@@ -1,0 +1,85 @@
+### YamlMime:Landing
+title: Apparaatacties extern uitvoeren met Intune
+summary: Intune biedt beheerders de mogelijkheid om apparaatacties extern uit te voeren. Door deze externe acties vanuit de Intune-portal te gebruiken kunt u apparaten opnieuw opstarten, wachtwoordcodes opnieuw instellen, verloren of gestolen apparaten vinden en meer.
+metadata:
+  title: Apparaatacties extern uitvoeren met Intune
+  description: Met Intune kunt u extern acties uitvoeren.
+  services: service
+  ms.service: microsoft-intune
+  ms.subservice: remote-actions
+  ms.topic: landing-page
+  ms.collection: collection
+  author: ErikjeMS
+  ms.author: erikje
+  ms.date: 09/13/2019
+  ms.openlocfilehash: 0c2340fffb2e3680ae4d137f9c0c944a72babf35
+  ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+  ms.translationtype: HT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 03/13/2020
+  ms.locfileid: "79333631"
+landingContent:
+- title: Apparaatacties extern uitvoeren
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Overzicht van apparaatbeheer
+      url: device-management.md
+  - linkListType: how-to-guide
+    links:
+    - text: Naam van apparaat wijzigen
+      url: device-rename.md
+    - text: Apparaatdetails bekijken
+      url: device-inventory.md
+    - text: Aangepaste meldingen naar apparaten verzenden
+      url: custom-notifications.md
+    - text: Apparaat synchroniseren
+      url: device-sync.md
+    - text: Apparaten extern beheren met TeamViewer
+      url: teamviewer-support.md
+    - text: Bulkacties voor apparaat
+      url: bulk-device-actions.md
+- title: Verwijderen en opnieuw opstarten
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Verwijderen, wissen, buiten gebruik stellen, registratie ongedaan maken
+      url: devices-wipe.md
+    - text: Nieuwe start van Windows
+      url: device-fresh-start.md
+    - text: Apparaat opnieuw opstarten
+      url: device-restart.md
+- title: Gebruikersacties
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Gebruiker afmelden
+      url: device-logout-user.md
+    - text: Primaire gebruiker zoeken
+      url: find-primary-user.md
+    - text: Gebruiker verwijderen
+      url: device-remove-user.md
+- title: Vergrendelingen en wachtwoorden
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Apparaat vergrendelen
+      url: device-remote-lock.md
+    - text: Wachtwoordcode van apparaat opnieuw instellen
+      url: device-passcode-reset.md
+    - text: Windows 10-pincode opnieuw instellen
+      url: device-lost-mode.md
+- title: Acties voor Apple-apparaten
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: iOS-/iPadOS-apparaten vinden
+      url: device-locate.md
+    - text: Supervisiemodus voor iOS/iPadOS inschakelen
+      url: device-supervised-mode.md
+    - text: Verloren modus voor iOS/iPadOS inschakelen
+      url: device-lost-mode.md
+    - text: Gegevens wissen van macOS-apparaat
+      url: device-erase.md
+    - text: Activeringsslot uitschakelen
+      url: device-activation-lock-disable.md

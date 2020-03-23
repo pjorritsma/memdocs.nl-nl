@@ -265,6 +265,12 @@
               href: security-baseline-settings-defender-atp.md
             - name: Basislijninstellingen voor Microsoft Edge
               href: security-baseline-settings-edge.md
+        - name: Beleidsinstellingen voor Antivirus
+          items:
+            - name: Instellingen voor macOS Defender Antivirus
+              href: antivirus-microsoft-defender-settings-macos.md
+            - name: Instellingen voor Windows 10 Microsoft Defender Antivirus
+              href: antivirus-microsoft-defender-settings-windows.md
         - name: Windows Update-instellingen
           href: windows-update-settings.md
         - name: 'Instellingen voor nalevingsbeleid: Android'

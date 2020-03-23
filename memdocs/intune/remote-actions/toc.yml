@@ -49,7 +49,9 @@
           href: device-rename.md
         - name: Meldingen verzenden
           href: custom-notifications.md
-        - name: Extern beheer van mobiele apparaten
+        - name: Mobiele apparaten extern ondersteunen
+          href: remote-assist-mobile-devices.md
+        - name: TeamViewer gebruiken voor extern beheer
           href: teamviewer-support.md
         - name: Apparaat synchroniseren
           href: device-sync.md

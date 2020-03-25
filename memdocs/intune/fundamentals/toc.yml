@@ -282,5 +282,5 @@
               href: troubleshoot-software-updates-in-microsoft-intune.md
             - name: Algemene fouten in Endpoint Protection
               href: troubleshoot-endpoint-protection-in-microsoft-intune.md
-    - name: Intune-documentatie voor eindgebruikers
-      href: /user-help/use-managed-devices-to-get-work-done
+    - name: Documentatie voor Intune-eindgebruikers
+      href: ../user-help/use-managed-devices-to-get-work-done.md

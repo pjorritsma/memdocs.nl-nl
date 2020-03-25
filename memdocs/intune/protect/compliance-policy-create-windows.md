@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c2f0d78fa929a7ed7ca33f7688027fb55c083280
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ed0194f0ace1ed1e962a8b993a4e93f7ef487bdc
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79353174"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084934"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Instellingen in Windows 10 en later om te markeren of apparaten wel of niet conform zijn met behulp van Intune
 
@@ -177,7 +177,7 @@ Geldt alleen voor gezamenlijk beheerde apparaten met Windows 10 en hoger. Appara
   [Firewall-CSP](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp)
 
   > [!NOTE]
-  > Als het apparaat onmiddellijk wordt gesynchroniseerd nadat het opnieuw is opgestart, of als het apparaat direct wordt gesynchroniseerd na te zijn geactiveerd uit de slaapstand, rapporteert deze instelling mogelijk **fout**. Dit scenario heeft mogelijk geen invloed op de algehele compatibiliteitsstatus van de apparaat. Als u de compatibiliteitsstatus opnieuw wilt evalueren, moet u [het apparaat handmatig synchroniseren](https://docs.microsoft.com/user-help/sync-your-device-manually-windows).
+  > Als het apparaat onmiddellijk wordt gesynchroniseerd nadat het opnieuw is opgestart, of als het apparaat direct wordt gesynchroniseerd na te zijn geactiveerd uit de slaapstand, rapporteert deze instelling mogelijk **fout**. Dit scenario heeft mogelijk geen invloed op de algehele compatibiliteitsstatus van de apparaat. Als u de compatibiliteitsstatus opnieuw wilt evalueren, moet u [het apparaat handmatig synchroniseren](https://docs.microsoft.com/mem/intune/user-help/sync-your-device-manually-windows).
 
 - **Trusted Platform Module (TPM)** :  
   - **Niet geconfigureerd** (*standaard*): Intune controleert het apparaat niet op een TPM-chipversie.

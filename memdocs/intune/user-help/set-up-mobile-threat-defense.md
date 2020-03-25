@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 889c7ef6d45a51a4aed86bf1a76842feb6f6251a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b5df63a14f27b657c585eb43e09b02368d969939
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79336105"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084401"
 ---
 # <a name="install-mobile-threat-defense"></a>Mobile Threat Defense installeren   
 
@@ -79,9 +79,9 @@ Zie [Uw persoonlijke apparaat registreren op het netwerk van uw organisatie](htt
 Als de installatie mislukt, neemt u contact op met uw IT-ondersteuningsmedewerker. [Ga naar de website van de bedrijfsportal](https://go.microsoft.com/fwlink/?linkid=2010980) om de contactgegevens van uw organisatie op te zoeken.  
 
 U kunt ook uw app-logboeken naar uw IT-ondersteuningsmedewerker sturen om deze meer context over de installatie te geven.  
-* Android-gebruikers: [Uw logboeken uploaden en e-mailen](https://docs.microsoft.com/user-help/send-logs-to-your-it-admin-by-email-android) vanuit de bedrijfsportal.   
+* Android-gebruikers: [Uw logboeken uploaden en e-mailen](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android) vanuit de bedrijfsportal.   
 
-* Gebruikers van iOS-apparaten: U kunt [uw logboeken ophalen en verzenden](https://docs.microsoft.com/intune/apps/manage-microsoft-edge#use-microsoft-edge-on-ios-to-access-managed-app-logs) vanuit Microsoft Edge voor iOS.  
+* Gebruikers van iOS-apparaten: U kunt [uw logboeken ophalen en verzenden](https://docs.microsoft.com/intune/apps/manage-microsoft-edge#use-microsoft-edge-to-access-managed-app-logs) vanuit Microsoft Edge voor iOS.  
 
 ## <a name="resolve-a-threat"></a>Een bedreiging oplossen  
 Als een bedreiging het gedefinieerde dreigingsniveau van uw organisatie overschrijdt, kan uw organisatie het volgende doen:  

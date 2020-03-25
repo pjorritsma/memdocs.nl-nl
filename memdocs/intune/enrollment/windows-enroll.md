@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c2a32561f66f3170b41209cb4d324e368768878
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 1f4d51cbd5c8bc6c82822d5e26191c01d2e1bb1d
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79344425"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220146"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Inschrijving voor Windows-apparaten instellen
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Met de informatie in dit artikel kunnen IT-beheerders de inschrijving van Windows-apparaten vereenvoudigen voor hun gebruikers. Zodra u [Intune hebt ingesteld](../fundamentals/setup-steps.md), kunnen gebruikers Windows-apparaten registreren door zich [aan te melden](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-windows) met hun werk- of schoolaccount.  
+Met de informatie in dit artikel kunnen IT-beheerders de inschrijving van Windows-apparaten vereenvoudigen voor hun gebruikers. Zodra u [Intune hebt ingesteld](../fundamentals/setup-steps.md), kunnen gebruikers Windows-apparaten registreren door zich [aan te melden](https://docs.microsoft.com/mem/intune/user-help/windows-enrollment-company-portal) met hun werk- of schoolaccount.  
 
 Als Intune-beheerder kunt u de registratie op de volgende manieren vereenvoudigen:
 
@@ -111,7 +111,7 @@ Laat uw gebruikers weten hoe ze hun Windows-apparaten kunnen inschrijven en wat 
 > [!NOTE]
 > Eindgebruikers moeten toegang hebben tot de bedrijfsportalwebsite via Microsoft Edge om Windows-apps te bekijken die u hebt toegewezen voor specifieke versies van Windows. Andere browsers, zoals Google Chrome, Mozilla Firefox en Internet Explorer bieden geen ondersteuning voor deze manier van filteren.
 
-Zie [Uw Windows-apparaat inschrijven bij Intune](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-windows) voor inschrijvingsinstructies voor eindgebruikers. U kunt gebruikers ook verwijzen naar het artikel [Welke gegevens kan mijn bedrijf zien wanneer ik mijn apparaat inschrijf in Intune?](https://docs.microsoft.com/user-help/what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows)
+Zie [Uw Windows-apparaat inschrijven bij Intune](../user-help/windows-enrollment-company-portal.md) voor inschrijvingsinstructies voor eindgebruikers. U kunt gebruikers ook verwijzen naar het artikel [Welke gegevens kan mijn bedrijf zien wanneer ik mijn apparaat inschrijf in Intune?](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
 
 >[!IMPORTANT]
 > Als u automatische MDM-inschrijving niet hebt ingeschakeld maar Windows 10-apparaten hebt die zijn samengevoegd in Azure AD, worden na de inschrijving twee records weergegeven in de Intune-console. U kunt dit gedrag beëindigen. Hiervoor moeten gebruikers met samengevoegde apparaten in Azure AD met hetzelfde account naar **Accounts** > **Toegang tot werk- of schoolaccount** en **Verbinden** gaan. 

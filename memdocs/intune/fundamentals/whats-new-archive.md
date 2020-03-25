@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17fa979f9563eb0735a68d2cc0ed82d800f8816f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0b2bb9a6220a599cc0e403e6c71f3b8907bbab0e
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354734"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085835"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Wat is er nieuw in Microsoft Intune - vorige maanden
 
@@ -294,7 +294,7 @@ De Microsoft Intune-app voor Android is bijgewerkt met de volgende verbeteringen
 - Er is een weergave van aangepaste pushmeldingen toegevoegd. Dit is in lijn met de ondersteuning die recent is toegevoegd in de bedrijfsportal-apps voor iOS en Android. Zie [Aangepaste meldingen verzenden in Intune](../remote-actions/custom-notifications.md) voor meer informatie.
 ""
 #### <a name="for-ios-devices-customize-the-enrollment-process-privacy-screen-of-the-company-portal---4394993---"></a>Voor iOS-apparaten past u het privacyvenster voor het inschrijvingsproces van de Bedrijfsportal aan<!-- 4394993 -->
-Met behulp van Markdown kunt u het privacyvenster van de Bedrijfsportal aanpassen dat eindgebruikers te zien krijgen tijdens de iOS-registratie. U kunt met name de lijst met dingen aanpassen die uw organisatie niet op het apparaat kan zien of doen. Zie [De app Intune-bedrijfsportal configureren](../apps/company-portal-app.md#privacy-statement-customization) voor meer informatie.
+Met behulp van Markdown kunt u het privacyvenster van de Bedrijfsportal aanpassen dat eindgebruikers te zien krijgen tijdens de iOS-registratie. U kunt met name de lijst met dingen aanpassen die uw organisatie niet op het apparaat kan zien of doen. Zie [De app Intune-bedrijfsportal configureren](../apps/company-portal-app.md#configuration) voor meer informatie.
 
 
 
@@ -1094,7 +1094,7 @@ De schermen en stappen in de bedrijfsportal-app voor iOS-inschrijving zijn bijge
 * De app instellingen te openen voor het installeren van het beheerprofiel op hun apparaat.
 * Terug te gaan naar de bedrijfsportal-app om de inschrijving te voltooien.  
 
-Zie [iOS-apparaat inschrijven bij Intune](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-ios) voor de bijgewerkte stappen en schermen voor de inschrijving.
+Zie [iOS-apparaat inschrijven bij Intune](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-ios) voor de bijgewerkte stappen en schermen voor de inschrijving.
 
 #### <a name="openssl-encryption-for-android-app-protection-policies---3747362---"></a>OpenSSL-versleuteling voor app-beveiligingsbeleid voor Android<!-- 3747362 -->
 Intune app-beveiligingsbeleid (APP) op Android-apparaten maakt nu gebruik van een OpenSSL-versleutelingsbibliotheek die compatibel is met FIPS 140-2. Zie de sectie over [versleuteling](../apps/app-protection-policy-settings-android.md#encryption) van [instellingen van app-beveiligingsbeleid voor Android in Microsoft Intune](../apps/app-protection-policy-settings-android.md) voor meer informatie.
@@ -1390,7 +1390,7 @@ Er zijn nieuwe meldingen voor installatiefouten van apps beschikbaar met betrekk
 In Intune selecteert u **Client-apps** > **Apps** > naam van de app > **Apparaatinstallatiestatus**. Nieuwe foutmeldingen zijn beschikbaar in de kolom **Statusdetails**.
 
 #### <a name="new-app-categories-screen-in-the-company-portal-app-for-windows-10---3834780----"></a>Het scherm Nieuwe app-categorieën in de bedrijfsportal-app voor Windows 10<!-- 3834780  -->
-Een nieuw scherm met de naam **App-categorieën** is toegevoegd om de blader- en selectie-ervaring voor apps te verbeteren in de bedrijfsportal voor Windows 10. Gebruikers zien nu hun apps gesorteerd onder categorieën, zoals **Aanbevolen**, **Opleiding** en **Productiviteit**. Deze wijziging wordt weergegeven in de bedrijfsportal-app-versies 10.3.3451.0 en hoger. Zie [Wat is er nieuw in de gebruikersinterface van de app?](whats-new-app-ui.md) om het nieuwe scherm te bekijken. Zie [Apps installeren en delen op uw apparaat](https://docs.microsoft.com/user-help/install-apps-cpapp-windows) voor meer informatie over apps in de bedrijfsportal.  
+Een nieuw scherm met de naam **App-categorieën** is toegevoegd om de blader- en selectie-ervaring voor apps te verbeteren in de bedrijfsportal voor Windows 10. Gebruikers zien nu hun apps gesorteerd onder categorieën, zoals **Aanbevolen**, **Opleiding** en **Productiviteit**. Deze wijziging wordt weergegeven in de bedrijfsportal-app-versies 10.3.3451.0 en hoger. Zie [Wat is er nieuw in de gebruikersinterface van de app?](whats-new-app-ui.md) om het nieuwe scherm te bekijken. Zie [Apps installeren en delen op uw apparaat](https://docs.microsoft.com/mem/intune/user-help/install-apps-cpapp-windows) voor meer informatie over apps in de bedrijfsportal.  
 
 #### <a name="power-bi-compliance-app---1455231-doc-work-item---"></a>Power BI-compatibiliteit-app<!-- 1455231 doc-work-item -->
 Krijg toegang tot uw Intune-datawarehouse in Power BI Online met behulp van de [Intune-compatibiliteit-app (datawarehouse)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp). Met deze Power BI-app kunt u nu vooraf gemaakte rapporten openen en delen zonder iets te hoeven instellen en zonder uw webbrowser te verlaten. Zie [Wijzigingenlogboek - Power BI-compatibiliteit-app](../developer/reports-changelog.md#power-bi-compliance-app) voor meer informatie.
@@ -2284,7 +2284,7 @@ Op basis van feedback van klanten zijn er nieuwe functies toegevoegd aan de bedr
 - Verbeterde prestaties voor grote app-catalogi
 - Beter toegankelijk voor alle gebruikers  
 
-De [documentatie voor Intune-bedrijfsportalwebsite](https://docs.microsoft.com/user-help/using-the-intune-company-portal-website) is bijgewerkt, waarbij deze wijzigingen zijn meegenomen. Zie [UI-updates voor Intune-eindgebruiker-apps](whats-new-app-ui.md) voor een voorbeeld van de app-uitbreidingen.  
+De [documentatie voor Intune-bedrijfsportalwebsite](https://docs.microsoft.com/mem/intune/user-help/using-the-intune-company-portal-website) is bijgewerkt, waarbij deze wijzigingen zijn meegenomen. Zie [UI-updates voor Intune-eindgebruiker-apps](whats-new-app-ui.md) voor een voorbeeld van de app-uitbreidingen.  
 
 ### <a name="monitor-and-troubleshoot"></a>Bewaken en problemen oplossen
 

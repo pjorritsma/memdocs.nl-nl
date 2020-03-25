@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a38664640b448d6770d4728a9a9918e251c37e3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 93fba17973571a9981269eb0b9fc98dae20cb920
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79344698"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085866"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Problemen bij de apparaatinschrijving in Microsoft Intune oplossen
 
@@ -47,8 +47,8 @@ U kunt er ook voor zorgen dat de datum en tijd op het apparaat van de gebruiker 
 
 Gebruikers van beheerde apparaten kunnen registratie- en diagnostische gegevens laten vastleggen in logboeken, zodat u deze kunt bekijken. Gebruikersinstructies voor het vastleggen van gegevens in logboeken vindt u in:
 
-- [Android-inschrijvingsfouten verzenden naar de IT-beheerder](https://docs.microsoft.com/user-help/send-enrollment-errors-to-your-it-admin-android)
-- [iOS-/iPadOS-fouten naar uw IT-beheerder verzenden](https://docs.microsoft.com/user-help/send-errors-to-your-it-admin-ios)
+- [Android-inschrijvingsfouten verzenden naar de IT-beheerder](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-using-cable-android)
+- [iOS-/iPadOS-fouten naar uw IT-beheerder verzenden](https://docs.microsoft.com/mem/intune/user-help/send-errors-to-your-it-admin-ios)
 
 
 ## <a name="general-enrollment-issues"></a>Problemen bij het registreren van apparaten

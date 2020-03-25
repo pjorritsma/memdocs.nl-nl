@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cfb0012dfc2cedb72c64a54c16b567dffff84c9e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: cd6956a9bdb19f25e39dd8cfb8e7e685d60f7b8c
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342293"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083557"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>Gegevensbeschermingsframework met beleid voor app-beveiliging 
 
@@ -55,7 +55,7 @@ Zoals in de bovenstaande tabel wordt aangegeven, moeten alle wijzigingen in het 
 
 Bij het testen van wijzigingen in een beleid voor app-beveiliging moet u zich bewust zijn van de [leveringstiming](app-protection-policy-delivery.md). De status van de levering van het beleid voor app-beveiliging voor een bepaalde gebruiker kan worden gecontroleerd. Zie [How to monitor app protection policies](app-protection-policies-monitor.md) (App-beveiligingsbeleid controleren) voor meer informatie.
 
-Afzonderlijke instellingen van het beleid voor app-beveiliging voor elke app kunnen worden gevalideerd op apparaten met Edge en de URL *about:Intunehelp*. Zie [Logboeken van beveiliging voor client-apps controleren](app-protection-policy-settings-log.md) en [Internettoegang beheren met behulp van Microsoft Edge met Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs) voor meer informatie.
+Afzonderlijke instellingen van het beleid voor app-beveiliging voor elke app kunnen worden gevalideerd op apparaten met Edge en de URL *about:Intunehelp*. Zie [Logboeken van beveiliging voor client-apps controleren](app-protection-policy-settings-log.md) en [Internettoegang beheren met behulp van Microsoft Edge met Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs) voor meer informatie.
 
 ## <a name="app-data-protection-framework-settings"></a>Gegevensbeschermingsframework met beleid voor app-beveiliging
 

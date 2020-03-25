@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 89fdcaefebc7329959cc1e5d77a97034d038d5c2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 3b3420dce8ea9d21b955e36506229817420cdbf0
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79346908"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084179"
 ---
 # <a name="using-your-windows-device-with-intune-company-portal"></a>Uw Windows-apparaat gebruiken met de Intune-bedrijfsportal
 
@@ -33,7 +33,7 @@ In dit artikel worden specifieke taken en informatie voor de bedrijfsportal voor
 ## <a name="how-to-get-company-portal"></a>De bedrijfsportal ophalen
 De bedrijfsportal is beschikbaar als website-versie en als app-download. Meld u aan met uw werk- of schoolreferenties voor [toegang tot de bedrijfsportalwebsite](https://go.microsoft.com/fwlink/?linkid=2010980).  
 
-Raadpleeg [Aanmelden bij de bedrijfsportal](https://docs.microsoft.com/user-help/sign-in-to-the-company-portal) voor gedetailleerde stappen en schermopnamen.
+Raadpleeg [Aanmelden bij de bedrijfsportal](https://docs.microsoft.com/mem/intune/user-help/sign-in-to-the-company-portal) voor gedetailleerde stappen en schermopnamen.
 
 ## <a name="supported-versions"></a>Ondersteunde versies
 

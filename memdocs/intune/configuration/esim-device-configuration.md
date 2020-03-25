@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,18 +16,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f12282acebaa90d3afe868bb28743444d01001d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: e4e9a37e2dbb725a06d304d345fd085dabbc5e14
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79343489"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086998"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Mobiele eSIM-profielen configureren in Intune - Openbare preview
 
 Een eSIM is een ingesloten SIM-chip. U kunt hiermee verbinding maken met internet via een mobiele dataverbinding op een met eSIM compatibel apparaat, zoals de [Surface LTE Pro](https://www.microsoft.com/surface/business/surface-pro). Met een eSIM hebt u geen SIM-kaart van uw mobiele provider meer nodig. Als wereldreiziger hoeft u dan alleen nog maar te schakelen tussen mobiele providers en gegevensabonnementen om altijd online te blijven.
 
 Dit is handig als u bijvoorbeeld een data-abonnement hebt voor het werk en u bij een andere provider bent aangesloten voor persoonlijk gebruik. Als u onderweg bent, kunt u gebruikmaken van internet door in die regio te zoeken naar providers met beschikbare data-abonnementen.
+
+Deze functie is van toepassing op:
+
+- Windows 10 en nieuwer
 
 U kunt in Intune eenmalig te gebruiken activeringscodes importeren die door uw provider zijn aangeleverd. Als u in de eSIM-module data-abonnementen wilt configureren, implementeert u de activeringscodes op uw met eSIM compatibele apparaten. Wanneer via Intune een activeringscode is geïnstalleerd, maakt de eSIM-hardwaremodule gebruik van de gegevens die zijn gekoppeld aan de activeringscode om contact op te nemen met de provider. Wanneer dit is gebeurd, wordt het eSIM-profiel naar het apparaat gedownload en geconfigureerd voor mobiele activering.
 

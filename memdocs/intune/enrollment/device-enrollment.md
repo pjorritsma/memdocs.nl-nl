@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a81d0cad6e7fa985733675912ada6f446eb501d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4aaa8bcee3684c73fa5ec3d488fd3107585dfc61
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359401"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086175"
 ---
 # <a name="what-is-device-enrollment"></a>Wat is apparaatinschrijving?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -39,7 +39,7 @@ Standaard kunnen apparaten voor alle platforms worden ingeschreven in Intune. U 
 |:---:|:---:|:---:|:---:|:---:|
 | | Apparaten worden gewist tijdens de registratie. | Hiermee wordt elk apparaat aan een gebruiker gekoppeld.| Zo ja, dan kunnen gebruikers apparaten niet uitschrijven. | |
 |**[BYOD](#bring-your-own-device)** | Nee| Ja | Nee | [Meer informatie](apple-mdm-push-certificate-get.md)|
-|**[DEM](#device-enrollment-manager)**| Nee |Nee |Nee | [Meer informatie](device-enrollment-program-enroll-ios.md)|
+|**[DEM](#device-enrollment-manager)**| Nee |Nee |Nee | [Meer informatie](device-enrollment-manager-enroll.md)|
 |**[DEP](#apple-device-enrollment-program)**| Ja | Optioneel | Optioneel|[Meer informatie](device-enrollment-program-enroll-ios.md)|
 |**[USB-SA](#usb-sa)**| Ja | Optioneel | Nee| [Meer informatie](apple-configurator-enroll-ios.md)|
 |**[USB-Direct](#usb-direct)**| Nee | Nee | Nee|[Meer informatie](apple-configurator-enroll-ios.md)|
@@ -67,7 +67,7 @@ Standaard kunnen apparaten voor alle platforms worden ingeschreven in Intune. U 
 
 | **Persoonlijk** | **Inschrijvingsmethoden** | **Opnieuw instellen vereist** | **Gebruikersaffiniteit** | **Vergrendeld** | **Details**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**Android-apparaatbeheer**|**Gebruiker geïnitieerd via bedrijfsportal** | Nee | Ja | Nee | [Meer informatie](https://docs.microsoft.com/user-help/enroll-device-android-company-portal)|
+|**Android-apparaatbeheer**|**Gebruiker geïnitieerd via bedrijfsportal** | Nee | Ja | Nee | [Meer informatie](https://docs.microsoft.com/mem/intune/user-help/enroll-device-android-company-portal)|
 |**Android Enterprise - Werkprofiel**|**Gebruiker geïnitieerd via bedrijfsportal**| Nee | Ja | Nee | [Meer informatie](android-work-profile-enroll.md)|
 
 

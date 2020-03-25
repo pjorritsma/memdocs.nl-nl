@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 842b262c2ae19a7a026d87600df5ffb0e80cf9b8
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 969dbcbe3fe1b1a155769bec6403b889b3d326bc
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359232"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086105"
 ---
 # <a name="set-up-iosipados-and-ipados-user-enrollment-preview"></a>Gebruikersinschrijving voor iOS/iPadOS en iPadOS instellen (preview)
 
@@ -59,7 +59,7 @@ Met een inschrijvingsprofiel worden de instellingen gedefinieerd die worden toeg
 
     - **Apparaatinschrijving**: alle gebruikers in dit profiel gebruiken apparaatinschrijving.
     - **Gebruikersinschrijving**: alle gebruikers in dit profiel gebruiken gebruikersinschrijving.
-    - **Bepalen op basis van gebruikerskeuze**: alle gebruikers in deze groep mogen kiezen welk type inschrijving ze gebruiken. Wanneer gebruikers hun apparaten inschrijven, krijgen ze de mogelijkheid om te kiezen tussen **Ik ben eigenaar van dit apparaat** en **(Bedrijf) is eigenaar van dit apparaat**. Als ze de laatste optie selecteren, wordt het apparaat ingeschreven via apparaatinschrijving. Als gebruikers **Ik ben eigenaar dit apparaat** kiezen, wordt een andere optie weergegeven om te kiezen of ze het hele apparaat of alleen aan werk gerelateerde apps en gegevens willen beveiligen. De keuze van eindgebruikers of ze de eigenaar van het apparaat zijn, bepaalt welk inschrijvingstype op hun apparaat wordt geïmplementeerd. Deze gebruikerskeuze wordt ook weergegeven in het kenmerk Apparaateigendom in Intune. Zie [Toegang tot uw bedrijfsbronnen instellen voor uw iOS-/iPadOS-apparaat](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-ios) voor meer informatie over de gebruikerservaring.
+    - **Bepalen op basis van gebruikerskeuze**: alle gebruikers in deze groep mogen kiezen welk type inschrijving ze gebruiken. Wanneer gebruikers hun apparaten inschrijven, krijgen ze de mogelijkheid om te kiezen tussen **Ik ben eigenaar van dit apparaat** en **(Bedrijf) is eigenaar van dit apparaat**. Als ze de laatste optie selecteren, wordt het apparaat ingeschreven via apparaatinschrijving. Als gebruikers **Ik ben eigenaar dit apparaat** kiezen, wordt een andere optie weergegeven om te kiezen of ze het hele apparaat of alleen aan werk gerelateerde apps en gegevens willen beveiligen. De keuze van eindgebruikers of ze de eigenaar van het apparaat zijn, bepaalt welk inschrijvingstype op hun apparaat wordt geïmplementeerd. Deze gebruikerskeuze wordt ook weergegeven in het kenmerk Apparaateigendom in Intune. Zie [Toegang tot uw bedrijfsbronnen instellen voor uw iOS-/iPadOS-apparaat](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp) voor meer informatie over de gebruikerservaring.
     
 5. Selecteer **Volgende**.
 

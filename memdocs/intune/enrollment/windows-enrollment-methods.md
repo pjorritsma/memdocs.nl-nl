@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/25/2019
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: ''
-ms.openlocfilehash: eac0eff9167e46d73dffe1c74ce073ffa68c7070
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a6b45cef3cc13357638753efd5b8179c5ce41f6c
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363197"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085698"
 ---
 # <a name="intune-enrollment-methods-for-windows-devices"></a>Intune-inschrijvingsmethoden voor Windows-apparaten
 
@@ -36,7 +36,7 @@ U kunt apparaten op twee manieren in Intune inschrijven:
 
 Gebruikers kunnen hun eigen Windows-apparaat zelf inschrijven via een van deze methoden:
 
-- [BYOD (Bring Your Own Device)](https://docs.microsoft.com/user-help/enroll-windows-10-device): Gebruikers schrijven hun persoonlijke apparaten in door bij de **instellingen** van het apparaat verbinding te maken met een **werk- en schoolaccount**. Dit gebeurt er tijdens dit proces:
+- [BYOD (Bring Your Own Device)](https://docs.microsoft.com/mem/intune/user-help/enroll-windows-10-device): Gebruikers schrijven hun persoonlijke apparaten in door bij de **instellingen** van het apparaat verbinding te maken met een **werk- en schoolaccount**. Dit gebeurt er tijdens dit proces:
   - Het apparaat wordt bij Azure Active Directory ingeschreven voor toegang tot zakelijke resources, zoals e-mail.
   - Het apparaat wordt als persoonlijk apparaat (BYOD) in Intune ingeschreven.
 Als een beheerder Automatische inschrijving heeft geconfigureerd (beschikbaar voor Azure AD Premium-abonnementen), hoeft de gebruiker zijn of haar referenties maar eenmaal in te voeren. Anders moet hij of zij zich afzonderlijk inschrijven via Alleen MDM-inschrijving en de referenties opnieuw invoeren.  

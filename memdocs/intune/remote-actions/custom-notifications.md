@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79bcfe4adead40e8a38d7f84af52406af320a394
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4b79c7a9cdc740984e1ace90b37bdea8dbdc70de
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79338237"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220248"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Aangepaste meldingen verzenden in Intune
 
@@ -73,7 +73,6 @@ Als u de bedrijfsportal-app hebt geopend op een Android-apparaat, lijkt de meldi
 - Als u een bericht wilt maken, gebruikt u een account dat is toegewezen aan een Intune-rol die de juiste machtiging bevat, zoals wordt beschreven in het eerdere gedeelte *Machtigingen*. Zie [Roltoewijzingen](../fundamentals/role-based-access-control.md#role-assignments) voor het toewijzen van machtigingen aan een gebruiker.
 - Aangepaste meldingen mogen een titel hebben van maximaal 50 tekens en een hoofdtekst van maximaal 500 tekens.  
 - in Intune wordt geen tekst opgeslagen van eerder verzonden aangepaste meldingen. Als u een bericht opnieuw wilt verzenden, moet u het bericht opnieuw maken.  
-- U kunt maximaal 25 berichten per uur verzenden naar groepen. Deze beperking is ingesteld op het tenantniveau. Deze beperking is niet van toepassing wanneer u meldingen verzendt naar afzonderlijke apparaten.
 - U kunt maximaal 25 berichten per uur verzenden naar groepen. Deze beperking is ingesteld op het tenantniveau. Deze beperking is niet van toepassing wanneer u meldingen verzendt naar afzonderlijke gebruikers.
 - Wanneer u berichten verzendt naar afzonderlijke apparaten, kunt u maximaal 10 berichten per uur verzenden naar hetzelfde apparaat.
 - U kunt aangepaste meldingen verzenden naar gebruikers in groepen. Bij het verzenden van meldingen naar groepen kan elke melding aan maximaal 25 groepen tegelijk worden toegewezen. Geneste groepen tellen niet mee voor dit totaal. Bij het verzenden van een melding naar een groep, worden berichten alleen aan de gebruikers in de groep gericht en verzonden naar alle iOS/iPadOS- en Android-apparaten die de gebruiker heeft geregistreerd. Apparaten in de groep worden genegeerd bij het instellen van de melding.

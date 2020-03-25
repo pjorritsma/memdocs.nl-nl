@@ -18,17 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b3927f09bb74f9058b19dad7f2f3b72f21a0d43
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 17b120faa0021a1fc044d7831b4b81ea88f404a7
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79351926"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526577"
 ---
 # <a name="lookout-mobile-endpoint-security-connector-with-intune"></a>Lookout Mobile Endpoint Security-connector met Intune
 
 U kunt de toegang van mobiele apparaten tot bedrijfsresources beheren op basis van een risicoanalyse die door Lookout wordt uitgevoerd. Lookout is een Mobile Threat Defense-oplossing die met Microsoft Intune is geïntegreerd. Risico's worden beoordeeld op basis van telemetrische gegevens afkomstig van apparaten die door Lookout-service zijn verzameld:
-
 - Beveiligingsproblemen voor besturingssystemen
 - Schadelijke apps geïnstalleerd
 - Schadelijke netwerkprofielen
@@ -47,7 +46,7 @@ De mobiele app van Lookout, **Lookout for Work**, wordt geïnstalleerd en uitgev
 - **Ondersteuning voor uitgeschreven apparaten**: Intune kan de gegevens van de risicoanalyse van de Lookout for Work-app gebruiken voor uitgeschreven apparaten wanneer u beveiligingsbeleidsregels voor Intune-apps gebruikt. Beheerders kunnen deze combinatie gebruiken om bedrijfsgegevens te beschermen binnen een [met Microsoft Intune beveiligde app](../apps/apps-supported-intune-apps.md). Beheerders kunnen bedrijfsgegevens op deze ingeschreven apparaten ook blokkeren of selectief wissen. Ondersteuning bieden Lookout for Work met niet-ingeschreven apparaten:
   - [De MTD-app toevoegen aan niet-ingeschreven apparaten](../protect/mtd-add-apps-unenrolled-devices.md)
   - [Beveiligingsbeleid voor Mobile Threat Defense-apps maken](../protect/mtd-app-protection-policy.md)
-  - [De MTD-connector in Intune inschakelen voor uitgeschreven apparaten](../protect/mtd-enable-unenrolled-devices.md)
+  - [De MTD-connector in Intune inschakelen voor niet-ingeschreven apparaten](../protect/mtd-enable-unenrolled-devices.md)
 
 ## <a name="supported-platforms"></a>Ondersteunde platforms
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: edc5cd2926f85ebf2f81d681646be7973e6ba444
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: e838ab0123058b90f06814d5a1266072bd95385e
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354474"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085778"
 ---
 # <a name="whats-new-in-the-intune-classic-portal---previous-months"></a>Wat is er nieuw in de klassieke Intune-portal - vorige maanden
 
@@ -320,7 +320,7 @@ Intune markeert alle nieuwe apparaten als persoonlijk, tenzij de IT-beheerder ac
 ### <a name="notices"></a>Mededelingen
 
 __Meervoudige verificatie voor registratie wordt verplaatst naar Azure Portal__ <!--VSO 750545-->
-Tot nu toe maakten beheerders gebruik van de Intune-console of de Configuration Manager-console (vóór de release oktober 2016) om meervoudige verificatie in te stellen voor Intune-registraties. Met deze bijgewerkte functie kunt u zich aanmelden bij de [Microsoft Azure-portal](https://manage.windowsazure.com) met uw Intune-referenties en de instellingen voor meervoudige verificatie configureren via Azure AD. Meer informatie hierover vindt u [hier](https://aka.ms/mfa_ad).
+Tot nu toe maakten beheerders gebruik van de Intune-console of de Configuration Manager-console (vóór de release oktober 2016) om meervoudige verificatie in te stellen voor Intune-registraties. Met deze bijgewerkte functie kunt u zich aanmelden bij de [Microsoft Azure-portal](https://manage.windowsazure.com) met uw Intune-referenties en de instellingen voor meervoudige verificatie configureren via Azure AD. Meer informatie hierover vindt u [hier](/azure/active-directory/authentication/howto-mfa-mfasettings).
 
 __Bedrijfsportal-app voor Android nu beschikbaar in China__ <!--VSO 658093-->
 De bedrijfsportal-app voor Android kan vanaf nu worden gedownload in China. Vanwege de afwezigheid van Google Play Store in China kunnen Android-apparaten apps alleen verkrijgen via Chinese app-marktplaatsen. De bedrijfsportal-app voor Android kan nu worden gedownload via de volgende stores:

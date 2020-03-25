@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d7ec41361571647cc417dc34ad29522d50477eb
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b530e4590d50190160695049e2b72f03a0384131
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339563"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233596"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>Android-apparaten automatisch registreren met behulp van de Knox Mobile Enrollment van Samsung
 
@@ -61,7 +61,7 @@ Wanneer uw bedrijf is geregistreerd, kunt u uw MDM-profiel voor Microsoft Intune
 - Als u een Android MDM-profiel wilt maken, selecteert u **Apparaatbeheerder** als het profieltype in de Knox-portal. 
 - Als u een Android Enterprise MDM-profiel wilt maken, selecteert u **Apparaateigenaar** als het profieltype in de Knox-portal.  
 
-### <a name="for-android"></a>Voor Android
+### <a name="for-android-enterprise"></a>Voor Android Enterprise
 
 | MDM-profielvelden| Vereist? | Waarden | 
 |-------------------|-----------|-------| 
@@ -78,7 +78,7 @@ Wanneer uw bedrijf is geregistreerd, kunt u uw MDM-profiel voor Microsoft Intune
 
 \* Dit veld is niet vereist om het maken van een profiel in de Knox-portal te voltooien. Voor Intune is het echter wel vereist dat dit veld wordt ingevuld zodat het profiel het apparaat kan inschrijven bij Intune.
 
-### <a name="for-android-enterprise"></a>Voor Android Enterprise
+### <a name="for-android"></a>Voor Android
 
 Raadpleeg de instructies in de [profielinstallatie van Samsung](https://docs.samsungknox.com/KME-Getting-Started/Content/create-profiles.htm) voor stapsgewijze richtlijnen.
 

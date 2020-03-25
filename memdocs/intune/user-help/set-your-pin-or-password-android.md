@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: ec617d76ec2fe4d59de7715daec76351798bd460
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fa069eea0fc8dcc7b2c98c261f3f7527b802da6e
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79336170"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233442"
 ---
 # <a name="set-your-pin-or-password"></a>Uw pincode of wachtwoord instellen
 
@@ -36,6 +36,6 @@ U kunt de volgende stappen gebruiken om een pincode of wachtwoord in te stellen.
 
 2. Kies en bevestig uw nieuwe wachtwoord.
 
-Voor bepaalde apparaten moet u naast het schermwachtwoord ook een opstartpincode instellen. U kunt dit probleem oplossen door in uw instellingen-app de locatie te zoeken waar u deze optie kunt inschakelen. Op de Samsung Galaxy S7 schakelt u Beveiligd opstarten bijvoorbeeld in bij **Instellingen** > **Vergrendelscherm en beveiliging** > **Beveiligd opstarten**. [Hier](/user-help/your-device-appears-encrypted-but-cp-says-otherwise-android) kunt u meer informatie daarover vinden. 
+Voor bepaalde apparaten moet u naast het schermwachtwoord ook een opstartpincode instellen. U kunt dit probleem oplossen door in uw instellingen-app de locatie te zoeken waar u deze optie kunt inschakelen. Op de Samsung Galaxy S7 schakelt u Beveiligd opstarten bijvoorbeeld in bij **Instellingen** > **Vergrendelscherm en beveiliging** > **Beveiligd opstarten**. [Hier](your-device-appears-encrypted-but-cp-says-otherwise-android.md) kunt u meer informatie daarover vinden. 
 
 Nog hulp nodig? Neem contact op met het ondersteuningsteam van uw bedrijf. Controleer of de contactgegevens beschikbaar zijn op de [bedrijfsportalwebsite](https://go.microsoft.com/fwlink/?linkid=2010980).

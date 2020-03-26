@@ -15,36 +15,20 @@
       href: tutorial-walkthrough-administrative-templates.md
 - name: Instructiegidsen
   items:
-    - name: Een profiel maken
+    - name: Overzicht
       href: device-profile-create.md
-    - name: Beheersjablonen in Windows
-      items:
-        - name: Beheersjablonen in Windows
-          href: administrative-templates-windows.md
-        - name: Office bijwerken met behulp van beheersjablonen
-          href: administrative-templates-update-office.md
-      displayName: 'ADMX, GPO, group policy'
-    - name: Apparaatfuncties in iOS/iPadOS en macOS
-      href: device-features-configure.md
+    - name: Aangepaste apparaatinstellingen
+      href: custom-settings-configure.md
+      displayName: oma-uri
     - name: Apparaatinstellingen en functies beperken
       href: device-restrictions-configure.md
-      displayName: Device restrictions
-    - name: Windows bijwerken
-      href: delivery-optimization-windows.md
-      displayName: delivery optimization; updates
-    - name: BIOS-instellingen in Windows
-      href: device-firmware-configuration-interface-windows.md
-      displayName: 'DFCI, firmware'
-    - name: Domein toevoegen aan Windows
-      href: domain-join-configure.md
-    - name: Windows en S-modus bijwerken
-      href: edition-upgrade-configure-windows-10.md
+      displayName: device restrictions
     - name: E-mail
-      href: email-settings-configure.md
-    - name: Kiosken en toegewezen apparaten
-      href: kiosk-settings.md
-    - name: Gedeelde apparaten voor meerdere gebruikers
-      href: shared-user-device-settings.md
+      items:
+        - name: E-mailinstellingen configureren
+          href: email-settings-configure.md
+        - name: Problemen en oplossingen
+          href: troubleshoot-email-profiles-in-microsoft-intune.md
     - name: VPN
       href: vpn-settings-configure.md
       items:
@@ -54,46 +38,82 @@
           href: vpn-setting-configure-per-app.md
     - name: Wi-Fi-netwerk
       href: wi-fi-settings-configure.md
-      displayName: wifi
+      displayName: 'wifi, wireless'
       items:
         - name: Wi-Fi met een vooraf gedeelde sleutel
           href: wi-fi-profile-shared-key.md
+          displayName: 'psk, oma-uri, eap'
         - name: Problemen met Wi-Fi oplossen
           href: troubleshoot-wi-fi-profiles.md
+    - name: Beheersjablonen in Windows
+      displayName: 'admx, gpo, group policy'
+      items:
+        - name: Beheersjablonen
+          href: administrative-templates-windows.md
+        - name: Office bijwerken met behulp van beheersjablonen
+          href: administrative-templates-update-office.md
+    - name: BIOS-instellingen in Windows
+      href: device-firmware-configuration-interface-windows.md
+      displayName: 'dfci, firmware'
+    - name: Domein toevoegen aan Windows
+      href: domain-join-configure.md
+      displayName: 'enrollment, active directory, azure ad joined, join domain'
+    - name: Windows bijwerken
+      href: delivery-optimization-windows.md
+      displayName: 'delivery optimization, windows updates'
+    - name: Windows en S-modus bijwerken
+      href: edition-upgrade-configure-windows-10.md
+    - name: Apparaatfuncties in iOS/iPadOS en macOS
+      href: device-features-configure.md
+      displayName: 'airprint, home screen, lock screen, sso, single sign-on'
     - name: Extensies in macOS
       href: kernel-extensions-overview-macos.md
-    - name: Education - Toets maken-app
-      href: education-settings-configure.md
+      displayName: 'kernel extensions, system extensions'
+    - name: Voorkeursbestand in macOS
+      href: preference-file-settings-macos.md
+      displayName: 'property list files, plist'
     - name: Mobility-extensies op Zebra-apparaten
-      href: android-zebra-mx-overview.md
-      displayName: mx
+      displayName: 'mx, android, stagenow'
+      items:
+        - name: MX op Android-apparaatbeheerder
+          href: android-zebra-mx-overview.md
+        - name: StageNow-logboeken en veelvoorkomende problemen
+          href: android-zebra-mx-logs-troubleshoot.md
     - name: OEMConfig op Android Enterprise
       href: android-oem-configuration-overview.md
+      displayName: 'original equipment manufacturers, schema'
+    - name: Kiosken en toegewezen apparaten
+      href: kiosk-settings.md
+      displayName: 'single app, multi app'
+    - name: Gedeelde apparaten voor meerdere gebruikers
+      href: shared-user-device-settings.md
+      displayName: 'shared pc, education'
+    - name: Education - Toets maken-app
+      href: education-settings-configure.md
     - name: Mobiele eSIM op Windows
       href: esim-device-configuration.md
+      displayName: embedded sim
     - name: 'Telecommunicatie kosten in Android, iOS/iPadOS'
       href: telecom-expenses-monitor.md
-    - name: Aangepaste apparaatinstellingen
-      href: custom-settings-configure.md
-    - name: Profielen toewijzen
-      href: device-profile-assign.md
-    - name: Profielen controleren
-      href: device-profile-monitor.md
+      displayName: saaswedo datalert
+    - name: Implementeren en bewaken
+      items:
+        - name: Profielen toewijzen
+          href: device-profile-assign.md
+          displayName: 'deploy, push'
+        - name: Profielen controleren
+          href: device-profile-monitor.md
     - name: Problemen oplossen
       items:
         - name: Problemen met beleidsregels en profielen oplossen
           href: troubleshoot-policies-in-microsoft-intune.md
-        - name: 'E-mailprofielen: problemen en oplossingen'
-          href: troubleshoot-email-profiles-in-microsoft-intune.md
-        - name: StageNow-logboeken en veelvoorkomende problemen
-          href: android-zebra-mx-logs-troubleshoot.md
         - name: Veelgestelde vragen en antwoorden
           href: device-profile-troubleshoot.md
 - name: Verwijzing
   items:
     - name: Configuratieprofielinstellingen
       items:
-        - name: Android
+        - name: Android-apparaatbeheerder
           items:
             - name: Apparaatbeperkingen
               href: device-restrictions-android.md
@@ -146,8 +166,6 @@
               href: ../protect/endpoint-protection-macos.md?toc=/intune/configuration/toc.json&bc=/intune/configuration/breadcrumb/toc.json
             - name: Uitbreidingen
               href: kernel-extensions-settings-macos.md
-            - name: Voorkeursbestand
-              href: preference-file-settings-macos.md
             - name: VPN
               href: vpn-settings-macos.md
             - name: Wi-Fi

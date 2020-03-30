@@ -12,17 +12,17 @@ ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: c6fd72a6-7dc8-48fc-9df1-db5627a51597
-ms.reviewer: karanda
+ms.reviewer: maholdaa
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 105a25e33e0f8f0a76934199d24060328d50c05f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: df5c33e1e8e589f430fe8265ee4762b4755f3618
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79360363"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086456"
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key-in-intune"></a>Een aangepast apparaatprofiel gebruiken om een Wi-Fi-profiel te maken met een vooraf gedeelde sleutel in Intune
 
@@ -52,7 +52,7 @@ Deze functie ondersteunt:
 2. Selecteer **Apparaten** > **Configuratieprofielen** > **Profiel maken**.
 3. Voer de volgende eigenschappen in:
 
-    - **Naam**: Voer een beschrijvende naam in voor het beleid. Geef uw beleid een naam zodat u het later eenvoudig kunt identificeren. Een goede beleidsnaam is bijvoorbeeld **Aangepaste OMA-URI Wi-Fi-profielinstellingen voor Android-apparaten**.
+    - **Naam**: Voer een beschrijvende naam in voor het beleid. Geef uw beleid een naam zodat u het later eenvoudig kunt identificeren. Een goede beleidsnaam is bijvoorbeeld **Aangepaste OMA-URI Wi-Fi-profielinstellingen voor Android-apparaatbeheer-apparaten**.
     - **Beschrijving**: Voer een beschrijving in voor het profiel. Deze instelling is optioneel, maar wordt aanbevolen.
     - **Platform**: Kies uw platform.
     - **Profieltype**: Selecteer **Aangepast**.
@@ -139,6 +139,7 @@ xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
 ```
 
 ### <a name="eap-based-wi-fi-profile-example"></a>Voorbeeld van een op EAP gebaseerd profiel
+
 Het volgende voorbeeld bevat de XML-code voor een Wi-Fi-profiel op basis van EAP: Het voorbeeld is bedoeld om de juiste indeling te laten zien en meer details te bieden. Dit is slechts een voorbeeld en moet niet worden beschouwd als een aanbevolen configuratie voor uw omgeving.
 
 

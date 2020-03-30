@@ -6,24 +6,24 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 3/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: c87fd2bd-7f53-4f1b-b985-c34f2d85a7bc
-ms.reviewer: elocholi
+ms.reviewer: arnab
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9760029effc873b510bf37b779c054c9a0574a20
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6ab840653d7090ed925af0db08f410e236392234
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79353148"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80219840"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Nalevingsbeleid afdwingen op Macs die door Jamf Pro worden beheerd
 
@@ -41,7 +41,10 @@ Voor de procedures in dit artikel is toegang vereist tot de Intune-console en de
 
 2. Selecteer **Apparaten** > **Nalevingsbeleid**. Als u een eerder gemaakt beleid gebruikt, selecteert u dat beleid in de-console en gaat u naar de volgende stap van deze procedure. Als u een nieuw beleid wilt maken, selecteert u **Beleid maken** en geeft u vervolgens details op voor een beleid en selecteert u **macOS** bij *Platform*. Configureer *Instellingen* en *Acties voor niet-naleving* om te voldoen aan de vereisten van uw organisatie en selecteer vervolgens **Maken** om het beleid op te slaan.
 
-3. Selecteer **Toewijzingen** in het deelvenster *Overzicht*. Gebruik de beschikbare opties om te configureren welke Azure AD-gebruikers (Azure Active Directory) en beveiligingsgroepen dit beleid ontvangen. Jamf-integratie met Intune ondersteunt geen nalevingsbeleid voor apparaatgroepen.
+3. Selecteer **Toewijzingen** in het deelvenster *Overzicht*. Gebruik de beschikbare opties om te configureren welke Azure AD-gebruikers (Azure Active Directory) en beveiligingsgroepen dit beleid ontvangen. **Jamf-integratie met Intune ondersteunt geen nalevingsbeleid voor apparaatgroepen.**
+
+> [!NOTE]
+> Jamf-integratie met Intune biedt alleen ondersteuning voor AAD-gebruikersgroepen. Nalevingsbeleid voor apparaten dat is gericht op apparaatgroepen wordt niet toegepast.
 
 4. Wanneer u **Opslaan** selecteert, wordt het beleid geïmplementeerd voor de gebruikers.  
 

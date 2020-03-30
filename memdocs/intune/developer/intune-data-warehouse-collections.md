@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 03/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d3fbfa5ebd8e9ba54d5725cd650cba9c31b3537
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 9b8ffa656aa468b50569518aaff503fec1d21027
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79360285"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086243"
 ---
 # <a name="intune-data-warehouse-collections"></a>Intune-datawarehouse-verzamelingen
 
@@ -222,6 +222,7 @@ Met de entiteit **devices** worden alle geregistreerde apparaten voor beheer en 
 | DeviceRegistrationState    | Sleutel van het kenmerk voor de clientregistratiestatus voor dit apparaat.                                                                                                                      |
 | OwnerTypeKey               | Sleutel van het kenmerk voor het type eigenaar voor dit apparaat: zakelijk, persoonlijk of onbekend.                                                                                                    |
 | EnrolledDateTime           | De datum en tijd waarop het apparaat is ingeschreven.                                                                                                                                         |
+| EthernetMacAddress           | De unieke netwerk-id van dit apparaat.                                                                                                                                        |
 | LastSyncDateTime           | Laatste bekende keer dat een apparaat is ingecheckt bij Intune.                                                                                                                                              |
 | ManagementAgentKey         | Sleutel van de beheeragent die is gekoppeld aan dit apparaat.                                                                                                                             |
 | ManagementStateKey         | Sleutel van de aan dit apparaat gekoppelde beheerstatus waarmee de laatste status van een externe actie wordt aangegeven of dat het apparaat is gekraakt of geroot.                                                |
@@ -243,13 +244,16 @@ Met de entiteit **devices** worden alle geregistreerde apparaten voor beheer en 
 | MEID                       | MEID                                                                                                                                                                                   |
 | isSupervised               | De supervisiestatus van het apparaat                                                                                                                                                               |
 | FreeStorageSpaceInBytes    | Beschikbare opslag in bytes.                                                                                                                                                                 |
-| TotalStorageSpaceInBytes   | Totale opslag in bytes.                                                                                                                                                                |
+| TotalStorageSpaceInBytes   | Totale opslagcapaciteit in bytes.                                                                                                                                                                |
 | EncryptionState            | De versleutelingsstatus van het apparaat.                                                                                                                                                      |
 | SubscriberCarrier          | Provider van abonnee van het apparaat                                                                                                                                                       |
 | PhoneNumber                | Telefoonnummer van het apparaat                                                                                                                                                             |
 | IMEI                       | IMEI                                                                                                                                                                                   |
 | CellularTechnology         | Mobiele telefoontechnologie van het apparaat                                                                                                                                                    |
 | WiFiMacAddress             | MAC-adres Wi-Fi                                                                                                                                                                              |
+| Model                      | Het apparaatmodel.                                                                                                                                                                      |
+| Office365Version           | De versie van Office 365 die op het apparaat is geïnstalleerd.                                                                                                                             |
+| PhysicalMemoryInBytes      | Het fysieke geheugen in bytes.                                                                                                                                                          |
 
 
 ## <a name="devicetypes"></a>deviceTypes

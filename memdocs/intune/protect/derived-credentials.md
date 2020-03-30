@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3724e425ab284d63dbe1e64dcd236509744abe10
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 50d32a76e638d88adc7a72d103c84e73544079cb
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352342"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084893"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Afgeleide referenties gebruiken in Microsoft Intune
 
@@ -106,7 +106,7 @@ De belangrijkste overwegingen voor elke ondersteunde partner zijn de volgende.  
 
 #### <a name="disa-purebred"></a>DISA Purebred
 
-Controleer de [gebruikerswerkstroom voor DISA Purebred](https://docs.microsoft.com/user-help/enroll-ios-device-disa-purebred). De belangrijkste vereisten voor deze werkstroom zijn:
+Controleer de [gebruikerswerkstroom voor DISA Purebred](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-disa-purebred). De belangrijkste vereisten voor deze werkstroom zijn:
 
 - Gebruikers moeten toegang hebben tot een computer of KIOSK waar ze hun smartcard kunnen gebruiken om zich te verifiëren bij de verlener.
 
@@ -122,7 +122,7 @@ Zie [De DISA Purebred-app implementeren](#deploy-the-disa-purebred-app) verderop
 
 #### <a name="entrust-datacard"></a>Entrust Datacard
 
-Controleer de [gebruikerswerkstroom voor Entrust Datacard](https://docs.microsoft.com/user-help/enroll-ios-device-entrust-datacard). De belangrijkste vereisten voor deze werkstroom zijn:
+Controleer de [gebruikerswerkstroom voor Entrust Datacard](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-entrust-datacard). De belangrijkste vereisten voor deze werkstroom zijn:
 
 - Gebruikers moeten toegang hebben tot een computer of KIOSK waar ze hun smartcard kunnen gebruiken om zich te verifiëren bij de verlener.
 
@@ -132,7 +132,7 @@ Controleer de [gebruikerswerkstroom voor Entrust Datacard](https://docs.microsof
 
 #### <a name="intercede"></a>Intercede
 
-Controleer de [gebruikerswerkstroom voor Intercede](https://docs.microsoft.com/user-help/enroll-ios-device-intercede). De belangrijkste vereisten voor deze werkstroom zijn:
+Controleer de [gebruikerswerkstroom voor Intercede](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-intercede). De belangrijkste vereisten voor deze werkstroom zijn:
 
 - Gebruikers moeten toegang hebben tot een computer of KIOSK waar ze hun smartcard kunnen gebruiken om zich te verifiëren bij de verlener.
 
@@ -221,17 +221,34 @@ U kunt **afgeleide referentie** opgeven voor de volgende profieltypen en doelein
 Afgeleide referenties gebruiken voor verificatie op basis van certificaten voor websites en toepassingen. Ga als volgt te werk om een afgeleide referentie gebruiken voor app-verificatie:
 
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
+
 2. Selecteer **Apparaten** > **Configuratieprofielen** > **Profiel maken**.
-3. Voer de volgende instellingen in:
 
-    - **Naam**: Voer een beschrijvende naam in voor het profiel. Geef uw profielen een naam zodat u ze later eenvoudig kunt identificeren. Een goede profielnaam is bijvoorbeeld **Afgeleide referentie voor het profiel van iOS/iPadOS-apparaten**.
-    - **Beschrijving**: Voer een beschrijving in met een overzicht van de instelling en eventuele andere belangrijke details.
-    - **Platform**: Selecteer **iOS/iPadOS**.
-    - **Profieltype**: Selecteer **Afgeleide referentie**.
+3. Voer de volgende eigenschappen in:
+   - **Platform**: Selecteer het platform van de apparaten die dit profiel zullen ontvangen.
+   - **Profiel**: Selecteer **Afgeleide referentie**
 
-4. Selecteer **OK** om uw wijzigingen op te slaan.
-5. Wanneer u klaar bent, selecteert u **OK** > **Maken** om het Intune-profiel te maken. Wanneer het profiel is gemaakt, wordt dit weergegeven in de lijst **Apparaten - Configuratieprofielen**.
-6. Selecteer het nieuwe profiel > **Toewijzingen**. Selecteer de groepen waarvoor het beleid moet worden gebruikt.
+4. Selecteer **Maken**.
+
+5. Voer in **Basisinformatie** de volgende eigenschappen in:
+
+   - **Naam**: Voer een beschrijvende naam in voor het profiel. Geef uw profielen een naam zodat u ze later eenvoudig kunt identificeren. Een goede profielnaam is bijvoorbeeld **Afgeleide referentie voor het profiel van iOS/iPadOS-apparaten**.
+   - **Beschrijving**: Voer een beschrijving in voor het profiel. Deze instelling is optioneel, maar wordt aanbevolen.
+
+6. Selecteer **Volgende**.
+
+7. Stel in **Configuratie-instellingen** **Afgeleide referentie gebruiken voor app-verificatie** in op **Ja** en selecteer **Volgende**.
+
+8. Wijs in **Bereiktags** (optioneel) een tag toe om het profiel te filteren op specifieke IT-groepen, zoals `US-NC IT Team` of `JohnGlenn_ITDepartment`. Zie [RBAC en bereiktags gebruiken voor gedistribueerde IT](../fundamentals/scope-tags.md) voor meer informatie over bereiktags.
+
+   Selecteer **Volgende**.
+
+9. Selecteer in **Toewijzingen** de gebruiker of groepen die uw profiel zullen ontvangen. Zie [Gebruikers- en apparaatprofielen toewijzen](../configuration/device-profile-assign.md) voor meer informatie over het toewijzen van profielen.
+
+    Selecteer **Volgende**.
+
+10. Controleer uw instellingen in **Beoordelen en maken**. Wanneer u Maken selecteert, worden uw wijzigingen opgeslagen en wordt het profiel toegewezen. Het beleid wordt ook weergegeven in de lijst met profielen.
+
  
 Gebruikers ontvangen de app- of e-mailmelding, afhankelijk van de instellingen die u hebt opgegeven bij het instellen van de verlener van afgeleide referenties. Via de melding wordt de gebruiker geïnstrueerd de bedrijfsportal te starten zodat het beleid voor afgeleide referenties kan worden verwerkt.
 

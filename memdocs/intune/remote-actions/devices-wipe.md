@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 227d18a73ac33cfc277ec4c91935002e159da553
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2219dae6de9814e7eacebe507095c46c598f932f
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79348923"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084707"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Apparaten verwijderen via wissen of buiten gebruik stellen, of de registratie van het apparaat handmatig ongedaan maken
 
@@ -188,7 +188,7 @@ Als u een Apple DEP-apparaat volledig wilt verwijderen uit het beheer door Intun
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Kies **Apparaten** > **Alle apparaten** > kies het apparaat > **Buiten gebruik stellen**.
 ![Schermafbeelding van buiten gebruik stellen](./media/devices-wipe/retire.png)
-3. Ga naar [deploy.apple.com](http://deploy.apple.com) en zoek het apparaat met behulp van het serienummer.
+3. Ga naar [business.apple.com](http://business.apple.com) en zoek het apparaat met behulp van het serienummer.
 4. Kies in het menu **Toegewezen aan** de optie **Niet toegewezen**.
 
 5. Kies **Opnieuw toewijzen**.

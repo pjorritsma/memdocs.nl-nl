@@ -1,11 +1,11 @@
 ---
 title: Instellingen van apparaatfuncties voor iOS/iPadOS in Microsoft Intune - Azure | Microsoft Docs
-description: Bekijk alle instellingen voor het configureren van iOS-/iPadOS-apparaten, de indeling van het startscherm, app-meldingen, gedeelde apparaten, eenmalige aanmelding en het filteren van webinhoud in Microsoft Intune. Gebruik deze instellingen in een apparaatconfiguratieprofiel om iOS-/iPadOS-apparaten te configureren voor het gebruik van deze Apple-functies in uw organisatie.
+description: Bekijk alle instellingen voor het configureren van iOS- en iPadOS-apparaten voor AirPrint, de indeling van het startscherm, app-meldingen, gedeelde apparaten, eenmalige aanmelding en het filteren van webinhoud in Microsoft Intune. Gebruik deze instellingen in een apparaatconfiguratieprofiel om iOS-/iPadOS-apparaten te configureren voor het gebruik van deze Apple-functies in uw organisatie.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/09/2020
+ms.date: 03/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 351c6ade59d98ce620b939c5ff6238e650390a5f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fafca25fb0e374d281f8ef593cb5fa7f35d82979
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361078"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086967"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>iOS- en iPadOS-apparaatinstellingen voor het gebruik van algemene iOS-/iPadOS-functies in Intune
 
-Intune bevat enkele ingebouwde instellingen, zodat iOS-/iPadOS-gebruikers verschillende functies van Apple op hun apparaten kunnen gebruiken. Beheerders kunnen bijvoorbeeld bepalen hoe iOS-/iPadOS-gebruikers AirPrint-printers gebruiken, apps en mappen toevoegen aan de dock en pagina's op het startscherm, app-meldingen weergeven, details van inventaristags weergeven op het vergrendelingsscherm, verificatie met eenmalige aanmelding gebruiken, en gebruikers met certificaten verifiëren.
+Intune bevat enkele ingebouwde instellingen, zodat iOS-/iPadOS-gebruikers verschillende functies van Apple op hun apparaten kunnen gebruiken. Zo kunt u AirPrint-printers instellen, apps en mappen toevoegen aan de dock en pagina's op het startscherm, app-meldingen weergeven, details van inventaristags weergeven op het vergrendelingsscherm, verificatie met eenmalige aanmelding gebruiken en verificatie via certificaat gebruiken.
 
 Gebruik deze functies om iOS-/iPadOS-apparaten te beheren als onderdeel van uw MDM-oplossing (Mobile Device Management).
 
@@ -48,7 +48,7 @@ Dit artikel beschrijft deze instellingen en wat elke instelling doet. Ga naar [I
 - **IP-adres**: voer het IPv4- of IPv6-adres van de printer in. Als u hostnamen gebruikt om printers te identificeren, krijgt u het IP-adres door de printer in de terminal te pingen. In Haal het IP-adres en het pad op (in dit artikel) vindt u meer informatie.
 - **Pad**: het pad is doorgaans `ipp/print` voor printers in uw netwerk. In Haal het IP-adres en het pad op (in dit artikel) vindt u meer informatie.
 - **Poort**: Voer de luisterpoort van de AirPrint-bestemming in. Als u deze eigenschap leeg laat, maakt AirPrint gebruik van de standaardpoort. Beschikbaar in iOS 11.0+, en iPadOS 13.0+.
-- **TLS**: Kies **Inschakelen** voor het beveiligen van AirPrint-verbindingen met Transport Layer Security (TLS). Beschikbaar in iOS 11.0+, en iPadOS 13.0+.
+- **TLS**: Met **Inschakelen** worden AirPrint-verbindingen beveiligd met TLS (Transport Layer Security). Beschikbaar in iOS 11.0+, en iPadOS 13.0+.
 
 Als u AirPrint-servers wilt toevoegen, kunt u het volgende doen:
 
@@ -81,7 +81,7 @@ Deze functie is van toepassing op:
 
 ### <a name="dock"></a>Dock
 
-Gebruik de **Dock**-instellingen om maximaal zes items of mappen toe te voegen aan de dock onderaan in het iOS-/iPadOS-scherm. Veel apparaten ondersteunen minder items. IPhone-apparaten ondersteunen bijvoorbeeld maximaal vier items. In dit geval worden alleen de eerste vier items die u hebt toegevoegd op het apparaat weergegeven.
+Gebruik de **Dock**-instellingen om maximaal zes items of mappen aan de dock in het scherm toe te voegen. Veel apparaten ondersteunen minder items. IPhone-apparaten ondersteunen bijvoorbeeld maximaal vier items. In dit geval worden alleen de eerste vier items die u hebt toegevoegd op het apparaat weergegeven.
 
 U kunt maximaal **zes** items (combinatie van apps en mappen) voor de apparaatdock toevoegen.
 
@@ -283,8 +283,32 @@ Deze functie is van toepassing op:
 - **Type app-extensie voor eenmalige aanmelding**: Kies het type app-extensie voor eenmalige aanmelding. Uw opties zijn:
 
   - **Niet geconfigureerd**: er worden geen app-extensies gebruikt. Als u een app-extensie wilt uitschakelen, stelt u Type app-extensie voor SSO in op **Niet geconfigureerd**.
-  - **Omleiding**: gebruik een algemene, aanpasbare app-extensie van het type Omleiding om eenmalige aanmelding uit te voeren met moderne verificatiestromen. Zorg ervoor dat u weet wat de extensie-id is van de app-extensie van uw organisatie.
-  - **Referentie**: gebruik een algemene, aanpasbare app-extensie van het type Referentie voor het uitvoeren van eenmalige aanmelding met verificatiestromen met vraag en antwoord. Zorg ervoor dat u weet wat de extensie-id is van de app-extensie van uw organisatie.
+  - **Omleiding**: Gebruik een algemene, aanpasbare app-extensie van het type Omleiding om eenmalige aanmelding te gebruiken met moderne verificatiestromen. Zorg ervoor dat u weet wat de extensie-id is van de app-extensie van uw organisatie.
+
+    Op iOS-/iPadOS 13.0+-apparaten kunt u de **app-extensie voor SSO van Microsoft Azure AD configureren** met dit redirect-type app-extensie voor SSO. De Microsoft Azure AD-extensie maakt eenmalige aanmelding mogelijk tussen Microsoft-apps en organisatie-apps die Azure AD gebruiken voor verificatie. De Azure AD-extensie fungeert als een geavanceerde broker voor verificatie die verbeteringen in de beveiliging en de eindgebruikerservaring biedt. Alle apps die eerder brokered verificatie gebruikten met de app Microsoft Authenticator, behouden SSO met de SSO-extensie. De SSO-extensie van Azure AD biedt nog geen ondersteuning voor browser-SSO. Meer informatie over SSO en de broker voor iOS/iPadOS-verificatie vindt u in [SSO configureren op macOS en iOS/iPadOS](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-macos-ios).  
+
+    **De extensie van Microsoft Azure AD voor iOS configureren:**
+
+    1. Stel het **type app-extensie voor SSO** in op **Omleiden**.
+    2. Stel **Extensie-id** in op `com.microsoft.azureauthenticator.ssoextension`.
+    3. Stel **Team-id** in op `SGGM6D27TK`.
+    4. Voer in de instelling **URL's** de volgende URL's in:
+
+        - `https://login.microsoftonline.com`
+        - `https://login.windows.net`
+        - `https://login.microsoft.com`
+        - `https://sts.windows.net`
+        - `https://login.partner.microsoftonline.cn`
+        - `https://login.chinacloudapi.cn`
+        - `https://login.microsoftonline.de`
+        - `https://login.microsoftonline.us`
+        - `https://login.usgovcloudapi.net`
+        - `https://login-us.microsoftonline.com`
+
+    > [!IMPORTANT]
+    > Voor SSO met de Microsoft Azure AD-extensie in iOS/iPadOS installeert u eerst de iOS/iPadOS Microsoft Authenticator-app op het apparaat. Authenticator levert de Azure AD-extensie aan het apparaat en met de instellingen van de MDM-app-extensie voor SSO wordt de Azure AD-extensie geactiveerd. Zodra Authenticator en het profiel van de app-extensie voor SSO op het apparaat zijn geïnstalleerd, moeten gebruikers hun aanmeldingsgegevens opgeven om zich aan te melden en een sessie tot stand te brengen. Deze sessie wordt vervolgens voor verschillende toepassingen gebruikt, zonder dat gebruikers opnieuw moeten worden geverifieerd.
+
+  - **Referentie**: Gebruik een algemene, aanpasbare app-extensie van het type Referentie om eenmalige aanmelding te gebruiken met verificatiestromen met vraag en antwoord. Zorg ervoor dat u weet wat de extensie-id is van de app-extensie van uw organisatie.
   - **Kerberos**: gebruik de ingebouwde Kerberos-extensie van Apple, die is opgenomen in iOS 13.0+ en iPadOS 13.0+. Deze optie is een Kerberos-versie van de app-extensie **Referentie**.
 
   > [!TIP]
@@ -303,7 +327,7 @@ Deze functie is van toepassing op:
   - Alle domeinen in uw app-extensie voor eenmalige aanmelding bij Intune-profielen moeten uniek zijn. U kunt een domein niet herhalen in een app-extensieprofiel voor eenmalige aanmelding, zelfs niet als u verschillende typen app-extensie voor SSO gebruikt.
   - Deze domeinen zijn niet hoofdlettergevoelig.
 
-- **URL's** (alleen omleiden): voer de URL-voorvoegsels van uw id-providers in namens wie de eenmalige aanmelding wordt uitgevoerd met de app-extensie van het type Omleiding. Wanneer een gebruiker wordt omgeleid naar deze URL's, grijpt de app-extensie voor SSO in en wordt er om SSO gevraagd.
+- **URL's** (alleen omleiden): Voer de URL-voorvoegsels van uw id-providers in namens wie de eenmalige aanmelding de app-extensie van het type Omleiding gebruikt. Wanneer gebruikers worden omgeleid naar deze URL's, grijpt de app-extensie voor SSO in en wordt er om SSO gevraagd.
 
   - Alle URL's in uw app-extensie voor SSO bij Intune-profielen moeten uniek zijn. U kunt een domein niet herhalen in een app-extensieprofiel voor eenmalige aanmelding, zelfs niet als u verschillende typen app-extensies voor eenmalige aanmelding gebruikt.
   - De URL's moeten beginnen met http:// of https://.
@@ -320,7 +344,7 @@ Deze functie is van toepassing op:
 
   - **Toevoegen**: selecteer deze optie om uw configuratiesleutels toe te voegen.
 
-- **Gebruik van sleutelhanger** (alleen Kerberos): kies **Blokkeren** om te voorkomen dat wachtwoorden worden opgeslagen in de sleutelhanger. Als deze optie is geblokkeerd, wordt de gebruiker niet gevraagd om het wachtwoord op te slaan. Het wachtwoord moet opnieuw worden ingevoerd wanneer het Kerberos-ticket verloopt. **Niet geconfigureerd** (standaard): staat toe dat wachtwoorden worden opgeslagen in de sleutelhanger. Gebruikers worden niet gevraagd om hun wachtwoord opnieuw in te voeren wanneer het ticket verloopt.
+- **Gebruik van sleutelhanger** (alleen Kerberos): kies **Blokkeren** om te voorkomen dat wachtwoorden worden opgeslagen in de sleutelhanger. Als deze optie is geblokkeerd, wordt gebruikers niet gevraagd om het wachtwoord op te slaan. Het wachtwoord moet opnieuw worden ingevoerd wanneer het Kerberos-ticket verloopt. **Niet geconfigureerd** (standaard): staat toe dat wachtwoorden worden opgeslagen in de sleutelhanger. Gebruikers worden niet gevraagd om hun wachtwoord opnieuw in te voeren wanneer het ticket verloopt.
 - **Face ID, Touch ID of wachtwoordcode** (alleen Kerberos): **Vereisen**: gebruikers moeten hun Face ID, Touch ID of de wachtwoordcode van het apparaat invoeren wanneer de referentie nodig is om het Kerberos-ticket te vernieuwen. **Niet geconfigureerd** (standaardinstelling): gebruikers hoeven geen biometrische gegevens of wachtwoordcode te gebruiken om het Kerberos-ticket te vernieuwen. Als **Gebruik van sleutelhanger** is geblokkeerd, is deze instelling niet van toepassing.
 - **Standaardrealm** (alleen Kerberos): kies **Inschakelen** om de waarde voor **Realm** in te stellen die u hebt ingevoerd als de standaardrealm. **Niet geconfigureerd** (standaard): er wordt geen standaardrealm ingesteld.
 

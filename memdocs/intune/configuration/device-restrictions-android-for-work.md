@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 03/23/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0546b280f6a04b6bc396b39a9a04031ee9800172
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a3e6679e27e7d373243874ea40c2d028ff25d3e9
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361884"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220112"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Met Android Enterprise-apparaatinstellingen kunt u functies toestaan of beperken met behulp van Intune
 
@@ -316,7 +316,7 @@ Deze instellingen zijn van toepassing op Android Enterprise-inschrijvingstypen w
 - **Minimale wachtwoordlengte**: Geef het minimale aantal cijfers of tekens op waaruit het wachtwoord van de gebruiker moet bestaan, van **4**-**16**.
 - **Maximum aantal minuten van inactiviteit voordat het werkprofiel wordt vergrendeld**: Selecteer de hoeveelheid tijd voordat het werkprofiel wordt vergrendeld. De gebruiker moet vervolgens zijn referenties invoeren om weer toegang te krijgen.
 - **Aantal mislukte aanmeldingen voordat een apparaat wordt gewist**: Geef op hoe vaak een onjuist wachtwoord kan worden ingevoerd voordat het werkprofiel wordt gewist van het apparaat.
-- **Wachtwoordverlooptijd (dagen)** : Voer het aantal dagen in totdat het wachtwoord van de eindgebruiker moet worden gewijzigd (van **1**-**255**).
+- **Wachtwoordverlooptijd (dagen)** : Voer het aantal dagen in totdat het wachtwoord van de eindgebruiker moet worden gewijzigd (van **1**-**365**).
 - **Vereist wachtwoordtype**: Selecteer het type wachtwoord dat moet worden ingesteld op het apparaat. U kunt kiezen uit:
   - **Standaardwaarde apparaat**
   - **Lage beveiligingsbiometrie**
@@ -337,7 +337,7 @@ Deze wachtwoordinstellingen zijn van toepassing op persoonlijke profielen op app
 - **Minimale wachtwoordlengte**: Geef het minimale aantal cijfers of tekens op waaruit het wachtwoord van de gebruiker moet bestaan, van **4**-**14**.
 - **Maximum aantal minuten van inactiviteit voordat het scherm wordt vergrendeld**: Selecteer de hoeveelheid tijd voordat een inactief apparaat automatisch wordt vergrendeld
 - **Aantal mislukte aanmeldingen voordat een apparaat wordt gewist**: Geef op hoe vaak een onjuist wachtwoord kan worden ingevoerd voordat het werkprofiel wordt gewist van het apparaat.
-- **Wachtwoordverlooptijd (dagen)** : Voer het aantal dagen in totdat het wachtwoord van de eindgebruiker moet worden gewijzigd (van **1**-**255**)
+- **Wachtwoordverlooptijd (dagen)** : Voer het aantal dagen in totdat het wachtwoord van de eindgebruiker moet worden gewijzigd (van **1**-**365**)
 - **Vereist wachtwoordtype**: Selecteer het type wachtwoord dat moet worden ingesteld op het apparaat. U kunt kiezen uit:
   - **Standaardwaarde apparaat**
   - **Lage beveiligingsbiometrie**

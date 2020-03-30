@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df00db079a7e6b73ba24dc612b5cb6b2250c3898
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 50c56cff5f6b58894ff1abb24dad397d7e6c2c1e
+ms.sourcegitcommit: cd2cbc23b8909df3a000d8ad4140e87052d6de5a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79338185"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79508471"
 ---
 # <a name="see-device-details-in-intune"></a>Apparaatdetails bekijken in Intune
 
@@ -36,7 +36,7 @@ In dit artikel leest u hoe u al uw apparaten en hun eigenschappen kunt bekijken 
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Selecteer **Apparaten** > **Alle apparaten** en selecteer een van de apparaten in de lijst om de details ervan te openen:
 
-   - **Overzicht** toont de apparaatnaam en een lijst met enkele belangrijke eigenschappen van het apparaat, inclusief of het een BYOD-apparaat (Bring Your Own Device) is, wanneer het apparaat is ingecheckt, en meer. U kunt de volgende acties uitvoeren op het apparaat:
+   - **Overzicht** toont de apparaatnaam en een lijst met enkele belangrijke eigenschappen van het apparaat, zoals of het een persoonlijk of bedrijfsapparaat is, het serienummer, de primaire gebruiker, en meer. U kunt de volgende acties uitvoeren op het apparaat:
       - [Buiten gebruik stellen](devices-wipe.md#retire)
       - [Wissen](devices-wipe.md#wipe)
       - [Verwijderen](devices-wipe.md#delete-devices-from-the-intune-portal)

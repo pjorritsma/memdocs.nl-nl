@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1a967ff72c7751ebf1cfb74489fbe7bf73563077
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 1e088af5687b5708754869614a431e80f9497b3c
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79360519"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086830"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-for-iosipados-devices-in-intune"></a>VPN per app instellen voor iOS/iPadOS-apparaten in Intune
 
@@ -51,7 +51,7 @@ Voor verificatie kan Zscaler Private Access (ZPA) met Azure Active Directory (Az
 > [!IMPORTANT]
 > Uw VPN-leverancier heeft wellicht andere vereisten voor VPN per app, zoals bepaalde hardware of -licentieverlening. Raadpleeg de documentatie en zorg ervoor dat u voldoet aan deze vereisten voordat u Per-App VPN in Intune instelt.
 
-Ter bevestiging van de identiteit van de VPN-server legt deze het certificaat voor. Dit moet door het apparaat zonder prompt worden geaccepteerd. Als u wilt bevestigen dat het certificaat automatisch wordt goedgekeurd, moet u een vertrouwd certificaatprofiel maken dat het door de certificeringsinstantie (CA) uitgegeven basiscertificaat van de VPN-server bevat. 
+Ter bevestiging van de identiteit van de VPN-server legt deze het certificaat voor. Dit moet door het apparaat zonder prompt worden geaccepteerd. Als u wilt bevestigen dat het certificaat automatisch wordt goedgekeurd, moet u een vertrouwd certificaatprofiel maken dat het door de certificeringsinstantie (CA) uitgegeven basiscertificaat van de VPN-server bevat.
 
 ### <a name="export-the-certificate-and-add-the-ca"></a>Het certificaat exporteren en de CA toevoegen
 
@@ -73,14 +73,22 @@ Importeer het door de CA uitgegeven basiscertificaat van de VPN-server in een pr
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecteer **Apparaten** > **Configuratieprofielen** > **Profiel maken**.
 3. Voer de volgende eigenschappen in:
-    - **Naam**: Voer een beschrijvende naam in voor het profiel. Geef uw profielen een naam zodat u ze later eenvoudig kunt identificeren. Een goede profielnaam is bijvoorbeeld **iOS/iPadOS VPN-profiel met een vertrouwd certificaat voor hele bedrijf**.
-    - **Beschrijving**: Voer een beschrijving in voor het profiel. Deze instelling is optioneel, maar wordt aanbevolen.
+
     - **Platform**: Selecteer **iOS/iPadOS**.
     - **Profieltype**: Selecteer **Vertrouwd certificaat**.
-4. Selecteer het mappictogram en blader naar het VPN-certificaat (.cer-bestand) dat u vanuit de VPN-beheerconsole hebt geëxporteerd. 
-5. Selecteer **OK** > **Maken**.
 
-    ![Een vertrouwd certificaatprofiel voor iOS/iPadOS-apparaten in Microsoft Intune maken](./media/vpn-setting-configure-per-app/vpn-per-app-create-trusted-cert.png)
+4. Selecteer **Maken**.
+5. Voer in **Basisinformatie** de volgende eigenschappen in:
+
+    - **Naam**: Voer een beschrijvende naam in voor het profiel. Geef uw profielen een naam zodat u ze later eenvoudig kunt identificeren. Een goede profielnaam is bijvoorbeeld **iOS/iPadOS VPN-profiel met een vertrouwd certificaat voor hele bedrijf**.
+    - **Beschrijving**: Voer een beschrijving in voor het profiel. Deze instelling is optioneel, maar wordt aanbevolen.
+
+6. Selecteer **Volgende**.
+7. Selecteer in **Configuratie-instellingen** het mappictogram en blader naar het VPN-certificaat (.cer-bestand) dat u vanuit de VPN-beheerconsole hebt geëxporteerd.
+8. Selecteer **Volgende**en ga door met het maken van uw profiel. Zie [Een VPN-profiel maken](vpn-settings-configure.md#create-the-profile) voor meer informatie.
+
+    > [!div class="mx-imgBorder"]
+    > ![Een vertrouwd certificaatprofiel voor iOS/iPadOS-apparaten in Microsoft Intune maken](./media/vpn-setting-configure-per-app/vpn-per-app-create-trusted-cert.png)
 
 ## <a name="create-a-scep-or-pkcs-certificate-profile"></a>Een SCEP- of PKCS-certificaatprofiel maken
 
@@ -91,48 +99,61 @@ Lees een van de volgende artikelen om het clientverificatiecertificaat te config
 - [Infrastructuur configureren om SCEP te ondersteunen in Intune](../protect/certificates-scep-configure.md)
 - [PKCS-certificaten configureren en beheren met Intune](../protect/certficates-pfx-configure.md)
 
-Configureer het certificaat voor clientverificatie. U kunt dit rechtstreeks in SCEP-certificaatprofielen instellen (de lijst **Uitgebreide-sleutelgebruik** > **Clientverificatie**). Voor PKCS stelt u de clientverificatie in op het certificaatsjabloon in de certificeringsinstantie (CA).
+Configureer het certificaat voor clientverificatie. U kunt clientverificatie rechtstreeks in SCEP-certificaatprofielen instellen (de lijst **Uitgebreide-sleutelgebruik** > **Clientverificatie**). Voor PKCS stelt u de clientverificatie in op het certificaatsjabloon in de certificeringsinstantie (CA).
 
-![Een SCEP-certificaatprofiel in Microsoft Intune maken, inclusief indeling onderwerpnaam, sleutelgebruik, uitgebreide-sleutelgebruik en meer](./media/vpn-setting-configure-per-app/vpn-per-app-create-scep-cert.png)
+> [!div class="mx-imgBorder"]
+> ![Een SCEP-certificaatprofiel in Microsoft Intune maken, inclusief indeling onderwerpnaam, sleutelgebruik, uitgebreide-sleutelgebruik en meer](./media/vpn-setting-configure-per-app/vpn-per-app-create-scep-cert.png)
 
 ## <a name="create-a-per-app-vpn-profile"></a>Een profiel voor VPN per app maken
 
-Het VPN-profiel bevat het SCEP- of PKCS-certificaat met de referenties van de client, de verbindingsgegevens voor de VPN-verbinding en de markering voor VPN per app voor het inschakelen van de functie VPN per app voor gebruik door de iOS/iPadOS-toepassing.
+Het VPN-profiel bevat het SCEP- of PKCS-certificaat met de referenties van de client, de VPN-verbindingsgegevens en de VPN-vlag per app voor het inschakelen van VPN per app die wordt gebruikt door de iOS/iPadOS-toepassing.
 
 1. Selecteer in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **Configuratieprofielen** > **Profiel maken**.
-2. Voer de volgende eigenschappen in:
-    - **Naam**: Voer een beschrijvende naam in voor het aangepaste profiel. Geef uw profielen een naam zodat u ze later eenvoudig kunt identificeren. Een goede profielnaam is bijvoorbeeld **iOS/iPadOS VPN-profiel voor apps voor hele bedrijf**.
-    - **Beschrijving**: Voer een beschrijving in voor het profiel. Deze instelling is optioneel, maar wordt aanbevolen.
+2. Selecteer **Apparaten** > **Configuratieprofielen** > **Profiel maken**.
+3. Voer de volgende eigenschappen in:
+
     - **Platform**: Selecteer **iOS/iPadOS**.
     - **Profieltype**: Selecteer **VPN**.
-3. Bij **Verbindingstype** selecteert u uw VPN-client-app.
-4. Selecteer **Basis-VPN**. Onder [iOS/iPadOS VPN-instellingen](vpn-settings-ios.md) vindt u alle instellingen en de beschrijving daarvan. Wanneer u VPN per app gebruikt, moet u de volgende eigenschappen instellen:
 
-    - **Verificatiemethode**: Selecteer **Certificaten**. 
-    - **Verificatiecertificaat**: Selecteer een bestaand SCEP- of PKCS-certificaat > **OK**.
-    - **Split tunneling**: Selecteer **Uitschakelen** om te forceren dat al het verkeer de VPN-tunnel gebruikt wanneer de VPN-verbinding actief is. 
+4. Selecteer **Maken**.
+5. Voer in **Basisinformatie** de volgende eigenschappen in:
 
-      ![In een VPN per app-profiel voert u een verbinding, een IP-adres of FQDN, een verificatiemethode en Split tunneling in Microsoft Intune in](./media/vpn-setting-configure-per-app/vpn-per-app-create-vpn-profile.png)
+    - **Naam**: Voer een beschrijvende naam in voor het aangepaste profiel. Geef uw profielen een naam zodat u ze later eenvoudig kunt identificeren. Een goede profielnaam is bijvoorbeeld **iOS/iPadOS VPN-profiel voor apps voor hele bedrijf**.
+    - **Beschrijving**: Voer een beschrijving in voor het profiel. Deze instelling is optioneel, maar wordt aanbevolen.
+
+6. Configureer in **Configuratie-instellingen** de volgende instellingen:
+
+    - **Type verbinding**: Selecteer uw VPN-client-app.
+    - **Basis-VPN**: Configureer uw instellingen. Onder [iOS/iPadOS VPN-instellingen](vpn-settings-ios.md) vindt u alle instellingen en de beschrijving daarvan. Wanneer u VPN per app gebruikt, moet u de volgende eigenschappen instellen:
+
+      - **Verificatiemethode**: Selecteer **Certificaten**. 
+      - **Verificatiecertificaat**: Selecteer een bestaand SCEP- of PKCS-certificaat > **OK**.
+      - **Split tunneling**: Selecteer **Uitschakelen** om te forceren dat al het verkeer de VPN-tunnel gebruikt wanneer de VPN-verbinding actief is. 
+
+      > [!div class="mx-imgBorder"]
+      > ![In een VPN per app-profiel voert u een verbinding, een IP-adres of FQDN, een verificatiemethode en Split tunneling in Microsoft Intune in](./media/vpn-setting-configure-per-app/vpn-per-app-create-vpn-profile.png)
 
     Zie [iOS/iPadOS VPN-instellingen](vpn-settings-ios.md) voor informatie over de overige instellingen.
 
-5. Selecteer **Automatisch VPN** > **Het type automatisch VPN** > **VPN per app**
+    - **Automatisch VPN** > **Het type automatisch VPN** > **VPN per app**
 
-    ![In Intune stelt u Automatisch VPN in op VPN per app in iOS/iPadOS-apparaten](./media/vpn-setting-configure-per-app/vpn-per-app-automatic.png)
+      > [!div class="mx-imgBorder"]
+      > ![In Intune stelt u Automatisch VPN in op VPN per app in iOS/iPadOS-apparaten](./media/vpn-setting-configure-per-app/vpn-per-app-automatic.png)
 
-6. Selecteer **OK** > **OK** > **Maken**.
+7. Selecteer **Volgende**en ga door met het maken van uw profiel. Zie [Een VPN-profiel maken](vpn-settings-configure.md#create-the-profile) voor meer informatie.
 
 ## <a name="associate-an-app-with-the-vpn-profile"></a>Een app aan het VPN-profiel koppelen
 
 Na het toevoegen van uw VPN-profiel moet u de app en de Azure AD-groep (Microsoft Azure Active Directory) aan het profiel koppelen.
 
 1. Selecteer in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apps** > **Alle apps**.
-2. Selecteer een app uit de lijst > **Toewijzingen** > **Groep toevoegen**.
+2. Selecteer een app uit de lijst > **Eigenschappen** > **Toewijzingen** > **Groep toevoegen**.
 3. Bij **Toewijzingstype** selecteert u **Vereist** of **Beschikbaar voor geregistreerde apparaten**.
 4. Selecteer **Opgenomen groepen** > **Selecteer de groepen die u wilt opnemen** > Selecteer de groep [die u hebt gemaakt](#create-a-group-for-your-vpn-users) (in dit artikel) > **Selecteren**.
 5. Bij **VPN's** selecteert u het VPN per app-profiel [dat u hebt gemaakt ](#create-a-per-app-vpn-profile) (in dit artikel).
 
-    ![Een app toewijzen aan het VPN per app-profiel in Microsoft Intune](./media/vpn-setting-configure-per-app/vpn-per-app-app-to-vpn.png)
+    > [!div class="mx-imgBorder"]
+    > ![Een app toewijzen aan het VPN per app-profiel in Microsoft Intune](./media/vpn-setting-configure-per-app/vpn-per-app-app-to-vpn.png)
 
 6. Selecteer **OK** > **Opslaan**.
 

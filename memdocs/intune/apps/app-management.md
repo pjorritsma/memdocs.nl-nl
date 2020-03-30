@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/05/2020
+ms.date: 03/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 98eba2cd2905a70157cfb50299bb9b11a6319fcc
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5acf0db721accf058a10dafcf8165abeddafe7c7
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342332"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083746"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Wat is Microsoft Intune-appbeheer?
 
@@ -118,7 +118,7 @@ De volgende items in de console leveren app-gerelateerde functionaliteit:
 - **Windows-sleutels voor extern laden**: u kunt een Windows-sleutel voor extern laden toevoegen die kan worden gebruikt om een app rechtstreeks te installeren op apparaten in plaats van de app te publiceren en downloaden vanuit de Windows Store. Zie [Een Windows-app sideloaden](app-sideload-windows.md) voor meer informatie.
 - **Apple VPP-tokens**: voor het toepassen en weergeven van uw VPP-licenties (Volume Purchase Program) voor iOS/iPadOS. Zie [iOS-/iPadOS-apps die zijn aangeschaft via een volumeaankoopprogramma](vpp-apps-ios.md) voor meer informatie.
 - **Beheerde Google Play**: Beheerde Google Play is de zakelijke App Store van Google en tevens de enige bron van toepassingen voor Android Enterprise. Zie [Beheerde Google Play-apps toevoegen aan Android Enterprise-apparaten met Intune](apps-add-android-for-work.md) voor meer informatie.
-- **Huisstijl en aanpassing**: u kunt de bedrijfsportal aanpassen aan de huisstijl van uw bedrijf. Zie [De bedrijfsportal-app configureren](company-portal-app.md) voor meer informatie.
+- **Aanpassing**: u kunt de bedrijfsportal aanpassen aan de huisstijl van uw bedrijf. Zie [De bedrijfsportal-app configureren](company-portal-app.md) voor meer informatie.
 
 ## <a name="next-steps"></a>Volgende stappen
 

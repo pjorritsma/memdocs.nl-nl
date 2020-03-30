@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8efa125b78e1265861f55b258cd264d7640154b2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2e143530c5e9965a3717c632c1af7fcbc28a664f
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79360792"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526288"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Instellingen van apparaatfuncties voor macOS in Intune
 
@@ -55,7 +55,7 @@ U kunt ook een door komma's gescheiden bestand (.csv) **importeren** met een lij
 
 Om AirPrinter-servers toe te voegen, hebt u het IP-adres van de printer, het bronpad en de poort nodig. De volgende stappen laten zien hoe u aan deze informatie komt.
 
-1. Open op een Mac die verbonden is met hetzelfde lokale netwerk (subnet) als de AirPrint-printers de **Terminal** (via **/Programma's/Hulpprogramma's**).
+1. Open op een Mac die verbonden is met hetzelfde lokale netwerk (subnet) als de AirPrint-printers de **terminal** (via **/Programma's/Hulpprogramma's**).
 2. Typ in de Terminal-app `ippfind` en selecteer Enter.
 
     Noteer de printergegevens. Er wordt bijvoorbeeld iets in de trant van `ipp://myprinter.local.:631/ipp/port1` geretourneerd. Het eerste deel is de naam van de printer. Het laatste deel (`ipp/port1`) is het bronpad.
@@ -140,7 +140,7 @@ Deze functie is van toepassing op:
 - **Extensie-id** (omleiding en referentie): voer de bundel-id in waarmee de app-extensie voor eenmalige aanmelding wordt aangeduid, zoals `com.apple.ssoexample`.
 - **Team-id** (omleiding en referentie): voer de team-id in van uw app-extensie voor eenmalige aanmelding. Een team-id is een alfanumerieke tekenreeks van 10 tekens (cijfers en letters) die wordt gegenereerd met Apple, zoals `ABCDE12345`. 
 
-  [Zoek uw team-id](https://help.apple.com/developer-account/#/dev55c3c710c): (opent de website van Apple) biedt meer informatie.
+  [Zoek uw team-id](https://help.apple.com/developer-account/#/dev55c3c710c): (hiermee wordt de website van Apple geopend) biedt meer informatie.
 
 - **Realm** (referentie en Kerberos): Voer de naam van uw verificatierealm in. De realmnaam moet in hoofdletters zijn, zoals `CONTOSO.COM`. Uw realmnaam is meestal gelijk aan uw DNS-domeinnaam, maar dan met alleen hoofdletters.
 
@@ -151,7 +151,7 @@ Deze functie is van toepassing op:
 
 - **URL's** (alleen omleiden): voer de URL-voorvoegsels van uw id-providers in namens wie de eenmalige aanmelding wordt uitgevoerd met de app-extensie van het type Omleiding. Wanneer een gebruiker wordt omgeleid naar deze URL's, grijpt de app-extensie voor SSO in en wordt er om SSO gevraagd.
 
-  - Alle URL's in uw app-extensie voor SSO bij Intune-profielen moeten uniek zijn. U kunt een domein niet herhalen in een app-extensieprofiel voor SSO, zelfs niet als u verschillende typen app-extensie voor SSO gebruikt.
+  - Alle URL's in uw app-extensie voor SSO bij Intune-profielen moeten uniek zijn. U kunt een domein niet herhalen in een app-extensieprofiel voor eenmalige aanmelding, zelfs niet als u verschillende typen app-extensies voor eenmalige aanmelding gebruikt.
   - De URL's moeten beginnen met http:// of https://.
 
 - **Aanvullende configuratie** (omleiding en referentie): Voer aanvullende extensiegegevens in die moeten worden doorgegeven aan de app-extensie voor eenmalige aanmelding:
@@ -219,7 +219,7 @@ Deze functie is van toepassing op:
 
   `osascript -e 'id of app "ExampleApp"'`
 
-- **Domein**: voer het websitedomein in dat u aan een app wilt koppelen. Het domein bevat een servicetype en een volledig gekwalificeerde hostnaam, zoals `webcredentials:www.contoso.com`.
+- **Domein**: voer het websitedomein in dat u aan een app wilt koppelen. Het domein bevat een servicetype en een volledig gekwalificeerde hostnaam, zoals `webcredentials: www.contoso.com`.
 
   U kunt alle subdomeinen van een gekoppeld domein vergelijken door `*.` (een asterisk-jokerteken en een punt) vóór het domein in te voeren. De punt is vereist. Exacte domeinen hebben een hogere prioriteit dan domeinen met een jokerteken. Patronen van bovenliggende domeinen worden vergeleken *als* er geen overeenkomst wordt gevonden in het volledig gekwalificeerde subdomein.
 

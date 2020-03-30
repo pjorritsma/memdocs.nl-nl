@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/17/2019
+ms.date: 03/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ba140f9d49cbdfbada0cb992b333a690cbb4a85
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fcf2139019b1f4d764b55ee31f5961711a71834c
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79350249"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80219874"
 ---
 # <a name="use-update-channel-and-target-version-settings-to-update-office-365-with-microsoft-intune-administrative-templates"></a>Instellingen van het updatekanaal en de doelversie gebruiken om Office 365 bij te werken met Microsoft Intune-beheersjablonen
 
@@ -39,13 +39,15 @@ Van toepassing op:
 
 [Schakel automatische updates voor Office365 ProPlus in](https://docs.microsoft.com/deployoffice/configure-update-settings-for-office-365-proplus) op uw Office-apps. U kunt dit doen met behulp van groepsbeleid of met de Intune Office 2016 ADMX-sjabloon:
 
-![De instelling Automatische updates inschakelen voor Office instellen in de Intune-beheersjabloon](./media/administrative-templates-update-office/admx-enable-automatic-updates.png)
+> [!div class="mx-imgBorder"]
+> ![De instelling Automatische updates inschakelen voor Office instellen in de Intune-beheersjabloon](./media/administrative-templates-update-office/admx-enable-automatic-updates.png)
 
 ## <a name="set-the-update-channel-in-the-intune-administrative-template"></a>Het updatekanaal instellen in de Intune-beheersjabloon instellen
 
-1. Ga in de [Intune-beheersjabloon](administrative-templates-windows.md#create-a-template) naar de instelling **Updatekanaal** en voer het gewenste kanaal in. Kies bijvoorbeeld `Semi-Annual Channel`:
+1. Ga in de [Intune-beheersjabloon](administrative-templates-windows.md#create-the-template) naar de instelling **Updatekanaal** en voer het gewenste kanaal in. Kies bijvoorbeeld `Semi-Annual Channel`:
 
-    ![Stel in de Intune-beheersjabloon de instelling Updatekanaal in voor Office](./media/administrative-templates-update-office/admx-enable-update-channel-setting.png)
+    > [!div class="mx-imgBorder"]
+    > ![Stel in de Intune-beheersjabloon de instelling Updatekanaal in voor Office](./media/administrative-templates-update-office/admx-enable-update-channel-setting.png)
 
     > [!NOTE]
     > Het wordt aanbevolen om regelmatig updates uit te voeren. Hier wordt halfjaarlijks slechts als voorbeeld gebruikt.
@@ -53,7 +55,7 @@ Van toepassing op:
 2. [Wijs het beleid toe](device-profile-assign.md) aan uw Windows 10-apparaten. Als u het beleid sneller wilt testen, kunt u het beleid ook synchroniseren:
 
     - [Het beleid in Intune synchroniseren](../remote-actions/device-sync.md)
-    - [Het beleid handmatig op het apparaat synchroniseren](https://docs.microsoft.com/user-help/sync-your-device-manually-windows#sync-from-settings-app)
+    - [Het beleid handmatig op het apparaat synchroniseren](https://docs.microsoft.com/mem/intune/user-help/sync-your-device-manually-windows#sync-from-settings-app)
 
 ## <a name="check-the-intune-registry-keys"></a>Intune-registersleutels controleren
 
@@ -72,7 +74,8 @@ Nadat u het beleid en de apparaatsynchronisaties hebt toegewezen, kunt u bevesti
 
     Bekijk het volgende voorbeeld. U ziet dat `L_UpdateBranch` een vergelijkbare waarde heeft als `<enabled /><data id="L_UpdateBranchID" value="Deferred" />`. Deze waarde betekent dat deze is ingesteld op Semi-Annual-kanaal:
 
-    ![Voorbeeld: registersleutel L_Updatebranch in beheersjabloon](./media/administrative-templates-update-office/admx-update-branch-registry-key.png)
+    > [!div class="mx-imgBorder"]
+    > ![Voorbeeld: registersleutel L_Updatebranch in beheersjabloon](./media/administrative-templates-update-office/admx-update-branch-registry-key.png)
 
     > [!TIP]
     > In [Office 365 ProPlus beheren met Configuration Manage](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) worden de waarden met hun betekenis vermeld. De registerwaarden zijn gebaseerd op het geselecteerde distributiekanaal:
@@ -99,7 +102,8 @@ Op dit punt wordt het Intune-beleid toegepast op het apparaat.
 
     In het volgende voorbeeld ziet u dat `UpdateChannel` is ingesteld op `http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60`, dus op **maandelijks**:
 
-    ![Voorbeeld: registersleutel UpdateChannel van Office in beheersjabloon](./media/administrative-templates-update-office/admx-update-channel-office-registry-key.png)
+    > [!div class="mx-imgBorder"]
+    > ![Voorbeeld: registersleutel UpdateChannel van Office in beheersjabloon](./media/administrative-templates-update-office/admx-update-channel-office-registry-key.png)
 
     Dit voorbeeld betekent dat het beleid nog niet wordt toegepast, omdat het nog steeds is ingesteld op **maandelijks** in plaats van **halfjaarlijks**.
 
@@ -120,7 +124,8 @@ Als u het beleid wilt testen, kunt u de beleidsinstellingen op het apparaat afdw
     2. Vouw **Task Scheduler-bibliotheek** > **Microsoft** > **Office** uit.
     3. Selecteer **Automatische updates van Office 2.0** > **Uitvoeren**:
 
-        ![Task Scheduler openen en Automatische updates van Office uitvoeren](./media/administrative-templates-update-office/admx-task-scheduler-office-automatic-updates.png)
+        > [!div class="mx-imgBorder"]
+        > ![Task Scheduler openen en Automatische updates van Office uitvoeren](./media/administrative-templates-update-office/admx-task-scheduler-office-automatic-updates.png)
 
         Wacht tot de taak is voltooid. Dit kan enkele minuten duren.
 
@@ -138,11 +143,12 @@ Als u meer wilt doen, kunt u Office afdwingen de nieuwste versie-update op te ha
 
 1. Bevestig dat de Office-versie ondersteuning biedt voor het updatekanaal dat u kiest. [Update history for Office 365 ProPlus](https://docs.microsoft.com/officeupdates/update-history-office365-proplus-by-date) (Updategeschiedenis van Office 365 ProPlus) bevat de buildnummers die de verschillende updatekanalen ondersteunen.
 
-2. Ga in de [Intune-beheersjabloon](administrative-templates-windows.md#create-a-template) naar de instelling **Doelversie** en voer de gewenste versie in.
+2. Ga in de [Intune-beheersjabloon](administrative-templates-windows.md#create-the-template) naar de instelling **Doelversie** en voer de gewenste versie in.
 
     De instelling **Doelversie** lijkt op de volgende instelling:
 
-    ![Stel in de Intune-beheersjabloon de instelling Doelversie in voor Office](./media/administrative-templates-update-office/admx-enable-target-version-setting.png)
+    > [!div class="mx-imgBorder"]
+    > ![Stel in de Intune-beheersjabloon de instelling Doelversie in voor Office](./media/administrative-templates-update-office/admx-enable-target-version-setting.png)
 
 > [!IMPORTANT]
 >
@@ -167,7 +173,8 @@ U kunt deze stappen gebruiken om uw beleid te testen voordat u het beleid voor a
       1. Ga op het apparaat naar `C:\Program Files (x86)\Microsoft Office\Updates\Detection\Version`.
       2. Open bestand `VersionDescriptor.xml` en ga naar sectie `<Version>`. De beschikbare versie moet dezelfde versie zijn die u hebt ingevoerd in het Intune-beleid, bijvoorbeeld:
 
-          ![Controleer de versiesectie in het Office XML-bestand met de versiedescriptor](./media/administrative-templates-update-office/office-version-descriptor-xml-example.png)
+          > [!div class="mx-imgBorder"]
+          > ![Controleer de versiesectie in het Office XML-bestand met de versiedescriptor](./media/administrative-templates-update-office/office-version-descriptor-xml-example.png)
 
 4. Nadat de update is geïnstalleerd, moet de Office-app de nieuwe versie weergeven (bijvoorbeeld in het menu **Account**)
 

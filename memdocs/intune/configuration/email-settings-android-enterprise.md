@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,14 @@ search.appverid: MET150
 ms.reviewer: maholdaa
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: befd2ba9894d8b5d4f7fac32a96d4ed4cae6337a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ab544d285e49fd3914a8e9867c35ad9ed97f5fe8
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364250"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087037"
 ---
 # <a name="android-enterprise-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Android Enterprise-apparaatinstellingen voor het configureren van e-mail, verificatie en synchronisatie in Intune
-
-
 
 In dit artikel vindt u een overzicht en beschrijving van de verschillende e-mailinstellingen die u kunt beheren op Android Enterprise-apparaten. Gebruik deze instellingen voor het configureren van een e-mailserver, SSL voor het versleutelen van e-mailberichten en nog veel meer als onderdeel van uw beheeroplossing voor mobiele apparaten (MDM).
 
@@ -35,16 +33,16 @@ Zie voor meer informatie over e-mailprofielen in Intune [Configure email setting
 
 ## <a name="before-you-begin"></a>Voordat u begint
 
-Maak een [apparaatconfiguratieprofiel](email-settings-configure.md#create-a-device-profile) (kies het werkprofiel), of maak een [app-configuratiebeleid](../apps/app-configuration-policies-use-android.md).
+Maak een [apparaatconfiguratieprofiel](email-settings-configure.md) (kies het werkprofiel), of maak een [app-configuratiebeleid](../apps/app-configuration-policies-use-android.md).
 
 ## <a name="android-enterprise"></a>Android Enterprise
 
-- **E-mail-app**: Selecteer **Gmail** of **Nine Work**
-- **E-mailserver**: Geef de hostnaam van uw Exchange-server op. Voer bijvoorbeeld `outlook.office365.com` in.
+- **E-mail-app**: Selecteer **Gmail** of **Nine Work**.
+- **E-mailserver**: Voer de hostnaam van uw Exchange-server in. Voer bijvoorbeeld `outlook.office365.com` in.
 - **Het kenmerk Gebruikersnaam van AAD**: deze naam is het kenmerk dat Intune uit Azure Active Directory (Azure AD) ophaalt. In Intune wordt de gebruikersnaam die wordt gebruikt door dit profiel dynamisch gegenereerd. Uw opties zijn:
 
-  - **User Principal Name**: Hiermee wordt de naam opgehaald, zoals `user1` of `user1@contoso.com`
-  - **Gebruikersnaam**: Hiermee wordt alleen de naam opgehaald, zoals `user1`
+  - **User Principal Name**: Hiermee wordt de naam opgehaald, zoals `user1` of `user1@contoso.com`.
+  - **Gebruikersnaam**: Hiermee wordt alleen de naam opgehaald, zoals `user1`.
 
 - **Kenmerk van het e-mailadres van AAD**: Deze naam is het e-mailkenmerk dat Intune uit Azure AD ophaalt. In Intune wordt het e-mailadres dat voor dit profiel wordt gebruikt, dynamisch gegenereerd. Uw opties zijn:
   - **User Principal Name**:  Maakt gebruik van de volledige principal name, zoals `user1@contoso.com` of `user1`, als het e-mailadres.

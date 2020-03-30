@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/04/2020
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8bdb45edb1bcd518b4e55da40f179fb87cefb07c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7a49c71705755f82dcf33c63971ed6f11ffc849f
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79353668"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084975"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Geïmporteerde PKCS-certificaten configureren en gebruiken met Intune
 
@@ -45,8 +45,8 @@ Intune biedt ondersteuning voor het importeren van PFX-certificaten voor de volg
 - Android - Apparaatbeheerder
 - Android Enterprise - Volledig beheerd
 - Android Enterprise - Werkprofiel
-- iOS
-- Mac
+- iOS/iPadOS
+- macOS
 - Windows 10
 
 ## <a name="requirements"></a>Vereisten
@@ -213,28 +213,53 @@ Na het importeren van de certificaten naar Intune maakt u een **geïmporteerd PK
 
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecteer **Apparaten** > **Configuratieprofiel** > **Profiel maken**.
+2. Ga naar **Apparaten** > **Configuratieprofielen** > **Profiel maken**.
 
 3. Voer de volgende eigenschappen in:
+   - **Platform**: Kies het platform van uw apparaten.
+   - **Profiel**: Selecteer **Geïmporteerd PKCS-certificaat**
 
-   - **Naam** voor het profiel
-   - Een beschrijving instellen (optioneel)
-   - **Platform** waarvoor het profiel moet worden geïmplementeerd
-   - Stel **Profieltype** in op **Geïmporteerd PKCS-certificaat**
+4. Selecteer **Maken**.
 
-4. Selecteer **Instellingen** en voer de volgende eigenschappen in:
+5. Voer in **Basisinformatie** de volgende eigenschappen in:
+   - **Naam**: Voer een beschrijvende naam in voor het profiel. Geef uw profielen een naam zodat u ze later eenvoudig kunt identificeren. Een goede profielnaam is bijvoorbeeld *Geïmporteerd PKCS-certificaatprofiel voor hele bedrijf*.
+   - **Beschrijving**: Voer een beschrijving in voor het profiel. Deze instelling is optioneel, maar wordt aanbevolen.
+
+6. Selecteer **Volgende**.
+
+7. Voer de volgende eigenschappen in bij **Configuratie-instellingen**:
 
    - **Beoogd doeleinde**: Geef het beoogde doel op van de certificaten die voor dit profiel worden geïmporteerd. Beheerders kunnen certificaten importeren met verschillende beoogde doelen (zoals S/MIME-ondertekening of S/MIME-versleuteling). Het beoogde doel dat is geselecteerd in het certificaatprofiel komt overeen met het certificaatprofiel met de juiste geïmporteerde certificaten. Het beoogde doel is een tag om een groep geïmporteerde certificaten te groeperen. Dit garandeert niet dat certificaten die met die tag worden geïmporteerd, voldoen aan het beoogde doel.  
-   - **Geldigheidsduur van certificaat**: Tenzij de geldigheidsperiode in de certificaatsjabloon is gewijzigd, wordt deze optie standaard op één jaar ingesteld.
+
+   <!-- Not in new UI:
+   - **Certificate validity period**: Unless the validity period was changed in the certificate template, this option defaults to one year.
+   -->
    - **Sleutelarchiefprovider (KSP)** : Voor Windows selecteert u waar u de sleutels op het apparaat wilt opslaan.
 
-5. Selecteer **OK** > **Maken** om het profiel op te slaan.
+8. Selecteer **Volgende**.
+
+9. Wijs in **Bereiktags** (optioneel) een tag toe om het profiel te filteren op specifieke IT-groepen, zoals `US-NC IT Team` of `JohnGlenn_ITDepartment`. Zie [RBAC en bereiktags gebruiken voor gedistribueerde IT](../fundamentals/scope-tags.md) voor meer informatie over bereiktags.
+
+   Selecteer **Volgende**.
+
+10. Selecteer in **Toewijzingen** de gebruiker of groepen die uw profiel zullen ontvangen. Zie [Gebruikers- en apparaatprofielen toewijzen](../configuration/device-profile-assign.md) voor meer informatie over het toewijzen van profielen.
+
+    Selecteer **Volgende**.
+
+11. (*Alleen van toepassing op Windows 10*) Geef in **Toepasselijkheidsregels**de toepasselijkheidsregels op om de toewijzing van dit profiel te verfijnen. U kunt ervoor kiezen om het profiel al dan niet toe te wijzen op basis van de versie van het besturingssysteem of een apparaat.
+
+    Zie [Toepasselijkheidsregels](../configuration/device-profile-create.md#applicability-rules) in *Een apparaatprofiel maken in Microsoft Intune*voor meer informatie.
+
+    Selecteer **Volgende**.
+
+12. Controleer uw instellingen in **Beoordelen en maken**. Wanneer u Maken selecteert, worden uw wijzigingen opgeslagen en wordt het profiel toegewezen. Het beleid wordt ook weergegeven in de lijst met profielen.
 
 ## <a name="support-for-third-party-partners"></a>Ondersteuning voor externe partners
 
 De volgende partners leveren ondersteunde methoden of hulpprogramma's die u kunt gebruiken om PFX-certificaten te importeren in Intune.
 
 ### <a name="digicert"></a>DigiCert
+
 Als u de DigiCert PKI Platform-service gebruikt, kunt u het **importhulpprogamma voor Intune S/MIME-certificaten** van DigiCert gebruiken om PFX-certificaten te importeren in Intune. Als u dit hulpprogramma gebruikt, hoeft u de eerdere instructies in dit artikel in het gedeelte [PFX-certificaten importeren in Intune](#import-pfx-certificates-to-intune) niet meer te volgen.
 
 Zie https://knowledge.digicert.com/tutorials/microsoft-intune.html in de Knowledge Base van DigiCert voor meer informatie over het importhulpprogramma van DigiCert en hoe u dit hulpprogramma kunt verkrijgen.

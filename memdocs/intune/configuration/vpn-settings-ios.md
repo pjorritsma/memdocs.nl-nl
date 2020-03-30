@@ -1,11 +1,11 @@
 ---
 title: VPN-instellingen configureren voor iOS-/iPadOS-apparaten in Microsoft Intune - Azure | Microsoft Docs
-description: Voeg een VPN-configuratieprofiel toe of maak er een met configuratie-instellingen voor virtuele privénetwerken (VPN), inclusief de verbindingsgegevens, verificatiemethode en split tunneling in de basisinstellingen; de aangepaste VPN-instellingen met de id, en de paren van sleutels en waarden; de VPN-instellingen per app met inbegrip van Safari-URL's, en on-demand VPN's met SSID's of DNS-zoekdomeinen; en de proxy-instellingen die deel moeten uitmaken van een configuratiescript, IP- of FQDN-adres, en TCP-poort in Microsoft Intune op apparaten waarop iOS/iPadOS wordt uitgevoerd.
+description: U kunt op iOS/iPadOS-apparaten een VPN-configuratieprofiel toevoegen of maken met behulp van de VPN-configuratie-instellingen (virtueel particulier netwerk). Configureer de verbindingsgegevens, verificatiemethoden en split tunneling; aangepaste VPN-instellingen met de id en de sleutel-/waardeparen; de VPN-instellingen per app met inbegrip van Safari-URL's, en on-demand VPN's met SSID's of DNS-zoekdomeinen; en de proxyinstellingen met een configuratiescript, IP- of FQDN-adres en TCP-poort in Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 80ff24193c607003889c2246bb9199db795f1623
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 74e889419dcaaa75c2a31fe16931dddd84d1a967
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79360454"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086541"
 ---
 # <a name="add-vpn-settings-on-ios-and-ipados-devices-in-microsoft-intune"></a>VPN-instellingen toevoegen aan iOS- en iPadOS-apparaten in Microsoft Intune
 
@@ -82,10 +82,10 @@ Welke instellingen in de volgende lijst worden weergegeven, is afhankelijk van h
 
 - **Netwerktoegangsbeheer (NAC) inschakelen** (Cisco AnyConnect, Citrix SSO, F5 Access): Als u **Ik ga akkoord** kiest, wordt de apparaat-id opgenomen in het VPN-profiel. Deze id kan worden gebruikt voor verificatie bij de VPN om netwerktoegang toe te staan of te voorkomen.
 
-    **Wanneer u Cisco AnyConnect gebruikt met ISE**, moet u het volgende doen:
+  **Wanneer u Cisco AnyConnect gebruikt met ISE**, moet u het volgende doen:
 
-    - Als u dit nog niet hebt gedaan, integreert u ISE met Intune voor NAC zoals beschreven onder **Microsoft Intune configureren als MDM-server** in de [beheerdershandleiding Cisco Identity Services Engine](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html).
-    - NAC is ingeschakeld in het VPN-profiel.
+  - Als u dit nog niet hebt gedaan, integreert u ISE met Intune voor NAC zoals beschreven onder **Microsoft Intune configureren als een MDM-server** in de [beheerdershandleiding Cisco Identity Services Engine](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html).
+  - NAC is ingeschakeld in het VPN-profiel.
 
   **Wanneer u Citrix SSO met Gateway gebruikt**, moet u ervoor zorgen dat:
 
@@ -107,6 +107,34 @@ Welke instellingen in de volgende lijst worden weergegeven, is afhankelijk van h
 ## <a name="ikev2-settings"></a>IKEv2-instellingen
 
 Deze instellingen zijn van toepassing wanneer u het **verbindingstype** > **IKEv2** kiest.
+
+- **Permanente VPN**: Met **Inschakelen** zal een VPN-client automatisch verbinding maken en opnieuw verbinding maken met het VPN. AlwaysOn VPN-verbindingen blijven verbonden of maken direct verbinding wanneer gebruikers hun apparaat vergrendelen, het apparaat opnieuw wordt opgestart of het draadloze netwerk wordt gewijzigd. Als deze optie is ingesteld op **Uitschakelen** (standaard), wordt permanente VPN voor alle VPN-clients uitgeschakeld. Wanneer deze functie is ingeschakeld, moet u ook het volgende configureren:
+
+  - **Netwerkinterface**: Alle IKEv2-instellingen zijn alleen van toepassing op de netwerkinterface die u kiest. Uw opties zijn:
+    - **Wi-Fi en mobiel** (standaard): De IKEv2-instellingen zijn van toepassing op de Wi-Fi- en mobiele interfaces op het apparaat.
+    - **Mobiel**: De IKEv2-instellingen zijn alleen van toepassing op de mobiele interface op het apparaat. Selecteer deze optie als u implementeert op apparaten waarop de Wi-Fi-interface is uitgeschakeld of verwijderd.
+    - **Wi-Fi**: De IKEv2-instellingen zijn alleen van toepassing op de Wi-Fi-interface op het apparaat.
+  - **Gebruikers kunnen VPN-configuratie uitschakelen**: Als u **Inschakelen** kiest, kunnen gebruikers permanente VPN uitschakelen. Als u **Uitschakelen** (standaard) kiest, kunnen gebruikers permanente VPN niet uitschakelen. De standaardwaarde voor deze instelling is de veiligste optie.
+  - **Voicemail**: Kies wat er met voicemailverkeer gebeurt wanneer permanente VPN is ingeschakeld. Uw opties zijn:
+    - **Netwerkverkeer gedwongen omleiden via VPN** (standaard): Deze instelling is de veiligste optie.
+    - **Toestaan dat netwerkverkeer buiten VPN worden doorgevoerd**
+    - **Netwerkverkeer verwijderen**
+  - **AirPrint**: Kies wat er met AirPrint-verkeer gebeurt wanneer permanente VPN is ingeschakeld. Uw opties zijn:
+    - **Netwerkverkeer gedwongen omleiden via VPN** (standaard): Deze instelling is de veiligste optie.
+    - **Toestaan dat netwerkverkeer buiten VPN worden doorgevoerd**
+    - **Netwerkverkeer verwijderen**
+  - **Mobiele services**: Kies op iOS 13.0+ wat er met mobiel verkeer gebeurt wanneer permanente VPN is ingeschakeld. Uw opties zijn:
+    - **Netwerkverkeer gedwongen omleiden via VPN** (standaard): Deze instelling is de veiligste optie.
+    - **Toestaan dat netwerkverkeer buiten VPN worden doorgevoerd**
+    - **Netwerkverkeer verwijderen**
+  - **Toestaan dat verkeer van niet-systeemeigen vastgezette netwerk-apps buiten VPN worden doorgevoerd**: Een captive netwerk verwijst gewoonlijk naar Wi-Fi-hotspots zoals die in restaurants en hotels. Uw opties zijn:
+    - **Nee**: Het verkeer van alle CN-apps (Captive Networking) wordt omgeleid via de VPN-tunnel.
+    - **Ja, alle apps**: Het verkeer van alle CN-apps mag het VPN omzeilen.
+    - **Ja, specifieke apps**: **Voeg** een lijst toe van de CN-apps waarvan het verkeer het VPN mag omzeilen. Voer de bundel-id's van CN-app in. Voer bijvoorbeeld `com.contoso.app.id.package` in.
+
+  - **Toestaan dat verkeer van Captive Websheet-apps buiten het VPN passeert**: Captive WebSheet is een ingebouwde webbrowser waarin captive aanmelding wordt afgehandeld. Met **Inschakelen** mag het verkeer van browser-apps het VPN omzeilen. Met **Uitschakelen** (standaard) moet WebSheet-verkeer gebruikmaken van permanente VPN. De standaardwaarde is de veiligste optie.
+  - **Keepalive-interval voor Network Address Translation (NAT) (seconden)** : Om verbonden te blijven met het VPN, verzendt het apparaat netwerkpakketten om actief te blijven. Voer een waarde van 20 tot 1440 seconden in voor de frequentie waarmee deze pakketten worden verzonden. Voer bijvoorbeeld de waarde `60` in als u wilt dat er elke 60 seconden netwerkpakketten naar het VPN worden verzonden. Deze waarde is standaard ingesteld op `110` seconden.
+  - **De keepalive-interval voor NAT offloaden naar hardware als het apparaat in de slaapstand staat**: Wanneer een apparaat in de slaapstand staat, zal NAT bij de instelling **Inschakelen** (standaard) continu Keep-Alive-pakketten verzenden, zodat het apparaat verbonden blijft met het VPN. Met **Blokkeren** is deze functie uitgeschakeld.
 
 - **Externe id**: voer het netwerk-IP-adres, de FQDN, de UserFQDN of de ASN1DN van de IKEv2-server in. Voer bijvoorbeeld `10.0.0.3` of `vpn.contoso.com` in. Normaal gesproken voert u dezelfde waarde in als bij [**Verbindingsnaam**](#base-vpn-settings) (in dit artikel). Maar dit is afhankelijk van de instellingen van uw IKEv2-server.
 
@@ -193,8 +221,8 @@ Deze instellingen zijn van toepassing wanneer u het **verbindingstype** > **IKEv
   - **SSID's of DNS-zoekdomeinen**: Selecteer of voor deze voorwaarde het draadloze netwerk,  **SSID's** of **DNS-zoekdomeinen** worden gebruikt. Kies **Toevoegen** om een of meerdere SSID's of zoekdomeinen te configureren.
   - **URL-tekenreekstest**: Optioneel. Voer een URL die door de regel als een test wordt gebruikt. Als het apparaat zonder omleiding toegang wil verkrijgen tot deze URL, wordt de VPN-verbinding gestart. Het apparaat maakt dan verbinding met de doel-URL. De gebruiker ziet de tekenreekstestsite voor de URL niet.
 
-    Een voorbeeld van een URL-tekenreekstest is een controlewebserver-URL die de apparaatcompatibiliteit controleert voordat u verbinding maakt met de VPN-verbinding. Een andere mogelijkheid is dat de URL de VPN-verbinding voor een site controleert voordat het apparaat verbinding maakt met de doel-URL via de VPN-verbinding.
-.
+    Een voorbeeld van een URL-tekenreekstest is een controlewebserver-URL die de apparaatcompatibiliteit controleert voordat u verbinding maakt met de VPN-verbinding. Een andere mogelijkheid is dat de URL de VPN-verbinding voor een site controleert voordat het apparaat via de VPN-verbinding verbinding maakt met de doel-URL.
+
   - **Domeinactie**: Kies een van de volgende items:
     - Verbinding maken indien nodig
     - Nooit verbinding maken

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0733ac48aa39f611db43164137d129a3248f13d4
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 936dc5d4167252fcb2280ca3c9aa8b450a924a98
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342813"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083641"
 ---
 # <a name="manage-web-access-using-a-microsoft-intune-policy-protected-browser"></a>Webtoegang beheren via een met Microsoft Intune-beleid beveiligde browser
 
@@ -88,6 +88,9 @@ Omdat Managed Browser of Microsoft Edge niet worden beheerd door Intune, kunnen 
 ## <a name="conditional-access-for-protected-browsers"></a>Voorwaardelijke toegang voor de beveiligde browsers
 
 Managed Browser is nu een goedgekeurde client-app voor voorwaardelijke toegang. Dit betekent dat u de mobiele browsertoegang kunt beperken tot met Azure AD verbonden web-apps waarbij gebruikers alleen Managed Browser kunnen gebruiken en toegang vanaf andere niet-beveiligde browsers zoals Safari of Chrome wordt geblokkeerd. Deze beveiliging kan worden toegepast op Azure-resources zoals Exchange Online en SharePoint Online, het Microsoft 365 Office-beheercentrum en zelfs on-premises sites die u beschikbaar hebt gemaakt voor externe gebruikers via de [Azure AD-toepassingsproxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started). 
+
+> [!NOTE]
+> Nieuwe webclips (vastgemaakte webtoepassingen) op iOS-apparaten worden geopend in Microsoft Edge in plaats van in de Intune Managed Browser wanneer ze in een beveiligde browser moeten worden geopend. Voor oudere iOS-webclips moet u een nieuw doel opgeven om ervoor te zorgen dat ze worden geopend in Microsoft Edge in plaats van in de Managed Browser.
 
 Als u met Azure AD verbonden web-apps wilt beperken tot het gebruik van Intune Managed Browser op mobiele platforms, kunt u voorwaardelijk toegangsbeleid maken waarbij goedgekeurde clienttoepassingen worden vereist. 
 

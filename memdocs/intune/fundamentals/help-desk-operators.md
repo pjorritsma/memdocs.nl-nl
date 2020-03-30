@@ -17,12 +17,12 @@ ms.reviewer: sumitp
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ec804aa200e35391c5b283d6e26ba87002e271f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 07aceda512163513632d124d3e17d1041069b229
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359024"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085817"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>De portal voor probleemoplossing gebruiken om gebruikers in uw bedrijf te helpen
 
@@ -65,7 +65,7 @@ U kunt het deelvenster **Probleemoplossing** gebruiken om gebruikersgegevens wee
 | ---  | ---  | ---         |
 | 1.   | Accountstatus  | Geeft de status van de huidige Intune-tenant weer als **Actief** of **Inactief**.       |
 | 2.   | Gebruikersselectie  | De naam van de momenteel geselecteerde gebruiker. Klik op **Gebruiker wijzigen** om een nieuwe gebruiker te kiezen.       |
-| 3.   | Gebruikersstatus  | Geeft de status weer van de Intune-licentie van de gebruiker, het aantal apparaten, de nalevingsstatus van elk apparaat, het aantal apps en de nalevingsstatus van de apps.       |
+| 3.   | Gebruikersstatus  | Geeft de status weer van de Intune-licentie van de gebruiker, het aantal apparaten en de compliance van elk apparaat.       |
 | 4.   | Gebruikersgegevens  | U kunt de lijst gebruiken om de gegevens te selecteren die u in het deelvenster wilt weergeven. <br>U kunt de volgende selecties maken: <ul><li>Client-apps<li>Nalevingsbeleid<li> Configuratiebeleid<li>Beleid voor app-beveiliging <li>Registratiebeperkingen</ul>      |
 | 5.   | Groepslidmaatschap  | Hiermee geeft u de groepen weer waarvan de geselecteerde gebruiker momenteel lid is.       |
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/08/2020
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17a3a3b38b28eda0e4bde9c353482d0234fa3329
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5a98b57fe8cc2d9d2af3c0095297eb676796029f
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354318"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085212"
 ---
 # <a name="automate-email-and-add-actions-for-noncompliant-devices-in-intune"></a>E-mail automatiseren en acties voor niet-compatibele apparaten toevoegen in Intune
 
@@ -40,7 +40,16 @@ Er zijn verschillende soorten acties:
 
 - **Apparaat markeren als niet-compatibel**: maak een schema (met een aantal dagen) waarna het apparaat wordt gemarkeerd als niet-compatibel. U kunt de actie zodanig configureren dat deze onmiddellijk in werking treedt, maar u kunt de gebruiker ook een respijtperiode bieden om te voldoen aan het nalevingsbeleid.
 
-In dit artikel leest u informatie over:
+- **Het niet-compatibele apparaat buiten gebruik stellen**: Met deze actie verwijdert u alle bedrijfsgegevens van het apparaat en verwijdert u het apparaat uit Intune-beheer. Er wordt een minimale planning van 30 dagen ondersteund om te voorkomen dat een apparaat per ongeluk wordt gewist. Deze actie wordt ondersteund op de volgende platforms:
+  - Android
+  - iOS
+  - macOS
+  - Windows 10 Mobile
+  - Windows Phone 8.1 en hoger
+
+  Meer informatie over het [buiten gebruik stellen van apparaten](../remote-actions/devices-wipe.md#retire).
+  
+  In dit artikel leest u informatie over:
 
 - Een sjabloon voor berichtmeldingen maken
 - Een actie voor niet-naleving maken, zoals het verzenden van een e-mail of het extern vergrendelen van een apparaat
@@ -76,7 +85,7 @@ Maak een sjabloon voor berichtmeldingen om een e-mail naar uw gebruikers te vers
    - **E-mailvoettekst - Bedrijfslogo opnemen**
    - **E-mailvoettekst - Contactgegevens opnemen**
 
-   Het logo dat u uploadt als onderdeel van de huisstijl voor de bedrijfsportal, zal worden gebruikt voor e-mailsjablonen. Zie [Aanpassing bedrijfshuisstijl](../apps/company-portal-app.md#company-identity-branding-customization) voor meer informatie over de huisstijl voor de bedrijfsportal.
+   Het logo dat u uploadt als onderdeel van de huisstijl voor de bedrijfsportal, zal worden gebruikt voor e-mailsjablonen. Zie [Aanpassing bedrijfshuisstijl](../apps/company-portal-app.md#customizing-the-user-experience) voor meer informatie over de huisstijl voor de bedrijfsportal.
 
    ![Voorbeeld van een compatibel meldingsbericht in Intune](./media/actions-for-noncompliance/actionsfornoncompliance-1.PNG)
 
@@ -112,11 +121,13 @@ Naast de standaardactie om apparaten te markeren als niet-compatibel, kunt u opt
 
    - **U kunt het niet-compatibele apparaat als volgt op afstand vergrendelen**: Als het apparaat niet compatibel is, vergrendelt u het apparaat. De gebruiker moet een pincode of wachtwoord invoeren om het apparaat te ontgrendelen.
 
-5. Een **planning** configureren: Voer het aantal dagen (0 tot 365) na niet-naleving in voor het activeren van de actie op apparaten van gebruikers. Na deze respijtperiode kunt u een beleid voor [voorwaardelijke toegang](conditional-access-intune-common-ways-use.md) afdwingen. Als u **0** (nul) dagen invoert, wordt de voorwaardelijke toegang **onmiddellijk** van kracht. Als bijvoorbeeld een apparaat niet-compatibel is, gebruikt u voorwaardelijke toegang om onmiddellijk toegang tot e-mail, SharePoint en andere organisatieresources te blokkeren.
+   - **Het niet-compatibele apparaat buiten gebruik stellen**: Wanneer het apparaat niet compatibel is, verwijdert u alle bedrijfsgegevens van het apparaat en verwijdert u het apparaat uit Intune-beheer. Er wordt een minimale planning van **30** dagen ondersteund om te voorkomen dat u een apparaat per ongeluk wist.
+
+5. Een **planning** configureren: Voer het aantal dagen (0 tot 365) na niet-naleving in voor het activeren van de actie op apparaten van gebruikers. (*Het niet-compatibele apparaat buiten gebruik stellen* ondersteunt een minimum van 30 dagen.) Na deze respijtperiode kunt u een beleid voor [voorwaardelijke toegang](conditional-access-intune-common-ways-use.md) afdwingen. Als u **0** (nul) dagen invoert, wordt de voorwaardelijke toegang **onmiddellijk** van kracht. Als bijvoorbeeld een apparaat niet-compatibel is, gebruikt u voorwaardelijke toegang om onmiddellijk toegang tot e-mail, SharePoint en andere organisatieresources te blokkeren.
 
    Wanneer u een compliancebeleid maakt, wordt de actie **Het apparaat als niet-compatibel markeren** automatisch gemaakt en ingesteld op **0** dagen (onmiddellijk). Wanneer het apparaat met deze actie incheckt, wordt het apparaat onmiddellijk gemarkeerd als niet-compatibel. Als u ook voorwaardelijke toegang, wordt voorwaardelijke toegang automatisch geactiveerd. Als u een respijtperiode wilt toestaan, wijzigt u de **Planning** in de actie **Het apparaat als niet-compatibel markeren**.
 
-   In uw compliancebeleid wilt u bijvoorbeeld ook de gebruiker op de hoogte stellen. U kunt de actie **E-mail verzenden naar de eindgebruiker** toevoegen. In de actie **E-mail verzenden** stelt u de **Planning** in op twee dagen. Als het apparaat of de eindgebruiker op dag twee nog steeds wordt gemarkeerd als niet-compatibel, is uw e-mail verzonden op dag twee. Als u de gebruiker op dag vijf nog een keer wilt mailen over de niet-compatibele status, voegt u nog een actie toe en stelt u de **Planning** in op vijf dagen.
+  In uw compliancebeleid wilt u bijvoorbeeld ook de gebruiker op de hoogte stellen. U kunt de actie **E-mail verzenden naar de eindgebruiker** toevoegen. In de actie **E-mail verzenden** stelt u de **Planning** in op twee dagen. Als het apparaat of de eindgebruiker op de tweede dag nog steeds wordt beoordeeld als niet-compatibel, wordt uw e-mail op de tweede dag verzonden. Als u de gebruiker op de vijfde dag nog een keer wilt mailen over de niet-compatibele status, voegt u nog een actie toe en stelt u de **Planning** in op vijf dagen.
 
    Voor meer informatie over compliance en de ingebouwde acties, raadpleegt u het [complianceoverzicht](device-compliance-get-started.md).
 

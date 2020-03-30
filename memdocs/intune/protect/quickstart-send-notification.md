@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe62fa8082923b960773ce3ca45654a541132ca6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 1e41ed4d5de66e1ca9573145f865cbfce45f5245
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79338952"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084785"
 ---
 # <a name="quickstart-send-notifications-to-noncompliant-devices"></a>Quickstart: Meldingen verzenden naar niet-compatibele apparaten
 
@@ -66,9 +66,9 @@ Maak een sjabloon voor berichtmeldingen om een e-mail naar uw gebruikers te vers
 
 Raadpleeg de volgende artikelen voor meer details over het instellen van uw bedrijfsnaam, de contactgegevens van uw bedrijf en het bedrijfslogo:
 
-- [Bedrijfsinformatie en privacyverklaring](../apps/company-portal-app.md#company-information-and-privacy-statement)
+- [Bedrijfsinformatie en privacyverklaring](../apps/company-portal-app.md#configuration)
 - [Ondersteuningsinformatie](../apps/company-portal-app.md#support-information)
-- [Aanpassing bedrijfshuisstijl](../apps/company-portal-app.md#company-identity-branding-customization)
+- [De gebruikerservaring aanpassen](../apps/company-portal-app.md#customizing-the-user-experience).
 
 ## <a name="add-a-noncompliance-policy"></a>Een beleid voor niet-compatibiliteit toevoegen
 

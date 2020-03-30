@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6c2bacea3e1e87e6bd1a14c14b22bd6f4c2870fd
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d6cddd94400874c508a31b11b22fa4417798e2da
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339030"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084780"
 ---
 # <a name="view-and-correct-personal-data"></a>Persoonlijke gegevens weergeven en corrigeren
 
@@ -37,7 +37,7 @@ Intune-beheerders kunnen bepaalde persoonlijke gegevens weergeven op basis van d
 Beheerders kunnen persoonlijke gegevens van de eindgebruiker in verschillende blades in de gebruikersinterface van Intune zien. In de volgende artikelen wordt uitgelegd waartoe informatiebeheerders wel en geen toegang hebben:
 - In [Apparaatdetails weergeven](../remote-actions/device-inventory.md) in Intune wordt uitgelegd hoe u de details van een apparaat van een eindgebruiker kunt weergeven.
 - In [App-gegevens en -toewijzingen controleren](../apps/apps-monitor.md) wordt uitgelegd hoe u details over geïnstalleerde apps op een apparaat van een eindgebruiker kunt weergeven.
-- Het artikel [Welke gegevens kan mijn bedrijf zien wanneer ik mijn apparaat inschrijf?](https://docs.microsoft.com/user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune) bevat een lijst met gegevens voor eindgebruikers van alle gegevens die hun bedrijf wel en niet kunnen zien. U kunt uw gebruikers het best vertellen wat voor soort gegevens u verzamelt en waarom u die wilt verzamelen. Dit artikel kan de eerste stap in die transparantie zijn.
+- Het artikel [Welke gegevens kan mijn bedrijf zien wanneer ik mijn apparaat inschrijf?](https://docs.microsoft.com/mem/intune/user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune) bevat een lijst met gegevens voor eindgebruikers van alle gegevens die hun bedrijf wel en niet kunnen zien. U kunt uw gebruikers het beste vertellen wat voor soort gegevens u verzamelt en waarom u die wilt verzamelen. Dit artikel kan de eerste stap in die transparantie zijn.
 
 ### <a name="who-can-view-the-data"></a>Wie kan de gegevens bekijken?
 
@@ -49,7 +49,7 @@ U vindt meer informatie over de Microsoft-procedures voor gegevens in de voorwaa
 
 ## <a name="correct-end-user-personal-data"></a>Persoonlijke gegevens van eindgebruikers corrigeren
 
-Beheerders kunnen specifieke informatie over apparaten of apps niet bijwerken. Als eindgebruikers persoonlijke gegevens willen corrigeren (zoals de naam van het apparaat), moeten ze dit direct op hun apparaat doen. De wijzigingen worden de volgende keer dat ze verbinding maken met Intune gesynchroniseerd.
+Beheerders kunnen apparaat- of app-specifieke gegevens niet bijwerken. Als eindgebruikers persoonlijke gegevens willen corrigeren (zoals de naam van het apparaat), moeten ze dit direct op hun apparaat doen. De wijzigingen worden de volgende keer dat ze verbinding maken met Intune gesynchroniseerd.
 
 
 ## <a name="next-steps"></a>Volgende stappen

@@ -6,24 +6,24 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/22/2019
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 7fc95d17-098e-4da5-8a09-a96476569dd9
-ms.reviewer: srik
+ms.reviewer: crisk
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b746317ef15065af246cfd977f6e9d745ef4dea7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: cf732907b9123dfe8cbd72970556ecfbb5380733
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79362677"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086033"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Ondersteuning voor Microsoft Intune krijgen
 
@@ -35,7 +35,6 @@ Als Intune-beheerder kunt u de optie **Help en ondersteuning** gebruiken om vanu
 > Neem voor technische ondersteuning voor externe producten die met Intune werken (zoals SaaSwedo, Cisco of Lookout), contact op met de leverancier van dat product. Open pas een ondersteuningsaanvraag voor Intune als u zeker weet dat het andere product juist is geconfigureerd.
 >
 > Raadpleeg de sectie [Probleemoplossing](help-desk-operators.md) in de Intune-documentatie voor informatie over het oplossen van problemen met betrekking tot Microsoft Intune.
-
 
 ## <a name="help-and-support-experience"></a>Help en ondersteuning-ervaring
 
@@ -52,10 +51,9 @@ Wanneer u een nieuw gemaakte tenant voor Intune gebruikt, is het mogelijk dat *H
 
 - *Er is een onbekend probleem opgetreden. Vernieuw de pagina, maar als het probleem zich blijft voordoen, dient u een ondersteuningsaanvraag in via het [M365-beheercentrum](https://admin.microsoft.com) en verwijst u naar de gegeven sessie-id.*
 
-De foutdetails bestaan onder andere uit een *sessie-id*, *extensie*gegevens en meer. 
- 
-Dit probleem treedt op wanneer u uw nieuwe tenantaccount nog niet hebt geverifieerd via het **M365-beheercentrum** op https://admin.microsoft.com of de **Office 365-portal** op https://portal.office.com. U kunt dit probleem oplossen door de koppeling naar het *M365-beheercentrum* in het bericht te selecteren of door naar https://portal.office.com te gaan en u aan te melden. Na verificatie op beide sites hebt u toegang tot *Help en ondersteuning* voor Intune.
+De foutdetails bestaan onder andere uit een *sessie-id*, *extensie*gegevens en meer.
 
+Dit probleem treedt op wanneer u uw nieuwe tenantaccount niet hebt geverifieerd via het **M365-beheercentrum** op https://admin.microsoft.com of de **Office 365-portal** op https://portal.office.com. U kunt dit probleem oplossen door de koppeling naar het *M365-beheercentrum* in het bericht te selecteren of door naar https://portal.office.com te gaan en u aan te melden. Na verificatie op beide sites hebt u toegang tot *Help en ondersteuning* voor Intune.
 
 **Toegang tot Help en ondersteuning**:
 
@@ -67,18 +65,28 @@ Dit probleem treedt op wanneer u uw nieuwe tenantaccount nog niet hebt geverifie
   > Als uw exemplaar van Intune wordt gehost in de privécloud voor de overheid (ook wel een soevereine cloud genoemd, bijv. Azure Government) raadpleegt u [Intune-ondersteuning voor de privécloud voor de overheid](#intune-support-for-private-cloud-for-government) verderop in dit artikel. De *Help en ondersteuning*-ervaring voor Intune komt pas volgend jaar beschikbaar voor de privécloud voor de overheid.
 
 - Vanuit het **Microsoft Endpoint Manager-beheercentrum** doet u het volgende:
-  - Nadat u een functiegebied voor Intune hebt geselecteerd, selecteert u de optie voor **Help en ondersteuning**.
-  - Selecteer vanuit elk willekeurig knooppunt in het Microsoft Endpoint Manager-beheercentrum het **?** . in de rechterbovenhoek van de portal en gebruik vervolgens de vervolgkeuzelijst om de service te selecteren waarvoor u hulp wilt. Het pictogram **?** in het Microsoft Endpoint Manager-beheercentrum ondersteunt meerdere services, en u moet de specifieke service selecteren waarbij u hulp nodig hebt.  
 
-    ![Uw service selecteren](./media/get-support/select-a-service.png)
+  - Selecteer vanuit elk willekeurig knooppunt in het Microsoft Endpoint Manager-beheercentrum het **?** . in de rechterbovenhoek van de portal en gebruik vervolgens de vervolgkeuzelijst om het beheertype te selecteren waarvoor u hulp wilt. Het Microsoft Endpoint Manager-beheercentrum ondersteunt de volgende beheertypen. U moet het specifieke type selecteren waarbij u hulp nodig hebt, bijvoorbeeld Intune:
 
-    Nadat u een service hebt geselecteerd, ziet u de pagina *Help en ondersteuning* voor die service. Hier kunt u details opgeven voor [oplossingen zoeken](#find-solutions) voor een specifiek probleem.
+    - Configuration Manager (bevat Desktop Analytics)
+    - Intune
+    - Co-beheer  
 
-    Indien de resultaten van uw zoekopdracht niet overeenkomen met de verwachtingen voor uw service, controleert u of de juiste service is geselecteerd. De geselecteerde service wordt net na *Help en ondersteuning* weergegeven.  Als de juiste service niet is geselecteerd, klikt u op *Een service selecteren* om terug te gaan naar de vervolgkeuzelijst voor het selecteren van de service.
+    > [!div class="mx-imgBorder"]
+    > ![Een beheertype selecteren](./media/get-support/select-management-type.png)
 
-    ![Uw service bevestigen](./media/get-support/confirm-your-service-selection.png)
+    Nadat u een beheertype hebt geselecteerd, wordt de pagina *Help en ondersteuning* geopend, waar u details kunt opgeven voor [het zoeken naar oplossingen](#find-solutions) voor een specifiek probleem. Details worden gefilterd op basis van het geselecteerde beheertype.
 
-###  <a name="the-support-experience"></a>De ondersteuningservaring
+     Als het juiste beheertype niet is geselecteerd **(1)** , klikt u op *Een beheertype selecteren* **(2)** om terug te keren naar de vervolgkeuzelijst met beheertypen:
+
+    > [!div class="mx-imgBorder"]
+    > ![Het beheertype bevestigen](./media/get-support/confirm-management-selection.png)
+
+  - Als u Help en ondersteuning opent via **Probleemoplossing en ondersteuning** > **Help en ondersteuning**, wordt het geselecteerde beheertype niet weergegeven onder *Help en ondersteuning*.
+
+  - Als u inzoomt op een ander knooppunt, zoals *Apparaten*, *Apps* of *Gebruikers* en vervolgens *Help en ondersteuning* selecteert, kunt u geen beheertype selecteren en wordt het type niet weergegeven onder *Help en ondersteuning*. In dit geval wordt uitgegaan van *Intune*. Als u niet wilt dat de context Intune is, gebruikt u de optie **?** om een ander beheertype te selecteren.
+
+### <a name="the-support-experience"></a>De ondersteuningservaring
 
   Wanneer u Help en ondersteuning opent, verschijnt in de portal het venster **Hulp nodig?** :
 
@@ -144,8 +152,7 @@ Door ernstniveau **A** of **Kritiek** te selecteren, beperkt u zich tot een tele
 U hebt geen toegang meer tot de *Help en ondersteuning* van Azure om hulp te krijgen bij Intune, tenzij u een abonnement op een privécloud voor de overheid hebt.
 Als uw exemplaar van Intune niet in een privécloud voor de overheid wordt uitgevoerd, wordt u bij navigatie in *Help en ondersteuning* van Azure omgeleid naar de *Help en ondersteuning*-ervaring van Intune voor het maken en beheren van ondersteuningsincidenten:
 
-Wanneer u het navigatiedeelvenster **Help en ondersteuning** aan de linkerkant gebruikt of de optie **?** gebruikt om het deelvenster *Help* te openen en **Help en ondersteuning** selecteert, wordt de pagina *Help en ondersteuning* van Azure geopend. 
-
+Wanneer u het navigatiedeelvenster **Help en ondersteuning** aan de linkerkant gebruikt of de optie **?** gebruikt om het deelvenster *Help* te openen en **Help en ondersteuning** selecteert, wordt de pagina *Help en ondersteuning* van Azure geopend.
 
 Selecteer op deze pagina **+ Nieuwe ondersteuningsaanvraag** om het tabblad *Basis* van de pagina *Help en ondersteuning + Nieuwe ondersteuningsaanvraag* te openen.
 
@@ -160,10 +167,9 @@ Op deze pagina:
   
   ![Nieuwe ondersteuningsaanvraag](./media/get-support/new-request.png)
 
-
 ## <a name="intune-support-for-private-cloud-for-government"></a>Intune-ondersteuning voor de privécloud voor de overheid
 
-Als uw Intune-abonnement wordt gehost in de privécloud voor de overheid (ook wel een soevereine cloud genoemd, bijv. Azure Government), hebt u nog geen toegang tot de nieuwere Help en ondersteuning van Intune.  Gebruik in plaats daarvan de volgende informatie om ondersteuning te vragen voor Intune.
+Als uw Intune-abonnement wordt gehost in de privécloud voor de overheid (ook wel een soevereine cloud genoemd, bijvoorbeeld Azure Government), hebt u nog geen toegang tot de nieuwere Help en ondersteuning van Intune.  Gebruik in plaats daarvan de volgende informatie om ondersteuning te vragen voor Intune.
 
 ### <a name="create-an-online-support-ticket"></a>Een onlineondersteuningsticket maken
 

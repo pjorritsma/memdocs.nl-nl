@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0f475f6f204225e00424e08afb8c69e20e21e815
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4b8de67a77b2122c5db4dddbb82a4966c20e1936
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342020"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233522"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>App-beveiligingsbeleid maken en toewijzen
 
@@ -58,7 +58,7 @@ Wanneer u een app-beveiligingsbeleid maakt voor iOS/iPadOS- en Android-apps, vol
 
     De waarde **Platform** wordt ingesteld op basis van de bovenstaande keuze.
 
-    ![Schermopname van de pagina Basisinformatie van het deelvenster Beleid maken](/media/app-protection-policies/app-protection-add-policies-01.png)
+    ![Schermopname van de pagina Basisinformatie van het deelvenster Beleid maken](./media/app-protection-policies/app-protection-add-policies-01.png)
 
 5. Klik op **Volgende** om de pagina **Apps** weer te geven.<br>
     Op de pagina **Apps** kunt u kiezen hoe u dit beleid wilt toepassen op apps op verschillende apparaten. U moet minstens één app toevoegen.<p>
@@ -123,7 +123,7 @@ Om het effect van de wijzigingen onmiddellijk te zien, moet de eindgebruiker zic
     
     | Waarde/optie | Beschrijving |
     |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | Toepassen op apps op alle apparaattypen | Gebruik deze optie om uw beleid te richten op apps op apparaten met een beheerstatus. Kies **Nee** om toe te passen op specifieke apparaattypen. Zie [Beleidsregels voor app-beveiliging toepassen op basis van de apparaatbeheerstatus](#target-app-protection-policies-based-on-device-management-state) voor informatie |
+    | Toepassen op apps op alle apparaattypen | Gebruik deze optie om uw beleid te richten op apps op apparaten met een beheerstatus. Kies **Nee** om toe te passen op specifieke apparaattypen. Er is mogelijk extra app-configuratie nodig voor deze instelling. Zie [Beleidsregels voor app-beveiliging toepassen op basis van de apparaatbeheerstatus](#target-app-protection-policies-based-on-device-management-state) voor meer informatie. |
     |     Apparaattypen | Gebruik deze optie om op te geven of dit beleid van toepassing is op door MDM beheerde apparaten of op onbeheerde apparaten. Voor iOS-/iPadOS-APP-beleid selecteert u **Niet-beheerde** en **Beheerde** apparaten. Voor Android-APP-beleid maakt u een keuze uit **Niet-beheerd**, **Android-apparaatbeheerder** en **Android Enterprise**.  |
     | Openbare apps | Klik op **Openbare apps selecteren** om de apps te selecteren waarop u het wilt toepassen. |
     | Aangepaste apps | Klik op **Aangepaste apps selecteren** om aangepaste apps te selecteren op basis van een bundel-id. |
@@ -178,10 +178,9 @@ Voor het maken van deze beleidsregels bladert u naar **Apps** > **App-beveiligin
 - **Android-apparaatbeheerder**: Door Intune beheerde apparaten met de Android Device Administration-API.
 - **Android Enterprise**: Door Intune beheerde apparaten met Android Enterprise-werkprofielen of volledig apparaatbeheer van Android Enterprise.
 
-> [!NOTE]
-> Op Android-apparaten wordt gevraagd of de Intune-bedrijfsportal-app moet worden geïnstalleerd, ongeacht welk apparaattype is gekozen. Als u bijvoorbeeld 'Android Enterprise ' selecteert, wordt deze vraag toch gesteld aan gebruikers met niet-beheerde Android-apparaten.
+Op Android-apparaten wordt gevraagd of de Intune-bedrijfsportal-app moet worden geïnstalleerd, ongeacht welk apparaattype is gekozen. Als u bijvoorbeeld 'Android Enterprise ' selecteert, wordt deze vraag toch gesteld aan gebruikers met niet-beheerde Android-apparaten.
 
-Voor iOS/iPadOS zijn extra app-configuratie-instellingen vereist om APP-instellingen (beveiligingsbeleid voor apps) te richten op apps op apparaten die zijn ingeschreven bij Intune:
+Voor iOS/iPadOS zijn extra app-configuratie-instellingen nodig om de selectie 'Apparaattype' af te dwingen voor 'onbeheerde' apparaten. Deze configuraties communiceren aan de APP-service dat een bepaalde app wordt beheerd, en dat de APP-instellingen niet van toepassing zijn:
 
 - **IntuneMAMUPN** moet zijn geconfigureerd voor alle met MDM beheerde toepassingen. Zie [Gegevensoverdracht beheren tussen iOS-/iPadOS-apps met Microsoft Intune](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm) voor meer informatie.
 - **IntuneMAMDeviceID** moet zijn geconfigureerd voor alle door derden en met line-of-business MDM beheerde toepassingen. **IntuneMAMDeviceID** moet zijn geconfigureerd voor het apparaat-id-token. Bijvoorbeeld `key=IntuneMAMDeviceID, value={{deviceID}}`. Zie [App-configuratiebeleidsregels toevoegen voor beheerde iOS-/iPadOS-apparaten](app-configuration-policies-use-ios.md) voor meer informatie.

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4b706ea076ebcc239904a9ae918389ccafa287ec
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 462f9ca9618d16c0291792f86d00c46f641c6cc8
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339953"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084067"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Een apparaatprofiel maken in Microsoft Intune
 
@@ -52,7 +52,7 @@ Dit artikel:
    - **Beschrijving**: Voer een beschrijving in voor het profiel. Deze instelling is optioneel, maar wordt aanbevolen.
    - **Platform**: Kies het platform van uw apparaten. Uw opties zijn:  
 
-       - **Android**
+       - **Android-apparaatbeheerder**
        - **Android Enterprise**
        - **iOS/iPadOS**
        - **macOS**
@@ -68,12 +68,14 @@ Dit artikel:
        - [Delivery optimization](delivery-optimization-windows.md)
        - [Apparaatfuncties](device-features-configure.md)
        - [Apparaatbeperkingen](device-restrictions-configure.md)
+       - [Domeindeelname](domain-join-configure.md)
        - [Editie-upgrade en modusschakelaar](edition-upgrade-configure-windows-10.md)
        - [Onderwijs](education-settings-configure.md)
        - [E-mail](email-settings-configure.md)
        - [Endpoint Protection](../protect/endpoint-protection-configure.md)
        - [Identiteitsbescherming](../protect/identity-protection-configure.md)  
        - [Kiosk](kiosk-settings.md)
+       - [Microsoft Defender ATP](../protect/advanced-threat-protection.md)
        - [PKCS-certificaat](../protect/certficates-pfx-configure.md)
        - [PKCS-geïmporteerd certificaat](../protect/certificates-imported-pfx-configure.md)
        - [Voorkeursbestand](preference-file-settings-macos.md)
@@ -82,12 +84,12 @@ Dit artikel:
        - [Updatebeleid](../protect/software-updates-ios.md)
        - [VPN](vpn-settings-configure.md)
        - [Wi-Fi](wi-fi-settings-configure.md)
-       - [Microsoft Defender ATP](../protect/advanced-threat-protection.md)
        - [Windows Information Protection](../protect/windows-information-protection-configure.md)
 
      Als u bijvoorbeeld **iOS/iPadOS** selecteert als platform, zien uw opties voor het profieltype er ongeveer uit als het volgende profiel:
 
-     ![iOS-/iPadOS-profiel maken in Intune](./media/device-profile-create/create-device-profile.png)
+     > [!div class="mx-imgBorder"]
+     > ![iOS-/iPadOS-profiel maken in Intune](./media/device-profile-create/create-device-profile.png)
 
 4. Wanneer u klaar bent, selecteert u **OK** > **Maken** om uw wijzigingen op te slaan. Het profiel wordt gemaakt en weergegeven in de lijst.
 
@@ -138,7 +140,8 @@ Wanneer u het profiel aan de groepen toewijst, fungeren de regels voor toepassel
 
 1. Selecteer **Regels voor toepasselijkheid**. U kunt de **regel**, de **eigenschap** en de **editie van het besturingssysteem** kiezen:
 
-    ![Voeg een regel voor toepasselijkheid aan een apparaatconfiguratieprofiel toe in Microsoft Intune](./media/device-profile-create/applicability-rules.png)
+    > [!div class="mx-imgBorder"]
+    > ![Voeg een regel voor toepasselijkheid aan een apparaatconfiguratieprofiel toe in Microsoft Intune](./media/device-profile-create/applicability-rules.png)
 
 2. Kies in **Regel** of u gebruikers of groepen wilt opnemen of uitsluiten. Uw opties zijn:
 
@@ -184,7 +187,8 @@ Houd bij het maken van profielen rekening met de volgende aanbevelingen:
 
   In de volgende afbeelding ziet u een voorbeeld van een instelling die kan worden toegepast op gebruikers en/of apparaten:
 
-  ![Intune-beheersjabloon die van toepassing is op gebruikers en apparaten](./media/device-profile-create/setting-applies-to-user-and-device.png)
+  > [!div class="mx-imgBorder"]
+  > ![Intune-beheersjabloon die van toepassing is op gebruikers en apparaten](./media/device-profile-create/setting-applies-to-user-and-device.png)
 
 - Informeer uw gebruikers bij elk restrictief beleid dat u maakt over de wijziging. Als u bijvoorbeeld de wachtwoordvereiste wijzigt van 4 tekens in 6 tekens, laat dit dan aan uw gebruikers weten voordat u het beleid toewijst.
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eaaa9095becbcac7840d5babc2a099e7ec84af03
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: dbb8e5644390c589756af5a69f2fdd5a829866a1
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79362014"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084013"
 ---
 # <a name="use-and-manage-zebra-devices-with-zebra-mobility-extensions-in-microsoft-intune"></a>Zebra-apparaten gebruiken en beheren met Zebra Mobility Extensions in Microsoft Intune
-
-
 
 Intune bevat een uitgebreide set functies, waaronder apps beheren en apparaatinstellingen configureren. Deze ingebouwde functies en instellingen worden gebruikt om Android-apparaten te beheren die zijn gemaakt door Zebra Technologies. Deze apparaten worden ook wel Zebra-apparaten genoemd.
 
@@ -36,7 +34,9 @@ In dit artikel wordt beschreven hoe u Zebra Mobility Extensions (MX) gebruikt op
 
 Deze functie is van toepassing op:
 
-- Android
+- Android-apparaatbeheerder
+
+Gebruik [OEMConfig](android-oem-configuration-overview.md) voor Android Enterprise-apparaten.
 
 Uw bedrijf kan gebruikmaken van Zebra-apparaten voor de detailhandel, op de werkvloer en meer. Stel dat u een detailhandelaar bent en de verkoopmedewerkers in uw omgeving duizenden mobiele Zebra-apparaten gebruiken. Met Intune kunt u deze apparaten beheren als onderdeel van uw Mobile Device Management-oplossing (MDM).
 
@@ -139,14 +139,14 @@ Maak in Intune een apparaatconfiguratieprofiel:
 
     - **Naam**: Voer een beschrijvende naam in voor het nieuwe profiel.
     - **Beschrijving**: Voer een beschrijving in voor het profiel. Deze instelling is optioneel, maar wordt aanbevolen.
-    - **Platform**: Selecteer **Android**.
+    - **Platform**: Selecteer **Android-apparaatbeheer**.
     - **Profieltype**: Selecteer **MX-profiel (alleen Zebra)** .
 
 4. Voeg aan **MX-profiel in XML-indeling** het XML-profielbestand toe dat [u hebt geëxporteerd uit StageNow](#step-4-create-a-device-management-profile-in-stagenow) (in dit artikel).
 5. Selecteer **OK** > **Maken** om uw wijzigingen op te slaan. Het beleid wordt gemaakt en in de lijst weergegeven.
 
     > [!TIP]
-    > Uit veiligheidsoverwegingen wordt de profiel-XML-tekst pas weergegeven nadat u deze hebt opgeslagen. De tekst is versleuteld en u ziet alleen sterretjes (`****`). Ter referentie is het raadzaam om kopieën van de MX-profielen op te slaan voordat u deze aan Intune toevoegt.
+    > Uit veiligheidsoverwegingen wordt de profiel-XML-tekst niet meer weergegeven nadat u deze hebt opgeslagen. De tekst is versleuteld en u ziet alleen sterretjes (`****`). Ter referentie is het raadzaam om kopieën van de MX-profielen op te slaan voordat u deze aan Intune toevoegt.
 
 Het profiel is gemaakt, maar er gebeurt nog niets. Vervolgens kunt u [het profiel toewijzen](device-profile-assign.md) en [de status ervan controleren](device-profile-monitor.md).
 

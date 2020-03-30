@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f12ea7e320e3334d1925c8ab04905cd84ed56c82
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c57a201d71d3a8278499636c6ca794b437e11e9a
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79341656"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083807"
 ---
 # <a name="app-protection-policies-overview"></a>Overzicht van App-beveiligingsbeleid
 
@@ -205,6 +205,9 @@ Een voorbeeld van een persoonlijke context is een gebruiker die een nieuw docume
 Een voorbeeld van een werk- of zakelijke context is een gebruiker die de OneDrive-app start met behulp van een werkaccount. In de werkcontext kan deze gebruiker bestanden niet verplaatsen naar een persoonlijke opslaglocatie. Later, wanneer OneDrive wordt gebruikt voor een persoonlijk account, kunnen de gegevens op de persoonlijke OneDrive-locatie zonder beperkingen worden gekopieerd en verplaatst.
 
 Outlook heeft een gecombineerde weergave van e-mail met persoonlijke en zakelijke e-mail. In dit geval vraagt de Outlook-app om de Intune-pincode bij het starten van de app.
+
+  >[!NOTE]
+  > Hoewel Edge zich in de bedrijfscontext bevindt, kan de gebruiker opzettelijk OneDrive-bestanden uit de bedrijfscontext verplaatsen naar een onbekende persoonlijke cloudopslaglocatie. Zie [De lijst met toegestane of geblokkeerde sites voor Microsoft Edge opgeven](../apps/manage-microsoft-edge.md#specify-allowed-or-blocked-sites-list-for-microsoft-edge) en configureer de lijst met toegestane/geblokkeerde sites voor Edge om dit te voorkomen.
 
 Zie [MAM en meerdere identiteiten](apps-supported-intune-apps.md) voor meer informatie over meerdere identiteiten in Intune.
 

@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ab825416226ef0b395862ae26a934013136ca61b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ac81ceced473eacc32a3fca566f7c36eb7a262e2
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352264"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084881"
 ---
 # <a name="use-device-encryption-with-intune"></a>Apparaatversleuteling gebruiken met Intune
 
@@ -97,7 +97,7 @@ Nadat Intune een macOS-apparaat versleutelt met FileVault, kunt u op elk apparaa
 
 ### <a name="retrieve-personal-recovery-key-from-mem-encrypted-macos-devices"></a>Persoonlijke herstelsleutel ophalen van met MEM versleutelde macOS-apparaten
 
-Eindgebruikers kunnen hun persoonlijke herstelsleutel (FileVault-sleutel) ophalen met behulp van de Bedrijfsportal-app voor iOS. Het apparaat met de persoonlijke herstelsleutel moet zijn geregistreerd bij Intune en moet zijn versleuteld met FileVault via Intune. Met de Bedrijfsportal-app voor iOS kan de eindgebruiker een webpagina openen die de persoonlijke FileVault-herstelsleutel bevat. U kunt de herstelsleutel ook ophalen uit Intune door **Apparaten** > *het versleutelde en geregistreerde macOS-apparaat* > **Herstelsleutel ophalen** te selecteren. 
+Eindgebruikers kunnen hun persoonlijke herstelsleutel (FileVault-sleutel) ophalen met behulp van de iOS-bedrijfsportal-app, de Android-bedrijfsportal-app of via de Android Intune-app. Het apparaat met de persoonlijke herstelsleutel moet zijn geregistreerd bij Intune en moet zijn versleuteld met FileVault via Intune. Met de iOS-bedrijfsportal-app, Android-bedrijfsportal-app, de Android Intune-app of de Bedrijfsportal-website kunnen eindgebruikers de **FileVault**-herstelsleutel zien die nodig is om toegang te krijgen tot hun Mac-apparaten. Eindgebruikers kunnen **Apparaten** > *het versleutelde en ingeschreven macOS-apparaat* > **Herstelsleutel ophalen** selecteren. In de browser wordt de Webbedrijfsportal getoond waarin de herstelsleutel wordt weergegeven. 
 
 ## <a name="bitlocker-encryption-for-windows-10"></a>BitLocker-versleuteling voor Windows 10
 

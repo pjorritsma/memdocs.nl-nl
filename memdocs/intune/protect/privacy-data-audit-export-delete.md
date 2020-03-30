@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db3146bbaae3362e97c8c076823b58dbcd57c4af
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6aa9195e8d0559a106be323108487579eb068b91
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339069"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084817"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>Persoonlijke gegevens controleren, exporteren of verwijderen in Intune
 
@@ -66,7 +66,7 @@ Als u de persoonlijke gegevens van een eindgebruiker uit Intune wilt verwijderen
 Wanneer u de fabrieksinstellingen van het apparaat terugzet, worden alle bedrijfsgegevens en persoonlijke gegevens teruggezet naar de oorspronkelijke fabrieksinstellingen. Dit is bijvoorbeeld handig als u het apparaat aan een volgende werknemer wilt geven. Gebruikersbestanden, door de gebruiker geïnstalleerde toepassingen en niet-standaardinstellingen worden verwijderd. Deze gegevens worden binnen 30 dagen na de verwijderingsactie verwijderd uit de Intune-service.
 
 ### <a name="user-self-removal-from-intune-management"></a>De gebruiker verwijdert zichzelf uit Intune-beheer
-Gebruikers kunnen hun persoonlijke [Android-, Apple- of Windows-](https://docs.microsoft.com/user-help/unenroll-your-device-from-intune-android)apparaat uit Intune-beheer verwijderen zonder hulp van de beheerder.   
+Gebruikers kunnen hun persoonlijke [Android-, Apple- of Windows-](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-android)apparaat uit Intune-beheer verwijderen zonder hulp van de beheerder.   
 
 ### <a name="retire"></a>Buiten gebruik stellen
 Via de actie **Buiten gebruik stellen** worden door Intune ingerichte gegevens verwijderd, zoals bedrijfstoepassingen, gegevens over apps die door Intune worden beheerd, beleidsinstellingen en e-mailprofielen die via Intune worden ingericht. Bij deze actie blijven de persoonlijke gegevens van de gebruiker op het apparaat behouden.

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c30cc122931588149120efa10710627826c50e2c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 06d5e2163303b9766d41bcb0bd7581dc41bf6980
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79337964"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80219823"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>De hoofdgebruiker van een Intune-apparaat zoeken
 
@@ -43,8 +43,11 @@ De primaire gebruiker van een apparaat kan worden bijgewerkt voor Windows 10-app
 3. Selecteer een nieuwe gebruiker en kies **Selecteren**.
 
 Nadat de primaire gebruiker is bijgewerkt, wordt deze ook bijgewerkt in blades van Intune- en Azure AD-apparaten.
-
-De primaire gebruiker kan niet worden gewijzigd op Windows 10-apparaten die gezamenlijk worden beheerd.
+>[!NOTE]
+>1. Het kan 10 minuten duren voor updates van de primaire gebruiker tussen Eindpuntbeheer en Azure AD worden weergegeven.
+>2. De primaire gebruiker kan momenteel niet worden gewijzigd op Windows 10-apparaten die gezamenlijk worden beheerd. 
+>3. Als u de primaire gebruiker van het apparaat wijzigt, worden er geen wijzigingen aangebracht in het lokale groepslidmaatschap, zoals het toevoegen of verwijderen van gebruikers uit de lokale groep Administrators
+>4. Het wijzigen van de hoofdgebruiker heeft geen invloed op de 'Ingeschreven door'-gebruiker. 
 
 
 ## <a name="what-is-the-primary-user"></a>Wat is de hoofdgebruiker?

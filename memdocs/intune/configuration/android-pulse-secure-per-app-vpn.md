@@ -1,12 +1,11 @@
 ---
-title: Aangepast VPN-profiel per app voor Android
-titleSuffix: Microsoft Intune
-description: Meer informatie over het maken van een VPN-profiel per app maken voor Android-apparaten die worden beheerd met Microsoft Intune.
+title: Aangepast VPN-profiel per app voor Android in Microsoft Intune - Azure | Microsoft Docs
+description: Meer informatie over het maken van een VPN-profiel per app maken voor Android-apparaatbeheer-apparaten die worden beheerd met Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9fbcf60d3707097a323a05bf36d2cfe3902d5214
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d58ab666929e1e28cab4e19f2e2cec668f428452
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79340005"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083875"
 ---
 # <a name="use-a-microsoft-intune-custom-profile-to-create-a-per-app-vpn-profile-for-android-devices"></a>Een aangepast Microsoft Intune-profiel gebruiken voor het maken van een VPN-profiel per app voor Android-apparaten
 
@@ -44,14 +43,23 @@ Nadat u het beleid aan uw Android-apparaat of gebruikersgroepen hebt toegewezen,
 2. Selecteer **Apparaten** > **Configuratieprofielen** > **Profiel maken**.
 3. Voer de volgende eigenschappen in:
 
-    - **Naam**: Voer een beschrijvende naam in voor het profiel. Geef uw profielen een naam zodat u ze later eenvoudig kunt identificeren. Een goede profielnaam is bijvoorbeeld **Android VPN-profiel voor apps voor hele bedrijf**.
+    - **Platform**: Selecteer **Android-apparaatbeheer**.
+    - **Profiel**: Selecteer **VPN**.
+
+4. Selecteer **Maken**.
+5. Voer in **Basisinformatie** de volgende eigenschappen in:
+
+    - **Naam**: Voer een beschrijvende naam in voor het profiel. Geef uw profielen een naam zodat u ze later eenvoudig kunt identificeren. Een goede profielnaam is bijvoorbeeld **Android-apparaatbeheer VPN-profiel per app voor apps voor hele bedrijf**.
     - **Beschrijving**: Voer een beschrijving in voor het profiel. Deze instelling is optioneel, maar wordt aanbevolen.
-    - **Platform**: Selecteer **Android**.
-    - **Profieltype**: Selecteer **VPN**.
 
-4. Kies **Instellingen** > **Configureren**. Configureer vervolgens het VPN-profiel. Zie [VPN-instellingen configureren](vpn-settings-configure.md) en [VPN-instellingen voor Android-apparaten in Intune ](vpn-settings-android.md) voor meer informatie.
+6. Selecteer **Volgende**.
+7. Configureer in **configuratie-instellingen**de gewenste instellingen in het profiel:
 
-Noteer de waarde die u voor **Naam van de verbinding** opgeeft wanneer u het VPN-profiel maakt. Deze naam is nodig tijdens de volgend stap. Bijvoorbeeld **MyAppVpnProfile**.
+    - [VPN-instellingen voor Android-apparaatbeheer-apparaten](vpn-settings-android.md).
+
+    Noteer de waarde die u voor **Naam van de verbinding** invoert wanneer u het VPN-profiel maakt. Deze naam is nodig tijdens de volgend stap. In dit voorbeeld is de naam van de verbinding **MyAppVpnProfile**.
+
+8. Selecteer **Volgende**en ga door met het maken van uw profiel. Zie [Een VPN-profiel maken](vpn-settings-configure.md#create-the-profile) voor meer informatie.
 
 ## <a name="step-2-create-a-custom-configuration-policy"></a>Stap 2: Een aangepast configuratiebeleid maken
 
@@ -61,7 +69,7 @@ Noteer de waarde die u voor **Naam van de verbinding** opgeeft wanneer u het VPN
 
     - **Naam**: Voer een beschrijvende naam in voor het aangepaste profiel. Geef uw profielen een naam zodat u ze later eenvoudig kunt identificeren. Een goede profielnaam is bijvoorbeeld **Aangepast OMA-URI Android VPN-profiel voor hele bedrijf**.
     - **Beschrijving**: Voer een beschrijving in voor het profiel. Deze instelling is optioneel, maar wordt aanbevolen.
-    - **Platform**: Selecteer **Android**.
+    - **Platform**: Selecteer **Android-apparaatbeheer**.
     - **Profieltype**: Selecteer **Aangepast**.
 
 4. Kies **Instellingen** > **Configureren**.
@@ -72,7 +80,8 @@ Noteer de waarde die u voor **Naam van de verbinding** opgeeft wanneer u het VPN
     - **Gegevenstype**: Voer **Tekenreeks** in.
     - **Waarde**: Voer een lijst met door puntkomma's gescheiden pakketten in om aan het profiel te koppelen. Als u bijvoorbeeld wilt dat Excel en de Google Chrome-browser de VPN-verbinding gebruiken, voert u `com.microsoft.office.excel;com.android.chrome` in.
 
-![Voorbeeld van een aangepast VPN-beleid per app voor Android](./media/android-pulse-secure-per-app-vpn/android_per_app_vpn_oma_uri.png)
+    > [!div class="mx-imgBorder"]
+    >![Voorbeeld van een aangepast VPN-beleid per app voor Android-apparaatbeheer](./media/android-pulse-secure-per-app-vpn/android_per_app_vpn_oma_uri.png)
 
 ### <a name="set-your-app-list-to-blacklist-or-whitelist-optional"></a>Uw lijst met apps instellen als een blacklist of whitelist (optioneel)
 
@@ -87,3 +96,8 @@ Gebruik de waarde **BLACKLIST** om een lijst met apps in te voeren die de VPN-ve
 ## <a name="step-3-assign-both-policies"></a>Stap 3: Beide beleidsregels toewijzen
 
 [Wijs beide apparaatprofielen toe](device-profile-assign.md) aan de vereiste gebruikers of apparaten.
+
+## <a name="next-steps"></a>Volgende stappen
+
+- Zie [Android device settings to configure VPN](vpn-settings-android.md) (Android-apparaatinstellingen voor het configureren van VPN) voor een lijst met alle VPN-instellingen voor Android-apparaatbeheer.
+- Zie [VPN-instellingen configureren in Microsoft Intune](vpn-settings-configure.md) voor meer informatie over VPN-instellingen en Intune.

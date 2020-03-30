@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/22/2020
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3fc6b9fc427ab6e0dc0488061378e78060527676
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b30d2a3ef7c85557222aa39740417a1a6fd463f1
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361975"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084133"
 ---
 # <a name="add-web-apps-to-microsoft-intune"></a>Web-apps aan Microsoft Intune toevoegen
 
@@ -37,9 +37,10 @@ Er wordt door Intune een snelkoppeling gemaakt naar de web-app op het apparaat v
 
 > [!Note]
 > Op het apparaat van de gebruiker moet een browser zijn geïnstalleerd om web-apps te kunnen starten. 
-
-> [!Note]
-> Raadpleeg [Beheerde Google Play-webkoppelingen](apps-add-android-for-work.md#managed-google-play-web-links) voor Android Enterprise-apparaten
+> 
+> Raadpleeg [Beheerde Google Play-webkoppelingen](apps-add-android-for-work.md#managed-google-play-web-links) voor Android Enterprise-apparaten.
+> 
+> Op iOS-apparaten worden nieuwe webclips geopend in Microsoft Edge in plaats van in de Intune Managed Browser wanneer ze moeten worden geopend in een beveiligde browser. Voor oudere iOS-webclips moet u een nieuw doel opgeven om ervoor te zorgen dat ze worden geopend in Microsoft Edge in plaats van in de Managed Browser.
 
 ## <a name="add-a-web-app-to-intune"></a>Een web-app toevoegen aan Intune
 Voer de volgende stappen uit om een app toe te voegen aan Intune als een snelkoppeling naar een app op internet:

@@ -5,28 +5,28 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: karthib
+ms.reviewer: mikedano
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ade4842564188c457af94a22fe49d3d18d791ebb
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 420340e18eb4e638ed7bde049e6b548037c54f87
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361871"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087105"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Functies en instellingen toepassen op uw apparaten met apparaatprofielen in Microsoft Intune
 
-Microsoft Intune omvat instellingen en functies die u op verschillende apparaten binnen uw organisatie kunt in- of uitschakelen. Deze instellingen en functies worden toegevoegd aan 'configuratieprofielen'. U kunt profielen maken voor verschillende apparaten en verschillende platformen, waaronder iOS/iPadOS, Android en Windows. Gebruik vervolgens Intune om het profiel toe te passen of toe te wijzen aan de apparaten.
+Microsoft Intune omvat instellingen en functies die u op verschillende apparaten binnen uw organisatie kunt in- of uitschakelen. Deze instellingen en functies worden toegevoegd aan 'configuratieprofielen'. U kunt profielen voor verschillende apparaten en verschillende platforms maken, waaronder iOS/iPadOS, Android-apparaatbeheer, Android Enterprise en Windows. Gebruik vervolgens Intune om het profiel toe te passen of toe te wijzen aan de apparaten.
 
 Als onderdeel van uw MDM-oplossing (Mobile Device Management) kunt u deze configuratieprofielen gebruiken om verschillende taken te voltooien. Enkele profielvoorbeelden zijn:
 
@@ -55,7 +55,7 @@ Via [Certificaten](../protect/certificates-configure.md) worden vertrouwde , SCE
 
 Deze functie ondersteunt: 
 
-- Android
+- Android-apparaatbeheerder
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -69,7 +69,7 @@ Met [Aangepaste instellingen](custom-settings-configure.md) kunnen beheerders ap
 
 Deze functie ondersteunt:
 
-- Android
+- Android-apparaatbeheerder
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -108,7 +108,7 @@ Deze functie ondersteunt:
 
 Deze functie ondersteunt:
 
-- Android
+- Android-apparaatbeheerder
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -143,7 +143,7 @@ Met [Onderwijsinstellingen - iOS/iPadOS](../fundamentals/education-settings-conf
 
 Deze functie ondersteunt: 
 
-- Android
+- Android-apparaatbeheerder
 - Android Enterprise
 - iOS/iPadOS
 - Windows Phone 8.1
@@ -241,7 +241,7 @@ Met virtuele particuliere netwerken (VPN's) hebben gebruikers veilige externe to
 
 Deze functie ondersteunt: 
 
-- Android
+- Android-apparaatbeheerder
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -255,7 +255,7 @@ Deze functie ondersteunt:
 
 Deze functie ondersteunt: 
 
-- Android
+- Android-apparaatbeheerder
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -276,7 +276,7 @@ Met [Zebra Mobility Extensions (MX)](android-zebra-mx-overview.md) kunnen beheer
 
 Deze functie ondersteunt:
 
-- Android (Mobility Extensions)
+- Android-apparaatbeheer (mobiliteitsextensies)
 
 ## <a name="manage-and-troubleshoot"></a>Beheren en problemen oplossen
 

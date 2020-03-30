@@ -1,12 +1,12 @@
 ---
 title: E-mailinstellingen in Microsoft Intune configureren - Azure | Microsoft Docs
 titleSuffix: ''
-description: Een e-mailprofiel maken in Microsoft Intune en dit profiel implementeren op Android Enterprise-, iOS/iPadOS- en Windows-apparaten. Een e-mailprofiel gebruiken om algemene e-mailinstellingen te configureren, inclusief een e-mailserver en verificatiemethode om verbinding te maken met zakelijke e-mail op apparaten die u beheert.
+description: Een e-mailprofiel maken in Microsoft Intune en dit profiel implementeren voor Android-apparaatbeheer-, Android Enterprise-, iOS-, iPadOS- en Windows-apparaten. Gebruik e-mailprofielen om algemene e-mailinstellingen te configureren, inclusief een e-mailserver en verificatiemethoden om verbinding te maken met zakelijke e-mail op apparaten die u beheert.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3921da0032fdc0b28ff21812b99029d22fbbb27
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fdf722acf463bf576b222e5f13da2dcaff64504e
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364237"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086973"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>E-mailinstellingen toevoegen aan apparaten met Intune
 
@@ -29,7 +29,7 @@ Microsoft Intune omvat verschillende e-mailinstellingen die u op apparaten in uw
 
 U kunt e-mailprofielen gebruiken om de ingebouwde e-mailinstellingen te configureren voor de volgende apparaten:
 
-- Android Samsung Knox Standard 4.0 en hoger
+- Android-apparaatbeheer op Samsung Knox Standard 4.0 en hoger
 - Android Enterprise
 - iOS 8.0 en hoger
 - iPadOS 13.0 en hoger
@@ -38,35 +38,48 @@ U kunt e-mailprofielen gebruiken om de ingebouwde e-mailinstellingen te configur
 
 In dit artikel wordt uitgelegd hoe u een e-mailprofiel maakt in Microsoft Intune. Het bevat ook koppelingen naar de verschillende platforms voor meer specifieke instellingen.
 
-## <a name="create-a-device-profile"></a>Een apparaatprofiel maken
+## <a name="create-the-profile"></a>Het profiel maken
 
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecteer **Apparaten** > **Configuratieprofielen** > **Profiel maken**.
 3. Voer de volgende eigenschappen in:
 
-    - **Naam**: Voer een beschrijvende naam in voor het beleid. Geef uw beleid een naam zodat u het later eenvoudig kunt identificeren. Een goede beleidsnaam is bijvoorbeeld **E-mailinstellingen voor alle Windows-apparaten**.
-    - **Beschrijving**: Voer een beschrijving in voor het profiel. Deze instelling is optioneel, maar wordt aanbevolen.
-    - **Platform**: Kies het platform van uw apparaten. Uw opties zijn:
+    - **Platform**: Kies het platform van uw apparaten. Uw opties zijn:  
 
-        - **Android** (alleen Samsung Android Knox Standard)
+        - **Android-apparaatbeheer** (alleen Samsung Android Knox Standard)
         - **Android Enterprise**
         - **iOS/iPadOS**
-        - **Windows Phone 8.1**
         - **Windows 10 en hoger**
+        - **Windows Phone 8.1**
 
-    - **Profieltype**: Selecteer **E-mail**.
+    - **Profiel**: Selecteer **E-mail**.
 
-4. Welke instellingen u kunt configureren, is afhankelijk van het platform dat u hebt gekozen. Kies uw platform voor gedetailleerde instellingen:
+4. Selecteer **Maken**.
+5. Voer in **Basisinformatie** de volgende eigenschappen in:
 
-    - [Instellingen voor Android Samsung Knox Standard](email-settings-android.md)
-    - [Instellingen voor Android Enterprise](email-settings-android-enterprise.md)
-    - [Instellingen voor iOS/iPadOS](email-settings-ios.md)
-    - [Windows Phone 8.1-instellingen](email-settings-windows-phone-8-1.md)
-    - [Windows 10-instellingen](email-settings-windows-10.md)
+    - **Naam**: Voer een beschrijvende naam in voor het beleid. Geef uw beleid een naam zodat u het later eenvoudig kunt identificeren. Een goede beleidsnaam is bijvoorbeeld **Windows 10: E-mailinstellingen voor alle Windows 10-apparaten**.
+    - **Beschrijving**: Voer een beschrijving in voor het beleid. Deze instelling is optioneel, maar wordt aanbevolen.
 
-5. Wanneer u klaar bent, selecteert u **OK** > **Maken** om uw wijzigingen op te slaan.
+6. Selecteer **Volgende**.
 
-Nadat u uw instellingen hebt ingevoerd en het profiel maakt, wordt uw profiel weergegeven in de lijst met profielen. Vervolgens [wijst u dit profiel toe aan enkele groepen](device-profile-assign.md).
+7. Welke instellingen u kunt configureren in **Configuratie-instellingen**, is afhankelijk van het platform dat u hebt gekozen. Kies uw platform voor gedetailleerde instellingen:
+
+    - [Android-apparaatbeheer (Samsung Android Knox Standard)](email-settings-android.md)
+    - [Android Enterprise](email-settings-android-enterprise.md)
+    - [iOS/iPadOS](email-settings-ios.md)
+    - [Windows 10](email-settings-windows-10.md)
+    - [Windows Phone 8.1](email-settings-windows-phone-8-1.md)
+
+8. Selecteer **Volgende**.
+9. Wijs in **Bereiktags** (optioneel) een tag toe om het profiel te filteren op specifieke IT-groepen, zoals `US-NC IT Team` of `JohnGlenn_ITDepartment`. Zie [RBAC en bereiktags gebruiken voor gedistribueerde IT](../fundamentals/scope-tags.md) voor meer informatie over bereiktags.
+
+    Selecteer **Volgende**.
+
+10. Selecteer in **Toewijzingen** de gebruikers of groepen die uw profiel zullen ontvangen. Zie [Gebruikers- en apparaatprofielen toewijzen](device-profile-assign.md) voor meer informatie over het toewijzen van profielen.
+
+    Selecteer **Volgende**.
+
+11. Controleer uw instellingen in **Beoordelen en maken**. Wanneer u **Maken**selecteert, worden uw wijzigingen opgeslagen en wordt het profiel toegewezen. Het beleid wordt ook weergegeven in de lijst met profielen.
 
 ## <a name="remove-an-email-profile"></a>Een e-mailprofiel verwijderen
 
@@ -104,4 +117,4 @@ Als u wijzigingen aanbrengt aan een e-mailprofiel dat u eerder had toegewezen, z
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Als het profiel is gemaakt, doet het nog niets. Vervolgens [wijst u het profiel toe](device-profile-assign.md).
+Als het profiel is gemaakt, doet het nog niets. Vervolgens kunt u [het profiel toewijzen](device-profile-assign.md) en [de status ervan controleren](device-profile-monitor.md).

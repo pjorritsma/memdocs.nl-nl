@@ -15,18 +15,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f79b3fb2c8ef11478388bebf57b0885061be529f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d0ffd06d86106b07224edc40aefc7407673a0391
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79356346"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526254"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Op rollen gebaseerd toegangsbeheer (RBAC) en bereiktags gebruiken voor gedistribueerde IT
 
 U kunt op rollen gebaseerd toegangsbeheer (RBAC) en bereiktags gebruiken om ervoor te zorgen dat de juiste beheerders de juiste toegang tot en zichtbaarheid van de juiste Intune-objecten hebben. Rollen bepalen welke toegang beheerders hebben tot welke objecten. Bereiktags bepalen welke objecten zichtbaar zijn voor beheerders.
 
-Laten we bijvoorbeeld zeggen dat een beheerder van het regionale kantoor in Seattle de rol van beleids- en profielbeheerder heeft. U wilt dat deze beheerder alleen de profielen en beleidsregels ziet en beheert die van toepassing zijn op de apparaten in Seattle. Als u deze toegang wilt instellen, doet u het volgende:
+Stel bijvoorbeeld dat een beheerder van het regionale kantoor in Seattle de rol van beleids- en profielbeheerder heeft. U wilt dat deze beheerder alleen de profielen en beleidsregels ziet en beheert die van toepassing zijn op de apparaten in Seattle. Als u deze toegang wilt instellen, doet u het volgende:
 
 1. Maak een bereiktag met de naam Seattle.
 2. Maak een roltoewijzing voor de rol beleids- en profielbeheerder met: 

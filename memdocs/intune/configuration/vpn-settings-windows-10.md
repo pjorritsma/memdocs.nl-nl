@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,14 @@ search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26f2998c6b166e1f45c839d7006551867b8deb80
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8d2f671e88b1221961e978d1945e28c7cec474cb
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364081"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086496"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Instellingen voor Windows 10- en Windows Holographic-apparaten om VPN-verbindingen met Intune toe te voegen
-
-
 
 U kunt met Microsoft Intune VPN-verbindingen toevoegen aan en configureren voor apparaten. Dit artikel bevat een overzicht en beschrijvingen van veelgebruikte instellingen en functies bij het maken van virtuele particuliere netwerken (VPN's). Deze VPN-instellingen en -functies worden gebruikt in apparaatconfiguratieprofielen in Intune die worden gepusht of geïmplementeerd naar gebruikers.
 
@@ -46,11 +44,11 @@ Afhankelijk van de instellingen die u kiest, kunnen niet alle waarden worden gec
 
 - **Verbindingsnaam**: Voer een naam in voor deze verbinding. Eindgebruikers zien deze naam wanneer ze op hun apparaat in de lijst met beschikbare VPN-verbindingen zoeken.
 - **Servers**: Voeg een of meer VPN-servers toe waarmee de apparaten verbinding maken. Als u een server toevoegt, voert u de volgende gegevens in:
-  - **Beschrijving**: Voer een beschrijvende naam in voor de server, zoals **Contoso VPN-server**
-  - **IP-adres of FQDN**: Voer het IP-adres of de Fully Qualified Domain Name (FQDN) in van de VPN-server waarmee apparaten verbinding maken, zoals **192.168.1.1** of **vpn.contoso.com**
+  - **Beschrijving**: Voer een beschrijvende naam in voor de server, zoals **Contoso VPN-server**.
+  - **IP-adres of FQDN**: Voer het IP-adres of de Fully Qualified Domain Name (FQDN) in van de VPN-server waarmee apparaten verbinding maken, zoals **192.168.1.1** of **vpn.contoso.com**.
   - **Standaardserver**: Hiermee wordt deze server ingeschakeld als de standaardserver die apparaten gebruiken om de verbinding te maken. U kunt slechts één server als standaard instellen.
   - **Importeren**: Blader naar een bestand met een door komma's gescheiden lijst met servers in de indeling: beschrijving, IP-adres of FQDN, Standaardserver. Kies **OK** om deze servers te importeren in de lijst met **servers**.
-  - **Exporteren**: Hiermee exporteert u de lijst met servers naar een bestand met door komma's gescheiden waarden (CSV-bestand)
+  - **Exporteren**: Hiermee exporteert u de lijst met servers naar een bestand met door komma's gescheiden waarden (CSV-bestand).
 
 - **IP-adressen met interne DNS registreren**: Selecteer **Inschakelen** als u het VPN-profiel van Windows 10 zo wilt configureren dat de IP-adressen die zijn toegewezen aan de VPN-interface met de interne DNS, dynamisch worden geregistreerd. Selecteer **Uitschakelen** als u de IP-adressen niet dynamisch wilt registreren.
 
@@ -68,10 +66,10 @@ Afhankelijk van de instellingen die u kiest, kunnen niet alle waarden worden gec
   - **PPTP**
 
   Als u een VPN-verbindingstype kiest, wordt u mogelijk ook om de volgende instellingen gevraagd:  
-  - **AlwaysOn**: Kies **Inschakelen** om automatisch verbinding te maken met de VPN-verbinding wanneer het volgende gebeurt: 
+  - **AlwaysOn**: Kies **Inschakelen** om automatisch verbinding te maken met de VPN-verbinding wanneer het volgende gebeurt:
     - Gebruikers zich aanmelden op hun apparaten
     - Het netwerk op het apparaat wijzigt
-    - Het scherm op het apparaat wordt ingeschakeld nadat het was uitgeschakeld 
+    - Het scherm op het apparaat wordt ingeschakeld nadat het was uitgeschakeld
 
   - **Verificatiemethode**: Selecteer hoe gebruikers zich moeten verifiëren bij de VPN-server. Het gebruik van **certificaten** biedt verbeterde functies, zoals zero-touch, VPN op aanvraag en VPN per app.
   - **Referenties onthouden bij elke aanmelding**: Kies ervoor om de verificatiereferenties op te slaan in het cachegeheugen.

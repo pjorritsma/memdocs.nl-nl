@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/19/2019
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 398737a89c302031cfbed87709d031077f90fb6a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: edc3bb23097a26753a9e54b0b520e6fc22be3a69
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354266"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085198"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Naleving voor Microsoft Defender ATP met voorwaardelijke toegang in Intune afdwingen
 
@@ -136,14 +136,17 @@ Wanneer u verbinding maakte met Microsoft Defender ATP, heeft Intune van Microso
 
 Het nalevingsbeleid bepaalt het risiconiveau dat u voor een apparaat beschouwt als acceptabel.
 
-### <a name="create-the-compliance-policy"></a>Het nalevingsbeleid maken
+Als u niet bekend bent met het maken van compliancebeleid, raadpleegt u de procedure [Een beleid maken](../protect/create-compliance-policy.md#create-the-policy) in het artikel *Een nalevingsbeleid maken in Microsoft Intune*. De volgende informatie is specifiek voor het configureren van Defender ATP als onderdeel van een compliancebeleid.
 
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecteer **Apparaten** > **Nalevingsbeleid** > **Beleid maken**.
-3. Voer een **Naam** en **Beschrijving** in.
-4. In **Platform** selecteert u **Windows 10 en hoger**.
-5. Selecteer onder **Instellingen** de optie **Microsoft Defender ATP**.
-6. Stel **Vereisen dat het apparaat op of onder het apparaatdreigingsniveau moet zijn** in op het gewenste niveau.
+
+2. Selecteer **Apparaten** > **Nalevingsbeleid** > **Beleid** > **Beleid maken**.
+
+3. Bij **Platform** selecteert u *Windows 10 en hoger*. Selecteer vervolgens **Maken** om het configuratievenster **Beleid maken** te openen.
+
+4. Geef op het tabblad **Basis** een **Naam** op waaraan u het beleid later kunt herkennen. U kunt er ook voor kiezen om een **Beschrijving** op te geven.
+  
+5. Vouw op het tabblad **Nalevingsinstellingen** de groep **Microsoft Defender ATP** uit en stel de optie **Vereisen dat het apparaat op of onder het apparaatdreigingsniveau moet zijn** in op het gewenste niveau.
 
    De classificatie van bedreigingsniveaus wordt [bepaald door Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/alerts-queue).
 
@@ -152,8 +155,7 @@ Het nalevingsbeleid bepaalt het risiconiveau dat u voor een apparaat beschouwt a
    - **Gemiddeld**: Het apparaat is conform als de bedreigingen op het apparaat van laag of gemiddeld niveau zijn. Als er bedreigingen van hoog niveau worden aangetroffen, wordt het apparaat als niet-compatibel beoordeeld.
    - **Hoog**: Dit niveau is het minst veilig en laat alle bedreigingsniveaus toe. Apparaten met een hoog, gemiddeld of laag bedreigingsniveau worden daarom beschouwd als conform.
 
-7. Selecteer **OK** en **Maken** om wijzigingen op te slaan (en het beleid aan te maken).
-8. [Wijs het nalevingsbeleid voor apparaten toe](create-compliance-policy.md#assign-the-policy) aan de toepasselijke groepen.
+6. Voltooi de configuratie van het beleid, inclusief toewijzing van het beleid aan toepasselijke groepen.
 
 ## <a name="create-a-conditional-access-policy"></a>Beleid voor voorwaardelijke toegang maken
 

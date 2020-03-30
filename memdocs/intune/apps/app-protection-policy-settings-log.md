@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/09/2020
+ms.date: 03/17/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,21 +18,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe508dac691f922ec638709e04d6d4dd9f47f078
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f58c20731395c95e532e28165553743fdef701e9
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79341695"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083563"
 ---
 # <a name="review-client-app-protection-logs"></a>Logboeken voor beveiliging van de client-app controleren
 
 Kom meer te weten over de instellingen die u kunt bekijken in de app-beschermingslogboeken. U kunt de logboeken openen door de diagnostische modus van Intune in te schakelen op een mobiele client. 
 
 Het proces voor het inschakelen en verzamelen van logboeken verschilt per platform:
-- **IOS-/iPadOS-apparaten**: gebruik Microsoft Edge voor iOS/iPadOS om logboeken te verzamelen. Zie [Internettoegang beheren met behulp van Microsoft Edge met Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs) voor meer informatie. 
+- **IOS-/iPadOS-apparaten**: gebruik Microsoft Edge voor iOS/iPadOS om logboeken te verzamelen. Zie [Internettoegang beheren met behulp van Microsoft Edge met Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs) voor meer informatie. 
 - **Windows 10-apparaten**: gebruik *MDMDiag* en gebeurtenislogboeken. Zie [Diagnose MDM failures in Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) (MDM-fouten diagnosticeren in Windows 10) in de documentatie voor Windows-clientbeheer en het blog [Troubleshooting Windows 10 Intune Policy Failures](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (Problemen met het Windows 10 Intune-beleid oplossen).
-- **Android-apparaten**: er zijn geen diagnostische gegevens voor APP (beleid voor app-beveiliging) op Android-apparaten.
+- **Android-apparaten**: gebruik Microsoft Edge voor Android om logboeken te verzamelen. Zie [Internettoegang beheren met behulp van Microsoft Edge met Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs) voor meer informatie. 
 
 De volgende tabel bevat de naam van de instelling van het beleid voor app-beveiliging en ondersteunde waarden die in het logboek worden vastgelegd. Daarnaast wordt per instelling aangegeven welke beleidsinstelling is gevonden in de Microsoft Eindpuntbeheer-portal. Zie de [beveiligingsbeleidsinstellingen voor iOS-/iPadOS-apps](app-protection-policy-settings-ios.md) voor gedetailleerde informatie over elke instelling.
 

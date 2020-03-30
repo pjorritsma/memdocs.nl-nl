@@ -1,12 +1,12 @@
 ---
-title: Beheerde Google Play-apps toewijzen aan Android Enterprise-apparaten
+title: Beheerde Google Play-apps toevoegen en toewijzen aan Android Enterprise-apparaten
 titleSuffix: Microsoft Intune
 description: Ontdek hoe u apps synchroniseert en toewijst aan Android Enterprise-apparaten vanuit de beheerde Google Play Store.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/22/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dec2b1ace9b9b8a5c27ef468969a52f05e1bdcca
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b6dab926a59e69f5afb6c2f40ea7e315afed49f8
+ms.sourcegitcommit: e37d5d3f5bdb39a8f89ba0376b31c06aaf3c5d27
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79341448"
+ms.lasthandoff: 03/22/2020
+ms.locfileid: "80117297"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Beheerde Google Play-apps toevoegen aan Android Enterprise-apparaten met Intune
 
@@ -33,7 +33,7 @@ In Intune worden automatisch vier veelgebruikte Android Enterprise-apps toegevoe
 
 - **[Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune)** : wordt gebruikt voor scenario's met volledig beheer door Android Enterprise. Deze app wordt automatisch geïnstalleerd op volledig beheerde apparaten tijdens het apparaatinschrijvingsproces.
 - **[Microsoft Authenticator](https://play.google.com/store/apps/details?id=com.azure.authenticator)** : om u aan te melden bij uw accounts als u verificatie in twee stappen gebruikt. Deze app wordt automatisch geïnstalleerd op volledig beheerde apparaten tijdens het apparaatinschrijvingsproces.
-- **[Intune-bedrijfsportal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)** : wordt gebruikt voor beleidsregels voor app-beveiliging (APP) en werkprofielscenario's van Android Enterprise.
+- **[Intune-bedrijfsportal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)** : wordt gebruikt voor beleidsregels voor app-beveiliging (APP) en werkprofielscenario's van Android Enterprise. Deze app wordt automatisch geïnstalleerd op volledig beheerde apparaten tijdens het apparaatinschrijvingsproces.
 - **[Managed Home Screen](https://play.google.com/store/apps/details?id=com.microsoft.launcher.enterprise)** : wordt gebruikt voor toegewezen kiosk-scenario's van Android Enterprise voor meerdere apps. IT-beheerders moeten een toewijzing maken om deze app te installeren op toegewezen apparaten die worden gebruikt in kiosk-scenario's voor meerdere apps.
 
 >[!NOTE]
@@ -183,7 +183,7 @@ Als u een app uit de Store hebt goedgekeurd maar deze nog niet wordt weergegeven
 
 ## <a name="assigning-a-managed-google-play-app-to-android-enterprise-work-profile-devices"></a>Beheerde Google Play-app toewijzen aan apparaten met Android Enterprise-werkprofiel
 
-Als de app wordt weergegeven in het knooppunt **App-licenties** van het workloadvenster **Apps**, kunt u de app [net als alle andere apps toewijzen](/intune-azure/manage-apps/deploy-apps) door de app aan groepen gebruikers toe te wijzen.
+Als de app wordt weergegeven in het knooppunt **App-licenties** van het workloadvenster **Apps**, kunt u de app [net als alle andere apps toewijzen](/mem/intune/apps/apps-deploy) door de app aan groepen gebruikers toe te wijzen.
 
 Nadat u de app hebt toegewezen, wordt deze geïnstalleerd (of is deze beschikbaar voor installatie) op de apparaten van de gebruikers die u hebt aangewezen. De gebruiker van het apparaat wordt geen toestemming voor de installatie gevraagd. Zie [Inschrijving van apparaten met Android Enterprise-werkprofielen instellen](../enrollment/android-work-profile-enroll.md) voor meer informatie over apparaten met Android Enterprise-werkprofielen. 
 
@@ -197,7 +197,7 @@ Nadat u de app hebt toegewezen, wordt deze geïnstalleerd (of is deze beschikbaa
 De standaardinstelling is dat werknemers met een volledig beheerd Android Enterprise-apparaat niet de mogelijkheid hebben om apps te installeren die niet zijn goedgekeurd door de organisatie. Werknemers kunnen evenmin geïnstalleerde apps verwijderen als dit tegen het beleid is. Als u gebruikers toegang wilt geven tot de volledige Google Play Store voor het installeren van apps in plaats van alleen toegang te hebben tot de goedgekeurde apps in de beheerde Google Play Store, kunt u **Toegang tot alle apps in Google Play Store toestaan** **inschakelen**. Met deze instelling hebben gebruikers toegang tot alle apps in de Google Play Store met behulp van hun bedrijfsaccount, maar kunnen de aankoopmogelijkheden beperkt zijn. U kunt de beperking voor beperkte aankopen verwijderen door gebruikers toe te staan nieuwe accounts toe te voegen aan het apparaat. Als u dit doet, kunnen eindgebruikers apps kopen in de Google Play Store via hun persoonlijke accounts, en ze kunnen dan in-app-aankopen doen. Zie [Android Enterprise-apparaatinstellingen voor beheer van functies vanuit Intune](../configuration/device-restrictions-android-for-work.md) voor meer informatie. 
 
 > [!NOTE]
-> De Microsoft Intune-app en de Microsoft Authenticator-app worden tijdens het onboarden als vereiste apps geïnstalleerd op alle volledig beheerde apparaten. De voordelen hiervan zijn dat er ondersteuning wordt geboden voor voorwaardelijke toegang en dat gebruikers van Microsoft Intune-apps problemen met naleving kunnen zien en oplossen. 
+> De Microsoft Intune-app, de Microsoft Authenticator-app en de Bedrijfsportal-app worden tijdens het onboarden als vereiste apps geïnstalleerd op alle volledig beheerde apparaten. De voordelen hiervan zijn dat er ondersteuning wordt geboden voor voorwaardelijke toegang en dat gebruikers van Microsoft Intune-apps problemen met naleving kunnen zien en oplossen. 
 
 ## <a name="manage-android-enterprise-app-permissions"></a>Machtigingen voor Android Enterprise-apps beheren
 Android Enterprise vereist dat u apps goedkeurt in de beheerde Google Play Store-webconsole voordat u de apps met Intune synchroniseert en aan uw gebruikers toewijst. Met Android Enterprise kunt u de apps op de achtergrond en automatisch naar de apparaten van gebruikers pushen. U moet daarom de machtigingen voor de app namens al uw gebruikers accepteren. Gebruikers krijgen geen app-machtigingen te zien wanneer ze de apps installeren. Het is dus belangrijk dat u de informatie over de machtigingen begrijpt.

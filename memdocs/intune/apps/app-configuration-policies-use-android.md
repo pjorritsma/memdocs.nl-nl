@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f49d1e419eb7199d2a7cf20f03959689a5f5fa44
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 691da0c74ceddb34a48bfdf01e19dadaed444e45
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342488"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233475"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>App-configuratiebeleidsregels toevoegen voor beheerde Android Enterprise-apparaten
 
@@ -103,15 +103,18 @@ U kunt de volgende opties kiezen als u Variabele als het waardetype kiest:
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Alleen geconfigureerde organisatieaccounts toestaan in apps met meerdere identiteiten 
 
-Gebruik voor Android-apparaten de volgende sleutel-/waardeparen:
+Als Microsoft Intune-beheerder kunt u bepalen welke gebruikersaccounts worden toegevoegd aan Microsoft-apps op beheerde apparaten. U kunt de toegang beperken tot uitsluitend toegestane gebruikersaccounts van de organisatie, en persoonlijke accounts blokkeren op ingeschreven apparaten. Gebruik voor Android-apparaten de volgende sleutel-/waardeparen:
 
 | **Sleutel** | com.microsoft.intune.mam.AllowedAccountUPNs |
 |---|---|
 | **Waarden** | <ul><li>Een of meer door <code>;</code> gescheiden UPN’s.</li><li>Alleen beheerde gebruikersaccounts die met deze sleutel zijn gedefinieerd, zijn toegestaan.</li><li> Voor apparaten die zijn ingeschreven bij Intune, kan het <code>{{userprincipalname}}</code>-token worden gebruikt voor het ingeschreven gebruikersaccount.</li></ul> |
 
    > [!NOTE]
-   > U moet Outlook voor Android 2.2.222 en hoger, Word, Excel, PowerPoint voor Android 16.0.9327.1000 en hoger, of OneDrive voor Android 5.28 en hoger gebruiken, wanneer alleen organisatieaccounts met meerdere identiteiten zijn toegestaan.<p></p>
-   > Als Microsoft Intune-beheerder kunt u bepalen welke gebruikersaccounts worden toegevoegd aan Microsoft Office-toepassingen op beheerde apparaten. U kunt de toegang beperken tot uitsluitend toegestane gebruikersaccounts van de organisatie, en persoonlijke accounts blokkeren op ingeschreven apparaten. De app-configuratie wordt verwerkt op de ondersteunende toepassingen, en niet-goedgekeurde accounts worden verwijderd en geblokkeerd.<p></p>
+   > De volgende apps verwerken de bovenstaande app-configuratie en staan alleen organisatieaccounts toe:
+   > - Edge voor Android (42.0.4.4048 en hoger)
+   > - Office, Word, Excel en PowerPoint voor Android (16.0.9327.1000 en hoger)
+   > - OneDrive voor Android (5.28 en hoger)
+   > - Outlook voor Android (2.2.222 en hoger)
 
 ## <a name="enter-json-data"></a>JSON-gegevens invoeren
 

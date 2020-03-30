@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d40c4f352d3e7b94ef6e6c2f16a28d188c4e9ad1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: af4dce0d2bb7ef150d5332a9c58357513425cf50
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339381"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220197"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-device-enrollment-program"></a>iOS-/iPadOS-apparaten automatisch inschrijven met het Device Enrollment Program van Apple
 
@@ -195,6 +195,9 @@ Na installatie van de token kunt u een inschrijvingsprofiel voor DEP-apparaten m
 
 11. Kies of u wilt dat apparaten die dit profiel gebruiken, kunnen **synchroniseren met computers**. Als u **Apple Configurator per certificaat toestaan** kiest, moet u een certificaat kiezen onder **Apple Configurator-certificaten**.
 
+     > [!NOTE]
+     > Als **Synchroniseren met computers** is ingesteld op **Alles weigeren**, wordt de poort op iOS- en iPadOS-apparaten beperkt. De poort kan alleen worden gebruikt om op te laden, en voor niets anders. De poort wordt geblokkeerd voor het gebruik van iTunes of Apple Configurator.
+
 12. Als u in de vorige stap hebt gekozen voor **Apple Configurator per certificaat toestaan**, moet u een Apple Configurator-certificaat kiezen om te importeren.
 
 13. U kunt een naamgevingsindeling opgeven voor apparaten die automatisch wordt toegepast wanneer zij zich inschrijven en na elke keer dat succesvol wordt ingecheckt. Als u een naamgevingssjabloon wilt maken, selecteert u **Ja** onder **Sjabloon voor apparaatnamen toepassen**. Voer vervolgens in het tekstvak **Apparaatnaamsjabloon** het te gebruiken sjabloon in voor de naam die dit profiel gebruiken. U kunt een sjabloonindeling opgeven waarin het apparaattype en serienummer wordt opgenomen. 
@@ -278,6 +281,10 @@ U hebt beheer en synchronisatie tussen Apple en Intune ingeschakeld, en een prof
 Zie [Uw iOS-/iPadOS-apparaat inschrijven in Intune in met het Device Enrollment Program](../user-help/enroll-your-device-dep-ios.md).
 
 ## <a name="renew-a-dep-token"></a>Een DEP-token vernieuwen  
+
+> [!NOTE]
+> Naast het jaarlijks vernieuwen van uw DEP-token moet u uw inschrijvingsprogrammatoken in Intune en Apple Business Manager vernieuwen wanneer het beheerde Apple-ID-wachtwoord voor de gebruiker die het token in Apple Business Manager heeft ingesteld, wordt gewijzigd, of wanneer die gebruiker uw Apple Business Manager-organisatie verlaat.
+
 1. Ga naar deploy.apple.com.  
 2. Kies onder **Manage Servers** de MDM-server die is gekoppeld aan het tokenbestand dat u wilt vernieuwen.
 3. Kies **Generate New Token**.

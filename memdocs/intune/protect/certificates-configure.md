@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/22/2019
+ms.date: 03/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 700e255c55db1f216d605f5c54aa0c474e7f48b5
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2ab229e0ef0d2cdefe41f991efc8c45c988979db
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79353733"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085048"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Certificaten voor verificatie gebruiken in Microsoft Intune
 
@@ -107,31 +107,47 @@ Maak een afzonderlijk vertrouwd certificaatprofiel voor elk apparaatplatform dat
 
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecteer **Apparaten** > **Configuratieprofielen** > **Profiel maken**.
+2. Ga naar **Apparaten** > **Configuratieprofielen** > **Profiel maken**.
 
-   ![Ga naar Intune en maak een nieuw profiel voor een vertrouwd certificaat](./media/certficates-pfx-configure/certificates-pfx-configure-profile-new.png)
+   ![Ga naar Intune en maak een nieuw profiel voor een vertrouwd certificaat](./media/certificates-configure/certificates-configure-profile-new.png)
 
 3. Voer de volgende eigenschappen in:
+   - **Platform**: Kies het platform van de apparaten die dit profiel zullen ontvangen.
+   - **Profiel**: Selecteer **Vertrouwd certificaat**
+  
+4. Selecteer **Maken**.
 
-   - **Naam** voor het profiel
-   - Een **beschrijving** instellen (optioneel)
-   - **Platform** waarvoor het profiel moet worden geïmplementeerd
-   - Stel **Profieltype** in op **Vertrouwd certificaat**
+5. Voer in **Basisinformatie** de volgende eigenschappen in:
+   - **Naam**: Voer een beschrijvende naam in voor het profiel. Geef uw profielen een naam zodat u ze later eenvoudig kunt identificeren. Een goede profielnaam is bijvoorbeeld *Vertrouwd-certificaatprofiel voor hele bedrijf*.
+   - **Beschrijving**: Voer een beschrijving in voor het profiel. Deze instelling is optioneel, maar wordt aanbevolen.
 
-4. Selecteer **Instellingen** en blader naar het CER-bestand met het vertrouwde basis-CA-certificaat dat u hebt geëxporteerd voor gebruik bij dit certificaatprofiel en selecteer vervolgens **OK**.
+6. Selecteer **Volgende**.
 
-5. Voor Windows 8.1- en Windows 10-apparaten selecteert u het **doelarchief** voor het vertrouwde certificaat vanuit:
+7. Geef bij **Configuratie-instellingen** het eerder geëxporteerde CER-bestand van het vertrouwde basis-CA-certificaat op. 
+
+   Voor Windows 8.1- en Windows 10-apparaten selecteert u het **doelarchief** voor het vertrouwde certificaat vanuit:
 
    - **Certificaatarchief van de computer – basis**
    - **Certificaatarchief van de computer – tijdelijk**
    - **Certificaatarchief van de gebruiker – tijdelijk**
 
-6. Als u klaar bent, kiest u **OK**, gaat u terug naar het deelvenster **Profiel maken** en kiest u **Maken**.
+   ![Een profiel maken en een vertrouwd certificaat uploaden](./media/certificates-configure/certificates-configure-profile-fill.png)
 
-Het profiel wordt weergegeven in de lijst met profielen in het venster *Apparaten - Configuratieprofielen* met het profieltype **Vertrouwd certificaat**. Zorg ervoor dat u dit profiel toewijst aan apparaten die gebruik gaan maken van SCEP- of PKCS-certificaten. Zie [Apparaatprofielen toewijzen](../configuration/device-profile-assign.md) om dit profiel toe te wijzen aan groepen.
+8. Selecteer **Volgende**.
 
-> [!NOTE]
-> Op Android-apparaten wordt mogelijk een bericht weergegeven dat een derde partij een vertrouwd certificaat heeft geïnstalleerd.
+9. Wijs in **Bereiktags** (optioneel) een tag toe om het profiel te filteren op specifieke IT-groepen, zoals `US-NC IT Team` of `JohnGlenn_ITDepartment`. Zie [RBAC en bereiktags gebruiken voor gedistribueerde IT](../fundamentals/scope-tags.md) voor meer informatie over bereiktags.
+
+   Selecteer **Volgende**.
+
+10. Selecteer in **Toewijzingen** de gebruiker of groepen die uw profiel zullen ontvangen. Zie [Gebruikers- en apparaatprofielen toewijzen](../configuration/device-profile-assign.md) voor meer informatie over het toewijzen van profielen.
+
+    Selecteer **Volgende**.
+
+11. (*Alleen van toepassing op Windows 10*) Geef in **Toepasselijkheidsregels**de toepasselijkheidsregels op om de toewijzing van dit profiel te verfijnen. U kunt ervoor kiezen om het profiel al dan niet toe te wijzen op basis van de versie van het besturingssysteem of een apparaat.
+
+  Zie [Toepasselijkheidsregels](../configuration/device-profile-create.md#applicability-rules) in *Een apparaatprofiel maken in Microsoft Intune*voor meer informatie.
+
+12. Controleer uw instellingen in **Beoordelen en maken**. Wanneer u Maken selecteert, worden uw wijzigingen opgeslagen en wordt het profiel toegewezen. Het beleid wordt ook weergegeven in de lijst met profielen.
 
 ## <a name="additional-resources"></a>Extra resources
 

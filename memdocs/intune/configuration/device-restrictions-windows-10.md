@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/10/2020
+ms.date: 03/23/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8586e5c25ec3db4a736d84381e691ecebe6fae32
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 71e8b874e50fc1300124d748dfb70963acae089b
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361676"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220095"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Apparaatinstellingen voor Windows 10 en hoger om functies toe te staan of te beperken met behulp van Intune
 
@@ -898,6 +898,11 @@ Deze instellingen gebruiken de [beleid-CSP Defender](https://docs.microsoft.com/
   [Defender/ThreatSeverityDefaultAction CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-threatseveritydefaultaction)
 
 ### <a name="microsoft-defender-antivirus-exclusions"></a>Uitsluitingen voor Microsoft Defender Antivirus
+
+U kunt bepaalde bestanden uitsluiten van scans van Microsoft Defender Antivirus door uitsluitingslijsten te wijzigen. **Over het algemeen hoeft u geen uitsluitingen toe te passen**. Micro soft Defender Antivirus bevat een aantal automatische uitsluitingen op basis van bekend gedrag van besturingssystemen en typische beheerbestanden, zoals die worden gebruikt in bedrijfsbeheer, databasebeheer en andere bedrijfsscenario's en -situaties.
+
+> [!WARNING]
+> **Als u uitsluitingen definieert, vermindert dat de beveiliging die Microsoft Defender Antivirus biedt**. Evalueer altijd de risico's die zijn verbonden aan het implementeren van uitsluitingen. Sluit alleen bestanden uit waarvan u weet dat ze niet schadelijk zijn.
 
 - **Bestanden en mappen die moeten worden uitgesloten van scans en de realtime-beveiliging**: Voegt aan de uitsluitingslijst een of meer bestanden en mappen toe, zoals **C:\pad** of **%ProgramFiles%\pad\bestandsnaam.exe**. Deze bestanden en mappen worden niet opgenomen in real-timescans of geplande scans.
 - **Bestandsextensies die moeten worden uitgesloten van scans en de realtime-beveiliging**: Voeg aan de uitsluitingslijst een of meer bestandsextensies toe, zoals **jpg** of **txt**. Bestanden met deze extensies worden niet opgenomen in realtime-scans of geplande scans.

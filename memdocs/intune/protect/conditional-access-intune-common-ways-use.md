@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7eb597aec20e8010d8694475d2af5d8033a809f0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 9c8c78106125b45f52b45cb5fc6494b8e13b7a15
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352888"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084937"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Wat zijn gebruikelijke manieren om voorwaardelijke toegang met Intune te gebruiken?
 
@@ -83,7 +83,7 @@ Voorwaardelijke toegang voor pc's biedt mogelijkheden die vergelijkbaar zijn met
 
 #### <a name="corporate-owned"></a>In bedrijfseigendom
 
-- **On-premises AD-domein is toegevoegd:** Deze optie wordt doorgaans gebruikt door organisaties die redelijk tevreden zijn over de manier waarop hun pc's al worden beheerd met AD-groepsbeleid of Configuration Manager.
+- **Hybrid Azure AD joined:** Deze optie wordt doorgaans gebruikt door organisaties die redelijk tevreden zijn over de manier waarop hun pc's al worden beheerd met AD-groepsbeleid of Configuration Manager.
 
 - **Azure AD-domein toegevoegd en Intune-beheerprogramma:** Dit scenario is bedoeld voor organisaties die voornamelijk cloudservices gebruiken, met het doel om het gebruik van een on-premises infrastructuur te beperken, of alleen cloudservices gebruiken (geen on-premises infrastructuur). Azure AD Join werkt goed in een hybride omgeving en biedt toegang tot zowel cloud- als on-premises apps en bronnen. Het apparaat wordt toegevoegd aan Azure AD en wordt geregistreerd bij Intune, dat kan worden gebruikt als criterium voor voorwaardelijke toegang bij het openen van bedrijfsresources.
 

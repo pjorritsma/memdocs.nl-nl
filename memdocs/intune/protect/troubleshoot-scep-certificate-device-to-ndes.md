@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72e8f8a19ef27eee039090f146c46488ed1e1205
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 55660497751f1961c9c579ba1d800900189db782
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79350574"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526458"
 ---
 # <a name="troubleshoot-device-to-ndes-server-communication-for-scep-certificate-profiles-in-microsoft-intune"></a>Los problemen op met de communicatie tussen een apparaat en de NDES-server voor SCEP-certificaatprofielen in Microsoft Intune
 
@@ -243,6 +243,19 @@ Als de SCEP-groep van toepassingen niet is gestart, controleert u het toepassing
 
   ![IIS-machtigingen](../protect/media/troubleshoot-scep-certificate-device-to-ndes/iis-permissions.png)
 
+- **Oorzaak 4**: Het certificaat van de NDESPolicy-module is verlopen.
+
+  In het CAPI2-logboek (zie de oplossing van Oorzaak 2) ziet u fouten die aangeven dat het certificaat waarnaar wordt verwezen door 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP\Modules\NDESPolicy\NDESCertThumbprint' buiten de geldigheidsperiode van het certificaat valt.
+
+  **Oplossing**: Werk de verwijzing bij met de vingerafdruk van een geldig certificaat.
+  1. Identificeer een vervangend certificaat:
+     - Vernieuw het bestaande certificaat
+     - Selecteer een ander certificaat met vergelijkbare eigenschappen (onderwerp, EKU, sleuteltype en -lengte, enzovoort)
+     - Schrijf een nieuw certificaat in
+  2. Exporteer de registersleutel `NDESPolicy` om een back-up te maken van de huidige waarden.
+  3. Vervang de gegevens van de registerwaarde `NDESCertThumbprint` door de vingerafdruk van het nieuwe certificaat, waarbij u alle witruimte verwijdert en de tekst omzet in kleine letters.
+  4. Start de NDES IIS-toepassingsgroepen opnieuw of voer `iisreset` uit vanaf een opdrachtprompt met verhoogde bevoegdheid.
+
 #### <a name="gatewaytimeout"></a>GatewayTimeout
 
 Wanneer u naar de URL van de SCEP-server bladert, ontvangt u de volgende fout:
@@ -289,7 +302,7 @@ U hebt Azure AD-toepassingsproxy geconfigureerd. Wanneer u naar de URL van de SC
 
   **Oplossing**: Gebruik het standaarddomein van *yourtenant.msappproxy.net* voor de externe URL voor de SCEP in de configuratie van de toepassingsproxy.
 
-#### <a name="internal-server-error"></a>500 - Interne serverfout
+#### <a name="500---internal-server-error"></a><a name="internal-server-error"></a>500 - Interne serverfout
 
 Wanneer u naar de URL van de SCEP-server bladert, ontvangt u de volgende fout:
 

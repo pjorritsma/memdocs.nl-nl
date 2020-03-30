@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4d5fe8ed78aa5537552ecf3db12eabd2bb6fbde
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 79bb7e627043e439c7438c2fc4afcfdee5a44406
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359284"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086118"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>iOS-/iPadOS-apparaten inschrijven bij Intune
 
@@ -46,7 +46,7 @@ U kunt gebruikers hun persoonlijke apparaten laten inschrijven voor Intune-behee
 - Apparaatinschrijving is een veelgebruikte vorm van BYOD-inschrijving. Het biedt beheerders een breed scala aan beheeropties.
 - Gebruikersinschrijving is een meer gestroomlijnd inschrijvingsproces en biedt beheerders een subset aan apparaatbeheeropties. Deze functie is momenteel in preview. 
 
-Zodra u aan de vereisten hebt voldaan en gebruikerslicenties hebt toegewezen, kunnen gebruikers in de App Store de Intune-bedrijfsportal-app downloaden en in de app de inschrijvingsinstructies volgen. U kunt de privacyverklaring van het bedrijfsportal op iOS-/iPadOS-apparaten aanpassen, zoals wordt uitgelegd in het artikel over [het aanpassen van de privacyverklaring](../apps/company-portal-app.md#privacy-statement-customization).
+Zodra u aan de vereisten hebt voldaan en gebruikerslicenties hebt toegewezen, kunnen gebruikers in de App Store de Intune-bedrijfsportal-app downloaden en in de app de inschrijvingsinstructies volgen. U kunt de privacyverklaring van Bedrijfsportal op iOS-iPadOS aanpassen, zoals wordt uitgelegd in [De app Microsoft Intune-bedrijfsportal configureren](../apps/company-portal-app.md#configuration).
 
 ## <a name="company-owned-iosipados-devices"></a>iOS-/iPadOS-apparaten die bedrijfseigendom zijn
 

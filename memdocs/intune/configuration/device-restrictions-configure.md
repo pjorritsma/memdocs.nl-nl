@@ -1,11 +1,11 @@
 ---
 title: Apparaatfuncties beperken met behulp van beleid in Microsoft Intune - Azure | Microsoft Docs
-description: Een apparaatprofiel toevoegen om functies op Android-, macOS-, iOS-, iPadOS-, Windows Phone- en Windows 10-apparaten in Microsoft Intune te beperken
+description: Voeg een apparaatprofiel toe om functies op Android-apparaatbeheer-, Android Enterprise-, macOS-, iOS-, iPadOS-, Windows Phone- en Windows 10-apparaten in Microsoft Intune te beperken.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,16 +15,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28cf0b8bffc06a0b5a56165c1e9eeab780c453c7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7f1e421a344122dbd4cf59a49ea56ef0ba2bb125
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361819"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087074"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>Apparaatbeperkingsinstellingen configureren in Microsoft Intune
-
-
 
 Intune bevat beleidsregels voor apparaatbeperkingen waarmee beheerders Android-, iOS-/iPadOS-, macOS-en Windows-apparaten kunnen beheren. Met deze beperkingen kunt u een breed scala aan instellingen en functies beheren voor het beveiligen van de resources van uw organisatie. Beheerders kunnen bijvoorbeeld het volgende:
 
@@ -48,7 +46,7 @@ In dit artikel wordt beschreven hoe u een apparaatbeperkingsprofiel maakt. U kun
     - **Beschrijving**: Voer een beschrijving in voor het beleid. Deze instelling is optioneel, maar wordt aanbevolen.
     - **Platform**: Kies het platform van uw apparaten. Uw opties zijn:  
 
-        - **Android**
+        - **Android-apparaatbeheerder**
         - **Android Enterprise**
         - **iOS/iPadOS**
         - **macOS**
@@ -62,7 +60,7 @@ In dit artikel wordt beschreven hoe u een apparaatbeperkingsprofiel maakt. U kun
 
 4. Welke instellingen u kunt configureren, is afhankelijk van het platform dat u hebt gekozen. Kies uw platform voor gedetailleerde instellingen:
 
-    - [Android-instellingen](device-restrictions-android.md)
+    - [Instellingen voor Android-apparaatbeheer](device-restrictions-android.md)
     - [Instellingen voor Android Enterprise](device-restrictions-android-for-work.md)
     - [Instellingen voor iOS/iPadOS](device-restrictions-ios.md)
     - [macOS-instellingen](device-restrictions-macos.md)

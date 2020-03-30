@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4354d4b5aeb0957790d469a2a3fd5c6787aa93eb
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 367a632b082ad5d58221f33ca9a191fb229f8f66
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363769"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086334"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Ontwikkelaarshandleiding voor Microsoft Intune App SDK voor Android
 
@@ -297,7 +297,7 @@ Naast basisklassen kunnen voor bepaalde klassen die uw app gebruikt zonder aflei
 | enroid.preference.PreferenceActivity | MAMPreferenceActivity |
 | android.support.multidex.MultiDexApplication | MAMMultiDexApplication |
 | android.widget.TextView | MAMTextView |
-| android.widget.AutoCompleteTextView | MAMAutoCompleteTextView |
+| android.widget.AutoCompleteTextView |    MAMAutoCompleteTextView |
 | android.widget.CheckedTextView | MAMCheckedTextView |
 | android.widget.EditText | MAMEditText |
 | android.inputmethodservice.ExtractEditText | MAMExtractEditText |
@@ -324,7 +324,7 @@ Naast basisklassen kunnen voor bepaalde klassen die uw app gebruikt zonder aflei
 |--|--|
 | android.support.v7.app.AlertDialog.Builder | MAMAlertDialogBuilder |
 | android.support.v7.app.AppCompatActivity | MAMAppCompatActivity |
-| android.support.v7.widget.AppCompatAutoCompleteTextView | MAMAppCompatAutoCompleteTextView |
+| android.support.v7.widget.AppCompatAutoCompleteTextView |    MAMAppCompatAutoCompleteTextView |
 | android.support.v7.widget.AppCompatCheckedTextView | MAMAppCompatCheckedTextView |
 | android.support.v7.widget.AppCompatEditText | MAMAppCompatEditText |
 | android.support.v7.widget.AppCompatMultiAutoCompleteTextView | MAMAppCompatMultiAutoCompleteTextView |
@@ -1079,7 +1079,7 @@ De `getComplianceStatus()`-methode retourneert het resultaat van de nalevingsher
 | PENDING | De poging om naleving te herstellen, is mislukt omdat het statusantwoord niet van de service is ontvangen toen de tijdslimiet werd overschreden. Probeer later het token van de app opnieuw op te halen. |
 | COMPANY_PORTAL_REQUIRED | Voor een geslaagd nalevingsherstel moet Bedrijfsportal op het apparaat zijn geïnstalleerd.  Als Bedrijfsportal al op het apparaat is geïnstalleerd, moet de app opnieuw worden opgestart.  In dit geval wordt een dialoogvenster weergegeven waarin de gebruiker wordt gevraagd de app opnieuw op te starten. |
 
-Als de nalevingsstatus `MAMCAComplianceStatus.COMPLIANT` is, wordt de oorspronkelijke tokenverwerving van de app opnieuw gestart (voor de eigen resource van de app). Als de nalevingsherstelpoging is mislukt, worden door de methoden `getComplianceErrorTitle()` en `getComplianceErrorMessage()` gelokaliseerde tekenreeksen geretourneerd die in de app kunnen worden weergegeven als de eindgebruiker hiervoor kiest.  De meeste fouten kunnen niet door de app worden hersteld, dus over het algemeen kunt u het maken van het account of het aanmelden het beste laten mislukken, zodat gebruikers het later opnieuw kunnen proberen.  Als een fout zich blijft voordoen, kunt u de oorzaak proberen te achterhalen met behulp van de MAM-logboeken.  De eindgebruiker kan de logboeken verzenden aan de hand van de instructies die [hier](https://docs.microsoft.com/user-help/send-logs-to-your-it-admin-by-email-android "Logboeken via e-mail naar het ondersteuningsteam van uw bedrijf verzenden") beschikbaar zijn.
+Als de nalevingsstatus `MAMCAComplianceStatus.COMPLIANT` is, wordt de oorspronkelijke tokenverwerving van de app opnieuw gestart (voor de eigen resource van de app). Als de nalevingsherstelpoging is mislukt, worden door de methoden `getComplianceErrorTitle()` en `getComplianceErrorMessage()` gelokaliseerde tekenreeksen geretourneerd die in de app kunnen worden weergegeven als de eindgebruiker hiervoor kiest.  De meeste fouten kunnen niet door de app worden hersteld, dus over het algemeen kunt u het maken van het account of het aanmelden het beste laten mislukken, zodat gebruikers het later opnieuw kunnen proberen.  Als een fout zich blijft voordoen, kunt u de oorzaak proberen te achterhalen met behulp van de MAM-logboeken.  De eindgebruiker kan de logboeken verzenden aan de hand van de instructies die [hier](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android "Logboeken via e-mail naar het ondersteuningsteam van uw bedrijf verzenden") beschikbaar zijn.
 
 Aangezien met `MAMComplianceNotification` wordt `MAMUserNotification` uitgebreid, is ook de identiteit van de gebruiker beschikbaar voor wie de herstelpoging is uitgevoerd.
 
@@ -1457,12 +1457,12 @@ public final class MAMFileProtectionManager {
     * this method will silently do nothing.
     *
     * @param identity
-    *       Identity to set.
+    *         Identity to set.
     * @param file
-    *       File to protect.
+    *         File to protect.
     *
     * @throws IOException
-    *       If the file cannot be protected.
+    *         If the file cannot be protected.
     */
    public static void protect(final File file, final String identity) throws IOException;
 
@@ -1864,7 +1864,7 @@ De Intune SDK onderhoudt het contract geleverd door de Android-API, hoewel er va
 De Intune App SDK voor Android beheert niet de gegevensverzameling vanuit uw app. De toepassing Bedrijfsportal registreert standaard door het systeem gegenereerde gegevens. Deze gegevens worden naar Microsoft Intune verzonden. Conform het Microsoft-beleid worden er geen persoonsgegevens verzameld.
 
 > [!NOTE]
-> Als eindgebruikers ervoor kiezen deze gegevens niet te verzenden, moeten ze telemetrie uitschakelen onder Instellingen op de bedrijfsportal-app. Zie [Gegevensverzameling door Microsoft uitschakelen](https://docs.microsoft.com/user-help/turn-off-microsoft-usage-data-collection-android) voor meer informatie. 
+> Als eindgebruikers ervoor kiezen deze gegevens niet te verzenden, moeten ze telemetrie uitschakelen onder Instellingen op de bedrijfsportal-app. Zie [Gegevensverzameling door Microsoft uitschakelen](https://docs.microsoft.com/mem/intune/user-help/turn-off-microsoft-usage-data-collection-android) voor meer informatie. 
 
 ## <a name="recommended-android-best-practices"></a>Aanbevolen procedures voor Android
 

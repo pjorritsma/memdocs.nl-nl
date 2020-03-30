@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 03/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 387817dfcf929b985c0836779510e3d6c0f9795a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 10accc0c59dc0d97e2f3ac4739335dd1e2cd4cba
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79353616"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084968"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>SCEP-certificaatprofielen maken en toewijzen in Intune
 
@@ -35,28 +35,31 @@ Nadat u [uw infrastructuur hebt geconfigureerd](certificates-scep-configure.md) 
 
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecteer **Apparaten** > **Configuratieprofiel** > **Profiel maken**.
+2. Ga naar **Apparaten** > **Configuratieprofielen** > **Profiel maken**.
 
 3. Voer de volgende eigenschappen in:
+   - **Platform**: Kies het platform van uw apparaten.
+   - **Profiel**: Selecteer **SCEP-certificaat**
 
-4. Voer een **naam** en een **beschrijving** in voor het SCEP-certificaatprofiel.
+     Voor het **Android Enterprise**-platform is het *Profieltype* onderverdeeld in twee categorieën: *Alleen apparaateigenaar* en *Alleen werkprofiel*. Zorg ervoor dat u het juiste SCEP-certificaatprofiel selecteert voor de apparaten die u beheert.  
 
-5. Selecteer in de vervolgkeuzelijst **Platform** een [ondersteund apparaatplatform](certificates-configure.md#supported-platforms-and-certificate-profiles) voor dit SCEP-certificaat.
+     SCEP-certificaatprofielen voor het profiel *Alleen apparaateigenaar* hebben de volgende beperkingen:
 
-6. Selecteer in de vervolgkeuzelijst **Profieltype** de optie **SCEP-certificaat**.  
+      1. Certificaatrapportage is onder Bewaking niet beschikbaar voor de SCEP-certificaatprofielen voor apparaateigenaar.
 
-   Voor het **Android Enterprise**-platform is het *Profieltype* onderverdeeld in twee categorieën: *Alleen apparaateigenaar* en *Alleen werkprofiel*. Zorg ervoor dat u het juiste SCEP-certificaatprofiel selecteert voor de apparaten die u beheert.  
+      2. U kunt Intune niet gebruiken om certificaten in te trekken die zijn ingericht door SCEP-certificaatprofielen voor eigenaren van apparaten. U kunt het intrekken beheren via een extern proces of rechtstreeks met de certificeringsinstantie.
 
-   SCEP-certificaatprofielen voor het profiel *Alleen apparaateigenaar* hebben de volgende beperkingen:
+      3. Bij toegewezen Android Enterprise-apparaten worden SCEP-certificaatprofielen alleen ondersteund voor het configureren en verifiëren van Wi-Fi-netwerken.  SCEP-certificaatprofielen op toegewezen Android Enterprise-apparaten worden niet ondersteund voor VPN- of app-verificatie.
 
-   1. Certificaatrapportage is onder Bewaking niet beschikbaar voor de SCEP-certificaatprofielen voor apparaateigenaar.
+4. Selecteer **Maken**.
 
-   2. U kunt Intune niet gebruiken om certificaten in te trekken die zijn ingericht door SCEP-certificaatprofielen voor eigenaren van apparaten. U kunt het intrekken beheren via een extern proces of rechtstreeks met de certificeringsinstantie. 
+5. Voer in **Basisinformatie** de volgende eigenschappen in:
+   - **Naam**: Voer een beschrijvende naam in voor het profiel. Geef uw profielen een naam zodat u ze later eenvoudig kunt identificeren. Een goede profielnaam is bijvoorbeeld *SCEP-profiel voor hele bedrijf*.
+   - **Beschrijving**: Voer een beschrijving in voor het profiel. Deze instelling is optioneel, maar wordt aanbevolen.
 
-   4. Bij toegewezen Android Enterprise-apparaten worden SCEP-certificaatprofielen alleen ondersteund voor het configureren en verifiëren van Wi-Fi-netwerken.  SCEP-certificaatprofielen op toegewezen Android Enterprise-apparaten worden niet ondersteund voor VPN- of app-verificatie.   
+6. Selecteer **Volgende**.
 
-   
-7. Selecteer **Instellingen** en voltooi de volgende configuraties:
+7. Voltooi in **Configuratie-instellingen** de volgende configuraties:
 
    - **Certificaattype**:
 
@@ -209,7 +212,7 @@ Nadat u [uw infrastructuur hebt geconfigureerd](certificates-scep-configure.md) 
 
    - **Basiscertificaat**:
 
-     Selecteer het *vertrouwde certificaatprofiel* dat u eerder hebt geconfigureerd en hebt toegewezen aan de betreffende gebruikers en apparaten voor dit SCEP-certificaatprofiel. Het vertrouwde certificaatprofiel wordt gebruikt om het vertrouwde basis-CA-certificaat in te richten voor gebruikers en apparaten. Zie [Uw vertrouwde basis-CA-certificaat exporteren](certificates-configure.md#export-the-trusted-root-ca-certificate) en [Profielen voor vertrouwde certificaten maken](certificates-configure.md#create-trusted-certificate-profiles) in *Certificaten voor verificatie gebruiken in Intune* voor meer informatie over het vertrouwde certificaatprofiel. Als u een basiscertificeringsinstantie en een verlenende certificeringsinstantie hebt, selecteert u het vertrouwde basiscertificaatprofiel dat is gekoppeld aan de verlenende certificeringsinstantie.
+     Selecteer het *vertrouwde certificaatprofiel* dat u eerder hebt geconfigureerd en hebt toegewezen aan de betreffende gebruikers en apparaten voor dit SCEP-certificaatprofiel. Het vertrouwde certificaatprofiel wordt gebruikt om het vertrouwde basis-CA-certificaat in te richten voor gebruikers en apparaten. Zie [Uw vertrouwde basis-CA-certificaat exporteren](certificates-configure.md#export-the-trusted-root-ca-certificate) en [Profielen voor vertrouwde certificaten maken](certificates-configure.md#create-trusted-certificate-profiles) in *Certificaten voor verificatie gebruiken in Intune* voor meer informatie over het vertrouwde certificaatprofiel. Als u een basiscertificeringsinstantie en een verlenende certificeringsinstantie hebt, selecteert u het vertrouwde basiscertificaatprofiel waarmee de verlenende certificeringsinstantie wordt gevalideerd.
 
    - **Uitgebreide-sleutelgebruik**:
 
@@ -223,7 +226,21 @@ Nadat u [uw infrastructuur hebt geconfigureerd](certificates-scep-configure.md) 
 
      Voer een of meer URL's in voor de NDES-servers die certificaten via SCEP verlenen. Voer bijvoorbeeld iets in als *https://ndes.contoso.com/certsrv/mscep/mscep.dll* . U kunt indien nodig aanvullende SCEP-URL's voor taakverdeling toevoegen, omdat URL's willekeurig op het apparaat met het profiel worden gepusht. Als een van de SCEP-servers niet beschikbaar is, mislukt de SCEP-aanvraag. Dan wordt de volgende keer dat er apparaten worden ingecheckt, de certificaataanvraag mogelijk uitgevoerd op dezelfde niet-actieve server.
 
-8. Selecteer **OK** en selecteer vervolgens **Maken**. Het profiel is gemaakt en wordt weergegeven in de lijst *Apparaatconfiguratie - Profielen*.
+8. Selecteer **Volgende**.
+
+9. Wijs in **Bereiktags** (optioneel) een tag toe om het profiel te filteren op specifieke IT-groepen, zoals `US-NC IT Team` of `JohnGlenn_ITDepartment`. Zie [RBAC en bereiktags gebruiken voor gedistribueerde IT](../fundamentals/scope-tags.md) voor meer informatie over bereiktags.
+
+   Selecteer **Volgende**.
+
+10. Selecteer in **Toewijzingen** de gebruiker of groepen die uw profiel zullen ontvangen. Zie [Gebruikers- en apparaatprofielen toewijzen](../configuration/device-profile-assign.md) voor meer informatie over het toewijzen van profielen.
+
+    Selecteer **Volgende**.
+
+11. (*Alleen van toepassing op Windows 10*) Geef in **Toepasselijkheidsregels**de toepasselijkheidsregels op om de toewijzing van dit profiel te verfijnen. U kunt ervoor kiezen om het profiel al dan niet toe te wijzen op basis van de versie van het besturingssysteem of een apparaat.
+
+   Zie [Toepasselijkheidsregels](../configuration/device-profile-create.md#applicability-rules) in *Een apparaatprofiel maken in Microsoft Intune*voor meer informatie.
+
+12. Controleer uw instellingen in **Beoordelen en maken**. Wanneer u Maken selecteert, worden uw wijzigingen opgeslagen en wordt het profiel toegewezen. Het beleid wordt ook weergegeven in de lijst met profielen.
 
 ### <a name="avoid-certificate-signing-requests-with-escaped-special-characters"></a>Aanvragen voor certificaatondertekening met speciale tekens met escape-teken vermijden
 

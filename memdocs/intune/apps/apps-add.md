@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f543cf3a03e43948c8b97075325c071254b0c9a9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 73173d599c3d19bb39090b34e0c5f6ffec5753fe
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79341149"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083853"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Apps toevoegen aan Microsoft Intune 
 
@@ -207,6 +207,7 @@ Als u wilt leren hoe u voor elk platform apps aan Intune toevoegt, raadpleegt u:
 - [Windows LOB-app](lob-apps-windows.md)
 - [Office 365-apps voor Windows 10](apps-add-office365.md)
 - [Office 365-apps voor macOS](apps-add-office365-macos.md)
+- [Beheerde Google Play-apps](apps-add-android-for-work.md)
 - [Microsoft Edge voor Windows 10](apps-windows-edge.md)
 - [Microsoft Edge voor macOS](apps-edge-macos.md)
 - [Ingebouwde apps](apps-add-built-in.md)

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 22268d979b82aad31fdf1c9a67fd0417262de5ca
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 84d14943a37cf29a224c94364317d899b65ffef0
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363288"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526323"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Apparaten die aan hybride Azure AD zijn gekoppeld implementeren met Intune en Windows Autopilot
 U kunt Intune en Windows Autopilot gebruiken om apparaten in te stellen die zijn gekoppeld aan Hybrid Azure Active Directory (Azure AD). Volg hiervoor de stappen in dit artikel.
@@ -227,7 +227,7 @@ Het duurt ongeveer 15 minuten voordat de status van het apparaatprofiel is gewij
    - OU=Mine,DC=contoso,DC=com
    
    Hier volgen enkele voorbeelden die niet geldig zijn:
-   - CN=Computers,DC=contoso,DC=com (u kunt geen container opgeven, laat de waarde leeg om de standaard te gebruiken voor het domein)
+   - CN=Computers,DC=contoso,DC=com (u kunt geen container opgeven; laat de waarde leeg om de standaardwaarde voor het domein te gebruiken)
    - OU=Mine (u moet het domein opgeven via DC= attributes)
      
    > [!NOTE]

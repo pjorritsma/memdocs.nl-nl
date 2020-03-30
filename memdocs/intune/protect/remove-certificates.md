@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: lacranda
-ms.openlocfilehash: cba46d5b4b203cdbb67fb5f6b6b116a21ebacb32
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b6303d7d98e718c2a4f54b199bf90a3bd0684bf8
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79338926"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084752"
 ---
 # <a name="remove-scep-and-pkcs-certificates-in-microsoft-intune"></a>SCEP- en PKCS-certificaten verwijderen in Microsoft Intune
 
@@ -91,7 +91,6 @@ PKCS-certificaten *blijven gehandhaafd* op het apparaat (certificaten worden nie
 - Een beheerder de gebruiker of groep uit Azure AD verwijdert.
 - Een beheerder wijzigingen aanbrengt in het PKCS-profiel of dit bijwerkt.
 - Een certificaatprofiel wordt verwijderd uit de groepstoewijzing.
-
 
 ## <a name="ios-devices"></a>iOS-apparaten
 
@@ -190,8 +189,8 @@ Een basiscertificaat wordt verwijderd wanneer:
 - Een beheerder de actie [Buiten gebruik stellen](../remote-actions/devices-wipe.md#retire) uitvoert.
 
 PKCS-certificaten *blijven gehandhaafd* op het apparaat (certificaten worden niet ingetrokken of verwijderd) wanneer:
-- Een gebruiker de Intune-licentie verliest.
 
+- Een gebruiker de Intune-licentie verliest.
 - Een beheerder de Intune-licentie intrekt.
 - Een beheerder de gebruiker of groep uit Azure AD verwijdert.
 - Een beheerder wijzigingen aanbrengt in het PKCS-profiel of dit bijwerkt.
@@ -228,7 +227,23 @@ SCEP-certificaten *blijven gehandhaafd* op het apparaat (certificaten worden nie
 
 ### <a name="pkcs-certificates"></a>PKCS-certificaten
 
-PKCS-certificaten worden niet ondersteund in macOS.
+Een PKCS-certificaat wordt ingetrokken *en* verwijderd wanneer:
+
+- Een eindgebruiker zich uitschrijft.
+- Een beheerder de actie [Buiten gebruik stellen](../remote-actions/devices-wipe.md#retire) uitvoert.
+
+Een basiscertificaat wordt verwijderd wanneer:
+
+- Een eindgebruiker zich uitschrijft.
+- Een beheerder de actie [Buiten gebruik stellen](../remote-actions/devices-wipe.md#retire) uitvoert.
+
+PKCS-certificaten blijven gehandhaafd op het apparaat (certificaten worden niet ingetrokken of verwijderd) wanneer:
+
+- Een gebruiker de Intune-licentie verliest.
+- Een beheerder de Intune-licentie intrekt.
+- Een certificaatprofiel wordt verwijderd uit de groepstoewijzing. (Het profiel wordt verwijderd.)
+- Een beheerder de gebruiker of groep uit Azure AD verwijdert.
+- Een beheerder wijzigingen aanbrengt in het PKCS-profiel of dit bijwerkt.
 
 ## <a name="next-steps"></a>Volgende stappen
 

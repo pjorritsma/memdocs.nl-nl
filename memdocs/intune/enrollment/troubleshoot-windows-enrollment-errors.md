@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7cdd92948aed51eb37b4774d2521a1d28cd8245f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fe5fce47d6a0480596bc09d82456c7636fe84d51
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79344607"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526271"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Problemen met inschrijving van Windows-apparaten in Microsoft Intune oplossen
 
@@ -321,6 +321,8 @@ Fout 0x80070774: Er is iets misgegaan. Controleer of u de juiste aanmeldingsgege
 Dit probleem treedt meestal op voordat het apparaat opnieuw wordt opgestart in een Autopilot-scenario met hybride Azure AD, wanneer het apparaat een time-out heeft tijdens het eerste aanmeldingsscherm. Dit betekent dat de domeincontroller niet kan worden gevonden of niet kan worden bereikt vanwege verbindingsproblemen. Of het apparaat heeft een status waardoor het apparaat niet kan worden toegevoegd aan het domein.
 
 **Oorzaak**: De meestvoorkomende oorzaak is dat hybride Azure AD Join wordt gebruikt en dat de functie voor het toewijzen van gebruikers is geconfigureerd in het Autopilot-profiel. Met deze functie wordt een Azure AD Join op het apparaat uitgevoerd tijdens het eerste aanmeldingsscherm waarmee het apparaat in een toestand wordt geplaatst waarin het niet kan worden toegevoegd aan uw on-premises domein. Daarom mag de functie voor het toewijzen van gebruikers alleen worden gebruikt in standaardscenario's van Autopilot met Azure AD Join.  De functie mag niet worden gebruikt in scenario's met hybride Azure AD Join.
+
+Een andere mogelijke oorzaak voor deze fout is dat het AzureAD-apparaat dat aan het Autopilot-object is gekoppeld, is verwijderd. U kunt dit oplossen door het Autopilot-object te verwijderen en de hash opnieuw te importeren om een nieuw object te genereren.
 
 #### <a name="resolution"></a>Oplossing
 

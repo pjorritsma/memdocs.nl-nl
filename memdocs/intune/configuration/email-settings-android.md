@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31310accbaded1e048cb3c5b574557ffcef0335c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 36e17dc12622b3bb95c35a4472556f1c4f31ccd0
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364224"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087017"
 ---
 # <a name="android-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Android-apparaatinstellingen voor het configureren van e-mail, verificatie en synchronisatie in Intune
 
@@ -32,28 +32,26 @@ Zie voor meer informatie over e-mailprofielen in Intune [Configure email setting
 
 ## <a name="before-you-begin"></a>Voordat u begint
 
-[Maak een apparaatconfiguratieprofiel](email-settings-configure.md#create-a-device-profile).
+[Maak een apparaatconfiguratieprofiel](email-settings-configure.md).
 
 ## <a name="android-samsung-knox"></a>Android (Samsung Knox)
 
 - **E-mailserver**: Voer de hostnaam van uw Exchange-server in. Voer bijvoorbeeld `outlook.office365.com` in.
 - **Accountnaam**: Voer de weergavenaam voor het e-mailaccount in. Deze naam zien gebruikers op hun apparaat.
 - **Het kenmerk Gebruikersnaam van AAD**: deze naam is het kenmerk dat Intune uit Azure Active Directory (Azure AD) ophaalt. In Intune wordt de gebruikersnaam die wordt gebruikt door dit profiel dynamisch gegenereerd. Uw opties zijn:
-  - **User Principal Name**: Hiermee wordt de naam opgehaald, zoals `user1` of `user1@contoso.com`
-  - **Gebruikersnaam**: Hiermee wordt alleen de naam opgehaald, zoals `user1`
-  - **sAM-accountnaam**: Hiervoor is het domein vereist, zoals `domain\user1`. De sAM-accountnaam wordt alleen gebruikt bij Android-apparaten.
-
-    Voer ook in:  
+  - **User Principal Name**: Hiermee wordt de naam opgehaald, zoals `user1` of `user1@contoso.com`.
+  - **Gebruikersnaam**: Hiermee wordt alleen de naam opgehaald, zoals `user1`.
+  - **sAM-accountnaam**: Hiervoor is het domein vereist, zoals `domain\user1`. De sAM-accountnaam wordt alleen gebruikt bij Android-apparaten. Voer ook in:  
     - **Bron van gebruikersdomeinnaam**: Kies **AAD** (Azure Active Directory) of **Aangepast**.
 
       Voer, wanneer u ervoor kiest om de kenmerken op te halen van **AAD**, het volgende in:
-      - **Het kenmerk Gebruikersdomeinnaam van AAD**: Kies de optie om de **volledige domeinnaam** of het kenmerk **NetBIOS-naam** van de gebruiker op te halen
+      - **Het kenmerk Gebruikersdomeinnaam van AAD**: Kies de optie om de **Volledige domeinnaam** of het kenmerk **NetBIOS-naam** van de gebruiker op te halen.
 
       Wanneer u ervoor kiest om **aangepaste** kenmerken te gebruiken, moet u het volgende invoeren:
-      - **Te gebruiken aangepaste domeinnaam**: Voer een waarde in die Intune voor de domeinnaam gebruikt, zoals `contoso.com` of `contoso`
+      - **Te gebruiken aangepaste domeinnaam**: Voer een waarde in die voor de domeinnaam wordt gebruikt in Intune, zoals `contoso.com` of `contoso`.
 
 - **Kenmerk van het e-mailadres van AAD**: Deze naam is het e-mailkenmerk dat Intune uit Azure AD ophaalt. In Intune wordt het e-mailadres dat voor dit profiel wordt gebruikt, dynamisch gegenereerd. Uw opties zijn:
-  - **User Principal Name**:  Maakt gebruik van de volledige principal name, zoals `user1@contoso.com` of `user1`, als het e-mailadres.
+  - **User Principal Name**: Maakt gebruik van de volledige principal name, zoals `user1@contoso.com` of `user1`, als het e-mailadres.
   - **Primair SMTP-adres**: Maakt gebruik van het primaire SMTP-adres, zoals `user1@contoso.com`, voor aanmelding bij Exchange.
 
 - **Verificatiemethode**: Selecteer **Gebruikersnaam en wachtwoord** of **Certificaten** als verificatiemethode voor het e-mailprofiel.

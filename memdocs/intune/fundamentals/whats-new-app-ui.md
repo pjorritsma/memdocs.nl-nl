@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/07/2020
+ms.date: 03/05/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 767d3671d796299d802fe950d443a152d8e2d645
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ba2b8e407b4c81f74df7c86e7101461b30a0d8e0
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354565"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087161"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>UI-updates voor Intune-apps voor eindgebruikers
 
@@ -32,10 +32,19 @@ Informatie over de meest recente updates voor de Microsoft Intune-apps. We voege
 * Studenten en werknemers te waarschuwen voor wijzigingen in de app en in de inschrijving ervoor.
 * De documentatie of de helpdeskprocedures van uw organisatie bij te werken.  
 
-Zorg ervoor dat, als u een werknemer of student bent, u de schermafbeeldingen en koppelingen naar de Help-documentatie voor de bedrijfsportal bekijkt. Zie de [Help-documentatie voor bedrijfsportalgebruikers](https://docs.microsoft.com/user-help/) voor meer informatie over het gebruik van de bedrijfsportal-app.  
+Zorg ervoor dat, als u een werknemer of student bent, u de schermafbeeldingen en koppelingen naar de Help-documentatie voor de bedrijfsportal bekijkt. Zie de [Help-documentatie voor bedrijfsportalgebruikers](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done) voor meer informatie over het gebruik van de bedrijfsportal-app.  
 
-<!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/whats-new-app-ui/account-move-rom-iwp-user-1712.png)--->
 
+
+## <a name="week-of-march-2-2020"></a>Week van 2 maart 2020   
+### <a name="improved-sign-in-experience-in-company-portal-for-android"></a>Bijgewerkte aanmeldervaring voor de bedrijfsportal-app voor Android   
+De indeling van diverse aanmeldingsschermen in de bedrijfsportal-app voor Android is bijgewerkt voor een modernere, eenvoudige en duidelijke ervaring voor gebruikers. Ga naar [Uw Android-apparaat inschrijven](../user-help/enroll-device-android-company-portal.md) of [inschrijven met Android-werkprofiel](../user-help/enroll-device-android-work-profile.md) om alle inschrijvingsinstructies voor Bedrijfsportal voor Android te zien.   
+
+
+|Bijgewerkt|Vorige|   
+|---|---|   
+|![Voorbeeldafbeelding van het nieuwe aanmeldingsscherm voor Bedrijfsportal met de knop Aanmelden.](./media/whats-new-app-ui/intune-company-portal-sign-in-2003.png)|![Voorbeeldafbeelding van het vorige aanmeldingsscherm voor Bedrijfsportal, met een drukker ontwerp.](./media/whats-new-app-ui/intune-company-portal-sign-in-2002.png)| 
+|![Voorbeeldafbeelding van het nieuwe scherm Aanmelding in voortgang, met één voortgangsbalk.](./media/whats-new-app-ui/intune-company-portal-signing-in-2003.png)|![Voorbeeldafbeelding van het vorige scherm Aanmelding in voortgang, met een drukker ontwerp.](./media/whats-new-app-ui/intune-company-portal-signing-in-2002.png)|  
 ## <a name="week-of-february-3-2020"></a>Week van 3 februari 2020
 
 ### <a name="screen-removed-from-company-portal-android-work-profile-enrollment---6103987---"></a>Scherm verwijderd uit de Bedrijfsportal, inschrijving van het Android-werkprofiel <!--6103987 -->
@@ -105,7 +114,7 @@ De bedrijfsportal voor Windows toont nu alle beheerde apps (zowel vereiste als b
 ## <a name="week-of-june-17-2019"></a>Week van 17 juni 2019  
 
 ### <a name="new-features-in-microsoft-intune-app"></a>Nieuwe functies in Microsoft Intune-app
-We hebben nieuwe functies toegevoegd aan de Microsoft Intune-app (preview) voor Android. Gebruikers op volledig beheerde Android-apparaten kunnen nu:  
+Er zijn nieuwe functies toegevoegd aan de Microsoft Intune-app (preview) voor Android. Gebruikers op volledig beheerde Android-apparaten kunnen nu:  
 
 * De apparaten weergeven en beheren die zij hebben ingeschreven via de Intune-bedrijfsportal of de Microsoft Intune-app.    
 * Contact opnemen met hun organisatie voor ondersteuning.    
@@ -142,7 +151,7 @@ De schermen en stappen in de bedrijfsportal-app voor iOS-inschrijving zijn bijge
 * De app instellingen te openen voor het installeren van het beheerprofiel op hun apparaat.  
 * Terug te gaan naar de bedrijfsportal-app om de inschrijving te voltooien.  
 
-Zie [iOS-apparaat inschrijven bij Intune](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-ios) voor de bijgewerkte stappen en schermen voor de inschrijving.  
+Zie [iOS-apparaat inschrijven bij Intune](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-ios) voor de bijgewerkte stappen en schermen voor de inschrijving.  
 
 ### <a name="user-experience-update-for-the-company-portal-app-for-ios----2536024---"></a>Update van de gebruikerservaring voor de bedrijfsportal-app voor iOS <!-- 2536024 -->
 De startpagina van de bedrijfsportal-app voor iOS-apparaten is opnieuw ontworpen. Dankzij deze wijziging kunt u patronen van de iOS-gebruikersinterface beter volgen op de startpagina en is de zichtbaarheid van apps en e-Books verbeterd.  
@@ -166,7 +175,7 @@ Als Microsoft Intune-beheerder kunt u een aangepaste merkafbeelding uploaden die
 ## <a name="week-of-august-27-2018"></a>Week van 27 augustus 2018  
 
 ### <a name="new-user-experience-update-for-the-company-portal-website---2000968---"></a>Nieuwe update van de gebruikerservaring voor de bedrijfsportalwebsite <!--2000968 -->  
-Op basis van feedback van klanten zijn er nieuwe functies toegevoegd aan de Bedrijfsportalwebsite. U zult een aanzienlijke verbetering ervaren wat betreft de bestaande functionaliteit en bruikbaarheid van uw apparaten. Delen van de site, zoals apparaatgegevens, feedback, ondersteuning en apparaatoverzicht, hebben nu een nieuw, modern, responsief ontwerp. De [documentatie voor Intune-bedrijfsportalwebsite](https://docs.microsoft.com/user-help/using-the-intune-company-portal-website) is bijgewerkt, waarbij deze wijzigingen zijn meegenomen.   
+Op basis van feedback van klanten zijn er nieuwe functies toegevoegd aan de bedrijfsportalwebsite. U zult een aanzienlijke verbetering ervaren wat betreft de bestaande functionaliteit en bruikbaarheid van uw apparaten. Delen van de site, zoals apparaatgegevens, feedback, ondersteuning en apparaatoverzicht, hebben nu een nieuw, modern, responsief ontwerp. De [documentatie voor Intune-bedrijfsportalwebsite](https://docs.microsoft.com/mem/intune/user-help/using-the-intune-company-portal-website) is bijgewerkt, waarbij deze wijzigingen zijn meegenomen.   
 
 De updates die u ziet zijn onder andere:  
 

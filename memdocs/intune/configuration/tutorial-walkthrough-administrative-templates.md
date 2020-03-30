@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/23/2020
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 936634a26dee315c7ad452ac408f9cc0eac00dfe
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5988da854eecd528119a7e2591fc083dcdbc29bf
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79343268"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220219"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>Zelfstudie: De cloud gebruiken voor het configureren van groepsbeleid op Windows 10-apparaten met ADMX-sjablonen en Microsoft Intune
 
@@ -101,7 +101,7 @@ Deze functie is van toepassing op:
 ## <a name="open-the-endpoint-manager-admin-center"></a>Het Endpoint Manager-beheercentrum openen
 
 1. Open een Chromium-webbrowser, zoals Microsoft Edge versie 77 of hoger.
-2. Ga naar het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) (https://devicemanagement.microsoft.com). Meld u aan met het volgende account:
+2. Ga naar het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431). Meld u aan met het volgende account:
 
     **Gebruiker**: Voer het beheerdersaccount van uw Microsoft 365-tenantabonnement in.  
     **Wachtwoord**: Voer het wachtwoord in.
@@ -146,7 +146,7 @@ In deze volgende stappen maakt u beveiligingsgroepen en voegt u gebruikers toe a
     - **Groepstype**: Selecteer **Beveiliging**.
     - **Groepsnaam**: Voer **Alle Windows-apparaten** in.
     - **Type lidmaatschap**: Selecteer **Dynamisch apparaat**.
-    - **Leden van dynamisch apparaat**: Configureer uw query:
+    - **Leden van dynamisch apparaat**: Selecteer **Dynamische query toevoegen**en configureer uw query:
 
         - **Eigenschap**: Selecteer **deviceOSType**.
         - **Operator**: Selecteer **Is gelijk aan**.
@@ -166,7 +166,7 @@ In deze volgende stappen maakt u beveiligingsgroepen en voegt u gebruikers toe a
     - **Groepstype**: Selecteer **Beveiliging**.
     - **Groepsnaam**: Voer **Alle docenten** in.
     - **Type lidmaatschap**: Selecteer **Dynamische gebruiker**.
-    - **Dynamische gebruikersleden**: Configureer uw query:
+    - **Dynamische gebruikersleden**: Selecteer **Dynamische query toevoegen**en configureer uw query:
 
       - **Eigenschap**: Selecteer **afdeling**.
       - **Operator**: Selecteer **Is gelijk aan**.
@@ -225,12 +225,17 @@ In deze sectie maken we een beheersjabloon in Intune, bekijken we een aantal ins
 1. Selecteer in het Endpoint Manager-beheercentrum **Apparaten** > **Configuratieprofielen** > **Profiel maken**.
 2. Voer de volgende eigenschappen in:
 
+    - **Platform**: Kies **Windows 10 en hoger**.
+    - **Profiel**: Selecteer **Beheersjablonen**.
+
+3. Selecteer **Maken**.
+4. Voer in **Basisinformatie** de volgende eigenschappen in:
+
     - **Naam**: Voer een beschrijvende naam in voor het profiel. Geef uw profielen een naam zodat u ze later eenvoudig kunt identificeren. Voer bijvoorbeeld **Beheersjabloon - Windows 10-studentapparaten** in.
     - **Beschrijving**: Voer een beschrijving in voor het profiel. Deze instelling is optioneel, maar wordt aanbevolen.
-    - **Platform**: Kies **Windows 10 en hoger**.
-    - **Profieltype**: Selecteer **Beheersjablonen**.
 
-3. Selecteer **Maken**. Selecteer in de vervolgkeuzelijst **Een categorie selecteren** de optie **Alle producten**. Alle instellingen worden weergegeven. Bekijk de volgende eigenschappen in deze instellingen:
+5. Selecteer **Volgende**.
+6. Selecteer **Alle producten** in de vervolgkeuzelijst onder **Configuratie-instellingen**. Alle instellingen worden weergegeven. Bekijk de volgende eigenschappen in deze instellingen:
 
     - Het **Pad** naar het beleid is hetzelfde als dat van groepsbeleidsbeheer of GPEdit.
     - De instelling is van toepassing op gebruikers of apparaten.
@@ -263,7 +268,7 @@ In deze sectie wordt beleid in Intune en het overeenkomstige beleid in Groepsbel
     > [!div class="mx-imgBorder"]
     > ![De opties bekijken voor computerconfiguratie-instellingen in groepsbeleid](./media/tutorial-walkthrough-administrative-templates/prevent-enabling-lock-screen-camera-admx-policy.png)
 
-5. Ga in het beheercentrum voor apparaatbeheer naar uw sjabloon **Beheersjabloon - Windows 10-studentapparaten**.
+5. Ga in het Eindpuntbeheer-beheercentrum naar uw sjabloon **Beheersjabloon - Windows 10-studentapparaten**.
 6. Selecteer **Alle producten** in de vervolgkeuzelijst en zoek naar **Persoonlijke instellingen**:
 
     > [!div class="mx-imgBorder"]
@@ -290,7 +295,7 @@ In deze sectie wordt beleid in Intune en het overeenkomstige beleid in Groepsbel
 
 #### <a name="compare-an-edge-policy"></a>Edge-beleid vergelijken
 
-1. Ga in het beheercentrum voor apparaatbeheer naar uw sjabloon **Beheersjabloon - Windows 10-studentapparaten**.
+1. Ga in het Eindpuntbeheer-beheercentrum naar uw sjabloon **Beheersjabloon - Windows 10-studentapparaten**.
 2. Selecteer **Edge versie 77 en hoger** in de vervolgkeuzelijst.
 3. Zoeken naar **opstarten**. Bekijk de beschikbare instellingen.
 4. Zoek de volgende instellingen in Groepsbeleidsbeheer-editor:
@@ -338,17 +343,16 @@ In deze sjabloon configureren we enkele Internet Explorer-instellingen om appara
 
 ### <a name="assign-your-template"></a>Uw sjabloon toewijzen
 
-1. Selecteer **Toewijzingen** in uw sjabloon. Mogelijk moet u uw sjabloon sluiten en deze vervolgens selecteren in de lijst **Apparaten - Configuratieprofielen**:
+1. Selecteer in uw sjabloon **Toewijzingen** > **Groepen selecteren die moeten worden opgenomen**:
 
     > [!div class="mx-imgBorder"]
     > ![Selecteer uw beheersjabloonprofiel in de lijst Apparaatconfiguratieprofielen in Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/filter-administrative-template-device-configuration-profiles-list.png)
 
-2. Kies **Groepen selecteren die moeten worden opgenomen**. Er wordt een lijst met bestaande gebruikers en groepen weergegeven.
-3. Selecteer de groep **Alle Windows 10-studentapparaten** die u eerder hebt gemaakt > **Selecteren**.
+2. Er wordt een lijst met bestaande gebruikers en groepen weergegeven. Selecteer de groep **Alle Windows 10-studentapparaten** die u eerder hebt gemaakt > **Selecteren**.
 
     U kunt groepen toevoegen die leeg zijn als u deze zelfstudie in een productieomgeving gebruikt. Het doel is te oefenen met het toewijzen van uw sjabloon.
 
-4. U moet vervolgens de wijzigingen **Opslaan**.
+3. Selecteer **Volgende** om naar het tabblad **Beoordelen en maken** te gaan. Selecteer **Maken** om uw wijzigingen op te slaan.
 
 Zodra het profiel is opgeslagen, wordt op de apparaten toegepast wanneer deze worden ingecheckt bij Intune. Als de apparaten verbonden zijn met internet, kan dit onmiddellijk plaatsvinden. Zie [Hoe lang duurt het voor apparaten een beleidsregel, profiel of app hebben ontvangen nadat deze zijn toegewezen?](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) voor meer informatie over vernieuwtijden van beleid.
 
@@ -366,14 +370,17 @@ In deze sectie maakt u een OneDrive-beheersjabloon in Intune om bepaalde instell
 
 2. Voer de volgende eigenschappen in:
 
-    - **Naam**: Voer **Beheersjabloon - OneDrive-beleidsregels die van toepassing zijn op alle Windows 10-gebruikers** in.
-    - **Beschrijving**: Voer een beschrijving in voor het profiel. Deze instelling is optioneel, maar wordt aanbevolen.
     - **Platform**: Kies **Windows 10 en hoger**.
-    - **Profieltype**: Selecteer **Beheersjablonen**.
+    - **Profiel**: Selecteer **Beheersjablonen**.
 
 3. Selecteer **Maken**.
-4. Selecteer **Office** in de vervolgkeuzelijst.
-5. Kies **Inschakelen** voor de volgende instellingen. Zorg ervoor dat u **OK** selecteert om uw wijzigingen op te slaan.
+4. Voer in **Basisinformatie** de volgende eigenschappen in:
+
+    - **Naam**: Voer **Beheersjabloon - OneDrive-beleidsregels die van toepassing zijn op alle Windows 10-gebruikers** in.
+    - **Beschrijving**: Voer een beschrijving in voor het profiel. Deze instelling is optioneel, maar wordt aanbevolen.
+
+5. Selecteer **Volgende**.
+6. Selecteer **Office** in de vervolgkeuzelijst onder **Configuratie-instellingen**. Kies **Inschakelen** voor de volgende instellingen. Zorg ervoor dat u **OK** selecteert om uw wijzigingen op te slaan.
 
     - **Gebruikers op de achtergrond aanmelden bij de OneDrive-synchronisatieclient met hun Windows-referenties**
     - **OneDrive-bestanden op aanvraag gebruiken**
@@ -388,13 +395,12 @@ Zie [Groepsbeleid gebruiken voor het beheren van instellingen voor OneDrive-sync
 
 ### <a name="assign-your-template"></a>Uw sjabloon toewijzen
 
-1. Selecteer **Toewijzingen** in uw sjabloon.
-2. Kies **Groepen selecteren die moeten worden opgenomen**. Er wordt een lijst met bestaande gebruikers en groepen weergegeven.
-3. Selecteer de groep **Alle Windows-apparaten** die u eerder hebt gemaakt > **Selecteren**.
+1. Selecteer in uw sjabloon **Toewijzingen** > **Groepen selecteren die moeten worden opgenomen**
+2. Er wordt een lijst met bestaande gebruikers en groepen weergegeven. Selecteer de groep **Alle Windows-apparaten** die u eerder hebt gemaakt > **Selecteren**.
 
     U kunt groepen toevoegen die leeg zijn als u deze zelfstudie in een productieomgeving gebruikt. Het doel is te oefenen met het toewijzen van uw sjabloon.
 
-4. U moet vervolgens de wijzigingen **Opslaan**.
+3. Selecteer **Volgende** om naar het tabblad **Beoordelen en maken** te gaan. Selecteer **Maken** om uw wijzigingen op te slaan.
 
 Op dit moment hebt u enkele beheersjablonen gemaakt en deze toegewezen aan groepen die u hebt gemaakt. De volgende stap is het maken van een beheersjabloon met behulp van Windows PowerShell en de Microsoft Graph API voor Intune.
 

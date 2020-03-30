@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,16 +15,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fcaa3d4dc27f1791db77b70513968eeda51c668d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: df05c4b1a7a5ee3f30d33e40620a8a116f508333
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363899"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086487"
 ---
 # <a name="add-vpn-settings-on-windows-phone-81-devices-in-microsoft-intune"></a>VPN-instellingen toevoegen op Windows Phone 8.1-apparaten in Microsoft Intune
-
-
 
 In dit artikel leest u meer over de Intune-instellingen die u kunt gebruiken om VPN-verbindingen op apparaten met Windows Phone 8.1. te configureren. 
 
@@ -32,6 +30,10 @@ Afhankelijk van de instellingen die u kiest, kunnen niet alle waarden in de volg
 
 >[!IMPORTANT]
 >Windows Phone 8.1-VPN-profielen worden ook toegepast op Windows 10-apparaten.
+
+## <a name="before-you-begin"></a>Voordat u begint
+
+[Maak een VPN-apparaatconfiguratieprofiel](vpn-settings-configure.md).
 
 ## <a name="base-vpn-settings"></a>Basis-VPN-instellingen
 
@@ -51,7 +53,7 @@ Afhankelijk van de instellingen die u kiest, kunnen niet alle waarden in de volg
 - **VPN niet gebruiken op het Wi-Fi-netwerk van het bedrijf**: Schakel deze optie in om aan te geven dat de VPN-verbindingen niet worden gebruikt wanneer het apparaat is verbonden met het Wi-Fi-netwerk van het bedrijf.
 - **VPN niet gebruiken op het Wi-Fi-thuisnetwerk**: Schakel deze optie in om aan te geven dat de VPN-verbinding niet wordt gebruikt wanneer het apparaat is verbonden met een Wi-Fi-netwerk thuis.
 
-- **Type verbinding**: Selecteer het type VPN-verbinding in de volgende lijst met leveranciers:
+- **Type verbinding**: selecteer het type van de VPN-verbinding. Uw opties zijn:
   - **Check Point Capsule VPN**
   - **SonicWall Mobile Connect**
   - **F5 Edge Client**
@@ -91,7 +93,7 @@ Afhankelijk van de instellingen die u kiest, kunnen niet alle waarden in de volg
 
   Raadpleeg de VPN-documentatie van de fabrikant voor meer informatie over het schrijven van aangepaste XML-opdrachten.
 
-- **Split tunneling**: U kunt deze optie **Inschakelen** of **Uitschakelen** om apparaten op basis van het verkeer te laten bepalen welke verbinding moet worden gebruikt. Een gebruiker in een hotel gebruikt bijvoorbeeld de VPN-verbinding voor werkbestanden, maar het standaardnetwerk van het hotel om gewoon op het web te surfen.
+- **Split tunneling**: Met **Inschakelen** bepalen apparaten op basis van het verkeer welke verbinding moet worden gebruikt. Een gebruiker in een hotel gebruikt bijvoorbeeld de VPN-verbinding voor werkbestanden, maar het standaardnetwerk van het hotel om gewoon op het web te surfen. Selecteer **Uitschakelen** als u wilt afdwingen dat al het verkeer de VPN-tunnel gebruikt wanneer de VPN-verbinding actief is.
 
 ## <a name="proxy-settings"></a>Proxyinstellingen
 

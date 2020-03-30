@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a110b268c31f4e1ee5dada6554215b648449f01
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 28ce4e7d80e79f752bded8f0cdf03494aa629e1b
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342423"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233454"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>App-configuratiebeleidsregels voor beheerde iOS-/iPadOS-apparaten toevoegen
 
@@ -106,7 +106,7 @@ De tekens \{\{ en \}\} worden alleen gebruikt door tokentypen en mogen niet word
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Alleen geconfigureerde organisatieaccounts toestaan in apps met meerdere identiteiten 
 
-Gebruik voor iOS-/iPadOS-apparaten de volgende sleutel-/waardeparen:
+Als Microsoft Intune-beheerder kunt u bepalen welke gebruikersaccounts worden toegevoegd aan Microsoft-apps op beheerde apparaten. U kunt de toegang beperken tot uitsluitend toegestane gebruikersaccounts van de organisatie, en persoonlijke accounts blokkeren op ingeschreven apparaten. Gebruik voor iOS-/iPadOS-apparaten de volgende sleutel-/waardeparen:
 
 | **Sleutel** | **Waarden** |
 |----|----|
@@ -114,7 +114,10 @@ Gebruik voor iOS-/iPadOS-apparaten de volgende sleutel-/waardeparen:
 | IntuneMAMUPN | <ul><li>De UPN van het account waarvoor aanmelden bij de app is toegestaan.</li><li> Voor apparaten die zijn ingeschreven bij Intune, kan het <code>{{userprincipalname}}</code>-token worden gebruikt voor het ingeschreven gebruikersaccount.</li></ul>  |
 
    > [!NOTE]
-   > U moet OneDrive voor iOS 10.34 of hoger, Outlook voor iOS 2.99.0 of hoger, of Edge voor iOS 44.8.7 of hoger gebruiken, en de app moet onder [beveiligingsbeleid voor apps in Intune](app-protection-policy.md) vallen, indien u alleen geconfigureerde organisatie-accounts met meerdere identiteiten toestaat.
+   > De volgende apps verwerken de bovenstaande app-configuratie en staan alleen organisatieaccounts toe:
+   > - Edge voor iOS (44.8.7 en hoger)
+   > - OneDrive voor iOS (10.34 en hoger)
+   > - Outlook voor iOS (2.99.0 of hoger)
 
 ## <a name="enter-xml-data"></a>XML-gegevens invoeren
 

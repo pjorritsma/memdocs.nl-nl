@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48f890888d9bdb9d1df67596fb9125534e90a4d2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c0f1552d2edc6bfa5f6bdb255f156bcfb77a4990
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79350132"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084098"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Instellingen van apparaatfuncties voor iOS, iPadOS of macOS toevoegen in Intune
 
@@ -149,11 +149,11 @@ Van toepassing op:
 
 ## <a name="single-sign-on-app-extension"></a>App-extensie voor eenmalige aanmelding
 
-Met deze instellingen configureert u een app-extensie die eenmalige aanmelding (SSO) voor uw iOS-, iPadOS- en macOS-apparaten mogelijk maakt. De meeste LOB-apps (Line-Of-Business) vereisen een zekere mate van beveiligde gebruikersverificatie. In veel gevallen moeten gebruikers bij de verificatie herhaaldelijk dezelfde referenties invoeren. Met SSO hebben gebruikers toegang tot apps en websites nadat ze hun referenties eenmaal hebben ingevoerd. Nadat ze zich hebben aangemeld, hebben gebruikers automatisch toegang tot apps en websites, of kunnen ze Face ID, Touch ID of Apple-wachtwoordcode gebruiken om toegang te krijgen.
+Met deze instellingen configureert u een app-extensie die eenmalige aanmelding (SSO) voor uw iOS-, iPadOS- en macOS-apparaten mogelijk maakt. De meeste LOB-apps (Line-Of-Business) vereisen een zekere mate van beveiligde gebruikersverificatie. In veel gevallen moeten gebruikers bij de verificatie herhaaldelijk dezelfde referenties invoeren. Met SSO hebben gebruikers toegang tot apps en websites nadat ze hun referenties eenmaal hebben ingevoerd. SSO biedt gebruikers ook een betere authenticatie-ervaring en vermindert het aantal herhaalde prompts voor referenties.
 
-Gebruik deze instellingen in Intune voor het configureren van een SSO-app-extensie die is gemaakt door uw organisatie, id-provider of Apple. Met de SSO-app-extensie wordt de verificatie voor uw gebruikers afgehandeld. Met deze instellingen worden het omleidingstype en de SSO-app-extensies voor het referentietype geconfigureerd.
+Gebruik deze instellingen in Intune voor het configureren van een SSO-app-extensie die is gemaakt door uw organisatie, uw id-provider, Microsoft of Apple. Met de SSO-app-extensie wordt de verificatie voor uw gebruikers afgehandeld. Met deze instellingen worden het omleidingstype en de SSO-app-extensies voor het referentietype geconfigureerd.
 
-- Het omleidingstype is ontworpen voor moderne verificatieprotocollen, zoals OAuth en SAML2.
+- Het omleidingstype is ontworpen voor moderne verificatieprotocollen, zoals OAuth en SAML2. Microsoft heeft een omleidingstype-SSO-app-extensie voor iOS/iPadOS Azure AD die kan worden ingeschakeld met de instellingen van de app-extensie voor eenmalige aanmelding.
 - Het referentietype is ontworpen voor verificatiestromen met vraag en antwoord. U kunt kiezen tussen een Kerberos-referentie-extensie van Apple en een algemene referentie-extensie.
 
 Zie [SSO-app-extensie voor iOS/iPadOS](ios-device-features-settings.md#single-sign-on-app-extension) en [SSO-app-extensie voor macOS](macos-device-features-settings.md#single-sign-on-app-extension) voor een lijst met instellingen die u kunt configureren in Intune.
@@ -194,7 +194,7 @@ Van toepassing op:
 
 ## <a name="web-content-filter"></a>Webinhoudsfilter
 
-Met deze instellingen kunt u het ingebouwde AutoFilter-algoritme van Apple gebruiken om webpagina's te evalueren en inhoud voor volwassenen te blokkeren. U kunt ook een lijst met toegestane en beperkte webkoppelingen maken. U kunt bijvoorbeeld instellen dat alleen websites van `contoso` mogen worden geopend.
+Met deze instellingen wordt het ingebouwde AutoFilter-algoritme van Apple gebruikt om webpagina's te evalueren en inhoud voor volwassenen te blokkeren. U kunt ook een lijst met toegestane en beperkte webkoppelingen maken. U kunt bijvoorbeeld instellen dat alleen websites van `contoso` mogen worden geopend.
 
 Zie [Webinhoudsfilter op iOS/iPadOS](ios-device-features-settings.md#web-content-filter) voor een lijst met instellingen die u kunt configureren in Intune.
 

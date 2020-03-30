@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d57e2af03ba1d035f8285c4075d5cbc8ff6cfd38
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 26f3ec6871784a019ffcf117d17b863b05354848
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359466"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526305"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Apparaten identificeren als bedrijfseigendom
 
@@ -78,7 +78,7 @@ Dit CSV-bestand ziet er in een teksteditor als volgt uit:
 
 > [!IMPORTANT]
 > Sommige Android- en iOS-/iPadOS-apparaten hebben meerdere IMEI-nummers. Intune leest maar één IMEI-nummer per ingeschreven apparaat. Als u een IMEI-nummer importeert dat niet het IMEI-nummer is dat in Intune is geïnventariseerd, wordt het apparaat geclassificeerd als een persoonlijk apparaat in plaats van een apparaat in bedrijfseigendom. Als u meerdere IMEI-nummers voor een apparaat importeert, krijgen niet-geïnventariseerde nummers de inschrijvingsstatus **Onbekend**.<br>
->Let ook hierop: Serienummers zijn de aanbevolen identificatiewijze voor iOS-/iPadOS-apparaten.
+>Let ook hierop: Serienummers zijn de aanbevolen identificatiewijze voor iOS/iPadOS-apparaten.
 >Android-serienummers zijn niet gegarandeerd uniek of aanwezig. U kunt de leverancier van uw apparaat vragen of het serienummer van uw apparaat een betrouwbare id is.
 >De serienummers van het apparaat die aan Intune worden gemeld, komen mogelijk niet overeen met de id die wordt weergegeven in het menu Info of Instellingen van het apparaat. Controleer het type van het serienummer dat door de fabrikant van het apparaat wordt vermeld.
 >Wanneer wordt geprobeerd een bestand te uploaden met serienummers met punten (.), mislukt de upload. Serienummers met punten worden niet ondersteund.

@@ -17,12 +17,12 @@ ms.reviewer: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 335841a8642429e36c277673fd8a238d486366c9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f685f1f3d009d7ba7a1dc061ec3025b2f8c96b5f
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79350613"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084636"
 ---
 # <a name="troubleshoot-integration-of-jamf-pro-with-microsoft-intune"></a>Problemen oplossen met integratie van Jamf Pro met Microsoft Intune
 
@@ -89,8 +89,8 @@ Nadat u de integratie van Intune en Jamf Pro hebt geconfigureerd en voorwaardeli
 Een prompt met tekst zoals in het volgende voorbeeld wordt bijvoorbeeld weergegeven wanneer Microsoft Teams wordt geopend:
 
 ``` 
-  Microsoft Teams wants to sign using key “Microsoft Workplace Join Key” in your keychain.  
-  To allow this, enter the “login” keychain password 
+  Microsoft Teams wants to sign using key "Microsoft Workplace Join Key" in your keychain.  
+  To allow this, enter the "login" keychain password 
 ```
 
 **Oorzaak**: Deze prompts worden gegenereerd door Jamf Pro voor elke van toepassing zijnde app waarvoor Azure AD-registratie is vereist. 
@@ -156,7 +156,7 @@ In de bedrijfsportal-app ziet de gebruiker mogelijk **`Not registered`** , en mo
 
 **Oplossing**  
 U kunt de registratiebron als volgt van Intune wijzigen in Jamf:
-1. [De registratie van het macOS-apparaat bij Intune ongedaan maken](https://docs.microsoft.com/user-help/unenroll-your-device-from-intune-macos). Om het voor apparaten die niet volledig uit Intune zijn verwijderd niet nog ingewikkelder te maken, raadpleegt u [*Oorzaak 6*](#cause-6) in deze lijst met oorzaken.  
+1. [De registratie van het macOS-apparaat bij Intune ongedaan maken](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-macos). Om het voor apparaten die niet volledig uit Intune zijn verwijderd niet nog ingewikkelder te maken, raadpleegt u [*Oorzaak 6*](#cause-6) in deze lijst met oorzaken.  
 
 2. Gebruik Jamf-selfservice op het apparaat om de bedrijfsportal-app te openen en het apparaat vervolgens in te schrijven bij Intune. Voor deze taak moet u [Jamf hebben gebruikt om de bedrijfsportal-app voor macOS te implementeren](conditional-access-assign-jamf.md#deploy-the-company-portal-app-for-macos-in-jamf-pro) en [een beleid in Jamf Pro hebben gemaakt waarmee het gebruikersapparaat bij Azure AD wordt geregistreerd](conditional-access-assign-jamf.md#create-a-policy-in-jamf-pro-to-have-users-register-their-devices-with-azure-active-directory).  
 
@@ -242,9 +242,9 @@ Als een apparaat uit Jamf wordt uitgeschreven maar niet op de juiste manier uit 
 Tijdens de registratie ontvangen gebruikers van een macOS-apparaat de volgende vraag om JamfAAD toegang te verlenen tot een sleutel van hun sleutelhanger: 
 
 ```
-   JamfAAD wants to access key “Microsoft Workplace Join Key" in your keychain. 
+   JamfAAD wants to access key "Microsoft Workplace Join Key" in your keychain. 
     
-   To allow this, enter the “login” keychain password
+   To allow this, enter the "login" keychain password
 ```
 
 **Oplossing**  

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ed8acbcbe550ffd0a3a3f94e07d5752489ae8be6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 89d9fce6579b0fdf89299e342969f647c457cc84
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79340928"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80324829"
 ---
 # <a name="configure-google-chrome-for-android-devices-using-intune"></a>Google Chrome configureren voor Android-apparaten met behulp van Intune 
 
@@ -40,7 +40,7 @@ U kunt Intune-configuratiebeleid voor apps gebruiken om Google Chrome te configu
 2. Selecteer **Apps** > **Alle apps** > **Toevoegen** en voeg vervolgens de **beheerde Google Play**-app toe.
 3. Ga naar beheerde Google Play, zoek met **Google Chrome** en keur goed.
 
-    ![Google Chrome zoeken en goedkeuren](/media/apps-configure-chrome-android/search.png)
+    ![Google Chrome zoeken en goedkeuren](./media/apps-configure-chrome-android/search.png)
 
 4. Wijs Google Chrome als vereist app-type toe aan een gebruikersgroep. Google Chrome wordt automatisch geïmplementeerd wanneer het apparaat is ingeschreven bij Intune.
 
@@ -55,15 +55,15 @@ Zie [Beheerde Google Play Store-apps](apps-add-android-for-work.md#managed-googl
     - **Type apparaatinschrijving** - deze instelling is ingesteld op **Beheerde apparaten**.
     - **Platform** - selecteer **Android**.
 
-    ![Google Chrome-configuratiebeleid toevoegen](/media/apps-configure-chrome-android/add-policy.png)
+    ![Google Chrome-configuratiebeleid toevoegen](./media/apps-configure-chrome-android/add-policy.png)
 
 3. Klik op **Gekoppelde app** om het deelvenster **Gekoppelde app** weer te geven. Zoek en selecteer **Google Chrome**. Deze lijst bevat [beheerde Google Play-apps die u hebt goedgekeurd en die zijn gesynchroniseerd met Intune](apps-add-android-for-work.md).
 
-    ![Selecteer onder Gekoppelde app de optie Google Chrome](/media/apps-configure-chrome-android/associated-app.png)
+    ![Selecteer onder Gekoppelde app de optie Google Chrome](./media/apps-configure-chrome-android/associated-app.png)
 
 4. Klik op **Configuratie-instellingen**, selecteer **Configuration Designer gebruiken**, en klik vervolgens op **Toevoegen** om de configuratiesleutels te selecteren.
 
-    ![Configuration Designer gebruiken toevoegen](/media/apps-configure-chrome-android/configuration.png)
+    ![Configuration Designer gebruiken toevoegen](./media/apps-configure-chrome-android/configuration.png)
 
     Hieronder ziet u het voorbeeld van de algemene instellingen:
     - **Toegang tot een lijst met URL's blokkeren**: `["*"]`
@@ -73,7 +73,7 @@ Zie [Beheerde Google Play Store-apps](apps-add-android-for-work.md#managed-googl
 
     Zodra de configuratie-instellingen zijn toegevoegd met behulp van Configuration Designer, worden ze weergegeven in een tabel. 
 
-    ![Algemene instellingen](/media/apps-configure-chrome-android/common-settings.png)
+    ![Algemene instellingen](./media/apps-configure-chrome-android/common-settings.png)
 
     Met de bovenstaande instellingen maakt u bladwijzers en kunt u toegang tot alle URL's blokkeren, behalve `baidu.com`, `yahoo.com`, `chromium.org` en `chrome://`.
 
@@ -84,31 +84,31 @@ Zie [Beheerde Google Play Store-apps](apps-add-android-for-work.md#managed-googl
 
 Zodra het Android-apparaat is ingeschreven bij Android Enterprise, wordt de beheerde Google Chrome-app met het portfoliopictogram automatisch geïmplementeerd.
 
-   <img alt="Managed Google Chrome with the portfolio icon" src="/media/apps-configure-chrome-android/chrome-icon.png" width="350">
+   <img alt="Managed Google Chrome with the portfolio icon" src="./media/apps-configure-chrome-android/chrome-icon.png" width="350">
 
 Als u Google Chrome start, ziet u dat de instellingen zijn toegepast.
 
    Bladwijzers:<br>
-   <img alt="Bookmarks" src="/media/apps-configure-chrome-android/bookmarks.png" width="350">
+   <img alt="Bookmarks" src="./media/apps-configure-chrome-android/bookmarks.png" width="350">
 
    Geblokkeerde URL:<br>
-   <img alt="Blocked URL" src="/media/apps-configure-chrome-android/blocked-url.png" width="350">
+   <img alt="Blocked URL" src="./media/apps-configure-chrome-android/blocked-url.png" width="350">
 
    Toegestane URL:<br>
-   <img alt="Allow URL" src="/media/apps-configure-chrome-android/allowed-url.png" width="350">
+   <img alt="Allow URL" src="./media/apps-configure-chrome-android/allowed-url.png" width="350">
 
    Incognito-tabblad:<br>
-   <img alt="Incognito tab" src="/media/apps-configure-chrome-android/incognito-tab.png" width="350">
+   <img alt="Incognito tab" src="./media/apps-configure-chrome-android/incognito-tab.png" width="350">
 
 ## <a name="troubleshooting"></a>Probleemoplossing
 
 1. Ga naar de Intune-portal om de implementatiestatus van het beleid te controleren.
 
-    ![De implementatiestatus van het beleid controleren](/media/apps-configure-chrome-android/monitor-status.png)
+    ![De implementatiestatus van het beleid controleren](./media/apps-configure-chrome-android/monitor-status.png)
 
 2. Start Google Chrome en ga naar **chrome://policy** . We kunnen bevestigen dat de instellingen juist zijn toegepast.
 
-    ![Bevestigen dat de instellingen juist zijn toegepast](/media/apps-configure-chrome-android/confirm.png)
+    ![Bevestigen dat de instellingen juist zijn toegepast](./media/apps-configure-chrome-android/confirm.png)
 
 ## <a name="additional-information"></a>Aanvullende informatie
 

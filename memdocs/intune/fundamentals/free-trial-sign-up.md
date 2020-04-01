@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 83107121b05b2126e4c6b2b377baf57ee069f917
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 893981700ede9587a980faa0e4d6b0384c24e3d4
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79343983"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401492"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Quickstart: Microsoft Intune gratis proberen
 
@@ -64,7 +64,7 @@ U mag Intune 30 dagen gratis proberen. Als u al een werk- of schoolaccount hebt 
 
 Als u nog niet bent aangemeld bij de portal, voert u de volgende stappen uit:
 
-1. Open een nieuw browservenster en voer **https://devicemanagement.microsoft.com** in de adresbalk in. 
+1. Open een nieuw browservenster en voer **https://endpoint.microsoft.com** in de adresbalk in. 
 2. Gebruik de gebruikers-id die u in de bovenstaande stappen hebt opgegeven om u aan te melden ( *yourID@yourdomain* .onmicrosoft.com).
 
     ![Afbeelding van de aanmeldingspagina van de portal](./media/free-trial-sign-up/azure-portal-signin.png)
@@ -126,7 +126,7 @@ Zoals hierboven is gemeld, kunt u de domeinnaam wijzigen in het Microsoft 365-be
 ## <a name="admin-experiences"></a>Ervaringen van beheerders
 
 Er zijn twee portals die u het meest gebruikt:
-- Het beheercentrum van Microsoft Endpoint Manager ([https://devicemanagement.microsoft.com/](https://devicemanagement.microsoft.com/)), waar u de [mogelijkheden van Intune](what-is-intune.md) kunt verkennen. Hier werken beheerders normaal gesproken met Intune.
+- Het beheercentrum van Microsoft Endpoint Manager ([https://endpoint.microsoft.com/](https://endpoint.microsoft.com/)), waar u de [mogelijkheden van Intune](what-is-intune.md) kunt verkennen. Hier werken beheerders normaal gesproken met Intune.
 - Het beheercentrum van Microsoft 365 ([https://admin.microsoft.com](https://admin.microsoft.com)), waar u gebruikers kunt toevoegen en beheren als u Azure Active Directory hiervoor niet gebruikt. U kunt ook andere aspecten van uw account beheren, zoals facturering en ondersteuning.
 
 ## <a name="next-steps"></a>Volgende stappen

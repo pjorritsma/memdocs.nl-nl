@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1598be8f5f54f1f509194aed0232730bd821624b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8583c625277735d653143f5cf87c56c350bdc1ff
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79357113"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326707"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>Beleidssets gebruiken om verzamelingen beheerobjecten te groeperen
 
@@ -63,7 +63,7 @@ Wanneer u een beleidsset maakt, maakt u één toewijzingseenheid en beheert u ko
     - **Naam van beleidsset**: geef een naam voor deze beleidsset op.
     - **Beschrijving**: geef indien gewenst een beschrijving op voor de beleidsset.
    <p>
-   <img alt="Create policy set - Basics" src="/media/policy-sets/policy-sets-01.png">
+      <img alt="Create policy set - Basics" src="./media/policy-sets/policy-sets-01.png">
 
 4. Klik op **Volgende: toepassingsbeheer**.<br>
    Op de pagina **Toepassingsbeheer** kunt u desgewenst [apps](../apps/apps-add.md), [app-configuratiebeleid](../apps/app-configuration-policies-overview.md) en [app-beveiligingsbeleid](../apps/app-protection-policy.md) aan uw beleidsset toevoegen. Zie [Wat is Microsoft Intune-appbeheer?](../apps/app-management.md) voor meer informatie over het beheren van apps in Intune.

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3cf008c708ce42611a842ff7f8720d48d57ac91
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a1ce95391e8dbfa9fd8f5a8e2347f9c4249ee79f
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79341617"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323440"
 ---
 # <a name="use-ios-app-provisioning-profiles-to-prevent-your-apps-from-expiring"></a>Inrichtingsprofielen gebruiken voor iOS-apps om te voorkomen dat uw apps verlopen
 
@@ -53,7 +53,7 @@ Als beheerder kunt u beveiligingsgroepen in- en uitsluiten om de inrichtingsconf
 
    De **Vervaldatum** wordt ingevuld op basis van een waarde in het bestand Apple-profiel voor mobiele configuratie dat u hierboven hebt toegevoegd.<br>
 
-   <img alt="Create profile - Basics" src="/media/app-provisioning-profile-ios/app-provisioning-profile-ios-01.png">
+   <img alt="Create profile - Basics" src="./media/app-provisioning-profile-ios/app-provisioning-profile-ios-01.png">
 
 4. Klik op **Volgende: Bereiktags**.<br>
    Op de pagina **Bereiktags** kunt u desgewenst bereiktags configureren om te bepalen wie het inrichtingsprofiel voor iOS-/iPadOS-apps in Intune kan zien. Zie [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md) (Op rollen gebaseerd toegangsbeheer en bereiktags gebruiken voor gedistribueerde IT) voor meer informatie over bereiktags.

@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0b2bb9a6220a599cc0e403e6c71f3b8907bbab0e
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: c047c0f54e64dbe17b6bd9e9082272e80fe7566c
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80085835"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401480"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Wat is er nieuw in Microsoft Intune - vorige maanden
 
@@ -229,7 +229,7 @@ Wanneer u de [Intune Graph API](https://docs.microsoft.com/graph/api/resources/i
 ### <a name="microsoft-365-device-management"></a>Microsoft 365 Device Management
 
 #### <a name="improved-administration-experience-in-microsoft-365-device-management---5551239---"></a>Verbeterde beheerervaring in Microsoft 365 Device Management<!-- 5551239 -->
-Een vernieuwde en gestroomlijnde beheerervaring is nu algemeen beschikbaar in de gespecialiseerde werkruimte van Microsoft 365 Device Management op [https://devicemanagement.microsoft.com](https://devicemanagement.microsoft.com), met daarin:
+Een vernieuwde en gestroomlijnde beheerervaring is nu algemeen beschikbaar in de gespecialiseerde werkruimte van Microsoft 365 Device Management op [https://endpoint.microsoft.com](https://endpoint.microsoft.com), met daarin:
 
 - **Bijgewerkte navigatie**: U profiteert van een vereenvoudigde navigatie op het eerste niveau die functies op logische wijze groepeert.
 - **Nieuwe platformfilters**: Op de pagina's voor apparaten en apps kunt u één platform selecteren dat alleen het beleid en de apps voor het geselecteerde platform toont.
@@ -238,7 +238,7 @@ Zie de [Blogpost voor Enterprise Mobility + Security](https://go.microsoft.com/f
 
 #### <a name="introducing-endpoint-security-node-in-microsoft-365-device-management---5630102---"></a>Introductie van Endpoint Security-knooppunt in Microsoft 365 Device Management<!-- 5630102 -->
 
-Een **Endpoint Security**-knooppunt is nu algemeen beschikbaar in de gespecialiseerde werkruimte van Microsoft 365 Device Management op https://devicemanagement.microsoft.com, waar de mogelijkheden voor het beveiligen van eindpunten zijn samengebracht, zoals:
+Een **Endpoint Security**-knooppunt is nu algemeen beschikbaar in de gespecialiseerde werkruimte van Microsoft 365 Device Management op https://endpoint.microsoft.com, waar de mogelijkheden voor het beveiligen van eindpunten zijn samengebracht, zoals:
 
 - Beveiligingsbasislijnen:  Vooraf geconfigureerde groep instellingen die u helpen bij het toepassen van bekende groepen instellingen en standaardwaarden die door Microsoft worden aanbevolen.
 - Beveiligingstaken: Profiteer van het Threat and Vulnerability Management (TVM) van Microsoft Defender ATP en gebruik Intune om zwakke punten in eindpunten te herstellen.
@@ -527,7 +527,7 @@ In deze update worden de volgende functies toegevoegd:
 - **Toegewezen apparaten** > Meerdere apps **:** met **volumeregeling van media** kunnen gebruikers het mediavolume van het apparaat beheren met behulp van een schuifregelaar. 
 - **Toegewezen apparaten** > Meerdere apps **:**  **een schermbeveiliging inschakelen**, een aangepaste afbeelding uploaden en bepalen wanneer de schermbeveiliging wordt weergegeven.
 
-Ga naar [Android Enterprise-apparaatinstellingen om beperkingsfuncties toe te staan of te beperken met behulp van Intune](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings) om de huidige instellingen te zien.
+Ga naar [Android Enterprise-apparaatinstellingen om beperkingsfuncties toe te staan of te beperken met behulp van Intune](../configuration/device-restrictions-android-for-work.md#dedicated-devices) om de huidige instellingen te zien.
 
 Van toepassing op:
 
@@ -1461,7 +1461,7 @@ Van toepassing op:
 #### <a name="kiosk-devices-are-now-called-dedicated-devices-on-android-enterprise-devices---3598402-----"></a>Apparaten in de kioskmodus heten voortaan 'toegewezen apparaten' op Android Enterprise-apparaten<!-- 3598402   -->
 Voor de afstemming met Android terminologie wordt **kiosk** gewijzigd in **toegewezen apparaten** voor Android Enterprise-apparaten (**Apparaatconfiguratie** > **Profielen** > **Profiel maken** > ** Android Enterprise als platform > **Alleen apparaateigenaar** > **Apparaatbeperkingen** > **Toegewezen apparaten**).
 
-Als u de beschikbare instellingen wilt zien, gaat u naar [Apparaatinstellingen voor het toestaan of beperken van functies](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings).
+Als u de beschikbare instellingen wilt zien, gaat u naar [Apparaatinstellingen voor het toestaan of beperken van functies](../configuration/device-restrictions-android-for-work.md#dedicated-devices).
 
 Van toepassing op:  
 Android Enterprise
@@ -2106,7 +2106,7 @@ Wanneer Intune Office op de machines van uw eindgebruiker installeert, krijgen e
 ### <a name="monitor-and-troubleshoot"></a>Bewaken en problemen oplossen
 
 #### <a name="new-intune-support-experience-in-the-microsoft-365-device-management-portal---3076965---"></a>Nieuwe ervaring voor Intune-ondersteuning in de portal voor Microsoft 365-apparaatbeheer<!-- 3076965 -->
-We implementeren een nieuwe ervaring voor help en ondersteuning voor Intune in de [portal voor Microsoft 365-apparaatbeheer]( https://devicemanagement.microsoft.com). Met de nieuwe ervaring kunt u uw probleem in uw eigen woorden beschrijven en informatie over probleemoplossing en op internet gevonden informatie over het oplossen van het probleem ontvangen. Deze oplossingen worden aangeboden via een op regels gebaseerde machine learning-algoritme, dat wordt aangestuurd door zoekvragen van gebruikers.  
+We implementeren een nieuwe ervaring voor help en ondersteuning voor Intune in de [portal voor Microsoft 365-apparaatbeheer]( https://endpoint.microsoft.com). Met de nieuwe ervaring kunt u uw probleem in uw eigen woorden beschrijven en informatie over probleemoplossing en op internet gevonden informatie over het oplossen van het probleem ontvangen. Deze oplossingen worden aangeboden via een op regels gebaseerde machine learning-algoritme, dat wordt aangestuurd door zoekvragen van gebruikers.  
 
 Naast informatie die specifiek is voor problemen kunt u ook gebruikmaken van de nieuwe werkstroom voor het openen van een ondersteuningsvraag via e-mail of telefoon.  
 
@@ -2148,7 +2148,7 @@ Als u een van de hierna vermelde apparaten hebt, of als u een van de hierna verm
 ### <a name="device-management"></a>Apparaatbeheer
 
 #### <a name="microsoft-365-device-management-administration-center---3078424---"></a>Beheercentrum voor Microsoft 365-apparaatbeheer<!-- 3078424 -->
-Een van de beloften van Microsoft 365 is vereenvoudigd beheer. In de afgelopen jaren is de back-end Microsoft 365-services geïntegreerd voor het leveren van complete scenario’s, zoals voorwaardelijke toegang voor Intune en Azure AD. Het nieuwe [Microsoft 365-beheercentrum](https://devicemanagement.microsoft.com) is de plek waar de beheerervaring wordt versterkt, vereenvoudigd en geïntegreerd. De gespecialiseerde werkruimte voor apparaatbeheer biedt eenvoudige toegang tot alle apparaat- en appbeheerinformatie en taken die uw organisatie nodig heeft. Naar verwachting zal dat dit de primaire cloudwerkruimte voor zakelijke computerteams van eindgebruikers worden.
+Een van de beloften van Microsoft 365 is vereenvoudigd beheer. In de afgelopen jaren is de back-end Microsoft 365-services geïntegreerd voor het leveren van complete scenario’s, zoals voorwaardelijke toegang voor Intune en Azure AD. Het nieuwe [Microsoft 365-beheercentrum](https://endpoint.microsoft.com) is de plek waar de beheerervaring wordt versterkt, vereenvoudigd en geïntegreerd. De gespecialiseerde werkruimte voor apparaatbeheer biedt eenvoudige toegang tot alle apparaat- en appbeheerinformatie en taken die uw organisatie nodig heeft. Naar verwachting zal dat dit de primaire cloudwerkruimte voor zakelijke computerteams van eindgebruikers worden.
 
 
 <!-- ########################## -->

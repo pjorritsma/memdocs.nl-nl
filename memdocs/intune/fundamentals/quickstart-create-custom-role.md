@@ -42,7 +42,7 @@ Tijdens het maken van een aangepaste rol kunt u machtigingen instellen voor een 
 
 1. Kies in Intune **Rollen** > **Alle rollen** > **Toevoegen**.
 ![Browser](./media/quickstart-create-custom-role/add-custom-role.png)
-2. Bij **Aangepaste rol toevoegen** voert u in het vak **Naam***Beveiligingsbewerkingen* in.
+2. Bij **Aangepaste rol toevoegen** voert u in het vak **Naam** *Beveiligingsbewerkingen* in.
 3. In het vak **Beschrijving** voert u het volgende in: *Met deze rol kan een beveiligingsoperator de apparaatconfiguratie- en -nalevingsinformatie bewaken.*
 4. Kies **Configureren** > **Bedrijfsapparaat-id's** > **Ja** naast **Lezen** > **OK**.
 ![Browser](./media/quickstart-create-custom-role/corp-device-id-read.png)

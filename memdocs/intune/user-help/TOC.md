@@ -12,6 +12,7 @@
 
 ## Uw Android-apparaat gebruiken
 ### [Redenen om uw Android-apparaat in te schrijven](why-enroll-android-device.md)
+### [De bedrijfsportal-app installeren in China](install-company-portal-android-china.md)
 ### Uw apparaat inschrijven
 #### [Uw Android-apparaat inschrijven](enroll-device-android-company-portal.md)  
 #### [Inschrijven met Android-werkprofiel](enroll-device-android-work-profile.md)

@@ -26,6 +26,8 @@
     - name: Beleid voor app-beveiliging en werkprofielen (Android)
       href: android-deployment-scenarios-app-protection-work-profiles.md
       displayName: app-we; without; without enrollment
+    - name: Intune gebruiken zonder GMS
+      href: manage-without-gms.md
     - name: VEELGESTELDE VRAGEN OVER MAM
       href: mam-faq.md
 - name: Instructiegidsen

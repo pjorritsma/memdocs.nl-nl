@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe5fce47d6a0480596bc09d82456c7636fe84d51
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: 04bc86ff697ed7083cacd552cbf9ebe5096a228c
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526271"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326871"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Problemen met inschrijving van Windows-apparaten in Microsoft Intune oplossen
 
@@ -41,7 +41,7 @@ Verzamel de volgende gegevens van het probleem:
 - Hoeveel gebruikers treft het probleem? Geldt het probleem voor alle gebruikers of voor bepaalde gebruikers?
 - Voor hoeveel apparaten geldt het probleem? Geldt het probleem voor alle apparaten of voor bepaalde apparaten?
 - Wat is de MDM-instantie?
-- Hoe wordt de inschrijving uitgevoerd? Wordt BYOD (Bring Your Own Device) of Apple DEP (Device Enrollment Program) gebruikt met inschrijvingsprofielen?
+- Hoe wordt de inschrijving uitgevoerd? Wordt BYOD (Bring Your Own Device) of Apple ADE (Automated Device Enrollment) gebruikt met inschrijvingsprofielen?
 
 ## <a name="error-messages"></a>Foutberichten
 
@@ -141,7 +141,7 @@ Wijs een geldige Intune-licentie toe aan de gebruiker en schrijf het apparaat ve
 Gebruik een van de volgende methoden om dit probleem op te lossen: 
  
 ##### <a name="assign-a-valid-license-to-the-user"></a>Een geldige licentie toewijzen aan de gebruiker
-Ga naar het [Microsoft 365-beheercentrum](https://portal.office.com/adminportal/home)en wijs een Intune-of een Office 365-licentie toe aan de gebruiker.
+Ga naar het [Microsoft 365-beheercentrum](https://admin.microsoft.com)en wijs een Intune-of een Office 365-licentie toe aan de gebruiker.
 
 ##### <a name="correct-the-mdm-terms-of-use-url"></a>De URL voor de MDM-gebruiksvoorwaarden corrigeren
   1. Meld u aan bij de [Azure-portal](https://portal.azure.com/) en selecteer vervolgens **Azure Active Directory**.    
@@ -201,7 +201,7 @@ Fout: "Er is een probleem opgetreden. Uw organisatie biedt geen ondersteuning vo
 #### <a name="resolution"></a>Oplossing
 Voer deze stappen uit om dit probleem op te lossen in een zelfstandige Intune-omgeving: 
  
-1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) **Apparaten** > **Inschrijvingsbeperkingen** > kies een beperking voor het apparaattype.    
+1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **Inschrijvingsbeperkingen** > kies een beperking voor het apparaattype.    
 2. Kies **Eigenschappen** > **Bewerken** (naast **Platforminstellingen**) > **Toestaan** voor **Windows (MDM)** .    
 3. Klik op **Beoordelen en opslaan**.    
 
@@ -326,7 +326,7 @@ Een andere mogelijke oorzaak voor deze fout is dat het AzureAD-apparaat dat aan 
 
 #### <a name="resolution"></a>Oplossing
 
-1. Kies in het [beheercentrum van Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Apparaten** > **Windows** - > **Windows-apparaten**.
+1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) > **Apparaten** > **Windows** > **Windows-apparaten**.
 2. Selecteer het apparaat waarop het probleem zich voordoet > klik op het beletselsteken (...) helemaal rechts.
 3. Selecteer **Toewijzing van de gebruiker intrekken** en wacht totdat het proces is voltooid.
 4. Controleer of het Autopilot-profiel voor hybride Azure AD is toegewezen voordat u OOBE opnieuw probeert uit te voeren.

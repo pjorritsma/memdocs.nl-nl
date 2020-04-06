@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5e64996a1d586d332a3732ca68076c654a56c1e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: dd1bea64bbde5c7da7579471f93f659b71dffa87
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359674"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327212"
 ---
 # <a name="get-an-apple-mdm-push-certificate"></a>Een Apple MDM-pushcertificaat ophalen
 
@@ -41,7 +41,7 @@ Wanneer een pushcertificaat is verlopen, moet u dit vernieuwen. Zorg er tijdens 
 
 
 ## <a name="steps-to-get-your-certificate"></a>Stappen voor het ophalen van het certificaat
-Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431), kies **Apparaten** > **Apparaten inschrijven** > **Apple-inschrijving** > **Apple MDM-pushcertificaat** en volg deze stappen.
+Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431), kies **Apparaten** > **Apparaten inschrijven** > **Apple-inschrijving** > **Apple MDM-pushcertificaat** en voer de volgende stappen uit.
 
 ### <a name="step-1-grant-microsoft-permission-to-send-user-and-device-information-to-apple"></a>Stap 1. Microsoft toestemming geven om gebruikers en apparaatgegevens naar Apple te verzenden
 Selecteer **Ik ga akkoord.** om Microsoft toestemming te geven om gegevens te verzenden naar Apple.

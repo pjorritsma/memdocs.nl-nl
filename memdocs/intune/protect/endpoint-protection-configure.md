@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 03/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 mr.reviewer: karthib
-ms.openlocfilehash: 64a11cf9dca110a4a802ddff3e9176ec1ce88345
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4071614c7cb93194eef00f49aa2e1759ba1028f6
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352173"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359261"
 ---
 # <a name="add-endpoint-protection-settings-in-intune"></a>Instellingen voor Endpoint Protection toevoegen in Intune
 
@@ -45,23 +45,38 @@ Lees voordat u een profiel maakt de volgende artikelen door, zodat u precies wee
 
 2. Selecteer **Apparaten** > **Configuratieprofielen** > **Profiel maken**.
 
-3. Geef een **naam** en **beschrijving** op voor het Endpoint Protection-profiel.
+3. Voer de volgende eigenschappen in:
 
-4. Selecteer in de vervolgkeuzelijst **Platform** het apparaatplatform waarop u de aangepaste instellingen wilt toepassen. Op dit moment kunt u een van de volgende platformen kiezen voor apparaatbeperkingsinstellingen:
+    - **Platform**: Kies het platform van uw apparaten. Uw opties zijn:
 
-   - **macOS**
-   - **Windows 10 en hoger**
+        - **macOS**
+        - **Windows 10 en hoger**
 
-5. Kies **Endpoint Protection** in de vervolgkeuzelijst **Profieltype**.
+    - **Profiel**: Selecteer **Endpoint Protection**.
 
-6. Welke instellingen u kunt configureren, is afhankelijk van het platform dat u hebt gekozen. Zie:
+4. Selecteer **Maken**.
+5. Voer in **Basisinformatie** de volgende eigenschappen in:
+
+    - **Naam**: Voer een beschrijvende naam in voor het beleid. Geef uw beleid een naam zodat u het later eenvoudig kunt identificeren. Een goede beleidsnaam is bijvoorbeeld **macOS: Endpoint Protection-profiel waarmee de firewall wordt geconfigureerd voor alle macOS-apparaten**.
+    - **Beschrijving**: Voer een beschrijving in voor het beleid. Deze instelling is optioneel, maar wordt aanbevolen.
+
+6. Selecteer **Volgende**.
+
+7. Welke instellingen u kunt configureren in **Configuratie-instellingen**, is afhankelijk van het platform dat u hebt gekozen. Kies uw platform voor gedetailleerde instellingen:
 
    - [macOS-instellingen](endpoint-protection-macos.md)
    - [Windows 10-instellingen](endpoint-protection-windows-10.md)
 
-7. Nadat u de gewenste instellingen hebt geconfigureerd, selecteert u **Maken** op de pagina **Profiel maken**.
+8. Selecteer **Volgende**.
+9. Wijs in **Bereiktags** (optioneel) een tag toe om het profiel te filteren op specifieke IT-groepen, zoals `US-NC IT Team` of `JohnGlenn_ITDepartment`. Zie [RBAC en bereiktags gebruiken voor gedistribueerde IT](../fundamentals/scope-tags.md) voor meer informatie over bereiktags.
 
-   Het profiel wordt gemaakt en wordt weergegeven op de pagina met de profielenlijst. Zie [Apparaatprofielen toewijzen](../configuration/device-profile-assign.md) om dit profiel toe te wijzen aan groepen.
+    Selecteer **Volgende**.
+
+10. Selecteer in **Toewijzingen** de gebruikers of groepen die uw profiel zullen ontvangen. Zie [Gebruikers- en apparaatprofielen toewijzen](../configuration/device-profile-assign.md) voor meer informatie over het toewijzen van profielen.
+
+    Selecteer **Volgende**.
+
+11. Controleer uw instellingen in **Beoordelen en maken**. Wanneer u **Maken**selecteert, worden uw wijzigingen opgeslagen en wordt het profiel toegewezen. Het beleid wordt ook weergegeven in de lijst met profielen.
 
 ## <a name="add-custom-firewall-rules-for-windows-10-devices"></a>Aangepaste firewallregels toevoegen voor Windows 10-apparaten
 
@@ -75,7 +90,7 @@ Als u van plan bent profielen met aangepaste firewallregels te gebruiken, moet u
 
 - Als een regel niet kan worden toegepast, wordt van alle regels in het profiel gerapporteerd dat ze zijn mislukt. Intune kan niet identificeren welke specifieke regel dan is mislukt.  
 
-De firewallregels die door Intune kunnen worden beheerd, worden beschreven in de Windows [Firewall]( https://docs.microsoft.com/windows/client-management/mdm/firewall-csp)-configuratieprovider (CSP). Zie [Aangepaste firewallregels](endpoint-protection-windows-10.md#firewall-rules) voor een overzicht van de aangepaste-firewallinstellingen voor Windows 10-apparaten die door Intune worden ondersteund.
+De firewallregels die door Intune kunnen worden beheerd, worden beschreven in de Windows [Firewall](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp)-configuratieprovider (CSP). Zie [Aangepaste firewallregels](endpoint-protection-windows-10.md#firewall-rules) voor een overzicht van de aangepaste-firewallinstellingen voor Windows 10-apparaten die door Intune worden ondersteund.
 
 ### <a name="to-add-custom-firewall-rules-to-an-endpoint-protection-profile"></a>Aangepaste firewallregels toevoegen aan een Endpoint Protection-profiel
 
@@ -83,20 +98,22 @@ De firewallregels die door Intune kunnen worden beheerd, worden beschreven in de
 
 2. Selecteer **Apparaten** > **Configuratieprofielen** > **Profiel maken**.
 
-3. Bij *Platform* selecteert u **Windows 10 en hoger** en bij *Profieltype* selecteert u **Endpoint Protection**.
+3. Selecteer bij *Platform* **Windows 10 en hoger** en vervolgens bij *Profiel* **Endpoint Protection**.
 
-4. Selecteer **Microsoft Defender Firewall** om de configuratiepagina te openen en selecteer bij *Firewallregels* de optie **Toevoegen** om de pagina **Regel maken** te openen.
+    Selecteer **Maken**.
 
-5. Geef instellingen voor de firewallregel op en selecteer **OK** om deze op te slaan. Zie [Aangepaste firewallregels](endpoint-protection-windows-10.md#firewall-rules)om de beschikbare opties voor aangepaste firewallregels te bekijken in de documentatie.
+4. Voer een **naam** voor uw profiel in > **Volgende**.
+5. Selecteer **Microsoft Defender Firewall** bij de **configuratie-instellingen**. Selecteer bij *Firewallregels* **Toevoegen** om de pagina **Regel maken** te openen.
 
-6. Als u de regel hebt opgeslagen, wordt deze weergegeven op de pagina *Microsoft Defender Firewall*, in de lijst met regels.
+6. Geef instellingen voor de firewallregel op en selecteer **OK** om deze op te slaan. Zie [Aangepaste firewallregels](endpoint-protection-windows-10.md#firewall-rules)om de beschikbare opties voor aangepaste firewallregels te bekijken in de documentatie.
 
-7. Als u een regel wilt wijzigen, selecteert u de regel in de lijst. De pagina **Regel bewerken** wordt dan geopend.
+    1. De regel wordt weergegeven op de pagina *Microsoft Defender Firewall*, in de lijst met regels.
+    2. Als u een regel wilt wijzigen, selecteert u de regel in de lijst. De pagina **Regel bewerken** wordt dan geopend.
+    3. Als u een regel uit een profiel wilt verwijderen, selecteert u het beletselteken **(...)** bij de regel. Selecteer vervolgens **Verwijderen**.
+    4. Als u de volgorde wilt wijzigen waarin de regels worden weergegeven, selecteert u het pictogram *pijl-omhoog en pijl-omlaag* bovenaan de lijst met regels.
 
-8. Als u een regel uit een profiel wilt verwijderen, selecteert u het beletselteken **(...)** bij de regel. Selecteer vervolgens **Verwijderen**.
-
-9. Als u de volgorde wilt wijzigen waarin de regels worden weergegeven, selecteert u het pictogram *pijl-omhoog en pijl-omlaag* bovenaan de lijst met regels.
+7. Selecteer **Volgende** totdat u bij **Beoordelen en maken** aankomt. Wanneer u **Maken** selecteert, worden uw wijzigingen opgeslagen en wordt het profiel toegewezen. Het beleid wordt ook weergegeven in de lijst met profielen.
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Zie [Apparaatprofielen toewijzen](../configuration/device-profile-assign.md) om een profiel toe te wijzen aan groepen.
+Het profiel is gemaakt, maar er gebeurt mogelijk nog niets. Vervolgens kunt u [het profiel toewijzen](../configuration/device-profile-assign.md) en [de status ervan controleren](../configuration/device-profile-monitor.md).

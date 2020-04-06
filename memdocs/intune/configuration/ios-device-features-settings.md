@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/17/2020
+ms.date: 03/25/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fafca25fb0e374d281f8ef593cb5fa7f35d82979
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 69ca92125728ec8fdac27c229f8aacc5c0ef29c0
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086967"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359394"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>iOS- en iPadOS-apparaatinstellingen voor het gebruik van algemene iOS-/iPadOS-functies in Intune
 
@@ -33,7 +33,7 @@ Dit artikel beschrijft deze instellingen en wat elke instelling doet. Ga naar [I
 
 ## <a name="before-you-begin"></a>Voordat u begint
 
-[Maak een iOS-/iPadOS-apparaatconfiguratieprofiel](device-features-configure.md).
+[Maak een profiel voor iOS-/iPadOS-apparaatfuncties](device-features-configure.md).
 
 > [!NOTE]
 > Deze instellingen zijn van toepassing op verschillende inschrijvingstypen, waarbij sommige instellingen van toepassing zijn op alle inschrijvingsopties. Zie [iOS-/iPadOS-inschrijving](../enrollment/ios-enroll.md) voor meer informatie over de verschillende inschrijvingstypen.
@@ -81,11 +81,11 @@ Deze functie is van toepassing op:
 
 ### <a name="dock"></a>Dock
 
-Gebruik de **Dock**-instellingen om maximaal zes items of mappen aan de dock in het scherm toe te voegen. Veel apparaten ondersteunen minder items. IPhone-apparaten ondersteunen bijvoorbeeld maximaal vier items. In dit geval worden alleen de eerste vier items die u hebt toegevoegd op het apparaat weergegeven.
+Gebruik de **Dock**-instellingen om maximaal zes items of mappen aan de dock in het scherm toe te voegen. Veel apparaten ondersteunen minder items. IPhone-apparaten ondersteunen bijvoorbeeld maximaal vier items. In dit geval worden alleen de eerste vier items die u hebt toegevoegd op apparaten weergegeven.
 
 U kunt maximaal **zes** items (combinatie van apps en mappen) voor de apparaatdock toevoegen.
 
-- **Toevoegen**: Apps of mappen toevoegen aan de dock op het apparaat.
+- **Toevoegen**: apps of mappen toevoegen aan de dock op apparaten.
 - **Type**: Een **app** of een **map** toevoegen:
 
   - **App**: kies deze optie om apps aan de dock op het scherm toe te voegen. Voer het volgende in:
@@ -113,11 +113,13 @@ U kunt maximaal **zes** items (combinatie van apps en mappen) voor de apparaatdo
 
 In het volgende voorbeeld worden op het dock-scherm alleen de apps Safari, Mail en Aandelen weergegeven. De app Mail is geselecteerd om de eigenschappen ervan weer te geven:
 
-![Voorbeeld van iOS-/iPadOS-dockinstellingen](./media/ios-device-features-settings/FfFiUcP.png)
+> [!div class="mx-imgBorder"]
+> ![Voorbeeld van iOS-/iPadOS-dockinstellingen](./media/ios-device-features-settings/FfFiUcP.png)
 
 Wanneer u het beleid aan een iPhone toewijst, ziet de dock er ongeveer hetzelfde uit als de volgende afbeelding:
 
-![Voorbeeld van iOS-/iPadOS-dockindeling op iPhone](./media/ios-device-features-settings/bAgCe8F.png)
+> [!div class="mx-imgBorder"]
+> ![Voorbeeld van iOS-/iPadOS-dockindeling voor iPhone](./media/ios-device-features-settings/bAgCe8F.png)
 
 ### <a name="pages"></a>Pages
 
@@ -134,7 +136,7 @@ U kunt maximaal **40** pagina's toevoegen.
 
   U kunt maximaal **60** items (combinatie van apps en mappen) toevoegen op een apparaat.
 
-  - **Toevoegen**: Apps of mappen toevoegen aan een pagina op het apparaat.
+  - **Toevoegen**: Apps of mappen toevoegen aan een pagina op apparaten.
 
     - **Type**: Een **app** of een **map** toevoegen:
 
@@ -147,7 +149,7 @@ U kunt maximaal **40** pagina's toevoegen.
 
         Apps die u aan een pagina in een map toevoegt, worden gerangschikt van links naar rechts, en in dezelfde volgorde als de lijst. Als u meer apps toevoegt dan er op een pagina passen, worden de apps naar een andere pagina verplaatst.
 
-        - **Mapnaam**: Voer een naam voor de map in. Deze naam zien gebruikers op het apparaat.
+        - **Mapnaam**: Voer een naam voor de map in. Deze naam wordt voor gebruikers weergegeven op apparaten.
         - **Toevoegen**: Hiermee worden pagina's aan de map toegevoegd. Voer ook de volgende eigenschappen in:
 
           - **Paginanaam**: voer een naam voor de pagina in. Deze naam wordt gebruikt voor uw referentie in het Microsoft Endpoint Manager-beheercentrum. Deze wordt *niet* weergegeven op het iOS-/iPadOS-apparaat.
@@ -158,11 +160,13 @@ U kunt maximaal **40** pagina's toevoegen.
 
 In het volgende voorbeeld wordt een nieuwe pagina met de naam **Contoso** toegevoegd. Op de pagina worden de apps Zoek vrienden en Instellingen weergegeven. De app Instellingen is geselecteerd om de eigenschappen ervan weer te geven:
 
-![Voorbeeld van instellingen voor het iOS-/iPadOS-startscherm in Intune](./media/ios-device-features-settings/Jc2OxyX.png)
+> [!div class="mx-imgBorder"]
+> ![Voorbeeld van instellingen voor het iOS-/iPadOS-startscherm in Intune](./media/ios-device-features-settings/Jc2OxyX.png)
 
 Wanneer u het beleid aan een iPhone toewijst, ziet de pagina er ongeveer hetzelfde uit als de volgende afbeelding:
 
-![iOS-/iPadOS-apparaat met gewijzigd startscherm in Intune](./media/ios-device-features-settings/Bd37PHa.png)
+> [!div class="mx-imgBorder"]
+> ![iOS-/iPadOS-apparaat met gewijzigd startscherm in Intune](./media/ios-device-features-settings/Bd37PHa.png)
 
 ## <a name="app-notifications"></a>App-meldingen
 
@@ -170,18 +174,19 @@ Wanneer u het beleid aan een iPhone toewijst, ziet de pagina er ongeveer hetzelf
 
 - **Toevoegen**: Meldingen voor apps toevoegen:
 
-    ![App-melding toevoegen in iOS-/iPadOS-profiel in Intune](./media/ios-device-features-settings/ios-macos-app-notifications.png)
+  > [!div class="mx-imgBorder"]
+  > ![App-melding toevoegen in iOS-/iPadOS-profiel in Intune](./media/ios-device-features-settings/ios-macos-app-notifications.png)
 
   - **App-bundel-id**: voer de **App-bundel-id** in van de app die u wilt toevoegen. Zie [Bundel-id's voor ingebouwde iOS-/iPadOS-apps](bundle-ids-built-in-ios-apps.md) voor enkele voorbeelden.
-  - **App-naam**: voer de naam in van de app die u wilt toevoegen. Deze naam wordt gebruikt voor uw referentie in het Microsoft Endpoint Manager-beheercentrum. Deze wordt *niet* weergegeven op het apparaat.
-  - **Uitgever**: voer de uitgever in van de app die u toevoegt. Deze naam wordt gebruikt voor uw referentie in het Microsoft Endpoint Manager-beheercentrum. Deze wordt *niet* weergegeven op het apparaat.
-  - **Meldingen**: **in**- of **uitschakelen** dat de app meldingen naar het apparaat verzendt.
+  - **App-naam**: voer de naam in van de app die u wilt toevoegen. Deze naam wordt gebruikt voor uw referentie in het Microsoft Endpoint Manager-beheercentrum. Deze wordt *niet* weergegeven op apparaten.
+  - **Uitgever**: voer de uitgever in van de app die u toevoegt. Deze naam wordt gebruikt voor uw referentie in het Microsoft Endpoint Manager-beheercentrum. Deze wordt *niet* weergegeven op apparaten.
+  - **Meldingen**: **Inschakelen** of **Uitschakelen** dat de app meldingen naar apparaten verzendt.
     - **Weergeven in het meldingencentrum**: als u **Inschakelen** kiest, geeft de app meldingen weer in meldingencentrum van het apparaat. als u **Uitschakelen** kiest, geeft de app geen meldingen weer in meldingencentrum.
-    - **Weergeven in het vergrendelingsscherm**: als u **Inschakelen** kiest, worden meldingen van de app weergegeven op het vergrendelingsscherm van het apparaat. als u **Uitschakelen** kiest, worden meldingen van de app niet weergegeven op het vergrendelingsscherm.
-    - **Waarschuwingstype**: kies hoe de melding moet worden weergegeven wanneer het apparaat wordt ontgrendeld. Uw opties zijn:
+    - **Weergeven in het vergrendelingsscherm**: bij **Inschakelen** worden app-meldingen weergegeven op het vergrendelingsscherm van het apparaat. als u **Uitschakelen** kiest, worden meldingen van de app niet weergegeven op het vergrendelingsscherm.
+    - **Waarschuwingstype**: kies hoe de melding moet worden weergegeven wanneer apparaten worden ontgrendeld. Uw opties zijn:
       - **Geen**: er wordt geen melding weergegeven.
       - **Banner**: er wordt kort een banner weergegeven met de melding.
-      - **Modaal**: de melding wordt weergegeven en de gebruiker moet deze handmatig sluiten voordat de gebruiker kan doorgaan en het apparaat kan gebruiken.
+      - **Modaal**: de melding wordt weergegeven en gebruikers moeten deze handmatig sluiten om het apparaat verder te gebruiken.
     - **Badge op app-pictogram**: selecteer **Inschakelen** om een badge toe te voegen aan het app-pictogram. De badge betekent dat de app een melding heeft verzonden.
     - **Geluiden**: selecteer **Inschakelen** om een geluid af te spelen wanneer een melding wordt afgeleverd.
 
@@ -196,9 +201,9 @@ Deze functie is van toepassing op:
 
 - **Informatie over de assettag**: Voer informatie over de assettag van het apparaat in. Voer bijvoorbeeld `Owned by Contoso Corp` of `Serial Number: {{serialnumber}}` in.
 
-  De tekst die u opgeeft, wordt weergegeven in het aanmeldingsvenster en het vergrendelingsscherm van het apparaat.
+  De tekst die u opgeeft, wordt weergegeven in het aanmeldingsvenster en het vergrendelingsscherm op apparaten.
 
-- **Voetnoot voor vergrendelingsscherm**: Voer een opmerking in waarmee u het apparaat wellicht kunt terugkrijgen als het verloren of gestolen is. U kunt elke gewenste tekst invoeren. Voer bijvoorbeeld iets in zoals `If found, call Contoso at ...`.
+- **Voetnoot voor vergrendelingsscherm**: Als apparaten verloren of gestolen zijn, voert u een opmerking in waarmee u het apparaat wellicht kunt terugkrijgen. U kunt elke gewenste tekst invoeren. Voer bijvoorbeeld iets in zoals `If found, call Contoso at ...`.
 
   Apparaattokens kunnen ook worden gebruikt om apparaatspecifieke informatie aan deze velden toe te voegen. Als u bijvoorbeeld het serienummer wilt weergeven, voert u `Serial Number: {{serialnumber}}` in. De tekst die in het vergrendelingsscherm wordt weergegeven, is vergelijkbaar met `Serial Number 123456789ABC`. Wanneer u variabelen opgeeft, moet u ervoor zorgen dat u accolades `{{ }}` gebruikt. [App-configuratietokens](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) bevat een lijst met variabelen die kunnen worden gebruikt. U kunt ook `deviceName` of een andere apparaatspecifieke waarde gebruiken.
 
@@ -209,15 +214,16 @@ Deze functie is van toepassing op:
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Deze instellingen zijn van toepassing op: Apparaatinschrijving, automatische apparaatinschrijving (onder supervisie)
 
-- **Het kenmerk Gebruikersnaam van AAD**: Intune zoekt naar dit kenmerk voor elke gebruiker in Microsoft Azure Active Directory. Het betreffende veld (zoals UPN) wordt vervolgens door Intune ingevuld vóór het genereren van de XML die op het apparaat wordt geïnstalleerd. Uw opties zijn:
+- **Het kenmerk Gebruikersnaam van AAD**: Intune zoekt naar dit kenmerk voor elke gebruiker in Microsoft Azure Active Directory. Het betreffende veld (zoals UPN) wordt vervolgens door Intune gevuld voordat de XML wordt gegenereerd die op apparaten wordt geïnstalleerd. Uw opties zijn:
 
   - **User Principal Name**: de UPN wordt op de volgende manier geparseerd:
 
-    ![SSO-kenmerk van iOS-/iPadOS-gebruikersnaam in Intune](./media/ios-device-features-settings/User-name-attribute.png)
+    > [!div class="mx-imgBorder"]
+    > ![SSO-kenmerk van iOS-/iPadOS-gebruikersnaam in Intune](./media/ios-device-features-settings/User-name-attribute.png)
 
     U kunt de realm ook overschrijven met de tekst die u in het tekstvak **Realm** invoert.
 
-    Contoso heeft bijvoorbeeld meerdere regio's, waaronder Europa, Azië en Noord-Amerika. Contoso wil dat gebruikers uit Azië eenmalige aanmelding gebruiken en de app moet de UPN in de indeling `username@asia.contoso.com` hebben. Wanneer u **User Principal Name** selecteert, wordt de realm voor elke gebruiker overgenomen uit Microsoft Azure Active Directory, namelijk `contoso.com`. Voor gebruikers in Azië selecteert u dus **User Principal Name** en voert u `asia.contoso.com` in. De UPN van de eindgebruiker wordt `username@asia.contoso.com` in plaats van `username@contoso.com`.
+    Contoso heeft bijvoorbeeld meerdere regio's, waaronder Europa, Azië en Noord-Amerika. Contoso wil dat gebruikers uit Azië eenmalige aanmelding gebruiken en de app moet de UPN in de indeling `username@asia.contoso.com` hebben. Wanneer u **User Principal Name** selecteert, wordt de realm voor elke gebruiker overgenomen uit Microsoft Azure Active Directory, namelijk `contoso.com`. Voor gebruikers in Azië selecteert u dus **User Principal Name** en voert u `asia.contoso.com` in. De UPN van de gebruiker wordt `username@asia.contoso.com` in plaats van `username@contoso.com`.
 
   - **Apparaat-id voor Intune**: de apparaat-id voor Intune wordt automatisch door Intune geselecteerd.
 
@@ -231,7 +237,7 @@ Deze functie is van toepassing op:
 - **Realm**: voer het domeingedeelte van de URL in. Voer bijvoorbeeld `contoso.com` in.
 - **URL-voorvoegsels die gebruikmaken van eenmalige aanmelding**: **voeg** alle URL's in uw organisatie toe die gebruikersverificatie met eenmalige aanmelding vereisen.
 
-  Bijvoorbeeld: wanneer een gebruiker verbinding maakt met een van deze sites, gebruikt het iOS-/iPadOS-apparaat de referenties voor eenmalige aanmelding. De gebruiker hoeft geen aanvullende referenties in te voeren. Als meervoudige verificatie is ingeschakeld, moeten gebruikers de tweede verificatie invoeren.
+  Bijvoorbeeld: wanneer een gebruiker verbinding maakt met een van deze sites, gebruikt het iOS-/iPadOS-apparaat de referenties voor eenmalige aanmelding. Gebruikers hoeven geen aanvullende referenties in te voeren. Als meervoudige verificatie is ingeschakeld, moeten gebruikers de tweede verificatie invoeren.
 
   > [!NOTE]
   > Deze URL's moeten de juiste FQDN-indeling hebben. Apple vereist dat deze de indeling `http://<yourURL.domain>` hebben.
@@ -240,13 +246,13 @@ Deze functie is van toepassing op:
 
   De patronen `http://.com` en `https://.com` komen overeen met respectievelijk alle HTTP- en HTTPS-URL's.
 
-- **Apps die gebruikmaken van eenmalige aanmelding**: **voeg** apps toe op apparaten van eindgebruikers die gebruik kunnen maken van eenmalige aanmelding.
+- **Apps die gebruikmaken van eenmalige aanmelding**: **voeg** apps toe op apparaten van gebruikers die gebruik kunnen maken van eenmalige aanmelding.
 
   De matrix `AppIdentifierMatches` moet tekenreeksen bevatten die overeenkomen met de app-bundel-id's. Deze tekenreeksen kunnen exacte overeenkomsten zijn, zoals `com.contoso.myapp`, of u kunt identieke begintekens voor de bundel-id invoeren met het jokerteken \*. Het jokerteken moet worden weergegeven na een punt (.) en kan slechts één keer worden weergegeven aan het einde van de tekenreeks, zoals `com.contoso.*`. Wanneer een jokerteken wordt opgenomen, krijgt elke app waarvan de bundel-id begint met het voorvoegsel toegang tot het account.
 
   Gebruik **App-naam** om een gebruiksvriendelijke naam in te voeren waarmee u de bundel-id kunt aangeven.
 
-- **Referentievernieuwingscertificaat**: als u certificaten voor verificatie gebruikt (geen wachtwoorden), selecteert u het SCEP- of PFX-certificaat als het verificatiecertificaat. Dit certificaat is meestal hetzelfde certificaat dat voor de gebruiker is geïmplementeerd voor andere profielen, bijvoorbeeld voor VPN, Wi-Fi of e-mail.
+- **Referentievernieuwingscertificaat**: als u certificaten voor verificatie gebruikt (geen wachtwoorden), selecteert u het SCEP- of PFX-certificaat als het verificatiecertificaat. Dit certificaat is meestal hetzelfde certificaat dat voor gebruikers wordt geïmplementeerd voor andere profielen, bijvoorbeeld voor VPN, Wi-Fi of e-mail.
 
 ## <a name="web-content-filter"></a>Webinhoudsfilter
 
@@ -263,13 +269,13 @@ Deze functie is van toepassing op:
 
     - **Geblokkeerde URL's**: **voeg** de URL's toe waarvan u niet wilt dat deze worden geopend, ongeacht het webfilter van Apple.
 
-  - **Alleen specifieke websites** (alleen voor de Safari-webbrowser): deze URL's worden toegevoegd aan de bladwijzers van de Safari-browser. De gebruiker mag **alleen** deze sites bezoeken. Andere sites kunnen niet worden geopend. Gebruik deze optie alleen als u de exacte lijst van URL's weet die gebruikers mogen bezoeken.
+  - **Alleen specifieke websites** (alleen voor de Safari-webbrowser): deze URL's worden toegevoegd aan de bladwijzers van de Safari-browser. Gebruikers mogen **alleen** deze sites bezoeken. Andere sites kunnen niet worden geopend. Gebruik deze optie alleen als u de exacte lijst van URL's weet die gebruikers mogen bezoeken.
 
     - **URL**: voer de URL in van de website die u wilt toestaan. Voer bijvoorbeeld `https://www.contoso.com` in.
     - **Pad naar bladwijzer**: deze instelling is door Apple gewijzigd. Alle bladwijzers gaan naar de map **Goedgekeurde sites**. Bladwijzers komen niet in het pad naar de bladwijzer die u invoert.
     - **Titel**: geef een beschrijvende titel voor de bladwijzer op.
 
-    Als u geen URL's opgeeft, hebben eindgebruikers geen toegang tot websites, met uitzondering van `microsoft.com`, `microsoft.net` en `apple.com`. Deze URL's zijn automatisch toegestaan door Intune.
+    Als u geen URL's opgeeft, hebben gebruikers geen toegang tot websites, met uitzondering van `microsoft.com`, `microsoft.net` en `apple.com`. Deze URL's zijn automatisch toegestaan door Intune.
 
 ## <a name="single-sign-on-app-extension"></a>App-extensie voor eenmalige aanmelding
 
@@ -282,10 +288,10 @@ Deze functie is van toepassing op:
 
 - **Type app-extensie voor eenmalige aanmelding**: Kies het type app-extensie voor eenmalige aanmelding. Uw opties zijn:
 
-  - **Niet geconfigureerd**: er worden geen app-extensies gebruikt. Als u een app-extensie wilt uitschakelen, stelt u Type app-extensie voor SSO in op **Niet geconfigureerd**.
+  - **Niet geconfigureerd**: Deze instelling wordt niet gewijzigd of bijgewerkt door Intune. Het is mogelijk dat het besturingssysteem standaard geen app-extensies gebruikt. Als u een app-extensie wilt uitschakelen, stelt u Type app-extensie voor SSO in op **Niet geconfigureerd**.
   - **Omleiding**: Gebruik een algemene, aanpasbare app-extensie van het type Omleiding om eenmalige aanmelding te gebruiken met moderne verificatiestromen. Zorg ervoor dat u weet wat de extensie-id is van de app-extensie van uw organisatie.
 
-    Op iOS-/iPadOS 13.0+-apparaten kunt u de **app-extensie voor SSO van Microsoft Azure AD configureren** met dit redirect-type app-extensie voor SSO. De Microsoft Azure AD-extensie maakt eenmalige aanmelding mogelijk tussen Microsoft-apps en organisatie-apps die Azure AD gebruiken voor verificatie. De Azure AD-extensie fungeert als een geavanceerde broker voor verificatie die verbeteringen in de beveiliging en de eindgebruikerservaring biedt. Alle apps die eerder brokered verificatie gebruikten met de app Microsoft Authenticator, behouden SSO met de SSO-extensie. De SSO-extensie van Azure AD biedt nog geen ondersteuning voor browser-SSO. Meer informatie over SSO en de broker voor iOS/iPadOS-verificatie vindt u in [SSO configureren op macOS en iOS/iPadOS](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-macos-ios).  
+    Op iOS-/iPadOS 13.0+-apparaten kunt u de **app-extensie voor SSO van Microsoft Azure AD configureren** met dit redirect-type app-extensie voor SSO. De Microsoft Azure AD-extensie maakt eenmalige aanmelding mogelijk tussen Microsoft-apps en organisatie-apps die Azure AD gebruiken voor verificatie. De Azure AD-extensie fungeert als een geavanceerde broker voor verificatie die verbeteringen in de beveiliging en de gebruikerservaring biedt. Alle apps die eerder brokered verificatie gebruikten met de app Microsoft Authenticator, behouden SSO met de SSO-extensie. De SSO-extensie van Azure AD biedt nog geen ondersteuning voor browser-SSO. Meer informatie over SSO en de broker voor iOS/iPadOS-verificatie vindt u in [SSO configureren op macOS en iOS/iPadOS](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-macos-ios).  
 
     **De extensie van Microsoft Azure AD voor iOS configureren:**
 
@@ -306,7 +312,7 @@ Deze functie is van toepassing op:
         - `https://login-us.microsoftonline.com`
 
     > [!IMPORTANT]
-    > Voor SSO met de Microsoft Azure AD-extensie in iOS/iPadOS installeert u eerst de iOS/iPadOS Microsoft Authenticator-app op het apparaat. Authenticator levert de Azure AD-extensie aan het apparaat en met de instellingen van de MDM-app-extensie voor SSO wordt de Azure AD-extensie geactiveerd. Zodra Authenticator en het profiel van de app-extensie voor SSO op het apparaat zijn geïnstalleerd, moeten gebruikers hun aanmeldingsgegevens opgeven om zich aan te melden en een sessie tot stand te brengen. Deze sessie wordt vervolgens voor verschillende toepassingen gebruikt, zonder dat gebruikers opnieuw moeten worden geverifieerd.
+    > Voor eenmalige aanmelding met de Microsoft Azure AD-extensie voor iOS/iPadOS installeert u eerst de iOS/iPadOS Microsoft Authenticator-app op apparaten. Authenticator levert de Azure AD-extensie aan apparaten en met de instellingen van de MDM-app-extensie voor eenmalige aanmelding wordt de Azure AD-extensie geactiveerd. Zodra Authenticator en het profiel van de app-extensie voor eenmalige aanmelding op apparaten zijn geïnstalleerd, moeten gebruikers hun referenties opgeven om zich aan te melden en een sessie tot stand te brengen. Deze sessie wordt vervolgens voor verschillende toepassingen gebruikt, zonder dat gebruikers opnieuw moeten worden geverifieerd.
 
   - **Referentie**: Gebruik een algemene, aanpasbare app-extensie van het type Referentie om eenmalige aanmelding te gebruiken met verificatiestromen met vraag en antwoord. Zorg ervoor dat u weet wat de extensie-id is van de app-extensie van uw organisatie.
   - **Kerberos**: gebruik de ingebouwde Kerberos-extensie van Apple, die is opgenomen in iOS 13.0+ en iPadOS 13.0+. Deze optie is een Kerberos-versie van de app-extensie **Referentie**.
@@ -344,9 +350,9 @@ Deze functie is van toepassing op:
 
   - **Toevoegen**: selecteer deze optie om uw configuratiesleutels toe te voegen.
 
-- **Gebruik van sleutelhanger** (alleen Kerberos): kies **Blokkeren** om te voorkomen dat wachtwoorden worden opgeslagen in de sleutelhanger. Als deze optie is geblokkeerd, wordt gebruikers niet gevraagd om het wachtwoord op te slaan. Het wachtwoord moet opnieuw worden ingevoerd wanneer het Kerberos-ticket verloopt. **Niet geconfigureerd** (standaard): staat toe dat wachtwoorden worden opgeslagen in de sleutelhanger. Gebruikers worden niet gevraagd om hun wachtwoord opnieuw in te voeren wanneer het ticket verloopt.
-- **Face ID, Touch ID of wachtwoordcode** (alleen Kerberos): **Vereisen**: gebruikers moeten hun Face ID, Touch ID of de wachtwoordcode van het apparaat invoeren wanneer de referentie nodig is om het Kerberos-ticket te vernieuwen. **Niet geconfigureerd** (standaardinstelling): gebruikers hoeven geen biometrische gegevens of wachtwoordcode te gebruiken om het Kerberos-ticket te vernieuwen. Als **Gebruik van sleutelhanger** is geblokkeerd, is deze instelling niet van toepassing.
-- **Standaardrealm** (alleen Kerberos): kies **Inschakelen** om de waarde voor **Realm** in te stellen die u hebt ingevoerd als de standaardrealm. **Niet geconfigureerd** (standaard): er wordt geen standaardrealm ingesteld.
+- **Gebruik van sleutelhanger** (alleen Kerberos): **Blokkeren** voorkomt dat wachtwoorden worden opgeslagen in de sleutelketen. Als deze optie is geblokkeerd, wordt gebruikers niet gevraagd om het wachtwoord op te slaan. Het wachtwoord moet opnieuw worden ingevoerd wanneer het Kerberos-ticket verloopt. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem kan standaard toestaan dat wachtwoorden worden opgeslagen in de sleutelketen. Gebruikers worden niet gevraagd om hun wachtwoord opnieuw in te voeren wanneer het ticket verloopt.
+- **Face ID, Touch ID of wachtwoordcode** (alleen Kerberos): **Vereisen**: gebruikers moeten hun Face ID, Touch ID of de wachtwoordcode van het apparaat invoeren wanneer de referentie nodig is om het Kerberos-ticket te vernieuwen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het kan zijn dat het besturingssysteem standaard niet vereist dat gebruikers biometrische gegevens of wachtwoordcode gebruiken om het Kerberos-ticket te vernieuwen. Als **Gebruik van sleutelhanger** is geblokkeerd, is deze instelling niet van toepassing.
+- **Standaardrealm** (alleen Kerberos): met **Inschakelen** stelt u de waarde voor **Realm** in die u hebt ingevoerd als de standaardrealm. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het kan zijn dat het besturingssysteem standaard geen realm instelt.
 
   > [!TIP]
   > - U moet deze instelling **inschakelen** als u meerdere app-extensies voor SSO bij Kerberos configureert in uw organisatie.
@@ -371,8 +377,8 @@ Mogelijk ervaart u onverwacht gedrag wanneer een profiel zonder afbeelding wordt
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Deze instellingen zijn van toepassing op: Automatische apparaatinschrijving (onder toezicht)
 
-- **Weergavelocatie voor achtergrond**: kies een locatie op het apparaat om de afbeelding weer te geven. Uw opties zijn:
-  - **Niet geconfigureerd**: er is geen aangepaste afbeelding toegevoegd aan het apparaat. Het apparaat gebruikt de standaardinstelling van het besturingssysteem.
+- **Weergavelocatie voor achtergrond**: kies een locatie op apparaten om de afbeelding weer te geven. Uw opties zijn:
+  - **Niet geconfigureerd**: Deze instelling wordt niet gewijzigd of bijgewerkt door Intune. Er wordt geen aangepaste afbeelding toegevoegd aan apparaten. Het besturingssysteem kan standaard een eigen afbeelding instellen.
   - **Vergrendelingsscherm**: hiermee wordt de afbeelding toegevoegd aan het vergrendelingsscherm.
   - **Startscherm**: hiermee wordt de afbeelding toegevoegd aan het startscherm.
   - **Vergrendelingsscherm en startscherm**: dezelfde afbeelding wordt op het vergrendelingsscherm en het startscherm gebruikt.

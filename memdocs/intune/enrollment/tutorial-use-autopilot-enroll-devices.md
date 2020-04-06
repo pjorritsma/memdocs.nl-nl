@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4c4c6660138df0c05975b1fc6b093c41600c0547
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: e031acf6964c2e43bb355db85dd5e365db1a08ad
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79344620"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326897"
 ---
 # <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>Zelfstudie: Autopilot gebruiken om Windows-apparaten in Intune in te schrijven
 
@@ -116,7 +116,7 @@ Als u de Autopilot-apparaten niet meer wilt gebruiken, kunt u deze verwijderen.
 
 1. Als de apparaten zijn ingeschreven bij Intune, moet u ze eerst [verwijderen uit de Azure Active Directory-portal](../remote-actions/devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).
 
-2. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431), **Apparaten** > **Windows** > **Windows-inschrijving** > **Apparaten** (onder **Windows Autopilot Deployment-programma**).
+2. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de optie **Apparaten** > **Windows** > **Windows-inschrijving** > **Apparaten** (onder **Windows Autopilot Deployment-programma**).
 
 3. Kies de apparaten die u wilt verwijderen en kies vervolgens **Verwijderen**.
 

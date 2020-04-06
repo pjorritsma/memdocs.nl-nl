@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/25/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3cec45dae7e0596428b2d7ab5c925889c183d465
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8ac931bf20140865e1185c4f401de0141273cdb3
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364588"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359412"
 ---
 # <a name="use-custom-settings-for-ios-and-ipados-devices-in-microsoft-intune"></a>Aangepaste instellingen gebruiken voor iOS-/iPadOS-apparaten in Microsoft Intune
 
@@ -38,7 +38,7 @@ Dit artikel biedt richtlijnen voor het gebruik van Apple Configurator en Apple P
 
 ## <a name="before-you-begin"></a>Voordat u begint
 
-[Maak het profiel](device-profile-create.md).
+[Maak het profiel](custom-settings-configure.md).
 
 ## <a name="what-you-need-to-know"></a>Wat u dient te weten
 
@@ -57,14 +57,12 @@ Dit artikel biedt richtlijnen voor het gebruik van Apple Configurator en Apple P
 ## <a name="custom-configuration-profile-settings"></a>Aangepaste configuratieprofielinstellingen
 
 - **Naam van het aangepaste configuratieprofiel**: Geef een naam op voor het beleid. Deze naam wordt weergegeven op het apparaat en in de Intune-status.
-- **Configuratieprofielbestand**: Blader naar het configuratieprofiel dat u hebt gemaakt met Apple Configurator of Apple Profile Manager. De maximale bestandsgrootte is 1.000.000 bytes (net iets minder dan 1 MB). Het bestand dat u hebt geïmporteerd, wordt weergegeven in het gebied **Bestandsinhoud**.
+- **Configuratieprofielbestand**: Blader naar het configuratieprofiel dat u hebt gemaakt met Apple Configurator of Apple Profile Manager. De maximale bestandsgrootte is `1000000` bytes (net iets minder dan 1 MB). Het bestand dat u hebt geïmporteerd, wordt weergegeven in het gebied **Bestandsinhoud**.
 
   U kunt ook apparaattokens toevoegen aan uw aangepaste configuratiebestanden. Apparaattokens worden gebruikt om apparaatspecifieke informatie toe te voegen. Als u bijvoorbeeld het serienummer wilt weergeven, voert u `{{serialnumber}}` in. Op het apparaat wordt tekst weergegeven die lijkt op `123456789ABC`, wat uniek is voor elk apparaat. Wanneer u variabelen opgeeft, moet u ervoor zorgen dat u accolades `{{ }}` gebruikt. [App-configuratietokens](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) bevat een lijst met variabelen die kunnen worden gebruikt. U kunt ook `deviceid` of een andere apparaatspecifieke waarde gebruiken.
 
   > [!NOTE]
   > Variabelen worden niet gevalideerd in de gebruikersinterface en zijn hoofdlettergevoelig. Hierdoor ziet u mogelijk profielen die met onjuiste invoer zijn opgeslagen. Als u bijvoorbeeld `{{DeviceID}}` invoert in plaats van `{{deviceid}}`, wordt de letterlijke tekenreeks weergegeven in plaats van de unieke id van het apparaat. Zorg dat u de juiste informatie invoert.
-
-Selecteer **OK** > **Maken** om uw wijzigingen op te slaan. Het profiel wordt gemaakt en weergegeven in de lijst met profielen.
 
 ## <a name="next-steps"></a>Volgende stappen
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 03/31/2020
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5988da854eecd528119a7e2591fc083dcdbc29bf
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: 26576212f4df86681210956669320ed4b124025d
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220219"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488178"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>Zelfstudie: De cloud gebruiken voor het configureren van groepsbeleid op Windows 10-apparaten met ADMX-sjablonen en Microsoft Intune
 
@@ -39,7 +39,7 @@ ADMX-sjablonen zijn beschikbaar voor de volgende services:
 
 Zie [Informatie over door ADMX ondersteund beleid](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies) voor meer informatie over ADMX-beleid.
 
-In Microsoft Intune zijn deze sjablonen ingebouwd in de Intune-service en zijn deze beschikbaar als **Beheersjabloonprofielen**. In dit profiel configureert u de instellingen die u wilt opnemen en vervolgens wijst u dit profiel toe aan uw apparaten.
+In Microsoft Intune zijn deze sjablonen ingebouwd. Ze zijn beschikbaar als **beheersjabloonprofielen**. In dit profiel configureert u de instellingen die u wilt opnemen en vervolgens wijst u dit profiel toe aan uw apparaten.
 
 In deze zelfstudie doet u het volgende:
 
@@ -68,7 +68,7 @@ Deze functie is van toepassing op:
 
 - Ga als volgt te werk op een on-premises Active Directory-domeincontroller (DC):
 
-  1. Kopieer de volgende Office- en Microsoft Edge-sjablonen naar de [centrale opslag (map SYSVOL)](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra):
+  1. Kopieer de volgende Office- en Microsoft Edge-sjablonen naar de [centrale opslag (map sysvol)](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra):
 
       - [Office-beheersjablonen](https://www.microsoft.com/download/details.aspx?id=49030)
       - [Microsoft Edge-beheersjablonen > Beleidsbestand](https://www.microsoftedgeinsider.com/en-us/enterprise)
@@ -78,7 +78,9 @@ Deze functie is van toepassing op:
       - Het groepsbeleid dat we met deze sjablonen hebben gemaakt, heet **OfficeandEdge**. Deze naam wordt weergeven in de afbeeldingen.
       - De computer die door de Windows 10 Enterprise-beheerder wordt gebruikt, heet de **Beheercomputer**.
 
-      In sommige organisaties heeft een domeinbeheerder twee accounts: een gebruikelijk domeinwerkaccount en een ander domeinbeheerdersaccount dat alleen wordt gebruikt voor domeinbeheerderstaken, zoals groepsbeleid.
+      In sommige organisaties heeft een domeinbeheerder twee accounts:  
+        - Een normaal domeinwerkaccount
+        - Een ander domeinbeheerdersaccount dat alleen wordt gebruikt voor domeinbeheertaken, bijvoorbeeld met betrekking tot groepsbeleid
 
       Het doel van deze **Beheercomputer** is dat beheerders zich kunnen aanmelden met hun domeinbeheerdersaccount en toegang kunnen krijgen tot hulpprogramma's voor het beheren van groepsbeleid.
 
@@ -235,10 +237,20 @@ In deze sectie maken we een beheersjabloon in Intune, bekijken we een aantal ins
     - **Beschrijving**: Voer een beschrijving in voor het profiel. Deze instelling is optioneel, maar wordt aanbevolen.
 
 5. Selecteer **Volgende**.
-6. Selecteer **Alle producten** in de vervolgkeuzelijst onder **Configuratie-instellingen**. Alle instellingen worden weergegeven. Bekijk de volgende eigenschappen in deze instellingen:
+6. Configureer in **Configuratie-instellingen** de instellingen die van toepassing zijn op apparaten (**Computerconfiguratie**) en instellingen die van toepassing zijn op gebruikers (**Gebruikersconfiguratie**):
 
-    - Het **Pad** naar het beleid is hetzelfde als dat van groepsbeleidsbeheer of GPEdit.
-    - De instelling is van toepassing op gebruikers of apparaten.
+    > [!div class="mx-imgBorder"]
+    > ![ADMX-sjablooninstellingen toepassen op gebruikers en apparaten in Microsoft Intune Endpoint Manager](./media/tutorial-walkthrough-administrative-templates/administrative-templates-choose-computer-user-configuration.png)
+
+7. Vouw **Computerconfiguratie** > **Microsoft Edge** uit en selecteer **SmartScreen-instellingen**. Let op het pad naar het beleid en alle beschikbare instellingen:
+
+    > [!div class="mx-imgBorder"]
+    > ![Zie de beleidsinstellingen voor Microsoft Edge SmartScreen in ADMX-sjablonen in Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/computer-configuration-microsoft-edge-smartscreen-path.png)
+
+8. In de zoekfunctie voert u **downloaden** in. U ziet dat de beleidsinstellingen worden gefilterd:
+
+    > [!div class="mx-imgBorder"]
+    > ![De beleidsinstellingen voor Microsoft Edge SmartScreen in ADMX-sjablonen filteren in Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/computer-configuration-microsoft-edge-smartscreen-search-download.png)
 
 ### <a name="open-group-policy-management"></a>Groepsbeleidsbeheer openen
 
@@ -251,7 +263,7 @@ In deze sectie wordt beleid in Intune en het overeenkomstige beleid in Groepsbel
     Deze app wordt geïnstalleerd met **RSAT: hulpprogramma's voor groepsbeleidsbeheer**, een optionele functie die u in Windows installeert. Bij [Vereisten](#prerequisites) (in dit artikel) vindt u de stappen om deze functie te installeren.
 
 2. Vouw **Domeinen** uit > selecteer uw domein. Selecteer bijvoorbeeld **contoso.net**.
-3. Klik met de rechtermuisknop op het beleid **OfficeandEdge** > **Bewerken**. Hiermee wordt de app Groepsbeleidsbeheer-editor geopend.
+3. Klik met de rechtermuisknop op het beleid **OfficeandEdge** > **Bewerken**. De app Groepsbeleidsbeheer-editor wordt geopend.
 
     > [!div class="mx-imgBorder"]
     > ![Met de rechtermuisknop op het ADMX-groepsbeleid voor Office en Edge klikken en Bewerken selecteren](./media/tutorial-walkthrough-administrative-templates/open-group-policy-management.png)
@@ -269,18 +281,18 @@ In deze sectie wordt beleid in Intune en het overeenkomstige beleid in Groepsbel
     > ![De opties bekijken voor computerconfiguratie-instellingen in groepsbeleid](./media/tutorial-walkthrough-administrative-templates/prevent-enabling-lock-screen-camera-admx-policy.png)
 
 5. Ga in het Eindpuntbeheer-beheercentrum naar uw sjabloon **Beheersjabloon - Windows 10-studentapparaten**.
-6. Selecteer **Alle producten** in de vervolgkeuzelijst en zoek naar **Persoonlijke instellingen**:
+6. Selecteer **Computerconfiguratie** > **Configuratiescherm** > **Persoonlijke instellingen**. Bekijk de beschikbare instellingen:
 
     > [!div class="mx-imgBorder"]
-    > ![Zoeken naar persoonlijke instellingen in de beheersjabloon in Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/search-personalization-administrative-template.png)
+    > ![Het pad voor het persoonlijke-instellingenbeleid in Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/computer-configuration-control-panel-personalization-path.png)
 
-    Bekijk de beschikbare instellingen.
-
-    Het instellingstype is **Apparaat** en het pad is **\Control Panel\Personalization**. Dit pad is vergelijkbaar met wat u zojuist hebt gezien in Groepsbeleidsbeheer-editor. Als u de instelling opent, ziet u dezelfde opties **Niet geconfigureerd**, **Ingeschakeld** en **Uitgeschakeld** als u ziet in Groepsbeleidsbeheer-editor.
+    Het instellingstype is **Apparaat** en het pad is **/Control Panel/Personalization**. Dit pad is vergelijkbaar met wat u zojuist hebt gezien in Groepsbeleidsbeheer-editor. Als u de instelling **Inschakeling camera vanaf vergrendelingsscherm voorkomen** opent, ziet u de opties **Niet geconfigureerd**, **Ingeschakeld** en **Uitgeschakeld**, net als in Groepsbeleidsbeheer-editor.
 
 #### <a name="compare-a-user-policy"></a>Gebruikersbeleid vergelijken
 
-1. Zoek in uw beheersjabloon naar **InPrivate-browsing**. Bekijk het pad en merk op dat de instelling van toepassing is op gebruikers en apparaten.
+1. Selecteer in uw beheersjabloon de opties **Computerconfiguratie** > **Alle instellingen** en zoek naar **InPrivate-navigatie**. Bekijk het pad.
+
+    Doe hetzelfde voor **Gebruikersconfiguratie**. Selecteer **Alle instellingen** en zoek naar **InPrivate-navigatie**.
 
 2. Zoek in **Groepsbeleidsbeheer-editor** de overeenkomstige gebruikers- en apparaatinstellingen:
 
@@ -296,9 +308,11 @@ In deze sectie wordt beleid in Intune en het overeenkomstige beleid in Groepsbel
 #### <a name="compare-an-edge-policy"></a>Edge-beleid vergelijken
 
 1. Ga in het Eindpuntbeheer-beheercentrum naar uw sjabloon **Beheersjabloon - Windows 10-studentapparaten**.
-2. Selecteer **Edge versie 77 en hoger** in de vervolgkeuzelijst.
-3. Zoeken naar **opstarten**. Bekijk de beschikbare instellingen.
-4. Zoek de volgende instellingen in Groepsbeleidsbeheer-editor:
+2. Vouw **Computerconfiguratie** > **Microsoft Edge** > **Opstarten, startpagina en nieuwe tabbladpagina** uit. Bekijk de beschikbare instellingen.
+
+    Doe hetzelfde voor **Gebruikersconfiguratie**.
+
+3. Zoek de volgende instellingen in Groepsbeleidsbeheer-editor:
 
     - Apparaat: Vouw **Computerconfiguratie** > **Beleid** > **Beheersjablonen** > **Microsoft Edge** > **Opstarten, startpagina en nieuwe tabbladpagina** uit.
     - Gebruiker: Vouw **Gebruikersconfiguratie** > **Beleid** > **Beheersjablonen** > **Microsoft Edge** > **Opstarten, startpagina en nieuwe tabbladpagina** uit
@@ -311,12 +325,12 @@ U hebt een beheersjabloon gemaakt in Intune. We hebben enkele ADMX-instellingen 
 
 In deze sjabloon configureren we enkele Internet Explorer-instellingen om apparaten te vergrendelen die worden gedeeld door meerdere studenten.
 
-1. Zoek in uw **Beheersjabloon - Windows 10-studentapparaten** naar **InPrivate-navigatie uitschakelen** en selecteer het apparaatbeleid:
+1. Vouw in **Beheersjabloon - Windows 10-studentapparaten** de optie **Computerconfiguratie** uit, selecteer **Alle instellingen** en zoek naar **InPrivate-navigatie uitschakelen**:
 
     > [!div class="mx-imgBorder"]
     > ![Het apparaatbeleid InPrivate-navigatie uitschakelen in de beheersjabloon in Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/turn-off-inprivate-browsing-administrative-template.png)
 
-2. Bekijk in dit venster de beschrijving en de waarden die u kunt instellen. Deze opties zijn vergelijkbaar met wat u ziet in groepsbeleid.
+2. Selecteer de instelling **InPrivate-navigatie uitschakelen**. Bekijk in dit venster de beschrijving en de waarden die u kunt instellen. Deze opties zijn vergelijkbaar met wat u ziet in groepsbeleid.
 3. Selecteer **Ingeschakeld** > **OK** om uw wijzigingen op te slaan.
 4. Configureer ook de volgende Internet Explorer-instellingen. Zorg ervoor dat u **OK** selecteert om uw wijzigingen op te slaan.
 
@@ -343,7 +357,7 @@ In deze sjabloon configureren we enkele Internet Explorer-instellingen om appara
 
 ### <a name="assign-your-template"></a>Uw sjabloon toewijzen
 
-1. Selecteer in uw sjabloon **Toewijzingen** > **Groepen selecteren die moeten worden opgenomen**:
+1. Selecteer in uw sjabloon **Volgende** totdat u bij **Toewijzingen** bent. Kies **Groepen selecteren die moeten worden opgenomen**:
 
     > [!div class="mx-imgBorder"]
     > ![Selecteer uw beheersjabloonprofiel in de lijst Apparaatconfiguratieprofielen in Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/filter-administrative-template-device-configuration-profiles-list.png)
@@ -352,7 +366,7 @@ In deze sjabloon configureren we enkele Internet Explorer-instellingen om appara
 
     U kunt groepen toevoegen die leeg zijn als u deze zelfstudie in een productieomgeving gebruikt. Het doel is te oefenen met het toewijzen van uw sjabloon.
 
-3. Selecteer **Volgende** om naar het tabblad **Beoordelen en maken** te gaan. Selecteer **Maken** om uw wijzigingen op te slaan.
+3. Selecteer **Volgende**. In **Beoordelen en maken** selecteert u **Maken** om uw wijzigingen op te slaan.
 
 Zodra het profiel is opgeslagen, wordt op de apparaten toegepast wanneer deze worden ingecheckt bij Intune. Als de apparaten verbonden zijn met internet, kan dit onmiddellijk plaatsvinden. Zie [Hoe lang duurt het voor apparaten een beleidsregel, profiel of app hebben ontvangen nadat deze zijn toegewezen?](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) voor meer informatie over vernieuwtijden van beleid.
 
@@ -380,11 +394,20 @@ In deze sectie maakt u een OneDrive-beheersjabloon in Intune om bepaalde instell
     - **Beschrijving**: Voer een beschrijving in voor het profiel. Deze instelling is optioneel, maar wordt aanbevolen.
 
 5. Selecteer **Volgende**.
-6. Selecteer **Office** in de vervolgkeuzelijst onder **Configuratie-instellingen**. Kies **Inschakelen** voor de volgende instellingen. Zorg ervoor dat u **OK** selecteert om uw wijzigingen op te slaan.
+6. Configureer in **Configuratie-instellingen** de volgende instellingen. Zorg ervoor dat u **OK** selecteert om uw wijzigingen op te slaan:
 
-    - **Gebruikers op de achtergrond aanmelden bij de OneDrive-synchronisatieclient met hun Windows-referenties**
-    - **OneDrive-bestanden op aanvraag gebruiken**
-    - **Voorkomen dat gebruikers persoonlijke OneDrive-accounts synchroniseren**
+    - **Computerconfiguratie** > **Alle instellingen**:
+      - **Gebruikers op de achtergrond aanmelden bij de OneDrive-synchronisatieclient met hun Windows-referenties**
+        - **Type**: Apparaat
+        - **Waarde**: Ingeschakeld
+      - **OneDrive-bestanden op aanvraag gebruiken**
+        - **Type**: Apparaat
+        - **Waarde**: Ingeschakeld
+
+    - **Gebruikersconfiguratie** > **Alle instellingen**:
+      - **Voorkomen dat gebruikers persoonlijke OneDrive-accounts synchroniseren**
+        - **Type**: Gebruiker
+        - **Waarde**: Ingeschakeld
 
 Uw instellingen zien er ongeveer uit zoals de volgende:
 
@@ -395,12 +418,12 @@ Zie [Groepsbeleid gebruiken voor het beheren van instellingen voor OneDrive-sync
 
 ### <a name="assign-your-template"></a>Uw sjabloon toewijzen
 
-1. Selecteer in uw sjabloon **Toewijzingen** > **Groepen selecteren die moeten worden opgenomen**
+1. Selecteer in uw sjabloon **Volgende** totdat u bij **Toewijzingen** bent. Kies **Groepen selecteren die moeten worden opgenomen**:
 2. Er wordt een lijst met bestaande gebruikers en groepen weergegeven. Selecteer de groep **Alle Windows-apparaten** die u eerder hebt gemaakt > **Selecteren**.
 
     U kunt groepen toevoegen die leeg zijn als u deze zelfstudie in een productieomgeving gebruikt. Het doel is te oefenen met het toewijzen van uw sjabloon.
 
-3. Selecteer **Volgende** om naar het tabblad **Beoordelen en maken** te gaan. Selecteer **Maken** om uw wijzigingen op te slaan.
+3. Selecteer **Volgende**. In **Beoordelen en maken** selecteert u **Maken** om uw wijzigingen op te slaan.
 
 Op dit moment hebt u enkele beheersjablonen gemaakt en deze toegewezen aan groepen die u hebt gemaakt. De volgende stap is het maken van een beheersjabloon met behulp van Windows PowerShell en de Microsoft Graph API voor Intune.
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7538cce4b116098db21e89d491476e8e0cd7f4e5
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 410911a44ca84230c30ccbea394c24b539b77c4f
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086078"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327041"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Inschrijving voor macOS-apparaten instellen in Intune
 
@@ -60,7 +60,7 @@ Zie de volgende artikelen voor meer informatie over andere taken voor eindgebrui
 
 ## <a name="company-owned-macos-devices"></a>Bedrijfseigen macOS-apparaten
 Voor organisaties die apparaten voor hun gebruikers aanschaffen, ondersteunt Intune de volgende inschrijvingsmethoden voor macOS-apparaten die bedrijfseigendom zijn:
-- [Device Enrollment Program (DEP) van Apple](device-enrollment-program-enroll-macos.md): Organisaties kunnen macOS-apparaten aanschaffen via het Device Enrollment Program (DEP) van Apple. Met DEP kunt u een inschrijvingsprofiel draadloos implementeren om apparaten voor beheer in te schrijven.
+- [Automatische apparaatinschrijving (Automated Device Enrollment of ADE) van Apple](device-enrollment-program-enroll-macos.md): Organisaties kunnen macOS-apparaten aanschaffen via ADE. Met ADE kunt u een inschrijvingsprofiel draadloos implementeren om apparaten voor beheer in te schrijven.
 - [Apparaatinschrijvingsmanager (DEM)](device-enrollment-manager-enroll.md): U kunt een DEM-account gebruiken om maximaal duizend apparaten te registreren.
 
 ## <a name="block-macos-enrollment"></a>macOS-inschrijving blokkeren

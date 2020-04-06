@@ -6,26 +6,25 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/10/2019
+ms.date: 03/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa471beb5929a6c5b39267871518f560fe6978f6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2e18fad8f1112681a62bcdacd63c652cfd4ad3ac
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79343424"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359290"
 ---
 # <a name="macos-device-settings-to-configure-and-use-kernel-extensions-in-intune"></a>instellingen voor macOS-apparaten om kernelextensies te configureren en gebruiken in Intune
-
-
 
 In dit artikel vindt u een overzicht en beschrijving van de verschillende instellingen voor kernelextensies die u kunt beheren op macOS-apparaten. Gebruik deze instellingen om kernelextensies aan uw apparaten toe te voegen en te beheren als onderdeel van uw MDM-oplossing (Mobile Device Management).
 
@@ -44,7 +43,7 @@ Deze instellingen worden toegevoegd aan een apparaatconfiguratieprofiel in Intun
 
 ### <a name="settings-apply-to-user-approved-automated-device-enrollment"></a>Deze instellingen zijn van toepassing op: Door de gebruiker goedgekeurde, geautomatiseerde apparaatinschrijving
 
-- **Negeren door gebruiker toestaan**: Met **toestaan** kunnen gebruikers de kernelextensies goedkeuren die niet zijn opgenomen in het configuratieprofiel. Met **niet geconfigureerd** (standaard) voorkomt u dat gebruikers extensies kunnen toestaan die niet zijn opgenomen in het configuratieprofiel. Dit betekent dat alleen extensies zijn toegestaan die zijn opgenomen in het configuratieprofiel.
+- **Negeren door gebruiker toestaan**: Met **toestaan** kunnen gebruikers de kernelextensies goedkeuren die niet zijn opgenomen in het configuratieprofiel. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem kan standaard voorkomen dat gebruikers extensies kunnen toestaan die niet zijn opgenomen in het configuratieprofiel. Dit betekent dat alleen extensies zijn toegestaan die zijn opgenomen in het configuratieprofiel.
 
   Zie [user-approved kernel extension loading](https://developer.apple.com/library/archive/technotes/tn2459/_index.html) (laden van door de gebruiker goedgekeurde kernelextensies, opent de website van Apple) voor meer informatie over deze functie.
 

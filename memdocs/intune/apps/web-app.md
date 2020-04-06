@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b30d2a3ef7c85557222aa39740417a1a6fd463f1
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: e6d4fd6022e7d772c70a2147e0e25bd7dad0775c
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084133"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407692"
 ---
 # <a name="add-web-apps-to-microsoft-intune"></a>Web-apps aan Microsoft Intune toevoegen
 
@@ -41,6 +41,8 @@ Er wordt door Intune een snelkoppeling gemaakt naar de web-app op het apparaat v
 > Raadpleeg [Beheerde Google Play-webkoppelingen](apps-add-android-for-work.md#managed-google-play-web-links) voor Android Enterprise-apparaten.
 > 
 > Op iOS-apparaten worden nieuwe webclips geopend in Microsoft Edge in plaats van in de Intune Managed Browser wanneer ze moeten worden geopend in een beveiligde browser. Voor oudere iOS-webclips moet u een nieuw doel opgeven om ervoor te zorgen dat ze worden geopend in Microsoft Edge in plaats van in de Managed Browser.
+>
+> Voor Android-apparaten van verouderd apparaatbeheer werken webkoppelingen die zijn vastgemaakt via de widget Bedrijfsportal alleen met de Intune Managed Browser als de bedrijfsportalversie van de gebruikers ouder is dan 5.0.4737.0. 
 
 ## <a name="add-a-web-app-to-intune"></a>Een web-app toevoegen aan Intune
 Voer de volgende stappen uit om een app toe te voegen aan Intune als een snelkoppeling naar een app op internet:

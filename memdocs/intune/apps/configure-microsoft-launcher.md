@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 03/30/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6daf1b37517f33f004742d9550f04f79aa207b63
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0711b407b185b3a9621ff80a371bd3aaa5032ead
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79334129"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407740"
 ---
 # <a name="configure-microsoft-launcher"></a>Microsoft Launcher configureren
 
@@ -33,7 +33,7 @@ In Launcher mogen IT-beheerders van bedrijven startschermen van volledig beheerd
 
 ## <a name="how-to-configure-the-microsoft-launcher-app"></a>De Microsoft Launcher-app configureren 
 
-Navigeer naar het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) en selecteer **Apps** > **Configuratiebeleid voor apps**. Voeg een configuratiebeleid toe voor **Beheerde apparaten** met **Android**, en kies **Microsoft Launcher** als bijbehorende app. Klik op **Configuratie-instellingen** om de verschillende beschikbare instellingen voor Microsoft Launcher te configureren. 
+Nadat de Microsoft Launcher-app is [toegevoegd aan Intune](../apps/apps-add.md), navigeert u naar het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) en selecteert u **Apps** > **Configuratiebeleid voor apps**. Voeg een configuratiebeleid toe voor **Beheerde apparaten** met **Android**, en kies **Microsoft Launcher** als bijbehorende app. Klik op **Configuratie-instellingen** om de verschillende beschikbare instellingen voor Microsoft Launcher te configureren. 
 
 ## <a name="choosing-a-configuration-settings-format"></a>Een indeling voor de configuratie-instellingen kiezen 
 
@@ -46,6 +46,9 @@ Er zijn twee methoden waarmee u configuratie-instellingen kunt definiëren voor 
 Als u eigenschappen toevoegt met **Configuration Designer**, kunt u deze eigenschappen automatisch omzetten in JSON door **JSON-gegevens invoeren** te selecteren in de vervolgkeuzelijst **Indeling voor configuratie-instellingen**.
 
    ![Indeling voor configuratie-instellingen - Configuration Designer gebruiken](./media/configure-microsoft-launcher/configure-microsoft-launcher-01.png)
+
+   > [!NOTE]
+   > Zodra eigenschappen zijn geconfigureerd via Configuration Designer, worden de JSON-gegevens ook bijgewerkt zodat alleen deze eigenschappen worden weergegeven. Als u extra configuratiesleutels wilt toevoegen aan de JSON-gegevens, gebruikt u het [JSON-scriptvoorbeeld](../apps/configure-microsoft-launcher.md#microsoft-launcher-configuration-example) om de benodigde regels voor elke configuratiesleutel te kopiëren. 
 
 ## <a name="using-configuration-designer"></a>Configuration Designer gebruiken
 
@@ -64,6 +67,10 @@ De volgende tabel bevat de configuratiesleutels, waardetypen, standaardwaarden e
 |    Gebruiker toestaan de achtergrond te wijzigen    |    Booleaanse waarde    |    True    |    Hiermee kunt u opgeven of de instelling Achtergrond van apparaat instellen kan worden gewijzigd door de eindgebruiker.<ul><li>Als dit is ingesteld op **True**, wordt de achtergrond in het beleid alleen afgedwongen bij de eerste implementatie. Vervolgens wordt het beleid niet afgedwongen om eventuele wijzigingen door te voeren die zijn aangebracht door de gebruiker.</li><li>Als dit is ingesteld op **False**, wordt de achtergrond afgedwongen bij elke synchronisatie.</li></ul><br>JSON-sleutelnaam:<br>`com.microsoft.launcher.Wallpaper.URL.UserChangeAllowed`        |
 |    Feed inschakelen    |    Boolean-waarde    |    True    |    Hiermee kunt u de startfeed inschakelen op het apparaat, wanneer de gebruiker naar rechts swipet op het startscherm.<ul><li>Als dit is ingesteld op **True**, wordt de feed ingeschakeld.</li><li>Als dit is ingesteld op **False**, wordt de feed uitgeschakeld.</li></ul><br>JSON-sleutelnaam:<br>`com.microsoft.launcher.Feed.Enabled`    |
 |    Gebruiker toestaan het inschakelen van de feed te wijzigen    |    Boolean-waarde    |    True    |     Hiermee kunt u opgeven of de instelling **Feed inschakelen** kan worden gewijzigd door de eindgebruiker.<ul><li>Als dit is ingesteld op **True**, wordt de feed alleen afgedwongen bij de eerste implementatie. Vervolgens wordt het beleid niet afgedwongen om eventuele wijzigingen door te voeren die zijn aangebracht door de gebruiker.</li><li>Als dit is ingesteld op **False**, wordt de feed afgedwongen bij elke synchronisatie.</li></ul><br>JSON-sleutelnaam:`com.microsoft.launcher.Feed.Enabled.UserChangeAllowed`    |
+|    Plaatsing van de zoekbalk   |    Tekenreeks    |    Onderste    |  Hiermee kunt u de **plaatsing van de zoekbalk** op het startscherm opgeven. <ul><li>Als dit is ingesteld op **Onder**, bevindt de zoekbalk zich onderaan het startscherm.</li><li>Als dit is ingesteld op **Boven**, bevindt de zoekbalk zich bovenaan het startscherm.</li><li>Als dit is ingesteld op **Verbergen**, wordt de zoekbalk verwijderd uit het startscherm.</li></ul><br>JSON-sleutelnaam:<br>`com.microsoft.launcher.Search.SearchBar.Placement`    |
+|    Gebruikers toestaan de plaatsing van de zoekbalk te wijzigen   |    Booleaanse waarde    |    True    |  Hiermee kunt u opgeven of de instelling **Plaatsing van de zoekbalk** kan worden gewijzigd door de eindgebruiker. <ul><li>Als dit is ingesteld op **True**, wordt de plaatsing van de zoekbalk alleen afgedwongen bij de eerste implementatie. Vervolgens wordt het beleid niet afgedwongen om eventuele wijzigingen door te voeren die zijn aangebracht door de gebruiker.</li><li>Als dit is ingesteld op **False**, wordt de plaatsing van de zoekbalk afgedwongen bij elke synchronisatie.</li></ul><br>JSON-sleutelnaam:<br>`com.microsoft.launcher.Search.SearchBar.Placement.UserChangeAllowed`    |
+|    Dock-modus  |    Tekenreeks    |    Weergeven    | Hiermee kunt u het dock inschakelen op het apparaat, wanneer de gebruiker naar rechts veegt op het startscherm.<ul><li>Als dit is ingesteld op **Weergeven**, wordt het dock ingeschakeld.</li><li>Als dit is ingesteld op **Verbergen**, wordt het dock verborgen in het startscherm. De gebruiker kan het dock echter weergeven wanneer dat nodig is.</li><li>Als dit is ingesteld op **Uitgeschakeld**, wordt het dock uitgeschakeld.</li></ul><br>JSON-sleutelnaam:<br>`com.microsoft.launcher.Dock.Mode`    |
+|   Gebruiker toestaan het inschakelen van het dock te wijzigen   |    Tekenreeks    |    True    |  Hiermee kunt u opgeven of de instelling voor de Dock-modus kan worden gewijzigd door de eindgebruiker.<ul><li>Als dit is ingesteld op **True**, wordt de instelling voor de Dock-modus alleen afgedwongen bij de eerste implementatie. Vervolgens wordt het beleid niet afgedwongen om eventuele wijzigingen door te voeren die zijn aangebracht door de gebruiker.</li><li>Als dit is ingesteld op **False**, wordt de instelling voor de Dock-modus afgedwongen bij elke synchronisatie.</li></ul><br>JSON-sleutelnaam:<br>`com.microsoft.launcher.Dock.Mode.UserChangeAllowed`    |
 
 ## <a name="enter-json-data"></a>JSON-gegevens invoeren
 
@@ -76,7 +83,9 @@ Naast de lijst met configureerbare instellingen in de tabel Configuration Design
 |    Configuratiesleutel    |    Waardetype    |    Standaardwaarde    |    Beschrijving     |
 |----------------------------------------------------------------------------------------------------|-------------------|-------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    De in de whitelist opgenomen toepassingen instellen<br>JSON-sleutel:`com.microsoft.launcher.HomeScreen.Applications`    |    BundleArray    | Zie: [De in de whitelist opgenomen toepassingen instellen](configure-microsoft-launcher.md#set-allow-listed-applications)</sup>    |    Hiermee kunt u de apps definiëren die op het startscherm worden weergegeven. U kunt kiezen uit alle apps die zijn geïnstalleerd op het apparaat. U definieert de apps door de naam van het app-pakket in te voeren van de apps die u zichtbaar wilt maken. Met `com.android.settings` voegt u bijvoorbeeld instellingen toe aan het startscherm. De apps die u in deze sectie op de whitelist plaatst, moeten al op het apparaat zijn geïnstalleerd om te worden weergegeven op het startscherm.<p>Eigenschappen:<ul><li>**Pakket:** Naam van het toepassingspakket</li><li>**Klasse:** De toepassingsactiviteit die specifiek is voor een bepaalde app-pagina. Als deze waarde leeg is, wordt de standaardpagina van de app gebruikt.</li></ul>      |
-|    Home Screen-app-volgorde<br>JSON-sleutel: `com.microsoft.launcher.HomeScreen.AppOrder`    |    BundleArray    |    Zie: [Home Screen-app-volgorde](configure-microsoft-launcher.md#home-screen-app-order)      |    Hiermee kunt u de app-volgorde op het startscherm opgeven.<p>Eigenschappen:<br><ul><li>**Type:** Het enige type dat wordt ondersteund, is `application`.</li><li>**Positie:** De sleuf voor het toepassingspictogram op het startscherm. Deze begint vanaf positie 1 linksboven en gaat van links naar rechts, en van boven naar beneden.</li><li>**Pakket:** Naam van het toepassingspakket.</li><li>**Klasse:** De toepassingsactiviteit die specifiek is voor een bepaalde app-pagina. Als deze waarde leeg is, wordt de standaardpagina van de app gebruikt.</li></ul>    |
+|    Home Screen-app-volgorde<br>JSON-sleutel: `com.microsoft.launcher.HomeScreen.AppOrder`    |    BundleArray    |    Zie: [Home Screen-app-volgorde](configure-microsoft-launcher.md#home-screen-app-order)      |    Hiermee kunt u de app-volgorde op het startscherm opgeven.<p>Eigenschappen:<br><ul><li>**Type:** Als u posities van apps wilt opgeven, wordt alleen `application` ondersteund. Als u posities van webkoppelingen wilt opgeven, is het type `weblink`.</li><li>**Positie:** Hiermee geeft u de sleuf voor het toepassingspictogram op het startscherm op. Deze begint vanaf positie 1 linksboven en gaat van links naar rechts, en van boven naar beneden.</li><li>**Pakket:** Dit is de naam van het toepassingspakket dat wordt gebruikt om de app-volgorde op te geven.</li><li>**Klasse:** De toepassingsactiviteit die specifiek is voor een bepaalde app-pagina. Als deze waarde leeg is, wordt de standaardpagina van de app gebruikt. Deze eigenschap wordt gebruikt voor de app.</li><li>**Label**: De toepassingsactiviteit die specifiek is voor een bepaalde app-pagina. Als deze waarde leeg is, wordt de standaardpagina van de app gebruikt. Deze eigenschap wordt gebruikt voor de app.</li><li>**Koppeling**: De URL die moet worden gestart nadat de eindgebruiker op het pictogram voor de webkoppeling klikt. Deze eigenschap wordt gebruikt voor de webkoppeling.</li></ul>    |
+|    Vastgemaakte webkoppelingen instellen<br>JSON-sleutel: `com.microsoft.launcher.HomeScreen.WebLinks`    |    BundleArray    |    Zie: [Vastgemaakte webkoppelingen instellen](configure-microsoft-launcher.md#set-pinned-web-link)      |    Met deze sleutel kunt u websites vastmaken op het startscherm als pictogrammen voor snel starten. Op die manier kunt u ervoor zorgen dat de eindgebruiker snel en eenvoudig toegang tot essentiële websites heeft. U kunt de locatie van elk pictogram van een webkoppeling in de configuratie van Home Screen-app-volgorde wijzigen.<p>Eigenschappen:<br><ul><li>**•  Label**: De titel van de webkoppeling wordt weergegeven op het startscherm van MS Launcher.</li><li>**Koppeling**: De URL die moet worden gestart nadat de eindgebruiker op het pictogram voor de webkoppeling klikt.</li></ul>    |
+
 
 ### <a name="set-allow-listed-applications"></a>De in de whitelist opgenomen toepassingen instellen
 
@@ -131,6 +140,57 @@ Naast de lijst met configureerbare instellingen in de tabel Configuration Design
     ]
 }
 ```
+
+### <a name="set-pinned-web-link"></a>Vastgemaakte webkoppeling instellen
+
+```JSON
+{ 
+    "key": "com.microsoft.launcher.HomeScreen.WebLinks",  
+    "valueBundleArray": [ 
+        { 
+            "managedProperty": [ 
+                { 
+                    "key": "label",
+                    "valueString": "" 
+                },  
+                { 
+                    "key": "link", 
+                    "valueString": "" 
+                } 
+            ] 
+        }
+    ] 
+},
+{ 
+    "key": "com.microsoft.launcher.HomeScreen.AppOrder",  
+    "valueBundleArray": [ 
+        { 
+            "managedProperty": [ 
+                { 
+                    "key": "type",  
+                    "valueString": "" 
+                },  
+                { 
+                    "key": "position",  
+                    "valueInteger": 
+                },  
+                { 
+                    "key": "label",  
+                    "valueString": "" 
+                },  
+                { 
+                    "key": "link",  
+                    "valueString": "" 
+                } 
+            ] 
+        }
+    ] 
+}
+```
+
+
+
+### <a name="microsoft-launcher-configuration-example"></a>Configuratievoorbeeld van Microsoft Launcher
 
 Hier volgt een voorbeeld-JSON-script met alle beschikbare configuratiesleutels die erin zijn opgenomen:
 
@@ -204,6 +264,23 @@ Hier volgt een voorbeeld-JSON-script met alle beschikbare configuratiesleutels d
                 }
             ]
         }, 
+        { 
+            "key": "com.microsoft.launcher.HomeScreen.WebLinks",  
+            "valueBundleArray": [ 
+                { 
+                    "managedProperty": [ 
+                        { 
+                            "key": "label",
+                            "valueString": "News" 
+                        },  
+                        { 
+                            "key": "link", 
+                            "valueString": "https://www.bbc.com" 
+                        } 
+                    ] 
+                }
+            ] 
+        },
         {
             "key": "com.microsoft.launcher.HomeScreen.AppOrder.UserChangeAllowed", 
             "valueBool": false
@@ -270,11 +347,32 @@ Hier volgt een voorbeeld-JSON-script met alle beschikbare configuratiesleutels d
                             "valueString": ""
                         }
                     ]
+                },
+                {
+                    "managedProperty": [
+                        {
+                            "key": "type", 
+                            "valueString": "weblink"
+                        }, 
+                        {
+                            "key": "position", 
+                            "valueInteger": 20
+                        }, 
+                        {
+                            "key": "label", 
+                            "valueString": "News"
+                        }, 
+                        {
+                            "key": "link", 
+                            "valueString": "https://www.bbc.com"
+                        }
+                    ]
                 }
             ]
         }
     ]
 }
+
 ```
 
 ## <a name="next-steps"></a>Volgende stappen

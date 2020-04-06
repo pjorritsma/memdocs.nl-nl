@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f58c20731395c95e532e28165553743fdef701e9
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 7686be29b819d29aa39ed12d558780dde9bf4159
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083563"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401371"
 ---
 # <a name="review-client-app-protection-logs"></a>Logboeken voor beveiliging van de client-app controleren
 
@@ -33,6 +33,9 @@ Het proces voor het inschakelen en verzamelen van logboeken verschilt per platfo
 - **IOS-/iPadOS-apparaten**: gebruik Microsoft Edge voor iOS/iPadOS om logboeken te verzamelen. Zie [Internettoegang beheren met behulp van Microsoft Edge met Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs) voor meer informatie. 
 - **Windows 10-apparaten**: gebruik *MDMDiag* en gebeurtenislogboeken. Zie [Diagnose MDM failures in Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) (MDM-fouten diagnosticeren in Windows 10) in de documentatie voor Windows-clientbeheer en het blog [Troubleshooting Windows 10 Intune Policy Failures](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (Problemen met het Windows 10 Intune-beleid oplossen).
 - **Android-apparaten**: gebruik Microsoft Edge voor Android om logboeken te verzamelen. Zie [Internettoegang beheren met behulp van Microsoft Edge met Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs) voor meer informatie. 
+
+  > [!Note]
+  > Op volledig beheerde Android-apparaten is de bedrijfsportal-app van Intune in bepaalde gevallen mogelijk zichtbaar tussen alle andere apps. Dit kan gebeuren als een app die is gekoppeld aan een app-beveiligingsbeleid niet is geïnstalleerd of niet is gestart. 
 
 De volgende tabel bevat de naam van de instelling van het beleid voor app-beveiliging en ondersteunde waarden die in het logboek worden vastgelegd. Daarnaast wordt per instelling aangegeven welke beleidsinstelling is gevonden in de Microsoft Eindpuntbeheer-portal. Zie de [beveiligingsbeleidsinstellingen voor iOS-/iPadOS-apps](app-protection-policy-settings-ios.md) voor gedetailleerde informatie over elke instelling.
 

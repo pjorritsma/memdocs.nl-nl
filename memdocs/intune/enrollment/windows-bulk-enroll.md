@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f102daeab975bbbf0a618d1a5d642c84f52edba
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 077d7c4dd345b9b16677d61269b9f331dedb4dbb
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79344490"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488088"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Bulkregistratie voor Windows-apparaten
 
@@ -61,11 +61,13 @@ Azure AD-gebruikers zijn standaardgebruikers op deze apparaten en ontvangen toeg
 7. Geef uw Azure AD-referenties op om een bulk-token op te halen.
    ![Schermafbeelding van aanmelding bij de app Windows Configuration Designer](./media/windows-bulk-enroll/bulk-enroll-cred.png)
 
-8. Klik op **Volgende** wanneer de **Bulk Token** is opgehaald.
+8. Selecteer op de pagina **Dit account overal gebruiken op dit apparaat** de optie **Alleen deze app**.
 
-9. U kunt eventueel **toepassingen toevoegen** en **certificaten toevoegen**. Deze apps en certificaten worden ingericht op het apparaat.
+9. Klik op **Volgende** wanneer de **Bulk Token** is opgehaald.
 
-10. U kunt eventueel uw inrichtingspakket beveiligen met een wachtwoord.  Klik op **Maken**.
+10. U kunt eventueel **toepassingen toevoegen** en **certificaten toevoegen**. Deze apps en certificaten worden ingericht op het apparaat.
+
+11. U kunt eventueel uw inrichtingspakket beveiligen met een wachtwoord.  Klik op **Maken**.
     ![Schermafbeelding van pakketbeveiliging in de app Windows Configuration Designer](./media/windows-bulk-enroll/bulk-enroll-create.png)
 
 ## <a name="provision-devices"></a>Apparaten inrichten

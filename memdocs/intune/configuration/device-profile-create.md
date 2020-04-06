@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 462f9ca9618d16c0291792f86d00c46f641c6cc8
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: c2031ba23b49bda4890d2638272e3b808b4bf5a9
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084067"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327437"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Een apparaatprofiel maken in Microsoft Intune
 
@@ -37,73 +37,64 @@ Dit artikel:
 
 ## <a name="create-the-profile"></a>Het profiel maken
 
-1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
+Profielen worden gemaakt in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431). Selecteer **Apparaten**in dit beheercentrum. U hebt de volgende opties:
 
-2. Selecteer **Apparaten** > **Configuratieprofielen**. U hebt de volgende opties:
+- **Overzicht**: geeft de status van uw profielen weer en biedt aanvullende details over de profielen die u aan gebruikers en apparaten hebt toegewezen.
+- **Bewaken**: Controleer de status van uw profielen op slagen of falen en bekijk ook logboeken over uw profielen.
+- **Op platform**: Maak beleidsregels en profielen op basis van uw platform. In deze weergave kunnen ook specifieke functies voor het platform worden weergegeven. Selecteer bijvoorbeeld **Windows**. U ziet Windows-specifieke functies, zoals **Windows 10-update-ringen** en **PowerShell-scripts**.
+- **Beleid**: Maak apparaatprofielen en upload aangepaste [PowerShell-scripts](../apps/intune-management-extension.md) die op apparaten worden uitgevoerd, en voeg met [eSIM](esim-device-configuration.md) gegevensplannen toe aan apparaten.
 
-    - **Overzicht**: geeft de status van uw profielen weer en biedt aanvullende details over de profielen die u aan gebruikers en apparaten hebt toegewezen.
-    - **Beheren**: maak apparaatprofielen en upload aangepaste [PowerShell-scripts](../apps/intune-management-extension.md) die binnen het profiel worden uitgevoerd, en voeg met [eSIM](esim-device-configuration.md) gegevensplannen toe aan apparaten.
-    - **Bewaken**: controleer de status van een profiel op slagen of falen, en bekijk ook logboeken over uw profielen.
-    - **Configureren**: voeg een certificeringsinstantie (SCEP of PFX) toe of schakel [Telecom-onkostenbeheer](telecom-expenses-monitor.md) aan het profiel toe.
+Wanneer u een profiel maakt (**Configuratieprofielen** > **Profiel maken**), kiest u uw platform:
 
-3. Selecteer **Profiel maken**. Voer de volgende eigenschappen in:
+- **Android-apparaatbeheerder**
+- **Android Enterprise**
+- **iOS/iPadOS**
+- **macOS**
+- **Windows 10 en hoger**
+- **Windows 8.1 en hoger**
+- **Windows Phone 8.1**
 
-   - **Naam**: Voer een beschrijvende naam in voor het profiel. Geef uw profielen een naam zodat u ze later eenvoudig kunt identificeren. Een goede profielnaam is bijvoorbeeld **WP-e-mailprofiel voor hele bedrijf**.
-   - **Beschrijving**: Voer een beschrijving in voor het profiel. Deze instelling is optioneel, maar wordt aanbevolen.
-   - **Platform**: Kies het platform van uw apparaten. Uw opties zijn:  
+Kies vervolgens het profieltype. Welke instellingen u kunt configureren, is afhankelijk van het platform dat u kiest. In de volgende artikelen worden de instellingen voor de verschillende profieltypen beschreven:
 
-       - **Android-apparaatbeheerder**
-       - **Android Enterprise**
-       - **iOS/iPadOS**
-       - **macOS**
-       - **Windows Phone 8.1**
-       - **Windows 8.1 en hoger**
-       - **Windows 10 en hoger**
+- [Beheersjablonen (Windows)](administrative-templates-windows.md)
+- [Aangepast](custom-settings-configure.md)
+- [Delivery optimization (Windows)](delivery-optimization-windows.md)
+- [Afgeleide referentie (Android Enterprise, iOS, iPadOS)](../protect/derived-credentials.md)
+- [Apparaatfuncties (macOS, iOS, iPadOS)](device-features-configure.md)
+- [Apparaatfirmware (Windows)](device-firmware-configuration-interface-windows.md)
+- [Apparaatbeperkingen](device-restrictions-configure.md)
+- [Domeindeelname (Windows)](domain-join-configure.md)
+- [Editie-upgrade en modusschakelaar (Windows)](edition-upgrade-configure-windows-10.md)
+- [Onderwijs (iOS, iPadOS)](../fundamentals/education-settings-configure-ios.md)
+- [E-mail](email-settings-configure.md)
+- [Endpoint Protection (macOS, Windows)](../protect/endpoint-protection-configure.md)
+- [Extensies (macOS)](kernel-extensions-overview-macos.md)
+- [Identiteitsbescherming (Windows)](../protect/identity-protection-configure.md)
+- [Kiosk](kiosk-settings.md)
+- [Microsoft Defender ATP (Windows)](../protect/advanced-threat-protection.md)
+- [Mobiliteitsextensiesprofiel (MX, Android-apparaatbeheer)](android-zebra-mx-overview.md)
+- [OEMConfig (Android Enterprise)](android-oem-configuration-overview.md)
+- [PKCS-certificaat](../protect/certficates-pfx-configure.md)
+- [PKCS-geïmporteerd certificaat](../protect/certificates-imported-pfx-configure.md)
+- [Voorkeursbestand (macOS)](preference-file-settings-macos.md)
+- [SCEP-certificaat](../protect/certificates-scep-configure.md)
+- [Veilige evaluatie (onderwijs) (Windows)](education-settings-configure.md)
+- [Gedeeld apparaat voor meerdere gebruikers (Windows)](shared-user-device-settings.md)
+- [Telecommunicatie-uitgaven (Android-apparaatbeheerder, iOS, iPadOS)](telecom-expenses-monitor.md)
+- [Vertrouwd certificaat](../protect/certificates-configure.md)
+- [VPN](vpn-settings-configure.md)
+- [Wi-Fi](wi-fi-settings-configure.md)
 
-   - **Profieltype**: Selecteer het type instellingen dat u wilt configureren. De lijst die wordt getoond, is afhankelijk van het **platform** dat u kiest.
-   - **Instellingen**: In de volgende artikelen worden de instellingen voor elk profieltype beschreven:
+Als u bijvoorbeeld **iOS/iPadOS** selecteert als platform, zien uw opties voor het profieltype er ongeveer uit als het volgende profiel:
 
-       - [Beheersjablonen](administrative-templates-windows.md)
-       - [Aangepast](custom-settings-configure.md)
-       - [Delivery optimization](delivery-optimization-windows.md)
-       - [Apparaatfuncties](device-features-configure.md)
-       - [Apparaatbeperkingen](device-restrictions-configure.md)
-       - [Domeindeelname](domain-join-configure.md)
-       - [Editie-upgrade en modusschakelaar](edition-upgrade-configure-windows-10.md)
-       - [Onderwijs](education-settings-configure.md)
-       - [E-mail](email-settings-configure.md)
-       - [Endpoint Protection](../protect/endpoint-protection-configure.md)
-       - [Identiteitsbescherming](../protect/identity-protection-configure.md)  
-       - [Kiosk](kiosk-settings.md)
-       - [Microsoft Defender ATP](../protect/advanced-threat-protection.md)
-       - [PKCS-certificaat](../protect/certficates-pfx-configure.md)
-       - [PKCS-geïmporteerd certificaat](../protect/certificates-imported-pfx-configure.md)
-       - [Voorkeursbestand](preference-file-settings-macos.md)
-       - [SCEP-certificaat](../protect/certificates-scep-configure.md)
-       - [Vertrouwd certificaat](../protect/certificates-configure.md)
-       - [Updatebeleid](../protect/software-updates-ios.md)
-       - [VPN](vpn-settings-configure.md)
-       - [Wi-Fi](wi-fi-settings-configure.md)
-       - [Windows Information Protection](../protect/windows-information-protection-configure.md)
-
-     Als u bijvoorbeeld **iOS/iPadOS** selecteert als platform, zien uw opties voor het profieltype er ongeveer uit als het volgende profiel:
-
-     > [!div class="mx-imgBorder"]
-     > ![iOS-/iPadOS-profiel maken in Intune](./media/device-profile-create/create-device-profile.png)
-
-4. Wanneer u klaar bent, selecteert u **OK** > **Maken** om uw wijzigingen op te slaan. Het profiel wordt gemaakt en weergegeven in de lijst.
+> [!div class="mx-imgBorder"]
+> ![iOS-/iPadOS-profiel maken in Intune](./media/device-profile-create/create-device-profile.png)
 
 ## <a name="scope-tags"></a>Bereiktags
 
-Nadat u de instellingen hebt toegevoegd, kunt u ook een bereiktag toevoegen aan het profiel. Met bereiktags worden profielen gefilterd op specifieke IT-groepen, zoals `US-NC IT Team` of `JohnGlenn_ITDepartment`.
+Nadat u de instellingen hebt toegevoegd, kunt u ook een bereiktag toevoegen aan het profiel. Met bereiktags worden profielen gefilterd op specifieke IT-groepen, zoals `US-NC IT Team` of `JohnGlenn_ITDepartment`. Ze worden ook gebruikt in de gedistribueerde IT.
 
 Zie [RBAC en bereiktags gebruiken voor gedistribueerde IT](../fundamentals/scope-tags.md) voor meer informatie over bereiktags en wat u hiermee kunt doen.
-
-### <a name="add-a-scope-tag"></a>Een bereiktag toevoegen
-
-1. Selecteer **Bereik (tags)** .
-2. Selecteer **Toevoegen** om een nieuwe bereiktag te maken. Of selecteer een bestaande bereiktag in de lijst.
-3. Selecteer **OK** om uw wijzigingen op te slaan.
 
 ## <a name="applicability-rules"></a>Toepasselijkheidsregels
 

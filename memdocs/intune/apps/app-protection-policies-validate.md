@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 03/31/2020
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0e7ed0aa1d45c66c5688cde07b385cf95081a3c3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d41dec48ff1f357733882ebe99bcad670e676675
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342046"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488010"
 ---
 # <a name="how-to-validate-your-app-protection-policy-setup-in-microsoft-intune"></a>De configuratie van uw beveiligingsbeleid voor apps valideren in Microsoft Intune
 
@@ -44,7 +44,7 @@ Als blijkt dat uw beveiligingsbeleid voor apps niet werkt zoals verwacht, contro
 
 ### <a name="user-app-protection-status"></a>Gebruikersstatus van de app-beveiliging
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Selecteer **Apps** >  **App-beveiligingsstatus** en vervolgens de tegel **Toegewezen gebruikers**. 
+3. Selecteer **Apps** > **Bewaken** >  **App-beveiligingsstatus** en vervolgens de tegel **Toegewezen gebruikers**. 
 4. Op de pagina **App-rapportage** selecteert u **Gebruiker selecteren** voor een lijst met gebruikers en groepen. 
 5. Zoek naar en selecteer een gebruiker uit de lijst en kies vervolgens **Gebruiker selecteren**. Bovenaan het venster **App-rapportage** ziet u of de gebruiker een licentie voor app-beveiliging heeft. U kunt ook zien of de gebruiker een licentie voor O365 heeft en wat de app-status voor alle apparaten van de gebruiker is.
 

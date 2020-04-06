@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79bb7e627043e439c7438c2fc4afcfdee5a44406
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: e7d7f35d6d6b11875c722d4969f5776040ca0dfc
+ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086118"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80256450"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>iOS-/iPadOS-apparaten inschrijven bij Intune
 
@@ -52,23 +52,23 @@ Zodra u aan de vereisten hebt voldaan en gebruikerslicenties hebt toegewezen, ku
 
 Voor organisaties die apparaten voor hun gebruikers aanschaffen, ondersteunt Intune de volgende inschrijvingsmethoden voor iOS-/iPadOS-apparaten die bedrijfseigendom zijn:
 
-- Device Enrollment Program (DEP) van Apple
+- Automatische apparaatinschrijving (Automated Device Enrollment of ADE) van Apple
 - Apple School Manager
 - Inschrijving via Apple Configurator Setup Assistant
 - Directe inschrijving via Apple Configurator
 
 U kunt iOS-/iPadOS-apparaten die bedrijfseigendom zijn ook inschrijven met een [Device Enrollment Manager](device-enrollment-manager-enroll.md)-account.
 
-## <a name="device-enrollment-program"></a>Programma voor apparaatinschrijving
+## <a name="automated-device-enrollment"></a>Automatische apparaatinschrijving
 
-Organisaties kunnen nu iOS-/iPadOS-apparaten aanschaffen via het Device Enrollment Program (DEP) van Apple. Met DEP kunt u een inschrijvingsprofiel draadloos implementeren om apparaten voor beheer in te schrijven. Zie [Device Enrollment Program](device-enrollment-program-enroll-ios.md) voor meer informatie.
+Organisaties kunnen nu iOS-/iPadOS-apparaten aanschaffen via de automatische apparaatinschrijving (ADE) van Apple. Met ADE kunt u een inschrijvingsprofiel draadloos implementeren om apparaten voor beheer in te schrijven. Zie [Device Enrollment Program](device-enrollment-program-enroll-ios.md) voor meer informatie.
 
 ## <a name="user-enrollment"></a>Gebruikersinschrijving
 Gebruikersinschrijving biedt beheerders een subset van beheeropties vergeleken met andere inschrijvingsmethoden. Zie [Ondersteunde acties, wachtwoorden en andere opties voor gebruikersinschrijving](ios-user-enrollment-supported-actions.md) en [iOS-/iPadOS- en iPadOS-gebruikersinschrijving instellen](ios-user-enrollment.md) voor meer informatie.
 
 ## <a name="apple-school-manager"></a>Apple School Manager
 
-Apple School Manager is een programma voor het aanschaffen en inschrijven van apparaten voor scholen. Net zoals bij DEP kunt u een profiel implementeren om apparaten in te schrijven voor beheer. Meer informatie over [Apple School Manager](apple-school-manager-set-up-ios.md).
+Apple School Manager is een programma voor het aanschaffen en inschrijven van apparaten voor scholen. Net als bij ADE kunt u een profiel implementeren om apparaten in te schrijven voor beheer. Meer informatie over [Apple School Manager](apple-school-manager-set-up-ios.md).
 
 ## <a name="apple-configurator"></a>Apple Configurator
 
@@ -79,7 +79,7 @@ U kunt iOS-/iPadOS-apparaten inschrijven met Apple Configurator op een Mac-compu
 
 Meer informatie over [Apple Configurator-inschrijving](apple-configurator-enroll-ios.md).
 
-## <a name="use-the-company-portal-on-dep-enrolled-or-apple-configurator-enrolled-devices"></a>Apparaten die zijn geregistreerd via de bedrijfsportal op DEP of Apple Configurator gebruiken
+## <a name="use-the-company-portal-on-ade-enrolled-or-apple-configurator-enrolled-devices"></a>De bedrijfsportal gebruiken op apparaten die bij ADE of Apple Configurator zijn geschreven
 
 Op apparaten die zijn geconfigureerd met gebruikersaffiniteit kan de bedrijfsportal-app worden geïnstalleerd en uitgevoerd om apps te downloaden en apparaten te beheren. Nadat gebruikers hun apparaten hebben ontvangen, moeten zij een aantal extra stappen uitvoeren om de Configuratieassistent te voltooien en de bedrijfsportal-app te installeren.
 

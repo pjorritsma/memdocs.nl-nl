@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1f4d51cbd5c8bc6c82822d5e26191c01d2e1bb1d
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: fd7483319443b7a960f8e704442d2b43b6b00c66
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220146"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326914"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Inschrijving voor Windows-apparaten instellen
 
@@ -102,7 +102,7 @@ EnterpriseEnrollment-s.manage.microsoft.com is de aanbevolen FQDN voor registrat
 Het gebruik van een andere methode dan de CNAME-configuratie wordt niet ondersteund. Het gebruik van een proxyserver om enterpriseenrollment.contoso.com/EnrollmentServer/Discovery.svc om te leiden naar enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc of manage.microsoft.com/EnrollmentServer/Discovery.svc, wordt bijvoorbeeld niet ondersteund.
 
 **Stap 2: CNAME controleren** (optioneel)<br>
-1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431)**Apparaten** > **Windows** > **Windows-inschrijving** > **CNAME-validatie**.
+1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **Windows** > **Windows-inschrijving** > **CNAME-validatie**.
 2. Voer in het vak **Domein** de bedrijfswebsite in en kies **Testen**.
 
 ## <a name="tell-users-how-to-enroll-windows-devices"></a>Gebruikers uitleggen hoe ze Windows-apparaten inschrijven

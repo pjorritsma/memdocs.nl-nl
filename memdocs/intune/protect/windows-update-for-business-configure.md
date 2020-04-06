@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81bfa4d593f723aae46c2af63d550662e35b4017
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c156e0d1b627d285c6654994d6114920f86b2bab
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79349209"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488062"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Windows 10-software-updates beheren in Intune
 
@@ -209,7 +209,7 @@ Wanneer een apparaat een beleid voor Windows 10-onderdelenupdates ontvangt:
 
 Aan de volgende vereisten moet worden voldaan om Windows 10-onderdelenupdates te kunnen gebruiken in Intune.
 
-- Apparaten moeten worden ingeschreven bij Intune MDM en zijn toegevoegd aan Azure AD of zijn geregistreerd bij Azure AD.
+- Apparaten moeten worden ingeschreven bij Intune MDM en zijn toegevoegd aan Hybrid AD of Azure AD of zijn geregistreerd bij Azure AD.
 - Om het onderdelenupdatebeleid met Intune te kunnen gebruiken, moet de telemetrie van de apparaten zijn ingeschakeld, met een minimaal de instelling [*Basis*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry). Telemetrie wordt geconfigureerd onder *Rapportage en telemetrie* als onderdeel van een [Restrictiebeleid voor apparaten](../configuration/device-restrictions-configure.md).
   
   Op apparaten waarop het beleid voor onderdelenupdates wordt ontvangen en waarvan de telemetrie is ingesteld op *Niet geconfigureerd*, wat betekent dat het uit staat, kan een latere versie van Windows worden geïnstalleerd dan gedefinieerd in het beleid voor onderdelenupdates. De voorwaarde om telemetrie te vereisen wordt momenteel herzien, nu deze functie zich ontwikkelt in de richting van algemene beschikbaarheid.

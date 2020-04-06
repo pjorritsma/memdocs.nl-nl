@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d201bb3b15c0debb724f974d519a77994aae8e7f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 19660a8b2dc6b804a1ee1a1eaf407261ca9af2b1
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359544"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327240"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-school-manager"></a>Inschrijving van iOS-/iPadOS-apparaten instellen met Apple School Manager
 
@@ -31,7 +31,7 @@ ms.locfileid: "79359544"
 
 Met Intune kunt u iOS-/iPadOS-apparaten inschrijven die zijn aangeschaft via het programma [Apple School Manager](https://school.apple.com/). Als u Intune gebruikt in combinatie met Apple School Manager, kunt u een groot aantal iOS-/iPadOS-apparaten inschrijven zonder ze ooit aan te raken. Wanneer een student of docent het apparaat inschakelt, wordt Configuratieassistent uitgevoerd met vooraf gedefinieerde instellingen en wordt het apparaat geregistreerd voor beheer.
 
-Als u registratie via Apple School Manager wilt inschakelen, gebruikt u zowel de Intune- als Apple School Manager-portal. U hebt een lijst met serienummers of een aankoopordernummer nodig om apparaten voor beheer aan Intune toe te wijzen. U maakt DEP-inschrijvingsprofielen met instellingen die tijdens de inschrijving op de apparaten van toepassing zijn geweest.
+Als u registratie via Apple School Manager wilt inschakelen, gebruikt u zowel de Intune- als Apple School Manager-portal. U hebt een lijst met serienummers of een aankoopordernummer nodig om apparaten voor beheer aan Intune toe te wijzen. U maakt ADE-inschrijvingsprofielen (Automated Device Enrollment) die instellingen bevatten die tijdens de inschrijving op de apparaten van toepassing zijn geweest.
 
 Inschrijving voor Apple School Manager kan niet worden gebruikt met het [Device Enrollment Program van Apple](device-enrollment-program-enroll-ios.md) of de [apparaatinschrijvingsmanager](device-enrollment-manager-enroll.md).
 
@@ -48,7 +48,7 @@ Voordat u iOS-/iPadOS-bedrijfsapparaten met Apple School Manager kunt inschrijve
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-an-apple-token"></a>Stap 1. Het openbare-sleutelcertificaat van Intune downloaden dat is vereist voor het maken van een Apple-token
 
-1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de optie **Apparaten** > **iOS** > **iOS-inschrijving** > **Tokens voor het inschrijvingsprogramma** > **Toevoegen**.
+1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **iOS** > **iOS-inschrijving** > **Tokens voor het inschrijvingsprogramma** > **Toevoegen**.
 
    ![Een token voor het inschrijvingsprogramma ophalen.](./media/device-enrollment-program-enroll-ios/image01.png)
 
@@ -71,7 +71,7 @@ Voordat u iOS-/iPadOS-bedrijfsapparaten met Apple School Manager kunt inschrijve
 
 ### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>Stap 3. De Apple-id opslaan die u hebt gebruikt om dit token te maken
 
-Geef in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de Apple-id op voor toekomstige referentie.
+Geef in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de Apple ID op voor toekomstige referentie.
 
 ![Schermopname van het invoeren van de Apple ID die is gebruikt voor het maken van het token voor het inschrijvingsprogramma en het uploaden van het token.](./media/apple-school-manager-set-up-ios/image03.png)
 
@@ -106,7 +106,7 @@ Na installatie van het token kunt u een inschrijvingsprofiel voor Apple School-a
     > Deze worden niet ondersteund bij het verifiëren met Apple-configuratieassistent.
 
 6. Kies **Instellingen voor apparaatbeheer** en geef aan of u wilt dat apparaten die dit profiel gebruiken, onder supervisie worden gesteld.
-    Met apparaten **onder supervisie** krijgt u meer beheeropties en de activeringsvergrendeling is standaard uitgeschakeld. Microsoft raadt het gebruik van DEP aan als mechanisme voor het inschakelen van de supervisiemodus, met name voor organisaties die veel iOS-/iPadOS-apparaten implementeren.
+    Met apparaten **onder supervisie** krijgt u meer beheeropties en de activeringsvergrendeling is standaard uitgeschakeld. Microsoft raadt het gebruik van ADE aan als methode voor het inschakelen van de supervisiemodus, met name voor organisaties die veel iOS-/iPadOS-apparaten gebruiken.
 
     Gebruikers worden op twee manieren gewaarschuwd dat hun apparaten onder supervisie staan:
 

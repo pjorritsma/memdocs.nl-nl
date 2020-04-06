@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,21 +15,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3821017b0fe15df8a0329000aa74272e4d9477e
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 60a4ac793500cd4d31df2188344e2b5f4e1094a4
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086889"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359148"
 ---
 # <a name="windows-10-and-windows-holographic-for-business-device-settings-to-run-as-a-dedicated-kiosk-using-intune"></a>Instellingen voor Windows 10- en Windows Holographic for Business-apparaten om ze als toegewezen kiosk uit te voeren via Intune
 
 Op Windows 10-apparaten kunt u Intune gebruiken om apparaten als kiosk uit te voeren; dit worden ook wel toegewezen apparaten genoemd. Met een apparaat in de kioskmodus kan er één app of kunnen er veel apps worden uitgevoerd. U kunt een startmenu weergeven en aanpassen, diverse apps toevoegen, waaronder Win32-apps, een specifieke startpagina aan een webbrowser toevoegen en meer. 
 
-Deze functie is van toepassing op apparaten met:
+Deze functie is van toepassing op:
 
 - Windows 10 en hoger
 - Windows Holographic for Business
+
+Als u kioskprofielen voor andere platforms wilt maken, raadpleegt u [Android-apparaatbeheerder](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices) en [iOS/iPadOS](device-restrictions-ios.md#kiosk).
 
 Intune biedt ondersteuning voor één kioskprofiel per apparaat. Als u meerdere kioskprofielen op één apparaat nodig hebt, kunt u een [aangepaste OMA URI gebruiken](custom-settings-windows-10.md).
 
@@ -69,7 +71,8 @@ Het profiel wordt gemaakt en weergegeven in de lijst met profielen. Vervolgens [
 [Het profiel toewijzen](device-profile-assign.md) en [de status ervan controleren](device-profile-monitor.md).
 
 U kunt kioskprofielen maken voor apparaten met de volgende platforms:
+
 - [Android-apparaatbeheerder](device-restrictions-android.md#kiosk)
-- [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings)
+- [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices)
 - [Windows 10 en hoger](kiosk-settings-windows.md)
 - [Windows Holographic for Business](kiosk-settings-holographic.md)

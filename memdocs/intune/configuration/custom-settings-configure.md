@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6122f4624cc40152184c1c460afa6a7a39976063
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: c96de75557a4817f4e5f034689faecf7374cfe3f
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083987"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359425"
 ---
 # <a name="create-a-profile-with-custom-settings-in-intune"></a>Een profiel maken met aangepaste instellingen in Intune
 
@@ -38,20 +38,26 @@ In dit artikel wordt beschreven hoe u een aangepast profiel maakt voor Android-a
 2. Selecteer **Apparaten** > **Configuratieprofielen** > **Profiel maken**.
 3. Voer de volgende eigenschappen in:
 
+    - **Platform**: Kies het platform van uw apparaten. Uw opties zijn:  
+
+        - **Android-apparaatbeheerder**
+        - **Android Enterprise**
+        - **iOS/iPadOS**
+        - **macOS**
+        - **Windows 10 en hoger**
+        - **Windows Phone 8.1**
+
+    - **Profiel**: Selecteer **Aangepast**.
+
+4. Selecteer **Maken**.
+5. Voer in **Basisinformatie** de volgende eigenschappen in:
+
     - **Naam**: Voer een beschrijvende naam in voor het beleid. Geef uw beleid een naam zodat u het later eenvoudig kunt identificeren. Een goede beleidsnaam is bijvoorbeeld **Windows 10: Aangepast profiel waarmee aangepaste AllowVPNOverCellular OMA-URI** wordt ingeschakeld.
-    - **Beschrijving**: Voer een beschrijving in voor het profiel. Deze instelling is optioneel, maar wordt aanbevolen.
-    - **Platform**: Selecteer het platform van uw apparaten. Uw opties zijn:
+    - **Beschrijving**: Voer een beschrijving in voor het beleid. Deze instelling is optioneel, maar wordt aanbevolen.
 
-      - **Android-apparaatbeheerder**
-      - **Android Enterprise**
-      - **iOS/iPadOS**
-      - **macOS**
-      - **Windows 10 en hoger**
-      - **Windows 8.1 en hoger**
+6. Selecteer **Volgende**.
 
-    - **Profieltype**: Selecteer **Aangepast**.
-
-4. De instellingen zijn verschillend voor elk platform. Om de instellingen voor een specifiek platform te bekijken, selecteert u uw platform:
+7. Welke instellingen u kunt configureren in **Configuratie-instellingen**, is afhankelijk van het platform dat u hebt gekozen. Kies uw platform voor gedetailleerde instellingen:
 
     - [Android-apparaatbeheerder](custom-settings-android.md)
     - [Android Enterprise](custom-settings-android-for-work.md)
@@ -61,10 +67,24 @@ In dit artikel wordt beschreven hoe u een aangepast profiel maakt voor Android-a
     - [Windows Holographic for Business](custom-settings-windows-holographic.md)
     - [Windows Phone 8.1](custom-settings-windows-phone-8-1.md)
 
-5. Wanneer u klaar bent, selecteert u **Profiel maken** > **Maken**.
+8. Selecteer **Volgende**.
+9. Wijs in **Bereiktags** (optioneel) een tag toe om het profiel te filteren op specifieke IT-groepen, zoals `US-NC IT Team` of `JohnGlenn_ITDepartment`. Zie [RBAC en bereiktags gebruiken voor gedistribueerde IT](../fundamentals/scope-tags.md) voor meer informatie over bereiktags.
 
-Het profiel wordt gemaakt en wordt weergegeven in de lijst met profielen (**Apparaatconfiguratie** > **Profielen**).
+    Selecteer **Volgende**.
+
+10. Selecteer in **Toewijzingen** de gebruikers of groepen die uw profiel zullen ontvangen. Zie [Gebruikers- en apparaatprofielen toewijzen](device-profile-assign.md) voor meer informatie over het toewijzen van profielen.
+
+    Selecteer **Volgende**.
+
+11. Controleer uw instellingen in **Beoordelen en maken**. Wanneer u **Maken**selecteert, worden uw wijzigingen opgeslagen en wordt het profiel toegewezen. Het beleid wordt ook weergegeven in de lijst met profielen.
+
+## <a name="example"></a>Voorbeeld
+
+In het volgende voorbeeld wordt de instelling **Connectivity/AllowVPNOverCellular** ingeschakeld. Met deze instelling kan met een Windows-10-apparaat een VPN-verbinding worden gemaakt in een mobiel netwerk.
+
+> [!div class="mx-imgBorder"]
+> ![Voorbeeld van een aangepast beleid met VPN-instellingen in Intune en Eindpuntbeheer](./media/custom-settings-configure/custom-policy-example.png)
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Nadat het profiel is gemaakt, is het klaar om te worden toegewezen. Vervolgens kunt u [het profiel toewijzen](device-profile-assign.md) en [de status ervan controleren](device-profile-monitor.md).
+Het profiel is gemaakt, maar er gebeurt mogelijk nog niets. Vervolgens kunt u [het profiel toewijzen](device-profile-assign.md) en [de status ervan controleren](device-profile-monitor.md).

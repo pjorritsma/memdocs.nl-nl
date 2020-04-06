@@ -18,37 +18,41 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af4dce0d2bb7ef150d5332a9c58357513425cf50
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: 82b9dd1db3bd625f21dcdbf2df375f5b8612e74a
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220197"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327230"
 ---
-# <a name="automatically-enroll-iosipados-devices-with-apples-device-enrollment-program"></a>iOS-/iPadOS-apparaten automatisch inschrijven met het Device Enrollment Program van Apple
+# <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>iOS-/iPadOS-apparaten automatisch inschrijven met Automated Device Enrollment van Apple
 
-U kunt Intune zo instellen dat iOS-/iPadOS-apparaten die zijn gekocht via het [Device Enrollment Program (DEP)](https://deploy.apple.com) worden ingeschreven. Met DEP kunt u grote aantallen apparaten inschrijven zonder op de apparaten zelf aan de slag te gaan. Apparaten als iPhones, iPads en MacBooks kunnen rechtstreeks naar gebruikers worden verzonden. Als de gebruiker het apparaat inschakelt, wordt Configuratieassistent, met de herkenbare kant-en-klare ervaring voor Apple-producten, uitgevoerd met vooraf gedefinieerde instellingen en het apparaat ingeschreven bij beheer.
+> [!IMPORTANT]
+> Apple is recent overgestapt van het Apple Device Enrollment Program (DEP) naar Apple Automated Device Enrollment (ADE). In verband hiermee wordt de gebruikersinterface van Intune momenteel bijgewerkt. Totdat deze aanpassingen zijn voltooid, wordt *Device Enrollment Program* in de Intune-portal weergegeven. Waar Automatische apparaatinschrijving (Automated Device Enrollment) wordt weergegeven, wordt dit gebruikt.
 
-Als u registratie via DEP wilt inschakelen, gebruikt u zowel de Intune- als Apple School Manager-portal (ABM) of de Apple School Manager-portal (ASM). U hebt een lijst met serienummers of een aankoopordernummer nodig om apparaten voor beheer aan Intune toe te wijzen in ABM/ASM. U maakt DEP-inschrijvingsprofielen in Intune met instellingen die tijdens de inschrijving op de apparaten zijn toegepast. Zoals u ziet kan de Inschrijving via DEP niet worden gebruikt met een account van een [apparaatinschrijvingsmanager](device-enrollment-manager-enroll.md).
+U kunt Intune zo instellen dat iOS-/iPadOS-apparaten die zijn gekocht via [Automated Device Enrollment (ADE)](https://deploy.apple.com) van Apple (voorheen het Device Enrollment Program) worden ingeschreven. Met Automated Device Enrollment kunt u grote aantallen apparaten inschrijven zonder op de apparaten zelf aan de slag te gaan. Apparaten als iPhones, iPads en MacBooks kunnen rechtstreeks naar gebruikers worden verzonden. Als de gebruiker het apparaat inschakelt, wordt Configuratieassistent, met de herkenbare kant-en-klare ervaring voor Apple-producten, uitgevoerd met vooraf gedefinieerde instellingen en het apparaat ingeschreven bij beheer.
+
+Als u ADE wilt inschakelen, gebruikt u zowel de Intune- als de [Apple School Manager-portal (ABM)](https://business.apple.com/) of de [Apple School Manager-portal (ASM)](https://school.apple.com/). U hebt een lijst met serienummers of een aankoopordernummer nodig om apparaten voor beheer aan Intune toe te wijzen in een Apple-portal. U maakt ADE-inschrijvingsprofielen in Intune met instellingen die tijdens de inschrijving op de apparaten zijn toegepast. Zoals u ziet kan de ADE niet worden gebruikt met een account van een [apparaatinschrijvingsmanager](device-enrollment-manager-enroll.md).
 
 > [!NOTE]
-> Met DEP worden configuraties ingesteld die niet noodzakelijkerwijs kunnen worden verwijderd door de eindgebruiker. Daarom moet het apparaat vóór de [migratie naar DEP](../fundamentals/migration-guide-considerations.md) worden gewist om het terug te zetten naar een Out-Of-Box-status (fabrieksstatus).
+> Met ADE worden configuraties ingesteld die niet noodzakelijkerwijs kunnen worden verwijderd door de eindgebruiker. Daarom moet het apparaat vóór de [migratie naar ADE](../fundamentals/migration-guide-considerations.md) worden gewist om het terug te zetten naar een Out-Of-Box-status (fabrieksstatus).
 
-## <a name="dep-and-the-company-portal"></a>DEP en de bedrijfsportal
+## <a name="automated-device-enrollment-and-the-company-portal"></a>Automated Device Enrollment en de bedrijfsportal
 
-DEP-inschrijvingen zijn niet compatibel met de App Store-versie van de bedrijfsportal-app. U kunt gebruikers toegang geven tot de bedrijfsportal-app op een DEP-apparaat. U kunt deze toegang geven om gebruikers te laten kiezen welke zakelijke apps ze willen gebruiken op hun apparaat of om moderne verificatie te gebruiken om het inschrijvingsproces te voltooien. 
+ADE-inschrijvingen zijn niet compatibel met de App Store-versie van de bedrijfsportal-app. U kunt gebruikers toegang geven tot de bedrijfsportal-app op een ADE-apparaat. U kunt deze toegang geven om gebruikers te laten kiezen welke zakelijke apps ze willen gebruiken op hun apparaat of om moderne verificatie te gebruiken om het inschrijvingsproces te voltooien. 
 
-Push de app naar het apparaat met **Bedrijfsportal installeren met VPP** (Volume Purchase Program) in het DEP-profiel om moderne verificatie tijdens de inschrijving in te schakelen. Zie [iOS-/iPadOS-apparaten automatisch inschrijven met het Device Enrollment Program van Apple](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) voor meer informatie.
+Push de app naar het apparaat met **Bedrijfsportal installeren met VPP** (Volume Purchase Program) in het ADE-profiel om moderne verificatie tijdens de inschrijving in te schakelen. Zie [iOS-/iPadOS-apparaten automatisch inschrijven met ADE van Apple](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) voor meer informatie.
 
-Als u wilt inschakelen dat de Bedrijfsportal automatisch wordt bijgewerkt en de Bedrijfsportal-app weergeeft op apparaten die al bij DEP zijn geregistreerd, implementeert u de Bedrijfsportal-app via Intune als een vereiste VPP-app (Volume Purchase Program) waarop een [Toepassingsconfiguratiebeleid](../apps/app-configuration-policies-use-ios.md) is toegepast.
+Als u wilt inschakelen dat de bedrijfsportal automatisch wordt bijgewerkt en de bedrijfsportal-app wordt weergegeven op apparaten die al bij ADE zijn geregistreerd, implementeert u de bedrijfsportal-app via Intune als een vereiste VPP-app (Volume Purchase Program) waarop een [toepassingsconfiguratiebeleid](../apps/app-configuration-policies-use-ios.md) is toegepast.
 
-Opmerking: Wanneer u tijdens de automatische inschrijving van apparaten, terwijl de Bedrijfsportal wordt uitgevoerd in de modus voor één app, klikt op de koppeling Meer informatie, wordt een foutbericht weergegeven vanwege de modus voor één app. Nadat de registratie is voltooid, kunt u meer informatie bekijken in het CP wanneer het apparaat niet meer in de modus voor één app wordt weergegeven. 
+> [!NOTE]
+> Wanneer u tijdens de automatische inschrijving van apparaten, terwijl de bedrijfsportal wordt uitgevoerd in de modus voor één app, klikt op de koppeling **Meer informatie**, wordt een foutbericht weergegeven vanwege de modus voor één app. Nadat de registratie is voltooid, kunt u meer informatie bekijken in het CP wanneer het apparaat niet meer in de modus voor één app wordt weergegeven. 
 
 ## <a name="what-is-supervised-mode"></a>Wat is de supervisiemodus?
 
-Apple heeft de supervisiemodus geïntroduceerd in iOS/iPadOS 5. Een iOS-/iPadOS-apparaat in de supervisiemodus kan worden beheerd met meer besturingselementen, zoals het blokkeren van schermopnamen en blokkeren dat apps vanuit de App Store kunnen worden geïnstalleerd. Hierdoor is het vooral handig voor apparaten van het bedrijf. Intune ondersteunt het configureren van apparaten voor de supervisiemodus als onderdeel van het Apple Device Enrollment Program (DEP).
+Apple heeft de supervisiemodus geïntroduceerd in iOS/iPadOS 5. Een iOS-/iPadOS-apparaat in de supervisiemodus kan worden beheerd met meer besturingselementen, zoals het blokkeren van schermopnamen en blokkeren dat apps vanuit de App Store kunnen worden geïnstalleerd. Hierdoor is het vooral handig voor apparaten van het bedrijf. Intune ondersteunt het configureren van apparaten voor de supervisiemodus als onderdeel van ADE.
 
-Ondersteuning voor DEP-apparaten zonder supervisie is afgeschaft in iOS/iPadOS 11. In iOS/iPadOS 11 en later moeten met DEP geconfigureerde apparaten altijd onder supervisie staan. De DEP-vlag is_supervised wordt in een toekomstige iOS-/iPadOS-release genegeerd.
+Ondersteuning voor ADE-apparaten zonder supervisie is afgeschaft in iOS/iPadOS 11. In iOS/iPadOS 11 en later moeten met ADE geconfigureerde apparaten altijd onder supervisie staan. De ADE-vlag *is_supervised* wordt in een toekomstige iOS-/iPadOS-release genegeerd.
 
 <!--
 **Steps to enable enrollment programs from Apple**
@@ -59,18 +63,18 @@ Ondersteuning voor DEP-apparaten zonder supervisie is afgeschaft in iOS/iPadOS 1
 5. [Distribute devices to users](#end-user-experience-with-managed-devices)
 -->
 ## <a name="prerequisites"></a>Vereisten
-- Apparaten die zijn gekocht in het [Device Enrollment Program van Apple](https://deploy.apple.com)
+- Apparaten die zijn aangeschaft via [ADE van Apple](https://deploy.apple.com)
 - [Mobile Device Management-autoriteit (MDM)](../fundamentals/mdm-authority-set.md)
 - [Apple MDM-pushcertificaat](apple-mdm-push-certificate-get.md)
 
-## <a name="get-an-apple-dep-token"></a>Een Apple DEP-token ophalen
+## <a name="get-an-apple-ade-token"></a>Een Apple ADE-token ophalen
 
-Voordat u iOS-/iPadOS-apparaten met DEP kunt inschrijven, moet u een DEP-tokenbestand (.p7m) van Apple ontvangen. Intune kan met deze token informatie synchroniseren over DEP-apparaten die in eigendom zijn van uw bedrijf. Ook kan Intune hiermee inschrijvingsprofielen naar Apple uploaden en apparaten toewijzen aan die profielen.
+Voordat u iOS-/iPadOS-apparaten met ADE kunt inschrijven, moet u een ADE-tokenbestand (.p7m) van Apple ontvangen. Intune kan met dit token informatie synchroniseren over ADE-apparaten die eigendom zijn van uw bedrijf. Ook kan Intune hiermee inschrijvingsprofielen naar Apple uploaden en apparaten toewijzen aan die profielen.
 
-U gebruikt de Apple Business Manager- of Apple School Manager-portal om een token te maken. U gebruikt de ABM/ASM-portal ook om apparaten aan Intune toe te wijzen voor beheer.
+U gebruikt de [Apple Business Manager](https://business.apple.com/)- (ABM) of [Apple School Manager](https://school.apple.com/)-portal (ASM) om een token te maken. U gebruikt de ABM/ASM-portal ook om apparaten aan Intune toe te wijzen voor beheer.
 
 > [!NOTE]
-> In Intune kan een verwijderd Apple DEP-token worden hersteld, als u de token van de klassieke Intune-portal verwijdert voordat u naar Azure migreert. U kunt het DEP-token opnieuw verwijderen uit Azure Portal verwijderen.
+> Als u het token verwijdert uit de klassieke Intune-portal voordat u naar Azure migreert, herstelt Intune mogelijk een verwijderd Apple ADE-token. U kunt het ADE-token opnieuw verwijderen via Azure Portal.
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>Stap 1. Download het openbare-sleutelcertificaat van Intune dat is vereist om het token te maken.
 
@@ -81,17 +85,17 @@ U gebruikt de Apple Business Manager- of Apple School Manager-portal om een toke
 2. Geef Microsoft toestemming om gebruikers- en apparaatgegevens naar Apple te verzenden door **Ik ga akkoord** te selecteren.
 
 > [!NOTE]
-> Zodra u verder bent dan stap 2 voor het downloaden van het Intune-openbare-sleutelcertificaat, sluit u de wizard niet af en verlaat u deze pagina niet. Als u dit doet, wordt het certificaat dat u hebt gedownload ongeldig en moet u dit proces opnieuw uitvoeren. Als deze situatie zich voordoet, zult u doorgaans zien dat de knop Maken op het tabblad Controleren + maken grijs wordt weergegeven en u het proces niet kunt voltooien.
+> Zodra u verder bent dan stap 2 voor het downloaden van het Intune-openbare-sleutelcertificaat, sluit u de wizard niet af en verlaat u deze pagina niet. Als u dit doet, wordt het certificaat dat u hebt gedownload ongeldig en moet u dit proces opnieuw uitvoeren. Als deze situatie zich voordoet, zult u doorgaans zien dat de knop **Maken** op het tabblad **Controleren + maken** grijs wordt weergegeven en u het proces niet kunt voltooien.
 
    ![Schermopname van het deelvenster Token voor het inschrijvingsprogramma in de werkruimte Apple-certificaten voor het downloaden van de openbare sleutel.](./media/device-enrollment-program-enroll-ios/add-enrollment-program-token-pane.png)
 
-3. Kies **Uw openbare-sleutelcertificaat downloaden** en sla het bestand met de versleutelingssleutel (.pem) lokaal op. Het .pem-bestand wordt gebruikt om een vertrouwensrelatiecertificaat bij de portal Apple Device Enrollment Program aan te vragen.
+3. Kies **Uw openbare-sleutelcertificaat downloaden** en sla het bestand met de versleutelingssleutel (.pem) lokaal op. Het PEM-bestand wordt gebruikt om een vertrouwensrelatiecertificaat aan te vragen bij de Apple-portal.
 
 
 ### <a name="step-2-use-your-key-to-download-a-token-from-apple"></a>Stap 2. Gebruik uw sleutel om een token van Apple te downloaden.
 
-1. Kies **Een token voor Apple Device Enrollment Program maken** om de Deployment Program-portal van Apple te openen en meld u aan met uw Apple-id. Deze Apple-id kunt u gebruiken om uw DEP-token te verlengen.
-2. Kies **Aan de slag** bij **Device Enrollment Program** in de [Deployment Programs-portal](https://deploy.apple.com) van Apple.
+1. Kies **Een token voor Apple Device Enrollment Program maken** om de Business-portal van Apple te openen en meld u aan met uw Apple ID. Deze Apple ID kunt u gebruiken om uw ADE-token te verlengen.
+2. Kies **Aan de slag** bij **Device Enrollment Program** in de [Business-portal](https://business.apple.com) van Apple.
 
 3. Kies **MDM-server toevoegen** op de pagina **Servers beheren**.
 4. Voer de **MDM-servernaam** in en kies **Volgende**. De servernaam is voor eigen referentie en dient om de MDM-server te identificeren. Het is niet de naam of URL van de Microsoft Intune-server.
@@ -112,7 +116,7 @@ U gebruikt de Apple Business Manager- of Apple School Manager-portal om een toke
 
 ### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>Stap 3. Sla de Apple-id op die u hebt gebruikt om dit token te maken.
 
-Geef in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de Apple-id op voor toekomstige referentie.
+Geef in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de Apple ID op voor toekomstige referentie.
 
 ![Schermopname van het invoeren van de Apple ID die is gebruikt voor het maken van het token voor het inschrijvingsprogramma en het uploaden van het token.](./media/device-enrollment-program-enroll-ios/image03.png)
 
@@ -126,7 +130,7 @@ Met het pushcertificaat kan Intune iOS-/iPadOS-apparaten inschrijven en beheren 
 
 ## <a name="create-an-apple-enrollment-profile"></a>Een Apple-inschrijvingsprofiel maken
 
-Na installatie van de token kunt u een inschrijvingsprofiel voor DEP-apparaten maken. Met een inschrijvingsprofiel voor apparaten worden de instellingen gedefinieerd die worden toegepast op een groep apparaten tijdens de inschrijving. Er geldt een limiet van 100 inschrijvingsprofielen per DEP-token.
+Na installatie van het token kunt u een inschrijvingsprofiel voor ADE-apparaten maken. Met een inschrijvingsprofiel voor apparaten worden de instellingen gedefinieerd die worden toegepast op een groep apparaten tijdens de inschrijving. Er geldt een limiet van 100 inschrijvingsprofielen per ADE-token.
 
 > [!NOTE]
 > Apparaten worden geblokkeerd als er niet genoeg bedrijfsportal-licenties zijn voor een VPP-token, of als het token is verlopen. In Intune wordt een waarschuwing weergegeven wanneer een token bijna verloopt of als er nog maar weinig licenties beschikbaar zijn.
@@ -163,7 +167,7 @@ Na installatie van de token kunt u een inschrijvingsprofiel voor DEP-apparaten m
 6. Als u **Bedrijfsportal** kiest voor **Selecteren waar gebruikers de verificatie moeten uitvoeren**, kunt u een VPP-token gebruiken om de bedrijfsportal automatisch op het apparaat te installeren. In dit geval hoeft de gebruiker geen Apple-id op te geven. Als u de Bedrijfsportal wilt installeren met een VPP-token, kiest u een token onder **Install Company Portal with VPP** (Bedrijfsportal installeren met VPP). Daarvoor moet de bedrijfsportal al zijn toegevoegd aan het VPP-token. Om ervoor te zorgen dat de bedrijfsportal-app na de registratie nog steeds wordt bijgewerkt, moet u ervoor zorgen dat u een app-implementatie in Intune hebt geconfigureerd (Intune > Client-apps). Om interactie van de gebruiker te vermijden, wilt u de bedrijfsportal waarschijnlijk als een iOS/iPadOS VPP-app hebben, zodat het een vereiste app is, en apparaatlicenties voor de toewijzing gebruiken. Controleer of het token niet verloopt en of u voldoende apparaatlicenties hebt voor de bedrijfsportal-app. Als het token verloopt of onvoldoende licenties heeft, installeert Intune in plaats daarvan de App Store-bedrijfsportal en vraagt het om een Apple-id. 
 
     > [!NOTE]
-    > Wanneer **Selecteren waar gebruikers de verificatie moeten uitvoeren** is ingesteld op **Bedrijfsportal**, moet u ervoor zorgen dat het apparaatinschrijvingsproces wordt uitgevoerd binnen de eerste 24 uur dat de bedrijfsportal is gedownload op het DEP-apparaat. Anders mislukt de inschrijving en is er een herstel naar fabrieksinstellingen nodig om het apparaat in te schrijven.
+    > Wanneer **Selecteren waar gebruikers de verificatie moeten uitvoeren** is ingesteld op **Bedrijfsportal**, moet u ervoor zorgen dat het apparaatinschrijvingsproces wordt uitgevoerd binnen de eerste 24 uur dat de bedrijfsportal is gedownload op het ADE-apparaat. Anders mislukt de inschrijving en is er een herstel naar fabrieksinstellingen nodig om het apparaat in te schrijven.
     
     ![Schermafbeelding van de installatie van de bedrijfsportal met VPP.](./media/device-enrollment-program-enroll-ios/install-cp-with-vpp.png)
 
@@ -181,7 +185,7 @@ Na installatie van de token kunt u een inschrijvingsprofiel voor DEP-apparaten m
 
     ![Schermopname Instellingen voor apparaatbeheer.](./media/device-enrollment-program-enroll-ios/supervisedmode.png)
 
-    Met apparaten **onder supervisie** krijgt u meer beheeropties en de activeringsvergrendeling is standaard uitgeschakeld. Microsoft raadt het gebruik van DEP aan als mechanisme voor het inschakelen van de supervisiemodus, met name als u veel iOS-/iPadOS-apparaten implementeert.
+    Met apparaten **onder supervisie** krijgt u meer beheeropties en de activeringsvergrendeling is standaard uitgeschakeld. Microsoft raadt het gebruik van ADE aan als mechanisme voor het inschakelen van de supervisiemodus, met name als u veel iOS-/iPadOS-apparaten implementeert.
 
     Gebruikers worden op twee manieren gewaarschuwd dat hun apparaten onder supervisie staan:
 
@@ -254,7 +258,7 @@ Nu Intune toestemming heeft om uw apparaten te beheren, kunt u Intune synchronis
 1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **iOS** > **iOS-inschrijving** > **Tokens voor het inschrijvingsprogramma** > kies een token in de lijst > **Apparaten** > **Synchroniseren**. ![Schermafbeelding van het knooppunt Apparaten voor het inschrijvingsprogramma en de koppeling Synchronisatie.](./media/device-enrollment-program-enroll-ios/image06.png)
 
    Intune legt de volgende beperkingen op om aan de voorwaarden van Apple voor acceptabel verkeer van het inschrijvingsprogramma te voldoen:
-   - Een volledige synchronisatie kan niet vaker dan eens in de zeven dagen worden uitgevoerd. Tijdens een volledige synchronisatie haalt Intune de volledige bijgewerkte lijst met serienummers op die is toegewezen aan de Apple MDM-server die is verbonden met Intune. Als er een DEP-apparaat wordt verwijderd uit de Intune-portal, moet de toewijzing ongedaan worden gemaakt in de Apple MDM-server in de DEP-portal. Als de toewijzing niet ongedaan wordt gemaakt, wordt het apparaat niet meer in Intune geïmporteerd totdat de volledige synchronisatie wordt uitgevoerd.   
+   - Een volledige synchronisatie kan niet vaker dan eens in de zeven dagen worden uitgevoerd. Tijdens een volledige synchronisatie haalt Intune de volledige bijgewerkte lijst met serienummers op die is toegewezen aan de Apple MDM-server die is verbonden met Intune. Als er een ADE-apparaat wordt verwijderd uit de Intune-portal, moet de toewijzing ongedaan worden gemaakt in de Apple MDM-server in de ADE-portal. Als de toewijzing niet ongedaan wordt gemaakt, wordt het apparaat niet meer in Intune geïmporteerd totdat de volledige synchronisatie wordt uitgevoerd.   
    - Er wordt automatisch elke 24 uur een synchronisatie uitgevoerd. U kunt ook synchroniseren door op de knop **Synchroniseren** te klikken (maximaal één keer per 15 minuten). Synchronisatieaanvragen krijgen 15 minuten de tijd om te worden uitgevoerd. De knop **Synchroniseren** blijft uitgeschakeld totdat de synchronisatie is voltooid. Met de synchronisatie wordt de huidige apparaatstatus vernieuwt en worden nieuwe apparaten die aan de Apple MDM-server zijn toegewezen, geïmporteerd.   
 
 
@@ -276,16 +280,16 @@ U kunt een standaardprofiel kiezen dat wordt toegepast op apparaten die zich ins
 2. Kies **Standaardprofiel instellen**, kies een profiel in de vervolgkeuzelijst en kies vervolgens **Opslaan**. Dit profiel wordt toegepast op alle apparaten die zich met het token inschrijven.
 
 ## <a name="distribute-devices"></a>Apparaten distribueren
-U hebt beheer en synchronisatie tussen Apple en Intune ingeschakeld, en een profiel toegewezen om uw DEP-apparaten te kunnen inschrijven. De apparaten kunnen nu worden uitgedeeld aan de gebruikers. Voor apparaten met gebruikersaffiniteit moet aan elke gebruiker een Intune-licentie worden toegewezen. Voor apparaten zonder gebruikersaffiniteit is een apparaatlicentie vereist. Een geactiveerd apparaat kan geen inschrijvingsprofiel toepassen, tenzij het apparaat is gewist.
+U hebt beheer en synchronisatie tussen Apple en Intune ingeschakeld, en een profiel toegewezen om uw ADE-apparaten te kunnen inschrijven. De apparaten kunnen nu worden uitgedeeld aan de gebruikers. Voor apparaten met gebruikersaffiniteit moet aan elke gebruiker een Intune-licentie worden toegewezen. Voor apparaten zonder gebruikersaffiniteit is een apparaatlicentie vereist. Een geactiveerd apparaat kan geen inschrijvingsprofiel toepassen, tenzij het apparaat is gewist.
 
 Zie [Uw iOS-/iPadOS-apparaat inschrijven in Intune in met het Device Enrollment Program](../user-help/enroll-your-device-dep-ios.md).
 
-## <a name="renew-a-dep-token"></a>Een DEP-token vernieuwen  
+## <a name="renew-an-ade-token"></a>Een ADE-token vernieuwen  
 
 > [!NOTE]
-> Naast het jaarlijks vernieuwen van uw DEP-token moet u uw inschrijvingsprogrammatoken in Intune en Apple Business Manager vernieuwen wanneer het beheerde Apple-ID-wachtwoord voor de gebruiker die het token in Apple Business Manager heeft ingesteld, wordt gewijzigd, of wanneer die gebruiker uw Apple Business Manager-organisatie verlaat.
+> Naast het jaarlijks vernieuwen van uw ADE-token moet u uw inschrijvingsprogrammatoken in Intune en Apple Business Manager vernieuwen wanneer het beheerde Apple ID-wachtwoord voor de gebruiker die het token in Apple Business Manager heeft ingesteld, wordt gewijzigd, of wanneer die gebruiker uw Apple Business Manager-organisatie verlaat.
 
-1. Ga naar deploy.apple.com.  
+1. Ga naar business.apple.com.  
 2. Kies onder **Manage Servers** de MDM-server die is gekoppeld aan het tokenbestand dat u wilt vernieuwen.
 3. Kies **Generate New Token**.
 

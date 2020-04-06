@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ac81ceced473eacc32a3fca566f7c36eb7a262e2
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: d79f97da88a939d95b68a9ef747da87cf3844598
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084881"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322476"
 ---
 # <a name="use-device-encryption-with-intune"></a>Apparaatversleuteling gebruiken met Intune
 
@@ -43,7 +43,7 @@ Door de gebruiker goedgekeurde apparaatinschrijving is vereist om FileVault op h
 
 FileVault is een programma voor de versleuteling van volledige schijven. Het programma wordt geleverd bij macOS. U kunt Intune gebruiken om FileVault te configureren op apparaten waarop **macOS 10.13 of hoger** wordt uitgevoerd.
 
-Als u FileVault wilt configureren, maakt u een [apparaatconfiguratieprofiel](../configuration/device-profile-create.md) voor Endpoint Protection voor het macOS-platform. De FileVault-instellingen vormen een eigen instellingencategorie in Endpoint Protection voor macOS.
+Als u FileVault wilt configureren, maakt u een [apparaatconfiguratieprofiel](endpoint-protection-configure.md) voor Endpoint Protection voor het macOS-platform. De FileVault-instellingen vormen een eigen instellingencategorie in Endpoint Protection voor macOS.
 
 Wanneer u een beleid hebt gemaakt voor het met FileVault versleutelen van apparaten, wordt het beleid in twee fasen toegepast op apparaten. In eerste instantie wordt het apparaat voorbereid zodat Intune kan worden gebruikt voor het ophalen van en het maken van back-ups van de herstelsleutel. Deze actie heet ook wel 'escrow'. Wanneer er een escrow-sleutel is gemaakt, kan worden gestart met de schijfversleuteling.
 
@@ -105,7 +105,7 @@ Gebruik Intune om BitLocker-stationsversleuteling te configureren op apparaten w
 
 BitLocker is beschikbaar op apparaten met **Windows 10 of hoger**.
 
-Configureer BitLocker bij het maken van een [apparaatconfiguratieprofiel](../configuration/device-profile-create.md) voor Endpoint Protection in Windows 10 of op een nieuwer platform. De BitLocker-instellingen bevinden zich in de categorie Windows-versleutelingsinstellingen voor Windows 10 Endpoint Protection.
+Configureer BitLocker bij het maken van een [apparaatconfiguratieprofiel](endpoint-protection-configure.md) voor Endpoint Protection in Windows 10 of op een nieuwer platform. De BitLocker-instellingen bevinden zich in de categorie Windows-versleutelingsinstellingen voor Windows 10 Endpoint Protection.
 
 ![BitLocker-instellingen](./media/encrypt-devices/bitlocker-settings.png)
 
@@ -128,7 +128,7 @@ Configureer BitLocker bij het maken van een [apparaatconfiguratieprofiel](../con
 
 ### <a name="silently-enable-bitlocker-on-devices"></a>BitLocker op de achtergrond inschakelen op apparaten
 
-U kunt een BitLocker-beleid configureren waardoor BitLocker automatisch en op de achtergrond op een apparaat wordt geactiveerd. Dat houdt in dat BitLocker wordt ingeschakeld zonder dat eindgebruikers een gebruikersinterface te zien krijgen, zelfs wanneer die gebruiker geen lokale beheerder op het apparaat is.
+U kunt een BitLocker-beleid configureren waardoor BitLocker automatisch en op de achtergrond op een apparaat wordt geactiveerd. Dat houdt in dat BitLocker wordt ingeschakeld zonder dat eindgebruikers een gebruikersinterface te zien krijgen, zelfs wanneer die gebruikers geen lokale beheerders op het apparaat zijn.
 
 **Apparaatvereisten**:
 

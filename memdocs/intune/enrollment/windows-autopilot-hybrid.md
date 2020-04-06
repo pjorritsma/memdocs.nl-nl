@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 84d14943a37cf29a224c94364317d899b65ffef0
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: 81e5dc772ca85bf124af3da33a263b683ea0885b
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526323"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326969"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Apparaten die aan hybride Azure AD zijn gekoppeld implementeren met Intune en Windows Autopilot
 U kunt Intune en Windows Autopilot gebruiken om apparaten in te stellen die zijn gekoppeld aan Hybrid Azure Active Directory (Azure AD). Volg hiervoor de stappen in dit artikel.
@@ -109,7 +109,7 @@ De organisatie-eenheid waaraan het recht is verleend om computers te maken, moet
 
 De Intune-connector voor Active Directory moet worden geïnstalleerd op een computer waarop Windows Server 2016 of later wordt uitgevoerd. De computer moet ook toegang hebben tot internet en uw Active Directory. Als u de schaal en beschikbaarheid wilt verhogen of meerdere Active Directory-domeinen wilt ondersteunen, kunt u in uw omgeving meerdere connectors installeren. Het is raadzaam om de connector te installeren op een server waarop geen andere Intune-connectors worden uitgevoerd.
 
-1. Selecteer in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431)**Apparaten** > **Windows** > **Windows-inschrijving** > **Intune-connector voor Active Directory** > **Toevoegen**. 
+1. Selecteer in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **Windows** > **Windows-inschrijving** > **Intune-connector voor Active Directory** > **Toevoegen**. 
 2. Volg de instructies voor het downloaden van de connector.
 3. Open het gedownloade installatiebestand *ODJConnectorBootstrapper.exe* voor de connector om deze te installeren.
 4. Aan het einde van de installatie selecteert u **Configureren**.
@@ -130,7 +130,7 @@ Als u in uw netwerkomgeving over een webproxy beschikt, zorgt u ervoor dat de In
 
 
 ## <a name="create-a-device-group"></a>Een apparaatgroep maken
-1. Selecteer in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431)**Groepen** > **Nieuwe groep**.
+1. Selecteer in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Groepen** > **Nieuwe groep**.
 
 1. In het deelvenster **Groep** doet u het volgende:
 
@@ -185,7 +185,7 @@ Nadat uw Autopilot-apparaten zijn geregistreerd, worden hun namen de hostnaam va
 ## <a name="create-and-assign-an-autopilot-deployment-profile"></a>Een Windows AutoPilot-implementatieprofiel maken en toewijzen
 Autopilot-profielen worden gebruikt om de Autopilot-apparaten te configureren.
 
-1. Selecteer in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431)**Apparaten** > **Windows** > **Windows-inschrijving** > **Implementatieprofielen** > **Profiel maken**.
+1. Selecteer in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **Windows** > **Windows-inschrijving** > **Implementatieprofielen** > **Profiel maken**.
 2. Geef op de pagina **Basisinformatie** een waarde op voor **Naam** en eventueel ook voor **Beschrijving**.
 3. Als u wilt dat alle apparaten in de toegewezen groepen automatisch converteren naar Autopilot, stelt u **Alle doelapparaten converteren naar Autopilot** in op **Ja**. Alle niet-Autopilot-apparaten in toegewezen groepen die bedrijfseigendom zijn, worden ingeschreven bij de Autopilot-implementatieservice. Apparaten die persoonlijk eigendom zijn, worden niet geconverteerd naar Autopilot. Het kan 48 uur duren voordat de registratie is verwerkt. Wanneer het apparaat wordt uitgeschreven en opnieuw wordt ingesteld, wordt het door Autopilot geregistreerd. Nadat een apparaat op deze manier is geregistreerd, wordt het apparaat niet meer uit de Autopilot-implementatieservice verwijderd door deze optie uit te schakelen of de profieltoewijzing te verwijderen. In plaats daarvan moet u [het apparaat rechtstreeks verwijderen](enrollment-autopilot.md#delete-autopilot-devices).
 4. Selecteer **Volgende**.
@@ -202,7 +202,7 @@ Het duurt ongeveer 15 minuten voordat de status van het apparaatprofiel is gewij
 
 ## <a name="optional-turn-on-the-enrollment-status-page"></a>(Optioneel) De pagina Status van de registratie inschakelen
 
-1. Selecteer in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431)**Apparaten** > **Windows** > **Windows-inschrijving** > **Inschrijvingsstatuspagina**.
+1. Selecteer in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **Windows** > **Windows-inschrijving** > **Inschrijvingsstatuspagina**.
 1. In het deelvenster **Pagina Registratiestatus** selecteert u **Standaard** > **Instellingen**.
 1. In het vak **Voortgang app- en profielinstallatie weergeven** selecteert u **Ja**.
 1. Configureer de andere opties indien nodig.

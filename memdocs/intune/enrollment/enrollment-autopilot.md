@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f566361eab24ee93e8b332eeb3e005c8555ece0d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b6512aa01a55a3a1ed949b634b97eb891e9459a9
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363743"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327114"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Windows-apparaten in Intune inschrijven met Windows Autopilot  
 Windows Autopilot maakt het makkelijker om apparaten te registreren in Intune. Het kost veel tijd om aangepaste installatiekopieën van besturingssystemen te bouwen en onderhouden. Mogelijk besteedt u ook tijd aan het toepassen van deze aangepaste installatiekopieën op nieuwe apparaten, om ze voor te bereiden voor gebruik voordat u ze aan eindgebruikers verstrekt. Met Microsoft Intune en Autopilot geeft u nieuwe apparaten aan uw eindgebruikers zonder dat u aangepaste installatiekopieën van besturingssystemen voor de apparaten hoeft te bouwen, onderhouden en toe te passen. Als u Intune gebruikt om Autopilot-apparaten te beheren, kunt u beleidsregels, profielen, apps en meer beheren op apparaten nadat ze zijn ingeschreven. Zie [Overzicht van Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot) voor een overzicht van voordelen, scenario's en vereisten.
@@ -51,7 +51,7 @@ Raadpleeg voor meer informatie 'De PowerShell-cmdlet begrijpen'.
 
 U kunt Windows Autopilot-apparaten toevoegen door een CSV-bestand te importeren met de bijbehorende informatie.
 
-1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431), **Apparaten** > **Windows** > **Windows-inschrijving** > **Apparaten** (onder **Windows Autopilot Deployment-programma** > **Importeren**.
+1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **Windows** > **Windows-inschrijving** > **Apparaten** (onder **Windows Autopilot Deployment-programma** > **Importeren**.
 
     ![Schermafbeelding van Windows Autopilot-apparaten](./media/enrollment-autopilot/autopilot-import-device.png)
 
@@ -73,7 +73,7 @@ U kunt Windows Autopilot-apparaten toevoegen door een CSV-bestand te importeren 
 
 ## <a name="create-an-autopilot-device-group"></a>Een Autopilot-apparaatgroep maken
 
-1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431)**Groepen** > **Nieuwe groep**.
+1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Groepen** > **Nieuwe groep**.
 2. Op de blade **Groep**:
     1. Als **groepstype** kiest u **Beveiliging**.
     2. Geef een **groepsnaam** en een **beschrijving** voor de groep op.
@@ -90,7 +90,7 @@ U kunt Windows Autopilot-apparaten toevoegen door een CSV-bestand te importeren 
 
 ## <a name="create-an-autopilot-deployment-profile"></a>Een Autopilot-implementatieprofiel maken
 Autopilot-profielen worden gebruikt om de Autopilot-apparaten te configureren. U kunt maximaal 350 profielen per tenant maken.
-1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431)**Apparaten** > **Windows** > **Windows-inschrijving** > **Implementatieprofielen** > **Profiel maken**.
+1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **Windows** > **Windows-inschrijving** > **Implementatieprofielen** > **Profiel maken**.
 2. Geef op de pagina **Basisinformatie** een waarde op voor **Naam** en eventueel ook voor **Beschrijving**.
 
     ![Schermopname van de pagina Basisinformatie](./media/enrollment-autopilot/create-profile-basics.png)
@@ -139,7 +139,7 @@ Autopilot-profielen worden gebruikt om de Autopilot-apparaten te configureren. U
 ## <a name="edit-an-autopilot-deployment-profile"></a>Een Windows Autopilot-implementatieprofiel bewerken
 Nadat u een Autopilot-implementatieprofiel hebt gemaakt, kunt u bepaalde delen ervan bewerken.   
 
-1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de optie **Apparaten** > **Windows** > **Windows-inschrijving** > **Implementatieprofielen**.
+1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **Windows** > **Windows-inschrijving** > **Implementatieprofielen**.
 2. Selecteer het profiel dat u wilt bewerken.
 3. Selecteer **Eigenschappen** aan de linkerkant om de naam of beschrijving van het implementatieprofiel te wijzigen. Klik op **Opslaan** wanneer u klaar bent met het aanbrengen van wijzigingen.
 5. Klik op **Instellingen** de OOBE-instellingen te wijzigen. Klik op **Opslaan** wanneer u klaar bent met het aanbrengen van wijzigingen.
@@ -162,11 +162,11 @@ Nadat u een Autopilot-apparaat hebt geüpload, kunt u bepaalde kenmerken van het
 
 Waarschuwingen geven weer hoeveel Autopilot-programma-apparaten geen Autopilot-implementatieprofielen hebben. Aan de hand van de informatie in de waarschuwing kunt u profielen maken en deze toewijzen aan de niet-toegewezen apparaten. Als u op de waarschuwing klikt, verschijnt een volledige lijst met Windows Autopilot-apparaten en gedetailleerde informatie.
 
-Als u waarschuwingen over niet-toegewezen apparaten wilt zien, kiest u in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **Overzicht** > **Inschrijvingswaarschuwingen** > **Niet-toegewezen apparaten**.  
+Als u waarschuwingen voor niet-toegewezen apparaten wilt bekijken, kiest u in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **Overzicht** > **Inschrijvingswaarschuwingen** > **Niet-toegewezen apparaten**.  
 
 ## <a name="autopilot-deployments-report"></a>Rapport Autopilot-implementaties
 U kunt de details bekijken van elk apparaat dat via Windows Autopilot is geïmplementeerd.
-Als u het rapport wilt weergeven, gaat u naar het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431), kiest u **Apparaten** > **Bewaken** > **Autopilot-implementaties**.
+Als u het rapport wilt bekijken, gaat u naar het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) en kiest u **Apparaten** > **Monitor** > **Autopilot-implementaties**.
 De gegevens zijn tot 30 dagen na de implementatie beschikbaar.
 
 Dit rapport is beschikbaar als preview-versie. Implementatierecords voor apparaten worden momenteel alleen geactiveerd door nieuwe Intune-inschrijvingsgebeurtenissen. Dit betekent dat implementaties die geen nieuwe Intune-inschrijving activeren, niet door dit rapport worden opgenomen. Dit geldt ook voor alle soorten herstel die de inschrijving en het gebruikersgedeelte van Autopilot-ondersteuning beheren.
@@ -180,7 +180,7 @@ Vereisten: de Azure Active Directory-bedrijfsportal is geconfigureerd en Windows
 > [!NOTE]
 > Het is niet mogelijk om een gebruiker toe te wijzen aan een specifiek Autopilot-apparaat als u ADFS gebruikt.
 
-1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431), **Apparaten** > **Windows** > **Windows-inschrijving** > **Apparaten** (onder **Windows Autopilot Deployment-programma** > kies het apparaat > **Gebruiker toewijzen**.
+1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **Windows** > **Windows-inschrijving** > **Apparaten** (onder **Windows Autopilot Deployment-programma** > kies het apparaat > **Gebruiker toewijzen**.
 
     ![Schermafbeelding van Gebruiker toewijzen](./media/enrollment-autopilot/assign-user.png)
 
@@ -223,9 +223,9 @@ Als u geen interesse hebt in Mobile Device Management, kunt u Autopilot gebruike
 U kunt Windows-apparaten groeperen op correlator-id bij registratie met behulp van [Autopilot voor bestaande apparaten](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) via Configuration Manager. De correlator-ID is een parameter van het Autopilot-configuratiebestand. De [enrollmentProfileName van het Azure ID-apparaatkenmerk](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) wordt automatisch zodanig ingesteld dat deze aansluit bij de ‘OfflineAutopilotprofile-\<correlator-ID\>’. Hierdoor kunnen willekeurige dynamische groepen in Azure AD op basis van de correlator-id worden gemaakt met behulp van het kenmerk enrollmentprofileName.
 
 >[!WARNING] 
-> Omdat de correlatie-id niet vooraf wordt weergegeven in Intune, wordt door het apparaat mogelijk elke gewenste correlatie-id gerapporteerd. Als de gebruiker een correlatie-id maakt die overeenkomt met een Autopilot- of Apple DEP-profielnnaam, wordt het apparaat toegevoegd aan alle dynamische Microsoft Azure AD-apparaatgroepen op basis van het kenmerk enrollmentProfileName. U kunt dit conflict als volgt voorkomen:
+> Omdat de correlatie-id niet vooraf wordt weergegeven in Intune, wordt door het apparaat mogelijk elke gewenste correlatie-id gerapporteerd. Als de gebruiker een correlatie-id maakt die overeenkomt met een Autopilot- of Apple ADE-profielnnaam, wordt het apparaat toegevoegd aan een dynamische Microsoft Azure AD-apparaatgroep op basis van het kenmerk enrollmentProfileName. U kunt dit conflict als volgt voorkomen:
 > - Maak altijd dynamische groepsregels die overeenkomen met de *hele* enrollmentProfileName-waarde
-> - Begin een Autopilot- of Apple DEP-profielnaam nooit met 'OfflineAutopilotprofile-'.
+> - Begin een Autopilot- of Apple ADE-profielnaam nooit met 'OfflineAutopilotprofile-'.
 
 ## <a name="next-steps"></a>Volgende stappen
 Ontdek hoe u apparaten beheert nadat u Windows Autopilot hebt geconfigureerd voor geregistreerde Windows 10-apparaten. Zie [Wat is Microsoft Intune-apparaatbeheer?](../remote-actions/device-management.md) voor meer informatie.

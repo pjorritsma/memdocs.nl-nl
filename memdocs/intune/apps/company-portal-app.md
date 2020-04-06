@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1ec6d4ebe860a1c20ad1a11bd7e63086858a82c
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: e6a3152966dee507cde690d9be8f5a7e210c7945
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084223"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407756"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>De Intune-bedrijfsportal-apps, de bedrijfsportalwebsite en de Intune-app aanpassen
 
@@ -45,7 +45,7 @@ De volgende tabel bevat de gegevens voor huismerkaanpassing voor de eindgebruike
 | **Weergeven in koptekst** | Geef op of de koptekst in de eindgebruikerservaring het **Bedrijfslogo en -naam**, **Alleen bedrijfslogo** of **Alleen bedrijfsnaam** moet bevatten. In de onderstaande voorbeelden worden alleen de logo's weergegeven, niet de naam.  |
 | **Logo uploaden voor achtergrondkleur van thema​** | Upload het logo dat u wilt weergeven tegen de achtergrondkleur van het geselecteerde thema. Voor de beste weergave uploadt u een logo met een transparante achtergrond. In het voorbeeldvak onder de instelling kunt u zien hoe dit er uitziet.<p>Maximale afbeeldingsgrootte: 400 x 400 px<br>Maximale bestandsgrootte:   750 KB<br>Bestandstype: PNG, JPG of JPEG |
 | **Logo uploaden voor witte of lichte achtergrond​** | Upload het logo dat u wilt weergeven tegen een witte of lichtgekleurde achtergrond. Voor de beste weergave uploadt u een logo met een transparante achtergrond. In het voorbeeldvak onder de instelling kunt u zien hoe dit er uitziet tegen een witte achtergrond.<p>Maximale afbeeldingsgrootte: 400 x 400 px<br>Maximale bestandsgrootte: 750 KB<br>Bestandstype: PNG, JPG of JPEG |
-| **Merkafbeelding uploaden​** | Upload een afbeelding die het merk van uw organisatie representeert.<p><ul><li>Aanbevolen breedte van afbeelding: Groter dan 1125 pixels (minimaal 650 pixels vereist)</li><li>Maximale afbeeldingsgrootte: 1,3 MB</li><li>Bestandstype: PNG, JPG of JPEG</li><li>Deze wordt weergegeven op de volgende locaties:</li><ul><li>Bedrijfsportal voor iOS/iPadOS: Achtergrondafbeelding op de profielpagina van de gebruiker.</li><li>Bedrijfsportalwebsite:   Achtergrondafbeelding op de profielpagina van de gebruiker.</li><li>Intune-app voor Android: In de lade en als achtergrondafbeelding op de profielpagina van de gebruiker.</li></ul></ul> |
+| **Merkafbeelding uploaden​** | Upload een afbeelding die het merk van uw organisatie weergeeft.<p><ul><li>Aanbevolen breedte van afbeelding: Groter dan 1125 pixels (minimaal 650 pixels vereist)</li><li>Maximale afbeeldingsgrootte: 1,3 MB</li><li>Bestandstype: PNG, JPG of JPEG</li><li>Deze wordt weergegeven op de volgende locaties:</li><ul><li>Bedrijfsportal voor iOS/iPadOS: Achtergrondafbeelding op de profielpagina van de gebruiker.</li><li>Bedrijfsportalwebsite:   Achtergrondafbeelding op de profielpagina van de gebruiker.</li><li>Intune-app voor Android: In de lade en als achtergrondafbeelding op de profielpagina van de gebruiker.</li></ul></ul> |
 
 > [!NOTE]
 > Wanneer een gebruiker een iOS/iPadOS-toepassing installeert vanuit de bedrijfsportal wordt er een prompt weergegeven. Dit doet zich voor wanneer de iOS/iPadOS-app is gekoppeld aan de App Store, aan een volume-aankoopprogramma (VPP) of aan een Line-Of-Business-app (LOB). Met de prompt kunnen gebruikers de actie accepteren of het beheer van de app toestaan. In de prompt wordt uw bedrijfsnaam weergegeven. Wanneer uw bedrijfsnaam niet beschikbaar is, wordt **Bedrijfsportal** weergegeven.
@@ -56,7 +56,7 @@ Met de juiste merkafbeelding kan het vertrouwen van de gebruiker worden versterk
 
 - Neem contact op met uw marketing- of huisstijlafdeling. Mogelijk beschikken zij al over een goedgekeurde set afbeeldingen. Wellicht kunnen ze u ook helpen bij het naar behoefte optimaliseren van afbeeldingen.
 - Houd rekening met zowel liggende als staande weergave. De afbeelding moet voldoende achtergrond rond het centrale punt hebben. De afbeelding wordt mogelijk verschillend bijgesneden op basis van apparaatgrootte, -oriëntatie en platform.
-- Vermijd het gebruik van een standaardafbeelding. De afbeelding moet het merk en de identiteit van uw organisatie uitstralen, zoals de gebruikers dit kennen. Als u geen geschikte afbeelding hebt, kunt u nog beter helemaal geen afbeelding gebruiken, dan te kiezen voor een afbeelding die voor de gebruiker geen betekenis heeft.
+- Vermijd het gebruik van een standaardafbeelding. De afbeelding moet het merk en de identiteit van uw organisatie uitstralen, zoals de gebruikers dit kennen. Als u geen geschikte afbeelding hebt, kunt u beter helemaal geen afbeelding gebruiken, dan te kiezen voor een afbeelding die voor de gebruiker geen betekenis heeft.
 - Verwijder onnodige metagegevens. Afbeeldingsbestanden bevatten soms metagegevens, zoals een cameraprofiel, geografische locatie, titel, bijschrift, enzovoort. Gebruik een hulpprogramma voor afbeeldingoptimalisatie voor het verwijderen van deze gegevens. Zo blijft de kwaliteit behouden en kunt u voldoet aan de maximale bestandsgrootte.
 
 ### <a name="brand-image-examples"></a>Voorbeelden van merkafbeeldingen
@@ -73,7 +73,7 @@ Hieronder ziet u een voorbeeld van de merkafbeelding in de Intune-app voor Andro
 
 ## <a name="support-information"></a>Ondersteuningsinformatie
 
-Voer de ondersteuningsinformatie van uw organisatie in, zodat werknemers met vragen u kunnen bereiken. Deze ondersteuningsinformatie wordt in de gehele eindgebruikerservaring weergegeven op de pagina's **Ondersteuning**, **Help en ondersteuning** en **Helpdesk**.
+Voer de ondersteuningsinformatie van uw organisatie in, zodat werknemers voor vragen contact met u kunnen opnemen. Deze ondersteuningsinformatie wordt in de gehele eindgebruikerservaring weergegeven op de pagina's **Ondersteuning**, **Help en ondersteuning** en **Helpdesk**.
 
 | Veldnaam | Maximale lengte | Meer informatie |
 |------------------------|----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -193,4 +193,4 @@ Voor sommige platforms en configuraties zijn geen selfserviceacties voor apparat
 
 ## <a name="next-steps"></a>Volgende stappen
 
-- [De Windows 10-bedrijfsportal-app handmatig toevoegen met Microsoft Intune](company-portal-app.md)
+- [Apps toevoegen](apps-add.md)

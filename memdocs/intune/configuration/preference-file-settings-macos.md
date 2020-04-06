@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/09/2020
+ms.date: 03/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d226888c3d710a7b80357ebb92130b34ab2fef94
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2e83077561ec4492feaf14789cf339e0b3ee86e2
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79360753"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359332"
 ---
 # <a name="add-a-property-list-file-to-macos-devices-using-microsoft-intune"></a>Een eigenschappenlijstbestand toevoegen aan macOS-apparaten met behulp van Microsoft Intune
 
@@ -29,17 +29,13 @@ Met Microsoft Intune kunt u een eigenschappenlijstbestand (.plist) toevoegen voo
 
 Deze functie is van toepassing op:
 
-- macOS-apparaten met 10.7 en hoger
+- macOS 10.7 en hoger
 
-Eigenschappenlijstbestand bevatten doorgaans informatie over macOS-apps. Zie [Over gegevenseigenschappenlijstbestanden](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html) (Apple-website) en [Aangepaste payloadinstellingen](https://support.apple.com/guide/mdm/custom-mdm9abbdbe7/1/web/1) voor meer informatie.
+Eigenschappenlijstbestanden bevatten informatie over macOS-apps. Zie [Over gegevenseigenschappenlijstbestanden](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html) (Apple-website) en [Aangepaste payloadinstellingen](https://support.apple.com/guide/mdm/custom-mdm9abbdbe7/1/web/1) voor meer informatie.
 
-In dit artikel vindt u een overzicht en beschrijving van de verschillende instellingen voor eigenschappenlijstbestanden die u aan macOS-apparaten kunt toevoegen. Gebruik deze instellingen als onderdeel van de MDM-oplossing (Mobile Device Management) om de app-bundel-id (`com.company.application`) en het bijbehorende PLIST-bestand toe te voegen.
+In dit artikel vindt u een overzicht en beschrijving van de verschillende instellingen voor eigenschappenlijstbestanden die u aan macOS-apparaten kunt toevoegen. Gebruik deze instellingen als onderdeel van de MDM-oplossing (Mobile Device Management) om de app-bundel-id (`com.company.application`) en het PLIST-bestand van de app toe te voegen.
 
 Deze instellingen worden toegevoegd aan een apparaatconfiguratieprofiel in Intune en vervolgens toegewezen aan of geïmplementeerd op uw macOS-apparaten.
-
-## <a name="before-you-begin"></a>Voordat u begint
-
-[Maak het profiel](device-profile-create.md).
 
 ## <a name="what-you-need-to-know"></a>Wat u dient te weten
 
@@ -48,23 +44,49 @@ Deze instellingen worden toegevoegd aan een apparaatconfiguratieprofiel in Intun
 - Alleen in bepaalde apps kunnen beheerde voorkeuren worden gebruikt en in deze apps kunt u mogelijk niet alle instellingen beheren.
 - Upload eigenschappenlijstbestanden die worden toegepast op apparaatkanaalinstellingen, en niet op gebruikerskanaalinstellingen. Eigenschappenlijstbestanden worden toegepast op het hele apparaat.
 
-## <a name="preference-file"></a>Voorkeursbestand
+## <a name="create-the-profile"></a>Het profiel maken
 
-- **Naam van voorkeursdomein**: Eigenschappenlijstbestanden worden meestal gebruikt voor webbrowsers (Microsoft Edge), [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) en aangepaste apps. Wanneer u een voorkeursdomein maakt, wordt er ook een bundel-id gemaakt. Voer de bundel-id in, bijvoorbeeld `com.company.application`. Voer bijvoorbeeld `com.Contoso.applicationName`, `com.Microsoft.Edge` of `com.microsoft.wdav` in.
-- **Eigenschappenlijstbestand**: Selecteer het eigenschappenlijstbestand dat aan uw app is gekoppeld. Controleer of het een `.plist`- of `.xml`-bestand is. Upload bijvoorbeeld het bestand `YourApp-Manifest.plist` of het bestand `YourApp-Manifest.xml`.
-- **Bestandsinhoud**: De belangrijkste informatie in het eigenschappenlijstbestand wordt weergegeven. Als u de sleutelgegevens wilt wijzigen, opent u het lijstbestand in een andere editor en uploadt u het bestand opnieuw in Intune.
+1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Selecteer **Apparaten** > **Configuratieprofielen** > **Profiel maken**.
+3. Voer de volgende eigenschappen in:
 
-Zorg ervoor dat het bestand juist is opgemaakt. Het bestand mag alleen sleutel-waardeparen bevatten en mag niet tussen `<dict>`-, `<plist>`- of `<xml>`-tags staan. Het eigenschappenlijstbestand moet er ongeveer uitzien als het volgende bestand:
+    - **Platform**: **macOS** selecteren
+    - **Profiel**: Selecteer **Voorkeursbestand**.
 
-```xml
-<key>SomeKey</key>
-<string>someString</string>
-<key>AnotherKey</key>
-<false/>
-...
-```
+4. Selecteer **Maken**.
+5. Voer in **Basisinformatie** de volgende eigenschappen in:
 
-Selecteer **OK** > **Maken** om uw wijzigingen op te slaan. Het profiel wordt gemaakt en weergegeven in de lijst met profielen.
+    - **Naam**: Voer een beschrijvende naam in voor het beleid. Geef uw beleid een naam zodat u het later eenvoudig kunt identificeren. Een goede beleidsnaam is bijvoorbeeld **macOS: Voeg een voorkeursbestand toe waarmee op apparaten Microsoft Defender ATP wordt geconfigureerd**.
+    - **Beschrijving**: Voer een beschrijving in voor het beleid. Deze instelling is optioneel, maar wordt aanbevolen.
+
+6. Selecteer **Volgende**.
+
+7. Configureer in **Configuratie-instellingen** uw instellingen:
+
+    - **Naam van voorkeursdomein**: Eigenschappenlijstbestanden worden meestal gebruikt voor webbrowsers (Microsoft Edge), [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) en aangepaste apps. Wanneer u een voorkeursdomein maakt, wordt er ook een bundel-id gemaakt. Voer de bundel-id in, bijvoorbeeld `com.company.application`. Voer bijvoorbeeld `com.Contoso.applicationName`, `com.Microsoft.Edge` of `com.microsoft.wdav` in.
+    - **Eigenschappenlijstbestand**: Selecteer het eigenschappenlijstbestand dat aan uw app is gekoppeld. Controleer of het een `.plist`- of `.xml`-bestand is. Upload bijvoorbeeld het bestand `YourApp-Manifest.plist` of het bestand `YourApp-Manifest.xml`.
+    - **Bestandsinhoud**: De belangrijkste informatie in het eigenschappenlijstbestand wordt weergegeven. Als u de sleutelgegevens wilt wijzigen, opent u het lijstbestand in een andere editor en uploadt u het bestand opnieuw in Intune.
+
+    Zorg ervoor dat het bestand juist is opgemaakt. Het bestand mag alleen sleutel-waardeparen bevatten en mag niet tussen `<dict>`-, `<plist>`- of `<xml>`-tags staan. Het eigenschappenlijstbestand moet er ongeveer uitzien als het volgende bestand:
+
+    ```xml
+    <key>SomeKey</key>
+    <string>someString</string>
+    <key>AnotherKey</key>
+    <false/>
+    ...
+    ```
+
+8. Selecteer **Volgende**.
+9. Wijs in **Bereiktags** (optioneel) een tag toe om het profiel te filteren op specifieke IT-groepen, zoals `US-NC IT Team` of `JohnGlenn_ITDepartment`. Zie [RBAC en bereiktags gebruiken voor gedistribueerde IT](../fundamentals/scope-tags.md) voor meer informatie over bereiktags.
+
+    Selecteer **Volgende**.
+
+10. Selecteer in **Toewijzingen** de gebruikers of groepen die uw profiel zullen ontvangen. Zie [Gebruikers- en apparaatprofielen toewijzen](device-profile-assign.md) voor meer informatie over het toewijzen van profielen.
+
+    Selecteer **Volgende**.
+
+11. Controleer uw instellingen in **Beoordelen en maken**. Wanneer u **Maken**selecteert, worden uw wijzigingen opgeslagen en wordt het profiel toegewezen. Het beleid wordt ook weergegeven in de lijst met profielen.
 
 ## <a name="next-steps"></a>Volgende stappen
 

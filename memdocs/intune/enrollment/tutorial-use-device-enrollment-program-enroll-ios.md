@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 Customer intent: As an Intune admin, I want to set up the Apple's corporate device enrollment features so that corporate devices can automatically enroll in Intune.
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9aab0233c05416fc50413a7889435cb221179730
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: dd99c334866714095a4d87e1e028731ce3ee7c7c
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79344633"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326890"
 ---
 # <a name="tutorial-use-apples-corporate-device-enrollment-features-in-apple-business-manager-abm-to-enroll-iosipados-devices-in-intune"></a>Zelfstudie: De inschrijvingsfuncties voor zakelijke Apple-apparaten in Apple Business Manager (ABM) gebruiken om iOS-/iPadOS-apparaten bij Intune in te schrijven
 Met behulp van de functies voor apparaatinschrijving in Apple Business Manager kunt u apparaten eenvoudiger inschrijven. Intune biedt ook ondersteuning voor de oudere DEP-portal (Device Enrollment Program) van Apple, maar we raden u aan opnieuw te beginnen met Apple Business Manager. Met Microsoft Intune en Apple Corporate Device Enrollment worden apparaten automatisch veilig ingeschreven wanneer gebruikers het apparaat voor de eerste keer inschakelen. U kunt apparaten daarom naar vele gebruikers verzenden zonder elk apparaat afzonderlijk te hoeven instellen. 
@@ -42,7 +42,7 @@ Als u niet over een Intune-abonnement beschikt, kunt u [zich registreren voor ee
 ## <a name="get-an-apple-device-enrollment-token"></a>Een Apple-token voor apparaatinschrijving ophalen
 Voordat u iOS-/iPadOS-apparaten inschrijft met behulp van de zakelijke inschrijvingsfuncties van Apple, hebt u een bestand met een apparaatinschrijvingstoken van Apple (.pem-bestand) nodig. Intune kan met deze token informatie synchroniseren over Apple-apparaten die het eigendom zijn van uw bedrijf. Ook kan Intune hiermee inschrijvingsprofielen naar Apple uploaden en apparaten toewijzen aan die profielen.
 
-U maakt een apparaatinschrijvingstoken met behulp van ABM of de DEP-portal. U gebruikt de portals ook om apparaten aan Intune toe te wijzen voor beheer.
+U gebruikt de Apple-portal om een apparaatinschrijvingstoken te maken. U gebruikt de portals ook om apparaten aan Intune toe te wijzen voor beheer.
 
 1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **iOS** > **iOS-inschrijving** > **Tokens voor het inschrijvingsprogramma** > **Toevoegen**.
 
@@ -50,9 +50,9 @@ U maakt een apparaatinschrijvingstoken met behulp van ABM of de DEP-portal. U ge
 
    ![Schermopname van het deelvenster Token voor het inschrijvingsprogramma in de werkruimte Apple-certificaten voor het downloaden van de openbare sleutel.](./media/tutorial-use-device-enrollment-program-enroll-ios/add-enrollment-program-token-pane.png)
 
-3. Kies **Uw openbare-sleutelcertificaat downloaden** en sla het bestand met de versleutelingssleutel (.pem) lokaal op. Het .pem-bestand wordt gebruikt om een vertrouwensrelatiecertificaat aan te vragen bij de ABM- of DEP-portal.
+3. Kies **Uw openbare-sleutelcertificaat downloaden** en sla het bestand met de versleutelingssleutel (.pem) lokaal op. Het PEM-bestand wordt gebruikt om een vertrouwensrelatiecertificaat aan te vragen bij de Apple-portal.
 
-4. Kies **Een token voor Apple Device Enrollment Program maken** om de Deployment Program-portal van Apple te openen en meld u aan met uw Apple-id. Deze Apple-id kunt u gebruiken om uw DEP-token te verlengen.
+4. Kies **Een token voor Apple Device Enrollment Program maken** om de Deployment Program-portal van Apple te openen en meld u aan met uw Apple-id. Deze Apple ID kunt u gebruiken om uw token te verlengen.
 
 5. Kies **Aan de slag** bij **Device Enrollment Program** in de [Deployment Programs-portal](https://deploy.apple.com) van Apple. Uw proces verloopt mogelijk iets anders dan de volgende stappen in [Apple Business Manager](https://business.apple.com).
 
@@ -84,7 +84,7 @@ Na installatie van de token kunt u een inschrijvingsprofiel voor iOS-/iPadOS-app
 
 2. Selecteer de token die u zojuist hebt geïnstalleerd en kies **Profielen** > **Profiel maken**.
 
-3. Voer onder **Profiel maken***TestDEPProfile* als **naam** in en geef *DEP testen voor iOS-/iPadOS-apparaten* op als **beschrijving**. Gebruikers zien deze gegevens niet.
+3. Voer onder **Profiel maken** *TestProfile* als **naam** in en geef *ADE testen voor iOS-/iPadOS-apparaten* op als **Beschrijving**. Gebruikers zien deze gegevens niet.
 
 4. Kies **iOS** onder **Platform**.
 
@@ -116,13 +116,13 @@ Na installatie van de token kunt u een inschrijvingsprofiel voor iOS-/iPadOS-app
 
 ## <a name="sync-managed-devices-to-intune"></a>Beheerde apparaten synchroniseren met Intune
 
-Zodra u een inschrijvingsprogrammatoken hebt ingesteld via de ABM-, ASM- of DEP-portal en daar apparaten aan de MDM-server hebt toegewezen, wacht u totdat deze apparaten met de Intune-service zijn gesynchroniseerd of voert u handmatig een synchronisatie uit. Als u geen handmatige synchronisatie uitvoert, kan het tot 24 uur duren voordat apparaten in Azure Portal worden weergegeven.
+Zodra u een token voor het inschrijvingsprogramma hebt ingesteld via de ABM-, ASM- of ADE-portal en daar apparaten aan de MDM-server hebt toegewezen, wacht u totdat deze apparaten met de Intune-service zijn gesynchroniseerd of voert u handmatig een synchronisatie uit. Als u geen handmatige synchronisatie uitvoert, kan het tot 24 uur duren voordat apparaten in Azure Portal worden weergegeven.
 
 1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **iOS** > **iOS-inschrijving** > **Tokens voor het inschrijvingsprogramma** > kies een token in de lijst > **Apparaten** > **Synchroniseren**.
 
 ## <a name="assign-an-enrollment-profile-to-iosipados-devices"></a>Een inschrijvingsprofiel toewijzen aan iOS-/iPadOS-apparaten
 
-U moet een profiel voor een inschrijvingsprogramma aan apparaten toewijzen voordat deze kunnen worden ingeschreven. Deze apparaten worden via Apple met Intune gesynchroniseerd en moeten aan de juiste MDM-servertoken in de ABM-, ASM- of DEP-portal worden toegewezen.
+U moet een profiel voor een inschrijvingsprogramma aan apparaten toewijzen voordat deze kunnen worden ingeschreven. Deze apparaten worden via Apple met Intune gesynchroniseerd en moeten aan de juiste MDM-servertoken in de ABM-, ASM- of ADE-portal worden toegewezen.
 
 1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **iOS** > **iOS-inschrijving** > **Tokens voor het inschrijvingsprogramma** > kies een token in de lijst.
 2. Kies **Apparaten** > kies apparaten uit de lijst > **Profiel toewijzen**.
@@ -130,14 +130,14 @@ U moet een profiel voor een inschrijvingsprogramma aan apparaten toewijzen voord
 
 ## <a name="distribute-devices-to-users"></a>Apparaten onder gebruikers distribueren
 
-U hebt beheer en synchronisatie tussen Apple en Intune ingesteld en een profiel toegewezen om uw DEP-apparaten te kunnen inschrijven. De apparaten kunnen nu worden uitgedeeld aan de gebruikers. Voor apparaten met gebruikersaffiniteit moet aan elke gebruiker een Intune-licentie worden toegewezen.
+U hebt beheer en synchronisatie tussen Apple en Intune ingesteld en een profiel toegewezen om uw ADE-apparaten te kunnen inschrijven. De apparaten kunnen nu worden uitgedeeld aan de gebruikers. Voor apparaten met gebruikersaffiniteit moet aan elke gebruiker een Intune-licentie worden toegewezen.
 
 ## <a name="next-steps"></a>Volgende stappen
 
 Er bestaat aanvullende informatie over andere opties die voor het registreren van iOS-/iPadOS-apparaten beschikbaar zijn.
 
 > [!div class="nextstepaction"]
-> [Diepgaand artikel over iOS/iPadOS DEP-registratie](device-enrollment-program-enroll-ios.md)
+> [Diepgaand artikel over iOS/iPadOS ADE-registratie](device-enrollment-program-enroll-ios.md)
 
 <!--commenting out because inaccurate>
 ## Clean up resources

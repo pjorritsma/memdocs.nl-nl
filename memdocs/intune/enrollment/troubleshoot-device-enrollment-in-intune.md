@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93fba17973571a9981269eb0b9fc98dae20cb920
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: af60c91e52bcee643166729f3a3ac57ae232c4d9
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80085866"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326997"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Problemen bij de apparaatinschrijving in Microsoft Intune oplossen
 
@@ -63,7 +63,7 @@ Deze problemen kunnen optreden op alle apparaatplatforms.
 
 Voer de volgende stappen uit om te controleren of aan de gebruiker niet meer dan het maximale aantal apparaten is toegewezen:
 
-1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaatinschrijving** > **Inschrijvingsbeperkingen** > **Beperkingen voor apparaatlimieten**. Noteer de waarde in de kolom **Apparaatlimiet**.
+1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **Inschrijvingsbeperkingen** > **Beperkingen voor apparaatlimieten**. Noteer de waarde in de kolom **Apparaatlimiet**.
 
 2. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Gebruikers** > **Alle gebruikers** > selecteer de gebruiker > **Apparaten**. Noteer het aantal apparaten.
 
@@ -286,9 +286,9 @@ Als gebruikers het probleem willen oplossen, moeten ze de knop **Instellen** sel
 Na het inschrijven krijgen de apparaten weer een goede status en is er weer toegang mee te verkrijgen tot de bedrijfsresources.
 
 ### <a name="verify-ws-trust-13-is-enabled"></a>Controleren of WS-Trust 1.3 is ingeschakeld
-**Probleem:** iOS-/iPadOS-apparaten van het Device Enrollment Program (DEP) kunnen niet worden ingeschreven
+**Probleem** Automatische apparaatinschrijving (ADE) iOS-/iPadOS-apparaten kunnen niet worden ingeschreven
 
-Voor het inschrijven van DEP-apparaten met gebruikersaffiniteit moet het WS-Trust 1.3 Username/Mixed-eindpunt zijn ingeschakeld om gebruikerstokens aan te vragen. Dit eindpunt wordt standaard door Active Directory ingeschakeld. U kunt een lijst van ingeschakelde eindpunten ophalen met de PowerShell-cmdlet Get-AdfsEndpoint en vervolgens naar het eindpunt trust/13/UsernameMixed zoeken. Bijvoorbeeld:
+Voor het inschrijven van ADE-apparaten met gebruikersaffiniteit moet het WS-Trust 1.3 Username/Mixed-eindpunt zijn ingeschakeld om gebruikerstokens aan te vragen. Dit eindpunt wordt standaard door Active Directory ingeschakeld. U kunt een lijst van ingeschakelde eindpunten ophalen met de PowerShell-cmdlet Get-AdfsEndpoint en vervolgens naar het eindpunt trust/13/UsernameMixed zoeken. Bijvoorbeeld:
 
       Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
 

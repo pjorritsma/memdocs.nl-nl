@@ -18,16 +18,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 427907b3b24556be15958707bf55f4dc9b190d94
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 1070c7b396ac3c19c340a69b6e2eb8db9d6707b6
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363821"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327185"
 ---
 # <a name="automatically-enroll-macos-devices-with-the-apple-business-manager-or-apple-school-manager"></a>macOS-apparaten automatisch inschrijven met Apple Business Manager of Apple School Manager
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+> [!IMPORTANT]
+> Apple is recent overgestapt van het Apple Device Enrollment Program (DEP) naar het Apple Automated Device Enrollment (ADE). In verband hiermee wordt de gebruikersinterface van Intune momenteel bijgewerkt. Totdat deze aanpassingen zijn voltooid, wordt *Device Enrollment Program* in de Intune-portal weergegeven. Waar Automatische apparaatinschrijving (Automated Device Enrollment) wordt weergegeven, wordt dit gebruikt.
 
 U kunt de Intune-registratie instellen voor macOS-apparaten die zijn gekocht via [Apple Business Manager](https://business.apple.com/) of [Apple School Manager](https://school.apple.com/) van Apple. U kunt beide soorten inschrijvingen gebruiken voor grote aantallen apparaten zonder op de apparaten zelf aan de slag te gaan. U kunt macOS-apparaten rechtstreeks verzenden naar gebruikers. Als de gebruiker het apparaat inschakelt, wordt Configuratieassistent uitgevoerd met vooraf gedefinieerde instellingen en wordt het apparaat ingeschreven bij Intune-beheer.
 
@@ -50,9 +51,9 @@ Overigens werken Apple Business Manager-inschrijving en Apple School Manager nie
 - [MDM-instantie](../fundamentals/mdm-authority-set.md)
 - [Apple MDM-pushcertificaat](../enrollment/apple-mdm-push-certificate-get.md)
 
-## <a name="get-an-apple-dep-token"></a>Een Apple DEP-token ophalen
+## <a name="get-an-apple-ade-token"></a>Een Apple ADE-token ophalen
 
-Voordat u macOS-apparaten kunt inschrijven met DEP of Apple School Manager, hebt u een DEP-tokenbestand (.p7m) van Apple nodig. Intune kan met dit token gegevens synchroniseren van de apparaten die in eigendom zijn van uw organisatie. Hiermee kunnen in Intune ook inschrijvingsprofielen worden geüpload naar Apple en deze profielen worden toegewezen aan apparaten.
+Voordat u macOS-apparaten kunt inschrijven bij ADE of Apple School Manager, hebt u een tokenbestand (.p7m) van Apple nodig. Intune kan met dit token gegevens synchroniseren van de apparaten die in eigendom zijn van uw organisatie. Hiermee kunnen in Intune ook inschrijvingsprofielen worden geüpload naar Apple en deze profielen worden toegewezen aan apparaten.
 
 U gebruikt de Apple-portal om een token te maken. U gebruikt de Apple-portal ook om apparaten aan Intune toe te wijzen voor beheer.
 
@@ -92,7 +93,7 @@ U gebruikt de Apple-portal om een token te maken. U gebruikt de Apple-portal ook
 
 ### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>Stap 3. De Apple-id opslaan die u hebt gebruikt om dit token te maken
 
-Geef in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de Apple-id op voor toekomstige referentie.
+Geef in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de Apple ID op voor toekomstige referentie.
 
 ![Schermopname van het invoeren van de Apple ID die is gebruikt voor het maken van het token voor het inschrijvingsprogramma en het uploaden van het token.](./media/device-enrollment-program-enroll-macos/image03.png)
 
@@ -115,7 +116,7 @@ Na installatie van de token kunt u een inschrijvingsprofiel voor apparaten maken
 4. Kies **macOS** als **platform**.
 
 5. Geef voor **Gebruikersaffiniteit** aan of andere apparaten met dit profiel met of zonder toegewezen gebruiker moeten worden ingeschreven.
-    - **Inschrijven met gebruikersaffiniteit**: kies deze optie voor apparaten die eigendom zijn van gebruikers en waarvoor de bedrijfsportal-app moet worden gebruikt voor services zoals het installeren van apps. Als u ADFS gebruikt, vereist gebruikersaffiniteit [WS-Trust 1.3 gebruikersnaam/gemengd eindpunt](https://technet.microsoft.com/library/adfs2-help-endpoints). [Meer informatie](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint). Meervoudige verificatie wordt niet ondersteund voor macOS DEP-apparaten met gebruikersaffiniteit.
+    - **Inschrijven met gebruikersaffiniteit**: kies deze optie voor apparaten die eigendom zijn van gebruikers en waarvoor de bedrijfsportal-app moet worden gebruikt voor services zoals het installeren van apps. Als u ADFS gebruikt, vereist gebruikersaffiniteit [WS-Trust 1.3 gebruikersnaam/gemengd eindpunt](https://technet.microsoft.com/library/adfs2-help-endpoints). [Meer informatie](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint). Meervoudige verificatie wordt niet ondersteund voor macOS ADE-apparaten met gebruikersaffiniteit.
 
     - **Inschrijven zonder gebruikersaffiniteit**: kies deze optie voor een apparaat dat niet aan één gebruiker is gelieerd. Gebruik dit voor apparaten waarmee taken worden uitgevoerd zonder toegang tot lokale gebruikersgegevens. Apps als de bedrijfsportal-app werken niet.
 
@@ -168,7 +169,7 @@ Nu Intune toestemming heeft om uw apparaten te beheren, kunt u Intune synchronis
 1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **macOS** > **macOS-inschrijving** > **Tokens voor het inschrijvingsprogramma** > kies een token in de lijst > **Apparaten** > **Synchroniseren**. ![Schermopname van het geselecteerde knooppunt Apparaten voor het inschrijvingsprogramma en een pijl naar de koppeling Synchroniseren.](./media/device-enrollment-program-enroll-macos/image06.png)
 
    Om te voldoen aan de voorwaarden van Apple voor acceptabel verkeer van het inschrijvingsprogramma, worden door Intune de volgende beperkingen opgelegd:
-   - Een volledige synchronisatie kan niet vaker dan eens in de zeven dagen worden uitgevoerd. Tijdens een volledige synchronisatie haalt Intune de volledige bijgewerkte lijst met serienummers op die is toegewezen aan de Apple MDM-server die is verbonden met Intune. Wanneer een apparaat uit het inschrijvingsprogramma wordt verwijderd uit de Intune-portal zonder dat het eerst is afgemeld bij de Apple MDM-server in de DEP-portal, wordt het apparaat pas opnieuw in Intune geïmporteerd wanneer de volledige synchronisatie wordt uitgevoerd.   
+   - Een volledige synchronisatie kan niet vaker dan eens in de zeven dagen worden uitgevoerd. Tijdens een volledige synchronisatie haalt Intune de volledige bijgewerkte lijst met serienummers op die is toegewezen aan de Apple MDM-server die is verbonden met Intune. Wanneer een apparaat uit het inschrijvingsprogramma wordt verwijderd van de Intune-portal zonder dat het eerst is afgemeld bij de Apple MDM-server in de Apple-portal, wordt het apparaat pas opnieuw in Intune geïmporteerd wanneer de volledige synchronisatie wordt uitgevoerd.   
    - Er wordt automatisch elke 24 uur een synchronisatie uitgevoerd. U kunt ook synchroniseren door op de knop **Synchroniseren** te klikken (maximaal één keer per 15 minuten). Synchronisatieaanvragen krijgen 15 minuten de tijd om te worden uitgevoerd. De knop **Synchroniseren** blijft uitgeschakeld totdat de synchronisatie is voltooid. Met de synchronisatie wordt de huidige apparaatstatus vernieuwt en worden nieuwe apparaten die aan de Apple MDM-server zijn toegewezen, geïmporteerd.
 
 ## <a name="assign-an-enrollment-profile-to-devices"></a>Een inschrijvingsprofiel toewijzen aan apparaten
@@ -190,7 +191,7 @@ U kunt een standaardprofiel in macOS en iOS/iPadOS kiezen om toe te passen op al
 
 U hebt beheer en synchronisatie tussen Apple en Intune ingeschakeld, en een profiel toegewezen om uw apparaten te kunnen inschrijven. De apparaten kunnen nu worden uitgedeeld aan de gebruikers. Voor apparaten met gebruikersaffiniteit moet aan elke gebruiker een Intune-licentie worden toegewezen. Voor apparaten zonder gebruikersaffiniteit is een apparaatlicentie vereist. Een geactiveerd apparaat kan geen inschrijvingsprofiel toepassen, tenzij het apparaat is gewist.
 
-## <a name="renew-a-dep-token"></a>Een DEP-token vernieuwen
+## <a name="renew-an-ade-token"></a>Een ADE-token vernieuwen
 
 1. Ga naar deploy.apple.com.  
 2. Kies onder **Manage Servers** de MDM-server die is gekoppeld aan het tokenbestand dat u wilt vernieuwen.

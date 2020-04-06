@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 03/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,16 +15,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ef60333b53e03b3a6a8d736817ef27df9a182f1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5e857cdd7028851f14f607739ba7e37c744fa2f1
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352069"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359454"
 ---
-# <a name="macos-endpoint-protection-settings-in-intune"></a>Instellingen in Intune voor eindpuntbescherming in macOS  
+# <a name="macos-endpoint-protection-settings-in-intune"></a>Instellingen in Intune voor Endpoint Protection in macOS  
 
 In dit artikel komt u meer te weten over de eindpuntbeschermingsinstellingen die u kunt configureren voor apparaten waarop macOS wordt uitgevoerd. U kunt deze instellingen configureren met behulp van een configuratieprofiel voor macOS-apparaten voor [Endpoint Protection](endpoint-protection-configure.md) in Intune.  
+
+## <a name="before-you-begin"></a>Voordat u begint
+
+[Een macOS-eindpuntbeveiligingsprofiel maken](endpoint-protection-configure.md).
 
 ## <a name="gatekeeper"></a>Gatekeeper  
 
@@ -97,7 +101,7 @@ Zie [FDEFileVault](https://developer.apple.com/documentation/devicemanagement/fd
     Herstelsleutels van het type *Persoonlijke sleutel* zijn gemaakt voor apparaten. Configureer de volgende instellingen voor de persoonlijke sleutel.  
 
     - **Locatie van persoonlijke herstelsleutel**: geef een kort bericht op voor de gebruiker waarin wordt uitgelegd hoe en waar deze de persoonlijke herstelsleutel kan ophalen. Deze tekst wordt ingevoegd in het bericht dat de gebruiker op het aanmeldingsscherm ziet wanneer hij of zij wordt gevraagd de persoonlijke herstelsleutel in te voeren als een wachtwoord is vergeten.  
-      
+
     - **Roulering van persoonlijk herstelsleutel**: geef op hoe vaak de persoonlijke herstelsleutel voor een apparaat wordt gerouleerd. U kunt de standaardinstelling, **Niet geconfigureerd** of een waarde van **1** tot **12** maanden selecteren.  
 
   - **Vraag bij afmelden uitschakelen**  
@@ -118,3 +122,8 @@ Zie [FDEFileVault](https://developer.apple.com/documentation/devicemanagement/fd
 
 Zie [FileVault-herstelsleutels](encryption-monitor.md#filevault-recovery-keys) voor meer informatie over FileVault met Intune.
 
+## <a name="next-steps"></a>Volgende stappen
+
+[Het profiel toewijzen](../configuration/device-profile-assign.md) en [de status ervan controleren](../configuration/device-profile-monitor.md).
+
+U kunt ook eindpuntbeveiliging configureren op [apparaten met Windows 10 of nieuwer](endpoint-protection-windows-10.md).

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f8a15199f599cf0fd4f90ea965bcc3e668f3b27
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 44cae6e1e7fdd310a6053cbcb6f19371263d0161
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354409"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326624"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Verschillende apparaatbeheerfuncties beheren en gebruiken op Windows Holographic- en HoloLens-apparaten met Intune
 
@@ -58,7 +58,7 @@ U kunt ook een de volgende acties uitvoeren met behulp van de bedrijfsportal-app
 
 **[Een nalevingsbeleid voor apparaten maken](../protect/compliance-policy-create-windows.md)**
 
-Nalevingsbeleid zijn regels en instellingen waaraan apparaten moeten voldoen om compatibel te zijn. Gebruik deze beleidsregels met voorwaardelijke toegang om toegang tot bedrijfsresources te blokkeren voor apparaten die niet compatibel zijn. Maak in Intune nalevingsbeleid om toegang voor apparaten met Windows Holographic for Business toe te staan of te blokkeren. U kunt bijvoorbeeld een beleid maken waarvoor Bitlocker moet zijn ingeschakeld.
+Nalevingsbeleid zijn regels en instellingen waaraan apparaten moeten voldoen om compatibel te zijn. Gebruik deze beleidsregels met voorwaardelijke toegang om toegang tot bedrijfsresources te blokkeren voor apparaten die niet compatibel zijn. Maak in Intune nalevingsbeleid om toegang voor apparaten met Windows Holographic for Business toe te staan of te blokkeren. U kunt bijvoorbeeld een beleid maken waarvoor BitLocker moet zijn ingeschakeld.
 
 Zie ook **[Aan de slag met nalevingsbeleid](../protect/device-compliance-get-started.md)** .
 
@@ -107,7 +107,7 @@ Met Intune kunt u apparaatcategorieën maken om apparaten automatisch toe te voe
 
 ## <a name="device-configuration-profiles"></a>Apparaatconfiguratieprofielen
 
-**[Aan de slag met configuratieprofielen](../configuration/device-profiles.md) en [uw eigen profiel maken](../configuration/device-profile-create.md)**
+**[Aan de slag met configuratieprofielen](../configuration/device-profiles.md) en [profieloverzicht](../configuration/device-profile-create.md)**
 
 Intune omvat instellingen en functies die u op verschillende apparaten binnen uw organisatie kunt in- of uitschakelen. Deze instellingen en functies worden beheerd met behulp van profielen. U kunt bijvoorbeeld een profiel maken waarmee Cortana wordt ingeschakeld, of een profiel dat Microsoft Defender Smart Screen gebruikt op uw apparaten met Windows Holographic for Business.
 

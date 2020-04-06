@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6eefc9f07a6c0cf442468b14d6d74567b8c15861
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 78dec649f5486e0dcf56f92b8ac16d176d119653
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79348819"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322327"
 ---
 # <a name="troubleshoot-device-actions-in-intune"></a>Problemen met acties oplossen in Intune
 
@@ -54,7 +54,7 @@ Nee. En u hoeft de streepjes niet in te voeren.
 ## <a name="remove-devices-action"></a>De actie Apparaten verwijderen
 
 ### <a name="how-do-i-tell-who-started-a-retirewipe"></a>Hoe kan ik nagaan wie een actie Buiten gebruik stellen/wissen heeft gestart?
-Ga in het [Beheercentrum voor Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) naar **Tenantbeheer** > **Auditlogboeken** en controleer de kolom **Gestart door**.
+Ga in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) naar **Tenantbeheer** > **Auditlogboeken** > controleer de kolom **Gestart door**.
 Als u geen vermelding ziet, is de kans groot dat de gebruiker van het apparaat de actie heeft gestart. Deze heeft waarschijnlijk de Bedrijfsportal-app of portal.manage.microsoft.com gebruikt.
 
 ### <a name="why-wasnt-my-application-uninstalled-after-using-retire"></a>Waarom is mijn toepassing niet verwijderd na gebruik van Buiten gebruik stellen?
@@ -69,7 +69,7 @@ Dit is normaal. Google staat geen herstel van de fabrieksinstellingen van werkpr
 Omdat met het buiten gebruik stellen van een apparaat geen toegangstokens worden ingetrokken. U kunt beleid voor voorwaardelijke toegang gebruiken om dit probleem te verhelpen.
 
 ### <a name="how-can-i-monitor-a-retirewipe-action-after-it-was-issued"></a>Hoe kan ik een actie Buiten gebruik stellen/wissen bewaken nadat deze is uitgevoerd?
-Ga in het [Beheercentrum voor Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) naar **Tenantbeheer** > **Auditlogboeken**.
+Ga in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) naar **Tenantbeheer** > **Auditlogboeken**.
 
 ### <a name="why-do-wipes-sometimes-show-as-pending-indefinitely"></a>Waarom worden wisacties soms voor onbepaalde tijd weergegeven als In behandeling?
 De status van apparaten wordt niet altijd gemeld aan de Intune-service voordat Opnieuw instellen is gestart. Daarom wordt de actie weergegeven als In behandeling. Als u hebt bevestigd dat de actie is geslaagd, verwijdert u het apparaat uit de service.

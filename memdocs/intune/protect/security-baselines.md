@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/24/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a62b87861bbe2f1d9e498756aedb0acd28bbff5a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c810b6caa47596967cf9e1f2ad4cb3f772064f30
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79349989"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488054"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Beveiligingsbasislijnen gebruiken om Windows 10-apparaten te gebruiken in Intune
 
@@ -76,7 +76,7 @@ De volgende beveiligingsbasislijninstanties zijn beschikbaar voor gebruik met In
 
 - **Microsoft Defender ATP-basislijn**
    *(Voor het gebruik van deze basislijn moet uw omgeving voldoen aan de vereisten voor het gebruik van [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites))* .
-  - [Microsoft Defender ATP-basislijn](security-baseline-settings-defender-atp.md)
+  - [Microsoft Defender ATP-basislijn, versie 3](security-baseline-settings-defender-atp.md)
 
   > [!NOTE]
   > De beveiligingsbasislijn van de Microsoft Defender ATP is geoptimaliseerd voor fysieke apparaten en wordt momenteel niet aanbevolen voor gebruik met virtuele machines (VM's) of VDI-eindpunten. Bepaalde basislijninstellingen kunnen invloed hebben op externe interactieve sessies in gevirtualiseerde omgevingen.  Voor meer informatie ziet u [Increase compliance to the Microsoft Defender ATP security baseline](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) (Naleving met de Microsoft Defender ATP-beveiligingsbasislijn vergroten) in de Windows-documentatie.
@@ -146,7 +146,7 @@ Veelvoorkomende taken bij het werken met beveiligingsbasislijnen zijn onder meer
 
 ### <a name="change-the-baseline-version-for-a-profile"></a>De basislijnversie voor een profiel wijzigen
 
-U kunt de versie van de basislijninstantie die wordt gebruikt met een profiel wijzigen.  Wanneer u de versie wijzigt, selecteert u een beschikbare instantie van dezelfde basislijn. U kunt echter niet wisselen tussen twee verschillende basislijntypen, bijvoorbeeld in een profiel de basislijn veranderen van Defender ATP in de MDM-beveiligingsbasislijn.
+U kunt de versie van de basislijninstantie die wordt gebruikt met een profiel wijzigen.  Wanneer u de versie wijzigt, selecteert u een beschikbare instantie van dezelfde basislijn. U kunt echter niet wisselen tussen twee verschillende basislijntypen, bijvoorbeeld in een profiel de basislijn van Defender ATP veranderen in de MDM-beveiligingsbasislijn.
 
 Wanneer u een wijziging van de basislijnversie configureert, kunt u een CSV-bestand downloaden met de verschillen tussen de twee basislijnversies. U kunt er ook voor kiezen om al uw aanpassingen in de oorspronkelijke basislijnversie te behouden of de nieuwe versie te implementeren met alle standaardwaarden. U kunt geen wijzigingen aanbrengen in afzonderlijke instellingen wanneer u de versie van een basislijn voor een profiel wijzigt.
 
@@ -158,7 +158,7 @@ Wanneer u de basislijn opslaat nadat de conversie is voltooid, wordt deze onmidd
 
 - Instellingen die zich niet in de basislijnversie bevinden die u hebt geselecteerd, worden verwijderd en niet langer afgedwongen door het beveiligingsbasislijnprofiel.
 
-  Wanneer een instelling niet langer wordt beheerd door een basislijnprofiel, wordt deze niet opnieuw ingesteld op het apparaat. In plaats daarvan blijft de instelling op het apparaat ingesteld op de laatste configuratie, tot een ander proces de instelling wijzigt. Voorbeelden van processen die mogelijk een instelling wijzigen nadat u bent gestopt met het beheren hiervan, zijn onder meer een ander basislijnprofiel, een groepsbeleidinstelling of een handmatige configuratie op het apparaat.
+  Wanneer een instelling niet langer wordt beheerd door een basislijnprofiel, wordt deze niet opnieuw ingesteld op het apparaat. In plaats daarvan blijft de instelling op het apparaat ingesteld op de laatste configuratie, tot een ander proces de instelling wijzigt. Voorbeelden van processen waardoor mogelijk een instelling wordt gewijzigd nadat u bent gestopt met het beheren hiervan, zijn onder meer een ander basislijnprofiel, een groepsbeleidinstelling of een handmatige configuratie op het apparaat.
 
 #### <a name="to-change-the-baseline-version-for-a-profile"></a>De basislijnversie voor een profiel wijzigen
 
@@ -208,11 +208,11 @@ De instellingen voor elke basislijn worden door hetzelfde beveiligingsteam van M
 
 ### <a name="are-the-intune-security-baselines-cis-or-nsit-compliant"></a>Zijn de Intune-beveiligingsbasislijnen compatibel met CIS of NSIT?
 
-Strikt genomen niet. Het Microsoft-beveiligingsteam raadpleegt adviesorganisaties, zoals CIS, voor het opstellen van de aanbevelingen. Maar er is niet één-op-één koppeling tussen "Compatibel met CIS" en Microsoft-basislijnen.
+Strikt genomen niet. Het Microsoft-beveiligingsteam raadpleegt adviesorganisaties, zoals CIS, voor het opstellen van de aanbevelingen. Er is echter geen één-op-één koppeling tussen 'compatibel met CIS' en Microsoft-basislijnen.
 
 ### <a name="what-certifications-does-microsofts-security-baselines-have"></a>Welke certificeringen hebben Microsoft-beveiligingsbasislijnen? 
 
-- Microsoft blijft beveiligingsbasislijnen publiceren voor groepsbeleid (GPO's) en de [Security Compliance Toolkit](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10), zoals het dit al vele jaren doet. Deze basislijnen worden door veel organisaties gebruikt. De aanbevelingen in deze basislijnen zijn het gevolg van de samenwerking van het Microsoft Security-team met zakelijke klanten en externe organisaties, inclusief het Ministerie van defensie, de NIST (National Institute of Standards en Technology) en meer. We delen onze aanbevelingen en basislijnen met deze organisaties. Deze organisaties hebben ook hun eigen aanbevelingen die nauw aansluiten bij de aanbevelingen van Microsoft. Aangezien Mobile Device Management (MDM) blijft groeien in de cloud, heeft Microsoft gelijkwaardige MDM-aanbevelingen voor deze basislijnen groepsbeleid opgesteld. Deze aanvullende basislijnen zijn ingebouwd in Microsoft Intune en omvatten nalevingsrapporten voor gebruikers, groepen en apparaten die de basislijn volgen (of niet volgen).
+- Microsoft blijft beveiligingsbasislijnen publiceren voor groepsbeleid (GPO's) en de [Security Compliance Toolkit](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10), zoals het dit al vele jaren doet. Deze basislijnen worden door veel organisaties gebruikt. De aanbevelingen in deze basislijnen zijn het gevolg van de samenwerking van het Microsoft Security-team met zakelijke klanten en externe organisaties, inclusief het Amerikaanse Ministerie van Defensie, de NIST (National Institute of Standards en Technology) en meer. We delen onze aanbevelingen en basislijnen met deze organisaties. Deze organisaties hebben ook hun eigen aanbevelingen die nauw aansluiten bij de aanbevelingen van Microsoft. Aangezien Mobile Device Management (MDM) blijft groeien in de cloud, heeft Microsoft gelijkwaardige MDM-aanbevelingen voor deze basislijnen groepsbeleid opgesteld. Deze aanvullende basislijnen zijn ingebouwd in Microsoft Intune en omvatten nalevingsrapporten voor gebruikers, groepen en apparaten die de basislijn volgen (of niet volgen).
 
 - Veel klanten gebruiken de aanbevelingen voor Intune-basislijnen als uitgangspunt, en passen deze vervolgens aan hun eigen IT- en beveiligingsbehoeften aan. De Windows 10 RS5 **MDM-beveiligingsbasislijn** van Microsoft is de eerste basislijn die wordt uitgebracht. Deze basislijn is gebouwd als een algemene infrastructuur die klanten de mogelijkheid biedt om uiteindelijk andere beveiligingsbasislijnen op basis van CIS, NIST en andere standaarden te importeren. Deze is op dit moment beschikbaar voor Windows en zal later beschikbaar komen voor iOS/iPadOS en Android.
 

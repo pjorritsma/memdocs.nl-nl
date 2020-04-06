@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 03/30/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d8ff51b8b20c5f6505cb341f666ce043b086b3b
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: 677f85874ddf206b716e70a0cc6c659e10b99fef
+ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220180"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438805"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Wat is er nieuw in Microsoft Intune?
 
-Ontdek elke week wat er nieuw is in Microsoft Intune. U vindt hier ook [belangrijke kennisgevingen](#notices), [oudere releases](whats-new-archive.md) en informatie over [hoe service-updates voor Intune worden uitgebracht](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728). 
+Ontdek elke week wat er nieuw is in Microsoft Intune in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431). U vindt hier ook [belangrijke kennisgevingen](#notices), [oudere releases](whats-new-archive.md) en informatie over [hoe service-updates voor Intune worden uitgebracht](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728). 
 
 > [!Note]
 > Het kan voor elke [maandelijkse update](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) tot drie dagen duren totdat deze wordt geïmplementeerd. Dit gebeurt in de volgende volgorde:
@@ -55,6 +55,59 @@ Ontdek elke week wat er nieuw is in Microsoft Intune. U vindt hier ook [belangri
 -->  
 
 <!-- ########################## -->
+## <a name="week-of-march-30-2020"></a>Week van 30 maart 2020
+
+### <a name="new-url-for-the-microsoft-endpoint-manager-admin-center---3704810---"></a>Nieuwe URL voor het Microsoft Endpoint Manager-beheercentrum<!-- 3704810 -->
+De URL voor het Microsoft Endpoint Manager-beheercentrum (voorheen Microsoft 365 Device Management) is gewijzigd in [https://endpoint.microsoft.com](https://endpoint.microsoft.com), zodat deze overeenkomt met de aankondiging van Microsoft Endpoint Manager op Ignite van vorig jaar. De URL voor het oude beheercentrum ([https://devicemanagement.microsoft.com](https://devicemanagement.microsoft.com)) werkt nog wel, maar het wordt aanbevolen de nieuwe URL te gebruiken voor het Microsoft Endpoint Manager-beheercentrum.
+
+Zie [IT-taken vereenvoudigen met het Microsoft Endpoint Manager-beheercentrum](what-is-device-management.md#simplify-it-tasks-using-the-device-management-admin-center) voor meer informatie.
+
+### <a name="app-management"></a>Appbeheer
+
+#### <a name="script-support-for-macos-devices-public-preview---4280361-wnready---"></a>Scriptondersteuning voor macOS-apparaten (openbare preview)<!-- 4280361 wnready -->
+U kunt scripts toevoegen en implementeren op macOS-apparaten. Dankzij deze ondersteuning hebt u meer mogelijkheden om macOS-apparaten te configureren buiten wat al mogelijk is, met behulp van systeemeigen MDM-mogelijkheden op macOS-apparaten. Zie [Shell-scripts op macOS-apparaten gebruiken in Intune](../apps/macos-shell-scripts.md) voor meer informatie.
+
+<!-- ########################## -->
+## <a name="week-of-march-24-2020"></a>Week van 24 maart 2020
+
+### <a name="improved-user-interface-experience-when-creating-device-restrictions-profiles-on-android-and-android-enterprise-devices---5841361---"></a>Verbeterde gebruikersinterface-ervaring bij het maken van profielen voor apparaatbeperkingen op Android- en Android Enterprise-apparaten<!-- 5841361 -->
+
+Wanneer u een profiel voor Android- of Android Enterprise-apparaten maakt, wordt de ervaring in het Microsoft Endpoint Manager-beheercentrum bijgewerkt. Deze wijziging is van invloed op de volgende apparaatconfiguratieprofielen (**Apparaten** > **Configuratieprofielen** > **Profiel maken** > **Android-apparaatbeheerder** of **Android Enterprise** voor platform):
+
+- Apparaatbeperkingen: Android-apparaatbeheerder
+- Apparaatbeperkingen: Android Enterprise-apparaateigenaar
+- Apparaatbeperkingen: Android Enterprise - Werkprofiel
+
+Zie [Android-apparaatbeheerder](../configuration/device-restrictions-android.md) en [Android Enterprise](../configuration/device-restrictions-android-for-work.md) voor meer informatie over de apparaatbeperkingen die u kunt configureren.
+
+### <a name="improved-user-interface-experience-when-creating-configuration-profiles-on-iosipados-and-macos-devices---5569002-5568997---"></a>Verbeterde gebruikersinterface-ervaring bij het maken van configuratieprofielen op iOS-/iPadOS- en macOS-apparaten<!-- 5569002 5568997 -->
+
+Wanneer u een profiel voor iOS-of macOS-apparaten maakt, wordt de ervaring in het Microsoft Endpoint Manager-beheercentrum bijgewerkt. Deze wijziging is van invloed op de volgende apparaatconfiguratieprofielen (**Apparaten** > **Configuratieprofielen** > **Profiel maken** > **iOS/iPadOS** of **macOS** als platform):
+
+- Aangepast: iOS/iPadOS, macOS
+- Apparaatfuncties: iOS/iPadOS, macOS
+- Apparaatbeperkingen: iOS/iPadOS, macOS
+- Endpoint Protection: macOS
+- Extensies: macOS
+- Voorkeursbestand: macOS
+
+### <a name="hide-from-user-configuration-setting-in-device-features-on-macos-devices---6524869---"></a>Verbergen in de instelling voor gebruikersconfiguratie in de apparaatfuncties op macOS-apparaten<!-- 6524869 -->
+
+Wanneer u een configuratieprofiel voor apparaatfuncties maakt op macOS-apparaten, is er een nieuwe instelling beschikbaar, **Verbergen voor gebruikersconfiguratie**, (via **Apparaten** > **Configuratieprofielen** > **Profiel maken** > **macOS** voor platform > **Apparaatfuncties** voor profiel > **Aanmeldingsitems**).
+
+Met deze functie wordt het selectievakje voor het verbergen van een app in de lijst **Gebruikers en groepen** in de lijst met aanmeldingsitems voor apps op macOS-apparaten ingesteld. Voor bestaande profielen wordt deze instelling in de lijst als niet-geconfigureerd weergegeven. Beheerders kunnen bestaande profielen bijwerken om deze instelling te configureren.
+
+Als deze optie is ingesteld op **Verbergen**, wordt het selectievakje voor het verbergen van een app ingeschakeld. Gebruikers kunnen dit niet wijzigen. De app wordt ook verborgen voor gebruikers nadat ze zich aanmelden op hun apparaten.
+
+> [!div class="mx-imgBorder"]
+> ![Apps verbergen op macOS-apparaten nadat gebruikers zich aanmelden bij het apparaat in Microsoft Intune en Endpoint Manager](./media/whats-new/macos-hide-checkmark-users-groups-login-items-apps-list.png)
+
+Zie [Instellingen van apparaatfuncties voor macOS in Intune](../configuration/macos-device-features-settings.md) voor meer informatie over de instelling die u kunt configureren.
+
+Deze functie is van toepassing op:
+
+- macOS
+
 ## <a name="week-of-march-16-2020-2003-service-release"></a>Week van 16 maart 2020 (2003 servicerelease)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -90,7 +143,7 @@ Deze wijzigingen worden in de loop van de maand maart gefaseerd ingevoerd terwij
 ### <a name="device-configuration"></a>Apparaatconfiguratie
 
 #### <a name="new-user-experience-when-creating-administrative-templates-on-windows-devices--5096036---"></a>Nieuwe gebruikerservaring bij het maken van beheersjablonen op Windows-apparaten<!--5096036 -->
-Op basis van feedback van klanten en onze overstap naar de nieuwe Azure-ervaring in volledig scherm hebben we de profielervaring voor Beheersjablonen bijgewerkt met een mapweergave. Er zijn geen wijzigingen aangebracht in instellingen of bestaande profielen. Bestaande profielen zijn dus niet gewijzigd en kunnen in de nieuwe weergave worden gebruikt. U kunt nog steeds naar alle instellingsopties navigeren door **Alle instellingen** te selecteren en zoekopdrachten te gebruiken. De structuurweergave is onderverdeeld in Computer- en Gebruikersconfiguraties. U vindt instellingen voor Windows, Office en Edge in de betreffende mappen.  
+Op basis van feedback van klanten en onze overstap naar de nieuwe Azure-ervaring in volledig scherm hebben we de profielervaring voor Beheersjablonen bijgewerkt met een mapweergave. Er zijn geen wijzigingen aangebracht in instellingen of bestaande profielen. Uw bestaande profielen zijn dus niet gewijzigd en kunnen in de nieuwe weergave worden gebruikt. U kunt nog steeds naar alle instellingsopties navigeren door **Alle instellingen** te selecteren en zoekopdrachten te gebruiken. De structuurweergave is onderverdeeld in Computer- en Gebruikersconfiguraties. U vindt instellingen voor Windows, Office en Edge in de betreffende mappen.  
 
 Van toepassing op:
 - Windows 10 en nieuwer
@@ -183,7 +236,7 @@ Op deze niet-compatibele apparaten zien gebruikers op de pagina **Apparaatinstel
 2. Inschrijven bij Beheer van werkprofielen
 3. Problemen met naleving oplossen 
  
-Google vermindert de ondersteuning voor apparaatbeheerders in nieuwe Android-versies in een poging om apparaatbeheer moderner, breder en veiliger te maken met behulp van Android Enterprise.  Intune biedt slechts tot het tweede kwartaal van 2020 nog ondersteuning voor Android-apparaten met Android 10 en hoger die door apparaatbeheerder worden beheerd. Apparaten die worden beheerd met apparaatbeheerder (m.u.v. Samsung) en waarop Android 10 of hoger wordt uitgevoerd, kunnen na dit moment niet langer volledig worden beheerd. Betrokken apparaten ontvangen met name geen nieuwe wachtwoordvereisten meer. Lees deze [Kennisgeving](#decreasing-support-for-android-device-administrator) voor meer informatie.
+Google vermindert de ondersteuning voor apparaatbeheerders in nieuwe Android-versies in een poging om apparaatbeheer moderner, breder en veiliger te maken met behulp van Android Enterprise.  Intune biedt slechts tot het tweede kwartaal van 2020 nog ondersteuning voor Android-apparaten met Android 10 en hoger die door apparaatbeheerder worden beheerd. Apparaten die worden beheerd met apparaatbeheerder (m.u.v. Samsung) en waarop Android 10 of hoger wordt uitgevoerd, kunnen na dit moment niet langer volledig worden beheerd. Betrokken apparaten ontvangen met name geen nieuwe wachtwoordvereisten meer.
 
 Meer informatie over deze instelling vindt u in [Android-apparaten verplaatsen van beheer door apparaatbeheerder naar werkprofielbeheer](../enrollment/android-move-device-admin-work-profile.md). 
 
@@ -295,7 +348,11 @@ Raadpleeg het [artikel Configuration Manager Technical Preview](https://docs.mic
 U kunt nu bulkopdrachten uitgeven voor de volgende externe acties: opnieuw opstarten, naam wijzigen, Autopilot opnieuw instellen, wissen en verwijderen. Ga naar [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) > **Apparaten** > **Alle apparaten** > **Bulkacties** om de nieuwe bulkacties weer te geven.
 
 #### <a name="all-devices-list-improved-search-sort-and-filter--6179023--"></a>De lijst met alle apparaten biedt verbeterde functionaliteit voor zoeken, sorteren en filteren<!--6179023-->
-De lijst met alle apparaten is verbeterd voor betere prestaties en betere functionaliteit op het gebied van zoeken, sorteren en filteren. Voor meer informatie raadpleegt u [deze ondersteuningstip](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-changes-in-all-devices-list-and-reporting-in-intune/ba-p/1220946).
+De lijst met alle apparaten is verbeterd voor betere prestaties en betere functionaliteit op het gebied van zoeken, sorteren en filteren. Voor meer informatie raadpleegt u [deze ondersteuningstip](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-changes-in-all-devices-list-and-reporting-in-intune/ba-p/1220946).  
+
+### <a name="app-management"></a>Appbeheer  
+####  <a name="improved-sign-in-experience-in-company-portal-for-android"></a>Bijgewerkte aanmeldervaring voor de bedrijfsportal-app voor Android    
+De indeling van diverse aanmeldingsschermen in de bedrijfsportal-app voor Android is bijgewerkt voor een modernere, eenvoudige en duidelijke ervaring voor gebruikers. Zie [Wat is er nieuw in de gebruikersinterface van de app?](https://docs.microsoft.com/mem/intune/fundamentals/whats-new-app-ui) voor een overzicht van de verbeteringen.
 
 <!-- ########################## -->
 ## <a name="week-of-february-24-2020"></a>Week van 24 februari 2020
@@ -405,7 +462,7 @@ De naam van de optie in het beheercentrum voor Microsoft Eindpuntbeheer is bijge
 ### <a name="role-based-access-control"></a>Op rollen gebaseerd toegangsbeheer
 
 #### <a name="intune-roles-user-interface-changes-coming--5801612-----"></a>Wijzigingen in de gebruikersinterface van Intune-rollen zijn binnenkort beschikbaar<!--5801612   -->
-De gebruikersinterface voor [Beheercentrum voor Microsoft Eindpuntbeheer](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenantbeheer** > **Rollen** heeft nu een gebruiksvriendelijk en intuïtief ontwerp. Deze ervaring biedt dezelfde instellingen en gegevens als u nu gebruikt, maar werkt met een wizardachtige procedure.
+De gebruikersinterface voor het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenantbeheer** > **Rollen** heeft nu een gebruiksvriendelijker en intuïtief ontwerp. Deze ervaring biedt dezelfde instellingen en gegevens als u nu gebruikt, maar werkt met een wizardachtige procedure.
 
 <!-- ########################## -->
 ## <a name="week-of-february-17-2020"></a>Week van 17 februari 2020
@@ -487,10 +544,10 @@ Van toepassing op:
 ### <a name="device-enrollment"></a>Apparaatinschrijving
 
 #### <a name="block-android-enrollments-by-device-manufacturer--5197392----"></a>Android-inschrijvingen blokkeren op apparaatfabrikant<!--5197392  -->
-U kunt inschrijven van bepaalde apparaten blokkeren, op basis van de fabrikant van het apparaat. Deze functie is van toepassing op apparaten met werkprofielen voor Android-apparaatbeheerder en Android Enterprise. Ga naar het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) > **Apparaten** > **Inschrijvingsbeperkingen** om de inschrijvingsbeperkingen te zien.
+U kunt inschrijven van bepaalde apparaten blokkeren, op basis van de fabrikant van het apparaat. Deze functie is van toepassing op apparaten met werkprofielen voor Android-apparaatbeheerder en Android Enterprise. Ga naar [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) > **Apparaten** > **Inschrijvingsbeperkingen** om de inschrijvingsbeperkingen te zien.
 
 #### <a name="improvements-to-the-iosipados-create-enrollment-type-profile-ui---6055005---"></a>Verbeteringen in de UI voor het iOS/iPadOS-profielinschrijvingstype maken<!-- 6055005 -->
-Voor iOS/iPadOS-gebruikersinschrijving is de pagina **Profielinschrijvingstype maken** **Instellingen** gestroomlijnd om het keuzeproces voor **Inschrijvingstype** te verbeteren met behoud van dezelfde functionaliteit. Als u de nieuwe UI wilt bekijken, gaat u naar het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) > **Apparaten** > **iOS** > **iOS-inschrijving** > **Inschrijvingstypen** > **Profiel maken** > **pagina Instellingen**. Raadpleeg [Een gebruikersinschrijvingsprofiel maken in Intune](../enrollment/ios-user-enrollment.md#create-a-user-enrollment-profile-in-intune) voor meer informatie.
+Voor iOS/iPadOS-gebruikersinschrijving is de pagina **Profielinschrijvingstype maken** **Instellingen** gestroomlijnd om het keuzeproces voor **Inschrijvingstype** te verbeteren met behoud van dezelfde functionaliteit. Als u de nieuwe UI wilt bekijken, gaat u naar het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) > **Apparaten** > **iOS** > **iOS-inschrijving** > **Inschrijvingstypen** > **Profiel maken** >  pagina **Instellingen**. Raadpleeg [Een gebruikersinschrijvingsprofiel maken in Intune](../enrollment/ios-user-enrollment.md#create-a-user-enrollment-profile-in-intune) voor meer informatie.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-management"></a>Apparaatbeheer

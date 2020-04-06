@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d2814c1a7cc4dcb111e3454a6d359679df09c57b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 53f95c83cecbfce68b2370c0c0d4f8e98f856e12
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354760"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326698"
 ---
 # <a name="add-users-and-grant-administrative-permission-to-intune"></a>Gebruikers toevoegen en beheerdersmachtigingen aan Intune toekennen
 
@@ -57,7 +57,7 @@ U kunt handmatig gebruikers aan uw Intune-abonnement toevoegen via het [Microsof
 
 ### <a name="add-intune-users-in-the-azure-portal"></a>Intune-gebruikers toevoegen in de Azure-portal
 
-1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431)**Gebruikers** > **Alle gebruikers**.
+1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Gebruikers** > **Alle gebruikers**.
 2. Selecteer **Nieuwe gebruiker** in het beheercentrum.
 3. Geef de volgende gebruikersgegevens op:
    - **Naam**

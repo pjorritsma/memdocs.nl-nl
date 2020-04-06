@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c4ffe68585d58b4bc61d6302d7772fd2e19855c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 50dd3d245b9a89836e3858d71a7ad124189e0973
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361741"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407854"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>Met macOS-apparaatinstellingen kunt u functies toestaan of beperken met behulp van Intune
-
-
 
 In dit artikel vindt u een overzicht en beschrijving van de verschillende instellingen die u kunt beheren op macOS-apparaten. Gebruik deze instellingen als onderdeel van de MDM-oplossing (Mobile Device Management) om functies toe te staan of uit te schakelen, wachtwoordregels in te stellen, bepaalde apps toe te staan of te beperken en nog veel meer.
 
@@ -42,85 +40,89 @@ Deze instellingen worden toegevoegd aan een apparaatconfiguratieprofiel in Intun
 
 ### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Deze instellingen zijn van toepassing op: Apparaatinschrijving en geautomatiseerde apparaatinschrijving
 
-- **Definitie opzoeken**: Met **Blokkeren** voorkomt u dat de gebruiker een woord markeert en vervolgens de definitie ervan opzoekt op het apparaat. **Niet geconfigureerd** (standaard): geeft toegang tot de functie Opzoeken van definities van woorden.
-- **Dicteren**: Met **Blokkeren** zorgt u ervoor dat de gebruiker geen spraak meer kan gebruiken om tekst in te voeren. **Niet geconfigureerd** (standaard): staat de gebruiker toe invoer van Dicteren te gebruiken.
-- **Cacheopslag van inhoud**: Kies **Niet geconfigureerd** (standaard) om opslag van inhoud in cache mogelijk te maken. Met cacheopslag van inhoud worden app-gegevens, webbrowsergegevens, downloads en meer lokale items op het apparaat opgeslagen. Selecteer **Blokkeren** om te voorkomen dat deze gegevens in de cache worden opgeslagen.
+- **Definitie opzoeken**: Met **Blokkeren** voorkomt u dat de gebruiker een woord markeert en vervolgens de definitie ervan opzoekt op het apparaat. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem de functie Definitie opzoeken toestaat.
+- **Dicteren**: **Blokkeren** zorgt ervoor dat gebruikers geen spraakinvoer meer kunnen gebruiken om tekst in te voeren. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem toestaat dat gebruikers dicteerinvoer gebruiken.
+- **Cacheopslag van inhoud**: Met **Blokkeren** voorkomt u dat inhoud in de cache wordt opgeslagen. Met cacheopslag van inhoud worden app-gegevens, webbrowsergegevens, downloads en meer lokale items op apparaten opgeslagen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem caching van inhoud inschakelt.
 
   Zie [Cacheopslag van inhoud beheren op een Mac](https://support.apple.com/guide/mac-help/manage-content-caching-on-mac-mchl3b6c3720/mac) (hiermee wordt een andere website geopend) voor meer informatie over cacheopslag van inhoud in macOS.
 
   Deze functie is van toepassing op:  
   - macOS 10.13 en hoger
 
-- **Software-updates uitstellen**: Als de waarde is ingesteld op **Niet geconfigureerd** (standaard), worden software-updates weergegeven op het apparaat wanneer Apple deze uitbrengt. Als Apple bijvoorbeeld op een bepaalde datum een macOS-update uitbrengt, wordt deze update rond de releasedatum automatisch op het apparaat weergegeven. Seed-buildupdates zijn zonder vertraging toegestaan.
-
-  Met **Inschakelen** kunt u het weergeven van software-updates op apparaten uitstellen, van 0-90 dagen. Deze instelling bepaalt niet wanneer updates wel of niet worden geïnstalleerd. 
+- **Software-updates uitstellen**: Met **Inschakelen** kunt u het weergeven van software-updates op apparaten uitstellen, van 0-90 dagen. Deze instelling bepaalt niet wanneer updates wel of niet worden geïnstalleerd. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem updates op apparaten weergeeft wanneer Apple deze heeft uitgegeven. Als Apple bijvoorbeeld op een bepaalde datum een macOS-update uitbrengt, wordt deze update rond de releasedatum automatisch op apparaten weergegeven. Seed-buildupdates zijn zonder vertraging toegestaan.  
 
   - **De zichtbaarheid van software-updates vertragen**: Voer een waarde in tussen 0 en 90 dagen. Wanneer de vertraging verloopt, krijgen gebruikers een melding om een update uit te voeren naar de vroegste versie van het besturingssysteem die beschikbaar was toen de vertraging werd geactiveerd.
 
-    Als een macOS-update bijvoorbeeld beschikbaar komt op **1 januari** en **Zichtbaarheid vertragen** is ingesteld op **5 dagen**, wordt de update niet als beschikbare update weergegeven. Op de **zesde dag** na de release komt deze update beschikbaar en kunnen eindgebruikers deze installeren.
+    Als een macOS-update bijvoorbeeld beschikbaar komt op **1 januari** en **Zichtbaarheid vertragen** is ingesteld op **5 dagen**, wordt de update niet als beschikbare update weergegeven. Op de **zesde dag** na de release komt deze update beschikbaar en kunnen gebruikers deze installeren.
 
     Deze functie is van toepassing op:  
     - macOS 10.13.4 en hoger
 
-- **Schermopnamen**: Het apparaat moet zijn ingeschreven bij het geautomatiseerde DEP (Device Enrollment Program) van Apple. Als dit is ingesteld op **Blokkeren**, kunnen gebruikers geen schermopname van de weergave opslaan. Ook wordt het bekijken van externe schermen via de Classroom-app geblokkeerd. **Niet geconfigureerd** (standaard): staat gebruikers toe schermopnamen vast te leggen, en staat de Classroom-app toe externe schermen weer te geven.
+- **Schermopnamen**: Het apparaat moet zijn ingeschreven bij het geautomatiseerde DEP (Device Enrollment Program) van Apple. Met **Blokkeren** kunnen gebruikers geen schermopnamen van de weergave opslaan. Ook wordt het bekijken van externe schermen via de Classroom-app geblokkeerd. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem gebruikers toestaat schermopnamen vast te leggen, en de Classroom-app de mogelijkheid biedt om externe schermen weer te geven.
 
 ### <a name="settings-apply-to-automated-device-enrollment"></a>Deze instellingen zijn van toepassing op: Automatische apparaatinschrijving
 
-- **Externe schermobservatie via de Classroom-app**: Met **Uitschakelen** kunnen docenten de Classroom-app niet gebruiken om de schermen van hun studenten te bekijken. **Niet geconfigureerd** (standaard): staat docenten toe de schermen van hun leerlingen/studenten te bekijken.
+- **Externe schermobservatie via de Classroom-app**: Met **Uitschakelen** kunnen docenten de Classroom-app niet gebruiken om de schermen van hun studenten te bekijken. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem docenten toestaat de schermen van hun leerlingen/studenten te bekijken.
 
   Als u deze instelling wilt gebruiken, stelt u de instelling **Schermopnamen** in op **Niet geconfigureerd** (schermopnamen zijn toegestaan).
 
-- **Ongevraagde schermobservatie met de app Classroom**: Met **Toestaan** kunnen docenten de schermen van hun studenten bekijken zonder dat deze daar toestemming voor hoeven te geven. **Niet geconfigureerd** (standaard): vereist dat de leerling/student akkoord gaat voordat de docent de schermen kan zien.
+- **Ongevraagde schermobservatie met de app Classroom**: Met **Toestaan** kunnen docenten de schermen van hun studenten bekijken zonder dat deze daar toestemming voor hoeven te geven. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem vereist dat docenten de schermen pas kunnen zien als studenten akkoord gaan.
 
   Als u deze instelling wilt gebruiken, stelt u de instelling **Schermopnamen** in op **Niet geconfigureerd** (schermopnamen zijn toegestaan).
 
-- **Studenten moeten toestemming vragen om de Classroom-les te verlaten**: Met **Vereisen** hebben studenten die zijn ingeschreven bij een niet-beheerde Classroom-cursus, goedkeuring van de docent nodig om de cursus te verlaten. **Niet geconfigureerd** (standaard): staat leerlingen/studenten toe de cursus te verlaten wanneer ze willen.
+- **Studenten moeten toestemming vragen om de Classroom-les te verlaten**: Met **Vereisen** hebben studenten die zijn ingeschreven bij een niet-beheerde Classroom-cursus, goedkeuring van de docent nodig om de cursus te verlaten. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem studenten toestaat de cursus te verlaten wanneer ze willen.
 
-- **Docenten kunnen automatisch apparaten of apps vergrendelen in de Classroom-app**: Met **Toestaan** kunnen docenten het apparaat of een app van een student vergrendelen zonder goedkeuring van de student. **Niet geconfigureerd** (standaard): vereist dat de leerling/student akkoord gaat voordat de docent het apparaat of de app kan vergrendelen.
+- **Docenten kunnen automatisch apparaten of apps vergrendelen in de Classroom-app**: Met **Toestaan** kunnen docenten het apparaat of een app van een student vergrendelen zonder goedkeuring van de student. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem vereist dat docenten het apparaat of de app pas kunnen vergrendelen als studenten akkoord gaan.
 
-- **Studenten kunnen automatisch deelnemen aan een Classroom-les**: Met **Toestaan** kunnen studenten zich bij een les aansluiten zonder dat aan de docent te hoeven vragen. **Niet geconfigureerd** (standaard): vereist dat docenten goedkeuring geven voor deelname aan een klas.
+- **Studenten kunnen automatisch deelnemen aan een Classroom-les**: Met **Toestaan** kunnen studenten zich bij een les aansluiten zonder dat aan de docent te hoeven vragen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem vereist dat docenten goedkeuring geven voor deelname aan een klas.
 
 ## <a name="password"></a>Wachtwoord
 
 ### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Deze instellingen zijn van toepassing op: Apparaatinschrijving en geautomatiseerde apparaatinschrijving
 
-- **Wachtwoord**: **Vereisen** dat de eindgebruiker een wachtwoord invoert voor toegang tot het apparaat. **Niet geconfigureerd** (standaard): vereist geen wachtwoord. Er worden ook geen beperkingen afgedwongen, zoals het blokkeren van eenvoudige wachtwoorden of het instellen van een minimumlengte.
-  - **Vereist wachtwoordtype**: Hier geeft u op of het wachtwoord alleen numerieke tekens mag bevatten of dat het wachtwoord alfanumeriek moet zijn (en dus letters en cijfers moet bevatten).
+- **Wachtwoord**: **Vereisen** dat gebruikers een wachtwoord invoeren om toegang te krijgen tot apparaten. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem geen wachtwoord vereist. Er worden ook geen beperkingen afgedwongen, zoals het blokkeren van eenvoudige wachtwoorden of het instellen van een minimumlengte.
+  - **Vereist wachtwoordtype**: Voer het vereiste complexiteitsniveau voor het wachtwoord in dat uw organisatie nodig heeft. Uw opties zijn:
+    - **Niet geconfigureerd**: Deze instelling wordt niet gewijzigd of bijgewerkt door Intune.
+    - **Numeriek**: Het wachtwoord mag alleen uit getallen bestaan, bijvoorbeeld 123456789.
+    - **Alfanumeriek**: Dit zijn hoofdletters, kleine letters en numerieke tekens.
 
     Deze functie is van toepassing op:  
     - macOS 10.10.3 en hoger
 
-  - **Het aantal niet-alfanumerieke tekens in het wachtwoord**: Hier geeft u op hoeveel complexe tekens zijn vereist in het wachtwoord (tussen **0** en **4**).<br>Een complex teken is een symbool zoals ‘ **?** ’.
-  - **Minimale wachtwoordlengte**: Voer de minimumlengte van het wachtwoord in dat een gebruiker moet opgeven (tussen **4** en **16** tekens).
-  - **Eenvoudige wachtwoorden**: Hier stelt u in dat eenvoudige wachtwoorden mogen worden gebruikt, zoals **0000** en **1234**.
-  - **Maximum aantal minuten na schermvergrendeling voordat wachtwoord is vereist**: Hier geeft u op hoe lang de computer inactief moet zijn voordat een wachtwoord vereist is om te ontgrendelen.
-  - **Maximum aantal minuten van inactiviteit voordat het scherm wordt vergrendeld**: Hier geeft u de tijdsduur op die de computer inactief moet zijn voordat het scherm wordt vergrendeld.
-  - **Wachtwoordverlooptijd (dagen)** : Hier geeft u op na hoeveel dagen de gebruiker het wachtwoord moet wijzigen (tussen **1** en **255** dagen).
-  - **Wachtwoorden niet opnieuw gebruiken**: Voer het aantal eerder gebruikte wachtwoorden in dat niet opnieuw mag worden gebruikt, van **1** tot **24**.
+  - **Het aantal niet-alfanumerieke tekens in het wachtwoord**: Geef op hoeveel complexe tekens zijn vereist in het wachtwoord, tussen 0 en 4. Een complex teken is een symbool, zoals `?`
+  - **Minimale wachtwoordlengte**: Voer de minimale lengte van het wachtwoord in, tussen 4 en 16 tekens.
+  - **Eenvoudige wachtwoorden**: Sta eenvoudige wachtwoorden toe, zoals `0000` of `1234`.
+  - **Maximum aantal minuten na schermvergrendeling voordat wachtwoord is vereist**: Geef op hoe lang de computer inactief moet zijn voordat een wachtwoord vereist is om te ontgrendelen. Wanneer de waarde leeg is of is ingesteld op **Niet geconfigureerd**, wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
+  - **Maximum aantal minuten van inactiviteit voordat het scherm wordt vergrendeld**: Voer de tijdsduur in gedurende welke apparaten inactief moeten zijn voordat het scherm automatisch wordt vergrendeld. Voer bijvoorbeeld 5 in om apparaten te vergrendelen nadat deze 5 minuten lang inactief zijn geweest. Wanneer de waarde leeg is of is ingesteld op **Niet geconfigureerd**, wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
+  - **Wachtwoordverlooptijd (dagen)** : Geef het aantal dagen tussen 1 en 65535 op waarna het wachtwoord voor het apparaat moet worden gewijzigd. Voer bijvoorbeeld `90` als u wilt dat het wachtwoord na 90 dagen verloopt. Wanneer het wachtwoord is verlopen, wordt gebruikers gevraagd een nieuw wachtwoord te maken. Wanneer de waarde leeg is, wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
+  - **Wachtwoorden niet opnieuw gebruiken**: Gebruik deze instelling om te voorkomen dat gebruikers eerder gebruikte wachtwoorden hergebruiken. Voer het aantal eerder gebruikte wachtwoorden in dat niet opnieuw mag worden gebruikt, van 1 tot 24. Als u bijvoorbeeld 5 invoert, kan een gebruiker zijn nieuwe wachtwoord niet instellen op zijn huidige wachtwoord of een van zijn vier wachtwoorden daarvoor. Wanneer de waarde leeg is, wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
 
-- **Blokkeren dat gebruiker de wachtwoordcode wijzigt**: Selecteer **Blokkeren** om ervoor te zorgen dat de wachtwoordcode niet meer kan worden gewijzigd, toegevoegd of verwijderd. **Niet geconfigureerd** (standaard): staat toe dat wachtwoordcodes worden toegevoegd, gewijzigd of verwijderd.
-- **Ontgrendelen met vingerafdruk blokkeren**: Selecteer **Blokkeren** om te voorkomen dat vingerafdrukken kunnen worden gebruikt om het apparaat te ontgrendelen. **Niet geconfigureerd** (standaard): staat de gebruiker toe het apparaat te ontgrendelen met een vingerafdruk.
+- **Blokkeren dat gebruiker de wachtwoordcode wijzigt**: **Blokkeren** voorkomt dat de wachtwoordcode kan worden gewijzigd, toegevoegd of verwijderd. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem toestaat dat wachtwoordcodes worden toegevoegd, gewijzigd of verwijderd.
+- **Ontgrendelen met vingerafdruk blokkeren**: Met **Blokkeren** kunnen geen vingerafdrukken worden gebruikt om apparaten te ontgrendelen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem toestaat dat gebruikers het apparaat ontgrendelen met behulp van een vingerafdruk.
 
-- **Automatisch wachtwoorden invullen blokkeren**: Selecteer **Blokkeren** om te voorkomen dat de functie Wachtwoorden automatisch invullen wordt gebruikt in macOS. Als u **Blokkeren** kiest, heeft dat ook de volgende gevolgen:
+- **Automatisch wachtwoorden invullen blokkeren**: Met **Blokkeren** voorkomt u dat de functie Wachtwoorden automatisch invullen wordt gebruikt in macOS. Als u **Blokkeren** kiest, heeft dat ook de volgende gevolgen:
 
   - Gebruikers wordt niet meer gevraagd om een wachtwoord te gebruiken dat is opgeslagen in Safari of in een app.
   - Automatische sterke wachtwoorden zijn uitgeschakeld en gebruikers krijgen geen suggesties voor sterke wachtwoorden.
 
-  **Niet geconfigureerd** (standaard) staat deze functies toe.
+  Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem deze functies toestaat.
 
-- **Aanvragen voor wachtwoordnabijheid blokkeren**: Selecteer **Blokkeren** zodat het apparaat van een gebruiker geen wachtwoorden aanvraagt van apparaten in de omgeving. **Niet geconfigureerd** (standaard): staat deze wachtwoordaanvragen toe.
+- **Aanvragen voor wachtwoordnabijheid blokkeren**: Met **Blokkeren** voorkomt u dat apparaten wachtwoorden van nabijgelegen apparaten aanvragen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem deze wachtwoordaanvragen toestaat.
 
-- **Wachtwoorden delen blokkeren**: Selecteer **Blokkeren** om te voorkomen dat wachtwoorden via AirDrop tussen apparaten worden gedeeld. **Niet geconfigureerd** (standaard): staat toe dat wachtwoorden worden gedeeld.
+- **Wachtwoorden delen blokkeren**: Selecteer **Blokkeren** om te voorkomen dat wachtwoorden via AirDrop tussen apparaten worden gedeeld. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem het delen van wachtwoorden toestaat.
 
 ## <a name="built-in-apps"></a>Ingebouwde apps
 
 ### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Deze instellingen zijn van toepassing op: Apparaatinschrijving en geautomatiseerde apparaatinschrijving
 
-- **Automatisch invullen in Safari blokkeren**: Selecteer **Blokkeren** om de functie Automatisch invullen in Safari op het apparaat uit te schakelen. **Niet geconfigureerd** (standaard): staat gebruikers toe de instellingen voor automatisch doorvoeren te wijzigen in de webbrowser.
-- **Camera blokkeren**: Met **Blokkeren** voorkomt u toegang tot de camera op het apparaat. **Niet geconfigureerd** (standaard): staat toegang tot de camera van het apparaat toe.
-- **Apple Music blokkeren**: Met **Blokkeren** keert u terug naar de klassieke modus van de app Muziek en wordt de Muziek-service uitgeschakeld. **Niet geconfigureerd** (standaard): staat het gebruik van de app Apple Music toe.
-- **Zoekresultaten van internet blokkeren in Spotlight**: Met **Blokkeren** zorgt u ervoor dat Spotlight geen resultaten meer retourneert na een zoekopdracht op internet. **Niet geconfigureerd** (standaard): staat Zoeken met Spotlight toe om verbinding te maken met internet voor zoekresultaten.
-- **Bestandsoverdracht via iTunes blokkeren**: Met **Blokkeren** worden services voor het delen van toepassingsbestanden uitgeschakeld. Met **Niet geconfigureerd** (standaard) zijn services voor het delen van toepassingsbestanden toegestaan.
+- **Automatisch invullen in Safari blokkeren**: Met **Blokkeren** wordt de functie Automatisch invullen in Safari op apparaten uitgeschakeld. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem gebruikers toestaat de instellingen voor automatisch doorvoeren te wijzigen in de webbrowser.
+- **Camera blokkeren**: Met **Blokkeren** voorkomt u dat gebruikers toegang hebben tot de camera op apparaten. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem kan standaard toegang tot de camera van het apparaat toestaan.
+
+  Intune beheert alleen de toegang tot de camera van het apparaat. Het heeft geen toegang tot afbeeldingen of video's.
+
+- **Apple Music blokkeren**: Met **Blokkeren** keert u terug naar de klassieke modus van de app Muziek en wordt de Muziek-service uitgeschakeld. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem het gebruik van de app Apple Music toestaat.
+- **Zoekresultaten van internet blokkeren in Spotlight**: Met **Blokkeren** zorgt u ervoor dat Spotlight geen resultaten meer retourneert na een zoekopdracht op internet. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem toestaat dat Zoeken met Spotlight verbinding maakt met internet om zoekresultaten op te halen.
+- **Bestandsoverdracht via iTunes blokkeren**: Met **Blokkeren** worden services voor het delen van toepassingsbestanden uitgeschakeld. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem services voor het delen van toepassingsbestanden toestaat.
 
   Deze functie is van toepassing op:  
   - macOS 10.13 en hoger
@@ -131,12 +133,13 @@ Deze instellingen worden toegevoegd aan een apparaatconfiguratieprofiel in Intun
 
 - **Lijst met typen beperkte apps**: Hiermee maakt u een lijst met apps die gebruikers niet mogen installeren of gebruiken. Uw opties zijn:
 
-  - **Niet geconfigureerd** (standaard): Er zijn geen beperkingen vanuit Intune. Gebruikers hebben toegang tot apps die u toewijst en tot ingebouwde apps.
-  - **Niet-toegestane apps**: Apps die niet worden beheerd in Intune waarvan u niet wilt dat deze op het apparaat worden geïnstalleerd. Gebruikers kunnen geen verboden apps installeren. Maar als een gebruiker een app uit deze lijst installeert, wordt deze in Intune gerapporteerd.
-  - **Goedgekeurde apps**: Apps die gebruikers mogen installeren. Gebruikers mogen geen apps installeren die niet worden vermeld. Apps die worden beheerd door Intune, zijn automatisch toegestaan. Er wordt niet voorkomen dat gebruikers een app installeren die niet in de goedgekeurde lijst wordt vermeld. Maar als dat wel het geval is, wordt dit in Intune gerapporteerd.
+  - **Niet geconfigureerd** (standaard): Deze instelling wordt niet gewijzigd of bijgewerkt door Intune. Standaard is het mogelijk dat gebruikers toegang hebben tot door u toegewezen apps en ingebouwde apps.
+  - **Niet-toegestane apps**: Hiermee maakt u een lijst met apps die niet worden beheerd door Intune en die gebruikers niet mogen installeren en uitvoeren. Gebruikers kunnen geen verboden apps installeren. Als een gebruiker een app uit deze lijst installeert, wordt deze in Intune gerapporteerd.
+  - **Goedgekeurde apps**: Hiermee maakt u een lijst met apps die gebruikers mogen installeren. Om te voldoen aan het beleid, mogen gebruikers geen andere apps installeren. Apps die worden beheerd door Intune worden automatisch toegestaan, zoals de bedrijfsportal-app. Er wordt niet voorkomen dat gebruikers een app installeren die niet in de goedgekeurde lijst wordt vermeld. Maar als dat wel het geval is, wordt dit in Intune gerapporteerd.
+
 - **App-bundel-id**: Voer de [App-bundel-id](bundle-ids-built-in-ios-apps.md) van de gewenste app in. U kunt ingebouwde apps en Line-Of-Business-apps weergeven of verbergen. De website van Apple bevat een lijst met [ingebouwde Apple-apps](https://support.apple.com/HT208094).
 - **App-naam**: Voer de naam van de gewenste app in. U kunt ingebouwde apps en Line-Of-Business-apps weergeven of verbergen. De website van Apple bevat een lijst met [ingebouwde Apple-apps](https://support.apple.com/HT208094).
-- **Uitgever**: Voer de uitgever van de gewenste app in.
+- **Uitgever**: Voer de uitgever van de app in.
 
 Als u apps wilt toevoegen aan deze lijsten, kunt u:
 
@@ -147,23 +150,23 @@ Als u apps wilt toevoegen aan deze lijsten, kunt u:
 
 ### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Deze instellingen zijn van toepassing op: Apparaatinschrijving en geautomatiseerde apparaatinschrijving
 
-- **AirDrop blokkeren**: Selecteer **Blokkeren** om het gebruik van AirDrop op het apparaat te voorkomen. **Niet geconfigureerd** (standaard): staat het gebruik van de functie AirDrop toe voor het uitwisselen van inhoud met apparaten in de omgeving.
-- **Automatisch ontgrendelen via Apple Watch blokkeren**: Met **Blokkeren** voorkomt u dat gebruikers hun macOS-apparaat ontgrendelen met hun Apple Watch. Met **Niet geconfigureerd** (standaard) kunnen gebruikers hun macOS-apparaat ontgrendelen met hun Apple Watch.
+- **AirDrop blokkeren**: Met **Blokkeren** voorkomt u dat gebruikers AirDrop op apparaten gebruiken. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem het gebruik van de functie AirDrop toestaat voor het uitwisselen van inhoud met apparaten in de omgeving.
+- **Automatisch ontgrendelen via Apple Watch blokkeren**: Met **Blokkeren** voorkomt u dat gebruikers hun macOS-apparaat ontgrendelen met hun Apple Watch. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem toestaat dat gebruikers hun macOS-apparaat kunnen ontgrendelen met hun Apple Watch.
 
 ## <a name="cloud-and-storage"></a>Cloud en opslag
 
 ### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Deze instellingen zijn van toepassing op: Apparaatinschrijving en geautomatiseerde apparaatinschrijving
 
-- **Synchronisatie van iCloud-sleutelhanger blokkeren**: Selecteer **Blokkeren** om het synchroniseren van referenties die zijn opgeslagen in de Sleutelhanger, naar iCloud uit te schakelen. **Niet geconfigureerd** (standaard): staat gebruikers toe deze referenties te synchroniseren.
-- **Synchronisatie van clouddocumenten blokkeren**: **Blokkeren**: voorkomt dat documenten en gegevens worden gesynchroniseerd met iCloud. Met **Niet geconfigureerd** (standaard) staat u het synchroniseren van documenten en sleutelwaarden met uw iCloud-opslagruimte toe.
-- **Back-up van iCloud-mail blokkeren**: Met **Blokkeren** voorkomt u synchronisatie van de app Mail van macOS met iCloud. **Niet geconfigureerd** (standaard) staat synchronisatie van Mail met iCloud toe.
-- **Back-up van iCloud-contactpersonen blokkeren**: Met **Blokkeren** voorkomt u synchronisatie van contactpersonen op het apparaat met iCloud. **Niet geconfigureerd** (standaard) staat synchronisatie van contactpersonen met behulp van iCloud toe.
-- **Back-up van iCloud-agenda blokkeren**: Met **Blokkeren** voorkomt u synchronisatie van de app Agenda van macOS met iCloud. **Niet geconfigureerd** (standaard) staat synchronisatie van Agenda met iCloud toe.
-- **Back-up van iCloud-herinneringen blokkeren**: Met **Blokkeren** voorkomt u synchronisatie van de app Herinneringen van macOS met iCloud. **Niet geconfigureerd** (standaard) staat synchronisatie van Herinneringen met iCloud toe.
-- **Back-up van iCloud-bladwijzers blokkeren**: Met **Blokkeren** voorkomt u synchronisatie van bladwijzers op het apparaat met iCloud. **Niet geconfigureerd** (standaard) staat synchronisatie van Bladwijzers met iCloud toe.
-- **Back-up van iCloud-notities blokkeren**: Met **Blokkeren** voorkomt u synchronisatie van notities op het apparaat met iCloud. **Niet geconfigureerd** (standaard) staat synchronisatie van Notities met iCloud toe.
-- **iCloud-fotobibliotheek blokkeren**: Met **Blokkeren** wordt de iCloud-fotobibliotheek uitgeschakeld en wordt voorkomen dat in iCloud de foto’s van apparaten worden gesynchroniseerd. Foto's die niet volledig uit de iCloud-fotobibliotheek zijn gedownload, worden verwijderd uit de lokale opslag van het apparaat. **Niet geconfigureerd** (standaard): staat het synchroniseren van foto’s toe tussen het apparaat en de iCloud-fotobibliotheek.
-- **Handoff**: Met **Niet geconfigureerd** (standaard) staat u gebruikers toe om op een macOS-apparaat te werken en vervolgens hun werk voort te zetten op een ander iOS-/iPadOS- of macOS-apparaat. Met **Blokkeren** wordt voorkomen dat de Handoff-functie werkt op het apparaat. 
+- **Synchronisatie van iCloud-sleutelhanger blokkeren**: **Blokkeren** schakelt de synchronisatie van aanmeldingsgegevens in de sleutelhanger naar iCloud uit. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem toestaat dat gebruikers deze aanmeldingsgegevens synchroniseren.
+- **Synchronisatie van clouddocumenten blokkeren**: **Blokkeren**: voorkomt dat documenten en gegevens worden gesynchroniseerd met iCloud. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem het synchroniseren van documenten en sleutelwaarden met uw iCloud-opslagruimte toestaat.
+- **Back-up van iCloud-mail blokkeren**: Met **Blokkeren** voorkomt u synchronisatie van de app Mail van macOS met iCloud. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem de synchronisatie van Mail met iCloud toestaat.
+- **Back-up van iCloud-contactpersonen blokkeren**: Met **Blokkeren** voorkomt u synchronisatie van contactpersonen op het apparaat met iCloud. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem de synchronisatie van contactpersonen met iCloud toestaat.
+- **Back-up van iCloud-agenda blokkeren**: Met **Blokkeren** voorkomt u synchronisatie van de app Agenda van macOS met iCloud. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem de synchronisatie van Agenda met iCloud toestaat.
+- **Back-up van iCloud-herinneringen blokkeren**: Met **Blokkeren** voorkomt u synchronisatie van de app Herinneringen van macOS met iCloud. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem de synchronisatie van Herinneringen met iCloud toestaat.
+- **Back-up van iCloud-bladwijzers blokkeren**: Met **Blokkeren** voorkomt u synchronisatie van bladwijzers op het apparaat met iCloud. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem de synchronisatie van de bladwijzers met iCloud toestaat.
+- **Back-up van iCloud-notities blokkeren**: Met **Blokkeren** voorkomt u synchronisatie van notities op het apparaat met iCloud. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem de synchronisatie van notities met iCloud toestaat.
+- **iCloud-fotobibliotheek blokkeren**: Met **Blokkeren** wordt de iCloud-fotobibliotheek uitgeschakeld en wordt voorkomen dat in iCloud de foto’s van het apparaat worden gesynchroniseerd. Foto's die niet volledig uit de iCloud-fotobibliotheek zijn gedownload, worden verwijderd uit de lokale opslag van apparaten. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem de synchronisatie van foto’s toestaat tussen het apparaat en de iCloud-fotobibliotheek.
+- **Handoff**: Met deze functie kunnen gebruikers aan het werk gaan op een macOS-apparaat en vervolgens hun werk voortzetten op een ander iOS-/iPadOS- of macOS-apparaat. Met **Blokkeren** wordt voorkomen dat de Handoff-functie werkt op apparaten. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem deze functie toestaat op apparaten.
 
   Deze functie is van toepassing op:  
   - macOS 10.15 of hoger

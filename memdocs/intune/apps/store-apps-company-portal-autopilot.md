@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec131df32e06c1c43b8904dde732b4e6a17a91aa
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 3daf758ed93fb03ac63b062f604a457d033637dc
+ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79334194"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438758"
 ---
 # <a name="add-and-assign-the-windows-10-company-portal-app-for-autopilot-provisioned-devices"></a>De bedrijfsportal-app van Windows 10 toevoegen en toewijzen voor apparaten die met Autopilot zijn ingericht
 
@@ -52,9 +52,9 @@ Bedrijfsportal (offline) is geselecteerd om te worden geïnstalleerd met behulp 
 ## <a name="assign-the-company-portal-app"></a>De bedrijfsportal-app toewijzen
 
 1. Meld u met uw beheerdersaccount aan bij het  [Beheercentrum voor Microsoft Eindpuntbeheer](https://go.microsoft.com/fwlink/?linkid=2109431) . 
-2. Selecteer het tabblad  **Apps**  in het rechterdeelvenster.
-3. Onder  **Per platform** selecteert u **Windows**.
-4. Selecteer  **Bedrijfsportal (offline)** .
+2. Selecteer het tabblad **Apps** in het rechterdeelvenster.
+3. Onder **Per platform** selecteert u **Windows**.
+4. Selecteer **Bedrijfsportal (offline)** .
 5. Wacht tot de synchronisatieplanning is voltooid of voer een handmatige synchronisatie uit vanuit het Beheercentrum voor Microsoft Eindpuntbeheer.
 6. Wijs de bedrijfsportal-app, indien nodig, toe als vereiste app aan geselecteerde groepen met Autopilot-apparaten.
 

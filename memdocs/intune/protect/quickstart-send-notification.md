@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1e41ed4d5de66e1ca9573145f865cbfce45f5245
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 48ec5bf332d951fc19cb4d6ef1dee242b87d02ee
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084785"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325481"
 ---
 # <a name="quickstart-send-notifications-to-noncompliant-devices"></a>Quickstart: Meldingen verzenden naar niet-compatibele apparaten
 
@@ -41,7 +41,7 @@ Wanneer u nalevingsbeleid gebruikt om toegang tot bedrijfsbronnen door apparaten
 
 ## <a name="sign-in-to-intune"></a>Aanmelden bij Intune
 
-Meld u bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) aan als een [globale beheerder](../fundamentals/users-add.md#types-of-administrators) of een Intune-[servicebeheerder](../fundamentals/users-add.md#types-of-administrators). Als u een Intune-proefabonnement hebt gemaakt, is het account waarmee u het abonnement hebt gemaakt de globale beheerder.
+Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) als een [globale beheerder](../fundamentals/users-add.md#types-of-administrators) of als een [servicebeheerder](../fundamentals/users-add.md#types-of-administrators) voor Intune. Als u een Intune-proefabonnement hebt gemaakt, is het account waarmee u het abonnement hebt gemaakt de globale beheerder.
 
 ## <a name="create-a-notification-message-template"></a>Een sjabloon voor een meldingsbericht maken
 

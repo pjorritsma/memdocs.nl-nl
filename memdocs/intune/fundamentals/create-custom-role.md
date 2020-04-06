@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 54cb4028001f2e6b64cba639cb27c58b31db172f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 07c29f45c2d9356bda78e021d3baf9647aa03397
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79344152"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326798"
 ---
 # <a name="create-a-custom-role-in-intune"></a>Een aangepaste rol in Intune maken
 
@@ -34,7 +34,7 @@ Als u rollen wilt maken, bewerken of toewijzen, moet uw account een van de volge
 
 ## <a name="to-create-a-custom-role"></a>Een aangepaste rol maken
 
-1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de optie **Tenantbeheer** > **Rollen** > **Alle rollen** > **Maken**.
+1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Tenantbeheer** > **Rollen** > **Alle rollen** > **Maken**.
 
 2. Voer op de pagina **Basisinformatie** een naam en een beschrijving in voor de nieuwe rol en selecteer dan **Volgende**.
 

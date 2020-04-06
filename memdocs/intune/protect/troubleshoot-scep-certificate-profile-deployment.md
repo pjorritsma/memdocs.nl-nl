@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 216cf1a4d84adf717ebf914732eab3d6a169508f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 04ee6fea411c0ee231f4a7e9e00cdea45d206943
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79350418"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326612"
 ---
 # <a name="troubleshoot-deployment-of-a-scep-certificate-profile-to-devices-in-microsoft-intune"></a>Problemen met de implementatie van een SCEP-certificaatprofiel oplossen in Microsoft Intune
 
@@ -36,7 +36,7 @@ SCEP-certificaatprofielen voor Android worden op het apparaat beschikbaar als ee
 
 ### <a name="validate-that-the-android-device-was-sent-the-policy"></a>Controleren of het beleid naar het Android-apparaat is verzonden
 
-Als u wilt controleren of een profiel naar het verwachte apparaat is verzonden, gaat u in het [beheercentrum van Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) naar **Probleemoplossing en ondersteuning** > **Probleem oplossen**.  Stel in het venster *Probleem oplossen* **Toewijzingen** in op **Configuratieprofielen** en controleer vervolgens de volgende configuraties:
+Als u wilt controleren of een profiel naar het verwachte apparaat is verzonden, gaat u in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) naar **Probleemoplossing en ondersteuning** > **Probleem oplossen**.  Stel in het venster *Probleem oplossen* **Toewijzingen** in op **Configuratieprofielen** en controleer vervolgens de volgende configuraties:
 
 1. Geef een gebruiker op die het SCEP-certificaatprofiel moet ontvangen.
 
@@ -63,7 +63,7 @@ Voorbeelden van belangrijke vermeldingen:
 
 ### <a name="validate-that-the-iosipados-device-was-sent-the-policy"></a>Controleren of het beleid naar het iOS/iPadOS-apparaat is verzonden
 
-Als u wilt controleren of een profiel naar het verwachte apparaat is verzonden, gaat u in het [beheercentrum van Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) naar **Probleemoplossing en ondersteuning** > **Probleem oplossen**.  Stel in het venster *Probleem oplossen* **Toewijzingen** in op **Configuratieprofielen** en controleer vervolgens de volgende configuraties:
+Als u wilt controleren of een profiel naar het verwachte apparaat is verzonden, gaat u in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) naar **Probleemoplossing en ondersteuning** > **Probleem oplossen**.  Stel in het venster *Probleem oplossen* **Toewijzingen** in op **Configuratieprofielen** en controleer vervolgens de volgende configuraties:
 
 1. Geef een gebruiker op die het SCEP-certificaatprofiel moet ontvangen.
 
@@ -90,7 +90,7 @@ Voorbeelden van belangrijke vermeldingen:
 
 ### <a name="validate-that-the-windows-device-was-sent-the-policy"></a>Controleren of het beleid naar het Windows-apparaat is verzonden
 
-Als u wilt controleren of het profiel is verzonden naar het verwachte apparaat, gaat u in het [beheercentrum van Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)[beheercentrum van Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) naar **Probleemoplossing en ondersteuning** > **Probleem oplossen**.  Stel in het venster *Probleem oplossen* **Toewijzingen** in op **Configuratieprofielen** en controleer vervolgens de volgende configuraties:
+Als u wilt controleren of het profiel is verzonden naar het verwachte apparaat, gaat u in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431)[Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) naar **Probleemoplossing en ondersteuning** > **Probleem oplossen**.  Stel in het venster *Probleem oplossen* **Toewijzingen** in op **Configuratieprofielen** en controleer vervolgens de volgende configuraties:
 
 1. Geef een gebruiker op die het SCEP-certificaatprofiel moet ontvangen.
 

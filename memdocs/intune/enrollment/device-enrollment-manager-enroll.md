@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 14bc0be97a2e74c4666603feb2a4832c6a1e2011
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: e6b0c901cd52edcd674a2d787bc703c371dcf519
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339459"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327145"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Apparaten registreren in Intune met een manageraccount voor apparaatregistratie
 
@@ -37,7 +37,7 @@ DEM-gebruikersaccounts en apparaten die zijn ingeschreven met een DEM-gebruikers
 - Wissen kan niet worden uitgevoerd vanuit de bedrijfsportal. Apparaten die door DEM-gebruikersaccounts zijn ingeschreven, kunnen worden gewist via Intune (Azure Portal).
 - Alleen het lokale apparaat wordt weergegeven in de bedrijfsportal-app of op de website.
 - DEM-gebruikersaccounts kunnen geen Apple Volume Purchase Program-apps (VPP) met gebruikerslicenties gebruiken vanwege de Apple ID-vereisten per gebruiker voor het beheer van apps.
-- Er kunnen geen DEM-accounts worden gebruikt voor het inschrijven van apparaten via het Device Enrollment Program van Apple (DEP).
+- Er kunnen geen DEM-accounts worden gebruikt voor het inschrijven van apparaten via het Automated Device Enrollment (ADE) van Apple.
 - Apparaten kunnen VPP-apps installeren als ze over Apple VPP-apparaatlicenties beschikken.
 - Apparaten worden geblokkeerd voor Voorwaardelijke toegang, met uitzondering van Windows 10 1803+
 - Elk apparaat dat is ingeschreven bij DEM-accounts, moet de juiste licentie hebben om te worden beheerd door Intune. De licentie kan een Intune-gebruikerslicentie of een Intune-apparaatlicentie zijn.

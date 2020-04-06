@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4c22da8e3c4fdbcf40c3292476e734dd50f9543a
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 8e44fa26c84537fdcf801192ce8cc22790f320b9
+ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086220"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438801"
 ---
 # <a name="android-device-administrator-enrollment"></a>Registratie van Android-apparaatbeheerder
 
@@ -32,8 +32,6 @@ Android-apparaatbeheerder (soms aangeduid met het verouderde Android-beheer, uit
 Daarom raden we af om nieuwe apparaten te registreren aan de hand van het onderstaande proces voor apparaatbeheerder, om verminderde functionaliteit te vermijden.
 
 Om diezelfde redenen raden we ook aan dat u apparaten migreert van apparaatbeheerder als de apparaten worden bijgewerkt naar Android 10. 
-
-Voor meer informatie over Intune-ondersteuning voor Android-apparaatbeheerder, raadpleegt u het gedeelte [Aankondigingen](../fundamentals/whats-new.md#decreasing-support-for-android-device-administrator).
 
 Als u toch besluit om gebruikers hun Android-apparaten te laten registreren met apparaatbeheerder, gaat u door naar het volgende gedeelte.  
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9bbb8738acbfdfa2317d754797dbb171c6a5d8ac
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0efaaf94f969e0b1b27582027a68b9e59c944b0c
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79344386"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326853"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Een pagina Status van de inschrijving instellen
  
@@ -64,14 +64,14 @@ U kunt ook de volgorde van prioriteit voor elk profiel instellen om problemen me
 
 Volg de onderstaande stappen om de pagina Status van de registratie in te schakelen.
  
-1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431)**Apparaten** > **Windows** > **Windows-inschrijving** > **Inschrijvingsstatuspagina**.
+1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **Windows** > **Windows-inschrijving** > **Inschrijvingsstatuspagina**.
 2. In de blade **Pagina Status van de inschrijving** kiest u **Standaard** > **Instellingen**.
 3. Bij **Voortgang van installatie van app en profiel weergeven** kiest u **Ja**.
 4. Kies de andere instellingen die u wilt inschakelen en kies vervolgens **Opslaan**.
 
 ## <a name="create-enrollment-status-page-profile-and-assign-to-a-group"></a>Profiel voor pagina Status van de registratie maken en dit aan een groep toewijzen
 
-1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431)**Apparaten** > **Windows** > **Windows-inschrijving** > **Inschrijvingsstatuspagina** > **Profiel maken**.
+1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **Windows** > **Windows-inschrijving** > **Inschrijvingsstatuspagina** > **Profiel maken**.
 2. Geef een **naam** en **beschrijving** op.
 3. Kies **Maken**.
 4. Kies het nieuwe profiel in de lijst **Pagina Status van de inschrijving**.
@@ -82,7 +82,7 @@ Volg de onderstaande stappen om de pagina Status van de registratie in te schake
 
 Een gebruiker deel uitmaken van verschillende groepen en een groot aantal profielen voor de pagina Status van de inschrijving hebben. U kunt in dergelijke situaties conflicten voorkomen door voor elk profiel een prioriteit in te stellen. Als tijdens het inschrijven iemand meer dan een profiel heeft voor de pagina Status van de inschrijving, wordt alleen het profiel met de hoogste prioriteit toegepast op het apparaat dat wordt ingeschreven.
 
-1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431)**Apparaten** > **Windows** > **Windows-inschrijving** > **Inschrijvingsstatuspagina**.
+1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **Windows** > **Windows-inschrijving** > **Inschrijvingsstatuspagina**.
 2. Beweeg de muisaanwijzer over het profiel in de lijst.
 3. Sleep met behulp van de drie verticale puntjes het profiel naar de gewenste positie in de lijst.
 
@@ -90,7 +90,7 @@ Een gebruiker deel uitmaken van verschillende groepen en een groot aantal profie
 
 U kunt opgeven welke apps moeten worden geïnstalleerd voordat de gebruiker toegang krijgt tot het bureaublad.
 
-1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431)**Apparaten** > **Windows** > **Windows-inschrijving** > **Inschrijvingsstatuspagina**.
+1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **Windows** > **Windows-inschrijving** > **Inschrijvingsstatuspagina**.
 2. Kies een profiel > **Instellingen**.
 3. Kies **Ja** bij **Voortgang van installatie van app en profiel weergeven**.
 4. Kies **Ja** bij **Apparaatgebruik blokkeren totdat alle apps en profielen zijn geïnstalleerd**.

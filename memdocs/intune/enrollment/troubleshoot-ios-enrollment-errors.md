@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad456ef7cc88ccb24079010479bd8f27292eb73d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 07612080f170c5f2bef448aa616a4422508218d1
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363262"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326942"
 ---
 # <a name="troubleshoot-iosipados-device-enrollment-problems-in-microsoft-intune"></a>Problemen met inschrijving van iOS-/iPadOS-apparaten in Microsoft Intune oplossen
 
@@ -41,7 +41,7 @@ Verzamel de volgende gegevens van het probleem:
 - Hoeveel gebruikers treft het probleem? Geldt het probleem voor alle gebruikers of voor bepaalde gebruikers?
 - Voor hoeveel apparaten geldt het probleem? Geldt het probleem voor alle apparaten of voor bepaalde apparaten?
 - Wat is de MDM-instantie?
-- Hoe wordt de inschrijving uitgevoerd? Wordt BYOD (Bring Your Own Device) of Apple DEP (Device Enrollment Program) gebruikt met inschrijvingsprofielen?
+- Hoe wordt de inschrijving uitgevoerd? Wordt BYOD (Bring Your Own Device) of Apple ADE (Automated Device Enrollment) gebruikt met inschrijvingsprofielen?
 
 ## <a name="error-messages"></a>Foutberichten
 
@@ -106,7 +106,7 @@ Als uw bedrijf meerdere domeinen heeft voor gebruikersreferenties, maakt u CNAME
 **Oorzaak**: De gebruiker die het apparaat probeert in te schrijven, heeft geen licentie voor Microsoft Intune.
 
 #### <a name="resolution"></a>Oplossing
-1. Ga naar het [Office 365-beheercentrum](https://portal.office.com/adminportal/home#/homepage)en kies **Gebruikers > Actieve gebruikers**.
+1. Ga naar het [Office 365-beheercentrum](https://admin.microsoft.com)en kies **Gebruikers > Actieve gebruikers**.
 2. Selecteer het gebruikersaccount waaraan u een Intune-gebruikerslicentie wilt toewijzen en selecteer vervolgens **Productlicenties > Bewerken**.
 3. Selecteer **Aan**voor de licentie die u aan deze gebruiker wilt toewijzen en kies vervolgens **Opslaan**.
 4. Schrijf het apparaat opnieuw in.
@@ -157,7 +157,7 @@ Als uw bedrijf meerdere domeinen heeft voor gebruikersreferenties, maakt u CNAME
 **Oorzaak**: De gebruiker die het apparaat probeert in te schrijven, heeft geen geldige Intune-licentie.
 
 #### <a name="resolution"></a>Oplossing
-1. Ga naar het [Microsoft 365-beheercentrum](https://portal.office.com/adminportal/home#/homepage)en kies **Gebruikers** > **Actieve gebruikers**.
+1. Ga naar het [Microsoft 365-beheercentrum](https://admin.microsoft.com)en kies **Gebruikers** > **Actieve gebruikers**.
 2. Selecteer het betrokken gebruikersaccount > **Productlicenties** > **Bewerken**.
 3. Controleer of er een geldige Intune-licentie is toegewezen aan deze gebruiker.
 4. Schrijf het apparaat opnieuw in.
@@ -166,7 +166,7 @@ Als uw bedrijf meerdere domeinen heeft voor gebruikersreferenties, maakt u CNAME
 
 **Oorzaak**: De gebruiker die het apparaat probeert in te schrijven, heeft geen geldige Intune-licentie.
 
-1. Ga naar het [Microsoft 365-beheercentrum](https://portal.office.com/adminportal/home#/homepage)en kies **Gebruikers** > **Actieve gebruikers**.
+1. Ga naar het [Microsoft 365-beheercentrum](https://admin.microsoft.com)en kies **Gebruikers** > **Actieve gebruikers**.
 2. Selecteer het betrokken gebruikersaccount en kies vervolgens **Productlicenties** > **Bewerken**.
 3. Controleer of er een geldige Intune-licentie is toegewezen aan deze gebruiker.
 4. Schrijf het apparaat opnieuw in.
@@ -203,7 +203,7 @@ Vernieuw het APNs-certificaat en schrijf het apparaat opnieuw in.
 
 ### <a name="xpc_type_error-connection-invalid"></a>XPC_TYPE_ERROR Verbinding ongeldig
 
-Wanneer u een met DEP beheerd apparaat inschakelt waaraan een inschrijvingsprofiel is toegewezen, mislukt de inschrijving en ziet u het volgende foutbericht:
+Wanneer u een met ADE beheerd apparaat inschakelt waaraan een inschrijvingsprofiel is toegewezen, mislukt de inschrijving en ziet u het volgende foutbericht:
 
 ```
 asciidoc
@@ -213,7 +213,7 @@ iPhone com.apple.accessibility.AccessibilityUIServer(MobileAsset)[288] <Notice>:
 iPhone mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR Connection invalid <error: 0x1a49aebc0> { count = 1, transaction: 0, voucher = 0x0, contents = "XPCErrorDescription" => <string: 0x1a49aee18> { length = 18, contents = "Connection invalid" }
 ```
 
-**Oorzaak**: Er is een verbindingsprobleem tussen het apparaat en de Apple DEP-service.
+**Oorzaak**: Er is een verbindingsprobleem tussen het apparaat en de Apple ADE-service.
 
 #### <a name="resolution"></a>Oplossing
 Los het verbindingsprobleem op of gebruik een andere netwerkverbinding om het apparaat in te schrijven. Mogelijk moet u contact opnemen met Apple als het probleem zich blijft voordoen.
@@ -221,20 +221,20 @@ Los het verbindingsprobleem op of gebruik een andere netwerkverbinding om het ap
 
 ## <a name="other-issues"></a>Overige problemen
 
-### <a name="dep-enrollment-doesnt-start"></a>DEP-inschrijving wordt niet gestart
-Wanneer u een met DEP beheerd apparaat inschakelt waaraan een inschrijvingsprofiel is toegewezen, wordt het Intune-inschrijvingsproces niet gestart.
+### <a name="ade-enrollment-doesnt-start"></a>ADE-inschrijving wordt niet gestart
+Wanneer u een met ADE beheerd apparaat inschakelt waaraan een inschrijvingsprofiel is toegewezen, wordt het Intune-inschrijvingsproces niet gestart.
 
-**Oorzaak**: Het inschrijvingsprofiel wordt gemaakt voordat het DEP-token wordt geüpload naar Intune.
+**Oorzaak**: Het inschrijvingsprofiel wordt gemaakt voordat het ADE-token wordt geüpload naar Intune.
 
 #### <a name="resolution"></a>Oplossing
 
 1. Bewerk het inschrijvingsprofiel. U kunt het profiel aanpassen zoals u wilt. Het gaat erom de wijzigingstijd van het profiel bij te werken.
-2. Door DEP beheerde apparaten synchroniseren: Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **iOS** > **iOS-inschrijving** > **Tokens voor het inschrijvingsprogramma** > kies een token **Nu synchroniseren**. Er wordt een synchronisatieaanvraag verzonden naar Apple.
+2. Door ADE beheerde apparaten synchroniseren: Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **iOS** > **iOS-inschrijving** > **Tokens voor het inschrijvingsprogramma** > kies een token **Nu synchroniseren**. Er wordt een synchronisatieaanvraag verzonden naar Apple.
 
-### <a name="dep-enrollment-stuck-at-user-login"></a>DEP-inschrijving is vastgelopen bij gebruikersaanmelding
-Wanneer u een met DEP beheerd apparaat inschakelt waaraan een inschrijvingsprofiel is toegewezen, loopt de eerste configuratie vast nadat u de referenties hebt ingevoerd.
+### <a name="ade-enrollment-stuck-at-user-login"></a>ADE-inschrijving is vastgelopen bij gebruikersaanmelding
+Wanneer u een met ADE beheerd apparaat inschakelt waaraan een inschrijvingsprofiel is toegewezen, loopt de eerste configuratie vast nadat u de referenties hebt ingevoerd.
 
-**Oorzaak**: Multi-Factor Authentication (MFA) is ingeschakeld. Momenteel werkt MFA niet tijdens inschrijving op DEP-apparaten.
+**Oorzaak**: Multi-Factor Authentication (MFA) is ingeschakeld. Momenteel werkt MFA niet tijdens inschrijving op ADE-apparaten.
 
 #### <a name="resolution"></a>Oplossing
 Schakel MFA uit en schrijf het apparaat opnieuw in.

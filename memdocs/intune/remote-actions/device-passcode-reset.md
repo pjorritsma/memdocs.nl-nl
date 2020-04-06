@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc482163ea82f5e329b7486d1522e3536b75555d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 87cfb3edf860cfc9de9c479a13dd1ea3fa54e599
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79349053"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326457"
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>De wachtwoordcode van een apparaat opnieuw instellen of verwijderen via Intune
 
@@ -57,7 +57,7 @@ Als u een nieuwe wachtwoordcode voor het werkprofiel wilt maken, gebruikt u de a
 ## <a name="reset-a-passcode"></a>Een wachtwoordcode opnieuw instellen
 
 
-1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) met een van de volgende rollen: Globale beheerder van Azure Active Directory, Azure Active Directory Intune-servicebeheerder, helpdeskmedewerker of rolbeheerder.
+1. Meld u met een van de volgende rollen aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431): Globale beheerder van Azure Active Directory, Azure Active Directory Intune-servicebeheerder, helpdeskmedewerker of rolbeheerder.
 2. Selecteer **Apparaten** en selecteer vervolgens **Alle apparaten**.
 3. Selecteer een apparaat in de lijst met apparaten die u beheert en kies **Wachtwoordcode verwijderen**.
 

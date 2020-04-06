@@ -1,12 +1,12 @@
 ---
 title: WIP-appbeveiligingsbeleid (Windows Information Protection)
 titleSuffix: Microsoft Intune
-description: Met Microsoft Intune app-beveiligingsbeleid voor Windows-gegevensbescherming (WIP) maken en dit implementeren
+description: 'Met Microsoft Intune WIP-beleid (WIP: Windows Information Protection) maken en implementeren'
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 03/25/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4ea664594744facd36f3f92900a1e80c48053904
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6e7305d33b1c40c2624c5c860f59922a5817c818
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79345686"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326107"
 ---
-# <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Beveiligingsinstelling voor de beveiliging van apps voor Windows Information Protection (WIP) maken en implementeren met Intune
+# <a name="create-and-deploy-windows-information-protection-wip-policy-with-intune"></a>Met Intune WIP-beleid (WIP: Windows Information Protection) maken en implementeren
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-U kunt app-beveiligingsbeleid gebruiken met Windows 10-apps om apps zonder apparaatinschrijving te beveiligen.
+U kunt WIP-beleid gebruiken met Windows 10-apps om apps zonder apparaatinschrijving te beveiligen.
 
 ## <a name="before-you-begin"></a>Voordat u begint
 
@@ -49,10 +49,10 @@ U moet enkele concepten begrijpen voor het toevoegen van WIP-beleid:
 
 ## <a name="prerequisites"></a>Vereisten
 
-U moet de MAM-provider configureren voordat u een beveiligingsbeleid voor WIP-apps kunt maken. Meer informatie over [de configuratie van uw MAM-provider met Intune](app-protection-policies-configure-windows-10.md).  
+U moet de MAM-provider configureren voordat u een WIP-beleid kunt maken. Meer informatie over [de configuratie van uw MAM-provider met Intune](app-protection-policies-configure-windows-10.md).  
 
 > [!IMPORTANT]
-> WIP biedt geen ondersteuning voor meerdere identiteiten; er kan slechts één beheerde identiteit tegelijkertijd bestaan.
+> WIP biedt geen ondersteuning voor meerdere identiteiten; er kan slechts één beheerde identiteit tegelijkertijd bestaan. Zie [Uw ondernemingsgegevens beveiligen met Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip) voor meer informatie over de mogelijkheden en beperkingen van WIP.
 
 U moet bovendien beschikken over de volgende licentie en update:
 
@@ -63,7 +63,7 @@ U moet bovendien beschikken over de volgende licentie en update:
 
 
 
-## <a name="to-add-a-wip-app-protection-policy"></a>App-beveiligingsbeleid voor WIP toevoegen
+## <a name="to-add-a-wip-policy"></a>WIP-beleid toevoegen
 
 Nadat u Intune hebt ingesteld in uw organisatie, kunt u specifiek WIP-beleid maken.
 
@@ -76,7 +76,7 @@ Nadat u Intune hebt ingesteld in uw organisatie, kunt u specifiek WIP-beleid mak
 3. Voeg de volgende waarden toe:
     - **Naam:** typ een naam (vereist) voor het nieuwe beleid.
     - **Beschrijving:** (optioneel) typ een beschrijving.
-    - **Platform:** kies **Windows 10** als het ondersteunde platform voor het beveiligingsbeleid van uw app.
+    - **Platform:** Kies **Windows 10** als het ondersteunde platform voor uw WIP-beleid.
     - **Status van de inschrijving:** kies **Zonder inschrijving** als status van de inschrijving voor het beleid.
 4. Kies **Maken**. Het beleid wordt gemaakt en weergegeven in de tabel in het deelvenster **App-beveiligingsbeleid**.
 

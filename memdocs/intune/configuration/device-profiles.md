@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 420340e18eb4e638ed7bde049e6b548037c54f87
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 386e59fe3a7156a8bb74ed39a1b2fcad6ad91dad
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80087105"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359304"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Functies en instellingen toepassen op uw apparaten met apparaatprofielen in Microsoft Intune
 
@@ -53,7 +53,7 @@ Deze functie ondersteunt:
 
 Via [Certificaten](../protect/certificates-configure.md) worden vertrouwde , SCEP- en PKCS-certificaten geconfigureerd die zijn toegewezen aan apparaten. Met deze certificaten worden WiFi-, VPN- en e-mailprofielen geverifieerd.
 
-Deze functie ondersteunt: 
+Deze functie ondersteunt:
 
 - Android-apparaatbeheerder
 - Android Enterprise
@@ -84,6 +84,15 @@ Gebruik deze instellingen om te bepalen hoe software-updates worden gedownload n
 Deze functie ondersteunt:
 
 - Windows 10 en hoger
+
+## <a name="derived-credential"></a>Afgeleide referentie
+
+[Afgeleide referenties](../protect/derived-credentials.md) zijn certificaten op smartcards die kunnen worden geverifieerd, ondertekend en versleuteld. In Intune kunt u profielen maken met deze referenties voor gebruik in apps, e-mailprofielen, verbinding maken met VPN, S/MIME en Wi-Fi.
+
+Deze functie ondersteunt:
+
+- Android Enterprise
+- iOS/iPadOS
 
 ## <a name="device-features"></a>Apparaatfuncties
 
@@ -133,7 +142,7 @@ Deze functie ondersteunt:
 
 ## <a name="education"></a>Education
 
-Met [Onderwijsinstellingen - Windows 10](education-settings-configure.md) kunt u opties configureren voor de [Windows-app Toets maken](https://education.microsoft.com/gettrained/win10takeatest). Wanneer u deze opties configureert, kunnen er geen andere apps op het apparaat worden uitgevoerd totdat de toets is voltooid.
+Met [Onderwijsinstellingen - Windows 10](education-settings-configure.md) kunt u opties configureren voor de [Windows-app Toets maken](https://docs.microsoft.com/education/windows/take-tests-in-windows-10). Wanneer u deze opties configureert, kunnen er geen andere apps op het apparaat worden uitgevoerd totdat de toets is voltooid.
 
 Met [Onderwijsinstellingen - iOS/iPadOS](../fundamentals/education-settings-configure-ios-shared.md) kunt u de iOS-/iPadOS-app Classroom gebruiken om het leren te begeleiden en de apparaten van studenten in het leslokaal te beheren. U kunt iPads zo configureren dat meerdere studenten één apparaat kunnen delen.
 
@@ -141,7 +150,7 @@ Met [Onderwijsinstellingen - iOS/iPadOS](../fundamentals/education-settings-conf
 
 [E-mailinstellingen](email-settings-configure.md) maakt en bewaakt de e-mailinstellingen voor Exchange ActiveSync op de apparaten en wijst deze toe. E-mailprofielen helpen met consistentie, verminderen het aantal ondersteuningsaanvragen en bieden uw eindgebruikers toegang tot bedrijfse-mail op hun eigen apparaten zonder dat ze instellingen hoeven op te geven. 
 
-Deze functie ondersteunt: 
+Deze functie ondersteunt:
 
 - Android-apparaatbeheerder
 - Android Enterprise
@@ -151,12 +160,13 @@ Deze functie ondersteunt:
 
 ## <a name="endpoint-protection"></a>Endpoint Protection
 
-[Endpoint Protection-instellingen voor Windows 10](../protect/endpoint-protection-windows-10.md) configureert BitLocker- en Microsoft Defender-instellingen voor Windows 10-apparaten.
+Met [Endpoint Protection](../protect/endpoint-protection-configure.md) configureert u BitLocker- en Microsoft Defender-instellingen voor Windows 10-apparaten. En configureer de firewall, gateway en andere resources op macOS-apparaten.
 
 Zie het Engelstalige artikel [Configure endpoints using Mobile Device Management (MDM) tools](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm) (Eindpunten configureren met MDM-hulpprogramma's (Mobile Device Management)) als u Microsoft Defender Advanced Threat Protection (WDATP) wilt vrijgeven met Microsoft Intune.
 
 Deze functie ondersteunt:
 
+- macOS
 - Windows 10 en hoger
 
 ## <a name="esim-cellular---public-preview"></a>eSIM - Openbare preview
@@ -192,7 +202,15 @@ Deze functie ondersteunt:
 
 - Windows 10 en hoger
 
-Kiosk-instellingen zijn ook beschikbaar als apparaatbeperkingen voor [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings) en [iOS/iPadOS](device-restrictions-ios.md#kiosk).
+Kiosk-instellingen zijn ook beschikbaar als apparaatbeperkingen voor [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices) en [iOS/iPadOS](device-restrictions-ios.md#kiosk).
+
+## <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
+
+[Microsoft Defender Advanced Threat Protection (ATP)](../protect/advanced-threat-protection.md) is met Intune geïntegreerd om apparaten te bewaken en te beveiligen. U stelt risiconiveaus in en bepaalt wat er gebeurt als apparaten dit niveau overschrijden. Wanneer u dit combineert met voorwaardelijke toegang, kunt u hiermee schadelijke activiteiten in uw organisatie voorkomen.
+
+Deze functie ondersteunt:
+
+- Windows 10 en hoger
 
 ## <a name="oemconfig"></a>OEMConfig
 
@@ -206,11 +224,18 @@ Deze functie ondersteunt:
 
 [PowerShell-scripts op Windows 10-apparaten](../apps/intune-management-extension.md) gebruikt de Intune-beheerextensie om uw PowerShell-scripts te uploaden naar Intune en deze scripts vervolgens uit te voeren op uw apparaten. Zie ook de vereisten voor het gebruik van de extensie, hoe u deze toevoegt aan Intune, en andere belangrijke informatie.
 
-
 Deze functie ondersteunt:
 
 - Windows 10 en hoger
 - Windows Holographic for Business
+
+## <a name="preference-file"></a>Voorkeursbestand
+
+[Voorkeursbestanden](preference-file-settings-macos.md) op macOS-apparaten bevatten informatie over apps. U kunt bijvoorbeeld voorkeursbestanden gebruiken voor het beheren van webbrowserinstellingen, het aanpassen van apps en nog veel meer.
+
+Deze functie ondersteunt:
+
+- macOS
 
 ## <a name="shared-multi-user-device"></a>Gedeelde apparaat voor meerdere gebruikers
 
@@ -260,14 +285,6 @@ Deze functie ondersteunt:
 - iOS/iPadOS
 - macOS
 - Windows 8.1 (alleen importeren)
-- Windows 10 en hoger
-
-## <a name="windows-information-protection-profile"></a>Profiel Windows Information Protection
-
-[Windows Information Protection](../protect/windows-information-protection-configure.md) helpt bij de beveiliging tegen gegevenslekken zonder dat de gebruikerservaring van werknemers hierdoor wordt beïnvloed. Het helpt ook om zakelijke apps en gegevens te beschermen tegen onbedoelde gegevenslekken op apparaten die eigendom zijn van de onderneming en op persoonlijke apparaten die werknemers op het werk gebruiken. De omgeving of andere apps hoeven niet te worden gewijzigd om Windows Information Protection te gebruiken.
-
-Deze functie ondersteunt:
-
 - Windows 10 en hoger
 
 ## <a name="zebra-mobility-extensions-mx"></a>Zebra Mobility Extensions (MX)

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf732907b9123dfe8cbd72970556ecfbb5380733
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 2fbb82123f28c5049a60d60572aadcb3d03777b7
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086033"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326944"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Ondersteuning voor Microsoft Intune krijgen
 
@@ -38,7 +38,7 @@ Als Intune-beheerder kunt u de optie **Help en ondersteuning** gebruiken om vanu
 
 ## <a name="help-and-support-experience"></a>Help en ondersteuning-ervaring
 
-De Help en ondersteuning-ervaring van Intune is beschikbaar via het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) en via alle blades (of pagina's) onder Intune in de Azure-portal.
+De Help en ondersteuning-ervaring van Intune is beschikbaar via het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) en via alle blades (of pagina's) onder Intune in Azure Portal.
 
 De *Help en ondersteuning*-ervaring is vergelijkbaar met de ervaring in het [Microsoft 365-beheercentrum](https://admin.microsoft.com/) en vervangt de vorige *Help en ondersteuning*, die beschikbaar blijft voor andere services in Azure.
 
@@ -64,9 +64,9 @@ Dit probleem treedt op wanneer u uw nieuwe tenantaccount niet hebt geverifieerd 
   > [!NOTE]  
   > Als uw exemplaar van Intune wordt gehost in de privécloud voor de overheid (ook wel een soevereine cloud genoemd, bijv. Azure Government) raadpleegt u [Intune-ondersteuning voor de privécloud voor de overheid](#intune-support-for-private-cloud-for-government) verderop in dit artikel. De *Help en ondersteuning*-ervaring voor Intune komt pas volgend jaar beschikbaar voor de privécloud voor de overheid.
 
-- Vanuit het **Microsoft Endpoint Manager-beheercentrum** doet u het volgende:
+- **Vanuit het Microsoft Endpoint Manager-beheercentrum** doet u het volgende
 
-  - Selecteer vanuit elk willekeurig knooppunt in het Microsoft Endpoint Manager-beheercentrum het **?** . in de rechterbovenhoek van de portal en gebruik vervolgens de vervolgkeuzelijst om het beheertype te selecteren waarvoor u hulp wilt. Het Microsoft Endpoint Manager-beheercentrum ondersteunt de volgende beheertypen. U moet het specifieke type selecteren waarbij u hulp nodig hebt, bijvoorbeeld Intune:
+  - Selecteer vanuit elk willekeurig knooppunt in het Microsoft Endpoint Manager-beheercentrum het **?** in de rechterbovenhoek van de portal en gebruik vervolgens de vervolgkeuzelijst om het beheertype te selecteren waarvoor u hulp wilt. Het Microsoft Endpoint Manager-beheercentrum ondersteunt de volgende beheertypen. U moet het specifieke type selecteren waarbij u hulp nodig hebt, bijvoorbeeld Intune:
 
     - Configuration Manager (bevat Desktop Analytics)
     - Intune
@@ -84,7 +84,7 @@ Dit probleem treedt op wanneer u uw nieuwe tenantaccount niet hebt geverifieerd 
 
   - Als u Help en ondersteuning opent via **Probleemoplossing en ondersteuning** > **Help en ondersteuning**, wordt het geselecteerde beheertype niet weergegeven onder *Help en ondersteuning*.
 
-  - Als u inzoomt op een ander knooppunt, zoals *Apparaten*, *Apps* of *Gebruikers* en vervolgens *Help en ondersteuning* selecteert, kunt u geen beheertype selecteren en wordt het type niet weergegeven onder *Help en ondersteuning*. In dit geval wordt uitgegaan van *Intune*. Als u niet wilt dat de context Intune is, gebruikt u de optie **?** om een ander beheertype te selecteren.
+  - Als u inzoomt op een ander knooppunt, zoals *Apparaten*, *Apps* of *Gebruikers* en vervolgens *Help en ondersteuning* selecteert, kunt u geen beheertype selecteren en wordt het type niet weergegeven onder *Help en ondersteuning*. In dit geval wordt uitgegaan van *Intune*. Als u niet wilt dat de context Intune is, gebruikt u de optie **?** , zodat u een ander beheertype kunt selecteren.
 
 ### <a name="the-support-experience"></a>De ondersteuningservaring
 

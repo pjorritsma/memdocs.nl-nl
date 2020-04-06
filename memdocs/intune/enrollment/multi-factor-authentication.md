@@ -17,12 +17,12 @@ ROBOTS: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ec03d186b0b5d64b5b867cf413f477d9ded79e9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2b645b41a721063ddfea6019d726a3c232c8dd78
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79345101"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327012"
 ---
 # <a name="require-multi-factor-authentication-for-intune-device-enrollments"></a>Multi-Factor Authentication vereisen voor Intune-apparaatinschrijvingen
 
@@ -50,7 +50,7 @@ Voer de volgende stappen uit om MFA te vereisen wanneer een apparaat wordt gereg
 >[!Important]
 >Configureer geen **op het apparaat gebaseerde toegangsregels** voor Microsoft Intune-registratie.
 
-1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) kies **Apparaten** > **Voorwaardelijke toegang**. Het knooppunt voor voorwaardelijke toegang dat via *Intune* wordt geopend, is hetzelfde als het knooppunt dat u opent via *Azure AD*.
+1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) en kies **Apparaten** > **Voorwaardelijke toegang**. Het knooppunt voor voorwaardelijke toegang dat via *Intune* wordt geopend, is hetzelfde als het knooppunt dat u opent via *Azure AD*.
 2. Kies **Nieuw beleid**.
 3. Typ onder **Nieuw** beleid een beschrijvende naam voor het beleid.
 4. Kies in de sectie **Toewijzingen** **Gebruikers en groepen**. 

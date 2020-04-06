@@ -58,7 +58,7 @@ U gebruikt de Apple-portal om een apparaatinschrijvingstoken te maken. U gebruik
 
 4. Kies **MDM-server toevoegen** op de pagina **Servers beheren**.
 
-5. Voer voor de **MDM-servernaam***TestMDMServer* in en kies vervolgens **Volgende**. De servernaam is voor eigen referentie en dient om de MDM-server te identificeren. Het is niet de naam of URL van de Microsoft Intune-server.
+5. Voer voor de **MDM-servernaam** *TestMDMServer* in en kies vervolgens **Volgende**. De servernaam is voor eigen referentie en dient om de MDM-server te identificeren. Het is niet de naam of URL van de Microsoft Intune-server.
 
 6. Het dialoogvenster **Voeg &lt;servernaam&gt;** wordt geopend, met de instructie dat u uw **openbare sleutel moet uploaden**. Selecteer **Bestand kiezen...** om het .pem-bestand te uploaden en kies **Volgende**.
 

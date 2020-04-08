@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b25d5439aa9d0842cbbee24b5e8759d00f371d4b
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 58e651849632fd06f962edfc90649ad14eeaeda0
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407725"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696544"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Internettoegang beheren met behulp van Microsoft Edge met Microsoft Intune
 
@@ -367,14 +367,14 @@ Als uw organisatie in een streng gereguleerde branche werkt of als er VPN per ap
 
 |    Sleutel    |    Waarde    |
 |-----------|-------------|
-|    `com.microsoft.intune.mam.managedbrowser.disableFeatures`    |    Met **inprivate** wordt InPrivate-surfen uitgeschakeld.   |
+|    `com.microsoft.intune.mam.managedbrowser.disabledFeatures`    |    Met **inprivate** wordt InPrivate-surfen uitgeschakeld.   |
 
 ### <a name="restrict-microsoft-edge-use-to-allowed-accounts-only"></a>Gebruik van Microsoft Edge beperken tot toegestane accounts
 
 U kunt niet alleen InPrivate- en MSA-surfen blokkeren, maar u kunt ook het gebruik van Microsoft Edge alleen toestaan als de gebruiker is aangemeld met diens AAD-account. Deze functie is alleen beschikbaar voor bij MDM ingeschreven gebruikers. U vindt hier meer informatie over het configureren van deze instelling:
 
 >[!NOTE]
-> `com.microsoft.intune.mam.managedbrowser.disableFeatures` kan worden gebruikt om meerdere functies tegelijk uit te schakelen. Als u bijvoorbeeld zowel InPrivate als wachtwoord wilt uitschakelen, gebruikt u `inprivate| password`.
+> `com.microsoft.intune.mam.managedbrowser.disabledFeatures` kan worden gebruikt om meerdere functies tegelijk uit te schakelen. Als u bijvoorbeeld zowel InPrivate als wachtwoord wilt uitschakelen, gebruikt u `inprivate|password`.
 
 ## <a name="configure-microsoft-edge-as-a-kiosk-app-on-android-devices"></a>Microsoft Edge configureren als een kiosk-app op Android-apparaten
 

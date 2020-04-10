@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8f91b71d96c936e9808973df145862654f0e516a
-ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
+ms.openlocfilehash: e3636314ee21823b76a09120f92aca45965437d3
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80256637"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808191"
 ---
 # <a name="what-is-device-enrollment"></a>Wat is apparaatinschrijving?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -77,7 +77,7 @@ Standaard kunnen apparaten voor alle platforms worden ingeschreven in Intune. U 
 |**Android-apparaatbeheer**|**(Vooraf gedeclareerde IMEI of SN) Door gebruiker geïnitieerd via bedrijfsportal**| Nee | Ja | Nee | [Meer informatie](corporate-identifiers-add.md)|
 |**Android-apparaatbeheer met Zebra-mobiliteitsextensies**|**Door gebruiker of [DEM](#device-enrollment-manager) geïnitieerd via de bedrijfsportal**| Nee | Ja, als dit door de gebruiker is geïnitieerd, Nee als dit door [DEM](#device-enrollment-manager) is geïnitieerd | Nee | [Meer informatie](../configuration/android-zebra-mx-overview.md)|
 |**Toegewezen Android Enterprise-apparaten**|**NFC, Token, QR-code, Zero Touch**| Ja | Nee | Configureerbaar via beleid | [Meer informatie](android-kiosk-enroll.md)|
-|**Volledig beheerde Android Enterprise-apparaten**|**NFC, Token, QR-code, Zero Touch**| Ja | Ja | Configureerbaar via beleid | [Meer informatie](android-dedicated-devices-fully-managed-enroll.md)|
+|**Volledig beheerde Android Enterprise-apparaten**|**NFC, Token, QR-code, Zero Touch**| Ja | Ja. Nee als dit door [DEM](device-enrollment.md#device-enrollment-manager) is geïnitieerd | Configureerbaar via beleid | [Meer informatie](android-dedicated-devices-fully-managed-enroll.md)|
 
 
 ## <a name="bring-your-own-device"></a>Bring Your Own Device

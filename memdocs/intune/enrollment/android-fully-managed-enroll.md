@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89d299edfb9542591eaabcf42d0b2069bbde4331
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: d768859d65fff18d6ce94a26b48bb28f57417af6
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327315"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808079"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices"></a>Intune-inschrijving van volledig beheerde Android Enterprise-apparaten instellen 
 
@@ -65,7 +65,7 @@ Volg deze stappen om het beheer van volledig beheerde Android Enterprise-apparat
 Wanneer deze instelling is ingesteld op **Ja**, ontvangt u een inschrijvingstoken (een willekeurige tekenreeks) en een QR-code voor uw Intune-tenant. Deze inschrijvingstoken is geldig voor alle gebruikers en verloopt niet. Afhankelijk van het Android-besturingssysteem en de versie van het apparaat kunt u het token of de QR-code gebruiken om het apparaat in te schrijven.
 
 ## <a name="enroll-the-fully-managed-devices"></a>De volledig beheerde apparaten inschrijven
-U kunt nu [uw volledig beheerde apparaten inschrijven](android-dedicated-devices-fully-managed-enroll.md).
+U kunt uw [volledig beheerde apparaten nu inschrijven](android-dedicated-devices-fully-managed-enroll.md) (maar niet bij het gebruik van DEM-accounts).
 
 ## <a name="next-steps"></a>Volgende stappen
 - [Configuratiebeleid voor volledig beheerde Android Enterprise-apparaten toevoegen](../configuration/device-restrictions-android-for-work.md#device-owner-only)

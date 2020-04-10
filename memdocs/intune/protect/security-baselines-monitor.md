@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/04/2020
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f7118fbbf05c7793d93faf2aa4c9a4bb1af821c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 53187f7795eee07a62a83c1fb17a289451b32ee2
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322616"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551675"
 ---
 # <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>De beveiligingsbasislijn en het beveiligingsprofiel controleren in Microsoft Intune
 
@@ -153,4 +153,8 @@ Op Windows 10-apparaten is er een ingebouwd rapport met diagnostische gegevens o
 
 ## <a name="next-steps"></a>Volgende stappen
 
-[Bewaak apparaatprofielen](../configuration/device-profile-monitor.md) en [bekijk veelvoorkomende problemen en oplossingen](../configuration/device-profile-troubleshoot.md).
+- [Meer informatie over beveiligingsbasislijnen](security-baselines.md)
+- [Conflicten voorkomen](security-baselines.md#avoid-conflicts)
+- [Apparaatprofielen bewaken](../configuration/device-profile-monitor.md) 
+- [Veelvoorkomende problemen en oplossingen](../configuration/device-profile-troubleshoot.md).
+- [Beleidsregels en profielen voor het oplossen van problemen in Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)

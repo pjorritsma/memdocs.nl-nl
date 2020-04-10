@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c96de75557a4817f4e5f034689faecf7374cfe3f
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: feb211b1de15aa0400e9ff71b428e2db02ef4b03
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359425"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551371"
 ---
 # <a name="create-a-profile-with-custom-settings-in-intune"></a>Een profiel maken met aangepaste instellingen in Intune
 
@@ -31,6 +31,9 @@ Aangepaste instellingen worden voor elk platform anders geconfigureerd. Om bijvo
 Zie [Wat zijn Microsoft Intune-apparaatprofielen?](device-profiles.md) voor meer informatie over configuratieprofielen.
 
 In dit artikel wordt beschreven hoe u een aangepast profiel maakt voor Android-apparaatbeheer, Android Enterprise, iOS/iPadOS, macOS en Windows. U kunt ook alle beschikbare instellingen voor de verschillende platformen zien.
+
+> [!NOTE]
+> De Intune-gebruikersinterface wordt bijgewerkt naar een versie voor volledig scherm. Dit kan enkele weken duren. Totdat de tenant deze update ontvangt, hebt u een enigszins afwijkende werkstroom wanneer u instellingen maakt of bewerkt zoals beschreven in dit artikel.
 
 ## <a name="create-the-profile"></a>Het profiel maken
 

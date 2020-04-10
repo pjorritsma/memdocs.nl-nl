@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 677f85874ddf206b716e70a0cc6c659e10b99fef
-ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
+ms.openlocfilehash: 00faad5cccf8b2ed3198542868a36cb4699299b8
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438805"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808209"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Wat is er nieuw in Microsoft Intune?
 
@@ -55,14 +55,29 @@ Ontdek elke week wat er nieuw is in Microsoft Intune in het [Microsoft Endpoint 
 -->  
 
 <!-- ########################## -->
+## <a name="week-of-april-6-2020"></a>Week van 6 april 2020
+
+#### <a name="new-shell-script-settings-for-macos-devices---6884363---"></a>Nieuwe instellingen voor shell-script voor macOS-apparaten<!-- 6884363 -->
+Bij het configureren van shell-scripts voor macOS-apparaten kunt u nu de volgende nieuwe instellingen configureren: 
+- Scriptmeldingen op apparaten verbergen
+- Scriptfrequentie
+- Maximum aantal keren dat het script opnieuw moet worden uitgevoerd als het script mislukt
+
+Zie [Shell-scripts op macOS-apparaten gebruiken in Intune](../apps/macos-shell-scripts.md) voor meer informatie.
+
+<!-- ########################## -->
 ## <a name="week-of-march-30-2020"></a>Week van 30 maart 2020
 
 ### <a name="new-url-for-the-microsoft-endpoint-manager-admin-center---3704810---"></a>Nieuwe URL voor het Microsoft Endpoint Manager-beheercentrum<!-- 3704810 -->
 De URL voor het Microsoft Endpoint Manager-beheercentrum (voorheen Microsoft 365 Device Management) is gewijzigd in [https://endpoint.microsoft.com](https://endpoint.microsoft.com), zodat deze overeenkomt met de aankondiging van Microsoft Endpoint Manager op Ignite van vorig jaar. De URL voor het oude beheercentrum ([https://devicemanagement.microsoft.com](https://devicemanagement.microsoft.com)) werkt nog wel, maar het wordt aanbevolen de nieuwe URL te gebruiken voor het Microsoft Endpoint Manager-beheercentrum.
 
-Zie [IT-taken vereenvoudigen met het Microsoft Endpoint Manager-beheercentrum](what-is-device-management.md#simplify-it-tasks-using-the-device-management-admin-center) voor meer informatie.
+Zie [IT-taken vereenvoudigen met het Microsoft Endpoint Manager-beheercentrum](what-is-device-management.md#simplify-it-tasks-using-the-device-management-admin-center) voor meer informatie.  
 
-### <a name="app-management"></a>Appbeheer
+
+### <a name="app-management"></a>Appbeheer  
+
+#### <a name="company-portal-for-ios-supports-landscape-mode--6048329-wnready---"></a>Bedrijfsportal voor iOS biedt ondersteuning voor de liggende modus<!--6048329 wnready -->   
+Gebruikers kunnen hun apparaat nu inschrijven, apps zoeken en ondersteuning krijgen met hun favoriete schermstand. De app detecteert automatisch de stand en past de weergave aan de liggende of staande modus van het scherm aan, tenzij gebruikers het scherm vergrendelen in de staande modus.  
 
 #### <a name="script-support-for-macos-devices-public-preview---4280361-wnready---"></a>Scriptondersteuning voor macOS-apparaten (openbare preview)<!-- 4280361 wnready -->
 U kunt scripts toevoegen en implementeren op macOS-apparaten. Dankzij deze ondersteuning hebt u meer mogelijkheden om macOS-apparaten te configureren buiten wat al mogelijk is, met behulp van systeemeigen MDM-mogelijkheden op macOS-apparaten. Zie [Shell-scripts op macOS-apparaten gebruiken in Intune](../apps/macos-shell-scripts.md) voor meer informatie.
@@ -71,6 +86,9 @@ U kunt scripts toevoegen en implementeren op macOS-apparaten. Dankzij deze onder
 ## <a name="week-of-march-24-2020"></a>Week van 24 maart 2020
 
 ### <a name="improved-user-interface-experience-when-creating-device-restrictions-profiles-on-android-and-android-enterprise-devices---5841361---"></a>Verbeterde gebruikersinterface-ervaring bij het maken van profielen voor apparaatbeperkingen op Android- en Android Enterprise-apparaten<!-- 5841361 -->
+
+> [!NOTE] 
+> De Intune-gebruikersinterface wordt bijgewerkt naar een versie voor volledig scherm. Dit kan enkele weken duren. Totdat de tenant deze update ontvangt, hebt u een enigszins afwijkende werkstroom wanneer u instellingen maakt of bewerkt.
 
 Wanneer u een profiel voor Android- of Android Enterprise-apparaten maakt, wordt de ervaring in het Microsoft Endpoint Manager-beheercentrum bijgewerkt. Deze wijziging is van invloed op de volgende apparaatconfiguratieprofielen (**Apparaten** > **Configuratieprofielen** > **Profiel maken** > **Android-apparaatbeheerder** of **Android Enterprise** voor platform):
 
@@ -82,6 +100,9 @@ Zie [Android-apparaatbeheerder](../configuration/device-restrictions-android.md)
 
 ### <a name="improved-user-interface-experience-when-creating-configuration-profiles-on-iosipados-and-macos-devices---5569002-5568997---"></a>Verbeterde gebruikersinterface-ervaring bij het maken van configuratieprofielen op iOS-/iPadOS- en macOS-apparaten<!-- 5569002 5568997 -->
 
+> [!NOTE]
+> De Intune-gebruikersinterface wordt bijgewerkt naar een versie voor volledig scherm. Dit kan enkele weken duren. Totdat de tenant deze update ontvangt, hebt u een enigszins afwijkende werkstroom wanneer u instellingen maakt of bewerkt.
+
 Wanneer u een profiel voor iOS-of macOS-apparaten maakt, wordt de ervaring in het Microsoft Endpoint Manager-beheercentrum bijgewerkt. Deze wijziging is van invloed op de volgende apparaatconfiguratieprofielen (**Apparaten** > **Configuratieprofielen** > **Profiel maken** > **iOS/iPadOS** of **macOS** als platform):
 
 - Aangepast: iOS/iPadOS, macOS
@@ -92,6 +113,9 @@ Wanneer u een profiel voor iOS-of macOS-apparaten maakt, wordt de ervaring in he
 - Voorkeursbestand: macOS
 
 ### <a name="hide-from-user-configuration-setting-in-device-features-on-macos-devices---6524869---"></a>Verbergen in de instelling voor gebruikersconfiguratie in de apparaatfuncties op macOS-apparaten<!-- 6524869 -->
+
+> [!NOTE]
+> Deze wijziging wordt de komende paar weken doorgevoerd voor alle klanten.
 
 Wanneer u een configuratieprofiel voor apparaatfuncties maakt op macOS-apparaten, is er een nieuwe instelling beschikbaar, **Verbergen voor gebruikersconfiguratie**, (via **Apparaten** > **Configuratieprofielen** > **Profiel maken** > **macOS** voor platform > **Apparaatfuncties** voor profiel > **Aanmeldingsitems**).
 
@@ -187,6 +211,10 @@ Ga naar [iOS- en iPadOS-apparaatinstellingen om functies toe te staan of te bepe
 Het meldingspictogram op de blade Probleemoplossing voor een MAM-beleid dat in behandeling is, is gewijzigd in een informatiepictogram.
 
 ####  <a name="ui-update-when-configuring-compliance-policy---3961639------"></a>Update van gebruikersinterface tijdens de configuratie van het nalevingsbeleid<!-- 3961639    -->
+
+> [!NOTE]
+> De Intune-gebruikersinterface wordt bijgewerkt naar een versie voor volledig scherm. Dit kan enkele weken duren. Totdat de tenant deze update ontvangt, hebt u een enigszins afwijkende werkstroom wanneer u instellingen maakt of bewerkt.
+
 De gebruikersinterface voor het [maken van nalevingsbeleid](../protect/create-compliance-policy.md#create-the-policy) in Microsoft Endpoint Manager is bijgewerkt (**Apparaten** > **Nalevingsbeleid** > **Beleidsregels** > **Beleid maken**). Er is een nieuwe gebruikerservaring die dezelfde instellingen en gegevens bevat als die u eerder gebruikte. De nieuwe ervaring volgt een wizard-achtig proces voor het maken van een nalevingsbeleid en bevat een pagina waarop u *Toewijzingen* voor het beleid kunt toevoegen, en een pagina *Beoordelen en maken* waarop u uw configuratie kunt controleren voordat u het beleid maakt.
 
 #### <a name="retire-noncompliant-devices---1827291---------"></a>Niet-compatibele apparaten buiten gebruik stellen<!-- 1827291       -->

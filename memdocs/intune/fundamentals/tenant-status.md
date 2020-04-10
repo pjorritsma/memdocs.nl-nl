@@ -6,26 +6,27 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/05/2019
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.assetid: 7954a686-25dc-4fce-b395-324816f46d3b
+ms.reviewer: crisk
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99a34167f8616c6bbf2e441628de0d73aba080c3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d309b295281c88dff717c5f609905b3e541e3fed
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79355891"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696463"
 ---
 # <a name="use-the-intune-tenant-status-page"></a>De tenantstatuspagina in Intune gebruiken
 De Tenantstatuspagina in Microsoft Intune is een gecentraliseerde hub met de huidige en belangrijke details over uw tenant. Dit zijn onder andere details over de beschikbaarheid en het gebruik van licenties, de status van de connector en belangrijke communicatie over de Intune-service.  
 
-Als u het dashboard wilt weergeven, meldt u zich aan bij [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) en selecteert u **Tenantstatus**.  De *tenantstatus* wordt weergegeven in de groep **Help en ondersteuning**.  
+Als u het dashboard wilt bekijken, meldt u zich aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431), gaat u naar **Tenantbeheer** en selecteert u vervolgens **Tenantstatus**.
 
 De pagina is onderverdeeld in drie tabbladen:
 

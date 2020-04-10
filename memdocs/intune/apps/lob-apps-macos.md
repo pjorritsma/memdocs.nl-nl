@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e798d579341a841d25bea9abb416367fac15c2b
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 6dad4dffba0efadcca0ea5eb7d61960bec1b3f8e
+ms.sourcegitcommit: 0907ee1137773f0482b1d2b9bb344e206d05aede
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324050"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80536823"
 ---
 # <a name="how-to-add-macos-line-of-business-lob-apps-to-microsoft-intune"></a>LOB-apps (Line-Of-Business) voor macOS toevoegen in Microsoft Intune
 
@@ -65,8 +65,8 @@ U moet een extern hulpprogramma downloaden, het gedownloade hulpprogramma marker
     - `IntuneAppUtil -h`<br>
     Met deze opdracht worden de gebruiksgegevens voor het hulpprogramma weergegeven.
     
-    - `IntuneAppUtil -c <source_file> -o <output_file> [-v]`<br>
-    Met deze opdracht wordt het *.pkg*-LOB-app-bestand verpakt in een *.itunemac*-bestand.
+    - `IntuneAppUtil -c <source_file> -o <output_directory_path> [-v]`<br>
+    Met deze opdracht wordt het LOB-app-bestand *.pkg* dat wordt geboden in `<source_file>`, verpakt in een *.intunemac*-bestand met dezelfde naam, en wordt dit bestand in de map geplaatst waarnaar wordt verwezen met `<output_directory_path>`.
     
     - `IntuneAppUtil -r <filename.intunemac> [-v]`<br>
     Met deze opdracht worden de gedetecteerde parameters en versie voor het gemaakte *.itunemac*-bestand uitgepakt.

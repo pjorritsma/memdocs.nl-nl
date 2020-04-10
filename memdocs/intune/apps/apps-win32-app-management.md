@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/12/2020
+ms.date: 04/02/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4c08e0a967d18aaa7defb8e7b180a60f68c1b92c
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: ee632901162042f7d777043e6700b796b4badf58
+ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407809"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80620617"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Intune (zelfstandig) - Win32-app-beheer
 
@@ -33,7 +33,7 @@ ms.locfileid: "80407809"
 > Deze app-beheermogelijkheid biedt ondersteuning voor zowel 32- als 64-bits besturingssysteemarchitecturen voor Windows-toepassingen.
 
 > [!IMPORTANT]
-> Wanneer u Win32-apps implementeert, kunt u overwegen uitsluitend de [Intune Management-extensie](../apps/intune-management-extension.md) te gebruiken, met name wanneer u een Win32-app-installatieprogramma voor meerdere bestanden hebt. Als u de installatie van Win32-apps en Line-Of-Business-apps tijdens de Autopilot-registratie combineert, is het mogelijk dat de installatie van de app mislukt.  
+> Wanneer u Win32-apps implementeert, kunt u overwegen uitsluitend de [Intune-beheeruitbreiding](../apps/intune-management-extension.md) te gebruiken, met name wanneer u een Win32-app-installatieprogramma voor meerdere bestanden hebt. Als u de installatie van Win32-apps en Line-Of-Business-apps tijdens de Autopilot-registratie combineert, is het mogelijk dat de installatie van de app mislukt. De Intune-beheeruitbreiding wordt altijd automatisch geïnstalleerd wanneer een PowerShell-script of Win32-app wordt toegewezen aan de gebruiker of het apparaat.
 
 ## <a name="prerequisites"></a>Vereisten
 

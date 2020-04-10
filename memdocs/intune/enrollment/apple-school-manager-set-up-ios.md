@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19660a8b2dc6b804a1ee1a1eaf407261ca9af2b1
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 1bbca477b389b568d2aca1ab0f9394ec09fe2b24
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327240"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696558"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-school-manager"></a>Inschrijving van iOS-/iPadOS-apparaten instellen met Apple School Manager
 
@@ -38,7 +38,6 @@ Inschrijving voor Apple School Manager kan niet worden gebruikt met het [Device 
 **Vereisten**
 - [Apple MDM-push certificaat (Mobile Device Management)](apple-mdm-push-certificate-get.md)
 - [MDM-instantie](../fundamentals/mdm-authority-set.md)
-- [Apple MDM-pushcertificaat](apple-mdm-push-certificate-get.md)
 - Als u ADFS gebruikt, vereist gebruikersaffiniteit [WS-Trust 1.3 gebruikersnaam/gemengd eindpunt](https://technet.microsoft.com/library/adfs2-help-endpoints). [Meer informatie](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 - Apparaten die zijn gekocht via het programma [Apple School Management](http://school.apple.com)
 
@@ -120,7 +119,7 @@ Na installatie van het token kunt u een inschrijvingsprofiel voor Apple School-a
 
 8. U kunt meerdere gebruikers zich met een beheerde Apple-id laten aanmelden bij ingeschreven iPads. Als u dit wilt toestaan, kiest u **Ja** onder **Gedeelde iPad** (deze optie vereist dat **Inschrijven zonder gebruikersaffiniteit** en **Onder supervisie** zijn ingesteld op **Ja**.) Beheerde Apple-id's worden gemaakt in de portal Apple School Manager. Lees meer over [Gedeelde iPad](../fundamentals/education-settings-configure-ios-shared.md) en [de vereisten van Apple voor gedeelde iPad's](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56).
 
-9. Kies of u wilt dat apparaten die dit profiel gebruiken, kunnen **synchroniseren met computers**. Als u **Apple Configurator per certificaat toestaan** kiest, moet u een certificaat kiezen onder **Apple Configurator-certificaten**.
+9. Kies of u wilt dat apparaten die dit profiel gebruiken, kunnen **synchroniseren met computers**. **Alle weigeren**: betekent dat geen van de apparaten die gebruikmaken van dit profiel, kunnen worden gesynchroniseerd met gegevens op de computers. Als u **Apple Configurator per certificaat toestaan** kiest, moet u een certificaat kiezen onder **Apple Configurator-certificaten**.
 
 10. Als u in de vorige stap hebt gekozen voor **Apple Configurator per certificaat toestaan**, moet u een Apple Configurator-certificaat kiezen om te importeren.
 

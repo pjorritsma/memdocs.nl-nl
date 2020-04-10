@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4ed859078f7cc6be5a91b303de45f7247248203
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 7c6c8b9d964355b1c08756fc2026a87e30bc7297
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359182"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551516"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Instellingen van apparaatfuncties voor macOS in Intune
 
@@ -82,6 +82,9 @@ Om AirPrinter-servers toe te voegen, hebt u het IP-adres van de printer, het bro
   Let erop dat u het juiste pad opgeeft bij het toevoegen van een app, map of bestand. Niet alle items bevinden zich in de map `Applications`. Als gebruikers een item naar een andere locatie verplaatsen, verandert het pad. Dit verplaatste item wordt niet geopend wanneer de gebruiker zich aanmeldt.
 
 - **Verbergen voor gebruikersconfiguratie**: bij **verbergen** wordt de app niet weergegeven in de lijst met aanmeldingsitems voor gebruikers en groepen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem geeft standaard het item dat u opent bij het aanmelden weer in de lijst met aanmeldingsitems voor gebruikers en groepen wanneer de optie voor verbergen is uitgeschakeld.
+
+  > [!NOTE]
+  > Deze instelling wordt de komende paar weken doorgevoerd voor alle klanten.
 
 ## <a name="login-window"></a>Aanmeldingsvenster
 

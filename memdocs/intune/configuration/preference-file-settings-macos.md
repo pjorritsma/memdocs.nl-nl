@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e83077561ec4492feaf14789cf339e0b3ee86e2
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 9cb8cea30b53c5619580b289f73529668d71e909
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359332"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551494"
 ---
 # <a name="add-a-property-list-file-to-macos-devices-using-microsoft-intune"></a>Een eigenschappenlijstbestand toevoegen aan macOS-apparaten met behulp van Microsoft Intune
 
@@ -43,6 +43,9 @@ Deze instellingen worden toegevoegd aan een apparaatconfiguratieprofiel in Intun
 - Als u niet zeker weet hoe u een app-sleutel moet invoeren, wijzigt u de instelling in de app. Controleer vervolgens het voorkeursbestand van de app met behulp van [Xcode](https://developer.apple.com/xcode/) om te zien hoe de instelling is geconfigureerd. Apple raadt aan om niet-beheerbare instellingen te verwijderen met Xcode voordat u het bestand importeert.
 - Alleen in bepaalde apps kunnen beheerde voorkeuren worden gebruikt en in deze apps kunt u mogelijk niet alle instellingen beheren.
 - Upload eigenschappenlijstbestanden die worden toegepast op apparaatkanaalinstellingen, en niet op gebruikerskanaalinstellingen. Eigenschappenlijstbestanden worden toegepast op het hele apparaat.
+
+> [!NOTE]
+> De Intune-gebruikersinterface wordt bijgewerkt naar een versie voor volledig scherm. Dit kan enkele weken duren. Totdat de tenant deze update ontvangt, hebt u een enigszins afwijkende werkstroom wanneer u instellingen maakt of bewerkt zoals beschreven in dit artikel.
 
 ## <a name="create-the-profile"></a>Het profiel maken
 

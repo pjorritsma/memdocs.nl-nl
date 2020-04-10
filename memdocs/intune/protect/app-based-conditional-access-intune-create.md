@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73b471d7eefa8e696b17a949756ce1395530c5f7
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: fadd5817ccd4e591fe92c11cb30041296ac85d61
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323198"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696456"
 ---
 # <a name="set-up-app-based-conditional-access-policies-with-intune"></a>Op apps gebaseerd beleid instellen voor voorwaardelijke toegang met Intune
 
@@ -32,7 +32,7 @@ Op apps gebaseerd beleid instellen voor voorwaardelijke toegang voor apps die de
 Voordat u op apps gebaseerd beleid voor voorwaardelijke toegang kunt gebruiken, moet u [op apps gebaseerd beveiligingsbeleid voor Intune](../apps/app-protection-policies.md) op uw apps hebben toegepast.
 
 > [!IMPORTANT]
-> In dit artikel worden de stappen besproken die u moet volgen om een beleid voor voorwaardelijke toegang op basis van apps toe te voegen. U kunt dezelfde stappen volgen voor het toevoegen van apps zoals SharePoint Online, Microsoft Teams en Microsoft Exchange Online uit de lijst met goedgekeurde apps.
+> In dit artikel worden de stappen besproken die u moet volgen om eenvoudig beleid voor voorwaardelijke toegang op basis van apps toe te voegen. U kunt dezelfde stappen gebruiken voor andere cloud-apps. Zie [Implementatie van voorwaardelijke toegang plannen](https://docs.microsoft.com/azure/active-directory/conditional-access/plan-conditional-access) voor meer informatie
 
 ## <a name="create-app-based-conditional-access-policies"></a>Op apps gebaseerd beleid maken voor voorwaardelijke toegang
 
@@ -48,7 +48,7 @@ Voordat u beleid voor voorwaardelijke toegang kunt maken vanuit het Microsoft En
 
 3. Voer een **naam** voor het beleid in en selecteer onder *Toewijzingen***Gebruikers en groepen**. Gebruik de opties Opnemen of Uitsluiten om uw groepen voor het beleid toe te voegen en selecteer **Klaar**.
 
-4. Selecteer **Cloud-apps of acties** en kies welke apps u wilt beveiligen. Kies bijvoorbeeld **Apps selecteren** en selecteer **Office 365 SharePoint Online** en **Office 365 Exchange Online**.
+4. Selecteer **Cloud-apps of acties** en kies welke apps u wilt beveiligen. Kies bijvoorbeeld **Apps selecteren**, en selecteer **Office 365 (preview)** .
 
    Selecteer **OK** om uw wijzigingen op te slaan.
 
@@ -56,7 +56,7 @@ Voordat u beleid voor voorwaardelijke toegang kunt maken vanuit het Microsoft En
 
    Selecteer **OK** om uw wijzigingen op te slaan.
 
-6. Selecteer onder *Besturingselementen voor toegang* de optie **Verlenen** om voorwaardelijke toegang toe te passen op basis van apparaatcompatibiliteit. Selecteer bijvoorbeeld **Toegang verlenen** > **Vereisen dat apparaat wordt gemarkeerd als conform**.
+6. Selecteer onder *Besturingselementen voor toegang* de optie **Verlenen** om voorwaardelijke toegang toe te passen op basis van apparaatcompatibiliteit. Selecteer bijvoorbeeld **Toegang verlenen** > **Goedgekeurde client-app vereisen** en **App-beveiligingsbeleid vereisen (preview)** . Selecteer vervolgens **Een van de geselecteerde besturingselementen vereisen**
 
    Kies **Selecteren** om uw wijzigingen op te slaan.
 

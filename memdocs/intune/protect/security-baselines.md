@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c810b6caa47596967cf9e1f2ad4cb3f772064f30
-ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
+ms.openlocfilehash: 618ed802d33f2c50a567f1e18da4689855bbf016
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80488054"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551680"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Beveiligingsbasislijnen gebruiken om Windows 10-apparaten te gebruiken in Intune
 
@@ -62,11 +62,20 @@ Wanneer u een *beveiligingsbasislijnprofiel* maakt, gebruikt het profiel automat
 
 U kunt kiezen of u [de versie wilt wijzigen](#change-the-baseline-version-for-a-profile) van een basislijn die wordt gebruikt met een bepaald profiel. Dit betekent dat wanneer er een nieuwe versie uitkomt, u geen nieuw basislijnprofiel hoeft te maken om er gebruik van te kunnen maken. In plaats daarvan selecteert u, wanneer u hier klaar voor bent, een basislijnprofiel en gebruikt u de ingebouwde optie om de instantieversie van dat profiel te wijzigen in een nieuwe versie.
 
+## <a name="avoid-conflicts"></a>Conflicten voorkomen
+
+U kunt een of meer van de beschikbare basislijnen tegelijkertijd gebruiken in uw Intune-omgeving. U kunt ook meerdere exemplaren van dezelfde beveiligingsbasislijnen gebruiken die verschillende aanpassingen hebben.
+
+Wanneer u meerdere beveiligingsbasislijnen gebruikt, raadpleegt u de instellingen in elke basislijn om vast te stellen wanneer uw verschillende basislijnconfiguraties conflicterende waarden voor dezelfde instelling opgeven. Aangezien u beveiligingsbasislijnen kunt implementeren die voor verschillende doeleinden zijn ontworpen, en meerdere exemplaren van dezelfde basislijn met aangepaste instellingen kunt implementeren, ontstaan er configuratieconflicten voor apparaten die moeten worden onderzocht en opgelost.
+
+Bovendien worden met beveiligingsbasislijnen vaak dezelfde instellingen beheerd die u kunt instellen met [apparaatconfiguratieprofielen](../configuration/device-profiles.md) of andere typen beleid. Houd daarom altijd rekening met de instellingen van uw aanvullende beleidsregels en profielen, wanneer u conflicten wilt voorkomen of oplossen.
+
+Gebruik de informatie in de volgende koppelingen om te helpen conflicten te identificeren en op te lossen:
+
+- [Beleidsregels en profielen voor het oplossen van problemen in Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)
+- [Uw beveiligingsbasislijnen bewaken](security-baselines-monitor.md#troubleshoot-using-per-setting-status)
+
 ## <a name="available-security-baselines"></a>Beschikbare beveiligingsbasislijnen
-
- U kunt een of meer van de beschikbare basislijnen tegelijkertijd gebruiken in uw Intune-omgeving. U kunt ook meerdere exemplaren van dezelfde beveiligingsbasislijnen gebruiken die verschillende aanpassingen hebben.
-
-Wanneer u meerdere beveiligingsbasislijnen gebruikt, raadpleegt u de instellingen in elke basislijn om vast te stellen wanneer verschillende basislijnen conflicterende waarden voor dezelfde instelling opgeven. Aangezien u beveiligingsbasislijnen kunt implementeren die voor verschillende doeleinden zijn ontworpen en meerdere exemplaren van dezelfde basislijn met aangepaste instellingen kunt implementeren, onstaan er [configuratieconflicten voor apparaten die moeten worden onderzocht en opgelost](security-baselines-monitor.md#troubleshoot-using-per-setting-status).  Houd ook rekening met uw [apparaatconfiguratieprofielen](../configuration/device-profiles.md), die veel van dezelfde instellingen configureren als beveiligingsbasislijnen.
 
 De volgende beveiligingsbasislijninstanties zijn beschikbaar voor gebruik met Intune. Gebruik de koppelingen om de instellingen weer te geven voor de meest recente instantie van elke basislijn.
 

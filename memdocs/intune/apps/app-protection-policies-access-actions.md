@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b877587e8eb50019086e2296d7cc5b7e900da62a
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: f77fb3b93c2600bf422aa95af267abc3e64ae7ee
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323788"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551354"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Selectief gegevens wissen met acties voor voorwaardelijke toegang in app-beveiligingsbeleid in Intune
 
@@ -59,7 +59,7 @@ Voor iOS/iPadOS kunt u acties configureren voor de volgende instellingen met beh
 - Apparaatmodel(len)
 - Maximaal toegestaan bedreigingsniveau van apparaat
 
-Als u de instelling **Apparaatmodel(len)** wilt gebruiken, voert u een lijst met door puntkomma's gescheiden waarden in met iOS-/iPadOS-modelaanduidingen. Deze waarden zijn niet hoofdlettergevoelig. Behalve in Intune Reporting voor de invoer van de 'Apparaatmodellen', kunt u een iOS-/iPadOS-model-id vinden in de kolom Apparaattype in de [ondersteuningsdocumentatie van HockeyApp](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types) of in deze [externe GitHub-opslagplaats](https://gist.github.com/adamawolf/3048717).<br>
+Als u de instelling **Apparaatmodel(len)** wilt gebruiken, voert u een lijst met door puntkomma's gescheiden waarden in met iOS-/iPadOS-modelaanduidingen. Deze waarden zijn niet hoofdlettergevoelig. Behalve in Intune Reporting voor de invoer van de Apparaatmodellen kunt u een iOS-/iPadOS-model-id vinden in deze [GitHub-opslagplaats van derden](https://gist.github.com/adamawolf/3048717).<br>
 Voorbeeldinvoer: *iPhone5,2;iPhone5,3*
 
 Op apparaten van eindgebruikers moet de Intune-client actie ondernemen op basis van tekenreeksen van het apparaatmodel die zijn opgegeven in Intune-beleid voor toepassingsbeveiliging. Het afstemmen is volledig afhankelijk van wat het apparaat rapporteert. U (de IT-beheerder) wordt aangeraden om ervoor te zorgen dat het beoogde gedrag optreedt door deze instelling in een kleine groep gebruikers te testen op basis van verschillende apparaatfabrikanten en -modellen. De standaardwaarde is **Niet geconfigureerd**.<br>

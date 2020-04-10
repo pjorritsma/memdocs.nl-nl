@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c8c521dc0899b3429de85e95116a6277d724771
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 6f16c39ff0af44918099863be5d23ec9fe564493
+ms.sourcegitcommit: 954b3aae7916ad14065e6e86a577c5205103a50e
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327276"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80624917"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>Android-apparaten verplaatsen van beheer door apparaatbeheerder naar werkprofielbeheer
 
@@ -65,8 +65,8 @@ Wanneer gebruikers zien dat ze om die reden niet meer compatibel zijn, kunnen ze
 
 
     In het e-mailbericht kunt u de onderstaande URL in uw berichten aan gebruikers toevoegen. Met de URL wordt de pagina **Apparaatinstellingen bijwerken** van de Android-bedrijfsportal geopend. Op deze pagina wordt het proces gestart om over te stappen op werkprofielbeheer.
-    - [https://portal.manage.microsoft.com/UpdateSettings.aspx](https://portal.manage.microsoft.com/UpdateSettings.aspx).
-    - Voor de Amerikaanse overheid kunt u in plaats daarvan deze koppeling gebruiken: [https://portal.manage.microsoft.us/UpdateSettings.aspx](https://portal.manage.microsoft.us/UpdateSettings.aspx).
+    - `https://portal.manage.microsoft.com/UpdateSettings.aspx`.
+    - Voor de Amerikaanse overheid kunt u in plaats hiervan deze koppeling gebruiken: `https://portal.manage.microsoft.us/UpdateSettings.aspx`.
   
     > [!NOTE]
     > - Natuurlijk kunt u gebruikersvriendelijke hypertekst gebruiken voor de koppelingen in uw communicatie met gebruikers. Gebruik echter geen URL-verkorters omdat de koppelingen dan misschien niet werken.

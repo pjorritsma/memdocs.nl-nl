@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/19/2019
+ms.date: 03/31/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,63 +15,79 @@ ms.assetid: d4430e92-04cc-48e9-a77a-81b95a90b6b3
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: arnab
+ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: ee2d220e308b406251f049e1c17422f89ee36534
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d9e074def368927504c3f3c1761ec21b3ab62d22
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79348780"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696262"
 ---
 # <a name="encrypting-your-android-device"></a>Uw Android-apparaat versleutelen
 
-Met apparaatversleuteling worden uw bestanden en mappen beschermd tegen onbevoegde toegang als uw apparaat is vermist of gestolen. Nadat u apparaatversleuteling hebt ingeschakeld, kunnen alleen personen met het juiste wachtwoord of de juiste pincode zich aanmelden bij uw apparaat. 
+Met apparaatversleuteling worden uw bestanden en mappen beschermd tegen onbevoegde toegang als uw apparaat is vermist of gestolen. Hiermee worden de gegevens op uw apparaat ontoegankelijk en onleesbaar voor personen zonder een wachtwoordcode. 
 
-Voordat u toegang krijgt tot school- of werkresources, moet u mogelijk uw Android-apparaat verplicht versleutelen van uw organisatie. Sommige nieuwere Android-apparaten worden standaard versleuteld.  
+Voordat u toegang krijgt tot school- of werkresources, moet u van uw organisatie mogelijk het volgende doen:
 
-## <a name="turn-on-encryption"></a>Versleuteling inschakelen
-
-Als bedrijfsportal of de Microsoft Intune app u vraagt om uw apparaat te versleutelen, voert u de volgende stappen uit. 
+* [Een apparaat versleutelen](#encrypt-device)
+* [Beveiligd opstarten inschakelen](#enable-secure-startup)
+* [Een wachtwoordcode, pincode of andere verificatiemethode voor opstarten instellen](#set-startup-passcode)  
 
 > [!Note]
-> Bepaalde Android-apparaten, zoals Huawei, Vivo en OPPO, kunnen niet worden versleuteld. Zie [hier](your-device-appears-encrypted-but-cp-says-otherwise-android.md) voor meer informatie.  
+> Bepaalde Android-apparaten, zoals Huawei, Vivo en OPPO, kunnen niet worden versleuteld. Raadpleeg [Apparaat is versleuteld maar de app zegt iets anders](your-device-appears-encrypted-but-cp-says-otherwise-android.md) voor meer informatie.  
 
-1. Stel een schermvergrendeling voor het apparaat in.  
-    a. Ga naar **Instelling** > **Vergrendelscherm en beveiliging** > **Type schermvergrendeling**.  
-    b. Selecteer **Pincode**, **Wachtwoord** of **Patroon**.  
-    c. Volg de instructies op het scherm voor het configureren van de beeldschermvergrendeling.  
+## <a name="encrypt-device"></a>Apparaat versleutelen
 
-2. Ga terug naar **Vergrendelingsscherm en beveiliging** en selecteer **Beveiligd opstarten**.
-3. Kies **Pincode vereisen wanneer het apparaat inschakelt** > **OK**.
-4. Voer uw pincode in om te bevestigen en versleutel uw apparaat.
-5. Open de bedrijfsportal of Microsoft Intune-app.
+Volg deze stappen om uw apparaat te versleutelen. Het apparaat wordt mogelijk meerdere keren opnieuw opgestart. 
+
+De naam en locatie van de versleutelingsoptie variëren, afhankelijk van de fabrikant van uw apparaat en de Android-versie. 
+
+1. Open de app **Instellingen**.
+2. Typ **beveiliging** of **versleutelen** in de zoekbalk van de app om gerelateerde instellingen te vinden.
+3. Tik op de optie om het apparaat te versleutelen. Volg de instructies op het scherm.  
+4. Stel een wachtwoord voor het vergrendelingsscherm, pincode of andere verificatiemethode in, wanneer u hierom wordt gevraagd (indien toegestaan in uw organisatie). 
+5. Open de bedrijfsportal of Microsoft Intune-app om de instellingen opnieuw te controleren.
+    * Bedrijfsportal-gebruikers: Selecteer uw apparaat en tik op **Apparaatinstellingen controleren**. 
+    * Microsoft Intune-gebruikers: U moet wachten tot de pagina is bijgewerkt, maar als dat is gebeurd, is de versleutelingsstatus gewijzigd in conform. 
+
+## <a name="enable-secure-startup"></a>Beveiligd opstarten inschakelen
+
+In uw organisatie is mogelijk vereist dat u beveiligd opstarten inschakelt als onderdeel van het versleutelingsbeleid. Met deze functie wordt het apparaat nog extra beschermd, omdat er een wachtwoord of pincode moet worden ingevoerd voordat de telefoon kan worden opgestart. Mogelijk hebt u nog aanvullende verificatieopties. Dit varieert, afhankelijk van wat is toegestaan in uw organisatie. 
+
+De naam en locatie van de optie voor beveiligd opstarten variëren, afhankelijk van de fabrikant van uw apparaat en de Android-versie. Op sommige apparaten heet deze instelling **Versterkte beveiliging**. 
+
+1. Open de app **Instellingen**.
+2. Typ **beveiligd opstarten** in de zoekbalk van de app.
+3. Tik op **Beveiligd opstarten** > **Pincode vereisen wanneer het apparaat inschakelt**.
+4. Voer de pincode van het apparaat in, wanneer u hierom wordt gevraagd.   
+5. Open de bedrijfsportal of Microsoft Intune-app om de instellingen opnieuw te controleren.
     * Bedrijfsportal-gebruikers: Selecteer uw apparaat en tik op **Apparaatinstellingen controleren**. 
     * Microsoft Intune-gebruikers: U moet wachten tot de pagina is bijgewerkt, maar als dat is gebeurd, is de versleutelingsstatus gewijzigd in conform.  
 
-Apparaten met Android 4.4 en eerder hebben mogelijk niet de optie **Beveiligd opstarten**. In dat geval voert u de volgende stappen uit om uw apparaat te versleutelen.
 
-1. Ga naar **Instellingen** > **Beveiliging** > **Apparaat versleutelen**. Labels op het scherm zijn afhankelijk van Android-apparaten. Als u de optie **Apparaat versleutelen** niet ziet, kijkt u in:
-    * **Opslag** > **Opslagversleuteling**
-    * **Opslag** > **Vergrendelingsscherm en beveiliging** > **Overige beveiligingsinstellingen** 
+## <a name="set-startup-passcode"></a>Wachtwoordcode voor opstarten instellen   
+Bij het [versleutelen van uw apparaat](#encrypt-device) en het [inschakelen van beveiligd opstarten](#enable-secure-startup) wordt u gevraagd om een pincode, wachtwoord of andere verificatiemethode voor het apparaat in te stellen (indien toegestaan in uw organisatie). Er zijn geen verdere stappen vereist. 
 
-2. Volg de instructies op het scherm. Tijdens het versleutelen wordt het apparaat mogelijk meerdere keren opnieuw opgestart.
-3. Open de bedrijfsportal of Microsoft Intune-app.
-    * Bedrijfsportal-gebruikers: Selecteer uw apparaat en tik op **Apparaatinstellingen controleren**.  
-    * Microsoft Intune-gebruikers: U moet wachten tot de pagina is bijgewerkt, maar als dat is gebeurd, is de versleutelingsstatus gewijzigd in conform.
+Het type vergrendelingsscherm kiezen of wijzigen:
 
-## <a name="troubleshoot"></a>Problemen oplossen  
-**Probleem**: U hebt uw apparaat al versleuteld en
+1. Open de app **Instellingen**.
+2. Typ **schermvergrendeling** in de zoekbalk van de app.
+3. Tik op **Type schermvergrendeling**.
+4. Tik op het type schermvergrendeling dat u wilt gebruiken, en volg de instructies op het scherm om dit te bevestigen.  
 
-- De versleutelingsknop is uitgeschakeld.
-- Er wordt een bericht weergegeven dat u nog moet versleutelen.
-- Er treden fouten op bij het gebruik van de bedrijfsportal- of Microsoft Intune-app.
+## <a name="troubleshoot"></a>Problemen oplossen    
+**Probleem**: De versleutelingsknop is uitgeschakeld.   
 
-**Wat u kunt doen**
+**Wat u kunt doen**: 
+* Controleer of het apparaat volledig is opgeladen en is aangesloten. Versleuteling kan enige tijd duren en vereist een volledig opgeladen batterij.   
 
-- Zorg dat het apparaat is geladen en aangesloten.  
-- Zorg ervoor dat u een pincode of wachtwoord hebt ingesteld op het apparaat.  
+**Probleem**: Er wordt een bericht weergegeven dat u het apparaat nog moet versleutelen.  
+
+**Wat u kunt doen**:
+   *  [Stel een vergrendelingsscherm in](#set-startup-passcode) op het apparaat. 
+   * [Schakel beveiligd opstarten in](#enable-secure-startup).
 
 Nog hulp nodig? Neem contact op met het ondersteuningsteam van het bedrijf (zie de [bedrijfsportalwebsite](https://go.microsoft.com/fwlink/?linkid=2010980) voor contactgegevens) of stuur een e-mail naar het <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with encryption on my Android device&body=Describe the issue you're experiencing here.">Microsoft Android-team</a>.  

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/17/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 185cfbf49c9a6623559a2b50f0184980286e03eb
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 9e97322fa8a126203bf6e4d1e7a3703b92ded339
+ms.sourcegitcommit: 0907ee1137773f0482b1d2b9bb344e206d05aede
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80358718"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80536856"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Wat is Microsoft Intune-appbeheer?
 
@@ -119,6 +119,8 @@ De volgende items in de console leveren app-gerelateerde functionaliteit:
 - **Apple VPP-tokens**: voor het toepassen en weergeven van uw VPP-licenties (Volume Purchase Program) voor iOS/iPadOS. Zie [iOS-/iPadOS-apps die zijn aangeschaft via een volumeaankoopprogramma](vpp-apps-ios.md) voor meer informatie.
 - **Beheerde Google Play**: Beheerde Google Play is de zakelijke App Store van Google en tevens de enige bron van toepassingen voor Android Enterprise. Zie [Beheerde Google Play-apps toevoegen aan Android Enterprise-apparaten met Intune](apps-add-android-for-work.md) voor meer informatie.
 - **Aanpassing**: u kunt de bedrijfsportal aanpassen aan de huisstijl van uw bedrijf. Zie [De bedrijfsportal-app configureren](company-portal-app.md) voor meer informatie.
+
+Zie [Apps toevoegen aan Microsoft Intune](../apps/apps-add.md) voor meer informatie over apps.
 
 ## <a name="next-steps"></a>Volgende stappen
 

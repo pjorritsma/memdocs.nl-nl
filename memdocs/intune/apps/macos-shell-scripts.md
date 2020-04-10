@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/26/2020
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36936976528b5ea9c3fff1f77ec11223a4e4e63d
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.openlocfilehash: ba099e3614c11e10ce4cd9ae94668a1648bfc150
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80401781"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808050"
 ---
 # <a name="use-shell-scripts-on-macos-devices-in-intune-public-preview"></a>Shell-scripts op macOS-apparaten gebruiken in Intune (openbare preview)
 
@@ -55,6 +55,9 @@ Zorg ervoor dat aan de volgende vereisten wordt voldaan bij het opstellen van Sh
 4. Voer in **Scriptinstellingen** de volgende eigenschappen in en selecteer **Volgende**:
    - **Script uploaden**: Blader naar het Shell-script. Het scriptbestand moet kleiner zijn dan 200 kB.
    - **Script uitvoeren als aangemelde gebruiker**: Selecteer **Ja** om het script op het apparaat uit te voeren met de referenties van de gebruiker. Kies **Nee** (standaard) om het script als de rootgebruiker uit te voeren. 
+   - **Scriptmeldingen op apparaten verbergen:** Scriptmeldingen worden standaard weergegeven voor elk script dat wordt uitgevoerd. Eindgebruikers zien een melding van Intune op macOS-apparaten over dat *deze de computer wordt geconfigureerd door de IT-afdeling*.
+   - **Scriptfrequentie:** Selecteer hoe vaak het script moet worden uitgevoerd. Kies **Niet geconfigureerd** (standaard) om een script slechts één keer uit te voeren.
+   - **Maximum aantal keren dat het script opnieuw moet worden uitgevoerd als het script mislukt:** Selecteer hoe vaak het script moet worden uitgevoerd als er een afsluitcode wordt geretourneerd die niet gelijk is aan nul (0 betekent geslaagd). Kies **Niet geconfigureerd** (standaard) om een script niet opnieuw uit te voeren nadat het is mislukt.
 5. Voeg in **Bereiktags** desgewenste bereiktags toe voor het script en selecteer **Volgende**. U kunt bereiktags gebruiken om te bepalen wie scripts mag bekijken in Intune. Zie [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md) (Op rollen gebaseerd toegangsbeheer en bereiktags gebruiken voor gedistribueerde IT) voor uitgebreide informatie over bereiktags.
 6. Selecteer **Toewijzingen** > **Selecteer groepen om in te sluiten**. Er wordt een bestaande lijst met Azure AD-groepen weergegeven. Selecteer een of meer apparaatgroepen die de gebruikers bevatten wiens macOS-apparaten het script moeten ontvangen. Kies **Selecteren**. De groepen die u hebt gekozen, worden weergegeven in de lijst en ontvangen uw scriptbeleid.
    > [!NOTE]
@@ -103,9 +106,17 @@ Voor uw toegewezen Intune-rol zijn machtigingen vereist voor **Apparaatconfigura
  - De agent wordt op de achtergrond geverifieerd bij Intune-services voordat deze wordt ingecheckt om toegewezen Shell-scripts voor het macOS-apparaat te ontvangen.
  - De agent ontvangt toegewezen Shell-scripts en voert de scripts uit op basis van het geconfigureerde schema, het aantal nieuwe pogingen, de meldingsinstellingen en andere instellingen die door de beheerder zijn ingesteld.
  - De agent controleert meestal elke 8 uur op nieuwe of bijgewerkte scripts bij Intune-services. Dit check-inproces is onafhankelijk van het inchecken bij MDM. 
+ 
+ ### <a name="how-can-i-manually-initiate-an-agent-check-in-from-a-mac"></a>Hoe kan ik handmatig het inchecken van een agent initiëren vanaf een Mac-computer?
+Open **Terminal** op een Mac-computer waarop de agent is geïnstalleerd, en voer de opdracht `sudo killall IntuneMdmAgent` uit om het `IntuneMdmAgent`-proces te beëindigen. Het `IntuneMdmAgent`-proces wordt onmiddellijk opnieuw gestart. Hierdoor wordt een check-in bij Intune geïnitieerd.
 
- >[!NOTE]
- > Met de actie **Instellingen controleren** in de bedrijfsportal wordt alleen het inchecken bij MDM afgedwongen. Er is geen handmatige actie voor het inchecken van de agent.
+U kunt ook het volgende doen:
+1. Open **Activiteitbewaking** > **Weergeven** > *en selecteer **Alle processen**.* 
+2. Zoek naar processen met de naam `IntuneMdmAgent`. 
+3. Sluit het proces dat wordt uitgevoerd voor **rootgebruiker**. 
+
+> [!NOTE]
+> Met de actie **Instellingen controleren** in de bedrijfsportal en de actie **Synchroniseren** voor apparaten in de Microsoft Endpoint Manager-beheerconsole wordt een MDM-check-in geïnitieerd. Inchecken van de agent wordt niet afgedwongen.
 
  ### <a name="when-is-the-agent-removed"></a>Wanneer wordt de agent verwijderd?
  Er zijn verschillende omstandigheden die ertoe kunnen leiden dat de agent van het apparaat wordt verwijderd, zoals:

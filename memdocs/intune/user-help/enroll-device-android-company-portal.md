@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 04/01/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 0f6efa6d026879a3231c21662e799bf8ba7ada09
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0c9bf96188e27afeaf66e7b2897f8cda19f9df37
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79337743"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551659"
 ---
 # <a name="enroll-your-device-with-company-portal"></a>Uw apparaat inschrijven bij de bedrijfsportal  
 Schrijf uw persoonlijke of zakelijke Android-apparaat in voor veilige toegang tot uw zakelijke e-mail, apps en gegevens. De bedrijfsportal biedt ondersteuning voor Android-apparaten, inclusief Samsung Knox, met Android 4.4 en hoger.  
@@ -35,7 +35,7 @@ Schrijf uw persoonlijke of zakelijke Android-apparaat in voor veilige toegang to
 > Samsung Knox is een beveiligingstype dat door sommige Samsung-apparaten wordt gebruikt als extra bescherming naast de beveiligingsfuncties van systeemeigen Android-apparaten. Als u wilt controleren of u een Samsung Knox-apparaat hebt, gaat u naar **Instellingen** > **Over apparaat**. Als de **Knox-versie** niet wordt vermeld, hebt u een systeemeigen Android-apparaat.
 
 ## <a name="enroll-device"></a>Een apparaat inschrijven  
-Zorg ervoor dat u [de gratis app Intune-bedrijfsportal via Google Play hebt geïnstalleerd](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal). 
+Zorg ervoor dat u de Intune-bedrijfsportal-app hebt geïnstalleerd [uit Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal). Raadpleeg [Bedrijfsportal-app installeren op het vasteland van China](install-company-portal-android-china.md) voor een lijst met stores die de app aanbieden op het vasteland van China.    
 
 Tijdens de registratie wordt u mogelijk gevraagd om een categorie te kiezen die het beste beschrijft hoe u uw apparaat gebruikt. Het ondersteuningsteam van het bedrijf gebruikt uw antwoord om te controleren tot welke apps u toegang hebt.  
 

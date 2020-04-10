@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5f32ffb864f40d8cb5402f7d4488b3870686d1a
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: ed5ff548d28a5bc973c43c84861b9b256b41a203
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322507"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696294"
 ---
 # <a name="see-device-details-in-intune"></a>Apparaatdetails bekijken in Intune
 
@@ -48,13 +48,19 @@ In dit artikel leest u hoe u al uw apparaten en hun eigenschappen kunt bekijken 
       - [Autopilot opnieuw instellen](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset) (alleen Windows)
       - [Snelle scan](../configuration/device-restrictions-windows-10.md) (alleen Windows 10)
       - [Volledige scan](../configuration/device-restrictions-windows-10.md) (alleen Windows 10)
-       - [Naam van apparaat wijzigen](device-rename.md)
-      - Een externe hulpsessie starten
+      - Beveiligingsinformatie van Windows Defender bijwerken
+      - [BitLocker-sleutelrotatie](https://docs.microsoft.com/mem/intune/protect/encrypt-devices#to-rotate-the-bitlocker-recovery-key)
+      - [Naam van apparaat wijzigen](device-rename.md)
+      - [Nieuwe sessie van hulp op afstand](https://docs.microsoft.com/mem/intune/remote-actions/teamviewer-support)
    - Gebruik **Eigenschappen** om een [apparaatcategorie die u maakt](../enrollment/device-group-mapping.md) toe te wijzen en wijzig de eigendom van het apparaat naar een persoonlijk apparaat of een bedrijfsapparaat.
    - **Hardware** bevat veel details over het apparaat, zoals de apparaat-id, het besturingssysteem en de versie, opslagruimte en meer informatie.
    - Bij **Gedetecteerde toepassingen** staan alle apps vermeld die volgens Intune op het apparaat zijn geïnstalleerd, en de appversies. Zie [Door Intune gedetecteerde apps](../apps/app-discovered-apps.md) voor meer informatie.
    - Bij **Apparaatnaleving** staan alle toegewezen nalevingsbeleidsregels en wordt vermeld of het apparaat compatibel of niet compatibel is.
    - Bij **Apparaatconfiguratie** ziet u het configuratiebeleid van alle apparaten die aan het apparaat zijn toegewezen en wordt vermeld of het beleid is geslaagd of mislukt.
+   - **App-configuratie** 
+   - **Configuratie van eindpuntbeveiliging**
+   - **Herstelsleutels** geeft de beschikbare BitLocker-sleutels weer die zijn gevonden voor het apparaat
+   - In **Beheerde apps** worden alle beheerde apps weergegeven die in Intune zijn geconfigureerd en op het apparaat zijn geïmplementeerd. 
 
 ## <a name="hardware-device-details"></a>Hardwareapparaatdetails
 Afhankelijk van de provider die door de apparaten wordt gebruikt, worden mogelijk niet alle gegevens vermeld

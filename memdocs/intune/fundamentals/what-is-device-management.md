@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 756d835a54a9b020be50a83d95d1925334fda8f1
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 32e5d053b6dd579aad25a268604248d4fb5a6072
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326652"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696476"
 ---
 # <a name="device-management-overview"></a>Overzicht van apparaatbeheer
 
@@ -76,7 +76,7 @@ Het is een belangrijke taak van elke apparaatbeheeroplossing om beveiliging en b
 
 Er zijn verschillende manieren om apparaten te beheren. Ten eerste kunt u verschillende aspecten van apparaten beheren met behulp van de ingebouwde functies van Intune. Deze aanpak heet **Mobile Device Management (MDM)** . Gebruikers 'registreren' hun apparaten en gebruiken certificaten om met Intune te communiceren. Als IT-beheerder kunt u apps naar apparaten pushen, apparaten alleen gebruik laten maken van een specifiek besturingssysteem, persoonlijke apparaten blokkeren en meer. Als een apparaat ooit verloren raakt of wordt gestolen, kunt u ook alle gegevens van het apparaat verwijderen.
 
-Bij de tweede aanpak beheert u de apps op apparaten. Deze aanpak heet **Mobile Application Management (MAM)** . Gebruikers kunnen hun persoonlijke apparaten gebruiken om toegang te krijgen tot bedrijfsresources. Wanneer gebruikers een app openen, zoals hun Postvak IN of SharePoint, wordt gevraagd om aanvullende verificatie. Als een apparaat ooit verloren raakt of wordt gestolen, kunt u alle bedrijfsgegevens van het apparaat verwijderen.
+Bij de tweede aanpak beheert u de apps op apparaten. Deze aanpak heet **Mobile Application Management (MAM)** . Gebruikers kunnen hun persoonlijke apparaten gebruiken om toegang te krijgen tot bedrijfsresources. Wanneer gebruikers een app openen, zoals hun Postvak IN of SharePoint, wordt gevraagd om aanvullende verificatie. Als een apparaat ooit verloren raakt of wordt gestolen, kunt u alle bedrijfsgegevens verwijderen uit de met Intune beheerde toepassingen.
 
 U kunt ook een combinatie van [MDM en MAM](byod-technology-decisions.md) gebruiken.
 

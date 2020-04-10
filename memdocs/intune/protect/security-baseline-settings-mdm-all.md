@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 388630712b398ef82e78e55efa63418e95187681
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5b40ed9dff0d83639015e70889bf7008e8e68173
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79351185"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696501"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Windows MDM-beveiligingsbasislijninstellingen voor Intune
 
@@ -1583,6 +1583,9 @@ Zie [Beleids-CSP - Defender](https://docs.microsoft.com/windows/client-managemen
 ::: zone pivot="mdm-may-2019"
 
 - **Adobe Reader starten in een onderliggend proces**:  
+Deze regel voorkomt aanvallen door het maken van extra processen met Adobe Reader te blokkeren. Via social engineering of aanvallen kan malware aanvullende payloads downloaden en starten en uit Adobe Reader breken. Door te blokkeren dat onderliggende processen worden gegenereerd met Adobe Reader kan er geen malware worden verspreid die probeert om deze te gebruiken als vector.
+[Meer informatie](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+
   **Standaardinstelling**: Inschakelen
 
 ::: zone-end
@@ -2162,3 +2165,9 @@ De instellingen kunnen als volgt zijn:
 - **Hoofdletters in pincode vereisen**
 
 ::: zone-end
+
+## <a name="next-steps"></a>Volgende stappen
+
+- [Meer informatie over beveiligingsbasislijnen](security-baselines.md)
+- [Conflicten voorkomen](security-baselines.md#avoid-conflicts)
+- [Beleidsregels en profielen voor het oplossen van problemen in Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)

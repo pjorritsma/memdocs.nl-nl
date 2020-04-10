@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d424163df07dbe6add74bbdab9ec36a7b220b655
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 6c8e1551b49fce5074bd2e88d1d8802f62cca2bb
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324231"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808102"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>PowerShell-scripts op Windows 10-apparaten gebruiken in Intune
 
@@ -31,6 +31,9 @@ Gebruik de Microsoft Intune-beheeruitbreiding om PowerShell-scripts te uploaden 
 Deze functie is van toepassing op:
 
 - Windows 10 en hoger
+
+> [!NOTE]
+> Zodra aan de vereisten van de Intune-beheeruitbreiding is voldaan, wordt de Intune-beheeruitbreiding altijd automatisch geïnstalleerd wanneer een PowerShell-script of Win32-app wordt toegewezen aan de gebruiker of het apparaat. Raadpleeg de [vereisten](../apps/intune-management-extension.md#prerequisites) voor Intune-beheeruitbreidingen voor meer informatie.
 
 ## <a name="move-to-modern-management"></a>Uw beheer moderniseren
 
@@ -121,7 +124,34 @@ De Intune-beheeruitbreiding heeft de volgende vereisten. Zodra aan de vereisten 
 
 - Eindgebruikers hoeven zich niet aan te melden bij het apparaat om PowerShell-scripts uit te voeren.
 
-- De Intune-beheeruitbreidingsclient neemt één keer per uur contact op met Intune en na elke keer dat er opnieuw is opgestart. Dit gebeurt om te controleren op nieuwe scripts en wijzigingen. Wanneer u het beleid aan de Microsoft Azure Active Directory-groepen toewijst, wordt het PowerShell-script uitgevoerd en worden de resultaten van de uitvoering gerapporteerd. Zodra het script wordt uitgevoerd, wordt deze pas weer opnieuw uitgevoerd als het script of het beleid is gewijzigd.
+- De Intune-beheeruitbreidingsagent neemt één keer per uur contact op met Intune en na elke keer dat er opnieuw is opgestart. Dit gebeurt om te controleren op nieuwe scripts en wijzigingen. Wanneer u het beleid aan de Microsoft Azure Active Directory-groepen toewijst, wordt het PowerShell-script uitgevoerd en worden de resultaten van de uitvoering gerapporteerd. Zodra het script wordt uitgevoerd, wordt deze pas weer opnieuw uitgevoerd als het script of het beleid is gewijzigd. Als het script mislukt, probeert de Intune-beheeruitbreiding nog drie keer om het script opnieuw uit te voeren, bij de volgende drie achtereenvolgende keren dat de Intune-beheeruitbreidingsagent incheckt.
+
+### <a name="failure-to-run-script-example"></a>Voorbeeld van fout bij uitvoeren van script
+08:00 uur
+  -  Inchecken
+  -  Script **ConfigScript01** wordt uitgevoerd
+  -  Script mislukt
+
+9:00
+  -  Inchecken
+  -  Script **ConfigScript01** wordt uitgevoerd
+  -  Script mislukt (aantal nieuwe pogingen = 1)
+
+10:00
+  -  Inchecken
+  -  Script **ConfigScript01** wordt uitgevoerd
+  -  Script mislukt (aantal nieuwe pogingen = 2)
+  
+11:00
+  -  Inchecken
+  -  Script **ConfigScript01** wordt uitgevoerd
+  -  Script mislukt (aantal nieuwe pogingen = 3)
+
+12:00
+  -  Inchecken
+  - Er worden geen extra pogingen gedaan om het script **ConfigScript01** uit te voeren.
+  - Als er hierna geen verdere wijzigingen worden aangebracht in het script, worden er geen extra pogingen gedaan om het script uit te voeren.
+
 
 ## <a name="monitor-run-status"></a>Uitvoeringsstatus bewaken
 

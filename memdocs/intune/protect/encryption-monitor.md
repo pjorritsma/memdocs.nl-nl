@@ -220,7 +220,7 @@ Intune biedt toegang tot de Microsoft Azure Active Directory-blade voor BitLocke
 
 2. Selecteer **Apparaten** > **Alle apparaten**.
 
-3. Selecteer een apparaat in de lijst en selecteer vervolgens onder *Monitor***Herstelsleutels**.
+3. Selecteer een apparaat in de lijst en selecteer vervolgens onder *Monitor* **Herstelsleutels**.
   
    Als er sleutels in Azure AD beschikbaar zijn, is de volgende informatie beschikbaar:
    - BitLocker-sleutel-id

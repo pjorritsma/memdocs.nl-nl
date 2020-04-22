@@ -1,0 +1,68 @@
+### YamlMime:Landing
+title: Documentatie voor app-beheer
+summary: Gebruik Configuration Manager voor het beheren en implementeren van toepassingen, scripts en pakketten. Automatiseer de implementaties of laat gebruikers apps installeren vanuit Software Center.
+metadata:
+  title: Documentatie voor app-beheer
+  titleSuffix: Configuration Manager
+  description: Gebruik Configuration Manager voor het beheren en implementeren van toepassingen, scripts en pakketten. Automatiseer de implementaties of laat gebruikers apps installeren vanuit Software Center.
+  ms.prod: configuration-manager
+  ms.technology: configmgr-app
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 01/28/2020
+  ms.openlocfilehash: 7fccbe98c6199543554b48f28325b6531d0092c3
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81740895"
+landingContent:
+- title: Over app-beheer
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Inleiding tot app-beheer
+      url: understand/introduction-to-application-management.md
+    - text: Plannen voor app-beheer
+      url: plan-design/plan-for-and-configure-application-management.md
+    - text: Software Center plannen
+      url: plan-design/plan-for-software-center.md
+  - linkListType: tutorial
+    links:
+    - text: Een app maken en implementeren
+      url: get-started/create-and-deploy-an-application.md
+- title: Aan de slag
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Apps maken
+      url: deploy-use/create-applications.md
+    - text: PowerShell-scripts maken en uitvoeren
+      url: deploy-use/create-deploy-scripts.md
+  - linkListType: deploy
+    links:
+    - text: Apps implementeren
+      url: deploy-use/deploy-applications.md
+    - text: Microsoft Edge implementeren en bijwerken
+      url: deploy-use/deploy-edge.md
+- title: Belangrijkste taken
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: App-groepen maken
+      url: deploy-use/create-app-groups.md
+    - text: Apps goedkeuren
+      url: deploy-use/app-approval.md
+    - text: Apps installeren voor een apparaat
+      url: deploy-use/install-app-for-device.md
+    - text: Gebruikersaffiniteit apparaat
+      url: deploy-use/link-users-and-devices-with-user-device-affinity.md
+    - text: Het app-gebruik controleren met softwaremeter
+      url: deploy-use/monitor-app-usage-with-software-metering.md
+  - linkListType: reference
+    links:
+    - text: Problemen met app-implementaties oplossen
+      url: understand/app-deployment-technical-reference.md
+    - text: Pakketten en programma's
+      url: deploy-use/packages-and-programs.md

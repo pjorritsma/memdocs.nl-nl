@@ -1,0 +1,32 @@
+### YamlMime:Landing
+title: Documentatie voor beheerservice
+summary: Ontwikkelaarsdocumentatie voor de REST API van Configuration Manager
+metadata:
+  title: Documentatie voor beheerservice
+  titleSuffix: Configuration Manager
+  description: Upload uw Configuration Manager-apparaten naar de cloudservice om acties voor de apparaten uit te voeren.
+  ms.product: configuration-manager
+  ms.technology: configmgr-sdk
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 04/01/2020
+  ms.openlocfilehash: c6c2e97491982f39db4c149ac0bc38266bc2ea27
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741677"
+landingContent:
+- title: Over de beheerservice
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Wat is de beheerservice?
+      url: overview.md
+  - linkListType: how-to-guide
+    links:
+    - text: Instellen
+      url: set-up.md
+    - text: Gebruik
+      url: usage.md

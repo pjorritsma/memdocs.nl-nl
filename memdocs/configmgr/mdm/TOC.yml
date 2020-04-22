@@ -1,0 +1,48 @@
+- name: MDM-documentatie
+  href: index.yml
+- name: On-premises MDM
+  items:
+    - name: Wat is on-premises MDM
+      href: understand/manage-mobile-devices-with-on-premises-infrastructure.md
+    - name: On-premises MDM plannen
+      href: plan-design/plan-on-premises-mdm.md
+    - name: Setup
+      items:
+        - name: On-premises rollen installeren
+          href: get-started/install-site-system-roles-for-on-premises-mdm.md
+        - name: Certificaten instellen
+          href: get-started/set-up-certificates-on-premises-mdm.md
+        - name: Instellen voor inschrijving
+          href: get-started/set-up-device-enrollment-on-premises-mdm.md
+    - name: Apparaten inschrijven
+      items:
+        - name: Overzicht van inschrijving
+          href: deploy-use/enroll-devices-on-premises-mdm.md
+        - name: Gebruikersinschrijving
+          href: deploy-use/user-enroll-devices-on-premises-mdm.md
+        - name: Bulkinschrijving
+          href: deploy-use/bulk-enroll-devices-on-premises-mdm.md
+    - name: Apparaten beheren en gegevens beveiligen
+      href: deploy-use/wipe-lock-reset-devices.md
+    - name: Toepassingen beheren
+      href: deploy-use/management-tasks-applications.md
+    - name: Configuratie-instellingen beheren
+      href: deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md
+    - name: Toegang tot de bedrijfsresources
+      items:
+        - name: PFX-certificaatprofielen maken
+          href: deploy-use/create-pfx-certificate-profiles.md
+        - name: PFX-certificaatprofielen importeren
+          href: deploy-use/import-pfx-certificate-profiles.md
+        - name: Wi-Fi-profielen
+          href: ../protect/deploy-use/create-wifi-profiles.md?toc=/configmgr/mdm/toc.json&bc=/configmgr/mdm/breadcrumb/toc.json
+        - name: VPN-profielen
+          href: ../protect/deploy-use/vpn-profiles.md?toc=/configmgr/mdm/toc.json&bc=/configmgr/mdm/breadcrumb/toc.json
+- name: Exchange Server-connector
+  items:
+    - name: Apparaatbeheer met Exchange
+      href: deploy-use/manage-mobile-devices-with-exchange-activesync.md
+    - name: De Exchange-connector installeren
+      href: deploy-use/install-configure-exchange-connector.md
+- name: Wat is er gebeurd met hybride MDM?
+  href: understand/what-happened-to-hybrid.md

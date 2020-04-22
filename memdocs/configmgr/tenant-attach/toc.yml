@@ -1,0 +1,8 @@
+- name: Documentatie voor tenantkoppeling
+  href: index.yml
+- name: Implementeren en gebruiken
+  items:
+    - name: Tenantkoppeling inschakelen
+      href: device-sync-actions.md
+    - name: Problemen met apparaatacties oplossen
+      href: technical-reference.md

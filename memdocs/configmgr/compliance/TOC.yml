@@ -1,0 +1,62 @@
+- name: Documentatie voor apparaatcompatibiliteit
+  href: index.yml
+- name: Begrijpen en verkennen
+  items:
+    - name: Apparaatcompatibiliteit garanderen
+      href: understand/ensure-device-compliance.md
+- name: Aan de slag
+  items:
+    - name: Aan de slag met instellingen voor naleving
+      href: get-started/get-started-with-compliance-settings.md
+- name: Plannen en ontwerpen
+  items:
+    - name: De instellingen voor naleving plannen en configureren
+      href: plan-design/plan-for-and-configure-compliance-settings.md
+    - name: Taken voor het beheren van de naleving
+      items:
+        - name: Algemene taken voor het beheren van de naleving
+          href: plan-design/common-tasks-for-managing-compliance.md
+        - name: Apparaten met de Configuration Manager-client
+          href: plan-design/common-tasks-for-managing-compliance-on-devices-with-the-client.md
+        - name: Configuratiebasislijnen maken en implementeren
+          href: plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md
+    - name: Beveiliging en privacy
+      href: plan-design/security-and-privacy-for-compliance-settings.md
+- name: Implementeren en gebruiken
+  items:
+    - name: Configuratie-items maken
+      items:
+        - name: Overzicht van Configuratie-items maken
+          href: deploy-use/create-configuration-items.md
+        - name: Apparaten die worden beheerd met de Configuration Manager-client
+          items:
+            - name: Windows 10
+              href: deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md
+            - name: Mac OS X
+              href: deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md
+            - name: Windows-desktopcomputer en -server (aangepast)
+              href: deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md
+    - name: Onderliggende configuratie-items maken
+      href: deploy-use/create-child-configuration-items.md
+    - name: Configuratiebasislijnen maken
+      href: deploy-use/create-configuration-baselines.md
+    - name: Configuratiebasislijnen implementeren
+      href: deploy-use/deploy-configuration-baselines.md
+    - name: Configuratiegegevens beheren
+      items:
+        - name: Configuratiegegevens beheren
+          href: deploy-use/management-tasks-for-configuration-data.md
+        - name: Configuratiegegevens importeren
+          href: deploy-use/import-configuration-data.md
+    - name: Configuratie-items voor gebruikersgegevens en -profielen maken
+      href: deploy-use/create-user-data-and-profiles-configuration-items.md
+    - name: Profielen van OneDrive voor Bedrijven
+      href: deploy-use/onedrive-profile.md
+    - name: Profielen voor externe verbindingen maken
+      href: deploy-use/create-remote-connection-profiles.md
+    - name: Windows-apparaten upgraden naar een nieuwe versie
+      href: deploy-use/upgrade-windows-version.md
+    - name: Instellingen voor Microsoft Edge configureren
+      href: deploy-use/browser-profiles.md
+    - name: Instellingen voor naleving bewaken
+      href: deploy-use/monitor-compliance-settings.md

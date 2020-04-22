@@ -1,0 +1,54 @@
+### YamlMime:Landing
+title: Documentatie voor Desktop Analytics
+summary: Desktop Analytics is een cloudservice die kan worden geïntegreerd met Configuration Manager. Deze service voorziet u van inzichten om uw Windows-clients bij te werken.
+metadata:
+  title: Documentatie voor Desktop Analytics
+  titleSuffix: Configuration Manager
+  description: Desktop Analytics is een cloudservice die kan worden geïntegreerd met Configuration Manager. Deze service voorziet u van inzichten om uw Windows-clients bij te werken.
+  ms.prod: configuration-manager
+  ms.technology: configmgr-analytics
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 01/28/2020
+  ms.openlocfilehash: 1c0aa1c481acb18fadeebbdecdcd4759568d2242
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741405"
+landingContent:
+- title: Over Desktop Analytics
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Wat is Desktop Analytics?
+      url: overview.md
+    - text: Wat is er nieuw?
+      url: whats-new.md
+  - linkListType: tutorial
+    links:
+    - text: Testfase Windows 10
+      url: tutorial-windows10.md
+- title: Aan de slag
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Desktop Analytics instellen
+      url: set-up.md
+    - text: Verbinding maken met Configuration Manager
+      url: connect-configmgr.md
+    - text: Apparaten inschrijven
+      url: enroll-devices.md
+- title: Resources
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Veelgestelde vragen over Desktop Analytics
+      url: faq.md
+    - text: Gegevens delen inschakelen
+      url: enable-data-sharing.md
+    - text: Status van de verbinding bewaken
+      url: monitor-connection-health.md
+    - text: Problemen met Desktop Analytics oplossen
+      url: troubleshooting.md

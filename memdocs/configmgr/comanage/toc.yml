@@ -1,0 +1,54 @@
+- name: Documentatie voor co-beheer
+  href: index.yml
+- name: Overzicht
+  items:
+    - name: Wat is co-beheer?
+      href: overview.md
+- name: Quickstarts
+  items:
+    - name: Overzicht van quickstarts
+      href: quickstarts.md
+    - name: Directe waarde
+      items:
+        - name: Voorwaardelijke toegang
+          href: quickstart-conditional-access.md
+        - name: Externe acties van Intune
+          href: quickstart-remote-actions.md
+        - name: Clientstatus
+          href: quickstart-client-health.md
+        - name: Hybride Azure AD
+          href: quickstart-hybrid-aad.md
+        - name: Windows Autopilot
+          href: quickstart-autopilot.md
+    - name: Aan de slag
+      items:
+        - name: Paden naar co-beheer
+          href: quickstart-paths.md
+        - name: Hybride Azure AD instellen
+          href: quickstart-setup-hybrid-aad.md
+        - name: Een upgrade uitvoeren naar Windows 10
+          href: quickstart-upgrade-win10.md
+        - name: Hulp krijgen van FastTrack
+          href: quickstart-fasttrack.md
+- name: Zelfstudies
+  items:
+    - name: Co-beheer voor Configuration Manager-clients inschakelen
+      href: tutorial-co-manage-clients.md
+    - name: Co-beheer voor op internet gebaseerde apparaten inschakelen
+      href: tutorial-co-manage-new-devices.md
+- name: Concepten
+  items:
+    - name: Workloads
+      href: workloads.md
+    - name: Co-existentie met een MDM-service van derden
+      href: coexistence.md
+- name: Instructiegidsen
+  items:
+    - name: Co-beheer inschakelen
+      href: how-to-enable.md
+    - name: Op internet gebaseerde apparaten voorbereiden
+      href: how-to-prepare-Win10.md
+    - name: Workloads overhevelen naar Intune
+      href: how-to-switch-workloads.md
+    - name: Co-beheer bewaken
+      href: how-to-monitor.md

@@ -1,0 +1,16 @@
+- name: Documentatie voor beheerservice
+  href: index.yml
+- name: Wat is de beheerservice?
+  href: overview.md
+- name: Instructiegidsen
+  items:
+    - name: Instellen
+      href: set-up.md
+    - name: Gebruik
+      href: usage.md
+- name: Verwijzing
+  items:
+    - name: Veelgestelde vragen
+      href: faq.md
+    - name: Opmerkingen bij de release
+      href: release-notes.md

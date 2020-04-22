@@ -1,0 +1,148 @@
+- name: Documentatie voor besturingssysteemimplementatie
+  href: index.yml
+- name: Informatie
+  items:
+    - name: Introductie van besturingssysteemimplementatie
+      href: understand/introduction-to-operating-system-deployment.md
+- name: Plannen en ontwerpen
+  items:
+    - name: Vereisten voor de infrastructuur voor besturingssysteemimplementatie
+      href: plan-design/infrastructure-requirements-for-operating-system-deployment.md
+    - name: Planningsoverwegingen voor het automatiseren van taken
+      href: plan-design/planning-considerations-for-automating-tasks.md
+    - name: Scenario's voor het implementeren van enterprise-besturingssystemen
+      items:
+        - name: Overzicht van scenario's voor besturingssysteemimplementatie
+          href: deploy-use/scenarios-to-deploy-enterprise-operating-systems.md
+        - name: Windows bijwerken naar de laatste versie
+          href: deploy-use/upgrade-windows-to-the-latest-version.md
+        - name: Windows Autopilot implementeren voor bestaande apparaten
+          href: deploy-use/windows-autopilot-for-existing-devices.md
+        - name: Een bestaande computer vernieuwen met een nieuwe versie van Windows
+          href: deploy-use/refresh-an-existing-computer-with-a-new-version-of-windows.md
+        - name: Een nieuwe versie van Windows op een nieuwe computer (bare-metal) installeren
+          href: deploy-use/install-new-windows-version-new-computer-bare-metal.md
+        - name: Een bestaande computer vervangen en de instellingen overzetten
+          href: deploy-use/replace-an-existing-computer-and-transfer-settings.md
+    - name: Methoden om enterprise-besturingssystemen te implementeren
+      items:
+        - name: Methoden voor de implementatie van besturingssystemen
+          href: deploy-use/methods-to-deploy-enterprise-operating-systems.md
+        - name: PXE gebruiken om Windows via het netwerk te implementeren
+          href: deploy-use/use-pxe-to-deploy-windows-over-the-network.md
+        - name: Windows met Software Center via het netwerk implementeren
+          href: deploy-use/use-software-center-to-deploy-windows-over-the-network.md
+        - name: Opstartbare media gebruiken om Windows te implementeren via het netwerk
+          href: deploy-use/use-bootable-media-to-deploy-windows-over-the-network.md
+        - name: Zelfstandige media gebruiken om Windows te implementeren zonder gebruik van het netwerk
+          href: deploy-use/use-stand-alone-media-to-deploy-windows-without-using-the-network.md
+        - name: Multicast gebruiken om Windows via het netwerk te implementeren
+          href: deploy-use/use-multicast-to-deploy-windows-over-the-network.md
+        - name: Een installatiekopie voor een OEM in de fabriek of bij een lokaal depot maken
+          href: deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot.md
+    - name: Beveiliging en privacy voor besturingssysteemimplementatie
+      href: plan-design/security-and-privacy-for-operating-system-deployment.md
+    - name: Interoperabiliteit bij de implementatie van besturingssystemen plannen
+      href: plan-design/planning-for-operating-system-deployment-interoperability.md
+- name: Aan de slag
+  items:
+    - name: Sitesysteemrollen voor besturingssysteemimplementaties voorbereiden
+      href: get-started/prepare-site-system-roles-for-operating-system-deployments.md
+    - name: Voorbereiden op besturingssysteemimplementatie
+      items:
+        - name: Voorbereidingen voor besturingssysteemimplementatie
+          href: get-started/prepare-for-operating-system-deployment.md
+        - name: Installatiekopieën
+          items:
+            - name: Opstartinstallatiekopieën beheren
+              href: get-started/manage-boot-images.md
+            - name: Opstartinstallatiekopieën aanpassen
+              href: get-started/customize-boot-images.md
+        - name: Installatiekopieën van het besturingssysteem
+          items:
+            - name: Installatiekopieën van besturingssysteem beheren
+              href: get-started/manage-operating-system-images.md
+            - name: Installatiekopieën van besturingssysteem aanpassen
+              href: get-started/customize-operating-system-images.md
+        - name: Upgradepakketten voor besturingssysteem beheren
+          href: get-started/manage-operating-system-upgrade-packages.md
+        - name: Stuurprogramma's beheren
+          href: get-started/manage-drivers.md
+        - name: De gebruikersstatus beheren
+          href: get-started/manage-user-state.md
+        - name: Voorbereiden op onbekende computerimplementaties
+          href: get-started/prepare-for-unknown-computer-deployments.md
+        - name: Gebruikers koppelen aan een doelcomputer
+          href: get-started/associate-users-with-a-destination-computer.md
+    - name: Windows PE-Peer-Cache voorbereiden om WAN-verkeer te beperken
+      href: get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md
+- name: Implementeren en gebruiken
+  items:
+    - name: Takenreeksen maken en beheren
+      href: deploy-use/manage-task-sequences-to-automate-tasks.md
+    - name: Takenreeksen maken om taken te automatiseren
+      items:
+        - name: Een takenreeks maken voor het installeren van een besturingssysteem
+          href: deploy-use/create-a-task-sequence-to-install-an-operating-system.md
+        - name: Een takenreeks maken voor het bijwerken van een besturingssysteem
+          href: deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md
+        - name: Takenreeksstappen voor het beheren van de conversie van BIOS naar UEFI
+          href: deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md
+        - name: Een takenreeks maken voor het vastleggen van een besturingssysteem
+          href: deploy-use/create-a-task-sequence-to-capture-an-operating-system.md
+        - name: Een takenreeks maken voor het registreren en herstellen van de gebruikersstatus
+          href: deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md
+        - name: Een aangepaste takenreeks maken
+          href: deploy-use/create-a-custom-task-sequence.md
+        - name: Een takenreeks maken voor niet-besturingssysteemimplementaties
+          href: deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md
+    - name: Een takenreeks implementeren
+      href: deploy-use/deploy-a-task-sequence.md
+    - name: Een gefaseerde implementatie maken
+      href: deploy-use/create-phased-deployment-for-task-sequence.md
+    - name: Gefaseerde implementaties beheren en bewaken
+      href: deploy-use/manage-monitor-phased-deployments.md
+    - name: Windows beheren als een service
+      href: deploy-use/manage-windows-as-a-service.md
+    - name: Windows to Go implementeren
+      href: deploy-use/deploy-windows-to-go.md
+    - name: Besturingssysteemimplementaties bewaken
+      href: deploy-use/monitor-operating-system-deployments.md
+    - name: Fouten opsporen in een takenreeks
+      href: deploy-use/debug-task-sequence.md
+    - name: Vooraf in cachegeheugen opgeslagen inhoud configureren
+      href: deploy-use/configure-precache-content.md
+    - name: Takenreeksmedia maken
+      items:
+        - name: Overzicht van takenreeksmedia
+          href: deploy-use/create-task-sequence-media.md
+        - name: Zelfstandige media maken
+          href: deploy-use/create-stand-alone-media.md
+        - name: Voorbereide media maken
+          href: deploy-use/create-prestaged-media.md
+        - name: Opstartbare media maken
+          href: deploy-use/create-bootable-media.md
+        - name: Vastelegmedia maken
+          href: deploy-use/create-capture-media.md
+- name: Technische naslaginformatie
+  items:
+    - name: De takenreekseditor gebruiken
+      href: understand/task-sequence-editor.md
+    - name: Gebruikerservaring voor implementatie van besturingssysteem
+      href: understand/user-experience.md
+    - name: Stappen voor takenreeksen
+      items:
+        - name: Stappen voor takenreeksen
+          href: understand/task-sequence-steps.md
+        - name: Software-updates installeren
+          href: understand/install-software-updates.md
+        - name: BitLocker vooraf inrichten in Windows PE
+          href: deploy-use/preprovision-bitlocker-in-windows-pe.md
+    - name: Takenreeksvariabelen gebruiken
+      href: understand/using-task-sequence-variables.md
+    - name: Takenreeksvariabelen
+      href: understand/task-sequence-variables.md
+    - name: Prestart-opdrachten voor takenreeksmedia
+      href: understand/prestart-commands-for-task-sequence-media.md
+    - name: Inrichtingsmodus
+      href: understand/provisioning-mode.md

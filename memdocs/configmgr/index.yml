@@ -1,0 +1,235 @@
+### YamlMime:Hub
+title: Documentatie voor Microsoft Endpoint Configuration Manager
+summary: 'Officiële productdocumentatie voor de volgende onderdelen van Microsoft Endpoint Manager: Configuration Manager, co-beheer en Desktop Analytics'
+metadata:
+  ms.topic: hub-page
+  ms.openlocfilehash: b890572e652528e1446f1dd2e194d933c27938dd
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741473"
+highlightedContent:
+  items:
+  - title: Wat is er nieuw?
+    itemType: learn
+    url: ./core/plan-design/changes/whats-new-incremental-versions.md
+  - title: Ondersteunde configuraties
+    itemType: architecture
+    url: ./core/plan-design/configs/supported-configurations.md
+  - title: Updates en onderhoud
+    itemType: deploy
+    url: ./core/servers/manage/updates.md
+  - title: Logboekbestanden
+    itemType: learn
+    url: ./core/plan-design/hierarchy/log-files.md
+  - title: Poorten
+    itemType: learn
+    url: ./core/plan-design/hierarchy/ports.md
+  - title: Technical preview
+    itemType: get-started
+    url: ./core/get-started/technical-preview.md
+conceptualContent:
+  items:
+  - title: Aan cloud gekoppeld beheer
+    links:
+    - text: Clients op internet beheren
+      url: ./core/clients/manage/manage-clients-internet.md
+      itemType: overview
+    - text: Azure AD plannen
+      url: ./core/plan-design/security/plan-for-security.md#bkmk_planazuread
+      itemType: architecture
+    - text: Azure-services
+      url: ./core/servers/deploy/configure/azure-services-wizard.md
+      itemType: how-to-guide
+  - title: Co-beheer
+    links:
+    - text: Quickstarts
+      url: ./comanage/quickstarts.md
+      itemType: quickstart
+    - text: Zelfstudie
+      url: ./comanage/tutorial-co-manage-clients.md
+      itemType: tutorial
+    - text: Workloads
+      url: ./comanage/workloads.md
+      itemType: overview
+    footerLink:
+      text: Meer informatie
+      url: ./comanage/index.yml
+  - title: Real-time beheer
+    links:
+    - text: CMPivot
+      url: ./core/servers/manage/cmpivot.md
+      itemType: get-started
+    - text: PowerShell-scripts uitvoeren
+      url: ./apps/deploy-use/create-deploy-scripts.md
+      itemType: how-to-guide
+  - title: Desktop Analytics
+    links:
+    - text: Overzicht
+      url: ./desktop-analytics/overview.md
+      itemType: overview
+    - text: Windows 10 implementeren naar pilot
+      url: ./desktop-analytics/tutorial-windows10.md
+      itemType: tutorial
+    - text: Desktop Analytics instellen
+      url: ./desktop-analytics/set-up.md
+      itemType: how-to-guide
+    - text: Office 365-dashboard
+      url: ./sum/deploy-use/office-365-dashboard.md
+      itemType: learn
+    footerLink:
+      text: Meer informatie
+      url: ./desktop-analytics/index.yml
+  - title: Infrastructuur vereenvoudigen
+    links:
+    - text: Siteserver met hoge beschikbaarheid
+      url: ./core/servers/deploy/configure/site-server-high-availability.md
+      itemType: deploy
+    - text: Een distributiepunt opnieuw toewijzen
+      url: ./core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_reassign
+      itemType: how-to-guide
+    - text: Configuration Manager in Azure
+      url: ./core/understand/configuration-manager-on-azure.md
+      itemType: learn
+  - title: Basisinfrastructuur
+    links:
+    - text: De console gebruiken
+      url: ./core/servers/manage/admin-console.md
+      itemType: how-to-guide
+    - text: Clients implementeren
+      url: ./core/clients/deploy/deploy-clients-to-windows-computers.md
+      itemType: deploy
+    - text: Configuration Manager en Windows 10 up-to-date houden
+      url: ./core/understand/configuration-manager-and-windows-as-service.md
+      itemType: learn
+    footerLink:
+      text: Meer informatie
+      url: ./core/index.yml
+  - title: Appbeheer
+    links:
+    - text: Apps maken
+      url: ./apps/get-started/create-and-deploy-an-application.md
+      itemType: how-to-guide
+    - text: Apps implementeren
+      url: ./apps/deploy-use/deploy-applications.md
+      itemType: deploy
+    - text: Software Center plannen
+      url: ./apps/plan-design/plan-for-software-center.md
+      itemType: architecture
+    - text: Microsoft Edge-beheer
+      url: ./apps/deploy-use/deploy-edge.md
+      itemType: how-to-guide
+    footerLink:
+      text: Meer informatie
+      url: ./apps/index.yml
+  - title: Besturingssysteemimplementatie
+    links:
+    - text: Een upgrade uitvoeren naar Windows 10
+      url: ./osd/deploy-use/upgrade-windows-to-the-latest-version.md
+      itemType: overview
+    - text: Gefaseerde implementaties
+      url: ./osd/deploy-use/create-phased-deployment-for-task-sequence.md
+      itemType: how-to-guide
+    - text: Stappen voor takenreeksen
+      url: ./osd/understand/task-sequence-steps.md
+      itemType: learn
+    footerLink:
+      text: Meer informatie
+      url: ./osd/index.yml
+  - title: Software-updates
+    links:
+    - text: Software-updates plannen
+      url: ./sum/plan-design/plan-for-software-updates.md
+      itemType: architecture
+    - text: Software-updates implementeren
+      url: ./sum/deploy-use/deploy-software-updates.md
+      itemType: deploy
+    - text: Windows 10-updates optimaliseren
+      url: ./sum/deploy-use/optimize-windows-10-update-delivery.md
+      itemType: learn
+    - text: Office 365 bijwerken
+      url: ./sum/deploy-use/manage-office-365-proplus-updates.md
+      itemType: how-to-guide
+    footerLink:
+      text: Meer informatie
+      url: ./sum/index.yml
+  - title: Apparaatcompatibiliteit
+    links:
+    - text: Configuratie-items maken
+      url: ./compliance/deploy-use/create-configuration-items.md
+      itemType: how-to-guide
+    - text: Instellingen voor Microsoft Edge
+      url: ./compliance/deploy-use/browser-profiles.md
+      itemType: how-to-guide
+    - text: Een upgrade uitvoeren voor uw Windows-editie
+      url: ./compliance/deploy-use/upgrade-windows-version.md
+      itemType: how-to-guide
+    footerLink:
+      text: Meer informatie
+      url: ./compliance/index.yml
+  - title: Beveiligen
+    links:
+    - text: Windows Defender
+      url: ./protect/deploy-use/endpoint-protection.md
+      itemType: overview
+    - text: WDATP
+      url: ./protect/deploy-use/windows-defender-advanced-threat-protection.md
+      itemType: how-to-guide
+    - text: BitLocker-beheer
+      url: ./protect/plan-design/bitlocker-management.md
+      itemType: overview
+    footerLink:
+      text: Meer informatie
+      url: ./protect/index.yml
+additionalContent:
+  sections:
+  - title: Community en ondersteuning voor Configuration Manager
+    items:
+    - title: Configuration Manager-blog
+      summary: Nieuws en aankondigingen
+      url: https://techcommunity.microsoft.com/t5/Configuration-Manager-Blog/bg-p/ConfigurationManagerBlog
+    - title: 'Twitter: #ConfigMgr'
+      summary: Blijf op de hoogte met onze actieve community op Twitter
+      url: https://twitter.com/hashtag/configmgr
+    - title: Configuration Manager-forums
+      summary: Stel technische vragen in de productforums
+      url: https://social.technet.microsoft.com/Forums/home?forum=ConfigMgrCBGeneral%2CConfigMgrDeployment%2CConfigMgrMDM%2CConfigMgrMigration%2CConfigMgrCompliance%2CConfigMgrAppManagement%2CConfigMgrPowerShell%2CConfigMgrCBOSD&filter=alltypes&sort=lastpostdesc
+    - title: Productfeedback via UserVoice
+      summary: Deel productideeën met het ontwikkelteam
+      url: https://configurationmanager.uservoice.com/forums/300492-ideas
+    - title: Productondersteuning
+      summary: Ontvang deskundige hulp van Microsoft-ondersteuning
+      url: https://aka.ms/cmcbsupport
+    - title: System Center 2012 R2 Configuration Manager
+      summary: Documentatie voor de vorige versie van Configuration Manager
+      url: https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682144(v=technet.10)
+  - title: Andere inhoud
+    items:
+    - title: Ontwikkelen
+      links:
+      - url: https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps
+        text: PowerShell
+      - url: ./develop/index.yml
+        text: Software Development Kit (SDK)
+      - url: ./develop/adminservice/index.yml
+        text: REST API van de beheerservice
+      - url: ./develop/core/understand/sqlviews/create-custom-reports-using-sql-server-views.md
+        text: SQL-weergaven
+    - title: Hulpprogramma's
+      links:
+      - url: ./core/support/support-center.md
+        text: Ondersteuningscentrum
+      - url: ./mdt/index.yml
+        text: MDT
+      - url: ./apps/pcm/package-conversion-manager.md
+        text: Package Conversion Manager
+      - url: ./core/support/tools.md
+        text: Meer informatie >
+    - title: Andere communitysites
+      links:
+      - url: https://www.reddit.com/r/sccm
+        text: Configuration Manager op Reddit
+      - url: https://www.facebook.com/groups/ConfigMgr2012
+        text: Groep met Configuration Manager-professionals op Facebook
+  footer: Hebt u een probleem gevonden op onze site? [Laat het ons weten](./core/understand/use-docs.md#bkmk_docfeedback)!

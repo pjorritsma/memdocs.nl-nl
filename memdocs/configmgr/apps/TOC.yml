@@ -1,0 +1,126 @@
+- name: Documentatie voor app-beheer
+  href: index.yml
+- name: Begrijpen en verkennen
+  items:
+    - name: Inleiding
+      href: understand/introduction-to-application-management.md
+- name: Aan de slag
+  items:
+    - name: Een toepassing maken en implementeren
+      href: get-started/create-and-deploy-an-application.md
+- name: Plannen en ontwerpen
+  items:
+    - name: Toepassingsbeheer plannen en configureren
+      href: plan-design/plan-for-and-configure-application-management.md
+    - name: Software Center plannen
+      href: plan-design/plan-for-software-center.md
+    - name: Beveiliging en privacy
+      href: plan-design/security-and-privacy-for-application-management.md
+- name: Implementeren en gebruiken
+  items:
+    - name: Toepassingen maken
+      href: deploy-use/create-applications.md
+      items:
+        - name: Mac-computertoepassingen maken
+          href: get-started/creating-mac-computer-applications.md
+        - name: Windows-toepassingen maken
+          href: get-started/creating-windows-applications.md
+        - name: Linux- en UNIX-servertoepassingen maken
+          href: get-started/creating-linux-and-unix-server-applications.md
+        - name: Windows Embedded-toepassingen maken
+          href: get-started/creating-windows-embedded-applications.md
+        - name: Globale voorwaarden maken
+          href: deploy-use/create-global-conditions.md
+        - name: Toepassingsgroepen maken
+          href: deploy-use/create-app-groups.md
+        - name: Pakketten en programma's
+          href: deploy-use/packages-and-programs.md
+        - name: Pakketdefinitiebestanden
+          href: deploy-use/package-definition-files.md
+    - name: Toepassingen implementeren
+      items:
+        - name: Toepassingen implementeren
+          href: deploy-use/deploy-applications.md
+        - name: Een gefaseerde implementatie maken
+          href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json
+        - name: Toepassingen goedkeuren
+          href: deploy-use/app-approval.md
+        - name: Toepassingen voor een apparaat installeren
+          href: deploy-use/install-app-for-device.md
+        - name: Een toepassing delen
+          href: deploy-use/share-applications.md
+        - name: De implementatie van een toepassing simuleren
+          href: deploy-use/simulate-application-deployments.md
+        - name: Microsoft Edge versie 77 en hoger implementeren
+          href: deploy-use/deploy-edge.md
+        - name: Virtuele toepassingen van App-V implementeren
+          href: get-started/deploying-app-v-virtual-applications.md
+        - name: Tips voor het oplossen van problemen met app-implementatie
+          href: deploy-use/troubleshoot-application-deployment.md
+    - name: Toepassingen bewaken
+      items:
+        - name: Toepassingen bewaken vanaf de console
+          href: deploy-use/monitor-applications-from-the-console.md
+        - name: Gefaseerde implementaties beheren en bewaken
+          href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json
+        - name: Het app-gebruik controleren met softwaremeter
+          href: deploy-use/monitor-app-usage-with-software-metering.md
+    - name: Toepassingen beheren
+      items:
+        - name: Beheertaken
+          href: deploy-use/management-tasks-applications.md
+        - name: Gebruikersaffiniteit apparaat
+          href: deploy-use/link-users-and-devices-with-user-device-affinity.md
+        - name: Microsoft Store voor Bedrijven en Onderwijs
+          href: deploy-use/manage-apps-from-the-windows-store-for-business.md
+        - name: Virtuele omgevingen van App-V
+          href: deploy-use/create-app-v-virtual-environments.md
+        - name: Toepassingen importeren en exporteren
+          href: deploy-use/import-export-applications.md
+    - name: Toepassingen bijwerken en buiten gebruik stellen
+      items:
+        - name: Toepassingen bijwerken en buiten gebruik stellen
+          href: deploy-use/update-and-retire-applications.md
+        - name: Toepassingen herzien en vervangen
+          href: deploy-use/revise-and-supersede-applications.md
+        - name: Toepassingen verwijderen
+          href: deploy-use/uninstall-applications.md
+    - name: Scripts uitvoeren en beheren
+      href: deploy-use/create-deploy-scripts.md
+      items:
+        - name: Meer informatie over de beveiliging van PowerShell-scripts
+          href: deploy-use/learn-script-security.md
+    - name: Package Conversion Manager
+      items:
+        - name: Abonnement voor Package Conversion Manager
+          href: pcm/package-conversion-manager.md
+        - name: Pakketten analyseren en converteren
+          href: pcm/how-to-analyze-and-convert.md
+- name: Problemen oplossen
+  items:
+    - name: Problemen oplossen met de implementatie van toepassingen
+      items:
+        - name: Voordat u begint
+          href: understand/app-deployment-technical-reference.md
+        - name: Beleid voor toepassingsimplementatie
+          href: understand/deployment-policy-technical-reference.md
+        - name: Toepassingsimplementatie voor apparaten
+          href: understand/device-deployment-technical-reference.md
+        - name: Toepassingsimplementatie voor gebruikers
+          href: understand/user-deployment-technical-reference.md
+        - name: Clientonderdelen voor toepassingsimplementatie
+          href: understand/client-components-technical-reference.md
+        - name: Toepassingsevaluatie
+          href: understand/deployment-evaluation-technical-reference.md
+        - name: Toepassing downloaden
+          href: understand/deployment-download-technical-reference.md
+        - name: Toepassing installeren
+          href: understand/deployment-install-technical-reference.md
+    - name: Problemen met de integratie van Microsoft Store voor Bedrijven en Onderwijs oplossen
+      href: deploy-use/troubleshoot-microsoft-store-for-business-integration.md
+    - name: Problemen met Package Conversion Manager oplossen
+      items:
+        - name: Problemen met Package Conversion Manager oplossen
+          href: pcm/troubleshoot-pcm.md
+        - name: Foutberichten voor Package Conversion Manager
+          href: pcm/error-messages.md

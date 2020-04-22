@@ -1,0 +1,58 @@
+### YamlMime:Landing
+title: Documentatie over Mobile Device Management (MDM)
+summary: Microsoft Endpoint Manager gebruiken voor het beheren van mobiele apparaten in uw organisatie, on-premises of op basis van de cloud
+metadata:
+  title: Beheer van mobiele apparaten
+  titleSuffix: Configuration Manager
+  description: Microsoft Endpoint Manager gebruiken voor het beheren van mobiele apparaten in uw organisatie, on-premises of op basis van de cloud
+  ms.prod: configuration-manager
+  ms.technology: configmgr-mdm
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 12/31/2019
+  ms.openlocfilehash: d9e3c95272c9e0d6596d214f73ea53f572b54c6b
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741796"
+landingContent:
+- title: Over on-premises MDM
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Wat is on-premises MDM?
+      url: understand/manage-mobile-devices-with-on-premises-infrastructure.md
+    - text: On-premises MDM plannen
+      url: plan-design/plan-on-premises-mdm.md
+  - linkListType: how-to-guide
+    links:
+    - text: Rollen installeren
+      url: get-started/install-site-system-roles-for-on-premises-mdm.md
+    - text: Apparaten inschrijven
+      url: deploy-use/enroll-devices-on-premises-mdm.md
+    - text: Apparaten beheren
+      url: deploy-use/wipe-lock-reset-devices.md
+- title: Verbinding maken met ConfigMgr en Exchange
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Apparaatbeheer met Exchange
+      url: deploy-use/manage-mobile-devices-with-exchange-activesync.md
+  - linkListType: how-to-guide
+    links:
+    - text: De Exchange-connector installeren
+      url: deploy-use/install-configure-exchange-connector.md
+- title: Op de cloud gebaseerde Intune gebruiken
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Wat is Intune?
+      url: https://docs.microsoft.com/intune/fundamentals/what-is-intune
+    - text: Overzicht van apparaatbeheer
+      url: https://docs.microsoft.com/intune/fundamentals/what-is-device-management
+  - linkListType: tutorial
+    links:
+    - text: Walkthrough voor Intune in Microsoft Endpoint Manager
+      url: https://docs.microsoft.com/intune/fundamentals/tutorial-walkthrough-endpoint-manager

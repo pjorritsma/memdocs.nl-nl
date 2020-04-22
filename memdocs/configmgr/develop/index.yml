@@ -1,0 +1,62 @@
+### YamlMime:Landing
+title: SDK-documentatie voor Configuration Manager
+summary: De SDK voor Configuration Manager bevat documentatie en voorbeelden die nuttig zijn bij de ontwikkeling van toepassingen die Configuration Manager-gegevens gebruiken en bewerken.
+metadata:
+  title: SDK-documentatie
+  titleSuffix: Configuration Manager
+  description: De SDK voor Configuration Manager bevat documentatie en voorbeelden die nuttig zijn bij de ontwikkeling van toepassingen die Configuration Manager-gegevens gebruiken en bewerken.
+  ms.prod: configuration-manager
+  ms.technology: configmgr-sdk
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 04/01/2020
+  ms.openlocfilehash: 94ad699d6de55ffbbc77722b2e9e4063844f78a3
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741711"
+landingContent:
+- title: Informatie over de Configuration Manager-SDK
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Overzicht van SDK
+      url: core/misc/system-center-configuration-manager-sdk.md
+    - text: Wat is er nieuw?
+      url: core/changes/what-s-new-in-the-system-center-configuration-manager-sdk.md
+    - text: SDK-vereisten
+      url: core/reqs/about-configuration-manager-sdk-requirements.md
+  - linkListType: reference
+    links:
+    - text: Naslaginformatie Configuration Manager-API
+      url: reference/configuration-manager-reference.md
+    - text: REST API van de beheerservice
+      url: adminservice/index.yml
+- title: Aan de slag
+  linkLists:
+  - linkListType: architecture
+    links:
+    - text: Aan de slag met het programmeren van Configuration Manager
+      url: core/understand/getting-started-with-configuration-manager-programming.md
+    - text: Architectuuroverzicht
+      url: core/understand/architectural-overview.md
+    - text: Aan de slag met PowerShell
+      url: core/understand/getting-started-with-configuration-manager-and-windows-powershell.md
+  - linkListType: reference
+    links:
+    - text: PowerShell-cmdlets voor Configuration Manager
+      url: https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps
+- title: Belangrijkste taken
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Inleiding tot WBEMTEST
+      url: core/understand/introduction-to-wbemtest.md
+  - linkListType: reference
+    links:
+    - text: SQL-weergaven van Configuration Manager-schema
+      url: core/understand/configuration-manager-schema-sql-views.md
+    - text: WMI-klasse SMS_R_System-server
+      url: reference/core/clients/manage/sms_r_system-server-wmi-class.md

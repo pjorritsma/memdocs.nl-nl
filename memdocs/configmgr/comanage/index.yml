@@ -1,0 +1,56 @@
+### YamlMime:Landing
+title: Documentatie voor co-beheer
+summary: Beheer co-beheer kunt u Windows 10-apparaten tegelijkertijd beheren door zowel Configuration Manager als Microsoft Intune te gebruiken.
+metadata:
+  title: Documentatie voor co-beheer
+  titleSuffix: Configuration Manager
+  description: Beheer co-beheer kunt u Windows 10-apparaten tegelijkertijd beheren door zowel Configuration Manager als Microsoft Intune te gebruiken.
+  ms.product: configuration-manager
+  ms.technology: configmgr-comanage
+  ms.topic: landing-page
+  author: mestew
+  ms.author: mstewart
+  ms.date: 01/10/2020
+  ms.openlocfilehash: bc1bf65ecaf77ded325fcdae19a0d318052b1cc9
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81740997"
+landingContent:
+- title: Over co-beheer
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Wat is co-beheer?
+      url: overview.md
+    - text: Paden naar co-beheer
+      url: quickstart-paths.md
+  - linkListType: video
+    links:
+    - text: Voorwaardelijke toegang met co-beheer
+      url: https://channel9.msdn.com/Series/Endpoint-Zone/The-Security-Benefits-of-Conditional-Access/player
+- title: Aan de slag
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Co-beheer inschakelen voor bestaande Configuration Manager-clients
+      url: tutorial-co-manage-clients.md
+    - text: Co-beheer inschakelen voor nieuwe op internet gebaseerde apparaten
+      url: tutorial-co-manage-new-devices.md
+  - linkListType: video
+    links:
+    - text: Upgraden naar Windows 10 voor co-beheer
+      url: https://channel9.msdn.com/Series/Endpoint-Zone/Upgrading-to-Windows-10-to-Enable-Co-Management/player
+- title: Belangrijkste taken
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Configuration Manager-workloads overschakelen naar Intune
+      url: how-to-switch-workloads.md
+    - text: Co-beheer beheren in Configuration Manager
+      url: how-to-monitor.md
+  - linkListType: video
+    links:
+    - text: Windows Autopilot met co-beheer
+      url: https://channel9.msdn.com/Series/Endpoint-Zone/Using-Windows-Autopilot-with-Co-Management/player

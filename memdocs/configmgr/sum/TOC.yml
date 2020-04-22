@@ -1,0 +1,95 @@
+- name: Documentatie beheer van software-updates
+  href: index.yml
+- name: Begrijpen en verkennen
+  items:
+    - name: Inleiding tot software-updates
+      href: understand/software-updates-introduction.md
+    - name: Gebruikte pictogrammen voor software-updates
+      href: understand/software-updates-icons.md
+- name: Plannen en ontwerpen
+  items:
+    - name: Software-updates plannen
+      href: plan-design/plan-for-software-updates.md
+    - name: Vereisten voor software-updates
+      href: plan-design/prerequisites-for-software-updates.md
+    - name: Aanbevolen procedures voor software-updates
+      href: plan-design/software-updates-best-practices.md
+    - name: Beveiliging en privacy voor software-updates
+      href: plan-design/security-and-privacy-for-software-updates.md
+- name: Aan de slag
+  items:
+    - name: Beheer van software-updates voorbereiden
+      href: get-started/prepare-for-software-updates-management.md
+    - name: Een software-updatepunt installeren
+      href: get-started/install-a-software-update-point.md
+    - name: Software-updates synchroniseren
+      href: get-started/synchronize-software-updates.md
+    - name: Classificaties en producten synchroniseren
+      href: get-started/configure-classifications-and-products.md
+    - name: Instellingen voor software-updates beheren
+      href: get-started/manage-settings-for-software-updates.md
+    - name: Software-updates synchroniseren in niet-verbonden omgevingen
+      items:
+        - name: Software-updates vanaf een niet-verbonden software-updatepunt synchroniseren
+          href: get-started/synchronize-software-updates-disconnected.md
+        - name: Office 365-updates vanaf een niet-verbonden software-updatepunt synchroniseren
+          href: get-started/synchronize-office-updates-disconnected.md
+- name: Implementeren en gebruiken
+  items:
+    - name: Software-updates downloaden
+      href: deploy-use/download-software-updates.md
+    - name: Software-updates toevoegen aan een updategroep
+      href: deploy-use/add-software-updates-to-an-update-group.md
+    - name: Software-updates implementeren
+      href: deploy-use/deploy-software-updates.md
+      items:
+        - name: Software-updates handmatig implementeren
+          href: deploy-use/manually-deploy-software-updates.md
+        - name: Software-updates automatisch implementeren
+          href: deploy-use/automatically-deploy-software-updates.md
+        - name: Een gefaseerde implementatie maken
+          href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json
+    - name: Software-updates controleren
+      href: deploy-use/monitor-software-updates.md
+      items:
+        - name: Gefaseerde implementaties beheren en bewaken
+          href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json
+    - name: Onderhoud van software-updates
+      href: deploy-use/software-updates-maintenance.md
+    - name: Orchestration-groepen
+      href: deploy-use/orchestration-groups.md
+    - name: Een servergroep onderhouden
+      href: deploy-use/service-a-server-group.md
+    - name: Office 365-clientbeheerdashboard
+      href: deploy-use/office-365-dashboard.md
+    - name: Office 365 ProPlus-updates beheren
+      href: deploy-use/manage-office-365-proplus-updates.md
+    - name: Levering van Windows 10-update optimaliseren
+      href: deploy-use/optimize-windows-10-update-delivery.md
+    - name: De bestanden voor snelle installatie van Windows 10-updates beheren
+      href: deploy-use/manage-express-installation-files-for-windows-10-updates.md
+    - name: Integratie met Windows Update voor bedrijven in Windows 10
+      href: deploy-use/integrate-windows-update-for-business-windows-10.md
+    - name: Software-updates van derden
+      href: deploy-use/third-party-software-updates.md
+    - name: Voorbeeldscenario voor het implementeren van beveiligingsupdates
+      href: deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md
+- name: System Center Updates Publisher
+  href: tools/updates-publisher.md
+  items:
+    - name: Installeren
+      href: tools/install-updates-publisher.md
+    - name: Opties configureren
+      href: tools/updates-publisher-options.md
+    - name: Catalogi beheren
+      href: tools/updates-publisher-catalogs.md
+    - name: Updates beheren
+      href: tools/manage-updates-with-updates-publisher.md
+    - name: Publicaties beheren
+      href: tools/updates-publisher-publications.md
+    - name: Nieuwe updates maken
+      href: tools/create-updates-with-updates-publisher.md
+    - name: Toepasselijkheidsregels
+      href: tools/updates-publisher-applicability-rules.md
+    - name: Certificaten en beveiliging
+      href: tools/updates-publisher-security.md

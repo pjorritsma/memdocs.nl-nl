@@ -1,0 +1,84 @@
+### YamlMime:Landing
+title: Documentatie voor kerninfrastructuur
+summary: Basisinformatie over het product Configuration Manager, waaronder informatie over siteservers en clients.
+metadata:
+  title: Documentatie voor kerninfrastructuur
+  titleSuffix: Configuration Manager
+  description: Basisinformatie over het product Configuration Manager, waaronder informatie over siteservers en clients.
+  ms.prod: configuration-manager
+  ms.technology: configmgr-core
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 01/30/2020
+  ms.openlocfilehash: 2816bb6b4685cdd6e7ce56b981fc9e0ffbd89ac3
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741439"
+landingContent:
+- title: Over de kerninfrastructuur
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Wat is Configuration Manager?
+      url: understand/introduction.md
+    - text: Veelgestelde vragen over Microsoft Endpoint Configuration Manager
+      url: understand/microsoft-endpoint-manager-faq.md
+    - text: Wat is er nieuw?
+      url: plan-design/changes/whats-new-incremental-versions.md
+    - text: Technical preview
+      url: get-started/technical-preview.md
+  - linkListType: get-started
+    links:
+    - text: De console gebruiken
+      url: servers/manage/admin-console.md
+    - text: Software Center gebruiken
+      url: understand/software-center.md
+    - text: De documentatie gebruiken
+      url: understand/use-docs.md
+    - text: Help-informatie zoeken
+      url: understand/find-help.md
+- title: Aan de slag
+  linkLists:
+  - linkListType: architecture
+    links:
+    - text: Ondersteunde configuraties
+      url: plan-design/configs/supported-configurations.md
+    - text: Ondersteuning voor Windows 10
+      url: plan-design/configs/support-for-windows-10.md
+    - text: Sitevereisten
+      url: plan-design/configs/site-and-site-system-prerequisites.md
+  - linkListType: deploy
+    links:
+    - text: Updates en onderhoud
+      url: servers/manage/updates.md
+    - text: Updates binnen de console installeren
+      url: servers/manage/install-in-console-updates.md
+    - text: Clients implementeren
+      url: clients/deploy/deploy-clients-to-windows-computers.md
+    - text: Migreren tussen hiërarchieën
+      url: migration/migrate-data-between-hierarchies.md
+- title: Belangrijkste taken
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: TLS 1.2 inschakelen
+      url: plan-design/security/enable-tls-1-2.md
+    - text: CMPivot
+      url: servers/manage/cmpivot.md
+    - text: Plan voor cloudbeheergateway
+      url: clients/manage/cmg/plan-cloud-management-gateway.md
+    - text: Verbeterde HTTP
+      url: plan-design/hierarchy/enhanced-http.md
+  - linkListType: reference
+    links:
+    - text: Logboekbestanden
+      url: plan-design/hierarchy/about-log-files.md
+    - text: Poorten
+      url: plan-design/hierarchy/ports.md
+    - text: Clientinstellingen
+      url: clients/deploy/about-client-settings.md
+    - text: Hulpprogramma's
+      url: support/tools.md

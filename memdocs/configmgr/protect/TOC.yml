@@ -1,0 +1,144 @@
+- name: Documentatie voor de beveiliging van gegevens en infrastructuur
+  href: index.yml
+- name: Begrijpen en verkennen
+  items:
+    - name: Overzicht
+      href: understand\protect-data-and-site-infrastructure.md
+- name: Plannen en ontwerpen
+  items:
+    - name: Endpoint Protection plannen
+      href: plan-design/planning-for-endpoint-protection.md
+    - name: BitLocker-beheer plannen
+      href: plan-design/bitlocker-management.md
+    - name: Certificaatprofielen plannen
+      items:
+        - name: Vereisten voor certificaatprofielen
+          href: plan-design/prerequisites-for-certificate-profiles.md
+        - name: Certificaatsjabloonmachtigingen voor certificaatprofielen
+          href: plan-design/planning-for-certificate-template-permissions.md
+    - name: Vereisten voor Wi-Fi- en VPN-profielen
+      href: plan-design/prerequisites-for-wifi-vpn-profiles.md
+    - name: Beveiliging en privacy
+      items:
+        - name: Wi-Fi en VPN-profielen
+          href: plan-design/security-and-privacy-for-wifi-vpn-profiles.md
+        - name: Certificaatprofielen
+          href: plan-design/security-and-privacy-for-certificate-profiles.md
+- name: Implementeren en gebruiken
+  items:
+    - name: Endpoint Protection
+      items:
+        - name: Overzicht van Endpoint Protection
+          href: deploy-use/endpoint-protection.md
+        - name: Endpoint Protection configureren
+          items:
+            - name: Endpoint Protection configureren
+              href: deploy-use/endpoint-protection-configure.md
+            - name: Sitesysteemrol
+              href: deploy-use/endpoint-protection-site-role.md
+            - name: Waarschuwingen
+              href: deploy-use/endpoint-configure-alerts.md
+            - name: Definitie-updates
+              items:
+                - name: Overzicht van Definitie-updates
+                  href: deploy-use/endpoint-definition-updates.md
+                - name: Configuration Manager-updates
+                  href: deploy-use/endpoint-definitions-configmgr.md
+                - name: WSUS-updates
+                  href: deploy-use/endpoint-definitions-wsus.md
+                - name: Microsoft-updates
+                  href: deploy-use/endpoint-definitions-microsoft-updates.md
+                - name: Malware Protection Center
+                  href: deploy-use/endpoint-definitions-protection-center.md
+                - name: Netwerkshare-updates
+                  href: deploy-use/endpoint-definitions-network.md
+            - name: Implementatiebeleid
+              href: deploy-use/endpoint-antimalware-policies.md
+            - name: Client configureren
+              href: deploy-use/endpoint-protection-configure-client.md
+        - name: Windows Firewall-beleid
+          href: deploy-use/create-windows-firewall-policies.md
+        - name: Microsoft Defender Advanced Threat Protection
+          href: deploy-use/windows-defender-advanced-threat-protection.md
+        - name: Exploit Guard-beleid maken en implementeren
+          href: deploy-use/create-deploy-exploit-guard-policy.md
+        - name: Application Guard-beleid maken en implementeren
+          href: deploy-use/create-deploy-application-guard-policy.md
+        - name: Instellingen van Windows Defender-toepassingsbeheer
+          href: deploy-use/use-device-guard-with-configuration-manager.md
+        - name: Antimalware- en firewalltaken
+          href: deploy-use/endpoint-antimalware-firewall.md
+        - name: Endpoint Protection-scenario
+          href: deploy-use/scenarios-endpoint-protection.md
+        - name: Help voor Endpoint Protection-client
+          href: deploy-use/endpoint-protection-client-help.md
+        - name: Problemen met client oplossen
+          href: deploy-use/troubleshoot-endpoint-client.md
+        - name: Veelgestelde vragen over Windows Defender
+          href: deploy-use/endpoint-protection-client-faq.md
+    - name: BitLocker-beheer
+      items:
+        - name: Herstelgegevens versleutelen
+          href: deploy-use/bitlocker/encrypt-recovery-data.md
+        - name: BitLocker-beleid implementeren
+          href: deploy-use/bitlocker/deploy-management-agent.md
+        - name: BitLocker-portals instellen
+          href: deploy-use/bitlocker/setup-websites.md
+        - name: Selfservice portal implementeren
+          href: deploy-use/bitlocker/customize-self-service-portal.md
+        - name: BitLocker-rapporten weergeven
+          href: deploy-use/bitlocker/view-reports.md
+        - name: Website voor beheer en controle
+          href: deploy-use/bitlocker/helpdesk-portal.md
+        - name: Selfservice portal
+          href: deploy-use/bitlocker/self-service-portal.md
+    - name: Instellingen voor Windows Hello voor Bedrijven
+      href: deploy-use/windows-hello-for-business-settings.md
+    - name: Certificaatprofielen
+      items:
+        - name: Inleiding tot certificaatprofielen
+          href: deploy-use/introduction-to-certificate-profiles.md
+        - name: Certificaatprofielen maken
+          href: deploy-use/create-certificate-profiles.md
+        - name: Certificaatinfrastructuur configureren
+          href: deploy-use/certificate-infrastructure.md
+    - name: Wi-Fi-profielen
+      items:
+        - name: Wi-Fi-profielen maken
+          href: deploy-use/create-wifi-profiles.md
+    - name: VPN-profielen
+      items:
+        - name: VPN-profielen
+          href: deploy-use/vpn-profiles.md
+        - name: VPN-profielen maken
+          href: deploy-use/create-vpn-profiles.md
+        - name: Een familienaam van een pakket (PFN) zoeken voor VPN per app
+          href: deploy-use/find-a-pfn-for-per-app-vpn.md
+    - name: 'Wi-Fi-, VPN-, e-mail- en certificaatprofielen implementeren'
+      href: deploy-use/deploy-wifi-vpn-email-cert-profiles.md
+    - name: Instellen van voorwaarden
+      href: ../mdm/understand/what-happened-to-hybrid.md?toc=/sccm/protect/toc.json&bc=/sccm/protect/breadcrumb/toc.json
+    - name: Beveiliging controleren
+      items:
+        - name: 'Wi-Fi-, e-mail- en VPN-profielen controleren'
+          href: deploy-use/monitor-wifi-email-vpn-profiles.md
+        - name: Certificaatprofielen controleren
+          href: deploy-use/monitor-certificate-profiles.md
+        - name: Endpoint Protection controleren
+          href: deploy-use/monitor-endpoint-protection.md
+- name: Technische documentatie
+  items:
+    - name: BitLocker-beheer
+      items:
+        - name: Naslaginformatie voor instellingen
+          href: tech-ref/bitlocker/settings.md
+        - name: Problemen met BitLocker oplossen
+          href: tech-ref/bitlocker/troubleshoot.md
+        - name: BitLocker-gebeurtenislogboeken
+          href: tech-ref/bitlocker/about-event-logs.md
+        - name: Clientgebeurtenislogboeken
+          href: tech-ref/bitlocker/client-event-logs.md
+        - name: Servergebeurtenislogboeken
+          href: tech-ref/bitlocker/server-event-logs.md
+        - name: Niet-nalevingscodes
+          href: tech-ref/bitlocker/non-compliance-codes.md

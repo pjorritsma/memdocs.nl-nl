@@ -1,0 +1,66 @@
+### YamlMime:Landing
+title: Documentatie voor apparaatcompatibiliteit
+summary: Met Configuration Manager beschikt u over de hulpmiddelen en resources die u nodig hebt om de configuratie en compatibiliteit van apparaten in uw organisatie te beheren.
+metadata:
+  title: Documentatie voor apparaatcompatibiliteit
+  titleSuffix: Configuration Manager
+  description: Met Configuration Manager beschikt u over de hulpmiddelen en resources die u nodig hebt om de configuratie en compatibiliteit van apparaten in uw organisatie te beheren.
+  ms.product: configuration-manager
+  ms.technology: configmgr-compliance
+  ms.topic: landing-page
+  author: mestew
+  ms.author: mstewart
+  ms.date: 01/25/2020
+  ms.openlocfilehash: 7b66409e8f4082927225246bb5144efb8b65d567
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741099"
+landingContent:
+- title: Over apparaatnaleving
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Inleiding tot apparaatnaleving
+      url: understand/ensure-device-compliance.md
+    - text: Aan de slag met instellingen voor naleving
+      url: get-started/get-started-with-compliance-settings.md
+  - linkListType: architecture
+    links:
+    - text: De instellingen voor naleving plannen en configureren
+      url: plan-design/plan-for-and-configure-compliance-settings.md
+- title: Aan de slag
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Algemene taken voor het beheren van de naleving
+      url: plan-design/common-tasks-for-managing-compliance-on-devices-with-the-client.md
+    - text: Configuratie-items maken voor Windows 10-apparaten
+      url: deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md
+    - text: Configuratiebasislijnen maken
+      url: deploy-use/create-configuration-baselines.md
+  - linkListType: deploy
+    links:
+    - text: Configuratiebasislijnen implementeren
+      url: deploy-use/deploy-configuration-baselines.md
+  - linkListType: how-to-guide
+    links:
+    - text: Instellingen voor naleving bewaken
+      url: deploy-use/monitor-compliance-settings.md
+- title: Belangrijkste taken
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Aangepaste configuratie-items maken
+      url: deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md
+    - text: Profielen voor externe verbindingen maken
+      url: deploy-use/create-remote-connection-profiles.md
+    - text: Configuratie-items voor gebruikersgegevens en -profielen maken
+      url: deploy-use/create-user-data-and-profiles-configuration-items.md
+  - linkListType: concept
+    links:
+    - text: Profielen van OneDrive voor Bedrijven
+      url: deploy-use/onedrive-profile.md
+    - text: Configuratiegegevens beheren
+      url: deploy-use/management-tasks-for-configuration-data.md

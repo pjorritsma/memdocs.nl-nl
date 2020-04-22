@@ -1,0 +1,62 @@
+### YamlMime:Landing
+title: Documentatie voor besturingssysteemimplementatie
+summary: Gebruik Configuration Manager om Windows te implementeren via verschillende methoden en om taken te automatiseren.
+metadata:
+  title: Documentatie voor besturingssysteemimplementatie
+  titleSuffix: Configuration Manager
+  description: Gebruik Configuration Manager om Windows te implementeren via verschillende methoden en om taken te automatiseren.
+  ms.prod: configuration-manager
+  ms.technology: configmgr-osd
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 01/28/2020
+  ms.openlocfilehash: 5c56cef287ee16a8899c16af72d4734c9d1f4bad
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741949"
+landingContent:
+- title: Over besturingssysteemimplementatie
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Introductie van besturingssysteemimplementatie
+      url: understand/introduction-to-operating-system-deployment.md
+    - text: Vereisten voor de infrastructuur
+      url: plan-design/infrastructure-requirements-for-operating-system-deployment.md
+  - linkListType: concept
+    links:
+    - text: Voorbereidingen voor besturingssysteemimplementatie
+      url: get-started/prepare-for-operating-system-deployment.md
+    - text: Scenario's voor besturingssysteemimplementatie
+      url: deploy-use/scenarios-to-deploy-enterprise-operating-systems.md
+    - text: Methoden voor de implementatie van besturingssystemen
+      url: deploy-use/methods-to-deploy-enterprise-operating-systems.md
+- title: Aan de slag
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Takenreeksen beheren
+      url: deploy-use/manage-task-sequences-to-automate-tasks.md
+    - text: Een takenreeks voor een besturingssysteem maken
+      url: deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md
+    - text: Een gefaseerde implementatie maken
+      url: deploy-use/create-phased-deployment-for-task-sequence.md
+    - text: Een takenreeks implementeren
+      url: deploy-use/deploy-a-task-sequence.md
+    - text: Fouten opsporen in een takenreeks
+      url: deploy-use/debug-task-sequence.md
+- title: Technische documentatie
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: De takenreekseditor gebruiken
+      url: understand/task-sequence-editor.md
+    - text: Stappen voor takenreeksen
+      url: understand/task-sequence-steps.md
+    - text: Takenreeksvariabelen gebruiken
+      url: understand/using-task-sequence-variables.md
+    - text: Referentie voor takenreeksvariabelen
+      url: understand/task-sequence-variables.md

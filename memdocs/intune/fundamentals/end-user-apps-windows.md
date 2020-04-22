@@ -1,5 +1,5 @@
 ---
-title: Hoe uw Windows-gebruikers hun apps downloaden
+title: Hoe uw Windows-gebruikers apps downloaden
 description: Manieren om Windows-apps beschikbaar te stellen aan gebruikers
 keywords: ''
 author: lenewsad
@@ -18,13 +18,13 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 875e11a76587e8eef58ad741f453c21e3b96d5c7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79362846"
 ---
-# <a name="how-your-windows-users-get-their-apps"></a>Hoe uw Windows-gebruikers hun apps downloaden
+# <a name="how-your-windows-users-get-their-apps"></a>Hoe uw Windows-gebruikers apps downloaden
 
 Gebruik deze informatie om te begrijpen hoe en waar uw gebruikers de apps downloaden die u distribueert via Microsoft Intune.
 
@@ -36,7 +36,7 @@ Gebruik deze informatie om te begrijpen hoe en waar uw gebruikers de apps downlo
 
 **Niet-beheerde apps** zijn apps die kunnen worden beheerd via beleid en die niet zijn verpakt door Intune of waarin de Intune App SDK niet is opgenomen. App-beveiligingsbeleid kan niet worden toegepast op deze apps.
 
-## <a name="see-also"></a>Zie tevens
+## <a name="see-also"></a>Zie ook
 
 [Hoe uw Android-gebruikers hun apps downloaden](end-user-apps-android.md)
 [Hoe uw iOS-/iPadOS-gebruikers hun apps downloaden](end-user-apps-android.md)

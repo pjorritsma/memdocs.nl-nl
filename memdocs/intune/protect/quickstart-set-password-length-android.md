@@ -19,13 +19,13 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b2e2d5fb2f698d7e0b544dbdbd4ab05f2b94b7ea
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325462"
 ---
-# <a name="quickstart-create-a-password-compliance-policy-for-android-devices"></a>Quickstart: Een beleid voor wachtwoordcompatibiliteit maken voor Android-apparaten
+# <a name="quickstart-create-a-password-compliance-policy-for-android-devices"></a>Snelstartgids: Een beleid voor wachtwoordcompatibiliteit maken voor Android-apparaten
 
 In deze quickstart gaat u Microsoft Intune gebruiken om de gebruikers van Android onder uw medewerkers te verplichten een wachtwoord van een voorgeschreven lengte in te voeren om toegang te krijgen tot informatie op hun Android-apparaten.
 
@@ -34,11 +34,11 @@ Een Intune-beleid voor apparaatcompatibiliteit bepaalt de regels en instellingen
 > [!IMPORTANT]
 > Naast wachtwoordinstellingen moet u ook overwegen andere systeembeveiligingsinstellingen te gebruiken om uw medewerkers te beveiligen. Zie [Systeembeveiligingsinstellingen](compliance-policy-create-android-for-work.md) voor meer informatie.
 
-Als u niet over een Intune-abonnement beschikt, kunt u zich [registreren voor een gratis proefaccount](../fundamentals/free-trial-sign-up.md).
+Als u niet over een Intune-abonnement beschikt, kunt u [zich registreren voor een gratis proefaccount](../fundamentals/free-trial-sign-up.md).
 
 ## <a name="sign-in-to-intune"></a>Aanmelden bij Intune
 
-Meld u bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) aan als een [Globale beheerder](../fundamentals/users-add.md#types-of-administrators) of een Intune-[servicebeheerder](../fundamentals/users-add.md#types-of-administrators).
+Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) als een [globale beheerder](../fundamentals/users-add.md#types-of-administrators) of als een [servicebeheerder](../fundamentals/users-add.md#types-of-administrators) voor Intune.
 
 ## <a name="create-a-device-compliance-policy"></a>Een nalevingsbeleid voor apparaten maken
 
@@ -74,7 +74,7 @@ Als u het beleid niet meer nodig hebt, kunt u het verwijderen. Hiervoor selectee
 
 In deze snelstart hebt u Intune gebruikt om een nalevingsbeleid te maken voor de Android-apparaten van uw werknemers om een wachtwoord van ten minste zes tekens lang te vereisen. Zie [Aan de slag met compatibiliteitsbeleid voor apparaten in Intune](device-compliance-get-started.md) voor meer informatie over het maken van compatibiliteitsbeleid voor apparaten.
 
-Als u deze reeks snelstartgidsen voor Intune wilt volgen, kunt u doorgaan met de volgende snelstartgids.
+Ga door naar de volgende snelstartgids om deze serie met snelstartgidsen voor Intune te volgen.
 
 > [!div class="nextstepaction"]
-> [Quickstart: Meldingen verzenden naar niet-compatibele apparaten](quickstart-send-notification.md)
+> [Snelstartgids: Meldingen verzenden naar niet-compatibele apparaten](quickstart-send-notification.md)

@@ -5,7 +5,7 @@
   items:
     - name: Overzicht van apparaatbeheer
       href: device-management.md
-- name: Instructiegidsen
+- name: Handleidingen
   items:
     - name: Vergrendelingen en wachtwoorden
       items:

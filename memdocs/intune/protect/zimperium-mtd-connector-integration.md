@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 5bb106e482beb7894c84f11d0994b43ba43eb302
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79338380"
 ---
 # <a name="integrate-zimperium-with-intune"></a>Zimperium integreren met Intune
@@ -74,7 +74,7 @@ Zie voor meer informatie over toestemming en Azure Active Directory-toepassingen
 
 4. Kies **MDM toevoegen** selecteer dan **Microsoft Intune** in de lijst **MDM-provider**.
 
-5. Nadat u Microsoft Intune als MDM-service hebt ingesteld, wordt het venster **Configuratie van Microsoft Intune** weergegeven en kiest u voor elke optie **Azure Active Directory toevoegen**: **Zimperium zConsole**-, **zIPS iOS- en Android- apps** om Zimperium te machtigen voor communicatie met Intune en Azure AD via eenmalige aanmelding voor Azure AD.
+5. Nadat u Microsoft Intune als MDM-service hebt ingesteld, verschijnt het venster **Configuratie van Microsoft Intune**, kies **Azure Active Directory toevoegen** voor elke volgende optie: **Zimperium zConsole**, **zIPS iOS- en Android-apps** om Zimperium te autoriseren te communiceren met Intune en Azure AD via Azure AD eenmalige aanmelding.
 
     > [!IMPORTANT]  
     > U moet de Zimperium zConsole-, zIPS iOS- en Android-apps toevoegen om het integratieproces met Intune te voltooien.

@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 957c63c760dcc576ab30bb85440d52833307818d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79344087"
 ---
 # <a name="how-your-iosipados-users-get-their-apps"></a>Hoe uw iOS-/iPadOS-gebruikers hun apps downloaden
@@ -54,7 +54,7 @@ Als er al een app is geïnstalleerd op het apparaat van een eindgebruiker, wordt
 
 ![Afbeelding van de waarschuwing met betrekking tot het wijzigen van app-beheer, met opties voor annuleren en beheren.](./media/end-user-apps-ios/intune-app-management-confirmation-2002.png)
 
-## <a name="see-also"></a>Zie tevens  
+## <a name="see-also"></a>Zie ook  
 
 [Hoe uw Android-gebruikers apps downloaden](end-user-apps-android.md)
 

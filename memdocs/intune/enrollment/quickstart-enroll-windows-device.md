@@ -18,13 +18,13 @@ search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 4f70c8487d9cb30b2a7cced63e6e019541f73704
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80327059"
 ---
-# <a name="quickstart-enroll-your-windows-10-device"></a>Quickstart: Uw Windows 10-apparaat registreren
+# <a name="quickstart-enroll-your-windows-10-device"></a>Snelstartgids: Uw Windows 10-apparaat inschrijven
 
 In deze snelstartgids neemt u eerst de rol van de Intune-gebruiker op zich en schrijft u uw Windows 10-apparaat in bij Microsoft Intune. Vervolgens gaat u terug naar Intune om het ingeschreven apparaat te bevestigen.
 
@@ -33,7 +33,7 @@ Door uw apparaten in te schrijven bij Microsoft Intune, krijgen uw Windows 10-ap
 > [!TIP]
 > Ontdek wat er gebeurt wanneer u [uw apparaat inschrijft in Intune](../user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) en wat betekent dat voor de [informatie op het apparaat](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
 
-Als u niet over een Intune-abonnement beschikt, kunt u zich [registreren voor een gratis proefaccount](../fundamentals/free-trial-sign-up.md).
+Als u niet over een Intune-abonnement beschikt, kunt u [zich registreren voor een gratis proefaccount](../fundamentals/free-trial-sign-up.md).
 
 ## <a name="prerequisites"></a>Vereisten
 
@@ -105,7 +105,7 @@ Als u uw Windows-apparaat wilt uitschrijven, raadpleegt u [Uw Windows-apparaat u
 
 In deze snelstartgids hebt u ontdekt hoe u Windows 10-apparaten in Intune kunt inschrijven. U kunt meer lezen over andere manieren om apparaten voor alle platformen in te schrijven. Zie [Werk gedaan krijgen met beheerde apparaten](../user-help/use-managed-devices-to-get-work-done.md) voor meer informatie over het gebruik van apparaten met Intune.
 
-Als u deze reeks snelstartgidsen voor Intune wilt volgen, kunt u doorgaan met de volgende snelstartgids.
+Ga door naar de volgende snelstartgids om deze serie met snelstartgidsen voor Intune te volgen.
 
 > [!div class="nextstepaction"]
-> [Quickstart: Een vereiste wachtwoordlengte instellen voor Android-apparaten](../protect/quickstart-set-password-length-android.md)
+> [Snelstartgids: Een vereiste wachtwoordlengte instellen voor Android-apparaten](../protect/quickstart-set-password-length-android.md)

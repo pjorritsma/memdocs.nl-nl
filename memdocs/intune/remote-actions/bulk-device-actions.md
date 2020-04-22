@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 5f33198e71fd4250ee93207e571bc535abd1c95f
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325369"
 ---
 # <a name="use-bulk-device-actions"></a>Bulksgewijze apparaatacties gebruiken
@@ -39,7 +39,7 @@ U kunt bulksgewijze apparaatacties voor de volgende externe acties gebruiken:
 
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Kies **Apparaten** > **Alle apparaten** > **Bulksgewijze apparaatacties**.
-![Bulksgewijze apparaatacties](./media/bulk-device-actions/bulk-device-actions.png)
+![Apparaatacties bulksgewijs uitvoeren](./media/bulk-device-actions/bulk-device-actions.png)
 3. Selecteer op de pagina **Bulkacties voor apparaat** een **besturingssysteem** en **Apparaatactie**. Voor sommige apparaatacties kunnen extra opties of velden worden ingevuld. Kies **Volgende**.
 4. Selecteer op de pagina **Apparaten** 1 tot 100 apparaten > **Volgende**.
 5. Selecteer op de pagina **Beoordelen en maken** de optie **Maken**.

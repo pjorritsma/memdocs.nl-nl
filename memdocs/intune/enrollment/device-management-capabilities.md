@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 2dea6d5af4356526c2df1b23d47fb468c6213e0c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79359453"
 ---
 # <a name="enrolled-device-management-capabilities-of-microsoft-intune"></a>Beheermogelijkheden voor geregistreerde apparaten in Microsoft Intune
@@ -46,7 +46,7 @@ Gebruikers krijgen toegang tot de bedrijfsportal waar ze apps kunnen installeren
 |Kioskmodus|Hiermee kunt u bepaalde functies van mobiele apparaten vergrendelen, zoals schermafbeeldingen en de aan/uit-knop. U kunt hiermee apparaten ook beperken tot het uitvoeren van een enkele app die u opgeeft. |[Beleidsinstellingen voor iOS-configuraties in Microsoft Intune](../configuration/device-restrictions-ios.md)|
 |AutoPilot-opnieuw instellen|Hiermee wordt een taak naar het apparaat verzonden om het opnieuw instellen extern te starten, waardoor IT-medewerkers of andere beheerders dit proces niet op elke computer afzonderlijk te hoeven starten. Wanneer Autopilot opnieuw instellen op een apparaat wordt gebruikt, wordt de primaire gebruiker van het apparaat verwijderd. De volgende gebruiker die zich na het opnieuw instellen aanmeldt, wordt ingesteld als primaire gebruiker.|[Externe AutoPilot-opnieuw instellen voor Windows](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)|
 
-## <a name="app-management"></a>Appbeheer
+## <a name="app-management"></a>App-beheer
 
 |Mogelijkheid|Details|Meer informatie|
 |--------------|-----------|--------------------|

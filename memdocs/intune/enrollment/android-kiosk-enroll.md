@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae24c8cad5ccee06444ffec6a4cd8b39b3371b49
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: b8872efe661f01d2cc286282c38953739711982b
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327292"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81397693"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-dedicated-devices"></a>Intune-inschrijving van toegewezen Android Enterprise-apparaten instellen
 
@@ -39,7 +39,7 @@ Apparaten die u op deze manier beheert, zijn geregistreerd in Intune zonder een 
 
 Apparaten moeten voldoen aan de volgende vereisten om te worden beheerd als een toegewezen Android Enterprise-apparaat:
 
-- Android-besturingssysteemversie 5.1 en hoger.
+- Android-besturingssysteemversie 6.0 en hoger.
 - Op de apparaten moet een verdeling van Android worden uitgevoerd die connectiviteit met GMS (Google Mobile Services) heeft. Op de apparaten moet GMS beschikbaar zijn en de apparaten moeten in staat zijn om verbinding te maken met GMS.
 
 ## <a name="set-up-android-enterprise-dedicated-device-management"></a>Beheer van toegewezen Android Enterprise-apparaat instellen
@@ -61,8 +61,8 @@ U moet een inschrijvingsprofiel maken, zodat u uw toegewezen apparaten kunt insc
 
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) en kies **Apparaten** > **Android** > **Android-inschrijving** > **Toegewezen apparaten in bedrijfseigendom.**
 2. Kies **Maken** en vul de vereiste velden in.
-    - **Naam**: Typ een naam die u gebruikt wanneer u het profiel toewijst aan de dynamische apparaatgroep.
-    - **Vervaldatum van het token**: De datum waarop het token verloopt. Google dwingt een maximum van 90 dagen af.
+    - **Naam**: typ een naam die u gebruikt wanneer u het profiel toewijst aan de dynamische apparaatgroep.
+    - **Vervaldatum van token**: de datum waarop het token verloopt. Google dwingt een maximum van 90 dagen af.
 3. Kies **Maken** om het profiel op te slaan.
 
 ### <a name="create-a-device-group"></a>Een apparaatgroep maken
@@ -72,7 +72,7 @@ U kunt apps en beleidsregels zenden naar toegewezen of dynamische apparaatgroepe
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) en kies **Groepen** > **Alle groepen** > **Nieuwe groep**.
 2. Vul in de blade **Groep** de vereiste velden als volgt in:
     - **Groepstype**: Beveiliging
-    - **Groepsnaam**: Typ een intuïtieve naam (bijvoorbeeld Factory 1-apparaten)
+    - **Groepsnaam**: typ een intuïtieve naam (bijvoorbeeld Factory 1-apparaten)
     - **Type lidmaatschap**: Dynamisch apparaat
 3. Kies **Dynamische query toevoegen**.
 4. Vul in de blade **Dynamisch-lidmaatschapregels** de velden als volgt in:
@@ -85,8 +85,8 @@ U kunt apps en beleidsregels zenden naar toegewezen of dynamische apparaatgroepe
 
 ### <a name="replace-or-remove-tokens"></a>Tokens vervangen of verwijderen
 
-- **Token vervangen**: Met Token vervangen kunt u een nieuw token of nieuwe QR-code genereren wanneer voor een van beide de vervaldatum nadert.
-- **Token intrekken**: U kunt het token of de QR-code direct laten verlopen. Vanaf dat moment is het token of de QR-code niet meer bruikbaar. U kunt deze optie bijvoorbeeld gebruiken als u:
+- **Token vervangen**: met Token vervangen kunt u een nieuw token of nieuwe QR-code genereren wanneer voor een van beide de vervaldatum nadert.
+- **Token intrekken**: u kunt het token of de QR-code direct laten verlopen. Vanaf dat moment is het token of de QR-code niet meer bruikbaar. U kunt deze optie bijvoorbeeld gebruiken als u:
   - het token of de QR-code per ongeluk hebt gedeeld met een onbevoegde partij
   - alle inschrijvingen hebt voltooid en het token of de QR-code niet meer nodig hebt
 

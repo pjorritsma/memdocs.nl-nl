@@ -12,11 +12,11 @@
           items:
             - name: Help voor Intune-gebruikers
               tocHref: /intune/user-help/
-              topicHref: /intune/user-help/
+              topicHref: /intune/user-help/use-managed-devices-to-get-work-done
             - name: Apps
               tocHref: /intune/apps/
               topicHref: /intune/apps/
-            - name: Basisprincipes
+            - name: Basisbeginselen
               tocHref: /intune/fundamentals/
               topicHref: /intune/fundamentals/
             - name: Inschrijving

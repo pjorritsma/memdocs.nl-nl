@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 4fd08ba190654db5678766e34e3340330dcf3ca8
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79346089"
 ---
 # <a name="device-encrypted-but-apps-say-otherwise"></a>Het apparaat is versleuteld, maar in apps wordt iets anders aangegeven
@@ -34,7 +34,7 @@ Als in de bedrijfsportal- of Microsoft Intune-app wordt aangeven dat uw apparaat
 
 Voor bepaalde Android-apparaten moet u een opstartpincode instellen om ervoor te zorgen dat uw apparaat beveiligd is. De locatie van deze instelling is in de app **Instellingen** van uw apparaat. De naam en locatie van de instelling kunnen verschillen. Op de Samsung Galaxy-S7 wordt de instelling bijvoorbeeld aangeduid als **Veilig opstarten**. Als u dit wilt inschakelen en een wachtwoordcode wilt maken, gaat u naar **Instellingen** > **Vergrendelingsscherm en beveiliging** > **Veilig opstarten**.  
 
-## <a name="encrypt-the-entire-device"></a>Versleutel het hele apparaat
+## <a name="encrypt-the-entire-device"></a>Het hele apparaat versleutelen
 
 Deze sectie is alleen van toepassing op de Bedrijfsportal-app. Op sommige apparaten kunt u kiezen of u het hele apparaat of alleen de gebruikte ruimte wilt versleutelen. Kies de optie om het hele apparaat te versleutelen. Als u ervoor hebt gekozen om alleen de gebruikte ruimte te versleutelen:
 

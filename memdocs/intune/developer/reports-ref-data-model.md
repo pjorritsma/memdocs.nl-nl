@@ -19,17 +19,17 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: cf5ab63f72484ddbbf311810e232404ab643d2d2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79359843"
 ---
 # <a name="microsoft-intune-data-warehouse-data-model"></a>Gegevensmodel van Microsoft Intune-datawarehouse
 
 In het Intune-datawarehouse worden dagelijks gegevens verzameld om een historisch overzicht te bieden van uw steeds veranderende omgeving van mobiele apparaten. De weergave bestaat uit entiteiten die in de tijd aan elkaar gerelateerd zijn.
 
-## <a name="entities-entity-sets"></a>Entiteiten: Entiteitsets
+## <a name="entities-entity-sets"></a>Entiteiten: entiteitsets
 
 De gegevens in het datawarehouse worden in de volgende algemene gebieden ingedeeld:
 

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f3aaf2bf895082f3647f0a1ad6b9997a5e97baee
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79364120"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Beleidsregels en profielen voor het oplossen van problemen in Intune
@@ -53,25 +53,25 @@ Controleer de [tenantstatus](../fundamentals/tenant-status.md) en controleer of 
 
 4. Zoek onder **Apparaten** het apparaat waarop het probleem zich voordoet. Controleer de verschillende kolommen:
 
-    - **Beheerd**: Wanneer een apparaat nalevings- of configuratiebeleidsregels moet ontvangen, moet voor deze eigenschap **MDM** of **EAS/MDM** worden weergegeven.
+    - **Beheerd**: wanneer een apparaat nalevings- of configuratiebeleidsregels moet ontvangen, moet voor deze eigenschap **MDM** of **EAS/MDM** worden weergegeven.
 
         - Als **Beheerd** niet is ingesteld op **MDM** of **EAS/MDM**, is het apparaat niet geregistreerd. Een apparaat ontvangt pas nalevings- of configuratiebeleidsregels als het is geregistreerd.
 
         - Voor beveiligingsbeleid voor apps (mobiel toepassingsbeheer) hoeven apparaten niet te zijn geregistreerd. Zie [App-beveiligingsbeleid maken en toewijzen](../apps/app-protection-policies.md) voor meer informatie.
 
-    - **Het type Azure AD-join**: Moet worden ingesteld op **Werkplek** of **AzureAD**.
+    - **Azure AD-verbindingsype**: moet worden ingesteld op **Werkplek** of **AzureAD**.
  
         - Als deze kolom op **Niet geregistreerd** is ingesteld, is er mogelijk een probleem met de registratie. Doorgaans kunt u dit probleem oplossen door de registratie van het apparaat ongedaan te maken en het apparaat vervolgens opnieuw te registreren.
 
-    - **Compatibel met Intune**: Moet **Ja** zijn. Als **Nee** wordt weergegeven, is er mogelijk een probleem met nalevingsbeleidsregels of maakt het apparaat geen verbinding met de Intune-service. Het apparaat is bijvoorbeeld uitgeschakeld of er is geen netwerkverbinding. Uiteindelijk wordt het apparaat niet-compatibel, mogelijk na 30 dagen.
+    - **Compatibel met Intune**: moet **Ja** zijn. Als **Nee** wordt weergegeven, is er mogelijk een probleem met nalevingsbeleidsregels of maakt het apparaat geen verbinding met de Intune-service. Het apparaat is bijvoorbeeld uitgeschakeld of er is geen netwerkverbinding. Uiteindelijk wordt het apparaat niet-compatibel, mogelijk na 30 dagen.
 
         Zie [Aan de slag met apparaatnalevingsbeleid in Intune](../protect/device-compliance-get-started.md) voor meer informatie.
 
-    - **Compatibel met Azure AD**: Moet **Ja** zijn. Als **Nee** wordt weergegeven, is er mogelijk een probleem met nalevingsbeleidsregels of maakt het apparaat geen verbinding met de Intune-service. Het apparaat is bijvoorbeeld uitgeschakeld of er is geen netwerkverbinding. Uiteindelijk wordt het apparaat niet-compatibel, mogelijk na 30 dagen.
+    - **Compatibel met Azure AD**: moet **Ja** zijn. Als **Nee** wordt weergegeven, is er mogelijk een probleem met nalevingsbeleidsregels of maakt het apparaat geen verbinding met de Intune-service. Het apparaat is bijvoorbeeld uitgeschakeld of er is geen netwerkverbinding. Uiteindelijk wordt het apparaat niet-compatibel, mogelijk na 30 dagen.
 
         Zie [Aan de slag met apparaatnalevingsbeleid in Intune](../protect/device-compliance-get-started.md) voor meer informatie.
 
-    - **Laatste check-in**: Moet een recente tijd en datum zijn. Standaard worden Intune-apparaten elke 8 uur ingecheckt.
+    - **Laatst ingecheckt**: moet een recente tijd en datum zijn. Standaard worden Intune-apparaten elke 8 uur ingecheckt.
 
         - Als de **Laatste incheckdatum** meer dan 24 uur geleden is, is er mogelijk een probleem met het apparaat. Een apparaat dat niet kan worden ingecheckt, kan geen beleidsregels uit Intune ontvangen.
 
@@ -91,10 +91,10 @@ Controleer de [tenantstatus](../fundamentals/tenant-status.md) en controleer of 
 
         **Beleidsstatussen**:
 
-        - **Niet van toepassing**: Dit beleid wordt niet ondersteund op dit platform. iOS-/iPadOS-beleid werkt bijvoorbeeld niet op Android. Samsung KNOX-beleid werkt niet op Windows-apparaten.
-        - **Conflict**: Het apparaat heeft een bestaande instelling die niet door Intune kan worden overschreven. Of u hebt twee beleidsregels geïmplementeerd met dezelfde instelling, maar verschillende waarden.
-        - **In behandeling**: Het apparaat is niet ingecheckt bij Intune om het beleid op te halen. Of het apparaat heeft het beleid wel ontvangen, maar de status is niet naar Intune gerapporteerd.
-        - **Fouten**: Zoek fouten en mogelijke oplossingen op bij [Problemen met toegang tot bedrijfsresources oplossen](../fundamentals/troubleshoot-company-resource-access-problems.md).
+        - **Niet van toepassing**: dit beleid wordt niet ondersteund op dit platform. iOS-/iPadOS-beleid werkt bijvoorbeeld niet op Android. Samsung KNOX-beleid werkt niet op Windows-apparaten.
+        - **Conflict**: het apparaat heeft een bestaande instelling die niet door Intune kan worden overschreven. Of u hebt twee beleidsregels geïmplementeerd met dezelfde instelling, maar verschillende waarden.
+        - **In behandeling**: het apparaat is niet ingecheckt bij Intune om het beleid op te halen. Of het apparaat heeft het beleid wel ontvangen, maar de status is niet naar Intune gerapporteerd.
+        - **Fouten**: zoek fouten en mogelijke oplossingen op in [Problemen met toegang tot bedrijfsresources oplossen](../fundamentals/troubleshoot-company-resource-access-problems.md).
 
         **Nuttige koppelingen**: 
 
@@ -108,13 +108,13 @@ Controleer de [tenantstatus](../fundamentals/tenant-status.md) en controleer of 
 
     Bij elk apparaat worden de bijbehorende profielen vermeld. Elk profiel heeft een **status**. De status is van toepassing wanneer alle toegewezen profielen, inclusief hardware- en besturingssysteembeperkingen en -vereisten, als geheel worden overwogen. Mogelijke statussen zijn:
 
-    - **Voldoet**: Het apparaat heeft het profiel ontvangen en meldt aan Intune dat de instelling wordt nageleefd.
+    - **Komt overeen**: het apparaat heeft het profiel ontvangen en meldt aan Intune dat de instelling wordt nageleefd.
 
-    - **Niet van toepassing**: De profielinstelling is niet van toepassing. E-mailinstellingen voor iOS-/iPadOS-apparaten zijn bijvoorbeeld niet van toepassing op een Android-apparaat.
+    - **Niet van toepassing**: de profielinstelling is niet van toepassing. E-mailinstellingen voor iOS-/iPadOS-apparaten zijn bijvoorbeeld niet van toepassing op een Android-apparaat.
 
-    - **In behandeling**: Het profiel wordt naar het apparaat verzonden, maar de status is nog niet naar Intune gerapporteerd. Zo moet de gebruiker in geval van versleuteling voor Android versleuteling inschakelen, waardoor de actie mogelijk in behandeling is.
+    - **In behandeling**: het profiel wordt naar het apparaat verzonden, maar de status is nog niet naar Intune gerapporteerd. Zo moet de gebruiker in geval van versleuteling voor Android versleuteling inschakelen, waardoor de actie mogelijk in behandeling is.
 
-**Nuttige koppeling**: [Configuratieprofielen voor apparaten bewaken](../configuration/device-profile-monitor.md)
+**Handige koppeling**:[Configuratieprofielen voor apparaten bewaken](../configuration/device-profile-monitor.md)
 
 > [!NOTE]
 > Wanneer er twee sets beleidsregels met verschillende beperkingsniveaus zijn die op hetzelfde apparaat of dezelfde gebruiker van toepassing zijn, wordt het meest beperkende beleid toegepast.
@@ -126,9 +126,9 @@ Controleer de [tenantstatus](../fundamentals/tenant-status.md) en controleer of 
 - [Problemen oplossen met aangepaste CSP-instellingen voor Windows 10](https://support.microsoft.com/en-us/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (opent een andere website van Microsoft)
 - [Groepsbeleid in Windows 10 versus MDM-beleid in Intune](https://blogs.technet.microsoft.com/cbernier/2018/04/02/windows-10-group-policy-vs-intune-mdm-policy-who-wins/) (opent een andere website van Microsoft)
 
-## <a name="alert-saving-of-access-rules-to-exchange-has-failed"></a>Waarschuwing: Opslaan van toegangsregels in Exchange is mislukt
+## <a name="alert-saving-of-access-rules-to-exchange-has-failed"></a>Waarschuwing: het opslaan van de toegangsregels in Exchange is mislukt
 
-**Probleem**: U ontvangt in de beheerconsole de waarschuwing **Het opslaan van de toegangsregels in Exchange is mislukt**.
+**Probleem**: u ontvangt in de beheerconsole de waarschuwing **Het opslaan van de toegangsregels in Exchange is mislukt**  .
 
 Als u beleid hebt gemaakt in de werkruimte Beleid voor Exchange On-Premises (beheerconsole), maar Office 365 gebruikt, worden de geconfigureerde beleidsinstellingen niet door Intune afgedwongen. Noteer de beleidsbron die in de waarschuwing wordt vermeld. Verwijder de verouderde regels in de werkruimte Beleid voor Exchange On-Premises. De verouderde regels zijn algemene Exchange-regels in Intune voor Exchange On-Premises en zijn niet relevant voor Office 365. Maak vervolgens een nieuw beleid voor Office 365.
 
@@ -161,7 +161,7 @@ Bij Windows-pc's die worden beheerd met de Intune-softwareclient kunnen beleidsf
 
 1. Stel de computer buiten gebruik. Zie [Apparaten verwijderen](../remote-actions/devices-wipe.md).
 
-2. Wacht twintig minuten tot de clientsoftware is verwijderd.
+2. Wacht 20 minuten tot de clientsoftware is verwijderd.
 
     > [!NOTE]
     > Probeer niet om de client te verwijderen vanuit Programma's en onderdelen.
@@ -170,7 +170,7 @@ Bij Windows-pc's die worden beheerd met de Intune-softwareclient kunnen beleidsf
 
 4. Verplaats de schuifregelaar voor meldingen naar de standaardinstelling.
 
-### <a name="error-cannot-obtain-the-value-from-the-computer-0x80041013"></a>Fout: Kan de waarde niet ophalen van de computer, 0x80041013
+### <a name="error-cannot-obtain-the-value-from-the-computer-0x80041013"></a>Fout: kan de waarde niet ophalen van de computer, 0x80041013
 
 Dit gebeurt als de tijd op het lokale systeem met meer dan vijf minuten afwijkt. Als de tijd op de lokale computer afwijkt, mislukken beveiligde transacties omdat de tijdstempels ongeldig zijn.
 

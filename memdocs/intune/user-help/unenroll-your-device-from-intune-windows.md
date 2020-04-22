@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 1392530643b4846c871b942d8265a7b43ace3124
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79347116"
 ---
 # <a name="remove-your-windows-device-from-management"></a>Windows-apparaat verwijderen uit beheer
@@ -85,16 +85,16 @@ Voer de volgende stappen uit om een Windows 8.1-apparaat te verwijderen uit Intu
 ## <a name="remove-your-windows-81-phone"></a>Uw Windows 8.1-telefoon verwijderen
 Voer de volgende stappen uit om een Windows 8.1-telefoon te verwijderen uit Intune.
 
-1. Ga naar **Instellingen** > **Werkplek**.
-2. Tik op het werkplekaccount dat u wilt registreren.
-3. Tik onder in het scherm op **Verwijderen**.
+1. Tik op **Instellingen** > **Werkplek**.
+2. Tik op het werkplekaccount dat u wilt uitschrijven.
+3. Tik boven in het scherm op **Verwijderen**.
 4. Tik in het dialoogvenster **Account verwijderen** op **Verwijderen**.  
 ## <a name="removing-your-personal-information-after-removing-the-company-portal"></a>Uw persoonlijke gegevens verwijderen na het verwijderen van de bedrijfsportal  
 
 Er zijn twee soorten gegevens die door de bedrijfsportal op uw Windows-apparaat worden opgeslagen:
 
-- **Diagnostische logboeken**: Standaardgegevens over appactiviteit die door Microsoft worden verzameld. Deze wordenautomatisch gewist zodra u de Bedrijfsportal-app verwijdert. Activiteitgegevens van een app omvatten bijvoorbeeld gegevens over hoelang de app geopend was en of de app is vastgelopen.
-- **Toepassingscache**: Ondersteuningsbestanden die de app nodig heeft om te kunnen werken, zoals pictogrammen en instellingen.
+- **Diagnostische logboeken**: standaardgegevens over app-activiteit die door Microsoft worden verzameld. Deze wordenautomatisch gewist zodra u de Bedrijfsportal-app verwijdert. Activiteitgegevens van een app omvatten bijvoorbeeld gegevens over hoelang de app geopend was en of de app is vastgelopen.
+- **Toepassingscache**: ondersteuningsbestanden die de app nodig heeft om te kunnen werken, zoals pictogrammen en instellingen.
 
 Als u de opgeslagen logboeken en de cache wilt verwijderen, voert u een van de volgende stappen uit:
 

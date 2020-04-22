@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f4e809a888fc2696e54540ee6baa2271d7340579
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79361052"
 ---
 # <a name="upgrade-devices-running-windows-holographic-to-windows-holographic-for-business"></a>Apparaten met Windows Holographic upgraden naar Windows Holographic for Business
@@ -37,8 +37,8 @@ Zie [Upgrade Windows 10 editions or enable S mode](edition-upgrade-configure-win
 
 ## <a name="edition-upgrade"></a>Editie-upgrade
 
-- **Editie bijwerken naar**: selecteer **Windows 10 Holographic for Business**.
-- **Licentiebestand**: blader naar het XML-licentiebestand dat u hebt gekregen en selecteer dit bestand.
+- **Editie bijwerken naar**: selecteer bij **Windows 10 Holographic for Business**.
+- **Licentiebestand**: blader naar het XML-licentiebestand dat voor u is opgegeven en selecteer dit bestand.
 
   ![Voer de naam van het XML-bestand in dat de gegevens over de licentie voor Holographic for Business bevat](./media/holographic-upgrade/Holographic-edition-upgrade.png)
  

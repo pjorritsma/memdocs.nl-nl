@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9a1a5b291135f5c6d42a47377d14d6d3d4f13411
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79362326"
 ---
 # <a name="keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune"></a>Windows-pc's up-to-date houden met software-updates in Microsoft Intune
@@ -80,7 +80,7 @@ Met de volgende twee procedures kunt u zich voorbereiden op het gebruik van soft
 
 1. Kies in de [Microsoft Intune-beheerconsole](https://manage.microsoft.com/) de optie **Beheer** &gt; **Updates**.
 
-2. Selecteer op de pagina **Service-instellingen: updates** in de lijst **Productcategorie** de updatecategorieën die u beschikbaar wilt maken voor computers. De meest voorkomende updates zijn standaard al ingeschakeld.
+2. Selecteer op de pagina **Service-instellingen: updates** in de lijst **Productcategorie** de updatecategorieën die u beschikbaar wilt maken voor alle computers. De meest voorkomende updates zijn standaard al ingeschakeld.
 
     > [!IMPORTANT]
     > Als u ervoor wilt zorgen dat computers de updates ontvangen die zijn goedgekeurd door de beheerder, mag de instelling voor Groepsbeleid van WSUS (Windows Server Update Services), **Locatie van Microsoft-updateservice in intranet** niet worden toegepast op computers die zijn ingeschreven met Intune.
@@ -93,7 +93,7 @@ Met de volgende twee procedures kunt u zich voorbereiden op het gebruik van soft
 
 1. Kies in de [Microsoft Intune-beheerconsole](https://manage.microsoft.com/) de optie **Beheer** &gt; **Updates**.
 
-2. Kies in de sectie **Automatische goedkeuringsregels** van de pagina **Serverinstellingen: updates** de optie **Nieuw**.
+2. Kies in de sectie **Automatische goedkeuringsregels** van de pagina **Service-instellingen: updates** de optie **Nieuw**.
 
 3. Geef op de pagina **Algemeen** van de wizard Automatische goedkeuringsregel maken een naam en optionele beschrijving voor de regel op.
 
@@ -153,7 +153,7 @@ U kunt ook updates implementeren voor software die niet door Microsoft is gemaak
 5. Geef op de pagina **Detectieregels** op hoe in Intune kan worden bepaald of de update al bestaat op beheerde computers. Als u gebruikmaakt van de standaardoptie **De standaarddetectieregels gebruiken**, wordt met Intune het updatepakket altijd één keer geïnstalleerd op elke doelcomputer.
 
     > [!NOTE]
-    > Als het setup-bestand dat u voor de update hebt opgegeven, een Windows Installer- of MSP-bestand is, wordt de pagina **Detectieregels** van de wizard niet weergegeven. Windows Installer- en MSP-bestanden bevatten hun eigen instructies voor het detecteren van eerdere update-installaties.
+    > Als het installatiebestand dat u voor de update hebt opgegeven, een Windows Installer- of MSP-bestand is, wordt de pagina **Detectieregels** van de wizard niet weergegeven. Windows Installer- en MSP-bestanden bevatten hun eigen instructies voor het detecteren van eerdere update-installaties.
 
     Selecteer een of meer van de volgende regels om te bepalen of de update al is geïnstalleerd op beheerde computers:
 
@@ -175,7 +175,7 @@ U kunt ook updates implementeren voor software die niet door Microsoft is gemaak
 
 8. Geef alle overige informatie op die nodig is om de detectieregel te configureren, zoals een bestandspad en -naam, de productcode van Windows Installer of een registersleutel, en kies **Volgende**.
 
-9. Op de pagina **Opdrachtregelargumenten** van de wizard kunt u de vereiste eigenschappen voor de installatie toevoegen aan de opdrachtregel voor de installatie om het gedrag van het setup-bestand te wijzigen. Sommige software ondersteunt bijvoorbeeld de eigenschap **/q** voor een stille installatie. Raadpleeg de documentatie bij uw softwarepakket voor meer informatie over alle ondersteunde opdrachtregelargumenten. Geef de benodigde opdrachtregelargumenten op en kies **Volgende**.
+9. Op de pagina **Opdrachtregelargumenten** van de wizard kunt u de vereiste eigenschappen voor de installatie toevoegen aan de opdrachtregel voor de installatie om het gedrag van het installatiebestand te wijzigen. Sommige software ondersteunt bijvoorbeeld de eigenschap **/q** voor een stille installatie. Raadpleeg de documentatie bij uw softwarepakket voor meer informatie over alle ondersteunde opdrachtregelargumenten. Geef de benodigde opdrachtregelargumenten op en kies **Volgende**.
 
     > [!NOTE]
     > Als de update geen ondersteuning biedt voor een stille installatie, kunt u de update niet installeren met Intune
@@ -235,7 +235,7 @@ Wanneer u een update uit de lijst selecteert, zijn opdrachten beschikbaar waarme
 
         - **Niet installeren**: er wordt alleen gemeld dat de update van toepassing is, maar de update wordt niet geïnstalleerd.
 
-        - **Beschikbare installatie**: de gebruiker kan de toepassing op verzoek installeren uit de bedrijfsportal.
+        - **Beschikbare installatie** – De gebruiker kan de toepassing op verzoek installeren uit de bedrijfsportal.
 
         - **Verwijderen**: updates worden verwijderd van computers in de doelgroep.
 
@@ -250,7 +250,7 @@ Wanneer u een update uit de lijst selecteert, zijn opdrachten beschikbaar waarme
 
         - **Aangepast**: hiermee geeft u de datum en tijd op waarop goedgekeurde updates worden geïnstalleerd.
 
-        - **Een week**, **Twee weken**, **Een maand**: de update wordt binnen de opgegeven periode geïnstalleerd.
+        - **Een week**, **Twee weken**, **Een maand** – De update binnen de opgegeven periode installeren.
 
 5. Klik op **Voltooien** om de instellingen op te slaan of kies **Annuleren** om de instellingen te negeren en terug te keren naar de lijst met updates.
 
@@ -260,5 +260,5 @@ Wanneer u een update uit de lijst selecteert, zijn opdrachten beschikbaar waarme
 6. Controleer het detailvenster onder aan de pagina **Alle updates** op herinneringsberichten voor de update.
 
 
-## <a name="see-also"></a>Zie tevens
+## <a name="see-also"></a>Zie ook
 [Beleid voor het beveiligen van Windows-pc's](policies-to-protect-windows-pcs-in-microsoft-intune.md)

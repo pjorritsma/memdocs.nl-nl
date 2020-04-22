@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d277b47b2d753b5068e871fe33ce0cab48cfb1e4
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79357360"
 ---
 # <a name="identify-mobile-device-management-use-case-scenarios"></a>Gebruiksscenario's voor het beheer van mobiele apparaten identificeren
@@ -81,7 +81,7 @@ In de volgende stap stelt u vast welke platformen voor mobiele apparaten zijn ge
 
 Uw bedrijfsgebruiksscenario kan bijvoorbeeld de iOS-/iPadOS- en Android Samsung Knox-apparaatplatformen ondersteunen. Uw BYOD-beleid kan ondersteuning omvatten voor aanvullende platformen voor mobiele apparaten, zoals Android (behalve Samsung Knox) en Windows 10 Mobile. Voortbouwend op de voorgaande voorbeelden hebben we platformen voor mobiele apparaten gekoppeld aan elk gebruiksscenario.
 
-| **Use cases** | **Subgebruikssituaties** | **Groepen** | **Apparaatplatformen** |   
+| **Use cases** | **Subgebruikssituaties** | **GROEPEN** | **Apparaatplatformen** |   
 |:---:|:---:|:---:|:---:|
 | Bedrijf | Informatiemedewerker | HR, Financiën | iOS/iPadOS |                                                           
 | Bedrijf | Leidinggevenden | HR, Financiën | iOS/iPadOS |                                                           

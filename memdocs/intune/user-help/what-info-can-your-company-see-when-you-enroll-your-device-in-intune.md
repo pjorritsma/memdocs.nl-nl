@@ -19,10 +19,10 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.collection: ''
 ms.openlocfilehash: ccef2c10f4baaac9e417dd4952b1ea6d6cf47e5c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79346843"
 ---
 # <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>Welke gegevens kan mijn organisatie zien wanneer ik mijn apparaat inschrijf?
@@ -52,8 +52,8 @@ Uw organisatie kan uw persoonlijke gegevens niet zien wanneer u een apparaat met
 
 **Wat uw organisatie mogelijk kan zien:**
 
-- Telefoonnummer: Op apparaten die eigendom zijn van de organisatie is uw volledige telefoonnummer zichtbaar. Voor persoonlijke apparaten zijn alleen de laatste vier cijfers van uw telefoonnummer zichtbaar voor uw organisatie. U kunt het eigendomstype van elk afzonderlijk apparaat zien op de pagina **Apparaatdetails** van dat apparaat.
+- Telefoonnummer: Voor apparaten die eigendom zijn van de organisatie is uw volledige telefoonnummer zichtbaar. Voor persoonlijke apparaten zijn alleen de laatste vier cijfers van uw telefoonnummer zichtbaar voor uw organisatie. U kunt het eigendomstype van elk afzonderlijk apparaat zien op de pagina **Apparaatdetails** van dat apparaat.
 - Apparaatopslagruimte: als u een vereiste app niet kunt installeren, kan uw organisatie kijken naar de opslagruimte van het apparaat om te controleren of er wellicht te weinig ruimte is.  
 - Locatie: uw organisatie kan nooit de locatie van uw apparaat zien, tenzij u een verloren iOS-apparaat onder supervisie moet herstellen. Raadpleeg de [Apple iOS-documentatie](https://go.microsoft.com/fwlink/?linkid=853816) voor meer informatie over apparaten onder supervisie.  
-- Details app-inventaris: als uw organisatie gebruikmaakt van Mobile Threat Defense, kunnen er details worden weergegeven over de apps die op uw iOS-apparaat zijn geïnstalleerd. Meer informatie over [Mobile Threat Defense](you-are-prompted-to-install-mtd-ios.md). Als u een persoonlijk apparaat hebt, kan uw organisatie alleen uw beheerde apps zien. Als u een apparaat hebt dat eigendom is van het bedrijf waar u werkt, kan uw organisatie al uw apps zien.
+- Details app-inventaris: als uw organisatie gebruikmaakt van Mobile Threat Defense, kunnen er meer details worden weergegeven over de apps die op uw iOS-apparaat zijn geïnstalleerd. Meer informatie over [Mobile Threat Defense](you-are-prompted-to-install-mtd-ios.md). Als u een persoonlijk apparaat hebt, kan uw organisatie alleen uw beheerde apps zien. Als u een apparaat hebt dat eigendom is van het bedrijf waar u werkt, kan uw organisatie al uw apps zien.
 - Netwerkgegevens: bepaalde informatie over netwerkverbindingen voor Android-apparaten kan voor de ondersteuning van uw organisatie beschikbaar zijn. Als uw organisatie bijvoorbeeld vereist dat apparaten binnen een bepaald gebouw blijven, herkent uw apparaat het netwerk waarmee het is verbonden. 

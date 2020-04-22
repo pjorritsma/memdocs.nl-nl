@@ -19,13 +19,13 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: fb8b5eae3c88664caff76da597fc3ab9111f989c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79343853"
 ---
-# <a name="quickstart-create-and-assign-an-app-protection-policy"></a>Quickstart: Beveiligingsbeleid voor apps maken en toewijzen
+# <a name="quickstart-create-and-assign-an-app-protection-policy"></a>Snelstartgids: App-beveiligingsbeleid maken en toewijzen
 
 In deze snelstartgids gaat u met Intune app-beveiligingsbeleid maken en aan een client-app op een apparaat van een eindgebruiker toewijzen. Intune maakt gebruik van app-beveiligingsbeleid om te controleren of uw apps aan de beveiligingsvereisten voor de gegevens van uw organisatie voldoen.
 
@@ -49,7 +49,7 @@ Gebruik de volgende stappen om een app-beveiligingsbeleid te maken:
     - **Naam**: *Inhoudsbeveiliging Windows 10*
     - **Beschrijving**: *Gebruikers die zijn gekoppeld aan dit beleid kunnen niet inhoud van de toegewezen app knippen/plakken of naar andere niet-beheerde apps op het apparaat kopiëren en omgekeerd.*
     - **Platform**: *Windows 10*
-    - **Status van de inschrijving**: *Ingeschreven*
+    - **De status van inschrijving**: *Ingeschreven*
 
 3. Selecteer **Beveiligde apps** om de apps te kiezen die aan dit beleid moeten voldoen.
 4. Klik op **Apps toevoegen**.
@@ -83,7 +83,7 @@ U hebt nu het beveiligingsbeleid voor apps toegewezen.
 
 In deze snelstartgids hebt u beveiligingsbeleid voor apps gemaakt en toegewezen. Gebruikers van de app waaraan dit beleid is toegewezen, kunnen niet inhoud van de toegewezen app knippen/plakken of naar andere niet-beheerde apps op het apparaat kopiëren en omgekeerd. Met dit type beveiliging kunnen gegevens van uw organisatie worden beveiligd. Zie [Wat is een app-beveiligingsbeleid?](app-protection-policy.md) voor meer informatie over app-beveiligingsbeleid in Intune.
 
-Als u deze reeks snelstartgidsen voor Intune wilt volgen, kunt u doorgaan met de volgende snelstartgids.
+Ga door naar de volgende snelstartgids om deze serie met snelstartgidsen voor Intune te volgen.
 
 > [!div class="nextstepaction"]
-> [Quickstart: Een aangepaste rol maken en toewijzen](../fundamentals/create-custom-role.md)
+> [Snelstartgids: Een aangepaste rol maken en toewijzen](../fundamentals/create-custom-role.md)

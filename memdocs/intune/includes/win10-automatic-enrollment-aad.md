@@ -37,7 +37,7 @@ Met automatische inschrijving kunnen gebruikers hun Windows 10-apparaten inschri
 
    ![Schermopname van de Azure-portal](../enrollment/media/windows-enroll/auto-enroll-scope.png)
 
-5. Gebruik de standaardwaarden voor de volgende URL's:
+5. Gebruik de standaardwaarden voor de volgende URL’s:
     - **URL voor MDM-gebruiksvoorwaarden**
     - **Detectie-URL voor MDM**
     - **URL van MDM-naleving**

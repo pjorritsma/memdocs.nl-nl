@@ -19,15 +19,15 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e762106a13bb42be11771276f38a37e46ae24662
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79338900"
 ---
 # <a name="software-update-agent-error-codes-and-descriptions-in-microsoft-intune"></a>Foutcodes en beschrijvingen van software-update-agent in Microsoft Intune
 
-De volgende tabel bevat de foutcodes voor de Intune **Update-agent**. Als u een specifieke foutcode niet in deze tabel kunt vinden, raadpleegt u [de lijst met foutcodes voor Windows Update](https://support.microsoft.com/help/938205/windows-update-error-code-list).
+De volgende tabel bevat de foutcodes voor Intune **Update-agent**. Als u een specifieke foutcode niet in deze tabel kunt vinden, raadpleegt u [de lijst met foutcodes voor Windows Update](https://support.microsoft.com/help/938205/windows-update-error-code-list).
 
 |Foutcode|Symbolische naam|Meer informatie|
 |--------------|-----------------|--------------------|

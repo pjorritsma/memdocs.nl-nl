@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6b9f5a560b0f44b8ff256034b51cb9057faf0ec2
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: ce61f7af7c11fb579e34890700231ca2e59fb5cd
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80576851"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81267680"
 ---
 # <a name="how-to-use-intune-in-environments-without-google-mobile-services"></a>Intune gebruiken in omgevingen zonder Google Mobile Services
 
@@ -33,7 +33,7 @@ Microsoft Intune gebruikt GMS (Google Mobile Services) om te communiceren met de
 
 ### <a name="for-users-outside-of-mainland-china"></a>Voor gebruikers buiten het vasteland van China 
 
-Als Google Play niet beschikbaar is, kan de  [Microsoft Intune-bedrijfsportal voor Android](../user-help/install-the-company-portal-app-android.md) worden gedownload op Android-apparaten en kan de app worden gesideload. Wanneer de app op deze manier is geïnstalleerd, worden er niet automatisch updates en fixes in geïnstalleerd. Zorg er daarom voor dat u regelmatig handmatig updates en patches voor de app installeert. 
+Als Google Play niet beschikbaar is, kan de  [Microsoft Intune-bedrijfsportal voor Android](https://www.microsoft.com/en-us/download/details.aspx?id=49140) worden gedownload op Android-apparaten en kan de app worden gesideload. Wanneer de app op deze manier is geïnstalleerd, worden er niet automatisch updates en fixes in geïnstalleerd. Zorg er daarom voor dat u regelmatig handmatig updates en patches voor de app installeert. 
 
 ### <a name="for-users-in-mainland-china"></a>Voor gebruikers op het vasteland van China 
 

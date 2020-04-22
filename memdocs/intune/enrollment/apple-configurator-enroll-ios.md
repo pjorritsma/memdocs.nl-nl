@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 71563a44e991e7324b9ce258d66d288d4b5a6cdb
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80327252"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-configurator"></a>Registratie van iOS-/iPadOS-apparaten instellen met Apple Configurator
@@ -132,7 +132,7 @@ Nadat u het profiel hebt gemaakt en de serienummers toegewezen, moet u het profi
 6. Selecteer in het deelvenster **Registreren bij MDM-server** de naam van de server die u hebt gemaakt en kies vervolgens **Volgende**.
 7. Selecteer in het deelvenster **Apparaten onder supervisie plaatsen** het toezichtsniveau en kies **Volgende**.
 8. Kies de **organisatie** in het deelvenster **Een organisatie maken** of maak een nieuwe organisatie en kies vervolgens **Volgende**.
-9. Kies in het deelvenster **iOS-/iPadOS-configuratieassistent configureren** de stappen die de gebruiker te zien krijgt en kies vervolgens **Voorbereiden**. Voer een verificatie uit om de vertrouwensinstellingen bij te werken als dit wordt gevraagd.  
+9. Kies in het deelvenster **iOS-/iPadOS-configuratieassistent configureren** de stappen die de gebruiker te zien krijgt en kies vervolgens **Voorbereiden**. Voer als u hierom wordt gevraagd een verificatie uit om de instellingen voor de vertrouwensrelatie bij te werken.  
 10. Zodra het iOS-/iPadOS-apparaat klaar is met de voorbereidingen, kunt u de USB-kabel verwijderen.  
 
 ### <a name="distribute-devices"></a>Apparaten distribueren

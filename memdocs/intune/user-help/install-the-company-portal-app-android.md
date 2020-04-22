@@ -20,17 +20,17 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 23ae0ec9d91a0bd1a171708699ae88e7c572a250
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084496"
 ---
 # <a name="install-the-company-portal-app-for-android"></a>De bedrijfsportal-app voor Android installeren
 
 De bedrijfsportal is een app die u toegang geeft tot de apps, de e-mail, het netwerk en de internetverbinding van uw bedrijf of school. Met deze app kunt u de veiligheid van uw bedrijfsgegevens waarborgen door de beveiliging van uw apparaat te waarborgen, bijvoorbeeld door de bedrijfs-apps up-to-date te houden of door ervoor te zorgen dat een apparaat na een bepaalde tijd automatisch wordt vergrendeld. Zie [Waarom uw Android-apparaat inschrijven](why-enroll-android-device.md) voor meer informatie over de functies van de bedrijfsportal en het aandeel hiervan in Apparaatbeheer.  
 
-1. Tik op **Start** > **Play Store**.
+1. Tik op Tap **Start** > **Play Store**.
 
 2. Typ in het **zoekvak** de tekst **Intune-bedrijfsportal**.  
 

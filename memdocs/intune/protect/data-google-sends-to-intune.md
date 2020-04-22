@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f218ffd5d11e800588000e8b24aa81a7554b7051
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79352537"
 ---
 # <a name="data-google-sends-to-intune"></a>Gegevens die Google verzendt naar Intune
@@ -36,9 +36,9 @@ De volgende tabel bevat de gegevens die Google naar Microsoft Intune verzendt wa
 
 | Gegevens die Google verzendt naar Intune | Details | Gebruikt voor | Voorbeeld |
 |:---:|:---:|:---:|:---:|
-| Zakelijke gegevens | Ondernemings-id's van de klant in Google. | Hiermee worden gegevens van de klant gekoppeld tussen Intune en Google. | Voorbeeld van **enterpriseId**: LC04eik8a6.<br>**Naam**. De naam van de beheerder die is ingevoerd bij het configureren van Android Enterprise. Voorbeeld: Stefan Spel.<br>**E-mailadres beheerder**. YourAdmin@gmail.com die is gebruikt bij het configureren van Android Enterprise. |
-| Toepassingsgegevens | Gegevens voor beheerde Play Store-toepassingen. | Bedoeld voor de toepassing voor gebruikers of apparaten als deze beschikbaar of vereist zijn. | Voorbeeld van **Toepassingsnaam**: Contoso-toepassing voor magazijninventarisatie.<br>Voorbeeld van **unieke id voor de toepassing**: app:com. Contoso.magazijn.inventarisatie |
-| Serviceaccount | Uniek, intern Google-serviceaccount voor gebruik met specifieke klantaanroepen. | Wordt gebruikt voor aanroepen in Google namens de klant (om apps en apparaten te bekijken en meer) | Voorbeeld van **naam**: InternalAccount@InternalService.com.<br>Voorbeeld van **Sleutels**: ServiceAccountPassword |
+| Zakelijke gegevens | Ondernemings-id's van de klant in Google. | Hiermee worden gegevens van de klant gekoppeld tussen Intune en Google. | Voorbeeld van **enterpriseId**: LC04eik8a6.<br>**Naam**. De naam van de beheerder die is ingevoerd bij het configureren van Android Enterprise. Bijvoorbeeld: Jan Smit.<br>**E-mailadres beheerder**. YourAdmin@gmail.com die is gebruikt bij het configureren van Android Enterprise. |
+| Toepassingsgegevens | Gegevens voor beheerde Play Store-toepassingen. | Bedoeld voor de toepassing voor gebruikers of apparaten als deze beschikbaar of vereist zijn. | Voorbeeld van **toepassingsnaam**: Contoso-toepassing voor magazijn-inventarisatie.<br>Voorbeeld van **unieke id voor de toepassing**: app:com. Contoso.magazijn.inventarisatie |
+| Serviceaccount | Uniek, intern Google-serviceaccount voor gebruik met specifieke klantaanroepen. | Wordt gebruikt voor aanroepen in Google namens de klant (om apps en apparaten te bekijken en meer) | Voorbeeld van **naam**: InternalAccount@InternalService.com.<br>Voorbeeld van **trefwoorden**: ServiceAccountPassword |
 
 
 Als u zakelijke Android-apparaten niet meer wilt beheren met Microsoft Intune en u de gegevens wilt verwijderen, moet u zowel het zakelijke Android-apparaatbeheer via Microsoft Intune uitschakelen als uw Google-account verwijderen. In uw Google-account vindt u meer informatie over accountbeheer.

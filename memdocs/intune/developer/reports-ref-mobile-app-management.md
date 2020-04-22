@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 428ee1ce93b4f6fe21c4b0180a9df222f3e23e09
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79359752"
 ---
 # <a name="reference-for-mobile-app-management-mam-entities"></a>Naslag voor MAM-entiteiten (Mobile Application Management)
@@ -30,7 +30,7 @@ ms.locfileid: "79359752"
 De categorie **Mobile App Management** bevat entiteiten voor mobiele apps, zoals:
 
 - Apps
-- exemplaren
+- Exemplaren
 - Incheckstatus
 - Algemene status
 - Beleidsstatus
@@ -60,8 +60,8 @@ De entiteit **mamApplicationInstance** bevat een lijst met beheerde MAM-apps (Mo
 |          Eigenschap          |                                                                                                  Beschrijving                                                                                                  |               Voorbeeld                |
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
 |   applicationInstanceKey   |                                                               De unieke id van het MAM-app-exemplaar in het datawarehouse (surrogaatsleutel).                                                                |                 123                  |
-|           userId           |                                                                              De gebruikers-id van de gebruiker die deze MAM-app heeft geïnstalleerd.                                                                              | b66bc706-ffff-7437-0340-032819502773 |
-|   applicationInstanceId    |                                              De unieke id van het MAM-app-exemplaar, vergelijkbaar met ApplicationInstanceKey, maar de id is een natuurlijke sleutel.                                              | b66bc706-ffff-7437-0340-032819502773 |
+|           userId           |                                                                              De gebruikers-id van de gebruiker die deze MAM-app heeft geïnstalleerd.                                                                              | b66bc706-FFFF-7437-0340-032819502773 |
+|   applicationInstanceId    |                                              De unieke id van het MAM-app-exemplaar, vergelijkbaar met ApplicationInstanceKey, maar de id is een natuurlijke sleutel.                                              | b66bc706-FFFF-7437-0340-032819502773 |
 | mamApplicationId | De toepassings-id van de MAM-toepassing waarvoor dit MAM-toepassingsexemplaar is gemaakt.   | 11/23/2016 12:00:00 AM   |
 |     applicationVersion     |                                                                                     De toepassingsversie van deze MAM-app.                                                                                      |                  2                   |
 |        createdDate         |                                                                 De datum waarop deze record van het MAM-app-exemplaar is gemaakt. De waarde kan null zijn.                                                                 |        11/23/2016 12:00:00 AM        |

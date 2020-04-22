@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 28ce4e7d80e79f752bded8f0cdf03494aa629e1b
-ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80233454"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>App-configuratiebeleidsregels voor beheerde iOS-/iPadOS-apparaten toevoegen
@@ -31,7 +31,7 @@ ms.locfileid: "80233454"
 
 Gebruik app-configuratiebeleidsregels in Microsoft Intune om aangepaste configuratie-instellingen te leveren voor een iOS-/iPadOS-app. Met deze configuratie-instellingen kan een app worden aangepast op basis van de richting van de leverancier van de app. U krijgt deze configuratie-instellingen (sleutels en waarden) van de leverancier van de app. Als u de app wilt configureren, geeft u de instellingen op als sleutels en waarden, of als XML die de sleutels en waarden bevat.
 
-Als Microsoft Intune-beheerder kunt u bepalen welke gebruikersaccounts worden toegevoegd aan Microsoft Office-toepassingen op beheerde apparaten. U kunt de toegang beperken tot uitsluitend toegestane gebruikersaccounts van de organisatie, en persoonlijke accounts blokkeren op ingeschreven apparaten. De app-configuratie wordt verwerkt op de ondersteunende toepassingen, en niet-goedgekeurde accounts worden verwijderd en geblokkeerd. De instellingen van het configuratiebeleid worden gebruikt wanneer de app deze controleert, doorgaans bij de eerste keer dat de app wordt uitgevoerd.
+Als Microsoft Intune-beheerder kunt u bepalen welke gebruikersaccounts worden toegevoegd aan Microsoft Office-toepassingen op beheerde apparaten. U kunt de toegang beperken tot uitsluitend toegestane gebruikersaccounts van de organisatie en persoonlijke accounts op ingeschreven apparaten blokkeren. De app-configuratie wordt verwerkt op de ondersteunende toepassingen, en niet-goedgekeurde accounts worden verwijderd en geblokkeerd. De instellingen van het configuratiebeleid worden gebruikt wanneer de app deze controleert, doorgaans bij de eerste keer dat de app wordt uitgevoerd.
 
 Zodra u een appconfiguratiebeleid hebt toegevoegd, kunt u de toewijzingen voor het appconfiguratiebeleid instellen. Wanner u de toewijzingen voor het beleid instelt, kunt u ervoor kiezen de groep gebruikers voor wie het beleid van toepassing is op te nemen of uit te sluiten. Als u ervoor kiest een of meer groepen op te nemen, kunt u specifieke groepen selecteren waarvoor u ingebouwde groepen wilt opnemen of selecteren. Ingebouwde groepen zijn **Alle gebruikers**, **Alle apparaten** en **Alle gebruikers + alle apparaten**. 
 
@@ -106,11 +106,11 @@ De tekens \{\{ en \}\} worden alleen gebruikt door tokentypen en mogen niet word
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Alleen geconfigureerde organisatieaccounts toestaan in apps met meerdere identiteiten 
 
-Als Microsoft Intune-beheerder kunt u bepalen welke gebruikersaccounts worden toegevoegd aan Microsoft-apps op beheerde apparaten. U kunt de toegang beperken tot uitsluitend toegestane gebruikersaccounts van de organisatie, en persoonlijke accounts blokkeren op ingeschreven apparaten. Gebruik voor iOS-/iPadOS-apparaten de volgende sleutel-/waardeparen:
+Als Microsoft Intune-beheerder kunt u bepalen welke gebruikersaccounts worden toegevoegd aan Microsoft-apps op beheerde apparaten. U kunt de toegang beperken tot uitsluitend toegestane gebruikersaccounts van de organisatie en persoonlijke accounts op ingeschreven apparaten blokkeren. Gebruik voor iOS-/iPadOS-apparaten de volgende sleutel-/waardeparen:
 
 | **Sleutel** | **Waarden** |
 |----|----|
-| IntuneMAMAllowedAccountsOnly | <ul><li>**Ingeschakeld**: Het enige account dat is toegestaan, is het beheerde gebruikersaccount dat wordt gedefinieerd door de sleutel [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).</li><li>**Uitgeschakeld** (of een andere waarde die geen hoofdletterongevoelige overeenkomst is met **Ingeschakeld**): Elk account is toegestaan.</li></ul> |
+| IntuneMAMAllowedAccountsOnly | <ul><li>**Ingeschakeld**: het enige account dat is toegestaan, is het beheerde gebruikersaccount dat wordt gedefinieerd met de sleutel [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).</li><li>**Uitgeschakeld** (of een andere waarde die geen hoofdlettergevoelige overeenkomst is met **Ingeschakeld**): elk account is toegestaan.</li></ul> |
 | IntuneMAMUPN | <ul><li>De UPN van het account waarvoor aanmelden bij de app is toegestaan.</li><li> Voor apparaten die zijn ingeschreven bij Intune, kan het <code>{{userprincipalname}}</code>-token worden gebruikt voor het ingeschreven gebruikersaccount.</li></ul>  |
 
    > [!NOTE]

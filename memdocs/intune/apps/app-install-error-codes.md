@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: bdf779e35125d8da7093e67702e064cff362d6ed
-ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80620542"
 ---
 # <a name="intune-app-installation-error-reference"></a>Naslaginformatie voor installatiefouten voor Intune-apps
@@ -57,7 +57,7 @@ De volgende foutberichten en beschrijvingen bieden informatie over iOS- en iPadO
 
 | Foutcode (Hex) | Foutcode (Dec) | Foutbericht/-code | Beschrijving/probleemoplossingstips |
 |--------------------|------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 0x87D12906 | -2016335610 | Fout bij de Apple MDM-agent: De opdracht voor app-installatie is mislukt zonder opgegeven foutreden. Probeer de app opnieuw te installeren. | Apple MDM-Agent heeft geretourneerd dat de installatieopdracht is mislukt. |
+| 0x87D12906 | -2016335610 | Fout bij de Apple MDM-agent: de opdracht voor app-installatie is mislukt zonder opgegeven foutreden. Probeer de app opnieuw te installeren. | Apple MDM-Agent heeft geretourneerd dat de installatieopdracht is mislukt. |
 | 0x87D1313C | -2016333508 | De netwerkverbinding op de client is verbroken of onderbroken. Latere pogingen moeten in een betere netwerkomgeving slagen. | De netwerkverbinding is verbroken terwijl de bijgewerkte URL voor de downloadservice naar het apparaat werd verzonden. Een server met de opgegeven hostnaam kan niet worden gevonden. |
 | 0x87D1313D | -2016333507 | Licentie voor de app is niet opgehaald met de ITunes Store-id | Synchroniseer het bijbehorende VPP-token en synchroniseer het apparaat vervolgens met Intune. Als het probleem zich blijft voordoen, verwijdert u de groepstoewijzing en wijst u de VPP-app opnieuw toe als app met apparaatlicentie. Als het probleem zich blijft voordoen, trekt u de app-licentie van het apparaat in door te navigeren naar **Apps** > **iOS** > *VPP-app selecteren* > **App-licenties** > *Apparaat selecteren*. Trek vervolgens de licentie in en wijs de app opnieuw toe aan de gebruikersgroep of apparaatgroep. Als het probleem zich blijft voordoen, kunt u alle VPP-licenties van het apparaat intrekken door naar **Apparaten** > **iOS** > *Apparaat selecteren* > **Overzicht** > **Licenties intrekken** te gaan, en vervolgens het apparaat in te trekken en opnieuw in te schrijven bij Intune.
 | 0x87D11388 | -2016341112 | Het iOS-/iPadOS-apparaat is momenteel bezet.  | Het iOS-/iPadOS-apparaat is bezet, wat leidt tot een fout. Het apparaat is vergrendeld. De gebruiker moet het apparaat ontgrendelen om de app te installeren. |
@@ -79,7 +79,7 @@ De volgende foutberichten en beschrijvingen bieden informatie over iOS- en iPadO
 | 0x87D13B9A | -2016330854 | Onbekend probleem. Probeer het opnieuw. | De installatie van de app is mislukt om een onbekende reden. Probeer het later opnieuw. |
 | 0x87D13B9B | -2016330853 | De installatie van de app is mislukt. De volgende keer dat het apparaat wordt gesynchroniseerd, wordt er vanuit Intune een nieuwe poging ondernomen. | Er is een apparaatfout opgetreden bij het installeren van de app. Synchroniseer het apparaat en probeer de app opnieuw te installeren. |
 | 0x87d13b7e | -2016330882 | De licentietoewijzing is mislukt vanwege de Apple-fout Er zijn geen resterende VPP-licenties  | Dit gedrag is inherent aan het ontwerp. U kunt dit oplossen door extra VPP-licenties aan te schaffen of licenties te claimen bij gebruikers waarop niet meer wordt gericht. |
-| 0x87d13b6e | -2016330898 | Fout 12024 bij de app-installatie: Onbekende oorzaak.  | Apple heeft niet voldoende informatie gegeven om te bepalen waarom de installatie is mislukt.   Er valt niets te rapporteren. |
+| 0x87d13b6e | -2016330898 | App-installatiefout 12024: Onbekende oorzaak.  | Apple heeft niet voldoende informatie gegeven om te bepalen waarom de installatie is mislukt.   Er valt niets te rapporteren. |
 | 0x87d13b7f | -2016330881 | Het vereiste beleid voor app-configuratie ontbreekt, controleer of het beleid op dezelfde groepen is gericht.  | Voor de app is app-configuratie vereist, maar er is geen app-configuratie aangewezen. De beheerder moet zorgen dat voor de groepen waarop de app is gericht ook de vereiste app-configuratie op de groepen is gericht. |
 | 0x87d13b69 | -2016330903 | VPP-apparaatlicentie is alleen van toepassing op apparaten met iOS/iPadOS 9.0 of hoger.  | Werk de betrokken iOS- of iPadOS-apparaten bij naar iOS/iPadOS 9.0 of hoger. |
 | 0x87d13b8f | -2016330865 | De toepassing is geïnstalleerd op het apparaat, maar is niet-beheerd.  | Deze fout treedt alleen op bij Line-Of-Business-apps. De app is buiten Intune geïnstalleerd. U kunt deze fout oplossen door de app van het apparaat te verwijderen. De volgende keer dat de synchronisatie van het apparaat plaatsvindt, wordt de app vanuit Intune op het apparaat geïnstalleerd. |

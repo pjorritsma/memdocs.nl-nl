@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7b75faa501fa91dc82bfec83b8c418e28b39fcec
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79350678"
 ---
 # <a name="intune-certificate-connector-events-and-diagnostic-codes"></a>Gebeurtenissen en diagnostische codes van Intune Certificate Connector
@@ -41,7 +41,7 @@ Vanaf versie 6.1806.x.x legt de Intune-connectorservice gebeurtenissen vast in d
 | 10102 | CertificateRenewal_Failure  | Connector-inschrijvingscertificaat niet vernieuwd. Installeer de connector opnieuw. | 0x00000000, 0x00000405, 0x0FFFFFFF |
 | 10302 | RetrieveCertificate_Error  | Ophalen van het connector-inschrijvingscertificaat uit het register is mislukt. Bekijk de gebeurtenisdetails voor de vingerafdruk van het certificaat die betrekking heeft op deze gebeurtenis. | 0x00000000, 0x00000404, 0x0FFFFFFF |
 | 10301 | RetrieveCertificate_Warning  | Controleer de diagnostische gegevens in de details van gebeurtenis. | 0x00000000, 0x00000403, 0x0FFFFFFF |
-| 20100 | PkcsCertIssue_Success  | Een PKCS-certificaat is uitgegeven. Bekijk de gebeurtenisdetails voor de apparaat-id, de gebruikers-id, CA-naam, certificaatsjabloonnaam en certificaatvingerafdruk die betrekking hebben op deze gebeurtenis. | 0x00000000, 0x0FFFFFFF |
+| 20100 | PkcsCertIssue_Success  | Een PKCS-certificaat is uitgegeven. Bekijk de gebeurtenisdetails voor de apparaat-id, gebruikers-id, CA-naam, certificaatsjabloonnaam en certificaatvingerafdruk die betrekking hebben op deze gebeurtenis. | 0x00000000, 0x0FFFFFFF |
 | 20102 | PkcsCertIssue_Failure  | Uitgifte van een PKCS-certificaat is mislukt. Bekijk de gebeurtenisdetails voor de apparaat-id, gebruikers-id, CA-naam, certificaatsjabloonnaam en certificaatvingerafdruk die betrekking hebben op deze gebeurtenis. | 0x00000000, 0x00000400, 0x00000401, 0x0FFFFFFF |
 | 20200 | RevokeCert_Success  | Het certificaat is ingetrokken. Bekijk de gebeurtenisdetails voor de apparaat-id, gebruikers-id, CA-naam en certificaatserienummer die betrekking hebben op deze gebeurtenis. | 0x00000000, 0x0FFFFFFF |
 | 20202 | RevokeCert_Failure | Kan het certificaat niet verwijderen. Bekijk de gebeurtenisdetails voor de apparaat-id, gebruikers-id, CA-naam en certificaatserienummer die betrekking hebben op deze gebeurtenis. Zie de NDES SVC-logboeken voor meer informatie.   | 0x00000000, 0x00000402, 0x0FFFFFFF |

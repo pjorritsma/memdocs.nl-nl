@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ce008c21cefeb3920182a09547db091547681401
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79343073"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-testing-guide"></a>Testhandleiding voor Microsoft Intune App SDK voor Android
@@ -55,7 +55,7 @@ U kunt een pincode vereisen voor toegang tot bedrijfsresources. U kunt ook een z
 2. Bevestig de volgende voorwaarden:
     - Bij het starten van de app dient een prompt voor het invoeren van de pincode of de productiegebruiker die is gebruikt tijdens de inschrijving bij de bedrijfsportal te worden weergegeven.
     - Wanneer er geen geldige aanmeldingsprompt wordt weergegeven, kan dit zijn veroorzaakt door een onjuist geconfigureerd Android-manifest, in het bijzonder de waarden voor de integratie van ADAL (Azure Active Directory Authentication Library) (SkipBroker, ClientID en Authority).
-    - Wanneer er geen prompt wordt weergegeven, wordt dit mogelijk veroorzaakt door een onjuist geïntegreerde `MAMActivity`-waarde. Zie de [ontwikkelaarshandleiding voor de Microsoft Intune App-SDK voor Android](app-sdk-android.md) voor meer informatie over `MAMActivity`.
+    - Wanneer er geen prompt wordt weergegeven, wordt dit mogelijk veroorzaakt door een onjuist geïntegreerde `MAMActivity`-waarde. Zie de `MAMActivity`ontwikkelaarshandleiding voor de Microsoft Intune App-SDK voor Android[ voor meer informatie over ](app-sdk-android.md).
 
 > [!NOTE] 
 > Als de voorgaande test niet werkt, zullen de volgende tests waarschijnlijk ook mislukken. Controleer de integratie van de [SDK](app-sdk-android.md#sdk-integration) en [ADAL](app-sdk-android.md#configure-azure-active-directory-authentication-library-adal).

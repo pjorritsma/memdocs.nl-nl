@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a1641efe6899c46a797a8ccf7979b533cb620d19
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79358959"
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>De Intune-softwareclient installeren op Windows-pc's
@@ -77,7 +77,7 @@ Ga op de computer(s) waarop de clientsoftware moet worden geïnstalleerd naar de
 2. Kopieer de bestanden **Microsoft_Intune_x86.msi**, **Microsoft_Intune_x64.msi** en **MicrosoftIntune.accountcert** naar een netwerklocatie die toegankelijk is voor alle computers waarop de clientsoftware moet worden geïnstalleerd.
 
     > [!IMPORTANT]
-    > Scheid of hernoem de bestanden niet, anders mislukt de installatie van de clientsoftware.
+    > Scheid of hernoem de bestanden niet om te voorkomen de installatie van clientsoftware mislukt.
 
 3. Gebruik Groepsbeleid om de software te implementeren op de computers in uw netwerk.
 
@@ -88,7 +88,7 @@ U kunt de Intune-clientsoftware op computers implementeren met een installatieko
 
 1. Kopieer de clientinstallatiebestanden **Microsoft_Intune_Setup.exe** en **MicrosoftIntune.accountcert** naar de map **%Systemdrive%\Temp\Microsoft_Intune_Setup** op de referentiecomputer.
 
-2. Maak de registervermelding **WindowsIntuneEnrollPending** door de volgende opdracht toe te voegen aan het script **SetupComplete.cmd**:
+2. Maak de registervermelding **WindowsIntuneEnrollPending** door de volgende opdracht toe te voegen aan het script **SetupComplete.cmd** :
 
     ```cmd
     %windir%\system32\reg.exe add HKEY_LOCAL_MACHINE\Software\Microsoft\Onlinemanagement\Deployment /v
@@ -126,8 +126,8 @@ Als er wel een Intune-licentie is toegewezen aan gebruikers en de MDM-instantie 
 
 - Gebruikers van Windows 10- of Windows 8.1-pc’s zien twee inschrijvingsopties:
 
-  - **Pc inschrijven als mobiel apparaat**: als gebruikers de knop **Meer informatie over inschrijven** kiezen, worden ze naar instructies geleid voor het inschrijven van hun pc als mobiel apparaat. Deze knop wordt prominent weergegeven, omdat MDM-inschrijving als de standaard inschrijvingsoptie wordt beschouwd die de voorkeur heeft. De MDM-optie is echter niet van toepassing op dit onderwerp, dat alleen de installatie van de clientsoftware dekt.
-  - **Pc inschrijven met behulp van de Intune-clientsoftware**: u moet uw gebruikers instrueren om de link **Klik hier om het te downloaden** te selecteren, zodat ze door de installatie van de clientsoftware worden geleid.
+  - **Pc inschrijven als mobiel apparaat**: Als gebruikers de knop **Meer informatie over inschrijven** kiezen, worden ze naar instructies geleid voor het inschrijven van hun pc als mobiel apparaat. Deze knop wordt prominent weergegeven, omdat MDM-inschrijving als de standaard inschrijvingsoptie wordt beschouwd die de voorkeur heeft. De MDM-optie is echter niet van toepassing op dit onderwerp, dat alleen de installatie van de clientsoftware dekt.
+  - **Pc inschrijven met behulp van de Intune-clientsoftware**: U moet uw gebruikers vertellen dat ze de link **Klik hier om het te downloaden** moeten selecteren, zodat ze door de installatie van de clientsoftware worden geleid.
 
 De volgende tabel geeft een overzicht van de opties.
 

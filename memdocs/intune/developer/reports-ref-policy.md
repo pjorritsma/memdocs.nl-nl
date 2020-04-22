@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 5a2f13bddb852b46459c9c79df39dda49ef9549d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79339914"
 ---
 # <a name="reference-for-policy-entities"></a>Naslag voor beleidsentiteiten
@@ -40,7 +40,7 @@ De entiteit **policy** bevat apparaatconfiguratieprofielen, app-configuratieprof
 | Eigenschap  | Beschrijving | Voorbeeld |
 |---------|------------|--------|
 | policyKey |Een unieke sleutel voor het beleid in het datawarehouse. |123 |
-| policyId |Een unieke id van het beleid in het datawarehouse. |b66bc706-ffff-7437-0340-032819502773 |
+| policyId |Een unieke id van het beleid in het datawarehouse. |b66bc706-FFFF-7437-0340-032819502773 |
 | policyName |De naam van het beleid. |"Windows 10 Baseline" |
 | policyVersion |De versie van het beleid. Wanneer het beleid wordt gewijzigd, wordt er een nieuwere versie gemaakt. |1, 2, 3 |
 | isDeleted |Geeft aan of de beleidsrecord is bijgewerkt.  <br>Waar: het beleid heeft een nieuwe record met bijgewerkte velden. <br>Onwaar: de meest recente record voor het beleid. |Waar/onwaar |

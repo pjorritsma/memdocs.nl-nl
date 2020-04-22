@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7aa18316ad1b4473ac70399e1370bfececadbfaf
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79357438"
 ---
 # <a name="develop-a-rollout-plan"></a>Een rollout-plan ontwikkelen
@@ -44,7 +44,7 @@ Bepaal vervolgens het tijdschema voor elke doelgroep. Voor deze taak wordt meest
 ## <a name="rollout-phases"></a>Implementatiefasen
 Organisaties kiezen er vaak voor om de rollout van Intune te starten met een eerste pilot, voor een kleine groep gebruikers in de IT-afdeling. De testfase kan vervolgens worden uitgebreid naar een grotere groep IT-gebruikers en er kunnen andere groepen in de organisatie aan deelnemen.
 
-### <a name="pilot"></a>Test
+### <a name="pilot"></a>Pilotimplementatie
 In de eerste fase van de implementatie zijn de testfasegebruikers de doelgroep. De testfasegebruikers moeten weten dat ze de eerste gebruikers van een nieuwe oplossing zijn. Zij moeten bereid zijn om feedback te geven zodat de configuratie, documentatie en meldingen kunnen worden verbeterd en zodat de weg wordt geëffend voor alle andere gebruikers in latere fasen van de implementatie. Deze gebruikers moeten geen leidinggevenden of VIP's zijn.
 
 De testfase is een goede gelegenheid voor u om de [uitdagingen](planning-guide-deployment-goals.md) te testen en de [vereisten](planning-guide-requirements.md) die u eerder hebt verzameld te verfijnen.

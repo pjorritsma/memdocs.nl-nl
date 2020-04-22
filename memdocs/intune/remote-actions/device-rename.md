@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 4ff0e650a3eccf057158d3faf28875e42ed90a4d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325034"
 ---
 # <a name="rename-a-device-in-intune"></a>Naam van een apparaat wijzigen in Intune
@@ -46,7 +46,7 @@ Deze functie biedt momenteel geen ondersteuning voor de naamwijziging van hybrid
 Bij het wijzigen van de naam van een Windows-apparaat moet de nieuwe naam aan de volgende regels voldoen:
 - Maximaal 15 tekens (moet kleiner zijn dan of gelijk zijn aan 63 bytes, exclusief navolgende null-tekens)
 - Niet null of een lege tekenreeks
-- Toegestane ASCII: Letters (a-z, A-Z), cijfers (0-9) en afbreekstreepjes
+- Toegestane ASCII: letters (a-z, A-Z), cijfers (0-9) en afbreekstreepjes
 - Toegestane Unicode: tekens > = 0x80, moet geldige UTF8 zijn, moet IDN-toewijsbaar zijn (dat wil zeggen dat RtlIdnToNameprepUnicode moet slagen, zie RFC 3492)
 - Namen mogen niet alleen cijfers bevatten
 - Namen mogen geen spaties bevatten

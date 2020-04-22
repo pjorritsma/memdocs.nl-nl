@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d29294f1d9556f195fe70f0e2cb36cc8c9ddcfba
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79357724"
 ---
 # <a name="create-a-design"></a>Een ontwerp maken
@@ -99,7 +99,7 @@ Wanneer u de huidige MDM-omgeving vastlegt, moet u rekening houden met alle proj
 | **Identiteit** | Azure AD, Azure AD Connect, niet federatief, geen MFA | Project aanwezig om MFA tegen het eind van het jaar in te schakelen |                 
 | **E-mailomgeving** | Exchange On-premises, Exchange Online | Momenteel vindt migratie plaats van Exchange On-premises naar Exchange Online. 75% van postvakken gemigreerd. De laatste 25% wordt gemigreerd voordat Intune-pilot begint. |                
 | **SharePoint** | SharePoint On-premises | Er zijn geen plannen om over te stappen op SharePoint Online |  
-| **Huidig MDM** | Exchange ActiveSync |  |
+| **Huidig MDM** | Exchange ActiveSync: |  |
 | **Certificaatoplossing** | Microsoft Server 2012 R2, AD Certificate Services | Gebruik alleen PKI voor websiteservers |
 | **Systeembeheer** | Huidige versie van Configuration Manager | Wil een co-beheeroplossing onderzoeken |
 | **VPN-oplossing** | Cisco AnyConnect |  |
@@ -182,7 +182,7 @@ Kijk eens goed naar de volgende aspecten van uw apparaten, zodat u beter begrijp
 
 - Apparaateigendom
 
-- Bulkinschrijving
+- Bulkregistratie
 
 Laten we deze gebieden eens nader bekijken.
 
@@ -209,9 +209,9 @@ U kunt [een sjabloon van de bovenstaande tabel downloaden](https://gallery.techn
 
 Intune ondersteunt zowel bedrijfseigen apparaten als persoonlijke apparaten. Een apparaat wordt beschouwd als bedrijfseigendom als u het inschrijft bij een apparaatinschrijvingsbeheerder of apparaatinschrijvingsprogramma. Een apparaat kan bijvoorbeeld worden ingeschreven via Apple Device Enrollment Program (DEP), worden gemarkeerd als bedrijfseigendom en in een apparaatgroep worden geplaatst die specifieke beleidsregels en apps van het bedrijf ontvangt.
 
-Zie [sectie 3: use-casescenariovereisten bepalen](planning-guide-requirements.md) voor meer informatie over voorbeelden van apparaten in bedrijfseigendom en BYOD-apparaten.
+Zie [Sectie 3: use-casescenariovereisten bepalen](planning-guide-requirements.md) voor meer informatie over voorbeelden van apparaten in bedrijfseigendom en BYOD-apparaten.
 
-### <a name="bulk-enrollment"></a>Bulkinschrijving
+### <a name="bulk-enrollment"></a>Bulkregistratie
 
  U kunt apparaten bulksgewijs op verschillende manieren inschrijven, afhankelijk van het platform. Als bulksgewijze inschrijving is vereist, bepaalt u eerst [de juiste methode voor bulksgewijze inschrijving](../enrollment/device-enrollment.md), die u vervolgens opneemt in uw ontwerp.
 
@@ -255,8 +255,8 @@ U moet ten minste één configuratiebeleid per platform maken. U kunt desgewenst
 
 | **Naam van beleid** | **Apparaatplatform** | **Instellingen** | **Doelgroep** |   
 |:---:|:---:|:---:|:---:|
-| Bedrijfseigendom - iOS | iOS | Pincode is vereist, lengte: 6, Cloudback-up beperken | Bedrijfsapparaten |                                                           
-| Bedrijfseigendom - Android | Android | Pincode is vereist, lengte: 6, Cloudback-up beperken | Bedrijfsapparaten |                                                           
+| Bedrijfseigendom - iOS | iOS | Pincode is vereist, lengte: 6, cloudback-up beperken | Bedrijfsapparaten |                                                           
+| Bedrijfseigendom - Android | Android | Pincode is vereist, lengte: 6, cloudback-up beperken | Bedrijfsapparaten |                                                           
 | BYOD - iOS  | iOS | Pincode is vereist, lengte: 4 | BYOD-apparaten |
 | BYOD - Android  | Android | Pincode is vereist, lengte: 4 | BYOD-apparaten |
 
@@ -348,7 +348,7 @@ U kunt Intune gebruiken om de gebruikers of apparaten op verschillende manieren 
 
 - [iOS Volume Purchase Program for Business (VPP)](../apps/vpp-apps-ios.md)
 
-- [Apps in de Microsoft Store voor Bedrijven](../apps/windows-store-for-business.md)
+- [Microsoft Store voor Bedrijven-apps](../apps/windows-store-for-business.md)
 
 #### <a name="app-type-requirements"></a>Vereisten voor app-typen
 

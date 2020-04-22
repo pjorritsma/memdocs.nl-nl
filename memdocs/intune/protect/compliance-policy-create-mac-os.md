@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 210ec5ea6acc2d0ce91a93c83991b630a6fdbb4d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79353239"
 ---
 # <a name="macos-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>macOS-instellingen om te markeren of apparaten wel of niet conform zijn met behulp van Intune
@@ -57,7 +57,7 @@ Gebruik deze nalevingsinstellingen als Intune-beheerder om de resources van uw o
 - **Maximumversie van OS-build**:  
   Als Apple beveiligingsupdates publiceert, wordt het buildnummer meestal bijgewerkt, niet de versie van het besturingssysteem. Gebruik deze functie om het buildnummer in te voeren dat maximaal is toegestaan op het apparaat.
 
-## <a name="system-security-settings"></a>Systeembeveiligingsinstellingen
+## <a name="system-security-settings"></a>Instellingen voor systeembeveiliging
 
 ### <a name="password"></a>Wachtwoord
 
@@ -72,7 +72,7 @@ Gebruik deze nalevingsinstellingen als Intune-beheerder om de resources van uw o
 - **Minimale wachtwoordlengte**:  
   Voer het aantal cijfers of tekens in waaruit het wachtwoord minimaal moet bestaan.
 
-- **Wachtwoordtype**: Kies of een wachtwoord alleen **numerieke** tekens mag bevatten of uit een combinatie van cijfers en andere tekens moet bestaan (**alfanumeriek**).
+- **Wachtwoordtype**: kies of een wachtwoord alleen **numerieke** tekens mag bevatten of uit een combinatie van cijfers en andere tekens moet bestaan (**alfanumeriek**).
 
 - **Het aantal niet-alfanumerieke tekens in het wachtwoord**:  
   Voer het minimumaantal speciale tekens (zoals `&`, `#`, `%`, `!` enz.) in dat het wachtwoord moet bevatten.
@@ -116,7 +116,7 @@ Apparaten worden door de firewall tegen onbevoegde netwerktoegang beschermd. U k
 
 Zie [Gatekeeper in macOS](https://support.apple.com/HT202491) (hiermee wordt een Apple-website geopend) voor meer informatie.
 
-**Alle apps toestaan die zijn gedownload vanaf deze locaties**: Hiermee staat u toe dat ondersteunde toepassingen vanaf verschillende locaties op uw apparaten worden geïnstalleerd. Uw locatieopties:
+**Alle apps toestaan die zijn gedownload vanaf deze locaties**: hiermee staat u toe dat ondersteunde toepassingen vanaf verschillende locaties op uw apparaten worden geïnstalleerd. Uw locatieopties:
 
 - **Niet geconfigureerd** (*default*): de optie Gatekeeper heeft geen invloed op naleving of niet-naleving.  
 - **Mac App Store** - Alleen apps voor de Mac App Store installeren. Apps van derden en van niet-geïdentificeerde ontwikkelaars kunnen niet worden geïnstalleerd. Als een gebruiker Gatekeeper selecteert om apps buiten de Mac App Store om te installeren, wordt het apparaat vervolgens beschouwd als niet compatibel.

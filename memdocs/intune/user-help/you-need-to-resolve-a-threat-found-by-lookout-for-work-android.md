@@ -18,10 +18,10 @@ ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 535c9b6384c30473a0e4d6e849d41404acfea043
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79346375"
 ---
 # <a name="resolve-a-threat-found-by-lookout-for-work"></a>Een bedreiging oplossen die met Lookout for Work is gevonden  
@@ -52,7 +52,7 @@ Krijg weer toegang tot resources van uw bedrijf wanneer de Lookout for Work-app 
 
 Als u een app installeert die door Lookout for Work wordt aangeduid als een bedreiging, ontvangt u een bericht zoals weergegeven in de onderstaande schermafbeelding.  
 
-![Voorbeeldschermafbeelding waarin een waarschuwingsbericht van Lookout Virus via de Lookout for Work-app-interface wordt weergegeven. Er worden drie knoppen weergegeven: 'Sluiten', 'Meer info' en 'Verwijderen'.](./media/lookout-virus-alert-android.png)  
+![Voorbeeldschermafbeelding waarin een waarschuwingsbericht van Lookout Virus via de Lookout for Work-app-interface wordt weergegeven. Er zijn drie knoppen weergegeven: ‘Sluiten,' 'Meer Info' en 'Verwijderen'.](./media/lookout-virus-alert-android.png)  
 
 Als u weer toegang wilt krijgen tot uw verloren gegane bedrijfse-mail en gegevens, moet u de verdachte app verwijderen. Zolang de app zich op uw apparaat bevindt, hebt u geen toegang tot resources van het bedrijf.    
 

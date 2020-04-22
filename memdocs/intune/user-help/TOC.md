@@ -17,6 +17,9 @@
 #### [Uw Android-apparaat inschrijven](enroll-device-android-company-portal.md)  
 #### [Inschrijven met Android-werkprofiel](enroll-device-android-work-profile.md)
 #### [Inschrijven met Microsoft Intune-app](enroll-device-android-microsoft-intune-app.md)
+#### Inschrijven met afgeleide referenties
+##### [Inschrijven met Entrust Datacard](enroll-android-device-entrust-datacard.md)
+##### [Inschrijven met Intercede](enroll-android-device-intercede.md)
 ### [Verplaatsen naar nieuwe apparaatbeheerinstellingen](move-to-new-device-management-setup.md)
 ### [Beheerde apps op een apparaat gebruiken](use-managed-apps-on-your-device-android.md)
 ### [Een apparaat versleutelen](encrypt-your-device-android.md)
@@ -25,7 +28,7 @@
 ### [Tijd van de vergrendeling instellen](set-the-amount-of-time-before-your-device-is-locked-android.md)
 ### [VPN installeren](install-your-companys-virtual-private-network-VPN-android.md)
 ### [Gegevensverzameling door Microsoft uitschakelen](turn-off-microsoft-usage-data-collection-android.md)
-### [Wat gebeurt er als u de registratie van uw apparaat bij Intune ongedaan maakt?](what-happens-if-you-unenroll-your-device-from-intune-android.md)
+### [Wat gebeurt er als u de registratie van een apparaat bij Intune ongedaan maakt?](what-happens-if-you-unenroll-your-device-from-intune-android.md)
 #### [De inschrijving van het apparaat ongedaan maken](unenroll-your-device-from-intune-android.md)
 #### [De registratie van een apparaat ongedaan maken als u de gebruiksvoorwaarden hebt afgewezen](unenroll-your-device-from-intune-if-you-declined-terms-of-use-android.md)
 

@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c7de0b978c24f28988c62854a249505a0598db95
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084084"
 ---
 # <a name="bundle-ids-for-built-in-ios-and-ipados-apps-you-can-use-in-intune"></a>Bundel-id's voor ingebouwde iOS- en iPadOS-apps die u kunt gebruiken in Intune
@@ -29,7 +29,7 @@ Als u functies configureert op iOS-/iPadOS-apparaten, kunt u ook de ingebouwde a
 
 ## <a name="bundle-ids"></a>Bundel-id's
 
-| Bundel-id                   | App-naam     | Uitgever |
+| Bundel-id                   | App-naam     | Publisher |
 |-----------------------------|--------------|-----------|
 | com.apple.AppStore          | App Store    | Apple     |
 | com.apple.store.Jolly       | Apple Store  | Apple     |

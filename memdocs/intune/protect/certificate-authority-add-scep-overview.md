@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 1dfac34615c208328cab06a3fd047d3a9b99c794
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79353889"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>Partnercertificeringsinstanties toevoegen in Intune met behulp van SCEP
@@ -134,7 +134,7 @@ Als u een externe certificeringsinstantie bent en interesse hebt om uw product t
 - [Intune SCEP API GitHub-opslagplaats](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation)
 - [Richtlijnen voor Intune SCEP-API voor externe CA's ](scep-libraries-apis.md)
 
-## <a name="see-also"></a>Zie tevens
+## <a name="see-also"></a>Zie ook
 
 - [Certificaatprofielen configureren](certificates-scep-configure.md)
 - [Intune SCEP API GitHub-opslagplaats](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation)

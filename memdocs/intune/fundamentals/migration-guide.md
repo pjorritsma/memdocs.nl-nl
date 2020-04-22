@@ -18,10 +18,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 88f30f10af5969d202dd8eb252cc82d03d3d921e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79358062"
 ---
 # <a name="intune-migration-guide"></a>Migratiehandleiding voor Intune
@@ -36,11 +36,11 @@ In deze handleiding vindt u instructies voor de migratie van een externe MDM-pro
 
 In deze handleiding wordt de migratie in twee fasen onderverdeeld die taken, strategieën en tactische richtlijnen omvatten, aan de hand waarvan u stapsgewijs de gehele procedure voor de migratie naar Intune MDM doorloopt.
 
-- [Fase 1: Intune voorbereiden op Mobile Device Management](migration-guide-prepare.md)
+- [Fase 1: Intune voorbereiden op het beheer van mobiele apparaten](migration-guide-prepare.md)
 
   - [De vereisten voor de MDM-migratie beoordelen](migration-guide-prepare.md#assess-mdm-requirements)
 
-  - [Basisconfiguratie](migration-guide-setup.md)
+  - [Basisinstallatie](migration-guide-setup.md)
 
   - [Beheerbeleid voor apparaten en apps configureren](migration-guide-configure-policies.md)
 
@@ -48,7 +48,7 @@ In deze handleiding wordt de migratie in twee fasen onderverdeeld die taken, str
 
   - [Speciale overwegingen bij migratie](migration-guide-considerations.md)
 
-- [Fase 2: migratiecampagne](migration-guide-campaign.md)
+- [Fase 2: Migratiecampagne](migration-guide-campaign.md)
 
   - [Communicatieplanning](migration-guide-communication-plan.md)
 
@@ -72,4 +72,4 @@ Het is belangrijk dat u beseft dat de nieuwe Intune-implementatie kan afwijken v
 
 ## <a name="next-steps"></a>Volgende stappen
 
-[Fase 1: Intune voorbereiden op Mobile Device Management](migration-guide-prepare.md)
+[Fase 1: Intune voorbereiden op het beheer van mobiele apparaten](migration-guide-prepare.md)

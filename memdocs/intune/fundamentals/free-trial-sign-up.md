@@ -19,13 +19,13 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 893981700ede9587a980faa0e4d6b0384c24e3d4
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/30/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80401492"
 ---
-# <a name="quickstart-try-microsoft-intune-for-free"></a>Quickstart: Microsoft Intune gratis proberen
+# <a name="quickstart-try-microsoft-intune-for-free"></a>Snelstartgids: Microsoft Intune gratis proberen
 
 Met Microsoft Intune kun u de bedrijfsgegevens van uw werknemers beschermen door middel van het beheer van apparaten en apps. In deze snelstartgids maakt u een gratis abonnement om Intune in een testomgeving te proberen.
 
@@ -104,7 +104,7 @@ Zie [De instantie voor het beheer van mobiele apparaten instellen](mdm-authority
 Zoals hierboven is gemeld, kunt u de domeinnaam wijzigen in het Microsoft 365-beheercentrum als uw organisatie een eigen aangepast domein heeft dat u wilt gebruiken zonder **.onmicrosoft.com**. U kunt de aangepaste domeinnaam toevoegen, verifiëren en configureren met behulp van de volgende stappen.  
 
 > [!IMPORTANT]
-> U kunt het gedeelte **onmicrosoft.com** van de *initiële* domeinnaam niet wijzigen of verwijderen. U kunt *aangepaste* domeinnamen wel toevoegen, verifiëren of verwijderen met Intune om uw bedrijfsidentiteit helder te houden. Zie [Een aangepaste domeinnaam configureren](custom-domain-name-configure.md) voor meer informatie.
+> U kunt het gedeelte *onmicrosoft.com* van de **initiële** domeinnaam niet wijzigen of verwijderen. U kunt *aangepaste* domeinnamen wel toevoegen, verifiëren of verwijderen met Intune om uw bedrijfsidentiteit helder te houden. Zie [Een aangepaste domeinnaam configureren](custom-domain-name-configure.md) voor meer informatie.
 
 1. Ga naar het [Microsoft 365-beheercentrum](https://admin.microsoft.com) en meld u aan met uw beheerdersaccount.
 
@@ -133,7 +133,7 @@ Er zijn twee portals die u het meest gebruikt:
 
 In deze snelstartgids maakt u een gratis abonnement om Intune in een testomgeving te proberen. Raadpleeg [Intune instellen](setup-steps.md) voor meer informatie over het instellen van Intune.
 
-Als u deze reeks snelstartgidsen voor Intune wilt volgen, kunt u doorgaan met de volgende snelstartgids.
+Ga door naar de volgende snelstartgids om deze serie met snelstartgidsen voor Intune te volgen.
 
 > [!div class="nextstepaction"]
-> [Quickstart: Een gebruiker maken en vervolgens een licentie aan deze gebruiker toewijzen](quickstart-create-user.md)
+> [Snelstartgids: een gebruiker maken en er een licentie aan toewijzen](quickstart-create-user.md)

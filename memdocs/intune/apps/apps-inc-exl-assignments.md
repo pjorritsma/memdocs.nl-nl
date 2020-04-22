@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 6095c079c6b5cb6f132d9963e3e7413e97180d70
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80324588"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>App-toewijzingen opnemen en uitsluiten in Microsoft Intune
@@ -83,7 +83,7 @@ U kunt een app toewijzen aan groepen met behulp van de toewijzing voor opnemen e
 
     ![App-toewijzingen van Intune - Groepen uitsluiten](./media/apps-inc-exl-assignments/apps-inc-exl-04.png)
 13. Selecteer **Selecteren** om de selectie van groepen te voltooien.
-14. Selecteer **OK** in het deelvenster **Groep toevoegen**. De app-lijst **Toewijzingen** wordt weergegeven.
+14. Selecteer in het deelvenster **Groep toevoegen** **OK**. De app-lijst **Toewijzingen** wordt weergegeven.
 15. Klik op **Opslaan** om uw groepstoewijzingen te activeren voor de app.
 
 Als u groepstoewijzingen maakt, kunnen groepen die al zijn toegewezen, niet worden gewijzigd. Als u een groep wilt selecteren die momenteel niet beschikbaar is, verwijdert u eerst de app uit de lijst met toegewezen apps.

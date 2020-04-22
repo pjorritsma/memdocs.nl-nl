@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 78fce6f5f518227500b3cf42f1d935c0dd88df8c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79359856"
 ---
 # <a name="reference-for-application-entities"></a>Naslag voor toepassingsentiteiten
@@ -42,7 +42,7 @@ De entiteit **AppRevision** biedt een overzicht van alle versies van apps.
 | Eigenschap  | Beschrijving | Voorbeeld |
 |---------|------------|--------|
 | appKey |De unieke id van de app. |123 |
-| applicationId |De unieke id van de app, vergelijkbaar met AppKey, maar dit is een natuurlijke sleutel |b66bc706-ffff-7437-0340-032819502773 |
+| applicationId |De unieke id van de app, vergelijkbaar met AppKey, maar dit is een natuurlijke sleutel |b66bc706-FFFF-7437-0340-032819502773 |
 | revision |De versie zoals vermeld door de beheerder tijdens het uploaden van het binaire bestand. |2 |
 | title |De titel van de app. |Excel |
 | publisher |De uitgever van de app. |Microsoft |

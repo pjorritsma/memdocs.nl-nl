@@ -16,10 +16,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7e568a7700a6849993d24be4dd042195a95ab000
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79338419"
 ---
 # <a name="windows-update-settings-for-intune"></a>Windows Update-instellingen voor Intune  
@@ -33,7 +33,7 @@ Wanneer u instellingen voor Windows 10-update-ringen in Intune configureert, con
 Update-instellingen bepalen welke bits een apparaat downloadt, en wanneer. Raadpleeg de Windows-referentiedocumentatie voor meer informatie over het gedrag van elke instelling.  
 
 - **Servicekanaal**  
-  **Standaardinstelling**: Semi-Annual-kanaal  
+  **Standaard**: Semi-Annual-kanaal  
   Windows Update CSP: [Update/BranchReadinessLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-branchreadinesslevel)  
 
   Stel het kanaal (branch) in van waaruit het apparaat Windows-updates ontvangt. Verschillende kanalen kunnen verschillende uitstelperioden gebruiken voordat updates worden geleverd.  
@@ -55,21 +55,21 @@ Update-instellingen bepalen welke bits een apparaat downloadt, en wanneer. Raadp
   > Vanaf Windows-versie 1903 wordt het gebruik van het *Semi-Annual-kanaal (targeted)* (SAC-T) stopgezet. Met deze wijziging wordt SAC-T samengevoegd met het *Semi-Annual-kanaal*. Zie voor meer informatie over deze wijziging en hoe dit van invloed is op Windows Update voor Bedrijven, het bericht [Windows Update for Business and the retirement of SAC-T](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/Windows-Update-for-Business-and-the-retirement-of-SAC-T/ba-p/339523) in het Windows IT Pro Blog.  
  
 - **Productupdates van Microsoft**  
-  **Standaardinstelling**:  Toestaan  
+  **Standaard**: toestaan  
   Windows Update CSP: [Update/AllowMUUpdateService](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowmuupdateservice)
 
   - **Toestaan**: selecteer *Toestaan* om te scannen op app-updates van Microsoft Update.  
   - **Blokkeren**: selecteer Blokkeren om te voorkomen dat er wordt gescand op app-updates.  
 
 - **Windows-stuurprogramma's**  
-  **Standaardinstelling**:  Toestaan  
+  **Standaard**: toestaan  
   Windows Update CSP: [Update/ExcludeWUDriversInQualityUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-excludewudriversinqualityupdate)  
 
   - Kies **Toestaan**: selecteer *Toestaan* als u Windows Update-stuurprogramma's ook wilt laten bijwerken.  
   - **Blokkeren**: selecteer Blokkeren om scannen voor stuurprogramma’s te voorkomen.  
 
 - **Uitstelperiode voor kwaliteitsupdates (dagen)**  
-  **Standaardinstelling**: 0  
+  **Standaard**: 0  
   Windows Update CSP: [Update/DeferQualityUpdatesPeriodInDays](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-deferqualityupdatesperiodindays)  
 
   Geef het aantal dagen (0 tot 30) op dat kwaliteitsupdates worden uitgesteld. Deze periode wordt opgeteld bij de eventuele uitstelperiode van het servicekanaal dat u selecteert. De uitstelperiode begint wanneer het beleid wordt ontvangen door het apparaat.  
@@ -77,7 +77,7 @@ Update-instellingen bepalen welke bits een apparaat downloadt, en wanneer. Raadp
   Kwaliteitsupdates zijn doorgaans oplossingen en verbeteringen in de bestaande Windows-functionaliteit.  
 
 - **Uitstelperiode voor onderdelenupdates (dagen)**  
-  **Standaardinstelling**: 0  
+  **Standaard**: 0  
   Windows Update CSP: [Update/PauseFeatureUpdatesPeriodInDays](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-deferfeatureupdatesperiodindays)  
 
   Geef het aantal dagen op dat onderdelenupdates worden uitgesteld. Deze periode wordt opgeteld bij de eventuele uitstelperiode van het servicekanaal dat u selecteert. De uitstelperiode begint wanneer het beleid wordt ontvangen door het apparaat.  
@@ -90,7 +90,7 @@ Update-instellingen bepalen welke bits een apparaat downloadt, en wanneer. Raadp
   Upgrades van onderdelen zijn over het algemeen nieuwe functies van Windows.  
 
 - **Periode instellen voor onderdelenupdate verwijderen (2-60 dagen)**  
-  **Standaardinstelling**: 10  
+  **Standaard**: 10  
   Windows Update CSP: [Update/ConfigureFeatureUpdateUninstallPeriod](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configurefeatureupdateuninstallperiod)  
 
   Configureer een tijd waarna onderdelenupdates niet meer kunnen worden verwijderd.  
@@ -104,7 +104,7 @@ Update-instellingen bepalen welke bits een apparaat downloadt, en wanneer. Raadp
 De instellingen voor de gebruikerservaring bepalen de ervaring van de eindgebruiker wat betreft het opnieuw opstarten van het apparaat en ontvangen herinneringen. Raadpleeg de Windows Update CSP-documentatie voor meer informatie over het gedrag van elke instelling.  
 
 - **Gedrag van automatische updates**  
-  **Standaardinstelling**: Automatisch installeren op onderhoudstijdstip  
+  **Standaard**: Automatisch installeren op onderhoudstijdstip  
   Windows Update CSP: [Update/AllowAutoUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)  
 
   Kies hoe automatische updates worden geïnstalleerd, en wanneer het apparaat indien nodig opnieuw moet worden opgestart.  
@@ -118,11 +118,11 @@ De instellingen voor de gebruikerservaring bepalen de ervaring van de eindgebrui
     Deze optie kan een apparaat automatisch opnieuw opstarten nadat de update is geïnstalleerd. Gebruik de instelling **Gebruikstijden** om een periode te definiëren waarin automatisch opnieuw opstarten wordt geblokkeerd:  
 
     - **Start gebruikstijd**: Geef een begintijd op voor het onderdrukken van opnieuw opstarten vanwege update-installaties.  
-      **Standaardinstelling**: 08:00 uur  
+      **Standaard**: 8: 00 uur  
       Windows Update CSP: [Update/ActiveHoursStart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursstart)  
   
     - **Einde gebruikstijd**: Geef een eindtijd op voor het onderdrukken van opnieuw opstarten vanwege update-installaties.  
-      **Standaardinstelling**: 17:00 uur  
+      **Standaard**: 17: 00 uur  
       Windows Update CSP: [Update/ActiveHoursEnd](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
 
   - **Automatisch installeren en opnieuw starten op het tijdstip voor onderhoud** – Updates worden automatisch gedownload en vervolgens geïnstalleerd tijdens Automatisch onderhoud wanneer het apparaat niet in gebruik is of op accustroom werkt. Als opnieuw opstarten vereist is, wordt het apparaat opnieuw opgestart wanneer het niet wordt gebruikt. (Dit is de standaardinstelling voor niet-beheerde apparaten.)  
@@ -130,11 +130,11 @@ De instellingen voor de gebruikerservaring bepalen de ervaring van de eindgebrui
     Deze optie kan een apparaat automatisch opnieuw opstarten nadat de update is geïnstalleerd. Het gebruik van de instelling **Gebruikstijden** wordt niet beschreven in de instellingen van Windows Update, maar worden gebruikt door Intune om een periode te definiëren waarin automatisch opnieuw opstarten wordt geblokkeerd:  
 
     - **Start gebruikstijd**: Geef een begintijd op voor het onderdrukken van opnieuw opstarten vanwege update-installaties.  
-      **Standaardinstelling**: 08:00 uur  
+      **Standaard**: 8: 00 uur  
       Windows Update CSP: [Update/ActiveHoursStart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursstart)  
   
     - **Einde gebruikstijd**: Geef een eindtijd op voor het onderdrukken van opnieuw opstarten vanwege update-installaties.  
-      **Standaardinstelling**: 17:00 uur  
+      **Standaard**: 17: 00 uur  
       Windows Update CSP: [Update/ActiveHoursEnd](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
 
   - **Automatisch installeren en opnieuw starten op het geplande tijdstip**: Geef een installatiedag en -tijd op. Als er niets wordt opgegeven, wordt de installatie dagelijks om 03:00 uur uitgevoerd, gevolgd door een aftelling van 15 minuten naar een herstart. Aangemelde gebruikers kunnen het aftellen en opnieuw opstarten uitstellen.   
@@ -143,13 +143,13 @@ De instellingen voor de gebruikerservaring bepalen de ervaring van de eindgebrui
     Deze optie ondersteunt extra instellingen.  
 
     - **Frequentie van automatisch gedrag**: Gebruik deze instelling om te plannen wanneer updates worden geïnstalleerd, inclusief de week, de dag en het tijdstip.  
-      **Standaardinstelling**: Elke week
+      **Standaard**: elke week
 
     - **Geplande installatiedag**: Geef aan op welke dag van de week u wilt dat updates worden geïnstalleerd.  
-      **Standaardinstelling**: Elke dag  
+      **Standaard**: elke dag  
 
     - **Geplande installatietijd**: Geef aan op welke dag van de week u wilt dat updates worden geïnstalleerd.  
-      **Standaardinstelling**: 03:00 uur  
+      **Standaard**: 3: 00 uur  
 
   - **Automatisch installeren en opnieuw opstarten zonder tussenkomst van de eindgebruiker**: Updates worden automatisch gedownload en vervolgens geïnstalleerd tijdens Automatisch onderhoud wanneer het apparaat niet in gebruik is of op accustroom werkt. Als opnieuw opstarten vereist is, wordt het apparaat opnieuw opgestart wanneer het niet wordt gebruikt. Deze optie stelt het configuratiescherm van de eindgebruiker in op alleen-lezen.  
 
@@ -157,7 +157,7 @@ De instellingen voor de gebruikerservaring bepalen de ervaring van de eindgebrui
 
 
 - **Controles voor opnieuw starten**  
-  **Standaardinstelling**: Toestaan  
+  **Standaard**: toestaan  
   Windows Update CSP: [Update/SetEDURestart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setedurestart)  
 
   Als u deze controles wilt overslaan wanneer u een apparaat opnieuw start, kiest u **Overslaan**. 
@@ -169,21 +169,21 @@ De instellingen voor de gebruikerservaring bepalen de ervaring van de eindgebrui
   - *Windows-versie 1709 en later*: Tijdens de gebruikstijd worden de volgende processen niet uitgevoerd voor updates: scannen, downloaden, installeren en opnieuw opstarten. Na de gebruikstijd worden de updateprocessen wel uitgevoerd en kunnen ze het apparaat uit de slaapstand halen, scannen, downloaden, installeren en opnieuw opstarten, zolang het door de accu- en stroomcontrole komt. 
 
 - **Voorkomen dat de gebruiker Windows-updates onderbreekt**  
-  **Standaardinstelling**: Toestaan  
+  **Standaard**: toestaan  
   Windows Update CSP: [Update/SetDisablePauseUXAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setdisablepauseuxaccess)  
 
   - **Toestaan**: sta toe dat de gebruiker van een apparaat de installatie van een update kan onderbreken.  
   - **Blokkeren**: voorkom dat de gebruiker van een apparaat de installatie van een update onderbreekt.  
 
 - **Blokkeren dat de gebruiker kan zoeken naar Windows-updates**  
-  **Standaardinstelling**: Toestaan  
+  **Standaard**: toestaan  
   Windows Update CSP: [Update/SetDisableUXWUAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setdisableuxwuaccess) 
 
   - **Toestaan**: sta toe dat de gebruiker van een apparaat een Windows Update-scan gebruikt om updates te zoeken en te downloaden, en functies te installeren.
   - **Blokkeren**: voorkom dat de gebruiker van een apparaat toegang heeft tot de Windows Update-scan, updates kan downloaden, en functies kan installeren.  
 
 - **Goedkeuring van de gebruiker vereisen voor opnieuw opstarten buiten werkuren**  
-  **Standaardinstelling**: Niet geconfigureerd  
+  **Standaard**: niet geconfigureerd  
   Windows Update CSP: [Update/AutoRestartRequiredNotificationDismissal](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
   
   - **Niet geconfigureerd**  
@@ -206,7 +206,7 @@ De instellingen voor de gebruikerservaring bepalen de ervaring van de eindgebrui
   Wanneer u de standaardwaarde wist, wordt deze instelling *Niet geconfigureerd*.  
 
 - **Niveau van Update-melding wijzigen**  
-  **Standaardinstelling**: Gebruik de standaardmeldingen van Windows Update  
+  **Standaard**: gebruik de standaard Windows Update-meldingen  
   Windows Update CSP: [Update/UpdateNotificationLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-updatenotificationlevel)
   
   Geef aan op welk niveau van Windows Update-meldingen zichtbaar is voor gebruikers. Deze instelling bepaalt niet hoe en wanneer updates worden gedownload en geïnstalleerd.  
@@ -218,7 +218,7 @@ De instellingen voor de gebruikerservaring bepalen de ervaring van de eindgebrui
   - **Schakel alle meldingen uit, inclusief waarschuwingen voor opnieuw opstarten**  
 
 - **Deadline-instellingen gebruiken**  
-  **Standaardinstelling**: Niet geconfigureerd  
+  **Standaard**: niet geconfigureerd  
  
   Hiermee kunnen gebruikers deadline-instellingen gebruiken.  
 
@@ -228,24 +228,24 @@ De instellingen voor de gebruikerservaring bepalen de ervaring van de eindgebrui
   Als de optie is ingesteld op *Toestaan*, kunt u de volgende instellingen voor deadlines configureren:
 
   - **Deadline voor onderdelenupdates**  
-    **Standaardinstelling**: *Niet geconfigureerd*  
+    **Standaard**: *niet geconfigureerd*  
     Windows Update CSP: [Update/ConfigureDeadlineForFeatureUpdates](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforfeatureupdates)  
 
     Hiermee geeft u het aantal dagen op dat een gebruiker heeft voordat de onderdelenupdates automatisch op de apparaten worden geïnstalleerd (2-30).
 
   - **Deadline voor kwaliteitsupdates**  
-    **Standaardinstelling**: *Niet geconfigureerd*  
+    **Standaard**: *niet geconfigureerd*  
     Windows Update CSP: [Update/ConfigureDeadlineForQualityUpdates](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforqualityupdates)
 
     Hiermee geeft u het aantal dagen op dat een gebruiker heeft voordat de kwaliteitsupdates automatisch op de apparaten worden geïnstalleerd (2-30).
 
   - **Respijtperiode**  
-    **Standaardinstelling**: *Niet geconfigureerd* Windows Update CSP: [Update/ConfigureDeadlineGracePeriod]( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
+    **Standaard**: *Niet geconfigureerd* Windows Update CSP: [Update/ConfigureDeadlineGracePeriod]( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
 
     Hiermee wordt een minimum aantal dagen na de deadline opgegeven voordat er automatische opnieuw wordt opgestart (2-7).
 
   - **Automatisch opnieuw opstarten vóór deadline**  
-    **Standaardinstelling**:  Ja - Windows Update CSP: [Update/ConfigureDeadlineNoAutoReboot](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinenoautoreboot)
+    **Standaard**:  Ja Windows Update CSP: [Update/ConfigureDeadlineNoAutoReboot](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinenoautoreboot)
 
     Hiermee wordt opgegeven of het apparaat automatisch opnieuw moet worden opgestart vóór de deadline.
     - **Ja**

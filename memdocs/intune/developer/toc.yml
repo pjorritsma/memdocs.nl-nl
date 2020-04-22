@@ -1,6 +1,6 @@
 - name: Richtlijnen voor ontwikkelaars
   href: index.yml
-- name: Instructiegidsen
+- name: Handleidingen
   expanded: true
   items:
     - name: Apps beveiligen met Intune App SDK

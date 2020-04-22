@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: apps; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 33f59cc2ecd2662e2d5d09fb06a9f1c7a33f0fca
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79342358"
 ---
 # <a name="overview-of-the-app-lifecycle-in-microsoft-intune"></a>Overzicht van de app-levenscyclus in Microsoft Intune
@@ -34,7 +34,7 @@ De levenscyclus van de Microsoft Intune-app begint zodra een app wordt toegevoeg
 
 De eerste stap in de implementatie van apps is het toevoegen van de apps die u wilt beheren en toewijzen aan Intune. U kunt met veel verschillende typen apps werken, maar de basisprocedures zijn hetzelfde. Met Intune kunt u verschillende app-typen toevoegen, zoals apps die intern zijn ontwikkeld (line-of-business), apps uit de Store, apps die zijn ingebouwd en apps op internet. Zie [Apps toevoegen aan Microsoft Intune](apps-add.md) voor meer informatie over deze app-typen.
 
-## <a name="deploy"></a>Implementeren
+## <a name="deploy"></a>Implementeer
 
 Nadat u de app aan Intune hebt toegevoegd, kunt u deze [toewijzen aan gebruikers en apparaten die u beheert](apps-deploy.md). In Intune is dit proces gemakkelijk en zodra de app is geïmplementeerd, kunt u [het succes bewaken](apps-monitor.md) van de implementatie vanuit Intune in Azure Portal. Bovendien kunt u in sommige app-stores, zoals die van [Apple](vpp-apps-ios.md) en [Windows](windows-store-for-business.md), bulksgewijs app-licenties voor uw bedrijf kopen. Intune kan gegevens synchroniseren met deze stores zodat u het licentiegebruik voor deze typen apps kunt implementeren en bijhouden vanuit de Intune-beheerconsole.
 

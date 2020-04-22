@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8c5a0a1405ceda93317dbefa6d80ec24cc0156bb
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79362339"
 ---
 # <a name="help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune"></a>Help Windows-pc's beveiligen met Endpoint Protection Help voor Microsoft Intune
@@ -63,7 +63,7 @@ Als u van uw huidige eindpuntbeveiligingstoepassing wilt overschakelen op Micros
 ## <a name="configure-microsoft-intune-endpoint-protection"></a>Microsoft Intune Endpoint Protection configureren
 Gebruik de volgende stappen om u te helpen bij het configureren van Endpoint Protection voor Microsoft Intune.
 
-1. Ga naar de [Microsoft Intune-beheerconsole](https://manage.microsoft.com/) en kies **Beleid** > **Beleid toevoegen**.
+1. Ga naar de [Microsoft Intune-beheerconsole](https://manage.microsoft.com/) en kies**Beleid** > **Beleid toevoegen**.
 
 2. Vouw **Computerbeheer** uit en selecteer **Instellingen Microsoft Intune-agent**. Selecteer **Aangepast beleid maken en implementeren** om beleid op te geven voor Endpoint Protection-instellingen. Klik vervolgens op de knop **Beleid maken**.
 
@@ -198,5 +198,5 @@ U kunt met Intune een volledige of snelle malwarescan uitvoeren met Endpoint Pro
 ## <a name="need-more-help"></a>Meer hulp nodig?
 Zie [Problemen met Endpoint Protection in Microsoft Intune oplossen](troubleshoot-endpoint-protection-in-microsoft-intune.md) voor meer hulp en ondersteuning.
 
-## <a name="see-also"></a>Zie tevens
+## <a name="see-also"></a>Zie ook
 [Beleid voor het beveiligen van Windows-pc's](policies-to-protect-windows-pcs-in-microsoft-intune.md)

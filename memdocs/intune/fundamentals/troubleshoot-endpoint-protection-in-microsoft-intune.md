@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 16b7cc65ae043fb48b7f500bfcd65195c7ff7561
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79355696"
 ---
 # <a name="endpoint-protection-issues-and-possible-solutions-in-microsoft-intune"></a>Problemen met Endpoint Protection en mogelijke oplossingen in Microsoft Intune
@@ -37,7 +37,7 @@ Gebeurtenislogboeken en foutcodes bekijken om [problemen met Microsoft Defender 
 
 ### <a name="endpoint-protection-engine-unavailable"></a>Endpoint Protection-engine niet beschikbaar
 
-**Mogelijke oorzaak**: De Intune Endpoint Protection-engine is beschadigd of verwijderd.
+**Mogelijke oorzaak**: de Intune Endpoint Protection-engine is beschadigd of verwijderd.
 
 **Mogelijke oplossingen**:
 
@@ -58,7 +58,7 @@ U krijgt mogelijk een bericht te zien waarin staat dat sommige functies zijn uit
 `Script scanning disabled`  
 `Network Inspection System disabled`  
 
-**Mogelijke oplossingen**: Schakel deze functies in. Zie voor meer informatie:
+**Mogelijke oplossingen**: schakel deze functies in. Zie voor meer informatie:
 
 - [Instellingen voor Endpoint Protection toevoegen](../protect/endpoint-protection-configure.md)
 - [Microsoft Defender Antivirus](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus)
@@ -80,7 +80,7 @@ Er is al 14 dagen geen volledige of snelle scan uitgevoerd. Dit scenario kan pla
 
 Er wordt een andere eindpuntbeveiligingstoepassing uitgevoerd en het apparaat is in orde.
 
-**Mogelijke oplossingen**: Als er een andere Endpoint Protection-toepassing is geïnstalleerd en Intune de betreffende toepassing detecteert, kan het apparaat instabiel worden.
+**Mogelijke oplossingen**: als er een andere Endpoint Protection-toepassing is geïnstalleerd en Intune de betreffende toepassing detecteert, kan het apparaat instabiel worden.
 
 ## <a name="next-steps"></a>Volgende stappen
 

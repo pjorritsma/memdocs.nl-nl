@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: 82872ba6-80f8-4cc9-adf4-0ccd8ff26dd2
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1d08b058303d70188c89d3ded989d4d3864b318f
-ms.sourcegitcommit: 012947b2095979ceb4e9c9f698e9c32f46baa7d8
+ms.openlocfilehash: fe58f7baf20903ade462430f4944d0f4555223af
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80525207"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81725976"
 ---
 # <a name="integrate-pradeo-mobile-threat-defense-with-intune"></a>Pradeo Mobile Threat Defense integreren met Intune
 
@@ -32,7 +32,7 @@ Voer de volgende stappen uit om de Pradeo Mobile Threat Defense-oplossing te int
 ## <a name="before-you-begin"></a>Voordat u begint
 
 > [!NOTE]
-> De volgende stappen moeten worden uitgevoerd in de [Pradeo Security-console](https://www.apps-security.com).
+> De volgende stappen moeten worden uitgevoerd in de [Pradeo Security-console](https://pradeo-security.com/).
 
 Zorg ervoor dat u over het volgende beschikt voordat u begint met de integratie van Pradeo met Intune:
 

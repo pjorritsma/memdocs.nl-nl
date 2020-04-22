@@ -89,7 +89,7 @@
     - name: iOS-/iPadOS-inschrijving instellen
       href: ios-enroll.md
       items:
-        - name: Programma voor apparaatinschrijving
+        - name: Automatische apparaatinschrijving
           href: device-enrollment-program-enroll-ios.md
         - name: Gebruikersinschrijving voor iOS/iPadOS en iPadOS instellen
           href: ios-user-enrollment.md

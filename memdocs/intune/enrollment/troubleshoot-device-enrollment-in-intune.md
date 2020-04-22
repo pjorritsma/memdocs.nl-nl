@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af60c91e52bcee643166729f3a3ac57ae232c4d9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: ac29e27c85ad43ccc078c54dd9d5b8b659206f57
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326997"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81397761"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Problemen bij de apparaatinschrijving in Microsoft Intune oplossen
 
@@ -237,7 +237,7 @@ U kunt het hulpprogramma voor diagnostische gegevens op [https://www.digicert.co
 
 In de volgende stappen wordt slechts een van de vele methoden en hulpprogramma's beschreven die u kunt gebruiken om te valideren of het certificaat goed is geïnstalleerd.
 
-1. Ga naar het [gratis hulpprogramma Digicert](ttps://www.digicert.com/help/).
+1. Ga naar het [gratis hulpprogramma Digicert](https://www.digicert.com/help/).
 2. Geef de Fully Qualified Domain Name van uw AD FS-server op (bijvoorbeeld sts.contoso.com) en selecteer **SERVER CONTROLEREN**.
 
 Als het servercertificaat goed is geïnstalleerd, worden er allemaal vinkjes weergegeven in de resultaten. Als het bovenstaande probleem bestaat, ziet u in de rapportsecties 'Certificaatnaam komt overeen met' en 'SSL-certificaat is correct geïnstalleerd' een rode X.

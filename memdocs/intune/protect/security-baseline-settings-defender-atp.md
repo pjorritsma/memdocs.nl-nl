@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a431ad92c285e1a2912e0f387ee5ea514e876ef
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: 67f4d3c08cbad08464d488073c574babcc77dc61
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551757"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81397506"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Microsoft Defender Advanced Threat Protection-basislijninstellingen voor Intune
 
@@ -133,7 +133,7 @@ Zie [BitLocker Group Policy settings](https://docs.microsoft.com/windows/securit
     - **Ja**: Windows staat niet toe dat er gegevens naar vaste stations worden geschreven die niet met BitLocker zijn beveiligd. Als een vast station niet is versleuteld, moet de gebruiker de BitLocker-installatiewizard voor het station doorlopen voordat schrijftoegang wordt verleend.
 
   - **Versleutelingsmethode voor vaste gegevensstations configureren**  
-    CSP: [EncryptionMethodByDriveType](hhttps://go.microsoft.com/fwlink/?linkid=872526)  
+    CSP: [EncryptionMethodByDriveType](https://go.microsoft.com/fwlink/?linkid=872526)  
     Deze instelling is beschikbaar als het *beleid voor vaste BitLocker-stations* is ingesteld op *Configureren*.
 
     Configureer de versleutelingsmethode en coderingssterkte voor vaste gegevensstations. *XTS-AES, 128-bits* is de standaardversleutelingsmethode van Windows en de aanbevolen waarde.
@@ -215,7 +215,7 @@ Zie [BitLocker Group Policy settings](https://docs.microsoft.com/windows/securit
 ## <a name="device-installation"></a>Apparaatinstallatie
 
 - **Installatie van hardwareapparaten op basis van apparaat-id's**  
-  [DeviceInstallation/PreventInstallationOfMatchingDeviceIDs](hhttps://go.microsoft.com/fwlink/?linkid=2066794)  
+  [DeviceInstallation/PreventInstallationOfMatchingDeviceIDs](https://go.microsoft.com/fwlink/?linkid=2066794)  
   
   Met deze beleidsinstelling kunt u een lijst opgeven met Plug en Play-hardware id's en compatibele id's voor apparaten die niet mogen worden geïnstalleerd in Windows. Deze beleidsinstelling heeft een hogere prioriteit dan welke andere beleidsinstelling dan ook waarmee Windows wordt toegestaan een apparaat te installeren.  Als u deze beleidsinstelling inschakelt op een externe desktopserver, heeft deze invloed op de omleiding van de opgegeven apparaten van een externe desktopclient naar de externe desktopserver.
 

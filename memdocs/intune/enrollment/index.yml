@@ -12,12 +12,12 @@ metadata:
   ms.author: dougeby
   manager: dougeby
   ms.date: 08/07/2019
-  ms.openlocfilehash: be5cae95460064287fa347d1ca42626ab75a2809
-  ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+  ms.openlocfilehash: 468bf56722f17fded75c18a722b15e5e55113eec
+  ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
   ms.translationtype: HT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 03/13/2020
-  ms.locfileid: "79333937"
+  ms.lasthandoff: 04/23/2020
+  ms.locfileid: "82077951"
 landingContent:
 - title: Meer informatie over inschrijving
   linkLists:
@@ -87,7 +87,7 @@ landingContent:
     links:
     - text: iOS-/iPadOS-inschrijving instellen
       url: ios-enroll.md
-    - text: iOS-/iPadOS-apparaten automatisch inschrijven met het Device Enrollment Program van Apple
+    - text: iOS-/iPadOS-apparaten automatisch inschrijven met Automated Device Enrollment van Apple
       url: device-enrollment-program-enroll-ios.md
     - text: Gebruikersinschrijving voor iOS/iPadOS en iPadOS instellen
       url: ios-user-enrollment.md
@@ -111,7 +111,7 @@ landingContent:
     links:
     - text: macOS-inschrijving instellen
       url: macos-enroll.md
-    - text: macOS-apparaten automatisch inschrijven met het Device Enrollment Program of Apple School Manager
+    - text: macOS-apparaten automatisch inschrijven met het Automated Device Enrollment of Apple School Manager
       url: device-enrollment-program-enroll-macos.md
     - text: Registratie van iOS-/iPadOS-apparaten instellen met Apple Configurator
       url: apple-configurator-enroll-ios.md

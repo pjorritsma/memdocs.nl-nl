@@ -17,12 +17,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f7322ca043db4f6c6f7b66221ba20a02ee505ba2
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: aaeca2e4dadf7ef28b55479fb83becfc3b206123
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79358296"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080008"
 ---
 # <a name="plan-communications"></a>De communicatie plannen
 
@@ -32,7 +32,7 @@ Download:  [Intune Adoption Kit](https://aka.ms/IntuneAdoptionKit)
 
 ## <a name="email-templates"></a>E-mail-sjablonen
 
-Het volgende e-mailcommunicatieplan wordt aangeraden. U kunt de tekst bewerken in overeenstemming met het besturingssysteem en de omgeving van uw gebruikers. We bieden u sjablonen aan die u kunt aanpassen voor uw communicatieplan:
+Het volgende e-mailcommunicatieplan wordt aangeraden. U kunt de tekst bewerken in overeenstemming met het besturingssysteem en de omgeving van uw gebruikers. Sjablonen voor u om uw communicatieplan aan te passen:
 
 - **E-mail 1**: informeer over de voordelen, verwachtingen en planning. Maak van de gelegenheid gebruik om te wijzen op eventuele andere nieuwe services waartoe gebruikers toegang zullen hebben op apparaten die met Intune worden beheerd.
 

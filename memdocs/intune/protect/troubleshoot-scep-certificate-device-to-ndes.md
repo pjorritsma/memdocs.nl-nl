@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 934e2283fec0cd68ea5b72f092fb6dcac6f3fe4c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 53f33b659e45720dc84b7c38ca54fec0e3768a60
+ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81379636"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82126088"
 ---
 # <a name="troubleshoot-device-to-ndes-server-communication-for-scep-certificate-profiles-in-microsoft-intune"></a>Los problemen op met de communicatie tussen een apparaat en de NDES-server voor SCEP-certificaatprofielen in Microsoft Intune
 
@@ -161,7 +161,7 @@ Verbindingen die lijken op het volgende voorbeeld, met de statuscode 500, geven 
 
 Gebruik de volgende stappen om de URL te testen die is opgegeven in het SCEP-certificaatprofiel.
 
-1. Bewerk in Intune uw SCEP-certificaatprofiel en kopieer de Server-URL. De URL moet lijken op *https://contoso.com/certsrv/mscep/msecp.dll* .
+1. Bewerk in Intune uw SCEP-certificaatprofiel en kopieer de Server-URL. De URL moet lijken op *https://contoso.com/certsrv/mscep/mscep.dll* .
 
 2. Open een webbrowser en blader naar de URL van de SCEP-server. Het resultaat moet zijn: **HTTP-fout 403.0 – Verboden**. Dit resultaat is een indicatie dat de URL correct werkt.
 

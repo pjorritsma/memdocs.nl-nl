@@ -1,0 +1,96 @@
+### YamlMime:Hub
+title: Documentatie voor Microsoft Endpoint Manager
+summary: Officiële productdocumentatie voor Microsoft Endpoint Manager
+metadata:
+  services: service
+  ms.service: microsoft-intune
+  ms.topic: hub-page
+  author: dougeby
+  ms.author: dougeby
+  manager: mtillman
+  ms.date: 04/20/2020
+  ms.openlocfilehash: b72bb3a86129b67622f1f22b4e78814d3dfee574
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: nl-NL
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741303"
+highlightedContent:
+  items:
+  - title: Overzicht van Microsoft Endpoint Manager
+    itemType: overview
+    url: endpoint-manager-overview.md
+  - title: Microsoft Endpoint Manager (productpagina)
+    itemType: get-started
+    url: https://www.microsoft.com/microsoft-365/microsoft-endpoint-manager
+  - title: 'Zelfstudie: Walkthrough voor Intune in Microsoft Endpoint Manager'
+    itemType: tutorial
+    url: ./intune/fundamentals/tutorial-walkthrough-endpoint-manager.md
+  - title: Uw externe personeel beveiligen
+    itemType: get-started
+    url: https://docs.microsoft.com/enterprise-mobility-security/remote-work/
+conceptualContent:
+  items:
+  - title: Microsoft Intune
+    links:
+    - url: ./intune/index.yml
+      itemType: overview
+      text: Documentatie voor Microsoft Intune
+    - url: ./intune/fundamentals/index.yml
+      itemType: overview
+      text: Intune plannen en instellen
+    - url: ./intune/enrollment/index.yml
+      itemType: overview
+      text: Apparaten inschrijven
+    - url: ./intune/remote-actions/index.yml
+      itemType: overview
+      text: Apparaten extern beheren
+    - url: ./intune/protect/index.yml
+      itemType: overview
+      text: Complianceregels maken voor gebruikers en apparaten
+    - url: ./intune/configuration/index.yml
+      itemType: overview
+      text: Apparaatfuncties en -instellingen beheren
+    - url: ./intune/apps/index.yml
+      itemType: concept
+      text: Apps beheren en beveiligen
+  - title: Microsoft Endpoint Configuration Manager
+    links:
+    - url: ./configmgr/index.yml
+      itemType: get-started
+      text: Documentatie voor Microsoft Endpoint Configuration Manager
+    - url: ./configmgr/comanage/index.yml
+      itemType: concept
+      text: Workloads voor apparaten beheren in Configuration Manager en Intune
+    - url: ./configmgr/desktop-analytics/index.yml
+      itemType: overview
+      text: Desktop Analytics gebruiken voor updategereedheid
+    - url: ./configmgr/core/index.yml
+      itemType: overview
+      text: Uw infrastructuur beheren
+    - url: ./configmgr/apps/index.yml
+      itemType: concept
+      text: Apps beheren
+    - url: ./configmgr/osd/index.yml
+      itemType: concept
+      text: Implementatie van besturingssystemen
+    - url: ./configmgr/sum/index.yml
+      itemType: concept
+      text: Software-updates
+    - url: ./configmgr/compliance/index.yml
+      itemType: concept
+      text: Configuratie en naleving van apparaten beheren
+    - url: ./configmgr/protect/index.yml
+      itemType: concept
+      text: Uw infrastructuur en gegevens beveiligen
+  - title: Windows Autopilot
+    links:
+    - url: https://docs.microsoft.com/windows/deployment/windows-autopilot/
+      itemType: concept
+      text: Documentatie voor Windows Autopilot
+    - url: /mem/intune/enrollment/enrollment-autopilot
+      itemType: how-to-guide
+      text: 'Intune: Windows-apparaten inschrijven met Windows Autopilot'
+    - url: ./configmgr/osd/deploy-use/windows-autopilot-for-existing-devices.md
+      itemType: how-to-guide
+      text: 'Configuration Manager: Windows Autopilot gebruiken voor bestaande apparaten'

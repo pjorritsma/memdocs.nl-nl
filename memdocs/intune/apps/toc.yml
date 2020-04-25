@@ -147,12 +147,12 @@
               href: apps-configure-chrome-android.md
         - name: Apps en boeken die zijn gekocht via het volume-aankoopprogramma
           items:
-            - name: VPP-apps en -boeken beheren
+            - name: Overzicht van het volume-aankoopprogramma
               href: vpp-apps.md
               displayName: vpp; volume purchased
-            - name: iOS VPP-apps
+            - name: iOS-apps die zijn gekocht via het volume-aankoopprogramma
               href: vpp-apps-ios.md
-            - name: Microsoft Store voor Bedrijven-apps
+            - name: Apps in de Microsoft Store voor Bedrijven
               href: windows-store-for-business.md
             - name: iOS eBooks
               href: vpp-ebooks-ios.md
@@ -206,6 +206,10 @@
           href: app-install-error-codes.md
         - name: Problemen met Mobile Application Management oplossen
           href: troubleshoot-mam.md
+        - name: App-logboeken voor beveiliging controleren
+          href: app-protection-policy-settings-log.md
+        - name: Problemen oplossen met implementatie van app-beveiligingsbeleid
+          href: troubleshoot-app-protection-policy-deployment.md
 - name: Verwijzing
   items:
     - name: Apps beveiligen met Intune App SDK

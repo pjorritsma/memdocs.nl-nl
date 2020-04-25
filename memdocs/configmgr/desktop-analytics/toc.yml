@@ -1,0 +1,60 @@
+- name: Documentatie voor Desktop Analytics
+  href: index.yml
+- name: Overzicht
+  items:
+    - name: Wat is Desktop Analytics?
+      href: overview.md
+    - name: Wat is er nieuw?
+      href: whats-new.md
+- name: Zelfstudies
+  items:
+    - name: Testfase Windows 10
+      href: tutorial-windows10.md
+- name: Concepten
+  items:
+    - name: Implementatieplannen
+      href: about-deployment-plans.md
+    - name: Activa
+      href: about-assets.md
+    - name: Updates aan kwaliteit en functies
+      href: about-updates.md
+    - name: Evaluatie van de compatibiliteit
+      href: compat-assessment.md
+    - name: Status bewaken
+      href: health-status-monitoring.md
+- name: Instructiegidsen
+  items:
+    - name: Desktop Analytics instellen
+      href: set-up.md
+    - name: Verbinding maken met Configuration Manager
+      href: connect-configmgr.md
+    - name: Apparaten inschrijven
+      href: enroll-devices.md
+    - name: Implementatieplannen maken
+      href: create-deployment-plans.md
+    - name: Implementeren voor testdoeleinden
+      href: deploy-pilot.md
+    - name: Implementeren voor productie
+      href: deploy-prod.md
+    - name: Uw account opnieuw instellen
+      href: account-reset.md
+    - name: Uw account sluiten
+      href: account-close.md
+- name: Verwijzing
+  items:
+    - name: Gegevens delen inschakelen
+      href: enable-data-sharing.md
+    - name: Privacy
+      href: privacy.md
+    - name: Problemen oplossen
+      href: troubleshooting.md
+    - name: Logboekverzamelaar
+      href: log-collector.md
+    - name: Status van de verbinding bewaken
+      href: monitor-connection-health.md
+    - name: Instellingen voor groepsbeleid
+      href: group-policy-settings.md
+    - name: Veelgestelde vragen
+      href: faq.md
+    - name: Ondersteuning krijgen
+      href: get-support.md

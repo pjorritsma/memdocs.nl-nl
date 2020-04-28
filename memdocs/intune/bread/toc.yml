@@ -6,31 +6,35 @@
       tocHref: /enterprise-mobility-security/
       topicHref: /enterprise-mobility-security/
       items:
-        - name: Intune
-          tocHref: /intune/
-          topicHref: /intune/
+        - name: Microsoft Endpoint Manager
+          tocHref: /mem/
+          topicHref: /mem/
           items:
-            - name: Help voor Intune-gebruikers
-              tocHref: /intune/user-help/
-              topicHref: /intune/user-help/use-managed-devices-to-get-work-done
-            - name: Apps
-              tocHref: /intune/apps/
-              topicHref: /intune/apps/
-            - name: Basisbeginselen
-              tocHref: /intune/fundamentals/
-              topicHref: /intune/fundamentals/
-            - name: Inschrijving
-              tocHref: /intune/enrollment/
-              topicHref: /intune/enrollment/
-            - name: Externe acties
-              tocHref: /intune/remote-actions/
-              topicHref: /intune/remote-actions/
-            - name: Configuration
-              tocHref: /intune/configuration/
-              topicHref: /intune/configuration/
-            - name: Beveiligen
-              tocHref: /intune/protect/
-              topicHref: /intune/protect/
-            - name: Ontwikkelaar
-              tocHref: /intune/developer/
-              topicHref: /intune/developer/
+            - name: Intune
+              tocHref: /mem/intune/
+              topicHref: /mem/intune/
+              items:
+                - name: Help voor Intune-gebruikers
+                  tocHref: /mem/intune/user-help/
+                  topicHref: /mem/intune/user-help/use-managed-devices-to-get-work-done
+                - name: Apps
+                  tocHref: /mem/intune/apps/
+                  topicHref: /mem/intune/apps/
+                - name: Basisprincipes
+                  tocHref: /mem/intune/fundamentals/
+                  topicHref: /mem/intune/fundamentals/
+                - name: Inschrijving
+                  tocHref: /mem/intune/enrollment/
+                  topicHref: /mem/intune/enrollment/
+                - name: Externe acties
+                  tocHref: /mem/intune/remote-actions/
+                  topicHref: /mem/intune/remote-actions/
+                - name: Configuration
+                  tocHref: /mem/intune/configuration/
+                  topicHref: /mem/intune/configuration/
+                - name: Beveiligen
+                  tocHref: /mem/intune/protect/
+                  topicHref: /mem/intune/protect/
+                - name: Ontwikkelaar
+                  tocHref: /mem/intune/developer/
+                  topicHref: /mem/intune/developer/

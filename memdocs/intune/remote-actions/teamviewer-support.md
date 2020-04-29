@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9dc309cb373d9f06fd68810531d5634eb4c0b7d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 1a18895ecfcb17567170dfae8f07814020a60df1
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325043"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81726009"
 ---
 # <a name="use-teamviewer-to-remotely-administer-intune-devices"></a>TeamViewer gebruiken voor het extern beheren van Intune-apparaten
 
@@ -67,7 +67,7 @@ Nadat de connector is geconfigureerd, kunt u een apparaat op afstand beheren. Vo
 Wanneer u een externe sessie start, wordt er een vlag voor meldingen op het pictogram van de bedrijfsportal-app op het apparaat van de gebruiker weergegeven. Er wordt ook een melding weergegeven wanneer de app wordt geopend. Gebruikers kunnen het verzoek om hulp op afstand dan accepteren.
 
 > [!NOTE]
-> Voor Windows-apparaten die zijn ingeschreven met behulp van methoden zonder tussenkomst van gebruikers, zoals DEM en WCD, wordt de TeamViewer-melding niet in de bedrijfsportal-app weergegeven. In deze scenario's is het raadzaam de sessie te genereren via de TeamViewer-portal.
+> Voor Windows-apparaten die zijn ingeschreven met behulp van methoden zonder tussenkomst van gebruikers, zoals de apparaatinschrijvingsmanager (DEM) en Windows Configuration Designer (WCD), wordt de TeamViewer-melding niet in de bedrijfsportal-app weergegeven. In deze scenario's is het raadzaam de sessie te genereren via de TeamViewer-portal.
 
 In TeamViewer kunt u een reeks acties op het apparaat uitvoeren, zoals het overnemen van het beheer van het apparaat. Zie de [TeamViewer-richtlijnen](https://www.teamviewer.com/support/documents/) voor meer informatie over wat u kunt doen.
 

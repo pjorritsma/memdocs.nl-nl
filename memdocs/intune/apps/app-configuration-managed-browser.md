@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b62a717217daaffeca5480ac55d0ccef3b10136
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 47b6f624ba5c12cd68322bde5c1f85ad7f0a6430
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323394"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "80862836"
 ---
 # <a name="manage-web-access-using-a-microsoft-intune-policy-protected-browser"></a>Webtoegang beheren via een met Microsoft Intune-beleid beveiligde browser
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Met behulp van een browser die wordt beveiligd met Intune-beleid (Microsoft Edge of Intune Managed Browser), kunt u ervoor zorgen dat de toegang tot zakelijke websites altijd is beveiligd.  Als u deze configureert met Intune, bieden beveiligde browsers de volgende voordelen:
+Met behulp van een browser die wordt beveiligd met Intune-beleid (bijvoorbeeld Microsoft Edge), kunt u ervoor zorgen dat de toegang tot zakelijke websites altijd is beveiligd. Als u deze configureert met Intune, bieden beveiligde browsers de volgende voordelen:
 
 - Beleid voor toepassingsbeveiliging
 - Voorwaardelijke toegang
@@ -38,11 +38,11 @@ Met behulp van een browser die wordt beveiligd met Intune-beleid (Microsoft Edge
 - Proxyintegratie met Azure-toepassingen
 
 > [!IMPORTANT]
-> De Intune Managed Browser wordt buiten gebruik gesteld. Gebruik Microsoft Edge als uw beveiligde Intune-browser. 
+> De Intune Managed Browser is buiten gebruik gesteld. Gebruik [Microsoft Edge](../apps/manage-microsoft-edge.md) als uw beveiligde Intune-browser. 
 
 ## <a name="microsoft-edge-support"></a>Microsoft Edge-ondersteuning
 
-U kunt Microsoft Edge gebruiken voor zakelijke scenario’s op iOS-/iPadOS- en Android-apparaten. Microsoft Edge biedt ondersteuning voor dezelfde beheerscenario's als de Intune Managed Browser met de toevoeging van verbeteringen in de eindgebruikerservaring. Op basis van Intune-beleid zijn onder andere de volgende zakelijke functies van Microsoft Edge beschikbaar:
+U kunt Microsoft Edge gebruiken voor zakelijke scenario’s op iOS-/iPadOS- en Android-apparaten. Op basis van Intune-beleid zijn onder andere de volgende zakelijke functies van Microsoft Edge beschikbaar:
 
 - **Dual-Identity**. Gebruikers kunnen zowel een werkaccount als een persoonlijk account maken om mee te browsen. Er is sprake van een volledige scheiding tussen de twee identiteiten. Dit is vergelijkbaar met de architectuur en ervaring in Office 365 en Outlook. Intune-beheerders kunnen het gewenste beleid instellen voor beveiligde browsersessies binnen het werkaccount. 
 - **Integratie van beveiligingsbeleid voor Intune-apps**. Beheerders kunnen nu app-beveiligingsbeleid instellen voor Microsoft Edge, inclusief beheer over knippen, kopiëren en plakken, waardoor er geen schermopnamen kunnen worden vastgelegd. Ook kunnen ze ervoor zorgen dat door de gebruiker geselecteerde koppelingen alleen kunnen worden geopend in andere beheerde apps.
@@ -53,7 +53,7 @@ Beveiligingsbeleid van Microsoft Intune voor Microsoft Edge helpt u om de gegeve
 
 ## <a name="getting-started"></a>Aan de slag
 
-Microsoft Edge en de Intune Managed Browser zijn webbrowser-apps die u en uw eindgebruikers kunnen downloaden uit openbare app-stores en in uw organisatie kunnen gebruiken. 
+Microsoft Edge is een webbrowser-app die u en uw eindgebruikers kunnen downloaden uit openbare app stores en die in uw organisatie kan worden gebruikt. 
 
 Besturingssysteemvereisten voor browserbeleid:
 - Android 4 en hoger of
@@ -189,7 +189,7 @@ Gebruik de bovenstaande procedure om een app-configuratie voor Microsoft Edge te
 
 ## <a name="how-to-configure-application-proxy-settings-for-protected-browsers"></a>Application Proxy-instellingen configureren voor beveiligde browsers
 
-Microsoft Edge en Intune Managed Browser en de [Azure AD-toepassingsproxy]( https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) kunnen samen worden gebruikt om de volgende scenario's te ondersteunen voor gebruikers van iOS-/iPadOS- en Android-apparaten:
+Microsoft Edge en de [Azure AD-toepassingsproxy]( https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) kunnen samen worden gebruikt om de volgende scenario's te ondersteunen voor gebruikers van iOS-/iPadOS- en Android-apparaten:
 
 - Een gebruiker downloadt de Microsoft Outlook-app en meldt zich hierbij aan. Het beleid voor app-beveiliging van Intune wordt automatisch toegepast. Dit houdt in dat opgeslagen gegevens worden versleuteld en dat wordt voorkomen dat de gebruiker bestanden van het bedrijf overbrengt naar niet-beheerde apps of locaties op het apparaat. Wanneer de gebruiker vervolgens in Outlook klikt op een koppeling naar een intranetsite, kunt u instellen dat de koppeling alleen kan worden geopend in een beveiligde browser. De beveiligde browser herkent dat deze intranetsite via de toepassingsproxy beschikbaar is gesteld aan de gebruiker. De gebruiker wordt automatisch omgeleid via de toepassingsproxy om zich bij de betreffende meervoudige verificatie en voorwaardelijke toegang te verifiëren voordat de intranetsite wordt bereikt. Deze site, die eerder niet bereikbaar was omdat de gebruiker extern was, is nu toegankelijk en de koppeling in Outlook werkt zoals verwacht.
 - Een externe gebruiker opent de beveiligde browser en gaat naar een intranetsite via de interne URL. De beveiligde browser herkent dat deze intranetsite via de toepassingsproxy beschikbaar is gesteld aan de gebruiker. De gebruiker wordt automatisch omgeleid via de toepassingsproxy om zich bij de betreffende meervoudige verificatie en voorwaardelijke toegang te verifiëren voordat de intranetsite wordt bereikt. Deze site, die eerder niet bereikbaar was omdat de gebruiker extern was, is nu toegankelijk.
@@ -199,18 +199,17 @@ Microsoft Edge en Intune Managed Browser en de [Azure AD-toepassingsproxy]( http
 - Stel de interne toepassingen in via de toepassingsproxy van Azure AD.
   - Raadpleeg [deze documentatie](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy) voor het configureren van de toepassingsproxy en het publiceren van toepassingen. 
   - [Gebruikers moeten zijn toegewezen](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-add-on-premises-application#add-a-user-for-testing) aan de ondernemingstoepassing waarvoor de omleiding moet plaatsvinden. Dit moet ook gebeuren als de toepassing is ingesteld op de Doorvoermodus voor Verificatie vooraf, en als de vereiste voor gebruikerstoewijzing is uitgeschakeld in de instellingen voor de toepassingsproxy.
-- U moet minimaal versie 1.2.0 van de Managed Browser-app gebruiken.
-- Er is een [beleid voor app-beveiliging van Intune](app-protection-policy.md) toegewezen aan de Managed Browser- of Microsoft Edge-app.
+- Er moet een [beleid voor app-beveiliging van Intune](app-protection-policy.md) worden toegewezen aan de Microsoft Edge-app.
 
     > [!NOTE]
-    > Het kan tot 24 uur duren voordat bijgewerkte omleidingsgegevens voor de toepassingsproxy worden doorgevoerd in Managed Browser en Microsoft Edge.
+    > Het kan tot 24 uur duren voordat bijgewerkte omleidingsgegevens voor de toepassingsproxy worden doorgevoerd in Microsoft Edge.
 
 
 #### <a name="step-1-enable-automatic-redirection-to-a-protected-browser-from-outlook"></a>Stap 1: schakel automatische omleiding naar een beveiligde browser vanuit Outlook in
 Outlook moet zijn geconfigureerd met een beleid voor app-beveiliging waarmee de instelling **Webinhoud beperken voor weergave in de Managed Browser** beschikbaar komt.
 
 #### <a name="step-2-assign-an-app-configuration-policy-assigned-for-the-protected-browser"></a>Stap 2: wijs een app-configuratiebeleid toe voor de beveiligde browser
-Met deze procedure wordt de Managed Browser- of Microsoft Edge-app geconfigureerd voor omleiding via een proxy. 
+Met deze procedure wordt de Microsoft Edge-app geconfigureerd voor omleiding via een proxy. 
 
 Open het tabblad **Edge** in de configuratie-instellingen voor het beleid en selecteer **Inschakelen** voor de omleidingswaarde van de toepassingsproxy. Als u deze instelling inschakelt, krijgen gebruikers toegang tot zakelijke koppelingen en on-premises web-apps die zijn gepubliceerd via de Azure-toepassingsproxy.
 
@@ -223,7 +222,7 @@ Met deze instelling kunt u de startpagina configureren die gebruikers zien wanne
 - Het snelkoppelingspictogram naar de startpagina verschijnt als pictogram onder het besturingselement voor zoeken.  Het kan niet worden bewerkt of verwijderd.
 - De snelkoppeling naar de startpagina geeft de naam van uw organisatie weer om deze te onderscheiden.  Deze verschijnt altijd als het eerste pictogram.
 
-Geef met de procedure voor het maken van een app-configuratie voor Microsoft Edge of Managed Browser het volgende sleutel-waardepaar op:
+Geef met behulp van de procedure voor het maken van een app-configuratie voor Microsoft Edge het volgende sleutel- en waardepaar op:
 
 |                                Sleutel                                |                                                           Waarde                                                            |
 |-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
@@ -237,7 +236,7 @@ Met deze instelling kunt u een set bladwijzers configureren die beschikbaar zijn
 - Deze bladwijzers worden bovenaan de lijst weergegeven. Bladwijzers die gebruikers maken, worden onder deze bladwijzers weergegeven.
 - Als u App Proxy-omleiding hebt ingeschakeld, kunt u App Proxy-webapps toevoegen met behulp van hun interne of externe URL.
 
-Geef met de procedure voor het maken van een app-configuratie voor Microsoft Edge of Managed Browser het volgende sleutel-waardepaar op:
+Geef met behulp van de procedure voor het maken van een app-configuratie voor Microsoft Edge het volgende sleutel- en waardepaar op:
 
 |                                Sleutel                                 |                                                                                                                                                                                                                                                         Waarde                                                                                                                                                                                                                                                          |
 |--------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -245,7 +244,7 @@ Geef met de procedure voor het maken van een app-configuratie voor Microsoft Edg
 
 ## <a name="how-to-specify-allowed-and-blocked-urls-for-a-protected-browser"></a>Toegestane en geblokkeerde URL's voor een beveiligde browser opgeven
 
-Geef met de procedure voor het maken van een app-configuratie voor Microsoft Edge of Managed Browser het volgende sleutel-waardepaar op:
+Geef met behulp van de procedure voor het maken van een app-configuratie voor Microsoft Edge het volgende sleutel- en waardepaar op:
 
 |Sleutel|Waarde|
 |-|-|
@@ -311,13 +310,13 @@ De hoeksteen van de zakelijke Microsoft Edge-versie voor mobiel is het model voo
 
 Een van de voordelen van dit model is dat wanneer gebruikers een koppeling willen openen (zoals een nieuwsartikel, enzovoort) naar een site die niet is toegestaan in uw organisatie, ze dit in hun persoonlijke context wél kunnen doen, omdat deze volledig gescheiden is van de werkcontext. Deze tijdelijke overgangen zijn standaard ingeschakeld. 
 
-Geef met de procedure voor het maken van een app-configuratie voor Microsoft Edge of Managed Browser het volgende sleutel-waardepaar op:
+Geef met behulp van de procedure voor het maken van een app-configuratie voor Microsoft Edge het volgende sleutel- en waardepaar op:
 
 | Sleutel                                                                | Waarde                                                 |
 |--------------------------------------------------------------------|-------------------------------------------------------|
 | **com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock** | Bij **Onwaar** zijn deze tijdelijke overgangen geblokkeerd |
 
-## <a name="how-to-access-to-managed-app-logs-using-the-managed-browser-on-ios"></a>Toegang tot logboeken van beheerde apps met Managed Browser in iOS
+## <a name="how-to-access-managed-app-logs-using-the-managed-browser-on-ios"></a>Toegang tot logboeken van beheerde apps met Managed Browser in iOS
 
 Eindgebruikers bij wie Managed Browser is geïnstalleerd op hun iOS-/iPadOS-apparaat, kunnen de beheerstatus van alle gepubliceerde Microsoft-apps bekijken. Ze kunnen logboeken versturen om problemen met hun beheerde iOS-/iPadOS-apps op te lossen.
 

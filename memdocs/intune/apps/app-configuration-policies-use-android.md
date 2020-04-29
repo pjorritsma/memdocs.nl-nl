@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/07/2020
+ms.date: 04/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e5a9db094163bcf4f987b881c83d98be655acfd
-ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
+ms.openlocfilehash: f61f0dd7f0f3b343b8f68de0b20b06d0f69212ac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80808084"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81397778"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>App-configuratiebeleidsregels toevoegen voor beheerde Android Enterprise-apparaten
 
@@ -47,7 +47,7 @@ App-configuratiebeleidsregels in Microsoft Intune leveren instellingen voor behe
 8. Klik op **Toevoegen** om het deelvenster **Machtigingen toevoegen** weer te geven.
 9. Klik op de machtigingen die u wilt overschrijven. De verleende machtigingen overschrijven het beleid 'Standaardapp-machtigingen' voor de geselecteerde apps.
 10. Stel de **Machtigingsstatus** in voor elke machtiging. U kunt kiezen uit **Vragen**, **Automatisch verlenen** of **Automatisch weigeren**. Zie [Android Enterprise-instellingen om te markeren of apparaten wel of niet conform zijn met behulp van Intune](../protect/compliance-policy-create-android-for-work.md) voor meer informatie over machtigingen.
-11. Als de beheerde app ondersteuning biedt voor configuratie-instellingen, selecteert u in de vervolgkeuzelijst de optie **Indeling configuratie-instellingen**. Selecteer een van de volgende methoden om configuratiegegevens toe te voegen:
+11. Als de beheerde app ondersteuning biedt voor configuratie-instellingen, is de vervolgkeuzelijst **Indeling configuratie-instellingen** zichtbaar. Selecteer een van de volgende methoden om configuratiegegevens toe te voegen:
     - **Configuration Designer gebruiken**
     - **JSON-gegevens invoeren**<br><br>
     Zie [Configuration Designer gebruiken](#use-the-configuration-designer) voor meer informatie over het gebruik van Configuration Designer. Zie [JSON-gegevens invoeren](#enter-json-data) voor meer informatie over het invoeren van XML-gegevens.

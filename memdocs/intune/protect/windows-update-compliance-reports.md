@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/25/2019
+ms.date: 04/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,16 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ad666f21b2ff271b99675486835357dfd071773
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 157c61e9f145295f5ef728d12385fa44697a88e2
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326503"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81725642"
 ---
 # <a name="intune-compliance-reports-for-updates"></a>Intune-nalevingsrapporten voor updates
 
-Wanneer u Intune gebruikt om Windows-updates te implementeren naar Windows 10-apparaten, bekijkt u details over updatenaleving met behulp van Intune of de gratis oplossing *Updatenaleving*, wat deel uitmaakt van de Microsoft Operations Management Suite (OMS).
+Wanneer u Intune gebruikt om Windows-updates te implementeren op Windows 10-apparaten, bekijkt u details over updatenaleving met behulp van Intune of de gratis oplossing *Updatenaleving*. Updatenaleving is onderdeel van de Microsoft Operations Management Suite (OMS).
 
 ## <a name="use-intune"></a>Intune gebruiken
 
@@ -47,13 +47,13 @@ U kunt als volgt een beleidsrapport weergeven met de implementatiestatus voor de
 
 ## <a name="use-update-compliance"></a>Updatenaleving gebruiken
 
-Met de Windows Analytics-oplossing [Updatenaleving](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor) kunt u de Windows 10 update-implementaties bewaken. Updatenaleving wordt u aangeboden via Azure Portal en is gratis beschikbaar voor apparaten die aan de [voorwaarden](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started#update-compliance-prerequisites) voldoen.  
+Met [Updatenaleving](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor) kunt u de Windows 10-update-implementaties bewaken. Updatenaleving wordt u aangeboden via Azure Portal en is gratis beschikbaar voor apparaten die aan de [voorwaarden](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started#update-compliance-prerequisites) voldoen.  
 
 Wanneer u deze oplossing gebruikt, kunt u een commerciële id implementeren op elk van uw door Intune beheerde Windows 10-apparaten waarvoor u over de naleving van updates wilt rapporteren.  
 
 In Intune worden de OMA-URI-instellingen van een aangepast beleid gebruikt om de commerciële id te configureren. Zie [Aangepaste instellingen gebruiken voor Windows 10-apparaten in Intune](../configuration/custom-settings-windows-10.md).
 
-Het pad voor de OMA-URI (hoofdlettergevoelig) voor het configureren van de commerciële id is: *./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID*  
+Het pad voor de OMA-URI (hoofdlettergevoelig) voor het configureren van de commerciële id is: *./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID*
 
 U kunt bijvoorbeeld de volgende waarden gebruiken in **OMA-URI-instelling toevoegen of bewerken**:
 

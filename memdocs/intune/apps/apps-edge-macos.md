@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 002d8e8826fbc1420bf9deca6fb88a3468e8a2ad
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: c0d9267f989988ae33d56696d424de56a649bca2
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324514"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "80900470"
 ---
 # <a name="add-microsoft-edge-to-macos-devices-using-microsoft-intune"></a>Microsoft Edge toevoegen aan macOS-apparaten met behulp van Microsoft Intune
 
 Voordat u apps kunt implementeren, configureren, bewaken of beveiligen, moet u deze aan Intune toevoegen. Een van de beschikbare [app-typen](apps-add.md#app-types-in-microsoft-intune) is Microsoft Edge *versie 77 en later*. Door dit app-type in Intune te selecteren, kunt u Microsoft Edge *versie 77 en later* toewijzen aan en installeren op door u beheerde macOS-apparaten. Met dit app-type kunt u Microsoft Edge eenvoudig toewijzen aan macOS-apparaten zonder dat u gebruik hoeft te maken van de macOS App Wrapping Tool. Deze apps worden geleverd met Microsoft AutoUpdate (MAU) om de apps veiliger te maken en up-to-date te houden.
 
 > [!IMPORTANT]
-> Dit app-type is in **openbare preview** en biedt Dev- en Beta-kanalen voor macOS. De implementatie is alleen in het Engels (EN) beschikbaar, maar eindgebruikers kunnen de weergavetaal wijzigen in de browser via **Instellingen** > **Talen**. 
+> Dit app-type is biedt Dev- en Beta-kanalen voor macOS. De implementatie is alleen in het Engels (EN) beschikbaar, maar eindgebruikers kunnen de weergavetaal wijzigen in de browser via **Instellingen** > **Talen**. 
 
 > [!NOTE]
 > Microsoft Edge *versie 77 en later* is ook beschikbaar voor Windows 10.

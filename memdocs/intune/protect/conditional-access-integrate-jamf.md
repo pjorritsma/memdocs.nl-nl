@@ -6,28 +6,32 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 04/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 4b6dcbcc-4661-4463-9a36-698d673502c6
-ms.reviewer: jinyoon
+ms.reviewer: arnab
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0a9f4d9195c68664f42570746ade6d924c8da62
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: e5b568a90d4077c32a88044beea746907613eb0e
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323010"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81525730"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Jamf Pro integreren met Intune in verband met nalevingsbeleid
 
-Als uw organisatie [Jamf Pro](https://www.jamf.com) gebruikt voor het beheren van de macOS-apparaten, kunt u Microsoft Intune-nalevingsbeleid met voorwaardelijke toegang tot Azure Active Directory (Azure AD) gebruiken om ervoor te zorgen dat apparaten in uw organisatie compatibel zijn voordat ze toegang tot bedrijfsbronnen krijgen. Dit artikel is bedoeld om te helpen bij het configureren van de Jamf-integratie met Intune.
+Als uw organisatie [Jamf Pro](https://www.jamf.com) gebruikt voor het beheren van de macOS-apparaten, kunt u Microsoft Intune-nalevingsbeleid met voorwaardelijke toegang tot Azure Active Directory (Azure AD) gebruiken om ervoor te zorgen dat apparaten in uw organisatie compatibel zijn voordat ze toegang tot bedrijfsbronnen krijgen. Als u Jamf Pro wilt integreren met Intune, hebt u twee opties:
+
+- **Integratie handmatig configureren**: gebruik de informatie in dit artikel om de Jamf-integratie met Intune handmatig te configureren.
+- **De Jamf-cloudconnector gebruiken** (*aanbevolen*): gebruik de informatie in [De Jamf-cloudconnector gebruiken met Microsoft Intune](../protect/conditional-access-jamf-cloud-connector.md) om de Jamf-cloudconnector te installeren voor het integreren van Jamf Pro met Microsoft Intune. Met de cloudconnector worden veel van de stappen geautomatiseerd die nodig zijn wanneer u de integratie handmatig configureert.
+
 
 Wanneer u Jamf Pro integreert met Intune, kunt u de inventarisgegevens van macOS-apparaten synchroniseren met Intune via Azure AD. De inventarisgegevens worden vervolgens door de nalevingsengine van Intune geanalyseerd en verwerkt tot een rapport. De analyse van Intune wordt gecombineerd met informatie over de Azure AD-identiteit van de gebruiker van het apparaat om beleid voor voorwaardelijke toegang af te dwingen. Apparaten die compatibel zijn met het beleid voor voorwaardelijke toegang, kunnen toegang krijgen tot beveiligde bedrijfsbronnen.
 
@@ -154,7 +158,7 @@ Nadat u de integratie tussen Intune en Jamf hebt geconfigureerd, moet u [nalevin
 
 ## <a name="disconnect-jamf-pro-and-intune"></a>Verbinding tussen Jamf Pro en Intune verbreken
 
-Als u Jamf Pro niet meer gebruikt om Macs in uw organisatie te beheren en wilt dat gebruikers worden beheerd door Intune, moet u de verbinding tussen Jamf Pro en Intune verwijderen. Verwijder de verbinding met behulp van de Jamf Pro-console.
+Als u de integratie van Jamf Pro met Intune moet verwijderen, gebruikt u de volgende stappen om de verbinding uit de Jamf Pro-console te verwijderen. Deze informatie is van toepassing op zowel de handmatige geconfigureerde integratie als de integratie via de cloudconnector.
 
 1. Ga in Jamf Pro naar **Global Management** > **Conditional Access**. Selecteer op het tabblad **macOS Intune Integration** de optie **Edit**.
 

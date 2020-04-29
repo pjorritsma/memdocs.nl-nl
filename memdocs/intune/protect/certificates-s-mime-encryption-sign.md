@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/10/2018
+ms.date: 04/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b4965f29144131895660796bc3282ba46d6b8101
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b93e850e7a38feb7dd5347670279f6d85b92455b
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79353603"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81725652"
 ---
 # <a name="smime-overview-to-sign-and-encrypt-email-in-intune"></a>S/MIME-overzicht voor het ondertekenen en versleutelen van e-mails in Intune
 
@@ -46,7 +46,7 @@ Als u handtekeningcertificaten wilt gebruiken, maakt u een sjabloon op de certif
 
 Voor het ondertekenen van certificaten in Intune wordt gebruik gemaakt van PKCS-certificaten. In [PKCS-certificaten configureren en gebruiken](certficates-pfx-configure.md) wordt beschreven hoe u PKCS-certificaten in uw Intune-omgeving implementeert en gebruikt. Deze stappen omvatten:
 
-- De Microsoft Intune-certificaatconnector downloaden en installeren ter ondersteuning van PKCS-certificaataanvragen.
+- De Microsoft Intune-certificaatconnector downloaden en installeren ter ondersteuning van PKCS-certificaataanvragen. De connector heeft dezelfde netwerkvereisten als [beheerde apparaten](../fundamentals/intune-endpoints.md#access-for-managed-devices).
 - Een profiel voor een vertrouwd basiscertificaat maken voor uw apparaten. Deze stap omvat het gebruik van vertrouwde basis- en tussencertificaten voor uw certificeringsinstantie en de implementatie van het profiel op apparaten.
 - Een PKCS-certificaatprofiel maken met behulp van de certificaatsjabloon die u hebt gemaakt. Met dit profiel zorgt u voor ondertekening van certificaten op apparaten en implementeert u het PKCS-certificaatprofiel op apparaten.
 

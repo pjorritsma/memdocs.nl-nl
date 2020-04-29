@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 3/13/2020
+ms.date: 04/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,22 +18,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba902cca39db44c20c79ae7b960b13966c1a09d9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 8b7ef62056fc85f7584d0d7fed3eab646d199476
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323092"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81525667"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Nalevingsbeleid afdwingen op Macs die door Jamf Pro worden beheerd
 
-Wanneer u [Jamf Pro integreert met Intune](conditional-access-integrate-jamf.md), kunt u beleid voor voorwaardelijke toegang gebruiken om naleving op uw Mac-apparaten af te dwingen met de vereisten van uw organisatie.  Dit artikel is bedoeld om u te helpen bij de volgende taken:  
+Wanneer u Jamf Pro integreert met Intune, kunt u beleid voor voorwaardelijke toegang gebruiken om naleving op uw Mac-apparaten af te dwingen met de vereisten van uw organisatie. Dit artikel is bedoeld om u te helpen bij de volgende taken:  
 
 - Beleid voor voorwaardelijke toegang maken.
 - Jamf Pro configureren voor implementatie van de Intune-bedrijfsportal-app op apparaten die u beheert met Jamf.
 - Apparaten configureren voor registratie bij Azure AD wanneer de gebruiker zich aanmeldt bij de Bedrijfsportal-app die ze starten vanuit de selfservice-app van Jamf. Met apparaatregistratie wordt een identiteit in Azure AD gemaakt waarmee het apparaat kan worden geëvalueerd met beleidsregels voor voorwaardelijke toegang om toegang te krijgen tot bedrijfsbronnen.  
  
 Voor de procedures in dit artikel is toegang vereist tot de Intune-console en de Jamf Pro-console.
+Intune ondersteunt twee methoden om Jamf Pro te integreren, die u afzonderlijk kunt configureren van de procedures in dit artikel:
+
+- Aanbevolen: [De Jamf-cloudconnector gebruiken om Jamf Pro te integreren met Intune](conditional-access-jamf-cloud-connector.md)
+- [De integratie van Jamf Pro met Intune handmatig configureren](conditional-access-integrate-jamf.md)
 
 ## <a name="set-up-device-compliance-policies-in-intune"></a>Nalevingsbeleid voor apparaten in Intune instellen
 

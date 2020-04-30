@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d768859d65fff18d6ce94a26b48bb28f57417af6
-ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
+ms.openlocfilehash: 8830d0c18bb4ef257abcffd75d001b9d8af5f502
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80808079"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81220580"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices"></a>Intune-inschrijving van volledig beheerde Android Enterprise-apparaten instellen 
 
@@ -60,7 +60,7 @@ Volg deze stappen om het beheer van volledig beheerde Android Enterprise-apparat
 2. Onder **Allow users to enroll corporate-owned user devices** (Gebruikers toestaan apparaten in bedrijfseigendom in te schrijven) kiest u **Ja**.
 
 > [!NOTE]
-> Als u een Azure AD-beleid voor voorwaardelijke toegang hebt gedefinieerd dat gebruikmaakt van de regel *vereisen dat een apparaat moet worden gemarkeerd als compatibel* en dat geldt voor **alle cloud-apps**, **Android** en **browsers**, moet u de cloud-app van **Microsoft Intune** uitsluiten van dit beleid. Dit komt omdat bij Android-installaties gebruik wordt gemaakt van een Chrome-tabblad om de gebruikers bij de inschrijving te verifiëren. Zie [Documentatie voor voorwaardelijke toegang van Azure AD](https://docs.microsoft.com/azure/active-directory/conditional-access/) voor meer informatie.
+> Als u beleid voor voorwaardelijke toegang voor Azure AD hebt gedefinieerd waarin gebruik wordt gemaakt van het toekenningsbesturingselement *Vereisen dat een apparaat moet worden gemarkeerd als compatibel* of van blokkeringsbeleid dat geldt voor **Alle cloud-apps**, **Android** en **Browsers**, moet u de cloud-app **Microsoft Intune** uitsluiten van dit beleid. Dit is nodig omdat bij Android-installaties gebruik wordt gemaakt van een Chrome-tabblad om de gebruikers bij de inschrijving te verifiëren. Zie [Documentatie voor voorwaardelijke toegang voor Azure AD](https://docs.microsoft.com/azure/active-directory/conditional-access/) voor meer informatie.
 
 Wanneer deze instelling is ingesteld op **Ja**, ontvangt u een inschrijvingstoken (een willekeurige tekenreeks) en een QR-code voor uw Intune-tenant. Deze inschrijvingstoken is geldig voor alle gebruikers en verloopt niet. Afhankelijk van het Android-besturingssysteem en de versie van het apparaat kunt u het token of de QR-code gebruiken om het apparaat in te schrijven.
 

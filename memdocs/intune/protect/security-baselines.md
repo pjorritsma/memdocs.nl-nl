@@ -5,23 +5,23 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 04/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: shpate
+ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 618ed802d33f2c50a567f1e18da4689855bbf016
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: faf117f3eedbfe7527606d7a0942cab644c700cb
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551680"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81615665"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Beveiligingsbasislijnen gebruiken om Windows 10-apparaten te gebruiken in Intune
 
@@ -46,13 +46,34 @@ Met beveiligingsbasislijnen kunt u een veilige end-to-end-werkstroom inrichten v
 
 [Windows-beveiligingsbasislijnen](https://docs.microsoft.com/windows/security/threat-protection/windows-security-baselines) is een goede bron voor meer informatie over deze functie. [Mobile Device Management](https://docs.microsoft.com/windows/client-management/mdm/) (MDM) is een goede bron meer informatie over MDM en wat u op Windows-apparaten kunt doen.
 
+## <a name="available-security-baselines"></a>Beschikbare beveiligingsbasislijnen
+
+De volgende beveiligingsbasislijninstanties zijn beschikbaar voor gebruik met Intune. Gebruik de koppelingen om de instellingen weer te geven voor de meest recente instantie van elke basislijn.
+
+- **MDM-beveiligingsbasislijn**
+  - [MDM-beveiligingsbasislijn voor mei 2019](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)
+  - [Voorbeeld: MDM-basislijn voor beveiliging voor oktober 2018](security-baseline-settings-mdm-all.md?pivots=mdm-preview)
+
+- **Microsoft Defender ATP-basislijn**
+   *(Voor het gebruik van deze basislijn moet uw omgeving voldoen aan de vereisten voor het gebruik van [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites))* .
+  - [Microsoft Defender ATP-basislijn, versie 3](security-baseline-settings-defender-atp.md)
+
+  > [!NOTE]
+  > De beveiligingsbasislijn van de Microsoft Defender ATP is geoptimaliseerd voor fysieke apparaten en wordt momenteel niet aanbevolen voor gebruik met virtuele machines (VM's) of VDI-eindpunten. Bepaalde basislijninstellingen kunnen invloed hebben op externe interactieve sessies in gevirtualiseerde omgevingen.  Voor meer informatie ziet u [Increase compliance to the Microsoft Defender ATP security baseline](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) (Naleving met de Microsoft Defender ATP-beveiligingsbasislijn vergroten) in de Windows-documentatie.
+
+- **Microsoft Edge-basislijn**
+  - [Microsoft Edge-basislijn voor april 2020 (Edge versie 80 en hoger)](security-baseline-settings-edge.md?pivots-edge-april-2020)
+  - [Voorbeeld: Microsoft Edge-basislijn voor oktober 2019 (Edge versie 77 en hoger)](security-baseline-settings-edge.md?pivots=edge-october-2019)
+
+Profielen die u eerder hebt gemaakt op basis van een previewsjabloon, kunt u gewoon blijven gebruiken en bewerken, zelfs wanneer de sjabloon niet meer beschikbaar is voor nieuwe profielen.
+
+Wanneer u klaar bent om over te stappen op een meer recente versie van een basislijn die u gebruikt, raadpleegt u [De basislijnversie voor een profiel wijzigen](#change-the-baseline-version-for-a-profile) in dit artikel. 
+
 ## <a name="about-baseline-versions-and-instances"></a>Versies en instanties van basislijnen
 
 In elke nieuwe versie-instantie van een basislijn kunnen instellingen worden toegevoegd, verwijderd of veranderd. Als er in een nieuwe versie van Windows 10 bijvoorbeeld nieuwe Windows 10-instellingen beschikbaar komen, ontvangt de MDM-beveiligingsbasislijn mogelijk een nieuwe versie-instantie met de nieuwste instellingen.
 
-In de Intune-console worden op de tegel voor elke basislijn de naam van de basislijnsjabloon en basisgegevens over die basislijn weergegeven. Zo wordt er aangegeven hoeveel profielen u hebt die dat type basislijn gebruiken, hoeveel verschillende instanties (versies) van het type basislijn er beschikbaar zijn en een *laatste publicatiedatum*, die aangeeft wanneer die basislijnsjabloon aan uw tenant is toegevoegd. In de volgende voorbeelden ziet u de tegel van een vaak gebruikte MDM-beveiligingsbasislijn:
-
-![Basislijntegel](./media/security-baselines/baseline-tile.png)
+U ziet in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) onder **Endpoint Security** > **Beveiligingsbasislijnen** een lijst met de beschikbare basislijnen. De lijst bevat de basislijnsjabloonnaam, hoeveel profielen u hebt die dat type basislijn gebruiken, hoeveel verschillende instanties (versies) van het type basislijn er beschikbaar zijn en een *laatste publicatiedatum* waarmee wordt aangegeven wanneer de nieuwste versie van de basislijnsjabloon beschikbaar is gesteld.
 
 Als u meer gegevens wilt bekijken over de basislijnversies die u gebruikt, selecteert u een basislijntegel. Het deelvenster *Overzicht* wordt dan geopend. Selecteer vervolgens **Versies**. Intune geeft details weer over de versies van die basislijn die door uw profielen worden gebruikt. In het deelvenster Versies kunt u een versie selecteren om meer informatie weer te geven over de profielen die hiervan gebruikmaken. U kunt ook twee verschillende versies selecteren en vervolgens kiezen voor **Basislijnen vergelijken** om een CSV-bestand te downloaden met de verschillen.
 
@@ -74,26 +95,6 @@ Gebruik de informatie in de volgende koppelingen om te helpen conflicten te iden
 
 - [Beleidsregels en profielen voor het oplossen van problemen in Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)
 - [Uw beveiligingsbasislijnen bewaken](security-baselines-monitor.md#troubleshoot-using-per-setting-status)
-
-## <a name="available-security-baselines"></a>Beschikbare beveiligingsbasislijnen
-
-De volgende beveiligingsbasislijninstanties zijn beschikbaar voor gebruik met Intune. Gebruik de koppelingen om de instellingen weer te geven voor de meest recente instantie van elke basislijn.
-
-- **MDM-beveiligingsbasislijn**
-  - [MDM-beveiligingsbasislijn voor mei 2019](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)
-  - [Voorbeeld: MDM-basislijn voor beveiliging voor oktober 2018](security-baseline-settings-mdm-all.md?pivots=mdm-preview)
-
-- **Microsoft Defender ATP-basislijn**
-   *(Voor het gebruik van deze basislijn moet uw omgeving voldoen aan de vereisten voor het gebruik van [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites))* .
-  - [Microsoft Defender ATP-basislijn, versie 3](security-baseline-settings-defender-atp.md)
-
-  > [!NOTE]
-  > De beveiligingsbasislijn van de Microsoft Defender ATP is geoptimaliseerd voor fysieke apparaten en wordt momenteel niet aanbevolen voor gebruik met virtuele machines (VM's) of VDI-eindpunten. Bepaalde basislijninstellingen kunnen invloed hebben op externe interactieve sessies in gevirtualiseerde omgevingen.  Voor meer informatie ziet u [Increase compliance to the Microsoft Defender ATP security baseline](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) (Naleving met de Microsoft Defender ATP-beveiligingsbasislijn vergroten) in de Windows-documentatie.
-
-- **Microsoft Edge-basislijn**
-  - [Voorbeeld: Microsoft Edge-basislijn](security-baseline-settings-edge.md)
-
-Profielen die u eerder hebt gemaakt op basis van een previewsjabloon, kunt u gewoon blijven gebruiken en bewerken, zelfs wanneer de sjabloon niet meer beschikbaar is voor nieuwe profielen.
 
 ## <a name="manage-baselines"></a>Basislijnen beheren
 

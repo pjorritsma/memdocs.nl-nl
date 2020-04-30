@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 Customer intent: As an Intune admin, I want to set up the Apple's corporate device enrollment features so that corporate devices can automatically enroll in Intune.
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd99c334866714095a4d87e1e028731ce3ee7c7c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: a3a949738056c9acf33ef09e28f7664690dfd77f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326890"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078903"
 ---
 # <a name="tutorial-use-apples-corporate-device-enrollment-features-in-apple-business-manager-abm-to-enroll-iosipados-devices-in-intune"></a>Zelfstudie: De inschrijvingsfuncties voor zakelijke Apple-apparaten in Apple Business Manager (ABM) gebruiken om iOS-/iPadOS-apparaten bij Intune in te schrijven
 Met behulp van de functies voor apparaatinschrijving in Apple Business Manager kunt u apparaten eenvoudiger inschrijven. Intune biedt ook ondersteuning voor de oudere DEP-portal (Device Enrollment Program) van Apple, maar we raden u aan opnieuw te beginnen met Apple Business Manager. Met Microsoft Intune en Apple Corporate Device Enrollment worden apparaten automatisch veilig ingeschreven wanneer gebruikers het apparaat voor de eerste keer inschakelen. U kunt apparaten daarom naar vele gebruikers verzenden zonder elk apparaat afzonderlijk te hoeven instellen. 
@@ -82,21 +82,23 @@ Na installatie van de token kunt u een inschrijvingsprofiel voor iOS-/iPadOS-app
 
 1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **iOS** > **iOS-inschrijving** > **Tokens voor het inschrijvingsprogramma**.
 
-2. Selecteer de token die u zojuist hebt geïnstalleerd en kies **Profielen** > **Profiel maken**.
+2. Selecteer het token dat u zojuist hebt geïnstalleerd en kies **Profielen** > **Profiel maken** > **iOS**.
 
-3. Voer onder **Profiel maken** *TestProfile* als **naam** in en geef *ADE testen voor iOS-/iPadOS-apparaten* op als **Beschrijving**. Gebruikers zien deze gegevens niet.
+3. Op de pagina **Basisinformatie** voert u *TestProfile* in als **Naam** en *ADE testen voor iOS-/iPadOS-apparaten* als **Beschrijving**. Gebruikers zien deze gegevens niet.
 
-4. Kies **iOS** onder **Platform**.
+4. Selecteer **Volgende**.
 
-5. Bepaal of uw apparaten met of zonder **Gebruikersaffiniteit** moeten worden ingeschreven. Gebruikersaffiniteit is ontworpen voor apparaten die door specifieke gebruikers worden gebruikt. Kies **Inschrijven met gebruikersaffiniteit** als uw gebruikers de bedrijfsportal willen gebruiken voor services zoals het installeren van apps. Als uw gebruikers de bedrijfsportal niet nodig hebben of als u het apparaat voor veel gebruikers wilt inrichten, kiest u **Inschrijven zonder Gebruikersaffiniteit**.
+5. Bepaal op de pagina **Beheerinstellingen** of u wilt dat uw apparaten worden ingeschreven met of zonder **Gebruikersaffiniteit**. Gebruikersaffiniteit is ontworpen voor apparaten die door specifieke gebruikers worden gebruikt. Kies **Inschrijven met gebruikersaffiniteit** als uw gebruikers de bedrijfsportal willen gebruiken voor services zoals het installeren van apps. Als uw gebruikers de bedrijfsportal niet nodig hebben of als u het apparaat voor veel gebruikers wilt inrichten, kiest u **Inschrijven zonder Gebruikersaffiniteit**.
 
-6. Als u ervoor kiest om een apparaat met Gebruikersaffiniteit in te schrijven, moet u bepalen of u de verificatie wilt uitvoeren via de bedrijfsportal of via Apple-configuratieassistent. Als u meervoudige verificatie wilt gebruiken, gebruikers wilt toestaan om wachtwoorden te wijzigen wanneer zij zich voor het eerst aanmelden of als u gebruikers wilt vragen hun verlopen wachtwoorden opnieuw in te stellen tijdens de inschrijving, kiest u **Ja** onder **Verificatie met bedrijfsportal in plaats van Apple-configuratieassistent**. Kies **Nee** als er geen problemen mee hebt om de door Apple aangeboden HTTP-basisverificatie via de Apple-configuratieassistent te gebruiken. Als u **Ja** kiest en u wilt dat de bedrijfsportal-app automatisch wordt bijgewerkt op de apparaten van eindgebruikers, moet u de bedrijfsportal apart als een vereiste app voor deze gebruikers implementeren op basis van het Apple-volumeaankoopprogramma.
+6. Als u ervoor kiest voor inschrijving met Gebruikersaffiniteit, wordt de optie **Selecteren waar gebruikers de verificatie moeten uitvoeren** weergegeven. Bepaal of u wilt verifiëren met de bedrijfsportal of de Apple-configuratieassistent.
+   - **Bedrijfsportal**: Selecteer deze optie om Multi-Factor Authentication te gebruiken, gebruikers toe te staan hun wachtwoord te wijzigen wanneer zij zich voor het eerst aanmelden of gebruikers te vragen hun verlopen wachtwoorden opnieuw in te stellen tijdens de inschrijving. Als u wilt dat de bedrijfsportal-app automatisch wordt bijgewerkt op de apparaten van eindgebruikers, moet u de bedrijfsportal apart als een vereiste app voor deze gebruikers implementeren via het Apple Volume Purchase Program (VPP).
+   - **Configuratieassistent**: Selecteer deze optie om gebruik te maken van de door Apple aangeboden HTTP-basisverificatie via de Apple-configuratieassistent
+  
+7. Als u kiest voor inschrijving met Gebruikersaffiniteit en Verificatie met de bedrijfsportal, wordt de optie **Bedrijfsportal installeren met VPP** weergegeven. Als u de bedrijfsportal installeert met een VPP-token, hoeven gebruikers geen Apple-id en wachtwoord in te voeren om de bedrijfsportal tijdens de inschrijving in de App Store te downloaden. Kies **Token gebruiken:** onder **Bedrijfsportal installeren met VPP** om een VPP-token te selecteren waarvoor gratis licenties van de bedrijfsportal beschikbaar zijn. Als u VPP niet wilt gebruiken om de bedrijfsportal te implementeren, kiest u **VPP niet gebruiken**. 
 
-7. Als u hebt gekozen voor inschrijving met Gebruikersaffiniteit en Verificatie met bedrijfsportal, bepaalt u nu of u de bedrijfsportal wilt installeren in combinatie met het Apple Volume Purchase Program (VPP). Als u de bedrijfsportal installeert met een VPP-token, hoeven gebruikers geen Apple-id en wachtwoord in te voeren om de bedrijfsportal tijdens de inschrijving in de App Store te downloaden. Kies **Token gebruiken:** onder **Bedrijfsportal installeren met VPP** om een VPP-token te selecteren waarvoor gratis licenties van de bedrijfsportal beschikbaar zijn. Als u VPP niet wilt gebruiken om de bedrijfsportal te implementeren, kiest u **VPP niet gebruiken** onder **Bedrijfsportal installeren met VPP**. 
+8. Als u de inschrijving uitvoert met Gebruikersaffiniteit, Verificatie met de bedrijfsportal en Bedrijfsportal installeren met VPP, moet u bepalen of u de bedrijfsportal wilt uitvoeren in de modus voor één app totdat de verificatie is uitgevoerd. Met behulp van deze instelling kunt ervoor zorgen dat gebruikers geen toegang hebben tot andere apps, totdat ze de bedrijfsinschrijving hebben voltooid. Als u de gebruiker tot deze stroom wilt beperken totdat de inschrijving is voltooid, kiest u **Ja** onder **De bedrijfsportal uitvoeren in de modus voor één app tot de verificatie**. 
 
-8. Als u de inschrijving uitvoert met Gebruikersaffiniteit, Verificatie met bedrijfsportal en Bedrijfsportal installeren met VPP, moet u bepalen of u de bedrijfsportal wilt uitvoeren in de Eén-app-modus totdat de verificatie wordt uitgevoerd. Met behulp van deze instelling kunt ervoor zorgen dat gebruikers geen toegang hebben tot andere apps, totdat ze de bedrijfsinschrijving hebben voltooid. Als u de gebruiker tot deze stroom wilt beperken totdat de inschrijving is voltooid, kiest u **Ja** onder **Bedrijfsportal tot verificatie uitvoeren in één-app-modus**. 
-
-9. Kies **Instellingen apparaatbeheer** en kies **Ja** onder **Onder toezicht**. U krijgt de meeste beheeropties voor uw zakelijke iOS-/iPadOS-apparaten door apparaten onder toezicht te stellen.
+9. Kies bij **Instellingen voor apparaatbeheer** de optie **Ja** bij **Onder supervisie**. (Als u **Inschrijven met gebruikeraffiniteit** hebt gekozen, wordt deze optie automatisch ingesteld op **Ja**). U krijgt de meeste beheeropties voor uw zakelijke iOS-/iPadOS-apparaten door apparaten onder toezicht te stellen.
 
 10. Kies **Ja** onder **Vergrendelde inschrijving** om ervoor te zorgen dat gebruikers het beheer van de bedrijfsapparaten niet kunnen verwijderen. 
 
@@ -104,15 +106,15 @@ Na installatie van de token kunt u een inschrijvingsprofiel voor iOS-/iPadOS-app
 
 12. Standaard krijgen apparaten bij Apple de naam van het apparaattype (bijv. iPad). Als u een andere naamsjabloon wilt opgeven, kiest u **Ja** onder **Sjabloon voor apparaatnamen toepassen**. Voer de naam in die u op de apparaten wilt toepassen, waarbij u de tekenreeksen *{{SERIAL}}* en *{{DEVICETYPE}}* vervangt door het serienummer en het apparaattype van elk apparaat. Anders kiest u **Nee** onder **Sjabloon voor apparaatnamen toepassen**.
 
-13. Kies **OK**.
+13. Kies **Volgende**.
 
-14. Kies **Aanpassing Configuratieassistent** en voer *Afdeling Zelfstudie* als **Afdelingsnaam** in. Dit is de tekenreeks die gebruikers zien wanneer ze tijdens het activeren van het apparaat op **Over configuratie** tikken.
+14. Voer op de pagina **Configuratieassistent** de tekst *Afdeling Zelfstudie* in als **Afdelingsnaam**. Dit is de tekenreeks die gebruikers zien wanneer ze tijdens het activeren van het apparaat op **Over configuratie** tikken.
 
 15. Voer onder **Telefoonnummer afdeling** een telefoonnummer in. Dit is het nummer dat wordt weergegeven wanneer gebruikers tijdens de activering op de knop **Hulp nodig?** drukken.
 
 16. U kunt tijdens de activering van apparaten diverse schermen **weergeven** of **verbergen**. Voor de beste inschrijvingservaring stelt u alle schermen in op **Verbergen**.
 
-17. Kies **OK** > **Maken**.
+17. Kies **Volgende** om naar de pagina **Beoordelen en maken** te gaan. Selecteer **Maken**.
 
 ## <a name="sync-managed-devices-to-intune"></a>Beheerde apparaten synchroniseren met Intune
 

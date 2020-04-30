@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 04/13/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f685f1f3d009d7ba7a1dc061ec3025b2f8c96b5f
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 49749ec3a839b11062b1cc2655a1cca4e3d6cfb0
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084636"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81525698"
 ---
 # <a name="troubleshoot-integration-of-jamf-pro-with-microsoft-intune"></a>Problemen oplossen met integratie van Jamf Pro met Microsoft Intune
 
@@ -35,21 +35,22 @@ Dit artikel helpt Intune-beheerders om problemen met de integratie van Jamf Pro 
 
 Voordat u begint met het oplossen van problemen, moet u wat basisinformatie verzamelen om het probleem duidelijk te maken en sneller een oplossing te vinden. Wanneer u bijvoorbeeld een probleem aantreft met betrekking tot de integratie van Jamf in Intune, moet u altijd controleren of aan alle voorwaarden is voldaan. Lees de volgende overwegingen voordat u begint met het oplossen van problemen:
 
-- Lees de voorwaarden bij [Jamf Pro integreren met Intune](conditional-access-integrate-jamf.md#prerequisites).
-- Alle gebruikers moeten over Microsoft Intune- en Microsoft AAD Premium P1-licenties beschikken 
+- Controleer de vereisten in de volgende artikelen, afhankelijk van de manier waarop u de Jamf Pro-integratie met Intune configureert:
+  - [De Jamf-cloudconnector gebruiken om Jamf Pro te integreren met Intune](conditional-access-jamf-cloud-connector.md)
+  - [Jamf Pro integreren met Intune](conditional-access-integrate-jamf.md#prerequisites)
+- Alle gebruikers moeten over Microsoft Intune- en Microsoft AAD Premium P1-licenties beschikken
 - U moet over een gebruikersaccount met machtigingen voor integratie met Microsoft Intune beschikken in de Jamf Pro-console.
 - U moet over een gebruikersaccount met globale beheerdersmachtigingen beschikken in Azure.
 
+Houd rekening met de volgende informatie wanneer u de Jamf Pro-integratie met Intune onderzoekt:
 
-Houd rekening met de volgende informatie wanneer u de Jamf Pro-integratie met Intune onderzoekt: 
 - Wat is het exacte foutbericht?
 - Waar is het foutbericht?
 - Wanneer is het probleem begonnen?  Heeft de Jamf Pro-integratie met Intune ooit gewerkt?
 - Hoeveel gebruikers treft het probleem? Geldt het probleem voor alle gebruikers of voor bepaalde gebruikers?
 - Voor hoeveel apparaten geldt het probleem? Geldt het probleem voor alle apparaten of voor bepaalde apparaten?
  
-
-## <a name="common-problems"></a>Algemene problemen 
+## <a name="common-problems"></a>Algemene problemen
 
 Met behulp van de volgende informatie kunt u algemene problemen voor apparaten identificeren en oplossen nadat u de integratie tussen Intune en Jamf Pro hebt ingesteld.  
 
@@ -109,23 +110,23 @@ Er zijn verschillende algemene oorzaken voor Mac-apparaten die kunnen niet worde
 
 #### <a name="cause-1"></a>Oorzaak 1  
 
-**De zakelijke Jamf Pro-toepassing in Azure heeft niet de juiste machtiging of heeft meer dan één machtiging**  
+**De zakelijke Jamf Pro-toepassing in Azure heeft niet de juiste machtiging of heeft meer dan één machtiging**
 
   Wanneer u de app in Azure maakt, moet u alle API-standaardmachtigingen verwijderen en vervolgens één machtiging van *update_device_attributes* aan Intune toewijzen. 
 
   **Oplossing**  
-  Lees en corrigeer waar nodig de machtigingen voor de Jamf-app die u hebt gemaakt in Azure AD. Bekijk de procedure voor het [maken van een toepassing voor Jamf in Azure AD](conditional-access-integrate-jamf.md#create-an-application-in-azure-active-directory). 
+  Lees en corrigeer waar nodig de machtigingen voor de Jamf-app. Als u de Jamf Pro Cloud Connector gebruikt, is deze app voor u gemaakt. Als u de integratie handmatig hebt geconfigureerd, hebt u de app zelf gemaakt in Azure AD. Bekijk de procedure voor het [maken van een toepassing voor Jamf in Azure AD](conditional-access-integrate-jamf.md#create-an-application-in-azure-active-directory) voor de app-machtigingen.
 
 #### <a name="cause-2"></a>Oorzaak 2  
 
 **De app **Jamf Native macOS Connector** is niet gemaakt in uw Azure AD-tenant of toestemming voor de connector is ondertekend door een account dat niet over globale beheerdersrechten beschikt**  
 
   **Oplossing**  
-  Zie de sectie *macOS Intune-integratie configureren* in [Integratie met Microsoft Intune](https://docs.jamf.com/10.13.0/jamf-pro/administrator-guide/Integrating_with_Microsoft_Intune.html) op docs.jamf.com. 
+  Zie de sectie *macOS Intune-integratie configureren* in [Integratie met Microsoft Intune](https://docs.jamf.com/10.13.0/jamf-pro/administrator-guide/Integrating_with_Microsoft_Intune.html) op docs.jamf.com.
 
 #### <a name="cause-3"></a>Oorzaak 3
 
-**De gebruiker heeft geen geldige Intune- of Jamf-licentie**  
+**De gebruiker heeft geen geldige Intune- of Jamf-licentie**
 
   Het ontbreken van een geldige licentie kan leiden tot de volgende fout, waarmee wordt aangegeven dat de Jamf-licentie is verlopen:  
   ```
@@ -183,8 +184,10 @@ Als Intune-integratie is uitgeschakeld, krijgen gebruikers in de bedrijfsportal 
 De Jamf Pro-server stuurt een puls naar de Intune-servers wanneer integratie is uitgeschakeld; zo weet Intune dat integratie is uitgeschakeld. 
 
 **Oplossing**  
-Schakel Intune-integratie opnieuw in via Jamf Pro. Zie [Microsoft Intune-integratie in Jamf Pro configureren](conditional-access-integrate-jamf.md#enable-intune-to-integrate-with-jamf-pro).
+Schakel Intune-integratie opnieuw in via Jamf Pro. Bekijk het volgende, afhankelijk van hoe u de integratie configureert:
 
+- [De Jamf-cloudconnector gebruiken om Jamf Pro te integreren met Intune](conditional-access-jamf-cloud-connector.md)
+- [Handmatig de Microsoft Intune-integratie in Jamf Pro configureren](conditional-access-integrate-jamf.md#enable-intune-to-integrate-with-jamf-pro).
 
 #### <a name="cause-6"></a><a name="cause-6"></a>Oorzaak 6  
 
@@ -226,8 +229,8 @@ Als een apparaat uit Jamf wordt uitgeschreven maar niet op de juiste manier uit 
    - Type: Toepassingswachtwoord; account: com.microsoft.workplacejoin.registeredUserPrincipalName
    - Type: Certificaat; uitgegeven door: MS-Organization-Access
    - Type: Voorkeur voor identiteit; naam (ADFS STS URL, indien aanwezig): https://adfs\<DNSName>.com/adfs/ls
-   - Type: Voorkeur voor identiteit; naam: https://enterpriseregistration.windows.net
-   - Type: Voorkeur voor identiteit; naam: https://enterpriseregistration.windows.net/  
+   - Type: Voorkeur voor identiteit; naam: `https://enterpriseregistration.windows.net`
+   - Type: Voorkeur voor identiteit; naam: `https://enterpriseregistration.windows.net/`
 9. Start het Mac-apparaat opnieuw op.
 10. Verwijder de bedrijfsportal van het apparaat.
 11. Ga naar portal.manage.microsoft.com en verwijder alle exemplaren van het Mac-apparaat. Wacht ten minste 30 minuten voordat u naar de volgende stap gaat.
@@ -270,29 +273,27 @@ U kunt dit probleem oplossen met de oplossing voor [*Oorzaak 6*](#cause-6) voor 
 Wanneer een apparaat uit de integratie van Intune en Jamf Pro wordt verwijderd, is het mogelijk dat een aantal gegevens bewaard blijven, waardoor er dubbele vermeldingen ontstaan door opeenvolgende registraties.  
 
 **Oplossing**  
-U kunt dit probleem oplossen met de oplossing voor [*Oorzaak 6*](#cause-6) voor *apparaten die niet kunnen worden geregistreerd*, eerder in dit artikel. 
+U kunt dit probleem oplossen met de oplossing voor [*Oorzaak 6*](#cause-6) voor *apparaten die niet kunnen worden geregistreerd*, eerder in dit artikel.
 
 ### <a name="compliance-policy-fails-to-evaluate-the-device"></a>Het apparaat kan niet worden geëvalueerd door het nalevingsbeleid  
 
-**Oorzaak**: Jamf-integratie met Intune ondersteunt geen nalevingsbeleid voor apparaatgroepen. 
+**Oorzaak**: Jamf-integratie met Intune ondersteunt geen nalevingsbeleid voor apparaatgroepen.
 
 **Oplossing**  
-Pas het nalevingsbeleid voor macOS-apparaten aan die aan gebruikersgroepen moeten worden toegewezen. 
-
+Pas het nalevingsbeleid voor macOS-apparaten aan die aan gebruikersgroepen moeten worden toegewezen.
 
 ### <a name="could-not-retrieve-the-access-token-for-microsoft-graph-api"></a>Kan de toegangstoken voor Microsoft Graph API niet ophalen
 
 U ontvangt de volgende fout:
 
-```
-   Could not retrieve the access token for Microsoft Graph API. Check the configuration for Microsoft Intune Integration.
-```   
+`Could not retrieve the access token for Microsoft Graph API. Check the configuration for Microsoft Intune Integration.`
 
-Deze fout kan door een van de volgende problemen zijn veroorzaakt: 
+Deze fout kan door een van de volgende problemen zijn veroorzaakt:
 
 #### <a name="theres-a-permission-issue-with-the-jamf-pro-application-in-azure"></a>Er is sprake van een machtigingsprobleem met de Jamf Pro-toepassing in Azure
 
-Tijdens de registratie van de Jamf Pro-app in Azure is een van de volgende situaties opgetreden:  
+Tijdens de registratie van de Jamf Pro-app in Azure is een van de volgende situaties opgetreden:
+
 - De app heeft meer dan één machtiging ontvangen.
 - De optie **Beheerderstoestemming verlenen voor *\<uw bedrijf>*** is niet geselecteerd.  
 
@@ -301,12 +302,13 @@ Zie de oplossing voor oorzaak 1 voor [apparaten die niet kunnen worden geregistr
 
 #### <a name="a-license-required-for-jamf-intune-integration-has-expired"></a>Een vereiste licentie voor Jamf-Intune-integratie is verlopen
 
-**Oplossing**: Zie de oplossing voor oorzaak 3 voor [apparaten die niet kunnen worden geregistreerd](#devices-fail-to-register). 
+**Oplossing**: Zie de oplossing voor oorzaak 3 voor [apparaten die niet kunnen worden geregistreerd](#devices-fail-to-register).
 
 #### <a name="the-required-ports-arent-open-on-your-network"></a>De vereiste poorten zijn niet geopend in uw netwerk
 
-**Oplossing**: Lees de informatie voor netwerkpoorten bij de [voorwaarden](conditional-access-integrate-jamf.md#prerequisites) voor de integratie van Jamf Pro met Intune.
-
+**Oplossing**:  
+Lees de informatie voor netwerkpoorten bij de [voorwaarden](conditional-access-jamf-cloud-connector.md#prerequisites) voor de integratie van Jamf Pro met Intune.
 
 ## <a name="next-steps"></a>Volgende stappen
+
 Meer informatie over [de integratie van Jamf Pro met Intune](conditional-access-integrate-jamf.md)

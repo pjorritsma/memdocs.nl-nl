@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 04/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb8d5b53e136ea22d1edbad7755e198fd4155285
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: 4ffa3d11b92c38373da22e53b96fe9cf9e520b5b
+ms.sourcegitcommit: af8a3efd361a7f3fa6e98e5126dfb1391966ff76
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551390"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82149175"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Instellingen van apparaatfuncties voor iOS, iPadOS of macOS toevoegen in Intune
 
@@ -37,9 +37,6 @@ Intune bevat veel functies en instellingen waarmee beheerders iOS, iPadOS en mac
 Intune maakt gebruik van configuratieprofielen om deze instellingen te maken voor en af te stemmen op de behoeften van uw organisatie. Nadat u deze functies aan een profiel hebt toegevoegd, kunt u het profiel pushen naar en implementeren op iOS-/iPadOS- en macOS-apparaten in uw organisatie.
 
 In dit artikel wordt beschreven welke functies u kunt configureren en hoe u een apparaatconfiguratieprofiel kunt maken. U ziet ook de beschikbare instellingen voor [iOS-/iPadOS](ios-device-features-settings.md)- en [macOS](macos-device-features-settings.md)-apparaten.
-
-> [!NOTE]
-> De Intune-gebruikersinterface wordt bijgewerkt naar een versie voor volledig scherm. Dit kan enkele weken duren. Totdat de tenant deze update ontvangt, hebt u een enigszins afwijkende werkstroom wanneer u instellingen maakt of bewerkt zoals beschreven in dit artikel.
 
 ## <a name="airprint"></a>AirPrint
 
@@ -134,14 +131,14 @@ Van toepassing op:
 
 ## <a name="single-sign-on"></a>Eenmalige aanmelding
 
-De meeste LOB-apps (Line-Of-Business) vereisen een zekere mate van gebruikersverificatie om beveiliging te ondersteunen. In veel gevallen moet de gebruiker bij de verificatie herhaaldelijk dezelfde referenties invoeren. Ontwikkelaars kunnen apps maken die gebruikmaken van eenmalige aanmelding (SSO) ter verbetering van de gebruikerservaring. Met eenmalige aanmelding hoeft een gebruiker minder vaak referenties in te voeren.
+De meeste LOB-apps (Line-Of-Business) vereisen een zekere mate van gebruikersverificatie om beveiliging te ondersteunen. In veel gevallen moeten gebruikers bij de verificatie herhaaldelijk dezelfde referenties invoeren. Ontwikkelaars kunnen apps maken die gebruikmaken van eenmalige aanmelding (SSO) ter verbetering van de gebruikerservaring. Met eenmalige aanmelding hoeft een gebruiker minder vaak referenties in te voeren.
+
+Het profiel voor eenmalige aanmelding is gebaseerd op Kerberos. Kerberos is een netwerkverificatieprotocol waarbij gebruik wordt gemaakt van geheime-sleutelcryptografie om client-servertoepassingen te verifiëren. De Intune-instellingen definiëren Kerberos-accountgegevens wanneer er toegang wordt verkregen tot servers of opgegeven apps, en verwerken Kerberos-vragen voor webpagina's en systeemeigen apps. Apple raadt u aan de instellingen van de [Kerberos SSO-app-extensie](#single-sign-on-app-extension) (in dit artikel) in plaats van de SSO-instellingen te gebruiken.  
 
 Voor het gebruik van eenmalige aanmelding, moet u over het volgende beschikken:
 
 - Een app die is gecodeerd om te zoeken naar de gebruikersreferentieopslagplaats in eenmalige aanmelding op het apparaat.
 - Intune geconfigureerd voor eenmalige aanmelding vanaf iOS-/iPadOS-apparaten.
-
-![Deelvenster Eenmalige aanmelding](./media/device-features-configure/sso-blade.png)
 
 Zie [Eenmalige aanmelding op iOS/iPadOS](ios-device-features-settings.md#single-sign-on) voor een lijst met instellingen die u kunt configureren in Intune.
 
@@ -156,7 +153,7 @@ Met deze instellingen configureert u een app-extensie die eenmalige aanmelding (
 
 Gebruik deze instellingen in Intune voor het configureren van een SSO-app-extensie die is gemaakt door uw organisatie, uw id-provider, Microsoft of Apple. Met de SSO-app-extensie wordt de verificatie voor uw gebruikers afgehandeld. Met deze instellingen worden het omleidingstype en de SSO-app-extensies voor het referentietype geconfigureerd.
 
-- Het omleidingstype is ontworpen voor moderne verificatieprotocollen, zoals OAuth en SAML2. Microsoft heeft een omleidingstype-SSO-app-extensie voor iOS/iPadOS Azure AD die kan worden ingeschakeld met de instellingen van de app-extensie voor eenmalige aanmelding.
+- Het omleidingstype is ontworpen voor moderne verificatieprotocollen, zoals OAuth en SAML2. U kunt een algemene omleidingsextensie gebruiken op macOS-apparaten. Voor iOS- en iPadOS-apparaten kunt u kiezen tussen de Azure AD SSO-extensie van Microsoft ([Microsoft Enterprise SSO-invoegtoepassing](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)) en een algemene omleidingsextensie.
 - Het referentietype is ontworpen voor verificatiestromen met vraag en antwoord. U kunt kiezen tussen een Kerberos-referentie-extensie van Apple en een algemene referentie-extensie.
 
 Zie [SSO-app-extensie voor iOS/iPadOS](ios-device-features-settings.md#single-sign-on-app-extension) en [SSO-app-extensie voor macOS](macos-device-features-settings.md#single-sign-on-app-extension) voor een lijst met instellingen die u kunt configureren in Intune.

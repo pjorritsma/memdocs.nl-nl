@@ -11,12 +11,12 @@ author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b91f6b11df1b65176711df0ecd907a1764c2e692
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 3892da4f3783e8b169bff576a9945f34cc47c356
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79355085"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81726047"
 ---
 # <a name="using-the-intune-docs"></a>De intune-documenten gebruiken
 
@@ -117,11 +117,11 @@ Volg deze algemene richtlijnen bij het bijdragen aan Intune-documenten:
 
 ## <a name="consolidation-of-documentation-for-microsoft-endpoint-manager"></a>Consolidatie van documentatie voor Microsoft Endpoint Manager
 
-Voor betere ondersteuning van gecombineerde scenario's voor Intune en Configuration Manager is deze documentatiebibliotheek verplaatst naar [https://docs.microsoft.com/mem/intune](https://docs.microsoft.com/mem/intune). De documentatiebibliotheek van Configuration Manager wordt later verplaatst naar `docs.microsoft.com/mem/configmgr`. Alle koppelingen worden automatisch omgeleid, zodat u geen wijzigingen hoeft aan te brengen om deze inhoud te lezen.
+Voor betere ondersteuning van gecombineerde scenario's voor Intune en Configuration Manager is de documentatie voor Intune en Configuration Manager geconsolideerd op de Microsoft Endpoint Manager-site. De Intune-documentatie bevindt zich nu op [https://docs.microsoft.com/mem/intune](https://docs.microsoft.com/mem/intune) en de documentatiebibliotheek van Configuration Manager is beschikbaar op [https://docs.microsoft.com/mem/configmgr](https://docs.microsoft.com/mem/configmgr). Als u een oude URL gebruikt, worden alle koppelingen automatisch omgeleid, zodat u geen wijzigingen hoeft aan te brengen om deze inhoud te lezen.
 
 Als u feedback geeft of een bijdrage levert aan artikelen, zijn er enkele wijzigingen nodig:
 
-- Bestaande GitHub-problemen blijven in de oorspronkelijke opslagplaats, [https://github.com/MicrosoftDocs/IntuneDocs/issues](https://github.com/MicrosoftDocs/IntuneDocs/issues).
+- Bestaande GitHub-problemen zijn in de oorspronkelijke opslagplaats, [https://github.com/MicrosoftDocs/IntuneDocs/issues](https://github.com/MicrosoftDocs/IntuneDocs/issues) of [https://github.com/MicrosoftDocs/sccmdocs/issues](https://github.com/MicrosoftDocs/sccmdocs/) gebleven.
 
   - Deze problemen worden niet weergegeven als open of gesloten problemen in het gedeelte Feedback van het gekoppelde artikel.
 

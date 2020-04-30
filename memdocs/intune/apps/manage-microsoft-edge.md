@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 04/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 58e651849632fd06f962edfc90649ad14eeaeda0
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.openlocfilehash: cc1b11fe533499ebe29101c09fb1355cd8d04243
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80696544"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82183072"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Internettoegang beheren met behulp van Microsoft Edge met Microsoft Intune
 
@@ -39,8 +39,8 @@ Met beveiligingsbeleid van Microsoft Intune voor Microsoft Edge kunt u de gegeve
 ## <a name="getting-started"></a>Aan de slag
 
 U en uw eindgebruikers kunnen Microsoft Edge in openbare app stores downloaden en deze in uw organisaties gebruiken. Voor browserbeleid gelden de volgende besturingssysteemvereisten:
-- Android 4 en hoger
-- iOS 8.0 en hoger
+- Android 5 en hoger
+- iOS 12.0 en hoger
 
 ## <a name="application-protection-policies-for-microsoft-edge"></a>Beveiligingsbeleid voor apps voor Microsoft Edge
 
@@ -129,7 +129,7 @@ U wijst de instellingen aan groepen gebruikers in Azure AD toe. Als deze gebruik
 
 ## <a name="direct-users-to-microsoft-edge-instead-of-the-intune-managed-browser"></a>Gebruikers doorsturen naar Microsoft Edge in plaats van de Intune Managed Browser 
 
-Zowel de Intune Managed Browser als Microsoft Edge kunnen worden gebruikt als door beleid beveiligde browsers. Geef de volgende configuratie-instelling op voor alle door Intune beheerde apps (bijvoorbeeld Outlook, OneDrive en SharePoint), zodat gebruikers worden doorgestuurd naar de juiste browser-app:
+Microsoft Edge kan worden gebruikt als een met beleid beveiligde browser. Geef de volgende configuratie-instelling op voor alle door Intune beheerde apps (bijvoorbeeld Outlook, OneDrive en SharePoint), zodat gebruikers worden doorgestuurd naar de juiste browser-app:
 
 |    Sleutel    |    Waarde    |
 |------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -194,7 +194,7 @@ Net als bij het configureren van een snelkoppeling naar een startpagina, kunt u 
 
 |    Sleutel    |    Waarde    |
 |-------------------------------------------------------------------|-------------|
-|    com.microsoft.intune.mam.managedbrowser.managedTopSites   |    Specificeer een set waarde-URL's. Elke snelkoppeling naar een site op het hoogste niveau bestaat uit een titel en een URL. Scheid de titel en de URL met het teken `|`. Bijvoorbeeld: <br> `GitHub | https://github.com/||LinkedIn|https://www.linkedin.com`    |
+|    com.microsoft.intune.mam.managedbrowser.managedTopSites   |    Specificeer een set waarde-URL's. Elke snelkoppeling naar een site op het hoogste niveau bestaat uit een titel en een URL. Scheid de titel en de URL met het teken `|`. Bijvoorbeeld: <br> `GitHub|https://github.com/||LinkedIn|https://www.linkedin.com`    |
 
 ## <a name="configure-your-organizations-logo-and-brand-color-for-new-tab-pages-in-microsoft-edge"></a>Het logo en de merkkleur van uw organisatie configureren voor nieuwe tabbladen in Microsoft Edge
 
@@ -416,7 +416,7 @@ Lees [Send logs to your IT admin by email](https://docs.microsoft.com/mem/intune
 
 Hier volgen aanvullende overwegingen voor beveiliging en privacy voor Microsoft Edge:
 
-- Microsoft Edge maakt geen gebruik van de instellingen die gebruikers configureren voor de systeemeigen browser https://docs.microsoft.com/en-us/intune/apps/app-configuration-policies-use-android#allow-only-configured-organization-accounts-in-multi-identity-apps op hun apparaten, omdat Microsoft Edge geen toegang heeft tot deze instellingen.
+- Microsoft Edge maakt geen gebruik van de instellingen die gebruikers instellen voor de systeemeigen browser op hun apparaten, omdat Microsoft Edge geen toegang heeft tot deze instellingen.
 - U kunt de optie **Eenvoudige pincode vereisen voor toegang** of **Bedrijfsreferenties vereisen voor toegang** configureren in een app-beveiligingsbeleid dat is gekoppeld aan Microsoft Edge. Als een gebruiker de Help-koppeling op de verificatiepagina selecteert, kan hij alle internetsites bezoeken, ongeacht of deze zijn toegevoegd aan de lijst met geblokkeerde sites van het beleid.
 - Microsoft Edge kan alleen toegang tot sites blokkeren wanneer de sites rechtstreeks worden geopend. De app kan de toegang niet blokkeren wanneer gebruikers tussenliggende services (zoals een vertaalservice) gebruiken voor toegang tot de site.
 - Om verificatie en toegang tot de Intune-documentatie toe te staan, wordt * **.microsoft.com** uitgesloten van opname in lijsten met toegestane en geblokkeerde sites. Dit domein is altijd toegestaan.

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 07c29f45c2d9356bda78e021d3baf9647aa03397
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 6633682a9572ba36f41f42e77c5aa64403e0e209
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326798"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81440574"
 ---
 # <a name="create-a-custom-role-in-intune"></a>Een aangepaste rol in Intune maken
 
@@ -40,7 +40,7 @@ Als u rollen wilt maken, bewerken of toewijzen, moet uw account een van de volge
 
 3. Kies op de pagina **Machtigingen** de machtigingen die u voor deze rol wilt gebruiken.
 
-4. Kies op de pagina **Bereik (tags)** de tags voor deze rol. Deze rol heeft toegang tot resources waaraan deze tags ook zijn toegevoegd. Kies **Volgende**.
+4. Kies op de pagina **Bereik (tags)** de tags voor deze rol. Wanneer deze rol wordt toegewezen aan een gebruiker, heeft die gebruiker toegang tot resources die ook deze tags hebben. Kies **Volgende**.
 
 5. Kies op de pagina **Controleren en maken** de optie **Maken** zodra u klaar bent. De nieuwe rol wordt weergegeven in de lijst op de blade **Intune-rollen - Alle rollen**.
 

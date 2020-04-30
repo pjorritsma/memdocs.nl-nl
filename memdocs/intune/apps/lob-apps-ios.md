@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5caa8b23950e3ce87f66d6804961a9a2a3e21c6
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 90f943c7eca95a5311023b03e769e4e18ada9249
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324077"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "80863091"
 ---
 # <a name="add-an-ios-line-of-business-app-to-microsoft-intune"></a>Een iOS Line-Of-Business-app toevoegen aan Microsoft Intune
 
@@ -34,7 +34,7 @@ Gebruik de informatie in dit artikel om iOS-Line-Of-Business-apps (LOB) aan Micr
 > [!NOTE]
 > Gebruikers van iOS-apparaten kunnen sommige van de ingebouwde iOS-apps, zoals Stocks en Maps verwijderen. U kunt Intune niet gebruiken voor het opnieuw implementeren van deze apps. Als gebruikers deze apps verwijderen, moeten ze naar de App Store gaan en ze handmatig opnieuw installeren.
 >
-> iOS LOB-apps hebben een maximale grootte van 4 GB per app.
+> iOS LOB-apps hebben een maximale grootte van 2 GB per app.
 
 > [!NOTE]
 > Bundel-id's (bijvoorbeeld *com.contoso.app*) zijn unieke id's van een app. Als u bijvoorbeeld voor testdoeleinden een bètaversie van een LOB-app wilt installeren naast de productieversie, moet de bètaversie een andere unieke id hebben (bijvoorbeeld *com.contoso.app-beta*). Anders overlapt de bètaversie de productieversie en wordt deze behandeld als een upgrade. Het wijzigen van de naam van het IPA-bestand heeft geen invloed op dit gedrag.
@@ -80,7 +80,7 @@ U kunt bereiktags gebruiken om te bepalen wie er informatie over client-apps mag
 
 ## <a name="step-3---assignments"></a>Stap 3: Toewijzingen
 
-1. Selecteer de groepstoewijzingen **Vereist**, **Beschikbaar voor ingeschreven apparaten** of **Verwijderen** voor de app. Zie [Groepen toevoegen om gebruikers en apparaten in te delen](../fundamentals/groups-add.md) en [Apps toewijzen aan groepen met Microsoft Intune](apps-deploy.md) voor meer informatie.
+1. Selecteer de groepstoewijzingen **Vereist**, **Beschikbaar voor ingeschreven apparaten**, **Beschikbaar met of zonder inschrijving** of **Verwijderen** voor de app. Zie [Groepen toevoegen om gebruikers en apparaten in te delen](../fundamentals/groups-add.md) en [Apps toewijzen aan groepen met Microsoft Intune](apps-deploy.md) voor meer informatie.
 2. Klik op **Volgende** om naar de pagina **Controleren en maken** weer te geven.
 
 ## <a name="step-4---review--create"></a>Stap 4: beoordelen en maken

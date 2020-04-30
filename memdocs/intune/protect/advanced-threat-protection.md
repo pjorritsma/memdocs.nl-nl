@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 04/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,28 +16,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c5528e5de99e599c968f0c006aa98545b2004e2
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: beea54b7ca244190ec0821d4ce8364369797590a
+ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551550"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82166605"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Naleving voor Microsoft Defender ATP met voorwaardelijke toegang in Intune afdwingen
 
-U kunt Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) integreren met Microsoft Intune als een Mobile Threat Defense-oplossing. Dankzij integratie kunt u beveiligingsrisico's helpen voorkomen en de impact van beveiligingsschending binnen een organisatie beperken. Microsoft Defender ATP werkt met apparaten waarop Windows 10 of hoger wordt uitgevoerd.
+U kunt Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) integreren met Microsoft Intune als een Mobile Threat Defense-oplossing. Dankzij integratie kunt u beveiligingsrisico's helpen voorkomen en de impact van beveiligingsschending binnen een organisatie beperken. Microsoft Defender ATP werkt op apparaten waarop Windows 10 of hoger wordt uitgevoerd, en op Android-apparaten.
 
 Voor effectieve bescherming gebruikt u een combinatie van de volgende configuraties:
 
-- **Maak een service-naar-service-verbinding tussen Intune en Microsoft Defender ATP**. Met deze verbinding kan Microsoft Defender ATP gegevens verzamelen over risico's voor Windows 10-apparaten die u beheert met Intune.
+- **Maak een service-naar-service-verbinding tussen Intune en Microsoft Defender ATP**. Met deze verbinding kan Microsoft Defender ATP gegevens verzamelen over risico's voor Windows 10- en Android-apparaten die u beheert met Intune.
 - **Gebruik een profiel voor apparaatconfiguratie om apparaten te onboarden met Microsoft Defender ATP**. U kunt apparaten onboarden om deze te configureren zodat ze communiceren met Microsoft Defender ATP en de gegevens aanleveren om hun risiconiveau te bepalen.
 - **Gebruik een nalevingsbeleid voor apparaten om het risiconiveau dat u wilt toestaan te bepalen**. Risiconiveaus worden gerapporteerd door Microsoft Defender ATP. Apparaten die het toegestane risiconiveau overschrijden, worden aangeduid als niet-compatibel.
 - **Gebruik beleid voor voorwaardelijke toegang** om te voorkomen dat gebruikers toegang krijgen tot bedrijfsresources vanaf apparaten die niet compatibel zijn.
 
 Wanneer u Intune integreert met Microsoft Defender ATP, hebt u ook toegang tot Threat & Vulnerability Management (TVM) van ATP en kunt u [Intune gebruiken voor het wegnemen van beveiligingsproblemen die door TVM op eindpunten zijn geïdentificeerd](atp-manage-vulnerabilities.md).
-
-> [!NOTE]
-> De Intune-gebruikersinterface wordt bijgewerkt naar een versie voor volledig scherm. Dit kan enkele weken duren. Totdat de tenant deze update ontvangt, hebt u een enigszins afwijkende werkstroom wanneer u instellingen maakt of bewerkt zoals beschreven in dit artikel.
 
 ## <a name="example-of-using-microsoft-defender-atp-with-intune"></a>Voorbeeld van het gebruik van Microsoft Defender ATP met Intune
 
@@ -61,7 +58,7 @@ Omdat u Intune-compliancebeleid voor apparaten gebruikt dat apparaten met *Mediu
 Als u Microsoft Defender ATP met Intune wilt gebruiken, moet u het volgende geconfigureerd en klaar voor gebruik hebben:
 
 - Tenant met licentie voor Enterprise Mobility + Security E3 en Windows E5 (of Microsoft 365 Enterprise E5)
-- Microsoft Intune-omgeving met [Intune-beheerde](../enrollment/windows-enroll.md) Windows 10-apparaten die ook deelnemen aan Azure AD
+- Microsoft Intune-omgeving met [door Intune-beheerde](../enrollment/windows-enroll.md) Windows 10- of Android-apparaten die ook aan Azure AD zijn toegevoegd
 - [Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) en toegang tot de Microsoft Defender Security Center (ATP-portal)
 
 > [!NOTE]
@@ -81,15 +78,17 @@ U hoeft Defender ATP slechts één keer per tenant in te schakelen.
 
    ![Selecteren om het Microsoft Defender Security Center te openen](./media/advanced-threat-protection/atp-device-compliance-open-microsoft-defender.png)
 
-4. In **Microsoft Defender Security Center**:
-    1. Selecteer **Instellingen** > **Geavanceerde functies**.
-    2. Voor **Microsoft Intune-verbinding**, kiest u **Aan**:
+3. In **Microsoft Defender Security Center**:
+   1. Selecteer **Instellingen** > **Geavanceerde functies**.
+   2. Voor **Microsoft Intune-verbinding**, kiest u **Aan**:
 
-        ![De verbinding met Intune inschakelen](./media/advanced-threat-protection/atp-security-center-intune-toggle.png)
+      ![De verbinding met Intune inschakelen](./media/advanced-threat-protection/atp-security-center-intune-toggle.png)
 
-    3. Selecteer **Voorkeuren opslaan**.
+   3. Selecteer **Voorkeuren opslaan**.
 
-4. Ga terug naar **Microsoft Defender ATP** in het Microsoft Endpoint Manager-beheercentrum. Stel onder **Instellingen voor MDM-beleidsnaleving** **Windows-apparaten met versie 10.0.15063 en hoger verbinden met Microsoft Defender ATP** in op **Aan**.
+4. Ga terug naar **Microsoft Defender ATP** in het Microsoft Endpoint Manager-beheercentrum. Ga als volgt te werk onder **Instellingen voor MDM-nalevingsbeleid**, afhankelijk van de behoeften van uw organisatie:
+   - Stel **Windows-apparaten met versie 10.0.15063 en hoger verbinden met Microsoft Defender ATP** in op **Aan** en/of
+   - Stel **Android-apparaten met versie 6.0.0 en hoger verbinden met Microsoft Defender ATP** in op **Aan**.
 
 5. Selecteer **Opslaan**.
 
@@ -107,9 +106,9 @@ U hoeft Defender ATP slechts één keer per tenant in te schakelen.
 >
 > Als u klassiek beleid voor voorwaardelijke toegang wilt bekijken, gaat u in [Azure](https://portal.azure.com/#home) naar **Azure Active Directory** > **Voorwaardelijke toegang** > **Klassieke beleidsregels**.
 
-## <a name="onboard-devices-by-using-a-configuration-profile"></a>Apparaten onboarden met behulp van een configuratieprofiel
+## <a name="onboard-windows-devices-by-using-a-configuration-profile"></a>Windows-apparaten onboarden met behulp van een configuratieprofiel 
 
-Nadat u de service-naar-service-verbinding tussen intune en Microsoft Defender ATP hebt ingesteld, kunt u uw door Intune beheerde apparaten onboarden bij ATP, zodat gegevens over het risiconiveau kunnen worden verzameld en gebruikt. U gebruikt een profiel voor apparaatconfiguratie om apparaten te onboarden bij Microsoft Defender ATP.
+Voor het Windows-platform geldt dat u, na het instellen van de service-naar-service-verbinding tussen Intune en Microsoft Defender ATP, uw door Intune beheerde apparaten kunt onboarden bij ATP, zodat gegevens over het risiconiveau kunnen worden verzameld en gebruikt. U gebruikt een profiel voor apparaatconfiguratie om apparaten te onboarden bij Microsoft Defender ATP.
 
 Wanneer u verbinding maakte met Microsoft Defender ATP, heeft Intune van Microsoft Defender ATP een configuratiepakket voor onboarding gekregen. Dit pakket wordt geïmplementeerd op apparaten met het apparaatconfiguratieprofiel. Het configuratiepakket configureert apparaten zo dat ze communiceren met [Microsoft Defender ATP-services](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) om bestanden te scannen, bedreigingen te detecteren en het risico aan Microsoft Defender ATP te rapporteren. Wanneer u eenmaal onboarding van een apparaat met het configuratiepakket hebt uitgevoerd, dan hoeft u dit niet opnieuw te doen. U kunt apparaten onboarden met behulp van een [groepsbeleid of Microsoft Endpoint Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints).
 
@@ -118,7 +117,7 @@ Wanneer u verbinding maakte met Microsoft Defender ATP, heeft Intune van Microso
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecteer **Apparaten** > **Configuratieprofielen** > **Profiel maken**.
 3. Voer een **Naam** en **Beschrijving** in.
-4. Voor **Platform** selecteert u **Windows 10 en hoger**
+4. Voor **Platform** selecteert u **Windows 10 en hoger** 
 5. Voor **Profieltype** selecteert u **Microsoft Defender ATP (Windows 10 Desktop)** .
 6. Configureer de gewenste instellingen:
 
@@ -137,7 +136,7 @@ Wanneer u verbinding maakte met Microsoft Defender ATP, heeft Intune van Microso
 
 ## <a name="create-and-assign-the-compliance-policy"></a>Nalevingsbeleid maken en toewijzen
 
-Het nalevingsbeleid bepaalt het risiconiveau dat u voor een apparaat beschouwt als acceptabel.
+Voor zowel Windows- als Android-apparaten bepaalt het nalevingsbeleid het risiconiveau dat u aanvaardbaar vindt voor een apparaat.
 
 Als u niet bekend bent met het maken van compliancebeleid, raadpleegt u de procedure [Een beleid maken](../protect/create-compliance-policy.md#create-the-policy) in het artikel *Een nalevingsbeleid maken in Microsoft Intune*. De volgende informatie is specifiek voor het configureren van Defender ATP als onderdeel van een compliancebeleid.
 
@@ -145,9 +144,9 @@ Als u niet bekend bent met het maken van compliancebeleid, raadpleegt u de proce
 
 2. Selecteer **Apparaten** > **Nalevingsbeleid** > **Beleid** > **Beleid maken**.
 
-3. Bij **Platform** selecteert u *Windows 10 en hoger*. Selecteer vervolgens **Maken** om het configuratievenster **Beleid maken** te openen.
+3. Als **Platform** selecteert u *Windows 10 en hoger*, **Android-apparaatbeheerder** en/of **Android Enterprise**. Selecteer vervolgens **Maken** om het configuratievenster **Beleid maken** te openen.
 
-4. Geef op het tabblad **Basis** een **Naam** op waaraan u het beleid later kunt herkennen. U kunt er ook voor kiezen om een **Beschrijving** op te geven.
+4. Geef een **Naam** op waaraan u het beleid later kunt herkennen. U kunt er ook voor kiezen om een **Beschrijving** op te geven.
   
 5. Vouw op het tabblad **Nalevingsinstellingen** de groep **Microsoft Defender ATP** uit en stel de optie **Vereisen dat het apparaat op of onder het apparaatdreigingsniveau moet zijn** in op het gewenste niveau.
 
@@ -205,7 +204,7 @@ Zie [Intune-rapporten](../fundamentals/reports.md) voor meer informatie over rap
 
 ## <a name="view-onboarding-status"></a>Status voor onboarding weergeven
 
-Als u de status voor onboarding van alle door Intune beheerde Windows 10-apparaten wilt weergeven, gaat u naar **Apparaatcompatibiliteit** > **Microsoft Defender ATP**. Op deze pagina kunt u ook een apparaatconfiguratieprofiel maken om meer apparaten naar Microsoft Defender ATP te onboarden.
+Als u de status voor onboarding van alle door Intune beheerde Windows 10-apparaten wilt weergeven, gaat u naar **Tenantbeheer** > **Microsoft Defender ATP**. Op deze pagina kunt u ook een apparaatconfiguratieprofiel maken om meer apparaten naar Microsoft Defender ATP te onboarden.
 
 ## <a name="next-steps"></a>Volgende stappen
 

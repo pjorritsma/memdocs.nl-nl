@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf2c3c09ca957b0355669edc536dfd1f0d0e3226
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 38598e0245b0cfe15be4b9303620aea1724933d1
+ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407893"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82166567"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Met Android Enterprise-apparaatinstellingen kunt u functies toestaan of beperken met behulp van Intune
 
@@ -85,7 +85,7 @@ Deze instellingen zijn van toepassing op Android Enterprise-inschrijvingstypen w
 
 ### <a name="system-security"></a>Systeembeveiliging
 
-- **Bedreigingsscan voor apps**: Met **Vereisen** (standaard) kunnen apps worden gescand door Google Play Protect voor- en nadat deze zijn geïnstalleerd. Als er een bedreiging wordt gedetecteerd, kunnen gebruikers de waarschuwing krijgen dat de app moet worden verwijderd van het apparaat. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem niet Google Play Protect inschakelt of uitvoert om apps te scannen.
+- **Bedreigingsscan voor apps**: Met **Vereisen** (standaard) kunnen apps worden gescand door Google Play Protect voor- en nadat deze zijn geïnstalleerd. Als er een bedreiging wordt gedetecteerd, kunnen gebruikers de waarschuwing krijgen dat de app moet worden verwijderd van het apparaat. Wanneer dit is ingesteld op **Niet geconfigureerd**, wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem niet Google Play Protect inschakelt of uitvoert om apps te scannen.
 
 ### <a name="dedicated-devices"></a>Toegewezen apparaten
 
@@ -207,6 +207,9 @@ Gebruik deze instellingen om een kioskstijlervaring op uw toegewezen apparaten t
 - **Het aantal dagen totdat het wachtwoord verloopt**: Geef het aantal dagen, tussen 1 en 365, op waarna het wachtwoord voor het apparaat moet worden gewijzigd. Voer bijvoorbeeld `90` als u wilt dat het wachtwoord na 90 dagen verloopt. Wanneer het wachtwoord is verlopen, wordt gebruikers gevraagd een nieuw wachtwoord te maken. Wanneer de waarde leeg is, wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
 - **Het vereiste aantal wachtwoorden voordat de gebruiker een wachtwoord opnieuw kan gebruiken**: Gebruik deze instelling om te voorkomen dat gebruikers eerder gebruikte wachtwoorden hergebruiken. Voer het aantal eerder gebruikte wachtwoorden in dat niet opnieuw mag worden gebruikt, van 1 tot 24. Als u bijvoorbeeld `5` invoert, kan een gebruiker zijn nieuwe wachtwoord niet instellen op zijn huidige wachtwoord of een van zijn vier wachtwoorden daarvoor. Wanneer de waarde leeg is, wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
 - **Aantal mislukte aanmeldingen voordat een apparaat wordt gewist**: Voer het aantal onjuiste wachtwoorden tussen 4 en 11 in dat is toegestaan voordat het apparaat wordt gewist. Met `0` (nul) kan de functionaliteit voor het wissen van het apparaat worden uitgeschakeld. Wanneer de waarde leeg is, wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
+
+  > [!NOTE]
+  > Op Apparaateigenaar-apparaten wordt niet gevraagd om een wachtwoord in te stellen. De instellingen worden afgedwongen en u moet het wachtwoord handmatig instellen. Het beleid waarmee dit wordt afgedwongen wordt als mislukt gerapporteerd totdat u een wachtwoord instelt dat aan uw vereisten voldoet.
 
 ### <a name="power-settings"></a>Energie-instellingen
 

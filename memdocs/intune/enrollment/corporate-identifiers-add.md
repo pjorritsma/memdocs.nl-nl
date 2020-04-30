@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 483f82e67c3f5d8ad3b4e55fba73e21eba85d49d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 03df52662aaced80280192b9096c6d169020b55d
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327153"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81615457"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Apparaten identificeren als bedrijfseigendom
 
@@ -128,3 +128,9 @@ De apparaateigenschappen tonen **Eigendom** voor de records van elk apparaat in 
 3. Selecteer voor **Apparaateigendom** de optie **Persoonlijk** of **Zakelijk**.
 
    ![Apparaateigenschappen die de apparaatcategorie en opties van Apparaateigendom weergeeft](./media/corporate-identifiers-add/device-properties.png)
+
+U kunt uit het oogpunt van privacy een pushmelding configureren die naar de gebruikers van zowel de Android- als de iOS-bedrijfsportal wordt verzonden wanneer het eigendomstype voor hun apparaat is gewijzigd van **Persoonlijk** in **Zakelijk**. 
+
+Wanneer het eigendomstype van een apparaat wordt gewijzigd van Zakelijk in Persoonlijk, worden alle app-gegevens die eerder van het apparaat zijn verzameld, binnen zeven dagen verwijderd door Intune. Indien van toepassing, verwijdert Intune ook het bewaarde telefoonnummer. Via Intune wordt nog steeds een inventaris gemaakt van de apps die door de IT-beheerder op het apparaat worden geïnstalleerd en wordt nog steeds een gedeeltelijk telefoonnummer voor het apparaat verzameld nadat het is gemarkeerd als persoonlijk.
+
+U kunt deze instelling vinden in Microsoft Endpoint Manager door **Tenantbeheer** > **Aanpassing** te selecteren. Zie [Bedrijfsportal - Configuratie](../apps/company-portal-app.md#configuration) voor meer informatie.

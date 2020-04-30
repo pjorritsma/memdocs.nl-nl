@@ -9,6 +9,7 @@ ms.date: 10/31/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ''
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 38d1b40ecdeee5bfd872297a5fd4f0229cb48dcf
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 268ed874be65c9ade7f801b89528d1a23f176ee1
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79337587"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077798"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-disa-purebred"></a>iOS- of iPadOS-apparaat instellen met bedrijfsportal en DISA Purebred  
 
@@ -39,10 +40,10 @@ U moet waarschijnlijk een afgeleide referentie instellen als u een smartcard geb
 In dit artikel gaat u het volgende doen:  
 
    * Een mobiel iOS- of iPadOS-apparaat inschrijven met Intune-bedrijfsportal.  
-   * Een afgeleide referentie ophalen van de provider van afgeleide referenties van uw organisatie, [DISA Purebred](https://cyber.mil/pki-pke/purebred/).  
+   * Een afgeleide referentie ophalen bij de provider van afgeleide referenties van uw organisatie, DISA Purebred: https:\//cyber.mil/pki-pke/purebred/.  
 
 ## <a name="what-are-derived-credentials"></a>Wat zijn afgeleide referenties?  
-Een afgeleide referentie is een certificaat dat is afgeleid van uw smartcardreferenties en op uw apparaat is geïnstalleerd. Het biedt u externe toegang tot werkresources, waarbij wordt voorkomen dat onbevoegde gebruikers toegang krijgen tot gevoelige informatie.  
+Een afgeleide referentie is een certificaat dat is afgeleid van uw smartcardreferenties en dat op uw apparaat is geïnstalleerd. Het biedt u externe toegang tot werkresources, waarbij wordt voorkomen dat onbevoegde gebruikers toegang krijgen tot gevoelige informatie.  
 
 Afgeleide referenties worden gebruikt voor het volgende: 
 * Studenten en medewerkers verifiëren die zich aanmelden bij school-of werk-apps, Wi-Fi en VPN
@@ -118,7 +119,7 @@ Tijdens de installatie moet u ook contact opnemen met een Purebred-agent of-vert
 21. Ga terug naar de bedrijfsportal-app en wacht tot bedrijfsportal uw apparaat heeft ingesteld.   
 
 ## <a name="next-steps"></a>Volgende stappen  
-Nadat de inschrijving is voltooid, hebt u toegang tot werkresources, zoals e-mail, Wi-Fi en alle apps die uw organisatie beschikbaar maakt. Als u meer informatie wilt over hoe u apps ophaalt, zoekt, installeert en verwijdert in de bedrijfsportal raadpleegt u:
+Nadat de inschrijving is voltooid, hebt u toegang tot werkresources, zoals e-mail, Wi-Fi en alle apps die uw organisatie beschikbaar stelt. Als u meer informatie wilt over hoe u apps ophaalt, zoekt, installeert en verwijdert in bedrijfsportal raadpleegt u:
 
 * [Apps beheren via de Bedrijfsportalwebsite](manage-apps-cpweb.md)  
 * [Beheerde apps op een apparaat gebruiken](use-managed-apps-on-your-device-ios.md)  

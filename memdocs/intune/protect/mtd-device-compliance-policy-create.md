@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/20/2019
+ms.date: 04/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e05577967d874ea8e3cd5e4bdd5e20e204158921
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: eb5a04b8db382345cbf8f3e86feab8b3cea9efd9
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325443"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81615688"
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>MTD-nalevingsbeleid (Mobile Threat Defense) voor apparaten maken met Intune
 
@@ -59,6 +59,11 @@ Vereisten voor apparaatnalevingsbeleid met MTD:
    - **Gemiddeld**: het apparaat is conform als de bedreigingen op het apparaat van laag of gemiddeld niveau zijn. Als er bedreigingen van hoog niveau worden aangetroffen, wordt het apparaat als niet-compatibel beoordeeld.
 
    - **Hoog**: dit is het minst veilige niveau. Hiermee worden alle bedreigingsniveaus toegestaan en wordt Mobile Threat Defense uitsluitend gebruikt voor rapportagedoeleinden. Op apparaten moet de MTD-app met deze instelling zijn geactiveerd.
+
+   > [!IMPORTANT]
+   > Als Android Enterprise-apparaateigenaar kunt u beleid na het maken en opslaan niet meer bewerken om het bedreigingsniveau te wijzigen. Bewerkingen om het apparaatdreigingsniveau te wijzigen voor de Apparaatstatus-instelling **Vereisen dat het apparaat het apparaatdreigingsniveau niet overschrijdt** worden niet doorgevoerd. Als u de bedreigingsniveauwaarde wilt wijzigen, moet u het huidige beleid verwijderen en nieuw beleid maken waarmee het gewenste bedreigingsniveau wordt ingesteld.
+   >
+   > Dit is een bekend probleem dat wordt opgelost in een toekomstige update voor Intune.
 
 6. Selecteer tweemaal **OK** en vervolgens **Maken** om het beleid te maken.
 

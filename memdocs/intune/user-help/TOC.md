@@ -28,7 +28,7 @@
 ### [Tijd van de vergrendeling instellen](set-the-amount-of-time-before-your-device-is-locked-android.md)
 ### [VPN installeren](install-your-companys-virtual-private-network-VPN-android.md)
 ### [Gegevensverzameling door Microsoft uitschakelen](turn-off-microsoft-usage-data-collection-android.md)
-### [Wat gebeurt er als u de registratie van een apparaat bij Intune ongedaan maakt?](what-happens-if-you-unenroll-your-device-from-intune-android.md)
+### [Wat gebeurt er als u de registratie van uw apparaat bij Intune ongedaan maakt?](what-happens-if-you-unenroll-your-device-from-intune-android.md)
 #### [De inschrijving van het apparaat ongedaan maken](unenroll-your-device-from-intune-android.md)
 #### [De registratie van een apparaat ongedaan maken als u de gebruiksvoorwaarden hebt afgewezen](unenroll-your-device-from-intune-if-you-declined-terms-of-use-android.md)
 
@@ -54,12 +54,11 @@
 #### [Niet-ondersteunde beveiligingspatch](you-need-to-update-your-device-OS-security-patch-android.md)
 #### [Apparaten met versleutelingsfouten](your-device-appears-encrypted-but-cp-says-otherwise-android.md)
 
-### Mobile Threat Defense
-#### [Mobile Threat Defense-apps installeren](you-are-prompted-to-install-mtd-android.md)
-##### [Lookout for Work installeren](you-are-prompted-to-install-lookout-for-work-android.md)
-##### [Symantec Endpoint Protection Mobile installeren](you-are-prompted-to-install-skycure-android.md)
-##### [SandBlast Mobile Protect installeren](you-are-prompted-to-install-sandblast-android.md)
-##### [Zimperium zIPS installeren](you-are-prompted-to-install-zips-android.md)
+### Mobile Threat Defense-apps 
+#### [Lookout for Work installeren](you-are-prompted-to-install-lookout-for-work-android.md)
+#### [Symantec Endpoint Protection Mobile installeren](you-are-prompted-to-install-skycure-android.md)
+#### [SandBlast Mobile Protect installeren](you-are-prompted-to-install-sandblast-android.md)
+#### [Zimperium zIPS installeren](you-are-prompted-to-install-zips-android.md)
 #### [Een bedreiging oplossen](you-need-to-resolve-a-threat-found-by-mtd-android.md)
 ##### [Lookout for Work gebruiken](you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md)
 ##### [Symantec Endpoint Protection Mobile gebruiken](you-need-to-resolve-a-threat-found-by-skycure-android.md)
@@ -99,12 +98,11 @@
 #### [Uw apparaat bijwerken voor de installatie van Outlook](update-device-outlook-ios.md)
 #### [Mijn versie van iOS wordt nog niet ondersteund](your-ios-version-isnt-yet-supported.md)
 
-### Mobile Threat Defense
-#### [Mobile Threat Defense-apps installeren](you-are-prompted-to-install-mtd-ios.md)
-##### [Lookout for Work installeren](you-are-prompted-to-install-lookout-for-work-ios.md)
-##### [Symantec Endpoint Protection Mobile installeren](you-are-prompted-to-install-skycure-ios.md)
-##### [SandBlast Mobile Protect installeren](you-are-prompted-to-install-sandblast-ios.md)
-##### [Zimperium zIPS installeren](you-are-prompted-to-install-zips-ios.md)
+### Mobile Threat Defense-apps
+#### [Lookout for Work installeren](you-are-prompted-to-install-lookout-for-work-ios.md)
+#### [Symantec Endpoint Protection Mobile installeren](you-are-prompted-to-install-skycure-ios.md)
+#### [SandBlast Mobile Protect installeren](you-are-prompted-to-install-sandblast-ios.md)
+#### [Zimperium zIPS installeren](you-are-prompted-to-install-zips-ios.md)
 #### [Een bedreiging oplossen](you-need-to-resolve-a-threat-found-by-mtd-ios.md)
 ##### [Lookout for Work gebruiken](you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md)
 ##### [Symantec Endpoint Protection Mobile gebruiken](you-need-to-resolve-a-threat-found-by-skycure-ios.md)

@@ -1,0 +1,105 @@
+---
+title: De-client installeren met Azure AD
+titleSuffix: Configuration Manager
+description: De Configuration Manager-client op Windows 10-apparaten installeren en toewijzen met behulp van Azure Active Directory voor verificatie
+ms.date: 03/20/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-client
+ms.topic: conceptual
+ms.assetid: a44006eb-8650-49f6-94e1-18fa0ca959ee
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 9a55440e7ba61ec62d9f0c91c0a23b98bab5884c
+ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.translationtype: MT
+ms.contentlocale: nl-NL
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81713497"
+---
+# <a name="install-and-assign-configuration-manager-windows-10-clients-using-azure-ad-for-authentication"></a>Configuration Manager Windows 10-clients installeren en toewijzen met behulp van Azure AD voor verificatie
+
+Als u de Configuration Manager-client op Windows 10-apparaten wilt installeren met behulp van Azure AD-verificatie, integreert u Configuration Manager met Azure Active Directory (Azure AD). Clients kunnen zich op het intranet bevindt, rechtstreeks communiceren met een HTTPS-beheer punt of een beheer punt in een site die is ingeschakeld voor verbeterde HTTP. Ze kunnen ook communiceren via internet via de CMG of met een beheer punt op internet. Dit proces maakt gebruik van Azure AD om clients te verifiëren op de Configuration Manager-site. Azure AD vervangt de nood zaak voor het configureren en gebruiken van certificaten voor client verificatie.
+
+Het instellen van Azure AD kan voor sommige klanten eenvoudiger zijn dan het instellen van een open bare-sleutel infrastructuur voor verificatie op basis van certificaten. Er zijn functies waarvoor u de site naar Azure AD moet voorbereiden, maar waarvoor de clients geen lid hoeven te zijn van Azure AD.<!-- SCCMDocs issue 1259 --> Raadpleeg voor meer informatie de volgende artikelen:
+
+- [Azure Active Directory plannen](../../plan-design/security/plan-for-security.md#bkmk_planazuread)
+- [Azure AD gebruiken voor co-beheer](../../../comanage/quickstart-hybrid-aad.md)
+
+## <a name="before-you-begin"></a>Voordat u begint
+
+- Een Azure AD-Tenant is een vereiste  
+
+- Apparaat vereisten:  
+
+  - Windows 10  
+
+  - Toegevoegd aan Azure AD, ofwel zuivere Cloud domein lid of hybride Azure AD-lid  
+
+- Gebruikers vereisten:  
+
+  - De aangemelde gebruiker moet een Azure AD-identiteit zijn.
+
+  - Als de gebruiker een federatieve of gesynchroniseerde identiteit is, moet u Configuration Manager [Active Directory gebruikers detectie](../../servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) en [Azure AD-gebruikers detectie](../../servers/deploy/configure/about-discovery-methods.md#azureaddisc)gebruiken. Zie [een strategie voor het implementeren van een hybride identiteit definiëren](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-identity-adoption-strategy)voor meer informatie over hybride identiteiten.<!--497750-->  
+
+- Naast de [bestaande vereisten](../../plan-design/configs/site-and-site-system-prerequisites.md#bkmk_2012MPpreq) voor de site systeemrol van het beheer punt, schakelt u ook **ASP.net 4,5** in op deze server. Andere opties bevatten die automatisch worden geselecteerd bij het inschakelen van ASP.NET 4,5.  
+
+- Bepaal of het beheer punt HTTPS vereist. Zie [beheer punt voor HTTPS inschakelen](../manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_mphttps)voor meer informatie.  
+
+- Stel eventueel een CMG ( [Cloud Management Gateway](../manage/cmg/plan-cloud-management-gateway.md) ) in voor het implementeren van clients op internet. Voor on-premises clients die worden geverifieerd met Azure AD, hebt u geen CMG nodig.  
+
+> [!TIP]
+> Vanaf versie 2002,<!--5686290--> Configuration Manager breidt de ondersteuning uit voor apparaten op Internet die niet vaak verbinding maken met het interne netwerk, geen lid kunnen worden van Azure Active Directory (Azure AD) en geen methode hebben om een door PKI uitgegeven certificaat te installeren. Zie [verificatie op basis van tokens voor CMG](deploy-clients-cmg-token.md)voor meer informatie.
+
+## <a name="configure-azure-services-for-cloud-management"></a>Azure-Services configureren voor Cloud beheer
+
+Verbind uw Configuration Manager-site als de eerste stap met Azure AD. Zie [Azure-Services configureren](../../servers/deploy/configure/azure-services-wizard.md)voor meer informatie over dit proces. Maak een verbinding met de **Cloud beheer** service.
+
+Schakel [Azure AD-gebruikers detectie](../../servers/deploy/configure/configure-discovery-methods.md#azureaadisc) in als onderdeel van onboarding voor **Cloud beheer**.
+
+Nadat u deze acties hebt voltooid, is uw Configuration Manager-site verbonden met Azure AD.
+
+## <a name="configure-client-settings"></a>Clientinstellingen configureren
+
+Deze client instellingen helpen bij het samen voegen van Windows 10-apparaten met Azure AD. Ze kunnen ook clients op internet in staat stellen het CMG-en Cloud distributiepunt te gebruiken.
+
+1. Configureer de volgende client instellingen in de sectie **Cloud Services** met behulp van de informatie in het [configureren van client instellingen](configure-client-settings.md).  
+
+    - **Toegang tot Cloud distributiepunt toestaan**: Schakel deze instelling in om op internet apparaten te helpen de vereiste inhoud op te halen om de Configuration Manager-client te installeren. Als de inhoud niet beschikbaar is op het Cloud distributiepunt, kunnen apparaten de inhoud ophalen uit de CMG. Met de Boots trap van de client installatie wordt een nieuwe poging gedaan om het Cloud distributiepunt voor vier uur voordat het terugvalt op de CMG.<!--495533-->  
+
+    - **Nieuwe Windows 10-apparaten die lid zijn van een domein automatisch registreren bij Azure Active Directory**: ingesteld op **Ja** of **Nee**. De standaard instelling is **Ja**. Dit is ook de standaard instelling in Windows 10, versie 1709.
+
+    - **Clients inschakelen om een Cloud beheer gateway te gebruiken**: ingesteld op **Ja** (standaard) of **Nee**.  
+
+2. Implementeer de client instellingen op de vereiste verzameling apparaten. Implementeer deze instellingen niet voor gebruikers verzamelingen.
+
+Als u wilt bevestigen dat het apparaat is gekoppeld aan Azure `dsregcmd.exe /status` AD, voert u uit vanaf een opdracht prompt. In het veld **AzureAdjoined** in de resultaten wordt **Ja** weer gegeven als het apparaat is toegevoegd aan Azure AD.
+
+## <a name="install-and-register-the-client-using-azure-ad-identity"></a>De client installeren en registreren met Azure AD-identiteit
+
+Als u de-client hand matig wilt installeren met behulp van Azure AD-identiteit, raadpleegt u eerst het algemene proces voor het [hand matig installeren van clients](deploy-clients-to-windows-computers.md#BKMK_Manual).
+
+ > [!Note]  
+ > Het apparaat moet toegang hebben tot het internet om contact op te nemen met Azure AD, maar dit is niet nodig op internet.
+
+In het volgende voor beeld ziet u de algemene structuur van de opdracht regel:`ccmsetup.exe /mp:<source management point> CCMHOSTNAME=<internet-based management point> SMSSiteCode=<site code> SMSMP=<initial management point> AADTENANTID=<Azure AD tenant identifier> AADCLIENTAPPID=<Azure AD client app identifier> AADRESOURCEURI=<Azure AD server app identifier>`
+
+Zie [Eigenschappen van client installatie](about-client-installation-properties.md)voor meer informatie.
+
+De para meter **/MP** en de eigenschap **CCMHOSTNAME** geven een van de volgende op, afhankelijk van het scenario:
+
+- On-premises beheer punt. Geef alleen de para meter **/MP** op. De eigenschap **CCMHOSTNAME** is niet vereist.
+- Cloudbeheergateway
+-  Beheerpunt op internet
+
+De eigenschap **SMSMP** geeft het on-premises of op internet gebaseerd beheer punt op.
+
+In dit voor beeld wordt een Cloud beheer gateway gebruikt. Er worden voorbeeld waarden vervangen:`ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver`
+
+De site publiceert extra Azure AD-gegevens naar de Cloud beheer gateway (CMG). Een client die lid is van Azure AD, haalt deze informatie op uit de CMG tijdens het ccmsetup-proces, waarbij dezelfde Tenant wordt gebruikt waaraan deze is gekoppeld. Dit gedrag vereenvoudigt het installeren van de client in een omgeving met meer dan één Azure AD-Tenant. De enige twee vereiste ccmsetup-eigenschappen zijn **CCMHOSTNAME** en **SMSSiteCode**.<!--3607731-->
+
+Zie op [Internet gebaseerde apparaten voorbereiden voor co-beheer](../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client)om de client installatie te automatiseren met behulp van de Azure AD-identiteit via Microsoft intune.
+
+## <a name="next-steps"></a>Volgende stappen
+
+Zodra het proces is voltooid, kunt u door gaan met het [bewaken en beheren van clients](../manage/monitor-clients.md).

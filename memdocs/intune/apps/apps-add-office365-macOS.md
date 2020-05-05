@@ -1,12 +1,12 @@
 ---
-title: Office 365 installeren op macOS-apparaten met Microsoft Intune
+title: Office 365-apps installeren op macOS-apparaten met Microsoft Intune
 titleSuffix: ''
 description: Meer informatie over hoe u Microsoft Intune kunt gebruiken om Office 365-apps op macOS-apparaten te installeren.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 04/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,32 +18,34 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 007d5929c6d1b0dd953d4910b31c872582e817cc
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 39837fc3d97389d830fb1befe7e55c276022d351
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324854"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023228"
 ---
 # <a name="assign-office-365-to-macos-devices-with-microsoft-intune"></a>Office 365 toewijzen aan macOS-apparaten met Microsoft Intune
 
-Met dit type app kunt u Office 365 2016-apps eenvoudig toewijzen aan macOS-apparaten. Door dit type app te gebruiken, kunt u Word, Excel, PowerPoint, Outlook en OneNote installeren. Deze apps worden ook geleverd met Microsoft AutoUpdate (MAU) om ervoor te zorgen dat de apps veiliger worden en up-to-date blijven. De apps die u wilt, worden als één app weergegeven in de lijst met apps in de Intune-console.
+Met dit type app kunt u Office 365 2016-apps eenvoudig toewijzen aan macOS-apparaten. Door dit type app te gebruiken, kunt u Word, Excel, PowerPoint, Outlook, OneNote en Teams installeren. Deze apps worden ook geleverd met Microsoft AutoUpdate (MAU) om ervoor te zorgen dat de apps veiliger worden en up-to-date blijven. De apps die u wilt, worden als één app weergegeven in de lijst met apps in de Intune-console.
 
+> [!NOTE]
+> De naam van Microsoft Office 365 ProPlus is gewijzigd in **Microsoft 365-apps voor ondernemingen**. In onze documentatie verwijzen we er doorgaans naar met **Microsoft 365-apps**.
 
 ## <a name="before-you-start"></a>Voordat u begint
 
-Voordat u Office 365 gaat toevoegen aan macOS-apparaten, moet u de volgende details begrijpen:
+Voordat u Office 365-apps gaat toevoegen aan macOS-apparaten, moet u de volgende details begrijpen:
 
 - Op de apparaten waarop u deze apps implementeert, moet macOS 10.10 of hoger zijn geïnstalleerd.
 - Intune ondersteunt alleen het toevoegen van de Office-apps die in het Office 2016 voor Mac-pakket zijn opgenomen.
 - Als er Office-apps zijn geopend wanneer Intune het app-pakket installeert, verliezen gebruikers mogelijk gegevens in niet-opgeslagen bestanden.
 
-## <a name="select-the-office-365-suite-app-type"></a>Het app-type Office 365 Suite selecteren
+## <a name="select-microsoft-365-apps"></a>Microsoft 365-apps selecteren
 
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecteer **Apps** > **Alle apps** > **Toevoegen**.
-3. Selecteer **macOS** in het gedeelte **Office 365 Suite** van het deelvenster **Een app-type selecteren**.
-4. Klik op **Selecteren**. De stappen voor **Office 365 Suite toevoegen** worden weergegeven.
+3. Selecteer **macOS** in de sectie **Microsoft 365-apps** van het deelvenster **Een app-type selecteren**.
+4. 4. Klik op **Selecteren**. De stappen voor **Microsoft 365-apps toevoegen** worden weergegeven.
 
 ## <a name="step-1---app-suite-information"></a>Stap 1: Gegevens over de app-suite
 
@@ -60,7 +62,7 @@ In deze stap geeft u informatie op over het app-pakket. Aan de hand van deze inf
     - **Ontwikkelaar**: Microsoft wordt weergegeven als de ontwikkelaar.
     - **Eigenaar**: Microsoft wordt weergegeven als de eigenaar.
     - **Opmerkingen**: voer de opmerkingen in die u aan deze app wilt koppelen.
-    - **Logo**: het Office 365-logo wordt samen met de app weergegeven wanneer gebruikers door de bedrijfsportal bladeren.
+    - **Logo**: Het logo van Microsoft 365-apps wordt samen met de app weergegeven wanneer gebruikers door de bedrijfsportal bladeren.
 2. Klik op **Volgende** om de pagina **Bereiktags** weer te geven.
 
 ## <a name="step-2---select-scope-tags-optional"></a>Stap 2: Bereiktags selecteren (optioneel)
@@ -74,7 +76,7 @@ U kunt bereiktags gebruiken om te bepalen wie er informatie over client-apps mag
 1. Selecteer de groepstoewijzingen **Vereist** of **Beschikbaar voor ingeschreven apparaten** voor de app-suite. Zie [Groepen toevoegen om gebruikers en apparaten in te delen](../fundamentals/groups-add.md) en [Apps toewijzen aan groepen met Microsoft Intune](apps-deploy.md) voor meer informatie.
 
     >[!Note]
-    > U kunt de Office 365 voor macOS-app-suite niet via Intune verwijderen.
+    > U kunt de Microsoft 365-apps voor macOS-app-suite niet via Intune verwijderen.
 
 2. Klik op **Volgende** om naar de pagina **Controleren en maken** weer te geven. 
 
@@ -83,9 +85,9 @@ U kunt bereiktags gebruiken om te bepalen wie er informatie over client-apps mag
 1. Controleer de waarden en instellingen die u hebt ingevoerd voor de app-suite.
 2. Klik als u klaar bent op **Maken** om de app toe te voegen aan Intune.
 
-    De blade **Overzicht** van de Office 365 voor Window 10-app-suite die u hebt gemaakt, wordt weergegeven. Het pakket wordt in de lijst met apps als een afzonderlijk item weergegeven.
+    De blade **Overzicht** wordt weergegeven. Het pakket wordt in de lijst met apps als een afzonderlijk item weergegeven.
 
 ## <a name="next-steps"></a>Volgende stappen
 
-- Zie [Apps van Office 365 ProPlus 2016 toewijzen aan Windows 10-apparaten met Microsoft Intune](apps-add-office365.md) voor meer informatie over het toevoegen van Office 365-apps aan Windows 10-apparaten.
+- Zie [Apps van Microsoft 365 toewijzen aan Windows 10-apparaten met Microsoft Intune](apps-add-office365.md) voor meer informatie over het toevoegen van Office 365-apps aan Windows 10-apparaten.
 - Zie voor meer informatie over app-toewijzingen opnemen in of uitsluiten uit groepen gebruikers [App-toewijzingen opnemen en uitsluiten](apps-inc-exl-assignments.md).

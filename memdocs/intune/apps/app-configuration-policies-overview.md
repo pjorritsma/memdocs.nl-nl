@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 04/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e5abdfe69d5553be420d96da60f34df93a6b2f4
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: f4dd0b1702b06f3efbed07a70b13a59b271816f8
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083671"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023007"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>App-configuratiebeleid voor Microsoft Intune
 
@@ -72,6 +72,20 @@ Als u **Beheerde apps** selecteert als het **Type apparaatregistratie**, verwijs
 
 > [!NOTE]
 > Voor apps met meerdere identiteiten, zoals Microsoft Outlook, kunnen gebruikersvoorkeuren worden overwogen. Zo worden voor het Postvak IN met prioriteit de gebruikersinstellingen gerespecteerd en wordt de configuratie ervan niet gewijzigd. Met andere parameters kunt u bepalen of een gebruiker de instelling wel of niet kan wijzigen. Zie [Configuratie-instellingen voor de Outlook-app voor iOS/iPadOS en Android implementeren](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune) voor meer informatie.
+
+## <a name="android-app-configuration-policies"></a>Configuratiebeleidsregels voor Android-apps
+
+Voor Android-app-configuratiebeleid kunt u het type apparaatinschrijving selecteren voordat er een app-configuratieprofiel wordt gemaakt. U bent op de hoogte van de certificaatprofielen die worden gebaseerd op het type inschrijving (werkprofiel of apparaateigenaar). Deze update biedt het volgende:
+
+1. Als er een nieuw profiel wordt gemaakt en Werkprofiel en Apparaateigenaarprofiel als het type apparaatinschrijving zijn geselecteerd, kunt u geen certificaatprofiel aan het app-configuratiebeleid koppelen.
+2. Als er een nieuw profiel wordt gemaakt en alleen Werkprofiel is geselecteerd, kan Werkprofiel-certificaatbeleid dat is gemaakt onder Apparaatconfiguratie worden gebruikt.
+3. Als er een nieuw profiel wordt gemaakt en alleen Apparaateigenaar is geselecteerd, kan Apparaateigenaar-certificaatbeleid dat is gemaakt onder Apparaatconfiguratie worden gebruikt. 
+4. Als u een Gmail- of Nine-configuratieprofiel implementeert op een toegewezen Android Enterprise-apparaat dat geen gebruiker heeft, mislukt dit omdat de gebruiker niet kan worden omgezet met Intune.
+
+> [!IMPORTANT]
+> Bestaand beleid dat is gemaakt voorafgaand aan de release van deze functie (release april 2020 - 2004) en waarvoor geen certificaatprofielen zijn gekoppeld aan het beleid, wordt het type apparaatinschrijving standaard ingesteld op Werkprofiel en Apparaateigenaarprofiel. Bestaand beleid dat is gemaakt voorafgaand aan de release van deze functie en waaraan certificaatprofielen zijn gekoppeld, wordt bovendien standaard ingesteld op uitsluitend Werkprofiel.
+> 
+> Met bestaand beleid worden geen nieuwe certificaten hersteld of uitgegeven.
 
 ## <a name="validate-the-applied-app-configuration-policy"></a>Het toegepaste app-configuratiebeleid valideren
 
@@ -149,7 +163,7 @@ U kunt de iOS-/iPadOS-configuratie valideren met het **diagnostische logboek van
 
 ### <a name="android-configuration-on-managed-devices"></a>Android-configuratie op beheerde apparaten
 
-U kunt de iOS-/iPadOS-configuratie valideren met het **diagnostische logboek van Intune** op beheerde apparaten voor de configuratie van beheerde apps.
+U kunt de Android-configuratie valideren met het **diagnostische logboek van Intune** op beheerde apparaten voor de configuratie van beheerde apps.
 
 Als u logboeken van een Android-apparaat wilt verzamelen, moet u of de eindgebruiker de logboeken van het apparaat downloaden via een USB-verbinding (of het equivalent van **File Explorer** op het apparaat). Dit zijn de stappen:
 

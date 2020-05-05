@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 633adc8fa28f422c4b21958675efb53cb2571d39
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: a0cf2096b4a8862a29d47bc05aa29f0cbb48792b
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324734"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023245"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Apps toevoegen aan Microsoft Intune 
 
@@ -56,8 +56,8 @@ De volgende tabel bevat de specifieke app-typen en informatie over hoe u deze ku
 | Windows Phone 8.1 Store-apps  | Store-app  | Selecteer **Windows Phone 8.1** als het **app-type** en voer de URL van de Microsoft Store in voor de app. |
 | Microsoft Store-apps  | Store-app  | Selecteer **Windows** als het **app-type** en voer de URL van de Microsoft Store in voor de app. |
 | Beheerde Google Play-apps | Store-app  | Selecteer **Beheerde Google Play** als het **apptype**, zoek de app en selecteer de app in Intune. |
-| Office 365-apps voor Windows 10  | Store-app (Office 365) | Selecteer **Windows 10** bij **Office 365-suite** als het **app-type** en selecteer vervolgens de Office 365-app die u wilt installeren.  |
-| Office 365-apps voor macOS | Store-app (Office 365) | Selecteer **macOS** bij **Office 365-suite** als het **app-type** en selecteer vervolgens de Office 365-app-suite. |
+| Office 365-apps voor Windows 10  | Store-app (Office 365) | Selecteer **Windows 10** bij **Microsoft 365-apps** als het **app-type**, en selecteer vervolgens de Office 365-app die u wilt installeren.  |
+| Office 365-apps voor macOS | Store-app (Office 365) | Selecteer **macOS** bij **Microsoft 365-apps** als het **app-type** en selecteer vervolgens de Office 365-app-suite. |
 | Microsoft Edge versie 77 en hoger voor Windows 10 | Store-app | Selecteer **Windows 10** bij **Microsoft Edge versie 77 en hoger** als het **app-type**. |
 | Microsoft Edge versie 77 en hoger voor macOS | Store-app | Selecteer **macOS** bij **Microsoft Edge versie 77 en hoger** als het **app-type**. |
 | Android LOB-apps (Line-Of-Business) | LOB-app | Selecteer **Line-Of-Business**-app als het **app-type**, selecteer het **app-pakketbestand** en voeg vervolgens een Android-installatiebestand toe met de extensie **.apk**.  |
@@ -121,7 +121,7 @@ Raadpleeg de sectie 'Apps' binnen de sectie 'Functievereisten' in [Een ontwerp m
 U kunt in Intune de functionaliteit wijzigen van apps die u implementeert, zodat deze in overeenstemming zijn met het nalevings- en beveiligingsbeleid van uw bedrijf. Met dit beheer kunt u bepalen hoe de bedrijfsgegevens worden beveiligd. Door Intune beheerde apps worden ingeschakeld met een uitgebreide reeks van beveiligingsbeleidsregels voor mobiele toepassingen, zoals:
 
 - De beperking van functies voor kopiëren en plakken en opslaan als.
-- De configuratie van webkoppelingen zodat deze in de Intune-app Managed Browser worden geopend.
+- Webkoppelingen zo configureren dat deze in de Microsoft Edge-app worden geopend.
 - De inschakeling van het gebruik van meerdere identiteiten en voorwaardelijke toegang op app-niveau.
 
 Voor apps die door Intune worden beheerd, kan ook app-beveiliging worden ingeschakeld zonder dat een apparaat hoeft te worden ingeschreven. U kunt op die manier beleid voor de preventie van gegevensverlies toepassen zonder dat u het apparaat van de gebruiker hoeft te beheren. Daarnaast kunt u het beheer van mobiele apps in uw mobiele apps en LOB-apps opnemen via de Intune App SDK en de App Wrapping Tool. Raadpleeg [Overzicht van de Intune App SDK](../developer/app-sdk.md) voor meer informatie over deze hulpprogramma's.

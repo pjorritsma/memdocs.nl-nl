@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 82e02795dc9dbcbc0598218418404fe74fdf1226
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: e6a3e2b9026024791ef1a9e4eb5aca08718d8573
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551621"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023160"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>Beleidssets gebruiken om verzamelingen beheerobjecten te groeperen
 
@@ -89,7 +89,7 @@ Voor beleidssets, nieuw voor 1910, zijn de volgende problemen bekend.
   - Android Store-app
   - Line-Of-Business-app voor Android
   - Beheerde Line-Of-Business-app voor Android
-  - Office 365 ProPlus-suite (Windows 10)
+  - Microsoft 365-apps (Windows 10)
   - Webkoppeling
   - Ingebouwde iOS/iPadOS-app
   - Ingebouwde Android-app
@@ -121,6 +121,7 @@ Voor beleidssets, nieuw voor 1910, zijn de volgende problemen bekend.
     Als een beleidsregel wordt toegevoegd aan een beleidsset die is geïmplementeerd voor een groep, wordt de groep weergegeven als rechtstreeks in de workload toegewezen, niet als 'toegewezen via de beleidsset'. Als gevolg hiervan worden in MAM geen verwijderingen verwerkt van groepstoewijzingen die afkomstig zijn uit beleidssets.
 
 - MAM biedt geen ondersteuning voor implementatie in de virtuele groepen **Alle gebruikers** en **Alle apparaten**. Dit geldt voor alle beleidstypen.
+- Het apparaatconfiguratieprofiel van het type Beheersjablonen kan niet worden geselecteerd als onderdeel van een beleidsset.
 
 ## <a name="next-steps"></a>Volgende stappen
 

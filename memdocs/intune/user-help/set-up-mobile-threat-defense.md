@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/25/2019
+ms.date: 04/27/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: b5df63a14f27b657c585eb43e09b02368d969939
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 676af3373acd399056a0ebdc77c9152442a72101
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084401"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82182273"
 ---
 # <a name="install-mobile-threat-defense"></a>Mobile Threat Defense installeren   
 
@@ -30,7 +30,7 @@ Als onderdeel van de beveiligingsvereisten van uw organisatie moet u mogelijk ee
 
 Als u niet over de vereiste MTD-app beschikt, kunt u zich niet via uw werk- of schoolaccount aanmelden bij beveiligde apps. In dit artikel leert u [hoe u een MTD-app installeert](set-up-mobile-threat-defense.md#install-app) om de blokkering op te heffen.  
 
-Er zijn diverse MTD-apps beschikbaar die u kunt installeren. Uw organisatie laat u weten welke app u moet gebruiken. 
+Er zijn diverse MTD-apps voor leveranciers die u kunt installeren, allemaal met verschillende namen. Uw bedrijf informeert u welke app u moet gebruiken. Als u wordt gevraagd om de app te installeren maar geen verdere instructies of een link heeft ontvangen om aan de app te komen, neemt u contact op met uw IT-ondersteuningsmedewerker. 
 
 
 ## <a name="information-your-organization-can-see"></a>Informatie die uw organisatie kan zien   

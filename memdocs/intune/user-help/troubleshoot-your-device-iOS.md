@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/02/2017
+ms.date: 04/27/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,16 +19,16 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: e8b2fe2cfa080c5fffc1e66e66a397a036d794c6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 65a7c561e8686a88367d70bf17d0f08eee80af02
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79347181"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82210329"
 ---
-# <a name="fix-common-issues-with-your-ios-device"></a>Veelvoorkomende problemen met uw iOS-apparaat herstellen
+# <a name="fix-common-problems-with-your-ios-device"></a>Veelvoorkomende problemen met uw iOS-apparaat oplossen
 
-Soms kunnen er problemen optreden met uw iOS-apparaat die zou kunnen worden hersteld via het oplossen van problemen. Enkele veelvoorkomende problemen die u eerst zelf kunt proberen op te lossen worden hieronder vermeld. Voor complexere problemen kunt u het best contact opnemen met het ondersteuningsteam van het bedrijf via de contactgegevens op de [bedrijfsportalwebsite](https://go.microsoft.com/fwlink/?linkid=2010980).
+Met de links in dit artikel vindt u antwoorden op veelgestelde vragen over de iOS-inschrijving of over het oplossen van problemen met iOS. Als u een vraag hebt of hulp nodig hebt met iets dat hier niet wordt vermeld, neemt u contact op met uw IT-ondersteuningsmedewerker met behulp van de contactgegevens op de [Bedrijfsportal-website](https://go.microsoft.com/fwlink/?linkid=2010980).  
 
 - [Ik moet opnieuw verbinding maken met een iOS-apparaat waarmee is geknoeid](how-to-reconnect-a-compromised-ios-device.md)
 - [Ik wil fouten naar het ondersteuningsteam van mijn bedrijf verzenden](send-errors-to-your-it-admin-ios.md)
@@ -38,5 +38,5 @@ Soms kunnen er problemen optreden met uw iOS-apparaat die zou kunnen worden hers
 - [Hoe vind ik het serienummer op mijn apparaat?](how-do-i-find-the-serial-number-on-my-device-ios.md)
 - [Ik wil mijn iOS-apparaat bijwerken](you-need-to-update-your-ios-device.md)
 - [Mijn versie van iOS wordt nog niet ondersteund](your-ios-version-isnt-yet-supported.md)
-- [Ik moet een Mobile Threat Defense-app installeren op mijn iOS-apparaat](you-are-prompted-to-install-mtd-ios.md)
+- [Ik moet een Mobile Threat Defense-app installeren op mijn iOS-apparaat](set-up-mobile-threat-defense.md)
 - [Ik moet een bedreiging oplossen die een Mobile Threat Defense-app op mijn iOS-apparaat heeft gevonden](you-need-to-resolve-a-threat-found-by-mtd-ios.md)

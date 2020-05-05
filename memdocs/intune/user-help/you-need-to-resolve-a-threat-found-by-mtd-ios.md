@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/05/2018
+ms.date: 04/27/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,18 +17,18 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 905378b764fe3e8beee7eb90570cb9f871d9fa47
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: bc6780d8956b00e9e0f177c69f067bafa4e8b49e
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79346206"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82182987"
 ---
-# <a name="resolve-a-threat-found-by-a-mobile-threat-defense-app"></a>Een bedreiging oplossen die is gevonden door een Mobile Threat Defense-app
+# <a name="resolving-a-threat-found-by-a-mobile-threat-defense-app"></a>Een bedreiging oplossen die is gevonden door een Mobile Threat Defense-app
 
-Mobile Threat Defense-apps detecteren en waarschuwen u voor mogelijke bedreigingen op uw apparaten. Sommige organisaties integreren een Mobile Threat Defense-service in een MDM-provider, zoals Intune. Wanneer deze is geïntegreerd, worden via de Mobile Threat Defense-service bedreigingen (zoals verdachte apps, netwerken en beveiligingsproblemen in besturingssystemen) gerapporteerd en krijgt u meldingen in de bedrijfsportal-app. Vervolgens kunt u meer informatie opzoeken over de bedreiging en herstelstappen in de Mobile Threat Defense-app.  
+Een Mobile Threat Defense (MTD) detecteert potentiële bedreigingen op uw apparaat, zoals verdachte apps, netwerken of beveiligingsproblemen van besturingssystemen, en waarschuwt u. De Bedrijfsportal-app waarschuwt u wanneer er een bedreiging wordt gedetecteerd en laat u weten of deze invloed heeft op uw toegang tot school- of werkresources. Vervolgens wordt u omgeleid naar de MTD-app voor meer informatie over de dreiging en, indien beschikbaar, stappen om deze te op te lossen. 
 
-Bedreigingen worden aan u weergegeven als onopgeloste, niet-compatibele problemen in de bedrijfsportal. Als de bedreigingen als riskant genoeg zijn geclassificeerd, wordt de toegang tot de bedrijfsresources ingetrokken door uw bedrijf. Zolang deze bedreigingen op het apparaat aanwezig zijn, kunt u mogelijk geen:  
+Als een bedreiging te riskant lijkt, zoals wordt bepaald door uw organisatie, kan uw toegang tot school- of werkresources worden ingetrokken. Zolang deze bedreigingen op het apparaat aanwezig zijn, kunt u mogelijk geen:  
 
 * verbinding maken met bedrijfs-e-mail
 * verbinding maken met zakelijke Wi-Fi
@@ -36,7 +36,7 @@ Bedreigingen worden aan u weergegeven als onopgeloste, niet-compatibele probleme
 * bedrijfsbestanden synchroniseren met OneDrive
 * bedrijfsapps openen
 
-Hieronder vindt u de iOS-specifieke Mobile Threat Defense-services die uw organisatie mogelijk heeft ingesteld. Selecteer een app voor meer informatie over het gedrag ervan. 
+Er zijn diverse MTD-apps voor leveranciers beschikbaar, allemaal met verschillende namen. Hieronder vindt u enkele iOS-apps die u mogelijk hebt. Selecteer een app om te bekijken hoe deze werkt met Bedrijfsportal om u te waarschuwen voor bedreigingen. Volg de instructies in het Bedrijfsportal en de MTD-app voor meer informatie of neem contact op met uw IT-ondersteuningsmedewerker. 
 
 
 * [Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md)
@@ -44,5 +44,5 @@ Hieronder vindt u de iOS-specifieke Mobile Threat Defense-services die uw organi
 * [SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-ios.md)
 * [Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-ios.md)
 
-Nog hulp nodig? Neem contact op met het ondersteuningsteam van uw bedrijf. U vindt de contactgegevens van uw beheerder op de [bedrijfsportalwebsite](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Nog hulp nodig? Neem contact op met de ondersteuningsmedewerker van uw bedrijf. U vindt de contactgegevens van uw beheerder op de [bedrijfsportalwebsite](https://go.microsoft.com/fwlink/?linkid=2010980).  
 

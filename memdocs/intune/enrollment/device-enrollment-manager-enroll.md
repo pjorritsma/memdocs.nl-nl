@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 27ec9e4c407dd8ef1a94e9c443f62ea5456866dc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8710043244e0b6becebef60890ac1a0ec3105971
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80808134"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254636"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Apparaten registreren in Intune met een manageraccount voor apparaatregistratie
 
@@ -43,6 +43,13 @@ DEM-gebruikersaccounts en apparaten die zijn ingeschreven met een DEM-gebruikers
 - Elk apparaat dat is ingeschreven bij DEM-accounts, moet de juiste licentie hebben om te worden beheerd door Intune. De licentie kan een Intune-gebruikerslicentie of een Intune-apparaatlicentie zijn.
 - Als u [apparaten met een Android Enterprise-werkprofiel registreert](android-work-profile-enroll.md) met een Device Enrollment Manager-account, kunt u per account 10 apparaten registreren.
 - [Volledig beheerde Android Enterprise-apparaten inschrijven](android-fully-managed-enroll.md) bij DEM-accounts wordt niet ondersteund.
+- Als u beperking toepast op een Azure AD-apparaat op een DEM-account, voorkomt u dat u de limiet van 1.000 apparaten bereikt die het DEM-account kan inschrijven.
+
+## <a name="enrollment-methods-supported-by-dem-accounts"></a>Inschrijvingsmethoden die worden ondersteund door DEM-accounts
+
+- [Windows Autopilot](enrollment-autopilot.md)
+- [Bulkinschrijving voor Windows-apparaten](windows-bulk-enroll.md)
+- DEM geïnitieerd via de Bedrijfsportal
 
 ## <a name="add-a-device-enrollment-manager"></a>Een apparaatinschrijvingsmanager toevoegen
 
@@ -52,14 +59,13 @@ DEM-gebruikersaccounts en apparaten die zijn ingeschreven met een DEM-gebruikers
 
 3. Voer op de blade **Gebruiker toevoegen** een UPN-naam (User Principal Name) in voor de DEM-gebruiker en selecteer **Toevoegen**. De DEM-gebruiker wordt toegevoegd aan de lijst met DEM-gebruikers.
 
-## <a name="permissions-for-dem"></a>Machtigingen voor DEM
+## <a name="permissions-required-to-create-dem-accounts"></a>Machtigingen voor het maken van DEM-accounts
 
 De Azure AD-rollen Globale beheerder of Intune-servicebeheerder zijn vereist voor
 - het toewijzen van DEM-machtigingen aan een Azure AD-gebruikersaccount
 - het bekijken van alle DEM-gebruikers
 
 Als een gebruiker niet over de rol van globale beheerder of Intune-servicebeheerder beschikt, maar wel leesmachtigingen voor de toegewezen DEM-rol heeft, kan de gebruiker alleen de zelfgemaakte DEM-gebruikers weergeven.
-
 
 ## <a name="remove-device-enrollment-manager-permissions"></a>Machtigingen voor een apparaatinschrijvingsmanager verwijderen
 

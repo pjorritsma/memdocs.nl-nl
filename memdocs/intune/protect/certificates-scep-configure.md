@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/07/2019
+ms.date: 04/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4698c0bf286fab855b0067899c5347b643ee6ce9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 2163f420089dcd8936d6dc64b8ce02c5ff268b53
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325744"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079889"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Infrastructuur configureren om SCEP te ondersteunen in Intune
 
@@ -53,6 +53,7 @@ De volgende on-premises infrastructuur moet worden uitgevoerd op servers die dee
 - **Microsoft Intune Certificate Connector**: de Microsoft Intune Certificate Connector is vereist voor het gebruik van SCEP-certificaatprofielen in Intune. In dit artikel vindt u instructies voor het [ installeren van deze connector](#install-the-intune-certificate-connector).
 
   De connector ondersteunt ook de Federal Information Processing Standard-modus (FIPS). FIPS is niet vereist, maar wanneer deze modus is ingeschakeld, kunt u certificaten verlenen en intrekken.
+  - De connector heeft dezelfde netwerkvereisten als [beheerde apparaten](../fundamentals/intune-endpoints.md#access-for-managed-devices).
   - De connector moet worden uitgevoerd op dezelfde server als de NDES-serverfunctie, een server met Windows Server 2012 R2 of later.
   - .NET Framework 4.5 is vereist voor de connector en wordt automatisch geïnstalleerd met Windows Server 2012 R2.
   - Verbeterde beveiliging van Internet Explorer [moet zijn ingeschakeld op de server die als host fungeert voor NDES](https://technet.microsoft.com/library/cc775800(v=WS.10).aspx) en de Microsoft Intune Certificate Connector.
@@ -417,7 +418,7 @@ De Microsoft Intune Certificate Connector wordt geïnstalleerd op server waarop 
 
    2. Aan het account dat u gebruikt moet een geldige Intune-licentie zijn toegewezen.
 
-   3. Nadat u zich hebt aangemeld, wordt door de Intune Certificate Connector een certificaat van Intune gedownload. Dit certificaat wordt gebruikt voor verificatie tussen de connector en Intune. Als het account dat u hebt gebruikt geen Intune-licentie heeft, kan het certificaat niet uit Intune worden opgehaald door de connector (NDESConnectorUI. exe).  
+   3. Nadat u zich hebt aangemeld, wordt door de Intune Certificate Connector een certificaat van Intune gedownload. Dit certificaat wordt gebruikt voor verificatie tussen de connector en Intune. Als het account dat u hebt gebruikt geen Intune-licentie heeft, kan het certificaat niet uit Intune worden opgehaald door de connector (NDESConnectorUI.exe).  
 
       Als uw organisatie een proxyserver gebruikt en de NDES-server de proxy nodig heeft om toegang tot internet te krijgen, selecteert u **Proxyserver gebruiken**. Voer vervolgens de naam van de proxyserver, de poort en de accountreferenties in om verbinding te maken.
 

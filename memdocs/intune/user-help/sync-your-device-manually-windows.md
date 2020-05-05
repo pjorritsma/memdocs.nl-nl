@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: f9e62cd4c4034e4cf2eafaea56aa3e5175b1797e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: cc2fbfac43916a8298646f6ff57c146c45966b1c
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79335741"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254806"
 ---
 # <a name="sync-your-windows-device-manually"></a>Uw Windows-apparaat handmatig synchroniseren
 
@@ -40,7 +40,7 @@ Alle Windows-apparaten kunnen worden gesynchroniseerd vanuit de app Instellingen
 * [Windows Phone 8.1](#windows-phone-81)    
 
 ## <a name="sync-directly-from-company-portal-app-for-windows"></a>Rechtstreeks synchroniseren vanuit de bedrijfsportal-app voor Windows
-Voer deze stappen uit als u een Windows 10-apparaat wilt synchroniseren waarop makersupdate (versie 1703) of hoger wordt uitgevoerd.
+Voer deze stappen uit als u een Windows 10-apparaat wilt synchroniseren waarop makersupdate (versie 1709) of hoger wordt uitgevoerd.
 
 1. Open de bedrijfsportal-app op uw apparaat.
 

@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 077d7c4dd345b9b16677d61269b9f331dedb4dbb
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 54b26c2b7599906df29e5130b99dc38124e0b411
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80488088"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254789"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Bulkregistratie voor Windows-apparaten
 
@@ -32,7 +32,7 @@ Azure AD-gebruikers zijn standaardgebruikers op deze apparaten en ontvangen toeg
 
 ## <a name="prerequisites-for-windows-devices-bulk-enrollment"></a>Vereisten voor bulkregistratie van Windows-apparaten
 
-- Apparaten met een Windows 10 Creator-update (build 1703) of later
+- Apparaten met een Windows 10-makersupdate (build 1709) of later
 - [Automatische inschrijving bij Windows](windows-enroll.md#enable-windows-10-automatic-enrollment)
 
 ## <a name="create-a-provisioning-package"></a>Een inrichtingspakket maken

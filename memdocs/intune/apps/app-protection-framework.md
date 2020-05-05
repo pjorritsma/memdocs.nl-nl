@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/03/2020
+ms.date: 04/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 635804a9ad5cd76d104f16bcd204df1daa28b114
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 86117193ce7aae01380923ce26f84dfb5ba97a4d
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80696486"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82182290"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>Gegevensbeschermingsframework met beleid voor app-beveiliging 
 
@@ -37,7 +37,7 @@ Het framework voor de configuratie van gegevensbescherming met beleid voor app-b
 
 - Geavanceerde gegevensbeveiliging voor ondernemingen (niveau 2): Microsoft raadt deze configuratie aan voor apparaten waarop gebruikers toegang krijgen tot gevoelige of vertrouwelijke informatie. Deze configuratie is van toepassing voor de meeste mobiele gebruikers die toegang hebben tot werk- of schoolgegevens. Sommige van de besturingselementen kunnen van invloed zijn op de gebruikerservaring.
 
-- Hoge gegevensbeveiliging voor ondernemingen (niveau 3): Microsoft raadt deze configuratie aan voor apparaten die worden uitgevoerd door een organisatie met een groter of meer geavanceerd beveiligingsteam, of voor specifieke gebruikers of groepen die een uniek hoog risico hebben (een organisatie heeft bijvoorbeeld gebruikers geïdentificeerd die gegevens verwerken waarvan de diefstal direct ernstige gevolgen voor hun aandelenprijs zou hebben). Een organisatie die veel kans loopt het doelwit te zijn van goed gefinancierde en geavanceerde aanvallers, moet streven naar deze configuratie.
+- Hoge gegevensbeveiliging voor ondernemingen (niveau 3): Microsoft raadt deze configuratie aan voor apparaten die worden uitgevoerd door een organisatie met een groter of meer geavanceerd beveiligingsteam, of voor specifieke gebruikers of groepen die een uniek hoog risico hebben (gebruikers die gegevens verwerken onbevoegde openbaarmaking ernstige gevolgen heeft voor de organisatie). Een organisatie die veel kans loopt het doelwit te zijn van goed gefinancierde en geavanceerde aanvallers, moet streven naar deze configuratie.
 
 ## <a name="app-data-protection-framework-deployment-methodology"></a>Implementatiemethodologie van gegevensbeschermingsframework met beleid voor app-beveiliging
 
@@ -159,8 +159,8 @@ De beleidsinstellingen die in niveau 2 worden afgedwongen, bevatten alle beleids
 
 | Instelling | Beschrijving van instelling |          Waarde/actie  |          Platform        | Opmerkingen |
 |--------------------|----------------------------|-----------------------------------------------------------|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Apparaatvoorwaarden  |       Minimale versie van het besturingssysteem  |          *Indeling: Major.Minor.Build <br>Voorbeeld:   12.4.4*/Toegang blokkeren |          iOS/iPadOS        | Microsoft raadt aan de minimale primaire iOS-versie te configureren zodat deze overeenkomt met de ondersteunde iOS-versies voor Microsoft-apps.   Microsoft-apps ondersteunen een N-1-benadering waarbij N de huidige versie van de primaire iOS-release is. Voor primaire en buildversies raadt Microsoft aan ervoor te zorgen dat apparaten zijn bijgewerkt met de respectieve beveiligingspatches. Zie [Apple-beveiligingspatches](https://support.apple.com/en-us/HT201222) voor de meest recente aanbevelingen van Apple |
-| Apparaatvoorwaarden  |       Minimale versie van het besturingssysteem  |          *Indeling: Major.Minor<br> Voorbeeld: 8.0*/Toegang blokkeren   |          Android        | Microsoft raadt aan de minimale primaire versie van Android te configureren zodat deze overeenkomt met de ondersteunde Android-versies voor Microsoft-apps. OEM's en apparaten die voldoen aan de aanbevolen Android Enterprise-vereisten, moeten ondersteuning bieden voor de release die nu wordt vrijgegeven + upgrade van één letter.   Op dit moment wordt Android 8.0 of hoger door Android aangeraden voor kennismedewerkers.   Zie [Aanbevolen Android Enterprise-vereisten](https://www.android.com/enterprise/recommended/requirements/) voor de nieuwste aanbevelingen van Android |
+| Apparaatvoorwaarden  |       Minimale versie van het besturingssysteem  |          *Indeling: Major.Minor.Build <br>Voorbeeld:   12.4.6* / Toegang blokkeren |          iOS/iPadOS        | Microsoft raadt aan de minimale primaire iOS-versie te configureren zodat deze overeenkomt met de ondersteunde iOS-versies voor Microsoft-apps.   Microsoft-apps ondersteunen een N-1-benadering waarbij N de huidige versie van de primaire iOS-release is. Voor primaire en buildversies raadt Microsoft aan ervoor te zorgen dat apparaten zijn bijgewerkt met de respectieve beveiligingspatches. Zie [Apple-beveiligingspatches](https://support.apple.com/en-us/HT201222) voor de meest recente aanbevelingen van Apple |
+| Apparaatvoorwaarden  |       Minimale versie van het besturingssysteem  |          *Indeling: Major.Minor<br> Voorbeeld: 5.0* / Toegang blokkeren   |          Android        | Microsoft raadt aan de minimale primaire versie van Android te configureren zodat deze overeenkomt met de ondersteunde Android-versies voor Microsoft-apps. OEM's en apparaten die voldoen aan de aanbevolen Android Enterprise-vereisten, moeten ondersteuning bieden voor de release die nu wordt vrijgegeven + upgrade van één letter.   Op dit moment wordt Android 8.0 of hoger door Android aangeraden voor kennismedewerkers.   Zie [Aanbevolen Android Enterprise-vereisten](https://www.android.com/enterprise/recommended/requirements/) voor de nieuwste aanbevelingen van Android |
 | Apparaatvoorwaarden  |       Minimale patchversie  |          *Indeling:   JJJJ-MM-DD <br> Voorbeeld: 2020-01-01*/Toegang blokkeren  |          Android        | Android-apparaten kunnen maandelijkse beveiligingspatches ontvangen, maar de release is afhankelijk van OEM's en/of providers. Organisaties moeten ervoor zorgen dat geïmplementeerde Android-apparaten beveiligingspatches ontvangen voordat deze instelling wordt geïmplementeerd. Zie [Android-beveiligingsbulletins](https://source.android.com/security/bulletin/) voor de nieuwste patchreleases.  |
 
 #### <a name="level-3-enterprise-high-data-protection"></a>Hoge gegevensbeveiliging voor ondernemingen op niveau 3 
@@ -192,6 +192,7 @@ De beleidsinstellingen die in niveau 3 worden afgedwongen, bevatten alle beleids
 
 | Instelling | Beschrijving van instelling |          Waarde/actie  |          Platform        | Opmerkingen |
 |----------------------------|--------------------------------------|-------------------|---------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Apparaatvoorwaarden  |       Minimale versie van het besturingssysteem  |          *Indeling: Major.Minor<br> Voorbeeld: 8.0*/Toegang blokkeren   |          Android        | Microsoft raadt aan de minimale primaire versie van Android te configureren zodat deze overeenkomt met de ondersteunde Android-versies voor Microsoft-apps. OEM's en apparaten die voldoen aan de aanbevolen Android Enterprise-vereisten, moeten ondersteuning bieden voor de release die nu wordt vrijgegeven + upgrade van één letter.   Op dit moment wordt Android 8.0 of hoger door Android aangeraden voor kennismedewerkers.   Zie [Aanbevolen Android Enterprise-vereisten](https://www.android.com/enterprise/recommended/requirements/) voor de nieuwste aanbevelingen van Android |
 |       Apparaatvoorwaarden  |          Apparaten die zijn opengebroken of geroot  |        N.v.t./Gegevens wissen  |          iOS/iPadOS, Android        |  |
 |       Apparaatvoorwaarden  |          Maximaal toegestaan bedreigingsniveau  |          Beveiligd/Toegang blokkeren  |          iOS/iPadOS, Android        | <p>Apparaten die niet zijn ingeschreven, kunnen worden gecontroleerd op bedreigingen met behulp van Mobile Threat Defense. Zie [Mobile Threat Defense voor niet-ingeschreven apparaten](https://aka.ms/mtdmamdocs) voor meer informatie.      </p><p>     Als het apparaat is ingeschreven, kan deze instelling worden overgeslagen als u Mobile Threat Defense voor ingeschreven apparaten wilt implementeren. Zie [Mobile Threat Defense voor ingeschreven apparaten](../protect/mtd-device-compliance-policy-create.md) voor meer informatie.</p> |
 

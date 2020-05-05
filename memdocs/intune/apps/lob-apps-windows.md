@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb9695db99b8c170978ed2a27800b7cfe6090168
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e77c1dd32bc70b94d5c4fdd74ea82dbd65211e38
+ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80323931"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82166635"
 ---
 # <a name="add-a-windows-line-of-business-app-to-microsoft-intune"></a>Een Windows Line-Of-Business-app toevoegen aan Microsoft Intune
 
@@ -60,7 +60,9 @@ Een LOB-app is een app die u vanaf een app-installatiebestand toevoegt. Dit type
     - **Naam**: voer de naam van de app in zoals deze in de bedrijfsportal wordt weergegeven. Zorg ervoor dat alle app-namen die u gebruikt, uniek zijn. Als dezelfde app-naam twee keer voorkomt, wordt slechts één van de apps weergegeven voor gebruikers in de bedrijfsportal.
     - **Beschrijving**: voer een beschrijving van de app in. De beschrijving wordt weergegeven in de bedrijfsportal.
     - **Uitgever**: Voer de naam van de uitgever van de app in.
-    - **Minimumversie van het besturingssysteem**: selecteer in de lijst de minimumversie van het besturingssysteem waarin de app kan worden geïnstalleerd. Als u de app toewijst aan een apparaat met een lager besturingssysteem, wordt de app niet geïnstalleerd.
+    - **Context voor app-installatie**: Selecteer de installatiecontext die u aan deze app wilt koppelen. Voor apps in de dubbele modus selecteert u de gewenste context voor deze app. Dit is vooraf geselecteerd voor alle apps op basis van pakket en kan niet worden aangepast.
+    - **App-versie negeren**: stel deze optie in op **Ja** als de app-ontwikkelaar de app automatisch bijwerkt. Deze optie is alleen van toepassing op mobiele .msi-apps.
+    - **Opdrachtregelargumenten**: voer eventueel opdrachtregelargumenten in die u wilt toepassen op het MSI-bestand wanneer dit wordt uitgevoerd.  Bijvoorbeeld **/q**. Neem niet de msiexec-opdracht of -argumenten op, zoals **/i** of **/x**, omdat ze automatisch worden gebruikt. Zie [Opdrachtregelopties](https://docs.microsoft.com/windows/desktop/Msi/command-line-options) voor meer informatie. Als voor het MSI-bestand extra opdrachtregelopties vereist zijn, kunt u [Win32-app-beheer](app-management.md) gebruiken.
     - **Categorie**: selecteer een of meer van de ingebouwde app-categorieën of selecteer een categorie die u hebt gemaakt. Met categorieën kunnen gebruikers de app gemakkelijker vinden wanneer ze door de bedrijfsportal bladeren.
     - **Deze weergeven als aanbevolen app in de bedrijfsportal**: Geef de app prominent weer op de hoofdpagina van de bedrijfsportal wanneer gebruikers door apps bladeren.
     - **Informatie-URL**: Voer de URL in van een website die informatie over deze app bevat (optioneel). De URL wordt weergegeven in de bedrijfsportal.

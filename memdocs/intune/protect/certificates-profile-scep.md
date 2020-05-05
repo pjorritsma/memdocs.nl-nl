@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2019
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,20 +16,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a775171a72de32af98d8089311b5fe467e560515
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 3da418db81a315e4102b63c34ffc557646d36f70
+ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323151"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82126065"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>SCEP-certificaatprofielen maken en toewijzen in Intune
 
 Nadat u [uw infrastructuur hebt geconfigureerd](certificates-scep-configure.md) voor ondersteuning van SCEP-certificaten (Simple Certificate Enrollment Protocol), kunt u SCEP-certificaatprofielen maken en deze vervolgens toewijzen aan gebruikers en apparaten in Intune.
 
-> [!IMPORTANT]  
-> Voordat u SCEP-certificaatprofielen maakt, moeten u ervoor zorgen dat apparaten die gebruik gaan maken van een SCEP-certificaatprofiel, uw vertrouwde basiscertificeringsinstantie (basis-CA) vertrouwen. Gebruik een *vertrouwd certificaatprofiel* in Intune om het vertrouwde basis-CA-certificaat in te richten voor gebruikers en apparaten. Zie [Het vertrouwde basis-CA-certificaat exporteren](certificates-configure.md#export-the-trusted-root-ca-certificate) en [Profielen voor vertrouwde certificaten maken](certificates-configure.md#create-trusted-certificate-profiles) in *Certificaten voor verificatie gebruiken in Intune* voor meer informatie over het vertrouwde certificaatprofiel.
-
+> [!IMPORTANT]
+> Als u een SCEP-certificaatprofiel voor apparaten wilt gebruiken, moeten deze uw vertrouwde basiscertificeringsinstantie (CA) vertrouwen. Het vertrouwen van de basiscertificeringsinstantie kan het best worden ingesteld door een [vertrouwd certificaatprofiel](../protect/certificates-configure.md#create-trusted-certificate-profiles) te implementeren naar dezelfde groep die het SCEP-certificaatprofiel ontvangt. Vertrouwde certificaatprofielen richten het Vertrouwde basis-CA-certificaat in.
 
 ## <a name="create-a-scep-certificate-profile"></a>Een SCEP-certificaatprofiel maken
 
@@ -95,7 +94,8 @@ Nadat u [uw infrastructuur hebt geconfigureerd](certificates-scep-configure.md) 
        - **Serienummer**
        - **Aangepast**: Wanneer u deze optie selecteert, wordt het tekstvak **Aangepast** ook weergegeven. Met dit veld kunt u een onderwerpnaam invoeren in een aangepaste indeling, inclusief variabelen. Aangepaste indeling ondersteunt twee variabelen: **Algemene naam (CN)** en **E-mail (E)** . **Algemene naam (CN)** kan worden ingesteld op een van de volgende variabelen:
 
-         - **CN={{UserName}}** : De user principal name van de gebruiker, bijvoorbeeld janedoe@contoso.com.
+         - **CN={{UserName}}** : De gebruikersnaam van de gebruiker, bijvoorbeeld janedoe.
+         - **CN={{UserPrincipalName}}** : De user principal name van de gebruiker, bijvoorbeeld janedoe@contoso.com.\*
          - **CN={{AAD_Device_ID}}** : Een id die wordt toegewezen wanneer u een apparaat in Azure Active Directory (AD) registreert. Deze id wordt doorgaans gebruikt voor verificatie met Azure AD.
          - **CN={{SERIALNUMBER}}** : Het unieke serienummer (SN) dat doorgaans wordt gebruikt door de fabrikant om een apparaat te identificeren.
          - **CN={{IMEINumber}}** : Het unieke nummer van de International Mobile Equipment Identity (IMEI) dat wordt gebruikt om een mobiele telefoon te identificeren.
@@ -111,6 +111,8 @@ Nadat u [uw infrastructuur hebt geconfigureerd](certificates-scep-configure.md) 
          - **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**
 
          Dat voorbeeld bevat een indeling van de onderwerpnaam waarin gebruik wordt gemaakt van de variabelen CN en E, plus tekenreeksen voor de waarden Organizational Unit, Organization, Location, State en Country. [De functie CertStrToName](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) beschrijft deze functie en de ondersteunde tekenreeksen.
+         
+         \* Voor profielen met alleen een Android-apparaateigenaar werkt de instelling **CN={{UserPrincipalName}}** niet. Profielen met alleen een Android-apparaateigenaar kunnen worden gebruikt voor apparaten zonder gebruiker; zo kunnen dergelijke profielen niet worden gebruikt om de user principal name van een gebruiker te achterhalen. Als u deze optie voor apparaten met gebruikers echt nodig hebt, kunt u een tijdelijke oplossing als volgt gebruiken: **CN={{UserName}}\@contoso.com** Dit biedt de gebruikersnaam en het domein dat u handmatig hebt toegevoegd, bijvoorbeeld janedoe@contoso.com
 
       - **Certificaattype Apparaat**
 
@@ -224,7 +226,7 @@ Nadat u [uw infrastructuur hebt geconfigureerd](certificates-scep-configure.md) 
 
    - **URL's van SCEP-server**:
 
-     Voer een of meer URL's in voor de NDES-servers die certificaten via SCEP verlenen. Voer bijvoorbeeld iets in als *https://ndes.contoso.com/certsrv/mscep/mscep.dll* . U kunt indien nodig aanvullende SCEP-URL's voor taakverdeling toevoegen, omdat URL's willekeurig op het apparaat met het profiel worden gepusht. Als een van de SCEP-servers niet beschikbaar is, mislukt de SCEP-aanvraag. Dan wordt de volgende keer dat er apparaten worden ingecheckt, de certificaataanvraag mogelijk uitgevoerd op dezelfde niet-actieve server.
+     Voer een of meer URL's in voor de NDES-servers die certificaten via SCEP verlenen. Voer bijvoorbeeld iets in zoals `https://ndes.contoso.com/certsrv/mscep/mscep.dll`. U kunt indien nodig aanvullende SCEP-URL's voor taakverdeling toevoegen, omdat URL's willekeurig op het apparaat met het profiel worden gepusht. Als een van de SCEP-servers niet beschikbaar is, mislukt de SCEP-aanvraag. Dan wordt de volgende keer dat er apparaten worden ingecheckt, de certificaataanvraag mogelijk uitgevoerd op dezelfde niet-actieve server.
 
 8. Selecteer **Volgende**.
 
@@ -259,7 +261,7 @@ Wanneer de onderwerpnaam een van deze speciale tekens bevat, moet u een van de v
 
 **Bijvoorbeeld**: u hebt een onderwerpnaam die wordt weergegeven als *Test User (TestCompany, LLC)* .  Een CSR waarin de CN een komma bevat tussen *TestCompany* en *LLC*, leidt tot problemen.  Deze problemen kunnen worden vermeden door aanhalingstekens te plaatsen rond de hele CN of door de komma te verwijderen tussen *TestCompany* en *LLC*:
 
-- **Aanhalingstekens toevoegen**: *CN=Test User (TestCompany*, LLC),OU=UserAccounts,DC=corp,DC=contoso,DC=com*
+- **Aanhalingstekens toevoegen**: *CN="Test User (TestCompany, LLC)",OU=UserAccounts,DC=corp,DC=contoso,DC=com*
 - **De komma verwijderen**: *CN=Test User (TestCompany LLC),OU=UserAccounts,DC=corp,DC=contoso,DC=com*
 
  Pogingen om de komma te escapen met behulp van een backslash-teken mislukken, met een fout in de CRP-logboeken:
@@ -282,7 +284,11 @@ Exception:    at Microsoft.ConfigurationManager.CertRegPoint.ChallengeValidation
 
 ## <a name="assign-the-certificate-profile"></a>Het certificaatprofiel toewijzen
 
-Wijs SCEP-certificaatprofielen op dezelfde manier toe als u [apparaatprofielen implementeert](../configuration/device-profile-assign.md) voor andere doeleinden. Denk echter na over het volgende voordat u verdergaat:
+Wijs SCEP-certificaatprofielen op dezelfde manier toe als u [apparaatprofielen implementeert](../configuration/device-profile-assign.md) voor andere doeleinden.
+
+Als u een SCEP-certificaatprofiel wilt gebruiken, moet een apparaat ook het vertrouwde certificaatprofiel hebben ontvangen met uw vertrouwde basis-CA-certificaat. We raden aan dat u het vertrouwde basiscertificaat en SCEP-certificaatprofiel voor dezelfde groepen implementeert.
+
+Denk na over het volgende voordat u verdergaat:
 
 - Wanneer u SCEP-certificaatprofielen aan groepen toewijst, wordt het bestand met het vertrouwde basis-CA-certificaat (zoals gespecificeerd in het *vertrouwde CA-certificaatprofiel*) op het apparaat geïnstalleerd. Het apparaat gebruikt het SCEP-certificaatprofiel om een certificaataanvraag voor dat vertrouwde basis-CA-certificaat te maken.
 
@@ -293,8 +299,6 @@ Wijs SCEP-certificaatprofielen op dezelfde manier toe als u [apparaatprofielen i
 - Als u een certificaat snel naar een apparaat wilt publiceren nadat het apparaat is geregistreerd, wijst u het certificaatprofiel toe aan een gebruikersgroep en niet aan een apparaatgroep. Als u het toewijst aan een apparaatgroep, is een volledige apparaatregistratie vereist voordat het apparaat beleid kan ontvangen.
 
 - Als u co-beheer gebruikt voor Intune en Configuration Manager, stelt u in Configuration Manager de [workloadschuifregelaar](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) voor resourcetoegangsbeleid in op **Intune** of **Testfase van Intune**. Met deze instelling is het toegestaan dat Windows 10-clients het proces starten om het certificaat aan te vragen.
-
-- Hoewel u het vertrouwde certificaatprofiel en het SCEP-certificaatprofiel afzonderlijk maakt en toewijst, moeten beide zijn toegewezen. Als deze niet beide op een apparaat zijn geïnstalleerd, mislukt het SCEP-certificaatbeleid. Zorg ervoor dat alle vertrouwde basiscertificaatprofielen ook zijn geïmplementeerd in dezelfde groepen als het SCEP-profiel. Als u bijvoorbeeld een SCEP-certificaatprofiel naar een gebruikersgroep implementeert, moet ook het profiel van het vertrouwde basiscertificaat (en het tussencertificaat) naar die gebruikersgroep worden geïmplementeerd.
 
 > [!NOTE]
 > Als op iOS-/iPadOS-apparaten een SCEP-certificaatprofiel of een PKCS-certificaatprofiel aan een extra profiel, zoals een Wi-Fi- of VPN-profiel, is gekoppeld, ontvangt het apparaat een certificaat voor al deze extra profielen. Hierdoor ontvangt het iOS-/iPadOS-apparaat meerdere certificaten na de SCEP- of PKCS-certificaataanvraag. 

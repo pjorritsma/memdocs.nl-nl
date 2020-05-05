@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad0964eafccc5bf007b1569762e4cea4d0ee691a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b8552bd6bb570c91e84acd40cd2b654696eca972
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326776"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82210346"
 ---
 # <a name="assign-licenses-to-users-so-they-can-enroll-devices-in-intune"></a>Licenties toewijzen aan gebruikers zodat ze kunnen apparaten inschrijven bij Intune
 
@@ -36,7 +36,7 @@ U kunt het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/f
 
 1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Gebruikers** > **Alle gebruikers** > selecteer de gebruiker > **Licenties** > **Toewijzingen**.
 
-2. Kies het vak voor **Intune** > **Opslaan**.
+2. Kies het vak voor **Intune** > **Opslaan**. Als u de Enterprise Mobility + Security E5 of een andere licentie wilt gebruiken, kiest u dat vak.
 
    ![Schermafbeelding van het gedeelte Productlicenties in het Microsoft 365-beheercentrum.](./media/licenses-assign/mem-assign-license.png)
 

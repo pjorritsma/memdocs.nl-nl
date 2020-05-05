@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87cfb3edf860cfc9de9c479a13dd1ea3fa54e599
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: ef7a076c0a41e84e0028da6655569401f334772c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326457"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078971"
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>De wachtwoordcode van een apparaat opnieuw instellen of verwijderen via Intune
 
@@ -59,13 +59,15 @@ Als u een nieuwe wachtwoordcode voor het werkprofiel wilt maken, gebruikt u de a
 
 1. Meld u met een van de volgende rollen aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431): Globale beheerder van Azure Active Directory, Azure Active Directory Intune-servicebeheerder, helpdeskmedewerker of rolbeheerder.
 2. Selecteer **Apparaten** en selecteer vervolgens **Alle apparaten**.
-3. Selecteer een apparaat in de lijst met apparaten die u beheert en kies **Wachtwoordcode verwijderen**.
+3. Selecteer een apparaat in de lijst met apparaten die u beheert en kies **Wachtwoordcode opnieuw instellen**.
 
-## <a name="reset-android-work-profile-passcodes"></a>Wachtwoordcodes voor Android-werkprofielen opnieuw instellen
+## <a name="reset-android-work-profile-and-device-owner-passcodes"></a>Wachtwoordcodes voor Android-werkprofielen en apparaateigenaars opnieuw instellen
 
 Ondersteunde Android Enterprise-apparaten waarop een werkprofiel is ingeschreven, ontvangen een nieuw wachtwoord om het beheerde profiel te ontgrendelen of een beheerde gebruikersvraag voor eindgebruikers.
 
-Voor zakelijke Android-apparaten waarop versie 8.x of later wordt uitgevoerd en die met een werkprofiel zijn ingeschreven, worden eindgebruikers geïnformeerd om hun wachtwoordcode opnieuw in te stellen zodra de inschrijving is voltooid. De melding wordt weergegeven als een wachtwoord voor een werkprofiel is vereist en is ingesteld. Zodra de wachtwoordcode is ingevoerd, wordt de melding verwijderd.
+Bij Android Enterprise-apparaten met een werkprofiel waarop versie 8.x of later wordt uitgevoerd, wordt eindgebruikers gevraagd om hun wachtwoordcode opnieuw in te stellen zodra de inschrijving is voltooid. De melding wordt weergegeven als een wachtwoord voor een werkprofiel is vereist en is ingesteld. Zodra de wachtwoordcode is ingevoerd, wordt de melding verwijderd.
+
+Bij Android Enterprise-apparaateigenaars en werkprofielapparaten met versie 8.x of hoger is het zo dat, nadat de opnieuw ingestelde wachtwoordcode wordt geselecteerd in de console, de MEM Intune-beheerder een tijdelijke wachtwoordcode te zien krijgt. De tijdelijke wachtwoordcode moet op het apparaat worden ingevoerd. De tijdelijke wachtwoordcode voor het apparaat wordt 7 dagen weergegeven in de console.
 
 
 ## <a name="remove-iosipados-passcodes"></a>iOS-/iPadOS-wachtwoordcodes verwijderen

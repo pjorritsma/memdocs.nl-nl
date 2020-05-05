@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 04/10/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a063baf405c9f9886718242f48a47e1e5fe68f5
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 1640928bfb1ca27d4ee72e014adad88db0976a2d
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324508"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078325"
 ---
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>Alleen zakelijke gegevens wissen uit door Intune beheerde apps
 
@@ -40,9 +40,9 @@ Als u alleen de gegevens van de zakelijke apps wilt verwijderen, maakt u een ver
 > Contactpersonen die rechtstreeks vanuit de app zijn gesynchroniseerd met het systeemeigen adresboek, worden verwijderd. Contactpersonen die vanuit het systeemeigen adresboek zijn gesynchroniseerd met een andere externe bron, kunnen niet worden gewist. Dit is momenteel alleen van toepassing op de Microsoft Outlook-app.
 
 ## <a name="deployed-wip-policies-without-user-enrollment"></a>Geïmplementeerd WIP-beleid zonder gebruikersinschrijving
-WIP-beleid (Windows Information Protection) kan worden geïmplementeerd zonder dat MDM-gebruikers hun Windows 10-apparaat hoeven in te schrijven. Met deze configuratie kunnen bedrijven hun bedrijfsdocumenten op basis van de WIP-configuratie beschermen, terwijl gebruikers hun eigen Windows-apparaten kunnen blijven beheren. Zodra documenten met WIP-beleid zijn beveiligd, kunnen de beschermde gegevens selectief worden gewist door een Intune-beheerder. Door een gebruiker en een apparaat te selecteren een en wisaanvraag te versturen, worden alle gegevens onbruikbaar die met het WIP-beleid zijn beschermd. Vanuit Intune in de Azure-portal selecteert u hiervoor **Client-app** > **App selectief wissen**. Zie [Beveiligingsinstelling voor de beveiliging van apps voor Windows Information Protection (WIP) maken en implementeren met Intune](windows-information-protection-policy-create.md).
+WIP-beleid (Windows Information Protection) kan worden geïmplementeerd zonder dat MDM-gebruikers hun Windows 10-apparaat hoeven in te schrijven. Met deze configuratie kunnen bedrijven hun bedrijfsdocumenten op basis van de WIP-configuratie beschermen, terwijl gebruikers hun eigen Windows-apparaten kunnen blijven beheren. Zodra documenten met WIP-beleid zijn beveiligd, kunnen de beschermde gegevens selectief worden gewist door een Intune-beheerder ([globale beheerder of een Intune-servicebeheerder](../fundamentals/users-add.md#types-of-administrators)). Door een gebruiker en een apparaat te selecteren een en wisaanvraag te versturen, worden alle gegevens onbruikbaar die met het WIP-beleid zijn beschermd. Vanuit Intune in de Azure-portal selecteert u hiervoor **Client-app** > **App selectief wissen**. Zie [Beveiligingsinstelling voor de beveiliging van apps voor Windows Information Protection (WIP) maken en implementeren met Intune](windows-information-protection-policy-create.md).
 
-## <a name="create-a-wipe-request"></a>Een wisaanvraag maken
+## <a name="create-a-device-based-wipe-request"></a>Een aanvraag voor het wissen van een apparaat maken
 
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecteer **Apps** > **App selectief wissen** > **Wisaanvraag maken**.<br>
@@ -61,6 +61,16 @@ De service maakt en volgt voor elke beveiligde app op het apparaat een afzonderl
 
    ![Schermopname van het deelvenster Client-apps - App selectief wissen](./media/apps-selective-wipe/apps-selective-wipe-03.png)
 
+## <a name="create-a-user-based-wipe-request"></a>Een aanvraag voor het wissen van een gebruiker maken
+
+Door een gebruiker toe te voegen aan Wissen op gebruikersniveau worden er automatisch wisopdrachten gestuurd naar alle apps op de apparaten van de gebruiker.  De gebruiker blijft bij elke check-in van alle apparaten wisopdrachten ontvangen.  Als u een gebruiker opnieuw wilt inschakelen, moet u deze uit de lijst verwijderen.  
+
+1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Selecteer **Apps** > **App selectief wissen** > **Wisaanvraag maken**.<br>
+   Selecteer **Wissen op gebruikersniveau**
+3. Klik op **Toevoegen**. Het deelvenster **Gebruiker selecteren** wordt dan weergegeven.
+4. Kies de gebruiker van wie u de app-gegevens wilt wissen en klik op **Selecteren**.
+
 ## <a name="monitor-your-wipe-requests"></a>Uw verzoeken om te wissen bijhouden
 
 U kunt een verkort rapport weergeven met de algemene status van het verzoek om te wissen, het aantal verzoeken dat in behandeling is en het aantal verzoeken dat is mislukt. Voor meer informatie volgt u deze stappen:
@@ -74,7 +84,7 @@ U ziet ook de apparaatnaam en het apparaattype, wat nuttig kan zijn bij het leze
 >[!IMPORTANT]
 > De gebruiker moet de app openen voordat het wissen wordt uitgevoerd, en het wissen kan tot 30 minuten duren nadat het verzoek is gemaakt.
 
-## <a name="delete-a-wipe-request"></a>Een verzoek om te wissen verwijderen
+## <a name="delete-a-device-wipe-request"></a>Een aanvraag voor het wissen van een apparaat maken
 
 Wisverzoeken die nog in behandeling zijn, worden weergegeven totdat u ze handmatig verwijdert. Handmatig een verzoek om te wissen verwijderen:
 
@@ -85,6 +95,14 @@ Wisverzoeken die nog in behandeling zijn, worden weergegeven totdat u ze handmat
     ![Schermafbeelding van de lijst met aanvragen voor wissen in het deelvenster App selectief wissen](./media/apps-selective-wipe/delete-wipe-request.png)
 
 3. U wordt gevraagd om het verwijderen te bevestigen. Kies **Ja** of **Nee** en klik vervolgens op **OK**.
+
+## <a name="delete-a-user-wipe-request"></a>Een aanvraag om een gebruiker te wissen verwijderen
+
+De opdracht om de gebruiker te wissen blijft in de lijst staan tot deze door een beheerder wordt verwijderd. Een gebruiker uit de lijst verwijderen:
+
+1. In het deelvenster **Client-apps - App selectief wissen** selecteert u **Wissen op gebruikersniveau**
+2. Klik met de rechtermuisknop op de gebruiker die u wilt verwijderen en kies vervolgens **Verwijderen**. 
+
 
 ## <a name="see-also"></a>Zie tevens
 [Wat is app-beveiligingsbeleid](app-protection-policy.md)

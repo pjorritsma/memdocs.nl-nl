@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -16,12 +16,12 @@ ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5f4b50ac8df811a3e71070ebec979139b3ebbe62
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 0834ee2ac6cbd7460ed96024a9b30ab503fae9fb
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325117"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078334"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Line-of-business-apps ondertekenen, zodat ze kunnen worden geïmplementeerd op Windows-apparaten met Intune
 
@@ -78,7 +78,7 @@ Als de certificaatperiode is verlopen, kunnen de APPX-bestanden mogelijk niet me
 
 ## <a name="manually-deploy-windows-10-company-portal-app"></a>De Windows 10-bedrijfsportal-app handmatig implementeren
 
-Als u geen toegang wilt bieden tot de Microsoft Store, kunt u de Windows 10-bedrijfsportal-app handmatig rechtstreeks implementeren vanuit Intune, zelfs als u Intune niet hebt geïntegreerd met MSFB (Microsoft Store voor Bedrijven). Als u MSFB wel hebt geïntegreerd, kunt u de bedrijfsportal-app ook implementeren met [apps implementeren met behulp van MSFB.](store-apps-windows.md)
+Als u geen toegang wilt bieden tot de Microsoft Store, kunt u de Bedrijfsportal-app voor Windows 10 handmatig rechtstreeks implementeren vanuit Intune, zelfs als u Intune niet hebt geïntegreerd met MSFB (Microsoft Store voor Bedrijven). Als u MSFB wel hebt geïntegreerd, kunt u de bedrijfsportal-app ook implementeren met [apps implementeren met behulp van MSFB.](store-apps-windows.md)
 
  > [!NOTE]
  > Voor deze optie is handmatige implementatie van updates vereist voor elke app-update.
@@ -87,7 +87,7 @@ Als u geen toegang wilt bieden tot de Microsoft Store, kunt u de Windows 10-bedr
 2. Zodra de app is aangeschaft, selecteert u de app op de pagina **Inventaris**.  
 3. Selecteer **Windows 10 alle apparaten** als **Platform**. Klik vervolgens op de betreffende **Architectuur** en download. Een app-licentiebestand is niet nodig voor deze app.
    ![Afbeelding van Windows 10 X86-pakketdetails voor downloaden](./media/app-sideload-windows/Win10CP-all-devices.png)
-4. Download alle pakketten onder "Vereiste frameworks". Dit moet worden uitgevoerd voor x86-, x64- en ARM-architecturen. Totaal zijn dit 9 pakketten, zoals hieronder weergegeven.
+4. Download alle pakketten onder 'Vereiste frameworks'. Dit moet worden uitgevoerd voor x86-, x64-, ARM- en ARM64-architecturen. In totaal zijn dit 9 pakketten, zoals hieronder weergegeven.
 
    ![Afbeelding van afhankelijkheidsbestanden voor downloaden ](./media/app-sideload-windows/Win10CP-dependent-files.png)
 5. Voordat u de bedrijfsportal-app uploadt naar Intune, maakt u een map (bijvoorbeeld C:&#92;Company Portal) waarin de pakketten als volgt zijn gestructureerd:
@@ -106,7 +106,7 @@ Als uw gebruikers de Windows 8.1- of Windows Phone 8.1-bedrijfsportal-apps al he
 
 ### <a name="how-do-i-upgrade-my-sideloaded-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>Hoe ik een upgrade uitvoeren van mijn gesideloade Windows 8.1-bedrijfsportal-app naar de Windows 10-bedrijfsportal-app?
 
-Het wordt aanbevolen de implementatie voor de Windows 8.1-bedrijfsportal-app te verwijderen door de implementatieactie in te stellen op Installatie ongedaan maken. Zodra deze actie is uitgevoerd, kan de Windows 10-bedrijfsportal-app worden geïmplementeerd via een van de bovenstaande opties.  
+Het wordt aanbevolen de implementatie voor de Bedrijfsportal-app voor Windows 8.1 te verwijderen door de implementatieactie in te stellen op 'Installatie ongedaan maken'. Zodra deze actie is uitgevoerd, kan de Windows 10-bedrijfsportal-app worden geïmplementeerd via een van de bovenstaande opties.  
 
 Als u de app moet sideloaden en de Windows 8.1-bedrijfsportal hebt geïmplementeerd zonder deze ondertekenen met het Symantec-certificaat, volgt u de stappen in de bovenstaande sectie Deploy directly via Intune (Rechtstreeks implementeren via Intune) om de upgrade te voltooien.
 
@@ -114,13 +114,13 @@ Als u de app moet sideloaden en de Windows 8.1-bedrijfsportal hebt ondertekend e
 
 ### <a name="how-do-i-upgrade-my-signed-and-sideloaded-windows-phone-81-company-portal-app-or-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>Hoe kan ik een upgrade uitvoeren van mijn ondertekende en gesideloade Windows Phone 8.1-bedrijfsportal-app of Windows 8.1-bedrijfsportal-app naar de Windows 10-bedrijfsportal-app?
 
-Het wordt aanbevolen de bestaande implementatie voor de Windows Phone 8.1-bedrijfsportal-app of de Windows 8.1-bedrijfsportal-app te verwijderen door de implementatieactie in te stellen op Installatie ongedaan maken. Zodra deze actie is uitgevoerd, kan de Windows 10-bedrijfsportal-app normaal worden geïmplementeerd.  
+Het wordt aanbevolen de bestaande implementatie voor de Bedrijfsportal-app voor Windows Phone 8.1 of de Bedrijfsportal-app voor Windows 8.1. te verwijderen door de implementatieactie in te stellen op 'Installatie ongedaan maken'. Zodra deze actie is uitgevoerd, kan de Windows 10-bedrijfsportal-app normaal worden geïmplementeerd.  
 
 Anders moet de Windows 10-bedrijfsportal-app op de juiste manier worden bijgewerkt en ondertekend om ervoor te zorgen dat het upgradepad in acht wordt genomen.  
 
 Als de Windows 10-bedrijfsportal-app op deze manier is ondertekend en geïmplementeerd, moet u dit proces herhalen voor elke nieuwe app-update wanneer deze beschikbaar is in de Store. De app wordt niet automatisch bijgewerkt wanneer de Store wordt bijgewerkt.  
 
-U ondertekent en implementeer de app als volgt:
+U ondertekent en implementeert de app als volgt:
 
 1. Download het ondertekeningsscript voor de Microsoft Intune Windows 10-bedrijfsportal-app van [https://aka.ms/win10cpscript](https://aka.ms/win10cpscript).  Voor dit script moet de Windows SDK voor Windows 10 moet zijn geïnstalleerd op de hostcomputer. Ga naar [https://go.microsoft.com/fwlink/?LinkId=619296](https://go.microsoft.com/fwlink/?LinkId=619296) om de Windows SDK voor Windows 10 te downloaden.
 2. Download de Windows 10-bedrijfsportal-app vanuit Microsoft Store voor Bedrijven, zoals hierboven beschreven.  

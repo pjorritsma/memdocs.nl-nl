@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/25/2020
+ms.date: 04/27/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 69ca92125728ec8fdac27c229f8aacc5c0ef29c0
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: af60c16c4a7c9d27409f82cfc53d5c345dfe1af0
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359394"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82210211"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>iOS- en iPadOS-apparaatinstellingen voor het gebruik van algemene iOS-/iPadOS-functies in Intune
 
@@ -111,10 +111,10 @@ U kunt maximaal **zes** items (combinatie van apps en mappen) voor de apparaatdo
 
 #### <a name="example"></a>Voorbeeld
 
-In het volgende voorbeeld worden op het dock-scherm alleen de apps Safari, Mail en Aandelen weergegeven. De app Mail is geselecteerd om de eigenschappen ervan weer te geven:
+In het volgende voorbeeld worden op het dock-scherm de apps Safari, Mail en Aandelen weergegeven. De app Mail is geselecteerd om de eigenschappen ervan weer te geven:
 
 > [!div class="mx-imgBorder"]
-> ![Voorbeeld van iOS-/iPadOS-dockinstellingen](./media/ios-device-features-settings/FfFiUcP.png)
+> ![Voorbeeld van dockinstellingen in de iOS/iPadOS-beginschermindeling in Intune](./media/ios-device-features-settings/dock-screen-mail-app.png)
 
 Wanneer u het beleid aan een iPhone toewijst, ziet de dock er ongeveer hetzelfde uit als de volgende afbeelding:
 
@@ -158,10 +158,15 @@ U kunt maximaal **40** pagina's toevoegen.
 
 #### <a name="example"></a>Voorbeeld
 
-In het volgende voorbeeld wordt een nieuwe pagina met de naam **Contoso** toegevoegd. Op de pagina worden de apps Zoek vrienden en Instellingen weergegeven. De app Instellingen is geselecteerd om de eigenschappen ervan weer te geven:
+In het volgende voorbeeld wordt een nieuwe pagina met de naam **Contoso** toegevoegd. Op de pagina worden de apps Zoek vrienden en Instellingen weergegeven:
 
 > [!div class="mx-imgBorder"]
-> ![Voorbeeld van instellingen voor het iOS-/iPadOS-startscherm in Intune](./media/ios-device-features-settings/Jc2OxyX.png)
+> ![Instellingen en voorbeeld nieuwe pagina in iOS/iPadOS-beginschermindeling in Intune](./media/ios-device-features-settings/page-find-friends-settings-apps.png)
+
+De app Instellingen is geselecteerd om de eigenschappen ervan weer te geven:
+
+> [!div class="mx-imgBorder"]
+> ![Voorbeeld in Intune eigenschappen Instellingen-app in iOS/iPadOS-beginschermindeling](./media/ios-device-features-settings/page-settings-app-properties.png)
 
 Wanneer u het beleid aan een iPhone toewijst, ziet de pagina er ongeveer hetzelfde uit als de volgende afbeelding:
 
@@ -175,7 +180,7 @@ Wanneer u het beleid aan een iPhone toewijst, ziet de pagina er ongeveer hetzelf
 - **Toevoegen**: Meldingen voor apps toevoegen:
 
   > [!div class="mx-imgBorder"]
-  > ![App-melding toevoegen in iOS-/iPadOS-profiel in Intune](./media/ios-device-features-settings/ios-macos-app-notifications.png)
+  > ![App-melding toevoegen in iOS-/iPadOS-profiel in Intune](./media/ios-device-features-settings/ios-ipados-app-notifications.png)
 
   - **App-bundel-id**: voer de **App-bundel-id** in van de app die u wilt toevoegen. Zie [Bundel-id's voor ingebouwde iOS-/iPadOS-apps](bundle-ids-built-in-ios-apps.md) voor enkele voorbeelden.
   - **App-naam**: voer de naam in van de app die u wilt toevoegen. Deze naam wordt gebruikt voor uw referentie in het Microsoft Endpoint Manager-beheercentrum. Deze wordt *niet* weergegeven op apparaten.
@@ -214,9 +219,11 @@ Deze functie is van toepassing op:
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Deze instellingen zijn van toepassing op: Apparaatinschrijving, automatische apparaatinschrijving (onder supervisie)
 
-- **Het kenmerk Gebruikersnaam van AAD**: Intune zoekt naar dit kenmerk voor elke gebruiker in Microsoft Azure Active Directory. Het betreffende veld (zoals UPN) wordt vervolgens door Intune gevuld voordat de XML wordt gegenereerd die op apparaten wordt geïnstalleerd. Uw opties zijn:
+- **Realm**: voer het domeingedeelte van de URL in. Voer bijvoorbeeld `contoso.com` in.
+- **Principal-naam van Kerberos**: Intune zoekt naar dit kenmerk voor elke gebruiker in Microsoft Azure Active Directory. Het betreffende veld (zoals UPN) wordt vervolgens door Intune gevuld voordat de XML wordt gegenereerd die op apparaten wordt geïnstalleerd. Uw opties zijn:
 
-  - **User Principal Name**: de UPN wordt op de volgende manier geparseerd:
+  - **Niet geconfigureerd**: Deze instelling wordt niet gewijzigd of bijgewerkt door Intune. Standaard wordt gebruikers gevraagd om een principal-naam van Kerberos wanneer het profiel op apparaten wordt geïmplementeerd. Voor MDM is een principal-naam vereist om SSO-profielen te installeren.
+  - **User Principal Name**: De User Principal Name (UPN)wordt op de volgende manier geparseerd:
 
     > [!div class="mx-imgBorder"]
     > ![SSO-kenmerk van iOS-/iPadOS-gebruikersnaam in Intune](./media/ios-device-features-settings/User-name-attribute.png)
@@ -227,15 +234,22 @@ Deze functie is van toepassing op:
 
   - **Apparaat-id voor Intune**: de apparaat-id voor Intune wordt automatisch door Intune geselecteerd.
 
-    Apps hoeven standaard alleen de apparaat-id te gebruiken. Als uw app echter gebruikmaakt van de realm en de apparaat-id, kunt u de realm in het tekstvak Realm invoeren.
+    Apps hoeven standaard alleen de apparaat-id te gebruiken. Als uw app echter gebruikmaakt van de realm en de apparaat-id, kunt u de realm in het tekstvak **Realm** invoeren.
 
     > [!NOTE]
     > Houd de realm standaard leeg als u de apparaat-id gebruikt.
 
   - **Apparaat-id voor Microsoft Azure Active Directory**
+  - **SAM-accountnaam**: De on-premises SAM-accountnaam (Security Accounts Manager) wordt door Intune ingevuld.
 
-- **Realm**: voer het domeingedeelte van de URL in. Voer bijvoorbeeld `contoso.com` in.
-- **URL-voorvoegsels die gebruikmaken van eenmalige aanmelding**: **voeg** alle URL's in uw organisatie toe die gebruikersverificatie met eenmalige aanmelding vereisen.
+
+- **Apps**: **voeg** apps toe op apparaten van gebruikers die gebruik kunnen maken van eenmalige aanmelding.
+
+  De matrix `AppIdentifierMatches` moet tekenreeksen bevatten die overeenkomen met de app-bundel-id's. Deze tekenreeksen kunnen exacte overeenkomsten zijn, zoals `com.contoso.myapp`, of u kunt identieke begintekens voor de bundel-id invoeren met het jokerteken \*. Het jokerteken moet worden weergegeven na een punt (.) en kan slechts één keer worden weergegeven aan het einde van de tekenreeks, zoals `com.contoso.*`. Wanneer een jokerteken wordt opgenomen, krijgt elke app waarvan de bundel-id begint met het voorvoegsel toegang tot het account.
+
+  Gebruik **App-naam** om een gebruiksvriendelijke naam in te voeren waarmee u de bundel-id kunt aangeven.
+
+- **URL-voorvoegsels**: **voeg** alle URL's in uw organisatie toe die gebruikersverificatie met eenmalige aanmelding vereisen.
 
   Bijvoorbeeld: wanneer een gebruiker verbinding maakt met een van deze sites, gebruikt het iOS-/iPadOS-apparaat de referenties voor eenmalige aanmelding. Gebruikers hoeven geen aanvullende referenties in te voeren. Als meervoudige verificatie is ingeschakeld, moeten gebruikers de tweede verificatie invoeren.
 
@@ -246,13 +260,7 @@ Deze functie is van toepassing op:
 
   De patronen `http://.com` en `https://.com` komen overeen met respectievelijk alle HTTP- en HTTPS-URL's.
 
-- **Apps die gebruikmaken van eenmalige aanmelding**: **voeg** apps toe op apparaten van gebruikers die gebruik kunnen maken van eenmalige aanmelding.
-
-  De matrix `AppIdentifierMatches` moet tekenreeksen bevatten die overeenkomen met de app-bundel-id's. Deze tekenreeksen kunnen exacte overeenkomsten zijn, zoals `com.contoso.myapp`, of u kunt identieke begintekens voor de bundel-id invoeren met het jokerteken \*. Het jokerteken moet worden weergegeven na een punt (.) en kan slechts één keer worden weergegeven aan het einde van de tekenreeks, zoals `com.contoso.*`. Wanneer een jokerteken wordt opgenomen, krijgt elke app waarvan de bundel-id begint met het voorvoegsel toegang tot het account.
-
-  Gebruik **App-naam** om een gebruiksvriendelijke naam in te voeren waarmee u de bundel-id kunt aangeven.
-
-- **Referentievernieuwingscertificaat**: als u certificaten voor verificatie gebruikt (geen wachtwoorden), selecteert u het SCEP- of PFX-certificaat als het verificatiecertificaat. Dit certificaat is meestal hetzelfde certificaat dat voor gebruikers wordt geïmplementeerd voor andere profielen, bijvoorbeeld voor VPN, Wi-Fi of e-mail.
+- **Certificaat vernieuwen**: als u certificaten voor verificatie gebruikt (geen wachtwoorden), selecteert u het SCEP- of PFX-certificaat als het verificatiecertificaat. Dit certificaat is meestal hetzelfde certificaat dat voor gebruikers wordt geïmplementeerd voor andere profielen, bijvoorbeeld voor VPN, Wi-Fi of e-mail.
 
 ## <a name="web-content-filter"></a>Webinhoudsfilter
 
@@ -288,37 +296,24 @@ Deze functie is van toepassing op:
 
 - **Type app-extensie voor eenmalige aanmelding**: Kies het type app-extensie voor eenmalige aanmelding. Uw opties zijn:
 
-  - **Niet geconfigureerd**: Deze instelling wordt niet gewijzigd of bijgewerkt door Intune. Het is mogelijk dat het besturingssysteem standaard geen app-extensies gebruikt. Als u een app-extensie wilt uitschakelen, stelt u Type app-extensie voor SSO in op **Niet geconfigureerd**.
-  - **Omleiding**: Gebruik een algemene, aanpasbare app-extensie van het type Omleiding om eenmalige aanmelding te gebruiken met moderne verificatiestromen. Zorg ervoor dat u weet wat de extensie-id is van de app-extensie van uw organisatie.
+  - **Niet geconfigureerd**: Deze instelling wordt niet gewijzigd of bijgewerkt door Intune. Standaard gebruikt het besturingssysteem geen app-extensies. Als u een app-extensie wilt uitschakelen, stelt u Type app-extensie voor SSO in op **Niet geconfigureerd**.
+  - **Microsoft Azure AD**: Maakt gebruik van de SSO-invoegtoepassing van Microsoft Enterprise. Dat is een omleidingstype-SSO-app-extensie. Deze invoegtoepassing biedt SSO voor Active Directory-accounts voor alle toepassingen die ondersteuning bieden voor de functie [Enterprise Single Sign-On van Apple](https://developer.apple.com/documentation/authenticationservices). Gebruik dit SSO-app-extensietype om SSO in te schakelen voor Microsoft-apps, organisatie-apps en websites die worden geverifieerd met behulp van Azure AD.
 
-    Op iOS-/iPadOS 13.0+-apparaten kunt u de **app-extensie voor SSO van Microsoft Azure AD configureren** met dit redirect-type app-extensie voor SSO. De Microsoft Azure AD-extensie maakt eenmalige aanmelding mogelijk tussen Microsoft-apps en organisatie-apps die Azure AD gebruiken voor verificatie. De Azure AD-extensie fungeert als een geavanceerde broker voor verificatie die verbeteringen in de beveiliging en de gebruikerservaring biedt. Alle apps die eerder brokered verificatie gebruikten met de app Microsoft Authenticator, behouden SSO met de SSO-extensie. De SSO-extensie van Azure AD biedt nog geen ondersteuning voor browser-SSO. Meer informatie over SSO en de broker voor iOS/iPadOS-verificatie vindt u in [SSO configureren op macOS en iOS/iPadOS](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-macos-ios).  
-
-    **De extensie van Microsoft Azure AD voor iOS configureren:**
-
-    1. Stel het **type app-extensie voor SSO** in op **Omleiden**.
-    2. Stel **Extensie-id** in op `com.microsoft.azureauthenticator.ssoextension`.
-    3. Stel **Team-id** in op `SGGM6D27TK`.
-    4. Voer in de instelling **URL's** de volgende URL's in:
-
-        - `https://login.microsoftonline.com`
-        - `https://login.windows.net`
-        - `https://login.microsoft.com`
-        - `https://sts.windows.net`
-        - `https://login.partner.microsoftonline.cn`
-        - `https://login.chinacloudapi.cn`
-        - `https://login.microsoftonline.de`
-        - `https://login.microsoftonline.us`
-        - `https://login.usgovcloudapi.net`
-        - `https://login-us.microsoftonline.com`
+    De Azure AD-invoegtoepassing fungeert als een geavanceerde broker voor verificatie die verbeteringen in de beveiliging en de gebruikerservaring biedt. Alle apps die eerder brokered verificatie gebruikten met de app Microsoft Authenticator, behouden SSO met de [SSO-invoegtoepassing van Microsoft Enterprise voor Apple-apparaten](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin).
 
     > [!IMPORTANT]
-    > Voor eenmalige aanmelding met de Microsoft Azure AD-extensie voor iOS/iPadOS installeert u eerst de iOS/iPadOS Microsoft Authenticator-app op apparaten. Authenticator levert de Azure AD-extensie aan apparaten en met de instellingen van de MDM-app-extensie voor eenmalige aanmelding wordt de Azure AD-extensie geactiveerd. Zodra Authenticator en het profiel van de app-extensie voor eenmalige aanmelding op apparaten zijn geïnstalleerd, moeten gebruikers hun referenties opgeven om zich aan te melden en een sessie tot stand te brengen. Deze sessie wordt vervolgens voor verschillende toepassingen gebruikt, zonder dat gebruikers opnieuw moeten worden geverifieerd.
+    > Installeer eerst de iOS/iPadOS Microsoft Authenticator-app op apparaten om eenmalige aanmelding te verkrijgen met het SSO-app-extensietype van Microsoft Azure AD. De Authenticator-app biedt de SSO-invoegtoepassing van Microsoft Enterprise op apparaten, en de invoegtoepassing wordt geactiveerd door de instellingen van de MDM-app-extensie voor eenmalige aanmelding. Zodra Authenticator en het profiel van de app-extensie voor eenmalige aanmelding op apparaten zijn geïnstalleerd, moeten gebruikers hun referenties opgeven om zich aan te melden en een sessie tot stand te brengen op hun apparaat. Deze sessie wordt vervolgens voor verschillende toepassingen gebruikt, zonder dat gebruikers opnieuw moeten worden geverifieerd. Zie [Wat is de Microsoft Authenticator-app?](https://docs.microsoft.com/azure/active-directory/user-help/user-help-auth-app-overview)voor meer informatie over Authenticator.
 
+  - **Omleiding**: Gebruik een algemene, aanpasbare app-extensie van het type Omleiding om eenmalige aanmelding te gebruiken met moderne verificatiestromen. Zorg ervoor dat u weet wat de extensie-id is van de app-extensie van uw organisatie.
   - **Referentie**: Gebruik een algemene, aanpasbare app-extensie van het type Referentie om eenmalige aanmelding te gebruiken met verificatiestromen met vraag en antwoord. Zorg ervoor dat u weet wat de extensie-id is van de app-extensie van uw organisatie.
   - **Kerberos**: gebruik de ingebouwde Kerberos-extensie van Apple, die is opgenomen in iOS 13.0+ en iPadOS 13.0+. Deze optie is een Kerberos-versie van de app-extensie **Referentie**.
 
   > [!TIP]
   > Met de typen **Omleiding** en **Referentie** voegt u uw eigen configuratiewaarden toe om door te geven aan de extensie. Als u het type **Referentie** gebruikt, kunt u overwegen om de ingebouwde configuratie-instellingen te gebruiken die Apple heeft opgenomen in het type **Kerberos**.
+
+- **Modus Gedeeld apparaat** (alleen Microsoft Azure AD): Kies **Inschakelen** als u de SSO-invoegtoepassing van Microsoft Enterprise implementeert op iOS/iPadOS-apparaten die zijn geconfigureerd voor de modus Gedeeld apparaat van Azure AD. Met apparaten in de gedeelde modus kunnen veel gebruikers zich globaal aan- en afmelden bij toepassingen die de modus Gedeeld apparaat ondersteunen. Wanneer dit is ingesteld op **Niet geconfigureerd**, wordt deze instelling niet door Intune gewijzigd of bijgewerkt. iOS/iPadOS-apparaten zijn standaard niet bedoeld om te worden gedeeld door meerdere gebruikers.
+
+  Zie [Overzicht van de modus Gedeeld apparaat](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices) en [De modus Gedeeld apparaat voor iOS-apparaten](https://docs.microsoft.com/azure/active-directory/develop/msal-ios-shared-devices) voor meer informatie over de modus Gedeeld apparaat en hoe u deze kunt inschakelen.  
 
 - **Extensie-id** (omleiding en referentie): voer de bundel-id in waarmee de app-extensie voor eenmalige aanmelding wordt aangeduid, zoals `com.apple.extensiblesso`.
 
@@ -336,16 +331,16 @@ Deze functie is van toepassing op:
 - **URL's** (alleen omleiden): Voer de URL-voorvoegsels van uw id-providers in namens wie de eenmalige aanmelding de app-extensie van het type Omleiding gebruikt. Wanneer gebruikers worden omgeleid naar deze URL's, grijpt de app-extensie voor SSO in en wordt er om SSO gevraagd.
 
   - Alle URL's in uw app-extensie voor SSO bij Intune-profielen moeten uniek zijn. U kunt een domein niet herhalen in een app-extensieprofiel voor eenmalige aanmelding, zelfs niet als u verschillende typen app-extensies voor eenmalige aanmelding gebruikt.
-  - De URL's moeten beginnen met http:// of https://.
+  - De URL's moeten beginnen met `http://` of `https://`.
 
-- **Aanvullende configuratie** (omleiding en referentie): Voer aanvullende extensiegegevens in die moeten worden doorgegeven aan de app-extensie voor eenmalige aanmelding:
+- **Aanvullende configuratie** (Microsoft Azure AD, omleiding en referentie): Voer aanvullende extensiegegevens in die moeten worden doorgegeven aan de app-extensie voor eenmalige aanmelding:
   - **Sleutel**: voer de naam in van het item dat u wilt toevoegen, zoals `user name`.
   - **Type**: voer het gegevenstype in. Uw opties zijn:
 
     - Tekenreeks
     - Booleaanse waarde: voer `True` of `False` in bij **Configuratiewaarde**.
     - Geheel getal: voer een getal in bij **Configuratiewaarde**.
-    
+
   - **Waarde**: voer de gegevens in.
 
   - **Toevoegen**: selecteer deze optie om uw configuratiesleutels toe te voegen.

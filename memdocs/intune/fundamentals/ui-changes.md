@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9fbf58b7ae035bbd7da15814787f283c7b80e13e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5ff2898f97bbef4cba0d14d4810a503d613cff18
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79355111"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077917"
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Waar is de Intune-functie die ik zoek gebleven in Azure?
 Bij het verplaatsen van Intune naar de Azure-portal hebben we van de gelegenheid gebruikgemaakt om een aantal taken logischer in te delen. Maar dergelijke verbeteringen betekenen wel dat u de nieuwe indeling moet leren kennen. Deze referentiegids is speciaal bedoeld voor degenen die heel vertrouwd zijn met Intune in de klassieke portal, en die zich afvragen waar bepaalde functies in Intune zijn gebleven in Azure Portal. Als een functie die u zoekt niet wordt behandeld in dit artikel, laat dan een reactie achter onder het artikel, zodat we het kunnen bijwerken.
@@ -32,7 +32,7 @@ Bij het verplaatsen van Intune naar de Azure-portal hebben we van de gelegenheid
 |Onderdeel |Pad in klassieke portal|Pad in Intune in de Azure-portal|
 |------------|---------------|---------------|
 |Device Enrollment Program (DEP) (alleen iOS)|Beheerder > Mobile Device Management > iOS > Device Enrollment Program|[Apparaatinschrijving > Apple-inschrijving > Token voor het inschrijvingsprogramma](#where-did-apple-dep-go) |
-|Device Enrollment Program (DEP) (alleen iOS)| Beheer > Mobile Device Management > iOS en Mac OS X > Device Enrollment Program |[Apparaatinschrijving > Apple-inschrijving > Serienummers voor het inschrijvingsprogramma](#where-did-apple-dep-go) |
+|Device Enrollment Program (DEP) (alleen iOS)| Beheerder > Mobile Device Management > iOS en Mac OS X > Device Enrollment Program |[Apparaatinschrijving > Apple-inschrijving > Serienummers voor het inschrijvingsprogramma](#where-did-apple-dep-go) |
 |Inschrijvingsregels |Beheerder > Mobile Device Management > Inschrijvingsregels|[Apparaatinschrijving > Inschrijvingsbeperkingen](#where-did-enrollment-rules-go) |
 |Wordt gegroepeerd op iOS-serienummer |Groepen > Alle apparaten > Vooraf geregistreerde bedrijfsapparaten > Op iOS-serienummer|[Apparaatinschrijving > Apple-inschrijving > Serienummers voor het inschrijvingsprogramma](#where-did-corporate-pre-enrolled-devices-go) |
 |Wordt gegroepeerd op iOS-serienummer |Groepen > Alle apparaten > Vooraf geregistreerde bedrijfsapparaten > Op iOS-serienummer| [Apparaatinschrijving > Apple-inschrijving > AC-serienummers](#where-did-corporate-pre-enrolled-devices-go)|
@@ -52,7 +52,7 @@ In de klassieke portal kunt u regels instellen voor de MDM-inschrijving van mobi
 
 ![Afbeelding van regels voor inschrijving van mobiele apparaten in klassieke console](./media/ui-changes/01-classic-rules.png)
 
-Deze regels waren van toepassing op alle gebruikers in uw Intune-account, zonder uitzonderingen. In Azure Portal zijn deze regels nu onderverdeeld in twee typen beleid, Beperkingen voor apparaattypen en Apparaatlimietbeperkingen.
+Deze regels waren van toepassing op alle gebruikers in uw Intune-account, zonder uitzonderingen. In Azure Portal worden deze regels nu weergegeven in twee verschillende beleidstypen: Beperkingen voor het apparaattype en Beperkingen voor apparaatlimieten.
 
 ![Afbeelding van beperkingen voor inschrijving van mobiele apparaten in Azure](./media/ui-changes/02-azure-enroll-restrictions.png)
 

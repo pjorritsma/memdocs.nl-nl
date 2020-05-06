@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ef8989c9f4de0211a7636c747ff9a01111842f6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: da2bc520448236c93845731b1f7c937d417fc2e0
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80325321"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078988"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Aangepaste meldingen verzenden in Intune
 
-Gebruik Microsoft Intune om aangepaste meldingen te verzenden naar de gebruikers van beheerde iOS-/iPadOS- en Android-apparaten. Deze berichten worden op de apparaten van gebruikers weergegeven als reguliere pushmeldingen vanuit de Bedrijfsportal-app en de Microsoft Intune-app, net zoals meldingen van andere toepassingen op het apparaat worden weergegeven. De aangepaste meldingen van Intune worden niet ondersteund voor macOS- Windows-apparaten.
+Gebruik Microsoft Intune om aangepaste meldingen te verzenden naar de gebruikers van beheerde iOS-/iPadOS- en Android-apparaten. Deze berichten worden op de apparaten van gebruikers weergegeven als reguliere pushmeldingen vanuit de Bedrijfsportal-app en de Microsoft Intune-app, net zoals meldingen van andere toepassingen op het apparaat worden weergegeven. De aangepaste meldingen van Intune worden niet ondersteund door macOS- en Windows-apparaten.
 
 Aangepaste meldingen hebben een korte titel en een hoofdtekst van maximaal 500 tekens. De berichten kunnen worden aangepast voor algemene communicatiedoeleinden.
 
@@ -72,7 +72,7 @@ Als u de bedrijfsportal-app hebt geopend op een Android-apparaat, lijkt de meldi
  
 - Als u een bericht wilt maken, gebruikt u een account dat is toegewezen aan een Intune-rol die de juiste machtiging bevat, zoals wordt beschreven in het eerdere gedeelte *Machtigingen*. Zie [Roltoewijzingen](../fundamentals/role-based-access-control.md#role-assignments) voor het toewijzen van machtigingen aan een gebruiker.
 - Aangepaste meldingen mogen een titel hebben van maximaal 50 tekens en een hoofdtekst van maximaal 500 tekens.  
-- in Intune wordt geen tekst opgeslagen van eerder verzonden aangepaste meldingen. Als u een bericht opnieuw wilt verzenden, moet u het bericht opnieuw maken.  
+- In Intune wordt geen tekst opgeslagen van eerder verzonden aangepaste meldingen. Als u een bericht opnieuw wilt verzenden, moet u het bericht opnieuw maken.  
 - U kunt maximaal 25 berichten per uur verzenden naar groepen. Deze beperking is ingesteld op het tenantniveau. Deze beperking is niet van toepassing wanneer u meldingen verzendt naar afzonderlijke gebruikers.
 - Wanneer u berichten verzendt naar afzonderlijke apparaten, kunt u maximaal 10 berichten per uur verzenden naar hetzelfde apparaat.
 - U kunt aangepaste meldingen verzenden naar gebruikers in groepen. Bij het verzenden van meldingen naar groepen kan elke melding aan maximaal 25 groepen tegelijk worden toegewezen. Geneste groepen tellen niet mee voor dit totaal. Bij het verzenden van een melding naar een groep, worden berichten alleen aan de gebruikers in de groep gericht en verzonden naar alle iOS/iPadOS- en Android-apparaten die de gebruiker heeft geregistreerd. Apparaten in de groep worden genegeerd bij het instellen van de melding.
@@ -105,7 +105,7 @@ Intune verwerkt de berichten die u maakt onmiddellijk. De enige bevestiging dat 
 
 ![Bevestiging van een verzonden melding](./media/custom-notifications/notification-sent.png)  
 
-Intune volgt verzonden aangepaste meldingen niet. Apparaten registreren ontvangst ook niet buiten het meldingencentrum van de apparaten. De melding kan worden opgenomen in een tijdelijk diagnostisch logboek als een gebruiker ondersteuning aanvraagt in de Bedrijfsportal- of Intune-app.
+Intune volgt verzonden aangepaste meldingen niet. Apparaten registreren de ontvangst ook niet buiten het meldingencentrum van het apparaat. De melding kan worden opgenomen in een tijdelijk diagnostisch logboek als een gebruiker ondersteuning aanvraagt in de Bedrijfsportal- of Intune-app.
 
 ## <a name="send-a-custom-notification-to-a-single-device"></a>Een aangepaste melding verzenden naar één apparaat
 

@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 84a7f679cc071a3e8d339fd29e278dfde6eef28c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 08a6cf6eed86836c8fe887265faddb1459918aea
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79348195"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074755"
 ---
 # <a name="enroll-your-windows-phone-81-device-in-intune"></a>Uw Windows Phone 8.1-apparaat registreren bij Intune  
 
@@ -61,7 +61,7 @@ Uw apparaat inschrijven:
 4. Selecteer **Tik om dit apparaat te registreren of te identificeren**.  
 
 
-    ![Het scherm Tik om dit apparaat in te schrijven of te identificeren](./media/WP81-enroll-1-swipe-my-devices.png)  
+    ![Het scherm Tik om dit apparaat te registreren of te identificeren](./media/WP81-enroll-1-swipe-my-devices.png)  
 
 5. Tik op **Dit apparaat registreren**.  
 

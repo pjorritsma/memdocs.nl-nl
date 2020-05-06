@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b75faa501fa91dc82bfec83b8c418e28b39fcec
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 592b42ca5f21cd68eaad01acf9895f7e5f4b5c73
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79350678"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079158"
 ---
 # <a name="intune-certificate-connector-events-and-diagnostic-codes"></a>Gebeurtenissen en diagnostische codes van Intune Certificate Connector
 
@@ -41,12 +41,12 @@ Vanaf versie 6.1806.x.x legt de Intune-connectorservice gebeurtenissen vast in d
 | 10102 | CertificateRenewal_Failure  | Connector-inschrijvingscertificaat niet vernieuwd. Installeer de connector opnieuw. | 0x00000000, 0x00000405, 0x0FFFFFFF |
 | 10302 | RetrieveCertificate_Error  | Ophalen van het connector-inschrijvingscertificaat uit het register is mislukt. Bekijk de gebeurtenisdetails voor de vingerafdruk van het certificaat die betrekking heeft op deze gebeurtenis. | 0x00000000, 0x00000404, 0x0FFFFFFF |
 | 10301 | RetrieveCertificate_Warning  | Controleer de diagnostische gegevens in de details van gebeurtenis. | 0x00000000, 0x00000403, 0x0FFFFFFF |
-| 20100 | PkcsCertIssue_Success  | Een PKCS-certificaat is uitgegeven. Bekijk de gebeurtenisdetails voor de apparaat-id, gebruikers-id, CA-naam, certificaatsjabloonnaam en certificaatvingerafdruk die betrekking hebben op deze gebeurtenis. | 0x00000000, 0x0FFFFFFF |
+| 20100 | PkcsCertIssue_Success  | Een PKCS-certificaat is uitgegeven. Bekijk de gebeurtenisdetails voor de apparaat-id, de gebruikers-id, CA-naam, certificaatsjabloonnaam en certificaatvingerafdruk die betrekking hebben op deze gebeurtenis. | 0x00000000, 0x0FFFFFFF |
 | 20102 | PkcsCertIssue_Failure  | Uitgifte van een PKCS-certificaat is mislukt. Bekijk de gebeurtenisdetails voor de apparaat-id, gebruikers-id, CA-naam, certificaatsjabloonnaam en certificaatvingerafdruk die betrekking hebben op deze gebeurtenis. | 0x00000000, 0x00000400, 0x00000401, 0x0FFFFFFF |
 | 20200 | RevokeCert_Success  | Het certificaat is ingetrokken. Bekijk de gebeurtenisdetails voor de apparaat-id, gebruikers-id, CA-naam en certificaatserienummer die betrekking hebben op deze gebeurtenis. | 0x00000000, 0x0FFFFFFF |
 | 20202 | RevokeCert_Failure | Kan het certificaat niet verwijderen. Bekijk de gebeurtenisdetails voor de apparaat-id, gebruikers-id, CA-naam en certificaatserienummer die betrekking hebben op deze gebeurtenis. Zie de NDES SVC-logboeken voor meer informatie.   | 0x00000000, 0x00000402, 0x0FFFFFFF |
 | 20300 | Upload_Success | De aanvraag- of intrekkingsgegevens van het certificaat zijn geüpload. Bekijk de gebeurtenisdetails voor de uploaddetails. | 0x00000000, 0x0FFFFFFF |
-| 20302 | Upload_Failure | De aanvraag- of intrekkingsgegevens van het certificaat zijn niet geüpload. Bekijk de gebeurtenisdetails > Uploadstatus om de fout te bepalen.| 0x00000000, 0x0FFFFFFF |
+| 20302 | Upload_Failure | Kan de aanvraag- of intrekkingsgegevens van het certificaat niet uploaden. Bekijk de gebeurtenisdetails > Uploadstatus om de fout te bepalen.| 0x00000000, 0x0FFFFFFF |
 | 20400 | Download_Success | Aanvraag om een certificaat te ondertekenen, een clientcertificaat te downloaden of een certificaat in te trekken, is gedownload. Bekijk de gebeurtenisdetails voor de downloaddetails.  | 0x00000000, 0x0FFFFFFF |
 | 20402 | Download_Failure | Aanvraag om een certificaat te ondertekenen, een clientcertificaat te downloaden of een certificaat in te trekken, is niet gedownload. Bekijk de gebeurtenisdetails voor de downloaddetails. | 0x00000000, 0x0FFFFFFF |
 | 20500 | CRPVerifyMetric_Success  | Certificaatregistratiepunt heeft een clientverificatievraag geverifieerd | 0x00000000, 0x0FFFFFFF |

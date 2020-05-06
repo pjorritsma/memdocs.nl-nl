@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 374b433ff6ee50f91343489ae36a1a190d87c7aa
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b2ed22f393ea58d50c10175ffbd647bc53f592e5
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79347857"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078818"
 ---
 # <a name="manage-apps-from-the-company-portal-website"></a>Apps beheren via de bedrijfsportalwebsite 
 Ga naar de [bedrijfsportalwebsite](https://portal.manage.microsoft.com) om apps in uw organisatie weer te geven en te beheren. 
@@ -38,7 +38,7 @@ Op deze pagina wordt de volgende informatie over elke app weergegeven:
 
 * Naam: De naam van de app, met een koppeling naar de detailpagina van de app.
 * Uitgever: De naam van de ontwikkelaar of het bedrijf dat de app heeft gedistribueerd. Een uitgever is doorgaans een softwareleverancier of uw organisatie.  
-* Publicatiedatum: De datum waarop de app beschikbaar is gesteld zodat deze kan worden gedownload. Bij de publicatiedatum kan de datum voor de eerste release van een app of de meest recente update van de app worden weergegeven.
+* Publicatiedatum: De datum waarop de app beschikbaar is gesteld zodat deze kan worden gedownload. Bij de publicatiedatum kan de datum voor de eerste release van een app of de meest recente update van een app worden weergegeven.
 * Status: De huidige status van de app op uw apparaat. Deze kan zijn: Beschikbaar, Geïnstalleerd en Wordt geïnstalleerd. 
 * Categorie: De functie of het doel van de app, zoals aanbevolen, technisch, onderwijs en productiviteit.  
 
@@ -65,7 +65,7 @@ Op deze pagina wordt de volgende informatie over elke app weergegeven:
 * Naam: De naam van de app, met een koppeling naar de detailpagina van de app.
 * Toewijzingstype: Hoe de app aan u wordt toegewezen en voor u beschikbaar wordt gesteld. Bekijk Beschikbare en vereiste apps voor meer informatie. Uw organisatie kan een app voor u beschikbaar stellen zodat u deze zelf kunt installeren of de app verplicht stellen en deze automatisch op uw apparaat laten installeren.  
 * Uitgever: De naam van de ontwikkelaar of het bedrijf dat de app heeft gedistribueerd. Een uitgever is doorgaans een softwareleverancier of uw organisatie.  
-* Publicatiedatum: De datum waarop de app beschikbaar is gesteld zodat deze kan worden gedownload. Bij de publicatiedatum kan de datum voor de eerste release van een app of de meest recente update van de app worden weergegeven.
+* Publicatiedatum: De datum waarop de app beschikbaar is gesteld zodat deze kan worden gedownload. Bij de publicatiedatum kan de datum voor de eerste release van een app of de meest recente update van een app worden weergegeven.
 * Status: De huidige installatiestatus van de app op uw apparaat. Voor apps kunnen de volgende statussen worden weergegeven: Wordt geïnstalleerd, Geïnstalleerd en Installatie mislukt. Het kan voor vereiste apps tot tien minuten duren voordat er een actuele status wordt weergegeven.  
 
 ### <a name="search-and-refine"></a>Zoeken en verfijnen  

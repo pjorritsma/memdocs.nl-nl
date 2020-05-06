@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9ff60d5823d7b249e4648b5858ff5ab2dcd5935a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 74fbf1af85fdaef7cebde5c58f7892015b433ff6
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357711"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079226"
 ---
 # <a name="determine-deployment-goals-objectives-and-challenges"></a>Doelen, doelstellingen en uitdagingen voor de implementatie bepalen
 
-Een goed implementatieplan begint met het identificeren van de doelen en doelstellingen voor de implementatie van uw organisatie, samen met potentiële uitdagingen. Laten we elk gebied eens nader bekijken.
+Een goed implementatieplan begint met het vaststellen van de doelen en doelstellingen voor de implementatie van uw organisatie, samen met de potentiële uitdagingen. Laten we elk gebied eens nader bekijken.
 
 ## <a name="deployment-goals"></a>Implementatiedoelen
 
@@ -95,4 +95,4 @@ Implementatie-uitdagingen hebben betrekking op kwesties die topprioriteit hebben
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Nu u uw implementatiedoelen, -doelstellingen en -uitdagingen hebt geïdentificeerd, gaan we naar de volgende sectie: [Use-casescenario's bepalen](planning-guide-scenarios.md).
+Nu u uw implementatiedoelen, -doelstellingen en -uitdagingen hebt vastgesteld, gaan we naar de volgende sectie: [Use-casescenario's bepalen](planning-guide-scenarios.md).

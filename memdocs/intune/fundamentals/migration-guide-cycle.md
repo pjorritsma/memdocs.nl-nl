@@ -17,16 +17,16 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d5a9c1fab01393f45c877165230ae68118b1113
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: cdef53672c46fe4e49a5d21a22e585654c504f03
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79358218"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075945"
 ---
 # <a name="typical-migration-cycle"></a>Normale migratiecyclus
 
-Het is gebruikelijk voor een organisatie om de Intune-migratie te starten met een korte testfase onder een aantal gebruikers op de IT-afdeling. Bovendien moet uw organisatie mogelijk thema’s bespreken als de welwillendheid van medewerkers ten aanzien van de wijziging, het aantal gebruikers, de complexiteit, de vereisten, de locatie en het bedrijfsrisico zodat u het tijdskader voor de migratie kunt bepalen.
+Het is gebruikelijk voor een organisatie om de Intune-migratie te starten met een korte testfase onder een aantal gebruikers op de IT-afdeling. Bovendien moet uw organisatie mogelijk thema’s bespreken als de welwillendheid van medewerkers ten aanzien van de wijziging, het aantal gebruikers, de complexiteit, de vereisten, de locatie en het bedrijfsrisico, zodat u het tijdskader voor de migratie kunt bepalen.
 
 Hier volgt een voorbeeld van de wijze waarop u uw doelgroepen kunt plannen:
 

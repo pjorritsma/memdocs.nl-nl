@@ -18,14 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5b6762669e4d816010982c63a119bffdec2f055
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 32405d7cc00d7ddbf528eb9ce736cf0faf702b42
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79334272"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023024"
 ---
-# <a name="quickstart-add-and-assign-a-client-app"></a>Snelstartgids: Een client-app toevoegen en toewijzen
+# <a name="quickstart-add-and-assign-a-client-app"></a>Quickstart: Een client-app toevoegen en toewijzen
 
 In deze snelstartgids gaat u met behulp van Microsoft Intune een client-app toevoegen en toewijzen aan de werknemers van uw bedrijf. Een van de prioriteiten van een beheerder is om ervoor te zorgen dat eindgebruikers toegang hebben tot de apps die ze nodig hebben voor hun werk.
 
@@ -46,7 +46,7 @@ U kunt een app opnemen zodat u met Intune aspecten van de app kunt beheren.
 Gebruik de volgende stappen om een app aan Intune toe te voegen:
 
 1. Selecteer in [Intune](https://aka.ms/intuneportal) de opties **Apps** > **Alle apps** > **Toevoegen**. 
-2. Selecteer **Windows 10** in het gedeelte **Office 365-suite** van het deelvenster **Een app-type selecteren**.
+2. Selecteer **Windows 10** in de sectie **Microsoft 365-apps** van het deelvenster **Een app-type selecteren**.
 3. Klik op **Selecteren**. De stappen **App toevoegen** worden weergegeven.
 4. Bevestig de standaardgegevens op de pagina **Gegevens over de app-suite**.
 5. Klik op **Volgende** om de pagina **App-suite configureren** weer te geven.
@@ -88,7 +88,7 @@ U moet de bedrijfsportal-app installeren en gebruiken voor het installeren van d
 
 2. Open vanuit het menu **Start** **Microsoft Store**. Zoek vervolgens de app **Bedrijfsportal** en installeer deze.
 3. Start de app **Bedrijfsportal**.
-4. Klik op de app die u met behulp van Intune hebt toegevoegd. In deze snelstartgis hebt u de app **Suite Microsoft Office 365-apps** toegevoegd.
+4. Klik op de app die u met behulp van Intune hebt toegevoegd. In deze quickstart hebt u de suite **Microsoft 365-apps** toegevoegd.
 
     > [!NOTE]
     > Als u geen apps aan de Intune-gebruiker hebt kunnen toewijzen, ziet u het volgende bericht: *Uw IT-beheerder heeft geen apps beschikbaar gemaakt voor u.*
@@ -101,7 +101,7 @@ Als uw bedrijf vereist dat u de bedrijfsportal-app aan uw werknemers toewijst, k
 
 In deze snelstartgids hebt u apps aan Intune toegevoegd, de apps aan een groep toegewezen en de apps op het ingeschreven Windows 10 Desktop-apparaat geïnstalleerd. Zie [Wat is Microsoft Intune-appbeheer?](app-management.md) voor meer informatie over het beheren van apps in Intune.
 
-Ga door naar de volgende snelstartgids om deze serie met snelstartgidsen voor Intune te volgen.
+Als u deze reeks snelstartgidsen voor Intune wilt volgen, kunt u doorgaan met de volgende snelstartgids.
 
 > [!div class="nextstepaction"]
-> [Snelstartgids: Beveiligingsbeleid voor apps maken en toewijzen](quickstart-create-assign-app-policy.md)
+> [Quickstart: Een beveiligingsbeleid voor apps maken en toewijzen](quickstart-create-assign-app-policy.md)

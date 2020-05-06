@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c047c0f54e64dbe17b6bd9e9082272e80fe7566c
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.openlocfilehash: 5657a26419280871e6739060509a72c4604fc3a7
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80401480"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82255010"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Wat is er nieuw in Microsoft Intune - vorige maanden
 
@@ -222,7 +222,7 @@ U gebruikt afgeleide referenties als verificatiemethode voor configuratieprofiel
 
 Raadpleeg [Afgeleide PIV-referenties](https://www.nccoe.nist.gov/projects/building-blocks/piv-credentials) op www.nccoe.nist.gov voor meer informatie over de standaard.
 
-#### <a name="use-graph-api-to-specify-a-on-premises-user-principal-name-as-a-variable-for-scep-certificates----5437939----------"></a>Graph API gebruiken om een on-premises user principal name op te geven als een variabele voor SCEP-certificaten<!--  5437939        -->  
+#### <a name="use-graph-api-to-specify-an-on-premises-user-principal-name-as-a-variable-for-scep-certificates----5437939----------"></a>Graph API gebruiken om een on-premises user principal name op te geven als een variabele voor SCEP-certificaten<!--  5437939        -->  
 Wanneer u de [Intune Graph API](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-1.0)gebruikt, kunt u onPremisesUserPrincipalName opgeven als een variabele voor de alternatieve naam voor het onderwerp (SAN) voor SCEP-certificaten.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->'
@@ -284,7 +284,7 @@ Momenteel wordt, nadat de LOB-app is gedownload, een melding over het **slagen v
 De Intune Graph API kan via lees- en schrijfbewerkingen worden aangeroepen voor toepassingen, met behulp van de app-id zonder gebruikersreferenties. Zie [Working with Intune in Microsoft Graph](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-1.0) (Werken met intune in Microsoft Graph) voor meer informatie over het openen van de Microsoft Graph API voor Intune.
 
 #### <a name="protected-data-sharing-and-encryption-for-intune-app-sdk-for-ios---3586942----"></a>Het delen en versleutelen van beveiligde gegevens voor Intune App SDK voor iOS<!-- 3586942  -->
-De Intune App-SDK voor iOS gebruikt 256-bits versleutelingssleutels wanneer versleuteling is ingeschakeld door app-beveiligingsbeleid. Alle apps moeten eerst over een SDK-versie 8.1.1 beschikken, als u het delen van beveiligde gegevens wilt toestaan.
+De Intune App-SDK voor iOS gebruikt 256-bits versleutelingssleutels wanneer versleuteling is ingeschakeld door app-beveiligingsbeleid. Het delen van beveiligde gegevens is pas mogelijk als alle apps over SDK-versie 8.1.1 beschikken.
 
 #### <a name="updates-to-microsoft-intune-app---4997846---"></a>Updates voor de Microsoft Intune-app<!-- 4997846 -->
 De Microsoft Intune-app voor Android is bijgewerkt met de volgende verbeteringen:
@@ -2011,7 +2011,7 @@ Gebruikers wordt nu gevraagd om een pincode na het doorvoeren van biometrische w
 Deze functie is alleen beschikbaar voor iOS en vereist het gebruik van toepassingen die de Intune-APP SDK voor iOS, versie 9.0.1 of hoger, hebben geïntegreerd. Integratie van de SDK is nodig om het gedrag te kunnen afdwingen in de betreffende toepassingen. Deze integratie vindt doorlopend plaats en is afhankelijk van de specifieke toepassingsteams. Apps die hieraan deelnemen, zijn onder meer WXP, Outlook, Managed Browser en Yammer.
 
 #### <a name="network-access-control-support-on-ios-vpn-clients---1333693---"></a>Ondersteuning voor netwerktoegangsbeheer op iOS VPN-clients<!-- 1333693 -->
-Met deze update is er een nieuwe instelling om netwerktoegangsbeheer (NAC) in te schakelen wanneer u een VPN-configuratieprofiel maakt voor Cisco AnyConnect-, F5-toegang en Citrix SSO voor iOS. Dankzij deze instelling kan de NAC-ID van het apparaat worden opgenomen in het VPN-profiel. Momenteel zijn er geen VPN-clients of NAC-partneroplossingen die ondersteuning bieden voor deze nieuwe NAC-ID, maar we houden u op de hoogte via onze [ondersteuningsblogpost](ttps://aka.ms/iOS12_and_vpn) als dit het geval is.
+Met deze update is er een nieuwe instelling om netwerktoegangsbeheer (NAC) in te schakelen wanneer u een VPN-configuratieprofiel maakt voor Cisco AnyConnect-, F5-toegang en Citrix SSO voor iOS. Dankzij deze instelling kan de NAC-ID van het apparaat worden opgenomen in het VPN-profiel. Momenteel zijn er geen VPN-clients of NAC-partneroplossingen die ondersteuning bieden voor deze nieuwe NAC-ID, maar we houden u op de hoogte via onze [ondersteuningsblogpost](https://aka.ms/iOS12_and_vpn) als dit het geval is.
 
 Voor het gebruik van NAC moet u het volgende doen:
 1. Aangeven dat Intune apparaat-id's in VPN-profielen mag opnemen
@@ -2200,7 +2200,7 @@ De pagina [Maak kennis met Windows 10 in S-⁠modus](https://www.microsoft.com/w
 Van toepassing op: de meeste recente build van [Windows Insider](https://docs.microsoft.com/windows-insider/at-work-pro/) (in preview).
 
 #### <a name="windows-defender-atp-configuration-package-automatically-added-to-configuration-profile---2144658---"></a>Windows Defender ATP configuratiepakket automatisch toegevoegd aan configuratieprofiel<!-- 2144658 -->
-Wanneer u [Advanced Threat Protection en onboarding](../protect/advanced-threat-protection.md#onboard-devices-by-using-a-configuration-profile)-apparaten gebruikt in Intune, moest u voorheen een configuratiepakket downloaden en dit aan uw configuratieprofiel toevoegen. Met deze update haalt Intune het pakket automatisch op uit het Windows Defender-beveiligingscentrum en voegt het toe aan uw profiel.
+Wanneer u [Advanced Threat Protection en onboarding](../protect/advanced-threat-protection.md#onboard-windows-devices-by-using-a-configuration-profile)-apparaten gebruikt in Intune, moest u voorheen een configuratiepakket downloaden en dit aan uw configuratieprofiel toevoegen. Met deze update haalt Intune het pakket automatisch op uit het Windows Defender-beveiligingscentrum en voegt het toe aan uw profiel.
 Van toepassing op Windows 10 en hoger.
 
 #### <a name="require-users-to-connect-during-device-setup--2311457--"></a>Gebruikers verplichten om verbinding te maken tijdens de installatie van het apparaat<!--2311457-->
@@ -2530,7 +2530,7 @@ U kunt nu het veld met de managementnaam bewerken op de blade **Eigenschappen** 
 #### <a name="new-all-devices-filter-device-category---1878520---"></a>Nieuw filter Alle apparaten: Apparaatcategorie<!-- 1878520 -->
 U kunt nu de lijst **Alle apparaten** filteren op apparaatcategorie. Als u dit wilt doen, kiest u **Apparaten** > **Alle apparaten** > **Filter** > **Apparaatcategorie**.
 
-#### <a name="use-teamviewer-to-screen-share-ios-and-macos-devices---1985547---"></a>TeamViewer gebruiken voor het delen van schermen op iOS- en MacOS-apparaten<!-- 1985547 -->
+#### <a name="use-teamviewer-to-screen-share-ios-and-macos-devices---1985547---"></a>TeamViewer gebruiken voor het delen van schermen op iOS- en macOS-apparaten<!-- 1985547 -->
 Beheerders kunnen nu verbinding maken met [TeamViewer](../remote-actions/teamviewer-support.md) en een sessie voor het delen van schermen starten met iOS- en macOS-apparaten. iPhone-, iPad- en MacOS-gebruikers kunnen hun schermen live delen met andere pc's of mobiele apparaten. 
 
 #### <a name="multiple-exchange-connector-support---2070451---"></a>Ondersteuning voor meerdere Exchange Connectors<!-- 2070451 -->
@@ -2935,7 +2935,7 @@ Met Azure Active Directory (Azure AD) kunt u nu de toegang tot websites op mobie
 De bedrijfsportal-app voor Android is bijgewerkt om de richtlijnen voor [Ontwerp van materiaal](https://material.io/) van Android te volgen. In het Engelstalige artikel [What's new in app UI](whats-new-app-ui.md) (Nieuw in de gebruikersinterface van de app) kunt u afbeeldingen van de nieuwe pictogrammen bekijken.
 
 #### <a name="company-portal-enrollment-improved---1874230-eeready--"></a>Inschrijving bedrijfsportal verbeterd<!-- 1874230 eeready-->
-Gebruikers die een apparaat inschrijven via de bedrijfsportal in Windows 10-build 1703 en hoger, kunnen de eerste stap van de inschrijving voltooien zonder de app te verlaten.
+Gebruikers die een apparaat inschrijven via de bedrijfsportal in Windows 10-build 1709 en hoger, kunnen de eerste stap van de inschrijving voltooien zonder de app te verlaten.
 #### <a name="hololens-and-surface-hub-now-appear-in-device-lists--1725868---"></a>HoloLens en Surface Hub nu worden weergegeven in de apparaatlijsten<!--1725868 -->
 Er is ondersteuning toegevoegd voor het weergeven van HoloLens- en Surface Hub-apparaten die via Intune zijn geregistreerd bij de bedrijfsportal-app voor Android.
 
@@ -3574,7 +3574,7 @@ Wanneer het profiel naar het apparaat is gepusht, is de volgende stap afhankelij
 ### <a name="access-to-managed-app-logs-for-ios---1469920---"></a>Toegang tot de logboeken van de beheerde app voor iOS<!-- 1469920 -->
 Eindgebruikers waarvoor de beheerde browser is geïnstalleerd kunnen de beheerstatus van alle gepubliceerde Microsoft-apps bekijken en logbestanden versturen om problemen met hun beheerde iOS-apps op te lossen.
 
-Zie [Toegang tot de logboeken van de beheerde app voor iOS](../apps/app-configuration-managed-browser.md#how-to-access-to-managed-app-logs-using-the-managed-browser-on-ios) voor meer informatie over het inschakelen van de probleemoplossingsmodus in de beheerde browser op een iOS-apparaat.
+Zie [Toegang tot de logboeken van de beheerde app voor iOS](../apps/app-configuration-managed-browser.md) voor meer informatie over het inschakelen van de probleemoplossingsmodus in de beheerde browser op een iOS-apparaat.
 
 ### <a name="improvements-to-device-setup-workflow-in-the-company-portal-for-ios-in-version-290---1417174---"></a>Verbeteringen in de werkstroom voor apparaatinstellingen in de bedrijfsportal voor iOS in versie 2.9.0<!-- 1417174 -->
 
@@ -4025,7 +4025,7 @@ Op basis van feedback van klanten hebben we de Intune-bedrijfsportal-app voor An
 Op basis van feedback van gebruikers is aan de bedrijfsportal-app voor Android een nieuwe menu-actie toegevoegd om het verwijderen van de bedrijfsportal van uw apparaat te starten. Met deze actie verwijdert u het apparaat uit Intune-beheer, zodat de app door de gebruiker van het apparaat kan worden verwijderd. U kunt deze wijzigingen zien op de pagina [Wat is er nieuw in de gebruikersinterface van apps](whats-new-app-ui.md) en in de [Android-eindgebruikersdocumentatie](../user-help/unenroll-your-device-from-intune-android.md).
 
 ### <a name="improvements-to-app-syncing-with-windows-10-creators-update--676505--"></a>Verbeterde synchronisatie van apps met Windows 10-makersupdate<!--676505-->
-De bedrijfsportal-app voor Windows 10 voert nu automatisch een synchronisatie uit voor app-installatieaanvragen voor apparaten met Windows 10-makersupdate (versie 1703). Hierdoor is de kans aanzienlijk kleiner dat app-installaties worden gestopt tijdens de status Synchronisatie in behandeling. Daarnaast kunnen gebruikers handmatig een synchronisatie uitvoeren vanuit de app. U kunt deze wijzigingen zien op [deze pagina](whats-new-app-ui.md).
+De bedrijfsportal-app voor Windows 10 voert nu automatisch een synchronisatie uit voor app-installatieaanvragen voor apparaten met Windows 10-makersupdate (versie 1709). Hierdoor is de kans aanzienlijk kleiner dat app-installaties worden gestopt tijdens de status Synchronisatie in behandeling. Daarnaast kunnen gebruikers handmatig een synchronisatie uitvoeren vanuit de app. U kunt deze wijzigingen zien op [deze pagina](whats-new-app-ui.md).
 
 ### <a name="new-guided-experience-for-windows-10-company-portal---1058938---"></a>Nieuwe begeleide ervaring voor Windows 10-bedrijfsportal<!---1058938--->
 De bedrijfsportal-app voor Windows 10 bevat een begeleiding voor Intune voor apparaten die nog niet zijn geïdentificeerd of geregistreerd. Deze nieuwe ervaring biedt stapsgewijze instructies die gebruikers begeleidt bij de registratie bij Azure Active Directory (vereist voor de voorwaardelijke toegangsfuncties) en MDM-registratie (vereist voor apparaatbeheerfuncties). De stapsgewijze instructies zijn toegankelijk via de startpagina van de bedrijfsportal. Als gebruikers de registratie en inschrijving niet voltooien, kunnen ze de app gewoon blijven gebruiken, maar is de functionaliteit beperkt.

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d6fdb0e019c4c61a83beed63c6d2470a0ed04b1
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: c2d0d4c186dd0c703e371169fd24c2dbdabaa8ea
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326054"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254840"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Android Enterprise-apparaten met OEMConfig gebruiken en beheren in Microsoft Intune
 
@@ -151,21 +151,25 @@ Vergeleken met standaard-apps bieden OEMConfig-apps meer bevoegdheden voor behee
 
 | OEM | Bundel-id | OEM-documentatie (indien beschikbaar) |
 | --- | --- | ---|
-| Samsung | com.samsung.android.knox.kpu | [Beheerdershandleiding voor de KNOX-service-invoegtoepassing](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) |
-| Zebra Technologies | com.zebra.oemconfig.common | [Overzicht van OEMConfig van Zebra](http://techdocs.zebra.com/oemconfig ) |
+| Ascom | com.ascom.myco.oemconfig | |
+| Cipherlab | com.cipherlab.oemconfig | |
 | Honeywell | com.honeywell.oemconfig |  |
+| HMDGlobal - 7.2 | com.hmdglobal.app.oemconfig.n7_2 | 
+| HMDGlobal - 4.2 | com.hmdglobal.app.oemconfig.n4_2 | 
 | Kyocera | jp.kyocera.enterprisedeviceconfig |  |
+| Samsung | com.samsung.android.knox.kpu | [Beheerdershandleiding voor de KNOX-service-invoegtoepassing](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) |
+| Seuic | com.seuic.seuicoemconfig | |
 | Spectralink: streepjescodes | com.spectralink.barcode.service |  |
 | Spectralink: knoppen | com.spectralink.buttons |  |
 | Spectralink: apparaat | com.spectralink.slnkdevicesettings  |  |
 | Spectralink: logboekregistratie | com.spectralink.slnklogger |  |
 | Spectralink: VQO | com.spectralink.slnkvqo |  |
-| Seuic | com.seuic.seuicoemconfig | |
 | Unitech Electronics | com.unitech.oemconfig | |
+| Zebra Technologies | com.zebra.oemconfig.common | [Overzicht van OEMConfig van Zebra](http://techdocs.zebra.com/oemconfig ) |
 
 -----------------
 
-Als er een OEMConfig-toepassing voor uw apparaat bestaat, maar deze niet in de bovenstaande tabel staat of niet wordt weergegeven in de Intune-console, mailt u naar `IntuneOEMConfig@microsoft.com`.
+Als er een OEMConfig-toepassing voor uw apparaat bestaat, maar deze niet in de bovenstaande tabel staat of niet wordt weergegeven in de Intune-console, stuurt u een e-mail naar `IntuneOEMConfig@microsoft.com`.
 
 > [!NOTE]
 > OEMConfig-apps moeten door Intune worden onboarded voordat ze kunnen worden geconfigureerd met OEMConfig-profielen. Zodra een app wordt ondersteund, hoeft u geen contact op te nemen met Microsoft over het instellen ervan in uw tenant. U kunt gewoon de instructies op deze pagina volgen.

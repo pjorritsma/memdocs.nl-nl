@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 04/30/2020
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f8be97edbbba9a998dd223a5a0e9c8982c1a16a1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4f32ced29b6bb53f8c091ba1a0f42261a2baa493
+ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326601"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82605215"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>Zelfstudie: Exchange Online-e-mail beschermen op onbeheerde apparaten
 
@@ -38,7 +38,7 @@ Voor deze zelfstudie hebt u een testtenant nodig met de volgende abonnementen:
 
 - Azure Active Directory Premium ([ gratis proefversie](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
 - Intune-abonnement ([gratis proefversie](../fundamentals/free-trial-sign-up.md))
-- Office 365 Business-abonnement inclusief Exchange ([ gratis proefversie](https://go.microsoft.com/fwlink/p/?LinkID=510938))
+- Een abonnement op Microsoft Office 365-apps voor bedrijven-abonnement inclusief Exchange ([gratis proefversie](https://go.microsoft.com/fwlink/p/?LinkID=510938))
 
 ## <a name="sign-in-to-intune"></a>Aanmelden bij Intune
 
@@ -95,7 +95,6 @@ In deze zelfstudie gaan we een Intune-app-beveiligingsbeleid instellen voor iOS 
    Klik op **Volgende** om door te gaan.
 
 8. Op de pagina **Toewijzingen** kunt u het beveiligingsbeleid voor apps toewijzen aan groepen gebruikers. Voor deze zelfstudie gaat u dit beleid niet toewijzen aan een groep.  
- U hoeft deze instellingen niet te configureren.
 
    Klik op **Volgende** om door te gaan.
 

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fcf2139019b1f4d764b55ee31f5961711a71834c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6b0c673eb702e3e9f08209d04bf256c049b10ee6
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80219874"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82022684"
 ---
 # <a name="use-update-channel-and-target-version-settings-to-update-office-365-with-microsoft-intune-administrative-templates"></a>Instellingen van het updatekanaal en de doelversie gebruiken om Office 365 bij te werken met Microsoft Intune-beheersjablonen
 
@@ -37,7 +37,7 @@ Van toepassing op:
 
 ## <a name="prerequisites"></a>Vereisten
 
-[Schakel automatische updates voor Office365 ProPlus in](https://docs.microsoft.com/deployoffice/configure-update-settings-for-office-365-proplus) op uw Office-apps. U kunt dit doen met behulp van groepsbeleid of met de Intune Office 2016 ADMX-sjabloon:
+[Schakel automatische updates voor Microsoft 365-apps in](https://docs.microsoft.com/deployoffice/configure-update-settings-for-office-365-proplus) voor uw Office-apps. U kunt dit doen met behulp van groepsbeleid of met de Intune Office 2016 ADMX-sjabloon:
 
 > [!div class="mx-imgBorder"]
 > ![De instelling Automatische updates inschakelen voor Office instellen in de Intune-beheersjabloon](./media/administrative-templates-update-office/admx-enable-automatic-updates.png)
@@ -78,7 +78,7 @@ Nadat u het beleid en de apparaatsynchronisaties hebt toegewezen, kunt u bevesti
     > ![Voorbeeld: registersleutel L_Updatebranch in beheersjabloon](./media/administrative-templates-update-office/admx-update-branch-registry-key.png)
 
     > [!TIP]
-    > In [Office 365 ProPlus beheren met Configuration Manage](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) worden de waarden met hun betekenis vermeld. De registerwaarden zijn gebaseerd op het geselecteerde distributiekanaal:
+    > In [Microsoft 365-apps beheren met Configuration Manager](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) worden de waarden met hun betekenis vermeld. De registerwaarden zijn gebaseerd op het geselecteerde distributiekanaal:
     >
     >- Monthly-kanaal                - waarde="Current"
     >- Monthly-kanaal (Targeted)     - waarde="Current"
@@ -98,7 +98,7 @@ Op dit punt wordt het Intune-beleid toegepast op het apparaat.
     - `UpdateChannel`: een dynamische sleutel die wordt gewijzigd, afhankelijk van de geconfigureerde instellingen.
     - `CDNBaseUrl`: deze wordt ingesteld wanneer Office 365 op het apparaat wordt geïnstalleerd.
 
-3. Bekijk de waarde `UpdateChannel`. De waarde vertelt u hoe vaak Office wordt bijgewerkt. In [Office 365 ProPlus beheren met Configuration Manage](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) worden de waarden vermeld en waarvoor ze zijn ingesteld.
+3. Bekijk de waarde `UpdateChannel`. De waarde vertelt u hoe vaak Office wordt bijgewerkt. In [Microsoft 365 Apps beheren met Configuration Manager](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) worden de waarden vermeld en waarvoor ze zijn ingesteld.
 
     In het volgende voorbeeld ziet u dat `UpdateChannel` is ingesteld op `http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60`, dus op **maandelijks**:
 
@@ -141,7 +141,7 @@ Als u meer wilt doen, kunt u Office afdwingen de nieuwste versie-update op te ha
 
 ### <a name="step-1-force-the-office-version-to-update"></a>Stap 1: Office-versie afdwingen tot bijwerken
 
-1. Bevestig dat de Office-versie ondersteuning biedt voor het updatekanaal dat u kiest. [Update history for Office 365 ProPlus](https://docs.microsoft.com/officeupdates/update-history-office365-proplus-by-date) (Updategeschiedenis van Office 365 ProPlus) bevat de buildnummers die de verschillende updatekanalen ondersteunen.
+1. Bevestig dat de Office-versie ondersteuning biedt voor het updatekanaal dat u kiest. [Update history for Microsoft 365 Apps](https://docs.microsoft.com/officeupdates/update-history-office365-proplus-by-date) (Updategeschiedenis van Microsoft 365-apps) bevat de buildnummers die de verschillende updatekanalen ondersteunen.
 
 2. Ga in de [Intune-beheersjabloon](administrative-templates-windows.md#create-the-template) naar de instelling **Doelversie** en voer de gewenste versie in.
 
@@ -182,6 +182,6 @@ U kunt deze stappen gebruiken om uw beleid te testen voordat u het beleid voor a
 
 [Kanaalwaarden voor Office 365-clients bijwerken](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)
 
-[Overview of the Office cloud policy service for Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service) (Overzicht van de Office-cloudbeleidsservice voor Office 365 ProPlus)
+[Overview of the Office cloud policy service for Microsoft 365 Apps ](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service) (Overzicht van de Office-cloudbeleidsservice voor Microsoft 365-apps)
 
 [Windows 10-sjablonen gebruiken voor het configureren van instellingen voor groepsbeleid (ADMX-sjablonen) in Microsoft Intune](administrative-templates-windows.md)

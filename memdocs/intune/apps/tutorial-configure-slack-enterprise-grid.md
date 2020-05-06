@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 556381337b225640f25d2e3adf86dde5ed428273
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 98ab8fd069b0542a29f61d9b0f5b69d7b82a8a1c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80325669"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074772"
 ---
 # <a name="tutorial-configure-slack-to-use-intune-for-emm-and-app-configuration"></a>Zelfstudie: Slack configureren om Intune te gebruiken voor de configuratie van EMM en de app
 
@@ -128,7 +128,7 @@ Voeg een app-configuratiebeleid toe voor Slack. App-configuratiebeleidsregels vo
 5. Selecteer **Gekoppelde app**.
 6. Voer in de zoekbalk 'Slack' in en selecteer de app.
 7. Klik op **OK** en selecteer vervolgens **Configuratie-instellingen**.
-    - Voor informatie over configuratiesleutels en hun waarden, raadpleegt u de documentatie op het tabblad 'Technisch' van [de AppConfig-webpagina van Slack](https://www.appconfig.org/company/slack/).
+    - Voor informatie over configuratiesleutels en hun waarden, raadpleegt u de documentatie op het tabblad Technisch van [de AppConfig-webpagina van Slack](https://www.appconfig.org/company/slack/).
 8. Selecteer **OK** en selecteer vervolgens **Toevoegen**.
 9. Voer in de zoekbalk 'Testbeleid Slack-app-configuratie' in en selecteer het beleid dat u zojuist hebt toegevoegd.
 10. Selecteer bij Beheren **Toewijzingen**.

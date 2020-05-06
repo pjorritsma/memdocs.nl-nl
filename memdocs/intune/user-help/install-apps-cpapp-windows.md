@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: e0802e068b98e3f71393ca9b8124558243bf4847
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c16f2d8cf70fe42e5122083364efa222cffa706e
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79347896"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078886"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Apps op uw apparaat installeren en delen
 
@@ -89,7 +89,7 @@ Bekijk een lijst met alle apps die op uw apparaat zijn geïnstalleerd. Op de pag
 * Naam: De naam van de app. Optionele apps bevatten een koppeling naar de pagina **App-gegevens**.
 * Toewijzingstype: Hoe de app aan u wordt toegewezen en voor u beschikbaar wordt gesteld. 
 * Uitgever: De naam van de ontwikkelaar of het bedrijf dat de app heeft gedistribueerd. Een uitgever is doorgaans een softwareleverancier of uw organisatie.  
-* Publicatiedatum: De datum waarop de app beschikbaar is gesteld zodat deze kan worden gedownload. Bij de publicatiedatum kan de datum voor de eerste release van een app of de meest recente update van de app worden weergegeven.
+* Publicatiedatum: De datum waarop de app beschikbaar is gesteld zodat deze kan worden gedownload. Bij de publicatiedatum kan de datum voor de eerste release van een app of de meest recente update van een app worden weergegeven.
 * Status: De huidige installatiestatus van de app op uw apparaat. Voor apps kunnen de volgende statussen worden weergegeven: Wordt geïnstalleerd, Geïnstalleerd en Installatie mislukt. Het kan voor vereiste apps tot tien minuten duren voordat er een actuele status wordt weergegeven. Zie de opmerking onder [Apps installeren](#install-apps) voor belangrijke informatie over het installeren van een vereiste app. 
 
 Ga naar het navigatiemenu en selecteer **Geïnstalleerde apps** om naar deze pagina te gaan.  

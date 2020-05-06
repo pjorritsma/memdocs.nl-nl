@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/03/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 687ef14791d1ae0df60d28802d27b99dd9547423
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.openlocfilehash: 64cb05d6e031cfe08789d6b7c923d9e489d0e433
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80401338"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254313"
 ---
 # <a name="add-microsoft-edge-for-windows-10-to-microsoft-intune"></a>Microsoft Edge voor Windows 10 toevoegen aan Microsoft Intune
 
 Voordat u apps kunt implementeren, configureren, bewaken of beveiligen, moet u deze aan Intune toevoegen. Een van de beschikbare [app-typen](apps-add.md#app-types-in-microsoft-intune) is Microsoft Edge *versie 77 en later*. Door dit app-type in Intune te selecteren, kunt u Microsoft Edge *versie 77 en later* toewijzen aan en installeren op door u beheerde Windows 10-apparaten.
 
 > [!IMPORTANT]
-> Dit app-type is in **openbare preview** en biedt stabiele, beta- en dev-kanalen voor Windows 10. De implementatie is alleen in het Engels (EN) beschikbaar, maar eindgebruikers kunnen de weergavetaal wijzigen in de browser via **Instellingen** > **Talen**. Microsoft Edge is een Win32-app die wordt geïnstalleerd in systeemcontext en in soortgelijke architecturen (x86-app in een x86-besturingssysteem en x64-app in een x64-besturingssysteem). Er worden bestaande Microsoft Edge-installaties door Intune gedetecteerd. Als de app in de gebruikerscontext is geïnstalleerd, wordt deze door een systeeminstallatie overschreven. Als de app in de systeemcontext is geïnstalleerd, wordt de installatie gerapporteerd. Automatische updates van Microsoft Edge zijn bovendien standaard **Ingeschakeld**.
+> Dit type app biedt stabiele, bèta- en dev-kanalen voor Windows 10. De implementatie is alleen in het Engels (EN) beschikbaar, maar eindgebruikers kunnen de weergavetaal wijzigen in de browser via **Instellingen** > **Talen**. Microsoft Edge is een Win32-app die wordt geïnstalleerd in systeemcontext en in soortgelijke architecturen (x86-app in een x86-besturingssysteem en x64-app in een x64-besturingssysteem). Er worden bestaande Microsoft Edge-installaties door Intune gedetecteerd. Als de app in de gebruikerscontext is geïnstalleerd, wordt deze door een systeeminstallatie overschreven. Als de app in de systeemcontext is geïnstalleerd, wordt de installatie gerapporteerd. Automatische updates van Microsoft Edge zijn bovendien standaard **Ingeschakeld**.
 
 > [!NOTE]
 > Microsoft Edge *versie 77 en later* is ook beschikbaar voor macOS.
@@ -38,7 +38,7 @@ Voordat u apps kunt implementeren, configureren, bewaken of beveiligen, moet u d
 
 ## <a name="prerequisites"></a>Vereisten
 
-- Windows 10 versie 1703 of hoger.
+- Windows 10 versie 1709 of hoger.
 - Alle vooraf geïnstalleerde versies van Microsoft Edge *versie 77 en later* voor alle kanalen in de gebruikerscontext worden overschreven met Edge, geïnstalleerd in de systeemcontext.
 
 ## <a name="configure-the-app-in-intune"></a>De app configureren in Intune

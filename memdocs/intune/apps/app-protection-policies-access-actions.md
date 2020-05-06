@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f77fb3b93c2600bf422aa95af267abc3e64ae7ee
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ba37abadc8571cee53b97877f4a8a6695f78acd2
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80551354"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079328"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Selectief gegevens wissen met acties voor voorwaardelijke toegang in app-beveiligingsbeleid in Intune
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67d0d271b5befc65ad286a8da6e00f647973d73d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 7893e845d2f4c73d4fc6fdecd8691b288c33bb48
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79364458"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078240"
 ---
 # <a name="common-questions-issues-and-resolutions-with-device-policies-and-profiles-in-microsoft-intune"></a>Algemene vragen, problemen en oplossingen met apparaatbeleid en -profielen in Microsoft Intune
 
@@ -40,7 +40,7 @@ Enkele extra aanbevelingen:
 - Als u bent verbonden met het Wi-Fi-eindpunt (de Wi-Fi-router), noteert u de SSID en de referentie die wordt gebruikt (dit is het wachtwoord of de wachtwoordzin).
 - Voer de SSID en referentie (wachtwoord of wachtwoordzin) in het veld vooraf gedeelde sleutel in. 
 - Stel deze instelling in voor een testgroep met een beperkt aantal gebruikers, bij voorkeur het liefst alleen voor het IT-team. 
-- Synchroniseer uw iOS-/iPadOS-apparaat naar Intune. Registreert u als dit nog niet is gebeurd. 
+- Synchroniseer uw iOS-/iPadOS-apparaat naar Intune. Schrijf u in als dit nog niet is gebeurd. 
 - Test de verbinding met hetzelfde Wi-Fi-eindpunt opnieuw (zoals vermeld in de eerste stap).
 - Implementeer deze instelling naar grotere groepen en uiteindelijk naar alle eindgebruikers in uw organisatie. 
 

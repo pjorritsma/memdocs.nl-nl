@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0711b407b185b3a9621ff80a371bd3aaa5032ead
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ac4a9797df1ea64a5ffbceca3ea204bd9ed13a6f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80407740"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075537"
 ---
 # <a name="configure-microsoft-launcher"></a>Microsoft Launcher configureren
 
@@ -49,6 +49,8 @@ Als u eigenschappen toevoegt met **Configuration Designer**, kunt u deze eigensc
 
    > [!NOTE]
    > Zodra eigenschappen zijn geconfigureerd via Configuration Designer, worden de JSON-gegevens ook bijgewerkt zodat alleen deze eigenschappen worden weergegeven. Als u extra configuratiesleutels wilt toevoegen aan de JSON-gegevens, gebruikt u het [JSON-scriptvoorbeeld](../apps/configure-microsoft-launcher.md#microsoft-launcher-configuration-example) om de benodigde regels voor elke configuratiesleutel te kopiëren. 
+
+Bij het bewerken van eerder gemaakte beleidsregels voor app-configuraties en als er complexe eigenschappen zijn geconfigureerd, wordt tijdens het bewerkingsproces de JSON-gegevenseditor weergegeven. Alle eerder geconfigureerde instellingen blijven behouden en u kunt overschakelen op het gebruik van Configuration Designer om ondersteunde instellingen te wijzigen.
 
 ## <a name="using-configuration-designer"></a>Configuration Designer gebruiken
 

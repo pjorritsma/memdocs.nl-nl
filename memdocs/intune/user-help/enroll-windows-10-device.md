@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2d5438a83132323f67f9fd9655a8a1bff52439a9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8f3150a887cfbff73976bb697e0b13ea129f003f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79348442"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080076"
 ---
 # <a name="enroll-windows-10-devices-with-intune-company-portal"></a>Windows 10-apparaten inschrijven bij de Intune-bedrijfsportal
 
@@ -60,7 +60,7 @@ In deze stappen wordt beschreven hoe u een apparaat inschrijft met Windows 10 ve
 
 6. Als u van uw organisatie een pincode moet instellen voor Windows Hello, wordt u gevraagd een verificatiecode in te voeren. Voer de code in en ga door met de aanwijzingen op het scherm voor het maken van een pincode.  
 
-7. Op het scherm **U bent klaar** ziet, selecteert u **Gereed**. Uw apparaat is nu geregistreerd.  
+7. Op het scherm **U bent klaar** selecteert u **Gereed**. Uw apparaat is nu geregistreerd.  
 
 8. Als u uw verbinding nogmaals wilt controleren, gaat u terug naar **Instellingen** > **Accounts** > **Toegang tot werk of school**.  Uw account wordt nu in de lijst weergegeven.  
 

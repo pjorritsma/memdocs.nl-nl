@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 64d1bce08186c47e63a83b3148b59a2593a761f5
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 7f1bd1b5da0a45ce4291eba765742405e1e4ba43
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79362261"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077883"
 ---
 # <a name="manage-license-agreements-for-windows-pc-software-in-microsoft-intune"></a>Licentieovereenkomsten voor Windows-pc-software in Microsoft Intune beheren
 
@@ -148,7 +148,7 @@ Naast Microsoft-volumelicentieovereenkomsten kunt u ook andere typen licentieove
 
     - **Agreement name** (vereist). De naam van een overeenkomst mag uit maximaal 256 tekens bestaan en mag niet de volgende tekens bevatten: **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /** . Spaties zijn toegestaan in de naam.
 
-    - **Uitgever** (vereist). Terwijl u de naam van een uitgever typt, worden alle namen van uitgevers opgehaald die de door u getypte letters bevatten. Als u bijvoorbeeld 'soft' typt, worden alle namen opgehaald van uitgevers die 'soft' bevatten, bijvoorbeeld 'Microsoft' en 'Microsoft Research.' De namen van de uitgevers worden opgehaald uit de Software Asset Catalog. Voordat u de titel van het product kunt invoeren, moet u de uitgever selecteren.
+    - **Uitgever** (vereist). Terwijl u de naam van een uitgever typt, worden alle namen van uitgevers opgehaald die de door u getypte letters bevatten. Als u bijvoorbeeld 'soft' typt, worden alle namen opgehaald van uitgevers die 'soft' bevatten, bijvoorbeeld 'Microsoft' en 'Microsoft Research'. De namen van de uitgevers worden opgehaald uit de Software Asset Catalog. Voordat u de titel van het product kunt invoeren, moet u de uitgever selecteren.
 
         > [!IMPORTANT]
         > Het bedrijf dat u wilt toevoegen, wordt mogelijk niet in deze lijst weergegeven. U kunt alleen softwareovereenkomsten toevoegen voor bedrijven die al voorkomen in Software Asset Catalog. Microsoft probeert echter doorlopend om de meest populaire softwaretitels toe te voegen. Als u een aanvraag wilt indienen om een bedrijf aan deze lijst toe te voegen, kunt u dat doen op de [Intune Uservoice-site](https://microsoftintune.uservoice.com/).

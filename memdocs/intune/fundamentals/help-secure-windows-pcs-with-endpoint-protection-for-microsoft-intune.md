@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c5a0a1405ceda93317dbefa6d80ec24cc0156bb
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b18d796c8897d2de249f1f1f218a31e99512e813
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79362339"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079464"
 ---
 # <a name="help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune"></a>Help Windows-pc's beveiligen met Endpoint Protection Help voor Microsoft Intune
 
@@ -43,7 +43,7 @@ Als IT-beheerder is een van uw eerste prioriteiten de computers die u beheert vr
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |                                             Gebruik Microsoft Intune Endpoint Protection alleen als er geen eindpuntbeveiligingstoepassing van derden is geïnstalleerd.<br /><br />U kunt Microsoft Intune Endpoint Protection gebruiken op alle computers waarop geen eindpuntbeveiligingstoepassing van derden is geïnstalleerd.                                              | Endpoint Protection installeren = <strong>Ja</strong><br /><br />Endpoint Protection inschakelen = <strong>Ja</strong><br /><br />Endpoint Protection installeren, zelfs als er een eindpuntbeveiligingstoepassing van derden is geïnstalleerd = <strong>Nee</strong>  |                                                                      Als een eindpuntbeveiligingstoepassing van derden wordt gedetecteerd, wordt Microsoft Intune Endpoint Protection niet geïnstalleerd of wordt de installatie ongedaan gemaakt als het programma al is geïnstalleerd.                                                                       |
 | Microsoft Intune Endpoint Protection gebruiken, zelfs als een eindpuntbeveiligingstoepassing van derden is geïnstalleerd.<br /><br />Met deze methode voert u Microsoft Intune Endpoint Protection en de eindpuntbeveiligingstoepassing van derden tegelijkertijd uit. Deze configuratie wordt afgeraden, omdat zich prestatieproblemen kunnen voordoen. | Endpoint Protection installeren = <strong>Ja</strong><br /><br />Endpoint Protection inschakelen = <strong>Ja</strong><br /><br />Endpoint Protection installeren, zelfs als er een eindpuntbeveiligingstoepassing van derden is geïnstalleerd = <strong>Ja</strong> |                        Gebruiken wanneer:<br /><br />- U wilt overschakelen op het gebruik van Microsoft Intune Endpoint Protection.<br />- U een nieuwe client met Microsoft Intune Endpoint Protection implementeert.<br />- U een client bijwerkt met Microsoft Intune Endpoint Protection.                         |
-|                                                                                                             Gebruik Intune zonder Microsoft Intune Endpoint Protection. In plaats daarvan vertrouwt u op een eindpuntbeveiligingstoepassing van derden.                                                                                                             |                                                                                                Endpoint Protection installeren = <strong>Nee</strong>                                                                                                 | Als u geen eindpuntbeveiligingstoepassing van derden gebruikt, wordt deze configuratie afgeraden. De computers worden namelijk blootgesteld aan malware of andere aanvallen.<br /><br />Microsoft Intune Endpoint Protection wordt niet geïnstalleerd of wordt verwijderd als het al is geïnstalleerd. |
+|                                                                                                             Gebruik Intune zonder Microsoft Intune Endpoint Protection. In plaats daarvan vertrouwt u op een eindpuntbeveiligingstoepassing van derden.                                                                                                             |                                                                                                Endpoint Protection installeren = <strong>Nee</strong>                                                                                                 | Als u geen eindpuntbeveiligingstoepassing van derden gebruikt, wordt deze configuratie afgeraden. De computers van de organisatie kunnen hierdoor namelijk worden blootgesteld aan malware of andere aanvallen.<br /><br />Microsoft Intune Endpoint Protection wordt niet geïnstalleerd of wordt verwijderd als het al is geïnstalleerd. |
 
 Als u van uw huidige eindpuntbeveiligingstoepassing wilt overschakelen op Microsoft Intune Endpoint Protection, gaat u als volgt te werk:
 
@@ -63,7 +63,7 @@ Als u van uw huidige eindpuntbeveiligingstoepassing wilt overschakelen op Micros
 ## <a name="configure-microsoft-intune-endpoint-protection"></a>Microsoft Intune Endpoint Protection configureren
 Gebruik de volgende stappen om u te helpen bij het configureren van Endpoint Protection voor Microsoft Intune.
 
-1. Ga naar de [Microsoft Intune-beheerconsole](https://manage.microsoft.com/) en kies**Beleid** > **Beleid toevoegen**.
+1. Ga naar de [Microsoft Intune-beheerconsole](https://manage.microsoft.com/) en kies **Beleid** > **Beleid toevoegen**.
 
 2. Vouw **Computerbeheer** uit en selecteer **Instellingen Microsoft Intune-agent**. Selecteer **Aangepast beleid maken en implementeren** om beleid op te geven voor Endpoint Protection-instellingen. Klik vervolgens op de knop **Beleid maken**.
 
@@ -87,7 +87,7 @@ U kunt het geïmplementeerde Endpoint Protection-beleid zien op de pagina **Alle
 
 Als u de beleidswaarden voor **Endpoint Protection installeren** en **Endpoint Protection inschakelen** op **Ja**en de beleidswaarde voor **Endpoint Protection installeren, zelfs als er een eindpuntbeveiligingstoepassing van derden is geïnstalleerd** op **Nee** hebt ingesteld, detecteert Microsoft Intune Endpoint Protection dat een andere eindpuntbeveiligingstoepassing is geïnstalleerd. Dit betekent dat Endpoint Protection niet wordt geïnstalleerd of wordt verwijderd als het al is geïnstalleerd. Microsoft Intune Endpoint Protection rapporteert echter wel over de status van de andere eindpuntbeveiligingstoepassing in Intune.
 
-  Met de realtime-beveiliging van Microsoft Security Essentials wordt u gewaarschuwd wanneer mogelijke bedreigingen, zoals virussen of spyware, zichzelf op uw pc proberen te installeren of uit te voeren. Wanneer dit gebeurt, ziet u een bericht in het systeemvak rechts in de taakbalk.
+  Met de realtime-beveiliging van Microsoft Security Essentials wordt u gewaarschuwd wanneer mogelijke bedreigingen, zoals virussen of spyware, zichzelf op uw pc proberen te installeren of uit te voeren. Op het moment dat dit gebeurt, ziet u een bericht in het systeemvak rechts in de taakbalk.
 
 ### <a name="specify-real-time-protection-settings"></a>Instellingen voor realtime-beveiliging opgeven
 
@@ -128,7 +128,7 @@ Als u de beleidswaarden voor **Endpoint Protection installeren** en **Endpoint P
 
 ### <a name="choose-default-actions-settings"></a>Instellingen voor standaardacties kiezen
 
-Met de instelling **Kiezen hoe Endpoint Protection omgaat met schadelijke software met de volgende waarschuwingsniveaus** geeft u de standaardactie op die door Endpoint Protection moet worden uitgevoerd wanneer er malware van verschillende waarschuwingsniveaus wordt gedetecteerd. Voor elk waarschuwingsniveau kunt u de malware verwijderen of in quarantaine plaatsen of de actie uitvoeren die door Microsoft wordt aanbevolen.
+Met de instelling **Kiezen hoe Endpoint Protection omgaat met schadelijke software met de volgende waarschuwingsniveaus** geeft u de standaardactie op die door Endpoint Protection moet worden uitgevoerd wanneer er malware van verschillende waarschuwingsniveaus wordt gedetecteerd. Voor elk waarschuwingsniveau kunt u de malware verwijderen of in quarantaine plaatsen, of de actie uitvoeren die door Microsoft wordt aanbevolen.
 
 Aanbevolen waarde: **Aanbevolen actie**, waarmee Endpoint Protection actie kan aanbevelen.   
 
@@ -198,5 +198,5 @@ U kunt met Intune een volledige of snelle malwarescan uitvoeren met Endpoint Pro
 ## <a name="need-more-help"></a>Meer hulp nodig?
 Zie [Problemen met Endpoint Protection in Microsoft Intune oplossen](troubleshoot-endpoint-protection-in-microsoft-intune.md) voor meer hulp en ondersteuning.
 
-## <a name="see-also"></a>Zie ook
+## <a name="see-also"></a>Zie tevens
 [Beleid voor het beveiligen van Windows-pc's](policies-to-protect-windows-pcs-in-microsoft-intune.md)

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 237e281b88492ff7b7e1b5614600662e15761935
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 4babd715df08a905a5ceed6ec881cbfe07f5de19
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407828"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82209870"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Apparaatinstellingen voor Windows 10 en hoger om functies toe te staan of te beperken met behulp van Intune
 
@@ -81,11 +81,13 @@ Deze instellingen gebruiken de [beleid-CSP ApplicationManagement](https://docs.m
 
   [ApplicationManagement/AllowGameDVR CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowgamedvr)
 
-- **Alleen apps uit de Store**: Met deze instelling bepaalt u de gebruikerservaring wanneer gebruikers apps van andere locaties dan de Microsoft Store installeren. Uw opties zijn:
+- **Alleen apps uit de Store**: Met deze instelling bepaalt u de gebruikerservaring wanneer gebruikers apps van andere locaties dan de Microsoft Store installeren. U voorkomt er niet mee dat inhoud van USB-apparaten, netwerkshares of andere niet-internetbronnen wordt geïnstalleerd. Gebruik een betrouwbare browser om ervoor te zorgen dat deze beveiligingsmaatregelen naar verwachting werken.
+
+  Uw opties zijn:
 
   - **Niet geconfigureerd** (standaard): Deze instelling wordt niet gewijzigd of bijgewerkt door Intune. Standaard kan in het besturingssysteem ingesteld zijn dat eindgebruikers apps van andere locaties dan de Microsoft Store mogen installeren, met inbegrip van apps die zijn gedefinieerd in andere beleidsinstellingen.  
   - **Overal**: Hiermee schakelt u de app-aanbevelingen uit en kunnen gebruikers apps vanaf elke locatie installeren.  
-  - **Alleen Store**: Hiermee dwingt u af dat eindgebruikers alleen apps van de Microsoft Store kunnen installeren.
+  - **Alleen Store**: De bedoeling is om te voorkomen dat schadelijke inhoud invloed heeft op uw gebruikersapparaten als er uitvoerbare inhoud van internet wordt gedownload. Wanneer gebruikers apps van internet proberen te installeren, wordt de installatie geblokkeerd. Gebruikers krijgen een bericht te zien waarin wordt aanbevolen apps te downloaden van de Microsoft Store.
   - **Aanbevelingen**: Wanneer gebruikers via internet een app willen installeren die beschikbaar is in de Microsoft Store, krijgen ze een bericht te zien waarin wordt aanbevolen de app vanuit de Store te downloaden.  
   - **Store heeft voorkeur**: Hiermee worden gebruikers gewaarschuwd wanneer ze apps van andere locaties dan de Microsoft Store installeren.
 
@@ -140,10 +142,14 @@ Deze instellingen gebruiken de [beleid-CSP Bluetooth](https://docs.microsoft.com
 
 Deze instellingen gebruiken de [beleid-CSP Accounts](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-accounts), waarbij ook de ondersteunde Windows-edities worden vermeld.
 
+> [!IMPORTANT]
+> Het blokkeren of uitschakelen van deze Microsoft-accountinstellingen kan invloed hebben op inschrijvingsscenario's waarvoor gebruikers zich moeten aanmelden bij Azure AD. Stel dat u gebruikmaakt van [AutoPilot-ondersteuning](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove). Normaal gesproken krijgen gebruikers een Azure AD-aanmeldingsvenster te zien. Als deze instellingen zijn ingesteld op **Blokkeren** of **Uitschakelen**, wordt de Azure AD-aanmeldingsoptie mogelijk niet weergegeven. In plaats daarvan wordt gebruikers gevraagd om de gebruiksrechtovereenkomst te accepteren en een lokaal account te maken. Dit is mogelijk niet wat u wilt.
+
 - **Microsoft-account**: Met **Blokkeren** kunnen eindgebruikers geen Microsoft-account aan het apparaat koppelen. Met **Niet geconfigureerd** (standaard) kan een Microsoft-account worden toegevoegd en gebruikt.
+
 - **Niet-Microsoft-account**: Met **Blokkeren** kunnen eindgebruikers geen niet-Microsoft-accounts toevoegen via de gebruikersinterface. Met **Niet geconfigureerd** (standaard) kunnen gebruikers e-mailaccounts toevoegen die niet aan een Microsoft-account zijn gekoppeld.
 - **Synchronisatie van instellingen voor Microsoft-accounts**: Met **Niet geconfigureerd** (standaard) staat u synchronisatie tussen apparaten toe van apparaat- en appinstellingen die aan een Microsoft-account zijn gekoppeld. Met **Blokkeren** wordt deze synchronisatie voorkomen.
-- **Aanmeldhulp voor Microsoft-account toestaan**: Met **Niet geconfigureerd** (standaard) kunnen eindgebruikers de service **Aanmeldhulp voor Microsoft-account** (wlidsvc) starten en stoppen. Met deze service kunnen gebruikers zich aanmelden bij hun Microsoft-account. Met **Uitschakelen** kunnen eindgebruikers de aanmeldhulp voor Microsoft-account-service (wlidsvc) niet beheren.
+- **Aanmeldhulp voor Microsoft-account toestaan**: Met **Niet geconfigureerd** (standaard) kunnen eindgebruikers de service **Aanmeldhulp voor Microsoft-account** (wlidsvc) starten en stoppen. Met deze service kunnen gebruikers zich aanmelden bij hun Microsoft-account. Met **Uitschakelen** wordt de Microsoft-aanmeldhulp (wlidsvc) ingesteld op Uitgeschakeld en wordt voorkomen dat eindgebruikers deze service handmatig starten.
 
 ## <a name="cloud-printer"></a>Cloudprinter
 
@@ -669,7 +675,7 @@ Deze instellingen gebruiken de [beleid-CSP Start](https://docs.microsoft.com/win
 
 ## <a name="microsoft-defender-smart-screen"></a>Microsoft Defender SmartScreen
 
-- **SmartScreen voor Microsoft Edge**: Met **Vereisen** wordt Microsoft Defender SmartScreen uitgeschakeld en kunnen gebruikers deze functie niet inschakelen. Met **Niet geconfigureerd** (standaard) wordt SmartScreen ingeschakeld. Hiermee kunt u gebruikers beveiligen tegen potentiële dreigingen. Gebruikers kunne deze functie niet uitschakelen.
+- **SmartScreen voor Microsoft Edge**: Met **Vereisen** wordt Microsoft Defender SmartScreen ingeschakeld en kunnen gebruikers deze functie niet uitschakelen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem kan standaard SmartScreen inschakelen en gebruikers toestaan deze in of uit te schakelen.
 
   Microsoft Edge gebruikt Microsoft Defender SmartScreen (ingeschakeld) om gebruikers tegen mogelijke oplichting door phishing en schadelijke software te beschermen.
 

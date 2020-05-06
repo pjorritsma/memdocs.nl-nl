@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d838260f0a4961302b24486474eec74b4cacd23e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f0a7bbdd5bb27b6fe17f5b4f44302551ff67de5d
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79343944"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254976"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Gegevensoverdracht beheren tussen iOS-apps met Microsoft Intune
 
@@ -45,7 +45,7 @@ Gebruik een app-beveiligingsbeleid met de beheerde **Open-in-functie** van iOS o
 ## <a name="configure-user-upn-setting-for-microsoft-intune-or-third-party-emm"></a>UPN-gebruikersinstelling configureren voor Microsoft Intune of EMM van derden
 Deze configuratie van de UPN-gebruikersinstelling is **vereist** voor apparaten die worden beheerd door Intune of een EMM-oplossing van derden om het geregistreerde gebruikersaccount vast te stellen. De UPN-configuratie werkt met het app-beveiligingsbeleid dat u via Intune implementeert. De volgende procedure is een algemene werkstroom voor het configureren van de UPN-instelling en de daaruit voortvloeiende gebruikerservaring:
 
-1. Maak in de [Azure-portal](https://portal.azure.com) [beveiligingsbeleid voor apps en wijs dit toe](app-protection-policies.md) voor iOS/iPadOS. Configureer beleidsinstellingen via de bedrijfsvereisten en selecteer de iOS-apps waarop dit beleid van toepassing moet zijn.
+1. Maak in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) [een appbeveiligingsbeleid](app-protection-policies.md) voor iOS/iPadOS en wijs het toe. Configureer beleidsinstellingen via de bedrijfsvereisten en selecteer de iOS-apps waarop dit beleid van toepassing moet zijn.
 
 2. Implementeer de apps en het e-mailprofiel die u wilt laten beheren via Intune of de MDM-oplossing van derden met behulp van de volgende algemene stappen. Deze ervaring wordt ook getoond in *voorbeeld 1*.
 
@@ -53,7 +53,7 @@ Deze configuratie van de UPN-gebruikersinstelling is **vereist** voor apparaten 
 
       **sleutel** = IntuneMAMUPN, **waarde** = <username@company.com>
 
-      Voorbeeld: [‘IntuneMAMUPN’, ‘janellecraig@contoso.com’]
+      Voorbeeld: ['IntuneMAMUPN', 'janellecraig@contoso.com']
       
      > [!NOTE]
      > In Intune moet het inschrijvingstype van het App Configuration-beleid zijn ingesteld op **Beheerde apparaten**.

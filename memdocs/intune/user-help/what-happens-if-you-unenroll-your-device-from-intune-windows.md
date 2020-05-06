@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 56a7b87f61c522eb7796d201be4b3100d57f8ca1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: bea6ab16baa923d4cc38dee421342636de9e1942
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79346869"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076795"
 ---
 # <a name="what-happens-if-you-unenroll-your-windows-device-from-intune"></a>Wat gebeurt er als u de registratie van uw Windows-apparaat bij Intune ongedaan maakt?
 

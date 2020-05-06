@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1ac77e4c539c8d5614001f9a326b32536ee07629
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 79bcfc1fabab3b14a9a2560b692c5f2ca459aee4
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79336482"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079413"
 ---
 # <a name="remotely-lock-your-device-from-the-company-portal-website"></a>Uw apparaat extern vergrendelen op de website van de bedrijfsportal
 
@@ -53,7 +53,7 @@ De instelling voor extern vergrendelen werkt voor:
 
 4. Er verschijnt een bericht met de waarschuwing dat u op het punt staat uw apparaat te vergrendelen. Tik op **Extern vergrendelen** om te bevestigen.
 
-Na de bevestiging probeert de bedrijfsportal uw apparaat te vergrendelen. Het bericht 'Extern vergrendelen in behandeling' wordt in de tussentijd weergegeven. Wanneer uw apparaat is vergrendeld, wordt de status weergegeven als ‘Extern vergrendelen is geslaagd.’  
+Na de bevestiging probeert de bedrijfsportal uw apparaat te vergrendelen. Het bericht 'Extern vergrendelen in behandeling' wordt in de tussentijd weergegeven. Wanneer uw apparaat is vergrendeld, wordt de status weergegeven als 'Extern vergrendelen is geslaagd'.  
 
 De status Externe vergrendelen wordt op drie locaties weergegeven:
 
@@ -62,7 +62,7 @@ De status Externe vergrendelen wordt op drie locaties weergegeven:
 * De tegel met de naam van het apparaat in het paginagedeelte **Apparaten**.  
 
 > [!Note]
-> Wacht enkele minuten als u de melding krijgt dat extern vergrendelen is mislukt. Probeer vervolgens opnieuw uw apparaat te vergrendelen. De status wordt weer gewijzigd in ‘Extern vergrendelen is in behandeling.’ Als ook de nieuwe poging niet werkt, neemt u contact op met het ondersteuningsteam van uw bedrijf voor hulp.
+> Wacht enkele minuten als u de melding krijgt dat extern vergrendelen is mislukt. Probeer vervolgens opnieuw uw apparaat te vergrendelen. De status wordt weer gewijzigd in 'Extern vergrendelen is in behandeling'. Als ook de nieuwe poging niet werkt, neemt u contact op met het ondersteuningsteam van uw bedrijf voor hulp.
 
 Als u uw apparaat terugvindt en het wilt ontgrendelen nadat u eerder Extern vergrendelen hebt gebruikt, voer dan gewoon uw wachtwoordcode in.  
 

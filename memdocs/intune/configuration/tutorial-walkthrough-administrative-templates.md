@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26576212f4df86681210956669320ed4b124025d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 41a2dce895761053e482fe029e4599819a099ac6
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80488178"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254857"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>Zelfstudie: De cloud gebruiken voor het configureren van groepsbeleid op Windows 10-apparaten met ADMX-sjablonen en Microsoft Intune
 
@@ -34,7 +34,7 @@ Beheersjablonen voor groepsbeleid, ook wel ADMX-sjablonen genoemd, bevatten inst
 ADMX-sjablonen zijn beschikbaar voor de volgende services:
 
 - **Microsoft Edge**: download op [Microsoft Edge-beleidsbestand](https://www.microsoftedgeinsider.com/en-us/enterprise).
-- **Office**: download op [Office 365 ProPlus, Office 2019 en Office 2016](https://www.microsoft.com/download/details.aspx?id=49030).
+- **Office**: download op [Microsoft 365 apps, Office 2019 en Office 2016](https://www.microsoft.com/download/details.aspx?id=49030).
 - **Windows**: ingebouwd in het Windows 10-besturingssysteem.
 
 Zie [Informatie over door ADMX ondersteund beleid](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies) voor meer informatie over ADMX-beleid.
@@ -53,7 +53,7 @@ Aan het einde van dit lab beschikt u over de vaardigheden om aan de slag te gaan
 
 Deze functie is van toepassing op:
 
-- Windows 10 versie 1703 en hoger
+- Windows 10 versie 1709 en hoger
 
 ## <a name="prerequisites"></a>Vereisten
 

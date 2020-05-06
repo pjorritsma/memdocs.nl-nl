@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da9ab5fe5a8716e3af0ae02122f51d06e6e55e6f
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 424b835669986d1ede6e2300e9dfaba619034c30
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79352498"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079736"
 ---
 # <a name="data-intune-sends-to-apple"></a>Gegevens die Intune naar Apple verzendt
 
@@ -60,7 +60,7 @@ In de volgende tabel staat welke gegevens Microsoft Intune vanaf een apparaat ve
 | ASM/DEP | profile_uuid | De unieke id van het toegewezen profiel. |
 | ASM/DEP | device_assigned_by | Het e-mailadres van de persoon die het apparaat heeft toegewezen. |
 | ASM/DEP | os | Het besturingssysteem van het apparaat: iOS/iPadOS, OSX of tvOS. Deze sleutel is geldig in X-Server-Protocol-Version 2 en hoger. |
-| ASM/DEP | device_family | De Apple-productfamilie van het apparaat: iPhone, iPad, iPod, Mac of AppleTV. Deze sleutel is geldig in X-Server-Protocol-Version 2 en hoger. |
+| ASM/DEP | device_family | De Apple-productfamilie van het apparaat: iPad, iPhone, iPod, Mac of AppleTV. Deze sleutel is geldig in X-Server-Protocol-Version 2 en hoger. |
 | ASM/DEP | profile_name | Tekenreeks. Een leesbare naam voor het profiel. |
 | ASM/DEP | support_phone_number | Optioneel. Tekenreeks. Een ondersteuningstelefoonnummer voor de organisatie. |
 | ASM/DEP | support_email_address | Optioneel. Tekenreeks. Een ondersteuningse-mailadres voor de organisatie. Deze sleutel is geldig in X-Server-Protocol-Version 2 en hoger. |

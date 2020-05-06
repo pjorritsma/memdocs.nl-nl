@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0d596a0a43c17243431fa47bcac996868fd38066
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: ef8fb81b7be05d21eec5a4d1b544ee1a7d34bd07
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80358687"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693478"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>De app Microsoft Managed Home Screen voor Android Enterprise configureren
 
@@ -66,7 +66,6 @@ De volgende tabel bevat de beschikbare configuratiesleutels, waardetypen, standa
 | De grootte van het app-pictogram instellen | integer | 2 | Hiermee kunt u de pictogramgrootte instellen voor apps die worden weergegeven op het startscherm. U kunt de volgende waarden in deze configuratie kiezen voor de verschillende grootten - 0 (minimale grootte), 1 (klein), 2 (normaal), 3 (groot) en 4 (maximale grootte). |
 | Pictogram app-map instellen | integer | 0 | Hiermee kunt u het uiterlijk van app-mappen definiëren op het startscherm. U kunt voor het uiterlijk de volgende waarden kiezen: Donker vierkant(0);   Donker cirkel(1); Licht vierkant(2); Licht cirkel(3). |
 | Schermstand instellen | integer | 1 | Hiermee kunt u de stand van het startscherm instellen op de modus Staand, Liggend of Automatisch draaien. U kunt de stand instellen door de waarden 1 (voor de staande modus), 2 (voor de liggende modus), 3 (voor Automatisch draaien) in te voeren. |
-| Telemetrie van het apparaat inschakelen | Booleaanse waarde | FALSE | Hiermee kunt u de telemetrie inschakelen die wordt vastgelegd voor het beheerde startscherm. Als u dit inschakelt, kan Microsoft telemetrie over het apparaatgebruik vastleggen, zoals het aantal keren dat een bepaalde app op dit apparaat wordt gestart. |
 | De in de whitelist opgenomen toepassingen instellen | bundleArray | FALSE | Hiermee kunt u de apps definiëren die op het startscherm worden weergegeven. U kunt kiezen uit alle apps die op het apparaat zijn geïnstalleerd. U definieert de apps door de naam van het app-pakket in te voeren van de apps die u graag zichtbaar wilt maken. Met com.microsoft.emmx voegt u bijvoorbeeld Instellingen toe aan het startscherm. De apps die u in dit gedeelte op de whitelist plaatst, moeten al op het apparaat zijn geïnstalleerd om te worden weergegeven op het startscherm. |
 | Vastgemaakte webkoppelingen instellen | bundleArray | FALSE | Hiermee kunt u websites vastmaken als pictogrammen voor snel starten op het startscherm. Met deze configuratie kunt u de URL definiëren en toevoegen aan het startscherm waar de eindgebruiker deze met één keer tikken kan starten in de browser. |
 | De schermbeveiliging inschakelen | Booleaanse waarde | FALSE | De schermbeveiligingsmodus wel of niet inschakelen. Indien deze is ingesteld op true, kunt u **screen_saver_image**, **screen_saver_show_time**, **inactive_time_to_show_screen_saver**, en **media_detect_ screen_saver** configureren. |
@@ -78,10 +77,17 @@ De volgende tabel bevat de beschikbare configuratiesleutels, waardetypen, standa
 | Type virtuele startknop | string | swipe_up | Gebruik **swipe_up** om toegang te krijgen tot de startknop met een gebaar Omhoog vegen. Gebruik **float** om toegang te krijgen tot een sticky, permanente startknop die de gebruiker over het scherm kan verplaatsen. |
 | Indicatiebalk van accu- en signaalsterkte | Booleaanse waarde | True  | Wanneer u deze instelling op `True` zet, wordt de indicatiebalk voor de batterij- en signaalsterkte weergegeven. |
 | Wachtwoord voor afsluiten taakvergrendelingsmodus | string |   | Voer een 4-6-cijferige code in waarmee u tijdelijk de taakvergrendelingsmodus kunt opheffen voor het oplossen van problemen. |
+| Beheerde instelling weergeven | Booleaanse waarde | TRUE | 'Beheerde instelling' is een app voor het beheerde startscherm die alleen wordt weergegeven als u instellingen hebt geconfigureerd voor snelle toegang, waaronder **Wi-Fi-instellingen tonen**, **Bluetooth-instelling tonen**, **Volume-instelling weergeven** en **Zaklantaarninstelling weergeven**. Deze instellingen kunnen ook worden geopend door op het scherm omlaag te vegen. Stel deze sleutel in op `False` om de app 'Beheerde instelling' te verbergen en gebruikers instellingen alleen te laten openen door omlaag te vegen.    |
+| Eenvoudig toegankelijk foutopsporingsmenu inschakelen | Booleaanse waarde | FALSE | Stel deze instelling in op `True` om het foutopsporingsmenu te kunnen openen vanuit de app Beheerde instellingen of door omlaag te vegen in beheerde startscherm. In het foutopsporingsmenu kan de functie voor het sluiten van de kioskmodus worden gebruikt. Het menu is te openen door ongeveer 15 keer op de knop Terug te klikken. Als u deze instelling ingesteld houdt op `False`, blijft het foutopsporingsmenu alleen toegankelijk via de knop Terug.   |
 | Wi-Fi-instellingen tonen | Booleaanse waarde | FALSE | Wanneer u deze instelling op `True` zet, kan de eindgebruiker Wi-Fi in- of uitschakelen of verbinding maken met verschillende Wi-Fi-netwerken.  |
+| Lijst toegestane Wi-Fi-netwerken inschakelen | Booleaanse waarde | FALSE | Stel deze instelling in op `True` en vul de sleutel voor de **lijst toegestane Wi-Fi-netwerken** in om te beperken welke Wi-Fi-netwerken in het beheerde startscherm worden weergegeven. Stel dit in op `False` om alle mogelijke beschikbare Wi-Fi-netwerken weer te geven die op het apparaat zijn gedetecteerd. Houd er rekening mee dat deze instelling alleen relevant is als **Wi-Fi-instellingen tonen** is ingesteld op `True` en de **lijst toegestane Wi-Fi-netwerken** is ingevuld.   |
+| Lijst toegestane Wi-Fi-netwerken| bundleArray | FALSE | Hiermee kunt u een lijst weergeven met alle SSID's van de Wi-Fi-netwerken die u op het apparaat in het beheerde startscherm wilt laten weergeven. Deze lijst is alleen relevant als **Wi-Fi-instellingen tonen** en **Lijst toegestane Wi-Fi-netwerken inschakelen** zijn ingesteld op `True`. Als een van beide is ingesteld op `False`, hoeft u deze configuratie niet te wijzigen.    |
 | Bluetooth-instelling tonen | Booleaanse waarde | FALSE | Wanneer u deze instelling op `True` zet, kan de eindgebruiker Bluetooth in- of uitschakelen of verbinding maken met verschillende voor Bluetooth geschikte netwerken.   |
+| Volume-instelling weergeven | Booleaanse waarde | FALSE | Als u deze instelling instelt op `True`, krijgt de eindgebruiker toegang tot een volumeschuifregelaar om het mediavolume aan te passen.   |
+| Zaklantaarninstelling weergeven | Booleaanse waarde | FALSE | Als u deze instelling instelt op `True`, kan de eindgebruiker de zaklantaarn van het apparaat in- of uitschakelen. Als het apparaat geen zaklantaarn ondersteunt, wordt deze instelling niet weergegeven, zelfs niet als deze is ingesteld op `True`.   |
+| Instelling voor apparaatgegevens weergeven | Booleaanse waarde | FALSE | Als u deze instelling instelt op `True`, kan de eindgebruiker snel informatie over het apparaat verkrijgen via de app Beheerde instelling of door omlaag te vegen. De toegankelijke informatie omvat bijvoorbeeld het merk, het model en het serienummer van het apparaat.   |
 | Toepassingen in een map worden geordend op naam | Booleaanse waarde | TRUE | Als u deze instelling op `False` instelt, verschijnen items in een map in de volgorde waarin ze zijn opgegeven. Anders worden ze op alfabetische volgorde in de map weergegeven.   |
-| Alfabetische volgorde ingeschakeld | Booleaanse waarde | FALSE | Als u deze instellingen op `True` instelt, is het mogelijk om de volgorde van toepassingen, weblinks en mappen in de Managed Home Screen in te stellen. Als dit is ingeschakeld, stelt u de volgorde in met **app_order**. Dan kan de eindgebruiker Bluetooth in- of uitschakelen of verbinding maken met verschillende voor Bluetooth geschikte netwerken.   |
+| Alfabetische volgorde ingeschakeld | Booleaanse waarde | FALSE | Als u deze instellingen op `True` instelt, is het mogelijk om de volgorde van toepassingen, weblinks en mappen in de Managed Home Screen in te stellen. Na het inschakelen kunt u de volgorde instellen met **app_order**.   |
 | Toepassingsvolgorde | bundleArray | FALSE | Hiermee geeft u de volgorde van toepassingen, weblinks en mappen op in Managed Home Screen. Als u deze instelling wilt gebruiken, moet **Startscherm vergrendelen** zijn ingeschakeld, moet **Rastergrootte instellen** zijn gedefinieerd en moet **Toepassingsvolgorde ingeschakeld** zijn ingesteld op `True`.   |
 
 ## <a name="enter-json-data"></a>JSON-gegevens invoeren
@@ -124,10 +130,6 @@ Hier volgt een voorbeeld-JSON-script met alle beschikbare configuratiesleutels d
         {
             "key": "screen_orientation",
             "valueInteger": 1
-        },
-        {
-            "key": "enable_telemetry",
-            "valueBool": false
         },
         {
             "key": "applications",
@@ -182,6 +184,51 @@ Hier volgt een voorbeeld-JSON-script met alle beschikbare configuratiesleutels d
         {
             "key": "show_bluetooth_setting",
             "valueBool": false
+        },
+        {
+            "key": "show_flashlight_setting",
+            "valueBool": false
+        },
+        {
+            "key": "show_volume_setting",
+            "valueBool": false
+        },
+        {
+            "key": "show_device_info_setting",
+            "valueBool": false
+        },
+        {
+            "key": "show_managed_setting",
+            "valueBool": false
+        },
+        {
+            "key": "enable_easy_access_debugmenu",
+            "valueBool": false
+        },
+        {
+            "key": "enable_wifi_allowlist",
+            "valueBool": false
+        },
+        {
+            "key": "wifi_allowlist",
+            "valueBundleArray": [
+                {
+                    "managedProperty": [
+                        {
+                            "key": "SSID",
+                            "valueString": "name of Wi-Fi network 1 here"
+                        }
+                    ]
+                },   
+                {
+                    "managedProperty": [
+                        {
+                            "key": "SSID",
+                            "valueString": "name of Wi-Fi network 2 here"
+                        }
+                    ]
+                }  
+            ]
         },
         {
             "key": "grid_size",
@@ -335,7 +382,7 @@ Hier volgt een voorbeeld-JSON-script met alle beschikbare configuratiesleutels d
 De app Managed Home Screen biedt nu toegang tot de app Android Device Policy van Google. De app Managed Home Screen is een aangepast startprogramma dat wordt gebruikt voor apparaten die bij Intune zijn ingeschreven als toegewezen Android Enterprise-apparaat (AE) op basis van de kioskmodus voor meerdere apps. U kunt de app Android Device Policy openen of gebruikers naar de app leiden voor ondersteuning en foutopsporing. De opstartmogelijkheid is beschikbaar op het moment dat het apparaat wordt ingeschreven en wordt gekoppeld aan Managed Home Screen. Er zijn geen extra installaties nodig voor het gebruik van deze functionaliteit.
 
 ## <a name="managed-home-screen-debug-screen"></a>Scherm voor probleemopsporing voor Managed Home Screen
-U kunt het scherm voor probleemopsporing voor Managed Home Screen openen door op de knop **Terug** te klikken tot het scherm voor foutopsporing wordt weergegeven (klik vijftien keer of vaker op de knop **Terug**). Vanuit dit scherm voor foutopsporing kunt u de toepassing Android Device Policy starten, logboeken weergeven en uploaden of de kioskmodus tijdelijk onderbreken om het apparaat bij te werken. Voor meer informatie over het onderbreken van de kioskmodus raadpleegt u het item **Kioskmodus verlaten** in de [toegewezen apparaatinstellingen](../configuration/device-restrictions-android-for-work.md#dedicated-devices) voor Android Enterprise.
+U kunt het scherm voor probleemopsporing voor Managed Home Screen openen door op de knop **Terug** te klikken tot het scherm voor foutopsporing wordt weergegeven (klik vijftien keer of vaker op de knop **Terug**). Vanuit dit scherm voor foutopsporing kunt u de toepassing Android Device Policy starten, logboeken weergeven en uploaden of de kioskmodus tijdelijk onderbreken om het apparaat bij te werken. Voor meer informatie over het onderbreken van de kioskmodus raadpleegt u het item **Kioskmodus verlaten** in de [toegewezen apparaatinstellingen](../configuration/device-restrictions-android-for-work.md#dedicated-devices) voor Android Enterprise. Als u op zoek bent naar een eenvoudigere manier om toegang te verkrijgen tot het beheerder startscherm, kunt u **Eenvoudige toegang tot foutopsporingsmenu inschakelen** instellen op `True` aan de hand van toepassingsconfiguratiebeleid. 
 
 ## <a name="next-steps"></a>Volgende stappen
 

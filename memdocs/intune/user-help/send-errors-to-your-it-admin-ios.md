@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 542a49e53e8d95a1f0290001151e175a0bbd7eab
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8f533a04e9865b4d841bee1a2764eef2fbbbcda9
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79347467"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079379"
 ---
 # <a name="send-errors-to-your-company-support-for-issues-with-your-ios-device"></a>Fouten naar het ondersteuningsteam van uw bedrijf verzenden wanneer u problemen ondervindt met uw iOS-apparaat
 Soms treedt een fout op wanneer u de bedrijfsportal-app op uw iOS-apparaat gebruikt. Wanneer dit gebeurt, kunt u meer informatie over de fout per e-mail naar een ondersteuningsmedewerker van uw bedrijf verzenden. Deze informatie bevat de context die nodig is om het probleem voor u op te lossen.
@@ -37,6 +37,6 @@ Als er tijdens het gebruik van de bedrijfsportal-app fouten optreden op uw iOS-a
 
 - Tik op het tabblad **Meer** van de bedrijfsportal-app op **Get Help** (Hulp krijgen).
 
-- Zorg ervoor dat u in de bedrijfsportal-app bent, schud het apparaat heen en weer en tik op **Diagnostisch rapport verzenden** wanneer het waarschuwingsbericht over diagnostische gegevens wordt weergegeven. Als de waarschuwing niet wordt weergegeven wanneer u het apparaat heen en weer schudt, gaat u naar **Instellingen** > **Bedrijfsportal** en zorgt u dat de optie **Schudden** is ingeschakeld.
+- Zorg ervoor dat u in de bedrijfsportal-app bent, schud het apparaat heen en weer en tik op **Diagnostisch rapport verzenden** wanneer het waarschuwingsbericht over diagnostische gegevens wordt weergegeven. Als de waarschuwing niet wordt weergegeven wanneer u het apparaat heen en weer schudt, opent u **Instellingen** > **Bedrijfsportal** en controleert u of de optie **Schudden** is ingeschakeld.
 
 Nog hulp nodig? Neem contact op met het ondersteuningsteam van uw bedrijf. Controleer of de contactgegevens beschikbaar zijn op de [bedrijfsportalwebsite](https://go.microsoft.com/fwlink/?linkid=2010980).

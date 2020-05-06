@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78dec649f5486e0dcf56f92b8ac16d176d119653
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2ad644d8438b23f36eccad24bee31ee92de5c040
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80322327"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078840"
 ---
 # <a name="troubleshoot-device-actions-in-intune"></a>Problemen met acties oplossen in Intune
 
@@ -97,12 +97,12 @@ Omdat volgens een van uw nalevingsbeleidsregels een wachtwoordcode vereist is.
 ## <a name="wipe-action"></a>Actie Wissen
 
 ### <a name="i-cant-restart-a-windows-10-device-after-using-the-wipe-action"></a>Ik kan een Windows 10-apparaat niet opnieuw opstarten na het gebruik van de actie Wissen
-Dit kan gebeuren als u ervoor kiest om het **apparaat te wissen en u doorgaat met wissen, zelfs als het apparaat de voedingsspanning verliest. Houd er bij de keuze van deze optie rekening mee dat sommige Windows 10-apparaten niet meer kunnen worden opgestart.** op een Windows 10-apparaat.
+Dit kan gebeuren als u kiest voor **Apparaat wissen en doorgaan met wissen zelfs als het apparaat de voedingsspanning verliest. Houdt er bij de keuze van deze optie rekening mee dat sommige Windows 10-apparaten niet meer worden gestart.** op een Windows 10-apparaat.
 
 Dit kan gebeuren wanneer de installatie van Windows ernstige beschadigingen heeft waardoor het besturingssysteem niet opnieuw kan worden geïnstalleerd. In dat geval mislukt het proces en blijft het systeem hangen in de [Windows-herstelomgeving]( https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference).
 
 ### <a name="i-cant-restart-a-bitlocker-encrypted-device-after-using-the-wipe-action"></a>Ik kan een met BitLocker versleuteld apparaat niet opnieuw opstarten na het gebruik van de actie Wissen
-Dit kan gebeuren als u ervoor kiest om het **apparaat te wissen en u doorgaat met wissen, zelfs als het apparaat de voedingsspanning verliest. Houd er bij de keuze van deze optie rekening mee dat sommige Windows 10-apparaten niet meer kunnen worden opgestart.** optie op een met BitLocker versleuteld apparaat.
+Dit kan gebeuren als u kiest voor **Apparaat wissen en doorgaan met wissen zelfs als het apparaat de voedingsspanning verliest. Houdt er bij de keuze van deze optie rekening mee dat sommige Windows 10-apparaten niet meer worden gestart.** optie op een met BitLocker versleuteld apparaat.
 
 Om dit probleem op te lossen, gebruikt u opstartbare media om Windows 10 opnieuw op het apparaat te installeren.
 

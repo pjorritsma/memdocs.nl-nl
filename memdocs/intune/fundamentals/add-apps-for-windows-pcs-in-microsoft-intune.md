@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a2c5590acd870e2623491052ba43bf29e4676568
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d9ad6414bd0565389b39cc97322341ada0b4b4c4
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79344360"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079294"
 ---
 # <a name="add-apps-for-windows-pcs-that-run-the-intune-software-client"></a>Apps voor Windows-pc's met de Intune-softwareclient toevoegen
 
@@ -53,7 +53,7 @@ U gebruikt de uitgever van Intune-software om de eigenschappen van de app te con
    - **Geef de locatie op van de software-installatiebestanden**. Geef de locatie op van de installatiebestanden of kies **Bladeren** om de locatie in een lijst te selecteren.
    - **Neem aanvullende bestanden en submappen op in dezelfde map**. Sommige software die gebruikmaakt van Windows Installer vereist ondersteunende bestanden. Deze moeten zich in dezelfde map bevinden als het installatiebestand. Selecteer deze optie als u deze ondersteunende bestanden ook wilt implementeren.
 
-   Als u bijvoorbeeld een app met de naam Application.msi wilt publiceren naar Intune, komt de pagina er als volgt uit te zien: ![Software-installatiepagina van de uitgever](./media/add-apps-for-windows-pcs-in-microsoft-intune/publisher-for-pc.png)
+   Als u bijvoorbeeld een app met de naam Application.msi wilt publiceren via Intune, komt de pagina er als volgt uit te zien: ![Pagina Software-installatie van de uitgever](./media/add-apps-for-windows-pcs-in-microsoft-intune/publisher-for-pc.png)
 
    Dit installatietype maakt gebruik van uw opslagruimte in de cloud.
 
@@ -84,15 +84,15 @@ U gebruikt de uitgever van Intune-software om de eigenschappen van de app te con
 
    Als de app voldoet aan één van de regels die u hebt geconfigureerd, wordt deze niet geïnstalleerd.
 
-6. Alleen voor het bestandstype **Windows Installer** (.msi en .exe): op de pagina **Opdrachtregelargumenten** kiest u of u optionele opdrachtregelargumenten wilt opgeven voor het installatieprogramma.
+6. Alleen voor het bestandstype **Windows Installer** (.msi en .exe): Kies op de pagina **Opdrachtregelargumenten** of u optionele opdrachtregelargumenten wilt opgeven voor het installatieprogramma.
    De volgende parameters worden automatisch toegevoegd door Intune:
    - Voor .exe-bestanden wordt **/install** toegevoegd.
    - Voor .msi-bestanden wordt **/quiet** toegevoegd.
    Houd er rekening mee dat deze opties alleen werken als de maker van het app-pakket deze functionaliteit heeft ingeschakeld.
 
-7. Alleen voor het bestandstype **Windows Installer** (alleen .exe): op de pagina **Retourcodes** kunt u nieuwe foutcodes toevoegen die door Intune worden geïnterpreteerd wanneer de app wordt geïnstalleerd op een beheerde Windows-pc.
+7. Alleen voor het bestandstype **Windows Installer** (alleen .exe): Op de pagina **Retourcodes** kunt u nieuwe foutcodes toevoegen die door Intune worden geïnterpreteerd wanneer de app wordt geïnstalleerd op een beheerde Windows-pc.
 
-   Standaard worden door Intune retourcodes volgens de industriestandaard gebruikt om te melden dat de installatie van een app-pakket is mislukt of geslaagd: **0** (Geslaagd) of **3010** (Geslaagd en opnieuw opgestart). U kunt ook uw eigen retourcodes aan deze lijst toevoegen. Als u een lijst met retourcodes opgeeft en de installatie van de app een code retourneert die niet in de lijst voorkomt, wordt dit geïnterpreteerd als een fout.
+   Standaard worden in Intune de industriestandaard retourcodes gebruikt om te melden dat de installatie van een app-pakket is mislukt of geslaagd: **0** (geslaagd) of **3010** (geslaagd en opnieuw opgestart). U kunt ook uw eigen retourcodes aan deze lijst toevoegen. Als u een lijst met retourcodes opgeeft en de installatie van de app een code retourneert die niet in de lijst voorkomt, wordt dit geïnterpreteerd als een fout.
 
 8. Controleer op de pagina **Samenvatting** de informatie die u hebt opgegeven. Wanneer u klaar bent, kiest u **Uploaden**.
 
@@ -104,4 +104,4 @@ De app wordt weergegeven op het knooppunt **Apps** van de werkruimte **Apps**.
 
 Nadat u een app hebt gemaakt, is de volgende stap om deze te implementeren. Zie [Apps aan groepen toewijzen met Microsoft Intune](../apps/apps-deploy.md) voor meer informatie.
 
-Raadpleeg het blogbericht [Support Tip: Best Practices for Intune Software Distribution to PC’s](https://support.microsoft.com/en-US/help/2583929) als u meer informatie wilt over tips en trucs voor het implementeren van software op Windows-pc's.
+Als u meer informatie wilt over tips en trucs voor het implementeren van software op Windows-pc's, raadpleegt u de blogpost [Support Tip: Best Practices for Intune Software Distribution to PC’s (Aanbevolen procedures voor het distribueren van Intune-software naar pc's)](https://support.microsoft.com/en-US/help/2583929).

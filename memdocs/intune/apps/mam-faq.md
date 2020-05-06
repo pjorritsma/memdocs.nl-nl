@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 04/14/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7a533344b72952098403fae0ebcabbcad473684a
-ms.sourcegitcommit: db511e03f14e6120968b60def8990485eb42529b
+ms.openlocfilehash: 16c086295b93b72ef2f9cfbd2d6a15d6bb54f320
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80611728"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82183005"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Veelgestelde vragen over MAM en app-beveiliging
 
@@ -38,9 +38,9 @@ Met MAM worden de gegevens van een organisatie in een toepassing beveiligd. Met 
 
 **Welke apparaatconfiguraties ondersteunt MAM?**<br></br>
 Intune MAM ondersteunt twee configuraties:
-- **Intune MDM + MAM**: IT-beheerders kunnen apps alleen met MAM en beleidsregels voor de beveiliging van apps beheren op apparaten die zijn geregistreerd bij Intune Mobile Device Management (MDM). Als klanten apps willen beheren met MDM + MAM, moeten zij de Intune-console Azure Portal op https://portal.azure.com gebruiken.
+- **Intune MDM + MAM**: IT-beheerders kunnen apps alleen met MAM en beleidsregels voor de beveiliging van apps beheren op apparaten die zijn geregistreerd bij Intune Mobile Device Management (MDM). Als klanten apps willen beheren met behulp van MDM en MAM, moeten ze gebruikmaken van het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-- **MAM zonder apparaatregistratie**: MAM zonder apparaatregistratie, of MAM-WE, biedt IT-beheerders de mogelijkheid apps te beheren met MAM en beleidsregels voor app-beveiliging op apparaten die niet zijn geregistreerd met Intune MDM. Dit betekent dat apps door Intune kunnen worden beheerd op apparaten die zijn geregistreerd bij externe EMM providers. Als klanten apps willen beheren met MAM-WE, moeten zij de Intune-console in de Azure-portal op [https://portal.azure.com](https://portal.azure.com) gebruiken. Apps kunnen ook door Intune worden beheerd op apparaten die zijn geregistreerd bij externe Enterprise Mobility Management-providers of die helemaal niet bij een MDM zijn geregistreerd.
+- **MAM zonder apparaatregistratie**: MAM zonder apparaatregistratie, of MAM-WE, biedt IT-beheerders de mogelijkheid apps te beheren met MAM en beleidsregels voor app-beveiliging op apparaten die niet zijn geregistreerd met Intune MDM. Dit betekent dat apps door Intune kunnen worden beheerd op apparaten die zijn geregistreerd bij externe EMM providers. Als klanten apps willen beheren met behulp van MAM-WE, moeten ze gebruikmaken van het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431). Apps kunnen ook door Intune worden beheerd op apparaten die zijn geregistreerd bij externe Enterprise Mobility Management-providers of die helemaal niet bij een MDM zijn geregistreerd.
 
 
 ## <a name="app-protection-policies"></a>Beleid voor app-beveiliging
@@ -54,6 +54,7 @@ Zie de [beleidsinstellingen voor de beveiliging van Android-apps](app-protection
 **Is het mogelijk om op hetzelfde moment, maar voor verschillende apparaten, beleid van zowel MDM als MAM toe te passen op dezelfde gebruiker? Bijvoorbeeld in een situatie waarin een gebruiker thuis toegang kan krijgen tot bedrijfsresources vanaf een eigen computer met MAM, maar ook op kantoor vanaf een apparaat dat met Intune MDM wordt beheerd. Zijn er nog aandachtspunten voor dit idee?**<br></br>
 Als u een MAM-beleid toepast op de gebruiker zonder de apparaatstatus in te stellen, krijgt de gebruiker het MAM-beleid op zowel het BYOD-apparaat als het door Intune beheerde apparaat. U kunt een MAM-beleid ook toepassen op basis van de beheerde status. Bij het maken van een beleid voor de beveiliging van apps selecteert u dan Nee voor Doel voor alle app-typen. Ga vervolgens op een van de volgende manieren te werk:
 - Pas een minder streng MAM-beleid toe op apparaten die met Intune worden beheerd en een meer beperkend MAM-beleid op apparaten die niet bij MDM zijn ingeschreven.
+-   Pas MAM-beleid toe op door Intune beheerde apparaten dat net zo strikt is als op apparaten die door derden worden beheerd.
 - Pas alleen een MAM-beleid toe op niet-ingeschreven apparaten.
 
 Zie [How to monitor app protection policies](app-protection-policies-monitor.md) (App-beveiligingsbeleid controleren) voor meer informatie.
@@ -69,7 +70,7 @@ Alle apps die zijn geïntegreerd met de [Intune App SDK](../developer/app-sdk.md
 
 - Er moet een licentie voor Microsoft Intune Azure aan het Azure Active Directory-account van de eindgebruiker zijn toegewezen. Zie [Intune-licenties beheren](../fundamentals/licenses-assign.md) voor informatie over het toewijzen van Intune-licenties aan eindgebruikers.
 
-- De eindgebruiker moet behoren tot een beveiligingsgroep waarop een beleidsregel voor de beveiliging van apps is gericht. Dezelfde beleidsregel voor de beveiliging van apps moet ook zijn gericht op de specifieke app die wordt gebruikt. Beleidsregels voor de beveiliging van apps kunnen worden gemaakt en geïmplementeerd in de Intune-console in [Azure Portal](https://portal.azure.com). Beveiligingsgroepen kunnen op dit moment worden gemaakt in het [Microsoft 365-beheercentrum](https://admin.microsoft.com).
+- De eindgebruiker moet behoren tot een beveiligingsgroep waarop een beleidsregel voor de beveiliging van apps is gericht. Dezelfde beleidsregel voor de beveiliging van apps moet ook zijn gericht op de specifieke app die wordt gebruikt. Beleid voor app-beveiliging kan worden gemaakt en geïmplementeerd in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431). Beveiligingsgroepen kunnen op dit moment worden gemaakt in het [Microsoft 365-beheercentrum](https://admin.microsoft.com).
 
 - De eindgebruiker moet zich bij de app aanmelden met zijn AAD-account.
 
@@ -78,7 +79,7 @@ Alle apps die zijn geïntegreerd met de [Intune App SDK](../developer/app-sdk.md
 Het Intune SDK-ontwikkelingsteam houdt zich actief bezig met het testen en onderhouden van ondersteuning voor apps die zijn gebouwd met de systeemeigen Android-, iOS-/iPadOS- (Obj-C, Swift), Xamarin- en Xamarin.Forms-platforms. Hoewel het sommige klanten is gelukt om de Intune SDK te integreren in andere platforms, zoals React Native en NativeScript, bieden we geen specifieke instructies of plug-ins voor app-ontwikkelaars die andere platforms gebruiken dan de platforms die door ons worden ondersteund.
 
 **Ondersteunt de Intune APP SDK de bibliotheek voor Microsoft-verificatie (MSAL) of sociale accounts?**<br></br>
-De Intune APP SDK gebruikt enkele geavanceerde mogelijkheden van ADAL voor zowel eigen als externe versies van de SDK. Hierdoor werkt MSAL niet goed met de meeste belangrijkste scenario's, zoals verificatie in de Intune-app-beveiligingsservice en voorwaardelijk starten. Gezien het feit dat het Identity-team van Microsoft gebruikers over het algemeen aanraadt om voor alle Microsoft Office-apps over te stappen naar MSAL, zal de Intune SDK daar uiteindelijk ondersteuning voor moeten gaan bieden, maar hier zijn momenteel nog geen plannen voor.
+De Intune App SDK kan ofwel gebruikmaken van de Azure Active Directory Authentication Library of van de Microsoft Authentication Library voor de scenario's voor verificatie en voorwaardelijk starten. Het is ook afhankelijk van ADAL/MSAL dat de gebruikers-id wordt geregistreerd bij de MAM-service om zonder scenario's voor apparaatinschrijving beheertaken uit te voeren.It also relies on ADAL/MSAL to register the user identity with the MAM service for management without device enrollment scenarios.
 
 **Wat zijn de aanvullende vereisten voor het gebruik van de [mobiele app van Outlook](https://products.office.com/outlook)?**
 
@@ -91,7 +92,7 @@ De Intune APP SDK gebruikt enkele geavanceerde mogelijkheden van ADAL voor zowel
 
 **Wat zijn de aanvullende vereisten voor het gebruik van de apps [Word, Excel en PowerPoint](https://products.office.com/business/office)?**
 
-- De eindgebruiker moet een licentie voor [Office 365 Business of Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) aan zijn Azure Active Directory-account hebben gekoppeld. Het abonnement moet de Office-apps voor mobiele apparaten bevatten en kan een cloudopslagaccount met [OneDrive voor Bedrijven](https://onedrive.live.com/about/business/) bevatten. Office 365-licenties kunnen aan de hand van de volgende [instructies](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc) worden toegewezen in het [Microsoft 365-beheercentrum](https://admin.microsoft.com).
+- De eindgebruiker moet een licentie voor [Microsoft 365 Apps voor Business of Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) aan zijn Azure Active Directory-account hebben gekoppeld. Het abonnement moet de Office-apps voor mobiele apparaten bevatten en kan een cloudopslagaccount met [OneDrive voor Bedrijven](https://onedrive.live.com/about/business/) bevatten. Office 365-licenties kunnen aan de hand van de volgende [instructies](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc) worden toegewezen in het [Microsoft 365-beheercentrum](https://admin.microsoft.com).
 
 - De eindgebruiker moet een beheerde locatie hebben die is geconfigureerd met de gedetailleerde functie voor 'opslaan als', onder de instelling 'Kopieën van organisatiegegevens opslaan' van het beveiligingsbeleid voor toepassingen. Als bijvoorbeeld OneDrive de beheerde locatie is, moet de [OneDrive](https://onedrive.live.com/about/)-app worden geconfigureerd in de Word-, Excel- of PowerPoint-app van de eindgebruiker.
 
@@ -161,7 +162,7 @@ In Intune kunnen app-gegevens op drie verschillende manieren worden gewist: voll
 
 - **Wat is selectief wissen voor MDM?**<br></br> Raadpleeg [Apparaten verwijderen - buiten gebruik stellen](../remote-actions/devices-wipe.md#retire) voor meer informatie over het verwijderen van zakelijke gegevens.
 
-- **Wat is selectief wissen voor MAM?**<br></br> Bij selectief wissen voor MAM worden gegevens van bedrijfs-apps gewoon gewist uit een app. De aanvraag wordt gestart via de Intune Azure-portal. Raadpleeg [Alleen zakelijke gegevens wissen uit door Intune beheerde apps](apps-selective-wipe.md) voor meer informatie over hoe u een verzoek om te wissen aanvraagt.
+- **Wat is selectief wissen voor MAM?**<br></br> Bij selectief wissen voor MAM worden gegevens van bedrijfs-apps gewoon gewist uit een app. De aanvraag wordt gestart met behulp van het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431). Raadpleeg [Alleen zakelijke gegevens wissen uit door Intune beheerde apps](apps-selective-wipe.md) voor meer informatie over hoe u een verzoek om te wissen aanvraagt.
 
 - **Hoe snel wordt selectief wissen voor MAM uitgevoerd?**<br></br> Als de gebruiker de app gebruikt wanneer selectief wissen wordt gestart, controleert de Intune App SDK om de 30 minuten op aanvragen van de MAM-service voor selectief wissen. Daarnaast wordt er gecontroleerd of er een aanvraag voor selectief wissen is verzonden wanneer de gebruiker de app voor de eerste keer start en zich aanmeldt met een werk- of schoolaccount.
 

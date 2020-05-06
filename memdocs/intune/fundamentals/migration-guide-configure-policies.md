@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5f0f4106921f7b4ef1d33e72a217246543512bb5
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2cefc43aa4c1e5031bc1b755a244df54f6442137
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79358283"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079991"
 ---
 # <a name="configure-device-compliance-and-app-management-policies-when-migrating-to-microsoft-intune"></a>Het nalevingsbeleid voor apparaten en het beleid voor appbeheer configureren bij een migratie naar Microsoft Intune
 
@@ -50,7 +50,7 @@ U kunt apparaatgroepen maken wanneer u beheertaken moet uitvoeren op basis van d
 
 Apparaatgroepen zijn nuttig voor het beheren van apparaten zonder specifieke gebruiker, zoals kioskapparaten, apparaten die worden gedeeld door werknemers van dezelfde dienst of apparaten die zijn toegewezen aan een specifieke locatie.
 
-Door apparaatgroepen te beheren voordat ze worden ingeschreven, kunt u apparaatcategorieën gebruiken om apparaten bij inschrijving automatisch deel te laten nemen aan groepen. Vervolgens ontvangen de apparaten automatisch het apparaatbeleid. [Aan de slag met groepen](groups-get-started.md).
+Door apparaatgroepen te beheren voordat ze worden ingeschreven, kunt u apparaatcategorieën gebruiken om apparaten bij inschrijving automatisch deel te laten nemen aan groepen. Vervolgens ontvangen de apparaten automatisch het apparaatbeleid voor de groep. [Aan de slag met groepen](groups-get-started.md).
 
 ### <a name="task-2-use-resource-access-profiles-wi-fi-vpn-and-email-certificates"></a>Taak 2: Resourcetoegangsprofielen (certificaten voor Wi-Fi, VPN en e-mail) gebruiken
 

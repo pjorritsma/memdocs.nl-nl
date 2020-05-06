@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/16/2020
+ms.date: 04/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e6a3152966dee507cde690d9be8f5a7e210c7945
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 7e584019063c6af7f04f5666ba2c38d8199681c5
+ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407756"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81771418"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>De Intune-bedrijfsportal-apps, de bedrijfsportalwebsite en de Intune-app aanpassen
 
@@ -31,7 +31,7 @@ Via de bedrijfsportal-apps, de bedrijfsportalwebsite en de Intune-app op Android
 
 ## <a name="customizing-the-user-experience"></a>De gebruikerservaring aanpassen
 
-Door de eindgebruikerservaring aan te passen, kunt u uw eindgebruikers een vertrouwde en efficiënte ervaring geven. Ga hiervoor naar het [Beheercentrum voor Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), selecteer **Tenantbeheer** > **Aanpassing** en configureer de vereiste instellingen. Deze instellingen zijn van toepassing op de bedrijfsportal-apps, bedrijfsportalwebsite en Intune-app op Android.
+Door de eindgebruikerservaring aan te passen, kunt u uw eindgebruikers een vertrouwde en efficiënte ervaring geven. Als u dit wilt doen, gaat u naar [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) en selecteert u **Tenantbeheer** > **Aanpassing**, waar u het standaardbeleid kunt bewerken of beleid voor maximaal tien groepen kunt maken. Deze instellingen zijn van toepassing op de bedrijfsportal-apps, bedrijfsportalwebsite en Intune-app op Android.
 
 ## <a name="branding"></a>Huisstijl
 
@@ -93,6 +93,7 @@ De volgende tabel bevat aanvullende configuratiegegevens:
 | URL voor de privacyverklaring | 79 | Stel de privacyverklaring van uw organisatie in zodat deze wordt weergegeven wanneer gebruikers op privacykoppelingen klikken. U moet een geldige URL opgeven in de notatie `https://www.contoso.com`. |
 | Privacybericht in de bedrijfsportal voor iOS​/iPadOS | 520 | Behoud de standaardinstelling of stel een Aangepast bericht in om de items weer te geven die uw organisatie wel of niet kan zien op beheerde iOS- en iPadOS-apparaten. U kunt Markdown gebruiken om opsommingstekens, vet, cursief en koppelingen toe te voegen. |
 | Apparaatinschrijving | N.v.t. | Geef op of en hoe gebruikers moeten worden gevraagd om zich in te schrijven bij Mobile Device Management. Zie hieronder voor meer informatie. |
+| Melding voor apparaateigendom | N.v.t. | Verzend een pushmelding naar zowel de gebruikers van de Android- als de iOS-bedrijfsportal wanneer het eigendomstype voor hun apparaat is gewijzigd van Persoonlijk in Zakelijk. Deze pushmelding is standaard uitgeschakeld. Wanneer het apparaateigendom is ingesteld op eigendom van het bedrijf, heeft Intune meer toegang tot het apparaat, waaronder de volledige app-inventaris, FileVault-sleutelrotatie, het ophalen van telefoonnummers en een aantal externe acties. Zie [Apparaateigendom wijzigen](../enrollment/corporate-identifiers-add.md#change-device-ownership) voor meer informatie.  |
 
 ### <a name="device-enrollment-setting-options"></a>Opties voor het instellen van apparaatinschrijving
 
@@ -188,8 +189,8 @@ Voor sommige platforms en configuraties zijn geen selfserviceacties voor apparat
 <sup>(4)</sup> Met **Naam wijzigen** wordt alleen de apparaatnaam in de app of webportal van de bedrijfsportal gewijzigd, niet op het apparaat zelf.<br>
 <sup>(5)</sup> **Wissen** is niet beschikbaar op door de gebruiker ingeschreven iOS/iPadOS-apparaten.<br>
 <sup>(6)</sup> **Wachtwoordcode opnieuw instellen** wordt niet ondersteund in bepaalde Android- en Android Enterprise-configuraties. Zie [De wachtwoordcode van een apparaat opnieuw instellen of verwijderen via Intune](../remote-actions/device-passcode-reset.md) voor meer informatie.<br>
-<sup>(7)</sup> **Buiten gebruik stellen** en **Wissen** is niet beschikbaar in Android Enterprise-apparaateigenaarscenario's (COPE, COBO, COSU).<br> 
-<sup>(8)</sup> **Wachtwoordcode opnieuw instellen** wordt niet ondersteund voor door de gebruiker ingeschreven iOS/iPadOS-apparaten.
+<sup>(7)</sup> **Buiten gebruik stellen** en **Wissen** is niet beschikbaar in Android Enterprise-apparaateigenaarscenario's (COPE, COBO, COSU).<br>
+<sup>(8)</sup>**Wachtwoordcode opnieuw instellen** wordt niet ondersteund voor door de gebruiker ingeschreven iOS/iPadOS-apparaten.
 
 ## <a name="next-steps"></a>Volgende stappen
 

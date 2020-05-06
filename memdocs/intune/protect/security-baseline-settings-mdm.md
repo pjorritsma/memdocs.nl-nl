@@ -13,17 +13,17 @@ ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
 ROBOTS: NOINDEX
-ms.reviewer: joglocke
+ms.reviewer: laarrizz
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 83b2f3952d0805237acf0fe71c4f0f1617618723
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: cf43608bd6eb9132cef1b97198e724bcada81d30
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79351146"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693364"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>MDM-beveiligingsbasislijninstellingen voor Intune  
 
@@ -1125,7 +1125,7 @@ Zie [Beleids-CSP - InternetExplorer](https://docs.microsoft.com/windows/client-m
   
   **Standaardinstelling**: Java uitschakelen  
   
-- **Uitgebreide beveiligde modus van Internet Explorer**  
+- **Uitgebreide beveiligde modus van Internet Explorer**   
   De uitgebreide beveiligde modus biedt extra bescherming tegen schadelijke websites door gebruik te maken van 64-bits processen op 64-bits versies van Windows. Op computers met minimaal Windows 8 beperkt de uitgebreide beveiligde modus ook de locaties die Internet Explorer in het register en bestandssysteem kan lezen. Als u deze beleidsinstelling inschakelt, wordt Uitgebreide beveiligde modus ingeschakeld. Voor elke zone waarvoor Beveiligde modus is ingeschakeld, wordt Uitgebreide beveiligde modus gebruikt. Gebruikers kunnen Uitgebreide beveiligde modus niet uitschakelen. Als u deze beleidsinstelling uitschakelt, wordt Uitgebreide beveiligde modus uitgeschakeld. In een zone waarvoor Beveiligde modus is ingeschakeld, wordt de Beveiligde modus-versie gebruikt die is geïntroduceerd in Internet Explorer 7 voor Windows Vista. Als u dit beleid niet configureert, kunnen gebruikers Uitgebreide beveiligde modus inschakelen of uitschakelen op het tabblad Geavanceerd van het dialoogvenster Internetopties.  
   [Meer informatie](https://go.microsoft.com/fwlink/?linkid=2067158)  
   

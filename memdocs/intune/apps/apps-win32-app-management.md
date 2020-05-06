@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee632901162042f7d777043e6700b796b4badf58
-ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
+ms.openlocfilehash: 8d1933350675a0d36042d1a4bd1e6a26c9a95814
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80620617"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254602"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Intune (zelfstandig) - Win32-app-beheer
 
@@ -357,6 +357,11 @@ Verder worden in de bedrijfsportal-app aanvullende berichten over de status van 
 ## <a name="set-win32-app-availability-and-notifications"></a>Beschikbaarheid en meldingen voor Win32-apps instellen
 U kunt de begintijd en deadline voor een Win32-app configureren. Bij de begintijd start de Intune-beheerextensie het downloaden van de app-inhoud en slaat deze op in de cache voor de vereiste intentie. De app wordt geïnstalleerd op het tijdstip van de deadline. Voor beschikbare apps bepaalt de begintijd wanneer de app wordt weergegeven in de Bedrijfsportal en wordt de inhoud gedownload wanneer de eindgebruiker de app vanuit de Bedrijfsportal aanvraagt. Daarnaast kunt u een respijtperiode voor opnieuw opstarten inschakelen. 
 
+> [!IMPORTANT]
+> De instelling **Respijtperiode opnieuw opstarten** in het gedeelte **Toewijzing** is alleen beschikbaar wanneer het **Gedrag apparaat bij opnieuw starten** van het gedeelte **Programma** is ingesteld op een van de volgende opties:
+> - **Gedrag op basis van retourcodes bepalen**
+> - **Via Intune wordt opnieuw opstarten van het apparaat afgedwongen**
+
 Stel de app-beschikbaarheid in op basis van een datum en tijd voor een vereiste app door de volgende stappen uit te voeren:
 
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
@@ -405,6 +410,8 @@ Agentlogboeken op de clientcomputer staan doorgaans in `C:\ProgramData\Microsoft
 > **Voor X86-clientcomputers**:<br>
 > *C:\Program Files\Microsoft Intune Management Extension\Content*<br>
 > *C:\windows\IMECache*
+>
+> Zie [Virusscanaanbevelingen voor Enterprise-computers waarop momenteel ondersteunde versies van Windows worden uitgevoerd](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers) voor meer informatie.
 
 ### <a name="detecting-the-win32-app-file-version-using-powershell"></a>De bestandsversie van de Win32-app detecteren met behulp van PowerShell
 

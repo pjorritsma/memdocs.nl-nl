@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9f0a4b260fcd2698315ba8b777d88b86e203259
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f58723be1a3fed09173a20a585077aef72e0c8f0
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79350002"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079107"
 ---
 # <a name="troubleshoot-the-ndes-policy-module-in-microsoft-intune"></a>Problemen met de NDES-beleidsmodule in Microsoft Intune oplossen
 
@@ -155,7 +155,7 @@ Na een geslaagde validatie door het certificaatregistratiepunt (de beleidsmodule
 
 **Als er geen indicatoren voor een geslaagde validatie aanwezig zijn**:
 
-Voer de volgende stappen uit als de vermeldingen die een geslaagde validatie aangeven niet worden weergegeven:
+Voer de volgende stappen uit als de vermeldingen die een geslaagde validatie aangeven, niet worden weergegeven:
 
 1. Zoek naar problemen die zijn vastgelegd in *CertificateRegistrationPoint.svclog* wanneer de aanvraag wordt gecontroleerd door het certificaatregistratiepunt. Zoek naar de vermeldingen tussen de volgende regels:
 

@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: f7dc2fcf505890af1e24f8176bef653a6d5f1022
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 0aff833df367cced712219fff0be85653ef79e89
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79334974"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079651"
 ---
 # <a name="you-need-to-install-sandblast-mobile-protect-on-your-android-device"></a>U moet SandBlast Mobile Protect installeren op uw Android-apparaat
 
@@ -52,7 +52,7 @@ Als u problemen met de installatie ondervindt, voert u de stappen voor probleemo
 
 10. Als er geen beveiligingsrisico's worden gevonden, worden alle drie bedreigingstypen in het groen weergegeven.
 
-11. Op het scherm **Apparaatdetails** in de bedrijfsportal wordt vermeld dat u nu voldoet aan de beveiligingsvereisten van uw bedrijf.
+11. In het scherm **Apparaatdetails** op de bedrijfsportal ziet u dat u nu voldoet aan de beveiligingsvereisten van uw bedrijf.
 
     ![Uw apparaat voldoet nu aan het beleid](./media/mtd-device-now-compliant-android.png)
 

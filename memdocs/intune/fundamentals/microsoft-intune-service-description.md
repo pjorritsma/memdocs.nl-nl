@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1a37971928ab2aef8c5e78e9d0eefb748ecf5f04
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4ca133b1995769f1c4cdfdcaf6b3a8256d7e6d5c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79358634"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078839"
 ---
 # <a name="microsoft-intune-service-description"></a>Beschrijving van de Microsoft Intune-service
 
@@ -62,11 +62,11 @@ Omdat het MDM-ecosysteem regelmatig wordt gewijzigd met bijgewerkte versies van 
 
   - De berichten in het Office 365-beheercentrum worden gericht gestuurd. Dit betekent dat als uw bedrijf niet beschikt over een Intune voor EDU-aanbieding, u geen berichten ontvangt over Intune voor EDU.
 
-  - Berichten verlopen. Zo is bijvoorbeeld de melding dat de service is bijgewerkt met een koppeling naar de Wat is er nieuw-pagina waarschijnlijk verlopen voordat u de volgende melding over service-updates ontvangt. Anders zou u wellicht een grote aantal berichten hebben die mogelijk niet meer relevant zijn.
+  - Berichten verlopen. Zo is de melding dat de service is bijgewerkt met een koppeling naar de Wat is er nieuw-pagina waarschijnlijk verlopen voordat u de volgende melding over service-updates ontvangt. Anders zou u een groot aantal berichten hebben die mogelijk niet meer relevant zijn.
 
   - Met de mobiele app voor Office 365-beheer kunt u alle berichten doorzoeken en de melding doorsturen als u deze wilt delen met collega's in uw organisatie.
 
-  - Onder Edit message center preferences (Voorkeuren voor het berichtencentrum bewerken) komt een wisselknop voor **Intune** zodat u die berichten kunt bekijken die naar een Intune-abonnement zijn gestuurd. Als u Mobile Device Management voor Office 365 ziet: dat is niet Intune maar een andere service.
+  - Onder Edit message center preferences (Voorkeuren voor het berichtencentrum bewerken) komt een wisselknop voor **Intune** zodat u de berichten kunt bekijken die naar een Intune-abonnement zijn gestuurd. Als u Mobile Device Management voor Office 365 ziet: dat is niet Intune maar een andere service.
 
 - We gebruiken ook twee blogs gebruikt voor het delen van de EMS-berichten en de best practices voor Intune-ondersteuning:
 
@@ -81,18 +81,18 @@ Omdat het MDM-ecosysteem regelmatig wordt gewijzigd met bijgewerkte versies van 
 
 Om ervoor te zorgen dat u zich voor kunt bereiden op wijzigingen in de service, brengen wij u hiervan ten minste 7 tot 90 dagen vóór de servicewijziging op de hoogte, afhankelijk van de gevolgen van de wijziging. Het kan onder andere gaan om de volgende typen wijzigingen:
 
-- Wijzigingen in de eindgebruikerservaring die u wilt delen met uw helpdeskpersoneel of uw eindgebruikers. Microsoft brengt u doorgaans 7 tot 30 dagen voor dergelijke wijzigingen op de hoogte en legt deze vast in [Wat is er nieuw in de gebruikersinterface van de Intune-app](whats-new-app-ui.md). Zaken als de correctie van een spelfout, worden doorgaans niet vastgelegd in documentatie. Maar een wijziging in de eindgebruikerservaring voor inschrijving is in de gebruikersinterface voldoende ingrijpend, zodat zowel een bericht wordt gestuurd naar klanten via het berichtencentrum van Office 365 als een koppeling wordt geplaatst in de Wat is er nieuw in de gebruikersinterface van de Intune-app. Zo bent u op de hoogte van aanstaande wijzigingen en hebt u de tijd om de richtlijnen voor uw eindgebruikers te evalueren en bij te werken voordat de wijzigingen worden uitgerold.
+- Wijzigingen in de eindgebruikerservaring die u wilt delen met uw helpdeskpersoneel of uw eindgebruikers. Microsoft brengt u doorgaans 7 tot 30 dagen vóór dergelijke wijzigingen op de hoogte en legt deze vast in [Wat is er nieuw in de gebruikersinterface van de Intune-app](whats-new-app-ui.md). Zaken als de correctie van een spelfout, worden doorgaans niet vastgelegd in documentatie. Maar een wijziging in de eindgebruikerservaring voor inschrijving is in de gebruikersinterface voldoende ingrijpend, zodat zowel een bericht wordt gestuurd naar klanten via het berichtencentrum van Office 365 als een koppeling wordt geplaatst in de Wat is er nieuw in de gebruikersinterface van de Intune-app. Zo bent u op de hoogte van aanstaande wijzigingen en hebt u de tijd om de richtlijnen voor uw eindgebruikers te evalueren en bij te werken voordat de wijzigingen worden uitgerold.
 
 - Wijzigingen waarop u actie moet ondernemen, heten **Plan for Change** (Plannen voor wijziging) en worden doorgaans circa 30 dagen voorafgaand aan de wijziging aangekondigd. In het berichtencentrum van Office 365 wordt specifiek de categorie Plannen voor wijziging aangegeven. Als er een exacte datum bekend is waarop de wijziging in gebruik wordt genomen, wordt tevens een datum voor **Act by** (reageren voor) vermeld, met een visuele wachtrij en uitroepteken.
 
-- Voor de meeste afschaffingen ontvangt u 90 dagen voorafgaand aan de afschaffing een kennisgeving. Als bijvoorbeeld de ondersteuning van een specifieke versie van IE wordt afgeschaft, is het doel u hiervan 90 dagen van tevoren in kennis te stellen. Het aankondigen van afschaffingen worden echter complexer wanneer een ander bedrijf de afschaffen aankondigt. Wanneer bijvoorbeeld een browserbedrijf aankondigt dat Silverlight niet meer zal worden ondersteund in hun nieuwste build, laat Microsoft aan klanten weten dat die browser niet meer zal worden ondersteund, maar kan deze kennisgeving mogelijk niet binnen 90 dagen voor de wijziging worden gestuurd.
+- Voor de meeste afschaffingen ontvangt u 90 dagen voorafgaand aan de afschaffing een kennisgeving. Als bijvoorbeeld de ondersteuning van een specifieke versie van IE wordt afgeschaft, is het doel om u hier 90 dagen van tevoren over te informeren. Het aankondigen van afschaffingen worden echter complexer wanneer een ander bedrijf een afschaffing aankondigt. Wanneer bijvoorbeeld een browserbedrijf aankondigt dat Silverlight niet meer zal worden ondersteund in hun nieuwste build, laat Microsoft aan klanten weten dat die browser niet meer zal worden ondersteund, maar kan deze kennisgeving mogelijk niet binnen 90 dagen voor de wijziging worden gestuurd.
 
 - In het geval van stopzetting van de Intune-service, ontvangt u 12 maanden van tevoren een melding.
 
-Ten slotte in het zeldzame geval dat er na een incident actie moet worden ondernemen om uw service te herstellen of een grote wijziging op stapel staat die door Microsoft op basis van feedback van klanten als mogelijk verstorend wordt beschouwd, wordt op basis van de instellingen in uw [Office 365-communicatievoorkeuren](https://support.office.com/article/Change-your-contact-preferences-for-communications-from-Microsoft-6f70de1b-a64d-4498-bfbd-be8c83a9c0fc) en of u een geldig (en bij voorkeur zakelijk) e-mailadres hebt opgegeven, een e-mail gestuurd naar de servicebeheerders.  
+In het zeldzame geval dat er na een incident actie moet worden ondernomen om uw service te herstellen of dat er een grote wijziging op stapel staat die op basis van feedback van klanten door Microsoft als mogelijk verstorend wordt beschouwd, wordt op basis van de instellingen in uw [Office 365-communicatievoorkeuren](https://support.office.com/article/Change-your-contact-preferences-for-communications-from-Microsoft-6f70de1b-a64d-4498-bfbd-be8c83a9c0fc) en of u een geldig (en bij voorkeur zakelijk) e-mailadres hebt opgegeven, een e-mail gestuurd naar de servicebeheerders.  
 
 
-<!--- ## Choose the management solution that’s right for you
+<!--- ## Choose the management solution that's right for you
 You can set up Intune in several ways to manage and help protect your company's mobile devices and computers (referred to as **devices** in this article).
 
 - **Intune stand-alone configuration.** Use the web-based admin console in Intune to manage devices in your organization. Intune can be used without any on-premises IT infrastructure. If you use Intune with Active Directory Domain Services, you can use domain user accounts that you manage with Domain Services with Intune.
@@ -100,7 +100,7 @@ You can set up Intune in several ways to manage and help protect your company's 
 --->
 
 ## <a name="language-support"></a>Taalondersteuning
-Intune wordt uitgevoerd in Azure Portal, en die portal biedt ondersteuning voor de volgende talen: Chinees (Vereenvoudigd), Chinees (Traditioneel), Duits, Engels, Frans, Hongaars, Italiaans, Japans, Koreaans, Nederlands, Pools, Portugees (Brazilië), Portugees (Portugal), Russisch, Spaans, Tsjechisch, Turks en Zweeds.
+Intune wordt uitgevoerd in Azure Portal, die ondersteuning biedt voor deze talen: Chinees (Vereenvoudigd), Chinees (Traditioneel), Duits, Engels, Frans, Hongaars, Italiaans, Japans, Koreaans, Nederlands, Pools, Portugees (Brazilië), Portugees (Portugal), Russisch, Spaans, Tsjechisch, Turks en Zweeds.
 
 De Intune-beheerconsole en de interface voor mobiele gebruikers worden ondersteund in de talen Deens, Fins, Grieks, Noors en Roemeens, en in alle talen die worden ondersteund door de Azure-portal.
 

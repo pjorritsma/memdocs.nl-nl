@@ -17,16 +17,16 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 11959de1d03c7aa9cd29de2b4069c6d7bc133f79
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9a15bc7c1fd74aa3741a9bd699778795cbf3faab
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79358439"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080025"
 ---
-# <a name="phase-2-migration-campaign"></a>Fase 2: migratiecampagne
+# <a name="phase-2-migration-campaign"></a>Fase 2: Migratiecampagne
 
-Kies een migratiestrategie die het beste past bij de behoeften van uw organisatie en pas de implementatietactieken aan op basis van uw specifieke wensen. In de rest van deze handleiding vindt u de middelen om de apparaten van de gebruikers bij Intune te registreren.
+Kies een migratiestrategie die het beste past bij de behoeften van uw organisatie en pas de implementatietactieken aan op basis van uw specifieke wensen. In de rest van deze handleiding vindt u de middelen om de apparaten van de gebruikers bij Intune in te schrijven.
 
 ## <a name="keys-to-a-successful-migration"></a>Belangrijke factoren voor een geslaagde migratie
 
@@ -64,7 +64,7 @@ Wanneer u tevreden bent over de eerste fase van de migratie, herhaalt u de [migr
 
 - Zorg ervoor dat het helpdeskteam er klaar voor is om gedurende de migratiecampagne ondersteuning te bieden aan de eindgebruikers. Hanteer een migratie op vrijwillige basis totdat u een idee hebt van de werkbelasting voor ondersteuningsgesprekken.
 
-- Stel pas deadlines voor de registratie in als de ondersteuning voor de resterende gebruikers kan worden verwerkt door uw helpdesk
+- Stel pas deadlines voor de inschrijving in als de ondersteuning voor de resterende gebruikers kan worden verwerkt door uw helpdesk
 
 > [!IMPORTANT]
 > Configureer niet zowel Intune als uw bestaande MDM-oplossing van derden zo dat deze gebruikmaken van toegangsbeheer voor resources als Exchange of SharePoint Online. Daarnaast mogen apparaten maar in één oplossing tegelijk worden ingeschreven.

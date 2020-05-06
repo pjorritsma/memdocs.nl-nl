@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 04/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 75ef2a03c9f42f0bda78af009f0fb563fbcedb75
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: f609ec62259deffb220c8ee935d0f10a98ae77b5
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220010"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254891"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Windows 10-sjablonen gebruiken voor het configureren van instellingen voor groepsbeleid in Microsoft Intune
 
@@ -41,7 +41,7 @@ In dit artikel vindt u de stappen voor het maken van een sjabloon voor Windows 1
 
 ## <a name="before-you-begin"></a>Voordat u begint
 
-- Sommige van deze instellingen zijn beschikbaar vanaf Windows 10 versie 1703 (RS2/build 15063). Sommige instellingen zijn niet in alle Windows-edities beschikbaar. Voor de beste ervaring wordt u aangeraden Windows 10 Enterprise versie 1903 (19H1/build 18362) of nieuwer te gebruiken.
+- Sommige van deze instellingen zijn beschikbaar vanaf Windows 10 versie 1709 (RS2/build 15063). Sommige instellingen zijn niet in alle Windows-edities beschikbaar. Voor de beste ervaring wordt u aangeraden Windows 10 Enterprise versie 1903 (19H1/build 18362) of nieuwer te gebruiken.
 
 - De Windows-instellingen maken gebruik van [beleids-CSP's voor Windows](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies). De CSP's werken op verschillende edities van Windows zoals Home, Professional, Enterprise enzovoort. Ga naar [Beleids-CSP's voor Windows](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies) om te zien of een bepaalde CSP in een specifieke editie werkt.
 
@@ -57,7 +57,7 @@ In dit artikel vindt u de stappen voor het maken van een sjabloon voor Windows 1
 4. Selecteer **Maken**.
 5. Voer in **Basisinformatie** de volgende eigenschappen in:
 
-    - **Naam**: Voer een beschrijvende naam in voor het profiel. Geef uw profielen een naam zodat u ze later eenvoudig kunt identificeren. Een goede profielnaam is bijvoorbeeld **Beheersjabloon: Windows 10-beheersjabloon die xyz-instellingen configureert in Microsoft Edge**.
+    - **Naam**: Voer een beschrijvende naam in voor het profiel. Geef uw profielen een naam zodat u ze later eenvoudig kunt identificeren. Een goede profielnaam is bijvoorbeeld **Beheersjabloon: Windows 10-beheersjabloon waarmee de instellingen xyz in Microsoft Edge worden geconfigureerd.**
     - **Beschrijving**: Voer een beschrijving in voor het profiel. Deze instelling is optioneel, maar wordt aanbevolen.
 
 6. Selecteer **Volgende**.
@@ -102,6 +102,10 @@ In dit artikel vindt u de stappen voor het maken van een sjabloon voor Windows 1
     Selecteer **Volgende**.
 
 14. Selecteer in **Toewijzingen** de gebruiker of groepen die uw profiel zullen ontvangen. Zie [Gebruikers- en apparaatprofielen toewijzen](device-profile-assign.md) voor meer informatie over het toewijzen van profielen.
+
+    Als het profiel is toegewezen aan gebruikersgroepen, zijn de geconfigureerde ADMX-instellingen van toepassing op elk apparaat waarop de gebruiker zich inschrijft en aanmeldt. Als het profiel is toegewezen aan apparaatgroepen, zijn de geconfigureerde ADMX-instellingen van toepassing op elke gebruiker die zich bij dat apparaat aanmeldt. Deze toewijzing vindt alleen plaats als de ADMX-instelling een computerconfiguratie (`HKEY_LOCAL_MACHINE`) of een gebruikersconfiguratie (`HKEY_CURRENT_USER`) is. Bij sommige instellingen kan een computerinstelling die aan een gebruiker is toegewezen, ook invloed hebben op de ervaring van andere gebruikers van dat apparaat.
+    
+    Zie [Gebruikersgroepen versus apparaatgroepen](device-profile-assign.md#user-groups-vs-device-groups) voor meer informatie.
 
     Selecteer **Volgende**.
 

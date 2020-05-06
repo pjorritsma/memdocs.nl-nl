@@ -7,58 +7,24 @@ ms.topic: include
 ms.date: 03/30/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 7fe4f5241fe0cea70bd77fcdd559cfca909598a8
-ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
+ms.openlocfilehash: fbf352c3bccfb17efc35e34a2a822b6bbbcc215d
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80808175"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82183042"
 ---
 Deze mededelingen bevatten belangrijke informatie die u kan helpen om voorbereid te zijn op toekomstige wijzigingen en functies in Intune.
 
 ### <a name="microsoft-intune-support-for-windows-10-mobile-ending--3544938--"></a>Microsoft Intune-ondersteuning voor Windows 10 Mobile wordt afgeschaft<!--3544938-->
-Microsoft-ondersteuning voor Windows 10 Mobile is in december 2019 afgeschaft. Zoals is vermeld in deze verklaring, komen gebruikers van Windows 10 Mobile niet meer in aanmerking voor nieuwe beveiligingspatches, hotfixes anders dan beveiligings, gratis ondersteuningsopties of online technische contentupdates van Microsoft. Op basis van de ondersteuning voor het mobiele besturingssysteem beëindigt Microsoft Intune op 11 mei 2020 de ondersteuning voor zowel de Bedrijfsportal voor de mobiele Windows 10-app als het besturingssysteem van Windows Mobile.
+Microsoft-ondersteuning voor Windows 10 Mobile is in december 2019 afgeschaft. Zoals is vermeld in deze verklaring, komen gebruikers van Windows 10 Mobile niet meer in aanmerking voor nieuwe beveiligingspatches, hotfixes anders dan beveiligings, gratis ondersteuningsopties of online technische contentupdates van Microsoft. Op basis van de ondersteuning voor het mobiele besturingssysteem beëindigt Microsoft Intune op 10 augustus 2020 de ondersteuning voor zowel de bedrijfsportal voor de mobiele Windows 10-app als het besturingssysteem van Windows 10 Mobile.
 
 #### <a name="how-does-this-affect-me"></a>Wat betekent dit voor mij?
-Als u Windows 10 Mobile-apparaten gebruikt in uw organisatie, kunt u tussen nu en 11 mei 2020 nieuwe apparaten inschrijven, beleid en apps toevoegen of verwijderen of beheerinstellingen bijwerken. Na 11 mei stoppen we nieuwe inschrijvingen en verwijderen we uiteindelijk Windows 10 Mobile-beheer uit de Intune-gebruikersinterface. Apparaten checken niet langer in bij de Intune-service en we verwijderen apparaat- en beleidsgegevens.  
+Als u Windows 10 Mobile-apparaten gebruikt in uw organisatie, kunt u tussen nu en 10 augustus 2020 nieuwe apparaten inschrijven, beleid en apps toevoegen of verwijderen of beheerinstellingen bijwerken. Na 10 augustus zijn geen nieuwe inschrijvingen meer mogelijk en verwijderen we uiteindelijk Windows 10 Mobile-beheer uit de Intune-gebruikersinterface. Apparaten checken niet langer in bij de Intune-service en we verwijderen apparaat- en beleidsgegevens.  
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Wat moet ik doen om me voor te bereiden op deze wijziging?
 Controleer uw Intune-rapporten om na te gaan voor welke apparaten of gebruikers dit gevolgen kan hebben. Ga naar **Apparaten** > **Alle apparaten** en filter op besturingssysteem. U kunt extra kolommen toevoegen, zodat u eenvoudiger kunt vaststellen wie in uw organisatie apparaten met Windows 10 Mobile gebruikt. Vraag uw eindgebruikers hun apparaten te vernieuwen of stop het gebruik van deze apparaten voor zakelijke toegang.
 
-
-### <a name="updated-support-statement-for-adobe-acrobat-reader-for-intune-mobile-app--5746776--"></a>Bijgewerkte ondersteuningsmededeling over de mobiele app Adobe Acrobat Reader voor Intune<!--5746776-->
-Eind augustus hebben we via MC188653 meegedeeld dat de mobiele app Adobe Acrobat Reader voor Intune op 1 december 2019 het eind van zijn levenscyclus heeft bereikt en dat Adobe van plan is om ondersteuning te bieden voor de app-beveiliging van Intune vanuit de belangrijkste Acrobat Reader-app. Sindsdien hebben we feedback van klanten ontvangen dat we IT-beheerders meer tijd moesten geven om zich bezig te houden met Adobe Acrobat Reader voor Intune en dat eindgebruikers meer tijd nodig hadden om zich Adobe Acrobat Reader voor Intune eigen te maken. Omdat Adobe Acrobat Reader voor Intune veel wordt gebruikt op apparaten van eindgebruikers en een belangrijke rol speelt in bedrijfsscenario's, willen we kunnen blijven garanderen dat elke ervaring voldoet aan de vereisten die uw organisatie stelt aan de bescherming van haar apps. 
-
-Hoewel we nog steeds aanraden om uw beleid op de algemene mobiele Acrobat Reader-app toe te passen, omdat de mobiele Acrobat Reader-app beveiligingsbeleid voor apps ondersteunt en de Intune-SDK erin is geïntegreerd, wordt de Adobe Acrobat Reader voor Intune-app nog ondersteund tot en met 31 maart 2020. 
-
-#### <a name="how-does-this-affect-me"></a>Wat betekent dit voor mij?
-U ontvangt dit bericht omdat tijdens onze rapportage is gebleken dat er een of meer beleidsregels in uw organisatie zijn die zich richten op de toepassing Adobe Acrobat Reader voor Intune en/of omdat u onze vorige EOL-communicatie hebt ontvangen. 
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Wat moet ik doen om me voor te bereiden op deze wijziging?
-Breng uw eindgebruikers en helpdesk op de hoogte van deze wijziging. U kunt de [functionaliteit van de bedrijfsportal voor het afhandelen van ondersteuningsinformatie](../apps/company-portal-app.md#support-information) gebruiken om een kanaal op te zetten voor het stellen en beantwoorden van vragen met betrekking tot Intune.
-
-#### <a name="additional-information"></a>Aanvullende informatie
-https://helpx.adobe.com/acrobat/kb/intune-app-end-of-life.html
-
-### <a name="take-action-use-microsoft-edge-for-your-protected-intune-browser-experience--5728447--"></a>Onderneem actie: Gebruik Microsoft Edge als uw beveiligde Intune-browser<!--5728447-->
-Zoals we al hebben gecommuniceerd in het afgelopen jaar, ondersteunt Microsoft Edge voor mobiel dezelfde beheerfuncties als Managed Browser, maar is de ervaring voor de eindgebruiker sterk verbeterd. Om plaats te maken voor de nieuwe gebruikerservaring die met Microsoft Edge wordt geboden, wordt Intune Managed Browser buiten gebruik gesteld. Vanaf 27 januari 2020 wordt Intune Managed Browser niet meer ondersteund door Intune.  
-
-#### <a name="how-does-this-affect-me"></a>Wat betekent dit voor mij? 
-Vanaf 1 februari 2020 is Intune Managed Browser niet meer beschikbaar in de Google Play Store of de App Store voor iOS. Vanaf dan kunt u nog steeds nieuw app-beveiligingsbeleid toepassen op Intune Managed Browser, maar kunnen nieuwe gebruikers de Intune Managed Browser-app niet meer downloaden. In iOS worden bovendien nieuwe webclips die worden gepusht naar apparaten die via MDM zijn ingeschreven, geopend in Microsoft Edge in plaats van in Intune Managed Browser.  
-
-Op 31 maart 2020 wordt Intune Managed Browser verwijderd uit de Azure-console. Dit betekent dat u geen nieuwe beleidsregels meer kunt maken voor Intune Managed Browser. Bestaand Intune Managed Browser-beleid dat u hebt geïmplementeerd, wordt hierdoor niet beïnvloed. Intune Managed Browser wordt weergegeven in de console als een LOB-app zonder pictogram en bestaande beleidsregels worden nog steeds weergegeven als gericht op de app. Vanaf dan wordt ook de optie voor het omleiden van webinhoud naar Intune Managed Browser verwijderd uit de sectie Gegevensbescherming van App-beveiligingsbeleid.  
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Wat moet ik doen om me voor te bereiden op deze wijziging? 
-Voor een soepele overgang van Intune Managed Browser naar Microsoft Edge wordt u aangeraden de volgende stappen proactief uit te voeren: 
-
-1. Stel Microsoft Edge voor iOS en Android in als doel met app-beveiligingsbeleid (ook wel MAM genoemd) en app-configuratie-instellingen. U kunt uw Intune Managed Browser-beleid opnieuw gebruiken voor Microsoft Edge door ook die bestaande beleidsregels te richten op Microsoft Edge.  
-2. Voor alle apps in uw omgeving die met MAM worden beveiligd, moet de app-beveiligingsbeleidsinstelling 'Overdracht van webinhoud met andere apps beperken' zijn ingesteld op 'Browsers die worden beheerd met beleid'. 
-3. Stel het doel in van alle apps die met MAM worden beveiligd, waarbij u de configuratie-instelling 'com.microsoft.intune.useEdge' van de beheerde app instelt op true (waar). Met ingang van de release van 1911 kunt u stap 2 en stap 3 eenvoudig uitvoeren door de instelling 'Overdracht van webinhoud met andere apps beperken' te configureren voor Microsoft Edge in de sectie Gegevensbescherming van uw app-beveiligingsbeleid. 
-
-Ondersteuning voor webclips in iOS en Android is binnenkort beschikbaar. Wanneer deze ondersteuning wordt uitgebracht, moet u het doel van bestaande webclips opnieuw instellen om ervoor te zorgen dat ze worden geopend in Microsoft Edge in plaats van in Managed Browser. 
-
-#### <a name="additional-information"></a>Aanvullende informatie
-Bekijk onze documenten over het [gebruik van Microsoft Edge met app-beveiligingsbeleid](../apps/manage-microsoft-edge.md) voor meer informatie of lees onze [blogpost over ondersteuning](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Use-Microsoft-Edge-for-your-Protected-Intune-Browser-Experience/ba-p/1004269).
 
 ### <a name="end-of-support-for-legacy-pc-management"></a>Einde van ondersteuning voor verouderd pc-beheer
 

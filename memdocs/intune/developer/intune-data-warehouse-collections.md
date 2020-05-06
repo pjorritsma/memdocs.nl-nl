@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9b8ffa656aa468b50569518aaff503fec1d21027
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9a4d468c62132c6af4477ba48f17ac9b21013e51
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086243"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82022734"
 ---
 # <a name="intune-data-warehouse-collections"></a>Intune-datawarehouse-verzamelingen
 
@@ -35,10 +35,10 @@ De entiteit **AppRevision** biedt een overzicht van alle versies van apps.
 |          Eigenschap          |                                      Beschrijving                                      |                Voorbeeld               |
 |:--------------------------:|:-------------------------------------------------------------------------------------:|:------------------------------------:|
 | AppKey                     | De unieke id van de app.                                                         | 123                                  |
-| ApplicationId              | De unieke id van de app, vergelijkbaar met AppKey, maar dit is een natuurlijke sleutel.        | b66bc706-FFFF-7437-0340-032819502773 |
+| ApplicationID              | De unieke id van de app, vergelijkbaar met AppKey, maar dit is een natuurlijke sleutel.        | b66bc706-ffff-7437-0340-032819502773 |
 | Revisie                   | De versie zoals vermeld door de beheerder tijdens het uploaden van het binaire bestand.                   | 2                                    |
 | Titel                      | De titel van de app.                                                                     | Excel                                |
-| Publisher                  | De uitgever van de app.                                                                 | Microsoft                            |
+| Uitgever                  | De uitgever van de app.                                                                 | Microsoft                            |
 | UploadState                | De uploadstatus van de app.                                                              | 1                                    |
 | AppTypeKey                 | Verwijzing naar AppType, zoals beschreven in de volgende sectie.                            | 1                                    |
 | VppProgramTypeKey          | Verwijzing naar VppProgramType, zoals hieronder beschreven.                                        | 30876                                |
@@ -69,7 +69,7 @@ De entiteit **appType** vermeldt de installatiebron van een app.
 | 3         | iOS Store-app                   | Een iOS Store-app.                                 |
 | 4         | iOS LOB-app                     | Een iOS Line-Of-Business-app.                      |
 | 5         | Beheerde iOS Store-app (MAM)     | Een iOS Store-app die onder beheer staat.       |
-| 6         | O365 Pro Plus Suite             | De Office 365 Pro Plus Suite voor Windows 10.     |
+| 6         | O365 Pro Plus Suite             | De Microsoft 365-apps voor Windows 10.     |
 | 7         | Web-app                         | Een web-app.                                        |
 | 8         | Windows Phone 8.1 Store-app     | Een Windows Phone 8.1 Store-app.                    |
 | 9         | Windows Store-app               | Een Windows Store-app.                              |
@@ -85,7 +85,7 @@ De volgende tabel geeft een overzicht van de toewijzingsstatus van nalevingsbele
 | DateKey       | De datum waarop de samenvatting voor het nalevingsbeleid is gemaakt.                                                                                                                   | 20161204 |
 | Onbekend       | Het aantal apparaten dat offline is of om een andere redenen niet kan communiceren met Intune of Azure AD.                                                                           | 5        |
 | Niet van toepassing | Het aantal apparaten waarvoor het nalevingsbeleid waarop de beheerder zich richt, niet van toepassing is.                                                                                     | 201      |
-| compatibel     | Het aantal apparaten waarop een of meer nalevingsbeleidsregels voor apparaten is toegepast waarop de beheerder zich richt.                                                                        | 4083     |
+| Compliant     | Het aantal apparaten waarop een of meer nalevingsbeleidsregels voor apparaten is toegepast waarop de beheerder zich richt.                                                                        | 4083     |
 | Respijtperiode | Aantal apparaten die niet voldoen aan het beleid, maar zich in de respijtperiode bevindt die door de beheerder is vastgesteld.                                                                                  | 57       |
 | Niet-compatibel  | Het aantal apparaten waarop een of meer nalevingsbeleidsregels niet zijn toegepast waarop de beheerder zich richt of waarvoor de gebruiker niet voldoet aan de beleidsregels waarop de beheerder zich richt. | 43       |
 |    Fout      |    Het aantal apparaten dat niet kan communiceren met Intune of Azure AD en een foutbericht heeft geretourneerd.                                                                          |    3     |
@@ -100,7 +100,7 @@ De volgende tabel geeft een overzicht van de toewijzingsstatus van nalevingsbele
 | PolicyPlatformKey | Sleutel voor het platformtype van het nalevingsbeleid waarvoor de samenvatting is gemaakt.                                                                                            | 5        |
 | Onbekend           | Het aantal apparaten dat offline is of om een andere redenen niet kan communiceren met Intune of Azure AD.                                                                           | 13       |
 | Niet van toepassing     | Het aantal apparaten waarvoor het nalevingsbeleid waarop de beheerder zich richt, niet van toepassing is.                                                                                     | 3        |
-| compatibel         | Het aantal apparaten waarop een of meer nalevingsbeleidsregels voor apparaten is toegepast waarop de beheerder zich richt.                                                                        | 45       |
+| Compliant         | Het aantal apparaten waarop een of meer nalevingsbeleidsregels voor apparaten is toegepast waarop de beheerder zich richt.                                                                        | 45       |
 | Respijtperiode     | Aantal apparaten die niet voldoen aan het beleid, maar zich in de respijtperiode bevindt die door de beheerder is vastgesteld.                                                                                  | 3        |
 | Niet-compatibel      | Het aantal apparaten waarop een of meer nalevingsbeleidsregels niet zijn toegepast waarop de beheerder zich richt of waarvoor de gebruiker niet voldoet aan de beleidsregels waarop de beheerder zich richt. | 7        |
 | Fout             | Het aantal apparaten dat niet kan communiceren met Intune of Azure AD en een foutbericht heeft geretourneerd.                                                                             | 3        |
@@ -117,7 +117,7 @@ De volgende tabel geeft een overzicht van de toewijzingsstatus van nalevingsbele
 |  complianceStatus  |                       Beschrijving                      |
 |:------------------:|:------------------------------------------------------:|
 |    Onbekend         |    Onbekend.                                                                        |
-|    compatibel       |    Voldoet aan het beleid.                                                                      |
+|    Compliant       |    Voldoet aan het beleid.                                                                      |
 |    Noncompliant    |       Apparaat voldoet niet aan het beleid en heeft geen toegang tot bedrijfsresources.             |
 |    Conflict        |    Conflict met andere regels.                                                      |
 |    Fout           |       Fout.                                                                       |
@@ -455,8 +455,8 @@ De entiteit **MamApplicationInstance** bevat een lijst met beheerde MAM-apps (Mo
 |          Eigenschap          |                                                                                                  Beschrijving                                                                                                  |               Voorbeeld                |
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
 |   ApplicationInstanceKey   |                                                               De unieke id van het MAM-app-exemplaar in het datawarehouse (surrogaatsleutel).                                                                |                 123                  |
-|           UserId           |                                                                              De gebruikers-id van de gebruiker die deze MAM-app heeft geïnstalleerd.                                                                              | b66bc706-FFFF-7437-0340-032819502773 |
-|   ApplicationInstanceId    |                                              De unieke id van het MAM-app-exemplaar, vergelijkbaar met ApplicationInstanceKey, maar de id is een natuurlijke sleutel.                                              | b66bc706-FFFF-7437-0340-032819502773 |
+|           UserId           |                                                                              De gebruikers-id van de gebruiker die deze MAM-app heeft geïnstalleerd.                                                                              | b66bc706-ffff-7437-0340-032819502773 |
+|   ApplicationInstanceId    |                                              De unieke id van het MAM-app-exemplaar, vergelijkbaar met ApplicationInstanceKey, maar de id is een natuurlijke sleutel.                                              | b66bc706-ffff-7437-0340-032819502773 |
 | mamApplicationId | De toepassings-id van de MAM-toepassing waarvoor dit MAM-toepassingsexemplaar is gemaakt.   | 11/23/2016 12:00:00 AM   |
 |     ApplicationVersion     |                                                                                     De toepassingsversie van deze MAM-app.                                                                                      |                  2                   |
 |        CreatedDate         |                                                                 De datum waarop deze record van het MAM-app-exemplaar is gemaakt. De waarde kan null zijn.                                                                 |        11/23/2016 12:00:00 AM        |
@@ -590,7 +590,7 @@ Met de entiteit **ownerType** wordt aangegeven of een apparaat bedrijfseigendom 
 |:-------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------:|
 | ownerTypeID   | Unieke id van het type eigenaar.                                                                                                                                               |                            |
 | ownerTypeKey  | Unieke id van het type eigenaar in het datawarehouse - surrogaatsleutel.                                                                                                       |                            |
-| ownerTypeName | Hiermee wordt het type eigenaar van de apparaten voorgesteld: Corporate - apparaat is eigendom van de onderneming.  Personal - apparaat is persoonlijk eigendom (BYOD).   Unknown - er is geen informatie over dit apparaat. | Corporate Personal Unknown |
+| ownerTypeName | Vertegenwoordigt het eigenaartype van de apparaten:  Corporate - Het apparaat is bedrijfseigendom.  Personal - apparaat is persoonlijk eigendom (BYOD).   Unknown - er is geen informatie over dit apparaat. | Corporate Personal Unknown |
 
 > [!Note]  
 > Bij het maken van dynamische groepen voor apparaten moet u voor het `ownerTypeName`-filter in AzureAD de waarde `deviceOwnership` instellen als `Company`. Zie [Regels voor apparaten](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) voor meer informatie. 
@@ -601,7 +601,7 @@ De entiteit **Policy** bevat apparaatconfiguratieprofielen, app-configuratieprof
 |          Eigenschap          |                                                                       Beschrijving                                                                      |                Voorbeeld               |
 |:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------:|
 | PolicyKey                  | Een unieke sleutel voor het beleid in het datawarehouse.                                                                                              | 123                                  |
-| PolicyId                   | Een unieke id van het beleid in het datawarehouse.                                                                                                 | b66bc706-FFFF-7437-0340-032819502773 |
+| PolicyId                   | Een unieke id van het beleid in het datawarehouse.                                                                                                 | b66bc706-ffff-7437-0340-032819502773 |
 | PolicyName                 | De naam van het beleid.                                                                                                                                    | "Windows 10 Baseline"                |
 | PolicyVersion              | De versie van het beleid. Wanneer het beleid wordt gewijzigd, wordt er een nieuwere versie gemaakt.                                                             | 1, 2, 3                              |
 | IsDeleted                  | Geeft aan of de beleidsrecord is bijgewerkt.  Waar: het beleid heeft een nieuwe record met bijgewerkte velden.  Onwaar: de meest recente record voor het beleid. | Waar/onwaar                           |
@@ -698,7 +698,7 @@ De entiteitverzameling **user** bevat gebruikersgegevens. Deze records bevatten 
 |          Eigenschap          |                                                                                                           Beschrijving                                                                                                          |                Voorbeeld               |
 |:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------:|
 | UserKey                    | De unieke id van de gebruiker in het datawarehouse - surrogaatsleutel.                                                                                                                                                         | 123                                  |
-| UserId                     | De unieke id van de gebruiker, vergelijkbaar met UserKey, maar dit is een natuurlijke sleutel.                                                                                                                                                    | b66bc706-FFFF-7437-0340-032819502773 |
+| UserId                     | De unieke id van de gebruiker, vergelijkbaar met UserKey, maar dit is een natuurlijke sleutel.                                                                                                                                                    | b66bc706-ffff-7437-0340-032819502773 |
 | UserEmail                  | Het e-mailadres van de gebruiker.                                                                                                                                                                                                     | John@constoso.com                    |
 | userPrincipalName                        | De UPN (user principal name) van de gebruiker.                                                                                                                                                                                               | John@constoso.com                    |
 | DisplayName                | De weergavenaam van de gebruiker.                                                                                                                                                                                                      | Jan                                 |

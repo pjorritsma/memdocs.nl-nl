@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e28ca9e9b8ed77cdd01b415761fd90308d5b7017
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a36449de6d6ebc437b445309bb64f3a9b448d90f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79352745"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079804"
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Beleid voor voorwaardelijke toegang vanuit de klassieke Intune-portal overbrengen naar Azure Portal
 
@@ -199,7 +199,7 @@ Omdat MDM is verwijderd uit de klassieke Intune-portal, wordt de volgende koppel
 
 [https://portal.azure.com/?microsoft_aad_iam_classicPolicyDontHide=true#blade/Microsoft_AAD_IAM/ConditionalAccessBlade/ClassicPolicies](https://portal.azure.com/?microsoft_aad_iam_classicPolicyDontHide=true#blade/Microsoft_AAD_IAM/ConditionalAccessBlade/ClassicPolicies)
 
-## <a name="see-also"></a>Zie ook
+## <a name="see-also"></a>Zie tevens
 
 - [Gebruikelijke manieren om voorwaardelijke toegang met Intune te gebruiken](conditional-access-intune-common-ways-use.md)
 - [Op apps gebaseerde voorwaardelijke toegang met Intune](app-based-conditional-access-intune.md)

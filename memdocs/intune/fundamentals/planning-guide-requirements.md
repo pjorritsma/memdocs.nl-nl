@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6e002b62fb00c4e2e8523848c4c64ad7a54ce024
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 257f717243e021e7fd643a6e7ca41644e4369bcd
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357646"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080127"
 ---
 # <a name="determine-use-case-scenario-requirements"></a>Vereisten voor gebruiksscenario's bepalen
 
@@ -35,7 +35,7 @@ Er zijn mogelijk ook organisatiegroepen voor uw bedrijfsgebruiksscenario waarvoo
 
 Hier volgen enkele voorbeelden van gebruikssituatievereisten van een organisatie met verschillende vereisten voor elk gebruiksscenario en subgebruiksscenario, elke organisatiegroep en elk platform voor mobiele apparaten. U kunt ook de volgende tabel gebruiken om de gebruikssituatievereisten van uw organisatie in te voeren:
 
-| **Use cases** | **Subgebruikssituaties** | **GROEPEN** | **Apparaatplatformen** | **Requirements** |
+| **Use cases** | **Subgebruikssituaties** | **Groepen** | **Apparaatplatformen** | **Vereisten** |
 |:---:|:---:|:---:|:---:|:---:|
 | Bedrijf | Informatiemedewerker | HR, Financiën | iOS/iPadOS | Beveiligde e-mail, apparaatinstellingen, profielen, apps |                                                          
 | Bedrijf | Leidinggevenden | HR, Financiën | iOS/iPadOS | Beveiligde e-mail, apparaatinstellingen, profielen, apps |                                                         

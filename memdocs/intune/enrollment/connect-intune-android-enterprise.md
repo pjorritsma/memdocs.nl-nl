@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97024c641be4c61561e762751cfabfab2732e4c1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6027a8f193bc470c4c7ab7724f3b9736c2487980
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327175"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078019"
 ---
 # <a name="connect-your-intune-account-to-your-managed-google-play-account"></a>Uw Intune-account verbinden met uw Beheerde Google Play-account
 
@@ -41,7 +41,7 @@ In Intune worden automatisch vier veelgebruikte Android Enterprise-apps toegevoe
 > [!NOTE]
 > Als gevolg van interactie tussen domeinen van Google en Microsoft moet u in deze stap mogelijk uw browserinstellingen aanpassen.  Zorg ervoor dat 'portal.azure.com' en 'play.google.com' zich in dezelfde beveiligingszone bevinden in uw browser.
 
-1. Als u dit nog niet hebt gedaan, moet u het beheer van mobiele apparaten voorbereiden door  [de beheerautoriteit voor mobiele apparaten](../fundamentals/mdm-authority-set.md) in te stellen als **Microsoft Intune**.
+1. Als u dit nog niet hebt gedaan, moet u het beheer van mobiele apparaten voorbereiden door [de instantie voor het beheer van mobiele apparaten in te stellen](../fundamentals/mdm-authority-set.md) als **Microsoft Intune**.
 2. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431), kies **Apparaten** > **Android** > **Android-inschrijving** > **Beheerde Google Play**.  Als u een aangepaste Intune beheerdersrol gebruikt, zijn voor toegang tot deze rol lees- en bijwerkmachtigingen voor de organisatie vereist.
    
    ![Android Enterprise-inschrijvingsscherm](./media/connect-intune-android-enterprise/android-work-bind.png)

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d193e067a752e89377b4bec903ff4f890add230
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ac6650f06abddd2633e73f39a6bf72d54e344a61
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80325626"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079192"
 ---
 # <a name="troubleshoot-bitlocker-policies-in-microsoft-intune"></a>Problemen met BitLocker-beleid in Microsoft Intune oplossen
 
@@ -35,7 +35,7 @@ Met Microsoft Intune beschikt u over de volgende methoden om BitLocker te behere
 
 - **Beleidsregels voor apparaatconfiruatie**: bepaalde ingebouwde beleidsopties zijn beschikbaar in Intune wanneer u een apparaatconfiguratieprofiel maakt om Endpoint Protection te beheren. U kunt deze opties vinden door [een apparaatprofiel voor Endpoint Protection](endpoint-protection-configure.md#create-a-device-profile-containing-endpoint-protection-settings) te maken, **Windows 10 en later** te selecteren bij *Platform* en vervolgens de categorie **Windows-versleuteling** te selecteren bij *Instellingen*. 
 
-   Zie [Windows-versleuteling](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption) voor de beschikbare opties en functies.
+   Zie dit artikel voor de beschikbare opties en functies: [Windows-versleuteling](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption).
 
 - **Beveiligingsbasislijnen** - [Beveiligingsbasislijnen](security-baselines.md) zijn bekende groepen instellingen en standaardwaarden die door het relevante beveiligingsteam worden aanbevolen om Windows-apparaten te beveiligen. Met verschillende basislijnbronnen, zoals de *MDM-beveiligingsbasislijn* of de *Microsoft Defender ATP-basislijn*, kunt u dezelfde of andere instellingen beheren. U kunt er ook dezelfde instellingen mee beheren als met apparaatconfiguratiebeleid. 
 
@@ -105,7 +105,7 @@ Confirm-SecureBootUEFI
 
 ### <a name="review-the-devices-registry-key-configuration"></a>De configuratie van de registersleutel voor apparaten controleren
 
-Nadat BitLocker-beleid op een apparaat is geïmplementeerd, bekijkt u de volgende registersleutel op het apparaat, waar u de configuratie van BitLocker-instellingen kunt controleren: *HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\current\device\BitLocker*. Hier volgt een voorbeeld:
+Nadat BitLocker-beleid op een apparaat is geïmplementeerd, bekijkt u de volgende registersleutel op het apparaat, waar u de configuratie van BitLocker-instellingen kunt controleren:  *HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\current\device\BitLocker*. Hier volgt een voorbeeld:
 
 ![BitLocker-registersleutel](./media/troubleshooting-bitlocker-policies/registry.png)
 

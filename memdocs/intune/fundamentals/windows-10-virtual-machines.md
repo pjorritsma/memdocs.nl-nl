@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f09ffc2bc1d0c1850f20121c869186018cf9ae31
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 944b3d98dc59dcae69f72fef5dfdb1793701f67a
+ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79354422"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82126167"
 ---
 # <a name="using-windows-10-virtual-machines-with-intune"></a>Virtuele Windows 10-machines gebruiken met Intune
 
@@ -31,12 +31,15 @@ Intune biedt ondersteuning voor het beheer van virtuele machines met Windows 10 
 
 Houd bij het beheren van virtuele Windows 10-machines met Intune rekening met de volgende punten:
 
+- Windows 10 Enterprise Multi Session (Enterprise for Virtual Devices) zoals wordt gebruikt in Windows Virtual Desktop, biedt momenteel geen ondersteuning voor Intune-beheer.
+
 ## <a name="enrollment"></a>Inschrijving
 - Het is niet raadzaam virtuele machines op aanvraag te beheren en virtuele machinesessies met Intune te hosten. Elke VM moet worden ingeschreven als deze wordt gemaakt. Als u regelmatig virtuele machines verwijdert, blijven er zwevende apparaatrecords in Intune achter totdat deze worden [opgeschoond](../remote-actions/devices-wipe.md#automatically-delete-devices-with-cleanup-rules). 
 - Automatische implementatie van Windows Autopilot en nauwkeurige implementatietypen worden niet ondersteund omdat hiervoor een fysieke TPM (Trusted Platform Module) is vereist. 
 - De OOBE-inschrijving (Out-Of-Box Experience) wordt niet ondersteund op VM's die alleen toegankelijk zijn via RDP (zoals VM's die worden gehost op Azure). Deze beperking betekent het volgende:
     - Windows Autopilot en Commercial OOBE worden niet ondersteund.
     - Opties voor de inschrijvingsstatuspagina voor beleid voor apparaatcontext worden niet ondersteund.
+
 
 ## <a name="configuration"></a>Configuration
 Intune biedt geen ondersteuning voor een configuratie die gebruikmaakt van een Trusted Platform Module of hardwarebeheer, waaronder:

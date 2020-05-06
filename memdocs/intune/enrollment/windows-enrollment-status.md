@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0efaaf94f969e0b1b27582027a68b9e59c944b0c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 8ba3563a243b13b874608ad7a3ec918130e5bb80
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326853"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82022701"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Een pagina Status van de inschrijving instellen
  
@@ -41,7 +41,7 @@ De pagina Status van de registratie is handig voor gebruikers om de status van h
 U kunt ook de volgorde van prioriteit voor elk profiel instellen om problemen met conflicterende profieltoewijzingen aan dezelfde gebruiker te voorkomen.
 
 > [!NOTE]
-> De pagina Status van de inschrijving kan alleen worden gebruikt voor een gebruiker die deel uitmaakt van een toegewezen groep en als het beleid is ingesteld op het apparaat op het moment van inschrijving voor alle gebruikers die het apparaat gebruiken.  
+> De pagina Status van de inschrijving kan alleen worden gebruikt voor een gebruiker die deel uitmaakt van een toegewezen groep en als het beleid is ingesteld op het apparaat op het moment van inschrijving voor alle gebruikers die het apparaat gebruiken.  Een apparaat koppelen aan profielen voor inschrijvingsstatuspagina wordt momenteel niet ondersteund.
 
 ## <a name="available-settings"></a>Beschikbare instellingen
 
@@ -97,6 +97,10 @@ U kunt opgeven welke apps moeten worden geïnstalleerd voordat de gebruiker toeg
 5. Kies **Geselecteerd** bij **Gebruik van het apparaat blokkeren totdat de vereiste apps zijn geïnstalleerd als deze zijn toegewezen aan de gebruiker/het apparaat**.
 6. Kies **Apps selecteren** > kies de apps > **selecteer** > **Opslaan**.
 
+De apps in deze lijst worden door Intune gebruikt om de lijst te filteren die als blokkering moet worden beschouwd.  De lijst geeft niet aan welke apps moeten worden geïnstalleerd.  Als u in deze lijst bijvoorbeeld 'App 1,'App 2' en 'App 3' opneemt en 'App 3', 'App 4 'aan het apparaat of de gebruiker worden gekoppeld, wordt op de inschrijvingsstatuspagina alleen 'App 3' bijgehouden.  'App 4' wordt wel nog geïnstalleerd, maar op de inschrijvingsstatuspagina wordt niet gewacht op voltooiing ervan.
+
+Er kunnen maximaal 25 apps worden opgegeven.
+
 ## <a name="enrollment-status-page-tracking-information"></a>Traceringsinformatie op de pagina Status van de inschrijving
 
 Er zijn drie fasen waarvoor gegevens worden bijgehouden op de pagina Status van de inschrijving: voorbereiding van het apparaat, installatie van het apparaat en installatie van het account.
@@ -145,10 +149,11 @@ Voor de installatie van het account worden op de pagina Status van de inschrijvi
 ### <a name="troubleshooting"></a>Probleemoplossing
 Beste vragen voor probleemoplossing.
 
-- Waarom zijn mijn toepassingen niet geïnstalleerd tijdens de fase Installatie van het apparaat tijdens de implementatie van Autopilot die gebruikmaakt van de pagina Status van de inschrijving?
-  - Om er zeker van te zijn dat toepassingen worden geïnstalleerd tijdens de installatiefase van een Autopilot-apparaat, moet u ervoor zorgen dat 
-        1. De toepassing is geselecteerd voor het blokkeren van toegang in de lijst met geselecteerde apps
-        2. U de toepassingen richt op dezelfde Azure AD-apparaatgroep waaraan uw Autopilot-profiel is toegewezen. 
+- Waarom zijn mijn toepassingen niet geïnstalleerd en getraceerd met de pagina Inschrijvingsstatus?
+  - Om te garanderen dat toepassingen worden geïnstalleerd en getraceerd met de pagina Inschrijvingsstatus, zorgt u ervoor dat:
+      - De apps zijn toegewezen aan een Azure AD-groep met het apparaat (voor op apparaten gerichte apps) of de gebruiker (voor op gebruikers gerichte apps), met behulp van de toewijzing 'vereist'.  (Op apparaten gerichte apps worden getraceerd tijdens de apparaatfase van ESP, terwijl op gebruikers gerichte apps worden getraceerd tijdens de gebruikersfase van ESP.)
+      - U geeft **Apparaatgebruik blokkeren totdat alle apps en profielen zijn geïnstalleerd** op of neemt de app op in de lijst **Apparaatgebruik blokkeren tot deze vereiste apps zijn geïnstalleerd**.
+      - De apps worden geïnstalleerd in apparaatcontext en hebben geen toepasselijkheidsregels voor gebruikerscontext.
 
 - Waarom wordt de pagina Status van de inschrijving weergegeven voor implementaties zonder Autopilot, bijvoorbeeld wanneer een gebruiker zich voor de eerste keer aanmeldt op een apparaat dat voor co-beheer is ingeschreven bij Configuration Manager?  
   - Op de pagina Status van de inschrijving wordt de installatiestatus voor alle inschrijvingsmethoden vermeld, met inbegrip van
@@ -190,7 +195,6 @@ Beste vragen voor probleemoplossing.
 ### <a name="known-issues"></a>Bekende problemen
 Hieronder worden enkele bekende problemen beschreven. 
 - Als u het ESP-profiel uitschakelt, blijft het ESP-beleid van kracht op apparaten en zien gebruikers nog steeds de pagina Status van de inschrijving wanneer ze zich voor de eerste keer aanmelden bij het apparaat. Het beleid wordt niet verwijderd wanneer het ESP-profiel wordt uitgeschakeld. U moet OMA-URI implementeren om de pagina Status van de inschrijving uit te schakelen. Hierboven vindt u instructies voor het uitschakelen van de pagina Status van de inschrijving met OMA-URI. 
-- Als er een aanvraag voor het opnieuw opstarten van het apparaat in behandeling is, treedt er altijd een time-out op. De time-out treedt op omdat het apparaat opnieuw moet worden opgestart. Opnieuw opstarten is nodig om tijd te bieden voor het voltooien van het item dat wordt bijgehouden op de pagina Status van de inschrijving. Als het apparaat opnieuw wordt opgestart, wordt de pagina Status van de inschrijving afgesloten en na het opnieuw opstarten wordt niet de pagina voor accountinstallatie weergegeven.  U kunt overwegen opnieuw opstarten achterwege te laten bij de installatie van een toepassing. 
 - Opnieuw opstarten tijdens apparaatinstallatie dwingt de gebruiker om referenties in te voeren voordat de fase voor installatie van het account wordt ingegaan. Gebruikersreferenties blijven niet behouden tijdens het opnieuw opstarten. Laat de gebruiker zijn of haar referenties invoeren, waarna de pagina Status van de inschrijving wordt weergegeven. 
 - Er treedt altijd een time-out op voor de pagina Status van de inschrijving tijdens een inschrijving met Werk- en schoolaccount toevoegen in Windows 10-versie 1903 en lager. De pagina Status van de inschrijving wacht totdat de Azure AD-registratie is voltooid. Het probleem is opgelost in Windows 10-versie 1903 en hoger.  
 - Hybride Azure AD Auto Pilot-implementatie met ESP duurt langer dan de time-outperiode die is gedefinieerd in het ESP-profiel. Bij hybride Azure AD Auto Pilot-implementaties duurt de ESP 40 minuten langer dan de waarde die is ingesteld in het ESP-profiel. Deze vertraging geeft de on-premises AD-connector tijd om de nieuwe apparaatrecord te maken in Azure AD. 

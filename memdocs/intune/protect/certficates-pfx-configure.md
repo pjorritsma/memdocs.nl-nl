@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b2ef5656c2608cee825dc294d87e661c7ad63634
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: dfa559a9c628dfc87c982023e350947d3e9bfeea
+ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322786"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81771475"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>PKCS-certificaten configureren en gebruiken met Intune
 
@@ -151,7 +151,7 @@ Voor verificatie van een apparaat met VPN, Wi-Fi of andere resources hebt u op e
 3. Klik op *De certificaatconnectorsoftware downloaden* voor de connector voor PKCS #12 en sla het bestand op op een locatie waartoe u toegang hebt vanaf de server waarop u de connector gaat installeren.
 
    ![Microsoft Intune Certificate Connector-download](./media/certficates-pfx-configure/download-ndes-connector.png)
- 
+
 4. Nadat het downloaden is voltooid, meldt u zich aan bij de server. Vervolgens:
 
     1. Controleer of .NET 4.5 Framework of hoger is geïnstalleerd. Dit is vereist voor de NDES-certificaatconnector. .NET Framework 4.5 wordt automatisch geïnstalleerd met Windows Server 2012 R2 en nieuwere versies.
@@ -202,7 +202,7 @@ Voor verificatie van een apparaat met VPN, Wi-Fi of andere resources hebt u op e
 
    Selecteer **Volgende**.
 
-10. Selecteer in **Toewijzingen** de gebruiker of groepen die uw profiel zullen ontvangen. Zie [Gebruikers- en apparaatprofielen toewijzen](../configuration/device-profile-assign.md) voor meer informatie over het toewijzen van profielen.
+10. Selecteer in **Toewijzingen** de gebruiker of groepen die uw profiel zullen ontvangen. Plan de implementatie van dit certificaatprofiel zodat dit naar dezelfde groepen wordt geïmplementeerd die het PKCS-certificaatprofiel ontvangen. Zie [Gebruikers- en apparaatprofielen toewijzen](../configuration/device-profile-assign.md) voor meer informatie over het toewijzen van profielen.
 
     Selecteer **Volgende**.
 
@@ -260,7 +260,7 @@ Voor verificatie van een apparaat met VPN, Wi-Fi of andere resources hebt u op e
 
    Selecteer **Volgende**.
 
-10. Selecteer in **Toewijzingen** de gebruiker of groepen die uw profiel zullen ontvangen. Zie [Gebruikers- en apparaatprofielen toewijzen](../configuration/device-profile-assign.md) voor meer informatie over het toewijzen van profielen.
+10. Selecteer in **Toewijzingen** de gebruiker of groepen die uw profiel zullen ontvangen. Plan de implementatie van dit certificaatprofiel zodat dit naar dezelfde groepen wordt geïmplementeerd die het vertrouwde certificaatprofiel ontvangen. Zie [Gebruikers- en apparaatprofielen toewijzen](../configuration/device-profile-assign.md) voor meer informatie over het toewijzen van profielen.
 
     Selecteer **Volgende**.
 

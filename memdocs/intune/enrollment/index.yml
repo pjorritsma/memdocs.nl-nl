@@ -12,12 +12,12 @@ metadata:
   ms.author: dougeby
   manager: dougeby
   ms.date: 08/07/2019
-  ms.openlocfilehash: 468bf56722f17fded75c18a722b15e5e55113eec
-  ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+  ms.openlocfilehash: c604af033d47061c186bd987310e495d2b118268
+  ms.sourcegitcommit: 5f9d5d22114ae5aeb0270c7fb59c5dced5f48826
   ms.translationtype: HT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 04/23/2020
-  ms.locfileid: "82077951"
+  ms.lasthandoff: 05/06/2020
+  ms.locfileid: "82862323"
 landingContent:
 - title: Meer informatie over inschrijving
   linkLists:
@@ -65,8 +65,6 @@ landingContent:
     links:
     - text: Uw Intune-account verbinden met uw beheerde Google Play-account
       url: connect-intune-android-enterprise.md
-    - text: Inschrijving van apparaten met een Android Enterprise-werkprofiel instellen
-      url: android-work-profile-enroll.md
     - text: Inschrijving van apparaten met een Android Enterprise-werkprofiel instellen
       url: android-work-profile-enroll.md
     - text: Inschrijving van toegewezen Android Enterprise-apparaten instellen

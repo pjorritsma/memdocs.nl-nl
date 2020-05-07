@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6dc2c1d4f07e601d98bc2f26ec4766e21a8f1bc7
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5d56d3982a036ace198ceae9bf2d01a8c12de6d5
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79350665"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079141"
 ---
 # <a name="troubleshoot-conditional-access"></a>Problemen met voorwaardelijke toegang oplossen
 In dit artikel wordt beschreven wat u moet doen wanneer uw gebruikers geen toegang kunnen krijgen tot resources die met voorwaardelijke toegang zijn beschermd, of wanneer gebruikers wel toegang tot beschermde resources kunnen krijgen, maar eigenlijk zouden moeten worden geblokkeerd.
@@ -105,14 +105,14 @@ Deze voorwaarden voor elk apparaat zijn terug te vinden in Azure Portal en in he
 
 Als een apparaat niet compatibel is, maar nog steeds toegang heeft, voert u de volgende acties uit.
 
-- Controleer de doelgroepen en de groepen die zijn uitgesloten. Als een gebruiker zich niet in de juiste doelgroep of in de groep die is uitgesloten bevindt, wordt deze niet geblokkeerd. Alleen apparaten van gebruikers in een doelgroep worden gecontroleerd op naleving.
+- Controleer de doelgroepen en de groepen die zijn uitgesloten. Als een gebruiker zich niet bevindt in de juiste doelgroep of in de groep die is uitgesloten, wordt deze niet geblokkeerd. Alleen apparaten van gebruikers in een doelgroep worden gecontroleerd op naleving.
 
 - Zorg ervoor dat het apparaat wordt gedetecteerd. Verwijst de Exchange-Connector naar een Exchange 2010 CAS terwijl de gebruiker zich op een Exchange 2013-server bevindt? In dit geval, mits de standaardregel voor Exchange Toestaan is, kan Intune de verbinding van het apparaat met Exchange niet detecteren, zelfs als de gebruiker zich in de doelgroep bevindt.
 
 - Bestaan apparaat/toegangsstatus in Exchange controleren:
-  - Gebruik deze PowerShell-cmdlet om een lijst van alle mobiele apparaten voor een postvak op te halen: 'Get-ActiveSyncDeviceStatistics-Postvak mbx'. Als het apparaat niet wordt weergegeven, heeft het geen toegang tot Exchange.
+  - Gebruik deze PowerShell-cmdlet om een lijst met alle mobiele apparaten voor een postvak op te halen: Get-ActiveSyncDeviceStatistics -mailbox mbx. Als het apparaat niet wordt weergegeven, heeft het geen toegang tot Exchange.
   
-  - Als het apparaat wordt weergegeven, gebruikt u de cmdlet 'Get-CASmailbox -identity:’upn’ | fl' voor gedetailleerde informatie over de toegangsstatus en om die informatie aan Microsoft Ondersteuning te verstrekken.
+  - Als het apparaat wordt weergegeven, gebruikt u de cmdlet 'Get-CASmailbox -identity:'upn' | fl' voor gedetailleerde informatie over de toegangsstatus en om die informatie aan Microsoft Ondersteuning te verstrekken.
 
 ## <a name="next-steps"></a>Volgende stappen
 Als deze informatie geen oplossing biedt, kunt u ook [ondersteuning voor Microsoft Intune krijgen](../fundamentals/get-support.md).

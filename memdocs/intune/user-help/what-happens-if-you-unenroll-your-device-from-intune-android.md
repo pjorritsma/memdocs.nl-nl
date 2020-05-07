@@ -19,16 +19,16 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 368972acc1b3380b1adf9b21939adbca0dc1434c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a8bbabee06e2aa94b6dc7c4d273c76f513005ddf
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79346856"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077016"
 ---
 # <a name="what-happens-if-you-unenroll-your-android-device-from-intune"></a>Wat gebeurt er als u de inschrijving van uw Android-apparaat bij Intune ongedaan maakt?
 
-Wanneer u de inschrijving van uw Android-apparaat bij Intune ongedaan maakt, gebeurt het volgende:
+Wanneer u de registratie van uw Android-apparaat bij Intune ongedaan maakt, gebeurt het volgende:
 
 - Het ondersteuningsteam van uw bedrijf beheert het apparaat niet meer.
 

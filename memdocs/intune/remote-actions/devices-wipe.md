@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2eae55477ef62c408ff886499f4668c81c799fc8
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: cbcd54a56304df36c536e5a623f4e9da5ba3f15b
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326290"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254687"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Apparaten verwijderen via wissen of buiten gebruik stellen, of de registratie van het apparaat handmatig ongedaan maken
 
@@ -94,7 +94,7 @@ In de volgende tabellen wordt beschreven welke gegevens worden verwijderd en wat
 |E-mail|E-mailprofielen die via Intune zijn ingericht, worden verwijderd. In de cache opgeslagen e-mail op het apparaat wordt verwijderd.|
 |Loskoppelen van Azure AD|Azure AD-record wordt verwijderd.|
 
-### <a name="android"></a>Android
+### <a name="android-device-administrator"></a>Android-apparaatbeheerder
 
 |Gegevenstype|Android|Android Samsung Knox Standard|
 |-------------|-----------|------------------------|
@@ -110,11 +110,11 @@ In de volgende tabellen wordt beschreven welke gegevens worden verwijderd en wat
 |E-mail|N.v.t. (e-mailprofielen worden niet ondersteund door Android-apparaten)|E-mailprofielen die via Intune zijn ingericht, worden verwijderd. In de cache opgeslagen e-mail op het apparaat wordt verwijderd.|
 |Loskoppelen van Azure AD|Azure AD-record wordt verwijderd.|Azure AD-record wordt verwijderd.|
 
-### <a name="android-work-profile"></a>Android-werkprofiel
+### <a name="android-enterprise-devices-with-a-work-profile"></a>Android Enterprise-apparaten met een werkprofiel
 
 Door Bedrijfsgegevens verwijderen uit te voeren op een apparaat met een Android-werkprofiel, verwijdert u alle gegevens, apps en instellingen in het werkprofiel op het apparaat. Het apparaat wordt buiten bedrijf gesteld voor beheer met Intune. Wissen wordt niet ondersteund voor Android-werkprofielen.
 
-### <a name="android-enterprise-kiosk-devices"></a>Kioskapparaten voor Android Enterprise
+### <a name="android-enterprise-dedicated-devices"></a>Toegewezen Android Enterprise-apparaten
 
 U kunt apparaten in de kioskmodus alleen wissen. U kunt Android-apparaten in de kioskmodus niet buiten gebruik stellen.
 
@@ -134,7 +134,7 @@ U kunt apparaten in de kioskmodus alleen wissen. U kunt Android-apparaten in de 
 
 |Gegevenstype|Windows 8.1 (MDM) en Windows RT 8.1|Windows RT|Windows Phone 8.1 en Windows Phone 8|Windows 10|
 |-------------|----------------------------------------------------------------|--------------|-----------------------------------------|--------|
-|Bedrijfs-apps en de bijbehorende gegevens die door Intune zijn geïnstalleerd|Sleutels worden ingetrokken voor bestanden die zijn beveiligd met EFS. De gebruiker kan de bestanden niet openen.|Bedrijfs-apps worden niet verwijderd.|Apps die oorspronkelijk zijn geïnstalleerd via de bedrijfsportal, worden verwijderd. Gegevens van bedrijfs-apps worden verwijderd.|Apps worden verwijderd. Sideloadsleutels worden verwijderd.<br>Voor Windows 10 versie 1703 (makersupdate) en hoger worden Office 365 ProPlus-apps niet verwijderd. Win32-apps waarvoor de Intune-beheerextensie is geïnstalleerd, worden niet verwijderd van apparaten die niet meer ingeschreven zijn. Beheerders kunnen gebruikmaken van uitsluiting van opdrachten, zodat Win32-apps niet worden aangeboden op BYOD-apparaten.|
+|Bedrijfs-apps en de bijbehorende gegevens die door Intune zijn geïnstalleerd|Sleutels worden ingetrokken voor bestanden die zijn beveiligd met EFS. De gebruiker kan de bestanden niet openen.|Bedrijfs-apps worden niet verwijderd.|Apps die oorspronkelijk zijn geïnstalleerd via de bedrijfsportal, worden verwijderd. Gegevens van bedrijfs-apps worden verwijderd.|Apps worden verwijderd. Sideloadsleutels worden verwijderd.<br>Voor Windows 10 versie 1709 (makersupdate) en hoger worden Microsoft 365-apps niet verwijderd. Win32-apps waarvoor de Intune-beheerextensie is geïnstalleerd, worden niet verwijderd van apparaten die niet meer ingeschreven zijn. Beheerders kunnen gebruikmaken van uitsluiting van opdrachten, zodat Win32-apps niet worden aangeboden op BYOD-apparaten.|
 |Instellingen|Configuraties die zijn ingesteld door Intune-beleid, worden niet meer afgedwongen. Gebruikers kunnen de instellingen wijzigen.|Configuraties die zijn ingesteld door Intune-beleid, worden niet meer afgedwongen. Gebruikers kunnen de instellingen wijzigen.|Configuraties die zijn ingesteld door Intune-beleid, worden niet meer afgedwongen. Gebruikers kunnen de instellingen wijzigen.|Configuraties die zijn ingesteld door Intune-beleid, worden niet meer afgedwongen. Gebruikers kunnen de instellingen wijzigen.|
 |Instellingen voor Wi-Fi en VPN-profiel|Verwijderd.|Verwijderd.|Niet ondersteund.|Verwijderd.|
 |Instellingen van certificaatprofiel|Certificaten worden verwijderd en ingetrokken.|Certificaten worden verwijderd en ingetrokken.|Niet ondersteund.|Certificaten worden verwijderd en ingetrokken.|

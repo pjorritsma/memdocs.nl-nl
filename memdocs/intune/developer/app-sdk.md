@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d47d91388fffd0e5716d20be640c4afbad2862e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4416e6bef4386358c964b0ed58aa568bb8c3a3a4
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79343034"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078155"
 ---
 # <a name="microsoft-intune-app-sdk-overview"></a>Overzicht van de Microsoft Intune App SDK
 Met de Intune App SDK voor iOS en Android kan uw app worden in geschakeld voor ondersteuning van [Intune-beleid voor app-beveiliging](../apps/app-protection-policy.md). Wanneer er app-beveiligingsbeleid op uw app is toegepast, kan deze worden beheerd door Intune en wordt deze door Intune herkend als een beheerde app. De SDK streeft ernaar om het aantal door de app-ontwikkelaar vereiste codewijzigingen zo klein mogelijk te maken. U ziet dat u de meeste van de SDK-functies kunt inschakelen zonder het gedrag van uw app te wijzigen. U kunt de API's van de SDK gebruiken voor het aanpassen van uw app-gedrag voor ondersteuning van functies waarvoor de deelname van uw app is vereist, voor een verbeterde ervaring voor eindgebruikers en IT-beheerders.

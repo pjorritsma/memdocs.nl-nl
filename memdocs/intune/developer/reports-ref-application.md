@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78fce6f5f518227500b3cf42f1d935c0dd88df8c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4ec35681b6e81eb28c114733cc7913dd90875bfd
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79359856"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023313"
 ---
 # <a name="reference-for-application-entities"></a>Naslag voor toepassingsentiteiten
 
@@ -42,7 +42,7 @@ De entiteit **AppRevision** biedt een overzicht van alle versies van apps.
 | Eigenschap  | Beschrijving | Voorbeeld |
 |---------|------------|--------|
 | appKey |De unieke id van de app. |123 |
-| applicationId |De unieke id van de app, vergelijkbaar met AppKey, maar dit is een natuurlijke sleutel |b66bc706-FFFF-7437-0340-032819502773 |
+| applicationId |De unieke id van de app, vergelijkbaar met AppKey, maar dit is een natuurlijke sleutel |b66bc706-ffff-7437-0340-032819502773 |
 | revision |De versie zoals vermeld door de beheerder tijdens het uploaden van het binaire bestand. |2 |
 | title |De titel van de app. |Excel |
 | publisher |De uitgever van de app. |Microsoft |
@@ -77,7 +77,7 @@ De entiteit **appType** vermeldt de installatiebron van een app.
 | 3 |iOS Store-app | Een iOS Store-app. |
 | 4 |iOS LOB-app | Een iOS Line-Of-Business-app. |
 | 5 |Beheerde iOS Store-app (MAM) | Een iOS Store-app die onder beheer staat. |
-| 6 |O365 Pro Plus Suite | De Office 365 Pro Plus Suite voor Windows 10. |
+| 6 |O365 Pro Plus Suite | De Microsoft 365-apps voor Windows 10. |
 | 7 |Web-app | Een web-app. |
 | 8 |Windows Phone 8.1 Store-app | Een Windows Phone 8.1 Store-app. |
 | 9 |Windows Store-app | Een Windows Store-app. |

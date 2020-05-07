@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48ca59c9eea6ba7dd489f5c958ef6976095f27c9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 40eaf6be1b5f6cdb0222fc5bd79e8e5a5b72a947
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79360623"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078206"
 ---
 # <a name="troubleshoot-wi-fi-device-configuration-profiles-in-microsoft-intune"></a>Problemen met Wi-Fi-apparaatconfiguratieprofielen oplossen in Microsoft Intune
 
@@ -215,7 +215,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
 
     ` Skipping Wifi profile <profile ID> because it is pending certificates.`
 
-    In het volgende voorbeeld van het logboek worden certificaten weergegeven die worden uitgesloten, omdat de criteria **Any Purpose** EKU (Extended Key Usage) zijn opgegeven. De certificaten die zijn toegewezen aan het apparaat, beschikken echter niet over deze EKU:
+    In het volgende voorbeeld van het logboek worden certificaten weergegeven die worden uitgesloten, omdat de criteria **Any Purpose** EKU (Extended Key Usage) zijn opgegeven. De certificaten die aan het apparaat zijn toegewezen, beschikken echter niet over deze EKU:
 
     ```log
     2018-11-27T21:10:37.6390000    VERB     com.microsoft.omadm.utils.CertUtils      14210    00948    Excluding cert with alias User<ID1> and requestId <requestID1> as it does not have any purpose EKU.

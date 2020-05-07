@@ -19,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1e1f1c04bed91de3ac193ea3b6a07bde4e8658ba
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d0e933d3ab40b6c07615f701c9d181d41e4fded5
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81638237"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077781"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-entrust-datacard"></a>iOS- of iPadOS-apparaat instellen met Intune-bedrijfsportal en Entrust Datacard
 
@@ -102,7 +102,7 @@ Afgeleide referenties zijn een implementatie van de NIST-richtlijnen (National I
 17. Tik op **Camera gebruiken** > **OK**.  
 
     ![Voorbeeldschermopname van een bedrijfsportalprompt, waarin wordt gevraagd om toegang tot de camera toe te staan.](./media/allow-cp-camera-access-intercede.png)  
-18. Scan de afbeelding van de QR-code die op uw voor smartcard geschikte apparaat wordt weergegeven.  
+18. Scan de afbeelding van de QR-code die op uw voor smartcard geschikte apparaat staat.  
 19. Voer het numerieke wachtwoord in dat wordt weergegeven onder de QR-code.  
 
     ![Voorbeeldschermopname van het bedrijfsportalscherm Wachtwoord vereist, veld Wachtwoord invoeren.](./media/enter-password-derived-credentials.png)   

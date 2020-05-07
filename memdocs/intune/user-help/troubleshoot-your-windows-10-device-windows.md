@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 7af5274065217331cf3c7fc2a493374f4c0e2227
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f0ad29e04e2f1d15c94e3ecdc4dbb3c891cd605e
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79335650"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077713"
 ---
 # <a name="troubleshoot-your-windows-10-device-enrollment"></a>Problemen met de registratie van uw Windows 10-apparaat oplossen
 Volg deze probleemoplossingsstappen als u uw apparaat hebt ingeschreven, maar u nog steeds geen toegang hebt tot e-mails en bestanden van uw werk of school.  
@@ -45,7 +45,7 @@ Volg deze probleemoplossingsstappen als u uw apparaat hebt ingeschreven, maar u 
 
 2. Voer een van de volgende handelingen uit:
 
-   - Als u een verbinding ziet die lijkt op die in de onderstaande afbeelding, tikt u erop. Controleer vervolgens of u de opties Beheren, Info en Verbinding verbreken ziet. Als deze opties worden weergegeven, bent u nu geregistreerde en verbonden.
+   - Als u een verbinding ziet die lijkt op die in de onderstaande afbeelding, tikt u erop. Controleer vervolgens of u de opties Beheren, Info en Verbinding verbreken ziet. Als deze opties worden weergegeven, bent u nu geregistreerd en verbonden.
 
      ![validate-successful-enrollment](./media/w10-enroll-rs1-validate-successful-enrollment.png)
 

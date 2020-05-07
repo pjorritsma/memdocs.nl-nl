@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: ee2d862f29866ecaaa758983f847d0a1a598e2f1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ee0cd575da83231723ea869d472da1be599ce477
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79346466"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079617"
 ---
 # <a name="install-zimperium-zips-on-your-android-device"></a>Zimperium zIPS op uw Android-apparaat installeren
 
@@ -52,7 +52,7 @@ Als u problemen met de installatie ondervindt, voert u de stappen voor probleemo
 
    * Als er geen beveiligingsrisico's worden gevonden, worden alle drie bedreigingstypen in het groen weergegeven.
 
-11. Op het scherm **Apparaatdetails** in de bedrijfsportal wordt vermeld dat u nu voldoet aan de beveiligingsvereisten van uw bedrijf.
+11. In het scherm **Apparaatdetails** op de bedrijfsportal ziet u dat u nu voldoet aan de beveiligingsvereisten van uw bedrijf.
 
     ![Uw apparaat voldoet nu aan het beleid](./media/mtd-device-now-compliant-android.png)
 

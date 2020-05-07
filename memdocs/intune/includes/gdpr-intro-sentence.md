@@ -1,6 +1,6 @@
 ---
-title: bestand opnemen
-description: bestand opnemen
+title: Include-bestand
+description: Include-bestand
 services: azure-policy
 author: eross-msft
 ms.service: azure-policy
@@ -9,12 +9,12 @@ ms.date: 04/24/2018
 ms.author: lizross
 ms.custom: include file
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b5e550f18908ae34c7df7e8ba9f03ce6a1b7d0a5
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 349ad64867426efda8bb33134edc09fcae7b16cf
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79339108"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82095883"
 ---
 >[!Note] 
-> Dit artikel bevat stappen voor als u persoonlijke gegevens van het apparaat of de service wilt verwijderen. Bovendien kunt u het gebruiken om uw verplichtingen met betrekking tot de AVG na te komen. Zie het [gedeelte AVG van de Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) als u op zoek bent naar algemene informatie over de AVG.
+> Dit artikel bevat stappen voor het verwijderen van persoonlijke gegevens op het apparaat of uit de service en kan worden gebruikt ter ondersteuning van uw verplichtingen onder de AVG. Zie de [AVG-sectie van Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) voor algemene informatie over de AVG.

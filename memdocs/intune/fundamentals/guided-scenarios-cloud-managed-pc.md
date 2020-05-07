@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8720eec22c8e7fd8a9c8c2303b50e71db0e834ad
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 1fcd77774cb19a70ee02cab9d2d1e6a44dd9745a
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79362586"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023194"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>Begeleid scenario: in de cloud beheerde moderne desktop
 
-De moderne desktop is het geavanceerde productiviteitsplatform voor de informatiemedewerker. Office 365 ProPlus en Windows 10 zijn de kernonderdelen van de moderne desktop, samen met de nieuwste beveiligingsbasislijnen voor Windows 10 en Microsoft Defender Advanced Threat Protection.
+De moderne desktop is het geavanceerde productiviteitsplatform voor de informatiemedewerker. Microsoft 365-apps en Windows 10 zijn de kernonderdelen van de moderne desktop, samen met de nieuwste beveiligingsbasislijnen voor Windows 10 en Microsoft Defender Advanced Threat Protection.
 
 Het beheer van de moderne desktop vanuit de cloud biedt internetbrede externe acties als extra voordeel. In cloudbeheer wordt gebruikgemaakt van het ingebouwde Windows Mobile Device Management-beleid en worden afhankelijkheden van het lokale Active Directory-groepsbeleid verwijderd.
 
@@ -46,7 +46,7 @@ Voor het geval u een in de cloud beheerde moderne desktop wilt evalueren in uw e
 
 ## <a name="step-1---introduction"></a>Stap 1: inleiding
 
-Met behulp van dit begeleide scenario stelt u een testgebruiker in, schrijft u een apparaat in bij Intune en implementeert u het apparaat met aanbevolen Intune-instellingen en met Windows 10 en Office ProPlus. Uw apparaat wordt ook geconfigureerd voor Microsoft Defender Advanced Threat Protection als u ervoor kiest om [deze beveiliging in te inschakelen in Intune](../protect/advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune). De gebruiker die u instelt en het apparaat dat u inschrijft worden toegevoegd aan een nieuwe beveiligingsgroep en geconfigureerd met de aanbevolen instellingen voor beveiliging en productiviteit.
+Met behulp van dit begeleide scenario stelt u een testgebruiker in, schrijft u een apparaat in bij Intune en implementeert u het apparaat met aanbevolen Intune-instellingen en met Windows 10 en Microsoft 365-apps. Uw apparaat wordt ook geconfigureerd voor Microsoft Defender Advanced Threat Protection als u ervoor kiest om [deze beveiliging in te inschakelen in Intune](../protect/advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune). De gebruiker die u instelt en het apparaat dat u inschrijft worden toegevoegd aan een nieuwe beveiligingsgroep en geconfigureerd met de aanbevolen instellingen voor beveiliging en productiviteit.
 
 ### <a name="what-you-will-need-to-continue"></a>Wat u nodig hebt om verder te gaan
 
@@ -121,7 +121,7 @@ In het begeleide scenario wordt de gebruiker ook toegewezen aan het geselecteerd
 
 Zodra de gebruiker het apparaat heeft toegevoegd aan Azure Active Directory worden de volgende configuraties toegepast op het apparaat:
 
-1. Office 365 ProPlus wordt automatisch geïnstalleerd op de in de cloud beheerde pc. Hierin bevinden zich vertrouwde toepassingen als Access, Excel, OneNote, Outlook, PowerPoint, Publisher, Skype voor Bedrijven en Word. U kunt deze toepassingen gebruiken om verbinding te maken met Office 365-services zoals SharePoint Online, Exchange Online en Skype voor Bedrijven Online. Office 365 ProPlus wordt regelmatig bijgewerkt met nieuwe functies, in tegenstelling tot niet-abonnementsversies van Office. Zie Nieuwe functies in Office 365 voor een lijst met nieuwe functies.
+1. Microsoft 365-apps worden automatisch geïnstalleerd op de in de cloud beheerde pc. Hierin bevinden zich vertrouwde toepassingen als Access, Excel, OneNote, Outlook, PowerPoint, Publisher, Skype voor Bedrijven en Word. U kunt deze toepassingen gebruiken om verbinding te maken met Office 365-services zoals SharePoint Online, Exchange Online en Skype voor Bedrijven Online. Microsoft 365-apps worden regelmatig bijgewerkt met nieuwe functies, in tegenstelling tot niet-abonnementsversies van Office. Zie Nieuwe functies in Office 365 voor een lijst met nieuwe functies.
 2. Er worden Windows-beveiligingsbasislijnen geïnstalleerd op de in de cloud beheerde pc. Als u Microsoft Defender Advanced Threat Protection hebt ingesteld, worden in het begeleide scenario ook basislijninstellingen voor Defender geconfigureerd. Defender Advanced Threat Protection biedt een nieuwe beveiligingslaag na schending in de Windows 10-beveiligingsstack. Met een combinatie van clienttechnologie die is ingebouwd in Windows 10 en een robuuste cloudservice helpt deze laag bij het detecteren van bedreigingen die door andere beveiligingsmethoden heen zijn gekomen. 
 
 ## <a name="next-steps"></a>Volgende stappen

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 23594bd1e728e20deba6d978fc2a1f678d692ff3
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b1987783be15bbde704e34bbd21ecd70dc048935
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79364471"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078257"
 ---
 # <a name="monitor-device-profiles-in-microsoft-intune"></a>Apparaatprofielen controleren in Microsoft Intune
 
@@ -104,7 +104,7 @@ Met uw DFCI-profielinstellingen ziet u mogelijk de volgende statussen:
   - UEFI staat DFCI niet toe om een functie uit te schakelen en de profielinstelling wordt **Uitgeschakeld**.
   - Op het apparaat ontbreekt de hardware om de functie uit te schakelen en de profielinstelling wordt **Uitgeschakeld**.
   - Op het apparaat is niet de nieuwste versie van de DFCI-firmware geïnstalleerd.
-  - DFCI wordt uitgeschakeld voordat het wordt ingeschreven bij Intune met behulp van een lokaal 'opt-out'-besturingselement in het UEFI-menu.
+  - DFCI was uitgeschakeld voordat het werd ingeschreven bij Intune met behulp van een lokaal 'opt-out'-besturingselement in het UEFI-menu.
   - Het apparaat was geregistreerd bij Intune buiten de Autopilot-inschrijving.
   - Het apparaat is niet geregistreerd voor Autopilot door een Microsoft-cryptografie provider of is rechtstreeks geregistreerd door de OEM.
 

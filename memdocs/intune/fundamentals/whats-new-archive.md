@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5657a26419280871e6739060509a72c4604fc3a7
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: c3adb6f1548c0b332aaa477014f07559ffc826c1
+ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82255010"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82842288"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Wat is er nieuw in Microsoft Intune - vorige maanden
 
@@ -4187,7 +4187,7 @@ In een Intune-apparaatbeperkingsprofiel kunt u nu de volgende [meldingsinstellin
 - Opgeven of meldingsgeluiden zijn toegestaan.
 
 ### <a name="configure-ios-apps-to-run-in-single-app-mode-autonomously---737837---"></a>iOS-apps configureren voor autonome uitvoering in één-app-modus<!-- 737837 -->
-U kunt nu een Intune-apparaatprofiel gebruiken om iOS-apparaten te configureren voor het uitvoeren van opgegeven apps in de [Autonome modus voor enkele toepassing](../configuration/device-restrictions-ios.md#autonomous-single-app-mode). Wanneer deze modus is geconfigureerd en de app wordt uitgevoerd, wordt het apparaat vergrendeld zodat alleen de betreffende app kan worden uitgevoerd. U kunt bijvoorbeeld een app configureren die de gebruikers een test laat uitvoeren op het apparaat. Wanneer de acties van de app zijn voltooid of u het beleid verwijdert, keert het apparaat terug naar de normale staat.
+U kunt nu een Intune-apparaatprofiel gebruiken om iOS-apparaten te configureren voor het uitvoeren van opgegeven apps in de [Autonome modus voor enkele toepassing](../configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam). Wanneer deze modus is geconfigureerd en de app wordt uitgevoerd, wordt het apparaat vergrendeld zodat alleen de betreffende app kan worden uitgevoerd. U kunt bijvoorbeeld een app configureren die de gebruikers een test laat uitvoeren op het apparaat. Wanneer de acties van de app zijn voltooid of u het beleid verwijdert, keert het apparaat terug naar de normale staat.
 
 ### <a name="configure-trusted-domains-for-email-and-web-browsing-on-ios-devices---723765---"></a>Vertrouwde domeinen configureren voor e-mail en browsen op het web op iOS-apparaten<!-- 723765 -->
 In een iOS-apparaatbeperkingsprofiel kunt u nu de volgende [domeininstellingen](../configuration/device-restrictions-ios.md#domains) configureren:

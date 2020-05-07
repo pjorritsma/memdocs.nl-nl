@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 61ca3d5ecc614cee70c1d8a834f29b9db7ad21d2
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 42e28238a1ffbad3faa162dd21d4639e742ec7e3
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326840"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075401"
 ---
 # <a name="add-groups-to-organize-users-and-devices"></a>Groepen toevoegen om gebruikers en apparaten in te delen
 
@@ -91,7 +91,7 @@ Volg de onderstaande stappen om een nieuwe groep te maken.
 
 ## <a name="groups-and-policies"></a>Groepen en beleidsregels
 
-Toegang tot de resources van uw organisatie wordt beheerd door gebruikers en groepen die u maakt.
+De toegang tot de resources van uw organisatie wordt beheerd door gebruikers en groepen die u maakt.
 
 Als u groepen maakt, kunt u overwegen om [nalevingsbeleid](../protect/device-compliance-get-started.md) en [configuratieprofielen](../configuration/device-profiles.md) te gebruiken. U kunt bijvoorbeeld het volgende hebben:
 

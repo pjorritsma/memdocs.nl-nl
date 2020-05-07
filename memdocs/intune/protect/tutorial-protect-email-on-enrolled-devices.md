@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 200bde56a4a1e77ce78678eddd35537c04dfa514
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 24bdaf71f90e3da84fb26c4b69d9b81f43413c69
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80325495"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079056"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>Zelfstudie: Exchange Online e-mail beschermen op beheerde apparaten
 
@@ -43,7 +43,7 @@ Voor deze zelfstudie hebt u een testtenant nodig met de volgende abonnementen:
 
 - Azure Active Directory Premium ([ gratis proefversie](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
 
-- Office 365 Business-abonnement inclusief Exchange ([ gratis proefversie](https://go.microsoft.com/fwlink/p/?LinkID=510938))
+- Een abonnement op Microsoft Office 365-apps voor bedrijven-abonnement inclusief Exchange ([gratis proefversie](https://go.microsoft.com/fwlink/p/?LinkID=510938))
 
 Voordat u begint, maakt u een test-apparaatprofiel voor iOS-apparaten aan door de stappen in de [Snelstartgids: Een e-mailprofiel voor een apparaat maken voor iOS/iPadOS](../configuration/quickstart-email-profile.md).
 

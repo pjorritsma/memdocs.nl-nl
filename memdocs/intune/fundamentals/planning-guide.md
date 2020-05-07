@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6327de8fd4543f60d66eedc3ac6b86b8275f2ca2
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 65d4745580a4b0d733ffe14be03f0f9893074586
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357217"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080093"
 ---
 # <a name="intune-deployment-planning-design-and-implementation-guide"></a>Handleiding voor het plannen, ontwerpen en toepassen van een Intune-implementatie
 
@@ -39,9 +39,9 @@ Deze handleiding bevat secties waarin u stapsgewijs van begin tot eind door het 
 
 - [Sectie 3: Use-casescenariovereisten bepalen](planning-guide-requirements.md)
 
-- [Sectie 4: Een rollout-plan ontwikkelen](planning-guide-rollout-plan.md)
+- [Sectie 4: Een implementatieplan ontwikkelen](planning-guide-rollout-plan.md)
 
-- [Sectie 5: Een rollout-communicatieplan ontwikkelen](planning-guide-communication-plan.md)
+- [Sectie 5: Een communicatieplan voor de implementatie ontwikkelen](planning-guide-communication-plan.md)
 
 - [Sectie 6: Een ondersteuningsplan ontwikkelen](planning-guide-support-plan.md)
 
@@ -53,7 +53,7 @@ Deze handleiding bevat secties waarin u stapsgewijs van begin tot eind door het 
 
 Deze handleiding bevat ook aanvullende technische informatie en tabelsjablonen die kunnen worden gebruikt om u te helpen met het plannen, ontwerpen en implementeren van Intune.
 
-- [Aanvullende bronnen: koppelingen en tabelsjablonen](planning-guide-resources.md)
+- [Aanvullende resources: Koppelingen en tabelsjablonen](planning-guide-resources.md)
 
 ## <a name="assumptions"></a>Aannames
 
@@ -63,4 +63,4 @@ Deze handleiding bevat ook aanvullende technische informatie en tabelsjablonen d
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Laten we beginnen met de eerste sectie: [Doelen, doelstellingen en uitdagingen voor de implementatie bepalen](planning-guide-deployment-goals.md).
+Aan de slag met de eerste sectie: [Doelen, doelstellingen en uitdagingen voor de implementatie bepalen](planning-guide-deployment-goals.md).

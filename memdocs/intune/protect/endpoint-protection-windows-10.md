@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/13/2020
+ms.date: 04/23/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aaec456a5ff9864fedf5e95f317bc484ddfc4d82
-ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
+ms.openlocfilehash: fedca34aaf390dfec655e3166f3a153af93a7ce0
+ms.sourcegitcommit: 7b3eed763b394075766ea080968889a8538bfe56
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80275064"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506587"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Instellingen voor Windows 10 (en hoger) om apparaten te beveiligen met Intune
 
@@ -748,17 +748,6 @@ Deze instellingen zijn specifiek van toepassing op vaste gegevensstations.
     - **Back-up maken van herstelwachtwoorden en sleutelpakketten**  
     - **Alleen een back-up maken van herstelwachtwoorden**  
 
-  - **Clientgestuurde rotatie van herstelwachtwoorden**  
-    **Standaardinstelling**: Sleutelrotatie is ingeschakeld voor apparaten die zijn toegevoegd aan Azure AD  
-    BitLocker-CSP: [ConfigureRecoveryPasswordRotation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)  
-    
-    Met deze instelling wordt een clientgestuurde rotatie van het herstelwachtwoord gestart na herstel van het besturingssysteemstation (met bootmgr of WinRE).  
-
-    - Niet geconfigureerd  
-    - Sleutelrotatie is uitgeschakeld  
-    - Sleutelrotatie is ingeschakeld voor apparaten die zijn toegevoegd aan Azure AD  
-    - Sleutelrotatie is ingeschakeld voor apparaten die zijn toegevoegd aan Azure AD en hybride Azure AD  
-
   - **Herstelgegevens opslaan in Azure Active Directory voordat BitLocker wordt ingeschakeld**  
     **Standaardinstelling**: Niet geconfigureerd  
  
@@ -942,6 +931,9 @@ Blokkeer de volgende acties om e-mailbedreigingen te voorkomen:
 > **Voor X86-clientcomputers**:  
 > *C:\Program Files\Microsoft Intune Management Extension\Content*  
 > *C:\windows\IMECache*  
+>
+> Zie [Virusscanaanbevelingen voor Enterprise-computers waarop momenteel ondersteunde versies van Windows worden uitgevoerd](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers) voor meer informatie.
+
 
 ### <a name="controlled-folder-access"></a>Gecontroleerde mappentoegang  
 
@@ -1264,9 +1256,8 @@ Gebruik deze opties voor het configureren van de lokale beveiligingsinstellingen
   **Standaardinstelling**: Niet geconfigureerd  
   LocalPoliciesSecurityOptions-CSP: [Devices_AllowUndockWithoutHavingToLogon](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-devices-allowundockwithouthavingtologon)  
 
-  
-  - **Blokkeren**: gebruikers kunnen op de fysieke knop voor het uitwerpen van een gedokt draagbaar apparaat drukken om het apparaat veilig te ontkoppelen.  
-  - **Niet geconfigureerd**: een gebruiker moet zich aanmelden bij het apparaat en toestemming krijgen om het apparaat los te koppelen.  
+  - **Blokkeren**: een gebruiker moet zich aanmelden bij het apparaat en toestemming krijgen om het apparaat los te koppelen.
+  - **Niet geconfigureerd**: gebruikers kunnen op de fysieke knop voor het uitwerpen van een gedokt draagbaar apparaat drukken om het apparaat veilig te ontkoppelen.
 
 - **Stuurprogramma's voor gedeelde printers installeren**  
   **Standaardinstelling**:  Niet geconfigureerd  
@@ -1309,8 +1300,8 @@ Gebruik deze opties voor het configureren van de lokale beveiligingsinstellingen
   LocalPoliciesSecurityOptions-CSP: [InteractiveLogon_DoNotRequireCTRLALTDEL](https://go.microsoft.com/fwlink/?linkid=867951)  
 
 
-  - **Inschakelen**: gebruikers hoeven niet op CTRL+ALT+DEL te drukken om zich aan te melden.  
-  - **Niet geconfigureerd**: vereisen dat gebruikers op CTRL+ALT+DEL drukken om zich aan te melden bij Windows.  
+  - **Inschakelen**: vereisen dat gebruikers op CTRL+ALT+DEL drukken om zich aan te melden bij Windows.
+  - **Niet geconfigureerd**: gebruikers hoeven niet op CTRL+ALT+DEL te drukken om zich aan te melden.
 
 - **Gedrag bij verwijderen van smartcard**  
   **Standaardinstelling**: Werkstation vergrendelen   

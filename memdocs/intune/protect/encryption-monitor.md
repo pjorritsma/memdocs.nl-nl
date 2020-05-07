@@ -17,12 +17,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 81864c207cec560ca8b42041f9248560ebcf3b04
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 0b634dad49b11e39e9a046688f0b5fd9ddc53ab4
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80322443"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254993"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Apparaatversleuteling bewaken met Intune
 
@@ -56,7 +56,7 @@ In het deelvenster Versleutelingsrapport ziet u een lijst met de apparaten die u
     - macOS-versie 10.13 of hoger
 
     **Voor Windows 10-apparaten**:
-    - versie 1703 of hoger van *Business*, *Enterprise* of *Education*, of versie 1809 van *Pro*
+    - Versie 1709 of hoger van *Business*, *Enterprise* of *Education*, of versie 1809 van *Pro*
     - Het apparaat moet beschikken over een TPM-chip
 
     Zie de [BitLocker CSP (configuratieserviceprovider)](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) in de Windows-documentatie voor meer informatie.
@@ -120,9 +120,9 @@ Wanneer u een apparaat selecteert in het versleutelingsrapport, wordt in Intune 
 
     *Overweeg het volgende: Intune kan FileVault niet instellen op een apparaat dat al is versleuteld. In een dergelijk geval moet de gebruiker het apparaat handmatig ontsleutelen; daarna kan het pas worden beheerd met een apparaatconfiguratiebeleid en Intune*.
 
-  - FileVault vereist dat de gebruiker het beheer goedkeurt als er gebruik wordt gemaakt van macOS Catalina of hoger.
+  - Voor FileVault is vereist dat de gebruiker het beheer goedkeurt als er gebruik wordt gemaakt van macOS Catalina of hoger.
 
-    *Overweeg het volgende: vanaf macOS-versie 10.15 (Catalina) kan het gebruik van door de gebruiker goedgekeurde inschrijvingsinstellingen ertoe leiden dat gebruikers de FileVault-versleuteling handmatig moeten goedkeuren. Zie [Door gebruiker goedgekeurde registratie](../enrollment/macos-enroll.md) in de Intune-documentatie voor meer informatie*.
+    *Overweeg het volgende: Vanaf macOS-versie 10.15 (Catalina) kan het gebruik van door de gebruiker goedgekeurde inschrijvingsinstellingen ertoe leiden dat gebruikers de FileVault-versleuteling handmatig moeten goedkeuren. Zie [Door gebruiker goedgekeurde registratie](../enrollment/macos-enroll.md) in de Intune-documentatie voor meer informatie*.
 
   - Onbekend.
 
@@ -229,7 +229,7 @@ Intune biedt toegang tot de Microsoft Azure Active Directory-blade voor BitLocke
 
    Als er geen sleutels aanwezig zijn in Azure AD, wordt *Er is geen BitLocker-sleutel gevonden voor dit apparaat* weergegeven.
 
-De informatie voor BitLocker wordt verkregen met behulp van de [BitLocker-configuratieserviceprovider](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (CSP). BitLocker CSP wordt ondersteund op Windows 10-versie 1703 en hoger en voor Windows 10 Pro-versie 1809 en hoger.
+De informatie voor BitLocker wordt verkregen met behulp van de [BitLocker-configuratieserviceprovider](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (CSP). BitLocker CSP wordt ondersteund op Windows 10 versie 1709 en hoger en voor Windows 10 Pro-versie 1809 en hoger.
 
 ## <a name="next-steps"></a>Volgende stappen
 

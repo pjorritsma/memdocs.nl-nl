@@ -19,12 +19,12 @@ ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1f6af588b6350bb7a0d2058f8f623c51bbdaa4c4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4c31f8ee0389da35fe515928cbb286dd2632809f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79337509"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077730"
 ---
 # <a name="enroll-your-organization-provided-ios-device-in-management"></a>Het door uw organisatie verstrekte iOS-apparaat in beheer inschrijven
 
@@ -45,7 +45,7 @@ Als u uw eigen iOS-apparaat gebruikt, in plaats van een door het bedrijf gelever
 1. Schakel uw iOS-apparaat in.
 2. Nadat u uw **Taal** hebt geselecteerd, verbindt u uw apparaat met wifi.
 3. Kies op het scherm **iOS-apparaat instellen** de optie **Instellen als nieuw apparaat**.  
-4. Zodra u een wifi-verbinding hebt, wordt het scherm **Configuratie** weergegeven. Dit geeft aan dat **[uw bedrijf] automatisch uw apparaat configureert.**
+4. Zodra u een Wi-Fi-verbinding hebt, wordt het scherm **Configuratie** weergegeven. Dit geeft aan dat **[uw bedrijf] automatisch uw apparaat configureert.**
 
    **Configuratie maakt het mogelijk voor [uw bedrijf] om dit apparaat draadloos te beheren. Een beheerder kan u helpen bij het instellen van e-mail- en netwerkaccounts, het installeren en configureren van apps, en het op afstand beheren van instellingen. Een beheerder kan functies uitschakelen, apps installeren en verwijderen, uw internetverkeer bewaken en beperken en dit apparaat op afstand wissen.**
 

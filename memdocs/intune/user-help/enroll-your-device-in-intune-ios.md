@@ -19,12 +19,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: aeb2e22348e7197f0abb62ee540c37079f8645f4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 49e598f370669ed55688af6e6a570a932b5bf9d3
+ms.sourcegitcommit: 3ff33493c3f93bf06fdc942d30958a2a4ad03529
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084685"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82137963"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>Toegang tot uw bedrijfsbronnen instellen voor uw iOS-apparaat  
 
@@ -170,13 +170,13 @@ Als u uw inschrijving langer dan een paar minuten onderbreekt, kan de app worden
 
 8. Voer het wachtwoord voor uw beheerde Apple-id in op het scherm **Aanmelden**. In de meeste gevallen zijn deze referenties dezelfde die u ook gebruikt om u aan te melden bij uw werk- of schoolaccount, tenzij uw organisatie u een andere set referenties heeft gegeven. 
 9. Tik op **Aanmelden**.  
-10. Er wordt een succesbericht weergegeven op het scherm kort nadat het profiel is geïnstalleerd. U kunt controleren of het profiel is geïnstalleerd door naar de instellingen  **Profielen en apparaatbeheer**  te gaan. Het profiel moet worden weergegeven onder  **Mobile Device Management**.  
+10. Er wordt een succesbericht weergegeven op het scherm kort nadat het profiel is geïnstalleerd. U kunt controleren of het profiel is geïnstalleerd door naar de instellingen **Profielen en apparaatbeheer** te gaan. Het profiel moet worden weergegeven onder **Mobile Device Management**.  
 
     ![Voorbeeldschermopname van de app Instellingen, de instellingen Profielen en Apparaatbeheer met het beheerprofiel.](./media/ios-12-cp-enroll-1904.PNG)  
 
 11. Ga terug naar de bedrijfsportal-app. In de bedrijfsportal-app gaat de synchronisatie en setup van uw apparaat van start. In Bedrijfsportal kunt u mogelijk worden gevraagd aanvullende apparaatinstellingen bij te werken. Als dit het geval is, tikt u op **Doorgaan**.    
 
-12. U weet dat de installatie is voltooid wanneer alle items in de lijst met een groen vinkje worden weergegeven. Tik op  **Gereed**.  
+12. U weet dat de installatie is voltooid wanneer alle items in de lijst met een groen vinkje worden weergegeven. Tik op **Gereed**.  
 
 ## <a name="it-administrator-support"></a>Ondersteuning IT-beheerder  
 Als u een IT-beheerder bent en in de problemen raakt tijdens het inschrijven van apparaten, kunt u [Troubleshooting iOS device enrollment problems in Microsoft Intune (Problemen oplossen met de inschrijving van iOS-apparaten in Microsoft Intune)](https://support.microsoft.com/en-us/help/4039809) raadplegen. Dit artikel bevat algemene fouten, de oorzaken en de stappen om deze op te lossen.  

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 04/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 671f80efb54f51cac410b37de6227e456d9316d9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 36b39d20e666015ae040a1fa058dca1d167686e4
+ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323134"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739900"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Toegang tot Exchange On-Premises voor Intune configureren
 
@@ -35,7 +35,7 @@ Als u een Exchange Online Dedicated-omgeving hebt en wilt weten of deze de nieuw
 
 Controleer of aan de volgende voorwaarden is voldaan voordat u voorwaardelijke toegang configureert:
 
-- Uw versie van Exchange is **Exchange 2010 SP1 of hoger**. De CAS-matrix (Client Access Server) voor Exchange-servers wordt ondersteund.
+- Uw versie van Exchange is **Exchange 2010 SP3 of hoger**. De CAS-matrix (Client Access Server) voor Exchange-servers wordt ondersteund.
 
 - U hebt de [on-premises Exchange-connector Exchange ActiveSync](exchange-connector-install.md), die Intune verbindt met Exchange On-Premises, geïnstalleerd en in gebruik.
 

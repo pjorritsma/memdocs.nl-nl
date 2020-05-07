@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/20/2020
+ms.date: 04/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 098ccdef50c9f006884f9b6ae6acc635da100cb2
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d9a3e2c2a2c50f2d0fde264eedc2096d34f815a9
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81725683"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023177"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Geïmporteerde PKCS-certificaten configureren en gebruiken met Intune
 
@@ -210,6 +210,9 @@ Voor meer informatie over andere beschikbare opdrachten, raadpleegt u het leesmi
 ## <a name="create-a-pkcs-imported-certificate-profile"></a>Een geïmporteerd PKCS-certificaatprofiel maken
 
 Na het importeren van de certificaten naar Intune maakt u een **geïmporteerd PKCS-certificaatprofiel** en wijst u dit toe aan Azure Active Directory-groepen.
+
+> [!NOTE]
+> Nadat u een geïmporteerd PKCS-certificaatprofiel hebt gemaakt, zijn de waarden voor het **beoogde doel** en voor de **KSP** (Key Storage Provider) in het profiel alleen-lezen, en kunnen niet worden bewerkt. Als u een andere waarde voor een van deze instellingen nodig hebt, moet u een nieuw profiel maken en implementeren. 
 
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
 

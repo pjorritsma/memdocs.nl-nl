@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/07/2020
+ms.date: 05/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26bd9a92343c1ddcc31c1ff65b43643f3d9e22c9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d419eb341d3d15a8307396d1bcf13235201606f4
+ms.sourcegitcommit: 56bb5419c41c2e150ffed0564350123135ea4592
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79353356"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82729246"
 ---
 # <a name="android-enterprise-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Android Enterprise-instellingen om te markeren of apparaten wel of niet conform zijn met behulp van Intune
 
@@ -41,11 +41,24 @@ Gebruik deze nalevingsinstellingen als Intune-beheerder om de resources van uw o
 
 [Een nalevingsbeleid maken](create-compliance-policy.md#create-the-policy). Selecteer voor **Platform** de optie **Android Enterprise**.
 
+
 ## <a name="device-owner"></a>Eigenaar van het apparaat
+
+### <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
+
+- **Vereisen dat het apparaat de risicoscore voor computers niet overschrijdt**  
+
+  Selecteer de maximale toegestane risicoscore voor apparaten die door Microsoft Defender ATP worden geëvalueerd. Apparaten die deze score overschrijden, worden gemarkeerd als niet-compatibel.
+  - **Niet geconfigureerd** (*standaard*)
+  - **Veilig**
+  - **Laag**
+  - **Gemiddeld**
+  - **Hoog**
 
 ### <a name="device-health"></a>Apparaatstatus
 
-- **Vereisen dat het apparaat zich op of onder het apparaatdreigingsniveau bevindt**: Selecteer welk bedreigingsniveau voor apparaten maximaal is toegestaan dat door uw [Mobile Threat Defense-service](mobile-threat-defense.md) wordt geëvalueerd. Apparaten die dit dreigingsniveau overschrijden, worden gemarkeerd als niet-conform. Als u deze instelling wilt gebruiken, kiest u het toegestane bedreigingsniveau:
+- **Vereisen dat het apparaat zich op of onder het apparaatdreigingsniveau bevindt**  
+  Selecteer welk bedreigingsniveau voor apparaten maximaal is toegestaan dat door uw [Mobile Threat Defense-service](mobile-threat-defense.md) wordt geëvalueerd. Apparaten die dit dreigingsniveau overschrijden, worden gemarkeerd als niet-conform. Als u deze instelling wilt gebruiken, kiest u het toegestane bedreigingsniveau:
 
   - **Niet geconfigureerd** (*standaard*) - Deze instelling wordt niet beoordeeld op naleving of niet-naleving.
   - **Beveiligd** - Deze optie is het veiligst en betekent dat het apparaat geen bedreigingen kan hebben. Als een van de bedreigingsniveaus voor het apparaat wordt gedetecteerd, wordt het apparaat geëvalueerd als niet-compatibel.
@@ -53,12 +66,13 @@ Gebruik deze nalevingsinstellingen als Intune-beheerder om de resources van uw o
   - **Gemiddeld** - Het apparaat wordt als compatibel beoordeeld als de bedreigingen op het apparaat van laag of gemiddeld niveau zijn. Als bedreigingen met hoog niveau worden aangetroffen op het apparaat, wordt het apparaat als niet-compatibel beoordeeld.
   - **Hoog** - Deze optie is het minst veilig, omdat alle bedreigingsniveaus zijn toegestaan. Deze optie kan handig zijn als u deze alleen gebruikt voor rapportagedoeleinden.
   
-> [!NOTE] 
+> [!NOTE]
 > Alle Mobile Threat Defense-providers (MTD) worden ondersteund op implementaties van Android Enterprise-apparaateigenaren door middel van app-configuratie. Neem contact op met uw MTD-provider voor de exacte configuratie die nodig is voor de ondersteuning van platformen voor Android Enterprise-apparaten op Intune.
 
 #### <a name="google-play-protect"></a>Google Play Protect
 
-- **SafetyNet-attestation voor apparaat**: hiermee kunt u instellen aan welk integriteitsniveau voor [SafetyNet-attestation](https://developer.android.com/training/safetynet/attestation.html) het apparaat moet voldoen. Uw opties zijn:
+- **SafetyNet-attestation voor apparaat**  
+  hiermee kunt u instellen aan welk integriteitsniveau voor [SafetyNet-attestation](https://developer.android.com/training/safetynet/attestation.html) het apparaat moet voldoen. Uw opties zijn:
   - **Niet geconfigureerd** (*standaard*) - Instelling wordt niet beoordeeld op naleving of niet-naleving.
   - **Basisintegriteit controleren**
   - **Basisintegriteit en gecertificeerde apparaten controleren**
@@ -67,94 +81,119 @@ Gebruik deze nalevingsinstellingen als Intune-beheerder om de resources van uw o
 
 #### <a name="operating-system-version"></a>Versie van besturingssysteem
 
-- **Minimale versie van het besturingssysteem**: Als een apparaat niet voldoet aan de minimumvereisten met betrekking tot de versie van het besturingssysteem, wordt dit apparaat gerapporteerd als niet-conform. Er wordt een koppeling met informatie over het uitvoeren van een upgrade weergegeven. Eindgebruikers kunnen hun apparaat upgraden, waarna ze toegang tot resources van de organisatie krijgen.
+- **Minimale versie van het besturingssysteem**  
+  Als een apparaat niet voldoet aan de minimumvereisten met betrekking tot de versie van het besturingssysteem, wordt dit apparaat gerapporteerd als niet-conform. Er wordt een koppeling met informatie over het uitvoeren van een upgrade weergegeven. Eindgebruikers kunnen hun apparaat upgraden, waarna ze toegang tot resources van de organisatie krijgen.
 
   *Standaard is er geen versie geconfigureerd*.
 
-- **Maximale versie van het besturingssysteem**: Wanneer een apparaat een versie van het besturingssysteem gebruikt die hoger is dan de versie in de regel, wordt de toegang tot organisatieresources geblokkeerd. De gebruiker wordt gevraagd contact op te nemen met de IT-beheerder. Op dit apparaat kan geen toegang worden verkregen tot organisatieresources totdat de regel wordt aangepast om de versie van het besturingssysteem toe te staan.
+- **Maximale versie van het besturingssysteem**  
+  Wanneer een apparaat een versie van het besturingssysteem gebruikt die hoger is dan de versie in de regel, wordt de toegang tot organisatieresources geblokkeerd. De gebruiker wordt gevraagd contact op te nemen met de IT-beheerder. Op dit apparaat kan geen toegang worden verkregen tot organisatieresources totdat de regel wordt aangepast om de versie van het besturingssysteem toe te staan.
 
   *Standaard is er geen versie geconfigureerd*.
 
-- **Minimaal beveiligingspatchniveau**:  selecteer het oudste beveiligingspatchniveau dat een apparaat mag hebben. Apparaten die niet ten minste dit patchniveau hebben, zijn niet-conform. De datum moet worden opgegeven in de indeling JJJJ-MM-DD.
+- **Minimaal beveiligingspatchniveau**  
+  selecteer het oudste beveiligingspatchniveau dat een apparaat mag hebben. Apparaten die niet ten minste dit patchniveau hebben, zijn niet-conform. De datum moet worden opgegeven in de indeling JJJJ-MM-DD.
 
   *Standaard is er geen datum geconfigureerd*.
 
-
 ### <a name="system-security"></a>Systeembeveiliging
 
-- **Wachtwoord vereist voor het ontgrendelen van mobiele apparaten**: 
+- **Wachtwoord vereisen voor het ontgrendelen van mobiele apparaten**  
   - **Niet geconfigureerd** (*standaard*) - Deze instelling wordt niet beoordeeld op naleving of niet-naleving.
   - **Vereisen** - Gebruikers moeten een wachtwoord invoeren voordat ze toegang kunnen krijgen tot hun apparaat.
-  - **Vereist wachtwoordtype**: kies of een wachtwoord alleen numerieke tekens mag bevatten of ook een combinatie van cijfers en andere tekens. Uw opties zijn:
-    - **Standaardwaarde apparaat**: als u de naleving van wachtwoorden wilt evalueren, selecteert u een andere wachtwoordsterkte dan **Standaardwaarde apparaat**.  
-    - **Wachtwoord vereist, geen beperkingen**
-    - **Zwakke biometrie** - [Sterke versus zwakke biometrie](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (hiermee wordt een Android-website geopend)
-    - **Numeriek** (*standaard*): Het wachtwoord mag alleen uit getallen bestaan, bijvoorbeeld `123456789`. Voer de **Minimale wachtwoordlengte** die een gebruiker moet invoeren in, tussen 4 en 16 tekens.
-    - **Numeriek complex** - Herhaalde of opeenvolgende cijfers, zoals '1111' of '1234', zijn niet toegestaan. Voer de **Minimale wachtwoordlengte** die een gebruiker moet invoeren in, tussen 4 en 16 tekens.
-    - **Alfabetisch** - Letters uit het alfabet zijn vereist. Er zijn geen cijfers en symbolen vereist. Voer de **Minimale wachtwoordlengte** die een gebruiker moet invoeren in, tussen 4 en 16 tekens.
-    - **Alfanumeriek** - Dit zijn hoofdletters, kleine letters en numerieke tekens. Voer de **Minimale wachtwoordlengte** die een gebruiker moet invoeren in, tussen 4 en 16 tekens.
-    - **Alfanumeriek met symbolen** - Dit zijn hoofdletters, kleine letters, numerieke tekens, leestekens en symbolen. Voer ook in:
-    
-    Afhankelijk van het *wachtwoordtype* dat u selecteert, zijn de volgende instellingen beschikbaar:  
-    - **Minimale wachtwoordlengte**: Voer de minimale lengte van het wachtwoord in, tussen 4 en 16 tekens.  
 
-    - **Het vereiste aantal tekens**: Voer het aantal tekens in dat het wachtwoord moet bevatten, tussen 0 en 16 tekens.
+- **Vereist wachtwoordtype**  
+  kies of een wachtwoord alleen numerieke tekens mag bevatten of ook een combinatie van cijfers en andere tekens. Uw opties zijn:
+  - **Standaardwaarde apparaat**: als u de naleving van wachtwoorden wilt evalueren, selecteert u een andere wachtwoordsterkte dan *Standaardwaarde apparaat*.
+  - **Wachtwoord vereist, geen beperkingen**
+  - **Zwakke biometrie** - [Sterke versus zwakke biometrie](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (hiermee wordt een Android-website geopend)
+  - **Numeriek** (*standaard*): Het wachtwoord mag alleen uit getallen bestaan, bijvoorbeeld `123456789`. Voer de **Minimale wachtwoordlengte** die een gebruiker moet invoeren in, tussen 4 en 16 tekens.
+  - **Numeriek complex** - Herhaalde of opeenvolgende cijfers, zoals '1111' of '1234', zijn niet toegestaan. Voer de **Minimale wachtwoordlengte** die een gebruiker moet invoeren in, tussen 4 en 16 tekens.
+  - **Alfabetisch** - Letters uit het alfabet zijn vereist. Er zijn geen cijfers en symbolen vereist. Voer de **Minimale wachtwoordlengte** die een gebruiker moet invoeren in, tussen 4 en 16 tekens.
+  - **Alfanumeriek** - Dit zijn hoofdletters, kleine letters en numerieke tekens. Voer de **Minimale wachtwoordlengte** die een gebruiker moet invoeren in, tussen 4 en 16 tekens.
+  - **Alfanumeriek met symbolen** - Dit zijn hoofdletters, kleine letters, numerieke tekens, leestekens en symbolen.
 
-    - **Het vereiste aantal kleine letters**: Voer het aantal kleine letters in dat het wachtwoord moet bevatten, tussen 0 en 16 tekens.
+  Afhankelijk van het *wachtwoordtype* dat u selecteert, zijn de volgende instellingen beschikbaar:
+  - **Minimale wachtwoordlengte**  
+    Voer de minimale lengte van het wachtwoord in, tussen 4 en 16 tekens.  
 
-    - **Het vereiste aantal hoofdletters**: Voer het aantal hoofdletters in dat het wachtwoord moet bevatten, tussen 0 en 16 tekens.
+  - **Het vereiste aantal tekens**  
+    Voer het aantal tekens in dat het wachtwoord moet bevatten, tussen 0 en 16 tekens.
 
-    - **Het vereiste aantal andere tekens dan letters**: Voer het aantal andere tekens dan alfabetische letters in dat het wachtwoord moet bevatten, tussen 0 en 16 tekens.
+  - **Het vereiste aantal kleine letters**  
+    Voer het aantal kleine letters in dat het wachtwoord moet bevatten, tussen 0 en 16 tekens.
 
-    - **Het vereiste aantal numerieke tekens**: Voer het aantal numerieke tekens (`1`, `2`, `3` enzovoort) in dat het wachtwoord moet bevatten, tussen 0 en 16 tekens.
-    
-    - **Het vereiste aantal symbolen**: Voer het aantal symbolen (`&`, `#`, `%` enzovoort) in dat het wachtwoord moet bevatten, tussen 0 en 16 tekens.
- 
-- **Maximum aantal minuten inactief voordat wachtwoord is vereist**: Voer in na hoeveel niet-actieve tijd gebruikers hun wachtwoord opnieuw moeten invoeren. De opties zijn de standaardwaarde *Niet geconfigureerd* en van *1 minuut* tot *8 uur*.
+  - **Het vereiste aantal hoofdletters**  
+    Voer het aantal hoofdletters in dat het wachtwoord moet bevatten, tussen 0 en 16 tekens.
 
-- **Het aantal dagen totdat het wachtwoord verloopt**: Voer het aantal dagen in voordat het wachtwoord voor het apparaat moet worden gewijzigd, tussen 1 en 365. Als u bijvoorbeeld wilt dat het wachtwoord na zestig dagen moet worden gewijzigd, voert u `60` in. Wanneer het wachtwoord is verlopen, wordt gebruikers gevraagd een nieuw wachtwoord te maken.
+  - **Het vereiste aantal andere tekens dan letters**  
+    Voer het aantal andere tekens dan alfabetische letters in dat het wachtwoord moet bevatten, tussen 0 en 16 tekens.
 
-   *Standaard is er geen waarde geconfigureerd*.
+  - **Het vereiste aantal numerieke tekens**  
+    Voer het aantal numerieke tekens (`1`, `2`, `3` enzovoort) in dat het wachtwoord moet bevatten, tussen 0 en 16 tekens.
 
-- **Het vereiste aantal wachtwoorden voordat de gebruiker een wachtwoord opnieuw kan gebruiken**: Voer het aantal recente wachtwoorden in dat niet opnieuw mag worden gebruikt, tussen 1 en 24. Gebruik deze instelling om te voorkomen dat de gebruiker eerder gebruikte wachtwoorden hergebruikt.  
+  - **Het vereiste aantal symbolen**  
+    Voer het aantal symbolen (`&`, `#`, `%` enzovoort) in dat het wachtwoord moet bevatten, tussen 0 en 16 tekens.
+
+  - **Maximumaantal minuten inactief voordat wachtwoord is vereist**  
+    Voer in na hoeveel niet-actieve tijd gebruikers hun wachtwoord opnieuw moeten invoeren. De opties zijn de standaardwaarde *Niet geconfigureerd* en van *1 minuut* tot *8 uur*.
+
+  - **Het aantal dagen totdat het wachtwoord verloopt**  
+    Voer het aantal dagen in voordat het wachtwoord voor het apparaat moet worden gewijzigd, tussen 1 en 365. Als u bijvoorbeeld wilt dat het wachtwoord na zestig dagen moet worden gewijzigd, voert u `60` in. Wanneer het wachtwoord is verlopen, wordt gebruikers gevraagd een nieuw wachtwoord te maken.
+
+    *Standaard is er geen waarde geconfigureerd*.
+
+  - **Het vereiste aantal wachtwoorden voordat de gebruiker een wachtwoord opnieuw kan gebruiken**  
+    Voer het aantal recente wachtwoorden in dat niet opnieuw mag worden gebruikt, tussen 1 en 24. Gebruik deze instelling om te voorkomen dat de gebruiker eerder gebruikte wachtwoorden hergebruikt.  
 
     *Standaard is er geen versie geconfigureerd*.
 
 #### <a name="encryption"></a>Versleuteling
 
-- **Versleuteling van gegevensopslag op apparaat**: 
+- **Versleuteling van gegevensopslag op apparaat**  
   - **Niet geconfigureerd** (*standaard*) - Deze instelling wordt niet beoordeeld op naleving of niet-naleving.
-  - **Vereisen**: de gegevensopslag op uw apparaten versleutelen.  
+  - **Vereisen**: de gegevensopslag op uw apparaten versleutelen.
 
   U hoeft deze instelling niet te configureren omdat versleuteling op apparaten met Android Enterprise wordt afgedwongen.
 
 ## <a name="work-profile"></a>Werkprofiel
 
-### <a name="device-health"></a>Apparaatstatus
+### <a name="microsoft-defender-atp---for-work-profile"></a>Microsoft Defender ATP - *voor werkprofiel*
 
-- **Geroote apparaten**: 
+- **Vereisen dat het apparaat de risicoscore voor computers niet overschrijdt**  
+  Selecteer de maximale toegestane risicoscore voor apparaten die door Microsoft Defender ATP worden geëvalueerd. Apparaten die deze score overschrijden, worden gemarkeerd als niet-compatibel.
+  - **Niet geconfigureerd** (*standaard*)
+  - **Veilig**
+  - **Laag**
+  - **Gemiddeld**
+  - **Hoog**
+
+### <a name="device-health---for-work-profile"></a>Apparaatstatus - *voor werkprofiel*
+
+- **Geroote apparaten**  
   - **Niet geconfigureerd** (*standaard*) - Deze instelling wordt niet beoordeeld op naleving of niet-naleving.
-  - **Blokkeren** - Geroote (jailbroken) apparaten als niet-compatibel markeren.  
+  - **Blokkeren** - Geroote (jailbroken) apparaten als niet-compatibel markeren.
 
-- **Vereisen dat het apparaat zich op of onder het apparaatdreigingsniveau bevindt**: Selecteer welk bedreigingsniveau voor apparaten maximaal is toegestaan dat door uw [Mobile Threat Defense-service](mobile-threat-defense.md) wordt geëvalueerd. Apparaten die dit dreigingsniveau overschrijden, worden gemarkeerd als niet-conform. Als u deze instelling wilt gebruiken, kiest u het toegestane bedreigingsniveau:
-
+- **Vereisen dat het apparaat zich op of onder het apparaatdreigingsniveau bevindt**  
+  Selecteer welk bedreigingsniveau voor apparaten maximaal is toegestaan dat door uw [Mobile Threat Defense-service](mobile-threat-defense.md) wordt geëvalueerd. Apparaten die dit dreigingsniveau overschrijden, worden gemarkeerd als niet-conform. Als u deze instelling wilt gebruiken, kiest u het toegestane bedreigingsniveau:
   - **Niet geconfigureerd** (*standaard*) - Deze instelling wordt niet beoordeeld op naleving of niet-naleving.
   - **Beveiligd** - Deze optie is het veiligst en betekent dat het apparaat geen bedreigingen kan hebben. Als een van de bedreigingsniveaus voor het apparaat wordt gedetecteerd, wordt het apparaat geëvalueerd als niet-compatibel.
   - **Laag** - Het apparaat wordt als compatibel beoordeeld als er alleen bedreigingen met een laag niveau op staan. Als een hoger niveau wordt aangetroffen, krijgt het apparaat de status niet-compatibel.
   - **Gemiddeld** - Het apparaat wordt als compatibel beoordeeld als de bedreigingen op het apparaat van laag of gemiddeld niveau zijn. Als bedreigingen met hoog niveau worden aangetroffen op het apparaat, wordt het apparaat als niet-compatibel beoordeeld.
   - **Hoog** - Deze optie is het minst veilig, omdat alle bedreigingsniveaus zijn toegestaan. Deze optie kan handig zijn als u deze alleen gebruikt voor rapportagedoeleinden.
 
-#### <a name="google-play-protect"></a>Google Play Protect
+#### <a name="google-play-protect---for-work-profile"></a>Google Play Protect - *voor werkprofiel*
 
-- **Google Play Services is geconfigureerd**: 
+- **Google Play Services is geconfigureerd**  
   - **Niet geconfigureerd** (*standaard*) - Deze instelling wordt niet beoordeeld op naleving of niet-naleving.
-  - **Vereisen** - Vereisen dat de app Google Play Services is geïnstalleerd en ingeschakeld. Google Play Services maakt beveiligingsupdates mogelijk en vormt een basisafhankelijkheid voor veel beveiligingsfuncties op door Google gecertificeerde apparaten. 
+  - **Vereisen** - Vereisen dat de app Google Play Services is geïnstalleerd en ingeschakeld. Google Play Services maakt beveiligingsupdates mogelijk en vormt een basisafhankelijkheid voor veel beveiligingsfuncties op door Google gecertificeerde apparaten.
   
-- **Bijgewerkte beveiligingsprovider**: 
+- **Bijgewerkte beveiligingsprovider**  
   - **Niet geconfigureerd** (*standaard*) - Deze instelling wordt niet beoordeeld op naleving of niet-naleving.
-  - **Vereisen** - Vereisen dat het apparaat tegen bekende beveiligingsproblemen wordt beveiligd door een actuele beveiligingsprovider. 
+  - **Vereisen** - Vereisen dat het apparaat tegen bekende beveiligingsproblemen wordt beveiligd door een actuele beveiligingsprovider.
   
-- **SafetyNet-attestation voor apparaat**: hiermee kunt u instellen aan welk integriteitsniveau voor [SafetyNet-attestation](https://developer.android.com/training/safetynet/attestation.html) het apparaat moet voldoen. Uw opties zijn:
+- **SafetyNet-attestation voor apparaat**  
+  hiermee kunt u instellen aan welk integriteitsniveau voor [SafetyNet-attestation](https://developer.android.com/training/safetynet/attestation.html) het apparaat moet voldoen. Uw opties zijn:
   - **Niet geconfigureerd** (*standaard*) - Instelling wordt niet beoordeeld op naleving of niet-naleving.
   - **Basisintegriteit controleren**
   - **Basisintegriteit en gecertificeerde apparaten controleren**
@@ -162,27 +201,30 @@ Gebruik deze nalevingsinstellingen als Intune-beheerder om de resources van uw o
 > [!NOTE]
 > Op apparaten met Android Enterprise is **Bedreigingsscan voor apps** een configuratiebeleidsregel voor apparaten. Met behulp van een configuratiebeleidsregel kunnen beheerders de instelling op een apparaat inschakelen. Zie [Android Enterprise-apparaatbeperkingsinstellingen](../configuration/device-restrictions-android-for-work.md).
 
-### <a name="device-properties"></a>Apparaateigenschappen
+### <a name="device-properties---for-work-profile"></a>Apparaateigenschappen - *voor werkprofiel*
 
-#### <a name="operating-system-version"></a>Versie van besturingssysteem
+#### <a name="operating-system-version---for-work-profile"></a>Versie van het besturingssysteem - *voor werkprofiel*
 
-- **Minimale versie van het besturingssysteem**: Als een apparaat niet voldoet aan de minimumvereisten met betrekking tot de versie van het besturingssysteem, wordt dit apparaat gerapporteerd als niet-conform. Er wordt een koppeling met informatie over het uitvoeren van een upgrade weergegeven. Eindgebruikers kunnen hun apparaat upgraden, waarna ze toegang tot resources van de organisatie krijgen.
-
-  *Standaard is er geen versie geconfigureerd*.
-
-- **Maximale versie van het besturingssysteem**: Wanneer een apparaat een versie van het besturingssysteem gebruikt die hoger is dan de versie in de regel, wordt de toegang tot organisatieresources geblokkeerd. De gebruiker wordt gevraagd contact op te nemen met de IT-beheerder. Op dit apparaat kan geen toegang worden verkregen tot organisatieresources totdat de regel wordt aangepast om de versie van het besturingssysteem toe te staan.
+- **Minimale versie van het besturingssysteem**  
+Als een apparaat niet voldoet aan de minimumvereisten met betrekking tot de versie van het besturingssysteem, wordt dit apparaat gerapporteerd als niet-conform. Er wordt een koppeling met informatie over het uitvoeren van een upgrade weergegeven. Eindgebruikers kunnen hun apparaat upgraden, waarna ze toegang tot resources van de organisatie krijgen.
 
   *Standaard is er geen versie geconfigureerd*.
 
-### <a name="system-security"></a>Systeembeveiliging
+- **Maximale versie van het besturingssysteem**  
+Wanneer een apparaat een versie van het besturingssysteem gebruikt die hoger is dan de versie in de regel, wordt de toegang tot organisatieresources geblokkeerd. De gebruiker wordt gevraagd contact op te nemen met de IT-beheerder. Op dit apparaat kan geen toegang worden verkregen tot organisatieresources totdat de regel wordt aangepast om de versie van het besturingssysteem toe te staan.
 
-- **Wachtwoord vereist voor het ontgrendelen van mobiele apparaten**: 
-  - **Niet geconfigureerd** (*standaard*) - Deze instelling wordt niet beoordeeld op naleving of niet-naleving. 
+  *Standaard is er geen versie geconfigureerd*.
+
+### <a name="system-security---for-work-profile"></a>Systeembeveiliging - *voor werkprofiel*
+
+- **Wachtwoord vereisen voor het ontgrendelen van mobiele apparaten**  
+  - **Niet geconfigureerd** (*standaard*) - Deze instelling wordt niet beoordeeld op naleving of niet-naleving.
   - **Vereisen** - Gebruikers moeten een wachtwoord invoeren voordat ze toegang kunnen krijgen tot hun apparaat.  
 
   Deze instelling wordt toegepast op apparaatniveau. Als alleen op het niveau van het werkprofiel een wachtwoord vereist is, dient u een configuratiebeleid te gebruiken. Zie [Configuratie-instellingen voor Android Enterprise-apparaat](../configuration/device-restrictions-android-for-work.md).
 
-- **Vereist wachtwoordtype**: kies of een wachtwoord alleen numerieke tekens mag bevatten of ook een combinatie van cijfers en andere tekens. Uw opties zijn:
+- **Vereist wachtwoordtype**  
+  kies of een wachtwoord alleen numerieke tekens mag bevatten of ook een combinatie van cijfers en andere tekens. Uw opties zijn:
   - **Standaardwaarde apparaat**
   - **Lage beveiligingsbiometrie**
   - **Ten minste numeriek** (*standaard*): Voer de **Minimale wachtwoordlengte** die een gebruiker moet invoeren in, tussen 4 en 16 tekens.
@@ -191,26 +233,31 @@ Gebruik deze nalevingsinstellingen als Intune-beheerder om de resources van uw o
   - **Ten minste alfanumeriek**: Voer de **Minimale wachtwoordlengte** die een gebruiker moet invoeren in, tussen 4 en 16 tekens.
   - **Ten minste alfanumeriek met symbolen**: Voer de **Minimale wachtwoordlengte** die een gebruiker moet invoeren in, tussen 4 en 16 tekens.
 
-  Afhankelijk van het *wachtwoordtype* dat u selecteert, zijn de volgende instellingen beschikbaar:  
-  - **Maximum aantal minuten inactief voordat wachtwoord is vereist**: Voer in na hoeveel niet-actieve tijd gebruikers hun wachtwoord opnieuw moeten invoeren. De opties zijn de standaardwaarde *Niet geconfigureerd* en van *1 minuut* tot *8 uur*.
+  Afhankelijk van het *wachtwoordtype* dat u selecteert, zijn de volgende instellingen beschikbaar:
 
-  - **Het aantal dagen totdat het wachtwoord verloopt**: Voer het aantal dagen in voordat het wachtwoord voor het apparaat moet worden gewijzigd, tussen 1 en 365. Als u bijvoorbeeld wilt dat het wachtwoord na zestig dagen moet worden gewijzigd, voert u `60` in. Wanneer het wachtwoord is verlopen, wordt gebruikers gevraagd een nieuw wachtwoord te maken.
+  - **Maximumaantal minuten inactief voordat wachtwoord is vereist**  
+    Voer in na hoeveel niet-actieve tijd gebruikers hun wachtwoord opnieuw moeten invoeren. De opties zijn de standaardwaarde *Niet geconfigureerd* en van *1 minuut* tot *8 uur*.
 
-  - **Minimale wachtwoordlengte**: Voer de minimale lengte van het wachtwoord in, tussen 4 en 16 tekens. 
-  
-  - **Aantal eerdere wachtwoorden dat niet opnieuw mag worden gebruikt**: voer het aantal recente wachtwoorden in dat niet opnieuw mag worden gebruikt. Gebruik deze instelling om te voorkomen dat de gebruiker eerder gebruikte wachtwoorden hergebruikt.
+  - **Het aantal dagen totdat het wachtwoord verloopt**  
+    Voer het aantal dagen in voordat het wachtwoord voor het apparaat moet worden gewijzigd, tussen 1 en 365. Als u bijvoorbeeld wilt dat het wachtwoord na zestig dagen moet worden gewijzigd, voert u `60` in. Wanneer het wachtwoord is verlopen, wordt gebruikers gevraagd een nieuw wachtwoord te maken.
 
-#### <a name="encryption"></a>Versleuteling
+  - **Minimale wachtwoordlengte**  
+    Voer de minimale lengte van het wachtwoord in, tussen 4 en 16 tekens.
 
-- **Versleuteling van gegevensopslag op apparaat**: 
+  - **Aantal eerdere wachtwoorden dat niet opnieuw mag worden gebruikt**  
+    voer het aantal recente wachtwoorden in dat niet opnieuw mag worden gebruikt. Gebruik deze instelling om te voorkomen dat de gebruiker eerder gebruikte wachtwoorden hergebruikt.
+
+#### <a name="encryption---for-work-profile"></a>Versleuteling - *voor werkprofiel*
+
+- **Versleuteling van gegevensopslag op apparaat**  
   - **Niet geconfigureerd** (*standaard*) - Deze instelling wordt niet beoordeeld op naleving of niet-naleving.
   - **Vereisen**: de gegevensopslag op uw apparaten versleutelen.  
 
   U hoeft deze instelling niet te configureren omdat versleuteling op apparaten met Android Enterprise wordt afgedwongen.
 
-#### <a name="device-security"></a>Apparaatbeveiliging
+#### <a name="device-security---for-work-profile"></a>Apparaatbeveiliging - *voor werkprofiel*
 
-- **Apps van onbekende bronnen blokkeren**: 
+- **Apps van onbekende bronnen blokkeren**  
   - **Niet geconfigureerd** (*standaard*) - Deze instelling wordt niet beoordeeld op naleving of niet-naleving.
   - **Blokkeren**: blokkeer apparaten waarop **Beveiliging** > **Onbekende bronnen** is ingeschakeld (*wordt ondersteund op apparaten met Android 4.0 tot en met Android 7.x. Niet ondersteund in Android 8.0 en hoger*).  
 
@@ -221,7 +268,7 @@ Gebruik deze nalevingsinstellingen als Intune-beheerder om de resources van uw o
 
   U hoeft deze instelling niet te configureren omdat installatie vanuit onbekende bronnen altijd wordt voorkomen op apparaten met Android Enterprise.
 
-- **Runtime-integriteit van de bedrijfsportal-app**: 
+- **Runtime-integriteit van de bedrijfsportal-app**  
   - **Niet geconfigureerd** (*standaard*) - Deze instelling wordt niet beoordeeld op naleving of niet-naleving.
   - **Vereisen** - Kies *Vereisen* om te bevestigen dat de bedrijfsportal-app aan alle volgende vereisten voldoet:
     - De reguliere runtime-omgeving is geïnstalleerd
@@ -229,13 +276,14 @@ Gebruik deze nalevingsinstellingen als Intune-beheerder om de resources van uw o
     - Bevindt zich niet in de foutopsporingsmodus
     - Is geïnstalleerd via een bekende bron
 
-- **USB-foutopsporing op apparaat blokkeren**: 
+- **USB-foutopsporing op apparaat blokkeren**  
   - **Niet geconfigureerd** (*standaard*) - Deze instelling wordt niet beoordeeld op naleving of niet-naleving.
   - **Blokkeren** - Voorkomen dat apparaten de functie voor USB-foutopsporing gebruiken.  
 
   U hoeft deze instelling niet te configureren omdat USB-foutopsporing altijd al is uitgeschakeld op apparaten met Android Enterprise.
 
-- **Minimaal beveiligingspatchniveau**:  selecteer het oudste beveiligingspatchniveau dat een apparaat mag hebben. Apparaten die niet ten minste dit patchniveau hebben, zijn niet-conform. De datum moet worden opgegeven in de indeling JJJJ-MM-DD.
+- **Minimaal beveiligingspatchniveau**  
+  selecteer het oudste beveiligingspatchniveau dat een apparaat mag hebben. Apparaten die niet ten minste dit patchniveau hebben, zijn niet-conform. De datum moet worden opgegeven in de indeling JJJJ-MM-DD.
 
   *Standaard is er geen datum geconfigureerd*.
 

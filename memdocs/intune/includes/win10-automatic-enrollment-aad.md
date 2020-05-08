@@ -28,16 +28,18 @@ Met automatische inschrijving kunnen gebruikers hun Windows 10-apparaten inschri
    - **Alle** - Alle gebruikers kunnen automatisch hun Windows 10-apparaten inschrijven
 
       > [!IMPORTANT]
-      > Voor BYOD-apparaten krijgt het MAM-gebruikersbereik voorrang als zowel het MAM-gebruikersbereik als het MDM-gebruikersbereik (automatische MDM-registratie) zijn ingeschakeld voor alle gebruikers (of dezelfde groepen of gebruikers). Het apparaat wordt niet via MDM geregistreerd, maar gebruikt WIP-beleid (Windows Information Protection) (als u dit hebt geconfigureerd).
+      > Voor Windows BYOD-apparaten krijgt het MAM-gebruikersbereik voorrang als zowel het MAM-gebruikersbereik als het MDM-gebruikersbereik (automatische MDM-registratie) zijn ingeschakeld voor alle gebruikers (of dezelfde groepen of gebruikers). Het apparaat wordt niet via MDM geregistreerd, en WIP-beleid (Windows Information Protection) wordt toegepast als u dit hebt geconfigureerd.
       >
-      > Voor zakelijke apparaten krijgt het MDM-gebruikersbereik voorrang als beide bereiken zijn ingeschakeld. De apparaten worden via MDM geregistreerd.
+      > Als u automatische inschrijving wilt inschakelen voor Windows BYOD-apparaten aan een MDM: configureer het MDM-gebruikersbereik op **Alle** (of **Een aantal**, en geef een groep op) en configureer het MAM-gebruikersbereik op **Geen** (of **Een aantal**, en geef een groep op - en zorg ervoor dat gebruikers geen lid zijn van een groep waarop zowel MDM- als MAM-gebruikersbereiken zijn gericht).
+      >
+      >Voor [zakelijke apparaten](../enrollment/enrollment-restrictions-set.md#blocking-personal-windows-devices) krijgt het MDM-gebruikersbereik voorrang als beide bereiken (MDM en MAM) zijn ingeschakeld. Het apparaat wordt automatisch ingeschreven bij het geconfigureerde MDM.
 
    > [!NOTE]
    > Het MDM-gebruikersbereik moet worden ingesteld op een Azure AD-groep die gebruikersobjecten bevat.
 
    ![Schermopname van de Azure-portal](../enrollment/media/windows-enroll/auto-enroll-scope.png)
 
-5. Gebruik de standaardwaarden voor de volgende URL’s:
+5. Gebruik de standaardwaarden voor de volgende URL's:
     - **URL voor MDM-gebruiksvoorwaarden**
     - **Detectie-URL voor MDM**
     - **URL van MDM-naleving**

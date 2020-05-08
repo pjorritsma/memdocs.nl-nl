@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6a2dbd43ff5a8048286693dbfb417d6bb720a877
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5f85a8ffc81aa91bce09d6a76eeb5a52335d8b23
+ms.sourcegitcommit: dda5e6f00f79737348e850d971f15fc3093d6431
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79353031"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82745192"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Nalevingsbeleid voor Intune-apparaten controleren
 
@@ -102,6 +102,11 @@ Met deze actie wordt het venster **Apparaatnaleving** geopend en worden apparate
 ![In de dashboardafbeelding ziet u meer informatie over het apparaat met die specifieke status](./media/compliance-policy-monitor/drill-down-details.png)
 
 Als u alle apparaten wilt zien van een specifieke gebruiker, kunt u het diagramrapport ook filteren door het e-mailadres van de gebruiker in te typen.
+
+> [!TIP]
+> Als er geen gebruiker is aangemeld bij het apparaat, stuurt het apparaat met het nalevingsbeleid een nalevingsrapport terug naar Intune, met **Systeemaccount** als de user principal name. Dit gebeurt omdat een nalevingsbeleid voor apparaten is gericht op een groep gebruikers of apparaten, en er is op het moment dat het nalevingsbeleid werd geëvalueerd geen gebruiker bij het apparaat aangemeld.
+>
+> Als er meerdere gebruikers zijn aangemeld bij hetzelfde apparaat, en op het apparaat is per toeval een nalevingsbeleid ingesteld dat is afgestemd op alle gebruikers die momenteel zijn aangemeld op het apparaat, kan het nalevingsrapport hetzelfde apparaat meerdere keren weergeven als elke gebruiker die zich bij het apparaat heeft aangemeld, het nalevingsbeleid van het apparaat moet evalueren en het weer aan Intune rapporteert.
 
 #### <a name="filter-and-columns"></a>Filteren en kolommen
 

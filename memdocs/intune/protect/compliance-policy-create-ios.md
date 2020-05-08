@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/07/2020
+ms.date: 05/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d9da6870caed61917d8093e2dd25882cec72d987
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 536ad36120a8fb5dc4ad0d16b8f265e56260d461
+ms.sourcegitcommit: 56bb5419c41c2e150ffed0564350123135ea4592
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79353252"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82729263"
 ---
 # <a name="iosipados-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>iOS-/iPadOS-instellingen om te markeren of apparaten wel of niet conform zijn met behulp van Intune
 
@@ -41,9 +41,9 @@ Gebruik deze nalevingsinstellingen als Intune-beheerder om de resources van uw o
 
 ## <a name="email"></a>E-mail
 
-- **Vereisen dat mobiele apparaten een beheerd e-mailprofiel hebben**:  
+- **Kan geen e-mail instellen op het apparaat**  
   - **Niet geconfigureerd** (*standaard*) - Deze instelling wordt niet beoordeeld op naleving of niet-naleving.
-  - **Vereisen** - Apparaten die geen e-mailprofiel hebben dat door Intune wordt beheerd, worden als niet-compatibel beschouwd. Een apparaat kan geen beheerd e-mailprofiel hebben als het niet correct is gekoppeld of als de gebruiker het e-mailaccount handmatig op het apparaat heeft ingesteld.
+  - **Vereisen**: Een beheerd e-mailaccount is vereist. Als de gebruiker al een e-mailaccount op het apparaat heeft, moet het e-mailaccount worden verwijderd, zodat Intune op de juiste wijze kan worden ingesteld. Als er geen e-mailaccount op het apparaat bestaat, moet de gebruiker contact opnemen met de IT-beheerder om een beheerd e-mailaccount te configureren.
 
   Het apparaat wordt in de volgende situaties beschouwd als niet-conform:  
   - Het e-mailprofiel is toegewezen aan een andere gebruikersgroep dan de gebruikersgroep waarvoor het nalevingsbeleid is bedoeld.
@@ -53,12 +53,16 @@ Zie [De toegang tot zakelijke e-mail configureren met e-mailprofielen bij Intune
 
 ## <a name="device-health"></a>Apparaatstatus
 
-- **Opengebroken apparaten**:  
+- **Opengebroken apparaten**  
+  *Wordt ondersteund voor iOS 8.0 en hoger*
+
   - **Niet geconfigureerd** (*standaard*) - Deze instelling wordt niet beoordeeld op naleving of niet-naleving.
   - **Blokkeren** - Geroote (jailbroken) apparaten als niet-compatibel markeren.  
 
-- **Vereisen dat het apparaat zich op of onder het apparaatbedreigingsniveau bevindt** *(iOS 8.0 en hoger)* :  
-  Gebruik deze instelling om de risicobeoordeling uit te voeren als voorwaarde voor naleving. Kies het toegestane bedreigingsniveau:  
+- **Vereisen dat het apparaat zich op of onder het apparaatdreigingsniveau bevindt**  
+  *Wordt ondersteund voor iOS 8.0 en hoger*
+
+  Gebruik deze instelling om de risicobeoordeling uit te voeren als voorwaarde voor naleving. Kies het toegestane bedreigingsniveau:
   - **Niet geconfigureerd** (*standaard*) - Deze instelling wordt niet beoordeeld op naleving of niet-naleving.
   - **Beveiligd** - Deze optie is het veiligst en betekent dat het apparaat geen bedreigingen kan hebben. Als een van de bedreigingsniveaus voor het apparaat wordt gedetecteerd, wordt het apparaat geëvalueerd als niet-conform.
   - **Laag** - Het apparaat wordt als compatibel beoordeeld als er alleen bedreigingen met een laag niveau op staan. Als een hoger niveau wordt aangetroffen, krijgt het apparaat de status niet-compatibel.
@@ -69,16 +73,24 @@ Zie [De toegang tot zakelijke e-mail configureren met e-mailprofielen bij Intune
 
 ### <a name="operating-system-version"></a>Versie van besturingssysteem  
 
-- **Minimale versie van het besturingssysteem** *(iOS 8.0 en hoger)* :  
+- **Minimale versie van het besturingssysteem**  
+  *Wordt ondersteund voor iOS 8.0 en hoger*
+
   Als een apparaat niet voldoet aan de minimumvereisten met betrekking tot de versie van het besturingssysteem, wordt dit apparaat gerapporteerd als niet-conform. Er wordt een koppeling met informatie over het uitvoeren van een upgrade weergegeven. De eindgebruiker kan kiezen om het apparaat bij te werken. Daarna zijn de resources van de organisatie toegankelijk.
 
-- **Maximale versie van het besturingssysteem** *iOS 8.0 en hoger)* :  
+- **Maximale versie van het besturingssysteem**  
+  *Wordt ondersteund voor iOS 8.0 en hoger*
+
   Wanneer een apparaat een versie van het besturingssysteem gebruikt die hoger is dan de versie in de regel, wordt de toegang tot organisatieresources geblokkeerd. De eindgebruiker wordt gevraagd contact op te nemen met de IT-beheerder. Op dit apparaat kan geen toegang worden verkregen tot organisatieresources zolang een regel niet zodanig is gewijzigd dat de versie van het besturingssysteem is toegestaan.
 
-- **Minimale build-versie van het besturingssysteem** *(iOS 8.0 en hoger)* :  
+- **Minimumversie van build van besturingssysteem**  
+  *Wordt ondersteund voor iOS 8.0 en hoger*
+
   Als Apple beveiligingsupdates publiceert, wordt het buildnummer meestal bijgewerkt, niet de versie van het besturingssysteem. Gebruik deze functie om het buildnummer in te voeren dat minimaal is toegestaan op het apparaat.
 
-- **Maximale build-versie van het besturingssysteem** *(iOS 8.0 en hoger)* :  
+- **Maximumversie van build van besturingssysteem*  
+  *Wordt ondersteund voor iOS 8.0 en hoger*
+
   Als Apple beveiligingsupdates publiceert, wordt het buildnummer meestal bijgewerkt, niet de versie van het besturingssysteem. Gebruik deze functie om het buildnummer in te voeren dat maximaal is toegestaan op het apparaat.
 
 ## <a name="system-security"></a>Systeembeveiliging
@@ -88,40 +100,52 @@ Zie [De toegang tot zakelijke e-mail configureren met e-mailprofielen bij Intune
 > [!NOTE]
 > Nadat nalevings- of configuratiebeleid is toegepast op een iOS-/iPadOS-apparaat, wordt gebruikers elke vijftien minuten gevraagd een wachtwoordcode in te stellen. Gebruikers wordt continu gevraagd een wachtwoordcode in te stellen totdat de code is ingesteld. Wanneer een wachtwoordcode is ingesteld voor het iOS-/iPadOS-apparaat, wordt het versleutelingsproces automatisch gestart. Het apparaat blijft versleuteld totdat de wachtwoordcode is uitgeschakeld.
 
-- **Wachtwoord vereist voor het ontgrendelen van mobiele apparaten**:  
+- **Wachtwoord vereisen voor het ontgrendelen van mobiele apparaten**  
   - **Niet geconfigureerd** (*standaard*) - Deze instelling wordt niet beoordeeld op naleving of niet-naleving.  
   - **Vereisen** - Gebruikers moeten een wachtwoord invoeren voordat ze toegang kunnen krijgen tot hun apparaat. iOS-/iPadOS-apparaten die gebruikmaken van een wachtwoord, zijn versleuteld.
 
-- **Eenvoudige wachtwoorden**:  
+- **Eenvoudige wachtwoorden**  
+  *Wordt ondersteund voor iOS 8.0 en hoger*
+
   - **Niet geconfigureerd** (*standaard*): gebruikers kunnen eenvoudige wachtwoorden maken, zoals **1234** of **1111**.
-  - **Blokkeren** - Gebruikers kunnen geen eenvoudige wachtwoorden maken, zoals **1234** of **1111**. 
+  - **Blokkeren** - Gebruikers kunnen geen eenvoudige wachtwoorden maken, zoals **1234** of **1111**.
 
-- **Minimale wachtwoordlengte**:  
-  Voer het aantal cijfers of tekens in waaruit het wachtwoord minimaal moet bestaan.  
+- **Minimale wachtwoordlengte**  
+  *Wordt ondersteund voor iOS 8.0 en hoger*
 
-- **Vereist wachtwoordtype**:  
+  Voer het aantal cijfers of tekens in waaruit het wachtwoord minimaal moet bestaan.
+
+- **Vereist wachtwoordtype**  
+  *Wordt ondersteund voor iOS 8.0 en hoger*
+
   Kies of een wachtwoord alleen **numerieke** tekens mag bevatten of uit een combinatie van cijfers en andere tekens moet bestaan (**alfanumeriek**).
 
-- **Het aantal niet-alfanumerieke tekens in het wachtwoord**:  
-  Voer het minimumaantal speciale tekens (zoals `&`, `#`, `%`, `!` enz.) in dat het wachtwoord moet bevatten. 
+- **Het aantal niet-alfanumerieke tekens in het wachtwoord**  
+  Voer het minimumaantal speciale tekens (zoals `&`, `#`, `%`, `!` enz.) in dat het wachtwoord moet bevatten.
 
   Als u een hogere waarde instelt, moet de gebruiker een wachtwoord maken dat complexer is.
 
-- **Maximum aantal minuten na schermvergrendeling voordat een wachtwoord is vereist** *(iOS 8.0 en hoger)* :  
+- **Maximumaantal minuten na schermvergrendeling voordat wachtwoord is vereist**  
+  *Wordt ondersteund voor iOS 8.0 en hoger*
+
   Geef op hoe snel nadat het scherm is vergrendeld, een gebruiker een wachtwoord moet invoeren om toegang tot het apparaat te krijgen. De opties zijn de standaardwaarde *Niet geconfigureerd*, *Onmiddellijk* en van *1 minuut* tot *4 uur*.
 
-- **Maximum aantal minuten van inactiviteit voordat het scherm wordt vergrendeld**:  
+- **Maximum aantal minuten van inactiviteit voordat het scherm wordt vergrendeld**  
   Voer de niet-actieve tijd in waarna het scherm van het apparaat wordt vergrendeld. De opties zijn de standaardwaarde *Niet geconfigureerd*, *Onmiddellijk* en van *1 minuut* tot *15 minuten*.
 
-- **Wachtwoordverlooptijd (dagen)** :  
-  selecteer het aantal dagen waarna het wachtwoord verloopt en gebruikers een nieuw wachtwoord moeten maken. 
+- **Dagen tot wachtwoord verloopt**  
+  *Wordt ondersteund voor iOS 8.0 en hoger*
 
-- **Aantal vorige wachtwoorden dat niet opnieuw mag worden gebruikt** *(iOS 8.0 en hoger)* :   
+  selecteer het aantal dagen waarna het wachtwoord verloopt en gebruikers een nieuw wachtwoord moeten maken.
+
+- **Aantal eerdere wachtwoorden dat niet opnieuw mag worden gebruikt**  
+  *Wordt ondersteund voor iOS 8.0 en hoger*
+
   Voer het aantal eerder gebruikte wachtwoorden in dat niet opnieuw mag worden gebruikt.
 
 ### <a name="device-security"></a>Apparaatbeveiliging
 
-- **Beperkte apps**:  
+- **Beperkte apps**  
   U kunt apps beperken door de bundel-id’s toe te voegen aan het beleid. Als de app op een apparaat is geïnstalleerd, wordt het apparaat gemarkeerd als niet-conform.
 
   - **App-naam** - Voer een gebruiksvriendelijke naam in om u te helpen de bundel-id te identificeren.

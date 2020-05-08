@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 05/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 210ec5ea6acc2d0ce91a93c83991b630a6fdbb4d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 04063cf519c9dcb4a10e7acfa0e51181b3bf259a
+ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79353239"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82782239"
 ---
 # <a name="macos-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>macOS-instellingen om te markeren of apparaten wel of niet conform zijn met behulp van Intune
 
@@ -39,60 +39,61 @@ Gebruik deze nalevingsinstellingen als Intune-beheerder om de resources van uw o
 
 ## <a name="device-health"></a>Apparaatstatus
 
-- **Beveiliging van systeemintegriteit vereisen**:  
+- **Beveiliging van systeemintegriteit vereisen**  
   - **Niet geconfigureerd** (*standaard*) - Deze instelling wordt niet beoordeeld op naleving of niet-naleving.
   - **Vereisten**: u kunt vereisen dat macOS-apparaten [System Integrity Protection](https://support.apple.com/HT204899) (hiermee wordt de website van Apple geopend) hebben ingeschakeld.  
 
 ## <a name="device-properties"></a>Apparaateigenschappen
 
-- **Minimale versie van het besturingssysteem die is vereist**:  
+- **Minimale versie van het besturingssysteem dat is vereist**  
   Als een apparaat niet voldoet aan de minimumvereisten met betrekking tot de versie van het besturingssysteem, wordt dit apparaat gerapporteerd als niet-conform. Er wordt een koppeling met informatie over het uitvoeren van een upgrade weergegeven. De apparaatgebruiker kan kiezen om het apparaat bij te werken. Daarna zijn de resources van de organisatie toegankelijk.
 
-- **Maximale versie van het besturingssysteem dat is toegestaan**:  
+- **Maximale versie van het besturingssysteem dat is toegestaan**  
   Wanneer een apparaat een versie van het besturingssysteem gebruikt die hoger is dan de versie in de regel, wordt de toegang tot organisatieresources geblokkeerd. De apparaatgebruiker wordt gevraagd contact op te nemen met de IT-beheerder. Op dit apparaat kan geen toegang worden verkregen tot organisatieresources zolang een regel niet zodanig is gewijzigd dat de versie van het besturingssysteem is toegestaan.
 
-- **Minimumversie van OS-build**:  
+- **Minimumversie van build van besturingssysteem**  
   Als Apple beveiligingsupdates publiceert, wordt het buildnummer meestal bijgewerkt, niet de versie van het besturingssysteem. Gebruik deze functie om het buildnummer in te voeren dat minimaal is toegestaan op het apparaat.
 
-- **Maximumversie van OS-build**:  
+- **Maximumversie van build van besturingssysteem**  
   Als Apple beveiligingsupdates publiceert, wordt het buildnummer meestal bijgewerkt, niet de versie van het besturingssysteem. Gebruik deze functie om het buildnummer in te voeren dat maximaal is toegestaan op het apparaat.
 
-## <a name="system-security-settings"></a>Instellingen voor systeembeveiliging
+## <a name="system-security-settings"></a>Systeembeveiligingsinstellingen
 
 ### <a name="password"></a>Wachtwoord
 
-- **Wachtwoord vereist voor het ontgrendelen van mobiele apparaten**:  
+- **Wachtwoord vereisen voor het ontgrendelen van mobiele apparaten**  
   - **Niet geconfigureerd** (*standaard*)
   - **Vereisen** - Gebruikers moeten een wachtwoord invoeren voordat ze toegang kunnen krijgen tot hun apparaat.
 
-- **Eenvoudige wachtwoorden**:  
+- **Eenvoudige wachtwoorden**  
   - **Niet geconfigureerd** (*standaardinstelling*): gebruikers kunnen eenvoudige wachtwoorden maken, zoals **1234** of **1111**.
   - **Blokkeren** - Gebruikers kunnen geen eenvoudige wachtwoorden maken, zoals **1234** of **1111**.
 
-- **Minimale wachtwoordlengte**:  
+- **Minimale wachtwoordlengte**  
   Voer het aantal cijfers of tekens in waaruit het wachtwoord minimaal moet bestaan.
 
-- **Wachtwoordtype**: kies of een wachtwoord alleen **numerieke** tekens mag bevatten of uit een combinatie van cijfers en andere tekens moet bestaan (**alfanumeriek**).
+- **Wachtwoordtype**  
+  Kies of een wachtwoord alleen **numerieke** tekens mag bevatten of uit een combinatie van cijfers en andere tekens moet bestaan (**alfanumeriek**).
 
-- **Het aantal niet-alfanumerieke tekens in het wachtwoord**:  
+- **Het aantal niet-alfanumerieke tekens in het wachtwoord**  
   Voer het minimumaantal speciale tekens (zoals `&`, `#`, `%`, `!` enz.) in dat het wachtwoord moet bevatten.
 
   Als u een hogere waarde instelt, moet de gebruiker een wachtwoord maken dat complexer is.
 
-- **Maximum aantal minuten inactief voordat wachtwoord is vereist**:  
+- **Maximumaantal minuten inactief voordat wachtwoord is vereist**  
   Voer in na hoeveel niet-actieve tijd gebruikers hun wachtwoord opnieuw moeten invoeren.
 
-- **Wachtwoordverlooptijd (dagen)** :  
+- **Dagen tot wachtwoord verloopt**  
   selecteer het aantal dagen waarna het wachtwoord verloopt en gebruikers een nieuw wachtwoord moeten maken.
 
-- **Aantal eerdere wachtwoorden dat niet opnieuw mag worden gebruikt**:  
+- **Aantal eerdere wachtwoorden dat niet opnieuw mag worden gebruikt**  
   Voer het aantal eerder gebruikte wachtwoorden in dat niet opnieuw mag worden gebruikt.
 > [!IMPORTANT]
 > Als de wachtwoordvereiste op een macOS-apparaat wordt gewijzigd, wordt deze vereiste pas van kracht als de gebruiker de eerstvolgende keer het wachtwoord wil wijzigen. Als u bijvoorbeeld de lengtebeperking voor het wachtwoord instelt op acht cijfers en op het macOS-apparaat nog een beperking voor zes cijfers geldt, gaat de nieuwe beperking pas in de eerstvolgende keer dat de gebruiker het wachtwoord wil bijwerken.
 
 ### <a name="encryption"></a>Versleuteling
 
-- **Versleuteling van gegevensopslag op een apparaat**:  
+- **Versleuteling van gegevensopslag op een apparaat**  
   - **Niet geconfigureerd** (*standaard*)
   - **Vereisen** - Gebruik *Vereisen* om de gegevensopslag op uw apparaten te versleutelen.
 
@@ -100,15 +101,15 @@ Gebruik deze nalevingsinstellingen als Intune-beheerder om de resources van uw o
 
 Apparaten worden door de firewall tegen onbevoegde netwerktoegang beschermd. U kunt Firewall gebruiken om verbindingen te beheren op basis van de toepassing. 
 
-- **Firewall**:  
+- **Firewall**  
   - **Niet geconfigureerd** (*standaard*) - Deze instelling zorgt ervoor dat de firewall uitgeschakeld blijft en dat netwerkverkeer is toegestaan (niet geblokkeerd).
   - **Inschakelen** - Gebruik *Inschakelen* om apparaten te beveiligen tegen onbevoegde toegang. Door deze functie in te schakelen, kunt u binnenkomende internetverbindingen verwerken en de verborgen modus gebruiken. 
 
-- **Binnenkomende verbindingen**:  
+- **Binnenkomende verbindingen**  
   - **Niet geconfigureerd** (*standaard*) - Staat binnenkomende verbindingen en services voor delen toe.
   - **Blokkeren**: - Blokkeer alle binnenkomende verbindingen, behalve de verbindingen die vereist zijn voor basisinternetservices, zoals DHCP, Bonjour en IPSec. Via deze instelling worden ook alle services voor delen geblokkeerd, met inbegrip van het delen van het scherm, externe toegang, het delen van iTunes-muziek en meer.  
 
-- **Verborgen modus**:  
+- **Verborgen modus**  
   - **Niet geconfigureerd** (*standaardinstelling*): bij deze instelling blijft de afgeschermde modus uitgeschakeld.
   - **Inschakelen** - U kunt de verborgen modus inschakelen om te voorkomen dat het apparaat reageert op testaanvragen van kwaadwillige gebruikers. Wanneer de modus is ingeschakeld, reageert het apparaat nog wel op binnenkomende verzoeken voor toegestane apps.  
 
@@ -116,12 +117,13 @@ Apparaten worden door de firewall tegen onbevoegde netwerktoegang beschermd. U k
 
 Zie [Gatekeeper in macOS](https://support.apple.com/HT202491) (hiermee wordt een Apple-website geopend) voor meer informatie.
 
-**Alle apps toestaan die zijn gedownload vanaf deze locaties**: hiermee staat u toe dat ondersteunde toepassingen vanaf verschillende locaties op uw apparaten worden geïnstalleerd. Uw locatieopties:
+- **Toestaan dat apps worden gedownload van deze locaties**  
+  Hiermee staat u toe dat ondersteunde toepassingen vanaf verschillende locaties op uw apparaten worden geïnstalleerd. Uw locatieopties:
 
-- **Niet geconfigureerd** (*default*): de optie Gatekeeper heeft geen invloed op naleving of niet-naleving.  
-- **Mac App Store** - Alleen apps voor de Mac App Store installeren. Apps van derden en van niet-geïdentificeerde ontwikkelaars kunnen niet worden geïnstalleerd. Als een gebruiker Gatekeeper selecteert om apps buiten de Mac App Store om te installeren, wordt het apparaat vervolgens beschouwd als niet compatibel.
-- **Mac App Store en geïdentificeerde ontwikkelaars** - Apps voor de Mac App Store en geïdentificeerde ontwikkelaars installeren. macOS controleert de identiteit van ontwikkelaars en voert daarnaast enkele andere controles uit om de integriteit van de app te verifiëren. Als een gebruiker Gatekeeper selecteert om apps buiten deze opties om te installeren, wordt het apparaat vervolgens beschouwd als niet compatibel.
-- **Overal** -Apps kunnen vanaf elke locatie en van elke ontwikkelaar worden geïnstalleerd. Dit is de minst veilige optie.
+  - **Niet geconfigureerd** (*default*): de optie Gatekeeper heeft geen invloed op naleving of niet-naleving.  
+  - **Mac App Store** - Alleen apps voor de Mac App Store installeren. Apps van derden en van niet-geïdentificeerde ontwikkelaars kunnen niet worden geïnstalleerd. Als een gebruiker Gatekeeper selecteert om apps buiten de Mac App Store om te installeren, wordt het apparaat vervolgens beschouwd als niet compatibel.
+  - **Mac App Store en geïdentificeerde ontwikkelaars** - Apps voor de Mac App Store en geïdentificeerde ontwikkelaars installeren. macOS controleert de identiteit van ontwikkelaars en voert daarnaast enkele andere controles uit om de integriteit van de app te verifiëren. Als een gebruiker Gatekeeper selecteert om apps buiten deze opties om te installeren, wordt het apparaat vervolgens beschouwd als niet compatibel.
+  - **Overal** -Apps kunnen vanaf elke locatie en van elke ontwikkelaar worden geïnstalleerd. Dit is de minst veilige optie.
  
 
 ## <a name="next-steps"></a>Volgende stappen

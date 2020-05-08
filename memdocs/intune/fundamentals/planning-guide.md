@@ -13,17 +13,17 @@ ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: a65efa6e-4a48-47f3-8f6e-34a85ca64ced
-ms.reviewer: jeffbu, cgerth
+ms.reviewer: andredm7
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65d4745580a4b0d733ffe14be03f0f9893074586
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 613bb0ddf935815a4022fa483e0aad615c64121a
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82080093"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802035"
 ---
 # <a name="intune-deployment-planning-design-and-implementation-guide"></a>Handleiding voor het plannen, ontwerpen en toepassen van een Intune-implementatie
 
@@ -53,7 +53,10 @@ Deze handleiding bevat secties waarin u stapsgewijs van begin tot eind door het 
 
 Deze handleiding bevat ook aanvullende technische informatie en tabelsjablonen die kunnen worden gebruikt om u te helpen met het plannen, ontwerpen en implementeren van Intune.
 
-- [Aanvullende resources: Koppelingen en tabelsjablonen](planning-guide-resources.md)
+### <a name="additional-resources"></a>Extra resources
+
+- [Handleiding Proof-of-concept (PoC) Microsoft Endpoint Manager:](https://www.microsoft.com/microsoft-365/partners/endpoint-manager-poc) dit is bedoeld om een framework en technische richtlijnen te bieden voor het uitvoeren van een geslaagde PoC binnen uw organisatie.
+- [Koppelingen en tabelsjablonen](planning-guide-resources.md)
 
 ## <a name="assumptions"></a>Aannames
 

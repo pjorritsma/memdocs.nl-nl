@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 04/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fdf722acf463bf576b222e5f13da2dcaff64504e
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 9657353dd877b380d506e588934e3f6fd29b51c1
+ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086973"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587037"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>E-mailinstellingen toevoegen aan apparaten met Intune
 
@@ -95,6 +95,8 @@ U kunt e-mailprofielen beveiligen met behulp van de volgende opties:
 
 - **Certificaten**: wanneer u het e-mailprofiel maakt, kiest u een certificaatprofiel dat u eerder hebt gemaakt in Intune. Dit certificaat wordt het identiteitscertificaat genoemd. Het wordt geverifieerd aan de hand van een vertrouwd-certificaatprofiel of een basiscertificaat om te bepalen of een apparaat van de gebruiker verbinding mag maken. Het vertrouwde certificaat wordt toegewezen aan de computer die de e-mailverbinding verifieert. Dit is meestal de systeemeigen e-mailserver.
 
+  Als u gebruikmaakt van verificatie op basis van certificaten voor uw e-mailprofiel, implementeert u het e-mailprofiel, het certificaatprofiel en het vertrouwde basisprofiel in dezelfde groepen om ervoor te zorgen dat elk apparaat de geldigheid van uw certificeringsinstantie kan herkennen.
+
   Zie [How to configure certificates with Intune](../protect/certificates-configure.md) (Certificaten configureren met Intune) voor meer informatie over het gebruiken en maken van certificaatprofielen in Intune.
 
 - **Gebruikersnaam en wachtwoord**: de gebruiker wordt geverifieerd op de systeemeigen e-mailserver door de gebruikersnaam en het wachtwoord in te voeren. Het wachtwoord is niet aanwezig in het e-mailprofiel. De gebruiker voert dus het wachtwoord in wanneer verbinding wordt gemaakt met de e-mail.
@@ -109,7 +111,7 @@ Als de gebruiker al een e-mailaccount heeft geconfigureerd, is wordt het e-mailp
 
 - **Android Samsung Knox - Standard**: Een bestaand, dubbel e-mailprofiel wordt gedetecteerd op basis van het e-mailadres. Het bestaande e-mailprofiel wordt overschreven door het Intune-profiel. Android gebruikt geen hostnaam om het profiel te identificeren. Maak niet meerdere e-mailprofielen met hetzelfde e-mailadres op verschillende hosts. De profielen overschrijven elkaar.
 
-- **Android-werkprofielen**: Intune bevat twee Android-profielen voor zakelijke e-mail, een voor de app van Gmail en een voor de app van Nine Work. Deze apps zijn beschikbaar in de Google Play Store en worden geïnstalleerd in het werkprofiel van het apparaat. Door deze apps worden geen dubbele profielen gemaakt. Beide apps ondersteunen verbindingen met Exchange. Voor het gebruik van connectiviteit voor e-mail, implementeert u een van deze e-mail-apps op apparaten van uw gebruikers. Maak en implementeer vervolgens het juiste e-mailprofiel. E-mail-apps zoals Nine Work zijn mogelijk niet gratis. Raadpleeg de licentiegegevens van de app of neem contact op met het bedrijf dat de app heeft gemaakt voor meer informatie.
+- **Android-werkprofielen**: Intune bevat twee Android-profielen voor zakelijke e-mail, een voor de app van Gmail en een voor de app van Nine Work. Deze apps zijn beschikbaar in de Google Play Store en worden geïnstalleerd in het werkprofiel van het apparaat. Door deze apps worden geen dubbele profielen gemaakt. Beide apps ondersteunen verbindingen met Exchange. Voor het gebruik van connectiviteit voor e-mail, implementeert u een van deze e-mail-apps op apparaten van uw gebruikers. Maak en implementeer vervolgens het juiste e-mailprofiel. U kunt Gmail- en Nine-e-mailconfiguratieprofielen gebruiken die werken voor zowel het inschrijvingstype Werkprofiel als het inschrijvingstype Apparaateigenaar, waaronder het gebruik van certificaatprofielen voor beide e-mailconfiguratietypen. Gmail- of Nine-beleid dat u onder Apparaatconfiguratie voor werkprofielen hebt gemaakt, blijft van toepassing op het apparaat en het is niet nodig om ze te verplaatsen naar het app-configuratiebeleid. E-mail-apps zoals Nine Work zijn mogelijk niet gratis. Raadpleeg de licentiegegevens van de app of neem contact op met het bedrijf dat de app heeft gemaakt voor meer informatie. 
 
 ## <a name="changes-to-assigned-email-profiles"></a>Wijzigingen in toegewezen e-mailprofielen
 

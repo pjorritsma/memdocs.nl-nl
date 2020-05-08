@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 05/05/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 554bc09aa57306010069df4a85baa70fafdc41a6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 7d8ea221b6c1768055e3ca1839c20ed64e2e3838
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086673"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802018"
 ---
 # <a name="settings-for-windows-10-microsoft-defender-antivirus-policy-in-microsoft-intune"></a>Instellingen voor het Microsoft Defender Antivirus-beleid voor Windows 10 in Microsoft Intune
 
@@ -82,7 +82,7 @@ Voor elke instelling in deze groep kunt u de instelling uitvouwen, **Toevoegen**
   - **Ja**: het gebruik van realtime-bewaking wordt afgedwongen. Apparaatgebruikers kunnen deze instelling niet wijzigen.
 
 - **Beveiliging bij toegang inschakelen**  
-  CSP: [AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935&clcid=0x409)
+  CSP: [AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935)
 
   Configureer virusbeveiliging die voortdurend actief is, in plaats van op aanvraag.
 
@@ -90,8 +90,16 @@ Voor elke instelling in deze groep kunt u de instelling uitvouwen, **Toevoegen**
   - **Nee**: beveiliging bij toegang blokkeren op apparaten. Apparaatgebruikers kunnen deze instelling niet wijzigen.
   - **Ja**: beveiliging bij toegang is actief op apparaten.
 
+- **Controleren op inkomende en uitgaande bestanden**  
+  CSP: [Defender/RealTimeScanDirection](https://go.microsoft.com/fwlink/?linkid=2113943)
+
+  Configureer deze instelling om te bepalen welk NTFS-bestand en welke programma-activiteit wordt gecontroleerd.
+  - **Alle bestanden bewaken** (*standaard*)
+  - **Alleen inkomende bestanden controleren**
+  - **Alleen uitgaande bestanden controleren**
+
 - **Gedragscontrole inschakelen**  
-  CSP: [AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048&clcid=0x409)
+  CSP: [AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048)
 
   Standaard maakt Defender op desktopapparaten met Windows 10 gebruik van Gedragscontrole.
 
@@ -109,7 +117,7 @@ Voor elke instelling in deze groep kunt u de instelling uitvouwen, **Toevoegen**
   - **Ja**: netwerkbeveiliging is ingeschakeld. Apparaatgebruikers kunnen deze instelling niet wijzigen.
 
 - **Alle gedownloade bestanden en bijlagen scannen**  
-  CSP: [EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=2113939&clcid=0x409)
+  CSP: [EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=2113939)
 
   Configureer Defender zo dat alle gedownloade bestanden en bijlagen worden gescand.
 
@@ -118,7 +126,7 @@ Voor elke instelling in deze groep kunt u de instelling uitvouwen, **Toevoegen**
   - **Ja**: Defender scant alle gedownloade bestanden en bijlagen. Apparaatgebruikers kunnen deze instelling niet wijzigen.
 
 - **Scripts scannen die in Microsoft-browsers worden gebruikt**  
-  CSP: [AllowScriptScanning](https://go.microsoft.com/fwlink/?linkid=2114054&clcid=0x409)
+  CSP: [AllowScriptScanning](https://go.microsoft.com/fwlink/?linkid=2114054)
 
   Configureer Defender voor het scannen van scripts.
 
@@ -127,7 +135,7 @@ Voor elke instelling in deze groep kunt u de instelling uitvouwen, **Toevoegen**
   - **Ja**: Defender scant scripts. Apparaatgebruikers kunnen deze instelling niet wijzigen.
 
 - **Netwerkbestanden scannen**  
-  CSP: [AllowScanningNetworkFiles](https://go.microsoft.com/fwlink/?linkid=2114049&clcid=0x409)
+  CSP: [AllowScanningNetworkFiles](https://go.microsoft.com/fwlink/?linkid=2114049&)
 
   Configureer Defender voor het scannen van netwerkbestanden.
 
@@ -136,7 +144,7 @@ Voor elke instelling in deze groep kunt u de instelling uitvouwen, **Toevoegen**
   - **Ja**: het scannen van netwerkbestanden is ingeschakeld. Apparaatgebruikers kunnen deze instelling niet wijzigen.
 
 - **E-mails scannen**  
-  CSP: [AllowEmailScanning](https://go.microsoft.com/fwlink/?linkid=2114052&clcid=0x409)
+  CSP: [AllowEmailScanning](https://go.microsoft.com/fwlink/?linkid=2114052)
 
   Configureer Defender voor het scannen van inkomende e-mail.
 
@@ -147,7 +155,7 @@ Voor elke instelling in deze groep kunt u de instelling uitvouwen, **Toevoegen**
 ## <a name="remediation"></a>Herstel
 
 - **Aantal dagen (0-90) voor het bewaren van schadelijke software in quarantaine**  
-  CSP: [DaysToRetainCleanedMalware](https://go.microsoft.com/fwlink/?linkid=2114055&clcid=0x409)
+  CSP: [DaysToRetainCleanedMalware](https://go.microsoft.com/fwlink/?linkid=2114055)
 
   Geef een aantal dagen op van nul tot 90, gedurende welke het systeem in quarantaine geplaatste items bewaart voordat ze automatisch worden verwijderd. Met de waarde nul blijven items in quarantaine staan en worden ze niet automatisch verwijderd.
 
@@ -160,7 +168,7 @@ Voor elke instelling in deze groep kunt u de instelling uitvouwen, **Toevoegen**
   - **Alle voorbeelden automatisch verzenden**
 
 - **Uit te voeren actie tegen mogelijk ongewenste apps**  
-  CSP: [PUAProtection](https://go.microsoft.com/fwlink/?linkid=2114051&clcid=0x409)
+  CSP: [PUAProtection](https://go.microsoft.com/fwlink/?linkid=2114051)
 
   Geef het detectieniveau op voor mogelijk ongewenste toepassingen (PUA's). Defender waarschuwt gebruikers wanneer mogelijk ongewenste software wordt gedownload of op een apparaat wordt geïnstalleerd.
 
@@ -170,7 +178,7 @@ Voor elke instelling in deze groep kunt u de instelling uitvouwen, **Toevoegen**
   - **Auditmodus**: Microsoft Defender detecteert mogelijk ongewenste toepassingen, maar neemt geen verdere acties. U kunt informatie nalezen over de toepassingen waartegen Windows Defender actie zou hebben ondernomen, door te zoeken naar gebeurtenissen die door Windows Defender in Logboeken zijn gemaakt.
 
 - **Acties voor gedetecteerde bedreigingen**  
-  CSP: [ThreatSeverityDefaultAction](https://go.microsoft.com/fwlink/?linkid=2113938&clcid=0x409)
+  CSP: [ThreatSeverityDefaultAction](https://go.microsoft.com/fwlink/?linkid=2113938)
 
   Geef de actie op die door Microsoft Defender moeten worden uitgevoerd voor gedetecteerde schadelijke software op basis van het bedreigingsniveau van de malware.
   
@@ -193,7 +201,7 @@ Voor elke instelling in deze groep kunt u de instelling uitvouwen, **Toevoegen**
 ## <a name="scan"></a>Scannen
 
 - **Archiefbestanden scannen**  
-  CSP: [AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047&clcid=0x409)
+  CSP: [AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047)
 
   Configureer Defender om archiefbestanden, zoals ZIP- of CAB-bestanden, te scannen.
 
@@ -203,7 +211,7 @@ Meer informatie
   - **Ja**: het scannen van archiefbestanden wordt ingeschakeld. Apparaatgebruikers kunnen deze instelling niet wijzigen.
 
 - **Lage CPU-prioriteit inschakelen voor geplande scans**  
-  CSP: [EnableLowCPUPriority](https://go.microsoft.com/fwlink/?linkid=2113944&clcid=0x409)
+  CSP: [EnableLowCPUPriority](https://go.microsoft.com/fwlink/?linkid=2113944)
 
   Configureer CPU-prioriteit voor geplande scans.
   - **Niet geconfigureerd** (*standaard*): de instelling wordt teruggezet op de systeemstandaard. Dat betekent dat er geen wijzigingen in de CPU-prioriteit worden aangebracht.
@@ -211,7 +219,7 @@ Meer informatie
   - **Ja**: tijdens geplande scans wordt lage CPU-prioriteit gebruikt. Apparaatgebruikers kunnen deze instelling niet wijzigen.
 
 - **Volledige inhaalscan uitschakelen**  
-  CSP: [DisableCatchupFullScan](https://go.microsoft.com/fwlink/?linkid=2114042&clcid=0x409)
+  CSP: [DisableCatchupFullScan](https://go.microsoft.com/fwlink/?linkid=2114042)
 
   Configureer inhaalscans voor geplande volledige scans. Een inhaalscan is een scan die wordt gestart omdat een regelmatig geplande scan is gemist. Normaal gesproken zijn deze geplande scans niet uitgevoerd omdat de computer op het geplande tijdstip was uitgeschakeld.
 
@@ -220,7 +228,7 @@ Meer informatie
   - **Ja**: inhaalscans voor geplande volledige scans worden afgedwongen en de gebruiker kan ze niet uitschakelen. Als een computer offline is gedurende twee opeenvolgende geplande scans, wordt een inhaalscan gestart wanneer iemand zich de volgende keer aanmeldt bij de computer. Als er geen geplande scan is geconfigureerd, wordt er geen inhaalscan uitgevoerd. Apparaatgebruikers kunnen deze instelling niet wijzigen.
 
 - **Snelle inhaalscan uitschakelen**  
-  CSP: [DisableCatchupQuickScan](https://go.microsoft.com/fwlink/?linkid=2113941&clcid=0x409)
+  CSP: [DisableCatchupQuickScan](https://go.microsoft.com/fwlink/?linkid=2113941)
 
   Configureer inhaalscans voor geplande snelle scans. Een inhaalscan is een scan die wordt gestart omdat een regelmatig geplande scan is gemist. Normaal gesproken zijn deze geplande scans niet uitgevoerd omdat de computer op het geplande tijdstip was uitgeschakeld.
 
@@ -229,12 +237,12 @@ Meer informatie
   - **Ja**: inhaalscans voor geplande snelle scans worden afgedwongen en de gebruiker kan ze niet uitschakelen. Als een computer offline is gedurende twee opeenvolgende geplande scans, wordt een inhaalscan gestart wanneer iemand zich de volgende keer aanmeldt bij de computer. Als er geen geplande scan is geconfigureerd, wordt er geen inhaalscan uitgevoerd. Apparaatgebruikers kunnen deze instelling niet wijzigen.
 
 - **Limiet voor het CPU-gebruik per scan**  
-  CSP: [AvgCPULoadFactor](https://go.microsoft.com/fwlink/?linkid=2114046&clcid=0x409)
+  CSP: [AvgCPULoadFactor](https://go.microsoft.com/fwlink/?linkid=2114046)
 
   Geef de limiet op als een percentage tussen nul en 100, de gemiddelde CPU-belastingsfactor voor de Defender-scan.
 
 - **Toegewezen netwerkschijven scannen tijdens een volledige scan**  
-  CSP: [AllowFullScanOnMappedNetworkDrives](https://go.microsoft.com/fwlink/?linkid=2113945&clcid=0x409)
+  CSP: [AllowFullScanOnMappedNetworkDrives](https://go.microsoft.com/fwlink/?linkid=2113945)
 
   Configureer Defender voor het scannen van toegewezen netwerkstations.
 
@@ -243,13 +251,13 @@ Meer informatie
   - **Ja**: het scannen van toegewezen netwerkstations is ingeschakeld. Apparaatgebruikers kunnen deze instelling niet wijzigen.
 
 - **Dagelijkse snelle scan uitvoeren om**  
-  CSP: [ScheduleQuickScanTime](https://go.microsoft.com/fwlink/?linkid=2114053&clcid=0x409)
+  CSP: [ScheduleQuickScanTime](https://go.microsoft.com/fwlink/?linkid=2114053)
 
   Selecteer het tijdstip waarop Defender snelle scans moet uitvoeren.
   Standaard is dit **niet geconfigureerd**
 
 - **Type scan**  
-  CSP: [ScanParameter](https://go.microsoft.com/fwlink/?linkid=2114045&clcid=0x409)
+  CSP: [ScanParameter](https://go.microsoft.com/fwlink/?linkid=2114045)
 
   Selecteer het type scan dat Defender moet uitvoeren.
 
@@ -271,14 +279,14 @@ Meer informatie
 ## <a name="updates"></a>Updates
 
 - **Voer in hoe vaak (0-24 uur) er moet worden gecontroleerd op updates van de beveiligingsinformatie**  
-  CSP: [SignatureUpdateInterval](https://go.microsoft.com/fwlink/?linkid=2113936&clcid=0x409)
+  CSP: [SignatureUpdateInterval](https://go.microsoft.com/fwlink/?linkid=2113936)
 
   Geef een interval van nul tot 24 (in uren) op dat wordt gebruikt om op handtekeningen te controleren. De waarde nul betekent dat er niet wordt gecontroleerd op nieuwe handtekeningen. Met de waarde 2 wordt elke twee uur gecontroleerd, enzovoort.
 
 ## <a name="user-experience"></a>Gebruikerservaring
 
 - **Gebruikerstoegang tot de app Microsoft Defender toestaan**  
-  CSP: [AllowUserUIAccess](https://go.microsoft.com/fwlink/?linkid=2114043&clcid=0x409)  
+  CSP: [AllowUserUIAccess](https://go.microsoft.com/fwlink/?linkid=2114043)  
 
   - **Niet geconfigureerd** (*standaard*): de instelling wordt teruggezet op de standaardinstelling van de client, waarbij interface en meldingen zijn toegestaan.
   - **Nee**: de gebruikersinterface (UI) van Defender is niet toegankelijk en meldingen worden onderdrukt.

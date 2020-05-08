@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 235f5517c9968ba63b04fefa03d9486e5bd6e52d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d1ff20db13a87faea41d262da5742a428ec4d28f
+ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086394"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587282"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>Wi-Fi-instellingen toevoegen en gebruiken op uw apparaten in Microsoft Intune
 
@@ -97,6 +97,10 @@ Wi-Fi-profielen ondersteunen de volgende apparaatplatformen:
     Selecteer **Volgende**.
 
 11. Controleer uw instellingen in **Beoordelen en maken**. Wanneer u **Maken**selecteert, worden uw wijzigingen opgeslagen en wordt het profiel toegewezen. Het beleid wordt ook weergegeven in de lijst met profielen.
+
+> [!TIP]
+> Als u gebruikmaakt van verificatie op basis van certificaten voor uw Wi-Fi-profiel, implementeert u het Wi-Fi-profiel, het certificaatprofiel en het vertrouwde basisprofiel in dezelfde groepen om ervoor te zorgen dat elk apparaat de geldigheid van uw certificeringsinstantie kan herkennen.  Zie [Certificaten configureren met Microsoft Intune](../protect/certificates-configure.md) voor meer informatie.
+
 
 ## <a name="next-steps"></a>Volgende stappen
 

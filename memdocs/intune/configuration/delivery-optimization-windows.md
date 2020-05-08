@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/10/2020
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: kerimh
-ms.openlocfilehash: 71039737a74aebb3066c001536aaf677a0467696
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c37563dee40d776d352dec4e0b8ef11b1dc8f67b
+ms.sourcegitcommit: 7b3eed763b394075766ea080968889a8538bfe56
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79345673"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506536"
 ---
 # <a name="delivery-optimization-settings-in-microsoft-intune"></a>Delivery Optimization-instellingen in Microsoft Intune
 
@@ -39,22 +39,28 @@ Raadpleeg [Delivery Optimization-updates](https://docs.microsoft.com/windows/dep
 2. Selecteer **Apparaten** > **Configuratieprofielen** > **Profiel maken**.
 
 3. Voer de volgende eigenschappen in:
+   - **Platform**: Kies **Windows 10 en hoger**.
+   - **Profieltype**: Selecteer **Delivery Optimization**.
 
-    - **Naam**: Voer een beschrijvende naam in voor het nieuwe profiel.
-    - **Beschrijving**: Voer een beschrijving in voor het profiel. Deze instelling is optioneel, maar wordt aanbevolen.
-    - **Platform**: Kies **Windows 10 en hoger**.
-    - **Profieltype**: Selecteer **Delivery Optimization**.
+4. Selecteer **Maken**.
 
-4. Kies **Instellingen** > **Configureren** en definieer hoe updates en apps moeten worden gedownload. Zie [Instellingen voor Delivery Optimization voor Intune](delivery-optimization-settings.md) voor meer informatie over beschikbare instellingen.
+5. Voer op de pagina **Basisinformatie** een naam en een beschrijving in voor het profiel en selecteer dan **Volgende**.
 
-5. Wanneer u klaar bent, selecteert u **OK** > **Maken** om uw wijzigingen op te slaan.
+6. Op de pagina **Configuratie-instellingen** definieert u hoe updates en apps moeten worden gedownload. Zie [Instellingen voor Delivery Optimization voor Intune](delivery-optimization-settings.md) voor meer informatie over beschikbare instellingen.
 
-Het profiel wordt gemaakt en weergegeven in de lijst. Vervolgens moet u [het profiel toewijzen](device-profile-assign.md) en [de status ervan controleren](device-profile-monitor.md).
+   Wanneer u klaar bent met het configureren van instellingen, selecteert u **Volgende**.
 
-<!-- ## Move existing update rings to delivery optimization
+7. Selecteer op de pagina **Bereik (tags)** de optie **Bereiktags selecteren** om het deelvenster *Tags selecteren* te openen en bereiktags toe te wijzen aan het profiel.
+  
+   Selecteer **Volgende** om door te gaan.
 
-**Delivery optimization** settings replace **Software updates – Windows 10 Update Rings**. Your existing update rings can be easily changed to use the **Delivery optimization** settings. To maintain the same settings when you create a delivery optimization profile, use the same *Delivery optimization download mode* and then set the same settings as you already use. However, you can choose to reconfigure delivery optimization settings to take advantage of the full range of addition settings that the Delivery Optimization profile can manage. 
--->
+8. Selecteer op de pagina **Toewijzingen** de groepen die dit profiel zullen ontvangen. Zie [Gebruikers- en apparaatprofielen toewijzen](../configuration/device-profile-assign.md) voor meer informatie over het toewijzen van profielen.
+
+   Selecteer **Volgende**.
+
+9. Gebruik op de pagina **Toepasselijkheidregels** de opties **Regel**, **Eigenschap** en **Waarde** om te definiëren hoe dit profiel van toepassing is op toegewezen groepen.
+
+10. Kies op de pagina **Controleren en maken** de optie **Maken** zodra u klaar bent. Het profiel wordt gemaakt en weergegeven in de lijst. Vervolgens moet u [het profiel toewijzen](device-profile-assign.md) en [de status ervan controleren](device-profile-monitor.md).
 
 ## <a name="remove-delivery-optimization-from-windows-10-update-rings"></a>Delivery Optimization verwijderen uit Windows 10-updateringen
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6c8e1551b49fce5074bd2e88d1d8802f62cca2bb
-ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
+ms.openlocfilehash: 749377ceecf29d9b900cff108fc4b736d6b8d0f2
+ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80808102"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82605164"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>PowerShell-scripts op Windows 10-apparaten gebruiken in Intune
 
@@ -30,7 +30,7 @@ Gebruik de Microsoft Intune-beheeruitbreiding om PowerShell-scripts te uploaden 
 
 Deze functie is van toepassing op:
 
-- Windows 10 en hoger
+- Windows 10 en hoger (met uitzondering van Windows 10 Home)
 
 > [!NOTE]
 > Zodra aan de vereisten van de Intune-beheeruitbreiding is voldaan, wordt de Intune-beheeruitbreiding altijd automatisch geïnstalleerd wanneer een PowerShell-script of Win32-app wordt toegewezen aan de gebruiker of het apparaat. Raadpleeg de [vereisten](../apps/intune-management-extension.md#prerequisites) voor Intune-beheeruitbreidingen voor meer informatie.
@@ -47,11 +47,14 @@ De Intune-beheeruitbreiding is een aanvulling op de meegeleverde Windows 10-MDM-
 
 De Intune-beheeruitbreiding heeft de volgende vereisten. Zodra aan de vereisten wordt voldaan, wordt de Intune-beheeruitbreiding altijd automatisch geïnstalleerd wanneer een PowerShell-script of Win32-app wordt toegewezen aan de gebruiker of het apparaat.
 
-- Apparaten met Windows 10 versie 1607 of hoger. Als het apparaat wordt ingeschreven via [bulksgewijze automatische inschrijving](../enrollment/windows-bulk-enroll.md), moeten deze zijn voorzien van Windows 10 versie 1703 of hoger. De Intune-beheeruitbreiding wordt in de S-modus niet ondersteund in Windows 10 omdat het in de S-modus niet is toegestaan om niet-Store-apps uit te voeren. 
+- Apparaten met Windows 10 versie 1607 of hoger. Als het apparaat wordt ingeschreven via [bulksgewijze automatische inschrijving](../enrollment/windows-bulk-enroll.md), moet dit zijn voorzien van Windows 10 versie 1709 of hoger. De Intune-beheeruitbreiding wordt in de S-modus niet ondersteund in Windows 10 omdat het in de S-modus niet is toegestaan om niet-Store-apps uit te voeren. 
   
 - Apparaten die zijn gekoppeld aan Azure Active Directory (AD), met inbegrip van:  
   
   - Hybride Azure AD-koppeling: Apparaten die aan Azure Active Directory (AD) én aan een on-premises Active Directory (AD) zijn gekoppeld. Zie [De implementatie van uw hybride Azure Active Directory-deelname plannen](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan) voor hulp.
+  
+  > [!TIP]
+  > Zorg ervoor dat apparaten zijn [gekoppeld](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) aan Azure AD. Apparaten die alleen [geregistreerd](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) zijn in Azure AD zullen scripts niet ontvangen.  
 
 - Apparaten die zijn ingeschreven bij Intune, met inbegrip van:
 
@@ -71,8 +74,8 @@ De Intune-beheeruitbreiding heeft de volgende vereisten. Zodra aan de vereisten 
     - [Workload Client-apps](https://docs.microsoft.com/configmgr/comanage/workloads#client-apps)
     - [Configuration Manager-workloads overschakelen naar Intune](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads)
   
-> [!TIP]
-> Zorg ervoor dat apparaten zijn [gekoppeld](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) aan Azure AD. Apparaten die alleen [geregistreerd](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) zijn in Azure AD zullen scripts niet ontvangen.
+> [!NOTE]
+> Zie [Virtuele Windows 10-machines gebruiken met Intune](../fundamentals/windows-10-virtual-machines.md) voor meer informatie over het gebruik van virtuele Windows 10-machines.
 
 ## <a name="create-a-script-policy-and-assign-it"></a>Een scriptbeleid maken en het toewijzen
 
@@ -125,6 +128,8 @@ De Intune-beheeruitbreiding heeft de volgende vereisten. Zodra aan de vereisten 
 - Eindgebruikers hoeven zich niet aan te melden bij het apparaat om PowerShell-scripts uit te voeren.
 
 - De Intune-beheeruitbreidingsagent neemt één keer per uur contact op met Intune en na elke keer dat er opnieuw is opgestart. Dit gebeurt om te controleren op nieuwe scripts en wijzigingen. Wanneer u het beleid aan de Microsoft Azure Active Directory-groepen toewijst, wordt het PowerShell-script uitgevoerd en worden de resultaten van de uitvoering gerapporteerd. Zodra het script wordt uitgevoerd, wordt deze pas weer opnieuw uitgevoerd als het script of het beleid is gewijzigd. Als het script mislukt, probeert de Intune-beheeruitbreiding nog drie keer om het script opnieuw uit te voeren, bij de volgende drie achtereenvolgende keren dat de Intune-beheeruitbreidingsagent incheckt.
+
+- Voor gedeelde apparaten wordt het PowerShell-script uitgevoerd voor elke nieuwe gebruiker die zich aanmeldt.
 
 ### <a name="failure-to-run-script-example"></a>Voorbeeld van fout bij uitvoeren van script
 08:00 uur

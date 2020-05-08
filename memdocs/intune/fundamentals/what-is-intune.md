@@ -17,20 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8fce5e8d7a92922d6061c33655bc4e83b3a1a95
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3a10709972b0387681d00c8fe848079807c6293a
+ms.sourcegitcommit: 4381afb515c06f078149bd52528d1f24b63a2df9
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80233480"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82538101"
 ---
 # <a name="microsoft-intune-is-an-mdm-and-mam-provider-for-your-devices"></a>Microsoft Intune is een MDM- en MAM-provider voor uw apparaten
 
 Microsoft Intune is een cloudservice die is gericht op MDM (Mobile Device Management) en MAM (Mobile Application Management). Intune is opgenomen in de [EMS-suite (Enterprise Mobility en Security)](https://www.microsoft.com/microsoft-365/enterprise-mobility-security) van Microsoft, en biedt gebruikers de mogelijkheid om productief te zijn terwijl uw bedrijfsgegevens beschermd blijven. Het wordt geïntegreerd met andere services, waaronder Microsoft 365 en Azure AD (Active Directory) om te bepalen wie toegang heeft, en waartoe ze toegang hebben, en Azure Information Protection voor gegevensbescherming. Als u het gebruikt in combinatie met Microsoft 365, kunt u ervoor zorgen dat uw medewerkers productief werken op al hun apparaten terwijl de gegevens van uw organisatie beschermd blijven.
 
-![Afbeelding van Intune-architectuur](./media/what-is-intune/intunearch_sm.png)
-
-Geef een [grotere versie](./media/what-is-intune/intunearchitecture.svg) van het diagram van de Intune-architectuur weer.
+[![Afbeelding van Intune-architectuur](./media/what-is-intune/intunearch_sm.png )](./media/what-is-intune/intunearchitecture.svg#lightbox)
 
 Met Intune kunt u het volgende doen:
 
@@ -61,6 +59,11 @@ Als apparaten zijn ingeschreven en worden beheerd in Intune, kunnen beheerders h
 - [Functies en instellingen toepassen op uw apparaten met behulp van apparaatprofielen](../configuration/device-profiles.md)
 
 - [Apparaten beveiligen met Microsoft Intune](../protect/device-protect.md)
+
+### <a name="try-the-interactive-guide"></a>De interactieve handleiding proberen
+De stappen in de interactieve handleiding [Apparaten beheren met Microsoft Endpoint Manager](https://mslearn.cloudguides.com/en-us/guides/Manage%20devices%20with%20Microsoft%20Endpoint%20Manager) leiden u door het Microsoft Endpoint Manager-beheercentrum waar u ziet hoe u mobiele apps en desktoptoepassingen kunt beheren en beveiligen.</br></br>
+
+> [!VIDEO https://mslearn.cloudguides.com/en-us/guides/Manage%20devices%20with%20Microsoft%20Endpoint%20Manager]
 
 ## <a name="manage-apps"></a>Apps beheren
 

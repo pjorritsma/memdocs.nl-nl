@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 04/29/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e857cdd7028851f14f607739ba7e37c744fa2f1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 337f7608b4c75a5a2ce2c85774d2090d549ae1fe
+ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80359454"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587263"
 ---
 # <a name="macos-endpoint-protection-settings-in-intune"></a>Instellingen in Intune voor Endpoint Protection in macOS  
 
@@ -113,6 +113,18 @@ Zie [FDEFileVault](https://developer.apple.com/documentation/devicemanagement/fd
 
   - **Toegestaan aantal keren voor overslaan**  
   Stel in hoe vaak de gebruiker de vraag om FileVault in te schakelen kan negeren voordat FileVault vereist is voor aanmelding van de gebruiker. 
+
+    > [!IMPORTANT]
+    >
+    > Er is een bekend probleem met de waarde **Geen limiet, altijd vragen**. In plaats van een gebruiker versleuteling te laten omzeilen wanneer hij zich aanmeldt, is voor deze instelling apparaatversleuteling vereist bij de volgende aanmelding. Dit probleem wordt naar verwachting eind juni opgelost en wordt vermeld in MC210922.
+    >
+    > Wanneer dit probleem is opgelost, heeft deze instelling de nieuwe optie nul (**0**), waarmee wordt vereist dat apparaten worden versleuteld bij de volgende keer dat een gebruiker zich bij het apparaat aanmeldt. Wanneer deze oplossing wordt opgenomen in Intune-updates, wordt bovendien elk beleid dat is ingesteld op **Geen limiet, altijd vragen** bijgewerkt om de nieuwe waarde van **0** te gebruiken, waarmee het huidige gedrag van het vereisen van versleuteling wordt gehandhaafd.
+    >
+    > Nadat dit probleem is opgelost, kunt u de mogelijkheid om versleuteling te vereisen overslaan door deze instelling opnieuw te configureren om **Geen limiet, altijd vragen** in te stellen. De instelling werkt namelijk zoals oorspronkelijk werd verwacht en staat toe dat gebruikers het versleutelen van het apparaat overslaan.
+    >
+    > Als u macOS-apparaten hebt ingeschreven, kunt u meer informatie bekijken wanneer u zich aanmeldt bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431). Ga dan naar **Tenantbeheer** > **Tenantstatus**, selecteer **Servicestatus en berichtencentrum** en zoek de bericht-id **MC210922**.
+
+    <br> 
 
     - **Niet geconfigureerd**: versleuteling op het apparaat is vereist voordat de volgende aanmelding is toegestaan.  
     - **1** tot **10**: sta een gebruiker toe de vraag tussen 1 en 10 keer te negeren voordat versleuteling op het apparaat wordt vereist.  

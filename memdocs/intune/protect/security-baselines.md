@@ -5,23 +5,23 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
+ms.date: 05/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: aanavath
+ms.reviewer: laarrizz
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: faf117f3eedbfe7527606d7a0942cab644c700cb
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 35e48be90b80d0c776087c95444f5f77f5ff547c
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81615665"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693424"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Beveiligingsbasislijnen gebruiken om Windows 10-apparaten te gebruiken in Intune
 
@@ -56,7 +56,8 @@ De volgende beveiligingsbasislijninstanties zijn beschikbaar voor gebruik met In
 
 - **Microsoft Defender ATP-basislijn**
    *(Voor het gebruik van deze basislijn moet uw omgeving voldoen aan de vereisten voor het gebruik van [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites))* .
-  - [Microsoft Defender ATP-basislijn, versie 3](security-baseline-settings-defender-atp.md)
+  - [Microsoft Defender ATP-basislijn voor april 2020 - versie 4](security-baseline-settings-defender-atp.md?pivots=atp-april-2020)
+  - [Microsoft Defender ATP-basislijn voor maart 2020 - versie 3](security-baseline-settings-defender-atp.md?pivots=atp-march-2020)
 
   > [!NOTE]
   > De beveiligingsbasislijn van de Microsoft Defender ATP is geoptimaliseerd voor fysieke apparaten en wordt momenteel niet aanbevolen voor gebruik met virtuele machines (VM's) of VDI-eindpunten. Bepaalde basislijninstellingen kunnen invloed hebben op externe interactieve sessies in gevirtualiseerde omgevingen.  Voor meer informatie ziet u [Increase compliance to the Microsoft Defender ATP security baseline](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) (Naleving met de Microsoft Defender ATP-beveiligingsbasislijn vergroten) in de Windows-documentatie.
@@ -75,13 +76,19 @@ In elke nieuwe versie-instantie van een basislijn kunnen instellingen worden toe
 
 U ziet in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) onder **Endpoint Security** > **Beveiligingsbasislijnen** een lijst met de beschikbare basislijnen. De lijst bevat de basislijnsjabloonnaam, hoeveel profielen u hebt die dat type basislijn gebruiken, hoeveel verschillende instanties (versies) van het type basislijn er beschikbaar zijn en een *laatste publicatiedatum* waarmee wordt aangegeven wanneer de nieuwste versie van de basislijnsjabloon beschikbaar is gesteld.
 
-Als u meer gegevens wilt bekijken over de basislijnversies die u gebruikt, selecteert u een basislijntegel. Het deelvenster *Overzicht* wordt dan geopend. Selecteer vervolgens **Versies**. Intune geeft details weer over de versies van die basislijn die door uw profielen worden gebruikt. In het deelvenster Versies kunt u een versie selecteren om meer informatie weer te geven over de profielen die hiervan gebruikmaken. U kunt ook twee verschillende versies selecteren en vervolgens kiezen voor **Basislijnen vergelijken** om een CSV-bestand te downloaden met de verschillen.
-
-![Basislijnen vergelijken](./media/security-baselines/compare-baselines.png)
-
-Wanneer u een *beveiligingsbasislijnprofiel* maakt, gebruikt het profiel automatisch de meest recente instantie van de beveiligingsbasislijn.  Profielen die u eerder hebt gemaakt en die gebruikmaken van een eerdere instantie van de basislijnversie, kunt u gewoon blijven gebruiken en bewerken. Dit geldt ook voor basislijnen die met een previewversie zijn gemaakt.
+Als u meer gegevens wilt bekijken over de basislijnversies die u gebruikt, selecteert u een basislijntegel. Het deelvenster *Overzicht* wordt dan geopend. Selecteer vervolgens **Versies**. Intune geeft details weer over de versies van die basislijn die door uw profielen worden gebruikt, inclusief de meest recente en de huidige basislijnversie.  U kunt een versie selecteren om meer informatie weer te geven over de profielen die hiervan gebruikmaken.
 
 U kunt kiezen of u [de versie wilt wijzigen](#change-the-baseline-version-for-a-profile) van een basislijn die wordt gebruikt met een bepaald profiel. Dit betekent dat wanneer er een nieuwe versie uitkomt, u geen nieuw basislijnprofiel hoeft te maken om er gebruik van te kunnen maken. In plaats daarvan selecteert u, wanneer u hier klaar voor bent, een basislijnprofiel en gebruikt u de ingebouwde optie om de instantieversie van dat profiel te wijzigen in een nieuwe versie.
+
+### <a name="compare-baseline-versions"></a>Basislijnversies vergelijken
+
+In het deelvenster **Versies** voor een beveiligingsbasislijn vindt u een lijst van elke versie van deze basislijn die u hebt geïmplementeerd. Deze lijst bevat ook de meest recente en actieve versie van de basislijn. Wanneer u een nieuw *profiel* voor een beveiligingsbasislijn maakt, gebruikt het profiel de meest recente versie van de beveiligingsbasislijn.  Profielen die u eerder hebt gemaakt en die gebruikmaken van een eerdere basislijnversie, kunt u gewoon blijven gebruiken en bewerken. Dit geldt ook voor basislijnen die met een previewversie zijn gemaakt.
+
+Als u wilt weten wat er is gewijzigd tussen versies, selecteert u de selectievakjes voor twee verschillende versies en selecteert u **Basislijnen vergelijken** om een CSV-bestand te downloaden waarin deze verschillen worden beschreven. 
+
+De download identificeert elke instelling in de twee basislijnversies en noteert of deze instelling is gewijzigd (*nietGelijk*) of hetzelfde is gebleven (*gelijk*). Details bevatten ook de standaardwaarde voor de instelling per versie en of de instelling is *toegevoegd* aan de recentere versie of *verwijderd* uit de recentere versie.
+
+![Basislijnen vergelijken](./media/security-baselines/compare-baselines.png)
 
 ## <a name="avoid-conflicts"></a>Conflicten voorkomen
 
@@ -199,6 +206,14 @@ Wanneer u de basislijn opslaat nadat de conversie is voltooid, wordt deze onmidd
 Wanneer een beveiligingsbasislijninstelling niet langer van toepassing is op een apparaat, of wanneer bepaalde instellingen in een basislijn zijn ingesteld op *Niet geconfigureerd*, worden deze instellingen op een apparaat niet teruggezet naar een vooraf beheerde configuratie. In plaats daarvan behouden de eerder beheerde instellingen op het apparaat de configuratie zoals die is ontvangen van de basislijn, tot een ander proces die instellingen op het apparaat bijwerkt.
 
 Andere processen die later mogelijk de instellingen op het apparaat wijzigen, zijn onder meer implementatie van een andere of een nieuwe beveiligingsbasislijn, een apparaatconfiguratieprofiel, groepsbeleidconfiguraties of een handmatige bewerking van de instellingen op het apparaat.
+
+### <a name="older-baseline-versions"></a>Oudere basislijnversies
+
+Microsoft Endpoint Manager werkt de versies van ingebouwde beveiligingsbasislijnen bij, afhankelijk van de veranderende behoeften van een typische organisatie. Elke nieuwe release resulteert in een versie-update naar een bepaalde basislijn. De verwachting is dat klanten de meest recente basislijnversie gebruiken als uitgangspunt voor hun apparaatconfiguratieprofielen.
+
+Wanneer er geen profielen meer zijn die gebruikmaken van een oudere basislijn in uw tenant, vermeldt Microsoft Endpoint Manager alleen de meest recente basislijnversie die beschikbaar is.
+
+Als er een profiel is gekoppeld aan een oudere basislijn, wordt die oudere basislijn nog steeds weergegeven.
 
 ## <a name="co-managed-devices"></a>Apparaten met co-beheer
 

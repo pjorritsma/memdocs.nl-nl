@@ -5,34 +5,58 @@ description: Beveiligingsbasislijninstellingen die door Intune worden ondersteun
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 05/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: aanavath
+ms.reviewer: laarrizz
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67f4d3c08cbad08464d488073c574babcc77dc61
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+zone_pivot_groups: atp-baseline-versions
+ms.openlocfilehash: e1081395c733807c38dc940ebd1b7c2765da7a9a
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81397506"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693400"
 ---
+<!-- Pivots in use: 
+::: zone pivot="atp-april-2020"
+::: zone-end
+
+::: zone pivot="atp-march-2020"
+::: zone-end
+
+::: zone pivot="atp-march-2020,atp-april-2020"
+::: zone-end
+-->
+
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Microsoft Defender Advanced Threat Protection-basislijninstellingen voor Intune
 
 Bekijk de basislijninstellingen voor Microsoft Defender Advanced Threat Protection die worden ondersteund door Microsoft Intune. De standaardinstellingen van de basislijn Advanced Threat Protection (ATP) vertegenwoordigen de aanbevolen configuratie voor ATP en komen mogelijk niet overeen met de standaardinstellingen voor andere beveiligingsbasislijnen.
 
-De informatie in dit artikel is van toepassing op versie 3 van de Microsoft Defender ATP-basislijn die is uitgebracht op 1 maart 2020.
+::: zone pivot="atp-april-2020"
+
+De informatie in dit artikel is van toepassing op versie 4 van de Microsoft Defender ATP-basislijn die is uitgebracht op 21 april 2020. Als u wilt weten wat er is gewijzigd met deze versie van de basislijn in vergelijking met vorige versies, gebruikt u de actie [Basislijnen vergelijken](../protect/security-baselines.md#compare-baseline-versions) die beschikbaar is wanneer u het deelvenster *Versies* voor deze basislijn weergeeft.
+
+::: zone-end
+::: zone pivot="atp-march-2020"
+
+De informatie in dit artikel is van toepassing op versie 3 van de Microsoft Defender ATP-basislijn die is uitgebracht op 1 maart 2020. Als u wilt weten wat er is gewijzigd met deze versie van de basislijn in vergelijking met vorige versies, gebruikt u de actie [Basislijnen vergelijken](../protect/security-baselines.md#compare-baseline-versions) die beschikbaar is wanneer u het deelvenster *Versies* voor deze basislijn weergeeft.
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
+
 
 De basislijn Microsoft Defender Advanced Threat Protection is beschikbaar als uw omgeving voldoet aan de vereisten voor het gebruik van [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites).
 
 Deze basislijn is geoptimaliseerd voor fysieke apparaten en wordt momenteel niet aanbevolen voor gebruik met virtuele machines (VM's) of VDI-eindpunten. Bepaalde basislijninstellingen kunnen invloed hebben op externe interactieve sessies in gevirtualiseerde omgevingen. Voor meer informatie ziet u [Increase compliance to the Microsoft Defender ATP security baseline](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) (Naleving met de Microsoft Defender ATP-beveiligingsbasislijn vergroten) in de Windows-documentatie.
+
 
 ## <a name="application-guard"></a>Application Guard
 
@@ -630,11 +654,26 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   - **Ja** (*standaard*): alle gedownloade bestanden en bijlagen worden gescand. De instelling krijgt weer de standaardwaarde van de client. Deze standaardwaarde is Ingeschakeld en de gebruiker kan dit niet wijzigen. Als u deze instelling wilt uitschakelen, gebruikt u een aangepaste URI.
   - **Niet-geconfigureerd**: de instelling krijgt weer de standaardwaarde van de client. Deze standaardwaarde is Ingeschakeld en de gebruiker kan dit niet wijzigen. Als u deze instelling wilt uitschakelen, gebruikt u een aangepaste URI.
 
+::: zone-end
+::: zone pivot="atp-april-2020"
+
+- **Beveiliging Blokkeren bij toegang**  
+  CSP: [Defender/AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935&clcid=0x409)
+
+  - **Ja**
+  - **Niet geconfigureerd** (*standaard*)
+
+::: zone-end
+::: zone pivot="atp-march-2020"
+
 - **Beveiliging Blokkeren bij toegang**  
   CSP: [Defender/AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935&clcid=0x409)
 
   - **Ja** (*standaard*)
   - **Niet geconfigureerd**
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
 
 - **Browserscripts scannen**  
   CSP: [Defender/AllowScriptScanning](https://go.microsoft.com/fwlink/?linkid=2114054&clcid=0x409)
@@ -863,6 +902,8 @@ Raadpleeg [PassportForWork CSP](https://docs.microsoft.com/windows/client-manage
     - **Niet toegestaan**
     - **Vereist**
     - **Toegestaan** (*standaard*)
+
+::: zone-end
 
 ## <a name="next-steps"></a>Volgende stappen
 

@@ -19,19 +19,19 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 07d0d807a9d675d7eef0a3910a50d547dc6be872
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 764c04e130f206e77a99e557d0397a329865c2ab
+ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79335325"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82605079"
 ---
 # <a name="using-your-ios-device-with-intune-company-portal"></a>Uw iOS-apparaat gebruiken met de Intune-bedrijfsportal
 In dit artikel vindt u specifieke taken en informatie voor de bedrijfsportal voor iOS. Gebruik dit artikel om problemen met uw iOS-apparaat op te lossen of te beheren. Klik op een willekeurige koppeling voor meer informatie, stappen en schermafbeeldingen.
 
 ## <a name="supported-versions"></a>Ondersteunde versies
 
-De bedrijfsportal voor iOS biedt momenteel ondersteuning voor iOS 10.0 en later.  
+De bedrijfsportal voor iOS biedt momenteel ondersteuning voor iOS 11.0 en hoger.  
 
 
 ## <a name="enrolling-into-intune-and-installing-the-company-portal"></a>Inschrijven in Intune en de Bedrijfsportal installeren

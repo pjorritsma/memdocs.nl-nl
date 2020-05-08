@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2019
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7bcc99937cfdf0c286eeb4f7f3d11ff4bf5c0c4f
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: c9b23d68928b183a70e8069edbf6027ddc0436ed
+ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322805"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587305"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Certificaten voor verificatie gebruiken in Microsoft Intune
 
@@ -99,7 +99,9 @@ U gebruikt dit CER-bestand wanneer u [vertrouwde certificaatprofielen](#create-t
 
 ## <a name="create-trusted-certificate-profiles"></a>profielen voor vertrouwde certificaten maken
 
-U moet een vertrouwd certificaatprofiel maken voordat u een SCEP-, PKCS- of geïmporteerd PKCS-certificaatprofiel kunt maken. Zorg er bij het implementeren van een vertrouwd certificaatprofiel voor dat elk apparaat de geldigheid van uw certificeringsinstantie herkent. SCEP-certificaat profielen verwijzen rechtstreeks naar een vertrouwd certificaatprofiel. PKCS-certificaatprofielen verwijzen niet rechtstreeks naar het vertrouwde certificaatprofiel, maar wel naar de server die als host fungeert voor uw CA. Geïmporteerde PKCS-certificaatprofielen verwijzen niet rechtstreeks naar het vertrouwde certificaatprofiel, maar kunnen er wel gebruik van maken op het apparaat. Het implementeren van een vertrouwd certificaatprofiel op apparaten zorgt ervoor dat deze vertrouwensrelatie tot stand wordt gebracht. Wanneer een apparaat de basis-CA niet vertrouwt, mislukt het SCEP- of PKCS-certificaatprofielbeleid.
+U moet een vertrouwd certificaatprofiel maken en implementeren voordat u een SCEP-, PKCS- of geïmporteerd PKCS-certificaatprofiel maakt. Wanneer u een vertrouwd certificaatprofiel implementeert naar dezelfde groepen die de andere typen certificaatprofiel ontvangen, zorgt u ervoor dat elk apparaat de geldigheid van uw certificeringsinstantie kan herkennen. Dit omvat profielen zoals die voor VPN, Wi-Fi en e-mail.
+
+SCEP-certificaat profielen verwijzen rechtstreeks naar een vertrouwd certificaatprofiel. PKCS-certificaatprofielen verwijzen niet rechtstreeks naar het vertrouwde certificaatprofiel, maar wel naar de server die als host fungeert voor uw CA. Geïmporteerde PKCS-certificaatprofielen verwijzen niet rechtstreeks naar het vertrouwde certificaatprofiel, maar kunnen er wel gebruik van maken op het apparaat. Het implementeren van een vertrouwd certificaatprofiel op apparaten zorgt ervoor dat deze vertrouwensrelatie tot stand wordt gebracht. Wanneer een apparaat de basis-CA niet vertrouwt, mislukt het SCEP- of PKCS-certificaatprofielbeleid.
 
 Maak een afzonderlijk vertrouwd certificaatprofiel voor elk apparaatplatform dat u wilt ondersteunen, net zoals u dat voor SCEP-, PKCS- en geïmporteerde PKCS-certificaatprofielen gaat doen.
 

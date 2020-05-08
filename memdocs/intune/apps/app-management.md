@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9e97322fa8a126203bf6e4d1e7a3703b92ded339
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: baffa150b416b778e41a59fdf4e5a1b686cdae7b
+ms.sourcegitcommit: 4381afb515c06f078149bd52528d1f24b63a2df9
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80536856"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82538140"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Wat is Microsoft Intune-appbeheer?
 
@@ -109,6 +109,11 @@ Boven in het navigatiemenu voor de app-workload vindt u informatie over veelgebr
     - **App-categorieën**: voor het toevoegen, vastmaken en verwijderen van namen van app-categorieën.
     - **eBooks**: Sommige app stores bieden u de mogelijkheid meerdere licenties te kopen voor apps of boeken die u in uw bedrijf wilt gebruiken. Zie [Apps en boeken met Microsoft Intune beheren die via het Volume Purchase Program zijn gekocht](vpp-apps.md) voor meer informatie.
 - **Help en ondersteuning**: problemen oplossen, ondersteuning aanvragen of de status van Intune weergeven. Zie [Problemen oplossen](../fundamentals/help-desk-operators.md) voor meer informatie.
+
+### <a name="try-the-interactive-guide"></a>De interactieve handleiding proberen
+De stappen in de interactieve handleiding [Mobiele apps en desktoptoepassingen beheren en beveiligen met Microsoft Endpoint Manager](https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager) leiden u door het Microsoft Endpoint Manager-beheercentrum waar u ziet hoe u apparaten beheert die zijn ingeschreven bij Intune, naleving afdwingt met beleidsregels en de gegevens van uw organisatie beveiligt.</br></br>
+
+> [!VIDEO https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager]
 
 ## <a name="additional-information"></a>Aanvullende informatie
 De volgende items in de console leveren app-gerelateerde functionaliteit:

@@ -5,7 +5,7 @@ description: Controleer de standaardwaarden en beschikbare instellingen voor de 
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/07/2020
+ms.date: 05/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -13,16 +13,17 @@ ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
 zone_pivot_groups: windows-mdm-versions
+ms.reviewer: laarrizz
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b40ed9dff0d83639015e70889bf7008e8e68173
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 67bb805df6406226c67084ed832f5cc590b1664a
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80696501"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943906"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Windows MDM-beveiligingsbasislijninstellingen voor Intune
 
@@ -31,10 +32,13 @@ Bekijk de instellingen voor de MDM-beveiligingsbasislijn die in Microsoft Intune
 - Raadpleeg [Beveiligingsbasislijnen](security-baselines.md) voor meer informatie over het gebruik van beveiligingsbasislijnen met Intune en hoe u de basislijnversie in uw beveiligingsbasislijnprofielen kunt upgraden.
 - De meest recente basislijnversie is **MDM-beveiligingsbasislijn voor mei 2019**
 
+Als u wilt weten wat er is gewijzigd met deze versie van de basislijn in vergelijking met vorige versies, gebruikt u de actie [Basislijnen vergelijken](../protect/security-baselines.md#compare-baseline-versions) die beschikbaar is wanneer u het deelvenster *Versies* voor deze basislijn weergeeft.
+
 Zorg ervoor dat u de basislijnversie selecteert die u wilt bekijken.
 <!-- Cookies might be required to enable some browsers to display the zone options -->
 
 ::: zone pivot="mdm-may-2019"
+
 **MDM-beveiligingsbasislijn voor mei 2019**:  
 > [!NOTE]
 > In juni 2019 werd de sjabloon *MDM-beveiligingsbasislijn voor mei 2019* uitgebracht als algemeen beschikbaar (niet in de preview-versie). Deze versie van de beveiligingsbasislijn vervangt de vorige basislijn, de *MDM-beveiligingsbasislijn voor oktober 2018*.  Profielen die zijn gemaakt vóór de basislijn van mei 2019 beschikbaar werd, worden niet bijgewerkt met de instellingen en waarden in de versie van mei 2019.  U kunt geen nieuwe profielen maken op basis van de preview-sjabloon, maar u kunt de profielen die u eerder hebt gemaakt op basis van de preview-sjabloon, wel bewerken en blijven gebruiken.
@@ -43,6 +47,7 @@ Zie [Wat is er nieuw in de nieuwe sjabloon](#whats-changed-in-the-new-template) 
 
 ::: zone-end
 ::: zone pivot="mdm-preview"
+
 **Preview: MDM-beveiligingsbasislijn voor oktober 2018**:  
 > [!NOTE]
 > Dit is de preview-versie van de MDM-beveiligingsbasislijn, uitgebracht in oktober 2018. Deze preview-basislijn is in juni 2019 vervangen door de release van de sjabloon *MDM-beveiligingsbasislijn voor mei 2019*. Deze sjabloon is algemeen beschikbaar (niet in de preview-versie). Profielen die zijn gemaakt vóór de *MDM-beveiligingsbasislijn voor mei 2019* beschikbaar werd, worden niet bijgewerkt met de instellingen en waarden van de versie MDM-beveiligingsbasislijn voor mei 2019. U kunt geen nieuwe profielen maken op basis van de preview-sjabloon, maar u kunt de profielen die u eerder hebt gemaakt op basis van de preview-sjabloon, wel bewerken en blijven gebruiken.
@@ -143,11 +148,17 @@ Zie [Beleids-CSP - BitLocker](https://docs.microsoft.com/windows/client-manageme
 
   Voor het BitLocker-beleid voor verwisselbare stations moet u de volgende instelling configureren:
 
-  - **Versleuteling vereisen voor schrijftoegang**:  
+::: zone-end
+::: zone pivot="mdm-may-2019"
+
+  - **Schrijftoegang blokkeren voor verwisselbare gegevensstations die niet zijn beveiligd door BitLocker**:  
     **Standaardinstelling**: Ja
 
 ::: zone-end
 ::: zone pivot="mdm-preview"
+
+  - **Versleuteling vereisen voor schrijftoegang**:  
+    **Standaardinstelling**: Ja
 
 - **BitLocker-beleid voor losse stations**:  
   Deze beleidsinstelling wordt gebruikt om de versleutelingsmethode en coderingssterkte te regelen. De waarden van dit beleid bepalen de coderingssterkte die door BitLocker wordt gebruikt voor versleuteling. Ondernemingen kunnen het versleutelingsniveau bepalen voor extra beveiliging (AES-256 is sterker dan AES-128). Als u deze instelling inschakelt, kunt u afzonderlijke versleutelingsalgoritmen en belangrijke coderingssterkten configureren voor vaste gegevensstations, besturingssysteemstations en losse gegevensstations. Voor vaste stations en besturingssysteemstations wordt het gebruik van het XTS-AES-algoritme aanbevolen. Gebruik 128-bits AES-CBC of 256-bits AES-CBC voor losse stations als het station in andere apparaten wordt gebruikt waarop geen Windows 10, versie 1511 of later wordt uitgevoerd. Het wijzigen van de versleutelingsmethode heeft geen invloed als het station al is versleuteld of als de versleuteling nog wordt uitgevoerd. In deze gevallen wordt deze beleidsinstelling genegeerd.  
@@ -281,7 +292,7 @@ Zie [Beleids-CSP - DataProtection](https://docs.microsoft.com/windows/client-man
 
 Zie [Beleids-CSP - DeviceGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceguard) in de Windows-documentatie voor meer informatie.
 
-- **Credential Guard**:  
+- **Credential Guard inschakelen**:  
   Met deze instelling kunnen gebruikers Credential Guard inschakelen met op virtualisatie gebaseerde beveiliging om aanmeldingsgegevens bij opnieuw opstarten te beschermen.  
   [Meer informatie](https://go.microsoft.com/fwlink/?linkid=2067044)
 
@@ -381,7 +392,7 @@ Zie [Beleids-CSP - DeviceLock](https://docs.microsoft.com/windows/client-managem
 
     **Standaardinstelling**: 60
 
-  - **Vereist wachtwoordtype**:  
+  - **Vereist wachtwoord**:  
     Hiermee bepaalt u het type pincode of wachtwoord dat is vereist.  
     [Meer informatie](https://go.microsoft.com/fwlink/?linkid=2067027)
 
@@ -463,24 +474,24 @@ Zie [Beleids-CSP - EventLogService](https://docs.microsoft.com/windows/client-ma
 Zie [Beleids-CSP - Ervaring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience) in de Windows-documentatie voor meer informatie.
 
 - **Windows Spotlight blokkeren**:  
-  Hiermee kunnen IT-beheerders alle Windows Spotlight-functies uitschakelen: Window Spotlight op het vergrendelingsscherm, Windows Tips, Microsoft consumentenfuncties en andere gerelateerde functies.  
+  Laat IT-beheerders alle functies van Windows Spotlight uitschakelen (blokkeren). Dit omvat Windows Spotlight op het vergrendelingsscherm, Windows Tips, Microsoft-functies voor consumenten en andere gerelateerde functies.  
   [Meer informatie](https://go.microsoft.com/fwlink/?linkid=2067037)
 
   **Standaardinstelling**: Ja
 
-  Wanneer *Windows-spotlight blokkeren* is ingesteld op *Ja*, zijn de volgende instellingen beschikbaar.
+  Als *Windows Spotlight blokkeren* is ingesteld op *Niet geconfigureerd*, wordt Windows Spotlight niet geblokkeerd op apparaten en kunt u vervolgens de volgende instellingen configureren om geselecteerde items voor Windows Spotlight te blokkeren:
 
   - **Suggesties van derden in Windows Spotlight blokkeren**:  
     Hiermee geeft u op of app- en inhoudssuggesties van uitgevers van externe software zijn toegestaan in Windows Spotlight-functies zoals Spotlight op het vergrendelingsscherm, voorgestelde apps in het startmenu en Windows Tips. Gebruikers zien mogelijk nog wel suggesties voor Microsoft-functies, apps en services.  
     [Meer informatie](https://go.microsoft.com/fwlink/?linkid=2067045)
 
-    **Standaardinstelling**: Ja
+    **Standaardinstelling**: Niet geconfigureerd
 
   - **Specifieke functies voor consumenten blokkeren**:  
     Hiermee kunnen IT-beheerders ervaringen inschakelen die doorgaans alleen voor consumenten worden gebruikt, zoals startsuggesties, lidmaatschapsmeldingen, Post-OOBE-app-installaties en omleidingstegels.  
     [Meer informatie](https://go.microsoft.com/fwlink/?linkid=2067054)
 
-    **Standaardinstelling**: Ja
+    **Standaardinstelling**: Niet geconfigureerd
 
 ## <a name="exploit-guard"></a>ExploitGuard
 
@@ -1501,7 +1512,7 @@ Zie [Beleids-CSP - LocalPoliciesSecurityOptions](https://docs.microsoft.com/wind
 
   **Standaardinstelling**: Ja
   
-- **Toepassingen met UI-toegang toestaan voor veilige locaties**:  
+- **UIAccess-toepassingen alleen voor veilige locaties toestaan**:  
   Met deze beleidsinstelling wordt bepaald of UIA-programma's (User Interface Accessibility of UIAcces) het beveiligde bureaublad automatisch kunnen uitschakelen voor het vragen om benodigde bevoegdheden die door een standaardgebruiker.
 
   - *Ja*: UIA-programma's, waaronder Windows Hulp op afstand, kunnen automatisch het beveiligde bureaublad uitschakelen bij vragen om benodigde bevoegdheden. Als u de beleidsinstelling 'Gebruikersaccountbeheer: naar het beveiligd bureaublad overschakelen tijdens het vragen om benodigde bevoegdheden' niet uitschakelt, worden de vragen weergegeven op het bureaublad van de interactieve gebruiker in plaats op van het beveiligde bureaublad.
@@ -1539,151 +1550,168 @@ Zie [Beleids-CSP - LocalPoliciesSecurityOptions](https://docs.microsoft.com/wind
 
 Zie [Beleids-CSP - Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) in de Windows-documentatie voor meer informatie.
 
-- **Inkomende e-mailberichten scannen**:  
-  Hiermee kunt u het scannen van e-mail toestaan of niet toestaan.  
-  [Meer informatie](https://go.microsoft.com/fwlink/?linkid=2067116)
-
-  **Standaardinstelling**: Ja
-
-- **Onderliggend procestype voor starten van Office-apps**:  
-  Office-apps mogen geen onderliggende processen maken. Dit is inclusief Word, Excel, PowerPoint, OneNote en Access. Dit is typisch malwaregedrag, met name voor op macro's gebaseerde aanvallen die Office-apps proberen te gebruiken om schadelijke uitvoerbare bestanden te starten of te downloaden.  
-  [Meer informatie](https://go.microsoft.com/fwlink/?linkid=2067121)
-
-  **Standaardinstelling**: Blokkeren
-
-- **Voorbeeld van een Defender-toestemmingstype voor indiening**:  
-  Hiermee wordt het gebruikerstoestemmingsniveau in Microsoft Defender gecontroleerd om gegevens te verzenden. Als de vereiste toestemming al is verleend, worden de gegevens door Microsoft Defender ingediend. Als dit niet het geval is (en als de gebruiker heeft opgegeven dat deze vraag nooit mag worden gesteld), wordt de gebruikersinterface geopend om de gebruiker om toestemming te vragen (wanneer Defender/AllowCloudProtection is toegestaan) voordat gegevens worden verzonden.  
-  [Meer informatie](https://go.microsoft.com/fwlink/?linkid=2067131)
-
-  **Standaardinstelling**: Veilige voorbeelden automatisch verzenden
-
-- **Interval voor handtekeningupdates (in uren)** :  
-  Het interval voor Defender-handtekeningupdates in uren.
-
-  **Standaardinstelling**: 4
-
-- **Uitvoeringstype van de payload die is gedownload met een script**:  
-  Het uitvoeringstype van de payload die is gedownload met een Defender-script.
-
-  **Standaardinstelling**: Blokkeren
-  
-- **Type referentiediefstal voorkomen**:  
-  Microsoft Defender Credential Guard maakt gebruik van op virtualisatie gebaseerde beveiliging om geheime gegevens te isoleren. Zo hebt u er alleen met bevoegde systeemsoftware toegang toe. Onbevoegde toegang tot deze geheimen kan leiden tot diefstal van referenties, zoals Pass-the-Hash of Pass-The-Ticket. Met Microsoft Defender Credential Guard worden deze aanvallen voorkomen, doordat NTLM-wachtwoord-hashes, Kerberos Ticket Granting Tickets en referenties die door toepassingen zijn opgeslagen als domeinreferenties worden beschermd.  
-  [Meer informatie](https://go.microsoft.com/fwlink/?linkid=2067065)
-  
-  **Standaardinstelling**: Inschakelen
-
-- **Uitvoertype vanuit e-mailinhoud**:  
-  Deze regel voorkomt dat de volgende bestandstypen worden uitgevoerd of gestart vanuit een e-mailbericht dat wordt weergegeven in Microsoft Outlook of webmail (zoals Gmail.com of Outlook.com): Uitvoerbare bestanden (zoals .exe, .dll of .scr) Script-bestanden (zoals de volgende: PowerShell .ps, VisualBasic .vbs of JavaScript .js) Script-archiefbestanden.  
-  [Meer informatie](https://go.microsoft.com/fwlink/?linkid=2067063)
-
-  **Standaardinstelling**: Blokkeren
-
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 
-- **Adobe Reader starten in een onderliggend proces**:  
+- **Blokkeren dat onderliggende processen kunnen worden gemaakt in Adobe Reader**:  
 Deze regel voorkomt aanvallen door het maken van extra processen met Adobe Reader te blokkeren. Via social engineering of aanvallen kan malware aanvullende payloads downloaden en starten en uit Adobe Reader breken. Door te blokkeren dat onderliggende processen worden gegenereerd met Adobe Reader kan er geen malware worden verspreid die probeert om deze te gebruiken als vector.
 [Meer informatie](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
   **Standaardinstelling**: Inschakelen
 
-::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
-
-- **Netwerkbeveiliging**:  
-  Met dit beleid kunt u netwerkbeveiliging inschakelen (blokkeren/controleren) of uitschakelen in Microsoft Defender Exploit Guard. Netwerkbeveiliging is een functie van Microsoft Defender Exploit Guard die voorkomt dat werknemers die apps gebruiken in contact komen met phishing-praktijken, sites die misbruik maken en schadelijke inhoud op internet. Dit omvat het voorkomen dat browsers van derden verbinding maken met gevaarlijke websites. Waardetype is geheel getal. Als u deze instelling inschakelt, wordt netwerkbeveiliging ingeschakeld en kunnen werknemers dit niet uitschakelen. Het gedrag kan worden beheerd met de volgende opties: Blokkeren en controleren. Als u dit beleid inschakelt met de optie Blokkeren, kunnen gebruikers en apps geen verbinding maken met gevaarlijke domeinen. U kunt deze activiteit bekijken in Microsoft Defender Security Center. Als u dit beleid inschakelt met de optie Controleren, kunnen gebruikers en apps verbinding maken met gevaarlijke domeinen. Maar deze activiteit wordt nog steeds weergegeven in Microsoft Defender Security Center. Als u dit beleid uitschakelt, kunnen gebruikers/apps verbinding maken met gevaarlijke domeinen. U ziet geen netwerkactiviteit in Microsoft Defender Security Center. Als u dit beleid niet configureert, wordt netwerkblokkering standaard uitgeschakeld.  
-  [Meer informatie](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-network-protection)
+- **Office-communicatieapps worden gestart in een onderliggend proces**:  
+  [Apparaten beveiligen tegen misbruik](https://go.microsoft.com/fwlink/?linkid=874499)
 
   **Standaardinstelling**: Inschakelen
+
+- **Voer in hoe vaak (0-24 uur) er moet worden gecontroleerd op updates van de beveiligingsinformatie**  
+  CSP: [Defender/SignatureUpdateInterval](https://go.microsoft.com/fwlink/?linkid=2113936)
+  
+  Geef op hoe vaak er moet worden gecontroleerd op nieuwe handtekeningen. Een waarde van 1 is één uur, 2 is twee uur, enzovoort.
+
+  **Standaardinstelling**: 4
+
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019"
 
 - **Scandag voor Defender plannen**:  
   Scandag voor Defender plannen.
 
   **Standaardinstelling**: Elke dag
 
-- **Cloudbeveiliging**:  
-  Om uw pc zo goed mogelijk te beveiligen, verzendt Microsoft Defender gegevens naar Microsoft over problemen die worden gevonden. Microsoft analyseert die gegevens, verzamelt meer gegevens over problemen die u en andere klanten ondervinden en biedt verbeterde oplossingen.  
-  [Meer informatie](https://go.microsoft.com/fwlink/?linkid=2067039)
+- **Cloudbeveiliging inschakelen**:  
+  CSP: [Defender/AllowCloudProtection](https://go.microsoft.com/fwlink/?linkid=2113937)
+  
+  Wanneer deze optie is ingesteld op Ja, verzendt Windows Defender gegevens naar Microsoft over problemen die worden gevonden. Als deze optie is ingesteld op Niet geconfigureerd, keert de client terug naar de standaardinstelling; de functie wordt ingeschakeld, maar de gebruiker kan deze uitschakelen.
 
   **Standaardinstelling**:  Ja  
 
-- **Defender: mogelijk ongewenste app-actie**:  
-  De beveiligingsfunctie tegen mogelijk ongewenste toepassingen (PUA; potentially unwanted application) in Microsoft Defender Antivirus kan mogelijk ongewenste toepassingen identificeren en voorkomen dat ze worden gedownload en geïnstalleerd op eindpunten in uw netwerk. Deze toepassingen worden niet beschouwd als virussen, malware of andere soorten bedreigingen, maar kunnen mogelijk acties uitvoeren op eindpunten die nadelige invloed hebben op de prestaties of het gebruik. Mogelijk ongewenste toepassingen kan ook verwijzen naar toepassingen die een slechte reputatie hebben. Standaardgedrag van mogelijk ongewenste toepassingen is: Verschillende typen softwarebundeling Advertentietoevoeging in webbrowsers Optimalisatieprogramma's voor stuurprogramma's en registers die problemen detecteren en vragen om betaling om problemen op te lossen. Ze blijven op het eindpunt en er worden geen wijzigen of optimalisaties aangebracht (ook wel bekend als 'rogue antivirus'-programma's). Deze toepassingen kunnen het risico op infectie van uw netwerk met malware verhogen, ervoor zorgen dat malware-infecties moeilijker kunnen worden geïdentificeerd en kunnen IT-resources verspillen omdat deze de toepassingen moeten opschonen.  
-  [Meer informatie](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
+- **Realtime-beveiliging inschakelen**  
+  CSP: [Defender/AllowRealtimeMonitoring](https://go.microsoft.com/fwlink/?linkid=2114050)
 
-  **Standaardinstelling**: Blokkeren  
+  Wanneer deze instelling is ingesteld op Ja, wordt realtime-bewaking afgedwongen en kan de gebruiker deze niet uitschakelen. Wanneer deze instelling is ingesteld op Niet-geconfigureerd, krijgt de instelling weer de standaardwaarde van de client. Deze standaardwaarde is ingeschakeld en de gebruiker kan dit wijzigen. Als u realtime bewaking wilt uitschakelen, gebruikt u een aangepaste URI.
 
-- **Macrocode verborgen in scripts**:  
-  Malware en andere bedreigingen kunnen proberen hun schadelijke code te verbergen in sommige scriptbestanden. Met deze regel wordt voorkomen dat scripts die verborgen lijken te zijn, worden uitgevoerd.  
-  [Meer informatie](https://go.microsoft.com/fwlink/?linkid=2067026)
-
-  **Standaardinstelling**: Blokkeren
-
-- **Verwisselbare stations scannen tijdens een volledige scan**:  
-  Hiermee kan Microsoft Defender scannen op schadelijke en ongewenste software op verwisselbare stations (bijvoorbeeld flashstations) tijdens een volledige scan. Microsoft Defender Antivirus scant alle bestanden op USB-apparaten voordat ze worden uitgevoerd.  
-  [Meer informatie](https://go.microsoft.com/fwlink/?linkid=2067036)
-
-  **Standaardinstelling**: Ja  
+  **Standaardinstelling**:  Ja  
 
 - **Archiefbestanden scannen**:  
-  Archiefbestanden scannen met Defender.
+  CSP: [Defender/AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047)
+  
+  Wanneer deze instelling is ingesteld op Ja, wordt scannen van archiefbestanden als ZIP- of CAB-bestanden afgedwongen. Wanneer deze instelling is ingesteld op Niet geconfigureerd, wordt de instelling teruggezet op de standaardwaarde van de client, namelijk het scannen van gearchiveerde bestanden. De gebruiker kan dit echter uitschakelen.
 
   **Standaardinstelling**: Ja
 
-- **Gedragscontrole**:  
-  Staat de functie Microsoft Defender Behavior Monitoring wel of niet toe. Deze sensoren, ingesloten in Windows 10, verzamelen en verwerken gedragssignalen van het besturingssysteem en verzenden deze sensorgegevens naar uw persoonlijke, geïsoleerde cloudinstantie van Microsoft Defender ATP.  
-  [Meer informatie](https://go.microsoft.com/fwlink/?linkid=2067111)
+- **Gedragscontrole inschakelen**:  
+  CSP: [Defender/AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048)
+
+  Wanneer deze instelling is ingesteld op Ja, wordt gedragscontrole afgedwongen en kan de gebruiker dit niet uitschakelen. Wanneer deze instelling is ingesteld op Niet-geconfigureerd, krijgt de instelling weer de standaardwaarde van de client. Deze standaardwaarde is ingeschakeld en de gebruiker kan dit wijzigen. Als u realtime bewaking wilt uitschakelen, gebruikt u een aangepaste URI.
 
   **Standaardinstelling**: Ja
 
-- **Bestanden scannen die zijn geopend vanuit mappen op het netwerk**:  
-  Als bestanden alleen-lezen zijn, kunnen gebruikers geen gedetecteerde malware verwijderen.
+- **Inkomende e-mailberichten scannen**:  
+  CSP: [Defender/AllowEmailScanning](https://go.microsoft.com/fwlink/?linkid=2114052)
+
+  Wanneer deze instelling is ingesteld op Ja, worden het postvak IN en mailbestanden (bijvoorbeeld met de indelingen PST, DBX, MNX, MIME en BINHEX) gescand. Wanneer deze instelling is ingesteld op Niet geconfigureerd, krijgt de instelling weer de standaardwaarde van de client waarbij e-mailbestanden niet worden gescand.
 
   **Standaardinstelling**: Ja
 
-- **Niet-vertrouwd USB-procestype**:  
-  Met deze regel kunnen beheerders voorkomen dat niet-ondertekende of niet-vertrouwde uitvoerbare bestanden worden uitgevoerd vanaf verwisselbare USB-stations, zoals SD-kaarten.  
-  [Meer informatie](https://go.microsoft.com/fwlink/?linkid=2067100)
+- **Verwisselbare stations scannen tijdens een volledige scan**:  
+  CSP: [Defender/AllowFullScanRemovableDriveScanning](https://go.microsoft.com/fwlink/?linkid=2113946)
 
-  **Standaardinstelling**: Blokkeren
+  Wanneer deze instelling is ingesteld op Ja, worden tijdens een volledige scan verwijderbare stations (bijvoorbeeld USB-sticks) gescand. Wanneer deze instelling is ingesteld op Niet geconfigureerd, wordt deze instelling weer teruggezet op de standaardwaarde van de client, waarbij verwijderbare stations worden gescand; de gebruiker kan dit echter uitschakelen.
+  **Standaardinstelling**: Ja  
 
-- **Office-apps: invoeringstype voor andere processen**:  
-  Office-apps, inclusief Word, Excel, PowerPoint en OneNote, kunnen geen code invoeren in andere processen. Dit wordt doorgaans gebruikt door malware om schadelijke code uit te voeren in een poging om de activiteit te verbergen voor antivirusscanegines.  
-  [Meer informatie](https://go.microsoft.com/fwlink/?linkid=2067019)
+- **Voorkomen dat Office-toepassingen code in andere processen injecteren**:  
+  [Apparaten beveiligen tegen misbruik](https://go.microsoft.com/fwlink/?linkid=872974)
+
+  Wanneer deze instelling is ingesteld op Ja, mogen Office-toepassingen geen code in andere processen injecteren. Wanneer deze instelling is ingesteld op Alleen controle, worden er Windows-gebeurtenissen geactiveerd in plaats van geblokkeerd. Wanneer deze instelling is ingesteld op Niet geconfigureerd, wordt de instelling teruggezet op de Windows-standaardwaarde, namelijk uitgeschakeld. Deze ASR-regel wordt beheerd via de volgende GUID: 75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84
 
   **Standaardinstelling**:  Blokkeren
 
-- **Office-macrocode staat Win32-importtype toe**:  
-  Malware kan macrocode in Office-bestanden gebruiken om Win32-DLL's te importeren en laden, die worden gebruikt om API-aanroepen uit te voeren voor verdere infectie in het hele systeem. Met deze regel wordt geprobeerd Office-bestanden te blokkeren die macrocode bevatten waarmee Win32-DLL's kunnen worden geïmporteerd. Dit is inclusief Word, Excel, PowerPoint en OneNote.  
-  [Meer informatie](https://go.microsoft.com/fwlink/?linkid=2067130)
+- **Voorkomen dat Office-toepassingen uitvoerbare inhoud maken**  
+  [Apparaten beveiligen tegen misbruik](https://go.microsoft.com/fwlink/?linkid=872975)
+
+  Wanneer deze instelling is ingesteld op Ja, kunnen Office-toepassingen geen uitvoerbare inhoud maken. Wanneer deze instelling is ingesteld op Alleen controle, worden er Windows-gebeurtenissen geactiveerd in plaats van geblokkeerd. Wanneer deze instelling is ingesteld op Niet geconfigureerd, wordt de instelling teruggezet op de Windows-standaardwaarde, namelijk uitgeschakeld. Deze ASR-regel wordt beheerd via de volgende GUID: 3B576869-A4EC-4529-8536-B80A7769E899
+
+  **Standaardinstelling**:  Blokkeren
+
+- **Voorkomen dat Office-toepassingen onderliggende processen maken**  
+  [Apparaten beveiligen tegen misbruik](https://go.microsoft.com/fwlink/?linkid=872976)
+
+  Wanneer deze instelling is ingesteld op Controlemodus, treden Windows-gebeurtenissen op in plaats van dat deze worden geblokkeerd. Wanneer deze instelling is ingesteld op Niet geconfigureerd, wordt de instelling teruggezet op de Windows-standaardwaarde, namelijk uitgeschakeld. Deze ASR-regel wordt beheerd via de volgende GUID: D4F940AB-401B-4EFC-AADC-AD5F3C50688A
+
+  **Standaardinstelling**:  Blokkeren
+
+- **Win32 API-aanroepen blokkeren vanuit Office-macro's**:  
+  [Apparaten beveiligen tegen misbruik](https://go.microsoft.com/fwlink/?linkid=872977)
+
+  Wanneer deze instelling is ingesteld op Ja, mogen Office-macro's niet gebruikmaken van Win32 API-aanroepen. Wanneer deze instelling is ingesteld op Alleen controle, worden er Windows-gebeurtenissen geactiveerd in plaats van geblokkeerd. Wanneer deze instelling is ingesteld op Niet geconfigureerd, wordt de instelling teruggezet op de Windows-standaardwaarde, namelijk uitgeschakeld. Deze ASR-regel wordt beheerd via de volgende GUID: 92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B
+  
+  **Standaardinstelling**: Blokkeren
+
+- **Uitvoering van mogelijk verborgen scripts (js/vbs/ps) voorkomen**:  
+  [Apparaten beveiligen tegen misbruik](https://go.microsoft.com/fwlink/?linkid=872978)
+
+  Wanneer deze instelling is ingesteld op Ja, blokkeert Defender de uitvoering van verborgen scripts. Wanneer deze instelling is ingesteld op Alleen controle, worden er Windows-gebeurtenissen geactiveerd in plaats van geblokkeerd. Wanneer deze instelling is ingesteld op Niet geconfigureerd, wordt de instelling teruggezet op de Windows-standaardwaarde, namelijk uitgeschakeld. Deze ASR-regel wordt beheerd via de volgende GUID: 5BEB7EFE-FD9A-4556-801D-275E5FFC04CC
+  
+  **Standaardinstelling**: Blokkeren
+
+- **Uitvoertype vanuit e-mailinhoud**:    
+  [Downloaden van uitvoerbare inhoud via e-mail- en webmailclients blokkeren](https://go.microsoft.com/fwlink/?linkid=872980)
+
+  Wanneer deze instelling is ingesteld op Ja, wordt uitvoerbare inhoud die is gedownload uit e-mail- en webmailclients geblokkeerd. Wanneer deze instelling is ingesteld op Alleen controle, worden er Windows-gebeurtenissen geactiveerd in plaats van geblokkeerd. Wanneer deze instelling is ingesteld op Niet geconfigureerd, wordt de instelling teruggezet op de Windows-standaardwaarde, namelijk uitgeschakeld.
 
   **Standaardinstelling**: Blokkeren
 
-- **Defender op cloudblokniveau**:  
-  Defender op cloudblokniveau.
+- **Type referentiediefstal voorkomen**:  
+  [Apparaten beveiligen tegen misbruik](https://go.microsoft.com/fwlink/?linkid=874499)
+  
+  Wanneer deze instelling is ingesteld op Ja, worden pogingen om referenties te stelen via lsass.exe geblokkeerd. Wanneer deze instelling is ingesteld op Alleen controle, worden er Windows-gebeurtenissen geactiveerd in plaats van geblokkeerd. Wanneer deze instelling is ingesteld op Niet geconfigureerd, wordt de instelling teruggezet op de Windows-standaardwaarde, namelijk uitgeschakeld. Deze ASR-regel wordt beheerd via de volgende GUID: 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2
 
-  **Standaardinstelling**: Niet geconfigureerd
+  **Standaardinstelling**: Inschakelen
 
-- **Realtimecontrole**:  
-  Voor Defender is realtimecontrole vereist.
+- **Defender: mogelijk ongewenste app-actie**:  
+  CSP: [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)+
 
-  **Standaardinstelling**: Ja
+  De beveiligingsfunctie tegen mogelijk ongewenste toepassingen (PUA; potentially unwanted application) in Microsoft Defender Antivirus kan mogelijk ongewenste toepassingen identificeren en voorkomen dat ze worden gedownload en geïnstalleerd op eindpunten in uw netwerk. Deze toepassingen worden niet beschouwd als virussen, malware of andere soorten bedreigingen, maar kunnen mogelijk acties uitvoeren op eindpunten die nadelige invloed hebben op de prestaties of het gebruik. Mogelijk ongewenste toepassingen kan ook verwijzen naar toepassingen die een slechte reputatie hebben. Standaardgedrag van mogelijk ongewenste toepassingen is: Verschillende typen softwarebundeling Advertentietoevoeging in webbrowsers Optimalisatieprogramma's voor stuurprogramma's en registers die problemen detecteren en vragen om betaling om problemen op te lossen. Ze blijven op het eindpunt en er worden geen wijzigen of optimalisaties aangebracht (ook wel bekend als 'rogue antivirus'-programma's). Deze toepassingen kunnen het risico op infectie van uw netwerk met malware verhogen, ervoor zorgen dat malware-infecties moeilijker kunnen worden geïdentificeerd en kunnen IT-resources verspillen omdat deze de toepassingen moeten opschonen.
+
+  **Standaardinstelling**: Blokkeren
+
+- **Voorkomen dat niet-vertrouwde en niet-ondertekende processen kunnen worden uitgevoerd vanaf een USB**:  
+  [Apparaten beveiligen tegen misbruik](https://go.microsoft.com/fwlink/?linkid=874502)
+  
+  Wanneer deze instelling is ingesteld op Ja, worden niet-vertrouwde/niet-ondertekende processen die worden uitgevoerd vanaf een USB-station geblokkeerd. Wanneer deze instelling is ingesteld op Alleen controle, worden er Windows-gebeurtenissen geactiveerd in plaats van geblokkeerd. Wanneer deze instelling is ingesteld op Niet geconfigureerd, wordt de instelling teruggezet op de Windows-standaardwaarde, namelijk uitgeschakeld. Deze ASR-regel wordt beheerd via de volgende GUID: b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4
+
+  **Standaardinstelling**: Blokkeren
+
+- **Netwerkbeveiliging**:  
+  [Defender/EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=872618)
+
+  Wanneer deze instelling is ingesteld op Ja, wordt netwerkbeveiliging ingeschakeld voor alle gebruikers in het systeem. Met netwerkbeveiliging worden werknemers beschermd tegen phishing-praktijken en schadelijke inhoud op internet. Dit omvat ook browsers van derden. Als u deze optie instelt op Alleen controle, worden gebruikers niet geblokkeerd voor gevaarlijke domeinen, maar worden in plaats daarvan Windows-gebeurtenissen gegenereerd. Wanneer deze instelling is ingesteld op Niet geconfigureerd, wordt de instelling teruggezet op de Windows-standaardwaarde, namelijk uitgeschakeld.
+
+  **Standaardinstelling**: Inschakelen
+
+- **Voorbeeld van een Defender-toestemmingstype voor indiening**:  
+  [Defender/SubmitSamplesConsent](https://go.microsoft.com/fwlink/?linkid=2067131)
+
+  Hiermee wordt het gebruikerstoestemmingsniveau in Microsoft Defender gecontroleerd om gegevens te verzenden. Als de vereiste toestemming al is verleend, worden de gegevens door Microsoft Defender ingediend. Als dit niet het geval is (en als de gebruiker heeft opgegeven dat deze vraag nooit mag worden gesteld), wordt de gebruikersinterface geopend om de gebruiker om toestemming te vragen (wanneer Defender/AllowCloudProtection is toegestaan) voordat gegevens worden verzonden.
+
+  **Standaardinstelling**: Veilige voorbeelden automatisch verzenden
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 
-- **Office-communicatieapps worden gestart in een onderliggend proces**:  
-  **Standaardinstelling**:  Inschakelen
+- **Netwerkbestanden scannen**  
+  [Defender/AllowScanningNetworkFiles](https://go.microsoft.com/fwlink/?linkid=2114049)
+
+  - **Standaardinstelling**: Ja
+
+- **Voorkomen dat JavaScript of VBScript gedownloade uitvoerbare inhoud start**  
+  [Apparaten beveiligen tegen misbruik](https://go.microsoft.com/fwlink/?linkid=872979)
+
+  Wanneer deze instelling is ingesteld op Ja, blokkeert Defender het uitvoeren van JavaScript- en VBScript-bestanden die van internet zijn gedownload. Wanneer deze instelling is ingesteld op Alleen controle, worden er Windows-gebeurtenissen geactiveerd in plaats van geblokkeerd. Wanneer deze instelling is ingesteld op Niet geconfigureerd, wordt de instelling teruggezet op de Windows-standaardwaarde, namelijk uitgeschakeld. Deze ASR-regel wordt beheerd via de volgende GUID: D3E037E1-3EB8-44C8-A917-57927947596D
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
-
-- **Office-apps: uitvoerbare inhoud maken of lanceren**:  
-  Deze regel is gericht op typisch gedrag van verdachte en schadelijke invoegtoepassingen en scripts (extensies) die uitvoerbare bestanden maken of openen. Dit is een typische malwaretechniek. Extensies kunnen niet worden gebruikt door Office-apps. Doorgaans gebruiken deze extensies Windows Scripting Host (WSH-bestanden) om scripts uit te voeren die bepaalde taken automatiseren of door gebruikers gemaakte extra functies leveren.  
-  [Meer informatie](https://go.microsoft.com/fwlink/?linkid=2067108)
-
-  **Standaardinstelling**: Blokkeren
+::: zone pivot="mdm-may-2019,mdm-preview"
 
 ## <a name="ms-security-guide"></a>MS-beveiligingshandleiding
 
@@ -1733,7 +1761,7 @@ Raadpleeg [Policy CSP - MSSLegacy](https://docs.microsoft.com/windows/client-man
 
   **Standaardinstelling**: hoogste beveiliging
 
-- **ICMP-omleidingen van netwerk overschrijven door OSPF gegenereerde omleidingen**:  
+- **ICMP-omleidingen voor het netwerk overschrijven routes die door OSPF zijn gegenereerd**:  
   [Meer informatie](https://go.microsoft.com/fwlink/?linkid=2067326)
 
   **Standaardinstelling**: Uitgeschakeld
@@ -1787,19 +1815,21 @@ Zie [Beleids-CSP - RemoteAssistance](https://docs.microsoft.com/windows/client-m
 
   **Standaardinstelling**: Hulp op afstand uitschakelen
 
-  Wanneer dit is ingeschakeld op *Hulp op afstand inschakelen*, configureert u de volgende aanvullende instellingen:
+<!-- These settings are not available: 
+  When set to *Enable Remote Assistance*, configure the following additional settings:
 
-  - **Machtiging Hulp op afstand aanvragen**:  
-    **Standaardinstelling**: Weergave
+  - **Remote Assistance solicited permission**:  
+    **Default**: View
 
-  - **Maximale waarde tickettijd**:  
-    **Standaardinstelling**: *Niet geconfigureerd*
+  - **Maximum ticket time value**:  
+    **Default**: *Not configured*
 
-  - **Maximale periode tickettijd**:  
-    **Standaardinstelling**: Minuten
+  - **Maximum ticket time period**:  
+    **Default**: Minutes
 
-  - **Uitnodigingsmethode e-mail**:  
-    **Standaardinstelling**: Eenvoudige MAPI
+  - **E-Mail invitation method**:  
+    **Default**: Simple MAPI
+-->
 
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
@@ -1917,6 +1947,9 @@ Zie [Beleids-CSP - Search](https://docs.microsoft.com/windows/client-management/
 
 Zie [Beleids-CSP - SmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen) in de Windows-documentatie voor meer informatie.
 
+::: zone-end
+::: zone pivot="mdm-preview"
+
 - **Uitvoering van niet-geverifieerde bestanden blokkeren**:  
   Verhinderen dat een gebruiker niet-geverifieerde bestanden uitvoert.
 
@@ -1933,6 +1966,26 @@ Zie [Beleids-CSP - SmartScreen](https://docs.microsoft.com/windows/client-manage
   [Meer informatie](https://go.microsoft.com/fwlink/?linkid=2067168)
 
   **Standaardinstelling**: Ja
+
+::: zone-end
+::: zone pivot="mdm-may-201"
+
+- **Windows SmartScreen inschakelen**  
+  CSP: [SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)
+
+  Wanneer deze instelling is ingesteld op Ja, wordt het gebruik van SmartScreen afgedwongen voor alle gebruikers. Wanneer deze instelling is ingesteld op Niet geconfigureerd, wordt de standaardinstelling van Windows teruggezet. Dit betekent dat SmartScreen wordt ingeschakeld, maar gebruikers kunnen deze instelling indien gewenst wijzigen. Als u SmartScreen wilt uitschakelen, gebruikt u een aangepaste URI.
+
+  **Standaardinstelling**: Ja
+
+- **Blokkeren dat gebruikers SmartScreen-waarschuwingen kunnen negeren**  
+  CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
+
+  Wanneer deze instelling is ingesteld op Ja, wordt in SmartScreen geen optie weergegeven voor de gebruiker om de waarschuwing te negeren en de app uit te voeren. De waarschuwing wordt weergegeven, maar de gebruiker kan deze omzeilen. Wanneer deze instelling is ingesteld op Niet geconfigureerd, wordt de instelling teruggezet op de Windows-standaardwaarde, waarbij overschrijven door de gebruiker is toegestaan. Voor deze instelling moet de instelling SmartScreen afdwingen voor apps en bestanden worden ingeschakeld.
+
+  **Standaardinstelling**: Ja
+
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019"
 
 ## <a name="system"></a>Systeem
 
@@ -1991,52 +2044,40 @@ Zie [Beleids-CSP - WindowsConnectionManager](https://docs.microsoft.com/windows/
 
 ## <a name="windows-hello-for-business"></a>Windows Hello voor Bedrijven
 
-- **Het gebruik van verbeterde anti-adresvervalsing inschakelen, indien beschikbaar**
+- **Windows Hello voor Bedrijven blokkeren**  
+  Windows Hello voor Bedrijven is een alternatieve aanmeldmethode voor Windows die wachtwoorden, smartcards en virtuele smartcards vervangt. Als u deze beleidsinstelling uitschakelt of niet configureert, richt het apparaat Windows Hello voor Bedrijven in. Als u deze beleidsinstelling inschakelt, richt het apparaat voor geen enkele gebruiker Windows Hello voor Bedrijven in.
 
-  Zo Ja, dan gebruiken apparaten verbeterde anti-adresvervalsing, indien beschikbaar. Zo Nee, dan wordt anti-adresvervalsing geblokkeerd. Niet geconfigureerd: respecteert configuraties die op de client worden uitgevoerd.  
-  [Meer informatie](https://go.microsoft.com/fwlink/?linkid=2067192)
+  **Standaardinstelling**: Ingeschakeld
+  
+  Als de optie wordt ingesteld op *Uitgeschakeld*, kunt u de volgende instellingen configureren:
 
-  **Standaardinstelling**: Ja
+  - **Minimale lengte pincode**  
+    De minimale lengte van de pincode moet tussen de 4 en 127 tekens zijn.
 
-- **Windows Hello voor Bedrijven configureren**
+    **Standaardinstelling**: *Niet geconfigureerd*
 
-  Windows Hello voor Bedrijven is een alternatieve aanmeldmethode voor Windows die wachtwoorden, smartcards en virtuele smartcards vervangt.
+  - **Het gebruik van verbeterde anti-adresvervalsing inschakelen, indien beschikbaar**  
+    [Bescherming tegen adresvervalsing](https://go.microsoft.com/fwlink/?linkid=2067192)
 
-  > [!IMPORTANT]
-  > De opties voor deze instelling zijn het omgekeerde van hun impliciete betekenis. Terwijl ze het omgekeerde betekenen, zorgt de waarde *Ja* er niet voor dat Windows Hello wordt ingeschakeld, en betekent in plaats hiervan *Niet geconfigureerd*. Als deze instelling is ingesteld op *Niet geconfigureerd*, wordt Windows Hello ingeschakeld op apparaten die deze basislijn ontvangen.
-  >
-  > De volgende beschrijvingen zijn gewijzigd om dit gedrag weer te geven. De omkering van instellingen wordt opgelost in een toekomstige update van deze beveiligingsbasislijn.
+    Indien ingeschakeld, gebruiken apparaten verbeterde anti-adresvervalsing, indien beschikbaar. Als deze niet is geconfigureerd, wordt de clientconfiguratie voor anti-adresvervalsing geaccepteerd.
 
-  - Als deze instelling is ingesteld op *Niet geconfigureerd*, wordt Windows Hello ingeschakeld en wordt Windows Hello voor Bedrijven ingericht met het apparaat.
-  - Als deze instelling is ingesteld op *Ja*, is de basislijn niet van invloed op de beleidsinstelling van het apparaat. Dit betekent dat als Windows Hello voor Bedrijven is uitgeschakeld op een apparaat, het uitgeschakeld blijft. Als deze instelling is ingeschakeld, blijft het programma ingeschakeld.
-  <!-- expected behavior 
-  - When set to *Yes*, you  enable this policy and the device provisions Windows Hello for Business.  
-  - When set to *Not configured*, the baseline does not affect the policy setting of the device. This means that if Windows Hello for Business is disabled on a device, it remains disabled. If its enabled, it remains enabled. 
-  -->
+    **Standaardinstelling**: Niet geconfigureerd
 
-  U kunt Windows Hello voor Bedrijven niet uitschakelen via deze basislijn. U kunt Windows Hello voor Bedrijven uitschakelen wanneer u [Windows-inschrijving](windows-hello.md) configureert, of als onderdeel van een apparaatconfiguratieprofiel voor [identiteitsbescherming](identity-protection-configure.md).  
+  - **Kleine letters in pincode**:  
+    Indien vereist moet de pincode van de gebruiker minstens één kleine letter bevatten.
 
-  **Standaardinstelling**: Ja
+    **Standaardinstelling**: Niet toegestaan
 
-- **Kleine letters in pincode vereisen**:  
-  Indien vereist moet de pincode van de gebruiker minstens één kleine letter bevatten.
+  - **Speciale tekens in pincode**:  
+    Indien vereist moet de gebruikerspincode minstens één speciaal teken bevatten.
 
-  **Standaardinstelling**: Toegestaan
+    **Standaardinstelling**: Niet toegestaan
+ 
 
-- **Speciale tekens in pincode vereisen**:  
-  Indien vereist moet de gebruikerspincode minstens één speciaal teken bevatten.
+  - **Hoofdletters in pincode**:  
+    Indien vereist moet de gebruikerspincode minstens één hoofdletter bevatten.
 
-  **Standaardinstelling**: Toegestaan
-
-- **Minimale lengte pincode**:  
-  De minimale lengte van de pincode moet tussen de 4 en 127 tekens zijn.
-
-  **Standaardinstelling**: 6
-
-- **Hoofdletters in pincode vereisen**:  
-  Indien vereist moet de gebruikerspincode minstens één hoofdletter bevatten.
-
-  **Standaardinstelling**: Toegestaan
+    **Standaardinstelling**: Niet toegestaan
 
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
@@ -2062,7 +2103,7 @@ Raadpleeg [Policy CSP - WindowsInkWorkspace](https://docs.microsoft.com/windows/
 
 Raadpleeg [Policy CSP - WindowsPowerShell](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowspowershell) (Beleids-CSP - WindowsPowerShell) in de Windows-documentatie voor meer informatie.
 
-- **PowerShell: logboekregistratie van Shell-script blokkeren**:  
+- **Logboekregistratie van blokkeren van PowerShell-scripts**:  
   Met deze beleidsinstelling wordt logboekregistratie van alle PowerShell-scriptinvoer naar het gebeurtenislogboek van Microsoft-Windows-PowerShell/Operational ingeschakeld. Als u deze beleidsinstelling inschakelt, wordt met Windows PowerShell de verwerking van opdrachten, scriptblokkeringen, functies en scripts via logboekregistratie bijgehouden, ongeacht of deze interactief worden aangeroepen of via automatisering. Als u deze beleidsinstelling uitschakelt, wordt logboekregistratie van PowerShell-scriptinvoer uitgeschakeld. Als u de logboekregistratie voor het aanroepen van script blokkeren inschakelt, worden gebeurtenissen door PowerShell vastgelegd bij het aanroepen van een opdracht, scriptblokkering, functie of bij het starten of stoppen van een script. Als het aanroeplogbestand wordt ingeschakeld, wordt er een groot aantal gebeurtenislogboeken gegenereerd. Opmerking: Deze beleidsinstelling bestaat onder Computerconfiguratie en Gebruikersconfiguratie in de Groepsbeleidseditor. De beleidsinstelling Computerconfiguratie heeft voorrang op de beleidsinstelling Gebruikersconfiguratie.  
   [Meer informatie](https://go.microsoft.com/fwlink/?linkid=2067330)
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 632f3bf16fd062acf05c7bd4e269069468df42a3
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 36944b05a12b150c15e59f145efd9fef85598a2f
+ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79360207"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82881040"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Wijzigingenlogboek voor de API van Intune-datawarehouse
 
@@ -265,4 +265,4 @@ U kunt rapporten en gegevensvisualisaties maken met behulp van de informatie ove
 
 ## <a name="next-steps"></a>Volgende stappen
 - Ontdek [wat er elke week nieuw is in Intune](../fundamentals/whats-new.md). U vindt hier ook informatie over toekomstige wijzigingen, belangrijke kennisgevingen betreffende de service en informatie over oudere releases.
-- Lees het [Microsoft Intune-blog](https://go.microsoft.com/fwlink/?LinkID=273882).
+- Lees het [Microsoft Intune-blog](https://www.microsoft.com/microsoft-365/blog/microsoft-intune/).

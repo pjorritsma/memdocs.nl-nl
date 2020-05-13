@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cc1b11fe533499ebe29101c09fb1355cd8d04243
-ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
+ms.openlocfilehash: 373c3c5a6a3167943d78e5a17ac9b7cab8afba8a
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82183072"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943855"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Internettoegang beheren met behulp van Microsoft Edge met Microsoft Intune
 
@@ -351,7 +351,7 @@ Microsoft Edge op iOS biedt standaard de mogelijkheid om de wachtwoorden van uw 
 
 |    Sleutel    |    Waarde    |
 |-----------------------|-----------------------|
-|    `com.microsoft.intune.mam.managedbrowser.disableFeatures`    |    Met **wachtwoord** worden de meldingen uitgeschakeld waarin de eindgebruiker wordt aangeboden om wachtwoorden op te slaan.    |
+|    `com.microsoft.intune.mam.managedbrowser.disabledFeatures`    |    Met **wachtwoord** worden de meldingen uitgeschakeld waarin de eindgebruiker wordt aangeboden om wachtwoorden op te slaan.    |
 
 ### <a name="disable-users-from-adding-extensions-to-microsoft-edge"></a>Voorkomen dat gebruikers uitbreidingen toevoegen aan Microsoft Edge 
 

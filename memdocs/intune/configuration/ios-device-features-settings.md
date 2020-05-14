@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/27/2020
+ms.date: 05/07/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af60c16c4a7c9d27409f82cfc53d5c345dfe1af0
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: fce26aab90989f31ee56a9abd58f617c780d9c4b
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210211"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943872"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>iOS- en iPadOS-apparaatinstellingen voor het gebruik van algemene iOS-/iPadOS-functies in Intune
 
@@ -107,7 +107,7 @@ U kunt maximaal **zes** items (combinatie van apps en mappen) voor de apparaatdo
       U kunt maximaal **20** pagina's toevoegen voor de apparaatdock.
 
 > [!NOTE]
-> Wanneer u pictogrammen toevoegt met behulp van de Dock-instellingen, zijn de pictogrammen op het startscherm en de pagina's vergrendeld en kunnen deze niet worden verplaatst. Dit is mogelijk inherent aan iOS/iPadOS en de MDM-beleidsregels van Apple.
+> Wanneer u de indelingsinstellingen voor het Startscherm gebruikt om pagina's toe te voegen of pagina's en apps aan het Dock toevoegt, zijn de pictogrammen op het Startscherm en de pagina's vergrendeld. Deze kunnen niet worden verplaatst of verwijderd. Dit gedrag is mogelijk inherent aan iOS/iPadOS en de MDM-beleidsregels van Apple.
 
 #### <a name="example"></a>Voorbeeld
 

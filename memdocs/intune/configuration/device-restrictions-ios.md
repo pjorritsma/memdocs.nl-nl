@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 05/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 897366ba9b7bae15050c0aa5e392ba5255a90b24
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 49ecd2a1aaa5408a721b06264703720be601c73c
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407822"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269011"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Met instellingen voor iOS- en iPadOS-apparaten kunt u functies toestaan of beperken met behulp van Intune
 
@@ -95,6 +95,10 @@ Deze instellingen worden toegevoegd aan een apparaatconfiguratieprofiel in Intun
 - **Activeringsvergrendeling**: Met **Toestaan** schakelt u Activeringsvergrendeling in op iOS/iPadOS-apparaten in de supervisiemodus. Met Activeringsslot kan een verloren of gestolen apparaat moeilijker opnieuw worden geactiveerd. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
 - **Verwijderen van app blokkeren**: Met **Blokkeren** kunnen gebruikers geen apps verwijderen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem toestaat dat gebruikers apps van apparaten kunnen verwijderen.
 - **USB-accessoires toestaan terwijl het apparaat is vergrendeld**: Met **Toestaan** kunnen gegevens worden uitgewisseld tussen USB-accessoires en apparaten die al meer dan een uur zijn vergrendeld. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem de beperkte USB-modus niet bijwerkt op apparaten en dat USB-accessoires geen gegevens kunnen overdragen vanaf apparaten als deze langer dan een uur zijn vergrendeld.
+
+  Deze functie is van toepassing op:  
+  - iOS/iPadOS 11.4.1 en hoger
+
 - **Automatisch instellen van datum en tijd afdwingen**: Met **Vereisen** wordt het instellen van de datum en tijd automatisch afgedwongen op apparaten in de supervisiemodus. De tijdzone van het apparaat wordt bijgewerkt wanneer het apparaat mobiele verbindingen heeft of wanneer Wi-Fi met locatieservices is ingeschakeld voor het apparaat. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
 - **Studenten moeten toestemming vragen om de Classroom-cursus te verlaten**: Met **Vereisen** wordt afgedwongen dat leerlingen/studenten die zijn ingeschreven bij een niet-beheerde cursus met de app Klaslokaal, toestemming aan de docent vragen om de cursus te verlaten. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem niet afdwingt dat de leerling/student om toestemming vraagt.
 
@@ -292,7 +296,7 @@ Deze instellingen worden toegevoegd aan een apparaatconfiguratieprofiel in Intun
   Vanaf iOS/iPadOS 13.0 is het voor deze instelling vereist dat apparaten onder supervisie staan.
 
   - **Apps installeren via de App Store**: Met **Blokkeren** wordt de App Store niet weergegeven op het startscherm van apparaten. Gebruikers kunnen iTunes nog steeds gebruiken of met Apple Configurator apps installeren. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem de App Store op het startscherm toestaat.
-  - **Automatisch downloaden van apps**: **Blokkeren** voorkomt dat apps die zijn gekocht op andere apparaten, automatisch worden gedownload. Dit is niet van invloed op updates voor bestaande apps. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem gebruikers toestaat om apps die zijn gekocht op andere iOS-/iPadOS-apparaten, te downloaden op het apparaat.
+  - **Automatisch downloaden van apps**: **Blokkeren** voorkomt dat apps die zijn gekocht op andere apparaten automatisch worden gedownload en dat nieuwe apps automatisch worden bijgewerkt. Dit is niet van invloed op updates voor bestaande apps. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem gebruikers toestaat om apps die zijn gekocht op andere iOS-/iPadOS-apparaten op het apparaat te downloaden of bij te werken.
 
 - **Expliciete muziek-, podcast- of nieuwsinhoud op iTunes**: **Blokkeren** voorkomt expliciete muziek-, podcast- of nieuwsinhoud in iTunes. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem het apparaat toegang geeft tot inhoud voor volwassenen in de Store.
 
@@ -324,7 +328,10 @@ Deze instellingen worden toegevoegd aan een apparaatconfiguratieprofiel in Intun
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Deze instellingen zijn van toepassing op: Apparaatinschrijving, automatische apparaatinschrijving (onder supervisie)
 
+
 - **Spotlight-zoekacties voor de weergave van resultaten op internet**: Met **Blokkeren** zorgt u ervoor dat Spotlight geen resultaten meer retourneert na een zoekopdracht op internet. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem toestaat dat Zoeken met Spotlight verbinding maakt met internet om zoekresultaten te verstrekken.
+
+  Deze instelling wordt gedupliceerd in de gebruikersinterface, wat in een toekomstige release wordt opgelost. Momenteel is deze instelling van toepassing op apparaten onder supervisie. In een toekomstige versie is deze instelling van toepassing op apparaten die zijn ingeschreven of automatisch zijn ingeschreven en waarvoor geen supervisie nodig is.
 
 - **Safari-cookies**: Selecteer hoe cookies moeten worden verwerkt op het apparaat. Uw opties zijn:
   - Toestaan
@@ -334,7 +341,7 @@ Deze instellingen worden toegevoegd aan een apparaatconfiguratieprofiel in Intun
 
 - **Safari JavaScript**: Met **Blokkeren** voorkomt u dat Java-scripts worden uitgevoerd in de browser op apparaten. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem Java-scripts toestaat.
 
-- **Safari-pop-ups**: Met **Blokkeren** wordt het gebruik van de pop-upblokkering in de webbrowser uitgeschakeld. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem de pop-upblokkering toestaat.
+- **Safari-pop-ups**: Met **Blokkeren** worden alle pop-ups in de Safari-webbrowser geblokkeerd. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem de pop-upblokkering toestaat.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Deze instellingen zijn van toepassing op: Automatische apparaatinschrijving (onder toezicht)
 
@@ -386,6 +393,8 @@ Deze instellingen worden toegevoegd aan een apparaatconfiguratieprofiel in Intun
 - **Wijzigingen in de instellingen van de app Zoek mijn vrienden**: Met **Blokkeren** voorkomt u wijzigingen in de instellingen van de app Zoek vrienden. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem toestaat dat gebruikers de instellingen van de app Zoek mijn vrienden wijzigen.
 
 - **Spotlight-zoekacties voor de weergave van resultaten op internet**: Met **Blokkeren** zorgt u ervoor dat Spotlight geen resultaten meer retourneert na een zoekopdracht op internet. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem toestaat dat Zoeken met Spotlight verbinding maakt met internet om zoekresultaten te verstrekken.
+
+  Deze instelling wordt gedupliceerd in de gebruikersinterface, wat in een toekomstige release wordt opgelost. Momenteel is deze instelling van toepassing op apparaten onder supervisie. In een toekomstige versie is deze instelling van toepassing op apparaten die zijn ingeschreven of automatisch zijn ingeschreven en waarvoor geen supervisie nodig is.
 
 - **Het verwijderen van systeem-apps van apparaat blokkeren**: Met **Blokkeren** wordt de mogelijkheid uitgeschakeld om systeem-apps van het apparaat te verwijderen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem toestaat dat gebruikers systeem-apps kunnen verwijderen.
 
@@ -586,11 +595,16 @@ Ga op een van de volgende manieren te werk om apps toe te voegen:
 
   Vanaf iOS/iPadOS 13.0 is het voor deze instelling vereist dat apparaten onder supervisie staan.
 
-## <a name="autonomous-single-app-mode"></a>Autonome modus voor één app
+## <a name="autonomous-single-app-mode-asam"></a>Autonome modus voor één app (ASAM)
 
-Gebruik deze instellingen om iOS-/iPadOS-apparaten te configureren om specifieke apps in de autonome modus voor één app uit te voeren. Als deze modus is geconfigureerd en gebruikers een van de geconfigureerde apps starten, wordt het apparaat vergrendeld voor deze app. Schakelen tussen apps/taken is uitgeschakeld totdat gebruikers de toegestane app verlaten.
+Gebruik deze instellingen om iOS-/iPadOS-apparaten te configureren om specifieke apps in de autonome modus voor één app (ASAM) uit te voeren. Als deze modus is geconfigureerd en gebruikers een van de geconfigureerde apps starten, wordt het apparaat vergrendeld voor deze app. Schakelen tussen apps/taken is uitgeschakeld totdat gebruikers de toegestane app verlaten.
 
 Voeg bijvoorbeeld in een school- of universiteitsomgeving een app toe waarmee gebruikers een test kunnen uitvoeren op het apparaat. Of vergrendel het apparaat in de Bedrijfsportal-app totdat de gebruiker zich verifieert. Wanneer de acties van de app zijn voltooid door gebruikers, of wanneer u het beleid verwijdert, keert het apparaat terug naar de normale staat.
+
+> [!NOTE]
+> Niet alle apps ondersteunen de autonome modus voor één app. Als u een app in de autonome modus voor één app wilt plaatsen, is doorgaans een bundel-ID of een sleutel-/waardepaar geleverd door een app-configuratiebeleid vereist. Zie de [`autonomousSingleAppModePermittedAppIDs` beperking](https://developer.apple.com/documentation/devicemanagement/restrictions) in de MDM-documentatie van Apple voor meer informatie. Zie de documentatie van de leverancier voor meer informatie over de specifieke instellingen die nodig zijn voor de app die u wilt configureren.
+
+Als u bijvoorbeeld Zoom Rooms wilt configureren in de autonome modus voor één app, geeft Zoom aan dat de bundel-id van `us.zoom.zpcontroller` moet worden gebruikt. In dit geval kunt u ook een wijziging aanbrengen in de Zoom-webportal. Zie voor meer informatie het [Zoom-helpcentrum](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Deze instellingen zijn van toepassing op: Automatische apparaatinschrijving (onder toezicht)
 
@@ -601,6 +615,8 @@ Voeg bijvoorbeeld in een school- of universiteitsomgeving een app toe waarmee ge
 U kunt ook een CSV-bestand met de lijst met app-namen en de bijbehorende bundel-id’s **importeren**. Of **Exporteer** een bestaande lijst die de apps bevat.
 
 ## <a name="kiosk"></a>Kiosk
+
+[Modus voor één app](https://support.apple.com/guide/mdm/mdm80a981/web) wordt aangeduid als kioskmodus in Intune.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Deze instellingen zijn van toepassing op: Automatische apparaatinschrijving (onder toezicht)
 
@@ -666,8 +682,7 @@ U kunt ook een CSV-bestand met de lijst met app-namen en de bijbehorende bundel-
 
 De supervisiemodus voor iOS/iPadOS kan alleen worden ingeschakeld tijdens de initiële installatie van het apparaat via het Device Enrollment Program van Apple of met behulp van Apple Configurator. Zodra de supervisiemodus is ingeschakeld, kunt u in Intune een apparaat configureren met de volgende functionaliteit:
 
-- App-vergrendeling (modus voor één app) 
-- Algemene HTTP-proxy 
+- Kioskmodus (Modus voor één app): deze wordt 'App-vergrendeling' genoemd in de [Apple-documentatie voor ontwikkelaars](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf).
 - Activeringsslot uitschakelen 
 - Autonome modus voor één app 
 - Webinhoudsfilter 

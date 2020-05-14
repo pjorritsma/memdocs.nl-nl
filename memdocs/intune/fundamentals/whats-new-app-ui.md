@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/05/2020
+ms.date: 05/08/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe95196da3e75dc50e585dc1c4508e8d20c7d5e3
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 17213a29d5182176fe2fd8e5802e5ca03587d8f7
+ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82255027"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82991795"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>UI-updates voor Intune-apps voor eindgebruikers
 
@@ -36,6 +36,26 @@ Zorg ervoor dat, als u een werknemer of student bent, u de schermafbeeldingen en
 
 
 
+## <a name="week-of-may-4-2020"></a>Week van 4 mei 2020  
+### <a name="company-portal-for-android-guides-users-to-get-apps-after-work-profile-enrollment----6103999---"></a>Bedrijfsportal voor Android helpt gebruikers apps te verkrijgen na registratie van het werkprofiel <!-- 6103999 -->
+De in-app-richtlijnen in de bedrijfsportal zijn verbeterd zodat gebruikers gemakkelijker apps kunnen zoeken en installeren. Nadat gebruikers zich hebben geregistreerd voor werkprofielbeheer, zien ze een bericht dat ze aanbevolen apps kunnen vinden in de Google Play-versie met badge. De laatste stap in [Apparaat inschrijven met Android-profiel](../user-help/enroll-device-android-work-profile.md) is bijgewerkt zodat het nieuwe bericht wordt weergegeven. 
+
+![Voorbeeldafbeelding van Bedrijfsportal op het tabblad Apparaten, waar wordt gevraagd om de versie met badge van Google Play te openen.](./media/whats-new-app-ui/updated-banner-android-2005.png)  
+
+Gebruikers zien ook de nieuwe koppeling **Apps downloaden** in de het linkerpaneel van de bedrijfsportal. 
+
+![Voorbeeldafbeelding van linkerpaneel van Bedrijfsportal, waarin het menu-item Apps downloaden wordt uitgelicht.](./media/whats-new-app-ui/updated-drawer-android-2005.png)  
+
+Om ruimte te maken voor deze nieuwe en verbeterde ervaringen, is het tabblad **Apps**, zoals weergegeven in de volgende afbeelding, verwijderd.  
+
+![Voorbeeldafbeelding van het verwijderde tabblad Apps in de bedrijfsportal.](./media/whats-new-app-ui/apps-tab-android-removed-2005.png)  
+
+
+
+
+
+
+
 ## <a name="week-of-march-2-2020"></a>Week van 2 maart 2020   
 ### <a name="improved-sign-in-experience-in-company-portal-for-android"></a>Bijgewerkte aanmeldervaring voor de bedrijfsportal-app voor Android   
 De indeling van diverse aanmeldingsschermen in de bedrijfsportal-app voor Android is bijgewerkt voor een modernere, eenvoudige en duidelijke ervaring voor gebruikers. Ga naar [Uw Android-apparaat inschrijven](../user-help/enroll-device-android-company-portal.md) of [inschrijven met Android-werkprofiel](../user-help/enroll-device-android-work-profile.md) om alle inschrijvingsinstructies voor Bedrijfsportal voor Android te zien.   
@@ -44,7 +64,7 @@ De indeling van diverse aanmeldingsschermen in de bedrijfsportal-app voor Androi
 |Bijgewerkt|Vorige|   
 |---|---|   
 |![Voorbeeldafbeelding van het nieuwe aanmeldingsscherm voor Bedrijfsportal met de knop Aanmelden.](./media/whats-new-app-ui/intune-company-portal-sign-in-2003.png)|![Voorbeeldafbeelding van het vorige aanmeldingsscherm voor Bedrijfsportal, met een drukker ontwerp.](./media/whats-new-app-ui/intune-company-portal-sign-in-2002.png)| 
-|![Voorbeeldafbeelding van het nieuwe scherm Aanmelding in voortgang, met één voortgangsbalk.](./media/whats-new-app-ui/intune-company-portal-signing-in-2003.png)|![Voorbeeldafbeelding van het vorige scherm Aanmelding in voortgang, met een drukker ontwerp.](./media/whats-new-app-ui/intune-company-portal-signing-in-2002.png)|  
+|![Voorbeeldafbeelding van het nieuwe scherm Aanmelding in voortgang, met één voortgangsbalk.](./media/whats-new-app-ui/intune-company-portal-signing-in-2003.png)|![Voorbeeldafbeelding van het vorige scherm Aanmelding in voortgang, met een drukker ontwerp.](./media/whats-new-app-ui/intune-company-portal-signing-in-2002.png)|
 ## <a name="week-of-february-3-2020"></a>Week van 3 februari 2020
 
 ### <a name="screen-removed-from-company-portal-android-work-profile-enrollment---6103987---"></a>Scherm verwijderd uit de Bedrijfsportal, inschrijving van het Android-werkprofiel <!--6103987 -->
@@ -615,6 +635,6 @@ Dit zijn de plannen voor manieren waarop we de gebruikerservaring gaan verbetere
 
 
 ## <a name="see-also"></a>Zie tevens
-* [Microsoft Intune-blog](https://go.microsoft.com/fwlink/?LinkID=273882)
+* [Microsoft Intune-blog](https://www.microsoft.com/microsoft-365/blog/microsoft-intune/)
 * [Roadmap voor cloudplatform](https://www.microsoft.com/cloud-platform/roadmap)
 * [Wat is er nieuw in Intune?](whats-new.md)

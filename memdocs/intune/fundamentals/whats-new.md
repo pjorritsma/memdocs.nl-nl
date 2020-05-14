@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/30/2020
+ms.date: 05/04/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf490c71fdc94b974e53a9d0f388a777e986f13c
-ms.sourcegitcommit: 8a8378b685a674083bfb9fbc9c0662fb0c7dda97
+ms.openlocfilehash: 5b3c8287d9b5ca2d46094d04ee2179128bead4a8
+ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619573"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82991746"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Wat is er nieuw in Microsoft Intune?
 
@@ -51,6 +51,14 @@ Ontdek elke week wat er nieuw is in Microsoft Intune in het [Microsoft Endpoint 
 ### Device security
 ### Intune apps
 ### Monitor and troubleshoot
+
+<!-- ########################## -->
+## <a name="week-of-may-4-2020"></a>Week van 4 mei 2020  
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->  
+
+### <a name="company-portal-for-android-guides-users-to-get-apps-after-work-profile-enrollment----6103999---"></a>Bedrijfsportal voor Android helpt gebruikers apps te verkrijgen na registratie van het werkprofiel <!-- 6103999 -->
+De in-app-richtlijnen in de bedrijfsportal zijn verbeterd zodat gebruikers gemakkelijker apps kunnen zoeken en installeren. Nadat gebruikers zich hebben geregistreerd voor werkprofielbeheer, zien ze een bericht dat ze aanbevolen apps kunnen vinden in de Google Play-versie met badge. De laatste stap in [Apparaat inschrijven met Android-profiel](../user-help/enroll-device-android-work-profile.md) is bijgewerkt zodat het nieuwe bericht wordt weergegeven. Gebruikers zien ook de nieuwe koppeling **Apps downloaden** in de het linkerpaneel van de bedrijfsportal. Om ruimte te maken voor deze nieuwe en verbeterde ervaringen, is het tabblad **Apps** verwijderd. Als u de bijgewerkte vensters wilt zien, gaat u naar [UI-updates voor eindgebruikers-apps voor Intune](./whats-new-app-ui.md). 
 
 <!-- ########################## -->
 ## <a name="week-of-april-20-2020"></a>Week van 20 april 2020

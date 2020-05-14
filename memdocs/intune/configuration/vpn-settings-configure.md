@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 64356bf9be0c2c439c1f4fc296a9728a7937b001
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c72d2f8d9bd6a7235845863000272f605bb41089
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086547"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943821"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>VPN-profielen maken om verbinding te maken met VPN-servers in Intune
 
@@ -182,7 +182,13 @@ Voor VPN-profielen kan een aantal verschillende verbindingstypen en -protocollen
 
 Wanneer u het VPN-profiel maakt, kiest u een SCEP- of PFX-certificaatprofiel dat u eerder hebt gemaakt in Intune. Dit profiel wordt het identiteitscertificaat genoemd. Dit wordt gebruikt voor verificatie aan de hand van een vertrouwd-certificaatprofiel (of *basiscertificaat*) dat u hebt gemaakt om het apparaat van de gebruiker verbinding te laten maken. Het vertrouwde certificaat wordt toegewezen aan de computer die de VPN-verbinding verifieert. Dit is meestal de VPN-server.
 
+Als u gebruikmaakt van verificatie op basis van certificaten voor uw VPN-profiel, implementeert u het VPN-profiel, het certificaatprofiel en het vertrouwde basisprofiel in dezelfde groepen om ervoor te zorgen dat elk apparaat de geldigheid van uw certificeringsinstantie kan herkennen.
+
 Zie [How to configure certificates with Microsoft Intune](../protect/certificates-configure.md) (Certificaten configureren met Microsoft Intune) voor meer informatie over het gebruiken en maken van certificaatprofielen in Intune.
+
+> [!NOTE]
+> Certificaten die zijn toegevoegd met behulp van het profieltype voor **geïmporteerde PKCS-certificaten** worden niet ondersteund voor VPN-verificatie. Certificaten die zijn toegevoegd met behulp van profieltype voor **PKCS-certificaten** worden ondersteund voor VPN-verificatie.
+
 
 ### <a name="user-name-and-password"></a>Gebruikersnaam en wachtwoord
 

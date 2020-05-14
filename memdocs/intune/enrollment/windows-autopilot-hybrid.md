@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81e5dc772ca85bf124af3da33a263b683ea0885b
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2ea6d407417300d2b758861ed35fcecc88f7ec74
+ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326969"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82991710"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Apparaten die aan hybride Azure AD zijn gekoppeld implementeren met Intune en Windows Autopilot
 U kunt Intune en Windows Autopilot gebruiken om apparaten in te stellen die zijn gekoppeld aan Hybrid Azure Active Directory (Azure AD). Volg hiervoor de stappen in dit artikel.
@@ -108,6 +108,8 @@ De organisatie-eenheid waaraan het recht is verleend om computers te maken, moet
 ## <a name="install-the-intune-connector"></a>De Intune-connector installeren
 
 De Intune-connector voor Active Directory moet worden geïnstalleerd op een computer waarop Windows Server 2016 of later wordt uitgevoerd. De computer moet ook toegang hebben tot internet en uw Active Directory. Als u de schaal en beschikbaarheid wilt verhogen of meerdere Active Directory-domeinen wilt ondersteunen, kunt u in uw omgeving meerdere connectors installeren. Het is raadzaam om de connector te installeren op een server waarop geen andere Intune-connectors worden uitgevoerd.
+
+De Intune-connector vereist dat de [dezelfde eindpunten worden gebruikt als voor Intune](../fundamentals/intune-endpoints.md).
 
 1. Selecteer in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **Windows** > **Windows-inschrijving** > **Intune-connector voor Active Directory** > **Toevoegen**. 
 2. Volg de instructies voor het downloaden van de connector.

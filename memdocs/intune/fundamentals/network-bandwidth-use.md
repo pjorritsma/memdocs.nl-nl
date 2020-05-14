@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 569a80d21efd82b6008c7aa7a613c089a10c6ff3
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5b3052d8d213ce3190ed29b43f580a8de9c840b7
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357893"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943838"
 ---
 # <a name="intune-network-configuration-requirements-and-bandwidth"></a>Netwerkconfiguratievereisten en bandbreedte voor Intune
 
@@ -74,14 +74,6 @@ Hieronder vindt u standaardinstellingen voor een proxyserver die inhoud voor Int
 
 Zie de documentatie voor uw proxyserver voor informatie over het gebruik van een proxyserver om inhoud in cache te plaatsen.
 
-### <a name="use-background-intelligent-transfer-service-bits-on-computers"></a>BITS (Background Intelligent Transfer Service) gebruiken op computers
-
-U kunt, tijdens de uren die u zelf configureert, BITS gebruiken op een Windows-computer om de netwerkbandbreedte te beperken. U kunt BITS-beleid configureren op de pagina **Netwerkbandbreedte** van het beleid van de Intune-agent.
-
-> [!NOTE]
-> Voor MDM-beheer in Windows maakt alleen de beheerinterface van het OS voor het type MobileMSI-app gebruik van BITS om te downloaden. Voor AppX/MsiX wordt een systeemeigen niet-BITS-downloadstack gebruikt, en Win32-apps via de Intune-agent gebruiken Delivery Optimization, in plaats van BITS.
-
-Zie [Background Intelligent Transfer Service](https://technet.microsoft.com/library/bb968799.aspx) in de TechNet-bibliotheek voor meer informatie over BITS en Windows-computers.
 
 ### <a name="delivery-optimization"></a>Delivery optimization
 
@@ -91,7 +83,22 @@ Raadpleeg het artikel [Delivery Optimization voor Windows 10-updates](https://do
 
 U kunt [Delivery Optimization configureren](../configuration/delivery-optimization-settings.md) als onderdeel van uw apparaatconfiguratieprofielen.
 
-### <a name="use-branchcache-on-computers"></a>BranchCache gebruiken op computers
+
+### <a name="background-intelligent-transfer-service-bits-and-branchcache"></a>Background Intelligent Transfer Service (BITS) en BranchCache 
+
+U kunt Microsoft Intune gebruiken voor het beheren van Windows-pc's als [mobiele apparaten met MDM (Mobile Device Management)](../enrollment/windows-enroll.md) of als computers met de Intune-softwareclient. Microsoft adviseert klanten om indien mogelijk [de MDM-beheeroplossing](../enrollment/windows-enroll.md) te gebruiken. Wanneer deze beheeroplossing wordt gebruikt, worden BranchCache en BITS niet ondersteund. Raadpleeg [Beheer van Windows-pc's vergelijken als computers of mobiele apparaten](pc-management-comparison.md) voor meer informatie.
+
+#### <a name="use-bits-on-computers-requires-intune-software-client"></a>(BITS) gebruiken op computers (hiervoor is de Intune-softwareclient vereist)
+
+U kunt, tijdens de uren die u zelf configureert, BITS gebruiken op een Windows-computer om de netwerkbandbreedte te beperken. U kunt BITS-beleid configureren op de pagina **Netwerkbandbreedte** van het beleid van de Intune-agent.
+
+> [!NOTE]
+> Voor MDM-beheer in Windows maakt alleen de beheerinterface van het OS voor het type MobileMSI-app gebruik van BITS om te downloaden. Voor AppX/MsiX wordt een systeemeigen niet-BITS-downloadstack gebruikt, en Win32-apps via de Intune-agent gebruiken Delivery Optimization, in plaats van BITS.
+
+Zie [Background Intelligent Transfer Service](https://technet.microsoft.com/library/bb968799.aspx) in de TechNet-bibliotheek voor meer informatie over BITS en Windows-computers.
+
+
+#### <a name="use-branchcache-on-computers-requires-intune-software-client"></a>BranchCache gebruiken op computers (hiervoor is de Intune-softwareclient vereist)
 
 Intune-clients kunnen BranchCache gebruiken om WAN-verkeer (Wide Area Network) te beperken. De volgende besturingssystemen ondersteunen BranchCache:
 
@@ -106,8 +113,6 @@ Wanneer de Intune-client is geïnstalleerd op computers, worden BranchCache en d
 
 Als u BranchCache gebruikt, moet u samenwerken met andere beheerders in uw organisatie die het groepsbeleid en het beleid voor de Intune Firewall beheren. Zorg ervoor dat zij geen beleid implementeren waarmee BranchCache of Firewall-uitzonderingen worden uitgeschakeld. Zie [Overzicht van BranchCache](https://technet.microsoft.com/library/hh831696.aspx) voor meer informatie over BranchCache.
 
-> [!NOTE]
-> U kunt Microsoft Intune gebruiken voor het beheren van Windows-pc's als [mobiele apparaten met MDM (Mobile Device Management)](../enrollment/windows-enroll.md) of als computers met de Intune-softwareclient. Microsoft adviseert klanten om indien mogelijk [de MDM-beheeroplossing](../enrollment/windows-enroll.md) te gebruiken. Wanneer deze beheeroplossing wordt gebruikt, wordt BranchCache niet ondersteund. Raadpleeg [Beheer van Windows-pc's vergelijken als computers of mobiele apparaten](pc-management-comparison.md) voor meer informatie.
 
 ## <a name="next-steps"></a>Volgende stappen
 

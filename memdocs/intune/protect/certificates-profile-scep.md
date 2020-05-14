@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3da418db81a315e4102b63c34ffc557646d36f70
-ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
+ms.openlocfilehash: fe91e36ab5cc66fe81c77401a2a0374f6577b202
+ms.sourcegitcommit: 5f9d5d22114ae5aeb0270c7fb59c5dced5f48826
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82126065"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82862374"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>SCEP-certificaatprofielen maken en toewijzen in Intune
 
@@ -301,7 +301,8 @@ Denk na over het volgende voordat u verdergaat:
 - Als u co-beheer gebruikt voor Intune en Configuration Manager, stelt u in Configuration Manager de [workloadschuifregelaar](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) voor resourcetoegangsbeleid in op **Intune** of **Testfase van Intune**. Met deze instelling is het toegestaan dat Windows 10-clients het proces starten om het certificaat aan te vragen.
 
 > [!NOTE]
-> Als op iOS-/iPadOS-apparaten een SCEP-certificaatprofiel of een PKCS-certificaatprofiel aan een extra profiel, zoals een Wi-Fi- of VPN-profiel, is gekoppeld, ontvangt het apparaat een certificaat voor al deze extra profielen. Hierdoor ontvangt het iOS-/iPadOS-apparaat meerdere certificaten na de SCEP- of PKCS-certificaataanvraag. 
+> - Als op iOS-/iPadOS-apparaten een SCEP-certificaatprofiel of een PKCS-certificaatprofiel aan een extra profiel, zoals een Wi-Fi- of VPN-profiel, is gekoppeld, ontvangt het apparaat een certificaat voor al deze extra profielen. Hierdoor ontvangt het iOS-/iPadOS-apparaat meerdere certificaten na de SCEP- of PKCS-certificaataanvraag. 
+> - Voor iOS 13 en macOS 10.15 zijn er enkele [aanvullende beveiligingsvereisten die door Apple worden gedocumenteerd](https://support.apple.com/HT210176) om rekening mee te houden.  
 
 
 ## <a name="next-steps"></a>Volgende stappen

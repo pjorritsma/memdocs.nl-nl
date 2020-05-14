@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4afc27680c464f67756340ebcb0958887ae6f795
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5fc11d7302c30dd53314eb2312d37842b081a6b3
+ms.sourcegitcommit: 5f9d5d22114ae5aeb0270c7fb59c5dced5f48826
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80407878"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82862357"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Lijsten met apparaatbeperkingen voor Android en Samsung Knox Standard in Intune
 
@@ -114,7 +114,7 @@ Gebruik deze instellingen om bepaalde apps op apparaten toe te staan of te blokk
 - **Niet geconfigureerd** (standaard): Deze instelling wordt niet gewijzigd of bijgewerkt door Intune.
 - **Niet-toegestane apps**: Hiermee maakt u een lijst met apps die niet worden beheerd door Intune en die gebruikers niet mogen installeren en uitvoeren. Als een gebruiker een app uit deze lijst installeert, ontvangt u een melding van Intune.
 - **Goedgekeurde apps**: Hiermee maakt u een lijst met apps die gebruikers mogen installeren. Om te voldoen aan het beleid, mogen gebruikers geen andere apps installeren.  Apps die worden beheerd door Intune worden automatisch toegestaan, zoals de bedrijfsportal-app.
-- **Apps-lijst**: U moet uw app **toevoegen**:
+- **Apps-lijst**: Uw app **toevoegen**:
   - **App-bundel-id**: Voer de bundel-id van de app in.
   - **URL van de App Store**: Voer de Google Play Store-URL van de gewenste app in. Als u bijvoorbeeld de app voor het Extern bureaublad van Microsoft voor Android wilt toevoegen, voert u `https://play.google.com/store/apps/details?id=com.microsoft.rdc.android` in.
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db9164d68783356faf01fe4fc4e8d74f2a4b0869
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: dd999f621375cfdbfa80bf076766be20053221dc
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023347"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269062"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>iOS-/iPadOS-apparaten automatisch inschrijven met Automated Device Enrollment van Apple
 
@@ -148,8 +148,7 @@ Na installatie van het token kunt u een inschrijvingsprofiel voor ADE-apparaten 
 
     ![Maak een schermafdruk van het profiel.](./media/device-enrollment-program-enroll-ios/image04.png)
 
-3. Voer op de pagina **Basisinformatie** een **Naam** en een **Beschrijving** voor het profiel in voor administratieve doeleinden. Gebruikers zien deze gegevens niet. U kunt dit veld **Naam** gebruiken om een dynamische groep te maken in Azure Active Directory. Gebruik de profielnaam om de parameter enrollmentProfileName te definiëren om apparaten aan dit inschrijvingsprofiel toe te wijzen. Voor apparaten die zijn ingeschreven met Automatische apparaatinschrijving met gebruikersaffiniteit, zorgt het richten op AAD-gebruikersgroepen waarvan de ingeschreven gebruiker lid is vóór de installatie van het apparaat voor de snelste beleidslevering voor de apparaten. Het doel voor toepassingen en beleid voor Dynamische groepen gebaseerd op de Inschrijvingsprofielen zorgt voor enige vertraging in het toepassen op apparaten nadat de inschrijvingsstroom is voltooid.
-Meer informatie over [Azure Active Directory dynamic groups](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) (dynamische Azure Active Directory-groepen).
+3. Voer op de pagina **Basisinformatie** een **Naam** en een **Beschrijving** voor het profiel in voor administratieve doeleinden. Gebruikers zien deze gegevens niet. 
 
     ![Naam en beschrijving van het profiel.](./media/device-enrollment-program-enroll-ios/image05.png)
 
@@ -264,6 +263,17 @@ Meer informatie over [Azure Active Directory dynamic groups](https://docs.micros
 16. Kies **Volgende** om naar de pagina **Beoordelen en maken** te gaan.
 
 17. Kies **Maken** om een profiel op te slaan.
+
+### <a name="dynamic-groups-in-azure-active-directory"></a>Dynamische groepen beheren in Azure Active Directory
+
+U kunt bij het inschrijven het veld **Naam** gebruiken om een dynamische groep te maken in Azure Active Directory. Zie voor meer informatie het artikel over [dynamische Azure Active Directory-groepen](/azure/active-directory/users-groups-roles/groups-dynamic-membership).
+
+U kunt de profielnaam gebruiken om de [parameter enrollmentProfileName](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) te definiëren om apparaten aan dit inschrijvingsprofiel toe te wijzen.
+
+Voor de snelste beleidsimplementatie op ADE-apparaten met gebruikersaffiniteit, moet u ervoor zorgen dat de inschrijvende gebruiker voorafgaand aan het instellen van het apparaat lid is van een AAD-gebruikersgroep. 
+
+Het toewijzen van dynamische groepen aan inschrijvingsprofielen kan leiden tot enige vertraging bij het leveren van toepassingen en beleid aan apparaten na de registratie.
+
 
 ## <a name="sync-managed-devices"></a>Beheerde apparaten synchroniseren
 Nu Intune toestemming heeft om uw apparaten te beheren, kunt u Intune synchroniseren met Apple om uw beheerde apparaten weer te geven in Intune in Azure Portal.

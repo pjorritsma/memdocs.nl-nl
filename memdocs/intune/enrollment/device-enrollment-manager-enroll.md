@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8710043244e0b6becebef60890ac1a0ec3105971
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 80e15e78e270ae72bdf584e9db967cae81d3ac2b
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254636"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83342994"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Apparaten registreren in Intune met een manageraccount voor apparaatregistratie
 
@@ -46,6 +46,8 @@ DEM-gebruikersaccounts en apparaten die zijn ingeschreven met een DEM-gebruikers
 - Als u beperking toepast op een Azure AD-apparaat op een DEM-account, voorkomt u dat u de limiet van 1.000 apparaten bereikt die het DEM-account kan inschrijven.
 
 ## <a name="enrollment-methods-supported-by-dem-accounts"></a>Inschrijvingsmethoden die worden ondersteund door DEM-accounts
+
+U kunt de volgende methoden gebruiken om apparaten in te schrijven met behulp van DEM-accounts:
 
 - [Windows Autopilot](enrollment-autopilot.md)
 - [Bulkinschrijving voor Windows-apparaten](windows-bulk-enroll.md)

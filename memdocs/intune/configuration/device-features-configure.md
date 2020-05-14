@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4ffa3d11b92c38373da22e53b96fe9cf9e520b5b
-ms.sourcegitcommit: af8a3efd361a7f3fa6e98e5126dfb1391966ff76
+ms.openlocfilehash: 8e72fc48608ebf32f3e32d4a94ab7203ee418d8f
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82149175"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943804"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Instellingen van apparaatfuncties voor iOS, iPadOS of macOS toevoegen in Intune
 
@@ -153,7 +153,7 @@ Met deze instellingen configureert u een app-extensie die eenmalige aanmelding (
 
 Gebruik deze instellingen in Intune voor het configureren van een SSO-app-extensie die is gemaakt door uw organisatie, uw id-provider, Microsoft of Apple. Met de SSO-app-extensie wordt de verificatie voor uw gebruikers afgehandeld. Met deze instellingen worden het omleidingstype en de SSO-app-extensies voor het referentietype geconfigureerd.
 
-- Het omleidingstype is ontworpen voor moderne verificatieprotocollen, zoals OAuth en SAML2. U kunt een algemene omleidingsextensie gebruiken op macOS-apparaten. Voor iOS- en iPadOS-apparaten kunt u kiezen tussen de Azure AD SSO-extensie van Microsoft ([Microsoft Enterprise SSO-invoegtoepassing](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)) en een algemene omleidingsextensie.
+- Het omleidingstype is ontworpen voor moderne verificatieprotocollen, zoals OpenID Connect, OAuth en SAML2. U kunt een algemene omleidingsextensie gebruiken op macOS-apparaten. Voor iOS- en iPadOS-apparaten kunt u kiezen tussen de Azure AD SSO-extensie van Microsoft ([Microsoft Enterprise SSO-invoegtoepassing](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)) en een algemene omleidingsextensie.
 - Het referentietype is ontworpen voor verificatiestromen met vraag en antwoord. U kunt kiezen tussen een Kerberos-referentie-extensie van Apple en een algemene referentie-extensie.
 
 Zie [SSO-app-extensie voor iOS/iPadOS](ios-device-features-settings.md#single-sign-on-app-extension) en [SSO-app-extensie voor macOS](macos-device-features-settings.md#single-sign-on-app-extension) voor een lijst met instellingen die u kunt configureren in Intune.

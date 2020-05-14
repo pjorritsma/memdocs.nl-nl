@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ed0194f0ace1ed1e962a8b993a4e93f7ef487bdc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: dfcedebf32c8f08450e3eaa87c99f9bc11dd7431
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084934"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906901"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Instellingen in Windows 10 en later om te markeren of apparaten wel of niet conform zijn met behulp van Intune
 
@@ -44,7 +44,7 @@ Gebruik deze nalevingsinstellingen als Intune-beheerder om de resources van uw o
 ### <a name="windows-health-attestation-service-evaluation-rules"></a>Evaluatieregels voor Windows Health Attestation-service
 
 - **BitLocker vereisen**:  
-   Windows BitLocker-stationsversleuteling versleutelt alle gegevens die zijn opgeslagen op het Windows-besturingssysteemvolume. BitLocker gebruikt de TPM (Trusted Platform Module) om het Windows-besturingssysteem en de gebruikersgegevens te beveiligen. Het helpt ook om te bevestigen dat een computer niet is gemanipuleerd, zelfs als deze zonder toezicht, kwijtgeraakt of gestolen is. Als de computer is uitgerust met een compatibele TPM, gebruikt BitLocker de TPM om de versleutelingssleutels die de gegevens beveiligen te vergrendelen. Als gevolg hiervan kunnen de sleutels niet worden gebruikt tot met de TPM de status van de computer is gecontroleerd.  
+   Windows BitLocker-stationsversleuteling versleutelt alle gegevens die zijn opgeslagen op het volume met het Windows-besturingssysteem. BitLocker gebruikt de TPM (Trusted Platform Module) om het Windows-besturingssysteem en de gebruikersgegevens te beveiligen. Het helpt ook om te bevestigen dat een computer niet is gemanipuleerd, zelfs als deze zonder toezicht, kwijtgeraakt of gestolen is. Als de computer is uitgerust met een compatibele TPM, gebruikt BitLocker de TPM om de versleutelingssleutels te vergrendelen die de gegevens beschermen. Als gevolg hiervan kunnen de sleutels niet worden gebruikt tot met de TPM de status van de computer is gecontroleerd.  
 
    - **Niet geconfigureerd** (*standaard*) - Deze instelling wordt niet beoordeeld op naleving of niet-naleving.
    - **Vereisen** - Het apparaat kan gegevens die op de schijf zijn opgeslagen, beveiligen tegen onbevoegde toegang wanneer het systeem is uitgeschakeld of zich in de slaapstand bevindt.  
@@ -65,7 +65,7 @@ Gebruik deze nalevingsinstellingen als Intune-beheerder om de resources van uw o
 Meer resources:
 
 - Zie [Health Attestation CSP](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp) voor meer informatie over de werking van de Health Attestation-service.
-- [Ondersteuningstip: apparaatstatusverklaring gebruiken als onderdeel van uw Intune-nalevingsbeleid](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643).
+- [Ondersteuningstip: Apparaatstatusverklaring gebruiken als onderdeel van uw Intune-nalevingsbeleid](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643).
 
 ## <a name="device-properties"></a>Apparaateigenschappen
 
@@ -188,10 +188,20 @@ Geldt alleen voor gezamenlijk beheerde apparaten met Windows 10 en hoger. Appara
 - **Antivirus**:  
   - **Niet geconfigureerd** (*standaard*) - Intune controleert niet of er antivirusoplossingen op het apparaat zijn geïnstalleerd. 
   - **Vereisen** - Controleer de naleving met behulp van antivirusoplossingen die zijn geregistreerd bij [Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), zoals Symantec en Microsoft Defender.
+  
+  [DeviceStatus CSP - DeviceStatus/Antivirus/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+
+  > [!NOTE]
+  > De DeviceStatus CSP voor antivirus wordt niet ondersteund voor *Windows 10 Home* en rapporteert de status *Niet van toepassing*. Het Intune-team werkt aan een oplossing. U kunt dit probleem omzeilen door [Windows Defender](#defender)-instellingen te gebruiken in het compliancebeleid voor apparaten. Windows Defender-instellingen worden ondersteund voor Windows 10 Home.  
 
 - **Antispyware**:  
   - **Niet geconfigureerd** (*standaard*) - Intune controleert niet of er antispywareoplossingen op het apparaat zijn geïnstalleerd.
   - **Vereisen** - Controleer de naleving met behulp van antispywareoplossingen die zijn geregistreerd bij [Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), zoals Symantec en Microsoft Defender.  
+  
+  [DeviceStatus CSP - DeviceStatus/Antispyware/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+
+  > [!NOTE]
+  > De DeviceStatus CSP voor antispyware wordt niet ondersteund voor *Windows 10 Home* en rapporteert de status *Niet van toepassing*. Het Intune-team werkt aan een oplossing. U kunt dit probleem omzeilen door [Windows Defender](#defender)-instellingen te gebruiken in het compliancebeleid voor apparaten. Windows Defender-instellingen worden ondersteund voor Windows 10 Home. 
 
 ### <a name="defender"></a>Defender
 

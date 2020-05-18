@@ -20,6 +20,7 @@
 #### Inschrijven met afgeleide referenties
 ##### [Inschrijven met Entrust Datacard](enroll-android-device-entrust-datacard.md)
 ##### [Inschrijven met Intercede](enroll-android-device-intercede.md)
+##### [Inschrijven met DISA Purebred](enroll-android-device-disa-purebred.md)
 ### [Verplaatsen naar nieuwe apparaatbeheerinstellingen](move-to-new-device-management-setup.md)
 ### [Beheerde apps op een apparaat gebruiken](use-managed-apps-on-your-device-android.md)
 ### [Een apparaat versleutelen](encrypt-your-device-android.md)

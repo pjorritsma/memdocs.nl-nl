@@ -55,7 +55,7 @@ U kunt een pincode vereisen voor toegang tot bedrijfsresources. U kunt ook een z
 2. Bevestig de volgende voorwaarden:
     - Bij het starten van de app dient een prompt voor het invoeren van de pincode of de productiegebruiker die is gebruikt tijdens de inschrijving bij de bedrijfsportal te worden weergegeven.
     - Wanneer er geen geldige aanmeldingsprompt wordt weergegeven, kan dit zijn veroorzaakt door een onjuist geconfigureerd Android-manifest, in het bijzonder de waarden voor de integratie van ADAL (Azure Active Directory Authentication Library) (SkipBroker, ClientID en Authority).
-    - Wanneer er geen prompt wordt weergegeven, wordt dit mogelijk veroorzaakt door een onjuist geïntegreerde `MAMActivity`-waarde. Zie de `MAMActivity`ontwikkelaarshandleiding voor de Microsoft Intune App-SDK voor Android[ voor meer informatie over ](app-sdk-android.md).
+    - Wanneer er geen prompt wordt weergegeven, wordt dit mogelijk veroorzaakt door een onjuist geïntegreerde `MAMActivity`-waarde. Zie de [ontwikkelaarshandleiding voor de Microsoft Intune App-SDK voor Android](app-sdk-android.md) voor meer informatie over `MAMActivity`.
 
 > [!NOTE] 
 > Als de voorgaande test niet werkt, zullen de volgende tests waarschijnlijk ook mislukken. Controleer de integratie van de [SDK](app-sdk-android.md#sdk-integration) en [ADAL](app-sdk-android.md#configure-azure-active-directory-authentication-library-adal).

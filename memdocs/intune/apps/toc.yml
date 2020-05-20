@@ -165,7 +165,7 @@
             - name: Overzicht van App-beveiligingsbeleid
               href: app-protection-policy.md
               displayName: app; protection; policy
-            - name: Gegevensbeschermingsframework met APP
+            - name: Gegevensbeschermingsframework met beleid voor app-beveiliging
               href: app-protection-framework.md
             - name: Beveiligingsbeleid voor apps maken
               items:

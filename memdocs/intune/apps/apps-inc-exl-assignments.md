@@ -83,7 +83,7 @@ U kunt een app toewijzen aan groepen met behulp van de toewijzing voor opnemen e
 
     ![App-toewijzingen van Intune - Groepen uitsluiten](./media/apps-inc-exl-assignments/apps-inc-exl-04.png)
 13. Selecteer **Selecteren** om de selectie van groepen te voltooien.
-14. Selecteer in het deelvenster **Groep toevoegen** **OK**. De app-lijst **Toewijzingen** wordt weergegeven.
+14. Selecteer **OK** in het deelvenster **Groep toevoegen**. De app-lijst **Toewijzingen** wordt weergegeven.
 15. Klik op **Opslaan** om uw groepstoewijzingen te activeren voor de app.
 
 Als u groepstoewijzingen maakt, kunnen groepen die al zijn toegewezen, niet worden gewijzigd. Als u een groep wilt selecteren die momenteel niet beschikbaar is, verwijdert u eerst de app uit de lijst met toegewezen apps.

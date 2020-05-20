@@ -151,7 +151,7 @@ Nadat de instelling is voltooid, wordt Azure AD met Lookout Mobile Endpoint Secu
 - De initiële status van apparaten is *in behandeling*.  
 - De apparaatstatus wordt bijgewerkt nadat de app *Lookout for Work* op het apparaat is geïnstalleerd, geopend en geactiveerd.
 
-Zie *Lookout for Work-apps met Intune toevoegen* voor meer informatie over het implementeren van de app [Lookout for Work](mtd-apps-ios-app-configuration-policy-add-assign.md) op het apparaat.
+Zie [Lookout for Work-apps met Intune toevoegen](mtd-apps-ios-app-configuration-policy-add-assign.md) voor meer informatie over het implementeren van de app *Lookout for Work* op het apparaat.
 
 ## <a name="next-steps"></a>Volgende stappen
 

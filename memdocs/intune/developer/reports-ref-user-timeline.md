@@ -80,5 +80,5 @@ Een persoon die alleen de dimensie-entiteiten wil zien die momenteel aanwezig zi
 
 ## <a name="next-steps"></a>Volgende stappen
 
-- Zie **Naslaginformatie voor huidige gebruikersentiteit** voor meer informatie over de entiteit [Huidige gebruiker](reports-ref-data-model.md).
-- Zie **Naslaginformatie voor gebruikersentiteit** voor meer informatie over de entiteit [Gebruiker](reports-ref-user.md).
+- Zie [Naslaginformatie voor huidige gebruikersentiteit](reports-ref-data-model.md) voor meer informatie over de entiteit **Huidige gebruiker**.
+- Zie [Naslaginformatie voor gebruikersentiteit](reports-ref-user.md) voor meer informatie over de entiteit **Gebruiker**.

@@ -42,7 +42,7 @@ Dit artikel biedt richtlijnen voor het gebruik van Apple Configurator en Apple P
 
 ## <a name="what-you-need-to-know"></a>Wat u dient te weten
 
-- Wanneer u **Apple Configurator** gebruikt om het configuratieprofiel te maken, moet u ervoor zorgen dat de instellingen die u exporteert, compatibel zijn met de iOS-/iPadOS-versie op de apparaten. Zoek op de **Apple Developer**-website naar **Configuration Profile Reference** (naslag voor configuratieprofielen) en [Mobile Device Management Protocol Reference](https://developer.apple.com/) (naslag voor beheerprotocol voor mobiele apparaten) als u meer wilt weten over het oplossen van problemen bij incompatibele instellingen.
+- Wanneer u **Apple Configurator** gebruikt om het configuratieprofiel te maken, moet u ervoor zorgen dat de instellingen die u exporteert, compatibel zijn met de iOS-/iPadOS-versie op de apparaten. Zoek op de [Apple Developer](https://developer.apple.com/)-website naar **Configuration Profile Reference** (naslag voor configuratieprofielen) en **Mobile Device Management Protocol Reference** (naslag voor beheerprotocol voor mobiele apparaten) als u meer wilt weten over het oplossen van problemen bij incompatibele instellingen.
 
 - Wanneer u **Apple Profile Manager** gebruikt, moet u het volgende doen:
 
@@ -52,7 +52,7 @@ Dit artikel biedt richtlijnen voor het gebruik van Apple Configurator en Apple P
 
     Download dit bestand en sla het op. U voert dit bestand in het Intune-profiel in.
 
-  - Zorg ervoor dat de instellingen die u uit Apple Profile Manager exporteert, compatibel zijn met de iOS-/iPadOS-versie op de apparaten. Zoek op de **Apple Developer**-website naar **Configuration Profile Reference** (naslag voor configuratieprofielen) en [Mobile Device Management Protocol Reference](https://developer.apple.com/) (naslag voor beheerprotocol voor mobiele apparaten) als u meer wilt weten over het oplossen van problemen bij incompatibele instellingen.
+  - Zorg ervoor dat de instellingen die u uit Apple Profile Manager exporteert, compatibel zijn met de iOS-/iPadOS-versie op de apparaten. Zoek op de [Apple Developer](https://developer.apple.com/)-website naar **Configuration Profile Reference** (naslag voor configuratieprofielen) en **Mobile Device Management Protocol Reference** (naslag voor beheerprotocol voor mobiele apparaten) als u meer wilt weten over het oplossen van problemen bij incompatibele instellingen.
 
 ## <a name="custom-configuration-profile-settings"></a>Aangepaste configuratieprofielinstellingen
 

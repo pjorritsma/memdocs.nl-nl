@@ -28,6 +28,8 @@
       href: terms-and-conditions-create.md
     - name: Beperkingen
       href: enrollment-restrictions-set.md
+    - name: Inzicht in Intune en Azure AD-apparaatlimieten
+      href: device-limit-intune-azure.md
     - name: Apple MDM-pushcertificaat
       href: apple-mdm-push-certificate-get.md
     - name: Zakelijke id’s

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a4d468c62132c6af4477ba48f17ac9b21013e51
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 997a2db8917da1443531d8446176c21db3a5dbf6
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82022734"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709448"
 ---
 # <a name="intune-data-warehouse-collections"></a>Intune-datawarehouse-verzamelingen
 
@@ -193,6 +193,8 @@ De entiteit **DeviceConfigurationProfileUserActivity** bevat het aantal gebruike
 | OSVersion                  | Versie besturingssysteem.                                                                                                                                                                          |
 | JailBroken                 | Of het apparaat jailbroken of geroot is.                                                                                                                                         |
 | DeviceCategoryKey          | Sleutel van het kenmerk voor de apparaatcategorie voor dit apparaat.                                                                                                                                    |
+
+
 ## <a name="deviceregistrationstates"></a>deviceRegistrationStates
 De entiteit **DeviceRegistrationState** vertegenwoordigt het registratietype waarnaar wordt verwezen door andere datawarehouse-verzamelingen. 
 
@@ -222,7 +224,6 @@ Met de entiteit **devices** worden alle geregistreerde apparaten voor beheer en 
 | DeviceRegistrationState    | Sleutel van het kenmerk voor de clientregistratiestatus voor dit apparaat.                                                                                                                      |
 | OwnerTypeKey               | Sleutel van het kenmerk voor het type eigenaar voor dit apparaat: zakelijk, persoonlijk of onbekend.                                                                                                    |
 | EnrolledDateTime           | De datum en tijd waarop het apparaat is ingeschreven.                                                                                                                                         |
-| EthernetMacAddress           | De unieke netwerk-id van dit apparaat.                                                                                                                                        |
 | LastSyncDateTime           | Laatste bekende keer dat een apparaat is ingecheckt bij Intune.                                                                                                                                              |
 | ManagementAgentKey         | Sleutel van de beheeragent die is gekoppeld aan dit apparaat.                                                                                                                             |
 | ManagementStateKey         | Sleutel van de aan dit apparaat gekoppelde beheerstatus waarmee de laatste status van een externe actie wordt aangegeven of dat het apparaat is gekraakt of geroot.                                                |
@@ -244,16 +245,12 @@ Met de entiteit **devices** worden alle geregistreerde apparaten voor beheer en 
 | MEID                       | MEID                                                                                                                                                                                   |
 | isSupervised               | De supervisiestatus van het apparaat                                                                                                                                                               |
 | FreeStorageSpaceInBytes    | Beschikbare opslag in bytes.                                                                                                                                                                 |
-| TotalStorageSpaceInBytes   | Totale opslagcapaciteit in bytes.                                                                                                                                                                |
 | EncryptionState            | De versleutelingsstatus van het apparaat.                                                                                                                                                      |
 | SubscriberCarrier          | Provider van abonnee van het apparaat                                                                                                                                                       |
 | PhoneNumber                | Telefoonnummer van het apparaat                                                                                                                                                             |
 | IMEI                       | IMEI                                                                                                                                                                                   |
 | CellularTechnology         | Mobiele telefoontechnologie van het apparaat                                                                                                                                                    |
 | WiFiMacAddress             | MAC-adres Wi-Fi                                                                                                                                                                              |
-| Model                      | Het apparaatmodel.                                                                                                                                                                      |
-| Office365Version           | De versie van Office 365 die op het apparaat is geïnstalleerd.                                                                                                                             |
-| PhysicalMemoryInBytes      | Het fysieke geheugen in bytes.                                                                                                                                                          |
 
 
 ## <a name="devicetypes"></a>deviceTypes

@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/01/2020
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97d3c4ee2e1ad173b8fff238f072b1b36c3ed1cb
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 24663f8338f03fab53369689b4a61b5bd1bec63f
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80536906"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83991213"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-for-iosipados-devices-in-intune"></a>VPN per app instellen voor iOS/iPadOS-apparaten in Intune
 
@@ -75,7 +75,7 @@ Importeer het door de CA uitgegeven basiscertificaat van de VPN-server in een pr
 3. Voer de volgende eigenschappen in:
 
     - **Platform**: Selecteer **iOS/iPadOS**.
-    - **Profieltype**: Selecteer **Vertrouwd certificaat**.
+    - **Profiel**: Selecteer **Vertrouwd certificaat**.
 
 4. Selecteer **Maken**.
 5. Voer in **Basisinformatie** de volgende eigenschappen in:
@@ -113,7 +113,7 @@ Het VPN-profiel bevat het SCEP- of PKCS-certificaat met de referenties van de cl
 3. Voer de volgende eigenschappen in:
 
     - **Platform**: Selecteer **iOS/iPadOS**.
-    - **Profieltype**: Selecteer **VPN**.
+    - **Profiel**: Selecteer **VPN**.
 
 4. Selecteer **Maken**.
 5. Voer in **Basisinformatie** de volgende eigenschappen in:

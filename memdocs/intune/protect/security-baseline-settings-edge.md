@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 861d7f526711f2169e8fd03b3df09659440523b9
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.openlocfilehash: c20489b8da3080506065d68aeb1b19dae362c2fb
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693443"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556316"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="edge-october-2019"
@@ -47,7 +47,6 @@ Bekijk de basislijninstellingen van de Edge-webbrowser die worden ondersteund do
 ::: zone-end
 ::: zone pivot="edge-april-2020"
 
-*Deze nieuwe basislijn wordt in de komende weken geïmplementeerd op tenants. We verwachten dat alle tenants deze nieuwe basislijn begin mei zullen hebben.*
 Als u wilt weten wat er is veranderd in deze versie van de basislijn vergeleken met eerdere versies, gebruikt u de actie [Basislijnen vergelijken](../protect/security-baselines.md#compare-baseline-versions) die beschikbaar is wanneer het paneel *Versies* voor deze basislijn wordt weergegeven. Als u wilt weten wat er is veranderd in deze versie van de basislijn vergeleken met eerdere versies, gebruikt u de actie [Basislijnen vergelijken](../protect/security-baselines.md#compare-baseline-versions) die beschikbaar is wanneer het paneel *Versies* voor deze basislijn wordt weergegeven.
 
 ::: zone-end

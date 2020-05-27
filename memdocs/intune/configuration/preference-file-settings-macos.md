@@ -6,22 +6,23 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2020
-ms.topic: reference
+ms.date: 05/05/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9cb8cea30b53c5619580b289f73529668d71e909
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ebf65ecc6dbe5059adbd6fec70833bf2fcab9de7
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80551494"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988669"
 ---
 # <a name="add-a-property-list-file-to-macos-devices-using-microsoft-intune"></a>Een eigenschappenlijstbestand toevoegen aan macOS-apparaten met behulp van Microsoft Intune
 
@@ -44,9 +45,6 @@ Deze instellingen worden toegevoegd aan een apparaatconfiguratieprofiel in Intun
 - Alleen in bepaalde apps kunnen beheerde voorkeuren worden gebruikt en in deze apps kunt u mogelijk niet alle instellingen beheren.
 - Upload eigenschappenlijstbestanden die worden toegepast op apparaatkanaalinstellingen, en niet op gebruikerskanaalinstellingen. Eigenschappenlijstbestanden worden toegepast op het hele apparaat.
 
-> [!NOTE]
-> De Intune-gebruikersinterface wordt bijgewerkt naar een versie voor volledig scherm. Dit kan enkele weken duren. Totdat de tenant deze update ontvangt, hebt u een enigszins afwijkende werkstroom wanneer u instellingen maakt of bewerkt zoals beschreven in dit artikel.
-
 ## <a name="create-the-profile"></a>Het profiel maken
 
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
@@ -66,9 +64,13 @@ Deze instellingen worden toegevoegd aan een apparaatconfiguratieprofiel in Intun
 
 7. Configureer in **Configuratie-instellingen** uw instellingen:
 
-    - **Naam van voorkeursdomein**: Eigenschappenlijstbestanden worden meestal gebruikt voor webbrowsers (Microsoft Edge), [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) en aangepaste apps. Wanneer u een voorkeursdomein maakt, wordt er ook een bundel-id gemaakt. Voer de bundel-id in, bijvoorbeeld `com.company.application`. Voer bijvoorbeeld `com.Contoso.applicationName`, `com.Microsoft.Edge` of `com.microsoft.wdav` in.
+    - **Naam van voorkeursdomein**: Voer de bundel-id in, bijvoorbeeld `com.company.application`. Voer bijvoorbeeld `com.Contoso.applicationName`, `com.Microsoft.Edge` of `com.microsoft.wdav` in.
+
+      Eigenschappenlijstbestanden worden meestal gebruikt voor webbrowsers (Microsoft Edge), [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) en aangepaste apps. Wanneer u een voorkeursdomein maakt, wordt er ook een bundel-id gemaakt.
+
     - **Eigenschappenlijstbestand**: Selecteer het eigenschappenlijstbestand dat aan uw app is gekoppeld. Controleer of het een `.plist`- of `.xml`-bestand is. Upload bijvoorbeeld het bestand `YourApp-Manifest.plist` of het bestand `YourApp-Manifest.xml`.
-    - **Bestandsinhoud**: De belangrijkste informatie in het eigenschappenlijstbestand wordt weergegeven. Als u de sleutelgegevens wilt wijzigen, opent u het lijstbestand in een andere editor en uploadt u het bestand opnieuw in Intune.
+
+      De belangrijkste informatie in het eigenschappenlijstbestand wordt weergegeven. Als u de sleutelgegevens wilt wijzigen, opent u het lijstbestand in een andere editor en uploadt u het bestand opnieuw in Intune.
 
     Zorg ervoor dat het bestand juist is opgemaakt. Het bestand mag alleen sleutel-waardeparen bevatten en mag niet tussen `<dict>`-, `<plist>`- of `<xml>`-tags staan. Het eigenschappenlijstbestand moet er ongeveer uitzien als het volgende bestand:
 
@@ -93,6 +95,6 @@ Deze instellingen worden toegevoegd aan een apparaatconfiguratieprofiel in Intun
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Het profiel is gemaakt, maar er gebeurt nog niets. Vervolgens kunt u [het profiel toewijzen](device-profile-assign.md) en [de status ervan controleren](device-profile-monitor.md).
+[Het profiel toewijzen](device-profile-assign.md) en [de status ervan controleren](device-profile-monitor.md).
 
 Zie [Microsoft Edge-beleidsinstellingen voor macOS configureren](https://docs.microsoft.com/deployedge/configure-microsoft-edge-on-mac) voor meer informatie over voorkeursbestanden voor Microsoft Edge.

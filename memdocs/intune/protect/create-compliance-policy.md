@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 03/20/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b437a72a2380fea215746aa76b35898c6fc60b16
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: de23dc438ac176383cf5f5fbfac4da22f91bd4b2
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80551385"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988823"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Een nalevingsbeleid maken in Microsoft Intune
 
@@ -58,9 +58,6 @@ Neem het volgende in acht voor het gebruik van het nalevingsbeleid voor apparate
 - Apparaten registreren in Intune (vereist om de nalevingsstatus te zien)
 
 - Registreer apparaten voor één gebruiker of registreer ze zonder een primaire gebruiker. Apparaten die zijn geregistreerd voor meerdere gebruikers worden niet ondersteund.
-
-> [!NOTE]
-> De Intune-gebruikersinterface wordt bijgewerkt naar een versie voor volledig scherm. Dit kan enkele weken duren. Totdat de tenant deze update ontvangt, hebt u een enigszins afwijkende werkstroom wanneer u instellingen maakt of bewerkt zoals beschreven in dit artikel.
 
 ## <a name="create-the-policy"></a>Beleid maken
 
@@ -134,7 +131,7 @@ If the **Evaluate** button is grayed out, make sure the policy is assigned to on
 
 ## <a name="refresh-cycle-times"></a>Cyclusduur vernieuwen
 
-In Intune worden verschillende vernieuwingscycli gebruikt om te controleren op updates voor nalevingsbeleid. Als het apparaat onlangs is ingeschreven, worden de check-ins vaker uitgevoerd. [Vernieuwingscycli voor beleidsregels en profielen](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) bevat de geschatte vernieuwingstijden.
+In Intune worden verschillende vernieuwingscycli gebruikt om te controleren op updates voor nalevingsbeleid. Als het apparaat onlangs is ingeschreven, worden de check-ins vaker uitgevoerd. In [Vernieuwingscycli voor beleidsregels en profielen](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) worden de geschatte vernieuwingstijden vermeld.
 
 Gebruikers kunnen ook op elk gewenst moment de bedrijfsportal-app openen en het apparaat synchroniseren om onmiddellijk op beleidsupdates te controleren.
 
@@ -166,7 +163,7 @@ Wanneer een apparaat meerdere nalevingsbeleidsregels heeft en het apparaat versc
 |---------|---------|
 |Onbekend     |1|
 |Niet van toepassing     |2|
-|compatibel|3|
+|Compliant|3|
 |Respijtperiode|4|
 |Niet-compatibel|5|
 |Fout|6|

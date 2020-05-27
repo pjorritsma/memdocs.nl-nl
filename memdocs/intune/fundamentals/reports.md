@@ -7,7 +7,7 @@ author: erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 12/19/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4e377e0cd9ad15d1d3a0ac9fb5c088dc1366d48
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 299eba5cfd07edac44db35d3b3eb6b97e5242973
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326754"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989985"
 ---
 # <a name="intune-reports"></a>Intune-rapporten
 Met Microsoft Intune-rapporten kunt u de status en activiteit van eindpunten in uw organisatie effectiever en proactief in de gaten houden. Het biedt ook andere rapportagegegevens in Intune. U kunt bijvoorbeeld rapporten zien over de compatibiliteit, de status en de trends van apparaten. Daarnaast kunt u aangepaste rapporten maken om meer specifieke gegevens te verkrijgen. 

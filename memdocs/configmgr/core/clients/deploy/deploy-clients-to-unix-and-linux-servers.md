@@ -10,12 +10,12 @@ ms.assetid: 15a4e323-9f42-4fea-bb14-f2b905d1f77c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4375867e70cb7f2989b78572c7fc8e005f95be73
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c9e8e40a6bdfa129a03e6042985e4956ffb21b5c
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713448"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906323"
 ---
 # <a name="how-to-deploy-clients-to-unix-and-linux-servers-in-configuration-manager"></a>Clients implementeren op UNIX-en Linux-servers in Configuration Manager
 
@@ -36,7 +36,7 @@ Voordat u een Linux-of UNIX-server met Configuration Manager kunt beheren, moet 
  Nadat u de client hebt geïnstalleerd, geeft u de client instellingen op in de Configuration Manager-console om de client agent op dezelfde manier te configureren als Windows-clients. Zie  [Clientinstellingen voor Linux- en UNIX-servers](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ClientSettingsforLnU)voor meer informatie.  
 
 ##  <a name="about-client-installation-packages-and-the-universal-agent"></a><a name="BKMK_AboutInstallPackages"></a>Over client installatie pakketten en de universele agent  
- Als u de client voor Linux en UNIX op een bepaald platform wilt installeren, moet u het desbetreffende clientinstallatiepakket gebruiken voor de computer waarop u de client installeert. Elke clientdownload uit het [Microsoft Downloadcentrum](https://go.microsoft.com/fwlink/?LinkID=525184)bevat de betreffende clientinstallatiepakketten. Naast de clientinstallatiepakketten bevat de clientdownload het **installatie** script waarmee de installatie van de client op elke computer wordt beheerd.  
+ Als u de client voor Linux en UNIX op een bepaald platform wilt installeren, moet u het desbetreffende clientinstallatiepakket gebruiken voor de computer waarop u de client installeert. Elke clientdownload uit het [Microsoft Downloadcentrum](https://www.microsoft.com/download/details.aspx?id=47719)bevat de betreffende clientinstallatiepakketten. Naast de clientinstallatiepakketten bevat de clientdownload het **installatie** script waarmee de installatie van de client op elke computer wordt beheerd.  
 
  Wanneer u een client installeert, kunt u hetzelfde proces en de opdracht regel eigenschappen gebruiken, ongeacht het client installatie pakket dat u gebruikt.  
 
@@ -69,7 +69,7 @@ Elk client installatie pakket bevat alle benodigde bestanden om de client instal
 
 ###  <a name="to-install-the-configuration-manager-client-on-linux-and-unix-servers"></a><a name="BKMK_ToInstallLnUClinent"></a>De Configuration Manager-client installeren op Linux-en UNIX-servers  
 
-1.  Op een Windows-computer: [download het betreffende clientbestand voor de Linux- of UNIX-server](https://go.microsoft.com/fwlink/?LinkID=525184) die u wilt beheren.  
+1.  Op een Windows-computer: [download het betreffende clientbestand voor de Linux- of UNIX-server](https://www.microsoft.com/download/details.aspx?id=47719) die u wilt beheren.  
 
 2.  Voer het zelfuitpakkende .exe-bestand uit op de Windows-computer om het installatiescript en het .tar-bestand voor de clientinstallatie uit te pakken.  
 
@@ -100,7 +100,7 @@ Elk client installatie pakket bevat alle benodigde bestanden om de client instal
     >  Met deze eigenschap geeft u niet het beheer punt op waaraan de client na de installatie wordt toegewezen.  
 
     > [!NOTE]  
-    >  Wanneer u de `-mp` eigenschap gebruikt om een beheer punt op te geven dat is geconfigureerd om alleen https-client verbindingen te accepteren, moet `-UsePKICert` u ook de eigenschap gebruiken.  
+    >  Wanneer u de `-mp` eigenschap gebruikt om een beheer punt op te geven dat is geconfigureerd om alleen https-client verbindingen te accepteren, moet u ook de `-UsePKICert` eigenschap gebruiken.  
 
 -   `-sitecode <sitecode>`  
 
@@ -134,7 +134,7 @@ Elk client installatie pakket bevat alle benodigde bestanden om de client instal
 
      Optioneel. Hiermee geeft u het volledige pad naar en de bestandsnaam van een X.509 PKI-certificaat in de PKCS#12-notatie (Public Key Certificate Standard) op. Dit certificaat wordt gebruikt voor clientverificatie. Als er tijdens de installatie geen certificaat is opgegeven en u een certificaat moet toevoegen of wijzigen, gebruikt u het hulpprogramma **certutil** . Zie [certificaten beheren op de client voor Linux en UNIX](../manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ManageLinuxCerts)voor meer informatie.  
 
-     Wanneer u gebruikt `-UsePKICert`, moet u ook het wacht woord opgeven dat is gekoppeld aan het PKCS # 12-bestand `-certpw` met behulp van de opdracht regel parameter.  
+     Wanneer u gebruikt `-UsePKICert` , moet u ook het wacht woord opgeven dat is gekoppeld aan het PKCS # 12-bestand met behulp van de `-certpw` opdracht regel parameter.  
 
      Als u deze eigenschap niet gebruikt om een PKI-certificaat op te geven, gebruikt de client een zelfondertekend certificaat en zijn alle communicatie naar site systemen via HTTP.  
 
@@ -147,7 +147,7 @@ Elk client installatie pakket bevat alle benodigde bestanden om de client instal
 
 -   `-certpw <parameter>`  
 
-     Optioneel. Hiermee geeft u het wacht woord op dat is gekoppeld aan het PKCS # 12-bestand `-UsePKICert` dat u hebt opgegeven met behulp van de eigenschap.  
+     Optioneel. Hiermee geeft u het wacht woord op dat is gekoppeld aan het PKCS # 12-bestand dat u hebt opgegeven met behulp van de `-UsePKICert` eigenschap.  
 
      Voorbeeld: `-UsePKICert <full path and filename> -certpw <password>`  
 
@@ -201,7 +201,7 @@ Elk client installatie pakket bevat alle benodigde bestanden om de client instal
 
      Gebruik deze optie als u PKI-client certificaten gebruikt die niet zijn gekoppeld aan een basis-CA-certificaat dat wordt vertrouwd door de beheer punten van uw sites. Beheer punten weigeren de client als het client certificaat niet is gekoppeld aan een vertrouwd basis certificaat in de lijst met certificaat verleners van de site.  
 
-     Als u deze optie niet gebruikt, zal de Linux-en UNIX-client de vertrouwens hiërarchie alleen verifiëren met het `-UsePKICert` certificaat in de optie.  
+     Als u deze optie niet gebruikt, zal de Linux-en UNIX-client de vertrouwens hiërarchie alleen verifiëren met het certificaat in de `-UsePKICert` optie.  
 
      Voorbeeld: `-rootcerts <full path and file name>,<full path and file name>`  
 

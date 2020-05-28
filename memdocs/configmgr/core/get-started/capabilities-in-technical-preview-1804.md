@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: b30386745244900e7f525f8f45b25a598628bf43
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b709d6ec0c0cda188502c314d945a70e8de71288
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078733"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905256"
 ---
 # <a name="capabilities-in-technical-preview-1804-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1804 voor Configuration Manager
 
@@ -80,7 +80,7 @@ Deze externe inhouds bibliotheek is een nieuwe vereiste voor [hoge Beschik baarh
 
 3. Selecteer **een netwerk share** en voer een geldig netwerkpad in. Dit pad is de locatie waarnaar de site de inhouds bibliotheek verplaatst. Klik op **OK**.  
 
-4. Let op de eigenschap **status** in de kolom inhouds bibliotheek in het deel venster Details. Hiermee wordt de voortgang van de site weer gegeven bij het verplaatsen van de inhouds bibliotheek. Wanneer deze bewerking wordt uitgevoerd, wordt het percentage voltooid weer gegeven. Als er een fout status is, wordt de fout weer gegeven. Veelvoorkomende fouten `access denied` zijn `disk full`of. Wanneer het volt ooien `OK`wordt weer gegeven. Raadpleeg **distmgr. log** voor meer informatie. Zie [Logboeken site server en site systeem server](../plan-design/hierarchy/log-files.md#BKMK_SiteSiteServerLog)voor meer informatie.  
+4. Let op de eigenschap **status** in de kolom inhouds bibliotheek in het deel venster Details. Hiermee wordt de voortgang van de site weer gegeven bij het verplaatsen van de inhouds bibliotheek. Wanneer deze bewerking wordt uitgevoerd, wordt het percentage voltooid weer gegeven. Als er een fout status is, wordt de fout weer gegeven. Veelvoorkomende fouten zijn `access denied` of `disk full` . Wanneer het volt ooien wordt weer gegeven `OK` . Raadpleeg **distmgr. log** voor meer informatie. Zie [Logboeken site server en site systeem server](../plan-design/hierarchy/log-files.md#BKMK_SiteSiteServerLog)voor meer informatie.  
 
 Als u de inhouds bibliotheek terug naar de site server wilt verplaatsen, herhaalt u dit proces en selecteert u de optie **lokaal voor de site server**.  
 
@@ -134,8 +134,6 @@ Als u probeert feedback te verzenden van een apparaat dat geen toegang heeft tot
 
 Gebruik het ondersteunings centrum voor het oplossen van problemen met clients, het weer geven van real-time Logboeken of het vastleggen van de status van een Configuration Manager-client computer voor latere analyse. Ondersteunings centrum is één hulp programma voor het consolideren van veel hulpprogram ma's voor probleem oplossing. Een voor beeld van de meest recente versie van het ondersteunings centrum met oplossingen voor fouten, verbeteringen en een preview van de nieuwe log viewer is beschikbaar in de Technical Preview. Zoek het installatie programma voor het ondersteunings centrum op de site server in de map **cd. latest\SMSSETUP\Tools\SupportCenter** .
 
- > [!Tip]  
- > Oudere documentatie voor de bestaande functionaliteit in het ondersteunings centrum is beschikbaar op [TechNet](https://technet.microsoft.com/library/dn688621.aspx). Relevante informatie wordt in het proces gemigreerd naar de docs.microsoft.com-bibliotheek.  
 
 ### <a name="new-support-center-features"></a>Nieuwe functies van het ondersteunings centrum  
 
@@ -304,7 +302,7 @@ We hebben de volgende verbeteringen aangebracht in de implementatie van het best
   > Variabelen en hun waarden worden opgeslagen met de taken reeks als XML en verborgen in de-data base. Wanneer de client een taken reeks beleid aanvraagt van het beheer punt, wordt dit tijdens de overdracht versleuteld en wanneer het op de client wordt opgeslagen. Alle variabelen waarden zijn echter onbewerkte tekst in de taken reeks omgeving in het geheugen tijdens runtime op de client. Als de taken reeks een stap bevat voor het uitvoeren van de waarde van de variabele, is deze uitvoer in tekst zonder opmaak. Dit gedrag vereist een expliciete actie van de beheerder voor het toevoegen van een dergelijke stap in de taken reeks. 
 
 
-- [Naam van masker programma tijdens het uitvoeren van de opdracht stap van een taken reeks](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed): als u wilt voor komen dat gevoelige gegevens worden weer gegeven of **OSDDoNotLogCommand** geregistreerd, `TRUE`stelt u de taken reeks variabele OSDDoNotLogCommand in op. Deze variabele maskeert de naam van het programma in bestand smsts. log tijdens de taken reeks stap [opdracht regel uitvoeren](../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine) . <!--1358493-->  
+- [Naam van masker programma tijdens het uitvoeren van de opdracht stap van een taken reeks](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed): als u wilt voor komen dat gevoelige gegevens worden weer gegeven of geregistreerd, stelt u de taken reeks variabele **OSDDoNotLogCommand** in op `TRUE` . Deze variabele maskeert de naam van het programma in bestand smsts. log tijdens de taken reeks stap [opdracht regel uitvoeren](../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine) . <!--1358493-->  
 
 
 

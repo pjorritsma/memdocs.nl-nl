@@ -10,12 +10,12 @@ ms.assetid: 95033a9b-ff13-4b70-b1de-bcb25bcb6024
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9a1dcd3528f4dbaacec81837150d6f8a1ad6c455
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 652a0c5e36ce7c4bacf40531a82fdf4e16197d95
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724165"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906921"
 ---
 # <a name="customize-operating-system-images-with-configuration-manager"></a>Installatie kopieën van een besturings systeem aanpassen met Configuration Manager
 
@@ -95,7 +95,7 @@ Installatie kopieën van besturings systemen in Configuration Manager zijn WIM-b
     > [!IMPORTANT]  
     >  De [Windows voorbereiden voor vastleggen](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture) takenreeks tracht het lokale beheerderswachtwoord op de referentiecomputer opnieuw in te stellen op een lege waarde voordat Sysprep draait. Indien het lokale beveiligingsbeleid **Het wachtwoord moet aan de complexiteitsvereisten voldoen** ingeschakeld is, slaagt deze takenreeksstap er niet in om het beheerderswachtwoord opnieuw in te stellen. Schakel in dit geval het beleid uit indien u de takenreeks uitvoert.  
 
-     Zie [Technische naslaginformatie over systeemvoorbereiding (Sysprep)](https://go.microsoft.com/fwlink/?LinkId=280286) voor meer informatie over Sysprep.  
+     Zie [Sysprep (systeem voorbereiding) Overview (Engelstalig)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview)voor meer informatie over Sysprep.  
 
 -   **Juiste hulpprogramma's en scripts die zijn vereist om installatie-scenario's in te perken**  
 

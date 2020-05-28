@@ -10,12 +10,12 @@ ms.assetid: 6143fd47-48ec-4bca-b53b-5b9b9f067bc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7476f27c050a7870cd8f860f2e1b6bfa3d68a7e9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b3849f360b2f22f2f48bbe49159b610399158b29
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81715023"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427766"
 ---
 # <a name="how-to-upgrade-clients-for-windows-computers-in-configuration-manager"></a>Clients voor Windows-computers bijwerken in Configuration Manager
 
@@ -39,7 +39,7 @@ Clients uitsluiten van een upgrade door een uitsluitings verzameling op te geven
 > Als u een upgrade van uw server infrastructuur uitvoert van een eerdere versie van Configuration Manager, voltooit u de server upgrades voordat u de Configuration Manager-clients bijwerkt. Dit proces omvat het installeren van alle updates van de huidige branch. De meest recente update van de huidige branch bevat de meest recente versie van de client. Upgrade clients nadat u alle Configuration Manager-updates hebt geïnstalleerd.
 
 > [!NOTE]
-> Als u van plan bent om de-site opnieuw toe te wijzen voor de clients tijdens de upgrade, `SMSSITECODE` geeft u de nieuwe site op met behulp van de client. msi-eigenschap. Als u de waarde van `AUTO` voor de `SMSSITECODE`opgeeft, moet u `SITEREASSIGN=TRUE`ook opgeven. Met deze eigenschap kan automatische site toewijzing tijdens de upgrade worden uitgevoerd. Zie [Eigenschappen van client installatie-SMSSITECODE](../../deploy/about-client-installation-properties.md#smssitecode)voor meer informatie.
+> Als u van plan bent om de-site opnieuw toe te wijzen voor de clients tijdens de upgrade, geeft u de nieuwe site op met behulp van de `SMSSITECODE` client. msi-eigenschap. Als u de waarde van `AUTO` voor de `SMSSITECODE` opgeeft, moet u ook opgeven `SITEREASSIGN=TRUE` . Met deze eigenschap kan automatische site toewijzing tijdens de upgrade worden uitgevoerd. Zie [Eigenschappen van client installatie-SMSSITECODE](../../deploy/about-client-installation-properties.md#smssitecode)voor meer informatie.
 
 ## <a name="about-automatic-client-upgrade"></a><a name="bkmk_autoupdate"></a>Over automatische client upgrade
 
@@ -97,7 +97,7 @@ Gebruik de volgende procedure voor het configureren van een automatische client 
 Clients ontvangen deze instellingen wanneer ze de volgende keer het beleid downloaden.
 
 > [!NOTE]
-> Bij Client upgrades worden Configuration Manager onderhouds Vensters geaccepteerd die u hebt geconfigureerd.
+> Bij Client upgrades worden Configuration Manager onderhouds Vensters geaccepteerd die u hebt geconfigureerd. De execmgr-thread voert alleen de client installatie Boots trap programma (ccmsetup. exe) uit tijdens een onderhouds venster. Als op het apparaat een Windows-editie met een schrijf filter wordt uitgevoerd, probeert ccmsetup tegelijkertijd te downloaden en te installeren. Anders is ccmsetup wille keurig een tijd om inhoud te downloaden. Nadat de inhoud is gedownload en het lokale beleid is gecompileerd, wordt de client upgrade door execmgr gepland tijdens het volgende onderhouds venster.<!-- SCCMDocs#896 -->
 
 ## <a name="next-steps"></a>Volgende stappen
 

@@ -10,12 +10,12 @@ ms.assetid: 500a9aa6-68aa-44eb-bf49-350c1314a697
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: cc7eb1a8ba721545bdee50d45887ab9d3aa8e952
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d3f01e54ba196ee9c27295d8f970a7dbe352f63f
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721008"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906178"
 ---
 # <a name="custom-locations-for-configuration-manager-site-database-files"></a>Aangepaste locaties voor Configuration Manager site database bestanden
 
@@ -36,6 +36,6 @@ ms.locfileid: "81721008"
 
 -   Stop de **SMS_Executive** -service op de site server van Configuration Manager.  
 
--   Gebruik de documentatie voor uw versie van SQL Server om u te begeleiden bij het verplaatsen van een gebruikers database. Als u bijvoorbeeld SQL Server 2014 gebruikt, raadpleegt u [data bases van gebruikers verplaatsen](https://technet.microsoft.com/library/ms345483\(v=sql.120\).aspx) op TechNet.  
+-   Zie [data bases van gebruikers verplaatsen](https://docs.microsoft.com/sql/relational-databases/databases/move-user-databases?view=sql-server-2014)voor meer informatie over het verplaatsen van een gebruikers database.  
 
 -   Nadat u de verplaatsing van het database bestand hebt voltooid, start u de **SMS_Executive** -service opnieuw op de Configuration Manager site server.  

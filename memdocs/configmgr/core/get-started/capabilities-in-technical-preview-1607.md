@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 7ec5802a8931bc4397eaf302920f09d8597802fe
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 73aac9e1bfb7b902a7db28ba4be00a2a02277324
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721610"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905685"
 ---
 # <a name="capabilities-in-technical-preview-1607-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1607 voor Configuration Manager
 
@@ -62,15 +62,15 @@ Aangepaste huis stijl voor het Software Center wordt toegepast volgens de volgen
 ## <a name="use-the-same-network-adapter-for-multiple-pxe-initiated-deployments"></a>Dezelfde netwerk adapter gebruiken voor meerdere door PXE geïnitieerde implementaties
 In Technical Preview versie 1607, wanneer u een Ethernet-adapter gebruikt om meerdere apparaten te installeren (zoals een USB-Ethernet adapter die u op meerdere apparaten gebruikt), kunt u een nieuwe instelling inschakelen waarmee u hardware-id's voor de Ethernet-adapters opgeeft. Configuration Manager negeert de hardware-id's in de lijst tijdens het uitvoeren van een PXE-installatie en voor registratie van de client.
 
-Voor meer informatie over dit probleem raadpleegt u de blog van het [Configuration Manager OSD-ondersteunings team](https://blogs.technet.microsoft.com/system_center_configuration_manager_operating_system_deployment_support_blog/2015/08/27/reusing-the-same-nic-for-multiple-pxe-initiated-deployments-in-system-center-configuration-manger-osd/).  
+Voor meer informatie over dit probleem raadpleegt u de blog van het [Configuration Manager OSD-ondersteunings team](https://techcommunity.microsoft.com/t5/configuration-manager-archive/reusing-the-same-nic-for-multiple-pxe-initiated-deployments-in/ba-p/273721).  
 
 ### <a name="enable-the-feature-to-manage-duplicate-hardware-identifiers"></a>De functie inschakelen voor het beheren van dubbele hardware-id's  
-1. Ga in de Configuration Manager-console naar **beheer** > **overzicht** > **Cloud Services** > **updates en onderhouds** > **functies**.
+1. Ga in de Configuration Manager-console naar **beheer**  >  **overzicht**  >  **Cloud Services**  >  **updates en onderhouds**  >  **functies**.
 2. Selecteer in het weergave paneel **dubbele hardware-Id's beheren**.
 3. Klik op het tabblad **Start** in de groep **functies** op **inschakelen**.
 
 ### <a name="add-hardware-identifiers-for-configuration-manager-to-ignore"></a>Hardware-id's voor Configuration Manager voor negeren toevoegen  
-1. Ga in de Configuration Manager-console naar **beheer** > **overzicht** > **site configuratie** > **sites**.
+1. Ga in de Configuration Manager-console naar **beheer**  >  **overzicht**  >  **site configuratie**  >  **sites**.
 2. Klik op **Hiërarchie-instellingen** op het tabblad **Start** , in de groep **Sites**.
 3. Ga naar het tabblad **goed keuring van client en conflicterende records** .
 4. Klik op **toevoegen** in de sectie **dubbele hardware-id's** om nieuwe hardware-id's toe te voegen.

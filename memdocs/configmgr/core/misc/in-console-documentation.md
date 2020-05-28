@@ -2,7 +2,7 @@
 title: Documentatie in de console
 titleSuffix: Configuration Manager
 description: Dit artikel wordt alleen weer gegeven in de Configuration Manager-console.
-ms.date: 04/23/2020
+ms.date: 05/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: cd5c03b9b05bff253a93466eb27700685faea055
-ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
+ms.openlocfilehash: 678f19d4ec69bea2bc5b3863e3e2a8332c10f3be
+ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82126047"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83551601"
 ---
 <!-- 
 - Feature 1357546
@@ -27,7 +27,7 @@ ms.locfileid: "82126047"
 
 # <a name="microsoft-endpoint-configuration-manager-documentation"></a>Documentatie voor Microsoft Endpoint Configuration Manager
 
-*Laatste update: 23 april 2020*
+*Laatste update: 11 mei 2020*
 
 Deze inhoud kan u helpen bij het leren en ondersteunen van Configuration Manager.
 
@@ -55,22 +55,22 @@ Een gecuratorde lijst met belang rijke artikelen.
 
 ## <a name="trending"></a>Trending
 
-De populairste artikelen tussen 1 maart en 30 maart 2020.
+De populairste artikelen van 1 april tot en met 30 april 2020.
 
 | Pagina weergaven | Titel |
 |------------|-------|
-| 22659 | [Een cloudbeheergateway plannen](https://docs.microsoft.com/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
-| 16797 | [Verwijzing naar logboekbestand](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/log-files) |
-| 16142 | [Poorten die worden gebruikt voor verbindingen](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/ports) |
-| 15907 | [Gebruikershandleiding van Software Center](https://docs.microsoft.com/configmgr/core/understand/software-center) |
-| 14667 | [Updates en onderhoud](https://docs.microsoft.com/configmgr/core/servers/manage/updates) |
-| 14455 | [Overzicht van het inschakelen van Transport Layer Security (TLS) 1,2](https://docs.microsoft.com/configmgr/core/plan-design/security/enable-tls-1-2) |
-| 12292 | [Desktop Analytics](https://docs.microsoft.com/configmgr/desktop-analytics/overview) |
-| 12062 | [Co-beheer voor Windows 10-apparaten](https://docs.microsoft.com/configmgr/comanage/overview) |
-| 11741 | [Wat is Configuration Manager?](https://docs.microsoft.com/configmgr/core/understand/introduction) |
-| 11282 | [Wat is er nieuw in versie 1910](https://docs.microsoft.com/configmgr/core/plan-design/changes/whats-new-in-version-1910) |
+| 37071 | [Een cloudbeheergateway plannen](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
+| 19105 | [Verwijzing naar logboekbestand](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files) |
+| 17942 | [Poorten die worden gebruikt voor verbindingen](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/ports) |
+| 15564 | [Updates en onderhoud](https://docs.microsoft.com/mem/configmgr/core/servers/manage/updates) |
+| 15389 | [Overzicht van het inschakelen van Transport Layer Security (TLS) 1,2](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2) |
+| 15316 | [Co-beheer voor Windows 10-apparaten](https://docs.microsoft.com/mem/configmgr/comanage/overview) |
+| 15229 | [Gebruikershandleiding van Software Center](https://docs.microsoft.com/mem/configmgr/core/understand/software-center) |
+| 14978 | [Transport Layer Security (TLS) 1,2 op clients inschakelen](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) |
+| 13522 | [Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/overview) |
+| 13017 | [Clientinstellingen](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/about-client-settings) |
 
-De [pagina Configuration Manager hub](https://docs.microsoft.com/mem/configmgr/) heeft 36.258 pagina weergaven ontvangen in deze tijds periode.
+De [pagina Configuration Manager hub](https://docs.microsoft.com/mem/configmgr/) heeft 41.479 pagina weergaven ontvangen in deze tijds periode.
 
 ## <a name="recently-updated"></a>Recent bijgewerkt
 
@@ -78,15 +78,16 @@ Artikelen met een recente en belang rijke update.
 
 | Laatst gecontroleerd | Titel |
 |---------------|-------|
-| 3/30/2020 | [Naslaginformatie voor onderhoudstaken](https://docs.microsoft.com/configmgr/core/servers/manage/reference-for-maintenance-tasks) |
-| 3/30/2020 | [Instellingen voor software-updates beheren](https://docs.microsoft.com/configmgr/sum/get-started/manage-settings-for-software-updates) |
-| 3/25/2020 | [Antimalwarebeleid Endpoint Protection](https://docs.microsoft.com/configmgr/protect/deploy-use/endpoint-antimalware-policies) |
-| 3/23/2020 | [Windows Autopilot implementeren voor bestaande apparaten](https://docs.microsoft.com/configmgr/osd/deploy-use/windows-autopilot-for-existing-devices) |
-| 12-03-2020 | [Implementatie plannen maken](https://docs.microsoft.com/configmgr/desktop-analytics/create-deployment-plans) |
-| 12-03-2020 | [Implementeren naar pilot](https://docs.microsoft.com/configmgr/desktop-analytics/deploy-pilot) |
-| 12-03-2020 | [Wat is er nieuw in Desktop Analytics](https://docs.microsoft.com/configmgr/desktop-analytics/whats-new) |
-| 3/3/2020 | [Evaluatie van de compatibiliteit](https://docs.microsoft.com/configmgr/desktop-analytics/compat-assessment) |
-| 3/3/2020 | [Desktop Analytics](https://docs.microsoft.com/configmgr/desktop-analytics/overview) |
+| 4/30/2020 | [Technical Preview 2004](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2004) |
+| 4/29/2020 | [Verificatie op basis van tokens voor CMG](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/deploy-clients-cmg-token) |
+| 4/28/2020 | [Orchestration-groepen](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/orchestration-groups) |
+| 4/15/2020 | [Goedkeurings proces van toepassing](https://docs.microsoft.com/mem/configmgr/develop/apps/application-approval-process) |
+| 4/15/2020 | [Apparaten inschrijven in Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/enroll-devices) |
+| 4/10/2020 | [Micro soft Endpoint Manager-Tenant koppelen](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) |
+| 4/8/2020 | [Integreren met Power BI Report Server](https://docs.microsoft.com/mem/configmgr/core/servers/manage/powerbi-report-server) |
+| 4/8/2020 | [Releaseopmerkingen](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/install/release-notes) |
+| 4/1/2020 | [Wat is de beheer service?](https://docs.microsoft.com/mem/configmgr/develop/adminservice/overview) |
+| 4/1/2020 | [Wat is er nieuw in versie 2002](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2002) |
 
 ## <a name="troubleshooting-articles"></a>Artikelen over probleemoplossing
 
@@ -106,11 +107,12 @@ Begeleide procedures voor hulp bij het oplossen van problemen Configuration Mana
 
 ## <a name="new-and-updated-support-articles"></a>Nieuwe en bijgewerkte ondersteunings artikelen
 
-Ondersteunings artikelen die nieuw zijn of worden bijgewerkt tussen 21 februari en 19 maart 2020.
+Ondersteunings artikelen die nieuw zijn of worden bijgewerkt tussen 20 maart en 15 mei 2020.
 
-- [KB 4552430 update categorie synchronisatie van derden wordt opnieuw ingesteld op de standaard waarde in Configuration Manager](https://support.microsoft.com/help/4552430)
-- [KB 4551013 gewijzigde updates van derden kunnen niet worden gedownload in Configuration Manager](https://support.microsoft.com/help/4551013)
-- [KB 4552181 inhouds distributie loopt in Configuration Manager huidige vertakking versie 1910](https://support.microsoft.com/help/4552181)
-- [KB 4550023 een Configuration Manager in-place upgrade taken reeks wordt niet voortgezet nadat een Windows 10-in-place upgrade is teruggedraaid](https://support.microsoft.com/help/4550023)
+- [KB 4561494 micro soft Edge-toepassing kan niet worden gemaakt Configuration Manager](https://support.microsoft.com/help/4561494)
+- [KB 4551059 Remote Configuration Manager console loopt 20 seconden per 10 minuten vast](https://support.microsoft.com/help/4551059)
+- [KB 4556203-samen vatting van wijzigingen in micro soft endpoint Configuration Manager huidige vertakking, versie 2002](https://support.microsoft.com/help/4556203)
+- [KB 4553501-update voor micro soft endpoint Configuration Manager versie 2002, eerste update ring](https://support.microsoft.com/help/4553501)
+- [KB 4561945 fout ' de onderliggende verbinding is gesloten ' wanneer het service verbindings programma het bestand ConfigMgr. AdminUIContent. cab downloadt](https://support.microsoft.com/help/4561945)
 
 Als u zich wilt abonneren op Atom of RSS-melding van nieuwe Configuration Manager-ondersteunings artikelen, raadpleegt u [content updates ondersteunen](https://support.microsoft.com/help/4089498/) en selecteert u **micro soft endpoint Configuration Manager**.  

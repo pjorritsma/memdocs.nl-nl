@@ -10,12 +10,12 @@ ms.assetid: f0f818d4-7f45-402f-8758-dc88bc024953
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 39039347361076ae7c8491f95419187d0af9da85
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7de7d562131f97ac21d1c394b176d3b7f4ce7747
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722618"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906440"
 ---
 # <a name="supported-configurations-for-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>Ondersteunde configuraties voor de Long-term Servicing Branch van System Center Configuration Manager
 
@@ -25,13 +25,13 @@ Gebruik de informatie in dit onderwerp om te begrijpen welke besturings systemen
 Als anders vermeld in deze of de LTSB-specifieke onderwerpen, zijn dezelfde configuraties en beperkingen die van toepassing zijn op de Current Branch versie 1606 van toepassing op de LTSB.  Als er conflicten optreden, gebruikt u de informatie die van toepassing is op de editie die u gebruikt. Normaal gesp roken is de LTSB beperkter dan de Current Branch.
 
 ## <a name="general-statement-of-support"></a>Algemene ondersteunings verklaring
-De volgende producten en technologieën worden ondersteund door deze vertakking van Configuration Manager. Hun insluiting in deze inhoud geeft echter geen uitbrei ding van ondersteuning voor een product of versie die de individuele ondersteunings levenscyclus van het product nakomt. Producten die niet langer zijn dan hun levens cyclus, worden niet ondersteund voor gebruik met Configuration Manager. Ga voor meer informatie naar de website van [Microsoft ondersteuning Lifecycle](https://go.microsoft.com/fwlink/p/?LinkId=208270) en lees de [Veelgestelde vragen over het Microsoft ondersteuning Lifecycle-beleid](https://go.microsoft.com/fwlink/p/?LinkId=31976).
+De volgende producten en technologieën worden ondersteund door deze vertakking van Configuration Manager. Hun insluiting in deze inhoud geeft echter geen uitbrei ding van ondersteuning voor een product of versie die de individuele ondersteunings levenscyclus van het product nakomt. Producten die niet langer zijn dan hun levens cyclus, worden niet ondersteund voor gebruik met Configuration Manager. Ga voor meer informatie naar de website van [Microsoft ondersteuning Lifecycle](https://support.microsoft.com/lifecycle) en lees de veelgestelde vragen over het Microsoft ondersteuning Lifecycle-beleid.
 
-Producten en product versies die niet in de volgende onderwerpen worden vermeld, worden bovendien niet ondersteund, tenzij ze zijn aangekondigd op de [Enterprise Mobility + Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/).
+Producten en product versies die niet in de volgende onderwerpen worden vermeld, worden bovendien niet ondersteund, tenzij ze zijn aangekondigd op de [Enterprise Mobility + Security Blog](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/bg-p/enterprisemobilityandsecurity).
 
 **Beperkingen voor toekomstige ondersteuning:** De LTSB heeft beperkte ondersteuning voor toekomstige server-en client besturingssystemen en product afhankelijkheden. De lijst met platforms voor de LTSB is vast voor de levens duur van de release:
 
-**Windows**
+**Windows:**
 - Alleen kwaliteits-en beveiligings updates voor Windows worden ondersteund.
 - Er is geen ondersteuning toegevoegd voor huidige branches (CB), Current branches for Business (CBB) of LTSB van Windows 10.
 - Geen ondersteuning voor nieuwe primaire versies van Windows Server.
@@ -72,7 +72,7 @@ U kunt de LTSB gebruiken om de volgende besturings systemen van Windows-computer
 - De Server Core-installatie van Windows Server 2012 (x64) (Opmerking 2)
 
 **(Opmerking 1)** Data Center-releases worden ondersteund, maar niet gecertificeerd voor Configuration Manager.  
-**(Opmerking 2)** Ter ondersteuning van client push installatie moet op de computer waarop deze besturingssysteem versie wordt uitgevoerd, de functie service Bestands server worden uitgevoerd voor de server functie bestands-en opslag Services. Zie [Server functies en-onderdelen installeren op een server core-server](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx) in de Windows Server 2012 TechNet-bibliotheek voor meer informatie over het installeren van Windows-onderdelen op een server core-computer.
+**(Opmerking 2)** Ter ondersteuning van client push installatie moet op de computer waarop deze besturingssysteem versie wordt uitgevoerd, de functie service Bestands server worden uitgevoerd voor de server functie bestands-en opslag Services. Zie [Server functies en-onderdelen installeren op een server core-server](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574158(v=ws.11))voor meer informatie over het installeren van Windows-onderdelen op een server core-computer.
 
 ### <a name="windows-embedded"></a>Windows Embedded
 U kunt de LTSB gebruiken om de volgende Windows Embedded-apparaten te beheren door de-client software op het apparaat te installeren.  Zie [planning voor client implementatie op Windows Embedded-apparaten](../clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md)voor meer informatie.
@@ -131,7 +131,7 @@ U kunt de LTSB gebruiken om de volgende Windows Embedded-apparaten te beheren do
 ### <a name="mac-computers"></a>Mac-computers  
  U kunt de LTSB gebruiken voor het beheren van Mac OS X-computers met de Configuration Manager-client voor Mac.
 
-Het Mac-client installatie pakket wordt niet geleverd met de Configuration Manager media. U kunt deze downloaden als onderdeel van de down load ' clients voor aanvullende besturings systemen ' in het [micro soft Download centrum](https://go.microsoft.com/fwlink/?LinkID=525184).  
+Het Mac-client installatie pakket wordt niet geleverd met de Configuration Manager media. U kunt deze downloaden als onderdeel van de down load ' clients voor aanvullende besturings systemen ' in het [micro soft Download centrum](https://www.microsoft.com/download/details.aspx?id=47719).  
 
 Ondersteuning voor Mac-besturings systemen is beperkt tot de apparaten die worden vermeld in deze sectie. Ondersteuning biedt geen aanvullende besturings systemen die mogelijk worden ondersteund door een toekomstige update op Mac client installatie pakketten voor Current Branch.
 
@@ -145,7 +145,7 @@ Zie [clients implementeren op Macs](../clients/deploy/deploy-clients-to-macs.md)
 ## <a name="linux-and-unix-servers"></a>Linux-en UNIX-servers
 U kunt de LTSB gebruiken voor het beheren van Linux-en UNIX-servers met de Configuration Manager-client voor Linux en UNIX.
 
-De Linux-en UNIX-client installatie pakketten worden niet geleverd met de Configuration Manager media. U kunt deze downloaden als onderdeel van de down load "clients voor aanvullende besturings systemen" in het [micro soft Download centrum](https://go.microsoft.com/fwlink/?LinkID=525184). Naast de clientinstallatiepakketten bevat de clientdownload het installatie script waarmee de installatie van de client op elke computer wordt beheerd.
+De Linux-en UNIX-client installatie pakketten worden niet geleverd met de Configuration Manager media. U kunt deze downloaden als onderdeel van de down load "clients voor aanvullende besturings systemen" in het [micro soft Download centrum](https://www.microsoft.com/download/details.aspx?id=47719). Naast de clientinstallatiepakketten bevat de clientdownload het installatie script waarmee de installatie van de client op elke computer wordt beheerd.
 
 Ondersteuning voor Linux-en UNIX-besturings systemen is beperkt tot die in deze sectie. Ondersteuning omvat geen aanvullende besturings systemen die mogelijk worden ondersteund door een toekomstige update van Linux-en UNIX-client pakketten voor Current Branch.
 
@@ -163,95 +163,95 @@ De volgende versies worden ondersteund door het aangegeven. tar-bestand te gebru
 
 |Versie|File|  
 |-|-|  
-|Versie 5,3 (voeding)|CCM-Aix53ppc. &lt;build\>. tar|  
-|Versie 6,1 (voeding)|CCM-Aix61ppc. &lt;build\>. tar|  
-|Versie 7,1 (voeding)|CCM-Aix71ppc. &lt;build\>. tar|  
+|Versie 5,3 (voeding)|CCM-Aix53ppc. &lt; Build \> . tar|  
+|Versie 6,1 (voeding)|CCM-Aix61ppc. &lt; Build \> . tar|  
+|Versie 7,1 (voeding)|CCM-Aix71ppc. &lt; Build \> . tar|  
 
 ### <a name="centos"></a>CentOS  
 
 |Versie|File|  
 |-|-|  
-|Versie 5 x86|CCM-Universalx86. &lt;build\>. tar|  
-|Versie 5 x64|CCM-Universalx64. &lt;build\>. tar|  
-|Versie 6 x86|CCM-Universalx86. &lt;build\>. tar|  
-|Versie 6 x64|CCM-Universalx64. &lt;build\>. tar|  
-|Versie 7 x64|CCM-Universalx64. &lt;build\>. tar|  
+|Versie 5 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Versie 5 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Versie 6 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Versie 6 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Versie 7 x64|CCM-Universalx64. &lt; Build \> . tar|  
 
 ### <a name="debian"></a>Debian  
 
 |Versie|File|    
 |-|-|  
-|Versie 5 x86|CCM-Universalx86. &lt;build\>. tar|  
-|Versie 5 x64|CCM-Universalx64. &lt;build\>. tar|  
-|Versie 6x86|CCM-Universalx86. &lt;build\>. tar|  
-|Versie 6 x64|CCM-Universalx64. &lt;build\>. tar|  
-|Versie 7 x86|CCM-Universalx86. &lt;build\>. tar|  
-|Versie 7 x64|CCM-Universalx64. &lt;build\>. tar|  
-|Versie 8 x86|CCM-Universalx86. &lt;build\>. tar|  
-|Versie 8 x64|CCM-Universalx64. &lt;build\>. tar|  
+|Versie 5 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Versie 5 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Versie 6x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Versie 6 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Versie 7 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Versie 7 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Versie 8 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Versie 8 x64|CCM-Universalx64. &lt; Build \> . tar|  
 
 ### <a name="hp-ux"></a>HP-UX  
 
 |Versie|File|  
 |-|-|  
-|Versie 11iv2 IA64|CCM-HpuxB. 11.23 i64. &lt;build\>. tar|  
-|Versie 11iv2 PA-RISC|CCM-HpuxB. 11.23 PA. &lt;build\>. tar|  
-|Versie 11iv3 IA64|CCM-HpuxB. 11.31 i64. &lt;build\>. tar|  
-|Versie 11iv3 PA-RISC|CCM-HpuxB. 11.31 PA. &lt;build\>. tar|  
+|Versie 11iv2 IA64|CCM-HpuxB. 11.23 i64. &lt; Build \> . tar|  
+|Versie 11iv2 PA-RISC|CCM-HpuxB. 11.23 PA. &lt; Build \> . tar|  
+|Versie 11iv3 IA64|CCM-HpuxB. 11.31 i64. &lt; Build \> . tar|  
+|Versie 11iv3 PA-RISC|CCM-HpuxB. 11.31 PA. &lt; Build \> . tar|  
 
 ### <a name="oracle-linux"></a>Oracle Linux  
 
 |Versie|File|    
 |-|-|  
-|Versie 5 x86|CCM-Universalx86. &lt;build\>. tar|  
-|Versie 5 x64|CCM-Universalx64. &lt;build\>. tar|  
-|Versie 6 x86|CCM-Universalx86. &lt;build\>. tar|  
-|Versie 6 x64|CCM-Universalx64. &lt;build\>. tar|  
-|Versie 7 x64|CCM-Universalx64. &lt;build\>. tar|  
+|Versie 5 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Versie 5 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Versie 6 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Versie 6 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Versie 7 x64|CCM-Universalx64. &lt; Build \> . tar|  
 
 ### <a name="red-hat-enterprise-linux-rhel"></a>Red Hat Enterprise Linux (RHEL)  
 
 |Versie|File|  
 |-|-|  
-|Versie 4 x86|CCM-RHEL4x86. &lt;build\>. tar|  
-|Versie 4 x64|CCM-RHEL4x64. &lt;build\>. tar|  
-|Versie 5 x86|CCM-Universalx86. &lt;build\>. tar|  
-|Versie 5 x64|CCM-Universalx64. &lt;build\>. tar|  
-|Versie 6 x86|CCM-Universalx86. &lt;build\>. tar|  
-|Versie 6 x64|CCM-Universalx64. &lt;build\>. tar|  
-|Versie 7 x64|CCM-Universalx64. &lt;build\>. tar|  
+|Versie 4 x86|CCM-RHEL4x86. &lt; Build \> . tar|  
+|Versie 4 x64|CCM-RHEL4x64. &lt; Build \> . tar|  
+|Versie 5 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Versie 5 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Versie 6 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Versie 6 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Versie 7 x64|CCM-Universalx64. &lt; Build \> . tar|  
 
 ### <a name="solaris"></a>Sun  
 
 |Versie|File|   
 |-|-|  
-|Versie 9 SPARC|CCM-Sol9sparc. &lt;build\>. tar|  
-|Versie 10 x86|CCM-Sol10x86. &lt;build\>. tar|  
-|Versie 10 SPARC|CCM-Sol10sparc. &lt;build\>. tar|  
-|Versie 11 x86|CCM-Sol11x86. &lt;build\>. tar|  
-|Versie 11 SPARC|CCM-Sol11sparc. &lt;build\>. tar|  
+|Versie 9 SPARC|CCM-Sol9sparc. &lt; Build \> . tar|  
+|Versie 10 x86|CCM-Sol10x86. &lt; Build \> . tar|  
+|Versie 10 SPARC|CCM-Sol10sparc. &lt; Build \> . tar|  
+|Versie 11 x86|CCM-Sol11x86. &lt; Build \> . tar|  
+|Versie 11 SPARC|CCM-Sol11sparc. &lt; Build \> . tar|  
 
 ### <a name="suse-linux-enterprise-server-sles"></a>SUSE Linux Enterprise Server (SLES)  
 
 |Versie|File|  
 |-|-|  
-|Versie 9 x86|CCM-SLES9x86. &lt;build\>. tar|  
-|Versie 10 SP1 x86|CCM-Universalx86. &lt;build\>. tar|  
-|Versie 10 SP1 x64|CCM-Universalx64. &lt;build\>. tar|  
-|Versie 11 SP1 x86|CCM-Universalx86. &lt;build\>. tar|  
-|Versie 11 SP1 x64|CCM-Universalx64. &lt;build\>. tar|  
-|Versie 12 x64|CCM-Universalx64. &lt;build\>. tar|  
+|Versie 9 x86|CCM-SLES9x86. &lt; Build \> . tar|  
+|Versie 10 SP1 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Versie 10 SP1 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Versie 11 SP1 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Versie 11 SP1 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Versie 12 x64|CCM-Universalx64. &lt; Build \> . tar|  
 
 ### <a name="ubuntu"></a>Ubuntu  
 
 |Versie|File|    
 |-|-|  
-|Versie 10,04 LTS x86|CCM-Universalx86. &lt;build\>. tar|  
-|Versie 10,04 LTS x64|CCM-Universalx64. &lt;build\>. tar|  
-|Versie 12,04 LTS x86|CCM-Universalx86. &lt;build\>. tar|  
-|Versie 12,04 LTS x64|CCM-Universalx64. &lt;build\>. tar|  
-|Versie 14,04 LTS x86|CCM-Universalx86. &lt;build\>. tar|  
-|Versie 14,04 LTS x64|CCM-Universalx64. &lt;build\>. tar|  
+|Versie 10,04 LTS x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Versie 10,04 LTS x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Versie 12,04 LTS x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Versie 12,04 LTS x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Versie 14,04 LTS x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Versie 14,04 LTS x64|CCM-Universalx64. &lt; Build \> . tar|  
 
 ### <a name="exchange-server-connector"></a>Exchange Server-connector
  De LTSB ondersteunt beperkt beheer van apparaten die verbinding maken met uw Exchange Server-exemplaar, zonder client software te installeren. Zie [mobiele apparaten beheren met Configuration Manager en Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)voor meer informatie.

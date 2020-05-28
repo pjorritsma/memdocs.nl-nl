@@ -10,12 +10,12 @@ ms.assetid: 33a6c1d9-4dd8-411c-a748-693a5bd2ea5a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 241e7ed9a2195e178cc1aac2ee2a146eea60b093
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b691004742def4c126ba82b07cad1651cbe822f8
+ms.sourcegitcommit: 13ceb4e1cc8c2a10bfa199e301bf9bada8ceb268
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721743"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82923429"
 ---
 # <a name="create-and-deploy-windows-defender-application-guard-policy"></a>Windows Defender Application Guard-beleid maken en implementeren
 
@@ -25,12 +25,12 @@ U kunt beleids regels voor [Windows Defender Application Guard (toepassings beve
 
 ## <a name="prerequisites"></a>Vereisten
 
-Als u een Windows Defender Application Guard-beleid wilt maken en implementeren, moet u de update van Windows 10 over het najaar van de maker (1709) gebruiken. De Windows 10-apparaten waarop u het beleid implementeert, moeten worden geconfigureerd met een netwerk isolatie beleid. Zie [overzicht van Windows Defender Application Guard](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview)voor meer informatie.
+Als u een Windows Defender Application Guard-beleid wilt maken en implementeren, moet u de update van Windows 10 over het najaar van de maker (1709) gebruiken. De Windows 10-apparaten waarop u het beleid implementeert, moeten worden geconfigureerd met een [netwerk isolatie beleid](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard#network-isolation-settings). Zie [overzicht van Windows Defender Application Guard](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview)voor meer informatie.
 
 ## <a name="create-a-policy-and-to-browse-the-available-settings"></a>Een beleid maken en bladeren door de beschik bare instellingen
 
 1. Kies in de Configuration Manager-console **activa en naleving**.
-2. Kies **overzicht** > **Endpoint Protection**Endpoint Protection > **Windows Defender Application Guard**in de werk ruimte **activa en naleving** .
+2. Kies **overzicht**Endpoint Protection **Assets and Compliance**  >  **Endpoint Protection**  >  **Windows Defender Application Guard**in de werk ruimte activa en naleving.
 3. Klik op het tabblad **Start** in de groep **maken** op **Windows Defender Application Guard-beleid maken**.
 4. Met behulp van het [artikel](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard) als referentie kunt u de beschik bare instellingen bekijken en configureren. Met Configuration Manager kunt u bepaalde beleids instellingen instellen:
    - [Instellingen voor interactie met host](#bkmk_HIS)
@@ -70,10 +70,10 @@ Hiermee configureert u interacties tussen hostcomputers en de Application Guard-
 
 Hiermee configureert u het gedrag van de toepassing in de Application Guard-sessie. Vóór Configuration Manager versie 1802 bevonden zowel het toepassings gedrag als de interactie met de host zich op het tabblad **instellingen** .
 
-- **Inhoud:**
+- **Inhoudbeheer**
   - Enter prise-sites kunnen niet-bedrijfs inhoud laden, zoals invoeg toepassingen van derden.
 - **Daarenteg**
-  - Door de gebruiker gegenereerde browser gegevens behouden
+  - Door de gebruiker gegenereerde browsergegevens behouden
   - Beveiligings gebeurtenissen in de geïsoleerde Application Guard-sessie controleren
 
 ### <a name="file-management"></a><a name="bkmk_FM"></a>Bestands beheer

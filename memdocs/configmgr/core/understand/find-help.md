@@ -2,7 +2,7 @@
 title: Help-informatie zoeken
 titleSuffix: Configuration Manager
 description: Zoek bronnen voor aanvullende informatie over Configuration Manager.
-ms.date: 04/01/2020
+ms.date: 05/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 86810629-cf2a-43e8-86a2-847444119fc1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6610e86c12b6f7704b65dc11c476fa09e8f2ae63
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7bae98a8df1d8b8ff843bd333083c4c6ad68848c
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722905"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343181"
 ---
 # <a name="find-help-for-using-configuration-manager"></a>Hulp zoeken voor het gebruik van Configuration Manager
 
@@ -81,7 +81,7 @@ Vanaf Configuration Manager 2002, wanneer u **een glim lach verzendt** of **een 
    - Bericht-ID 53900 voor een succes volle verzen ding.
    - Bericht-ID 53901 voor een mislukte verzen ding.
 
-Status berichten weer geven van status**bericht query's**van **bewakings** > **systeem status** > . Begin met de query **alle status berichten** en selecteer uw tijds bestek. Wanneer de berichten worden geladen, klikt u op de knop **berichten filteren** en filtert u op bericht-id 53900 of 53901.
+Status berichten weer geven van status bericht query's van **bewakings**  >  **systeem status**  >  **Status Message Queries**. Begin met de query **alle status berichten** en selecteer uw tijds bestek. Wanneer de berichten worden geladen, klikt u op de knop **berichten filteren** en filtert u op bericht-id 53900 of 53901.
 
 Status berichten worden niet gemaakt als u [feedback verzendt die u hebt opgeslagen om deze later te](find-help.md#BKMK_NoInternet)verzenden.
 
@@ -127,13 +127,20 @@ Wanneer u **een glim lach verzendt** of **een frons verzendt**, wordt de volgend
         - `-s --silent`Geen logboek registratie naar de console (kan niet combi neren met--verbose)
         - `-v, --verbose`Uitvoer uitgebreide logboek registratie naar de console (kan niet combi neren met--Silent)
         - `--help`Hiermee wordt het Help-scherm weer gegeven
+    
+    - Vanaf versie 1910 biedt het hulp programma UploadOfflineFeedback ondersteuning voor het gebruik van een proxy server. U kunt de volgende para meters opgeven:
+        - `-x, --proxy`Hiermee geeft u een proxy server op om verbinding te maken met internet.
+        - `-o, --port`Hiermee geeft u de poort op waarmee de proxy server verbinding maakt met internet.
+        - `-u, --user`Hiermee geeft u de gebruikers naam op voor de proxy server om verbinding te maken met internet.
+        - `-w, --password`Hiermee geeft u het wacht woord op voor de proxy server om verbinding te maken met internet. Typ een asterisk (&#42;) om een prompt voor het wacht woord te maken. Het wachtwoord wordt niet weergegeven als u deze na de wachtwoordprompt invoert. We raden u ten zeerste aan een asterisk (&#42;) te gebruiken om een prompt te maken voor het invoeren van wacht woorden, omdat tekst zonder opmaak op de opdracht regel minder veilig is.
+        - `-i`Verbindings controle overs Laan: Hiermee slaat u de controle van de netwerk verbinding over, worden de feedback met de opgegeven instellingen geüpload.
 
 ## <a name="confirmation-of-console-feedback"></a><a name="bkmk_feedbackid"></a>Bevestiging van console feedback
 
 <!--3556010-->
 Vanaf versie 1902, wanneer u feedback verzendt via de Configuration Manager-console of UploadOfflineFeedback. exe, wordt er een bevestigings bericht weer gegeven. Dit bericht bevat een **feedback-id**, die u aan micro soft kunt geven als tracking-ID.
 
-- Als u de **feedback-id**wilt kopiëren, selecteert u het Kopieer pictogram naast de id of gebruikt u de sneltoets **CTRL** + **C** .
+- Als u de **feedback-id**wilt kopiëren, selecteert u het Kopieer pictogram naast de id of gebruikt u de sneltoets **CTRL**  +  **C** .
   - Deze ID is niet opgeslagen op uw computer. Zorg er daarom voor dat u deze kopieert voordat u het venster sluit.
 - Als **u op dit bericht niet opnieuw weer geven** klikt, wordt het dialoog venster onderdrukt en wordt voor komen dat het wordt weer gegeven in de toekomst.
 

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: a4fa056c9c0708d2cecc0ca5f244e134e22ad10b
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: a8a4ce1c3d54311db18decc85f57d3e03298d339
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073706"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904682"
 ---
 # <a name="what39s-new-in-version-1706-of-configuration-manager"></a>Wat&#39;s nieuw in versie 1706 van Configuration Manager
 
@@ -28,8 +28,8 @@ Update 1706 voor Configuration Manager current branch is beschikbaar als een upd
 > Als u een nieuwe site wilt installeren, moet u een basislijn versie van Configuration Manager gebruiken.  
 >
 > Meer informatie over:    
-> - [Nieuwe sites installeren](https://technet.microsoft.com/library/mt590197.aspx)  
-> - [Updates installeren op sites](https://technet.microsoft.com/library/mt607046.aspx)  
+> - [Nieuwe sites installeren](../../servers/deploy/install/installing-sites.md)  
+> - [Updates installeren op sites](../../servers/manage/updates.md)  
 > - [Basis lijn-en update versies](../../servers/manage/updates.md#bkmk_Baselines)  
 
 De volgende secties bevatten informatie over wijzigingen en nieuwe mogelijkheden die zijn geïntroduceerd in versie 1706 van Configuration Manager.  
@@ -129,7 +129,7 @@ In deze release hebben we nieuwe instellingen voor configuratie-items toegevoegd
   - Apps uit de Store automatisch bijwerken
   - Alleen persoonlijke Store gebruiken
   - Door store afkomstige app starten
-- **Micro soft Edge**
+- **Microsoft Edge**
   - Toegang tot about: Flags blok keren
   - SmartScreen-prompt negeren
   - SmartScreen-prompt voor bestanden negeren
@@ -168,7 +168,7 @@ Zie [configuratie-items maken voor windows 8,1-en Windows 10-apparaten die worde
   * Samsung KNOX Standard 4.0+
 
 
-## <a name="application-management"></a>Beheer van toepassingen
+## <a name="application-management"></a>Toepassingsbeheer
 
 ### <a name="run-powershell-scripts-from-the-configuration-manager-console"></a>Power shell-scripts uitvoeren vanuit de Configuration Manager-console
 <!-- 1236459 -->
@@ -223,14 +223,14 @@ U kunt nu Configuration Manager gebruiken om updates van micro soft Surface-Stuu
 
 ### <a name="configure-windows-update-for-business-deferral-policies"></a>Windows Update voor beleid voor bedrijfs uitstel configureren
 <!-- 1290890 -->
-U kunt nu uitstel beleid configureren voor Windows 10-onderdelen updates of kwaliteits updates voor Windows 10-apparaten die rechtstreeks worden beheerd door Windows Update voor bedrijven. U kunt het uitstel beleid beheren in het knoop punt nieuwe **Windows Update voor bedrijfs beleid** onder **software bibliotheek** > **Windows 10 Servicing**.
+U kunt nu uitstel beleid configureren voor Windows 10-onderdelen updates of kwaliteits updates voor Windows 10-apparaten die rechtstreeks worden beheerd door Windows Update voor bedrijven. U kunt het uitstel beleid beheren in het knoop punt nieuwe **Windows Update voor bedrijfs beleid** onder **software bibliotheek**  >  **Windows 10 Servicing**.
 
 Zie [integratie met Windows Update voor bedrijven in Windows 10](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md#configure-windows-update-for-business-deferral-policies)voor meer informatie.
 
 ### <a name="improved-user-notifications-for-office-365-updates"></a>Verbeterde gebruikers meldingen voor Office 365-updates
 Er zijn verbeteringen aangebracht in het gebruik van de Office-klik-en-klaar-gebruikers ervaring wanneer een client een update van Office 365 installeert. Dit omvat pop-up-en in-app-meldingen en een aftellings ervaring. Zie voor meer informatie [gedrag voor opnieuw opstarten en client meldingen voor Office 365-updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md#restart-behavior-and-client-notifications-for-office-365-updates)
 
-## <a name="reporting"></a>Rapporten
+## <a name="reporting"></a>Rapportage
 
 ### <a name="use-windows-analytics-with-configuration-manager"></a>Gebruik Windows Analytics met Configuration Manager
 <!-- 1318608 -->

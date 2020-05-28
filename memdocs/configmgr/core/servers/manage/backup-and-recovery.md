@@ -10,12 +10,12 @@ ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 824eaeb939249e1bcc2ed21d5815a0a72dc54797
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 46d2af2d89e41e931add0f77931b442b68835235
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81717865"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906466"
 ---
 # <a name="back-up-a-configuration-manager-site"></a>Back-up van een Configuration Manager-site
 
@@ -71,7 +71,7 @@ Als u het back-upproces wilt vereenvoudigen, kunt u een **AfterBackup. bat** -be
 
 U kunt een back-up maken van een centrale beheer site en primaire site. Secundaire sites of site systeem servers hebben geen back-uptaken.
 
-Wanneer de Configuration Manager backup-service wordt uitgevoerd, worden de instructies gevolgd die zijn gedefinieerd in het `<ConfigMgrInstallationFolder>\Inboxes\Smsbkup.box\Smsbkup.ctl`back-upbesturingsbestand:. U kunt het back-upcontrolebestand aanpassen om het gedrag van de back-upservice te wijzigen.  
+Wanneer de Configuration Manager backup-service wordt uitgevoerd, worden de instructies gevolgd die zijn gedefinieerd in het back-upbesturingsbestand: `<ConfigMgrInstallationFolder>\Inboxes\Smsbkup.box\Smsbkup.ctl` . U kunt het back-upcontrolebestand aanpassen om het gedrag van de back-upservice te wijzigen.  
 > [!NOTE]
 > Wijzigingen van **Smsbkup. ctl** worden toegepast na het opnieuw opstarten van de service SMS_SITE_VSS_WRITER op de site server.
 
@@ -116,7 +116,7 @@ Informatie voor siteback-upstatus wordt geschreven naar het bestand **Smsbkup.lo
 
 -   Wanneer u de back-uptaak configureert om een waarschuwing te maken wanneer deze mislukt, zoekt u naar back-upfouten in het knoop punt **waarschuwingen** van de werk ruimte **bewaking** .  
 
--   Open Windows Verkenner op de site server en blader naar `<ConfigMgrInstallationFolder>\Logs`. Controleer **Smsbkup. log** op waarschuwingen en fouten. Wanneer site back-up is voltooid, wordt het `Backup completed` logboek weer gegeven `STATMSG: ID=5035`met de bericht-id.  
+-   Open Windows Verkenner op de site server en blader naar `<ConfigMgrInstallationFolder>\Logs` . Controleer **Smsbkup. log** op waarschuwingen en fouten. Wanneer site back-up is voltooid, wordt het logboek weer gegeven `Backup completed` met de bericht-id `STATMSG: ID=5035` .  
 
     > [!TIP]  
     >  Wanneer de onderhouds taak van de back-up mislukt, start u de back-uptaak opnieuw door de **SMS_SITE_BACKUP** Windows-service te stoppen en opnieuw te starten.  
@@ -137,7 +137,7 @@ Bewaar meerdere archieven van de back-upmomentopname om de volgende redenen:
 
 
 ## <a name="using-the-afterbackupbat-file"></a>Het bestand AfterBackup.bat gebruiken  
-Nadat een back-up van de site is gemaakt, probeert de back-uptaak automatisch een script met de naam **AfterBackup. bat**uit te voeren. Maak het bestand AfterBackup. bat hand matig op de site server `<ConfigMgrInstallationFolder>\Inboxes\Smsbkup.box`in. Als er een AfterBackup. bat-bestand in de juiste map aanwezig is, wordt dit automatisch uitgevoerd nadat de back-uptaak is voltooid.
+Nadat een back-up van de site is gemaakt, probeert de back-uptaak automatisch een script met de naam **AfterBackup. bat**uit te voeren. Maak het bestand AfterBackup. bat hand matig op de site server in `<ConfigMgrInstallationFolder>\Inboxes\Smsbkup.box` . Als er een AfterBackup. bat-bestand in de juiste map aanwezig is, wordt dit automatisch uitgevoerd nadat de back-uptaak is voltooid.
 
 In het bestand AfterBackup. bat kunt u de moment opname van de back-up archiveren aan het einde van elke back-upbewerking. Er kunnen automatisch andere taken na back-ups worden uitgevoerd die geen deel uitmaken van de onderhouds taak van de back-upserver van site. Het AfterBackup.bat-bestand integreert het archief en de back-upbewerkingen, waardoor elke nieuwe back-upmomentopname wordt gearchiveerd.
 
@@ -172,7 +172,7 @@ De inhouds bibliotheek in Configuration Manager is de locatie waar alle inhouds 
 
 -   De inhouds bibliotheek moet worden hersteld voordat u inhoud opnieuw kunt distribueren naar distributie punten. Wanneer u de herdistributie van inhoud start, Configuration Manager kopieert de bestanden uit de inhouds bibliotheek van de site server naar de distributie punten. Zie [de inhouds bibliotheek](../../plan-design/hierarchy/the-content-library.md)voor meer informatie.  
 
--   De bron bestanden van het pakket moeten worden hersteld voordat u inhoud op distributie punten kunt bijwerken. Wanneer u een update van de inhoud start, kopieert Configuration Manager nieuwe of gewijzigde bestanden van de pakket bron naar de inhouds bibliotheek. Vervolgens worden de bestanden gekopieerd naar de gekoppelde distributie punten. Voer de volgende SQL Server query uit op de site database om de bron locatie van het pakket voor alle pakketten en `SELECT * FROM v_Package`toepassingen te vinden:. U kunt de locatie van de pakketbron vinden door de eerste drie tekens van de pakket-id te bekijken. Als de pakket-id bijvoorbeeld CEN00001 is, is de sitecode van de bronsite CEN. Wanneer u de pakket bron bestanden herstelt, moeten deze worden hersteld naar dezelfde locatie waar deze zich vóór de fout bevonden.  
+-   De bron bestanden van het pakket moeten worden hersteld voordat u inhoud op distributie punten kunt bijwerken. Wanneer u een update van de inhoud start, kopieert Configuration Manager nieuwe of gewijzigde bestanden van de pakket bron naar de inhouds bibliotheek. Vervolgens worden de bestanden gekopieerd naar de gekoppelde distributie punten. Voer de volgende SQL Server query uit op de site database om de bron locatie van het pakket voor alle pakketten en toepassingen te vinden: `SELECT * FROM v_Package` . U kunt de locatie van de pakketbron vinden door de eerste drie tekens van de pakket-id te bekijken. Als de pakket-id bijvoorbeeld CEN00001 is, is de sitecode van de bronsite CEN. Wanneer u de pakket bron bestanden herstelt, moeten deze worden hersteld naar dezelfde locatie waar deze zich vóór de fout bevonden.  
 
 Controleer of u zowel de inhouds bibliotheek als pakket bron bestanden in de back-up van het bestands systeem voor de site server opneemt.  
 
@@ -183,12 +183,12 @@ Gebruik de volgende procedure om een back-up te maken van de update Publisher-da
 
 #### <a name="back-up-the-updates-publisher-database"></a>Back-up maken van de updates Publisher-data base  
 
-1.  Op de computer waarop updates Publisher wordt uitgevoerd, bladert u naar de updates Publisher-database bestand `%USERPROFILE%\AppData\Local\Microsoft\System Center Updates Publisher 2011\5.00.1727.0000\` **Scupdb. sdf** in. Er is een ander database bestand voor elke gebruiker die updates Publisher uitvoert.  
+1.  Op de computer waarop updates Publisher wordt uitgevoerd, bladert u naar de updates Publisher-database bestand **Scupdb. sdf** in `%USERPROFILE%\AppData\Local\Microsoft\System Center Updates Publisher 2011\5.00.1727.0000\` . Er is een ander database bestand voor elke gebruiker die updates Publisher uitvoert.  
 
-2.  Kopieer het databasebestand naar uw back-upbestemming. Als uw back-upbestemming bijvoorbeeld is `E:\ConfigMgr_Backup`, kunt u de updates Publisher-database bestand naar `E:\ConfigMgr_Backup\SCUP`kopiëren.  
+2.  Kopieer het databasebestand naar uw back-upbestemming. Als uw back-upbestemming bijvoorbeeld is `E:\ConfigMgr_Backup` , kunt u de updates Publisher-database bestand naar kopiëren `E:\ConfigMgr_Backup\SCUP` .  
 
     > [!TIP]  
-    >  Wanneer er meer dan één database bestand op een computer staat, overweeg dan het bestand in een submap op te slaan die het gebruikers profiel aangeeft dat aan het database bestand is gekoppeld. U kunt bijvoorbeeld één database bestand hebben in `E:\ConfigMgr_Backup\SCUP\User1` en een ander database bestand in. `E:\ConfigMgr_Backup\SCUP\User2`  
+    >  Wanneer er meer dan één database bestand op een computer staat, overweeg dan het bestand in een submap op te slaan die het gebruikers profiel aangeeft dat aan het database bestand is gekoppeld. U kunt bijvoorbeeld één database bestand hebben in `E:\ConfigMgr_Backup\SCUP\User1` en een ander database bestand in `E:\ConfigMgr_Backup\SCUP\User2` .  
 
 
 
@@ -213,7 +213,7 @@ De SMS Writer is een service die communiceert met de Windows-Volume Shadow Copy 
 ### <a name="process"></a>Proces  
 1. SMS Writer registreert bij de VSS-service en wordt gekoppeld aan de betreffende interfaces en gebeurtenissen. 
 2. Wanneer VSS gebeurtenissen uitzendt, of specifieke berichten naar de SMS Writer verstuurt, reageert de SMS Writer op het bericht en neemt de nodige actie. 
-3. De SMS Writer leest het back-upcontrolebestand **smsbkup. ctl** in `<ConfigMgrInstallationPath>\inboxes\smsbkup.box`en bepaalt de bestanden en gegevens waarvan een back-up moet worden gemaakt. 
+3. De SMS Writer leest het back-upcontrolebestand **smsbkup. ctl** in en `<ConfigMgrInstallationPath>\inboxes\smsbkup.box` bepaalt de bestanden en gegevens waarvan een back-up moet worden gemaakt. 
 4. De SMS Writer bouwt meta gegevens op, die bestaan uit verschillende onderdelen, waaronder specifieke gegevens van de SMS-register sleutel en subsleutels. 
     a. De meta gegevens worden verzonden naar VSS wanneer deze wordt aangevraagd. 
     b. VSS verzendt de meta gegevens vervolgens naar de aanvragende toepassing, de Configuration Manager back-upbeheer. 
@@ -231,7 +231,7 @@ De schrijver-ID voor de SMS Writer is **03ba67dd-dc6d-4729-a038-251f7018463b**.
 De SMS Writer-service moet onder het lokale systeemaccount worden uitgevoerd.  
 
 ### <a name="volume-shadow-copy-service"></a>Volume Shadow Copy-service  
-De VSS is een set van COM API's die een kader implementeert voor het maken van volume back-ups terwijl toepassingen op het systeem doorgaan met het schrijven naar de volumes. De VSS biedt een consistente interface die coördinatie toestaat tussen toepassingen die gegevens op schijf bijwerken (de SMS Writer-service) en toepassingen die back-ups maken van toepassingen (de Backup Manager-service). Zie de [Volume Shadow Copy service](https://go.microsoft.com/fwlink/p/?LinkId=241968)voor meer informatie.  
+De VSS is een set van COM API's die een kader implementeert voor het maken van volume back-ups terwijl toepassingen op het systeem doorgaan met het schrijven naar de volumes. De VSS biedt een consistente interface die coördinatie toestaat tussen toepassingen die gegevens op schijf bijwerken (de SMS Writer-service) en toepassingen die back-ups maken van toepassingen (de Backup Manager-service). Zie de [Volume Shadow Copy service](https://docs.microsoft.com/windows-server/storage/file-server/volume-shadow-copy-service)voor meer informatie.  
 
 
 

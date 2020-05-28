@@ -10,12 +10,12 @@ ms.assetid: cdb9fb0c-0912-41e4-b427-f40620971763
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d948452da54a41e35095b01cb0e942e02a7a597f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ff2d5c6df0da6b25395858a55ef1ee8a3c0da00b
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718068"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906527"
 ---
 # <a name="reference-for-configuration-manager-setup"></a>Naslag informatie voor het instellen van Configuration Manager
 
@@ -73,4 +73,4 @@ Gegevens verzameling bevat deze drie niveaus:
 
 Zie voor meer informatie, inclusief de openbaar making van de gegevens die worden verzameld door elk niveau, [Diagnostische en gebruiks gegevens voor Configuration Manager](../../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md).  
 
-Ga naar om de privacyverklaring van Configuration Manager Online weer te geven [https://go.microsoft.com/fwlink/?LinkID=626527](https://go.microsoft.com/fwlink/?LinkID=626527).
+Zie de [privacyverklaring van micro soft](https://privacy.microsoft.com/privacystatement)voor meer informatie.

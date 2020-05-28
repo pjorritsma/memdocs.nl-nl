@@ -10,12 +10,12 @@ ms.assetid: 88ac4e55-d47b-4c94-b9c3-704c6a48b845
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6fff68eaad52f753d27971562a4bbfaa47a6cf6e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ffa50d2cfb3095eb136128c09b74e9ee6a4eb501
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711565"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904403"
 ---
 # <a name="diagnostics-and-usage-data-for-configuration-manager"></a>Diagnostische en gebruiks gegevens voor Configuration Manager
 
@@ -28,7 +28,7 @@ Met elke Configuration Manager hiërarchie worden diagnostische en gebruiks gege
 > [!NOTE]  
 > Configuration Manager verzamelt alleen gegevens uit de SQL Server-Data Base van de site en verzamelt geen gegevens rechtstreeks van clients of site servers.  
 
-Zie de [privacyverklaring van micro soft](https://go.microsoft.com/fwlink/?LinkID=626527)voor meer informatie.  
+Zie de [privacyverklaring van micro soft](https://privacy.microsoft.com/privacystatement)voor meer informatie.  
 
 > [!div class="nextstepaction"]
 > [Gebruik van diagnostische en gebruiksgegevens door Microsoft](how-diagnostics-and-usage-data-is-used.md)

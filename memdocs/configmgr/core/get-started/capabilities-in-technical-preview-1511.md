@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: f32eaffe673324699e20fc7c579ea1ac9b38c479
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 337b494bdce24463c19dd22ae975af5e99d6d895
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076336"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905853"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1511 voor Configuration Manager
 
@@ -34,7 +34,7 @@ Voor computers die zijn verbonden via WUfB is Configuration Manager niet in staa
 
 -   Windows 10 Desktop Pro of Windows 10 Enter prise Edition versie 1511 of hoger  
 
--   Computers die worden beheerd via [Windows Update voor bedrijven](https://technet.microsoft.com/library/mt622730\(v=vs.85\).aspx).  
+-   Computers die worden beheerd via [Windows Update voor bedrijven](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb).  
 
 ### <a name="try-it-out"></a>Probeer het nu!  
  Voer de volgende taak uit en gebruik vervolgens de feedback informatie boven aan dit onderwerp om ons te laten weten hoe het werkt:  
@@ -67,7 +67,7 @@ Wanneer micro soft een nieuwe Office 365 desktop-client update publiceert op Win
 
 4. U kunt naleving voor Office 365-updates controleren met behulp van de controle of rapporten in de console.  
 
-   Zie [Office 365-client updates beheren met Configuration Manager Technical Preview](https://technet.microsoft.com/library/mt628083.aspx)voor gedetailleerde stappen.  
+   Zie [Office 365-client updates beheren met Configuration Manager Technical Preview](https://docs.microsoft.com/deployoffice/manage-microsoft-365-apps-updates-configuration-manager)voor gedetailleerde stappen.  
 
 ##  <a name="support-for-sql-server-alwayson-for-highly-available-databases"></a><a name="BKMK_AlwasyOn"></a>Ondersteuning voor SQL Server AlwaysOn voor Maxi maal beschik bare data bases  
  Configuration Manager ondersteunt nu het gebruik van een SQL Server AlwaysOn-beschikbaarheids groepen voor het hosten van de site database.  Wanneer u een nieuwe site installeert, kunt u instellen dat de beschikbaarheids groep wordt gebruikt in plaats van een normaal exemplaar van SQL Server.  
@@ -110,7 +110,7 @@ Voer de volgende taken uit en gebruik daarna de feedback informatie boven aan di
  Gebruik de volgende procedures om eerst de beschikbaarheids groep te maken en te configureren en vervolgens een nieuwe Configuration Manager-site te installeren die gebruikmaakt van de beschikbaarheids groep.  
 
 #### <a name="to-create-a-sql-server-alwayson-availability-group"></a>Een SQL Server AlwaysOn-beschikbaarheids groep maken  
-Het proces voor het [maken van een SQL Server beschikbaarheids groep](https://technet.microsoft.com/library/ff878265\(v=sql.120\).aspx) wordt beschreven in de documentatie bibliotheek van SQL Server.  Wanneer u de beschikbaarheids groep maakt, moet u ervoor zorgen dat aan de volgende vereisten wordt voldaan voor gebruik met Configuration Manager:  
+Het proces voor het [maken van een SQL Server beschikbaarheids groep](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-ver15) wordt beschreven in de documentatie bibliotheek van SQL Server.  Wanneer u de beschikbaarheids groep maakt, moet u ervoor zorgen dat aan de volgende vereisten wordt voldaan voor gebruik met Configuration Manager:  
 
 -   Maxi maal drie leden:  
 
@@ -131,7 +131,7 @@ Een site installeren die gebruikmaakt van een SQL Server beschikbaarheids groep:
 
 1.  Vervang het volgende wanneer u hierom wordt gevraagd door Configuration Manager Setup:  
 
-    -   **SQL Server naam**: Voer de virtuele naam in voor het eind punt dat u hebt geconfigureerd bij het maken van de beschikbaarheids groep. De virtuele naam moet een volledige DNS-naam zijn, ** &lt;zoals\>eindpuntserver. fabrikam.com**.  
+    -   **SQL Server naam**: Voer de virtuele naam in voor het eind punt dat u hebt geconfigureerd bij het maken van de beschikbaarheids groep. De virtuele naam moet een volledige DNS-naam zijn, zoals ** &lt; eindpuntserver \> . fabrikam.com**.  
 
     -   **Exemplaar**: deze waarde moet leeg blijven. Er is geen exemplaar van deze configuratie.  
 
@@ -165,7 +165,7 @@ Voer de volgende taak uit en gebruik vervolgens de feedback informatie boven aan
 
 #### <a name="to-create-a-collection-for-a-server-cluster"></a>Een verzameling voor een server cluster maken  
 
-1.  [Maak een verzameling apparaten](https://technet.microsoft.com/library/gg712295.aspx) die de servers in het cluster bevat.  
+1.  [Maak een verzameling apparaten](../clients/manage/collections/create-collections.md) die de servers in het cluster bevat.  
 
 2.  Klik in de werk ruimte **activa en naleving** op **apparaten verzamelingen**, klik met de rechter muisknop op de verzameling met de servers in het cluster en klik vervolgens op **Eigenschappen**.  
 
@@ -200,6 +200,6 @@ Voer de volgende taak uit en gebruik vervolgens de feedback informatie boven aan
 
 #### <a name="to-deploy-software-updates-to-the-server-cluster"></a>Software-updates implementeren op het server cluster  
 
-1.  [Software-updates implementeren](https://technet.microsoft.com/library/gg712304.aspx) in de server cluster verzameling.  
+1.  [Software-updates implementeren](../../sum/deploy-use/deploy-software-updates.md) in de server cluster verzameling.  
 
-2.  [Controleer de implementatie van de software-update](https://technet.microsoft.com/library/gg712304.aspx).  
+2.  [Controleer de implementatie van de software-update](../../sum/deploy-use/monitor-software-updates.md).  

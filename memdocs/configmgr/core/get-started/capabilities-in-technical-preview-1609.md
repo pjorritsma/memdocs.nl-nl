@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: e7e803dd1cbacbbd65a5f2968e217656b088d281
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 51a974247d7281d6134b699a5865f801d1ed6094
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721533"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905707"
 ---
 # <a name="capabilities-in-technical-preview-1609-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1609 voor Configuration Manager
 
@@ -51,7 +51,6 @@ Als deze functie is ingeschakeld, wordt door de Configuratieassistent van Apple 
 
 Met upgrade Analytics kunt u de gereedheids gegevens en compatibiliteit van apparaten beoordelen en analyseren met Windows 10, zodat u gemakkelijker en vloeiendere upgrades kunt uitvoeren. Met de integratie van Upgrade Analytics met Configuration Manager, hebt u toegang tot de compatibiliteits gegevens voor upgrades in de Configuration Manager-beheer console en vervolgens, vanuit de apparaten lijst, doel apparaten voor upgrade of herstel.
 
-Meer informatie over Upgrade Analytics vindt u in aan de [slag met upgrade Analytics](https://technet.microsoft.com/itpro/windows/deploy/upgrade-analytics-get-started).
 
 ## <a name="native-connection-types-for-windows-10-vpn-hybrid-profiles"></a>Systeem eigen verbindings typen voor hybride profielen voor Windows 10 VPN
 
@@ -72,7 +71,7 @@ In deze release hebben we de [integratie van Windows Store voor bedrijven](../..
 #### <a name="purchase-and-sync-a-paid-online-licensed-app"></a>Een betaalde online gelicentieerde app kopen en synchroniseren
 
 1. Koop een betaalde online gelicentieerde app vanuit Windows Store voor bedrijven.
-2. Klik in de werk ruimte **beheer** van de Configuration Manager-console op **Cloud Services** > **updates en onderhoud** > van**Windows Store voor bedrijven**.
+2. Klik in de werk ruimte **beheer** van de Configuration Manager-console op **Cloud Services**  >  **updates en onderhoud**van  >  **Windows Store voor bedrijven**.
 3. Klik op het tabblad **Start** in de groep **synchroniseren** op **Nu synchroniseren**.
 4. Binnenkort wordt de app die u hebt aangeschaft, weer gegeven in het knoop punt **licentie gegevens voor Store-apps** van de werk ruimte **toepassings beheer** .
 
@@ -83,7 +82,7 @@ De procedure voor het maken en implementeren van een Configuration Manager toepa
 
 #### <a name="modify-the-client-secret-key-from-azure-active-directory"></a>Wijzig de client geheime sleutel van Azure Active Directory
 
-1. Klik in de werk ruimte **beheer** van de Configuration Manager-console op **Cloud Services** > **updates en onderhoud** > van**Windows Store voor bedrijven**.
+1. Klik in de werk ruimte **beheer** van de Configuration Manager-console op **Cloud Services**  >  **updates en onderhoud**van  >  **Windows Store voor bedrijven**.
 2. Selecteer uw Windows Store voor bedrijven-account en klik vervolgens op **Eigenschappen**.
 3. Voer in het dialoog venster **Eigenschappen van Windows Store voor bedrijven-account** een nieuwe sleutel in het veld **geheime sleutel** van de client in en klik vervolgens op **verifiëren**. Nadat de verificatie is uitgevoerd, klikt u op **Toep assen**en sluit u het dialoog venster.
 
@@ -105,7 +104,7 @@ Als u hulp nodig hebt bij een van deze instellingen, opent u [instellingen en fu
 #### <a name="security-settings"></a>Beveiligingsinstellingen
 
 - **Versleuteling vereisen op opslagkaarten**
-- **Schermopname toestaan**
+- **Schermafbeelding toestaan**
 - **Verzending van diagnostische gegevens toestaan**
 
 #### <a name="browser-settings"></a>Browserinstellingen
@@ -128,7 +127,7 @@ Als u hulp nodig hebt bij een van deze instellingen, opent u [instellingen en fu
 - **NFC toestaan**
 - **Bluetooth toestaan**
 - **Spraakroaming toestaan**
-- **Dataroaming toestaan**
+- **Gegevensroaming toestaan**
 - **Sms-/mms-berichten toestaan**
 - **Spraakassistent toestaan**
 - **Nummer inspreken toestaan**
@@ -163,7 +162,7 @@ Als u hulp nodig hebt bij een van deze instellingen, opent u [instellingen en fu
 
 #### <a name="security-settings"></a>Beveiligingsinstellingen
 
-- **Versleuteling vereisen op mobiel apparaat**
+- **Versleuteling vereisen voor mobiel apparaat**
 - **Handmatige uitschrijving toestaan**
 
 #### <a name="device-capability-settings"></a>Instellingen voor apparaatfuncties
@@ -198,7 +197,7 @@ Als u hulp nodig hebt bij een van deze instellingen, opent u [instellingen en fu
 - **Minimale wachtwoordlengte**
 - **Aantal mislukte aanmeldingen dat is toegestaan voordat het apparaat wordt gewist**
 - **Minuten van inactiviteit voordat het scherm wordt uitgeschakeld**
-- **Wacht woord verloopt (dagen)**
+- **Dagen tot wachtwoord verloopt**
 - **Wachtwoordgeschiedenis onthouden**
 - **Wachtwoorden niet opnieuw gebruiken**
 - **Afbeeldingswachtwoord en PIN toestaan**
@@ -239,7 +238,7 @@ In de volgende secties worden de wijzigingen beschreven die in deze preview-vers
 ### <a name="changes-in-ui-and-behavior-for-boundary-groups-and-content-locations"></a>Wijzigingen in de gebruikers interface en het gedrag voor grens groepen en inhouds locaties
 Hieronder vindt u belang rijke wijzigingen in grens groepen en hoe clients inhoud vinden. Veel van deze wijzigingen en concepten werken samen.
 - **Configuraties voor snelle of trage verbindingen worden verwijderd:** U kunt afzonderlijke distributie punten niet meer configureren om snel of traag te zijn.  In plaats daarvan wordt elk site systeem dat is gekoppeld aan een grens groep, op dezelfde manier behandeld. Als gevolg van deze wijziging wordt het tabblad **verwijzingen** van de eigenschappen van de grens groep niet meer ondersteund voor snelle of langzame configuratie.
-- **Nieuwe standaard grens groep op elke site:**  Elke primaire site heeft een nieuwe standaard grens groep met de naam ***standaard-site-boundary\<-Group>***.  Wanneer een client zich niet op een netwerk locatie bevindt die is toegewezen aan een grens groep, zal die client de site systemen gebruiken die zijn gekoppeld aan de standaard groep van de toegewezen site. Plan het gebruik van deze grens groep als een vervanging van de locatie van de tijdelijke inhoud van het concept.    
+- **Nieuwe standaard grens groep op elke site:**  Elke primaire site heeft een nieuwe standaard grens groep met de naam ***standaard-site-boundary-group \<>***.  Wanneer een client zich niet op een netwerk locatie bevindt die is toegewezen aan een grens groep, zal die client de site systemen gebruiken die zijn gekoppeld aan de standaard groep van de toegewezen site. Plan het gebruik van deze grens groep als een vervanging van de locatie van de tijdelijke inhoud van het concept.    
   -  **' Terugval bron locaties voor inhoud toestaan '** wordt verwijderd: u hoeft niet langer expliciet een distributie punt te configureren dat moet worden gebruikt voor terugval en de opties die u kunt instellen, worden verwijderd uit de gebruikers interface.
 
   Daarnaast is het resultaat van de instelling **clients toestaan een terugval bron locatie te gebruiken voor inhoud** van een implementatie type voor toepassingen is gewijzigd. Met deze instelling voor een implementatie type kan een client de standaard site grens groep gebruiken als de locatie van de inhouds bron.
@@ -318,8 +317,8 @@ Door de verschillende groepen van de neighbor zo te configureren dat deze op ver
 
 ### <a name="update-existing-boundary-groups-to-the-new-model"></a><a name="bkmk_update"></a>Bestaande grens groepen bijwerken naar het nieuwe model
 Wanneer u versie 1609 installeert en uw site bijwerkt, worden de volgende configuraties automatisch gemaakt. Deze zijn bedoeld om ervoor te zorgen dat uw huidige terugval gedrag beschikbaar blijft, totdat u nieuwe grens groepen en relaties configureert.  
-- Niet-beveiligde distributie punten op een site worden toegevoegd aan de *standaard locatie van site-boundary-\<Group>* grens groep van die site.
-- Er wordt een kopie gemaakt van elke bestaande grens groep die een site server bevat die is geconfigureerd met een trage verbinding. De naam van de nieuwe groep is *** \<de oorspronkelijke grens groepsnaam>-langzaam-tmp***:  
+- Niet-beveiligde distributie punten op een site worden toegevoegd aan de *standaard locatie van site-boundary-group \<>* grens groep van die site.
+- Er wordt een kopie gemaakt van elke bestaande grens groep die een site server bevat die is geconfigureerd met een trage verbinding. De naam van de nieuwe groep is de *** \< oorspronkelijke grens groepsnaam>-langzaam-tmp***:  
   -   Site systemen met een snelle verbinding blijven in de oorspronkelijke grens groep.
   -   Een kopie van site systemen met een trage verbinding wordt toegevoegd aan de kopie van de grens groep. De oorspronkelijke site systemen die als langzaam zijn geconfigureerd, blijven in de oorspronkelijke grens groep voor compatibiliteit met eerdere versies, maar worden niet gebruikt vanuit die grens groep.
   -   Er zijn geen grenzen gekoppeld aan de kopie van deze grens groep. Er wordt echter een terugval koppeling gemaakt tussen de oorspronkelijke groep en de nieuwe kopie van de grens groep waarvan de terugval tijd is ingesteld op nul.
@@ -338,7 +337,7 @@ Niet geselecteerd | Geselecteerd |   **Normale terugval** : distributie punten i
 
 
 ## <a name="office-365-client-management-dashboard"></a>Office 365-dash board voor client beheer  
-De technische preview van Configuration Manager 1609 introduceert een nieuw dash board. Als u het dash board wilt weer geven, gaat u in de Configuration Manager-console naar **software bibliotheek** > **Overview** > **Office 365 client management**.
+De technische preview van Configuration Manager 1609 introduceert een nieuw dash board. Als u het dash board wilt weer geven, gaat u in de Configuration Manager-console naar **software bibliotheek**  >  **Overview**  >  **Office 365 client management**.
 >[!NOTE]
 >In de werk ruimte wat is er **Nieuw** in de Configuration Manager-console, heeft het nieuwe dash board een onjuiste naam **Office 365-onderhouds dashboard**.
 
@@ -348,7 +347,7 @@ In het dash board worden grafieken weer gegeven voor het volgende:
 - Office 365-client versies
 - Office 365-client talen
 - Office 365-client kanalen     
-Zie [Overzicht van updatekanalen voor Office 365 ProPlus](https://technet.microsoft.com/library/mt455210.aspx) voor meer informatie.
+Zie [Overzicht van updatekanalen voor Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-update-channels) voor meer informatie.
 - Automatische implementatie regels waarbij Office 365-client is geselecteerd in de set beschik bare producten.
 
 U kunt de volgende acties uitvoeren op het dash board:
@@ -368,7 +367,7 @@ In deze versie van het Office 365-dash board voor client beheer kunt u het insta
 - U kunt problemen ondervinden bij het importeren van bestaande client instellingen (XML) in de wizard Office 365-app installeren. U kunt de client instellingen hand matig configureren zonder een probleem.
 
 #### <a name="to-deploy-office-365-apps-to-clients"></a>Office 365-Apps implementeren op clients
-1. Navigeer in de Configuration Manager-console naar **software bibliotheek** > **Overview** > **Office 365 client management**.
+1. Navigeer in de Configuration Manager-console naar **software bibliotheek**  >  **Overview**  >  **Office 365 client management**.
 2. Klik in het rechterdeel venster op **Office 365 Installer** . De Office 365-client installatie wizard wordt geopend.
 3. Geef op de pagina **Toepassings instellingen** een naam en beschrijving voor de app op, voer de download locatie voor de bestanden in en klik op **volgende**. Houd er rekening mee dat de locatie moet worden opgegeven in de vorm &#92;&#92;*server*&#92;*share*.
 4. Kies op de pagina **client instellingen importeren** of u de Office 365-client instellingen wilt importeren uit een bestaand XML-configuratie bestand of hand matig de instellingen wilt opgeven en klik vervolgens op **volgende**.
@@ -383,7 +382,7 @@ Wanneer u een bestaand configuratie bestand hebt, voert u de locatie voor het be
 Als u ervoor kiest om het pakket niet in de wizard te implementeren, gaat u naar stap 9.
 8. Configureer de overige pagina's van de wizard op dezelfde manier als bij een typische toepassings implementatie. Zie [een toepassing maken en implementeren](../../apps/get-started/create-and-deploy-an-application.md)voor meer informatie.
 9. Voltooi de wizard.
-10. U kunt de toepassing implementeren of bewerken op dezelfde manier als andere toepassingen in Configuration Manager vanuit **software bibliotheek** > **overzicht** > toepassingen voor**toepassings beheer** > **.**
+10. U kunt de toepassing implementeren of bewerken op dezelfde manier als andere toepassingen in Configuration Manager vanuit **software bibliotheek**  >  **overzicht**toepassingen voor  >  **toepassings beheer**  >  **Applications**.
 
 >[!NOTE]
 >Nadat u Office 365-apps hebt geïmplementeerd, kunt u regels voor automatische implementatie maken om de apps te onderhouden. Als u een ADR voor Office 365-Apps wilt maken, klikt u op **een ADR maken**en selecteert u **Office 365-client** wanneer u het product kiest. Zie [software-updates automatisch implementeren](../../sum/deploy-use/automatically-deploy-software-updates.md)voor meer informatie.
@@ -417,7 +416,7 @@ In een bestaande taken reeks om een besturings systeem te installeren, voegt u e
 In deze release kunt u een snel overzicht krijgen van de algemene compatibiliteit voor apparaten en de belangrijkste redenen voor niet-naleving met behulp van nieuwe grafieken onder **bewaking werk ruimte** in de Configuration Manager-console.
 
 #### <a name="to-view-the-intune-compliance-charts"></a>De intune-compatibiliteits grafieken weer geven
-1. Ga in de Configuration Manager-console naar **controle** > -**overzicht** > **instellingen voor naleving**.
+1. Ga in de Configuration Manager-console naar **controle**-  >  **overzicht**  >  **instellingen voor naleving**.
 2. De **algemene nalevings** grafiek van het apparaat wordt weer gegeven.
 3. Klik op het knoop punt **nalevings beleid** om de grafieken over de **algehele naleving** van het apparaat en de **belangrijkste niet-nalevings redenen** weer te geven.
 
@@ -425,7 +424,7 @@ In deze release kunt u een snel overzicht krijgen van de algemene compatibilitei
 - Er wordt momenteel een fout gegenereerd door het inzoomen voor de **algemene nalevings** grafiek voor apparaten.
 - In de grafiek **best mogelijke redenen voor niet-naleving** worden de beleids naam en niet de afzonderlijke redenen voor niet-naleving vermeld. U kunt op het beleid klikken om in te zoomen op de apparaten die niet compatibel zijn voor dat beleid.
 
-### <a name="try-it-out"></a>Uitproberen
+### <a name="try-it-out"></a>Beleid uitproberen
 Voer de volgende secties in de aangegeven volg orde uit:
 
 #### <a name="check-overall-compliance-chart"></a>Algemene nalevings grafiek controleren
@@ -437,7 +436,7 @@ Voer de volgende secties in de aangegeven volg orde uit:
 
 #### <a name="check-the-top-non-compliance-reasons-chart"></a>Controleer de grafiek met de belangrijkste redenen voor niet-naleving
 5. Controleer de grafiek **best mogelijke redenen voor niet-naleving** . In dit diagram worden de belangrijkste vijf redenen voor niet-naleving vermeld, maar wanneer er slechts twee nalevings instellingen zijn ingesteld voor het beleid, worden alleen de bovenste twee redenen voor naleving weer gegeven.
-6. Klik op een van de secties in de grafiek. Beide apparaten moeten worden weer gegeven in de gefilterde weer gave onder **activa en naleving** > **overzicht** > **apparaat**.
+6. Klik op een van de secties in de grafiek. Beide apparaten moeten worden weer gegeven in de gefilterde weer gave onder **activa en naleving**  >  **overzicht**  >  **apparaat**.
 
 #### <a name="make-devices-compliant-and-check-the-charts"></a>Apparaten compatibel maken en de grafieken controleren
 7. Maak een van de apparaten die voldoen aan een van de beleids regels. Controleer de **volledige compliance** -grafiek van het apparaat. In de grafiek moet één compatibel apparaat en één niet-compatibel apparaat worden weer gegeven.

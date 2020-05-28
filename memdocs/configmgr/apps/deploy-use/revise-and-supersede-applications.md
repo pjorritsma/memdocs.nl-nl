@@ -2,7 +2,7 @@
 title: Toepassingen herzien en vervangen
 titleSuffix: Configuration Manager
 description: Meer informatie over het werken met Configuration Manager toepassings versies en het vervangen van toepassingen.
-ms.date: 10/06/2016
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 30170d70-489f-47f7-bebf-9ed0115db26b
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 87804ee2a76dea918cebb964a3672ab61bf6de8d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6afed00b8207edb338b2a6dc62e083a5267fa47e
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81710067"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343130"
 ---
 # <a name="revise-and-supersede-applications-in-configuration-manager"></a>Toepassingen herzien en vervangen in Configuration Manager
 
@@ -28,7 +28,7 @@ In dit onderwerp leert u hoe u kunt werken met Configuration Manager-toepassings
 
 ### <a name="to-display-an-application-revision-history"></a>De revisiegeschiedenis voor een toepassing weergeven  
 
-1.  Kies in de Configuration Manager-console **software bibliotheek** > **toepassingen voor****toepassings beheer** > en kies vervolgens de gewenste toepassing.  
+1.  Kies in de Configuration Manager-console **software bibliotheek**toepassingen voor  >  **toepassings beheer**  >  **Applications**en kies vervolgens de gewenste toepassing.  
 
 3.  Klik op het tabblad **Start** in de groep **toepassing** op **overzicht van wijzigingen** om het dialoog venster **overzicht van toepassings revisies** te openen.  
 
@@ -59,8 +59,8 @@ In dit onderwerp leert u hoe u kunt werken met Configuration Manager-toepassings
 >  U kunt de huidige toepassings revisie alleen verwijderen als de toepassing buiten gebruik is gesteld en geen verwijzingen bevat.  
 
 ##  <a name="application-supersedence"></a> Vervanging van toepassing  
- Met toepassings beheer in Configuration Manager kunt u bestaande toepassingen bijwerken of vervangen door gebruik te maken van een vervangings relatie. Wanneer u een toepassing vervangt, kunt u een nieuw implementatie type opgeven om het implementatie type van de vervangen toepassing te vervangen en ook bepalen of u de vervangen toepassing wilt upgraden of verwijderen voordat de vervangende toepassing wordt geïnstalleerd.  
-
+ Met toepassings beheer in Configuration Manager kunt u bestaande toepassingen bijwerken of vervangen door gebruik te maken van een vervangings relatie. Wanneer u een toepassing vervangt, kunt u een nieuw implementatie type opgeven om het implementatie type van de vervangen toepassing te vervangen en ook bepalen of u de vervangen toepassing wilt upgraden of verwijderen voordat de vervangende toepassing wordt geïnstalleerd. Over het algemeen is het raadzaam om vervangings ketens te beperken tot vijf niveaus diep.
+ 
 > [!IMPORTANT]  
 >  Wanneer u de optie voor het verwijderen van het vervangen implementatietype selecteert, kunt u dit implementatietype niet vervangen door een implementatietype dat is toegepast op een ander type verzameling.  Als u de optie voor het verwijderen van het vervangen implementatietype hebt geselecteerd, kunt u een implementatietype dat op een apparaatverzameling is geïmplementeerd bijvoorbeeld niet vervangen door een implementatietype dat op een gebruikersverzameling is geïmplementeerd.  
 
@@ -94,7 +94,7 @@ In dit onderwerp leert u hoe u kunt werken met Configuration Manager-toepassings
 
 ### <a name="to-specify-a-supersedence-relationship"></a>Een vervangingsrelatie opgeven  
 
-1.  Kies in de Configuration Manager-console **software bibliotheek** > **toepassingen voor****toepassings beheer** > en kies vervolgens de toepassing die een andere toepassing vervangt.  
+1.  Kies in de Configuration Manager-console **software bibliotheek**toepassingen voor  >  **toepassings beheer**  >  **Applications**en kies vervolgens de toepassing die een andere toepassing vervangt.  
 
 3.  Klik op het tabblad **Start** in de groep **Eigenschappen** op **Eigenschappen** om het dialoog venster **Eigenschappen** van toepassings naam te openen.  
 
@@ -111,7 +111,7 @@ In dit onderwerp leert u hoe u kunt werken met Configuration Manager-toepassings
 
 8.  Klik op **OK** om het dialoog venster **Geef vervangings relatie** op te sluiten.  
 
-9. Klik op **OK** om het dialoog venster **Eigenschappen** van *<toepassings\> naam* te sluiten.  
+9. Klik op **OK** om het dialoog venster **Eigenschappen** van *<toepassings \> naam* te sluiten.  
 
 ### <a name="to-display-applications-that-supersede-the-current-application"></a>Toepassingen weergeven die de huidige toepassing vervangen  
 
@@ -121,6 +121,6 @@ In dit onderwerp leert u hoe u kunt werken met Configuration Manager-toepassings
 
 3.  Klik op het tabblad **Start** in de groep **Eigenschappen** op **Eigenschappen** om het dialoog venster **Eigenschappen** van *<\> toepassing* te openen.  
 
-4.  Kies op het tabblad **verwijzingen** van het dialoog venster **Eigenschappen** van *<toepassings\> naam* de optie **toepassingen die deze toepassing vervangen** in de vervolg keuzelijst **Relatie type** .  
+4.  Kies op het tabblad **verwijzingen** van het dialoog venster **Eigenschappen** van *<toepassings \> naam* de optie **toepassingen die deze toepassing vervangen** in de vervolg keuzelijst **Relatie type** .  
 
 5.  Bekijk de lijst met toepassingen die de geselecteerde toepassing vervangen en klik vervolgens op **OK** om het dialoog venster **Eigenschappen** van *<\> toepassings naam* te sluiten.  

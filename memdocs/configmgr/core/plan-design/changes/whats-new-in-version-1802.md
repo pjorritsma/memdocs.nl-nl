@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 11066470347db0f3ffbfadda9897aed92baa645b
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: e7bc30c4350d96654a0f6a6ae548d63c2928e791
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073599"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904658"
 ---
 # <a name="whats-new-in-version-1802-of-configuration-manager"></a>Wat is er nieuw in versie 1802 van Configuration Manager
 
@@ -143,7 +143,7 @@ Micro soft zal de Linux-en UNIX-client ondersteuning in Configuration Manager on
 
 ### <a name="surface-device-dashboard"></a>Surface Device-dashboard
 <!--1355788-->
-Het Surface Device-dash board bevat informatie over de Surface-apparaten die in uw omgeving zijn gevonden. Ga in de-console naar **bewakings** > **oppervlak apparaten**. U kunt de items bekijken:
+Het Surface Device-dash board bevat informatie over de Surface-apparaten die in uw omgeving zijn gevonden. Ga in de-console naar **bewakings**  >  **oppervlak apparaten**. U kunt de items bekijken:
 - Percentage van Opper vlakken
 - Percentage Surface-modellen
 - Top vijf van firmware versies
@@ -169,11 +169,11 @@ Vanaf deze release kunt u een dash board weer geven met informatie over co-behee
 
 ### <a name="microsoft-edge-browser-policies"></a>Micro soft Edge-browser beleid
 <!-- 1357310 -->
-Voor klanten die de [micro soft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) -webbrowser op Windows 10-clients gebruiken, maakt u een Configuration Manager beleid voor nalevings instellingen om verschillende micro soft Edge-instellingen te configureren. Zie [micro soft Edge-browser profiel maken](../../../compliance/deploy-use/browser-profiles.md)voor meer informatie. 
+Voor klanten die de [micro soft Edge](https://www.microsoft.com/itpro/microsoft-edge) -webbrowser op Windows 10-clients gebruiken, maakt u een Configuration Manager beleid voor nalevings instellingen om verschillende micro soft Edge-instellingen te configureren. Zie [micro soft Edge-browser profiel maken](../../../compliance/deploy-use/browser-profiles.md)voor meer informatie. 
 
 
 
-## <a name="application-management"></a>Beheer van toepassingen
+## <a name="application-management"></a>Toepassingsbeheer
 
 ### <a name="allow-user-interaction-when-installing-an-application"></a>Gebruikers interactie toestaan bij het installeren van een toepassing
 <!-- 1356976 -->
@@ -259,7 +259,7 @@ Regels voor automatische implementatie kunnen worden gepland om de offset van ee
 
 
 
-## <a name="reporting"></a>Rapporten
+## <a name="reporting"></a>Rapportage
 
 ### <a name="report-for-default-browser-counts"></a>Rapport voor standaard aantal browsers
 <!-- 1357830 -->

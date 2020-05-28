@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9fd1e0bb45972bb9b3ba2a3e0bbfbb3d0509c4a8
-ms.sourcegitcommit: 56bb5419c41c2e150ffed0564350123135ea4592
+ms.openlocfilehash: bfcdd74b7b5c31e3f3ab6bb38a7ea96de9d05eec
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82729298"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905146"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Technical Preview voor Configuration Manager
 
@@ -25,7 +25,7 @@ Dit artikel bevat informatie over de maandelijkse technische preview-vertakking 
 
 Omdat deze release een technische preview is, zijn de details en functionaliteit onderhevig aan wijzigingen.
 
-Deze informatie is van toepassing op alle versies van de Configuration Manager Technical Preview-vertakking. In dit artikel vindt u een overzicht van elke nieuwe functie, samen met de Technical Preview-versie waarin deze voor het eerst wordt weer gegeven. Bijvoorbeeld versie **2001** voor januari (`01`) van 2020 (`20`). Voor afzonderlijke artikelen die aan elke preview-versie zijn toegewezen, worden de afzonderlijke functies beschreven.
+Deze informatie is van toepassing op alle versies van de Configuration Manager Technical Preview-vertakking. In dit artikel vindt u een overzicht van elke nieuwe functie, samen met de Technical Preview-versie waarin deze voor het eerst wordt weer gegeven. Bijvoorbeeld versie **2001** voor januari ( `01` ) van 2020 ( `20` ). Voor afzonderlijke artikelen die aan elke preview-versie zijn toegewezen, worden de afzonderlijke functies beschreven.
 
 Voor informatie over wat er nieuw is in de *huidige vertakking* van Configuration Manager raadpleegt u [Wat is er nieuw in Configuration Manager incrementele versies](../plan-design/changes/whats-new-incremental-versions.md).
 
@@ -74,7 +74,7 @@ De technische preview-vertakking van Configuration Manager ondersteunt de volgen
 - De site ondersteunt Maxi maal 10 clients, waarmee elke [ondersteunde client versie van het besturings systeem](../plan-design/configs/supported-operating-systems-for-clients-and-devices.md)kan worden uitgevoerd.<!-- SCCMDocs#1656 -->
 
 > [!Note]
-> Het opnemen van deze producten in deze inhoud impliceert geen uitbrei ding van ondersteuning voor een versie die niet langer is dan de levens cyclus. Configuration Manager biedt geen ondersteuning voor producten die niet langer zijn dan de levens cyclus. Zie [micro soft Lifecycle-beleid](https://go.microsoft.com/fwlink/p/?LinkId=208270)voor meer informatie.
+> Het opnemen van deze producten in deze inhoud impliceert geen uitbrei ding van ondersteuning voor een versie die niet langer is dan de levens cyclus. Configuration Manager biedt geen ondersteuning voor producten die niet langer zijn dan de levens cyclus. Zie [micro soft Lifecycle-beleid](https://support.microsoft.com/lifecycle)voor meer informatie.
 
 ## <a name="install-and-update"></a><a name="bkmk_install"></a>Installeren en bijwerken
 
@@ -95,7 +95,7 @@ Installeer een basislijn versie van Maxi maal één jaar na de release. Gebruik 
 
 - **Technical Preview-versie 2002**: de Configuration Manager Technical Preview-vertakking versie 2002 is beschikbaar als een update in de console en als nieuwe basislijn versie.
 
-Down load een basislijn versie van het [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
+Down load een basislijn versie van het [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
 
 ## <a name="providing-feedback"></a><a name="BKMK_TPFeedback"></a>Feedback geven
 

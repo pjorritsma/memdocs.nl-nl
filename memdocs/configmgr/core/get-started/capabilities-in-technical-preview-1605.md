@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: c38230b44f7f18e3f60cb4c88b31a03e10a37d30
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d52725e0127f7129a3962cd3ef178d2540bb785a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721638"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905740"
 ---
 # <a name="capabilities-in-technical-preview-1605-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1605 voor Configuration Manager
 
@@ -97,13 +97,13 @@ Veelvoorkomende acties, zoals **buiten gebruik stellen/wissen**, **opnieuw inste
 
 1.  Registreer Configuration Manager in Azure Active Directory als een hulp programma voor het beheer van webtoepassingen en/of Web-API. Hiermee krijgt u een client-ID die u later nodig hebt.  
 
-    1.  Selecteer uw Azure Active Directory in het [https://manage.windowsazure.com](https://manage.windowsazure.com)knoop punt Active Directory van en klik vervolgens op **toepassingen** > **toevoegen**.  
+    1.  Selecteer uw Azure Active Directory in het knoop punt Active Directory van en [https://manage.windowsazure.com](https://manage.windowsazure.com) klik vervolgens op **toepassingen**  >  **toevoegen**.  
 
     2.  Klik op **een toepassing toevoegen die mijn organisatie ontwikkelt**.  
 
     3.  Voer een naam in voor de toepassing, selecteer **Webtoepassing** en/of **Web-API**en klik op de pijl **volgende** .  
 
-    4.  Voer dezelfde URL in voor zowel de **aanmeldings-URL** als de **URI van de App-ID**. De URL kan iets zijn en hoeft niet te worden omgezet naar een echt adres. U kunt bijvoorbeeld **https://e&lt;domein eigen>/SCCM**invoeren.  
+    4.  Voer dezelfde URL in voor zowel de **aanmeldings-URL** als de **URI van de App-ID**. De URL kan iets zijn en hoeft niet te worden omgezet naar een echt adres. U kunt bijvoorbeeld **https://e domein eigen &lt;>/SCCM**invoeren.  
 
     5.  Voltooi de wizard.  
 
@@ -163,7 +163,7 @@ Veelvoorkomende acties, zoals **buiten gebruik stellen/wissen**, **opnieuw inste
 
     2.  2.  Kies de app die u wilt implementeren en klik vervolgens op het tabblad **Start** in de groep **maken** op **toepassing maken**.  
 
--   De locatie die u gebruikt om een Apple VPP-token op te halen en te uploaden voor apps die zijn gekocht via het volume-aankoop programma in de Configuration Manager-console is gewijzigd. U kunt dit nu doen in de werk ruimte **beheer** onder het knoop punt **Cloud Services** > **Apple volume Purchase Program tokens** .  
+-   De locatie die u gebruikt om een Apple VPP-token op te halen en te uploaden voor apps die zijn gekocht via het volume-aankoop programma in de Configuration Manager-console is gewijzigd. U kunt dit nu doen in de werk ruimte **beheer** onder het knoop punt **Cloud Services**  >  **Apple volume Purchase Program tokens** .  
 
 ##  <a name="enterprise-data-protection-edp"></a><a name="BKMK_VPP"></a>Ondernemings gegevens bescherming (EDP)  
  U kunt configuratie-items maken waarmee u uw beleid voor ondernemings gegevens bescherming (EDP) implementeert, met inbegrip van uw beveiligde apps, uw EDP-beschermings niveau en het vinden van Bedrijfs gegevens in het netwerk. Zie de volgende onderwerpen voor meer informatie over EDP:  
@@ -192,7 +192,7 @@ Als de Bedrijfsportal langer dan 15 minuten open is, wordt in deze technische pr
 
 #### <a name="general-prerequisites"></a>Algemene vereisten  
 
--   Zorg ervoor dat u de [voorbereidings stappen voor on-premises Mobile Device Management](https://technet.microsoft.com/library/mt613153.aspx) hebt voltooid en [uw apparaten hebt geregistreerd](https://technet.microsoft.com/library/mt627870.aspx).  
+-   Zorg ervoor dat u de [voorbereidings stappen voor on-premises MDM](../../mdm/plan-design/plan-on-premises-mdm.md) hebt voltooid en [uw apparaten hebt geregistreerd](../../mdm/deploy-use/enroll-devices-on-premises-mdm.md).  
 
 -   Voor de beste ervaring bij het installeren van toepassingen bij gebruik van de Bedrijfsportal, moet u ervoor zorgen dat Configuration Manager een actieve verbinding met Microsoft Intune heeft.  
 
@@ -236,7 +236,7 @@ Als de Bedrijfsportal langer dan 15 minuten open is, wordt in deze technische pr
 
    2. Run **Set-ExecutionPolicy RemoteSigned**  
 
-   3. Vanuit de map ** &lt;SCCM Installation Directory\>\Cd.latest\SMSSETUP\TOOLS\MDM** run **.\ConfigurationScript.ps1**  
+   3. Vanuit de map ** &lt; SCCM Installation Directory \> \Cd.latest\SMSSETUP\TOOLS\MDM** run **.\ConfigurationScript.ps1**  
 
       Het configuratie script doet het volgende:  
 
@@ -261,7 +261,7 @@ Als de Bedrijfsportal langer dan 15 minuten open is, wordt in deze technische pr
 
 2.  Gebruikers kunnen vervolgens apps zoeken en installeren vanuit de Bedrijfsportal.  
 
-     Nadat u Bedrijfsportal hebt geopend, ziet u een dialoog venster voor verificatie met de naam **Configuration Manager** de Active Directory referenties van de gebruiker opgeven (in user@domain de vorm van of domein\gebruiker) om u aan te melden.  
+     Nadat u Bedrijfsportal hebt geopend, ziet u een dialoog venster voor verificatie met de naam **Configuration Manager** de Active Directory referenties van de gebruiker opgeven (in de vorm van user@domain of domein\gebruiker) om u aan te melden.  
 
 ##  <a name="new-tabs-for-updates-and-operating-systems-in-software-center"></a><a name="BKMK_SW1"></a>Nieuwe tabbladen voor updates en besturings systemen in Software Center  
  In deze release zijn de volgende wijzigingen aangebracht om de lay-out van de Software Center-toepassing te verbeteren:  
@@ -284,7 +284,7 @@ Als de Bedrijfsportal langer dan 15 minuten open is, wordt in deze technische pr
 
 #### <a name="to-create-a-collection-for-a-server-group"></a>Een verzameling voor een server groep maken  
 
-1.  [Maak een verzameling apparaten](https://technet.microsoft.com/library/gg712295.aspx) die de computers in de Server groep bevat.  
+1.  [Maak een verzameling apparaten](../clients/manage/collections/create-collections.md) die de computers in de Server groep bevat.  
 
 2.  Klik in de werk ruimte **activa en naleving** op **apparaten verzamelingen**, klik met de rechter muisknop op de verzameling met de computers in de Server groep en klik vervolgens op **Eigenschappen**.  
 
@@ -325,9 +325,9 @@ Als de Bedrijfsportal langer dan 15 minuten open is, wordt in deze technische pr
 
 #### <a name="to-deploy-software-updates-to-the-server-group-and-monitor-status"></a>Software-updates implementeren in de Server groep en de status van de monitor  
 
-1.  [Software-updates implementeren](https://technet.microsoft.com/library/gg712304.aspx) in de verzameling van Server groepen.  
+1.  [Software-updates implementeren](../../sum/deploy-use/deploy-software-updates.md) in de verzameling van Server groepen.  
 
-2.  [Controleer de implementatie van de software-update](https://technet.microsoft.com/library/gg712304.aspx). Naast de standaard weergave weergaven voor de implementatie van software-updates, wordt een nieuwe status beschrijving weer gegeven wanneer een client op zijn beurt wacht om de software-updates te installeren. **Wachten op vergren deling** wordt weer gegeven voor deze nieuwe status.  
+2.  [Controleer de implementatie van de software-update](../../sum/deploy-use/monitor-software-updates.md). Naast de standaard weergave weergaven voor de implementatie van software-updates, wordt een nieuwe status beschrijving weer gegeven wanneer een client op zijn beurt wacht om de software-updates te installeren. **Wachten op vergren deling** wordt weer gegeven voor deze nieuwe status.  
 
 #### <a name="to-clear-the-deployment-locks-for-computers-in-a-server-group"></a>De implementatie vergrendelingen wissen voor computers in een server groep  
 
@@ -366,7 +366,7 @@ Als de Bedrijfsportal langer dan 15 minuten open is, wordt in deze technische pr
 
 ##### <a name="onboard-devices-for-microsoft-defender-atp"></a>Onboarding-apparaten voor micro soft Defender ATP  
 
-1. Ga in de Configuration Manager-console **naar activa en naleving** > **overzicht** > **Endpoint Protection** > **Windows Defender ATP-beleid** en klik op **Windows Defender ATP-beleid maken**. De wizard micro soft Defender ATP-beleid wordt geopend.  
+1. Ga in de Configuration Manager-console naar **activa en naleving**  >  **overzicht**  >  **Endpoint Protection**  >  **Windows Defender ATP-beleid** en klik op **Windows Defender ATP-beleid maken**. De wizard micro soft Defender ATP-beleid wordt geopend.  
 
 2. Typ de **naam** en **Beschrijving** voor het micro soft Defender ATP-beleid en selecteer **onboarding**. Klik op Volgende.  
 
@@ -386,7 +386,7 @@ Als de Bedrijfsportal langer dan 15 minuten open is, wordt in deze technische pr
 
 ##### <a name="monitor-microsoft-defender-atp"></a>Micro soft Defender ATP bewaken  
 
-1.  Navigeer in de Configuration Manager-console naar **bewakings** > **overzicht** > **beveiliging** en klik vervolgens op **Windows Defender ATP**.  
+1.  Navigeer in de Configuration Manager-console naar **bewakings**  >  **overzicht**  >  **beveiliging** en klik vervolgens op **Windows Defender ATP**.  
 
 2.  Bekijk het micro soft Defender Advanced Threat Protection-dash board.  
 
@@ -408,7 +408,7 @@ Als de Bedrijfsportal langer dan 15 minuten open is, wordt in deze technische pr
 ### <a name="enable-health-attestation-for-on-premises-devices"></a>Status verklaring inschakelen voor on-premises apparaten  
  In 1605 hebben we enkele fouten opgelost die zijn gedetecteerd in 1604 Technical Preview.  Als u dit wilt uitproberen, configureert u de on-premises Health Attestation-service met de instellingen van de client agent.  
 
-1.  Ga in de Configuration Manager-console naar **beheer** > **overzicht** > **client instellingen**en stel **on-premises Health Attestation-service gebruiken** in op **Ja**.  
+1.  Ga in de Configuration Manager-console naar **beheer**  >  **overzicht**  >  **client instellingen**en stel **on-premises Health Attestation-service gebruiken** in op **Ja**.  
 
 2.  Geef de **URL op voor de on-premises statusverklaringsservice**en klik op **OK**.  
 
@@ -429,7 +429,7 @@ Als de Bedrijfsportal langer dan 15 minuten open is, wordt in deze technische pr
 
 ##### <a name="pre-declare-corporate-owned-devices-with-imei-or-ios-serial-number"></a>Vooraf declareren van apparaten in bedrijfseigendom met IMEI-nummer of iOS-serienummer  
 
-1. Ga in de Configuration Manager-console naar **activa en naleving** > **overzicht** > **van alle apparaten** > die eigendom zijn van het bedrijf en klik vervolgens op **vooraf gedeclareerde apparaten maken**.**Pre-declared Devices** De wizard vooraf gedeclareerde apparaten wordt geopend.  
+1. Ga in de Configuration Manager-console naar **activa en naleving**  >  **overzicht**van  >  **alle apparaten die eigendom**zijn van het bedrijf  >  **Pre-declared Devices**en klik vervolgens op **vooraf gedeclareerde apparaten maken**. De wizard vooraf gedeclareerde apparaten wordt geopend.  
 
 2. Geef op hoe u apparaatgegevens wilt toevoegen:  
 

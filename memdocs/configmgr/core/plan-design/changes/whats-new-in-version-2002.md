@@ -2,7 +2,7 @@
 title: Wat is er nieuw in versie 2002
 titleSuffix: Configuration Manager
 description: Krijg informatie over wijzigingen en nieuwe mogelijkheden die zijn geïntroduceerd in versie 2002 van Configuration Manager current branch.
-ms.date: 04/01/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,18 +10,18 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f760e70b1896700fa08bdb27c68794d2dec8c192
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1aca9058b0f095b7f25b345c15eed1446dcf61d2
+ms.sourcegitcommit: 7b224e138c0618e978be59832b3486f3745abacc
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719293"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83381550"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 2002 van Configuration Manager current branch
 
 *Van toepassing op: Configuration Manager (huidige vertakking)*
 
-Update 2002 voor Configuration Manager current branch is beschikbaar als een update in de console. Deze update Toep assen op sites waarop versie 1806 of hoger wordt uitgevoerd. <!-- baseline only statement:-->Wanneer u een nieuwe site installeert, is deze ook beschikbaar als basislijn versie. In dit artikel vindt u een overzicht van de wijzigingen en nieuwe functies in Configuration Manager, versie 2002.
+Update 2002 voor Configuration Manager current branch is beschikbaar als een update in de console. Deze update Toep assen op sites waarop versie 1810 of hoger wordt uitgevoerd. <!-- baseline only statement:-->Wanneer u een nieuwe site installeert, is deze ook beschikbaar als basislijn versie. In dit artikel vindt u een overzicht van de wijzigingen en nieuwe functies in Configuration Manager, versie 2002.
 
 Bekijk altijd de laatste controle lijst voor het installeren van deze update. Zie [Check List for Install update 2002](../../servers/manage/checklist-for-installing-update-2002.md)(Engelstalig) voor meer informatie. Nadat u een site hebt bijgewerkt, raadpleegt u ook de [controle lijst na de update](../../servers/manage/checklist-for-installing-update-2002.md#post-update-checklist).
 
@@ -280,7 +280,7 @@ Zie [gebruikers ervaringen voor implementatie van besturings systemen](../../../
 
 Deze release bevat de volgende verbeteringen voor de implementatie van het besturings systeem:
 
-- De taken reeks omgeving bevat een nieuwe alleen-lezen variabele `_TSSecureBoot`.<!--5842295--> Gebruik deze variabele om de status van beveiligd opstarten op een apparaat met UEFI-functionaliteit te bepalen. Zie [_TSSecureBoot](../../../osd/understand/task-sequence-variables.md#TSSecureBoot)voor meer informatie.
+- De taken reeks omgeving bevat een nieuwe alleen-lezen variabele `_TSSecureBoot` .<!--5842295--> Gebruik deze variabele om de status van beveiligd opstarten op een apparaat met UEFI-functionaliteit te bepalen. Zie [_TSSecureBoot](../../../osd/understand/task-sequence-variables.md#TSSecureBoot)voor meer informatie.
 
 - Stel taken reeks variabelen in om de gebruikers context te configureren voor de **opdracht regel uitvoeren** en **Power shell-script** tappen uit te voeren.<!-- 5573175 --> Zie [SMSTSRunCommandLineAsUser](../../../osd/understand/task-sequence-variables.md#SMSTSRunCommandLineAsUser) en [SMSTSRunPowerShellAsUser](../../../osd/understand/task-sequence-variables.md#SMSTSRunPowerShellAsUser)voor meer informatie.
 
@@ -411,9 +411,9 @@ Zie [release opmerkingen voor Power shell versie 2002](https://docs.microsoft.co
 
 Zie [release opmerkingen voor de beheer service](../../../develop/adminservice/release-notes.md#bkmk_2002)voor meer informatie over wijzigingen in de beheer service rest API.
 
-<!--
-Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2002](https://support.microsoft.com/help/nnnnn).
+Afgezien van nieuwe functies bevat deze release ook aanvullende wijzigingen, zoals oplossingen voor problemen. Zie [overzicht van wijzigingen in Configuration Manager current branch, versie 2002](https://support.microsoft.com/help/4556203)voor meer informatie.
 
+<!--
 The following update rollup (4517869) is available in the console starting on October 1, 2019: [Update rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869).
 
 -->
@@ -433,8 +433,9 @@ The following additional hotfixes are available to address specific issues:
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Op dit moment wordt versie 2002 uitgebracht voor de vroege update ring. Als u deze update wilt installeren, moet u zich aanmelden. Zie [early update ring](../../servers/manage/checklist-for-installing-update-2002.md#early-update-ring)voor meer informatie.
-<!-- As of December 20, 2019, version 2002 is globally available for all customers to install. -->
+<!-- At this time, version 2002 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2002.md#early-update-ring). -->
+
+Vanaf 11 mei 2020 is versie 2002 wereld wijd beschikbaar voor alle klanten die moeten worden geïnstalleerd.
 
 Wanneer u klaar bent om deze versie te installeren, raadpleegt u [updates voor Configuration Manager](../../servers/manage/updates.md) en [controle lijst voor het installeren van update 2002](../../servers/manage/checklist-for-installing-update-2002.md).
 

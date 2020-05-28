@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6a9770dca209669659abf6e4fc9c23d5e6972981
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 2a3b322f868c5c203114de4d974ba6682272c5d7
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073548"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906253"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 1810 van Configuration Manager current branch
 
@@ -43,7 +43,7 @@ Meer informatie over ondersteunings wijzigingen voordat ze worden geïmplementee
 
 Vanaf 14 augustus 2018 wordt de functie hybride Mobile Device Management afgeschaft. Zie [Wat is er gebeurd met hybride MDM](../../../mdm/understand/what-happened-to-hybrid.md)voor meer informatie.<!--Intune feature 2683117-->  
 
-Ondersteuning voor System Center Endpoint Protection (SCEP) voor Mac en Linux (alle versies) eindigt op 31 december 2018. De beschik baarheid van nieuwe virus definities voor SCEP voor Mac en SCEP voor Linux kan na het einde van de ondersteuning worden stopgezet. Zie [End of support blog post](https://go.microsoft.com/fwlink/?linkid=870182)voor meer informatie.
+Ondersteuning voor System Center Endpoint Protection (SCEP) voor Mac en Linux (alle versies) eindigt op 31 december 2018. De beschik baarheid van nieuwe virus definities voor SCEP voor Mac en SCEP voor Linux kan na het einde van de ondersteuning worden stopgezet. Zie [End of support blog post](https://techcommunity.microsoft.com/t5/configuration-manager-blog/end-of-support-for-scep-for-mac-and-scep-for-linux-on-december/ba-p/286257)voor meer informatie.
 
 Klassieke service-implementaties in azure zijn nu afgeschaft in Configuration Manager. Begin met het gebruik van Azure Resource Manager-implementaties voor de Cloud beheer gateway en het Cloud distributiepunt. Zie [plan for CMG](../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager)voor meer informatie.
 
@@ -219,7 +219,7 @@ Zie [toepassingen goed keuren](../../../apps/deploy-use/app-approval.md)voor mee
 ### <a name="detection-methods-dont-load-windows-powershell-profiles"></a>Windows Power shell-profielen worden niet geladen door detectie methoden
 
 <!--3607762, fka 1359239-->
-U kunt Windows Power shell-scripts gebruiken voor detectie methoden voor toepassingen en instellingen in configuratie-items. Wanneer deze scripts worden uitgevoerd op clients, roept de Configuration Manager-client nu Power `-NoProfile` shell aan met de para meter. Met deze optie wordt Power shell zonder profielen gestart.
+U kunt Windows Power shell-scripts gebruiken voor detectie methoden voor toepassingen en instellingen in configuratie-items. Wanneer deze scripts worden uitgevoerd op clients, roept de Configuration Manager-client nu Power shell aan met de `-NoProfile` para meter. Met deze optie wordt Power shell zonder profielen gestart.
 
 Een Power shell-profiel is een script dat wordt uitgevoerd wanneer Power shell wordt gestart. U kunt een Power shell-profiel maken om uw omgeving aan te passen en om sessie-specifieke elementen toe te voegen aan elke Power shell-sessie die u start.
 
@@ -237,7 +237,7 @@ Zie [toepassingen maken](../../../apps/deploy-use/create-applications.md) en [aa
 <!--3607717, fka 1358333-->
 [Windows auto pilot voor bestaande apparaten](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) is nu beschikbaar in Windows 10 versie 1809 of hoger. Met deze nieuwe functie kunt u de installatie kopie van een Windows 7-apparaat voor de door de [gebruiker gestuurde Windows-modus voor automatische prototypen](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) opnieuw maken en inrichten met één systeem eigen Configuration Manager taken reeks.
 
-Zie voor meer informatie [Windows auto pilot voor bestaande apparaten](../../../osd/deploy-use/windows-autopilot-for-existing-devices.md).
+Zie [Windows Autopilot voor bestaande apparaten](../../../osd/deploy-use/windows-autopilot-for-existing-devices.md) voor meer informatie.
 
 
 ### <a name="specify-the-drive-for-offline-os-image-servicing"></a>Het station opgeven voor offline-installatie kopie onderhoud van besturings systemen
@@ -435,7 +435,7 @@ Het volgende update pakket (4488598) is beschikbaar in de-console vanaf 25 maart
 
 De volgende aanvullende hotfixes zijn beschikbaar om specifieke problemen op te lossen:
 
-| Id | Titel | Date | In-console |
+| Id | Titel | Datum | In-console |
 |---------|---------|---------|---------|
 | [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune connector certificaat wordt niet vernieuwd in Configuration Manager | 18 januari 2019 | Ja |
 | [4490434](https://support.microsoft.com/help/4490434) | Er worden dubbele kolommen voor gebruikers detectie gemaakt in Configuration Manager | 22 februari 2019 | Ja |

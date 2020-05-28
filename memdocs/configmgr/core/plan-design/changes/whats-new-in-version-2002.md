@@ -2,7 +2,7 @@
 title: Wat is er nieuw in versie 2002
 titleSuffix: Configuration Manager
 description: Krijg informatie over wijzigingen en nieuwe mogelijkheden die zijn geïntroduceerd in versie 2002 van Configuration Manager current branch.
-ms.date: 05/11/2020
+ms.date: 05/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1aca9058b0f095b7f25b345c15eed1446dcf61d2
-ms.sourcegitcommit: 7b224e138c0618e978be59832b3486f3745abacc
+ms.openlocfilehash: afdcc608133d306042c9c6dc817396bb2fc3f387
+ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83381550"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84126478"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 2002 van Configuration Manager current branch
 
@@ -328,6 +328,15 @@ Zie voor meer informatie [Office 365-updates synchroniseren vanaf een niet-verbo
 
 <!-- 5229962 -->
 Configuration Manager heeft de ondersteuning voor onboarding-apparaten uitgebreid naar micro soft Defender ATP. Zie [micro soft Defender Advanced Threat Protection](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md#onboard-devices)(Engelstalig) voor meer informatie.
+
+## <a name="onboard-configuration-manager-clients-to-microsoft-defender-atp-via-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a>Configuration Manager-clients onboarden naar micro soft Defender ATP via het beheer centrum van micro soft Endpoint Manager
+<!--5691658-->
+U kunt nu het voorbereidings beleid voor micro soft Defender ATP-eindpunt detectie en-antwoorden (EDR) implementeren voor het Configuration Manager van beheerde clients. Voor deze clients is Azure AD of MDM-inschrijving niet vereist en het beleid is gericht op ConfigMgr-verzamelingen in plaats van met Azure AD-groepen.
+
+Met deze mogelijkheid kunnen klanten zowel intune MDM als Configuration Manager client EDR/ATP onboarding beheren vanuit één beheer ervaring-het micro soft Endpoint Manager-beheer centrum. Zie voor meer informatie [eindpunt detectie en reactie beleid voor eindpunt beveiliging in intune](../../../../intune/protect/endpoint-security-edr-policy.md).
+
+> [!Important]
+> U hebt de hotfix Rollup, [KB4563473](https://support.microsoft.com/help/4563473), geïnstalleerd in uw omgeving voor deze functie.
 
 ### <a name="improvements-to-bitlocker-management"></a>Verbeteringen aan BitLocker-beheer
 

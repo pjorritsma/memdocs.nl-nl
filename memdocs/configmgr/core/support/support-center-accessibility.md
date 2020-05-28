@@ -43,27 +43,27 @@ U kunt ook een toetsen bord gebruiken om algemene taken uit te voeren in onderst
 |Taak  |Sneltoets  |
 |---------|---------|
 |Configuratie opties voor toepassing openen |**F4**|
-|Afsluiten     |**ALT** + **F4**|
+|Afsluiten     |**Alt**  +  **F4**|
 |Details van client laden of vernieuwen<br>(op het tabblad **client Details** van het ondersteunings centrum)|**F5**|
 |Geselecteerde beleids weergave laden<br>(op het tabblad **client beleid** van het ondersteunings centrum)|**F5**|
 |Een beleid vernieuwen<br>(op het tabblad **client beleid** van het ondersteunings centrum na het selecteren van een beleid)|**F5** |
-|Kopiëren als MOF<br>(op het tabblad **client beleid** van het ondersteunings centrum na het selecteren van een beleid; ook beschikbaar voor WMI-gebeurtenissen)|**CTRL** + **Shift**SHIFT + **C** |
-|Een beleid als lokale client-MOF kopiëren<br>(op het tabblad **client beleid** van het ondersteunings centrum na het selecteren van een beleid)|**CTRL** + -**SHIFT** + **X** |
-|Aanvraag beleid<br>(op het tabblad **client beleid** van het ondersteunings centrum)|**CTRL** + **R** |
-|Beleid evalueren<br>(op het tabblad **client beleid** van het ondersteunings centrum)|**CTRL** + **E** |
+|Kopiëren als MOF<br>(op het tabblad **client beleid** van het ondersteunings centrum na het selecteren van een beleid; ook beschikbaar voor WMI-gebeurtenissen)|**CTRL**  +  **SHIFT**  +  **C** |
+|Een beleid als lokale client-MOF kopiëren<br>(op het tabblad **client beleid** van het ondersteunings centrum na het selecteren van een beleid)|**CTRL**  +  **SHIFT**  +  **X** |
+|Aanvraag beleid<br>(op het tabblad **client beleid** van het ondersteunings centrum)|**CTRL**  +  **R** |
+|Beleid evalueren<br>(op het tabblad **client beleid** van het ondersteunings centrum)|**CTRL**  +  **E** |
 |Inhouds weergave laden of vernieuwen<br>(op het tabblad **inhoud** van het ondersteunings centrum)|**F5** |
 |Inventaris van belasting<br>(op het tabblad **inventarisatie** van het ondersteunings centrum)|**F5** |
 |Beginnen met probleem oplossing<br>(op het tabblad **probleem oplossing** van het ondersteunings centrum)|**F5** |
-|Gegevens bundel openen<br>(op het tabblad **Start** van de viewer voor ondersteunings centrum)|**CTRL** + **O** |
-|Logboek bestanden openen<br>(op het tabblad **Logboeken** van het ondersteunings centrum en in het venster van de logboeken viewer)|**CTRL** + **O** |
-|Logboek bestanden openen in de huidige weer gave<br>(op het tabblad **Logboeken** van het ondersteunings centrum en in het venster van de logboeken viewer)|**CTRL** + -**SHIFT** + **O** |
-|Logboek bestanden openen in een nieuw venster van de logboeken viewer<br>(op het tabblad **Logboeken** van het ondersteunings centrum en in het venster van de logboeken viewer)|**CTRL** + **N** |
-|Alle logboek bestanden sluiten<br>(op het tabblad **Logboeken** van het ondersteunings centrum en in het venster van de **logboeken viewer** )|**CTRL** + **W** |
-|Zoeken in logboek bestanden| - **CTRL** + **F**: Hiermee opent u het dialoog venster **zoeken** om een zoek reeks in te voeren<br> - **F3**: de volgende overeenkomst zoeken<br> - **Shift** + **F3**: de vorige overeenkomst zoeken|
-|Een fout code opzoeken<br>(op het tabblad **Logboeken** en in het venster van de **logboeken viewer** )|**CTRL** + **L** |
-|Kopiëren uit een logboek bestand| - **CTRL** + **C**: de tekst van het logboek bestand kopiëren<br> - **CTRL** + **Shift**SHIFT + **C**: de logboek vermelding zonder opmaak kopiëren|
-|Snel filter met behulp van de tekst van een logboek bestand<br>(op het tabblad **Logboeken** en in het venster van de **logboeken viewer** )|**CTRL** + **Shift**SHIFT + **C** |
-|Aantekeningen toevoegen aan een logboek bestand<br>(op het tabblad **Logboeken** en in het venster van de **logboeken viewer** )|**CTRL** + **-SHIFT** + **N** <sup>[Opmerking 1](#bkmk_note1)</sup>|
+|Gegevens bundel openen<br>(op het tabblad **Start** van de viewer voor ondersteunings centrum)|**CTRL**  +  **O** |
+|Logboek bestanden openen<br>(op het tabblad **Logboeken** van het ondersteunings centrum en in het venster van de logboeken viewer)|**CTRL**  +  **O** |
+|Logboek bestanden openen in de huidige weer gave<br>(op het tabblad **Logboeken** van het ondersteunings centrum en in het venster van de logboeken viewer)|**CTRL**  +  **SHIFT**  +  **O** |
+|Logboek bestanden openen in een nieuw venster van de logboeken viewer<br>(op het tabblad **Logboeken** van het ondersteunings centrum en in het venster van de logboeken viewer)|**CTRL**  +  **N** |
+|Alle logboek bestanden sluiten<br>(op het tabblad **Logboeken** van het ondersteunings centrum en in het venster van de **logboeken viewer** )|**CTRL**  +  **W** |
+|Zoeken in logboek bestanden| - **CTRL**  +  **F**: Hiermee opent u het dialoog venster **zoeken** om een zoek reeks in te voeren<br> - **F3**: de volgende overeenkomst zoeken<br> - **SHIFT**  +  **F3**: de vorige overeenkomst zoeken|
+|Een fout code opzoeken<br>(op het tabblad **Logboeken** en in het venster van de **logboeken viewer** )|**CTRL**  +  **L** |
+|Kopiëren uit een logboek bestand| - **CTRL**  +  **C**: de tekst van het logboek bestand kopiëren<br> - **CTRL**  +  **SHIFT**  +  **C**: de logboek vermelding zonder opmaak kopiëren|
+|Snel filter met behulp van de tekst van een logboek bestand<br>(op het tabblad **Logboeken** en in het venster van de **logboeken viewer** )|**CTRL**  +  **SHIFT**  +  **C** |
+|Aantekeningen toevoegen aan een logboek bestand<br>(op het tabblad **Logboeken** en in het venster van de **logboeken viewer** )|**CTRL**  +  **SHIFT**  +  **N** <sup>[Opmerking 1](#bkmk_note1)</sup>|
 |Help openen|**Step**|
 
 

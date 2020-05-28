@@ -35,7 +35,7 @@ Dit artikel bevat een inleiding tot de functies die beschikbaar zijn in de Techn
 - **Update voor preview versie 1707 mislukt wanneer u een site server in de passieve modus hebt**. Wanneer u de preview-versie 1706 uitvoert en een [primaire site server in de passieve modus](capabilities-in-technical-preview-1706.md#site-server-role-high-availability)hebt, moet u de site server van de passieve modus verwijderen voordat u uw preview-site kunt bijwerken naar versie 1707. U kunt de site server van de passieve modus opnieuw installeren nadat versie 1707 van de site is uitgevoerd.
 
   De site server van de passieve modus verwijderen:
-  1. Ga in de-console naar **beheer** > **overzicht** > **site configuratie** > **servers en site systeem rollen**en selecteer vervolgens de site server passieve modus.
+  1. Ga in de-console naar **beheer**  >  **overzicht**  >  **site configuratie**  >  **servers en site systeem rollen**en selecteer vervolgens de site server passieve modus.
   2. Klik in het deel venster **site systeem rollen** met de rechter muisknop op de **site** serverrol en kies vervolgens **rol verwijderen**.
   3. Klik met de rechter muisknop op de site server in de passieve modus en kies **verwijderen**.
   4. Nadat de installatie van de site server ongedaan is gemaakt, start u de service **CONFIGURATION_MANAGER_UPDATE**opnieuw op de actieve primaire site server.
@@ -60,7 +60,7 @@ Vanaf deze release ondersteunt peer-cache distributie van inhoud snelle installa
 
 ## <a name="surface-device-dashboard"></a>Surface Device-dash board
 <!--1355788-->
-Het Surface Device-dash board bevat informatie over de Surface-apparaten die in uw omgeving zijn gevonden. Ga in de-console naar **bewakings** > **oppervlak apparaten**. U kunt het volgende bekijken:
+Het Surface Device-dash board bevat informatie over de Surface-apparaten die in uw omgeving zijn gevonden. Ga in de-console naar **bewakings**  >  **oppervlak apparaten**. U kunt het volgende bekijken:
 - percentage van Opper vlakken
 - percentage Surface-modellen
 - Top vijf versies van besturings systemen
@@ -81,7 +81,7 @@ Als u Windows Defender Application Guard-beleid wilt maken en implementeren, moe
 #### <a name="to-create-a-policy-and-to-browse-the-available-settings"></a>Een beleid maken en bladeren door de beschik bare instellingen:
 
 1. Kies in de Configuration Manager-console **activa en naleving**.
-2. Kies **overzicht** > **Endpoint Protection**Endpoint Protection > **Windows Defender Application Guard**in de werk ruimte **activa en naleving** .
+2. Kies **overzicht**Endpoint Protection **Assets and Compliance**  >  **Endpoint Protection**  >  **Windows Defender Application Guard**in de werk ruimte activa en naleving.
 3. Klik op het tabblad **Start** in de groep **maken** op **Windows Defender Application Guard-beleid maken**.
 4. Als u het blog bericht als referentie wilt gebruiken, kunt u door de beschik bare instellingen bladeren en deze configureren om de functie uit te proberen.
 5. In deze release hebben we de nieuwe **netwerk definitie** pagina aan de wizard toegevoegd. Op deze pagina geeft u de bedrijfs identiteit op en definieert u de grens van uw bedrijfs netwerk.<br>Windows 10-Pc's slaan slechts één netwerk isolatie lijst op de client op. In deze release kunt u twee verschillende soorten netwerk isolatie lijsten maken (één van Windows Information Protection en één van Windows Defender Application Guard) en implementeren op de client. Als u beide beleids regels implementeert, moeten deze netwerk isolatie lijsten overeenkomen. Als u lijsten implementeert die niet overeenkomen met dezelfde client, mislukt de implementatie.

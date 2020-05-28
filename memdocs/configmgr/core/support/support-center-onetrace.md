@@ -46,9 +46,9 @@ OneTrace werkt met veel soorten logboek bestanden, zoals:
 
 ## <a name="install"></a>Installeren
 
-OneTrace wordt geïnstalleerd met het ondersteunings centrum. Zoek het installatie programma voor het ondersteunings centrum op de site server `cd.latest\SMSSETUP\Tools\SupportCenter\SupportCenterInstaller.msi`op het volgende pad:.
+OneTrace wordt geïnstalleerd met het ondersteunings centrum. Zoek het installatie programma voor het ondersteunings centrum op de site server op het volgende pad: `cd.latest\SMSSETUP\Tools\SupportCenter\SupportCenterInstaller.msi` .
 
-Standaard wordt de toepassing OneTrace geïnstalleerd op `C:\Program Files (x86)\Configuration Manager Support Center\CMPowerLogViewer.exe`.
+Standaard wordt de toepassing OneTrace geïnstalleerd op `C:\Program Files (x86)\Configuration Manager Support Center\CMPowerLogViewer.exe` .
 
 > [!Note]  
 > Het ondersteunings centrum en OneTrace gebruiken Windows Presentation Foundation (WPF). Dit onderdeel is niet beschikbaar in Windows PE. Ga door met het gebruik van CMTrace in opstart installatie kopieën met taken reeks implementaties.  
@@ -69,7 +69,7 @@ Als u logboek groepen wilt weer geven, gaat u naar het menu **weer gave** en sel
 
 ### <a name="customize-log-groups"></a>Logboek groepen aanpassen
 
-U kunt deze groepen aanpassen door de configuratie-XML te wijzigen, die standaard zich in het volgende pad `C:\Program Files (x86)\Configuration Manager Support Center\LogGroups.xml`bevindt:.
+U kunt deze groepen aanpassen door de configuratie-XML te wijzigen, die standaard zich in het volgende pad bevindt: `C:\Program Files (x86)\Configuration Manager Support Center\LogGroups.xml` .
 
 Het volgende voor beeld is een gedeelte van het standaard configuratie bestand:
 
@@ -95,7 +95,7 @@ De `GroupType` eigenschap accepteert de volgende waarden:
 - `1`: Configuration Manager-client logboeken
 - `2`: Configuration Manager-server logboeken
 
-De `GroupFilePath` eigenschap kan een expliciet pad voor de logboek bestanden bevatten. Als deze leeg is, is OneTrace afhankelijk van de Register configuratie voor het groeps type. Als u bijvoorbeeld instelt `GroupType=1`, wordt standaard OneTrace automatisch gezocht in `C:\Windows\CCM\Logs` de logboeken in de groep. In dit voor beeld hoeft u niet op te `GroupFilePath`geven.
+De `GroupFilePath` eigenschap kan een expliciet pad voor de logboek bestanden bevatten. Als deze leeg is, is OneTrace afhankelijk van de Register configuratie voor het groeps type. Als u bijvoorbeeld instelt `GroupType=1` , wordt standaard OneTrace automatisch gezocht in `C:\Windows\CCM\Logs` de logboeken in de groep. In dit voor beeld hoeft u niet op te geven `GroupFilePath` .
 
 ## <a name="see-also"></a>Zie ook
 

@@ -44,7 +44,7 @@ Voor een lijst met basislijn versies raadpleegt u **basis lijn-en update versies
 ## <a name="use-the-configuration-manager-console-to-convert-the-long-term-servicing-branch"></a>De Configuration Manager-console gebruiken om de Long-term Servicing branch te converteren
 Als uw site de LTSB uitvoert, kunt u de volgende optie in de console Configuration Manager gebruiken om te converteren naar de Current Branch:
 
- 1. Ga in de-console naar **beheer** > **site configuratie** > **sites**en open vervolgens **hiërarchie-instellingen**.  
+ 1. Ga in de-console naar **beheer**  >  **site configuratie**  >  **sites**en open vervolgens **hiërarchie-instellingen**.  
 
  2. Ga **in hiërarchie-instellingen**naar het tabblad **licenties** . Selecteer de optie die u wilt **converteren naar current branch**en kies vervolgens **Toep assen**.  
 

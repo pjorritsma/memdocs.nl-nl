@@ -10,12 +10,12 @@ ms.assetid: 69550b35-bcdb-4b47-bbec-b3c8bc92bb7b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 96cce5d4aaa352177b1c24ff78cf15e90ea6e823
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4a9ae791582911f91e5f76b841248ad5085d8170
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713707"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879823"
 ---
 # <a name="monitor-database-replication"></a>Database replicatie bewaken
 
@@ -122,7 +122,10 @@ Voer RLA uit in de Configuration Manager-console of vanaf een opdracht prompt:
 
 - Om uit te voeren in de Configuration Manager-console gaat u naar de werk ruimte **bewaking** en selecteert u het knoop punt **database replicatie** . Selecteer de replicatie koppeling die u wilt analyseren en selecteer vervolgens op het lint **Replication link Analyzer**.  
 
-- Typ de volgende opdracht om uit te voeren vanaf een opdracht prompt:`%ProgramFiles(x86)%\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManager.ReplicationLinkAnalyzer.Wizard.exe <source site server FQDN> <destination site server FQDN>`  
+- Typ de volgende opdracht om uit te voeren vanaf een opdracht prompt:`%ProgramFiles(x86)%\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManager.ReplicationLinkAnalyzer.Wizard.exe <source site server FQDN> <destination site server FQDN>`  
+
+    > [!IMPORTANT]
+    > Vanaf versie 1910 is dit pad gewijzigd om de map te gebruiken `Microsoft Endpoint Manager` . Zorg ervoor dat u geen oudere versie van het bestand gebruikt dat in een andere map kan voor komen.
 
 Wanneer u RLA uitvoert, worden er problemen gedetecteerd door gebruik te maken van een reeks diagnostische regels en controles. U ziet de problemen die het hulp programma identificeert. Wanneer deze instructies bevat om een probleem op te lossen, worden ze weer gegeven. Als RLA automatisch een probleem kan oplossen, wordt deze optie weer gegeven.
 

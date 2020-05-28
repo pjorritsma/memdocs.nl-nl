@@ -31,7 +31,7 @@ Maak een volledig *probleemoplossings bundel* bestand (. zip) waarmee de client 
 
 - Lokale beheerders rechten voor een Configuration Manager-client  
 
-- Het installatie programma van het ondersteunings centrum. Dit bestand bevindt zich op de `cd.latest\SMSSETUP\Tools\SupportCenter\SupportCenterInstaller.msi`site server op. Zie [ondersteunings centrum-installeren](support-center.md#install)voor meer informatie.  
+- Het installatie programma van het ondersteunings centrum. Dit bestand bevindt zich op de site server op `cd.latest\SMSSETUP\Tools\SupportCenter\SupportCenterInstaller.msi` . Zie [ondersteunings centrum-installeren](support-center.md#install)voor meer informatie.  
 
 
 
@@ -43,7 +43,7 @@ Maak een volledig *probleemoplossings bundel* bestand (. zip) waarmee de client 
 
 3.  Op het tabblad Start van het lint selecteert u **geselecteerde gegevens verzamelen**. Standaard verzamelt het ondersteunings centrum de minimale gegevensset: logboek bestanden, client configuratie en besturings systeem.  
 
-4.  Sla het bundel bestand voor probleem oplossing (. zip) op naar een map op de computer. De bestands naam is standaard vergelijkbaar met het volgende voor beeld: `Support_c885cdfed3c7482bba4f9e662978ec07.zip`.  
+4.  Sla het bundel bestand voor probleem oplossing (. zip) op naar een map op de computer. De bestands naam is standaard vergelijkbaar met het volgende voor beeld: `Support_c885cdfed3c7482bba4f9e662978ec07.zip` .  
 
 
 

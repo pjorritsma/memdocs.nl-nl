@@ -41,13 +41,13 @@ Dit artikel bevat een inleiding tot de functies die beschikbaar zijn in de Techn
 
 1.  Registreer Configuration Manager in Azure Active Directory als een hulp programma voor het beheer van webtoepassingen en/of Web-API. Hiermee krijgt u een client-ID die u later nodig hebt.  
 
-    1.  Selecteer uw **Active Directory** Azure Active Directory in het [https://manage.windowsazure.com](https://manage.windowsazure.com)knoop punt Active Directory van en klik vervolgens op **toepassingen** > **toevoegen**.  
+    1.  Selecteer uw Azure Active Directory in het knoop punt **Active Directory** van en [https://manage.windowsazure.com](https://manage.windowsazure.com) klik vervolgens op **toepassingen**  >  **toevoegen**.  
 
     2.  Klik op **een toepassing toevoegen die mijn organisatie ontwikkelt**.  
 
     3.  Voer een naam in voor de toepassing, selecteer **Webtoepassing** en/of **Web-API**en klik op de pijl Volgende.  
 
-    4.  Voer dezelfde URL in voor zowel de **aanmeldings-URL** als de **URI van de App-ID**.  De URL kan iets zijn en hoeft niet te worden omgezet naar een echt adres. U kunt bijvoorbeeld **&lt;https://domein\>-/SCCM**invoeren.  
+    4.  Voer dezelfde URL in voor zowel de **aanmeldings-URL** als de **URI van de App-ID**.  De URL kan iets zijn en hoeft niet te worden omgezet naar een echt adres. U kunt bijvoorbeeld **https:// &lt; domein- \> /SCCM**invoeren.  
 
     5.  Voltooi de wizard.  
 
@@ -159,7 +159,7 @@ Wanneer een gebruiker een Pass Port-pincode maakt, stuurt Windows een melding da
 
 #### <a name="enable-health-attestation-for-on-premises-devices"></a>Status verklaring inschakelen voor on-premises apparaten  
 
-1.  Navigeer in de Configuration Manager-console naar **beheer** > **overzicht** > **client instellingen**en stel **on-premises goed werkende Attestation-service gebruiken** in op **Ja**.  
+1.  Navigeer in de Configuration Manager-console naar **beheer**  >  **overzicht**  >  **client instellingen**en stel **on-premises goed werkende Attestation-service gebruiken** in op **Ja**.  
 
 2.  Geef de **URL op voor de on-premises statusverklaringsservice**en klik op **OK**.  
 

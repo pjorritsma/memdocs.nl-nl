@@ -40,7 +40,7 @@ De BitLocker-herstel sleutel aanvragen bij de Self-Service Portal:
 
 1. Wanneer BitLocker een apparaat vergrendelt, wordt het BitLocker-herstel scherm tijdens het opstarten weer gegeven. Noteer de BitLocker-herstel sleutel-ID van 32 cijfers.
 
-1. Ga op een andere computer naar de Self-Service Portal in de webbrowser, bijvoorbeeld `https://webserver.contoso.com/SelfService`.
+1. Ga op een andere computer naar de Self-Service Portal in de webbrowser, bijvoorbeeld `https://webserver.contoso.com/SelfService` .
 
 1. Lees en accepteer de kennisgeving.
 

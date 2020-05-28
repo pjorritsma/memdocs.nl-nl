@@ -10,12 +10,12 @@ ms.assetid: 5beb5564-2fdf-4f0a-8801-d0cec8214c43
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7a670660bcf7b3f5cb8209aaf6d0b59eb0f343e4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 27994107c32fac87a465240f07b68d57fddfc140
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711488"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83983819"
 ---
 # <a name="paths-to-co-management"></a>Paden naar co-beheer
 
@@ -45,7 +45,6 @@ U moet het volgende instellen:
         - Voor federatieve domeinen
 - Instelling van client agent voor hybride Azure AD-samen voeging
 - De automatische inschrijving van apparaten met intune configureren
-- Intune-gebruikerslicenties toewijzen
 - Co-beheer inschakelen in Configuration Manager
 
 Zie [zelf studie: co-beheer inschakelen voor bestaande Configuration Manager-clients](tutorial-co-manage-clients.md)voor een zelf studie over dit pad.

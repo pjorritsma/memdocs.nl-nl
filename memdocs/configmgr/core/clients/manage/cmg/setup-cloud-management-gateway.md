@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 36d256e674a0fe973eca4bc692a244af034d5cc1
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 8c585473ec80ad4c6dfe49d22e527e99175bfbb4
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076761"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83877416"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Cloud beheer gateway instellen voor Configuration Manager
 
@@ -41,7 +41,7 @@ Gebruik de volgende controle lijst om ervoor te zorgen dat u over de benodigde i
 
     - Integratie met [Azure AD](../../../servers/deploy/configure/azure-services-wizard.md) voor **Cloud beheer**. Azure AD-gebruikers detectie is niet vereist.  
 
-    - De resource providers **micro soft. ClassicCompute** & **micro soft. Storage** moeten zijn geregistreerd in het Azure-abonnement. Zie [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services)voor meer informatie.
+    - De resource providers **micro soft. ClassicCompute**  &  **micro soft. Storage** moeten zijn geregistreerd in het Azure-abonnement. Zie [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services)voor meer informatie.
 
     - Een abonnements beheerder moet zich aanmelden.  
 
@@ -82,12 +82,12 @@ Voer deze procedure uit op de site op het hoogste niveau. Deze site is een zelfs
 
 4. Geef de **Azure-omgeving** voor deze CMG op. De opties in de vervolg keuzelijst kunnen variëren, afhankelijk van de implementatie methode.  
 
-5. Selecteer **Volgende**. Wacht tot de site de verbinding met Azure test.  
+5. Selecteer **Next**. Wacht tot de site de verbinding met Azure test.  
 
 6. Selecteer op de pagina instellingen van de wizard eerst **Bladeren** en kies de. PFX-bestand voor het CMG-Server verificatie certificaat. De naam van dit certificaat vult de vereiste velden **FQDN** en **service naam** van de service in.  
 
    > [!NOTE]  
-   > Het certificaat voor CMG-Server verificatie ondersteunt joker tekens. Als u een certificaat met Joker tekens gebruikt, vervangt u`*`het sterretje () in het veld **FQDN van service** door de gewenste hostnaam voor de CMG.<!--491233-->  
+   > Het certificaat voor CMG-Server verificatie ondersteunt joker tekens. Als u een certificaat met Joker tekens gebruikt, vervangt u het sterretje ( `*` ) in het veld **FQDN van service** door de gewenste HOSTNAAM voor de CMG.<!--491233-->  
 
 7. Selecteer de vervolg keuzelijst **regio** om de Azure-regio voor deze CMG te kiezen.  
 
@@ -110,7 +110,7 @@ Voer deze procedure uit op de site op het hoogste niveau. Deze site is een zelfs
 
 13. Vanaf versie 1806 wordt standaard de volgende optie ingeschakeld: **CMG toestaan om te functioneren als een Cloud distributiepunt en inhoud van Azure Storage te bewaren**. Een CMG kan nu ook inhoud aan clients aanbieden. Deze functionaliteit vermindert de vereiste certificaten en kosten van virtuele Azure-machines.  
 
-14. Selecteer **Volgende**.  
+14. Selecteer **Next**.  
 
 15. Als u CMG-verkeer met een drempel van 14 dagen wilt bewaken, kiest u het selectie vakje om de drempel waarschuwing in te scha kelen. Geef vervolgens de drempel waarde en het percentage op waarmee de verschillende waarschuwings niveaus moeten worden verhoogd. Kies **volgende** wanneer u klaar bent.  
 
@@ -199,6 +199,43 @@ Met deze opdracht worden alle beheer punten op internet weer gegeven die de clie
 > [!Note]  
 > Als u het CMG-client verkeer wilt oplossen, gebruikt u **CMGHttpHandler. log**, **CMGService. log**en **SMS_Cloud_ProxyConnector. log**. Zie [logboek bestanden](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway)voor meer informatie.
 
+### <a name="install-off-premises-clients-using-a-cmg"></a>On-premises clients installeren met behulp van een CMG
+
+Als u de client agent wilt installeren op systemen die momenteel niet zijn verbonden met uw intranet, moet aan een van de volgende voor waarden worden voldaan. In alle gevallen is een lokaal Administrator-account op de doel systemen vereist.
+
+1. De Configuration Manager site is op de juiste wijze geconfigureerd voor het gebruik van PKI-certificaten voor client verificatie. Daarnaast hebben de client systemen een geldig, uniek en vertrouwd certificaat voor client verificatie dat eerder aan hen is uitgegeven.
+
+2. De systemen zijn lid van een Azure AD-domein en zijn lid van een hybride Azure AD-domein.
+
+3. Op de site wordt Configuration Manager versie 2002 of hoger uitgevoerd.
+
+Voor de opties 1 en 2 gebruikt u de para meter **/MP** om de URL van de CMG op te geven bij het aanroepen van **ccmsetup. exe**. Zie [over para meters en eigenschappen van client installatie](../../deploy/about-client-installation-properties.md#mp)voor meer informatie.
+
+Voor optie 3, vanaf Configuration Manager versie 2002, kunt u de client agent installeren op systemen die niet met uw intranet zijn verbonden met behulp van een token voor massa registratie. Zie [een token voor bulk registratie maken](../../deploy/deploy-clients-cmg-token.md#create-a-bulk-registration-token)voor meer informatie over deze methode.
+
+### <a name="configure-off-premises-clients-for-cmg"></a>On-premises clients configureren voor CMG
+
+U kunt systemen verbinden met een recent geconfigureerde CMG, waarbij de volgende voor waarden waar zijn:  
+
+- De Configuration Manager-client agent is al geïnstalleerd op systemen.
+
+- Systemen zijn niet verbonden en kunnen niet worden verbonden met uw intranet.
+
+- Systemen voldoen aan een van de volgende voor waarden:
+
+  - Elk is een geldig, uniek en vertrouwd certificaat voor client verificatie dat eerder is uitgegeven.
+
+  - Lid van Azure AD-domein
+
+  - Hybride Azure AD-domein toegevoegd.
+
+- U wilt de bestaande client agent niet volledig opnieuw installeren.
+
+- U hebt een methode om een register waarde voor de machine te wijzigen en de **SMS agent host** -service opnieuw te starten met een lokaal beheerders account.
+
+Als u de verbinding op deze systemen wilt forceren, maakt u de register waarde **CMGFQDNs** (van het type REG_SZ) onder **HKLM\Software\Microsoft\CCM**. Stel deze waarde in op de URL van de CMG (bijvoorbeeld `https://contoso-cmg.contoso.com` ). Zodra de **SMS agent host** -service op het client systeem is ingesteld, start u deze opnieuw.
+
+Als de Configuration Manager-client geen huidig CMG of Internet gericht beheer punt in het REGI ster heeft ingesteld, wordt de register waarde **CMGFQDNs** automatisch gecontroleerd. Deze controle vindt plaats om de 25 uur, wanneer de **SMS agent host** -service wordt gestart, of wanneer een netwerk wijziging wordt gedetecteerd. Wanneer de client verbinding maakt met de site en informatie over een CMG, wordt deze waarde automatisch bijgewerkt.
 
 ## <a name="modify-a-cmg"></a>Een CMG wijzigen
 

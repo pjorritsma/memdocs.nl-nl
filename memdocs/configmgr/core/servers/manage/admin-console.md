@@ -10,12 +10,12 @@ ms.assetid: 463ce307-59dd-4abd-87b8-42ca9db178d7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 58b66639094a602206114cd75a724504618ad38c
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: ac5b3ca8e8e2231bb421838fa56b20253ddfcb74
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110029"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83878378"
 ---
 # <a name="how-to-use-the-configuration-manager-console"></a>De Configuration Manager-console gebruiken
 
@@ -27,7 +27,7 @@ Beheerders gebruiken de Configuration Manager-console voor het beheren van de Co
 
 De Configuration Manager-console wordt altijd op elke site server geïnstalleerd. U kunt deze ook op andere computers installeren. Zie [de Configuration Manager-console installeren](../deploy/install/install-consoles.md)voor meer informatie.
 
-De eenvoudigste methode om de-console te openen op een Windows 10- **Start** computer, klikt u `Configuration Manager console`op Start en typt u. Mogelijk hoeft u niet de volledige teken reeks voor Windows te typen om het beste resultaat te vinden.
+De eenvoudigste methode om de-console te openen op een Windows 10-computer, klikt u op **Start** en typt u `Configuration Manager console` . Mogelijk hoeft u niet de volledige teken reeks voor Windows te typen om het beste resultaat te vinden.
 
 Als u door het menu Start bladert, zoekt u het pictogram **Configuration Manager-console** in de groep **micro soft Endpoint Manager** .
 
@@ -50,7 +50,7 @@ Gebruik de volgende stappen om verbinding te maken met een andere site server:
 
     ![Het venster site verbinding typt u de FQDN-naam van de site server](media/site-server-fqdn.png)  
 
-3. Selecteer **Verbinden**.  
+3. Selecteer **Verbinding maken**.  
 
 Vanaf versie 1810 kunt u het minimale verificatie niveau voor beheerders opgeven om toegang te krijgen tot Configuration Manager-sites. Deze functie dwingt beheerders af om zich aan te melden bij Windows met het vereiste niveau. Zie [de SMS-provider plannen](../../plan-design/hierarchy/plan-for-the-sms-provider.md#bkmk_auth)voor meer informatie. <!--1357013-->  
 
@@ -58,7 +58,7 @@ Vanaf versie 1810 kunt u het minimale verificatie niveau voor beheerders opgeven
 
 Sommige onderdelen van de console zijn mogelijk niet zichtbaar, afhankelijk van de toegewezen beveiligingsrol. Zie [basis principes van beheer op basis van rollen](../../understand/fundamentals-of-role-based-administration.md)voor meer informatie over rollen.
 
-### <a name="workspaces"></a>Workspaces
+### <a name="workspaces"></a>Werkruimten
 
 De Configuration Manager-console heeft vier **werk ruimten**:  
 
@@ -172,7 +172,7 @@ opmerking
 
 ### <a name="start-microsoft-teams-chat"></a>Micro soft teams chat starten
 
-1. Ga naar **beheer** > **beveiligings** > **console verbindingen**.
+1. Ga naar **beheer**  >  **beveiligings**  >  **console verbindingen**.
 1. Klik met de rechter muisknop op de console verbinding van een gebruiker en selecteer **Start micro soft teams chat**.
     - Als de principal-naam van de gebruiker niet is gevonden voor de geselecteerde beheerder, start u de **Chat functie van micro soft teams** is grijs weer gegeven.
     - Er wordt een fout bericht weer gegeven, inclusief een download koppeling, wanneer micro soft teams niet is geïnstalleerd op het apparaat van waaruit u de-console uitvoert.
@@ -228,7 +228,7 @@ De volgende meldingen zijn het meest van toepassing op de Technical Preview-vert
 - Niet-overeenkomende console versies (kritiek): de versie van de console komt niet overeen met de site versie  
 - Site-upgrade is beschikbaar (waarschuwing): er is een nieuw update pakket beschikbaar  
 
-Zie het bestand **SmsAdminUI. log** op de-console computer voor meer informatie en hulp bij het oplossen van problemen. Dit logboek bestand bevindt zich standaard op het volgende pad `C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\AdminUILog\SmsAdminUI.log`:.
+Zie het bestand **SmsAdminUI. log** op de-console computer voor meer informatie en hulp bij het oplossen van problemen. Dit logboek bestand bevindt zich standaard op het volgende pad: `C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\AdminUILog\SmsAdminUI.log` .
 
 
 ## <a name="in-console-documentation-dashboard"></a><a name="bkmk_doc-dashboard"></a>Dash board documentatie in de console
@@ -419,9 +419,9 @@ In de werk ruimte **software bibliotheek** vouwt u **toepassings beheer**uit, ga
 
 1. Ga naar een van de volgende locaties in de Configuration Manager-console:
 
-   - **Software Library** > **software werkt** > **alle software-updates** bij
-   - **Software bibliotheek** > **Windows 10 onderhoud** > **alle Windows 10-updates**
-   - **Software bibliotheek** > **Office 365 client management** > **Office 365 updates**
+   - **Software bibliotheek**  >  **Software-updates**  >  **Alle software-updates**
+   - **Software bibliotheek**  >  Onderhoud van Windows **10**  >  **Alle Windows 10-updates**
+   - **Software bibliotheek**  >  **Office 365-client beheer**  >  **Office 365-updates**
 
 1. Selecteer een update die vereist is voor ten minste één apparaat.
 1. Ga naar het tabblad **samen vatting** en zoek het cirkel diagram onder **Statistieken**.

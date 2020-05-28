@@ -5,17 +5,17 @@ description: Meer informatie over het voorbereiden van uw Windows 10-apparaten o
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/24/2020
+ms.date: 05/14/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: 59ca1006d8700e52b3f3fb703f8896ce9fa8b9b7
-ms.sourcegitcommit: 3ff33493c3f93bf06fdc942d30958a2a4ad03529
+ms.openlocfilehash: e6582599a02f4a8196ee739ca875df4d158a993e
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82137912"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427792"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>Het voorbereiden van op internet gebaseerde apparaten voor co-beheer
 
@@ -104,13 +104,13 @@ Zie [Eigenschappen van client installatie](../core/clients/deploy/about-client-i
 
 ### <a name="create-the-app-in-intune"></a>De app in intune maken
 
-1. Ga naar de [Azure Portal](https://portal.azure.com)en open vervolgens de pagina intune.  
+1. Ga naar het [beheer centrum van micro soft Endpoint Manager](https://endpoint.microsoft.com)en vouw vervolgens het navigatie deel venster aan de linkerkant uit.  
 
-2. Selecteer **client apps** > **apps** > **toevoegen**.  
+2. Selecteer **apps**  >  **alle apps**  >  **toevoegen**.  
 
 3. Onder **andere**selecteert u de **line-of-Business-app**.  
 
-4. Upload het bestand **ccmsetup. msi** -app-pakket. Dit bestand vindt u in de volgende map op de site server Configuration Manager `<ConfigMgr installation directory>\bin\i386`:.  
+4. Upload het bestand **ccmsetup. msi** -app-pakket. Dit bestand vindt u in de volgende map op de site server Configuration Manager: `<ConfigMgr installation directory>\bin\i386` .  
 
     > [!Tip]  
     > Wanneer u de site bijwerkt, zorg er dan voor dat u deze app ook bijwerkt in intune.  

@@ -10,18 +10,18 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e2c8b369b69bd5fcddd2f52b875b5089d82ebb0e
-ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
-ms.translationtype: HT
+ms.openlocfilehash: b3ddd1a4b59ba750e9fca5f8386762b4a5dddb13
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82605131"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429829"
 ---
 # <a name="task-sequence-variables"></a>Takenreeksvariabelen
 
 *Van toepassing op: Configuration Manager (huidige vertakking)*
 
-Dit artikel bevat een verwijzing voor alle beschik bare variabelen in alfabetische volg orde. Gebruik de functie **zoeken** in browser (doorgaans **CTRL** + **F**) om een specifieke variabele te vinden. De variabele opmerkingen als deze specifiek zijn voor een bepaalde stap. Het artikel over [taken reeks stappen](task-sequence-steps.md) bevat de lijst met variabelen die specifiek zijn voor elke stap.
+Dit artikel bevat een verwijzing voor alle beschik bare variabelen in alfabetische volg orde. Gebruik de functie **zoeken** in browser (doorgaans **CTRL**  +  **F**) om een specifieke variabele te vinden. De variabele opmerkingen als deze specifiek zijn voor een bepaalde stap. Het artikel over [taken reeks stappen](task-sequence-steps.md) bevat de lijst met variabelen die specifiek zijn voor elke stap.
 
 Zie [using Task sequence Varia bles](using-task-sequence-variables.md)(Engelstalig) voor meer informatie.
 
@@ -106,11 +106,11 @@ Geeft de standaardgateways aan die worden gebruikt door de computer.
 
 ### <a name="_smstsdownloadondemand"></a><a name="SMSTSDownloadOnDemand"></a>_SMSTSDownloadOnDemand
 
-Als de huidige taken reeks wordt uitgevoerd in de modus voor downloaden op aanvraag, is `true`deze variabele. Down load-on-demand modus betekent dat taken reeks beheer alleen lokaal inhoud downloadt wanneer het toegang heeft tot de inhoud.
+Als de huidige taken reeks wordt uitgevoerd in de modus voor downloaden op aanvraag, is deze variabele `true` . Down load-on-demand modus betekent dat taken reeks beheer alleen lokaal inhoud downloadt wanneer het toegang heeft tot de inhoud.
 
 ### <a name="_smstsinwinpe"></a><a name="SMSTSInWinPE"></a>_SMSTSInWinPE
 
-Wanneer de huidige taken reeks stap wordt uitgevoerd in Windows PE, is `true`deze variabele. Test deze taken reeks variabele om de huidige besturingssysteem omgeving te bepalen.
+Wanneer de huidige taken reeks stap wordt uitgevoerd in Windows PE, is deze variabele `true` . Test deze taken reeks variabele om de huidige besturingssysteem omgeving te bepalen.
 
 ### <a name="_smstsipaddresses"></a><a name="SMSTSIPAddresses"></a>_SMSTSIPAddresses
 
@@ -132,9 +132,9 @@ Slaat de retour code op van de laatste actie die is uitgevoerd. Deze variabele k
 
 ### <a name="_smstslastactionsucceeded"></a><a name="SMSTSLastActionSucceeded"></a>_SMSTSLastActionSucceeded
 
-- Als de laatste stap is voltooid, is `true`deze variabele.  
+- Als de laatste stap is voltooid, is deze variabele `true` .  
 
-- Als de laatste stap is mislukt, is `false`dat.  
+- Als de laatste stap is mislukt, is dat `false` .  
 
 - Als de taken reeks de laatste actie heeft overgeslagen, omdat de stap is uitgeschakeld of de gekoppelde voor waarde is geëvalueerd als **Onwaar**, wordt deze variabele niet opnieuw ingesteld. Het bevat nog steeds de waarde voor de vorige actie.  
 
@@ -177,7 +177,7 @@ Geeft het merk van de computer aan.
 
 ### <a name="_smstsmdatapath"></a><a name="SMSTSMDataPath"></a>_SMSTSMDataPath
 
-Hiermee geeft u het pad op dat wordt gedefinieerd door de variabele [SMSTSLocalDataDrive](#SMSTSLocalDataDrive) . Wanneer u SMSTSLocalDataDrive definieert voordat de taken reeks wordt gestart, bijvoorbeeld door een verzamelings variabele in te stellen, definieert Configuration Manager de _SMSTSMDataPath variabele zodra de taken reeks wordt gestart.
+Hiermee geeft u het pad op dat wordt gedefinieerd door de variabele [SMSTSLocalDataDrive](#SMSTSLocalDataDrive) . Dit pad geeft aan waar de taken reeks tijdelijke cache bestanden opslaat op de doel computer terwijl deze wordt uitgevoerd. Wanneer u SMSTSLocalDataDrive definieert voordat de taken reeks wordt gestart, bijvoorbeeld door een verzamelings variabele in te stellen, definieert Configuration Manager de _SMSTSMDataPath variabele zodra de taken reeks wordt gestart.
 
 ### <a name="_smstsmediatype"></a><a name="SMSTSMediaType"></a>_SMSTSMediaType
 
@@ -239,7 +239,7 @@ Geeft het serienummer van de computer aan.
 
 ### <a name="_smstssetuprollback"></a><a name="SMSTSSetupRollback"></a>_SMSTSSetupRollback
 
-Hiermee geeft u op of Windows Setup een terugdraai bewerking hebt uitgevoerd tijdens een in-place upgrade. De waarden van de variabele `true` kunnen `false`of zijn.
+Hiermee geeft u op of Windows Setup een terugdraai bewerking hebt uitgevoerd tijdens een in-place upgrade. De waarden van de variabele kunnen `true` of zijn `false` .
 
 ### <a name="_smstssitecode"></a><a name="SMSTSSiteCode"></a>_SMSTSSiteCode
 
@@ -274,7 +274,7 @@ Wanneer de taken reeks gebruikmaakt van HTTPS om te communiceren met het beheer 
 
 ### <a name="_smstsuserstarted"></a><a name="SMSTSUserStarted"></a>_SMSTSUserStarted
 
-Hiermee wordt aangegeven of een gebruiker de taken reeks heeft gestart. Deze variabele wordt alleen ingesteld als de taken reeks wordt gestart vanuit software Center. Als [_SMSTSLaunchMode](#SMSTSLaunchMode) bijvoorbeeld is ingesteld op `SMS`.
+Hiermee wordt aangegeven of een gebruiker de taken reeks heeft gestart. Deze variabele wordt alleen ingesteld als de taken reeks wordt gestart vanuit software Center. Als [_SMSTSLaunchMode](#SMSTSLaunchMode) bijvoorbeeld is ingesteld op `SMS` .
 
 Deze variabele kan de volgende waarden hebben:  
 
@@ -284,7 +284,7 @@ Deze variabele kan de volgende waarden hebben:
 
 ### <a name="_smstsusessl"></a><a name="SMSTSUseSSL"></a>_SMSTSUseSSL
 
-Hiermee geeft u op of de taken reeks SSL gebruikt om te communiceren met het Configuration Manager beheer punt. Als u uw site systemen voor HTTPS configureert, wordt de waarde ingesteld op `true`.
+Hiermee geeft u op of de taken reeks SSL gebruikt om te communiceren met het Configuration Manager beheer punt. Als u uw site systemen voor HTTPS configureert, wordt de waarde ingesteld op `true` .
 
 ### <a name="_smstsuuid"></a><a name="SMSTSUUID"></a>_SMSTSUUID
 
@@ -301,84 +301,84 @@ De variabele specificeert of de computer wordt gebruikt als een Windows To Go-ap
 *Vanaf versie 2002* <!--6005561-->  
 *Is van toepassing op de stap [gereedheid controleren](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
-Een alleen-lezen variabele voor of de controle van het **minimale geheugen (MB)** de`1`waarde True ()`0`of False () retourneert. Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
+Een alleen-lezen variabele voor of de controle van het **minimale geheugen (MB)** de waarde True ( `1` ) of False ( `0` ) retourneert. Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
 
 ### <a name="_ts_crspeed"></a><a name="TSCRSPEED"></a>_TS_CRSPEED
 
 *Vanaf versie 2002* <!--6005561-->  
 *Is van toepassing op de stap [gereedheid controleren](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
-Een alleen-lezen variabele voor of de **minimale processor snelheid (MHz)** controleren True (`1`) of False (`0`) retourneert. Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
+Een alleen-lezen variabele voor of de **minimale processor snelheid (MHz)** controleren True ( `1` ) of False ( `0` ) retourneert. Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
 
 ### <a name="_ts_crdisk"></a><a name="TSCRDISK"></a>_TS_CRDISK
 
 *Vanaf versie 2002* <!--6005561-->  
 *Is van toepassing op de stap [gereedheid controleren](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
-Een alleen-lezen variabele voor of de controle **minimale beschik bare schijf ruimte (MB)** de`1`waarde True ()`0`of False () retourneert. Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
+Een alleen-lezen variabele voor of de controle **minimale beschik bare schijf ruimte (MB)** de waarde True ( `1` ) of False ( `0` ) retourneert. Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
 
 ### <a name="_ts_crostype"></a><a name="TSCROSTYPE"></a>_TS_CROSTYPE
 
 *Vanaf versie 2002* <!--6005561-->  
 *Is van toepassing op de stap [gereedheid controleren](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
-Een alleen-lezen variabele voor of het **huidige besturings systeem dat moet worden vernieuwd, wordt geretourneerd als** True`1`() of False`0`(). Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
+Een alleen-lezen variabele voor of het **huidige besturings systeem dat moet worden vernieuwd, wordt geretourneerd als** True ( `1` ) of False ( `0` ). Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
 
 ### <a name="_ts_crarch"></a><a name="TSCRARCH"></a>_TS_CRARCH
 
 *Vanaf versie 2002* <!--6005561-->  
 *Is van toepassing op de stap [gereedheid controleren](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
-Een alleen-lezen variabele voor of de **architectuur van de huidige controle van het besturings systeem** True (`1`)`0`of False () retourneert. Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
+Een alleen-lezen variabele voor of de **architectuur van de huidige controle van het besturings systeem** True ( `1` ) of False ( `0` ) retourneert. Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
 
 ### <a name="_ts_crminosver"></a><a name="TSCRMINOSVER"></a>_TS_CRMINOSVER
 
 *Vanaf versie 2002* <!--6005561-->  
 *Is van toepassing op de stap [gereedheid controleren](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
-Een alleen-lezen variabele voor of de **minimale** controle van de versie van het`1`besturings systeem True (`0`) of False () retourneert. Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
+Een alleen-lezen variabele voor of de minimale controle van de versie van het **besturings systeem** True ( `1` ) of False ( `0` ) retourneert. Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
 
 ### <a name="_ts_crmaxosver"></a><a name="TSCRMAXOSVER"></a>_TS_CRMAXOSVER
 
 *Vanaf versie 2002* <!--6005561-->  
 *Is van toepassing op de stap [gereedheid controleren](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
-Een alleen-lezen variabele voor of de **maximale** controle van de versie van het`1`besturings systeem True (`0`) of False () retourneert. Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
+Een alleen-lezen variabele voor of de maximale controle van de versie van het **besturings systeem** True ( `1` ) of False ( `0` ) retourneert. Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
 
 ### <a name="_ts_crclientminver"></a><a name="TSCRCLIENTMINVER"></a>_TS_CRCLIENTMINVER
 
 *Vanaf versie 2002* <!--6005561-->  
 *Is van toepassing op de stap [gereedheid controleren](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
-Een alleen-lezen variabele voor of de controle van de **minimale client versie** True`1`() of False`0`() retourneert. Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
+Een alleen-lezen variabele voor of de controle van de **minimale client versie** True ( `1` ) of False ( `0` ) retourneert. Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
 
 ### <a name="_ts_croslanguage"></a><a name="TSCROSLANGUAGE"></a>_TS_CROSLANGUAGE
 
 *Vanaf versie 2002* <!--6005561-->  
 *Is van toepassing op de stap [gereedheid controleren](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
-Een alleen-lezen variabele voor of de **taal van de huidige controle van het besturings systeem** True (`1`)`0`of False () retourneert. Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
+Een alleen-lezen variabele voor of de **taal van de huidige controle van het besturings systeem** True ( `1` ) of False ( `0` ) retourneert. Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
 
 ### <a name="_ts_cracpower"></a><a name="TSCRACPOWER"></a>_TS_CRACPOWER
 
 *Vanaf versie 2002* <!--6005561-->  
 *Is van toepassing op de stap [gereedheid controleren](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
-Een alleen-lezen variabele voor of de **netstroom die is aangesloten op het stop** contact`1`, True ()`0`of False () retourneert. Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
+Een alleen-lezen variabele voor of de **netstroom die is aangesloten op het stop** contact, True ( `1` ) of False ( `0` ) retourneert. Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
 
 ### <a name="_ts_crnetwork"></a><a name="TSCRNETWORK"></a>_TS_CRNETWORK
 
 *Vanaf versie 2002* <!--6005561-->  
 *Is van toepassing op de stap [gereedheid controleren](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
-Een alleen-lezen variabele voor of de controle van de **netwerk adapter die is verbonden** , True`1`(`0`) of False () retourneert. Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
+Een alleen-lezen variabele voor of de controle van de **netwerk adapter die is verbonden** , True ( `1` ) of False ( `0` ) retourneert. Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
 
 ### <a name="_ts_crwired"></a><a name="TSCRWIRED"></a>_TS_CRWIRED
 
 *Vanaf versie 2002* <!--6005561-->  
 *Is van toepassing op de stap [gereedheid controleren](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
-Een alleen-lezen variabele voor of de **netwerk adapter niet draadloze** controle de waarde True (`1`) of False (`0`) retourneert. Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
+Een alleen-lezen variabele voor of de **netwerk adapter niet draadloze** controle de waarde True ( `1` ) of False ( `0` ) retourneert. Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
 
 ### <a name="_tsappinstallstatus"></a><a name="TSAppInstallStatus"></a>_TSAppInstallStatus
 
@@ -422,15 +422,15 @@ Deze instelling is vereist. Mogelijke waarden zijn `True` en `False`. Bijvoorbee
 
 #### <a name="osdadapter0ipaddresslist"></a>OSDAdapter0IPAddressList
 
-Een door komma's gescheiden lijst met IP-adressen voor de adapter. Deze eigenschap wordt genegeerd, tenzij **EnableDHCP** is ingesteld `false`op. Deze instelling is vereist.
+Een door komma's gescheiden lijst met IP-adressen voor de adapter. Deze eigenschap wordt genegeerd, tenzij **EnableDHCP** is ingesteld op `false` . Deze instelling is vereist.
 
 #### <a name="osdadapter0subnetmask"></a>OSDAdapter0SubnetMask
 
-Een door komma's gescheiden lijst met subnetmaskers. Deze eigenschap wordt genegeerd, tenzij **EnableDHCP** is ingesteld `false`op. Deze instelling is vereist.
+Een door komma's gescheiden lijst met subnetmaskers. Deze eigenschap wordt genegeerd, tenzij **EnableDHCP** is ingesteld op `false` . Deze instelling is vereist.
 
 #### <a name="osdadapter0gateways"></a>OSDAdapter0Gateways
 
-Een door komma's gescheiden lijst met IP-gateway adressen. Deze eigenschap wordt genegeerd, tenzij **EnableDHCP** is ingesteld `false`op. Deze instelling is vereist.
+Een door komma's gescheiden lijst met IP-gateway adressen. Deze eigenschap wordt genegeerd, tenzij **EnableDHCP** is ingesteld op `false` . Deze instelling is vereist.
 
 #### <a name="osdadapter0dnsdomain"></a>Osdadapter0dnsdomain – DNS
 
@@ -442,19 +442,19 @@ Een door komma's gescheiden lijst met DNS-servers voor de adapter. Deze instelli
 
 #### <a name="osdadapter0enablednsregistration"></a>OSDAdapter0EnableDNSRegistration
 
-Stel in `true` om het IP-adres voor de adapter in DNS te registreren.
+Stel in om `true` het IP-adres voor de adapter in DNS te registreren.
 
 #### <a name="osdadapter0enablefulldnsregistration"></a>OSDAdapter0EnableFullDNSRegistration
 
-Stel dit `true` in om het IP-adres voor de adapter in DNS te registreren onder de volledige DNS-naam voor de computer.
+Stel `true` dit in om het IP-adres voor de adapter in DNS te registreren onder de volledige DNS-naam voor de computer.
 
 #### <a name="osdadapter0enableipprotocolfiltering"></a>OSDAdapter0EnableIPProtocolFiltering
 
-Stel deze `true` optie in om IP-protocol filtering op de adapter in te scha kelen.
+Stel `true` deze optie in om IP-protocol filtering op de adapter in te scha kelen.
 
 #### <a name="osdadapter0ipprotocolfilterlist"></a>OSDAdapter0IPProtocolFilterList
 
-Een door komma's gescheiden lijst met protocollen die over IP mogen worden uitgevoerd. Deze eigenschap wordt genegeerd als **EnableIPProtocolFiltering** is ingesteld op `false`.
+Een door komma's gescheiden lijst met protocollen die over IP mogen worden uitgevoerd. Deze eigenschap wordt genegeerd als **EnableIPProtocolFiltering** is ingesteld op `false` .
 
 #### <a name="osdadapter0enabletcpfiltering"></a>OSDAdapter0EnableTCPFiltering
 
@@ -462,7 +462,7 @@ Instellen op `true` om TCP-poort filtering voor de adapter in te scha kelen.
 
 #### <a name="osdadapter0tcpfilterportlist"></a>OSDAdapter0TCPFilterPortList
 
-Een door komma's gescheiden lijst met poorten waaraan toegangs machtigingen voor TCP worden toegekend. Deze eigenschap wordt genegeerd als **EnableTCPFiltering** is ingesteld op `false`.
+Een door komma's gescheiden lijst met poorten waaraan toegangs machtigingen voor TCP worden toegekend. Deze eigenschap wordt genegeerd als **EnableTCPFiltering** is ingesteld op `false` .
 
 #### <a name="osdadapter0tcpipnetbiosoptions"></a>OSDAdapter0TcpipNetbiosOptions
 
@@ -478,7 +478,7 @@ Stel in `true` om WINS te gebruiken voor naam omzetting.
 
 #### <a name="osdadapter0winsserverlist"></a>OSDAdapter0WINSServerList
 
-Een door komma's gescheiden lijst met IP-adressen van WINS-servers. Deze eigenschap wordt genegeerd, tenzij **EnableWINS** is ingesteld `true`op.
+Een door komma's gescheiden lijst met IP-adressen van WINS-servers. Deze eigenschap wordt genegeerd, tenzij **EnableWINS** is ingesteld op `true` .
 
 #### <a name="osdadapter0macaddress"></a>OSDAdapter0MacAddress
 
@@ -582,7 +582,7 @@ Met ingang van versie 1906 gebruikt u deze variabele om het aantal keer opnieuw 
 
 #### <a name="valid-values"></a>Geldige waarden
 
-Een geheel getal `1` van `15`tot.
+Een geheel getal van `1` tot `15` .
 
 ### <a name="osdbitlockerrebootcountoverride"></a><a name="OSDBitLockerRebootCountOverride"></a>OSDBitLockerRebootCountOverride
 
@@ -593,7 +593,7 @@ Met ingang van versie 1906 stelt u deze waarde in om het aantal te overschrijven
 
 #### <a name="valid-values"></a>Geldige waarden
 
-Een geheel getal `0` van `15`tot.
+Een geheel getal van `0` tot `15` .
 
 ### <a name="osdbitlockerrecoverypassword"></a><a name="OSDBitLockerRecoveryPassword"></a>OSDBitLockerRecoveryPassword
 
@@ -651,7 +651,7 @@ Geeft de naam van de doelcomputer op.
 
 *Is van toepassing op de stap [Windows-instellingen vastleggen](task-sequence-steps.md#BKMK_CaptureWindowsSettings) .*
 
-Ingesteld op de NetBIOS-naam van de computer. De waarde wordt alleen ingesteld als de variabele [OSDMigrateComputerName](#OSDMigrateComputerName) is ingesteld op `true`.
+Ingesteld op de NetBIOS-naam van de computer. De waarde wordt alleen ingesteld als de variabele [OSDMigrateComputerName](#OSDMigrateComputerName) is ingesteld op `true` .
 
 ### <a name="osdconfigfilename"></a><a name="OSDConfigFileName"></a>OSDConfigFileName
 
@@ -723,9 +723,9 @@ Hiermee geeft u de naam in RFC 1779-indeling op van de organisatie-eenheid (OE) 
 
 (invoer)
 
-Als u wilt voor komen dat mogelijk gevoelige gegevens worden weer gegeven of geregistreerd, `TRUE`stelt u deze variabele in op. Deze variabele maskeert de programma naam in de **bestand smsts. log** tijdens de stap **pakket installeren** .
+Als u wilt voor komen dat mogelijk gevoelige gegevens worden weer gegeven of geregistreerd, stelt u deze variabele in op `TRUE` . Deze variabele maskeert de programma naam in de **bestand smsts. log** tijdens de stap **pakket installeren** .
 
-Vanaf versie 1902, wanneer u deze variabele instelt op `TRUE`, wordt de opdracht regel ook verborgen met de stap **opdracht regel uitvoeren** in het logboek bestand.<!--3654172-->
+Vanaf versie 1902, wanneer u deze variabele instelt op `TRUE` , wordt de opdracht regel ook verborgen met de stap **opdracht regel uitvoeren** in het logboek bestand.<!--3654172-->
 
 ### <a name="osdenabletcpipfiltering"></a><a name="OSDEnableTCPIPFiltering"></a>OSDEnableTCPIPFiltering
 
@@ -825,7 +825,7 @@ Hiermee geeft u de naam op van een Active Directory domein waarvan de doel compu
 
 (invoer)
 
-Hiermee geeft u de naam in RFC 1779-indeling op van de organisatie-eenheid (OE) waarvan de doelcomputer lid wordt. Als u deze optie opgeeft, moet de waarde het volledige pad bevatten. De lengte van de OE-naam moet tussen 0 en 32.767 tekens lang zijn. Deze waarde wordt niet ingesteld als de variabele [OSDJoinType](#OSDJoinType) is ingesteld `1` op (lid worden van werk groep).
+Hiermee geeft u de naam in RFC 1779-indeling op van de organisatie-eenheid (OE) waarvan de doelcomputer lid wordt. Als u deze optie opgeeft, moet de waarde het volledige pad bevatten. De lengte van de OE-naam moet tussen 0 en 32.767 tekens lang zijn. Deze waarde wordt niet ingesteld als de variabele [OSDJoinType](#OSDJoinType) is ingesteld op `1` (lid worden van werk groep).
 
 #### <a name="example"></a>Voorbeeld
 
@@ -963,7 +963,7 @@ Hiermee geeft u op of de naam van de computer wordt gemigreerd.
 
 (invoer)
 
-Hiermee geeft u de configuratiebestanden op waarmee het vastleggen van gebruikersprofielen wordt beheerd. Deze variabele wordt alleen gebruikt als [OSDMigrateMode](#OSDMigrateMode) is ingesteld op `Advanced`. Deze door komma's gescheiden lijstwaarde wordt ingesteld om aangepaste gebruikersprofielmigratie uit te voeren.
+Hiermee geeft u de configuratiebestanden op waarmee het vastleggen van gebruikersprofielen wordt beheerd. Deze variabele wordt alleen gebruikt als [OSDMigrateMode](#OSDMigrateMode) is ingesteld op `Advanced` . Deze door komma's gescheiden lijstwaarde wordt ingesteld om aangepaste gebruikersprofielmigratie uit te voeren.
 
 #### <a name="example"></a>Voorbeeld
 
@@ -1030,7 +1030,7 @@ Hiermee geeft u op of het lokale computeraccount wordt hersteld.
 
 (invoer)
 
-Als de variabele [OSDMigrateLocalAccounts](#OSDMigrateLocalAccounts) is `true`, moet deze variabele het wacht woord bevatten dat is toegewezen aan *alle* gemigreerde lokale accounts. USMT wijst hetzelfde wacht woord toe aan alle gemigreerde lokale accounts. Beschouw dit wacht woord als tijdelijk en wijzig het later op een andere manier.
+Als de variabele [OSDMigrateLocalAccounts](#OSDMigrateLocalAccounts) is `true` , moet deze variabele het wacht woord bevatten dat is toegewezen aan *alle* gemigreerde lokale accounts. USMT wijst hetzelfde wacht woord toe aan alle gemigreerde lokale accounts. Beschouw dit wacht woord als tijdelijk en wijzig het later op een andere manier.
 
 ### <a name="osdmigratemode"></a><a name="OSDMigrateMode"></a>OSDMigrateMode
 
@@ -1123,11 +1123,11 @@ Gebruik de volgende namen van variabelen om de eigenschappen te definiëren voor
 
 #### <a name="osdpartitions0type"></a>Osdpartitions0type –
 
-Hiermee geeft u het type partitie. Deze eigenschap is vereist. Geldige waarden zijn `Primary`, `Extended` `Logical`, en `Hidden`.
+Hiermee geeft u het type partitie. Deze eigenschap is vereist. Geldige waarden zijn `Primary` ,, en `Extended` `Logical` `Hidden` .
 
 #### <a name="osdpartitions0filesystem"></a>Osdpartitions0filesystem – dit
 
-Hiermee geeft u het type bestands systeem op dat moet worden gebruikt bij het format teren van de partitie. Deze eigenschap is optioneel. Als u geen bestands systeem opgeeft, wordt de partitie niet geformatteerd met de stap. Geldige waarden zijn `FAT32` en `NTFS`.
+Hiermee geeft u het type bestands systeem op dat moet worden gebruikt bij het format teren van de partitie. Deze eigenschap is optioneel. Als u geen bestands systeem opgeeft, wordt de partitie niet geformatteerd met de stap. Geldige waarden zijn `FAT32` en `NTFS` .
 
 #### <a name="osdpartitions0bootable"></a>Osdpartitions0bootable –
 
@@ -1135,7 +1135,7 @@ Hiermee geeft u op of de partitie kan worden opgestart. Deze eigenschap is verei
 
 #### <a name="osdpartitions0quickformat"></a>Osdpartitions0quickformat –
 
-Hiermee geeft u het type notatie op dat wordt gebruikt. Deze eigenschap is vereist. Als deze waarde is ingesteld op `TRUE`, wordt door de stap een snelle indeling uitgevoerd. Anders voert de stap een volledige indeling uit.
+Hiermee geeft u het type notatie op dat wordt gebruikt. Deze eigenschap is vereist. Als deze waarde is ingesteld op `TRUE` , wordt door de stap een snelle indeling uitgevoerd. Anders voert de stap een volledige indeling uit.
 
 #### <a name="osdpartitions0volumename"></a>Osdpartitions0volumename –
 
@@ -1147,7 +1147,7 @@ Hiermee geeft u de grootte van de partitie. Deze eigenschap is optioneel. Als de
 
 #### <a name="osdpartitions0sizeunits"></a>Osdpartitions0sizeunits –
 
-In de stap worden deze eenheden gebruikt voor het interpreteren van de variabele **OSDPartitions0Size** . Deze eigenschap is optioneel. Geldige waarden zijn `MB` (standaard), `GB`en `Percent`.
+In de stap worden deze eenheden gebruikt voor het interpreteren van de variabele **OSDPartitions0Size** . Deze eigenschap is optioneel. Geldige waarden zijn `MB` (standaard), `GB` en `Percent` .
 
 #### <a name="osdpartitions0volumelettervariable"></a>Osdpartitions0volumelettervariable –
 
@@ -1200,7 +1200,7 @@ Hiermee geeft u de standaard geregistreerde organisatie naam in het nieuwe bestu
 
 *Is van toepassing op de stap [Windows-instellingen vastleggen](task-sequence-steps.md#BKMK_CaptureWindowsSettings) .*
 
-Ingesteld op de geregistreerde organisatienaam van de computer. De waarde wordt alleen ingesteld als de variabele [OSDMigrateRegistrationInfo](#OSDMigrateRegistrationInfo) is ingesteld op `true`.
+Ingesteld op de geregistreerde organisatienaam van de computer. De waarde wordt alleen ingesteld als de variabele [OSDMigrateRegistrationInfo](#OSDMigrateRegistrationInfo) is ingesteld op `true` .
 
 ### <a name="osdregisteredusername"></a><a name="OSDRegisteredUserName"></a>OSDRegisteredUserName
 
@@ -1311,13 +1311,13 @@ Hiermee geeft u het pad op naar de Windows-map van het geïnstalleerde besturing
 
 Hiermee geeft u de standaard instelling voor de tijd zone op die wordt gebruikt in het nieuwe besturings systeem.
 
-Stel de waarde van deze variabele in op de taal invariante naam van de tijd zone. Gebruik bijvoorbeeld de teken reeks in de `Std` waarde voor een tijd zone onder de volgende register sleutel:. `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones`
+Stel de waarde van deze variabele in op de taal invariante naam van de tijd zone. Gebruik bijvoorbeeld de teken reeks in de `Std` waarde voor een tijd zone onder de volgende register sleutel: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones` .
 
 ### <a name="osdtimezone-output"></a><a name="OSDTimeZone-output"></a>OSDTimeZone (uitvoer)
 
 *Is van toepassing op de stap [Windows-instellingen vastleggen](task-sequence-steps.md#BKMK_CaptureWindowsSettings) .*
 
-Ingesteld op de tijdzone van de computer. De waarde wordt alleen ingesteld als de variabele [OSDMigrateTimeZone](#OSDMigrateTimeZone) is ingesteld op `true`.
+Ingesteld op de tijdzone van de computer. De waarde wordt alleen ingesteld als de variabele [OSDMigrateTimeZone](#OSDMigrateTimeZone) is ingesteld op `true` .
 
 ### <a name="osdwindowssettingsinputlocale"></a><a name="OSDWindowsSettingsInputLocale"></a>OSDWindowsSettingsInputLocale
 
@@ -1527,7 +1527,7 @@ Hiermee geeft u op hoe een takenreeks gebruikers koppelt aan de doelcomputer. St
 <!--512358-->
 In scenario's zonder verbinding probeert de taken reeks engine herhaaldelijk status berichten naar het beheer punt te verzenden. Dit gedrag in dit scenario veroorzaakt vertragingen bij het verwerken van taken reeksen.
 
-Stel deze variabele in `true` op en de taken reeks engine probeert geen status berichten te verzenden nadat het eerste bericht niet kan worden verzonden. In deze eerste poging zijn meerdere nieuwe pogingen opgenomen.
+Stel deze variabele in op `true` en de taken reeks engine probeert geen status berichten te verzenden nadat het eerste bericht niet kan worden verzonden. In deze eerste poging zijn meerdere nieuwe pogingen opgenomen.
 
 Wanneer de taken reeks opnieuw wordt gestart, blijft de waarde van deze variabele behouden. De taken reeks probeert echter een oorspronkelijk status bericht te verzenden. In deze eerste poging zijn meerdere nieuwe pogingen opgenomen. Als dit lukt, wordt de status van de taken reeks verder verzonden, ongeacht de waarde van deze variabele. Als de status niet kan worden verzonden, gebruikt de taken reeks de waarde van deze variabele.
 
@@ -1540,7 +1540,7 @@ Wanneer de taken reeks opnieuw wordt gestart, blijft de waarde van deze variabel
 
 (invoer)
 
-Standaard in een 64-bits besturings systeem zoekt en voert de taken reeks het programma uit op de opdracht regel met behulp van de WOW64-bestands systeem-redirector. Dit gedrag zorgt ervoor dat de opdracht 32-bits versies van OS-Program ma's en-Dll's kan zoeken. Als u `true` deze variabele instelt, wordt het gebruik van de WOW64-bestands systeem-redirector uitgeschakeld. De opdracht vindt systeem eigen 64-bits versies van OS-Program ma's en dll-bestanden. Deze variabele heeft geen effect als deze wordt uitgevoerd op een 32-bits besturings systeem.
+Standaard in een 64-bits besturings systeem zoekt en voert de taken reeks het programma uit op de opdracht regel met behulp van de WOW64-bestands systeem-redirector. Dit gedrag zorgt ervoor dat de opdracht 32-bits versies van OS-Program ma's en-Dll's kan zoeken. Als u deze variabele instelt, wordt `true` het gebruik van de WOW64-bestands systeem-redirector uitgeschakeld. De opdracht vindt systeem eigen 64-bits versies van OS-Program ma's en dll-bestanden. Deze variabele heeft geen effect als deze wordt uitgevoerd op een 32-bits besturings systeem.
 
 ### <a name="smstsdownloadabortcode"></a><a name="SMSTSDownloadAbortCode"></a>SMSTSDownloadAbortCode
 
@@ -1592,9 +1592,9 @@ Gebruik deze variabele als u de weergavetaal wilt wijzigen van een taalonafhanke
 
 ### <a name="smstslocaldatadrive"></a><a name="SMSTSLocalDataDrive"></a>SMSTSLocalDataDrive
 
-Hiermee geeft u op waar de taken reeks tijdelijke bestanden opslaat op de doel computer terwijl deze wordt uitgevoerd.
+Hiermee geeft u op waar de taken reeks tijdelijke cache bestanden opslaat op de doel computer terwijl deze wordt uitgevoerd.
 
-Stel deze variabele in voordat de taken reeks wordt gestart, bijvoorbeeld door een verzamelings variabele in te stellen. Zodra de taken reeks is gestart, Configuration Manager definieert de [_SMSTSMDataPath](#SMSTSMDataPath) variabele zodra de taken reeks wordt gestart.
+Stel deze variabele in voordat de taken reeks wordt gestart, bijvoorbeeld door een verzamelings variabele in te stellen. Zodra de taken reeks is gestart, definieert Configuration Manager de [_SMSTSMDataPath](#SMSTSMDataPath) variabele op basis van de definitie van de variabele SMSTSLocalDataDrive.
 
 ### <a name="smstsmp"></a><a name="SMSTSMP"></a>SMSTSMP
 
@@ -1609,9 +1609,9 @@ Gebruik deze variabele om de URL of het IP-adres van het Configuration Manager b
 
 (invoer)
 
-Als de client zich niet op het intranet bevindt, gebruikt u deze variabele om herhaalde MPList-aanvragen voor het vernieuwen van de client in te scha kelen. Deze variabele is standaard ingesteld op `True`.
+Als de client zich niet op het intranet bevindt, gebruikt u deze variabele om herhaalde MPList-aanvragen voor het vernieuwen van de client in te scha kelen. Deze variabele is standaard ingesteld op `True` .
 
-Wanneer clients zich op het Internet bevinden, stelt u `False` deze variabele in op om onnodige vertragingen te voor komen.
+Wanneer clients zich op het Internet bevinden, stelt u deze variabele in op `False` om onnodige vertragingen te voor komen.
 
 ### <a name="smstsmplistrequesttimeout"></a><a name="SMSTSMPListRequestTimeout"></a>SMSTSMPListRequestTimeout
 
@@ -1626,7 +1626,7 @@ Als de taken reeks de lijst met beheer punten (MPList) niet kan ophalen van loca
 
 ### <a name="smstspeerdownload"></a><a name="SMSTSPeerDownload"></a>SMSTSPeerDownload
 
-Gebruik deze variabele om de client in staat te stellen Windows PE-peer-cache te gebruiken. Als u `true` deze variabele instelt, wordt deze functionaliteit ingeschakeld.
+Gebruik deze variabele om de client in staat te stellen Windows PE-peer-cache te gebruiken. Als u deze variabele instelt, wordt `true` deze functionaliteit ingeschakeld.
 
 ### <a name="smstspeerrequestport"></a><a name="SMSTSPeerRequestPort"></a>SMSTSPeerRequestPort
 
@@ -1638,7 +1638,7 @@ Gebruik deze variabele als u inhoud tijdelijk in de takenreekscache wilt houden.
 
 ### <a name="smstspostaction"></a><a name="SMSTSPostAction"></a>SMSTSPostAction
 
-Hiermee geeft u een opdracht op die wordt uitgevoerd nadat de taken reeks is voltooid. Geef `shutdown.exe /r /t 30 /f` bijvoorbeeld op dat de computer 30 seconden nadat de taken reeks is voltooid, opnieuw moet worden opgestart.
+Hiermee geeft u een opdracht op die wordt uitgevoerd nadat de taken reeks is voltooid. Geef bijvoorbeeld `shutdown.exe /r /t 30 /f` op dat de computer 30 seconden nadat de taken reeks is voltooid, opnieuw moet worden opgestart.
 
 ### <a name="smstspreferredadvertid"></a><a name="SMSTSPreferredAdvertID"></a>SMSTSPreferredAdvertID
 
@@ -1646,7 +1646,7 @@ Hiermee wordt de taken reeks gedwongen een specifieke gerichte implementatie uit
 
 ### <a name="smstspreservecontent"></a><a name="SMSTSPreserveContent"></a>SMSTSPreserveContent
 
-Met deze variabele wordt de inhoud in de taken reeks gemarkeerd die na de implementatie moet worden bewaard in de Configuration Manager-client cache. Deze variabele wijkt af van de [smstspersiscontent](#SMSTSPersistContent), waarbij alleen de inhoud voor de duur van de taken reeks wordt bewaard. Smstspersiscontent maakt gebruik van de taken reeks cache, SMSTSPreserveContent maakt gebruik van de Configuration Manager-client cache. Stel SMSTSPreserveContent in `true` om deze functionaliteit in te scha kelen.
+Met deze variabele wordt de inhoud in de taken reeks gemarkeerd die na de implementatie moet worden bewaard in de Configuration Manager-client cache. Deze variabele wijkt af van de [smstspersiscontent](#SMSTSPersistContent), waarbij alleen de inhoud voor de duur van de taken reeks wordt bewaard. Smstspersiscontent maakt gebruik van de taken reeks cache, SMSTSPreserveContent maakt gebruik van de Configuration Manager-client cache. Stel SMSTSPreserveContent in om `true` deze functionaliteit in te scha kelen.
 
 ### <a name="smstsrebootdelay"></a><a name="SMSTSRebootDelay"></a>SMSTSRebootDelay
 
@@ -1665,7 +1665,7 @@ Vanaf versie 1906 gebruikt u deze variabele met de bestaande [SMSTSRebootDelay](
 
 #### <a name="example"></a>Voorbeeld
 
-U wilt gebruikers een melding van 60 minuten opnieuw opstarten aan het begin van de taken reeks van Windows 10 in-place upgrade geven. Na deze eerste lange time-out wilt u extra time-outs tot 60 seconden. Stel SMSTSRebootDelay in `3600`op en SMSTSRebootDelayNext naar `60`.  
+U wilt gebruikers een melding van 60 minuten opnieuw opstarten aan het begin van de taken reeks van Windows 10 in-place upgrade geven. Na deze eerste lange time-out wilt u extra time-outs tot 60 seconden. Stel SMSTSRebootDelay in op `3600` en SMSTSRebootDelayNext naar `60` .  
 
 
 ### <a name="smstsrebootmessage"></a><a name="SMSTSRebootMessage"></a>SMSTSRebootMessage
@@ -1685,7 +1685,7 @@ Geeft aan dat opnieuw opstarten is aangevraagd nadat de huidige takenreeks is vo
 
 ### <a name="smstsretryrequested"></a><a name="SMSTSRetryRequested"></a>SMSTSRetryRequested
 
-Hiermee wordt een nieuwe poging aangevraagd nadat de huidige takenreeksstap is voltooid. Als deze taken reeks variabele is ingesteld, stelt u ook [SMSTSRebootRequested](#SMSTSRebootRequested) de variabele SMSTSRebootRequested `true`in op. Nadat de computer opnieuw is opgestart, voert het taken reeks beheer dezelfde taken reeks stap opnieuw uit.
+Hiermee wordt een nieuwe poging aangevraagd nadat de huidige takenreeksstap is voltooid. Als deze taken reeks variabele is ingesteld, stelt u ook de variabele [SMSTSRebootRequested](#SMSTSRebootRequested) in op `true` . Nadat de computer opnieuw is opgestart, voert het taken reeks beheer dezelfde taken reeks stap opnieuw uit.
 
 ### <a name="smstsruncommandlineasuser"></a><a name="SMSTSRunCommandLineAsUser"></a>SMSTSRunCommandLineAsUser
 
@@ -1696,7 +1696,7 @@ Gebruik taken reeks variabelen voor het configureren van de gebruikers context v
 
 Configureer `SMSTSRunCommandLineAsUser` met een van de volgende waarden:
 
-- `true`: Alle verdere **Uitvoeren opdracht regel** stappen worden uitgevoerd in de context van de gebruiker die `SMSTSRunCommandLineUserName`is opgegeven in.
+- `true`: Alle verdere **Uitvoeren opdracht regel** stappen worden uitgevoerd in de context van de gebruiker die is opgegeven in `SMSTSRunCommandLineUserName` .
 
 - `false`: Alle verdere **Uitvoeren opdracht regel** stappen worden uitgevoerd in de context die u in de stap hebt geconfigureerd.
 
@@ -1732,7 +1732,7 @@ Gebruik taken reeks variabelen voor het configureren van de gebruikers context v
 
 Configureer `SMSTSRunPowerShellAsUser` met een van de volgende waarden:
 
-- `true`: Eventuele verdere **uitvoer Power shell-script** stappen worden uitgevoerd in de context van de `SMSTSRunPowerShellUserName`gebruiker die is opgegeven in.
+- `true`: Eventuele verdere **uitvoer Power shell-script** stappen worden uitgevoerd in de context van de gebruiker die is opgegeven in `SMSTSRunPowerShellUserName` .
 
 - `false`: Alle verdere **Power shell-script** stappen die worden uitgevoerd in de context die u hebt geconfigureerd in de stap.
 
@@ -1767,7 +1767,7 @@ Bepaal de time-out voor het scannen van software-updates tijdens deze stap. Als 
 
 ### <a name="smstsudausers"></a><a name="SMSTSUDAUsers"></a>SMSTSUDAUsers
 
-Hiermee geeft u de primaire gebruikers van de doel computer op met de volgende `<DomainName>\<UserName>`indeling:. Scheid meerdere gebruikers met behulp van een`,`komma (). Zie [gebruikers koppelen aan een doel computer](../get-started/associate-users-with-a-destination-computer.md)voor meer informatie.
+Hiermee geeft u de primaire gebruikers van de doel computer op met de volgende indeling: `<DomainName>\<UserName>` . Scheid meerdere gebruikers met behulp van een komma ( `,` ). Zie [gebruikers koppelen aan een doel computer](../get-started/associate-users-with-a-destination-computer.md)voor meer informatie.
 
 #### <a name="example"></a>Voorbeeld
 
@@ -1783,7 +1783,7 @@ Deze optionele taken reeks variabele bepaalt het client gedrag wanneer de instal
 
 Stel de waarde voor SMSTSWaitForSecondReboot in seconden in om op te geven hoelang de taken reeks tijdens deze stap wordt onderbroken terwijl de computer opnieuw wordt opgestart. Laat voldoende tijd voor het geval er een tweede keer opnieuw wordt opgestart.
 
-Als u bijvoorbeeld SMSTSWaitForSecondReboot instelt op, wordt `600`de taken reeks gedurende tien minuten na het opnieuw opstarten onderbroken voordat extra stappen worden uitgevoerd. Deze variabele is handig wanneer een enkele taken reeks stap software-updates installeren honderden software-updates installeert.
+Als u bijvoorbeeld SMSTSWaitForSecondReboot instelt op, wordt `600` de taken reeks gedurende tien minuten na het opnieuw opstarten onderbroken voordat extra stappen worden uitgevoerd. Deze variabele is handig wanneer een enkele taken reeks stap software-updates installeren honderden software-updates installeert.
 
 > [!Note]
 > Deze variabele is alleen van toepassing op een taken reeks die een besturings systeem implementeert. Het werkt niet in een aangepaste taken reeks. <!-- 2839998 -->
@@ -1791,14 +1791,14 @@ Als u bijvoorbeeld SMSTSWaitForSecondReboot instelt op, wordt `600`de taken reek
 ### <a name="tsdebugmode"></a><a name="TSDebugMode"></a>TSDebugMode
 
 <!--3612274-->
-Met ingang van versie 1906 stelt u `TRUE` deze variabele in op een verzameling of computer object waarop de taken reeks wordt geïmplementeerd. Op elk apparaat waarop deze variabele is ingesteld, wordt elke taken reeks geïmplementeerd in de foutopsporingsmodus.
+Met ingang van versie 1906 stelt u deze variabele in `TRUE` op een verzameling of computer object waarop de taken reeks wordt geïmplementeerd. Op elk apparaat waarop deze variabele is ingesteld, wordt elke taken reeks geïmplementeerd in de foutopsporingsmodus.
 
 Zie [debug a task sequence](../deploy-use/debug-task-sequence.md)voor meer informatie.
 
 ### <a name="tsdebugonerror"></a><a name="TSDebugOnError"></a>TSDebugOnError
 
 <!-- 5012536 -->
-Met ingang van versie 1910 stelt u deze variabele `TRUE` in op automatisch starten van het [fout opsporingsprogramma voor de taken reeks](../deploy-use/debug-task-sequence.md) wanneer de taken reeks een fout retourneert.
+Met ingang van versie 1910 stelt u deze variabele in op `TRUE` automatisch starten van het [fout opsporingsprogramma voor de taken reeks](../deploy-use/debug-task-sequence.md) wanneer de taken reeks een fout retourneert.
 
 Stel deze variabele in op:
 
@@ -1821,7 +1821,7 @@ Gebruik deze variabele om te bepalen wanneer de taken reeks voortgang weergeeft 
 
 (invoer)
 
-Geef op of de taken reeks engine een gedetecteerde waarschuwing beschouwt als een fout tijdens deze stap. De taken reeks stelt de [_TSAppInstallStatus](#TSAppInstallStatus) variabele in `Warning` op wanneer een of meer toepassingen, of een vereiste afhankelijkheid, niet zijn geïnstalleerd omdat deze niet aan een vereiste voldoet. Wanneer u deze variabele instelt op `True`, en de taken reeks **_TSAppInstallStatus** op `Warning`, is het resultaat een fout. Een waarde van `False` is het standaard gedrag.
+Geef op of de taken reeks engine een gedetecteerde waarschuwing beschouwt als een fout tijdens deze stap. De taken reeks stelt de [_TSAppInstallStatus](#TSAppInstallStatus) variabele in op `Warning` Wanneer een of meer toepassingen, of een vereiste afhankelijkheid, niet zijn geïnstalleerd omdat deze niet aan een vereiste voldoet. Wanneer u deze variabele instelt op `True` , en de taken reeks **_TSAppInstallStatus** op `Warning` , is het resultaat een fout. Een waarde van `False` is het standaard gedrag.
 
 ### <a name="tsprogressinfolevel"></a><a name="TSProgressInfoLevel"></a>TSProgressInfoLevel
 
@@ -1832,6 +1832,10 @@ Geef deze variabele op om te bepalen welk type informatie wordt weer gegeven in 
 - `1`: Voeg de huidige stap en het totale aantal stappen toe aan de voortgangs tekst. Bijvoorbeeld **2 van 10**.
 - `2`: Voeg de huidige stap, het totale aantal stappen en het percentage voltooid toe. Bijvoorbeeld **2 van 10 (20% voltooid)**.
 - `3`: Geef het percentage voltooid op. Bijvoorbeeld **(20% voltooid)**.
+
+### <a name="tsuefidrive"></a><a name="TSUEFIDrive"></a>TSUEFIDrive
+
+Gebruik de eigenschappen van een FAT32-partitie in het veld **variabele** . Wanneer de taken reeks deze variabele detecteert, bereidt deze de schijf voor op de overgang naar UEFI voordat de computer opnieuw wordt opgestart. Zie [taken reeks stappen voor het beheren van de conversie van BIOS naar UEFI](../deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md)voor meer informatie.
 
 ### <a name="workingdirectory"></a><a name="WorkingDirectory"></a>Variabele workingdirectory
 
@@ -1864,10 +1868,10 @@ De volgende variabelen zijn afgeschaft:
 >
 > Tijdens de implementatie van een besturings systeem bepaalt Windows Setup standaard de beste stationsletter die moet worden gebruikt (meestal C:).
 
-*Vorig gedrag*: wanneer u een installatie kopie toepast, bepaalt de variabele OSDPreverveDriveLetter of de taken reeks de stationsletter gebruikt die is vastgelegd in het installatie kopie bestand (Wim). Stel de waarde voor deze variabele `false` in op het gebruik van de locatie die u opgeeft voor de **doel** instelling in de taken reeks stap **besturings systeem Toep assen** . Zie installatie kopie van het [besturings systeem Toep assen](task-sequence-steps.md#BKMK_ApplyOperatingSystemImage)voor meer informatie.
+*Vorig gedrag*: wanneer u een installatie kopie toepast, bepaalt de variabele OSDPreverveDriveLetter of de taken reeks de stationsletter gebruikt die is vastgelegd in het installatie kopie bestand (Wim). Stel de waarde voor deze variabele in op het `false` gebruik van de locatie die u opgeeft voor de **doel** instelling in de taken reeks stap **besturings systeem Toep assen** . Zie installatie kopie van het [besturings systeem Toep assen](task-sequence-steps.md#BKMK_ApplyOperatingSystemImage)voor meer informatie.
 
 
-## <a name="see-also"></a>Zie tevens
+## <a name="see-also"></a>Zie ook
 
 - [Stappen voor takenreeksen](task-sequence-steps.md)
 - [Taken reeks variabelen gebruiken](using-task-sequence-variables.md)

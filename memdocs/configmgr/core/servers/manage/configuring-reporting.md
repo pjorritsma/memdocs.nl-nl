@@ -10,12 +10,12 @@ ms.assetid: 55ae86a7-f0ab-4c09-b4da-89cd0e7fa0e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4ba67fee260867494302e49b7c9d3a97480e236b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1b7ada6f54a7642817a321937a4d7128994d5538
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723759"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83823976"
 ---
 # <a name="configure-reporting-in-configuration-manager"></a>Rapportage in Configuration Manager configureren
 
@@ -70,7 +70,7 @@ Gebruik de volgende procedure om te controleren of SQL Server Reporting Services
 
 3. Open de **sleutel reportbuilderapplicationmanifestname** -sleutel om de waardegegevens te bewerken.  
 
-4. Wijzig de waarde in `ReportBuilder_3_0_0_0.application`en selecteer **OK** om op te slaan.
+4. Wijzig de waarde in `ReportBuilder_3_0_0_0.application` en selecteer **OK** om op te slaan.
 
 5. Sluit de Register-editor van Windows.  
 
@@ -114,7 +114,7 @@ Zie [site systeem rollen installeren](../deploy/configure/install-site-system-ro
 
 1. Configureer op de pagina **Reporting Services-punt** de volgende instellingen:  
 
-    - **Naam site database server**: Geef de naam op van de server die als host fungeert voor de Configuration Manager-site database. De wizard haalt doorgaans de Fully Qualified Domain Name (FQDN) voor de server op. Als u een Data Base-exemplaar wilt opgeven &lt;, gebruikt u de indeling *Server naam*>\&lt; *exemplaar naam*>. Bijvoorbeeld `sqlserver\named1`.
+    - **Naam site database server**: Geef de naam op van de server die als host fungeert voor de Configuration Manager-site database. De wizard haalt doorgaans de Fully Qualified Domain Name (FQDN) voor de server op. Als u een Data Base-exemplaar wilt opgeven, gebruikt u de indeling &lt; *Server naam* > \& lt;* exemplaar naam*>. Bijvoorbeeld `sqlserver\named1`.
 
     - **Database naam**: Geef de naam op van de Configuration Manager-site database. Selecteer **verifiëren** om te bevestigen dat de wizard toegang heeft tot de site database.  
 
@@ -130,7 +130,7 @@ Zie [site systeem rollen installeren](../deploy/configure/install-site-system-ro
 
     - **Account van Reporting Services-punt**: Selecteer **instellen**en selecteer vervolgens een account om te gebruiken. SQL Server Reporting Services op het Reporting Services-punt gebruikt dit account om verbinding te maken met de Configuration Manager-site database. Deze verbinding is om de gegevens voor een rapport op te halen. Selecteer **bestaand account** om een Windows-gebruikers account op te geven dat u eerder hebt geconfigureerd als een Configuration Manager-account. Selecteer **Nieuw account** om een Windows-gebruikers account op te geven dat momenteel niet is geconfigureerd voor gebruik. Configuration Manager verleent de opgegeven gebruiker automatisch toegang tot de site database.  
 
-        Het account waarmee Reporting Services wordt uitgevoerd, moet behoren tot de lokale beveiligings groep van het domein **Windows-autorisatie toegangs groep**. Ook moet de machtiging voor het **lezen van tokenGroupsGlobalAndUniversal** zijn ingesteld op **toestaan**. Gebruikers in een ander domein dan het Reporting Services-punt account hebben een twee richtings vertrouwensrelatie nodig tussen de domeinen om rapporten uit te voeren.
+        Het account waarmee Reporting Services wordt uitgevoerd, moet behoren tot de lokale beveiligings groep van het domein **Windows-autorisatie toegangs groep**. Hiermee verleent het account **Lees** machtigingen voor alle gebruikers objecten binnen het domein toe aan het **tokenGroupsGlobalAndUniversal** -kenmerk. Gebruikers in een ander domein dan het Reporting Services-punt account hebben een twee richtings vertrouwensrelatie nodig tussen de domeinen om rapporten uit te voeren.
 
         Het opgegeven Windows-gebruikersaccount en wachtwoord zijn versleuteld en opgeslagen in de Reporting Services-database. Reporting Services haalt de gegevens op voor rapporten van de sitedatabase met dit account en wachtwoord.  
 
@@ -232,9 +232,9 @@ Controleer de installatie van het Reporting Services-punt door te kijken naar sp
 
 ### <a name="verify-installation-by-log-file"></a>Installatie controleren op logboek bestand
 
-Open het bestand **Srsrp. log** , dat zich bevindt in de map **Logs** van het Configuration Manager installatiepad. Zoek naar de teken `Installation was successful`reeks.
+Open het bestand **Srsrp. log** , dat zich bevindt in de map **Logs** van het Configuration Manager installatiepad. Zoek naar de teken reeks `Installation was successful` .
 
-Door lopen dit logboek bestand vanaf het tijdstip waarop het Reporting Services-punt is geïnstalleerd. Controleer of de rapportmappen gemaakt zijn, of de rapporten geïmplementeerd zijn en of het beveiligingsbeleid op elke map bevestigd is. Zoek na de laatste regel van beveiligings beleids bevestigingen naar de teken `Successfully checked that the SRS web service is healthy on server`reeks.  
+Door lopen dit logboek bestand vanaf het tijdstip waarop het Reporting Services-punt is geïnstalleerd. Controleer of de rapportmappen gemaakt zijn, of de rapporten geïmplementeerd zijn en of het beveiligingsbeleid op elke map bevestigd is. Zoek na de laatste regel van beveiligings beleids bevestigingen naar de teken reeks `Successfully checked that the SRS web service is healthy on server` .  
 
 ## <a name="configure-a-certificate-to-author-reports"></a>Een certificaat voor het ontwerpen van rapporten configureren
 

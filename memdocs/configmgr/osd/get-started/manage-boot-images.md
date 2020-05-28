@@ -10,12 +10,12 @@ ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1166d4c674207ed3590901465ca90a98ce3ae78f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 4403c8d0c57fba8fb63e3df729fb8a48ff123362
+ms.sourcegitcommit: d8dc05476ecd5db7ecb36dc649b566b349ba263d
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075061"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83732870"
 ---
 # <a name="manage-boot-images-with-configuration-manager"></a>Opstart installatie kopieën beheren met Configuration Manager
 
@@ -25,7 +25,7 @@ Een opstart installatie kopie in Configuration Manager is een [Windows PE](https
 
 ## <a name="default-boot-images"></a><a name="BKMK_BootImageDefault"></a>Standaard installatie kopieën
 
-Configuration Manager biedt twee standaard opstart installatie kopieën: één ter ondersteuning van x86-platformen en één ter ondersteuning van x64-platformen. Deze installatie kopieën worden opgeslagen in de *x64* -of *i386* -mappen in de volgende share op de `\\<SiteServerName>\SMS_<sitecode>\osd\boot\`site server:. De standaard installatie kopieën worden bijgewerkt of opnieuw gegenereerd, afhankelijk van de actie die u uitvoert.
+Configuration Manager biedt twee standaard opstart installatie kopieën: één ter ondersteuning van x86-platformen en één ter ondersteuning van x64-platformen. Deze installatie kopieën worden opgeslagen in de *x64* -of *i386* -mappen in de volgende share op de site server: `\\<SiteServerName>\SMS_<sitecode>\osd\boot\` . De standaard installatie kopieën worden bijgewerkt of opnieuw gegenereerd, afhankelijk van de actie die u uitvoert.
 
 Houd rekening met het volgende gedrag voor elk van de acties die worden beschreven voor standaard installatie kopieën:
 
@@ -40,7 +40,7 @@ Houd rekening met het volgende gedrag voor elk van de acties die worden beschrev
 - Als u niet wilt dat uw aangepaste/standaard installatie kopieën automatisch worden bijgewerkt, slaat u ze niet op in de standaard locatie.  
 
 > [!NOTE]
-> Het hulp programma Configuration Manager logboek (**CMTrace**) wordt toegevoegd aan alle opstart installatie kopieën in de **software bibliotheek**. Wanneer u Windows PE gebruikt, start u het hulp programma door `cmtrace` te typen vanaf de opdracht prompt.
+> Het hulp programma Configuration Manager logboek (**CMTrace**) wordt toegevoegd aan alle opstart installatie kopieën in de **software bibliotheek**. Wanneer u Windows PE gebruikt, start u het hulp programma door te typen `cmtrace` vanaf de opdracht prompt.
 >
 > CMTrace is de standaard viewer voor logboek bestanden in Windows PE.
 
@@ -188,7 +188,7 @@ Selecteer op het tabblad **Aanpassen** één van de volgende instellingen:
 - Selecteer de optie voor het **inschakelen van prestart-opdrachten** om een opdracht op te geven die moet worden uitgevoerd voordat de taken reeks wordt uitgevoerd. Wanneer u deze optie inschakelt, geeft u ook de opdracht regel op die moet worden uitgevoerd en de ondersteunings bestanden die vereist zijn voor de opdracht.  
 
     > [!WARNING]  
-    > Toevoegen `cmd /c` aan het begin van de opdracht regel. Als u niet opgeeft `cmd /c`, wordt de opdracht niet afgesloten nadat deze is uitgevoerd. De implementatie blijft wachten tot de opdracht is voltooid en er worden geen andere geconfigureerde opdrachten of acties gestart.  
+    > Toevoegen `cmd /c` aan het begin van de opdracht regel. Als u niet opgeeft `cmd /c` , wordt de opdracht niet afgesloten nadat deze is uitgevoerd. De implementatie blijft wachten tot de opdracht is voltooid en er worden geen andere geconfigureerde opdrachten of acties gestart.  
 
     > [!TIP]  
     > Tijdens het maken van de taken reeks media schrijft de wizard de pakket-ID en prestart-opdracht regel naar het bestand **CreateTSMedia. log** . Deze informatie bevat de waarde voor alle taken reeks variabelen. Dit logboek bevindt zich op de computer waarop de Configuration Manager-console wordt uitgevoerd. Bekijk dit logboek bestand om de waarden voor de taken reeks variabelen te controleren.  
@@ -201,13 +201,8 @@ Selecteer op het tabblad **Aanpassen** één van de volgende instellingen:
 
 - **Standaard toetsenbord indeling instellen in WinPE**: <!--4910348-->Configureer vanaf versie 1910 de standaardtoetsen bord indeling voor een opstart installatie kopie. Als u een andere taal dan en-US selecteert, bevat Configuration Manager nog steeds en-us in de beschik bare land instellingen voor invoer. Op het apparaat is de oorspronkelijke toetsenbord indeling de geselecteerde land instelling, maar de gebruiker kan het apparaat overschakelen naar en-US als dat nodig is.
 
-    > [!Tip]
-    > De Power shell [-cmdlet Set-CMBootImage](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) bevat nu een nieuwe `-InputLocale`para meter. Bijvoorbeeld:
-    >
-    > ```PowerShell
-    > # Set boot image keyboard layout to Russian (Russia)
-    > Set-CMBootimage -Id "CM100004" -InputLocale "ru-ru"`
-    > ```
+> [!Tip]
+> Gebruik de Power shell [-cmdlet Set-CMBootImage](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) om deze instellingen te configureren van een script.
 
 #### <a name="optional-components"></a>Optionele onderdelen
 

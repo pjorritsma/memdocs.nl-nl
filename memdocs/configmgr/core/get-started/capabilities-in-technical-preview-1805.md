@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 88234bb3117850bc3280242671ae459308a5262e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d8c1cd6610bd09b2714951d8a755770b6347b2f6
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714841"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905235"
 ---
 # <a name="capabilities-in-technical-preview-1805-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1805 voor Configuration Manager
 
@@ -163,8 +163,6 @@ Wanneer u deze werk belasting overschakelt, kunt u nog steeds instellingen van C
 <!--1358112-->
 
 Windows-lage extra vertraging achtergrond transport (LEDBAT) is een functie van Windows Server voor het beheren van achtergrond netwerk overdrachten. Voor distributie punten die worden uitgevoerd op ondersteunde versies van Windows Server, kunt u een optie inschakelen om netwerk verkeer aan te passen. Clients gebruiken alleen netwerk bandbreedte wanneer dit beschikbaar is. 
-
-Voor meer informatie over Windows LEDBAT raadpleegt u het nieuwe blog bericht over [Trans Port](https://blogs.technet.microsoft.com/networking/2016/07/18/announcing-new-transport-advancements-in-the-anniversary-update-for-windows-10-and-windows-server-2016/) -voor schotten.
 
 
 ### <a name="prerequisites"></a>Vereisten
@@ -350,7 +348,7 @@ Zie [System Center updates Publisher](../../sum/tools/updates-publisher.md)voor 
 - Als WSUS zich op een afzonderlijke server van het software-update punt bevindt, moet u een van de volgende opties op de externe WSUS-server uitvoeren:
     - De Remote Registry-service in Windows inschakelen  
     of
-    - Maak in de register `HKLM\Software\Microsoft\Update Services\Server\Setup`sleutel een nieuwe DWORD met de naam **EnableSelfSignedCertificates** met een waarde `1`van. 
+    - Maak in de register sleutel `HKLM\Software\Microsoft\Update Services\Server\Setup` een nieuwe DWORD met de naam **EnableSelfSignedCertificates** met een waarde van `1` . 
 
 ### <a name="try-it-out"></a>Probeer het nu!
 Probeer de taken uit te voeren. Stuur vervolgens [feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) en laat ons weten hoe het heeft gewerkt.
@@ -390,7 +388,7 @@ De standaard taken reeks sjabloon voor Windows 10 in-place upgrade bevat nu een 
 ## <a name="cmtrace-installed-with-client"></a>CMTrace geïnstalleerd met client
 <!--1357971-->
 
-Het CMTrace-hulp programma voor logboek weergave wordt nu samen met de Configuration Manager-client automatisch geïnstalleerd. Deze wordt toegevoegd aan de installatiemap van de client. Dit is `%WinDir%\ccm\cmtrace.exe`standaard.
+Het CMTrace-hulp programma voor logboek weergave wordt nu samen met de Configuration Manager-client automatisch geïnstalleerd. Deze wordt toegevoegd aan de installatiemap van de client. Dit is standaard `%WinDir%\ccm\cmtrace.exe` .
 
 > [!Note]  
 > CMTrace wordt *niet* automatisch bij Windows geregistreerd om de bestands extensie. log te openen.
@@ -414,10 +412,10 @@ Deze release bevat de volgende verbeteringen voor het nieuwe [feedback](capabili
 
 - In het dialoog venster feedback worden nu de vorige instellingen, zoals de geselecteerde opties en uw e-mail adres, opnieuw toegewezen.  
 
-- Offline feedback wordt nu ondersteund. Sla uw feedback op in de-console en upload deze naar micro soft vanaf een systeem met Internet verbinding. Gebruik het nieuwe Uploader-hulp programma voor offline `cd.latest\SMSSETUP\Tools\UploadOfflineFeedback\UploadOfflineFeedback.exe`feedback dat zich bevindt in. Als u de beschik bare en vereiste opdracht regel opties wilt zien, voert u `--help` het hulp programma uit met de optie. Het verbonden systeem moet toegang hebben tot **petrol.Office.Microsoft.com**.
+- Offline feedback wordt nu ondersteund. Sla uw feedback op in de-console en upload deze naar micro soft vanaf een systeem met Internet verbinding. Gebruik het nieuwe Uploader-hulp programma voor offline feedback dat zich bevindt in `cd.latest\SMSSETUP\Tools\UploadOfflineFeedback\UploadOfflineFeedback.exe` . Als u de beschik bare en vereiste opdracht regel opties wilt zien, voert u het hulp programma uit met de `--help` optie. Het verbonden systeem moet toegang hebben tot **petrol.Office.Microsoft.com**.
 
 ### <a name="known-issues"></a>Bekende problemen
-Wanneer u **een glim lach verzenden** gebruikt of **een frons verzendt** vanaf de-console op een computer met een Internet verbinding, kan het volgende bericht worden weer gegeven: ' fout bij het verzenden van feedback '. Als u op **meer details**klikt, wordt de volgende tekst weer gegeven `{"Message":""}`:. Deze fout wordt veroorzaakt door een bekend probleem met de reactie van het back-end-feedback systeem. U kunt de fout negeren. Micro soft heeft uw feedback nog ontvangen. (Als in de details een ander bericht wordt weer gegeven, gebruikt u de optie offline feedback om uw feedback op een later tijdstip opnieuw te verzenden.)
+Wanneer u **een glim lach verzenden** gebruikt of **een frons verzendt** vanaf de-console op een computer met een Internet verbinding, kan het volgende bericht worden weer gegeven: ' fout bij het verzenden van feedback '. Als u op **meer details**klikt, wordt de volgende tekst weer gegeven: `{"Message":""}` . Deze fout wordt veroorzaakt door een bekend probleem met de reactie van het back-end-feedback systeem. U kunt de fout negeren. Micro soft heeft uw feedback nog ontvangen. (Als in de details een ander bericht wordt weer gegeven, gebruikt u de optie offline feedback om uw feedback op een later tijdstip opnieuw te verzenden.)
 
 
 

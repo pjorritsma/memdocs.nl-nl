@@ -2,7 +2,7 @@
 title: Beheerinzichten
 titleSuffix: Configuration Manager
 description: Meer informatie over de Management Insights-functionaliteit die beschikbaar is in de Configuration Manager-console.
-ms.date: 04/01/2020
+ms.date: 05/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a79f83be-884c-48e6-94d6-ed0a68c22e2f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e9aae1da48deabd0cc339cd25055827caf07354b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 69b2533dd5c86124a6aff9feac7306ecf16c6e5a
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713735"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268960"
 ---
 # <a name="management-insights-in-configuration-manager"></a>Beheer inzichten in Configuration Manager
 
@@ -146,13 +146,13 @@ Vanaf versie 1902 zijn er nieuwe regels met aanbevelingen voor het beheren van v
 
 - **Verzamelingen met dezelfde begin tijd voor opnieuw evalueren**: deze verzamelingen hebben dezelfde herevaluatietijd als andere verzamelingen. Wijzig de tijd van de nieuwe evaluatie zodat deze geen conflict veroorzaakt.  
 
-- **Verzamelingen met een query tijd van meer dan twee seconden**: Controleer de query regels voor deze verzameling. Overweeg om de verzameling te wijzigen of te verwijderen.
+- **Verzamelingen met een query tijd van meer dan vijf minuten**: Controleer de query regels voor deze verzameling. Overweeg om de verzameling te wijzigen of te verwijderen.
 
 - De volgende regels bevatten configuraties die mogelijk onnodig belasting op de site veroorzaken. Bekijk deze verzamelingen en verwijder deze of schakel de regel evaluatie uit:  
 
   - **Verzamelingen zonder query regels en incrementele updates ingeschakeld**  
 
-  - **Verzamelingen zonder query regels en ingeschakeld voor geplande of incrementele evaluatie**  
+  - **Verzamelingen zonder query regels en zijn ingeschakeld voor elk schema**  
 
   - **Verzamelingen zonder query regels en volledige evaluatie plannen geselecteerd**  
 

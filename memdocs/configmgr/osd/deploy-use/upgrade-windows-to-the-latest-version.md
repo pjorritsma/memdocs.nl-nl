@@ -10,12 +10,12 @@ ms.assetid: c21eec87-ad1c-4465-8e45-5feb60b92707
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d604095ec3097581289a05cd306b865dbd7da99a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8bfb45ba835851c33d6017f7f0a884bd2c1e9421
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720007"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429327"
 ---
 # <a name="upgrade-windows-to-the-latest-version-with-configuration-manager"></a>Windows upgraden naar de nieuwste versie met Configuration Manager
 
@@ -85,7 +85,7 @@ De volgende taken zijn niet compatibel met de in-place upgrade. Hiervoor moet u 
 
   - Schijf partities wijzigen
   - De systeem architectuur van x86 naar x64 wijzigen
-  - UEFI implementeren. (Zie voor meer informatie over een mogelijke optie [converteren van BIOS naar UEFI tijdens een in-place upgrade](task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade).)
+  - UEFI implementeren. (Zie voor meer informatie over een mogelijke optie [converteren van BIOS naar UEFI tijdens een in-place upgrade](task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu).)
   - De taal van het basis besturingssysteem wijzigen  
 
 - U hebt aangepaste vereisten, waaronder het gebruik van een aangepaste basis installatie kopie, het gebruik van schijf versleuteling van derden of het vereisen van WinPE offline bewerkingen.  

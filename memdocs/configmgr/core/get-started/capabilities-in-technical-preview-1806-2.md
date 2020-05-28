@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 426767b65e0fd770a9a41ce9463948007a524c41
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b7643c73d2e9dad00e926bdc3db905016c45860a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078750"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905220"
 ---
 # <a name="capabilities-in-technical-preview-18062-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1806,2 voor Configuration Manager
 
@@ -60,7 +60,7 @@ Als u uw site al hebt bijgewerkt, werkt automatische client upgrade en client pu
 Gebruik hetzelfde proces als u een nieuwe client installeert in uw Technical Preview versie 1806,2-site. 
 
 > [!Important]  
-> Gebruik niet de `/MP` opdracht regel parameter in dit scenario. Deze para meter heeft voor `/source` rang boven en zorgt ervoor dat ccmsetup client inhoud downloadt van het beheer punt of distributie punt.
+> Gebruik niet de `/MP` opdracht regel parameter in dit scenario. Deze para meter heeft voor rang boven `/source` en zorgt ervoor dat ccmsetup client inhoud downloadt van het beheer punt of distributie punt.
 > 
 > Opdracht regel eigenschappen, zoals SMSSITECODE of CCMLOGLEVEL, zijn OK voor gebruik, maar zijn niet nodig bij het upgraden van een bestaande client. 
 
@@ -147,7 +147,7 @@ Wanneer u een gefaseerde implementatie maakt en hand matig een fase configureert
 <!--1357427-->
 Configuration Manager ondersteunt nu de implementatie van nieuwe indelingen van Windows 10 app package (. msix) en app-bundel (. msixbundle). De nieuwste Preview-versies van [Windows Insider](https://insider.windows.com/) ondersteunen momenteel deze nieuwe indelingen.
 
-Ga voor een overzicht van MSIX naar [een](https://blogs.msdn.microsoft.com/sgern/2018/06/18/a-closer-look-at-msix/)meer informatie over MSIX.
+Ga voor een overzicht van MSIX naar [een](https://docs.microsoft.com/archive/blogs/sgern/a-closer-look-at-msix)meer informatie over MSIX.
 
 Zie voor meer informatie over het maken van een nieuwe MSIX-app [MSIX-ondersteuning geïntroduceerd in Insider Build 17682](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376).
 
@@ -159,7 +159,7 @@ Zie voor meer informatie over het maken van een nieuwe MSIX-app [MSIX-ondersteun
 Probeer de taken uit te voeren. Stuur vervolgens [feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) en laat ons weten hoe het heeft gewerkt.
 
 1. [Maak een toepassing](../../apps/deploy-use/create-applications.md)In de Configuration Manager-console. 
-2. Selecteer het installatie bestands **type** van de toepassing als **Windows-\*app-pakket \*(. appx \*,. appxbundle \*,. msix,. msixbundle)**.
+2. Selecteer het installatie bestands **type** van de toepassing als **Windows-app-pakket ( \* . appx, \* . appxbundle, \* . msix, \* . msixbundle)**.
 3. [Implementeer de toepassing](../../apps/deploy-use/deploy-applications.md) naar de client met de meest recente preview-versie van Windows Insider.
 
 
@@ -303,7 +303,7 @@ Aangepaste catalogussen verwijderen uit hetzelfde knoop punt van de-console. Sel
 
 
 ### <a name="known-issue"></a>Bekend probleem
-De Verwijder actie voor aangepaste catalogi wordt grijs weer gegeven, zodat u geen aangepaste catalogi kunt verwijderen uit de-console. Gebruik het hulp programma **WBEMTest** op de site server om dit probleem op te lossen. Query voor het exemplaar dat u wilt verwijderen met de naam of down load-URL, bijvoorbeeld `select * from SMS_ISVCatalog where DownloadURL="http://www.contoso.com/catalog.cab"`:. Selecteer in het venster query resultaten het object en klik op **verwijderen**.<!--518676-->  
+De Verwijder actie voor aangepaste catalogi wordt grijs weer gegeven, zodat u geen aangepaste catalogi kunt verwijderen uit de-console. Gebruik het hulp programma **WBEMTest** op de site server om dit probleem op te lossen. Query voor het exemplaar dat u wilt verwijderen met de naam of down load-URL, bijvoorbeeld: `select * from SMS_ISVCatalog where DownloadURL="http://www.contoso.com/catalog.cab"` . Selecteer in het venster query resultaten het object en klik op **verwijderen**.<!--518676-->  
 
 
 

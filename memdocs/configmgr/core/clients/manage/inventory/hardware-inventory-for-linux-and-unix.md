@@ -10,12 +10,12 @@ ms.assetid: 1026d616-2a20-4fb2-8604-d331763937f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1bdfb8c6d528c12581f05f86111a1a76d2259faa
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 84f4b822475111352c5dcf23f4868a1fa43ec3a7
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714421"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906275"
 ---
 # <a name="hardware-inventory-for-linux-and-unix-in-configuration-manager"></a>Hardware-inventaris voor Linux en UNIX in Configuration Manager
 
@@ -105,7 +105,7 @@ Acties voor hardware-inventaris worden ingevoerd in het logboekbestand van de cl
 ###  <a name="create-a-custom-hardware-inventory-provider-for-linux-and-unix-computers"></a><a name="BKMK_LinuxProvider"></a> Een aangepaste hardware-inventarisprovider maken voor Linux- en UNIX-computers.  
  Als u een aangepaste hardware-inventaris provider wilt maken voor de Configuration Manager-client voor Linux en UNIX, gebruikt u **Omi source-v. 1.0.6** en volgt u de instructies in de hand leiding aan de slag met Omi. Met dit proces maakt u een Managed Object Format-bestand waarmee u het schema van de nieuwe provider definieert. Later importeert u het MOF-bestand naar Configuration Manager om ondersteuning van de nieuwe aangepaste inventaris klasse in te scha kelen.  
 
- U kunt de OMI Source - v.1.0.6 en de introductiehandleiding voor OMI downloaden van de website [The Open Group](https://github.com/microsoft/omi/blob/master/README.md) . U vindt deze downloads op het tabblad **Documenten** op de volgende webpagina op de website OpenGroup.org: [Open Management Infrastructure (OMI)](https://go.microsoft.com/fwlink/p/?LinkId=286805).  
+ U kunt de OMI Source - v.1.0.6 en de introductiehandleiding voor OMI downloaden van de website [The Open Group](https://github.com/microsoft/omi/blob/master/README.md) . U vindt deze downloads op het tabblad **Documenten** op de volgende webpagina op de website OpenGroup.org: [Open Management Infrastructure (OMI)](https://collaboration.opengroup.org/omi/).  
 
 ###  <a name="configure-each-computer-that-runs-linux-or-unix-with-the-custom-hardware-inventory-provider"></a><a name="BKMK_AddProvidertoLinux"></a> Configureer elke computer met Linux of UNIX met de aangepaste hardware-inventarisprovider:  
  Nadat u een aangepaste inventarisprovider hebt gemaakt, moet u het providerbibliotheekbestand kopiëren naar en registreren op elke computer waarvan u de inventaris wilt verzamelen.  

@@ -82,10 +82,10 @@ Wanneer u **selectief wissen**kiest voor apps, worden de app-gegevens van het be
 
 Zie [informatie over het wissen van Bedrijfs gegevens uit door intune beheerde apps] (.. /.. /intune/apps/apps-selective-wipe.md.
 
-#### <a name="sync"></a>Sync
+#### <a name="sync"></a>Synchroniseren
 Met apparaatactie **Synchroniseren** wordt het geselecteerde apparaat direct ingecheckt bij Intune. Wanneer een apparaat wordt ingecheckt, ontvangt het direct alle in behandeling zijnde acties of beleids regels die u hieraan hebt toegewezen.
 
-Met deze functie kunt u het beleid dat u hebt toegewezen direct valideren en problemen oplossen, zonder te wachten op de volgende geplande check-in.
+Met deze functie kunt u toegewezen beleid meteen controleren en in het geval van problemen direct aanpassen, zonder dat u hoeft te wachten op de volgende geplande check-in.
 
 Zie [apparaten synchroniseren voor het meest recente beleid en acties voor intune](../../intune/remote-actions/device-sync.md)voor meer informatie.
 

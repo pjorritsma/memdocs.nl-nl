@@ -10,12 +10,12 @@ ms.assetid: 45a10878-ff48-4318-9c6d-c014b38a4039
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 09618acc1c0950c3eaae79cca59fcf71dc7ef61e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 66770ea14c3ae53bad8e6df61b54c7c5e2d2aaa0
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709570"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904562"
 ---
 # <a name="supported-configurations-for-configuration-manager"></a>Ondersteunde configuraties voor Configuration Manager
 
@@ -27,12 +27,12 @@ De informatie in deze en de volgende onderwerpen zijn essentieel om u te helpen 
 
 Wanneer een Configuration Manager-functie of-functionaliteit meer specifieke configuraties vereist, wordt deze informatie opgenomen in de specifieke documentatie van de functie en is aanvulling op de meer algemene configuratie details.  
 
- De producten en technologieën die in de volgende onderwerpen worden beschreven, worden ondersteund door Configuration Manager. Hun insluiting in deze inhoud impliceert echter geen uitbrei ding van de ondersteuning voor een product buiten de individuele ondersteunings levenscyclus van dat product. Producten die niet langer zijn dan hun levens cyclus, worden niet ondersteund voor gebruik met Configuration Manager, inclusief alle producten die onder het [Extended Security updates (ESU)-](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) programma vallen. Ga naar de website [Microsoft Support Lifecycle](https://go.microsoft.com/fwlink/p/?LinkId=208270) voor meer informatie over Microsoft Support-levenscycli. Zie [ondersteunde versies van besturings systemen voor clients en apparaten voor Configuration Manager](supported-operating-systems-for-clients-and-devices.md#bkmk_ESU)voor meer informatie over uitgebreide beveiligings Updates in Configuration Manager.
+ De producten en technologieën die in de volgende onderwerpen worden beschreven, worden ondersteund door Configuration Manager. Hun insluiting in deze inhoud impliceert echter geen uitbrei ding van de ondersteuning voor een product buiten de individuele ondersteunings levenscyclus van dat product. Producten die niet langer zijn dan hun levens cyclus, worden niet ondersteund voor gebruik met Configuration Manager, inclusief alle producten die onder het [Extended Security updates (ESU)-](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) programma vallen. Ga naar de website [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle) voor meer informatie over Microsoft Support-levenscycli. Zie [ondersteunde versies van besturings systemen voor clients en apparaten voor Configuration Manager](supported-operating-systems-for-clients-and-devices.md#bkmk_ESU)voor meer informatie over uitgebreide beveiligings Updates in Configuration Manager.
 
 > [!NOTE]  
->  Ga voor meer informatie over het micro soft Support Lifecycle-beleid naar de veelgestelde vragen over het Microsoft Ondersteuning Lifecycle-beleid met betrekking tot [Microsoft ondersteuning Lifecycle-beleid](https://go.microsoft.com/fwlink/p/?LinkId=31976).  
+>  Ga voor meer informatie over het micro soft Support Lifecycle-beleid naar de veelgestelde vragen over het Microsoft Ondersteuning Lifecycle-beleid met betrekking tot [Microsoft ondersteuning Lifecycle-beleid](https://support.microsoft.com/lifecycle).  
 
- Producten en product versies die niet worden vermeld in de volgende onderwerpen, worden bovendien niet ondersteund met Configuration Manager tenzij ze zijn aangekondigd op het [Enter prise Mobility and Security-Blog](https://blogs.technet.microsoft.com/enterprisemobility/).  Op dit moment wordt de inhoud van deze blog voorafgaat aan een update voor deze hoofd tekst van de documentatie.
+ Producten en product versies die niet worden vermeld in de volgende onderwerpen, worden bovendien niet ondersteund met Configuration Manager tenzij ze zijn aangekondigd op het [Enter prise Mobility and Security-Blog](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/bg-p/enterprisemobilityandsecurity).  Op dit moment wordt de inhoud van deze blog voorafgaat aan een update voor deze hoofd tekst van de documentatie.
 
 
 -  [Grootte en schaalgetallen](../../../core/plan-design/configs/size-and-scale-numbers.md)  

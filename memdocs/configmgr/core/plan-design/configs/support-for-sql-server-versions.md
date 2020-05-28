@@ -10,12 +10,12 @@ ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 24c3a72eacea6446fb82785a25b0318d8cad0471
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3c52008089a6d23d5c4efe44f0970bb186eb334a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711593"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904636"
 ---
 # <a name="supported-sql-server-versions-for-configuration-manager"></a>Ondersteunde SQL Server versies voor Configuration Manager
 
@@ -65,7 +65,7 @@ In een hiërarchie met meerdere sites kunnen verschillende sites verschillende v
 - De SQL Server versies die u gebruikt, blijven in de ondersteuning van micro soft.
 - SQL Server ondersteunt replicatie tussen de twee versies van SQL Server. Zie [SQL Server replicatie achterwaartse compatibiliteit](https://docs.microsoft.com/sql/relational-databases/replication/replication-backward-compatibility)voor meer informatie.
 
-Voor SQL Server 2016 en voorafgaand aan de ondersteuning voor elke SQL-versie en Service Pack wordt het [micro soft Lifecycle-beleid](https://aka.ms/sqllifecycle)gevolgd. Ondersteuning voor een specifiek SQL Server Service Pack bevat cumulatieve updates, tenzij ze achterwaartse compatibiliteit met de versie van het basis Service Pack verstoren. Vanaf SQL Server 2017 worden service packs niet vrijgegeven, omdat het een [modern service model](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server/)volgt. Het SQL Server-team raadt voortdurend, [proactieve installatie van cumulatieve updates](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/) aan zodra deze beschikbaar komen.
+Voor SQL Server 2016 en voorafgaand aan de ondersteuning voor elke SQL-versie en Service Pack wordt het [micro soft Lifecycle-beleid](https://aka.ms/sqllifecycle)gevolgd. Ondersteuning voor een specifiek SQL Server Service Pack bevat cumulatieve updates, tenzij ze achterwaartse compatibiliteit met de versie van het basis Service Pack verstoren. Vanaf SQL Server 2017 worden service packs niet vrijgegeven, omdat het een [modern service model](https://docs.microsoft.com/archive/blogs/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server)volgt. Het SQL Server-team raadt voortdurend, [proactieve installatie van cumulatieve updates](https://docs.microsoft.com/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism) aan zodra deze beschikbaar komen.
 
 Tenzij anders aangegeven, worden de volgende versies van SQL Server ondersteund met alle actieve versies van Configuration Manager. Als ondersteuning voor een nieuwe SQL Server-versie wordt toegevoegd, wordt de Configuration Manager versie die ondersteuning biedt, vermeld. Als de ondersteuning is afgeschaft, zoekt u naar details over betrokken versies van Configuration Manager.
 
@@ -109,7 +109,7 @@ SQL Server versie 2019 logboek registratie van de volgende fout:
 
 `Microsoft SQL Server reported SQL message 596, severity 21: [HY000][596][Microsoft][SQL Server Native Client 11.0][SQL Server]Cannot continue the execution because the session is in the kill state.`
 
-U ziet ook crash dumps (`.mdump` bestanden) van SQL in de logboekmap, die standaard is. `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log`
+U ziet ook crash dumps ( `.mdump` bestanden) van SQL in de logboekmap, die standaard is `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log` .
 
 ### <a name="sql-server-2017-standard-enterprise"></a>SQL Server 2017: Standard, Enter prise
 

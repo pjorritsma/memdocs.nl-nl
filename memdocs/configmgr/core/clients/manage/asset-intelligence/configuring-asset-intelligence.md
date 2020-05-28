@@ -10,12 +10,12 @@ ms.assetid: 08e0382d-de05-4a76-ba5c-7223173f7066
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 56a65a0a4e1dd9a96e5725ea8c68cc435947bb08
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1a5c89d3fdd82bfa654f806c6931bde2621e714b
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713952"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906612"
 ---
 # <a name="configure-asset-intelligence-in-configuration-manager"></a>Asset Intelligence configureren in Configuration Manager
 
@@ -39,7 +39,7 @@ Asset Intelligence voor raden en beheert het gebruik van software licenties.
 
 ##### <a name="to-enable-asset-intelligence-hardware-inventory-reporting-classes-from-the-asset-intelligence-home-page"></a>Asset Intelligence-rapportageklassen voor hardware-inventarisatie inschakelen via de startpagina Asset Intelligence  
 
-1.  Kies in de Configuration Manager-console de optie **activa en naleving** > **Asset Intelligence**.  
+1.  Kies in de Configuration Manager-console de optie **activa en naleving**  >  **Asset Intelligence**.  
 
 3.  Klik op het tabblad **Start** in de groep **Asset Intelligence** op **inventaris klassen bewerken**.   
 
@@ -51,13 +51,13 @@ Asset Intelligence voor raden en beheert het gebruik van software licenties.
 
 ##### <a name="to-enable-asset-intelligence-hardware-inventory-reporting-classes-from-client-settings-properties"></a>Asset Intelligence-rapportageklassen voor hardware-inventarisatie inschakelen via de eigenschappen voor clientinstellingen  
 
-1.  Kies in de Configuration Manager-console de instellingen van de**client agent standaard instellingen**voor de **beheer** >  **client** > . Als u aangepaste client instellingen hebt gemaakt, kunt u die in plaats daarvan selecteren.  
+1.  Kies in de Configuration Manager-console **Administration**de instellingen van de  >   **Client Settings**  >  **client agent standaard instellingen**voor de beheer client. Als u aangepaste client instellingen hebt gemaakt, kunt u die in plaats daarvan selecteren.  
 
 3.  Kies **Eigenschappen**in het tabblad **Start** > groep **Eigenschappen** .   
 
-4.  Kies **Hardware Inventory** > **set classes**. .  
+4.  Kies **Hardware Inventory**  >  **set classes**. .  
 
-5.  Kies **filteren op categorie** > **Asset Intelligence rapportage klassen**. De lijst met klassen wordt vernieuwd met alleen de Asset Intelligence-rapportageklassen voor hardware-inventarisatie.  
+5.  Kies **filteren op categorie**  >  **Asset Intelligence rapportage klassen**. De lijst met klassen wordt vernieuwd met alleen de Asset Intelligence-rapportageklassen voor hardware-inventarisatie.  
 
 6.  Selecteer ten minste één rapportage klasse in de lijst.  
 
@@ -73,7 +73,7 @@ Via het Asset Intelligence-synchronisatiepunt kunnen nieuwe Asset Intelligence-c
 
 ##### <a name="to-install-an-asset-intelligence-synchronization-point-site-system-role"></a>Een sitesysteemrol Asset Intelligence-synchronisatiepunt installeren  
 
-1.  Kies in de Configuration Manager-console **beheer**> **site configuratie** > **servers en site systeem rollen**.  
+1.  Kies in de Configuration Manager-console **beheer** >  **site configuratie**  >  **servers en site systeem rollen**.  
 
 3.  Voeg de site systeemrol Asset Intelligence synchronisatie punt toe aan een nieuwe of bestaande site systeem server:  
 
@@ -110,7 +110,7 @@ Via het Asset Intelligence-synchronisatiepunt kunnen nieuwe Asset Intelligence-c
 
 ##### <a name="to-enable-success-logon-event-logging-by-using-a-local-security-policy"></a>De registratie van geslaagde aanmeldingsgebeurtenissen inschakelen op basis van lokaal beveiligingsbeleid  
 
-1.  Kies op een Configuration Manager-client computer **Start** > **systeem beheer** > **lokale beveiligings beleid**.  
+1.  Kies op een Configuration Manager-client computer **Start**  >  **systeem beheer**  >  **lokale beveiligings beleid**.  
 
 2.  Vouw in het dialoog venster **lokaal beveiligings beleid** onder **beveiligings instellingen**het item **lokaal beleid**uit en kies vervolgens **controle beleid**.  
 
@@ -139,7 +139,7 @@ Via het Asset Intelligence-synchronisatiepunt kunnen nieuwe Asset Intelligence-c
 4.  Geef op de pagina **Importeren** op of u een MVLS-bestand (.xml of .csv) of een algemene licentieverklaring (.csv) wilt importeren. Zie [Create a general license statement information file for import](#BKMK_CreateGeneralLicenseStatement) verderop in dit onderwerp voor meer informatie over het maken van een bestand met een algemene licentieverklaring.  
 
     > [!WARNING]  
-    >  Ga naar het [Microsoft Volume Licensing Service Center](https://go.microsoft.com/fwlink/p/?LinkId=226547)als u een MVLS-bestand in de CSV-indeling wilt downloaden dat u kunt importeren in de Asset Intelligence-catalogus. U krijgt alleen toegang tot deze gegevens als u over een geregistreerd account op de website beschikt. Neem contact op met uw Microsoft-accountmedewerker voor informatie over het ontvangen van een MVLS-bestand in de XML-indeling.  
+    >  Ga naar het [Microsoft Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx)als u een MVLS-bestand in de CSV-indeling wilt downloaden dat u kunt importeren in de Asset Intelligence-catalogus. U krijgt alleen toegang tot deze gegevens als u over een geregistreerd account op de website beschikt. Neem contact op met uw Microsoft-accountmedewerker voor informatie over het ontvangen van een MVLS-bestand in de XML-indeling.  
 
 5.  Voer het UNC-pad naar het bestand met de licentie verklaring in of kies **Bladeren** om een gedeelde netwerkmap en een bestand te selecteren.  
 
@@ -213,7 +213,7 @@ In Asset Intelligence worden de door u opgegeven producten in de algemene licent
 
 ##### <a name="to-configure-asset-intelligence-maintenance-tasks"></a>Asset Intelligence-onderhoudstaken configureren  
 
-1.  Klik in de Configuration Manager-console op **beheer** > **site configuratie** > **sites**.  
+1.  Klik in de Configuration Manager-console op **beheer**  >  **site configuratie**  >  **sites**.  
 
 3.  Selecteer de site waarop de Asset Intelligence-onderhoudstaak moet worden geconfigureerd.  
 

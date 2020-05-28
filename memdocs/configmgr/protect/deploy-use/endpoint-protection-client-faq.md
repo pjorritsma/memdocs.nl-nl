@@ -10,12 +10,12 @@ ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8b89f2dd9f60b43db5c4ce8956f843429b47bc62
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3b206c1556c2e9550ade5c2322acd65ad2b19412
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724368"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906834"
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Veelgestelde vragen over Endpoint Protection-client
 
@@ -145,7 +145,7 @@ U kunt alle ongewenste of mogelijk schadelijke items die Windows Defender detect
 
 -   Zorg ervoor dat uw antivirus- en antispywaresoftware, Windows Defender, de meest recente updates gebruikt tegen mogelijke bedreigingen (zie Hoe houd ik virus-en spywaredefinities up-to-date?). Zorg er ook voor dat u altijd de meest recente versie van Windows Defender gebruikt.  
 
--   Download updates alleen van betrouwbare bronnen. Ga voor Windows-besturings systemen altijd naar [Microsoft Update](https://go.microsoft.com/fwlink/?LinkID=96304) (https://go.microsoft.com/fwlink/?LinkID=96304) en gebruik altijd de legitieme websites van het bedrijf of de persoon die de software produceert.  
+-   Download updates alleen van betrouwbare bronnen. Ga voor Windows-besturings systemen altijd naar de [catalogus Microsoft Update](https://catalog.update.microsoft.com).  Gebruik altijd de legitieme websites van het bedrijf of de persoon die de software produceert.
 
 -   Als u een e-mailbericht met een bijlage ontvangt en de bron niet vertrouwt, verwijdert u dit onmiddellijk. Down load geen toepassingen of bestanden van onbekende bronnen en wees voorzichtig wanneer u bestanden verhandelt met andere gebruikers.  
 

@@ -10,12 +10,12 @@ ms.assetid: b1970688-0cd2-404f-a17f-9e2aa4a78758
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: a23f6106a8c922b3ff4e8306fb76aec4fd26b148
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 216c61a671d7d06e434fa399bb3bae12e12f7275
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711607"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905168"
 ---
 # <a name="set-up-a-configuration-manager-lab"></a>Een Configuration Manager Lab instellen
 
@@ -31,9 +31,9 @@ Als u de instructies in dit onderwerp volgt, kunt u een Lab instellen voor het e
 
 -   **De test omgeving maakt gebruik van Windows Server 2012 R2**, waarin we Configuration Manager zullen installeren.  
 
-     U kunt een evaluatie versie van Windows Server 2012 R2 downloaden in het [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012).  
+     U kunt een evaluatie versie van Windows Server 2012 R2 downloaden van het [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012).  
 
-     Overweeg de verbeterde beveiliging van Internet Explorer te wijzigen of uit te scha kelen zodat u eenvoudiger toegang hebt tot bepaalde down loads waarnaar wordt verwezen tijdens het verloop van deze oefeningen. Controleer [Internet Explorer: verbeterde beveiliging](https://technet.microsoft.com/library/dd883248\(v=ws.10\).aspx) voor meer informatie.  
+     Overweeg de verbeterde beveiliging van Internet Explorer te wijzigen of uit te scha kelen zodat u eenvoudiger toegang hebt tot bepaalde down loads waarnaar wordt verwezen tijdens het verloop van deze oefeningen. Zie [Internet Explorer: verbeterde beveiliging](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10))voor meer informatie.  
 
 -   In **de test omgeving wordt SQL Server 2012 SP2 gebruikt** voor de site database.  
 
@@ -45,7 +45,7 @@ Als u de instructies in dit onderwerp volgt, kunt u een Lab instellen voor het e
 
     -   **SQL_Latin1_General_CP1_CI_AS** als de **SQL-sorterings** klasse.  
 
-    -   **Windows**-verificatie [in plaats van SQL-verificatie](https://technet.microsoft.com/library/ms144284.aspx)is vereist.  
+    -   **Windows**-verificatie [in plaats van SQL-verificatie](https://docs.microsoft.com/sql/relational-databases/security/choose-an-authentication-mode?view=sql-server-ver15)is vereist.  
 
     -   Een toegewezen **SQL Server-exemplaar** is vereist.  
 
@@ -61,11 +61,11 @@ Als u de instructies in dit onderwerp volgt, kunt u een Lab instellen voor het e
 
 -   **De domein controller maakt gebruik van Windows Server 2008 R2** met Active Directory Domain Services geïnstalleerd. De domein controller functioneert ook als host voor de DHCP-en de DNS-servers voor gebruik met een Fully Qualified Domain Name.  
 
-     Raadpleeg dit [overzicht van Active Directory Domain Services](https://technet.microsoft.com/library/hh831484)voor meer informatie.  
+     Zie [overzicht van Active Directory Domain Services](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831484(v=ws.11))voor meer informatie.  
 
 -   **Hyper-V wordt gebruikt met een aantal virtuele machines** om te controleren of de beheer stappen die in deze oefeningen zijn uitgevoerd, werken zoals verwacht. Er worden mini maal drie virtuele machines aanbevolen, waarop Windows 10 is geïnstalleerd.  
 
-     Raadpleeg dit [overzicht van Hyper-V](https://technet.microsoft.com/library/hh831531.aspx)voor meer informatie.  
+     Zie [overzicht van Hyper-V](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831531(v=ws.11))voor meer informatie.  
 
 -   Er zijn **beheerders machtigingen** vereist voor al deze onderdelen.  
 
@@ -95,7 +95,7 @@ Nadat u al deze onderdelen hebt geïnstalleerd, moet u extra stappen ondernemen 
 De volgende stappen die vereist zijn om Configuration Manager-clients in te scha kelen Active Directory Domain Services om site bronnen te vinden, worden weer gegeven in de volgende procedures.  
 
 ##  <a name="create-the-system-management-container"></a><a name="BKMK_CreateSysMgmtLab"></a> De container voor systeembeheer maken  
- Configuration Manager wordt niet automatisch de vereiste System Management-container in Active Directory Domain Services gemaakt wanneer het schema wordt uitgebreid. Daarom maakt u deze voor uw testomgeving. Voor deze stap moet u [ADSI Bewerken installeren](https://technet.microsoft.com/library/cc773354\(WS.10\).aspx#BKMK_InstallingADSIEdit).  
+ Configuration Manager wordt niet automatisch de vereiste System Management-container in Active Directory Domain Services gemaakt wanneer het schema wordt uitgebreid. Daarom maakt u deze voor uw testomgeving. Voor deze stap moet u [ADSI bewerken installeren](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10)).
 
  Zorg dat u bent aangemeld als een account waaraan de machtiging **Alle onderliggende objecten maken** is verleend voor de container **Systeem** in Active Directory Domain Services.  
 
@@ -103,7 +103,7 @@ De volgende stappen die vereist zijn om Configuration Manager-clients in te scha
 
 1.  Voer **ADSI Bewerken**uit en maak verbinding met het domein waaronder de siteserver zich bevindt.  
 
-2.  Vouw **domein&lt;computer Fully Qualified Domain name\>** uit, vouw **<DN\>-naam**uit, klik met de rechter muisknop op **CN = systeem**, klikt u op **Nieuw**en klik vervolgens op **object**.  
+2.  Vouw **domein &lt; computer Fully Qualified Domain name \> **uit, vouw **<DN \> -naam**uit, klik met de rechter muisknop op **CN = systeem**, klikt u op **Nieuw**en klik vervolgens op **object**.  
 
 3.  Selecteer, in het **Maak object** dialoogvenster, **Container**, en klik dan op **Volgende**.  
 
@@ -119,7 +119,7 @@ De volgende stappen die vereist zijn om Configuration Manager-clients in te scha
 
 #### <a name="to-set-security-permissions-for-the-system-management-container"></a>Beveiligingsrechten instellen voor de container voor systeembeheer:  
 
-1.  Vouw in het console venster het **domein van de site server**uit, vouw **DC&lt;= server Distinguished name\>** uit en vouw **CN = System**. Klik met de rechter muisknop op **CN = systeem beheer**en klik vervolgens op **Eigenschappen**.  
+1.  Vouw in het console venster het **domein van de site server**uit, vouw **DC = &lt; Server Distinguished name \> **uit en vouw **CN = System**. Klik met de rechter muisknop op **CN = systeem beheer**en klik vervolgens op **Eigenschappen**.  
 
 2.  Klik in het dialoogvenster **CN=Eigenschappen voor systeembeheer** op het tabblad **Beveiliging** en klik vervolgens op **Toevoegen** om het computeraccount van de siteserver toe te voegen. Verleen aan het account de machtigingen **Volledig beheer** .  
 
@@ -129,7 +129,7 @@ De volgende stappen die vereist zijn om Configuration Manager-clients in te scha
 
 5.  Klik op **OK** om de **ADSI Bewerken** -console te sluiten en de procedure te voltooien.  
 
-     Raadpleeg [het Active Directory-schema uitbreiden voor Configuration Manager](../../core/plan-design/network/extend-the-active-directory-schema.md) voor meer inzicht in deze procedure  
+     Zie voor meer informatie [het Active Directory schema voor Configuration Manager uitbreiden](../../core/plan-design/network/extend-the-active-directory-schema.md)  
 
 ##  <a name="extend-the-active-directory-schema-using-extadschexe"></a><a name="BKMK_ExtADSchLab"></a> Het Active Directory-schema met behulp van extadsch.exe uitbreiden  
  U gaat het Active Directory schema voor dit lab uitbreiden, zodat u alle Configuration Manager functies en functionaliteit kunt gebruiken met de minste administratieve overhead. Het uitbreiden van het Active Directory-schema is een configuratie voor het hele forest, die één keer per forest wordt uitgevoerd. Permanente uitbreiding van het schema wijzigt de set klassen en kenmerken in de basisconfiguratie van Active Directory. Deze actie kan niet ongedaan worden gemaakt. Als u het schema uitbreidt, hebben Configuration Manager toegang tot onderdelen waarmee het effectief kan worden gebruikt in uw test omgeving.  
@@ -139,7 +139,7 @@ De volgende stappen die vereist zijn om Configuration Manager-clients in te scha
 
 #### <a name="to-extend-the-active-directory-schema-using-extadschexe"></a>Het Active Directory-schema met behulp van extadsch.exe uitbreiden:  
 
-1.  Maak een back-up van de systeem status van de schema master-domein controller. Raadpleeg voor meer informatie over back-ups van de master-domeincontroller [Windows Server Backup](https://technet.microsoft.com/library/cc770757.aspx)  
+1.  Maak een back-up van de systeem status van de schema master-domein controller. Zie [Windows Server back-up](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770757(v=ws.11)) voor meer informatie over het maken van een back-up van de Master domein controller.  
 
 2.  Navigeer naar **\SMSSETUP\BIN\X64** op het installatiemedium.  
 
@@ -147,7 +147,7 @@ De volgende stappen die vereist zijn om Configuration Manager-clients in te scha
 
 4.  Controleer of de schema-uitbreiding is geslaagd door het **extadsch.log** te controleren dat zich in de hoofdmap van het systeemstation bevindt.  
 
-     Raadpleeg [het Active Directory-schema uitbreiden voor Configuration Manager](../../core/plan-design/network/extend-the-active-directory-schema.md)voor meer inzicht in deze procedure.  
+     Zie [het Active Directory schema voor Configuration Manager uitbreiden](../../core/plan-design/network/extend-the-active-directory-schema.md)voor meer informatie.  
 
 ##  <a name="other-required-tasks"></a><a name="BKMK_OtherTasksLab"></a> Andere vereiste taken  
  U moet ook de volgende taken vóór de installatie voltooien.  
@@ -158,7 +158,7 @@ De volgende stappen die vereist zijn om Configuration Manager-clients in te scha
 
  **.NET installeren en Windows Communication Foundation activeren**  
 
- U moet eerst twee .NET Frameworks installeren: eerst .NET 3.5.1 en vervolgens .NET 4.5.2+. U moet ook Windows Communication Foundation (WCF) activeren. WCF is ontworpen om een beheerbare benadering te bieden voor gedistribueerde computing, brede interoperabiliteit en rechtstreekse ondersteuning voor service-oriëntatie. WCF vereenvoudigt ook de ontwikkeling van verbonden toepassingen via een servicegericht programmeermodel. Lees [Wat is Windows Communication Foundation?](https://technet.microsoft.com/subscriptions/ms731082\(v=vs.90\).aspx) voor meer inzicht in WCF.  
+ U moet eerst twee .NET Frameworks installeren: eerst .NET 3.5.1 en vervolgens .NET 4.5.2+. U moet ook Windows Communication Foundation (WCF) activeren. WCF is ontworpen om een beheerbare benadering te bieden voor gedistribueerde computing, brede interoperabiliteit en rechtstreekse ondersteuning voor service-oriëntatie. WCF vereenvoudigt ook de ontwikkeling van verbonden toepassingen via een servicegericht programmeermodel. Zie [Wat Is Windows Communication Foundation?](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms731082(v=vs.90))voor meer informatie.
 
 #### <a name="to-install-net-and-activate-windows-communication-foundation"></a>.NET installeren en Windows Communication Foundation activeren:  
 
@@ -198,27 +198,15 @@ De volgende stappen die vereist zijn om Configuration Manager-clients in te scha
 
 10. Nadat de basisinstallatie van .NET is voltooid, gaat u naar het [Microsoft Downloadcentrum](https://www.microsoft.com/download/details.aspx?id=42643) om het webinstallatieprogramma voor .NET Framework 4.5.2 op te halen. Klik op de knop **Downloaden** en kies vervolgens **Uitvoeren** voor het installatieprogramma. De vereiste onderdelen worden automatisch gedetecteerd en in de geselecteerde taal geïnstalleerd.  
 
-Bekijk de volgende artikelen voor aanvullende informatie over de reden dat deze .NET Frameworks vereist zijn:  
-
--   [Versies en afhankelijkheden van .NET Framework](https://technet.microsoft.com/library/bb822049.aspx)  
-
--   [Overzicht toepassingscompatibiliteit .NET framework 4 RTM](https://technet.microsoft.com/library/dd889541.aspx)  
-
--   [Procedure: Een ASP.NET-webtoepassing upgraden naar ASP.NET 4](https://technet.microsoft.com/library/dd483478\(VS.100\).aspx)  
-
--   [Veelgestelde vragen levenscyclusbeleid Microsoft .NET Framework-ondersteuning](https://support.microsoft.com/en-us/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update)  
-
--   [CLR inside out-in-process side-by-side](https://msdn.microsoft.com/magazine/ee819091.aspx)  
-
 **BITS, IIS en RDC inschakelen**  
 
-[Background Intelligent Transfer Service (BITS)](https://technet.microsoft.com/library/dn282296.aspx) wordt gebruikt voor toepassingen die asynchroon bestanden moeten overbrengen tussen een client en een server. Door de stroom van de overdrachten op de voor- en achtergrond te reguleren, houdt BITS het reactievermogen van andere netwerktoepassingen intact. Ook worden automatisch bestandsoverdrachten hervat als een overdrachtssessie wordt onderbroken.  
+[Background Intelligent Transfer Service (BITS)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn282296(v=ws.11)) wordt gebruikt voor toepassingen die asynchroon bestanden moeten overbrengen tussen een client en een server. Door de stroom van de overdrachten op de voor- en achtergrond te reguleren, houdt BITS het reactievermogen van andere netwerktoepassingen intact. Ook worden automatisch bestandsoverdrachten hervat als een overdrachtssessie wordt onderbroken.  
 
 U installeert BITS voor deze testomgeving, omdat deze siteserver ook wordt gebruikt als beheerpunt.  
 
 Internet Information Services (IIS) is een flexibele, schaalbare webserver die kan worden gebruikt voor het hosten van alles op het web. Deze wordt door Configuration Manager gebruikt voor een aantal site systeem rollen. Raadpleeg [websites voor site systeem servers](../../core/plan-design/network/websites-for-site-system-servers.md)voor meer informatie over IIS.  
 
-[Externe differentiële compressie (RDC)](https://technet.microsoft.com/library/cc754372.aspx) is een reeks API's dat toepassingen kunnen gebruiken om te bepalen of eventuele wijzigingen zijn aangebracht in een set bestanden. Via RDC kan de toepassing alleen de gewijzigde gedeelten van een bestand repliceren, waardoor netwerkverkeer tot een minimum wordt beperkt.  
+[Externe differentiële compressie (RDC)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754372(v=ws.11)) is een reeks API's dat toepassingen kunnen gebruiken om te bepalen of eventuele wijzigingen zijn aangebracht in een set bestanden. Via RDC kan de toepassing alleen de gewijzigde gedeelten van een bestand repliceren, waardoor netwerkverkeer tot een minimum wordt beperkt.  
 
 #### <a name="to-enable-bits-iis-and-rdc-site-server-roles"></a>De siteserverrollen BITS, IIS en RDC inschakelen:  
 
@@ -266,7 +254,7 @@ Internet Information Services (IIS) is een flexibele, schaalbare webserver die k
 
         -   **Aanvraagfiltering**  
 
-        -   **Basisverificatie**  
+        -   **Basis verificatie**  
 
         -   **Verificatie van client certificaat toewijzing**  
 
@@ -298,7 +286,7 @@ Internet Information Services (IIS) is een flexibele, schaalbare webserver die k
 
         -   **FTP-service**  
 
-    -   **Beheerhulpprogramma's**  
+    -   **Beheerprogramma's**  
 
         -   **IIS-beheerconsole**  
 
@@ -330,7 +318,7 @@ Internet Information Services (IIS) is een flexibele, schaalbare webserver die k
 
 7.  Klik op **Installeren** en controleer of de installatie is gelukt aan de hand van het deelvenster **Meldingen** van **Serverbeheer**.  
 
-IIS blokkeert standaard de toegang tot verschillende bestandsextensies en locaties voor HTTP- of HTTPS-communicatie. U moet aanvraagfiltering voor IIS op het distributiepunt configureren zodat deze bestanden kunnen worden gedistribueerd naar clientsystemen. Zie [IIS Request Filtering for distribution points](../../core/plan-design/network/prepare-windows-servers.md#BKMK_IISFiltering)voor meer informatie.  
+IIS blokkeert standaard de toegang tot verschillende bestandsextensies en locaties voor HTTP- of HTTPS-communicatie. U moet aanvraagfiltering voor IIS op het distributiepunt configureren zodat deze bestanden kunnen worden gedistribueerd naar clientsystemen. Zie [IIS-aanvraag filtering voor distributie punten](../../core/plan-design/network/prepare-windows-servers.md#BKMK_IISFiltering)voor meer informatie.  
 
 #### <a name="to-configure-iis-filtering-on-distribution-points"></a>IIS-filtering configureren voor distributiepunten:  
 

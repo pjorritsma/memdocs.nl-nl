@@ -10,12 +10,12 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a1355b6d670e94d985717dfb32386f579cba42a0
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: cb91e62c4ffce37068b2de5e125865e28ff8c53b
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078665"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83878959"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Basis concepten voor inhouds beheer in Configuration Manager
 
@@ -103,12 +103,12 @@ De volgende lijsten geven een overzicht van de verschillen tussen *binary Differ
 Configuration Manager ondersteunt diverse opties voor het beheren van inhoud tussen peer apparaten op hetzelfde netwerk:
 
 - [BranchCache](#branchcache)
-- [Delivery optimization](#delivery-optimization)
+- [Leverings optimalisatie](#delivery-optimization)
 - [Peer-cache Configuration Manager](#peer-cache)
 
 Gebruik de volgende tabel om de belangrijkste functies van deze technologieën te vergelijken:
 
-| Functie  | Peer&nbsp;-cache  | Leverings&nbsp;optimalisatie  | BranchCache  |
+| Functie  | Peer- &nbsp; cache  | Leverings &nbsp; optimalisatie  | BranchCache  |
 |---------|---------|---------|---------|
 | Over subnetten | Ja | Ja | Nee |
 | Bandbreedte beperken | Ja (BITS) | Ja (systeem eigen) | Ja (BITS) |
@@ -116,7 +116,7 @@ Gebruik de volgende tabel om de belangrijkste functies van deze technologieën t
 | Grootte van beheer cache op schijf | Ja | Ja | Ja |
 | Detectie van peer-bronnen | Hand matig (client instelling) | Automatisch | Automatisch |
 | Peer-detectie | Via beheer punt met behulp van grens groepen | Cloud service uitvoeren | Uitzenden |
-| Rapporten | Dash board client gegevens bronnen | Dash board client gegevens bronnen | Dash board client gegevens bronnen |
+| Rapportage | Dash board client gegevens bronnen | Dash board client gegevens bronnen | Dash board client gegevens bronnen |
 | Besturings element voor WAN-gebruik | Grensgroepen | GroupID | Alleen subnet |
 | Ondersteunde inhoud | Alle ConfigMgr-inhoud | Windows-updates, stuur Programma's, Store-apps | Alle ConfigMgr-inhoud |
 | Beleidsbeheer | Instellingen voor client agent | Instellingen van client agent (gedeeltelijk) | Instellingen voor client agent |
@@ -156,7 +156,7 @@ Delivery Optimization is de aanbevolen technologie voor het optimaliseren van Wi
 Vanaf versie 1906 kunt u een micro soft Connected cache-server op uw distributie punten installeren. Door deze inhoud on-premises in de cache te plaatsen, kunnen uw clients profiteren van de functie voor Delivery Optimization, maar kunt u WAN-koppelingen helpen beveiligen.
 
 > [!NOTE]
-> Vanaf versie 1910 wordt deze functie nu **micro soft Connected cache**genoemd. Voorheen bekend als Delivery Optimization in-Network cache (DOINC).
+> Vanaf versie 1910 wordt deze functie nu **micro soft Connected cache**genoemd. Het was voorheen bekend als Delivery Optimization in-Network cache.
 
 Deze cache server fungeert als transparante cache op aanvraag voor inhoud die wordt gedownload door Delivery Optimization. Gebruik client instellingen om te controleren of deze server alleen wordt aangeboden aan de leden van de lokale Configuration Manager grens groep.
 

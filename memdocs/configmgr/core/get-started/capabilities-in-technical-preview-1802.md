@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 50e05d07ec3e2612c170157c45f5e64abe3766de
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 94208da3eda33cba69f04bbbf42edd08b585c1c4
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718607"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428196"
 ---
 # <a name="capabilities-in-technical-preview-1802-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1802 voor Configuration Manager
 
@@ -36,7 +36,7 @@ Bekijk de [technische preview voor Configuration Manager](technical-preview.md) 
 - **Bijwerken naar een nieuwe preview-versie mislukt wanneer u een site server in de passieve modus hebt**. Als u een [primaire site server in de passieve modus](capabilities-in-technical-preview-1706.md#site-server-role-high-availability)hebt, moet u de site server van de passieve modus verwijderen voordat u de nieuwe preview-versie bijwerkt. U kunt de site server van de passieve modus opnieuw installeren nadat de update door de site is voltooid.
 
   De site server van de passieve modus verwijderen:
-  1. Ga in de Configuration Manager-console naar **beheer** > **overzicht** > **site configuratie** > **servers en site systeem rollen**en selecteer vervolgens de site server passieve modus.
+  1. Ga in de Configuration Manager-console naar **beheer**  >  **overzicht**  >  **site configuratie**  >  **servers en site systeem rollen**en selecteer vervolgens de site server passieve modus.
   2. Klik in het deel venster **site systeem rollen** met de rechter muisknop op de **site** serverrol en kies vervolgens **rol verwijderen**.
   3. Klik met de rechter muisknop op de site server in de passieve modus en kies **verwijderen**.
   4. Nadat de installatie van de site server ongedaan is gemaakt, start u de service **CONFIGURATION_MANAGER_UPDATE**opnieuw op de actieve primaire site server.
@@ -56,7 +56,7 @@ In deze release kunt u de Endpoint Protection workload nu overzetten van Configu
  
 ## <a name="configure-windows-delivery-optimization-to-use-configuration-manager-boundary-groups"></a>Windows Delivery Optimization configureren om Configuration Manager grens groepen te gebruiken
 <!-- 1324696 -->
-U gebruikt Configuration Manager grens groepen om de distributie van inhoud in uw bedrijfs netwerk en externe kant oren te definiëren en te reguleren. [Windows Delivery Optimization](/windows/deployment/update/waas-delivery-optimization) is een op de cloud gebaseerde peer-to-peer-technologie voor het delen van inhoud tussen Windows 10-apparaten. Vanaf deze release configureert u Delivery Optimization om uw grens groepen te gebruiken bij het delen van inhoud tussen peers. Een nieuwe client instelling past de grens groep-ID toe als de id van de leverings optimalisatie groep op de client. Wanneer de client communiceert met de Delivery Optimization-Cloud service, wordt deze id gebruikt om peers met de gewenste inhoud te vinden. 
+U gebruikt Configuration Manager grens groepen om de distributie van inhoud in uw bedrijfs netwerk en externe kant oren te definiëren en te reguleren. [Windows Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) is een op de cloud gebaseerde peer-to-peer-technologie voor het delen van inhoud tussen Windows 10-apparaten. Vanaf deze release configureert u Delivery Optimization om uw grens groepen te gebruiken bij het delen van inhoud tussen peers. Een nieuwe client instelling past de grens groep-ID toe als de id van de leverings optimalisatie groep op de client. Wanneer de client communiceert met de Delivery Optimization-Cloud service, wordt deze id gebruikt om peers met de gewenste inhoud te vinden. 
 
 ### <a name="prerequisites"></a>Vereisten
 - Delivery Optimization is alleen beschikbaar op Windows 10-clients
@@ -68,7 +68,7 @@ U gebruikt Configuration Manager grens groepen om de distributie van inhoud in u
 2. Selecteer de nieuwe **Delivery Optimization** -groep.
 3. Schakel de instelling **gebruik Configuration Manager grens groepen in voor de id van de leverings optimalisatie groep**.
 
-Zie voor meer informatie de optie **groep** Delivery mode in [Delivery Optimization Options](/windows/deployment/update/waas-delivery-optimization#how-microsoft-uses-delivery-optimization).
+Zie voor meer informatie de optie **groep** Delivery mode in [Delivery Optimization Options](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#how-microsoft-uses-delivery-optimization).
 
 
 
@@ -96,23 +96,23 @@ De standaard taken reeks sjabloon voor Windows 10 in-place upgrade bevat nu extr
 - **Niet-compatibele toepassingen verwijderen**: Voeg stappen toe aan deze groep om alle toepassingen te verwijderen die niet compatibel zijn met deze versie van Windows 10. De methode voor het verwijderen van een toepassing varieert. Als de toepassing Windows Installer gebruikt, kopieert u de opdracht regel voor het **Uninstall-programma** van het tabblad **Program ma's** van de Windows Installer implementatie type-eigenschappen van de toepassing. Voeg vervolgens de stap **opdracht regel uitvoeren** in deze groep toe met de opdracht regel voor het verwijderen van het programma. Bijvoorbeeld: </br>`msiexec /x {150031D8-1234-4BA8-9F52-D6E5190D1CBA} /q`</br> 
 - **Niet-compatibele Stuur Programma's verwijderen**: Voeg stappen toe aan deze groep om stuur Programma's te verwijderen die niet compatibel zijn met deze versie van Windows 10.
 - **Beveiliging van derden verwijderen/opschorten**: Voeg stappen toe aan deze groep voor het verwijderen of onderbreken van externe beveiligings Programma's, zoals antivirus software.
-   - Als u een schijf versleutelings programma van derden gebruikt, geeft u het versleutelings stuur programma voor het Windows Setup met de [opdracht regel optie](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) **/ReflectDrivers** . Voeg een [set taken reeks variabelen voor sets](../../osd/understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable) toe aan de taken reeks in deze groep. Stel de taken reeks variabele in op **OSDSetupAdditionalUpgradeOptions**. Stel de waarde in op **/ReflectDriver** met het pad naar het stuur programma. Met deze [taken reeks actie variabele](../../osd/understand/task-sequence-steps.md#BKMK_UpgradeOS) wordt de Windows Setup opdracht regel toegevoegd die wordt gebruikt door de taken reeks. Neem contact op met de software leverancier voor meer informatie over dit proces.
+   - Als u een schijf versleutelings programma van derden gebruikt, geeft u het versleutelings stuur programma voor het Windows Setup met de [opdracht regel optie](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) **/ReflectDrivers** . Voeg een [set taken reeks variabelen voor sets](../../osd/understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable) toe aan de taken reeks in deze groep. Stel de taken reeks variabele in op **OSDSetupAdditionalUpgradeOptions**. Stel de waarde in op **/ReflectDriver** met het pad naar het stuur programma. Met deze [taken reeks actie variabele](../../osd/understand/task-sequence-steps.md#BKMK_UpgradeOS) wordt de Windows Setup opdracht regel toegevoegd die wordt gebruikt door de taken reeks. Neem contact op met de software leverancier voor meer informatie over dit proces.
 
 ### <a name="new-groups-under-post-processing"></a>Nieuwe groepen onder **naverwerking**
 - Op **installatie-gebaseerde Stuur programma's toep assen**: Voeg in deze groep stappen toe om stuur programma's (. exe) te installeren op basis van pakketten.
 - **Beveiliging van derden installeren/inschakelen**: Voeg stappen toe aan deze groep om beveiligings Programma's van derden, zoals anti virus, te installeren of in te scha kelen. 
-- **Windows-standaard-apps en-koppelingen instellen**: Voeg de stappen in deze groep toe om Windows-standaard-apps en-bestands koppelingen in te stellen. Bereid eerst een referentie computer voor met de gewenste app-koppelingen. Voer vervolgens de volgende opdracht regel uit om te exporteren: </br>`dism /online /Export-DefaultAppAssociations:"%UserProfile%\Desktop\DefaultAppAssociations.xml"`</br>Voeg het XML-bestand toe aan een pakket. Voeg vervolgens een stap [opdracht regel uitvoeren](../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine) toe aan deze groep. Geef het pakket op dat het XML-bestand bevat en geef vervolgens de volgende opdracht regel op: </br>`dism /online /Import-DefaultAppAssociations:DefaultAppAssocations.xml`</br> Zie [standaard toepassings koppelingen exporteren of importeren](/windows-hardware/manufacture/desktop/export-or-import-default-application-associations)voor meer informatie.
-- **Aanpassingen en persoonlijke instellingen Toep assen**: Voeg stappen toe aan deze groep om aanpassingen aan het start menu toe te passen, zoals het organiseren van programma groepen. Zie [het Start scherm aanpassen](/windows-hardware/manufacture/desktop/customize-the-start-screen)voor meer informatie.
+- **Windows-standaard-apps en-koppelingen instellen**: Voeg de stappen in deze groep toe om Windows-standaard-apps en-bestands koppelingen in te stellen. Bereid eerst een referentie computer voor met de gewenste app-koppelingen. Voer vervolgens de volgende opdracht regel uit om te exporteren: </br>`dism /online /Export-DefaultAppAssociations:"%UserProfile%\Desktop\DefaultAppAssociations.xml"`</br>Voeg het XML-bestand toe aan een pakket. Voeg vervolgens een stap [opdracht regel uitvoeren](../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine) toe aan deze groep. Geef het pakket op dat het XML-bestand bevat en geef vervolgens de volgende opdracht regel op: </br>`dism /online /Import-DefaultAppAssociations:DefaultAppAssocations.xml`</br> Zie [standaard toepassings koppelingen exporteren of importeren](https://docs.microsoft.com/windows-hardware/manufacture/desktop/export-or-import-default-application-associations)voor meer informatie.
+- **Aanpassingen en persoonlijke instellingen Toep assen**: Voeg stappen toe aan deze groep om aanpassingen aan het start menu toe te passen, zoals het organiseren van programma groepen. Zie [het Start scherm aanpassen](https://docs.microsoft.com/windows-hardware/manufacture/desktop/customize-the-start-screen)voor meer informatie.
 
 ### <a name="additional-recommendations"></a>Extra aanbevelingen
-- Raadpleeg de Windows-documentatie om [Windows 10-upgrade fouten op te lossen](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors). Dit artikel bevat ook gedetailleerde informatie over het upgrade proces.
+- Raadpleeg de Windows-documentatie om [Windows 10-upgrade fouten op te lossen](https://docs.microsoft.com/windows/deployment/upgrade/resolve-windows-10-upgrade-errors). Dit artikel bevat ook gedetailleerde informatie over het upgrade proces.
 - Op de standaard stap voor het controleren van de **gereedheid** kunt u **ervoor zorgen dat het minimale aantal beschik bare schijf ruimte (MB)** is. Stel de waarde in op ten minste **16384** (16 GB) voor een 32-bits OS-upgrade pakket, of **20480** (20 GB) voor de 64-bits. 
 - Gebruik de **SMSTSDownloadRetryCount** [ingebouwde taken reeks variabele](../../osd/understand/task-sequence-variables.md) SMSTSDownloadRetryCount om het beleid opnieuw te downloaden. Op dit moment wordt de client standaard twee maal opnieuw geprobeerd. Deze variabele is ingesteld op twee (2). Als uw clients zich niet op een bekabelde bedrijfs netwerk verbinding bevinden, helpen extra nieuwe pogingen om de client beleid te verkrijgen. Het gebruik van deze variabele veroorzaakt geen negatief neven effect, anders dan vertraagd mislukken als het beleid niet kan worden gedownload.<!-- 501016 --> Verhoog ook de **SMSTSDownloadRetryDelay** -variabele van de standaard waarde van 15 seconden.
 - Een inline-compatibiliteits beoordeling uitvoeren. 
    - Voeg in de groep **voorbereiden voor upgrade** een tweede stap van het **besturings systeem uit** . Geef een naam voor de *upgrade beoordeling*op. Geef hetzelfde upgrade pakket op en schakel vervolgens de optie in om **Windows Setup compatibiliteits scan uit te voeren zonder de upgrade te starten**. Schakel **door gaan bij fout** in op het tabblad Opties. 
    - Voeg direct na deze stap voor de *upgrade beoordeling* een stap **opdracht regel uitvoeren** toe. Geef de volgende opdracht regel op:</br> `cmd /c exit %_SMSTSOSUpgradeActionReturnCode%`</br>Voeg op het tabblad **Opties** de volgende voor waarde toe: </br>`Task Sequence Variable _SMSTSOSUpgradeActionReturnCode not equals 3247440400` </br>Deze retour code is het decimale equivalent van MOSETUP_E_COMPAT_SCANONLY (0xC1900210). Dit is een geslaagde compatibiliteits scan zonder problemen. Als de stap *upgrade beoordeling* slaagt en deze code retourneert, wordt deze stap overgeslagen. Als de evaluatie stap een andere retour code retourneert, mislukt deze stap de taken reeks met de retour code van de Windows Setup compatibiliteits scan.
    - Zie [upgrade van besturings systeem](../../osd/understand/task-sequence-steps.md#BKMK_UpgradeOS)voor meer informatie.
-- Als u het apparaat wilt wijzigen van BIOS in UEFI tijdens deze taken reeks, raadpleegt u de [conversie van BIOS naar UEFI tijdens een in-place upgrade](../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade).
+- Als u het apparaat wilt wijzigen van BIOS in UEFI tijdens deze taken reeks, raadpleegt u de [conversie van BIOS naar UEFI tijdens een in-place upgrade](../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu).
 
 Verzend **feedback** vanaf het tabblad **Start** van het lint als u nog meer aanbevelingen of suggesties hebt.
 
@@ -158,13 +158,13 @@ Probeer de taken uit te voeren. Vervolgens verzendt u **feedback** vanaf het tab
 <!--1319632-->
 Het nieuwe [product levenscyclus dashboard](../clients/manage/asset-intelligence/product-lifecycle-dashboard.md) toont de status van het micro soft Product Lifecycle-beleid voor micro soft-producten geïnstalleerd op apparaten die worden beheerd met Configuration Manager. Het dash board biedt informatie over micro soft-producten in uw omgeving, de ondersteunings status en de ondersteuning voor eind datums. U kunt het dash board gebruiken om inzicht te krijgen in de beschik baarheid van de ondersteuning voor elk product. 
 
-Als u toegang wilt krijgen tot het levenscyclus dashboard, gaat u in de Configuration Manager-console naar **activa en naleving** >**Asset Intelligence** >**product levenscyclus**
+Als u toegang wilt krijgen tot het levenscyclus dashboard, gaat u in de Configuration Manager-console naar **activa en naleving**  > **Asset Intelligence**  > **product levenscyclus**
 
 
 
 ## <a name="improvements-to-reporting"></a>Verbeteringen in rapportage
 <!--1357653-->
-Als gevolg van [uw feedback](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/32434147-new-builtin-reports-about-windows-10-versions-and) hebben we een nieuw rapport toegevoegd, **voor Windows 10-onderhouds Details voor een specifieke verzameling**. Dit rapport bevat de resource-ID, de NetBIOS-naam, de naam van het besturings systeem, de naam van de besturingssysteem release, de build, de besturingssysteem vertakking en de onderhouds status voor Windows 10-apparaten. Als u het rapport wilt openen, gaat u naar **bewaking** >**rapport** >**rapporten** >**besturings systemen** >**Windows 10 service Details voor een specifieke verzameling**.
+Als gevolg van [uw feedback](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/32434147-new-builtin-reports-about-windows-10-versions-and) hebben we een nieuw rapport toegevoegd, **voor Windows 10-onderhouds Details voor een specifieke verzameling**. Dit rapport bevat de resource-ID, de NetBIOS-naam, de naam van het besturings systeem, de naam van de besturingssysteem release, de build, de besturingssysteem vertakking en de onderhouds status voor Windows 10-apparaten. Als u het rapport wilt openen, gaat u naar **bewaking**  > **rapport**  > **rapporten**  > **besturings systemen**  > **Windows 10 service Details voor een specifieke verzameling**.
 
 
 
@@ -227,14 +227,14 @@ De lijst met [niet-ondersteunde scenario's](../plan-design/network/cng-certifica
 
 ## <a name="cloud-management-gateway-support-for-azure-resource-manager"></a>Cloud Management gateway-ondersteuning voor Azure Resource Manager
 <!-- 1324735 -->
-Bij het maken van een exemplaar van de [Cloud beheer gateway](../clients/manage/cmg/plan-cloud-management-gateway.md) (CMG) biedt de wizard nu de mogelijkheid om een **Azure Resource Manager-implementatie**te maken. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is een modern platform voor het beheren van alle oplossings resources als één entiteit, een zogenaamde [resource groep](/azure/azure-resource-manager/resource-group-overview#resource-groups). Bij het implementeren van CMG met Azure Resource Manager gebruikt de site Azure Active Directory (Azure AD) om de benodigde cloud resources te verifiëren en te maken. Voor deze moderne implementatie is het klassieke Azure-beheer certificaat niet vereist.  
+Bij het maken van een exemplaar van de [Cloud beheer gateway](../clients/manage/cmg/plan-cloud-management-gateway.md) (CMG) biedt de wizard nu de mogelijkheid om een **Azure Resource Manager-implementatie**te maken. [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) is een modern platform voor het beheren van alle oplossings resources als één entiteit, een zogenaamde [resource groep](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups). Bij het implementeren van CMG met Azure Resource Manager gebruikt de site Azure Active Directory (Azure AD) om de benodigde cloud resources te verifiëren en te maken. Voor deze moderne implementatie is het klassieke Azure-beheer certificaat niet vereist.  
 
 De wizard CMG biedt nog steeds de optie voor een **klassieke service-implementatie** met behulp van een Azure-beheer certificaat. Voor het vereenvoudigen van de implementatie en het beheer van resources, raden we u aan het Azure Resource Manager-implementatie model te gebruiken voor alle nieuwe CMG-instanties. Implementeer, indien mogelijk, bestaande CMG-exemplaren opnieuw via Resource Manager.
 
 Configuration Manager migreert geen bestaande klassieke CMG-instanties naar het Azure Resource Manager-implementatie model. Maak nieuwe CMG-instanties met Azure Resource Manager-implementaties en verwijder vervolgens klassieke CMG-instanties. 
 
 > [!IMPORTANT]
-> Deze functie biedt geen ondersteuning voor Azure Cloud service providers (CSP). De CMG-implementatie met Azure Resource Manager blijft de klassieke Cloud service gebruiken, die niet door de CSP wordt ondersteund. Zie [beschik bare Azure-Services in azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services)voor meer informatie.  
+> Deze functie biedt geen ondersteuning voor Azure Cloud service providers (CSP). De CMG-implementatie met Azure Resource Manager blijft de klassieke Cloud service gebruiken, die niet door de CSP wordt ondersteund. Zie [beschik bare Azure-Services in azure CSP](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services)voor meer informatie.  
 
 ### <a name="prerequisites"></a>Vereisten
 - Integratie met [Azure AD](../clients/deploy/deploy-clients-cmg-azure.md). Azure AD-gebruikers detectie is niet vereist.
@@ -317,7 +317,7 @@ Windows auto pilot is een oplossing voor het voorbereiden en configureren van ni
 
 ## <a name="improvements-to-configuration-manager-policies-for-windows-defender-exploit-guard"></a>Verbeteringen aan Configuration Manager-beleid voor Windows Defender exploit Guard
 <!-- 1356220 -->
-Er zijn aanvullende beleids instellingen voor de onderdelen kwets baarheid voor aanvallen en Controlled folder Access toegevoegd in Configuration Manager voor [Windows Defender exploit Guard](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection).
+Er zijn aanvullende beleids instellingen voor de onderdelen kwets baarheid voor aanvallen en Controlled folder Access toegevoegd in Configuration Manager voor [Windows Defender exploit Guard](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection).
 
 **Nieuwe instellingen voor gecontroleerde mappen toegang**<br/>
 Er zijn twee extra opties voor het configureren van beheerde mappen toegang: **alleen schijf sectoren blok keren** en **alleen schijf sectoren controleren**. Deze twee instellingen zorgen ervoor dat Controlled folder Access alleen kan worden ingeschakeld voor opstart sectoren en de beveiliging van specifieke mappen of de standaard beveiligde mappen niet mogelijk maakt. 
@@ -332,20 +332,20 @@ Er zijn twee extra opties voor het configureren van beheerde mappen toegang: **a
 
 ## <a name="microsoft-edge-browser-policies"></a>Micro soft Edge-browser beleid
 <!-- 1357310 -->
-Voor klanten die de [micro soft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) -webbrowser op Windows 10-clients gebruiken, kunt u nu een Configuration Manager beleid voor nalevings instellingen maken voor het configureren van verschillende instellingen voor micro soft Edge. Dit beleid bevat momenteel de volgende instellingen:
+Voor klanten die de [micro soft Edge](https://www.microsoft.com/itpro/microsoft-edge) -webbrowser op Windows 10-clients gebruiken, kunt u nu een Configuration Manager beleid voor nalevings instellingen maken voor het configureren van verschillende instellingen voor micro soft Edge. Dit beleid bevat momenteel de volgende instellingen:
 - **Stel de micro soft Edge-browser in als standaard**: Hiermee wordt de Windows 10-standaard instelling voor apps voor de webbrowser geconfigureerd in micro soft Edge
-- **Vervolg keuzelijst voor de adres balk toestaan**: vereist Windows 10, versie 1703 of hoger. Zie [AllowAddressBarDropdown-browser beleid](/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown)voor meer informatie.
-- **Synchronisatie van favorieten tussen micro soft-browsers toestaan**: vereist Windows 10, versie 1703 of hoger. Zie [SyncFavoritesBetweenIEAndMicrosoftEdge-browser beleid](/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge)voor meer informatie.
-- **Browse gegevens wissen bij afsluiten toestaan**: vereist Windows 10, versie 1703 of hoger. Zie [ClearBrowsingDataOnExit-browser beleid](/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit)voor meer informatie.
-- **Do not track-headers toestaan**: Zie [AllowDoNotTrack-browser beleid](/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack)voor meer informatie.
-- **Automatisch invullen toestaan**: Zie [AllowAutofill-browser beleid](/windows/client-management/mdm/policy-csp-browser#browser-allowautofill)voor meer informatie.
-- **Cookies toestaan**: Zie [AllowCookies-browser beleid](/windows/client-management/mdm/policy-csp-browser#browser-allowcookies)voor meer informatie.
-- **Pop-upblokkering toestaan**: Zie [AllowPopups-browser beleid](/windows/client-management/mdm/policy-csp-browser#browser-allowpopups)voor meer informatie.
-- **Zoek suggesties in de adres balk toestaan**: Zie [AllowSearchSuggestionsinAddressBar-browser beleid](/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar)voor meer informatie.
-- **Verzenden van intranet verkeer naar Internet Explorer toestaan**: Zie [SendIntranetTraffictoInternetExplorer-browser beleid](/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer)voor meer informatie.
-- **Wachtwoord beheer toestaan**: Zie [AllowPasswordManager-browser beleid](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)voor meer informatie.
-- **Ontwikkelhulpprogramma's toestaan**: Zie [AllowDeveloperTools-browser beleid](/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools)voor meer informatie.
-- **Extensies toestaan**: Zie [AllowExtensions-browser beleid](/windows/client-management/mdm/policy-csp-browser#browser-allowextensions)voor meer informatie.
+- **Vervolg keuzelijst voor de adres balk toestaan**: vereist Windows 10, versie 1703 of hoger. Zie [AllowAddressBarDropdown-browser beleid](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown)voor meer informatie.
+- **Synchronisatie van favorieten tussen micro soft-browsers toestaan**: vereist Windows 10, versie 1703 of hoger. Zie [SyncFavoritesBetweenIEAndMicrosoftEdge-browser beleid](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge)voor meer informatie.
+- **Browse gegevens wissen bij afsluiten toestaan**: vereist Windows 10, versie 1703 of hoger. Zie [ClearBrowsingDataOnExit-browser beleid](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit)voor meer informatie.
+- **Do not track-headers toestaan**: Zie [AllowDoNotTrack-browser beleid](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack)voor meer informatie.
+- **Automatisch invullen toestaan**: Zie [AllowAutofill-browser beleid](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowautofill)voor meer informatie.
+- **Cookies toestaan**: Zie [AllowCookies-browser beleid](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowcookies)voor meer informatie.
+- **Pop-upblokkering toestaan**: Zie [AllowPopups-browser beleid](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpopups)voor meer informatie.
+- **Zoek suggesties in de adres balk toestaan**: Zie [AllowSearchSuggestionsinAddressBar-browser beleid](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar)voor meer informatie.
+- **Verzenden van intranet verkeer naar Internet Explorer toestaan**: Zie [SendIntranetTraffictoInternetExplorer-browser beleid](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer)voor meer informatie.
+- **Wachtwoord beheer toestaan**: Zie [AllowPasswordManager-browser beleid](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)voor meer informatie.
+- **Ontwikkelhulpprogramma's toestaan**: Zie [AllowDeveloperTools-browser beleid](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools)voor meer informatie.
+- **Extensies toestaan**: Zie [AllowExtensions-browser beleid](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowextensions)voor meer informatie.
 
 ### <a name="prerequisites"></a>Vereisten
 - Windows 10-client die Azure Active Directory lid is. 
@@ -412,7 +412,7 @@ Met gefaseerde implementaties wordt een gecoördineerde, geordende implementatie
 1. Vouw in de werk ruimte **software bibliotheek** **besturings systemen**uit en selecteer **taken reeksen**.
 2. Klik met de rechter muisknop op een bestaande taken reeks en selecteer **gefaseerde implementatie maken**. 
 3. Geef op het tabblad **Algemeen** de gefaseerde implementatie een naam, beschrijving (optioneel) en selecteer **automatisch een standaard implementatie met twee fasen maken**. 
-4. Vul de velden **eerste verzameling** en **tweede verzameling** in. Selecteer **Volgende**.
+4. Vul de velden **eerste verzameling** en **tweede verzameling** in. Selecteer **Next**.
 5. Kies op het tabblad **instellingen** één optie voor elk van de plannings instellingen en selecteer **volgende** als u klaar bent. 
 6. Bewerk op het tabblad **fasen** de gewenste fasen en klik vervolgens op **volgende**.
 7. Bevestig uw selecties op het tabblad **samen vatting** en klik vervolgens op **volgende** om door te gaan.

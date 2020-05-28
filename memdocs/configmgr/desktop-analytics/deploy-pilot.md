@@ -10,12 +10,13 @@ ms.assetid: 637fbd8e-b8ea-4c7e-95ee-a60a323c496e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b0e939b51c464215ac1d4feea539ceb5677a01a6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: 0e90855949f5c8f249db6b2f4305c71b8ee4e768
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723682"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83824015"
 ---
 # <a name="how-to-deploy-to-pilot-with-desktop-analytics"></a>Implementeren voor pilot met Desktop Analytics
 
@@ -100,7 +101,12 @@ Voordat u Windows kunt implementeren, moet u eerst de software-objecten in Confi
 
 ## <a name="deploy-to-pilot-devices"></a>Implementeren op pilot-apparaten
 
-Configuration Manager gebruikt de gegevens uit de Desktop Analytics om verzamelingen te maken voor de test-en productie-implementaties. Om ervoor te zorgen dat apparaten in orde zijn na elke implementatie fase, gebruikt u de volgende procedure voor het maken van een door een bureau blad Analytics geïntegreerde, gefaseerde implementatie:
+Configuration Manager gebruikt de gegevens uit de Desktop Analytics om verzamelingen te maken voor de test-en productie-implementaties. Deze verzamelingen bevinden zich in de werk ruimte **activa en naleving** , knoop punt voor **apparaat-verzamelingen** , map **implementatie plannen** .
+
+> [!IMPORTANT]
+> Deze verzamelingen worden beheerd door Configuration Manager voor implementatie plannen voor desktop Analytics. Hand matige wijzigingen worden niet ondersteund.
+
+Om ervoor te zorgen dat apparaten in orde zijn na elke implementatie fase, gebruikt u de volgende procedure voor het maken van een door een bureau blad Analytics geïntegreerde, gefaseerde implementatie:
 
 1. Ga in de Configuration Manager-console naar de **software bibliotheek**, vouw **Desktop Analytics Servicing**uit en selecteer het knoop punt **implementatie plannen** .  
 
@@ -113,9 +119,9 @@ Configuration Manager gebruikt de gegevens uit de Desktop Analytics om verzameli
 
 4. Voer een naam in voor de implementatie en selecteer de taken reeks die u wilt gebruiken. Gebruik de optie om **automatisch een standaard implementatie met twee fasen te maken**en configureer vervolgens de volgende verzamelingen:  
 
-    - **Eerste verzameling**: Zoek en selecteer de **pilot** verzameling voor dit implementatie plan. De standaard naam Conventie voor deze verzameling is `<deployment plan name> (Pilot)`.
+    - **Eerste verzameling**: Zoek en selecteer de **pilot** verzameling voor dit implementatie plan. De standaard naam Conventie voor deze verzameling is `<deployment plan name> (Pilot)` .
 
-    - **Tweede verzameling**: Zoek en selecteer de **productie** verzameling voor dit implementatie plan. De standaard naam Conventie voor deze verzameling is `<deployment plan name> (Production)`.
+    - **Tweede verzameling**: Zoek en selecteer de **productie** verzameling voor dit implementatie plan. De standaard naam Conventie voor deze verzameling is `<deployment plan name> (Production)` .
 
     > [!Note]  
     > Met de integratie van het bureau blad Analytics maakt Configuration Manager automatisch pilot-en productie verzamelingen voor het implementatie plan. Voordat u deze kunt gebruiken, kan het enige tijd duren voordat deze verzamelingen worden gesynchroniseerd. Zie [problemen oplossen-gegevens latentie](troubleshooting.md#data-latency)voor meer informatie.<!-- 4984639 -->
@@ -171,7 +177,7 @@ Apparaten die fouten rapporteren of andere problemen worden ook weer gegeven in 
 Op de pagina **Implementatie status** vindt u een lijst met apparaten in de volgende categorieën:
 
 - Niet gestart
-- Wordt uitgevoerd
+- Actief
 - Voltooid
 - Aandacht vereist: apparaten
 - Aandacht vereist: problemen

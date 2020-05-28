@@ -2,7 +2,7 @@
 title: Proxyserverondersteuning
 titleSuffix: Configuration Manager
 description: Meer informatie over hoe Configuration Manager-site systeem servers proxy servers gebruiken.
-ms.date: 04/01/2020
+ms.date: 05/05/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9123a87a-0b6f-43c7-b5c2-fac5d09686b1
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5581214dd786bdefd29d0e4d2626de536ad26ace
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 89a2f76f394d3bdf8fd6785429ae0ae60302537a
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718712"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802086"
 ---
 # <a name="proxy-server-support-in-configuration-manager"></a>Ondersteuning van proxy server in Configuration Manager
 
@@ -50,6 +50,10 @@ Voor deze configuratie moet de primaire siteserver:
 - Maakt standaard gebruik van het **systeem** account van de computer om verbinding te maken. Het kan ook het site systeem proxyserver account gebruiken, indien nodig.  
 
 - Maakt gebruik van Windows web browser-Api's.  
+
+### <a name="cloud-management-gateway-connection-point"></a>Verbindings punt van de Cloud beheer gateway
+
+Het CMG-verbindings punt (Cloud Management Gateway) is een on-premises rol die communiceert met de CMG-service in Azure. Zie [plan for the CMG](../../clients/manage/cmg/plan-cloud-management-gateway.md)voor meer informatie.
 
 ### <a name="distribution-point"></a>Distributiepunt
 
@@ -111,3 +115,7 @@ Vanaf Configuration Manager versie 2002 gebruiken de volgende functies de proxy 
     - **Referenties gebruiken om verbinding te maken met de proxy server**: voor veel proxy servers moet een gebruiker worden geverifieerd. De site systeem server gebruikt standaard het computer account om verbinding te maken met de proxy server. Indien nodig, schakelt u deze optie in, klikt u op **instellen**en kiest u vervolgens een **bestaand account** of geeft u een **Nieuw account**op. Deze referenties zijn het **Server account van het site systeem**.  Zie [accounts die worden gebruikt in Configuration Manager](../hierarchy/accounts.md)voor meer informatie.  
 
 4. Kies **OK** om de nieuwe proxyserver configuratie op te slaan.  
+
+## <a name="next-steps"></a>Volgende stappen
+
+Als uw organisatie netwerk communicatie met Internet beperkt met behulp van een firewall of proxy apparaat, moet u toegang tot internet-eind punten toestaan. Zie [vereisten voor Internet toegang](internet-endpoints.md)voor meer informatie.

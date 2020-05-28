@@ -2,7 +2,7 @@
 title: Microsoft Defender Advanced Threat Protection
 titleSuffix: Configuration Manager
 description: Meer informatie over het beheren en bewaken van micro soft Defender Advanced Threat Protection, een nieuwe service die ondernemingen helpt bij het reageren op geavanceerde aanvallen.
-ms.date: 04/27/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a5fc033e-828e-4e45-9097-bbbd0697ebdf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a635ae36875984537c18c4850a3526d57ffceb31
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 801aee9665e567ce1a983fba294f1e58f58eee04
+ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210142"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83406668"
 ---
 # <a name="microsoft-defender-advanced-threat-protection"></a>Microsoft Defender Advanced Threat Protection
 
@@ -40,10 +40,10 @@ Op basis van de versie van Configuration Manager die u uitvoert, kunnen de volge
 
 #### <a name="configuration-manager-version-2002-and-later"></a>Configuration Manager versie 2002 en hoger
 <!--5229962-->
-- Windows 7 SP1
+Vanaf Configuration Manager versie 2002 kunt u de volgende besturings systemen onboarden:
+
 - Windows 8.1
 - Windows 10, versie 1607 of hoger
-- Windows Server 2008 R2 SP1
 - Windows Server 2012 R2
 - Windows Server 2016
 - Windows Server 2016, versie 1803
@@ -57,8 +57,8 @@ Op basis van de versie van Configuration Manager die u uitvoert, kunnen de volge
    - Als u een onboarding van Windows 10, Windows Server 1803 en Windows Server 2019 hebt:
       1. Selecteer **Configuration Manager (huidige vertakking) versie 1606** en selecteer **pakket downloaden**.
       1. Down load het gecomprimeerde archief bestand (. zip) en pak de inhoud uit.
-   - Als u een ander Windows-besturings systeem wilt voorbereiden: 
-      1. Selecteer de besturings systemen die u wilt vrijgeven uit de lijst. Kies bijvoorbeeld **Windows 7 en 8,1** of **Windows Server 2008 R2 SP1, 2012 R2 en 2016**.
+   - Als u een ander Windows-besturings systeem wilt voorbereiden:
+      1. Selecteer de besturings systemen die u wilt vrijgeven uit de lijst die wordt weer gegeven in de online micro soft Defender ATP-service.
       1. Kopieer de waarden voor de **werkruimte sleutel** en **werk ruimte-id** van de sectie **verbinding configureren** zodra het proces is voltooid.
 
 > [!IMPORTANT]
@@ -66,11 +66,11 @@ Op basis van de versie van Configuration Manager die u uitvoert, kunnen de volge
 
 ## <a name="onboard-devices"></a>Apparaten onboarden
 
-1. Ga in de Configuration Manager-console naar **activa en naleving** > **Endpoint Protection** > **Windows Defender ATP-beleid** en selecteer **Windows Defender ATP-beleid maken**. De wizard micro soft Defender ATP-beleid wordt geopend.  
+1. Ga in de Configuration Manager-console naar **activa en naleving**  >  **Endpoint Protection**  >  **Windows Defender ATP-beleid** en selecteer **Windows Defender ATP-beleid maken**. De wizard micro soft Defender ATP-beleid wordt geopend.  
 1. Typ de **naam** en **Beschrijving** voor het micro soft Defender ATP-beleid en selecteer **onboarding**.
 1. **Blader** naar het configuratie bestand dat is opgenomen in de micro soft Defender ATP Cloud service-Tenant van uw organisatie.
-   - Voor **Windows 7 en 8,1** of **Windows Server 2008 R2 SP1, 2012 R2 en 2016**, geeft u de **werkruimte sleutel** en **werk ruimte-id**op.
-   - Voor Configuration Manager versie 2002 hebt u de **werkruimte sleutel** en **werk ruimte-id** nodig, zelfs als u alleen apparaten met Windows Server 2019 en Windows Server 1803 of hoger gebruikt. U kunt deze waarden ophalen door **instellingen** > te selecteren die**Windows 7 en 8,1** van de [micro soft Defender ATP online-service](https://securitycenter.windows.com/)**onboarding** > hebben. <!--7054188-->
+   - Voor Windows 8,1 of Windows Server 2012 R2 en 2016 geeft u de **werkruimte sleutel** en **werk ruimte-id**op.
+   - Voor Configuration Manager versie 2002 hebt u de **werkruimte sleutel** en **werk ruimte-id** nodig, zelfs als u alleen apparaten met Windows Server 2019 en Windows Server 1803 of hoger gebruikt. U kunt deze waarden ophalen door **instellingen**te selecteren die  >  Windows 7 en 8,1 van de micro soft Defender ATP online-service**onboarding**hebben  >  **Windows 7 and 8.1** . [Microsoft Defender ATP online service](https://securitycenter.windows.com/) <!--7054188-->
 1. Geef de bestands voorbeelden op die worden verzameld en gedeeld met beheerde apparaten voor analyse.  
 
    - **Geen**
@@ -82,7 +82,7 @@ Selecteer **implementeren** om het micro soft Defender ATP-beleid te richten op 
 
 ## <a name="monitor"></a>Controleren
 
-1. Navigeer in de Configuration Manager-console naar **bewakings** > **beveiliging** en selecteer vervolgens **Windows Defender ATP**.  
+1. Navigeer in de Configuration Manager-console naar **bewakings**  >  **beveiliging** en selecteer vervolgens **Windows Defender ATP**.  
 
 1. Bekijk het micro soft Defender Advanced Threat Protection-dash board.  
 
@@ -108,7 +108,7 @@ Selecteer **implementeren** om het micro soft Defender ATP-beleid te richten op 
 
 1. Down load het gecomprimeerde archief bestand (. zip) en pak de inhoud uit. Offboarding-bestanden zijn 30 dagen geldig.
 
-1. Ga in de Configuration Manager-console naar **activa en naleving** > **Endpoint Protection** > **Windows Defender ATP-beleid** en selecteer **Windows Defender ATP-beleid maken**. De wizard micro soft Defender ATP-beleid wordt geopend.  
+1. Ga in de Configuration Manager-console naar **activa en naleving**  >  **Endpoint Protection**  >  **Windows Defender ATP-beleid** en selecteer **Windows Defender ATP-beleid maken**. De wizard micro soft Defender ATP-beleid wordt geopend.  
 
 1. Typ de **naam** en **Beschrijving** voor het micro soft Defender ATP-beleid en selecteer **Offboarding**.
 

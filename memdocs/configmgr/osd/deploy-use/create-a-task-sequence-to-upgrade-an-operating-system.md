@@ -10,12 +10,12 @@ ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b11e0a1747cb8303c14f5971b98d337ae7b2a834
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8d87b2cde9a9fadb7326939b7fe473ba2a757e91
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723003"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83430121"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>Een taken reeks maken om een besturings systeem in Configuration Manager bij te werken
 
@@ -63,14 +63,14 @@ Als u het besturings systeem op clients wilt upgraden, maakt u een taken reeks e
 
     - **Editie-index**: als er meerdere OS Edition-indexen beschikbaar zijn in het pakket, selecteert u de gewenste editie-index. De wizard selecteert standaard de eerste index.  
 
-    - **Product code**: Geef de Windows-product code op voor het besturings systeem dat u wilt installeren. Geef gecodeerde volume licentie sleutels of standaard product codes op. Als u een standaard product code gebruikt, scheidt u elke groep van vijf tekens met een`-`streepje (). Bijvoorbeeld: `XXXXX-XXXXX-XXXXX-XXXXX-XXXXX`. Wanneer de upgrade is voor een volume licentie-editie, is de product code mogelijk niet vereist.  
+    - **Product code**: Geef de Windows-product code op voor het besturings systeem dat u wilt installeren. Geef gecodeerde volume licentie sleutels of standaard product codes op. Als u een standaard product code gebruikt, scheidt u elke groep van vijf tekens met een streepje ( `-` ). Bijvoorbeeld: `XXXXX-XXXXX-XXXXX-XXXXX-XXXXX`. Wanneer de upgrade is voor een volume licentie-editie, is de product code mogelijk niet vereist.  
 
         > [!Note]  
         > Deze product code kan een meervoudige activerings code (MAK) of een algemene volume licentie code (GVLK) zijn. Een GVLK wordt ook wel een configuratie sleutel voor de KMS-client (Key Management service) genoemd. Zie [volume activering plannen](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client)voor meer informatie. Zie [bijlage a](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) van de Windows Server-activerings handleiding voor een lijst met installatie sleutels voor KMS-clients.
 
     - **Negeer mogelijke compatibiliteits berichten**: Selecteer deze instelling als u een upgrade uitvoert naar Windows Server 2016. Als u deze instelling niet selecteert, kan de taken reeks niet worden voltooid omdat Windows Setup wacht totdat de gebruiker op **bevestigen** klikt in het dialoog venster Windows-app-compatibiliteit.  
 
-6. Geef op de pagina **updates toevoegen** aan of u vereiste, alle of geen software-updates wilt installeren. Selecteer **volgende**. Als u opgeeft om software-updates te installeren, installeert Configuration Manager alleen de updates die zijn gericht op de verzamelingen waarvan de doel computer lid is.  
+6. Geef op de pagina **updates toevoegen** aan of u vereiste, alle of geen software-updates wilt installeren. Selecteer vervolgens **Volgende**. Als u opgeeft om software-updates te installeren, installeert Configuration Manager alleen de updates die zijn gericht op de verzamelingen waarvan de doel computer lid is.  
 
 7. Geef op de pagina **toepassingen installeren** de toepassingen op die moeten worden geïnstalleerd op de doel computer en selecteer **volgende**. Als u meer dan één toepassing selecteert, geeft u ook op of de taken reeks moet worden voortgezet als de installatie van een bepaalde toepassing mislukt.  
 
@@ -102,7 +102,7 @@ Voeg stappen in deze groep toe om te controleren of de computer accu of Wired Po
 
 #### <a name="battery-check-example"></a>Voor beeld van batterij controle
 
-Gebruik WbemTest en maak verbinding met `root\cimv2` de naam ruimte. Voer vervolgens de volgende query uit:
+Gebruik WbemTest en maak verbinding met de `root\cimv2` naam ruimte. Voer vervolgens de volgende query uit:
 
 `Select BatteryStatus From Win32_Battery where BatteryStatus != 2`
 
@@ -114,7 +114,7 @@ Voeg stappen in deze groep toe om te controleren of de computer is verbonden met
 
 #### <a name="network-check-example"></a>Netwerk controle-voor beeld
 
-Gebruik WbemTest en maak verbinding met `root\cimv2` de naam ruimte. Voer vervolgens de volgende query uit:
+Gebruik WbemTest en maak verbinding met de `root\cimv2` naam ruimte. Voer vervolgens de volgende query uit:
 
 `Select * From Win32_NetworkAdapter Where NetConnectionStatus = 2 and PhysicalAdapter = 'True' and NetConnectionID = 'Wi-Fi'`
 
@@ -136,7 +136,7 @@ Voeg stappen voor het verwijderen van Stuur Programma's die niet compatibel zijn
 
 Voeg stappen voor het verwijderen of onderbreken van externe beveiligings Programma's, zoals antivirus software, toe aan deze groep.  
 
-Als u een schijf versleutelings programma van derden gebruikt, geeft u het versleutelings stuur programma `/ReflectDrivers` voor het Windows Setup met de [opdracht regel optie](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#reflectdrivers). Voeg een [set taken reeks variabelen voor sets](../understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable) toe aan de taken reeks in deze groep. Stel de taken reeks variabele in op **OSDSetupAdditionalUpgradeOptions**. Stel de waarde in `/ReflectDrivers` op met het pad naar het stuur programma. Met deze [taken reeks variabele](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) wordt de Windows Setup opdracht regel toegevoegd die wordt gebruikt door de taken reeks. Neem contact op met de software leverancier voor meer informatie over dit proces.  
+Als u een schijf versleutelings programma van derden gebruikt, geeft u het versleutelings stuur programma voor het Windows Setup met de `/ReflectDrivers` [opdracht regel optie](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#reflectdrivers). Voeg een [set taken reeks variabelen voor sets](../understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable) toe aan de taken reeks in deze groep. Stel de taken reeks variabele in op **OSDSetupAdditionalUpgradeOptions**. Stel de waarde in op `/ReflectDrivers` met het pad naar het stuur programma. Met deze [taken reeks variabele](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) wordt de Windows Setup opdracht regel toegevoegd die wordt gebruikt door de taken reeks. Neem contact op met de software leverancier voor meer informatie over dit proces.  
 
 ### <a name="download-package-content-task-sequence-step"></a>De taken reeks stap pakket inhoud downloaden  
 
@@ -147,7 +147,7 @@ Gebruik de stap [pakket inhoud downloaden](../understand/task-sequence-steps.md#
 - Als u een geschikt stuurprogrammapakket wilt downloaden, gebruikt u twee **Pakketinhoud downloaden**-stappen op voorwaarde dat het juiste hardwaretype wordt gedetecteerd voor elk stuurprogrammapakket. Configureer elke stap **pakket inhoud downloaden** om dezelfde variabele te gebruiken. Gebruik vervolgens die variabele voor de waarde van de **gefaseerde inhoud** in het gedeelte Stuur Programma's van de stap **besturings systeem bijwerken** .  
 
     > [!NOTE]  
-    > Configuration Manager voegt een numeriek achtervoegsel toe aan deze naam van de variabele. Als u bijvoorbeeld een aangepaste variabele `%mycontent%` opgeeft, slaat de client alle inhoud waarnaar wordt verwezen, op op deze locatie. Wanneer u in een volgende stap naar de variabele verwijst, zoals **besturings systeem bijwerken**, gebruikt u de variabele met een numeriek achtervoegsel. In dit voor beeld `%mycontent01%` of `%mycontent02%`, waarbij het nummer overeenkomt met de volg orde waarin de stap **pakket inhoud downloaden** deze specifieke inhoud bevat.  
+    > Configuration Manager voegt een numeriek achtervoegsel toe aan deze naam van de variabele. Als u bijvoorbeeld `%mycontent%` een aangepaste variabele opgeeft, slaat de client alle inhoud waarnaar wordt verwezen, op op deze locatie. Wanneer u in een volgende stap naar de variabele verwijst, zoals **besturings systeem bijwerken**, gebruikt u de variabele met een numeriek achtervoegsel. In dit voor beeld `%mycontent01%` of `%mycontent02%` , waarbij het nummer overeenkomt met de volg orde waarin de stap **pakket inhoud downloaden** deze specifieke inhoud bevat.  
 
 
 ## <a name="recommended-task-sequence-steps-for-post-processing"></a>Aanbevolen stappen voor de taken reeks voor naverwerking
@@ -261,12 +261,12 @@ Zie [upgrade van besturings systeem](../understand/task-sequence-steps.md#BKMK_U
 
 ### <a name="convert-from-bios-to-uefi"></a>Converteren van BIOS naar UEFI
 
-Als u het apparaat wilt wijzigen van BIOS in UEFI tijdens deze taken reeks, raadpleegt u de [conversie van BIOS naar UEFI tijdens een in-place upgrade](task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade).  
+Als u het apparaat wilt wijzigen van BIOS in UEFI tijdens deze taken reeks, raadpleegt u de [conversie van BIOS naar UEFI tijdens een in-place upgrade](task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu).  
 
 ### <a name="manage-bitlocker"></a>BitLocker beheren
 
 <!--SCCMDocs issue #494-->
-Als u BitLocker-schijf versleuteling gebruikt, wordt de standaard Windows Setup automatisch onderbroken tijdens de upgrade. Vanaf Windows 10 versie 1803 bevat Windows Setup de `/BitLocker` opdracht regel parameter om dit gedrag te bepalen. Als voor uw beveiligings vereisten altijd actieve schijf versleuteling moet worden ingeschakeld, gebruikt u de [taken reeks variabele](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) **OSDSetupAdditionalUpgradeOptions** in de **voor bereiding van de upgrade** groep `/BitLocker TryKeepActive`die u wilt toevoegen. Zie [Windows Setup opdracht regel opties](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#bitlocker)voor meer informatie.
+Als u BitLocker-schijf versleuteling gebruikt, wordt de standaard Windows Setup automatisch onderbroken tijdens de upgrade. Vanaf Windows 10 versie 1803 bevat Windows Setup de `/BitLocker` opdracht regel parameter om dit gedrag te bepalen. Als voor uw beveiligings vereisten altijd actieve schijf versleuteling moet worden ingeschakeld, gebruikt u de [taken reeks variabele](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) **OSDSetupAdditionalUpgradeOptions** in de **voor bereiding van de upgrade** groep die u wilt toevoegen `/BitLocker TryKeepActive` . Zie [Windows Setup opdracht regel opties](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#bitlocker)voor meer informatie.
 
 ### <a name="remove-default-apps"></a>Standaard-apps verwijderen
 

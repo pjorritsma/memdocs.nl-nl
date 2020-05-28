@@ -125,8 +125,8 @@ Als u de verwerking van een Windows Defender-toepassings beheer beleid wilt cont
 
 Als u wilt controleren of de specifieke software die wordt geblokkeerd of gecontroleerd, raadpleegt u de volgende gebeurtenis logboeken van de lokale client:
 
-1. Voor het blok keren en controleren van uitvoer bare bestanden, kunt u met **toepassingen en services** > **micro soft** > **Windows** > -**code-integriteit** > **operationeel**vastleggen.
-2. Voor het blok keren en controleren van Windows Installer-en script bestanden, gebruikt u **toepassingen en services** > om**micro soft** > **Windows** > **AppLocker** > **MSI en script**te gebruiken.
+1. Voor het blok keren en controleren van uitvoer bare bestanden, kunt u met **toepassingen en services**  >  **micro soft**  >  **Windows**-  >  **code-integriteit**  >  **operationeel**vastleggen.
+2. Voor het blok keren en controleren van Windows Installer-en script bestanden, gebruikt u **toepassingen en services**om  >  **micro soft**  >  **Windows**  >  **AppLocker**  >  **MSI en script**te gebruiken.
 
 <!--Reworked article to put this inline while working on VSO 1355092
 ## Automatically let software run if it is trusted by Intelligent Security Graph

@@ -10,12 +10,12 @@ ms.assetid: 76c220b6-1824-4e2e-8c61-a719f0b056f1
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f5d59e165f2bb20ad6851f7d52c94d39e1ec9e4e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: eb9bfc252c82e477359a4c14cbe92a6dc11257bd
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718243"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906513"
 ---
 # <a name="where-to-get-installation-media-for-configuration-manager"></a>Locatie voor het verkrijgen van installatie media voor Configuration Manager
 
@@ -25,6 +25,6 @@ Als u over Configuration Manager volume licenties met Software Assurance beschik
 
 Als u een Configuration Manager licentie hebt van EMS, Microsoft 365 of een Cloud Solution Provider (CSP), raadpleegt u de [Veelgestelde vragen over het product en de licentie verlening](../../../understand/product-and-licensing-faq.md#bkmk_csp).
 
-Als u volume licenties voor Configuration Manager wilt aanschaffen, neemt u contact op met uw micro soft-reseller of gaat u naar [aanschaf via Volume Licensing](https://www.microsoft.com/Licensing/how-to-buy/how-to-buy.aspx). U kunt ook media downloaden om een Evaluation Edition van Configuration Manager te installeren vanaf de website van het [TechNet Evaluation Center]( https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection) .
+Als u volume licenties voor Configuration Manager wilt aanschaffen, neemt u contact op met uw micro soft-reseller of gaat u naar [aanschaf via Volume Licensing](https://www.microsoft.com/Licensing/how-to-buy/how-to-buy.aspx). U kunt ook media downloaden om een Evaluation Edition van Configuration Manager te installeren op de website van het [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection) .
 
 Zie [basis lijn-en update versies](../../manage/updates.md#bkmk_Baselines)voor meer informatie over basislijn media voor Configuration Manager.

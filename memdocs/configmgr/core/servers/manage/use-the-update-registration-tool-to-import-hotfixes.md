@@ -43,26 +43,26 @@ Wanneer u een out-of-band-versie moet installeren en de naam van de update of he
 
 -   Het account waarmee u het hulp programma uitvoert, moet over **lokale beheerders** machtigingen beschikken op de computer waarop het service verbindings punt wordt gehost (waarop het hulp programma wordt uitgevoerd)  
 
--   Het account waarmee u het hulp programma uitvoert, moet **Schrijf** machtigingen hebben voor de volgende map op de computer die als host fungeert voor het service verbindings punt: ** &lt;ConfigMgr-installatie directory\>\EasySetupPayload\offline**  
+-   Het account waarmee u het hulp programma uitvoert, moet **Schrijf** machtigingen hebben voor de volgende map op de computer die als host fungeert voor het service verbindings punt: ** &lt; ConfigMgr-installatie directory \> \EasySetupPayload\offline**  
 
 ### <a name="to-use-the-update-registration-tool"></a>Het hulpprogramma Registratie bijwerken gebruiken  
 
 1. Op de computer die het serviceverbindingspunt host:  
 
-   -   Open een opdracht prompt met beheerders bevoegdheden en wijzig de mappen in de locatie met ** &lt;\>-&lt;product\>-&lt;product versie KB artikel id\>-ConfigMgr. update. exe**  
+   -   Open een opdracht prompt met beheerders bevoegdheden en wijzig de mappen in de locatie met ** &lt; product \> - &lt; product versie \> - &lt; KB artikel id \> -ConfigMgr. update. exe**  
 
 2. Voer de volgende opdracht uit om het hulpprogramma Registratie bijwerken te openen:  
 
-   -   **&lt;\>-Product&lt;\>product versie-KB artikel-\>id-ConfigMgr. update. exe&lt;**  
+   -   **&lt;Product \> - &lt; product versie \> - &lt; KB artikel-id \> -ConfigMgr. update. exe**  
 
    Wanneer de hotfix is geregistreerd, wordt deze binnen 24 uur weergegeven als nieuwe update in de console.  U kunt het proces versnellen:
 
-   - Open de Configuration Manager-console, ga naar **beheer** > **updates en onderhoud**en klik vervolgens op **controleren op updates**. (Vóór versie 1702 werden updates en onderhoud onder **beheer** > **Cloud Services**.) 
+   - Open de Configuration Manager-console, ga naar **beheer**  >  **updates en onderhoud**en klik vervolgens op **controleren op updates**. (Vóór versie 1702 werden updates en onderhoud onder **beheer**  >  **Cloud Services**.) 
 
    Het hulpprogramma Registratie bijwerken registreert de uitgevoerde bewerkingen in een logboekbestand op de lokale computer. Het logboek bestand heeft dezelfde naam als het bestand hotfix. exe en wordt naar de map **% System root%/Temp** geschreven.  
 
     Wanneer de update is geregistreerd, kunt u het hulpprogramma Registratie bijwerken sluiten.  
 
-3. Open de Configuration Manager-console en ga naar **beheer** > **updates en onderhoud**. De geïmporteerde hotfixes kunnen nu worden geïnstalleerd. (Vóór versie 1702 werden updates en onderhoud onder **beheer** > **Cloud Services**.)
+3. Open de Configuration Manager-console en ga naar **beheer**  >  **updates en onderhoud**. De geïmporteerde hotfixes kunnen nu worden geïnstalleerd. (Vóór versie 1702 werden updates en onderhoud onder **beheer**  >  **Cloud Services**.)
 
    Zie [updates in de console installeren voor Configuration Manager](../../../core/servers/manage/install-in-console-updates.md) voor meer informatie over het installeren van updates.  

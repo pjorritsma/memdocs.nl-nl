@@ -10,12 +10,12 @@ ms.assetid: 24fca61e-9cdb-447a-ad7a-f4d2e4fd6704
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c191debd77502f7d594a77eb3bd0c50cd6854f66
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 84cb878de3eea56dc68180a83fd4b6a32b2d1073
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722583"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906427"
 ---
 # <a name="use-cloud-services-with-configuration-manager"></a>Cloudservices met Configuration Manager gebruiken
 
@@ -36,7 +36,7 @@ Hoewel het inrichten van cloud resources niet iets hoeft te doen voordat u Confi
 
 -   Zie [cloud-gebaseerde distributie punten installeren](../servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md)voor meer informatie over distributie punten in de Cloud.
 
--   Zie [Azure](https://go.microsoft.com/fwlink/p/?LinkId=262965) in de MSDN-bibliotheek voor meer informatie over Azure.  
+-   Zie [Wat is Azure?](https://azure.microsoft.com/overview/what-is-azure/) voor meer informatie over Azure.
 
 ### <a name="azure-virtual-machines-for-cloud-based-infrastructure"></a>Virtuele Azure-machines (voor Cloud infrastructuur)  
  Configuration Manager ondersteunt het gebruik van computers die worden uitgevoerd op virtuele machines in azure, net zoals wanneer de on-premises in uw fysieke bedrijfs netwerk worden uitgevoerd. U kunt in de volgende scenario's kunt virtuele Azure-machines gebruiken:  
@@ -78,12 +78,4 @@ Voor deze aanvullende mogelijkheden hebt u geen Azure-abonnement nodig. U hoeft 
 ##  <a name="security-for-cloud-based-services"></a><a name="BKMK_CloudSec"></a>Beveiliging voor Cloud Services  
  Configuration Manager gebruikt certificaten voor het inrichten en openen van uw inhoud in azure, en voor het beheren van de services die u gebruikt. Configuration Manager versleutelt de gegevens die u in azure opslaat, maar brengt geen aanvullende beveiligings-of gegevens controles meer uit dan die die Azure biedt.  
 
- Zie de Details voor de verschillende Cloud resource scenario's voor meer informatie. U kunt ook de volgende onderwerpen voor Azure-beveiliging bekijken:  
-
--   [Azure: wat is het beheer van beveiligings accounts in azure?](https://go.microsoft.com/fwlink/p/?LinkId=262968)  
-
--   [Overzicht van Azure-beveiliging](https://go.microsoft.com/fwlink/p/?LinkId=262970)  
-
--   [Beveiligingsdilemma's tijdens de cloudmigratie overwinnen](https://go.microsoft.com/fwlink/p/?LinkId=262971)  
-
--   [Gegevensbeveiliging in Azure, deel 1 van 2](https://go.microsoft.com/fwlink/p/?LinkId=262974)  
+ Zie de Details voor de verschillende Cloud resource scenario's voor meer informatie. Zie ook een [Inleiding tot Azure-beveiliging](https://docs.microsoft.com/azure/security/fundamentals/overview).

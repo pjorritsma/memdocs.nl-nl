@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2ae184400a3de0d7ab27fffc1ce1e6287593b1ae
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: ed3f53b6e2e9557def20fc459dfcf4641b0e396d
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076302"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905827"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1601 voor Configuration Manager
 
@@ -83,7 +83,7 @@ In de 1601 Technical Preview is ondersteuning toegevoegd voor de volgende functi
 
     -   **Alle vereiste updates met een deadline die ouder is dan een bepaald aantal dagen, zijn geïnstalleerd:** Deze regel controleert of het apparaat van de gebruiker alle vereiste updates heeft (opgegeven in de regel **vereiste automatische updates** ) binnen de door u opgegeven deadline en respijt periode, en installeert automatisch de vereiste updates die nog niet zijn geïnstalleerd.  
 
-    -   **BitLocker-stationsversleuteling vereisen:** Dit is een controle om te controleren of het primaire station (bijvoorbeeld C:\\) op het apparaat BitLocker is versleuteld. Als Bitlocker-versleuteling niet is ingeschakeld op het primaire station, wordt de toegang tot e-mail en SharePoint-services geblokkeerd.  
+    -   **BitLocker-stationsversleuteling vereisen:** Dit is een controle om te controleren of het primaire station (bijvoorbeeld C: \\ ) op het apparaat BitLocker is versleuteld. Als Bitlocker-versleuteling niet is ingeschakeld op het primaire station, wordt de toegang tot e-mail en SharePoint-services geblokkeerd.  
 
     -   **Antimalware vereisen:** Hiermee wordt gecontroleerd of de antimalware-software (alleen System Center Endpoint Protection of Windows Defender) is ingeschakeld en wordt uitgevoerd.  
          Indien dit niet is ingeschakeld, wordt de toegang tot e-mail en SharePoint-services geblokkeerd.  
@@ -140,7 +140,7 @@ Een client is online als deze momenteel is verbonden met een Configuration Manag
  De online status van de client heeft geen vereisten. U kunt deze gaan gebruiken zodra Configuration Manager Technical Preview 1601 is geïnstalleerd.  
 
 ### <a name="limitations"></a>Beperkingen  
- De online status van de client is alleen beschikbaar voor Windows-computers waarop de Configuration Manager-client is geïnstalleerd. De online status van de client wordt niet ondersteund voor Mac-, Linux-of UNIX-computers of\-apparaten die worden beheerd met on-premises Mobile Device Management.  
+ De online status van de client is alleen beschikbaar voor Windows-computers waarop de Configuration Manager-client is geïnstalleerd. De online status van de client wordt niet ondersteund voor Mac-, Linux-of UNIX-computers of apparaten die worden beheerd met on- \- premises Mobile Device Management.  
 
 ### <a name="to-view-client-online-status"></a>Online status van de client weer geven  
 
@@ -164,7 +164,6 @@ Een client is online als deze momenteel is verbonden met een Configuration Manag
 
  Configuration Manager helpt u bij het beheren van apps die u via een dergelijk programma hebt aangeschaft door de licentie gegevens uit de App Store te importeren en bij te houden hoeveel licenties u hebt gebruikt.  
 
- Zie [apps beheren die u hebt aangeschaft via een volume-aankoop programma met Configuration Manager](https://technet.microsoft.com/library/mt627954.aspx)voor meer informatie.  
 
 ### <a name="ios---app-configuration-for-applicationsbr-hybrid"></a>iOS-app-configuratie voor toepassingen<br />Hybride  
  Sommige iOS-toepassingen ondersteunen het vooraf configureren van instellingen, zoals een server of database waarmee de toepassing verbinding moet maken. Configuration Manager ondersteunt nu het implementeren van app-configuratie beleidsregels op het apparaat, zodat de gebruiker de app onmiddellijk kan gebruiken zonder dat deze informatie nodig is. Ontwikkel aars moeten deze functionaliteit in hun apps inschakelen.  

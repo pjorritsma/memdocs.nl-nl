@@ -2,7 +2,7 @@
 title: Controle lijst voor 2002
 titleSuffix: Configuration Manager
 description: Meer informatie over de acties die u moet uitvoeren voordat u bijwerkt naar Configuration Manager versie 2002.
-ms.date: 04/01/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2993032a-1204-4bd8-b5af-17a980bb0649
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a7f2abac1810b5ab40e3c253b6aee7aa970174d9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 63293c103cf8a19d006bd700cac6c370ba5e7391
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723535"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268943"
 ---
 # <a name="checklist-for-installing-update-2002-for-configuration-manager"></a>Controle lijst voor het installeren van update 2002 voor Configuration Manager
 
@@ -33,7 +33,7 @@ Nadat uw hiërarchie het update pakket van micro soft heeft gedownload, kunt u h
 
   - In het dmpdownloader. log kan worden aangegeven dat het dmpdownloader-proces wacht op een interval voordat op updates wordt gecontroleerd. Als u het downloaden van de herdistributie bestanden van de update opnieuw wilt starten, start u de **SMS_Executive** -service opnieuw op de site server.
 
-  - Een ander algemeen Download probleem treedt op wanneer de instellingen van de `silverlight.dlservice.microsoft.com`proxy `download.microsoft.com`server downloaden `go.microsoft.com`van, en niet verhinderen.
+  - Een ander algemeen Download probleem treedt op wanneer de instellingen van de proxy server downloaden van `silverlight.dlservice.microsoft.com` , en niet verhinderen `download.microsoft.com` `go.microsoft.com` .
 
 Zie [updates en onderhoud in de console](updates.md#bkmk_inconsole)voor meer informatie over het installeren van updates.
 
@@ -68,33 +68,35 @@ De eerste keer dat u een Configuration Manager-console gebruikt nadat de update 
 
 <!-- SCCMDocs#1397 -->
 
-<!-- As of December 20, 2019, version 2002 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version.
- -->
+Vanaf 11 mei 2020 is versie 2002 wereld wijd beschikbaar voor alle klanten die moeten worden geïnstalleerd. Als u zich eerder hebt aangemeld bij de vroege update ring, kijkt u naar een update voor deze huidige vertakkings versie.
 
-Op dit moment wordt versie 2002 uitgebracht voor de vroege update ring. Als u deze update wilt installeren, moet u zich aanmelden. Met het volgende Power shell-script wordt uw hiërarchie of zelfstandige primaire site toegevoegd aan de vroege update ring voor versie 2002:
+<!--
+At this time, version 2002 is released for the early update ring. To install this update, you need to opt-in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2002:
 
-[Script voor versie 2002 opt-in](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
+[Version 2002 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
 
-Micro soft ondertekent het script digitaal en bundelt dit in een ondertekend zelfuitpakkend uitvoerbaar bestand.
+<!--
+Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable.
 
 > [!Note]  
-> Update versie 2002 is alleen van toepassing op sites waarop versie 1810 of hoger wordt uitgevoerd.
+> The version 2002 update is only applicable to sites running version 1810 or later.
 
-Om u aan te melden voor de eerste update ring:
+To opt-in to the early update ring:
 
-1. Open Windows Power shell en **Voer als Administrator uit**
-1. Voer het script **EnableEarlyUpdateRing2002. ps1** uit met de volgende syntaxis:
+1. Open Windows PowerShell and **Run as administrator**
+1. Run the **EnableEarlyUpdateRing2002.ps1** script, using the following syntax:
 
     `EnableEarlyUpdateRing2002.ps1 <SiteServer_Name> | SiteServer_IP>`
 
-    Waar `SiteServer` verwijst naar de centrale beheer site of de zelfstandige primaire site server. Bijvoorbeeld: `EnableEarlyUpdateRing2002.ps1 cmprimary01`
+    Where `SiteServer` refers to the central administration site or standalone primary site server. For example, `EnableEarlyUpdateRing2002.ps1 cmprimary01`
 
-1. Controleren op updates. Zie [beschik bare updates ophalen](install-in-console-updates.md#get-available-updates)voor meer informatie.
+1. Check for updates. For more information, see [Get available updates](install-in-console-updates.md#get-available-updates).
 
-De update versie 2002 is nu beschikbaar in de-console.
+The version 2002 update should now be available in the console.
 
 > [!Important]  
-> Met dit script wordt de site alleen toegevoegd aan de vroege update ring voor versie 2002. Het is geen permanente wijziging.
+> This script only adds your site to the early update ring for version 2002. It's not a permanent change.
+ -->
 
 ## <a name="checklist"></a>Controlelijst
 
@@ -190,7 +192,7 @@ Voordat u de update installeert, moet u de onderhouds taak van de site uitschake
 
 Wanneer een onderhoudstaak van de sitedatabase wordt uitgevoerd tijdens de installatie van updates, kan de installatie van de update mislukken. Voordat u een taak uitschakelt, registreert u het schema van de taak zodat u de configuratie ervan kunt herstellen nadat de update is geïnstalleerd.
 
-Zie [onderhouds taken](maintenance-tasks.md) en [naslag voor onderhouds taken](reference-for-maintenance-tasks.md)voor meer informatie.
+Zie [onderhouds taken](maintenance-tasks.md)   en [naslag voor onderhouds taken](reference-for-maintenance-tasks.md)voor meer informatie.
 
 ### <a name="temporarily-stop-any-antivirus-software"></a>Antivirus software tijdelijk stoppen
 
@@ -212,7 +214,7 @@ U kunt bijvoorbeeld aangepaste vermeldingen toevoegen aan het bestand **osdinjec
 
 Wanneer u een site-update installeert waarmee de client ook wordt bijgewerkt, test u die nieuwe client update in de pre-productie voordat u alle productie-clients bijwerkt. Als u deze optie wilt gebruiken, moet u uw site configureren voor ondersteuning van automatische upgrades voor pre-productie voordat u begint met de installatie van de update.
 
-Zie [clients](../../clients/manage/upgrade/upgrade-clients.md) bijwerken en [Client upgrades testen in een pre-productie verzameling](../../clients/manage/upgrade/test-client-upgrades.md)voor meer informatie.
+Zie [clients bijwerken](../../clients/manage/upgrade/upgrade-clients.md)   en [Client upgrades testen in een pre-productie verzameling](../../clients/manage/upgrade/test-client-upgrades.md)voor meer informatie.
 
 ### <a name="plan-to-use-service-windows"></a>Het gebruik van service vensters plannen
 
@@ -237,7 +239,7 @@ Als u een controle op vereisten wilt uitvoeren vanuit de-console, gaat u naar de
 Zie voor meer informatie de sectie de **prerequisite Checker uitvoeren voordat u een update installeert** in [voordat u een update in de console installeert](install-in-console-updates.md#bkmk_beforeinstall).
 
 > [!IMPORTANT]  
-> Wanneer de prerequisite checker wordt uitgevoerd, werkt het proces enkele product bron bestanden bij die worden gebruikt voor site-onderhouds taken. Daarom voert u na het uitvoeren van de prerequisite Checker, maar voordat u de update installeert,, als u een site-onderhouds taak moet uitvoeren, **Setupwpf. exe** (Configuration Manager Setup) uit vanaf de cd. Meest recente map op de site server.
+> Wanneer de prerequisite checker wordt uitgevoerd, werkt het proces enkele product bron bestanden bij die worden gebruikt voor site-onderhouds taken. Daarom voert u na het uitvoeren van de prerequisite Checker, maar voordat u de update installeert,, als u een site-onderhouds taak moet uitvoeren, **Setupwpf. exe**   (Configuration Manager Setup) uit vanaf de cd. Meest recente map op de site server.
 
 ### <a name="update-sites"></a>Sites bijwerken
 

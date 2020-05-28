@@ -10,12 +10,12 @@ ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 2c8ca66bc83ec8eb18bc331287b6dbee47af7d85
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0a2a45ff866ea02aacc83c42109c8cba4020ed4e
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719804"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906804"
 ---
 #  <a name="manage-settings-for-software-updates"></a><a name="BKMK_ManageSUSettings"></a>Instellingen voor software-updates beheren  
 
@@ -40,7 +40,7 @@ Er zijn specifieke door Windows Update Agent (WUA) gebruikte groepsbeleidinstell
 Wanneer er een software-updatepunt voor een site is gemaakt, ontvangen clients een machinebeleid dat de servernaam van het software-updatepunt verstrekt en het lokale beleid **Locatie van Microsoft-updateservice in intranet opgeven** op de computer configureert. De WUA haalt de in de instelling **De updateservice in intranet instellen voor het detecteren van updates** opgegeven servernaam op, waarna deze verbinding maakt met deze server wanneer de scan voor compatibiliteit van software-updates wordt uitgevoerd. Wanneer het domeinbeleid voor de instelling **Locatie van Microsoft-updateservice in intranet** wordt gemaakt, wordt het lokale beleid overschreven en maakt de WUA mogelijk verbinding met een andere server dan die van het software-updatepunt. Wanneer dit gebeurt, scant de client mogelijk voor compatibiliteit van software-updates op basis van andere producten, classificaties en talen. Daarom dient u het Active Directory-beleid voor clientcomputers niet te configureren.  
 
 ### <a name="allow-signed-content-from-intranet-microsoft-update-service-location-group-policy"></a>Ondertekende inhoud vanaf de locatie van de Microsoft-updateservice op een intranet toestaan  
-U moet de groepsbeleidinstelling **Ondertekende inhoud toestaan van groepsbeleid voor locatie van Microsoft-updateservice in intranet** inschakelen voordat de WUA computers gaat scannen op software-updates die door System Center Updates Publisher zijn gemaakt en gepubliceerd. Wanneer de beleidinstelling is ingeschakeld, accepteert WUA via een intranetlocatie ontvangen software-updates, als de software-updates zijn ondertekend in het certificaatarchief **Vertrouwde uitgevers** op de lokale computer. Zie de [documentatiebibliotheek van Updates Publisher 2011](https://go.microsoft.com/fwlink/p/?LinkId=232476)voor meer informatie over de voor Updates Publisher 2011 vereiste groepsbeleidinstellingen.  
+U moet de groepsbeleidinstelling **Ondertekende inhoud toestaan van groepsbeleid voor locatie van Microsoft-updateservice in intranet** inschakelen voordat de WUA computers gaat scannen op software-updates die door System Center Updates Publisher zijn gemaakt en gepubliceerd. Wanneer de beleidinstelling is ingeschakeld, accepteert WUA via een intranetlocatie ontvangen software-updates, als de software-updates zijn ondertekend in het certificaatarchief **Vertrouwde uitgevers** op de lokale computer. Zie de [documentatiebibliotheek van Updates Publisher 2011](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10))voor meer informatie over de voor Updates Publisher 2011 vereiste groepsbeleidinstellingen.  
 
 ### <a name="automatic-updates-configuration"></a>Automatische updates configureren  
 Met automatische updates kunt u beveiligingsupdates en andere belangrijke downloads ontvangen op clientcomputers. Automatische updates wordt geconfigureerd via de groepsbeleidinstelling **Automatische updates configureren** of via het configuratiescherm op de lokale computer. Wanneer Automatische updates is ingeschakeld, ontvangen clientcomputers updatemeldingen en downloaden en installeren de clientcomputers de vereiste updates, afhankelijk van de geconfigureerde instellingen, Wanneer Automatische updates tegelijk met software-updates wordt gebruikt, geeft elke clientcomputer mogelijk meldingspictogrammen en pop-upweergavemeldingen weer voor dezelfde update. Wanneer opnieuw opstarten is vereist, geeft elke clientcomputer mogelijk een dialoogvenster voor opnieuw opstarten weer voor dezelfde update.  
@@ -137,6 +137,6 @@ Standaard wordt de certificaatintrekkingslijst (CRL) niet gecontroleerd bij het 
 Als u deze optie gebruikt, moet u CRL-controle inschakelen op de Configuration Manager-consoles die software-updates verwerken.  
 
 #### <a name="to-enable-crl-checking"></a>Controle van certificaatintrekkingslijst inschakelen  
-Op de computer die de CRL-controle uitvoert, voert u vanaf de product-DVD het volgende uit vanaf een opdracht prompt: **\SMSSETUP\BIN\X64\\**<*Language*>**\UpdDwnldCfg.exe/checkrevocation**.  
+Op de computer die de CRL-controle uitvoert, voert u vanaf de product-DVD het volgende uit vanaf een opdracht prompt: **\SMSSETUP\BIN\X64 \\ ** < *Language* > **\UpdDwnldCfg.exe/checkrevocation**.  
 
 Voor Engels (Verenigde Staten) voert u bijvoorbeeld **\SMSSETUP\BIN\X64\00000409\UpdDwnldCfg.exe/checkrevocation** uit  

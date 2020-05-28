@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d154dc0ba681a37ebb2155bfa1bcdb6d8734965f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b3e1a2feaddb7384d76790249152c89dfa8ee2d3
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073956"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904800"
 ---
 # <a name="what39s-new-in-version-1610-of-configuration-manager"></a>Wat&#39;s nieuw in versie 1610 van Configuration Manager
 
@@ -29,8 +29,8 @@ Update 1610 voor Configuration Manager current branch is beschikbaar als een upd
 > Als u een nieuwe site wilt installeren, moet u een basislijn versie van Configuration Manager gebruiken.  
 >
 > Meer informatie over:    
-> - [Nieuwe sites installeren](https://technet.microsoft.com/library/mt590197.aspx)  
-> - [Updates installeren op sites](https://technet.microsoft.com/library/mt607046.aspx)  
+> - [Nieuwe sites installeren](../../servers/deploy/install/installing-sites.md)  
+> - [Updates installeren op sites](../../servers/manage/updates.md)  
 > - [Basis lijn-en update versies](../../servers/manage/updates.md#bkmk_Baselines)
 
 De volgende secties bevatten informatie over wijzigingen en nieuwe mogelijkheden die zijn geïntroduceerd in versie 1610 van Configuration Manager.  
@@ -156,7 +156,7 @@ Voor meer informatie:
 - [Clientinstellingen configureren](../../clients/deploy/configure-client-settings.md)
 
 ## <a name="software-updates-dashboard"></a>Dash board voor software-updates
-Gebruik het nieuwe dash board voor software-updates om de huidige nalevings status van apparaten in uw organisatie weer te geven en snel de gegevens te analyseren om te zien welke apparaten risico lopen. Als u het dash board wilt weer geven, gaat u naar **bewaking** > **overzicht** > **Security** > **software updates dash board**.
+Gebruik het nieuwe dash board voor software-updates om de huidige nalevings status van apparaten in uw organisatie weer te geven en snel de gegevens te analyseren om te zien welke apparaten risico lopen. Als u het dash board wilt weer geven, gaat u naar **bewaking**  >  **overzicht**  >  **Security**  >  **software updates dash board**.
 
 Zie [software-updates bewaken](../../../sum/deploy-use/monitor-software-updates.md)voor meer informatie.
 
@@ -168,7 +168,7 @@ Met deze actie wordt de toepassing niet verwijderd van alle apparaten. Het progr
 
 ## <a name="filter-by-content-size-in-automatic-deployment-rules"></a>Filteren op inhouds grootte in regels voor automatische implementatie
 U kunt nu filteren op de inhouds grootte voor software-updates in regels voor automatische implementatie. Als u bijvoorbeeld alleen software-updates wilt downloaden die kleiner zijn dan 2 MB, kunt u het filter voor **inhouds grootte (KB)** instellen op **< 2048**. Met dit filter wordt voor komen dat grote software-updates automatisch worden gedownload, wat een vereenvoudigd Windows-onderhoud op lagere niveaus ondersteunt wanneer de netwerk bandbreedte beperkt is. Zie deze artikelen voor meer informatie:
-- [Configuration Manager en vereenvoudigd Windows-onderhoud op besturings systemen van lagere niveaus](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/)
+- [Configuration Manager en vereenvoudigd Windows-onderhoud op besturings systemen van lagere niveaus](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-simplified-windows-servicing-on-down/ba-p/274056)
 - [Software-updates automatisch implementeren](../../../sum/deploy-use/automatically-deploy-software-updates.md)
 
 Voer een van de volgende handelingen uit om het veld **inhouds grootte (KB)** te configureren:
@@ -176,7 +176,7 @@ Voer een van de volgende handelingen uit om het veld **inhouds grootte (KB)** te
 - Ga in de eigenschappen voor een bestaande regel voor automatische implementatie naar het tabblad **software-updates** .
 
 ## <a name="office-365-client-management-dashboard"></a>Office 365-dash board voor client beheer
-Het Office 365-dash board voor client beheer is nu beschikbaar in de Configuration Manager-console. Als u het dash board wilt weer geven, gaat u naar **software bibliotheek** > **Overview** > **Office 365 client management**.
+Het Office 365-dash board voor client beheer is nu beschikbaar in de Configuration Manager-console. Als u het dash board wilt weer geven, gaat u naar **software bibliotheek**  >  **Overview**  >  **Office 365 client management**.
 
 In het dash board worden grafieken weer gegeven voor het volgende:
 
@@ -216,7 +216,7 @@ Zie [configuratie-items voor apparaten die worden beheerd zonder de Configuratio
 
 #### <a name="security-settings"></a>Beveiligingsinstellingen
 - **Versleuteling vereisen op opslagkaarten**
-- **Schermopname toestaan**
+- **Schermafbeelding toestaan**
 - **Verzending van diagnostische gegevens toestaan**
 
 #### <a name="browser-settings"></a>Browserinstellingen
@@ -236,7 +236,7 @@ Zie [configuratie-items voor apparaten die worden beheerd zonder de Configuratio
 - **NFC toestaan**
 - **Bluetooth toestaan**
 - **Spraakroaming toestaan**
-- **Dataroaming toestaan**
+- **Gegevensroaming toestaan**
 - **Sms-/mms-berichten toestaan**
 - **Spraakassistent toestaan**
 - **Nummer inspreken toestaan**
@@ -263,7 +263,7 @@ Zie [configuratie-items voor apparaten die worden beheerd zonder de Configuratio
 - **Wacht woord vereisen wanneer het apparaat wordt geactiveerd vanuit een niet-actieve status**
 
 #### <a name="security-settings"></a>Beveiligingsinstellingen
-- **Versleuteling vereisen op mobiel apparaat**
+- **Versleuteling vereisen voor mobiel apparaat**
 - **Handmatige uitschrijving toestaan**
 
 #### <a name="device-capability-settings"></a>Instellingen voor apparaatfuncties
@@ -291,7 +291,7 @@ Zie [configuratie-items voor apparaten die worden beheerd zonder de Configuratio
 - **Minimale wachtwoordlengte**
 - **Aantal mislukte aanmeldingen dat is toegestaan voordat het apparaat wordt gewist**
 - **Minuten van inactiviteit voordat het scherm wordt uitgeschakeld**
-- **Wacht woord verloopt (dagen)**
+- **Dagen tot wachtwoord verloopt**
 - **Wachtwoordgeschiedenis onthouden**
 - **Wachtwoorden niet opnieuw gebruiken**
 - **Afbeeldingswachtwoord en PIN toestaan**

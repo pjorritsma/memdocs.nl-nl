@@ -10,12 +10,13 @@ ms.assetid: 6e7d2850-b0af-497e-bbc1-bfc2a7420a7a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e1d031588100f3930bf5bf25970f544b91017d77
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: e24c2ee19093dd12af6e87280a31851a1f593782
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722520"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268467"
 ---
 # <a name="how-to-close-your-account"></a>Uw account sluiten
 
@@ -112,7 +113,7 @@ Als u niet wilt dat uw apparaten diagnostische gegevens gaan verzenden:
 
 Stel deze waarden in met een van de volgende methoden:
 
-- Groeps beleid, in **computer configuratie** > **Beheersjablonen** > van**gegevens verzameling en Preview-versies** van Windows-**onderdelen** > 
+- Groeps beleid, in **computer configuratie**  >  **Beheersjablonen**van  >  **Windows Components**  >  **gegevens verzameling en Preview-versies** van Windows-onderdelen
 - Beheer van mobiele apparaten (MDM), zoals [Microsoft intune](https://docs.microsoft.com/intune/device-restrictions-windows-10#reporting-and-telemetry)
 
 Zie [Diagnostische gegevens van Windows in uw organisatie configureren](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization) voor meer informatie.

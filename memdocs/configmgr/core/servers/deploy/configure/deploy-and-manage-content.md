@@ -2,7 +2,7 @@
 title: Inhoud implementeren
 titleSuffix: Configuration Manager
 description: Nadat u distributie punten voor Configuration Manager hebt geïnstalleerd, kunt u aan de slag gaan met het implementeren van inhoud.
-ms.date: 10/06/2016
+ms.date: 05/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: d50dcca0-4419-449d-a487-73abcadf328f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7478eff1a14eeffd4d12b1539df7c5573c6a7cb6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: df26fe91f009a1a4f5d3c5a4f4adb5fe45bbd245
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722975"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343147"
 ---
 # <a name="deploy-and-manage-content-for-configuration-manager"></a>Inhoud implementeren en beheren voor Configuration Manager
 
@@ -24,7 +24,7 @@ ms.locfileid: "81722975"
 Nadat u distributie punten voor Configuration Manager hebt geïnstalleerd, kunt u beginnen met het implementeren van inhoud. Doorgaans worden inhouds overdrachten naar distributie punten via het netwerk, maar er zijn ook andere opties voor het ophalen van inhoud aan de distributie punten. Na de overdracht van inhoud naar een distributie punt, kunt u die inhoud op distributie punten bijwerken, opnieuw distribueren, verwijderen en valideren.  
 
 ##  <a name="distribute-content"></a><a name="bkmk_distribute"></a>Inhoud distribueren  
-Doorgaans distribueert u inhoud naar distributie punten zodat deze beschikbaar is voor client computers. (De uitzonde ring hierop is wanneer u inhouds distributie op aanvraag gebruikt voor een specifieke implementatie.)  Wanneer u inhoud distribueert, Configuration Manager inhouds bestanden in een pakket opslaat en vervolgens het pakket distribueert naar het distributie punt. De typen inhoud die u kunt distribueren, zijn:  
+Doorgaans distribueert u inhoud naar distributie punten zodat deze beschikbaar is voor client computers. (De uitzonde ring hierop is wanneer u inhouds distributie op aanvraag gebruikt voor een specifieke implementatie.) Wanneer u inhoud distribueert, Configuration Manager inhouds bestanden in een pakket opslaat en vervolgens het pakket distribueert naar het distributie punt. De inhoud voor het pakket wordt opgehaald uit de inhouds bibliotheek van de site server. De typen inhoud die u kunt distribueren, zijn:  
 
 - Implementatie typen van toepassing  
 
@@ -52,21 +52,21 @@ Gebruik de volgende procedure om inhoud te distribueren naar distributie punten.
 
 2.  Selecteer in de werk ruimte **software bibliotheek** een van de volgende stappen voor het type inhoud dat u wilt distribueren:  
 
-    - **Toepassingen**:**Vouw toepassingen voor** **toepassings beheer** > uit en selecteer vervolgens de toepassingen die u wilt distribueren.  
+    - **Toepassingen**: Vouw toepassingen voor **toepassings beheer**uit  >  **Applications**en selecteer vervolgens de toepassingen die u wilt distribueren.  
 
-    - **Pakketten**: Vouw **toepassings beheer** >  **pakketten**uit en selecteer vervolgens de pakketten die u wilt distribueren.  
+    - **Pakketten**: Vouw **toepassings beheer**  >   **pakketten**uit en selecteer vervolgens de pakketten die u wilt distribueren.  
 
-    - **Implementatie pakketten**: Vouw **Software-update** >  -**implementatie pakketten**uit en selecteer vervolgens de implementatie pakketten die u wilt distribueren.  
+    - **Implementatie pakketten**: Vouw **Software**  >   -Update-**implementatie pakketten**uit en selecteer vervolgens de implementatie pakketten die u wilt distribueren.  
 
-    - **Stuur programmapakketten**: Vouw **besturings systemen** >  **Stuur programmapakketten**uit en selecteer vervolgens de Stuur programmapakketten die u wilt distribueren.  
+    - **Stuur programmapakketten**: Vouw **besturings systemen**  >   **Stuur programmapakketten**uit en selecteer vervolgens de Stuur programmapakketten die u wilt distribueren.  
 
-    - **Installatie kopieën van besturings systeem**: Vouw **besturingssysteem** >  **installatie kopieën**van besturings systemen uit en selecteer vervolgens de installatie kopieën van het besturings systeem die u wilt distribueren.  
+    - **Installatie kopieën van besturings systeem**: Vouw **besturingssysteem**  >   **installatie kopieën**van besturings systemen uit en selecteer vervolgens de installatie kopieën van het besturings systeem die u wilt distribueren.  
 
-    - **Installatie Programma's**van het besturings systeem: Vouw besturings **systemen** > **installatie Programma's besturings systeem**en selecteer vervolgens de installatie Programma's van het besturings systeem die u wilt distribueren.  
+    - **Installatie Programma's**van het besturings systeem: Vouw besturings **systemen**  >  **installatie Programma's besturings systeem**en selecteer vervolgens de installatie Programma's van het besturings systeem die u wilt distribueren.  
 
-    - **Opstart installatie**kopieën: Vouw**installatie kopieën**van **besturings systemen** >  uit en selecteer vervolgens de opstart installatie kopieën die u wilt distribueren.  
+    - **Opstart installatie**kopieën: Vouw installatie kopieën van **besturings systemen**uit  >   **Boot Images**en selecteer vervolgens de opstart installatie kopieën die u wilt distribueren.  
 
-    - **Taken reeksen**: Vouw**taken reeksen**van **besturings systemen** >  uit en selecteer vervolgens de taken reeks die u wilt distribueren. Hoewel taken reeksen geen inhoud bevatten, hebben ze gekoppelde inhouds afhankelijkheden die worden gedistribueerd.  
+    - **Taken reeksen**: Vouw taken reeksen van **besturings systemen**uit  >   **Task Sequences**en selecteer vervolgens de taken reeks die u wilt distribueren. Hoewel taken reeksen geen inhoud bevatten, hebben ze gekoppelde inhouds afhankelijkheden die worden gedistribueerd.  
 
       > [!NOTE]  
       > Als u de taken reeks wijzigt, moet u de inhoud opnieuw distribueren.  
@@ -155,7 +155,7 @@ U kunt een gecomprimeerd, voor bereid inhouds bestand maken dat de bestanden en 
     > [!NOTE]  
     > **Voor toepassingen:** Klik op het tabblad **Start** in de groep **toepassing** op voor **bereid inhouds bestand maken**.  
     >   
-    > **Voor pakketten:** Klik op het tabblad **Start** in de &lt;groep *pakketnaam*> op voor **bereid inhouds bestand maken**.  
+    > **Voor pakketten:** Klik op het tabblad **Start** in de &lt; groep *pakketnaam*> op voor **bereid inhouds bestand maken**.  
 
 4.  Klik op de pagina **Algemeen** op **Bladeren**, kies de locatie voor het voor bereide inhouds bestand, geef een naam op voor het bestand en klik vervolgens op **Opslaan**. U gebruikt dit vooraf geplaatste inhouds bestand op primaire site servers, secundaire site servers of distributie punten om de inhoud en meta gegevens te importeren.  
 
@@ -252,18 +252,18 @@ Gebruik de volgende procedure om de inhouds bestanden hand matig vanuit het voor
 
 1.  Kopieer het voor bereide inhouds bestand naar de computer waarvan u de inhoud wilt extra heren.  
 
-2.  Kopieer het opdracht regel programma voor het uitpakken van inhoud vanuit &lt; *ConfigMgrInstallationPath*> \Bin\\&lt;*platform*> naar de computer van waaruit u het voor bereide inhouds bestand wilt extra heren.  
+2.  Kopieer het opdracht regel programma voor het uitpakken van inhoud vanuit &lt; *ConfigMgrInstallationPath*> \Bin \\ &lt; *platform*> naar de computer van waaruit u het voor bereide inhouds bestand wilt extra heren.  
 
 3.  Open de opdracht prompt en navigeer naar de maplocatie van het voor bereide inhouds bestand en het hulp programma voor het uitpakken van inhoud.  
 
     > [!NOTE]  
     > U kunt een of meer voor bereide inhouds bestanden ophalen op een site server, secundaire site server of distributie punt.  
 
-4.  Typ **extract content/p:**&lt;*PrestagedFileLocation*>**\\**&lt;*PrestagedFileName*PrestagedFileName> **/s** om één bestand te importeren.  
+4.  Typ **extract content/p:** &lt; *PrestagedFileLocation* > **\\** &lt; *PrestagedFileName* >  **/s** om één bestand te importeren.  
 
-    Typ **extract content/p:**&lt;*PrestagedFileLocation*> **/s** om alle voor bereide bestanden in de opgegeven map te importeren.  
+    Typ **extract content/p:** &lt; *PrestagedFileLocation* >  **/s** om alle voor bereide bestanden in de opgegeven map te importeren.  
 
-    Typ bijvoorbeeld **extract content/p: D:\PrestagedFiles\MyPrestagedFile.pkgx/s** waarbij `D:\PrestagedFiles\` de PrestagedFileLocation is, `MyPrestagedFile.pkgx` de voor bereide bestands naam is en `/S` informeert Configuration Manager om alleen inhouds bestanden uit te pakken die nieuwer zijn dan het distributie punt.  
+    Typ bijvoorbeeld **extract content/p: D:\PrestagedFiles\MyPrestagedFile.pkgx/s** waarbij `D:\PrestagedFiles\` de PrestagedFileLocation is, de voor `MyPrestagedFile.pkgx` bereide bestands naam is en `/S` informeert Configuration Manager om alleen inhouds bestanden uit te pakken die nieuwer zijn dan het distributie punt.  
 
     Wanneer u het voor bereide inhouds bestand op een site server uitpakt, worden de inhouds bestanden toegevoegd aan de inhouds bibliotheek op de site server en vervolgens wordt de beschik baarheid van de inhoud geregistreerd in de site Server database. Wanneer u het voor bereide inhouds bestand op een distributie punt exporteert, worden de inhouds bestanden toegevoegd aan de inhouds bibliotheek op het distributie punt. het distributie punt verzendt een status bericht naar de bovenliggende primaire site server en vervolgens wordt de beschik baarheid van de inhoud geregistreerd in de site database.  
 
@@ -311,7 +311,7 @@ U hebt de volgende opties voor het beheren van inhoud:
 
 ### <a name="update-content"></a>Inhoud bijwerken
 Wanneer de locatie van het bron bestand voor een implementatie wordt bijgewerkt door nieuwe bestanden toe te voegen of bestaande bestanden te vervangen door een nieuwere versie, kunt u de inhouds bestanden op distributie punten bijwerken met behulp van de actie **distributie punten bijwerken** of **inhoud bijwerken** :  
-- De inhouds bestanden worden gekopieerd van het bronpad van het bron bestand naar de inhouds bibliotheek op de site die eigenaar is van de inhouds bron van het pakket  
+- De inhouds bestanden worden gekopieerd van de oorspronkelijke pakket bron locatie naar de inhouds bibliotheek op de site die eigenaar is van de pakket inhouds bron
 - De pakket versie wordt verhoogd  
 - Elk exemplaar van de inhouds bibliotheek op site servers en op distributie punten werkt alleen met de bestanden die zijn gewijzigd  
 
@@ -324,19 +324,19 @@ Wanneer de locatie van het bron bestand voor een implementatie wordt bijgewerkt 
 
 2.  Selecteer in de werk ruimte **software bibliotheek** een van de volgende stappen voor het type inhoud dat u wilt distribueren:  
 
-    - **Toepassingen**:**Vouw toepassingen voor** **toepassings beheer** > uit en selecteer vervolgens de toepassingen die u wilt distribueren. Klik op het tabblad **implementatie typen** en selecteer vervolgens het implementatie type dat u wilt bijwerken.  
+    - **Toepassingen**: Vouw toepassingen voor **toepassings beheer**uit  >  **Applications**en selecteer vervolgens de toepassingen die u wilt distribueren. Klik op het tabblad **implementatie typen** en selecteer vervolgens het implementatie type dat u wilt bijwerken.  
 
-    - **Pakketten**: Vouw **toepassings beheer** > **pakketten**uit en selecteer vervolgens de pakketten die u wilt bijwerken.  
+    - **Pakketten**: Vouw **toepassings beheer**  >  **pakketten**uit en selecteer vervolgens de pakketten die u wilt bijwerken.  
 
-    - **Implementatie pakketten**: Vouw **Software-update** > -**implementatie pakketten**uit en selecteer vervolgens de implementatie pakketten die u wilt bijwerken.  
+    - **Implementatie pakketten**: Vouw **Software**  >  -Update-**implementatie pakketten**uit en selecteer vervolgens de implementatie pakketten die u wilt bijwerken.  
 
-    - **Stuur programmapakketten**: Vouw **besturings systemen** > **Stuur programmapakketten**uit en selecteer vervolgens de Stuur programmapakketten die u wilt bijwerken.  
+    - **Stuur programmapakketten**: Vouw **besturings systemen**  >  **Stuur programmapakketten**uit en selecteer vervolgens de Stuur programmapakketten die u wilt bijwerken.  
 
-    - **Installatie kopieën van besturings systeem**: Vouw besturingssysteem**installatie kopieën**van besturings **systemen** > uit en selecteer vervolgens de installatie kopieën van het besturings systeem die u wilt bijwerken.  
+    - **Installatie kopieën van besturings systeem**: Vouw besturingssysteem installatie kopieën van besturings **systemen**uit  >  **Operating System Images**en selecteer vervolgens de installatie kopieën van het besturings systeem die u wilt bijwerken.  
 
-    - **Installatie Programma's**van het besturings systeem: Vouw besturings **systemen** > **installatie Programma's besturings systeem**uit en selecteer vervolgens de installatie Programma's van het besturings systeem die u wilt bijwerken.  
+    - **Installatie Programma's**van het besturings systeem: Vouw besturings **systemen**  >  **installatie Programma's besturings systeem**uit en selecteer vervolgens de installatie Programma's van het besturings systeem die u wilt bijwerken.  
 
-    - **Opstart installatie**kopieën: Vouw**installatie kopieën**van **besturings systemen** >  uit en selecteer vervolgens de opstart installatie kopieën die u wilt bijwerken.  
+    - **Opstart installatie**kopieën: Vouw installatie kopieën van **besturings systemen**uit  >   **Boot Images**en selecteer vervolgens de opstart installatie kopieën die u wilt bijwerken.  
 
 3.  Klik op het tabblad **Start** in de groep **implementatie** op **distributie punten bijwerken**en klik vervolgens op **OK** om te bevestigen dat u de inhoud wilt bijwerken.  
 
@@ -362,19 +362,19 @@ Gebruik deze bewerking om inhouds bestanden in het pakket te herstellen of de in
 
 2.  Selecteer in de werk ruimte **software bibliotheek** een van de volgende stappen voor het type inhoud dat u wilt distribueren:  
 
-    - **Toepassingen**:**Vouw toepassingen voor** **toepassings beheer** >  uit en selecteer vervolgens de toepassing die u opnieuw wilt distribueren.  
+    - **Toepassingen**: Vouw toepassingen voor **toepassings beheer**uit  >   **Applications**en selecteer vervolgens de toepassing die u opnieuw wilt distribueren.  
 
-    - **Pakketten**: Vouw **toepassings beheer** > **pakketten**uit en selecteer vervolgens het pakket dat u opnieuw wilt distribueren.  
+    - **Pakketten**: Vouw **toepassings beheer**  >  **pakketten**uit en selecteer vervolgens het pakket dat u opnieuw wilt distribueren.  
 
-    - **Implementatie pakketten**: Vouw **Software-update** >  -**implementatie pakketten**uit en selecteer vervolgens het implementatie pakket dat u opnieuw wilt distribueren.  
+    - **Implementatie pakketten**: Vouw **Software-update**  >   -**implementatie pakketten**uit en selecteer vervolgens het implementatie pakket dat u opnieuw wilt distribueren.  
 
-    - **Stuur programmapakketten**: Vouw **besturings systemen** > **Stuur programmapakketten**uit en selecteer vervolgens het stuur programmapakket dat u opnieuw wilt distribueren.  
+    - **Stuur programmapakketten**: Vouw **besturings systemen**  >  **Stuur programmapakketten**uit en selecteer vervolgens het stuur programmapakket dat u opnieuw wilt distribueren.  
 
-    - **Installatie kopieën van besturings systeem**: Vouw besturingssysteem**installatie kopieën**van besturings **systemen** > uit en selecteer vervolgens de installatie kopie van het besturings systeem die u opnieuw wilt distribueren.  
+    - **Installatie kopieën van besturings systeem**: Vouw besturingssysteem installatie kopieën van besturings **systemen**uit  >  **Operating System Images**en selecteer vervolgens de installatie kopie van het besturings systeem die u opnieuw wilt distribueren.  
 
-    - **Installatie Programma's voor besturings** **systemen** > : Vouw besturingssysteem**installatie Programma's**van besturings systeem uit en selecteer vervolgens het installatie programma van het besturings systeem dat u opnieuw wilt distribueren.  
+    - **Installatie Programma's voor besturings** **systemen**: Vouw besturingssysteem installatie Programma's van besturings systeem uit  >  **Operating System Installers**en selecteer vervolgens het installatie programma van het besturings systeem dat u opnieuw wilt distribueren.  
 
-    - **Opstart installatie**kopieën: Vouw**installatie kopieën**van **besturings systemen** >  uit en selecteer vervolgens de opstart installatie kopie die u opnieuw wilt distribueren.  
+    - **Opstart installatie**kopieën: Vouw installatie kopieën van **besturings systemen**uit  >   **Boot Images**en selecteer vervolgens de opstart installatie kopie die u opnieuw wilt distribueren.  
 
 3.  Klik op **Eigenschappen** in het tabblad **Start**, in de groep **Eigenschappen**.  
 
@@ -409,7 +409,7 @@ U kunt de **RetryContentReplication** Windows Management INSTRUMENTATION (WMI)-k
 
 Gebruik deze methode alleen voor het afdwingen van replicatie wanneer u inhoud opnieuw moet distribueren nadat er problemen zijn met de normale replicatie van inhoud (meestal bevestigd door het knoop punt controle van de-console).   
 
-Zie [RetryContentReplication-methode in Class SMS_CM_UpdatePackages](https://msdn.microsoft.com/library/mt762092(CMSDK.16).aspx) op MSDN voor meer informatie over deze SDK-optie. Microsoft.com.
+Zie [methode RetryContentReplication in klasse SMS_CM_UpdatePackages](../../../../develop/reference/sum/retrycontentreplication-method-in-class-sms_cm_updatepackages.md)voor meer informatie over deze SDK-optie.
 
 ### <a name="remove-content"></a>Inhoud verwijderen
 Wanneer u niet langer inhoud op uw distributie punten nodig hebt, kunt u de inhouds bestanden op het distributie punt verwijderen.  
@@ -426,19 +426,19 @@ Als de inhoud echter is gekoppeld aan een ander pakket dat naar hetzelfde distri
 
 2.  Selecteer in de werk ruimte **software bibliotheek** een van de volgende stappen voor het type inhoud dat u wilt verwijderen:  
 
-    - **Toepassingen**:**Vouw toepassingen voor** **toepassings beheer** > uit en selecteer vervolgens de toepassing die u wilt verwijderen.  
+    - **Toepassingen**: Vouw toepassingen voor **toepassings beheer**uit  >  **Applications**en selecteer vervolgens de toepassing die u wilt verwijderen.  
 
-    - **Pakketten**: Vouw **toepassings beheer** > **pakketten**uit en selecteer vervolgens het pakket dat u wilt verwijderen.  
+    - **Pakketten**: Vouw **toepassings beheer**  >  **pakketten**uit en selecteer vervolgens het pakket dat u wilt verwijderen.  
 
-    - **Implementatie pakketten**: Vouw **Software-update** > -**implementatie pakketten**uit en selecteer vervolgens het implementatie pakket dat u wilt verwijderen.  
+    - **Implementatie pakketten**: Vouw **Software**  >  -Update-**implementatie pakketten**uit en selecteer vervolgens het implementatie pakket dat u wilt verwijderen.  
 
-    - **Stuur programmapakketten**: Vouw **besturings systemen** > **Stuur programmapakketten**uit en selecteer vervolgens het stuur programmapakket dat u wilt verwijderen.  
+    - **Stuur programmapakketten**: Vouw **besturings systemen**  >  **Stuur programmapakketten**uit en selecteer vervolgens het stuur programmapakket dat u wilt verwijderen.  
 
-    - **Installatie kopieën van besturings systeem**: Vouw **besturingssysteem** > **installatie kopieën**van besturings systemen uit en selecteer vervolgens de installatie kopie van het besturings systeem die u wilt verwijderen.  
+    - **Installatie kopieën van besturings systeem**: Vouw **besturingssysteem**  >  **installatie kopieën**van besturings systemen uit en selecteer vervolgens de installatie kopie van het besturings systeem die u wilt verwijderen.  
 
-    - **Installatie Programma's voor besturings** **systemen** > : Vouw besturingssysteem**installatie Programma's**van besturings systeem uit en selecteer vervolgens het installatie programma van het besturings systeem dat u wilt verwijderen.  
+    - **Installatie Programma's voor besturings**systemen: Vouw **besturingssysteem**  >  **installatie Programma's**van besturings systeem uit en selecteer vervolgens het installatie programma van het besturings systeem dat u wilt verwijderen.  
 
-    - **Opstart installatie**kopieën: Vouw**installatie kopieën**van **besturings systemen** > uit en selecteer vervolgens de opstart installatie kopie die u wilt verwijderen.  
+    - **Opstart installatie**kopieën: Vouw installatie kopieën van **besturings systemen**uit  >  **Boot Images**en selecteer vervolgens de opstart installatie kopie die u wilt verwijderen.  
 
 3.  Klik op **Eigenschappen** in het tabblad **Start**, in de groep **Eigenschappen**.  
 
@@ -491,19 +491,19 @@ Zie [distributiepunt configuraties](../../../../core/servers/deploy/configure/in
 
 2.  Selecteer in de werk ruimte **software bibliotheek** een van de volgende stappen voor het type inhoud dat u wilt valideren:  
 
-    - **Toepassingen**:**Vouw toepassingen voor** **toepassings beheer** > uit en selecteer vervolgens de toepassing die u wilt valideren.  
+    - **Toepassingen**: Vouw toepassingen voor **toepassings beheer**uit  >  **Applications**en selecteer vervolgens de toepassing die u wilt valideren.  
 
-    - **Pakketten**: Vouw **toepassings beheer** > **pakketten**uit en selecteer vervolgens het pakket dat u wilt valideren.  
+    - **Pakketten**: Vouw **toepassings beheer**  >  **pakketten**uit en selecteer vervolgens het pakket dat u wilt valideren.  
 
-    - **Implementatie pakketten**: Vouw **Software-update** > -**implementatie pakketten**uit en selecteer vervolgens het implementatie pakket dat u wilt valideren.  
+    - **Implementatie pakketten**: Vouw **Software**  >  -Update-**implementatie pakketten**uit en selecteer vervolgens het implementatie pakket dat u wilt valideren.  
 
-    - **Stuur programmapakketten**: Vouw **besturings systemen** > **Stuur programmapakketten**uit en selecteer vervolgens het stuur programmapakket dat u wilt valideren.  
+    - **Stuur programmapakketten**: Vouw **besturings systemen**  >  **Stuur programmapakketten**uit en selecteer vervolgens het stuur programmapakket dat u wilt valideren.  
 
-    - **Installatie kopieën van besturings systeem**: Vouw besturingssysteem**installatie kopieën**van besturings **systemen** > uit en selecteer vervolgens de installatie kopie van het besturings systeem die u wilt valideren.  
+    - **Installatie kopieën van besturings systeem**: Vouw besturingssysteem installatie kopieën van besturings **systemen**uit  >  **Operating System Images**en selecteer vervolgens de installatie kopie van het besturings systeem die u wilt valideren.  
 
-    - **Installatie Programma's voor besturings** **systemen** >  : Vouw besturingssysteem**installatie Programma's**van besturings systeem uit en selecteer vervolgens het installatie programma van het besturings systeem dat u wilt valideren.  
+    - **Installatie Programma's voor besturings**systemen: Vouw **besturingssysteem**  >   **installatie Programma's**van besturings systeem uit en selecteer vervolgens het installatie programma van het besturings systeem dat u wilt valideren.  
 
-    - **Opstart installatie**kopieën: Vouw**installatie kopieën**van **besturings systemen** > uit en selecteer vervolgens de opstart installatie kopie die u vooraf wilt plaatsen.  
+    - **Opstart installatie**kopieën: Vouw installatie kopieën van **besturings systemen**uit  >  **Boot Images**en selecteer vervolgens de opstart installatie kopie die u vooraf wilt plaatsen.  
 
 3.  Klik op **Eigenschappen** in het tabblad **Start**, in de groep **Eigenschappen**.  
 

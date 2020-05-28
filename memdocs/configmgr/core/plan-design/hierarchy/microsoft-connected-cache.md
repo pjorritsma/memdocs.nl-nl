@@ -2,7 +2,7 @@
 title: Microsoft verbonden cache
 titleSuffix: Configuration Manager
 description: Uw Configuration Manager-distributie punt gebruiken als lokale cache server voor leverings optimalisatie
-ms.date: 03/20/2019
+ms.date: 05/05/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e718e62f097a9fec20d7b29deb9f03453931188a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4dead573e1744a5c8b84ff954e85be43af644486
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714967"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83878494"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Met micro soft verbonden cache in Configuration Manager
 
@@ -26,7 +26,7 @@ ms.locfileid: "81714967"
 Vanaf versie 1906 kunt u een micro soft Connected cache-server op uw distributie punten installeren. Door deze inhoud on-premises in de cache te plaatsen, kunnen uw clients profiteren van de functie voor Delivery Optimization, maar kunt u WAN-koppelingen helpen beveiligen.
 
 > [!NOTE]
-> Vanaf versie 1910 wordt deze functie nu **micro soft Connected cache**genoemd. Voorheen bekend als Delivery Optimization in-Network cache (DOINC).
+> Vanaf versie 1910 wordt deze functie nu **micro soft Connected cache**genoemd. Het was voorheen bekend als Delivery Optimization in-Network cache.
 
 Deze cache server fungeert als transparante cache op aanvraag voor inhoud die wordt gedownload door Delivery Optimization. Gebruik client instellingen om te controleren of deze server alleen wordt aangeboden aan de leden van de lokale Configuration Manager grens groep.
 
@@ -99,15 +99,29 @@ Wanneer u clients configureert voor het gebruik van de verbonden cache server, v
 
 ### <a name="note-1-about-drive-selection"></a><a name="bkmk_note1"></a>Opmerking 1: station selecteren
 
-Als u **automatisch**selecteert en het verbonden cache onderdeel wordt geïnstalleerd door Configuration Manager, wordt het **no_sms_on_drive. SMS** -bestand geaccepteerd. Het distributie punt heeft bijvoorbeeld het bestand `C:\no_sms_on_drive.sms`. Zelfs als de station C: de meeste vrije ruimte heeft, configureert Configuration Manager verbonden cache om een ander station te gebruiken voor de cache.
+Als u **automatisch**selecteert en het verbonden cache onderdeel wordt geïnstalleerd door Configuration Manager, wordt het **no_sms_on_drive. SMS** -bestand geaccepteerd. Het distributie punt heeft bijvoorbeeld het bestand `C:\no_sms_on_drive.sms` . Zelfs als de station C: de meeste vrije ruimte heeft, configureert Configuration Manager verbonden cache om een ander station te gebruiken voor de cache.
 
-Als u een specifiek station selecteert dat al het bestand **no_sms_on_drive. SMS** bevat, wordt het bestand door Configuration Manager genegeerd. Configureren van verbonden cache voor gebruik van dat station is een expliciete intentie. Het distributie punt heeft bijvoorbeeld het bestand `F:\no_sms_on_drive.sms`. Wanneer u de eigenschappen van het distributie punt expliciet configureert voor het gebruik van het station **f:** , Configuration Manager configureert verbonden cache om het station f: te gebruiken voor de cache.
+Als u een specifiek station selecteert dat al het bestand **no_sms_on_drive. SMS** bevat, wordt het bestand door Configuration Manager genegeerd. Configureren van verbonden cache voor gebruik van dat station is een expliciete intentie. Het distributie punt heeft bijvoorbeeld het bestand `F:\no_sms_on_drive.sms` . Wanneer u de eigenschappen van het distributie punt expliciet configureert voor het gebruik van het station **f:** , Configuration Manager configureert verbonden cache om het station f: te gebruiken voor de cache.
 
 Het station wijzigen nadat u de verbonden cache hebt geïnstalleerd:
 
 - Configureer hand matig de eigenschappen van het distributie punt voor het gebruik van een specifieke stationsletter.
 
 - Als deze is ingesteld op automatisch, moet u eerst het **no_sms_on_drive. SMS** -bestand maken. Breng vervolgens een wijziging aan in de eigenschappen van het distributie punt om een configuratie wijziging te activeren.
+
+### <a name="automation"></a>Automation
+
+<!-- SCCMDocs#1911 -->
+
+U kunt de Configuration Manager SDK gebruiken voor het automatiseren van de configuratie van micro soft Connected cache settings op een distributie punt. Net als bij alle site rollen gebruikt u de [WMI-klasse SMS_SCI_SysResUse](../../../develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class.md). Zie [de site rollen Program meren](../../../develop/osd/about-operating-system-deployment-site-role-configuration.md#programming-the-site-roles)voor meer informatie.
+
+Wanneer u het **SMS_SCI_SysResUse** -exemplaar voor het distributie punt bijwerkt, stelt u de volgende eigenschappen in:
+
+- **AgreeDOINCLicense**: ingesteld op `1` om de licentie voorwaarden te accepteren.
+- **Vlaggen**: inschakelen `|= 4` , uitschakelen`&= ~4`
+- **DiskSpaceDOINC**: ingesteld op `Percentage` of`GB`
+- **RetainDOINCCache**: ingesteld op `0` of`1`
+- **LocalDriveDOINC**: ingesteld op `Automatic` , of een specifieke stationsletter, zoals `C:` of`D:`
 
 ## <a name="verify"></a>Verifiëren
 

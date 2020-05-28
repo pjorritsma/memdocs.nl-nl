@@ -2,7 +2,7 @@
 title: Toegankelijkheid
 titleSuffix: Configuration Manager
 description: Meer informatie over de functies die Configuration Manager toegankelijk maken voor iedereen.
-ms.date: 03/27/2019
+ms.date: 05/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: 1cb96666-98bf-49a9-85ca-dbb53f0655e9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2ff86df999ab744d590b1ca120a8b566d18f446b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 1b25b0137e24212cbad2ba688735e45d9fe9aac0
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718558"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556027"
 ---
 # <a name="accessibility-features-in-configuration-manager"></a>Toegankelijkheids functies in Configuration Manager
 
@@ -45,7 +46,7 @@ Gebruik de volgende sneltoetsen om toegang te krijgen tot een werk ruimte:
 |CTRL + 4|  Beheer|
 
 
-### <a name="other-keyboard-shortcuts"></a>Andere sneltoetsen
+### <a name="other-console-shortcuts"></a>Andere-console snelkoppelingen
 
 |Sneltoets|  Doel|
 |--------|--------|  
@@ -56,6 +57,14 @@ Gebruik de volgende sneltoetsen om toegang te krijgen tot een werk ruimte:
 |CTRL + D|Stel de focus in op het deel venster Details, indien beschikbaar.|
 |Alt     |Wijzig de focus in en uit het lint.|
 
+### <a name="cmpivot-shortcuts"></a><a name="bkmk_cmpshortcuts"></a>CMPivot-snelkoppelingen
+
+De meeste [webbrowsers](https://support.microsoft.com/help/17456/windows-internet-explorer-ease-of-access-options) -sneltoetsen werken in CMPivot.
+
+|Sneltoets|Doel|
+|--------|--------|  
+|CTRL + 1|Stel de focus in op het eerste tabblad.|
+|ALT +&lt;|Terug naar het adres|
 
 
 ## <a name="other-accessibility-features"></a>Andere toegankelijkheids functies
@@ -85,9 +94,9 @@ Gebruik de volgende sneltoetsen om toegang te krijgen tot een werk ruimte:
 ## <a name="see-also"></a>Zie ook
 
 Raadpleeg de volgende artikelen voor meer informatie over de grond beginselen van het navigeren van Configuration Manager gebruikers interfaces:
-- [De Configuration Manager-console gebruiken](../servers/manage/admin-console.md)  
+- [De Configuration Manager-console gebruiken](../servers/manage/admin-console.md)
 - [Gebruikershandleiding van Software Center](software-center.md)
 
 > [!NOTE]  
-> De informatie in dit artikel is mogelijk alleen van toepassing op gebruikers die een licentie hebben voor micro soft-producten in de Verenigde Staten. Als u dit product buiten de Verenigde Staten hebt aangeschaft, kunt u de kaart van de dochter maatschappij gebruiken die bij uw software pakket is geleverd of de [micro soft-website voor toegankelijkheid](https://go.microsoft.com/fwlink/?LinkId=8431) bezoeken voor contact gegevens voor micro soft-ondersteunings services. U kunt contact opnemen met uw dochter onderneming als u wilt weten of het type producten en services dat in deze sectie wordt beschreven, beschikbaar is in uw omgeving. Informatie over toegankelijkheid is beschikbaar in andere talen, waaronder Japans en Frans.  
+> De informatie in dit artikel is mogelijk alleen van toepassing op gebruikers die een licentie hebben voor micro soft-producten in de Verenigde Staten. Als u dit product buiten de Verenigde Staten hebt aangeschaft, kunt u de kaart van de dochter maatschappij gebruiken die bij uw software pakket is geleverd of de [micro soft-website voor toegankelijkheid](https://www.microsoft.com/accessibility/) bezoeken voor contact gegevens voor micro soft-ondersteunings services. U kunt contact opnemen met uw dochter onderneming als u wilt weten of het type producten en services dat in deze sectie wordt beschreven, beschikbaar is in uw omgeving. Informatie over toegankelijkheid is beschikbaar in andere talen, waaronder Japans en Frans.  
 

@@ -2,7 +2,7 @@
 title: Controles van vereisten
 titleSuffix: Configuration Manager
 description: Verwijzing naar de specifieke controles van de vereisten voor Configuration Manager updates.
-ms.date: 04/01/2020
+ms.date: 05/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d8fc9abfc9fc09bc3011a3fee30b258023d04c8a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9f0ed1d5913154d90242d1aa2a47efbcf7d22282
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718194"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943787"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Lijst met vereisten controles voor Configuration Manager
 
@@ -727,7 +727,7 @@ Configuration Manager vereist geen Active Directory schema-uitbrei dingen voor d
 
 *Van toepassing op: centrale beheer site, primaire site*
 
-Pakketten bevatten ongeldige tekens in de share naam, zoals `#`.
+Pakketten bevatten ongeldige tekens in de share naam, zoals `#` .
 
 ### <a name="site-system-to-sql-server-communication"></a>Communicatie tussen site systeem en SQL Server
 
@@ -741,7 +741,7 @@ Het account dat u hebt geconfigureerd voor het uitvoeren van de SQL Server-servi
 
 Start in versie 1810, Controleer of de site database een achterstand heeft voor het bijhouden van SQL-wijzigingen.<!--SCCMDocs-pr issue 3023-->  
 
-U moet deze controle hand matig controleren door een opgeslagen diagnostische procedure uit te voeren in de site database. Maak eerst een [Diagnostische verbinding](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017) met uw site database. De eenvoudigste methode is om de query-editor van de data base engine van SQL Server Management Studio `admin:<instance name>`te gebruiken en verbinding te maken met.
+U moet deze controle hand matig controleren door een opgeslagen diagnostische procedure uit te voeren in de site database. Maak eerst een [Diagnostische verbinding](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017) met uw site database. De eenvoudigste methode is om de query-editor van de data base engine van SQL Server Management Studio te gebruiken en verbinding te maken met `admin:<instance name>` .
 
 Voer de volgende opdrachten uit in een exclusieve beheerders verbindings venster:
 
@@ -771,9 +771,9 @@ SELECT * FROM vLogs WHERE ProcedureName = 'spDiagChangeTracking'
 
 Wanneer u een nieuwe site installeert, installeert Configuration Manager automatisch SQL Server Native Client als een herdistribueerbaar onderdeel. Nadat de site is geïnstalleerd, wordt Configuration Manager SQL Server Native Client niet bijgewerkt. Het bijwerken van de SQL Server Native Client moet mogelijk opnieuw worden opgestart, wat van invloed kan zijn op het installatie proces van de site.
 
-Met deze controle wordt gecontroleerd of de site een ondersteunde versie van de SQL Native Client heeft. Vanaf versie 1810 is de minimale versie SQL 2012 SP4 (`11.*.7001.0`).
+Met deze controle wordt gecontroleerd of de site server een ondersteunde versie van de SQL Native Client heeft. Met de controle van vereisten wordt niet gecontroleerd of de versie van de SQL Native Client op externe site systemen.
 
-Deze SQL Native Client-versie ondersteunt TLS 1,2. Raadpleeg voor meer informatie de volgende artikelen:
+De minimale versie is SQL 2012 SP4 ( `11.*.7001.0` ). Deze SQL Native Client-versie ondersteunt TLS 1,2. Raadpleeg voor meer informatie de volgende artikelen:
 
 - [TLS 1,2-ondersteuning voor Microsoft SQL Server](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)  
 

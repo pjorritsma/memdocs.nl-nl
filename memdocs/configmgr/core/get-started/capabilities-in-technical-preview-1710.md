@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 503bb6d2293b4b5efb1d84980225a9d7052e1656
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3dd4c3f22a0f2c24153e6d26be2e3098511c5dc4
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721295"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905313"
 ---
 # <a name="capabilities-in-technical-preview-1710-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1710 voor Configuration Manager
 
@@ -35,7 +35,7 @@ Dit artikel bevat een inleiding tot de functies die beschikbaar zijn in de Techn
 - **Bijwerken naar een nieuwe preview-versie mislukt wanneer u een site server in de passieve modus hebt**. Wanneer u een preview-versie met een [primaire site server in de passieve modus](capabilities-in-technical-preview-1706.md#site-server-role-high-availability)uitvoert, moet u de site server van de passieve modus verwijderen voordat u uw preview-site kunt bijwerken naar deze nieuwe preview-versie. U kunt de site server van de passieve modus opnieuw installeren nadat de update door de site is voltooid.
 
   De site server van de passieve modus verwijderen:
-  1. Ga in de-console naar **beheer** > **overzicht** > **site configuratie** > **servers en site systeem rollen**en selecteer vervolgens de site server passieve modus.
+  1. Ga in de-console naar **beheer**  >  **overzicht**  >  **site configuratie**  >  **servers en site systeem rollen**en selecteer vervolgens de site server passieve modus.
   2. Klik in het deel venster **site systeem rollen** met de rechter muisknop op de **site** serverrol en kies vervolgens **rol verwijderen**.
   3. Klik met de rechter muisknop op de site server in de passieve modus en kies **verwijderen**.
   4. Nadat de installatie van de site server ongedaan is gemaakt, start u de service **CONFIGURATION_MANAGER_UPDATE**opnieuw op de actieve primaire site server.
@@ -93,7 +93,7 @@ Deze release voegt ondersteuning toe voor Windows Defender exploit Guard. U kunt
 -   Kwetsbaarheid voor aanvallen verminderen
 -   Gecontroleerde mappentoegang
 -   Exploit Protection
--   Netwerkbeveiliging
+-   Netwerk beveiliging
 
 Compatibiliteits gegevens voor de implementatie van exploit Guard-beleid zijn beschikbaar vanuit de Configuration Manager-console.
 
@@ -107,10 +107,10 @@ Op beheerde apparaten moet Windows 10 1709 worden bijgewerkt of later en voldoen
 | Kwetsbaarheid voor aanvallen verminderen  | Op apparaten moet [Windows Defender AV-real-time-beveiliging]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) zijn ingeschakeld.  |
 | Gecontroleerde mappentoegang  | Op apparaten moet [Windows Defender AV-real-time-beveiliging]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) zijn ingeschakeld.   |
 | Exploit Protection  | Geen  |
-| Netwerkbeveiliging  |  Op apparaten moet [Windows Defender AV-real-time-beveiliging]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) zijn ingeschakeld.  |
+| Netwerk beveiliging  |  Op apparaten moet [Windows Defender AV-real-time-beveiliging]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) zijn ingeschakeld.  |
 
 ### <a name="create-an-exploit-guard-policy----1355468---"></a>Een exploit Guard-beleid maken  <!--1355468 -->
-1. Ga in de Configuration Manager-console naar **activa en nalevings** > **Endpoint Protection**en klik vervolgens op **Windows Defender exploit Guard**.
+1. Ga in de Configuration Manager-console naar **activa en nalevings**  >  **Endpoint Protection**en klik vervolgens op **Windows Defender exploit Guard**.
 2. Klik op het tabblad **Start** in de groep **maken** op **exploit beleid maken**.
 3. Geef op de pagina **Algemeen** van de **Wizard Configuratie-item maken** een naam en een optionele beschrijving voor het configuratie-item op.
 4. Selecteer vervolgens de onderdelen voor exploit Guard die u met dit beleid wilt beheren. Voor elk onderdeel dat u selecteert, kunt u aanvullende details configureren.
@@ -121,11 +121,11 @@ Op beheerde apparaten moet Windows 10 1709 worden bijgewerkt of later en voldoen
 5. Voltooi de wizard om het beleid te maken, dat u later op apparaten kunt implementeren.
 
 ### <a name="deploy-an-exploit-guard-policy"></a>Een exploit Guard-beleid implementeren     
-Nadat u exploit Guard-beleids regels hebt gemaakt, gebruikt u de wizard exploit Guard-beleid implementeren om ze te implementeren. Hiervoor opent u de Configuration Manager-console naar **activa en nalevings** > **Endpoint Protection**en klikt u vervolgens op **exploit Guard-beleid implementeren**.
+Nadat u exploit Guard-beleids regels hebt gemaakt, gebruikt u de wizard exploit Guard-beleid implementeren om ze te implementeren. Hiervoor opent u de Configuration Manager-console naar **activa en nalevings**  >  **Endpoint Protection**en klikt u vervolgens op **exploit Guard-beleid implementeren**.
 
 ## <a name="limited-support-for-cng-certificates"></a>Beperkte ondersteuning voor CNG-certificaten
 <!-- 1356191 -->
-Vanaf deze versie kunt u nu [crypto GRAFIE API: Next Generation (CNG)](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) -certificaat sjablonen gebruiken voor de volgende scenario's:
+Vanaf deze versie kunt u nu [crypto GRAFIE API: Next Generation (CNG)](https://docs.microsoft.com/windows/win32/seccng/cng-features) -certificaat sjablonen gebruiken voor de volgende scenario's:
 
 - Client registratie en communicatie met een HTTPS-beheer punt.   
 - Software distributie en toepassings implementatie met een HTTPS-distributie punt.   
@@ -202,7 +202,7 @@ Lees [het blog bericht](https://blogs.windows.com/msedgedev/2016/09/27/applicati
 
 Een beleid maken en bladeren door de beschik bare instellingen:
 1. Kies in de **Configuration Manager** -console **activa en naleving**.
-2. Kies **overzicht** > **Endpoint Protection**Endpoint Protection > **Windows Defender Application Guard**in de werk ruimte **activa en naleving** .
+2. Kies **overzicht**Endpoint Protection **Assets and Compliance**  >  **Endpoint Protection**  >  **Windows Defender Application Guard**in de werk ruimte activa en naleving.
 3. Klik op het tabblad **Start** in de groep **maken** op **Windows Defender Application Guard-beleid maken**.
 4. Als u het blog bericht als referentie wilt gebruiken, kunt u door de beschik bare instellingen bladeren en deze configureren om de functie uit te proberen.
 5. In deze release hebben we de nieuwe netwerk definitie pagina aan de wizard toegevoegd. Hier geeft u de bedrijfs identiteit op en definieert u de grens van uw bedrijfs netwerk.

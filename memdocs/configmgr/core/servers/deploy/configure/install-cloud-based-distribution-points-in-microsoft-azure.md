@@ -10,12 +10,12 @@ ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 30cd61240b09f821d8b18c37e6accc7450f35817
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 35379aed71544a25a98ec4dfa421be70c1bae851
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718845"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427740"
 ---
 # <a name="install-a-cloud-distribution-point-for-configuration-manager"></a>Een Cloud distributiepunt voor Configuration Manager installeren
 
@@ -35,7 +35,7 @@ In dit artikel vindt u meer informatie over de stappen voor het installeren van 
 - [Inhoud distribueren en clients configureren](#bkmk_client)
 - [Beheren en bewaken](#bkmk_monitor)
 - [Wijzigen](#bkmk_modify)
-- [Geavanceerde probleem oplossing](#bkmk_tshoot)
+- [Geavanceerde probleemoplossing](#bkmk_tshoot)
 
 
 ## <a name="before-you-begin"></a><a name="bkmk_before"></a>Voordat u begint
@@ -115,7 +115,7 @@ Voer deze procedure uit op de site als host van dit Cloud distributiepunt zoals 
     >
     > Als u een klassieke service-implementatie wilt gebruiken, selecteert u die optie op deze pagina. Voer eerst uw Azure **-abonnements-id**in. Selecteer vervolgens **Bladeren** en selecteer de. PFX-bestand voor het Azure-beheer certificaat.  
 
-3. Selecteer **Volgende**. Wacht tot de site de verbinding met Azure test.  
+3. Selecteer **Next**. Wacht tot de site de verbinding met Azure test.  
 
 4. Geef op de pagina **instellingen** de volgende instellingen op en selecteer **volgende**:  
 
@@ -132,9 +132,9 @@ Voer deze procedure uit op de site als host van dit Cloud distributiepunt zoals 
     - **Certificaat bestand**: Selecteer **Bladeren** en selecteer de. PFX-bestand voor het Server verificatie certificaat van dit Cloud distributiepunt. De algemene naam van dit certificaat vult de vereiste velden **FQDN** en **service naam** van de service in.  
 
         > [!NOTE]  
-        > Het certificaat voor Server verificatie van het Cloud distributiepunt ondersteunt joker tekens. Als u een certificaat met Joker tekens gebruikt, vervangt u`*`het sterretje () in het veld **FQDN van service** door de gewenste hostnaam voor de service.  
+        > Het certificaat voor Server verificatie van het Cloud distributiepunt ondersteunt joker tekens. Als u een certificaat met Joker tekens gebruikt, vervangt u het sterretje ( `*` ) in het veld **FQDN van service** door de gewenste hostnaam voor de service.  
 
-5. Stel op de pagina **waarschuwingen** opslag quota's, quota voor overdracht en in welk percentage van deze quota's u Configuration Manager waarschuwingen wilt genereren. Selecteer **volgende**.  
+5. Stel op de pagina **waarschuwingen** opslag quota's, quota voor overdracht en in welk percentage van deze quota's u Configuration Manager waarschuwingen wilt genereren. Selecteer vervolgens **Volgende**.  
 
 6. Voltooi de wizard.  
 
@@ -169,11 +169,11 @@ Voordat clients het Cloud distributiepunt kunnen gebruiken, moeten ze de naam va
 If you issue the server authentication certificate from your PKI, you may directly specify the Azure **Service name**. For example, `WallaceFalls.cloudapp.net`. When you specify this certificate in the Create Cloud Distribution Point Wizard, both the **Service FQDN** and **Service name** properties are the same. In this scenario, you don't need to configure DNS. The name that clients receive from the management point is the same name as the service in Azure.  
 -->
 
-De algemene naam van het Server verificatie certificaat moet uw domein naam bevatten. Deze naam is vereist wanneer u een certificaat van een open bare provider aanschaft. Het wordt aanbevolen om dit certificaat uit te geven via uw PKI. Bijvoorbeeld `WallaceFalls.contoso.com`. Wanneer u dit certificaat opgeeft in de wizard Cloud distributiepunt maken, vult de algemene naam de **service FQDN** -eigenschap (`WallaceFalls.contoso.com`) in. De **service naam** heeft dezelfde hostnaam (`WallaceFalls`) en voegt deze toe aan de naam van het Azure- `cloudapp.net`domein. In dit scenario moeten clients de **service FQDN** (`WallaceFalls.contoso.com`) van uw domein omzetten in de **naam** van de Azure-`WallaceFalls.cloudapp.net`service (). Maak een CNAME-alias om deze namen toe te wijzen.
+De algemene naam van het Server verificatie certificaat moet uw domein naam bevatten. Deze naam is vereist wanneer u een certificaat van een open bare provider aanschaft. Het wordt aanbevolen om dit certificaat uit te geven via uw PKI. Bijvoorbeeld `WallaceFalls.contoso.com`. Wanneer u dit certificaat opgeeft in de wizard Cloud distributiepunt maken, vult de algemene naam de **service FQDN** -eigenschap ( `WallaceFalls.contoso.com` ) in. De **service naam** heeft dezelfde hostnaam ( `WallaceFalls` ) en voegt deze toe aan de naam van het Azure-domein `cloudapp.net` . In dit scenario moeten clients de **service FQDN** () van uw domein omzetten `WallaceFalls.contoso.com` in de **naam** van de Azure-service ( `WallaceFalls.cloudapp.net` ). Maak een CNAME-alias om deze namen toe te wijzen.
 
 ### <a name="create-cname-alias"></a>CNAME-alias maken
 
-Maak een canonieke naam record (CNAME) in de open bare, Internet gerichte DNS van uw organisatie. Met deze record wordt een alias gemaakt voor de service- **FQDN** -eigenschap van het Cloud distributiepunt die door clients wordt ontvangen en de naam van de Azure- **service**. Maak bijvoorbeeld een nieuwe CNAME-record voor `WallaceFalls.contoso.com` `WallaceFalls.cloudapp.net`.  
+Maak een canonieke naam record (CNAME) in de open bare, Internet gerichte DNS van uw organisatie. Met deze record wordt een alias gemaakt voor de service- **FQDN** -eigenschap van het Cloud distributiepunt die door clients wordt ontvangen en de naam van de Azure- **service**. Maak bijvoorbeeld een nieuwe CNAME-record voor `WallaceFalls.contoso.com` `WallaceFalls.cloudapp.net` .  
 
 ### <a name="client-name-resolution-process"></a>Proces van client naam omzetting
 
@@ -215,6 +215,8 @@ Met standaard client instellingen kunnen clients automatisch Cloud distributiepu
 ## <a name="manage-and-monitor"></a><a name="bkmk_monitor"></a>Beheren en bewaken  
 
 Bewaak inhoud die u naar een Cloud distributiepunt distribueert hetzelfde als met andere on-premises distributie punten. Zie [inhoud bewaken](monitor-content-you-have-distributed.md)voor meer informatie.
+
+Wanneer u de lijst met Cloud distributiepunten weergeeft in de-console, kunt u aanvullende kolommen toevoegen aan de lijst. Bijvoorbeeld, de kolom **gegevens** uitgaand toont de hoeveelheid gegevensclients die in de afgelopen 30 dagen van de service is gedownload.<!-- SCCMDocs#755 -->
 
 ### <a name="alerts"></a><a name="bkmk_alerts"></a>Berichten  
 

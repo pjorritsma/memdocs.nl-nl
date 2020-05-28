@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 05e7bbe6373ed91de5a2bb8e99a8425e733274f2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0513c1908b1360a50653931dda57e5d148055240
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721617"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905676"
 ---
 # <a name="capabilities-in-technical-preview-1606-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1606 voor Configuration Manager
 
@@ -50,7 +50,7 @@ U kunt apparaatcategorieën maken die kunnen worden gebruikt om apparaten automa
 
 ### <a name="associate-a-collection-with-a-device-category"></a>Een verzameling koppelen aan een apparaatcategorie
 Wanneer u een verzameling koppelt aan een apparaatcategorie, worden alle apparaten in de door u opgegeven categorie toegevoegd aan die verzameling.
-1.  Klik in het dialoog venster **Eigenschappen** voor een verzameling apparaten op **regel** > **Categorie apparaat**toevoegen.
+1.  Klik in het dialoog venster **Eigenschappen** voor een verzameling apparaten op **regel**  >  **Categorie apparaat**toevoegen.
 2.  Selecteer in het dialoog venster **lidmaatschaps regel voor apparaat maken** de categorie die wordt toegepast op alle apparaten in de verzameling.
 3.  Sluit het dialoog venster **lidmaatschaps regel** voor het maken van een apparaatcategorie en het dialoog venster Eigenschappen van verzameling.
 
@@ -80,9 +80,9 @@ Er zijn Vergelijk bare opties toegevoegd aan de wizard software-updates implemen
 
 Device Guard is een Windows 10-functie waarbij gebruik wordt gemaakt van hardware-en software functies om strikt te bepalen wat er op het apparaat mag worden uitgevoerd.
 
-U kunt een gedetailleerd overzicht lezen van wat Device Guard doet en hoe het werkt in [Dit TechNet-artikel](https://technet.microsoft.com/itpro/windows/whats-new/device-guard-overview).
+Zie [Inleiding tot Device Guard](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)voor meer informatie.
 
-In deze release kan Configuration Manager worden gebruikt in combi natie met Device Guard en [Windows AppLocker](https://technet.microsoft.com/library/dd723678(v=ws.10).aspx) , zodat uitvoer bare en dll-bestanden die worden geïmplementeerd met Configuration Manager, automatisch worden vertrouwd wanneer ze afkomstig zijn van een beheerd installatie programma, wat betekent dat ze kunnen worden uitgevoerd op het doel apparaat en dat andere software niet mag worden uitgevoerd, tenzij expliciet is toegestaan om te worden uitgevoerd door andere AppLocker-regels.  
+In deze release kan Configuration Manager worden gebruikt in combi natie met Device Guard en [Windows AppLocker](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd723678(v=ws.10)) , zodat uitvoer bare en dll-bestanden die worden geïmplementeerd met Configuration Manager, automatisch worden vertrouwd wanneer ze afkomstig zijn van een beheerd installatie programma, wat betekent dat ze kunnen worden uitgevoerd op het doel apparaat en dat andere software niet mag worden uitgevoerd, tenzij expliciet is toegestaan om te worden uitgevoerd door andere AppLocker-regels.  
 
 Op dit moment kan deze mogelijkheid niet worden geconfigureerd vanuit de Configuration Manager-console. Als u het beleid wilt configureren, moet u een register sleutel configureren op elke client en Windows-Services configureren op de client.
 Wanneer dit is gebeurd, configureert u het AppLocker-beleids bestand. Nadat u het beleids bestand hebt geconfigureerd, kunt u het implementeren op elk compatibel client apparaat.
@@ -93,24 +93,22 @@ Net als bij alle AppLocker-beleids regels kunnen beleid met beheerde installatie
 - Controle modus: toepassingen zijn niet actief, maar alle toepassingen die zouden zijn geblokkeerd, worden gerapporteerd in een logboek bestand (deze worden ondersteund in een latere versie van Configuration Manager).
 - Afdwinging ingeschakeld: toepassingen zijn geblokkeerd voor uitvoering.
 
-Meer informatie over het gebruik van Device Guard met Configuration Manager vindt u in het [Enter prise Mobility and Security-Blog](https://blogs.technet.microsoft.com/enterprisemobility/2016/06/20/configmgr-as-a-managed-installer-with-win10).
+Raadpleeg voor meer informatie de volgende artikelen:
 
-Meer lezen:
+- [Inleiding tot Device Guard](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)
 
-- [Inleiding tot Device Guard](https://technet.microsoft.com/itpro/windows/keep-secure/introduction-to-device-guard-virtualization-based-security-and-code-integrity-policies)
-- [Certificering en naleving van Device Guard](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-certification-and-compliance)
-- [Implementatie handleiding voor Device Guard](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide)
+- [Het implementatie proces van Windows Defender Application Control plannen en aan de slag gaan](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)
 
   ##  <a name="multiple-device-management-points-for-on-premises-mobile-device-management"></a><a name="dmp_onprem"></a>Meerdere Apparaatbeheer punten voor on-premises beheer van mobiele apparaten  
-  Met Technical Preview 1606 van de\-on-premises Mobile Device Management (MDM) ondersteunt een nieuwe mogelijkheid in Windows 10 jubileum update waarmee automatisch een geregistreerd apparaat wordt geconfigureerd om meer dan één apparaatbeheerpunt beschikbaar te maken voor gebruik. Hierdoor kan het apparaat terugvallen op een ander apparaatbeheerpunt wanneer het normale gebruik niet beschikbaar is. Deze functie werkt alleen voor Pc's waarop Windows 10 jubileum update is geïnstalleerd.  
+  Met Technical Preview 1606 van de on- \- premises Mobile Device Management (MDM) ondersteunt een nieuwe mogelijkheid in Windows 10 jubileum update waarmee automatisch een geregistreerd apparaat wordt geconfigureerd om meer dan één apparaatbeheerpunt beschikbaar te maken voor gebruik. Hierdoor kan het apparaat terugvallen op een ander apparaatbeheerpunt wanneer het normale gebruik niet beschikbaar is. Deze functie werkt alleen voor Pc's waarop Windows 10 jubileum update is geïnstalleerd.  
 
 ### <a name="try-it-out"></a>Probeer het nu!  
 
 1.  Installeer meer dan één apparaatbeheerpunt in uw-hiërarchie.  
 
-2.  Een Windows 10 jubileum update-apparaat inschrijven voor\-on-premises Mobile Device Management.  
+2.  Een Windows 10 jubileum update-apparaat inschrijven voor on- \- premises Mobile Device Management.  
 
-Zie [mobiele apparaten beheren met on-premises infra structuur](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md)voor meer\-informatie over het voorbereiden van uw site en het inschrijven van apparaten voor on-premises Mobile Device Management.  
+\-Zie [mobiele apparaten beheren met on-premises infra structuur](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md)voor meer informatie over het voorbereiden van uw site en het inschrijven van apparaten voor on-premises Mobile Device Management.  
 
 ## <a name="cloud-proxy-service-for-managing-clients-on-the-internet"></a><a name="cloud_proxy"></a>Cloud proxy service voor het beheren van clients op Internet
 
@@ -221,10 +219,10 @@ Nadat clients de nieuwe locatie-informatie voor de Cloud proxy service hebben, k
 
 Het starten van Technical Preview 1606, kunt u een instelling voor een Configuration Manager client agent gebruiken in plaats van groeps beleid, zodat Office 365-clients updates van Configuration Manager kunnen ontvangen. Nadat u deze instelling hebt geconfigureerd en Office 365-updates hebt geïmplementeerd, communiceert de Configuration Manager-client agent met de Office 365-client agent om Office 365-updates te downloaden vanaf een distributie punt en te installeren. Configuration Manager maakt ook inventarisatie van de instelling van de client agent.
 
-Zie [Office 365 ProPlus-updates beheren](https://technet.microsoft.com/library/mt741983.aspx)voor meer informatie.
+Zie [Office 365 ProPlus-updates beheren](../../sum/deploy-use/manage-office-365-proplus-updates.md)voor meer informatie.
 
 ### <a name="set-the-configuration-manager-client-setting-to-manage-the-office-365-client-agent"></a>Stel de Configuration Manager client instelling in om de Office 365-client agent te beheren
-1.  Klik in de Configuration Manager-console op **beheer** > **overzicht** > **client instellingen**.
+1.  Klik in de Configuration Manager-console op **beheer**  >  **overzicht**  >  **client instellingen**.
 2. Open de juiste Apparaatinstellingen om de client agent in te scha kelen. Zie [client instellingen configureren](../../core/clients/deploy/configure-client-settings.md)voor meer informatie over standaard-en aangepaste client instellingen.
 3. Klik op **software-updates** en selecteer **Ja** voor de instelling **beheer van de Office 365-client agent inschakelen** .  
 

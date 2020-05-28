@@ -2,7 +2,7 @@
 title: Levering van Windows 10-update optimaliseren
 titleSuffix: Configuration Manager
 description: Meer informatie over het gebruik van Configuration Manager voor het beheren van update-inhoud om actueel te blijven met Windows 10.
-ms.date: 04/21/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b670cfaf-96a4-4fcb-9caa-0f2e8c2c6198
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f7edd05a7b1ce105e81fd4f594d95c9dfb45f472
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 835dcd0c86244c1731cb6c6e040d577160759614
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771370"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83267787"
 ---
 # <a name="optimize-windows-10-update-delivery-with-configuration-manager"></a>De levering van Windows 10-updates optimaliseren met Configuration Manager
 
@@ -103,7 +103,7 @@ Het selecteren van de juiste peer cache technologie voor bestanden voor snelle i
 | Cache grootte op schijf beheer | Ja | Ja | Ja |
 | Detectie van een peer bron | Automatisch | Hand matig (instelling client agent) | Automatisch |
 | Peer-detectie | Via Delivery Optimization Cloud service (Internet toegang vereist) | Via beheer punt (gebaseerd op client grens groepen) | Cast |
-| Rapporten | Ja (met Desktop Analytics) | Dash board client gegevens bronnen ConfigMgr | Dash board client gegevens bronnen ConfigMgr |
+| Rapportage | Ja (met Desktop Analytics) | Dash board client gegevens bronnen ConfigMgr | Dash board client gegevens bronnen ConfigMgr |
 | Besturings element voor WAN-gebruik | Ja (systeem eigen, kan worden beheerd via groeps beleids instellingen) | Grensgroepen | Alleen subnet-ondersteuning |
 | Beheer via ConfigMgr | Gedeeltelijk (instelling client agent) | Ja (instelling client agent) | Ja (instelling client agent) |
 
@@ -125,13 +125,13 @@ Als de server zijde van grotere updates blok keren is voor de acceptatie van sne
 
 De Windows Update Agent (WUA) vraagt eerst snelle inhoud op. Als de snelle update niet kan worden geïnstalleerd, kan deze terugvallen op de volledige update.  
 
-1. De Configuration Manager-client vertelt WUA het downloaden van de update-inhoud. Wanneer WUA een snelle down load initieert, downloadt het eerst een stub (bijvoorbeeld `Windows10.0-KB1234567-<platform>-express.cab`), die deel uitmaakt van het Express-pakket.  
+1. De Configuration Manager-client vertelt WUA het downloaden van de update-inhoud. Wanneer WUA een snelle down load initieert, downloadt het eerst een stub (bijvoorbeeld `Windows10.0-KB1234567-<platform>-express.cab` ), die deel uitmaakt van het Express-pakket.  
 
 2. WUA geeft deze stub door aan het installatie programma van Windows Update, CBS (Component-Based Servicing). CBS gebruikt de stub om een lokale inventarisatie uit te voeren, waarbij de Deltas van het bestand op het apparaat worden vergeleken met wat er nodig is om naar de meest recente versie van het bestand te gaan dat wordt aangeboden.  
 
 3. CBS vraagt vervolgens WUA om de vereiste bereiken van een of meer Express. psf-bestanden te downloaden.  
 
-4. Bezorgings optimalisatie coördineert met Configuration Manager en downloadt de bereiken van een lokaal distributie punt of peers, indien beschikbaar. Als Delivery Optimization is uitgeschakeld, wordt de Background Intelligent Transfer Service (BITS) op dezelfde manier gebruikt met Configuration Manager coördinatie van peer-cache bronnen. Delivery Optimization of BITS geeft de bereiken door aan WUA, waardoor ze beschikbaar zijn voor CBS om toe te passen en te installeren.  
+4. Als Delivery Optimization is ingeschakeld en peers detecteert de benodigde bereiken, wordt de client vanaf peers onafhankelijk van de Configuration Manager-client gedownload. Als Delivery Optimization is uitgeschakeld of als er geen peers zijn die de benodigde bereiken hebben, worden deze bereiken door de ConfigMgr-client gedownload van een lokaal distributie punt (of een peer-of Microsoft Update). De bereiken worden door gegeven aan de Windows Update-Agent, waardoor deze kunnen worden toegepast op CBS om de bereiken toe te passen.
 
 
 #### <a name="why-are-the-express-files-psf-so-large-when-stored-on-configuration-manager-peer-sources-in-the-ccmcache-folder"></a>Waarom worden de Express-bestanden (. psf) zo groot als ze worden opgeslagen op Configuration Manager peer bronnen in de map ccmcache?

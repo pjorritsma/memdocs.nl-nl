@@ -10,12 +10,12 @@ ms.assetid: ae72df4b-5f5d-4e19-9052-bda28edfbace
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a72ff9947f6ca31ce2158c5c763602b34948a15c
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b012dd1e7da0d6a3efb4d1cc33b8a79ef319bc0a
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075656"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268994"
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-configuration-manager"></a>Meer informatie over hoe clients site bronnen en-services vinden voor Configuration Manager
 
@@ -62,7 +62,7 @@ Een client selecteert een beheer punt om mee te communiceren op basis van de hui
 
 U kunt voorkeursbeheerpunten gebruiken. Voorkeurs beheer punten zijn beheer punten van de toegewezen site van een client die zijn gekoppeld aan een grens groep die de client gebruikt om site systeem servers te vinden. De koppeling van een voorkeurs beheer punt met een grens groep als een site systeem server is vergelijkbaar met de manier waarop distributie punten of status migratie punten zijn gekoppeld aan een grens groep. Als u voorkeursbeheerpunten voor de hiërarchie inschakelt, zal een client die een beheerpunt van de toegewezen site gebruikt, proberen eerst een voorkeursbeheerpunt te gebruiken voordat andere beheerpunten worden gebruikt.  
 
-U kunt ook de informatie in de blog van het [beheer punt](https://blogs.technet.com/b/jchalfant/archive/2014/09/22/management-point-affinity-added-in-configmgr-2012-r2-cu3.aspx) op TechNet.com gebruiken om de affiniteit van het beheer punt te configureren. Beheer punt affiniteit overschrijft het standaard gedrag voor toegewezen beheer punten en stelt de client in staat om een of meer specifieke beheer punten te gebruiken.  
+U kunt ook de informatie in de blog van het [affiniteit van beheer punten](https://docs.microsoft.com/archive/blogs/jchalfant/management-point-affinity-added-in-configmgr-2012-r2-cu3) gebruiken om de affiniteit van het beheer punt te configureren. Beheer punt affiniteit overschrijft het standaard gedrag voor toegewezen beheer punten en stelt de client in staat om een of meer specifieke beheer punten te gebruiken.  
 
 Telkens wanneer een client contact moet opnemen met een beheer punt, wordt de MP-lijst gecontroleerd, die lokaal wordt opgeslagen in Windows Management Instrumentation (WMI). De client maakt een initiële MP-lijst wanneer deze wordt geïnstalleerd. De client werkt de lijst vervolgens regel matig bij met details over elk beheer punt in de hiërarchie.  
 
@@ -131,12 +131,12 @@ Nadat een client communicatie tot stand heeft gebracht met een beheer punt, blij
 De client selecteert dan een wille keurig nieuw beheer punt dat moet worden gebruikt.  
 
 ##  <a name="active-directory"></a><a name="bkmk_ad"></a>Active Directory  
-Clients die lid zijn van een domein kunnen AD DS gebruiken voor servicelocatiebepaling. Hiervoor moeten sites [gegevens publiceren naar Active Directory](https://technet.microsoft.com/library/hh696543.aspx).  
+Clients die lid zijn van een domein kunnen AD DS gebruiken voor servicelocatiebepaling. Hiervoor moeten sites [gegevens publiceren naar Active Directory](../../servers/deploy/configure/publish-site-data.md).  
 
 Een client kan AD DS gebruiken voor service locatie wanneer alle volgende voor waarden waar zijn:  
 
-- Het Active Directory [schema is uitgebreid](https://technet.microsoft.com/library/mt345589.aspx) of is uitgebreid voor System Center 2012 Configuration Manager.  
-- Het [Active Directory-forest is geconfigureerd voor publicatie](https://technet.microsoft.com/library/hh696542.aspx)en Configuration Manager-sites zijn geconfigureerd om te publiceren.  
+- Het Active Directory [schema is uitgebreid](../network/extend-the-active-directory-schema.md) of is uitgebreid voor System Center 2012 Configuration Manager.  
+- Het [Active Directory-forest is geconfigureerd voor publicatie](../../servers/deploy/configure/publish-site-data.md)en Configuration Manager-sites zijn geconfigureerd om te publiceren.  
 - De clientcomputer is lid van een Active Directory-domein en heeft toegang tot een algemene-catalogusserver.  
 
 Als een client geen beheer punt kan vinden om te gebruiken voor service locatie vanaf AD DS, wordt geprobeerd om DNS te gebruiken.  
@@ -148,7 +148,7 @@ Overweeg het gebruik van DNS voor servicelocatiebepaling als aan de volgende voo
 - Het AD DS schema wordt niet uitgebreid ter ondersteuning van Configuration Manager.
 - Clients op het intranet bevinden zich in een forest dat niet is ingeschakeld voor Configuration Manager publicatie.  
 - U hebt clients op werkgroepcomputers en deze clients zijn niet geconfigureerd voor client beheer via internet. (Een werkgroeps-client die is geconfigureerd voor internet communiceert alleen met Internet gerichte beheer punten en maakt geen gebruik van DNS voor service locatie.)  
-- U kunt [clients configureren voor het zoeken van beheerpunten via DNS](https://technet.microsoft.com/library/gg682055).  
+- U kunt [clients configureren voor het zoeken van beheerpunten via DNS](../../clients/deploy/configure-client-computers-to-find-management-points-by-using-dns-publishing.md).  
 
 Wanneer een website records voor servicelocatiebepaling van beheerpunten publiceert naar DNS:  
 
@@ -183,7 +183,7 @@ Configuration Manager ondersteunt RFC 2782 voor service locatie records. Deze re
 
 Geef de volgende waarden op om een beheer punt te publiceren naar Configuration Manager:  
 
-- **_Service**: Voer **_mssms_mp**_&lt;site\>code in &lt;,\> waarbij naam van de locatie van het beheer punt is.  
+- **_Service**: Voer **_mssms_mp**_ &lt; \> site code in, waarbij &lt; \> naam van de locatie van het beheer punt is.  
 - **._Proto**: geef **._tcp**op.  
 - **.Naam**: voer het DNS-achtervoegsel in van het beheerpunt, bijvoorbeeld **contoso.com**.  
 - **TTL**: voer **14400**in, wat gelijk staat aan vier uur.  
@@ -201,7 +201,7 @@ Als u Windows Server DNS gebruikt, kunt u de volgende procedure gebruiken om dit
 
 ##### <a name="to-configure-automatic-publishing"></a>Automatische publicatie configureren:  
 
-1.  Vouw in de Configuration Manager-console **beheer** > **site configuratie** > **sites**uit.  
+1.  Vouw in de Configuration Manager-console **beheer**  >  **site configuratie**  >  **sites**uit.  
 
 2.  Selecteer uw site en kies vervolgens **site onderdelen configureren**.  
 
@@ -226,7 +226,7 @@ Als u Windows Server DNS gebruikt, kunt u de volgende procedure gebruiken om dit
 4.  Met de optie **nieuwe andere records** kiest u **service locatie (SRV)** in het dialoog **venster bron record type** , kiest u **record maken**, voert u de volgende informatie in en kiest u **gereed**:  
 
     - **Domein**: voer indien nodig het DNS-achtervoegsel in van het beheerpunt, bijvoorbeeld **contoso.com**.  
-    - **Service**: Typ **_mssms_mp**_&lt;code\>site, &lt;waarbij\> site-naam van het beheer punt is.  
+    - **Service**: Typ **_mssms_mp**_ &lt; \> code site, &lt; waarbij \> site-naam van het beheer punt is.  
     - **Protocol**: typ **_tcp**.  
     - **Priority**: Configuration Manager gebruikt dit veld niet.  
     - **Gewicht**: Configuration Manager gebruikt dit veld niet.  

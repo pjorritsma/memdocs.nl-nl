@@ -2,7 +2,7 @@
 title: Implementaties van besturingssystemen bewaken
 titleSuffix: Configuration Manager
 description: Om u te helpen bij het bewaken van de implementatie objecten van het besturings systeem, biedt de Configuration Manager-console waarschuwingen, rapporten en verschillende status indicatoren.
-ms.date: 10/06/2016
+ms.date: 05/04/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 08085d94-295c-432f-b5e3-9736bce0193b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9d0a430a1010611bc6a7e0871e8c59ca3d1f8de7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7afab9fbbb443b2f9fb4af15a3805c0b7df7a014
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723829"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802163"
 ---
 # <a name="monitor-operating-system-deployments-in-configuration-manager"></a>Implementaties van besturings systemen in Configuration Manager bewaken
 
@@ -45,6 +45,9 @@ De Configuration Manager-console biedt de volgende manieren om u te helpen bij h
 3.  Klik op de takenreeks waarvoor u de implementatiestatus wilt controleren.  
 
 4.  Klik op het tabblad **Starten** in de groep **Implementatie** op **Status weergeven**.  
+
+> [!NOTE]  
+> Wanneer een upgrade wordt gestart, wordt status bericht 52200 gegenereerd. Dit bevat de gebruiker die de upgrade heeft uitgevoerd.  
 
 ##  <a name="operating-system-deployment-reports"></a><a name="BKMK_TSReports"></a> Rapporten voor besturingssysteemimplementaties  
  Er zijn veel vooraf gedefinieerde rapporten voor besturingssysteemimplementaties beschikbaar. Deze zijn ingedeeld in verscheidene categorieën en kunnen worden gebruikt voor het rapporteren van specifieke informatie over statusmigratie en takenreeksimplementaties. U kunt naast deze vooraf geconfigureerde rapporten ook aangepaste software-updaterapporten maken op basis van de behoeften van uw bedrijf. Zie [bewerkingen en onderhoud voor rapportage](../../core/servers/manage/operations-and-maintenance-for-reporting.md)voor meer informatie.  

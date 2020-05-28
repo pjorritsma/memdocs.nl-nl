@@ -2,7 +2,7 @@
 title: Evaluatie van de compatibiliteit
 titleSuffix: Configuration Manager
 description: Meer informatie over compatibiliteits evaluatie voor Windows-apps en-stuur Programma's in Desktop Analytics.
-ms.date: 04/21/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: ea78f726-b1b3-49b0-8141-d916be48c458
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eedd33999ce17417122b2403c777a0b560e5f197
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.reviewer: acabello
+ms.openlocfilehash: 7b2bff4f8365693c86540c9b0578307340f13a49
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82109995"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268892"
 ---
 # <a name="compatibility-assessment-in-desktop-analytics"></a>Compatibiliteits evaluatie in Desktop Analytics
 
@@ -29,7 +30,7 @@ Desktop Analytics maakt gebruik van de volgende categorieën van de compatibilit
 
 - **Hoog**: de toepassing is bijna zeker mislukt tijdens of na de upgrade. Mogelijk is er een herbemiddeling vereist.
 
-- **Onbekend**: de app is niet geëvalueerd. Er zijn geen andere inzichten zoals *bekende problemen met MS*.
+- **Onbekend**: de app is niet geëvalueerd. Er zijn geen andere inzichten zoals *MS bekende problemen* of *gereed voor Windows*.
 
 In de lijst met app-of stuur programma-assets in een implementatie plan ziet u deze waarde voor elk element in de kolom **compatibiliteits risico** .
 
@@ -40,9 +41,13 @@ In de lijst met app-of stuur programma-assets in een implementatie plan ziet u d
 Er zijn verschillende bronnen die door Desktop Analytics worden gebruikt voor het genereren van de beoordelings classificatie voor toepassingen:
 
 - [Bekende problemen met micro soft](#microsoft-known-issues)
+- [Gereed voor Windows](#ready-for-windows)
 - [Geavanceerde inzichten](#advanced-insights)
 
 U kunt de evaluatie voor elke bron in de app vinden in Desktop Analytics. Selecteer in de lijst met app-assets in een implementatie plan een afzonderlijke app om het deel venster met de eigenschappen te openen. U ziet een algemene aanbeveling en beoordelings niveau. De sectie **compatibiliteits risico factoren** bevat Details voor deze evaluaties.
+
+> [!TIP]
+> Als in het deel venster app-Details de compatibiliteits beoordeling niet wordt weer gegeven, komt dit mogelijk doordat de instelling Details van de **App-versie** is uitgeschakeld. Het is standaard uitgeschakeld en alle versies van apps met dezelfde naam en uitgever worden gecombineerd. De service maakt nog steeds compatibiliteits risico Beoordelingen voor elke versie. Schakel Details van de **App-versies** in om de compatibiliteits risico beoordeling voor een specifieke app-versie te bekijken. Zie [activa plannen](about-deployment-plans.md#plan-assets)voor meer informatie.
 
 ## <a name="microsoft-known-issues"></a>Bekende problemen met micro soft
 
@@ -120,7 +125,7 @@ Windows-compatibiliteits gegevens classificeert enkele apps en stuur Programma's
 
 1. Selecteer **assets plannen** in het menu en schakel over naar het tabblad **apps** .
 
-1. Filter de kolom naam om items weer te geven met waarden die het `Safeguard`woord bevatten. Selecteer het resultaat om meer informatie weer te geven.
+1. Filter de kolom naam om items weer te geven met waarden die het woord bevatten `Safeguard` . Selecteer het resultaat om meer informatie weer te geven.
 
     > [!NOTE]
     > Dit item is geen echte app die op uw apparaten is geïnstalleerd. Het is een tijdelijke aanduiding waarmee u apps of stuur Programma's in uw omgeving kunt identificeren met de compatibiliteits label voor beveiliging.
@@ -130,6 +135,28 @@ Windows-compatibiliteits gegevens classificeert enkele apps en stuur Programma's
 1. Vergelijk de huidige gepubliceerde lijst met de lijst met assets in uw omgeving. Herstel alle mogelijk problematische apps of stuur Programma's door een update naar een compatibele versie uit te voeren.
 
 [![Scherm afbeelding van de beveiligde app in Desktop Analytics](media/5746559-safeguards.png)](media/5746559-safeguards.png#lightbox)
+
+## <a name="ready-for-windows"></a>Gereed voor Windows
+
+De status van de goed keuring is gebaseerd op informatie van commerciële apparaten die gegevens delen met micro soft. De status is geïntegreerd met ondersteunings instructies van software leveranciers.
+
+Desktop Analytics biedt de acceptatie status voor elke versie van een Asset die is gevonden op commerciële apparaten. Deze status bevat geen gegevens van consumenten apparaten of apparaten die geen gegevens delen. De status kan niet representatief zijn voor het acceptatie tempo van alle Windows 10-apparaten.
+
+De mogelijke categorieën zijn:
+
+- **Sterk goedgekeurd**: op ten minste 100.000 commerciële Windows 10-apparaten is deze app geïnstalleerd.
+
+- **Goedgekeurd**: ten minste 10.000 commerciële Windows 10-apparaten hebben deze app geïnstalleerd.
+
+- **Onvoldoende gegevens**: te weinig commerciële Windows 10-apparaten delen informatie voor deze app voor micro soft om de toepassing te categoriseren.
+
+- **Contact opnemen met ontwikkel aars**: er zijn mogelijk compatibiliteits problemen met deze versie van de app. Micro soft raadt aan om contact op te nemen met de software provider voor meer informatie.
+
+- **Onbekend**: er is geen informatie beschikbaar voor deze versie van deze toepassing. Er is mogelijk informatie beschikbaar voor andere versies van de toepassing.
+
+### <a name="support-statement"></a>Ondersteunings verklaring
+
+Als de software provider een of meer versies van deze toepassing in Windows 10 ondersteunt, ziet u deze instructie in het deel venster app-eigenschappen. Zoek in de sectie compatibiliteits risico factoren naar de **ondersteunings verklaring**.
 
 ## <a name="advanced-insights"></a>Geavanceerde inzichten
 
@@ -209,7 +236,7 @@ Desktop Analytics bevat ook lijsten en groepen per Beschik baarheid van Stuur Pr
 
 U kunt de evaluatie vinden in het stuur programma in Desktop Analytics. Selecteer in de lijst met stuur programma-assets in een implementatie plan een afzonderlijk stuur programma om het deel venster met de eigenschappen te openen. U ziet een algemene aanbeveling en beoordelings niveau. De sectie **compatibiliteits risico factoren** bevat Details voor deze evaluaties.
 
-| Beschik baarheid Stuur Programma's | Actie vereist? | Wat het betekent | Richtlijnen |
+| Beschik baarheid Stuur Programma's | Actie vereist? | Wat het betekent | Hulp |
 |---------------------|------------------|---------------|----------|
 | Beschikbaar in box | Nee, alleen voor bewustzijn | De momenteel geïnstalleerde versie van een toepassing of stuur programma wordt niet gemigreerd naar de nieuwe versie van het besturings systeem. Er wordt een compatibele versie geïnstalleerd met de nieuwe versie van het besturings systeem. | Voor de upgrade is geen actie vereist om door te gaan. |
 | Importeren uit Windows Update | Ja | De versie van een stuur programma die momenteel is geïnstalleerd, wordt niet gemigreerd naar de nieuwe versie van het besturings systeem. Een compatibele versie is beschikbaar via Windows Update. | Als de computer automatisch updates ontvangt van Windows Update, is geen actie vereist. Als dat niet het geval is, kunt u na het upgraden van Windows een nieuw stuur programma importeren uit Windows Update. |

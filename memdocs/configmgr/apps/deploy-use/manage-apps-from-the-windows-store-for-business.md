@@ -165,6 +165,6 @@ Bij het implementeren van offline-Apps op Windows 10-apparaten met de Configurat
 
 Nadat de Microsoft Store voor Business-en Education-beheerder een offline app heeft verkregen, publiceert u de app niet voor gebruikers via de Store. Deze configuratie zorgt ervoor dat gebruikers niet online kunnen installeren of bijwerken. Gebruikers ontvangen alleen offline-app-updates via Configuration Manager.
 
-## <a name="see-also"></a>Zie tevens
+## <a name="see-also"></a>Zie ook
 
 [Problemen oplossen met de Microsoft Store voor zakelijke en onderwijs integratie met Configuration Manager](troubleshoot-microsoft-store-for-business-integration.md)

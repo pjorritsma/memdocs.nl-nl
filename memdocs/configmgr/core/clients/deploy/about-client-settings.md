@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1435c1ab6be8c80178566ae9d354084fddebb22a
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 127ed43fded6c66bc4395ae4d69a28ae8c9eddd5
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771361"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83877528"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Over client instellingen in Configuration Manager
 
@@ -325,9 +325,9 @@ Als clients de vereiste software-updates zonder vertraging moeten installeren ti
 
 ### <a name="grace-period-for-enforcement-after-deployment-deadline-hours"></a>Respijt periode voor afdwingen na de deadline van de implementatie (uren)
 
-Stel deze optie in op **Ja**als u gebruikers meer tijd wilt geven om de vereiste software-update-implementaties na de deadline te installeren. Deze respijt periode is voor een lange periode uitgeschakeld voor een computer en de gebruiker moet een groot aantal toepassings-of update-implementaties installeren. Deze instelling is bijvoorbeeld handig als een gebruiker van vakantie terugkeert en gedurende een lange periode moet wachten terwijl de client achterstallige toepassings implementaties installeert.
+Als u gebruikers meer tijd wilt geven om de vereiste implementaties van software-updates na de deadline te installeren, stelt u een waarde in voor deze optie. Deze respijt periode is voor een lange periode uitgeschakeld voor een computer en de gebruiker moet een groot aantal toepassings-of update-implementaties installeren. Deze instelling is bijvoorbeeld handig als een gebruiker van vakantie terugkeert en gedurende een lange periode moet wachten terwijl de client achterstallige toepassings implementaties installeert.
 
-Stel een respijt periode in van 1 tot 120 uur. Gebruik deze instelling samen met de implementatie-eigenschap **vertraging afdwingen van deze implementatie op basis van gebruikers voorkeuren**. Zie [toepassingen implementeren](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period)voor meer informatie.
+Stel een respijt periode van 0 tot 120 uur in. Gebruik deze instelling samen met de implementatie-eigenschap **vertraging afdwingen van deze implementatie op basis van gebruikers voorkeuren**. Zie [toepassingen implementeren](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period)voor meer informatie.
 
 
 ## <a name="computer-restart"></a>Computer opnieuw opstarten
@@ -363,7 +363,7 @@ U gebruikt Configuration Manager grens groepen om de distributie van inhoud in u
 
 ### <a name="use-configuration-manager-boundary-groups-for-delivery-optimization-group-id"></a>Configuration Manager grens groepen gebruiken voor de ID van de leverings optimalisatie groep
 
-Kies **Ja** om de grens groep-ID toe te passen als de id van de leverings optimalisatie groep op de client. Wanneer de client communiceert met de Delivery Optimization-Cloud service, wordt deze id gebruikt om peers met de gewenste inhoud te vinden.
+Kies **Ja** om de grens groep-ID toe te passen als de id van de leverings optimalisatie groep op de client. Wanneer de client communiceert met de Delivery Optimization-Cloud service, wordt deze id gebruikt om peers met de gewenste inhoud te vinden. Als u deze instelling inschakelt, wordt ook de download modus voor de leverings optimalisatie ingesteld op de groep (2) op de doel clients.
 
 > [!Note]
 > Micro soft raadt aan de client in staat te stellen deze instelling te configureren via lokaal beleid in plaats van met groeps beleid. Hierdoor kan de grens groep-ID worden ingesteld als de id van de bezorgings optimalisatie groep op de client. Zie [Delivery Optimization](../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization)voor meer informatie.
@@ -509,13 +509,12 @@ Kies een van de volgende opties voor deze instelling:
 
     - Vereiste implementaties (zodra de installatiedeadline wordt bereikt)  
 
-    > [!IMPORTANT]  
-    > De client staat altijd software-installaties toe vanuit software Center, ongeacht de instellingen voor de Internet verbinding met data limiet.  
-
     Als de client de limiet voor gegevens overdracht voor de Internet verbinding met data limiet bereikt, probeert de client niet langer te communiceren met Configuration Manager-sites.  
 
 - **Blok keren**: de Configuration Manager-client probeert niet te communiceren met Configuration Manager-sites wanneer deze zich op een Internet verbinding met data limiet bevinden. Dit is de standaardoptie.  
 
+> [!IMPORTANT]  
+> De client staat altijd software-installaties toe vanuit software Center, ongeacht de instellingen voor de Internet verbinding met data limiet. Als de gebruiker een software-installatie aanvraagt terwijl het apparaat zich op een netwerk met data limiet bevindt, wordt het doel van de gebruiker door het Software Center gerespecteerd.<!-- MEMDocs#285 -->
 
 
 ## <a name="power-management"></a>Energiebeheer  
@@ -777,9 +776,9 @@ Als u het type bestand wilt opgeven dat u wilt inventariseren, selecteert u **ty
 
 - Selecteer **Nieuw** om een nieuw bestands type toe te voegen aan de inventarisatie. Geef vervolgens de volgende gegevens op in het dialoog venster **geïnventariseerde bestands eigenschappen** :  
 
-    - **Naam**: Geef een naam op voor het bestand dat u wilt inventariseren. Gebruik een asterisk (`*`) als Joker teken voor wille keurige tekst en een vraag teken`?`() die een enkel teken voor stelt. Als u bijvoorbeeld alle bestanden met de extensie. doc wilt inventariseren, geeft u de bestands naam `*.doc`op.  
+    - **Naam**: Geef een naam op voor het bestand dat u wilt inventariseren. Gebruik een asterisk ( `*` ) als Joker teken voor wille keurige tekst en een vraag teken ( `?` ) die een enkel teken voor stelt. Als u bijvoorbeeld alle bestanden met de extensie. doc wilt inventariseren, geeft u de bestands naam op `*.doc` .  
 
-    - **Locatie**: Selecteer **instellen** om het dialoog venster **Eigenschappen van pad** te openen. Software-inventaris configureren om op alle harde schijven van de client te zoeken naar het opgegeven bestand, zoek een opgegeven `C:\Folder`pad (bijvoorbeeld) of zoek naar een opgegeven variabele (bijvoorbeeld `%windir%`). U kunt ook zoeken in alle submappen onder het opgegeven pad.  
+    - **Locatie**: Selecteer **instellen** om het dialoog venster **Eigenschappen van pad** te openen. Software-inventaris configureren om op alle harde schijven van de client te zoeken naar het opgegeven bestand, zoek een opgegeven pad (bijvoorbeeld `C:\Folder` ) of zoek naar een opgegeven variabele (bijvoorbeeld `%windir%` ). U kunt ook zoeken in alle submappen onder het opgegeven pad.  
 
     - **Versleutelde en gecomprimeerde bestanden uitsluiten**: wanneer u deze optie kiest, worden gecomprimeerde of versleutelde bestanden niet geïnventariseerd.  
 
@@ -798,16 +797,16 @@ Als u bestanden wilt verzamelen van client computers, selecteert u **bestanden i
 
 - Voer, in het dialoogvenster **Eigenschappen verzameld bestand** , de volgende informatie in:  
 
-    - **Naam**: Geef een naam op voor het bestand dat u wilt verzamelen. Gebruik een asterisk (`*`) als Joker teken voor wille keurige tekst en een vraag teken`?`() die een enkel teken voor stelt.  
+    - **Naam**: Geef een naam op voor het bestand dat u wilt verzamelen. Gebruik een asterisk ( `*` ) als Joker teken voor wille keurige tekst en een vraag teken ( `?` ) die een enkel teken voor stelt.  
 
-    - **Locatie**: Selecteer **instellen** om het dialoog venster **Eigenschappen van pad** te openen. Software-inventaris configureren om te zoeken naar alle harde schijven van de client voor het bestand dat u wilt verzamelen, zoek een opgegeven pad `C:\Folder`(bijvoorbeeld) of zoek naar een opgegeven variabele (bijvoorbeeld `%windir%`). U kunt ook zoeken in alle submappen onder het opgegeven pad.  
+    - **Locatie**: Selecteer **instellen** om het dialoog venster **Eigenschappen van pad** te openen. Software-inventaris configureren om te zoeken naar alle harde schijven van de client voor het bestand dat u wilt verzamelen, zoek een opgegeven pad (bijvoorbeeld `C:\Folder` ) of zoek naar een opgegeven variabele (bijvoorbeeld `%windir%` ). U kunt ook zoeken in alle submappen onder het opgegeven pad.  
 
     - **Versleutelde en gecomprimeerde bestanden uitsluiten**: wanneer u deze optie kiest, worden gecomprimeerde of versleutelde bestanden niet verzameld.  
 
     - **Stoppen met verzamelen van bestanden wanneer de totale grootte van de bestanden groter is dan (KB)**: Geef de bestands grootte op, in kilo bytes (KB), waarna de client stopt met het verzamelen van de opgegeven bestanden.  
 
     > [!NOTE]  
-    > De site server verzamelt de vijf meest recent gewijzigde versies van verzamelde bestanden en slaat deze op in `<ConfigMgr installation directory>\Inboxes\Sinv.box\Filecol` de map. Als een bestand sinds de laatste software-inventarisatie fase niet is gewijzigd, wordt het bestand niet opnieuw verzameld.  
+    > De site server verzamelt de vijf meest recent gewijzigde versies van verzamelde bestanden en slaat deze op in de `<ConfigMgr installation directory>\Inboxes\Sinv.box\Filecol` map. Als een bestand sinds de laatste software-inventarisatie fase niet is gewijzigd, wordt het bestand niet opnieuw verzameld.  
     >
     > Software-inventaris verzamelt geen bestanden die groter zijn dan 20 MB.  
     >
@@ -942,11 +941,11 @@ Deze client instelling biedt de volgende opties:
 
 - **Normaal**: Windows Setup maakt meer systeem bronnen en updates sneller. Er wordt meer processor tijd gebruikt, waardoor de totale installatie tijd korter is, maar de storing van de gebruiker langer is.  
 
-    - Hiermee configureert u het setupconfig. ini-bestand op het apparaat `/Priority Normal` met de [Windows Setup-opdracht regel optie](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
+    - Hiermee configureert u het setupconfig. ini-bestand op het apparaat met de `/Priority Normal` [Windows Setup-opdracht regel optie](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
 
 - **Laag**: u kunt op het apparaat blijven werken terwijl het op de achtergrond wordt gedownload en bijgewerkt. De totale installatie tijd is langer, maar de onderbreking van de gebruiker is korter. Mogelijk moet u de maximale uitvoerings tijd van de update verhogen om te voor komen dat er een time-out optreedt wanneer u deze optie gebruikt.  
 
-    - Hiermee verwijdert `/Priority` u de [Windows Setup-opdracht regel optie](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) uit het bestand setupconfig. ini.
+    - Hiermee verwijdert u de `/Priority` [Windows Setup-opdracht regel optie](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) uit het bestand setupconfig. ini.
 
 
 ### <a name="enable-third-party-software-updates"></a>Updates van software van derden inschakelen

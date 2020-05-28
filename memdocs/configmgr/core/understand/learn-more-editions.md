@@ -10,12 +10,12 @@ ms.assetid: 495b87ae-41a4-49ba-abe2-d4f7d22ac0d4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f18ed2180f1d526e2afa4872e8fa9018c7e18721
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 04ed335c65369840085fe44ba2f1b81d7806a0e3
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722709"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906055"
 ---
 # <a name="licensing-and-branches-for-configuration-manager"></a>Licenties en vertakkingen voor Configuration Manager
 
@@ -32,7 +32,7 @@ In dit artikel vindt u meer informatie over de licentie vereisten voor de beschi
 
 Klanten met een actieve Software Assurance (SA) op Configuration Manager licenties of met gelijkwaardige abonnements rechten vanaf 1 oktober 2016 hebben recht op het gebruik van de versie 1606-release van Configuration Manager van oktober 2016. Klanten met rechten voor het Configuration Manager op of na 1 oktober 2016 vinden twee gelicentieerde opties bij de installatie: current branch en Long-term Servicing Branch (LTSB).
 
-Zie [licentie voorwaarden en documentatie](https://go.microsoft.com/fwlink/?LinkId=800052)voor de volledige voor waarden voor de producten die u aanschaft via micro soft Volume Licensing Program ma's.
+Zie [licentie voorwaarden en documentatie](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?mode=1)voor de volledige voor waarden voor de producten die u aanschaft via micro soft Volume Licensing Program ma's.
 
 
 ## <a name="licensed-branches"></a>Gelicentieerde branches
@@ -117,7 +117,7 @@ Gebruik de volgende bronnen voor meer informatie over de licentie gegevens van e
 
 - [Overzicht van VLSC](https://www.microsoft.com/Licensing/existing-customer/vlsc-training-and-resources.aspx)
 
-- [Micro soft Volume Licensing-product termen](https://go.microsoft.com/fwlink/?LinkId=800052)
+- [Micro soft Volume Licensing-product termen](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?mode=1)
 
 - Klanten met een volume licentie kunnen een samen vatting krijgen van hun licenties via het [Volume License-Service Centrum](https://www.microsoft.com/Licensing/servicecenter/default.aspx). Ga naar het menu **licenties** en selecteer **licentie samenvatting**.
 

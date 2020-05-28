@@ -2,7 +2,7 @@
 title: Releaseopmerkingen
 titleSuffix: Configuration Manager
 description: Meer informatie over urgente problemen die nog niet zijn opgelost in het product of die zijn opgenomen in een Microsoft Ondersteuning Knowledge Base-artikel.
-ms.date: 04/08/2020
+ms.date: 05/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: da0b9fc5600a957680ad22e54edc176c892527a6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 131b6104d5724c8a4eeb0bb68c4afd9a5319abb7
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718131"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83823959"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Release opmerkingen voor Configuration Manager
 
@@ -33,6 +33,8 @@ Raadpleeg de volgende artikelen voor meer informatie over de nieuwe functies die
 - [Wat is er nieuw in versie 1910](../../../plan-design/changes/whats-new-in-version-1910.md)
 - [Wat is er nieuw in versie 1906](../../../plan-design/changes/whats-new-in-version-1906.md)  
 - [Wat is er nieuw in versie 1902](../../../plan-design/changes/whats-new-in-version-1902.md)
+
+Zie [what's New in Desktop Analytics](../../../../desktop-analytics/whats-new.md)(Engelstalig) voor meer informatie over de nieuwe functies van bureau blad Analytics.
 
 > [!Tip]  
 > Als u een melding wilt ontvangen wanneer deze pagina wordt bijgewerkt, kopieert en plakt u de volgende URL in uw RSS feed-lezer:`https://docs.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us`
@@ -105,9 +107,9 @@ Als u de Configuration Manager-console uitvoert in een besturings systeem waarbi
 
 `Unable to get certificate for Powershell`
 
-Deze fout treedt op omdat `scripts` een map niet bestaat in `AdminConsole\bin` de Directory voor Zweedse, Hongaarse of Japanse talen. De map scripts is gelokaliseerd in deze talen van het besturings systeem.
+Deze fout treedt op omdat een `scripts` map niet bestaat in de `AdminConsole\bin` Directory voor Zweedse, Hongaarse of Japanse talen. De map scripts is gelokaliseerd in deze talen van het besturings systeem.
 
-U kunt dit probleem omzeilen door een map te `scripts` maken met `AdminConsole\bin` de naam in de map. Kopieer de bestanden vanuit uw gelokaliseerde map naar de zojuist `scripts` gemaakte map. Implementeer micro soft Edge, versie 77 en hoger zodra de bestanden zijn gekopieerd.
+U kunt dit probleem omzeilen door een map te maken `scripts` met de naam in de `AdminConsole\bin` map. Kopieer de bestanden vanuit uw gelokaliseerde map naar de zojuist gemaakte `scripts` map. Implementeer micro soft Edge, versie 77 en hoger zodra de bestanden zijn gekopieerd.
 
 ## <a name="os-deployment"></a>Besturingssysteemimplementatie
 
@@ -166,6 +168,15 @@ Zie [aangepaste beveiligings rollen maken](../configure/configure-role-based-adm
 
 ## <a name="desktop-analytics"></a>Desktop Analytics
 
+### <a name="an-extended-security-update-for-windows-7-causes-them-to-show-as-unable-to-enroll"></a><a name="dawin7-diagtrack"></a>Een uitgebreide beveiligings update voor Windows 7 geeft aan dat ze niet kunnen worden **Inge schreven**
+
+<!-- 7283186 -->
+_Van toepassing op: Configuration Manager versies 1902, 1906, 1910 en 2002_
+
+De uitgebreide beveiligings update van april 2020 (ESU) voor Windows 7 heeft de mini maal vereiste versie van diagtrack. dll gewijzigd van 10586 naar 10240. Door deze wijziging worden Windows 7-apparaten weer gegeven als niet in staat **om in te schrijven** in het dash board **verbindings status** van de bureau blad Analytics. Wanneer u inzoomt op de weer gave apparaat voor deze status, wordt de volgende status weer gegeven in de eigenschap **DiagTrack service configuration** :`Connected User Experience and Telemetry (diagtrack.dll) component is outdated. Check requirements.`
+
+Er is geen tijdelijke oplossing vereist voor dit probleem. Verwijder de ESU van april niet. Als op een andere manier op de juiste wijze is geconfigureerd, rapporteren de Windows 7-apparaten nog steeds diagnostische gegevens naar de Desktop Analytics-service en worden ze nog steeds weer gegeven in de portal.
+
 ### <a name="if-you-use-hardware-inventory-for-distributed-views-you-cant-onboard-to-desktop-analytics"></a>Als u hardware-inventarisatie gebruikt voor gedistribueerde weer gaven, kunt u niet onboarden naar Desktop Analytics
 
 <!-- 4950335 -->
@@ -209,7 +220,7 @@ Als u een verbinding maakt met een Azure-service en de **Azure-omgeving** instel
 Select Environment, Name, TenantID From AAD_Tenant_Ex
 ```
 
-Voor de overheids-Cloud is `2` het resultaat van deze query voor de specifieke Tenant.
+Voor de overheids-Cloud is het resultaat van deze query `2` voor de specifieke Tenant.
 
 ### <a name="cant-download-content-from-a-cloud-management-gateway-enabled-for-tls-12"></a>Kan geen inhoud downloaden van een Cloud beheer gateway die is ingeschakeld voor TLS 1,2
 
@@ -241,7 +252,7 @@ Dit probleem omzeilen:
 
 - U kunt ook een traditioneel [Cloud distributiepunt](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md)gebruiken. Deze rol dwingt geen TLS 1,2 af, maar is compatibel met clients waarvoor TLS 1,2 vereist is.
 
-## <a name="protection"></a>Beveiliging
+## <a name="protection"></a>Protection
 
 ### <a name="bitlocker-management-appears-in-version-1906"></a>BitLocker-beheer wordt weer gegeven in versie 1906
 

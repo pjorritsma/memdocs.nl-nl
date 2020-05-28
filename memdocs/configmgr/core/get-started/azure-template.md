@@ -10,16 +10,16 @@ ms.assetid: 9875c443-19bf-43a0-9203-3a741f305096
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dd2a8b3bfb7c4b8af277616c7eaed329bc143bb7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 23cc7d0c642637a310f53280bafed6a2a28d2834
+ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711600"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83406676"
 ---
 # <a name="create-a-configuration-manager-lab-in-azure"></a>Een Configuration Manager Lab maken in azure
 
-*Van toepassing op: Configuration Manager (technische preview-vertakking)*
+*Van toepassing op: Configuration Manager (huidige vertakking, Technical Preview-vertakking)*
 
 <!--3556017-->
 
@@ -35,12 +35,12 @@ Zie [Configuration Manager op Azure](../understand/configuration-manager-on-azur
 ## <a name="prerequisites"></a>Vereisten
 
 Dit proces vereist een Azure-abonnement waarin u de volgende objecten kunt maken: 
-- Twee Standard_B2s virtuele machines voor domein-en MP & DP-rollen.
-- Een Standard_B2ms virtuele machine voor de primaire site server en de SQL database-server.
+- Twee Standard_B2s virtuele machines voor domein controller, beheer punt en distributie punt.
+- Eén Standard_B2ms virtuele machine voor de primaire site server en de SQL database-server.
 - Standard_LRS Storage-account
 
 > [!Tip]  
-> Raadpleeg de [Azure-prijs calculator](https://azure.microsoft.com/pricing/calculator/) om mogelijke kosten te bepalen.  
+> Zie de [Azure-prijs calculator](https://azure.microsoft.com/pricing/calculator/)om mogelijke kosten te bepalen.  
 
 
 
@@ -71,9 +71,9 @@ Dit proces vereist een Azure-abonnement waarin u de volgende objecten kunt maken
     > [!Important]  
     > De volgende instellingen zijn vereist voor Azure. Gebruik de standaard waarden. Wijzig deze waarden niet.  
     > 
-    > - locatie van artefacten: de locatie van de scripts voor deze sjabloon ** \_** <!-- https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/sccm-technicalpreview/ -->  
+    > - ** \_ locatie van artefacten**: de locatie van de scripts voor deze sjabloon <!-- https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/sccm-technicalpreview/ -->  
     >
-    > - artefacten locatie SAS-token: de sasToken is vereist voor toegang tot de artefacten locatie ** \_**  
+    > - ** \_ artefacten locatie SAS-token**: de sasToken is vereist voor toegang tot de artefacten locatie  
     > 
     > - **Locatie**: de locatie voor alle resources
 
@@ -84,9 +84,9 @@ De instellingen worden gevalideerd door Azure en de implementatie wordt gestart.
 > [!NOTE]
 > Het proces kan 2-4 uur duren. Zelfs wanneer de Azure Portal een geslaagde implementatie toont, blijven configuratie scripts worden uitgevoerd. Start de virtuele machines niet opnieuw op tijdens het proces.
 
-Als u de status van de configuratie scripts wilt weer geven, `<prefix>PS1` maakt u verbinding met de server en bekijkt `%windir%\TEMP\ProvisionScript\PS1.json`u het volgende bestand:. Als alle stappen worden weer gegeven als voltooid, wordt het proces uitgevoerd.
+Als u de status van de configuratie scripts wilt weer geven, maakt u verbinding met de `<prefix>PS1` Server en bekijkt u het volgende bestand: `%windir%\TEMP\ProvisionScript\PS1.json` . Als alle stappen worden weer gegeven als voltooid, wordt het proces uitgevoerd.
 
-Als u verbinding wilt maken met de virtuele machines, moet u eerst de Azure Portal de open bare IP-adressen voor elke virtuele machine ophalen. Wanneer u verbinding maakt met de virtuele machine, is `contoso.com`de domein naam. Gebruik de referenties die u hebt opgegeven in de implementatie sjabloon. Zie [verbinding maken en aanmelden bij een virtuele Azure-machine met Windows](https://docs.microsoft.com/azure/virtual-machines/windows/connect-logon)voor meer informatie.
+Als u verbinding wilt maken met de virtuele machines, moet u eerst de Azure Portal de open bare IP-adressen voor elke virtuele machine ophalen. Wanneer u verbinding maakt met de virtuele machine, is de domein naam `contoso.com` . Gebruik de referenties die u hebt opgegeven in de implementatie sjabloon. Zie [verbinding maken en aanmelden bij een virtuele Azure-machine met Windows](https://docs.microsoft.com/azure/virtual-machines/windows/connect-logon)voor meer informatie.
 
 
 
@@ -96,13 +96,13 @@ Alle drie de virtuele machines hebben de volgende specificaties:
 - 150 GB schijf ruimte
 - Zowel een openbaar als een particulier IP-adres. De open bare Ip's bevinden zich in een netwerk beveiligings groep die alleen verbindingen met extern bureau blad toestaat op TCP-poort 3389. 
 
-Het voor voegsel dat u hebt opgegeven in de implementatie sjabloon is het voor voegsel van de VM-naam. Als u bijvoorbeeld ' Contoso ' als voor voegsel hebt ingesteld, is `contosoDC`de computer naam van de domein controller.
+Het voor voegsel dat u hebt opgegeven in de implementatie sjabloon is het voor voegsel van de VM-naam. Als u bijvoorbeeld ' Contoso ' als voor voegsel hebt ingesteld, is de computer naam van de domein controller `contosoDC` .
 
 
 ### `<prefix>DC01`
 
 - Active Directory-domeincontroller
-- Standard_B2s, met twee CPU en 4 GB geheugen
+- Standard_B2s, met twee processors en 4 GB geheugen
 - Windows Server 2019 Data Center Edition
 
 #### <a name="windows-features-and-roles"></a>Windows-onderdelen en -rollen
@@ -113,7 +113,7 @@ Het voor voegsel dat u hebt opgegeven in de implementatie sjabloon is het voor v
 
 ### `<prefix>PS01`
 
-- Standard_B2ms, met twee CPU en 8 GB aan geheugen
+- Standard_B2ms, met twee processors en 8 GB aan geheugen
 - Windows Server 2016 Data Center Edition
 - SQL Server
 - Windows 10 ADK met Windows PE 
@@ -127,7 +127,7 @@ Het voor voegsel dat u hebt opgegeven in de implementatie sjabloon is het voor v
 
 ### `<prefix>DPMP01`
 
-- Standard_B2s, met twee CPU en 4 GB geheugen
+- Standard_B2s, met twee processors en 4 GB geheugen
 - Windows Server 2019 Data Center Edition
 - Distributiepunt
 - Beheerpunt

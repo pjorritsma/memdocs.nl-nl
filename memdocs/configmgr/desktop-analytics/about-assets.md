@@ -2,7 +2,7 @@
 title: Assets in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Meer informatie over apparaten, stuur Programma's en apps in Desktop Analytics.
-ms.date: 01/16/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: d07198cf-49bb-4712-8c63-063b4302cc11
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fe1338781cbb16a8485de050a294e34e487a2ecc
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: d5900fd4cb4fdebea23e626ffbe17c5289712b31
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722548"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268909"
 ---
 # <a name="assets-in-desktop-analytics"></a>Assets in Desktop Analytics
 
@@ -41,6 +42,10 @@ Op het tabblad **apps** worden alle geïnstalleerde apps weer gegeven die de ser
 
 Op meer dan 2% van geregistreerde apparaten zijn **interessante** apps geïnstalleerd.
 
+De instelling Details van de **App-versies** is standaard uitgeschakeld. op dit tabblad worden alle versies van apps met dezelfde naam en uitgever gecombineerd.<!-- 5542186 --> Het standaard gedrag helpt bij het verminderen van het totale aantal apps dat u ziet, waardoor u minder inspanningen krijgt om aantekeningen aan de apps te maken. Het aantal apps in de tegel **apps** op de achtergrond is ook gelijk aan deze instelling. In plaats van honderden exemplaren van micro soft Edge te vermelden, is er bijvoorbeeld één exemplaar voor alle versies. U kunt beslissingen voor alle versies eenmaal maken. Als u beslissingen moet nemen over specifieke versies van een app, schakelt u deze instelling in. U kunt deze instelling ook configureren bij het werken met een implementatie plan. Zie [activa plannen](about-deployment-plans.md#plan-assets)voor meer informatie.
+
+Selecteer de app in de lijst en selecteer **bewerken**. Met deze actie worden Details voor de app weer gegeven. Selecteer de vervolg keuzelijst **urgentie** en stel een waarde in. U kunt ook een **eigenaar**toewijzen. Als u wijzigingen aanbrengt, selecteert u **Opslaan**.
+
 Configureer het **belang** van apps door een van de volgende categorieën in te stellen:
 
 - Kritiek
@@ -49,7 +54,7 @@ Configureer het **belang** van apps door een van de volgende categorieën in te 
 - Niet gecontroleerd
 - Niet belang rijk<!-- 3587232 -->
 
-Selecteer de app in de lijst en selecteer **bewerken**. Met deze actie worden Details voor de app weer gegeven. Selecteer de vervolg keuzelijst **urgentie** en stel een waarde in. U kunt ook een **eigenaar**toewijzen. Als u wijzigingen aanbrengt, selecteert u **Opslaan**.
+Wanneer de instelling Details van de **App-versie** is uitgeschakeld, wordt in het deel venster app-Details het aantal versies en talen van de app weer gegeven dat wordt gecombineerd. Als u wijzigingen in de app-details opslaat, geldt dit voor alle versies. Stel bijvoorbeeld het **belang** of de **eigenaar**in. Bij sommige waarden wordt ' multiple ' weer gegeven, wat betekent dat er niet één consistente waarde in alle versies is.
 
 ### <a name="automatic-upgrade-decision-of-system-and-store-apps"></a><a name="bkmk_plan-autoapp" />Beslissing over automatische upgrade van systeem-en Store-apps
 
@@ -70,7 +75,7 @@ Het identificeren van **urgentie** en het **opwaarderen van upgrades** is essent
 >    - Voor Store-apps, filter **type** als **modern**
 >    - Voor systeem-apps filter **categorie** als **achtergrond proces** of **Windows-onderdeel**
 
-In een implementatie plan kunt u ook de beslissing van de **upgrade**instellen. Zie voor meer informatie [fonds beleggingen](about-deployment-plans.md#plan-assets)
+In een implementatie plan kunt u ook de beslissing van de **upgrade**instellen. Zie [activa plannen](about-deployment-plans.md#plan-assets)voor meer informatie.
 
 ### <a name="usage"></a>Gebruik
 

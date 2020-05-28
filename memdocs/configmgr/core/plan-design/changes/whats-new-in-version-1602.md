@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: fc38d0cbd70faa23f67c7089944b8b4c2cd0f7fc
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 2e398795a14f5073141f103d93ccd82e61d4d7a8
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078716"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904900"
 ---
 # <a name="what39s-new-in-version-1602-of-configuration-manager"></a>Wat&#39;s nieuw in versie 1602 van Configuration Manager
 
@@ -42,9 +42,9 @@ Update 1602 voor Configuration Manager is alleen beschikbaar als een update in d
 > [!WARNING]  
 >  Voordat u de upgrade naar Windows Server 2012 R2 uitvoert, dient u WSUS 3.2 te verwijderen van de server.  
 >   
->  Zie de sectie nieuwe en gewijzigde functionaliteit in [Windows Server Update Services overzicht](https://technet.microsoft.com/library/hh852345.aspx)in de Windows Server-documentatie voor meer informatie over deze kritieke stap.  
+>  Zie de sectie nieuwe en gewijzigde functionaliteit in [Windows Server Update Services overzicht](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality)voor meer informatie over deze kritieke stap.  
 
- Als u een server wilt bijwerken, gebruikt u de upgrade procedures voor Windows Server 2012 R2. U hoeft na de upgrade geen Configuration Manager site server-herstel uit te voeren. Zie [Upgradeopties voor Windows Server 2012 R2](https://technet.microsoft.com/library/dn303416.aspx) in de Windows Server-documentatie voor de upgradeprocedures.  
+ Als u een server wilt bijwerken, gebruikt u de upgrade procedures voor Windows Server 2012 R2. U hoeft na de upgrade geen Configuration Manager site server-herstel uit te voeren. Zie [Upgradeopties voor Windows Server 2012 R2](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11)) in de Windows Server-documentatie voor de upgradeprocedures.  
 
 ###  <a name="sql-server-alwayson-availability-groups"></a><a name="bkmk_AOAG"></a>SQL Server AlwaysOn-beschikbaarheids groepen  
  Gebruik SQL Server AlwaysOn-beschikbaarheids groepen voor het hosten van de site database op primaire sites en de centrale beheer site als oplossing voor hoge Beschik baarheid en herstel na nood gevallen.  
@@ -60,7 +60,7 @@ Update 1602 voor Configuration Manager is alleen beschikbaar als een update in d
 
 -   Wanneer u de classificatie **upgrades** voor software-update synchronisatie selecteert, wordt er een waarschuwing weer gegeven. Deze waarschuwing laat u weten dat [hotfix 3095113](https://support.microsoft.com/kb/3095113) voor Windows Server Update Services (WSUS) 4,0 is vereist voordat u software-updates kunt synchroniseren, en dat Windows 10-onderhoud goed werkt. Vanuit het waarschuwings bericht gaat u naar het bijbehorende Knowledge Base-artikel.  
 
--   Beschik bare Windows 10-upgrades worden nu alleen weer gegeven in het knoop punt Windows 10- **onderhoud** \ **alle updates van Windows** 10 van de Configuration Manager-console. Deze updates worden niet meer weer gegeven in het knoop punt **Software** \ **-updates voor** software-updates van de-console.  
+-   Beschik bare Windows 10-upgrades worden nu alleen weer gegeven in het knoop punt Windows 10- **onderhoud**  \  **alle updates van Windows** 10 van de Configuration Manager-console. Deze updates worden niet meer weer gegeven in het knoop punt **Software**-updates voor software-updates  \  **All Software Updates** van de-console.  
 
 -   Een onderhouds plan wordt beschouwd als een implementatie met een hoog risico en het venster **verzameling selecteren** bevat alleen de aangepaste verzamelingen die voldoen aan de verificatie-instellingen voor de implementatie die zijn geconfigureerd in de eigenschappen van de site. Zie [instellingen voor het beheren van implementaties met een hoog risico voor Configuration Manager](../../servers/manage/settings-to-manage-high-risk-deployments.md)voor meer informatie.  
 
@@ -142,7 +142,7 @@ Deze apps vindt u in het knoop punt **toepassingen** van de Configuration Manage
  Zie [clients controleren](../../../core/clients/manage/monitor-clients.md)voor meer informatie.  
 
 ### <a name="refresh-pc-machine-and-user-policy-from-software-center"></a>PC-computer-en gebruikers beleid vernieuwen vanuit software Center  
- Er is een nieuwe optie, **synchronisatie beleid**toegevoegd aan de pagina **Opties** > **computer onderhoud** van software Center dat ervoor zorgt dat de PC het Configuration Manager computer-en gebruikers beleid vernieuwd.  
+ Er is een nieuwe optie, **synchronisatie beleid**toegevoegd aan de pagina **Opties**  >  **computer onderhoud** van software Center dat ervoor zorgt dat de PC het Configuration Manager computer-en gebruikers beleid vernieuwd.  
 
 ### <a name="software-center-branding-changes"></a>Huismerk wijzigingen voor Software Center  
  U kunt de kleur, de organisatie naam en het pictogram wijzigen die worden weer gegeven in Software Center. Deze instellingen worden toegepast op basis van de volgende regels:  

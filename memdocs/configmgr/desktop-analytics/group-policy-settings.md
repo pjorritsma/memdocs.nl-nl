@@ -10,12 +10,13 @@ ms.assetid: 004ca404-e6fa-47f0-ae77-e44e18a08b33
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0224d9faecb9ff17afc2af3a57ba222023b5a3d5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: 8251e21c7eccb87b764af75e883018bdc894ca37
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718894"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268671"
 ---
 # <a name="group-policy-settings-for-desktop-analytics"></a>Groeps beleids instellingen voor desktop Analytics
 
@@ -37,11 +38,11 @@ Configuration Manager stelt Windows-beleid in een of beide van de volgende regis
 |--------|------|------------|-------|
 | **CommercialId** | Lokaal | Alle Windows-versies | Als u een apparaat wilt weer geven in Desktop Analytics, configureert u dit met de commerciële ID van uw organisatie. |
 | **AllowTelemetry**  | GPO | Windows 10 | Instellen `1` voor **Basic**, `2` voor **uitgebreid**of `3` voor **volledige** diagnostische gegevens. Voor desktop Analytics zijn ten minste eenvoudige diagnostische gegevens vereist. Micro soft raadt u aan het verbeterde niveau (beperkt) te gebruiken met Desktop Analytics. Zie [Diagnostische gegevens van Windows in uw organisatie configureren](https://docs.microsoft.com/windows/configuration/configure-windows-diagnostic-data-in-your-organization) voor meer informatie. |
-| **LimitEnhancedDiagnosticDataWindowsAnalytics** | GPO | Windows 10, versie 1803 en hoger | Deze instelling is alleen van toepassing wanneer de AllowTelemetry `2`-instelling is. Hiermee worden de uitgebreide diagnostische gegevens gebeurtenissen die naar micro soft worden verzonden, beperkt tot alleen die gebeurtenissen die nodig zijn voor desktop Analytics. Zie voor meer informatie [gebeurtenissen van Windows 10 diagnostische gegevens en velden die zijn verzameld via het beleid uitgebreide diagnostische gegevens beperken](https://docs.microsoft.com/windows/configuration/enhanced-diagnostic-data-windows-analytics-events-and-fields). |
+| **LimitEnhancedDiagnosticDataWindowsAnalytics** | GPO | Windows 10, versie 1803 en hoger | Deze instelling is alleen van toepassing wanneer de AllowTelemetry-instelling is `2` . Hiermee worden de uitgebreide diagnostische gegevens gebeurtenissen die naar micro soft worden verzonden, beperkt tot alleen die gebeurtenissen die nodig zijn voor desktop Analytics. Zie voor meer informatie [gebeurtenissen van Windows 10 diagnostische gegevens en velden die zijn verzameld via het beleid uitgebreide diagnostische gegevens beperken](https://docs.microsoft.com/windows/configuration/enhanced-diagnostic-data-windows-analytics-events-and-fields). |
 | **AllowDeviceNameInTelemetry** | GPO | Windows 10, versie 1803 en hoger | Apparaten kunnen de naam van het apparaat verzenden. De naam van het apparaat wordt niet standaard naar micro soft verzonden. Als u de apparaatnaam niet verzendt, wordt deze in Desktop Analytics weer gegeven als ' onbekend '. Zie [device name (apparaatnaam](enroll-devices.md#device-name)) voor meer informatie. |
-| **CommercialDataOptIn** | Lokaal | Windows 8,1 en eerder | Desktop Analytics vereist een waarde van `1`. Zie voor meer informatie [commerciële gegevens opt-in Windows 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/ee126127\(v=ws.10\)). |
-| **RequestAllAppraiserVersions** | Beide | Windows 8,1 en eerder | `1` Voor desktop Analytics moet de waarde voor het verzamelen van gegevens correct zijn. |
-| **DisableEnterpriseAuthProxy** | GPO | Alle Windows-versies | Als uw omgeving een door een gebruiker geverifieerde proxy met geïntegreerde Windows-verificatie voor Internet toegang vereist, moet `0` voor desktop Analytics de waarde voor het verzamelen van gegevens correct worden gebruikt. Zie verificatie van de [proxy server](enable-data-sharing.md#proxy-server-authentication)voor meer informatie. |
+| **CommercialDataOptIn** | Lokaal | Windows 8,1 en eerder | Desktop Analytics vereist een waarde van `1` . Zie voor meer informatie [commerciële gegevens opt-in Windows 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/ee126127\(v=ws.10\)). |
+| **RequestAllAppraiserVersions** | Beide | Windows 8,1 en eerder | Voor desktop Analytics moet de waarde `1` voor het verzamelen van gegevens correct zijn. |
+| **DisableEnterpriseAuthProxy** | GPO | Alle Windows-versies | Als uw omgeving een door een gebruiker geverifieerde proxy met geïntegreerde Windows-verificatie voor Internet toegang vereist, moet voor desktop Analytics de waarde `0` voor het verzamelen van gegevens correct worden gebruikt. Zie verificatie van de [proxy server](enable-data-sharing.md#proxy-server-authentication)voor meer informatie. |
 
 > [!IMPORTANT]
 > In de meeste gevallen gebruikt u Configuration Manager voor het configureren van deze instellingen. Deze instellingen zijn niet ook van toepassing op domein groeps beleidsobjecten. Zie [conflict oplossing](enroll-devices.md#conflict-resolution)voor meer informatie.
@@ -63,7 +64,7 @@ In het algemeen gebruikt u Configuration Manager verzamelingen om instellingen e
 
 Configuration Manager configureert de instellingen voor commerciële ID en diagnostische gegevens in uw doel verzameling. Als u verschillende instellingen voor diagnostische gegevens wilt configureren voor een andere groep apparaten, gebruikt u instellingen voor groeps beleid om Configuration Manager instellingen te overschrijven. U moet bijvoorbeeld een **verbeterd (beperkt)** niveau instellen voor sommige apparaten en **basis** voor anderen. Sommige apparaten hebben mogelijk verschillende verificatie-instellingen voor de [proxy server](enable-data-sharing.md#proxy-server-authentication) .
 
-De relevante groeps beleids instellingen bevinden zich op het volgende pad: **computer configuratie** > **Beheersjablonen** > **Windows Components** > **gegevens verzameling en Preview-versies**van Windows-onderdelen.
+De relevante groeps beleids instellingen bevinden zich op het volgende pad: **computer configuratie**  >  **Beheersjablonen**  >  **Windows Components**  >  **gegevens verzameling en Preview-versies**van Windows-onderdelen.
 
 Groeps beleids instellingen wijzigen alleen register instellingen in de volgende sleutel:`HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`
 
@@ -78,9 +79,9 @@ De instellingen voor groeps beleid in de volgende tabel hebben de grootste kans 
 |--------------|----------------|-------------------------------------------------|
 | **De commerciële ID configureren** | CommercialId | Als u dit beleid instelt op een andere waarde, wordt de commerciële ID die is ingesteld door Configuration Manager overschreven. Als dit niet dezelfde ID is, worden geconfigureerde apparaten mogelijk niet weer gegeven in Desktop Analytics. |
 | **Telemetrie toestaan** | AllowTelemetry | Als u dit beleid instelt op een andere waarde, overschrijft het het globale diagnostische gegevens niveau dat u hebt ingesteld in Configuration Manager voor de doel verzameling. |
-| **Uitgebreide diagnostische gegevens beperken tot de minimale vereisten van Windows Analytics** | LimitEnhancedDiagnosticDataWindowsAnalytics | Dit beleid is afhankelijk van de vorige AllowTelemetry-instelling. Afhankelijk van het niveau dat u hebt ingesteld in Configuration Manager of met groeps beleid, kan dit beleid het niveau van diagnostische gegevens op het apparaat wijzigen in **uitgebreid** of **uitgebreid (beperkt)**. Dit beleid is alleen van toepassing als AllowTelemetry is `2` ingesteld op (**uitgebreid**). |
+| **Uitgebreide diagnostische gegevens beperken tot de minimale vereisten van Windows Analytics** | LimitEnhancedDiagnosticDataWindowsAnalytics | Dit beleid is afhankelijk van de vorige AllowTelemetry-instelling. Afhankelijk van het niveau dat u hebt ingesteld in Configuration Manager of met groeps beleid, kan dit beleid het niveau van diagnostische gegevens op het apparaat wijzigen in **uitgebreid** of **uitgebreid (beperkt)**. Dit beleid is alleen van toepassing als AllowTelemetry is ingesteld op `2` (**uitgebreid**). |
 | **Toestaan dat de apparaatnaam wordt verzonden in diagnostische gegevens van Windows** | AllowDeviceNameInTelemetry | Als u ervoor kiest om apparaatnamen te verzenden in Configuration Manager, kunt u deze vervangen door de configuratie van dit beleid in te scha kelen. Wanneer u deze instelling uitschakelt, worden apparaatnamen in Desktop Analytics weer gegeven als ' onbekend '. Zie [device name (apparaatnaam](enroll-devices.md#device-name)) voor meer informatie. |
-| **Geauthenticeerd proxy gebruik configureren voor de verbonden gebruikers ervaring en telemetrie-service** | DisableEnterpriseAuthProxy | Als u Configuration Manager apparaten configureert voor het gebruik van door de gebruiker`0`geverifieerde proxy (), als u dit beleid vervolgens configureert om het`1` **gebruik van geverifieerde proxy's () uit te scha kelen** , verzendt het apparaat diagnostische gegevens in de systeem context in plaats van de context van de gebruiker. Als u het apparaat niet configureert met een proxy in de systeem context of als het apparaat niet kan worden geverifieerd bij de proxy, kan Windows geen diagnostische gegevens naar Desktop Analytics verzenden. |
+| **Geauthenticeerd proxy gebruik configureren voor de verbonden gebruikers ervaring en telemetrie-service** | DisableEnterpriseAuthProxy | Als u Configuration Manager apparaten configureert voor het gebruik van door de gebruiker geverifieerde proxy ( `0` ), als u dit beleid vervolgens configureert om het **gebruik van geverifieerde proxy's () uit te scha kelen** `1` , verzendt het apparaat diagnostische gegevens in de systeem context in plaats van de context van de gebruiker. Als u het apparaat niet configureert met een proxy in de systeem context of als het apparaat niet kan worden geverifieerd bij de proxy, kan Windows geen diagnostische gegevens naar Desktop Analytics verzenden. |
 
 > [!NOTE]
 > Met het verouderde beleid worden **Connected user experiences en telemetrie** (TelemetryProxy) geconfigureerd, kan Windows diagnostische gegevens naar een specifieke proxy door sturen in plaats van de gebruiker (WinINET) of de Device (WinHTTP)-proxy. Sommige Windows-onderdelen bieden geen ondersteuning voor dit beleid. Als u dit beleid gebruikt, kan dit leiden tot problemen met de gegevens kwaliteit in Desktop Analytics.

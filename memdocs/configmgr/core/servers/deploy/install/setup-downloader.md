@@ -1,8 +1,8 @@
 ---
-title: Downloadprogramma voor het installatieprogramma
+title: Hulp programma Setup Downloader
 titleSuffix: Configuration Manager
-description: Meer informatie over deze zelfstandige toepassing, die is bedoeld om ervoor te zorgen dat uw site-installatie gebruikmaakt van de huidige versies van de sleutel installatie bestanden.
-ms.date: 01/22/2020
+description: Gebruik het zelfstandige hulp programma om de huidige versies van de sleutel installatie bestanden voor installatie te downloaden.
+ms.date: 05/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,102 +10,113 @@ ms.assetid: bda87fc5-2e4c-4992-98a4-01770365038c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2fa1899f8e7dc14812f9f9ecf889350a153b2d25
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2da8aed5cfe4a478010165445094f1fce4627d9a
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718075"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428836"
 ---
 # <a name="setup-downloader-for-configuration-manager"></a>Download programma instellen voor Configuration Manager
 
 *Van toepassing op: Configuration Manager (huidige vertakking)*
 
-Voordat u het installatie programma uitvoert om een Configuration Manager site te installeren of bij te werken, kunt u de zelfstandige toepassing voor installatie van Downloader gebruiken uit de versie van Configuration Manager die u wilt installeren om bijgewerkte Setup-bestanden te downloaden.  
+Voordat u Configuration Manager Setup uitvoert om een site te installeren of bij te werken, kunt u het zelfstandige hulp programma voor de installatie van Downloader gebruiken om bijgewerkte Setup-bestanden te downloaden. Voer het hulp programma uit vanaf de versie van Configuration Manager die u wilt installeren. Gebruik bijgewerkte installatie bestanden om te controleren of uw site-installatie de huidige versies van de sleutel installatie bestanden gebruikt.
 
-Met behulp van bijgewerkte installatie bestanden zorgt u ervoor dat uw site-installatie gebruikmaakt van de huidige versies van de sleutel installatie bestanden. In oveview:   
--   Wanneer u het download programma voor de installatie van gebruikt om bestanden te downloaden voordat u het installatie programma start, geeft u een map op waarin de bestanden moeten worden opgeslagen.  
--   Het account waarmee u het download programma voor de installatie uitvoert, moet machtigingen voor **volledig beheer** hebben voor de downloadmap.  
--   Wanneer u het installatie programma uitvoert om een site te installeren of bij te werken, kunt u het gebruiken om deze lokale kopie van bestanden die u eerder hebt gedownload. Hiermee wordt voor komen dat het installatie formulier verbinding kan maken met micro soft wanneer u de installatie of upgrade van de site start.  
--   U kunt dezelfde lokale kopie van de installatie bestanden gebruiken voor de volgende site-installaties of-upgrades.  
+Wanneer u het download programma voor de installatie gebruikt, geeft u een map op waarin de bestanden moeten worden opgeslagen. Het account dat u gebruikt om het hulp programma uit te voeren, moet machtigingen voor **volledig beheer** hebben voor de downloadmap. Wanneer u het installatie programma uitvoert om een site te installeren of bij te werken, kunt u deze lokale kopie opgeven van bestanden die u eerder hebt gedownload. Dit gedrag zorgt ervoor dat Setup geen verbinding kan maken met micro soft wanneer u de installatie of upgrade van de site start. U kunt dezelfde lokale kopie van installatie bestanden gebruiken voor andere site-installaties of-upgrades van dezelfde versie.
 
-De volgende typen bestanden worden gedownload door het download programma voor de installatie:  
--   Vereiste herdistribueerbare bestanden  
--   Taalpakketten  
--   De nieuwste product updates voor Setup  
+Het hulp programma Setup Downloader downloadt de volgende typen bestanden:
 
-U hebt twee opties voor het uitvoeren van Setup Downloader:
+- Vereiste herdistribueerbare bestanden
+- Taalpakketten
+- De nieuwste product updates voor Setup
+
+U hebt twee opties om Setup Downloader uit te voeren:
+
 - De toepassing uitvoeren met de gebruikers interface
-- Voor opdracht regel opties voert u de toepassing uit vanaf een opdracht prompt
+- Voer de toepassing uit vanaf een opdracht prompt voor aanvullende opdracht regel opties
 
+Als uw organisatie netwerk communicatie met Internet beperkt met behulp van een firewall of proxy apparaat, moet u het hulp programma toegang geven tot internet-eind punten. Op het apparaat waarop u het hulp programma uitvoert, moet Internet toegang hetzelfde zijn als het service verbindings punt. Zie [vereisten voor Internet toegang](../../../plan-design/network/internet-endpoints.md#bkmk_scp)voor meer informatie.<!-- SCCMDocs#677 -->
 
-## <a name="run-setup-downloader-with-the-user-interface"></a><a name="bkmk_ui"></a>Het download programma voor de installatie uitvoeren met de gebruikers interface  
+## <a name="run-setup-downloader-with-the-user-interface"></a><a name="bkmk_ui"></a>Het download programma voor de installatie uitvoeren met de gebruikers interface
 
-1.  Op een computer met Internet toegang opent u Windows Verkenner en gaat u ** &lt;naar ConfigMgrInstallationMedia\>\SMSSETUP\BIN\X64**.  
+1. Op een computer met Internet toegang, bladert u naar de installatie media voor de versie van Configuration Manager die u wilt installeren.
 
-2.  Om het download programma voor de installatie te openen, dubbelklikt u op **Setupdl. exe**.   
+1. Voer **Setupdl. exe**in de submap **SMSSETUP\BIN\X64** uit.
 
-3. Geef het pad op voor de map die als host moet fungeren voor de bijgewerkte installatie bestanden en klik vervolgens op **downloaden**. Setup Downloader verifieert de bestanden die zich momenteel in de downloadmap bevinden. Hiermee downloadt u alleen bestanden die ontbreken of die nieuwer zijn dan de bestaande bestanden. Setup Downloader maakt submappen voor gedownloade talen en andere vereiste submappen.  
+1. Geef het pad op voor de map waarin de bijgewerkte installatie bestanden moeten worden opgeslagen en selecteer vervolgens **downloaden**. Setup Downloader verifieert de bestanden die zich momenteel in de downloadmap bevinden. Hiermee downloadt u alleen bestanden die ontbreken of die nieuwer zijn dan de bestaande bestanden. Er worden submappen gemaakt voor gedownloade talen en andere vereiste onderdelen.
 
-4.  Als u de download resultaten wilt bekijken, opent u het bestand **ConfigMgrSetup. log** in de hoofdmap van station C.  .  
+1. Zie **C:\ConfigMgrSetup.log**om de download resultaten te bekijken.
 
-## <a name="run-setup-downloader-from-a-command-prompt"></a><a name="bkmk_cmd"></a>Het download programma voor de installatie uitvoeren vanaf een opdracht prompt  
+## <a name="run-setup-downloader-from-a-command-prompt"></a><a name="bkmk_cmd"></a>Het download programma voor de installatie uitvoeren vanaf een opdracht prompt
 
-1.  Ga ** &lt;in een opdracht prompt venster naar *Configuration Manager installation media*\>\SMSSETUP\BIN\X64**.   
+1. Open een opdracht prompt en wijzig de map naar het installatie medium voor de versie van Configuration Manager die u wilt installeren.
 
-2.  Als u het download programma wilt openen, voert u **Setupdl. exe**uit.
+1. Wijzig de map in de submap **SMSSETUP\BIN\X64** en voer **Setupdl. exe** uit met de opties die nodig zijn.
 
-    U kunt de volgende opdracht regel opties gebruiken met **Setupdl. exe**:   
+1. Zie **C:\ConfigMgrSetup.log**om de download resultaten te bekijken.
 
-    -   **/Verify**: gebruik deze optie om de bestanden in de downloadmap te controleren, waaronder taal bestanden. Raadpleeg het bestand ConfigMgrSetup. log in de hoofdmap van station C voor een lijst met bestanden die verouderd zijn. Er worden geen bestanden gedownload wanneer u deze optie gebruikt.  
+### <a name="command-line-options"></a>Opdrachtregelopties
 
-    -   **/VERIFYLANG**: gebruik deze optie om de taal bestanden in de downloadmap te controleren. Raadpleeg het bestand ConfigMgrSetup. log in de hoofdmap van station C voor een lijst met taal bestanden die verouderd zijn.
+U kunt de volgende opdracht regel opties gebruiken met **Setupdl. exe**:
 
-    -   **/Lang**: gebruik deze optie om alleen de taal bestanden te downloaden naar de downloadmap.  
+- **/Verify**: Controleer de bestanden in de downloadmap, met inbegrip van taal bestanden. Raadpleeg **C:\ConfigMgrSetup.log**voor de lijst met verouderde bestanden. Wanneer u deze optie gebruikt, worden er geen bestanden gedownload.
 
-    -   **/NOUI**: gebruik deze optie om het download programma voor de installatie te starten zonder de gebruikers interface weer te geven. Wanneer u deze optie gebruikt, moet u het **downloadmap** opgeven als onderdeel van de opdracht bij de opdracht prompt.  
+- **/VERIFYLANG**: Controleer alleen de taal bestanden in de downloadmap. Raadpleeg **C:\ConfigMgrSetup.log**voor de lijst met verouderde taal bestanden.
 
-    -   Downloadpad: u kunt het pad naar de downloadmap opgeven om de verificatie of het download proces automatisch te starten. ** &lt;\>** U moet het pad naar de down load opgeven wanneer u de **/NOUI** -optie gebruikt. Als u geen pad voor downloaden opgeeft, moet u het pad opgeven wanneer het download programma voor de installatie wordt geopend. Het download programma voor de installatie maakt de map als deze nog niet bestaat.  
+- **/Lang**: down load alleen de taal bestanden naar de downloadmap.
 
-    Voorbeeldopdrachten:
+- **/NOUI**: Start de installatie-Downloader zonder de gebruikers interface. Wanneer u deze optie gebruikt, is het **pad naar de down load** vereist.
 
-    -   **setupdl &lt;downloadpad\>**  
+- **Pad voor downloaden**: Geef het pad naar de downloadmap op om de verificatie of het download proces automatisch te starten. Wanneer u de optie **/NOUI** gebruikt, is het pad naar de down load vereist. Als u geen pad naar een down load opgeeft, wordt u door het download programma gevraagd het pad op te geven. Als de map nog niet bestaat, wordt deze gemaakt door het download programma voor de installatie.
 
-        -   Setup Downloader start, controleert de bestanden in de opgegeven downloadmap en downloadt alleen de bestanden die ontbreken of die nieuwere versies hebben dan bestaande bestanden.     
+### <a name="example-commands"></a>Voorbeeldopdrachten
 
-    -   **setupdl/VERIFY &lt;downloadpad\>**  
+#### <a name="example-1"></a>Voorbeeld 1
 
-        -   Setup Downloader start en controleert de bestanden in de opgegeven downloadmap.  
+Setup Downloader verifieert de bestanden in de opgegeven downloadmap en downloadt vervolgens bestanden.
 
-    -   **setupdl/NOUI &lt;downloadpad\>**  
+`setupdl.exe C:\Download`
 
-        -   Setup Downloader start, controleert de bestanden in de opgegeven downloadmap en downloadt alleen de bestanden die ontbreken of die nieuwer zijn dan de bestaande bestanden.  
+#### <a name="example-2"></a>Voorbeeld 2
 
-    -   **setupdl/LANG &lt;downloadpad\>**  
+Met het download programma voor installatie worden alleen de bestanden in de opgegeven downloadmap gecontroleerd.
 
-        -   Setup Downloader start, controleert de taal bestanden in de opgegeven downloadmap en downloadt vervolgens alleen de taal bestanden die ontbreken of die nieuwer zijn dan de bestaande bestanden.  
+`setupdl.exe /VERIFY C:\Download`
 
-    -   **setupdl/VERIFY**  
+#### <a name="example-3"></a>Voorbeeld 3
 
-        -   Het download programma voor de installatie wordt gestart en vervolgens moet u het pad naar de downloadmap opgeven. Nadat u vervolgens op **verifiëren**hebt geklikt, controleert Setup Downloader de bestanden in de downloadmap.  
+Setup Downloader verifieert de bestanden in de opgegeven downloadmap en downloadt vervolgens bestanden. Er wordt geen gebruikers interface weer gegeven in het hulp programma.
 
-3.  Als u de download resultaten wilt bekijken, opent u het bestand **ConfigMgrSetup. log** in de hoofdmap van station C.
+`setupdl.exe /NOUI C:\Download`
+
+#### <a name="example-4"></a>Voorbeeld 4
+
+Setup Downloader controleert de taal bestanden in de opgegeven downloadmap en downloadt vervolgens alleen de taal bestanden.
+
+`setupdl.exe /LANG C:\Download`
 
 ## <a name="copy-setup-downloader-files-to-another-computer"></a><a name="bkmk_cp-files"></a>Setup-Download bestanden kopiëren naar een andere computer
 
 1. Ga in Windows Verkenner naar een van de volgende locaties:
 
     - **&lt;Configuration Manager installatie media> \SMSSETUP\BIN\X64**
+
     - **&lt;Configuration Manager installatiepad> \BIN\X64**
-    
+
 1. Kopieer de volgende bestanden naar dezelfde doelmap op de andere computer:
-    
+
     - **setupdl. exe**
-    - **. \\taal>\\setupdlres &lt;. dll**
-      - Dit bestand bevindt zich in de submap voor de taal van de installatie. Bijvoorbeeld: Engels bevindt zich `00000409` in de submap.
 
-    Als voor beeld moeten de doel mappen op het apparaat er als volgt uitzien:
-    - C:\ConfigManInstall\setupdl.exe
-    - C:\ConfigManInstall\00000409\setupdlres.dll
+    - **.\\&lt; taal > \\ setupdlres. dll**
 
-1. Start het download programma voor de installatie van de computer met behulp van de [gebruikers interface](#bkmk_ui) of de [opdracht prompt](#bkmk_cmd), zoals beschreven in de bovenstaande secties.
+        > [!NOTE]
+        > Dit bestand bevindt zich in de submap voor de taal van de installatie. Bijvoorbeeld: Engels bevindt zich in de `00000409` submap.
+
+    De doel mappen op het apparaat moeten eruitzien zoals in het volgende voor beeld:
+
+    - `C:\ConfigManInstall\setupdl.exe`
+
+    - `C:\ConfigManInstall\00000409\setupdlres.dll`
+
+1. Voer het download programma voor de installatie van de doel computer uit. Gebruik de [gebruikers interface](#bkmk_ui) of de [opdracht prompt](#bkmk_cmd).

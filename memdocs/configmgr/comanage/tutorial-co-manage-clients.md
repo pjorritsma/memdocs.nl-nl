@@ -10,12 +10,12 @@ ms.assetid: 140c522f-d09a-40b6-a4b0-e0d14742834a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 918df2cded3fad48352fff6a2617b1133540c0eb
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: bb770a559904421f6bf01616504331dbebb9b549
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712426"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268076"
 ---
 # <a name="tutorial-enable-co-management-for-existing-configuration-manager-clients"></a>Zelf studie: co-beheer inschakelen voor bestaande Configuration Manager-clients
 
@@ -64,9 +64,10 @@ Als deze nog niet aanwezig is in uw omgeving, kunt u tijdens deze zelf studie he
 
 In deze zelf studie gebruikt u de volgende machtigingen om taken uit te voeren:
 
-- Een account dat een *globale beheerder* is in azure Active Directory (Azure AD) 
 - Een account dat een *domein beheerder* is in uw on-premises infra structuur  
 - Een account dat een *volledige beheerder* is voor *alle* bereiken in Configuration Manager
+- Een account dat een *globale beheerder* is in azure Active Directory (Azure AD)
+   - Zorg ervoor dat u een intune-licentie hebt toegewezen aan het account dat u gebruikt om u aan te melden bij uw Tenant. Als dat niet het geval is, mislukt de fout melding ' de gebruiker wordt niet herkend '. <!--mem issue 169-->
 
 ## <a name="set-up-hybrid-azure-ad"></a>Hybride Azure AD instellen
 
@@ -120,7 +121,7 @@ Als u problemen ondervindt met het volt ooien van hybride Azure AD join voor Win
 
 Gebruik client instellingen om Configuration Manager-clients zodanig te configureren dat deze automatisch worden geregistreerd bij Azure AD.  
 
-1. Open de **Configuration Manager-console** > **beheer** > **overzicht** > **client instellingen**en bewerk vervolgens de **standaard client instellingen**.  
+1. Open de **Configuration Manager-console**  >  **beheer**  >  **overzicht**  >  **client instellingen**en bewerk vervolgens de **standaard client instellingen**.  
 
 2. Selecteer **Cloud Services**.  
 
@@ -134,7 +135,7 @@ Vervolgens stellen we de automatische inschrijving van apparaten in met intune. 
 
 Met automatische inschrijving kunnen gebruikers hun Windows 10-apparaten inschrijven bij intune. Apparaten worden inge schreven wanneer een gebruiker hun werk account toevoegt aan hun persoonlijk apparaat of wanneer een apparaat in bedrijfs eigendom is gekoppeld aan Azure Active Directory.  
 
-1. Meld u aan bij [de Azure Portal](https://portal.azure.com/) en selecteer **Azure Active Directory** > Mobility-**Microsoft intune****(MDM en mam)** > .  
+1. Meld u aan bij de [Azure Portal](https://portal.azure.com/) en selecteer **Azure Active Directory**  >  Mobility-Microsoft intune **(MDM en mam)**  >  **Microsoft Intune**.  
 
 2. **MDM-gebruikers bereik**configureren. Geef een van de volgende opties op om te configureren welke apparaten van gebruikers worden beheerd door Microsoft Intune en accepteer de standaard waarden voor de URL-waarden.  
 

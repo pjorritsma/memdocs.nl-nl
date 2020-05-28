@@ -2,20 +2,20 @@
 title: Gebruikte accounts
 titleSuffix: Configuration Manager
 description: De Windows-groepen,-accounts en SQL-objecten identificeren en beheren die worden gebruikt in Configuration Manager.
-ms.date: 10/23/2019
+ms.date: 05/08/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.technology: Configuration Manager-core
 ms.topic: conceptual
 ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a6808fed9fa9aaf894e3975066eb7707880b7948
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 5bd1284b96e1739126b8d6ee19f20699d47e5880
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073412"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83267981"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Accounts die worden gebruikt in Configuration Manager
 
@@ -24,14 +24,14 @@ ms.locfileid: "82073412"
 Gebruik de volgende informatie om de Windows-groepen, accounts en SQL-objecten te identificeren die worden gebruikt in Configuration Manager, hoe ze worden gebruikt en eventuele vereisten.  
 
 - [Windows-groepen die worden gemaakt en gebruikt met Configuration Manager](#bkmk_groups)  
-  - [ConfigMgr_CollectedFilesAccess](#configmgr_collectedfilesaccess)  
-  - [ConfigMgr_DViewAccess](#configmgr_dviewaccess)  
-  - [Gebruikers van extern beheer van ConfigMgr](#configmgr-remote-control-users)  
+  - [Configuratie Manager_CollectedFilesAccess](#configmgr_collectedfilesaccess)  
+  - [Configuratie Manager_DViewAccess](#configmgr_dviewaccess)  
+  - [Gebruikers met beheer op afstand Configuration Manager](#configmgr_rcusers)  
   - [SMS Admins](#sms-admins)  
-  - [SMS_SiteSystemToSiteServerConnection_MP_&lt;site code\>](#bkmk_remotemp)  
-  - [SMS_SiteSystemToSiteServerConnection_SMSProv_&lt;site code\>](#bkmk_remoteprov)  
-  - [SMS_SiteSystemToSiteServerConnection_Stat_&lt;site code\>](#bkmk_remotestat)  
-  - [SMS_SiteToSiteConnection_&lt;site code\>](#bkmk_filerepl)  
+  - [SMS_SiteSystemToSiteServerConnection_MP_ &lt; site code\>](#bkmk_remotemp)  
+  - [SMS_SiteSystemToSiteServerConnection_SMSProv_ &lt; site code\>](#bkmk_remoteprov)  
+  - [SMS_SiteSystemToSiteServerConnection_Stat_ &lt; site code\>](#bkmk_remotestat)  
+  - [SMS_SiteToSiteConnection_ &lt; site code\>](#bkmk_filerepl)  
 
 - [Accounts die worden gebruikt met Configuration Manager](#bkmk_accounts)
   - [Account voor detectie van Active Directory-groep](#active-directory-group-discovery-account)  
@@ -96,7 +96,7 @@ Configuration Manager maakt automatisch en in veel gevallen worden de volgende W
 > Wanneer Configuration Manager een groep maakt op een computer die lid is van een domein, is de groep een lokale beveiligings groep. Als de computer een domein controller is, is de groep een domeingebonden groep. Dit type groep wordt gedeeld tussen alle domein controllers in het domein.  
 
 
-### <a name="configmgr_collectedfilesaccess"></a><a name="configmgr_collectedfilesaccess"></a>ConfigMgr_CollectedFilesAccess
+### <a name="configuration-manager_collectedfilesaccess"></a><a name="configmgr_collectedfilesaccess"></a>Configuratie Manager_CollectedFilesAccess
 
 Configuration Manager gebruikt deze groep om toegang te verlenen voor het weer geven van bestanden die zijn verzameld door software-inventarisatie.  
 
@@ -114,14 +114,14 @@ Configuration Manager beheert automatisch het groepslid maatschap. De leden zijn
 Deze groep heeft standaard **Lees** machtiging voor de volgende map op de site server:`C:\Program Files\Microsoft Configuration Manager\sinv.box\FileCol`  
 
 
-### <a name="configmgr_dviewaccess"></a><a name="configmgr_dviewaccess"></a>ConfigMgr_DViewAccess  
+### <a name="configuration-manager_dviewaccess"></a><a name="configmgr_dviewaccess"></a>Configuratie Manager_DViewAccess  
 
 Deze groep is een lokale beveiligings groep die Configuration Manager maakt op de site database server of de data base-replica server voor een onderliggende primaire site. De site maakt deze wanneer u gedistribueerde weer gaven gebruikt voor database replicatie tussen sites in een hiërarchie. Het bevat de site server en SQL Server computer accounts van de centrale beheer site.
 
 Zie [gegevens overdracht tussen sites](data-transfers-between-sites.md)voor meer informatie.
 
 
-### <a name="configmgr-remote-control-users"></a>Gebruikers van extern beheer van ConfigMgr  
+### <a name="configuration-manager-remote-control-users"></a><a name="configmgr_rcusers"></a>Gebruikers met beheer op afstand Configuration Manager  
 
 Configuration Manager externe hulpprogram ma's deze groep gebruiken om de accounts en groepen op te slaan die u hebt ingesteld in de lijst met **toegestane viewers** . De site wijst deze lijst toe aan elke client.  
 
@@ -166,7 +166,7 @@ U kunt de rechten en machtigingen voor de SMS admins-groep weer geven in de MMC-
 Wanneer u een externe Configuration Manager-console gebruikt, configureert u de DCOM-machtigingen voor **externe activering** op zowel de site Server computer als de SMS-provider. Ken deze rechten toe aan de **SMS admins** -groep. Deze actie vereenvoudigt het beheer in plaats van deze rechten rechtstreeks aan gebruikers of groepen toe te kennen. Zie [DCOM-machtigingen voor externe Configuration Manager-consoles configureren](../../servers/manage/modify-your-infrastructure.md#BKMK_ConfigDCOMforRemoteConsole)voor meer informatie. 
 
 
-### <a name="sms_sitesystemtositeserverconnection_mp_ltsitecode"></a><a name="bkmk_remotemp"></a>SMS_SiteSystemToSiteServerConnection_MP_&lt;site code\>  
+### <a name="sms_sitesystemtositeserverconnection_mp_ltsitecode"></a><a name="bkmk_remotemp"></a>SMS_SiteSystemToSiteServerConnection_MP_ &lt; site code\>  
  
 Beheer punten die zich op afstand van de site server bevinden, gebruiken deze groep om verbinding te maken met de site database. Deze groep biedt een beheerpunt toegang tot het Postvak IN op de siteserver en de sitedatabase.  
 
@@ -179,10 +179,10 @@ Wanneer u een site verwijdert, wordt deze groep niet automatisch verwijderd. Ver
 Configuration Manager beheert automatisch het groepslid maatschap. Lidmaatschap omvat standaard de computeraccounts van externe computers die een beheerpunt voor de site hebben.
 
 #### <a name="permissions"></a>Machtigingen
-Deze groep heeft standaard de machtiging **lezen**, **lezen & uitvoeren**en Mapinhoud **weer geven** voor de volgende map op de site server: `C:\Program Files\Microsoft Configuration Manager\inboxes`. Deze groep heeft de extra machtiging **schrijven** naar submappen onder **Postvak**in, waarnaar het beheer punt client gegevens schrijft.
+Deze groep heeft standaard de machtiging **lezen**, **lezen & uitvoeren**en Mapinhoud **weer geven** voor de volgende map op de site server: `C:\Program Files\Microsoft Configuration Manager\inboxes` . Deze groep heeft de extra machtiging **schrijven** naar submappen onder **Postvak**in, waarnaar het beheer punt client gegevens schrijft.
 
 
-### <a name="sms_sitesystemtositeserverconnection_smsprov_ltsitecode"></a><a name="bkmk_remoteprov"></a>SMS_SiteSystemToSiteServerConnection_SMSProv_&lt;site code\>  
+### <a name="sms_sitesystemtositeserverconnection_smsprov_ltsitecode"></a><a name="bkmk_remoteprov"></a>SMS_SiteSystemToSiteServerConnection_SMSProv_ &lt; site code\>  
  
 Externe SMS-provider computers gebruiken deze groep om verbinding te maken met de site server.  
 
@@ -195,11 +195,11 @@ Wanneer u een site verwijdert, wordt deze groep niet automatisch verwijderd. Ver
 Configuration Manager beheert automatisch het groepslid maatschap. Lidmaatschap omvat standaard het computer account of een domein gebruikers account. Deze account wordt gebruikt om verbinding te maken met de site server van elke externe SMS-provider.
 
 #### <a name="permissions"></a>Machtigingen
-Deze groep heeft standaard de machtiging **lezen**, **lezen & uitvoeren**en Mapinhoud **weer geven** voor de volgende map op de site server: `C:\Program Files\Microsoft Configuration Manager\inboxes`. Deze groep heeft de extra machtigingen **schrijven** en **wijzigen** in submappen onder de post vakken. De SMS-provider vereist toegang tot deze mappen.
+Deze groep heeft standaard de machtiging **lezen**, **lezen & uitvoeren**en Mapinhoud **weer geven** voor de volgende map op de site server: `C:\Program Files\Microsoft Configuration Manager\inboxes` . Deze groep heeft de extra machtigingen **schrijven** en **wijzigen** in submappen onder de post vakken. De SMS-provider vereist toegang tot deze mappen.
 
-Deze groep heeft ook **Lees** machtigingen voor de submappen op de onderstaande `C:\Program Files\Microsoft Configuration Manager\OSD\Bin`site server. 
+Deze groep heeft ook **Lees** machtigingen voor de submappen op de onderstaande site server `C:\Program Files\Microsoft Configuration Manager\OSD\Bin` . 
 
-Het bevat ook de volgende machtigingen voor de submappen hieronder `C:\Program Files\Microsoft Configuration Manager\OSD\boot`:
+Het bevat ook de volgende machtigingen voor de submappen hieronder `C:\Program Files\Microsoft Configuration Manager\OSD\boot` :
 - **Lezen**  
 - **Lezen & uitvoeren**  
 - **Mapinhoud weer geven**  
@@ -207,7 +207,7 @@ Het bevat ook de volgende machtigingen voor de submappen hieronder `C:\Program F
 - **Wijzigen**   
 
 
-### <a name="sms_sitesystemtositeserverconnection_stat_ltsitecode"></a><a name="bkmk_remotestat"></a>SMS_SiteSystemToSiteServerConnection_Stat_&lt;site code\>  
+### <a name="sms_sitesystemtositeserverconnection_stat_ltsitecode"></a><a name="bkmk_remotestat"></a>SMS_SiteSystemToSiteServerConnection_Stat_ &lt; site code\>  
 
 Het onderdeel Bestands verzendings beheer op Configuration Manager externe site systeem computers maakt gebruik van deze groep om verbinding te maken met de site server.  
 
@@ -220,12 +220,12 @@ Wanneer u een site verwijdert, wordt deze groep niet automatisch verwijderd. Ver
 Configuration Manager beheert automatisch het groepslid maatschap. Lidmaatschap omvat standaard het computer account of het domein gebruikers account. Dit account wordt gebruikt om verbinding te maken met de site server van elk extern site systeem dat het File Dispatch Manager uitvoert.
 
 #### <a name="permissions"></a>Machtigingen
-Deze groep beschikt standaard over de machtigingen **lezen**, **lezen & uitvoeren**en Mapinhoud **weer geven** voor de volgende map en de bijbehorende submappen op de site server: `C:\Program Files\Microsoft Configuration Manager\inboxes`. 
+Deze groep beschikt standaard over de machtigingen **lezen**, **lezen & uitvoeren**en Mapinhoud **weer geven** voor de volgende map en de bijbehorende submappen op de site server: `C:\Program Files\Microsoft Configuration Manager\inboxes` . 
 
-Deze groep heeft de extra machtigingen **schrijven** en **wijzigen** in de volgende map op de site server: `C:\Program Files\Microsoft Configuration Manager\inboxes\statmgr.box`.
+Deze groep heeft de extra machtigingen **schrijven** en **wijzigen** in de volgende map op de site server: `C:\Program Files\Microsoft Configuration Manager\inboxes\statmgr.box` .
 
 
-### <a name="sms_sitetositeconnection_ltsitecode"></a><a name="bkmk_filerepl"></a>SMS_SiteToSiteConnection_&lt;site code\>  
+### <a name="sms_sitetositeconnection_ltsitecode"></a><a name="bkmk_filerepl"></a>SMS_SiteToSiteConnection_ &lt; site code\>  
 Configuration Manager gebruikt deze groep om op bestanden gebaseerde replicatie tussen sites in een hiërarchie in te scha kelen. Voor elke externe site die rechtstreeks bestanden overbrengt naar deze site, bevat deze groep accounts die zijn ingesteld als een **account voor bestands replicatie**.  
 
 #### <a name="type-and-location"></a>Type en locatie
@@ -237,7 +237,7 @@ Wanneer u een nieuwe site installeert als een onderliggend element van een ander
 Wanneer u een site verwijdert, wordt deze groep niet automatisch verwijderd. Verwijder deze hand matig nadat u een site hebt verwijderd.
 
 #### <a name="permissions"></a>Machtigingen
-Deze groep heeft standaard de **volledige controle** over de volgende map: `C:\Program Files\Microsoft Configuration Manager\inboxes\despoolr.box\receive`.
+Deze groep heeft standaard de **volledige controle** over de volgende map: `C:\Program Files\Microsoft Configuration Manager\inboxes\despoolr.box\receive` .
 
 
 
@@ -245,6 +245,8 @@ Deze groep heeft standaard de **volledige controle** over de volgende map: `C:\P
 
 U kunt de volgende accounts instellen voor Configuration Manager.  
 
+> [!TIP]
+> Gebruik niet het procent teken ( `%` ) in het wacht woord voor accounts die u opgeeft in de Configuration Manager-console. Het account kan niet worden geverifieerd.<!-- SCCMDocs#1032 -->
 
 ### <a name="active-directory-group-discovery-account"></a>Account voor detectie van Active Directory-groep  
 
@@ -382,7 +384,7 @@ Client computers gebruiken het **netwerk toegangs account** wanneer ze hun lokal
 
 Een Configuration Manager client probeert eerst het computer account te gebruiken om de inhoud te downloaden. Als dit mislukt, probeert het automatisch het netwerk toegangs account.  
 
-Met ingang van versie 1806, een werk groep of Azure AD-gekoppelde client, hebben veilig toegang tot inhoud vanaf distributie punten zonder dat hiervoor een netwerk toegangs account nodig is. Dit gedrag omvat implementatie scenario's voor besturings systemen met een taken reeks die wordt uitgevoerd vanaf opstart media, PXE of software Center. Zie [Enhanced http](enhanced-http.md)(Engelstalig) voor meer informatie.<!--1358228,1358278-->
+Als u de site configureert voor HTTPS of [verbeterde http](enhanced-http.md), kan een werk groep of Azure AD-client veilig toegang krijgen tot inhoud vanaf distributie punten zonder dat hiervoor een netwerk toegangs account nodig is. Dit gedrag omvat implementatie scenario's voor besturings systemen met een taken reeks die wordt uitgevoerd vanaf opstart media, PXE of software Center.<!--1358228,1358278--> Zie [communicatie tussen clients en beheer punten](communications-between-endpoints.md#bkmk_client2mp)voor meer informatie.<!-- SCCMDocs#1345 -->
 
 > [!Note]  
 > Als u **Enhanced http** inschakelt om het netwerk toegangs account niet te vereisen, moet op het distributie punt Windows Server 2012 of hoger worden uitgevoerd. <!--SCCMDocs-pr issue #2696-->
@@ -458,7 +460,7 @@ SQL Server Reporting Services gebruikt het **account van het Reporting Services-
 > Het account dat u opgeeft moet de machtiging **lokaal aanmelden** hebben op de computer die als host fungeert voor de SQL Reporting Services-Data Base.
 
 > [!NOTE]  
-> Aan het account worden automatisch alle benodigde rechten verleend door toe te voegen aan de smsschm_users SQL Database rol van de ConfigMgr-data base.
+> Aan het account worden automatisch alle benodigde rechten verleend door toe te voegen aan de smsschm_users SQL Database rol van de Configuration Manager-Data Base.
 
 Zie [Introduction to Reporting](../../servers/manage/introduction-to-reporting.md)(Engelstalig) voor meer informatie.
 
@@ -643,41 +645,41 @@ Dit object wordt gebruikt om SQL Reporting uitvoeringen uit te voeren.  De volge
 
 ## <a name="database-roles-that-configuration-manager-uses-in-sql"></a><a name="bkmk_sqlroles"></a>Database rollen die door Configuration Manager worden gebruikt in SQL
 <!--SCCMDocs issue #1160-->
-Configuration Manager maakt en onderhoudt automatisch de volgende functie objecten in SQL. Deze rollen bieden toegang tot specifieke opgeslagen procedures, tabellen, weer gaven en functies voor het uitvoeren van de benodigde acties van elke rol om gegevens op te halen of gegevens in te voegen van en naar de ConfigMgr-data base. Deze objecten bevinden zich in de Configuration Manager-Data Base onder beveiliging/rollen/database rollen.
+Configuration Manager maakt en onderhoudt automatisch de volgende functie objecten in SQL. Deze rollen bieden toegang tot specifieke opgeslagen procedures, tabellen, weer gaven en functies om de benodigde acties van elke rol uit te voeren om gegevens op te halen of gegevens in te voegen van en van de Configuration Manager Data Base. Deze objecten bevinden zich in de Configuration Manager-Data Base onder beveiliging/rollen/database rollen.
 
 > [!IMPORTANT]  
-> Als u deze objecten wijzigt of verwijdert, kan dit leiden tot ingrijpende problemen binnen een Configuration Manager omgeving.  U kunt het beste geen wijzigingen aanbrengen in deze objecten.
+> Als u deze objecten wijzigt of verwijdert, kan dit leiden tot ingrijpende problemen binnen een Configuration Manager omgeving. Wijzig deze objecten niet. De volgende lijst is alleen ter informatie bedoeld.
 
 ### <a name="smsdbrole_aitool"></a>smsdbrole_AITool
 
-Asset Intelligence volume licenties importeren. ConfigMgr verleent deze machtiging aan gebruikers accounts op basis van RBA-toegang om de volume licentie te kunnen importeren die moet worden gebruikt met Asset Intelligence.  Dit account kan worden toegevoegd door een volledige beheerdersrol of een Asset Manager-rol.
+Asset Intelligence volume licenties importeren. Configuration Manager verleent deze machtiging aan gebruikers accounts op basis van RBA-toegang om de volume licentie te kunnen importeren die moet worden gebruikt met Asset Intelligence.  Dit account kan worden toegevoegd door een volledige beheerdersrol of een Asset Manager-rol.
 
 ### <a name="smsdbrole_aius"></a>smsdbrole_AIUS
 
-Asset Intelligence Update synchronisatie. ConfigMgr verleent het computer account dat als host van de Asset Intelligence synchronisatie punt account toegang krijgt tot het ophalen van Asset Intelligence proxy gegevens en om de in behandeling zijnde AI-gegevens weer te geven voor het uploaden.
+Asset Intelligence Update synchronisatie. Configuration Manager verleent het computer account dat als host van het Asset Intelligence synchronisatie punt-account toegang krijgt tot Asset Intelligence-proxy gegevens en om de in behandeling zijnde AI-gegevens weer te geven voor het uploaden.
 
 ### <a name="smsdbrole_amtsp"></a>smsdbrole_AMTSP
 
 Buiten-band beheer. Deze rol wordt gebruikt door Configuration Manager AMT-rol om gegevens op te halen op apparaten die ondersteunde Intel AMT.
 
 > [!NOTE]  
-> Deze rol is afgeschaft in nieuwere releases van ConfigMgr.
+> Deze rol is afgeschaft in nieuwere releases van Configuration Manager.
 
 ### <a name="smsdbrole_crp"></a>smsdbrole_CRP
 
-Ondersteuning voor het certificaat registratiepunt System Center Endpoint Protection (SCEP). ConfigMgr verleent machtigingen aan het computer account van het site systeem dat ondersteuning biedt voor het certificaat registratiepunt voor SCEP-ondersteuning voor ondertekening en verlenging van certificaten.
+Certificaat registratiepunt ter ondersteuning van Simple Certificate Enrollment Protocol (SCEP). Configuration Manager verleent machtigingen aan het computer account van het site systeem dat ondersteuning biedt voor het certificaat registratiepunt voor SCEP-ondersteuning voor ondertekening en verlenging van certificaten.
 
 ### <a name="smsdbrole_crppfx"></a>smsdbrole_CRPPfx
 
-PFX-ondersteuning van het certificaat registratiepunt. ConfigMgr verleent machtigingen aan het computer account van het site systeem dat ondersteuning biedt voor het certificaat registratiepunt dat is geconfigureerd voor PFX-ondersteuning voor ondertekening en verlenging.
+PFX-ondersteuning van het certificaat registratiepunt. Configuration Manager verleent machtigingen aan het computer account van het site systeem dat ondersteuning biedt voor het certificaat registratiepunt dat is geconfigureerd voor PFX-ondersteuning voor ondertekening en verlenging.
 
 ### <a name="smsdbrole_dmp"></a>smsdbrole_DMP
 
-Apparaatbeheerpunt. ConfigMgr verleent deze machtiging aan het computer account voor een beheer punt met de optie ' mobiele apparaten en Mac-computer toestaan dit beheer punt te gebruiken ', de mogelijkheid om ondersteuning te bieden voor door MDM Inge schreven apparaten.
+Apparaatbeheerpunt. Configuration Manager verleent deze machtiging aan het computer account voor een beheer punt met de optie ' mobiele apparaten en Mac-computer toestaan dit beheer punt te gebruiken ', de mogelijkheid om ondersteuning te bieden voor door MDM Inge schreven apparaten.
 
 ### <a name="smsdbrole_dmpconnector"></a>smsdbrole_DmpConnector
 
-Service verbindings punt. ConfigMgr verleent deze machtiging aan het computer account dat het service aansluitpunt host om telemetriegegevens op te halen en te verstrekken, Cloud Services te beheren en service-updates op te halen.
+Service verbindings punt. Configuration Manager verleent deze machtiging aan het computer account dat het service aansluitpunt host om telemetriegegevens op te halen en te verstrekken, Cloud Services te beheren en service-updates te verkrijgen.
 
 ### <a name="smsdbrole_dviewaccess"></a>smsdbrole_DViewAccess
 
@@ -685,11 +687,11 @@ Gedistribueerde weer gaven. Configuration Manager verleent deze machtiging aan h
 
 ### <a name="smsdbrole_dwss"></a>smsdbrole_DWSS
 
-Data Warehouse. ConfigMgr verleent deze machtiging aan het computer account dat als host voor de Data Warehouse-rol wordt gehost.
+Data Warehouse. Configuration Manager verleent deze machtiging aan het computer account dat als host voor de Data Warehouse-rol wordt gehost.
 
 ### <a name="smsdbrole_enrollsvr"></a>smsdbrole_EnrollSvr
 
- Inschrijvings punt. ConfigMgr verleent deze machtiging aan het computer account dat het inschrijvings punt host om apparaatregistratie via MDM toe te staan.
+ Inschrijvings punt. Configuration Manager verleent deze machtiging aan het computer account dat het inschrijvings punt host om apparaatregistratie via MDM toe te staan.
 
 ### <a name="smsdbrole_extract"></a>smsdbrole_extract
 
@@ -697,26 +699,26 @@ Biedt toegang tot alle uitgebreide schema weergaven.
 
 ### <a name="smsdbrole_hmsuser"></a>smsdbrole_HMSUser
 
-Hiërarchie Manager-service. ConfigMgr verleent machtigingen aan dit account voor het beheren van failover-status berichten en SQL Server Broker-trans acties tussen sites binnen een hiërarchie.
+Hiërarchie Manager-service. Configuration Manager verleent machtigingen aan dit account voor het beheren van failover-status berichten en SQL Server Broker-trans acties tussen sites in een hiërarchie.
 
 > [!NOTE]  
 > De functie smdbrole_WebPortal is standaard lid van deze rol.
 
 ### <a name="smsdbrole_mcs"></a>smsdbrole_MCS
 
-Multi cast-service. ConfigMgr verleent deze machtiging aan het computer account van het distributie punt dat multi cast ondersteunt.
+Multi cast-service. Configuration Manager verleent deze machtiging aan het computer account van het distributie punt dat multi cast ondersteunt.
 
 ### <a name="smsdbrole_mp"></a>smsdbrole_MP
 
-Beheer punt. ConfigMgr verleent deze machtiging aan het computer account dat de rol beheer punt host om ondersteuning te bieden voor de Configuration Manager-clients.
+Beheer punt. Configuration Manager verleent deze machtiging aan het computer account dat de rol beheer punt host om ondersteuning te bieden voor de Configuration Manager-clients.
 
 ### <a name="smsdbrole_mpmbam"></a>smsdbrole_MPMBAM
 
-Beheer punt micro soft BitLocker Administration and monitoring. ConfigMgr verleent deze machtiging aan het computer account dat het beheer punt host dat MBAM beheert voor een omgeving.
+Beheer punt micro soft BitLocker Administration and monitoring. Configuration Manager verleent deze machtiging aan het computer account dat het beheer punt host dat MBAM beheert voor een omgeving.
 
 ### <a name="smsdbrole_mpusersvc"></a>smsdbrole_MPUserSvc
 
-Toepassings aanvraag beheer punt. ConfigMgr verleent deze machtiging aan het computer account dat het beheer punt host om toepassings aanvragen op basis van gebruikers te ondersteunen.
+Toepassings aanvraag beheer punt. Configuration Manager verleent deze machtiging aan het computer account dat het beheer punt host om toepassings aanvragen op basis van gebruikers te ondersteunen.
 
 ### <a name="smsdbrole_siteprovider"></a>smsdbrole_siteprovider
 
@@ -724,16 +726,37 @@ SMS-provider. Configuration Manager verleent deze machtiging aan het computer ac
 
 ### <a name="smsdbrole_siteserver"></a>smsdbrole_siteserver
 
-Site server. ConfigMgr verleent deze machtiging aan het computer account dat de primaire of CAS-site host.
+Site server. Configuration Manager verleent deze machtiging aan het computer account dat de primaire of CAS-site host.
 
 ### <a name="smsdbrole_sup"></a>smsdbrole_SUP
 
-Software-update punt. ConfigMgr verleent deze machtiging aan het computer account dat het software-update punt host voor het werken met updates van derden.
+Software-update punt. Configuration Manager verleent deze machtiging aan het computer account dat het software-update punt host voor het werken met updates van derden.
 
 ### <a name="smsdbrole_webportal"></a>smsdbrole_WebPortal
 
-Website punt van toepassingscatalogus. ConfigMgr verleent machtigingen aan het computer account dat het toepassingscatalogus website punt host om toepassings implementatie op basis van gebruikers te bieden.
+Website punt van toepassingscatalogus. Configuration Manager verleent machtigingen aan het computer account dat het toepassingscatalogus website punt host om toepassings implementatie op basis van gebruikers te bieden.
 
 ### <a name="smsschm_users"></a>smsschm_users
 
-Toegang voor gebruikers rapportage. ConfigMgr verleent toegang tot het account dat wordt gebruikt voor het Reporting Services-account om toegang tot de SMS-rapportage weergaven toe te staan om de Configuration Manager rapport gegevens weer te geven.  De gegevens worden verder beperkt door het gebruik van RBA.
+Toegang voor gebruikers rapportage. Configuration Manager verleent toegang tot het account dat wordt gebruikt voor het Reporting Services-account om toegang te krijgen tot de SMS-rapportage weergaven om de Configuration Manager rapportage gegevens weer te geven.  De gegevens worden verder beperkt door het gebruik van RBA.
+
+## <a name="elevated-permissions"></a>Verhoogde machtigingen
+
+<!-- SCCMDocs#405 -->
+
+Voor Configuration Manager moeten sommige accounts verhoogde machtigingen hebben voor on-continue bewerkingen. Zie bijvoorbeeld [vereisten voor het installeren van een primaire site](../../servers/deploy/install/prerequisites-for-installing-sites.md#bkmk_PrereqPri). De volgende lijst bevat een overzicht van deze machtigingen en de redenen waarom ze nodig zijn.
+
+- Het computer account van de server van de primaire site server en de centrale beheer site vereist:
+
+  - Lokale beheerders rechten op alle site systeem servers. Deze machtiging is om systeem services te beheren, te installeren en te verwijderen. De site server werkt ook lokale groepen op het site systeem bij wanneer u rollen toevoegt of verwijdert.
+
+  - Sysadmin toegang tot het SQL-exemplaar voor de site database. Deze machtiging is voor het configureren en beheren van SQL voor de site. Configuration Manager nauw geïntegreerd met SQL, is het niet alleen een Data Base.
+
+- Gebruikers accounts in de rol volledige beheerder vereisen:
+
+  - Lokale beheerders rechten op alle site servers. Deze machtiging is om systeem services, register sleutels en-waarden en WMI-objecten weer te geven, te bewerken, te verwijderen en te installeren.
+
+  - Sysadmin toegang tot het SQL-exemplaar voor de site database. Deze machtiging is om de data base te installeren en bij te werken tijdens de installatie of het herstel. Het is ook vereist voor SQL-onderhoud en-bewerkingen. U kunt bijvoorbeeld statistieken opnieuw indexeren en bijwerken.
+
+    > [!NOTE]
+    > Sommige organisaties kunnen ervoor kiezen om sysadmin-toegang te verwijderen en deze alleen te verlenen wanneer dit nodig is. Dit gedrag wordt soms aangeduid als just-in-time (JIT)-toegang. In dit geval moeten gebruikers met de rol volledige beheerder nog steeds toegang hebben tot opgeslagen procedures voor lezen, bijwerken en uitvoeren van de Configuration Manager Data Base. Deze machtigingen maken het mogelijk om de meeste problemen op te lossen zonder volledige sysadmin-toegang.

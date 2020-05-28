@@ -5,17 +5,17 @@ description: Software-updates automatisch implementeren met behulp van automatis
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 05/20/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: eca3227a023561a099804ef0928bfee7a7aff2c6
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: bf172c4cb34a17ac793ea5568b0505505baf97a0
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110437"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709431"
 ---
 #  <a name="automatically-deploy-software-updates"></a>Software-updates automatisch implementeren  
 
@@ -49,7 +49,7 @@ Automatisch goed keuren en implementeren van software-updates met behulp van een
 
          - De sjabloon **Office 365-client updates** biedt algemene instellingen die u kunt gebruiken wanneer u updates implementeert voor Office 365 Pro Plus clients.
              > [!Note]
-             > Vanaf 21 april 2020, wordt de naam van Office 365 ProPlus gewijzigd in **Microsoft 365 apps voor bedrijven**. Als uw Adr's afhankelijk is van de eigenschap ' title ', moet u deze bewerken vanaf 9 juni 2020. `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)`is een voor beeld van de nieuwe titel. Zie [name wijzigen voor Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change)voor meer informatie.
+             > Vanaf 21 april 2020, wordt de naam van Office 365 ProPlus gewijzigd in **Microsoft 365 apps voor bedrijven**. Als uw Adr's afhankelijk is van de eigenschap ' title ', moet u deze bewerken vanaf 9 juni 2020. `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)`is een voor beeld van de nieuwe titel. Zie voor meer informatie over het wijzigen van uw Adr's voor de titel wijziging [kanalen voor Microsoft 365 apps bijwerken](manage-office-365-proplus-updates.md#bkmk_channel). Zie voor meer informatie over de naamswijziging naam [wijzigen voor Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change).
 
          - De sjabloon **SCEP-en Windows Defender anti virus-updates** biedt algemene instellingen die u kunt gebruiken wanneer u Endpoint Protection definitie-updates implementeert.  
 
@@ -85,7 +85,7 @@ Automatisch goed keuren en implementeren van software-updates met behulp van een
 
      - De limiet voor software-updates in de ADR is 1000 software-updates.  
 
-     - Als dat nodig is, filtert u op de inhouds grootte voor software-updates in de regels voor automatische implementatie. Zie [Configuration Manager en vereenvoudigd Windows-onderhoud op besturings systemen van lagere niveaus](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/)voor meer informatie.  
+     - Als dat nodig is, filtert u op de inhouds grootte voor software-updates in de regels voor automatische implementatie. Zie [Configuration Manager en vereenvoudigd Windows-onderhoud op besturings systemen van lagere niveaus](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-simplified-windows-servicing-on-down/ba-p/274056)voor meer informatie.  
 
      - Met ingang van versie 1910 kunt u **geïmplementeerd** als een update filter voor uw regels voor automatische implementatie. Dit filter helpt bij het identificeren van nieuwe updates die mogelijk moeten worden geïmplementeerd voor uw pilot-of test verzamelingen. Het software-update filter kan er ook voor zorgen dat oudere updates niet opnieuw worden geïmplementeerd. 
          - Als u **geïmplementeerd** als een filter gebruikt, moet u mindful zijn dat u de update mogelijk al hebt geïmplementeerd voor een andere verzameling, zoals een pilot-of test verzameling. <!--4852033-->
@@ -187,7 +187,7 @@ Automatisch goed keuren en implementeren van software-updates met behulp van een
 
         -  **Beschrijving**: geef een beschrijving op die informatie biedt over het implementatiepakket. De optionele beschrijving is beperkt tot 127 tekens.  
 
-        -  **Pakketbron**: hiermee geeft u de locatie op van de bronbestanden van de software-update. Typ een netwerkpad voor de bron locatie, bijvoorbeeld `\\server\sharename\path`, of klik op **Bladeren** om de netwerk locatie te zoeken. Maak de gedeelde map voor de bron bestanden van het implementatie pakket voordat u doorgaat naar de volgende pagina.  
+        -  **Pakketbron**: hiermee geeft u de locatie op van de bronbestanden van de software-update. Typ een netwerkpad voor de bron locatie, bijvoorbeeld, `\\server\sharename\path` of klik op **Bladeren** om de netwerk locatie te zoeken. Maak de gedeelde map voor de bron bestanden van het implementatie pakket voordat u doorgaat naar de volgende pagina.  
 
             - U kunt de opgegeven locatie niet gebruiken als de bron van een ander software-implementatie pakket.  
 
@@ -211,7 +211,7 @@ Automatisch goed keuren en implementeren van software-updates met behulp van een
 
     -   **Software-updates downloaden van Internet**: Selecteer deze instelling om de software-updates te downloaden vanaf een opgegeven locatie op internet. Deze instelling is standaard ingeschakeld.  
 
-    -   **Software-updates downloaden vanaf een locatie op het lokale netwerk**: selecteer deze instelling als u wilt dat de software-updates worden gedownload vanuit een lokale map of een gedeelde map. Deze instelling is nuttig wanneer de computer waarop de wizard wordt uitgevoerd, geen toegang tot internet heeft. Elke computer met Internet toegang kan tijdig downloaden van de software-updates. Sla ze vervolgens op in een locatie op het lokale netwerk die toegankelijk is vanaf de computer waarop de wizard wordt uitgevoerd.  
+    -   **Software-updates downloaden vanaf een locatie op het lokale netwerk**: selecteer deze instelling als u wilt dat de software-updates worden gedownload vanuit een lokale map of een gedeelde map. Deze instelling is nuttig wanneer de computer waarop de wizard wordt uitgevoerd, geen toegang tot internet heeft. Elke computer met Internet toegang kan tijdig downloaden van de software-updates. Sla ze vervolgens op in een locatie op het lokale netwerk die toegankelijk is vanaf de computer waarop de wizard wordt uitgevoerd. Een ander scenario kan zijn wanneer u inhoud downloadt die is gepubliceerd via System Center Updates Publisher of een patch oplossing van derden. De WSUS-inhouds share op het software-update punt op het hoogste niveau kan worden ingevoerd als de netwerk locatie die moet worden gedownload, zoals `\\server\WsusContent` . <!--memdocs-issue-211-->
 
 14. Selecteer op de pagina **taal** selecteren de talen waarvoor de site de geselecteerde software-updates downloadt. De site downloadt deze updates alleen als deze beschikbaar zijn in de geselecteerde talen. Software-updates die niet taalspecifiek zijn, worden altijd gedownload. De wizard selecteert standaard de talen die u hebt geconfigureerd in de eigenschappen van het software-update punt. Er moet ten minste één taal worden geselecteerd voordat u doorgaat naar de volgende pagina. Wanneer u alleen talen selecteert die niet door een software-update worden ondersteund, mislukt het downloaden van de update.  
 

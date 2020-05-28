@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d06bda9d07a53e022de27afc68f40f9ce706867f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: fb13844dd05049b9186909884aa0c457a8cfacd9
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076149"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428410"
 ---
 # <a name="capabilities-in-technical-preview-1703-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1703 voor Configuration Manager
 
@@ -48,7 +48,7 @@ U kunt nu gelicentieerde Apps implementeren op apparaten en gebruikers. Afhankel
 
 U kunt eind gebruikers nu voorzien van een directe koppeling naar een toepassing in Software Center. Dit betekent dat ze software Center niet meer hoeven te openen en te zoeken naar een toepassing voordat ze deze kunnen installeren. Dit is alleen beschikbaar voor Configuration Manager toepassingen, niet voor pakketten en Program ma's of taken reeksen.
 
-### <a name="try-it-out"></a>Uitproberen                 
+### <a name="try-it-out"></a>Beleid uitproberen                 
 
 Gebruik de volgende URL-indeling om software Center te openen voor een bepaalde toepassing:
 
@@ -70,7 +70,7 @@ Met deze koppeling kunnen eind gebruikers software Center rechtstreeks openen in
 
 U kunt nu PFX-certificaat profielen implementeren die u hebt geïmporteerd op Configuration Manager-client computers met Windows 10.
 
-### <a name="try-it-out"></a>Uitproberen
+### <a name="try-it-out"></a>Beleid uitproberen
 
 Volg de instructies in [PFX-certificaat profielen maken](../../mdm/deploy-use/create-pfx-certificate-profiles.md) om een pfx-profiel te importeren, het profiel te implementeren en vervolgens te controleren of het certificaat is geïnstalleerd voor de doel gebruiker.
 
@@ -97,7 +97,7 @@ Registreer Configuration Manager in Azure Active Directory als webtoepassing of 
 
 ### <a name="use-the-wizard-to-configure-the-wsfb-cloud-service"></a>Gebruik de wizard voor het configureren van de WSfB-Cloud service
 
-1. Ga in de-console naar **beheer** > **overzicht** > **Cloud Services Management** > **Azure** > **Azure-Services**en kies vervolgens **Azure-Services configureren** om de **wizard Azure-Services**te starten.
+1. Ga in de-console naar **beheer**  >  **overzicht**  >  **Cloud Services Management**  >  **Azure**  >  **Azure-Services**en kies vervolgens **Azure-Services configureren** om de **wizard Azure-Services**te starten.
 
 2. Selecteer op de pagina **Azure-Services** de service die u wilt configureren en klik vervolgens op **volgende**. Met deze preview-versie kan alleen WSfB worden geconfigureerd.
 
@@ -127,10 +127,10 @@ U kunt nu de rest van de [Current Branch inhoud](../../apps/deploy-use/manage-ap
 ### <a name="modify-a-cloud-service-configuration"></a>Een Cloud service configuratie wijzigen
 U kunt de eigenschappen van een Cloud service weer geven en bewerken om de configuratie te wijzigen.
 
-Ga in de-console naar **beheer** > **overzicht** > **Cloud Services beheer** > **Azure** > **Azure-Services**, en kies vervolgens **Azure-Services configureren**, selecteer een Cloud service en kies vervolgens **Eigenschappen**.
+Ga in de-console naar **beheer**  >  **overzicht**  >  **Cloud Services beheer**  >  **Azure**  >  **Azure-Services**, en kies vervolgens **Azure-Services configureren**, selecteer een Cloud service en kies vervolgens **Eigenschappen**.
 
 ## <a name="convert-from-bios-to-uefi-during-an-in-place-upgrade"></a>Conversie van BIOS naar UEFI tijdens een in-place upgrade
-In de update voor Windows 10 Crea tors wordt een eenvoudig conversie programma geïntroduceerd waarmee het proces voor het opnieuw partitioneren van de harde schijf voor UEFI-hardware wordt geautomatiseerd en het conversie programma wordt geïntegreerd in het Windows 7-in-place upgrade proces. Wanneer u dit hulp programma combineert met de taken reeks voor de upgrade van het besturings systeem en het OEM-hulp programma dat de firmware converteert van BIOS naar UEFI, kunt u uw computers converteren van BIOS naar UEFI tijdens een in-place upgrade naar de update voor Windows 10 Crea tors. Zie [taken reeks stappen voor het beheren van de conversie van BIOS naar UEFI](../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade)voor meer informatie.
+In de update voor Windows 10 Crea tors wordt een eenvoudig conversie programma geïntroduceerd waarmee het proces voor het opnieuw partitioneren van de harde schijf voor UEFI-hardware wordt geautomatiseerd en het conversie programma wordt geïntegreerd in het Windows 7-in-place upgrade proces. Wanneer u dit hulp programma combineert met de taken reeks voor de upgrade van het besturings systeem en het OEM-hulp programma dat de firmware converteert van BIOS naar UEFI, kunt u uw computers converteren van BIOS naar UEFI tijdens een in-place upgrade naar de update voor Windows 10 Crea tors. Zie [taken reeks stappen voor het beheren van de conversie van BIOS naar UEFI](../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu)voor meer informatie.
 
 ## <a name="collapsible-task-sequence-groups"></a>Samenvouw bare taken reeks groepen
 Deze versie introduceert de mogelijkheid om taken reeks groepen uit te vouwen en samen te vouwen. U kunt afzonderlijke groepen uitvouwen of samen vouwen of alle groepen in één keer uitvouwen of samen vouwen.
@@ -143,7 +143,7 @@ Vanaf deze versie kunt u de client instellingen voor apparaten gebruiken om de c
 - U moet uw site hebben geconfigureerd voor het gebruik van de Upgradegereedheid-Cloud service.
 
 ### <a name="configure-windows-analytics-client-settings"></a>Windows Analytics-client instellingen configureren
-Als u Windows Analytics wilt configureren, gaat u in de Configuration Manager-console naar **beheer** > **client instellingen**en dubbelklikt u op **aangepaste client instellingen voor apparaten maken** en controleert u vervolgens **Windows Analytics**.  
+Als u Windows Analytics wilt configureren, gaat u in de Configuration Manager-console naar **beheer**  >  **client instellingen**en dubbelklikt u op **aangepaste client instellingen voor apparaten maken** en controleert u vervolgens **Windows Analytics**.  
 
 Configureer vervolgens het volgende nadat u naar het tabblad instellingen van **Windows Analytics** hebt genavigeerd:
 - **Commerciële ID**  

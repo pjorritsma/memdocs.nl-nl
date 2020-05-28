@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: df951bfb44313cfec8dacb8c0df34abb7beb0c56
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f3f38de1d7440ffd0293bde359deeb6be3bbeffb
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720294"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906195"
 ---
 # <a name="recommended-antivirus-exclusions-for-configuration-manager"></a>Aanbevolen uitsluitingen van virussen voor Configuration Manager
 
@@ -83,7 +83,7 @@ Om dergelijke problemen te voor komen, raden we u aan de volgende uitsluitingen 
 
 ### <a name="folder-exclusions-for-clients"></a>Uitsluitingen van mappen voor clients
 
-- *Client Installation Folder*Installatiemap van de client\*. sdf\\
+- Installatiemap van de *client* \\ \* . sdf
 - *Client installatie map*\ServiceData
 - C:\Windows\CCMCache
 - C:\Windows\CCMSetup
@@ -114,10 +114,10 @@ Proces uitsluitingen zijn alleen nodig als agressieve antivirus Programma's Conf
 
 Raadpleeg de volgende artikelen voor meer informatie over uitsluitingen van virussen:
 
-[Configuration Manager Current Branch antivirus uitsluitingen-System Center premier field engineer-blog](https://blogs.technet.microsoft.com/systemcenterpfe/2017/05/24/configuration-manager-current-branch-antivirus-update/)
+[Configuration Manager Current Branch antivirus uitsluitingen-System Center premier field engineer-blog](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/configuration-manager-current-branch-antivirus-exclusions/ba-p/884831)
 
-[De uitsluitingen van System Center 2012 Configuration Manager anti virus zijn bijgewerkt met meer informatie over OSD-en opstart installatie kopieën](https://blogs.technet.microsoft.com/systemcenterpfe/2013/01/11/updated-system-center-2012-configuration-manager-antivirus-exclusions-with-more-details-on-osd-and-boot-images-etc/)
+[De uitsluitingen van System Center 2012 Configuration Manager anti virus zijn bijgewerkt met meer informatie over OSD-en opstart installatie kopieën](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/updated-system-center-2012-configuration-manager-antivirus/ba-p/884371)
 
-[Antivirus software kiezen voor uitvoering op computers met SQL Server](https://support.microsoft.com/en-us/help/309422/how-to-choose-antivirus-software-to-run-on-computers-that-are-running-sql-server)
+[Antivirus software kiezen voor uitvoering op computers met SQL Server](https://support.microsoft.com/help/309422/how-to-choose-antivirus-software-to-run-on-computers-that-are-running-sql-server)
 
-[Aanbevelingen voor virus scans voor Enter prise-computers waarop momenteel ondersteunde versies van Windows worden uitgevoerd](https://support.microsoft.com/en-us/help/822158/virus-scanning-recommendations-for-enterprise-computers-that-are-running-currently-supported-versions-of-windows)
+[Aanbevelingen voor virus scans voor Enter prise-computers waarop momenteel ondersteunde versies van Windows worden uitgevoerd](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers-that-are-running-currently-supported-versions-of-windows)

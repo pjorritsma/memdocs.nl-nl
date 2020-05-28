@@ -10,12 +10,12 @@ ms.assetid: 3393db41-900a-44c5-b950-2d46a35a198c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4b7db4537965b17cd56cc4d996eec576c2b18965
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3825ef9b9b1efd576a31742e0fdbe7c2bc3b1628
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722114"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906849"
 ---
 # <a name="security-and-privacy-for-certificate-profiles-in-configuration-manager"></a>Beveiliging en privacy voor certificaat profielen in Configuration Manager
 
@@ -27,7 +27,7 @@ ms.locfileid: "81722114"
 
 |Aanbevolen beveiligingsprocedure|Meer informatie|  
 |----------------------------|----------------------|  
-|Bepaal en volg alle aanbevolen beveiligingsprocedures voor de registratieservice voor netwerkapparaten, waaronder het configureren van de website van de Registratieservice voor netwerkapparaten in Internet Information Services (IIS) om SSL te vereisen en clientcertificaten te negeren.|Zie [Network Device Enrollment Service Guidance](https://go.microsoft.com/fwlink/p/?LinkId=309016) (Richtlijnen voor de Registratieservice van netwerkapparaten) in de bibliotheek Active Directory Certificate Services-bibliotheek op TechNet.|  
+|Bepaal en volg alle aanbevolen beveiligingsprocedures voor de registratieservice voor netwerkapparaten, waaronder het configureren van de website van de Registratieservice voor netwerkapparaten in Internet Information Services (IIS) om SSL te vereisen en clientcertificaten te negeren.|Zie [richt lijnen voor registratie service voor netwerk apparaten](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11))voor meer informatie.|  
 |Kies bij het configureren van SCEP-certificaatprofielen de veiligste opties die door de apparaten en uw infrastructuur worden ondersteund.|Bepaal, implementeer en volg alle 'best practice' beveiligingsprocedures die voor uw apparaten en infrastructuur worden aanbevolen.|  
 |Geef handmatig de gebruikersaffiniteit met apparaat op in plaats van gebruikers toe te staan hun primaire apparaat te identificeren. Zorg daarnaast dat op gebruik gebaseerde configuratie niet is ingeschakeld.|Als u op de optie **Alleen certificaatinschrijving op het primaire apparaat van gebruikers toestaan** in een SCEP-certificaatprofiel klikt, moet u de informatie die van gebruikers of van het apparaat wordt verzameld niet als gezaghebbend beschouwen. Als u SCEP-certifcaatprofielen bij deze configuratie implementeert en een vertrouwde gebruiker met beheerdersrechten geeft de gebruikersaffiniteit met apparaat niet op, dan kunnen onbevoegde gebruikers verhoogde bevoegdheden krijgen en kunnen certificaten worden verleend voor verificatie.<br /><br /> **Opmerking:** Als u de op gebruik gebaseerde configuratie inschakelt, wordt deze informatie verzameld met behulp van status berichten die niet zijn beveiligd door Configuration Manager. Gebruik om deze dreiging te voorkomen, SMB-ondertekening of IPsec tussen clientcomputers en het beheerpunt.|  
 |Voeg geen lees- en registratiemachtigingen toe aan de certificaatsjablonen of configureer het certificaatregistratiepunt om de certificaatsjablooncontrole over te slaan.|Hoewel Configuration Manager de aanvullende controle ondersteunt als u de beveiligings machtigingen voor lezen en inschrijven voor gebruikers toevoegt en u het certificaat registratiepunt kunt configureren om deze controle over te slaan als verificatie niet mogelijk is, is de configuratie geen beveiligings best practice. Zie [plannen voor certificaat sjabloon machtigingen voor certificaat profielen](../../protect/plan-design/planning-for-certificate-template-permissions.md)voor meer informatie.|  

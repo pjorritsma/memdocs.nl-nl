@@ -10,12 +10,12 @@ ms.assetid: d6a73e68-57d8-4786-842b-36669541d8ff
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3729bdc28cce961bd081ddb461d3d1da45d6c017
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 909f9fa603f6b979b283593da79730a97fcb9fc9
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718719"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904158"
 ---
 # <a name="pki-certificate-requirements-for-configuration-manager"></a>PKI-certificaatvereisten voor Configuration Manager
 
@@ -23,11 +23,7 @@ ms.locfileid: "81718719"
 
 De open bare-sleutel infrastructuur (PKI)-certificaten die u mogelijk nodig hebt voor Configuration Manager worden weer gegeven in de volgende tabellen. Bij deze informatie wordt ervan uitgegaan dat u basiskennis hebt van PKI-certificaten. Zie voor [beeld van een stapsgewijze implementatie van de PKI-certificaten voor Configuration Manager: Windows Server 2008-certificerings instantie](example-deployment-of-pki-certificates.md)voor meer informatie.
 
-Raadpleeg de volgende documentatie voor meer informatie over het Active Directory van Certificate Services:  
-
-- Voor Windows Server 2012: [Overzicht van Active Directory Certificate Services](https://go.microsoft.com/fwlink/p/?LinkId=286744)  
-
-- Voor Windows Server 2008: [Active Directory Certificate Services in Windows Server 2008](https://go.microsoft.com/fwlink/p/?LinkId=115018)
+Zie [Active Directory Certificate Services Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831740(v=ws.11))(Engelstalig) voor meer informatie over het Active Directory van Certificate Services.
 
 Zie [overzicht van CNG-certificaten](cng-certificates-overview.md)voor meer informatie over het gebruik van crypto grafie API: Next Generation (CNG)-certificaten met Configuration Manager.
 

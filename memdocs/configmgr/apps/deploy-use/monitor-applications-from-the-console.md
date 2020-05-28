@@ -63,7 +63,7 @@ De implementatiestatus voor pakket- en programma-implementaties wordt niet geagg
 
 ## <a name="monitor-the-state-of-an-application-in-the-configuration-manager-console"></a>De status van een toepassing in de Configuration Manager-console bewaken  
 
-1.  Kies in de Configuration Manager-console **bewakings** > **implementaties**.  
+1.  Kies in de Configuration Manager-console **bewakings**  >  **implementaties**.  
 
 3.  Als u de implementatie Details voor elke compatibiliteits status en de apparaten in die status wilt bekijken, selecteert u een implementatie en kiest u vervolgens op het tabblad **Start** in de groep **implementatie** de optie **status weer geven** om het deel venster **Implementatie status** te openen. In dit deelvenster kunt u de assets met elke conformiteitsstatus weergeven. Kies een wille keurige Asset om gedetailleerdere informatie over de implementatie status voor die Asset weer te geven.  
 
@@ -80,7 +80,7 @@ De informatie die wordt weer gegeven in het deel venster **Implementatie status*
 
 Als de gegevens die worden weer gegeven op het tabblad **samen vatting** en het tabblad **implementatie typen** niet overeenkomen met de gegevens die worden weer gegeven in het deel venster **Implementatie status** , kiest u **samen vatting uitvoeren** om de gegevens op deze tabbladen bij te werken. U kunt de standaardsamenvattingsinterval voor toepassingsimplementaties als volgt configureren:  
 
-1. Klik in de Configuration Manager-console op **beheer** > **site configuratie** > **sites**.
+1. Klik in de Configuration Manager-console op **beheer**  >  **site configuratie**  >  **sites**.
 
 2. Selecteer in de lijst **sites** de site waarvoor u het samenvattings interval wilt configureren en klik vervolgens op het tabblad **Start** in de groep **instellingen** op **status overzichten**.
 

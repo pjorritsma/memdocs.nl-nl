@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 6402205ae694d719845492b1af37000a0b9335c5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cee161747d5c0b462836b7c3a44e1460173b124c
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721470"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905665"
 ---
 # <a name="capabilities-in-technical-preview-1610-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1610 voor Configuration Manager
 
@@ -29,7 +29,7 @@ Dit artikel bevat een inleiding tot de functies die beschikbaar zijn in de Techn
 
 **Hier volgen enkele nieuwe functies die u kunt uitproberen met deze versie.**  
 ## <a name="filter-by-content-size-in-automatic-deployment-rules"></a>Filteren op inhouds grootte in regels voor automatische implementatie
-U kunt nu filteren op de inhouds grootte voor software-updates in regels voor automatische implementatie. U kunt bijvoorbeeld het filter voor **inhouds grootte (KB)** instellen op **< 2048** om alleen software-updates te downloaden die kleiner zijn dan 2 MB. Als u dit filter gebruikt, voor komt u dat grote software-updates automatisch worden gedownload voor een betere ondersteuning van vereenvoudigde Windows-onderhoud op lagere niveaus wanneer de netwerk bandbreedte beperkt is. Zie [Configuration Manager en vereenvoudigd Windows-onderhoud op besturings systemen van lagere niveaus](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/)voor meer informatie.
+U kunt nu filteren op de inhouds grootte voor software-updates in regels voor automatische implementatie. U kunt bijvoorbeeld het filter voor **inhouds grootte (KB)** instellen op **< 2048** om alleen software-updates te downloaden die kleiner zijn dan 2 MB. Als u dit filter gebruikt, voor komt u dat grote software-updates automatisch worden gedownload voor een betere ondersteuning van vereenvoudigde Windows-onderhoud op lagere niveaus wanneer de netwerk bandbreedte beperkt is. Zie [Configuration Manager en vereenvoudigd Windows-onderhoud op besturings systemen van lagere niveaus](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-simplified-windows-servicing-on-down/ba-p/274056)voor meer informatie.
 
 #### <a name="to-configure-the-content-size-field"></a>Het veld inhouds grootte configureren
 Als u het veld **inhouds grootte (KB)** wilt configureren, gaat u naar de pagina **software-updates** in de wizard regel voor automatische implementatie maken wanneer u een ADR maakt of gaat u naar het tabblad software- **updates** in de eigenschappen voor een bestaande ADR.
@@ -58,13 +58,13 @@ Voor meer informatie:
 
 Als beheerder kunt u nu een eerder goedgekeurde toepassings aanvraag weigeren. Zodra de toepassing is geweigerd, moeten gebruikers de aanvraag later opnieuw verzenden. Met de weigering wordt de toepassing niet verwijderd. in plaats daarvan wordt het opnieuw goed keuren afgedwongen voor elke nieuwe aanvraag voor die toepassing van die gebruiker. Voorheen was toepassings aanvraag weigering alleen beschikbaar voor toepassings aanvragen die niet zijn goedgekeurd.
 
-#### <a name="try-it-out"></a>Uitproberen
+#### <a name="try-it-out"></a>Beleid uitproberen
 Een door een toepassing goedgekeurde aanvraag weigeren:
 
 1. In de Configuration Manager-console [maakt en implementeert u een toepassing](../../apps/deploy-use/create-applications.md) waarvoor goed keuring is vereist.
 2. Open Software Center op een client computer en dien een aanvraag in voor de toepassing.
 3. In de Configuration Manager-console keurt u de toepassings aanvraag goed.
-4. De goedgekeurde toepassings aanvraag weigeren: in de Configuration Manager-console navigeert u in het**overzicht** > van de **software bibliotheek** > op**toepassings beheer** > **goedkeurings aanvragen** en selecteert u de toepassings aanvraag die u wilt weigeren.  Klik op het lint op **weigeren**.
+4. De goedgekeurde toepassings aanvraag weigeren: in de Configuration Manager-console navigeert u in het overzicht van de **software bibliotheek**op  >  **Overview**  >  **toepassings beheer**  >  **goedkeurings aanvragen** en selecteert u de toepassings aanvraag die u wilt weigeren.  Klik op het lint op **weigeren**.
 
 ## <a name="exclude-clients-from-automatic-upgrade"></a>Clients uitsluiten van automatische upgrade
 Technical Preview 1610 introduceert een nieuwe instelling die u kunt gebruiken om een verzameling clients te uitsluiten van de automatische installatie van bijgewerkte client versies.  Dit geldt voor automatische upgrades en andere methoden, zoals upgrades op basis van software-updates, aanmeldings scripts en groeps beleid. Dit kan worden gebruikt voor een verzameling computers die meer aandacht nodig hebben bij het upgraden van de client. Een client die zich in een uitgesloten verzameling bevindt, negeert aanvragen om bijgewerkte client software te installeren.
@@ -126,7 +126,7 @@ U kunt met name de volgende instellingen voor Windows Defender configureren:
 
 ### <a name="try-it-out"></a>Probeer het nu!
 
-1. Ga in de Configuration Manager-console naar **activa en naleving** > **overzicht** > **configuratie-items**voor**compatibiliteits instellingen** > en maak een nieuw **configuratie-item**.
+1. Ga in de Configuration Manager-console naar **activa en naleving**  >  **overzicht**  >  configuratie-items voor**compatibiliteits instellingen**  >  **Configuration Items**en maak een nieuw **configuratie-item**.
 2. Voer een naam in en selecteer **windows 8,1 en Windows 10** onder **instellingen voor apparaten die worden beheerd zonder de Configuration Manager-client** en klik op **volgende**.
 3. Zorg ervoor dat **alle Windows 10-(64-bits)** en **alle windows 10 (32-bits)** zijn geselecteerd op de pagina **ondersteunde platforms** en klik vervolgens op **volgende**.
 4. Selecteer de instellings groep **Windows Defender** en klik vervolgens op **volgende**.
@@ -143,7 +143,7 @@ U kunt nu een beleids synchronisatie aanvragen voor een mobiel apparaat vanuit d
 
 ### <a name="try-it-out"></a>Probeer het nu!
 
-1. Ga in de Configuration Manager-console naar **activa en naleving** > **overzicht** > apparaten.
+1. Ga in de Configuration Manager-console naar **activa en naleving**  >  **overzicht** > apparaten.
 2. Selecteer in het menu **acties voor externe apparaten** de optie **synchronisatie aanvraag verzenden**.
 
 De synchronisatie kan vijf tot tien minuten duren. Eventuele wijzigingen in het beleid worden gesynchroniseerd met het apparaat. U kunt de status van de synchronisatie aanvraag volgen in de kolom **externe synchronisatie status** in de weer gave **apparaten** of in het dialoog venster **Eigenschappen** van het apparaat.

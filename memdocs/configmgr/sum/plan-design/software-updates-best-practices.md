@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 6d20389a-9de2-4a64-bced-9fc4fa519174
-ms.openlocfilehash: dc0d416fdd186dbbeb4c61d48b688072bb830485
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: eb9a675970abb581a793208c73506e1e94cc6f63
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723990"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906691"
 ---
 # <a name="best-practices-for-software-updates-in-configuration-manager"></a>Aanbevolen procedures voor software-updates in Configuration Manager
 
@@ -41,7 +41,7 @@ Voor meer informatie over het delen van de WSUS-data base raadpleegt u de volgen
 
 - [Een gedeelde SUSDB implementeren voor Configuration Manager software-update punten](https://techcommunity.microsoft.com/t5/Configuration-Manager-Archive/How-to-implement-a-shared-SUSDB-for-Configuration-Manager/ba-p/274103)  
 
-- [Overwegingen voor meerdere WSUS-instanties die een inhouds database delen wanneer u Configuration Manager gebruikt](https://blogs.technet.microsoft.com/wsus/2014/03/22/considerations-for-multiple-wsus-instances-sharing-a-content-database-when-using-system-center-configuration-manager-but-without-network-load-balancing-nlb/)  
+- [Overwegingen voor meerdere WSUS-instanties die een inhouds database delen als Configuration Manager wordt gebruikt](https://docs.microsoft.com/archive/blogs/wsus/considerations-for-multiple-wsus-instances-sharing-a-content-database-when-using-system-center-configuration-manager-but-without-network-load-balancing-nlb).
 
 
 ### <a name="when-configuration-manager-and-wsus-use-the-same-sql-server-configure-one-to-use-a-named-instance-and-the-other-to-use-the-default-instance"></a><a name="bkmk_sql-instance"></a>Als Configuration Manager en WSUS gebruikmaken van dezelfde SQL Server, configureert u er een om een benoemd exemplaar te gebruiken en de andere voor het gebruik van het standaard exemplaar  

@@ -10,12 +10,12 @@ ms.assetid: be276b34-e283-4386-8b45-5629e431c50d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 05aeca86071ea823d3ebc3cf493bea4d418bad27
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 63f6c7321301e5705c4188012ba53b50f4c37b57
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722688"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906039"
 ---
 # <a name="microsoft-endpoint-configuration-manager-faq"></a>Veelgestelde vragen over Microsoft Endpoint Configuration Manager
 
@@ -25,7 +25,7 @@ Vanaf versie 1910 maakt Configuration Manager nu deel uit van micro soft Endpoin
 
 ## <a name="summary"></a>Samenvatting
 
-Bekijk eerst de volgende video van twee minuten van Mark Anderson, micro soft Corporate Vice President for Microsoft 365:
+Bekijk om te beginnen de volgende video van twee minuten van Brad Anderson, Corporate Vice President for Microsoft 365 bij Microsoft:
 
 > [!VIDEO https://www.youtube.com/embed/GS7oNPInFuw]
 
@@ -40,8 +40,8 @@ De volgende micro soft-beheer oplossingen maken nu deel uit van het merk van **m
 - [Configuration Manager](https://docs.microsoft.com/configmgr)
 - [Intune](https://docs.microsoft.com/intune)
 - [Desktop Analytics](../../desktop-analytics/overview.md)
-- [Auto Pilot](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
-- Andere functies in de beheer [console voor Apparaatbeheer](https://go.microsoft.com/fwlink/?linkid=2109094)
+- [Autopilot](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
+- Andere functies in de beheer [console voor Apparaatbeheer](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760)
 
 Raadpleeg voor meer informatie de volgende Posts van Mark Anderson, micro soft Corporate Vice President for Microsoft 365:
 

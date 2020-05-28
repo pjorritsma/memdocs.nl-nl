@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 0a10726062d679666d14cbbb0b87510af5dfe30c
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 3259bd1b20740046e70b1ef53281b0ff235a3896
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078801"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905464"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1705 voor Configuration Manager
 
@@ -64,7 +64,7 @@ Het account dat u gebruikt om het hulp programma uit te voeren, vereist de volge
 -   **Lokale beheerder** op de computer die het service verbindings punt host.
 
 U hebt de GUID van het update pakket nodig die u opnieuw wilt instellen. De GUID ophalen:
--   Ga in de-console naar **beheer** > **updates en onderhoud** en klik vervolgens in het weergave paneel met de rechter muisknop op de kop van een van de kolommen (zoals **status**) en selecteer vervolgens **pakket-GUID**. Hiermee voegt u die kolom toe aan het weer geven en toont de kolom de GUID van het update pakket.
+-   Ga in de-console naar **beheer**  >  **updates en onderhoud** en klik vervolgens in het weergave paneel met de rechter muisknop op de kop van een van de kolommen (zoals **status**) en selecteer vervolgens **pakket-GUID**. Hiermee voegt u die kolom toe aan het weer geven en toont de kolom de GUID van het update pakket.
 
 > [!TIP]  
 > Als u de GUID wilt kopiëren, selecteert u de rij voor het update pakket dat u opnieuw wilt instellen en gebruikt u vervolgens CTRL + C om die rij te kopiëren. Als u de gekopieerde selectie in een tekst editor plakt, kunt u vervolgens alleen de GUID kopiëren voor gebruik als een opdracht regel parameter wanneer u het hulp programma uitvoert.
@@ -85,11 +85,11 @@ Wanneer het hulp programma wordt uitgevoerd:
 
 |                        Parameter                         |                                                            Beschrijving                                                            |
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| **-S &lt;FQDN van de SQL Server van uw site op het hoogste niveau>** | *Vereist* <br> U moet de FQDN opgeven van de SQL Server die als host fungeert voor de site database voor de bovenste site van uw hiërarchie. |
-|                **-D &lt;Database naam>**                 |                             *Vereist* <br> U moet de naam van de data base van de bovenste site opgeven.                             |
-|                 **-P &lt;Package GUID>**                 |                        *Vereist* <br> U moet de GUID opgeven voor het update pakket dat u opnieuw wilt instellen.                        |
-|           **-I &lt;SQL Server exemplaar naam>**           |                   *Beschrijving* <br> Hier kunt u het exemplaar van SQL Server identificeren dat als host fungeert voor de site database.                   |
-|                       **-FDELETE**                       |                      *Beschrijving* <br> Gebruik deze om het verwijderen van een geslaagd update pakket af te dwingen.                      |
+| **-S &lt; FQDN van de SQL Server van uw site op het hoogste niveau>** | *Vereist* <br> U moet de FQDN opgeven van de SQL Server die als host fungeert voor de site database voor de bovenste site van uw hiërarchie. |
+|                **-D &lt; database naam>**                 |                             *Vereist* <br> U moet de naam van de data base van de bovenste site opgeven.                             |
+|                 **-P &lt; package GUID>**                 |                        *Vereist* <br> U moet de GUID opgeven voor het update pakket dat u opnieuw wilt instellen.                        |
+|           **-I &lt; SQL Server exemplaar naam>**           |                   *Optioneel* <br> Hier kunt u het exemplaar van SQL Server identificeren dat als host fungeert voor de site database.                   |
+|                       **-FDELETE**                       |                      *Optioneel* <br> Gebruik deze om het verwijderen van een geslaagd update pakket af te dwingen.                      |
 
  **Voorbeelden:**  
  In een typisch scenario wilt u een update met Download problemen opnieuw instellen. De FQDN van de SQL-servers is *Server1.fabrikam.com*, de site database is *CM_XYZ*en de pakket-GUID is *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  U voert de volgende handelingen uit: ***CMUpdateReset. exe-S server1.fabrikam.com-D CM_XYZ-P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
@@ -99,7 +99,7 @@ Wanneer het hulp programma wordt uitgevoerd:
 ### <a name="test-the-tool-with-the-technical-preview"></a>Het hulp programma testen met de Technical Preview  
 U kunt dit hulp programma gebruiken met Technical Preview versie 1606 of hoger. Deze achterwaartse ondersteuning wordt geboden zodat het hulp programma kan worden gebruikt met een groter aantal Technical Preview-update scenario's, zonder dat u hoeft te wachten tot de volgende Technical Preview-versie beschikbaar is.
 
-Voer het hulp programma uit op een update pakket voor een technische preview voordat deze update de vereiste controle heeft voltooid. De status van een voltooide controle op vereisten wordt aangeduid met een van de volgende statussen voor het pakket in **beheer** > **updates en onderhoud**:  
+Voer het hulp programma uit op een update pakket voor een technische preview voordat deze update de vereiste controle heeft voltooid. De status van een voltooide controle op vereisten wordt aangeduid met een van de volgende statussen voor het pakket in **beheer**  >  **updates en onderhoud**:  
 -   **Het controleren van vereisten is voltooid**
 -   **Het controleren van vereisten is voltooid met een waarschuwing**
 -   **Controleren van vereisten is mislukt**
@@ -121,12 +121,12 @@ Met deze versie kunt u nu asynchrone doorvoer replica's gebruiken in de SQL Serv
 
 - Deze release biedt geen ondersteuning voor failover voor het gebruik van de asynchrone doorvoer replica als uw site database.
   > [!CAUTION]  
-  > Omdat Configuration Manager de status van de asynchrone doorvoer replica niet valideert om te bevestigen dat deze actueel is, en [door het ontwerp van een dergelijke replica niet kan worden gesynchroniseerd](https://msdn.microsoft.com/library/ff877884(SQL.120).aspx(d=robot)#Availability%20Modes), kunt u het gebruik van een asynchrone doorvoer replica, omdat de site database de integriteit van uw site en gegevens mogelijk maakt.  
+  > Omdat Configuration Manager de status van de asynchrone doorvoer replica niet valideert om te bevestigen dat deze actueel is, en [door het ontwerp van een dergelijke replica niet kan worden gesynchroniseerd](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-2014#AvailabilityModes), kunt u het gebruik van een asynchrone doorvoer replica, omdat de site database de integriteit van uw site en gegevens mogelijk maakt.  
 
 - U kunt hetzelfde aantal en type replica's in een beschikbaarheids groep gebruiken, zoals wordt ondersteund door de versie van SQL Server die u gebruikt.   (Eerdere ondersteuning is beperkt tot twee synchroon door Voer-replica's.)
 
 ### <a name="configure-an-asynchronous-commit-replica"></a>Een asynchrone doorvoer replica configureren
-Als u een asynchrone replica wilt toevoegen aan een [beschikbaarheids groep die u gebruikt met Configuration Manager](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md), hoeft u de vereiste configuratie scripts voor het configureren van een synchrone replica niet uit te voeren. (Dit komt doordat er geen ondersteuning is voor het gebruik van deze asynchrone replica als de site database.) Raadpleeg [de SQL Server-documentatie](https://msdn.microsoft.com/library/hh213247(v=sql.120).aspx(d=robot)) voor informatie over het toevoegen van secundaire replica's aan beschikbaarheids groepen.
+Als u een asynchrone replica wilt toevoegen aan een [beschikbaarheids groep die u gebruikt met Configuration Manager](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md), hoeft u de vereiste configuratie scripts voor het configureren van een synchrone replica niet uit te voeren. (Dit komt doordat er geen ondersteuning is voor het gebruik van deze asynchrone replica als de site database.) Zie [een secundaire replica toevoegen aan een beschikbaarheids groep](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server?view=sql-server-2014)voor meer informatie.
 
 ### <a name="use-the-asynchronous-replica-to-recover-your-site"></a>De asynchrone replica gebruiken om uw site te herstellen
 Voordat u een asynchrone replica gebruikt om de site database te herstellen, moet u de actieve primaire site stoppen om te voor komen dat er extra schrijf bewerkingen naar de site database worden uitgevoerd. Nadat u de site hebt gestopt, kunt u een asynchrone replica gebruiken in plaats van een [hand matig herstelde data base](../servers/manage/recover-sites.md#use-a-site-database-that-has-been-manually-recovered)te gebruiken.
@@ -170,7 +170,7 @@ Lees het blog bericht voor meer informatie over de basis beginselen van Windows 
 Een beleid maken en bladeren door de beschik bare instellingen:
 
 1.  Kies in de Configuration Manager-console **activa en naleving**.
-2.  Kies **overzicht** > **Endpoint Protection**Endpoint Protection > **Windows Defender Application Guard**in de werk ruimte **activa en naleving** .
+2.  Kies **overzicht**Endpoint Protection **Assets and Compliance**  >  **Endpoint Protection**  >  **Windows Defender Application Guard**in de werk ruimte activa en naleving.
 3.  Klik op het tabblad **Start** in de groep **maken** op **Windows Defender Application Guard-beleid maken**.
 4.  Als u het blog bericht als referentie wilt gebruiken, kunt u door de beschik bare instellingen bladeren en deze configureren om de functie uit te proberen.
 5.  Wanneer u klaar bent, voltooit u de wizard en implementeert u het beleid op een of meer Windows 10-apparaten.
@@ -246,7 +246,7 @@ U hebt uw Configuration Manager-site op dit moment verbonden met Azure AD.
 Voordat u begint, moet u ervoor zorgen dat de bron bestanden van de client installatie lokaal worden opgeslagen op het apparaat waarop u de client wilt installeren.
 Gebruik vervolgens de instructies in [Hoe clients implementeren op Windows-computers](../clients/deploy/deploy-clients-to-windows-computers.md#BKMK_Manual) met behulp van de volgende opdracht regel voor de installatie (Vervang de waarden in het voor beeld met uw eigen waarden):
 
-**ccmsetup. exe/NoCrlCheck/Source: C:\CLIENT CCMHOSTNAME = SCCMPROXYCONTOSO. CLOUDAPP. NET/CCM_Proxy_ServerAuth/72457598037527932 SMSSiteCode = HEC AADTENANTID = 780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME = contoso AADCLIENTAPPID =\<GUID> AADRESOURCEURI =<https://contososerver>**
+**ccmsetup. exe/NoCrlCheck/Source: C:\CLIENT CCMHOSTNAME = SCCMPROXYCONTOSO. CLOUDAPP. NET/CCM_Proxy_ServerAuth/72457598037527932 SMSSiteCode = HEC AADTENANTID = 780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME = contoso AADCLIENTAPPID = \< GUID > AADRESOURCEURI =<https://contososerver>**
 
 - **/NoCrlCheck**: als uw beheer punt of Cloud beheer gateway een niet-openbaar server certificaat gebruikt, kan de client de locatie van de CRL mogelijk niet bereiken.
 - **/Source**: lokale map: locatie van de client installatie bestanden.
@@ -276,7 +276,7 @@ Vereisten voor het configureren van een verbinding met OMS zijn niet gewijzigd t
 
 ### <a name="use-the-azure-services-wizard-to-configure-the-connection-to-oms"></a>De wizard Azure-Services gebruiken om de verbinding met OMS te configureren
 
-1.  Ga in de-console naar **beheer** > **overzicht** > **Cloud Services** > **Azure-Services**en kies vervolgens **Azure-Services configureren** op het tabblad **Start** van het lint om de **wizard Azure-Services**te starten.
+1.  Ga in de-console naar **beheer**  >  **overzicht**  >  **Cloud Services**  >  **Azure-Services**en kies vervolgens **Azure-Services configureren** op het tabblad **Start** van het lint om de **wizard Azure-Services**te starten.
 
 2.  Selecteer op de pagina **Azure-Services** de Operations Management Suite-Cloud service. Geef een beschrijvende naam op voor de naam van de **Azure-service** en een optionele beschrijving en klik vervolgens op **volgende**.
 

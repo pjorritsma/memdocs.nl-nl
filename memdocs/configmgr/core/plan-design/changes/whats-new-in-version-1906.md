@@ -10,12 +10,12 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c7ad4e96d9afba7e52d2ff2e5dd3f4f6be0b9a98
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 2db1a719aaf1cb79973f1af8e2de3c1bbb91d605
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078699"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879092"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 1906 van Configuration Manager current branch
 
@@ -186,7 +186,7 @@ Zie [dash board client gegevens bronnen](../../servers/deploy/configure/monitor-
 ### <a name="use-your-distribution-point-as-an-in-network-cache-server-for-delivery-optimization"></a>Gebruik uw distributie punt als een cache server in het netwerk voor de optimalisatie van de levering
 
 <!--3555764-->
-U kunt nu een DOINC-server (Delivery Optimization) installeren op uw distributie punten. Door deze inhoud on-premises in de cache te plaatsen, kunnen uw clients profiteren van de functie voor Delivery Optimization, maar kunt u WAN-koppelingen helpen beveiligen.
+U kunt nu Delivery Optimization in-Network cache server installeren op uw distributie punten. Door deze inhoud on-premises in de cache te plaatsen, kunnen uw clients profiteren van de functie voor Delivery Optimization, maar kunt u WAN-koppelingen helpen beveiligen.
 
 Deze cache server fungeert als transparante cache op aanvraag voor inhoud die wordt gedownload door Delivery Optimization. Gebruik client instellingen om te controleren of deze server alleen wordt aangeboden aan de leden van de lokale Configuration Manager grens groep.
 
@@ -306,7 +306,7 @@ Deze release bevat de volgende verbeteringen voor het goed keuren van apps:
 
 - Er is een nieuwe WMI-methode, **DeleteInstance** voor het verwijderen van een aanvraag voor het goed keuren van apps. Met deze actie wordt de app op het apparaat niet verwijderd. Als dit nog niet is gebeurd, kan de gebruiker de app niet installeren vanuit software Center.
 
-- Aanroepen van de **CreateApprovedRequest** -API om een vooraf goedgekeurde aanvraag voor een app op een apparaat te maken. Stel de para meter voor automatische **installatie** in op om te voor komen dat de app `FALSE`automatisch wordt geïnstalleerd op de client. De gebruiker ziet de app in Software Center, maar wordt niet automatisch geïnstalleerd.
+- Aanroepen van de **CreateApprovedRequest** -API om een vooraf goedgekeurde aanvraag voor een app op een apparaat te maken. Stel de para meter voor automatische **installatie** in op om te voor komen dat de app automatisch wordt geïnstalleerd op de client `FALSE` . De gebruiker ziet de app in Software Center, maar wordt niet automatisch geïnstalleerd.
 
 Zie [toepassingen goed keuren](../../../apps/deploy-use/app-approval.md)voor meer informatie.
 
@@ -432,7 +432,7 @@ Gebruik de volgende URL-indeling om software Center te openen op een bepaald tab
 
 `softwarecenter:page=CustomTab1`
 
-De teken `CustomTab1` reeks is het eerste aangepaste tabblad in de juiste volg orde.
+De teken reeks `CustomTab1` is het eerste aangepaste tabblad in de juiste volg orde.
 
 Typ bijvoorbeeld deze URL in het venster Windows **uitvoeren** .
 
@@ -501,9 +501,9 @@ U kunt nu inzoomen op nalevings statistieken om te zien voor welke apparaten een
 
 De **weer gave** die is vereist, is beschikbaar op de volgende locaties:
 
-   - **Software Library** > **software werkt** > **alle software-updates** bij
-   - **Software bibliotheek** > **Windows 10 onderhoud** > **alle Windows 10-updates**
-   - **Software bibliotheek** > **Office 365 client management** > **Office 365 updates**
+   - **Software bibliotheek**  >  **Software-updates**  >  **Alle software-updates**
+   - **Software bibliotheek**  >  Onderhoud van Windows **10**  >  **Alle Windows 10-updates**
+   - **Software bibliotheek**  >  **Office 365-client beheer**  >  **Office 365-updates**
 
 Zie [software-updates bewaken](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates), [Windows als een service beheren](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates)en [Office 365 ProPlus-updates beheren](../../../sum/deploy-use/manage-office-365-proplus-updates.md#drill-through-required-office-365-updates)voor meer informatie.
 

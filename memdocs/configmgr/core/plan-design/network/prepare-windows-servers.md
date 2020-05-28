@@ -10,12 +10,12 @@ ms.assetid: 2aca914f-641e-4bc8-98d4-bbf0a2a5276f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8889c0ee306eaaf682563b2e8e72d5482054d1c7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7e4e84b55c929dd878cb0720b3f61dfceedcf449
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81710788"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904100"
 ---
 # <a name="prepare-windows-servers-to-support-configuration-manager"></a>Windows-servers voorbereiden voor de ondersteuning van Configuration Manager
 
@@ -67,7 +67,7 @@ De volgende Windows-rollen zijn vereist ter ondersteuning van specifieke functio
           - ASP.NET  
           - ISAPI-uitbreidingen  
           - ISAPI-filters  
-    - Beheerhulpprogramma's  
+    - Beheerprogramma's  
           - Compatibiliteit met IIS 6-beheer  
           - Compatibiliteit met IIS 6-metabase  
           - Compatibiliteit met IIS 6 Windows Management Instrumentation (WMI)  
@@ -98,7 +98,7 @@ De volgende Windows-rollen zijn vereist ter ondersteuning van specifieke functio
 ##  <a name="iis-request-filtering-for-distribution-points"></a><a name="BKMK_IISFiltering"></a>IIS-aanvraag filtering voor distributie punten  
 IIS gebruikt standaard aanvraagfiltering om de toegang tot verschillende bestandsnaamextensies en maplocaties voor HTTP- of HTTPS-communicatie te blokkeren. Op een distributie punt wordt hiermee voor komen dat clients pakketten downloaden die geblokkeerde extensies of maplocaties hebben.  
 
-Wanneer de bron bestanden van uw pakket extensies hebben die in IIS worden geblokkeerd door de configuratie van de aanvraag filtering, moet u aanvraag filtering instellen om ze toe te staan. Dit doet u door [de functie voor het filteren van aanvragen te bewerken](https://technet.microsoft.com/library/hh831621.aspx) in IIS-beheer op de distributiepunt computers.  
+Wanneer de bron bestanden van uw pakket extensies hebben die in IIS worden geblokkeerd door de configuratie van de aanvraag filtering, moet u aanvraag filtering instellen om ze toe te staan. Dit doet u door [de functie voor het filteren van aanvragen te bewerken](https://docs.microsoft.com/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)) in IIS-beheer op de distributiepunt computers.  
 
 Daarnaast worden de volgende bestandsnaam extensies gebruikt door Configuration Manager voor pakketten en toepassingen. Zorg ervoor dat de configuraties voor het filteren van aanvragen deze bestands extensies niet blok keren:  
 
@@ -136,4 +136,4 @@ Bron bestanden voor een software-implementatie kunnen bijvoorbeeld een map met d
 - HEAD
 - PROPFIND
 
-Zie [aanvraag filtering configureren in IIS](https://technet.microsoft.com/library/hh831621.aspx#Verbs)voor meer informatie. 
+Zie [aanvraag filtering configureren in IIS](https://docs.microsoft.com/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)#http-verbs)voor meer informatie. 

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d3ae44892cd46a438113fb54dad0e290b8fb148e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 556ddb10f0ba25fc1c3cf4b215d5058d3221c7fe
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723311"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906452"
 ---
 # <a name="checklist-for-installing-update-1702-for-configuration-manager"></a>Controle lijst voor het installeren van update 1702 voor Configuration Manager
 
@@ -27,7 +27,7 @@ Wanneer u de huidige vertakking van Configuration Manager gebruikt, kunt u de up
 > [!TIP]
 > Versie 1702 is ook beschikbaar als [basislijn media](updates.md#bkmk_Baselines) die u kunt gebruiken om de eerste site van een nieuwe hiërarchie te installeren.
 
-Als u de update voor versie 1702 wilt downloaden, moet u een site systeemrol voor het service verbindings punt gebruiken op de site op het hoogste niveau van uw hiërarchie. Dit kan in de online-of offline modus zijn. Nadat uw hiërarchie het update pakket van micro soft heeft gedownload, kunt u het vinden in de **console &gt; onder &gt; beheer &gt; overzicht Cloud Services updates en onderhoud**.
+Als u de update voor versie 1702 wilt downloaden, moet u een site systeemrol voor het service verbindings punt gebruiken op de site op het hoogste niveau van uw hiërarchie. Dit kan in de online-of offline modus zijn. Nadat uw hiërarchie het update pakket van micro soft heeft gedownload, kunt u het vinden in de console onder **beheer &gt; overzicht &gt; Cloud Services &gt; updates en onderhoud**.
 
 -   Wanneer de update wordt weer gegeven als **beschikbaar**, is de update gereed voor installatie. Voordat u versie 1702 installeert, raadpleegt u de volgende informatie [over het installeren van update 1702](#about-installing-update-1702) en de [controle lijst](#checklist) voor configuraties die moeten worden gemaakt voordat de update wordt gestart.
 
@@ -35,7 +35,7 @@ Als u de update voor versie 1702 wilt downloaden, moet u een site systeemrol voo
 
     -   Als in het dmpdownloader. log wordt aangegeven dat het dmpdownloader-proces in de slaap stand staat en wacht op een interval voordat op updates wordt gecontroleerd, kunt u de **SMS_Executive** -service opnieuw starten op de site server om het downloaden van de herdistributies bestanden van de update opnieuw te starten.
 
-    -   Een ander algemeen Download probleem doet zich voor wanneer de instellingen van `silverlight.dlservice.microsoft.com` de `download.microsoft.com`proxy server downloaden van en niet verhinderen.
+    -   Een ander algemeen Download probleem doet zich voor wanneer de instellingen van de proxy server downloaden van en niet verhinderen `silverlight.dlservice.microsoft.com` `download.microsoft.com` .
 
 Zie [updates en onderhoud in de console](updates.md#bkmk_inconsole)voor meer informatie over het installeren van updates.
 
@@ -89,7 +89,7 @@ Zie voor meer informatie [Site and site system prerequisites](../../plan-design/
 
 **Controleer de versie van de Windows Assessment and Deployment Kit (ADk) voor Windows 10** De Windows 10 ADK moet versie 1607 of hoger zijn. Als u de ADK moet bijwerken, doet u dit voordat u Configuration Manager gaat bijwerken. Dit zorgt ervoor dat de standaard opstart installatie kopieën automatisch worden bijgewerkt naar de meest recente versie van Windows PE. (Aangepaste opstart installatie kopieën moeten hand matig worden bijgewerkt.)
 
-Als u de site bijwerkt voordat u de ADK bijwerkt, raadpleegt u de blog [Configuration Manager en Windows ADk voor Windows 10, versie 1607](https://blogs.technet.microsoft.com/enterprisemobility/2016/09/09/configuration-manager-and-the-windows-adk-for-windows-10-version-1607/) voor een script dat kan worden gebruikt om de opstart installatie kopieën opnieuw te genereren.
+Als u de site bijwerkt voordat u de ADK bijwerkt, raadpleegt u de blog [Configuration Manager en Windows ADk voor Windows 10, versie 1607](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-the-windows-adk-for-windows-10-version/ba-p/274047) voor een script dat kan worden gebruikt om de opstart installatie kopieën opnieuw te genereren.
 
 **De site- en hiërarchiestatus bekijken en controleren of er geen onopgeloste problemen zijn:** voordat u een site bijwerkt, dient u alle operationele problemen voor de siteserver, de sitedatabaseserver, en sitesysteemrollen die op externe computers zijn geïnstalleerd, op te lossen. De update van een site kan mislukken door bestaande operationele problemen.
 
@@ -99,7 +99,7 @@ Zie [waarschuwingen en het status systeem voor Configuration Manager gebruiken](
 Zorg ervoor dat bestands-en database replicatie tussen sites operationeel en actueel is. Vertragingen of achterstanden in een van beide kunnen leiden tot een soepele, geslaagde update.
 Voor databasereplicatie kunt u Replication Link Analyzer gebruiken om u te helpen bij het oplossen van problemen voordat u de update start.
 
-Zie [Replication link Analyzer](monitor-replication.md#BKMK_RLA) in het onderwerp  [database replicatie bewaken](monitor-replication.md)voor meer informatie.
+Zie [Replication link Analyzer](monitor-replication.md#BKMK_RLA)   in het onderwerp [database replicatie bewaken](monitor-replication.md)voor meer informatie   .
 
 **Installeer alle toepasselijke kritieke updates voor besturings systemen op computers die de site, de site database server en externe site systeem rollen hosten:** Installeer alle essentiële updates voor elk toepasselijk site systeem voordat u een update voor Configuration Manager installeert. Als een update die u installeert, vereist dat de computer opnieuw wordt opgestart, start de desbetreffende computers dan opnieuw op voordat u de upgrade start.
 
@@ -184,7 +184,7 @@ Zie [updates voor Configuration Manager](updates.md)voor meer informatie.
 
 ## <a name="post-update-checklist"></a>Controle lijst voor bijwerken berichten
 Controleer de volgende acties om uit te voeren nadat de installatie van de update is voltooid.
-1. Zorg ervoor dat de replicatie van site-naar-site actief is. In de-console bekijkt u**site hiërarchie** **bewaking** > en **bewaken** > van**database replicatie** voor aanwijzingen van problemen of bevestiging dat replicatie koppelingen actief zijn.
+1. Zorg ervoor dat de replicatie van site-naar-site actief is. In de-console bekijkt **Monitoring**u  >  **site hiërarchie**bewaking en **bewaken**  >  van**database replicatie** voor aanwijzingen van problemen of bevestiging dat replicatie koppelingen actief zijn.
 2. Zorg ervoor dat de site server en de site systeemrol zijn bijgewerkt naar versie 1702. In de-console kunt u de optionele kolom **versie** toevoegen aan de weer gave van een aantal knoop punten, inclusief **sites** en **distributie punten**.
 
    Als dat nodig is, wordt de site systeemrol automatisch opnieuw geïnstalleerd om bij te werken naar de nieuwe versie. Overweeg om externe site systemen die niet zijn bijgewerkt, opnieuw te starten.

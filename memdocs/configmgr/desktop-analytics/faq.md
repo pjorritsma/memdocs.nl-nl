@@ -10,12 +10,13 @@ ms.assetid: e0db3311-2303-4013-a906-76b408172d3c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 29f063da47dc26789493b2a83ad8e0cfa6885270
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.reviewer: acabello
+ms.openlocfilehash: d1f18c135f200b2a9e40b970871c73a0d98893a2
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693295"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429822"
 ---
 # <a name="desktop-analytics-faq"></a>Veelgestelde vragen over Desktop Analytics
 
@@ -51,6 +52,10 @@ Ja, gebruik het volgende proces:
 
 - Wijzig op het tabblad **verbinding met bureau blad Analytics** de **doel verzameling** of beheer de extra verzamelingen.
 
+<!-- 7130169 -->
+> [!Note]
+> Voeg niet meer dan 20 verzamelingen toe aan de lijst met extra verzamelingen. Wees voorzichtig met het totale aantal apparaten in elke verzameling. Neem altijd uw [wereld wijde pilot op en sluit verzamelingen](deploy-pilot.md#bkmk_GlobalPilot)uit.  
+
 > [!IMPORTANT]  
 > Configuration Manager maakt gebruik van een instellingen beleid voor het configureren van apparaten in de doel verzameling. Dit beleid bevat de instellingen voor diagnostische gegevens om apparaten in staat te stellen gegevens naar micro soft te verzenden. Als u de doel verzameling wijzigt, wordt het instellingen beleid op apparaten die niet meer in de doel verzameling zijn, niet meer ongedaan gemaakt. Als u niet wilt dat uw apparaten diagnostische gegevens blijven verzenden, [configureert u de apparaten opnieuw](account-close.md#reconfigure-clients).
 
@@ -64,7 +69,7 @@ Zie [een bestaande computer vernieuwen met een nieuwe versie van Windows](../osd
 
 ### <a name="can-i-change-from-bios-to-uefi-when-upgrading-windows"></a>Kan ik overschakelen van BIOS naar UEFI bij het upgraden van Windows?
 
-Ja. Zie [conversie van BIOS naar UEFI tijdens een in-place upgrade](../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade)voor meer informatie.
+Ja. Zie [conversie van BIOS naar UEFI tijdens een in-place upgrade](../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu)voor meer informatie.
 
 ### <a name="can-i-use-desktop-analytics-with-windows-10-ltsc"></a>Kan ik Desktop Analytics gebruiken met Windows 10 LTSC?
 
@@ -144,7 +149,7 @@ Ja, de volgende Windows Analytics-functies zijn buiten gebruik gesteld of nog ni
 - Windows Information Protection
 - Ondersteuning voor Windows Server
 
-## <a name="other"></a>Overige
+## <a name="other"></a>Anders
 
 ### <a name="can-i-use-desktop-analytics-for-my-office-365-proplus-upgrades"></a><a name="bkmk_office"></a>Kan ik Desktop Analytics voor mijn Office 365 ProPlus-upgrades gebruiken?
 

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: bd9475a72ef8d2b25f026ab76e124c8217ed7ee9
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: eacf64245f4cfc779dc92be73e8d7e387b34f909
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073939"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427943"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Wat&#39;s nieuw in versie 1702 van Configuration Manager
 
@@ -28,8 +28,8 @@ Update 1702 voor Configuration Manager current branch is beschikbaar als een upd
 > Als u een nieuwe site wilt installeren, moet u een basislijn versie van Configuration Manager gebruiken.  
 >
 > Meer informatie over:    
-> - [Nieuwe sites installeren](https://technet.microsoft.com/library/mt590197.aspx)  
-> - [Updates installeren op sites](https://technet.microsoft.com/library/mt607046.aspx)  
+> - [Nieuwe sites installeren](../../servers/deploy/install/installing-sites.md)  
+> - [Updates installeren op sites](../../servers/manage/updates.md)  
 > - [Basis lijn-en update versies](../../servers/manage/updates.md#bkmk_Baselines)
 
 De volgende secties bevatten informatie over wijzigingen en nieuwe mogelijkheden die zijn geïntroduceerd in versie 1702 van Configuration Manager.  
@@ -71,7 +71,7 @@ U kunt de volgende **feedback** optie vinden:
 - Wanneer u met de rechter muisknop op een object in de-console klikt.   
    ![Recht: Klik op optie](./media/feedback-option.png)   
 
-  Als u **feedback** kiest, wordt uw browser geopend op de [website van Configuration Manager UserVoice-feedback](https://go.microsoft.com/fwlink/?linkid=617029).
+  Als u **feedback** kiest, wordt uw browser geopend op de [website van Configuration Manager UserVoice-feedback](https://configurationmanager.uservoice.com/forums/300492-ideas).
 
 
 ###  <a name="changes-for-updates-and-servicing"></a>Wijzigingen voor updates en onderhoud
@@ -135,7 +135,7 @@ Vanaf versie 1702 gebruiken de-clients grens groepen om een nieuw software-updat
 Er zijn veel nieuwe instellingen voor iOS-apparaten toegevoegd zodat deze overeenkomen met die van Microsoft Intune.
 
 
-## <a name="application-management"></a>Beheer van toepassingen
+## <a name="application-management"></a>Toepassingsbeheer
 
 ### <a name="improved-support-for-windows-store-for-business-apps"></a>Verbeterde ondersteuning voor Windows Store voor bedrijven-apps
 
@@ -191,7 +191,7 @@ U kunt nu teruggaan naar een vorige pagina wanneer u een taken reeks uitvoert en
 Vanaf versie 1702, voor beschik bare implementaties van taken reeksen, kunt u ervoor kiezen om inhoud in de cache te gebruiken. Inhoud vooraf-cache biedt u de mogelijkheid om de client toe te staan de toepasselijke inhoud te downloaden zodra deze de implementatie ontvangt. Als de gebruiker klikt op **installeren** in Software Center, is de inhoud daarom gereed en wordt de installatie snel gestart, omdat de inhoud zich op de lokale harde schijf bevindt. Zie [inhoud vooraf in cache configureren](../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md#configure-pre-cache-content)voor meer informatie.
 
 ### <a name="convert-from-bios-to-uefi-during-an-in-place-upgrade"></a>Conversie van BIOS naar UEFI tijdens een in-place upgrade
-In de update voor Windows 10 Crea tors wordt een eenvoudig conversie programma geïntroduceerd waarmee het proces voor het opnieuw partitioneren van de harde schijf voor UEFI-hardware wordt geautomatiseerd en het conversie programma wordt geïntegreerd in het Windows 7-in-place upgrade proces. Wanneer u dit hulp programma combineert met de taken reeks voor de upgrade van het besturings systeem en het OEM-hulp programma dat de firmware converteert van BIOS naar UEFI, kunt u uw computers converteren van BIOS naar UEFI tijdens een in-place upgrade naar de update voor Windows 10 Crea tors. Zie [taken reeks stappen voor het beheren van de conversie van BIOS naar UEFI](../../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade)voor meer informatie.
+In de update voor Windows 10 Crea tors wordt een eenvoudig conversie programma geïntroduceerd waarmee het proces voor het opnieuw partitioneren van de harde schijf voor UEFI-hardware wordt geautomatiseerd en het conversie programma wordt geïntegreerd in het Windows 7-in-place upgrade proces. Wanneer u dit hulp programma combineert met de taken reeks voor de upgrade van het besturings systeem en het OEM-hulp programma dat de firmware converteert van BIOS naar UEFI, kunt u uw computers converteren van BIOS naar UEFI tijdens een in-place upgrade naar de update voor Windows 10 Crea tors. Zie [taken reeks stappen voor het beheren van de conversie van BIOS naar UEFI](../../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu)voor meer informatie.
 
 ### <a name="improvements-to-the-install-applications-task-sequence-step"></a>Verbeteringen in de taken reeks stap toepassingen installeren
 Deze versie heeft de volgende verbeteringen geïntroduceerd:
@@ -248,7 +248,7 @@ Vanaf versie 1702 voor hybride Mobile Device Management (MDM) hoeft u niet lange
 Deze wijziging is van invloed op de wizards voor het maken van de volgende items:
 
 - Configuratie-items
-- Compliance beleidsregels
+- Nalevingsbeleid
 - Certificaatprofielen
 - E-mailprofielen
 - VPN-profielen

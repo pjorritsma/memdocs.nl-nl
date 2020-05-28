@@ -10,12 +10,12 @@ ms.assetid: f2df88b4-c348-4dcf-854a-54fd6eedf485
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 590f3adec168fe6d7f4718505bd6f7d6b9f7c25f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: fe570eeedc2c050bdaf27903d30ddffff63109d9
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712531"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879152"
 ---
 # <a name="creating-custom-report-models-for-configuration-manager-in-sql-server-reporting-services"></a>Aangepaste rapport modellen maken voor Configuration Manager in SQL Server Reporting Services
 
@@ -68,7 +68,7 @@ Voorbeeld rapport modellen zijn opgenomen in Configuration Manager, maar u kunt 
 
 4.  Specificeer in het dialoogvenster **Verbindingsbeheer** de volgende verbindingseigenschappen voor de gegevensbron:  
 
-    -   **Server naam**: Typ de naam van de Configuration Manager-site database server of Selecteer deze in de lijst. Als u werkt met een benoemd exemplaar in plaats van het standaard exemplaar, typt &lt;u de naam van het *database server*>\\&lt;*exemplaar*>.  
+    -   **Server naam**: Typ de naam van de Configuration Manager-site database server of Selecteer deze in de lijst. Als u werkt met een benoemd exemplaar in plaats van het standaard exemplaar, typt u de naam van het &lt; *database server* > \\ &lt; *exemplaar*>.  
 
     -   Selecteer **Windows-verificatie gebruiken**.  
 
@@ -100,7 +100,7 @@ Voorbeeld rapport modellen zijn opgenomen in Configuration Manager, maar u kunt 
     > [!TIP]  
     >  Klik voor hulp bij het vinden van weergaven in de lijst **Beschikbare objecten** op de kop **Naam** bovenin de lijst om de objecten op alfabetische volgorde te sorteren.  
 
-5.  Nadat u de weer gave hebt **>** geselecteerd, klikt u op om het object over te zetten naar de lijst met **opgenomen objecten** .  
+5.  Nadat u de weer gave hebt geselecteerd, klikt **>** u op om het object over te zetten naar de lijst met **opgenomen objecten** .  
 
 6.  Als de pagina **Overeenkomst met naam** wordt weergeven, accepteert u de standaardselecties en klikt u op **Volgende**.  
 
@@ -136,17 +136,17 @@ Voorbeeld rapport modellen zijn opgenomen in Configuration Manager, maar u kunt 
 
 ###  <a name="to-deploy-the-custom-report-model-to-configuration-manager"></a><a name="BKMK_DeployReportModel"></a>Het aangepaste rapport model implementeren naar Configuration Manager  
 
-1. Vind de map waarin u het rapportmodelproject hebt gemaakt. Bijvoorbeeld:%*userprofile*% \ Documents\Visual Studio 2008 \\\*&lt;project name\>* van projecten.  
+1. Vind de map waarin u het rapportmodelproject hebt gemaakt. Bijvoorbeeld:%*userprofile*% \ Documents\Visual Studio 2008 \ \\ * &lt; project name van projecten \> .*  
 
 2. Kopieer de volgende bestanden van de map rapportmodelproject naar een tijdelijke map op uw computer:  
 
-   -   *Model naam\> &lt;* **.dsv**  
+   -   * &lt; Model naam \> * **. DSV**  
 
-   -   *Model naam\> &lt;* **.smdl**  
+   -   * &lt; Model naam \> * **. smdl**  
 
 3. Open de voorgaande bestanden met een tekstbewerkingstoepassing, zoals Kladblok.  
 
-4. Zoek in de bestands _ &lt;model\>naam_**. DSV**de eerste regel van het bestand, die als volgt wordt gelezen:  
+4. Zoek in de bestands _ &lt; model \> naam_**. DSV**de eerste regel van het bestand, die als volgt wordt gelezen:  
 
     `<DataSourceView xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`
 
@@ -156,9 +156,9 @@ Voorbeeld rapport modellen zijn opgenomen in Configuration Manager, maar u kunt 
 
 5. Kopieer de gehele inhoud van het bestand naar het Windows-klembord.  
 
-6. Sluit de _ &lt;\>naam_van het bestands model **. DSV**.  
+6. Sluit de _ &lt; naam \> _van het bestands model **. DSV**.  
 
-7. Zoek in de bestands _ &lt;model\>naam_**. smdl**de laatste drie regels van het bestand, die er als volgt uitzien:  
+7. Zoek in de bestands _ &lt; model \> naam_**. smdl**de laatste drie regels van het bestand, die er als volgt uitzien:  
 
     `</Entity>`  
 
@@ -166,11 +166,11 @@ Voorbeeld rapport modellen zijn opgenomen in Configuration Manager, maar u kunt 
 
     `</SemanticModel>`  
 
-8. Plak de inhoud van de bestands _ &lt;model naam\>_**. DSV** direct vóór de laatste regel van het bestand (**&lt;semanticmodel bevindt\>**).  
+8. Plak de inhoud van de bestands _ &lt; model naam \> _**. DSV** direct vóór de laatste regel van het bestand (** &lt; semanticmodel bevindt \> **).  
 
-9. Sla de _ &lt;\>naam_van het bestands model op en sluit deze **. smdl**.  
+9. Sla de _ &lt; naam \> _van het bestands model op en sluit deze **. smdl**.  
 
-10. Kopieer de _ &lt;naam\>_ van het bestands model **. smdl** naar de map *% Program Files%* \Microsoft Configuration Manager \AdminConsole\XmlStorage\Other op de Configuration Manager site server.  
+10. Kopieer de _ &lt; naam \> _van het bestands model **. smdl** naar de map *% Program Files%* \Microsoft Configuration Manager \AdminConsole\XmlStorage\Other op de Configuration Manager site server.  
 
     > [!IMPORTANT]  
     >  Nadat u het rapport model bestand naar de Configuration Manager-site server hebt gekopieerd, moet u de Configuration Manager-console sluiten en opnieuw starten voordat u het rapport model kunt gebruiken in de **wizard Rapport maken**.  
@@ -213,7 +213,7 @@ Voorbeeld rapport modellen zijn opgenomen in Configuration Manager, maar u kunt 
 
 4.  Specificeer in het dialoogvenster **Verbindingsbeheer** de volgende verbindingseigenschappen voor de gegevensbron:  
 
-    -   **Server naam**: Typ de naam van de Configuration Manager-site database server of Selecteer deze in de lijst. Als u werkt met een benoemd exemplaar in plaats van het standaard exemplaar, typt &lt;u de naam van het *database server*>\\&lt;*exemplaar*>.  
+    -   **Server naam**: Typ de naam van de Configuration Manager-site database server of Selecteer deze in de lijst. Als u werkt met een benoemd exemplaar in plaats van het standaard exemplaar, typt u de naam van het &lt; *database server* > \\ &lt; *exemplaar*>.  
 
     -   Selecteer **Windows-verificatie gebruiken**.  
 
@@ -246,7 +246,7 @@ Voorbeeld rapport modellen zijn opgenomen in Configuration Manager, maar u kunt 
 
    - **v_GS_OPERATING_SYSTEM (dbo)**  
 
-     Nadat u elke weer gave hebt **>** geselecteerd, klikt u op om het object over te zetten naar de lijst met **opgenomen objecten** .  
+     Nadat u elke weer gave hebt geselecteerd, klikt **>** u op om het object over te zetten naar de lijst met **opgenomen objecten** .  
 
    > [!TIP]  
    >  Klik voor hulp bij het vinden van weergaven in de lijst **Beschikbare objecten** op de kop **Naam** bovenin de lijst om de objecten op alfabetische volgorde te sorteren.  
@@ -379,17 +379,17 @@ Voorbeeld rapport modellen zijn opgenomen in Configuration Manager, maar u kunt 
 
 #### <a name="to-deploy-the-custom-report-model-to-configuration-manager"></a>To deploy the custom report model to Configuration Manager  
 
-1. Vind de map waarin u het rapportmodelproject hebt gemaakt. Bijvoorbeeld:%*userprofile*% \ Documents\Visual Studio 2008 \\\*&lt;project name\>* van projecten.  
+1. Vind de map waarin u het rapportmodelproject hebt gemaakt. Bijvoorbeeld:%*userprofile*% \ Documents\Visual Studio 2008 \ \\ * &lt; project name van projecten \> .*  
 
 2. Kopieer de volgende bestanden van de map rapportmodelproject naar een tijdelijke map op uw computer:  
 
-   -   *Model naam\> &lt;* **.dsv**  
+   -   * &lt; Model naam \> * **. DSV**  
 
-   -   *Model naam\> &lt;* **.smdl**  
+   -   * &lt; Model naam \> * **. smdl**  
 
 3. Open de voorgaande bestanden met een tekstbewerkingstoepassing, zoals Kladblok.  
 
-4. Zoek in de bestands _ &lt;model\>naam_**. DSV**de eerste regel van het bestand, die als volgt wordt gelezen:  
+4. Zoek in de bestands _ &lt; model \> naam_**. DSV**de eerste regel van het bestand, die als volgt wordt gelezen:  
 
     `<DataSourceView xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`
 
@@ -399,9 +399,9 @@ Voorbeeld rapport modellen zijn opgenomen in Configuration Manager, maar u kunt 
 
 5. Kopieer de gehele inhoud van het bestand naar het Windows-klembord.  
 
-6. Sluit de _ &lt;\>naam_van het bestands model **. DSV**.  
+6. Sluit de _ &lt; naam \> _van het bestands model **. DSV**.  
 
-7. Zoek in de bestands _ &lt;model\>naam_**. smdl**de laatste drie regels van het bestand, die er als volgt uitzien:  
+7. Zoek in de bestands _ &lt; model \> naam_**. smdl**de laatste drie regels van het bestand, die er als volgt uitzien:  
 
     `</Entity>`  
 
@@ -409,11 +409,11 @@ Voorbeeld rapport modellen zijn opgenomen in Configuration Manager, maar u kunt 
 
     `</SemanticModel>`  
 
-8. Plak de inhoud van de bestands _ &lt;model naam\>_**. DSV** direct vóór de laatste regel van het bestand (**&lt;semanticmodel bevindt\>**).  
+8. Plak de inhoud van de bestands _ &lt; model naam \> _**. DSV** direct vóór de laatste regel van het bestand (** &lt; semanticmodel bevindt \> **).  
 
-9. Sla de _ &lt;\>naam_van het bestands model op en sluit deze **. smdl**.  
+9. Sla de _ &lt; naam \> _van het bestands model op en sluit deze **. smdl**.  
 
-10. Kopieer de _ &lt;naam\>_ van het bestands model **. smdl** naar de map *% Program Files%* \Microsoft Configuration Manager\AdminConsole\XmlStorage\Other op de site server van Configuration Manager.  
+10. Kopieer de _ &lt; naam \> _van het bestands model **. smdl** naar de map *% Program Files%* \Microsoft endpoint Manager\AdminConsole\XmlStorage\Other op de site server van Configuration Manager.  
 
     > [!IMPORTANT]  
     >  Nadat u het rapport model bestand naar de Configuration Manager-site server hebt gekopieerd, moet u de Configuration Manager-console sluiten en opnieuw starten voordat u het rapport model kunt gebruiken in de **wizard Rapport maken**.  

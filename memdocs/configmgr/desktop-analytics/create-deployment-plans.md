@@ -10,12 +10,13 @@ ms.assetid: 8e0e8496-136b-461f-8239-cc19c6b78c3b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8c42576f35d285fc7285466c4208d7ccaf370daa
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: ac9b5ddd85904c90709a9450d6d2a9ffd379ddb9
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723703"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268756"
 ---
 # <a name="how-to-create-deployment-plans-in-desktop-analytics"></a>Implementatie plannen maken in Desktop Analytics
 
@@ -94,7 +95,7 @@ Configureer of uw apparaten Stuur Programma's van Windows Update ophalen. Deze w
 
 ### <a name="windows-applications"></a>Windows-toepassingen
 
-De apps die door Desktop *Analytics worden weer gegeven, zijn* gebaseerd op de drempel waarde voor aantal kleine installaties. Stel deze drempel in voor de gereedheids regels voor het implementatie plan. Deze drempel waarde is standaard **2,0%**. U kunt de waarde wijzigen van `0.0` in `10.0`.
+De apps die door Desktop *Analytics worden weer gegeven, zijn* gebaseerd op de drempel waarde voor aantal kleine installaties. Stel deze drempel in voor de gereedheids regels voor het implementatie plan. Deze drempel waarde is standaard **2,0%**. U kunt de waarde wijzigen van `0.0` in `10.0` .
 
 
 ## <a name="next-steps"></a>Volgende stappen

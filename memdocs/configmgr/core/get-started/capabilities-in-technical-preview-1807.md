@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 398f16b8f75d894030d76406807f74bdaa4be9d5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ace27e9035af6696e455382a32365be0e3824d65
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714785"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905204"
 ---
 # <a name="capabilities-in-configuration-manager-technical-preview-version-1807"></a>Mogelijkheden in Configuration Manager Technical Preview-versie 1807 
 
@@ -82,7 +82,7 @@ De werk ruimte **Community** bevat ook de volgende knoop punten:
 
 - Gebruik de Configuration Manager-console op het besturings systeem van de client.  
 
-    - Als alternatief, maar niet aanbevolen: Schakel op een server besturingssysteem [Internet Explorer uit: verbeterde beveiliging](https://go.microsoft.com/fwlink/?LinkId=253461).  
+    - Als alternatief, maar niet aanbevolen: Schakel op een server besturingssysteem [Internet Explorer uit: verbeterde beveiliging](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10)).
 
 - De computer met de-console vereist Internet toegang en connectiviteit met de volgende sites:  
     - `https://aka.ms`  
@@ -112,7 +112,7 @@ Probeer de taken uit te voeren. Stuur vervolgens [feedback](capabilities-in-tech
 
 Deze instelling is standaard **automatisch**. Met deze waarde Configuration Manager selecteert u het station waarop het is geïnstalleerd. 
 
-Tijdens offline onderhoud slaat Configuration Manager tijdelijke bestanden op in de map `<drive>:\ConfigMgr_OfflineImageServicing`. Ook worden de installatie kopieën van het besturings systeem in deze map gekoppeld. 
+Tijdens offline onderhoud slaat Configuration Manager tijdelijke bestanden op in de map `<drive>:\ConfigMgr_OfflineImageServicing` . Ook worden de installatie kopieën van het besturings systeem in deze map gekoppeld. 
 
 Controleer het logboek bestand **OfflineServicingMgr. log** . 
 
@@ -191,7 +191,7 @@ Als u deze vereisten niet configureert, verzendt de site een e-mail melding voor
 
     - Configureer de volgende instellingen voor deze systeem eigen app hand matig in azure AD:  
 
-        - **Omleidings-URI**: `https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`. Gebruik de Fully Qualified Domain Name (FQDN) van de CMG-service (Cloud Management Gateway), bijvoorbeeld GraniteFalls.Contoso.com.   
+        - **Omleidings-URI**: `https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth` . Gebruik de Fully Qualified Domain Name (FQDN) van de CMG-service (Cloud Management Gateway), bijvoorbeeld GraniteFalls.Contoso.com.   
 
         - **Manifest**: Stel **oauth2AllowImplicitFlow** in op True:`"oauth2AllowImplicitFlow": true,`  
 

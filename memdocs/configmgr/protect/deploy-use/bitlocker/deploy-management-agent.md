@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 96594731ef64577d30267376d3bcb93268e59a9e
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: ebd847e44c1acd87c316514ec9919f8a6690a647
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075010"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428574"
 ---
 # <a name="deploy-bitlocker-management"></a>BitLocker-beleid implementeren
 
@@ -77,7 +77,7 @@ Wanneer u dit beleid maakt en implementeert, schakelt de Configuration Manager-c
 
     - **Selecteer beveiliging voor het station van het besturings systeem**: Configureer dit voor het gebruik van een TPM en pincode, of alleen voor de TPM.
 
-    - **Minimale lengte voor pincodes configureren voor opstarten**: als u een pincode nodig hebt, is deze waarde de kortste lengte die de gebruiker kan opgeven. De gebruiker voert deze pincode in wanneer de computer opstart om het station te ontgrendelen. De minimale lengte van de pincode is `4`standaard.
+    - **Minimale lengte voor pincodes configureren voor opstarten**: als u een pincode nodig hebt, is deze waarde de kortste lengte die de gebruiker kan opgeven. De gebruiker voert deze pincode in wanneer de computer opstart om het station te ontgrendelen. De minimale lengte van de pincode is standaard `4` .
 
     Zie [instellingen referentie-OS station](../../tech-ref/bitlocker/settings.md#os-drive)voor meer informatie over deze en andere instellingen op deze pagina.
 
@@ -152,7 +152,7 @@ Gebruik de volgende logboeken om te controleren en problemen op te lossen:
 
 - MBAM-gebeurtenis logboek: Ga in de Windows Logboeken naar toepassingen en services > micro soft > Windows > MBAM.  Zie [informatie over BitLocker-gebeurtenis logboeken](../../tech-ref/bitlocker/about-event-logs.md) en [client gebeurtenis logboeken](../../tech-ref/bitlocker/client-event-logs.md)voor meer informatie.
 
-- **BitlockerMangementHandler. log** in client logboeken standaard `%WINDIR%\CCM\Logs` pad
+- **BitlockerMangementHandler. log** in client logboeken `%WINDIR%\CCM\Logs` standaard pad
 
 ### <a name="management-point-logs-recovery-service"></a>Beheer punt Logboeken (Recovery-Service)
 
@@ -205,7 +205,7 @@ Wanneer u overschakelt op versleutelings beheer, moet u een [reencryptie](#re-en
 
 Raadpleeg de volgende artikelen voor meer informatie over het beheren van BitLocker met intune:
 
-- [Apparaatversleuteling gebruiken met intune](../../../../intune/protect/encrypt-devices.md#bitlocker-encryption-for-windows-10)
+- [Apparaatversleuteling gebruiken met intune](../../../../intune/protect/encrypt-devices.md)
 - [Problemen met BitLocker-beleid in Microsoft Intune oplossen](../../../../intune/protect/troubleshoot-bitlocker-policies.md)
 
 ## <a name="next-steps"></a>Volgende stappen

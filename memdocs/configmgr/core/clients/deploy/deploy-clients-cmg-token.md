@@ -10,12 +10,12 @@ ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3a05c10d1f73fa0817febdd591190f6bc2ff0a0e
-ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
+ms.openlocfilehash: c6b33027d67329b883f401168795c1b466ded1a7
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587266"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709384"
 ---
 # <a name="token-based-authentication-for-cloud-management-gateway"></a>Verificatie op basis van tokens voor Cloud beheer gateway
 
@@ -25,7 +25,7 @@ ms.locfileid: "82587266"
 
 De Cloud Management Gateway (CMG) ondersteunt veel soorten clients, maar zelfs met [verbeterde http](../../plan-design/hierarchy/enhanced-http.md), hebben deze clients een [certificaat voor client verificatie](../manage/cmg/certificates-for-cloud-management-gateway.md#for-internet-based-clients-communicating-with-the-cloud-management-gateway)nodig. Deze certificaat vereiste kan lastig zijn om in te richten op Internet-clients die niet vaak verbinding maken met het interne netwerk, geen lid kunnen worden van Azure Active Directory (Azure AD) en geen methode hebben voor het installeren van een door PKI uitgegeven certificaat.
 
-Vanaf versie 2002 wordt de ondersteuning van het apparaat door Configuration Manager uitgebreid met de volgende methoden:
+Om deze problemen op te lossen, vanaf versie 2002, wordt de ondersteuning van het apparaat door Configuration Manager uitgebreid met de volgende methoden:
 
 - Registreer u voor een uniek token op het interne netwerk
 
@@ -54,7 +54,7 @@ Als u geen clients in het interne netwerk kunt installeren en registreren, maakt
 
 1. Open een opdrachtprompt als beheerder.
 
-1. Voer het hulp programma uit `\bin\X64` vanuit de map van de Configuration Manager-installatiemap op de site `BulkRegistrationTokenTool.exe`server:. Maak een nieuw token met de `/new` para meter. Bijvoorbeeld `BulkRegistrationTokenTool.exe /new`. Zie het gebruik van het [bulk registratie token](#bulk-registration-token-tool-usage)voor meer informatie.
+1. Voer het hulp programma uit vanuit de `\bin\X64` map van de Configuration Manager-installatiemap op de site server: `BulkRegistrationTokenTool.exe` . Maak een nieuw token met de `/new` para meter. Bijvoorbeeld `BulkRegistrationTokenTool.exe /new`. Zie het gebruik van het [bulk registratie token](#bulk-registration-token-tool-usage)voor meer informatie.
 
 1. Kopieer het token en sla het op een beveiligde locatie op.
 
@@ -101,9 +101,31 @@ Het token is niet opgeslagen op de client of op de site. Kopieer het token van d
 
 Gebruik with `/new` para meter om de geldigheids periode van het token op te geven. Geef een geheel getal op in minuten. De standaard waarde is 4.320 (drie dagen). De maximum waarde is 10.080 (zeven dagen).
 
-Voorbeeld: `BulkRegistrationTokenTool.exe /lifetime:4320`
+Voorbeeld: `BulkRegistrationTokenTool.exe /lifetime 4320`
 
-## <a name="see-also"></a>Zie tevens
+## <a name="bulk-registration-token-management"></a>Token beheer voor bulk registratie
+
+U kunt eerder gemaakte tokens voor bulk registratie en de levens duur ervan weer geven in de Configuration Manager-console en het gebruik ervan blok keren, indien nodig. De site database biedt echter geen bulk registratie tokens.
+
+#### <a name="to-review-a-bulk-registration-token"></a>Een token voor bulk registratie controleren
+
+1. Klik op **Beheer**in de Configuration Manager-console.
+
+2. Vouw in de werk ruimte beheer het knoop punt **beveiliging**uit en klik op **certificaten**. In de-console wordt een lijst weer gegeven met alle site-gerelateerde certificaten en bulk registratie tokens in het detail venster.
+
+3. Selecteer het bulk registratie token dat u wilt controleren.
+
+U kunt specifieke bulk registratie tokens identificeren op basis van hun GUID. GUID'S voor bulk registratie tokens worden weer gegeven bij het maken van tokens. U kunt de kolom **type** ook filteren of sorteren als dat nodig is.
+
+#### <a name="to-block-a-bulk-registration-token"></a>Een token voor bulk registratie blok keren
+
+1. Klik op **Beheer**in de Configuration Manager-console.
+
+2. Vouw in de werk ruimte beheer het knoop punt **beveiliging**uit, klik op **certificaten**en selecteer het bulk registratie token dat u wilt blok keren.
+
+3. Selecteer op het tabblad **Start** van de lint balk of het menu met de rechter muisknop op inhoud **blok keren**. Daarentegen kunt u eerder geblokkeerde bulk registratie tokens deblokkeren door **blok kering** te selecteren op het tabblad **Start** van de lint balk of het menu met de rechter muisknop op inhoud.
+
+## <a name="see-also"></a>Zie ook
 
 - [Plan voor de Cloud beheer gateway](../manage/cmg/plan-cloud-management-gateway.md)
 

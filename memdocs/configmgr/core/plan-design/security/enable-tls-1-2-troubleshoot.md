@@ -77,7 +77,7 @@ Volg deze stappen om dit probleem op te lossen:
 
 1. [Werk .NET Framework](enable-tls-1-2-client.md#bkmk_net)bij en schakel sterke crypto grafie in op alle relevante computers.
 
-1. Maak in `%WinDir%\System32\InetSrv` de map van de Application Catalog-server een bestand **W2SP. exe. config** met de volgende inhoud:
+1. Maak in de `%WinDir%\System32\InetSrv` map van de Application Catalog-server een bestand **W2SP. exe. config** met de volgende inhoud:
 
     ``` XML
     <?xml version="1.0" encoding="utf-8" ?>

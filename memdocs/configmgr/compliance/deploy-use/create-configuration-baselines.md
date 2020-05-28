@@ -10,12 +10,12 @@ ms.assetid: 678c9622-c61b-47d1-ba25-690616e431c7
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2028974c166e060f445b255db6c5af707725a3f4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1365aec90093ee24ad967e1d68e7c414b4efa254
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712923"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906668"
 ---
 # <a name="create-configuration-baselines-in-configuration-manager"></a>Configuratie basislijnen maken in Configuration Manager
 
@@ -23,6 +23,9 @@ ms.locfileid: "81712923"
 
 
 Configuratie basislijnen in Configuration Manager bevatten vooraf gedefinieerde configuratie-items en optioneel andere configuratie basislijnen. Nadat u een configuratiebasislijn hebt gemaakt, kunt u deze implementeren bij een verzameling, zodat apparaten in die verzameling de configuratiebasislijn downloaden en naleving ervan beoordelen.  
+
+> [!TIP]
+> Er is geen manier om de volg orde te bepalen dat de Configuration Manager-client de configuratie-items in een basis lijn evalueert. Het is niet-deterministisch.<!-- MEMDocs#175 -->
 
 ## <a name="configuration-baselines"></a>Configuratiebasislijn
 
@@ -38,7 +41,7 @@ Configuratie basislijnen in Configuration Manager bevatten vooraf gedefinieerde 
 
 Gebruik de volgende procedure om een configuratie basislijn te maken met behulp van het dialoog venster **configuratie basislijn maken** :  
 
-1. Klik in de Configuration Manager-console op **activa en naleving** > **instellingen** > **configuratie basislijnen**.  
+1. Klik in de Configuration Manager-console op **activa en naleving**  >  **instellingen**  >  **configuratie basislijnen**.  
 
 2. Klik op het tabblad **Start** in de groep **Maken** op **Configuratiebasislijn maken**.  
 
@@ -95,19 +98,19 @@ Ga als volgt te werk om aangepaste configuratie basislijnen op te nemen als onde
 
 Wanneer een gebruiker deel uitmaakt van een verzameling die is gericht op een nalevings beleid dat de regel voorwaarde bevat, **inclusief geconfigureerde basis lijnen in de beoordeling van het nalevings beleid**, worden alle basis lijnen met de optie **deze basis lijn evalueren als onderdeel van de beoordeling van het nalevings beleid** geselecteerd die zijn geïmplementeerd voor de gebruiker of het apparaat van de gebruiker worden geëvalueerd voor naleving. Bijvoorbeeld:
 
-- `User1`maakt deel uit `User Collection 1`van.
-- `User1`gebruikt `Device1`in `Device Collection 1` en `Device Collection 2`.
-- `Compliance Policy 1`bevat de voor waarde voor het **evalueren van geconfigureerde basis lijnen in nalevings beleid** en wordt geïmplementeerd naar `User Collection 1`.
-- `Configuration Baseline 1`heeft **deze basis lijn geëvalueerd als onderdeel van de beoordeling van het nalevings beleid** geselecteerd en wordt geïmplementeerd naar `Device Collection 1`.
-- `Configuration Baseline 2`heeft **deze basis lijn geëvalueerd als onderdeel van de beoordeling van het nalevings beleid** geselecteerd en wordt geïmplementeerd naar `Device Collection 2`.
+- `User1`maakt deel uit van `User Collection 1` .
+- `User1`gebruikt `Device1` in `Device Collection 1` en `Device Collection 2` .
+- `Compliance Policy 1`bevat de voor waarde voor het **evalueren van geconfigureerde basis lijnen in nalevings beleid** en wordt geïmplementeerd naar `User Collection 1` .
+- `Configuration Baseline 1`heeft **deze basis lijn geëvalueerd als onderdeel van de beoordeling van het nalevings beleid** geselecteerd en wordt geïmplementeerd naar `Device Collection 1` .
+- `Configuration Baseline 2`heeft **deze basis lijn geëvalueerd als onderdeel van de beoordeling van het nalevings beleid** geselecteerd en wordt geïmplementeerd naar `Device Collection 2` .
 
-`Compliance Policy 1` Als in dit scenario wordt geëvalueerd voor `User1` gebruik `Device1`, worden beide `Configuration Baseline 1` en `Configuration Baseline 2` ook geëvalueerd.
+Als in dit scenario wordt `Compliance Policy 1` geëvalueerd voor `User1` Gebruik `Device1` , worden beide `Configuration Baseline 1` en `Configuration Baseline 2` ook geëvalueerd.
 
-- `User1`soms gebruikt `Device2`.
-- `Device2`is lid van `Device Collection 2` en `Device Collection 3`.
+- `User1`soms gebruikt `Device2` .
+- `Device2`is lid van `Device Collection 2` en `Device Collection 3` .
 - `Device Collection 3`is `Configuration Baseline 3` geïmplementeerd, maar **deze basis lijn evalueren als onderdeel van de beoordeling van het nalevings beleid** is niet geselecteerd.
 
-Wanneer `User1` wordt `Device2`gebruikt, `Configuration Baseline 2` wordt alleen geëvalueerd `Compliance Policy 1` als er wordt geëvalueerd.
+Wanneer `User1` wordt gebruikt `Device2` , `Configuration Baseline 2` wordt alleen geëvalueerd als er wordt `Compliance Policy 1` geëvalueerd.
 
 > [!NOTE]
 ><!--5582516-->

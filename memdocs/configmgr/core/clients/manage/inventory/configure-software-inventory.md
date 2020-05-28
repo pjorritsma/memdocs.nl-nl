@@ -10,12 +10,12 @@ ms.assetid: f86559de-092a-4ce8-9b43-5d7530e0b763
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 74436eb95166ae9bc78d7ae22881b709349bf847
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f6fcf4736c30d8743d0d26b52aac60ef12b5c9cd
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714428"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906297"
 ---
 # <a name="how-to-configure-software-inventory-in-configuration-manager"></a>Software-inventaris configureren in Configuration Manager
 
@@ -25,7 +25,7 @@ Met deze procedure configureert u de standaard client instellingen voor software
 
 ## <a name="to-configure-software-inventory"></a>De software-inventarisatie configureren  
 
-1. **Kies** > in de Configuration Manager-console de**client instellingen voor**de client instellingen**standaard**.    
+1. Kies in de Configuration Manager-console de client instellingen voor **de client instellingen**  >  **Client Settings****standaard**.    
 
 2. Klik op het tabblad **Start** in de groep **Eigenschappen** op **Eigenschappen**.  
 
@@ -44,7 +44,7 @@ Met deze procedure configureert u de standaard client instellingen voor software
    > [!TIP]
    >   Fout code 80041006 in inventoryprovider. log betekent dat er onvoldoende geheugen beschikbaar is voor de WMI-provider. Dat wil zeggen dat de geheugen quotum limiet voor een provider is bereikt en dat de inventaris provider niet kan door gaan.
    > In dit geval maakt de inventaris agent een rapport met 0 vermeldingen, zodat er geen inventaris-items worden gerapporteerd. <br/>
-   > Een mogelijke oplossing voor deze fout is het verminderen van het bereik van de software-inventaris verzameling. In omstandigheden wanneer de fout optreedt nadat het inventarisatie bereik is beperkt, kan het verhogen van de eigenschap [MemoryPerHost](https://blogs.technet.microsoft.com/askperf/2008/09/16/memory-and-handle-quotas-in-the-wmi-provider-service/) die is gedefinieerd in de klasse [_ProviderHostQuotaConfiguration](https://msdn.microsoft.com/library/aa394671) , een oplossing bieden.
+   > Een mogelijke oplossing voor deze fout is het verminderen van het bereik van de software-inventaris verzameling. In omstandigheden wanneer de fout optreedt nadat het inventarisatie bereik is beperkt, kan het verhogen van de eigenschap [MemoryPerHost](https://techcommunity.microsoft.com/t5/ask-the-performance-team/memory-and-handle-quotas-in-the-wmi-provider-service/ba-p/373319) die is gedefinieerd in de klasse [_ProviderHostQuotaConfiguration](https://docs.microsoft.com/windows/win32/wmisdk/--providerhostquotaconfiguration) , een oplossing bieden.
 
 <!--SMS.480648 include WMI Out of memory tip -->
 

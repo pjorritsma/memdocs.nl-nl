@@ -2,7 +2,7 @@
 title: Co-beheer bewaken
 titleSuffix: Configuration Manager
 description: Gebruik het dash board voor co-beheer om informatie over gezamenlijk beheerde apparaten te bekijken.
-ms.date: 07/26/2019
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: e83a7b0d-b381-4b4a-8eca-850385abbebb
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 64d34cef57a3d5f141093d2b099c0b352604be42
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e4516ca9baa7398322c204908c25248921a69d25
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709696"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268059"
 ---
 # <a name="how-to-monitor-co-management-in-configuration-manager"></a>Co-beheer in Configuration Manager controleren
 
@@ -173,7 +173,7 @@ Het productie beleid (CoMgmtSettingsProd) is gericht op de verzameling **alle sy
 
 ## <a name="wmi-device-data"></a>WMI-apparaatgegevens
 
-Een query uitvoeren op de WMI-klasse **SMS_Client_ComanagementState** . U kunt aangepaste verzamelingen maken in Configuration Manager, waarmee u de status van uw implementatie voor co-beheer bepaalt. Zie [verzamelingen maken](../core/clients/manage/collections/create-collections.md)voor meer informatie over het maken van aangepaste verzamelingen.
+Een query uitvoeren op de WMI-klasse **SMS_Client_ComanagementState** in de naam ruimte **root\sms\ site_ site code &lt;>** op de site server. U kunt aangepaste verzamelingen maken in Configuration Manager, waarmee u de status van uw implementatie voor co-beheer bepaalt. Zie [verzamelingen maken](../core/clients/manage/collections/create-collections.md)voor meer informatie over het maken van aangepaste verzamelingen.
 
 De volgende velden zijn beschikbaar in de WMI-klasse:  
 

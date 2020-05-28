@@ -37,7 +37,7 @@ Het account dat u gebruikt om het hulp programma uit te voeren, vereist de volge
 - **Lokale beheerder** op de computer die het service verbindings punt host.
 
 U hebt de GUID nodig van het update pakket dat u opnieuw wilt instellen. De GUID ophalen:
-  1.   Ga in de-console naar **beheer** > **updates en onderhoud**.
+  1.   Ga in de-console naar **beheer**  >  **updates en onderhoud**.
   2.   Klik in het weergave paneel met de rechter muisknop op de kop van een van de kolommen (zoals **status**) en selecteer vervolgens **pakket-GUID** om die kolom toe te voegen aan de weer gave.
   3.   In de kolom wordt nu de GUID van het update pakket weer gegeven.
 
@@ -65,11 +65,11 @@ Wanneer het hulp programma wordt uitgevoerd:
 
 |                        Parameter                         |                                                       Beschrijving                                                        |
 |----------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| **-S &lt;FQDN van de SQL Server van uw site op het hoogste niveau>** | *Vereist* <br> Geef de FQDN op van de SQL Server die als host fungeert voor de site database voor de bovenste site van uw hiërarchie. |
-|                **-D &lt;Database naam>**                 |                          *Vereist* <br> Geef de naam op van de Data Base op de site op het hoogste niveau.                          |
-|                 **-P &lt;Package GUID>**                 |                        *Vereist* <br> Geef de GUID op voor het update pakket dat u opnieuw wilt instellen.                        |
-|           **-I &lt;SQL Server exemplaar naam>**           |                    *Beschrijving* <br> Identificeer het exemplaar van SQL Server dat als host fungeert voor de site database.                     |
-|                       **-FDELETE**                       |                       *Beschrijving* <br> Het verwijderen van een geslaagd update pakket afdwingen.                        |
+| **-S &lt; FQDN van de SQL Server van uw site op het hoogste niveau>** | *Vereist* <br> Geef de FQDN op van de SQL Server die als host fungeert voor de site database voor de bovenste site van uw hiërarchie. |
+|                **-D &lt; database naam>**                 |                          *Vereist* <br> Geef de naam op van de Data Base op de site op het hoogste niveau.                          |
+|                 **-P &lt; package GUID>**                 |                        *Vereist* <br> Geef de GUID op voor het update pakket dat u opnieuw wilt instellen.                        |
+|           **-I &lt; SQL Server exemplaar naam>**           |                    *Optioneel* <br> Identificeer het exemplaar van SQL Server dat als host fungeert voor de site database.                     |
+|                       **-FDELETE**                       |                       *Optioneel* <br> Het verwijderen van een geslaagd update pakket afdwingen.                        |
 
 **Voorbeelden:**  
 In een typisch scenario wilt u een update met Download problemen opnieuw instellen. De FQDN van de SQL-servers is *Server1.fabrikam.com*, de site database is *CM_XYZ*en de pakket-GUID is *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  U voert de volgende handelingen uit: ***CMUpdateReset. exe-S server1.fabrikam.com-D CM_XYZ-P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***

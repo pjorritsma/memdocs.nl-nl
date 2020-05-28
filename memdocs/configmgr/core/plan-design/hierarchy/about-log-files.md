@@ -10,12 +10,12 @@ ms.assetid: b1751e3c-a60c-4ab7-a943-2595df1eb612
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d6be23adc7ac082545bffeef59ed52d3455d9931
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 588bccc533909f2438dc61d6f25b39c3a582c71b
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720301"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879013"
 ---
 # <a name="about-log-files-in-configuration-manager"></a>Over logboek bestanden in Configuration Manager
 
@@ -41,7 +41,7 @@ Alle Configuration Manager-logboek bestanden zijn tekst zonder opmaak, zodat u z
 
 ### <a name="cmtrace"></a>CMTrace
 
-Als u de logboeken wilt weer geven, gebruikt u het hulp programma Configuration Manager log viewer **CMTrace**. Deze bevindt zich `\SMSSetup\Tools` in de map van de Configuration Manager-bron media. Het hulp programma CMTrace wordt toegevoegd aan alle opstart installatie kopieën die worden toegevoegd aan de software bibliotheek. Het CMTrace-hulp programma voor logboek weergave wordt samen met de Configuration Manager-client automatisch geïnstalleerd.<!--1357971--> Zie [CMTrace](../../support/cmtrace.md) voor meer informatie.
+Als u de logboeken wilt weer geven, gebruikt u het hulp programma Configuration Manager log viewer **CMTrace**. Deze bevindt zich in de `\SMSSetup\Tools` map van de Configuration Manager-bron media. Het hulp programma CMTrace wordt toegevoegd aan alle opstart installatie kopieën die worden toegevoegd aan de software bibliotheek. Het CMTrace-hulp programma voor logboek weergave wordt samen met de Configuration Manager-client automatisch geïnstalleerd.<!--1357971--> Zie [CMTrace](../../support/cmtrace.md) voor meer informatie.
 
 ### <a name="onetrace"></a>OneTrace
 
@@ -211,11 +211,14 @@ Voor de rol van distributie punt bijvoorbeeld:
 
 Gebruik de volgende procedure om het uitgebreide niveau van het AdminUI. log voor de Configuration Manager-console te wijzigen:
 
-1. Open het console configuratie bestand **micro soft. ConfigurationManagement. exe. config**in een XML-editor, zoals Klad blok. Het standaard configuratie bestand bevindt zich op de volgende locatie:`C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+1. Open het console configuratie bestand **micro soft. ConfigurationManagement. exe. config**in een XML-editor, zoals Klad blok. Het standaard configuratie bestand bevindt zich op de volgende locatie:`C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
 
-1. Wijzig het `Error` kenmerk **switchValue** onder het > **bron** element **System. Diagnostics** > **sources.** `Verbose` Bijvoorbeeld:
+    > [!IMPORTANT]
+    > Vanaf versie 1910 is dit pad gewijzigd om de map te gebruiken `Microsoft Endpoint Manager` . Zorg ervoor dat u geen oudere versie van het bestand gebruikt dat in een andere map kan voor komen.
 
-    Origineel: `<source name="SmsAdminUISnapIn" switchValue="Error">` nieuw:`<source name="SmsAdminUISnapIn" switchValue="Verbose" >`
+1. **system.diagnostics**  >  **sources**  >  Wijzig het kenmerk **switchValue** onder het**bron** element System. Diagnostics sources `Error` `Verbose` . Bijvoorbeeld:
+
+    Origineel: `<source name="SmsAdminUISnapIn" switchValue="Error">` Nieuw:`<source name="SmsAdminUISnapIn" switchValue="Verbose" >`
 
 1. Sla het bestand op en start de console opnieuw.
 
@@ -240,7 +243,7 @@ De volgende locaties zijn de standaard waarden. Als u de installatie mappen in u
 - Serviceclient`C:\Windows\CCM\logs`
 - Naam`C:\Program Files\Microsoft Configuration Manager\Logs`
 - Beheer punt:`C:\SMS_CCM\Logs`
-- Configuration Manager-console:`C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\AdminUILog`
+- Configuration Manager-console:`C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\AdminUILog`
 - ADSI`C:\inetpub\logs\logfiles\w3svc1`
 
 ### <a name="task-sequence-log-locations"></a>Locaties van taken reeks logboeken
@@ -248,7 +251,7 @@ De volgende locaties zijn de standaard waarden. Als u de installatie mappen in u
 De locatie van het logboek bestand **bestand smsts. log** van de taken reeks varieert, afhankelijk van de fase van de taken reeks:
 
 - In Windows PE voor [Format teren en partitioneren schijf](../../../osd/understand/task-sequence-steps.md#BKMK_FormatandPartitionDisk) stap: `X:\Windows\temp\smstslog\smsts.log` (X is het Windows PE RAM-station)
-- In Windows PE na **Format teren en partitioneren schijf** : `X:\smstslog\smsts.log`en vervolgens `C:\_SMSTaskSequence\Logs\smstslog\smsts.log` gekopieerd naar wanneer het station gereed is
+- In Windows PE na **Format teren en partitioneren schijf** : `X:\smstslog\smsts.log` en vervolgens gekopieerd naar `C:\_SMSTaskSequence\Logs\smstslog\smsts.log` wanneer het station gereed is
 - In het nieuwe Windows-besturings systeem voordat de-client is geïnstalleerd:`C:\_SMSTaskSequence\Logs\smstslog\smsts.log`
 - In Windows nadat de client is geïnstalleerd:`C:\Windows\CCM\Logs\smstslog\smsts.log`
 - In Windows nadat de taken reeks is voltooid:`C:\Windows\CCM\Logs\smsts.log`

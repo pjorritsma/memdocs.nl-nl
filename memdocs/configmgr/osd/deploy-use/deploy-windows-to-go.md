@@ -10,12 +10,12 @@ ms.assetid: 8eed50f5-80a4-422e-8aa6-a7ccb2171475
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0174cea761da15cc57eeb55fba26070fe664bb76
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: add0d17205cc82b30f3a88558c690a813239b92a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81710963"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906937"
 ---
 # <a name="deploy-windows-to-go-with-configuration-manager"></a>Windows to go met Configuration Manager implementeren
 
@@ -23,7 +23,7 @@ ms.locfileid: "81710963"
 
 Dit onderwerp bevat de stappen voor het inrichten van Windows to go in Configuration Manager. Windows To Go is een ondernemingsfunctie van Windows 8, die het mogelijk maakt een Windows To Go-werkruimte te maken die kan worden opgestart vanaf een via een USB-verbinding aangesloten extern station op computers die voldoen aan de certificeringsvereisten van Windows 7 of Windows 8, ongeacht het besturingssysteem van de computer. Windows To Go-werkruimten kunnen dezelfde installatiekopie gebruiken die ondernemingen gebruiken voor hun desktops en laptops en kunnen op dezelfde wijze worden beheerd.  
 
- Zie [Windows to go Feature Overview](https://go.microsoft.com/fwlink/p/?LinkId=263433)(Engelstalig) voor meer informatie over Windows to go.  
+ Zie [Windows to go Feature Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh831833(v=ws.11))(Engelstalig) voor meer informatie over Windows to go.  
 
 ## <a name="provision-windows-to-go"></a>Inrichting Windows To Go  
  Windows To Go is een besturingssysteem dat is opgeslagen op een extern station dat is aangesloten via een USB-verbinding. U kunt het Windows To Go-station inrichten zoals u andere implementaties van het besturingssysteem inricht. Niettemin moet u een lichtjes andere benadering gebruiken om deze stations in te richten, omdat Windows To Go is ontwikkeld als een op de gebruiker gerichte, zeer mobiele oplossing.  
@@ -105,7 +105,7 @@ Dit onderwerp bevat de stappen voor het inrichten van Windows to go in Configura
 
    -   **Opmerking**: hier kunt u met een unieke beschrijving aangeven waarvoor het medium wordt gebruikt.  
 
-   -   **Mediabestand**: de naam en het pad van de uitvoerbestanden opgeven. De wizard schrijft de uitvoerbestanden naar deze locatie. Bijvoorbeeld: ** \\\servername\folder\outputfile.Wim**  
+   -   **Mediabestand**: de naam en het pad van de uitvoerbestanden opgeven. De wizard schrijft de uitvoerbestanden naar deze locatie. Bijvoorbeeld: ** \\ \servername\folder\outputfile.Wim**  
 
 7. Geef op de pagina **Beveiliging** de volgende informatie op en klik vervolgens op **Volgende**.  
 
@@ -311,7 +311,7 @@ Dit onderwerp bevat de stappen voor het inrichten van Windows to go in Configura
 
     1.  **Naam**: geef een naam voor de opdrachtregel op, bijvoorbeeld **Enable BitLocker for Windows To Go**.  
 
-    2.  **Opdracht regel**: i386 \ osdbitlocker_wtg. exe/enable/pwd: < *geen&#124;AD*>  
+    2.  **Opdracht regel**: i386 \ osdbitlocker_wtg. exe/enable/pwd: < *geen & #124; AD*>  
 
          Parameters:  
 

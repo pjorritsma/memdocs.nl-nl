@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 184c836a601378fcb8e58f78debb80a3cd48857c
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.openlocfilehash: 40eda7184d7be5010bf51e3ac0d30d6d9442203c
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693109"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905068"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Verwijderde en afgeschafte functies voor Configuration Manager
 
@@ -29,7 +29,7 @@ Deze informatie kan worden gewijzigd in toekomstige releases. De functie bevat m
 
 De volgende functies zijn afgeschaft. U kunt ze nu nog steeds gebruiken, maar micro soft wil de ondersteuning in de toekomst beëindigen.
 
-|Functie|Afschaffing eerst aangekondigd|Ondersteuning&nbsp;verwijderd|
+|Functie|Afschaffing eerst aangekondigd|Ondersteuning &nbsp; verwijderd|
 |-----------|---|--------------|
 | Optie Desktop Analytics om **recente gegevens weer te geven** voor apparaatregistratie en beveiligings updates.<!-- 7080949 --> Zie [Data latentie](../../../../desktop-analytics/troubleshooting.md#data-latency)voor meer informatie.|Mei 2020|2020 juli|
 |De implementatie voor het delen van inhoud van Azure is gewijzigd. Gebruik een Cloud beheer gateway die is ingeschakeld voor inhoud. U kunt in de toekomst geen traditioneel Cloud distributiepunt maken.|Februari 2019|TBD<sup>[Opmerking 1](#bkmk_note1)</sup>|
@@ -43,14 +43,14 @@ De specifieke periode moet worden bepaald (TBD). Micro soft raadt u aan het nieu
 
 De volgende functies worden niet meer ondersteund. In sommige gevallen bevinden ze zich niet meer in het product.
 
-|Functie|Afschaffing eerst aangekondigd|Ondersteuning&nbsp;verwijderd|  
+|Functie|Afschaffing eerst aangekondigd|Ondersteuning &nbsp; verwijderd|  
 |-----------|---|--------------|  
 | Integratie van Windows Analytics en Upgradegereedheid. Zie [KB 4521815: Windows Analytics is buiten gebruik gesteld op 31 januari 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement)voor meer informatie. | 14 oktober 2019 | 31 januari 2020 |
 | Evaluatie van apparaatstatusverklaring voor nalevings beleid voor voorwaardelijke toegang <!--1235616 aka 3608202--> Zie [Wat is er gebeurd met hybride MDM](../../../../mdm/understand/what-happened-to-hybrid.md)voor meer informatie.| 3 juli 2019 | Versie 1910 |
 | De app Configuration Manager Bedrijfsportal | 21 mei 2019 | Versie 1910 |
 | De toepassings catalogus, met inbegrip van beide site systeem rollen: het Application catalog-website punt en het webservicepunt. Zie [de Application Catalog verwijderen](../../../../apps/plan-design/plan-for-and-configure-application-management.md#bkmk_remove-appcat)voor meer informatie. | 21 mei 2019 | Versie 1910 |
-|Verificatie op basis van certificaten met instellingen voor Windows hello voor bedrijven in Configuration Manager<br>Zie [Windows hello voor bedrijven-instellingen](../../../../protect/deploy-use/windows-hello-for-business-settings.md)voor meer informatie.|December 2017|Versie 1910|
-|System Center-Endpoint Protection voor Mac en Linux<br>Zie [End of support blog post](https://go.microsoft.com/fwlink/?linkid=870182)voor meer informatie.|Oktober 2018|31 december 2018|
+|Verificatie op basis van certificaten met instellingen voor Windows hello voor bedrijven in Configuration Manager<br>Zie [Windows hello voor bedrijven-instellingen](../../../../protect/deploy-use/windows-hello-for-business-settings.md)voor meer informatie.|december 2017|Versie 1910|
+|System Center-Endpoint Protection voor Mac en Linux<br>Zie [End of support blog post](https://techcommunity.microsoft.com/t5/configuration-manager-blog/end-of-support-for-scep-for-mac-and-scep-for-linux-on-december/ba-p/286257)voor meer informatie.|Oktober 2018|31 december 2018|
 |On-premises voorwaardelijke toegang<br>Zie [Wat is er gebeurd met hybride MDM](../../../../mdm/understand/what-happened-to-hybrid.md)voor meer informatie.|30 januari 2019|1 september 2019|
 |Hybrid Mobile Device Management (MDM)<br>Zie [Wat is er gebeurd met hybride MDM](../../../../mdm/understand/what-happened-to-hybrid.md)voor meer informatie.<br><br>Vanaf de 1902-release van de intune-service, die aan het einde van februari 2019 werd verwacht, kunnen nieuwe klanten geen nieuwe hybride verbinding maken.<!--Intune feature 2683117-->|14 augustus 2018|1 september 2019|
 |SCAP-extensies (Security content Automation Protocol). <!--3607889--><br>De vorige gecertificeerde versie is nog steeds beschikbaar in het [micro soft Download centrum](https://www.microsoft.com/download/details.aspx?id=48741).|September 2018|Versie 1810|
@@ -80,7 +80,7 @@ Met Configuration Manager is systeem eigen ondersteuning voor op AMT gebaseerde 
 
 Configuration Manager heeft ondersteuning voor netwerk toegangs beveiliging verwijderd. De functie is afgeschaft in Windows Server 2012 R2 en wordt uit Windows 10 verwijderd.  
 
-Bekijk het gedeelte *Afgeschafte functionaliteit* van [Overzicht van Services voor netwerkbeleid en -toegang](https://technet.microsoft.com/library/hh831683.aspx) voor informatie over alternatieven voor netwerktoegangsbeveiliging.
+Bekijk het gedeelte *Afgeschafte functionaliteit* van [Overzicht van Services voor netwerkbeleid en -toegang](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831683(v=ws.11)) voor informatie over alternatieven voor netwerktoegangsbeveiliging.
 
 ## <a name="see-also"></a>Zie ook
 

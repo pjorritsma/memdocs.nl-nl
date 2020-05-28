@@ -10,23 +10,23 @@ ms.assetid: 91f9de33-b277-4500-acd6-e7d90a2947c9
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9917ec8a1ed2072903276de438f49d3f783a1284
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ed155fb61491a273732ed3b974b6ddb5ac29bc89
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712447"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904003"
 ---
 # <a name="health-attestation-for-configuration-manager"></a>Status verklaring voor Configuration Manager
 
 *Van toepassing op: Configuration Manager (huidige vertakking)*
 
-Beheerders kunnen de status van[ Windows 10 Health Attestation](https://technet.microsoft.com/library/mt592023.aspx) van apparaten bekijken in de Configuration Manager-console.  Met Health Attestation van apparaten kan de beheerder ervoor zorgen dat clientcomputers over de volgende betrouwbare configuraties van BIOS, TPM en opstartsoftware beschikken:  
+Beheerders kunnen de status van[ Windows 10 Health Attestation](https://docs.microsoft.com/windows/security/threat-protection/protect-high-value-assets-by-controlling-the-health-of-windows-10-based-devices) van apparaten bekijken in de Configuration Manager-console.  Met Health Attestation van apparaten kan de beheerder ervoor zorgen dat clientcomputers over de volgende betrouwbare configuraties van BIOS, TPM en opstartsoftware beschikken:  
 
 -   Early Launch Antimalware: Early Launch Antimalware (ELAM) beschermt uw computer wanneer deze wordt gestart en voordat de stuurprogramma's van derden worden geïnitialiseerd. [ELAM inschakelen](https://gallery.technet.microsoft.com/How-to-turn-on-Early-84552ec5)  
 -   BitLocker: Windows BitLocker-stationsversleuteling is software waarmee u alle gegevens kunt versleutelen die zijn opgeslagen op het Windows-besturingssysteemvolume.  [BitLocker inschakelen](https://gallery.technet.microsoft.com/How-to-turn-on-BitLocker-34294d3d)  
--   Beveiligd opstarten: beveiligd opstarten is een standaard die is ontwikkeld door leden van de pc-industrie om ervoor te zorgen dat uw pc opstart met alleen de software die wordt vertrouwd door de fabrikant van de computer. [Meer informatie over beveiligd opstarten](https://technet.microsoft.com/library/hh824987.aspx)  
--   Code-integriteit: code-integriteit is een functie die de beveiliging van het besturingssysteem verbetert door de integriteit van een stuurprogramma of systeembestand te valideren elke keer wanneer dit in het geheugen wordt geladen. [Meer informatie over code-integriteit](https://technet.microsoft.com/library/dd348642.aspx)  
+-   Beveiligd opstarten: beveiligd opstarten is een standaard die is ontwikkeld door leden van de pc-industrie om ervoor te zorgen dat uw pc opstart met alleen de software die wordt vertrouwd door de fabrikant van de computer. [Meer informatie over beveiligd opstarten](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh824987(v=win.10))  
+-   Code-integriteit: code-integriteit is een functie die de beveiliging van het besturingssysteem verbetert door de integriteit van een stuurprogramma of systeembestand te valideren elke keer wanneer dit in het geheugen wordt geladen. [Meer informatie over code-integriteit](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd348642(v=ws.10))  
 
 Deze functionaliteit is beschikbaar voor pc's en on-premises bronnen die worden beheerd door Configuration Manager en mobiele apparaten die met behulp van Microsoft Intune worden beheerd. Beheerders kunnen opgeven of rapportage plaatsvindt via de cloud of on-premises infrastructuur. Door de bewaking van on-premises apparaatstatusverklaring kan de beheerder client-Pc's zonder Internet toegang controleren.
 
@@ -34,7 +34,7 @@ Deze functionaliteit is beschikbaar voor pc's en on-premises bronnen die worden 
 
  **Vereiste**  
 
--   Client apparaten met Windows 10 versie 1607 of Windows Server 2016 versie 1607 met [Apparaatstatusverklaring ingeschakeld](https://technet.microsoft.com/windows-server-docs/security/device-health-attestation).
+-   Client apparaten met Windows 10 versie 1607 of Windows Server 2016 versie 1607 met [Apparaatstatusverklaring ingeschakeld](https://docs.microsoft.com/windows-server/security/device-health-attestation).
 -   TPM 1,2 of TPM 2 ingeschakelde apparaten.
 -   Wanneer u Cloud beheer gebruikt, wordt de communicatie tussen de Configuration Manager client agent en het beheer punt met de Health Attestation-service van *has.spserv.Microsoft.com* (poort 443) (Cloud beheer). Bij on-premises moet de client kunnen communiceren met het beheer punt voor apparaatstatusverklaring-functionaliteit.
 
@@ -42,7 +42,7 @@ Deze functionaliteit is beschikbaar voor pc's en on-premises bronnen die worden 
 
 Gebruik deze procedure om apparaatstatusverklaring-bewaking in te scha kelen voor apparaten die verbinding maken met internet.
 
-1.  Kies in de Configuration Manager-console **beheer** > **overzicht** > **client instellingen**.  Kies het tabblad voor **Computeragent** -instellingen.  
+1.  Kies in de Configuration Manager-console **beheer**  >  **overzicht**  >  **client instellingen**.  Kies het tabblad voor **Computeragent** -instellingen.  
 2.  Selecteer in het dialoogvenster **Standaardinstellingen** de optie **Computeragent** en schuif vervolgens omlaag naar **Communicatie met de Health Attestation-service inschakelen**  
 3.  Stel de optie **Communicatie met de Health Attestation-Service inschakelen** in op **Ja**en klik vervolgens op **OK**.  
 4. Richt de verzamelingen van apparaten in die de apparaatstatus moeten rapporteren.
@@ -52,10 +52,10 @@ Gebruik deze procedure om de apparaatstatusverklaring-bewaking in te scha kelen 
 
 Vanaf Configuration Manager 1702 kan de URL van de on-premises apparaatstatusverklaring-service op het beheer punt worden geconfigureerd voor de ondersteuning van client apparaten zonder Internet toegang.
 
-1. Ga in de Configuration Manager-console naar **beheer** > **overzicht** > **site configuratie** > **sites**.
-2. Klik met de rechter muisknop op de primaire of secundaire site met het beheer punt dat ondersteuning biedt voor on-premises apparaatstatusverklaring-clients en selecteer **site onderdelen** > **beheer punt**configureren. De pagina **Eigenschappen van beheer punt onderdelen** wordt geopend.
+1. Ga in de Configuration Manager-console naar **beheer**  >  **overzicht**  >  **site configuratie**  >  **sites**.
+2. Klik met de rechter muisknop op de primaire of secundaire site met het beheer punt dat ondersteuning biedt voor on-premises apparaatstatusverklaring-clients en selecteer **site onderdelen**  >  **beheer punt**configureren. De pagina **Eigenschappen van beheer punt onderdelen** wordt geopend.
 3. Selecteer op het tabblad **Geavanceerde opties** de optie **toevoegen** en geef een geldige on-premises URL voor de apparaatstatusverklaring-service op. U kunt meerdere Url's toevoegen. Als er meerdere on-premises Url's worden opgegeven, ontvangen clients de volledige set en kiezen die wille keurig te gebruiken.
-4.  Kies in de Configuration Manager-console **beheer** > **overzicht** > **client instellingen**.  Kies het tabblad voor **Computeragent** -instellingen.  
+4.  Kies in de Configuration Manager-console **beheer**  >  **overzicht**  >  **client instellingen**.  Kies het tabblad voor **Computeragent** -instellingen.  
 5.  Schuif omlaag om **communicatie met de Health Attestation-service in te scha kelen**en stel in op **Ja**.
 7.  Klik op de optie **on-premises Health Attestaion-service gebruiken** en stel dit in op **Ja**.
 8. Richt u op de verzamelingen apparaten die de status van apparaten moeten rapporteren met de instellingen van de client agent om apparaatstatusverklaring-rapportage in te scha kelen.

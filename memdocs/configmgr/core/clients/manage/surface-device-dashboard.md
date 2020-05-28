@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7397fc17-3ae8-4525-8386-aea8a9cffa06
-ms.openlocfilehash: 08baf595199bdda121f897d507de97cb7e93e620
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f9b9c49bde16754b7a60112905f14da2cd5e48eb
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81715065"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906279"
 ---
 # <a name="surface-device-dashboard-in-configuration-manager"></a>Dash board van Surface-apparaat in Configuration Manager
 
@@ -31,8 +31,8 @@ Voer de volgende stappen uit om het Surface Device-dash board te openen:
 2. Klik op het knoop punt **bewaking** . 
 3. Klik op **Surface devices**om het dash board te laden.
 
-**Surface device dashboard**
-![Dash board van Surface-apparaat dashboard](media/Surface-device-dashboard.PNG)
+**Surface Device-dash board** 
+ ![ Surface Device-dash board](media/Surface-device-dashboard.PNG)
 
 
 
@@ -57,11 +57,9 @@ Het Surface Device-dash board toont drie grafieken voor uw omgeving.
 
 ## <a name="more-information"></a>Meer informatie
 
-Zie voor meer informatie over Surface-apparaten:
-- De [Surface]( https://go.microsoft.com/fwlink/?linkid=861998) -website.
+Zie de [Surface](https://www.microsoft.com/surface) -website voor meer informatie over Surface-apparaten.
 
-Zie voor meer informatie over het implementeren van Surface firmware-updates in Configuration Manager:
-- [Updates van Surface drivers beheren in Configuration Manager]( https://support.microsoft.com/help/4098906).
+Zie [updates van Surface drivers beheren](https://support.microsoft.com/help/4098906)voor meer informatie over het implementeren van Surface firmware-updates in Configuration Manager.
 
 
 

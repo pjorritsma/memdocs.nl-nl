@@ -10,12 +10,12 @@ ms.assetid: 4cf640b3-610c-4c3c-b966-c62e9f5654ff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d35f36b6578359f62f21b4e2208a70ace22cf0d9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 94f002ecd12d08ffd5f3d4767e315e0d83714929
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711502"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764047"
 ---
 # <a name="conditional-access-with-co-management"></a>Voorwaardelijke toegang met co-beheer
 
@@ -108,7 +108,7 @@ Voorwaardelijke toegang is gemakkelijk te gebruiken wanneer u [co-beheer inschak
 
 Raadpleeg de volgende artikelen voor meer informatie over het gebruik van voorwaardelijke toegang: 
 
-- [Voorwaardelijke toegang in azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)  
+- [Voorwaardelijke toegang in Azure AD](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)  
 
 - [Intune apparaatnalevingsbeleid](https://docs.microsoft.com/intune/device-compliance)  
 

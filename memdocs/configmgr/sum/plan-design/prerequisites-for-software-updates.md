@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
-ms.openlocfilehash: 138ff268f42dae1c15e11b34c92e6c7a3044705b
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: a870d2bf18b9e7f064e914f450aee0f5e3e2e545
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078444"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906704"
 ---
 # <a name="prerequisites-for-software-updates-in-configuration-manager"></a>Vereisten voor software-updates in Configuration Manager
 
@@ -83,7 +83,7 @@ Er zijn twee updates vereist voor het synchroniseren van de classificatie van **
 
 - U moet [KB 3095113](https://support.microsoft.com/kb/3095113)installeren, uitgebracht in oktober 2015, op uw software-update punten en site servers voordat u de classificatie **upgrades** synchroniseert.
   - Met deze update wordt de classificatie **upgrades** ingeschakeld.
-- Voor de service Windows 10 versie 1607 en hoger moet u [KB 3159706](https://support.microsoft.com/en-us/help/3159706)installeren en configureren. KB 3159706 is uitgebracht in mei 2016.
+- Voor de service Windows 10 versie 1607 en hoger moet u [KB 3159706](https://support.microsoft.com/help/3159706)installeren en configureren. KB 3159706 is uitgebracht in mei 2016.
   - Met deze update kunt u de bestanden die worden gebruikt voor het upgraden van Windows 10 versie 1607 en hoger, in WSUS systeem eigen decoderen.
 
 >[!IMPORTANT]
@@ -95,7 +95,7 @@ De updates en problemen die in deze sectie worden beschreven, zijn alleen van to
 
 ### <a name="historical-information-about-kb-3095113"></a>Historische informatie over KB 3095113
 
- [KB 3095113](https://support.microsoft.com/kb/3095113) is in oktober 2015 [uitgebracht als een hotfix](https://blogs.technet.microsoft.com/wsus/2015/12/03/important-update-for-wsus-4-0-kb-3095113/) voor het toevoegen van ondersteuning voor Windows 10-upgrades naar WSUS. Met de update kan WSUS updates synchroniseren en distribueren in de classificatie **upgrades** voor Windows 10.
+ [KB 3095113](https://support.microsoft.com/kb/3095113) is in oktober 2015 [uitgebracht als een hotfix](https://docs.microsoft.com/archive/blogs/wsus/important-update-for-wsus-4-0-kb-3095113) voor het toevoegen van ondersteuning voor Windows 10-upgrades naar WSUS. Met de update kan WSUS updates synchroniseren en distribueren in de classificatie **upgrades** voor Windows 10.
 
 Als u upgrades synchroniseert zonder eerst [KB 3095113](https://support.microsoft.com/kb/3095113)te installeren, vult u de WSUS-data base (SUSDB) in met niet-bruikbare gegevens. Deze gegevens moeten worden gewist voordat de upgrades op de juiste wijze kunnen worden geïmplementeerd. Windows 10-upgrades in deze status kunnen niet worden gedownload met behulp van de wizard software-updates downloaden.
 
@@ -115,15 +115,15 @@ ERROR: DownloadContentFiles() failed with hr=0x80073633
 # This log is truncated for readability.
 ```
 
-Als deze fouten zijn opgetreden, worden ze opgelost door een gewijzigde versie van de [oplossings stappen voor WSUS](https://blogs.technet.microsoft.com/wsus/2016/01/29/how-to-delete-upgrades-in-wsus/)uit te voeren. Omdat deze stappen vergelijkbaar zijn met de oplossing voor het niet uitvoeren van de hand matige stappen die vereist zijn na de installatie van KB 3159706, hebben we beide sets stappen gecombineerd tot één oplossing in de volgende sectie:
+Als deze fouten zijn opgetreden, worden ze opgelost door een gewijzigde versie van de [oplossings stappen voor WSUS](https://docs.microsoft.com/archive/blogs/wsus/how-to-delete-upgrades-in-wsus)uit te voeren. Omdat deze stappen vergelijkbaar zijn met de oplossing voor het niet uitvoeren van de hand matige stappen die vereist zijn na de installatie van KB 3159706, hebben we beide sets stappen gecombineerd tot één oplossing in de volgende sectie:
 
 - [U kunt de synchronisatie van de upgrades herstellen voordat u KB 3095113 of kb 3159706 installeert](#bkmk_fix-upgrades).
 
 ### <a name="historical-information-about-kb-3159706"></a>Historische informatie over KB 3159706
 
-KB 3148812 is in eerste instantie uitgebracht in april 2016 zodat WSUS de. esd-bestanden die worden gebruikt voor het upgraden van Windows 10-pakketten systeem eigen kunnen ontsleutelen. [Kb 3148812 heeft problemen voor sommige klanten veroorzaakt](https://blogs.technet.microsoft.com/wsus/2016/05/05/the-long-term-fix-for-kb3148812-issues/) en is vervangen door [KB 3159706](https://support.microsoft.com/en-us/help/3159706). KB 3159706 moet worden geïnstalleerd op alle software-update punten en site servers voordat u Windows 10-versie 1607 en hoger kunt onderhouden. Er kunnen echter problemen optreden als u de KB niet wilt realiseren, moeten de volgende hand matige stappen na de installatie:
+KB 3148812 is in eerste instantie uitgebracht in april 2016 zodat WSUS de. esd-bestanden die worden gebruikt voor het upgraden van Windows 10-pakketten systeem eigen kunnen ontsleutelen. [Kb 3148812 heeft problemen voor sommige klanten veroorzaakt](https://docs.microsoft.com/archive/blogs/wsus/the-long-term-fix-for-kb3148812-issues) en is vervangen door [KB 3159706](https://support.microsoft.com/help/3159706). KB 3159706 moet worden geïnstalleerd op alle software-update punten en site servers voordat u Windows 10-versie 1607 en hoger kunt onderhouden. Er kunnen echter problemen optreden als u de KB niet wilt realiseren, moeten de volgende hand matige stappen na de installatie:
 
-1. Vanaf een opdracht prompt met verhoogde bevoegdheid `"C:\Program Files\Update Services\Tools\wsusutil.exe" postinstall /servicing`.
+1. Vanaf een opdracht prompt met verhoogde bevoegdheid `"C:\Program Files\Update Services\Tools\wsusutil.exe" postinstall /servicing` .
 1. Start de WSUS-service opnieuw op alle WSUS-servers.
 
 Als u niet beseft dat KB 3159706 hand matige stappen heeft na de installatie, of als u een synchronisatie hebt uitgevoerd in de upgrade voor Windows 10 1607 vóór de installatie van KB 3159706, worden er problemen ondervonden met het maken van verbinding met de WSUS-console en de implementatie van de upgrade respectievelijk. Wanneer een client het upgrade bestand heeft gedownload, wordt er een [ **0xC1800118** -fout code](https://support.microsoft.com/help/3194588/0xc1800118-error-when-you-push-windows-10-version-1607-by-using-wsus)weer geven.
@@ -143,7 +143,7 @@ Volg de onderstaande stappen om zowel de 0xc1800118-fout als ' fout: ongeldige c
       Get-WsusClassification | Where-Object -FilterScript {$_.Classification.Title -Eq "Upgrades"} | Set-WsusClassification -Disable
       ```  
      - Als u de WSUS-data base tussen meerdere WSUS-servers deelt, hoeft u de **upgrade** voor elke Data Base slechts één keer uit te checken.  
-1. Voer op elke WSUS-server een opdracht prompt met verhoogde bevoegdheden uit `"C:\Program Files\Update Services\Tools\wsusutil.exe" postinstall /servicing`:. Start vervolgens de WSUS-service opnieuw op alle WSUS-servers.
+1. Voer op elke WSUS-server een opdracht prompt met verhoogde bevoegdheden uit: `"C:\Program Files\Update Services\Tools\wsusutil.exe" postinstall /servicing` . Start vervolgens de WSUS-service opnieuw op alle WSUS-servers.
    -  WSUS plaatst de data base in de [modus voor één gebruiker](https://docs.microsoft.com/sql/relational-databases/databases/set-a-database-to-single-user-mode) voordat wordt gecontroleerd of er onderhoud nodig is. De service wordt uitgevoerd of wordt niet uitgevoerd op basis van de resultaten van de controle. Vervolgens wordt de Data Base weer in de modus voor meerdere gebruikers geplaatst. 
    - Als u de WSUS-data base tussen meerdere WSUS-servers deelt, hoeft u dit niet één keer te doen voor elke Data Base.
 1. Verwijder alle Windows 10-upgrades van elke WSUS-data base met behulp van de Power shell-ISE die wordt uitgevoerd als Administrator.

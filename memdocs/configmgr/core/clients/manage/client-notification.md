@@ -10,12 +10,12 @@ ms.assetid: deb8aac8-2bd9-4980-a25b-5f8d93051226
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8a00f77a5a902728a7c41905314511cffcfa81a5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7680c8f955773f169d56f36eb9bbe6507d2d7ce6
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714092"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427809"
 ---
 # <a name="client-notification-in-configuration-manager"></a>Client melding in Configuration Manager
 
@@ -153,6 +153,9 @@ Vanaf versie 1910 zijn er nieuwe acties voor **client diagnostiek** in de Config
 Zie [over logboek bestanden](../../plan-design/hierarchy/about-log-files.md#bkmk_reg-client)voor meer informatie over deze instellingen.
 
 Volg de status van de taak in het **diagnose. log** op de client. Wanneer client logboeken worden verzameld, wordt er aanvullende informatie geregistreerd in **MP_SinvCollFile. log** op het beheer punt en **bestand sinvproc. log** op de site server.
+
+> [!Tip]
+> Verzamelde client logboeken worden opgeslagen op basis van de instellingen voor het verzamelen van software-inventaris bestanden. De bestanden worden opgeslagen op de site server in de **map inboxes\sinv.box\filecol** -map. Er is geen limiet voor het aantal versies gedefinieerd. Met de onderhouds taak [verouderde verzamelde bestanden verwijderen](../../servers/manage/reference-for-maintenance-tasks.md#delete-aged-collected-files) worden de bestanden op basis van een schema verwijderd. Dit is standaard elke 90 dagen.
 
 ### <a name="prerequisites---client-diagnostics"></a>Vereisten-diagnostische gegevens van client
 

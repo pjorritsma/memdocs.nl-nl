@@ -10,12 +10,13 @@ ms.assetid: be680198-4cea-4378-a686-d52f382ba483
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c7610b0e60f3ea02918c9dd98858a3b2bfd7c712
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: 0811c695acba4859bf32de535a28ea55cf8eee07
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723633"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268739"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>Gegevens delen inschakelen voor desktop Analytics
 
@@ -74,6 +75,9 @@ Als u het delen van gegevens wilt inschakelen, moet u uw proxy server configurer
 > Voor privacy-en gegevens integriteit controleert Windows naar een micro soft SSL-certificaat (certificaat vastmaken) bij de communicatie met de eind punten van de diagnostische gegevens. SSL-onderscheping en-inspectie zijn niet mogelijk. Als u Desktop Analytics wilt gebruiken, moet u deze eind punten uitsluiten van SSL-inspectie.<!-- BUG 4647542 -->
 
 Vanaf versie 2002, als de Configuration Manager-site geen verbinding kan maken met de vereiste eind punten voor een Cloud service, wordt een kritieke status bericht-ID 11488 gegenereerd. Wanneer er geen verbinding kan worden gemaakt met de service, wordt de status van het SMS_SERVICE_CONNECTOR onderdeel gewijzigd in kritiek. Bekijk de gedetailleerde status in het knoop punt [onderdeel status](../core/servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus) van de Configuration Manager-console.<!-- 5566763 -->
+
+> [!NOTE]
+> Zie [open bare IP-adres ruimte van micro soft](https://www.microsoft.com/download/details.aspx?id=53602)voor meer informatie over de IP-adresbereiken van micro soft. Deze adressen worden regel matig bijgewerkt. Er is geen granulatie per service, elk IP-adres in deze bereiken kan worden gebruikt.
 
 ### <a name="server-connectivity-endpoints"></a>Server connectiviteit-eind punten
 
@@ -136,7 +140,7 @@ Apparaten configureren voor het gebruik van de context van de aangemelde gebruik
 - Zorg ervoor dat de gebruikers over proxy machtigingen beschikken om de eind punten van de diagnostische gegevens te bereiken. Deze optie vereist dat de apparaten console gebruikers hebben met proxy machtigingen, zodat u deze methode niet kunt gebruiken met headless apparaten.
 
 > [!IMPORTANT]
-> De verificatie methode voor de gebruikers proxy is niet compatibel met het gebruik van micro soft Defender Advanced Threat Protection. Dit gedrag is omdat deze verificatie afhankelijk is van de **DisableEnterpriseAuthProxy** -register sleutel die `0`is ingesteld op, terwijl micro soft Defender ATP vereist dat `1`deze is ingesteld op. Zie [instellingen voor machine proxy en Internet connectiviteit configureren in micro soft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection)voor meer informatie.
+> De verificatie methode voor de gebruikers proxy is niet compatibel met het gebruik van micro soft Defender Advanced Threat Protection. Dit gedrag is omdat deze verificatie afhankelijk is van de **DisableEnterpriseAuthProxy** -register sleutel die is ingesteld op `0` , terwijl micro soft Defender ATP vereist dat deze is ingesteld op `1` . Zie [instellingen voor machine proxy en Internet connectiviteit configureren in micro soft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection)voor meer informatie.
 
 ### <a name="device-proxy-authentication"></a>Verificatie van Device proxy
 
@@ -158,7 +162,7 @@ Deze benadering is het meest gecompliceerd omdat hiervoor de volgende configurat
 
   - Transparante proxy
 
-  - WinINET-proxy voor het hele apparaat configureren met de volgende groeps beleids instelling: **proxy-instellingen per computer (in plaats van per gebruiker) maken** (ProxySettingsPerUser = `1`)
+  - WinINET-proxy voor het hele apparaat configureren met de volgende groeps beleids instelling: **proxy-instellingen per computer (in plaats van per gebruiker) maken** (ProxySettingsPerUser = `1` )
 
   - Gerouteerde verbinding of die gebruikmaakt van Network Address Translation (NAT)
 

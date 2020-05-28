@@ -10,12 +10,12 @@ ms.assetid: 1fcc921f-085f-4b0b-9c53-1e0707211076
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c6891a46050bb83e54fb34b97d9129fcb5873785
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f877de32c9915f91d1e2d7f2d90b9b40ab69df11
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718670"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906576"
 ---
 # <a name="additional-information-about-privacy-for-configuration-manager"></a>Aanvullende informatie over privacy voor Configuration Manager
 
@@ -91,6 +91,6 @@ Zie [Endpoint Protection](../../../protect/deploy-use/endpoint-protection.md)voo
 
 Ga in de Configuration Manager-console naar de werk ruimte **bewaking** , selecteer het knoop punt **site hiërarchie** en schakel over naar de **geografische weer gave**. Met deze weer gave kunt u kaarten gebruiken die micro soft Bing Maps biedt om uw Configuration Manager fysieke server topologie weer te geven. Om deze functie in te scha kelen, wordt de locatie-informatie die u opgeeft van uw server naar de Bing Maps-webservice verzonden.
 
-Microsoft gebruikt de informatie voor de werking van Microsoft Bing Maps en voor de verbetering van de werking hiervan en voor andere Microsoft-sites en -diensten. Zie de [privacyverklaring van micro soft](https://go.microsoft.com/fwlink/?LinkId=823548)voor meer informatie.
+Microsoft gebruikt de informatie voor de werking van Microsoft Bing Maps en voor de verbetering van de werking hiervan en voor andere Microsoft-sites en -diensten. Zie de [privacyverklaring van micro soft](https://privacy.microsoft.com/privacystatement)voor meer informatie.
 
 U kunt kiezen om de geografische weergave voor de sitehiërarchie niet te gebruiken. In de weer gave standaard hiërarchie diagram kunt u de hiërarchie zien en de Bing Maps-service niet gebruiken.

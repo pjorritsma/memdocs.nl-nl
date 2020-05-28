@@ -10,12 +10,12 @@ ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c7a505296fe51aae996d429fe7da2033d3a787ff
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 542069b82ea4c68a48ccc47b79007fd2fa25322a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722562"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906014"
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>Welke vertakking van Configuration Manager moet ik gebruiken?
 
@@ -47,7 +47,7 @@ Micro soft is van plan om updates voor Configuration Manager huidige vertakking 
 
 Als u de huidige branch als een nieuwe site wilt installeren, gebruikt u [basislijn media](../servers/manage/updates.md#bkmk_Baselines). Gebruik basislijn media ook om een upgrade uit te kunnen uitvoeren van System Center 2012 Configuration Manager met Service Pack 2 of System Center 2012 R2 Configuration Manager met Service Pack 1. De toegang tot deze media is afhankelijk van hoe uw organisatie licenties Configuration Manager.
 
-U kunt ook de basislijn media gebruiken om een nieuwe site te installeren die een evaluatie-editie van de huidige vertakking is. Voor de evaluatie versie is geen licentie vereist. U kunt de Evaluation Edition voor 180 dagen gebruiken. Het biedt ondersteuning voor een upgrade naar een gelicentieerde versie van de huidige vertakking. Als u alleen een Evaluation Edition wilt installeren, haalt u deze op in het [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection).
+U kunt ook de basislijn media gebruiken om een nieuwe site te installeren die een evaluatie-editie van de huidige vertakking is. Voor de evaluatie versie is geen licentie vereist. U kunt de Evaluation Edition voor 180 dagen gebruiken. Het biedt ondersteuning voor een upgrade naar een gelicentieerde versie van de huidige vertakking. Als u alleen een Evaluation Edition wilt installeren, haalt u deze op uit het [evaluatie centrum](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection).
 
 > [!NOTE]
 > Gebruik Baseline media om sites te installeren voor een nieuwe Configuration Manager-hiërarchie. Als u eerder een basislijn versie hebt geïnstalleerd, gebruikt u de updates in de console om uw sites bij te werken naar een nieuwe versie.  
@@ -87,9 +87,9 @@ Als u de LTSB wilt installeren als een nieuwe site of als een upgrade van een on
 > [!TIP]  
 > Zie [System center 2016-documentatie](https://docs.microsoft.com/system-center/index)voor meer informatie over system Center 2016. In deze documentatie wordt ook beschreven hoe u System Center 2016 kunt ophalen. hiervoor is een micro soft-licentie overeenkomst of vergelijk bare rechten vereist.  
 >  
-> Als u Configuration Manager versie 1606 in het Volume Licensing Service Center (VLSC) wilt vinden, gaat u naar het tabblad **down loads en sleutels** van de [VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx), zoekt `System Center 2016`u naar en selecteert u **System center 2016 Data Center** of **System Center 2016 Standard**.  
+> Als u Configuration Manager versie 1606 in het Volume Licensing Service Center (VLSC) wilt vinden, gaat u naar het tabblad **down loads en sleutels** van de [VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx), zoekt u naar `System Center 2016` en selecteert u **System Center 2016 Data Center** of **System Center 2016 Standard**.  
 >  
-> U kunt ook een Evaluation Edition van System Center 2016 ophalen in het [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview).  
+> U kunt ook een Evaluation Edition van System Center 2016 ophalen uit het [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview).  
 
 ### <a name="features-of-the-ltsb"></a>Functies van de LTSB
 
@@ -166,6 +166,6 @@ Als u de versie van uw site wilt controleren, gaat u in de-console naar **over C
 
 ### <a name="branch"></a>Vertakking
 
-Ga in de-console naar **beheer** > **site configuratie** > **sites**en open **hiërarchie-instellingen**om de vertakking van uw site te bevestigen. Als er een actieve optie is om te converteren naar de huidige vertakking, wordt de LTSB-versie uitgevoerd op de site. Wanneer de site de huidige vertakking uitvoert, schakelt de console deze optie uit.
+Ga in de-console naar **beheer**  >  **site configuratie**  >  **sites**en open **hiërarchie-instellingen**om de vertakking van uw site te bevestigen. Als er een actieve optie is om te converteren naar de huidige vertakking, wordt de LTSB-versie uitgevoerd op de site. Wanneer de site de huidige vertakking uitvoert, schakelt de console deze optie uit.
 
 Zie [basis lijn-en update versies](../servers/manage/updates.md#bkmk_Baselines)voor meer informatie over de verschillende versies van Configuration Manager.

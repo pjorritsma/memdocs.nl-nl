@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 522e01b0d811d768d4f239bc917c2e3db08e05ef
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 2168f844f1c9ef98ea21da68b73531bca7aad999
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210074"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905177"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1806 voor Configuration Manager
 
@@ -81,10 +81,10 @@ SCUP gemaakt blijft ondersteuning bieden voor andere catalogussen en scenario's.
 
     > [!Tip]  
     > Het software-update punt vereist HTTPS omdat het een vereiste is voor de WSUS-Api's die worden gebruikt voor het afhandelen van handtekening certificaten. Clients hoeven ook geen HTTPS-functionaliteit te hebben. Raadpleeg de volgende artikelen voor hulp voor meer informatie over het inschakelen van HTTPS op WSUS:  
-    > - [Beveiligde WSUS met het Secure Sockets Layer-protocol](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) 
-    > - [Blog bericht over WSUS-ondersteuning](https://blogs.technet.microsoft.com/sus/2011/05/09/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names/)
+    > - [Beveiligde WSUS met het Secure Sockets Layer-protocol](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) 
+    > - [Blog bericht over WSUS-ondersteuning](https://docs.microsoft.com/archive/blogs/sus/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names)
 
-- Er voldoende schijf ruimte op het software-update punt, WSUSContent-map, om de binaire bron inhoud op te slaan voor software-updates van derden. De hoeveelheid vereiste opslag is afhankelijk van de leverancier, typen updates en specifieke updates die u voor implementatie publiceert. Als u de map WSUSContent naar een ander station met meer vrije ruimte wilt verplaatsen, raadpleegt u het blog bericht van het WSUS-ondersteunings team [hoe u de locatie wijzigt waar WSUS lokaal updates opslaat](https://blogs.technet.microsoft.com/sus/2008/05/19/wsus-how-to-change-the-location-where-wsus-stores-updates-locally/).  
+- Er voldoende schijf ruimte op het software-update punt, WSUSContent-map, om de binaire bron inhoud op te slaan voor software-updates van derden. De hoeveelheid vereiste opslag is afhankelijk van de leverancier, typen updates en specifieke updates die u voor implementatie publiceert. Als u de map WSUSContent naar een ander station met meer vrije ruimte wilt verplaatsen, raadpleegt u het blog bericht van het WSUS-ondersteunings team [hoe u de locatie wijzigt waar WSUS lokaal updates opslaat](https://docs.microsoft.com/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally).  
 
 - Inschakelen en implementeren van de client instelling [software-updates](../clients/deploy/about-client-settings.md#enable-third-party-software-updates) van derden inschakelen in de groep met software- **updates** .  
 
@@ -149,7 +149,7 @@ Voer de volgende stappen uit voor *software-updates* van derden die u wilt imple
 
 
 ### <a name="monitoring-progress-of-third-party-software-updates"></a>De voortgang van software-updates van derden bewaken
-Synchronisatie van software-updates van derden wordt afgehandeld door het onderdeel SMS_ISVUPDATES_SYNCAGENT op de site server. U kunt status berichten van dit onderdeel weer geven of meer gedetailleerde statussen bekijken in het SMS_ISVUPDATES_SYNCAGENT. log. Dit logboek bevindt zich op de site server in de submap **logs** van de installatiemap van de site. Dit pad is `C:\Program Files\Microsoft Configuration Manager\Logs`standaard. Zie [software-updates bewaken](../../sum/deploy-use/monitor-software-updates.md)voor meer informatie over het controleren van het algemene proces voor software-update beheer.
+Synchronisatie van software-updates van derden wordt afgehandeld door het onderdeel SMS_ISVUPDATES_SYNCAGENT op de site server. U kunt status berichten van dit onderdeel weer geven of meer gedetailleerde statussen bekijken in het SMS_ISVUPDATES_SYNCAGENT. log. Dit logboek bevindt zich op de site server in de submap **logs** van de installatiemap van de site. Dit pad is standaard `C:\Program Files\Microsoft Configuration Manager\Logs` . Zie [software-updates bewaken](../../sum/deploy-use/monitor-software-updates.md)voor meer informatie over het controleren van het algemene proces voor software-update beheer.
 
 
 ### <a name="known-issues"></a>Bekende problemen
@@ -191,9 +191,6 @@ Er is ook een nieuwe globale voor waarde, **zijn Office 365-toepassingen die wor
 <!--1357861-->
 Pakket conversie beheer is nu een geïntegreerd hulp programma waarmee u verouderde Configuration Manager 2007-pakketten kunt converteren naar Configuration Manager huidige branch-toepassingen. Vervolgens kunt u de functies van toepassingen gebruiken, zoals afhankelijkheden, vereisten regels en gebruikers affiniteit met apparaat.
 
-> [!Tip]  
-> Oudere documentatie voor de bestaande functionaliteit in package Conversion Manager is beschikbaar op [TechNet](https://technet.microsoft.com/library/hh531519.aspx). Relevante informatie wordt in het proces gemigreerd naar de docs.microsoft.com-bibliotheek.
-
 ### <a name="try-it-out"></a>Probeer het nu!
  Probeer de taken uit te voeren. Stuur vervolgens [feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) en laat ons weten hoe het heeft gewerkt.
 
@@ -206,7 +203,6 @@ Pakket conversie beheer is nu een geïntegreerd hulp programma waarmee u veroude
      - **Pakket converteren**: sommige pakketten kunnen eenvoudig worden geconverteerd in toepassingen met deze actie.
      - **Herstellen en converteren**: voor sommige pakketten moeten problemen worden opgelost voordat deze naar toepassingen worden geconverteerd.  
 
-   Zie [pakketten analyseren en converteren](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/hh846244%28v%3dtechnet.10%29)voor meer informatie over deze acties.  
 
 3. Ga naar de werk ruimte **bewaking** en selecteer **pakket conversie status**. Dit nieuwe dash board toont de algemene analyse-en conversie status van de pakketten in de-site. Met een nieuwe achtergrond taak worden automatisch de analyse gegevens samenvatten.  
 
@@ -238,7 +234,7 @@ U kunt nu software-updates implementeren op apparaten zonder eerst software-upda
 Het hulp programma voor het aanpassen van Office is nu geïntegreerd met het installatie programma van Office 365 in de Configuration Manager-console. Bij het maken van een implementatie voor Office 365 kunt u nu de meest recente Office-beheer baarheid-instellingen dynamisch configureren. Het hulp programma voor het aanpassen van Office wordt op hetzelfde moment bijgewerkt als de release van de nieuwe builds van Office 365. U kunt nu profiteren van nieuwe beheer instellingen in Office 365 zodra deze beschikbaar zijn. 
 
 ### <a name="prerequisites"></a>Vereisten
-- De computer waarop de Configuration Manager-console wordt uitgevoerd, heeft Internet toegang nodig via HTTPS-poort 443. De Office 365-client installatie wizard gebruikt een Windows standaard webbrowser-API om https://config.office.comte openen. Als er een Internet proxy wordt gebruikt, moet de gebruiker toegang hebben tot deze URL.
+- De computer waarop de Configuration Manager-console wordt uitgevoerd, heeft Internet toegang nodig via HTTPS-poort 443. De Office 365-client installatie wizard gebruikt een Windows standaard webbrowser-API om te openen https://config.office.com . Als er een Internet proxy wordt gebruikt, moet de gebruiker toegang hebben tot deze URL.
 
 ### <a name="try-it-out"></a>Probeer het nu!
  Probeer de taken uit te voeren. Stuur vervolgens [feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) en laat ons weten hoe het heeft gewerkt.

@@ -10,12 +10,12 @@ ms.assetid: 3cd9c725-6b42-427d-9191-86e67f84e48c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7a14b79a9e7fd91b6470836b4271a669725065bd
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 52c2b70d2b094d5a89d80aafa61f1db67a53816f
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771172"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83987712"
 ---
 # <a name="use-a-cloud-distribution-point-in-configuration-manager"></a>Een Cloud distributiepunt gebruiken in Configuration Manager
 
@@ -174,7 +174,9 @@ Wanneer u een Cloud distributiepunt in uw hiërarchie gebruikt, gebruikt u de vo
 
 ### <a name="deployment-settings"></a>Implementatie-instellingen
 
-- Wanneer u een taken reeks implementeert met de optie om **inhoud lokaal te downloaden wanneer deze nodig is voor het uitvoeren van de taken reeks**, bevat het beheer punt geen Cloud distributiepunt als inhouds locatie. Implementeer de taken reeks met de optie **alle inhoud lokaal downloaden voordat de taken reeks wordt gestart** zodat clients een Cloud distributiepunt kunnen gebruiken.  
+- **Down load de inhoud lokaal wanneer dit nodig is voor de taken reeks die wordt uitgevoerd**. Vanaf versie 1910 kan de engine van de taken reeks pakketten op aanvraag downloaden van een CMG of een Cloud distributiepunt. Deze wijziging biedt extra flexibiliteit met uw Windows 10-in-place upgrade implementaties op apparaten op internet.
+
+- **Alle inhoud lokaal downloaden voordat de taken reeks wordt gestart**. In Configuration Manager versie 1906 en lager, werken andere opties, zoals **het lokaal downloaden van inhoud wanneer dit nodig is voor de taken reeks die wordt uitgevoerd** , niet in dit scenario. De taken reeks engine kan geen inhoud downloaden van een Cloud bron. De Configuration Manager-client moet de inhoud van de Cloud bron downloaden voordat de taken reeks wordt gestart. U kunt deze optie nog steeds gebruiken in versie 1910, indien nodig om aan uw vereisten te voldoen.
 
 - Een Cloud distributiepunt biedt geen ondersteuning voor pakket implementaties met de optie om het **programma uit te voeren vanaf het distributie punt**. Gebruik de implementatie optie om **inhoud te downloaden vanaf een distributie punt en lokaal uit te voeren**.  
 

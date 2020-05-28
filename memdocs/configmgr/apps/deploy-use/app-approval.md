@@ -2,7 +2,7 @@
 title: Toepassingen goedkeuren
 titleSuffix: Configuration Manager
 description: Meer informatie over de instellingen en het gedrag voor het goed keuren van toepassingen in Configuration Manager.
-ms.date: 04/30/2020
+ms.date: 05/04/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 20493c86-6454-4b35-8f22-0d049b68b8bb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fac75f0f13141c86b29d0213b3c7b06b9f603062
-ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
+ms.openlocfilehash: f725c1b7dc380a84cd94e666b98dbd309df3744c
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82643229"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802052"
 ---
 # <a name="approve-applications-in-configuration-manager"></a>Toepassingen goed keuren in Configuration Manager
 
@@ -109,6 +109,9 @@ Met deze vereisten ontvangen ontvangers een e-mail met een melding van de aanvra
 
 - [E-mail meldingen voor waarschuwingen](../../core/servers/manage/use-alerts-and-the-status-system.md#to-configure-email-notification-for-alerts)configureren.  
 
+    > [!NOTE]
+    > De gebruiker met beheerders rechten die de toepassing implementeert, heeft toestemming nodig om een waarschuwing en een abonnement te maken. Als deze gebruiker niet over deze machtigingen beschikt, zien ze een fout aan het einde van de **wizard software implementeren**: "u hebt geen beveiligings rechten om deze bewerking uit te voeren."<!-- 2810283 -->
+
 - Schakel de SMS-provider op de primaire site in om een certificaat te gebruiken.<!--SCCMDocs-pr issue 3135--> Gebruik een van de volgende opties:  
 
   - Aanbevelingen [Uitgebreide http](../../core/plan-design/hierarchy/enhanced-http.md) inschakelen voor de primaire site.
@@ -127,39 +130,39 @@ Met deze aanvullende optionele vereisten kan de ontvanger de aanvraag vanaf elke
 
 - Schakel de service SMS-provider beheer in via de Cloud beheer gateway. Ga in de Configuration Manager-console naar de werk ruimte **beheer** , vouw **site configuratie**uit en selecteer het knoop punt **servers en site systeem rollen** . Selecteer de server met de functie SMS-provider. Selecteer in het detail venster de rol **SMS-provider** en selecteer **Eigenschappen** in het lint op het tabblad siterol. selecteer de optie om **Configuration Manager Cloud beheer gateway verkeer voor de beheer service toe te staan**.  
 
-  - De SMS-provider vereist **.net 4.5.2** of hoger.  
+- De SMS-provider vereist **.net 4.5.2** of hoger.  
 
-- [Cloudbeheergateway](../../core/clients/manage/cmg/plan-cloud-management-gateway.md)  
+- Stel een [Cloud beheer gateway](../../core/clients/manage/cmg/plan-cloud-management-gateway.md)in.
 
-- De site onboarden naar [Azure-Services](../../core/servers/deploy/configure/azure-services-wizard.md) voor **Cloud beheer**  
+- De site onboarden naar [Azure-Services](../../core/servers/deploy/configure/azure-services-wizard.md) voor **Cloud beheer**.
 
-  - [Azure AD-gebruikers detectie](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc) inschakelen  
+- Schakel [Azure AD-gebruikers detectie](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc)in.
 
-  - Instellingen in azure AD hand matig configureren:  
+- Instellingen in azure AD hand matig configureren:  
 
-        1. Ga naar de [Azure Portal](https://portal.azure.com) als gebruiker met *globale beheerders* machtigingen. Ga naar **Azure Active Directory**en selecteer **app-registraties**.  
+    1. Ga naar de [Azure Portal](https://portal.azure.com) als gebruiker met *globale beheerders* machtigingen. Ga naar **Azure Active Directory**en selecteer **app-registraties**.  
 
-        2. Selecteer de toepassing die u hebt gemaakt voor Configuration Manager integratie van **Cloud beheer** .  
+    1. Selecteer de toepassing die u hebt gemaakt voor Configuration Manager integratie van **Cloud beheer** .  
 
-        3. Selecteer in het menu **beheren** de optie **verificatie**.  
+    1. Selecteer in het menu **beheren** de optie **verificatie**.  
 
-            1. Plak in het gedeelte **omleidings-uri's** in het volgende pad:`https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`  
+        1. Plak in het gedeelte **omleidings-uri's** in het volgende pad:`https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`  
 
-            2. Vervang `<CMG FQDN>` door de Fully QUALIFIED domain name (FQDN) van uw CMG-service (Cloud Management Gateway). Bijvoorbeeld GraniteFalls.Contoso.com.  
+        1. Vervang door `<CMG FQDN>` de Fully Qualified Domain Name (FQDN) van uw CMG-service (Cloud Management Gateway). Bijvoorbeeld GraniteFalls.Contoso.com.  
 
-            3. Selecteer vervolgens **Opslaan**.  
+        1. Selecteer vervolgens **Opslaan**.  
 
-        4. Selecteer in het menu **beheren** de optie **manifest**.  
+    1. Selecteer in het menu **beheren** de optie **manifest**.  
 
-            1. Zoek in het deel venster manifest bewerken de eigenschap **oauth2AllowImplicitFlow** .  
+        1. Zoek in het deel venster manifest bewerken de eigenschap **oauth2AllowImplicitFlow** .  
 
-            2. Wijzig de waarde in **True**. De volledige regel moet er bijvoorbeeld uitzien als in de volgende regel:`"oauth2AllowImplicitFlow": true,`  
+        1. Wijzig de waarde in **True**. De volledige regel moet er bijvoorbeeld uitzien als in de volgende regel:`"oauth2AllowImplicitFlow": true,`  
 
-            3. Selecteer **Opslaan**.  
+        1. Selecteer **Opslaan**.  
 
 ### <a name="configure-email-approval"></a>Goed keuring van e-mail configureren
 
-1. Implementeer in de Configuration Manager-console [een toepassing](deploy-applications.md) als beschikbaar voor een verzameling gebruikers. Schakel op de pagina **implementatie-instellingen** het in voor goed keuring. Voer vervolgens een of meer e-mail adressen in om een melding te ontvangen. Scheid e-mail adressen met een punt komma`;`().  
+1. Implementeer in de Configuration Manager-console [een toepassing](deploy-applications.md) als beschikbaar voor een verzameling gebruikers. Schakel op de pagina **implementatie-instellingen** het in voor goed keuring. Voer vervolgens een of meer e-mail adressen in om een melding te ontvangen. Scheid e-mail adressen met een punt komma ( `;` ).  
 
      > [!Note]  
      > Iedereen in uw Azure AD-organisatie die het e-mail bericht ontvangt, kan de aanvraag goed keuren. Stuur het e-mail bericht niet door naar anderen, tenzij u wilt dat ze actie ondernemen.  

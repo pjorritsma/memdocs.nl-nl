@@ -10,12 +10,12 @@ ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 14f319cfa1d09cf21cc5da5ed4a9fde9b9b9799b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b17c8c9ed0c1f6f9a5aeb487e07ad3d3dc66cbae
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723864"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82903960"
 ---
 # <a name="recover-a-configuration-manager-site"></a>Een Configuration Manager-site herstellen
 
@@ -50,7 +50,7 @@ Gebruik een van de volgende procedures om een bestaande server op te schonen:
 #### <a name="clean-an-existing-server-for-site-server-recovery-only"></a>Een bestaande server alleen voor herstel van de site server opschonen
 
 1. SMS-register sleutels verwijderen:`HKLM\Software\Microsoft\SMS`
-2. Verwijder register vermeldingen die beginnen met `SMS` van `HKLM\System\CurrentControlSet\Services`. Bijvoorbeeld:
+2. Verwijder register vermeldingen die beginnen met `SMS` van `HKLM\System\CurrentControlSet\Services` . Bijvoorbeeld:
     - SMS_DISCOVERY_DATA_MANAGER
     - SMS_EXECUTIVE
     - SMS_INBOX_MONITOR
@@ -193,7 +193,7 @@ Gebruik deze optie wanneer er geen gegevens verlies is opgetreden op de Configur
 
 Configuration Manager kunt wijzigingen bijhouden inschakelen voor de site database in SQL Server. Met de functie voor het bijhouden van wijzigingen kan Configuration Manager query's uitvoeren op informatie over de wijzigingen die zijn aangebracht in database tabellen na een eerder tijdstip. De Bewaar periode geeft aan hoe lang de gegevens voor het bijhouden van wijzigingen worden bewaard. De site database is standaard geconfigureerd voor een Bewaar periode van vijf dagen. Wanneer u een sitedatabase herstelt, vindt het herstelproces anders plaats als uw back-up binnen of buiten de bewaarperiode valt. Als uw SQL Server bijvoorbeeld uitvalt en uw laatste back-up zeven dagen oud is, is het buiten de Bewaar periode.
 
-Voor meer informatie over SQL Server interne wijzigingen bijhouden raadpleegt u de volgende blog berichten van het SQL Server team: [Wijzigingen bijhouden opschonen-deel 1](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-1/) en [Wijzigingen bijhouden opschoning onderdeel 2](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-2).
+Voor meer informatie over SQL Server interne wijzigingen bijhouden raadpleegt u de volgende blog berichten van het SQL Server team: [Wijzigingen bijhouden opschonen-deel 1](https://docs.microsoft.com/archive/blogs/sql_server_team/change-tracking-cleanup-part-1) en [Wijzigingen bijhouden opschoning onderdeel 2](https://docs.microsoft.com/archive/blogs/sql_server_team/change-tracking-cleanup-part-2).
 
 ### <a name="reinitialization-of-site-or-global-data"></a>Opnieuw initialiseren van site of globale gegevens
 
@@ -263,7 +263,7 @@ Gebruik een van de volgende procedures om u te helpen uw site server en site dat
 
 1. Bereid het script voor de installatie zonder toezicht voor voor de opties die u nodig hebt voor het siteherstel. Zie [site Recovery zonder toezicht](unattended-recovery.md)voor meer informatie.  
 
-2. Voer Configuration Manager Setup uit met behulp van de `/script` opdracht regel optie. U maakt bijvoorbeeld een Setup-initialisatie bestand **installatie bijvoorbeeld configmgrunattend. ini**. U slaat deze op in `C:\Temp` de map van de computer waarop u het installatie programma uitvoert. Gebruik de volgende opdracht:  
+2. Voer Configuration Manager Setup uit met behulp van de `/script` opdracht regel optie. U maakt bijvoorbeeld een Setup-initialisatie bestand **installatie bijvoorbeeld configmgrunattend. ini**. U slaat deze op in de `C:\Temp` map van de computer waarop u het installatie programma uitvoert. Gebruik de volgende opdracht:  
 
     `setup.exe /script C:\temp\ConfigMgrUnattend.ini`  
 
@@ -380,7 +380,7 @@ Sommige klanten maken aangepaste rapporten in SQL Server Reporting Services. Wan
 
 De site database houdt in dat de site server de inhouds bestanden opslaat. Er wordt geen back-up gemaakt van de inhouds bestanden en deze worden niet teruggezet als onderdeel van het back-up-en herstel proces. Als u inhouds bestanden volledig wilt herstellen, herstelt u de inhouds bibliotheek en pakket bron bestanden op de oorspronkelijke locatie. Er zijn verschillende methoden om uw inhouds bestanden te herstellen. De eenvoudigste methode is om de bestanden terug te zetten vanuit een back-up van een bestands systeem van de site server.
 
-Als u geen back-up van het bestands systeem voor de pakket bron bestanden hebt, moet u deze hand matig kopiëren of downloaden. Dit proces is vergelijkbaar met wanneer u het pakket oorspronkelijk hebt gemaakt. Voer de volgende query uit in SQL Server om de bron locatie van het pakket voor alle pakketten en `SELECT * FROM v_Package`toepassingen te vinden:. Bepaal de bron site van het pakket door de eerste drie tekens van de pakket-ID te bekijken. Als de pakket-id bijvoorbeeld CEN00001 is, is de sitecode van de bronsite CEN. Wanneer u de pakketbronbestanden herstelt, moeten deze op dezelfde locatie worden hersteld waar deze zich vóór de fout bevonden.
+Als u geen back-up van het bestands systeem voor de pakket bron bestanden hebt, moet u deze hand matig kopiëren of downloaden. Dit proces is vergelijkbaar met wanneer u het pakket oorspronkelijk hebt gemaakt. Voer de volgende query uit in SQL Server om de bron locatie van het pakket voor alle pakketten en toepassingen te vinden: `SELECT * FROM v_Package` . Bepaal de bron site van het pakket door de eerste drie tekens van de pakket-ID te bekijken. Als de pakket-id bijvoorbeeld CEN00001 is, is de sitecode van de bronsite CEN. Wanneer u de pakketbronbestanden herstelt, moeten deze op dezelfde locatie worden hersteld waar deze zich vóór de fout bevonden.
 
 Als u geen bestandssysteem back-up hebt die de inhouds bibliotheek bevat, hebt u de volgende opties voor terugzetten:  
 
@@ -406,7 +406,7 @@ Als onderdeel van de eigenschappen van het status migratie punt geeft u de mappe
 
 ### <a name="regenerate-the-certificates-for-distribution-points"></a>De certificaten voor distributiepunten opnieuw genereren
 
-Nadat u een site hebt hersteld, kan in het **distmgr. log** de volgende vermelding voor een of meer distributie punten `Failed to decrypt cert PFX data`worden weer gegeven:. Deze vermelding geeft aan dat de certificaat gegevens van het distributie punt niet door de site kunnen worden ontsleuteld. U kunt dit probleem oplossen door het certificaat opnieuw te genereren of opnieuw te importeren voor de betrokken distributie punten. Gebruik de Power shell [-cmdlet Set-CMDistributionPoint](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmdistributionpoint) .
+Nadat u een site hebt hersteld, kan in het **distmgr. log** de volgende vermelding voor een of meer distributie punten worden weer gegeven: `Failed to decrypt cert PFX data` . Deze vermelding geeft aan dat de certificaat gegevens van het distributie punt niet door de site kunnen worden ontsleuteld. U kunt dit probleem oplossen door het certificaat opnieuw te genereren of opnieuw te importeren voor de betrokken distributie punten. Gebruik de Power shell [-cmdlet Set-CMDistributionPoint](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmdistributionpoint) .
 
 ### <a name="update-certificates-used-for-cloud-based-distribution-points"></a>Certificaten bijwerken die worden gebruikt voor distributie punten in de Cloud
 

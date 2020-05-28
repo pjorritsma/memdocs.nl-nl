@@ -10,12 +10,13 @@ ms.assetid: 2ea18d09-c957-47f7-8e54-c6f2b3c74347
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e9cca066d389ea8d3847737651f4994977a5e2f5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: 22b5461df3a560449316009471ea029967118f5d
+ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723612"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83864890"
 ---
 # <a name="how-to-enroll-devices-in-desktop-analytics"></a>Apparaten inschrijven in Desktop Analytics
 
@@ -33,13 +34,13 @@ Installeer de nieuwste versie van deze onderdelen om de beste ervaring met Deskt
 
 De volgende tabel geeft een overzicht van de updates voor elk onderdeel op ondersteunde versies van besturings systemen:
 
-| Versie van het besturingssysteem | Beoordeling | DiagTrack |
+| Besturingssysteemversie | Beoordeling | DiagTrack |
 | --------------| ----------------------- | -------------------|
 | Windows 10 1909 | Opgenomen <sup> [Opmerking 1](#bkmk_note1)</sup> | [Meest recente cumulatieve update](https://support.microsoft.com/help/4529964) |
-| Windows 10 1903 | Inbegrepen | [Meest recente cumulatieve update](https://support.microsoft.com/help/4498140) |
-| Windows 10 1809 | Inbegrepen | [Meest recente cumulatieve update](https://support.microsoft.com/help/4464619) |
-| Windows 10 1803 | Inbegrepen | [Meest recente cumulatieve update](https://support.microsoft.com/help/4099479) |
-| Windows 10 1709 | Inbegrepen | [Meest recente cumulatieve update](https://support.microsoft.com/help/4043454) |
+| Windows 10 1903 | Opgenomen <sup> [Opmerking 1](#bkmk_note1)</sup> | [Meest recente cumulatieve update](https://support.microsoft.com/help/4498140) |
+| Windows 10 1809 | Opgenomen <sup> [Opmerking 1](#bkmk_note1)</sup> | [Meest recente cumulatieve update](https://support.microsoft.com/help/4464619) |
+| Windows 10 1803 | Opgenomen <sup> [Opmerking 1](#bkmk_note1)</sup> | [Meest recente cumulatieve update](https://support.microsoft.com/help/4099479) |
+| Windows 10 1709 | Opgenomen <sup> [Opmerking 1](#bkmk_note1)</sup> | [Meest recente cumulatieve update](https://support.microsoft.com/help/4043454) |
 | Windows 8.1 | [KB 2976978](https://support.microsoft.com/help/2976978) <sup> [Opmerking 2](#bkmk_note2)</sup> | [Meest recente maandelijkse Rollup](https://support.microsoft.com/help/4009470) |
 | Windows 7 SP1 | [KB 2952664](https://support.microsoft.com/help/2952664) <sup> [Opmerking 3](#bkmk_note3)</sup> | [Meest recente maandelijkse Rollup](https://support.microsoft.com/help/4009469) |
 
@@ -50,7 +51,7 @@ De volgende tabel geeft een overzicht van de updates voor elk onderdeel op onder
 
 ### <a name="note-1-windows-10"></a><a name="bkmk_note1"></a>Opmerking 1: Windows 10
 
-Hoewel Windows 10 deze onderdelen bevat, is voor Windows 10-apparaten standaard de meest recente cumulatieve update nodig om de volledige functionaliteit van Desktop Analytics te krijgen. Bijvoorbeeld, om het apparaat te beoordelen op compatibiliteit met de meest recente versie van het besturings systeem en de bijna realtime informatie te verkrijgen voor implementaties en inschrijvings status.
+Hoewel Windows 10 deze onderdelen bevat, is voor Windows 10-apparaten standaard de meest recente cumulatieve update nodig om de volledige functionaliteit van Desktop Analytics te krijgen, zoals het evalueren van het apparaat voor compatibiliteit met de meest recente versie van het besturings systeem.
 
 ### <a name="note-2-windows-81"></a><a name="bkmk_note2"></a>Opmerking 2: Windows 8,1
 
@@ -125,7 +126,7 @@ Er is een optie in de Configuration Manager instellingen voor desktop Analytics 
 
 In het algemeen gebruikt u Configuration Manager verzamelingen om instellingen en registraties voor desktop Analytics te richten. Gebruik direct lidmaatschap of query's om apparaten op te nemen of uit te sluiten van de verzameling. Zie [verzamelingen maken](../core/clients/manage/collections/create-collections.md)voor meer informatie.
 
-Configuration Manager configureert alleen de Windows-instellingen als er nog geen waarde bestaat. Als u verschillende instellingen voor een unieke groep apparaten wilt configureren, kunt u [groeps beleid](group-policy-settings.md)gebruiken. Instellingen die zijn gericht op groeps beleid hebben voor rang op Configuration Manager instellingen.
+Configuration Manager configureert alleen de Windows-instellingen als er nog geen waarde bestaat. Als u verschillende instellingen voor een unieke groep apparaten wilt configureren, kunt u [groeps beleid](group-policy-settings.md)gebruiken. Instellingen die zijn gericht op groeps beleid hebben voor rang op Configuration Manager instellingen. Apparaten waarop groeps beleid is gericht, geven mogelijk niet de juiste status weer in het dash board voor [verbindings status](monitor-connection-health.md) .
 
 Wanneer u het niveau van de diagnostische gegevens configureert, stelt u de bovenste grens voor het apparaat in. In Windows 10 versie 1803 en hoger kunnen gebruikers ervoor kiezen om een lager niveau in te stellen. U kunt dit gedrag best uren met behulp van de groeps beleids instelling, de **optie voor het instellen van telemetrie configureren van de gebruikers interface**. Zie voor meer informatie [groeps beleids instellingen voor desktop Analytics](group-policy-settings.md).
 

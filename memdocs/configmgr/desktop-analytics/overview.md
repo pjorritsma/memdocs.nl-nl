@@ -10,12 +10,13 @@ ms.assetid: 38b2bed2-20dd-4ce1-abc0-219343d2c4b8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6710170d6c86f59b1626285c618f3108f8947974
-ms.sourcegitcommit: 8a8378b685a674083bfb9fbc9c0662fb0c7dda97
+ms.reviewer: acabello
+ms.openlocfilehash: b280661c4de9282d3907b7d480477fc67f6a8dc5
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619437"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83824061"
 ---
 # <a name="what-is-desktop-analytics"></a>Wat is Desktop Analytics?
 
@@ -93,7 +94,7 @@ Als u Desktop Analytics wilt gebruiken, moet u ervoor zorgen dat uw omgeving vol
     > Desktop Analytics ondersteunt meerdere Configuration Manager hiërarchieën die rapporteren aan één Azure AD-Tenant.<!-- 4814075 --> Als u meerdere hiërarchieën in uw omgeving hebt, hebt u de volgende opties:
     >
     > - Gebruik verschillende commerciële Id's en Azure AD-tenants.
-    > - Configureer beide hiërarchieën zodat deze dezelfde commerciële ID gebruiken om het exemplaar van de Azure AD-Tenant en het bureau blad Analytics te delen.
+    > - Configureer beide hiërarchieën zodat deze dezelfde commerciële ID gebruiken om het exemplaar van de Azure AD-Tenant en het bureau blad Analytics te delen. Gebruik [verschillende apps](connect-configmgr.md#bkmk_connect) voor het verbinden van elke hiërarchie. Het kan tot 30 dagen duren nadat u een hiearchy voor de portal hebt losgekoppeld om wijzigingen weer te geven. 
 
 - Apparaten met Windows 7, Windows 8,1 of Windows 10  
 

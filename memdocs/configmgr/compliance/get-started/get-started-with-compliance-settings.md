@@ -10,12 +10,12 @@ ms.assetid: a2742d52-851e-4abc-b623-d12d91684c0b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 59b0b799fd54e0e613f78b11b48b53b19d20ddbf
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9143c224082f00b882d3cb557b47b737012393fa
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712223"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906345"
 ---
 # <a name="get-started-with-compliance-settings-in-configuration-manager"></a>Aan de slag met instellingen voor naleving in Configuration Manager
 
@@ -107,7 +107,7 @@ Zie [Windows-apparaten upgraden met het beleid voor editie-upgrades](../deploy-u
 
 ## <a name="microsoft-edge-browser-profiles"></a>Micro soft Edge-browser profielen
 <!-- 1357310 -->
-Vanaf versie 1802, voor klanten die de [micro soft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) -webbrowser op Windows 10-clients gebruiken, maakt u een beleid voor nalevings instellingen voor het configureren van verschillende instellingen voor micro soft Edge. 
+Vanaf versie 1802, voor klanten die de [micro soft Edge](https://www.microsoft.com/itpro/microsoft-edge) -webbrowser op Windows 10-clients gebruiken, maakt u een beleid voor nalevings instellingen voor het configureren van verschillende instellingen voor micro soft Edge. 
 
 Zie [micro soft Edge-browser profielen](../deploy-use/browser-profiles.md)voor meer informatie.
 

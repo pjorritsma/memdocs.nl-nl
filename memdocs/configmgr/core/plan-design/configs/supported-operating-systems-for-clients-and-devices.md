@@ -10,12 +10,12 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 57c60fcdadf3e58b59d33ecf2753789122a38ecc
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: e9e0ec6df5f80b318cb78ed8cddc986b613230e1
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078682"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904537"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Ondersteunde versies van besturings systemen voor clients en apparaten voor Configuration Manager
 
@@ -54,7 +54,7 @@ Als u in dit scenario gebruikers beleid nodig hebt en mogelijke prestatie proble
 
 - Gebruik [client instellingen](../../clients/deploy/configure-client-settings.md)In versie 1910 en hoger. Configureer in de **client beleids** groep de volgende instelling: **gebruikers beleid inschakelen voor meerdere gebruikers sessies**.<!-- 4737447 -->
 
-- Gebruik in versie 1906 de Configuration Manager SDK met de [WMI-klasse SMS_PolicyAgentConfig-server](../../../develop/reference/core/clients/config/sms_policyagentconfig-server-wmi-class.md). Stel de nieuwe `PolicyEnableUserPolicyOnTS` eigenschap in `true`op.
+- Gebruik in versie 1906 de Configuration Manager SDK met de [WMI-klasse SMS_PolicyAgentConfig-server](../../../develop/reference/core/clients/config/sms_policyagentconfig-server-wmi-class.md). Stel de nieuwe `PolicyEnableUserPolicyOnTS` eigenschap in op `true` .
 
 > [!Note]  
 > U kunt geen co-beheer gebruiken met een client met Windows 10 Enter prise multi-session. <!-- SCCMDocs-pr#3950 -->
@@ -209,7 +209,7 @@ Zie [clients implementeren op Macs](../../clients/deploy/deploy-clients-to-macs.
 > [!Important]  
 > Configuration Manager versie 1902 daalt ondersteuning voor Linux en UNIX als een-client. De afschaffing werd aangekondigd met [versie 1802](../changes/whats-new-in-version-1802.md#deprecation-announcement-for-linux-and-unix-client-support). Overweeg Microsoft Azure beheer voor het beheer van Linux-servers. Azure-oplossingen hebben uitgebreide Linux-ondersteuning die in de meeste gevallen de functionaliteit van Configuration Manager overschrijden, waaronder end-to-end patch management voor Linux.
 
-De Linux-en UNIX-client installatie pakketten worden niet geleverd met de Configuration Manager media. Down load de **clients voor aanvullende besturings systemen** via het [micro soft Download centrum](https://go.microsoft.com/fwlink/?LinkID=525184). Naast client installatie pakketten bevat de client Download het script waarmee de installatie van de client op elke computer wordt beheerd.  
+De Linux-en UNIX-client installatie pakketten worden niet geleverd met de Configuration Manager media. Down load de **clients voor aanvullende besturings systemen** via het [micro soft Download centrum](https://www.microsoft.com/download/details.aspx?id=47719). Naast client installatie pakketten bevat de client Download het script waarmee de installatie van de client op elke computer wordt beheerd.  
 
 ### <a name="requirements-and-limitations"></a>Vereisten en beperkingen
 
@@ -229,89 +229,89 @@ De volgende versies worden ondersteund door het aangegeven. tar-bestand te gebru
 
 |Versie|TAR-bestand|  
 |-|-|  
-|Versie 6,1 (voeding)|CCM-Aix61ppc. &lt;build\>. tar|  
-|Versie 7,1 (voeding)|CCM-Aix71ppc. &lt;build\>. tar|  
+|Versie 6,1 (voeding)|CCM-Aix61ppc. &lt; Build \> . tar|  
+|Versie 7,1 (voeding)|CCM-Aix71ppc. &lt; Build \> . tar|  
 
 #### <a name="centos"></a>CentOS  
 
 |Versie|TAR-bestand|  
 |-|-|  
-|Versie 5 x86|CCM-Universalx86. &lt;build\>. tar|  
-|Versie 5 x64|CCM-Universalx64. &lt;build\>. tar|  
-|Versie 6 x86|CCM-Universalx86. &lt;build\>. tar|  
-|Versie 6 x64|CCM-Universalx64. &lt;build\>. tar|  
-|Versie 7 x64|CCM-Universalx64. &lt;build\>. tar|  
+|Versie 5 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Versie 5 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Versie 6 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Versie 6 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Versie 7 x64|CCM-Universalx64. &lt; Build \> . tar|  
 
 #### <a name="debian"></a>Debian  
 
 |Versie|TAR-bestand|  
 |-|-|  
-|Versie 5 x86|CCM-Universalx86. &lt;build\>. tar|  
-|Versie 5 x64|CCM-Universalx64. &lt;build\>. tar|  
-|Versie 6 x86|CCM-Universalx86. &lt;build\>. tar|  
-|Versie 6 x64|CCM-Universalx64. &lt;build\>. tar|  
-|Versie 7 x86|CCM-Universalx86. &lt;build\>. tar|  
-|Versie 7 x64|CCM-Universalx64. &lt;build\>. tar|  
-|Versie 8 x86|CCM-Universalx86. &lt;build\>. tar|  
-|Versie 8 x64|CCM-Universalx64. &lt;build\>. tar|  
+|Versie 5 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Versie 5 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Versie 6 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Versie 6 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Versie 7 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Versie 7 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Versie 8 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Versie 8 x64|CCM-Universalx64. &lt; Build \> . tar|  
 
 #### <a name="hp-ux"></a>HP-UX  
 
 |Versie|TAR-bestand|  
 |-|-|  
-|Versie 11iv3 IA64|CCM-HpuxB. 11.31 i64. &lt;build\>. tar|  
+|Versie 11iv3 IA64|CCM-HpuxB. 11.31 i64. &lt; Build \> . tar|  
 
 #### <a name="oracle-linux"></a>Oracle Linux  
 
 |Versie|TAR-bestand|  
 |-|-|  
-|Versie 5 x86|CCM-Universalx86. &lt;build\>. tar|  
-|Versie 5 x64|CCM-Universalx64. &lt;build\>. tar|  
-|Versie 6 x86|CCM-Universalx86. &lt;build\>. tar|  
-|Versie 6 x64|CCM-Universalx64. &lt;build\>. tar|  
-|Versie 7 x64|CCM-Universalx64. &lt;build\>. tar|  
+|Versie 5 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Versie 5 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Versie 6 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Versie 6 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Versie 7 x64|CCM-Universalx64. &lt; Build \> . tar|  
 
 #### <a name="red-hat-enterprise-linux-rhel"></a>Red Hat Enterprise Linux (RHEL)  
 
 |Versie|TAR-bestand|  
 |-|-|  
-|Versie 5 x86|CCM-Universalx86. &lt;build\>. tar|  
-|Versie 5 x64|CCM-Universalx64. &lt;build\>. tar|  
-|Versie 6 x86|CCM-Universalx86. &lt;build\>. tar|  
-|Versie 6 x64|CCM-Universalx64. &lt;build\>. tar|  
-|Versie 7 x64|CCM-Universalx64. &lt;build\>. tar|  
+|Versie 5 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Versie 5 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Versie 6 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Versie 6 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Versie 7 x64|CCM-Universalx64. &lt; Build \> . tar|  
 
 #### <a name="solaris"></a>Sun  
 
 |Versie|TAR-bestand|  
 |-|-|  
-|Versie 10 x86|CCM-Sol10x86. &lt;build\>. tar|  
-|Versie 10 SPARC|CCM-Sol10sparc. &lt;build\>. tar|  
-|Versie 11 x86|CCM-Sol11x86. &lt;build\>. tar|  
-|Versie 11 SPARC|CCM-Sol11sparc. &lt;build\>. tar|  
+|Versie 10 x86|CCM-Sol10x86. &lt; Build \> . tar|  
+|Versie 10 SPARC|CCM-Sol10sparc. &lt; Build \> . tar|  
+|Versie 11 x86|CCM-Sol11x86. &lt; Build \> . tar|  
+|Versie 11 SPARC|CCM-Sol11sparc. &lt; Build \> . tar|  
 
 #### <a name="suse-linux-enterprise-server-sles"></a>SUSE Linux Enterprise Server (SLES)  
 
 |Versie|TAR-bestand|  
 |-|-|  
-|Versie 10 SP1 x86|CCM-Universalx86. &lt;build\>. tar|  
-|Versie 10 SP1 x64|CCM-Universalx64. &lt;build\>. tar|  
-|Versie 11 SP1 x86|CCM-Universalx86. &lt;build\>. tar|  
-|Versie 11 SP1 x64|CCM-Universalx64. &lt;build\>. tar|  
-|Versie 12 x64|CCM-Universalx64. &lt;build\>. tar|  
+|Versie 10 SP1 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Versie 10 SP1 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Versie 11 SP1 x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Versie 11 SP1 x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Versie 12 x64|CCM-Universalx64. &lt; Build \> . tar|  
 
 #### <a name="ubuntu"></a>Ubuntu  
 
 |Versie|TAR-bestand|  
 |-|-|  
-|Versie 10,04 LTS x86|CCM-Universalx86. &lt;build\>. tar|  
-|Versie 10,04 LTS x64|CCM-Universalx64. &lt;build\>. tar|  
-|Versie 12,04 LTS x86|CCM-Universalx86. &lt;build\>. tar|  
-|Versie 12,04 LTS x64|CCM-Universalx64. &lt;build\>. tar|  
-|Versie 14,04 LTS x86|CCM-Universalx86. &lt;build\>. tar|  
-|Versie 14,04 LTS x64|CCM-Universalx64. &lt;build\>. tar|  
-|Versie 16,04 LTS x86|CCM-Universalx86. &lt;build\>. tar|  
-|Versie 16,04 LTS x64|CCM-Universalx64. &lt;build\>. tar|  
+|Versie 10,04 LTS x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Versie 10,04 LTS x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Versie 12,04 LTS x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Versie 12,04 LTS x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Versie 14,04 LTS x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Versie 14,04 LTS x64|CCM-Universalx64. &lt; Build \> . tar|  
+|Versie 16,04 LTS x86|CCM-Universalx86. &lt; Build \> . tar|  
+|Versie 16,04 LTS x64|CCM-Universalx64. &lt; Build \> . tar|  
 
 
 ## <a name="on-premises-mdm"></a><a name="bkmk_OnpremOS"></a>On-premises MDM

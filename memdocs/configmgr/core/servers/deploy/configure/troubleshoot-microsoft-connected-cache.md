@@ -10,19 +10,19 @@ ms.assetid: 121e0341-4f51-4d54-a357-732c26caf7c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e5be6158a2ed7d79af2bee72c81a462e4d83b68e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0a8c975798c506339a981e8648003387dc1e9838
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718285"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83878103"
 ---
 # <a name="troubleshoot-microsoft-connected-cache-in-configuration-manager"></a>Problemen met micro soft Connected cache in Configuration Manager oplossen
 
 In dit artikel vindt u technische gegevens over micro soft Connected cache in Configuration Manager. Gebruik dit hulp programma om problemen op te lossen die in uw omgeving mogelijk zijn. Zie voor meer informatie over hoe het werkt en hoe u deze kunt gebruiken [micro soft Connected cache in Configuration Manager](../../../plan-design/hierarchy/microsoft-connected-cache.md).
 
 > [!NOTE]
-> Vanaf versie 1910 wordt deze functie nu **micro soft Connected cache**genoemd. Voorheen bekend als Delivery Optimization in-Network cache (DOINC).
+> Vanaf versie 1910 wordt deze functie nu **micro soft Connected cache**genoemd. Het was voorheen bekend als Delivery Optimization in-Network cache.
 
 ## <a name="verify"></a>Verifiëren
 
@@ -70,18 +70,18 @@ ExpireOn                    : 9/6/2019 8:36:19 AM
 IsPinned                    : False
 ```
 
-U ziet dat `BytesFromCacheServer` het kenmerk niet gelijk is aan nul.
+U ziet dat het `BytesFromCacheServer` kenmerk niet gelijk is aan nul.
 
 Als de client onjuist is geconfigureerd of de cache server niet correct is geïnstalleerd, gaat de Delivery Optimization-client terug naar de oorspronkelijke Cloud bron. Het kenmerk BytesFromCacheServer is dan nul.
 
 ### <a name="verify-on-the-server"></a><a name="bkmk_verify-server"></a>Controleren op de server
 
-Controleer eerst of de register eigenschappen correct zijn geconfigureerd: `HKLM\SOFTWARE\Microsoft\Delivery Optimization In-Network Cache`. De locatie van de schijf cache is `PrimaryDrivesInput\DOINC-E77D08D0-5FEA-4315-8C95-10D359D59294`bijvoorbeeld, waar `PrimaryDrivesInput` meerdere stations kunnen zijn, zoals `C,D,E`.
+Controleer eerst of de register eigenschappen correct zijn geconfigureerd: `HKLM\SOFTWARE\Microsoft\Delivery Optimization In-Network Cache` . De locatie van de schijf cache is bijvoorbeeld `PrimaryDrivesInput\DOINC-E77D08D0-5FEA-4315-8C95-10D359D59294` , waar `PrimaryDrivesInput` meerdere stations kunnen zijn, zoals `C,D,E` .
 
 Gebruik vervolgens de volgende methode om een client Download aanvraag naar de server met de verplichte headers te simuleren.
 
 1. Open een 64-bits Power shell-venster als beheerder.
-2. Voer de volgende opdracht uit en vervang de naam of het IP-adres van uw `<DoincServer>`server voor:
+2. Voer de volgende opdracht uit en vervang de naam of het IP-adres van uw server voor `<DoincServer>` :
 
 ```PowerShell
 Invoke-WebRequest -URI "http://<DoincServer>/mscomtest/wuidt.gif" -Headers @{"Host"="b1.download.windowsupdate.com"}
@@ -116,7 +116,7 @@ De volgende kenmerken duiden op geslaagd:
 
 - Setup-logboek voor ARR:`%temp%\arr_setup.log`
 
-- Logboek voor installatie van cache server `SMS_DP$\Ms.Dsp.Do.Inc.Setup\DoincSetup.log` : op het distributie punt en `DistMgr.log` op de site server
+- Logboek voor installatie van cache server: `SMS_DP$\Ms.Dsp.Do.Inc.Setup\DoincSetup.log` op het distributie punt en `DistMgr.log` op de site server
 
 - Operationele logboeken van IIS: standaard`%SystemDrive%\inetpub\logs\LogFiles`
 

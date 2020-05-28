@@ -10,12 +10,12 @@ ms.assetid: c631197d-7daa-4faa-9e22-980cd6d604c2
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 21279eb2f7d7962d1286d60a599411912d38313a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: da2fe2ad66617ffb5ad3058011f111b0aaf9e9ae
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718600"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82903912"
 ---
 # <a name="support-center-for-configuration-manager"></a>Ondersteunings centrum voor Configuration Manager
 
@@ -25,7 +25,7 @@ ms.locfileid: "81718600"
 Vanaf versie 1810, gebruikt u het ondersteunings centrum voor het oplossen van problemen met clients, het weer geven van real-time Logboeken of het vastleggen van de status van een Configuration Manager-client computer voor latere analyse. Ondersteunings centrum is één hulp programma voor het consolideren van veel hulpprogram ma's voor probleem oplossing.
 
 
-## <a name="about"></a>Info
+## <a name="about"></a>Over
 
 Het ondersteunings centrum is erop gericht de uitdagingen en frustraties te verminderen bij het oplossen van problemen Configuration Manager-client computers. Als u zich eerder bij het werken met ondersteuning voor het oplossen van een probleem met Configuration Manager-clients, moet u hand matig logboek bestanden en andere informatie verzamelen om het probleem op te lossen. Het was heel gemakkelijk om per ongeluk een cruciaal logboek bestand te verg eten, waardoor er extra pijnen worden veroorzaakt voor u en het ondersteunings personeel waarmee u samenwerkt.
 
@@ -52,7 +52,7 @@ Vanaf versie 1906 is **OneTrace** een nieuwe logboek weergave met het ondersteun
 
 ### <a name="powershell-cmdlets"></a>PowerShell-cmdlets
 
-Ondersteunings centrum omvat ook [Windows Power shell-cmdlets](https://go.microsoft.com/fwlink/?linkid=397830). Gebruik deze cmdlets om een externe verbinding met een andere Configuration Manager-client te maken, de opties voor gegevens verzameling te configureren en gegevens verzameling te starten.
+Ondersteunings centrum omvat ook [Power shell-cmdlets](https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps). Gebruik deze cmdlets om een externe verbinding met een andere Configuration Manager-client te maken, de opties voor gegevens verzameling te configureren en gegevens verzameling te starten.
 
 
 ## <a name="prerequisites"></a>Vereisten
@@ -66,7 +66,7 @@ Installeer de volgende onderdelen op de server of client computer waarop u het o
 
 ## <a name="install"></a>Installeren
 
-Zoek het installatie programma voor het ondersteunings centrum op de site server `cd.latest\SMSSETUP\Tools\SupportCenter\SupportCenterInstaller.msi`op het volgende pad:.
+Zoek het installatie programma voor het ondersteunings centrum op de site server op het volgende pad: `cd.latest\SMSSETUP\Tools\SupportCenter\SupportCenterInstaller.msi` .
 
 Nadat u deze hebt geïnstalleerd, gaat u naar de volgende items in het menu Start van de groep **micro soft System Center** :  
 
@@ -86,7 +86,7 @@ Als u al een oudere versie van het ondersteunings centrum hebt geïnstalleerd, m
 
 ### <a name="remote-connections-must-include-computer-name-or-domain-as-part-of-the-user-name"></a>Externe verbindingen moeten de computer naam of het domein bevatten als onderdeel van de gebruikers naam
 
-Als u verbinding maakt met een externe client vanuit ondersteunings centrum, moet u de computer naam of de domein naam voor het gebruikers account opgeven bij het tot stand brengen van de verbinding. Als u een steno computer naam of domein naam gebruikt (zoals `.\administrator`), is de verbinding geslaagd, maar worden er geen gegevens van de client verzameld.
+Als u verbinding maakt met een externe client vanuit ondersteunings centrum, moet u de computer naam of de domein naam voor het gebruikers account opgeven bij het tot stand brengen van de verbinding. Als u een steno computer naam of domein naam gebruikt (zoals `.\administrator` ), is de verbinding geslaagd, maar worden er geen gegevens van de client verzameld.
 
 Als u dit probleem wilt voor komen, gebruikt u de volgende indelingen voor gebruikers namen om verbinding te maken met een externe client:
 
@@ -95,7 +95,7 @@ Als u dit probleem wilt voor komen, gebruikt u de volgende indelingen voor gebru
 
 ### <a name="scripted-server-message-block-connections-to-remote-clients-might-require-removal"></a>Script server bericht blok verbindingen met externe clients moeten mogelijk worden verwijderd
 
-Wanneer u verbinding maakt met externe clients met behulp van de cmdlet [New-CMMachineConnection](https://go.microsoft.com/fwlink/p/?linkid=390542) Power shell, maakt het ondersteunings centrum een Server Message Block (SMB)-verbinding met elke externe client. Deze verbindingen blijven behouden nadat u het verzamelen van gegevens hebt voltooid. Om te voor komen dat het maximum aantal externe verbindingen voor Windows wordt overschreden `net use` , gebruikt u de opdracht om de momenteel actieve set met externe verbindingen weer te geven. Schakel vervolgens alle overbodige verbindingen uit met behulp van de volgende opdracht:`net use <connection_name> /d`
+Wanneer u verbinding maakt met externe clients met behulp van de cmdlet [New-CMMachineConnection](https://go.microsoft.com/fwlink/p/?linkid=390542) Power shell, maakt het ondersteunings centrum een Server Message Block (SMB)-verbinding met elke externe client. Deze verbindingen blijven behouden nadat u het verzamelen van gegevens hebt voltooid. Om te voor komen dat het maximum aantal externe verbindingen voor Windows wordt overschreden, gebruikt u de `net use` opdracht om de momenteel actieve set met externe verbindingen weer te geven. Schakel vervolgens alle overbodige verbindingen uit met behulp van de volgende opdracht:`net use <connection_name> /d`
 waarbij `<connection_name>` de naam is van de externe verbinding.
 
 ### <a name="application-deployment-evaluation-cycle-request-isnt-sent-correctly-to-remote-machines"></a>De aanvraag voor de evaluatie cyclus voor implementatie van de toepassing is niet correct naar externe computers verzonden

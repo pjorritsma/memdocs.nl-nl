@@ -10,12 +10,12 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 04981e944b838f89af2383678c94e620aaefd7f0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a52b70b0a753036c506e5d515cbac048d6771295
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719321"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879059"
 ---
 # <a name="whats-new-in-version-1910-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 1910 van Configuration Manager current branch
 
@@ -45,8 +45,8 @@ De volgende micro soft-beheer oplossingen maken nu deel uit van het merk van mic
 - [Configuration Manager](https://docs.microsoft.com/configmgr)
 - [Intune](https://docs.microsoft.com/intune)
 - [Desktop Analytics](../../../desktop-analytics/overview.md)
-- [Auto Pilot](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
-- Andere functies in de beheer [console voor Apparaatbeheer](https://go.microsoft.com/fwlink/?linkid=2109094)
+- [Autopilot](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
+- Andere functies in de beheer [console voor Apparaatbeheer](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760)
 
 Raadpleeg voor meer informatie de volgende Posts van Mark Anderson, micro soft Corporate Vice President for Microsoft 365:
 
@@ -123,7 +123,7 @@ Wanneer u micro soft Connected cache op uw Configuration Manager-distributie pun
 Zie voor meer informatie [micro soft Connected cache in Configuration Manager](../hierarchy/microsoft-connected-cache.md#bkmk_intune).
 
 > [!NOTE]
-> Configuration Manager huidige branch-versie 1906 opgenomen DOINC ( [Delivery Optimization in-Network cache](../hierarchy/microsoft-connected-cache.md) ), een toepassing die is geïnstalleerd op Windows Server en nog steeds in ontwikkeling is. Met ingang van huidige versie 1910 van de branch wordt deze functie nu micro soft Connected cache genoemd.
+> Configuration Manager huidige branch-versie 1906 opgenomen [Delivery Optimization in-Network cache](../hierarchy/microsoft-connected-cache.md), een toepassing die is geïnstalleerd op Windows Server en nog steeds in ontwikkeling is. Met ingang van huidige versie 1910 van de branch wordt deze functie nu micro soft Connected cache genoemd.
 >
 > Wanneer u een verbonden cache op een Configuration Manager distributie punt installeert, wordt het verkeer voor de leverings optimalisatie service naar lokale bronnen geoffload. Verbonden cache doet dit gedrag door inhoud op het niveau van byte bereik efficiënt op te slaan in de cache.
 

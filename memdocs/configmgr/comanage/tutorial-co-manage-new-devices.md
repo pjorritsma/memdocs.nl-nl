@@ -5,17 +5,17 @@ description: Meer informatie over het configureren van co-beheer voor nieuwe Win
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/12/2020
+ms.date: 05/14/2020
 ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 7fb02a5c-e286-46b1-a972-6335c858429a
-ms.openlocfilehash: 75016e8028dde29c83ae7e7f5a23a1f6dbb4417f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 67d86850dc0440481916984af8635d9e005044c6
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712713"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428621"
 ---
 # <a name="tutorial-enable-co-management-for-new-internet-based-devices"></a>Zelf studie: co-beheer inschakelen voor nieuwe apparaten op Internet
 
@@ -96,7 +96,7 @@ Over dit certificaat:
 
 ### <a name="identify-a-unique-name-for-your-cloud-management-gateway-in-azure"></a>Een unieke naam voor uw Cloud beheer gateway in azure identificeren
 
-Wanneer u het CMG Server-verificatie certificaat aanvraagt, geeft u aan wat een unieke naam moet zijn om uw *Cloud service (klassiek)* in azure te identificeren. De open bare Azure-Cloud maakt standaard gebruik van *cloudapp.net*en de CMG wordt in het cloudapp.net-domein gehost als * \<YourUniqueDnsName>. cloudapp.net*.  
+Wanneer u het CMG Server-verificatie certificaat aanvraagt, geeft u aan wat een unieke naam moet zijn om uw *Cloud service (klassiek)* in azure te identificeren. De open bare Azure-Cloud maakt standaard gebruik van *cloudapp.net*en de CMG wordt in het cloudapp.net-domein gehost als * \< YourUniqueDnsName>. cloudapp.net*.  
 
 > [!TIP]  
 > In deze zelf studie gebruikt het **certificaat voor CMG-Server verificatie** een FQDN die eindigt op *contoso.com*.  Nadat we de CMG hebben gemaakt, configureren we een canonieke naam record (CNAME) in de open bare DNS van de organisatie. Met deze record wordt een alias gemaakt voor de CMG die wordt toegewezen aan de naam die wordt gebruikt in het open bare certificaat.  
@@ -206,9 +206,9 @@ Voer de volgende procedure uit vanaf de primaire site server.
 
    - **Toepassings naam**: Geef een beschrijvende naam op voor de app, zoals de *Web-app voor Cloud beheer*.  
 
-   - **URL van start pagina**: deze waarde wordt niet gebruikt door Configuration Manager, maar is vereist voor Azure AD. Deze waarde is `https://ConfigMgrService`standaard ingesteld op.  
+   - **URL van start pagina**: deze waarde wordt niet gebruikt door Configuration Manager, maar is vereist voor Azure AD. Deze waarde is standaard ingesteld op `https://ConfigMgrService` .  
 
-   - **App-ID-URI**: deze waarde moet uniek zijn in uw Azure AD-Tenant. Het bevindt zich in het toegangs token dat door de Configuration Manager-client wordt gebruikt om toegang tot de service aan te vragen. Deze waarde is `https://ConfigMgrService`standaard ingesteld op.  
+   - **App-ID-URI**: deze waarde moet uniek zijn in uw Azure AD-Tenant. Het bevindt zich in het toegangs token dat door de Configuration Manager-client wordt gebruikt om toegang tot de service aan te vragen. Deze waarde is standaard ingesteld op `https://ConfigMgrService` .  
 
    Selecteer vervolgens **Aanmelden**en geef een Azure AD Global Administrator-account op. Deze referenties worden niet opgeslagen door Configuration Manager. Deze persoon heeft geen machtigingen nodig in Configuration Manager en hoeft niet hetzelfde account te zijn dat de wizard Azure-Services uitvoert.
 
@@ -220,7 +220,7 @@ Voer de volgende procedure uit vanaf de primaire site server.
 
    - **Toepassings naam**: Geef een beschrijvende naam op voor de app, zoals de *systeem eigen client-app voor Cloud beheer*.
 
-   - **Antwoord-URL**: deze waarde wordt niet gebruikt door Configuration Manager, maar is vereist voor Azure AD. Deze waarde is `https://ConfigMgrClient`standaard ingesteld op.
+   - **Antwoord-URL**: deze waarde wordt niet gebruikt door Configuration Manager, maar is vereist voor Azure AD. Deze waarde is standaard ingesteld op `https://ConfigMgrClient` .
    Selecteer vervolgens **Aanmelden**en geef een Azure AD Global Administrator-account op. Net als de web-app worden deze referenties niet opgeslagen en zijn er geen machtigingen vereist in Configuration Manager.
 
    Nadat u zich hebt aangemeld, worden de resultaten weer gegeven. Selecteer **OK** om het dialoog venster client toepassing maken te sluiten en terug te keren naar de pagina app-eigenschappen. Selecteer vervolgens **volgende** om door te gaan.
@@ -237,11 +237,11 @@ Voer de volgende procedure uit vanaf de primaire site server.
 
    1. Selecteer de web-app die u hebt gemaakt.
 
-   2. Ga naar **instellingen > vereiste machtigingen**, selecteer **machtigingen verlenen**en selecteer vervolgens **Ja**.  
+   2. Ga naar **API-machtigingen** > Selecteer **toestemming van beheerder verlenen voor** <your tenant> en selecteer vervolgens **Ja**.  
 
    3. Selecteer de systeem eigen client-app die u hebt gemaakt.
 
-   4. Ga naar **instellingen > vereiste machtigingen**, selecteer **machtigingen verlenen**en selecteer vervolgens **Ja**.  
+   4. Ga naar **API-machtigingen** > Selecteer **toestemming van beheerder verlenen voor** <your tenant> en selecteer vervolgens **Ja**.
 
 9. Ga in de Configuration Manager-console naar **beheer > overzicht > Cloud Services > Azure-Services**en selecteer uw Azure-service. Klik vervolgens met de rechter muisknop op **Azure Active Directory gebruiker Discover** en selecteer **nu volledige detectie uitvoeren**. Selecteer **Ja** om de actie te bevestigen.  
 
@@ -323,7 +323,7 @@ Configureer de site ter ondersteuning van verbeterde HTTP.
 
 3. Ga nu naar **beheer > overzicht > site configuratie > servers en site systeem rollen** en selecteer de server met een beheer punt waarop u het verbindings punt van de Cloud beheer gateway wilt installeren.  
 
-4. Selecteer **site systeem rollen toevoegen** **en vervolgens**> **Next**volgende.  
+4. Selecteer **site systeem rollen toevoegen** **en vervolgens volgende** >  **Next**.  
 
 5. Selecteer het **verbindings punt van de Cloud beheer gateway** en selecteer **volgende** om door te gaan.  
 
@@ -351,7 +351,7 @@ Gebruik client instellingen om Configuration Manager-clients te configureren om 
 
    - **Toegang tot Cloud distributiepunt toestaan**
 
-4. Stel op de pagina **client beleid**  =  **gebruikers beleids aanvragen van internetclients inschakelen in****Ja**.
+4. Stel op de pagina **client beleid** **gebruikers beleids aanvragen van internetclients inschakelen in**  =  **Ja**.
 
 5. Selecteer **OK** om deze configuratie op te slaan.
 
@@ -383,11 +383,11 @@ Wanneer een eerder niet-beheerd Windows 10-apparaat wordt geregistreerd bij intu
 
 ### <a name="create-an-intune-app-to-install-the-configuration-manager-client"></a>Een intune-app maken om de Configuration Manager-client te installeren
 
-1. Meld u vanaf de primaire site server aan bij de [Azure Portal](https://portal.azure.com/) en ga naar de **intune-> Client-apps > apps > toevoegen**.
+1. Meld u vanaf de primaire site server aan bij het [beheer centrum van micro soft Endpoint Manager](https://endpoint.microsoft.com) en ga naar de **app apps**  >  **All Apps**  >  **toevoegen**.
 
-2. Voor **app-type**: Selecteer **line-of-Business-app**.
+2. Selecteer bij app-type de optie **line-of-Business-app** onder **andere**.
 
-3. Selecteer **app-pakket bestand**, blader naar de locatie van het Configuration Manager bestand **ccmsetup. msi**en selecteer vervolgens **openen > OK**.
+3. Voor het **app-pakket bestand**bladert u naar de locatie van het Configuration Manager bestand **ccmsetup. msi**en selecteert u vervolgens **openen > OK**.
 Bijvoorbeeld: *C:\Program Files\Microsoft Configuration Manager\bin\i386\ccmsetup.msi*
 
 4. Selecteer **app-gegevens**en geef vervolgens de volgende gegevens op:
@@ -395,7 +395,7 @@ Bijvoorbeeld: *C:\Program Files\Microsoft Configuration Manager\bin\i386\ccmsetu
 
    - **Uitgever**: micro soft  
 
-   - **Opdracht regel argumenten**: * \<Geef de **CCMSETUPCMD** -opdracht regel op. U kunt de opdracht regel gebruiken die u hebt opgeslagen op de* *pagina activering van de wizard voor het configureren van co-beheer. Deze opdracht regel bevat de namen van uw Cloud service en aanvullende waarden waarmee apparaten de Configuration Manager-client software kunnen installeren. >*  
+   - **Opdracht regel argumenten**: * \< Geef de **CCMSETUPCMD** -opdracht regel op. U kunt de opdracht regel gebruiken die u hebt opgeslagen op de* *pagina activering van de wizard voor het configureren van co-beheer. Deze opdracht regel bevat de namen van uw Cloud service en aanvullende waarden waarmee apparaten de Configuration Manager-client software kunnen installeren. >*  
 
      De opdracht regel structuur moet er als volgt uitzien in dit voor beeld met alleen de para meters CCMSETUPCMD en SMSSiteCode:  
 
@@ -412,11 +412,11 @@ Bijvoorbeeld: *C:\Program Files\Microsoft Configuration Manager\bin\i386\ccmsetu
 
 De volgende procedure implementeert de app voor het installeren van de Configuration Manager-client die u in de vorige procedure hebt gemaakt.
 
-1. Meld u aan bij de [Azure-portal](https://portal.azure.com/).  Selecteer **alle services > intune-> client-apps > apps**en selecteer vervolgens **Boots trap client installeren**de app die u hebt gemaakt om de Configuration Manager-client te implementeren.  
+1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://endpoint.microsoft.com). Selecteer **apps**  >  **alle apps** en selecteer vervolgens **Boots trap client installeren**, de app die u hebt gemaakt om de Configuration Manager-client te implementeren.  
 
-2. Selecteer **toewijzingen > groep toevoegen**.  Stel **toewijzings type** in als **vereist**en gebruik vervolgens **opgenomen groepen** en **uitgesloten groepen** om de Azure Active Directory (AD) groepen in te stellen met gebruikers en apparaten die u wilt deel nemen aan co-beheer.  
+2. Klik op **Eigenschappen** en vervolgens op **bewerken** voor **toewijzingen**. Selecteer **groep toevoegen** onder **vereiste** toewijzingen om de Azure Active Directory-groepen (AD) in te stellen met gebruikers en apparaten die u wilt laten deel nemen aan co-beheer.  
 
-3. Selecteer **OK** en **Sla** de configuratie op.
+3. Selecteer **controleren + opslaan** en **Sla** de configuratie op.
 De app is nu vereist voor gebruikers en apparaten waaraan u deze hebt toegewezen. Nadat de app de Configuration Manager-client op een apparaat heeft geïnstalleerd, wordt deze beheerd door co-beheer.
 
 ## <a name="summary"></a>Samenvatting

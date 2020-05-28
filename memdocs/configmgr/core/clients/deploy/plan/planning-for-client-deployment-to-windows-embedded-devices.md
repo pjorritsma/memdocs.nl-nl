@@ -10,12 +10,12 @@ ms.assetid: 038e61f9-f49d-41d1-9a9f-87bec9e00d5d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 623125ad64c7ed421ea209137eb68f17891d7a81
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7848e3c0c38391ab61d10ad46cbb772c812539c7
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714015"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906641"
 ---
 # <a name="planning-for-client-deployment-to-windows-embedded-devices-in-configuration-manager"></a>Het plannen van client implementatie op Windows Embedded-apparaten in Configuration Manager
 
@@ -46,11 +46,11 @@ ms.locfileid: "81714015"
 
  Configuration Manager biedt ondersteuning voor het beheren van de volgende typen schrijf filters:  
 
-- Op bestand gebaseerd schrijf filter (FBWF): Zie [op bestanden gebaseerde schrijf filter](https://go.microsoft.com/fwlink/?LinkID=204717)voor meer informatie.  
+- Op bestand gebaseerd schrijf filter (FBWF): Zie [op bestanden gebaseerde schrijf filter](https://docs.microsoft.com/previous-versions/windows/embedded/aa940926(v=winembedded.5))voor meer informatie.  
 
-- Enhanced Write Filter-RAM-geheugen (EWF): Zie [Enhanced Write Filter](https://go.microsoft.com/fwlink/?LinkId=204718)voor meer informatie.  
+- Enhanced Write Filter-RAM-geheugen (EWF): Zie [Enhanced Write Filter](https://docs.microsoft.com/previous-versions/windows/embedded/ms912906(v=winembedded.5))voor meer informatie.  
 
-- Gecombineerd schrijf filter (UWF): Zie [Unified Write Filter](https://go.microsoft.com/fwlink/?LinkId=309236)(Engelstalig) voor meer informatie.  
+- Gecombineerd schrijf filter (UWF): Zie [Unified Write Filter](https://docs.microsoft.com/windows-hardware/customize/enterprise/unified-write-filter)(Engelstalig) voor meer informatie.  
 
   Configuration Manager ondersteunt geen schrijf filter bewerkingen wanneer het Windows Embedded-apparaat zich in de EWF RAM reg-modus bevindt.  
 
@@ -59,7 +59,7 @@ ms.locfileid: "81714015"
 > 
 > **Voor apparaten die alleen gebruikmaken van FBWF:** Configureer de volgende uitzonde ringen om client status en inventaris gegevens te behouden tussen het opnieuw opstarten van het apparaat:  
 > 
-> - CCMINSTALLDIR\\*. sdf  
+> - CCMINSTALLDIR \\ *. sdf  
 >   -   CCMINSTALLDIR\ServiceData  
 >   -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
 > 

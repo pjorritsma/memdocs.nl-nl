@@ -2,7 +2,7 @@
 title: Preview van endpoint Analytics
 titleSuffix: Configuration Manager
 description: Instructies voor de preview-versie van endpoint Analytics.
-ms.date: 04/30/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: e7dbb53833c29aae442eec4ca3c8402b99cde237
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
-ms.translationtype: HT
+ms.openlocfilehash: c7a99931db27b6a55c9e0722cc12c1d7a9cc9e80
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693240"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764234"
 ---
 # <a name="endpoint-analytics-preview"></a><a name="bkmk_uea"></a>Preview van endpoint Analytics
 
@@ -24,6 +24,9 @@ ms.locfileid: "82693240"
 > Deze informatie is gekoppeld aan een preview-functie die aanzienlijk kan worden gewijzigd voordat deze commercieel wordt uitgebracht. Microsoft biedt geen enkele expliciete of impliciete garanties met betrekking tot de informatie die hier wordt verstrekt. 
 >
 > Zie [what's New in endpoint Analytics](whats-new-endpoint-analytics.md)(Engelstalig) voor meer informatie over wijzigingen in endpoint Analytics. 
+>
+>Als u wilt deel nemen aan de persoonlijke Preview voor endpoint Analytics, voert u de gegevens [in dit formulier in](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR9-ZzmlTlbJMh03eDDHtO81UOERLUkMzNFZKSlBaNFNFUVhFSlE0MzNYMS4u). Tenants worden in vlucht gegeven als openingen voor de preview-versie.
+
 
 ## <a name="endpoint-analytics-overview"></a>Overzicht van eindpunt analyse
 
@@ -64,7 +67,7 @@ Als u apparaten wilt registreren via intune, moet u voor deze preview-versie het
 Als u apparaten wilt registreren via Configuration Manager, is voor deze preview het volgende vereist:
 - Configuration Manager versie 2002 of hoger
 - Clients bijgewerkt naar versie 2002 of hoger
-- [Micro soft Endpoint Manager-Tenant](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) is ingeschakeld met een Azure-Tenant locatie van Noord-Amerika (binnenkort worden de andere regio's uitgebreid)
+- [Micro soft Endpoint Manager-Tenant](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) is ingeschakeld met een Azure-Tenant locatie van Noord-Amerika of Europa (binnenkort worden de andere regio's uitgebreid)
 
 Bij het inschrijven van apparaten via intune of Configuration Manager, hebben [**proactieve herstel scripts**](#bkmk_uea_prs) de volgende vereisten:
 - Apparaten moeten lid zijn van Azure AD of hybride Azure AD zijn toegevoegd en voldoen aan een van de volgende voor waarden:
@@ -99,8 +102,38 @@ Een alleen-lezen gebruiker heeft alleen de machtiging **lezen** nodig onder de k
 
 Voor proactieve herstel bewerkingen heeft de gebruiker machtigingen nodig voor hun rol in de categorie **apparaat-configuraties** .  Machtigingen in de categorie voor het **endpoint Analytics** zijn niet nodig als de gebruiker alleen proactieve herstel bewerkingen gebruikt.
 
+De [intune-service beheerder](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#intune-service-administrator-permissions) moet de licentie vereisten bevestigen voordat proactieve herstel bewerkingen voor de eerste keer worden gebruikt.
 
 ## <a name="start-gathering-data"></a><a name="bkmk_uea_start"></a>Gegevens verzameling starten
+- Als u alleen door intune beheerde apparaten wilt registreren, gaat u naar de [onboarding in het gedeelte endpoint Analytics-Portal](#bkmk_uea_onboard) .
+
+- Als u apparaten registreert die worden beheerd door Configuration Manager, moet u de volgende stappen uitvoeren:
+   - [Gegevens verzameling voor endpoint Analytics inschakelen in Configuration Manager](#bkmk_uea_cm_enroll)
+   - [Het uploaden van gegevens in Configuration Manager inschakelen](#bkmk_uea_cm_upload)
+   - [Onboarding in de Endpoint Analytics-Portal](#bkmk_uea_onboard)  
+
+### <a name="enroll-devices-managed-by-configuration-manager"></a><a name="bkmk_uea_cm_enroll"></a>Apparaten registreren die worden beheerd door Configuration Manager
+<!--6051638, 5924760-->
+Voordat u Configuration Manager-apparaten inschrijft, controleert u de [vereisten](#bkmk_uea_prereq) , waaronder het inschakelen van [micro soft Endpoint Manager-Tenant bijvoegen](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions). 
+
+#### <a name="enable-endpoint-analytics-data-collection-in-configuration-manager"></a><a name="bkmk_uea_cm_enable"></a>Gegevens verzameling voor endpoint Analytics inschakelen in Configuration Manager
+
+1. Ga in de Configuration Manager-console naar de client instellingen voor de **beheerders**  >  **Client Settings**  >  **instelling**.
+1. Klik met de rechter muisknop en selecteer **Eigenschappen** en selecteer vervolgens de instellingen van de **computer agent** .
+1. Stel **endpoint Analytics-gegevens verzameling inschakelen** in op **Ja**.
+   > [!Important] 
+   > Als u een bestaande aangepaste client agent hebt ingesteld die op uw apparaten is geïmplementeerd, moet u de optie voor het **verzamelen van endpoint Analytics-gegevens** in deze aangepaste instelling bijwerken en vervolgens opnieuw implementeren op uw computers om deze van kracht te laten worden.
+
+#### <a name="enable-data-upload-in-configuration-manager"></a><a name="bkmk_uea_cm_upload"></a>Het uploaden van gegevens in Configuration Manager inschakelen
+
+1. Ga in de Configuration Manager-console naar **beheer**  >  **Cloud Services**  >  **co-beheer**.
+1. Selecteer **CoMgmtSettingsProd** en klik vervolgens op **Eigenschappen**.
+1. Schakel op het tabblad **Upload configureren** de optie in om **endpoint Analytics in te scha kelen voor apparaten die zijn geüpload naar micro soft Endpoint Manager**
+
+   :::image type="content" source="media/6051638-configure-upload-configmgr.png" alt-text="Endpoint Analytics inschakelen voor apparaten die zijn geüpload naar micro soft Endpoint Manager" lightbox="media/6051638-configure-upload-configmgr.png":::
+
+### <a name="onboard-in-the-endpoint-analytics-portal"></a><a name="bkmk_uea_onboard"></a>Onboarding in de Endpoint Analytics-Portal
+Het voorbereiden van de portal voor het endpoint Analytics is vereist voor zowel Configuration Manager als door intune beheerde apparaten.
 
 1. Ga naar `https://endpoint.microsoft.com/#blade/Microsoft_Intune_Enrollment/UXAnalyticsMenu`
 1. Klik op **Start**. Hiermee wordt automatisch een configuratie profiel toegewezen voor het verzamelen van opstart prestatie gegevens van alle apparaten die in aanmerking komen. U kunt later [toegewezen apparaten wijzigen](#bkmk_uea_profile) . Het kan tot 24 uur duren voordat de prestatie gegevens van uw intune-apparaten zijn Inge schreven nadat de computer opnieuw is opgestart.
@@ -207,7 +240,7 @@ Als u op een bepaald apparaat klikt, kunt u de opstart-en aanmeldings geschieden
 De pagina **opstart prestaties** bevat tabbladen met rapporten die ondersteuning bieden voor de inzichten, waaronder:
 1. **Model prestaties**. Op dit tabblad ziet u de opstart-en aanmeldings prestaties per model, waarmee u kunt vaststellen of prestatie problemen worden geïsoleerd voor bepaalde modellen.
 1. **Prestaties**van het apparaat. Dit tabblad biedt opstart-en aanmeldings gegevens voor al uw apparaten. U kunt sorteren op een bepaalde metrische waarde (bijvoorbeeld een GP-aanmeldings tijd) om te zien welke apparaten de slechtste scores voor die metriek hebben om te helpen bij het oplossen van problemen. U kunt ook op naam zoeken naar een apparaat. Als u via een apparaat klikt, kunt u de opstart-en aanmeldings geschiedenis bekijken, waarmee u kunt nagaan of er een recente regressie is
-1. **Opstart processen**. Dit tabblad (indien zichtbaar; we hebben dit alleen naar een of meer van u naar een aantal van u gereisd als we deze functie nog ontwikkelen) laat zien welke processen invloed hebben op de fase van de aanmelding ' tijd voor respons op het bureau blad '; die de CPU boven 50% houdt nadat het bureau blad is gerenderd.
+1. **Opstart processen**. Opstart processen kunnen een negatieve invloed hebben op de gebruikers ervaring door de tijds duur te verhogen die gebruikers nodig hebben om te reageren op het bureau blad. Dit tabblad (indien zichtbaar; we hebben dit alleen naar een of meer van u naar een aantal van u gereisd als we deze functie nog ontwikkelen) laat zien welke processen invloed hebben op de fase van de aanmelding ' tijd voor respons op het bureau blad '; die de CPU boven 50% houdt nadat het bureau blad is gerenderd. De tabel bevat alleen processen die van invloed zijn op een minimum van 10 apparaten in uw Tenant.  
 
 ## <a name="proactive-remediations"></a><a name="bkmk_uea_prs"></a>Proactieve herstel bewerkingen
 
@@ -218,7 +251,7 @@ Elk script pakket bestaat uit een detectie script, een herstel script en meta ge
 ### <a name="get-the-detection-and-remediation-scripts"></a><a name="bkmk_uea_prs_ps1"></a>De detectie-en herstel scripts ophalen
 
 1. Kopieer de scripts van de onderkant van dit artikel in de sectie [Power shell-scripts](#bkmk_uea_ps_scripts) .
-    - Script bestanden waarvan de naam begint `det` met detectie scripts zijn. Herstel scripts beginnen met `rem`.
+    - Script bestanden waarvan de naam begint met `det` detectie scripts zijn. Herstel scripts beginnen met `rem` .
     - Zie de [script beschrijvingen](#bkmk_uea_scripts)voor een beschrijving van de scripts.
 1. Sla elk script op met de gegeven naam. De naam bevindt zich ook in de opmerkingen boven aan elk script.
     - U kunt een andere script naam gebruiken, maar deze komt niet overeen met de naam die wordt vermeld in de sectie [beschrijvingen van scripts](#bkmk_uea_scripts) .
@@ -241,7 +274,7 @@ De **Microsoft intune Management extension** -service haalt de scripts van intun
 1. Klik op **volgende** en wijs vervolgens de **bereik Tags** toe die u nodig hebt.
 1. In de stap **toewijzingen** selecteert u de apparaatgroepen waarvoor u het script pakket wilt implementeren.
 1. Voltooi de stap voor het **beoordelen en maken** van uw implementatie.
-1. Onder **Reporting** > **endpoint Analytics: proactieve herstel**bewerkingen ziet u een overzicht van de status van detectie en herstel.
+1. Onder **Reporting**  >  **endpoint Analytics: proactieve herstel**bewerkingen ziet u een overzicht van de status van detectie en herstel.
        [![Overzichts pagina van het rapport met proactieve herstel van eind punten.](media/proactive-remediations-report-overview.png)](media/proactive-remediations-report-overview.png#lightbox)
 1. Klik op **Apparaatstatus** om status Details voor elk apparaat in uw implementatie op te halen.
        [![Status van het apparaat voor proactieve herstel bewerkingen voor endpoint Analytics.](media/proactive-remediations-device-status.png)](media/proactive-remediations-device-status.png#lightbox)
@@ -262,9 +295,9 @@ Als u deze instelling wilt toewijzen aan een subset van apparaten, [maakt u een 
 
   - **Naam**: Voer een beschrijvende naam in voor het profiel, zoals het beleid voor het **verzamelen van intune-gegevens**
    
-  - **Beschrijving:** voer een beschrijving in voor het profiel. Deze instelling is optioneel, maar wordt aanbevolen.
+  - **Beschrijving**: Voer een beschrijving in voor het profiel. Deze instelling is optioneel, maar wordt aanbevolen.
     
-  - **Platform**: selecteer **Windows 10 en hoger**
+  - **Platform**: Selecteer **Windows 10 en hoger**
    
   - **Profiel type**: Selecteer **Windows status controle**
    
@@ -310,7 +343,7 @@ Houd er rekening mee dat deze problemen niet van toepassing zijn op gegevens die
 Ten tweede is hier een korte controle lijst voor het oplossen van problemen:
 1. Zorg ervoor dat u beschikt over het Windows-status bewaken profiel dat is gericht op alle apparaten waarvoor u prestatie gegevens wilt. U vindt een koppeling naar dit profiel via de pagina instellingen voor het endpoint Analytics of u navigeert naar de gewenste naam, net zoals bij andere intune-profielen. Ga naar het tabblad toewijzing om te controleren of deze is toegewezen aan de verwachte set apparaten. 
 1. Bekijk de apparaten die zijn geconfigureerd voor het verzamelen van gegevens. U kunt deze informatie ook bekijken op de pagina overzicht van profielen.  
-   - Er is een bekend probleem waarbij klanten profiel toewijzings fouten kunnen zien, waarbij de betrokken apparaten een fout code `-2016281112 (Remediation failed)`van weer geven. Dit probleem wordt momenteel onderzocht.
+   - Er is een bekend probleem waarbij klanten profiel toewijzings fouten kunnen zien, waarbij de betrokken apparaten een fout code van weer geven `-2016281112 (Remediation failed)` . Dit probleem wordt momenteel onderzocht.
 1. Apparaten die zijn geconfigureerd voor het verzamelen van gegevens moeten opnieuw worden gestart nadat het verzamelen van gegevens is ingeschakeld en u moet vervolgens tot 24 uur wachten voordat het apparaat wordt weer gegeven op het tabblad prestaties van apparaat.
 1. Als uw apparaat is geconfigureerd voor het verzamelen van gegevens, vervolgens opnieuw is gestart en u na 24 uur nog steeds niet meer ziet, kan het zijn dat het apparaat de eind punten van de verzameling niet kan bereiken. Dit probleem kan zich voordoen als uw bedrijf gebruikmaakt van een proxy server en de eind punten niet zijn ingeschakeld in de proxy. Zie [Troubleshooting endpoints (eind punten](#bkmk_uea_endpoints)) voor meer informatie.
 
@@ -350,7 +383,7 @@ Apparaten configureren voor het gebruik van de context van de aangemelde gebruik
 - Zorg ervoor dat de gebruikers over proxy machtigingen beschikken om de eind punten voor het delen van gegevens te bereiken. Deze optie vereist dat de apparaten console gebruikers hebben met proxy machtigingen, zodat u deze methode niet kunt gebruiken met headless apparaten.
 
 > [!IMPORTANT]
-> De verificatie methode voor de gebruikers proxy is niet compatibel met het gebruik van micro soft Defender Advanced Threat Protection. Dit gedrag is omdat deze verificatie afhankelijk is van de **DisableEnterpriseAuthProxy** -register sleutel die `0`is ingesteld op, terwijl micro soft Defender ATP vereist dat `1`deze is ingesteld op. Zie [instellingen voor machine proxy en Internet connectiviteit configureren in micro soft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection)voor meer informatie.
+> De verificatie methode voor de gebruikers proxy is niet compatibel met het gebruik van micro soft Defender Advanced Threat Protection. Dit gedrag is omdat deze verificatie afhankelijk is van de **DisableEnterpriseAuthProxy** -register sleutel die is ingesteld op `0` , terwijl micro soft Defender ATP vereist dat deze is ingesteld op `1` . Zie [instellingen voor machine proxy en Internet connectiviteit configureren in micro soft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection)voor meer informatie.
 
 #### <a name="device-proxy-authentication"></a>Verificatie van Device proxy
 
@@ -372,7 +405,7 @@ Deze benadering is het meest gecompliceerd omdat hiervoor de volgende configurat
 
   - Transparante proxy
 
-  - WinINET-proxy voor het hele apparaat configureren met de volgende groeps beleids instelling: **proxy-instellingen per computer (in plaats van per gebruiker) maken** (ProxySettingsPerUser = `1`)
+  - WinINET-proxy voor het hele apparaat configureren met de volgende groeps beleids instelling: **proxy-instellingen per computer (in plaats van per gebruiker) maken** (ProxySettingsPerUser = `1` )
 
   - Gerouteerde verbinding of die gebruikmaakt van Network Address Translation (NAT)
 
@@ -380,6 +413,10 @@ Deze benadering is het meest gecompliceerd omdat hiervoor de volgende configurat
 
 
 ## <a name="frequently-asked-questions"></a><a name="bkmk_uea_faq"></a>Veelgestelde vragen
+
+### <a name="will-my-endpoint-analytics-data-migrate-if-i-move-my-intune-tenant-to-a-different-tenant-location"></a>Worden mijn endpoint Analytics-gegevens gemigreerd als ik mijn intune-Tenant naar een andere Tenant locatie Verplaats?
+
+Als u uw intune-Tenant naar een andere locatie migreert, gaan alle gegevens in uw endpoint Analytics-oplossing op het moment van de migratie verloren. Omdat de eind punten in endpoint Analytics voortdurend in het rapport staan, worden alle gebeurtenissen die na de migratie worden uitgevoerd, automatisch naar uw nieuwe Tenant locatie en rapporten geuploadd, ervan uitgaande dat apparaten op de juiste wijze zijn Inge schreven. 
 
 ### <a name="why-are-the-scripts-exiting-with-a-code-of-1"></a>Waarom worden de scripts afgesloten met de code 1?
 
@@ -391,13 +428,13 @@ De scripts worden afgesloten met een code van 1 om aan te geven dat het herstel 
 
 ## <a name="script-descriptions"></a><a name="bkmk_uea_scripts"></a>Script beschrijvingen
 
-In deze tabel worden de script namen, beschrijvingen, detecties, herstel bewerkingen en configureer bare items weer gegeven. Script bestanden waarvan de naam begint `Detect` met detectie scripts zijn. Herstel scripts beginnen met `Remediate`. Deze scripts kunnen worden gekopieerd uit de volgende sectie in dit artikel.
+In deze tabel worden de script namen, beschrijvingen, detecties, herstel bewerkingen en configureer bare items weer gegeven. Script bestanden waarvan de naam begint met `Detect` detectie scripts zijn. Herstel scripts beginnen met `Remediate` . Deze scripts kunnen worden gekopieerd uit de volgende sectie in dit artikel.
 
 |Scriptnaam|Beschrijving|
 |---|---|
-|**Verlopen groeps beleid bijwerken** </br>`Detect_stale_Group_Policies.ps1` </br> `Remediate_stale_GroupPolicies.ps1`| Detecteert of de laatste groepsbeleid vernieuwing groter `7 days` is dan geleden.  </br>Pas de drempel van 7 dagen aan door de waarde voor `$numDays` in het detectie script te wijzigen. </br></br>Opgelost door uit te voeren `gpupdate /target:computer /force` en`gpupdate /target:user /force`  </br> </br>Kan helpen bij het verminderen van ondersteuning bij netwerk connectiviteit wanneer certificaten en configuraties via groepsbeleid worden geleverd. </br> </br> **Voer het script uit met de referenties die zijn aangemeld**: Ja|
+|**Verlopen groeps beleid bijwerken** </br>`Detect_stale_Group_Policies.ps1` </br> `Remediate_stale_GroupPolicies.ps1`| Detecteert of de laatste groepsbeleid vernieuwing groter is dan `7 days` geleden.  </br>Pas de drempel van 7 dagen aan door de waarde voor `$numDays` in het detectie script te wijzigen. </br></br>Opgelost door uit te voeren `gpupdate /target:computer /force` en`gpupdate /target:user /force`  </br> </br>Kan helpen bij het verminderen van ondersteuning bij netwerk connectiviteit wanneer certificaten en configuraties via groepsbeleid worden geleverd. </br> </br> **Voer het script uit met de referenties die zijn aangemeld**: Ja|
 |**Office klik-en-klaar-service opnieuw starten** </br> `Detect_Click_To_Run_Service_State.ps1` </br> `Remediate_Click_To_Run_Service_State.ps1`| Detecteert of de klik-en-klaar-service is ingesteld op automatisch starten en als de service wordt gestopt. </br> </br> Herstel door de service zodanig in te stellen dat deze automatisch wordt gestart en de service wordt gestart als deze is gestopt. </br></br> Helpt problemen op te lossen waarbij Win32-Microsoft 365-apps voor bedrijven niet starten omdat de klik-en-klaar-service is gestopt. </br> </br> **Voer het script uit met de referenties die zijn aangemeld**: Nee|
-|**Controleer netwerk certificaten** </br>`Detect_Expired_Issuer_Certificates.ps1` </br>`Remediate_Expired_Issuer_Certificates.ps1`|Hiermee worden certificaten gedetecteerd die zijn uitgegeven door een certificerings instantie in het persoonlijke archief van de computer of gebruiker die verlopen of bijna verlopen zijn. </br> Geef de CA op door de waarde voor `$strMatch` in het detectie script te wijzigen. Geef 0 op `$expiringDays` om verlopen certificaten te vinden of geef een ander aantal dagen op om certificaten bij verval datum te vinden.  </br></br>Herstel door een pop-upmelding naar de gebruiker te verhogen. </br> Geef de `$Title` waarden `$msgText` en op bij de titel van het bericht en de tekst die gebruikers moeten zien. </br> </br> Hiermee worden gebruikers op de hoogte gesteld van verlopen certificaten die mogelijk moeten worden vernieuwd. </br> </br> **Voer het script uit met de referenties die zijn aangemeld**: Nee|
+|**Controleer netwerk certificaten** </br>`Detect_Expired_Issuer_Certificates.ps1` </br>`Remediate_Expired_Issuer_Certificates.ps1`|Hiermee worden certificaten gedetecteerd die zijn uitgegeven door een certificerings instantie in het persoonlijke archief van de computer of gebruiker die verlopen of bijna verlopen zijn. </br> Geef de CA op door de waarde voor `$strMatch` in het detectie script te wijzigen. Geef 0 op `$expiringDays` om verlopen certificaten te vinden of geef een ander aantal dagen op om certificaten bij verval datum te vinden.  </br></br>Herstel door een pop-upmelding naar de gebruiker te verhogen. </br> Geef de `$Title` waarden en op `$msgText` bij de titel van het bericht en de tekst die gebruikers moeten zien. </br> </br> Hiermee worden gebruikers op de hoogte gesteld van verlopen certificaten die mogelijk moeten worden vernieuwd. </br> </br> **Voer het script uit met de referenties die zijn aangemeld**: Nee|
 |**Verouderde certificaten wissen** </br>`Detect_Expired_User_Certificates.ps1` </br> `Remediate_Expired_User_Certificates.ps1`| Hiermee worden verlopen certificaten gedetecteerd die zijn uitgegeven door een certificerings instantie in het persoonlijke archief van de huidige gebruiker. </br> Geef de CA op door de waarde voor `$certCN` in het detectie script te wijzigen. </br> </br> Herstel door verlopen certificaten te verwijderen die zijn uitgegeven door een certificerings instantie uit het persoonlijke archief van de huidige gebruiker. </br> Geef de CA op door de waarde voor `$certCN` in het herstel script te wijzigen. </br> </br> Hiermee worden verlopen certificaten die zijn uitgegeven door een CA uit het persoonlijke archief van de huidige gebruiker gevonden en verwijderd. </br> </br> **Voer het script uit met de referenties die zijn aangemeld**: Ja|
 
 ## <a name="powershell-scripts"></a><a name="bkmk_uea_ps_scripts"></a>Power shell-scripts
@@ -744,7 +781,7 @@ In de volgende afbeelding ziet u hoe vereiste functionele gegevens stromen van a
 
 Het gemiddelde aantal latentie-einden is ongeveer 12 uur en wordt gegatedeerd op de tijd die nodig is om de dagelijkse verwerking uit te voeren. Alle andere delen van de gegevens stroom zijn bijna in realtime.
 
-### <a name="data-collection"></a><a name="bkmk_uea_datacollection"></a>Gegevens verzamelen
+### <a name="data-collection"></a><a name="bkmk_uea_datacollection"></a>Gegevensverzameling
 
 Momenteel verzamelt de basis functionaliteit van endpoint Analytics informatie die is gekoppeld aan opstart prestatie records die in de [geïdentificeerde](https://docs.microsoft.com/mem/intune/protect/privacy-data-collect#identified-data) en [gepseudoniemde](https://docs.microsoft.com/mem/intune/protect/privacy-data-collect#pseudonymized-data) categorieën vallen. Wanneer we meer functionaliteit gedurende een bepaalde periode toevoegen, worden de verzamelde gegevens zo nodig verschillend. Het belangrijkste data Points dat momenteel wordt verzameld:
 
@@ -770,7 +807,7 @@ Momenteel verzamelt de basis functionaliteit van endpoint Analytics informatie d
   - **gpLogonDurationInMilliseconds**: tijd voor het verwerken van groeps beleid
   - **desktopShownDurationInMilliseconds:** Tijd voor het laden van bureau blad (Explorer. exe)
   - **desktopUsableDurationInMilliseconds:** Tijd voor het gebruik van bureau blad (Explorer. exe)
-  - **topProcesses:** Lijst met processen die tijdens het opstarten worden geladen met de naam, met statistieken voor CPU-gebruik en app-Details (naam, uitgever, versie). Bijvoorbeeld *{\"verwerker\":\"svchost\",\"CpuUsage\": 43,\"ProcessFullPath\":\"C:\\\\Windows\\\\System32\\\\svchost. exe\",\"ProductName\":\"micro&reg; Soft&reg; Windows-\"besturings\"systeem\",\"Uitgever:\"micro\"Soft\"Corporation\",\"productVersion: 10.0.18362.1}*
+  - **topProcesses:** Lijst met processen die tijdens het opstarten worden geladen met de naam, met statistieken voor CPU-gebruik en app-Details (naam, uitgever, versie). Bijvoorbeeld *{ \" verwerker \" : \" svchost \" , \" CpuUsage \" : 43, \" ProcessFullPath \" : \" C: \\ \\ Windows \\ \\ System32 \\ \\ svchost. exe \" , \" ProductName \" : \" micro soft &reg; Windows &reg; -besturings systeem \" , \" Uitgever \" : \" micro soft Corporation \" , \" productVersion \" : \" 10.0.18362.1 \" }*
 - Gegevens van apparaten die niet zijn gekoppeld aan een apparaat of gebruiker (als deze gegevens zijn gekoppeld aan een apparaat of gebruiker, worden deze gegevens behandeld als geïdentificeerde gegevens)
   - **Id:** Unieke apparaat-ID die wordt gebruikt door Windows Update
   - **localId:** Een lokaal gedefinieerde unieke ID voor het apparaat. Dit is niet de door de mens lees bare apparaatnaam. Waarschijnlijk gelijk aan de waarde die is opgeslagen op HKLM\Software\Microsoft\SQMClient\MachineId.

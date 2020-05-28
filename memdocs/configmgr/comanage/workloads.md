@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
-ms.openlocfilehash: 8c91ba1c2b4b5ef7072c030eddd9b97dd69933e5
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 928ef8a8ebc90807912f22901743725df9aa67e7
+ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075707"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82842220"
 ---
 # <a name="co-management-workloads"></a>Werk belastingen voor co-beheer
 
@@ -25,7 +25,7 @@ Als u een werk belasting overschakelt naar intune, maar later van gedachten vera
 
 Co-beheer ondersteunt de volgende werk belastingen:
 
-- [Nalevings beleid](#compliance-policies)  
+- [Nalevingsbeleid](#compliance-policies)  
 
 - [Windows Update beleid](#windows-update-policies)  
 
@@ -39,7 +39,7 @@ Co-beheer ondersteunt de volgende werk belastingen:
 
 - [Client-apps](#client-apps)  
 
-## <a name="compliance-policies"></a>Compliance beleidsregels
+## <a name="compliance-policies"></a>Nalevingsbeleid
 
 Nalevings beleid definieert de regels en instellingen waaraan een apparaat moet voldoen om te worden beschouwd als compatibel met het beleid voor voorwaardelijke toegang. U kunt ook nalevings beleid gebruiken om nalevings problemen met apparaten onafhankelijk van voorwaardelijke toegang te controleren en te herstellen. Vanaf Configuration Manager versie 1910 kunt u evaluatie van aangepaste configuratie basislijnen toevoegen als beoordelings regel voor nalevings beleid. Zie [aangepaste configuratie basislijnen opnemen als onderdeel van de evaluatie van het nalevings beleid](../compliance/deploy-use/create-configuration-baselines.md#bkmk_CAbaselines)voor meer informatie.
 
@@ -75,16 +75,15 @@ De Endpoint Protection werk belasting bevat de Windows Defender-suite van antima
 - Windows Defender Application Control  
 - Windows Defender Security Center  
 - Windows Defender Advanced Threat Protection (nu bekend als micro soft Defender Threat Protection)
-- Windows Information Protection  
 
 Zie voor meer informatie over de intune-functie [Endpoint Protection voor Microsoft intune](https://docs.microsoft.com/intune/endpoint-protection-windows-10).
 
 > [!Note]  
 > Wanneer u deze werk belasting overschakelt, blijft het Configuration Manager-beleid op het apparaat totdat het intune-beleid deze overschrijft. Dit gedrag zorgt ervoor dat het apparaat nog steeds beveiligings beleid heeft tijdens de overgang.
 >
-> De Endpoint Protection werk belasting maakt ook deel uit van de apparaatconfiguratie. Hetzelfde gedrag geldt wanneer u de workload van de [apparaatconfiguratie](#device-configuration) overschakelt.<!-- SCCMDocs.nl-nl issue #4 -->
+> De Endpoint Protection werk belasting maakt ook deel uit van de apparaatconfiguratie. Hetzelfde gedrag geldt wanneer u de workload van de [apparaatconfiguratie](#device-configuration) overschakelt.<!-- SCCMDocs.nl-nl issue #4 --> Wanneer u de werk belasting van de apparaatconfiguratie overschakelt, bevat het ook beleids regels voor de functie Windows Information Protection, die niet is opgenomen in de werk belasting Endpoint Protection.<!-- 4184095 -->
 >
-> De micro soft Defender anti virus-instellingen die deel uitmaken van het profiel type voor beperkingen van het apparaat voor de configuratie van het intune-apparaat, zijn niet opgenomen in het bereik van de Endpoint Protection-schuif regelaar. Als u micro soft Defender anti virus wilt beheren voor door co beheerde apparaten waarvoor de Endpoint Protection-schuif regelaar is ingeschakeld, gebruikt u het nieuwe antivirus beleid in **micro soft Endpoint Manager-beheer centrum** > **Endpoint Security** > **anti virus**. Het nieuwe beleids type heeft nieuwe en verbeterde beschik bare opties en biedt ondersteuning voor alle instellingen die beschikbaar zijn in het profiel voor beperkingen van apparaten. <!--6609171-->
+> De micro soft Defender anti virus-instellingen die deel uitmaken van het profiel type voor beperkingen van het apparaat voor de configuratie van het intune-apparaat, zijn niet opgenomen in het bereik van de Endpoint Protection-schuif regelaar. Als u micro soft Defender anti virus wilt beheren voor door co beheerde apparaten waarvoor de Endpoint Protection-schuif regelaar is ingeschakeld, gebruikt u het nieuwe antivirus beleid in **micro soft Endpoint Manager-beheer centrum**  >  **Endpoint Security**  >  **anti virus**. Het nieuwe beleids type heeft nieuwe en verbeterde beschik bare opties en biedt ondersteuning voor alle instellingen die beschikbaar zijn in het profiel voor beperkingen van apparaten. <!--6609171-->
 >
 > Het Windows-versleutelings onderdeel bevat BitLocker-beheer. Zie [Deploying BitLocker Management](../protect/deploy-use/bitlocker/deploy-management-agent.md#co-management-and-intune)(Engelstalig) voor meer informatie over het gedrag van deze functie met co-beheer.<!-- SCCMDocs#2321 -->
 
@@ -97,6 +96,9 @@ De werk belasting voor apparaatconfiguratie bevat instellingen die u beheert voo
 U kunt nog steeds instellingen van Configuration Manager implementeren op door co beheerde apparaten, zelfs als intune de configuratie-instantie van de apparaat is. Deze uitzonde ring kan worden gebruikt om instellingen te configureren die uw organisatie vereist, maar die nog niet beschikbaar zijn in intune. Geef deze uitzonde ring op een [Configuration Manager configuratie basislijn](../compliance/deploy-use/create-configuration-baselines.md)op. Schakel de optie om **deze basis lijn altijd toe te passen, zelfs voor clients die gezamenlijk worden beheerd** bij het maken van de basis lijn. U kunt dit later wijzigen op het tabblad **Algemeen** van de eigenschappen van een bestaande basis lijn.  
 
 Zie [een apparaatprofiel maken in Microsoft intune](https://docs.microsoft.com/intune/device-profile-create)voor meer informatie over de intune-functie.  
+
+> [!NOTE]
+> Wanneer u de werk belasting van de apparaatconfiguratie overschakelt, bevat het ook beleids regels voor de functie Windows Information Protection, die niet is opgenomen in de werk belasting Endpoint Protection.<!-- 4184095 -->
 
 ## <a name="office-click-to-run-apps"></a>Office klik-en-klaar-apps
 
@@ -139,13 +141,13 @@ Wanneer de Endpoint Protection werk belasting wordt verplaatst naar intune, kan 
 
 U kunt dit probleem omzeilen door de CleanUpPolicy. XML toe te passen met behulp van ConfigSecurityPolicy. exe nadat de intune-beleids regels zijn ontvangen door de client met behulp van de onderstaande stappen:
 
-1. Kopieer de onderstaande tekst en sla deze `CleanUpPolicy.xml`op als.
+1. Kopieer de onderstaande tekst en sla deze op als `CleanUpPolicy.xml` .
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
    <SecurityPolicy xmlns="http://forefront.microsoft.com/FEP/2010/01/PolicyData" Name="FEP clean-up policy"><PolicySection Name="FEP.AmPolicy"><LocalGroupPolicySettings><IgnoreKey Name="SOFTWARE\Policies\Microsoft\Microsoft Antimalware"/><IgnoreKey Name="SOFTWARE\Policies\Microsoft\Windows Defender"/></LocalGroupPolicySettings></PolicySection></SecurityPolicy>
    ```
-1. Open een opdracht prompt met verhoogde bevoegdheden `ConfigSecurityPolicy.exe`naar. Dit uitvoer bare bestand bevindt zich doorgaans in een van de volgende directory's:
+1. Open een opdracht prompt met verhoogde bevoegdheden naar `ConfigSecurityPolicy.exe` . Dit uitvoer bare bestand bevindt zich doorgaans in een van de volgende directory's:
    - C:\Program Files\Windows Defender
    - C:\Program Files\Microsoft Security-client
 1. Geef vanuit de opdracht prompt het XML-bestand door om het beleid op te schonen. Bijvoorbeeld `ConfigSecurityPolicy.exe C:\temp\CleanUpPolicy.xml`.  

@@ -35,7 +35,7 @@ Wijzigingen ten opzichte van vorige versies worden aangegeven met ***[New]***, *
 ##  <a name="how-to-change-the-level"></a><a name="bkmk_change"></a> Niveau wijzigen
  Beheerders met een op rollen gebaseerd administratief bereik met **wijzigings** machtigingen voor de object klasse **site** kunnen het niveau wijzigen van de gegevens die zijn verzameld in de instellingen voor diagnostische gegevens en gebruik in de Configuration Manager-console.
 
-U wijzigt het niveau van de gegevens verzameling vanuit de-console door te navigeren naar **beheer** > **overzicht** > **site configuratie** > **sites**. Open de instellingen van de **hiërarchie**en selecteer vervolgens het gegevens niveau dat u wilt gebruiken.  
+U wijzigt het niveau van de gegevens verzameling vanuit de-console door te navigeren naar **beheer**  >  **overzicht**  >  **site configuratie**  >  **sites**. Open de instellingen van de **hiërarchie**en selecteer vervolgens het gegevens niveau dat u wilt gebruiken.  
 
 
 

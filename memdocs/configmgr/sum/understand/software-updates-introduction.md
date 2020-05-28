@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: e9778b13-c8a3-40eb-8655-34ac8ce9cdaa
-ms.openlocfilehash: c857997bdbeed51286e874dcbecf00b414dfe6a0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: bd384edafd6464073b33a593a56bc88ba2fb0b87
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81717641"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906767"
 ---
 # <a name="introduction-to-software-updates-in-configuration-manager"></a>Inleiding tot software-updates in Configuration Manager
 
@@ -275,7 +275,7 @@ Zie voor een voorbeeld scenario waarin wordt getoond hoe u software-updates in u
  Zie [planning voor client implementatie op Windows Embedded-apparaten](../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md)voor meer informatie over de manier waarop Configuration Manager Inge sloten apparaten beheert die gebruikmaken van schrijf filters.  
 
 ##  <a name="extend-software-updates-in-configuration-manager"></a><a name="BKMK_ExtendSoftwareUpdates"></a> Software-updates uitbreiden in Configuration Manager  
- Gebruik System Center Updates Publisher om software-updates te beheren die niet beschikbaar zijn via Microsoft Update. Nadat u de software-updates naar de update server hebt gepubliceerd en de software-updates in Configuration Manager hebt gesynchroniseerd, kunt u de software-updates implementeren op Configuration Manager-clients. Zie [updates publisher 2011](https://go.microsoft.com/fwlink/p/?LinkId=252947)voor meer informatie over updates Publisher.  
+ Gebruik System Center Updates Publisher om software-updates te beheren die niet beschikbaar zijn via Microsoft Update. Nadat u de software-updates naar de update server hebt gepubliceerd en de software-updates in Configuration Manager hebt gesynchroniseerd, kunt u de software-updates implementeren op Configuration Manager-clients. Zie [updates publisher 2011](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10))voor meer informatie over updates Publisher.  
 
 ## <a name="next-steps"></a>Volgende stappen
 [Software-updates plannen](../plan-design/plan-for-software-updates.md)

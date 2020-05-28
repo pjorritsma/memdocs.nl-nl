@@ -10,12 +10,13 @@ ms.assetid: 1f4e26f7-42f2-40c8-80cf-efd405349c6c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 37555c6b60b0d2c18096c2778e9a077baeb9143f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: fdc15860f2d093a4c9c61b787ba0b780051d3f3d
+ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714540"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83864868"
 ---
 # <a name="monitor-connection-health"></a>Status van de verbinding bewaken
 
@@ -103,6 +104,9 @@ Het apparaat heeft de volgende kenmerken:
 Configuration Manager detecteert een of meer blokkerende problemen die de registratie van het apparaat verhinderen. Zie de lijst met eigenschappen van het [bureau blad Analytics in Configuration Manager](#bkmk_config-issues)voor meer informatie.  
 
 Zo is de Configuration Manager-client niet ten minste versie 1902 (5.0.8790). Werk de client bij naar de nieuwste versie. Overweeg automatische client upgrade voor de Configuration Manager-site in te scha kelen. Zie [upgrade-clients](../core/clients/manage/upgrade/upgrade-clients.md#automatic-client-upgrade)voor meer informatie.  
+
+> [!TIP]
+> Er is een bekend probleem met de Extended Security Update (ESU) van april 2020 voor Windows 7 waardoor apparaten deze fout niet kunnen rapporteren. Zie [release opmerkingen](../core/servers/deploy/install/release-notes.md#dawin7-diagtrack)voor meer informatie.<!-- 7283186 -->
 
 Vanaf versie 2002 kunt u problemen met de configuratie van de client proxy op twee gebieden gemakkelijker identificeren:
 
@@ -213,7 +217,7 @@ Anders kan een van de volgende fouten worden weer gegeven:
 
 - Kan de compatibiliteits gegevens verzameling voor de apparaat-app niet configureren (SetRequestAllAppraiserVersions). Raadpleeg de logboeken voor de uitzonderings Details  
 
-- Kan de RequestAllAppraiserVersions niet naar de register `HKLM:\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\AppCompatFlags\Appraiser`sleutel schrijven. Machtigingen controleren  
+- Kan de RequestAllAppraiserVersions niet naar de register sleutel schrijven `HKLM:\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\AppCompatFlags\Appraiser` . Machtigingen controleren  
 
 Controleer de machtigingen voor deze register sleutel. Zorg ervoor dat het lokale systeem account toegang heeft tot deze sleutel om de Configuration Manager-client in te stellen.  
 
@@ -228,7 +232,7 @@ Installeer de meest recente compatibiliteits update. Zie [Compatibility updates]
 
 ### <a name="appraiser-version"></a>Versie van de beoordeling
 
-Met deze eigenschap wordt de huidige versie van het onderdeel van de component beoordeling op het apparaat weer gegeven. Het bevat de bestands versie op `%windir%\System32\appraiser.dll`, zonder de decimale punten. Bestands versie 10.0.17763 wordt bijvoorbeeld weer gegeven als 10017763.
+Met deze eigenschap wordt de huidige versie van het onderdeel van de component beoordeling op het apparaat weer gegeven. Het bevat de bestands versie op `%windir%\System32\appraiser.dll` , zonder de decimale punten. Bestands versie 10.0.17763 wordt bijvoorbeeld weer gegeven als 10017763.
 
 ### <a name="last-successful-full-run-of-appraiser"></a>Laatste geslaagde volledige uitvoering van de beoordelings programma
 
@@ -248,7 +252,7 @@ Als dat niet lukt, kan er een van de volgende fouten worden weer gegeven:
 
 Raadpleeg M365AHandler. log op de client voor meer informatie.
 
-Controleer het volgende bestand: `%windir%\System32\CompatTelRunner.exe`. Als deze niet bestaat, installeert u de vereiste [compatibiliteits updates](enroll-devices.md#update-devices)opnieuw. Zorg ervoor dat er geen ander systeem onderdeel is om dit bestand te verwijderen, zoals groeps beleid of een antimalware-service.
+Controleer het volgende bestand: `%windir%\System32\CompatTelRunner.exe` . Als deze niet bestaat, installeert u de vereiste [compatibiliteits updates](enroll-devices.md#update-devices)opnieuw. Zorg ervoor dat er geen ander systeem onderdeel is om dit bestand te verwijderen, zoals groeps beleid of een antimalware-service.
 
 Als het bestand M365AHandler. log op de client een van de volgende fouten bevat:
 
@@ -299,7 +303,7 @@ Als dat niet lukt, kan er een van de volgende fouten worden weer gegeven:
 
 Raadpleeg M365AHandler. log op de client voor meer informatie.
 
-Controleer het volgende bestand: `%windir%\System32\DeviceCensus.exe`. Als deze niet bestaat, installeert u de vereiste [compatibiliteits updates](enroll-devices.md#update-devices)opnieuw. Zorg ervoor dat er geen ander systeem onderdeel is om dit bestand te verwijderen, zoals groeps beleid of een antimalware-service.
+Controleer het volgende bestand: `%windir%\System32\DeviceCensus.exe` . Als deze niet bestaat, installeert u de vereiste [compatibiliteits updates](enroll-devices.md#update-devices)opnieuw. Zorg ervoor dat er geen ander systeem onderdeel is om dit bestand te verwijderen, zoals groeps beleid of een antimalware-service.
 
 ### <a name="windows-diagnostic-endpoint-connectivity"></a>Windows diagnostische endpoint-connectiviteit
 
@@ -314,7 +318,7 @@ Anders kan een van de volgende fouten worden weer gegeven:
 
 Apparaten verifiëren de connectiviteit met een GET-aanvraag voor het volgende eind punt op basis van de versie van het besturings systeem:
 
-| Versie van het besturingssysteem | Eindpunt |
+| Besturingssysteemversie | Eindpunt |
 |------------|----------|
 | -Windows 10, versie 1809 of hoger<br/>-Windows 10, versie 1803 met de cumulatieve update van 2018-09 of hoger | `https://v10c.events.data.microsoft.com/health/keepalive` |
 | Windows 10, versie 1803 *zonder* de cumulatieve update van 2018-09 of hoger | `https://v10.events.data.microsoft.com/health/keepalive` |
@@ -356,9 +360,9 @@ Als deze controle is geslaagd, is het apparaat op de juiste wijze geconfigureerd
 
 Anders kan een van de volgende fouten worden weer gegeven:
 
-- Kan de CommercialId niet naar de register `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`sleutel schrijven. Machtigingen controleren  
+- Kan de CommercialId niet naar de register sleutel schrijven `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection` . Machtigingen controleren  
 
-- Kan de CommercialId in de register sleutel `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`niet bijwerken. Raadpleeg de logboeken voor de uitzonderings Details  
+- Kan de CommercialId in de register sleutel niet bijwerken `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection` . Raadpleeg de logboeken voor de uitzonderings Details  
 
 - Geef de juiste CommercialId-waarde op`HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`  
 
@@ -393,7 +397,7 @@ Anders kan een van de volgende fouten worden weer gegeven:
 
 - Kan niet controleren of de apparaatnaam naar micro soft moet worden verzonden als onderdeel van de diagnostische gegevens van Windows. Raadpleeg de logboeken voor de uitzonderings Details  
 
-- Kan AllowDeviceNameInTelemetry niet naar de register `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`sleutel schrijven. Machtigingen controleren  
+- Kan AllowDeviceNameInTelemetry niet naar de register sleutel schrijven `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection` . Machtigingen controleren  
 
 Raadpleeg M365AHandler. log op de client voor meer informatie.  
 
@@ -409,6 +413,9 @@ Als deze controle is geslaagd, is het DiagTrack-onderdeel op de juiste wijze gec
 Anders kan een van de volgende fouten worden weer gegeven:
 
 - Het onderdeel Connected User Experience en telemetrie (diagtrack. dll) is verouderd. Vereisten controleren  
+
+    > [!TIP]
+    > Er is een bekend probleem met de Extended Security Update (ESU) van april 2020 voor Windows 7 waardoor apparaten deze fout niet kunnen rapporteren. Zie [release opmerkingen](../core/servers/deploy/install/release-notes.md#dawin7-diagtrack)voor meer informatie.<!-- 7283186 -->
 
 - Kan het onderdeel Connected User Experience en telemetrie (diagtrack. dll) niet vinden. Vereisten controleren  
 
@@ -426,7 +433,7 @@ Zorg ervoor dat de **verbonden gebruikers ervaring en telemetrie** -service op h
 
 ### <a name="diagtrack-version"></a>DiagTrack-versie
 
-Met deze eigenschap wordt de huidige versie van de verbonden gebruikers ervaring en het telemetrie-onderdeel op het apparaat weer gegeven. Het bevat de bestands versie op `%windir%\System32\diagtrack.dll`, zonder de decimale punten. Bestands versie 10.0.10586 wordt bijvoorbeeld weer gegeven als 10010586.
+Met deze eigenschap wordt de huidige versie van de verbonden gebruikers ervaring en het telemetrie-onderdeel op het apparaat weer gegeven. Het bevat de bestands versie op `%windir%\System32\diagtrack.dll` , zonder de decimale punten. Bestands versie 10.0.10586 wordt bijvoorbeeld weer gegeven als 10010586.
 
 ### <a name="sqm-id-retrieval"></a>SQM-ID ophalen
 

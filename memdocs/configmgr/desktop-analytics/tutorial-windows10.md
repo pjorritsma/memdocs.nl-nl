@@ -10,12 +10,13 @@ ms.assetid: 3e82cd96-0ce0-474a-a597-d65fceadc95a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2456f530444fa5d9514247edd77cbe7b02f62c38
-ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
+ms.reviewer: acabello
+ms.openlocfilehash: b991c2ddd0ea121251eb19afbdb032844be8738d
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82126003"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268195"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>Zelf studie: Windows 10 implementeren naar pilot
 
@@ -165,7 +166,7 @@ Installeer de Configuration Manager versie 1902 update pakket (4500571) ter onde
 
     - **Desktop Analytics** selecteren in de lijst met beschik bare Services  
   
-   Selecteer **Volgende**.  
+   Selecteer **Next**.  
 
 3. Selecteer op de pagina **app** de juiste **Azure-omgeving**. Selecteer vervolgens **Bladeren** voor de web-app.
 
@@ -196,7 +197,7 @@ Installeer de Configuration Manager versie 1902 update pakket (4500571) ter onde
 
     - **Apparaatnaam in diagnostische gegevens toestaan**: Selecteer **inschakelen**  
   
-   Selecteer **Volgende**. Op de pagina **beschik bare functionaliteit** ziet u de functionaliteit van het bureau blad Analytics die beschikbaar is met de instellingen voor diagnostische gegevens van de vorige pagina. Selecteer **Volgende**.  
+   Selecteer **Next**. Op de pagina **beschik bare functionaliteit** ziet u de functionaliteit van het bureau blad Analytics die beschikbaar is met de instellingen voor diagnostische gegevens van de vorige pagina. Selecteer **Next**.  
 
 7. Configureer op de pagina **verzamelingen** de volgende instellingen:  
 
@@ -243,7 +244,7 @@ Gebruik deze procedure voor het maken van een implementatie plan in Desktop Anal
 
         - **Mijn computers krijgen automatisch Stuur Programma's van Windows Update**: de standaard instelling is **uitgeschakeld**, wat wordt aanbevolen bij het implementeren met Configuration Manager.  
 
-        - **Definieer een lage drempel waarde voor het aantal installaties voor uw apps**: de `2%`standaard instelling is. Apps onder deze drempel waarde worden automatisch ingesteld op het *aantal kleine installaties*. Met Desktop Analytics worden deze invoeg toepassingen niet gevalideerd tijdens de test fase.  
+        - **Definieer een lage drempel waarde voor het aantal installaties voor uw apps**: de standaard instelling is `2%` . Apps onder deze drempel waarde worden automatisch ingesteld op het *aantal kleine installaties*. Met Desktop Analytics worden deze invoeg toepassingen niet gevalideerd tijdens de test fase.  
 
             *Als een*app wordt geïnstalleerd op een hoger percentage computers dan deze drempel waarde, markeert het implementatie plan de app als een afdoende. Vervolgens kunt u het belang bepalen dat u tijdens de test fase wilt testen.  
 
@@ -362,7 +363,7 @@ Distribueer vervolgens het upgrade pakket van het besturings systeem naar distri
     >
     > Deze verzameling is gereserveerd voor apparaten met een desktop Analytics-implementatie plan. Hand matige wijzigingen in deze verzameling worden niet ondersteund.<!-- 3866460, SCCMDocs-pr 3544 -->  
 
-5. Selecteer op de pagina **inhoud** **toevoegen**en selecteer vervolgens **distributie punt**. Selecteer een beschikbaar distributie punt voor het hosten van de installatie-inhoud en selecteer **OK**. Selecteer **volgende**.  
+5. Selecteer op de pagina **inhoud** **toevoegen**en selecteer vervolgens **distributie punt**. Selecteer een beschikbaar distributie punt voor het hosten van de installatie-inhoud en selecteer **OK**. Selecteer vervolgens **Volgende**.  
 
 6. Selecteer op de pagina **implementatie-instellingen** de optie **volgende** om de standaard instellingen te accepteren. (Een beschik bare installatie.)  
 

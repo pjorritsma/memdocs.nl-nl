@@ -10,12 +10,12 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 3af6f2883ebf17ab19f57762b8b3bf26e3716262
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 9e59d850a78a8f45f93769003e7a1de99e5634b3
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075724"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906391"
 ---
 # <a name="create-windows-applications-in-configuration-manager"></a>Windows-toepassingen maken in Configuration Manager
 
@@ -27,7 +27,7 @@ Naast de andere Configuration Manager-vereisten en-procedures voor het [maken va
 
 Configuration Manager ondersteunt de implementatie van Windows-app-pakket (. appx) en app-bundel (. appxbundle) voor Windows 8,1-en Windows 10-apparaten.
 
-Wanneer u een toepassing maakt in de Configuration Manager-console, selecteert u het installatie bestands **type** van de toepassing als **Windows-app \*-pakket ( \*\*. appx, \*. appxbundle,. msix,. msixbundle)**. Zie [toepassingen maken](../deploy-use/create-applications.md)voor meer informatie over het maken van apps in het algemeen. Zie [ondersteuning voor MSIX-indeling](#bkmk_msix)voor meer informatie over de MSIX-indeling.
+Wanneer u een toepassing maakt in de Configuration Manager-console, selecteert u het installatie bestands **type** van de toepassing als **Windows-app-pakket ( \* . appx, \* . appxbundle, \* . msix, \* . msixbundle)**. Zie [toepassingen maken](../deploy-use/create-applications.md)voor meer informatie over het maken van apps in het algemeen. Zie [ondersteuning voor MSIX-indeling](#bkmk_msix)voor meer informatie over de MSIX-indeling.
 
 > [!Note]  
 > Als u gebruik wilt maken van nieuwe Configuration Manager functies, moet u clients eerst bijwerken naar de nieuwste versie. Wanneer u de-site en-console bijwerkt terwijl er nieuwe functionaliteit wordt weer gegeven in de Configuration Manager-console, is het volledige scenario niet functioneel totdat de client versie ook het meest recent is.<!--SCCMDocs issue 646-->  
@@ -58,7 +58,7 @@ Als u een Windows-app-implementatie type voor deze functie wilt configureren, sc
 
 Configuration Manager ondersteunt de indelingen voor het Windows 10-app-pakket (. msix) en app-bundel (. msixbundle). Windows 10 versie 1809 of hoger ondersteunen deze indelingen.
 
-- Ga voor een overzicht van MSIX naar [een](https://blogs.msdn.microsoft.com/sgern/2018/06/18/a-closer-look-at-msix/)meer informatie over MSIX.  
+- Ga voor een overzicht van MSIX naar [een](https://docs.microsoft.com/archive/blogs/sgern/a-closer-look-at-msix)meer informatie over MSIX.  
 
 - Zie voor meer informatie over het maken van een nieuwe MSIX-app [MSIX-ondersteuning geïntroduceerd in Insider Build 17682](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376).  
 
@@ -79,7 +79,7 @@ Converteer uw bestaande Windows Installer-toepassingen (. msi) naar de MSIX-inde
 
   - Installeer het [MSIX-verpakkings programma](https://www.microsoft.com/store/productId/9N5LW3JBCXKF) vanaf het Microsoft Store  
 
-  - Installeer het [stuur programma](/windows/msix/packaging-tool/tool-known-issues#frameworks-and-drivers) voor het MSIX-pakket<!--SCCMDocs-pr issue #3091-->  
+  - Installeer het [stuur programma](https://docs.microsoft.com/windows/msix/packaging-tool/tool-known-issues#frameworks-and-drivers) voor het MSIX-pakket<!--SCCMDocs-pr issue #3091-->  
 
 Installeer geen andere apps of services op dit apparaat. Het is uw referentie systeem.
 
@@ -104,7 +104,7 @@ Als het proces mislukt, verwijst de pagina samen vatting naar het logboek bestan
 
 Als u deze MSIX-app wilt gebruiken, moet u deze eerst digitaal ondertekenen zodat clients deze kunnen vertrouwen. Zie de volgende artikelen voor meer informatie over dit proces:
 
-- [MSIX: het MSIX-hulp programma voor het ondertekenen van het MSIX-pakket](https://blogs.msdn.microsoft.com/sgern/2018/09/06/msix-the-msix-packaging-tool-signing-the-msix-package/)
+- [MSIX: het MSIX-hulp programma voor het ondertekenen van het MSIX-pakket](https://docs.microsoft.com/archive/blogs/sgern/msix-the-msix-packaging-tool-signing-the-msix-package)
 - [Een app-pakket ondertekenen met SignTool](https://docs.microsoft.com/windows/desktop/appxpkg/how-to-sign-a-package-using-signtool)
 
 Nadat u de app hebt ondertekend, maakt u een nieuw implementatie type voor de toepassing in Configuration Manager. Zie [implementatie typen voor de toepassing maken](../deploy-use/create-applications.md#bkmk_create-dt)voor meer informatie.
@@ -152,7 +152,7 @@ Wanneer u de toepassing maakt, moet uw gebruikers account machtigingen voor het 
 
 ## <a name="support-for-universal-windows-platform-uwp-apps"></a><a name="bkmk_uwp"></a>Ondersteuning voor Universeel Windows-platform-apps (UWP)  
 
-Voor Windows 10-apparaten is geen sideloading-code vereist om line-of-Business-Apps te installeren. Als u extern laden wilt inschakelen, moet de register sleutel `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Appx\AllowAllTrustedApps` echter de waarde **1**hebben.  
+Voor Windows 10-apparaten is geen sideloading-code vereist om line-of-Business-Apps te installeren. Als u extern laden wilt inschakelen, moet de register sleutel echter de `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Appx\AllowAllTrustedApps` waarde **1**hebben.  
 
 Als u deze register sleutel niet configureert, wordt deze waarde door Configuration Manager automatisch ingesteld op **1** wanneer u voor het eerst een app op het apparaat implementeert. Als u deze waarde instelt op **0**, kan Configuration Manager de waarde niet automatisch wijzigen en mislukt de implementatie van de line-of-Business-app.  
 
@@ -168,7 +168,7 @@ Als u mobiele app-pakketten wilt ondertekenen, gebruikt u de volgende tabel om t
 
 ## <a name="deploy-windows-installer-apps-to-mdm-enrolled-windows-10-devices"></a><a name="bkmk_mdm-msi"></a>Windows Installer-apps implementeren op MDM-Inge schreven Windows 10-apparaten  
 
-Met het implementatie type **Windows Installer\*via MDM (. msi)** kunt u op Windows Installer gebaseerde apps maken en implementeren op apparaten die zijn geregistreerd met MDM met Windows 10.  
+Met het implementatie type **Windows Installer via MDM ( \* . msi)** kunt u op Windows Installer gebaseerde apps maken en implementeren op apparaten die zijn geregistreerd met MDM met Windows 10.  
 
 Wanneer u dit implementatie type gebruikt, moet u rekening houden met de volgende punten:
 

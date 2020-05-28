@@ -78,7 +78,7 @@ Wanneer u software-updates publiceert, kunt u de taal van het binaire bestand va
 -   Italiaans
 -   Japans
 -   Koreaans
--   Norwegian
+-   Noors
 -   Pools
 -   Portugees
 -   Portugees (Brazilië)

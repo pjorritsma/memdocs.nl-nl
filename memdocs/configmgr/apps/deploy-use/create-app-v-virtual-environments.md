@@ -30,7 +30,7 @@ In een virtuele omgeving van micro soft Application Virtualization (app-V) in Co
 
 ## <a name="create-an-app-v-virtual-environment"></a>Een virtuele app-V-omgeving maken  
 
-1.  Kies in de Configuration Manager-console **software bibliotheek** > **toepassings beheer** > **App-V virtuele omgevingen**.  
+1.  Kies in de Configuration Manager-console **software bibliotheek**  >  **toepassings beheer**  >  **App-V virtuele omgevingen**.  
 
 3.  Klik op het tabblad **Start** in de groep **maken** op **virtuele omgeving maken**.  
 

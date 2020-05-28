@@ -10,12 +10,12 @@ ms.assetid: 95c13c00-909f-4fbb-bbaa-1eba9d54d8c5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c78bb5876455e68292e4a69d86a256fa9e5172d0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1ace560130e43fd5675b51b6d507e84043c01407
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718705"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904075"
 ---
 # <a name="schema-extensions-for-configuration-manager"></a>Schema-uitbreidingen voor System Center Configuration
 
@@ -25,7 +25,7 @@ U kunt het Active Directory schema uitbreiden ter ondersteuning van Configuratio
 
 -   Het is een goed idee om het Active Directory schema uit te breiden, maar dit is niet vereist.  
 
-Voordat u het [Active Directory-schema uitbreidt](https://docs.microsoft.com/sccm/core/plan-design/network/extend-the-active-directory-schema), dient u bekend te zijn met Active Directory Domain Services en te weten hoe u [het Active Directory-schema wijzigt](https://technet.microsoft.com/library/cc759402\(v=ws.10\).aspx).  
+Voordat u het [Active Directory-schema uitbreidt](https://docs.microsoft.com/sccm/core/plan-design/network/extend-the-active-directory-schema), dient u bekend te zijn met Active Directory Domain Services en te weten hoe u [het Active Directory-schema wijzigt](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759402(v=ws.10)).  
 
 ## <a name="considerations-for-extending-the-active-directory-schema-for-configuration-manager"></a>Overwegingen voor uitbrei ding van het Active Directory schema voor Configuration Manager  
 
@@ -70,7 +70,7 @@ Voordat u het [Active Directory-schema uitbreidt](https://docs.microsoft.com/scc
 
     -   **Installeer clients hand matig** en geef eigenschappen voor de client installatie op met behulp van de opdracht regel eigenschappen van CCMSetup-installatie. Dit moet het volgende omvatten:  
 
-        -   Geef een beheer punt of bronpad op van waaruit de computer de installatie bestanden kan downloaden met behulp van de ccmsetup-eigenschap **/MP: =&lt;naam van\> het beheer punt computer naam** of **/Source&lt;:\> pad naar client bron bestanden** op de CCMSetup-opdracht regel tijdens client installatie.  
+        -   Geef een beheer punt of bronpad op van waaruit de computer de installatie bestanden kan downloaden met behulp van de CCMSetup-eigenschap **/MP: = &lt; naam van \> het beheer punt computer naam** of **/Source: &lt; pad naar client bron bestanden \> ** op de CCMSetup-opdracht regel tijdens client installatie.  
 
         -   Geef een lijst met eerste beheer punten op die de client moet gebruiken, zodat deze aan de site kan worden toegewezen en down load vervolgens client beleid en site-instellingen. Gebruik hiervoor de Client.msi- eigenschap SMSMP van CCMSetup.  
 

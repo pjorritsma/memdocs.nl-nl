@@ -10,12 +10,13 @@ ms.assetid: 7ed389c3-a9ab-48ce-a5eb-27d52ee4fb94
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0835892788f86e9c246ed98d46658025fbc4180d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: c7bb6d01a35ce42002207d57d27fc41c37646d15
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723717"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268858"
 ---
 # <a name="how-to-connect-configuration-manager-with-desktop-analytics"></a>Configuration Manager verbinding maken met Desktop Analytics
 
@@ -51,7 +52,7 @@ Gebruik deze procedure om Configuration Manager verbinding te maken met Desktop 
 
     - Selecteer **Desktop Analytics** in de lijst met beschik bare Services.
 
-   Selecteer **Volgende**.
+   Selecteer **Next**.
 
 3. Selecteer op de pagina **app** de juiste **Azure-omgeving**. Selecteer vervolgens **Bladeren** voor de web-app.
 
@@ -90,7 +91,7 @@ Gebruik deze procedure om Configuration Manager verbinding te maken met Desktop 
         > [!NOTE]
         > Vanaf Windows 10 versie 1803 wordt de apparaatnaam niet standaard naar micro soft verzonden. Als u de apparaatnaam niet verzendt, wordt deze in Desktop Analytics weer gegeven als ' onbekend '. Dit gedrag kan het lastig maken om apparaten te identificeren en te beoordelen.
 
-   Selecteer **Volgende**. Op de pagina **beschik bare functionaliteit** ziet u de functionaliteit van het bureau blad Analytics die beschikbaar is met de instellingen voor diagnostische gegevens van de vorige pagina. Selecteer **volgende** om door te gaan of op **vorige** om wijzigingen aan te brengen.
+   Selecteer **Next**. Op de pagina **beschik bare functionaliteit** ziet u de functionaliteit van het bureau blad Analytics die beschikbaar is met de instellingen voor diagnostische gegevens van de vorige pagina. Selecteer **volgende** om door te gaan of op **vorige** om wijzigingen aan te brengen.
 
     ![Voor beeld van een beschik bare functionaliteits pagina in de wizard Azure-Services](media/available-functionality.png)
 

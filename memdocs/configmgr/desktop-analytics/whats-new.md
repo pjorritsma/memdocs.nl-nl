@@ -2,7 +2,7 @@
 title: Wat is er nieuw in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Een samen vatting van de nieuwe functies in de meest recente maandelijkse versie van de Desktop Analytics-Cloud service.
-ms.date: 03/12/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: fa300181-86cb-4afe-8fbf-895a7572378d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ce882f6bfc7a0d724688d5df59051dae17d54498
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.reviewer: acabello
+ms.openlocfilehash: 1d45d115f279603fa74e143c603c116146278ffe
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693142"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268159"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>Wat is er nieuw in Desktop Analytics
 
@@ -26,6 +27,16 @@ Meer informatie over wat er elke maand nieuw is in Desktop Analytics.
 
 Als u een melding wilt ontvangen wanneer deze pagina wordt bijgewerkt, kopieert en plakt u de volgende URL in uw RSS feed-lezer:`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
+
+## <a name="may-2020"></a>Mei 2020
+
+### <a name="reduce-the-number-of-apps-for-review"></a>Verminder het aantal apps voor beoordeling
+
+<!-- 5542186 -->
+
+Voor het consolideren en verminderen van het aantal apps dat wordt weer gegeven op de pagina assets in de portal, worden nu alle versies van apps met dezelfde naam en uitgever gecombineerd. Het aantal apps in de tegel ' **interessant ' apps** ' weerspiegelt deze instelling. In plaats van honderden exemplaren van micro soft Edge te vermelden, is er bijvoorbeeld één exemplaar voor alle versies. U kunt beslissingen voor alle versies eenmaal maken. Als u beslissingen moet nemen over specifieke versies van een app, kunt u dit gedrag configureren.
+
+Zie [about assets-apps (](about-assets.md#apps)Engelstalig) voor meer informatie.
 
 ## <a name="march-2020"></a>Maart 2020
 

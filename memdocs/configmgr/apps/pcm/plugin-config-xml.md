@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: ced1cc1347167451d4efb789b40746ff849710ee
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9178b595ba67723c623979b4c29290e42fe5f6ac
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709962"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83877738"
 ---
 # <a name="technical-reference-for-the-package-conversion-manager-plug-in-configuration-xml"></a>Technische documentatie voor de invoeg toepassing configuratie-XML van package Conversion Manager
 
@@ -37,14 +37,17 @@ In de volgende tabel worden de XML-elementen in het configuratie bestand van de 
 |**PcmPlugIn**|Tekenreeks|De naam van het script of het uitvoer bare bestand dat moet worden gebruikt als de pakket conversie beheer-invoeg toepassing.|
 |**PcmPlugInTimeoutMilliseconds**|Geheel getal|De maximale tijds duur, in milliseconden, dat moet worden gewacht op het script of uitvoer bare pakket conversie beheer-invoeg toepassing voor het volt ooien van de verwerking van een pakket.|
 |**PcmPluginExitCode**|Geheel getal|De verwachte afsluit code van het invoeg toepassings proces. Deze waarde geeft aan dat het geslaagd is. Alle andere codes worden als een fout beschouwd.|
-|**ForceRequirementsExtraction**|Booleaans|Automatische conversie toestaan om verzamelings vereisten te gebruiken die zijn gekoppeld aan een pakket. Dit moet alleen worden ingesteld op true wanneer u werkt met een package Conversion Manager-invoeg toepassing die is ontworpen om beslissingen te nemen over welke vereisten moeten worden gebruikt.|
+|**ForceRequirementsExtraction**|Boolean|Automatische conversie toestaan om verzamelings vereisten te gebruiken die zijn gekoppeld aan een pakket. Dit moet alleen worden ingesteld op true wanneer u werkt met een package Conversion Manager-invoeg toepassing die is ontworpen om beslissingen te nemen over welke vereisten moeten worden gebruikt.|
 
 
 
 ## <a name="sample-configuration-xml"></a>XML voor voorbeeld configuratie
 
 In deze sectie vindt u een voor beeld van de XML-elementen voor de configuratie van package Conversion Manager in het Configuration Manager-configuratie bestand **micro soft. ConfigurationManagement. exe. config**. Dit bestand bevindt zich standaard in het volgende pad:  
-`C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+`C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+
+> [!IMPORTANT]
+> Vanaf versie 1910 is dit pad gewijzigd om de map te gebruiken `Microsoft Endpoint Manager` . Zorg ervoor dat u geen oudere versie van het bestand gebruikt dat in een andere map kan voor komen. 
 
 In het voor beeld bevinden de elementen die betrekking hebben op package Conversion Manager zich in het volgende-element:`Microsoft.ConfigurationManagement.UserCentric.Workflow.Properties.Settings`
 

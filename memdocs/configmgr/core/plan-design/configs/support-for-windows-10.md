@@ -2,7 +2,7 @@
 title: Ondersteuning voor Windows 10
 titleSuffix: Configuration Manager
 description: Meer informatie over de Windows 10-versies die worden ondersteund als clients of voor OSD met Configuration Manager
-ms.date: 04/01/2020
+ms.date: 05/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a1626a65-da22-49e0-9564-d2f752ea3f4b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7241db0220bf4adf9b55341514afb03de33c2589
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a67a22f788af39dacb9f3a39e91e0f28444c6988
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709626"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879076"
 ---
 # <a name="support-for-windows-10-in-configuration-manager"></a>Ondersteuning voor Windows 10 in Configuration Manager  
 
@@ -53,11 +53,12 @@ De volgende tabel geeft een lijst van de versies van Windows 10 die u kunt gebru
 | **Enter prise 2015 LTSB** <!--10/14/2025-->   | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) |
 | **Enter prise 2016 LTSB** <!--10/13/2026-->   | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) |
 | **Enter prise LTSC 2019** <!--01/09/2029-->   | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) |
-| **1709**<br>(10.0.16299)   <!--04/14/2020-->   | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) |
+| **1709**<br>(10.0.16299)   <!--10/13/2020-->   | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) |
 | **1803**<br>(10.0.17134)   <!--11/10/2020-->   | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) |
 | **1809**<br>(10.0.17763)   <!--05/11/2021-->   | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) |
 | **1903**<br>(10.0.18362)   <!--12/08/2020-->   | ![Niet ondersteund](media/Red_X.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) |
-| **1909**<br>(10.0.18363)   <!--05/11/2021-->   | ![Niet ondersteund](media/Red_X.png) | ![Niet ondersteund](media/Red_X.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) |
+| **1909**<br>(10.0.18363)   <!--05/10/2022-->   | ![Niet ondersteund](media/Red_X.png) | ![Niet ondersteund](media/Red_X.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) |
+| **2004**<br>(10.0.19041)   <!--??/??/2021-->   | ![Niet ondersteund](media/Red_X.png) | ![Niet ondersteund](media/Red_X.png) | ![Niet ondersteund](media/Red_X.png) | ![Niet ondersteund](media/Red_X.png) | ![Ondersteund](media/green_check.png) |
 
 <!-- lifecycle reference: https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet -->
 
@@ -65,8 +66,8 @@ Voor meer informatie over Windows levenscyclus raadpleegt u het overzicht van de
 
 | Sleutel |
 |--|
-| ![Ondersteund](media/green_check.png) = **ondersteund**  |
-| ![Niet ondersteund](media/Red_X.png) = **niet** ondersteund |
+| ![Ondersteund ](media/green_check.png)  =  **Supported** ondersteund  |
+| ![Niet ondersteund ](media/Red_X.png)  =  **niet** ondersteund |
 
 ### <a name="windows-10-client-support-notes"></a><a name="bkmk_win10-notes"></a>Opmerkingen voor Windows 10-client ondersteuning
 
@@ -112,12 +113,13 @@ De volgende tabel geeft een lijst van de versies van Windows 10 ADK die u kunt g
 | **1803**<br>(10.1.17134) | ![Achterwaarts compatibel](media/blue_compat.png) | ![Achterwaarts compatibel](media/blue_compat.png) | ![Niet ondersteund](media/Red_X.png) | ![Niet ondersteund](media/Red_X.png) | ![Niet ondersteund](media/Red_X.png) |
 | **1809**<br>(10.1.17763) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Achterwaarts compatibel](media/blue_compat.png) | ![Achterwaarts compatibel](media/blue_compat.png) | ![Niet ondersteund](media/Red_X.png) |
 | **1903**<br>(10.1.18362) | ![Niet ondersteund](media/Red_X.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) |
+| **2004**<br>(10.1.19041) | ![Niet ondersteund](media/Red_X.png) | ![Niet ondersteund](media/Red_X.png) | ![Niet ondersteund](media/Red_X.png) | ![Niet ondersteund](media/Red_X.png) | ![Ondersteund](media/green_check.png) |
 
 |Sleutel|
 |--|
-| ![Ondersteund](media/green_check.png) = **ondersteund** <br/> In deze tabel wordt alleen de Windows ADK-ondersteuning weer gegeven ten opzichte van de versie van Configuration Manager. Micro soft raadt aan de Windows ADK te gebruiken die overeenkomt met de versie van Windows die u implementeert. Gebruik de meest recente versie van Windows ADK bij het implementeren van de nieuwste versie van Windows 10. De nieuwste versie van Windows ADK kan ondersteuning bieden voor de implementatie van oudere versies van besturings systemen, zoals Windows 8,1.<!-- SCCMDocs issue 1229 --> Zie voor meer informatie over de ondersteuning van Windows ADK-onderdelen [DISM-ondersteunde platforms](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms) en [USMT-vereisten](https://docs.microsoft.com/windows/deployment/usmt/usmt-requirements#bkmk-1). |
-| ![Achterwaarts compatibel](media/blue_compat.png)  = **achterwaarts compatibel** <br/> Deze combi natie wordt niet getest, maar zou moeten werken. Er worden bekende problemen of voor behoud gedocumenteerd. |
-| ![Niet ondersteund](media/Red_X.png) = **niet** ondersteund |
+| ![Ondersteund ](media/green_check.png)  =  **Supported** ondersteund <br/> In deze tabel wordt alleen de Windows ADK-ondersteuning weer gegeven ten opzichte van de versie van Configuration Manager. Micro soft raadt aan de Windows ADK te gebruiken die overeenkomt met de versie van Windows die u implementeert. Gebruik de meest recente versie van Windows ADK bij het implementeren van de nieuwste versie van Windows 10. De nieuwste versie van Windows ADK kan ondersteuning bieden voor de implementatie van oudere versies van besturings systemen, zoals Windows 8,1.<!-- SCCMDocs issue 1229 --> Zie voor meer informatie over de ondersteuning van Windows ADK-onderdelen [DISM-ondersteunde platforms](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms) en [USMT-vereisten](https://docs.microsoft.com/windows/deployment/usmt/usmt-requirements#bkmk-1). |
+| ![Achterwaarts compatibel ](media/blue_compat.png)   =  **achterwaarts compatibel** <br/> Deze combi natie wordt niet getest, maar zou moeten werken. Er worden bekende problemen of voor behoud gedocumenteerd. |
+| ![Niet ondersteund ](media/Red_X.png)  =  **niet** ondersteund |
 
 ### <a name="windows-10-adk-support-notes"></a><a name="bkmk_adk-notes"></a>Windows 10 ADK-ondersteunings opmerkingen
 

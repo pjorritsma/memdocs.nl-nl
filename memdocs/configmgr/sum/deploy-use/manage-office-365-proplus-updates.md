@@ -5,17 +5,17 @@ description: Configuration Manager synchroniseert Office 365-client updates van 
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 05/20/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: 4967b8b289d54a6355cb0a1e6454d5fac469a733
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: 09d8f0a37e9ed4308c5c8ffcf005c788612be235
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110403"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709499"
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>Office 365 ProPlus beheren met Configuration Manager
 
@@ -58,18 +58,18 @@ Voor eerdere versies van Configuration Manager moet u de volgende stappen uitvoe
 ### <a name="deploy-office-365-apps-using-configuration-manager-version-1806-or-higher"></a>Office 365-Apps implementeren met behulp van Configuration Manager versie 1806 of hoger: 
 Vanaf Configuration Manager 1806 is het hulp programma voor het aanpassen van Office geïntegreerd met het installatie programma van Office 365 in de Configuration Manager-console. Bij het maken van een implementatie voor Office 365 kunt u de meest recente Office-beheer baarheid-instellingen dynamisch configureren. <!--1358149-->
 
-1. Navigeer in de Configuration Manager-console naar **software bibliotheek** > **Overview** > **Office 365 client management**.
+1. Navigeer in de Configuration Manager-console naar **software bibliotheek**  >  **Overview**  >  **Office 365 client management**.
 2. Klik in het rechterdeel venster op **Office 365 Installer** . De Office 365-client installatie wizard wordt geopend.
 3. Geef op de pagina **Toepassings instellingen** een naam en beschrijving voor de app op, voer de download locatie voor de bestanden in en klik op **volgende**. De locatie moet worden opgegeven als &#92;&#92;*server*&#92;*share*.
 4. Klik op de pagina **Office-instellingen** op **Ga naar het hulp programma voor het aanpassen van Office**. Hiermee opent u het [hulp programma voor het aanpassen van de Office-aanpassing voor klik-en-klaar](https://config.office.com).
 5. Configureer de gewenste instellingen voor uw Office 365-installatie. Klik op het **verzenden** in de rechter bovenhoek van de pagina wanneer u de configuratie voltooit. 
-6. Bepaal op de pagina **implementatie** of u nu of op een later tijdstip wilt implementeren. Als u ervoor kiest om later te implementeren, kunt u de toepassing vinden in **software bibliotheek** > toepassingen voor**toepassings beheer** > **.**  
+6. Bepaal op de pagina **implementatie** of u nu of op een later tijdstip wilt implementeren. Als u ervoor kiest om later te implementeren, kunt u de toepassing vinden in **software bibliotheek**toepassingen voor  >  **toepassings beheer**  >  **Applications**.  
 7. Bevestig de instellingen op de pagina **samen vatting** . 
 8. Klik op **volgende** en klik vervolgens op **sluiten** nadat de wizard Office 365-client installeren is voltooid. 
 
 ### <a name="deploy-office-365-apps-using-configuration-manager-version-1802-and-prior"></a>Office 365-Apps implementeren met behulp van Configuration Manager versie 1802 en eerder:
 
-1. Navigeer in de Configuration Manager-console naar **software bibliotheek** > **Overview** > **Office 365 client management**.
+1. Navigeer in de Configuration Manager-console naar **software bibliotheek**  >  **Overview**  >  **Office 365 client management**.
 2. Klik in het rechterdeel venster op **Office 365 Installer** . De Office 365-client installatie wizard wordt geopend.
 3. Geef op de pagina **Toepassings instellingen** een naam en beschrijving voor de app op, voer de download locatie voor de bestanden in en klik op **volgende**. De locatie moet worden opgegeven als &#92;&#92;*server*&#92;*share*.
 4. Kies op de pagina **client instellingen importeren** of u de Office 365-client instellingen wilt importeren uit een bestaand XML-configuratie bestand of dat u de instellingen hand matig wilt opgeven. Klik op **volgende** wanneer u klaar bent.  
@@ -83,7 +83,7 @@ Vanaf Configuration Manager 1806 is het hulp programma voor het aanpassen van Of
 7. Kies op de pagina **implementatie** of u de toepassing wilt implementeren en klik vervolgens op **volgende**. <br/>Als u ervoor kiest om het pakket niet in de wizard te implementeren, gaat u naar stap 9.
 8. Configureer de rest van de wizard pagina's zoals u zou doen voor een typische toepassings implementatie. Zie [een toepassing maken en implementeren](../../apps/get-started/create-and-deploy-an-application.md)voor meer informatie.
 9. Voltooi de wizard.
-10. U kunt de toepassing implementeren of bewerken vanuit **software bibliotheek** > **overzicht** > toepassingen voor**toepassings beheer** > **.**    
+10. U kunt de toepassing implementeren of bewerken vanuit **software bibliotheek**  >  **overzicht**toepassingen voor  >  **toepassings beheer**  >  **Applications**.    
 
 Nadat u Office 365-toepassingen hebt gemaakt en geïmplementeerd met behulp van het Office 365-installatie programma, worden de Office-updates niet standaard door Configuration Manager beheerd. Als u wilt dat Office 365-clients updates kunnen ontvangen van Configuration Manager, raadpleegt u [office 365-updates implementeren met Configuration Manager](#deploy-office-365-updates).
 
@@ -96,7 +96,7 @@ Nadat u Office 365-apps hebt geïmplementeerd, kunt u regels voor automatische i
 
 U kunt inzoomen op nalevings statistieken om te zien welke apparaten een specifieke Office 365-software-update nodig hebben. Als u de lijst met apparaten wilt weer geven, hebt u machtigingen nodig voor het weer geven van updates en de verzamelingen waartoe de apparaten behoren. Inzoomen op de apparaten lijst:
 
-1. Ga naar **Software Library** > **Office 365 client management** > **Office 365 updates**.
+1. Ga naar **Software Library**  >  **Office 365 client management**  >  **Office 365 updates**.
 1. Selecteer een update die vereist is voor ten minste één apparaat.
 1. Ga naar het tabblad **samen vatting** en zoek het cirkel diagram onder **Statistieken**.
 1. Selecteer de **weer gave vereiste** Hyper link naast het cirkel diagram om in te zoomen op de apparaten lijst.
@@ -114,7 +114,7 @@ Gebruik de volgende stappen om Office 365-updates te implementeren met Configura
 
     **Methode 1**: vanaf Configuration Manager versie 1606 kunt u de Configuration Manager-client instelling gebruiken om de Office 365-client agent te beheren. Nadat u deze instelling hebt geconfigureerd en Office 365-updates hebt geïmplementeerd, communiceert de Configuration Manager-client agent met de Office 365-client agent om de updates vanaf een distributie punt te downloaden en te installeren. Configuration Manager maakt inventaris van Office 365 ProPlus-client instellingen.    
 
-      1. Klik in de Configuration Manager-console op **beheer** > **overzicht** > **client instellingen**.  
+      1. Klik in de Configuration Manager-console op **beheer**  >  **overzicht**  >  **client instellingen**.  
 
       2. Open de juiste Apparaatinstellingen om de client agent in te scha kelen. Zie [client instellingen configureren](../../core/clients/deploy/configure-client-settings.md)voor meer informatie over standaard-en aangepaste client instellingen.  
 
@@ -125,7 +125,7 @@ Gebruik de volgende stappen om Office 365-updates te implementeren met Configura
 4. [Implementeer de Office 365-updates](deploy-software-updates.md) op clients.
 
 > [!Important]
-> - Vanaf Configuration Manager versie 1706 Office 365-client updates zijn verplaatst naar het knoop punt **Office 365 client management** >**Office 365 updates** . Deze verplaatsing heeft geen invloed op uw huidige ADR-configuratie. 
+> - Vanaf Configuration Manager versie 1706 Office 365-client updates zijn verplaatst naar het knoop punt **Office 365 client management**  > **Office 365 updates** . Deze verplaatsing heeft geen invloed op uw huidige ADR-configuratie. 
 > - Vóór Configuration Manager versie 1610, moet u updates downloaden en implementeren in dezelfde talen die zijn geconfigureerd op Office 365-clients. Stel bijvoorbeeld dat u een Office 365-client hebt geconfigureerd met de modules en-US en de-de talen. Op de site server downloadt en implementeert u alleen de inhoud en-US voor een toepasselijke Office 365-update. Wanneer de gebruiker de installatie start vanuit software Center voor deze update, loopt de update vast tijdens het downloaden van de inhoud voor de-de. 
 
 > [!NOTE]  
@@ -184,7 +184,7 @@ Gebruik de volgende procedure op het software-update punt op de centrale beheer 
 > Het configureren van extra Office 365 update talen is een instelling die voor de hele site geldt. Nadat u de talen hebt toegevoegd met behulp van de volgende procedure, worden alle Office 365-updates gedownload in die talen, evenals de talen die u selecteert op de pagina **taal selecteren** in de wizard software-updates downloaden of software-updates implementeren.
 
 1. Typ in een opdracht prompt *WBEMTest* als gebruiker met beheerders rechten om de Windows Management Instrumentation Tester te openen.
-2. Klik op **verbinding maken**en typ vervolgens *root\sms\&lt;site_&gt;site*code.
+2. Klik op **verbinding maken**en typ vervolgens *root\sms\ site_ &lt; site &gt; *code.
 3. Klik op **query**en voer de volgende query uit: *selecteer &#42; van SMS_SCI_Component waarbij componentnaam = "SMS_WSUS_CONFIGURATION_MANAGER"*  
    ![WMI-query](../media/1-wmiquery.png)
 4. Dubbel klik in het resultaten venster op het object met de site code voor de centrale beheer site of zelfstandige primaire site.
@@ -197,7 +197,7 @@ Gebruik de volgende procedure op het software-update punt op de centrale beheer 
  
    ![Talen toevoegen in eigenschaps editor](../media/4-props.png)  
 9. Klik op **sluiten**, klik op **sluiten**, klik op **eigenschap opslaan**en klik op **object opslaan** (als u op **sluiten** klikt, worden de waarden genegeerd). Klik op **sluiten**en klik vervolgens op **afsluiten** om de Windows Management Instrumentation Tester af te sluiten.
-10. Ga in de Configuration Manager-console naar**overzicht** > van **software bibliotheken** > **Office 365 client management** > **Office 365 updates**.
+10. Ga in de Configuration Manager-console naar overzicht van **software bibliotheken**  >  **Overview**  >  **Office 365 client management**  >  **Office 365 updates**.
 11. Wanneer u nu Office 365-updates downloadt, worden de updates gedownload in de talen die u in de wizard selecteert en in deze procedure hebt geconfigureerd. Als u wilt controleren of de updates in de juiste talen worden gedownload, gaat u naar de pakket bron voor de update en zoekt u naar bestanden met de taal code in de bestands naam.  
     ![Bestands namen met extra talen](../media/5-verification.png)
 
@@ -207,7 +207,7 @@ Wanneer u de taken reeks stap [software-updates installeren](../../osd/understan
 Gebruik een van de volgende methoden om ervoor te zorgen dat het update kanaal zodanig is ingesteld dat geïmplementeerde updates correct worden gedetecteerd:
 
 **Methode 1:**
-1. Open op een computer met dezelfde versie van Office 365 ProPlus taak planner (Taskschd. msc) en Identificeer de taak voor automatische updates van Office 365. Normaal gesp roken bevindt deze zich onder de **taak planner-bibliotheek** >**micro soft**>**Office**.
+1. Open op een computer met dezelfde versie van Office 365 ProPlus taak planner (Taskschd. msc) en Identificeer de taak voor automatische updates van Office 365. Normaal gesp roken bevindt deze zich onder de **taak planner-bibliotheek**  > **micro soft** > **Office**.
 2. Klik met de rechter muisknop op de taak automatische updates en selecteer **Eigenschappen**.
 3. Ga naar het tabblad **acties** en klik op **bewerken**. Kopieer de opdracht en eventuele argumenten. 
 4. Bewerk de taken reeks in de Configuration Manager-console.
@@ -216,7 +216,7 @@ Gebruik een van de volgende methoden om ervoor te zorgen dat het update kanaal z
 7. Klik op **OK**. 
 
 **Methode 2:**
-1. Open op een computer met dezelfde versie van Office 365 ProPlus taak planner (Taskschd. msc) en Identificeer de taak voor automatische updates van Office 365. Normaal gesp roken bevindt deze zich onder de **taak planner-bibliotheek** >**micro soft**>**Office**.
+1. Open op een computer met dezelfde versie van Office 365 ProPlus taak planner (Taskschd. msc) en Identificeer de taak voor automatische updates van Office 365. Normaal gesp roken bevindt deze zich onder de **taak planner-bibliotheek**  > **micro soft** > **Office**.
 2. Bewerk de taken reeks in de Configuration Manager-console.
 3. Voeg een nieuwe stap **opdracht regel uitvoeren** toe vóór de stap **software-updates installeren** in de taken reeks. Als Office 365 ProPlus is geïnstalleerd als onderdeel van dezelfde taken reeks, moet u ervoor zorgen dat deze stap wordt uitgevoerd nadat Office is geïnstalleerd.
 4. Voer in het veld opdracht regel de opdracht regel in waarmee de geplande taak wordt uitgevoerd. Zie voor beeld hieronder om te controleren of de teken reeks tussen aanhalings tekens overeenkomt met het pad en de naam van de taak die u in stap 1 hebt opgegeven.  
@@ -224,7 +224,33 @@ Gebruik een van de volgende methoden om ervoor te zorgen dat het update kanaal z
     Voorbeeld: `schtasks /run /tn "\Microsoft\Office\Office Automatic Updates 2.0"`
 5. Klik op **OK**. 
 
-## <a name="change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager"></a><a name="bkmk_channel"></a>Het update kanaal wijzigen nadat u Office 365-clients hebt ingeschakeld voor het ontvangen van updates van Configuration Manager
+## <a name="update-channels-for-microsoft-365-apps"></a><a name="bkmk_channel"></a>Kanalen voor Microsoft 365-apps bijwerken
+<!--6298093-->
+Wanneer Office 365 ProPlus is gewijzigd in **Microsoft 365 apps voor bedrijven**, zijn de update kanalen ook hernoemd. Als u een regel voor automatische implementatie (ADR) gebruikt om updates te implementeren, moet u wijzigingen aanbrengen in uw Adr's als ze afhankelijk zijn van de eigenschap **title** . Dat komt doordat de naam van de update pakketten in de Microsoft Update catalogus wordt gewijzigd.
+
+Op dit moment begint de titel van een update pakket voor Office 365 ProPlus met ' Office 365 client update ', zoals in het volgende voor beeld wordt weer gegeven:
+
+&nbsp;&nbsp;Office 365-client update-Semi-Annual-kanaal versie 1908 voor x64-editie (Build 11929,20648)
+
+Voor update pakketten die zijn uitgebracht op en na 9 juni, begint de titel met ' Microsoft 365 apps bijwerken ', zoals in het volgende voor beeld wordt weer gegeven:
+
+&nbsp;&nbsp;Updates van Microsoft 365-apps-Semi-Annual-kanaal versie 1908 voor x64-editie (Build 11929,50000)
+</br>
+</br>
+
+|Nieuwe kanaal naam|Vorige kanaal naam|
+|--|--|
+|Semi-Annual-kanaal voor ondernemingen|Semi-Annual-kanaal|
+|Semi-Annual Enter prise-kanaal (preview-versie)|Semi-Annual-kanaal (Targeted)|
+|Maandelijks bedrijfs kanaal|NA|
+|Huidig kanaal|Monthly-kanaal|
+|Huidig kanaal (preview-versie)|Monthly-kanaal (targeted)|
+|Bèta-kanaal|Handel|
+
+Zie [software-updates automatisch implementeren](automatically-deploy-software-updates.md)voor meer informatie over het wijzigen van uw adr's. Zie voor meer informatie over de naamswijziging naam [wijzigen voor Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change).
+
+
+## <a name="change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager"></a>Het update kanaal wijzigen nadat u Office 365-clients hebt ingeschakeld voor het ontvangen van updates van Configuration Manager
 
 Nadat u Office 365 ProPlus hebt geïmplementeerd, kunt u het update kanaal wijzigen met groepsbeleid of het Office Deployment Tool (ODT). U kunt bijvoorbeeld een apparaat verplaatsen van een semi-Annual-kanaal naar een semi-Annual-kanaal (targeted). Wanneer u het kanaal wijzigt, wordt Office automatisch bijgewerkt zonder dat de volledige versie opnieuw moet worden geïnstalleerd of gedownload. Zie [het Office 365 ProPlus-update kanaal wijzigen voor apparaten in uw organisatie](https://docs.microsoft.com//deployoffice/change-update-channels)voor meer informatie.
 

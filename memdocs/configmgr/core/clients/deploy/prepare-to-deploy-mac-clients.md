@@ -10,12 +10,12 @@ ms.assetid: 2285a953-6a86-4ed5-97dd-cd57b02bc1ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8d0968a61be4e450bb145b309f61de0d6c212549
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2b5bcbce659601e10f44f06af94eb939767a389a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713994"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906627"
 ---
 # <a name="prepare-to-deploy-client-software-to-macs"></a>Voorbereiden voor het implementeren van client software op Macs
 
@@ -27,7 +27,7 @@ Volg deze stappen om ervoor te zorgen dat u klaar bent om [de Configuration Mana
 
 ## <a name="mac-prerequisites"></a>Mac-vereisten
 
-Het Mac-client installatie pakket wordt niet geleverd met de Configuration Manager media. Down load de **clients voor aanvullende besturings systemen** via het [micro soft Download centrum](https://go.microsoft.com/fwlink/?LinkID=525184).  
+Het Mac-client installatie pakket wordt niet geleverd met de Configuration Manager media. Down load de **clients voor aanvullende besturings systemen** via het [micro soft Download centrum](https://www.microsoft.com/download/details.aspx?id=47719).  
 
 Zie [ondersteunde besturings systemen voor clients en apparaten](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mac-computers)voor een lijst met ondersteunde versies.
 

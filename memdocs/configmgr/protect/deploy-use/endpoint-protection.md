@@ -10,12 +10,12 @@ ms.assetid: 76c90f64-d729-456b-8304-01852cd66fb6
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: b74a8c1daff31a8ffca8a38e6449aeeef1bb9b2d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 5bdfd566682156e39e1dbed7c55af85b20a78671
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81715646"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906684"
 ---
 # <a name="endpoint-protection"></a>Endpoint Protection
 
@@ -92,7 +92,7 @@ Endpoint Protection beheert en bewaakt micro soft Defender Advanced Threat Prote
 ## <a name="endpoint-protection-client-for-mac-computers-and-linux-servers"></a>Endpoint Protection-client voor Mac-computers en Linux-servers  
 
 > [!Important]  
-> Ondersteuning voor System Center Endpoint Protection (SCEP) voor Mac en Linux (alle versies) eindigt op 31 december 2018. De beschik baarheid van nieuwe virus definities voor SCEP voor Mac en SCEP voor Linux kan na het einde van de ondersteuning worden stopgezet. Zie [End of support blog post](https://go.microsoft.com/fwlink/?linkid=870182)voor meer informatie.  
+> Ondersteuning voor System Center Endpoint Protection (SCEP) voor Mac en Linux (alle versies) eindigt op 31 december 2018. De beschik baarheid van nieuwe virus definities voor SCEP voor Mac en SCEP voor Linux kan na het einde van de ondersteuning worden stopgezet. Zie [End of support blog post](https://techcommunity.microsoft.com/t5/configuration-manager-blog/end-of-support-for-scep-for-mac-and-scep-for-linux-on-december/ba-p/286257)voor meer informatie.  
 
  System Center Endpoint Protection bevat een Endpoint Protection-client voor Linux en voor Mac-computers. Deze clients worden niet geleverd met Configuration Manager. Down load de volgende producten van de [Microsoft Volume Licensing Service Center](https://www.microsoft.com/licensing/servicecenter/default.aspx):  
 
@@ -113,7 +113,7 @@ Gebruik de volgende stappen om het installatie kopie bestand te downloaden met d
 2. Selecteer het tabblad **down loads en sleutels** boven aan de website.
 3. Filteren op product **System Center Endpoint Protection (huidige branch)**.
 4. Klik op koppeling om te **downloaden**
-5. Klik op **door gaan**. Er moeten verschillende bestanden worden weer geven, waaronder een met de naam: **System Center Endpoint Protection (huidige versie 1606) voor Linux OS en Macintosh OS multi taal 32/64 bits 1878 MB ISO**.
+5. Klik op **Continue**. Er moeten verschillende bestanden worden weer geven, waaronder een met de naam: **System Center Endpoint Protection (huidige versie 1606) voor Linux OS en Macintosh OS multi taal 32/64 bits 1878 MB ISO**.
 6. Klik op het pijl pictogram om het bestand te downloaden. De bestands naam is **SW_DVD5_Sys_Ctr_Endpnt_Prtctn_1606_MultiLang_-3_EptProt_Lin_Mac_MLF_X21-67050. ISO**.
 
 De update van januari 2018 (X21-67050) bevat de volgende versies:

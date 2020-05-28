@@ -10,12 +10,12 @@ ms.assetid: cb616925-bb94-4b7c-a867-b3d95aef4d5e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f9d2a7d4a16f85e9a5f78dd6251754d86527da87
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 05110714d3aa8ca48ff9384f0116338b0092fde1
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709892"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83877623"
 ---
 # <a name="troubleshoot-package-conversion-manager"></a>Problemen met Package Conversion Manager oplossen
 
@@ -58,10 +58,13 @@ Het deel venster met details van het knoop punt **pakketten** in de Configuratio
 
 ### <a name="enable-logging"></a>Logboekregistratie inschakelen
 
-Wanneer u logboek registratie inschakelt voor package Conversion Manager, worden alle acties, uitzonde ringen en fouten in het logboek geregistreerd. 
+Wanneer u logboek registratie inschakelt voor package Conversion Manager, worden alle acties, uitzonde ringen en fouten in het logboek geregistreerd.
 
 Als u logboek registratie voor dit onderdeel wilt inschakelen in de Configuration Manager, wijzigt u **micro soft. ConfigurationManagement. exe. config**. Dit configuratie bestand bevindt zich standaard in het volgende pad:  
-`C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`  
+`C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`  
+
+> [!IMPORTANT]
+> Vanaf versie 1910 is dit pad gewijzigd om de map te gebruiken `Microsoft Endpoint Manager` . Zorg ervoor dat u geen oudere versie van het bestand gebruikt dat in een andere map kan voor komen.
 
 Voeg de volgende **switches** en **traceer** XML-elementen in het element **System. Diagnostics** toe na het laatste **bron** element:
 
@@ -83,7 +86,7 @@ Voeg de volgende **switches** en **traceer** XML-elementen in het element **Syst
 In dit voor beeld wordt het bestand **PCMTrace. log**gebruikt. Dit logboek bevindt zich op de computer waarop de Configuration Manager-console wordt uitgevoerd in het volgende pad:  
 `%UserProfile%\AppData\Local\Temp`
 
-Als u het detail niveau wilt configureren, wijzigt u de instelling van de **PcmLogging** Trace switch. Stel deze waarde in op vier detail niveaus, van minst gedetailleerd (`1`) tot de meest gedetailleerde (`4`).
+Als u het detail niveau wilt configureren, wijzigt u de instelling van de **PcmLogging** Trace switch. Stel deze waarde in op vier detail niveaus, van minst gedetailleerd ( `1` ) tot de meest gedetailleerde ( `4` ).
 
 
 ### <a name="smsprovlog"></a>SMSProv.log

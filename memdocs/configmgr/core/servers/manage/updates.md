@@ -10,12 +10,12 @@ ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f38b8662d4d7b5e7897d0c43560a5e2a4672eee6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ffee9d851f00bcac5ed7ba562bdc9db8e0fa2767
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720742"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82903944"
 ---
 # <a name="updates-and-servicing-for-configuration-manager"></a>Updates en onderhoud voor Configuration Manager
 
@@ -60,11 +60,13 @@ De volgende ondersteunde versies van Configuration Manager zijn momenteel beschi
 
 | Versie | Beschikbaarheidsdatum | [Einddatum voor ondersteuning](current-branch-versions-supported.md) | Basislijn | Update in de console |  
 |-------------|-----------|------------|--------------|------------------------|  
-| [**2002**](../../plan-design/changes/whats-new-in-version-2002.md)<br /> (5.00.8968) | Mei 2020 | 1 oktober 2021 | Ja,<sup>[Opmerking 1](#bkmk_note1)</sup> | Ja |
+| [**2002**](../../plan-design/changes/whats-new-in-version-2002.md)<br /> (5.00.8968) | 1 april 2020 | 1 oktober 2021 | Ja,<sup>[Opmerking 1](#bkmk_note1)</sup> | Ja |
 | [**1910**](../../plan-design/changes/whats-new-in-version-1910.md)<br /> (5.00.8913) | 29 november 2019 | 29 mei 2021 | Nee | Ja |
 | [**1906**](../../plan-design/changes/whats-new-in-version-1906.md)<br /> (5.00.8853) | 26 juli 2019 | 26 januari 2021 | Nee | Ja |
 | [**1902**](../../plan-design/changes/whats-new-in-version-1902.md)<br /> (5.00.8790) | 27 maart 2019 | 27 september 2020 | Ja,<sup>[Opmerking 1](#bkmk_note1)</sup> | Ja |
 | [**1810**](../../plan-design/changes/whats-new-in-version-1810.md)<br /> (5.00.8740) | 27 november 2018 | 1 december 2020 | Nee | Ja |
+
+De **beschikbaarheids datum** is het moment waarop de [eerste update ring](checklist-for-installing-update-2002.md#early-update-ring) wordt uitgebracht. De basis lijn is beschikbaar op het Volume License Service Center nadat de update wereld wijd beschikbaar is.
 
 <a name="bkmk_note1"></a>
 
@@ -75,7 +77,7 @@ De volgende ondersteunde versies van Configuration Manager zijn momenteel beschi
 > - System Center 2016 Data Center
 > - System Center 2016 Standard  
 >
-> Zoek bijvoorbeeld naar de VLSC voor `System Center Config Mgr (current branch)`. Zoek de basislijn media in de lijst met bestanden en down load voor die release.  
+> Zoek bijvoorbeeld naar de VLSC voor `System Center Config Mgr (current branch)` . Zoek de basislijn media in de lijst met bestanden en down load voor die release.  
 
 #### <a name="historical-versions"></a>Historische versies
 

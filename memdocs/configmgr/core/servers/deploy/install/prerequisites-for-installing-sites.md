@@ -10,12 +10,12 @@ ms.assetid: 92b339ef-2723-4322-bec6-077b3e8846b0
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8362dbf5cf7264c19f683ce5a224f1e0ec348b36
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a7f7853b006d4ac8b11a30217d1b05b1eedd69dc
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718145"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268977"
 ---
 # <a name="prerequisites-for-installing-configuration-manager-sites"></a>Vereisten voor het installeren van Configuration Manager-sites
 
@@ -49,6 +49,9 @@ Als u een centrale beheer site wilt installeren als onderdeel van een hiërarchi
 
         > [!IMPORTANT]  
         > Wanneer Configuration Manager Setup is voltooid, moet het computer account van de site server sysadmin-rechten voor SQL Server behouden. Verwijder de SQL sysadmin-rechten van dit account niet.  
+
+    > [!NOTE]
+    > Zie [verhoogde machtigingen](../../../plan-design/hierarchy/accounts.md#elevated-permissions)voor meer informatie over de nood zaak van deze machtigingen nadat de installatie is voltooid.
 
 - Als u een primaire site installeert, hebt u de volgende aanvullende rechten nodig:  
 
@@ -134,7 +137,7 @@ Nadat u de site hebt uitgebreid, moet u de volgende Azure-Services opnieuw confi
 - [Microsoft Store voor bedrijven](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)  
 - [Cloudbeheergateway](../../../clients/manage/cmg/plan-cloud-management-gateway.md)
 
-Verleng op versie 1806 en hoger de geheime sleutel van de Azure Active Directory-Tenant. Zie [geheime sleutel vernieuwen](../configure/azure-services-wizard.md#bkmk_renew)voor meer informatie.
+De eenvoudigste methode is het vernieuwen van de geheime sleutel van de Azure Active Directory-Tenant. Zie [geheime sleutel vernieuwen](../configure/azure-services-wizard.md#bkmk_renew)voor meer informatie.
 
 U kunt ook de verbinding met die service verwijderen en opnieuw maken:
 

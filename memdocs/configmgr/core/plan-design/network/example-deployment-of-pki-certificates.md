@@ -10,12 +10,12 @@ ms.assetid: 3417ff88-7177-4a0d-8967-ab21fe7eba17
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 994ee2916020ecc4e6d9d3c35f41fe24d5a31405
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 45ef103645630b8e203710ec0ff36a71b3cef4cf
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718775"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904255"
 ---
 # <a name="step-by-step-example-deployment-of-the-pki-certificates-for-configuration-manager-windows-server-2008-certification-authority"></a>Voor beeld van een stapsgewijze implementatie van de PKI-certificaten voor Configuration Manager: Windows Server 2008-certificerings instantie
 
@@ -52,7 +52,7 @@ De volgende tabel bevat de typen PKI-certificaten die mogelijk vereist zijn voor
 |Certificaatvereiste|Certificaatbeschrijving|  
 |-----------------------------|-----------------------------|  
 |Webservercertificaat voor sitesystemen die IIS uitvoeren|Dit certificaat wordt gebruikt om gegevens te coderen en de server te verifiëren naar clients. Het moet extern worden geïnstalleerd van Configuration Manager op site systeem servers waarop Internet Information Services (IIS) wordt uitgevoerd en die zijn ingesteld in Configuration Manager om HTTPS te gebruiken.<br /><br /> Zie [het webserver certificaat implementeren voor site systemen die IIS uitvoeren](#BKMK_webserver2008_cm2012) in dit onderwerp voor de stappen voor het instellen en installeren van dit certificaat.|  
-|Servicecertificaat voor clients voor verbinding maken met cloud-gebaseerde distributiepunten|Zie [het service certificaat voor cloud-gebaseerde distributie punten implementeren](#BKMK_clouddp2008_cm2012) in dit onderwerp voor de stappen voor het configureren en installeren van dit certificaat.<br /><br /> **Belangrijk:** dit certificaat wordt in combinatie met het Microsoft Azure-beheercertificaat gebruikt. Zie [How to Create a Management Certificate](https://docs.microsoft.com/azure/cloud-services/cloud-services-certs-create#create-a-new-self-signed-certificate) (een beheer certificaat maken) en [een beheer certificaat toevoegen aan een Windows Azure-abonnement](https://docs.microsoft.com/azure/cloud-services/cloud-services-configure-ssl-certificate-portal#step-3-upload-a-certificate) in het gedeelte Windows Azure-platform van de MSDN-bibliotheek voor meer informatie over het beheer certificaat.|  
+|Servicecertificaat voor clients voor verbinding maken met cloud-gebaseerde distributiepunten|Zie [het service certificaat voor cloud-gebaseerde distributie punten implementeren](#BKMK_clouddp2008_cm2012) in dit onderwerp voor de stappen voor het configureren en installeren van dit certificaat.<br /><br /> **Belangrijk:** dit certificaat wordt in combinatie met het Microsoft Azure-beheercertificaat gebruikt. Zie [How to Create a Management Certificate](https://docs.microsoft.com/azure/cloud-services/cloud-services-certs-create#create-a-new-self-signed-certificate) (een beheer certificaat maken) en [een beheer certificaat toevoegen aan een Windows Azure-abonnement](https://docs.microsoft.com/azure/cloud-services/cloud-services-configure-ssl-certificate-portal#step-3-upload-a-certificate)voor meer informatie over het beheer certificaat.|  
 |Clientcertificaat voor Windows-computers|Dit certificaat wordt gebruikt om Configuration Manager-client computers te verifiëren naar site systemen die zijn ingesteld voor het gebruik van HTTPS. Het kan ook worden gebruikt voor beheer punten en status migratie punten om hun operationele status te controleren wanneer ze zijn ingesteld voor het gebruik van HTTPS. Het moet extern worden geïnstalleerd van Configuration Manager op computers.<br /><br /> Zie [het client certificaat voor Windows-computers implementeren](#BKMK_client2008_cm2012) in dit onderwerp voor de stappen voor het instellen en installeren van dit certificaat.|  
 |Clientcertificaat voor distributiepunten|Dit certificaat heeft twee doeleinden:<br /><br /> Het certificaat wordt gebruikt om het distributiepunt naar een HTTPS-beheerpunt te verifiëren voordat het distributiepunt statusberichten verzendt.<br /><br /> Wanneer de distributiepuntoptie **PXE-ondersteuning voor clients inschakelen** is geselecteerd, wordt het certificaat verzonden naar computers die een PXE-opstartbewerking uitvoeren, zodat ze verbinding kunnen maken met een HTTPS-beheerpunt tijdens de implementatie van het besturingssysteem.<br /><br /> Zie [het client certificaat voor distributie punten implementeren](#BKMK_clientdistributionpoint2008_cm2012) in dit onderwerp voor de stappen voor het instellen en installeren van dit certificaat.|  
 |Certificaat voor inschrijving voor mobiele apparaten|Dit certificaat wordt gebruikt voor het verifiëren van Configuration Manager clients voor mobiele apparaten naar site systemen die zijn ingesteld voor het gebruik van HTTPS. Het moet worden geïnstalleerd als onderdeel van inschrijving van mobiele apparaten in Configuration Manager en u kiest het geconfigureerde certificaat sjabloon als een client instelling voor mobiele apparaten.<br /><br /> Zie [het certificaat voor inschrijving voor mobiele apparaten implementeren](#BKMK_mobiledevices2008_cm2012) in dit onderwerp voor de stappen voor het instellen van dit certificaat.|  
@@ -354,7 +354,7 @@ Deze certificaatimplementatie heeft de volgende procedures:
 
 4.  Klik in het deel venster met resultaten op het tabblad **gekoppelde Groepsbeleid objecten** met de rechter muisknop op de nieuwe Groepsbeleid en kies vervolgens **bewerken**.  
 
-5.  Vouw in het **Groepsbeleidsbeheer-editor** **beleid** uit onder **computer configuratie**en ga vervolgens naar **Windows-instellingen** / **beveiligings instellingen** / **beleid voor open bare sleutels**.  
+5.  Vouw in het **Groepsbeleidsbeheer-editor** **beleid** uit onder **computer configuratie**en ga vervolgens naar **Windows-instellingen**  /  **beveiligings instellingen**  /  **beleid voor open bare sleutels**.  
 
 6.  Klik met de rechter muisknop op het object type met de naam **Certificate Services-client-automatisch inschrijven**en kies vervolgens **Eigenschappen**.  
 

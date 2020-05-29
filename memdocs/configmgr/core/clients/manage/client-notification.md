@@ -10,12 +10,12 @@ ms.assetid: deb8aac8-2bd9-4980-a25b-5f8d93051226
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7680c8f955773f169d56f36eb9bbe6507d2d7ce6
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: cb7cc71618ad0f86abce3ab76d6344e0d23bfc58
+ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83427809"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84153427"
 ---
 # <a name="client-notification-in-configuration-manager"></a>Client melding in Configuration Manager
 
@@ -140,7 +140,7 @@ Vanaf versie 1910 zijn er nieuwe acties voor **client diagnostiek** in de Config
 
 - **Uitgebreide logboek registratie inschakelen**: Wijzig het globale logboek niveau voor het onderdeel CCM in uitgebreid en schakel logboek registratie voor fout opsporing in.
 - **Uitgebreide logboek registratie uitschakelen**: Wijzig het globale logboek niveau in standaard en schakel logboek registratie voor fout opsporing uit.
-- **Client logboeken verzamelen** (vanaf 2002): er wordt een bericht voor client meldingen verzonden naar de geselecteerde clients om de CCM-logboeken te verzamelen. De logboeken worden geretourneerd met behulp van de bestands verzameling van de software-inventarisatie. <!--4226618-->
+- **Client logboeken verzamelen** (vanaf 2002): de site verzendt een client meldings bericht naar de geselecteerde clients om de CCM-logboeken te verzamelen. De client verzendt de logboeken naar het beheer punt met behulp van hetzelfde kanaal als de verzameling van software-inventaris bestanden. <!--4226618--> Het is niet nodig om software-inventarisatie in te scha kelen in client instellingen.<!-- MEMDocs#305 -->
    - De maximale grootte voor de gecomprimeerde client Logboeken is 100 MB. <!--6366098-->
    - [Resource Explorer](inventory/use-resource-explorer-to-view-software-inventory.md#bkmk_diag) gebruiken om deze bestanden te beheren en weer te geven.
 

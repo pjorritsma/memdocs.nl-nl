@@ -10,12 +10,12 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6ccfb523cc1abc3a64d396f32d55a4dc4551987c
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 12fee834e4f384cc180658a8e58cf3920a907831
+ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428598"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84153457"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Over para meters en eigenschappen van client installatie in Configuration Manager
 
@@ -80,6 +80,8 @@ Voorbeeld: `ccmsetup.exe /?`
 
 Hiermee geeft u de locatie voor het downloaden van bestanden. Gebruik een lokaal of UNC-pad. Het apparaat downloadt bestanden met behulp van het SMB-protocol (Server Message Block). Voor het gebruik van **/Source**moet het Windows-gebruikers account voor de client installatie **Lees** machtigingen voor de locatie hebben.
 
+Zie [grens groepen-client installatie](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup)voor meer informatie over hoe ccmsetup inhoud downloadt. Dit artikel bevat ook informatie over ccmsetup-gedrag als u de para meters **/MP** en **/Source** gebruikt.
+
 > [!TIP]  
 > U kunt de para meter **/Source** meer dan één keer in een opdracht regel gebruiken om alternatieve download locaties op te geven.  
 
@@ -88,6 +90,8 @@ Voorbeeld: `ccmsetup.exe /source:"\\server\share"`
 ### <a name="mp"></a>/MP
 
 Hiermee geeft u een bron beheer punt voor computers waarmee verbinding moet worden gemaakt. Computers gebruiken dit beheer punt om het dichtstbijzijnde distributie punt voor de installatie bestanden te vinden. Als er geen distributie punten zijn of als computers de bestanden niet kunnen downloaden van de distributie punten na vier uur, downloaden ze de bestanden van het opgegeven beheer punt.  
+
+Zie [grens groepen-client installatie](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup)voor meer informatie over hoe ccmsetup inhoud downloadt. Dit artikel bevat ook informatie over ccmsetup-gedrag als u de para meters **/MP** en **/Source** gebruikt.
 
 > [!IMPORTANT]  
 > Met deze para meter geeft u een initieel beheer punt voor computers op om een download bron te vinden. Dit kan elk beheer punt in elke site zijn. De client wordt niet *toegewezen* aan het opgegeven beheer punt.

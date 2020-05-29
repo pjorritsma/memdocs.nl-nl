@@ -10,12 +10,12 @@ ms.assetid: 5db2926f-f03e-49c7-b44b-e89b1a5a6779
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ce77c43f49556b3a60e36f05127f82d4d135762a
-ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
+ms.openlocfilehash: c9567cc441636bbda31262e0857e2fc6484c2af7
+ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82643267"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84153404"
 ---
 # <a name="configure-boundary-groups-for-configuration-manager"></a>Grens groepen voor Configuration Manager configureren
 
@@ -103,7 +103,7 @@ Wanneer een client geen beschikbaar site systeem kan vinden, begint het met zoek
 
 ### <a name="the-default-site-boundary-group"></a>De standaard site grens groep
 
-U kunt uw eigen grens groepen maken en elke site heeft een standaard site grens groep die Configuration Manager maakt. Deze groep krijgt de naam **standaard-site-boundary-&lt;Group>**. De groep voor site ABC krijgt bijvoorbeeld de naam **standaard-site-grens-&lt;groep ABC>**.
+U kunt uw eigen grens groepen maken en elke site heeft een standaard site grens groep die Configuration Manager maakt. Deze groep krijgt de naam **standaard-site-boundary-group &lt;>**. De groep voor site ABC krijgt bijvoorbeeld de naam **standaard-site-grens-groep &lt; ABC>**.
 
 Voor elke grens groep die u maakt, maakt Configuration Manager automatisch een impliciete koppeling naar elke standaard site grens groep in de hiërarchie.  
 
@@ -154,8 +154,16 @@ Als u de inhoud zodanig configureert dat deze op aanvraag wordt gedistribueerd e
 
 ### <a name="client-installation"></a><a name="bkmk_ccmsetup"></a>Client installatie
 
+Het installatie programma van de Configuration Manager-client, ccmsetup, kan installatie-inhoud ophalen van een lokale bron of via een beheer punt. Het eerste gedrag is afhankelijk van de opdracht regel parameters die u gebruikt om de-client te installeren:<!-- MEMDocs#286 -->
+
+- Als u de para meters **/MP** of **/Source** niet gebruikt, probeert ccmsetup een lijst met beheer punten te verkrijgen van Active Directory of DNS.
+- Als u alleen **/Source**opgeeft, wordt de installatie van het opgegeven pad geforceerd. Er worden geen beheer punten gedetecteerd. Als ccmsetup. cab niet kan worden gevonden op het opgegeven pad, mislukt ccmsetup.
+- Als u zowel **/MP** als **/Source**opgeeft, worden de opgegeven beheer punten gecontroleerd en detecteert deze. Als er geen geldig beheer punt kan worden gevonden, valt het terug naar het opgegeven bronpad.
+
+Zie [para meters en eigenschappen van client installatie](../../../clients/deploy/about-client-installation-properties.md)voor meer informatie over deze ccmsetup-para meters.
+
 <!--1358840-->
-Bij de installatie van de Configuration Manager-client neemt het ccmsetup-proces contact op met het beheer punt om de benodigde inhoud te vinden. Het beheer punt retourneert distributie punten op basis van de configuratie van de grens groep. Als u relaties voor de grens groep definieert, retourneert het beheer punt de distributie punten in de volgende volg orde:
+Wanneer ccmsetup contact maakt met het beheer punt om de benodigde inhoud te vinden, retourneert het beheer punt distributie punten op basis van de configuratie van de grens groep. Als u relaties voor de grens groep definieert, retourneert het beheer punt de distributie punten in de volgende volg orde:
 
 1. Huidige grens groep  
 2. Grens groepen in de buur  
@@ -241,16 +249,16 @@ Algemene scenario's voor het inschakelen van deze optie:
 
 - U hebt één grote grens groep voor alle externe kantoor locaties. Als u deze optie inschakelt, delen clients alleen inhoud in het subnet op de externe kantoor locatie, in plaats van een risico op het delen van inhoud tussen locaties.
 
-Vanaf versie 2002, afhankelijk van de configuratie van uw netwerk, kunt u bepaalde subnetten uitsluiten voor overeenkomende treffers. U wilt bijvoorbeeld een grens opnemen, maar een specifiek VPN-subnet uitsluiten. Configuration Manager sluit standaard het standaard Teredo-subnet (`2001:0000:%`) uit.<!--3555777-->
+Vanaf versie 2002, afhankelijk van de configuratie van uw netwerk, kunt u bepaalde subnetten uitsluiten voor overeenkomende treffers. U wilt bijvoorbeeld een grens opnemen, maar een specifiek VPN-subnet uitsluiten. Configuration Manager sluit standaard het standaard Teredo-subnet () uit `2001:0000:%` .<!--3555777-->
 
 > [!NOTE]
 > Wanneer u in versie 2002 [een zelfstandige primaire site uitbreidt](../install/prerequisites-for-installing-sites.md#bkmk_expand) om een centrale beheer site toe te voegen, wordt de lijst met uitsluitingen van het subnet teruggezet naar de standaard waarde. U kunt dit probleem omzeilen door na het uitbreiden van de site het Power shell-script uit te voeren om de lijst met uitsluitingen van het subnet te aanpassen op de CAS.<!-- 6309068 -->
 
-Importeer de lijst met uitgesloten subnetten als een teken reeks met door komma's gescheiden subnetten. Gebruik het procent teken (`%`) als Joker teken. Stel op de site server op het hoogste niveau de Inge sloten eigenschap **SubnetExclusionList** in voor het onderdeel **SMS_HIERARCHY_MANAGER** in de klasse **SMS_SCI_Component** . Zie [SMS_SCI_Component Server WMI-klasse](../../../../develop/reference/core/servers/configure/sms_sci_component-server-wmi-class.md)voor meer informatie.
+Importeer de lijst met uitgesloten subnetten als een teken reeks met door komma's gescheiden subnetten. Gebruik het procent teken ( `%` ) als Joker teken. Stel op de site server op het hoogste niveau de Inge sloten eigenschap **SubnetExclusionList** in voor het onderdeel **SMS_HIERARCHY_MANAGER** in de klasse **SMS_SCI_Component** . Zie [SMS_SCI_Component Server WMI-klasse](../../../../develop/reference/core/servers/configure/sms_sci_component-server-wmi-class.md)voor meer informatie.
 
 ##### <a name="sample-powershell-script-to-update-the-subnet-exclusion-list"></a>Power shell-voorbeeld script voor het bijwerken van de lijst met uitgesloten subnetten
 
-Het volgende script is een voor beeld van een manier om deze waarde te wijzigen. Voeg uw subnetten toe aan **PropertyValue** de variabele PropertyValue `2001:0000:%,172.16.16.0`na. Het is een door komma's gescheiden teken reeks. Voer dit script uit op de site server op het hoogste niveau in uw hiërarchie.
+Het volgende script is een voor beeld van een manier om deze waarde te wijzigen. Voeg uw subnetten toe aan de variabele **PropertyValue** na `2001:0000:%,172.16.16.0` . Het is een door komma's gescheiden teken reeks. Voer dit script uit op de site server op het hoogste niveau in uw hiërarchie.
 
 ```PowerShell
 $PropertyValue = "2001:0000:%,172.16.16.0"
@@ -469,7 +477,7 @@ U kunt afzonderlijke distributie punten niet meer configureren om snel of traag 
 
 ### <a name="new-default-boundary-group-at-each-site"></a>Nieuwe standaard grens groep op elke site
 
-Elke primaire site heeft een nieuwe standaard grens groep met de naam **standaard-site-boundary&lt;-Group>**. Wanneer een client zich niet op een netwerk locatie bevindt die is toegewezen aan een grens groep, worden de site systemen gebruikt die zijn gekoppeld aan de standaard groep van de toegewezen site. Plan het gebruik van deze grens groep als een vervanging van de locatie van de tijdelijke inhoud van het concept.
+Elke primaire site heeft een nieuwe standaard grens groep met de naam **standaard-site-boundary-group &lt;>**. Wanneer een client zich niet op een netwerk locatie bevindt die is toegewezen aan een grens groep, worden de site systemen gebruikt die zijn gekoppeld aan de standaard groep van de toegewezen site. Plan het gebruik van deze grens groep als een vervanging van de locatie van de tijdelijke inhoud van het concept.
 
 #### <a name="allow-fallback-source-locations-for-content-is-removed"></a>**Terugval bron locaties voor inhoud toestaan** is verwijderd
 
@@ -510,7 +518,7 @@ Wanneer een client zoekt naar een locatie van de inhouds bron, probeert het een 
 
 - Wanneer de client geen inhoud kan ophalen van de laatste server in de groep, wordt het proces opnieuw gestart.  
 
-## <a name="see-also"></a>Zie tevens
+## <a name="see-also"></a>Zie ook
 
 - [Procedures voor grensgroepen](boundary-group-procedures.md)  
 

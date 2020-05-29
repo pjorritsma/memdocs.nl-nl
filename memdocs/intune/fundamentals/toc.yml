@@ -157,6 +157,10 @@
               href: intune-endpoints.md
             - name: Intune US government-eindpunten
               href: intune-us-government-endpoints.md
+            - name: Chinese eindpunten
+              href: china-endpoints.md
+            - name: Door Intune beheerd via 21Vianet in China
+              href: china.md
         - name: Aanmelden bij Intune
           href: account-sign-up.md
         - name: Domeinen configureren

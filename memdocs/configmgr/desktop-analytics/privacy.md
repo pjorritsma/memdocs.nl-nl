@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: dd970dc1517a6fcc197b2bf39a141871b4999a02
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 82c8495391dcc22aa2784657bc1461887e412577
+ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268416"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84223653"
 ---
 # <a name="desktop-analytics-data-privacy"></a>Gegevens privacy voor desktop Analytics
 
@@ -55,7 +55,7 @@ In de volgende afbeelding ziet u hoe diagnostische gegevens van afzonderlijke ap
 
     4. U implementeert compatibiliteits updates op alle doel apparaten.  
 
-3. Apparaten verzenden diagnostische gegevens naar de micro soft Diagnostic Gegevensbeheer-service voor Windows. Deze service wordt gehost in de Verenigde Staten.  
+3. Apparaten verzenden diagnostische gegevens naar de micro soft Diagnostic Gegevensbeheer-service voor Windows. Alle diagnostische gegevens worden versleuteld via HTTPS en maakt gebruik van een certificaat dat wordt vastgemaakt tijdens de overdracht van het apparaat naar deze service. De micro soft Gegevensbeheer-service wordt gehost in de Verenigde Staten.
 
 4. Micro soft produceert elke dag een moment opname van de inzichten die IT-gericht zijn. In deze moment opname worden de diagnostische gegevens van Windows gecombineerd met de invoer voor de Inge schreven apparaten. Dit proces treedt op in tijdelijke opslag, wat alleen wordt gebruikt door Desktop Analytics. De tijdelijke opslag wordt gehost in micro soft-data centers in de Verenigde Staten. Alle gegevens worden verzonden via een met SSL (HTTPS) versleuteld kanaal. De moment opnamen worden gescheiden door de commerciële ID.  
 

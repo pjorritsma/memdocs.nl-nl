@@ -10,12 +10,12 @@ ms.assetid: c1d71899-308f-49d5-adfa-3a3ec0163ed8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e4922502b49ab2da9ce393fab809e4dc583fd962
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 84ef4e37ddf756f04101c9cdec0ec7a4ed91688d
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714008"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270834"
 ---
 # <a name="security-and-privacy-for-configuration-manager-clients"></a>Beveiliging en privacy voor Configuration Manager-clients
 
@@ -48,7 +48,7 @@ Wanneer u PKI-verificatie niet kunt gebruiken, identificeert goed keuring een co
 - Automatisch voor computers in vertrouwde domeinen
 - Automatisch voor alle computers  
 
-De veiligste goedkeurings methode is het automatisch goed keuren van clients die lid zijn van vertrouwde domeinen. Vervolgens moet u alle andere computers hand matig controleren en goed keuren. Het automatisch goed keuren van alle clients wordt niet aanbevolen, tenzij u andere toegangs controles hebt om onbetrouwbare computers de toegang tot uw netwerk te voor komen.  
+De veiligste goedkeurings methode is het automatisch goed keuren van clients die lid zijn van vertrouwde domeinen. Deze optie omvat clients die lid zijn van een verbonden Azure Active Directory (Azure AD).<!-- MEMDocs#318 --> Vervolgens moet u alle andere computers hand matig controleren en goed keuren. Het automatisch goed keuren van alle clients wordt niet aanbevolen, tenzij u andere toegangs controles hebt om onbetrouwbare computers de toegang tot uw netwerk te voor komen.  
 
 Zie [clients beheren vanaf het knoop punt apparaten](../../manage/manage-clients.md#BKMK_ManagingClients_DevicesNode)voor meer informatie over het hand matig goed keuren van computers.  
 

@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b9e2e4e85d9fb6a1ab34af8760e0ac61d6e4fab4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 79e83a7ba111b1d7f96fb623914ffe8e11f22f3d
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718299"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270868"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Het gebruik van SQL Server AlwaysOn-beschikbaarheids groepen met Configuration Manager voorbereiden
 
@@ -106,7 +106,7 @@ Configureer de data base van elke replica met de volgende instellingen:
 
     Zie [CLR-integratie](https://docs.microsoft.com/sql/relational-databases/clr-integration/clr-integration-enabling)voor meer informatie.  
 
-- Stel **maximale grootte van tekst repl** in op `2147483647`:  
+- Stel **maximale grootte van tekst repl** in op `2147483647` :  
 
     ``` SQL
     EXECUTE sp_configure 'max text repl size (B)', 2147483647
@@ -264,6 +264,8 @@ Nadat de installatie is voltooid, moeten de volgende poorten open blijven voor C
 
 U kunt aangepaste poorten voor deze configuraties gebruiken. Gebruik dezelfde aangepaste poorten voor het eind punt en voor alle replica's in de beschikbaarheids groep.
 
+Voor SQL om gegevens tussen sites te repliceren, maakt u een taakverdelings regel voor elke poort in de Azure-load balancer. Zie [poorten met hoge Beschik baarheid configureren voor een interne Load Balancer](https://docs.microsoft.com/azure/load-balancer/load-balancer-configure-ha-ports)voor meer informatie.<!-- MEMDocs#252 -->
+
 #### <a name="listener"></a>Listener
 
 De beschikbaarheidsgroep moet ten minste één *beschikbaarheidsgroeplistener*hebben. Wanneer u Configuration Manager configureert om de site database in de beschikbaarheids groep te gebruiken, gebruikt deze de virtuele naam van deze listener. Hoewel een beschikbaarheids groep meerdere listeners kan bevatten, kan Configuration Manager slechts één listener gebruiken. Zie [een SQL Server beschikbaarheids groep-listener maken of configureren](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server)voor meer informatie.
@@ -280,11 +282,11 @@ Denk bijvoorbeeld eens aan het volgende scenario:
 
 - U maakt een beschikbaarheids groep die gebruikmaakt van drie SQL-servers.  
 
-- Uw primaire replicaserver is een nieuwe installatie van SQL Server 2014. Standaard wordt de data base opgeslagen. MDF en. LDF-bestanden `C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA`in.  
+- Uw primaire replicaserver is een nieuwe installatie van SQL Server 2014. Standaard wordt de data base opgeslagen. MDF en. LDF-bestanden in `C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA` .  
 
-- U hebt uw secundaire replica servers bijgewerkt naar SQL Server 2014 van eerdere versies. Bij de upgrade blijven deze servers het oorspronkelijke bestandspad voor het opslaan van database bestanden: `C:\Program Files\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA`.  
+- U hebt uw secundaire replica servers bijgewerkt naar SQL Server 2014 van eerdere versies. Bij de upgrade blijven deze servers het oorspronkelijke bestandspad voor het opslaan van database bestanden: `C:\Program Files\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA` .  
 
-- Voordat u de site database naar deze beschikbaarheids groep verplaatst, maakt u op elke secundaire replica server het volgende bestandspad: `C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA`. Dit pad is een duplicaat van het pad dat wordt gebruikt voor de primaire replica, zelfs als de secundaire replica's deze bestands locatie niet gebruiken.  
+- Voordat u de site database naar deze beschikbaarheids groep verplaatst, maakt u op elke secundaire replica server het volgende bestandspad: `C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA` . Dit pad is een duplicaat van het pad dat wordt gebruikt voor de primaire replica, zelfs als de secundaire replica's deze bestands locatie niet gebruiken.  
 
 - Vervolgens verleent u de SQL Server-service account op elke secundaire replica volledige controle over de toegang tot de zojuist gemaakte bestands locatie op die server.  
 

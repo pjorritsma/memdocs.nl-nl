@@ -10,12 +10,12 @@ ms.assetid: 3986a992-c175-4b6f-922e-fc561e3d7cb7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2d7697f8b5a2017aa732c52512bf31598c070fbc
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7b9111e3be82424425561e0a664fee955d73ee63
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714876"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270817"
 ---
 # <a name="how-to-manage-clients-in-configuration-manager"></a>Clients beheren in Configuration Manager
 
@@ -103,7 +103,7 @@ Zie [client instellingen configureren](../deploy/configure-client-settings.md)vo
 
 ### <a name="approve"></a>Goedkeuren
 
-Wanneer de client communiceert met site systemen met behulp van HTTP en een zelfondertekend certificaat, moet u deze clients goed keuren om ze als vertrouwde computers te identificeren. Standaard keurt de site configuratie automatisch clients goed van hetzelfde Active Directory forest en vertrouwde forests. Dit standaard gedrag betekent dat u niet elke client hand matig hoeft goed te keuren. Computers die u vertrouwt hand matig goed keuren en andere niet-goedgekeurde computers die u vertrouwt.
+Wanneer de client communiceert met site systemen met behulp van HTTP en een zelfondertekend certificaat, moet u deze clients goed keuren om ze als vertrouwde computers te identificeren. Standaard keurt de site configuratie automatisch clients goed van hetzelfde Active Directory forest, vertrouwde forests en verbonden Azure Active Directory Azure AD-tenants<!-- MEMDocs#318 -->. Dit standaard gedrag betekent dat u niet elke client hand matig hoeft goed te keuren. Computers die u vertrouwt hand matig goed keuren en andere niet-goedgekeurde computers die u vertrouwt.
 
 > [!IMPORTANT]  
 > Hoewel sommige beheer functies kunnen werken voor niet-goedgekeurde clients, is dit een niet-ondersteund scenario voor Configuration Manager.  
@@ -242,7 +242,7 @@ In de cache van de client worden tijdelijke bestanden opgeslagen voor wanneer cl
 
 U kunt de grootte van de cachemap opgeven met behulp van client instellingen in de Configuration Manager-console. Zie [client cache-instellingen](../deploy/about-client-settings.md#client-cache-settings)voor meer informatie.
 
-De standaard locatie voor de Configuration Manager-client cache `%windir%\ccmcache` is en de standaard schijf ruimte is 5120 MB.  
+De standaard locatie voor de Configuration Manager-client cache is `%windir%\ccmcache` en de standaard schijf ruimte is 5120 MB.  
 
 > [!IMPORTANT]  
 > Versleutel de map die wordt gebruikt voor de client cache niet. Configuration Manager kan geen inhoud downloaden naar een versleutelde map.  
@@ -310,7 +310,7 @@ Zie [over eigenschappen van client installatie](../deploy/about-client-installat
 
 1. Open op de client computer het onderdeel **Configuration Manager** van het configuratie scherm.  
 
-2. Ga naar het tabblad **cache** . Stel de ruimte-en locatie-eigenschappen in. De standaard locatie is `%windir%\ccmcache`.  
+2. Ga naar het tabblad **cache** . Stel de ruimte-en locatie-eigenschappen in. De standaard locatie is `%windir%\ccmcache` .  
 
 3. Als u de bestanden in de cachemap wilt verwijderen, kiest u **bestanden verwijderen**.  
 
@@ -333,7 +333,7 @@ U kunt de Configuration Manager-client software van een computer verwijderen doo
 > [!TIP]  
 > Het verwijderings proces geeft geen resultaten weer op het scherm. Raadpleeg het volgende logboek bestand om te controleren of de client is verwijderd:`%windir%\ccmsetup\logs\CCMSetup.log`  
 >
-> Als u wilt wachten tot de verwijdering is voltooid voordat u iets anders doet, voert `Wait-Process CCMSetup` u uit in Power shell. Met deze opdracht kan een script worden onderbroken totdat het CCMSetup-proces is voltooid.
+> Als u wilt wachten tot de verwijdering is voltooid voordat u iets anders doet, voert u `Wait-Process CCMSetup` uit in Power shell. Met deze opdracht kan een script worden onderbroken totdat het CCMSetup-proces is voltooid.
 
 
 ## <a name="manage-conflicting-records"></a><a name="BKMK_ConflictingRecords"></a>Conflicterende records beheren

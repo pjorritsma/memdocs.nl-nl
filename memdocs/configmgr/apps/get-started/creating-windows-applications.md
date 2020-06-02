@@ -10,12 +10,12 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 9e59d850a78a8f45f93769003e7a1de99e5634b3
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: ddd01055ac6edf2872854c93cc5172b396052ad2
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906391"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270851"
 ---
 # <a name="create-windows-applications-in-configuration-manager"></a>Windows-toepassingen maken in Configuration Manager
 
@@ -39,7 +39,7 @@ Richt een toepassing in met een Windows-app-pakket voor alle gebruikers op het a
 > [!Important]  
 > Wees voorzichtig met het installeren, inrichten en bijwerken van verschillende versies van hetzelfde Windows-app-pakket op een apparaat. Dit kan leiden tot onverwachte resultaten. Dit gedrag kan optreden wanneer Configuration Manager wordt gebruikt om de app in te richten, maar vervolgens gebruikers toestaan om de app vanuit de Microsoft Store bij te werken. Zie de volgende richt lijnen voor meer informatie over het [beheren van apps vanuit de Microsoft Store voor bedrijven](../deploy-use/manage-apps-from-the-windows-store-for-business.md#next-steps).  
 
-Bij het inrichten van een offline gelicentieerde app, kunt Configuration Manager deze niet automatisch bijwerken vanuit de Microsoft Store.  
+Bij het implementeren van offline-Apps op Windows 10-apparaten met de Configuration Manager-client, mogen gebruikers geen toepassingen die extern kunnen worden bijgewerkt met Configuration Manager-implementaties. Het beheren van updates voor offline Apps is vooral belang rijk in omgevingen met meerdere gebruikers, zoals klas lokalen. Zie [apps beheren vanuit de Microsoft Store voor bedrijven en onderwijs met Configuration Manager](../deploy-use/manage-apps-from-the-windows-store-for-business.md#next-steps)voor meer informatie.<!-- MEMDocs#316 -->
 
 Configuration Manager ondersteunt het inrichten van apps op alle ondersteunde versies van Windows 10.<!--SCCMDocs-pr issue 2762-->
 
@@ -163,8 +163,8 @@ Als u mobiele app-pakketten wilt ondertekenen, gebruikt u de volgende tabel om t
 | Pakket  | Symantec  | Niet-Symantec  |
 |---------|---------|---------|
 | Universele **. appx** -pakketten op Windows 10 Mobile-apparaten | Ja | Ja |
-| **. xap** -pakketten | Ja | Nee |
-| **. appx** -pakketten die zijn gemaakt voor Windows Phone 8,1, kunnen worden geïnstalleerd op Windows 10 Mobile-apparaten | Ja | Nee |
+| **. xap** -pakketten | Yes | Nee |
+| **. appx** -pakketten die zijn gemaakt voor Windows Phone 8,1, kunnen worden geïnstalleerd op Windows 10 Mobile-apparaten | Yes | Nee |
 
 ## <a name="deploy-windows-installer-apps-to-mdm-enrolled-windows-10-devices"></a><a name="bkmk_mdm-msi"></a>Windows Installer-apps implementeren op MDM-Inge schreven Windows 10-apparaten  
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0412f15912ac9017ebc49f974ec621d86f8b6c0e
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: b87b2528dce4d007f2a2031a11fd69ea774c2033
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989091"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165903"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Azure AD gebruiken voor toegang tot de Intune-API's in Microsoft Graph
 
@@ -143,7 +143,7 @@ Zie voor meer informatie:
 Wanneer u Microsoft Graph machtigt, kunt u de volgende bereiken opgeven voor het beheren van toegang tot de Intune-functies: de volgende tabel bevat een overzicht van de machtigingsbereiken voor de Intune-API.  In de eerste kolom ziet u de naam van de functie, zoals weergegeven in Azure Portal. De tweede kolom bevat de naam van het machtigingbereik.
 
 De instelling _Toegang inschakelen_ | Scopenaam
-:--|:--
+:--|---
 __Externe acties die gebruikers beïnvloeden uitvoeren op apparaten met Microsoft Intune__ | [DeviceManagementManagedDevices.PrivilegedOperations.All](#mgd-po)
 __Microsoft Intune-apparaten lezen en schrijven__ | [DeviceManagementManagedDevices.ReadWrite.All](#mgd-rw)
 __Microsoft Intune-apparaten lezen__ | [DeviceManagementManagedDevices.Read.All](#mgd-ro)

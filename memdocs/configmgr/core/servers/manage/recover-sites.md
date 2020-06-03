@@ -2,7 +2,7 @@
 title: Site Recovery
 titleSuffix: Configuration Manager
 description: Meer informatie over het herstellen van uw sites in Configuration Manager.
-ms.date: 08/23/2019
+ms.date: 06/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: b17c8c9ed0c1f6f9a5aeb487e07ad3d3dc66cbae
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 37e4db2ad801c5923ba3db54554af0bb13968048
+ms.sourcegitcommit: 64727a4b025a589e270842da39516c4c42563a34
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82903960"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84301432"
 ---
 # <a name="recover-a-configuration-manager-site"></a>Een Configuration Manager-site herstellen
 
@@ -347,6 +347,10 @@ Herhaal dit proces voor elk ander PXE-ingeschakelde on-premises distributie punt
     - **Power shell-script uitvoeren**: als u de optie gebruikt om **deze stap uit te voeren als het volgende account**, selecteert u **instellen**. Voer het wacht woord in en bevestig dit en selecteer vervolgens **verifiëren**.
 
 Herhaal dit proces voor alle taken reeksen.
+
+### <a name="recreate-bootable-media-and-prestaged-media-in-non-pki-environments"></a>Opstart bare media en voorgefaseerde media opnieuw maken in niet-PKI-omgevingen
+
+In niet-PKI-omgevingen zijn zelfondertekende certificaten in opstart bare media en voor bereide media gebaseerd op de computer sleutels van de server waarop de media zijn gemaakt. Daarom moeten opstart bare media en voor bereide media die zijn gemaakt op die server opnieuw worden gemaakt als de hardware wordt gewijzigd of het besturings systeem opnieuw wordt geïnstalleerd als onderdeel van een herstel bewerking. Zie [opstart bare media maken](../../../osd/deploy-use/create-bootable-media.md) en voor [bereide media](../../../osd/deploy-use/create-prestaged-media.md)maken voor meer informatie over het maken van opstart bare media en voor bereide media.
 
 ### <a name="reenter-sideloading-keys"></a>Sideloading-codes opnieuw invoeren
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 45f649a99f6b3d632fea9e46dfdaee89450ebd23
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5939d12003df78b459ebc12c294434826194b931
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989286"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84166124"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Infrastructuur configureren om SCEP te ondersteunen in Intune
 
@@ -224,9 +224,9 @@ Standaard gebruikt Intune de waarde die is geconfigureerd in de sjabloon. U kunt
 
 1. Voer de volgende opdracht voor de CA uit:
 
-   -**certutil -setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE**
-   -**net stop certsvc**
-   -**net start certsvc**
+   **certutil -setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE**  
+   **net stop certsvc**  
+   **net start certsvc**    
 
 2. Gebruik op de verlenende CA de module Certificeringsinstantie om de certificaatsjabloon te publiceren. Selecteer het knooppunt **Certificaatsjablonen**, selecteer **Actie** > **Nieuw** > **Te verlenen certificaatsjablonen** en selecteer vervolgens de certificaatsjabloon die u in de vorige sectie hebt gemaakt.
 

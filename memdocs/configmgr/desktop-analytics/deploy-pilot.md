@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 0e90855949f5c8f249db6b2f4305c71b8ee4e768
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: 3aa722415248ad9275c6ad065f0120bfe78d3ce4
+ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83824015"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84311217"
 ---
 # <a name="how-to-deploy-to-pilot-with-desktop-analytics"></a>Implementeren voor pilot met Desktop Analytics
 
@@ -104,7 +104,7 @@ Voordat u Windows kunt implementeren, moet u eerst de software-objecten in Confi
 Configuration Manager gebruikt de gegevens uit de Desktop Analytics om verzamelingen te maken voor de test-en productie-implementaties. Deze verzamelingen bevinden zich in de werk ruimte **activa en naleving** , knoop punt voor **apparaat-verzamelingen** , map **implementatie plannen** .
 
 > [!IMPORTANT]
-> Deze verzamelingen worden beheerd door Configuration Manager voor implementatie plannen voor desktop Analytics. Hand matige wijzigingen worden niet ondersteund.
+> Deze verzamelingen worden beheerd door Configuration Manager voor implementatie plannen voor desktop Analytics. Hand matige wijzigingen worden niet ondersteund. Als u een van deze verzamelingen verwijdert, werkt Desktop Analytics niet en moet u Configuration Manager opnieuw [verbinding maken](connect-configmgr.md) .<!--7208090-->
 
 Om ervoor te zorgen dat apparaten in orde zijn na elke implementatie fase, gebruikt u de volgende procedure voor het maken van een door een bureau blad Analytics geïntegreerde, gefaseerde implementatie:
 

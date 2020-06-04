@@ -2,7 +2,7 @@
 title: Detectie configureren
 titleSuffix: Configuration Manager
 description: Configureer detectie methoden om te zoeken naar resources die u wilt beheren vanuit uw netwerk, Active Directory en Azure Active Directory.
-ms.date: 04/01/2020
+ms.date: 06/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 49505eb1-d44d-4121-8712-e0f3d8b15bf5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3bd03cb15ae1633d8ddfc8c2f26a741d2679b083
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cfda27df7df537ededb1f103afdd6107354af786
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721043"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347284"
 ---
 # <a name="configure-discovery-methods-for-configuration-manager"></a>Detectie methoden voor Configuration Manager configureren
 
@@ -148,7 +148,7 @@ Hoewel al deze detectie methoden onafhankelijk van elkaar zijn, delen ze vergeli
 
 ### <a name="configure-active-directory-system-discovery"></a><a name="bkmk_config-adsd"></a>Active Directory systeem detectie configureren  
 
-1. Op het tabblad **Algemeen** van de venster Eigenschappen Active Directory systeem detectie selecteert](media/Disc_new_Icon.gif) u het pictogram **nieuw** pictogram ![om een nieuwe Active Directory-container op te geven. In het dialoog venster **Active Directory container** voltooit u de volgende configuraties:  
+1. Op het tabblad **Algemeen** van de venster Eigenschappen Active Directory systeem detectie selecteert u het pictogram **Nieuw** pictogram ![ ](media/Disc_new_Icon.gif) om een nieuwe Active Directory-container op te geven. In het dialoog venster **Active Directory container** voltooit u de volgende configuraties:  
 
     1. Typ of blader naar een locatie voor het **pad**. Deze waarde is een geldig LDAP-pad naar een container of organisatie-eenheid (OE). De site voert een query uit op dit pad naar bronnen. Bijvoorbeeld: `LDAP://CN=Computers,DC=contoso,DC=com`  
 
@@ -183,7 +183,7 @@ Hoewel al deze detectie methoden onafhankelijk van elkaar zijn, delen ze vergeli
 
 ### <a name="configure-active-directory-user-discovery"></a><a name="bkmk_config-adud"></a>Active Directory gebruikers detectie configureren  
 
-1. Op het tabblad **Algemeen** van de Active Directory gebruikers detectie venster Eigenschappen selecteert](media/Disc_new_Icon.gif) u het pictogram **nieuw** pictogram ![om een nieuwe Active Directory-container op te geven. In het dialoog venster **Active Directory container** voltooit u de volgende configuraties:  
+1. Op het tabblad **Algemeen** van de Active Directory gebruikers detectie venster Eigenschappen selecteert u het pictogram **Nieuw** pictogram ![ ](media/Disc_new_Icon.gif) om een nieuwe Active Directory-container op te geven. In het dialoog venster **Active Directory container** voltooit u de volgende configuraties:  
 
     1. Geef een of meer locaties op waarnaar moet worden gezocht.  
 
@@ -243,7 +243,7 @@ Als u eerst de app in azure maakt en deze vervolgens in Configuration Manager *i
 Bij het configureren van de Azure-service voor **Cloud beheer** :
 
 - Selecteer op de pagina **detectie** van de wizard de optie voor het **inschakelen van Azure Active Directory gebruikers detectie**.
-- **Instellingen**selecteren.
+- Selecteer **Instellingen**.
 - Configureer in het dialoog venster instellingen van Azure AD-gebruikers detectie een schema voor wanneer detectie plaatsvindt. U kunt ook Delta detectie inschakelen, waarmee alleen wordt gecontroleerd op nieuwe of gewijzigde accounts in azure AD.
 
 > [!Note]  
@@ -265,7 +265,7 @@ U kunt gebruikers groepen en leden van deze groepen vinden vanuit Azure AD. Wann
 
 ### <a name="limitations"></a>Beperkingen
 
-Detectie van verschillen in azure AD-gebruikers groepen is momenteel uitgeschakeld.
+Detectie van verschillen in azure AD-gebruikers groepen is uitgeschakeld in versie 1906. U kunt deze inschakelen vanaf Configuration Manager versie 1910.
 
 ### <a name="log-files"></a>Logboekbestanden
 
@@ -288,7 +288,7 @@ Detectie inschakelen voor een bestaande Azure-service voor **Cloud beheer** :
 Detectie inschakelen bij het configureren van een nieuwe Azure-service voor **Cloud beheer** :
 
 - Selecteer op de pagina **detectie** van de wizard de optie voor het **inschakelen van Azure Active Directory groeps detectie**.
-- **Instellingen**selecteren.
+- Selecteer **Instellingen**.
 - In het dialoog venster instellingen voor de Azure AD-groeps detectie configureert u het detectie bereik en een schema voor wanneer detectie plaatsvindt.
 
 
@@ -415,7 +415,7 @@ Gebruik de volgende procedures om eerst alleen uw netwerk topologie te detectere
     - Op het tabblad **subnetten** selecteert u de optie **lokale subnetten zoeken** .  
 
       > [!TIP]  
-      > Als u de specifieke subnetten kent die uw netwerk vormen, schakelt u het selectie vakje **lokale subnetten zoeken** uit. Selecteer vervolgens het **New** pictogram nieuw ![pictogram](media/Disc_new_Icon.gif)en voeg de specifieke subnetten toe die u wilt doorzoeken. Voor grote netwerken zoekt u slechts één of twee subnetten tegelijk om het gebruik van netwerk bandbreedte te minimaliseren.  
+      > Als u de specifieke subnetten kent die uw netwerk vormen, schakelt u het selectie vakje **lokale subnetten zoeken** uit. Selecteer vervolgens het pictogram **Nieuw** pictogram ![ ](media/Disc_new_Icon.gif) en voeg de specifieke subnetten toe die u wilt doorzoeken. Voor grote netwerken zoekt u slechts één of twee subnetten tegelijk om het gebruik van netwerk bandbreedte te minimaliseren.  
 
     - Selecteer op het tabblad **domeinen** de optie voor het **zoeken naar het lokale domein**.  
 
@@ -424,7 +424,7 @@ Gebruik de volgende procedures om eerst alleen uw netwerk topologie te detectere
       > [!TIP]  
       > Wanneer u uw netwerk topologie voor het eerst toewijst, configureert u slechts een paar router-hops om het gebruik van netwerk bandbreedte te minimaliseren.  
 
-4. Op het tabblad **planning** selecteert u het pictogram **Nieuw** pictogram ![](media/Disc_new_Icon.gif)en stelt u een planning in voor het uitvoeren van detectie.  
+4. Op het tabblad **planning** selecteert u het pictogram **Nieuw** pictogram ![ ](media/Disc_new_Icon.gif) en stelt u een planning in voor het uitvoeren van detectie.  
 
     > [!NOTE]  
     > U kunt geen andere detectie configuratie toewijzen aan afzonderlijke planningen voor netwerk detectie. Telkens wanneer netwerk detectie wordt uitgevoerd, wordt de huidige detectie configuratie gebruikt.  
@@ -451,7 +451,7 @@ Gebruik de volgende procedures om eerst alleen uw netwerk topologie te detectere
 
     - Als u een specifiek subnet wilt doorzoeken, controleert u of het subnet wordt weer gegeven in **subnetten om te zoeken** en heeft de **Zoek** waarde **ingeschakeld**:  
 
-      1. Als het subnet niet wordt weer gegeven, selecteert u ![het nieuwe](media/Disc_new_Icon.gif) **pictogram Nieuw** pictogram. Voer in het dialoog venster **nieuwe toewijzing van subnet** de informatie over het **subnet** en **masker** in en selecteer vervolgens **OK**. Een nieuw subnet is standaard ingeschakeld voor zoeken.  
+      1. Als het subnet niet wordt weer gegeven, selecteert **u het nieuwe pictogram Nieuw** pictogram ![ ](media/Disc_new_Icon.gif) . Voer in het dialoog venster **nieuwe toewijzing van subnet** de informatie over het **subnet** en **masker** in en selecteer vervolgens **OK**. Een nieuw subnet is standaard ingeschakeld voor zoeken.  
 
       2. Als u de **Zoek** waarde voor een vermeld subnet wilt wijzigen, selecteert u deze in de lijst. Selecteer vervolgens de **wissel** knop om de waarde te scha kelen tussen **uitgeschakeld** en **ingeschakeld**.  
 
@@ -461,21 +461,21 @@ Gebruik de volgende procedures om eerst alleen uw netwerk topologie te detectere
 
     - Als u een specifiek domein wilt doorzoeken, moet u ervoor zorgen dat het domein wordt weer gegeven in **domeinen** en dat er een **Zoek** waarde is **ingeschakeld**:  
 
-      1. Als het domein niet wordt weer gegeven, selecteert u ![het nieuwe](media/Disc_new_Icon.gif) **pictogram Nieuw** pictogram. Voer in het dialoog venster **domein eigenschappen** de **domein** informatie in en selecteer **OK**. Een nieuw domein is standaard ingeschakeld voor zoeken.  
+      1. Als het domein niet wordt weer gegeven, selecteert **u het nieuwe pictogram Nieuw** pictogram ![ ](media/Disc_new_Icon.gif) . Voer in het dialoog venster **domein eigenschappen** de **domein** informatie in en selecteer **OK**. Een nieuw domein is standaard ingeschakeld voor zoeken.  
 
       2. Als u de **Zoek** waarde voor een vermeld domein wilt wijzigen, selecteert u deze in de lijst. Selecteer vervolgens de **wissel** knop om de waarde te scha kelen tussen **uitgeschakeld** en **ingeschakeld**.  
 
 7. Als u detectie wilt configureren om te zoeken naar specifieke SNMP-communitynamen voor SNMP-apparaten, gaat u naar het tabblad **SNMP** . Configureer vervolgens een of meer van de volgende opties:  
 
-    - Als u een SNMP-communitynaam wilt toevoegen aan de lijst met **SNMP**-communitynamen, selecteert ![u het](media/Disc_new_Icon.gif)pictogram **Nieuw** pictogram. Geef in het dialoog venster **nieuwe SNMP-communitynaam** de **naam** op van de SNMP-community en selecteer **OK**.  
+    - Als u een SNMP-communitynaam wilt toevoegen aan de lijst met **SNMP**-communitynamen, selecteert u het pictogram **Nieuw** pictogram ![ ](media/Disc_new_Icon.gif) . Geef in het dialoog venster **nieuwe SNMP-communitynaam** de **naam** op van de SNMP-community en selecteer **OK**.  
 
-    - Als u een SNMP-communitynaam wilt verwijderen, selecteert u de naam van de community en ![selecteert u](media/Disc_delete_Icon.gif)vervolgens het pictogram **verwijderen** pictogram verwijderen.  
+    - Als u een SNMP-communitynaam wilt verwijderen, selecteert u de naam van de community en selecteert u vervolgens het pictogram **verwijderen** pictogram ![ verwijderen ](media/Disc_delete_Icon.gif) .  
 
-    - Als u de zoek volgorde van SNMP-communitynamen wilt aanpassen, selecteert u een community-naam in de lijst. Selecteer vervolgens het **pictogram item** ![omhoog verplaatsen](media/Disc_moveUp_Icon.gif) of het pictogram **item omlaag** verplaatsen omlaag ![bewegen.](media/Disc_moveDown_Icon.gif) Wanneer detectie wordt uitgevoerd, worden communitynamen in een volg orde van boven naar beneden doorzocht. 
+    - Als u de zoek volgorde van SNMP-communitynamen wilt aanpassen, selecteert u een community-naam in de lijst. Selecteer vervolgens het pictogram **item** omhoog verplaatsen ![ ](media/Disc_moveUp_Icon.gif) of het pictogram **item omlaag** verplaatsen ![ omlaag bewegen ](media/Disc_moveDown_Icon.gif) . Wanneer detectie wordt uitgevoerd, worden communitynamen in een volg orde van boven naar beneden doorzocht. 
 
     - Als u het maximum aantal router-hops wilt configureren voor gebruik door SNMP-Zoek opdrachten, selecteert u het aantal hops in de vervolg keuzelijst **maximum aantal hops** .  
 
-8. Als u een SNMP-apparaat wilt configureren, gaat u naar het tabblad **SNMP-apparaten** . Als het apparaat niet wordt weer gegeven, selecteert u ![het nieuwe](media/Disc_new_Icon.gif) **pictogram Nieuw** pictogram. Geef in het dialoog venster **Nieuw SNMP-apparaat** het IP-adres of de apparaatnaam van het SNMP-apparaat op en selecteer vervolgens **OK**.  
+8. Als u een SNMP-apparaat wilt configureren, gaat u naar het tabblad **SNMP-apparaten** . Als het apparaat niet wordt weer gegeven, selecteert **u het nieuwe pictogram Nieuw** pictogram ![ ](media/Disc_new_Icon.gif) . Geef in het dialoog venster **Nieuw SNMP-apparaat** het IP-adres of de apparaatnaam van het SNMP-apparaat op en selecteer vervolgens **OK**.  
 
     > [!NOTE]  
     > Als u een apparaatnaam opgeeft, moet Configuration Manager de NetBIOS-naam kunnen omzetten in een IP-adres.  
@@ -487,12 +487,12 @@ Gebruik de volgende procedures om eerst alleen uw netwerk topologie te detectere
       > [!NOTE]  
       > Als u deze optie wilt gebruiken, moet de server zijn IP-adres van een DHCP-server leasen en kan geen statisch IP-adres gebruiken.  
 
-    - Als u een query wilt uitvoeren op een specifieke DHCP- ![server,](media/Disc_new_Icon.gif)selecteert u het pictogram **Nieuw** pictogram. Geef in het dialoog venster **nieuwe DHCP-server** het IP-adres of de server naam van de DHCP-server op en selecteer **OK**.  
+    - Als u een query wilt uitvoeren op een specifieke DHCP-server, selecteert u het pictogram **Nieuw** pictogram ![ ](media/Disc_new_Icon.gif) . Geef in het dialoog venster **nieuwe DHCP-server** het IP-adres of de server naam van de DHCP-server op en selecteer **OK**.  
 
       > [!NOTE]  
       > Als u een server naam opgeeft, moet Configuration Manager de NetBIOS-naam kunnen omzetten in een IP-adres.  
 
-10. Als u wilt configureren wanneer detectie wordt uitgevoerd, gaat u naar het tabblad **planning** . Selecteer vervolgens het **New** pictogram nieuw ![pictogram](media/Disc_new_Icon.gif) om een planning in te stellen voor het uitvoeren van netwerk detectie. U kunt meerdere terugkerende schema's en meerdere schema's zonder terugkeer patroon configureren.  
+10. Als u wilt configureren wanneer detectie wordt uitgevoerd, gaat u naar het tabblad **planning** . Selecteer vervolgens het pictogram **Nieuw** pictogram ![ ](media/Disc_new_Icon.gif) om een planning in te stellen voor het uitvoeren van netwerk detectie. U kunt meerdere terugkerende schema's en meerdere schema's zonder terugkeer patroon configureren.  
 
     > [!NOTE]  
     > Als op het tabblad **planning** meer dan één schema tegelijk wordt weer gegeven, wordt netwerk detectie uitgevoerd voor alle planningen die worden geconfigureerd op het tijdstip dat is opgegeven in de planning. Dit gedrag geldt ook voor terugkerende schema's.  

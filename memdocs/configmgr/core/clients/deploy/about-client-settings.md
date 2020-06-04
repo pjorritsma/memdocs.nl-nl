@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 127ed43fded6c66bc4395ae4d69a28ae8c9eddd5
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 21e837d5d97c42f095159a87e015f181c5e53419
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83877528"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347165"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Over client instellingen in Configuration Manager
 
@@ -98,7 +98,7 @@ Hiermee wordt [peer-cache](../../plan-design/hierarchy/client-peer-cache.md) voo
 Vanaf versie 1906 geeft u de minimum tijd op voor de Configuration Manager-client om inhoud in de cache te blijven gebruiken. Deze client instelling definieert de minimale hoeveelheid tijd Configuration Manager agent moet wachten voordat de inhoud uit de cache kan worden verwijderd in het geval dat er meer ruimte nodig is.
 
 Deze waarde is standaard 1.440 minuten (24 uur).
-De maximum waarde voor deze instelling is 10.080 minuten (1 week).
+De maximum waarde voor deze instelling is 10.080 minuten (één week).
 
 Deze instelling geeft u meer controle over de client cache op verschillende typen apparaten. U kunt de waarde verlagen op clients met kleine harde schijven en geen bestaande inhoud behoud voordat een andere implementatie wordt uitgevoerd.
 
@@ -114,7 +114,7 @@ Hiermee geeft u op hoe vaak de volgende Configuration Manager-clients client bel
 - Mac-computers  
 - Computers met Linux of UNIX  
 
-Deze waarde is standaard 60 minuten. Door deze waarde te verlagen, kunnen clients de site vaker controleren. Met talloze clients kan dit gedrag een negatieve invloed hebben op de prestaties van de site. De [richt lijnen voor grootte en schaal](../../plan-design/configs/size-and-scale-numbers.md) zijn gebaseerd op de standaard waarde. Het verhogen van deze waarde zorgt ervoor dat clients de site minder vaak kunnen navragen. Wijzigingen in het client beleid, met inbegrip van nieuwe implementaties, nemen clients langer in gebruik om deze te downloaden en te verwerken.<!-- SCCMDocs issue 823 -->
+Deze waarde is standaard 60 minuten. Door deze waarde te verlagen, kunnen clients de site vaker controleren. Bij veel clients kan dit gedrag een negatieve invloed hebben op de prestaties van de site. De [richt lijnen voor grootte en schaal](../../plan-design/configs/size-and-scale-numbers.md) zijn gebaseerd op de standaard waarde. Het verhogen van deze waarde zorgt ervoor dat clients de site minder vaak kunnen navragen. Wijzigingen in het client beleid, met inbegrip van nieuwe implementaties, nemen clients langer in gebruik om deze te downloaden en te verwerken.<!-- SCCMDocs issue 823 -->
 
 ### <a name="enable-user-policy-on-clients"></a>Gebruikers beleid op clients inschakelen
 
@@ -276,7 +276,7 @@ Configureren hoe gebruikers software, software-updates en taken reeksen kunnen i
 
 Als voor computers BitLocker-pincode vereist is, wordt met deze optie niet de vereiste om een pincode in te voeren wanneer de computer opnieuw wordt opgestart na een software-installatie.  
 
-- **Always**: Configuration Manager BitLocker wordt tijdelijk onderbroken nadat het software heeft geïnstalleerd waarvoor opnieuw moet worden opgestart en de computer opnieuw moet worden opgestart. Deze instelling is alleen van toepassing op het opnieuw opstarten van een computer, geïnitieerd door Configuration Manager. Met deze instelling wordt de vereiste voor het invoeren van de BitLocker-pincode niet opgeschort wanneer de gebruiker de computer opnieuw opstart. De BitLocker pincode entry-vereiste wordt hervat na het opstarten van Windows.
+- **Always**: Configuration Manager BitLocker wordt tijdelijk onderbroken nadat het software heeft geïnstalleerd waarvoor opnieuw moet worden opgestart en de computer opnieuw wordt opgestart. Deze instelling is alleen van toepassing wanneer Configuration Manager de computer opnieuw opstart. Met deze instelling wordt de vereiste voor het invoeren van de BitLocker-pincode niet opgeschort wanneer de gebruiker de computer opnieuw opstart. De BitLocker pincode entry-vereiste wordt hervat na het opstarten van Windows.
 
 - **Nooit**: Configuration Manager BitLocker niet wordt onderbroken nadat het software heeft geïnstalleerd waarvoor opnieuw moet worden opgestart. In dit scenario kan de software-installatie niet worden voltooid totdat de gebruiker de pincode heeft ingevoerd om het standaard opstart proces te volt ooien en Windows te laden.
 
@@ -329,29 +329,11 @@ Als u gebruikers meer tijd wilt geven om de vereiste implementaties van software
 
 Stel een respijt periode van 0 tot 120 uur in. Gebruik deze instelling samen met de implementatie-eigenschap **vertraging afdwingen van deze implementatie op basis van gebruikers voorkeuren**. Zie [toepassingen implementeren](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period)voor meer informatie.
 
-
 ## <a name="computer-restart"></a>Computer opnieuw opstarten
 
-De volgende instellingen moeten korter zijn dan het kortste onderhouds venster dat wordt toegepast op de computer:
+Zie meldingen over het [opnieuw opstarten van apparaten](device-restart-notifications.md)voor meer informatie over deze instellingen.<!-- 7182335 -->
 
-- **Een tijdelijke melding weer geven aan de gebruiker die het interval aangeeft voordat de gebruiker wordt afgemeld of de computer opnieuw opstart (minuten)**
-- **Een dialoog venster weer geven dat de gebruiker niet kan sluiten en waarin het aftellings interval wordt weer gegeven voordat de gebruiker wordt afgemeld of de computer opnieuw opstart (minuten)**
-
-
-Zie [onderhouds Vensters gebruiken](../manage/collections/use-maintenance-windows.md)voor meer informatie over onderhouds Vensters.
-
-- **Geef de duur voor uitstellen op voor het opnieuw starten van de computer (minuten)** (vanaf versie 1906)<!--3976435-->
-  - De standaard waarde is 240 minuten.
-  - De waarde voor de uitstel duur moet kleiner zijn dan de tijdelijke meldings waarde min de waarde voor de melding die de gebruiker niet kan negeren.
-  - Zie meldingen voor het [opnieuw opstarten van apparaten](device-restart-notifications.md)voor meer informatie.
-
-**Wanneer een implementatie opnieuw moet worden opgestart, een dialoog venster weer geven voor de gebruiker in plaats van een pop-upmelding**<!--3555947-->: Vanaf versie 1902 is het configureren van deze instelling op **Ja** van invloed op de gebruikers ervaring. Deze instelling is van toepassing op alle implementaties van toepassingen, taken reeksen en software-updates. Zie [plan for Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_impact)(Engelstalig) voor meer informatie.
-
-> [!IMPORTANT]
-> In Configuration Manager 1902 worden pop-upmeldingen in het dialoog venster niet vervangen. Om dit probleem op te lossen, installeert u het [Update pakket voor Configuration Manager versie 1902](https://support.microsoft.com/help/4500571/update-rollup-for-configuration-manager-current-branch-1902). <!--4404715-->
-
-
-## <a name="delivery-optimization"></a>Delivery optimization 
+## <a name="delivery-optimization"></a>Delivery optimization
 
 <!-- 1324696 -->
 U gebruikt Configuration Manager grens groepen om de distributie van inhoud in uw bedrijfs netwerk en externe kant oren te definiëren en te reguleren. [Windows Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) is een op de cloud gebaseerde peer-to-peer-technologie voor het delen van inhoud tussen Windows 10-apparaten. Configureer Delivery Optimization om uw grens groepen te gebruiken bij het delen van inhoud tussen peers.
@@ -363,7 +345,7 @@ U gebruikt Configuration Manager grens groepen om de distributie van inhoud in u
 
 ### <a name="use-configuration-manager-boundary-groups-for-delivery-optimization-group-id"></a>Configuration Manager grens groepen gebruiken voor de ID van de leverings optimalisatie groep
 
-Kies **Ja** om de grens groep-ID toe te passen als de id van de leverings optimalisatie groep op de client. Wanneer de client communiceert met de Delivery Optimization-Cloud service, wordt deze id gebruikt om peers met de gewenste inhoud te vinden. Als u deze instelling inschakelt, wordt ook de download modus voor de leverings optimalisatie ingesteld op de groep (2) op de doel clients.
+Kies **Ja** om de grens groep-ID toe te passen als de id van de leverings optimalisatie groep op de client. Wanneer de client communiceert met de Delivery Optimization-Cloud service, wordt deze id gebruikt om peers te zoeken met de inhoud. Als u deze instelling inschakelt, wordt ook de download modus voor de leverings optimalisatie ingesteld op de groep (2) op de doel clients.
 
 > [!Note]
 > Micro soft raadt aan de client in staat te stellen deze instelling te configureren via lokaal beleid in plaats van met groeps beleid. Hierdoor kan de grens groep-ID worden ingesteld als de id van de bezorgings optimalisatie groep op de client. Zie [Delivery Optimization](../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization)voor meer informatie.
@@ -411,7 +393,7 @@ Kies **Ja** om te onderdrukken dat de computer opnieuw wordt opgestart nadat de 
 
 ### <a name="allowed-period-of-time-users-can-postpone-a-required-restart-to-complete-the-endpoint-protection-installation-hours"></a>De toegestane periode waarmee gebruikers een vereiste herstart kunnen uitstellen om de Endpoint Protection-installatie te volt ooien (uur)
 
-Als een herstart nodig is nadat de Endpoint Protection-client is geïnstalleerd, wordt met deze instelling het aantal uren aangegeven dat gebruikers de vereiste herstart kunnen uitstellen. Voor deze instelling moet de instelling voor het onderdrukken van de **vereiste computer opnieuw worden opgestart nadat de Endpoint Protection-client is geïnstalleerd** **.**  
+Als een herstart nodig is nadat de Endpoint Protection-client is geïnstalleerd, wordt met deze instelling het aantal uren aangegeven dat gebruikers de vereiste herstart kunnen uitstellen. Deze instelling vereist dat u de volgende instelling uitschakelt: de **vereiste herstart van de computer onderdrukken nadat de Endpoint Protection-client is geïnstalleerd**.
 
 ### <a name="disable-alternate-sources-such-as-microsoft-windows-update-microsoft-windows-server-update-services-or-unc-shares-for-the-initial-definition-update-on-client-computers"></a>Alternatieve bronnen uitschakelen (zoals micro soft Windows Update, micro soft Windows Server Update Services of UNC-shares) voor de eerste definitie-update op client computers
 
@@ -423,7 +405,7 @@ Kies **Ja** als u wilt dat Configuration Manager alleen de initiële definitie-u
 
 ### <a name="polling-interval-for-mobile-device-legacy-clients"></a>Polling-interval voor verouderde clients voor mobiele apparaten
 
-Selecteer **interval instellen** om de tijds duur, in minuten of uren, op te geven dat verouderde mobiele apparaten moeten worden gecontroleerd op beleid. Deze apparaten zijn onder andere platforms als Windows CE, Mac OS X en UNIX of Linux.
+Selecteer **interval instellen** om de tijds duur, in minuten of uren, op te geven dat verouderde mobiele apparaten moeten worden gecontroleerd op beleid. Deze apparaten zijn onder andere platforms als Windows CE, macOS en UNIX of Linux.
 
 ### <a name="polling-interval-for-modern-devices-minutes"></a>Polling-interval voor moderne apparaten (minuten)
 
@@ -529,7 +511,7 @@ Kies **Ja** om gebruikers van software Center hun computer te laten uitsluiten v
 
 ### <a name="allow-network-wake-up"></a>Wake-up van netwerk toestaan
 
-Toegevoegd in 1810. Wanneer deze **optie is ingeschakeld**, worden de energie-instellingen op de netwerk adapter geconfigureerd om de netwerk adapter in staat te stellen het apparaat te activeren. Wanneer deze optie is ingesteld op **uitschakelen**, worden de energie-instellingen op de netwerk adapter zo geconfigureerd dat de netwerk adapter het apparaat niet meer kan activeren.
+Wanneer u deze instelling inschakelt, configureert de client de energie-instellingen op de computer zodat de netwerk adapter het apparaat kan activeren. Als u deze instelling uitschakelt, kan de netwerk adapter van de computer het apparaat niet meer activeren.
 
 ### <a name="enable-wake-up-proxy"></a>Wake-up proxy inschakelen
 
@@ -549,7 +531,7 @@ Configureer vervolgens de volgende extra instellingen, indien nodig:
     > [!IMPORTANT]  
     > Dit nummer moet overeenkomen met het nummer in de **Eigenschappen**van de site. Als u dit aantal op één plek wijzigt, wordt het niet automatisch bijgewerkt op de andere locatie.  
 
-- **Windows Defender firewall-uitzonde ring voor wake-up proxy**: de Configuration Manager-client configureert automatisch het poort nummer van de Wake-up proxy op apparaten waarop Windows Defender firewall wordt uitgevoerd. Selecteer **configureren** om de gewenste Firewall profielen op te geven.  
+- **Windows Defender firewall-uitzonde ring voor wake-up proxy**: de Configuration Manager-client configureert automatisch het poort nummer van de Wake-up proxy op apparaten waarop Windows Defender firewall wordt uitgevoerd. Selecteer **configureren** om de Firewall profielen op te geven.  
 
     Als clients een andere firewall uitvoeren, moet u deze hand matig configureren zodat het **poort nummer van de Wake-up proxy (UDP)** wordt toegestaan.  
 
@@ -586,7 +568,7 @@ Voordat u inhoud overbrengt van het gedeelde klem bord in een sessie voor beheer
 
 ### <a name="grant-remote-control-permission-to-local-administrators-group"></a>Machtigingen voor beheer op afstand toekennen aan lokale groep beheerders
 
-Kies of lokale beheerders op de server die de verbinding voor beheer op afstand initiëren, beheer op afstand kunnen maken voor client computers.  
+Kies of lokale beheerders op de server die de verbinding voor beheer op afstand starten, extern beheer van sessies tot client computers kunnen maken.  
 
 ### <a name="access-level-allowed"></a>Toegestaan toegangsniveau
 
@@ -620,7 +602,7 @@ Stel deze optie in om geluid te gebruiken om aan te geven wanneer een sessie voo
 
 Stel deze instelling in op **Ja** om ongevraagde externe hulp sessies Configuration Manager te beheren.  
 
-In een ongevraagde sessie van hulp op afstand heeft de gebruiker op de client computer geen hulp aangevraagd voor het initiëren van de sessie.  
+In een ongevraagde sessie van hulp op afstand heeft de gebruiker op de client computer geen hulp aangevraagd voor het starten van de sessie.  
 
 ### <a name="manage-solicited-remote-assistance-settings"></a>Instellingen voor gevraagde hulp op afstand beheren
 
@@ -671,7 +653,7 @@ Wanneer u deze optie inschakelt, worden gebruikers beschik bare toepassingen die
 
 ### <a name="hide-installed-applications-in-software-center"></a><a name="bkmk_HideInstalled"></a>Geïnstalleerde toepassingen verbergen in Software Center
 
-Wanneer u deze optie inschakelt, worden toepassingen die al zijn geïnstalleerd, niet meer weer gegeven op het tabblad toepassingen. Deze optie is ingesteld als de standaard waarde bij het installeren of upgraden van Configuration Manager 1802. Geïnstalleerde toepassingen zijn nog steeds beschikbaar voor controle op het tabblad installatie status. <!--1357592-->
+Wanneer u deze optie inschakelt, worden toepassingen die al zijn geïnstalleerd, niet meer weer gegeven op het tabblad toepassingen. Deze optie wordt ingesteld als de standaard waarde wanneer u Configuration Manager installeert of als u een upgrade naar uitvoert. Geïnstalleerde toepassingen zijn nog steeds beschikbaar voor controle op het tabblad installatie status. <!--1357592-->
 
 ### <a name="hide-application-catalog-link-in-software-center"></a><a name="bkmk_HideAppCat"></a>toepassingscatalogus koppeling verbergen in Software Center
 
@@ -696,7 +678,7 @@ Beschik bare tabbladen:
 - **Opties**
 - U kunt Maxi maal vijf aangepaste tabbladen toevoegen door te klikken op de knop **tabblad toevoegen** .
   - Geef de **tabblad naam** en de **inhouds-URL** op voor het aangepaste tabblad.
-  - Klik op **tabblad verwijderen** om een aangepast tabblad te verwijderen.  
+  - Selecteer **tabblad verwijderen** om een aangepast tabblad te verwijderen.  
 
   >[!Important]  
   > - Sommige website functies werken mogelijk niet wanneer deze worden gebruikt als aangepast tabblad in Software Center. Zorg ervoor dat u de resultaten test voordat u deze op clients implementeert. <!--519659-->
@@ -731,9 +713,9 @@ Als uw organisatie bijvoorbeeld geen nalevings beleid gebruikt en u het tabblad 
 
   - Software Center gebruikt altijd de standaard instelling. Gebruikers kunnen dit filter wijzigen, maar Software Center blijft de voor keur niet behouden.  
 
-- Stel de **standaard weergave** van de toepassing in op de **tegel weergave** of de **lijst weergave**. 
+- Stel de **standaard weergave** van de toepassing in op de **tegel weergave** of de **lijst weergave**.
 
-  - Als een gebruiker deze configuratie wijzigt, wordt de voor keur van de gebruiker in de toekomst door Software Center gehandhaafd. 
+  - Als een gebruiker deze configuratie wijzigt, wordt de voor keur van de gebruiker in de toekomst door Software Center gehandhaafd.
 
 
 ## <a name="software-deployment"></a>Software-implementatie  
@@ -745,7 +727,7 @@ Configureer een planning voor wanneer Configuration Manager de regels voor verei
 > [!IMPORTANT]  
 > Deze instelling is meer invasief voor de lokale client dan het netwerk of de site server. Een meer agressieve evaluatie planning is een negatieve invloed op de prestaties van uw netwerk en client computers. Micro soft raadt u niet aan een lagere waarde in te stellen dan de standaard instelling. Als u deze waarde wijzigt, controleert u de prestaties nauw keurig.  
 
-Start deze actie vanaf een client als volgt: Klik in het configuratie scherm van **Configuration Manager** op het tabblad **acties** , selecteer **evaluatie cyclus voor toepassings implementaties**.  
+Start deze actie vanaf een client als volgt: Selecteer in het configuratie scherm van **Configuration Manager** , in het tabblad **acties** , de **evaluatie cyclus**voor de implementatie van de toepassing.  
 
 
 
@@ -854,9 +836,9 @@ Gebruik deze instelling om software-updates op Configuration Manager-clients in 
 
 ### <a name="software-update-scan-schedule"></a>Planning software-updatescan
 
-Selecteer **planning** om op te geven hoe vaak de client een scan op nalevings beoordeling initieert. Deze scan bepaalt de status voor software-updates op de client (bijvoorbeeld vereist of geïnstalleerd). Zie [Software updates compliance assessment](../../../sum/understand/software-updates-introduction.md#BKMK_SUMCompliance)voor meer informatie over nalevingsbeoordeling.  
+Selecteer **planning** om op te geven hoe vaak de client een scan op nalevings beoordeling start. Deze scan bepaalt de status voor software-updates op de client (bijvoorbeeld vereist of geïnstalleerd). Zie [Software updates compliance assessment](../../../sum/understand/software-updates-introduction.md#BKMK_SUMCompliance)voor meer informatie over nalevingsbeoordeling.  
 
-Deze scan maakt standaard gebruik van een eenvoudig schema om elke zeven dagen te initiëren. U kunt een aangepaste planning maken. U kunt een exacte start datum en-tijd opgeven, UTC (Universal Coordinated Time) of de lokale tijd gebruiken en het terugkerende interval configureren voor een specifieke dag van de week.  
+Deze scan gebruikt standaard een eenvoudig schema om elke zeven dagen te beginnen. U kunt een aangepaste planning maken. U kunt een exacte start datum en-tijd opgeven, UTC (Universal Coordinated Time) of de lokale tijd gebruiken en het terugkerende interval configureren voor een specifieke dag van de week.  
 
 > [!NOTE]  
 > Als u een interval van minder dan één dag opgeeft, wordt Configuration Manager automatisch ingesteld op één dag.  
@@ -868,16 +850,16 @@ Deze scan maakt standaard gebruik van een eenvoudig schema om elke zeven dagen t
 
 Selecteer **schema** om te configureren hoe vaak de client agent voor software-updates software-updates opnieuw evalueert voor de installatie status op Configuration Manager-client computers. Wanneer eerder geïnstalleerde software-updates niet meer op clients zijn gevonden, maar nog steeds vereist zijn, installeert de client de software-updates opnieuw.
 
-Pas deze planning aan op basis van het bedrijfs beleid voor naleving van software-updates en of gebruikers software-updates kunnen verwijderen. Elke nieuwe evaluatie cyclus voor implementaties resulteert in de activiteit netwerk-en client computer processor. Deze instelling maakt standaard gebruik van een eenvoudige planning voor het initiëren van de scan voor nieuwe evaluaties van de implementatie om de zeven dagen.  
+Pas deze planning aan op basis van het bedrijfs beleid voor naleving van software-updates en of gebruikers software-updates kunnen verwijderen. Elke nieuwe evaluatie cyclus voor implementaties resulteert in de activiteit netwerk-en client computer processor. Deze instelling maakt standaard gebruik van een eenvoudig schema om elke zeven dagen de scan opnieuw te evalueren voor de implementatie.  
 
 > [!NOTE]  
 > Als u een interval van minder dan één dag opgeeft, wordt Configuration Manager automatisch ingesteld op één dag.  
 
 ### <a name="when-any-software-update-deployment-deadline-is-reached-install-all-other-software-update-deployments-with-deadline-coming-within-a-specified-period-of-time"></a>Wanneer een deadline voor de implementatie van software-updates is bereikt, installeert u alle andere software-update-implementaties met een deadline die binnen een bepaalde periode komt te staan
 
-Stel deze optie in op **Ja** om alle software-updates te installeren vanuit de vereiste implementaties met deadlines die binnen een bepaalde periode vallen. Wanneer een vereiste software-update-implementatie een deadline bereikt, initieert de client de installatie voor de software-updates in de implementatie. Met deze instelling wordt bepaald of software-updates moeten worden geïnstalleerd op basis van andere vereiste implementaties met een deadline binnen de opgegeven tijd.  
+Stel deze optie in op **Ja** om alle software-updates te installeren vanuit de vereiste implementaties met deadlines die binnen een bepaalde periode vallen. Wanneer een vereiste software-update-implementatie een deadline bereikt, start de client de installatie voor de software-updates in de implementatie. Met deze instelling wordt bepaald of software-updates moeten worden geïnstalleerd op basis van andere vereiste implementaties met een deadline binnen de opgegeven tijd.  
 
-Gebruik deze instelling om de installatie voor vereiste software-updates te versnellen. Deze instelling heeft ook de mogelijkheid om client beveiliging te verbeteren, meldingen te verlagen voor de gebruiker en de client opnieuw op te starten. Deze waarde is standaard ingesteld op **Nee**.  
+Gebruik deze instelling om de installatie te versnellen voor vereiste software-updates. Deze instelling heeft ook de mogelijkheid om client beveiliging te verbeteren, meldingen te verlagen voor de gebruiker en de client opnieuw op te starten. Deze waarde is standaard ingesteld op **Nee**.  
 
 ### <a name="period-of-time-for-which-all-pending-deployments-with-deadline-in-this-time-will-also-be-installed"></a>De periode gedurende welke alle in afwachting zijnde implementaties met deadlines in deze periode eveneens worden geïnstalleerd
 
@@ -911,7 +893,7 @@ Wanneer u deze optie instelt op **Ja**, wordt de configuratie van Office 365-ins
 
 ### <a name="enable-installation-of-software-updates-in-all-deployments-maintenance-window-when-software-update-maintenance-window-is-available"></a><a name="bkmk_SUMMaint"></a>Installatie van software-updates inschakelen in het onderhouds venster ' alle implementaties ' wanneer het onderhouds venster voor software-updates beschikbaar is
 
-Vanaf versie 1810, wanneer u deze optie instelt op **Ja** en de client ten minste één onderhouds venster voor software-updates heeft gedefinieerd, worden software-updates geïnstalleerd tijdens het onderhouds venster ' alle implementaties '.
+Wanneer u deze optie instelt op **Ja**en de client ten minste één onderhouds venster voor software-updates heeft gedefinieerd, worden software-updates geïnstalleerd tijdens het onderhouds venster ' alle implementaties '.
 
 Deze waarde is standaard ingesteld op **Nee**. Deze waarde gebruikt hetzelfde gedrag als eerder: als beide typen bestaan, wordt het venster genegeerd. <!--2839307-->
 
@@ -943,7 +925,7 @@ Deze client instelling biedt de volgende opties:
 
     - Hiermee configureert u het setupconfig. ini-bestand op het apparaat met de `/Priority Normal` [Windows Setup-opdracht regel optie](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
 
-- **Laag**: u kunt op het apparaat blijven werken terwijl het op de achtergrond wordt gedownload en bijgewerkt. De totale installatie tijd is langer, maar de onderbreking van de gebruiker is korter. Mogelijk moet u de maximale uitvoerings tijd van de update verhogen om te voor komen dat er een time-out optreedt wanneer u deze optie gebruikt.  
+- **Laag**: u kunt op het apparaat blijven werken terwijl het op de achtergrond wordt gedownload en bijgewerkt. De totale installatie tijd is langer, maar de onderbreking van de gebruiker is korter. Mogelijk moet u de maximale uitvoerings tijd van de update verhogen om een time-out te voor komen wanneer u deze optie gebruikt.  
 
     - Hiermee verwijdert u de `/Priority` [Windows Setup-opdracht regel optie](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) uit het bestand setupconfig. ini.
 

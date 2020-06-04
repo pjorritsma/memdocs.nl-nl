@@ -10,12 +10,12 @@ ms.assetid: 8adbe2e2-de26-4a80-8bbd-a5f34b8bac79
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 693f661f2a2db59335ec8e463842a0ad03c977f3
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: f9fafcc4b5462afb1b8e528837ea6ba61203e73d
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721911"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347136"
 ---
 # <a name="manage-apps-for-on-premises-mdm-in-configuration-manager"></a>Apps beheren voor on-premises MDM in Configuration Manager
 
@@ -61,4 +61,4 @@ Bekijk de volgende beperkingen die specifiek zijn voor mobiele apparaten:
 
 ## <a name="next-step"></a>Volgende stap
 
-Als u wijzigingen wilt aanbrengen, een geïmplementeerde toepassing wilt verwijderen of vervangen door een nieuwe toepassing, kunt u deze hetzelfde beheren als elke app in Configuration Manager. Zie [toepassingen bijwerken en buiten gebruik stellen](../../apps/deploy-use/update-and-retire-applications.md)voor meer informatie.
+Als u wijzigingen wilt aanbrengen, een geïmplementeerde toepassing wilt verwijderen of vervangen door een nieuwe toepassing, kunt u deze hetzelfde beheren als elke app in Configuration Manager. Zie [toepassingen herzien en vervangen](../../apps/deploy-use/revise-and-supersede-applications.md)voor meer informatie.

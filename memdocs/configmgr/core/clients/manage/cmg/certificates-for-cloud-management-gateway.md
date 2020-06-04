@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: 33e4ecbac965206ec4043f5adf91d2dbfb9602d8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7e9602ef5ea784dd3e97578d5ff585f2ca662c1e
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714078"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347199"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>Certificaten voor de Cloud beheer gateway
 
@@ -78,7 +78,7 @@ Als u ook de CMG voor inhoud wilt inschakelen, controleert u of de naam van de C
 - Zoeken naar **opslag account**
 - Test uw naam in het veld **naam van opslag account**
 
-Het voor voegsel van de DNS-naam, bijvoorbeeld *GraniteFalls*, moet 3 tot 24 tekens lang zijn en mag alleen alfanumerieke tekens gebruiken. Gebruik geen speciale tekens, zoals een streepje (`-`).<!-- SCCMDocs#1080 -->
+Het voor voegsel van de DNS-naam, bijvoorbeeld *GraniteFalls*, moet 3 tot 24 tekens lang zijn en mag alleen alfanumerieke tekens gebruiken. Gebruik geen speciale tekens, zoals een streepje ( `-` ).<!-- SCCMDocs#1080 -->
 
 ### <a name="cmg-trusted-root-certificate-to-clients"></a><a name="bkmk_cmgroot"></a>Vertrouwde basis certificaat CMG naar clients
 
@@ -238,15 +238,16 @@ Configureer een on-premises beheer punt met de volgende client verbindings modus
 
 #### <a name="legend-of-terms"></a>Legenda van voor waarden
 
-- *Werk groep*: het apparaat is niet gekoppeld aan een domein of Azure AD, maar heeft een [certificaat voor client verificatie](#bkmk_clientauth)  
-- *AD-domein*: u voegt het apparaat toe aan een on-premises Active Directory domein  
-- *Azure AD*: ook wel lid van een Cloud domein genoemd, voegt u het apparaat toe aan een Azure Active Directory-Tenant  
-- *Hybride lid*: u kunt het apparaat toevoegen aan een Active Directory domein en een Azure AD-Tenant  
-- *Http*: voor de eigenschappen van het beheer punt stelt u de client verbindingen in op **http**  
-- *Https*: voor de eigenschappen van het beheer punt stelt u de client verbindingen in op **https**  
-- *E-http*: op het tabblad site-eigenschappen, **client computer communicatie** , stelt u de site systeem instellingen in op **https of http**en schakelt u de optie voor het **gebruik van door Configuration Manager gegenereerde certificaten voor http-site systemen**in. U configureert het beheer punt voor HTTP, het HTTP-beheer punt is gereed voor HTTP-en HTTPS-communicatie (scenario's voor token verificatie).  
+- *Werk groep*: het apparaat is niet gekoppeld aan een domein of Azure AD, maar heeft een [certificaat voor client verificatie](#bkmk_clientauth).
+- *AD-domein*: u voegt het apparaat toe aan een on-premises Active Directory domein.
+- *Azure AD*: ook wel lid van een Cloud domein genoemd, voegt u het apparaat toe aan een Azure Active Directory-Tenant. Zie apparaten die zijn [toegevoegd aan Azure AD](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join)voor meer informatie.
+- *Hybride lid*: u voegt het apparaat toe aan uw on-premises Active Directory en registreert het met uw Azure Active Directory. Zie voor meer informatie [Hybrid Azure AD joined devices](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid)(Engelstalig).
+- *Http*: voor de eigenschappen van het beheer punt stelt u de client verbindingen in op **http**.
+- *Https*: voor de eigenschappen van het beheer punt stelt u de client verbindingen in op **https**.
+- *E-http*: op het tabblad site-eigenschappen, **client computer communicatie** , stelt u de site systeem instellingen in op **https of http**en schakelt u de optie voor het **gebruik van door Configuration Manager gegenereerde certificaten voor http-site systemen**in. U configureert het beheer punt voor HTTP, het HTTP-beheer punt is gereed voor HTTP-en HTTPS-communicatie (scenario's voor token verificatie).
+
     > [!Note]
-    > Vanaf versie 1906 wordt dit tabblad **communicatie beveiliging**genoemd.<!-- SCCMDocs#1645 -->  
+    > Vanaf versie 1906 wordt dit tabblad **communicatie beveiliging**genoemd.<!-- SCCMDocs#1645 -->
 
 ## <a name="azure-management-certificate"></a><a name="bkmk_azuremgmt"></a>Azure-beheer certificaat
 

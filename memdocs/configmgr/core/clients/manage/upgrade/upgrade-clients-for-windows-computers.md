@@ -2,7 +2,7 @@
 title: Clients in Windows bijwerken
 titleSuffix: Configuration Manager
 description: Clients op Windows-computers bijwerken in Configuration Manager.
-ms.date: 08/27/2019
+ms.date: 06/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6143fd47-48ec-4bca-b53b-5b9b9f067bc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b3849f360b2f22f2f48bbe49159b610399158b29
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 8b0a69b07a3be633434203f93b0724cec4ea88a3
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83427766"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347135"
 ---
 # <a name="how-to-upgrade-clients-for-windows-computers-in-configuration-manager"></a>Clients voor Windows-computers bijwerken in Configuration Manager
 
@@ -59,9 +59,6 @@ Een client kan automatisch worden bijgewerkt in de volgende scenario's:
 > Als u de verschillende versies van de Configuration Manager-client in uw hiërarchie wilt identificeren, gebruikt u het rapport **aantal Configuration Manager clients op client versies** in de rapportmap **site-client gegevens**.  
 
 Configuration Manager maakt standaard een upgrade pakket. Het pakket wordt automatisch naar alle distributie punten in de hiërarchie verzonden. Als u wijzigingen aanbrengt in het client pakket op de CAS, Configuration Manager het pakket automatisch bijgewerkt en wordt het opnieuw gedistribueerd. Een voor beeld van een wijziging is wanneer u een client taal pakket toevoegt. Als u automatische client upgrade inschakelt, installeert elke client automatisch het nieuwe client taal pakket.
-
-> [!NOTE]  
-> Configuration Manager verzendt het client upgrade pakket niet automatisch naar Configuration Manager cloud-gebaseerde distributie punten.  
 
 Schakel automatische client upgrade in in uw hiërarchie. Met deze configuratie blijven uw clients up-to-date met minder inspanning.  
 

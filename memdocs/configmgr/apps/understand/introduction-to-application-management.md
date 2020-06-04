@@ -10,12 +10,12 @@ ms.assetid: 08f711ba-83bf-4b5f-9520-a0778c6ae7eb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d3cd21fe4b1d53ecbb0bc60818405cb795a4f289
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1b2fc0dfe37ad51ce1a549545c3eaa716395438d
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81710760"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347105"
 ---
 # <a name="introduction-to-application-management-in-configuration-manager"></a>Inleiding tot toepassings beheer in Configuration Manager
 
@@ -95,7 +95,7 @@ Wanneer u *wijzigingen* aanbrengt in een toepassing of een implementatie type, m
 - Een vorige versie van een toepassing herstellen
 - Een oude versie verwijderen
 
-Zie [toepassingen bijwerken en buiten gebruik stellen](../deploy-use/update-and-retire-applications.md)voor meer informatie.  
+Zie [toepassingen herzien](../deploy-use/revise-and-supersede-applications.md#application-revisions)voor meer informatie.  
 
 ### <a name="detection-method"></a>Detectiemethode
 

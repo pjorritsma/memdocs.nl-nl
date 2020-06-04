@@ -2,7 +2,7 @@
 title: Distributie punten beheren
 titleSuffix: Configuration Manager
 description: Gebruik distributie punten om de inhoud te hosten die u implementeert op apparaten en gebruikers.
-ms.date: 12/03/2019
+ms.date: 06/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: aebafaf9-b3d5-4a0f-9ee5-685758c037a1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a1cc931bd0e02be66f608db11e0052fde571a427
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d1d93dd446a65fda0b259bb10e0c944780d41059
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718852"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347088"
 ---
 # <a name="install-and-configure-distribution-points-in-configuration-manager"></a>Distributie punten installeren en configureren in Configuration Manager
 
@@ -307,12 +307,16 @@ De volgende instellingen bevinden zich op de pagina **distributie punt** van de 
     - Configuration Manager versie 1806 met update pakket (4462978) of hoger  
 
         - Windows Server, versie 1709 of hoger
-        - Windows Server 2016 met updates KB4132216 en KB4284833
+        - Windows Server 2016 met de volgende updates:
+           - Cumulatieve update KB4132216, uitgebracht op 21 juni 2018, of een latere cumulatieve update.
+           - Service stack update KB4284833, uitgebracht 18, 2018 of een latere onderhouds stack-update.
 
     - Configuration Manager versie 1810 of hoger:
 
         - Windows Server, versie 1709 of hoger
-        - Windows Server 2016 met updates KB4132216 en KB4284833
+        - Windows Server 2016 met de volgende updates:
+           - Cumulatieve update KB4132216, uitgebracht op 21 juni 2018, of een latere cumulatieve update.
+           - Service stack update KB4284833, uitgebracht 18, 2018 of een latere onderhouds stack-update.
         - Windows Server 2019  
 
 - **Dit distributie punt inschakelen voor voor bereide inhoud**: met deze instelling kunt u inhoud toevoegen aan de server voordat u software distribueert. Omdat de inhouds bestanden al in de inhouds bibliotheek staan, worden ze niet via het netwerk overgedragen wanneer u de software distribueert. Zie voor [bereide inhoud](../../../plan-design/hierarchy/manage-network-bandwidth.md#BKMK_PrestagingContent)voor meer informatie.  

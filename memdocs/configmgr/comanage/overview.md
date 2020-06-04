@@ -10,12 +10,12 @@ ms.topic: overview
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: e06dc0d40eb6359d11ef31045989d7ed398b3687
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 86bd566e9582c7dd7c83f93c22430edcc8ea0d0d
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711320"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347182"
 ---
 # <a name="what-is-co-management"></a>Wat is co-beheer?
 
@@ -100,9 +100,9 @@ Als u co-beheer zelf inschakelt, hoeft u uw site niet vrij te maken met Azure AD
 
 ### <a name="azure-ad"></a>Azure AD
 
-- Windows 10-apparaten moeten lid zijn van Azure AD. Dit kan een van de volgende typen zijn:  
+- Windows 10-apparaten moeten zijn verbonden met Azure AD. Dit kan een van de volgende typen zijn:  
 
-  - [Hybride Azure Ad-lid](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan), waarbij het apparaat wordt gekoppeld aan uw on-premises Active Directory en deel uitmaakt van uw Azure Active Directory.  
+  - [Hybride Azure Ad-lid](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid), waarbij het apparaat wordt gekoppeld aan uw on-premises Active Directory en is geregistreerd bij uw Azure Active Directory.
 
   - Alleen [lid van Azure AD](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan) . (Dit type wordt soms aangeduid als lid van een Cloud domein)<!--SCCMDocs issue 605-->  
 
@@ -139,7 +139,7 @@ U hoeft de werk belastingen niet te scha kelen of u kunt ze individueel doen wan
 
 Co-beheer ondersteunt de volgende werk belastingen:
 
-- Compliance beleidsregels  
+- Nalevingsbeleid  
 
 - Windows Update beleid  
 

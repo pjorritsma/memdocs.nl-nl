@@ -77,10 +77,6 @@
           href: deploy-use/create-app-v-virtual-environments.md
         - name: Toepassingen importeren en exporteren
           href: deploy-use/import-export-applications.md
-    - name: Toepassingen bijwerken en buiten gebruik stellen
-      items:
-        - name: Toepassingen bijwerken en buiten gebruik stellen
-          href: deploy-use/update-and-retire-applications.md
         - name: Toepassingen herzien en vervangen
           href: deploy-use/revise-and-supersede-applications.md
         - name: Toepassingen verwijderen

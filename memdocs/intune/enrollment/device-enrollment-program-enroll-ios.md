@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/04/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd999f621375cfdbfa80bf076766be20053221dc
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 2db33dbe94ff5aef62563531149250fbd4268acc
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269062"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83986978"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>iOS-/iPadOS-apparaten automatisch inschrijven met Automated Device Enrollment van Apple
 
@@ -44,9 +44,6 @@ ADE-inschrijvingen zijn niet compatibel met de App Store-versie van de bedrijfsp
 Push de app naar het apparaat met **Bedrijfsportal installeren met VPP** (Volume Purchase Program) in het ADE-profiel om moderne verificatie tijdens de inschrijving in te schakelen. Zie [iOS-/iPadOS-apparaten automatisch inschrijven met ADE van Apple](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) voor meer informatie.
 
 Als u wilt inschakelen dat de bedrijfsportal automatisch wordt bijgewerkt en de bedrijfsportal-app wordt weergegeven op apparaten die al bij ADE zijn geregistreerd, implementeert u de bedrijfsportal-app via Intune als een vereiste VPP-app (Volume Purchase Program) waarop een [toepassingsconfiguratiebeleid](../apps/app-configuration-policies-use-ios.md) is toegepast.
-
-> [!NOTE]
-> Wanneer u tijdens de automatische inschrijving van apparaten, terwijl de bedrijfsportal wordt uitgevoerd in de modus voor één app, klikt op de koppeling **Meer informatie**, wordt een foutbericht weergegeven vanwege de modus voor één app. Nadat de registratie is voltooid, kunt u meer informatie bekijken in het CP wanneer het apparaat niet meer in de modus voor één app wordt weergegeven. 
 
 ## <a name="what-is-supervised-mode"></a>Wat is de supervisiemodus?
 
@@ -212,7 +209,7 @@ Na installatie van het token kunt u een inschrijvingsprofiel voor ADE-apparaten 
 
      > [!NOTE]
      > Als **Synchroniseren met computers** is ingesteld op **Alles weigeren**, wordt de poort op iOS- en iPadOS-apparaten beperkt. De poort kan alleen worden gebruikt om op te laden, en voor niets anders. De poort wordt geblokkeerd voor het gebruik van iTunes of Apple Configurator 2.
-     Als **Gesynchroniseerd met computers** is ingesteld op **Apple Configurator per certificaat toestaan**, moet u ervoor zorgen dat u een lokale kopie van het certificaat opslaat, waartoe u later toegang hebt. U kunt geen wijzigingen aanbrengen in de geüploade kopie. Het is belangrijk dat u dit certificaat toegankelijk houdt voor in de toekomst. 
+     Als **Gesynchroniseerd met computers** is ingesteld op **Apple Configurator per certificaat toestaan**, moet u ervoor zorgen dat u een lokale kopie van het certificaat opslaat, waartoe u later toegang hebt. U kunt geen wijzigingen aanbrengen in de geüploade kopie en het is belangrijk om dit certificaat in de toekomst te bewaren. Als u verbinding wilt maken met het iOS/iPadOS-apparaat vanaf een macOS-apparaat of pc, moet hetzelfde certificaat zijn geïnstalleerd op het apparaat dat de verbinding maakt met het iOS/iPadOS-apparaat dat is geregistreerd bij het geautomatiseerde inschrijvingsprofiel voor apparaten met deze configuratie en dit certificaat.
 
 12. Als u in de vorige stap hebt gekozen voor **Apple Configurator per certificaat toestaan**, moet u een Apple Configurator-certificaat kiezen om te importeren.
 
@@ -235,29 +232,33 @@ Na installatie van het token kunt u een inschrijvingsprofiel voor ADE-apparaten 
 
     | Instellingen van configuratieassistentschermen | Als u kiest voor **Weergeven**, zal het apparaat tijdens het instellen... |
     |------------------------------------------|------------------------------------------|
-    | <strong>Wachtwoordcode</strong> | De gebruiker om een wachtwoordcode vragen. Vraag altijd om een wachtwoordcode voor onbeveiligde apparaten, tenzij toegang op een andere manier wordt beheerd (bijvoorbeeld een kioskmodus die het apparaat tot één app beperkt). |
-    | <strong>Locatieservices</strong> | De gebruiker om zijn of haar locatie vragen. |
-    | <strong>Herstellen</strong> | Geef het scherm Apps en gegevens weer. Dit scherm biedt de gebruiker de mogelijkheid tijdens het instellen van het apparaat gegevens te herstellen of over te brengen vanuit de iCloud-back-up. |
-    | <strong>iCloud en Apple-id</strong> | Geef de gebruiker de mogelijkheid zich aan te melden met zijn of haar Apple-id en iCloud te gebruiken.                         |
-    | <strong>Voorwaarden</strong> | Vraag de gebruiker om de voorwaarden van Apple te accepteren. |
-    | <strong>Touch-id</strong> | Geef de gebruiker de mogelijkheid identificatie met een vingerafdruk in te stellen voor het apparaat. |
-    | <strong>Apple Pay</strong> | Geef de gebruiker de mogelijkheid Apple Pay in te stellen op het apparaat. |
-    | <strong>In- en uitzoomen</strong> | Geef de gebruiker de mogelijkheid om in te zoomen op het scherm tijdens het instellen van het apparaat. |
-    | <strong>Siri</strong> | Geef de gebruiker de mogelijkheid Siri in te stellen. |
-    | <strong>Diagnostische gegevens</strong> | Geef het scherm Diagnose en gebruik weer voor de gebruiker. Met dit scherm heeft de gebruiker de mogelijkheid diagnostische gegevens naar Apple te verzenden. |
-    | <strong>Weergavetoon</strong> | Geef de gebruiker de mogelijkheid om Weergavetoon in te schakelen. |
-    | <strong>Privacy</strong> | Geef het scherm Privacy weer voor de gebruiker. |
-    | <strong>Android-migratie</strong> | Geef de gebruiker de mogelijkheid om gegevens van een Android-apparaat te migreren. |
-    | <strong>iMessage en FaceTime</strong> | Geef de gebruiker de mogelijkheid iMessage en FaceTime in te stellen. |
-    | <strong>Onboarding</strong> | Informatieve onboarding-schermen weergeven ter educatie van de gebruiker, zoals Contactkaart, Multitasking en Beheercentrum. |
-    | <strong>Watch-migratie</strong> | Geef de gebruiker de mogelijkheid om gegevens van een horloge te migreren. |
-    | <strong>Schermtijd</strong> | Hiermee wordt het scherm Schermtijd weergeven. |
-    | <strong>Software-update</strong> | Hiermee wordt het scherm voor verplichte software-updates weergegeven. |
-    | <strong>SIM-installatie</strong> | Geef de gebruiker de mogelijkheid een mobiel abonnement toe te voegen. |
-    | <strong>Uiterlijk</strong> | Geef het scherm Uiterlijk weer aan de gebruiker. |
+    | <strong>Wachtwoordcode</strong> | De gebruiker om een wachtwoordcode vragen. Vraag altijd om een wachtwoordcode voor onbeveiligde apparaten, tenzij toegang op een andere manier wordt beheerd (bijvoorbeeld een kioskmodus die het apparaat tot één app beperkt). Voor iOS/iPadOS 7.0 en hoger. |
+    | <strong>Locatieservices</strong> | De gebruiker om zijn of haar locatie vragen. Voor macOS 10.11 en hoger en iOS/iPadOS 7.0 en hoger. |
+    | <strong>Herstellen</strong> | Geef het scherm Apps en gegevens weer. Dit scherm biedt de gebruiker de mogelijkheid tijdens het instellen van het apparaat gegevens te herstellen of over te brengen vanuit de iCloud-back-up. Voor macOS 10.9 en hoger en iOS/iPadOS 7.0 en hoger. |
+    | <strong>iCloud en Apple-id</strong> | Geef de gebruiker de mogelijkheid zich aan te melden met zijn of haar Apple-id en iCloud te gebruiken. Voor macOS 10.9 en hoger en iOS/iPadOS 7.0 en hoger.   |
+    | <strong>Voorwaarden</strong> | Vraag de gebruiker om de voorwaarden van Apple te accepteren. Voor macOS 10.9 en hoger iOS/iPadOS 7.0 en hoger. |
+    | <strong>Touch-id</strong> | Geef de gebruiker de mogelijkheid identificatie met een vingerafdruk in te stellen voor het apparaat. Voor macOS 10.12.4 en hoger en iOS/iPadOS 8.1 en hoger. |
+    | <strong>Apple Pay</strong> | Geef de gebruiker de mogelijkheid Apple Pay in te stellen op het apparaat. Voor macOS 10.12.4 en hoger en iOS/iPadOS 7.0 en hoger. |
+    | <strong>In- en uitzoomen</strong> | Geef de gebruiker de mogelijkheid om in te zoomen op het scherm tijdens het instellen van het apparaat. Voor iOS/iPadOS 8.3 en hoger. |
+    | <strong>Siri</strong> | Geef de gebruiker de mogelijkheid Siri in te stellen. Voor macOS 10.12 en hoger iOS/iPadOS 7.0 en hoger. |
+    | <strong>Diagnostische gegevens</strong> | Geef het scherm Diagnose en gebruik weer voor de gebruiker. Met dit scherm heeft de gebruiker de mogelijkheid diagnostische gegevens naar Apple te verzenden. Voor macOS 10.9 en hoger en iOS/iPadOS 7.0 en hoger. |
+    | <strong>Weergavetoon</strong> | Geef de gebruiker de mogelijkheid om Weergavetoon in te schakelen. Voor macOS 10.13.6 en hoger en iOS/iPadOS 9.3.2 en hoger. |
+    | <strong>Privacy</strong> | Geef het scherm Privacy weer voor de gebruiker. Voor macOS 10.13.4 en hoger en iOS/iPadOS 11.3 en hoger. |
+    | <strong>Android-migratie</strong> | Geef de gebruiker de mogelijkheid om gegevens van een Android-apparaat te migreren. Voor iOS/iPadOS 9.0 en hoger.|
+    | <strong>iMessage en FaceTime</strong> | Geef de gebruiker de mogelijkheid iMessage en FaceTime in te stellen. Voor iOS/iPadOS 9.0 en hoger. |
+    | <strong>Onboarding</strong> | Informatieve onboarding-schermen weergeven ter educatie van de gebruiker, zoals Contactkaart, Multitasking en Beheercentrum. Voor iOS/iPadOS 11.0 en hoger. |
+    | <strong>Watch-migratie</strong> | Geef de gebruiker de mogelijkheid om gegevens van een horloge te migreren. Voor iOS/iPadOS 11.0 en hoger.|
+    | <strong>Schermtijd</strong> | Hiermee wordt het scherm Schermtijd weergeven. Voor macOS 10.15 en hoger en iOS/iPadOS 12.0 en hoger. |
+    | <strong>Software-update</strong> | Hiermee wordt het scherm voor verplichte software-updates weergegeven. Voor iOS/iPadOS 12.0 en hoger. |
+    | <strong>SIM-installatie</strong> | Geef de gebruiker de mogelijkheid een mobiel abonnement toe te voegen. Voor iOS/iPadOS 12.0 en hoger. |
+    | <strong>Uiterlijk</strong> | Geef het scherm Uiterlijk weer aan de gebruiker. Voor macOS 10.14 en hoger en iOS/iPadOS 13.0 en hoger. |
     | <strong>Express-taal</strong>| Geeft het scherm Express-taal weer aan de gebruiker. |
     | <strong>Voorkeurstaal</strong> | Geeft de gebruiker de mogelijkheid om zijn **Voorkeurstaal** op te geven. |
-    | <strong>Migratie van apparaat naar apparaat</strong> | Geef de gebruiker de mogelijkheid om gegevens te migreren van een oud apparaat naar dit apparaat.|
+    | <strong>Migratie van apparaat naar apparaat</strong> | Geef de gebruiker de mogelijkheid om gegevens te migreren van een oud apparaat naar dit apparaat. Voor iOS/iPadOS 13.0 en hoger. |
+    | <strong>Registratie</strong> | Het registratiescherm weergeven voor de gebruiker. Voor macOS 10.9 en hoger. |
+    | <strong>FileVault</strong> | Het FileVault 2-versleutelingsscherm weergeven voor de gebruiker. Voor macOS 10.10 en hoger. |
+    | <strong>Diagnostische gegevens over iCloud</strong> | Geef het iCloud Analaytics-scherm weer voor de gebruiker. Voor macOS 10.12.4 en hoger. |
+    | <strong>iCloud-opslag</strong> | Geef het iCloud Documents- en Desktop-scherm weer aan de gebruiker. Voor macOS 10.13.4 en hoger. |
     
 
 16. Kies **Volgende** om naar de pagina **Beoordelen en maken** te gaan.
@@ -282,7 +283,7 @@ Nu Intune toestemming heeft om uw apparaten te beheren, kunt u Intune synchronis
 
    Intune legt de volgende beperkingen op om aan de voorwaarden van Apple voor acceptabel verkeer van het inschrijvingsprogramma te voldoen:
    - Een volledige synchronisatie kan niet vaker dan eens in de zeven dagen worden uitgevoerd. Tijdens een volledige synchronisatie haalt Intune de volledige bijgewerkte lijst met serienummers op die is toegewezen aan de Apple MDM-server die is verbonden met Intune. Als er een ADE-apparaat wordt verwijderd uit de Intune-portal, moet de toewijzing ongedaan worden gemaakt in de Apple MDM-server in de ADE-portal. Als de toewijzing niet ongedaan wordt gemaakt, wordt het apparaat niet meer in Intune geïmporteerd totdat de volledige synchronisatie wordt uitgevoerd.   
-   - Er wordt automatisch elke 24 uur een synchronisatie uitgevoerd. U kunt ook synchroniseren door op de knop **Synchroniseren** te klikken (maximaal één keer per 15 minuten). Synchronisatieaanvragen krijgen 15 minuten de tijd om te worden uitgevoerd. De knop **Synchroniseren** blijft uitgeschakeld totdat de synchronisatie is voltooid. Met de synchronisatie wordt de huidige apparaatstatus vernieuwt en worden nieuwe apparaten die aan de Apple MDM-server zijn toegewezen, geïmporteerd.   
+   - Er wordt automatisch elke 12 uur een synchronisatie uitgevoerd. U kunt ook synchroniseren door op de knop **Synchroniseren** te klikken (maximaal één keer per 15 minuten). Synchronisatieaanvragen krijgen 15 minuten de tijd om te worden uitgevoerd. De knop **Synchroniseren** blijft uitgeschakeld totdat de synchronisatie is voltooid. Met de synchronisatie wordt de huidige apparaatstatus vernieuwt en worden nieuwe apparaten die aan de Apple MDM-server zijn toegewezen, geïmporteerd.   
 
 
 ## <a name="assign-an-enrollment-profile-to-devices"></a>Een inschrijvingsprofiel toewijzen aan apparaten

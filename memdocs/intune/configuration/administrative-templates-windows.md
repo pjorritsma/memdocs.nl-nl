@@ -1,12 +1,12 @@
 ---
 title: Sjablonen voor Windows 10-apparaten gebruiken in Microsoft Intune - Azure | Microsoft Docs
-description: Gebruik beheersjablonen in Microsoft Intune en Endpoint Manager om groepen instellingen te maken voor Windows 10-apparaten. Gebruik deze instellingen in een apparaatconfiguratieprofiel om Office-programma's en Microsoft Edge te beheren, functies in Internet Explorer te beveiligen, toegang tot OneDrive te beheren, Extern bureaublad-functies te gebruiken, automatisch afspelen in te schakelen, instellingen voor energiebeheer in te stellen, afdrukken via HTTP te gebruiken, verschillende aanmeldingsopties te gebruiken en de grootte van het gebeurtenislogboek te beheren.
+description: Gebruik beheersjablonen in Microsoft Intune en Endpoint Manager om groepen instellingen te maken voor Windows 10-apparaten. Gebruik deze instellingen in een apparaatconfiguratieprofiel om Office-programma's en Microsoft Edge te beheren, Internet Explorer te beveiligen, toegang tot OneDrive te krijgen, Extern bureaublad te gebruiken, automatisch afspelen in te schakelen, instellingen voor energiebeheer in te stellen, afdrukken via HTTP te gebruiken, aanmeldingen door gebruikers te beheren en de grootte van het gebeurtenislogboek te wijzigen.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/15/2020
-ms.topic: conceptual
+ms.date: 05/14/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,18 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f609ec62259deffb220c8ee935d0f10a98ae77b5
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 89635c9eb2849b4896ea3df85dd081d6e267627e
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254891"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990204"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Windows 10-sjablonen gebruiken voor het configureren van instellingen voor groepsbeleid in Microsoft Intune
 
 Wanneer u apparaten in uw organisatie beheert, moet u groepen instellingen maken die van toepassing zijn op verschillende apparaatgroepen. Stel dat u beschikt over verschillende apparaatgroepen. Aan GroupA wilt u een specifieke set instellingen toewijzen. Aan GroupB wilt u een andere set instellingen toewijzen. U wilt ook een eenvoudig overzicht verkrijgen van de instellingen die u kunt configureren.
 
-U kunt deze taak uitvoeren met **Beheersjablonen** in Microsoft Intune. De beheersjablonen bevatten honderden instellingen waarmee functies kunnen worden geconfigureerd voor Microsoft Edge (versie 77 en hoger), Internet Explorer, Microsoft Office-programma's, Extern bureaublad, OneDrive, wachtwoorden en pincodes, en nog veel meer. Met deze instellingen kunnen groepsbeheerders groepsbeleid beheren via de cloud.
+U kunt deze taak uitvoeren met **Beheersjablonen** in Microsoft Intune. De beheersjablonen bevatten duizenden instellingen waarmee functies kunnen worden geconfigureerd voor Microsoft Edge (versie 77 en hoger), Internet Explorer, Microsoft Office-programma's, Extern bureaublad, OneDrive, wachtwoorden, pincodes, en nog veel meer. Met deze instellingen kunnen groepsbeheerders groepsbeleid beheren via de cloud.
 
 Deze functie is van toepassing op:
 
@@ -62,27 +62,27 @@ In dit artikel vindt u de stappen voor het maken van een sjabloon voor Windows 1
 
 6. Selecteer **Volgende**.
 
-7. Configureer in **Configuratie-instellingen** de instellingen die van toepassing zijn op het apparaat (**Computerconfiguratie**) en instellingen die van toepassing zijn op gebruikers **(Gebruikersconfiguratie**):
+7. Selecteer in **Configuratie-instellingen** de optie **Alle instellingen** om een alfabetische lijst met alle instellingen weer te geven. Of configureer instellingen die van toepassing zijn op apparaten (**Computerconfiguratie**) en instellingen die van toepassing zijn op gebruikers **(Gebruikersconfiguratie**):
 
     > [!div class="mx-imgBorder"]
     > ![ADMX-sjablooninstellingen toepassen op gebruikers en apparaten in Microsoft Intune Endpoint Manager](./media/administrative-templates-windows/administrative-templates-choose-computer-user-configuration.png)
 
-8. Wanneer u **Computerconfiguratie** selecteert, worden de instellingscategorieën weergegeven. U kunt elke categorie selecteren om de beschikbare instellingen te bekijken.
+8. Wanneer u **Alle instellingen** selecteert, wordt elke instelling weer gegeven. Schuif omlaag als u de pijlen voor vorige en volgende wilt gebruiken om meer instellingen te bekijken:
+
+    > [!div class="mx-imgBorder"]
+    > ![Een voorbeeldlijst met instellingen bekijken en de knoppen Vorige en Volgende gebruiken](./media/administrative-templates-windows/administrative-templates-sample-settings-list.png)
+
+9. Selecteer een willekeurige instelling. U kunt bijvoorbeeld filteren op **Office** en **Beperkt browsen activeren** selecteren. Er wordt een gedetailleerde beschrijving van de instelling weergegeven. Kies **Ingeschakeld**, **Uitgeschakeld** of laat de instellingen op **Niet geconfigureerd** staan (standaard). In de gedetailleerde beschrijving wordt ook uitgelegd wat er gebeurt wanneer u kiest voor **Ingeschakeld**, **Uitgeschakeld** of **Niet geconfigureerd**.
+
+    > [!TIP]
+    > De Windows-instellingen in Intune correleren met het pad naar het on-premises groepsbeleidsobject dat u ziet in Lokale groepsbeleidsobjecteditor (`gpedit`)
+
+10. Wanneer u **Computerconfiguratie** of **Gebruikersconfiguratie** selecteert, worden de instellingscategorieën weergegeven. U kunt elke categorie selecteren om de beschikbare instellingen te bekijken.
 
     Selecteer bijvoorbeeld **Computerconfiguratie** > **Windows-onderdelen** > **Internet Explorer** als u alle apparaatinstellingen wilt zien die van toepassing zijn op Internet Explorer:
 
     > [!div class="mx-imgBorder"]
     > ![Alle apparaatinstellingen bekijken die van toepassing zijn op Internet Explorer in Microsoft Intune Endpoint Manager](./media/administrative-templates-windows/administrative-templates-all-internet-explorer-settings-device.png)
-
-9. U kunt ook **Alle instellingen** selecteren als u elke apparaatinstelling wilt bekijken. Schuif omlaag als u de pijlen voor vorige en volgende wilt gebruiken om meer instellingen te bekijken:
-
-    > [!div class="mx-imgBorder"]
-    > ![Een voorbeeldlijst met instellingen bekijken en de knoppen Vorige en Volgende gebruiken](./media/administrative-templates-windows/administrative-templates-sample-settings-list.png)
-
-10. Selecteer een willekeurige instelling. U kunt bijvoorbeeld filteren op **Office** en **Beperkt browsen activeren** selecteren. Er wordt een gedetailleerde beschrijving van de instelling weergegeven. Kies **Ingeschakeld**, **Uitgeschakeld** of laat de instellingen op **Niet geconfigureerd** staan (standaard). In de gedetailleerde beschrijving wordt ook uitgelegd wat er gebeurt wanneer u kiest voor **Ingeschakeld**, **Uitgeschakeld** of **Niet geconfigureerd**.
-
-    > [!TIP]
-    > De Windows-instellingen in Intune correleren met het pad naar het on-premises groepsbeleidsobject dat u ziet in Lokale groepsbeleidsobjecteditor (`gpedit`)
 
 11. Selecteer **OK** om uw wijzigingen op te slaan.
 
@@ -104,7 +104,7 @@ In dit artikel vindt u de stappen voor het maken van een sjabloon voor Windows 1
 14. Selecteer in **Toewijzingen** de gebruiker of groepen die uw profiel zullen ontvangen. Zie [Gebruikers- en apparaatprofielen toewijzen](device-profile-assign.md) voor meer informatie over het toewijzen van profielen.
 
     Als het profiel is toegewezen aan gebruikersgroepen, zijn de geconfigureerde ADMX-instellingen van toepassing op elk apparaat waarop de gebruiker zich inschrijft en aanmeldt. Als het profiel is toegewezen aan apparaatgroepen, zijn de geconfigureerde ADMX-instellingen van toepassing op elke gebruiker die zich bij dat apparaat aanmeldt. Deze toewijzing vindt alleen plaats als de ADMX-instelling een computerconfiguratie (`HKEY_LOCAL_MACHINE`) of een gebruikersconfiguratie (`HKEY_CURRENT_USER`) is. Bij sommige instellingen kan een computerinstelling die aan een gebruiker is toegewezen, ook invloed hebben op de ervaring van andere gebruikers van dat apparaat.
-    
+
     Zie [Gebruikersgroepen versus apparaatgroepen](device-profile-assign.md#user-groups-vs-device-groups) voor meer informatie.
 
     Selecteer **Volgende**.
@@ -115,16 +115,22 @@ De volgende keer dat het apparaat controleert op configuratie-updates, worden de
 
 ## <a name="find-some-settings"></a>Enkele instellingen zoeken
 
-In deze sjablonen zijn honderden verschillende instellingen beschikbaar. Gebruik de volgende ingebouwde functies om het eenvoudiger te maken om specifieke instellingen te zoeken:
+In deze sjablonen zijn duizenden verschillende instellingen beschikbaar. Gebruik de volgende ingebouwde functies om het eenvoudiger te maken om specifieke instellingen te zoeken:
 
-- Selecteer in uw sjabloon de kolom **Instellingen**, **Status**, **Instellingstype** of **Pad** om de lijst te sorteren. Selecteer bijvoorbeeld de kolom **Pad** en gebruik de pijl Volgende om de instellingen in het pad `Microsoft Excel` te bekijken:
+- Selecteer in uw sjabloon de kolom **Instellingen**, **Status**, **Instellingstype** of **Pad** om de lijst te sorteren. Selecteer bijvoorbeeld de kolom **Pad** en gebruik de pijl Volgende om de instellingen in het pad `Microsoft Excel` te bekijken.
 
-- Gebruik in uw sjabloon het vak **Zoeken** om specifieke instellingen te zoeken. U kunt zoeken op instelling of pad. Bijvoorbeeld zoeken naar `copy`. Alle instellingen met `copy` worden weergegeven:
+- Gebruik in uw sjabloon het vak **Zoeken** om specifieke instellingen te zoeken. U kunt zoeken op instelling of pad. Selecteer **Alle instellingen** en zoek naar `copy`. Alle instellingen met `copy` worden weergegeven:
 
   > [!div class="mx-imgBorder"]
   > ![Zoeken naar 'copy' om alle apparaatinstellingen in beheersjablonen in Intune weer te geven](./media/administrative-templates-windows/search-copy-settings.png) 
 
   Zoek in een ander voorbeeld naar `microsoft word`. U ziet de instellingen die u voor het programma Microsoft Word kunt instellen. Zoek naar `explorer` om te bekijken welke Internet Explorer-instellingen u aan uw sjabloon kunt toevoegen.
+
+- U kunt uw zoekopdracht ook verfijnen door alleen **Computerconfiguratie** of **Gebruikersconfiguratie** te selecteren.
+
+  Als u bijvoorbeeld alle beschikbare gebruikersinstellingen voor Internet Explorer wilt zien, selecteert u **Gebruikersconfiguratie** en zoekt u naar `Internet Explorer`. Alleen de IE-instellingen die van toepassing zijn op gebruikers worden weer gegeven:
+
+  :::image type="content" source="./media/administrative-templates-windows/show-all-internet-explorer-settings-user-configuration.png" alt-text="Selecteer Gebruikersconfiguratie in de ADMX-sjabloon en zoek naar of filter op Internet Explorer in Microsoft Intune.":::
 
 ## <a name="next-steps"></a>Volgende stappen
 

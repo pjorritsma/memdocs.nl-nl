@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 08/16/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eee979ad22a501f8545b93c85790d37ca9648cf7
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 7244872fa888aaee164187e62a2355a94f793499
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077900"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83985178"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>De instantie voor het beheer van mobiele apparaten instellen
 
@@ -36,9 +36,9 @@ Mogelijke configuraties zijn:
 
 - **Co-beheer voor Intune**: integratie van de Intune-cloudoplossing met Configuration Manager voor Windows 10-apparaten. U kunt Intune configureren met behulp van de Configuration Manager-console. [Configureer de automatische inschrijving van apparaten in Intune](https://docs.microsoft.com/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune). 
 
-- **Mobile Device Management voor Office 365**: integratie van Office 365 met de Intune-cloudoplossing. U kunt Intune configureren vanuit het Microsoft 365-beheercentrum. Bevat een subset van de mogelijkheden die beschikbaar zijn met Intune Standalone. Stel de MDM-instantie in het Microsoft 365-beheercentrum in.
+- **Mobile Device Management voor Office 365**: integratie van Office 365 met de Intune-cloudoplossing. U kunt Intune configureren vanuit het Microsoft 365-beheercentrum. Bevat een subset van de mogelijkheden die beschikbaar zijn met Intune Standalone. Zie [Mobile Device Management (MDM) instellen in Office 365](https://support.office.com/en-us/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd)
 
-- **Combinatie met Office 365 MDM**: u kunt MDM voor Office 365 gelijktijdig met Intune activeren en gebruiken in uw tenant. U kunt per gebruiker de beheerinstantie instellen op Intune of MDM voor Office 365 om te bepalen welke service wordt gebruikt voor het beheren van de mobiele apparaten van die gebruiker. De beheerinstantie van de gebruiker wordt gedefinieerd op basis van de licentie die aan de gebruiker is toegewezen. Zie het blogbericht [Microsoft Intune Co-existence with MDM for Office 365](https://blogs.technet.microsoft.com/configmgrdogs/2016/01/04/microsoft-intune-co-existence-with-mdm-for-office-365) voor meer informatie
+- **Co-existentie met Office 365 MDM**: U kunt MDM voor Office gelijktijdig met Intune activeren en gebruiken in uw tenant. U kunt per gebruiker de beheerinstantie instellen op Intune of MDM voor Office om te bepalen welke service wordt gebruikt voor het beheren van de mobiele apparaten van de gebruiker die zijn ingeschreven bij MDM. De beheerinstantie van elke gebruiker wordt gedefinieerd op basis van de licentie die aan de gebruiker is toegewezen: Als de gebruiker alleen een licentie voor Microsoft 365 Basic of Standard heeft, worden de apparaten beheerd met MDM voor Office. Als de gebruiker een licentie met machtiging voor Intune heeft, worden de apparaten beheerd met Intune. Als u een licentie met machtiging voor Intune toevoegt aan een gebruiker die eerder werd beheerd met MDM voor Office, worden de apparaten overgeschakeld naar Intune-beheer. Zorg dat u Intune-configuraties hebt toegewezen aan gebruikers om MDM voor Office te vervangen voordat u gebruikers overschakelt naar Intune. Anders gaat de configuratie van MDM voor Office op het apparaat verloren en ontvangen de apparaten geen vervanging van Intune.
 
 ## <a name="set-mdm-authority-to-intune"></a>MDM-instantie instellen op Intune
 
@@ -70,14 +70,6 @@ Nadat u overschakelt naar de nieuwe MDM-instantie, duurt het waarschijnlijk enig
 - Apparaten moeten na de wijziging verbinding maken met de service, zodat de instellingen van de nieuwe MDM-instantie (zelfstandige versie van Intune) de huidige instellingen op het apparaat vervangen.
 - Na het wijzigen van de MDM-instantie blijven sommige basisinstellingen (zoals profielen) van de vorige MDM-instantie maximaal zeven dagen aanwezig op het apparaat, of totdat het apparaat de eerste keer verbinding maakt met de service. Het is aan te raden om de apps en instellingen (beleid, profielen, apps enzovoort) zo snel mogelijk te configureren in de nieuwe MDM-instantie en de instellingen te implementeren naar de gebruikersgroepen met gebruikers met bestaande geregistreerde apparaten. Zodra een apparaat verbinding maakt met de service na de wijziging van MDM-instantie, ontvangt het de nieuwe instellingen van de nieuwe MDM-instantie om te voorkomen dat het apparaat enige tijd onbeheerd en onbeschermd is.
 - Apparaten waaraan geen gebruikers zijn gekoppeld (zoals wanneer u werkt met het iOS/iPadOS Device Enrollment Program of scenario’s voor bulkinschrijving) worden niet gemigreerd naar de nieuwe MDM-instantie. Voor die apparaten moet u contact opnemen met ondersteuning voor hulp bij het overbrengen naar de nieuwe MDM-instantie.
-
-## <a name="change-mdm-authority-to-office-365"></a>MDM-instantie wijzigen in Office 365
-
-Als u Office 365 MDM wilt activeren (of MDM wilt activeren naast uw bestaande Intune-service), gaat u naar [https://protection.office.com](https://protection.office.com), kiest u **Preventie van gegevensverlies** > **Beveiligingsbeleid voor apparaten** > **Lijst met beheerde apparaten weergeven** > **Aan de slag**.
-
-Zie [Mobile Device Management (MDM) instellen in Office 365](https://support.office.com/en-us/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd) voor meer informatie.
-
-Als u wilt dat de eindgebruikers alleen worden beheerd door Office 365 MDM, verwijdert u alle toegewezen Intune- en/of EMS-licenties na het activeren van Office 365 MDM.
 
 ## <a name="mobile-device-cleanup-after-mdm-certificate-expiration"></a>Mobiele apparaten opschonen na de verloopdatum van het MDM-certificaat
 

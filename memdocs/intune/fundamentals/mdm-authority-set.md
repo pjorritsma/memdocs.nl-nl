@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7244872fa888aaee164187e62a2355a94f793499
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4209c461877786000e01dd03e4e0dea9f76a6e84
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985178"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270953"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>De instantie voor het beheer van mobiele apparaten instellen
 
@@ -36,9 +36,9 @@ Mogelijke configuraties zijn:
 
 - **Co-beheer voor Intune**: integratie van de Intune-cloudoplossing met Configuration Manager voor Windows 10-apparaten. U kunt Intune configureren met behulp van de Configuration Manager-console. [Configureer de automatische inschrijving van apparaten in Intune](https://docs.microsoft.com/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune). 
 
-- **Mobile Device Management voor Office 365**: integratie van Office 365 met de Intune-cloudoplossing. U kunt Intune configureren vanuit het Microsoft 365-beheercentrum. Bevat een subset van de mogelijkheden die beschikbaar zijn met Intune Standalone. Zie [Mobile Device Management (MDM) instellen in Office 365](https://support.office.com/en-us/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd)
+- **Mobile Device Management voor Office 365** - Als u MDM voor Office 365 hebt geactiveerd, ziet u dat MDM-machtiging is ingesteld op 'Office 365'. Als u Intune wilt gaan gebruiken, moet u Intune-licenties aanschaffen.
 
-- **Co-existentie met Office 365 MDM**: U kunt MDM voor Office gelijktijdig met Intune activeren en gebruiken in uw tenant. U kunt per gebruiker de beheerinstantie instellen op Intune of MDM voor Office om te bepalen welke service wordt gebruikt voor het beheren van de mobiele apparaten van de gebruiker die zijn ingeschreven bij MDM. De beheerinstantie van elke gebruiker wordt gedefinieerd op basis van de licentie die aan de gebruiker is toegewezen: Als de gebruiker alleen een licentie voor Microsoft 365 Basic of Standard heeft, worden de apparaten beheerd met MDM voor Office. Als de gebruiker een licentie met machtiging voor Intune heeft, worden de apparaten beheerd met Intune. Als u een licentie met machtiging voor Intune toevoegt aan een gebruiker die eerder werd beheerd met MDM voor Office, worden de apparaten overgeschakeld naar Intune-beheer. Zorg dat u Intune-configuraties hebt toegewezen aan gebruikers om MDM voor Office te vervangen voordat u gebruikers overschakelt naar Intune. Anders gaat de configuratie van MDM voor Office op het apparaat verloren en ontvangen de apparaten geen vervanging van Intune.
+- **Combinatie met Office 365 MDM** - U kunt Intune toevoegen aan uw tenant als u MDM voor Office 365 al gebruikt en de beheermachtiging instellen op Intune of MDM voor Office 365 voor elke gebruiker om aan te geven welke service wordt gebruikt om met MDM ingeschreven apparaten te beheren. De beheerinstantie van elke gebruiker wordt gedefinieerd op basis van de licentie die aan de gebruiker is toegewezen: Als de gebruiker alleen een licentie voor Microsoft 365 Basic of Standard heeft, worden de apparaten beheerd met MDM voor Office. Als de gebruiker een licentie met machtiging voor Intune heeft, worden de apparaten beheerd met Intune. Als u een licentie met machtiging voor Intune toevoegt aan een gebruiker die eerder werd beheerd met MDM voor Office, worden de apparaten overgeschakeld naar Intune-beheer. Zorg dat u Intune-configuraties hebt toegewezen aan gebruikers om MDM voor Office te vervangen voordat u gebruikers overschakelt naar Intune. Anders gaat de configuratie van MDM voor Office op het apparaat verloren en ontvangen de apparaten geen vervanging van Intune.
 
 ## <a name="set-mdm-authority-to-intune"></a>MDM-instantie instellen op Intune
 

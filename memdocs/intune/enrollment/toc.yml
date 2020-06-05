@@ -93,10 +93,13 @@
       items:
         - name: Automatische apparaatinschrijving
           href: device-enrollment-program-enroll-ios.md
-        - name: Gebruikersinschrijving voor iOS/iPadOS en iPadOS instellen
-          href: ios-user-enrollment.md
-        - name: Acties en opties die met Gebruikersregistratie worden ondersteund
-          href: ios-user-enrollment-supported-actions.md
+          displayName: dep; ade; bulk enroll
+        - name: Gebruiker- en apparaatinschrijving
+          items:
+            - name: Het profiel maken
+              href: ios-user-enrollment.md
+            - name: Voor gebruikersinschrijving ondersteunde acties
+              href: ios-user-enrollment-supported-actions.md
         - name: Apple School Manager
           href: apple-school-manager-set-up-ios.md
         - name: Apple Configurator

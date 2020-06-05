@@ -2,7 +2,7 @@
 title: Instellingen voor software-updates beheren
 titleSuffix: Configuration Manager
 description: Meer informatie over de client instellingen die van toepassing zijn op software-updates op uw site nadat u het software-update punt hebt geïnstalleerd.
-ms.date: 03/30/2020
+ms.date: 06/04/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -10,12 +10,12 @@ ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 0a2a45ff866ea02aacc83c42109c8cba4020ed4e
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 2b851c03424af0ba0f826716b401705879338855
+ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906804"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84436666"
 ---
 #  <a name="manage-settings-for-software-updates"></a><a name="BKMK_ManageSUSettings"></a>Instellingen voor software-updates beheren  
 
@@ -113,13 +113,13 @@ Op het tabblad **Vervangingsinformatie** wordt vervangingsinformatie weergegeven
 In de eigenschappen kunt u instellingen configureren voor een of meer software-updates. U kunt de meeste instellingen voor software-updates alleen configureren op de centrale beheersite of een zelfstandige primaire site. De volgende secties helpen u om instellingen voor software-updates te configureren.  
 
 ####  <a name="set-maximum-run-time"></a><a name="BKMK_SetMaxRunTime"></a> De maximale uitvoeringstijd instellen  
-Stel op het tabblad **Maximale uitvoeringstijd** de maximale hoeveelheid tijd in die aan een software-update wordt toegewezen om op clientcomputers te worden voltooid. Als de update langer duurt dan de waarde voor de maximale uitvoerings tijd, Configuration Manager maakt een status bericht en stopt de bewaking van de implementatie voor de installatie van software-updates. U kunt deze instelling alleen configureren op de centrale beheersite of een zelfstandige primaire site.  
+Stel op het tabblad **Maximale uitvoeringstijd** de maximale hoeveelheid tijd in die aan een software-update wordt toegewezen om op clientcomputers te worden voltooid. Als de update langer duurt dan de waarde voor de maximale uitvoerings tijd, wordt door Configuration Manager een status bericht gemaakt en wordt de installatie van software-updates gestopt. U kunt deze instelling alleen configureren op de centrale beheersite of een zelfstandige primaire site.  
 
 Configuration Manager gebruikt deze instelling ook om te bepalen of de installatie van de software-update in een geconfigureerd onderhouds venster moet worden gestart. Als de waarde voor de maximale uitvoeringsduur groter is dan de hoeveelheid resterende tijd binnen het onderhoudsvenster, wordt de installatie van software-updates uitgesteld tot het volgende onderhoudsvenster. Wanneer er meerdere software-updates moeten worden geïnstalleerd op een clientcomputer met een geconfigureerd onderhoudsvenster (tijdsbestek), wordt de software-update met de geringste maximale uitvoeringsduur als eerste geïnstalleerd . Vervolgens wordt de software-update met de volgende geringste maximale uitvoeringsduur geïnstalleerd, enzovoort. Voordat elke software-update wordt geïnstalleerd, controleert de client of het beschikbare onderhoudsvenster voldoende tijd biedt voor het installeren van de software-update. Nadat het installeren van de software-update is gestart; wordt de installatie zelfs voortgezet als deze zich verder uitstrekt dan het einde van het onderhoudsvenster. Zie het gebruik van onderhouds [Vensters](../../core/clients/manage/collections/use-maintenance-windows.md)voor meer informatie over onderhouds Vensters.  
 
 U kunt op het tabblad **Maximale uitvoeringstijd** de volgende instellingen weergeven en configureren:  
 
-- **Maximale uitvoerings tijd**: Hiermee geeft u het maximale aantal minuten op dat aan de installatie van een software-update moet worden toegewezen om te volt ooien voordat de installatie niet meer wordt bewaakt door Configuration Manager. Deze instelling wordt gebruikt om te bepalen of er voldoende beschikbare tijd resteert om de update voor het einde van een onderhoudsvenster te installeren. De standaard instelling is 60 minuten voor service packs. Voor andere software-update typen is de standaard waarde 10 minuten als u een nieuwe installatie van Configuration Manager versie 1511 of hoger en vijf minuten hebt uitgevoerd bij een upgrade van een eerdere versie. Waarden kunnen uiteenlopen van 5 tot 9999 minuten.  
+- **Maximale uitvoerings tijd**: hier wordt het maximale aantal minuten opgegeven dat aan de installatie van een software-update is toegewezen om te worden voltooid voordat de installatie wordt gestopt door Configuration Manager. Deze instelling wordt gebruikt om te bepalen of er voldoende beschikbare tijd resteert om de update voor het einde van een onderhoudsvenster te installeren. De standaard instelling is 60 minuten voor service packs. Voor andere software-update typen is de standaard waarde 10 minuten als u een nieuwe installatie van Configuration Manager versie 1511 of hoger en vijf minuten hebt uitgevoerd bij een upgrade van een eerdere versie. Waarden kunnen uiteenlopen van 5 tot 9999 minuten.  
 
 > [!IMPORTANT]  
 >  Stel de waarde voor de maximale uitvoerings tijd in op een waarde die kleiner is dan het geconfigureerde onderhouds venster tijd of verg root de tijd van het onderhouds venster tot een groter dan de maximale uitvoerings tijd. Anders wordt de installatie van de software-update nooit gestart.  

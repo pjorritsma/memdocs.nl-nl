@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: b280661c4de9282d3907b7d480477fc67f6a8dc5
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: a2829c5bd86192c4f2421550af9f27aef64aa353
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83824061"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428652"
 ---
 # <a name="what-is-desktop-analytics"></a>Wat is Desktop Analytics?
 
@@ -70,9 +70,6 @@ Als u Desktop Analytics wilt gebruiken, moet u ervoor zorgen dat uw omgeving vol
 ### <a name="technical"></a>Technisch
 
 - Een actief globaal Azure-abonnement met [globale beheerders](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions) machtigingen. [Micro soft-accounts](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts) worden niet ondersteund.  
-
-    > [!Important]  
-    > Voor desktop Analytics is momenteel vereist dat u een Office 365-service in uw Azure AD-Tenant implementeert. Dit is in de toekomst geen vereiste.
 
     - **Eigenaars machtigingen voor werk ruimten** voor het **instellen van uw werk ruimte**en de volgende rollen:  
 

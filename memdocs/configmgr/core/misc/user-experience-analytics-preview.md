@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: c7a99931db27b6a55c9e0722cc12c1d7a9cc9e80
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: 7ddcb1ade6f39d1fc2cb824470c33d39496bcbf1
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764234"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428676"
 ---
 # <a name="endpoint-analytics-preview"></a><a name="bkmk_uea"></a>Preview van endpoint Analytics
 
@@ -347,8 +347,11 @@ Ten tweede is hier een korte controle lijst voor het oplossen van problemen:
 1. Apparaten die zijn geconfigureerd voor het verzamelen van gegevens moeten opnieuw worden gestart nadat het verzamelen van gegevens is ingeschakeld en u moet vervolgens tot 24 uur wachten voordat het apparaat wordt weer gegeven op het tabblad prestaties van apparaat.
 1. Als uw apparaat is geconfigureerd voor het verzamelen van gegevens, vervolgens opnieuw is gestart en u na 24 uur nog steeds niet meer ziet, kan het zijn dat het apparaat de eind punten van de verzameling niet kan bereiken. Dit probleem kan zich voordoen als uw bedrijf gebruikmaakt van een proxy server en de eind punten niet zijn ingeschakeld in de proxy. Zie [Troubleshooting endpoints (eind punten](#bkmk_uea_endpoints)) voor meer informatie.
 
+### <a name="data-collection-for-intune-managed-devices"></a>Gegevens verzameling voor door intune beheerde apparaten
 
-### <a name="endpoints"></a><a name="bkmk_uea_endpoints"></a>Eind punten
+Endpoint Analytics maakt gebruik van Windows 10 en Windows Server verbonden gebruikers ervaringen en telemetrie-onderdelen (DiagTrack) voor het verzamelen van de gegevens van door intune beheerde apparaten. Zorg ervoor dat de **verbonden gebruikers ervaring en telemetrie** -service op het apparaat wordt uitgevoerd.
+
+#### <a name="endpoints"></a><a name="bkmk_uea_endpoints"></a>Eind punten
 
 Voor het inschrijven van apparaten bij Endpoint Analytics moeten de vereiste functionele gegevens naar micro soft worden verzonden. Als uw omgeving gebruikmaakt van een proxy server, gebruikt u deze informatie om de proxy te configureren.
 
@@ -364,15 +367,15 @@ Als u het delen van functionele gegevens wilt inschakelen, configureert u de pro
 | `https://*.manage.microsoft.com` | Wordt gebruikt voor het synchroniseren van Apparaatsets en apparaten met endpoint Analytics (alleen op Configuration Manager server functie). Zie [Configure the proxy for a site System server](../plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server)(Engelstalig) voor meer informatie. |
 
 
-### <a name="proxy-server-authentication"></a>Verificatie van de proxy server
+#### <a name="proxy-server-authentication"></a>Verificatie van de proxy server
 
 Als uw organisatie verificatie van de proxy server gebruikt voor Internet toegang, moet u ervoor zorgen dat de gegevens niet worden geblokkeerd vanwege de verificatie. Als uw proxy niet toestaat dat apparaten deze gegevens verzenden, worden ze niet weer gegeven in Desktop Analytics.
 
-#### <a name="bypass-recommended"></a>Bypass (aanbevolen)
+##### <a name="bypass-recommended"></a>Bypass (aanbevolen)
 
 Configureer uw proxy servers zo dat er geen proxy verificatie nodig is voor het verkeer naar de eind punten voor het delen van gegevens. Deze optie is de meest uitgebreide oplossing. Het werkt voor alle versies van Windows 10.  
 
-#### <a name="user-proxy-authentication"></a>Verificatie van de gebruikers proxy
+##### <a name="user-proxy-authentication"></a>Verificatie van de gebruikers proxy
 
 Apparaten configureren voor het gebruik van de context van de aangemelde gebruiker voor proxy verificatie. Voor deze methode zijn de volgende configuraties vereist:
 
@@ -385,7 +388,7 @@ Apparaten configureren voor het gebruik van de context van de aangemelde gebruik
 > [!IMPORTANT]
 > De verificatie methode voor de gebruikers proxy is niet compatibel met het gebruik van micro soft Defender Advanced Threat Protection. Dit gedrag is omdat deze verificatie afhankelijk is van de **DisableEnterpriseAuthProxy** -register sleutel die is ingesteld op `0` , terwijl micro soft Defender ATP vereist dat deze is ingesteld op `1` . Zie [instellingen voor machine proxy en Internet connectiviteit configureren in micro soft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection)voor meer informatie.
 
-#### <a name="device-proxy-authentication"></a>Verificatie van Device proxy
+##### <a name="device-proxy-authentication"></a>Verificatie van Device proxy
 
 Deze aanpak ondersteunt de volgende scenario's:
 

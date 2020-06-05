@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 69694fa39375daf436abf59fcd48edda41a9fc62
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: cfd329b7edb695c1e7316323555bfc18a2fd479e
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268246"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428580"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>Problemen met Desktop Analytics oplossen
 
@@ -68,7 +68,7 @@ Desktop Analytics voegt de volgende toepassingen toe aan uw Azure AD:
 
 - **MALogAnalyticsReader**: controleert uw Azure log Analytics-werk ruimte om te controleren of de dagelijkse moment opname is gekopieerd. Zie [MALogAnalyticsReader Application Role](#bkmk_MALogAnalyticsReader)(Engelstalig) voor meer informatie.  
 
-- **Office365-client beheerder**: hiermee wordt Configuration Manager het ophalen van informatie over het implementatie plan en de gereedheids status van het apparaat vanuit Desktop Analytics ingeschakeld.
+- **Desktop Analytics**: hiermee wordt Configuration Manager het ophalen van informatie over het implementatie plan en de gereedheids status van het apparaat vanuit Desktop Analytics ingeschakeld.
 
 Als u deze apps na het volt ooien van de installatie wilt inrichten, gaat u naar het deel venster **verbonden services** . Selecteer **gebruikers en apps toegang configureren**en richt de apps in.  
 
@@ -129,7 +129,7 @@ Als u de Azure AD-App voor Configuration Manager niet kunt maken met de wizard A
 
     - Selecteer **Desktop Analytics** in de lijst met beschik bare Services.  
   
-   Selecteer **Next**.  
+   Selecteer **Volgende**.  
 
 3. Selecteer op de pagina **app** de juiste **Azure-omgeving**. Selecteer vervolgens **importeren** voor de web-app. Configureer de volgende instellingen in het venster **apps importeren** :  
 

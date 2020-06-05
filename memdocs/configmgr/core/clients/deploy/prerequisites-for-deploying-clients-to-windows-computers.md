@@ -2,7 +2,7 @@
 title: Vereisten voor Windows-client implementatie
 titleSuffix: Configuration Manager
 description: Meer informatie over de vereisten voor het implementeren van de Configuration Manager-client op Windows-computers.
-ms.date: 11/29/2019
+ms.date: 06/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 1a2a9b48-a95b-4643-b00c-b3079584ae2e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1d4cd7ffe38f7191a5361ad2e89817ea80f9f093
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2aa375d0521e6088904ebe9a1f10af83f4bc261f
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713973"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428557"
 ---
 # <a name="prerequisites-for-deploying-clients-to-windows-computers-in-configuration-manager"></a>Vereisten voor het implementeren van clients op Windows-computers in Configuration Manager
 
@@ -28,24 +28,26 @@ Zie [ondersteunde configuraties](../../plan-design/configs/supported-configurati
 > [!NOTE]  
 > De in dit artikel vermelde softwareversienummers zijn alleen de minimaal vereiste versienummers.  
 
-
 ## <a name="prerequisites-for-windows-clients"></a><a name="BKMK_prereqs_computers"></a>Vereisten voor Windows-clients  
 
 Gebruik de volgende informatie om de vereisten te bepalen voor wanneer u de Configuration Manager-client op Windows-apparaten installeert.  
 
-### <a name="dependencies-external-to-configuration-manager"></a>Afhankelijkheden extern aan Configuration Manager  
+### <a name="dependencies-external-to-configuration-manager"></a>Afhankelijkheden extern aan Configuration Manager
 
-|Onderdeel|Beschrijving|  
-|---|---|  
-|Windows Installer versie 3.1.4000.2435|Vereist om het gebruik van Windows Installer-update-(.msp)bestanden te gebruiken voor pakketten en software-updates.|  
-|Microsoft Background Intelligent Transfer Service (BITS) versie 2.5|Vereist om beperkte gegevens overdracht tussen de client computer en Configuration Manager site systemen toe te staan. BITS wordt niet automatisch gedownload tijdens de client installatie. Wanneer BITS is geïnstalleerd op computers, moet de computer doorgaans opnieuw worden opgestart om de installatie te volt ooien.<br /><br /> De meeste besturings systemen bevatten BITS. Als dat niet het geval is, installeert u BITS voordat u de Configuration Manager-client installeert.|  
-|Microsoft Task Scheduler|Schakel deze service in op de client om de client installatie te volt ooien.|  
+Veel van deze onderdelen zijn services of functies die standaard door Windows worden ingeschakeld. Schakel deze onderdelen niet uit op Configuration Manager-clients.
+
+|Onderdeel|Beschrijving|
+|---|---|
+|Windows Installer|Vereist ter ondersteuning van het gebruik van Windows Installer bestanden voor toepassingen en software-updates.|
+|Micro soft Background Intelligent Transfer Service (BITS)|Vereist om beperkte gegevens overdracht tussen de client computer en Configuration Manager site systemen toe te staan.|
+|Microsoft Task Scheduler|Vereist voor client bewerkingen, zoals het regel matig evalueren van de status van de Configuration Manager client.|
+|Microsoft Remote Differential Compression (RDC)|Vereist om gegevensoverdracht te optimaliseren via het netwerk.|
 |SHA-2-ondersteuning voor ondertekening van programma code|Vanaf versie 1906 vereisen clients ondersteuning voor het algoritme voor het ondertekenen van de SHA-2-code. Zie [ondersteuning voor SHA-2-code ondertekening](#bkmk_sha2)voor meer informatie.|
 
 #### <a name="sha-2-code-signing-support"></a><a name="bkmk_sha2"></a>SHA-2-ondersteuning voor ondertekening van programma code
 
 <!--SCCMDocs-pr#3404-->
-Als gevolg van zwakke plekken in het SHA-1-algoritme en om af te stemmen op de industrie normen, worden door micro soft nu alleen Configuration Manager binaire bestanden ondertekend met het algoritme voor meer beveiliging SHA-2. Oudere versies van Windows-besturings systemen vereisen een update voor de ondersteuning van SHA-2-code ondertekening. Zie voor meer informatie [2019 SHA-2-ondersteuning voor het ondertekenen van code voor Windows en WSUS](https://support.microsoft.com/help/4472027/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus).
+Vanwege de nadelen van het algoritme SHA-1 en om af te stemmen op industrie standaarden, wordt micro soft nu alleen gebruikgemaakt van Configuration Manager binaire bestanden met het algoritme voor meer beveiliging SHA-2. Oudere versies van Windows-besturings systemen vereisen een update voor de ondersteuning van SHA-2-code ondertekening. Zie voor meer informatie [2019 SHA-2-ondersteuning voor het ondertekenen van code voor Windows en WSUS](https://support.microsoft.com/help/4472027/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus).
 
 Als u deze versies van het besturings systeem niet bijwerkt, kunt u de Configuration Manager-client versie 1906 niet installeren. Dit gedrag is van toepassing op een nieuwe client installatie of bij het bijwerken van een eerdere versie.
 
@@ -64,18 +66,15 @@ Als u een-client wilt beheren in een versie van Windows die niet is bijgewerkt, 
 
 De Configuration Manager-client heeft externe afhankelijkheden. Deze afhankelijkheden zijn afhankelijk van de versie van het besturings systeem en de geïnstalleerde software op de client computer.  
 
-Als de client deze afhankelijkheden vereist om de installatie te volt ooien, worden ze automatisch geïnstalleerd.  
+Als de client deze afhankelijkheden vereist om de installatie te volt ooien, worden ze automatisch geïnstalleerd.
 
-|Onderdeel|Beschrijving|  
-|---|---|  
-|Windows Update Agent versie 7.0.6000.363|Vereist door Windows ter ondersteuning van detectie van update en implementatie.|  
-|Microsoft Core XML Services (MSXML) versie 6.20.5002 of hoger|Vereist voor ondersteuning voor de verwerking van XML-documenten in Windows.|  
-|Microsoft Remote Differential Compression (RDC)|Vereist om gegevensoverdracht te optimaliseren via het netwerk.|  
-|Microsoft Visual C++ 2013 Te distribueren pakket versie 12.0.21005.1|Vereist ter ondersteuning van clientbewerkingen. Wanneer u deze update op client computers installeert, is het mogelijk dat de computer opnieuw moet worden opgestart om de installatie te volt ooien.|  
-|Microsoft Visual C++ 2005 Te distribueren pakket versie 8.0.50727.42|Voor versie 1606 en eerder is vereist voor de ondersteuning van Microsoft SQL Server Compact-bewerkingen.|  
-|Windows Imaging API's 6.0.6001.18000|Vereist om Configuration Manager toe te staan Windows-installatie kopie bestanden (. Wim) te beheren.|  
-|Microsoft-Beleidsplatform 1.2.3514.0|Vereist om clients toe te staan voor de evaluatie van de instellingen voor naleving.|  
-|Microsoft .NET Framework versie 4.5.2|Vereist ter ondersteuning van clientbewerkingen. Automatisch geïnstalleerd op de client computer als Microsoft .NET Framework versie 4,5 of hoger niet is geïnstalleerd. Voor meer informatie, zie [Aanvullende informatie over Microsoft .NET Framework versie 4.5.2](#dotNet).|  
+|Onderdeel|Beschrijving|
+|---|---|
+|Micro soft Core XML Services (MSXML) versie 6.20.5002 of hoger ( `msxml6.msi` )|Vereist voor ondersteuning voor de verwerking van XML-documenten in Windows.|
+|Micro soft Visual C++ 2013 Redistributable versie 12.0.40660.0 ( `vcredist_x*.exe` )|Vereist ter ondersteuning van clientbewerkingen. Wanneer u deze update op client computers installeert, is het mogelijk dat de computer opnieuw moet worden opgestart om de installatie te volt ooien.|<!-- SCCMDocs#1526 -->
+|Windows Imaging Api's 6.0.6001.18000 of hoger ( `wimgapi.msi` )|Vereist om Configuration Manager toe te staan Windows-installatie kopie bestanden (. Wim) te beheren.|
+|Microsoft-beleidsplatform 1.2.3514.0 of hoger ( `MicrosoftPolicyPlatformSetup.msi` )|Vereist om clients toe te staan voor de evaluatie van de instellingen voor naleving.|  
+|Microsoft .NET Framework versie 4.5.2 of hoger ( `NDP452-KB2901907-x86-x64-AllOS-ENU.exe` )|Vereist ter ondersteuning van clientbewerkingen. Automatisch geïnstalleerd op de client computer als Microsoft .NET Framework versie 4,5 of hoger niet is geïnstalleerd. Voor meer informatie, zie [Aanvullende informatie over Microsoft .NET Framework versie 4.5.2](#dotNet).|  
 |Microsoft SQL Server Compact 4,0 SP1-onderdelen|Vereist voor het opslaan van informatie met betrekking tot clientbewerkingen.|  
 
 > [!Important]
@@ -120,7 +119,7 @@ De volgende vereisten zijn specifiek voor de verschillende methodes van clientin
 
 #### <a name="client-push-installation"></a>Clientpushinstallatie  
 
-- De site gebruikt accounts voor push-installatie van de client om verbinding te maken met computers om de client te installeren. Geef deze accounts op op het tabblad **accounts** van de eigenschappen van de Push-client installatie. De account moet een lid zijn van de groep lokale beheerders op de doelcomputer.  
+- De site gebruikt accounts voor push-installatie van de client om verbinding te maken met computers om de client te installeren. Geef deze accounts op op het tabblad **accounts** van de eigenschappen van de Push-client installatie. Het account moet lid zijn van de lokale groep Administrators op de doel computer.  
 
     Als u geen account voor push-installatie van de client opgeeft, wordt het computer account van de site server gebruikt.  
 

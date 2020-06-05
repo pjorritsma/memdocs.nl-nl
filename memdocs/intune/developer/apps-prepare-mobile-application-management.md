@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cc180b4a554ceec19fb0815b028d875c32da37bf
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 739ebebe18628279e5242ab227cf0f43993eff08
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166022"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330862"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Line-of-business-apps voorbereiden voor app-beveiligingsbeleid
 
@@ -121,7 +121,6 @@ Deze tabel bevat de instellingen die zijn ingeschakeld als een app gebruikmaakt 
 |Inhoud van app-meldingen voor organisatieaccounts configureren|X|X|
 |Het gebruik van goedgekeurde toetsenborden vereisen (alleen Android)|X|X|
 |Beleid voor appbeveiliging vereisen (voorwaardelijke toegang)|X||
-|Goedgekeurde clientapp vereisen (voorwaardelijke toegang)|X||
 
 ## <a name="next-steps"></a>Volgende stappen
 

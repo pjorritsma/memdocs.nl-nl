@@ -10,12 +10,12 @@ ms.assetid: b2abcdb0-72e0-4c70-a4b8-7827480ba5b2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c2347275ffdc194e73cf792d6f83ffa75732f8c4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 13c16e89cc75bff1ccecd03a98cd12782c419a40
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711411"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455154"
 ---
 # <a name="deploy-a-task-sequence"></a>Een takenreeks implementeren
 
@@ -154,19 +154,7 @@ Gebruik de volgende procedure om een takenreeks te implementeren voor de compute
 
 9. Geef op de pagina **Distributiepunten** de volgende informatie:  
 
-    - **Implementatieopties**: u kunt een van de volgende opties opgeven:  
-
-        > [!NOTE]  
-        > Wanneer u multi cast gebruikt om een besturings systeem te implementeren, moet u de inhoud naar de computers downloaden, hetzij naar behoefte, hetzij voordat de taken reeks wordt uitgevoerd.  
-
-        - **Inhoud lokaal downloaden wanneer deze nodig is voor de taken reeks die wordt uitgevoerd**: Geef op dat clients inhoud downloaden van het distributie punt, zoals het nodig is voor de taken reeks. De client start de taken reeks. Wanneer een stap in de taken reeks inhoud vereist, wordt deze gedownload voordat de stap wordt uitgevoerd.  
-
-        - **Alle inhoud lokaal downloaden voordat de taken reeks wordt gestart**: Hiermee geeft u op dat clients alle inhoud vanaf het distributie punt downloaden voordat de taken reeks wordt uitgevoerd. Als u de taken reeks beschikbaar maakt voor PXE-en opstart media-implementaties op de pagina **implementatie-instellingen** , wordt deze optie niet weer gegeven.  
-
-        - **Direct toegang tot inhoud vanaf een distributie punt wanneer dit nodig is voor de taken reeks die wordt uitgevoerd**: Geef op dat clients de inhoud vanaf het distributie punt moeten uitvoeren. Deze optie is alleen beschikbaar wanneer u alle pakketten die aan de taken reeks zijn gekoppeld, inschakelt voor het gebruik van een pakket share op het distributie punt. Zie het tabblad **Gegevenstoegang** in de **eigenschappen** van de afzonderlijke pakketten voor informatie over het inschakelen van inhoud voor het gebruik van een pakketshare.  
-
-            > [!IMPORTANT]  
-            > Voor de beste beveiliging selecteert u de opties om **inhoud lokaal te downloaden wanneer deze nodig is voor de taken reeks die wordt uitgevoerd** , of **alle inhoud lokaal downloaden voordat de taken reeks wordt gestart**. Wanneer u een van deze opties selecteert, Configuration Manager hashes van het pakket, zodat de pakket integriteit kan worden gegarandeerd. Wanneer u de optie selecteert voor het **rechtstreeks openen van inhoud vanaf een distributie punt wanneer dit nodig is voor de taken reeks die wordt uitgevoerd**, controleert Configuration Manager de pakket-hash niet voordat het opgegeven programma wordt uitgevoerd. Omdat de site de pakket integriteit niet kan garanderen, is het mogelijk dat gebruikers met beheerders rechten de pakket inhoud kunnen wijzigen of knoeien.  
+    - **Implementatie opties**: Zie [implementatie opties](#bkmk_deploy-options)voor meer informatie.
 
     - **Een extern distributie punt gebruiken wanneer er geen lokaal distributie punt beschikbaar is**: Geef op of clients distributie punten kunnen gebruiken van een grens groep in de nabijheid om de inhoud te downloaden die vereist is voor de taken reeks.  
 
@@ -178,6 +166,63 @@ Gebruik de volgende procedure om een takenreeks te implementeren voor de compute
 10. Als u deze instellingen opnieuw wilt gebruiken, selecteert u **Opslaan als sjabloon**op het tabblad **samen vatting** . Geef een naam op voor de sjabloon en selecteer de instellingen die u wilt opslaan.  
 
 11. Voltooi de wizard.  
+
+### <a name="deployment-options"></a><a name="bkmk_deploy-options"></a>Implementatie opties
+
+<!-- MEMDocs#328, SCCMDocs#2114 -->
+
+Deze opties bevinden zich op het tabblad **distributie punten** van de taken reeks implementatie. Ze zijn dynamisch op basis van andere selecties in de implementatie en kenmerken van de taken reeks. Het is niet altijd mogelijk om alle opties te zien.
+
+> [!NOTE]  
+> Wanneer u multi cast gebruikt om een besturings systeem te implementeren, moet u de inhoud naar de computers downloaden, hetzij naar behoefte, hetzij voordat de taken reeks wordt uitgevoerd.  
+
+- **Inhoud lokaal downloaden wanneer deze nodig is voor de taken reeks die wordt uitgevoerd**: Geef op dat clients inhoud downloaden van het distributie punt, zoals het nodig is voor de taken reeks. De client start de taken reeks. Wanneer een stap in de taken reeks inhoud vereist, wordt deze gedownload voordat de stap wordt uitgevoerd.  
+
+- **Alle inhoud lokaal downloaden voordat de taken reeks wordt gestart**: Hiermee geeft u op dat clients alle inhoud vanaf het distributie punt downloaden voordat de taken reeks wordt uitgevoerd. Als u de taken reeks beschikbaar maakt voor PXE-en opstart media-implementaties op de pagina **implementatie-instellingen** , wordt deze optie niet weer gegeven.  
+
+- **Direct toegang tot inhoud vanaf een distributie punt wanneer dit nodig is voor de taken reeks die wordt uitgevoerd**: Geef op dat clients de inhoud vanaf het distributie punt moeten uitvoeren. Deze optie is alleen beschikbaar wanneer u alle pakketten die aan de taken reeks zijn gekoppeld, inschakelt voor het gebruik van een pakket share op het distributie punt. Zie het tabblad **Gegevenstoegang** in de **eigenschappen** van de afzonderlijke pakketten voor informatie over het inschakelen van inhoud voor het gebruik van een pakketshare.  
+
+> [!IMPORTANT]  
+> Voor de beste beveiliging selecteert u de opties om **inhoud lokaal te downloaden wanneer deze nodig is voor de taken reeks die wordt uitgevoerd** , of **alle inhoud lokaal downloaden voordat de taken reeks wordt gestart**. Wanneer u een van deze opties selecteert, Configuration Manager hashes van het pakket, zodat de pakket integriteit kan worden gegarandeerd. Wanneer u de optie selecteert voor het **rechtstreeks openen van inhoud vanaf een distributie punt wanneer dit nodig is voor de taken reeks die wordt uitgevoerd**, controleert Configuration Manager de pakket-hash niet voordat het opgegeven programma wordt uitgevoerd. Omdat de site de pakket integriteit niet kan garanderen, is het mogelijk dat gebruikers met beheerders rechten de pakket inhoud kunnen wijzigen of knoeien.  
+
+#### <a name="example-1-one-deployment-option"></a>Voor beeld 1: één implementatie optie
+
+U implementeert een besturingssysteem implementatie taken reeks waarmee de schijf wordt gewist en een installatie kopie wordt toegepast. Op de pagina **implementatie-instellingen** kunt u deze beschikbaar maken voor een optie die media en PXE bevat:
+
+:::image type="content" source="media/deploy-setting-make-available.png" alt-text="Taken reeks implementeren, beschikbaar maken voor de volgende":::
+
+Op de pagina **distributie punten** is er slechts één implementatie optie:
+
+- **Inhoud lokaal downloaden wanneer deze nodig is voor de taken reeks die wordt uitgevoerd**
+
+:::image type="content" source="media/deploy-option-1.png" alt-text="Taken reeks implementeren, één implementatie optie":::
+
+De optie voor het **lokaal downloaden van alle inhoud voordat de taken reeks wordt gestart** , is niet beschikbaar omdat de implementatie beschikbaar is gemaakt voor media en PXE.
+
+De mogelijkheid om **rechtstreeks vanaf een distributie punt toegang te krijgen tot inhoud, is niet beschikbaar voor de taken reeks die wordt uitgevoerd** . Niet alle inhoud waarnaar wordt verwezen, maakt gebruik van een pakket share.
+
+#### <a name="example-2-two-deployment-options"></a>Voor beeld 2: twee implementatie-opties
+
+U implementeert een besturingssysteem implementatie taken reeks waarmee de schijf wordt gewist en een installatie kopie wordt toegepast. Op de pagina **implementatie-instellingen** kunt u deze alleen beschikbaar maken voor Configuration Manager- **clients**. Er zijn twee implementatie opties beschikbaar op de pagina **distributie punten** :
+
+- **Inhoud lokaal downloaden wanneer deze nodig is voor de taken reeks die wordt uitgevoerd**
+- **Alle inhoud lokaal downloaden voordat de taken reeks wordt gestart**
+
+:::image type="content" source="media/deploy-option-2.png" alt-text="Taken reeks implementeren, twee implementatie opties":::
+
+De mogelijkheid om **rechtstreeks vanaf een distributie punt toegang te krijgen tot inhoud, is niet beschikbaar voor de taken reeks die wordt uitgevoerd** . Niet alle inhoud waarnaar wordt verwezen, maakt gebruik van een pakket share.
+
+#### <a name="example-3-three-deployment-options"></a>Voor beeld 3: drie implementatie opties
+
+U hebt verschillende pakketten met beheer scripts en gekoppelde inhoud. Op het tabblad **gegevens toegang** van de pakket eigenschappen configureert u dat allemaal om **de inhoud in dit pakket te kopiëren naar een pakket share op distributie punten**.
+
+U maakt een taken reeks die slechts verschillende **installatie pakket** stappen voor deze script pakketten heeft en de implementatie ervan. Op de pagina **implementatie-instellingen** is de enige optie alleen beschikbaar voor Configuration Manager- **clients**. Deze optie is alleen beschikbaar. De taken reeks is niet voor implementatie van het besturings systeem, omdat er geen opstart installatie kopie aan is gekoppeld. Er zijn drie implementatie opties beschikbaar op de pagina **distributie punten** :
+
+- **Inhoud lokaal downloaden wanneer deze nodig is voor de taken reeks die wordt uitgevoerd**
+- **Alle inhoud lokaal downloaden voordat de taken reeks wordt gestart**
+- **Direct toegang tot inhoud vanaf een distributie punt wanneer dit nodig is voor de taken reeks die wordt uitgevoerd**
+
+:::image type="content" source="media/deploy-option-3.png" alt-text="Taken reeks implementeren, drie implementatie opties":::
 
 ## <a name="deploy-windows-10-in-place-upgrade-via-cmg"></a>Windows 10-in-place upgrade implementeren via CMG
 

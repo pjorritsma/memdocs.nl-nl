@@ -3,13 +3,13 @@ author: mestew
 ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
-ms.date: 05/26/2020
-ms.openlocfilehash: ad725a2aeb01984d8bce71f66307792e8d1691ee
-ms.sourcegitcommit: 0d2f6132428b5fa994e5b770ab1d2bf7d78ac179
+ms.date: 06/05/2020
+ms.openlocfilehash: 3672127798b66d857b4a1dbd5014c02dfed8a7ee
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226662"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84466854"
 ---
 <!--This file is shared by the CMPivot overview articles for both Microsoft Endpoint Manager tenant attach and Configuration Manager-->
 
@@ -56,7 +56,7 @@ Entiteiten zijn objecten die kunnen worden opgevraagd van de client. Momenteel w
 |ComputerSystemProduct|Computer systeem product|
 |ConnectedDevice|Verbonden apparaat|
 |Verbinding|Een actieve TCP-verbinding in of uit het apparaat|
-|Desktop|Desktop|
+|Bureaublad|Bureaublad|
 |DesktopMonitor|Bureaublad monitor|
 |Apparaat|Algemene informatie over het apparaat|
 |Schijf|Gegevens van het lokale opslag apparaat op een computer waarop Windows wordt uitgevoerd|
@@ -128,7 +128,6 @@ Entiteiten zijn objecten die kunnen worden opgevraagd van de client. Momenteel w
 |ProtectedVolumeInformation|Gegevens van beveiligd volume|
 |Protocol|Protocol|
 |QuickFixEngineering|Quick Fix Engineering|
-|REGI ster ()|Alle waarden voor een specifieke register sleutel|
 |SCSIController|SCSI-controller|
 |SerialPortConfiguration|Configuratie van seriële poort|
 |SerialPorts|Seriële poorten|
@@ -270,4 +269,5 @@ Scalaire functies kunnen worden gebruikt in expressies. Momenteel worden de volg
 |Entiteit|FileContent()|Inhoud van een specifiek bestand|
 |Entiteit|NAPClient|NAP-client|
 |Entiteit|NAPSystemHealthAgent|NAP-systeem status agent|
+|Entiteit|REGI ster ()|Alle waarden voor een specifieke register sleutel<!--7371183-->|
 |Tabel operator|waardoor|Hiermee worden resultaten weer gegeven als grafische uitvoer|

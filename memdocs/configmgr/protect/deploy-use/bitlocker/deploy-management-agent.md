@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ebd847e44c1acd87c316514ec9919f8a6690a647
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: e33ba8df84239b4a438ff0c526bb255c5b7d0052
+ms.sourcegitcommit: e618ea7cb864635c838b672bc71a1e926bf7c047
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428574"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84458148"
 ---
 # <a name="deploy-bitlocker-management"></a>BitLocker-beleid implementeren
 
@@ -35,7 +35,7 @@ Voordat u het beleid voor BitLocker-beheer maakt en implementeert:
 
 - Als dat nodig is, [versleutelt u de herstel sleutels](encrypt-recovery-data.md) in de site database
 
-## <a name="create-a-policy"></a>Een beleid maken
+## <a name="create-a-policy"></a>Beleid maken
 
 Wanneer u dit beleid maakt en implementeert, schakelt de Configuration Manager-client de BitLocker-beheer agent op het apparaat in.
 
@@ -126,7 +126,7 @@ Wanneer u meer dan één beleids regel maakt, kunt u hun relatieve prioriteit co
 
 1. Als u wilt dat het apparaat de stations op elk gewenst moment kan versleutelen of ontsleutelen, selecteert u de optie voor **herstel toestaan buiten het onderhouds venster**. Als de verzameling onderhouds Vensters heeft, wordt dit BitLocker-beleid nog steeds hersteld.
 
-1. Een **eenvoudige** of **aangepaste** planning configureren. De client evalueert standaard de naleving van dit beleid om de 12 uur.
+1. Een **eenvoudige** of **aangepaste** planning configureren. De-client evalueert de compatibiliteit op basis van de instellingen die zijn opgegeven in de planning.
 
 1. Selecteer **OK** om het beleid te implementeren.
 

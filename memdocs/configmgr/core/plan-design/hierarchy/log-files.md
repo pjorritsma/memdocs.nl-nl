@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 36ab89f1e9988adc167bf69ff7d9f53b02bbe10f
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.openlocfilehash: 11efada9eaf7e16a68902d7d6d78fb6708916d05
+ms.sourcegitcommit: e618ea7cb864635c838b672bc71a1e926bf7c047
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166534"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84458131"
 ---
 # <a name="log-file-reference"></a>Verwijzing naar logboekbestand
 
@@ -79,7 +79,7 @@ De volgende secties bevatten informatie over de verschillende logboek bestanden 
 
   - [Endpoint Protection](#BKMK_EPLog)  
 
-  - [Uitbreidingen](#BKMK_Extensions)  
+  - [Extensies](#BKMK_Extensions)  
 
   - [Inventaris](#BKMK_InventoryLog)  
 
@@ -93,7 +93,7 @@ De volgende secties bevatten informatie over de verschillende logboek bestanden 
 
   - [Extern beheer](#BKMK_RCLog)  
 
-  - [Rapporten](#BKMK_ReportLog)  
+  - [Rapportage](#BKMK_ReportLog)  
 
   - [Op rollen gebaseerd beheer](#BKMK_RBALog)  
 
@@ -167,13 +167,13 @@ De volgende tabel geeft een lijst van de logboek bestanden die zich op de Config
 |PolicySdk.log|Registreert activiteiten voor beleidsysteem SDK interfaces.|  
 |Pwrmgmt.log|Registreert informatie over in- en schakelen en configureren van de wake-up proxy clientinstellingen.|  
 |PwrProvider.log|Registreert de activiteiten van de energiebeheer provider (PWRInvProvider) die in de WMI-service wordt gehost. Op alle ondersteunde versies van Windows somt de provider de huidige instellingen op de computers tijdens hardware-inventaris op en past de energiebeheerinstellingen toe.|  
-|SCClient_&lt;*domain*\>domein@gebruikers naam\>_1. log*username*&lt;|Registreert de activiteit in Software Center voor de opgegeven gebruiker op de clientcomputer.|  
-|SCClient_&lt;*domain*\>domein@gebruikers naam\>_2. log*username*&lt;|Registreert de historische activiteit in Software Center voor de gespecificeerde gebruiker op de clientcomputer.|  
+|SCClient_ &lt; *domein* \> @ &lt; *gebruikers naam* \> _1. log|Registreert de activiteit in Software Center voor de opgegeven gebruiker op de clientcomputer.|  
+|SCClient_ &lt; *domein* \> @ &lt; *gebruikers naam* \> _2. log|Registreert de historische activiteit in Software Center voor de gespecificeerde gebruiker op de clientcomputer.|  
 |Scheduler.log|Registreert activiteiten van geplande taken voor alle clientbewerkingen.|  
-|SCNotify_&lt;*domain*\>domein@gebruikers naam\>_1. log*username*&lt;|Registreert de activiteit voor het verwittigen van gebruikers met betrekking tot software voor de opgegeven gebruiker.|  
-|SCNotify_&lt;*domain*\>domein@&lt;*date_time* gebruikers naam\>_1-Date_Time>. log*username*&lt;|Registreert de historische activiteit voor het verwittigen van gebruikers met betrekking tot software voor de opgegeven gebruiker.|  
+|SCNotify_ &lt; *domein* \> @ &lt; *gebruikers naam* \> _1. log|Registreert de activiteit voor het verwittigen van gebruikers met betrekking tot software voor de opgegeven gebruiker.|  
+|SCNotify_ &lt; *domein* \> @ &lt; *gebruikers naam* \> _1- &lt; *Date_Time*>. log|Registreert de historische activiteit voor het verwittigen van gebruikers met betrekking tot software voor de opgegeven gebruiker.|  
 |setuppolicyevaluator.log|Registreert configuratie- en inventarisbeleid maken in WMI.|  
-|SleepAgent_&lt;*domein*\>@SYSTEM_0.log|Het hoofd logboek bestand voor wake-up proxy.|  
+|SleepAgent_ &lt; *domein*\>@SYSTEM_0.log|Het hoofd logboek bestand voor wake-up proxy.|  
 |smscliui.log|Registreert het gebruik van de Configuration Manager-client in het configuratie scherm.|  
 |SrcUpdateMgr.log|Registreert activiteit voor geïnstalleerde Windows installertoepassingen die geüpdatet zijn met de huidige bronlocaties van distributiepunten.|  
 |StatusAgent.log|Registreert statusberichten die zijn gemaakt door de clientonderdelen.|  
@@ -210,7 +210,7 @@ De Configuration Manager-client voor Linux en UNIX registreert informatie in de 
 |Logboeknaam|Details|
 |-------------------|-----------------------------------------------------------------|
 |Scxcm. log| Het logboek bestand voor de kern service van de Configuration Manager-client voor Linux en UNIX (ccmexec. bin). Dit logboekbestand bevat informatie over de installatie en voortgaande operaties van ccmexec.bin. Dit logboek bestand bevindt zich standaard op **/var/opt/Microsoft/scxcm.log**. Bewerk **/opt/microsoft/configmgr/etc/scxcm.conf** en wijzig het veld **PAD** om de locatie van het logboekbestand te wijzigen. U hoeft de client computer of-service niet opnieuw op te starten om de wijziging door te voeren. U kunt het logboek niveau instellen op een van de vier verschillende instellingen. |
-| Scxcmprovider. log |Het logboek bestand voor de CIM-service van de Configuration Manager-client voor Linux en UNIX (omiserver. bin). Dit logboekbestand bevat informatie over de lopende processen van nwserver.bin. Dit logboek bevindt `/var/opt/microsoft/configmgr/scxcmprovider.log`zich op. Als u de locatie van het logboekbestand wilt wijzigen, bewerkt u **/opt/microsoft/omi/etc/scxcmprovider.conf** en wijzigt u het veld **PAD**. U hoeft de client computer of-service niet opnieuw op te starten om de wijziging door te voeren. U kunt het logboek niveau instellen op een van de drie instellingen.|
+| Scxcmprovider. log |Het logboek bestand voor de CIM-service van de Configuration Manager-client voor Linux en UNIX (omiserver. bin). Dit logboekbestand bevat informatie over de lopende processen van nwserver.bin. Dit logboek bevindt zich op `/var/opt/microsoft/configmgr/scxcmprovider.log` . Als u de locatie van het logboekbestand wilt wijzigen, bewerkt u **/opt/microsoft/omi/etc/scxcmprovider.conf** en wijzigt u het veld **PAD**. U hoeft de client computer of-service niet opnieuw op te starten om de wijziging door te voeren. U kunt het logboek niveau instellen op een van de drie instellingen.|
 
 Beide logboekbestanden bieden ondersteuning voor verschillende niveaus van logboekregistratie:  
 
@@ -248,10 +248,10 @@ De Configuration Manager-client voor Mac-computers registreert informatie in de 
 
 |Logboeknaam|Details|Locatie|
 |--------------|-------------|-------------|
-|CCMClient-&lt;*Date_Time*>. log|Registreert activiteiten die betrekking hebben op de bewerkingen van de Mac-client, waaronder toepassings beheer, inventaris en logboek registratie van fouten.| `/Library/Application Support/Microsoft/CCM/Logs`|  
-|CCMAgent-&lt;*Date_Time*>. log|Registreert informatie die betrekking heeft op client bewerkingen, waaronder aanmeldings-en afmeldings bewerkingen van gebruikers en de activiteit van een Mac-computer.| `~/Library/Logs`|  
-|CCMNotifications-&lt;*Date_Time*>. log|Registreert activiteiten die gerelateerd zijn aan Configuration Manager meldingen die worden weer gegeven op de Mac-computer.| `~/Library/Logs`|  
-|CCMPrefPane-&lt;*Date_Time*>. log|Registreert activiteiten die betrekking hebben op het dialoog venster Configuration Manager voor keuren op de Mac-computer, waaronder algemene status-en fouten registratie.| `~/Library/Logs`|  
+|CCMClient- &lt; *Date_Time*>. log|Registreert activiteiten die betrekking hebben op de bewerkingen van de Mac-client, waaronder toepassings beheer, inventaris en logboek registratie van fouten.| `/Library/Application Support/Microsoft/CCM/Logs`|  
+|CCMAgent- &lt; *Date_Time*>. log|Registreert informatie die betrekking heeft op client bewerkingen, waaronder aanmeldings-en afmeldings bewerkingen van gebruikers en de activiteit van een Mac-computer.| `~/Library/Logs`|  
+|CCMNotifications- &lt; *Date_Time*>. log|Registreert activiteiten die gerelateerd zijn aan Configuration Manager meldingen die worden weer gegeven op de Mac-computer.| `~/Library/Logs`|  
+|CCMPrefPane- &lt; *Date_Time*>. log|Registreert activiteiten die betrekking hebben op het dialoog venster Configuration Manager voor keuren op de Mac-computer, waaronder algemene status-en fouten registratie.| `~/Library/Logs`|  
 
 Het logboek bestand **SMS_DM. log** op de site systeem server registreert ook communicatie tussen Mac-computers en het beheer punt dat is ingesteld voor mobiele apparaten en Mac-computers.  
 
@@ -438,7 +438,7 @@ De volgende tabel geeft een lijst van de logboek bestanden die informatie bevatt
 |Logboeknaam|Beschrijving|Computer met logboekbestand|  
 |--------------|-----------------|----------------------------|  
 |objreplmgr.log|Registreert gegevens over de replicatie van meldings bestanden voor software-updates van een bovenliggende site naar onderliggende sites.|Siteserver|  
-|PatchDownloader.log|Registreert gegevens over het proces van downloaden van software-updates van de updatebron naar de downloadbestemming op de siteserver.|Wanneer u updates hand matig downloadt, bevindt dit `%temp%` bestand zich in de map op de computer waarop u de-console gebruikt. Voor automatische implementatie regels geldt dat als de Configuration Manager-client op de site server is geïnstalleerd, dit bestand zich op de site `%windir%\CCM\Logs`server in bevindt.|  
+|PatchDownloader.log|Registreert gegevens over het proces van downloaden van software-updates van de updatebron naar de downloadbestemming op de siteserver.|Wanneer u updates hand matig downloadt, bevindt dit bestand zich in de `%temp%` map op de computer waarop u de-console gebruikt. Voor automatische implementatie regels geldt dat als de Configuration Manager-client op de site server is geïnstalleerd, dit bestand zich op de site server in bevindt `%windir%\CCM\Logs` .|  
 |ruleengine.log|Registreert details over automatische implementatieregels voor de identificatie, het downloaden van software, en maken van software-updategroepen en implementaties.|Siteserver|
 |SMS_ISVUPDATES_SYNCAGENT. log| Logboek bestand voor synchronisatie van software-updates van derden.| Software-update punt op het hoogste niveau in de hiërarchie van de Configuration Manager.|
 |SUPSetup.log|Registreert gegevens over de installatie van het software-updatepunt. Wanneer de installatie van het software-updatepunt is voltooid, wordt **Installatie is geslaagd** geschreven naar dit logboekbestand.|Sitesysteemserver|  
@@ -481,6 +481,7 @@ De volgende tabel geeft een lijst van de logboek bestanden die informatie bevatt
 |SMSdpmon.log|Registreert gegevens over de geplande taak van statusbewaking van het distributiepunt, dat op een distributiepunt geconfigureerd is.|Siteserver|  
 |SoftwareCatalogUpdateEndpoint.log|Registreert activiteiten voor het beheren van de URL voor de toepassingscatalogus weer gegeven in Software Center.|Client|  
 |SoftwareCenterSystemTasks.log|Registreert activiteiten die betrekking hebben op de validatie van vereiste onderdelen voor Software Center.|Client|  
+|TSDTHandler. log|Voor het implementatie type van de taken reeks. Het proces wordt geregistreerd bij het afdwingen van de app (installeren of verwijderen) voor het starten van de taken reeks. Gebruik het met AppEnforce. log en bestand smsts. log.|Client|<!-- MEMDocs#336 -->
 
 #### <a name="packages-and-programs"></a>Pakketten en programma's
 
@@ -572,7 +573,7 @@ De volgende tabel geeft een lijst van de logboek bestanden die informatie bevatt
 
 #### <a name="note-1-logs-synchronized-from-azure"></a><a name="bkmk_note1"></a>Opmerking 1: logboeken die zijn gesynchroniseerd vanuit Azure
 
-Dit zijn lokale Configuration Manager-logboek bestanden die Cloud Service Manager elke vijf minuten synchroniseert vanuit Azure Storage. De Cloud beheer gateway pusht elke vijf minuten logboeken naar Azure Storage. De maximale vertraging is 10 minuten. Uitgebreide switches beïnvloeden zowel lokale als externe logboeken. De daad werkelijke bestands namen bevatten de service naam en de instantie-id van de rol. Bijvoorbeeld CMG-*servicenaam*-*RoleInstanceID*-CMGSetup. log
+Dit zijn lokale Configuration Manager-logboek bestanden die Cloud Service Manager elke vijf minuten synchroniseert vanuit Azure Storage. De Cloud beheer gateway pusht elke vijf minuten logboeken naar Azure Storage. De maximale vertraging is 10 minuten. Uitgebreide switches beïnvloeden zowel lokale als externe logboeken. De daad werkelijke bestands namen bevatten de service naam en de instantie-id van de rol. Bijvoorbeeld CMG-*servicenaam* - *RoleInstanceID*-CMGSetup. log
 
 ### <a name="compliance-settings-and-company-resource-access"></a><a name="BKMK_CompSettingsLog"></a>Instellingen voor naleving en toegang tot bedrijfs bronnen
 
@@ -602,7 +603,7 @@ De volgende tabel geeft een lijst van de logboekbestanden die informatie bevatte
 
 |Logboeknaam|Beschrijving|Computer met logboekbestand|  
 |--------------|-----------------|----------------------------|  
-|CloudDP-&lt;GUID\>. log|Registreert gegevens voor een specifiek clouddistributiepunt, inclusief informatie over opslag en toegang tot inhoud.|Sitesysteemserver|  
+|CloudDP- &lt; GUID \> . log|Registreert gegevens voor een specifiek clouddistributiepunt, inclusief informatie over opslag en toegang tot inhoud.|Sitesysteemserver|  
 |CloudMgr.log|Registreert gegevens over het inrichten van inhoud, verzamelen van opslag-en bandbreedte statistieken en door de beheerder geïnitieerde acties om de Cloud service die een cloud-gebaseerd distributie punt uitvoert, te stoppen of te starten.|Sitesysteemserver|  
 |DataTransferService.log|Registreert alle BITS-communicatie voor beleids- of pakkettoegang. Dit logboek wordt ook gebruikt voor inhouds beheer door pull-distributie punten.|Computer die is geconfigureerd als een pull-distributie punt|  
 |PullDP.log|Registreert gegevens over inhoud die het pull-distributiepunt overdraagt van brondistributiepunten.|Computer die is geconfigureerd als een pull-distributie punt|  
@@ -615,8 +616,8 @@ De volgende tabel geeft een lijst van de logboekbestanden die informatie bevatte
 
 Gebruik de volgende logboek bestanden voor hulp bij het oplossen van problemen met Desktop Analytics die is geïntegreerd met Configuration Manager.
 
-De logboek bestanden op het service verbindings punt bevinden zich in de volgende `%ProgramFiles%\Configuration Manager\Logs\M365A`map:.
-De logboek bestanden op de Configuration Manager-client bevinden zich in de `%WinDir%\CCM\logs`volgende map:.
+De logboek bestanden op het service verbindings punt bevinden zich in de volgende map: `%ProgramFiles%\Configuration Manager\Logs\M365A` .
+De logboek bestanden op de Configuration Manager-client bevinden zich in de volgende map: `%WinDir%\CCM\logs` .
 
 | Logboek | Beschrijving |Computer met logboekbestand|
 |---------|---------|---------|
@@ -871,7 +872,7 @@ Onderhoud maakt gebruik van dezelfde infra structuur en hetzelfde proces als sof
 |--------------|-----------------|----------------------------|  
 |CBS. log|Registreert onderhouds fouten met betrekking tot wijzigingen voor Windows-updates of-rollen en-functies.|Client|
 |DISM. log|Registreert alle acties met behulp van DISM. Als dat nodig is, verwijst DISM. log naar CBS. log voor meer informatie.|Client|
-|bestand Setupact. log|Primair logboek bestand voor de meeste fouten die optreden tijdens het installatie proces van Windows. Het logboek bestand bevindt zich in de map\$% windir% Windows. ~ BT\sources\panther.|Client|
+|bestand Setupact. log|Primair logboek bestand voor de meeste fouten die optreden tijdens het installatie proces van Windows. Het logboek bestand bevindt zich in de map% windir% \$ Windows. ~ BT\sources\panther.|Client|
 
 Zie [logboek bestanden met betrekking tot online onderhoud](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-troubleshooting-and-log-files#online-servicing-related-log-files)voor meer informatie.
 
@@ -894,7 +895,7 @@ De volgende tabel geeft een lijst van de logboekbestanden die informatie bevatte
 |Change.log|Registreert gegevens over informatie over de WSUS-Server database die is gewijzigd.|WSUS-server|  
 |SoftwareDistribution.log|Registreert gegevens over de software-updates die zijn gesynchroniseerd vanuit de geconfigureerde update bron naar de WSUS-Server database.|WSUS-server|  
 
-Deze logboek bestanden bevinden zich in `%ProgramFiles%\Update Services\LogFiles` de map.
+Deze logboek bestanden bevinden zich in de `%ProgramFiles%\Update Services\LogFiles` map.
 
 ## <a name="see-also"></a>Zie ook
 

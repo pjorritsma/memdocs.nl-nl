@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 7ddcb1ade6f39d1fc2cb824470c33d39496bcbf1
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: da8c52dabf27ddf0992d9f405400b3ac984f2ecc
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428676"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455120"
 ---
 # <a name="endpoint-analytics-preview"></a><a name="bkmk_uea"></a>Preview van endpoint Analytics
 
@@ -56,7 +56,7 @@ Als u endpoint Analytics wilt gaan gebruiken, controleert u de vereisten en gaat
 
 Voor deze preview kunt u apparaten inschrijven via Configuration Manager of Microsoft Intune. 
 
-Als u apparaten wilt registreren via intune, moet u voor deze preview-versie het volgende doen:
+#### <a name="to-enroll-devices-via-intune-this-preview-requires"></a><a name="bkmk_uea__intune_prereq"></a>Als u apparaten wilt registreren via intune, moet u voor deze preview-versie het volgende doen:
 - InTune Inge schreven apparaten met Windows 10
 - Prestatie inzichten voor opstarten zijn alleen beschikbaar voor apparaten met versie 1903 of hoger van Windows 10 Enter prise (Home-en Pro-edities worden momenteel niet ondersteund) en de apparaten moeten worden toegevoegd aan Azure AD of hybride Azure AD. Machines die aan de werk plek zijn gekoppeld, worden momenteel niet ondersteund.
 - Netwerk verbinding van apparaten met de open bare cloud van micro soft. Zie [eind punten](#bkmk_uea_endpoints)voor meer informatie.
@@ -64,11 +64,12 @@ Als u apparaten wilt registreren via intune, moet u voor deze preview-versie het
    - Door te klikken op **Start**, gaat u akkoord met en erkent u dat uw klant gegevens kunnen worden opgeslagen buiten de locatie die u hebt geselecteerd tijdens het inrichten van uw Microsoft intune-Tenant.
    - Nadat u op **starten** voor het verzamelen van gegevens hebt geklikt, kunnen andere alleen-lezen rollen de gegevens weer geven.
 
-Als u apparaten wilt registreren via Configuration Manager, is voor deze preview het volgende vereist:
+#### <a name="to-enroll-devices-via-configuration-manager-this-preview-requires"></a><a name="bkmk_uea__cm_prereq"></a>Als u apparaten wilt registreren via Configuration Manager, is voor deze preview het volgende vereist:
 - Configuration Manager versie 2002 of hoger
 - Clients bijgewerkt naar versie 2002 of hoger
 - [Micro soft Endpoint Manager-Tenant](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) is ingeschakeld met een Azure-Tenant locatie van Noord-Amerika of Europa (binnenkort worden de andere regio's uitgebreid)
 
+#### <a name="proactive-remediation-scripting-requires"></a><a name="bkmk_uea__prs_prereq"></a>Voor proactieve herstel scripting is het volgende vereist:
 Bij het inschrijven van apparaten via intune of Configuration Manager, hebben [**proactieve herstel scripts**](#bkmk_uea_prs) de volgende vereisten:
 - Apparaten moeten lid zijn van Azure AD of hybride Azure AD zijn toegevoegd en voldoen aan een van de volgende voor waarden:
 - Een Windows 10 Enter prise-, Professional-of Education-apparaat dat wordt beheerd door intune

@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4dead573e1744a5c8b84ff954e85be43af644486
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 70d4930da712eccff8bdb1f1986a68aa5fe77644
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878494"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455273"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Met micro soft verbonden cache in Configuration Manager
 
@@ -63,7 +63,7 @@ Wanneer u clients configureert voor het gebruik van de verbonden cache server, v
 
   - Installeer de functie IIS [Application Request Routing](https://docs.microsoft.com/iis/extensions/planning-for-arr/application-request-routing-version-2-overview) (arr) niet vooraf. Verbonden cache installeert ARR en configureert de instellingen. Micro soft kan niet garanderen dat de verbindings configuratie van de verbonden cache niet in conflict is met andere toepassingen op de server waarop ook deze functie wordt gebruikt.
 
-  - Het distributie punt vereist Internet toegang tot de micro soft-Cloud. De specifieke Url's kunnen variëren, afhankelijk van de specifieke Cloud inhoud. Zie [vereisten voor Internet toegang](../network/internet-endpoints.md)voor meer informatie.
+  - Het distributie punt vereist Internet toegang tot de micro soft-Cloud. De specifieke Url's kunnen variëren, afhankelijk van de specifieke Cloud inhoud. Zorg ervoor dat u ook de eind punten voor Delivery Optimization toestaat. Zie [vereisten voor Internet toegang](../network/internet-endpoints.md)voor meer informatie.
 
   - Vanaf versie 2002 kan de toepassing voor de verbonden cache een niet-geverifieerde proxy server gebruiken voor Internet toegang. Zie [Configure the proxy for a site System server](../network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server)(Engelstalig) voor meer informatie.<!-- 5856396 -->
 

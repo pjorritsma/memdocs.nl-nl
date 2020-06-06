@@ -53,7 +53,7 @@ De volgende informatie is vergelijkbaar met hoe u regels maakt in de [wizard Upd
 
 1. Kies in de **werk ruimte regels**de optie **maken** om de wizard **regel maken** te openen.
 
-2. Geef een naam op voor de regel en klik vervolgens ![op nieuwe](media/newrule.png)regel. Hiermee opent u de pagina **toepasselijkheid regel** waar u regels kunt configureren.
+2. Geef een naam op voor de regel en klik vervolgens op ![ nieuwe regel ](media/newrule.png) . Hiermee opent u de pagina **toepasselijkheid regel** waar u regels kunt configureren.
 
 3. Selecteer bij **regel type** een van de volgende. De opties die u moet configureren, zijn afhankelijk van elk type:
 

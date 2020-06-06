@@ -2,7 +2,7 @@
 title: Wat is er nieuw in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Een samen vatting van de nieuwe functies in de meest recente maandelijkse versie van de Desktop Analytics-Cloud service.
-ms.date: 05/11/2020
+ms.date: 06/04/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 1d45d115f279603fa74e143c603c116146278ffe
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 5265ee88cbe6dc119d6d14dadd3fadad6a52b253
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268159"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84454950"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>Wat is er nieuw in Desktop Analytics
 
@@ -27,6 +27,12 @@ Meer informatie over wat er elke maand nieuw is in Desktop Analytics.
 
 Als u een melding wilt ontvangen wanneer deze pagina wordt bijgewerkt, kopieert en plakt u de volgende URL in uw RSS feed-lezer:`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
+
+## <a name="june-2020"></a>Juni 2020
+
+### <a name="improvement-to-prerequisites"></a>Verbetering van vereisten
+
+Voor desktop Analytics is niet langer vereist dat u een Office 365-service in uw Azure Active Directory-Tenant (Azure AD) implementeert. De **Office 365-client beheer** -app in azure AD is nu de app **Desktop Analytics** om Configuration Manager het ophalen van gegevens en de status van de service mogelijk te maken.
 
 ## <a name="may-2020"></a>Mei 2020
 

@@ -10,12 +10,12 @@ ms.assetid: 9d1e8252-99e3-48aa-bfa5-0cf4cd6637b2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 184bdc58ac6dc0e311875cc1ddab8c605d8eec32
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ec465f3dee33ca311aec120e74a2994a81a90ec9
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720623"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455222"
 ---
 # <a name="configure-pre-cache-content-for-task-sequences"></a>Inhoud in de cache vooraf configureren voor taken reeksen
 
@@ -68,7 +68,7 @@ De-client evalueert de kenmerken van de pakketten om te bepalen welke inhoud wor
 Om te bepalen welk Stuur programmapakket wordt gedownload tijdens de voor bereiding van de cache, evalueert de client het model met de **naam** eigenschap van de WMI-klasse **Win32_ComputerSystemProduct** .
 
 > [!TIP]
-> De werkelijke query gebruikt een `LIKE` instructie met Joker tekens: `select * from win32_computersystemproduct where name like "%yourstring%"`. Als u bijvoorbeeld opgeeft `Surface` als het model, wordt de query overeenkomt met alle modellen die die teken reeks bevatten.<!-- 6315551 -->
+> De werkelijke query gebruikt een `LIKE` instructie met Joker tekens: `select * from win32_computersystemproduct where name like "%yourstring%"` . Als u bijvoorbeeld opgeeft `Surface` als het model, wordt de query overeenkomt met alle modellen die die teken reeks bevatten.<!-- 6315551 -->
 
 #### <a name="package"></a>Pakket
 
@@ -101,7 +101,6 @@ In de volgende stap van het **besturings systeem** voor de upgrade wordt bijvoor
 >
 > Voeg eerst de taal toe door de taal voorwaarde voor het **besturings systeem** te selecteren. Bewerk vervolgens de WMI-query om de component architecture toe te voegen.
 
-
 ### <a name="3-deploy-the-task-sequence"></a><a name="bkmk_deploy"></a>3. de taken reeks implementeren
 
 [Implementeer de taken reeks](deploy-a-task-sequence.md). Configureer de volgende instellingen voor de functie vóór de cache:  
@@ -115,8 +114,7 @@ In de volgende stap van het **besturings systeem** voor de upgrade wordt bijvoor
 - Configureer op het tabblad **distributie punten** de instellingen voor de **implementatie opties** . Als de inhoud niet vooraf in de cache wordt opgeslagen voordat een gebruiker de installatie start, gebruikt de client deze instellingen.  
 
     > [!Important]  
-    > Voor een taken reeks die een installatie kopie van een besturings systeem installeert, gebruikt u niet de implementatie optie om **inhoud lokaal te downloaden wanneer deze nodig is voor de taken reeks die wordt uitgevoerd**. Wanneer de taken reeks de schijf gewist voordat de installatie kopie van het besturings systeem wordt toegepast, wordt de client cache verwijderd. Omdat de inhoud is verdwenen, mislukt de taken reeks.<!-- SCCMDocs-PR #1338 -->
-
+    > Voor een taken reeks die een installatie kopie van een besturings systeem installeert, gebruikt u niet de implementatie optie om **inhoud lokaal te downloaden wanneer deze nodig is voor de taken reeks die wordt uitgevoerd**. Wanneer de taken reeks de schijf gewist voordat de installatie kopie van het besturings systeem wordt toegepast, wordt de client cache verwijderd. Omdat de inhoud is verdwenen, mislukt de taken reeks.<!-- SCCMDocs-PR #1338 --> Deze implementatie opties zijn dynamisch op basis van andere opties die u voor de implementatie selecteert. Zie [Een takenreeks implementeren](deploy-a-task-sequence.md#bkmk_deploy-options)voor meer informatie.<!-- MEMDocs#328, SCCMDocs#2114 -->
 
 ## <a name="user-experience"></a>Gebruikerservaring
 
@@ -125,7 +123,6 @@ In de volgende stap van het **besturings systeem** voor de upgrade wordt bijvoor
 - Wanneer de-client de implementatie beschikbaar maakt voor gebruikers, wordt een melding weer gegeven om gebruikers te informeren over de nieuwe implementatie. Nu is de taken reeks zichtbaar in Software Center. De gebruiker kan naar Software Center gaan en op **installeren** klikken om de installatie te starten.  
 
 - Als de-client de inhoud niet volledig in de cache plaatst wanneer de gebruiker de taken reeks installeert, gebruikt de client de instellingen die u opgeeft op het tabblad **implementatie optie** van de implementatie.  
-
 
 ## <a name="see-also"></a>Zie ook
 

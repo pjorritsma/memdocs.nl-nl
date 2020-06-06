@@ -10,12 +10,12 @@ ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c6b33027d67329b883f401168795c1b466ded1a7
-ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
+ms.openlocfilehash: 5054d44371fd3114a9644f90d37dabf1e81d1997
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83709384"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455018"
 ---
 # <a name="token-based-authentication-for-cloud-management-gateway"></a>Verificatie op basis van tokens voor Cloud beheer gateway
 
@@ -60,10 +60,16 @@ Als u geen clients in het interne netwerk kunt installeren en registreren, maakt
 
 1. Installeer de Configuration Manager-client op een op internet gebaseerd apparaat. Neem de para meter client installatie op: [**/regtoken**](about-client-installation-properties.md#regtoken). De volgende voorbeeld opdracht regel bevat de andere vereiste installatie parameters en eigenschappen:
 
-    `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC SMSMP=https://mp1.contoso.com /regtoken:eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik9Tbzh2Tmd5VldRUjlDYVh5T2lacHFlMDlXNCJ9.eyJTQ0NNVG9rZW5DYXRlZ29yeSI6IlN7Q01QcmVBdXRoVG9rZW4iLCJBdXRob3JpdHkiOiJTQ0NNIiwiTGljZW5zZSI6IlNDQ00iLCJUeXBlIjoiQnVsa1JlZ2lzdHJhdGlvbiIsIlRlbmFudElkIjoiQ0RDQzVFOTEtMEFERi00QTI0LTgyRDAtMTk2NjY3RjFDMDgxIiwiVW5pcXVlSWQiOiJkYjU5MWUzMy1wNmZkLTRjNWItODJmMy1iZjY3M2U1YmQwYTIiLCJpc3MiOiJ1cm46c2NjbTpvYXV0aDI6Y2RjYzVlOTEtMGFkZi00YTI0LTgyZDAtMTk2NjY3ZjFjMDgxIiwiYXVkIjoidXJuOnNjY206c2VydmljZSIsImV4cCI6MTU4MDQxNbUwNSwibmJmIjoxNTgwMTU2MzA1fQ.ZUJkxCX6lxHUZhMH_WhYXFm_tbXenEdpgnbIqI1h8hYIJw7xDk3wv625SCfNfsqxhAwRwJByfkXdVGgIpAcFshzArXUVPPvmiUGaxlbB83etUTQjrLIk-gvQQZiE5NSgJ63LCp5KtqFCZe8vlZxnOloErFIrebjFikxqAgwOO4i5ukJdl3KQ07YPRhwpuXmwxRf1vsiawXBvTMhy40SOeZ3mAyCRypQpQNa7NM3adCBwUtYKwHqiX3r1jQU0y57LvU_brBfLUL6JUpk3ri-LSpwPFarRXzZPJUu4-mQFIgrMmKCYbFk3AaEvvrJienfWSvFYLpIYA7lg-6EVYRcCAA`
+    `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC /regtoken:eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik9Tbzh2Tmd5VldRUjlDYVh5T2lacHFlMDlXNCJ9.eyJTQ0NNVG9rZW5DYXRlZ29yeSI6IlN7Q01QcmVBdXRoVG9rZW4iLCJBdXRob3JpdHkiOiJTQ0NNIiwiTGljZW5zZSI6IlNDQ00iLCJUeXBlIjoiQnVsa1JlZ2lzdHJhdGlvbiIsIlRlbmFudElkIjoiQ0RDQzVFOTEtMEFERi00QTI0LTgyRDAtMTk2NjY3RjFDMDgxIiwiVW5pcXVlSWQiOiJkYjU5MWUzMy1wNmZkLTRjNWItODJmMy1iZjY3M2U1YmQwYTIiLCJpc3MiOiJ1cm46c2NjbTpvYXV0aDI6Y2RjYzVlOTEtMGFkZi00YTI0LTgyZDAtMTk2NjY3ZjFjMDgxIiwiYXVkIjoidXJuOnNjY206c2VydmljZSIsImV4cCI6MTU4MDQxNbUwNSwibmJmIjoxNTgwMTU2MzA1fQ.ZUJkxCX6lxHUZhMH_WhYXFm_tbXenEdpgnbIqI1h8hYIJw7xDk3wv625SCfNfsqxhAwRwJByfkXdVGgIpAcFshzArXUVPPvmiUGaxlbB83etUTQjrLIk-gvQQZiE5NSgJ63LCp5KtqFCZe8vlZxnOloErFIrebjFikxqAgwOO4i5ukJdl3KQ07YPRhwpuXmwxRf1vsiawXBvTMhy40SOeZ3mAyCRypQpQNa7NM3adCBwUtYKwHqiX3r1jQU0y57LvU_brBfLUL6JUpk3ri-LSpwPFarRXzZPJUu4-mQFIgrMmKCYbFk3AaEvvrJienfWSvFYLpIYA7lg-6EVYRcCAA`
 
     > [!TIP]
     > Zie voor meer informatie over deze opdracht regel [de client installeren en registreren met behulp van Azure AD-identiteit](deploy-clients-cmg-azure.md#install-and-register-the-client-using-azure-ad-identity). Dit proces is vergelijkbaar, maar de Azure AD-eigenschappen worden niet gebruikt.
+
+Als u dit wilt controleren, controleert u het volgende logboek bestand op een vergelijk bare vermelding:<!-- bug 7357499 -->
+
+```ClientLocation.log
+Rotating internet management point, new management point [1] is: https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 (0) with capabilities: <Capabilities SchemaVersion ="1.0"><Property Name="SSL" Version="1" /></Capabilities>
+```
 
 ### <a name="known-issues"></a>Bekende problemen
 
@@ -107,26 +113,26 @@ Voorbeeld: `BulkRegistrationTokenTool.exe /lifetime 4320`
 
 U kunt eerder gemaakte tokens voor bulk registratie en de levens duur ervan weer geven in de Configuration Manager-console en het gebruik ervan blok keren, indien nodig. De site database biedt echter geen bulk registratie tokens.
 
-#### <a name="to-review-a-bulk-registration-token"></a>Een token voor bulk registratie controleren
+### <a name="review-a-bulk-registration-token"></a>Een token voor bulk registratie controleren
 
-1. Klik op **Beheer**in de Configuration Manager-console.
+1. Ga in de Configuration Manager-console naar de werk ruimte **beheer** .
 
-2. Vouw in de werk ruimte beheer het knoop punt **beveiliging**uit en klik op **certificaten**. In de-console wordt een lijst weer gegeven met alle site-gerelateerde certificaten en bulk registratie tokens in het detail venster.
+2. Vouw **beveiliging**uit en selecteer het knoop punt **certificaten** . In de-console wordt een lijst weer gegeven met alle site-gerelateerde certificaten en bulk registratie tokens in het detail venster.
 
 3. Selecteer het bulk registratie token dat u wilt controleren.
 
-U kunt specifieke bulk registratie tokens identificeren op basis van hun GUID. GUID'S voor bulk registratie tokens worden weer gegeven bij het maken van tokens. U kunt de kolom **type** ook filteren of sorteren als dat nodig is.
+U kunt filteren of sorteren op de kolom **type** . Identificeer specifieke bulk registratie tokens op basis van hun GUID. Wanneer u een bulk registratie token maakt, wordt de GUID weer gegeven in het hulp programma.
 
-#### <a name="to-block-a-bulk-registration-token"></a>Een token voor bulk registratie blok keren
+### <a name="block-a-bulk-registration-token"></a>Een token voor bulk registratie blok keren
 
-1. Klik op **Beheer**in de Configuration Manager-console.
+1. Ga in de Configuration Manager-console naar de werk ruimte **beheer** .
 
-2. Vouw in de werk ruimte beheer het knoop punt **beveiliging**uit, klik op **certificaten**en selecteer het bulk registratie token dat u wilt blok keren.
+2. Vouw **beveiliging**uit, selecteer het knoop punt **certificaten** en selecteer het bulk registratie token dat u wilt blok keren.
 
-3. Selecteer op het tabblad **Start** van de lint balk of het menu met de rechter muisknop op inhoud **blok keren**. Daarentegen kunt u eerder geblokkeerde bulk registratie tokens deblokkeren door **blok kering** te selecteren op het tabblad **Start** van de lint balk of het menu met de rechter muisknop op inhoud.
+3. Klik op het tabblad **Start** van de lint balk of het snelmenu van de rechter muisknop op **blok keren**. Als u eerder geblokkeerde bulk registratie tokens wilt blok keren, selecteert u de **blok kering opheffen** .
 
 ## <a name="see-also"></a>Zie ook
 
-- [Plan voor de Cloud beheer gateway](../manage/cmg/plan-cloud-management-gateway.md)
+- [De cloudbeheergateway plannen](../manage/cmg/plan-cloud-management-gateway.md)
 
 - [Configuration Manager Windows 10-clients installeren en toewijzen met behulp van Azure AD voor verificatie](deploy-clients-cmg-azure.md)

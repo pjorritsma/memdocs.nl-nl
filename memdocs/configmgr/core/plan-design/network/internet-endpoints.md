@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 58afaf564a8afaba4569755575fcc7c1757c5529
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: 8423af8d4c743965f627a94a07f587fd97d45bdf
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110131"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84454967"
 ---
 # <a name="internet-access-requirements"></a>Vereisten voor internettoegang
 
@@ -34,11 +34,11 @@ Zie [over het service verbindings punt](../../servers/deploy/configure/about-the
 Andere Configuration Manager-functies vereisen mogelijk extra eind punten van het service verbindings punt. Zie de overige secties in dit artikel voor meer informatie.
 
 > [!TIP]  
-> Het service aansluitpunt gebruikt de Microsoft Intune-service wanneer deze `go.microsoft.com` verbinding `manage.microsoft.com`maakt met of. Er is een bekend probleem waarbij de intune-connector verbindings problemen ondervindt als het basis certificaat van de Baltimore Cyber Trust niet is geïnstalleerd, is verlopen of beschadigd is op het service verbindings punt. Voor meer informatie, Zie [KB 3187516: Service verbindings punt downloadt geen updates](https://support.microsoft.com/help/3187516).  
+> Het service aansluitpunt gebruikt de Microsoft Intune-service wanneer deze verbinding maakt met `go.microsoft.com` of `manage.microsoft.com` . Er is een bekend probleem waarbij de intune-connector verbindings problemen ondervindt als het basis certificaat van de Baltimore Cyber Trust niet is geïnstalleerd, is verlopen of beschadigd is op het service verbindings punt. Voor meer informatie, Zie [KB 3187516: Service verbindings punt downloadt geen updates](https://support.microsoft.com/help/3187516).  
 
 Vanaf versie 2002, als de Configuration Manager-site geen verbinding kan maken met de vereiste eind punten voor een Cloud service, wordt een kritieke status bericht-ID 11488 gegenereerd. Wanneer er geen verbinding kan worden gemaakt met de service, wordt de status van het SMS_SERVICE_CONNECTOR onderdeel gewijzigd in kritiek. Bekijk de gedetailleerde status in het knoop punt [onderdeel status](../../servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus) van de Configuration Manager-console.<!-- 5566763 -->
 
-### <a name="updates-and-servicing"></a><a name="bkmk_scp-updates"/>Updates en onderhoud
+### <a name="updates-and-servicing"></a><a name="bkmk_scp-updates"></a>Updates en onderhoud
 
 Zie [updates en onderhoud voor Configuration Manager](../../servers/manage/updates.md)voor meer informatie over deze functie.
 
@@ -87,6 +87,18 @@ Als u Windows 10-apparaten inschrijft voor Microsoft Intune voor co-beheer, moet
 
 Als u Configuration Manager integreert met de [Microsoft Store voor bedrijven](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md), moet u ervoor zorgen dat het service aansluitpunt en de doel apparaten toegang hebben tot de Cloud service. Zie [Microsoft Store voor Business proxy configureren](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration)voor meer informatie.
 
+## <a name="delivery-optimization"></a>Delivery Optimization
+
+Als u Delivery Optimization gebruikt, moeten clients communiceren met de Cloud service:`*.do.dsp.mp.microsoft.com`
+
+Distributie punten die ondersteuning bieden voor micro soft Connected cache vereisen ook deze eind punten.
+
+Raadpleeg voor meer informatie de volgende artikelen:
+
+- [Veelgestelde vragen over Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)
+- [Basis concepten voor inhouds beheer in Configuration Manager](../hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization)
+- [Met micro soft verbonden cache in Configuration Manager](../hierarchy/microsoft-connected-cache.md)
+
 ## <a name="cloud-services"></a><a name="bkmk_cloud"></a>Cloud Services
 
 <!-- SCCMDocs-pr #3402 -->
@@ -108,7 +120,7 @@ Het **CMG-verbindings punt** moet toegang hebben tot de volgende service-eind pu
 
 - Opslag eindpunt: `<name>.blob.core.windows.net` en`<name>.table.core.windows.net`
 
-    Waar `<name>` de naam is van de Cloud service van uw CMG of CDP. Als uw CMG bijvoorbeeld is `GraniteFalls.CloudApp.Net`, dan is het eerste opslag eindpunt dat is `GraniteFalls.blob.core.windows.net`toegestaan.<!-- SCCMDocs#2288 -->
+    Waar `<name>` de naam is van de Cloud service van uw CMG of CDP. Als uw CMG bijvoorbeeld is `GraniteFalls.CloudApp.Net` , dan is het eerste opslag eindpunt dat is toegestaan `GraniteFalls.blob.core.windows.net` .<!-- SCCMDocs#2288 -->
 
 Voor het ophalen van Azure AD-tokens door de **Configuration Manager-console** en- **client**:
 

@@ -1,8 +1,8 @@
 ---
 title: Beleid voor toepassings beveiliging beheren
 titleSuffix: Configuration Manager
-description: Meer informatie over het maken en implementeren van Windows Defender Application Guard-beleid
-ms.date: 07/26/2019
+description: Meer informatie over het maken en implementeren van micro soft Defender Application Guard-beleid
+ms.date: 06/05/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,29 +10,29 @@ ms.assetid: 33a6c1d9-4dd8-411c-a748-693a5bd2ea5a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: b691004742def4c126ba82b07cad1651cbe822f8
-ms.sourcegitcommit: 13ceb4e1cc8c2a10bfa199e301bf9bada8ceb268
+ms.openlocfilehash: 1189f8c89215bc228c533a88f38f5ae59b6855ee
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82923429"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84454933"
 ---
-# <a name="create-and-deploy-windows-defender-application-guard-policy"></a>Windows Defender Application Guard-beleid maken en implementeren
+# <a name="create-and-deploy-microsoft-defender-application-guard-policy"></a>Micro soft Defender Application Guard-beleid maken en implementeren
 
 *Van toepassing op: Configuration Manager (huidige vertakking)*
 <!-- 1351960 -->  
-U kunt beleids regels voor [Windows Defender Application Guard (toepassings beveiligings beleid)](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview) maken en implementeren met behulp van de Configuration Manager Endpoint Protection. Met deze beleids regels kunt u uw gebruikers beschermen door niet-vertrouwde websites te openen in een beveiligde geïsoleerde container die niet toegankelijk is voor andere onderdelen van het besturings systeem.
+U kunt beleids regels voor [micro soft Defender Application Guard (toepassings beveiligings beleid)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview) maken en implementeren met behulp van de Configuration Manager Endpoint Protection. Met deze beleids regels kunt u uw gebruikers beschermen door niet-vertrouwde websites te openen in een beveiligde geïsoleerde container die niet toegankelijk is voor andere onderdelen van het besturings systeem.
 
 ## <a name="prerequisites"></a>Vereisten
 
-Als u een Windows Defender Application Guard-beleid wilt maken en implementeren, moet u de update van Windows 10 over het najaar van de maker (1709) gebruiken. De Windows 10-apparaten waarop u het beleid implementeert, moeten worden geconfigureerd met een [netwerk isolatie beleid](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard#network-isolation-settings). Zie [overzicht van Windows Defender Application Guard](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview)voor meer informatie.
+Als u een micro soft Defender Application Guard-beleid wilt maken en implementeren, moet u de update van Windows 10 najaar Maker (1709) gebruiken. De Windows 10-apparaten waarop u het beleid implementeert, moeten worden geconfigureerd met een [netwerk isolatie beleid](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard#network-isolation-settings). Zie voor meer informatie het [overzicht van micro soft Defender Application Guard](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview).
 
 ## <a name="create-a-policy-and-to-browse-the-available-settings"></a>Een beleid maken en bladeren door de beschik bare instellingen
 
 1. Kies in de Configuration Manager-console **activa en naleving**.
 2. Kies **overzicht**Endpoint Protection **Assets and Compliance**  >  **Endpoint Protection**  >  **Windows Defender Application Guard**in de werk ruimte activa en naleving.
 3. Klik op het tabblad **Start** in de groep **maken** op **Windows Defender Application Guard-beleid maken**.
-4. Met behulp van het [artikel](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard) als referentie kunt u de beschik bare instellingen bekijken en configureren. Met Configuration Manager kunt u bepaalde beleids instellingen instellen:
+4. Met behulp van het [artikel](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard) als referentie kunt u de beschik bare instellingen bekijken en configureren. Met Configuration Manager kunt u bepaalde beleids instellingen instellen:
    - [Instellingen voor interactie met host](#bkmk_HIS)
    - [Toepassings gedrag](#bkmk_ABS)
    - [Bestands beheer](#bkmk_FM)
@@ -42,7 +42,7 @@ Als u een Windows Defender Application Guard-beleid wilt maken en implementeren,
     > Windows 10-Pc's slaan slechts één netwerk isolatie lijst op de client op. U kunt twee verschillende soorten netwerk isolatie lijsten maken en deze op de client implementeren:
     >
     >  - een van Windows Information Protection
-    >  - een van Windows Defender Application Guard
+    >  - een van micro soft Defender Application Guard
     >
     > Als u beide beleids regels implementeert, moeten deze netwerk isolatie lijsten overeenkomen. Als u lijsten implementeert die niet overeenkomen met dezelfde client, mislukt de implementatie. Zie de [Windows Information Protection-documentatie](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)voor meer informatie.
 
@@ -78,7 +78,7 @@ Hiermee configureert u het gedrag van de toepassing in de Application Guard-sess
 
 ### <a name="file-management"></a><a name="bkmk_FM"></a>Bestands beheer
 <!--3555858-->
-Vanaf Configuration Manager versie 1906 is er een beleids instelling waarmee gebruikers bestanden kunnen vertrouwen die normaal in Application Guard worden geopend. Wanneer de uitvoering is voltooid, worden de bestanden geopend op het hostapparaat in plaats van in Application Guard. Zie [instellingen voor Windows Defender Application Guard-beleid configureren](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard)voor meer informatie over het beleid voor toepassings beveiliging.
+Vanaf Configuration Manager versie 1906 is er een beleids instelling waarmee gebruikers bestanden kunnen vertrouwen die normaal in Application Guard worden geopend. Wanneer de uitvoering is voltooid, worden de bestanden geopend op het hostapparaat in plaats van in Application Guard. Zie [beleids instellingen voor micro soft Defender Application Guard configureren](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard)voor meer informatie over het beleid voor toepassings beveiliging.
 
 - **Gebruikers toestaan bestanden te vertrouwen die worden geopend in Windows Defender Application Guard** : Hiermee stelt u de gebruiker in staat om bestanden te markeren als vertrouwd. Wanneer een bestand wordt vertrouwd, wordt het geopend op de host in plaats van in Application Guard. Is van toepassing op Windows 10-versie 1809 of hoger.
   - **Verboden:** Gebruikers niet toestaan om bestanden te markeren als vertrouwd (standaard).
@@ -96,7 +96,12 @@ Wanneer u bestands beheer inschakelt, ziet u mogelijk fouten die zijn vastgelegd
 
 Als u de instellingen voor Application Guard wilt bewerken, vouwt u **Endpoint Protection** uit in de werk ruimte **activa en naleving** en klikt u vervolgens op het knoop punt **Windows Defender Application Guard** . Klik met de rechter muisknop op het beleid dat u wilt bewerken en selecteer vervolgens **Eigenschappen**.
 
+## <a name="known-issues"></a>Bekende problemen
+
+Op apparaten met Windows 10, versie 2004 worden fouten weer gegeven in nalevings rapportage voor de vertrouwens criteria van micro soft Defender Application Guard-bestanden. Dit probleem treedt op omdat sommige subklassen zijn verwijderd uit de WMI-klasse `MDM_WindowsDefenderApplicationGuard_Settings01` in Windows 10, versie 2004. Alle andere micro soft Defender Application Guard-instellingen zijn nog steeds van toepassing. alleen de vertrouwens criteria van het bestand zullen mislukken. Er zijn momenteel geen tijdelijke oplossingen om de fout te omzeilen. <!--7099444,5946790-->
+
 ## <a name="next-steps"></a>Volgende stappen
 
-Meer informatie over Windows Defender Application Guard: [overzicht van Windows Defender Application Guard](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/wd-app-guard-overview).
-[Veelgestelde vragen over Windows Defender Application Guard](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/faq-wd-app-guard).
+Zie voor meer informatie over micro soft Defender Application Guard
+ - [Overzicht van micro soft Defender Application Guard](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview).
+- [Veelgestelde vragen over micro soft Defender Application Guard](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/faq-md-app-guard).

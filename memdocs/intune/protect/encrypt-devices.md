@@ -1,13 +1,13 @@
 ---
-title: Apparaten versleutelen met de versleutelingsmethode die wordt ondersteund op platforms
+title: Windows 10-apparaten versleutelen met BitLocker in Intune
 titleSuffix: Microsoft Intune
-description: Versleutel apparaten met ingebouwde versleutelingsmethoden zoals BitLocker of FileVault, en beheer de herstelsleutels voor deze versleutelde apparaten vanuit de Intune-portal.
+description: Versleutel apparaten met de ingebouwde versleutelingsmethode BitLocker en beheer de herstelsleutels voor deze versleutelde apparaten vanuit de Intune-portal.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/03/2020
-ms.topic: conceptual
+ms.date: 05/18/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -17,114 +17,103 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: d79f97da88a939d95b68a9ef747da87cf3844598
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 16a2558a0f4b002528e749f4a66d3341e83c8576
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80322476"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989667"
 ---
-# <a name="use-device-encryption-with-intune"></a>Apparaatversleuteling gebruiken met Intune
+# <a name="manage-bitlocker-policy-for-windows-10-in-intune"></a>Het BitLocker-beleid voor Windows 10 in Intune beheren
 
-U kunt Intune gebruiken om de versleuteling van de ingebouwde schijf of het station van een apparaat te beheren voor het beschermen van de gegevens op uw apparaten.
+Gebruik Intune om BitLocker-stationsversleuteling te configureren op apparaten waarop Windows 10 wordt uitgevoerd.
 
-Configureer schijfversleuteling als onderdeel van een apparaatconfiguratieprofiel voor Endpoint Protection. De volgende platforms en versleutelingstechnologieën worden ondersteund door Intune:
+BitLocker is beschikbaar op apparaten met Windows 10 of hoger. Voor sommige instellingen van BitLocker moet het apparaat over een ondersteunde TPM beschikken.
 
-- macOS: FileVault
-- Windows 10 en hoger: BitLocker
+Gebruik een van de volgende beleidstypen om BitLocker op uw beheerde apparaten te configureren
 
-Intune biedt ook een ingebouwd [versleutelingsrapport](encryption-monitor.md) met informatie over de versleutelingsstatus van apparaten, voor alle beheerde apparaten.
+- **[Versleutelingsbeleid voor eindpuntbeveiligingsschijf voor Windows 10 BitLocker](#create-an-endpoint-security-policy-for-bitlocker)** . Het BitLocker-profiel in *eindpuntbeveiliging* is een gerichte groep instellingen die is toegewezen aan het configureren van BitLocker.
 
-## <a name="filevault-encryption-for-macos"></a>FileVault-versleuteling voor macOS
+  Bekijk de BitLocker-instellingen die beschikbaar zijn in [de BitLocker-profielen van het schijfversleutelingsbeleid](../protect/endpoint-security-disk-encryption-profile-settings.md#bitlocker).
 
-Gebruik Intune om FileVault-schijfversleuteling te configureren op apparaten waarop macOS wordt uitgevoerd. Gebruik vervolgens het Intune-versleutelingsrapport voor het weergeven van de versleutelingsgegevens voor deze apparaten en voor het beheren van herstelsleutels voor met FileVault versleutelde apparaten.
+- **[Configuratieprofiel van het apparaat voor eindpuntbescherming voor Windows 10 BitLocker](#create-an-endpoint-security-policy-for-bitlocker)** . De BitLocker-instellingen zijn een van de beschikbare instellingscategorieën voor Windows 10 eindpuntbescherming.
 
-Door de gebruiker goedgekeurde apparaatinschrijving is vereist om FileVault op het apparaat te laten werken. De inschrijving geldt alleen als goedgekeurd door de gebruiker als deze het beheerprofiel handmatig goedkeurt vanuit de systeemvoorkeuren.
+  Bekijk de BitLocker-instellingen die beschikbaar zijn voor [BitLocker in eindpuntbeschermingsprofielen op het formulier voor het apparaatconfiguratiebeleid](../protect/endpoint-protection-windows-10.md#windows-settings).
 
-FileVault is een programma voor de versleuteling van volledige schijven. Het programma wordt geleverd bij macOS. U kunt Intune gebruiken om FileVault te configureren op apparaten waarop **macOS 10.13 of hoger** wordt uitgevoerd.
+> [!TIP]
+> Intune biedt een ingebouwd [versleutelingsrapport](encryption-monitor.md) met informatie over de versleutelingsstatus van al uw beheerde apparaten. Nadat Intune een Windows 10-apparaat met BitLocker heeft versleuteld, kunt u de BitLocker-herstelsleutels bekijken en ophalen wanneer u het versleutelingsrapport bekijkt.
+>
+> U hebt ook toegang tot voor BitLocker belangrijke informatie over uw apparaten, zoals te zien is in Azure Active Directory (Azure AD).
+Een [versleutelingsrapport](encryption-monitor.md) met informatie over de versleutelingsstatus van apparaten, voor alle beheerde apparaten.
 
-Als u FileVault wilt configureren, maakt u een [apparaatconfiguratieprofiel](endpoint-protection-configure.md) voor Endpoint Protection voor het macOS-platform. De FileVault-instellingen vormen een eigen instellingencategorie in Endpoint Protection voor macOS.
+## <a name="permissions-to-manage-bitlocker"></a>Machtigingen voor het beheren van BitLocker
 
-Wanneer u een beleid hebt gemaakt voor het met FileVault versleutelen van apparaten, wordt het beleid in twee fasen toegepast op apparaten. In eerste instantie wordt het apparaat voorbereid zodat Intune kan worden gebruikt voor het ophalen van en het maken van back-ups van de herstelsleutel. Deze actie heet ook wel 'escrow'. Wanneer er een escrow-sleutel is gemaakt, kan worden gestart met de schijfversleuteling.
+Als u BitLocker in Intune wilt beheren, moet uw account beschikken over de juiste Intune-machtigingen voor [op rollen gebaseerd toegangsbeheer](../fundamentals/role-based-access-control.md) (RBAC).
 
-![FileVault-instellingen](./media/encrypt-devices/filevault-settings.png)
+Hieronder vindt u de BitLocker-machtigingen die deel uitmaken van de categorie Externe taken en de ingebouwde RBAC-rollen waarmee de machtiging wordt verleend:
 
-Voor meer informatie over de FileVault-instelling die u met Intune kunt beheren, ziet u [FileVault](endpoint-protection-macos.md#filevault) in het Intune-artikel over Endpoint Protection-instellingen voor macOS.
-
-### <a name="permissions-to-manage-filevault"></a>Machtigingen voor het beheren van FileVault
-
-Als u FileVault in Intune wilt beheren, moet uw account beschikken over de juiste machtigingen voor [op rollen gebaseerd toegangsbeheer](../fundamentals/role-based-access-control.md) (RBAC).
-
-Hieronder vindt u de FileVault-machtigingen die deel uitmaken van de categorie **Externe taken** en de ingebouwde RBAC-rollen waarmee de machtiging wordt verleend:
- 
-- **De FileVault-sleutel ophalen**:
-  - Helpdeskmedewerker
-  - Endpoint Security Manager
-
-- **FileVault-sleutel roteren**
+- **BitLocker-sleutels draaien**
   - Helpdeskmedewerker
 
-### <a name="how-to-configure-macos-filevault"></a>FileVault voor macOS configureren
+## <a name="create-and-deploy-policy"></a>Beleid opstellen en implementeren
+
+Gebruik een van de volgende procedures om het gewenste beleidstype op te stellen.
+
+### <a name="create-an-endpoint-security-policy-for-bitlocker"></a>Een eindpuntbeveiligingsbeleid voor BitLocker opstellen
+
+1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Selecteer **Eindpuntbeveiliging** > **Schijfversleuteling** > **Beleid maken**.
+
+3. Stel de volgende opties in:
+   1. **Platform**: Windows 10 of hoger
+   2. **Profiel**: BitLocker
+
+   ![Het BitLocker-profiel selecteren](./media/encrypt-devices/select-windows-bitlocker-es.png)
+
+4. Configureer de instellingen van BitLocker op de pagina **Configuratie-instellingen** zodat aan de vereisten van uw bedrijf wordt voldaan.  
+
+   Als u BitLocker op de achtergrond wilt inschakelen, raadpleegt u [BitLocker op de achtergrond inschakelen op apparaten](#silently-enable-bitlocker-on-devices) voor aanvullende vereisten en de specifieke instellingsconfiguraties die u moet gebruiken.
+
+   Selecteer **Volgende**.
+
+5. Selecteer op de pagina **Bereik (tags)** de optie **Bereiktags selecteren** om het deelvenster Tags selecteren te openen en bereiktags aan het profiel toe te wijzen.
+
+   Selecteer **Volgende** om door te gaan.
+
+6. Selecteer op de pagina **Toewijzingen** de groepen die dit profiel zullen ontvangen. Zie Gebruikers- en apparaatprofielen toewijzen voor meer informatie over het toewijzen van profielen.
+
+   Selecteer **Volgende**.
+
+7. Kies op de pagina **Controleren en maken** de optie **Maken** zodra u klaar bent. Het nieuwe profiel wordt weergegeven in de lijst wanneer u het beleidstype selecteert voor het profiel dat u hebt gemaakt.
+
+### <a name="create-a-device-configuration-profile-for-bitlocker"></a>Een apparaatconfiguratieprofiel voor BitLocker aanmaken
 
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Selecteer **Apparaten** > **Configuratieprofielen** > **Profiel maken**.
 
 3. Stel de volgende opties in:
+   1. **Platform**: Windows 10 en hoger
+   2. **Profieltype**: Endpoint Protection
 
-   - Platform: macOS
-   - Profieltype: Endpoint Protection
-
-4. Selecteer **Instellingen** > **FileVault**.
-
-5. Bij *FileVault* selecteert u **Inschakelen**.
-
-6. Bij *Herstelsleuteltype* wordt alleen de optie **Persoonlijke sleutel** ondersteund.
-
-   Overweeg een bericht toe te voegen om eindgebruikers te helpen bij het ophalen van de herstelsleutel voor hun apparaat. Deze informatie kan nuttig zijn voor uw eindgebruikers wanneer u de instelling voor wijziging van persoonlijke herstelsleutels gebruikt. Met deze instelling kan periodiek automatisch een nieuwe herstelsleutel voor een apparaat worden gegenereerd.
-
-   Bijvoorbeeld: Als u een verloren of onlangs vernieuwde herstelsleutel wilt ophalen, meldt u zich aan op de website van de Intune-bedrijfsportal. Dit kan vanaf elk apparaat. Ga in de portal naar *Apparaten* en selecteer het apparaat waarvoor FileVault is ingeschakeld. Selecteer dan *Herstelsleutel ophalen*. De huidige herstelsleutel wordt weergegeven.
-
-7. Configureer de overige [FileVault-instellingen](endpoint-protection-macos.md#filevault) zodanig dat er aan de vereisten van uw bedrijf wordt voldaan. Selecteer vervolgens **OK**.
-
-  8. Voltooi de configuratie van de aanvullende instellingen en sla het profiel op.  
-
-### <a name="manage-filevault"></a>FileVault beheren
-
-Wanneer Intune een macOS-apparaat versleutelt met FileVault, kunt u de FileVault-herstelsleutels bekijken en beheren tijdens het bekijken van het Intune-[versleutelingsrapport](encryption-monitor.md).
-
-Nadat Intune een macOS-apparaat versleutelt met FileVault, kunt u op elk apparaat de persoonlijke herstelsleutel van het apparaat bekijken in de online bedrijfsportal. Kies in de online bedrijfsportal het versleutelde macOS-apparaat en kies vervolgens 'Herstelsleutel ophalen' als externe actie.
-
-### <a name="retrieve-personal-recovery-key-from-mem-encrypted-macos-devices"></a>Persoonlijke herstelsleutel ophalen van met MEM versleutelde macOS-apparaten
-
-Eindgebruikers kunnen hun persoonlijke herstelsleutel (FileVault-sleutel) ophalen met behulp van de iOS-bedrijfsportal-app, de Android-bedrijfsportal-app of via de Android Intune-app. Het apparaat met de persoonlijke herstelsleutel moet zijn geregistreerd bij Intune en moet zijn versleuteld met FileVault via Intune. Met de iOS-bedrijfsportal-app, Android-bedrijfsportal-app, de Android Intune-app of de Bedrijfsportal-website kunnen eindgebruikers de **FileVault**-herstelsleutel zien die nodig is om toegang te krijgen tot hun Mac-apparaten. Eindgebruikers kunnen **Apparaten** > *het versleutelde en ingeschreven macOS-apparaat* > **Herstelsleutel ophalen** selecteren. In de browser wordt de Webbedrijfsportal getoond waarin de herstelsleutel wordt weergegeven. 
-
-## <a name="bitlocker-encryption-for-windows-10"></a>BitLocker-versleuteling voor Windows 10
-
-Gebruik Intune om BitLocker-stationsversleuteling te configureren op apparaten waarop Windows 10 wordt uitgevoerd. Gebruik vervolgens het Intune-versleutelingsrapport om de versleutelingsgegevens voor deze apparaten te bekijken. U hebt ook toegang tot voor BitLocker belangrijke informatie over uw apparaten, zoals te zien is in Azure Active Directory (Azure AD).
-
-BitLocker is beschikbaar op apparaten met **Windows 10 of hoger**.
-
-Configureer BitLocker bij het maken van een [apparaatconfiguratieprofiel](endpoint-protection-configure.md) voor Endpoint Protection in Windows 10 of op een nieuwer platform. De BitLocker-instellingen bevinden zich in de categorie Windows-versleutelingsinstellingen voor Windows 10 Endpoint Protection.
-
-![BitLocker-instellingen](./media/encrypt-devices/bitlocker-settings.png)
-
-### <a name="how-to-configure-windows-10-bitlocker"></a>BitLocker configureren voor Windows 10
-
-1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
-
-2. Selecteer **Apparaten** > **Configuratieprofielen** > **Profiel maken**.
-
-3. Stel de volgende opties in:
-
-   - Platform: Windows 10 en hoger
-   - Profieltype: Endpoint Protection
+   ![Het BitLocker-profiel selecteren](./media/encrypt-devices/select-windows-bitlocker-dc.png)
 
 4. Selecteer **Instellingen** > **Windows-versleuteling**.
 
-5. Configureer de instellingen van BitLocker zodat er aan de vereisten van uw bedrijf wordt voldaan. Selecteer dan **OK**.
+   ![BitLocker-instellingen](./media/encrypt-devices/bitlocker-settings.png)
 
-6. Voltooi de configuratie van de aanvullende instellingen en sla het profiel op.
+5. Configureer de instellingen van BitLocker zodat aan de vereisten van uw bedrijf wordt voldaan.
+
+   Als u BitLocker op de achtergrond wilt inschakelen, raadpleegt u [BitLocker op de achtergrond inschakelen op apparaten](#silently-enable-bitlocker-on-devices) voor aanvullende vereisten en de specifieke instellingsconfiguraties die u moet gebruiken.
+
+6. Selecteer **OK**.
+
+7. Voltooi de configuratie van de aanvullende instellingen en sla het profiel op.
+
+## <a name="manage-bitlocker"></a>BitLocker beheren
+
+Zie [Schijfversleuteling controleren](../protect/encryption-monitor.md) voor informatie over apparaten die het BitLocker-beleid ontvangen. U kunt de BitLocker-herstelsleutels ook bekijken en ophalen wanneer u het versleutelingsrapport bekijkt.
 
 ### <a name="silently-enable-bitlocker-on-devices"></a>BitLocker op de achtergrond inschakelen op apparaten
 
@@ -139,22 +128,35 @@ op een apparaat moet aan de volgende voorwaarden worden voldaan om in aanmerking
 
 **BitLocker-beleidsconfiguratie**:
 
-De volgende twee instellingen voor [BitLocker-basisinstellingen](../protect/endpoint-protection-windows-10.md#bitlocker-base-settings) moeten in het BitLocker-beleid zijn geconfigureerd:
+De volgende twee instellingen voor *BitLocker-basisinstellingen* moeten in het BitLocker-beleid zijn geconfigureerd:
 
 - **Waarschuwing voor andere schijfversleuteling** = *Blokkeren*.
 - **Standaardgebruikers toestaan om versleuteling in te schakelen tijdens Azure AD Join** = *Toestaan*
 
-Via het BitLocker-beleid **mag niet worden vereist** dat er een opstartpincode of -sleutel wordt gebruikt. Wanneer een TPM-opstartpincode of -sleutel is *vereist*, kan BitLocker niet op de achtergrond worden ingeschakeld en is interactie van de eindgebruiker vereist.  Aan deze vereiste wordt voldaan door middel van de volgende drie [BitLocker-instellingen voor het besturingssysteemstation](../protect/endpoint-protection-windows-10.md#bitlocker-os-drive-settings) in hetzelfde beleid:
+Via het BitLocker-beleid **mag niet worden vereist** dat er een opstartpincode of -sleutel wordt gebruikt. Wanneer een TPM-opstartpincode of -sleutel is *vereist*, kan BitLocker niet op de achtergrond worden ingeschakeld en is interactie van de eindgebruiker vereist.  Aan deze vereiste wordt voldaan door middel van de volgende drie *BitLocker-instellingen voor het besturingssysteemstation* in hetzelfde beleid:
 
 - **Compatibele TPM-opstartpincode** mag niet worden ingesteld op *Opstartpincode met TPM vereisen*
 - **Compatibele TPM-opstartsleutel** mag niet worden ingesteld op *Opstartsleutel met TPM vereisen*
 - **Compatibele opstartsleutel en -pincode voor TPM** mag niet worden ingesteld op *Opstartsleutel en -pincode met TPM vereisen*
 
+### <a name="view-details-for-recovery-keys"></a>Details weergeven voor herstelsleutels
 
+Intune biedt toegang tot de Microsoft Azure Active Directory-blade voor BitLocker, zodat u via de Intune-portal BitLocker-sleutel-id's en herstelsleutels voor uw Windows 10-apparaten kunt weergeven. Een apparaat is alleen toegankelijk als de sleutels van dat apparaat naar Azure AD worden geborgd.
 
-### <a name="manage-bitlocker"></a>BitLocker beheren
+1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-Wanneer Intune een Windows 10-apparaat versleutelt met BitLocker, kunt u de BitLocker-herstelsleutels bekijken en ophalen tijdens het bekijken van het Intune-[versleutelingsrapport](encryption-monitor.md).
+2. Selecteer **Apparaten** > **Alle apparaten**.
+
+3. Selecteer een apparaat in de lijst en selecteer vervolgens onder *Monitor* **Herstelsleutels**.
+  
+   Als er sleutels in Azure AD beschikbaar zijn, is de volgende informatie beschikbaar:
+   - BitLocker-sleutel-id
+   - BitLocker-herstelsleutel
+   - Type station
+
+   Als er geen sleutels aanwezig zijn in Azure AD, wordt *Er is geen BitLocker-sleutel gevonden voor dit apparaat* weergegeven.
+
+De informatie voor BitLocker wordt verkregen met behulp van de [BitLocker-configuratieserviceprovider](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (CSP). BitLocker CSP wordt ondersteund op Windows 10-versie 1703 en hoger en voor Windows 10 Pro-versie 1809 en hoger.
 
 ### <a name="rotate-bitlocker-recovery-keys"></a>BitLocker-herstelsleutels roteren
 
@@ -171,7 +173,7 @@ Apparaten moeten voldoen aan de volgende vereisten om rotatie van de BitLocker-h
   - **Clientgestuurde rotatie van herstelwachtwoorden**
 
   Deze instelling vindt u onder *Windows-versleuteling* als onderdeel van een configuratiebeleid voor Endpoint Protection in Windows 10.
-  
+
 #### <a name="to-rotate-the-bitlocker-recovery-key"></a>De BitLocker-herstelsleutel roteren
 
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
@@ -180,16 +182,12 @@ Apparaten moeten voldoen aan de volgende vereisten om rotatie van de BitLocker-h
 
 3. Selecteer een apparaat in de lijst met apparaten die u beheert, selecteer **Meer** en selecteer de externe apparaatactie **BitLocker-sleutelrotatie**.
 
+4. Selecteer op de pagina **Overzicht** van het apparaat de optie **BitLocker-sleutelrotatie**. Als deze optie niet wordt weergegeven, selecteert u het weglatingsteken ( **...** ) om extra opties weer te geven en vervolgens selecteert u de externe apparaatactie **BitLocker-sleutelrotatie**.
+
+   ![Het weglatingsteken selecteren om meer opties weer te geven](./media/encrypt-devices/select-more.png)
+
 ## <a name="next-steps"></a>Volgende stappen
 
-Een [nalevingsbeleid voor apparaten](compliance-policy-create-windows.md) maken.
+[FileVault-beleid beheren](../protect/encrypt-devices-filevault.md)
 
-U kunt op basis van het versleutelingsrapport de volgende zaken beheren:
-
-- [BitLocker-herstelsleutels](encryption-monitor.md#bitlocker-recovery-keys)
-- [FileVault-herstelsleutels](encryption-monitor.md#filevault-recovery-keys)
-
-Bekijk welke versleutelingsinstellingen u met Intune kunt configureren voor:
-
-- [BitLocker](endpoint-protection-windows-10.md#windows-encryption)
-- [FileVault](endpoint-protection-macos.md#filevault)
+[Schijfversleuteling controleren](../protect/encryption-monitor.md)

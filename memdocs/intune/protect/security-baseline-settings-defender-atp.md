@@ -18,12 +18,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 zone_pivot_groups: atp-baseline-versions
-ms.openlocfilehash: e1081395c733807c38dc940ebd1b7c2765da7a9a
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.openlocfilehash: 330a4387ef1a079b2a0f691bfb0b887117dd9e4b
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693400"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429341"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="atp-april-2020"
@@ -596,7 +596,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   [Apparaten beveiligen tegen misbruik](https://go.microsoft.com/fwlink/?linkid=874499)  
 
   Deze ASR-regel wordt beheerd via de volgende GUID: 26190899-1602-49e8-8b27-eb1d0a1ce869.
-  - **Niet geconfigureerd**: de Windows-standaardwaarde wordt hersteld. Dit houdt in dat het maken van onderliggende processen niet wordt geblokkeerd.
+  - **Niet geconfigureerd**. De standaardinstelling van Windows is hersteld. Hierdoor kan het aanmaken van onderliggende processen niet worden geblokkeerd.
   - **Door de gebruiker gedefinieerd**
   - **Inschakelen** (*standaard*): voorkomen dat Office-communicatietoepassingen onderliggende processen maken.
   - **Controlemodus**: er treden Windows-gebeurtenissen op in plaats van dat onderliggende processen worden geblokkeerd.
@@ -793,7 +793,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
 - **Netwerkbeveiliging inschakelen**  
   CSP: [Defender/EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=872618)
 
-  - **Niet-geconfigureerd**: de instelling wordt teruggezet op de Windows-standaardwaarde: Uitgeschakeld.
+  - **Niet geconfigureerd**: de instelling wordt teruggezet naar de standaardinstelling van Windows, die is uitgeschakeld.
   - **Door de gebruiker gedefinieerd**
   - **Inschakelen**: netwerkbeveiliging wordt ingeschakeld voor alle gebruikers in het systeem.
   - **Controlemodus** (*standaard*): gebruikers worden niet geweerd uit gevaarlijke domeinen; in plaats daarvan worden er Windows-gebeurtenissen geregistreerd.

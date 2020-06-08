@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 11/18/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 0b634dad49b11e39e9a046688f0b5fd9ddc53ab4
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 1199c6db96325a103394cfb53a4ca70092cd3767
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254993"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989649"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Apparaatversleuteling bewaken met Intune
 
@@ -169,68 +169,20 @@ Tijdens het weergeven van het deelvenster Versleutelingsrapport kunt u **Exporte
 
 Dit rapport kan worden gebruikt bij het identificeren van problemen voor groepen apparaten. U kunt het rapport bijvoorbeeld gebruiken om een lijst macOS-apparaten te maken waarvoor staat geregistreerd dat *FileVault al is ingeschakeld door de gebruiker*; dit geeft aan dat de apparaten handmatig moeten worden ontsleuteld voordat Intune de FileVault-instellingen kan beheren.
 
-## <a name="filevault-recovery-keys"></a>FileVault-herstelsleutels
+## <a name="manage-recovery-keys"></a>Herstelsleutels beheren
 
-Wanneer Intune een macOS-apparaat voor het eerst versleutelt met FileVault, wordt er een persoonlijke herstelsleutel gemaakt. Na het versleutelen wordt de persoonlijke sleutel één keer weergegeven aan de eindgebruiker.
+Bekijk voor meer informatie over het beheren van de herstelsleutels het volgende in de Intune-documentatie:
 
-Bij beheerde apparaten kan Intune een escrow-sleutel maken van de persoonlijke herstelsleutel. Met escrow-sleutels kunnen Intune-beheerders sleutels vernieuwen om de bescherming van apparaten te verbeteren en kunnen gebruikers verloren geraakte of vernieuwde persoonlijke herstelsleutels herstellen.
+macOS FileVault:
+- [Persoonlijke herstelsleutel ophalen](../protect/encrypt-devices-filevault.md#retrieve-personal-recovery-key)
+- [Herstelsleutels draaien](../protect/encrypt-devices-filevault.md#rotate-recovery-keys)
+- [Herstelsleutels herstellen](../protect/encrypt-devices-filevault.md#recover-recovery-keys)
 
-Intune biedt ondersteuning voor meerdere opties voor het vernieuwen en herstellen van persoonlijke herstelsleutels. Persoonlijke herstelsleutels kunnen bijvoorbeeld worden vernieuwd als de huidige persoonlijke herstelsleutel verloren is geraakt of er sprake is van een risico.
-
-> [!IMPORTANT]
-> Apparaten die door gebruikers zijn versleuteld (en niet door Intune), kunnen niet door Intune worden beheerd. Dit betekent dat Intune geen escrow-sleutel kan maken voor het persoonlijke herstel van de apparaten en dat de vernieuwing van de herstelsleutel niet kan worden beheerd. Voordat Intune kan worden gebruikt voor het beheer van FileVault en herstelsleutels voor het apparaat, moet de gebruiker het apparaat ontsleutelen. Daarna kan het apparaat met Intune worden versleuteld.
-
-### <a name="rotate-recovery-keys"></a>Herstelsleutels wijzigen
-
-- **Automatisch wijzigen**: Als beheerder kunt u de FileVault-instelling voor het wijzigen van persoonlijke herstelsleutels zodanig configureren dat er automatisch periodiek nieuwe herstelsleutels worden gegenereerd. Wanneer er een nieuwe sleutel wordt gegenereerd voor een apparaat, wordt de sleutel niet weergegeven aan de gebruiker. In plaats daarvan moet de gebruiker de sleutel ophalen bij een beheerder, of de app Bedrijfsportal gebruiken.
-
-- **Handmatig wijzigen**: u kunt als beheerder informatie bekijken over apparaten die u met Intune beheert en die met FileVault zijn versleuteld. U kunt ervoor kiezen om de herstelsleutels voor zakelijke apparaten handmatig te vernieuwen. Het is niet mogelijk om de herstelsleutels voor persoonlijke apparaten te vernieuwen.
-
-  Een herstelsleutel vernieuwen:
-
-  1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
-  
-  2. Selecteer **Apparaten** > **Alle apparaten**.
-  
-  3. Selecteer in de lijst met apparaten het apparaat dat is versleuteld en waarvoor u de sleutel wilt vernieuwen. Selecteer vervolgens onder Bewaken de optie  **Herstelsleutels**.
-  
-  4. In het deelvenster Herstelsleutels selecteert u **FileVault-herstelsleutel vernieuwen**.
-
-     De volgende keer dat het apparaat incheckt bij Intune, wordt de persoonlijke sleutel vernieuwd. Indien nodig kan de nieuwe sleutel door de eindgebruiker worden verkregen via de bedrijfsportal.
-
-### <a name="recover-recovery-keys"></a>Herstelsleutels herstellen
-
-- **Beheerder**: beheerders kunnen de persoonlijke herstelsleutels voor apparaten die zijn versleuteld met FileVault niet bekijken.
-
-- **Eindgebruiker**: eindgebruikers gebruiken de bedrijfsportalwebsite vanaf een apparaat om hun huidige persoonlijke herstelsleutel te gebruiken voor een van hun beheerde apparaten. Het is niet mogelijk om herstelsleutels te bekijken vanuit de app Bedrijfsportal.
-
-  Een herstelsleutel weergeven:
-  
-  1. Meld u op een apparaat aan bij de *Intune-bedrijfsportal*website.
-
-  2. Ga in de portal naar **Apparaten** en selecteer het macOS-apparaat dat is versleuteld met FileVault.
-
-  3. Selecteer **Herstelsleutel ophalen**. De huidige herstelsleutel wordt weergegeven.
-
-## <a name="bitlocker-recovery-keys"></a>BitLocker-herstelsleutels
-
-Intune biedt toegang tot de Microsoft Azure Active Directory-blade voor BitLocker, zodat u via de Intune-portal BitLocker-sleutel-id's en herstelsleutels voor uw Windows 10-apparaten kunt weergeven. Een apparaat is alleen toegankelijk als de sleutels van dat apparaat naar Azure AD worden geborgd.
-
-1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
-
-2. Selecteer **Apparaten** > **Alle apparaten**.
-
-3. Selecteer een apparaat in de lijst en selecteer vervolgens onder *Monitor* **Herstelsleutels**.
-  
-   Als er sleutels in Azure AD beschikbaar zijn, is de volgende informatie beschikbaar:
-   - BitLocker-sleutel-id
-   - BitLocker-herstelsleutel
-   - Type station
-
-   Als er geen sleutels aanwezig zijn in Azure AD, wordt *Er is geen BitLocker-sleutel gevonden voor dit apparaat* weergegeven.
-
-De informatie voor BitLocker wordt verkregen met behulp van de [BitLocker-configuratieserviceprovider](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (CSP). BitLocker CSP wordt ondersteund op Windows 10 versie 1709 en hoger en voor Windows 10 Pro-versie 1809 en hoger.
+Windows 10 BitLocker:
+- [BitLocker-herstelsleutels draaien](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys)
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Een [nalevingsbeleid voor apparaten](compliance-policy-create-windows.md) maken.
+[BitLocker-beleid beheren](../protect/encrypt-devices.md)
+
+[FileVault-beleid beheren](encrypt-devices-filevault.md)

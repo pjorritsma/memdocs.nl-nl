@@ -5,20 +5,20 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/20/2020
-ms.topic: conceptual
+ms.date: 05/15/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4de042fdc443a43e8a34a2eb433ecad34152887a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2d1aefab1e222ddb20b1c033c787ba7d323f59e5
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79350717"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988298"
 ---
 # <a name="add-iosipados-software-update-policies-in-intune"></a>iOS/iPadOS-software-updatebeleid in Intune configureren
 
@@ -33,6 +33,10 @@ Deze functie is van toepassing op:
 - iPadOS 13.0 of hoger (onder supervisie)
 
 Apparaten worden standaard ongeveer om de 8 uur bij Intune ingecheckt. Als er via een updatebeleid een update ter beschikking komt, wordt de update op het apparaat gedownload. Vervolgens wordt de update geïnstalleerd zodra het apparaat binnen de planningsconfiguratie wordt ingecheckt. Hoewel het updateproces doorgaans geen tussenkomst van de gebruiker omvat, moet de gebruiker een wachtwoordcode invoeren om een software-update te starten als het apparaat een wachtwoordcode heeft. Met profielen kan niet worden voorkomen dat gebruikers het besturingssysteem handmatig bijwerken. Met een apparaatconfiguratiebeleid waarmee de zichtbaarheid van software-updates wordt beperkt, kunt u voorkomen dat gebruikers het besturingssysteem handmatig bijwerken.
+
+> [!NOTE]
+> Bij het gebruik van [Autonome modus voor één app (ASAM)](https://docs.microsoft.com/mem/intune/configuration/device-restrictions-ios#autonomous-single-app-mode-asam) moet het effect van de besturingssysteemupdates worden overwogen, aangezien het resulterende gedrag mogelijk niet wenselijk is.
+Overweeg tests om de impact te beoordelen die besturingssysteemupdates hebben op de app die u uitvoert in ASAM.
 
 ## <a name="configure-the-policy"></a>Het beleid configureren
 
@@ -70,7 +74,9 @@ Apparaten worden standaard ongeveer om de 8 uur bij Intune ingecheckt. Als er vi
        Als u geen begin- of eindtijden configureert, worden geen beperkingen toegepast en kunnen updates op elk gewenst moment worden geïnstalleerd.  
 
        > [!NOTE]
-       > Als u de zichtbaarheid van software-updates voor een bepaald tijdvenster wilt uitstellen op de iOS/iPadOS-apparaten onder uw supervisie, moet u deze instellingen configureren in de [Apparaatbeperkingen](../configuration/device-restrictions-ios.md#general). Het beleid voor software-updates overschrijft eventuele apparaatbeperkingen. Wanneer u zowel beleid voor software-updates als een beperking om de zichtbaarheid van software-updates te vertragen instelt, wordt op het apparaat een software-update volgens het beleid afgedwongen. De beperking is van toepassing om te voorkomen dat gebruikers de optie zien om het apparaat zelf bij te werken. De update wordt gepusht zoals gedefinieerd in uw iOS/iPadOS-updatebeleid.
+       > U kunt instellingen configureren in [Apparaatbeperkingen](../configuration/device-restrictions-ios.md#general) om een update van gebruikers van een apparaat gedurende een bepaalde periode te verbergen op uw iOS/iPadOS-apparaten die onder toezicht staan. Een beperkingsperiode kan u tijd geven om een update te testen voordat deze voor gebruiker zichtbaar is voor installatie. Nadat de beperkingsperiode voor het apparaat is verlopen, wordt de update zichtbaar voor gebruikers. Gebruikers kunnen er vervolgens voor kiezen om het te installeren of via uw beleid voor software-updates kan het kort daarna automatisch worden geïnstalleerd.
+       >
+       > Wanneer u een beperking voor een apparaat gebruikt om een update te verbergen, moet u uw beleid voor software-updates controleren om ervoor te zorgen dat men de installatie van de update niet plant voordat deze beperkingsperiode afloopt. Met het beleid voor software-updates wordt het moment van de updates op basis van de eigen planning bepaald, ongeacht of de update wordt verborgen of zichtbaar is voor de gebruiker van het apparaat.
 
    Nadat u *Instellingen voor updatebeleid* hebt geconfigureerd, selecteert u **Volgende**.
 

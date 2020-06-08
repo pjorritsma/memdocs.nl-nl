@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/08/2020
+ms.date: 05/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17213a29d5182176fe2fd8e5802e5ca03587d8f7
-ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
+ms.openlocfilehash: efa965bc3dff2436a98602e3cb9dda96a1fe580d
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82991795"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84166153"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>UI-updates voor Intune-apps voor eindgebruikers
 
@@ -34,6 +34,19 @@ Informatie over de meest recente updates voor de Microsoft Intune-apps. We voege
 
 Zorg ervoor dat, als u een werknemer of student bent, u de schermafbeeldingen en koppelingen naar de Help-documentatie voor de bedrijfsportal bekijkt. Zie de [Help-documentatie voor bedrijfsportalgebruikers](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done) voor meer informatie over het gebruik van de bedrijfsportal-app.  
 
+
+
+## <a name="week-of-may-18-2020"></a>Week van 18 mei 2020  
+### <a name="update-to-icons-in-company-portal-app-for-iosipados-and-macos---6057697---"></a>Bijgewerkte pictogrammen in de Bedrijfsportal-app voor iOS/iPadOS en macOS <!--6057697 -->  
+We hebben de pictogrammen in Bedrijfsportal bijgewerkt voor een moderner uiterlijk dat wordt ondersteund op apparaten met twee schermen en is afgestemd op het Microsoft Fluent Design-systeem.
+
+|Bijgewerkt voor iOS/iPadOS|Eerder voor iOS/iPadOS|   
+|---|---|   
+|![Afbeelding van Bedrijfsportal voor iOS/iPadOS waarop de bijgewerkte pictogrammen in het onderste menu zijn gemarkeerd.](./media/whats-new-app-ui/company-portal-ios-icons-after-2005.png)|![Afbeelding van Bedrijfsportal voor iOS waarop de voormalige pictogrammen zijn gemarkeerd.](./media/whats-new-app-ui/company-portal-ios-icons-before-2005.png)| 
+
+|Bijgewerkt voor macOS|  
+|---|
+|![Afbeelding van het tabblad Apparaten in de Bedrijfsportal voor macOS waarop de bijgewerkte pictogrammen zijn gemarkeerd.](./media/whats-new-app-ui/company-portal-macos-icons-after-2005.png)|  
 
 
 ## <a name="week-of-may-4-2020"></a>Week van 4 mei 2020  

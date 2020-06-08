@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 06/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 38598e0245b0cfe15be4b9303620aea1724933d1
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.openlocfilehash: b81686f645d9fce610c39266feb2675fd35cc280
+ms.sourcegitcommit: 6f67c864cf71b4a6a316f4d04a6cc43cf28b4277
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166567"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84257032"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Met Android Enterprise-apparaatinstellingen kunt u functies toestaan of beperken met behulp van Intune
 
@@ -231,8 +231,16 @@ Gebruik deze instellingen om een kioskstijlervaring op uw toegewezen apparaten t
 
 ### <a name="applications"></a>Toepassingen
 
-- **Installatie vanuit onbekende bronnen toestaan**: Met **Toestaan** kunnen gebruikers **onbekende bronnen** inschakelen. Met deze instelling kunnen apps van onbekende bronnen worden geïnstalleerd, met inbegrip van andere bronnen dan Google Play Store. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem gebruikers verhindert om **onbekende bronnen** in te schakelen.
-- **Toegang tot alle apps in Google Play Store toestaan**: Als deze optie is ingesteld op **Toestaan**, krijgen gebruikers toegang tot alle apps in Google Play store. Ze krijgen geen toegang tot apps die de beheerder blokkeert in[Client-apps](../apps/apps-add-android-for-work.md). Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem gebruikers dwingt om alleen apps te openen die de beheerder beschikbaar maakt in Google Play Store of apps die zijn vereist in [Client-apps](../apps/apps-add-android-for-work.md).
+- **Installatie vanuit onbekende bronnen toestaan**: Met **Toestaan** kunnen gebruikers **onbekende bronnen** inschakelen. Met deze instelling kunnen apps van onbekende bronnen worden geïnstalleerd, met inbegrip van andere bronnen dan Google Play Store. Hiermee kunnen gebruikers apps op het apparaat side-loaden met behulp van een andere methode dan de Google Play Store. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem gebruikers verhindert om **onbekende bronnen** in te schakelen.
+- **Toegang tot alle apps in Google Play Store toestaan**: Als deze optie is ingesteld op **Toestaan**, krijgen gebruikers toegang tot alle apps in Google Play store. Ze krijgen geen toegang tot apps die de beheerder blokkeert in[Client-apps](../apps/apps-add-android-for-work.md).
+
+  Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem kan standaard het volgende doen:
+  
+  - Gebruikers dwingen om alleen apps te openen die de beheerder beschikbaar maakt in Google Play Store of apps die zijn vereist in [Client-apps](../apps/apps-add-android-for-work.md). 
+  - Automatisch apps verwijderen waarvan wordt gedetecteerd dat ze zijn geïnstalleerd door gebruikers buiten de Google Play Store.
+
+  Als u side-loaden wilt inschakelen, stelt **Installatie uit onbekende bronnen toestaan** en **Toegang tot alle apps in Google Play Store toestaan** in op **Toestaan**.
+
 - **App wordt automatisch bijgewerkt**: In apparaten wordt dagelijks gecontroleerd op app-updates. Kies deze optie wanneer updates automatisch worden geïnstalleerd. Uw opties zijn:
   - **Niet geconfigureerd**: Deze instelling wordt niet gewijzigd of bijgewerkt door Intune.
   - **Gebruikerskeuze**: Het besturingssysteem wordt mogelijk standaard ingesteld op deze optie. Gebruikers kunnen hun voorkeuren instellen in de beheerde Google Play-app.

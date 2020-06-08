@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/09/2020
-ms.topic: conceptual
+ms.date: 05/26/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e584019063c6af7f04f5666ba2c38d8199681c5
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 8f79ac0ef70eb9eccf47837517e3e69df3fdb3e8
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771418"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165716"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>De Intune-bedrijfsportal-apps, de bedrijfsportalwebsite en de Intune-app aanpassen
 
@@ -42,7 +42,7 @@ De volgende tabel bevat de gegevens voor huismerkaanpassing voor de eindgebruike
 | **Organisatienaam** | Deze naam wordt weergegeven in de berichten in de eindgebruikerservaring. Met de instelling **Weergeven in koptekst** kan worden ingesteld dat deze ook wordt weergegeven in kopteksten. De maximale lengte is 40 tekens. |
 | **Kleur** | Kies **Standaard** om te kiezen uit vijf standaardkleuren. Kies **Aangepast** om een specifieke kleur te selecteren op basis van een hexadecimale code. |
 | **Themakleur** | Stel de kleur van het thema in die u in de eindgebruikerservaring wilt weergeven. De tekstkleur wordt automatisch ingesteld op zwart of wit, zodat deze het best zichtbaar is op de geselecteerde themakleur. |
-| **Weergeven in koptekst** | Geef op of de koptekst in de eindgebruikerservaring het **Bedrijfslogo en -naam**, **Alleen bedrijfslogo** of **Alleen bedrijfsnaam** moet bevatten. In de onderstaande voorbeelden worden alleen de logo's weergegeven, niet de naam.  |
+| **Weergeven in koptekst** | Selecteer of de koptekst in de ervaring voor de eindgebruiker **Bedrijfslogo en -naam**, **Alleen organisatielogo** of **Alleen organisatienaam** moet weergeven. In de onderstaande voorbeelden worden alleen de logo's weergegeven, niet de naam.  |
 | **Logo uploaden voor achtergrondkleur van thema​** | Upload het logo dat u wilt weergeven tegen de achtergrondkleur van het geselecteerde thema. Voor de beste weergave uploadt u een logo met een transparante achtergrond. In het voorbeeldvak onder de instelling kunt u zien hoe dit er uitziet.<p>Maximale afbeeldingsgrootte: 400 x 400 px<br>Maximale bestandsgrootte:   750 KB<br>Bestandstype: PNG, JPG of JPEG |
 | **Logo uploaden voor witte of lichte achtergrond​** | Upload het logo dat u wilt weergeven tegen een witte of lichtgekleurde achtergrond. Voor de beste weergave uploadt u een logo met een transparante achtergrond. In het voorbeeldvak onder de instelling kunt u zien hoe dit er uitziet tegen een witte achtergrond.<p>Maximale afbeeldingsgrootte: 400 x 400 px<br>Maximale bestandsgrootte: 750 KB<br>Bestandstype: PNG, JPG of JPEG |
 | **Merkafbeelding uploaden​** | Upload een afbeelding die het merk van uw organisatie weergeeft.<p><ul><li>Aanbevolen breedte van afbeelding: Groter dan 1125 pixels (minimaal 650 pixels vereist)</li><li>Maximale afbeeldingsgrootte: 1,3 MB</li><li>Bestandstype: PNG, JPG of JPEG</li><li>Deze wordt weergegeven op de volgende locaties:</li><ul><li>Bedrijfsportal voor iOS/iPadOS: Achtergrondafbeelding op de profielpagina van de gebruiker.</li><li>Bedrijfsportalwebsite:   Achtergrondafbeelding op de profielpagina van de gebruiker.</li><li>Intune-app voor Android: In de lade en als achtergrondafbeelding op de profielpagina van de gebruiker.</li></ul></ul> |
@@ -86,21 +86,25 @@ Voer de ondersteuningsinformatie van uw organisatie in, zodat werknemers voor vr
 
 ## <a name="configuration"></a>Configuration
 
-De volgende tabel bevat aanvullende configuratiegegevens:
+U kunt de Bedrijfsportal-ervaring configureren, met name voor inschrijving, privacy, meldingen, app-bronnen en self-service acties.
+
+### <a name="enrollment"></a>Inschrijving
+
+De volgende tabel bevat specifieke configuratiedetails voor inschrijving:
 
 | Veldnaam | Maximale lengte | Meer informatie |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| URL voor de privacyverklaring | 79 | Stel de privacyverklaring van uw organisatie in zodat deze wordt weergegeven wanneer gebruikers op privacykoppelingen klikken. U moet een geldige URL opgeven in de notatie `https://www.contoso.com`. |
-| Privacybericht in de bedrijfsportal voor iOS​/iPadOS | 520 | Behoud de standaardinstelling of stel een Aangepast bericht in om de items weer te geven die uw organisatie wel of niet kan zien op beheerde iOS- en iPadOS-apparaten. U kunt Markdown gebruiken om opsommingstekens, vet, cursief en koppelingen toe te voegen. |
-| Apparaatinschrijving | N.v.t. | Geef op of en hoe gebruikers moeten worden gevraagd om zich in te schrijven bij Mobile Device Management. Zie hieronder voor meer informatie. |
-| Melding voor apparaateigendom | N.v.t. | Verzend een pushmelding naar zowel de gebruikers van de Android- als de iOS-bedrijfsportal wanneer het eigendomstype voor hun apparaat is gewijzigd van Persoonlijk in Zakelijk. Deze pushmelding is standaard uitgeschakeld. Wanneer het apparaateigendom is ingesteld op eigendom van het bedrijf, heeft Intune meer toegang tot het apparaat, waaronder de volledige app-inventaris, FileVault-sleutelrotatie, het ophalen van telefoonnummers en een aantal externe acties. Zie [Apparaateigendom wijzigen](../enrollment/corporate-identifiers-add.md#change-device-ownership) voor meer informatie.  |
+| Apparaatinschrijving | N.v.t. | Geef op of en hoe gebruikers moeten worden gevraagd om zich in te schrijven bij Mobile Device Management. Zie [Device enrollment setting options](../apps/company-portal-app.md#device-enrollment-setting-options) (Opties voor het instellen van apparaatinschrijving) voor meer informatie. |
 
-### <a name="device-enrollment-setting-options"></a>Opties voor het instellen van apparaatinschrijving
+#### <a name="device-enrollment-setting-options"></a>Opties voor het instellen van apparaatinschrijving
 
 > [!NOTE]
 > Voor ondersteuning van de instelling voor het inschrijven van apparaten moeten eindgebruikers beschikken over deze bedrijfsportalversies:
 > - Bedrijfsportal op iOS/iPadOS: versie 4.4 of hoger
 > - Bedrijfsportal op Android: versie 5.0.4715.0 of hoger 
+
+> [!IMPORTANT]
+> De volgende instellingen zijn niet van toepassing op iOS-en iPadOS-apparaten die zijn geconfigureerd om te worden ingeschreven met [Automatische apparaatinschrijving](../enrollment/device-enrollment-program-enroll-ios.md). Ongeacht hoe deze instellingen zijn geconfigureerd, worden iOS/iPadOS-apparaten die zijn geconfigureerd voor inschrijving met automatische apparaatregistratie, ingeschreven tijdens de out of box flow en worden gebruikers gevraagd zich aan te melden wanneer ze de Bedrijfsportal starten.
 
 |    Opties voor apparaatinschrijving    |    Beschrijving    |    Controlevragen    |    Melding    |    Status van apparaatgegevens    |    Status van app-details (van een app waarvoor inschrijving is vereist)    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
@@ -110,11 +114,51 @@ De volgende tabel bevat aanvullende configuratiegegevens:
 
 <sup>(1)</sup> **Bekend probleem:** Als u apps zo instelt dat inschrijving voor installatie is vereist en als u eveneens apparaatinschrijving instelt op 'Niet beschikbaar', worden gebruikers in de bedrijfsportal-app op Android alsnog geholpen bij de inschrijving. Dit wordt binnenkort verwijderd.
 
-> [!NOTE]
-> Als u gebruikmaakt van Azure Government, worden er app-logboeken aangeboden aan de eindgebruiker zodat deze kan beslissen hoe deze de logboeken graag wil delen wanneer er een probleem moet worden opgelost. Als u geen gebruik maakt van Azure Government, worden app-logboeken rechtstreeks vanuit de bedrijfsportal naar Microsoft verzonden wanneer de gebruiker hulp nodig heeft bij het oplossen van een probleem. Als de app-logboeken naar Microsoft worden verzonden, is het eenvoudiger om problemen op te lossen.
+### <a name="privacy"></a>Privacy
+
+De volgende tabel bevat specifieke configuratiedetails voor privacy:
+
+| Veldnaam | Maximale lengte | Meer informatie |
+|------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| URL voor de privacyverklaring | 79 | Stel de privacyverklaring van uw organisatie in zodat deze wordt weergegeven wanneer gebruikers op privacykoppelingen klikken. U moet een geldige URL opgeven in de notatie `https://www.contoso.com`. |
+| Privacybericht in de bedrijfsportal voor iOS​/iPadOS | 520 | Behoud de **Standaardinstelling** of stel een **Aangepast bericht** in om de items weer te geven die uw organisatie niet kan zien op beheerde iOS- en iPadOS-apparaten. U kunt Markdown gebruiken om opsommingstekens, vet, cursief en koppelingen toe te voegen. Gebruikers zien ook een lijst met items die uw organisatie kan zien en doen, maar deze lijst wordt automatisch gegenereerd door Intune en is niet aanpasbaar. |
+
+### <a name="device-ownership-notification"></a>Melding voor apparaateigendom
+
+De volgende tabel bevat specifieke configuratiedetails voor meldingen:
+
+| Veldnaam | Maximale lengte | Meer informatie |
+|------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Een pushmelding verzenden naar gebruikers wanneer het eigendomstype van het apparaat wordt gewijzigd van persoonlijk in zakelijk (alleen Android en iOS/iPadOS)​ | N.v.t. | Verzend een pushmelding naar zowel de gebruikers van de Android- als de iOS-bedrijfsportal wanneer het eigendomstype voor hun apparaat is gewijzigd van Persoonlijk in Zakelijk. Deze pushmelding is standaard uitgeschakeld. Wanneer het apparaateigendom is ingesteld op eigendom van het bedrijf, heeft Intune meer toegang tot het apparaat, waaronder de volledige app-inventaris, FileVault-sleutelrotatie, het ophalen van telefoonnummers en een aantal externe acties. Zie [Apparaateigendom wijzigen](../enrollment/corporate-identifiers-add.md#change-device-ownership) voor meer informatie.  |
+
+### <a name="app-sources"></a>App-bronnen
+
+U kunt kiezen welke extra app-bronnen worden weergegeven in Bedrijfsportal. De volgende tabel bevat specifieke configuratiedetails voor app-bronnen:
+
+| Veldnaam | Maximale lengte | Meer informatie |
+|------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Azure AD-ondernemingstoepassing | N.v.t. | Selecteer **Verbergen** of **Weergeven** om **Azure AD-ondernemingstoepassingen** in de Bedrijfsportal voor elke eindgebruiker weer te geven. Zie [App source setting options](../apps/company-portal-app.md#app-source-setting-options) (Opties voor app-broninstellingen) voor meer informatie. |
+| Office Online-toepassingen | N.v.t. | Selecteer **Verbergen** of **Weergeven** om **Office Online-toepassingen** in de Bedrijfsportal voor elke eindgebruiker weer te geven. Zie [App source setting options](../apps/company-portal-app.md#app-source-setting-options) (Opties voor app-broninstellingen) voor meer informatie. |
+
+#### <a name="app-source-setting-options"></a>Opties voor app-broninstellingen
 
 > [!NOTE]
-> Conform beleid van Microsoft en Apple verkopen we gegevens die met onze service zijn verzameld om geen enkele reden aan externe partijen.
+> Op de website van de Bedrijfsportal wordt in eerste instantie de weergave van apps van andere Microsoft-services ondersteund.
+
+U kunt **Azure AD-ondernemingstoepassingen** en **Office Online-toepassingen** in de Bedrijfsportal voor elke eindgebruiker weergeven of verbergen. **Weergeven** zorgt ervoor dat de Bedrijfsportal de hele toepassingscatalogus weergeeft van de gekozen Microsoft-service(s) die aan de gebruiker is/zijn toegewezen. **Azure AD-ondernemingstoepassingen** worden geregistreerd en toegewezen via de [Azure-portal](https://portal.azure.com). **Office Online-toepassingen** worden toegewezen met behulp van de licentiecontroles die beschikbaar zijn in het [M365-beheercentrum](https://admin.microsoft.com). U vindt deze configuratie-instelling door in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) **Tenantbeheer** > **Aanpassing** te selecteren. Standaard wordt elke extra app-bron ingesteld op **Verbergen**. 
+
+### <a name="customizing-user-self-service-actions-for-the-company-portal"></a>Self-serviceacties voor de gebruiker aanpassen voor de Bedrijfsportal
+
+U kunt de beschikbare self-serviceapparaatacties aanpassen die worden weergegeven aan eindgebruikers in de bedrijfsportal-app en -website. Als u onbedoelde apparaatacties wilt helpen voorkomen, kunt u instellingen configureren voor de Bedrijfsportal-app door **Tenantbeheer** > **Aanpassing** te selecteren. 
+
+Hiervoor zijn de volgende opties beschikbaar:
+- Knop **Verwijderen** verbergen op zakelijke Windows-apparaten.
+- Knop **Opnieuw instellen** verbergen op zakelijke Windows-apparaten.
+- Knop **Verwijderen** verbergen op zakelijke iOS/iPadOS-apparaten.
+- Knop **Opnieuw instellen** verbergen op zakelijke iOS/iPadOS-apparaten.
+
+> [!NOTE]
+> Deze acties kunnen worden gebruikt om apparaatacties in de Bedrijfsportal-app en op de website te beperken zonder een restrictiebeleid voor apparaten te implementeren. Als u wilt voorkomen dat gebruikers de fabrieksinstellingen opnieuw instellen of MDM verwijderen, moet u een restrictiebeleid voor apparaten configureren. 
 
 ## <a name="company-portal-derived-credentials-for-iosipados-devices"></a>Van de bedrijfsportal afgeleide referenties voor iOS/iPadOS-apparaten
 
@@ -136,7 +180,7 @@ Eindgebruikers kunnen navigatie-, app- en apparaatacties in de Windows-bedrijfsp
 De volgende sneltoetsen zijn beschikbaar in de Windows-bedrijfsportal-app.
 
 | Gebied | Beschrijving | Sneltoets |
-|:------------------:|:--------------:|:-----------------:|
+|--------------------|----------------|-------------------|
 | Navigatiemenu | Navigatie | Alt+M |
 |  | Home | Alt+H |
 |  | Alle apps | Alt+A |
@@ -159,7 +203,9 @@ Eindgebruikers zien ook de beschikbare snelkoppelingen in de Bedrijfsportal-app 
 
 ## <a name="user-self-service-device-actions-from-the-company-portal"></a>Apparaatacties voor selfservicegebruikers van de bedrijfsportal
 
-Gebruikers kunnen acties uitvoeren op hun lokale of externe apparaten via de bedrijfsportal-app of -website of de Intune-app op Android. De acties die gebruikers kunnen uitvoeren, kunnen per platform en configuratie van het apparaat verschillen. In alle gevallen kunnen de acties van het externe apparaat alleen worden uitgevoerd door de primaire gebruiker van het apparaat.
+Gebruikers kunnen acties uitvoeren op hun lokale of externe apparaten via de Bedrijfsportal-app, de Bedrijfsportal-website of de Intune-app op Android. De acties die gebruikers kunnen uitvoeren, kunnen per platform en configuratie van het apparaat verschillen. In alle gevallen kunnen de acties van het externe apparaat alleen worden uitgevoerd door de primaire gebruiker van het apparaat.  
+
+Beschikbare self-serviceacties voor apparaten zijn onder meer de volgende:
 
 - **Buiten gebruik stellen**: hiermee wordt het apparaat uit Intune verwijderd. In de app en op de website van de bedrijfsportal wordt dit weergegeven als **Verwijderen**.
 - **Wissen**: met deze actie wordt het apparaat opnieuw ingesteld. Op de website van de bedrijfsportal wordt dit weergegeven als **Opnieuw instellen** en als **Fabrieksinstellingen** in de iOS/iPadOS-bedrijfsportal-app.
@@ -169,14 +215,16 @@ Gebruikers kunnen acties uitvoeren op hun lokale of externe apparaten via de bed
 - **Wachtwoordcode opnieuw instellen**: deze actie wordt gebruikt om de wachtwoordcode van het apparaat opnieuw in te stellen. Op iOS/iPadOS-apparaten wordt de wachtwoordcode verwijderd en moet de eindgebruiker een nieuwe code invoeren in Instellingen. Op ondersteunde Android-apparaten wordt een nieuwe wachtwoordcode gegenereerd door Intune, die tijdelijk wordt weergegeven in de bedrijfsportal.
 - **Sleutelherstel**: deze actie wordt gebruikt om een persoonlijke herstelsleutel te herstellen voor versleutelde macOS-apparaten vanaf de Bedrijfsportal-website. 
 
+Zie [Customizing user self-service actions for the Company Portal](../apps/company-portal-app.md#customizing-user-self-service-actions-for-the-company-portal) (Self-service acties voor de gebruiker aanpassen voor de Bedrijfsportal) om de beschikbare self-service acties voor gebruikers aan te passen.
+
 ### <a name="self-service-actions"></a>Selfserviceacties
 
 Voor sommige platforms en configuraties zijn geen selfserviceacties voor apparaten toegestaan. De onderstaande tabel bevat meer informatie over selfserviceacties:
 
 |  | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
-| Buiten gebruik stellen | Beschikbaar<sup>(1)</sup> | Beschikbaar | Beschikbaar | Beschikbaar<sup>(7)</sup> |
-| Wissen | Beschikbaar | Beschikbaar<sup>(5)</sup> | NA | Beschikbaar<sup>(7)</sup> |
+| Buiten gebruik stellen | Beschikbaar<sup>(1)</sup> | Beschikbaar<sup>(9)</sup> | Beschikbaar | Beschikbaar<sup>(7)</sup> |
+| Wissen | Beschikbaar | Beschikbaar<sup>(5)</sup><sup>(9)</sup> | NA | Beschikbaar<sup>(7)</sup> |
 | Naam wijzigen<sup>(4)</sup> | Beschikbaar | Beschikbaar | Beschikbaar | Beschikbaar |
 | Synchroniseren | Beschikbaar | Beschikbaar | Beschikbaar | Beschikbaar |
 | Vergrendelen op afstand | Alleen Windows Phone | Beschikbaar | Beschikbaar | Beschikbaar |
@@ -190,8 +238,17 @@ Voor sommige platforms en configuraties zijn geen selfserviceacties voor apparat
 <sup>(5)</sup> **Wissen** is niet beschikbaar op door de gebruiker ingeschreven iOS/iPadOS-apparaten.<br>
 <sup>(6)</sup> **Wachtwoordcode opnieuw instellen** wordt niet ondersteund in bepaalde Android- en Android Enterprise-configuraties. Zie [De wachtwoordcode van een apparaat opnieuw instellen of verwijderen via Intune](../remote-actions/device-passcode-reset.md) voor meer informatie.<br>
 <sup>(7)</sup> **Buiten gebruik stellen** en **Wissen** is niet beschikbaar in Android Enterprise-apparaateigenaarscenario's (COPE, COBO, COSU).<br>
-<sup>(8)</sup>**Wachtwoordcode opnieuw instellen** wordt niet ondersteund voor door de gebruiker ingeschreven iOS/iPadOS-apparaten.
+<sup>(8)</sup>**Wachtwoordcode opnieuw instellen** wordt niet ondersteund voor door de gebruiker ingeschreven iOS/iPadOS-apparaten.<br>
+<sup>(9)</sup>Voor alle iOS/iPadOS-apparaten met automatische inschrijving (voorheen bekend als DEP) zijn de opties **Buiten gebruik stellen** en **Wissen** uitgeschakeld.
+
+### <a name="app-logs"></a>App-logboeken
+
+Als u gebruikmaakt van Azure Government, worden er app-logboeken aangeboden aan de eindgebruiker zodat deze kan beslissen hoe deze de logboeken graag wil delen wanneer er een probleem moet worden opgelost. Als u geen gebruik maakt van Azure Government, worden app-logboeken rechtstreeks vanuit de bedrijfsportal naar Microsoft verzonden wanneer de gebruiker hulp nodig heeft bij het oplossen van een probleem. Als de app-logboeken naar Microsoft worden verzonden, is het eenvoudiger om problemen op te lossen.
+
+> [!NOTE]
+> Conform beleid van Microsoft en Apple verkopen we gegevens die met onze service zijn verzameld om geen enkele reden aan externe partijen.
 
 ## <a name="next-steps"></a>Volgende stappen
 
+- [Het logo en de merkkleur van uw organisatie configureren voor nieuwe tabbladen in Microsoft Edge voor iOS en Android](manage-microsoft-edge.md#organization-logo-and-brand-color)
 - [Apps toevoegen](apps-add.md)

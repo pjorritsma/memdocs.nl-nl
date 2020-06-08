@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/02/2020
+ms.date: 06/01/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 70cb3e2f8baf89be5e77867b385788cb04181ba1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 8814e1a2c6b1af48d71a0a82c02492e48b44dda9
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986032"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84271004"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Intune (zelfstandig) - Win32-app-beheer
 
@@ -66,7 +66,7 @@ Als u `IntuneWinAppUtil.exe` uitvoert zonder parameters vanuit het opdrachtvenst
 ### <a name="available-command-line-parameters"></a>Beschikbare opdrachtregelparameters 
 
 |    **Opdrachtregelparameter**    |    **Beschrijving**    |
-|:------------------------------:|:----------------------------------------------------------:|
+|--------------------------------|------------------------------------------------------------|
 |    `-h`     |    Help    |
 |    `-c <setup_folder>`     |    De map voor alle installatiebestanden. Alle bestanden in deze map worden gecomprimeerd in een *.intunewin*-bestand.    |
 |    `-s <setup_file>`     |    Installatiebestand (zoals *setup.exe* of *setup.msi*).    |
@@ -76,7 +76,7 @@ Als u `IntuneWinAppUtil.exe` uitvoert zonder parameters vanuit het opdrachtvenst
 ### <a name="example-commands"></a>Voorbeeldopdrachten
 
 |    **Voorbeeldopdracht**    |    **Beschrijving**    |
-|:-----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|-------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    `IntuneWinAppUtil -h`    |    Met deze opdracht worden de gebruiksgegevens voor het hulpprogramma weergegeven.    |
 |    `IntuneWinAppUtil -c c:\testapp\v1.0 -s c:\testapp\v1.0\setup.exe -o c:\testappoutput\v1.0 -q`    |    Met deze opdracht genereert u het `.intunewin`-bestand van de opgegeven bronmap en het installatiebestand. Dit hulpprogramma haalt vereiste informatie voor Intune op voor het MSI-installatiebestand. Als `-q` is opgegeven, wordt de opdracht uitgevoerd in de stille modus. Als het uitvoerbestand al bestaat, wordt het overschreven. Als de uitvoermap niet bestaat, wordt deze automatisch gemaakt.    |
 
@@ -456,7 +456,7 @@ Vervang in de bovenstaande PowerShell-opdracht `<path to binary file>` door het 
 - Controleer de versie van het besturingssysteem: Windows 10 1607 en hoger.  
 - Controleer de Windows 10-SKU; Windows 10 S en Windows-versies met de S-modus ingeschakeld bieden geen ondersteuning voor MSI-installatie.
 
-Zie [Problemen met de installatie van Win32-apps oplossen](troubleshoot-app-install.md#win32-app-installation-troubleshooting) voor meer informatie over het oplossen van problemen met Win32-apps.
+Zie [Problemen met de installatie van Win32-apps oplossen](troubleshoot-app-install.md#win32-app-installation-troubleshooting) voor meer informatie over het oplossen van problemen met Win32-apps. Zie [App types supported on ARM64 device](../apps/troubleshoot-app-install.md#app-types-supported-on-arm64-devices) (Typen apps die worden ondersteund op ARM64-apparaten) voor meer informatie over app-typen op ARM64-apparaten.
 
 ## <a name="next-steps"></a>Volgende stappen
 

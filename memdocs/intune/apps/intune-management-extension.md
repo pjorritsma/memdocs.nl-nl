@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8d75208de7cc6697699d79e3a52df742f605fdb
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 529d7a7da1257b9ebce1e1ab3cec706e8f100403
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990731"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270936"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>PowerShell-scripts op Windows 10-apparaten gebruiken in Intune
 
@@ -68,7 +68,7 @@ De Intune-beheeruitbreiding heeft de volgende vereisten. Zodra aan de vereisten 
     
     - De gebruiker meldt zich op het apparaat aan bij diens Azure AD-account, waarna het apparaat bij Intune wordt ingeschreven.
 
-  - Gezamenlijk beheerde apparaten waarop gebruik wordt gemaakt Configuration Manager en Intune. Zorg ervoor dat de workload **Apps** is ingesteld op **testfase voor Intune** of **Intune**. Raadpleeg de volgende artikelen voor meer informatie: 
+  - Gezamenlijk beheerde apparaten waarop gebruik wordt gemaakt Configuration Manager en Intune. Wanneer u Win32-apps installeert, moet u ervoor zorgen dat de workload van **Apps** is ingesteld op **Testfase voor Intune** of **Intune**. PowerShell-scripts worden zelfs uitgevoerd als de workload voor **Apps** is ingesteld op **Configuration Manager**. De Intune-beheerextensie wordt geïmplementeerd op een apparaat wanneer u een PowerShell-script naar het apparaat target. Zoals hierboven vermeld, moet het apparaat echter een Azure AD- of hybride Azure AD-gekoppeld apparaat zijn met Windows 10 versie 1607 of hoger. Raadpleeg de volgende artikelen voor meer informatie: 
   
     - [Wat is co-beheer?](https://docs.microsoft.com/configmgr/comanage/overview) 
     - [Workload Client-apps](https://docs.microsoft.com/configmgr/comanage/workloads#client-apps)

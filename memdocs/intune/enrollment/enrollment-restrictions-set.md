@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 08/17/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4da13b77b52a8110072dcba208b70d1ce0407cbb
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: c1bbcfc953945f7e8525cb7dc7edf3b1dd8a2f5c
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077985"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989074"
 ---
 # <a name="set-enrollment-restrictions"></a>Registratiebeperkingen instellen
 
@@ -83,12 +83,14 @@ Standaardbeperkingen worden automatisch opgegeven voor registratiebeperkingen vo
 
 6. Kies onder **Persoonlijk eigendom** de optie **Toestaan** voor de platforms die u wilt toestaan als apparaten in persoonlijk eigendom.
 7. Voer onder **Apparaatfabrikant** een door komma's gescheiden lijst in van de fabrikanten die u wilt blokkeren.
-8. Kies **Volgende** om naar de pagina **Toewijzingen** te gaan.
-9. Kies **Groepen selecteren om op te nemen** en gebruik vervolgens het zoekvak om groepen te vinden die u wilt opnemen in deze beperking. De beperking geldt alleen voor de groepen waaraan deze is toegewezen. Als u geen beperking aan ten minste één groep toewijst, heeft deze bewerking dit geen effect. Kies dan de optie **Selecteren**. 
+8. Kies **Volgende** om naar de pagina **Bereiktags** te gaan.
+9. Voeg op de pagina **Bereiktags** eventueel de bereiktags toe die u wilt toepassen op deze beperking. Zie [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md) (Op rollen gebaseerd toegangsbeheer en bereiktags gebruiken voor gedistribueerde IT) voor meer informatie over bereiktags. Wanneer u bereiktags gebruikt met inschrijvingsbeperkingen, kunnen gebruikers alleen het beleid opnieuw rangschikken dat binnen hun bereik ligt. Ze kunnen bovendien alleen rangschikken voor de beleidsposities die binnen hun bereik liggen. Gebruikers zien het werkelijke beleidsprioriteitsnummer op elke beleidsregel. Een gebruiker binnen bereik kan de relatieve prioriteit van de beleidsregel aangeven, zelfs als deze niet alle andere beleidsregels kan zien.
+10. Kies **Volgende** om naar de pagina **Toewijzingen** te gaan.
+11. Kies **Groepen selecteren om op te nemen** en gebruik vervolgens het zoekvak om groepen te vinden die u wilt opnemen in deze beperking. De beperking geldt alleen voor de groepen waaraan deze is toegewezen. Als u geen beperking aan ten minste één groep toewijst, heeft deze bewerking dit geen effect. Kies dan de optie **Selecteren**. 
     ![Schermopname voor het kiezen van platforminstellingen](./media/enrollment-restrictions-set/select-groups.png)
-10. Selecteer **Volgende** om naar de pagina **Controleren en maken** te gaan.
-11. Selecteer **Maken** om de beperking te maken.
-12. De nieuwe beperking wordt gemaakt met een prioriteit boven de standaardwaarde. U kunt [de prioriteit wijzigen](#change-enrollment-restriction-priority).
+12. Selecteer **Volgende** om naar de pagina **Controleren en maken** te gaan.
+13. Selecteer **Maken** om de beperking te maken.
+14. De nieuwe beperking wordt gemaakt met een prioriteit boven de standaardwaarde. U kunt [de prioriteit wijzigen](#change-enrollment-restriction-priority).
 
 
 ## <a name="create-a-device-limit-restriction"></a>Een beperking voor apparaatlimiet maken
@@ -98,12 +100,14 @@ Standaardbeperkingen worden automatisch opgegeven voor registratiebeperkingen vo
 3. Kies **Volgende** om naar de pagina **Apparaatlimiet** te gaan.
 4. Selecteer voor **Apparaatlimiet** het maximum aantal apparaten dat een gebruiker kan inschrijven.
     ![Schermopname voor het kiezen van de apparaatlimiet](./media/enrollment-restrictions-set/choose-device-limit.png)
-5. Kies **Volgende** om naar de pagina **Toewijzingen** te gaan.
-6. Kies **Groepen selecteren om op te nemen** en gebruik vervolgens het zoekvak om groepen te vinden die u wilt opnemen in deze beperking. De beperking geldt alleen voor de groepen waaraan deze is toegewezen. Als u geen beperking aan ten minste één groep toewijst, heeft deze bewerking dit geen effect. Kies dan de optie **Selecteren**. 
+5. Kies **Volgende** om naar de pagina **Bereiktags** te gaan.
+6. Voeg op de pagina **Bereiktags** eventueel de bereiktags toe die u wilt toepassen op deze beperking. Zie [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md) (Op rollen gebaseerd toegangsbeheer en bereiktags gebruiken voor gedistribueerde IT) voor meer informatie over bereiktags. Wanneer u bereiktags gebruikt met inschrijvingsbeperkingen, kunnen gebruikers alleen het beleid opnieuw rangschikken dat binnen hun bereik ligt. Ze kunnen bovendien alleen rangschikken voor de beleidsposities die binnen hun bereik liggen. Gebruikers zien het werkelijke beleidsprioriteitsnummer op elke beleidsregel. Een gebruiker binnen bereik kan de relatieve prioriteit van de beleidsregel aangeven, zelfs als deze niet alle andere beleidsregels kan zien.
+7. Kies **Volgende** om naar de pagina **Toewijzingen** te gaan.
+8. Kies **Groepen selecteren om op te nemen** en gebruik vervolgens het zoekvak om groepen te vinden die u wilt opnemen in deze beperking. De beperking geldt alleen voor de groepen waaraan deze is toegewezen. Als u geen beperking aan ten minste één groep toewijst, heeft deze bewerking dit geen effect. Kies dan de optie **Selecteren**. 
     ![Schermopname voor het selecteren van groepen](./media/enrollment-restrictions-set/select-groups-device-limit.png)
-7. Selecteer **Volgende** om naar de pagina **Controleren en maken** te gaan.
-8. Selecteer **Maken** om de beperking te maken.
-9. De nieuwe beperking wordt gemaakt met een prioriteit boven de standaardwaarde. U kunt [de prioriteit wijzigen](#change-enrollment-restriction-priority).
+9. Selecteer **Volgende** om naar de pagina **Controleren en maken** te gaan.
+10. Selecteer **Maken** om de beperking te maken.
+11. De nieuwe beperking wordt gemaakt met een prioriteit boven de standaardwaarde. U kunt [de prioriteit wijzigen](#change-enrollment-restriction-priority).
 
 Bij BYOD-registraties wordt er een melding aan gebruikers weergegeven waarin staat wanneer zij hun limiet van geregistreerde apparaten hebben bereikt. Bijvoorbeeld in iOS:
 

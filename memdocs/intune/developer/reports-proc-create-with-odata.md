@@ -6,7 +6,7 @@ keywords: Intune-datawarehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/03/2019
+ms.date: 05/29/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87c1a63ffdfc0b923f636159536f6d6cf6420db9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 081d293432e15fccfd2b30d2eb7b7c300789e74f
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79360012"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270970"
 ---
 # <a name="create-an-intune-report-from-the-odata-feed-with-power-bi"></a>Een Intune-rapport maken van de OData-feed met Power BI
 
@@ -54,9 +54,9 @@ Installeer de nieuwste versie van Power BI Desktop. U kunt Power BI Desktop down
 > [!Note]  
 > U hebt machtigingen nodig om **Rapporten** te maken in Intune. Zie [Autorisatie](reports-api-url.md#authorization) voor meer informatie.
 
-1. Meld u aan bij [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Open het deelvenster **Intune Data Warehouse** door de link Data Warehouse onder **Andere taken** te selecteren aan de rechterkant van de blade **Microsoft Intune - Overzicht**.
-3. Kopieer de aangepaste feed-URL. Bijvoorbeeld: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta`
+1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Selecteer **Rapporten** > **Intune-datawarehouse** > **Datawarehouse**.
+3. Kopieer de aangepaste feed-URL. Bijvoorbeeld: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=v1.0`
 4. Open Power BI Desktop.
 5. Selecteer in de menubalk **Bestand** > **Gegevens ophalen** > **Odata-feed**.
 6. Plak de aangepaste feed-URL, die u in de eerdere stap hebt gekopieerd, in het vak voor de URL in het venster **OData-feed**.

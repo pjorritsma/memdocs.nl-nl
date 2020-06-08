@@ -1,13 +1,13 @@
 ---
 title: Microsoft Edge voor iOS en Android beheren met Intune
 titleSuffix: ''
-description: Hanteer het Intune-beveiligingsbeleid voor apps met Microsoft Edge zodat bedrijfswebsites altijd onder veilige omstandigheden toegankelijk zijn.
+description: Hanteer het Intune-beveiligingsbeleid voor apps met Microsoft Edge voor iOS en Android zodat bedrijfswebsites altijd onder veilige omstandigheden toegankelijk zijn.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/27/2020
-ms.topic: conceptual
+ms.date: 05/19/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,251 +18,282 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 373c3c5a6a3167943d78e5a17ac9b7cab8afba8a
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: ad0a886aba8e1966e47e9ea11c99cb97c35c4f5a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943855"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988376"
 ---
-# <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Internettoegang beheren met behulp van Microsoft Edge met Microsoft Intune
+# <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>Internettoegang beheren met behulp van Microsoft Edge voor iOS en Android met Microsoft Intune
 
-Wanneer u het Intune-beveiligingsbeleid voor apps met Microsoft Edge hanteert, helpt dat ervoor te zorgen dat bedrijfswebsites altijd onder veilige omstandigheden toegankelijk zijn. Op basis van Intune-beleid zijn de volgende zakelijke functies van Microsoft Edge beschikbaar:
+Microsoft Edge voor iOS en Android is ontworpen om gebruikers in staat te stellen op internet te surfen en ondersteunt meerdere identiteiten. Gebruikers kunnen een werkaccount en een persoonlijk account maken om mee te browsen. Er is een volledige scheiding tussen de twee identiteiten, vergelijkbaar met wat wordt aangeboden in andere mobiele apps van Microsoft.
 
-- **Dual-Identity.** Gebruikers kunnen een werkaccount en een persoonlijk account maken om mee te browsen. Er is sprake van een volledige scheiding tussen de twee identiteiten. Dit is vergelijkbaar met de architectuur en ervaring in Office 365 en Outlook. Intune-beheerders kunnen het gewenste beleid instellen voor beveiligde browsersessies binnen het werkaccount.
-- **App-beveiligingsbeleid van Intune integreren.** Aangezien Microsoft Edge is geïntegreerd met de Intune SDK kunt u app-beveiligingsbeleid gericht toepassen om bescherming te bieden tegen gegevensverlies. Met deze functies kan bijvoorbeeld het gebruik van knippen, kopiëren en plakken worden beheerd, en het maken van schermafdrukken worden geblokkeerd. Ook kan ervoor worden gezorgd dat door de gebruiker geselecteerde koppelingen uitsluitend worden geopend in andere beheerde apps.
-- **Proxy-integratie met Azure-toepassingen.** U kunt de toegang tot SaaS-apps (software als een dienst) en -web-apps beheren. Hiermee zorgt u ervoor dat browser-apps alleen worden uitgevoerd in de beveiligde Microsoft Edge-browser, of eindgebruikers nu verbinding maken vanuit het bedrijfsnetwerk of vanaf internet.
-- **Toepassingsconfiguratie.** U kunt door middel van de configuratie-instellingen voor toepassingen de beveiligingspositie van uw organisatie versterken en gebruiksvriendelijke functies configureren voor uw eindgebruikers. Zo kunt u bladwijzers, een snelkoppeling naar de startpagina, toegestane of geblokkeerde sites en een Azure Active Directory-toepassingsproxy (Azure AD) definiëren.
-
-Met beveiligingsbeleid van Microsoft Intune voor Microsoft Edge kunt u de gegevens en resources in uw organisatie beveiligen. Wanneer u dit beleid toepast met Microsoft Edge, zijn de resources van uw bedrijf beveiligd, niet alleen in systeemeigen geïnstalleerde apps, maar ook bij toegang via een webbrowser.
-
-## <a name="getting-started"></a>Aan de slag
-
-U en uw eindgebruikers kunnen Microsoft Edge in openbare app stores downloaden en deze in uw organisaties gebruiken. Voor browserbeleid gelden de volgende besturingssysteemvereisten:
-- Android 5 en hoger
-- iOS 12.0 en hoger
-
-## <a name="application-protection-policies-for-microsoft-edge"></a>Beveiligingsbeleid voor apps voor Microsoft Edge
-
-Aangezien Microsoft Edge is geïntegreerd met de Intune SDK, kunt u ook hierop het beveiligingsbeleid voor apps toepassen.
-
-U kunt deze instellingen toepassen op:
-- Apparaten die zijn ingeschreven bij Intune.
-- Apparaten die zijn ingeschreven bij een ander Mobile Device Management-product.
-- Niet-beheerde apparaten.
-
-Als Microsoft Edge niet wordt gekoppeld aan Intune-beleid, kunnen gebruikers het niet gebruiken om toegang te krijgen tot gegevens in andere door Intune beheerde toepassingen, zoals Office-apps. 
-
-   >[!NOTE]
-   > Het lang ingedrukt houden van toetsen is uitgeschakeld voor Microsoft Edge wanneer het 'Opslaan als'-beleid wordt toegepast, waardoor het niet mogelijk is om afbeeldingen te downloaden.
-
-## <a name="conditional-access-for-microsoft-edge"></a>Voorwaardelijke toegang voor Microsoft Edge
-
-U kunt gebruikmaken van voorwaardelijke toegang van Azure AD om de gebruikers om te leiden, zodat deze uitsluitend toegang hebben tot bedrijfsinhoud via Microsoft Edge. Dit beperkt de toegang in mobiele browsers tot web-apps die via Azure AD zijn verbonden met Microsoft Edge dat met beleid is beveiligd. De toegang vanuit andere onbeschermde browsers, bijvoorbeeld Safari of Chrome, is geblokkeerd. U kunt voorwaardelijke toegang toepassen op Azure-resources, zoals Exchange Online en SharePoint Online, het Microsoft 365-beheercentrum en zelfs on-premises sites die u aan externe gebruikers beschikbaar hebt gesteld via de [Azure AD-toepassingsproxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started).
+Microsoft Edge voor iOS wordt ondersteund op iOS 12.0 en hoger. Microsoft Edge voor Android wordt ondersteund op Android 5 en hoger.
 
 > [!NOTE]
-> Nieuwe webclips (vastgemaakte webtoepassingen) op iOS-apparaten worden geopend in Microsoft Edge in plaats van in de Intune Managed Browser wanneer ze in een beveiligde browser moeten worden geopend. Voor oudere iOS-webclips moet u een nieuw doel opgeven om ervoor te zorgen dat ze worden geopend in Microsoft Edge in plaats van in de Managed Browser.
+> Microsoft Edge voor iOS en Android maakt geen gebruik van de instellingen die gebruikers configureren voor de systeemeigen browser op hun apparaten, omdat Microsoft Edge voor iOS en Android geen toegang heeft tot deze instellingen.
 
-Ga als volgt te werk als u met Azure AD verbonden web-apps wilt beperken tot gebruik van Microsoft Edge in iOS en Android:
-1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecteer onder het Intune-knooppunt achtereenvolgens **Voorwaardelijke toegang** > **Nieuw beleid**.
-3. Selecteer **Verlenen** in het gedeelte **Besturingselementen voor toegang** van het deelvenster.
-4. Selecteer **Goedgekeurde client-app vereisen**.
-5. Kies **Selecteren** in het deelvenster **Verlenen**. Dit beleid moet worden toegewezen aan de cloud-apps die u alleen voor de Intune Managed Browser-app toegankelijk wilt maken.
+De meest veelzijdige en breedste beveiligingsmogelijkheden voor Office 365-gegevens zijn beschikbaar wanneer u zich abonneert op de Enterprise Mobility + Security Suite, die functies bevat van Microsoft Intune en Azure Active Directory Premium, zoals voorwaardelijke toegang. U moet minimaal een beleid voor voorwaardelijke toegang implementeren dat alleen connectiviteit toestaat voor Microsoft Edge voor iOS en Android vanaf mobiele apparaten en een Intune-beleid voor app-beveiliging dat ervoor zorgt dat de surfervaring wordt beschermd.
 
-    ![Schermopname van beleid voor voorwaardelijke toegang - Toekennen](./media/manage-microsoft-edge/manage-microsoft-edge-01.png)
+> [!NOTE]
+> Nieuwe webclips (vastgemaakte webtoepassingen) op iOS-apparaten worden geopend in Microsoft Edge voor iOS en Android in plaats van in de Intune Managed Browser wanneer ze in een beveiligde browser moeten worden geopend. Voor oudere iOS-webclips moet u een nieuw doel opgeven om ervoor te zorgen dat ze worden geopend in Microsoft Edge voor iOS en Android in plaats van in de Managed Browser.
 
-6. Selecteer in het gedeelte Toewijzingen **Voorwaarden** > **Apps**. Het deelvenster **Apps** wordt weergegeven.
-7. Selecteer **Ja** onder **Configureren** om het beleid voor specifieke client-apps toe te passen.
-8. Controleer of **Browser** is geselecteerd als client-app.
+## <a name="apply-conditional-access"></a>Voorwaardelijke toegang toepassen
+Organisaties kunnen gebruikmaken van het beleid voor voorwaardelijke toegang van Azure AD om ervoor te zorgen dat gebruikers alleen toegang hebben tot werk- of schoolinhoud met behulp van Microsoft Edge voor iOS en Android. Hiervoor hebt u een beleid voor voorwaardelijke toegang nodig dat zich richt op alle potentiële gebruikers. Meer informatie over het maken van dit beleid vindt u in [Beveiligingsbeleid voor apps vereisen voor toegang tot cloud-apps met voorwaardelijke toegang](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access).
 
-    ![Schermopname van beleid voor voorwaardelijke toegang - Client-apps selecteren](./media/manage-microsoft-edge/manage-microsoft-edge-02.png)
+1. Volg [Scenario 2: Voor browser-apps zijn goedgekeurde apps met app-beveiligingsbeleid vereist](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-2-browser-apps-require-approved-apps-with-app-protection-policies), waarmee Microsoft Edge voor iOS en Android is toegestaan, maar andere webbrowsers voor mobiele apparaten worden geblokkeerd en geen verbinding kunnen maken met Office 365-eindpunten.
 
-    > [!NOTE]
-    > Als u wilt beperken welke systeemeigen apps (niet-browser-apps) toegang hebben tot deze cloudtoepassingen, kunt u ook **Mobiele apps en bureaublad-clients** selecteren.
+   >[!NOTE]
+   > Dit beleid zorgt ervoor dat mobiele gebruikers toegang hebben tot alle Office 365-eindpunten vanuit Microsoft Edge voor iOS en Android. Dit beleid voorkomt ook dat gebruikers InPrivate gebruiken om toegang te krijgen tot Office 365-eindpunten.
 
-9. Selecteer in het gedeelte **Toewijzingen** de optie **Gebruikers en groepen** en kies vervolgens de gebruikers of groepen die u wilt toewijzen aan dit beleid.
+Met voorwaardelijke toegang kunt u zich ook richten op on-premises sites die u zichtbaar hebt gemaakt voor externe gebruikers via de [Azure AD-toepassingsproxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started).
 
-10. Selecteer in de sectie **Toewijzingen** de optie **Cloud-apps** om te kiezen welke apps met dit beleid moeten worden beveiligd.
+## <a name="create-intune-app-protection-policies"></a>Beveiligingsbeleid voor apps in Intune maken
 
-Nadat het bovenstaande beleid is geconfigureerd, worden gebruikers gedwongen om Microsoft Edge te gebruiken voor toegang tot de met Azure AD verbonden web-apps die u met dit beleid hebt beveiligd. Als gebruikers in dit scenario een onbeheerde browser proberen te gebruiken, ontvangen zij een bericht waarin wordt vermeld dat Microsoft Edge moet worden gebruikt.
+App-beveiligingsbeleid (APP) bepaalt welke apps zijn toegestaan en welke acties deze kunnen uitvoeren met de gegevens van uw organisatie. Dankzij de opties die beschikbaar zijn in APP kunnen organisaties de beveiliging aanpassen aan hun specifieke behoeften. Het is mogelijk niet voor iedereen duidelijk welke beleidsinstellingen vereist zijn om een volledig scenario te implementeren. Microsoft heeft een taxonomie geïntroduceerd voor het APP-gegevensbeschermingframework voor het beheer van mobiele iOS- en Android-apps om organisaties te helpen bij het bepalen van de prioriteit van de beveiliging van mobiele clienteindpunten.
 
-> [!TIP]
-> Voorwaardelijke toegang is een technologie van Azure AD. Het knooppunt voor voorwaardelijke toegang dat via Intune wordt geopend, is hetzelfde als het knooppunt dat u opent via Azure AD.
+Het APP-gegevensbeschermingframework is onderverdeeld in drie afzonderlijke configuratieniveaus, waarbij elk niveau is gebaseerd op het vorige niveau:
+
+- Met **Basisgegevensbescherming voor ondernemingen** (niveau 1) worden apps beveiligd met een pincode en versleuteld, en worden selectieve wisbewerkingen uitgevoerd. Voor Android-apparaten worden met dit niveau Android-apparaatbevestiging gevalideerd. Dit is een configuratie op instapniveau die vergelijkbare gegevensbescherming biedt in het Exchange Online-postvakbeleid en die IT en de gebruikerspopulatie laat kennismaken met APP.
+- Met **Geavanceerde gegevensbescherming voor ondernemingen** (niveau 2) worden mechanismen voor preventie van gegevenslekkage en minimale vereisten voor het besturingssysteem geïntroduceerd. Dit is de configuratie die van toepassing is op de meeste mobiele gebruikers die toegang hebben tot werk- of schoolgegevens.
+- Met **Hoge gegevensbeveiliging voor ondernemingen** (niveau 3) worden geavanceerde mechanismen voor gegevensbeveiliging, verbeterde configuratie van de pincode en APP Mobile Threat Defense geïntroduceerd. Deze configuratie is wenselijk voor gebruikers die toegang hebben tot gegevens met een hoog risico.
+
+Als u de specifieke aanbevelingen voor elk configuratieniveau en de apps die minimaal moeten worden beveiligd, wilt bekijken, bestudeert u [Gegevensbeschermingsframework met behulp van beveiligingsbeleid voor apps](app-protection-framework.md).
+
+Of het apparaat nu wel of niet is ingeschreven in een UEM-oplossing (Unified endpoint Management), er moet een Intune-app-beveiligingsbeleid worden gemaakt voor zowel iOS- als Android-apps, met behulp van de stappen in [App-beveiligingsbeleid maken en toewijzen](app-protection-policies.md). Deze beleidsregels moeten minimaal voldoen aan de volgende voorwaarden:
+
+1. Ze omvatten alle mobiele Microsoft-toepassingen, zoals Outlook, OneDrive, Office of Teams, omdat dit ervoor zorgt dat gebruikers op een veilige manier toegang hebben tot werk- of schoolgegevens binnen elke Microsoft-app.
+
+2. Ze worden toegewezen aan alle gebruikers. Dit zorgt ervoor dat alle gebruikers worden beveiligd, ongeacht of ze Microsoft Edge voor iOS of Android gebruiken.
+
+3. Bepaal welk frameworkniveau voldoet aan uw vereisten. De meeste organisaties moeten de instellingen implementeren die zijn gedefinieerd in **Geavanceerde gegevensbescherming voor ondernemingen** (niveau 2), omdat hiermee besturingselementen voor gegevensbescherming en toegangsvereisten worden ingeschakeld.
+
+Zie [Beveiligingsbeleidsinstellingen voor Android-apps](app-protection-policy-settings-android.md) en [Beveiligingsbeleidsinstellingen voor iOS-apps](app-protection-policy-settings-ios.md) voor meer informatie over de beschikbare instellingen.
+
+> [!IMPORTANT]
+> Als u Intune-app-beveiligingsbeleid wilt toepassen op apps op Android-apparaten die niet zijn ingeschreven bij Intune, moet de gebruiker ook de Intune-bedrijfsportal installeren. Raadpleeg [Wat u kunt verwachten wanneer uw Android-app wordt beheerd door een app-beveiligingsbeleid](../fundamentals/end-user-mam-apps-android.md) voor meer informatie.
 
 ## <a name="single-sign-on-to-azure-ad-connected-web-apps-in-policy-protected-browsers"></a>Eenmalige aanmelding voor met Azure AD verbonden web-apps in met beleid beveiligde browsers
 
-In Microsoft Edge in iOS en Android kan eenmalige aanmelding (SSO) worden gebruikt voor alle web-apps (SaaS en on-premises) die met Azure AD zijn verbonden. Met eenmalige aanmelding kunnen gebruikers toegang krijgen tot met Azure AD verbonden web-apps via Microsoft Edge, zonder dat ze hun referenties opnieuw hoeven op te geven.
+In Microsoft Edge voor iOS en Android kan eenmalige aanmelding (SSO) worden gebruikt voor alle web-apps (SaaS en on-premises) die met Azure AD zijn verbonden. Met eenmalige aanmelding kunnen gebruikers toegang krijgen tot met Azure AD verbonden web-apps via Microsoft Edge voor iOS en Android, zonder dat ze hun referenties opnieuw hoeven op te geven.
 
-Voor eenmalige aanmelding moet uw apparaat zijn geregistreerd door de Microsoft Authenticator-app voor iOS-apparaten of de Intune-bedrijfsportal voor Android. Als gebruikers over een van beide beschikken, wordt hen gevraagd hun apparaat te registreren wanneer ze naar een met Azure AD verbonden web-app in een met beleid beschermde browser gaan. (Dit geldt alleen als hun apparaat niet al is geregistreerd.) Nadat het apparaat is geregistreerd met het gebruikersaccount dat wordt beheerd door Intune, is voor dat account eenmalige aanmelding ingeschakeld voor web-apps die met Azure AD zijn verbonden.
+Voor eenmalige aanmelding moet uw apparaat zijn geregistreerd door de Microsoft Authenticator-app voor iOS-apparaten of de Intune-bedrijfsportal voor Android. Als gebruikers over een van beide beschikken, wordt hen gevraagd hun apparaat te registreren wanneer ze naar een met Azure AD verbonden web-app in een met beleid beschermde browser gaan (dit geldt alleen als hun apparaat nog niet is geregistreerd). Nadat het apparaat is geregistreerd met het gebruikersaccount dat wordt beheerd door Intune, is voor dat account eenmalige aanmelding ingeschakeld voor web-apps die met Azure AD zijn verbonden.
 
 > [!NOTE]
 > Apparaatregistratie is eenvoudig inchecken met de Azure AD-service. Dit vereist geen volledige apparaatinschrijving en geeft IT geen extra bevoegdheden op het apparaat.
 
-## <a name="create-a-protected-browser-app-configuration"></a>Een configuratie voor de beveiligde browser-app maken
+## <a name="utilize-app-configuration-to-manage-the-browsing-experience"></a>App-configuratie gebruiken om de surfervaring te beheren
 
-Ga als volgt te werk als u een appconfiguratie wilt maken voor Microsoft Edge:
+Microsoft Edge voor iOS en Android ondersteunt app-instellingen waarmee Unified Endpoint Management-beheerders, zoals Microsoft Endpoint Manager, het gedrag van de app kunnen aanpassen.
 
-1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecteer **Apps** > **App-configuratiebeleid** > **Toevoegen**.
-3. Geef in het deelvenster **Configuratiebeleid toevoegen** een **naam** en een optionele **beschrijving** op voor de app-configuratie-instellingen.
-4. Kies voor **Type apparaatregistratie** **Beheerde apps**.
-5. Kies **De vereiste app selecteren**. Kies vervolgens in het deelvenster **Doel-apps** **Managed Browser** of **Edge** voor iOS/iPadOS, voor Android of voor beide.
-6. Selecteer **OK** om terug te keren naar het deelvenster **Configuratiebeleid toevoegen**.
-7. Selecteer **Configuratie-instellingen**. Definieer in het deelvenster **Configuratie** sleutel- en waardeparen om configuraties op te geven voor Microsoft Edge. Gebruik de secties verderop in dit artikel voor meer informatie over de verschillende sleutel- en waardeparen die u kunt definiëren.
+App-configuratie kan worden geleverd via het OS-kanaal van Mobile Device Management (MDM) op geregistreerde apparaten (kanaal [Beheerde app-configuratie](https://developer.apple.com/library/content/samplecode/sc2279/Introduction/Intro.html) voor iOS of kanaal [Android in de Enterprise](https://developer.android.com/work/managed-configurations) voor Android) of via het kanaal Intune-app-beveiligingsbeleid (APP). Microsoft Edge voor iOS en Android ondersteunt de volgende configuratiescenario's:
 
-    > [!NOTE]
-    > Voor Microsoft Edge wordt hetzelfde sleutel- en waardepaar gebruikt als voor Managed Browser. Microsoft Edge moet worden geconfigureerd met een beveiligingsbeleid voor apps om het beleid voor app-configuratie in Android van kracht te laten worden.
+- Alleen werk- of schoolaccounts toestaan
+- Algemene configuratie-instellingen voor apps
+- Instellingen voor gegevensbeveiliging
 
-8. Selecteer **OK** wanneer u klaar bent.
-9. Kies in het deelvenster **Configuratiebeleid toevoegen** de optie **Toevoegen**.<br>
-    De nieuwe configuratie wordt gemaakt en weergegeven in het deelvenster **App-configuratie**.
+> [!IMPORTANT]
+> Voor configuratiescenario's waarvoor apparaatregistratie op Android is vereist, moeten de apparaten worden ingeschreven bij Android Enterprise en moet Microsoft Edge voor Android worden geïmplementeerd via de Beheerde Google Play Store. Zie [Inschrijving van apparaten met Android Enterprise-werkprofielen instellen](../enrollment/android-work-profile-enroll.md) en [App-configuratiebeleid toevoegen voor beheerde Android Enterprise-apparaten](app-configuration-policies-use-android.md) voor meer informatie.
 
-## <a name="assign-the-configuration-settings-you-created"></a>De configuratie-instellingen toewijzen die u hebt gemaakt 
-
-U wijst de instellingen aan groepen gebruikers in Azure AD toe. Als deze gebruiker de beveiligde browser-app heeft geïnstalleerd waarop het beleid is gericht, wordt de app beheerd door de instellingen die u hebt opgegeven.
-
-1. Selecteer in het deelvenster **Apps** van het Intune MAM-dashboard de optie **App-configuratiebeleid**.
-2. Selecteer in de lijst met app-configuraties de configuratie die u wilt toewijzen.
-3. Selecteer **Toewijzingen** in het volgende deelvenster.
-4. Selecteer in het deelvenster **Toewijzingen** de Azure AD-groep waaraan u de app-configuratie wilt toewijzen en selecteer vervolgens **OK**.
-
-## <a name="direct-users-to-microsoft-edge-instead-of-the-intune-managed-browser"></a>Gebruikers doorsturen naar Microsoft Edge in plaats van de Intune Managed Browser 
-
-Microsoft Edge kan worden gebruikt als een met beleid beveiligde browser. Geef de volgende configuratie-instelling op voor alle door Intune beheerde apps (bijvoorbeeld Outlook, OneDrive en SharePoint), zodat gebruikers worden doorgestuurd naar de juiste browser-app:
-
-|    Sleutel    |    Waarde    |
-|------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    `com.microsoft.intune.useEdge`    |    De waarde `true` zal uw gebruikers instructies geven om Microsoft Edge te downloaden en gebruiken.<br>De waarde `false` stelt uw gebruikers in staat de Intune Managed Browser te gebruiken.    |
-
-Als deze app-configuratiewaarde **niet** wordt ingesteld, bepaalt de volgende logica welke browser wordt gebruikt om bedrijfskoppelingen te openen.
-
-Op Android:
-- De Intune Managed Browser wordt geopend als een gebruiker zowel de Intune Managed Browser als Microsoft Edge op het apparaat heeft geïnstalleerd. 
-- Als alleen Microsoft Edge op het apparaat is geïnstalleerd en hieraan een Intune-beleid is gekoppeld, wordt Microsoft Edge geopend.
-- Als alleen de Managed Browser op het apparaat is geïnstalleerd en hieraan een Intune-beleid is gekoppeld, wordt de Managed Browser geopend.
-
-Op iOS/iPadOS, voor apps waarvoor de Intune SDK is geïntegreerd voor iOS v. 9.0.9+ :
-- De Intune Managed Browser wordt geopend als zowel de Managed Browser als Microsoft Edge op het apparaat zijn geïnstalleerd.  
-- Als alleen Microsoft Edge op het apparaat is geïnstalleerd en hieraan een Intune-beleid is gekoppeld, wordt Microsoft Edge geopend.
-- Als alleen de Managed Browser op het apparaat is geïnstalleerd en hieraan een Intune-beleid is gekoppeld, wordt de Managed Browser geopend.
-
-## <a name="configure-application-proxy-settings-for-microsoft-edge"></a>Toepassingproxy-instellingen configureren voor Microsoft Edge
-
-U kunt Microsoft Edge en de [Azure AD-toepassingsproxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) samen gebruiken om gebruikers toegang te verlenen tot intranetsites op hun mobiele apparaten. 
-
-Hier volgen enkele voorbeelden van de scenario's waarin de Azure AD-toepassingsproxy wordt ingeschakeld: 
-
-- Een gebruiker maakt gebruik van de mobiele app van Outlook, die wordt beveiligd door Intune. De gebruiker klikt vervolgens op een koppeling naar een intranetsite in een e-mailbericht en Microsoft Edge herkent dat deze intranetsite beschikbaar is gesteld voor de gebruiker via toepassingsproxy. De gebruiker wordt automatisch omgeleid via de toepassingsproxy om zich bij de betreffende meervoudige verificatie en voorwaardelijke toegang te verifiëren voordat de intranetsite wordt bereikt. De gebruiker heeft nu zelfs op mobiele apparaten toegang tot interne sites en de koppeling in Outlook werkt naar behoren.
-- Een gebruiker opent Microsoft Edge op het iOS- of Android-apparaat. Als Microsoft Edge wordt beveiligd met Intune en de toepassingsproxy is ingeschakeld, kan de gebruiker naar een intranetsite navigeren via de gebruikelijke interne URL. Microsoft Edge herkent dat deze intranetsite via toepassingsproxy beschikbaar is gesteld aan de gebruiker. De gebruiker wordt automatisch door de toepassingsproxy gestuurd om zich te verifiëren voordat hij de intranetsite bereikt. 
-
-### <a name="before-you-start"></a>Voordat u begint
-
-- Stel de interne toepassingen in via de Azure AD-toepassingsproxy.
-  - Raadpleeg [deze documentatie](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy) voor het configureren van de toepassingsproxy en het publiceren van toepassingen.
-- Aan de Microsoft Edge-app moet een [Intune-beveiligingsbeleid](app-protection-policy.md) zijn toegewezen.
+Elk configuratiescenario heeft zijn eigen specifieke vereisten. Bijvoorbeeld of voor het configuratiescenario apparaatregistratie vereist is en of dit hierdoor werkt met elke UEM-provider of dat Intune-app-beveiligingsbeleid vereist is.
 
 > [!NOTE]
-> Het kan tot 24 uur duren voordat bijgewerkte omleidingsgegevens voor de toepassingsproxy worden doorgevoerd in Managed Browser en Microsoft Edge.
+> Met Microsoft Endpoint Manager wordt de app-configuratie die via het MDM-OS-kanaal wordt geleverd, aangeduid als het app-configuratiebeleid (App Configuration Policy; ACP) **Beheerde apparaten**; app-configuratie die via het kanaal App-beveiligingsbeleid wordt geleverd, wordt het app-configuratiebeleid **Beheerde apps** genoemd.
 
-#### <a name="step-1-enable-automatic-redirection-to-microsoft-edge-from-outlook"></a>Stap 1: Schakel automatische omleiding naar Microsoft Edge vanuit Outlook in
-Configureer Outlook met een beveiligingsbeleid voor apps waarmee de instelling **Webinhoud delen met door beleid beheerde browsers** wordt ingeschakeld.
+## <a name="only-allow-work-or-school-accounts"></a>Alleen werk- of schoolaccounts toestaan
 
-![Schermafbeelding van beveiligingsbeleid voor apps - Webinhoud delen met door beleid beheerde browsers](./media/manage-microsoft-edge/manage-microsoft-edge-03.png)
+Het respecteren van het beleid voor gegevensbeveiliging en naleving van onze grootste en uiterst gereguleerde klanten is een belangrijke pijler van Microsoft 365. Sommige bedrijven zijn verplicht om alle communicatie-informatie in hun bedrijfsomgeving vast te leggen, en om ervoor te zorgen dat de apparaten alleen voor bedrijfscommunicatie worden gebruikt. Ter ondersteuning van deze vereisten kan Microsoft Edge voor iOS en Android op geregistreerde apparaten zo worden geconfigureerd dat maar één bedrijfsaccount kan worden ingericht binnen de app.
 
-#### <a name="step-2-set-the-app-configuration-setting-to-enable-app-proxy"></a>Stap 2: Stel de app-configuratie-instelling in voor het inschakelen van de toepassingsproxy
-Wijs aan Microsoft Edge het volgende sleutel-waardepaar toe om de toepassingsproxy voor Microsoft Edge in te schakelen:
+Meer informatie over het configureren van de instelling voor door de organisatie toegestane accounts vindt u hier:
 
-|    Sleutel    |    Waarde    |
-|-------------------------------------------------------------------|-------------|
-|    com.microsoft.intune.mam.managedbrowser.AppProxyRedirection    |    waar    |
+- [Android-instelling](app-configuration-policies-use-android.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
+- [iOS-instelling](app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
 
-Voor meer informatie over het gecombineerde gebruik van Microsoft Edge en de Azure AD-toepassingsproxy voor naadloze (en beveiligde) toegang tot on-premises web-apps raadpleegt u [Better together: Intune and Azure Active Directory team up to improve user access](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/better-together-intune-and-azure-active-directory-team-up-to/ba-p/250254). (Beter samen: Intune en Azure Active Directory werken samen om de toegang voor gebruikers te verbeteren.) Deze blogpost verwijst naar de Intune Managed Browser, maar de inhoud is ook van toepassing op Microsoft Edge.
+Dit configuratiescenario werkt alleen met geregistreerde apparaten. Een UEM-provider wordt echter wel ondersteund. Als u geen gebruik maakt van Microsoft Endpoint Manager, moet u de UEM-documentatie raadplegen voor informatie over hoe u deze configuratiesleutels implementeert.
 
-## <a name="configure-a-homepage-shortcut-for-microsoft-edge"></a>Een snelkoppeling naar de startpagina van Microsoft Edge configureren
+## <a name="general-app-configuration-scenarios"></a>Algemene configuratiescenario's voor apps
 
-Met deze instelling kunt u een snelkoppeling naar de startpagina voor Microsoft Edge configureren. De snelkoppeling naar de startpagina die u configureert, verschijnt als eerste pictogram onder de zoekbalk, wanneer de gebruiker een nieuw tabblad in Microsoft Edge opent. De gebruiker kan deze snelkoppeling niet bewerken of verwijderen in zijn beheerde context. De snelkoppeling naar de startpagina geeft voor de duidelijkheid de naam van uw organisatie weer. 
+Microsoft Edge voor iOS en Android biedt beheerders de mogelijkheid om de standaardconfiguratie voor verschillende in-app-instellingen aan te passen. Deze mogelijkheid is momenteel alleen beschikbaar wanneer voor Microsoft Edge voor iOS en Android een Intune-app-beveiligingsbeleid is toegepast op het werk- of schoolaccount dat is aangemeld bij de app.
 
-Gebruik het volgende sleutel-waardepaar om een snelkoppeling naar de startpagina te configureren:
+> [!IMPORTANT]
+> Microsoft Edge voor Android biedt geen ondersteuning voor Chromium-instellingen die beschikbaar zijn in Beheerde Google Play.
 
-|    Sleutel    |    Waarde    |
-|-------------------------------------------------------------------|-------------|
-|    com.microsoft.intune.mam.managedbrowser.homepage   |    Geef een geldige URL op. Uit veiligheidsoogpunt worden onjuiste URL's geblokkeerd.<br>**Voorbeeld:**  <`https://www.bing.com`>     |
+Microsoft Edge ondersteunt de volgende instellingen voor configuratie:
 
-## <a name="configure-multiple-top-site-shortcuts-for-new-tab-pages-in-microsoft-edge"></a>Meerdere snelkoppelingen naar sites op het hoogste niveau configureren voor nieuwe tabbladen in Microsoft Edge 
-Net als bij het configureren van een snelkoppeling naar een startpagina, kunt u meerdere snelkoppelingen naar sites op het hoogste niveau configureren op nieuwe tabbladen in Microsoft Edge. De gebruiker kan deze snelkoppelingen niet bewerken of verwijderen in een beheerde context. Opmerking: u kunt in totaal acht snelkoppelingen configureren, waaronder een snelkoppeling naar de startpagina. Als u een snelkoppeling naar de startpagina hebt geconfigureerd, vervangt deze de eerste site op het hoogste niveau die is geconfigureerd. 
+- Nieuwe tabbladpagina-ervaringen
+- Bladwijzerervaringen
+- Ervaringen met app-gedrag
+- Kioskmodus-ervaringen
 
-|    Sleutel    |    Waarde    |
-|-------------------------------------------------------------------|-------------|
-|    com.microsoft.intune.mam.managedbrowser.managedTopSites   |    Specificeer een set waarde-URL's. Elke snelkoppeling naar een site op het hoogste niveau bestaat uit een titel en een URL. Scheid de titel en de URL met het teken `|`. Bijvoorbeeld: <br> `GitHub|https://github.com/||LinkedIn|https://www.linkedin.com`    |
+Deze instellingen kunnen worden geïmplementeerd in de app, ongeacht de inschrijvingsstatus van het apparaat.
 
-## <a name="configure-your-organizations-logo-and-brand-color-for-new-tab-pages-in-microsoft-edge"></a>Het logo en de merkkleur van uw organisatie configureren voor nieuwe tabbladen in Microsoft Edge
+### <a name="new-tab-page-experiences"></a>Nieuwe tabbladpagina-ervaringen
 
-Met deze instellingen kunt u de nieuwe tabbladpagina voor Microsoft Edge aanpassen om het logo en de kleur van uw organisatie weer te geven als de achtergrond van de pagina.
+Microsoft Edge voor iOS en Android biedt organisaties verschillende opties om de ervaring Nieuwe tabbladpagina aan te passen.
+
+#### <a name="organization-logo-and-brand-color"></a>Bedrijfslogo en merkkleur
+
+Met deze instellingen kunt u de Nieuwe tabbladpagina voor Microsoft Edge voor iOS en Android aanpassen om het logo en de kleur van uw organisatie weer te geven als achtergrond van de pagina.
 
 Als u het logo en de kleur van uw organisatie wilt uploaden, moet u eerst de volgende stappen uitvoeren:
-- Ga in de Azure-portal naar [Beheercentrum voor Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) -> **Tenantbeheer** -> **Aanpassing** -> **Bedrijfshuisstijl**.
-- Als u het logo van uw merk wilt instellen, kiest u onder 'Weergeven' de optie 'Alleen bedrijfslogo'. Transparante achtergrondlogo's worden aanbevolen. 
-- Als u de achtergrondkleur van uw merk wilt instellen, kiest u onder 'Weergeven' de optie 'Themakleur'. Microsoft Edge past een lichtere tint van de kleur toe op de nieuwe tabbladpagina. Dit zorgt ervoor dat de pagina goed leesbaar is. 
+1. Ga in [Microsoft Endpoint Manager](https://endpoint.microsoft.com) naar **Tenantbeheer** -> **Aanpassing** -> **Bedrijfshuisstijl**.
+2. Als u uw merklogo wilt instellen, kiest u naast **Weergeven in koptekst** 'Alleen logo van organisatie'. Transparante achtergrondlogo's worden aanbevolen.
+3. Als u de achtergrondkleur van uw merk wilt instellen, selecteert u een **Themakleur**. Microsoft Edge voor iOS en Android past een lichtere tint van de kleur toe op de Nieuwe tabbladpagina. Dit zorgt ervoor dat de pagina goed leesbaar is.
 
-Gebruik vervolgens de volgende sleutel-/waardeparen om het merk van uw organisatie in Microsoft Edge weer te geven:
+Gebruik vervolgens de volgende sleutel-/waardeparen om het merk van uw organisatie in Microsoft Edge voor iOS en Android weer te geven:
 
 |    Sleutel    |    Waarde    |
 |--------------------------------------------------------------------|------------|
-|    com.microsoft.intune.mam.managedbrowser.NewTabPage.BrandLogo    |    True    |
-|    com.microsoft.intune.mam.managedbrowser.NewTabPage.BrandColor    |    True    |
+|    com.microsoft.intune.mam.managedbrowser.NewTabPage.BrandLogo    |    **waar** toont het merklogo van de organisatie<br>**onwaar** (standaard) geeft geen logo weer    |
+|    com.microsoft.intune.mam.managedbrowser.NewTabPage.BrandColor    |    **waar** geeft de merkkleur van de organisatie weer<br>**onwaar** (standaard) geeft geen kleur weer    |
 
-## <a name="display-relevant-industry-news-on-new-tab-pages"></a>Relevant nieuws van de branche weergeven op Nieuwe tabbladpagina
+#### <a name="homepage-shortcut"></a>Snelkoppeling voor startpagina
 
-U kunt de Nieuwe tabbladpagina in Microsoft Edge Mobile configureren zodat er nieuws wordt weergegeven van de branche die relevant is voor uw organisatie. Als u deze functie inschakelt, gebruikt Microsoft Edge Mobile de domeinnaam van uw organisatie voor het samenvoegen van nieuws van het web over uw organisatie, de branche van uw organisatie en de concurrentie, zodat uw gebruikers relevant extern nieuws kunnen vinden vanuit de nieuwe gecentraliseerde tabbladpagina's in Microsoft Edge. Nieuws van de branche is standaard uitgeschakeld en u kunt dit inschakelen voor uw organisatie. 
+Met deze instelling kunt u een snelkoppeling naar de startpagina voor Microsoft Edge voor iOS en Android configureren. De snelkoppeling naar de startpagina die u configureert, verschijnt als eerste pictogram onder de zoekbalk, wanneer de gebruiker een nieuw tabblad in Microsoft Edge voor iOS en Android opent. De gebruiker kan deze snelkoppeling niet bewerken of verwijderen in zijn beheerde context. De snelkoppeling naar de startpagina geeft voor de duidelijkheid de naam van uw organisatie weer. 
+
+|    Sleutel    |    Waarde    |
+|-------------------------------------------------------------------|-------------|
+|    com.microsoft.intune.mam.managedbrowser.homepage   |    Geef een geldige URL op. Uit veiligheidsoogpunt worden onjuiste URL's geblokkeerd.<br>Bijvoorbeeld: `https://www.bing.com`     |
+
+#### <a name="multiple-top-site-shortcuts"></a>Meerdere snelkoppelingen naar de bovenste site
+
+Net als bij het configureren van een snelkoppeling naar een startpagina, kunt u meerdere snelkoppelingen naar sites op het hoogste niveau configureren op nieuwe tabbladen in Microsoft Edge voor iOS en Android. De gebruiker kan deze snelkoppelingen niet bewerken of verwijderen in een beheerde context. Opmerking: u kunt in totaal acht snelkoppelingen configureren, waaronder een snelkoppeling naar de startpagina. Als u een snelkoppeling naar de startpagina hebt geconfigureerd, vervangt deze de eerste site op het hoogste niveau die is geconfigureerd. 
+
+|    Sleutel    |    Waarde    |
+|-------------------------------------------------------------------|-------------|
+|    com.microsoft.intune.mam.managedbrowser.managedTopSites   |    Specificeer een set waarde-URL's. Elke snelkoppeling naar een site op het hoogste niveau bestaat uit een titel en een URL. Scheid de titel en de URL met het teken `|`.<br>Bijvoorbeeld: `GitHub|https://github.com/||LinkedIn|https://www.linkedin.com`    |
+
+#### <a name="industry-news"></a>Branchenieuws
+
+U kunt de Nieuwe tabbladpagina in Microsoft Edge voor iOS en Android configureren zodat er nieuws wordt weergegeven van de branche die relevant is voor uw organisatie. Als u deze functie inschakelt, gebruikt Microsoft Edge voor iOS en Android de domeinnaam van uw organisatie voor het samenvoegen van nieuws van het web over uw organisatie, de branche van uw organisatie en de concurrentie, zodat uw gebruikers relevant extern nieuws kunnen vinden vanuit de nieuwe gecentraliseerde tabbladpagina's in Microsoft Edge voor iOS en Android. Branchenieuws is standaard uitgeschakeld. 
 
 |    Sleutel    |    Waarde    |
 |------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-|    com.microsoft.intune.mam.managedbrowser.NewTabPage.IndustryNews    |    Indien **True** wordt het nieuws van de branche weergegeven op de Nieuwe tabbladpagina van Microsoft Edge Mobile.<p>Met **False** (standaard) wordt het nieuws van de branche verborgen op de Nieuwe tabbladpagina.    |
+|    com.microsoft.intune.mam.managedbrowser.NewTabPage.IndustryNews    |    **waar** geeft Branchenieuws weer op de Nieuwe tabbladpagina<br>**onwaar** (standaard) verbergt Branchenieuws op de Nieuwe tabbladpagina    |
 
-## <a name="configure-managed-bookmarks-for-microsoft-edge"></a>Beheerde bladwijzers configureren voor Microsoft Edge
+### <a name="bookmark-experiences"></a>Bladwijzerervaringen
 
-Voor een betere toegankelijkheid kunt u bladwijzers configureren die u beschikbaar wilt stellen voor de gebruikers wanneer ze Microsoft Edge gebruiken. 
+Microsoft Edge voor iOS en Android biedt organisaties verschillende opties voor het beheren van bladwijzers.
 
-Hier volgt enige informatie:
+#### <a name="managed-bookmarks"></a>Beheerde bladwijzers
 
-- Gebruikers zien deze bladwijzers alleen wanneer ze de [bedrijfsmodus](https://docs.microsoft.com/intune/apps/app-configuration-managed-browser#how-to-configure-bookmarks-for-a-protected-browser) van Microsoft Edge gebruiken. 
-- Deze bladwijzers kunnen niet door gebruikers worden verwijderd of gewijzigd.
-- Deze bladwijzers worden boven in de lijst weergegeven. Door de gebruiker gemaakte bladwijzers worden onder deze bladwijzers weergegeven.
+Voor een betere toegankelijkheid kunt u bladwijzers configureren die u beschikbaar wilt stellen voor de gebruikers wanneer ze Microsoft Edge voor iOS en Android gebruiken.
+
+- Bladwijzers worden alleen weergegeven in het werk- of schoolaccount en zijn niet zichtbaar in persoonlijke accounts.
+- Bladwijzers kunnen niet door gebruikers worden verwijderd of gewijzigd.
+- Bladwijzers worden boven in de lijst weergegeven. Door de gebruiker gemaakte bladwijzers worden onder deze bladwijzers weergegeven.
 - Als u omleiding via een toepassingsproxy hebt ingeschakeld, kunt u web-apps met een toepassingsproxy toevoegen met behulp van hun interne of externe URL.
 - Zorg ervoor dat u alle URL's voorziet van het voorvoegsel **http://** of **https://** wanneer u ze in de lijst invoert.
-
-Gebruik het volgende sleutel-waardepaar om beheerde bladwijzers te configureren:
-
-|    Sleutel    |    Waarde    |
-|---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    com.microsoft.intune.mam.managedbrowser.bookmarks    |    De waarde voor deze configuratie is een lijst met bladwijzers. Elke bladwijzer bestaat uit de titel en de URL van de bladwijzer. Scheid de titel en de URL met het teken `|`.      Voorbeeld:<br>`Microsoft Bing|https://www.bing.com`<br>Als u meerdere bladwijzers wilt configureren, typt u een dubbel scheidingsteken `||` tussen de bladwijzers.<p>Voorbeeld:<br>`Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`    |
-
-## <a name="display-myapps-within-microsoft-edge-bookmarks"></a>MyApps weergeven in Microsoft Edge-bladwijzers
-
-Standaard worden aan gebruikers de MyApps-sites weergegeven die voor hen zijn geconfigureerd. Deze staan in een map in de Microsoft Edge-bladwijzers. Deze map krijgt een label met de naam van uw organisatie.
+- Bladwijzers worden gemaakt in een map met de naam van de organisatie die is gedefinieerd in Azure Active Directory.
 
 |    Sleutel    |    Waarde    |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    com.microsoft.intune.mam.managedbrowser.MyApps    |    Indien **True** wordt MyApps weergegeven in de Microsoft Edge-bladwijzers.<p>Bij **Onwaar** wordt MyApps verborgen in Microsoft Edge.    |
-    
-## <a name="use-https-protocol-as-default"></a>HTTPS-protocol als standaardinstelling gebruiken
+|    com.microsoft.intune.mam.managedbrowser.bookmarks    |    De waarde voor deze configuratie is een lijst met bladwijzers. Elke bladwijzer bestaat uit de titel en de URL van de bladwijzer. Scheid de titel en de URL met het teken `|`.<br> Bijvoorbeeld: `Microsoft Bing|https://www.bing.com`<p>Als u meerdere bladwijzers wilt configureren, typt u een dubbel scheidingsteken `||` tussen de bladwijzers.<br>Bijvoorbeeld:<br>`Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`    |
 
-U kunt Microsoft Edge voor mobiel zo configureren dat standaard het HTTPS-protocol wordt gebruikt wanneer de gebruiker er geen opgeeft. Over het algemeen wordt dit zeer aangeraden. Gebruik het volgende sleutel-waardepaar om HTTPS in te schakelen als het standaardprotocol:
+#### <a name="my-apps-bookmark"></a>Bladwijzer Mijn apps
+
+Standaard is voor gebruikers de bladwijzer Mijn apps geconfigureerd in de organisatiemap binnen Microsoft Edge voor iOS en Android.
 
 |    Sleutel    |    Waarde    |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    `com.microsoft.intune.mam.managedbrowser.defaultHTTPS`     |     Indien **True** wordt het standaardprotocol ingesteld op het gebruik van HTTPS     |
+|    com.microsoft.intune.mam.managedbrowser.MyApps    |    **waar** (standaard) geeft Mijn apps weer binnen de Microsoft Edge voor iOS- en Android-bladwijzers<br>**onwaar** verbergt Mijn apps binnen Microsoft Edge voor iOS en Android    |
 
+### <a name="app-behavior-experiences"></a>Ervaringen met app-gedrag
 
-## <a name="specify-allowed-or-blocked-sites-list-for-microsoft-edge"></a>De lijst met toegestane of geblokkeerde sites voor Microsoft Edge opgeven
-U kunt app-configuratie gebruiken om te bepalen tot welke sites gebruikers toegang kunnen krijgen met hun werkprofiel. Als u een lijst met toegestane sites gebruikt, hebben gebruikers alleen toegang tot de sites die u hierin expliciet hebt opgenomen. Als u een lijst met geblokkeerde sites gebruikt, hebben gebruikers toegang tot alle sites, met uitzondering van de sites die u expliciet hebt geblokkeerd. Gebruik alleen een lijst met toegestane sites of een lijst met geblokkeerde sites, niet beide. Als u beide lijsten gebruikt, heeft de lijst met toegestane sites voorrang.  
+Microsoft Edge voor iOS en Android biedt organisaties verschillende opties voor het beheren van het gedrag van de app.
 
-Gebruik de volgende sleutel-waardeparen om een lijst met toegestane sites of een lijst met geblokkeerde sites te configureren voor Microsoft Edge. 
+#### <a name="default-protocol-handler"></a>Standaardprotocolhandler
+
+Microsoft Edge voor iOS en Android maakt standaard gebruik van de HTTPS-protocolhandler wanneer de gebruiker het protocol niet in de URL opgeeft. Over het algemeen wordt dit zeer aangeraden, maar het kan worden uitgeschakeld.
 
 |    Sleutel    |    Waarde    |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    U kunt kiezen uit:<p>1. Geef toegestane URL's op (alleen deze URL's zijn toegestaan; andere sites zijn niet toegankelijk):<br>`com.microsoft.intune.mam.managedbrowser.AllowListURLs`<p>2. Geef geblokkeerde URL's op (alle andere sites zijn toegankelijk):<br>`com.microsoft.intune.mam.managedbrowser.BlockListURLs`    |    De overeenkomstige waarde voor de sleutel is een lijst met URL's. U geeft alle URL's die u wilt toestaan of blokkeren op als één waarde, gescheiden door een sluisteken `|`.<br>**Voorbeelden:**<br>`URL1|URL2|URL3`<br>`http://.contoso.com/|https://.bing.com/|https://expenses.contoso.com`  |
+|---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    com.microsoft.intune.mam.managedbrowser.defaultHTTPS     |     **waar** (standaard) standaardprotocolhandler is HTTPS<br>**onwaar** standaardprotocolhandler is HTTP     |
+
+#### <a name="disable-data-sharing-for-personalization"></a>Gegevens delen voor persoonlijke instellingen uitschakelen
+
+Standaard vraagt Microsoft Edge voor iOS en Android gebruikers om gebruiksgegevens te verzamelen en surfgeschiedenis te delen om zo de surfervaring te personaliseren. Organisaties kunnen het delen van deze gegevens uitschakelen door te voorkomen dat deze melding wordt weergegeven aan eindgebruikers.
+
+|    Sleutel    |    Waarde    |
+|----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    com.microsoft.intune.mam.managedbrowser.disableShareUsageData    |     **waar** schakelt deze melding uit, waardoor deze niet wordt weergegeven aan eindgebruikers<br>**onwaar** (standaard) gebruikers wordt gevraagd gebruiksgegevens te delen    |
+|     com.microsoft.intune.mam.managedbrowser.disableShareBrowsingHistory    |     **waar** schakelt deze melding uit, waardoor deze niet wordt weergegeven aan eindgebruikers<br>**onwaar** (standaard) gebruikers wordt gevraagd surfgeschiedenis te delen     |
+
+#### <a name="disable-specific-features"></a>Specifieke functies uitschakelen
+
+Met Microsoft Edge voor iOS en Android kunnen organisaties bepaalde functies uitschakelen die standaard zijn ingeschakeld. Als u deze functies wilt uitschakelen, configureert u de volgende instelling:
+
+|    Sleutel    |    Waarde    |
+|-----------------------|-----------------------|
+|    com.microsoft.intune.mam.managedbrowser.disabledFeatures    |    **wachtwoord** schakelt meldingen uit die de eindgebruiker aanbieden om wachtwoorden op te slaan<br>**inprivate** schakelt InPrivate-surfen uit<p>Als u meerdere functies wilt uitschakelen, moet u de waarden scheiden met `|`. Als u bijvoorbeeld zowel InPrivate als wachtwoordopslag wilt uitschakelen, gebruikt u `inprivate|password`.     |
+
+> [!NOTE]
+> Microsoft Edge voor Android biedt geen ondersteuning voor het uitschakelen van wachtwoordbeheer.
+
+#### <a name="disable-extensions"></a>Uitbreidingen uitschakelen
+
+U kunt het uitbreidingsframework in Microsoft Edge voor Android uitschakelen om te voorkomen dat gebruikers appuitbreidingen installeren. Daartoe configureert u de volgende instelling:
+
+|    Sleutel    |    Waarde    |
+|-----------|-------------|
+|    com.microsoft.intune.mam.managedbrowser.disableExtensionFramework    |    **waar** schakelt het uitbreidingsframe uit<br>**onwaar** (standaard) schakelt het uitbreidingsframework in    |
+
+### <a name="kiosk-mode-experiences-on-android-devices"></a>Kioskmodus-ervaringen op Android-apparaten
+
+Microsoft Edge voor Android kan worden ingeschakeld als een kiosk-app met de volgende instellingen:
+
+|    Sleutel    |    Waarde    |
+|-----------|-------------|
+|    com.microsoft.intune.mam.managedbrowser.enableKioskMode    |    **waar** schakelt de kioskmodus voor Microsoft Edge voor Android in<br>**onwaar** (standaard) schakelt kioskmodus uit    |
+|    com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode    |    **waar** geeft de adresbalk in kioskmodus weer<br> **onwaar** (standaard) verbergt de adresbalk in kioskmodus    |
+|    com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode    |    **waar** geeft de onderste actiebalk weer in kioskmodus<br> **onwaar** (standaard) verbergt de onderste balk in kioskmodus    |
+
+## <a name="data-protection-app-configuration-scenarios"></a>App-configuratiescenario's voor gegevensbescherming
+
+Microsoft Edge voor iOS en Android ondersteunt beleidsregels voor app-configuratie door de instellingen voor gegevensbeveiliging te volgen wanneer de app wordt beheerd door Microsoft Endpoint Manager met een Intune-app-beveiligingsbeleid dat is toegepast op het werk- of schoolaccount dat is aangemeld bij de app:
+
+- Accountsynchronisatie beheren
+- Beperkte websites beheren
+- Proxyconfiguratie beheren
+- Sites voor eenmalige aanmelding met NTLM beheren
+
+Deze instellingen kunnen worden geïmplementeerd in de app, ongeacht de inschrijvingsstatus van het apparaat.
+
+### <a name="manage-account-synchronization"></a>Accountsynchronisatie beheren
+
+Microsoft Edge Sync stelt gebruikers standaard in staat om toegang te krijgen tot hun surfgegevens op alle apparaten die zijn aangemeld. De gegevens die worden ondersteund door synchronisatie zijn onder andere:
+
+- Favorieten
+- Wachtwoorden
+- Adressen en meer (automatisch invullen van formulieren)
+
+De synchronisatiefunctionaliteit wordt ingeschakeld via toestemming van de gebruiker en gebruikers kunnen synchronisatie in- of uitschakelen voor elk van de hierboven vermelde gegevenstypen. Zie [Microsoft Edge Sync](https://docs.microsoft.com/DeployEdge/microsoft-edge-enterprise-sync) voor meer informatie.
+
+Organisaties hebben de mogelijkheid om Microsoft Edge-synchronisatie uit te schakelen op iOS en Android. 
+
+|Sleutel  |Waarde  |
+|---------|---------|
+|com.microsoft.intune.mam.managedbrowser.account.syncDisabled     |**waar** (standaard) staat Microsoft Edge-synchronisatie toe<br>**onwaar** schakelt Microsoft Edge-synchronisatie uit          |
+
+### <a name="manage-restricted-web-sites"></a>Beperkte websites beheren
+
+Organisaties kunnen bepalen tot welke sites gebruikers toegang hebben binnen de context van het werk- of schoolaccount in Microsoft Edge voor iOS en Android. Als u een lijst met toegestane sites gebruikt, hebben gebruikers alleen toegang tot de sites die expliciet worden genoemd. Als u een lijst met geblokkeerde sites gebruikt, hebben gebruikers toegang tot alle sites, met uitzondering van de sites die expliciet zijn geblokkeerd. Gebruik alleen een lijst met toegestane sites of een lijst met geblokkeerde sites, niet beide. Als u beide lijsten gebruikt, heeft alleen de lijst met toegestane sites voorrang.
+
+De organisatie bepaalt ook wat er gebeurt wanneer een gebruiker naar een beperkte website probeert te navigeren. Overgangen zijn standaard toegestaan. Als de organisatie dit toestaat, kunnen websites met beperkte toegang worden geopend in de context van het persoonlijke account, de InPrivate-context van het Azure AD-account en of de site volledig is geblokkeerd. Zie [Beperkte website-overgangen in Microsoft Edge Mobile](https://techcommunity.microsoft.com/t5/intune-customer-success/restricted-website-transitions-in-microsoft-edge-mobile/ba-p/1381333) voor meer informatie over de verschillende scenario's die worden ondersteund. Door overgangservaringen toe te staan, blijven de gebruikers van de organisatie beveiligd, terwijl bedrijfsresources veilig blijven.
+
+> [!NOTE]
+> Microsoft Edge voor iOS en Android kan alleen toegang tot sites blokkeren wanneer de sites rechtstreeks worden geopend. De app kan de toegang niet blokkeren wanneer gebruikers tussenliggende services (zoals een vertaalservice) gebruiken voor toegang tot de site.
+
+Gebruik de volgende sleutel-waardeparen om een lijst met toegestane sites of een lijst met geblokkeerde sites te configureren voor Microsoft Edge voor iOS en Android. 
+
+|Sleutel  |Waarde  |
+|---------|---------|
+|com.microsoft.intune.mam.managedbrowser.AllowListURLs     |De overeenkomstige waarde voor de sleutel is een lijst met URL's. U geeft alle URL's die u wilt toestaan op als één waarde, gescheiden door een sluisteken `|`.<p>**Voorbeelden:**<br>`URL1|URL2|URL3`<br>`http://.contoso.com/|https://.bing.com/|https://expenses.contoso.com`         |
+|com.microsoft.intune.mam.managedbrowser.BlockListURLs     |De overeenkomstige waarde voor de sleutel is een lijst met URL's. U geeft alle URL's die u wilt blokkeren op als één waarde, gescheiden door een sluisteken `|`.<br>**Voorbeelden:**<br>`URL1|URL2|URL3`<br>`http://.contoso.com/|https://.bing.com/|https://expenses.contoso.com`         |
+|com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock     |**waar** (standaard) staat Microsoft Edge voor iOS en Android toe om beperkte sites over te dragen. Wanneer persoonlijke accounts niet zijn uitgeschakeld, worden gebruikers gevraagd om over te schakelen naar de persoonlijke context om de beperkte site te openen of om een persoonlijk account toe te voegen. Als com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked is ingesteld op waar, hebben gebruikers de mogelijkheid om de beperkte site te openen in de InPrivate-context.<p>**onwaar** voorkomt dat Microsoft Edge voor iOS en Android gebruikers overzetten. Gebruikers krijgen een bericht te zien waarin staat dat de site die ze proberen te openen, is geblokkeerd.         |
+|com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked     |**waar** staat toe dat beperkte sites worden geopend in de InPrivate-context van het Azure AD-account. Als het Azure AD-account het enige account is dat is geconfigureerd in Microsoft Edge voor iOS en Android, wordt de beperkte site automatisch geopend in de InPrivate-context. Als de gebruiker een persoonlijk account heeft geconfigureerd, wordt de gebruiker gevraagd om te kiezen tussen het openen van InPrivate of om over te schakelen naar het persoonlijke account.<p> **onwaar** (standaard) vereist dat de beperkte site wordt geopend in het persoonlijke account van de gebruiker. Als persoonlijke accounts zijn uitgeschakeld, wordt de site geblokkeerd.<p>Om deze instelling door te voeren, moet com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock zijn ingesteld op waar.          |
+|com.microsoft.intune.mam.managedbrowser.durationOfOpenInPrivateSnackBar     | Voer het aantal seconden in dat gebruikers de volgende snackbarmelding zien: 'Koppeling geopend met InPrivate-modus. Uw organisatie vereist het gebruik van InPrivate-modus voor deze inhoud.' Standaard wordt de snackbarmelding gedurende zeven seconden weergegeven.
 
 De volgende sites zijn altijd toegestaan, ongeacht de instellingen voor de lijst met toegestane en geblokkeerde websites:
 - `https://*.microsoft.com/*`
@@ -273,8 +304,10 @@ De volgende sites zijn altijd toegestaan, ongeacht de instellingen voor de lijst
 - `https://*.microsoftonline.com/*`
 - `https://*.microsoftonline-p.com/*`
 
-### <a name="url-formats-for-allowed-and-blocked-site-list"></a>URL-indelingen voor een lijst met toegestane sites en een lijst met geblokkeerde sites 
-U kunt verschillende URL-indelingen gebruiken om uw lijsten met toegestane/geblokkeerde sites te maken. De toegestane patronen worden in de volgende tabel beschreven. Enkele opmerkingen voordat u aan de slag gaat: 
+#### <a name="url-formats-for-allowed-and-blocked-site-list"></a>URL-indelingen voor een lijst met toegestane sites en een lijst met geblokkeerde sites 
+
+U kunt verschillende URL-indelingen gebruiken om uw lijsten met toegestane/geblokkeerde sites te maken. De toegestane patronen worden in de volgende tabel beschreven.
+
 - Zorg ervoor dat u alle URL's voorziet van het voorvoegsel **http://** of **https://** wanneer u ze in de lijst invoert.
 - U kunt het jokerteken (\*) gebruiken volgens de regels in de volgende lijst met toegestane patronen.
 - Een jokerteken kan alleen overeenkomen met een volledig onderdeel van de hostnaam (gescheiden door punten) of met volledige delen van het pad (gescheiden door slashes). `http://*contoso.com` wordt bijvoorbeeld **niet** ondersteund.
@@ -308,128 +341,104 @@ U kunt verschillende URL-indelingen gebruiken om uw lijsten met toegestane/geblo
   - `http://www.contoso.com:*`
   - `http://www.contoso.com: /*`
 
-## <a name="transition-users-to-their-personal-context-when-trying-to-access-a-blocked-site"></a>Gebruikers overzetten naar hun persoonlijke context wanneer ze toegang proberen te krijgen tot een geblokkeerde site
+### <a name="manage-proxy-configuration"></a>Proxyconfiguratie beheren
 
-Met het model voor dubbele identiteit dat is ingebouwd in Microsoft Edge, kunt u eindgebruikers meer flexibiliteit bieden dan mogelijk was met de Intune Managed Browser. Wanneer gebruikers een geblokkeerde site in Microsoft Edge tegenkomen, kunt u hen vragen de koppeling te openen in hun persoonlijke context in plaats van in hun zakelijke context. Op deze manier blijven de gebruikers beschermd en blijven de zakelijke resources veilig. Als een gebruiker bijvoorbeeld via Outlook een koppeling naar een nieuwsbericht krijgt toegestuurd, kan hij deze koppeling openen in zijn persoonlijke context of op een InPrivate-tabblad. In zijn werkcontext zijn nieuwswebsites niet toegestaan. Deze overgangen zijn standaard toegestaan.
+U kunt Microsoft Edge voor iOS en Android en de [Azure AD-toepassingsproxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) samen gebruiken om gebruikers toegang te verlenen tot intranetsites op hun mobiele apparaten. Bijvoorbeeld: 
 
-Gebruik het volgende sleutel-waardepaar om te configureren of deze zachte overgangen zijn toegestaan:
+- Een gebruiker maakt gebruik van de mobiele app van Outlook, die wordt beveiligd door Intune. De gebruiker klikt vervolgens op een koppeling naar een intranetsite in een e-mailbericht en Microsoft Edge voor iOS en Android herkent dat deze intranetsite beschikbaar is gesteld voor de gebruiker via toepassingsproxy. De gebruiker wordt automatisch omgeleid via de toepassingsproxy om zich bij de betreffende meervoudige verificatie en voorwaardelijke toegang te verifiëren voordat de intranetsite wordt bereikt. De gebruiker heeft nu zelfs op mobiele apparaten toegang tot interne sites en de koppeling in Outlook werkt naar behoren.
+- Een gebruiker opent Microsoft Edge voor iOS en Android op het iOS- of Android-apparaat. Als Microsoft Edge voor iOS en Android wordt beveiligd met Intune en de toepassingsproxy is ingeschakeld, kan de gebruiker naar een intranetsite navigeren via de gebruikelijke interne URL. Microsoft Edge voor iOS en Android herkent dat deze intranetsite via toepassingsproxy beschikbaar is gesteld aan de gebruiker. De gebruiker wordt automatisch door de toepassingsproxy gestuurd om zich te verifiëren voordat hij de intranetsite bereikt. 
 
-|    Sleutel    |    Waarde    |
-|-------------------------------------------------------------------|-------------------------------------------------------|
-|    `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock`    |    Indien **True** (standaard) kan Microsoft Edge gebruikers overzetten naar hun persoonlijke context om geblokkeerde sites te openen.<p>Met **False** voorkomt u het overzetten van gebruikers door Microsoft Edge. Gebruikers krijgen een bericht te zien waarin staat dat de site die ze proberen te openen, is geblokkeerd.    |
+Voordat u begint:
 
-## <a name="open-restricted-links-directly-in-inprivate-tab-pages"></a>Beperkte links rechtstreeks in InPrivate-tabbladen openen
+- Stel de interne toepassingen in via de Azure AD-toepassingsproxy.
+  - Raadpleeg [deze documentatie](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy) voor het configureren van de toepassingsproxy en het publiceren van toepassingen.
+- Er moet een [Intune-app-beveiligingsbeleid](app-protection-policy.md) worden toegewezen aan de Microsoft Edge voor iOS en Android-app.
+- Microsoft-apps moeten beschikken over een app-beveiligingsbeleid waarvan de instelling voor gegevensoverdracht **Overdracht van webinhoud met andere apps beperken** is ingesteld op **Microsoft Edge**.
 
-U kunt instellen dat beperkte links rechtstreeks worden geopend in de InPrivate-navigatie, waardoor gebruikers een vloeiendere browse-ervaring krijgen. Hierdoor hoeven gebruikers niet over te stappen op hun persoonlijke context om een site te bekijken. InPrivate-navigatie wordt beschouwd als niet-beheerd, waardoor gebruikers geen toegang kunnen krijgen wanneer zij de InPrivate-navigatiemodus gebruiken.  Opmerking: Als u deze instelling van kracht wilt laten worden, moet u ook de bovenstaande instelling `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock` hebben ingesteld op **Waar**.
+> [!NOTE]
+> Het kan tot 24 uur duren voordat bijgewerkte omleidingsgegevens voor de toepassingsproxy worden doorgevoerd in Microsoft Edge voor iOS en Android.
 
-|    Sleutel    |    Waarde    |
-|----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    `com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked`    |    Indien **True** worden sites automatisch rechtstreeks op een InPrivate-tabblad geopend, zonder dat de gebruiker wordt gevraagd om over te stappen naar diens persoonlijke account. <p> Met **False** (standaard) wordt de site geblokkeerd in Microsoft Edge en wordt de gebruiker gevraagd om over te schakelen naar diens persoonlijke account om de site te bekijken.    |
-
-
-## <a name="disable-microsoft-edge-features-to-customize-the-end-user-experience-for-your-organizations-needs"></a>Schakel de Microsoft Edge-functies uit om de ervaring van de eindgebruiker aan te passen aan de behoeften van uw organisatie
-
-### <a name="disable-prompts-to-share-usage-data-for-personalization"></a>Meldingen om voor personalisatie gebruiksgegevens te delen, uitschakelen 
-
-Standaard vraagt Microsoft Edge gebruikers of gebruiksgegevens mogen worden verzameld voor het personaliseren van de surfervaring. U kunt het delen van deze gegevens uitschakelen door te voorkomen dat deze melding wordt weergegeven aan eindgebruikers. 
+Wijs aan Microsoft Edge voor iOS het volgende sleutel-waardepaar toe om de toepassingsproxy in te schakelen:
 
 |    Sleutel    |    Waarde    |
-|----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    `com.microsoft.intune.mam.managedbrowser.disableShareUsageData`    |     Als de optie wordt ingesteld op **True**, wordt de melding niet weergegeven aan eindgebruikers.    |
+|-------------------------------------------------------------------|-------------|
+|    com.microsoft.intune.mam.managedbrowser.AppProxyRedirection    |    **waar** schakelt Azure AD App Proxy-omleidingsscenario's in<br>**onwaar** (standaard) verhindert Azure AD App Proxy-scenario's    |
 
-### <a name="disable-prompts-to-share-browsing-history"></a>Meldingen om de surfgeschiedenis te delen, uitschakelen 
+> [!NOTE]
+> Microsoft Edge voor Android gebruikt deze sleutel niet. In plaats daarvan gebruikt Microsoft Edge voor Android automatisch de configuratie van Azure AD Application Proxy, mits een app-beveiligingsbeleid is toegepast op het aangemelde Azure AD-account.
 
-Standaard vraagt Microsoft Edge gebruikers om gegevens over de surfgeschiedenis te verzamelen om zo de surfervaring te personaliseren. U kunt het delen van deze gegevens uitschakelen door te voorkomen dat deze melding wordt weergegeven aan eindgebruikers.
+Voor meer informatie over het gecombineerde gebruik van Microsoft Edge voor iOS en Android en de Azure AD Application Proxy voor naadloze (en beveiligde) toegang tot on-premises web-apps raadpleegt u [Better together: Intune and Azure Active Directory team up to improve user access](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/better-together-intune-and-azure-active-directory-team-up-to/ba-p/250254). (Beter samen: Intune en Azure Active Directory werken samen om de toegang voor gebruikers te verbeteren.) Deze blogpost verwijst naar de Intune Managed Browser, maar de inhoud is ook van toepassing op Microsoft Edge voor iOS en Android.
 
-|    Sleutel    |    Waarde    |
-|----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     `com.microsoft.intune.mam.managedbrowser.disableShareBrowsingHistory`    |     Als de optie wordt ingesteld op **True**, wordt de melding niet weergegeven aan eindgebruikers.     |
+### <a name="manage-ntlm-single-sign-on-sites"></a>Sites voor eenmalige aanmelding met NTLM beheren
 
-### <a name="disable-prompts-that-offer-to-save-passwords"></a>Meldingen met het aanbod om wachtwoorden op te slaan, uitschakelen
+Organisaties kunnen vereisen dat gebruikers zich verifiëren met NTLM om toegang te krijgen tot intranetwebsites. Gebruikers worden standaard elke keer wanneer ze een website openen waarvoor NTLM-verificatie is vereist, gevraagd om referenties in te voeren, omdat NTLM-referenties in de cache zijn uitgeschakeld. 
 
-Microsoft Edge op iOS biedt standaard de mogelijkheid om de wachtwoorden van uw gebruikers op te slaan in de sleutelhanger. Als u deze prompt voor uw organisatie wilt uitschakelen, configureert u de volgende instelling:
-
-|    Sleutel    |    Waarde    |
-|-----------------------|-----------------------|
-|    `com.microsoft.intune.mam.managedbrowser.disabledFeatures`    |    Met **wachtwoord** worden de meldingen uitgeschakeld waarin de eindgebruiker wordt aangeboden om wachtwoorden op te slaan.    |
-
-### <a name="disable-users-from-adding-extensions-to-microsoft-edge"></a>Voorkomen dat gebruikers uitbreidingen toevoegen aan Microsoft Edge 
-
-U kunt het uitbreidingsraamwerk in Microsoft Edge uitschakelen om te voorkomen dat gebruikers uitbreidings-apps installeren. Daartoe configureert u de volgende instelling:
-
-|    Sleutel    |    Waarde    |
-|-----------|-------------|
-|    `com.microsoft.intune.mam.managedbrowser.disableExtensionFramework`    |    Indien **True** wordt het uitbreidingsraamwerk uitgeschakeld    |
-
-### <a name="disable-inprivate-browsing-and-microsoft-accounts-to-restrict-browsing-to-work-only-contexts"></a>InPrivate-surfen uitschakelen en Microsoft-accounts alleen werkgerelateerd laten surfen
-
-Als uw organisatie in een streng gereguleerde branche werkt of als er VPN per app wordt gebruikt om gebruikers via Microsoft Edge toegang te bieden tot werkresources, kunt u ervoor kiezen om InPrivate-surfen in Microsoft Edge uit te schakelen, aangezien dit wordt beschouwd als een niet-werkcontext. 
-
-|    Sleutel    |    Waarde    |
-|-----------|-------------|
-|    `com.microsoft.intune.mam.managedbrowser.disabledFeatures`    |    Met **inprivate** wordt InPrivate-surfen uitgeschakeld.   |
-
-### <a name="restrict-microsoft-edge-use-to-allowed-accounts-only"></a>Gebruik van Microsoft Edge beperken tot toegestane accounts
-
-U kunt niet alleen InPrivate- en MSA-surfen blokkeren, maar u kunt ook het gebruik van Microsoft Edge alleen toestaan als de gebruiker is aangemeld met diens AAD-account. Deze functie is alleen beschikbaar voor bij MDM ingeschreven gebruikers. U vindt hier meer informatie over het configureren van deze instelling:
-
->[!NOTE]
-> `com.microsoft.intune.mam.managedbrowser.disabledFeatures` kan worden gebruikt om meerdere functies tegelijk uit te schakelen. Als u bijvoorbeeld zowel InPrivate als wachtwoord wilt uitschakelen, gebruikt u `inprivate|password`.
-
-## <a name="configure-microsoft-edge-as-a-kiosk-app-on-android-devices"></a>Microsoft Edge configureren als een kiosk-app op Android-apparaten
-
-### <a name="enable-microsoft-edge-as-a-kiosk-app"></a>Microsoft Edge inschakelen als een kiosk-app
-Als u Microsoft Edge wilt inschakelen als een kiosk-app, moet u eerst deze bovenliggende instelling configureren:
-
-|    Sleutel    |    Waarde    |
-|-----------|-------------|
-|    `com.microsoft.intune.mam.managedbrowser.enableKioskMode`    |    Indien **True** wordt Kioskconfiguratie voor Microsoft Edge ingeschakeld    |
-
-### <a name="show-address-bar-in-kiosk-mode"></a>Adresbalk weergeven in kioskmodus
-Als u de adresbalk in Microsoft Edge wilt weergeven als de kioskmodus is geactiveerd, configureert u de volgende instelling:
-
-|    Sleutel    |    Waarde    |
-|-----------|-------------|
-|    `com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode`    |    Indien **True** wordt de adresbalk weergegeven. <br> Indien **False** (standaard) wordt de adresbalk verborgen.    |
-
-### <a name="show-bottom-action-bar-in-kiosk-mode"></a>Onderste actiebalk weergeven in kioskmodus
-|    Sleutel    |    Waarde    |
-|-----------|-------------|
-|    `com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode`    |    Indien **True** wordt de onderste actiebalk weergegeven in 
-Microsoft Edge. <br> Indien **False** (standaard) wordt de onderste balk verborgen.    |
+Organisaties kunnen NTLM-referenties in de cache inschakelen voor bepaalde websites. Nadat de gebruiker referenties heeft ingevoerd en zich heeft geverifieerd, worden de referenties voor deze sites standaard 30 dagen in de cache opgeslagen.
 
 
-## <a name="use-microsoft-edge-to-access-managed-app-logs"></a>Microsoft Edge gebruiken om logboeken van beheerde apps te openen
+|Sleutel  |Waarde  |
+|---------|---------|
+|com.microsoft.intune.mam.managedbrowser.NTLMSSOURLs     |De overeenkomstige waarde voor de sleutel is een lijst met URL's. U geeft alle URL's die u wilt toestaan op als één waarde, gescheiden door een sluisteken `|`.<p>**Voorbeelden:**<br>`URL1|URL2`<br>`http://app.contoso.com/|https://expenses.contoso.com`<p>Zie [URL-indelingen voor een lijst met toegestane sites en een lijst met geblokkeerde sites](#url-formats-for-allowed-and-blocked-site-list) voor meer informatie over de ondersteunde typen URL-indelingen.         |
+|com.microsoft.intune.mam.managedbrowser.durationOfNTLMSSO     |Aantal uur dat referenties in de cache moeten worden opgeslagen; de standaardwaarde is 720 uur         |
 
+## <a name="deploy-app-configuration-scenarios-with-microsoft-endpoint-manager"></a>Configuratiescenario's voor apps implementeren met Microsoft Endpoint Manager
 
-Gebruikers die Microsoft Edge op hun iOS- of Android-apparaat hebben geïnstalleerd, kunnen de beheerstatus van alle gepubliceerde Microsoft-apps bekijken. Ze kunnen logboeken verzenden voor het oplossen van problemen met hun beheerde iOS- of Android-apps door de volgende stappen uit te voeren:
+Als u Microsoft Endpoint Manager gebruikt als uw provider voor het beheer van mobiele apps, kunt u aan de hand van de volgende stappen een app-configuratiebeleid voor beheerde apps maken. Nadat de configuratie is gemaakt, kunt u de instellingen ervan toewijzen aan groepen gebruikers.
 
-1. Open Microsoft Edge op uw apparaat.
+1. Meld u aan bij [Microsoft Endpoint Manager](https://endpoint.microsoft.com).
+
+2. Selecteer **Apps** en selecteer vervolgens **App-configuratiebeleid**.
+
+3. Kies **Toevoegen** op de blade **App-configuratiebeleid** en selecteer **Beheerde apps**.
+
+4. Geef in de sectie **Basisinformatie** een **naam** en een optionele **beschrijving** op voor de app-configuratie-instellingen.
+
+5. Kies voor **Openbare apps** de optie **Openbare apps selecteren** en klik vervolgens op de blade **Beoogde apps** op **Microsoft Edge voor iOS en Android** door de apps voor zowel het iOS- als het Android-platform te selecteren. Klik op **Selecteren** om de geselecteerde openbare apps op te slaan.
+
+6. Klik op **Volgende** om de basisinstellingen van het app-configuratiebeleid te voltooien.
+
+7. Vouw in het gedeelte **Instellingen** de **Configuratie-instellingen voor Microsoft Edge** uit.
+
+8. Als u de instellingen voor gegevensbeveiliging wilt beheren, configureert u de gewenste instellingen dienovereenkomstig:
+
+    - Kies een van de beschikbare opties voor **Toepassingsproxy omleiden**: **Inschakelen**, **Uitschakelen** (standaard).
+
+    - Geef voor **Snelkoppelings-URL voor startpagina** een geldige URL op die het voorvoegsel *http://* of het voorvoegsel *https://* bevat. Uit veiligheidsoogpunt worden onjuiste URL's geblokkeerd.
+
+    - Geef voor **Beheerde bladwijzers** de titel en een geldige URL op die het voorvoegsel *http://* of het voorvoegsel *https://* bevat.
+
+    - Geef voor **Toegestane URL's** een geldige URL op (alleen deze URL's zijn toegestaan; andere sites zijn niet toegankelijk). Zie [URL-indelingen voor een lijst met toegestane sites en een lijst met geblokkeerde sites](#url-formats-for-allowed-and-blocked-site-list) voor meer informatie over de ondersteunde typen URL-indelingen.
+
+    - Geef voor **Geblokkeerde URL's** een geldige URL op (alleen deze URL's worden geblokkeerd). Zie [URL-indelingen voor een lijst met toegestane sites en een lijst met geblokkeerde sites](#url-formats-for-allowed-and-blocked-site-list) voor meer informatie over de ondersteunde typen URL-indelingen.
+
+    - Kies een van de beschikbare opties voor **Beperkte sites omleiden naar een persoonlijke context**: **Inschakelen** (standaard), **Uitschakelen**.
+
+    > [!NOTE]
+    > Wanneer zowel Toegestane URL's als Geblokkeerde URL's in het beleid worden gedefinieerd, wordt alleen de lijst met toegestane URL's gehonoreerd.
+
+9. Als u wilt dat aanvullende app-configuratie-instellingen niet worden weergegeven in het bovenstaande beleid, vouwt u het knooppunt **Algemene configuratie-instellingen** uit en voert u de sleutelwaardeparen dienovereenkomstig in.
+
+10. Wanneer u klaar bent met het configureren van de instellingen, kiest u **Volgende**.
+
+11. Kies in de sectie **Toewijzingen** **Groepen selecteren die moeten worden opgenomen**. Selecteer de Azure AD-groep waaraan u de app-configuratie wilt toewijzen en kies vervolgens **Selecteren**.
+
+12. Wanneer u klaar bent met de toewijzingen, kiest u **volgende**.
+
+13. Controleer op de blade **App-configuratiebeleid maken, Controleren en maken** de geconfigureerde instellingen en kies **Maken**.
+
+Het nieuwe configuratiebeleid wordt weergegeven op de blade **App-configuratiebeleid**.
+
+## <a name="use-edge-for-ios-and-android-to-access-managed-app-logs"></a>Microsoft Edge voor iOS en Android gebruiken voor toegang tot logboeken voor beheerde apps
+
+Gebruikers die Microsoft Edge voor iOS en Android op hun iOS- of Android-apparaat hebben geïnstalleerd, kunnen de beheerstatus van alle gepubliceerde Microsoft-apps bekijken. Ze kunnen logboeken verzenden voor het oplossen van problemen met hun beheerde iOS- of Android-apps door de volgende stappen uit te voeren:
+
+1. Open Microsoft Edge voor iOS en Android op het apparaat.
 2. Type `about:intunehelp` in het adresvak.
-3. De probleemoplossingsmodus van Microsoft Edge wordt gestart.
+3. Microsoft Edge voor iOS en Android start de probleemoplossingsmodus.
 
 Zie [Logboeken voor app-beveiliging in Managed Browser controleren](app-protection-policy-settings-log.md) voor een lijst met instellingen die worden opgeslagen in app-logboeken.
 
 Lees [Send logs to your IT admin by email](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android) (Logboeken naar uw IT-beheerder verzenden via e-mail) om te zien hoe u logboeken op Android-apparaten kunt bekijken.
-
-## <a name="security-and-privacy-for-microsoft-edge"></a>Beveiliging en privacy voor Microsoft Edge
-
-Hier volgen aanvullende overwegingen voor beveiliging en privacy voor Microsoft Edge:
-
-- Microsoft Edge maakt geen gebruik van de instellingen die gebruikers instellen voor de systeemeigen browser op hun apparaten, omdat Microsoft Edge geen toegang heeft tot deze instellingen.
-- U kunt de optie **Eenvoudige pincode vereisen voor toegang** of **Bedrijfsreferenties vereisen voor toegang** configureren in een app-beveiligingsbeleid dat is gekoppeld aan Microsoft Edge. Als een gebruiker de Help-koppeling op de verificatiepagina selecteert, kan hij alle internetsites bezoeken, ongeacht of deze zijn toegevoegd aan de lijst met geblokkeerde sites van het beleid.
-- Microsoft Edge kan alleen toegang tot sites blokkeren wanneer de sites rechtstreeks worden geopend. De app kan de toegang niet blokkeren wanneer gebruikers tussenliggende services (zoals een vertaalservice) gebruiken voor toegang tot de site.
-- Om verificatie en toegang tot de Intune-documentatie toe te staan, wordt * **.microsoft.com** uitgesloten van opname in lijsten met toegestane en geblokkeerde sites. Dit domein is altijd toegestaan.
-- Gebruikers kunnen gegevensverzameling uitschakelen. Microsoft verzamelt automatisch anonieme gegevens over de prestaties en het gebruik van Managed Browser om Microsoft-producten en -services te verbeteren. Gebruikers kunnen het verzamelen van deze gegevens uitschakelen met de instelling **Gebruiksgegevens** op hun apparaten. U hebt geen controle over het verzamelen van deze gegevens. Op iOS-apparaten kunnen gebruikers geen websites openen met een verlopen of niet-vertrouwd certificaat.
-
-## <a name="restrict-microsoft-edge-use-to-a-work-or-school-account"></a>Het gebruik van Microsoft Edge beperken tot een werk- of schoolaccount
-
-Het respecteren van het beleid voor gegevensbeveiliging en naleving van onze grootste en uiterst gereguleerde klanten is een belangrijke pijler van Microsoft 365. Sommige bedrijven zijn verplicht om alle communicatie-informatie in hun bedrijfsomgeving vast te leggen, en om ervoor te zorgen dat de apparaten alleen voor bedrijfscommunicatie worden gebruikt. Ter ondersteuning van deze vereisten kan Edge voor iOS en Android op geregistreerde apparaten zo worden geconfigureerd dat maar één bedrijfsaccount kan worden ingericht in Edge voor iOS en Android.
-
-U vindt hier meer informatie over het configureren van de instelling voor door de organisatie toegestane accounts:
-
-- [Android-instelling](app-configuration-policies-use-android.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
-- [iOS-instelling](app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
 
 ## <a name="next-steps"></a>Volgende stappen
 

@@ -4,7 +4,7 @@ description: Microsoft 365 Enterprise bevat Microsoft Intune. Bekijk hoe op welk
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 05/28/2020
 ms.topic: overview
 audience: microsoft-business
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 44f9446299bb20bd73890a67ec33c3d8e7a36e48
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 540faaca71d3694b95d32a24c947a977989a3223
+ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988141"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84223628"
 ---
 # <a name="device-management-overview"></a>Overzicht van apparaatbeheer
 
@@ -56,6 +56,16 @@ Met Intune kunt u meerdere apparaten voor één persoon beheren. Het is daarbij 
 - Persoonlijke apparaten gebruiken voor toegang tot bedrijfsresources
 
 Raadpleeg [Wat is Intune?](what-is-intune.md) voor meer informatie over Intune.
+
+## <a name="co-management"></a>Co-beheer
+
+Veel organisaties gebruiken on-premises Configuration Manager om apparaten, met inbegrip van desktops en servers, te beheren. U kunt uw on-premises Configuration Manager in de cloud verbinden met Microsoft Intune. Wanneer u verbindt via de cloud, krijgt u de voordelen van Intune en de cloud, met inbegrip van [voorwaardelijke toegang](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-conditional-access), [het uitvoeren van externe acties](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-remote-actions), [het gebruiken van Windows Autopilot](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-autopilot), en meer.
+
+[Microsoft Endpoint Manager](https://docs.microsoft.com/mem/endpoint-manager-overview) is een oplossingsplatform dat verschillende technologieën verenigt. Het bevat [Microsoft Intune](what-is-intune.md) voor het apparaatbeheer in de cloud en [Configuration Manager + Intune](https://docs.microsoft.com/mem/configmgr/comanage/overview) voor het koppelen van apparaten in de cloud.
+
+Als u Configuration Manager gebruikt en u klaar bent om sommige taken naar de cloud te verplaatsen, is co-beheer ideaal.
+
+Zie [What is co-management](https://docs.microsoft.com/mem/configmgr/comanage/overview) (Wat is co-beheer?) voor meer informatie over het koppelen van Configuration Manager in de cloud.
 
 ## <a name="integration-with-secure-and-protect-services"></a>Integratie met services beveiligen en beschermen
 

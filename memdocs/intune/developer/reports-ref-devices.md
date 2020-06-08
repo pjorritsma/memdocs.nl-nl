@@ -6,7 +6,7 @@ keywords: Intune-datawarehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/03/2020
+ms.date: 05/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31eef700f7aa38b70c5e9a2fa75fd3faee4c9713
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: bc01428430eb665dc609cff84ee322f28e3b7d79
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078053"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165427"
 ---
 # <a name="reference-for-devices-entities"></a>Informatie voor apparaatentiteiten
 
@@ -226,7 +226,7 @@ De entiteit **managementAgentTypes** vertegenwoordigt de agents die worden gebru
 Met de entiteit **devices** worden alle geregistreerde apparaten voor beheer en de bijbehorende eigenschappen weergegeven.
 
 |          Eigenschap          |                                                                                       Beschrijving                                                                                      |
-|:--------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | deviceKey                  | Unieke id van het apparaat in het datawarehouse - surrogaatsleutel.                                                                                                               |
 | deviceId                   | Unieke id van het apparaat.                                                                                                                                                     |
 | deviceName                 | Naam van het apparaat op platforms waarop het benoemen van een apparaat is toegestaan. Op andere platforms maakt Intune een naam op basis van andere eigenschappen. Dit kenmerk is niet beschikbaar voor alle apparaten. |
@@ -263,13 +263,18 @@ Met de entiteit **devices** worden alle geregistreerde apparaten voor beheer en 
 | cellularTechnology         | Mobiele telefoontechnologie van het apparaat                                                                                                                                                    |
 | WiFiMacAddress             | MAC-adres Wi-Fi                                                                                                                                                                              |
 | ICCD                       | Integrated Circuit Card Identifier (geïntegreerde circuitkaart-id)                                                                                                                                                     |
+| windowsOsEdition           | De versie van het Windows-besturingssysteem.                                                                                                                             |
+| EthernetMacAddress           | De unieke netwerk-id van dit apparaat.                                                                                                                                        |
+| model                      | Het apparaatmodel.                                                                                                                                                                      |
+| office365Version           | De versie van Office 365 die op het apparaat is geïnstalleerd.                                                                                                                             |
+
 
 ## <a name="devicepropertyhistories"></a>devicePropertyHistories
 
 De entiteit **devicePropertyHistory** heeft dezelfde eigenschappen als de apparatentabel en dagelijkse momentopnamen van elke apparaatrecord per dag voor de afgelopen 90 dagen. De kolom DateKey geeft de dag voor elke rij aan.
 
 |          Eigenschap          |                                                                                      Beschrijving                                                                                     |
-|:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | dateKey                    | Verwijzing naar datumtabel waarmee de dag wordt aangegeven.                                                                                                                                          |
 | deviceKey                  | Unieke id van het apparaat in het datawarehouse - surrogaatsleutel. Dit is een verwijzing naar de apparaattabel die de Intune-apparaat-id bevat.                               |
 | deviceName                 | Naam van het apparaat op platforms waarop het benoemen van een apparaat is toegestaan. Op andere platforms maakt Intune een naam op basis van andere eigenschappen. Dit kenmerk is niet beschikbaar voor alle apparaten. |
@@ -281,4 +286,6 @@ De entiteit **devicePropertyHistory** heeft dezelfde eigenschappen als de appara
 | OSVersion                  | Versie besturingssysteem.                                                                                                                                                                          |
 | jailBroken                 | Of het apparaat jailbroken of geroot is.                                                                                                                                         |
 | deviceCategoryKey          | Sleutel van het kenmerk voor de apparaatcategorie voor dit apparaat. 
+| physicalMemoryInBytes      | Het fysieke geheugen in bytes.                                                                                                                                                          |
+| totalStorageSpaceInBytes   | Totale opslagcapaciteit in bytes.                                                                                                                                                                |
 

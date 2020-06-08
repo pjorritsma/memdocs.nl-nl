@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/13/2020
+ms.date: 06/01/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 49749ec3a839b11062b1cc2655a1cca4e3d6cfb0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 78f69edbc38bc41863783010a0e795290b7762c5
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81525698"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270919"
 ---
 # <a name="troubleshoot-integration-of-jamf-pro-with-microsoft-intune"></a>Problemen oplossen met integratie van Jamf Pro met Microsoft Intune
 
@@ -205,14 +205,13 @@ Als een apparaat uit Jamf wordt uitgeschreven maar niet op de juiste manier uit 
    - /Library/Application Support/com.microsoft.CompanyPortal.usercontext.info
    - /Library/Application Support/com.microsoft.CompanyPortal
    - /Library/Application Support/com.jamfsoftware.selfservice.mac
-   - /Library/Saved Application
-   - State/com.jamfsoftware.selfservice.mac.savedState
+   - /Library/Saved Application State/com.jamfsoftware.selfservice.mac.savedState
    - /Library/Saved Application State/com.microsoft.CompanyPortal.savedState
    - /Library/Preferences/com.microsoft.CompanyPortal.plist
    - /Library/Preferences/com.jamfsoftware.selfservice.mac.plist
    - /Library/Preferences/com.jamfsoftware.management.jamfAAD.plist
-   - /Users/<username>/Library/Cookies/com.microsoft.CompanyPortal.binarycookies
-   - /Users/<username>/Library/Cookies/com.jamf.management.jamfAAD.binarycookies
+   - /Users/\<*username*>/Library/Cookies/com.microsoft.CompanyPortal.binarycookies
+   - /Users/\<*username*>/Library/Cookies/com.jamf.management.jamfAAD.binarycookies
    - com.microsoft.CompanyPortal
    - com.microsoft.CompanyPortal.HockeySDK
    - enterpriseregistration.windows.net
@@ -295,7 +294,7 @@ Deze fout kan door een van de volgende problemen zijn veroorzaakt:
 Tijdens de registratie van de Jamf Pro-app in Azure is een van de volgende situaties opgetreden:
 
 - De app heeft meer dan één machtiging ontvangen.
-- De optie **Beheerderstoestemming verlenen voor *\<uw bedrijf>*** is niet geselecteerd.  
+- De optie **Beheerderstoestemming verlenen voor *\<your company>*** is niet geselecteerd.  
 
 **Oplossing**  
 Zie de oplossing voor oorzaak 1 voor [apparaten die niet kunnen worden geregistreerd](#devices-fail-to-register), eerder in dit artikel.

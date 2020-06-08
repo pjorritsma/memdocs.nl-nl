@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2020
+ms.date: 06/01/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c98de99eb8f72840080ca720465559c462bc77f
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 2cc40eb4a8b094cd933a6bb3f4f8c7fdae927f7b
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023364"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270888"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Problemen met app-installatie oplossen
 
@@ -107,6 +107,18 @@ Er zijn specifieke vereisten voor het verzamelen van logboekbestanden:
 - Het verzamelen van Win32-app-installatielogboeken is ingeschakeld voor apps die voldoen aan de vereiste, beschikbare en app-verwijdertoewijzingsintentie.
 - Opgeslagen logboeken worden versleuteld om persoonlijke identificeerbare gegevens in de logboeken te beveiligen.
 - Voeg bij het openen van ondersteuningstickets voor Win32-app-fouten de gerelateerde foutenlogboeken bij met behulp van de bovenstaande stappen.
+
+## <a name="app-types-supported-on-arm64-devices"></a>App-typen die worden ondersteund op ARM64-apparaten
+
+App-typen die worden ondersteund op ARM64-apparaten zijn onder andere:
+- Web-apps waarvoor geen beheerde browser hoeft te worden geopend. 
+- Microsoft Store voor bedrijven-apps of Windows Universal Line-Of-Business-apps (`.appx`) met een van de volgende combinaties van `TargetDeviceFamily`- en `ProcessorArchitectures`-elementen:
+  - `TargetDeviceFamily` omvat bureaublad-apps, universele apps en Windows8x-apps. Windows8x-apps zijn alleen van toepassing op online Microsoft Store voor bedrijven-apps.
+  - `ProcessorArchitecture` omvat x86-apps, ARM-apps, ARM64-apps en neutrale apps.
+- Windows Store-apps
+- Mobiele MSI Line-Of-Business-apps
+- Win32-apps met de vereiste regel 32 bits.
+- Windows Office Klik-en-Klaar-apps als 32-bits of de x86-architectuur is geselecteerd.
 
 ## <a name="troubleshooting-apps-from-the-microsoft-store"></a>Het oplossen van problemen met apps van Microsoft Store
 

@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 089303b76f674d47767afdff72341d09f7f227d4
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 78cc6182cf8682935ecaa6c319e30ee8261fc2fb
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431732"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455256"
 ---
 # <a name="settings-for-the-windows-security-experience-profile-in-microsoft-intune"></a>Instellingen voor het Windows-beveiligingservaringsprofiel in Microsoft Intune
 
@@ -43,7 +43,7 @@ Bekijk de Antivirus-beleidsinstellingen die u kunt configureren voor het profiel
   - **Ja**: Het gebied voor beveiliging tegen virussen en bedreigingen in de Windows-beveiligings-app wordt verborgen voor eindgebruikers. Meldingen met betrekking tot beveiliging tegen virussen- en bedreigingen worden onderdrukt.
 
   - **Het gebied voor ransomware-gegevensherstel verbergen in de Windows-beveiligings-app**  
-    CSP: [](https://go.microsoft.com/fwlink/?linkid=873664)
+    CSP: [HideRansomwareDataRecovery](https://go.microsoft.com/fwlink/?linkid=873664)
 
   - **Niet geconfigureerd** (*standaard*): de instelling wordt teruggezet op de standaardinstelling van de client, waarbij interface en meldingen zijn toegestaan.
   - **Ja**: Het gebied voor gegevensherstel bij ransomware in de Windows-beveiligings-app wordt verborgen voor eindgebruikers. Meldingen gerelateerd aan ransomware worden onderdrukt.
@@ -85,7 +85,7 @@ Bekijk de Antivirus-beleidsinstellingen die u kunt configureren voor het profiel
   - **Ja**: het gebied voor gezinsopties in de Windows-beveiligings-app wordt verborgen voor eindgebruikers. Ook worden meldingen die betrekking hebben op de gezinsopties onderdrukt.
 
 - **Meldingen van de Windows-beveiligings-app**  
-  CSP: [](https://go.microsoft.com/fwlink/?linkid=873675)
+  CSP: [DisableNotifications](https://go.microsoft.com/fwlink/?linkid=873675)
 
   Gebruik deze instelling om Windows-beveiligingsmeldingen voor uw gebruikers te blokkeren voor alle voorgaande functie-instellingen. U kunt ook de Windows-beveiligings-app-meldingen per onderdeel beheren door de instellingen voor doorvoeren te gebruiken.
 

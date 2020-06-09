@@ -6,7 +6,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 04/30/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -17,17 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5839154ab0c884e933e8d11055e745d54503433
-ms.sourcegitcommit: 8a8378b685a674083bfb9fbc9c0662fb0c7dda97
+ms.openlocfilehash: 36b85fa6713af5679e59382efaeb354bb4949705
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619539"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990581"
 ---
-# <a name="use-shell-scripts-on-macos-devices-in-intune-public-preview"></a>Shell-scripts op macOS-apparaten gebruiken in Intune (openbare preview)
-
-> [!NOTE]
-> Shell-scripts voor macOS-apparaten zijn momenteel beschikbaar als preview-versie. Bekijk de lijst met [Bekende problemen in Preview](macos-shell-scripts.md#known-issues) voordat u deze functie gebruikt.
+# <a name="use-shell-scripts-on-macos-devices-in-intune"></a>Shell-scripts op macOS-apparaten gebruiken in Intune
 
 Gebruik Shell-scripts om de mogelijkheden voor apparaatbeheer uit te breiden op Intune tot voorbij de mogelijkheden die worden ondersteund door het macOS-besturingssysteem. 
 
@@ -59,10 +56,11 @@ Zorg ervoor dat aan de volgende vereisten wordt voldaan bij het opstellen van Sh
    - **Scriptfrequentie:** Selecteer hoe vaak het script moet worden uitgevoerd. Kies **Niet geconfigureerd** (standaard) om een script slechts één keer uit te voeren.
    - **Maximum aantal keren dat het script opnieuw moet worden uitgevoerd als het script mislukt:** Selecteer hoe vaak het script moet worden uitgevoerd als er een afsluitcode wordt geretourneerd die niet gelijk is aan nul (0 betekent geslaagd). Kies **Niet geconfigureerd** (standaard) om een script niet opnieuw uit te voeren nadat het is mislukt.
 5. Voeg in **Bereiktags** desgewenste bereiktags toe voor het script en selecteer **Volgende**. U kunt bereiktags gebruiken om te bepalen wie scripts mag bekijken in Intune. Zie [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md) (Op rollen gebaseerd toegangsbeheer en bereiktags gebruiken voor gedistribueerde IT) voor uitgebreide informatie over bereiktags.
-6. Selecteer **Toewijzingen** > **Selecteer groepen om in te sluiten**. Er wordt een bestaande lijst met Azure AD-groepen weergegeven. Selecteer een of meer apparaatgroepen die de gebruikers bevatten wiens macOS-apparaten het script moeten ontvangen. Kies **Selecteren**. De groepen die u hebt gekozen, worden weergegeven in de lijst en ontvangen uw scriptbeleid.
+6. Selecteer **Toewijzingen** > **Selecteer groepen om in te sluiten**. Er wordt een bestaande lijst met Azure AD-groepen weergegeven. Selecteer een of meer gebruikers- of apparaatgroepen die het script moeten ontvangen. Kies **Selecteren**. De groepen die u hebt gekozen, worden weergegeven in de lijst en ontvangen uw scriptbeleid.
    > [!NOTE]
-   > - Shell-scripts in Intune kunnen alleen worden toegewezen aan Azure AD-apparaatbeveiligingsgroepen. De toewijzing van de gebruikersgroep wordt niet ondersteund in de preview-versie. 
-   > - Bij het bijwerken van toewijzingen voor Shell-scripts worden ook toewijzingen voor de [Microsoft Intune-beheeragent voor macOS](macos-shell-scripts.md#microsoft-intune-management-agent-for-macos) bijgewerkt.
+   > - Shell-scripts die zijn toegewezen aan gebruikersgroepen, zijn van toepassing op elke gebruiker die zich aanmeldt bij de Mac.  
+   > - Bij het bijwerken van toewijzingen voor Shell-scripts worden ook toewijzingen voor [Microsoft Intune MDM-agent voor macOS](macos-shell-scripts.md#microsoft-intune-management-agent-for-macos) bijgewerkt.
+
 7. In **Controleren en toevoegen** wordt een samenvatting weer gegeven van de instellingen die u hebt geconfigureerd. Selecteer **Toevoegen** om het script op te slaan. Wanneer u **Toevoegen** selecteert, wordt het scriptbeleid geïmplementeerd in de groepen die u hebt gekozen.
 
 Het script dat u hebt gemaakt, wordt weergegeven in de lijst met scripts. 
@@ -123,7 +121,7 @@ De logboekverzameling kan mogelijk niet worden uitgevoerd om een van de redenen 
 ## <a name="frequently-asked-questions"></a>Veelgestelde vragen
 ### <a name="why-are-assigned-shell-scripts-not-running-on-the-device"></a>Waarom worden toegewezen Shell-scripts niet op het apparaat uitgevoerd?
 Hiervoor kunnen verschillende redenen zijn:
-* De agent moet mogelijk worden ingecheckt om nieuwe of bijgewerkte scripts te ontvangen. Dit incheckproces vindt elke 8 uur plaats en wijkt af van het inchecken bij MDM. Zorg ervoor dat het apparaat actief is en is verbonden met een netwerk om de agent in te checken en te wachten totdat de agent wordt ingecheckt.
+* De agent moet mogelijk worden ingecheckt om nieuwe of bijgewerkte scripts te ontvangen. Dit incheckproces vindt elke 8 uur plaats en wijkt af van het inchecken bij MDM. Zorg ervoor dat het apparaat actief is en is verbonden met een netwerk om de agent in te checken en te wachten totdat de agent wordt ingecheckt. U kunt de eindgebruiker ook vragen om Bedrijfsportal op de Mac te openen, het apparaat te selecteren en op **Instellingen controleren** te klikken.
 * De agent is mogelijk niet geïnstalleerd. Controleer of de agent is geïnstalleerd op `/Library/Intune/Microsoft Intune Agent.app` op het macOS-apparaat.
 * De status van de agent is mogelijk niet in orde. Er zal 24 uur worden geprobeerd de agent te herstellen, waarna de agent wordt verwijderd en opnieuw geïnstalleerd als er nog Shell-scripts aan zijn toegewezen.
 
@@ -149,15 +147,12 @@ De Microsoft Intune-beheeragent moet worden geïnstalleerd op beheerde macOS-app
  - De agent controleert meestal elke 8 uur op nieuwe of bijgewerkte scripts bij Intune-services. Dit check-inproces is onafhankelijk van het inchecken bij MDM. 
  
  ### <a name="how-can-i-manually-initiate-an-agent-check-in-from-a-mac"></a>Hoe kan ik handmatig het inchecken van een agent initiëren vanaf een Mac-computer?
-Open **Terminal** op een Mac-computer waarop de agent is geïnstalleerd, en voer de opdracht `sudo killall IntuneMdmAgent` uit om het `IntuneMdmAgent`-proces te beëindigen. Het `IntuneMdmAgent`-proces wordt onmiddellijk opnieuw gestart. Hierdoor wordt een check-in bij Intune geïnitieerd.
+Open **Bedrijfsportal** op een beheerde Mac waarop de agent is geïnstalleerd, selecteer het lokale apparaat en klik op **Instellingen controleren**. Hiermee wordt een MDM-controle gestart en wordt een agent ingecheckt.
 
-U kunt ook het volgende doen:
-1. Open **Activiteitbewaking** > **Weergeven** > *en selecteer **Alle processen**.* 
-2. Zoek naar processen met de naam `IntuneMdmAgent`. 
-3. Sluit het proces dat wordt uitgevoerd voor **rootgebruiker**. 
+U kunt ook **Terminal** openen, de `sudo killall IntuneMdmAgent` opdracht uitvoeren om het `IntuneMdmAgent` proces te beëindigen. Het `IntuneMdmAgent`-proces wordt onmiddellijk opnieuw gestart. Hierdoor wordt een check-in bij Intune geïnitieerd.
 
 > [!NOTE]
-> Met de actie **Instellingen controleren** in de bedrijfsportal en de actie **Synchroniseren** voor apparaten in de Microsoft Endpoint Manager-beheerconsole wordt een MDM-check-in geïnitieerd. Inchecken van de agent wordt niet afgedwongen.
+> Met de actie **Synchroniseren** voor apparaten in de Microsoft Endpoint Manager-beheerconsole wordt een MDM-check-in geïnitieerd. Inchecken van de agent wordt niet afgedwongen.
 
  ### <a name="when-is-the-agent-removed"></a>Wanneer wordt de agent verwijderd?
  Er zijn verschillende omstandigheden die ertoe kunnen leiden dat de agent van het apparaat wordt verwijderd, zoals:
@@ -165,14 +160,14 @@ U kunt ook het volgende doen:
  - Het macOS-apparaat wordt niet meer beheerd.
  - De agent bevindt zich in een onherstelbare status van meer dan 24 uur (de actieve tijd van het apparaat).
 
+ ### <a name="why-are-scripts-running-even-though-the-mac-is-no-longer-managed"></a>Waarom worden scripts uitgevoerd zelfs als de Mac niet meer wordt beheerd?
+ Wanneer een Mac met toegewezen scripts niet meer wordt beheerd, wordt de agent niet onmiddellijk verwijderd. De agent detecteert dat de Mac niet wordt beheerd bij het inchecken van de volgende agent (meestal elke 8 uur) en annuleert geplande scriptuitvoeringen. Dit betekent dat alle lokaal opgeslagen scripts die zijn gepland om vaker te worden uitgevoerd dan de volgende geplande agent-incheck wordt uitgevoerd. Wanneer de agent niet kan worden ingecheckt, worden er in maximaal 24 uur opnieuw ingecheckt (tijd dat apparaat actief is) en wordt de agent vervolgens verwijderd van de Mac.
+ 
  ### <a name="how-to-turn-off-usage-data-sent-to-microsoft-for-shell-scripts"></a>Hoe kan ik de gebruiksgegevens die naar Microsoft worden verstuurd uitschakelen voor Shell-scripts?
  Als u de gebruiksgegevens die naar Microsoft worden verzonden wilt uitschakelen vanuit de Intune-beheeragent, opent u de bedrijfsportal en selecteert u **Menu** > **Voorkeuren** >  *en schakelt u het selectievakje Microsoft toestaan gebruiksgegevens te verzamelen* uit. Hiermee worden de gebruiksgegevens uitgeschakeld die worden verstuurd voor zowel de agent als de bedrijfsportal.
 
 ## <a name="known-issues"></a>Bekende problemen
-- **Toewijzing van de gebruikersgroep:** Shell-scripts die zijn toegewezen aan gebruikersgroepen, zijn niet van toepassing op apparaten. De toewijzing van de gebruikersgroep wordt momenteel niet ondersteund in de preview-versie. Gebruik toewijzing van apparaatgroepen om scripts toe te wijzen.
-- **Logboeken verzamelen:** De actie Logboeken verzamelen is zichtbaar. Wanneer u echter logboeken probeert te verzamelen, wordt het foutbericht 'Er is een fout opgetreden' weergegeven en worden de logboeken niet vastgelegd. Het verzamelen van logboeken wordt momenteel niet ondersteund in de preview-versie.
 - **Geen uitvoeringsstatus van script:** In het onwaarschijnlijke geval dat een script wordt ontvangen op het apparaat en het apparaat offline gaat voordat de uitvoeringsstatus is gerapporteerd, wordt de uitvoeringsstatus van het script niet gerapporteerd in de beheerconsole.
-- **Rapport van gebruikersstatus:** Er is een probleem met een leeg rapport. Selecteer **Controleren** in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431). De gebruikersstatus toont een leeg rapport.
 
 ## <a name="next-steps"></a>Volgende stappen
 

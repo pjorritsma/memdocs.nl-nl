@@ -1,14 +1,15 @@
 ---
-title: Een Android-apparaat inschrijven via de Microsoft Intune-app en Entrust Datacard
-description: Een Android-apparaat inschrijven en verificatie van afgeleide referentie instellen met Entrust Datacard.
+title: Een Android-apparaat inschrijven via Microsoft Intune-app en DISA Purebred
+description: Meer informatie over het registreren van een Android-apparaat en het instellen van afgeleide referentieverificatie met DISA Purebred.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/17/2020
+ms.date: 05/15/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ''
 searchScope:
@@ -18,16 +19,16 @@ ms.reviewer: jeyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16d14a802c82918656741c137da672e501ddd41a
+ms.openlocfilehash: 584392891320f96eed16863225ffb323dc240594
 ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 05/27/2020
-ms.locfileid: "83879369"
+ms.locfileid: "83880623"
 ---
-# <a name="set-up-android-device-with-company-portal-and-entrust-datacard"></a>Een Android-apparaat instellen via de bedrijfsportal en Entrust Datacard
+# <a name="set-up-android-device-with-the-microsoft-intune-app-and-disa-purebred"></a>Een Android-apparaat instellen via de Microsoft Intune-app en DISA Purebred
 
-Registreer uw apparaat via de Microsoft Intune-app om beveiligde, mobiele toegang te verkrijgen tot e-mail, bestanden en apps van uw organisatie. Nadat uw apparaat is geregistreerd, wordt het *beheerd*. Uw organisatie kan beleid en apps aan het apparaat toewijzen via een MDM-provider (Mobile Device Management), zoals Intune.
+Registreer uw apparaat via de Microsoft Intune-app om beveiligde, mobiele toegang te verkrijgen tot e-mail, bestanden en apps van uw organisatie. Nadat uw apparaat is geregistreerd, wordt het *beheerd*. Uw organisatie kan beleid en apps aan het apparaat toewijzen via een MDM-provider (Mobile Device Management), zoals Intune.  
 
 Tijdens de registratie installeert u ook een afgeleide referentie op het apparaat. Uw organisatie vereist mogelijk dat u de afgeleide referentie gebruikt als verificatiemethode bij het openen van resources of voor het ondertekenen en versleutelen van e-mailberichten.
 
@@ -39,7 +40,7 @@ U moet waarschijnlijk een afgeleide referentie instellen als u een smartcard geb
 In dit artikel gaat u het volgende doen:
 
 * Een mobiel Android-apparaat inschrijven via de Intune-app
-* Uw smartcard instellen door een afgeleide referentie in te stellen van de provider van afgeleide referenties van uw organisatie, [Entrust Datacard](https://www.entrustdatacard.com/)
+* Stel uw smartcard in door een afgeleide referentie te installeren van de provider van afgeleide referenties van uw organisatie, [DISA Purebred](https://public.cyber.mil/pki-pke/purebred/)
 
 ## <a name="what-are-derived-credentials"></a>Wat zijn afgeleide referenties?
 
@@ -54,12 +55,15 @@ Afgeleide referenties zijn een implementatie van de NIST-richtlijnen (National I
 
 ## <a name="prerequisites"></a>Vereisten
 
- Als u de inschrijving wilt voltooien, hebt u het volgende nodig:
+Als u de inschrijving wilt voltooien, hebt u het volgende nodig:
 
 * De smartcard van uw school of werk
 * Toegang tot een computer of kiosk waarbij u zich kunt aanmelden met uw smartcard
-* Een nieuw apparaat of een apparaat met fabrieksinstellingen met Android 7.0 of hoger
+* Een nieuw apparaat of een apparaat met fabrieksinstellingen met Android 7.0 of hoger 
 * De geïnstalleerde Microsoft Intune-app op uw apparaat
+* De Purebred-app die op uw apparaat is geïnstalleerd (app moet automatisch kort na de installatie van het apparaat worden geïnstalleerd. Neem contact op met IT-ondersteuning als dit niet gebeurd.)
+
+Tijdens de installatie moet u ook contact opnemen met een Purebred-agent of-vertegenwoordiger.
 
 ## <a name="enroll-device"></a>Een apparaat inschrijven  
 
@@ -97,7 +101,7 @@ Afgeleide referenties zijn een implementatie van de NIST-richtlijnen (National I
    > [!div class="mx-imgBorder"]
    > ![Schermopname van de prompt Code invoeren van de bedrijfsportalwebsite.](./media/enter-code-intercede.png)
 
-10. Plaats de smartcard om u aan te melden.  
+10. Plaats de smartcard om u aan te melden. 
 
 11. Selecteer op het aanmeldingsscherm uw werk- of schoolaccount. Schakel vervolgens terug naar uw mobiele apparaat. 
 
@@ -107,17 +111,17 @@ Afgeleide referenties zijn een implementatie van de NIST-richtlijnen (National I
 
 13. Tik op **INSTALLEREN** om de bedrijfsapps op uw apparaat te installeren. Wanneer de installatie is voltooid, tikt u op **VOLGENDE**.  
 
-       ![Voorbeeldafbeelding van het instellen van uw zakelijke telefoon, waarin de knop Installeren is gemarkeerd.](./media/fully-managed-intune-app-11.png)    
+       ![Voorbeeldafbeelding van het instellen van uw zakelijke telefoon, waarin de knop Installeren is gemarkeerd.](./media/fully-managed-intune-app-11.png)   
 
 14. Tik op **START** om de Microsoft Intune-app te openen. 
 
     ![Voorbeeldafbeelding van het instellen van uw zakelijke telefoon, waarin de knop Starten is gemarkeerd.](./media/fully-managed-intune-app-17.png)   
- 
+
 15. Keer terug naar de Intune-app op uw mobiele apparaat en volg de instructies op het scherm tot uw inschrijving is voltooid. 
 
     ![Voorbeeldafbeelding van Toegang instellen, scherm apparaat registreren, knop Gereed gemarkeerd.](./media/fully-managed-intune-app-19.png)   
 
-16. Ga verder met de sectie [Smartcard instellen](enroll-android-device-entrust-datacard.md#set-up-smart-card) in dit artikel om het instellen van uw apparaat te voltooien.  
+16. Ga verder met de sectie [Smartcard instellen](enroll-android-device-disa-purebred.md#set-up-smart-card) in dit artikel om het instellen van uw apparaat te voltooien.  
 
 ### <a name="qr-code-enrollment"></a>Inschrijven met behulp van QR-code  
 In deze sectie gaat u de QR-code scannen die u van uw bedrijf hebt ontvangen.  Wanneer u klaar bent, wordt u teruggeleid naar de stappen voor de registratie van het apparaat.     
@@ -134,7 +138,7 @@ In deze sectie gaat u de QR-code scannen die u van uw bedrijf hebt ontvangen.  W
 ### <a name="token-enrollment"></a>Tokeninschrijving  
 In deze sectie gaat u het token invoeren dat u van uw bedrijf hebt ontvangen. Wanneer u klaar bent, wordt u teruggeleid naar de stappen voor de registratie van het apparaat.  
 
-1. Typ in het aanmeldscherm van Google **afw #setup** in het vak **E-mailadres of telefoonnummer**. Tik vervolgens op **Volgende**. 
+1. Typ in het aanmeldscherm van Google **afw #setup** in het vak **E-mailadres of telefoonnummer**. Tik op **Volgende**. 
 
    ![Voorbeeldafbeelding van het aanmeldscherm van Google waarin afw#setup in het veld is getypt.](./media/token-intune-app-01.png)   
 
@@ -150,64 +154,61 @@ In deze sectie gaat u het token invoeren dat u van uw bedrijf hebt ontvangen. Wa
 
 6. Ga terug naar [Apparaat inschrijven](#enroll-device), stap 4, om door te gaan met de installatie.
 
+
 ## <a name="set-up-smart-card"></a>Smartcard instellen  
+
+> [!NOTE]
+> De Purebred-app is vereist om deze stappen uit te voeren en wordt na de registratie automatisch op het apparaat geïnstalleerd. Als u de app nog steeds niet hebt, neemt u contact op met uw IT-ondersteuningsmedewerker.  
 
 1. Nadat de inschrijving is voltooid, ontvangt u via de Intune-app een melding over het instellen van uw smartcard. Tik op de melding. Als u geen melding ontvangt, controleert u uw e-mail.
 
    > [!div class="mx-imgBorder"]
-   > ![Voorbeeldschermopname van de pushmelding van de bedrijfsportal op het startscherm van het apparaat.](./media/action-required-in-app-android.png)
+   > ![Voorbeeldschermopname van de pushmelding van de Intune-app op het startscherm van het apparaat.](./media/action-required-in-app-android.png)
 
 2. Ga als volgt te werk op het scherm **Smartcard instellen**:
 
-   1. Tik op de koppeling naar de installatie-instructies van uw organisatie. Als uw organisatie geen aanvullende instructies verstrekt, wordt u naar dit artikel gestuurd.
+   1. Tik op de koppeling naar de installatie-instructies van uw organisatie en controleer deze. Als uw organisatie geen aanvullende instructies verstrekt, wordt u naar dit artikel gestuurd.
 
-   2. Tik op **BEGINNEN**. 
+   2. Tik op **BEGINNEN**.   
 
    > [!div class="mx-imgBorder"]
-   > ![Voorbeeldschermopname van het bedrijfsportalscherm Toegang tot mobiele smartcard instellen.](./media/smart-card-open-entrust-android.png)
+   > ![Voorbeeldschermopname van de Intune-app, scherm om smartcard in te stellen.](./media/smart-card-open-disa-purebred-android.png)
 
-3. Schakel over naar het apparaat dat geschikt is voor smartcards en open IdentityGuard.
+3. Tik in het scherm **Certificaten ophalen** op **PUREBRED STARTEN** om de Purebred-app te openen. (De app moet automatisch op uw apparaat zijn geïnstalleerd. Als u de app niet hebt, neemt u contact op met de ondersteuningsmedewerker.)  
 
-4. Zoek het aanmeldingsgebied voor smartreferenties en selecteer de aanmeldknop.
+   > [!div class="mx-imgBorder"]
+   > ![Voorbeeldschermopname van de Intune-appprompt om DISA Purebred-app te openen.](./media/open-app-prompt-disa-purbred-android.png)  
 
-5. Wanneer u wordt gevraagd om een certificaat te selecteren, kiest u uw smartcardreferenties. Selecteer vervolgens **OK**.
+4. De Purebred-app heeft mogelijk extra machtigingen van u nodig om goed te kunnen worden uitgevoerd. Tik op **Toestaan** of **Altijd toestaan** wanneer hierom wordt gevraagd. Voor meer informatie over waarom deze machtigingen zijn vereist, kunt u contact opnemen met uw ondersteuningsmedewerker of Purebred-agent.  
 
-6. Voer de pincode van uw smartcard in.
+5. Als u zich in de Purebred-app bevindt, moet u samenwerken met de Purebred-agent van uw organisatie om de certificaten te downloaden en te installeren die u nodig hebt voor toegang tot werk- of schoolresources.
 
-7. U wordt gevraagd om te kiezen uit een lijst met acties. Selecteer de actie waarmee u zich kunt inschrijven voor een afgeleide mobiele smartreferentie. Op de koppeling of knop staat iets als **Ik wil me inschrijven voor een afgeleide mobiele smartcardreferentie.**
+    > [!IMPORTANT]
+    > Tik tijdens dit proces op **OK** of **Installeren** wanneer hierom wordt gevraagd. Wijzig niet de namen van certificaatexemplaren (CA's) of certificaten die u wilt installeren.    
 
-8. Selecteer dat u de voor smartreferenties geschikte toepassing hebt gedownload en geïnstalleerd. Ga dan door naar het volgende scherm.
-
-9. Voer informatie in over uw afgeleide smartcardreferentie:
-
-    1. Voer voor de identiteitsnaam een naam in, zoals *Afgeleide Entrust-referentie*.  
-    2. Selecteer in het vervolgkeuzemenu **Entrust IdentityGuard Mobile Smart Credential**.
-
-    3. Ga door naar het volgende scherm. Er wordt een QR-code met een numeriek wachtwoord weergegeven.
-
-10. Keer terug naar uw Android-apparaat. Tik in de Intune-app in het scherm **QR-code ophalen** op **NEXT**.
+6. Nadat de installatie is voltooid, ontvangt u een melding dat uw certificaten gereed zijn. Tik op de melding om terug te keren naar de Intune-app.
 
     > [!div class="mx-imgBorder"]
-    > ![Voorbeeldschermopname van het bedrijfsportalscherm QR-code ophalen.](./media/get-qr-code-entrust-android.png)
+    > ![Schermopname van het scherm "Toegang tot certificaten toestaan"](./media/certificates-ready-prompt-disa-purbred-android.png)
 
-11. Als u wordt gevraagd om de Intune-app in staat te stellen uw camera te gebruiken, tikt u op **Toestaan**.
+7. Vanuit het scherm **Toegang tot certificaten toestaan**, geeft u de Intune-app toestemming om toegang te krijgen tot de afgeleide referentie die u hebt ontvangen van DISA Purebred. Met deze stap zorgt u ervoor dat uw organisatie uw identiteit kan verifiëren wanneer u beveiligde werk- of schoolresources opent.  
 
-12. Scan de afbeelding van de QR-code die op uw voor smartcard geschikte apparaat staat.
+    1. Tik op **VOLGENDE**.
 
-13. Voer in het scherm **Wachtwoord vereist** het wachtwoord in dat wordt weergegeven onder de QR-code.
+       > [!div class="mx-imgBorder"]
+       > ![Schermafbeelding van prompt "Certificaten zijn gereed"](./media/certificates-access-disa-purbred-android.png)
+
+    2. Wanneer u wordt gevraagd om **Certificaat kiezen**, moet u de selectie niet wijzigen. Het juiste certificaat is al geselecteerd. Tik daarom alleen op **Selecteren** of **OK**.  
+
+       > [!div class="mx-imgBorder"]
+       > ![Schermopname van de prompt "Certificaat kiezen"](./media/choose-certificates-prompt-disa-purbred-android.png)
+
+    3. Uw afgeleide referentie bestaat uit meerdere certificaten, dus u ziet mogelijk de prompt **Certificaat kiezen** meerdere keren. Herhaal de vorige stap totdat er geen prompts meer worden weergegeven.  
+
+8. Zodra alle certificaten zijn verwerkt, wacht u totdat het instellen van uw apparaat via de Intune-app is voltooid. Het instellen is voltooid als de melding **Gereed** wordt weergegeven op het scherm.  
 
     > [!div class="mx-imgBorder"]
-    > ![Voorbeeldschermopname van het bedrijfsportalscherm Wachtwoord vereist.](./media/password-required-entrust-android.png)  
-
-14. Via de Intune-app wordt begonnen met het downloaden en installeren van de certificaten die nodig zijn voor toegang tot werk- of schoolresources. Afhankelijk van uw internetverbinding kan dit proces enige tijd duren. Sluit de app tijdens dit proces niet.
-
-    > [!div class="mx-imgBorder"]
-    > ![Voorbeeldschermopname van het bedrijfsportalscherm Certificaten downloaden en installeren](./media/install-certificates-entrust-android.png)
-
-15. Zodra alle certificaten zijn verwerkt, wacht u totdat het instellen van uw apparaat via de Intune-app is voltooid. Het instellen is voltooid als de melding **Gereed** wordt weergegeven op het scherm.
-
-    > [!div class="mx-imgBorder"]
-    > ![Voorbeeldschermopname van het scherm Gereed](./media/all-set-android.png)
+    > ![Schermopname van het scherm Dat is alles](./media/all-set-android.png)
 
 ## <a name="next-steps"></a>Volgende stappen
 
@@ -215,5 +216,6 @@ Nadat de inschrijving is voltooid, hebt u toegang tot werkresources, zoals e-mai
 
 * [Beheerde apps op een apparaat gebruiken](use-managed-apps-on-your-device-android.md)  
 * [Apps beheren via de Bedrijfsportalwebsite](manage-apps-cpweb.md)  
+
 
 Nog hulp nodig? Neem contact op met het ondersteuningsteam van uw bedrijf. Controleer of de contactgegevens beschikbaar zijn op de [bedrijfsportalwebsite](https://go.microsoft.com/fwlink/?linkid=2010980).

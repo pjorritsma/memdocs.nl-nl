@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 04/17/2020
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
@@ -18,12 +18,12 @@ ms.reviewer: jeyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8afc499f85e91658b411a25988ac858ca59030cc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e82d8f27b7ffbce663ee64030a6d933bf1684dc1
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81616044"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880593"
 ---
 # <a name="set-up-android-device-with-company-portal-and-intercede"></a>Een Android-apparaat instellen via de bedrijfsportal en Intercede
 
@@ -135,7 +135,7 @@ In deze sectie gaat u de QR-code scannen die u van uw bedrijf hebt ontvangen.  W
 ### <a name="token-enrollment"></a>Tokeninschrijving  
 In deze sectie gaat u het token invoeren dat u van uw bedrijf hebt ontvangen. Wanneer u klaar bent, wordt u teruggeleid naar de stappen voor de registratie van het apparaat.  
 
-1. Typ in het aanmeldscherm van Google **afw #setup** in het vak **E-mailadres of telefoonnummer**. Tik op **Volgende**. 
+1. Typ in het aanmeldscherm van Google **afw #setup** in het vak **E-mailadres of telefoonnummer**. Tik vervolgens op **Volgende**. 
 
    ![Voorbeeldafbeelding van het aanmeldscherm van Google waarin afw#setup in het veld is getypt.](./media/token-intune-app-01.png)   
 
@@ -162,7 +162,7 @@ In deze sectie gaat u het token invoeren dat u van uw bedrijf hebt ontvangen. Wa
 
    1. Tik op de koppeling naar de installatie-instructies van uw organisatie. Als uw organisatie geen aanvullende instructies verstrekt, wordt u naar dit artikel gestuurd.
 
-   2. Tik op **Beginnen**.  
+   2. Tik op **BEGINNEN**.  
 
    > [!div class="mx-imgBorder"]
    > ![Voorbeeldschermopname van het bedrijfsportalscherm Toegang tot mobiele smartcard instellen.](./media/smart-card-open-entrust-android.png)
@@ -173,7 +173,7 @@ In deze sectie gaat u het token invoeren dat u van uw bedrijf hebt ontvangen. Wa
 
 5. Wanneer u wordt gevraagd welk profiel u wilt gebruiken, selecteert u de optie om te activeren met een mobiele referentie. Er wordt een QR-code weergegeven.  
 
-6. Keer terug naar uw Android-apparaat. Tik in het scherm Bedrijfsportal > **QR-code ophalen** op **Volgende**.
+6. Keer terug naar uw Android-apparaat. Tik in het scherm Bedrijfsportal > **QR-code ophalen** op **VOLGENDE**.
 
     > [!div class="mx-imgBorder"]
     > ![Voorbeeldschermopname van het bedrijfsportalscherm QR-code ophalen.](./media/get-qr-code-entrust-android.png)

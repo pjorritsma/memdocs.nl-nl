@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: ''
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1dee569d6f2ce4ed1a3bc278c9c9a886f9d23974
-ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
+ms.openlocfilehash: d9e3d03211907f31008b31d68c4ed5cd11ae1a6e
+ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82782255"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83791731"
 ---
 # <a name="microsoft-endpoint-manager-overview"></a>Overzicht van Microsoft Endpoint Manager
 
@@ -50,7 +50,7 @@ Endpoint Manager omvat onder andere de volgende services:
 
   Zie [Wat is Microsoft Intune?](https://docs.microsoft.com/intune/fundamentals/what-is-intune) voor meer informatie.
 
-- **Configuration Manager**: Configuration Manager is een on-premises oplossing voor het beheren van desktopcomputers, servers en laptops die zich op uw netwerk of op internet bevinden. U kunt ervoor kiezen om Configuration Manager in de cloud te gebruiken zodat integratie met Intune, Azure AD, Microsoft Defender ATP en andere cloudservices mogelijk is. Gebruik Configuration Manager om apps, software-updates en besturingssystemen te implementeren. U kunt ook naleving controleren, query's uitvoeren en in realtime op clients reageren, en nog veel meer.
+- **Configuration Manager**: Configuration Manager is een on-premises oplossing voor het beheren van desktopcomputers, servers en laptops die zich op uw netwerk of op internet bevinden. U kunt ervoor kiezen om Configuration Manager in de cloud te gebruiken zodat integratie met Intune, Azure Active Directory (AD), Microsoft Defender ATP en andere cloudservices mogelijk is. Gebruik Configuration Manager om apps, software-updates en besturingssystemen te implementeren. U kunt ook naleving controleren, query's uitvoeren en in realtime op clients reageren, en nog veel meer.
 
   Omdat Configuration Manager onderdeel is van Endpoint Manager kunt u deze gewoon blijven gebruiken. Als u een aantal taken wilt verplaatsen naar de cloud, kunt u het gebruik van [co-beheer](https://docs.microsoft.com/configmgr/comanage/) overwegen.
 
@@ -74,7 +74,7 @@ Endpoint Manager omvat onder andere de volgende services:
 
   Zie [Een overzicht van Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot) en [Windows-apparaten inschrijven in Intune](/mem/intune/enrollment/enrollment-autopilot) voor meer informatie.
 
-- **Azure AD Premium**: Azure AD wordt door Endpoint Manager gebruikt voor apparaten, gebruikers, groepen, dynamische groepen, automatisch inschrijven, meervoudige verificatie en voorwaardelijke toegang. Deze functies zijn essentieel voor het beveiligen van apparaten, apps en gegevens.
+- **Azure Active Directory (AD)** : Azure AD wordt gebruikt door de eindpuntbeheerder voor de identiteit van apparaten, gebruikers, groepen en meervoudige verificatie (MFA). **Azure AD Premium**, wat extra kosten met zich meebrengt, heeft [extra functies](https://azure.microsoft.com/pricing/details/active-directory/) om apparaten, apps en gegevens te beschermen, met inbegrip van dynamische groepen, automatische inschrijving en voorwaardelijke toegang.
 
   Zie [gebruikers toevoegen](/mem/intune/fundamentals/users-add), [automatisch inschrijven instellen](/mem/intune/enrollment/windows-enroll) en [over voorwaardelijke toegang](/mem/intune/protect/conditional-access) voor meer informatie.
 

@@ -10,12 +10,12 @@ ms.assetid: a2742d52-851e-4abc-b623-d12d91684c0b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9143c224082f00b882d3cb557b47b737012393fa
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: f0a26d02770ff8460787ee9897bdc8f1218a2c12
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906345"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506159"
 ---
 # <a name="get-started-with-compliance-settings-in-configuration-manager"></a>Aan de slag met instellingen voor naleving in Configuration Manager
 
@@ -103,11 +103,8 @@ Met het beleid voor editie-upgrades worden apparaten waarop bepaalde versies van
 
 Zie [Windows-apparaten upgraden met het beleid voor editie-upgrades](../deploy-use/upgrade-windows-version.md) voor meer informatie.
 
-
-
-## <a name="microsoft-edge-browser-profiles"></a>Micro soft Edge-browser profielen
+## <a name="microsoft-edge-legacy-browser-profiles"></a>Oudere browser profielen voor micro soft Edge
 <!-- 1357310 -->
-Vanaf versie 1802, voor klanten die de [micro soft Edge](https://www.microsoft.com/itpro/microsoft-edge) -webbrowser op Windows 10-clients gebruiken, maakt u een beleid voor nalevings instellingen voor het configureren van verschillende instellingen voor micro soft Edge. 
+Voor klanten die de [micro soft Edge verouderde](https://docs.microsoft.com/microsoft-edge/deploy/) webbrowser op Windows 10-clients gebruiken, maakt u een Configuration Manager nalevings beleid om de browser instellingen te configureren.
 
-Zie [micro soft Edge-browser profielen](../deploy-use/browser-profiles.md)voor meer informatie.
-
+Zie voor meer informatie [micro soft Edge verouderde browser profielen](../deploy-use/browser-profiles.md).

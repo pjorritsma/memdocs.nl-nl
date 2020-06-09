@@ -10,12 +10,12 @@ ms.assetid: b3ce6b9a-7d54-4374-9b7a-f017f872bd6f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 95fb434f94ece47a0e896e5cf1913f3f67cac7d0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cd1657e4c77430fea4cae754f5db5d669e9bf0fd
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720343"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506351"
 ---
 # <a name="diagnostic-and-usage-data-for-version-1910"></a>Diagnostische en gebruiks gegevens voor versie 1910
 
@@ -322,7 +322,7 @@ Voor Configuration Manager versie 1910 bevat dit niveau de volgende gegevens:
 
 - Windows hello voor bedrijven-beleid (gemaakt, geïmplementeerd)  
 
-- Aantal geïmplementeerde micro soft Edge-browser beleid  
+- Aantal geïmplementeerde beleids regels voor verouderde browsers van micro soft Edge  
 
 - Aantal OneDrive-beleids regels (gemaakt, geïmplementeerd)
 

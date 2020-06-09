@@ -10,12 +10,12 @@ ms.assetid: 264ea96f-f26a-4fb7-a23f-ecf36054e54b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1a56a9c869435bb8fd41aa6e46483277854d25b8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8521120de444d4c9725a297c63a9c0c72d4bf2fb
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720350"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506350"
 ---
 # <a name="diagnostic-and-usage-data-for-version-2002"></a>Diagnostische en gebruiks gegevens voor versie 2002
 
@@ -342,7 +342,7 @@ Voor Configuration Manager versie 2002 bevat dit niveau de volgende gegevens:
 
 - Windows hello voor bedrijven-beleid (gemaakt, geïmplementeerd)  
 
-- Aantal geïmplementeerde micro soft Edge-browser beleid  
+- Aantal geïmplementeerde beleids regels voor verouderde browsers van micro soft Edge  
 
 - Aantal OneDrive-beleids regels (gemaakt, geïmplementeerd)
 

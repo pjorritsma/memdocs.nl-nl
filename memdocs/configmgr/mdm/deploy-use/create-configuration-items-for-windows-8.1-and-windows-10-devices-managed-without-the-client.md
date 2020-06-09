@@ -10,12 +10,12 @@ ms.assetid: 23e1e4dc-623a-4521-ad04-ae9482927097
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8186b45a0b0c74840582052f9c585c0557180493
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: 1987ba504630ab1d4b23cdb54710f0cbaa3db28a
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721946"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506245"
 ---
 # <a name="create-configuration-items-for-windows-devices-with-on-premises-mdm-in-configuration-manager"></a>Configuratie-items maken voor Windows-apparaten met on-premises MDM in Configuration Manager
 
@@ -58,7 +58,7 @@ Raadpleeg de volgende artikelen voor meer algemene informatie over de instelling
 
     - **Geen**: voor apparaten die niet voldoen aan deze nalevings regel wordt geen fout Ernst gerapporteerd voor Configuration Manager-rapporten.
 
-    - **Informatie**
+    - **Gegevens**
 
     - **Waarschuwing**
 
@@ -89,8 +89,8 @@ Deze instellingen zijn alleen voor apparaten met Windows 10 of hoger.
 - **Aantal onthouden wacht woorden**: hiermee voor komt u dat eerder gebruikte wacht woorden opnieuw worden gebruikt.
 - **Aantal mislukte aanmeldings pogingen voordat het apparaat wordt gewist**: als dit aantal aanmeldings pogingen mislukt, wordt het apparaat gewist door MDM
 - **Niet-actieve periode voordat het apparaat wordt vergrendeld**: Hiermee geeft u de hoeveelheid tijd op die een apparaat inactief kan zijn voordat het wordt vergrendeld. Het apparaat is niet actief wanneer er geen gebruikers invoer is.
-- **Wachtwoord complexiteit**: Kies of u een numerieke pincode wilt opgeven `1234`, bijvoorbeeld of of u een sterk wacht woord moet invoeren.
-  - **Aantal complexe teken sets dat is vereist in het wacht woord**: als de complexiteit van het wacht woord **sterk**is, selecteert u hoeveel typen tekens het wacht woord vereist: hoofd letters, kleine letters, cijfers en symbolen. Deze waarde is `2`standaard ingesteld op.
+- **Wachtwoord complexiteit**: Kies of u een numerieke pincode wilt opgeven, bijvoorbeeld `1234` of of u een sterk wacht woord moet invoeren.
+  - **Aantal complexe teken sets dat is vereist in het wacht woord**: als de complexiteit van het wacht woord **sterk**is, selecteert u hoeveel typen tekens het wacht woord vereist: hoofd letters, kleine letters, cijfers en symbolen. Deze waarde is standaard ingesteld op `2` .
 - **Pincode voor wachtwoordherstel verzenden naar Exchange Server**
 
 ### <a name="device"></a>Apparaat
@@ -136,7 +136,7 @@ Deze instellingen zijn alleen voor apparaten met Windows 10 of hoger.
 - **Aankopen in app**: Hiermee staat u gebruikers toe om in-app-aankopen te maken.
 - Door **Store afkomstige app starten**: alle apps uitschakelen die vooraf zijn geïnstalleerd op het apparaat of die zijn geïnstalleerd vanaf de Microsoft Store.
 - **Apps uit de Store automatisch bijwerken**: toestaan of verhinderen dat apps die zijn geïnstalleerd van de Microsoft Store automatisch worden bijgewerkt.
-- **Apps installeren op Systeem station**: Hiermee staat u toe dat het apparaat apps op het systeem station installeert. Dit is meestal `C:` het station.
+- **Apps installeren op Systeem station**: Hiermee staat u toe dat het apparaat apps op het systeem station installeert. Dit is meestal het `C:` station.
 - **App-gegevens installeren op systeem volume**: Schakel deze optie in om apps in staat te stellen gegevens op te slaan op het systeem station.
 - **Alleen persoonlijke Store gebruiken**: gebruikers moeten apps uit uw privé-archief downloaden.
 - **Game DVR**: Windows Game-opname en-uitzending uitschakelen
@@ -164,7 +164,7 @@ Deze instellingen zijn voor apparaten met Windows 8.1 en Windows 10.
 - **Beveiligings niveau voor zone met vertrouwde sites**: Stel het beveiligings niveau in voor de zone met vertrouwde sites: hoog, gemiddeld-hoog, gemiddeld, middel groot laag of laag.
 - **Beveiligings niveau voor zone Websites met beperkte toegang**: Stel het beveiligings niveau in voor de zone met sites met beperkte toegang: hoog.
 - **Naam ruimten voor intranet zone**: Configureer websites om toe te voegen aan of te verwijderen uit de intranet zone.
-- **Ga naar intranet site voor invoer van één woord**: toestaan of verbieden dat Internet Explorer automatisch naar een intranet site gaat als de gebruiker een geldige site naam invoert zonder hiervoor een voor gaande protocol `https://`.
+- **Ga naar intranet site voor invoer van één woord**: toestaan of verbieden dat Internet Explorer automatisch naar een intranet site gaat als de gebruiker een geldige site naam invoert zonder hiervoor een voor gaande protocol `https://` .
 - **Menu optie bedrijfs modus**: Hiermee stelt u gebruikers in staat om bedrijfs modus te activeren en deactiveren vanuit het menu **extra** in Internet Explorer.
   - **Locatie van registratie rapport (URL)**: als bedrijfs modus actief is, geeft u een URL op voor het registreren van bezochte websites.
 - Locatie van de lijst met websites van **bedrijfs modus (URL)**: als de ondernemings modus actief is, geeft u de lijst met sites op die deze gebruikt.
@@ -242,7 +242,7 @@ Deze instellingen zijn alleen voor apparaten met Windows 10 of hoger.
         - **WPA2**
         - **WPA2-PSK**
     - **Gegevens versleuteling**: Kies de versleutelings methode die door deze verbinding wordt gebruikt. De beschik bare waarden worden gewijzigd op basis van de **verificatie** methode die u selecteert:
-        - **Geblokkeerd**
+        - **Uitgeschakeld**
         - **WEP**
         - **TKIP**
         - **KIEST**
@@ -327,7 +327,7 @@ Deze instellingen zijn alleen voor apparaten met Windows 10 team.
 
 Zie [uw ondernemings gegevens beveiligen met behulp van Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)voor meer informatie over het configureren van ondernemings gegevens beveiliging met Configuration Manager.
 
-### <a name="microsoft-edge"></a>Microsoft Edge
+### <a name="microsoft-edge-legacy"></a>Micro soft Edge verouderd
 
 Deze instellingen zijn alleen voor apparaten met Windows 10 of hoger.  
 
@@ -342,7 +342,7 @@ Deze instellingen zijn alleen voor apparaten met Windows 10 of hoger.
 - **Extensies**: Edge-extensies toestaan of verbieden.
 - **InPrivate-Browsing**: InPrivate-Browsing toestaan of verbieden, wat geen geschiedenis of cookies opslaat.
 - **WebRTC localhost IP-adres**: Hiermee staat u toe dat het localhost IP-adres van het apparaat wordt weer gegeven wanneer de gebruiker telefoon gesprekken maakt met het web RTC-protocol.
-- **Toegang tot about: Flags blok keren**: Hiermee staat u toe dat de `about:flags` gebruiker toegang heeft tot de pagina, die ontwikkel-en experimentele instellingen bevat.
+- **Toegang tot about: Flags blok keren**: Hiermee staat u toe dat de gebruiker toegang heeft tot de `about:flags` pagina, die ontwikkel-en experimentele instellingen bevat.
 - **SmartScreen-prompt negeren voor bestanden**: Hiermee staat u toe dat de gebruiker de waarschuwingen van het SmartScreen-filter overs Laan over het downloaden van mogelijk schadelijke bestanden.
 - **SmartScreen-prompt negeren**: Hiermee staat u toe dat de gebruiker de waarschuwingen van het SmartScreen-filter over mogelijk schadelijke websites kan overs Laan.
 - **URL voor eerste uitvoering**: Geef een website op die moet worden weer gegeven wanneer een gebruiker de eerste keer een rand opent.
@@ -368,7 +368,7 @@ Deze instellingen zijn alleen voor apparaten met Windows 10 of hoger.
 - **Archief bestanden scannen**: Defender scant gecomprimeerde archieven, zoals zip-of CAB-bestanden.
 - **E-mail berichten scannen**: Defender scant e-mail berichten wanneer deze op het apparaat binnenkomen.
 - **Verwissel bare stations scannen**: Defender scant Verwissel bare stations, zoals USB-sticks.
-- **Toegewezen stations scannen**: met Defender worden de stations gescand die zijn toegewezen aan netwerk shares. `H:` Is bijvoorbeeld toegewezen aan het persoonlijke station van een gebruiker. Als de bestanden op de schijf het kenmerk alleen-lezen hebben, kan Defender de gevonden malware niet verwijderen.
+- **Toegewezen stations scannen**: met Defender worden de stations gescand die zijn toegewezen aan netwerk shares. `H:`Is bijvoorbeeld toegewezen aan het persoonlijke station van een gebruiker. Als de bestanden op de schijf het kenmerk alleen-lezen hebben, kan Defender de gevonden malware niet verwijderen.
 - **Bestanden die zijn geopend vanuit gedeelde mappen op het netwerk scannen**: met Defender worden bestanden gescand wanneer een gebruiker deze opent vanuit een gedeeld netwerkpad. Bijvoorbeeld `\\server\share\file.doc`. Als het bestand op de share alleen-lezen is, kunnen er door Defender gevonden malware niet worden verwijderd.
 - **Interval voor handtekening updates**: Kies het tijds interval wanneer Defender op nieuwe handtekening bestanden controleert.
 - **Cloud beveiliging toestaan**: Defender gebruikt de micro soft Cloud om informatie over malware-activiteiten te ontvangen en functies zoals blok keren op het eerste gezicht in te scha kelen.
@@ -376,7 +376,7 @@ Deze instellingen zijn alleen voor apparaten met Windows 10 of hoger.
 - **Detectie van mogelijk ongewenste toepassingen**: Hiermee wordt het apparaat beschermd tegen het uitvoeren van software die door Defender als mogelijk ongewenst is geclassificeerd. U kunt beveiligen tegen deze toepassingen of de controle modus gebruiken om te rapporteren wanneer een gebruiker een mogelijk ongewenste toepassing installeert.
 - **Uitsluitingen van bestanden en**mappen: Voeg een of meer bestanden en mappen toe aan de uitsluitings lijst. Bijvoorbeeld `C:\Path` of `%ProgramFiles%\Path\filename.exe`. Defender bevat deze bestanden en mappen niet in realtime of geplande scans.
 - **Uitsluitingen van bestands extensies**: Voeg een of meer bestands extensies toe aan de uitsluitings lijst. Bijvoorbeeld `java` of `exe`. Defender bevat geen bestanden met deze uitbrei dingen in real-time of geplande scans.
-- **Uitsluitingen van processen**: Voeg specifieke processen toe aan de uitsluitings lijst. Bijvoorbeeld `C:\path\myproc.exe`. Dit type uitsluiting ondersteunt alleen de volgende extensies: `exe`, `com`of `scr`. Defender bevat deze processen niet in realtime of geplande scans.
+- **Uitsluitingen van processen**: Voeg specifieke processen toe aan de uitsluitings lijst. Bijvoorbeeld `C:\path\myproc.exe`. Dit type uitsluiting ondersteunt alleen de volgende extensies: `exe` , `com` of `scr` . Defender bevat deze processen niet in realtime of geplande scans.
 
 ### <a name="additional-settings"></a>Aanvullende instellingen
 

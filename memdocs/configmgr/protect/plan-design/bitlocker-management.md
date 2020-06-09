@@ -10,12 +10,12 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2523d06034f4a7effe769235cb5a4ede4df7e167
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: 2c03d5d06dc6b49ceff6af8ce862eb19cb4a517a
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764115"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531465"
 ---
 # <a name="plan-for-bitlocker-management"></a>BitLocker-beheer plannen
 
@@ -23,7 +23,7 @@ ms.locfileid: "83764115"
 
 <!-- 3601034 -->
 
-Vanaf versie 1910 gebruikt u Configuration Manager om BitLocker-stationsversleuteling (BDE) te beheren voor on-premises Windows-clients. Het biedt een volledig beheer van de BitLocker-levenscyclus waarmee het gebruik van micro soft BitLocker Administration and monitoring (MBAM) kan worden vervangen.
+Vanaf versie 1910 gebruikt u Configuration Manager om BitLocker-stationsversleuteling (BDE) te beheren voor on-premises Windows-clients, die zijn gekoppeld aan Active Directory. Azure Active Directory lid zijn van een werk groep of clients worden niet ondersteund. Het biedt een volledig beheer van de BitLocker-levenscyclus waarmee het gebruik van micro soft BitLocker Administration and monitoring (MBAM) kan worden vervangen.
 
 > [!Note]  
 > Configuration Manager schakelt deze optionele functie standaard niet in. U moet deze functie inschakelen voordat u deze kunt gebruiken. Zie voor meer informatie [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).  
@@ -92,7 +92,7 @@ Laat gebruikers zichzelf helpen met een sleutel voor eenmalig gebruik voor het o
     > [!NOTE]
     > Installeer alleen de Self-Service Portal en de beheer-en bewakings website met een primaire site database. Installeer deze websites voor elke primaire site in een hiërarchie.
 
-- Op de webserver waarop de Self-Service Portal wordt gehost, installeert u [micro soft ASP.NET MVC 4,0](https://docs.microsoft.com/aspnet/mvc/mvc4).
+- Op de webserver die als host fungeert voor de Self-Service Portal, installeert u [micro soft ASP.NET MVC 4,0](https://docs.microsoft.com/aspnet/mvc/mvc4) en .NET Framework 3,5 Feature voordat u het installatie proces indrukt. Andere vereiste Windows Server-functies en-onderdelen worden automatisch geïnstalleerd tijdens het installatie proces van de portal.
 
 - Het gebruikers account dat het installatie script voor de portal uitvoert, heeft SQL **sysadmin** -rechten nodig op de site database server. Tijdens het installatie proces stelt het script aanmeldings-, gebruikers-en SQL-rollen rechten in voor het computer account van de webserver. U kunt dit gebruikers account verwijderen uit de sysadmin-rol nadat u de installatie van de Self-Service Portal en de beheer-en controle website hebt voltooid.
 

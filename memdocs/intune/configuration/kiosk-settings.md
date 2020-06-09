@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2020
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 60a4ac793500cd4d31df2188344e2b5f4e1094a4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a9be644a47a361cf29e7b7132b2c87a4921553ea
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80359148"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989425"
 ---
 # <a name="windows-10-and-windows-holographic-for-business-device-settings-to-run-as-a-dedicated-kiosk-using-intune"></a>Instellingen voor Windows 10- en Windows Holographic for Business-apparaten om ze als toegewezen kiosk uit te voeren via Intune
 
@@ -45,30 +45,46 @@ In dit artikel wordt beschreven hoe u een apparaatconfiguratieprofiel maakt. Zie
 2. Selecteer **Apparaten** > **Configuratieprofielen** > **Profiel maken**.
 3. Voer de volgende eigenschappen in:
 
+   - **Platform**: Kies **Windows 10 en hoger**.
+   - **Profiel**: Selecteer **Kiosk**.
+
+4. Selecteer **Maken**.
+5. Voer in **Basisinformatie** de volgende eigenschappen in:
+
    - **Naam**: Voer een beschrijvende naam in voor het nieuwe profiel.
    - **Beschrijving**: Voer een beschrijving in voor het profiel. Deze instelling is optioneel, maar wordt aanbevolen.
-   - **Platform**: Kies **Windows 10 en hoger**
-   - **Profieltype**: Selecteer **Kiosk**
 
-4. Selecteer in **Instellingen** een **kioskmodus**. **Kioskmodus** geeft het type kioskmodus aan dat door het beleid wordt ondersteund. Opties zijn onder andere:
+6. Selecteer **Volgende**.
+7. Kies in **Configuratie-instellingen** > **Selecteer een kioskmodus** het type kioskmodus dat door het beleid wordt ondersteund. Opties zijn onder andere:
 
-    - **Niet geconfigureerd** (standaardinstelling): Er wordt door het beleid geen kioskmodus ingeschakeld.
+    - **Niet geconfigureerd** (standaardinstelling): Deze instelling wordt niet gewijzigd of bijgewerkt door Intune. Er wordt door het beleid geen kioskmodus ingeschakeld.
     - **Kiosk met één app, in volledige schermweergave**: Het apparaat wordt uitgevoerd als een enkel gebruikersaccount en wordt vastgemaakt aan een enkele Store-app. Dus wanneer de gebruiker zich aanmeldt, wordt een specifieke app gestart. Deze modus voorkomt ook dat de gebruiker nieuwe apps kan openen of de actieve app kan wijzigen.
     - **Kiosk voor meerdere apps**: Op het apparaat worden meerdere Store-apps, Win32-apps of Postvak IN-apps voor Windows uitgevoerd met behulp van de model-id van de toepassingsgebruiker (AUMID). Alleen de apps die u toevoegt, zijn op het apparaat beschikbaar.
 
         Het voordeel van een kiosk voor meerdere apps, of apparaat voor een bepaald doeleinde, is dat het eenvoudig is in het gebruik omdat de gebruikers alleen toegang krijgen tot de apps die ze nodig hebben. Daarnaast worden de apps die de gebruikers niet nodig hebben niet weergegeven.
 
     Voor een lijst van alle instellingen en wat ze doen raadpleegt u:
+
       - [Kioskinstellingen voor Windows 10](kiosk-settings-windows.md)
       - [Kioskinstellingen voor Windows Holographic for Business](kiosk-settings-holographic.md)
 
-5. Wanneer u klaar bent, selecteert u **OK** > **Maken** om uw wijzigingen op te slaan.
+8. Selecteer **Volgende**.
 
-Het profiel wordt gemaakt en weergegeven in de lijst met profielen. Vervolgens [wijst u het profiel toe](device-profile-assign.md).
+9. Wijs in **Bereiktags** (optioneel) een tag toe om het profiel te filteren op specifieke IT-groepen, zoals `US-NC IT Team` of `JohnGlenn_ITDepartment`. Zie [RBAC en bereiktags gebruiken voor gedistribueerde IT](../fundamentals/scope-tags.md) voor meer informatie over bereiktags.
+
+    Selecteer **Volgende**.
+
+10. Selecteer in **Toewijzingen** de gebruikers of gebruikersgroep die uw profiel ontvangen. Zie [Gebruikers- en apparaatprofielen toewijzen](device-profile-assign.md) voor meer informatie over het toewijzen van profielen.
+
+    Selecteer **Volgende**.
+
+11. Controleer uw instellingen in **Beoordelen en maken**. Wanneer u **Maken**selecteert, worden uw wijzigingen opgeslagen en wordt het profiel toegewezen. Het beleid wordt ook weergegeven in de lijst met profielen.
+
+De volgende keer dat elk apparaat incheckt, wordt het beleid toegepast.
 
 ## <a name="next-steps"></a>Volgende stappen
 
-[Het profiel toewijzen](device-profile-assign.md) en [de status ervan controleren](device-profile-monitor.md).
+Wanneer het [profiel is toegewezen](device-profile-assign.md), moet u [de status ervan controleren](device-profile-monitor.md).
 
 U kunt kioskprofielen maken voor apparaten met de volgende platforms:
 

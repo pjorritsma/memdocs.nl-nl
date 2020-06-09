@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/20/2020
-ms.topic: conceptual
+ms.date: 05/19/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 379ceb4bf99081e5544be15d338aade0eb5a7a60
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 91ca1e8a710e13e393af5bb3723ca1086e37887d
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80323596"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988602"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>App-beveiligingsbeleid maken en toewijzen
 
@@ -33,9 +33,19 @@ Meer informatie over het maken en toewijzen van app-beveiligingsbeleid (APP) van
 
 ## <a name="before-you-begin"></a>Voordat u begint
 
-App-beveiligingsbeleid kan van toepassing zijn op apps die worden uitgevoerd op apparaten die al dan niet door Intune worden beheerd. Voor een gedetailleerde beschrijving van de werking van het app-beveiligingsbeleid en de scenario's die worden ondersteund door het app-beveiligingsbeleid van Intune ziet u [Wat zijn app-beveiligingsbeleidsregels van Microsoft Intune?](app-protection-policy.md)
+App-beveiligingsbeleid kan van toepassing zijn op apps die worden uitgevoerd op apparaten die al dan niet door Intune worden beheerd. Voor een gedetailleerde beschrijving van de werking van het appbeveiligingsbeleid en de scenario's die worden ondersteund door het appbeveiligingsbeleid van Intune raadpleegt u [Overzicht van appbeveiligingsbeleid](app-protection-policy.md).
 
-Zie [MAM apps list (MAM-app-lijst)](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) voor een lijst met ondersteunde MAM-apps.
+Dankzij de opties die beschikbaar zijn in het appbeveiligingsbeleid (APP) kunnen organisaties de beveiliging aanpassen aan hun specifieke behoeften. Het is mogelijk niet voor iedereen duidelijk welke beleidsinstellingen vereist zijn om een volledig scenario te implementeren. Microsoft heeft een taxonomie geïntroduceerd voor het APP-gegevensbeschermingsframework voor het beheer van mobiele iOS- en Android-apps om organisaties te helpen bij het bepalen van de prioriteit van de beveiliging van mobiele clienteindpunten.
+
+Het APP-gegevensbeschermingsframework is onderverdeeld in drie afzonderlijke configuratieniveaus, waarbij elk niveau is gebaseerd op het vorige niveau:
+
+- Met **Basisgegevensbescherming voor ondernemingen** (niveau 1) worden apps beveiligd met een pincode en versleuteld, en worden selectieve wisbewerkingen uitgevoerd. Voor Android-apparaten wordt met dit niveau Android-apparaatbevestiging gevalideerd. Dit is een configuratie op instapniveau die vergelijkbare gegevensbescherming biedt in het Exchange Online-postvakbeleid en die IT en de gebruikerspopulatie laat kennismaken met APP.
+- Met **Geavanceerde gegevensbescherming voor ondernemingen** (niveau 2) worden mechanismen voor preventie van gegevenslekkage en minimale vereisten voor het besturingssysteem geïntroduceerd. Dit is de configuratie die van toepassing is op de meeste mobiele gebruikers die toegang hebben tot werk- of schoolgegevens.
+- Met **Hoge gegevensbeveiliging voor ondernemingen** (niveau 3) worden geavanceerde mechanismen voor gegevensbeveiliging, verbeterde configuratie van de pincode en APP Mobile Threat Defense geïntroduceerd. Deze configuratie is wenselijk voor gebruikers die toegang hebben tot gegevens met een hoog risico.
+
+Als u de specifieke aanbevelingen voor elk configuratieniveau en de apps die minimaal moeten worden beveiligd, wilt bekijken, bestudeert u [Gegevensbeschermingsframework met behulp van beveiligingsbeleid voor apps](app-protection-framework.md).
+
+Zie [Met Microsoft Intune beveiligde apps](apps-supported-intune-apps.md) voor een lijst met apps die de Intune-SDK hebben geïntegreerd.
 
 Zie [Add apps to Microsoft Intune](apps-add.md) (Apps toevoegen aan Microsoft Intune) voor informatie over het toevoegen van LOB-apps (Line-Of-Business) aan Microsoft Intune in voorbereiding op app-beveiligingsbeleid.
 

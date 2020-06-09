@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2020
-ms.topic: conceptual
+ms.date: 05/14/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c2031ba23b49bda4890d2638272e3b808b4bf5a9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 74e365e50d73bb14f20376c92b43061b12d00003
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327437"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988461"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Een apparaatprofiel maken in Microsoft Intune
 
@@ -58,7 +58,7 @@ Kies vervolgens het profieltype. Welke instellingen u kunt configureren, is afha
 
 - [Beheersjablonen (Windows)](administrative-templates-windows.md)
 - [Aangepast](custom-settings-configure.md)
-- [Delivery optimization (Windows)](delivery-optimization-windows.md)
+- [Delivery Optimization (Windows)](delivery-optimization-windows.md)
 - [Afgeleide referentie (Android Enterprise, iOS, iPadOS)](../protect/derived-credentials.md)
 - [Apparaatfuncties (macOS, iOS, iPadOS)](device-features-configure.md)
 - [Apparaatfirmware (Windows)](device-firmware-configuration-interface-windows.md)
@@ -85,10 +85,9 @@ Kies vervolgens het profieltype. Welke instellingen u kunt configureren, is afha
 - [VPN](vpn-settings-configure.md)
 - [Wi-Fi](wi-fi-settings-configure.md)
 
-Als u bijvoorbeeld **iOS/iPadOS** selecteert als platform, zien uw opties voor het profieltype er ongeveer uit als het volgende profiel:
+Als u bijvoorbeeld **iOS/iPadOS** als platform selecteert, lijken uw profielopties op het volgende profiel:
 
-> [!div class="mx-imgBorder"]
-> ![iOS-/iPadOS-profiel maken in Intune](./media/device-profile-create/create-device-profile.png)
+:::image type="content" source="./media/device-profile-create/create-device-profile.png" alt-text="Een iOS-/iPadOS-profiel in Microsoft Intune maken.":::
 
 ## <a name="scope-tags"></a>Bereiktags
 
@@ -129,10 +128,9 @@ Wanneer u het profiel aan de groepen toewijst, fungeren de regels voor toepassel
 
 ### <a name="add-a-rule"></a>Een regel toevoegen
 
-1. Selecteer **Regels voor toepasselijkheid**. U kunt de **regel**, de **eigenschap** en de **editie van het besturingssysteem** kiezen:
+1. Selecteer **Regels voor toepasselijkheid**. U kunt de **Regel** en **Eigenschap** kiezen:
 
-    > [!div class="mx-imgBorder"]
-    > ![Voeg een regel voor toepasselijkheid aan een apparaatconfiguratieprofiel toe in Microsoft Intune](./media/device-profile-create/applicability-rules.png)
+    :::image type="content" source="./media/device-profile-create/applicability-rules.png" alt-text="Voeg een toepasselijkheidsregel aan een configuratieprofiel voor Windows 10-apparaten toe in Microsoft Intune.":::
 
 2. Kies in **Regel** of u gebruikers of groepen wilt opnemen of uitsluiten. Uw opties zijn:
 
@@ -174,12 +172,11 @@ Houd bij het maken van profielen rekening met de volgende aanbevelingen:
 
 - Gebruikersbeleid gescheiden houden van apparaatbeleid.
 
-  [Beheersjablonen in Intune](administrative-templates-windows.md) bevatten bijvoorbeeld honderden ADMX-instellingen. Deze sjablonen tonen of een instelling van toepassing is op gebruikers of op apparaten. Als u beheersjablonen maakt, wijst u de gebruikersinstellingen toe aan een gebruikersgroep en wijst u de apparaatinstellingen toe aan een apparaatgroep.
+  [Beheersjablonen in Intune](administrative-templates-windows.md) bevatten bijvoorbeeld duizenden ADMX-instellingen. Deze sjablonen tonen of een instelling van toepassing is op gebruikers of op apparaten. Als u beheersjablonen maakt, wijst u de gebruikersinstellingen toe aan een gebruikersgroep en wijst u de apparaatinstellingen toe aan een apparaatgroep.
 
   In de volgende afbeelding ziet u een voorbeeld van een instelling die kan worden toegepast op gebruikers en/of apparaten:
 
-  > [!div class="mx-imgBorder"]
-  > ![Intune-beheersjabloon die van toepassing is op gebruikers en apparaten](./media/device-profile-create/setting-applies-to-user-and-device.png)
+  :::image type="content" source="./media/device-profile-create/setting-applies-to-user-and-device.png" alt-text="Intune-beheersjabloon die van toepassing is op gebruikers en apparaten.":::
 
 - Informeer uw gebruikers bij elk restrictief beleid dat u maakt over de wijziging. Als u bijvoorbeeld de wachtwoordvereiste wijzigt van 4 tekens in 6 tekens, laat dit dan aan uw gebruikers weten voordat u het beleid toewijst.
 

@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/21/2020
-ms.topic: conceptual
+ms.date: 05/19/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e77c1dd32bc70b94d5c4fdd74ea82dbd65211e38
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.openlocfilehash: 2614dfc903bf7f10633bf05414ed8a71cdd2e03b
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166635"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990619"
 ---
 # <a name="add-a-windows-line-of-business-app-to-microsoft-intune"></a>Een Windows Line-Of-Business-app toevoegen aan Microsoft Intune
 
@@ -50,7 +50,7 @@ Een LOB-app is een app die u vanaf een app-installatiebestand toevoegt. Dit type
    De details van de app worden weergegeven.
 
     > [!NOTE]
-    > De bestandsextensies voor Windows-apps zijn **.msi**, **.appx**, **.appxbundle**, **.msix** en **.msixbundle**.  
+    > De bestandsextensies voor Windows-apps zijn **.msi**, **.appx**, **.appxbundle**, **.msix** en **.msixbundle**. Voor meer informatie over **.msix** raadpleegt u [MSIX-documentatie](https://docs.microsoft.com/windows/msix/) en [MSIX-app-distributie](https://docs.microsoft.com/windows/msix/desktop/managing-your-msix-deployment-enterprise).
 
 3. Wanneer u klaar bent, selecteert u **OK** in het deelvenster **App-pakketbestand** om de app toe te voegen.
 

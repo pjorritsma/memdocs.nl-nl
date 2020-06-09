@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/28/2020
-ms.topic: conceptual
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eda210408adbb15d82d6bfc31bef2f225f53bc6f
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 65ba8319668baed6605bb8d0f409a4ea19a5140f
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80863074"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990120"
 ---
 # <a name="ios-app-protection-policy-settings"></a>Beveiligingsbeleidsinstellingen voor iOS-apps
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -48,7 +48,7 @@ Er zijn drie soorten beleidsinstellingen: *Gegevensverplaatsing*, *Toegangsverei
 | <ul><ui>**Gebruiker toestemming geven om kopieën naar geselecteerde services op te slaan** | Gebruikers kunnen naar de geselecteerde services opslaan (OneDrive voor Bedrijven, SharePoint en lokale opslag). Alle andere services worden geblokkeerd.| **0 geselecteerd**  |
 | **Knippen, kopiëren en plakken tussen andere apps beperken** | Geef op wanneer knip-, kopieer- en plakbewerkingen voor deze app kunnen worden gebruikt. Kies uit: <ul><li>**Geblokkeerd**:  geen knip-, kopieer- en plakbewerkingen toestaan tussen deze app en andere apps.</li><li>**Door beleid beheerde apps**: alleen knip-, kopieer- en plakbewerkingen toestaan tussen deze app en andere door beleid beheerde apps.</li><li>**Door beleid beheerde apps met Plakken in**: knippen en kopiëren toestaan tussen deze app en andere door beleid beheerde apps. Gegevens uit alle apps mogen in deze app worden geplakt.</li><li>**Elke app**: geen beperkingen voor knip-, kopieer- en plakbewerkingen vanuit en naar deze app.</ul> | **Elke app**   |
 | <ul><ui>**De tekenlimiet voor knippen en kopiëren voor elke app** | Hiermee geeft u het aantal tekens op dat kan worden geknipt of gekopieerd van gegevens van de organisatie en de accounts.  Hiermee kunt u het opgegeven aantal tekens voor elke toepassing delen, ongeacht de instelling **Knippen, kopiëren en plakken met andere apps beperken**.<p>Standaardwaarde = 0<p>**Opmerking**: *Voor de app is Intune SDK versie 9.0.14 of hoger vereist.*  | **0**   |
-| **Meldingen van organisatiegegevens** | Geef op hoe organisatiegegevens worden gedeeld via besturingssysteemmeldingen voor organisatieaccounts. Deze beleidsinstelling is van invloed op het lokale apparaat en alle verbonden apparaten, zoals draagbare apparaten en slimme luidsprekers. Met apps kunnen extra besturingselementen worden geboden om het gedrag van meldingen aan te passen. Er kan ook voor worden gekozen om niet aan alle waarden te voldoen. Kies uit: <ul><li>**Geblokkeerd**: Geen meldingen delen.</li><ul><li>Als dit niet wordt ondersteund door de toepassing, worden meldingen toegestaan.</li></ul><li>**Organisatiegegevens blokkeren**: Deel bijvoorbeeld geen organisatiegegevens in meldingen.</li><UL><li>'U hebt nieuwe e-mail'; 'U hebt een vergadering'.</li><li>Als dit niet wordt ondersteund door de toepassing, worden meldingen geblokkeerd.</li></ul><li>**Toestaan**: Hiermee worden organisatiegegevens in de meldingen gedeeld.</li></ul> <p>**Opmerking**: *Deze instelling vereist ondersteuning van apps. Outlook voor iOS 4.15.0 of hoger biedt op dit moment ondersteuning voor deze instelling.* | **Toestaan**   |
+| **Meldingen van organisatiegegevens** | Geef op hoe organisatiegegevens worden gedeeld via besturingssysteemmeldingen voor organisatieaccounts. Deze beleidsinstelling is van invloed op het lokale apparaat en alle verbonden apparaten, zoals draagbare apparaten en slimme luidsprekers. Met apps kunnen extra besturingselementen worden geboden om het gedrag van meldingen aan te passen. Er kan ook voor worden gekozen om niet aan alle waarden te voldoen. Kies uit: <ul><li>**Geblokkeerd**: Geen meldingen delen.</li><ul><li>Als dit niet wordt ondersteund door de toepassing, worden meldingen toegestaan.</li></ul><li>**Organisatiegegevens blokkeren**: Deel bijvoorbeeld geen organisatiegegevens in meldingen.</li><UL><li>'U hebt nieuwe e-mail'; 'U hebt een vergadering'.</li><li>Als dit niet wordt ondersteund door de toepassing, worden meldingen geblokkeerd.</li></ul><li>**Toestaan**: Hiermee worden organisatiegegevens in de meldingen gedeeld.</li></ul> <p>**Opmerking**: *Deze instelling vereist ondersteuning van apps. Outlook voor iOS 4.34.0 of hoger biedt op dit moment ondersteuning voor deze instelling.* | **Toestaan**   |
 | **Toetsenborden van derden** | Kies **Blokkeren** om het gebruik van toetsenborden van derden in beheerde toepassingen te voorkomen.<p>Wanneer deze instelling is ingeschakeld, ontvangt de gebruiker een eenmalige bericht waarin staat dat het gebruik van toetsenborden van derden is geblokkeerd. Dit bericht verschijnt tijdens de eerste keer dat een gebruiker interactie heeft met gegevens van de organisatie waarvoor het gebruik van een toetsenbord vereist is. Tijdens het gebruik van beheerde toepassingen is alleen het standaard iOS-/iPadOS-toetsenbord beschikbaar. Alle andere opties zijn uitgeschakeld. Deze instelling is van invloed op zowel de organisatie-als op persoonlijke accounts van toepassingen met meerdere identiteiten. Deze instelling heeft geen invloed op het gebruik van toetsenborden van derden in niet-beheerde toepassingen.<p>**Opmerking:** Voor deze functie is het vereist dat de app gebruikmaakt van de Intune-SDK versie 12.0.16 of hoger. Voor apps met SDK-versies van 8.0.14 tot en met 12.0.15 geldt dat deze functie niet correct functioneert op apps met meerdere identiteiten. Voor meer informatie, zie [Bekend probleem: toetsenborden van derden worden in iOS/iPadOS niet geblokkeerd voor persoonlijke accounts](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Updated-Known-issue-Third-party-keyboards-are-not-blocked-in-iOS/ba-p/339486). | **Toestaan**  |
 
 ### <a name="encryption"></a>Versleuteling

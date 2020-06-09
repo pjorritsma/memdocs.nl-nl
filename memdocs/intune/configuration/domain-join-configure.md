@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/20/2020
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 207b3983c214ad4e166ae58ea0ccd18ea23bf418
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 211722a02183d3b86525468f907d4093331d9de6
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79364393"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988424"
 ---
 # <a name="configuration-domain-join-settings-for-hybrid-azure-ad-joined-devices-in-microsoft-intune"></a>Configuratie-instellingen voor domeindeelname voor apparaten die zijn toegevoegd aan hybride Azure AD in Microsoft Intune
 
@@ -42,12 +42,17 @@ In dit artikel wordt aangegeven hoe u een domeindeelnameprofiel maakt voor een h
 2. Selecteer **Apparaten** > **Configuratieprofielen** > **Profiel maken**.
 3. Voer de volgende eigenschappen in:
 
+    - **Platform**: Kies **Windows 10 en hoger**.
+    - **Profiel**: Selecteer **Domeindeelname (preview)** .
+
+4. Selecteer **Maken**.
+5. Voer in **Basisinformatie** de volgende eigenschappen in:
+
     - **Naam**: Voer een beschrijvende naam in voor het beleid. Geef uw beleid een naam zodat u het later eenvoudig kunt identificeren. Een goede beleidsnaam is bijvoorbeeld **Windows 10: domeindeelnameprofiel dat on-premises domeingegevens bevat voor inschrijving van hybride AD-apparaten met Windows Autopilot**.
     - **Beschrijving**: Voer een beschrijving in voor het beleid. Deze instelling is optioneel, maar wordt aanbevolen.
-    - **Platform**: Kies **Windows 10 en hoger**.
-    - **Profieltype**: Selecteer **Domeindeelname (preview)** .
 
-4. Selecteer **Instellingen**. Voer de volgende eigenschappen in:
+6. Selecteer **Volgende**.
+7. Voer de volgende eigenschappen in bij **Configuratie-instellingen**:
 
     - **Computernaamvoorvoegsel**: Voer een voorvoegsel voor de apparaatnaam in. Computernamen bestaan uit 15 tekens. Na het voorvoegsel worden de resterende 15 tekens willekeurig gegenereerd.
     - **Domeinnaam**: Voer de FQDN (Fully Qualified Domain Name) in waaraan de apparaten moeten worden toegevoegd. Voer bijvoorbeeld in: `americas.corp.contoso.com.`
@@ -55,12 +60,22 @@ In dit artikel wordt aangegeven hoe u een domeindeelnameprofiel maakt voor een h
 
       Zie [Apparaten die zijn toegevoegd aan hybride Azure AD implementeren](../enrollment/windows-autopilot-hybrid.md) voor meer informatie en advies over deze instelling.
 
-5. Wanneer u klaar bent, selecteert u **OK** > **Maken** om uw wijzigingen op te slaan.
+8. Selecteer **Volgende**.
 
-Het profiel wordt gemaakt en weergegeven in de lijst met profielen. U kunt het nu gebruiken om [apparaten die zijn toegevoegd aan hybride Azure AD te implementeren met behulp van Intune en Windows Autopilot](../enrollment/windows-autopilot-hybrid.md).
+9. Wijs in **Bereiktags** (optioneel) een tag toe om het profiel te filteren op specifieke IT-groepen, zoals `US-NC IT Team` of `JohnGlenn_ITDepartment`. Zie [RBAC en bereiktags gebruiken voor gedistribueerde IT](../fundamentals/scope-tags.md) voor meer informatie over bereiktags.
+
+    Selecteer **Volgende**.
+
+10. Selecteer in **Toewijzingen** de gebruikers of gebruikersgroep die uw profiel ontvangen. Zie [Gebruikers- en apparaatprofielen toewijzen](device-profile-assign.md) voor meer informatie over het toewijzen van profielen.
+
+    Selecteer **Volgende**.
+
+11. Controleer uw instellingen in **Beoordelen en maken**. Wanneer u **Maken**selecteert, worden uw wijzigingen opgeslagen en wordt het profiel toegewezen. Het beleid wordt ook weergegeven in de lijst met profielen.
+
+U kunt het nu gebruiken om [apparaten die zijn toegevoegd aan hybride Azure AD te implementeren met behulp van Intune en Windows Autopilot](../enrollment/windows-autopilot-hybrid.md).
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Nadat het profiel is gemaakt, is het klaar om te worden toegewezen. Vervolgens kunt u [het profiel toewijzen](device-profile-assign.md) en [de status ervan controleren](device-profile-monitor.md).
+Wanneer het profiel is [toegewezen, ](device-profile-assign.md)moet u de [status ervan controleren](device-profile-monitor.md).
 
 [Apparaten die zijn toegevoegd aan hybride Azure AD implementeren met behulp van Intune en Windows Autopilot](../enrollment/windows-autopilot-hybrid.md).

@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/21/2020
-ms.topic: conceptual
+ms.date: 05/18/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 44089df5645b128ba29e481e899d52c90b8c0a42
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: d60d4eba093ce9663abf2aa57c6461bef5a34ef1
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078393"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988718"
 ---
 # <a name="intune-discovered-apps"></a>Door Intune gedetecteerde apps
 
@@ -54,7 +54,7 @@ De volgende lijst bevat de app-platformtypen, de apps die worden bewaakt op pers
 
 | Platform | Voor apparaten die persoonlijk eigendom zijn | Voor apparaten die bedrijfseigendom zijn | Cyclus vernieuwen |
 |------------------------------------------------------------------------|----------------------------------|--------------------------------------------------|---------------------------------------|
-| Windows 10 (Win32-apps) OPMERKING: hiervoor is de [Intune-beheeruitbreiding](intune-management-extension.md) vereist op het apparaat | Niet van toepassing | Alle apps die op het apparaat zijn geïnstalleerd | Elke 24 uur vanaf het moment dat het apparaat wordt ingeschreven |
+| Windows 10 (Win32-apps) OPMERKING: hiervoor is de [Intune-beheeruitbreiding](intune-management-extension.md) vereist op het apparaat | Niet van toepassing | Apps die door MSI op het apparaat zijn geïnstalleerd | Elke 24 uur vanaf het moment dat het apparaat wordt ingeschreven |
 | Windows 10 (moderne apps) | Alleen beheerde, moderne apps | Alle moderne apps die op het apparaat zijn geïnstalleerd | Elke zeven dagen vanaf het moment dat het apparaat wordt ingeschreven |
 | Windows 8.1 | Alleen beheerde apps | Alleen beheerde apps | Elke zeven dagen vanaf het moment dat het apparaat wordt ingeschreven |
 | Windows Phone 8 | Alleen beheerde apps | Alleen beheerde apps | Elke zeven dagen vanaf het moment dat het apparaat wordt ingeschreven |

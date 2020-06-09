@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 179314f363c8f086239b2c926c4bed8d09c68204
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4f85c30c9472849d26802c8cdccd7a95006a3e4a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79364159"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83984004"
 ---
 # <a name="control-access-accounts-and-power-features-on-shared-pc-or-multi-user-devices-using-intune"></a>Toegang, accounts en energiefuncties op gedeelde pc's en apparaten met meerdere gebruikers beheren met Intune
 
@@ -46,18 +46,39 @@ Wanneer het profiel in Intune is gemaakt, implementeert u het of wijst u het toe
 2. Selecteer **Apparaten** > **Configuratieprofielen** > **Profiel maken**.
 3. Voer de volgende eigenschappen in:
 
+   - **Platform**: Kies **Windows 10 en hoger**.
+   - **Profiel**: Selecteer **Gedeelde apparaat voor meerdere gebruikers**.
+
+4. Selecteer **Maken**.
+5. Voer in **Basisinformatie** de volgende eigenschappen in:
+
    - **Naam**: Voer een beschrijvende naam in voor het nieuwe profiel.
    - **Beschrijving**: Voer een beschrijving in voor het profiel. Deze instelling is optioneel, maar wordt aanbevolen.
-   - **Platform**: Kies **Windows 10 en hoger**.
-   - **Profieltype**: Selecteer **Gedeelde apparaat voor meerdere gebruikers**.
 
-4. Configureer de instellingen voor [Windows 10 en hoger](shared-user-device-settings-windows.md) of [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md).
+6. Selecteer **Volgende**.
+7. Welke instellingen u kunt configureren in **Configuratie-instellingen**, is afhankelijk van het platform dat u hebt gekozen. Kies uw platform voor gedetailleerde instellingen:
 
-5. Selecteer **OK** > **Maken** om uw wijzigingen op te slaan.
+    - [Windows 10 en hoger](shared-user-device-settings-windows.md)
+    - [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md)
 
-Het profiel wordt gemaakt en in de lijst weergegeven, maar er gebeurt nog niets. [Wijs het profiel toe](device-profile-assign.md) aan apparaatgroepen in uw organisatie.
+8. Selecteer **Volgende**.
+
+9. Wijs in **Bereiktags** (optioneel) een tag toe om het profiel te filteren op specifieke IT-groepen, zoals `US-NC IT Team` of `JohnGlenn_ITDepartment`. Zie [RBAC en bereiktags gebruiken voor gedistribueerde IT](../fundamentals/scope-tags.md) voor meer informatie over bereiktags.
+
+    Selecteer **Volgende**.
+
+10. Selecteer in **Toewijzingen** de apparaatgroep die uw profiel zal ontvangen. Zie [Gebruikers- en apparaatprofielen toewijzen](device-profile-assign.md) voor meer informatie over het toewijzen van profielen.
+
+    Selecteer **Volgende**.
+
+    > [!NOTE]
+    > Wijs het profiel toe aan apparaatgroepen in uw organisatie.
+
+11. Controleer uw instellingen in **Beoordelen en maken**. Wanneer u **Maken**selecteert, worden uw wijzigingen opgeslagen en wordt het profiel toegewezen. Het beleid wordt ook weergegeven in de lijst met profielen.
+
+De volgende keer dat elk apparaat incheckt, wordt het beleid toegepast.
 
 ## <a name="next-steps"></a>Volgende stappen
 
 - Zie alle instellingen voor [Windows 10 en hoger](shared-user-device-settings-windows.md) of [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md).
-- [Het profiel toewijzen](device-profile-assign.md) en [de status ervan controleren](device-profile-monitor.md).
+- Wanneer het [profiel is toegewezen](device-profile-assign.md), moet u [de status ervan controleren](device-profile-monitor.md).

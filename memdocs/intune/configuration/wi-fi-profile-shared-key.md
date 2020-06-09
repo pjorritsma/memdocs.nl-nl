@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df5c33e1e8e589f430fe8265ee4762b4755f3618
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 28dfeecf841eb1b9c69f46b2002b350c83514e1d
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086456"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990564"
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key-in-intune"></a>Een aangepast apparaatprofiel gebruiken om een Wi-Fi-profiel te maken met een vooraf gedeelde sleutel in Intune
 
@@ -52,12 +52,17 @@ Deze functie ondersteunt:
 2. Selecteer **Apparaten** > **Configuratieprofielen** > **Profiel maken**.
 3. Voer de volgende eigenschappen in:
 
+    - **Platform**: Kies uw platform.
+    - **Profiel**: Selecteer **Aangepast**.
+
+4. Selecteer **Maken**.
+5. Voer in **Basisinformatie** de volgende eigenschappen in:
+
     - **Naam**: Voer een beschrijvende naam in voor het beleid. Geef uw beleid een naam zodat u het later eenvoudig kunt identificeren. Een goede beleidsnaam is bijvoorbeeld **Aangepaste OMA-URI Wi-Fi-profielinstellingen voor Android-apparaatbeheer-apparaten**.
     - **Beschrijving**: Voer een beschrijving in voor het profiel. Deze instelling is optioneel, maar wordt aanbevolen.
-    - **Platform**: Kies uw platform.
-    - **Profieltype**: Selecteer **Aangepast**.
 
-4. Selecteer in **Instellingen** de optie **Toevoegen**. Voer een nieuwe OMA-URI-instelling met de volgende eigenschappen in:
+6. Selecteer **Volgende**.
+7. Selecteer in **Configuratie-instellingen** de optie **Toevoegen**. Voer een nieuwe OMA-URI-instelling met de volgende eigenschappen in:
 
     1. **Naam**: Voer een naam in voor de OMA-URI-instelling.
     2. **Beschrijving**: Voer een beschrijving in voor de OMA-URI-instelling. Deze instelling is optioneel, maar wordt aanbevolen.
@@ -74,10 +79,22 @@ Deze functie ondersteunt:
     4. **Gegevenstype**: Selecteer **Tekenreeks**.
 
     5. **Waarde**: Plak uw XML-code. Zie de [voorbeelden](#android-or-windows-wi-fi-profile-example) in dit artikel. Werk elke waarde bij zodat de waarden overeenkomen met uw netwerkinstellingen. In het gedeelte met opmerkingen over de code staat een aantal tips.
+    6. Selecteer **Toevoegen** om uw wijzigingen op te slaan.
 
-5. Wanneer u klaar bent, selecteert u **OK** > **Maken** om uw wijzigingen op te slaan.
+8. Selecteer **Volgende**.
 
-Uw profiel wordt weergegeven in de lijst met profielen. Vervolgens [wijst u dit profiel](device-profile-assign.md) aan uw gebruikersgroepen toe. Dit beleid kan alleen worden toegewezen aan gebruikersgroepen.
+9. Wijs in **Bereiktags** (optioneel) een tag toe om het profiel te filteren op specifieke IT-groepen, zoals `US-NC IT Team` of `JohnGlenn_ITDepartment`. Zie [RBAC en bereiktags gebruiken voor gedistribueerde IT](../fundamentals/scope-tags.md) voor meer informatie over bereiktags.
+
+    Selecteer **Volgende**.
+
+10. Selecteer in **Toewijzingen** de gebruikers of gebruikersgroep die uw profiel ontvangen. Zie [Gebruikers- en apparaatprofielen toewijzen](device-profile-assign.md) voor meer informatie over het toewijzen van profielen.
+
+    > [!NOTE]
+    > Dit beleid kan alleen worden toegewezen aan gebruikersgroepen.
+
+    Selecteer **Volgende**.
+
+11. Controleer uw instellingen in **Beoordelen en maken**. Wanneer u **Maken**selecteert, worden uw wijzigingen opgeslagen en wordt het profiel toegewezen. Het beleid wordt ook weergegeven in de lijst met profielen.
 
 De volgende keer dat met een apparaat wordt ingecheckt, wordt het beleid toegepast en wordt er een Wi-Fi-profiel gemaakt op het apparaat. Het apparaat kan dan automatisch verbinding maken met het netwerk.
 

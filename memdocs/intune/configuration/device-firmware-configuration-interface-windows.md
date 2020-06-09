@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/06/2019
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -15,16 +15,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df8f6ba6873e98663be853e134995bab640541fc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2f598a73275e257fca3ff4024641fce54c3dabd2
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79361117"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83983839"
 ---
 # <a name="use-device-firmware-configuration-interface-profiles-on-windows-devices-in-microsoft-intune-public-preview"></a>Device Firmware Configuration Interface-profielen gebruiken op Windows-apparaten in Microsoft Intune (openbare preview)
-
-
 
 Wanneer u Intune gebruikt om Autopilot-apparaten te beheren, kunt u met behulp van DFCI UEFI-instellingen (BIOS) beheren, nadat deze zijn opgegeven. Zie [Overzicht van DFCI](https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Dfci_Feature/) voor een overzicht van voordelen, scenario's en vereisten.
 
@@ -81,31 +79,35 @@ Dit profiel bevat de DFCI-instellingen die u configureert.
 2. Selecteer **Apparaten** > **Configuratieprofielen** > **Profiel maken**.
 3. Voer de volgende eigenschappen in:
 
+    - **Platform**: Kies **Windows 10 en hoger**.
+    - **Profiel**: Selecteer **Configuratie-interface voor apparaatfirmware**.
+
+4. Selecteer **Maken**.
+5. Voer in **Basisinformatie** de volgende eigenschappen in:
+
     - **Naam**: Voer een beschrijvende naam in voor het profiel. Geef uw beleid een naam zodat u het later eenvoudig kunt identificeren. Een goede profielnaam is bijvoorbeeld **Windows: Configureer DFCI-instellingen op Windows-apparaten**.
     - **Beschrijving**: Voer een beschrijving in voor het profiel. Deze instelling is optioneel, maar wordt aanbevolen.
-    - **Platform**: Kies **Windows 10 en hoger**.
-    - **Profieltype**: Selecteer **Configuratie-interface voor apparaatfirmware**.
 
-4. Configureer de gewenste instellingen:
+6. Selecteer **Volgende**.
+7. Configureer in **Configuratie-instellingen** de volgende instellingen:
 
     - **Lokale gebruiker kan UEFI-instellingen (BIOS) wijzigen**: Uw opties zijn:
       - **Uitsluitend niet-geconfigureerde instellingen**: De lokale gebruiker kan elke instelling wijzigen, *met uitzondering van* die instellingen die expliciet zijn ingesteld op **Inschakelen** of **Uitschakelen** door Intune.
       - **Geen**: De lokale gebruiker mag geen UEFI-instellingen (BIOS) wijzigen, inclusief instellingen die niet worden weergegeven in het DFCI-profiel.
 
     - **CPU- en IO-virtualisatie**: Uw opties zijn:
-        - **Niet geconfigureerd**: Intune laat deze functie ongemoeid en laat instellingen ongewijzigd.
+        - **Niet geconfigureerd**: Deze instelling wordt niet gewijzigd of bijgewerkt door Intune.
         - **Ingeschakeld**: Met het BIOS kan de CPU- en IO-virtualisatiefunctionaliteit van het platform worden gebruikt door het besturingssysteem. Hiermee worden de Windows-technologieën Beveiliging op basis van virtualisatie en Device Guard ingeschakeld.
-        - **Uitschakelen**: Met het BIOS kan de CPU- en IO-virtualisatiefunctionaliteit van het platform worden uitgeschakeld, en wordt voorkomen dat deze worden gebruikt.
     - **Camera's**: Uw opties zijn:
-        - **Niet geconfigureerd**: Intune laat deze functie ongemoeid en laat instellingen ongewijzigd.
+        - **Niet geconfigureerd**: Deze instelling wordt niet gewijzigd of bijgewerkt door Intune.
         - **Ingeschakeld**: Alle ingebouwde camera's die rechtstreeks worden beheerd door UEFI (BIOS) zijn ingeschakeld. Randapparatuur, zoals USB-camera's, wordt niet beïnvloed.
         - **Uitgeschakeld**: Alle ingebouwde camera's die rechtstreeks worden beheerd door UEFI (BIOS) zijn uitgeschakeld. Randapparatuur, zoals USB-camera's, wordt niet beïnvloed.
     - **Microfoons en luidsprekers**:  Uw opties zijn:
-        - **Niet geconfigureerd**: Intune laat deze functie ongemoeid en laat instellingen ongewijzigd.
+        - **Niet geconfigureerd**: Deze instelling wordt niet gewijzigd of bijgewerkt door Intune.
         - **Ingeschakeld**: Alle ingebouwde microfoons die rechtstreeks worden beheerd door UEFI (BIOS) zijn ingeschakeld. Randapparatuur, zoals USB-apparaten, wordt niet beïnvloed.
         - **Uitgeschakeld**: Alle ingebouwde microfoons die rechtstreeks worden beheerd door UEFI (BIOS) zijn uitgeschakeld. Randapparatuur, zoals USB-apparaten, wordt niet beïnvloed.
     - **Radio's (Bluetooth, Wi-Fi, NFC, enzovoort)** : Uw opties zijn:
-        - **Niet geconfigureerd**: Intune laat deze functie ongemoeid en laat instellingen ongewijzigd.
+        - **Niet geconfigureerd**: Deze instelling wordt niet gewijzigd of bijgewerkt door Intune.
         - **Ingeschakeld**: Alle ingebouwde radio's die rechtstreeks worden beheerd door UEFI (BIOS) zijn ingeschakeld. Randapparatuur, zoals USB-apparaten, wordt niet beïnvloed.
         - **Uitgeschakeld**: Alle ingebouwde radio's die rechtstreeks worden beheerd door UEFI (BIOS) zijn uitgeschakeld. Randapparatuur, zoals USB-apparaten, wordt niet beïnvloed.
 
@@ -113,19 +115,31 @@ Dit profiel bevat de DFCI-instellingen die u configureert.
         > Als u de instelling **Radio's** uitschakelt, is voor het apparaat een bekabelde netwerkverbinding vereist. Anders kan het apparaat misschien niet worden beheerd.
 
     - **Opstarten vanaf externe media (USB, SD)** : Uw opties zijn:
-        - **Niet geconfigureerd**: Intune laat deze functie ongemoeid en laat instellingen ongewijzigd.
+        - **Niet geconfigureerd**: Deze instelling wordt niet gewijzigd of bijgewerkt door Intune.
         - **Ingeschakeld**: UEFI (BIOS) staat het opstarten van niet-vaste-schijfopslag toe.
         - **Uitgeschakeld**: UEFI (BIOS) staat het opstarten van niet-vaste-schijfopslag niet toe.
-    - **Opstarten vanaf netwerkadapters**:  Uw opties zijn:
-        - **Niet geconfigureerd**: Intune laat deze functie ongemoeid en laat instellingen ongewijzigd.
+    - **Opstarten vanaf netwerkadapters**: Uw opties zijn:
+        - **Niet geconfigureerd**: Deze instelling wordt niet gewijzigd of bijgewerkt door Intune.
         - **Ingeschakeld**: UEFI (BIOS) staat het opstarten vanaf ingebouwde netwerkinterfaces toe.
         - **Uitgeschakeld**: UEFI (BIOS) staat het opstarten vanaf ingebouwde netwerkinterfaces niet toe.
 
-5. Wanneer u klaar bent, selecteert u **OK** > **Maken** om uw wijzigingen op te slaan. Het profiel wordt gemaakt en weergegeven in de lijst.
+8. Selecteer **Volgende**.
+
+9. Wijs in **Bereiktags** (optioneel) een tag toe om het profiel te filteren op specifieke IT-groepen, zoals `US-NC IT Team` of `JohnGlenn_ITDepartment`. Zie [RBAC en bereiktags gebruiken voor gedistribueerde IT](../fundamentals/scope-tags.md) voor meer informatie over bereiktags.
+
+    Selecteer **Volgende**.
+
+10. Selecteer in **Toewijzingen** de gebruikers of gebruikersgroep die uw profiel ontvangen. Zie [Gebruikers- en apparaatprofielen toewijzen](device-profile-assign.md) voor meer informatie over het toewijzen van profielen.
+
+    Selecteer **Volgende**.
+
+11. Controleer uw instellingen in **Beoordelen en maken**. Wanneer u **Maken**selecteert, worden uw wijzigingen opgeslagen en wordt het profiel toegewezen. Het beleid wordt ook weergegeven in de lijst met profielen.
+
+De volgende keer dat elk apparaat incheckt, wordt het beleid toegepast.
 
 ## <a name="assign-the-profiles-and-reboot"></a>De profielen toewijzen en opnieuw opstarten
 
-Nadat de profiel zijn gemaakt, zijn deze [klaar om te worden toegewezen](../configuration/device-profile-assign.md). Zorg ervoor dat u de profielen toewijst aan uw Azure AD-beveiligingsgroepen die uw DFCI-apparaten bevatten.
+Zorg ervoor dat u de profielen [toewijst](../configuration/device-profile-assign.md) aan uw Azure AD-beveiligingsgroepen die uw DFCI-apparaten bevatten. Het profiel kan worden toegewezen wanneer het wordt gemaakt of erna.
 
 Wanneer Windows Autopilot op het apparaat wordt uitgevoerd, kan het door de DFCI geforceerd opnieuw worden opgestart op de inschrijvingsstatuspagina. Tijdens de eerste keer dat de computer opnieuw wordt opgestart, wordt de UEFI ingeschreven bij Intune. 
 
@@ -179,4 +193,4 @@ Wanneer het DFCI-beleid wordt toegepast, kunnen lokale gebruikers geen instellin
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Wanneer het profiel is toegewezen, [moet u de status ervan controleren](device-profile-monitor.md).
+Nadat het [profiel is toegewezen](device-profile-assign.md), [moet u de status ervan controleren](device-profile-monitor.md).

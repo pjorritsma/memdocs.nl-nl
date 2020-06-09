@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 04/02/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ef23854fd3fee0883f6f91415a40ebbcc1b3c240
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c145a4b7fa150a9d42c9bf20eca4f85f6356acf8
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80620581"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988520"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>iOS- en macOS-apps beheren die zijn aangeschaft via het Apple Volume Purchase Program met Microsoft Intune
 
@@ -50,7 +50,7 @@ Aangeschafte apps kunnen aan groepen worden toegewezen met behulp van twee typen
 |-----------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Aanmelden bij de App Store | Niet vereist. | Elke eindgebruiker moet een unieke Apple-id gebruiken wanneer deze wordt gevraagd zich aan te melden bij de App Store. |
 | Apparaatconfiguratie blokkeert de toegang tot de App Store | Apps kunnen worden geïnstalleerd en bijgewerkt met behulp van Bedrijfsportal. | Voor de uitnodiging om lid te worden van Apple VPP is toegang tot de App Store vereist. Als u beleid hebt ingesteld om de App Store uit te schakelen, werkt de gebruikerslicentie voor VPP-apps niet. |
-| Automatische app-update | Zoals geconfigureerd door de Intune-beheerder in de instellingen voor Apple VPP-tokens, waarbij het toewijzingstype van de app is vereist.<p>Als het toewijzingstype beschikbaar is voor ingeschreven apparaten, kunnen beschikbare app-updates worden geïnstalleerd vanuit de bedrijfsportal. | Zoals geconfigureerd door de eindgebruiker in de persoonlijke instellingen van de App Store. Dit kan niet worden beheerd door de Intune-beheerder. |
+| Automatische app-update | Zoals geconfigureerd door de Intune-beheerder in de instellingen van het Apple VPP-token.<p>Als het toewijzingstype beschikbaar is voor ingeschreven apparaten, kunnen beschikbare app-updates worden geïnstalleerd vanuit de bedrijfsportal door de actie **Bijwerken** te selecteren op de pagina met app-details. | Zoals geconfigureerd door de eindgebruiker in de persoonlijke instellingen voor App Store. Dit kan niet worden beheerd door de Intune-beheerder. |
 | Gebruikersinschrijving | Niet ondersteund. | Ondersteund met beheerde Apple-id's. |
 | Books | Niet ondersteund. | Ondersteund. |
 | Gebruikte licenties | 1 licentie per apparaat. De licentie is gekoppeld aan het apparaat. | 1 licentie voor maximaal 5 apparaten met dezelfde persoonlijke Apple-id. De licentie is gekoppeld aan de gebruiker.<p>Een eindgebruiker die is gekoppeld aan een persoonlijke Apple-id en een beheerde Apple-id in Intune gebruikt 2 app-licenties. |
@@ -87,8 +87,8 @@ U kunt als volgt bestaande, gekochte VPP-inhoud en -tokens migreren naar Apps en
 1. Nodig VPP-kopers uit om lid te worden van uw organisatie, en laat elke gebruiker een unieke locatie selecteren. 
 2. Zorg ervoor dat alle VPP-kopers binnen uw organisatie stap 1 hebben voltooid voordat u doorgaat.
 3. Controleer of alle gekochte apps en licenties zijn gemigreerd naar Apps en Books in Apple Business Manager of Apple School Manager.
-4. Download een nieuw locatietoken via **Apple Business (of School) Manager** > **Instellingen** > **Apps en Books** > **Mijn servertokens**.
-5. Ga voor het bijwerken van een locatietoken in het Microsoft Endpoint Manager-beheercentrum naar **Tenantbeheer** > **Connectors en tokens** > **Apple VPP-tokens** en synchroniseer het token.
+4. Download het nieuwe locatietoken via **Apple Business (of School) Manager** > **Instellingen** > **Apps en Books** > **Mijn servertokens**.
+5. Ga voor het bijwerken van een locatietoken in het Microsoft Endpoint Manager-beheercentrum naar **Tenantbeheer** > **Connectors en tokens** > **Apple VPP-tokens** en upload het token handmatig.
 
 ## <a name="upload-an-apple-vpp-or-location-token"></a>Een Apple VPP- of locatietoken uploaden
 
@@ -108,7 +108,7 @@ U kunt als volgt bestaande, gekochte VPP-inhoud en -tokens migreren naar Apps en
     - **Automatische updates voor apps**: kies **Aan** of **Uit** om automatische updates in of uit te schakelen. Wanneer deze zijn ingeschakeld, detecteert Intune updates voor de VPP-app in de app store en pusht ze automatisch naar het apparaat als dit incheckt.
 
         > [!NOTE]
-        > Met automatische updates voor Apple VPP-apps worden alleen apps die zijn geïmplementeerd met de installatie-intentie **Vereiste**, automatisch bijgewerkt. Voor apps die zijn geïmplementeerd met de installatie-intentie **Beschikbaar**, wordt met de automatische update voor de IT-beheerder een statusbericht gegenereerd waarin staat dat een nieuwe versie van de app beschikbaar is. Dit statusbericht kan worden weergegeven door de app te selecteren, Apparaatinstallatiestatus te selecteren en de Statusdetails te controleren.  
+        > Met automatische updates voor Apple VPP-apps worden zowel apps met de installatie-intentie **Vereist** als **Beschikbaar** automatisch bijgewerkt. Voor apps die zijn geïmplementeerd met de installatie-intentie **Beschikbaar**, wordt met de automatische update voor de IT-beheerder een statusbericht gegenereerd waarin staat dat een nieuwe versie van de app beschikbaar is. Dit statusbericht kan worden weergegeven door de app te selecteren, Apparaatinstallatiestatus te selecteren en de Statusdetails te controleren.  
 
     - **Ik geef Microsoft toestemming om gebruikers- en apparaatgegevens naar Apple te verzenden.** - U moet **Ik ga akkoord** selecteren om door te gaan. Zie [Gegevens die Intune naar Apple verzendt](../protect/data-intune-sends-to-apple.md) om te kijken welke gegevens Microsoft naar Apple verzendt.
 5. Selecteer **Maken** wanneer u klaar bent. Het token wordt weergegeven in het deelvenster met de lijst met tokens.

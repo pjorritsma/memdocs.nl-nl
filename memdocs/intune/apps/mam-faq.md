@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16c086295b93b72ef2f9cfbd2d6a15d6bb54f320
-ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
+ms.openlocfilehash: c544109b170d25f4d9a2999a11bc47d4b4a090c5
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82183005"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989979"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Veelgestelde vragen over MAM en app-beveiliging
 
@@ -78,7 +78,7 @@ Alle apps die zijn geïntegreerd met de [Intune App SDK](../developer/app-sdk.md
 
 Het Intune SDK-ontwikkelingsteam houdt zich actief bezig met het testen en onderhouden van ondersteuning voor apps die zijn gebouwd met de systeemeigen Android-, iOS-/iPadOS- (Obj-C, Swift), Xamarin- en Xamarin.Forms-platforms. Hoewel het sommige klanten is gelukt om de Intune SDK te integreren in andere platforms, zoals React Native en NativeScript, bieden we geen specifieke instructies of plug-ins voor app-ontwikkelaars die andere platforms gebruiken dan de platforms die door ons worden ondersteund.
 
-**Ondersteunt de Intune APP SDK de bibliotheek voor Microsoft-verificatie (MSAL) of sociale accounts?**<br></br>
+**Ondersteunt de Intune APP SDK de bibliotheek voor Microsoft-verificatie (MSAL)?**<br></br>
 De Intune App SDK kan ofwel gebruikmaken van de Azure Active Directory Authentication Library of van de Microsoft Authentication Library voor de scenario's voor verificatie en voorwaardelijk starten. Het is ook afhankelijk van ADAL/MSAL dat de gebruikers-id wordt geregistreerd bij de MAM-service om zonder scenario's voor apparaatinschrijving beheertaken uit te voeren.It also relies on ADAL/MSAL to register the user identity with the MAM service for management without device enrollment scenarios.
 
 **Wat zijn de aanvullende vereisten voor het gebruik van de [mobiele app van Outlook](https://products.office.com/outlook)?**
@@ -170,7 +170,7 @@ In Intune kunnen app-gegevens op drie verschillende manieren worden gewist: voll
 Voor de app-beveiliging van Intune moet de identiteit van de gebruiker voor de toepassing en Intune App SDK consistent zijn. Dit kan alleen worden gegarandeerd via moderne verificatie. Er zijn scenario's waarin apps met een on-premisses configuratie werken, maar deze zijn niet consistent en kunnen ook niet worden gegarandeerd.
 
 **Is er een veilige manier om webkoppelingen te openen vanuit beheerde apps?**<br></br>
-Ja. De IT-beheerder kan een app-beveiligingsbeleid implementeren en instellen voor de [Intune Managed Browser-app](../apps/app-configuration-managed-browser.md), een webbrowser die is ontwikkeld door Microsoft Intune en eenvoudig kan worden beheerd met Intune. De IT-beheerder kan ervoor zorgen dat alle webkoppelingen in de door Intune beheerde apps moeten worden geopend met de Managed Browser-app.
+Ja. De IT-beheerder kan een app-beveiligingsbeleid implementeren en instellen voor de Microsoft Edge-app. De IT-beheerder kan ervoor zorgen dat alle webkoppelingen in de door Intune beheerde apps moeten worden geopend met de Microsoft Edge-app.
 
 ## <a name="app-experience-on-android"></a>Apps op Android gebruiken
 
@@ -211,7 +211,7 @@ Het Intune-beleid voor app-beveiliging geeft u de mogelijkheid app-toegang te be
 De heeft als doel de gegevens van uw organisatie in de app op app-niveau veilig en beschermd te houden. Deze functie is alleen beschikbaar voor iOS/iPadOS en vereist het gebruik van toepassingen waarin de Intune APP-SDK voor iOS/iPadOS, versie 9.0.1 of hoger is geïntegreerd. Integratie van de SDK is nodig om het gedrag te kunnen afdwingen in de betreffende toepassingen. Deze integratie vindt doorlopend plaats en is afhankelijk van de specifieke toepassingsteams. Apps die hieraan deelnemen, zijn onder meer WXP, Outlook, Managed Browser en Yammer.
   
 **Ik kan de iOS-extensie voor delen gebruiken om werk- of schoolgegevens te openen in niet-beheerde apps, zelfs wanneer het beleid voor het overdragen van gegevens is ingesteld op 'alleen voor beheerde apps' of 'geen apps'. Ontstaat hierdoor geen gegevenslek?**<br></br>
-De iOS-extensie voor delen kan alleen met het app-beveiligingsbeleid worden beheerd als ook het apparaat wordt beheerd. Daarom worden _**'zakelijke' gegevens door Intune versleuteld voordat ze buiten de app worden gedeeld**_ . U kunt dit controleren door een 'zakelijk' bestand te openen buiten de beheerde app. Het bestand moet zijn versleuteld en kan niet worden geopend bijten de beheerde app.
+De iOS-extensie voor delen kan alleen met het app-beveiligingsbeleid worden beheerd als ook het apparaat wordt beheerd. Daarom worden _**'zakelijke' gegevens door Intune versleuteld voordat ze buiten de app worden gedeeld**_. U kunt dit controleren door een 'zakelijk' bestand te openen buiten de beheerde app. Het bestand moet zijn versleuteld en kan niet worden geopend bijten de beheerde app.
 
 **Hoe werken meerdere toegangsinstellingen voor Intune-app-beveiliging die zijn geconfigureerd voor dezelfde set apps en gebruikers op iOS?**<br></br>
 Het Intune-app-beveiligingsbeleid voor toegang wordt in een bepaalde volgorde toegepast op apparaten van eindgebruikers wanneer ze vanaf hun bedrijfsaccount proberen toegang te krijgen tot een doel-app. In het algemeen krijgt wissen voorrang, dan volgt een waarschuwing die kan worden gesloten. Indien van toepassing op de specifieke gebruiker/app, wordt een instelling van een minimumversie van het iOS-/iPadOS-besturingssysteem die een gebruiker waarschuwt om de iOS-/iPadOS-versie bij te werken bijvoorbeeld toegepast na de instelling van de minimumversie van het iOS-/iPadOS-besturingssysteem die toegang door de gebruiker blokkeert. Dus in het scenario waarin de IT-beheerder de minimumversie van het iOS-/iPadOS-besturingssysteem configureert naar 11.0.0.0 en de minimumversie van het iOS-/iPadOS-besturingssysteem (alleen Waarschuwing) naar 11.1.0.0, terwijl het apparaat dat de app probeert te openen op iOS/iPadOS 10 zit, wordt de eindgebruiker geblokkeerd op basis van de restrictievere instelling voor de minimumversie van het iOS-/iPadOS-besturingssysteem die resulteert in geblokkeerde toegang.

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 242ec66ef79195533e7362694efb00928769b305
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 379eacee731c8cdd773fc7a15f556ab85e409f7c
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078172"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989887"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Ontwikkelaarshandleiding voor Microsoft Intune App SDK voor iOS
 
@@ -122,7 +122,7 @@ Als u de Intune App SDK wilt inschakelen, voert u de volgende stappen uit:
 2. Voeg de volgende iOS-frameworks toe aan het project:  
 -  MessageUI.framework  
 -  Security.framework  
--  MobileCoreServices.framework  
+-  CoreServices.framework  
 -  SystemConfiguration.framework  
 -  libsqlite3.tbd  
 -  libc++.tbd  
@@ -248,7 +248,7 @@ Sommige van deze instellingen zijn mogelijk in eerdere secties aan bod gekomen e
 Instelling  | Type  | Definitie | Vereist?
 --       |  --   |   --       |  --
 ADALClientId  | Tekenreeks  | De Azure AD-client-id van de app. | Vereist voor alle apps die gebruikmaken van MSAL en elke ADAL-app die toegang heeft tot een AAD-resource die niet van Intune is. |
-ADALAuthority | Tekenreeks | De Azure AD-instantie van de app wordt gebruikt. U moet uw eigen omgeving gebruiken waar AAD-accounts zijn geconfigureerd. | Vereist als voor de app ADAL of MSAL wordt gebruikt om toegang te krijgen tot een AAD-resource die niet van Intune is. Als deze waarde niet aanwezig is, wordt een standaard Intune-waarde gebruikt.|
+ADALAuthority | Tekenreeks | De Azure AD-instantie van de app wordt gebruikt. U moet uw eigen omgeving gebruiken waar AAD-accounts zijn geconfigureerd. | Optioneel. Aanbevolen als de app een aangepaste Line-Of-Business-toepassing is die is gebouwd voor gebruik binnen één organisatie-/AAD-tenant. Als deze waarde ontbreekt, wordt de gemeenschappelijke AAD-instantie gebruikt.|
 ADALRedirectUri  | Tekenreeks  | De Azure AD-omleidings-URI van de app. | ADALRedirectUri of ADALRedirectScheme is vereist voor alle apps die gebruikmaken van MSAL en elke ADAL-app die toegang heeft tot een AAD-resource die niet van Intune is.  |
 ADALRedirectScheme  | Tekenreeks  | Het Azure AD-omleidingsschema van de app. Dit kan worden gebruikt in plaats van ADALRedirectUri als de omleidings-URI van de app de notatie `scheme://bundle_id` heeft. | ADALRedirectUri of ADALRedirectScheme is vereist voor alle apps die gebruikmaken van MSAL en elke ADAL-app die toegang heeft tot een AAD-resource die niet van Intune is. |
 ADALLogOverrideDisabled | Boolean-waarde  | Geeft aan of de SDK alle ADAL-/MSAL-logboeken (inclusief ADAL-aanroepen van de app, indien van toepassing) naar een eigen logboekbestand routeert. De standaardwaarde is NO (Nee). De waarde is YES (Ja) als de app een eigen ADAL-/MSAL-logboek wil aanroepen. | Optioneel. |

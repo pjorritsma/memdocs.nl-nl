@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/18/2019
+ms.date: 05/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 18de92792582d4c6753bc8657c56d73fa1509788
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3d54e02c7bb88354ec59a9a8ce780ff559377466
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80359141"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556095"
 ---
 # <a name="windows-holographic-for-business-device-settings-to-run-as-a-kiosk-in-intune"></a>Instellingen voor Windows Holographic for Business-apparaten om ze als kiosk uit te voeren via Intune
 
@@ -34,50 +34,79 @@ Zie voor meer informatie over de Windows-kioskfunctie in Intune [Configure kiosk
 
 ## <a name="before-you-begin"></a>Voordat u begint
 
-[Maak het profiel](kiosk-settings.md#create-the-profile).
+- [Een configuratieprofiel voor een Windows 10-kioskapparaat maken](kiosk-settings.md#create-the-profile).
 
-## <a name="single-full-screen-app-kiosks"></a>Kiosken met één app op een volledig scherm
+  Wanneer u een configuratieprofiel voor een Windows 10-kioskapparaat maakt, zijn er meer instellingen dan in dit artikel worden vermeld. De instellingen in dit artikel worden ondersteund op apparaten met Windows Holographic for Business.
 
-Wanneer u een kioskmodus voor één app kiest, moet u de volgende instellingen opgeven:
+- Dit kioskprofiel is direct gerelateerd aan het apparaatbeperkingsprofiel dat u maakt met behulp van de [Windows Edge kioskinstellingen](device-restrictions-windows-holographic.md#microsoft-edge-browser). Samenvatting:
 
-- **Aanmeldingstype gebruiker**: Selecteer **Lokaal gebruikersaccount** om het lokale gebruikersaccount (op het apparaat) of een Microsoft-account (MSA) in te voeren dat is gekoppeld aan de kiosk-app. Gebruikersaccounttypen met het kenmerk **AutoLogon** worden niet ondersteund in Windows Holographic for Business.
+  1. Maak dit kioskprofiel om het apparaat in de kioskmodus uit te voeren.
+  2. Maak het [apparaatbeperkingsprofiel](device-restrictions-windows-holographic.md#microsoft-edge-browser) en configureer specifieke functies en instellingen die zijn toegestaan in Microsoft Edge.
 
-- **Toepassingstype**: Selecteer **Store-app**.
+> [!IMPORTANT]
+> Zorg ervoor dat u dit kioskprofiel toewijst aan de dezelfde apparaten als uw [Microsoft Edge-profiel](device-restrictions-windows-holographic.md#microsoft-edge-browser).
 
-- **App uitvoeren in kioskmodus**: Kies **Een Store-app toevoegen** en selecteer een app in de lijst.
+## <a name="single-app-full-screen-kiosk"></a>Kiosk met één app, in volledige schermweergave
+
+Hiermee wordt slechts één app op het apparaat uitgevoerd. Wanneer de gebruiker zich aanmeldt, wordt een specifieke app gestart. Deze modus voorkomt ook dat de gebruiker nieuwe apps kan openen of de actieve app kan wijzigen.
+
+- **Aanmeldingstype gebruiker**: Selecteer het accounttype waarmee de app wordt uitgevoerd. Uw opties zijn:
+
+  - **Automatisch aanmelden (Windows 10 versie 1803 en hoger)** : Niet ondersteund in Windows Holographic for Business.
+  - **Lokaal gebruikersaccount**: Voeg het lokale (op het apparaat) gebruikersaccount toe. Of voeg een aan de kioskapp gekoppeld Microsoft-account (MSA) toe. Met het account dat u invoert, kunt u zich aanmelden bij de kiosk.
+
+    Voor kiosken in openbare omgevingen moet een gebruikerstype met de minste bevoegdheid worden gebruikt.
+
+- **Toepassingstype**: Selecteer **Store-app toevoegen**.
+
+  - **App uitvoeren in kioskmodus**: Selecteer een app uit de lijst.
 
     Worden er geen apps in de lijst weergegeven? Voeg er een aantal toe met behulp van de stappen in [Client-apps](../apps/apps-add.md).
 
-    Selecteer **OK** om uw wijzigingen op te slaan.
+## <a name="multi-app-kiosk"></a>Kiosk voor meerdere apps
 
-## <a name="multi-app-kiosks"></a>Kiosken voor meerdere apps
+Apps in deze modus zijn beschikbaar in het startmenu. Deze apps zijn de enige apps die de gebruiker kan openen. Als een app een afhankelijkheid van een andere app heeft, moeten beide worden opgenomen in de lijst met toegestane apps.
 
-Apps in deze modus zijn beschikbaar in het startmenu. Deze apps zijn de enige apps die de gebruiker kan openen. Wanneer u een kioskmodus voor meerdere apps kiest, moet u de volgende instellingen opgeven:
+- **Gericht op Windows 10-apparaten in de S-modus**: Selecteer **Nee**. De S-modus wordt niet ondersteund in Windows Holographic for Business.
 
-- **Gericht op Windows 10-apparaten in de S-modus**: Kies **Nee**. De S-modus wordt niet ondersteund in Windows Holographic for Business.
+- **Aanmeldingstype gebruiker**: Voer een of meer gebruikersaccounts in die de apps kunnen gebruiken die u toevoegt. Uw opties zijn:
 
-- **Aanmeldingstype gebruiker**: Voer een of meer gebruikersaccounts in die de apps kunnen gebruiken die u toevoegt. Uw opties zijn: 
-
-  - **Automatisch aanmelden**: Niet ondersteund in Windows Holographic for Business.
-  - **Lokale gebruikersaccounts**: **Voeg** het lokale (op het apparaat) gebruikersaccount toe. Het account dat u opgeeft wordt gebruikt om u aan te melden bij de kiosk.
+  - **Automatisch aanmelden (Windows 10 versie 1803 en hoger)** : Niet ondersteund in Windows Holographic for Business.
+  - **Lokale gebruikersaccounts**: **Voeg** het lokale (op het apparaat) gebruikersaccount toe. Met het account dat u invoert, kunt u zich aanmelden bij de kiosk.
   - **Azure AD-gebruiker of -groep (Windows 10, versie 1803 of hoger)** : Hiervoor zijn gebruikersreferenties voor aanmelding op het apparaat vereist. Selecteer **Toevoegen** als u Azure AD-gebruikers of -groepen in de lijst wilt kiezen. U kunt meerdere gebruikers en groepen selecteren. Kies **Selecteren** om uw wijzigingen op te slaan.
   - **HoloLens-bezoeker**: Het bezoekersaccount is een gastaccount waarvoor geen gebruikersreferenties zijn of verificatie is vereist, zoals wordt beschreven in [Gedeelde pc-modusconcepten](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
 
-- **Toepassingen**: Voeg de apps toe die u op het apparaat in kioskmodus wilt uitvoeren. U kunt verschillende apps toevoegen.
+- **Browser en apps**: Voeg de apps toe die u op het apparaat in kioskmodus wilt uitvoeren. U kunt verschillende apps toevoegen.
 
-  - **Store-apps toevoegen**: Selecteer een bestaande app die u aan Intune hebt toegevoegd of geïmplementeerd als [client-apps](../apps/apps-add.md), waaronder Line-Of-Business-apps. Als er geen apps worden weergegeven, biedt Intune ondersteuning voor veel [app-typen](../apps/apps-add.md) die u [aan Intune toevoegt](../apps/store-apps-windows.md).
-  - **Win32-app toevoegen**: Niet ondersteund in Windows Holographic for Business.
-  - **Toevoegen via AUMID**: Gebruik deze optie om Postvak IN-apps voor Windows toe te voegen. Voer de volgende eigenschappen in: 
+  - **Browsers**
+    - **Microsoft Edge toevoegen**: Microsoft Edge wordt toegevoegd aan het app-raster en alle apps kunnen in deze kiosk worden uitgevoerd. Selecteer het Microsoft Edge-kioskmodustype:
 
-    - **Toepassingsnaam**: Vereist. Geef een naam op voor de toepassing.
-    - **Model-id van toepassingsgebruiker (AUMID)** : Vereist. Voer de AUMID van de Windows-app in. Zie [De model-id van toepassingsgebruiker van een geïnstalleerde app vinden](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) als u wilt weten hoe u aan deze id komt.
-    - **Tegelgrootte**: Vereist. Kies een tegelgrootte Klein, Normaal, Breed of Groot voor de app.
+      - **Normale modus (volledige versie van Microsoft Edge)** : Er wordt een volledige versies van Microsoft Edge uitgevoerd met alle browserfuncties. Gebruikersgegevens en -statussen worden tussen sessies opgeslagen.
+      - **Openbaar bladeren (InPrivate)** : hiermee wordt een versie met meerdere tabbladen van Microsoft Edge InPrivate uitgevoerd met een op maat gemaakte toepassing voor kiosken die in volledige schermweergave worden uitgevoerd.
 
-- **Browserinstellingen voor de kiosk**: Niet ondersteund in Windows Holographic for Business.
+      Zie [Microsoft Edge-kioskmodus implementeren](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types) voor meer informatie over deze opties.
+
+      > [!NOTE]
+      > Via deze instelling schakelt u de Microsoft Edge-browser in op het apparaat. Als u specifieke Microsoft Edge-instellingen wilt configureren, maakt u een apparaatbeperkingsprofiel (**Apparaatconfiguratie** > **Profielen** > **Profiel maken** > **Windows 10** voor platform > **Apparaatbeperkingen** > **Microsoft Edge-browser**). De beschikbare Holographic for Business-instellingen worden in de [Microsoft Edge-browser](device-restrictions-windows-holographic.md#microsoft-edge-browser) vermeld en beschreven.
+
+    - **Kiosk-browser toevoegen**: Niet ondersteund in Windows Holographic for Business.
+
+  - **Toepassingen**
+    - **Store-app toevoegen**: Selecteer een bestaande app die u aan Intune hebt toegevoegd of geïmplementeerd als [client-apps](../apps/apps-add.md), waaronder Line-Of-Business-apps. Als er geen apps worden weergegeven, biedt Intune ondersteuning voor veel [app-typen](../apps/apps-add.md) die u [aan Intune toevoegt](../apps/store-apps-windows.md).
+    - **Win32-app toevoegen**: Niet ondersteund in Windows Holographic for Business.
+    - **Toevoegen via AUMID**: Gebruik deze optie om Postvak IN-apps voor Windows, zoals Kladblok of Calculator toe te voegen. Voer de volgende eigenschappen in:
+
+      - **Toepassingsnaam**: Vereist. Geef een naam op voor de toepassing.
+      - **Model-id van toepassingsgebruiker (AUMID)** : Vereist. Voer de AUMID van de Windows-app in. Zie [De model-id van toepassingsgebruiker van een geïnstalleerde app vinden](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) als u wilt weten hoe u aan deze id komt.
+
+    - **AutoLaunch**: Optioneel. Nadat u uw apps en browser hebt toegevoegd, selecteert u één app of browser die automatisch moet worden geopend wanneer de gebruiker zich aanmeldt. Er kan slechts één app of browser automatisch worden gestart.
+    - **Tegelgrootte**: Vereist. Nadat u uw apps hebt toegevoegd, selecteert u een kleine, middelgrote, brede of grote app-tegelgrootte.
 
 - **Alternatieve indeling van het menu Start gebruiken**: Selecteer **Ja** om een XML-bestand op te geven waarin wordt beschreven hoe de apps worden weergegeven in het menu Start, zoals de volgorde van de apps. Gebruik deze optie als u meer aanpassingsmogelijkheden wilt gebruiken in het startmenu. [Startopmaak aanpassen en exporteren](https://docs.microsoft.com/hololens/hololens-kiosk#start-layout-for-hololens) biedt instructies en bevat een specifiek XML-bestand voor apparaten met Windows Holographic for Business.
 
 - **Windows-taakbalk**: Niet ondersteund in Windows Holographic for Business.
+- **Toegang tot de map Downloads toestaan**: Niet ondersteund in Windows Holographic for Business.
+- **Onderhoudsvenster opgeven voor opnieuw opstarten van apps**: Niet ondersteund in Windows Holographic for Business.
 
 ## <a name="next-steps"></a>Volgende stappen
 

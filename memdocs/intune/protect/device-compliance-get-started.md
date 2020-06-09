@@ -5,8 +5,8 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/21/2020
-ms.topic: conceptual
+ms.date: 05/21/2020
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9fa14dd54a820ed20f8b3b504a836392c7f428f
-ms.sourcegitcommit: 4381afb515c06f078149bd52528d1f24b63a2df9
+ms.openlocfilehash: 559d9a704f0b33e3fda3adf628626b56ff263de3
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82538166"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989719"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Regels instellen op apparaten om toegang tot resources in uw organisatie met behulp van Intune toe te staan
 
@@ -64,11 +64,17 @@ Remember that you need to implement Conditional Access policies in addition to c
 
 ## <a name="device-compliance-policies-work-with-azure-ad"></a>Apparaatnalevingsbeleid werkt met Azure AD
 
-Intune gebruikt [voorwaardelijke toegang](https://docs.microsoft.com/azure/active-directory/conditional-access/overview) van Azure AD (Active Directory) om te helpen naleving af te dwingen (wordt geopend op een andere documentenwebsite). Wanneer een apparaat is ingeschreven bij Intune, wordt het Azure AD-registratieproces gestart, en worden de apparaatgegevens bijgewerkt in Azure AD. Een van de belangrijkste apparaatgegevens is de nalevingsstatus van het apparaat. Deze nalevingsstatus wordt door de beleidsregels voor voorwaardelijke toegang gebruikt om de toegang tot e-mail en andere organisatieresources toe te staan of te blokkeren.
+Intune maakt gebruik van [voorwaardelijke toegang](../protect/conditional-access.md) om naleving af te dwingen. Voorwaardelijke toegang is een technologie van Azure Active Directory (Azure AD).
 
-- [Wat is apparaatbeheer in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-introduction) is een handige resource over hoe en waarom apparaten worden geregistreerd in Azure AD.
+Wanneer een apparaat is ingeschreven bij Intune, wordt het Azure AD-registratieproces gestart, en worden de apparaatgegevens bijgewerkt in Azure AD. Een van de belangrijkste apparaatgegevens is de nalevingsstatus van het apparaat. Deze nalevingsstatus wordt door de beleidsregels voor voorwaardelijke toegang gebruikt om de toegang tot e-mail en andere organisatieresources toe te staan of te blokkeren.
 
-- In [Voorwaardelijke toegang](conditional-access.md) en [algemene manieren om voorwaardelijke toegang te gebruiken](conditional-access-intune-common-ways-use.md) wordt deze functie beschreven in relatie tot Intune.
+Meer informatie over voorwaardelijke toegang en Intune:
+
+- [Gebruikelijke manieren om voorwaardelijke toegang met Intune te gebruiken](conditional-access-intune-common-ways-use.md)
+
+Meer informatie over voorwaardelijke toegang vindt u in de Azure AD-documentatie:
+  - [Wat is voorwaardelijke toegang](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)
+  - [Wat is een apparaat-id](https://docs.microsoft.com/azure/active-directory/device-management-introduction)
 
 ## <a name="ways-to-use-device-compliance-policies"></a>Nalevingsbeleid voor apparaten gebruiken
 
@@ -86,22 +92,22 @@ U kunt nalevingsbeleid implementeren voor gebruikers in gebruikersgroepen of app
 
 Intune bevat ook een set ingebouwde instellingen voor nalevingsbeleid. Het volgende ingebouwde beleid wordt geëvalueerd op alle apparaten die zijn ingeschreven in Intune:
 
-- **Apparaten waaraan geen nalevingsbeleid is toegewezen markeren als**: Deze eigenschap heeft twee waarden:
+- **Apparaten waaraan geen nalevingsbeleid is toegewezen markeren als**: Dit is een standaardactie voor niet-naleving. Deze eigenschap heeft twee waarden:
 
   - **Compatibel** (*standaard*): beveiligingsfunctie uit
   - **Niet compatibel**: beveiligingsfunctie aan
 
   Als er geen nalevingsbeleid aan een apparaat is toegewezen, wordt dit apparaat standaard als incompatibel beschouwd. Als u voorwaardelijke toegang met nalevingsbeleid gebruikt, is het raadzaam de standaardinstelling te wijzigen in **Niet compatibel**. Als een eindgebruiker incompatibel is omdat er geen beleid is toegewezen, wordt `No compliance policies have been assigned` vermeld in de [bedrijfsportal-app](../apps/company-portal-app.md).
 
-- **Verbeterde jailbreakdetectie**: als deze instelling is ingeschakeld, wordt de status van apparaten met jailbreak vaker weergegeven op iOS/iPadOS-apparaten. Deze instelling is alleen van invloed op apparaten waarop een nalevingsbeleid is gericht waarmee apparaten met jailbreak worden geblokkeerd. Door het inschakelen van deze eigenschap worden de locatieservices van het apparaat gebruikt. Ook kan dit invloed hebben op het batterijverbruik. De locatiegegevens van de gebruiker worden niet door Intune opgeslagen en worden alleen gebruikt om jailbreakdetectie vaker te activeren op de achtergrond. 
+- **Verbeterde jailbreakdetectie** (*Is van toepassing op iOS/iPadOS*): als deze instelling is ingeschakeld, wordt de status van apparaten met jailbreak vaker weergegeven op iOS/iPadOS-apparaten. Deze instelling is alleen van invloed op apparaten waarop een nalevingsbeleid is gericht waarmee apparaten met jailbreak worden geblokkeerd. Door het inschakelen van deze eigenschap worden de locatieservices van het apparaat gebruikt. Ook kan dit invloed hebben op het batterijverbruik. De locatiegegevens van de gebruiker worden niet door Intune opgeslagen en worden alleen gebruikt om jailbreakdetectie vaker te activeren op de achtergrond. 
 
   Wanneer u deze instelling inschakelt, moeten apparaten:
   - Locatieservices op het niveau van het besturingssysteem inschakelen.
   - De bedrijfsportal altijd toestaan om locatieservices te gebruiken.
 
-  Evaluatie wordt geactiveerd door de bedrijfsportal-app te openen of het apparaat een aanzienlijke afstand van 500 meter of meer te verplaatsen. Op apparaten met iOS 13 en hoger moeten gebruikers voor deze functie steeds de optie Altijd toestaan selecteren wanneer ze worden gevraagd door te gaan; hierdoor kan hun locatie op de achtergrond worden gebruikt in de bedrijfsportal. Als gebruikers toegang tot hun locatie niet altijd toestaan en een beleid hebben ingesteld waarbij deze instelling is geconfigureerd, wordt hun apparaat gemarkeerd als Niet-compatibel. Houd er rekening mee dat Intune niet kan garanderen dat elke grote locatiewijziging ervoor zorgt dat er op jailbreakdetectie wordt gecontroleerd, aangezien dit afhankelijk is van de netwerkverbinding van een apparaat op dat moment.
+  Verbeterde detectie werkt via de locatieservices. De evaluatie wordt geactiveerd door de bedrijfsportal-app te openen of het apparaat een aanzienlijke afstand van 500 meter of meer te verplaatsen. Op apparaten met iOS 13 en hoger moeten gebruikers voor deze functie steeds de optie Altijd toestaan selecteren wanneer ze worden gevraagd door te gaan; hierdoor kan hun locatie op de achtergrond worden gebruikt in de bedrijfsportal. Als gebruikers toegang tot hun locatie niet altijd toestaan en een beleid hebben ingesteld waarbij deze instelling is geconfigureerd, wordt hun apparaat gemarkeerd als Niet-compatibel. Houd er rekening mee dat Intune niet kan garanderen dat elke grote locatiewijziging ervoor zorgt dat er op jailbreakdetectie wordt gecontroleerd, aangezien dit afhankelijk is van de netwerkverbinding van een apparaat op dat moment.
 
-- **Geldigheidsperiode van nalevingsstatus (dagen)** : Voer de tijdsduur in dat apparaten de status voor alle ontvangen nalevingsbeleidsregels moeten rapporteren. Apparaten die niet binnen deze tijdsduur de status retourneren, worden als Niet compatibel beschouwd. De standaardwaarde is 30 dagen. De minimumwaarde is 1 dag.
+- **Geldigheidsperiode van nalevingsstatus (dagen)** : Voer de tijdsduur in dat apparaten de status voor alle ontvangen nalevingsbeleidsregels moeten rapporteren. Apparaten die niet binnen deze tijdsduur de status retourneren, worden als Niet compatibel beschouwd. De standaardwaarde is 30 dagen. De maximumwaarde is 120 dagen. De minimumwaarde is 1 dag.
 
   Deze instelling wordt weergegeven als het standaardnalevingsbeleid **Is actief** (**Apparaten** > **Controleren** > **Naleving van instelling**). De achtergrondtaak voor dit beleid wordt één keer per dag uitgevoerd.
 

@@ -18,21 +18,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e44dbb8e29da829e3455121700e8901a3b3fc98
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 63000a7285b2d1d6505a739f186dc9168e7f3fca
+ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81007620"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83853584"
 ---
 # <a name="review-client-app-protection-logs"></a>Logboeken voor beveiliging van de client-app controleren
 
 Kom meer te weten over de instellingen die u kunt bekijken in de app-beschermingslogboeken. U kunt de logboeken openen door de diagnostische modus van Intune in te schakelen op een mobiele client. 
 
 Het proces voor het inschakelen en verzamelen van logboeken verschilt per platform:
-- **IOS-/iPadOS-apparaten**: gebruik Microsoft Edge voor iOS/iPadOS om logboeken te verzamelen. Zie [Internettoegang beheren met behulp van Microsoft Edge met Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs) voor meer informatie. 
+- **IOS-/iPadOS-apparaten**: gebruik Microsoft Edge voor iOS/iPadOS om logboeken te verzamelen. Zie [Microsoft Edge voor iOS en Android gebruiken voor toegang tot logboeken voor beheerde apps](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs) voor details.
 - **Windows 10-apparaten**: gebruik *MDMDiag* en gebeurtenislogboeken. Zie [Diagnose MDM failures in Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) (MDM-fouten diagnosticeren in Windows 10) in de documentatie voor Windows-clientbeheer en het blog [Troubleshooting Windows 10 Intune Policy Failures](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (Problemen met het Windows 10 Intune-beleid oplossen).
-- **Android-apparaten**: gebruik Microsoft Edge voor Android om logboeken te verzamelen. Zie [Internettoegang beheren met behulp van Microsoft Edge met Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs) voor meer informatie. 
+- **Android-apparaten**: gebruik Microsoft Edge voor Android om logboeken te verzamelen. Zie [Microsoft Edge voor iOS en Android gebruiken voor toegang tot logboeken voor beheerde apps](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs) voor details.
 
   > [!Note]
   > Op volledig beheerde Android-apparaten is de bedrijfsportal-app van Intune in bepaalde gevallen mogelijk zichtbaar tussen alle andere apps. Dit kan gebeuren als een app die is gekoppeld aan een app-beveiligingsbeleid niet is geïnstalleerd of niet is gestart. 

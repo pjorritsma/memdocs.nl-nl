@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2020
-ms.topic: conceptual
+ms.date: 05/11/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0cf2096b4a8862a29d47bc05aa29f0cbb48792b
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: da78e0f80df31f5cb0f6236c4f85f93c05f0320a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023245"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989477"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Apps toevoegen aan Microsoft Intune 
 
@@ -43,6 +43,7 @@ Intune biedt ondersteuning voor een breed scala aan app-typen. De beschikbare op
 | Apps die intern zijn ontwikkeld (line-of-business) | De app wordt door Intune op het apparaat geïnstalleerd (u levert het installatiebestand). | U moet de app bijwerken. |
 | Apps die zijn ingebouwd (ingebouwde apps) | De app wordt door Intune op het apparaat geïnstalleerd.  | App-updates worden automatisch uitgevoerd. |
 | Apps op internet (webkoppeling) | Er wordt door Intune een snelkoppeling gemaakt naar de web-app op het beginscherm van het apparaat. | App-updates worden automatisch uitgevoerd. |
+| Apps van andere Microsoft-services  | Intune maakt een snelkoppeling naar de app in de bedrijfsportal. Zie [App source setting options](../apps/company-portal-app.md#app-source-setting-options) (Opties voor app-broninstellingen) voor meer informatie. | App-updates worden automatisch uitgevoerd. |
 
 ### <a name="specific-app-type-details"></a>Details specifieke app-typen
  
@@ -70,7 +71,6 @@ De volgende tabel bevat de specifieke app-typen en informatie over hoe u deze ku
 | Android Enterprise-systeem-apps  | Store-app  | Selecteer **Android Enterprise-systeem-app** als het **app-type** en voer vervolgens de naam, de uitgever en het pakketbestand van de app in.  |
 | Windows-app (Win32)  | LOB-app  | Selecteer **Windows-app (Win32)** als het **app-type**, selecteer het **app-pakketbestand** en voeg vervolgens een installatiebestand toe met de extensie **.intunewin**.  |
 | macOS LOB-apps | LOB-app  | Selecteer **Line-of-business** als het **app-type**, selecteer het **App-pakketbestand** en selecteer vervolgens een installatiebestand met de extensie **.intunemac**.  |
-
 
 <sup>1</sup> Zie [Informatie over apps met licentie](apps-add.md#understanding-licensed-apps) verderop voor meer informatie over Android Enterprise- en Android-werkprofielen.
 
@@ -112,6 +112,7 @@ U kunt kiezen uit de volgende app-typen:
 - **Apps uit de store**: een app die naar de Microsoft Store, iOS/iPadOS Store of Android Store is geüpload, is een store-app. De aanbieder van een store-app onderhoudt de app en levert hiervoor updates. U selecteert de app in de lijst van de store en voegt deze met behulp van Intune toe als een beschikbare app voor uw gebruikers.
 - **Apps die intern zijn ontwikkeld (line-of-business)** : apps die intern zijn gemaakt, worden LOB-apps (line-of-business) genoemd. De functionaliteit van dit type app is gemaakt voor een van de platformen die door Intune worden ondersteund, zoals Windows, iOS/iPadOS, macOS of Android. Uw organisatie maakt en levert u updates als een afzonderlijk bestand. U levert updates van de app aan gebruikers door de updates via Intune toe te voegen en te implementeren.
 - **Apps op internet**: web-apps zijn client-/servertoepassingen. De server levert de web-app, waaronder de gebruikersinterface, inhoud en functionaliteit. Bovendien bieden moderne webhostingplatformen meestal beveiliging, taakverdeling en andere voordelen. Dit type app wordt afzonderlijk onderhouden op internet. U gebruikt Intune om naar dit type app te verwijzen. U wijst ook de groepen gebruikers toe die toegang krijgen tot de app. Houd er rekening mee dat Android geen ondersteuning biedt voor web-apps.
+- **Apps van andere Microsoft-services**: Apps die ofwel uit Azure AD ofwel uit Office Online afkomstig zijn. **Azure AD-ondernemingstoepassingen** worden geregistreerd en toegewezen via de [Azure-portal](https://portal.azure.com). **Office Online-toepassingen** worden toegewezen met behulp van de licentiecontroles die beschikbaar zijn in het [M365-beheercentrum](https://admin.microsoft.com). In de bedrijfsportal kunt u Azure AD Enterprise- en Office Online-apps verbergen voor of tonen aan eindgebruikers. U vindt deze configuratie-instelling door in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) **Tenantbeheer** > **Aanpassing** te selecteren. Selecteer **Verbergen** of **Weergeven** om **Azure AD-ondernemingstoepassingen** of **Office Online-toepassingen** in de bedrijfsportal te verbergen voor of tonen aan alle gebruikers. Elke eindgebruiker ziet de volledige toepassingscatalogus van de gekozen Microsoft-service. Standaard wordt elke extra app-bron ingesteld op **Verbergen**. Zie [App source setting options](../apps/company-portal-app.md#app-source-setting-options) (Opties voor app-broninstellingen) voor meer informatie. 
 
 Wanneer u bepaalt welke apps uw organisatie nodig heeft, houd er dan rekening mee hoe de apps worden geïntegreerd met cloudservices, welke gegevens worden opgehaald met de apps, of de apps beschikbaar zijn voor BYOD-gebruikers en of internettoegang nodig is voor de apps.
 

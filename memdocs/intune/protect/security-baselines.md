@@ -5,8 +5,8 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/01/2020
-ms.topic: conceptual
+ms.date: 05/21/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.reviewer: laarrizz
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35e48be90b80d0c776087c95444f5f77f5ff547c
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.openlocfilehash: d533acfa60672bed3d6919116f11f43d525b6551
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693424"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988323"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Beveiligingsbasislijnen gebruiken om Windows 10-apparaten te gebruiken in Intune
 
@@ -68,23 +68,27 @@ De volgende beveiligingsbasislijninstanties zijn beschikbaar voor gebruik met In
 
 Profielen die u eerder hebt gemaakt op basis van een previewsjabloon, kunt u gewoon blijven gebruiken en bewerken, zelfs wanneer de sjabloon niet meer beschikbaar is voor nieuwe profielen.
 
-Wanneer u klaar bent om over te stappen op een meer recente versie van een basislijn die u gebruikt, raadpleegt u [De basislijnversie voor een profiel wijzigen](#change-the-baseline-version-for-a-profile) in dit artikel. 
+Wanneer u klaar bent om over te stappen op een recentere versie van een basislijn die u gebruikt, raadpleegt u [De basislijnversie voor een profiel wijzigen](#change-the-baseline-version-for-a-profile) in dit artikel. 
 
 ## <a name="about-baseline-versions-and-instances"></a>Versies en instanties van basislijnen
 
 In elke nieuwe versie-instantie van een basislijn kunnen instellingen worden toegevoegd, verwijderd of veranderd. Als er in een nieuwe versie van Windows 10 bijvoorbeeld nieuwe Windows 10-instellingen beschikbaar komen, ontvangt de MDM-beveiligingsbasislijn mogelijk een nieuwe versie-instantie met de nieuwste instellingen.
 
-U ziet in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) onder **Endpoint Security** > **Beveiligingsbasislijnen** een lijst met de beschikbare basislijnen. De lijst bevat de basislijnsjabloonnaam, hoeveel profielen u hebt die dat type basislijn gebruiken, hoeveel verschillende instanties (versies) van het type basislijn er beschikbaar zijn en een *laatste publicatiedatum* waarmee wordt aangegeven wanneer de nieuwste versie van de basislijnsjabloon beschikbaar is gesteld.
+U ziet in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) onder **Endpoint Security** > **Beveiligingsbasislijnen** een lijst met de beschikbare basislijnen. De lijst bevat:
+- de naam van de basislijnsjabloon
+- hoeveel profielen u hebt die gebruikmaken van dat type basislijn
+- hoeveel afzonderlijke exemplaren (versies) van het basislijntype beschikbaar zijn
+- een *Laatst gepubliceerd*-datum die aangeeft wanneer de nieuwste versie van de basislijnsjabloon beschikbaar werd
 
-Als u meer gegevens wilt bekijken over de basislijnversies die u gebruikt, selecteert u een basislijntegel. Het deelvenster *Overzicht* wordt dan geopend. Selecteer vervolgens **Versies**. Intune geeft details weer over de versies van die basislijn die door uw profielen worden gebruikt, inclusief de meest recente en de huidige basislijnversie.  U kunt een versie selecteren om meer informatie weer te geven over de profielen die hiervan gebruikmaken.
+Als u meer gegevens wilt bekijken over de basislijnversies die u gebruikt, selecteert u een basislijn. Het deelvenster *Overzicht* wordt dan geopend. Selecteer vervolgens **Versies**. Intune geeft details weer over de versies van die basislijn die door uw profielen worden gebruikt. De details omvatten de recentste en de huidige basislijnversie. U kunt een versie selecteren om meer informatie weer te geven over de profielen die hiervan gebruikmaken.
 
-U kunt kiezen of u [de versie wilt wijzigen](#change-the-baseline-version-for-a-profile) van een basislijn die wordt gebruikt met een bepaald profiel. Dit betekent dat wanneer er een nieuwe versie uitkomt, u geen nieuw basislijnprofiel hoeft te maken om er gebruik van te kunnen maken. In plaats daarvan selecteert u, wanneer u hier klaar voor bent, een basislijnprofiel en gebruikt u de ingebouwde optie om de instantieversie van dat profiel te wijzigen in een nieuwe versie.
+U kunt kiezen of u [de versie wilt wijzigen](#change-the-baseline-version-for-a-profile) van een basislijn die wordt gebruikt met een bepaald profiel. Wanneer u de versie wijzigt, hoeft u geen nieuw basislijnprofiel te maken om gebruik te maken van bijgewerkte versies. In plaats daarvan selecteert u een basislijnprofiel en gebruikt u de ingebouwde optie om de exemplaarversie van dat profiel te wijzigen in een nieuwe versie.
 
 ### <a name="compare-baseline-versions"></a>Basislijnversies vergelijken
 
 In het deelvenster **Versies** voor een beveiligingsbasislijn vindt u een lijst van elke versie van deze basislijn die u hebt geïmplementeerd. Deze lijst bevat ook de meest recente en actieve versie van de basislijn. Wanneer u een nieuw *profiel* voor een beveiligingsbasislijn maakt, gebruikt het profiel de meest recente versie van de beveiligingsbasislijn.  Profielen die u eerder hebt gemaakt en die gebruikmaken van een eerdere basislijnversie, kunt u gewoon blijven gebruiken en bewerken. Dit geldt ook voor basislijnen die met een previewversie zijn gemaakt.
 
-Als u wilt weten wat er is gewijzigd tussen versies, selecteert u de selectievakjes voor twee verschillende versies en selecteert u **Basislijnen vergelijken** om een CSV-bestand te downloaden waarin deze verschillen worden beschreven. 
+Als u wilt weten wat er is veranderd tussen versies, selecteert u de selectievakjes voor twee verschillende versies en selecteert u **Basislijnen vergelijken**. Vervolgens wordt u gevraagd om een CSV-bestand te downloaden waarin die verschillen worden uiteengezet.
 
 De download identificeert elke instelling in de twee basislijnversies en noteert of deze instelling is gewijzigd (*nietGelijk*) of hetzelfde is gebleven (*gelijk*). Details bevatten ook de standaardwaarde voor de instelling per versie en of de instelling is *toegevoegd* aan de recentere versie of *verwijderd* uit de recentere versie.
 
@@ -207,11 +211,41 @@ Wanneer een beveiligingsbasislijninstelling niet langer van toepassing is op een
 
 Andere processen die later mogelijk de instellingen op het apparaat wijzigen, zijn onder meer implementatie van een andere of een nieuwe beveiligingsbasislijn, een apparaatconfiguratieprofiel, groepsbeleidconfiguraties of een handmatige bewerking van de instellingen op het apparaat.
 
+### <a name="duplicate-a-security-baseline"></a>Een beveiligingsbasislijn dupliceren
+
+U kunt duplicaten van uw beveiligingsbasislijnen maken. Een scenario waarbij het dupliceren van een basislijn nuttig is, is wanneer u een soortgelijke maar andere basislijn aan een subset van apparaten wilt toewijzen. Door een duplicaat te maken hoeft u niet handmatig de hele basislijn opnieuw te maken. In plaats daarvan kunt u om het even welke huidige basislijnen dupliceren en vervolgens alleen de wijzigingen introduceren die het nieuwe exemplaar vereist. U kunt alleen een specifieke instelling wijzigen en de groep waaraan de basislijn is toegewezen.
+
+Wanneer u een duplicaat maakt, geeft u de kopie een nieuwe naam. De kopie wordt gemaakt met dezelfde instellingsconfiguraties en bereiktags als het oorspronkelijke beleid, maar bevat geen toewijzingen. Om toewijzingen te kunnen toevoegen, moet u de nieuwe basislijn bewerken.
+
+Alle beveiligingsbasislijnen ondersteunen het maken van een duplicaat.
+
+Nadat u een basislijn dupliceert, beoordeelt en bewerkt u het nieuwe exemplaar om de configuratie te wijzigen.
+
+#### <a name="to-duplicate-a-baseline"></a>Een basislijn dupliceren doet u als volgt:
+
+1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Ga naar **Eindpuntbeveiliging** > **Beveiligingsbasislijnen**, selecteer het type basislijn dat u wilt dupliceren en selecteer vervolgens **Profielen**.
+3. Klik met de rechtermuisknop op het profiel dat u wilt dupliceren en selecteer **Dupliceren**, of selecteer aan de rechterkant van de basislijn het weglatingsteken ( **...** ) en daarna **Dupliceren**.
+4. Geef een **nieuwe naam** op voor de basislijn en selecteer vervolgens **Opslaan**.
+
+Na het *vernieuwen* verschijnt het nieuwe basislijnprofiel in het beheercentrum.
+
+#### <a name="to-edit-a-baseline"></a>Een basislijn bewerken doet u als volgt:
+
+1. Selecteer de basislijn en selecteer vervolgens **Eigenschappen**.
+2. Selecteer **Instellingen** om de lijst van instellingscategorieën in de basislijn uit te vouwen. U kunt de instellingen in deze weergave niet wijzigen, maar u kunt wel controleren hoe ze zijn geconfigureerd.
+3. Als u de instellingen wilt wijzigen, selecteert u **Bewerken** voor elke categorie waarvoor u een wijziging wilt aanbrengen:
+   - Basisbeginselen
+   - Toewijzingen
+   - Bereiktags
+   - Configuratie-instellingen
+4. Nadat u wijzigingen hebt aangebracht, selecteert u **Opslaan** om uw bewerkingen op te slaan.  U moet bewerkingen van één categorie opslaan voordat u bewerkingen kunt aanbrengen in andere categorieën.
+
 ### <a name="older-baseline-versions"></a>Oudere basislijnversies
 
 Microsoft Endpoint Manager werkt de versies van ingebouwde beveiligingsbasislijnen bij, afhankelijk van de veranderende behoeften van een typische organisatie. Elke nieuwe release resulteert in een versie-update naar een bepaalde basislijn. De verwachting is dat klanten de meest recente basislijnversie gebruiken als uitgangspunt voor hun apparaatconfiguratieprofielen.
 
-Wanneer er geen profielen meer zijn die gebruikmaken van een oudere basislijn in uw tenant, vermeldt Microsoft Endpoint Manager alleen de meest recente basislijnversie die beschikbaar is.
+Wanneer er geen profielen meer zijn die gebruikmaken van een oudere basislijn in uw tenant, vermeldt Microsoft Endpoint Manager alleen de recentste basislijnversie die beschikbaar is.
 
 Als er een profiel is gekoppeld aan een oudere basislijn, wordt die oudere basislijn nog steeds weergegeven.
 

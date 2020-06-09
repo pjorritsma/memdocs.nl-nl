@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 03/24/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 mr.reviewer: karthib
-ms.openlocfilehash: 6b5d0f88222c8d48da4f91ff3cf8d4628ccb179d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: cb51d5f73edbc28572ee01d49ba4bd5a62cf6393
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80551577"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989632"
 ---
 # <a name="add-endpoint-protection-settings-in-intune"></a>Instellingen voor Endpoint Protection toevoegen in Intune
 
@@ -38,9 +38,6 @@ Lees voordat u een profiel maakt de volgende artikelen door, zodat u precies wee
 
 - [macOS-instellingen](endpoint-protection-macos.md)
 - [Windows 10-instellingen](endpoint-protection-windows-10.md)
-
-> [!NOTE]
-> De Intune-gebruikersinterface wordt bijgewerkt naar een versie voor volledig scherm. Dit kan enkele weken duren. Totdat de tenant deze update ontvangt, hebt u een enigszins afwijkende werkstroom wanneer u instellingen maakt of bewerkt zoals beschreven in dit artikel.
 
 ## <a name="create-a-device-profile-containing-endpoint-protection-settings"></a>Een apparaatprofiel met instellingen voor Endpoint Protection maken
 
@@ -60,8 +57,9 @@ Lees voordat u een profiel maakt de volgende artikelen door, zodat u precies wee
 4. Selecteer **Maken**.
 5. Voer in **Basisinformatie** de volgende eigenschappen in:
 
-    - **Naam**: Voer een beschrijvende naam in voor het beleid. Geef uw beleid een naam zodat u het later eenvoudig kunt identificeren. Een goede beleidsnaam is bijvoorbeeld **macOS: Endpoint Protection-profiel waarmee de firewall wordt geconfigureerd voor alle macOS-apparaten**.
-    - **Beschrijving**: Voer een beschrijving in voor het beleid. Deze instelling is optioneel, maar wordt aanbevolen.
+   - **Naam**: Voer een beschrijvende naam in voor het beleid. Geef uw beleid een naam zodat u het later eenvoudig kunt identificeren. Een goede beleidsnaam bevat bijvoorbeeld mogelijk het profieltype en het platform.
+
+   - **Beschrijving**: Voer een beschrijving in voor het beleid. Deze instelling is optioneel, maar wordt aanbevolen.
 
 6. Selecteer **Volgende**.
 

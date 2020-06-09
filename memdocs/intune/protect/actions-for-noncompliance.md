@@ -5,8 +5,8 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
-ms.topic: conceptual
+ms.date: 05/26/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8b8bde6b7979cfe3b936a08630e23e19fc7e5a0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: fff21eac61f7b68e00989aefc1f9ea6dc3ad7c0a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81615051"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989307"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Acties configureren voor niet-compatibele apparaten in Intune
 
@@ -55,11 +55,25 @@ Wanneer het e-mailbericht wordt verzonden, geeft Intune meer informatie over het
 
 - **U kunt het niet-compatibele apparaat als volgt op afstand vergrendelen**: Gebruik deze actie om een externe vergrendeling van een apparaat uit te brengen. De gebruiker wordt vervolgens gevraagd een pincode of wachtwoord in te voeren om het apparaat te ontgrendelen. Meer over de functie [Extern vergrendelen](../remote-actions/device-remote-lock.md).
 
+  Deze actie wordt ondersteund op de volgende platforms:
+  - Android:
+    - Android-apparaatbeheerder
+    - Android Enterprise-apparaateigenaar
+    - Android Enterprise-werkprofiel
+    - Kioskapparaten voor Android Enterprise
+  - iOS/iPadOS
+  - macOS
+  - Windows 10 Mobile
+  - Windows Phone 8.1 en hoger
+
 - **Het niet-compatibele apparaat buiten gebruik stellen**: Met deze actie verwijdert u alle bedrijfsgegevens van het apparaat en verwijdert u het apparaat uit Intune-beheer. Er wordt een minimale planning van **30** dagen ondersteund om te voorkomen dat u een apparaat per ongeluk wist.
 
   Deze actie wordt ondersteund op de volgende platforms:
-  - Android
-  - iOS
+  - Android:
+    - Android-apparaatbeheerder
+    - Android Enterprise-apparaateigenaar
+    - Android Enterprise-werkprofiel
+  - iOS/iPadOS
   - macOS
   - Windows 10 Mobile
   - Windows Phone 8.1 en hoger
@@ -161,7 +175,7 @@ U kunt optionele acties toevoegen wanneer u een nalevingsbeleid maakt of wanneer
 
    - **U kunt het niet-compatibele apparaat als volgt op afstand vergrendelen**: Als het apparaat niet compatibel is, vergrendelt u het apparaat. De gebruiker moet een pincode of wachtwoord invoeren om het apparaat te ontgrendelen.
 
-   - **Het niet-compatibele apparaat buiten gebruik stellen**: Wanneer het apparaat niet compatibel is, verwijdert u alle bedrijfsgegevens van het apparaat en verwijdert u het apparaat uit Intune-beheer. Er wordt een minimale planning van **30** dagen ondersteund om te voorkomen dat u een apparaat per ongeluk wist.
+   - **Het niet-compatibele apparaat buiten gebruik stellen**: Wanneer het apparaat niet compatibel is, verwijdert u alle bedrijfsgegevens van het apparaat en verwijdert u het apparaat uit Intune-beheer.
 
    - **Pushmelding verzenden naar eindgebruiker**: Configureer deze actie voor het verzenden van een pushmelding over niet-naleving van een apparaat via de bedrijfsportal app of de Intune-app op het apparaat.
 

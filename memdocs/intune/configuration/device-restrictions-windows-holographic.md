@@ -1,11 +1,11 @@
 ---
 title: Instellingen voor apparaten met Windows Holographic for Business in Microsoft Intune - Azure | Microsoft Docs
-description: Meer informatie over de configuratie van instellingen voor apparaatbeperkingen in Microsoft Intune voor Windows Holographic for Business, waaronder uitschrijving, geolocatie, wachtwoorden, apps installeren uit de App Store, cookies en pop-ups in Microsoft Edge, Microsoft Defender, zoeken, cloud en opslag, bluetooth-connectiviteit, systeemtijd en gebruiksgegevens in Azure.
+description: Meer informatie over de configuratie van instellingen voor apparaatbeperkingen in Microsoft Intune voor Windows Holographic for Business. Beheer van uitschrijving, geolocatie, wachtwoorden, apps installeren uit de App Store, cookies en pop-ups in Microsoft Edge, Microsoft Defender, zoeken, cloud en opslag, bluetooth-connectiviteit, systeemtijd en gebruiksgegevens.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 05/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,97 +15,143 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0a207c34c0d46b423eda44abf953e9c084cc9b2d
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 301cdd9403b0bb3e2d64c8707782ecbc639dc044
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078223"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556044"
 ---
 # <a name="windows-holographic-for-business-device-settings-to-allow-or-restrict-features-using-intune"></a>Windows Holographic for Business-apparaatinstellingen voor het toestaan of beperken van functies met behulp van Intune
 
-
-
 Dit artikel bevat een overzicht en beschrijving van de verschillende instellingen die u kunt beheren op Windows Holographic for Business-apparaten, zoals Microsoft Hololens. Gebruik deze instellingen als onderdeel van de oplossing Mobile Device Management (MDM) voor het toestaan of uitschakelen van functies, het beheren van de beveiliging en nog veel meer.
+
+Als Intune-beheerder kunt u deze instellingen maken en toewijzen aan uw apparaten.
 
 ## <a name="before-you-begin"></a>Voordat u begint
 
-[Maak een apparaatconfiguratieprofiel](device-restrictions-configure.md#create-the-profile).
+[Maak een Windows 10-configuratieprofiel voor apparaatbeperkingen](device-restrictions-configure.md#create-the-profile).
 
-## <a name="general"></a>Algemeen
-
-- **Handmatige uitschrijving**: Hiermee kan de gebruiker het werkplekaccount handmatig van het apparaat verwijderen.
-- **Cortana**: Hiermee schakelt u de spraakassistent Cortana in of uit.
-- **Geolocatie**: Geeft aan of op het apparaat gegevens van locatieservices kunnen worden gebruikt.
-
-## <a name="password"></a>Wachtwoord
-
-- **Wachtwoord**: Hiermee stelt u dat de eindgebruiker een wachtwoord moet invoeren voor toegang tot het apparaat.
-- **Wachtwoord vereisen wanneer het apparaat wordt geactiveerd vanuit een niet-actieve status**: Dit houdt in dat de gebruiker een wachtwoord moet opgeven om het apparaat te ontgrendelen.
+Wanneer u een Windows 10-configuratieprofiel voor apparaatbeperkingen maakt, zijn er meer instellingen dan in dit artikel worden vermeld. De instellingen in dit artikel worden ondersteund op apparaten met Windows Holographic for Business.
 
 ## <a name="app-store"></a>App Store
 
-- **Apps uit de Store automatisch bijwerken**: Apps die zijn geïnstalleerd vanuit Microsoft Store, kunnen automatisch worden bijgewerkt.
-- **Installatie van vertrouwde app**: Voor apps die zijn ondertekend met een vertrouwd certificaat is sideloaden mogelijk.
-- **Ontgrendeling voor ontwikkelaars**: De eindgebruiker mag instellingen voor Windows-ontwikkelaars wijzigen, zoals het toestaan van sideloaden van apps.
+- **Apps uit de Store automatisch bijwerken**: met **Blokkeren** voorkomt u dat updates automatisch worden geïnstalleerd vanuit de Microsoft Store. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard kan in het besturingssysteem zijn ingesteld dat apps die zijn geïnstalleerd vanuit de Microsoft Store, automatisch worden bijgewerkt.
 
-## <a name="microsoft-edge-browser"></a>Microsoft Edge-browser
+  [ApplicationManagement/AllowAppStoreAutoUpdate CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowappstoreautoupdate)
 
-- **Cookies**: Hiermee kunnen internetcookies in de browser op het apparaat worden opgeslagen.
-- **Pop-ups**: Hiermee kunt u pop-upvensters in de browser blokkeren (alleen van toepassing op Windows 10-desktop).
-- **Zoeksuggesties**: Hiermee kan de zoekmachine sites voorstellen wanneer er zoektermen worden getypt.
-- **Wachtwoordbeheer**: Hiermee schakelt u de functie Wachtwoordbeheer van Microsoft Edge in of uit.
-- **Do Not Track headers toestaan**: Hiermee configureert u de browser Microsoft Edge zodanig dat verzoeken om niet gevolgd te worden, worden verzonden naar websites die gebruikers bezoeken.
+- **Installatie van vertrouwde app**: Stel in of apps die niet afkomstig zijn uit de Microsoft Store mogen worden geïnstalleerd. Dit wordt ook wel sideloaden genoemd. Sideloading is de installatie en het uitvoeren of testen van een app die niet door de Microsoft Store is gecertificeerd. Dit kan bijvoorbeeld een app zijn die alleen voor gebruik binnen het bedrijf is bedoeld. Uw opties zijn:
+  - **Niet geconfigureerd** (standaard): Deze instelling wordt niet gewijzigd of bijgewerkt door Intune.
+  - **Blokkeren**: Hiermee voorkomt u sideloaden. Apps die niet afkomstig zijn uit de Microsoft Store, kunnen niet worden geïnstalleerd.
+  - **Toestaan**: Hiermee staat u sideloaden toe. Apps die niet afkomstig zijn uit de Microsoft Store, kunnen worden geïnstalleerd.
 
-## <a name="microsoft-defender-smart-screen"></a>Microsoft Defender SmartScreen
+  [ApplicationManagement/AllowAllTrustedApps CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowalltrustedapps)
 
-- **SmartScreen voor Microsoft Edge**: Schakel SmartScreen voor Microsoft Edge in voor toegang tot site- en bestanddownloads.
+- **Ontgrendeling voor ontwikkelaars**: Toestaan dat gebruikers instellingen voor Windows-ontwikkelaars wijzigen, zoals het toestaan van sideloaden van apps. Uw opties zijn:
+  - **Niet geconfigureerd** (standaard): Deze instelling wordt niet gewijzigd of bijgewerkt door Intune.
+  - **Blokkeren**: Hiermee voorkomt u de ontwikkelaarsmodus en sideloaden.
+  - **Toestaan**: Hiermee staat u de ontwikkelaarsmodus en sideloaden toe.
 
-## <a name="search"></a>Zoeken
-
-- **Zoeklocatie**: geef op of een zoekactie locatiegegevens mag gebruiken. informatie
-
-## <a name="cloud-and-storage"></a>Cloud en opslag
-
-- **Microsoft-account**: Hiermee staat u toe dat de gebruiker een Microsoft-account aan het apparaat kan koppelen.
+  [ApplicationManagement/AllowDeveloperUnlock CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowdeveloperunlock)
 
 ## <a name="cellular-and-connectivity"></a>Mobiel en connectiviteit
 
-- **Bluetooth**: Hiermee bepaalt u of de gebruiker Bluetooth op het apparaat kan inschakelen en configureren.
-- **Bluetooth-detectie**: Hiermee bepaalt u of het apparaat kan worden gedetecteerd door andere Bluetooth-apparaten.
-- **Bluetooth-promotie**: Hiermee bepaalt u of het apparaat reclame via Bluetooth kan ontvangen.
+- **Bluetooth**: Met **Blokkeren** wordt voorkomen dat gebruikers Bluetooth inschakelen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem Bluetooth op het apparaat toestaat.
+
+  [Connectivity/AllowBluetooth CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowbluetooth)
+
+- **Bluetooth-detectie**: Met **Blokkeren** kan het apparaat niet worden gedetecteerd door andere Bluetooth-apparaten. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem toestaat dat andere Bluetooth-apparaten, zoals een headset, het apparaat detecteren.
+
+  [Bluetooth/AllowDiscoverableMode CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
+
+- **Bluetooth-promotie**: Met **Blokkeren** voorkomt u dat het apparaat Bluetooth-reclames verzendt. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem toestaat dat het apparaat Bluetooth-reclames verzendt.
+
+  [Bluetooth/AllowAdvertising CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowadvertising)
+
+## <a name="cloud-and-storage"></a>Cloud en opslag
+
+- **Microsoft-account**: Met **Blokkeren** kunnen gebruikers geen Microsoft-account aan het apparaat koppelen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem toestaat dat een Microsoft-account wordt toegevoegd en gebruikt.
+
+  [Accounts/AllowMicrosoftAccountConnection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-accounts#accounts-allowmicrosoftaccountconnection)
 
 ## <a name="control-panel-and-settings"></a>Configuratiescherm en instellingen
 
-- **Systeemtijd wijzigen**: Hiermee voorkomt u dat de eindgebruiker de datum en tijd van het apparaat wijzigt.
+- **Systeemtijd wijzigen**: Met **Blokkeren** kunnen gebruikers de datum en tijd van het apparaat niet wijzigen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem toestaat dat gebruikers deze instellingen wijzigen.
 
-## <a name="kiosk---obsolete"></a>Kiosk - Verouderd
+  [Settings/AllowDateTime CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-settings#settings-allowdatetime)
 
-Deze instellingen zijn alleen-lezen en kunnen niet worden gewijzigd. Zie [Kioskinstellingen](kiosk-settings-holographic.md) voor het configureren van de kioskmodus.
+## <a name="general"></a>Algemeen
 
-Op een kioskapparaat wordt doorgaans een specifieke app uitgevoerd. Gebruikers hebben geen toegang tot functies op het apparaat buiten de kiosk-app.
+- **Handmatige uitschrijving**: Met **Blokkeren** kunnen gebruikers het werkplekaccount niet verwijderen met behulp van het configuratiescherm van de werkruimte op het apparaat. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
 
-- **Kioskmodus**: Hiermee bepaalt u het type kioskmodus dat door het beleid wordt ondersteund. Opties zijn onder andere:
+  [Experience/AllowManualMDMUnenrollment CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowmanualmdmunenrollment)
 
-  - **Niet geconfigureerd** (standaardinstelling): Er wordt door het beleid geen kioskmodus ingeschakeld. 
-  - **Kiosk voor één app**: Volgens het profiel kan het apparaat slechts één enkele app uitvoeren. Wanneer de gebruiker zich aanmeldt, wordt een specifieke app gestart. Deze modus voorkomt ook dat de gebruiker nieuwe apps kan openen of de actieve app kan wijzigen.
-  - **Kiosk voor meerdere apps**: Volgens het profiel kan het apparaat meerdere apps uitvoeren. Alleen de apps die u toevoegt, zijn beschikbaar voor de gebruiker. Het voordeel van een kiosk voor meerdere apps, of apparaat voor een vast doel, is dat het een eenvoudige ervaring biedt voor gebruikers door alleen toegang te geven tot apps die ze nodig hebben. En apps die ze niet nodig hebben, uit hun weergave verwijderen. 
-  
-    Wanneer u apps toevoegt voor een kioskervaring met meerdere apps, kunt u ook een opmaakbestand voor het startmenu toevoegen. [Opmaakbestand voor startmenu](/hololens/hololens-kiosk#start-layout-file-for-mdm-intune-and-others) bevat voorbeeld-XML die kan worden gebruikt in Intune. 
+- **Geolocatie**: Met **Blokkeren** kunnen gebruikers geen locatieservices op het apparaat inschakelen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
 
-### <a name="single-app-kiosks"></a>Kiosken voor één enkele app
+  [Experience/AllowFindMyDevice CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowfindmydevice)
 
-Voer de volgende instellingen in:
+- **Cortana**: Met **Blokkeren** wordt de spraakassistent Cortana op het apparaat uitgeschakeld. Als Cortana is uitgeschakeld, kunnen gebruikers nog wel zoeken naar items op het apparaat. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem Cortana toestaat.
 
-- **Gebruikersaccount**: Voer het lokale (op het apparaat) gebruikersaccount of de aanmelding in van het Azure AD-account dat is gekoppeld aan de kiosk-app. Voor accounts die zijn gekoppeld aan Azure AD-domeinen geeft u het account op in de indeling `domain\username@tenant.org`. 
+  [Experience/AllowCortana CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowcortana)
 
-    Voor kiosken in openbare omgevingen waarvoor automatische aanmelding is ingeschakeld, moet een gebruikerstype met minimale bevoegdheden (zoals het lokale standaardgebruikersaccount) worden gebruikt. Voor de configuratie van een Azure Active Directory-account voor de kioskmodus gebruikt u de indeling `AzureAD\user@contoso.com`.
+## <a name="microsoft-edge-browser"></a>Microsoft Edge-browser
 
-- **Model-id van toepassingsgebruiker (AUMID) van app**: Voer de AUMID van de kiosk-app in. Zie [De model-id van toepassingsgebruiker van een geïnstalleerde app vinden](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) voor meer informatie.
+- **Startervaring** > **Pop-ups toestaan**: Met **Ja** (standaard) zijn pop-ups toegestaan in de webbrowser. Met **Nee** worden pop-upvensters niet in de browser weergegeven.
+
+  [Browser/AllowPopups CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpopups)
+
+- **Favorieten en zoeken** > **Zoeksuggesties weergeven**: Met **Ja** (standaardwaarde) stelt u in dat het zoekprogramma sites kan voorstellen wanneer u zoektermen in de adresbalk typt. Met **Nee** wordt deze functie geblokkeerd.
+
+  [Browser/AllowSearchSuggestionsinAddressBar CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar)
+
+- **Privacy en beveiliging** > **wachtwoordbeheer toestaan**: Met **Ja** (standaard) kan Wachtwoordbeheer worden gebruikt in Microsoft Edge, waardoor gebruikers wachtwoorden op het apparaat kunnen opslaan en beheren. Met **Nee** kan Wachtwoordbeheer niet in Microsoft Edge worden gebruikt.
+
+  [Browser/AllowPasswordManager CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)
+
+- **Privacy en beveiliging** > **Cookies**: Geef aan hoe cookies worden verwerkt in de browser. Uw opties zijn:
+  - **Toestaan**: Cookies worden op het apparaat opgeslagen.
+  - **Alle cookies blokkeren**: Cookies worden niet op het apparaat opgeslagen.
+  - **Alleen cookies van derden blokkeren**: Cookies van derden of partners worden niet op het apparaat opgeslagen.
+
+  [Browser/AllowCookies CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowcookies)
+
+- **Privacy en beveiliging** > **Do Not Track-headers verzenden**: Met **Ja** worden Do Not Track-headers verzonden naar websites die traceringsgegevens aanvragen (aanbevolen). Met **Nee** (standaardwaarde) worden geen headers verzonden zodat websites de gebruiker kunnen volgen. Gebruikers kunnen deze instelling configureren.
+
+  [Browser/AllowDoNotTrack CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack)
+
+## <a name="microsoft-defender-smartscreen"></a>Microsoft Defender SmartScreen
+
+- **SmartScreen voor Microsoft Edge**: Met **Vereisen** wordt Microsoft Defender SmartScreen ingeschakeld en kunnen gebruikers deze functie niet uitschakelen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem kan standaard SmartScreen inschakelen en gebruikers toestaan deze in of uit te schakelen.
+
+  [Browser/AllowSmartScreen CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
+
+## <a name="password"></a>Wachtwoord
+
+- **Wachtwoord**: Met **Vereisen** moeten gebruikers een wachtwoord invoeren om toegang te krijgen tot het apparaat. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem toegang tot apparaten zonder wachtwoord toestaat. Is alleen van toepassing op lokale accounts. Wachtwoorden van domeinaccounts blijven geconfigureerd door Active Directory (AD) en Azure AD.
+
+  [DeviceLock/DevicePasswordEnabled CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-devicepasswordenabled)
+
+- **Wachtwoord vereisen wanneer het apparaat wordt geactiveerd vanuit een niet-actieve status**: Met **Vereisen** moeten gebruikers een wachtwoord opgeven om het apparaat te ontgrendelen na een periode van inactiviteit. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem geen pincode of wachtwoord vereist.
+
+  [DeviceLock/AllowIdleReturnWithoutPassword CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-allowidlereturnwithoutpassword)
 
 ## <a name="reporting-and-telemetry"></a>Rapportage en telemetrie
 
-- **Gebruiksgegevens delen**: Selecteer het niveau voor het verzenden van diagnostische gegevens.
+- **Gebruiksgegevens delen**: Kies het niveau van diagnostische gegevens die worden verzonden. Uw opties zijn:
+
+  - **Niet geconfigureerd** (standaard): Deze instelling wordt niet gewijzigd of bijgewerkt door Intune. Er wordt geen instelling afgedwongen. Gebruikers kiezen het niveau dat wordt verzonden. Standaard is het mogelijk dat het besturingssysteem geen gegevens deelt.
+  - **Beveiliging**: Informatie die vereist is om Windows beter te beveiligen, inclusief gegevens over de instellingen voor de gevonden gebruikerservaring en telemetrie, het hulpprogramma voor verwijderen van schadelijke software en Microsoft Defender
+  - **Standaard**: Basale apparaatgegevens, zoals gegevens met betrekking tot de kwaliteit, app-compatibiliteit, app-gebruiksgegevens en gegevens van het beveiligingsniveau
+  - **Uitgebreid**: Extra inzichten, zoals hoe Windows, Windows Server, System Center en apps worden gebruikt, hoe deze presteren en geavanceerde betrouwbaarheidsgegevens, plus gegevens van de niveaus Standaard en Beveiliging
+  - **Volledig**: Alle gegevens die nodig zijn om problemen op te sporen en op te lossen, plus gegevens van het niveaus Beveiliging, Standaard en Uitgebreid.
+
+  [System/AllowTelemetry CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system#system-allowtelemetry)
+
+## <a name="search"></a>Zoeken
+
+- **Zoeklocatie**: Met **Blokkeren** voorkomt u dat Windows Search de locatie gebruikt. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem deze functie toestaat.
+
+  [Search/AllowSearchToUseLocation CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search#search-allowsearchtouselocation)
 
 ## <a name="next-steps"></a>Volgende stappen
 

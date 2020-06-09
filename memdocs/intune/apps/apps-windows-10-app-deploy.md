@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/25/2020
-ms.topic: conceptual
+ms.date: 05/19/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 391fa20cf7ba53af649f9f614d9ca02c653c278b
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 5ed491fd379879369ead35ceb2c618def91d3e53
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079311"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83985924"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Implementatie van Windows 10-apps met behulp van Microsoft Intune 
 
@@ -92,7 +92,9 @@ Afhankelijk van het type app kunt u de app op twee manieren installeren op een W
 > [!NOTE]
 > Voor Win32-apps die zijn gemaakt voor Dual-modus, moet de beheerder aangeven of de app werkt in Gebruikersmodus of in Machinemodus voor alle toewijzingen die aan dat exemplaar zijn gekoppeld. De implementatiecontext kan niet per toewijzing worden gewijzigd.  
 
-Apps kunnen alleen worden geïnstalleerd in de apparaatcontext wanneer ze worden ondersteund door het apparaat en het Intune-app-type. U kunt de volgende typen apps installeren in de apparaatcontext en deze apps toewijzen aan een apparaatgroep:
+Apps kunnen alleen worden geïnstalleerd in de apparaatcontext wanneer ze worden ondersteund door het apparaat en het Intune-app-type. De installatie van apparaatcontext wordt ondersteund op Windows 10-desktops en teamapparaten, zoals de Surface Hub. Dit wordt niet ondersteund op apparaten met Windows Holographic for Business, zoals de Microsoft HoloLens.
+
+U kunt de volgende typen apps installeren in de apparaatcontext en deze apps toewijzen aan een apparaatgroep:
 
 - Win32-apps
 - Offline gelicentieerde Microsoft Store voor Bedrijven-apps

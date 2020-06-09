@@ -5,8 +5,8 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
-ms.topic: conceptual
+ms.date: 5/15/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8d4b866ca2086ae11efa10f1967b08f12e55919
-ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
+ms.openlocfilehash: d1b13d29f42778d73d4df4a86127b070db5dc601
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82881023"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989801"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Afgeleide referenties gebruiken in Microsoft Intune
 
@@ -63,7 +63,7 @@ Intune biedt ondersteuning voor afgeleide referenties op de volgende platformen:
 
 Intune biedt ondersteuning voor één verlener van afgeleide referenties per tenant. U kunt Intune configureren voor gebruik met de volgende verleners:
 
-- **DISA Purebred** (alleen iOS): https:\//cyber.mil/pki-pke/purebred/
+- **DISA Purebred** (alleen iOS): https://public.cyber.mil/pki-pke/purebred/
 - **Entrust Datacard**: https://www.entrustdatacard.com/
 - **Intercede**: https://www.intercede.com/
 
@@ -112,6 +112,7 @@ De belangrijkste overwegingen voor elke ondersteunde partner zijn de volgende.  
 Controleer de platformspecifieke gebruikerswerkstroom voor de apparaten waarvoor u afgeleide referenties gaat gebruiken.
 
 - [iOS en iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-disa-purebred)
+- [Volledig beheerde Android Enterprise-apparaten](https://docs.microsoft.com/mem/intune/user-help/enroll-android-device-disa-purebred)
 
 **Belangrijke vereisten zijn onder meer**:
 
@@ -226,7 +227,10 @@ Naast implementatie van de app met Intune, configureert u een Intune-VPN per app
   
 1. Download de DISA Purebred-toepassing: https:\//cyber.mil/pki-pke/purebred/.
 
-2. Implementeer de DISA Purebred-toepassing in Intune. Zie [Een iOS Line-Of-Business-app toevoegen aan Microsoft Intune](../apps/lob-apps-ios.md).
+2. Implementeer de DISA Purebred-toepassing in Intune. 
+
+   - Zie [Een iOS Line-Of-Business-app toevoegen aan Microsoft Intune](../apps/lob-apps-ios.md).
+   - Zie [Een Android Line-Of-Business-app toevoegen aan Microsoft Intune](../apps/lob-apps-android.md)
 
 3. [Maak een VPN per app](../configuration/vpn-settings-configure.md) voor de DISA Purebred-toepassing.
 

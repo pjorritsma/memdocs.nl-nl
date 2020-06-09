@@ -5,8 +5,8 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/28/2020
-ms.topic: conceptual
+ms.date: 05/15/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: kerimh
-ms.openlocfilehash: c37563dee40d776d352dec4e0b8ef11b1dc8f67b
-ms.sourcegitcommit: 7b3eed763b394075766ea080968889a8538bfe56
+ms.openlocfilehash: 4d491a3210229d5dd6c74ccaed7f44c4ae4eb83c
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506536"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990054"
 ---
 # <a name="delivery-optimization-settings-in-microsoft-intune"></a>Delivery Optimization-instellingen in Microsoft Intune
 
@@ -39,28 +39,36 @@ Raadpleeg [Delivery Optimization-updates](https://docs.microsoft.com/windows/dep
 2. Selecteer **Apparaten** > **Configuratieprofielen** > **Profiel maken**.
 
 3. Voer de volgende eigenschappen in:
+
    - **Platform**: Kies **Windows 10 en hoger**.
-   - **Profieltype**: Selecteer **Delivery Optimization**.
+   - **Profiel**: Selecteer **Delivery Optimization**.
 
 4. Selecteer **Maken**.
 
-5. Voer op de pagina **Basisinformatie** een naam en een beschrijving in voor het profiel en selecteer dan **Volgende**.
+5. Voer in **Basisinformatie** de volgende eigenschappen in:
 
-6. Op de pagina **Configuratie-instellingen** definieert u hoe updates en apps moeten worden gedownload. Zie [Instellingen voor Delivery Optimization voor Intune](delivery-optimization-settings.md) voor meer informatie over beschikbare instellingen.
+   - **Naam**: Voer een beschrijvende naam in voor het nieuwe profiel.
+   - **Beschrijving**: Voer een beschrijving in voor het profiel. Deze instelling is optioneel, maar wordt aanbevolen.
+
+6. Selecteer **Volgende**.
+
+7. Op de pagina **Configuratie-instellingen** definieert u hoe updates en apps moeten worden gedownload. Zie [Instellingen voor Delivery Optimization voor Intune](delivery-optimization-settings.md) voor meer informatie over beschikbare instellingen.
 
    Wanneer u klaar bent met het configureren van instellingen, selecteert u **Volgende**.
 
-7. Selecteer op de pagina **Bereik (tags)** de optie **Bereiktags selecteren** om het deelvenster *Tags selecteren* te openen en bereiktags toe te wijzen aan het profiel.
+8. Selecteer op de pagina **Bereik (tags)** de optie **Bereiktags selecteren** om het deelvenster *Tags selecteren* te openen en bereiktags toe te wijzen aan het profiel.
   
    Selecteer **Volgende** om door te gaan.
 
-8. Selecteer op de pagina **Toewijzingen** de groepen die dit profiel zullen ontvangen. Zie [Gebruikers- en apparaatprofielen toewijzen](../configuration/device-profile-assign.md) voor meer informatie over het toewijzen van profielen.
+9. Selecteer op de pagina **Toewijzingen** de groepen die dit profiel zullen ontvangen. Zie [Gebruikers- en apparaatprofielen toewijzen](../configuration/device-profile-assign.md) voor meer informatie over het toewijzen van profielen.
 
    Selecteer **Volgende**.
 
-9. Gebruik op de pagina **Toepasselijkheidregels** de opties **Regel**, **Eigenschap** en **Waarde** om te definiëren hoe dit profiel van toepassing is op toegewezen groepen.
+10. Gebruik op de pagina **Toepasselijkheidregels** de opties **Regel**, **Eigenschap** en **Waarde** om te definiëren hoe dit profiel van toepassing is op toegewezen groepen.
 
-10. Kies op de pagina **Controleren en maken** de optie **Maken** zodra u klaar bent. Het profiel wordt gemaakt en weergegeven in de lijst. Vervolgens moet u [het profiel toewijzen](device-profile-assign.md) en [de status ervan controleren](device-profile-monitor.md).
+11. Kies op de pagina **Controleren en maken** de optie **Maken** zodra u klaar bent. Het profiel wordt gemaakt en weergegeven in de lijst.
+
+De volgende keer dat elk apparaat incheckt, wordt het beleid toegepast.
 
 ## <a name="remove-delivery-optimization-from-windows-10-update-rings"></a>Delivery Optimization verwijderen uit Windows 10-updateringen
 
@@ -71,23 +79,32 @@ Delivery Optimization is eerder geconfigureerd als onderdeel van software-update
     1. Selecteer in het Microsoft Endpoint Manager-beheercentrum de opties **Apparaten** > **Configuratieprofielen** > **Profiel maken**.
     2. Voer de volgende eigenschappen in:
 
+        - **Platform**: Kies **Windows 10 en hoger**.
+        - **Profiel**: Selecteer **Delivery Optimization**.
+
+    3. Selecteer **Maken**.
+    4. Voer in **Basisinformatie** de volgende eigenschappen in:
+
         - **Naam**: Voer een beschrijvende naam in voor het nieuwe profiel.
         - **Beschrijving**: Voer een beschrijving in voor het profiel. Deze instelling is optioneel, maar wordt aanbevolen.
-        - **Platform**: Kies **Windows 10 en hoger**.
-        - **Profieltype**: Selecteer **Delivery Optimization**.
-        - **Instellingen**: Als **downloadmodus voor Delivery Optimization** kiest u dezelfde modus die door de bestaande software-update-ring wordt gebruikt, tenzij u de instellingen die u op uw apparaten toepast, wilt wijzigen. Uw opties zijn:
-            - **Niet geconfigureerd**
-            - **Alleen HTTP, geen peering**
-            - **HTTP gemengd met peering achter dezelfde NAT**
-            - **HTTP gemengd met peering in een privégroep**
-            - **HTTP met internetpeering**
-            - **Eenvoudige downloadmodus zonder peering**
-            - **Bypass-modus**
-    3. Configureer eventuele extra instellingen die u wilt beheren.
 
-2. Wijs dit nieuwe profiel toe aan dezelfde apparaten en gebruikers als de bestaande software-updatering. In [Het profiel toewijzen](device-profile-assign.md) worden de stappen vermeld.
+    5. Selecteer **Volgende**.
+    6. Kies in **Configuratie-instellingen** > **Downloadmodus** dezelfde modus die door de bestaande software-update-ring wordt gebruikt, *tenzij* u de instellingen die u op uw apparaten toepast, wilt wijzigen. Uw opties zijn:
 
-3. Maak de configuratie van de bestaande softwarering ongedaan:
+        - **Niet geconfigureerd**
+        - **Alleen HTTP, geen peering**
+        - **HTTP gemengd met peering achter dezelfde NAT**
+        - **HTTP gemengd met peering in een privégroep**
+        - **HTTP met internetpeering**
+        - **Eenvoudige downloadmodus zonder peering**
+        - **Bypass-modus**
+
+    7. Configureer [eventuele extra instellingen](delivery-optimization-settings.md) die u wilt beheren en ga door met het maken van het profiel.
+
+        Wijs in **Toewijzingen** dit nieuwe profiel toe aan dezelfde apparaten en gebruikers als de bestaande software-updatering. Zie [het profiel toewijzen](device-profile-assign.md) voor meer informatie.
+
+2. Maak de configuratie van de bestaande softwarering ongedaan:
+
     1. Ga in het Microsoft Endpoint Manager-beheercentrum naar **Software-updates** > Windows 10-updateringen.
     2. Selecteer uw updatering in de lijst.
     3. Stel in de instellingen **Delivery Optimization-downloadmodus** in op **Niet geconfigureerd**.
@@ -95,5 +112,6 @@ Delivery Optimization is eerder geconfigureerd als onderdeel van software-update
 
 ## <a name="next-steps"></a>Volgende stappen
 
-[Wijs het profiel toe](device-profile-assign.md) en [controleer de status](device-profile-monitor.md) van het profiel.  
+Nadat u het [profiel hebt toegewezen](device-profile-assign.md), [controleert u de status](device-profile-monitor.md) van het profiel.
+
 Bekijk de [instellingen voor Delivery Optimization](delivery-optimization-settings.md) voor Intune.

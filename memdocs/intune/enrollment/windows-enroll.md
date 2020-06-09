@@ -6,8 +6,8 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/05/2019
-ms.topic: conceptual
+ms.date: 05/22/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fd7483319443b7a960f8e704442d2b43b6b00c66
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9104716c469168a5ab2c5c1b49caf14071150db1
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326914"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988907"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Inschrijving voor Windows-apparaten instellen
 
@@ -95,8 +95,8 @@ De Contoso DNS-beheerder moet de volgende CNAME’s maken:
 
 Het kan 72 uur duren voordat wijzigingen in DNS-records zijn doorgegeven. U kunt de DNS-wijziging in Intune pas controleren wanneer de DNS-record is doorgegeven.
 
-## <a name="additional-endpoints-are-supported-but-not-recommended"></a>Aanvullende eindpunten worden ondersteund maar niet aanbevolen
-EnterpriseEnrollment-s.manage.microsoft.com is de aanbevolen FQDN voor registratie, maar er zijn twee andere eindpunten die in het verleden door klanten zijn gebruikt en die worden ondersteund. EnterpriseEnrollment.manage.microsoft.com (zonder de -s) en manage.microsoft.com werken beide als het doel voor de server met automatische detectie, maar de gebruiker moet op OK in een bevestigingsbericht tikken. Als u naar EnterpriseEnrollment-s.manage.microsoft.com verwijst, hoeft de gebruiker de extra bevestigingsstap niet uit te voeren. Dit is dus de aanbevolen configuratie
+## <a name="additional-endpoints-are-used-but-no-longer-supported"></a>Aanvullende eindpunten worden gebruikt, maar niet langer ondersteund
+EnterpriseEnrollment-s.manage.microsoft.com is de voorkeurs-FQDN voor inschrijving. Er zijn nog twee andere eindpunten die in het verleden door klanten zijn gebruikt en nog werken, maar deze worden niet meer ondersteund. EnterpriseEnrollment.manage.microsoft.com (zonder de -s) en manage.microsoft.com werken beide als het doel voor de server met automatische detectie, maar de gebruiker moet op OK in een bevestigingsbericht tikken. Als u naar EnterpriseEnrollment-s.manage.microsoft.com verwijst, hoeft de gebruiker de extra bevestigingsstap niet uit te voeren. Dit is dus de aanbevolen configuratie
 
 ## <a name="alternate-methods-of-redirection-are-not-supported"></a>Alternatieve omleidingsmethoden worden niet ondersteund
 Het gebruik van een andere methode dan de CNAME-configuratie wordt niet ondersteund. Het gebruik van een proxyserver om enterpriseenrollment.contoso.com/EnrollmentServer/Discovery.svc om te leiden naar enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc of manage.microsoft.com/EnrollmentServer/Discovery.svc, wordt bijvoorbeeld niet ondersteund.

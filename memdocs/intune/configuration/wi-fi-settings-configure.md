@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
-ms.topic: conceptual
+ms.date: 05/19/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d1ff20db13a87faea41d262da5742a428ec4d28f
-ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
+ms.openlocfilehash: ca2a5ddd3d2b4c0aa93c7c955d0d688944ee8f95
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587282"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83985511"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>Wi-Fi-instellingen toevoegen en gebruiken op uw apparaten in Microsoft Intune
 
@@ -39,11 +39,11 @@ In dit artikel worden de stappen vermeld voor het maken van een Wi-Fi-profiel. H
 
 Wi-Fi-profielen ondersteunen de volgende apparaatplatformen:
 
-- Android 4 en hoger
+- Android 5 en hoger
 - Android Enterprise en kiosk
-- iOS 8.0 en hoger
+- iOS 11.0 en hoger
 - iPadOS 13.0 en hoger
-- macOS X 10.11 en hoger
+- macOS X 10.12 en hoger
 - Windows 10 en hoger, Windows 10 Mobile en Windows Holographic for Business
 
 > [!NOTE]
@@ -69,7 +69,7 @@ Wi-Fi-profielen ondersteunen de volgende apparaatplatformen:
       > [!TIP]
       >
       > - Voor **Android Enterprise**-apparaten die als een toegewezen apparaat (kiosk) worden uitgevoerd, kiest u **Alleen apparaateigenaar** > **Wi-Fi**.
-      > - Voor **Vensters 8.1 en hoger** kunt u **Wi-Fi-import** kiezen. Met deze optie kunt u Wi-Fi-instellingen die u eerder vanaf een ander apparaat hebt geëxporteerd, importeren als een XML-bestand.
+      > - Voor **Windows 8.1 en hoger** kunt u **Wi-Fi importeren** kiezen. Met deze optie kunt u Wi-Fi-instellingen die u eerder vanaf een ander apparaat hebt geëxporteerd, importeren als een XML-bestand.
 
 4. Selecteer **Maken**.
 5. Voer in **Basisinformatie** de volgende eigenschappen in:
@@ -84,7 +84,7 @@ Wi-Fi-profielen ondersteunen de volgende apparaatplatformen:
     - [Android Enterprise](wi-fi-settings-android-enterprise.md), inclusief toegewezen apparaten
     - [iOS/iPadOS](wi-fi-settings-ios.md)
     - [macOS](wi-fi-settings-macos.md)
-    - [Windows 10 en hoger](wi-fi-settings-windows.md)
+    - [Windows 10 en nieuwer](wi-fi-settings-windows.md)
     - [Instellingen voor Windows 8.1 en hoger](wi-fi-settings-import-windows-8-1.md), inclusief Windows Holographic for Business
 
 8. Selecteer **Volgende**.

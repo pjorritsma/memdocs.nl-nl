@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/22/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 86117193ce7aae01380923ce26f84dfb5ba97a4d
-ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
+ms.openlocfilehash: 91683280a2e48d82fd145bf19228c33b432b6b49
+ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82182290"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83853567"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>Gegevensbeschermingsframework met beleid voor app-beveiliging 
 
@@ -55,7 +55,7 @@ Zoals in de bovenstaande tabel wordt aangegeven, moeten alle wijzigingen in het 
 
 Bij het testen van wijzigingen in een beleid voor app-beveiliging moet u zich bewust zijn van de [leveringstiming](app-protection-policy-delivery.md). De status van de levering van het beleid voor app-beveiliging voor een bepaalde gebruiker kan worden gecontroleerd. Zie [How to monitor app protection policies](app-protection-policies-monitor.md) (App-beveiligingsbeleid controleren) voor meer informatie.
 
-Afzonderlijke instellingen van het beleid voor app-beveiliging voor elke app kunnen worden gevalideerd op apparaten met Edge en de URL *about:Intunehelp*. Zie [Logboeken van beveiliging voor client-apps controleren](app-protection-policy-settings-log.md) en [Internettoegang beheren met behulp van Microsoft Edge met Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs) voor meer informatie.
+Afzonderlijke instellingen van het beleid voor app-beveiliging voor elke app kunnen worden gevalideerd op apparaten met Edge en de URL *about:Intunehelp*. Zie [Logboeken voor beveiliging van de client-app controleren](app-protection-policy-settings-log.md) en [Edge voor iOS en Android gebruiken voor toegang tot logboeken voor beheerde apps](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs) voor meer informatie.
 
 ## <a name="app-data-protection-framework-settings"></a>Gegevensbeschermingsframework met beleid voor app-beveiliging
 
@@ -140,7 +140,7 @@ Met het beleid in niveau 1 wordt een redelijk gegevenstoegangsniveau afgedwongen
 
 Niveau 2 is de configuratie voor gegevensbeveiliging die wordt aanbevolen als standaard voor apparaten waarbij gebruikers toegang hebben tot meer gevoelige informatie. Deze apparaten zijn tegenwoordig vaak het doelwit in ondernemingen. Bij deze aanbevelingen wordt er niet uitgegaan van een groot aantal medewerkers met veel ervaring op het gebied van beveiliging. Om die reden is het belangrijk dat de configuratie voor veel bedrijven toegankelijk is. Deze configuratie is een uitbreiding van de configuratie in niveau 1 door scenario's voor gegevensoverdracht te beperken en door een minimumversie van het besturingssysteem te vereisen.
 
-De beleidsinstellingen die in niveau 2 worden afgedwongen, bevatten alle beleidsinstellingen die worden aanbevolen voor niveau 1 en de onderstaande beleidsinstellingen worden alleen toegevoegd of bijgewerkt om meer besturingselementen en een meer geavanceerde configuratie dan niveau 1 te implementeren. Hoewel deze instellingen misschien iets meer impact op gebruikers of toepassingen hebben, wordt een niveau van gegevensbescherming afgedwongen dat beter past bij de risico's die gelden voor gebruikers met toegang tot gevoelige informatie op mobiele apparaten.
+De beleidsinstellingen die in niveau 2 worden afgedwongen, bevatten alle beleidsinstellingen die worden aanbevolen voor niveau 1, maar vermelden alleen de onderstaande beleidsinstellingen die zijn toegevoegd of gewijzigd om meer besturingselementen en een geavanceerdere configuratie dan niveau 1 te implementeren. Hoewel deze instellingen misschien iets meer impact op gebruikers of toepassingen hebben, wordt een niveau van gegevensbescherming afgedwongen dat beter past bij de risico's die gelden voor gebruikers met toegang tot gevoelige informatie op mobiele apparaten.
 
 #### <a name="data-protection"></a>Gegevensbescherming
 
@@ -167,7 +167,7 @@ De beleidsinstellingen die in niveau 2 worden afgedwongen, bevatten alle beleids
 
 Niveau 3 is de configuratie voor gegevensbeveiliging die wordt aanbevolen als standaard voor organisaties met veel ervaren beveiligingsmedewerkers of voor specifieke gebruikers en groepen die een grote kans op aanvallen hebben. Het gaat hier vaak om goed gefinancierde geavanceerde aanvallen zodat de hier beschreven extra beperkingen en besturingselementen heel nuttig zijn. Deze configuratie is een uitbreiding van de configuratie in niveau 2 door extra scenario's voor gegevensoverdracht te beperken, de complexiteit van de configuratie van pincodes te verhogen en detectie van mobiele bedreigingen toe te voegen.  
 
-De beleidsinstellingen die in niveau 3 worden afgedwongen, bevatten alle beleidsinstellingen die worden aanbevolen voor niveau 2 en 1, en de onderstaande beleidsinstellingen worden alleen toegevoegd of bijgewerkt om striktere configuratie en besturingselementen voor gegevensbeveiliging te implementeren. Deze beleidsinstellingen kunnen veel impact op gebruikers of toepassingen hebben, doordat een beveiligingsniveau wordt afgedwongen dat beter past bij organisaties die risico's lopen.  
+De beleidsinstellingen die in niveau 3 worden afgedwongen, bevatten alle beleidsinstellingen die worden aanbevolen voor niveau 2, maar vermelden alleen de onderstaande beleidsinstellingen die zijn toegevoegd of gewijzigd om meer besturingselementen en een geavanceerdere configuratie dan niveau 2 te implementeren. Deze beleidsinstellingen kunnen veel impact op gebruikers of toepassingen hebben, doordat een beveiligingsniveau wordt afgedwongen dat beter past bij organisaties die risico's lopen.  
 
 #### <a name="data-protection"></a>Gegevensbescherming
 

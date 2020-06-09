@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 068363167d5c6abb54dde26939b102db2f120d27
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b846aa1ead9bb2d1c1b15d783e646e59047c16ee
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79364380"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988417"
 ---
 # <a name="upgrade-windows-10-editions-or-switch-out-of-s-mode-on-devices-using-microsoft-intune"></a>Upgrade Windows 10-edities of schakel op apparaten de S-modus uit met behulp van Microsoft Intune
-
-
 
 Als onderdeel van uw MDM-oplossing (mobile device management) is het raadzaam uw Windows 10-apparaten te upgraden. U kunt bijvoorbeeld uw Windows 10 Professional-apparaten naar Windows 10 Enterprise upgraden. Of u wilt de S-modus op het apparaat uitschakelen.
 
@@ -100,21 +98,37 @@ In de volgende tabel staan de ondersteunde upgradepaden voor het upgradeprofiel 
 2. Selecteer **Apparaten** > **Configuratieprofielen** > **Profiel maken**.
 3. Voer de volgende eigenschappen in:
 
+    - **Platform**: Kies **Windows 10 en hoger**.
+    - **Profiel**: Selecteer **Editie-upgrade**.
+
+4. Selecteer **Maken**.
+5. Voer in **Basisinformatie** de volgende eigenschappen in:
+
     - **Naam**: Voer een beschrijvende naam in voor het nieuwe profiel. Voer bijvoorbeeld iets als `Windows 10 edition upgrade profile` of `Windows 10 switch off S mode` in.
     - **Beschrijving**: Voer een beschrijving in voor het profiel. Deze instelling is optioneel, maar wordt aanbevolen.
-    - **Platform**: Kies **Windows 10 en hoger**.
-    - **Profieltype**: Selecteer **Editie-upgrade**.
-    - **Instellingen**: Voer de instellingen in die u wilt configureren. Voor een lijst van alle instellingen en wat ze doen raadpleegt u:
 
-        - [Windows 10-upgrade en S-modus](edition-upgrade-windows-settings.md)
-        - [Windows Holographic for Business](holographic-upgrade.md)
+6. Selecteer **Volgende**.
+7. Voer in **Configuratie-instellingen** de instellingen in die u wilt configureren. Voor een lijst van alle instellingen en wat ze doen raadpleegt u:
 
-4. Selecteer **OK** > **Maken** om uw wijzigingen op te slaan.
+    - [Windows 10-upgrade en S-modus](edition-upgrade-windows-settings.md)
+    - [Windows Holographic for Business](holographic-upgrade.md)
 
-Het profiel wordt gemaakt en in de lijst weergegeven. Zorg ervoor dat u [het profiel toewijst](device-profile-assign.md) en [de status ervan controleert](device-profile-monitor.md).
+8. Selecteer **Volgende**.
+
+9. Wijs in **Bereiktags** (optioneel) een tag toe om het profiel te filteren op specifieke IT-groepen, zoals `US-NC IT Team` of `JohnGlenn_ITDepartment`. Zie [RBAC en bereiktags gebruiken voor gedistribueerde IT](../fundamentals/scope-tags.md) voor meer informatie over bereiktags.
+
+    Selecteer **Volgende**.
+
+10. Selecteer in **Toewijzingen** de gebruikers of gebruikersgroep die uw profiel ontvangen. Zie [Gebruikers- en apparaatprofielen toewijzen](device-profile-assign.md) voor meer informatie over het toewijzen van profielen.
+
+    Selecteer **Volgende**.
+
+11. Controleer uw instellingen in **Beoordelen en maken**. Wanneer u **Maken**selecteert, worden uw wijzigingen opgeslagen en wordt het profiel toegewezen. Het beleid wordt ook weergegeven in de lijst met profielen.
+
+De volgende keer dat elk apparaat incheckt, wordt het beleid toegepast.
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Nadat het profiel is gemaakt, is het klaar om te worden toegewezen. Vervolgens kunt u [het profiel toewijzen](device-profile-assign.md) en [de status ervan controleren](device-profile-monitor.md).
+Nadat het [profiel is toegewezen](device-profile-assign.md), [moet u de status ervan controleren](device-profile-monitor.md).
 
 Bekijk de instellingen voor upgrades en S-modus voor apparaten met [Windows 10](edition-upgrade-windows-settings.md) en [Windows Holographic for Business](holographic-upgrade.md).

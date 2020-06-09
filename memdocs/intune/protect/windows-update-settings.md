@@ -15,12 +15,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0b18af35b0e741540637ecdde74877d1058a7915
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: c6cb913d0f3d3f806a8a9a2592624b2bcf376f40
+ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254704"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83551907"
 ---
 # <a name="windows-update-settings-for-intune"></a>Windows Update-instellingen voor Intune  
 
@@ -126,7 +126,7 @@ De instellingen voor de gebruikerservaring bepalen de ervaring van de eindgebrui
 
   - **Automatisch installeren en opnieuw starten op het tijdstip voor onderhoud**: Updates worden automatisch gedownload en vervolgens geïnstalleerd tijdens Automatisch onderhoud wanneer het apparaat niet in gebruik is of op accustroom werkt. Als opnieuw opstarten vereist is, wordt het apparaat opnieuw opgestart wanneer het niet wordt gebruikt. (Dit is de standaardinstelling voor niet-beheerde apparaten.)  
 
-    Deze optie kan een apparaat automatisch opnieuw opstarten nadat de update is geïnstalleerd. Het gebruik van de instelling **Gebruikstijden** wordt niet beschreven in de instellingen van Windows Update, maar worden gebruikt door Intune om een periode te definiëren waarin automatisch opnieuw opstarten wordt geblokkeerd:  
+    Met deze optie kan een apparaat automatisch opnieuw worden opgestart nadat de update is geïnstalleerd. Het gebruik van de instelling **Gebruikstijden** wordt niet beschreven in de instellingen van Windows Update, maar worden gebruikt door Intune om een periode te definiëren waarin automatisch opnieuw opstarten wordt geblokkeerd:  
 
     - **Start gebruikstijd**: Geef een begintijd op voor het onderdrukken van opnieuw opstarten vanwege update-installaties.  
       **Standaardinstelling**: 08:00 uur  

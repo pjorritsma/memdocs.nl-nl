@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 04/22/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4dd0b1702b06f3efbed07a70b13a59b271816f8
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 6e99922c920966f4f0bb1037b5fc74799cfca7c5
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023007"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988778"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>App-configuratiebeleid voor Microsoft Intune
 
@@ -83,7 +83,7 @@ Voor Android-app-configuratiebeleid kunt u het type apparaatinschrijving selecte
 4. Als u een Gmail- of Nine-configuratieprofiel implementeert op een toegewezen Android Enterprise-apparaat dat geen gebruiker heeft, mislukt dit omdat de gebruiker niet kan worden omgezet met Intune.
 
 > [!IMPORTANT]
-> Bestaand beleid dat is gemaakt voorafgaand aan de release van deze functie (release april 2020 - 2004) en waarvoor geen certificaatprofielen zijn gekoppeld aan het beleid, wordt het type apparaatinschrijving standaard ingesteld op Werkprofiel en Apparaateigenaarprofiel. Bestaand beleid dat is gemaakt voorafgaand aan de release van deze functie en waaraan certificaatprofielen zijn gekoppeld, wordt bovendien standaard ingesteld op uitsluitend Werkprofiel.
+> Bestaand beleid dat is gemaakt voorafgaand aan de release van deze functie (release april 2020 - 2004) en waarvoor geen certificaatprofielen zijn gekoppeld aan het beleid, wordt voor het type apparaatinschrijving standaard ingesteld op Werkprofiel en Apparaateigenaarprofiel. Bestaand beleid dat is gemaakt voorafgaand aan de release van deze functie en waaraan certificaatprofielen zijn gekoppeld, wordt bovendien standaard ingesteld op uitsluitend Werkprofiel.
 > 
 > Met bestaand beleid worden geen nieuwe certificaten hersteld of uitgegeven.
 
@@ -107,7 +107,7 @@ U kunt op de volgende drie manieren het app-configuratiebeleid valideren:
 
 ### <a name="iosipados-configuration-on-unmanaged-devices"></a>iOS/iPadOS-configuratie op niet-beheerde apparaten
 
-U kunt de iOS-/iPadOS-configuratie valideren met het **diagnostische logboek van Intune** op niet-beheerde apparaten voor de configuratie van beheerde apps. Behalve met de onderstaande stappen, kunt u ook toegang krijgen tot de logboeken van beheerde apps met behulp van Microsoft Edge. Zie [Met Microsoft Edge in iOS/iPadOS logboeken voor beheerde apps openen](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs) voor meer informatie.
+U kunt de iOS-/iPadOS-configuratie valideren met het **diagnostische logboek van Intune** op niet-beheerde apparaten voor de configuratie van beheerde apps. Behalve met de onderstaande stappen, kunt u ook toegang krijgen tot de logboeken van beheerde apps met behulp van Microsoft Edge. Zie [Edge voor iOS en Android gebruiken voor toegang tot logboeken voor beheerde apps](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs) voor meer informatie.
 
 1. Download en installeer **Microsoft Edge** vanuit de App Store als het nog niet is geïnstalleerd op het apparaat. Zie [Met Microsoft Intune beveiligde apps](apps-supported-intune-apps.md) voor meer informatie.
 2. Start **Microsoft Edge** en selecteer **Info** > **Help bij Intune** in de navigatiebalk.

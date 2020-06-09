@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c80bf57b195d7e97308ba423c9e5b53f7e29c74
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f0f242f336fadf9dd31641849462a5dd24c09e3f
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086475"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556350"
 ---
 # <a name="add-vpn-settings-on-windows-81-devices-in-microsoft-intune"></a>VPN-instellingen toevoegen op Windows 8.1-apparaten in Microsoft Intune
 
@@ -30,21 +30,19 @@ Afhankelijk van de instellingen die u kiest, kunnen niet alle waarden in de volg
 
 ## <a name="before-you-begin"></a>Voordat u begint
 
-[Maak een apparaatconfiguratieprofiel](vpn-settings-configure.md).
+[Een Windows 8.1 VPN-apparaatconfiguratieprofiel maken](vpn-settings-configure.md).
 
 ## <a name="base-vpn-settings"></a>Basis-VPN-instellingen
 
-- **Alle instellingen alleen toepassen op Windows 8.1**: Configureer deze instelling in de klassieke Intune-portal. In het Microsoft Endpoint Manager-beheercentrum kan deze instelling niet worden gewijzigd. Als de instelling is ingesteld op **Geconfigureerd**, worden de instellingen alleen toegepast op Windows 8.1-apparaten. Als de instelling is ingesteld op **Niet geconfigureerd**, gelden deze instellingen ook voor Windows 10-apparaten.
-- **Verbindingsnaam**: Voer een naam in voor deze verbinding. Gebruikers zien deze naam wanneer ze op hun apparaat in de lijst met beschikbare VPN-verbindingen zoeken.
-- **Servers**: Voeg een of meer VPN-servers toe waarmee de apparaten verbinding maken.
-  - **Toevoegen**: Hiermee opent u het deelvenster **Rij toevoegen** waar u de volgende informatie kunt opgeven:
-    - **Beschrijving**: Geef een beschrijvende naam op voor de server, zoals **Contoso VPN-server**.
-    - **IP-adres of FQDN**: Geef het IP-adres of de Fully Qualified Domain Name (FQDN) op van de VPN-server waarmee apparaten verbinding maken. Voorbeelden: **192.168.1.1**, **vpn.contoso.com**.
-    - **Standaardserver**: Hiermee wordt deze server ingeschakeld als de standaardserver die apparaten gebruiken om de verbinding te maken. U kunt slechts één server als standaard instellen.
-  - **Importeren**: Blader naar een bestand met een door komma's gescheiden lijst met servers in de indeling: beschrijving, IP-adres of FQDN, standaardserver. Kies **OK** om deze servers te importeren in de lijst met **servers**.
+- **Verbindingsnaam**: Voer een naam in voor deze verbinding. Gebruikers zien deze naam wanneer ze op hun apparaat in de lijst met beschikbare VPN-verbindingen zoeken. Voer bijvoorbeeld `Contoso VPN` in.
+- **Servers**: Voeg een of meer VPN-servers toe waarmee de apparaten verbinding maken. Als u een server toevoegt, voert u de volgende gegevens in:
+  - **Beschrijving**: Voer een beschrijvende naam in voor de server, zoals **Contoso VPN-server**.
+  - **IP-adres of FQDN**: geef het IP-adres of de FQDN (Fully Qualified Domain Name) op van de VPN-server waarmee apparaten verbinding maken. Voer bijvoorbeeld `192.168.1.1` of `vpn.contoso.com` in.
+  - **Standaardserver**: met **Waar** wordt deze server ingeschakeld als de standaardserver die apparaten gebruiken om de verbinding te maken. U kunt slechts één server als standaard instellen.
+  - **Importeren**: blader naar een bestand met een door komma's gescheiden lijst met servers in de indeling: beschrijving, IP-adres of FQDN, standaardserver. Kies **OK** om deze servers te importeren in de lijst met **servers**.
   - **Exporteren**: Hiermee exporteert u de lijst met servers naar een bestand met door komma's gescheiden waarden (CSV-bestand).
 
-- **Type verbinding**: Selecteer het type VPN-verbinding in de volgende lijst met leveranciers:
+- **Type verbinding**: selecteer het type van de VPN-verbinding. Uw opties zijn:
   - **Check Point Capsule VPN**
   - **SonicWall Mobile Connect**
   - **F5 Edge Client**
@@ -52,11 +50,11 @@ Afhankelijk van de instellingen die u kiest, kunnen niet alle waarden in de volg
 
 <!--- **Fingerprint** (Check Point Capsule VPN only): Specify a string (for example, "Contoso Fingerprint Code") that will be used to verify that the VPN server can be trusted. A fingerprint can be sent to the client so it knows to trust any server that presents the same fingerprint when connecting. If the device doesn't already have the fingerprint, it will prompt the user to trust the VPN server that they are connecting to while showing the fingerprint. (The user manually verifies the fingerprint and chooses **trust** to connect.) --->
 
-- **Aanmeldingsgroep of domein** (alleen SonicWall Mobile Connect): Geef de naam op van de aanmeldingsgroep of het aanmeldingsdomein waarmee u verbinding wilt maken.
+- **Aanmeldingsgroep of domein** (alleen SonicWall Mobile Connect): voer de naam in van de aanmeldingsgroep of het aanmeldingsdomein waarmee u verbinding wilt maken.
 
-- **Rol** (alleen Pulse Secure): Geef de naam op van de gebruikersrol die toegang tot deze verbinding heeft. Een gebruikersrol definieert persoonlijke instellingen en opties en schakelt bepaalde toegangsfuncties in of uit.
+- **Rol** (alleen Pulse Secure): voer de naam in van de gebruikersrol die toegang tot deze verbinding heeft. Een gebruikersrol definieert persoonlijke instellingen en opties en schakelt bepaalde toegangsfuncties in of uit.
 
-- **Realm** (alleen Pulse Secure): Geef de naam op van de verificatierealm die u wilt gebruiken. Een verificatierealm is een groepering van verificatieresources die worden gebruikt door het verbindingstype Pulse Secure.
+- **Realm** (alleen Pulse Secure): voer de naam in van de verificatierealm die u wilt gebruiken. Een verificatierealm is een groepering van verificatieresources die worden gebruikt door het verbindingstype Pulse Secure.
 
 - **Aangepaste XML**: Geef aangepaste XML-opdrachten op waarmee de VPN-verbinding wordt geconfigureerd.
 
@@ -90,15 +88,20 @@ Afhankelijk van de instellingen die u kiest, kunnen niet alle waarden in de volg
 
 ## <a name="proxy-settings"></a>Proxyinstellingen
 
-- **Proxy-instellingen automatisch detecteren**: Als de VPN-server een proxyserver voor de verbinding vereist, geeft u op of u wilt dat apparaten de verbindingsinstellingen automatisch detecteren.
 - **Script voor automatische configuratie**: Gebruik een bestand om de proxyserver te configureren. Voer de **URL van de proxyserver** in die het configuratiebestand bevat. Voer bijvoorbeeld `http://proxy.contoso.com` in.
-- **Proxyserver gebruiken**: Schakel deze optie in als u de proxyserverinstellingen handmatig wilt invoeren.
-  - **Adres**: Voer het adres van de proxyserver in (als een IP-adres).
-  - **Poortnummer**: Voer het poortnummer in dat is gekoppeld aan de proxyserver.
-- **Proxy niet gebruiken voor lokale adressen**: Als voor de VPN-server een proxyserver voor de verbinding is vereist en u de proxyserver niet wilt gebruiken voor lokale adressen die u opgeeft, selecteert u deze optie.
+- **Adres**: voer het adres van de proxyserver in, zoals een IP-adres of `vpn.contoso.com`.
+- **Poortnummer**: voer het TCP-poortnummer in dat wordt gebruikt voor uw proxyserver.
+- **Proxy-instellingen automatisch detecteren**: Als de VPN-server een proxyserver voor de verbinding vereist, kiest u of u wilt dat apparaten de verbindingsinstellingen automatisch detecteren. Uw opties zijn:
+  - **Niet geconfigureerd** (standaard): Deze instelling wordt niet gewijzigd of bijgewerkt door Intune.
+  - **Inschakelen**: de verbindingsinstellingen worden automatisch gedetecteerd.
+  - **Uitschakelen**: de verbindingsinstellingen worden niet automatisch gedetecteerd.
+- **Proxy niet gebruiken voor lokale adressen**: bypass instellen voor de proxyserver voor lokale adressen. Uw opties zijn:
+  - **Niet geconfigureerd** (standaard): Deze instelling wordt niet gewijzigd of bijgewerkt door Intune.
+  - **Inschakelen**: geen proxyserver gebruiken voor lokale adressen.
+  - **Uitschakelen**: een proxyserver gebruiken voor lokale adressen.
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Het profiel is gemaakt, maar er gebeurt nog niets. Vervolgens kunt u [het profiel toewijzen](device-profile-assign.md) en [de status ervan controleren](device-profile-monitor.md).
+[Het profiel toewijzen](device-profile-assign.md) en [de status ervan controleren](device-profile-monitor.md).
 
 Configureer VPN-instellingen op apparaten met [Android](vpn-settings-android.md), [Android Enterprise](vpn-settings-android-enterprise.md), [macOS](vpn-settings-macos.md) en [Windows 10](vpn-settings-windows-10.md).

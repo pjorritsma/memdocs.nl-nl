@@ -1,13 +1,13 @@
 ---
-title: macOS-apparaatprofielen met kernelextensies maken met Microsoft Intune - Azure | Microsoft Docs
+title: macOS-systeem- en kernelextensies maken met Microsoft Intune - Azure | Microsoft Docs
 titleSuffix: ''
-description: Voeg een macOS-apparaatprofiel toe of maak een macOS-apparaatprofiel en configureer vervolgens kernelextensies om gebruikers toe te staan acties te overschrijven, een team-id toe te voegen en vervolgens een bundel- en team-id toe te voegen in Microsoft Intune.
+description: Een macOS-apparaatprofiel toevoegen of maken dat systeemextensies of kernelextensies configureert om gebruikers toe te staan acties te overschrijven, een team-id toe te voegen en vervolgens een bundel- en team-id toe te voegen in Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/24/2020
-ms.topic: reference
+ms.date: 05/07/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -17,49 +17,67 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8f9212d275b17db6a40e3133b5363cd13c9d13d6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: fce8218c9f8fb8757f0aef892f0854f1c386a8bd
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80551424"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990297"
 ---
-# <a name="add-macos-kernel-extensions-in-intune"></a>macOS-kernelextensies toevoegen in Intune
+# <a name="add-macos-system-and-kernel-extensions-in-intune"></a>macOS-systeem- en kernelextensies toevoegen in Intune
 
 > [!NOTE]
 > macOS-kernel-extensies worden vervangen door systeemextensies. Voor meer informatie raadpleegt u [Ondersteuningstip: Systeemextensies in plaats van kernelextensies gebruiken voor macOS Catalina 10.15 in Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-using-system-extensions-instead-of-kernel-extensions/ba-p/1191413).
 
-Op macOS-apparaten kunt u functies toevoegen op kernelniveau. Deze functies hebben toegang tot delen van het besturingssysteem waartoe reguliere programma's geen toegang hebben. Uw organisatie heeft mogelijk specifieke behoeften of vereisten die niet beschikbaar zijn in een app, een apparaatfunctie, enzovoort. 
+Op macOS-apparaten kunt u kernelextensies en systeemextensies toevoegen. Met zowel kernelextensies als systeemextensies kunnen gebruikers app-extensies installeren waarmee de systeemeigen mogelijkheden van het besturingssysteem worden uitgebreid. Kernelextensies voeren hun code uit op kernelniveau. Systeemextensies worden uitgevoerd in een strikt beheerde gebruikersruimte.
 
-Als u kernelextensies wilt toevoegen die altijd op uw apparaten mogen worden geladen, voegt u kernelextensies (KEXT) toe aan Microsoft Intune en implementeert u deze extensies vervolgens op uw apparaten.
+Gebruik Microsoft Intune om extensies toe te voegen die altijd op uw apparaten mogen worden geladen. Intune maakt gebruik van configuratieprofielen om deze instellingen te maken voor en af te stemmen op de behoeften van uw organisatie. Nadat u deze functies aan een profiel hebt toegevoegd, kunt u het profiel pushen naar en implementeren op macOS-apparaten in uw organisatie.
+
+In dit artikel worden systeemextensies en kernelextensies beschreven. Ook wordt getoond hoe u een apparaatconfiguratieprofiel maakt met behulp van extensies in Intune.
+
+## <a name="system-extensions"></a>Systeemextensies
+
+Systeemextensies worden uitgevoerd in de gebruikersruimte en hebben geen toegang tot de kernel. Het doel is de beveiliging te verhogen en de eindgebruiker meer controle te bieden, terwijl aanvallen op kernelniveau worden beperkt. Dit kunnen de volgende extensies zijn:
+
+- Stuurprogramma-extensies, met inbegrip van stuurprogramma's op USB, netwerkinterfacekaarten (NIC), seriële controllers en Human Interface-apparaten (HID)
+- Netwerkextensies, inclusief inhoudsfilters, DNS-proxy's en VPN-clients
+- Eindpuntbeveiligingsextensies, inclusief eindpuntdetectie, eindpuntreactie en antivirus
+
+Systeemextensies zijn opgenomen in de bundel van een app en worden geïnstalleerd vanuit de app.
+
+Zie [systeemextensies](https://developer.apple.com/documentation/systemextensions) (hiermee opent u de website van Apple) voor meer informatie over systeemextensies.
+
+## <a name="kernel-extensions"></a>Kernelextensies
+
+Kernelextensies voegen functies toe op kernelniveau. Deze functies hebben toegang tot delen van het besturingssysteem waartoe reguliere programma's geen toegang hebben. Uw organisatie heeft mogelijk specifieke behoeften of vereisten die niet beschikbaar zijn in een app, een apparaatfunctie, enzovoort.
 
 U hebt bijvoorbeeld een antivirusprogramma waarmee u uw apparaat kunt scannen op schadelijke inhoud. U kunt de kernelextensie van dit virusscanprogramma als een toegestane kernelextensie toevoegen in Intune. Vervolgens wijst u de extensie toe aan uw macOS-apparaten.
 
 Met deze functie kunnen beheerders gebruikers toestemming geven om kernelextensies te overschrijven, team-id's toe te voegen en specifieke kernelextensies toe te voegen aan Intune.
 
-Deze functie is van toepassing op:
+Zie [kernelextensies](https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Extend/Extend.html) (hiermee opent u de website van Apple) voor meer informatie over kernelextensies.
 
-- macOS 10.13.2 en hoger
+## <a name="prerequisites"></a>Vereisten
 
-Als u deze functie wilt gebruiken, moeten de apparaten aan de volgende voorwaarden voldoen:
+- Deze functie is van toepassing op:
 
-- Ingeschreven zijn bij Intune met behulp van het Device Enrollment Program (DEP) van Apple. Zie [macOS-apparaten automatisch inschrijven](../enrollment/device-enrollment-program-enroll-macos.md) voor meer informatie.
+  - macOS 10.13.2 en hoger (kernelextensies)
+  - macOS 10.15 en hoger (systeemextensies)
 
-  OF
+  Vanaf macOS 10.15 tot 10.15.4 kunnen kernelextensies en systeemextensies naast elkaar worden uitgevoerd.
 
-- Ingeschreven zijn bij Intune met door de gebruiker goedgekeurde inschrijving (term van Apple). Zie [Voorbereiding op wijzigingen in kernelextensies in macOS High Sierra](https://support.apple.com/en-us/HT208019) (hiermee opent u de website van Apple) voor meer informatie.
+- Als u deze functie wilt gebruiken, moeten de apparaten aan de volgende voorwaarden voldoen:
 
-Intune maakt gebruik van configuratieprofielen om deze instellingen te maken voor en af te stemmen op de behoeften van uw organisatie. Nadat u deze functies aan een profiel hebt toegevoegd, kunt u het profiel pushen naar en implementeren op macOS-apparaten in uw organisatie.
+  - Ingeschreven zijn bij Intune met behulp van het Device Enrollment Program (DEP) van Apple. Zie [macOS-apparaten automatisch inschrijven](../enrollment/device-enrollment-program-enroll-macos.md) voor meer informatie.
 
-In dit artikel wordt beschreven hoe u een apparaatconfiguratieprofiel maakt met behulp van kernelextensies in Intune.
+    OF
 
-> [!TIP]
-> Zie [overzicht van kernelextensies](https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Extend/Extend.html) (hiermee opent u de website van Apple) voor meer informatie over kernelextensies.
+  - Ingeschreven zijn bij Intune met door de gebruiker goedgekeurde inschrijving (term van Apple). Zie [Voorbereiding op wijzigingen in kernelextensies in macOS High Sierra](https://support.apple.com/en-us/HT208019) (hiermee opent u de website van Apple) voor meer informatie.
 
 ## <a name="what-you-need-to-know"></a>Wat u dient te weten
 
-- Niet-ondertekende verouderde kernelextensies kunnen worden toegevoegd.
-- Zorg ervoor dat u de juiste team-id en bundel-id van de kernelextensie invoert. De waarden die u invoert, worden niet door Intune gevalideerd. Als u onjuiste gegevens invoert, werkt de extensie niet op het apparaat. Een team-id is precies tien alfanumerieke tekens lang. 
+- Niet-ondertekende verouderde kernelextensies en systeemextensies kunnen worden toegevoegd.
+- Zorg ervoor dat u de juiste team-id en bundel-id van de extensie invoert. De waarden die u invoert, worden niet door Intune gevalideerd. Als u onjuiste gegevens invoert, werkt de extensie niet op het apparaat. Een team-id is precies tien alfanumerieke tekens lang.
 
 > [!NOTE]
 > Apple heeft informatie over ondertekening en notariële erkenning vrijgegeven voor alle software. Voor macOS 10.14.5 en hoger hoeven kernelextensies die via Intune zijn geïmplementeerd niet te voldoen aan het notariële erkenningsbeleid van Apple.
@@ -68,9 +86,6 @@ In dit artikel wordt beschreven hoe u een apparaatconfiguratieprofiel maakt met 
 >
 > - [Notariële erkenning voor uw app vóór distributie](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution) (hiermee opent u de website van Apple) 
 > - [Voorbereiding op wijzigingen in kernelextensies in macOS High Sierra](https://support.apple.com/en-us/HT208019) (hiermee opent u de website van Apple)
-
-> [!NOTE]
-> De Intune-gebruikersinterface wordt bijgewerkt naar een versie voor volledig scherm. Dit kan enkele weken duren. Totdat de tenant deze update ontvangt, hebt u een enigszins afwijkende werkstroom wanneer u instellingen maakt of bewerkt zoals beschreven in dit artikel.
 
 ## <a name="create-the-profile"></a>Het profiel maken
 
@@ -84,7 +99,7 @@ In dit artikel wordt beschreven hoe u een apparaatconfiguratieprofiel maakt met 
 4. Selecteer **Maken**.
 5. Voer in **Basisinformatie** de volgende eigenschappen in:
 
-    - **Naam**: Voer een beschrijvende naam in voor het beleid. Geef uw beleid een naam zodat u het later eenvoudig kunt identificeren. Een goede beleidsnaam is bijvoorbeeld **macOS: kernelextensies toevoegen aan apparaten**.
+    - **Naam**: Voer een beschrijvende naam in voor het beleid. Geef uw beleid een naam zodat u het later eenvoudig kunt identificeren. Een goede beleidsnaam is bijvoorbeeld **macOS: Antivirusscans toevoegen aan kernelextensies op apparaten**.
     - **Beschrijving**: Voer een beschrijving in voor het beleid. Deze instelling is optioneel, maar wordt aanbevolen.
 
 6. Selecteer **Volgende**.

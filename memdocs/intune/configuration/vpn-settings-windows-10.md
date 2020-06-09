@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d2f671e88b1221961e978d1945e28c7cec474cb
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9fbe28a6585fe9fe5cf7772b559924675ac39a30
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086496"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429477"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Instellingen voor Windows 10- en Windows Holographic-apparaten om VPN-verbindingen met Intune toe te voegen
 
@@ -66,7 +66,7 @@ Afhankelijk van de instellingen die u kiest, kunnen niet alle waarden worden gec
   - **PPTP**
 
   Als u een VPN-verbindingstype kiest, wordt u mogelijk ook om de volgende instellingen gevraagd:  
-  - **AlwaysOn**: Kies **Inschakelen** om automatisch verbinding te maken met de VPN-verbinding wanneer het volgende gebeurt:
+  - **AlwaysOn**: Met **Inschakelen** wordt automatisch verbinding gemaakt met de VPN-verbinding wanneer het volgende gebeurt:
     - Gebruikers zich aanmelden op hun apparaten
     - Het netwerk op het apparaat wijzigt
     - Het scherm op het apparaat wordt ingeschakeld nadat het was uitgeschakeld
@@ -114,10 +114,11 @@ Zie [EAP-configuratie](https://docs.microsoft.com/windows/client-management/mdm/
 
   - **Een WIP aan deze verbinding koppelen**: Voer een **WIP-domein voor deze verbinding** in
   - **Apps aan deze verbinding koppelen**: U kunt **een VPN-verbinding beperken tot deze apps** en vervolgens deze **gekoppelde apps** toevoegen. De apps die u invoert, maken automatisch gebruik van de VPN-verbinding. De app-id is afhankelijk van het type app. Voer voor een universele app de naam van de productfamilie in waartoe het pakket behoort. Voer voor een bureaublad-app het bestandspad van de app in.
-  >[!IMPORTANT]
-  >Het is raadzaam dat u alle app-lijsten beveiligt die zijn gemaakt voor VPN’s per app. Als een ongeautoriseerde gebruiker deze lijst wijzigt en u deze importeert in de app-lijst VPN per app, verleent u onbevoegde gebruikers mogelijk VPN-toegang tot apps die niet toegankelijk zouden moeten zijn. Een manier om uw lijsten met apps te beveiligen, is het gebruik van een toegangsbeheerlijst (ACL).
 
-- **Regels voor netwerkverkeer voor deze VPN-verbinding**: Selecteer welke protocollen en bereiken voor lokale en externe poorten voor de VPN-verbinding worden ingeschakeld. Als u geen netwerkverkeersregel maakt, worden alle protocollen, poorten en adresbereiken ingeschakeld. Nadat u een regel hebt gemaakt, worden door de VPN-verbinding alleen de protocollen, poorten en adresbereiken gebruikt die u in die regel invoert.
+  > [!IMPORTANT]
+  > Het is raadzaam dat u alle app-lijsten beveiligt die zijn gemaakt voor VPN’s per app. Als een ongeautoriseerde gebruiker deze lijst wijzigt en u deze importeert in de app-lijst VPN per app, verleent u onbevoegde gebruikers mogelijk VPN-toegang tot apps die niet toegankelijk zouden moeten zijn. Een manier om uw lijsten met apps te beveiligen, is het gebruik van een toegangsbeheerlijst (ACL).
+
+- **Regels voor netwerkverkeer voor deze VPN-verbinding**: Selecteer de protocollen en de bereiken voor lokale en externe poorten die voor de VPN-verbinding worden ingeschakeld. Als u geen netwerkverkeersregel maakt, worden alle protocollen, poorten en adresbereiken ingeschakeld. Nadat u een regel hebt gemaakt, worden door de VPN-verbinding alleen de protocollen, poorten en adresbereiken gebruikt die u in die regel invoert.
 
 ## <a name="conditional-access"></a>Voorwaardelijke toegang
 

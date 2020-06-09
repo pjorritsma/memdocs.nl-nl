@@ -5,8 +5,8 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/22/2020
-ms.topic: conceptual
+ms.date: 05/20/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d9a3e2c2a2c50f2d0fde264eedc2096d34f815a9
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 13824c82b426e1efb00dce2db7c9f4a2dd5bb9ee
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023177"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990330"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Geïmporteerde PKCS-certificaten configureren en gebruiken met Intune
 
@@ -148,7 +148,7 @@ De PowerShell-module biedt methoden om een sleutel te maken met behulp van Windo
 
 3. Als u de module wilt importeren, voert u `Import-Module .\IntunePfxImport.psd1` uit om de module te importeren.
 
-4. Voer vervolgens `Add-IntuneKspKey "Microsoft Software Key Storage Provider" "PFXEncryptionKey"` uit.
+4. Voer vervolgens `Add-IntuneKspKey -ProviderName "Microsoft Software Key Storage Provider" -KeyName "PFXEncryptionKey"` uit.
 
    > [!TIP]
    > De provider die u gebruikt, moet opnieuw worden geselecteerd wanneer u een PFX-certificaat importeert. U kunt de **Microsoft Software Key Storage Provider** gebruiken, maar het gebruik van een andere provider wordt ook ondersteund. De gebruikte sleutelnaam is een voorbeeld; u kunt een andere sleutelnaam naar keuze gebruiken.
@@ -187,12 +187,12 @@ Selecteer de sleutelopslagprovider die overeenkomt met de provider die u hebt ge
 
 3. Voer `Import-Module .\IntunePfxImport.psd1` uit om de module te importeren
 
-4. Voer `$authResult = Get-IntuneAuthenticationToken -AdminUserName "<Admin-UPN>"` uit om te verifiëren bij Intune Graph
+4. Voer `Set-IntuneAuthenticationToken  -AdminUserName "<Admin-UPN>"` uit om te verifiëren bij Intune Graph
 
    > [!NOTE]
    > Omdat de verificatie wordt uitgevoerd bij Graph, moet u machtigingen verlenen voor de AppID. Als dit de eerste keer is dat u dit hulpprogramma gebruikt, moet u een *globale beheerder* zijn. De PowerShell-cmdlets gebruiken dezelfde AppID als die in de [voorbeelden voor PowerShell Intune](https://github.com/microsoftgraph/powershell-intune-samples).
 
-5. Converteer het wachtwoord voor elk PFX-bestand dat u importeert naar een beveiligde tekenreeks door `$SecureFilePassword = ConvertTo-SecureString -String "<PFXPassword>" -AsPlainText -Force` uit te voeren.
+5. Converteer het wachtwoord voor elk PFX-bestand dat u importeert, naar een beveiligde tekenreeks door `$SecureFilePassword = ConvertTo-SecureString -String "<PFXPassword>" -AsPlainText -Force` uit te voeren.
 
 6. Voer `$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "<FullPathPFXToCert>" $SecureFilePassword "<UserUPN>" "<ProviderName>" "<KeyName>" "<IntendedPurpose>"` uit om een **UserPFXCertificate**-object te maken
 
@@ -200,10 +200,15 @@ Selecteer de sleutelopslagprovider die overeenkomt met de provider die u hebt ge
 
    > [!NOTE]
    > Wanneer u het certificaat importeert van een ander systeem dan de server waarop de connector is geïnstalleerd, gebruikt u de volgende opdracht, die het pad naar het sleutelbestand bevat: `$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "<FullPathPFXToCert>" $SecureFilePassword "<UserUPN>" "<ProviderName>" "<KeyName>" "<IntendedPurpose>" "<PaddingScheme>" "<File path to public key file>"`
+   >
+   > *VPN* wordt niet ondersteund als een IntendedPurpose. 
 
-7. Importeer het **UserPFXCertificate**-object in Intune door `Import-IntuneUserPfxCertificate -AuthenticationResult $authResult -CertificateList $userPFXObject` uit te voeren
 
-8. Voer `Get-IntuneUserPfxCertificate -AuthenticationResult $authResult -UserList "<UserUPN>"` uit om te controleren of het certificaat is geïmporteerd
+7. Importeer het **UserPFXCertificate**-object in Intune door `Import-IntuneUserPfxCertificate -CertificateList $userPFXObject` uit te voeren
+
+8. Voer `Get-IntuneUserPfxCertificate -UserList "<UserUPN>"` uit om te controleren of het certificaat is geïmporteerd
+
+9.  Voer `Remove-IntuneAuthenticationToken` als een best practice uit om de AAD-tokencache op te schonen zonder te wachten tot deze vanzelf verloopt
 
 Voor meer informatie over andere beschikbare opdrachten, raadpleegt u het leesmij-bestand in het [PowerShell-project PFXImport op GitHub](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
 
@@ -212,7 +217,7 @@ Voor meer informatie over andere beschikbare opdrachten, raadpleegt u het leesmi
 Na het importeren van de certificaten naar Intune maakt u een **geïmporteerd PKCS-certificaatprofiel** en wijst u dit toe aan Azure Active Directory-groepen.
 
 > [!NOTE]
-> Nadat u een geïmporteerd PKCS-certificaatprofiel hebt gemaakt, zijn de waarden voor het **beoogde doel** en voor de **KSP** (Key Storage Provider) in het profiel alleen-lezen, en kunnen niet worden bewerkt. Als u een andere waarde voor een van deze instellingen nodig hebt, moet u een nieuw profiel maken en implementeren. 
+> Nadat u een geïmporteerd PKCS-certificaatprofiel hebt gemaakt, zijn de profielwaarden voor het **beoogde doel** en voor de **KSP** (Key Storage Provider) alleen-lezen, en kunnen niet worden bewerkt. Als u een andere waarde voor een van deze instellingen nodig hebt, moet u een nieuw profiel maken en implementeren. 
 
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
 

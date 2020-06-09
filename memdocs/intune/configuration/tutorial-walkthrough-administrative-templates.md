@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 05/14/2020
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 41a2dce895761053e482fe029e4599819a099ac6
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 682934276a080323976e7045a14450dc382f4574
+ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254857"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83406586"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>Zelfstudie: De cloud gebruiken voor het configureren van groepsbeleid op Windows 10-apparaten met ADMX-sjablonen en Microsoft Intune
 
@@ -49,7 +49,7 @@ In deze zelfstudie doet u het volgende:
 > * De instellingen in Intune vergelijken met on-premises ADMX-instellingen.
 > * Verschillende beheersjablonen maken en de instellingen configureren die gericht zijn op de verschillende groepen.
 
-Aan het einde van dit lab beschikt u over de vaardigheden om aan de slag te gaan met Intune en Microsoft 365 om uw gebruikers te beheren en beheersjablonen te implementeren.
+Aan het einde van dit lab beschikt u over de vaardigheden om Intune en Microsoft 365 te gaan gebruiken om uw gebruikers te beheren en beheersjablonen te implementeren.
 
 Deze functie is van toepassing op:
 
@@ -114,7 +114,7 @@ U kunt het Endpoint Manager-beheercentrum ook openen vanuit het [Microsoft 365-b
 
 1. Ga naar [https://admin.microsoft.com](https://admin.microsoft.com).
 2. Meld u aan met het beheerdersaccount van uw Microsoft 365-tenantabonnement.
-3. Selecteer onder **Beheercentrums** de optie **Alle beheercentrums** > **Eindpuntbeheer**. Het Microsoft Endpoint Manager-beheercentrum wordt geopend.
+3. Selecteer **Alles weergeven** > **Alle beheercentra** > **Eindpuntbeheer**. Het Microsoft Endpoint Manager-beheercentrum wordt geopend.
 
     > [!div class="mx-imgBorder"]
     > ![Alle beheercentrums in het Microsoft 365-beheercentrum bekijken](./media/tutorial-walkthrough-administrative-templates/microsoft365-admin-centers.png)
@@ -123,7 +123,13 @@ U kunt het Endpoint Manager-beheercentrum ook openen vanuit het [Microsoft 365-b
 
 On-premises beleid wordt toegepast op LSDOE-volgorde: lokaal, site, domein en organisatie-eenheid (OE). In deze hiërarchie worden lokale beleidsregels overschreven door OE-beleidsregels, sitebeleidregels door domeinbeleidsregels enzovoort.
 
-In Intune worden beleidsregels toegepast op gebruikers en groepen die u maakt. Hier is geen hiërarchie. Als dezelfde instelling wordt bijgewerkt door twee beleidsregels, wordt de instelling weergegeven als een conflict. Als er sprake is van twee compliancebeleidsregels wordt het meest beperkende beleid toegepast. Als twee configuratieprofielen conflicteren, wordt de instelling niet toegepast. Zie [Algemene vragen, problemen en oplossingen met apparaatbeleid en -profielen](device-profile-troubleshoot.md#if-multiple-policies-are-assigned-to-the-same-user-or-device-how-do-i-know-which-settings-gets-applied) voor meer informatie.
+In Intune worden beleidsregels toegepast op gebruikers en groepen die u maakt. Hier is geen hiërarchie. Bijvoorbeeld:
+
+- Als dezelfde instelling wordt bijgewerkt door twee beleidsregels, wordt de instelling weergegeven als een conflict.
+- Als er sprake is van twee compliancebeleidsregels wordt het meest beperkende beleid toegepast.
+- Als twee configuratieprofielen conflicteren, wordt de instelling niet toegepast.
+
+Zie [Algemene vragen, problemen en oplossingen met apparaatbeleid en -profielen](device-profile-troubleshoot.md#if-multiple-policies-are-assigned-to-the-same-user-or-device-how-do-i-know-which-settings-gets-applied) voor meer informatie.
 
 In deze volgende stappen maakt u beveiligingsgroepen en voegt u gebruikers toe aan de groepen. U kunt een gebruiker aan meerdere groepen toevoegen. Het is bijvoorbeeld gebruikelijk dat een gebruiker meerdere apparaten heeft, zoals een Surface Pro voor het werk en een mobiel Android-apparaat voor persoonlijk gebruik. En het is gebruikelijk dat een persoon vanaf meerdere van deze apparaten toegang heeft tot organisatieresources.
 
@@ -237,7 +243,7 @@ In deze sectie maken we een beheersjabloon in Intune, bekijken we een aantal ins
     - **Beschrijving**: Voer een beschrijving in voor het profiel. Deze instelling is optioneel, maar wordt aanbevolen.
 
 5. Selecteer **Volgende**.
-6. Configureer in **Configuratie-instellingen** de instellingen die van toepassing zijn op apparaten (**Computerconfiguratie**) en instellingen die van toepassing zijn op gebruikers (**Gebruikersconfiguratie**):
+6. In **Configuratie-instellingen** geeft **Alle instellingen** een alfabetische lijst met alle instellingen weer. Ook kunt u instellingen filteren die van toepassing zijn op apparaten (**Computerconfiguratie**) en instellingen die van toepassing zijn op gebruikers **(Gebruikersconfiguratie**):
 
     > [!div class="mx-imgBorder"]
     > ![ADMX-sjablooninstellingen toepassen op gebruikers en apparaten in Microsoft Intune Endpoint Manager](./media/tutorial-walkthrough-administrative-templates/administrative-templates-choose-computer-user-configuration.png)
@@ -305,7 +311,7 @@ In deze sectie wordt beleid in Intune en het overeenkomstige beleid in Groepsbel
 > [!TIP]
 > Als u het ingebouwde Windows-beleid wilt zien, kunt u ook GPEdit gebruiken (de app **Groepsbeleid bewerken**).
 
-#### <a name="compare-an-edge-policy"></a>Edge-beleid vergelijken
+#### <a name="compare-a-microsoft-edge-policy"></a>Een Microsoft Edge-beleid vergelijken
 
 1. Ga in het Eindpuntbeheer-beheercentrum naar uw sjabloon **Beheersjabloon - Windows 10-studentapparaten**.
 2. Vouw **Computerconfiguratie** > **Microsoft Edge** > **Opstarten, startpagina en nieuwe tabbladpagina** uit. Bekijk de beschikbare instellingen.
@@ -368,7 +374,7 @@ In deze sjabloon configureren we enkele Internet Explorer-instellingen om appara
 
 3. Selecteer **Volgende**. In **Beoordelen en maken** selecteert u **Maken** om uw wijzigingen op te slaan.
 
-Zodra het profiel is opgeslagen, wordt op de apparaten toegepast wanneer deze worden ingecheckt bij Intune. Als de apparaten verbonden zijn met internet, kan dit onmiddellijk plaatsvinden. Zie [Hoe lang duurt het voor apparaten een beleidsregel, profiel of app hebben ontvangen nadat deze zijn toegewezen?](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) voor meer informatie over vernieuwtijden van beleid.
+Zodra het profiel is opgeslagen, wordt op de apparaten toegepast wanneer deze worden ingecheckt bij Intune. Als de apparaten verbonden zijn met internet, kan dit onmiddellijk plaatsvinden. Zie [Hoe lang duurt het voor apparaten een beleidsregel, profiel of app hebben ontvangen?](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) voor meer informatie over vernieuwtijden van beleid.
 
 Sluit uzelf niet uit wanneer u strikt of beperkend beleid en profielen toewijst. U kunt een groep maken die wordt uitgesloten van uw beleid en profielen. Zo hebt u toegang om problemen op te lossen. Bewaak deze groep om te bevestigen dat deze wordt gebruikt zoals bedoeld.
 
@@ -396,7 +402,7 @@ In deze sectie maakt u een OneDrive-beheersjabloon in Intune om bepaalde instell
 5. Selecteer **Volgende**.
 6. Configureer in **Configuratie-instellingen** de volgende instellingen. Zorg ervoor dat u **OK** selecteert om uw wijzigingen op te slaan:
 
-    - **Computerconfiguratie** > **Alle instellingen**:
+    - **Computerconfiguratie**:
       - **Gebruikers op de achtergrond aanmelden bij de OneDrive-synchronisatieclient met hun Windows-referenties**
         - **Type**: Apparaat
         - **Waarde**: Ingeschakeld
@@ -404,7 +410,7 @@ In deze sectie maakt u een OneDrive-beheersjabloon in Intune om bepaalde instell
         - **Type**: Apparaat
         - **Waarde**: Ingeschakeld
 
-    - **Gebruikersconfiguratie** > **Alle instellingen**:
+    - **Gebruikersconfiguratie**:
       - **Voorkomen dat gebruikers persoonlijke OneDrive-accounts synchroniseren**
         - **Type**: Gebruiker
         - **Waarde**: Ingeschakeld

@@ -6,8 +6,8 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/23/2019
-ms.topic: conceptual
+ms.date: 05/15/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6512aa01a55a3a1ed949b634b97eb891e9459a9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 361f0ff36b78daddd08954953744f3f95191d4f3
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327114"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990609"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Windows-apparaten in Intune inschrijven met Windows Autopilot  
 Windows Autopilot maakt het makkelijker om apparaten te registreren in Intune. Het kost veel tijd om aangepaste installatiekopieën van besturingssystemen te bouwen en onderhouden. Mogelijk besteedt u ook tijd aan het toepassen van deze aangepaste installatiekopieën op nieuwe apparaten, om ze voor te bereiden voor gebruik voordat u ze aan eindgebruikers verstrekt. Met Microsoft Intune en Autopilot geeft u nieuwe apparaten aan uw eindgebruikers zonder dat u aangepaste installatiekopieën van besturingssystemen voor de apparaten hoeft te bouwen, onderhouden en toe te passen. Als u Intune gebruikt om Autopilot-apparaten te beheren, kunt u beleidsregels, profielen, apps en meer beheren op apparaten nadat ze zijn ingeschreven. Zie [Overzicht van Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot) voor een overzicht van voordelen, scenario's en vereisten.
@@ -34,6 +34,8 @@ Er zijn vier typen Autopilot-implementatie:
 - Met [White Glove](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove) kunnen partners of IT-medewerkers vooraf een Windows 10-pc inrichten, zodat deze volledig geconfigureerd en bedrijfsklaar is
 - Met [Autopilot voor bestaande apparaten](https://docs.microsoft.com/windows/deployment/windows-autopilot/existing-devices) kunt u eenvoudig de nieuwste versie van Windows 10 implementeren op uw bestaande apparaten
 - [Door gebruiker gestuurde modus](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven), voor traditionele gebruikers.
+
+In dit artikel wordt uitgelegd hoe u Autopilot kunt instellen voor een Windows-pc. Zie [Windows Autopilot voor HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot) voor meer informatie over Autopilot en Hololens.
 
 ## <a name="prerequisites"></a>Vereisten
 
@@ -90,7 +92,7 @@ U kunt Windows Autopilot-apparaten toevoegen door een CSV-bestand te importeren 
 
 ## <a name="create-an-autopilot-deployment-profile"></a>Een Autopilot-implementatieprofiel maken
 Autopilot-profielen worden gebruikt om de Autopilot-apparaten te configureren. U kunt maximaal 350 profielen per tenant maken.
-1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **Windows** > **Windows-inschrijving** > **Implementatieprofielen** > **Profiel maken**.
+1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431)**Apparaten** > **Windows** > **Windows-inschrijving** > **Implementatieprofielen** > **Profiel maken** > **Windows-pc** of **HoloLens**. In dit artikel wordt uitgelegd hoe u Autopilot kunt instellen voor een Windows-pc. Zie [Windows Autopilot voor HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot) voor meer informatie over Autopilot en Hololens.
 2. Geef op de pagina **Basisinformatie** een waarde op voor **Naam** en eventueel ook voor **Beschrijving**.
 
     ![Schermopname van de pagina Basisinformatie](./media/enrollment-autopilot/create-profile-basics.png)

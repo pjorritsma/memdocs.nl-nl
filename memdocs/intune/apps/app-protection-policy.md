@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2020
-ms.topic: conceptual
+ms.date: 05/19/2020
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de679314bcd3b52ff879fbe9a6340a61d2b7e993
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 68e337f6315fc6d198e27c494b7689bb1cb9bc97
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078359"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989624"
 ---
 # <a name="app-protection-policies-overview"></a>Overzicht van App-beveiligingsbeleid
 
@@ -84,6 +84,18 @@ De platformondersteuning voor beveiligingsbeleid voor apps in Intune is afgestem
 > [!IMPORTANT]
 > De Intune-bedrijfsportal-app is vereist op het apparaat om appbeveiligingsbeleid op Android te ontvangen. Raadpleeg de [Appvereisten voor Intune-bedrijfsportaltoegang](../fundamentals/end-user-mam-apps-android.md#access-apps) voor meer informatie.
 
+## <a name="app-protection-policy-data-protection-framework"></a>Gegevensbeschermingsframework met beleid voor appbeveiliging
+
+Dankzij de opties die beschikbaar zijn in het appbeveiligingsbeleid (APP) kunnen organisaties de beveiliging aanpassen aan hun specifieke behoeften. Het is mogelijk niet voor iedereen duidelijk welke beleidsinstellingen vereist zijn om een volledig scenario te implementeren. Microsoft heeft een taxonomie geïntroduceerd voor het APP-gegevensbeschermingsframework voor het beheer van mobiele iOS- en Android-apps om organisaties te helpen bij het bepalen van de prioriteit van de beveiliging van mobiele clienteindpunten.
+
+Het APP-gegevensbeschermingsframework is onderverdeeld in drie afzonderlijke configuratieniveaus, waarbij elk niveau is gebaseerd op het vorige niveau:
+
+- Met **Basisgegevensbescherming voor ondernemingen** (niveau 1) worden apps beveiligd met een pincode en versleuteld, en worden selectieve wisbewerkingen uitgevoerd. Voor Android-apparaten wordt met dit niveau Android-apparaatbevestiging gevalideerd. Dit is een configuratie op instapniveau die vergelijkbare gegevensbescherming biedt in het Exchange Online-postvakbeleid en die IT en de gebruikerspopulatie laat kennismaken met APP.
+- Met **Geavanceerde gegevensbescherming voor ondernemingen** (niveau 2) worden mechanismen voor preventie van gegevenslekkage en minimale vereisten voor het besturingssysteem geïntroduceerd. Dit is de configuratie die van toepassing is op de meeste mobiele gebruikers die toegang hebben tot werk- of schoolgegevens.
+- Met **Hoge gegevensbeveiliging voor ondernemingen** (niveau 3) worden geavanceerde mechanismen voor gegevensbeveiliging, verbeterde configuratie van de pincode en APP Mobile Threat Defense geïntroduceerd. Deze configuratie is wenselijk voor gebruikers die toegang hebben tot gegevens met een hoog risico.
+
+Als u de specifieke aanbevelingen voor elk configuratieniveau en de apps die minimaal moeten worden beveiligd, wilt bekijken, bestudeert u [Gegevensbeschermingsframework met behulp van beveiligingsbeleid voor apps](app-protection-framework.md).
+
 ## <a name="how-app-protection-policies-protect-app-data"></a>Hoe het beveiligingsbeleid voor apps app-gegevens beveiligen
 
 ### <a name="apps-without-app-protection-policies"></a>Apps zonder het beveiligingsbeleid voor apps
@@ -143,13 +155,13 @@ De [Intune-SDK](../developer/app-sdk.md) maakt gebruik van een aantal geavanceer
 
 De volgende lijst bevat de vereisten voor eindgebruikers voor het gebruik van app-beveiligingsbeleidsregels voor een app die door Intune wordt beheerd:
 
-- De eindgebruiker moet een AAD-account (Azure Active Directory) hebben. Zie [Gebruikers toevoegen en beheerdersmachtigingen aan Intune toekennen](../fundamentals/users-add.md) voor informatie over het maken van Intune-gebruikers in Azure Active Directory.
+- De eindgebruiker moet een Azure Active Directory-account (Azure AD) hebben. Zie [Gebruikers toevoegen en beheerdersmachtigingen aan Intune toekennen](../fundamentals/users-add.md) voor informatie over het maken van Intune-gebruikers in Azure Active Directory.
 
 - Er moet een licentie voor Microsoft Intune Azure aan het Azure Active Directory-account van de eindgebruiker zijn toegewezen. Zie [Intune-licenties beheren](../fundamentals/licenses-assign.md) voor informatie over het toewijzen van Intune-licenties aan eindgebruikers.
 
 - De eindgebruiker moet behoren tot een beveiligingsgroep waarop een beleidsregel voor de beveiliging van apps is gericht. Dezelfde beleidsregel voor de beveiliging van apps moet ook zijn gericht op de specifieke app die wordt gebruikt. Beleidsregels voor de beveiliging van apps kunnen worden gemaakt en geïmplementeerd in de Intune-console in [Azure Portal](https://portal.azure.com). Beveiligingsgroepen kunnen op dit moment worden gemaakt in het [Microsoft 365-beheercentrum](https://admin.microsoft.com).
 
-- De eindgebruiker moet zich bij de app aanmelden met zijn AAD-account.
+- De eindgebruiker moet zich bij de app aanmelden met zijn Azure AD-account.
 
 ## <a name="app-protection-policies-for-microsoft-office-apps"></a>App-beveiligingsbeleid voor Microsoft Office-apps
 
@@ -207,7 +219,7 @@ Een voorbeeld van een werk- of zakelijke context is een gebruiker die de OneDriv
 Outlook heeft een gecombineerde weergave van e-mail met persoonlijke en zakelijke e-mail. In dit geval vraagt de Outlook-app om de Intune-pincode bij het starten van de app.
 
   >[!NOTE]
-  > Hoewel Edge zich in de bedrijfscontext bevindt, kan de gebruiker opzettelijk OneDrive-bestanden uit de bedrijfscontext verplaatsen naar een onbekende persoonlijke cloudopslaglocatie. Zie [De lijst met toegestane of geblokkeerde sites voor Microsoft Edge opgeven](../apps/manage-microsoft-edge.md#specify-allowed-or-blocked-sites-list-for-microsoft-edge) en configureer de lijst met toegestane/geblokkeerde sites voor Edge om dit te voorkomen.
+  > Hoewel Edge zich in de bedrijfscontext bevindt, kan de gebruiker opzettelijk OneDrive-bestanden uit de bedrijfscontext verplaatsen naar een onbekende persoonlijke cloudopslaglocatie. Als u dit wilt voorkomen, raadpleegt u [Beperkte websites beheren](manage-microsoft-edge.md#manage-restricted-web-sites) en configureert u de lijst met toegestane/geblokkeerde sites voor Edge.
 
 Zie [MAM en meerdere identiteiten](apps-supported-intune-apps.md) voor meer informatie over meerdere identiteiten in Intune.
 
@@ -310,7 +322,7 @@ Het Intune-beleid voor app-beveiliging geeft u de mogelijkheid app-toegang te be
 Dit proces heeft als doel de gegevens van uw organisatie in de app op app-niveau veilig en beschermd te houden. Deze functie is alleen beschikbaar voor iOS/iPadOS en vereist het gebruik van toepassingen waarin de Intune-SDK voor iOS/iPadOS, versie 9.0.1 of hoger is geïntegreerd. Integratie van de SDK is nodig om het gedrag te kunnen afdwingen in de betreffende toepassingen. Deze integratie vindt doorlopend plaats en is afhankelijk van de specifieke toepassingsteams. Apps die hieraan deelnemen, zijn onder meer WXP, Outlook, Managed Browser en Yammer.
   
 ### <a name="ios-share-extension"></a>iOS-extensie voor delen
-U kunt de iOS-/iPadOS-extensie voor delen gebruiken om werk- of schoolgegevens te openen in niet-beheerde apps, zelfs wanneer het beleid voor gegevensoverdracht is ingesteld op **Alleen voor beheerde apps** of **Geen apps**. De iOS-/iPadOS-extensie voor delen kan alleen met app-beveiligingsbeleid van Intune worden beheerd indien ook het apparaat wordt beheerd. Daarom worden _**'zakelijke' gegevens door Intune versleuteld voordat ze buiten de app worden gedeeld**_ . U kunt dit versleutelingsgedrag controleren door een 'zakelijk' bestand te openen buiten de beheerde app. Het bestand moet zijn versleuteld en kan niet worden geopend bijten de beheerde app.
+U kunt de iOS-/iPadOS-extensie voor delen gebruiken om werk- of schoolgegevens te openen in niet-beheerde apps, zelfs wanneer het beleid voor gegevensoverdracht is ingesteld op **Alleen voor beheerde apps** of **Geen apps**. De iOS-/iPadOS-extensie voor delen kan alleen met app-beveiligingsbeleid van Intune worden beheerd indien ook het apparaat wordt beheerd. Daarom worden _**'zakelijke' gegevens door Intune versleuteld voordat ze buiten de app worden gedeeld**_. U kunt dit versleutelingsgedrag controleren door een 'zakelijk' bestand te openen buiten de beheerde app. Het bestand moet zijn versleuteld en kan niet worden geopend bijten de beheerde app.
 
 ### <a name="multiple-intune-app-protection-access-settings-for-same-set-of-apps-and-users"></a>Meerdere toegangsinstellingen voor Intune-app-beveiligingsbeleid voor dezelfde set apps en gebruikers
 Het Intune-app-beveiligingsbeleid voor toegang wordt in een bepaalde volgorde toegepast op apparaten van eindgebruikers wanneer ze vanaf hun bedrijfsaccount proberen toegang te krijgen tot een doel-app. In het algemeen krijgt wissen voorrang, dan volgt een waarschuwing die kan worden gesloten. Indien van toepassing op de specifieke gebruiker/app, wordt een instelling van een minimumversie van het iOS-/iPadOS-besturingssysteem die een gebruiker waarschuwt om de iOS-/iPadOS-versie bij te werken bijvoorbeeld toegepast na de instelling van de minimumversie van het iOS-/iPadOS-besturingssysteem die toegang door de gebruiker blokkeert. Dus in het scenario waarin de IT-beheerder de minimumversie van het iOS-besturingssysteem configureert naar 11.0.0.0 en de minimumversie van het iOS-besturingssysteem (alleen Waarschuwing) naar 11.1.0.0, terwijl het apparaat dat de app probeert te openen op iOS 10 zit, wordt de eindgebruiker geblokkeerd op basis van de restrictievere instelling voor de minimumversie van het iOS-besturingssysteem die resulteert in geblokkeerde toegang.

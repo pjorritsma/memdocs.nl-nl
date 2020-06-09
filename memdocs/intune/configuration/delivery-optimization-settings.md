@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/01/2019
+ms.date: 05/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,14 +16,14 @@ ms.reviewer: kerimh
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d0b66b486025fa67d138f9ace09b78d4e894737e
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: d7884b67115aef945783a872d94e83d3a42d5426
+ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254925"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83551839"
 ---
-# <a name="delivery-optimization-settings-for-intune"></a>Delivery Optimization-instellingen voor Intune
+# <a name="delivery-optimization-settings-for-windows-10-devices-in-intune"></a>Delivery Optimization-instellingen voor Windows 10-apparaten in Intune
 
 In dit artikel worden de Delivery Optimization-instellingen weergegeven die Intune ondersteunt voor apparaten met Windows 10 of hoger.  
 
@@ -35,9 +35,13 @@ De volgende tabellen omvatten:
 
 - **Windows-versie**: De minimale versie van Windows 10 die ondersteuning biedt voor deze instelling.  
 
-- **Details**: Een korte beschrijving van hoe Intune de instelling implementeert, met inbegrip van de standaardinstelling voor Intune. Indien beschikbaar, vindt u koppelingen naar vermeldingen van de [beleids-CSP (serviceprovider voor beleidsconfiguratie) van Delivery Optimization-](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization).  
+- **Details**: Een korte beschrijving van hoe Intune de instelling implementeert, met inbegrip van de standaardinstelling voor Intune. Indien beschikbaar vindt u koppelingen naar vermeldingen van de [beleids-CSP (serviceprovider voor beleidsconfiguratie) van Delivery Optimization](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization).  
 
 Zie [Updates leveren](delivery-optimization-windows.md) voor het configureren van Intune voor het gebruik van deze instellingen.  
+
+## <a name="before-you-begin"></a>Voordat u begint
+
+[Maak een Windows 10 Delivery Optimization-profiel](delivery-optimization-windows.md).
 
 ## <a name="delivery-optimization"></a>Delivery optimization  
 
@@ -73,11 +77,12 @@ Zie [Updates leveren](delivery-optimization-windows.md) voor het configureren va
 
 |Instelling  |Windows-versie  |Details  |
 |---------|-----------------|---------|
-|Hostnamen van cacheserver | 1809  |Geef het IP-adres of de FQDN op van de netwerkcacheservers die door uw apparaten worden gebruikt voor de optimalisatie van de levering. Selecteer vervolgens **Toevoegen** om dat item toe te voegen aan de lijst.  <br><br>**Standaardinstelling**: Niet geconfigureerd  <br><br>Beleid van CSP: [DOCacheHost](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-docachehost)  |
+|Hostnamen van cacheserver | 1809  |Geef het IP-adres of de FQDN op van de netwerkcacheservers die door uw apparaten worden gebruikt voor Delivery Optimization. Selecteer vervolgens **Toevoegen** om dat item toe te voegen aan de lijst.  <br><br>**Standaardinstelling**: Niet geconfigureerd  <br><br>Beleid van CSP: [DOCacheHost](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-docachehost)  |
 |[Terugval van cacheserver voor downloaden op voorgrond vertragen (in seconden)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#delay-foreground-download-cache-server-fallback-in-secs) | 1903    |Geef een tijd in seconden op (0-2592000) om de terugval van een cacheserver naar de HTTP-bron te vertragen voor het downloaden van inhoud op de voorgrond. Wanneer het beleid is om downloaden op de voorgrond via HTTP te vertragen, wordt dit beleid het eerst toegepast (zodat downloads van peers voorrang krijgen). (0-2.592.000)    <br><br>**Standaardinstelling**: 0  <br><br>Beleid van CSP [DODelayCacheServerFallbackForeground](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dodelaycacheserverfallbackforeground)  |
 |[Cacheserverterugval voor downloaden op achtergrond vertragen (in seconden)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#delay-background-download-cache-server-fallback-in-secs) | 1903    |Geef een tijd in seconden op (0-2592000) om de terugval van een cacheserver naar de HTTP-bron te vertragen voor het downloaden van inhoud op de achtergrond. Als *HTTP-download op de achtergrond vertragen (in seconden)* is geconfigureerd, wordt deze instelling eerst toegepast om downloads vanaf peers toe te staan. (0-2.592.000)   <br><br>**Standaardinstelling**: 0 <br><br>Beleid van CSP: [DODelayCacheServerFallbackBackground](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dodelaycacheserverfallbackbackground)  |
 
-
 ## <a name="next-steps"></a>Volgende stappen
 
-[Delivery Optimization configureren in Intune](delivery-optimization-windows.md)
+[Het profiel toewijzen](device-profile-assign.md) en [de status ervan controleren](device-profile-monitor.md).
+
+[Meer informatie over Delivery Optimization in Intune](delivery-optimization-windows.md).

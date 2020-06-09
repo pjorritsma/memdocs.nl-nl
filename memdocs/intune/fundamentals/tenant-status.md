@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/06/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,15 +16,19 @@ ms.reviewer: crisk
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d309b295281c88dff717c5f609905b3e541e3fed
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a4d747a38dd8e2f95cafb25ec5705f83199f4c54
+ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80696463"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83690687"
 ---
 # <a name="use-the-intune-tenant-status-page"></a>De tenantstatuspagina in Intune gebruiken
-De Tenantstatuspagina in Microsoft Intune is een gecentraliseerde hub met de huidige en belangrijke details over uw tenant. Dit zijn onder andere details over de beschikbaarheid en het gebruik van licenties, de status van de connector en belangrijke communicatie over de Intune-service.  
+
+De Tenantstatuspagina in Microsoft Intune is een gecentraliseerde hub met de huidige en belangrijke details over uw tenant. Dit zijn onder andere details over de beschikbaarheid en het gebruik van licenties, de status van de connector en belangrijke communicatie over de Intune-service.
+
+> [!TIP]
+> Een tenant is een instantie van Azure Active Directory (Azure AD). Uw abonnement op Intune wordt gehost door een Azure AD-tenant. Zie [Een tenant instellen](https://docs.microsoft.com/azure/active-directory/develop/quickstart-create-new-tenant) in de Azure AD-documentatie voor meer informatie.
 
 Als u het dashboard wilt bekijken, meldt u zich aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431), gaat u naar **Tenantbeheer** en selecteert u vervolgens **Tenantstatus**.
 
@@ -64,20 +68,20 @@ Als u bijvoorbeeld de connector **VVP Expiry Date** selecteert, wordt de pagina 
 ## <a name="service-health-dashboard"></a>Statusdashboard van de service  
 Op het Statusdashboard van de service kunt u details weergeven voor *service-incidenten* die van invloed zijn op uw Tenant, en *Intune-nieuws* met informatie over updates en geplande wijzigingen.
 
-### <a name="intune-service-health"></a>Intune Service Health
+### <a name="intune-service-health-and-message-center"></a>Servicestatus en berichtencentrum van Intune
 U kunt gegevens over actieve incidenten en advies bekijken zonder dat u naar het Microsoft 365 Service Health-dashboard of het berichtencentrum hoeft te gaan. Beide zijn in het [Microsoft 365-beheercentrum](https://admin.microsoft.com) te vinden. Alleen incidenten die van invloed zijn op uw tenant worden weergegeven.  
 
 Wanneer u een incident selecteert, worden de incidentgegevens rechtstreeks op de tenantstatuspagina weergegeven. Als u advies en incidenten uit het verleden wilt bekijken, selecteert u **Incidenten/advies uit het verleden bekijken**. Het Microsoft 365-beheercentrum wordt geopend. U kunt dan voor uw tenant advies en incidenten uit de afgelopen 30 dagen bekijken.  
 
-Als u informatie over *Intune Service Health* wilt bekijken, moet uw account beschikken over de rol **Globale beheerder** of **Servicebeheerder** in Azure Active Directory of het Microsoft 365-beheercentrum. Als u deze machtigingen wilt toewijzen, meldt u zich aan bij het [Microsoft 365-beheercentrum](https://admin.microsoft.com) met globale-beheerdersmachtigingen. Selecteer **Gebruikers > Actieve gebruikers** en selecteer vervolgens het account waarvoor toegang is vereist. Selecteer **Bewerken** voor rollen, selecteer *Servicebeheerder* of *Globale beheerder* en selecteer vervolgens **Opslaan** voor uw bewerking om de machtigingen toe te wijzen.  
+Als u informatie over *Intune Service Health* wilt bekijken, moet uw account beschikken over de rol **Globale beheerder** of **Serviceondersteuningsbeheerder** in Azure Active Directory of het Microsoft 365-beheercentrum. Als u deze machtigingen wilt toewijzen, meldt u zich aan bij het [Microsoft 365-beheercentrum](https://admin.microsoft.com) met globale-beheerdersmachtigingen. Selecteer **Gebruikers > Actieve gebruikers** en selecteer vervolgens het account waarvoor toegang is vereist. Selecteer **Bewerken** voor rollen, selecteer *Serviceondersteuningsbeheerder* of *Globale beheerder* en selecteer vervolgens **Opslaan** voor uw bewerking om de machtigingen toe te wijzen.  
 
 U kunt uw communicatievoorkeuren voor Intune Service Health alleen instellen via het Microsoft 365-beheercentrum.
 
-### <a name="intune-news"></a>Intune-nieuws  
+### <a name="intune-message-center"></a>Intune-berichtencentrum  
 U kunt informatieve communicatie van het Intune-serviceteam bekijken zonder naar het Office-berichtencentrum te gaan. De communicatie omvat berichten over wijzigingen die recent zijn aangebracht aan de Intune-service en wijzigingen die binnenkort worden doorgevoerd voor uw tenant.  
 
 Standaard worden de tien meest recente en actieve berichten weergegeven. Als u oudere berichten wilt weergeven, klikt u op **Oudere berichten weergeven** om het *berichtencentrum* te openen in het Microsoft 365-beheercentrum.  
 
-Als u informatie over Intune-nieuws wilt bekijken, moet uw account beschikken over de rol **Globale beheerder** of **Servicebeheerder** in Azure Active Directory, of de rol **Berichtencentrum-lezer** in het Microsoft 365-beheercentrum.  Als u deze machtiging wilt toewijzen, meldt u zich aan bij het [Microsoft 365-beheercentrum](https://admin.microsoft.com) met beheerdersmachtigingen. Selecteer **Gebruikers > Actieve gebruikers** en selecteer vervolgens het account waarvoor toegang is vereist. Selecteer **Bewerken** voor *Rollen*, selecteer *Teams-communicatiebeheerder* en **sla vervolgens uw bewerking op** om de machtigingen toe te wijzen.  
+Als u informatie over Intune-nieuws wilt bekijken, moet uw account beschikken over de rol **Globale beheerder** of **Serviceondersteuningsbeheerder** in Azure Active Directory, of de rol **Berichtencentrum-lezer** in het Microsoft 365-beheercentrum.  Als u deze machtiging wilt toewijzen, meldt u zich aan bij het [Microsoft 365-beheercentrum](https://admin.microsoft.com) met beheerdersmachtigingen. Selecteer **Gebruikers > Actieve gebruikers** en selecteer vervolgens het account waarvoor toegang is vereist. Selecteer **Bewerken** voor *Rollen*, selecteer *Teams-communicatiebeheerder* en **sla vervolgens uw bewerking op** om de machtigingen toe te wijzen.  
 
-U kunt uw communicatievoorkeuren voor Intune-nieuws alleen instellen via het Microsoft 365-beheercentrum.
+U kunt uw communicatievoorkeuren voor het Intune-berichtencentrum alleen instellen via het Microsoft 365-beheercentrum.

@@ -6,7 +6,7 @@ keywords: Intune-datawarehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 05/14/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,18 +18,49 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36944b05a12b150c15e59f145efd9fef85598a2f
-ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
+ms.openlocfilehash: 8a4ddbb96c17e8e370fee73e6a6ec1d004df05f9
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82881040"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709329"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Wijzigingenlogboek voor de API van Intune-datawarehouse
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Houd updates voor Intune-datawarehouse bij.
+
+## <a name="2004"></a>2004 
+_Uitgebracht in april 2020_
+
+### <a name="beta-changes"></a>Bètawijzigingen
+
+De volgende tabel bevat de toegevoegde eigenschap voor de entiteit **device** in het Intune Data Warehouse.
+
+|    Verzameling                          |    Wijziging     |    Beschrijving                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    windowsOsEdition     |    Toegevoegd    |    De versie van het Windows-besturingssysteem.                                                                                                                                                                                                                                                                     |
+
+## <a name="2003"></a>2003 
+_Uitgebracht in maart 2020_
+
+### <a name="beta-changes"></a>Bètawijzigingen
+
+De volgende tabel bevat de toegevoegde eigenschappen voor de entiteit **device** in het Intune Data Warehouse.
+
+|    Verzameling                          |    Wijziging     |    Beschrijving                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    ethernetMacAddress    |    Toegevoegd    |    De unieke netwerk-id van dit apparaat.                                                                                                                                                                                                                                                                     |
+|    model    |    Toegevoegd    |    Het apparaatmodel.                                                                                                                                                                                                                                                                     |
+|    office365Version    |    Toegevoegd    |    De versie van Office 365 die op het apparaat is geïnstalleerd.                                                                                                                                                                                                                                                                     |
+
+De volgende tabel bevat de toegevoegde eigenschappen voor de entiteit **devicePropertyHistory** in het Intune Data Warehouse.
+
+|    Verzameling                          |    Wijziging     |    Beschrijving                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    physicalMemoryInBytes    |    Toegevoegd    |    Het fysieke geheugen in bytes.                                                                                                                                                                                                                                                                     |
+|    totalStorageSpaceInBytes     |    Toegevoegd    |    Totale opslag in bytes.                                                                                                                                                                                                                                                                     |
 
 ## <a name="1903-part-2"></a>1903 (deel 2)
 _Uitgebracht in april 2019_
@@ -249,7 +280,7 @@ _Uitgebracht: november 2017_
 
 De entiteitverzameling **Gebruiker** bevat alle Azure Active Directory-gebruikers (Azure AD) met toegewezen licenties in uw onderneming. Deze records bevatten gebruikersstatussen gedurende de periode van gegevensverzameling, ook als de gebruiker is verwijderd. Een gebruiker kan bijvoorbeeld worden toegevoegd aan Intune en vervolgens ergens gedurende de afgelopen maand zijn verwijderd. Ook al is deze gebruiker niet aanwezig op het moment dat het rapport wordt gegenereerd, toch zijn de gebruiker en de status aanwezig in de gegevens. U kunt een rapport maken dat de duur van de historische aanwezigheid van de gebruiker in uw gegevens weergeeft.
 
-Daarentegen bevat de nieuwe entiteitverzameling **Huidige gebruiker** alleen gebruikers die niet zijn verwijderd. De entiteitverzameling **Huidige gebruiker** bevat alleen gebruikers die momenteel actief zijn. Zie **Naslaginformatie voor huidige gebruikersentiteit** voor informatie over de entiteitverzameling [Huidige gebruiker](reports-ref-data-model.md).
+Daarentegen bevat de nieuwe entiteitverzameling **Huidige gebruiker** alleen gebruikers die niet zijn verwijderd. De entiteitverzameling **Huidige gebruiker** bevat alleen gebruikers die momenteel actief zijn. Zie [Naslaginformatie voor huidige gebruikersentiteit](reports-ref-data-model.md) voor informatie over de entiteitverzameling **Huidige gebruiker**.
 
 ## <a name="1709"></a>1709
 _Uitgebracht: oktober 2017_

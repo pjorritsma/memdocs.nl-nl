@@ -1,12 +1,12 @@
 ---
 title: iOS-/iPadOS- of macOS-apparaatprofielen maken met Microsoft Intune - Azure | Microsoft Docs
-description: Een iOS-, iPadOS- of macOS-apparaatprofiel toevoegen of maken en vervolgens instellingen voor AirPrint, de indeling van het startscherm, app-meldingen, gedeelde apparaten, eenmalige aanmelding en het filteren van webinhoud in Microsoft Intune configureren.
+description: Een profiel voor een iOS-, iPadOS- of macOS-apparaat maken. Instellingen voor AirPrint, de indeling van het startscherm, appmeldingen, gedeelde apparaten, eenmalige aanmelding en het filteren van webinhoud, in Microsoft Intune configureren.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/09/2020
-ms.topic: conceptual
+ms.date: 05/06/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e72fc48608ebf32f3e32d4a94ab7203ee418d8f
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: 349fdc7b0f13f0999b8c9993bcaba1d458ebac59
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943804"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989188"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Instellingen van apparaatfuncties voor iOS, iPadOS of macOS toevoegen in Intune
 
@@ -54,7 +54,7 @@ Van toepassing op:
 
 ## <a name="app-notifications"></a>App-meldingen
 
-Kies hoe apps op uw iOS- en iPadOS-apparaten meldingen ontvangen. U kunt bijvoorbeeld vanuit Intune app-meldingen verzenden, zodat deze worden weergegeven in het meldingencentrum of op het vergrendelingsscherm of dat er een geluid wordt afgespeeld.
+Kies hoe apps op uw iOS- en iPadOS-apparaten meldingen ontvangen. U kunt bijvoorbeeld appmeldingen verzenden, zodat deze in het meldingencentrum of op het vergrendelingsscherm worden weergegeven of een geluid afspelen.
 
 Zie [App-meldingen op iOS/iPadOS](ios-device-features-settings.md#app-notifications) voor een lijst met instellingen die u kunt configureren in Intune.
 

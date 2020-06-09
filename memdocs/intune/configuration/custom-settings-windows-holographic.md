@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
-ms.article: article
+ms.date: 05/18/2020
+ms.article: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43199009740f259c6a6484e455b0205da76492ba
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f37550bcfd8105b9cf5ea51c1bfa0d9305721348
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084050"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990084"
 ---
 # <a name="use-custom-settings-for-windows-holographic-for-business-devices-in-intune"></a>Aangepaste instellingen gebruiken voor apparaten met Windows Holographic for Business in Intune
 
@@ -35,38 +35,30 @@ Als u een specifieke instelling zoekt, moet u er rekening mee houden dat het [be
 
 In dit artikel wordt beschreven hoe u een aangepast profiel maakt voor Windows Holographic for Business-apparaten. Het bevat ook een lijst met de aanbevolen OMA-URI-instellingen.
 
-## <a name="create-the-profile"></a>Het profiel maken
+## <a name="before-you-begin"></a>Voordat u begint
 
-1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecteer **Apparaten** > **Configuratieprofielen** > **Profiel maken**.
-3. Voer de volgende instellingen in:
+[Een aangepast Windows 10-profiel maken](custom-settings-configure.md#create-the-profile).
 
-    - **Naam**: Voer een beschrijvende naam in voor het profiel. Geef uw profielen een naam zodat u ze later eenvoudig kunt identificeren. Een goede profielnaam is bijvoorbeeld **Aangepast Hololens-profiel**.
-    - **Beschrijving**: Voer een beschrijving in met een overzicht van de instelling en eventuele andere belangrijke details.
-    - **Platform**: Kies **Windows 10 en hoger**.
-    - **Profieltype**: Selecteer **Aangepast**.
+## <a name="custom-oma-uri-settings"></a>Aangepaste OMA-URI-instellingen
 
-4. Selecteer in **Aangepaste OMA-URI-instellingen** de optie **Toevoegen**. Voer de volgende instellingen in:
+**Toevoegen**: Voer de volgende instellingen in:
 
-    - **Naam**: Voer een unieke naam in voor de OMA-URI-instelling waaraan u deze kunt herkennen in de lijst met instellingen.
-    - **Beschrijving**: Voer een beschrijving in met een overzicht van de instelling en eventuele andere belangrijke details.
-    - **OMA-URI** (hoofdlettergevoelig): Voer de OMA-URI in die u als instelling wilt gebruiken.
-    - **Gegevenstype**: Selecteer het gegevenstype dat u voor deze OMA-URI-instelling gaat gebruiken. Uw opties zijn:
+- **Naam**: Voer een unieke naam in voor de OMA-URI-instelling waaraan u deze kunt herkennen in de lijst met instellingen.
+- **Beschrijving**: Voer een beschrijving in met een overzicht van de instelling en eventuele andere belangrijke details.
+- **OMA-URI** (hoofdlettergevoelig): Voer de OMA-URI in die u als instelling wilt gebruiken.
+- **Gegevenstype**: Selecteer het gegevenstype dat u voor deze OMA-URI-instelling gaat gebruiken. Uw opties zijn:
 
-        - Tekenreeks
-        - Tekenreeks (XML-bestand)
-        - Datum en tijd
-        - Geheel getal
-        - Drijvende komma
-        - Boolean-waarde
-        - Base64 (bestand)
+  - Tekenreeks
+  - Tekenreeks (XML-bestand)
+  - Datum en tijd
+  - Geheel getal
+  - Drijvende komma
+  - Boolean-waarde
+  - Base64 (bestand)
 
-    - **Waarde**: Voer de gegevenswaarde in die moet worden gekoppeld aan de OMA-URI die u hebt ingevoerd. De waarde is afhankelijk van het gegevenstype dat u hebt geselecteerd. Als u bijvoorbeeld **Datum en tijd** selecteert, selecteert u de waarde in een datumkiezer.
+- **Waarde**: Voer de gegevenswaarde in die moet worden gekoppeld aan de OMA-URI die u hebt ingevoerd. De waarde is afhankelijk van het gegevenstype dat u hebt geselecteerd. Als u bijvoorbeeld **Datum en tijd** selecteert, selecteert u de waarde in een datumkiezer.
 
-    Nadat u een aantal instellingen hebt toegevoegd, kunt u **Exporteren** selecteren. Met **Exporteren** maakt u een lijst met alle waarden die u hebt toegevoegd in een bestand met door komma's gescheiden waarden (.csv).
-
-5. Selecteer **OK** om uw wijzigingen op te slaan. Blijf, indien nodig, meer instellingen toevoegen.
-6. Wanneer u klaar bent, selecteert u **OK** > **Maken** om het Intune-profiel te maken. Wanneer het profiel is gemaakt, wordt dit weergegeven in de lijst **Apparaten - Configuratieprofielen**.
+Nadat u een aantal instellingen hebt toegevoegd, kunt u **Exporteren** selecteren. Met **Exporteren** maakt u een lijst met alle waarden die u hebt toegevoegd in een bestand met door komma's gescheiden waarden (.csv).
 
 ## <a name="recommended-custom-settings"></a>Aanbevolen aangepaste instellingen
 
@@ -149,7 +141,6 @@ De volgende instellingen zijn handig voor apparaten waarop Windows Holographic f
 > |----|---|
 > |./Vendor/MSFT/AccountManagement/UserProfileManagement/ProfileInactivityThreshold|Geheel getal<br/>De standaardwaarde is 30.|
 
-
 ### <a name="storagecapacitystartdeletion"></a>[StorageCapacityStartDeletion](https://docs.microsoft.com/windows/client-management/mdm/accountmanagement-csp)
 
 > [!div class="mx-tableFixed"]
@@ -172,6 +163,8 @@ Bovendien worden niet alle instellingen ondersteund die worden vermeld in [CSP's
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Het profiel is gemaakt, maar er gebeurt nog niets. Vervolgens kunt u [het profiel toewijzen](device-profile-assign.md) en [de status ervan controleren](device-profile-monitor.md).
+[Het profiel toewijzen](device-profile-assign.md) en [de status ervan controleren](device-profile-monitor.md).
 
 Maak een [aangepast profiel op Windows 10-apparaten](custom-settings-windows-10.md).
+
+Meer informatie over [aangepaste profielen](custom-settings-configure.md) in Intune.

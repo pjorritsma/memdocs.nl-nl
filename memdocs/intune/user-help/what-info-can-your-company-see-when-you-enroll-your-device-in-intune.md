@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 10/31/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -18,12 +18,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.collection: ''
-ms.openlocfilehash: ed3f9f6f01c8dc2df3a89daee991d9f8c61056b9
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 028a568b9a588697139f97f292c70c50347217f3
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210312"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83882077"
 ---
 # <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>Welke gegevens kan mijn organisatie zien wanneer ik mijn apparaat inschrijf?
 
@@ -51,7 +51,14 @@ Uw organisatie kan uw persoonlijke gegevens niet zien wanneer u een apparaat met
 - IMEI
 
  > [!NOTE]
- > Voor volledig beheerde en toegewezen Android Enterprise-apparaten kunt u niet de hele app-inventaris weergeven.    
+ > Voor volledig beheerde en toegewezen Android Enterprise-apparaten kunt u niet de hele app-inventaris weergeven.
+ 
+ > [!NOTE]
+ > Een app wordt beschouwd als **beheerde app** wanneer deze op een van de volgende manieren wordt geïnstalleerd:
+ > 1. Een gebruiker installeert deze vanuit de bedrijfsportal-app nadat deze door een Intune-beheerder als **beschikbaar** is gepubliceerd.
+ > 2. De app is door een Intune-beheerder als **vereist** gepubliceerd en is geïnstalleerd op het apparaat. 
+ >
+ > Zie [De mogelijkheden van niet-beheerde apps, beheerde apps en MAM-apps](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/understanding-the-capabilities-of-unmanaged-apps-managed-apps/ba-p/249164) als u een IT-beheerder of ondersteuningsmedewerker in uw organisatie bent en meer informatie wilt over app-beheer in Intune.
     
 **Wat uw organisatie mogelijk kan zien:**
 

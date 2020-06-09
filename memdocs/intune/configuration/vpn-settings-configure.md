@@ -1,12 +1,12 @@
 ---
 title: VPN-instellingen toevoegen aan apparaten in Microsoft Intune - Azure | Microsoft Docs
-description: Gebruik voor Android-apparaatbeheer-, Android Enterprise-, iOS/iPadOS-, macOS- en Windows-apparaten ingebouwde instellingen voor het maken van VPN-verbindingen (virtueel particulier netwerk) in Microsoft Intune.
+description: Gebruik op Android-apparaatbeheer-, Android Enterprise-, iOS/iPadOS-, macOS- en Windows-apparaten ingebouwde instellingen voor het maken van VPN-verbindingen (virtueel particulier netwerk) in Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 05/07/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c72d2f8d9bd6a7235845863000272f605bb41089
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: 1c92220fabf8d1cb2a34ac702dd4157ef848762b
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943821"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990272"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>VPN-profielen maken om verbinding te maken met VPN-servers in Intune
 
-Met virtuele particuliere netwerken (VPN's) geeft u gebruikers veilige externe toegang tot het netwerk van uw organisatie. Apparaten gebruiken een VPN-verbindingsprofiel om een verbinding met de VPN-server op te zetten. Met **VPN-profielen** in Microsoft Intune worden VPN-instellingen toegewezen aan gebruikers en apparaten in uw organisatie, zodat deze gemakkelijk en veilig verbinding met het netwerk van uw organisatie kunnen maken.
+Met virtuele particuliere netwerken (VPN's) geeft u gebruikers veilige externe toegang tot het netwerk van uw organisatie. Apparaten gebruiken een VPN-verbindingsprofiel om een verbinding met de VPN-server op te zetten. **VPN-profielen** in Microsoft Intune wijzen VPN-instellingen toe aan gebruikers en apparaten in uw organisatie. Gebruik deze instellingen, zodat gebruikers eenvoudig en veilig verbinding kunnen maken met uw bedrijfsnetwerk.
 
 U wilt bijvoorbeeld alle iOS/iPadOS-apparaten configureren met de instellingen die vereist zijn om verbinding te maken met een bestandsshare in het netwerk van de organisatie. U maakt een VPN-profiel dat deze instellingen bevat. U wijst dit profiel vervolgens toe aan alle gebruikers die over iOS/iPadOS-apparaten beschikken. De gebruikers zien de VPN-verbinding in de lijst met beschikbare netwerken en kunnen moeiteloos verbinding maken.
 
@@ -108,7 +108,6 @@ U kunt VPN-profielen met de volgende verbindingstypen maken:
   - Android Enterprise-werkprofielen
   - Android Enterprise-apparaten in zakelijk eigendom (volledig beheerd)
   - iOS/iPadOS
-  - macOS
   - Windows 10
   - Windows 8.1
   - Windows Phone 8.1
@@ -182,7 +181,7 @@ Voor VPN-profielen kan een aantal verschillende verbindingstypen en -protocollen
 
 Wanneer u het VPN-profiel maakt, kiest u een SCEP- of PFX-certificaatprofiel dat u eerder hebt gemaakt in Intune. Dit profiel wordt het identiteitscertificaat genoemd. Dit wordt gebruikt voor verificatie aan de hand van een vertrouwd-certificaatprofiel (of *basiscertificaat*) dat u hebt gemaakt om het apparaat van de gebruiker verbinding te laten maken. Het vertrouwde certificaat wordt toegewezen aan de computer die de VPN-verbinding verifieert. Dit is meestal de VPN-server.
 
-Als u gebruikmaakt van verificatie op basis van certificaten voor uw VPN-profiel, implementeert u het VPN-profiel, het certificaatprofiel en het vertrouwde basisprofiel in dezelfde groepen om ervoor te zorgen dat elk apparaat de geldigheid van uw certificeringsinstantie kan herkennen.
+Als u gebruikmaakt van verificatie op basis van certificaten voor uw VPN-profiel, implementeert u het VPN-profiel, het certificaatprofiel en het vertrouwde basisprofiel in dezelfde groepen. Door deze toewijzing kan elk apparaat de geldigheid van uw certificeringsinstantie herkennen.
 
 Zie [How to configure certificates with Microsoft Intune](../protect/certificates-configure.md) (Certificaten configureren met Microsoft Intune) voor meer informatie over het gebruiken en maken van certificaatprofielen in Intune.
 

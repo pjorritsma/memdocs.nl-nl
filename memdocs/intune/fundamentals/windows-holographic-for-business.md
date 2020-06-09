@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2020
+ms.date: 05/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 44cae6e1e7fdd310a6053cbcb6f19371263d0161
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5a463742a9511f21a98c277394f8c0d29084d379
+ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326624"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83791745"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Verschillende apparaatbeheerfuncties beheren en gebruiken op Windows Holographic- en HoloLens-apparaten met Intune
 
@@ -116,6 +116,8 @@ U kunt OMA-URI in uw profielen gebruiken om een aantal instellingen aan te passe
 ### <a name="custom-device-settings"></a>[Aangepaste apparaatinstellingen](../configuration/custom-settings-windows-holographic.md)
 
 Als u instellingen voor OMA-URI (Open Mobile Alliance Uniform Resource Identifier) wilt configureren, kunt u een aangepast profiel maken in Intune. Met de OMA-URI-instellingen kunt u verschillende functies beheren op uw apparaten met Windows Holographic for Business, zoals VPN inschakelen of controleren op updates van Microsoft Update.
+
+Bekijk een [voorbeeld](../configuration/custom-profile-hololens.md) dat gebruikmaakt van de [Windows Defender Application Control (WDAC) CSP](https://docs.microsoft.com/windows/client-management/mdm/applicationcontrol-csp) om te voorkomen dat apps kunnen worden geopend op Windows-apparaten met HoloLens 2.
 
 ### <a name="configure-kiosk-mode"></a>[Kioskmodus configureren](../configuration/kiosk-settings-holographic.md)
 

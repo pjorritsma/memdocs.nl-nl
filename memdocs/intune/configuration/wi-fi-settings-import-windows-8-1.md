@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,18 +15,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ef2c4593ad9809614b7e0d497745065fef12df69
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d17614424cdb20d2d88d818fcdd015c229150d66
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086376"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556333"
 ---
 # <a name="import-wi-fi-settings-for-windows-devices-in-intune"></a>Wi-Fi-instellingen importeren voor Windows-apparaten in Intune
 
 Voor apparaten met Windows kunt u een Wi-Fi-configuratieprofiel importeren dat eerder naar een bestand is geëxporteerd. **Voor apparaten met Windows 10 en hoger kunt u ook rechtstreeks in Intune [een Wi-Fi-profiel maken](wi-fi-settings-windows.md)** .
 
-Van toepassing op:  
+Deze functie is van toepassing op:
+
 - Windows 8.1 en hoger
 - Windows 10 en hoger
 - Windows 10 Desktop of Mobile
@@ -54,12 +55,16 @@ Voer de volgende stappen uit op een Windows-computer waarop het vereiste Wi-Fi-p
 4. Voer de opdracht `netsh wlan export profile name="ProfileName" folder=c:\Wifi` uit. Met deze opdracht wordt in uw doelmap een Wi-Fi-profielbestand met de naam **Wi-Fi-WiFiName.xml** gemaakt.
 
 > [!IMPORTANT]
-> - Als u een Wi-Fi-profiel met een vooraf gedeelde sleutel exporteert, **moet** u `key=clear` aan de opdracht toevoegen. Voer bijvoorbeeld `netsh wlan export profile name="ProfileName" key=clear folder=c:\Wifi` in.
+>
+> - Als u een Wi-Fi-profiel met een vooraf gedeelde sleutel exporteert, **moet** u `key=clear` aan de opdracht toevoegen. Voer bijvoorbeeld het volgende in:
+>
+>   `netsh wlan export profile name="ProfileName" key=clear folder=c:\Wifi`
+>
 > - Door gebruik te maken van een vooraf gedeelde sleutel met Windows 10 wordt een herstelfout in Intune weergegeven. Als dit gebeurt, wordt het Wi-Fi-profiel correct toegewezen aan het apparaat en werkt het profiel zoals verwacht.
 > - Als u een Wi-Fi-profiel met een vooraf gedeelde sleutel exporteert, moet u ervoor zorgen dat het bestand is beveiligd. De sleutel bestaat uit tekst zonder opmaak. Het is dus uw verantwoordelijkheid om de sleutel te beveiligen.
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Het profiel is gemaakt, maar er gebeurt niets. Vervolgens kunt u [het profiel toewijzen](device-profile-assign.md) en [de status ervan controleren](device-profile-monitor.md).
+[Het profiel toewijzen](device-profile-assign.md) en [de status ervan controleren](device-profile-monitor.md).
 
 Zie [Overzicht Wi-Fi-instellingen](wi-fi-settings-configure.md), met inbegrip van andere beschikbare platforms.

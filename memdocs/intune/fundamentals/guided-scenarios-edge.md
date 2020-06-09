@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5c2af6ce301b0a5de06cbbd4126b1661ca21fb0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 49f9b9076d20c1f5d4740a6f8b1b9883e12ce629
+ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79359063"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83853533"
 ---
 # <a name="guided-scenario---deploy-microsoft-edge-for-mobile"></a>Begeleid scenario: Microsoft Edge voor mobiel implementeren
 
@@ -90,6 +90,5 @@ In de laatste stap kunt u een samenvatting beoordelen van de instellingen die u 
 
 ## <a name="next-steps"></a>Volgende stappen
 
-- De beveiliging van het gebruik van Microsoft Edge uitbreiden door integratie met het beveiligingsbeleid van de Intune-app. Zie [Beveiligingsbeleid voor apps voor Microsoft Edge](../apps/manage-microsoft-edge.md#application-protection-policies-for-microsoft-edge) voor meer informatie.
-- Als u ook intranetsites wilt opnemen in het beveiligingsbeleid, onderzoek dan de mogelijkheden voor toegangsbescherming met behulp van proxyintegratie met Azure-toepassingen. Zie [Toepassingproxy-instellingen configureren voor Microsoft Edge](../apps/manage-microsoft-edge.md#configure-application-proxy-settings-for-microsoft-edge) voor meer informatie.
-
+- De beveiliging van het gebruik van Microsoft Edge uitbreiden door integratie met het beveiligingsbeleid van de Intune-app. Zie [Beveiligingsbeleid voor apps in Intune maken](../apps/manage-microsoft-edge.md#create-intune-app-protection-policies) voor meer informatie.
+- Als u ook intranetsites wilt opnemen in het beveiligingsbeleid, onderzoek dan de mogelijkheden voor toegangsbescherming met behulp van proxyintegratie met Azure-toepassingen. Zie [Proxyconfiguratie beheren](../apps/manage-microsoft-edge.md#manage-proxy-configuration) voor meer informatie.

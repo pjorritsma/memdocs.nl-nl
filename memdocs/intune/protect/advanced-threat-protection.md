@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 04/24/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: beea54b7ca244190ec0821d4ce8364369797590a
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.openlocfilehash: 35871aba60d45719b9a6da50184a6113f72e6044
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166605"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989290"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Naleving voor Microsoft Defender ATP met voorwaardelijke toegang in Intune afdwingen
 
@@ -204,7 +204,7 @@ Zie [Intune-rapporten](../fundamentals/reports.md) voor meer informatie over rap
 
 ## <a name="view-onboarding-status"></a>Status voor onboarding weergeven
 
-Als u de status voor onboarding van alle door Intune beheerde Windows 10-apparaten wilt weergeven, gaat u naar **Tenantbeheer** > **Microsoft Defender ATP**. Op deze pagina kunt u ook een apparaatconfiguratieprofiel maken om meer apparaten naar Microsoft Defender ATP te onboarden.
+Als u de status voor onboarding van alle door Intune beheerde Windows 10-apparaten wilt weergeven, gaat u naar **Eindpuntbeveiliging** > **Microsoft Defender ATP**. Op deze pagina kunt u ook een apparaatconfiguratieprofiel maken om meer apparaten naar Microsoft Defender ATP te onboarden.
 
 ## <a name="next-steps"></a>Volgende stappen
 

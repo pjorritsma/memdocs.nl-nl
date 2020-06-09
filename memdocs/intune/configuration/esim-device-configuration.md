@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
-ms.topic: conceptual
+ms.date: 05/26/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,14 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4e9a37e2dbb725a06d304d345fd085dabbc5e14
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 17c0c83452f7b67ad2fef660e8f0c81bc6d4b78f
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086998"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989144"
 ---
-# <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Mobiele eSIM-profielen configureren in Intune - Openbare preview
+# <a name="configure-esim-cellular-profiles-in-intune-public-preview"></a>Mobiele eSIM-profielen configureren in Intune (openbare preview)
 
 Een eSIM is een ingesloten SIM-chip. U kunt hiermee verbinding maken met internet via een mobiele dataverbinding op een met eSIM compatibel apparaat, zoals de [Surface LTE Pro](https://www.microsoft.com/surface/business/surface-pro). Met een eSIM hebt u geen SIM-kaart van uw mobiele provider meer nodig. Als wereldreiziger hoeft u dan alleen nog maar te schakelen tussen mobiele providers en gegevensabonnementen om altijd online te blijven.
 
@@ -37,7 +37,7 @@ U kunt in Intune eenmalig te gebruiken activeringscodes importeren die door uw p
 
 Als u met Intune een eSIM wilt implementeren op uw apparaten, hebt u het volgende nodig:
 
-- **Met eSIM compatibele apparaten**, zoals de Surface LTE: bekijk [of uw apparaat ondersteuning biedt voor eSIM](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data). U kunt ook een lijst bekijken van [enkele apparaten waarvan bekend is dat ze met eSIM compatibel zijn](#esim-capable-devices) (in dit artikel).
+- **Apparaten met eSIM-mogelijkheden**, zoals de Surface LTE: Zie [of uw apparaat ondersteuning biedt voor eSIM](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data). U kunt ook een lijst bekijken van [enkele apparaten waarvan bekend is dat ze met eSIM compatibel zijn](#esim-capable-devices) (in dit artikel).
 - **Pc’s met Windows 10 Fall Creators Update** (1709 of hoger) die zijn geregistreerd en waarvoor MDM van Intune wordt gebruikt
 - **Activeringscodes** aangeleverd door uw provider. De eenmalig te gebruiken activeringscodes worden aan Intune toegevoegd en geïmplementeerd op uw met eSIM compatibele apparaten. Neem contact op met uw provider om eSIM-activeringscodes te verkrijgen.
 
@@ -54,23 +54,9 @@ Dit artikel bevat informatie over deze stappen.
 
 ## <a name="esim-capable-devices"></a>Voor eSIM geschikte apparaten
 
-De volgende apparaten zijn geschikt voor eSIM en zijn momenteel verkrijgbaar. Controleer ook of [uw apparaat ondersteuning biedt voor eSIM](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data).
+Als u niet zeker weet of uw apparaten eSIM ondersteunen, neemt u contact op met de fabrikant van uw apparaat. Op Windows-apparaten kunt u de ondersteuning voor eSIM bevestigen. Zie [Een eSIM gebruiken om een verbinding met een mobiel netwerk op te halen op uw Windows 10-computer](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data) voor meer informatie.
 
-- Acer Swift 7
-- Asus NovoGo TP370QL
-- Asus TP401
-- Asus Transformer Mini T103
-- HP Elitebook G5
-- HP Envy x2
-- HP Probook G5
-- Lenovo Miix 630
-- Lenovo T480
-- Samsung Galaxy Book
-- Surface Pro LTE
-- HP Spectre Folio 13
-- Lenovo Yoga C630
-
-## <a name="step-1-add-cellular-activation-codes"></a>Stap 1: activeringscodes voor mobiele apparaten toevoegen
+## <a name="step-1-add-cellular-activation-codes"></a>Stap 1: Activeringscodes voor mobiele apparaten toevoegen
 
 De activeringscodes voor mobiele apparaten worden door uw provider aangeleverd in een CSV-bestand. Wanneer u over het bestand beschikt, voegt u het als volgt toe aan Intune:
 
@@ -97,13 +83,13 @@ Als u met een CSV-bestand met activeringscodes werkt, controleert u of uw provid
     1. De eerste kolom bevat de unieke ICCID (de id van de SIM-chip)
     2. Tweede kolom bevat de overeenkomst-id's, door komma's gescheiden (geen komma aan het einde). Bekijk het volgende voorbeeld:
 
-        ![CSV-voorbeeldbestand met activeringscodes van een provider](./media/esim-device-configuration/url-activation-code-examples.png)
+        :::image type="content" source="./media/esim-device-configuration/url-activation-code-examples.png" alt-text="CSV-voorbeeldbestand met activeringscodes van een provider.":::
 
 3. De naam van het CSV-bestand wordt de naam van de mobiele-abonnementsgroep in het beheercentrum Eindpuntbeheer. In de voorgaande afbeelding is de bestandsnaam `UnlimitedDataSkynet.csv`. In Intune heet de abonnementsgroep dus `UnlimitedDataSkynet.csv`:
 
-    ![De mobiele-abonnementsgroep krijgt de naam van het CSV-voorbeeldbestand met activeringscodes](./media/esim-device-configuration/subscription-pool-name-csv-file.png)
+    :::image type="content" source="./media/esim-device-configuration/subscription-pool-name-csv-file.png" alt-text="De mobiele-abonnementsgroep krijgt de naam van het CSV-voorbeeldbestand met activeringscodes.":::
 
-## <a name="step-2-create-an-azure-ad-device-group"></a>Stap 2: een Azure AD-apparaatgroep maken
+## <a name="step-2-create-an-azure-ad-device-group"></a>Stap 2: Een Azure AD-apparaatgroep maken
 
 Maak een apparaatgroep die de voor eSIM geschikte apparaten bevat. In [Groepen toevoegen](../fundamentals/groups-add.md) staat hoe u dit doet.
 
@@ -120,14 +106,14 @@ Wijs het profiel toe aan de Azure AD-groep die uw eSIM-apparaten bevat.
 3. In de lijst met profielen selecteert u de mobiele eSIM-abonnementsgroep die u wilt toewijzen en selecteert u vervolgens **Toewijzingen**.
 4. Geef aan of u groepen wilt **opnemen** of **uitsluiten** en selecteer vervolgens de gewenste groepen.
 
-    ![Een apparaatgroep opnemen voor het toewijzen van het profiel](./media/esim-device-configuration/include-exclude-groups.png)
+    :::image type="content" source="./media/esim-device-configuration/include-exclude-groups.png" alt-text="Een apparaatgroep opnemen voor het toewijzen van het profiel in Microsoft Intune.":::
 
 5. Wanneer u uw groepen hebt geselecteerd, kiest u een Azure AD-groep. Als u meerdere groepen wilt selecteren, houdt u de toets **Ctrl** ingedrukt en klikt u op de groepen.
 6. Wanneer u klaar bent, klikt u op **Opslaan** om de wijzigingen op te slaan.
 
 eSIM-activeringscodes worden één keer gebruikt. Wanneer Intune een activeringscode heeft geïnstalleerd op een apparaat neemt de eSIM-module contact op met de provider om het mobiele profiel te downloaden. Hiermee wordt de registratie van het apparaat bij het netwerk van de provider voltooid.
 
-## <a name="step-4-monitor-deployment"></a>Stap 4: implementatie controleren
+## <a name="step-4-monitor-deployment"></a>Stap 4: Implementatie controleren
 
 ### <a name="review-the-deployment-status"></a>De implementatiestatus controleren
 
@@ -148,10 +134,10 @@ Nadat u een apparaatprofiel hebt gemaakt, biedt Intune grafieken. In deze grafie
 
     Intune toont de leverings- en installatiestatus van de activeringscode die u voor apparaten wilt gebruiken.
 
-    - **Apparaat niet gesynchroniseerd**: het doelapparaat heeft nog geen contact opgenomen met Intune sinds het maken van het eSIM-implementatiebeleid
-    - **Activering in behandeling**: een tijdelijke status wanneer Intune bezig is met het installeren van de activeringscode op het apparaat
-    - **Actief**: het installeren van de activeringscode is voltooid
-    - **Activering mislukt**: het installeren van de activeringscode is mislukt - zie de handleiding voor probleemoplossing.
+    - **Apparaat niet gesynchroniseerd**: Het doelapparaat heeft nog geen contact opgenomen met Intune sinds het maken van het eSIM-implementatiebeleid
+    - **Activering in behandeling**: Een tijdelijke status wanneer Intune bezig is met het installeren van de activeringscode op het apparaat
+    - **Actief**: Het installeren van de activeringscode is voltooid
+    - **Activering mislukt**: Het installeren van de activeringscode is mislukt. Zie de handleiding voor probleemoplossing.
 
 #### <a name="view-the-detailed-device-status"></a>De gedetailleerde apparaatstatus weergeven
 
@@ -160,12 +146,12 @@ U kunt een gedetailleerde lijst met de apparaten uit Apparaatstatus controleren 
 1. Selecteer **Apparaten** > **Mobiele eSIM-profielen** > Selecteer een bestaand abonnement.
 2. Selecteer **Apparaatstatus**. Intune bevat aanvullende informatie over het apparaat:
 
-    - **Apparaatnaam**: de naam van het doelapparaat
-    - **Gebruiker**: de gebruiker van het geregistreerde apparaat
-    - **ICCID**: de unieke code die door de provider wordt geleverd. Deze maakt deel uit van de activeringscode die op het apparaat wordt geïnstalleerd
-    - **Activeringsstatus**: de Intune-leverings- en installatiestatus van de activeringscode op het apparaat
-    - **Mobiele status**: status die wordt opgegeven door de provider. Neem contact op met de provider om mogelijke problemen op te lossen.
-    - **Laatste check-in**: de datum waarop het apparaat het laatst met Intune heeft gecommuniceerd
+    - **Apparaatnaam**: De naam van het doelapparaat
+    - **Gebruiker**: De gebruiker van het geregistreerde apparaat
+    - **ICCID**: De unieke code die door de provider wordt geleverd. Deze maakt deel uit van de activeringscode die op het apparaat wordt geïnstalleerd
+    - **Activeringsstatus**: De Intune-leverings- en installatiestatus van de activeringscode op het apparaat
+    - **Mobiele status**: De status die is opgegeven door de mobiele provider. Neem contact op met de provider om mogelijke problemen op te lossen.
+    - **Laatste check-in**: De datum waarop het apparaat het laatst met Intune heeft gecommuniceerd
 
 ### <a name="monitor-esim-profile-details-on-the-actual-device"></a>De eSIM-profielgegevens op het apparaat zelf controleren
 
@@ -173,7 +159,7 @@ U kunt een gedetailleerde lijst met de apparaten uit Apparaatstatus controleren 
 2. Selecteer **Mobiel** > **eSIM-profielen beheren**
 3. De eSIM-profielen worden weergegeven:
 
-    ![De eSIM-profielen bekijken in uw apparaatinstellingen](./media/esim-device-configuration/device-settings-cellular-profiles.png)
+    :::image type="content" source="./media/esim-device-configuration/device-settings-cellular-profiles.png" alt-text="De eSIM-profielen bekijken in uw apparaatinstellingen.":::
 
 ## <a name="remove-the-esim-profile-from-device"></a>Het eSIM-profiel van het apparaat verwijderen
 
@@ -193,8 +179,9 @@ Het eSIM-profiel wordt ook verwijderd wanneer het apparaat [buiten gebruik wordt
 - Zorg ervoor dat uw CSV-bestand correct is ingedeeld. Controleer of het bestand dubbele codes bevat, meerdere providers bevat en verschillende data-abonnementen bevat. Deze mogen niet aanwezig zijn. Elk bestand moet dienen voor één provider en één mobiel data-abonnement.
 - Maak een statische Azure AD-groep die alleen de eSIM-doelapparaten bevat.
 - Als er een probleem is met de implementatiestatus, controleert u de volgende zaken:
-  - **Onjuiste bestandsindeling**: zie **Stap 1: activeringscodes voor mobiele apparaten toevoegen** (in dit artikel) over het indelen van het bestand.
-  - **Mobiele activering is mislukt, neem contact op met de provider**: de activeringscode kan mogelijk niet in het netwerk van de provider worden geactiveerd. Het kan ook zijn dat het downloaden van het profiel én de mobiele activering zijn mislukt.
+  - **Onjuiste bestandsindeling**: Zie **Stap 1: Activeringscodes voor mobiele apparaten toevoegen** (in dit artikel) over het indelen van het bestand.
+  - **Fout bij mobiele activering, neem contact op met de mobiele provider**: De activeringscode wordt mogelijk niet geactiveerd binnen hun netwerk. Het kan ook zijn dat het downloaden van het profiel én de mobiele activering zijn mislukt.
 
 ## <a name="next-steps"></a>Volgende stappen
+
 [Apparaatprofielen configureren](device-profiles.md)

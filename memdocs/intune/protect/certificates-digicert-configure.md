@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 04/21/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de7b96b5ad54a207b92221f7685f6c7f50942c46
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 99cad94d0d0f56aba94e8d00a091efea914f418e
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079872"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990346"
 ---
 # <a name="set-up-intune-certificate-connector-for-digicert-pki-platform"></a>Intune Certificate Connector instellen voor het DigiCert PKI-platform
 
@@ -32,7 +32,7 @@ U kunt Intune Certificate Connector gebruiken om PKCS-certificaten van het DigiC
 > [!TIP]
 > DigiCert heeft de websitebeveiliging van Symantec en verwante zakelijke PKI-oplossingen verkregen. Raadpleeg het [artikel over technische ondersteuning van Symantec](https://support.symantec.com/en_US/article.INFO4722.html) voor meer informatie over deze wijziging.
 
-Als u de Intune Certificate Connector al gebruikt om certificaten van een Microsoft-CA uit te geven met behulp van PKCS of System Center Endpoint Protection, kunt u dezelfde connector gebruiken om PKCS-certificaten van een DigiCert-CA te configureren en uit te geven. Nadat u de configuratie ter ondersteuning van de DigiCert-CA hebt voltooid, kan de Intune Certificate Connector de volgende certificaten uitgeven:
+Als u de Intune Certificate Connector al gebruikt om certificaten van een Microsoft-CA uit te geven met behulp van PKCS of Simple Certificate Enrollment Protocol (SCEP), kunt u dezelfde connector gebruiken om PKCS-certificaten van een DigiCert-CA te configureren en uit te geven. Nadat u de configuratie ter ondersteuning van de DigiCert-CA hebt voltooid, kan de Intune Certificate Connector de volgende certificaten uitgeven:
 
 * PKCS-certificaten van een Microsoft-CA
 * PKCS-certificaten van een DigiCert-CA

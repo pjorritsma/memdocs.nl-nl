@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 03/20/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f16c39ff0af44918099863be5d23ec9fe564493
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 685f2a51c7a2bfacbc95fb2a7615f0e459b97245
+ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80624917"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84126512"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>Android-apparaten verplaatsen van beheer door apparaatbeheerder naar werkprofielbeheer
 
@@ -59,19 +59,23 @@ Wanneer gebruikers zien dat ze om die reden niet meer compatibel zijn, kunnen ze
     ![Apparaten blokkeren](./media/android-move-device-admin-work-profile/block-devices.png)
 
 5. Op de pagina **Locaties** kunt u locaties toevoegen als u dat wilt > **Volgende**.
-6. In **Acties voor niet-naleving** kunt u de actie **E-mail verzenden naar de eindgebruiker** instellen.
 
-    ![E-mail verzenden](./media/android-move-device-admin-work-profile/send-email.png)
+6. In het tabblad **Acties voor niet-naleving** kunt u de [beschikbare acties voor niet-naleving](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance) configureren om de eindgebruikerservaring voor deze stroom aan te passen.
 
+    ![Niet-nalevingsacties](media/android-move-device-admin-work-profile/noncompliance-actions.png)
 
-    In het e-mailbericht kunt u de onderstaande URL in uw berichten aan gebruikers toevoegen. Met de URL wordt de pagina **Apparaatinstellingen bijwerken** van de Android-bedrijfsportal geopend. Op deze pagina wordt het proces gestart om over te stappen op werkprofielbeheer.
-    - `https://portal.manage.microsoft.com/UpdateSettings.aspx`.
-    - Voor de Amerikaanse overheid kunt u in plaats hiervan deze koppeling gebruiken: `https://portal.manage.microsoft.us/UpdateSettings.aspx`.
+    Enkele acties zijn het overwegen waard:
+
+    - **Het apparaat als niet-compatibel markeren**: Deze actie is standaard op nul (0) dagen ingesteld, waardoor de apparaten onmiddellijk als non-compliant worden gemarkeerd. Door dit aantal dagen te verhogen, krijgen gebruikers een gratieperiode waarin ze naar werkprofielbeheer kunnen stromen zonder als non-compliant te worden gemarkeerd. Door dit aantal bijvoorbeeld op 14 dagen in te stellen, krijgen gebruikers twee weken de tijd om van apparaatbeheerder naar werkprofielbeheer te gaan zonder toegang tot resources te verliezen.
+    - **Pushmelding verzenden naar eindgebruiker**: Configureer dit om pushmeldingen naar de apparaatbeheerderapparaten te sturen. Wanneer gebruikers de melding selecteren, wordt de Android-bedrijfsportal gelanceerd op de pagina **Apparaatinstellingen bijwerken**, waar ze de stroom kunnen starten om naar werkprofielbeheer te gaan.
+    - **E-mail verzenden naar de eindgebruiker**: Configureer dit om e-mails te sturen naar gebruikers over de overstap van apparaatbeheerder naar werkprofielbeheer. In de e-mail kunt u de onderstaande URL toevoegen die, indien geselecteerd, de Android-bedrijfsportal lanceert op de pagina Apparaatinstellingen bijwerken, waar ze de stroom naar werkprofielbeheer kunnen starten.
+      - `https://portal.manage.microsoft.com/UpdateSettings.aspx`.
+      - Voor de Amerikaanse overheid kunt u in plaats hiervan deze koppeling gebruiken: `https://portal.manage.microsoft.us/UpdateSettings.aspx`.
   
-    > [!NOTE]
-    > - Natuurlijk kunt u gebruikersvriendelijke hypertekst gebruiken voor de koppelingen in uw communicatie met gebruikers. Gebruik echter geen URL-verkorters omdat de koppelingen dan misschien niet werken.
-    > - Als de Android-bedrijfsportal op de achtergrond is geopend wanneer een gebruiker op de koppeling tikt, kan het zijn dat in plaats daarvan de laatst geopende pagina wordt weergegeven.
-    > - Gebruikers moeten op een Android-apparaat op de koppeling tikken. Als ze de koppeling in plaats daarvan in een browser plakken, wordt de Android-bedrijfsportal niet gestart. 
+      > [!NOTE]
+      > - Natuurlijk kunt u gebruikersvriendelijke hypertekst gebruiken voor de koppelingen in uw communicatie met gebruikers. Gebruik echter geen URL-verkorters omdat de koppelingen dan misschien niet werken.
+      > - Als de Android-bedrijfsportal op de achtergrond is geopend wanneer een gebruiker op de koppeling tikt, kan het zijn dat in plaats daarvan de laatst geopende pagina wordt weergegeven.
+      > - Gebruikers moeten op een Android-apparaat op de koppeling tikken. Als ze de koppeling in plaats daarvan in een browser plakken, wordt de Android-bedrijfsportal niet gestart. 
 
     Kies **Volgende**.
 

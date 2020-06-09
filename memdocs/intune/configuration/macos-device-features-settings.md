@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/16/2020
+ms.date: 05/05/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 63ffda60d00c1a386eb65d851563c911957c0acd
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9d4bc2de9e16cfcf9322cf343badafe3c9a35c70
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81615715"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428906"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Instellingen van apparaatfuncties voor macOS in Intune
 
@@ -31,25 +31,29 @@ Gebruik deze functies om macOS-apparaten te beheren als onderdeel van uw Mobile 
 
 Dit artikel beschrijft deze instellingen en wat elke instelling doet. Het beschrijft tevens de stappen voor het ophalen van het IP-adres, het pad en de poort van AirPrint-printers via de Terminal-app (emulator). Ga voor meer informatie over de functies van het apparaat naar [Instellingen voor iOS-/iPadOS- of macOS-apparaatfuncties toevoegen](device-features-configure.md).
 
+> [!NOTE]
+> De gebruikersinterface komt mogelijk niet overeen met de inschrijvingstypen in dit artikel. De informatie in dit artikel is juist. De gebruikersinterface wordt bijgewerkt in een aanstaande release.
+
 ## <a name="before-you-begin"></a>Voordat u begint
 
-[Maak een macOS-apparaatconfiguratieprofiel](device-features-configure.md).
+[Maak een profiel voor macOS-apparaatfuncties](device-features-configure.md).
 
 > [!NOTE]
 > Deze instellingen zijn van toepassing op verschillende inschrijvingstypen, waarbij sommige instellingen van toepassing zijn op alle inschrijvingsopties. Zie [macOS-inschrijving](../enrollment/macos-enroll.md) voor meer informatie over de verschillende inschrijvingstypen.
 
 ## <a name="airprint"></a>AirPrint
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Deze instellingen zijn van toepassing op: Apparaatinschrijving en geautomatiseerde apparaatinschrijving
+### <a name="settings-apply-to-all-enrollment-types"></a>Deze instellingen zijn van toepassing op: Alle inschrijvingstypen
 
-- **IP-adres**: voer het IPv4- of IPv6-adres van de printer in. Als u hostnamen gebruikt om printers te identificeren, haalt u het IP-adres op door de printer in de Terminal-app te pingen. In [Haal het IP-adres en het pad op](#get-the-ip-address-and-path) (in dit artikel) vindt u meer informatie.
-- **Pad**: Voer het pad van de printer in. Het pad is doorgaans `ipp/print` voor printers in uw netwerk. In [Haal het IP-adres en het pad op](#get-the-ip-address-and-path) (in dit artikel) vindt u meer informatie.
-- **Poort** (iOS 11.0+, iPadOS 13.0+): Voer de luisterpoort van de AirPrint-bestemming in. Als u deze eigenschap leeg laat, maakt AirPrint gebruik van de standaardpoort.
-- **TLS** (iOS 11.0+, iPadOS 13.0+): Selecteer **Inschakelen** voor het beveiligen van AirPrint-verbindingen met Transport Layer Security (TLS).
+- **AirPrint-doelen**: **Voeg** een of meer AirPrint-printers toe waarmee gebruikers kunnen afdrukken vanaf hun apparaten. Voer ook in:
+  - **Poort** (iOS 11.0+, iPadOS 13.0+): Voer de luisterpoort van de AirPrint-bestemming in. Als u deze eigenschap leeg laat, maakt AirPrint gebruik van de standaardpoort.
+  - **IP-adres**: voer het IPv4- of IPv6-adres van de printer in. Voer bijvoorbeeld `10.0.0.1` in. Als u hostnamen gebruikt om printers te identificeren, haalt u het IP-adres op door de printer in de Terminal-app te pingen. In [IP-adres en pad ophalen](#get-the-ip-address-and-path) (in dit artikel) vindt u meer informatie.
+  - **Pad**: Voer het bronpad van de printer in. Het pad is doorgaans `ipp/print` voor printers in uw netwerk. In [IP-adres en pad ophalen](#get-the-ip-address-and-path) (in dit artikel) vindt u meer informatie.
+  - **TLS** (iOS 11.0+, iPadOS 13.0+): Uw opties zijn:
+    - **Nee** (standaard): Transport Layer Security (TLS) wordt niet afgedwongen wanneer verbinding wordt gemaakt met AirPrint-printers.
+    - **Ja**: AirPrint-verbindingen worden beveiligd met TLS (Transport Layer Security).
 
-- **Voeg** de AirPrint-server toe. U kunt veel AirPrint-servers toevoegen.
-
-U kunt ook een door komma's gescheiden bestand (.csv) **importeren** met een lijst van AirPrint-printers. Nadat u AirPrint-printers aan Intune hebt toegevoegd, kunt u bovendien deze lijst **exporteren**.
+- **Importeer** een door komma's gescheiden bestand (.csv) met een lijst van AirPrint-printers. Nadat u AirPrint-printers aan Intune hebt toegevoegd, kunt u bovendien deze lijst **exporteren**.
 
 ### <a name="get-the-ip-address-and-path"></a>IP-adres en pad ophalen
 
@@ -66,60 +70,88 @@ Om AirPrinter-servers toe te voegen, hebt u het IP-adres van de printer, het bro
 
 4. Gebruik de waarden van het IP-adres en het bronpad. In dit voorbeeld is het IP-adres `10.50.25.21` en het bronpad `/ipp/port1`.
 
+## <a name="associated-domains"></a>Gekoppelde domeinen
+
+In Intune kunt u het volgende doen:
+
+- Een groot aantal app-naar-domein-koppelingen toevoegen.
+- Een groot aantal domeinen koppelen aan dezelfde app.
+
+Deze functie is van toepassing op:
+
+- macOS 10.15 of hoger
+
+### <a name="settings-apply-to-user-approved-device-enrollment-and-automated-device-enrollment"></a>Deze instellingen zijn van toepassing op: Door de gebruiker goedgekeurde apparaatinschrijving en automatische apparaatregistratie
+
+- **Gekoppelde domeinen**: **Voeg een koppeling toe** tussen uw domein en een app. Door deze functie worden aanmeldingsreferenties tussen een contoso-app en een contoso-website gedeeld. Voer ook in:
+
+  - **App-id**: voer de app-id in van de app die u aan een website wilt koppelen. De app-id bevat de team-id en een bundel-id: `TeamID.BundleID`.
+
+    De team-id is een alfanumerieke tekenreeks van 10 tekens (letters en cijfers) die door Apple wordt gegenereerd voor uw app-ontwikkelaars, zoals `ABCDE12345`. [Zoek uw team-id](https://help.apple.com/developer-account/#/dev55c3c710c) : (opent de website van Apple) biedt meer informatie.
+
+    De bundel-id is een unieke identificatie van de app en heeft doorgaans de omgekeerde notatie van de domeinnaam. De bundel-id van Finder is bijvoorbeeld `com.apple.finder`. Gebruik het AppleScript in Terminal om de bundel-id te vinden:
+
+    `osascript -e 'id of app "ExampleApp"'`
+
+  - **Domein**: voer het websitedomein in dat u aan een app wilt koppelen. Het domein bevat een servicetype en een volledig gekwalificeerde hostnaam, zoals `webcredentials:www.contoso.com`.
+
+    U kunt alle subdomeinen van een gekoppeld domein vergelijken door `*.` (een asterisk-jokerteken en een punt) vóór het domein in te voeren. De punt is vereist. Exacte domeinen hebben een hogere prioriteit dan domeinen met een jokerteken. Patronen van bovenliggende domeinen worden vergeleken *als* er geen overeenkomst wordt gevonden in het volledig gekwalificeerde subdomein.
+
+    Mogelijke servicetypen zijn:
+
+    - **authsrv**: App-extensie voor eenmalige aanmelding
+    - **applink**: Universele koppeling
+    - **webcredentials**: Automatisch invullen van wachtwoorden
+
+> [!TIP]
+> Als u problemen wilt oplossen, opent u **Systeemvoorkeuren** > **Profielen** op uw macOS-apparaat. Controleer of het profiel dat u hebt gemaakt, voorkomt in de lijst met apparaatprofielen. Zo ja, dan controleert u of de **configuratie voor gekoppelde domeinen** in het profiel voorkomt en de juiste app-id en domeinen bevat.
+
 ## <a name="login-items"></a>Aanmeldingsitems
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Deze instellingen zijn van toepassing op: Alle inschrijvingstypen
 
-- **Bestanden, mappen en aangepaste apps**: **voeg het pad toe** van een bestand, map, aangepaste app of systeem-app die u wilt openen wanneer gebruikers zich aanmelden bij hun apparaten. Systeem-apps of apps die zijn gebouwd of aangepast voor uw organisatie, bevinden zich doorgaans in de map `Applications` en hebben een pad dat er als volgt uitziet: `/Applications/AppName.app`. 
+- **De bestanden, mappen en aangepaste apps toevoegen die worden gestart bij het aanmelden**: **voeg het pad toe** van een bestand, map, aangepaste app of systeem-app die u wilt openen wanneer gebruikers zich aanmelden bij hun apparaten. Voer ook in:
 
-  U kunt een groot aantal bestanden, mappen en apps toevoegen. Voer bijvoorbeeld het volgende in:  
-  
-  - `/Applications/Calculator.app`
-  - `/Applications`
-  - `/Applications/Microsoft Office/root/Office16/winword.exe`
-  - `/Users/UserName/music/itunes.app`
-  
-  Let erop dat u het juiste pad opgeeft bij het toevoegen van een app, map of bestand. Niet alle items bevinden zich in de map `Applications`. Als gebruikers een item naar een andere locatie verplaatsen, verandert het pad. Dit verplaatste item wordt niet geopend wanneer de gebruiker zich aanmeldt.
+  - **Pad van item**: Voer het pad naar het bestand, de map of de app in. Systeem-apps of apps die zijn gebouwd of aangepast voor uw organisatie, bevinden zich doorgaans in de map `Applications` en hebben een pad dat er als volgt uitziet: `/Applications/AppName.app`.
 
-- **Verbergen voor gebruikersconfiguratie**: bij **verbergen** wordt de app niet weergegeven in de lijst met aanmeldingsitems voor gebruikers en groepen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem geeft standaard het item dat u opent bij het aanmelden weer in de lijst met aanmeldingsitems voor gebruikers en groepen wanneer de optie voor verbergen is uitgeschakeld.
+    U kunt een groot aantal bestanden, mappen en apps toevoegen. Voer bijvoorbeeld het volgende in:  
+  
+    - `/Applications/Calculator.app`
+    - `/Applications`
+    - `/Applications/Microsoft Office/root/Office16/winword.exe`
+    - `/Users/UserName/music/itunes.app`
+  
+    Let erop dat u het juiste pad opgeeft bij het toevoegen van een app, map of bestand. Niet alle items bevinden zich in de map `Applications`. Als gebruikers een item naar een andere locatie verplaatsen, verandert het pad. Dit verplaatste item wordt niet geopend wanneer de gebruiker zich aanmeldt.
+
+  - **Verbergen**: Kies of u wilt dat de app wordt weergegeven of verborgen. Uw opties zijn:
+    - **Niet geconfigureerd**: Dit is de standaardinstelling. Deze instelling wordt niet gewijzigd of bijgewerkt door Intune. Het besturingssysteem geeft standaard het item weer in de lijst met aanmeldingsitems voor gebruikers en groepen wanneer de optie voor verbergen is uitgeschakeld.
+    - **Ja**: De app wordt niet weergegeven in de lijst met aanmeldingsitems voor gebruikers en groepen.
 
 ## <a name="login-window"></a>Aanmeldingsvenster
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Deze instellingen zijn van toepassing op: Apparaatinschrijving en geautomatiseerde apparaatinschrijving
+### <a name="settings-apply-to-all-enrollment-types"></a>Deze instellingen zijn van toepassing op: Alle inschrijvingstypen
 
-#### <a name="window-layout"></a>Vensterindeling
-
-- **Aanvullende informatie op de menubalk weergeven**: Wanneer het tijdgebied op de menubalk wordt geselecteerd, wordt met **Toestaan** de hostnaam en macOS-versie getoond. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het kan zijn dat het besturingssysteem standaard deze informatie niet weergeeft op de menubalk.
+- **Aanvullende informatie op de menubalk weergeven**: Wanneer het tijdgebied op de menubalk wordt geselecteerd, worden met **Ja** de hostnaam en macOS-versie getoond. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het kan zijn dat het besturingssysteem standaard deze informatie niet weergeeft op de menubalk.
 - **Banner**: Voer een bericht in dat op het aanmeldingsscherm van apparaten wordt weergegeven. Voer bijvoorbeeld gegevens over uw organisatie, een welkomstbericht, informatie over gevonden voorwerpen, enzovoort in.
-- **Aanmeldingsindeling kiezen**: kies hoe gebruikers zich aanmelden op apparaten. Uw opties zijn:
-  - **Vragen om gebruikersnaam en wachtwoord** (standaard): Hiermee vereist u dat gebruikers een gebruikersnaam en wachtwoord invoeren.
-  - **Een lijst met alle gebruikers weergeven, vragen om wachtwoord**: Hiermee vereist u dat gebruikers hun gebruikersnaam selecteren in een lijst met gebruikers en vervolgens hun wachtwoord invoeren. Configureer ook het volgende:
+- **Tekstvelden voor gebruikersnaam en wachtwoord vereisen**: kies hoe gebruikers zich aanmelden op apparaten. Met **Ja** vereist u dat gebruikers een gebruikersnaam en wachtwoord invoeren. Wanneer dit is ingesteld op **Niet geconfigureerd**, wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard vereist het besturingssysteem mogelijk dat gebruikers hun gebruikersnaam selecteren in een lijst en vervolgens hun wachtwoord typen.
 
-    - **Lokale gebruikers**: Met **Verbergen** worden de lokale gebruikersaccounts niet weergegeven in de lijst met gebruikers, waaronder mogelijk de standaard- en beheerdersaccounts. Alleen de netwerk- en systeemgebruikersaccounts worden weergegeven. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem kan standaard de lokale gebruikersaccounts weergeven in de lijst met gebruikers.
-    - **Mobiele accounts**: Met **Verbergen** worden mobiele accounts niet weergegeven in de lijst met gebruikers. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem kan standaard de mobiele accounts weergeven in de lijst met gebruikers. Sommige mobiele accounts worden mogelijk weergegeven als netwerkgebruikers.
-    - **Netwerkgebruikers**: Selecteer **Weergeven** om de netwerkgebruikers in de lijst met gebruikers weer te geven. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het kan zijn dat het besturingssysteem standaard de netwerkgebruikersaccounts niet weergeeft in de lijst met gebruikers.
-    - **Gebruikers met beheerdersrechten**: Met **Verbergen** worden de gebruikersaccounts met beheerdersrechten niet weergegeven in de lijst met gebruikers. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem kan standaard de gebruikersaccounts met beheerdersrechten weergeven in de lijst met gebruikers.
-    - **Andere gebruikers**: Selecteer **Weergeven** om de **Andere...** gebruikers weer te geven in de lijst met gebruikers. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem geeft mogelijk standaard de andere gebruikersaccounts niet weer in de lijst met gebruikers.
+  Voer ook in:
 
-#### <a name="login-screen-power-settings"></a>Energie-instellingen op het aanmeldingsscherm
+  - **Lokale gebruikers verbergen**: Met **Ja** worden de lokale gebruikersaccounts niet weergegeven in de lijst met gebruikers, waaronder mogelijk de standaard- en beheerdersaccounts. Alleen de netwerk- en systeemgebruikersaccounts worden weergegeven. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem kan standaard de lokale gebruikersaccounts weergeven in de lijst met gebruikers.
+  - **Mobiele accounts verbergen**: Met **Ja** worden mobiele accounts niet weergegeven in de lijst met gebruikers. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem kan standaard de mobiele accounts weergeven in de lijst met gebruikers. Sommige mobiele accounts worden mogelijk weergegeven als netwerkgebruikers.
+  - **Netwerkgebruikers weergeven**: Selecteer **Ja** om de netwerkgebruikers in de lijst met gebruikers weer te geven. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het kan zijn dat het besturingssysteem standaard de netwerkgebruikersaccounts niet weergeeft in de lijst met gebruikers.
+  - **Beheerders van de computer verbergen**: Met **Ja** worden de gebruikersaccounts met beheerdersrechten niet weergegeven in de lijst met gebruikers. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem kan standaard de gebruikersaccounts met beheerdersrechten weergeven in de lijst met gebruikers.
+  - **Alle andere gebruikers weergeven**: Selecteer **Ja** om de **Andere...** gebruikers weer te geven in de lijst met gebruikers. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem geeft mogelijk standaard de andere gebruikersaccounts niet weer in de lijst met gebruikers.
 
-- **Knop Afsluiten**: Met **Verbergen** wordt de knop Afsluiten niet weergegeven op het aanmeldingsscherm. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem kan standaard de knop Afsluiten weergeven.
-- **Knop Opnieuw opstarten**: Met **Verbergen** wordt de knop Opnieuw opstarten niet weergegeven op het aanmeldingsscherm. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem kan standaard de knop Opnieuw opstarten weergeven.
-- **Knop Slaapstand**: Met **Verbergen** wordt de knop Slaapstand niet weergegeven op het aanmeldingsscherm. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem kan standaard de knop Slaapstand weergeven.
-
-#### <a name="other"></a>Overige
-
-- **Gebruikersaanmelding via console uitschakelen**: Met **Uitschakelen** wordt de macOS-opdrachtregel verborgen die wordt gebruikt voor aanmelding. Voor standaardgebruikers kunt u deze instelling het beste **Uitschakelen**. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem kan standaard toestaan dat geavanceerde gebruikers zich aanmelden via de macOS-opdrachtregel. Om de consolemodus in te schakelen moeten gebruikers `>console` invoeren in het veld Gebruikersnaam en zich verifiëren in het consolevenster.
-
-#### <a name="apple-menu"></a>Apple-menu
-
-Nadat gebruikers zich bij de apparaten hebben aangemeld, bepalen de volgende instellingen wat ze kunnen doen.
-
-- **Afsluiten deactiveren**: Met **Uitschakelen** wordt voorkomen dat gebruikers na aanmelding de optie **Afsluiten** selecteren. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem kan standaard toestaan dat gebruikers de menuopdracht **Afsluiten** selecteren op apparaten.
-- **Opnieuw opstarten deactiveren**: Met **Uitschakelen** wordt voorkomen dat gebruikers na aanmelding de optie **Opnieuw opstarten** selecteren. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem kan standaard toestaan dat gebruikers de menuopdracht **Opnieuw opstarten** selecteren op apparaten.
-- **Uitschakelen deactiveren**: Met **Uitschakelen** wordt voorkomen dat gebruikers na aanmelding de optie **Uitschakelen** selecteren. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem kan standaard toestaan dat gebruikers de menuopdracht **Uitschakelen** selecteren op apparaten.
-- **Afmelden deactiveren** (macOS 10.13 en hoger): Met **Uitschakelen** wordt voorkomen dat gebruikers na aanmelding de optie **Afmelden** selecteren. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem kan standaard toestaan dat gebruikers de menuopdracht **Afmelden** selecteren op apparaten.
-- **Vergrendelingsscherm deactiveren** (macOS 10.13 en hoger): Met **Uitschakelen** wordt voorkomen dat gebruikers na aanmelding de optie **Vergrendelingsscherm** selecteren. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem kan standaard toestaan dat gebruikers de menuopdracht **Vergrendelingsscherm** selecteren op apparaten.
+- **De knop Afsluiten verbergen**: Met **Ja** wordt de knop Afsluiten niet weergegeven op het aanmeldingsscherm. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem kan standaard de knop Afsluiten weergeven.
+- **De knop Opnieuw opstarten verbergen**: Met **Ja** wordt de knop Opnieuw opstarten niet weergegeven op het aanmeldingsscherm. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem kan standaard de knop Opnieuw opstarten weergeven.
+- **De slaapstandknop verbergen**: Met **Ja** wordt de knop Slaapstand niet weergegeven op het aanmeldingsscherm. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem kan standaard de knop Slaapstand weergeven.
+- **Gebruikersaanmelding via console uitschakelen**: Met **Ja** wordt de macOS-opdrachtregel verborgen die wordt gebruikt voor aanmelding. Voor standaardgebruikers kunt u deze instelling het beste op **Ja** instellen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem kan standaard toestaan dat geavanceerde gebruikers zich aanmelden via de macOS-opdrachtregel. Om de consolemodus in te schakelen moeten gebruikers `>console` invoeren in het veld Gebruikersnaam en zich verifiëren in het consolevenster.
+- **Afsluiten actieve aanmelding uitschakelen**: Met **Ja** wordt voorkomen dat gebruikers na aanmelding de optie **Afsluiten** selecteren. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem kan standaard toestaan dat gebruikers de menuopdracht **Afsluiten** selecteren op apparaten.
+- **Opnieuw opstarten tijdens actieve aanmelding uitschakelen**: Met **Ja** wordt voorkomen dat gebruikers na aanmelding de optie **Opnieuw opstarten** selecteren. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem kan standaard toestaan dat gebruikers de menuopdracht **Opnieuw opstarten** selecteren op apparaten.
+- **Uitschakelen tijdens actieve aanmelding uitschakelen**: Met **Ja** wordt voorkomen dat gebruikers na aanmelding de optie **Uitschakelen** selecteren. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem kan standaard toestaan dat gebruikers de menuopdracht **Uitschakelen** selecteren op apparaten.
+- **Afmelden tijdens actieve aanmelding uitschakelen** (macOS 10.13 of hoger): Met **Ja** wordt voorkomen dat gebruikers na aanmelding de optie **Afmelden** selecteren. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem kan standaard toestaan dat gebruikers de menuopdracht **Afmelden** selecteren op apparaten.
+- **Vergrendelingsscherm tijdens actieve aanmelding uitschakelen** (macOS 10.13 of hoger): Met **Ja** wordt voorkomen dat gebruikers na aanmelding de optie **Vergrendelingsscherm** selecteren. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem kan standaard toestaan dat gebruikers de menuopdracht **Vergrendelingsscherm** selecteren op apparaten.
 
 ## <a name="single-sign-on-app-extension"></a>App-extensie voor eenmalige aanmelding
 
@@ -127,9 +159,9 @@ Deze functie is van toepassing op:
 
 - macOS 10.15 of hoger
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Deze instellingen zijn van toepassing op: Alle inschrijvingstypen 
+### <a name="settings-apply-to-user-approved-device-enrollment-and-automated-device-enrollment"></a>Deze instellingen zijn van toepassing op: Door de gebruiker goedgekeurde apparaatinschrijving en automatische apparaatregistratie
 
-- **Type app-extensie voor SSO**: kies Referentie als het type app-extensie voor SSO. Uw opties zijn:
+- **Type app-extensie voor eenmalige aanmelding**: kies Referentie als het type app-extensie voor SSO. Uw opties zijn:
 
   - **Niet geconfigureerd**: er worden geen app-extensies gebruikt. Als u een app-extensie wilt uitschakelen, stelt u het type app-extensie voor SSO in op **Niet geconfigureerd**.
   - **Omleiding**: Gebruik een algemene, aanpasbare app-extensie van het type Omleiding om eenmalige aanmelding te gebruiken met moderne verificatiestromen. Zorg ervoor dat u de extensie- en team-id van de app-extensie van uw organisatie kent.
@@ -163,7 +195,7 @@ Deze functie is van toepassing op:
     - Tekenreeks
     - Booleaanse waarde: voer `True` of `False` in bij **Configuratiewaarde**.
     - Geheel getal: voer een getal in bij **Configuratiewaarde**.
-    
+
   - **Waarde**: voer de gegevens in.
   
   - **Toevoegen**: selecteer deze optie om uw configuratiesleutels toe te voegen.
@@ -199,42 +231,6 @@ Deze functie is van toepassing op:
 - **App-bundel-id's** (alleen Kerberos): **voeg de app-bundel-id's toe** die moeten gebruikmaken van eenmalige aanmelding op uw apparaten. Aan deze apps wordt toegang verleend tot Kerberos Ticket Granting Ticket en het verificatieticket. De apps verifiëren gebruikers ook voor services waarvoor ze gemachtigd zijn.
 - **Toewijzing aan domeinrealm** (alleen Kerberos): **voeg de DNS-achtervoegsels voor het domein toe** die moeten worden toegewezen aan uw realm. Gebruik deze instelling als de DNS-namen van de hosts niet overeenkomen met de realmnaam. Waarschijnlijk hoeft u deze aangepaste domein-naar-realm-toewijzing niet te maken.
 - **PKINIT-certificaat** (alleen Kerberos): **selecteer** het PIKNIT-certificaat (Public Key Cryptography for Initial Authentication) dat kan worden gebruikt voor Kerberos-verificatie. U kunt kiezen uit een [PKCS](../protect/certficates-pfx-configure.md)- of [SCEP](../protect/certificates-scep-configure.md)-certificaat dat u hebt toegevoegd in Intune. Raadpleeg [Certificaten gebruiken voor verificatie in Microsoft Intune](../protect/certificates-configure.md) voor meer informatie over certificaten.
-
-## <a name="associated-domains"></a>Gekoppelde domeinen
-
-In Intune kunt u het volgende doen:
-
-- Een groot aantal app-naar-domein-koppelingen toevoegen.
-- Een groot aantal domeinen koppelen aan dezelfde app.
-
-Deze functie is van toepassing op:
-
-- macOS 10.15 of hoger
-
-### <a name="settings-apply-to-all-enrollment-types"></a>Deze instellingen zijn van toepassing op: Alle inschrijvingstypen
-
-- **App-id**: voer de app-id in van de app die u aan een website wilt koppelen. De app-id bevat de team-id en een bundel-id: `TeamID.BundleID`.
-
-  De team-id is een alfanumerieke tekenreeks van 10 tekens (letters en cijfers) die door Apple wordt gegenereerd voor uw app-ontwikkelaars, zoals `ABCDE12345`. [Zoek uw team-id](https://help.apple.com/developer-account/#/dev55c3c710c) : (opent de website van Apple) biedt meer informatie.
-
-  De bundel-id is een unieke identificatie van de app en heeft doorgaans de omgekeerde notatie van de domeinnaam. De bundel-id van Finder is bijvoorbeeld `com.apple.finder`. Gebruik het AppleScript in Terminal om de bundel-id te vinden:
-
-  `osascript -e 'id of app "ExampleApp"'`
-
-- **Domein**: voer het websitedomein in dat u aan een app wilt koppelen. Het domein bevat een servicetype en een volledig gekwalificeerde hostnaam, zoals `webcredentials:www.contoso.com`.
-
-  U kunt alle subdomeinen van een gekoppeld domein vergelijken door `*.` (een asterisk-jokerteken en een punt) vóór het domein in te voeren. De punt is vereist. Exacte domeinen hebben een hogere prioriteit dan domeinen met een jokerteken. Patronen van bovenliggende domeinen worden vergeleken *als* er geen overeenkomst wordt gevonden in het volledig gekwalificeerde subdomein.
-
-  Mogelijke servicetypen zijn:
-
-  - **authsrv**: App-extensie voor eenmalige aanmelding
-  - **applink**: Universele koppeling
-  - **webcredentials**: Automatisch invullen van wachtwoorden
-
-- **Toevoegen**: selecteer deze optie om uw apps en gekoppelde domeinen toe te voegen.
-
-> [!TIP]
-> Als u problemen wilt oplossen, opent u **Systeemvoorkeuren** > **Profielen** op uw macOS-apparaat. Controleer of het profiel dat u hebt gemaakt, voorkomt in de lijst met apparaatprofielen. Zo ja, dan controleert u of de **configuratie voor gekoppelde domeinen** in het profiel voorkomt en de juiste app-id en domeinen bevat.
 
 ## <a name="next-steps"></a>Volgende stappen
 

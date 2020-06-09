@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/29/2020
+ms.date: 05/05/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 337f7608b4c75a5a2ce2c85774d2090d549ae1fe
-ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
+ms.openlocfilehash: eaca235305507065cb716e3427e52c679c1a5dad
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587263"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427777"
 ---
 # <a name="macos-endpoint-protection-settings-in-intune"></a>Instellingen in Intune voor Endpoint Protection in macOS  
 
@@ -30,84 +30,31 @@ In dit artikel komt u meer te weten over de eindpuntbeschermingsinstellingen die
 
 [Een macOS-eindpuntbeveiligingsprofiel maken](endpoint-protection-configure.md).
 
-## <a name="gatekeeper"></a>Gatekeeper  
+## <a name="filevault"></a>FileVault
 
-- **Toestaan dat apps worden gedownload van deze locaties**  
-  Beperk de apps die op een apparaat kunnen worden gestart, afhankelijk van waar de apps zijn gedownload. Het doel hiervan is om de apparaten te beschermen tegen malware en alleen apps toe te staan van bronnen die u vertrouwt.  
-
-  - **Niet geconfigureerd**  
-  - **Mac App Store**  
-  - **Mac App Store en geïdentificeerde ontwikkelaars**  
-  - **Overal**  
-
-  **Standaardinstelling**: Niet geconfigureerd  
-
-- **Gebruiker kan Gatekeeper overschrijven**  
-  Hiermee voorkomt u dat gebruikers de Gatekeeper-instelling kunnen overschrijven en voorkomt u dat ze op Control kunnen klikken om een app te installeren. Wanneer dit is ingeschakeld, kunnen gebruikers op Control klikken om een app te installeren.  
- 
-  - **Niet geconfigureerd**: gebruikers kunnen op Control klikken om apps te installeren.  
-  - **Blokkeren**: voorkomen dat gebruikers op Control klikken om apps te installeren.  
-
-  **Standaardinstelling**: Niet geconfigureerd  
-
-## <a name="firewall"></a>Firewall  
-
-Gebruik de firewall om verbindingen per toepassing te beheren, in plaats van per poort. Met de instellingen per toepassing kunt u beter profiteren van de voordelen van firewallbeveiliging. Bovendien helpt het te voorkomen dat ongewenste apps gebruikmaken van netwerkpoorten die zijn geopend voor legitieme apps.  
-
-**Algemeen**
-- **Firewall**  
-  Schakel de firewall in om te configureren hoe binnenkomende verbindingen in uw omgeving worden verwerkt.  
-  - **Niet geconfigureerd**  
-  - **Inschakelen**  
-
-  **Standaardinstelling**: Niet geconfigureerd  
-
-- **Binnenkomende verbindingen**  
-  Hiermee blokkeert u alle binnenkomende verbindingen, behalve de verbindingen die vereist zijn voor basisinternetservices, zoals DHCP, Bonjour en IPSec. Hiermee worden ook alle services voor delen (zoals delen van bestanden en delen van het scherm) geblokkeerd. Als u services voor delen gebruikt, moet u *Niet geconfigureerd* gebruiken.  
-  - **Niet geconfigureerd**  
-  - **Blokkeren**  
-
-  **Standaardinstelling**: Niet geconfigureerd  
-
-**Binnenkomende verbindingen voor specifieke apps blokkeren of toestaan.**  
-
-  - **Toegestane apps**  
-    Selecteer de apps die expliciet zijn toegestaan voor het ontvangen van binnenkomende verbindingen.  
-
-  - **Geblokkeerde apps**  
-    Selecteer de apps die binnenkomende verbindingen moeten blokkeren.  
-
-  - **Verborgen modus**  
-    Schakel deze optie in om te voorkomen dat de computer reageert op peilverzoeken. Het apparaat reageert nog wel op binnenkomende verzoeken voor toegestane apps. Onverwachte aanvragen, zoals ICMP (ping), worden genegeerd.  
-    - **Niet geconfigureerd**  
-    - **Inschakelen**  
-
-    **Standaardinstelling**: Niet geconfigureerd  
-
-## <a name="filevault"></a>FileVault  
 Zie [FDEFileVault](https://developer.apple.com/documentation/devicemanagement/fdefilevault) in de Apple-inhoud voor ontwikkelaars voor meer informatie over de Apple FileVault-instellingen. 
 
 > [!IMPORTANT]  
 > Vanaf macOS 10.15 is een door de gebruiker goedgekeurde MDM-inschrijving vereist voor FileVault-configuratie. 
 
-- **FileVault**  
+- **FileValt inschakelen**  
   U kunt volledige schijfversleuteling *inschakelen* met behulp van XTS-AES 128 met FileVault op apparaten waarop macOS 10.13 of later wordt uitgevoerd.  
   - **Niet geconfigureerd**  
-  - **Inschakelen**  
+  - **Ja**  
 
   **Standaardinstelling**: Niet geconfigureerd  
 
   - **Herstelsleuteltype**  
     Herstelsleutels van het type *Persoonlijke sleutel* zijn gemaakt voor apparaten. Configureer de volgende instellingen voor de persoonlijke sleutel.  
 
-    - **Locatie van persoonlijke herstelsleutel**: geef een kort bericht op voor de gebruiker waarin wordt uitgelegd hoe en waar deze de persoonlijke herstelsleutel kan ophalen. Deze tekst wordt ingevoegd in het bericht dat de gebruiker op het aanmeldingsscherm ziet wanneer hij of zij wordt gevraagd de persoonlijke herstelsleutel in te voeren als een wachtwoord is vergeten.  
+    - **Escrow-locatiebeschrijving van persoonlijke herstelsleutel**: geef een kort bericht op voor de gebruiker waarin wordt uitgelegd hoe en waar deze de persoonlijke herstelsleutel kan ophalen. Deze tekst wordt ingevoegd in het bericht dat de gebruiker op het aanmeldingsscherm ziet wanneer hij of zij wordt gevraagd de persoonlijke herstelsleutel in te voeren als een wachtwoord is vergeten.  
 
     - **Roulering van persoonlijk herstelsleutel**: geef op hoe vaak de persoonlijke herstelsleutel voor een apparaat wordt gerouleerd. U kunt de standaardinstelling, **Niet geconfigureerd** of een waarde van **1** tot **12** maanden selecteren.  
 
   - **Vraag bij afmelden uitschakelen**  
     Voorkom dat de gebruiker bij het afmelden wordt gevraagd om FileVault in te schakelen.  Wanneer Uitschakelen is ingesteld, wordt de vraag niet gesteld als de gebruiker zich afmeldt, maar als deze zich aanmeldt.  
     - **Niet geconfigureerd**  
-    - **Uitschakelen**: de vraag bij afmelden uitschakelen.
+    - **Ja**: de vraag bij afmelden uitschakelen.
 
     **Standaardinstelling**: Niet geconfigureerd  
 
@@ -124,15 +71,66 @@ Zie [FDEFileVault](https://developer.apple.com/documentation/devicemanagement/fd
     >
     > Als u macOS-apparaten hebt ingeschreven, kunt u meer informatie bekijken wanneer u zich aanmeldt bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431). Ga dan naar **Tenantbeheer** > **Tenantstatus**, selecteer **Servicestatus en berichtencentrum** en zoek de bericht-id **MC210922**.
 
-    <br> 
-
     - **Niet geconfigureerd**: versleuteling op het apparaat is vereist voordat de volgende aanmelding is toegestaan.  
     - **1** tot **10**: sta een gebruiker toe de vraag tussen 1 en 10 keer te negeren voordat versleuteling op het apparaat wordt vereist.  
     - **Geen limiet, altijd vragen**: de gebruiker wordt gevraagd om FileVault in te schakelen, maar versleuteling is nooit vereist.  
  
     **Standaardinstelling**: *Varieert*: wanneer de instelling *Vraag bij afmelden uitschakelen* is ingesteld op **Niet geconfigureerd**, is de standaardwaarde van deze instelling **Niet geconfigureerd**. Als *Vraag bij afmelden* is ingesteld op **Uitschakelen**, is de standaardwaarde van deze instelling **1** en is de waarde **Niet geconfigureerd** geen optie.
 
-Zie [FileVault-herstelsleutels](encryption-monitor.md#filevault-recovery-keys) voor meer informatie over FileVault met Intune.
+Zie [FileVault beheren](../protect/encrypt-devices-filevault.md#manage-filevault) voor meer informatie over FileVault met Intune.
+
+## <a name="firewall"></a>Firewall  
+
+Gebruik de firewall om verbindingen per toepassing te beheren, in plaats van per poort. Met de instellingen per toepassing kunt u beter profiteren van de voordelen van firewallbeveiliging. Bovendien helpt het te voorkomen dat ongewenste apps gebruikmaken van netwerkpoorten die zijn geopend voor legitieme apps.  
+
+- **Firewall inschakelen**  
+  Schakel de firewall in om te configureren hoe binnenkomende verbindingen in uw omgeving worden verwerkt.  
+  - **Niet geconfigureerd**  
+  - **Ja**  
+
+  **Standaardinstelling**: Niet geconfigureerd  
+
+- **Alle binnenkomende verbindingen blokkeren**  
+  Hiermee blokkeert u alle binnenkomende verbindingen, behalve de verbindingen die vereist zijn voor basisinternetservices, zoals DHCP, Bonjour en IPSec. Hiermee worden ook alle services voor delen (zoals delen van bestanden en delen van het scherm) geblokkeerd. Als u services voor delen gebruikt, moet u *Niet geconfigureerd* gebruiken.  
+  - **Niet geconfigureerd**  
+  - **Ja**  
+
+  **Standaardinstelling**: Niet geconfigureerd  
+
+- **Binnenkomende verbindingen voor de volgende apps toestaan**: Apps selecteren die inkomende verbindingen mogen ontvangen. Uw opties zijn:
+  - **Apps toevoegen op bundel-id**: Voer de [bundel-id](../configuration/bundle-ids-built-in-ios-apps.md) van de app in. De website van Apple bevat een lijst met [ingebouwde Apple-apps](https://support.apple.com/HT208094).
+  - **Store-app toevoegen**: Selecteer een Store-app die u eerder aan Intune hebt toegevoegd. Zie [Web-apps toevoegen aan Microsoft Intune](../apps/apps-add.md) voor meer informatie.
+
+- **Binnenkomende verbindingen voor de volgende apps blokkeren**: Selecteer apps die inkomende verbindingen mogen ontvangen. Uw opties zijn:
+  - **Apps toevoegen op bundel-id**: Voer de [bundel-id](../configuration/bundle-ids-built-in-ios-apps.md) van de app in. De website van Apple bevat een lijst met [ingebouwde Apple-apps](https://support.apple.com/HT208094).
+  - **Store-app toevoegen**: Selecteer een Store-app die u eerder aan Intune hebt toegevoegd. Zie [Web-apps toevoegen aan Microsoft Intune](../apps/apps-add.md) voor meer informatie.
+
+- **Verborgen modus inschakelen**  
+  Schakel deze optie in om te voorkomen dat de computer reageert op peilverzoeken. Het apparaat reageert nog wel op binnenkomende verzoeken voor toegestane apps. Onverwachte aanvragen, zoals ICMP (ping), worden genegeerd.  
+  - **Niet geconfigureerd**  
+  - **Ja**  
+
+  **Standaardinstelling**: Niet geconfigureerd  
+
+## <a name="gatekeeper"></a>Gatekeeper  
+
+- **Toestaan dat apps worden gedownload van deze locaties**  
+  Beperk de apps die op een apparaat kunnen worden gestart, afhankelijk van waar de apps zijn gedownload. Het doel hiervan is om de apparaten te beschermen tegen malware en alleen apps toe te staan van bronnen die u vertrouwt.  
+
+  - **Niet geconfigureerd**  
+  - **Mac App Store**  
+  - **Mac App Store en geïdentificeerde ontwikkelaars**  
+  - **Overal**  
+
+  **Standaardinstelling**: Niet geconfigureerd  
+
+- **Niet toestaan dat de gebruiker Gatekeeper negeert**  
+  Hiermee voorkomt u dat gebruikers de Gatekeeper-instelling kunnen overschrijven en voorkomt u dat ze op Control kunnen klikken om een app te installeren. Wanneer dit is ingeschakeld, kunnen gebruikers op Control klikken om een app te installeren.  
+
+  - **Niet geconfigureerd**: gebruikers kunnen op Control klikken om apps te installeren.  
+  - **Ja**: voorkomen dat gebruikers op Control klikken om apps te installeren.  
+
+  **Standaardinstelling**: Niet geconfigureerd  
 
 ## <a name="next-steps"></a>Volgende stappen
 

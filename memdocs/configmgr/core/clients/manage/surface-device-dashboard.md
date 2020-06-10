@@ -5,17 +5,17 @@ description: Bekijk informatie over Surface-apparaten met behulp van het dash bo
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 07/30/2018
+ms.date: 06/09/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7397fc17-3ae8-4525-8386-aea8a9cffa06
-ms.openlocfilehash: f9b9c49bde16754b7a60112905f14da2cd5e48eb
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 7e6a98c25fabff31d3eae688edf89540c1ab71a7
+ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906279"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84613942"
 ---
 # <a name="surface-device-dashboard-in-configuration-manager"></a>Dash board van Surface-apparaat in Configuration Manager
 
@@ -59,7 +59,7 @@ Het Surface Device-dash board toont drie grafieken voor uw omgeving.
 
 Zie de [Surface](https://www.microsoft.com/surface) -website voor meer informatie over Surface-apparaten.
 
-Zie [updates van Surface drivers beheren](https://support.microsoft.com/help/4098906)voor meer informatie over het implementeren van Surface firmware-updates in Configuration Manager.
+Zie [updates van Surface drivers beheren](../../../sum/deploy-use/surface-drivers.md)voor meer informatie over het implementeren van Surface firmware-updates in Configuration Manager.
 
 
 

@@ -2,7 +2,7 @@
 title: Certificerings instanties verwijderen
 titleSuffix: Configuration Manager
 description: De centrale beheer site (CAS) verwijderen om uw Configuration Manager-infra structuur te vereenvoudigen op één zelfstandige primaire site.
-ms.date: 04/01/2020
+ms.date: 06/09/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 16975644-8dfa-4f22-b45a-c54a9250dbd2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6704075d707306f55a50a937185c9bdd28b18cc5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 237c326c4420aec13ad6c9ca9b07d9f5304b6945
+ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718110"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84613973"
 ---
 # <a name="remove-the-central-administration-site"></a>De centrale beheer site verwijderen
 
@@ -93,9 +93,9 @@ Vanaf versie 2002, als de hiërarchie bestaat uit de centrale beheer site (CAS) 
 
     - Selecteer **Configuration Manager Setup**in het menu **Start** .
 
-    - Open `\SMSSETUP\BIN\X64\setup.exe`in de map voor de Configuration Manager- *installatie media*. Zorg ervoor dat deze versie hetzelfde is als de site versie.
+    - Open in de map voor de Configuration Manager- *installatie media* `\SMSSETUP\BIN\X64\setup.exe` . Zorg ervoor dat deze versie hetzelfde is als de site versie.
 
-    - Open `\BIN\X64\setup.exe`in de map waar Configuration Manager is *geïnstalleerd*.
+    - Open in de map waar Configuration Manager is *geïnstalleerd* `\BIN\X64\setup.exe` .
 
 1. Lees de informatie op de pagina **voordat u begint** .
 
@@ -143,7 +143,7 @@ Nadat u de certificerings instanties hebt verwijderd, controleert u de volgende 
 
 - Als u Configuration Manager verbindt met [Azure monitor](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=configmgr/core/context/core-context), moet u de verbinding opnieuw instellen. De eerste stap voor het oplossen van problemen is [het vernieuwen van de geheime sleutel](../configure/azure-services-wizard.md#bkmk_renew). Als het probleem niet is opgelost, maakt u de verbinding opnieuw.<!-- 5584635 -->
 
-- Als u in versie 2002 synchronisatie van Surface-Stuur Programma's inschakelt, moet u deze functie opnieuw configureren nadat u de CA'S hebt verwijderd. Zie [micro soft Surface-Stuur Programma's en firmware-updates insluiten](../../../../sum/get-started/configure-classifications-and-products.md#bkmk_Surface)voor meer informatie.<!-- 5728727 -->
+- Als u in versie 2002 synchronisatie van Surface-Stuur Programma's inschakelt, moet u deze functie opnieuw configureren nadat u de CA'S hebt verwijderd. Zie voor meer informatie [micro soft Surface-Stuur Programma's en firmware-updates](../../../../sum/deploy-use/surface-drivers.md).<!-- 5728727 -->
 
 - Als u software-updates van derden beheert:
 

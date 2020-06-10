@@ -2,7 +2,7 @@
 title: Documentatie in de console
 titleSuffix: Configuration Manager
 description: Dit artikel wordt alleen weer gegeven in de Configuration Manager-console.
-ms.date: 05/11/2020
+ms.date: 06/08/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 678f19d4ec69bea2bc5b3863e3e2a8332c10f3be
-ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
+ms.openlocfilehash: e2ace9e8a0fb8ba9e9071a2dc9db09434fe5279e
+ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83551601"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84613951"
 ---
 <!-- 
 - Feature 1357546
@@ -27,7 +27,7 @@ ms.locfileid: "83551601"
 
 # <a name="microsoft-endpoint-configuration-manager-documentation"></a>Documentatie voor Microsoft Endpoint Configuration Manager
 
-*Laatste update: 11 mei 2020*
+*Laatste update: 8 juni 2020*
 
 Deze inhoud kan u helpen bij het leren en ondersteunen van Configuration Manager.
 
@@ -42,7 +42,7 @@ Raadpleeg voor meer informatie de volgende artikelen:
 
 Een gecuratorde lijst met belang rijke artikelen.
 
-- [Micro soft Endpoint Manager-Tenant koppelen](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions)
+- [Microsoft Endpoint Manager-tenant koppelen](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions)
 - [Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/overview)
 - [Co-beheer voor Windows 10-apparaten](https://docs.microsoft.com/mem/configmgr/comanage/overview)  
 - [CMPivot](https://docs.microsoft.com/mem/configmgr/core/servers/manage/cmpivot)  
@@ -55,22 +55,22 @@ Een gecuratorde lijst met belang rijke artikelen.
 
 ## <a name="trending"></a>Trending
 
-De populairste artikelen van 1 april tot en met 30 april 2020.
+De populairste artikelen tussen 1 mei en 31 mei 2020.
 
 | Pagina weergaven | Titel |
 |------------|-------|
-| 37071 | [Een cloudbeheergateway plannen](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
-| 19105 | [Verwijzing naar logboekbestand](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files) |
-| 17942 | [Poorten die worden gebruikt voor verbindingen](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/ports) |
-| 15564 | [Updates en onderhoud](https://docs.microsoft.com/mem/configmgr/core/servers/manage/updates) |
-| 15389 | [Overzicht van het inschakelen van Transport Layer Security (TLS) 1,2](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2) |
-| 15316 | [Co-beheer voor Windows 10-apparaten](https://docs.microsoft.com/mem/configmgr/comanage/overview) |
-| 15229 | [Gebruikershandleiding van Software Center](https://docs.microsoft.com/mem/configmgr/core/understand/software-center) |
-| 14978 | [Transport Layer Security (TLS) 1,2 op clients inschakelen](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) |
-| 13522 | [Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/overview) |
-| 13017 | [Clientinstellingen](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/about-client-settings) |
+| 22624 | [Een cloudbeheergateway plannen](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
+| 18451 | [Wat is er nieuw in versie 2002](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2002) |
+| 17763 | [Verwijzing naar logboekbestand](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files) |
+| 16718 | [Transport Layer Security (TLS) 1,2 op clients inschakelen](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) |
+| 16004 | [Poorten die worden gebruikt voor verbindingen](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/ports) |
+| 13965 | [Overzicht van het inschakelen van Transport Layer Security (TLS) 1,2](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2) |
+| 13398 | [Updates en onderhoud](https://docs.microsoft.com/mem/configmgr/core/servers/manage/updates) |
+| 13279 | [Co-beheer voor Windows 10-apparaten](https://docs.microsoft.com/mem/configmgr/comanage/overview) |
+| 13260 | [Gebruikershandleiding van Software Center](https://docs.microsoft.com/mem/configmgr/core/understand/software-center) |
+| 12624 | [Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/overview) |
 
-De [pagina Configuration Manager hub](https://docs.microsoft.com/mem/configmgr/) heeft 41.479 pagina weergaven ontvangen in deze tijds periode.
+De [pagina Configuration Manager hub](https://docs.microsoft.com/mem/configmgr/) heeft 34.986 pagina weergaven ontvangen in deze tijds periode.
 
 ## <a name="recently-updated"></a>Recent bijgewerkt
 
@@ -78,16 +78,16 @@ Artikelen met een recente en belang rijke update.
 
 | Laatst gecontroleerd | Titel |
 |---------------|-------|
-| 4/30/2020 | [Technical Preview 2004](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2004) |
-| 4/29/2020 | [Verificatie op basis van tokens voor CMG](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/deploy-clients-cmg-token) |
-| 4/28/2020 | [Orchestration-groepen](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/orchestration-groups) |
-| 4/15/2020 | [Goedkeurings proces van toepassing](https://docs.microsoft.com/mem/configmgr/develop/apps/application-approval-process) |
-| 4/15/2020 | [Apparaten inschrijven in Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/enroll-devices) |
-| 4/10/2020 | [Micro soft Endpoint Manager-Tenant koppelen](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) |
-| 4/8/2020 | [Integreren met Power BI Report Server](https://docs.microsoft.com/mem/configmgr/core/servers/manage/powerbi-report-server) |
-| 4/8/2020 | [Releaseopmerkingen](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/install/release-notes) |
-| 4/1/2020 | [Wat is de beheer service?](https://docs.microsoft.com/mem/configmgr/develop/adminservice/overview) |
-| 4/1/2020 | [Wat is er nieuw in versie 2002](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2002) |
+| 5/29/2020 | [Technical Preview 2005](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2005) |
+| 5/27/2020 | [Ondersteuning voor Windows 10](https://docs.microsoft.com/mem/configmgr/core/plan-design/configs/support-for-windows-10) |
+| 5/26/2020 | [Overzicht van CMPivot](https://docs.microsoft.com/mem/configmgr/core/servers/manage/cmpivot-overview) |
+| 5/26/2020 | [CMPivot-overzicht van gekoppelde Tenant](https://docs.microsoft.com/mem/configmgr/tenant-attach/cmpivot-overview-attached) |
+| 5/26/2020 | [Aan de Tenant gekoppelde CMPivot-voorbeeld scripts](https://docs.microsoft.com/mem/configmgr/tenant-attach/cmpivot-samples-attached) |
+| 5/26/2020 | [Wat is er nieuw in versie 2002](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2002) |
+| 5/21/2020 | [Releaseopmerkingen](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/install/release-notes) |
+| 5/14/2020 | [Aanbevolen hardware](https://docs.microsoft.com/mem/configmgr/core/plan-design/configs/recommended-hardware) |
+| 5/11/2020 | [Assets in Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/about-assets) |
+| 5/11/2020 | [Wat is er nieuw in Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/whats-new) |
 
 ## <a name="troubleshooting-articles"></a>Artikelen over probleemoplossing
 

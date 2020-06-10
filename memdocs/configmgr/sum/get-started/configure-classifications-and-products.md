@@ -5,17 +5,17 @@ description: Volg deze stappen om software-update classificaties en producten te
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
-ms.openlocfilehash: 7e2cc1c2dc52a0bb6eb8d0dd143cbb2d005dc6e9
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 4f13ff305ba5fc2b5c5080bafb6fed2412ff8366
+ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078461"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84614083"
 ---
 # <a name="configure-classifications-and-products-to-synchronize"></a>Classificaties en producten configureren voor synchronisatie  
 
@@ -28,7 +28,7 @@ Meta gegevens van software-updates worden tijdens het synchronisatie proces in C
 
 ## <a name="to-configure-classifications-and-products-to-synchronize"></a>Classificaties en producten configureren die moeten worden gesynchroniseerd  
 
-1. Ga in de **Configuration Manager** -console naar **beheer** > **site configuratie** > **sites**.
+1. Ga in de **Configuration Manager** -console naar **beheer**  >  **site configuratie**  >  **sites**.
 
 2. Selecteer de centrale beheer site of de zelfstandige primaire site.  
 
@@ -47,9 +47,9 @@ Meta gegevens van software-updates worden tijdens het synchronisatie proces in C
      - **Update pakketten**: Hiermee geeft u een geteste, cumulatieve set van hotfixes, beveiligings updates, essentiële updates en updates die samen zijn verpakt voor een eenvoudige implementatie. Een update pakket is in het algemeen gericht op een specifiek gebied, zoals een beveiligings-of product onderdeel.  
      - **Updates**: Hiermee geeft u een uitgebreide oplossing voor een specifiek probleem op. Een update is een oplossing voor een niet-kritieke fout die niet aan beveiliging voldoet.  
      - **Upgrade**: Hiermee geeft u een upgrade op voor Windows 10-functies en-functionaliteit. Voor uw software-update punten en-sites moet mini maal WSUS 6,2 met [hotfix 3095113](https://support.microsoft.com/kb/3095113) worden uitgevoerd om de **upgrade** classificatie te verkrijgen. Zie [vereisten voor software-updates](../plan-design/prerequisites-for-software-updates.md#BKMK_wsus2012)voor meer informatie over het installeren van deze update en andere updates voor **upgrades**.
-
+    
     > [!NOTE]
-    > U kunt het selectie vakje **micro soft Surface-Stuur Programma's en firmware-updates** voor het synchroniseren van micro soft Surface-Stuur Programma's selecteren.<!--1098490--> Zie de sectie [micro soft Surface-Stuur Programma's en firmware-updates toevoegen](#bkmk_Surface) voor meer informatie.
+    > U kunt het selectie vakje **micro soft Surface-Stuur Programma's en firmware-updates** voor het synchroniseren van micro soft Surface-Stuur Programma's selecteren.<!--1098490--> Alle software-update punten moeten Windows Server 2016 of hoger uitvoeren om Surface-Stuur Programma's te synchroniseren. Als u een software-update punt inschakelt op een computer met Windows Server 2012 nadat u Surface drivers hebt ingeschakeld, zijn de scan resultaten voor de stuur programma-updates niet nauw keurig. Dit resulteert in onjuiste compatibiliteits gegevens die worden weer gegeven in de Configuration Manager-console en in Configuration Manager-rapporten. Zie [Surface drivers beheren met Configuration Manager](../deploy-use/surface-drivers.md)voor meer informatie.
 
 5. Geef op het tabblad **Producten** de producten op waarvoor u software-updates wilt synchroniseren, en klik vervolgens op **Sluiten**.  
 
@@ -67,13 +67,6 @@ Meta gegevens van software-updates worden tijdens het synchronisatie proces in C
     > - [Regels voor automatische implementatie](../deploy-use/automatically-deploy-software-updates.md#bkmk_adr-process) die het **Windows 10** -product bevatten, worden bijgewerkt met **Windows 10 versie 1903 en hoger**.
     > - [Onderhouds plannen](../../osd/deploy-use/manage-windows-as-a-service.md#servicing-plan-workflow) worden bijgewerkt met het product **Windows 10, versie 1903 en hoger** .
 
-## <a name="include-microsoft-surface-drivers-and-firmware-updates"></a><a name="bkmk_Surface"></a>Micro soft Surface-Stuur Programma's en firmware-updates toevoegen
-
-U kunt het selectie vakje **micro soft Surface-Stuur Programma's en firmware-updates** voor het synchroniseren van micro soft Surface-Stuur Programma's selecteren.<!--1098490--> Voor alle software-update punten moet Windows Server 2016 met een cumulatieve update [KB4025339](https://support.microsoft.com/help/4025339) of hoger worden uitgevoerd om Surface-Stuur Programma's te kunnen synchroniseren. Als u een software-update punt inschakelt op een computer met Windows Server 2012 nadat u Surface drivers hebt ingeschakeld, zijn de scan resultaten voor de stuur programma-updates niet nauw keurig. Dit resulteert in onjuiste compatibiliteits gegevens die worden weer gegeven in de Configuration Manager-console en in Configuration Manager-rapporten.  
-
-- Deze functie werd voor het eerst in versie 1706 geïntroduceerd als een [voorlopige functie](../../core/servers/manage/pre-release-features.md). Vanaf versie 1710 is deze functie niet langer een functie van de voorlopige versie.  
-- Configuration Manager schakelt deze optionele functie standaard niet in. U moet deze functie inschakelen voordat u deze kunt gebruiken. Zie voor meer informatie [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).<!--505213-->  
-- Stuur Programma's voor ARM-apparaten worden niet ondersteund voor synchronisatie.
 
 ## <a name="configuring-products-for-versions-of-windows-10"></a>Producten configureren voor versies van Windows 10
 
@@ -98,7 +91,7 @@ Wanneer u functie-updates voor Windows 10, versie 1909, goed keuren, ziet u een 
   - De vereisten voor het pakket voor activering zijn onder andere:
     - Een minimale cumulatieve update van [KB4517389](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4517389), uitgebracht op 8 oktober 2019.
     - Een minimale onderhouds stack-update van [KB4520390](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4520390), uitgebracht op 24 september 2019.
-  - Deze update, zoals andere onderdelen update, is niet beschikbaar voor importeren uit `https:\\catalog.update.microsoft.com`.
+  - Deze update, zoals andere onderdelen update, is niet beschikbaar voor importeren uit `https:\\catalog.update.microsoft.com` .
   - De update wordt automatisch gesynchroniseerd met WSUS als u het product **Windows 10, versie 1903 en hoger** hebt en de classificatie voor de **upgrade** is geselecteerd voor synchronisatie.
   - Ga in de Configuration Manager-console naar de werk ruimte **software bibliotheek** , vouw **Windows 10 Servicing**uit en selecteer het knoop punt **alle updates voor Windows 10** . Zoek naar de termen "activering" of "4517245".
 
@@ -143,7 +136,7 @@ Zie [ondersteuning voor Windows 10](../../core/plan-design/configs/support-for-w
 
 U moet de producten en classificaties inschakelen voor Windows Insider-upgrades en-updates. Onderdeel updates, cumulatieve updates en andere updates voor Windows Insider vindt u onder de product categorie **Windows Insider Prerelease** .
 
-1. Ga in de **Configuration Manager** -console naar **beheer** > **site configuratie** > **sites**.
+1. Ga in de **Configuration Manager** -console naar **beheer**  >  **site configuratie**  >  **sites**.
 2. Selecteer de centrale beheer site of de zelfstandige primaire site.  
 3. Klik op het tabblad **Start** in de groep **Instellingen** op **Sitecomponenten configureren** en klik op **Software-updatepunt**.
 4. Controleer op het tabblad **producten** of de volgende producten zijn geselecteerd voor synchronisatie:
@@ -157,7 +150,7 @@ U moet de producten en classificaties inschakelen voor Windows Insider-upgrades 
 
 ### <a name="upgrading-windows-insider-devices"></a>Windows Insider-apparaten bijwerken
 
-Zodra de upgrades voor Windows insiders zijn gesynchroniseerd, kunt u ze zien in **software bibliotheek** > **Windows 10 onderhoud** > van**alle Windows 10-updates**.
+Zodra de upgrades voor Windows insiders zijn gesynchroniseerd, kunt u ze zien in **software bibliotheek**  >  **Windows 10 onderhoud**van  >  **alle Windows 10-updates**.
 
 ![Updates van Windows insiders-onderdelen voor Windows 10-onderhoud](media/3556023-windows-insiders-pre-release-feature-update.png)
 

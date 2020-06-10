@@ -1,5 +1,5 @@
 ---
-title: Lookout MTD-connector met Microsoft Intune
+title: Lookout Mobile Endpoint integreren met Microsoft Intune
 titleSuffix: Microsoft Intune
 description: Meer informatie over de integratie van Intune met Lookout Mobile Threat Defense (MTD) om toegang tot uw bedrijfsbronnen met mobiele apparaten te bepalen.
 keywords: ''
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c3ca25ce4bf4f6520e7ef5f7e3aaaff958060a2
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1083e195cee20c3df9572db94395d462f9531a39
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990817"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330947"
 ---
 # <a name="lookout-mobile-endpoint-security-connector-with-intune"></a>Lookout Mobile Endpoint Security-connector met Intune
 
@@ -46,7 +46,7 @@ De mobiele app van Lookout, **Lookout for Work**, wordt geïnstalleerd en uitgev
 - **Ondersteuning voor uitgeschreven apparaten**: Intune kan de gegevens van de risicoanalyse van de Lookout for Work-app gebruiken voor uitgeschreven apparaten wanneer u beveiligingsbeleidsregels voor Intune-apps gebruikt. Beheerders kunnen deze combinatie gebruiken om bedrijfsgegevens te beschermen binnen een [met Microsoft Intune beveiligde app](../apps/apps-supported-intune-apps.md). Beheerders kunnen bedrijfsgegevens op deze ingeschreven apparaten ook blokkeren of selectief wissen. Ondersteuning bieden Lookout for Work met niet-ingeschreven apparaten:
   - [De MTD-app toevoegen aan niet-ingeschreven apparaten](../protect/mtd-add-apps-unenrolled-devices.md)
   - [Beveiligingsbeleid voor Mobile Threat Defense-apps maken](../protect/mtd-app-protection-policy.md)
-  - [De MTD-connector in Intune inschakelen voor uitgeschreven apparaten](../protect/mtd-enable-unenrolled-devices.md)
+  - [De MTD-connector in Intune inschakelen voor niet-ingeschreven apparaten](../protect/mtd-enable-unenrolled-devices.md)
 
 ## <a name="supported-platforms"></a>Ondersteunde platforms
 

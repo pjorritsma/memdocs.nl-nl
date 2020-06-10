@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 06/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 20c552ff879574edc0ed497b5c99b45b8092918a
-ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
+ms.openlocfilehash: f469d9646fad3b247743b6017f0ecbc7917f2cdf
+ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83864889"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84311167"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Apparaatinstellingen voor Windows 10 en hoger om functies toe te staan of te beperken met behulp van Intune
 
@@ -1095,7 +1095,8 @@ Deze instellingen gebruiken de [beleid-CSP Defender](https://docs.microsoft.com/
 - **Mogelijk ongewenste toepassingen detecteren**: Met deze functie worden mogelijk ongewenste toepassingen (PUA's) geïdentificeerd en geblokkeerd, zodat deze niet op uw netwerk worden gedownload of geïnstalleerd. Deze toepassingen worden niet beschouwd als virussen, malware of andere soorten bedreigingen. Ze kunnen echter wel acties uitvoeren op eindpunten die van invloed kunnen zijn op de prestaties of het gebruik ervan. Kies het niveau van beveiliging dat moet worden ingesteld als Windows PUA’s detecteert. Uw opties zijn:
 
   - **Niet geconfigureerd** (standaard): Deze instelling wordt niet gewijzigd of bijgewerkt door Intune. In Microsoft Defender is deze functie mogelijk standaard uitgeschakeld.
-  - **Blokkeren**: Microsoft Defender detecteert PUA’s en gedetecteerde items worden geblokkeerd. Deze items worden weergegeven in de geschiedenis, samen met andere dreigingen.
+  - **Uit**: PUA-beveiliging uit.
+  - **Inschakelen**: Microsoft Defender detecteert PUA’s en gedetecteerde items worden geblokkeerd. Deze items worden weergegeven in de geschiedenis, samen met andere dreigingen.
   - **Controleren**: Microsoft Defender detecteert PUA’s, maar onderneemt geen actie. U kunt de gegevens bekijken van toepassingen waarvoor acties zouden worden ondernomen. Zoek bijvoorbeeld naar gebeurtenissen die door Microsoft Defender in Logboeken zijn vastgelegd.
 
   Zie [Detect and block potentially unwanted applications](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus) (Mogelijk ongewenste toepassingen detecteren en blokkeren) voor meer informatie over mogelijk ongewenste apps.

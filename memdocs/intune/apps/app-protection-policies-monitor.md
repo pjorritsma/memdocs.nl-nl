@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 06/05/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,17 +18,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f39681bf954e84376e5d8e3862354a2a10b1003a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 10c715bcff63e6ec5a9ec9002926f6ee6608360e
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988106"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455069"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>App-beveiligingsbeleid controleren
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-U kunt de status van het app-beveiligingsbeleid bewaken dat u hebt toegepast op gebruikers vanuit het venster Intune-app-beveiliging in de [Azure Portal](https://portal.azure.com). Bovendien vindt u informatie over de gebruikers die te maken hebben met app-beveiligingsbeleid, de nalevingsstatus van beleid en problemen waarmee uw gebruikers mogelijk hebben te maken.
+U kunt de status van het app-beveiligingsbeleid bewaken dat u hebt toegepast op gebruikers vanuit het venster Intune-app-beveiliging. Bovendien vindt u informatie over de gebruikers die te maken hebben met app-beveiligingsbeleid, de nalevingsstatus van beleid en problemen waarmee uw gebruikers mogelijk hebben te maken.
 
 Er zijn drie verschillende plaatsen waar u app-beveiligingsbeleid kunt bewaken:
 - Samenvattingsweergave
@@ -43,10 +43,9 @@ De bewaarperiode voor app-beveiligingsgegevens is 90 dagen. Alle app-exemplaren 
 ## <a name="summary-view"></a>Samenvattingsweergave
 
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Selecteer **Apps** > **Bewaken** > **Status app-beveiliging**.
+2. Selecteer **Apps** > **Bewaken** > **Status app-beveiliging**.
 
-   ![Schermopname van de tegel Samenvatting van het deelvenster Mobile Application Management van Intune](./media/app-protection-policies-monitor/app-protection-user-status-summary.png)
-
+De onderstaande lijst bevat gedetailleerde informatie over de status van de app-beveiliging: 
 - **Toegewezen gebruikers**: Het totale aantal toegewezen gebruikers in uw bedrijf dat van een app gebruikmaakt die is gekoppeld aan een beleid in een werkcontext en wordt beveiligd en in licentie wordt gegeven, evenals de toegewezen gebruikers die onbeveiligd en niet-gelicentieerd zijn.
 - **Gemarkeerde gebruikers**: Het aantal gebruikers dat problemen ondervindt met hun apparaat. Gekraakte (iOS/iPadOS) en geroote (Android) apparaten worden onder **Gemarkeerde gebruikers** gerapporteerd. Bovendien worden hier gebruikers gerapporteerd met apparaten die zijn gemarkeerd na de controle Google SafetyNet-apparaatattestation (indien ingeschakeld door de IT-beheerder). 
 - **Gebruikers met mogelijk schadelijke apps**: Het aantal gebruikers waarvoor mogelijk een schadelijke app op hun Android-apparaat is gedetecteerd door Google Play Protect. 

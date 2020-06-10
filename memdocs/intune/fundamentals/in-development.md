@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5562ef1eaa1cc98e3f5a654e90e4779e228768b6
-ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
+ms.openlocfilehash: 90039e9bb75bcf7c266ac033408f87d37e27ef8d
+ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84311200"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84436751"
 ---
 # <a name="in-development-for-microsoft-intune"></a>In ontwikkeling voor Microsoft Intune
 
@@ -161,7 +161,7 @@ Er worden nieuwe fouten gerapporteerd voor iOS/iPadOS- en macOS-apparaten, waaro
 - Er wordt een telling van verwijderde Apple Business Manager-apparaten toegevoegd aan de overzichtspagina, waar u de status van uw apparaten kunt bekijken.
 
 ### <a name="bring-your-own-devices-can-use-vpn-to-deploy--5015344---"></a>Eigen apparaten kunnen voor het implementeren gebruikmaken van VPN<!--5015344 -->
-Deze functie wordt mogelijk vertraagd.
+Met de nieuwe wisselknop **Domeinconnectiviteitscontrole overslaan** voor het Autopilot-profiel kunt u Hybrid Azure AD Join-apparaten implementeren zonder toegang tot uw bedrijfsnetwerk door middel van uw eigen Win32 VPN-client van derden. Als u de nieuwe wisselknop wilt zien, gaat u naar het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) > **Apparaten**  > **Windows** > **Windows-inschrijving** > **Implementatieprofielen** > **Profiel maken** > **OOBE (Out-of-Box Experience)** .
 
 ### <a name="shared-ipads-for-business--6367326---"></a>Gedeelde iPads voor bedrijven<!--6367326 -->
 U kunt Intune en Apple Business Manager gebruiken om snel en veilig Gedeelde iPad in te stellen, zodat meerdere werknemers apparaten kunnen delen. [Gedeelde iPad](https://developer.apple.com/education/shared-ipad/) van Apple biedt een persoonlijke ervaring voor meerdere gebruikers terwijl gebruikersgegevens behouden blijven. Wanneer gebruikers een beheerde Apple ID gebruiken, hebben ze toegang tot hun apps, gegevens en instellingen nadat ze zich hebben aangemeld bij een gedeelde iPad in hun organisatie. Gedeelde iPad werkt met federatieve identiteiten.

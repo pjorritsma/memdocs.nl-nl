@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/22/2020
+ms.date: 05/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ca3ec1605bd4d63c182511c32297da0bdb503d8b
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: 67a0ad9eeb7e5ced358a44b17fd8f1c0b05fa2b8
+ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83824163"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84223671"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Wat is er nieuw in Microsoft Intune?
 
@@ -54,7 +54,22 @@ Ontdek elke week wat er nieuw is in Microsoft Intune in het [Microsoft Endpoint 
 
 <!-- ########################## -->
 
+## <a name="week-of-may-25-2020"></a>Week van 25 mei 2020
+
+### <a name="app-management"></a>Appbeheer
+
+#### <a name="windows-32-bit-x86-apps-on-arm64-devices---5477661---"></a>32-bits Windows-apps (x86) op ARM64-apparaten<!-- 5477661 -->
+32-bits Windows-apps (x86) die zijn geïmplementeerd als beschikbaar voor ARM64-apparaten worden nu weergegeven in de bedrijfsportal. Zie [Intune Win32 app-beheer](../apps/apps-win32-app-management.md) voor meer informatie over 32-bits Windows-apps.
+
+#### <a name="windows-company-portal-app-icon---7114635---"></a>Pictogram voor Windows-bedrijfsportal-app<!-- 7114635 -->
+Het pictogram voor de Windows-bedrijfsportal-app is bijgewerkt. Zie [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md) (De Intune-bedrijfsportal-apps, Bedrijfsportal-website en Intune-app aanpassen) voor meer informatie over de Bedrijfsportal.
+
 ## <a name="week-of-may-18-2020"></a>Week van 18 mei 2020
+
+### <a name="app-management"></a>Appbeheer  
+
+#### <a name="update-to-icons-in-company-portal-app-for-iosipados-and-macos--6057697---"></a>Bijgewerkte pictogrammen in de Bedrijfsportal-app voor iOS/iPadOS en macOS<!--6057697 -->
+We hebben de pictogrammen in Bedrijfsportal bijgewerkt voor een moderner uiterlijk dat wordt ondersteund op apparaten met twee schermen en is afgestemd op het Microsoft Fluent Design-systeem. Als u de bijgewerkte pictogrammen wilt zien, gaat u naar [UI-updates voor Intune-apps voor eindgebruikers](./whats-new-app-ui.md). 
 
 ### <a name="device-security"></a>Apparaatbeveiliging
 

@@ -15,12 +15,12 @@ ms.reviewer: pfetty
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5d0e809e834a82f192128263742bc2b9b0024a2
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 9a264b9a3b8f0ba15debe7e7323c106f09fa12c6
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079277"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455239"
 ---
 # <a name="technology-decisions-for-enabling-byod-with-microsoft-enterprise-mobility--security-ems"></a>Beslissingen voor de technologie voor het inschakelen van BYOD met Microsoft Enterprise Mobility + Security (EMS)
 
@@ -72,14 +72,14 @@ Toch maken veel organisaties zich nog steeds zorgen over specifieke risico's waa
 |Aangetast gebruikersaccount | Gebruikers met een hoog risico blokkeren | Gebruikers met een hoog risico blokkeren |
 |Aangetast gebruikersaccount | Pincode voor apparaat | Pincode voor app |
 | | | |
-| Aangetast apparaat of aangetaste app | Een compatibel apparaat vereisen | Jailbreak-controle bij starten app |
+| Aangetast apparaat of aangetaste app | Een compatibel apparaat vereisen | Jailbreak-/rootcontrole bij starten app |
 | Aangetast apparaat of aangetaste app | Apparaatgegevens versleutelen | App-gegevens versleutelen |
 | | | |
 |Verloren of gestolen apparaat | Alle apparaatgegevens verwijderen | Alle app-gegevens verwijderen|
 | | | |
-| Onbedoeld delen van gegevens of opslaan naar onbeveiligde locaties | Back-ups van apparaatgegevens beperken | Knippen/kopiëren/plakken beperken|
+| Onbedoeld delen van gegevens of opslaan naar onbeveiligde locaties | Back-ups van apparaatgegevens beperken | Back-ups van organisatiegegevens beperken |
 | Onbedoeld delen van gegevens of opslaan naar onbeveiligde locaties | Opslaan als beperken | Opslaan als beperken |
-|Onbedoeld delen van gegevens of opslaan naar onbeveiligde locaties | Afdrukken uitschakelen | n.v.t.|
+|Onbedoeld delen van gegevens of opslaan naar onbeveiligde locaties | Afdrukken uitschakelen | Afdrukken van organisatiegegevens uitschakelen |
 
 ## <a name="next-steps"></a>Volgende stappen
 Het is nu tijd om te kiezen of u BYOD in uw organisatie gaat inschakelen door te focussen op apparaatbeheer, app-beheer of een combinatie van beide. Het is aan u om te kiezen hoe u kunt garanderen dat de identiteits- en beveiligingsfuncties die beschikbaar zijn met Azure AD, altijd kunnen worden gebruikt.  

@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/27/2020
+ms.date: 06/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 424778a86ebf3bac750e17359204ef6be3aaa71c
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 69940fc8e3f495a1738f2b7b4c6769e431821f30
+ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166039"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84436802"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>iOS-apps voorbereiden voor app-beveiligingsbeleid met Intune App Wrapping Tool
 
@@ -323,7 +323,7 @@ De App Wrapping Tool voor iOS kan alleen volledig functioneren als aan bepaalde 
 
 ## <a name="setting-app-entitlements"></a>App-rechten instellen
 
-Voordat u de app verpakt, kunt u *rechten* verlenen zodat de app over meer machtigingen en mogelijkheden beschikt dan standaard het geval is. Voor de ondertekening van de programmacode wordt gebruikgemaakt van een *rechtenbestand* om speciale machtigingen in uw app (bijvoorbeeld de toegang tot een gedeelde sleutelketen) op te geven. Specifieke app-services, ook wel *mogelijkheden* genoemd, worden in Xcode ingeschakeld tijdens het ontwikkelen van de app. Wanneer de mogelijkheden eenmaal zijn ingeschakeld, worden deze weergegeven in uw rechtenbestand. Zie [Mogelijkheden toevoegen](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html) in de bibliotheek voor iOS-ontwikkelaars voor meer informatie over rechten en mogelijkheden. Zie [Ondersteunde mogelijkheden](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/SupportedCapabilities/SupportedCapabilities.html) voor een volledige lijst met ondersteunde mogelijkheden.
+Voordat u de app verpakt, kunt u *[rechten](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/AboutEntitlements.html)* verlenen zodat de app over meer machtigingen en mogelijkheden beschikt dan standaard het geval is. Voor de ondertekening van de programmacode wordt gebruikgemaakt van een *rechtenbestand* om speciale machtigingen in uw app (bijvoorbeeld de toegang tot een gedeelde sleutelketen) op te geven. Specifieke app-services, ook wel *mogelijkheden* genoemd, worden in Xcode ingeschakeld tijdens het ontwikkelen van de app. Wanneer de mogelijkheden eenmaal zijn ingeschakeld, worden deze weergegeven in uw rechtenbestand. Zie [Mogelijkheden toevoegen](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html) in de bibliotheek voor iOS-ontwikkelaars voor meer informatie over rechten en mogelijkheden. Zie [Ondersteunde mogelijkheden](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/SupportedCapabilities/SupportedCapabilities.html) voor een volledige lijst met ondersteunde mogelijkheden.
 
 ### <a name="supported-capabilities-for-the-app-wrapping-tool-for-ios"></a>Ondersteunde mogelijkheden voor de App Wrapping Tool voor iOS
 

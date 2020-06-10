@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/22/2020
+ms.date: 05/29/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: ac8f82396571a7ae39df43662000f9f3f17d0430
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: d0ba328f1976d0463c6be042dfd6f8a7570d6dac
+ms.sourcegitcommit: eb51bb38d484e8ef2ca3ae3c867561249fa413f3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990875"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84206329"
 ---
 # <a name="endpoint-detection-and-response-policy-for-endpoint-security-in-intune"></a>Eindpuntdetectie- en eindpuntresponsbeleid voor eindpuntbeveiliging in Intune
 
@@ -38,13 +38,13 @@ Er wordt EDR-beleid geïmplementeerd op groepen apparaten in Azure Active Direct
 
 U kunt het eindpuntbeveiligingsbeleid voor EDR vinden onder *Beheren* in het knooppunt **Eindpuntbeveiliging** van het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-Bekijk [Profielinstellingen voor eindpuntdetectie en -respons](../protect/endpoint-security-edr-profile-settings.md).
+Bekijk [Profielinstellingen voor eindpuntdetectie en -respons](endpoint-security-edr-profile-settings.md).
 
 ## <a name="prerequisites-for-edr-policies"></a>Vereisten voor EDR-beleid
 
 **Algemeen**:
 
-- **Tenant voor Microsoft Defender Advanced Threat Protection**: uw Defender ATP-tenant moet worden geïntegreerd met uw Microsoft Endpoint Manager-tenant (Intune-abonnement) voordat u een EDR-beleid kunt maken. Zie [Microsoft Defender ATP gebruiken](../protect/advanced-threat-protection.md) in de Intune-documentatie.
+- **Tenant voor Microsoft Defender Advanced Threat Protection**: uw Defender ATP-tenant moet worden geïntegreerd met uw Microsoft Endpoint Manager-tenant (Intune-abonnement) voordat u een EDR-beleid kunt maken. Zie [Microsoft Defender ATP gebruiken](advanced-threat-protection.md) in de Intune-documentatie.
 
 **Apparaten vanuit Configuration Manager ondersteunen**:
 
@@ -67,7 +67,7 @@ Voor ondersteuning bij het gebruik van een EDR-beleid bij Configuration Manager-
 
 ## <a name="edr-profiles"></a>EDR-profielen
 
-[Bekijk de instellingen](../protect/endpoint-security-edr-profile-settings.md) die u voor de volgende platforms en profielen kunt configureren.
+[Bekijk de instellingen](endpoint-security-edr-profile-settings.md) die u voor de volgende platforms en profielen kunt configureren.
 
 **Intune**: het onderstaande wordt ondersteund voor apparaten die u met Intune beheert:
 
@@ -138,7 +138,7 @@ Als u van plan bent om co-beheer in te schakelen, moet u bekend zijn met co-behe
 
       Wanneer deze optie is geselecteerd, biedt de wizard extra pagina's om de installatie van co-beheer uit te voeren. Zie [Co-beheer inschakelen](../../configmgr/comanage/how-to-enable.md) in de Configuration Manager-inhoud voor meer informatie.
 
-     ![Tenantkoppeling configureren](./media/endpoint-security-edr-policy/tenant-onboarding.png)
+     ![Tenantkoppeling configureren](media/endpoint-security-edr-policy/tenant-onboarding.png)
 
 4. Klik op **Volgende** en daarna op **Ja** om de melding **Een AAD-toepassing maken** te accepteren. Met deze actie wordt een service-principal ingericht en wordt een Azure AD-toepassingsregistratie gemaakt om de synchronisatie van verzamelingen met het Microsoft Endpoint Manager-beheercentrum te vergemakkelijken.
 
@@ -159,7 +159,7 @@ Als u van plan bent om co-beheer in te schakelen, moet u bekend zijn met co-behe
 3. Selecteer **Uploaden naar Microsoft Endpoint Manager-beheercentrum** in het tabblad **Upload configureren**. Klik op **Toepassen**.
    - De standaardinstelling voor het uploaden van apparaten is **Alle apparaten die worden beheerd door Microsoft Endpoint Configuration Manager**. U kunt er ook voor kiezen om uw configuratie te beperken tot een of enkele verzamelingen apparaten.
 
-     ![Het tabblad Eigenschappen voor co-beheer bekijken](./media/endpoint-security-edr-policy/configure-upload.png)
+     ![Het tabblad Eigenschappen voor co-beheer bekijken](media/endpoint-security-edr-policy/configure-upload.png)
 
 4. Meld u aan met uw *globale beheerder*-account wanneer u hierom wordt gevraagd.
 
@@ -195,7 +195,7 @@ Nadat u verzamelingen hebt geconfigureerd die u wilt synchroniseren met Microsof
 
    - U kunt deze optie niet selecteren als de Configuration Manager-hiërarchie niet is gekoppeld aan een tenant.
   
-   ![Cloudsynchronisatie configureren](./media/endpoint-security-edr-policy/cloud-sync.png)
+   ![Cloudsynchronisatie configureren](media/endpoint-security-edr-policy/cloud-sync.png)
 
 3. Selecteer **OK** om de configuratie op te slaan.
 
@@ -258,11 +258,17 @@ U kunt uitgebreide informatie bekijken over de EDR-beleidsregels die u in het be
 
 - Voor beleidsregels die zijn gericht op het platform **Windows 10 en hoger** (Intune), ziet u een overzicht van de naleving van het beleid. U kunt ook de grafiek selecteren om een lijst weer te geven met apparaten waarvoor het beleid is ontvangen en inzoomen op afzonderlijke apparaten voor meer informatie.
 
+  De grafiek voor **apparaten met ATP-sensor** geeft alleen apparaten weer die naar Defender ATP onboarden door het profiel voor **Windows 10 en hoger** te gebruiken. Om ervoor te zorgen dat al uw apparaten in deze grafiek worden weergeven, implementeert u het onboarding-profiel op al uw apparaten. Apparaten die op externe wijze, bijv. via groepsbeleid of PowerShell, op Defender ATP worden uitgevoerd, behoren tot de **apparaten zonder ATP-sensor**.
+
 - Voor beleidsregels die zijn gericht op het **Windows 10- en Windows Server**-platform (Configuration Manager), ziet u een overzicht van de naleving van het beleid, maar u kunt niet inzoomen om aanvullende informatie te bekijken. De weergave is beperkt omdat het beheercentrum gegevens met een beperkte status ontvangt van Configuration Manager, waarmee de implementatie van het beleid op Configuration Manager apparaten wordt beheerd.
 
-[Bekijk de instellingen](../protect/endpoint-security-edr-profile-settings.md) die u voor de platformen en profielen kunt configureren.
+
+
+
+
+[Bekijk de instellingen](endpoint-security-edr-profile-settings.md) die u voor de platformen en profielen kunt configureren.
 
 ## <a name="next-steps"></a>Volgende stappen
 
-- [Eindpuntbeveiligingsbeleid configureren](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
+- [Eindpuntbeveiligingsbeleid configureren](endpoint-security-policy.md#create-an-endpoint-security-policy)
 - Meer informatie over [eindpuntdetectie en -respons](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) vindt u in de Microsoft Defender ATP-documentatie.

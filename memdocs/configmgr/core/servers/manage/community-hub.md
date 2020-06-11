@@ -2,7 +2,7 @@
 title: Community-hub en GitHub
 titleSuffix: Configuration Manager
 description: Community hub inschakelen en gebruiken in Configuration Manager
-ms.date: 06/02/2020
+ms.date: 06/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 88cead9a-64fe-471e-b57c-81707cefe46c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d3dd8f8af7a3add38d8003da12078d393041631d
-ms.sourcegitcommit: 5e339c07001e911cf75ef922e6c66a7efdeab6f1
+ms.openlocfilehash: 606c9490e56d932176b17eef95ea4ed0c956770e
+ms.sourcegitcommit: a198e4efa52b16f87049853b9d8c9854fd9fa057
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84637728"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84680418"
 ---
 # <a name="community-hub-and-github"></a>Community-hub en GitHub
 <!--3555935, 3555936-->
@@ -36,10 +36,11 @@ Community hub ondersteunt de volgende objecten:
 
 ## <a name="prerequisites"></a>Vereisten
 
-- Op het apparaat waarop de Configuration Manager-console wordt uitgevoerd voor toegang tot de hub, zijn de volgende items nodig:
-   - Windows 10 build 17110 of hoger
+- Op het apparaat waarop de Configuration Manager-console wordt uitgevoerd om toegang te krijgen tot de Community-hub, moeten de volgende items worden gebruikt:
    - .NET Framework versie 4,6 of hoger
-
+   - Windows 10 build 17110 of hoger
+      - Windows Server wordt niet ondersteund, dus de Configuration Manager-console moet worden geïnstalleerd op een Windows 10-apparaat dat gescheiden is van de site server.
+   - Het aangemelde gebruikers account kan niet het ingebouwde Administrator account zijn
 
 - Als u rapporten wilt downloaden, moet u de optie **Configuration Manager gegenereerde certificaten gebruiken voor HTTP-site systemen** op de site die u in importeert. Zie [Enhanced http](/sccm/core/plan-design/hierarchy/enhanced-http)(Engelstalig) voor meer informatie.
    1. Ga naar **beheer**  >  **site configuratie**  >  **sites**.

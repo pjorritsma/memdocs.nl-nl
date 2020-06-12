@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/02/2020
+ms.date: 06/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c145a4b7fa150a9d42c9bf20eca4f85f6356acf8
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 2e386d382ceb785d886dfb931bb26222bd82b1a0
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988520"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347318"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>iOS- en macOS-apps beheren die zijn aangeschaft via het Apple Volume Purchase Program met Microsoft Intune
 
@@ -180,7 +180,13 @@ Als u de licenties van alle VPP-apps van een bepaald VPP-token wilt intrekken, m
 
 ## <a name="renewing-app-licenses"></a>App-licenties vernieuwen
 
-U kunt een Apple VPP-token vernieuwen door een nieuw token te downloaden van Apple Business Manager of Apple School Manager en het bestaande token in Intune bij te werken.
+U kunt een Apple VPP-token vernieuwen door een nieuw token te downloaden van [Apple Business Manager](https://business.apple.com/) of [Apple School Manager](https://school.apple.com/) en het bestaande token in Intune bij te werken. 
+
+Als u een Apple VPP-token wilt vernieuwen, volgt u de volgende stappen:
+
+1. Navigeer naar [Apple Business Manager](https://business.apple.com/) of [Apple School Manager](https://school.apple.com/).
+2. Download het nieuwe token in **Apple Business (of School) Manager** door **Instellingen** > **Apps en Books** > **Mijn servertokens** te selecteren.
+3. Het token in [Beheercentrum voor Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) bijwerken door **Tenantbeheer** > **Connectors en tokens** > **Apple VPP-tokens** te selecteren. Upload het token vervolgens handmatig.
 
 ## <a name="deleting-a-vpp-app"></a>Een VPP-app verwijderen
 
@@ -190,7 +196,7 @@ U kunt een iOS/iPadOS VPP-app op dit moment niet verwijderen uit Microsoft Intun
 
 Toegang tot Apple VPP-tokens en VPP-apps kan onafhankelijk worden beheerd met behulp van machtigingen die worden toegewezen aan aangepaste beheerdersrollen in Intune.
 
-* Als u een aangepaste rol in Intune wilt toestaan om Apple VPP-tokens te beheren onder **Apps** > **Apple VPP-tokens**, wijst u machtigingen toe voor **Beheerde apps**.
+* Als u een aangepaste rol van Intune wilt toestaan om Apple VPP-tokens in Beheercentrum voor Microsoft Endpoint Manager te beheren, selecteert u **Tenantbeheer** > **Connectors en tokens** > **Apple VPP-tokens** en wijst u machtigingen toe aan **Beheerde apps**.
 * Als u een aangepaste rol in Intune wilt toestaan om apps die zijn gekocht met iOS/iPadOS VPP-tokens, te beheren onder **Apps** > **Alle apps**, wijst u machtigingen toe voor **Mobiele apps**. 
 
 ## <a name="additional-information"></a>Aanvullende informatie

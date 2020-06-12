@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 06/02/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91ca1e8a710e13e393af5bb3723ca1086e37887d
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: abd34733bd27ec150a92bf20cecbf7edc02c2bd6
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988602"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330998"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>App-beveiligingsbeleid maken en toewijzen
 
@@ -51,7 +51,7 @@ Zie [Add apps to Microsoft Intune](apps-add.md) (Apps toevoegen aan Microsoft In
 
 ## <a name="app-protection-policies-for-iosipados-and-android-apps"></a>Beveiligingsbeleid voor apps voor iOS/iPadOS- en Android-apps
 
-Wanneer u een app-beveiligingsbeleid maakt voor iOS/iPadOS- en Android-apps, volgt u een moderne Intune-processtroom die resulteert in een nieuw beveiligingsbeleid voor apps.
+Wanneer u een app-beveiligingsbeleid maakt voor iOS/iPadOS- en Android-apps, volgt u een moderne Intune-processtroom die resulteert in een nieuw beveiligingsbeleid voor apps. Zie [Beleid voor Windows Information Protection (WIP) maken en implementeren met Intune](../apps/windows-information-protection-policy-create.md) voor informatie over het maken van een beveiligingsbeleid voor Windows-apps.
 
 ### <a name="create-an-iosipados-or-android-app-protection-policy"></a>Een beveiligingsbeleid voor iOS/iPadOS- of Android-apps maken
 

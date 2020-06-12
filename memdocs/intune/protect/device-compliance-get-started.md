@@ -1,11 +1,11 @@
 ---
 title: Nalevingsbeleid voor apparaten in Microsoft Intune - Azure | Microsoft Docs
-description: Ga aan de slag met het gebruik van apparaatnalevingsbeleid, overzicht van status- en ernstniveaus, gebruik van respijtperiode-status, werken met voorwaardelijke toegang, en verwerking van apparaten zonder toegewezen beleid.
+description: Aan de slag met het gebruik van beleidsregels voor compliance, inclusief instellingen voor compliancebeleid en compliancebeleid voor apparaten voor Microsoft Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/21/2020
+ms.date: 05/28/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,108 +16,146 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 559d9a704f0b33e3fda3adf628626b56ff263de3
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 227a44436f4490c9b3e2188609a9714a0e842149
+ms.sourcegitcommit: eb51bb38d484e8ef2ca3ae3c867561249fa413f3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989719"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84206312"
 ---
-# <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Regels instellen op apparaten om toegang tot resources in uw organisatie met behulp van Intune toe te staan
+# <a name="use-compliance-policies-to-set-rules-for-devices-you-manage-with-intune"></a>Beleidsregels voor compliance gebruiken om regels in te stellen voor apparaten die u beheert met Intune
 
-Veel MDM-oplossingen (mobile device management) beschermen bedrijfsgegevens, doordat gebruikers en apparaten aan bepaalde vereisten moeten voldoen. In Intune wordt deze functie 'nalevingsbeleid' genoemd. Het nalevingsbeleid bepaalt aan welke regels en instellingen apparaten moeten voldoen om compatibel te zijn. Indien gecombineerd met voorwaardelijke toegang kunnen beheerders gebruikers en apparaten blokkeren die niet aan de regels voldoen.
+Met MDM-oplossingen (mobile device management), zoals Intune, beschermt u bedrijfsgegevens, doordat gebruikers en apparaten aan bepaalde vereisten moeten voldoen. In Intune wordt deze functie *nalevingsbeleid* genoemd.
 
-Zo kan een Intune-beheerder eisen dat:
+Nalevingsbeleid in Intune:
 
-- eindgebruikers een wachtwoord gebruiken voor toegang tot bedrijfsgegevens op mobiele apparaten
-- het apparaat niet jailbroken of geroot is
-- er een minimum- of maximumversie van het besturingssysteem op het apparaat staat
-- het apparaat zich op of onder het apparaatdreigingsniveau bevindt
+- De regels en instellingen vaststellen waaraan gebruikers en apparaten moeten voldoen om compatibel te zijn.
+- Neem daarbij ook acties op die van toepassing zijn op apparaten die niet compatibel zijn. Met acties voor niet-naleving kunnen gebruikers op de hoogte worden gebracht van de voorwaarden van niet-naleving en de gegevens op niet-compatibele apparaten beveiligen.
+- Kan [worden gecombineerd met Voorwaardelijke toegang](#integrate-with-conditional-access), waardoor gebruikers en apparaten die niet aan de regels voldoen vervolgens kunnen worden geblokkeerd.
 
-U kunt deze functie ook gebruiken om de nalevingsstatus op apparaten in uw organisatie te bewaken.
+Er zijn twee onderdelen voor nalevingsbeleid in Intune:
 
-> [!IMPORTANT]
-> Intune volgt het incheckschema van het apparaat voor alle nalevingsevaluaties op het apparaat. [Vernieuwingscycli voor beleidsregels en profielen](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) bevat de geschatte vernieuwingstijden.
+- **Instellingen voor nalevingsbeleid**: Instellingen voor de hele tenant, die fungeren als een ingebouwd compliancebeleid dat door elk apparaat wordt ontvangen. Instellingen van het nalevingsbeleid bepalen de ondergrens van hoe compliancebeleid functioneert in uw Intune-omgeving, waarbij ook van een apparaat dat geen compliancebeleid heeft ontvangen, wordt vastgesteld of het compatibel is of niet.
 
-<!---### Actions for noncompliance
+- **Compliancebeleid van een apparaat**: Platformspecifieke regels die u configureert en implementeert voor groepen gebruikers of apparaten.  Met deze regels worden de vereisten voor apparaten gedefinieerd, zoals minimale besturingssystemen of het gebruik van schijfversleuteling. Apparaten moeten voldoen aan deze regels om te worden beschouwd als een apparaat dat het beleid naleeft.
 
-You can specify what needs to happen when a device is determined as noncompliant. This can be a sequence of actions during a specific time.
-When you specify these actions, Intune will automatically initiate them in the sequence you specify. See the following example of a sequence of
-actions for a device that continues to be in the noncompliant status for
-a week:
+Net als bij andere beleidsregels van Intune, zijn evaluaties van het compliancebeleid voor een apparaat afhankelijk van wanneer het apparaat wordt ingecheckt bij Intune en [de vernieuwingscycli van het beleid en het profiel](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 
-- When the device is first determined to be noncompliant, an email with noncompliant notification is sent to the user.
+## <a name="compliance-policy-settings"></a>Instellingen voor nalevingsbeleid
 
-- 3 days after initial noncompliance state, a follow up reminder is sent to the user.
+*Instellingen voor nalevingsbeleid* zijn instellingen voor de hele tenant die bepalen hoe de complianceservice van Intune met uw apparaten communiceert. Deze instellingen zijn anders dan de instellingen die u configureert in een compliancebeleid voor apparaten.
 
-- 5 days after initial noncompliance state, a final reminder with a notification that access to company resources will be blocked on the device in 2 days if the compliance issues are not remediated is sent to the user.
+Als u de instellingen voor het nalevingsbeleid wilt beheren, meldt u zich aan bij [Beheercentrum voor Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) en gaat u naar **Eindpuntbeveiliging** > **Apparaatcompatibiliteit** > **Instellingen voor nalevingsbeleid**.
 
-- 7 days after initial noncompliance state, access to company resources is blocked. This requires that you have Conditional Access policy that specifies that access from noncompliant devices should    be blocked for services such as Exchange and SharePoint.
+Instellingen voor nalevingsbeleid bevatten de volgende instellingen:
 
-### Grace Period
+- **Apparaten waaraan geen nalevingsbeleid is toegewezen markeren als**
 
-This is the time between when a device is first determined as
-noncompliant to when access to company resources on that device is blocked. This time allows for time that the user has to resolve
-compliance issues on the device. You can also use this time to create your action sequences to send notifications to the user before their access is blocked.
+  Met deze instelling bepaalt u hoe Intune omgaat met apparaten waaraan geen compliancebeleid voor apparaten is toegewezen. Deze instelling heeft twee waarden:
+  - **Compatibel** (*standaard*): Deze beveiligingsfunctie is uitgeschakeld. Apparaten waar geen apparaatnalevingsbeleid naartoe is gestuurd, worden beschouwd als *compatibel*.
+  - **Niet compatibel**: Deze beveiligingsfunctie is ingeschakeld. Apparaten die geen apparaatnalevingsbeleid hebben ontvangen, worden beschouwd als niet-compatibel.
 
-Remember that you need to implement Conditional Access policies in addition to compliance policies in order for access to company resources to be blocked.--->
+  Als u Voorwaardelijke toegang met uw nalevingsbeleid voor apparaten gebruikt, raden we u aan deze instelling te wijzigen in **Niet-compatibel** om ervoor te zorgen dat alleen apparaten die zijn bevestigd als compatibel, toegang hebben tot uw resources.
 
-## <a name="device-compliance-policies-work-with-azure-ad"></a>Apparaatnalevingsbeleid werkt met Azure AD
+  Als een eindgebruiker niet compatibel is omdat er geen beleid aan hem of haar is toegewezen, wordt in de [bedrijfsportal-app](../apps/company-portal-app.md) vermeld: Er is geen compliancebeleid toegewezen.
 
-Intune maakt gebruik van [voorwaardelijke toegang](../protect/conditional-access.md) om naleving af te dwingen. Voorwaardelijke toegang is een technologie van Azure Active Directory (Azure AD).
+- **Verbeterde jailbreakdetectie** (*alleen van toepassing op iOS/iPadOS*)
 
-Wanneer een apparaat is ingeschreven bij Intune, wordt het Azure AD-registratieproces gestart, en worden de apparaatgegevens bijgewerkt in Azure AD. Een van de belangrijkste apparaatgegevens is de nalevingsstatus van het apparaat. Deze nalevingsstatus wordt door de beleidsregels voor voorwaardelijke toegang gebruikt om de toegang tot e-mail en andere organisatieresources toe te staan of te blokkeren.
+  Deze instelling werkt alleen op apparaten waarop u een apparaatcompliancebeleid richt waarmee gekraakte apparaten worden geblokkeerd.  (Zie de instellingen voor [Apparaatstatus](compliance-policy-create-ios.md#device-health) voor iOS/iPadOS).
 
-Meer informatie over voorwaardelijke toegang en Intune:
+  Deze instelling heeft twee waarden:
 
-- [Gebruikelijke manieren om voorwaardelijke toegang met Intune te gebruiken](conditional-access-intune-common-ways-use.md)
+  - **Uitgeschakeld** (*standaard*): Deze beveiligingsfunctie is uitgeschakeld. Deze instelling heeft geen invloed op uw apparaten die een apparaatnalevingsbeleid ontvangen waarmee gekraakte apparaten worden geblokkeerd.
+  - **Ingeschakeld**: Deze beveiligingsfunctie is ingeschakeld. Apparaten die een apparaatnalevingsbeleid ontvangen om gekraakte apparaten te blokkeren, gebruiken de Verbeterde jailbreakdetectie.
 
-Meer informatie over voorwaardelijke toegang vindt u in de Azure AD-documentatie:
-  - [Wat is voorwaardelijke toegang](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)
-  - [Wat is een apparaat-id](https://docs.microsoft.com/azure/active-directory/device-management-introduction)
+  Wanneer deze functie is ingeschakeld op een van toepassing zijnd iOS/iPadOS-apparaat, wordt het apparaat:
 
-## <a name="ways-to-use-device-compliance-policies"></a>Nalevingsbeleid voor apparaten gebruiken
+  - Locatieservices op het niveau van het besturingssysteem ingeschakeld.
+  - Toegang tot locatieservices verleend aan de Bedrijfsportal.
+  - Gebruikgemaakt van de locatieservices om jailbreakdetectie vaker op de achtergrond te activeren. De locatiegegevens van de gebruiker worden niet opgeslagen met Intune.
 
-### <a name="with-conditional-access"></a>Met voorwaardelijke toegang
+  Verbeterde jailbreakdetectie voert een evaluatie uit wanneer:
 
-Voor apparaten die aan beleidsregels voldoen, kunt u deze apparaten toegang verlenen tot e-mail en andere organisatieresources. Als de apparaten niet aan beleidsregels voldoen, krijgen ze geen toegang tot organisatieresources. Dit wordt voorwaardelijke toegang genoemd.
+  - De bedrijfsportal-app wordt geopend
+  - Het apparaat fysiek een aanzienlijke afstand van ongeveer 500 meter of meer wordt verplaatst. Intune kan niet garanderen dat elke aanzienlijke locatiewijziging resulteert in een controle op jailbreakdetectie, aangezien deze controle afhankelijk is van de netwerkverbinding van een apparaat op dat moment.
 
-### <a name="without-conditional-access"></a>Zonder voorwaardelijke toegang
+  Op apparaten met iOS 13 en hoger moeten gebruikers voor deze functie steeds de optie *Altijd toestaan* selecteren wanneer hen wordt gevraagd door te gaan; hierdoor kan hun locatie op de achtergrond worden gebruikt in de Bedrijfsportal. Als gebruikers toegang tot hun locatie niet altijd toestaan en een beleid hebben ingesteld waarbij deze instelling is geconfigureerd, wordt hun apparaat gemarkeerd als niet-compatibel.
 
-U kunt nalevingsbeleid voor apparaten ook zonder voorwaardelijke toegang gebruiken. Bij onafhankelijk gebruik van nalevingsbeleid worden de betreffende apparaten geëvalueerd en samen met hun nalevingsstatus gerapporteerd. U kunt bijvoorbeeld rapporteren over het aantal apparaten dat niet is versleuteld of over welke apparaten jailbroken of geroot zijn. Wanneer u nalevingsbeleid zonder voorwaardelijke toegang gebruikt, zijn er geen toegangsbeperkingen tot bedrijfsresources.
+- **Geldigheidsperiode van nalevingsstatus (dagen)**
 
-## <a name="ways-to-deploy-device-compliance-policies"></a>Nalevingsbeleid voor apparaten implementeren
+  Geef een periode op waarin apparaten met succes moeten rapporteren over al hun ontvangen nalevingsbeleidsregels. Als een apparaat de nalevingsstatus voor een beleid niet rapporteert voordat de geldigheidsperiode is verstreken, wordt het apparaat als niet-compatibel behandeld.
 
-U kunt nalevingsbeleid implementeren voor gebruikers in gebruikersgroepen of apparaten in apparaatgroepen. Wanneer er nalevingsbeleid wordt geïmplementeerd voor een gebruiker, worden alle apparaten van de gebruiker gecontroleerd op naleving. Het gebruik van apparaatgroepen maakt rapportage over naleving in dit scenario eenvoudiger.
+  De periode is standaard ingesteld op 30 dagen. U kunt een periode van 1 tot 120 dagen configureren.
 
-Intune bevat ook een set ingebouwde instellingen voor nalevingsbeleid. Het volgende ingebouwde beleid wordt geëvalueerd op alle apparaten die zijn ingeschreven in Intune:
+  U kunt details over de naleving van het apparaat weergeven voor de instelling voor de geldigheidsperiode. Meld u aan bij [Beheercentrum voor Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) en ga naar **Apparaten** > **Controleren** > **Instelling compliance**. Deze instelling heeft de naam **Is actief** in de kolom *Instelling*.  Zie [Apparaatcompatibiliteit controleren](compliance-policy-monitor.md) voor meer informatie over deze en gerelateerde weergaven over de status van naleving.
 
-- **Apparaten waaraan geen nalevingsbeleid is toegewezen markeren als**: Dit is een standaardactie voor niet-naleving. Deze eigenschap heeft twee waarden:
+## <a name="device-compliance-policies"></a>Nalevingsbeleid voor apparaten
 
-  - **Compatibel** (*standaard*): beveiligingsfunctie uit
-  - **Niet compatibel**: beveiligingsfunctie aan
+Intune apparaatnalevingsbeleid:
 
-  Als er geen nalevingsbeleid aan een apparaat is toegewezen, wordt dit apparaat standaard als incompatibel beschouwd. Als u voorwaardelijke toegang met nalevingsbeleid gebruikt, is het raadzaam de standaardinstelling te wijzigen in **Niet compatibel**. Als een eindgebruiker incompatibel is omdat er geen beleid is toegewezen, wordt `No compliance policies have been assigned` vermeld in de [bedrijfsportal-app](../apps/company-portal-app.md).
+- De regels en instellingen vaststellen waaraan gebruikers en beheerde apparaten moeten voldoen om compatibel te zijn. Voorbeelden van regels zijn de vereiste dat op apparaten een minimale versie van het besturingssysteem wordt uitgevoerd, niet gekraakt of geroot zijn, en zich op of onder een *bedreigingsniveau* bevinden, zoals opgegeven door de beheersoftware voor bedreigingen die u hebt geïntegreerd met Intune.
+- Ondersteuningsacties die van toepassing zijn op apparaten die niet voldoen aan uw nalevingsregels. Voorbeelden van acties zijn op afstand vergrendelen of het verzenden van een e-mail van een apparaatgebruiker over de apparaatstatus, zodat het probleem kan worden opgelost.
+- Implementeer voor gebruikers in gebruikersgroepen of apparaten in apparaatgroepen. Wanneer er nalevingsbeleid wordt geïmplementeerd voor een gebruiker, worden alle apparaten van de gebruiker gecontroleerd op naleving. Het gebruik van apparaatgroepen maakt rapportage over naleving in dit scenario eenvoudiger.
 
-- **Verbeterde jailbreakdetectie** (*Is van toepassing op iOS/iPadOS*): als deze instelling is ingeschakeld, wordt de status van apparaten met jailbreak vaker weergegeven op iOS/iPadOS-apparaten. Deze instelling is alleen van invloed op apparaten waarop een nalevingsbeleid is gericht waarmee apparaten met jailbreak worden geblokkeerd. Door het inschakelen van deze eigenschap worden de locatieservices van het apparaat gebruikt. Ook kan dit invloed hebben op het batterijverbruik. De locatiegegevens van de gebruiker worden niet door Intune opgeslagen en worden alleen gebruikt om jailbreakdetectie vaker te activeren op de achtergrond. 
+Als u Voorwaardelijke toegang gebruikt, kunnen voor uw beleid voor Voorwaardelijke toegang de nalevingsresultaten van uw apparaat worden gebruikt om toegang tot resources van niet-compatibele apparaten te blokkeren.
 
-  Wanneer u deze instelling inschakelt, moeten apparaten:
-  - Locatieservices op het niveau van het besturingssysteem inschakelen.
-  - De bedrijfsportal altijd toestaan om locatieservices te gebruiken.
+De beschikbare instellingen die u in een compliancebeleid voor apparaten kunt opgeven, zijn afhankelijk van het platformtype dat u selecteert bij het maken van een beleid. Verschillende platformen voor apparaten ondersteunen verschillende instellingen en voor elk platformtype is een afzonderlijk beleid vereist.  
 
-  Verbeterde detectie werkt via de locatieservices. De evaluatie wordt geactiveerd door de bedrijfsportal-app te openen of het apparaat een aanzienlijke afstand van 500 meter of meer te verplaatsen. Op apparaten met iOS 13 en hoger moeten gebruikers voor deze functie steeds de optie Altijd toestaan selecteren wanneer ze worden gevraagd door te gaan; hierdoor kan hun locatie op de achtergrond worden gebruikt in de bedrijfsportal. Als gebruikers toegang tot hun locatie niet altijd toestaan en een beleid hebben ingesteld waarbij deze instelling is geconfigureerd, wordt hun apparaat gemarkeerd als Niet-compatibel. Houd er rekening mee dat Intune niet kan garanderen dat elke grote locatiewijziging ervoor zorgt dat er op jailbreakdetectie wordt gecontroleerd, aangezien dit afhankelijk is van de netwerkverbinding van een apparaat op dat moment.
+De volgende onderwerpen bevatten een koppeling naar artikelen die specifiek gaan over verschillende aspecten van het configuratiebeleid voor apparaten.
 
-- **Geldigheidsperiode van nalevingsstatus (dagen)** : Voer de tijdsduur in dat apparaten de status voor alle ontvangen nalevingsbeleidsregels moeten rapporteren. Apparaten die niet binnen deze tijdsduur de status retourneren, worden als Niet compatibel beschouwd. De standaardwaarde is 30 dagen. De maximumwaarde is 120 dagen. De minimumwaarde is 1 dag.
+- [**Acties voor niet-naleving**](actions-for-noncompliance.md): Elk nalevingsbeleid voor apparaten bevat een of meer acties voor niet-naleving. Deze acties zijn regels die worden toegepast op apparaten die niet voldoen aan de voorwaarden die u in het beleid hebt ingesteld.
 
-  Deze instelling wordt weergegeven als het standaardnalevingsbeleid **Is actief** (**Apparaten** > **Controleren** > **Naleving van instelling**). De achtergrondtaak voor dit beleid wordt één keer per dag uitgevoerd.
+  Elk nalevingsbeleid voor apparaten bevat standaard de actie om een apparaat als niet-compatibel te markeren als het niet kan voldoen aan een beleidsregel. Middels het beleid worden vervolgens op het apparaat alle aanvullende acties voor niet-naleving toegepast die u hebt geconfigureerd, op basis van de planningen die u voor deze acties hebt ingesteld.
 
-U kunt dit ingebouwde beleid gebruiken om deze instellingen te bewaken. In Intune worden [controles voor updates ook vernieuwd](create-compliance-policy.md#refresh-cycle-times) met verschillende intervallen, afhankelijk van het apparaatplatform. [Algemene vragen, problemen en oplossingen met apparaatbeleid en -profielen in Microsoft Intune](../configuration/device-profile-troubleshoot.md) is een goede resource.
+  Via acties voor niet-naleving kunnen gebruikers worden gewaarschuwd wanneer het apparaat niet compatibel is of kunnen gegevens worden beveiligd die zich op een apparaat kunnen bevinden. Voorbeelden van acties zijn:
 
-Nalevingsrapporten zijn een uitstekende manier om de status van apparaten te controleren. [Nalevingsbeleid bewaken](compliance-policy-monitor.md) bevat enkele richtlijnen.
+  - **Verzenden van e-mailwaarschuwingen** naar gebruikers en groepen met details over het apparaat dat niet compatibel is. U kunt het beleid zo configureren dat er direct een e-mail wordt verzonden nadat het apparaat is gemarkeerd als niet-compatibel, en vervolgens periodiek opnieuw, totdat het apparaat compatibel is.
+  - **Apparaten op afstand vergrendelen** die enige tijd niet compatibel zijn.
+  - **Apparaten buiten gebruik stellen** nadat deze al enige tijd niet compatibel zijn. Met deze actie verwijdert u het apparaat uit Intune-beheer en verwijdert u alle bedrijfsgegevens van het apparaat.
 
-## <a name="non-compliance-and-conditional-access-on-the-different-platforms"></a>Niet-naleving en voorwaardelijke toegang op verschillende platforms
+- [**Netwerklocaties configureren**](use-network-locations.md): Ondersteund door Android-apparaten. U kunt *netwerklocaties* configureren en vervolgens die locaties gebruiken als een nalevingsregel voor apparaten. Met dit type regel kunt u een apparaat als niet-compatibel markeren wanneer het zich buiten een opgegeven netwerk bevindt of dit netwerk verlaat. Voordat u een locatieregel kunt opgeven, moet u de netwerklocaties configureren.
+
+- [**Een beleid maken**](create-compliance-policy.md): Met de informatie in dit artikel kunt u de vereisten bekijken, de opties voor het configureren van regels doorlopen, acties voor niet-naleving opgeven en het beleid toewijzen aan groepen. Dit artikel bevat ook informatie over de tijden voor het vernieuwen van het beleid.
+
+  Bekijk de instellingen voor apparaatcompatibiliteit voor de verschillende apparaatplatformen:
+
+  - [Android](compliance-policy-create-android.md)
+  - [Android Enterprise](compliance-policy-create-android-for-work.md)
+  - [iOS](compliance-policy-create-ios.md)
+  - [macOS](compliance-policy-create-mac-os.md)
+  - [Windows Holographic for Business](compliance-policy-create-windows.md#windows-holographic-for-business)
+  - [Windows Phone 8.1](compliance-policy-create-windows-8-1.md)
+  - [Windows 8.1 en hoger](compliance-policy-create-windows-8-1.md)
+  - [Windows 10 en hoger](compliance-policy-create-windows.md)
+
+## <a name="monitor-compliance-status"></a>Status voor naleving bewaken
+
+Intune bevat een dashboard voor apparaatcompatibiliteit dat u gebruikt om de nalevingsstatus van apparaten te controleren en om in te zoomen op beleid en apparaten voor meer informatie. Zie [Controleren op naleving van het apparaat](compliance-policy-monitor.md) voor meer informatie over dit dashboard.
+
+## <a name="integrate-with-conditional-access"></a>Integreren met Voorwaardelijke toegang
+
+Wanneer u Voorwaardelijke toegang gebruikt, kunt u uw beleid voor Voorwaardelijke toegang configureren om de resultaten van het nalevingsbeleid van uw apparaat te gebruiken om te bepalen welke apparaten toegang krijgen tot de resources van uw organisatie. Dit toegangsbeheer is aanvullend op en gescheiden van de acties voor niet-naleving die u in uw nalevingsbeleid voor apparaten opneemt.
+
+Wanneer een apparaat wordt ingeschreven bij Intune, wordt het geregistreerd in Microsoft Azure AD. De nalevingsstatus voor apparaten wordt gerapporteerd aan Microsoft Azure AD. Als u in uw beleid voor Voorwaardelijke toegang het Toegangsbeheer hebt ingesteld op *Vereisen dat het apparaat wordt gemarkeerd als compatibel*, dan gebruikt Voorwaardelijke toegang die nalevingsstatus om te bepalen of toegang tot e-mail en andere resources van de organisatie wordt toegekend of geblokkeerd.
+
+Als u de nalevingsstatus van het apparaat gebruikt met beleidsregels voor Voorwaardelijke toegang, raadpleegt u hoe in uw tenant *Apparaten waaraan geen nalevingsbeleid is toegewezen markeren als*, dat u beheert onder [Instellingen nalevingsbeleid](#compliance-policy-settings), is geconfigureerd.
+
+Zie [Voorwaardelijke toegang op basis van het apparaat](conditional-access-intune-common-ways-use.md#device-based-conditional-access) voor meer informatie over het gebruik van Voorwaardelijke toegang met uw nalevingsbeleid voor apparaten
+
+Meer informatie over voorwaardelijke toegang vindt u in de Microsoft Azure AD-documentatie:
+
+- [Wat is voorwaardelijke toegang](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)
+- [Wat is een apparaat-id](https://docs.microsoft.com/azure/active-directory/device-management-introduction)
+
+### <a name="reference-for-non-compliance-and-conditional-access-on-the-different-platforms"></a>Naslag voor niet-naleving en voorwaardelijke toegang op verschillende platformen
 
 In de volgende tabel wordt beschreven hoe niet-compatibele instellingen worden beheerd wanneer een nalevingsbeleid wordt gebruikt in combinatie met beleid voor voorwaardelijke toegang.
+
+- **Hersteld**: Het besturingssysteem van het apparaat dwingt naleving af. De gebruiker wordt bijvoorbeeld gedwongen een pincode in te stellen.
+
+- **In quarantaine**: Het besturingssysteem van het apparaat dwingt geen naleving af. Bij Android- en Android Enterprise-apparaten wordt de gebruiker bijvoorbeeld niet gedwongen het apparaat te versleutelen. Als het apparaat niet compatibel is, worden de volgende acties uitgevoerd:
+  - Het apparaat wordt geblokkeerd als een beleid voor voorwaardelijke toegang van toepassing is voor de gebruiker.
+  - Via de bedrijfsportal-app wordt de gebruiker op de hoogte gebracht van eventuele nalevingsproblemen.
 
 ---------------------------
 
@@ -133,25 +171,10 @@ In de volgende tabel wordt beschreven hoe niet-compatibele instellingen worden b
 
 ---------------------------
 
-**Hersteld**: Het besturingssysteem van het apparaat dwingt naleving af. De gebruiker wordt bijvoorbeeld gedwongen een pincode in te stellen.
-
-**In quarantaine**: Het besturingssysteem van het apparaat dwingt geen naleving af. Bij Android- en Android Enterprise-apparaten wordt de gebruiker bijvoorbeeld niet gedwongen het apparaat te versleutelen. Als het apparaat niet compatibel is, worden de volgende acties uitgevoerd:
-
-- Het apparaat wordt geblokkeerd als een beleid voor voorwaardelijke toegang van toepassing is voor de gebruiker.
-- Via de bedrijfsportal-app wordt de gebruiker op de hoogte gebracht van eventuele nalevingsproblemen.
-
 ## <a name="next-steps"></a>Volgende stappen
 
-- [Maak een beleid](create-compliance-policy.md) en bekijk de vereisten.
-- Bekijk de nalevingsinstellingen voor de verschillende apparaatplatforms:
-
-  - [Android](compliance-policy-create-android.md)
-  - [Android Enterprise](compliance-policy-create-android-for-work.md)
-  - [iOS](compliance-policy-create-ios.md)
-  - [macOS](compliance-policy-create-mac-os.md)
-  - [Windows Holographic for Business](compliance-policy-create-windows.md#windows-holographic-for-business)
-  - [Windows Phone 8.1](compliance-policy-create-windows-8-1.md)
-  - [Windows 8.1 en hoger](compliance-policy-create-windows-8-1.md)
-  - [Windows 10 en hoger](compliance-policy-create-windows.md)
-
-- [Naslag voor beleidsentiteiten](../developer/reports-ref-policy.md) bevat meer informatie over de beleidsentiteiten voor Intune-datawarehouse.
+- [Locaties configureren](../protect/use-network-locations.md) voor gebruik met Android-apparaten
+- [Beleid maken en implementeren](../protect/create-compliance-policy.md) en vereisten beoordelen
+- [Apparaatcompatibiliteit bewaken](../protect/compliance-policy-monitor.md)
+- [Algemene vragen, problemen en oplossingen met apparaatbeleid en -profielen in Microsoft Intune](../configuration/device-profile-troubleshoot.md)
+- [Naslag voor beleidsentiteiten](../developer/reports-ref-policy.md) bevat meer informatie over de beleidsentiteiten voor Intune Data Warehouse

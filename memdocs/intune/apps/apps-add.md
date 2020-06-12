@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da78e0f80df31f5cb0f6236c4f85f93c05f0320a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f01baaf8ca48229242b6f65d10ef28a294a632bc
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989477"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428623"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Apps toevoegen aan Microsoft Intune 
 
@@ -187,6 +187,25 @@ Intune zal een vereiste app op basis van de volgende voorwaarden automatisch opn
 - Als de installatie van een vereiste app is mislukt of als de app niet op het apparaat aanwezig is, evalueert Intune de naleving en wordt de app opnieuw geïnstalleerd zodra deze planning is verstreken.  
 - Een beheerder geeft voor een gebruikersgroep aan dat een app beschikbaar is en de eindgebruiker installeert de app vanuit de bedrijfsportal op het apparaat. Later zal de beheerder de app bijwerken van v1 naar v2. Intune werkt de app bij zodra deze planning is verstreken, mits eerdere versies van de app nog steeds op het apparaat aanwezig zijn.
 - Als de beheerder een verwijderintentie implementeert en de app op het apparaat aanwezig is maar niet kan worden verwijderd, evalueert Intune de naleving en wordt de app verwijderd zodra deze planning is verstreken.   
+
+## <a name="uninstall-an-app"></a>Een app verwijderen
+
+Als u een app moet verwijderen van apparaten van de gebruiker, volgt u de volgende stappen.
+
+1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Selecteer **Apps** > **Alle apps** > *de app* > **Toewijzingen** > **Groep toevoegen**.
+3. Selecteer **Verwijderen** in het deelvenster **Groep toevoegen**.
+4. Selecteer **Opgenomen groepen** om de gebruikersgroepen te selecteren die worden beïnvloed door deze app-toewijzing.
+5. Selecteer de groepen waarop u de verwijderingstoewijzing wilt toepassen.
+6. Klik op **Selecteren** in het deelvenster **Groepen selecteren**.
+7. Klik op **OK** in het deelvenster **Toewijzen** om de toewijzing in te stellen.
+8. Selecteer **Groepen uitsluiten** als u gebruikersgroepen wilt uitsluiten zodat ze niet worden beïnvloed door deze app-toewijzing.
+9. Kies **Selecteren** in **Groepen selecteren** als u hebt besloten dat u groepen wilt uitsluiten.
+10. Selecteer **OK** in het deelvenster **Groep toevoegen**.
+11. Selecteer **Opslaan** in het deelvenster **Toewijzingen** van de app.
+
+> [!IMPORTANT]
+> Als u de app wilt verwijderen, moet u de leden of groepstoewijzing voor installatie verwijderen voordat u ze toewijst om te worden verwijderd. Als een groep wordt toegewezen voor zowel het installeren als het verwijderen van een app, blijft de app gehandhaafd en wordt deze niet verwijderd.
 
 ## <a name="app-installation-errors"></a>App-installatiefouten
 

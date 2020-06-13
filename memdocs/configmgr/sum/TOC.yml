@@ -68,6 +68,8 @@
       href: deploy-use/optimize-windows-10-update-delivery.md
     - name: De bestanden voor snelle installatie van Windows 10-updates beheren
       href: deploy-use/manage-express-installation-files-for-windows-10-updates.md
+    - name: Stuurprogramma's van Surface beheren
+      href: deploy-use/surface-drivers.md
     - name: Integratie met Windows Update voor bedrijven in Windows 10
       href: deploy-use/integrate-windows-update-for-business-windows-10.md
     - name: Software-updates van derden

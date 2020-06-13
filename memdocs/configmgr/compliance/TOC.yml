@@ -56,7 +56,7 @@
       href: deploy-use/create-remote-connection-profiles.md
     - name: Windows-apparaten upgraden naar een nieuwe versie
       href: deploy-use/upgrade-windows-version.md
-    - name: Instellingen voor Microsoft Edge configureren
+    - name: Instellingen voor Microsoft Edge (oudere versie) configureren
       href: deploy-use/browser-profiles.md
     - name: Instellingen voor naleving bewaken
       href: deploy-use/monitor-compliance-settings.md

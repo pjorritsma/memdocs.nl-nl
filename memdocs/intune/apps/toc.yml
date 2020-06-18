@@ -141,8 +141,12 @@
               href: configure-microsoft-launcher.md
             - name: Microsoft Edge configureren
               href: manage-microsoft-edge.md
+            - name: Office configureren
+              href: manage-microsoft-office.md
             - name: Outlook configureren
               href: app-configuration-policies-outlook.md
+            - name: Microsoft Teams configureren
+              href: manage-microsoft-teams.md
             - name: Google Chrome configureren voor Android
               href: apps-configure-chrome-android.md
             - name: Een VPN voor Android Enterprise configureren

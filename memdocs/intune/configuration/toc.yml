@@ -78,6 +78,9 @@
     - name: Voorkeursbestand in macOS
       href: preference-file-settings-macos.md
       displayName: 'property list files, plist'
+    - name: Bedrade netwerken op macOS
+      href: wired-networks-configure.md
+      displayName: 802.1x
     - name: Mobility-extensies op Zebra-apparaten
       displayName: 'mx, android, stagenow'
       items:
@@ -183,6 +186,8 @@
               href: vpn-settings-macos.md
             - name: Wi-Fi
               href: wi-fi-settings-macos.md
+            - name: Bedrade netwerken
+              href: wired-network-settings-macos.md
         - name: Windows 10 en hoger
           items:
             - name: Aangepast

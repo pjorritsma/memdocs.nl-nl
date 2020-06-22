@@ -83,7 +83,7 @@
 ### [Wat gebeurt er als u een apparaat opnieuw instelt met behulp van de bedrijfsportal?](effects-of-device-reset-company-portal-ios.md)
 ### [De inschrijving van het apparaat ongedaan maken](unenroll-your-device-from-intune-ios.md)
 #### [Wat gebeurt er als u de inschrijving van uw apparaat ongedaan maakt?](what-happens-if-you-unenroll-your-device-from-intune-ios.md)
-### [Uw apparaat handmatig synchroniseren](sync-your-device-manually-ios.md)
+### [Uw iOS-apparaat handmatig synchroniseren](sync-your-device-manually-ios.md)
 
 ### [Veelvoorkomende problemen met iOS oplossen](troubleshoot-your-device-iOS.md)
 #### [Opnieuw verbinding maken met een iOS-apparaat waarmee is geknoeid](how-to-reconnect-a-compromised-ios-device.md)
@@ -115,6 +115,7 @@
 ### [macOS-apparaten inschrijven](enroll-your-device-in-intune-macos-cp.md)
 ### [Het door uw organisatie verstrekte macOS-apparaat inschrijven](enroll-company-device-macos.md)  
 ### [De registratie van uw macOS-apparaat ongedaan maken](unenroll-your-device-from-intune-macos.md)  
+### [Uw macOS-apparaat handmatig synchroniseren](sync-your-device-manually-macos.md)
 ### [Veelvoorkomende problemen met macOS oplossen](troubleshoot-your-device-macos.md)
 #### [Mijn versie van macOS wordt nog niet ondersteund](your-macos-version-isnt-yet-supported.md)
 #### [Uw macOS-apparaat bijwerken](you-need-to-update-your-macos-device.md)

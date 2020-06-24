@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aef549cc01ba0e45d61c16eb8489f8926f92276b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 617c6b89bfc52d926e2ddb422c36db39edec6908
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990516"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093048"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Wat is Microsoft Intune-appbeheer?
 
@@ -71,7 +71,7 @@ Intune biedt een scala aan mogelijkheden om u te helpen de benodigde apps op de 
 <sup>1</sup> U kunt gebruikmaken van [Windows Information Protection](../protect/windows-information-protection-configure.md) om apps op apparaten met Windows 10 te beveiligen.<br>
 <sup>2</sup> Alleen van toepassing op apparaten die worden beheerd door Intune.<br>
 <sup>3</sup> Intune ondersteunt beschikbare apps uit beheerde Google Play Store op Android Enterprise-apparaten.<br>
-<sup>4</sup> Het is niet mogelijk in Intune om een snelkoppeling naar een app te installeren als een webkoppeling op standaard Android Enterprise-apparaten. Er wordt wel ondersteuning geboden voor webkoppelingen voor [toegewezen Android Enterprise-apparaten voor meerdere apps](../configuration/device-restrictions-android-for-work.md#dedicated-devices). 
+<sup>4</sup> Het is niet mogelijk in Intune om een snelkoppeling naar een app te installeren als een webkoppeling op standaard Android Enterprise-apparaten. Er wordt wel ondersteuning geboden voor webkoppelingen voor [toegewezen Android Enterprise-apparaten voor meerdere apps](../configuration/device-restrictions-android-for-work.md#device-experience). 
 
 
 ## <a name="get-started"></a>Aan de slag

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae89a939e35f68f55d2e63e7495a9b743cc0fa34
-ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
+ms.openlocfilehash: bc3ef945351529ce0db3e40108fef135414c4fab
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83791773"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093621"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Instellingen voor apparaten met Windows 10 en hoger om ze als kiosk uit te voeren via Intune
 
@@ -213,6 +213,6 @@ Apps in deze modus zijn beschikbaar in het startmenu. Deze apps zijn de enige ap
 
 [Het profiel toewijzen](device-profile-assign.md) en [de status ervan controleren](device-profile-monitor.md).
 
-U kunt ook kiosk-profielen maken voor apparaten met [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices) en [Windows Holographic for Business](kiosk-settings-holographic.md).
+U kunt ook kiosk-profielen maken voor apparaten met [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#device-experience) en [Windows Holographic for Business](kiosk-settings-holographic.md).
 
 Zie ook [een kiosk met één app instellen](https://docs.microsoft.com/windows/configuration/kiosk-single-app) of [een kiosk met meerdere apps instellen](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) in de Windows-richtlijnen.

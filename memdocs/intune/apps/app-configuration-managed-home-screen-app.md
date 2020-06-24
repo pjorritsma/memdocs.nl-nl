@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b2c804618081a21aaf9dfd70b92d65fc14a7cc7
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 3bcb9d86cf413407bc1e0812be4b0c9e17d0f88d
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988844"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093206"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>De app Microsoft Managed Home Screen voor Android Enterprise configureren
 
@@ -34,7 +34,7 @@ Managed Home Screen is de toepassing die wordt gebruikt voor aan Android Enterpr
 Normaal gesproken kunt u, als de instellingen beschikbaar zijn via de apparaatconfiguratie, daar de instellingen configureren. Hiermee bespaart u tijd, worden fouten geminimaliseerd en krijgt u een betere Intune- ondersteuningservaring. Echter enkele van de instellingen van het beheerde beginscherm zijn momenteel alleen beschikbaar via het deelvenster **App-configuratiebeleid** in de Intune-console. Ontdek met behulp van dit document hoe u de verschillende instellingen kunt configureren met Configuration Designer of een JSON-script. 
 
 > [!NOTE]
-> Het is momenteel mogelijk, en dit wordt ook aangeraden, om in de whitelist opgenomen toepassingen en vastgemaakte webkoppelingen in te stellen via **Apps** en **Apparaatconfiguratie**. Zie voor een volledige lijst van instellingen die in **Apparaatconfiguratie** beschikbaar zijn en van invloed zijn op Managed Home Screen [Toegewezen apparaatinstellingen](../configuration/device-restrictions-android-for-work.md#dedicated-devices).  
+> Het is momenteel mogelijk, en dit wordt ook aangeraden, om in de whitelist opgenomen toepassingen en vastgemaakte webkoppelingen in te stellen via **Apps** en **Apparaatconfiguratie**. Zie voor een volledige lijst van instellingen die in **Apparaatconfiguratie** beschikbaar zijn en van invloed zijn op Managed Home Screen [Toegewezen apparaatinstellingen](../configuration/device-restrictions-android-for-work.md#device-experience).  
 
 Navigeer eerst naar het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) en selecteer **Apps** > **Configuratiebeleid voor apps**. Voeg een configuratiebeleid toe voor **Beheerde apparaten** met **Android** en kies **Managed Home Screen** als bijbehorende app. Klik op **Configuratie-instellingen** om de verschillende beschikbare instellingen voor Managed Home Screen te configureren. 
 
@@ -382,7 +382,7 @@ Hier volgt een voorbeeld-JSON-script met alle beschikbare configuratiesleutels d
 De app Managed Home Screen biedt nu toegang tot de app Android Device Policy van Google. De app Managed Home Screen is een aangepast startprogramma dat wordt gebruikt voor apparaten die bij Intune zijn ingeschreven als toegewezen Android Enterprise-apparaat (AE) op basis van de kioskmodus voor meerdere apps. U kunt de app Android Device Policy openen of gebruikers naar de app leiden voor ondersteuning en foutopsporing. De opstartmogelijkheid is beschikbaar op het moment dat het apparaat wordt ingeschreven en wordt gekoppeld aan Managed Home Screen. Er zijn geen extra installaties nodig voor het gebruik van deze functionaliteit.
 
 ## <a name="managed-home-screen-debug-screen"></a>Scherm voor probleemopsporing voor Managed Home Screen
-U kunt het scherm voor probleemopsporing voor Managed Home Screen openen door op de knop **Terug** te klikken tot het scherm voor foutopsporing wordt weergegeven (klik vijftien keer of vaker op de knop **Terug**). Vanuit dit scherm voor foutopsporing kunt u de toepassing Android Device Policy starten, logboeken weergeven en uploaden of de kioskmodus tijdelijk onderbreken om het apparaat bij te werken. Voor meer informatie over het onderbreken van de kioskmodus raadpleegt u het item **Kioskmodus verlaten** in de [toegewezen apparaatinstellingen](../configuration/device-restrictions-android-for-work.md#dedicated-devices) voor Android Enterprise. Als u op zoek bent naar een eenvoudigere manier om toegang te verkrijgen tot het beheerder startscherm, kunt u **Eenvoudige toegang tot foutopsporingsmenu inschakelen** instellen op `True` aan de hand van toepassingsconfiguratiebeleid. 
+U kunt het scherm voor probleemopsporing voor Managed Home Screen openen door op de knop **Terug** te klikken tot het scherm voor foutopsporing wordt weergegeven (klik vijftien keer of vaker op de knop **Terug**). Vanuit dit scherm voor foutopsporing kunt u de toepassing Android Device Policy starten, logboeken weergeven en uploaden of de kioskmodus tijdelijk onderbreken om het apparaat bij te werken. Voor meer informatie over het onderbreken van de kioskmodus raadpleegt u het item **Kioskmodus verlaten** in de [toegewezen apparaatinstellingen](../configuration/device-restrictions-android-for-work.md#device-experience) voor Android Enterprise. Als u op zoek bent naar een eenvoudigere manier om toegang te verkrijgen tot het beheerder startscherm, kunt u **Eenvoudige toegang tot foutopsporingsmenu inschakelen** instellen op `True` aan de hand van toepassingsconfiguratiebeleid. 
 
 ## <a name="next-steps"></a>Volgende stappen
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/09/2019
+ms.date: 06/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dfcedebf32c8f08450e3eaa87c99f9bc11dd7431
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 972596cd3973c84c4f00409464f2fe621efc1369
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906901"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107395"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Instellingen in Windows 10 en later om te markeren of apparaten wel of niet conform zijn met behulp van Intune
 
@@ -46,13 +46,12 @@ Gebruik deze nalevingsinstellingen als Intune-beheerder om de resources van uw o
 - **BitLocker vereisen**:  
    Windows BitLocker-stationsversleuteling versleutelt alle gegevens die zijn opgeslagen op het volume met het Windows-besturingssysteem. BitLocker gebruikt de TPM (Trusted Platform Module) om het Windows-besturingssysteem en de gebruikersgegevens te beveiligen. Het helpt ook om te bevestigen dat een computer niet is gemanipuleerd, zelfs als deze zonder toezicht, kwijtgeraakt of gestolen is. Als de computer is uitgerust met een compatibele TPM, gebruikt BitLocker de TPM om de versleutelingssleutels te vergrendelen die de gegevens beschermen. Als gevolg hiervan kunnen de sleutels niet worden gebruikt tot met de TPM de status van de computer is gecontroleerd.  
 
-   - **Niet geconfigureerd** (*standaard*) - Deze instelling wordt niet beoordeeld op naleving of niet-naleving.
-   - **Vereisen** - Het apparaat kan gegevens die op de schijf zijn opgeslagen, beveiligen tegen onbevoegde toegang wanneer het systeem is uitgeschakeld of zich in de slaapstand bevindt.  
-
+  - **Niet geconfigureerd** (*standaard*) - Deze instelling wordt niet beoordeeld op naleving of niet-naleving.
+  - **Vereisen** - Het apparaat kan gegevens die op de schijf zijn opgeslagen, beveiligen tegen onbevoegde toegang wanneer het systeem is uitgeschakeld of zich in de slaapstand bevindt.  
 
 - **Vereisen dat beveiligd opstarten wordt ingeschakeld op het apparaat**:  
-    - **Niet geconfigureerd** (*standaard*) - Deze instelling wordt niet beoordeeld op naleving of niet-naleving.
-    - **Vereisen** - Het systeem wordt geforceerd opgestart in een vertrouwde fabrieksstatus. De belangrijkste onderdelen die worden gebruikt om de machine op te starten, moeten de juiste cryptografische handtekeningen hebben die worden vertrouwd door de organisatie die het apparaat heeft gemaakt. De UEFI-firmware verifieert de digitale handtekening voordat de computer kan worden opgestart. Als de bestanden zijn gemanipuleerd, waardoor de bijbehorende handtekening is beschadigd, kan het systeem niet worden gestart.
+  - **Niet geconfigureerd** (*standaard*) - Deze instelling wordt niet beoordeeld op naleving of niet-naleving.
+  - **Vereisen** - Het systeem wordt geforceerd opgestart in een vertrouwde fabrieksstatus. De belangrijkste onderdelen die worden gebruikt om de machine op te starten, moeten de juiste cryptografische handtekeningen hebben die worden vertrouwd door de organisatie die het apparaat heeft gemaakt. De UEFI-firmware verifieert de digitale handtekening voordat de computer kan worden opgestart. Als de bestanden zijn gemanipuleerd, waardoor de bijbehorende handtekening is beschadigd, kan het systeem niet worden gestart.
 
   > [!NOTE]
   > De instelling **Vereisen dat beveiligd opstarten wordt ingeschakeld op het apparaat** wordt ondersteund op bepaalde TPM 1.2- en 2.0-apparaten. Voor apparaten die geen ondersteuning bieden voor TPM 2.0 of later, wordt de beleidsstatus in Intune weergegeven als **Niet-conform**. Zie [Apparaatstatusverklaring](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation) voor meer informatie over ondersteunde versies.
@@ -60,7 +59,7 @@ Gebruik deze nalevingsinstellingen als Intune-beheerder om de resources van uw o
 - **Code-integriteit vereisen**:  
   Code-integriteit is een functie waarmee de integriteit van een stuurprogramma of systeembestand wordt gevalideerd telkens wanneer dit in het geheugen wordt geladen.
   - **Niet geconfigureerd** (*standaard*) - Deze instelling wordt niet beoordeeld op naleving of niet-naleving.
-  -  **Vereisen** - Code-integriteit vereisen, dit detecteert of een niet-ondertekend stuurprogramma of systeembestand naar de kernel wordt geladen. Ook wordt gedetecteerd of een systeembestand wordt gewijzigd door schadelijke software of wordt uitgevoerd via een gebruikersaccount met beheerdersbevoegdheden.
+  - **Vereisen** - Code-integriteit vereisen, dit detecteert of een niet-ondertekend stuurprogramma of systeembestand naar de kernel wordt geladen. Ook wordt gedetecteerd of een systeembestand wordt gewijzigd door schadelijke software of wordt uitgevoerd via een gebruikersaccount met beheerdersbevoegdheden.
 
 Meer resources:
 
@@ -104,7 +103,7 @@ Geldt alleen voor gezamenlijk beheerde apparaten met Windows 10 en hoger. Appara
 
 - **Apparaatcompatibiliteit van Configuration Manager vereisen**:  
   - **Niet geconfigureerd** (*standaard*) -Intune zoekt niet naar de Configuration Manager-instellingen voor naleving.
-  - **Vereisen**: vereisen dat alle instellingen (configuratie-items) in Configuration Manager compatibel zijn.  
+  - **Vereisen**: vereisen dat alle instellingen (configuratie-items) in Configuration Manager compatibel zijn.
 
     U kunt bijvoorbeeld vereisen dat alle software-updates worden geïnstalleerd op apparaten. Deze vereiste heeft in Configuration Manager de status Geïnstalleerd. Als programma's op het apparaat een onbekende status hebben, is het apparaat niet-compatibel in Intune.
 
@@ -128,7 +127,7 @@ Geldt alleen voor gezamenlijk beheerde apparaten met Windows 10 en hoger. Appara
   
   Wanneer deze optie is ingesteld op *Alfanumeriek*, zijn de volgende instellingen beschikbaar:  
   - **Wachtwoordcomplexiteit**:  
-    Uw opties zijn: 
+    Uw opties zijn:
     - **Cijfers en kleine letters vereisen** (*standaard*)
     - **Cijfers, kleine letters en hoofdletters vereisen**
     - **Cijfers, kleine letters, hoofdletters en speciale tekens vereisen**
@@ -172,7 +171,7 @@ Geldt alleen voor gezamenlijk beheerde apparaten met Windows 10 en hoger. Appara
 
 - **Firewall**:  
   - **Niet geconfigureerd** (*standaard*): Intune beheert de Microsoft Defender-firewall niet en wijzigt evenmin bestaande instellingen.
-  - **Vereisen**: Microsoft Defender-firewall inschakelen en voorkomen dat gebruikers deze functie kunnen uitschakelen.  
+  - **Vereisen**: Microsoft Defender-firewall inschakelen en voorkomen dat gebruikers deze functie kunnen uitschakelen.
 
   [Firewall-CSP](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp)
 
@@ -181,27 +180,21 @@ Geldt alleen voor gezamenlijk beheerde apparaten met Windows 10 en hoger. Appara
 
 - **Trusted Platform Module (TPM)** :  
   - **Niet geconfigureerd** (*standaard*): Intune controleert het apparaat niet op een TPM-chipversie.
-  - **Vereisen**: Intune controleert of de TPM-chipversie compatibel is. Het apparaat is compatibel als de TPM-chipversie groter is dan **0** (nul). Het apparaat is niet compatibel als er zich geen TPM-versie op het apparaat bevindt.  
+  - **Vereisen**: Intune controleert of de TPM-chipversie compatibel is. Het apparaat is compatibel als de TPM-chipversie groter is dan **0** (nul). Het apparaat is niet compatibel als er zich geen TPM-versie op het apparaat bevindt.
 
   [DeviceStatus CSP - DeviceStatus/TPM/SpecificationVersion node](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
   
 - **Antivirus**:  
-  - **Niet geconfigureerd** (*standaard*) - Intune controleert niet of er antivirusoplossingen op het apparaat zijn geïnstalleerd. 
+  - **Niet geconfigureerd** (*standaard*) - Intune controleert niet of er antivirusoplossingen op het apparaat zijn geïnstalleerd.
   - **Vereisen** - Controleer de naleving met behulp van antivirusoplossingen die zijn geregistreerd bij [Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), zoals Symantec en Microsoft Defender.
-  
-  [DeviceStatus CSP - DeviceStatus/Antivirus/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
 
-  > [!NOTE]
-  > De DeviceStatus CSP voor antivirus wordt niet ondersteund voor *Windows 10 Home* en rapporteert de status *Niet van toepassing*. Het Intune-team werkt aan een oplossing. U kunt dit probleem omzeilen door [Windows Defender](#defender)-instellingen te gebruiken in het compliancebeleid voor apparaten. Windows Defender-instellingen worden ondersteund voor Windows 10 Home.  
+  [DeviceStatus CSP - DeviceStatus/Antivirus/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
 
 - **Antispyware**:  
   - **Niet geconfigureerd** (*standaard*) - Intune controleert niet of er antispywareoplossingen op het apparaat zijn geïnstalleerd.
-  - **Vereisen** - Controleer de naleving met behulp van antispywareoplossingen die zijn geregistreerd bij [Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), zoals Symantec en Microsoft Defender.  
-  
-  [DeviceStatus CSP - DeviceStatus/Antispyware/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+  - **Vereisen** - Controleer de naleving met behulp van antispywareoplossingen die zijn geregistreerd bij [Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), zoals Symantec en Microsoft Defender.
 
-  > [!NOTE]
-  > De DeviceStatus CSP voor antispyware wordt niet ondersteund voor *Windows 10 Home* en rapporteert de status *Niet van toepassing*. Het Intune-team werkt aan een oplossing. U kunt dit probleem omzeilen door [Windows Defender](#defender)-instellingen te gebruiken in het compliancebeleid voor apparaten. Windows Defender-instellingen worden ondersteund voor Windows 10 Home. 
+  [DeviceStatus CSP - DeviceStatus/Antispyware/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
 
 ### <a name="defender"></a>Defender
 
@@ -212,7 +205,7 @@ Geldt alleen voor gezamenlijk beheerde apparaten met Windows 10 en hoger. Appara
   - **Vereisen**: Microsoft Defender Antimalware-service inschakelen en voorkomen dat gebruikers deze functie kunnen uitschakelen.
 
 - **Minimale versie van Microsoft Defender Antimalware**:  
-  Voer de minimaal toegestane versie van de Microsoft Defender Antimalware-service in. Voer bijvoorbeeld `4.11.0.0` in. Als dit veld leeg blijft, kan elke versie van de Microsoft Defender Antimalware-service worden gebruikt.  
+  Voer de minimaal toegestane versie van de Microsoft Defender Antimalware-service in. Voer bijvoorbeeld `4.11.0.0` in. Als dit veld leeg blijft, kan elke versie van de Microsoft Defender Antimalware-service worden gebruikt.
 
   *Standaard is er geen versie geconfigureerd*.
 
@@ -244,7 +237,6 @@ Geldt alleen voor gezamenlijk beheerde apparaten met Windows 10 en hoger. Appara
   - **Hoog** - Deze optie is het minst veilig, omdat alle bedreigingsniveaus zijn toegestaan. Deze optie kan handig zijn als u deze alleen gebruikt voor rapportagedoeleinden.
   
   Zie [Microsoft Defender ATP met voorwaardelijke toegang inschakelen](advanced-threat-protection.md) als u Microsoft Defender ATP (Advanced Threat Protection) wilt gebruiken tegen bedreigingen.
-
 
 ## <a name="windows-holographic-for-business"></a>Windows Holographic for Business
 

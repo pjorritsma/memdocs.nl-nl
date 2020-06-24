@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ecbde2f6e6a40379cd37a6ddebe09fa9dab8e3b1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 7894e2648b58b1afd313250dc9724f117fe6c93a
+ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988915"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216532"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Bulkregistratie voor Windows-apparaten
 
@@ -37,7 +37,7 @@ Azure AD-gebruikers zijn standaardgebruikers op deze apparaten en ontvangen toeg
 
 ## <a name="create-a-provisioning-package"></a>Een inrichtingspakket maken
 
-1. Download [Windows Configuration Designer (WCD)](https://www.microsoft.com/store/apps/9nblggh4tx22) vanuit Microsoft Store.
+1. Download [Windows Configuration Designer (WCD)](https://www.microsoft.com/p/windows-configuration-designer/9nblggh4tx22) vanuit Microsoft Store.
    ![Schermafbeelding van de App Store Windows Configuration Designer](./media/windows-bulk-enroll/bulk-enroll-store.png)
 
 2. Open de app **Windows Configuration Designer** en selecteer **Desktopapparaten inrichten**.

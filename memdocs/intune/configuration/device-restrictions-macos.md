@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e48ba131d97e68570f1d6cb85b285ddc3198971c
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: a4f4ef6bab42f2f1b97c32a422d92247a3e564f7
+ms.sourcegitcommit: a198e4efa52b16f87049853b9d8c9854fd9fa057
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429752"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84680401"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>Met macOS-apparaatinstellingen kunt u functies toestaan of beperken met behulp van Intune
 
@@ -190,7 +190,7 @@ Deze functie is van toepassing op:
 
   - **Codevereiste**: Voer de codehandtekening in voor de toepassing of het proces.
 
-    Er wordt een codehandtekening gemaakt wanneer een app of binair bestand wordt ondertekend door een ontwikkelaarscertificaat. U kunt de toewijzing vinden door de `codesign`-opdracht handmatig uit te voeren in de Terminal-app: `codesign --display -r -/path/to/app/binary`. De codehandtekening is alles wat na `=>` wordt weergegeven.
+    Er wordt een codehandtekening gemaakt wanneer een app of binair bestand wordt ondertekend door een ontwikkelaarscertificaat. U kunt de toewijzing vinden door de `codesign`-opdracht handmatig uit te voeren in de Terminal-app: `codesign --display -r - /path/to/app/binary`. De codehandtekening is alles wat na `=>` wordt weergegeven.
 
   - **Statische codevalidatie inschakelen**: Kies **Ja** als u wilt dat de app of het proces het codevereiste statisch valideert. Wanneer dit is ingesteld op **Niet geconfigureerd**, wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
 

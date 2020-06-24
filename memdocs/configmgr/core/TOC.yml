@@ -584,6 +584,8 @@
               href: servers/manage/introduction-to-reporting.md
             - name: Integreren met Power BI Report Server
               href: servers/manage/powerbi-report-server.md
+            - name: Power BI-voorbeeldrapporten installeren
+              href: servers/manage/powerbi-sample-reports.md
             - name: Rapportage plannen
               items:
                 - name: Rapportage plannen

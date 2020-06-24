@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: fdc15860f2d093a4c9c61b787ba0b780051d3f3d
-ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
+ms.openlocfilehash: db70eab54f319197f267173fe857d0fb147a7eba
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83864868"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746558"
 ---
 # <a name="monitor-connection-health"></a>Status van de verbinding bewaken
 
@@ -217,7 +217,7 @@ Anders kan een van de volgende fouten worden weer gegeven:
 
 - Kan de compatibiliteits gegevens verzameling voor de apparaat-app niet configureren (SetRequestAllAppraiserVersions). Raadpleeg de logboeken voor de uitzonderings Details  
 
-- Kan de RequestAllAppraiserVersions niet naar de register sleutel schrijven `HKLM:\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\AppCompatFlags\Appraiser` . Machtigingen controleren  
+- Kan de RequestAllAppraiserVersions niet naar de register sleutel schrijven `HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Appraiser` . Machtigingen controleren  
 
 Controleer de machtigingen voor deze register sleutel. Zorg ervoor dat het lokale systeem account toegang heeft tot deze sleutel om de Configuration Manager-client in te stellen.  
 
@@ -226,7 +226,7 @@ Raadpleeg M365AHandler. log op de client voor meer informatie.
 ### <a name="minimum-compatibility-update"></a>Minimale compatibiliteits update
 
 <!--18,19,32-->
-De compatibiliteits update (beoordeeld. dll) is niet geïnstalleerd of verouderd op het apparaat. Het is ouder dan de minimum vereiste voor desktop Analytics, 10.0.17763.
+De compatibiliteits update (appraiser.dll) is niet geïnstalleerd of verouderd op het apparaat. Het is ouder dan de minimum vereiste voor desktop Analytics, 10.0.17763.
 
 Installeer de meest recente compatibiliteits update. Zie [Compatibility updates](enroll-devices.md#update-devices)(Engelstalig) voor meer informatie.
 
@@ -248,7 +248,7 @@ Als dat niet lukt, kan er een van de volgende fouten worden weer gegeven:
 
 - Kan geen app-compatibiliteits gegevens verzamelen (RunAppraiser). Raadpleeg de logboeken voor meer informatie  
 
-- App-compatibiliteits gegevens verzameling (CompatTelRunner. exe) is beëindigd met een fout code  
+- App Compatibility Data Collection (CompatTelRunner.exe) is beëindigd met een fout code  
 
 Raadpleeg M365AHandler. log op de client voor meer informatie.
 
@@ -299,7 +299,7 @@ Als dat niet lukt, kan er een van de volgende fouten worden weer gegeven:
 
 - Kan geen gegevens verzamelen over het apparaat en de configuratie (RunCensus). Raadpleeg de logboeken voor de uitzonderings Details  
 
-- Het hulp programma voor het verzamelen van apparaat-en configuratie gegevens (devicecensus. exe) is niet gevonden  
+- Het hulp programma voor het verzamelen van apparaat-en configuratie gegevens (devicecensus.exe) is niet gevonden  
 
 Raadpleeg M365AHandler. log op de client voor meer informatie.
 
@@ -343,7 +343,7 @@ De instelling DisableEnterpriseAuthProxy is standaard ingeschakeld voor Windows 
 
 Met deze eigenschap kunnen de volgende fouten worden weer gegeven:
 
-- Verificatie proxy is ingeschakeld. Stel DisableEnterpriseAuthProxy in op 0 in`HKLM\Software\Policies\Microsoft\Windows\DataCollection`
+- Verificatie proxy is ingeschakeld. Stel DisableEnterpriseAuthProxy in op 0 in`HKLM:\Software\Policies\Microsoft\Windows\DataCollection`
 
 - Kan niet controleren op de status van de verificatie proxy. Raadpleeg de logboeken voor de uitzonderings Details
 
@@ -412,12 +412,12 @@ Als deze controle is geslaagd, is het DiagTrack-onderdeel op de juiste wijze gec
 
 Anders kan een van de volgende fouten worden weer gegeven:
 
-- Het onderdeel Connected User Experience en telemetrie (diagtrack. dll) is verouderd. Vereisten controleren  
+- Het onderdeel verbonden gebruikers ervaring en telemetrie (diagtrack.dll) is verouderd. Vereisten controleren  
 
     > [!TIP]
     > Er is een bekend probleem met de Extended Security Update (ESU) van april 2020 voor Windows 7 waardoor apparaten deze fout niet kunnen rapporteren. Zie [release opmerkingen](../core/servers/deploy/install/release-notes.md#dawin7-diagtrack)voor meer informatie.<!-- 7283186 -->
 
-- Kan het onderdeel Connected User Experience en telemetrie (diagtrack. dll) niet vinden. Vereisten controleren  
+- Kan het onderdeel verbonden gebruikers ervaring en telemetrie (diagtrack.dll) niet vinden. Vereisten controleren  
 
 - De verbonden gebruikers ervaringen en telemetrie-service inschakelen en starten om gegevens te verzenden naar micro soft  
 

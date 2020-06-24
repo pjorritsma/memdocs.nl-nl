@@ -2,7 +2,7 @@
 title: Een cloudbeheergateway plannen
 titleSuffix: Configuration Manager
 description: Plan en ontwerp de Cloud beheer gateway (CMG) om het beheer van clients op internet te vereenvoudigen.
-ms.date: 04/21/2020
+ms.date: 06/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 67b6fc51493dce4ee1718586cbf454da91883409
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 136e11f97849e5fd8a27d9f83ea1bd44791c492e
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254619"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715642"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Het plannen van de Cloud beheer gateway in Configuration Manager
 
@@ -85,9 +85,12 @@ De implementatie en het gebruik van de CMG omvat de volgende onderdelen:
 
 - De site systeemrol [**service aansluitpunt**](../../../servers/deploy/configure/about-the-service-connection-point.md) voert het onderdeel Cloud Service Manager uit, dat alle CMG-implementatie taken verwerkt. Daarnaast worden service status-en logboek gegevens vanuit Azure AD gecontroleerd en gerapporteerd. Zorg ervoor dat uw service verbindings punt zich in de [online modus](../../../servers/deploy/configure/about-the-service-connection-point.md#bkmk_modes)bevindt.  
 
-- De client aanvragen van de site systeemrol van het **beheer punt** per normaal.  
+- De client aanvragen van de site systeemrol van het **beheer punt** per normaal.
 
-- De site systeemrol Services-client aanvragen van het **Software-update punt** per normaal.  
+- De site systeemrol Services-client aanvragen van het **Software-update punt** per normaal.
+
+    > [!NOTE]
+    > Aanpassings richtlijnen voor beheer punten en software-update punten worden niet gewijzigd of ze on-premises of op internet gebaseerde clients onderhouden. Zie [grootte en schaal getallen](../../../plan-design/configs/size-and-scale-numbers.md#management-point)voor meer informatie.
 
 - Op **Internet gebaseerde clients** maken verbinding met de CMG om toegang te krijgen tot on-premises Configuration Manager onderdelen.
 
@@ -151,15 +154,33 @@ Wanneer clients op Internet zwerven, communiceren ze met de CMG in de Azure-regi
 > [!TIP]
 > U hoeft niet meer dan één Cloud beheer gateway te implementeren met het oog op geolocatie. De Configuration Manager-client is doorgaans niet van invloed op de geringe latentie die kan optreden bij de Cloud service, zelfs wanneer het geografisch uitvalt.
 
+### <a name="test-environments"></a>Test omgevingen
+<!-- SCCMDocs#1225 -->
+Veel organisaties hebben afzonderlijke omgevingen voor productie, testen, ontwikkeling of kwaliteits bewaking. Houd bij het plannen van uw CMG-implementatie rekening met de volgende vragen:
+
+- Hoeveel Azure AD-tenants heeft uw organisatie?
+  - Is er een afzonderlijke Tenant voor het testen?
+  - Zijn de id's van gebruikers en apparaten in dezelfde Tenant?
+
+- Hoeveel abonnementen bevinden zich in elke Tenant?
+  - Zijn er abonnementen die specifiek zijn voor het testen?
+
+De Azure-service van Configuration Manager voor **Cloud beheer** ondersteunt meerdere tenants. Meerdere Configuration Manager-sites kunnen verbinding maken met dezelfde Tenant. Eén site kan meerdere CMG services implementeren in verschillende abonnementen. Meerdere sites kunnen CMG-services implementeren in hetzelfde abonnement. Configuration Manager biedt flexibiliteit, afhankelijk van uw omgeving en bedrijfs vereisten.
+
+Zie de volgende veelgestelde vragen voor meer informatie: [de gebruikers accounts moeten zich in dezelfde Azure AD-Tenant bevinden als de Tenant die is gekoppeld aan het abonnement dat als host fungeert voor de CMG-Cloud service?](cloud-management-gateway-faq.md#bkmk_tenant)
+
 ## <a name="requirements"></a>Vereisten
 
 - Een **Azure-abonnement** om de CMG te hosten.
+
+    > [!IMPORTANT]
+    > CMG biedt geen ondersteuning voor abonnementen met een Azure Cloud service provider (CSP).<!-- MEMDocs#320 -->
 
 - Uw gebruikers account moet een **volledige beheerder** of **infrastructuur beheerder** zijn in Configuration Manager.<!-- SCCMDocs#2146 -->
 
 - Een **Azure-beheerder** moet deel nemen aan het eerste maken van bepaalde onderdelen, afhankelijk van uw ontwerp. Deze persoon kan hetzelfde zijn als de Configuration Manager beheerder of afzonderlijk. Als dit afzonderlijk is, zijn er geen machtigingen vereist in Configuration Manager.
 
-  - Als u de CMG wilt implementeren, hebt u een **abonnements beheerder** nodig
+  - Als u de CMG wilt implementeren, hebt u een **abonnements eigenaar** nodig
   - Als u de site wilt integreren met Azure AD om de CMG te implementeren met behulp van Azure Resource Manager, hebt u een **globale beheerder** nodig
 
 - Ten minste één on-premises Windows-Server voor het hosten van het **CMG-verbindings punt**. U kunt deze rol met andere Configuration Manager-site systeem rollen vinden.  
@@ -193,7 +214,7 @@ Wanneer clients op Internet zwerven, communiceren ze met de CMG in de Azure-regi
 
 - Software-update punten die gebruikmaken van een netwerk load balancer werken niet met CMG. <!--505311-->  
 
-- CMG-implementaties die gebruikmaken van het Azure-resource model, bieden geen ondersteuning voor Azure Cloud service providers (CSP). De CMG-implementatie met Azure Resource Manager blijft de klassieke Cloud service gebruiken, die niet wordt ondersteund door de CSP. Zie [beschik bare Azure-Services in azure CSP](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services) voor meer informatie.  
+- CMG-implementaties die gebruikmaken van het Azure-resource model, bieden geen ondersteuning voor Azure Cloud service providers (CSP). De CMG-implementatie met Azure Resource Manager blijft de klassieke Cloud service gebruiken, die niet wordt ondersteund door de CSP. Zie [Azure-Services die beschikbaar zijn in het Azure CSP-programma](https://docs.microsoft.com/partner-center/azure-plan-available)voor meer informatie.
 
 ### <a name="support-for-configuration-manager-features"></a>Ondersteuning voor Configuration Manager-functies
 
@@ -202,7 +223,7 @@ De volgende tabel geeft een overzicht van de CMG-ondersteuning voor Configuratio
 |Functie  |Ondersteuning  |
 |---------|---------|
 | Software-updates     | ![Ondersteund](media/green_check.png) |
-| Endpoint Protection     | ![Ondersteunde](media/green_check.png) <sup>[Opmerking 1](#bkmk_note1)</sup> |
+| Endpoint Protection     | ![Ondersteunde ](media/green_check.png) <sup> [Opmerking 1](#bkmk_note1)</sup> |
 | Hardware- en software-inventaris     | ![Ondersteund](media/green_check.png) |
 | Client status en meldingen     | ![Ondersteund](media/green_check.png) |
 | Scripts uitvoeren     | ![Ondersteund](media/green_check.png) |
@@ -231,7 +252,7 @@ De volgende tabel geeft een overzicht van de CMG-ondersteuning voor Configuratio
 |Sleutel|
 |--|
 |![Ondersteund](media/green_check.png) = Deze functie wordt ondersteund met CMG door alle ondersteunde versies van Configuration Manager  |
-|![Ondersteund](media/green_check.png) (*YYMM*) = deze functie wordt ondersteund met CMG vanaf versie *YYMM* van Configuration Manager  |
+|![Ondersteund ](media/green_check.png) (*YYMM*) = deze functie wordt ondersteund met CMG vanaf versie *YYMM* van Configuration Manager  |
 |![Niet ondersteund](media/Red_X.png) = Deze functie wordt niet ondersteund met CMG |
 
 #### <a name="note-1-support-for-endpoint-protection"></a><a name="bkmk_note1"></a>Opmerking 1: ondersteuning voor Endpoint Protection
@@ -333,6 +354,9 @@ Het volgende diagram is een eenvoudige, conceptuele gegevens stroom voor de CMG:
 
 3. De client maakt verbinding met de CMG via HTTPS-poort 443. De verificatie wordt geverifieerd met behulp van Azure AD of het certificaat voor client verificatie.  
 
+    > [!NOTE]
+    > Als u de CMG inschakelt voor het leveren van inhoud of het gebruik van een Cloud distributiepunt, maakt de client rechtstreeks verbinding met Azure Blob Storage via HTTPS-poort 443. Zie [een cloud-gebaseerd distributie punt gebruiken](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md#bkmk_dataflow)voor meer informatie.<!-- SCCMDocs#2332 -->
+
 4. De CMG stuurt de client communicatie via de bestaande verbinding naar het on-premises CMG-verbindings punt. U hoeft geen binnenkomende firewall poorten te openen.  
 
 5. Het CMG-verbindings punt stuurt de client communicatie door naar het on-premises beheer punt en het software-update punt.  
@@ -343,13 +367,14 @@ Zie [een cloud-gebaseerd distributie punt gebruiken](../../../plan-design/hierar
 
 Deze tabel geeft een lijst van de vereiste netwerk poorten en protocollen. De *client* is het apparaat waarmee de verbinding wordt gestart en waarvoor een uitgaande poort nodig is. De- *Server* is het apparaat dat de verbinding accepteert, waarbij een binnenkomende poort is vereist.
 
-| Client | Protocol | Poort | Server | Beschrijving |
+| Client | Protocol | Poort | server | Beschrijving |
 |--------|----------|------|--------|-------------|
 | Serviceverbindingspunt | HTTPS | 443 | Azure | CMG-implementatie |
 | CMG-verbindings punt | TCP-TLS | 10140-10155 | CMG-service | Voorkeurs protocol voor het maken van CMG-kanaal <sup> [Opmerking 1](#bkmk_port-note1)</sup> |
 | CMG-verbindings punt | HTTPS | 443 | CMG-service | Terugval protocol voor het bouwen van een CMG-kanaal aan slechts één VM-instantie <sup> [Opmerking 2](#bkmk_port-note2)</sup> |
 | CMG-verbindings punt | HTTPS | 10124-10139 | CMG-service | Terugval protocol voor het bouwen van een CMG-kanaal aan twee of meer VM-exemplaren <sup> [Opmerking 3](#bkmk_port-note3)</sup> |
 | Client | HTTPS | 443 | CMG | Algemene client communicatie |
+| Client | HTTPS | 443 | Blob Storage | Op de cloud gebaseerde inhoud downloaden |
 | CMG-verbindings punt | HTTPS of HTTP | 443 of 80 | Beheerpunt | On-premises verkeer, poort is afhankelijk van de configuratie van het beheer punt |
 | CMG-verbindings punt | HTTPS of HTTP | 443 of 80 | Software-updatepunt | On-premises verkeer, poort is afhankelijk van de configuratie van het software-update punt |
 

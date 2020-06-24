@@ -5,17 +5,17 @@ description: Configuration Manager worden updates van Surface-Stuur Programma's 
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 06/09/2020
+ms.date: 06/18/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: e9f9f4e6-5b4f-4b8f-94d6-db9b2b239113
-ms.openlocfilehash: 6428b6e1992af6dbb1f6d49b9ef1eac3010dd833
-ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
+ms.openlocfilehash: 04793a053e85be051ce9ffafd2f15d274cf166f0
+ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84614981"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84973074"
 ---
 # <a name="manage-surface-drivers-with-configuration-manager"></a>Surface-Stuur Programma's beheren met Configuration Manager
 
@@ -85,10 +85,9 @@ De meeste Stuur Programma's horen bij de volgende product groepen:
 
 ## <a name="surface-models"></a><a name="bkmk_models"></a>Surface-modellen
 
-De volgende tabel bevat de Surface modellen en versies van Windows 10 waarop Configuration Manager Stuur Programma's kunt installeren. Updates voor Surface drivers zijn niet beschikbaar in Configuration Manager dezelfde dag dat ze worden gepubliceerd in de Microsoft Update catalogus. Configuration Manager behoudt een eigen lijst met de Stuur Programma's die worden geïmporteerd. Deze lijst wordt regel matig gepubliceerd en bevat de Stuur Programma's die zijn gepubliceerd op of voor een bepaalde datum. Apparaten met Windows 10 S-producten moeten worden genoteerd.
+De volgende tabel bevat de Surface modellen en versies van Windows 10 waarop Configuration Manager Stuur Programma's kunt installeren. Updates voor Surface drivers zijn niet beschikbaar in Configuration Manager dezelfde dag dat ze worden gepubliceerd in de Microsoft Update catalogus. Configuration Manager behoudt een eigen lijst met de Stuur Programma's die worden geïmporteerd. Apparaten met Windows 10 S-producten moeten worden genoteerd. Micro soft streeft ernaar om de Surface-Stuur Programma's op de tweede dinsdag elke maand toe te voegen aan de acceptatie lijst om ze beschikbaar te maken voor synchronisatie met Configuration Manager. Zie [Veelgestelde vragen](#bkmk_faq)voor meer informatie.
 
-**Surface-Stuur Programma's die zijn gepubliceerd op of vóór 9 juni 2020 zijn beschikbaar in Configuration Manager**. 
-
+</br>
 
 |Surface model|Windows 10 1709| Windows 10 1803|Windows 10 1809|Windows 10 1903|Windows 10 1909|
 |----|----|----|----|----|----|
@@ -99,12 +98,12 @@ De volgende tabel bevat de Surface modellen en versies van Windows 10 waarop Con
 |Surface Pro X|N.v.t.| N.v.t.| N.v.t. |Ja|Ja|
 |Surface Book|Ja| Ja| Ja |Ja|Ja|
 |Oppervlakte rapport 2|Ja| Ja| Ja |Ja|Ja|
-|Surface Book 3|N.v.t.| N.v.t.| N.v.t. |N.v.t.|Ja|
+|Surface Book 3|N.v.t.| N.v.t.| N.v.t. |Ja|Ja|
 |Surface-laptop|Ja, met het product ' Windows 10 S versie 1709 en latere onderhouds Stuur Programma's ' geselecteerd| Ja, met het product ' Windows 10 S versie 1803 en latere onderhouds Stuur Programma's ' geselecteerd|Ja, met het product Windows 10 S versie 1809 en hoger upgrade & onderhouds Stuur Programma's ' geselecteerd|Ja, met het product Windows 10 S versie 1903 en hoger upgrade & onderhouds Stuur Programma's ' geselecteerd|Ja, met het product Windows 10 S versie 1903 en hoger upgrade & onderhouds Stuur Programma's ' geselecteerd|
-|Surface-laptop 2|Ja| Ja |Ja|Ja|Ja|
+|Surface-laptop 2|N.v.t.| Ja |Ja|Ja|Ja|
 |Surface-laptop 3|N.v.t.| N.v.t.|N.v.t.|Ja |Ja|
 |Oppervlakte bezoek|N.v.t.| Ja, met het product ' Windows 10 S versie 1803 en latere onderhouds Stuur Programma's ' geselecteerd|Ja, met het product Windows 10 S versie 1809 en hoger upgrade & onderhouds Stuur Programma's ' geselecteerd|Ja, met het product Windows 10 S versie 1903 en hoger upgrade & onderhouds Stuur Programma's ' geselecteerd|Ja, met het product Windows 10 S versie 1903 en hoger upgrade & onderhouds Stuur Programma's ' geselecteerd|
-|Oppervlakte Go 2|N.v.t.| Ja| Ja |Ja|Ja, met het product Windows 10 S versie 1903 en hoger upgrade & onderhouds Stuur Programma's ' geselecteerd|
+|Oppervlakte Go 2|N.v.t.| N.v.t.| Ja |Ja|Ja, met het product Windows 10 S versie 1903 en hoger upgrade & onderhouds Stuur Programma's ' geselecteerd|
 |Surface Studio|Ja| Ja| Ja |Ja|Ja|
 |Surface Studio 2|N.v.t.| Ja| Ja |Ja|Ja|
 
@@ -137,42 +136,25 @@ Als u wilt controleren of het software-update punt correct is geconfigureerd, ge
    Dit item is een XML-element met een lijst met elke product groep en classificatie die momenteel is gesynchroniseerd door de server van uw software-update punt. Als u de producten die u hebt geselecteerd, niet kunt vinden, controleert u of de producten voor het software-update punt zijn opgeslagen.
 1. U kunt ook wachten tot de volgende synchronisatie is voltooid. Controleer vervolgens of het Surface-stuur programma en de firmware-updates worden weer gegeven in software-updates in de Configuration Manager-console. De-console kan bijvoorbeeld de volgende informatie weer geven: ![ gesynchroniseerde Surface-Stuur Programma's in Configuration Manager-console](media/synchronized-surface-drivers.png)
 
-## <a name="frequently-asked-questions-faq"></a>Veelgestelde vragen
+##  <a name="frequently-asked-questions-faq"></a><a name="bkmk_faq"></a>Veelgestelde vragen
 
-### <a name="after-i-follow-the-steps-in-this-article-my-surface-drivers-are-still-not-synchronized-why"></a>Nadat ik de stappen in dit artikel heb gevolgd, worden de Surface-Stuur Programma's nog steeds niet gesynchroniseerd. Hoe komt dat?
+### <a name="after-i-follow-the-steps-in-this-article-my-surface-drivers-are-still-not-synchronized-why"></a>Nadat ik de stappen in dit artikel heb gevolgd, worden de Surface-Stuur Programma's nog steeds niet gesynchroniseerd. Hoe kan dat?
 
-Als u synchroniseert vanaf een upstream-Windows Server Update Services (WSUS) in plaats van Microsoft Update, moet u ervoor zorgen dat de upstream-WSUS-server is geconfigureerd voor ondersteuning en synchronisatie van updates voor Surface-Stuur Programma's. Alle downstream-servers zijn beperkt tot updates die aanwezig zijn in de upstream-WSUS-Server database.
+Als u synchroniseert vanaf een upstream-server (Windows Server Update Services) in plaats van Microsoft Update, moet u ervoor zorgen dat de upstream-WSUS-server is geconfigureerd voor ondersteuning en synchronisatie van updates voor Surface-Stuur Programma's. Alle downstream-servers zijn beperkt tot updates die aanwezig zijn in de upstream-WSUS-Server database.
 
-### <a name="after-i-follow-the-steps-in-this-article-some-surface-drivers-are-synchronized-but-not-the-expected-drivers-why"></a>Nadat ik de stappen in dit artikel heb gevolgd, worden sommige Surface-Stuur Programma's gesynchroniseerd, maar niet de verwachte Stuur Programma's. Hoe komt dat?
+Er zijn meer dan 68.000 updates die zijn geclassificeerd als stuur Programma's in WSUS. Micro soft filtert de synchronisatie van Stuur Programma's op basis van een acceptatie lijst om te voor komen dat niet-Opper vlakken worden gesynchroniseerd met Configuration Manager. Nadat de nieuwe acceptatie lijst is gepubliceerd en opgenomen in Configuration Manager, worden de nieuwe Stuur Programma's toegevoegd aan de-console na de volgende synchronisatie. Micro soft streeft ernaar om de Surface-Stuur Programma's op de tweede dinsdag elke maand toe te voegen aan de acceptatie lijst om ze beschikbaar te maken voor synchronisatie met Configuration Manager.
 
-De verwerkings tijd voor het testen van Stuur Programma's en het bevestigen ervan voor implementatie via WSUS en Configuration Manager varieert. Daarom is het oppervlak stuur programma-updates niet per se op dezelfde dag beschikbaar voor zowel de hand matige installatie als de implementatie van Configuration Manager-console.
+Als uw Configuration Manager omgeving offline is, wordt een nieuwe acceptatie lijst geïmporteerd telkens wanneer u de [onderhouds updates](../../core/servers/manage/use-the-service-connection-tool.md) naar Configuration Manager importeert. U moet ook een [nieuwe WSUS-catalogus](../get-started/synchronize-software-updates-disconnected.md) met de Stuur Programma's importeren voordat de updates worden weer gegeven in de Configuration Manager-console. Omdat een zelfstandige WSUS-omgeving meer Stuur Programma's bevat dan een Configuration Manager SUP, raden we u aan een Configuration Manager omgeving te maken die online mogelijkheden heeft en die u configureert voor het synchroniseren van Surface-Stuur Programma's. Dit biedt een kleinere WSUS-export die lijkt op de offline omgeving.
 
-Daarnaast zijn er meer dan 68.000 updates die zijn geclassificeerd als stuur Programma's in WSUS. Micro soft filtert de synchronisatie van Stuur Programma's op basis van een acceptatie lijst om te voor komen dat niet-Opper vlakken worden gesynchroniseerd met Configuration Manager. Surface-Stuur Programma's moeten extra tests door lopen voordat ze aan deze lijst kunnen worden toegevoegd. Nadat de nieuwe acceptatie lijst is gepubliceerd en opgenomen in Configuration Manager, worden de nieuwe Stuur Programma's toegevoegd aan de-console na de volgende synchronisatie.
+Als uw Configuration Manager omgeving online is en u nieuwe updates kunt detecteren, ontvangt u automatisch updates in de lijst. Als de verwachte Stuur Programma's niet worden weer geven, raadpleegt u WCM. log en bestand Wsyncmgr. log voor eventuele synchronisatie fouten.
 
-### <a name="is-the-driver-allow-list-published-is-it-downloadable"></a>Is de lijst met toegestane Stuur Programma's gepubliceerd? Is het downloadbaar?
+### <a name="my-configuration-manager-environment-is-offline-can-i-manually-import-surface-drivers-into-wsus"></a>Mijn Configuration Manager-omgeving is offline, kan ik hand matig Surface-Stuur Programma's importeren in WSUS?
 
-De acceptatie lijst van het Surface-stuur programma wordt niet online gepubliceerd. Deze lijst wordt via de update-en onderhouds kanalen aan Configuration Manager geleverd. Als uw Configuration Manager omgeving online is en u nieuwe updates kunt detecteren, ontvangt u automatisch updates in de lijst.
+Nee. Zelfs als de update in WSUS wordt geïmporteerd, wordt de update niet geïmporteerd in de Configuration Manager-console voor implementatie als deze niet in de acceptatie lijst staat. U moet het [hulp programma voor service verbindingen](../../core/servers/manage/use-the-service-connection-tool.md) gebruiken om onderhouds updates te importeren naar Configuration Manager om de acceptatie lijst bij te werken.
 
-Als uw Configuration Manager omgeving offline is, wordt een nieuwe acceptatie lijst geïmporteerd telkens wanneer u de onderhouds updates naar Configuration Manager importeert. U moet ook een nieuwe WSUS-catalogus met de Stuur Programma's importeren voordat de updates worden weer gegeven in de Configuration Manager-console. Omdat een zelfstandige WSUS-omgeving meer Stuur Programma's bevat dan een Configuration Manager software-update punt, wordt u aangeraden een Configuration Manager omgeving te maken die online mogelijkheden heeft en die u configureert voor het synchroniseren van Surface-Stuur Programma's. Dit biedt een kleinere WSUS-export die lijkt op de offline omgeving.
+### <a name="what-alternative-methods-do-i-have-to-deploy-surface-driver-and-firmware-updates"></a>Welke alternatieve methoden moet ik gebruiken voor het implementeren van Surface-Stuur Programma's en firmware-updates?
 
-Een andere oplossing is het gebruik van [alternatieve methoden](#bkmk_alt) voor het implementeren van Surface-Stuur Programma's en firmware-updates.
-
-### <a name="i-require-the-latest-firmware-update-and-i-cant-wait-for-it-to-be-approved-for-import-into-configuration-manager-can-i-manually-import-the-driver-into-wsus"></a>Ik heb de meest recente firmware-update nodig en ik kan niet wachten tot deze is goedgekeurd voor importeren in Configuration Manager. Kan ik het stuur programma hand matig in WSUS importeren? 
-
-Nee. Zelfs als de update in WSUS wordt geïmporteerd, wordt de update niet geïmporteerd in de Configuration Manager-console voor implementatie als deze niet in de acceptatie lijst staat.
-
-Een andere oplossing is het gebruik van [alternatieve methoden](#bkmk_alt) voor het implementeren van Surface-Stuur Programma's en firmware-updates.
-
-### <a name="can-i-manually-add-a-driver-to-the-allow-list"></a>Kan ik een stuur programma hand matig toevoegen aan de acceptatie lijst? 
-
-Nee. De lijst wordt opgeslagen in de Configuration Manager-Data Base. Eventuele wijzigingen in de lijst worden overschreven de volgende keer dat het CAB-bestand wordt verwerkt.
-
-
-### <a name="what-alternative-methods-do-i-have-to-deploy-surface-driver-and-firmware-updates"></a><a name="bkmk_alt"></a>Welke alternatieve methoden moet ik gebruiken voor het implementeren van Surface-Stuur Programma's en firmware-updates?
-
-Zie [Surface-Stuur Programma's en firmware-updates beheren](https://docs.microsoft.com/surface/manage-surface-pro-3-firmware-updates)voor meer informatie over het implementeren van Surface-Stuur Programma's en firmware-updates via alternatieve kanalen.
-
-Als u het MSI-of exe-bestand wilt downloaden en vervolgens wilt implementeren via traditionele software-implementatie kanalen, raadpleegt u [Surface firmware bijgewerkt met Configuration Manager](https://blogs.technet.microsoft.com/thejoncallahan/2016/06/20/keeping-surface-firmware-updated-with-configuration-manager/).
+Zie [Surface-Stuur Programma's en firmware-updates beheren](https://docs.microsoft.com/surface/manage-surface-driver-and-firmware-updates)voor meer informatie over het implementeren van Surface-Stuur Programma's en firmware-updates via alternatieve kanalen. Als u het MSI-of exe-bestand wilt downloaden en vervolgens wilt implementeren via traditionele software-implementatie kanalen, raadpleegt u [Surface firmware bijgewerkt met Configuration Manager](https://docs.microsoft.com/archive/blogs/thejoncallahan/keeping-surface-firmware-updated-with-configuration-manager).
 
 ## <a name="next-steps"></a>Volgende stappen
 

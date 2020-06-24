@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c447c9187696a8e918886117847dde6421b4014
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 665b88932c88f523b19fec596bfd969bb93ecdd4
+ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990741"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84721904"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Op rollen gebaseerd toegangsbeheer (RBAC) en bereiktags gebruiken voor gedistribueerde IT
 
@@ -81,7 +81,6 @@ Wanneer u met bereiktags werkt, moet u deze details onthouden:
 - U kunt bereiktags toewijzen aan een Intune-objecttype als de tenant meerdere versies van dat object kan hebben (zoals roltoewijzingen of apps).
   De volgende Intune-objecten zijn uitzonderingen op deze regel en ondersteunen momenteel geen bereiktags:
     - Windows ESP-profielen
-    - Apparaatcategorieën
     - Registratiebeperkingen
     - Bedrijfsapparaat-id's
     - Autopilot-apparaten

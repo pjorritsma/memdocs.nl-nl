@@ -5,17 +5,17 @@ description: Gebruik dit stapsgewijze proces voor het instellen van een CMG (Clo
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 07/26/2019
+ms.date: 06/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 8c585473ec80ad4c6dfe49d22e527e99175bfbb4
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 0960637f534bfe1361b55b2d63be87abc7894d7b
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83877416"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715234"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Cloud beheer gateway instellen voor Configuration Manager
 
@@ -25,7 +25,6 @@ Dit proces bevat de stappen die nodig zijn voor het instellen van een Cloud behe
 
 > [!Note]  
 > Configuration Manager schakelt deze optionele functie standaard niet in. U moet deze functie inschakelen voordat u deze kunt gebruiken. Zie voor meer informatie [Enable optional features from updates](../../../servers/manage/install-in-console-updates.md#bkmk_options).
-
 
 ## <a name="before-you-begin"></a>Voordat u begint
 
@@ -39,11 +38,11 @@ Gebruik de volgende controle lijst om ervoor te zorgen dat u over de benodigde i
 
 - U hebt de volgende vereisten nodig voor een [Azure Resource Manager](plan-cloud-management-gateway.md#azure-resource-manager) implementatie van CMG:  
 
-    - Integratie met [Azure AD](../../../servers/deploy/configure/azure-services-wizard.md) voor **Cloud beheer**. Azure AD-gebruikers detectie is niet vereist.  
+  - Integratie met [Azure AD](../../../servers/deploy/configure/azure-services-wizard.md) voor **Cloud beheer**. Azure AD-gebruikers detectie is niet vereist. Als u de site wilt integreren met Azure AD om de CMG te implementeren met behulp van Azure Resource Manager, moet u een **globale beheerder**hebben.
 
-    - De resource providers **micro soft. ClassicCompute**  &  **micro soft. Storage** moeten zijn geregistreerd in het Azure-abonnement. Zie [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services)voor meer informatie.
+  - De resource providers **micro soft. ClassicCompute**  &  **micro soft. Storage** moeten zijn geregistreerd in het Azure-abonnement. Zie [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services)voor meer informatie.
 
-    - Een abonnements beheerder moet zich aanmelden.  
+  - De **eigenaar** van een abonnement moet zich aanmelden om de CMG te implementeren.
 
 - Een wereld wijd unieke naam voor de service. Deze naam is afkomstig uit het [certificaat voor CMG-Server verificatie](certificates-for-cloud-management-gateway.md#bkmk_serverauth).  
 
@@ -60,10 +59,9 @@ Gebruik de volgende controle lijst om ervoor te zorgen dat u over de benodigde i
     >
     > Vanaf Configuration Manager versie 1902 is Azure Resource Manager het enige implementatie mechanisme voor nieuwe exemplaren van de Cloud beheer gateway.<!-- 3605704 -->
 
-    - Azure-abonnements-ID  
+  - Azure-abonnements-ID  
 
-    - Azure-beheer certificaat  
-
+  - Azure-beheer certificaat  
 
 ## <a name="set-up-a-cmg"></a>Een CMG instellen
 
@@ -73,7 +71,7 @@ Voer deze procedure uit op de site op het hoogste niveau. Deze site is een zelfs
 
 2. Selecteer **Cloudbeheergateway maken** op het lint.  
 
-3. Selecteer **Aanmelden**op de pagina Algemeen van de wizard. Verificatie met een Azure-abonnement beheerders account. Met de wizard worden de resterende velden automatisch ingevuld op basis van de gegevens die zijn opgeslagen tijdens de vereisten voor Azure AD-integratie. Als u meerdere abonnementen hebt, selecteert u de **abonnements-id** van het gewenste abonnement dat u wilt gebruiken.
+3. Selecteer **Aanmelden**op de pagina Algemeen van de wizard. Verifieer met een Azure- **abonnements eigenaar** -account. De wizard vult automatisch de resterende velden in van de gegevens die zijn opgeslagen tijdens de vereisten voor Azure AD-integratie. Als u meerdere abonnementen hebt, selecteert u de **abonnements-id** van het abonnement dat u wilt gebruiken.
 
     > [!Note]  
     > Vanaf versie 1810 zijn de klassieke service-implementaties in azure afgeschaft in Configuration Manager. Selecteer in versie 1902 en eerder **Azure Resource Manager implementatie** als de implementatie methode CMG.
@@ -100,7 +98,7 @@ Voer deze procedure uit op de site op het hoogste niveau. Deze site is een zelfs
 10. Selecteer **certificaten** om door client vertrouwde basis certificaten toe te voegen. Voeg alle certificaten in de vertrouwens keten toe.  
 
     > [!Note]  
-    > Vanaf versie 1806, wanneer u een CMG maakt, bent u niet langer verplicht een vertrouwd basis certificaat op de pagina instellingen op te geven. Dit certificaat is niet vereist wanneer u Azure Active Directory (Azure AD) gebruikt voor client verificatie, maar dat in de wizard vereist is. Als u certificaten voor PKI-client verificatie gebruikt, moet u nog steeds een vertrouwd basis certificaat toevoegen aan de CMG.<!--SCCMDocs-pr issue #2872-->  
+    > Een vertrouwd basis certificaat is niet vereist wanneer u Azure Active Directory (Azure AD) gebruikt voor client verificatie. Als u certificaten voor PKI-client verificatie gebruikt, moet u een vertrouwd basis certificaat toevoegen aan de CMG.<!--SCCMDocs-pr issue #2872-->
     >
     > In versie 1902 en eerder kunt u slechts twee vertrouwde basis certificerings instanties en vier tussenliggende (onderliggende) Ca's toevoegen.<!-- SCCMDocs-pr#4022 -->
 
@@ -108,7 +106,7 @@ Voer deze procedure uit op de site op het hoogste niveau. Deze site is een zelfs
 
 12. Vanaf versie 1906 kunt u **TLS 1,2 afdwingen**. Deze instelling is alleen van toepassing op de Azure Cloud service-VM. Dit geldt niet voor on-premises Configuration Manager site servers of-clients. Raadpleeg [How to Enable tls 1,2](../../../plan-design/security/enable-tls-1-2.md)(Engelstalig) voor meer informatie over TLS 1,2.<!-- SCCMDocs-pr#4021 -->
 
-13. Vanaf versie 1806 wordt standaard de volgende optie ingeschakeld: **CMG toestaan om te functioneren als een Cloud distributiepunt en inhoud van Azure Storage te bewaren**. Een CMG kan nu ook inhoud aan clients aanbieden. Deze functionaliteit vermindert de vereiste certificaten en kosten van virtuele Azure-machines.  
+13. Standaard maakt de wizard de volgende optie: **CMG toestaan als een Cloud distributiepunt te functioneren en inhoud van Azure Storage te bewaren**. Een CMG kan ook inhoud leveren aan clients. Deze functionaliteit vermindert de vereiste certificaten en kosten van virtuele Azure-machines.
 
 14. Selecteer **Next**.  
 
@@ -116,9 +114,8 @@ Voer deze procedure uit op de site op het hoogste niveau. Deze site is een zelfs
 
 16. Controleer de instellingen en klik op **volgende**. Configuration Manager begint met het instellen van de service. Nadat u de wizard hebt gesloten, duurt het vijf tot 15 minuten voordat de service volledig is ingericht in Azure. Controleer de kolom **status** voor het nieuwe CMG om te bepalen wanneer de service gereed is.  
 
-    > [!Note]  
+    > [!NOTE]
     > Gebruik **CloudMgr. log** en **CMGSetup. log**om problemen met CMG-implementaties op te lossen. Zie [logboek bestanden](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway)voor meer informatie.
-
 
 ## <a name="configure-primary-site-for-client-certificate-authentication"></a>Primaire site configureren voor verificatie van client certificaten
 
@@ -128,23 +125,21 @@ Als u certificaten voor [client verificatie](certificates-for-cloud-management-g
 
 2. Selecteer de primaire site waaraan uw op internet gebaseerde clients zijn toegewezen en kies **Eigenschappen**.  
 
-3. Schakel over naar het tabblad **client computer communicatie** in het eigenschappen venster van de primaire site en schakel het selectie vakje **PKI-client certificaat gebruiken (client verificatie) in wanneer dit beschikbaar is**.  
+3. Ga naar het tabblad **communicatie beveiliging** van het eigenschappen venster van de primaire site en schakel het selectie vakje **PKI-client certificaat gebruiken (client verificatie) in wanneer dit beschikbaar is**.  
 
-    > [!Note]
-    > Vanaf versie 1906 wordt dit tabblad **communicatie beveiliging**genoemd.<!-- SCCMDocs#1645 -->  
+    > [!NOTE]
+    > In versie 1902 en eerder wordt dit tabblad **client computer communicatie**genoemd.<!-- SCCMDocs#1645 -->
 
 4. Als u geen CRL publiceert, schakelt u de optie voor **clients uit de certificaatintrekkingslijst (CRL) voor site systemen uit**.  
-
 
 ## <a name="add-the-cmg-connection-point"></a>Het CMG-verbindings punt toevoegen
 
 Het CMG-verbindings punt is de site systeemrol voor het communiceren met de CMG. Volg de algemene instructies voor het [installeren van site systeem rollen](../../../servers/deploy/configure/install-site-system-roles.md)om het CMG-verbindings punt toe te voegen. Selecteer op de pagina selectie van systeem rollen van de wizard site Systeemrol toevoegen het **verbindings punt van de Cloud beheer gateway**. Selecteer vervolgens de **naam van de Cloud beheer gateway** waarmee deze server verbinding maakt. De wizard toont de regio voor de geselecteerde CMG.
 
-> [!Important]
+> [!IMPORTANT]
 > Het CMG-verbindings punt moet in sommige scenario's een [certificaat voor client verificatie](certificates-for-cloud-management-gateway.md#bkmk_clientauth) hebben.
 
 Gebruik **CMGService. log** en **SMS_Cloud_ProxyConnector. log**om de CMG-service status op te lossen. Zie [logboek bestanden](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway)voor meer informatie.
-
 
 ## <a name="configure-client-facing-roles-for-cmg-traffic"></a>Client gerichte rollen configureren voor CMG-verkeer
 
@@ -162,7 +157,6 @@ Configureer de site systemen van het beheer punt en het software-update punt om 
 
 Herhaal deze stappen voor extra beheer punten, indien nodig, en voor alle software-update punten.
 
-
 ## <a name="configure-boundary-groups"></a>Grens groepen configureren
 
 <!--3640932-->
@@ -172,17 +166,16 @@ Zie [grens groepen configureren](../../../servers/deploy/configure/boundary-grou
 
 Wanneer u [een grens groep maakt of configureert](../../../servers/deploy/configure/boundary-group-procedures.md), voegt u op het tabblad **verwijzingen** een Cloud beheer gateway toe. Met deze actie wordt de CMG gekoppeld aan deze grens groep.
 
-
 ## <a name="configure-clients-for-cmg"></a>Clients configureren voor CMG
 
-Zodra de CMG-en site systeem rollen worden uitgevoerd, krijgen clients automatisch de locatie van de CMG-service op de volgende locatie aanvraag. Clients moeten zich op het intranet bevindt om de locatie van de CMG-service te kunnen ontvangen, tenzij u [Windows 10-clients installeert en toewijst met behulp van Azure AD voor authenticatie](../../deploy/deploy-clients-cmg-azure.md). De polling cyclus voor locatie aanvragen is elke 24 uur. Als u niet wilt wachten op de normale geplande locatie aanvraag, kunt u de aanvraag afdwingen door de SMS agent host-service (ccmexec. exe) opnieuw te starten op de computer.  
+Zodra de CMG-en site systeem rollen worden uitgevoerd, krijgen clients automatisch de locatie van de CMG-service op de volgende locatie aanvraag. Clients moeten zich op het intranet bevindt om de locatie van de CMG-service te kunnen ontvangen, tenzij u [Windows 10-clients installeert en toewijst met behulp van Azure AD voor authenticatie](../../deploy/deploy-clients-cmg-azure.md). De polling cyclus voor locatie aanvragen is elke 24 uur. Als u niet wilt wachten op de normale geplande locatie aanvraag, kunt u de aanvraag afdwingen. Als u de aanvraag wilt afdwingen, start u de SMS agent host-service (ccmexec.exe) opnieuw op de computer.
 
-> [!Note]
+> [!NOTE]
 > Standaard ontvangen alle clients het CMG-beleid. Dit gedrag beheren met de client instelling, [clients toestaan om een Cloud beheer gateway te gebruiken](../../deploy/about-client-settings.md#enable-clients-to-use-a-cloud-management-gateway).
 
 De Configuration Manager-client bepaalt automatisch of deze zich op het intranet of Internet bevindt. Als de client verbinding kan maken met een domein controller of een on-premises beheer punt, wordt het verbindings type ingesteld op **momenteel intranet**. Als dat niet het geval **is, wordt**de locatie van de CMG-service gebruikt om te communiceren met de site.
 
->[!NOTE]
+> [!NOTE]
 > U kunt afdwingen dat de client altijd de CMG gebruikt, ongeacht of deze zich op het intranet of Internet bevindt. Deze configuratie is handig voor test doeleinden of voor clients die u wilt dwingen om altijd de CMG te gebruiken. Stel de volgende register sleutel in op de client:
 >
 > `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\Security, ClientAlwaysOnInternet = 1`
@@ -191,17 +184,20 @@ De Configuration Manager-client bepaalt automatisch of deze zich op het intranet
 >
 > Deze instelling is altijd van toepassing, zelfs als de client naar een locatie gaat waar grens groeps configuraties anderszins gebruikmaken van lokale bronnen.
 
+Als u wilt controleren of clients over het beleid beschikken met de CMG, opent u een Windows Power shell-opdracht prompt als beheerder op de client computer en voert u de volgende opdracht uit:
 
-Als u wilt controleren of clients over het beleid beschikken met de CMG, opent u een Windows Power shell-opdracht prompt als beheerder op de client computer en voert u de volgende opdracht uit:`Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}`
+```powershell
+Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}`
+```
 
 Met deze opdracht worden alle beheer punten op internet weer gegeven die de client kent. Hoewel de CMG niet technisch een beheer punt op internet is, zien clients deze als één.
 
-> [!Note]  
+> [!NOTE]  
 > Als u het CMG-client verkeer wilt oplossen, gebruikt u **CMGHttpHandler. log**, **CMGService. log**en **SMS_Cloud_ProxyConnector. log**. Zie [logboek bestanden](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway)voor meer informatie.
 
 ### <a name="install-off-premises-clients-using-a-cmg"></a>On-premises clients installeren met behulp van een CMG
 
-Als u de client agent wilt installeren op systemen die momenteel niet zijn verbonden met uw intranet, moet aan een van de volgende voor waarden worden voldaan. In alle gevallen is een lokaal Administrator-account op de doel systemen vereist.
+Als u de Configuration Manager-client wilt installeren op systemen die momenteel niet zijn verbonden met uw intranet, moet aan een van de volgende voor waarden worden voldaan. In alle gevallen is een lokaal Administrator-account op de doel systemen vereist.
 
 1. De Configuration Manager site is op de juiste wijze geconfigureerd voor het gebruik van PKI-certificaten voor client verificatie. Daarnaast hebben de client systemen een geldig, uniek en vertrouwd certificaat voor client verificatie dat eerder aan hen is uitgegeven.
 
@@ -209,35 +205,37 @@ Als u de client agent wilt installeren op systemen die momenteel niet zijn verbo
 
 3. Op de site wordt Configuration Manager versie 2002 of hoger uitgevoerd.
 
-Voor de opties 1 en 2 gebruikt u de para meter **/MP** om de URL van de CMG op te geven bij het aanroepen van **ccmsetup. exe**. Zie [over para meters en eigenschappen van client installatie](../../deploy/about-client-installation-properties.md#mp)voor meer informatie.
+Voor opties 1 en 2, wanneer u **ccmsetup.exe**uitvoert, gebruikt u de para meter **/MP** om de URL van de CMG op te geven. Zie [over para meters en eigenschappen van client installatie](../../deploy/about-client-installation-properties.md#mp)voor meer informatie.
 
-Voor optie 3, vanaf Configuration Manager versie 2002, kunt u de client agent installeren op systemen die niet met uw intranet zijn verbonden met behulp van een token voor massa registratie. Zie [een token voor bulk registratie maken](../../deploy/deploy-clients-cmg-token.md#create-a-bulk-registration-token)voor meer informatie over deze methode.
+Voor optie 3, vanaf Configuration Manager versie 2002, kunt u de-client installeren op systemen die niet zijn verbonden met uw intranet met behulp van een bulk registratie token. Zie [een token voor bulk registratie maken](../../deploy/deploy-clients-cmg-token.md#create-a-bulk-registration-token)voor meer informatie over deze methode.
 
 ### <a name="configure-off-premises-clients-for-cmg"></a>On-premises clients configureren voor CMG
 
 U kunt systemen verbinden met een recent geconfigureerde CMG, waarbij de volgende voor waarden waar zijn:  
 
-- De Configuration Manager-client agent is al geïnstalleerd op systemen.
+- Op systemen is de Configuration Manager-client al geïnstalleerd.
 
 - Systemen zijn niet verbonden en kunnen niet worden verbonden met uw intranet.
 
 - Systemen voldoen aan een van de volgende voor waarden:
 
-  - Elk is een geldig, uniek en vertrouwd certificaat voor client verificatie dat eerder is uitgegeven.
+  - Elk is een geldig, uniek en vertrouwd certificaat voor client verificatie dat eerder is uitgegeven
 
   - Lid van Azure AD-domein
 
-  - Hybride Azure AD-domein toegevoegd.
+  - Hybride Azure AD-domein toegevoegd
 
-- U wilt de bestaande client agent niet volledig opnieuw installeren.
+- U wilt de bestaande client niet volledig opnieuw installeren.
 
 - U hebt een methode om een register waarde voor de machine te wijzigen en de **SMS agent host** -service opnieuw te starten met een lokaal beheerders account.
 
-Als u de verbinding op deze systemen wilt forceren, maakt u de register waarde **CMGFQDNs** (van het type REG_SZ) onder **HKLM\Software\Microsoft\CCM**. Stel deze waarde in op de URL van de CMG (bijvoorbeeld `https://contoso-cmg.contoso.com` ). Zodra de **SMS agent host** -service op het client systeem is ingesteld, start u deze opnieuw.
+Als u de verbinding op deze systemen wilt forceren, maakt u de **REG_SZ** register vermelding `CMGFQDNs` in de sleutel `HKLM\Software\Microsoft\CCM` . Stel de waarde ervan in op de URL van de CMG, bijvoorbeeld `https://contoso-cmg.contoso.com` . Start de service **SMS agent host** Windows opnieuw op het apparaat.
 
-Als de Configuration Manager-client geen huidig CMG of Internet gericht beheer punt in het REGI ster heeft ingesteld, wordt de register waarde **CMGFQDNs** automatisch gecontroleerd. Deze controle vindt plaats om de 25 uur, wanneer de **SMS agent host** -service wordt gestart, of wanneer een netwerk wijziging wordt gedetecteerd. Wanneer de client verbinding maakt met de site en informatie over een CMG, wordt deze waarde automatisch bijgewerkt.
+Als de Configuration Manager-client geen huidig CMG of Internet gericht beheer punt in het REGI ster heeft ingesteld, wordt de `CMGFQDNs` register waarde automatisch gecontroleerd. Deze controle vindt plaats om de 25 uur, wanneer de **SMS agent host** -service wordt gestart, of wanneer een netwerk wijziging wordt gedetecteerd. Wanneer de client verbinding maakt met de site en informatie over een CMG, wordt deze waarde automatisch bijgewerkt.
 
 ## <a name="modify-a-cmg"></a>Een CMG wijzigen
+
+### <a name="cmg-properties"></a>CMG-eigenschappen
 
 Nadat u een CMG hebt gemaakt, kunt u enkele instellingen wijzigen. Selecteer de CMG in de console Configuration Manager en selecteer **Eigenschappen**. Configureer instellingen op de volgende tabbladen:  
 
@@ -255,12 +253,11 @@ Nadat u een CMG hebt gemaakt, kunt u enkele instellingen wijzigen. Selecteer de 
 
 - **Intrekking van client certificaat controleren**: als u deze instelling niet hebt ingeschakeld bij het maken van de CMG, kunt u deze later opnieuw inschakelen nadat u de CRL hebt gepubliceerd. Zie voor meer informatie [de certificaatintrekkingslijst publiceren](security-and-privacy-for-cloud-management-gateway.md#bkmk_crl).  
 
-- **Toestaan dat CMG als een Cloud distributiepunt werkt en inhoud van Azure Storage bedient**: vanaf versie 1806 is deze nieuwe optie standaard ingeschakeld. Een CMG kan nu ook inhoud aan clients aanbieden. Deze functionaliteit vermindert de vereiste certificaten en kosten van virtuele Azure-machines.<!--1358651-->  
+- **Toestaan dat CMG als een Cloud distributiepunt fungeert en inhoud van Azure Storage**bewaart: deze optie is standaard ingeschakeld. Een CMG kan ook inhoud leveren aan clients. Deze functionaliteit vermindert de vereiste certificaten en kosten van virtuele Azure-machines.<!--1358651-->
 
 #### <a name="alerts"></a>Waarschuwingen
 
-Configureer de waarschuwingen op elk gewenst moment nadat u de CMG hebt gemaakt.
-
+U kunt de waarschuwingen op elk gewenst moment opnieuw configureren nadat u de CMG hebt gemaakt.
 
 ### <a name="redeploy-the-service"></a>De service opnieuw implementeren
 
@@ -296,7 +293,7 @@ Als u een bestaande CMG hebt voor de klassieke implementatie methode, moet u een
 
     4. Verwijder de klassieke CMG.  
 
-> [!Tip]  
+> [!TIP]
 > Het huidige implementatie model van een CMG bepalen:<!--SCCMDocs issue #611-->  
 >
 > 1. Ga in de Configuration Manager-console naar de werk ruimte **beheer** , vouw **Cloud Services**uit en selecteer het knoop punt **cloudbeheergateway** .  
@@ -312,7 +309,6 @@ Wijzig de CMG alleen van de Configuration Manager-console. Het is niet mogelijk 
 ### <a name="delete-the-service"></a>De service verwijderen
 
 Als u de CMG wilt verwijderen, kunt u dit ook doen via de Configuration Manager-console. Het hand matig verwijderen van onderdelen in azure zorgt ervoor dat het systeem inconsistent is. Deze status blijft zwevende informatie en er kan onverwachte problemen optreden.
-
 
 ## <a name="next-steps"></a>Volgende stappen
 

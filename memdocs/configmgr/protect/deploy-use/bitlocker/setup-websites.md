@@ -10,12 +10,12 @@ ms.assetid: 1cd8ac9f-b7ba-4cf4-8cd2-d548b0d6b1df
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cbd7c516515718cca96bff9b1715233964cb2aa5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 53fc4f694579fb8c53a4aea1054cf49dff21e1d2
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81717361"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715676"
 ---
 # <a name="set-up-bitlocker-portals"></a>BitLocker-portals instellen
 
@@ -28,7 +28,7 @@ Als u de volgende BitLocker-beheer onderdelen in Configuration Manager wilt gebr
 - Self-Service Portal voor gebruikers
 - Website voor beheer en controle (helpdesk Portal)
 
-U kunt de portals installeren op een bestaande site server met IIS of een zelfstandige webserver gebruiken om ze te hosten.
+U kunt de portals installeren op een bestaande site server of site systeem server waarop IIS is geïnstalleerd, of een zelfstandige webserver gebruiken om ze te hosten.
 
 > [!NOTE]
 > Installeer alleen de Self-Service Portal en de beheer-en bewakings website met een primaire site database. Installeer deze websites voor elke primaire site in een hiërarchie.
@@ -37,29 +37,29 @@ Voordat u begint, moet u de [vereisten](../../plan-design/bitlocker-management.m
 
 ## <a name="script-usage"></a>Script gebruik
 
-Dit proces maakt gebruik van een Power shell-script, MBAMWebSiteInstaller. ps1, om deze onderdelen te installeren op de webserver. Het accepteert de volgende para meters:
+Dit proces maakt gebruik van een Power shell-script, MBAMWebSiteInstaller.ps1, om deze onderdelen te installeren op de webserver. Het accepteert de volgende para meters:
 
 - `-SqlServerName <ServerName>`(vereist): de Fully Qualified Domain Name van de database server van de primaire site.
 
 - `-SqlInstanceName <InstanceName>`: De SQL Server exemplaar naam voor de data base van de primaire site. Als SQL het standaard exemplaar gebruikt, neemt u deze para meter niet op.
 
-- `-SqlDatabaseName <DatabaseName>`(vereist): de naam van de data base van de primaire site `CM_ABC`, bijvoorbeeld.
+- `-SqlDatabaseName <DatabaseName>`(vereist): de naam van de data base van de primaire site, bijvoorbeeld `CM_ABC` .
 
 - `-ReportWebServiceUrl <ReportWebServiceUrl>`: De URL van de webservice van het Reporting service-punt van de primaire site. Dit is de **URL** van de webservice in **Reporting Services Configuration Manager**.
 
     > [!NOTE]
     > Met deze para meter wordt het **herstel controle rapport** geïnstalleerd dat is gekoppeld via de website beheer en controle. Standaard Configuration Manager de andere BitLocker-beheer rapporten bevat.
 
-- `-HelpdeskUsersGroupName <DomainUserGroup>`: Bijvoorbeeld `contoso\BitLocker help desk users`. Een domein gebruikers groep waarvan de leden toegang hebben tot de modules TPM en **stations herstellen** **beheren** van de website beheer en controle. Wanneer u deze opties gebruikt, moet deze rol alle velden invullen, met inbegrip van het domein en de account naam van de gebruiker.
+- `-HelpdeskUsersGroupName <DomainUserGroup>`: Bijvoorbeeld `contoso\BitLocker help desk users` . Een domein gebruikers groep waarvan de leden toegang hebben tot de modules TPM en **stations herstellen** **beheren** van de website beheer en controle. Wanneer u deze opties gebruikt, moet deze rol alle velden invullen, met inbegrip van het domein en de account naam van de gebruiker.
 
-- `-HelpdeskAdminsGroupName <DomainUserGroup>`: Bijvoorbeeld `contoso\BitLocker help desk admins`. Een domein gebruikers groep waarvan de leden toegang hebben tot alle herstel gebieden van de beheer-en bewakings website. Wanneer gebruikers helpen hun stations te herstellen, hoeft deze rol alleen de herstel sleutel in te voeren.
+- `-HelpdeskAdminsGroupName <DomainUserGroup>`: Bijvoorbeeld `contoso\BitLocker help desk admins` . Een domein gebruikers groep waarvan de leden toegang hebben tot alle herstel gebieden van de beheer-en bewakings website. Wanneer gebruikers helpen hun stations te herstellen, hoeft deze rol alleen de herstel sleutel in te voeren.
 
-- `-MbamReportUsersGroupName <DomainUserGroup>`: Bijvoorbeeld `contoso\BitLocker report users`. Een domein gebruikers groep waarvan de leden alleen-lezen toegang hebben tot het gebied **rapporten** van de website beheer en controle.
+- `-MbamReportUsersGroupName <DomainUserGroup>`: Bijvoorbeeld `contoso\BitLocker report users` . Een domein gebruikers groep waarvan de leden alleen-lezen toegang hebben tot het gebied **rapporten** van de website beheer en controle.
 
     > [!NOTE]
     > Het installatie script maakt geen domein gebruikers groepen die u opgeeft in de para meters **-HelpdeskUsersGroupName**, **-HelpdeskAdminsGroupName**en **-MbamReportUsersGroupName** . Voordat u het script uitvoert, moet u ervoor zorgen dat u deze groepen maakt.
     >
-    > Wanneer u de para meters **-HelpdeskUsersGroupName**, **-HelpdeskAdminsGroupName**en **-MbamReportUsersGroupName** opgeeft, moet u de domein naam en de groeps naam opgeven. Gebruik de indeling `"domain\user_group"`. Sluit de domein naam niet uit. Als de domein naam of de groeps naam spaties of speciale tekens bevat, plaatst u de para meter`"`tussen aanhalings tekens ().
+    > Wanneer u de para meters **-HelpdeskUsersGroupName**, **-HelpdeskAdminsGroupName**en **-MbamReportUsersGroupName** opgeeft, moet u de domein naam en de groeps naam opgeven. Gebruik de indeling `"domain\user_group"`. Sluit de domein naam niet uit. Als de domein naam of de groeps naam spaties of speciale tekens bevat, plaatst u de para meter tussen aanhalings tekens ( `"` ).
 
 - `-SiteInstall Both`: Geef op welke onderdelen moeten worden geïnstalleerd. Geldige opties zijn:
   - `Both`: Installeer beide onderdelen
@@ -68,7 +68,7 @@ Dit proces maakt gebruik van een Power shell-script, MBAMWebSiteInstaller. ps1, 
 
 - `-IISWebSite`: De website waarop het script de MBAM-webtoepassingen installeert. Standaard wordt de IIS-standaard website gebruikt. Maak de aangepaste website voordat u deze para meter gebruikt.
 
-- `-InstallDirectory`: Het pad waarin het script de Web-toepassings bestanden installeert. Dit pad is `C:\inetpub`standaard. Maak de aangepaste map voordat u deze para meter gebruikt.
+- `-InstallDirectory`: Het pad waarin het script de Web-toepassings bestanden installeert. Dit pad is standaard `C:\inetpub` . Maak de aangepaste map voordat u deze para meter gebruikt.
 
 - `-Uninstall`: Hiermee verwijdert u de BitLocker Management Help Desk/self-service portal sites op een webserver waarop ze eerder zijn geïnstalleerd.
 

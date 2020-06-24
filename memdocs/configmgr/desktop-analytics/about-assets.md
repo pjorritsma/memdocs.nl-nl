@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: d5900fd4cb4fdebea23e626ffbe17c5289712b31
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: f87c4cc1bcbe8039acb5876dc8e26ac597f12e59
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268909"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107304"
 ---
 # <a name="assets-in-desktop-analytics"></a>Assets in Desktop Analytics
 
@@ -56,7 +56,7 @@ Configureer het **belang** van apps door een van de volgende categorieën in te 
 
 Wanneer de instelling Details van de **App-versie** is uitgeschakeld, wordt in het deel venster app-Details het aantal versies en talen van de app weer gegeven dat wordt gecombineerd. Als u wijzigingen in de app-details opslaat, geldt dit voor alle versies. Stel bijvoorbeeld het **belang** of de **eigenaar**in. Bij sommige waarden wordt ' multiple ' weer gegeven, wat betekent dat er niet één consistente waarde in alle versies is.
 
-### <a name="automatic-upgrade-decision-of-system-and-store-apps"></a><a name="bkmk_plan-autoapp" />Beslissing over automatische upgrade van systeem-en Store-apps
+### <a name="automatic-upgrade-decision-of-system-and-store-apps"></a><a name="bkmk_plan-autoapp"> </a> Beslissing over automatische upgrade van systeem-en Store-apps
 
 <!-- 3587232 -->
 Het identificeren van **urgentie** en het **opwaarderen van upgrades** is essentieel voor alle interessantste apps in de Desktop Analytics-werk stroom. Bepaalde typen apps worden automatisch gemarkeerd als *niet belang rijk*om uw inspanningen te verminderen bij het aantekeningen maken op deze apps. De beslissing over de upgrade van het implementatie plan voor deze apps wordt ook gemarkeerd als *gereed*. De volgende apps zijn compatibel en blijven werken na het upgraden van Windows:

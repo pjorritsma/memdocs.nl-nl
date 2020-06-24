@@ -10,12 +10,12 @@ ms.assetid: b3d755bd-0870-4f1f-a56d-bfd3c7b492b9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d694f9985e6d1e5118f2620e5cbd556de249788a
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 31f9b1cb083400abd36858a177e87804a916362c
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771321"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746508"
 ---
 # <a name="how-to-use-the-configuration-manager-docs"></a>De Configuration Manager docs gebruiken
 
@@ -34,11 +34,11 @@ Zie [Help zoeken](find-help.md)voor algemene hulp bij het product.
 
 Gebruik de volgende zoektips om de benodigde informatie te vinden:
 
-- Wanneer u uw favoriete zoek machine gebruikt om inhoud te zoeken voor Configuration Manager `ConfigMgr` , kunt u uw zoek woorden samen voegen.
+- Wanneer u uw favoriete zoek machine gebruikt om inhoud te zoeken voor Configuration Manager, kunt u `ConfigMgr` uw zoek woorden samen voegen.
 
-  - Zoek naar resultaten van `docs.microsoft.com/configmgr` voor Configuration Manager huidige vertakking. De resultaten `docs.microsoft.com/previous-versions` van zijn voor oudere product versies.
+  - Zoek naar resultaten van `docs.microsoft.com/mem/configmgr` voor Configuration Manager huidige vertakking. De resultaten van `docs.microsoft.com/previous-versions` zijn voor oudere product versies.
 
-  - Als u de zoek resultaten verder wilt richten op de huidige inhouds bibliotheek `site:docs.microsoft.com` , neemt u de zoek machine op als bereik.
+  - Als u de zoek resultaten verder wilt richten op de huidige inhouds bibliotheek, neemt `site:docs.microsoft.com` u de zoek machine op als bereik.
 
 - Gebruik zoek termen die overeenkomen met de terminologie in de gebruikers interface en online documentatie. Vermijd onofficiële voor waarden of afkortingen die u kunt zien in de Community-inhoud. Zoek bijvoorbeeld naar:
 
@@ -46,13 +46,13 @@ Gebruik de volgende zoektips om de benodigde informatie te vinden:
   - ' implementatie type ' in plaats van ' DT '
   - ' software-updates ' in plaats van ' SUM '
 
-- Als u in het huidige artikel wilt zoeken, gebruikt u de **Zoek** functie van uw browser. Bij de meeste moderne webbrowsers drukt u op **CTRL**+**F** en voert u de zoek termen in.
+- Als u in het huidige artikel wilt zoeken, gebruikt u de **Zoek** functie van uw browser. Bij de meeste moderne webbrowsers drukt u op **CTRL** + **F** en voert u de zoek termen in.
 
 - Elk artikel op `docs.microsoft.com` bevat de volgende velden om te helpen bij het zoeken naar de inhoud:
 
-  - **Zoek** in de rechter bovenhoek. Als u alle artikelen wilt doorzoeken, voert u voor waarden in dit veld in. De artikelen in de Configuration Manager-bibliotheek bevatten `ConfigMgr` automatisch het bereik om deze documentatie bibliotheek alleen te doorzoeken.
+  - **Zoek** in de rechter bovenhoek. Als u alle artikelen wilt doorzoeken, voert u voor waarden in dit veld in. De artikelen in de Configuration Manager-bibliotheek bevatten automatisch het `ConfigMgr` bereik om deze documentatie bibliotheek alleen te doorzoeken.
 
-  - **Filteren op titel** boven de inhouds opgave links. Als u wilt zoeken in de huidige inhouds opgave, voert u voor waarden in dit veld in. Dit veld komt alleen overeen met de voor waarden die worden weer gegeven in de titel van het artikel voor het huidige knoop punt. Bijvoorbeeld: **kern infrastructuur** (`docs.microsoft.com/configmgr/core`) of **toepassings beheer** (`docs.microsoft.com/configmgr/apps`).
+  - **Filteren op titel** boven de inhouds opgave links. Als u wilt zoeken in de huidige inhouds opgave, voert u voor waarden in dit veld in. Dit veld komt alleen overeen met de voor waarden die worden weer gegeven in de titel van het artikel voor het huidige knoop punt. Bijvoorbeeld: **kern infrastructuur** ( `docs.microsoft.com/configmgr/core` ) of **toepassings beheer** ( `docs.microsoft.com/configmgr/apps` ).
 
 - Ondervindt u problemen met het vinden van iets? [Feedback over bestanden.](#bkmk_docfeedback) Wanneer u het probleem opslaat, geeft u de zoek machine op die u wilt gebruiken, de tref woorden die u hebt geprobeerd en het doel artikel. Deze feedback helpt micro soft bij het optimaliseren van de inhoud voor betere zoek mogelijkheden.
 
@@ -133,7 +133,7 @@ Als u een bijdrage wilt leveren, maar niet weet waar u moet beginnen, raadpleegt
 
     Micro soft-auteurs wijzen deze labels toe aan problemen die goede kandidaten zijn voor de bijdrage van de community.
 
-- Bekijk een artikel op nauw keurigheid. Werk vervolgens de **MS. date** -meta `mm/dd/yyyy` gegevens bij met de indeling. Deze bijdrage helpt de inhoud te vernieuwen.
+- Bekijk een artikel op nauw keurigheid. Werk vervolgens de **MS. date** -meta gegevens bij met de `mm/dd/yyyy` indeling. Deze bijdrage helpt de inhoud te vernieuwen.
 
 - Voeg uitleg, voor beelden of richt lijnen toe op basis van uw ervaring. Deze bijdrage maakt gebruik van de kracht van de community om kennis te delen.
 

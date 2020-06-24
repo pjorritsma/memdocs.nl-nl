@@ -5,17 +5,17 @@ description: Meer informatie over de verschillende digitale certificaten die u k
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 04/15/2020
+ms.date: 06/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: 7e9602ef5ea784dd3e97578d5ff585f2ca662c1e
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: b5a9a4a7f23942ac06dc16a0b54b657c7fd617a9
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347199"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715608"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>Certificaten voor de Cloud beheer gateway
 
@@ -28,7 +28,8 @@ Afhankelijk van het scenario dat u gebruikt voor het beheren van clients op inte
   - [Certificaat voor Server verificatie dat is uitgegeven door de open bare provider](#bkmk_serverauthpublic)  
   - [Server verificatie certificaat dat is uitgegeven door Enter prise PKI](#bkmk_serverauthpki)  
 
-- [Clientverificatiecertificaat](#bkmk_clientauth)  
+- [Clientverificatiecertificaat](#bkmk_clientauth)
+  - [CMG-verbindings punt](#bkmk_cmgcp)
   - [Door client vertrouwd basis certificaat naar CMG](#bkmk_clientroot)  
 
 - [Beheer punt voor HTTPS inschakelen](#bkmk_mphttps)  
@@ -73,7 +74,7 @@ Dit certificaat vereist een wereld wijd unieke naam voor het identificeren van d
     > [!Important]  
     > Maak de service niet in de portal. Gebruik dit proces alleen om de beschik baarheid van de naam te controleren.
 
-Als u ook de CMG voor inhoud wilt inschakelen, controleert u of de naam van de CMG-service ook een unieke naam voor een Azure-opslag account is. Als de naam van de Cloud service CMG uniek is, maar de naam van het opslag account niet, kan Configuration Manager de service niet inrichten in Azure. Herhaal het bovenstaande proces in de Azure Portal met de volgende wijzigingen:
+Als u ook de CMG voor inhoud inschakelt, controleert u of de naam van de CMG-service ook een unieke naam voor een Azure-opslag account is. Als de naam van de Cloud service CMG uniek is, maar de naam van het opslag account niet, kan Configuration Manager de service niet inrichten in Azure. Herhaal het bovenstaande proces in de Azure Portal met de volgende wijzigingen:
 
 - Zoeken naar **opslag account**
 - Test uw naam in het veld **naam van opslag account**
@@ -90,7 +91,7 @@ Clients moeten het certificaat voor CMG-Server verificatie vertrouwen. Er zijn t
 
   - U kunt ook Configuration Manager-certificaat profielen gebruiken om certificaten in te richten op clients. Zie [Inleiding tot certificaat profielen](../../../../protect/deploy-use/introduction-to-certificate-profiles.md)voor meer informatie.
 
-  - Als u van plan bent om [de Configuration Manager-client te installeren vanuit intune](../../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client), kunt u ook intune-certificaat profielen gebruiken om certificaten in te richten op clients. Zie [Configure a Certificate profile](https://docs.microsoft.com/intune/certificates-configure)(Engelstalig) voor meer informatie.
+  - Als u van plan bent om [de Configuration Manager-client te installeren vanuit intune](../../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client), kunt u ook intune-certificaat profielen gebruiken om certificaten in te richten op clients. Zie [Configure a Certificate profile (een certificaat profiel configureren](../../../../../intune/protect/certificates-configure.md)) voor meer informatie.
 
 ### <a name="server-authentication-certificate-issued-by-public-provider"></a><a name="bkmk_serverauthpublic"></a>Certificaat voor Server verificatie dat is uitgegeven door de open bare provider
 
@@ -129,18 +130,35 @@ Maak een aangepast SSL-certificaat voor de CMG op dezelfde wijze als voor een Cl
 
 ## <a name="client-authentication-certificate"></a><a name="bkmk_clientauth"></a>Certificaat voor client verificatie
 
-*Dit certificaat is vereist voor Internet-clients met Windows 8,1 en Windows 10-apparaten die geen deel uitmaken van Azure Active Directory (Azure AD). Het is ook vereist op het CMG-verbindings punt. Het is niet vereist voor Windows 10-clients die lid zijn van Azure AD.*
+Vereisten voor client verificatie certificaat:
+
+- Dit certificaat is vereist voor Internet-clients met Windows 8,1 en Windows 10-apparaten die geen deel uitmaken van Azure Active Directory (Azure AD).
+- Dit kan vereist zijn op het CMG-verbindings punt. Zie [CMG Connection Point](#bkmk_cmgcp)(Engelstalig) voor meer informatie.
+- Het is niet vereist voor Windows 10-clients die lid zijn van Azure AD.
+- Als uw site versie 2002 of hoger is, kunnen apparaten een token gebruiken dat is uitgegeven door de site. Zie [verificatie op basis van tokens voor CMG](../../deploy/deploy-clients-cmg-token.md)voor meer informatie.
 
 De clients gebruiken dit certificaat om te verifiëren bij de CMG. Voor Windows 10-apparaten die lid zijn van hybride of het Cloud domein, is dit certificaat niet vereist omdat ze Azure AD gebruiken voor verificatie.
 
 Richt dit certificaat in buiten de context van Configuration Manager. Gebruik bijvoorbeeld Active Directory Certificate Services en groeps beleid om certificaten voor client verificatie uit te geven. Zie [het client certificaat voor Windows-computers implementeren](../../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_client2008_cm2012)voor meer informatie.
 
-Voor het veilig door sturen van client aanvragen vereist het CMG-verbindings punt een certificaat voor client verificatie dat overeenkomt met het Server verificatie certificaat op het HTTPS-beheer punt. Als clients gebruikmaken van Azure AD-verificatie, of als u het beheer punt voor verbeterde HTTP configureert, is dit certificaat niet vereist. Zie [beheer punt voor HTTPS inschakelen](#bkmk_mphttps)voor meer informatie.
-
 > [!NOTE]
 > Micro soft raadt aan om apparaten te koppelen aan Azure AD. Op internet gebaseerde apparaten kunnen Azure AD gebruiken om te verifiëren met Configuration Manager. Het schakelt ook zowel apparaat-als gebruikers scenario's in, ongeacht of het apparaat op internet is of is verbonden met het interne netwerk. Zie [de client installeren en registreren met Azure AD Identity](../../deploy/deploy-clients-cmg-azure.md#install-and-register-the-client-using-azure-ad-identity)voor meer informatie.
 >
-> Vanaf versie 2002,<!--5686290--> Configuration Manager breidt de ondersteuning uit voor apparaten op Internet die niet vaak verbinding maken met het interne netwerk, geen lid kunnen worden van Azure Active Directory (Azure AD) en geen methode hebben om een door PKI uitgegeven certificaat te installeren. Zie [verificatie op basis van tokens voor CMG](../../deploy/deploy-clients-cmg-token.md)voor meer informatie.
+> Vanaf versie 2002,<!--5686290--> Configuration Manager breidt de ondersteuning uit voor apparaten op Internet die niet vaak verbinding maken met het interne netwerk, geen lid kunnen worden van Azure AD en geen methode hebben om een door PKI uitgegeven certificaat te installeren. Zie [verificatie op basis van tokens voor CMG](../../deploy/deploy-clients-cmg-token.md)voor meer informatie.
+
+### <a name="cmg-connection-point"></a><a name="bkmk_cmgcp"></a>CMG-verbindings punt
+
+Het CMG-verbindings punt vereist een beveiligde verbinding met het beheer punt om client aanvragen veilig door te sturen. Afhankelijk van hoe u uw apparaten en beheer punten configureert, wordt de configuratie van het CMG-verbindings punt bepaald.
+
+- Het beheer punt is HTTPS
+
+  - Clients hebben een certificaat voor client verificatie: voor het CMG-verbindings punt is een certificaat voor client verificatie vereist dat overeenkomt met het Server verificatie certificaat op het HTTPS-beheer punt.
+
+  - Clients gebruiken Azure AD-verificatie of een Configuration Manager-token: dit certificaat is niet vereist.
+
+- Als u het beheer punt configureert voor verbeterde HTTP: dit certificaat is niet vereist.
+
+Zie [beheer punt voor HTTPS inschakelen](#bkmk_mphttps)voor meer informatie.
 
 ### <a name="client-trusted-root-certificate-to-cmg"></a><a name="bkmk_clientroot"></a>Door client vertrouwd basis certificaat naar CMG
 
@@ -150,8 +168,8 @@ U geeft dit certificaat op wanneer u de CMG maakt in de Configuration Manager-co
 
 De CMG moet de client authenticatie certificaten vertrouwen. Geef de vertrouwde basis certificaat keten op om deze vertrouwens relatie uit te voeren. Zorg ervoor dat alle certificaten in de vertrouwens keten zijn toegevoegd. Als het client verificatie certificaat bijvoorbeeld wordt uitgegeven door een tussenliggende certificerings instantie, moet u zowel de tussenliggende als de basis-CA-certificaten toevoegen.
 
-> [!Note]  
-> Wanneer u een CMG maakt, hoeft u niet langer een vertrouwd basis certificaat op te geven op de pagina instellingen. Dit certificaat is niet vereist wanneer u Azure Active Directory (Azure AD) gebruikt voor client verificatie, maar dat in de wizard vereist is. Als u certificaten voor PKI-client verificatie gebruikt, moet u nog steeds een vertrouwd basis certificaat toevoegen aan de CMG.<!--SCCMDocs-pr issue #2872 SCCMDocs issue #1319-->
+> [!NOTE]  
+> Wanneer u een CMG maakt, hoeft u niet langer een vertrouwd basis certificaat op te geven op de pagina instellingen. Dit certificaat is niet vereist wanneer u Azure AD gebruikt voor client verificatie, maar dat in de wizard vereist is. Als u certificaten voor PKI-client verificatie gebruikt, moet u nog steeds een vertrouwd basis certificaat toevoegen aan de CMG.<!--SCCMDocs-pr issue #2872 SCCMDocs issue #1319-->
 >
 > In versie 1902 en eerder kunt u slechts twee vertrouwde basis certificerings instanties en vier tussenliggende (onderliggende) Ca's toevoegen.
 
@@ -193,7 +211,7 @@ Richt dit certificaat in buiten de context van Configuration Manager. Gebruik bi
 
 Wanneer u de site optie gebruikt om door **Configuration Manager gegenereerde certificaten voor HTTP-site systemen te gebruiken**, kan het beheer punt http zijn. Zie [Enhanced http](../../../plan-design/hierarchy/enhanced-http.md)(Engelstalig) voor meer informatie.
 
-> [!Tip]  
+> [!TIP]
 > Als u geen gebruik maakt van verbeterde HTTP en uw omgeving meerdere beheer punten heeft, hoeft u deze niet in HTTPS in te scha kelen voor CMG. Configureer de CMG-beheer punten alleen als **Internet**. Uw on-premises clients proberen deze niet te gebruiken.<!-- SCCMDocs#1676 -->
 
 ### <a name="enhanced-http-certificate-for-management-points"></a>Verbeterd HTTP-certificaat voor beheer punten
@@ -212,7 +230,7 @@ Configureer een on-premises beheer punt om verbindingen van de CMG met de volgen
 |------------------|------------------|
 | Werkgroep        | E-HTTP-<sup>[Opmerking 1](#bkmk_note1)</sup>, https |
 | AD-domein toegevoegd | E-HTTP-<sup>[Opmerking 1](#bkmk_note1)</sup>, https |
-| Toegevoegd aan Azure AD  | E-HTTP, HTTPS |
+| Azure AD-deelname  | E-HTTP, HTTPS |
 | Hybride join    | E-HTTP, HTTPS |
 
 <a name="bkmk_note1"></a>
@@ -228,7 +246,7 @@ Configureer een on-premises beheer punt met de volgende client verbindings modus
 |------------------|------------------|
 | Werkgroep        | HTTP, HTTPS |
 | AD-domein toegevoegd | HTTP, HTTPS |
-| Toegevoegd aan Azure AD  | HTTPS       |
+| Azure AD-deelname  | HTTPS       |
 | Hybride join    | HTTP, HTTPS |
 
 > [!NOTE]  
@@ -240,14 +258,14 @@ Configureer een on-premises beheer punt met de volgende client verbindings modus
 
 - *Werk groep*: het apparaat is niet gekoppeld aan een domein of Azure AD, maar heeft een [certificaat voor client verificatie](#bkmk_clientauth).
 - *AD-domein*: u voegt het apparaat toe aan een on-premises Active Directory domein.
-- *Azure AD*: ook wel lid van een Cloud domein genoemd, voegt u het apparaat toe aan een Azure Active Directory-Tenant. Zie apparaten die zijn [toegevoegd aan Azure AD](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join)voor meer informatie.
-- *Hybride lid*: u voegt het apparaat toe aan uw on-premises Active Directory en registreert het met uw Azure Active Directory. Zie voor meer informatie [Hybrid Azure AD joined devices](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid)(Engelstalig).
+- *Azure AD*: ook wel lid van een Cloud domein genoemd, voegt u het apparaat toe aan een Azure AD-Tenant. Zie apparaten die zijn [toegevoegd aan Azure AD](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join)voor meer informatie.
+- *Hybride lid*: u kunt het apparaat toevoegen aan uw on-premises Active Directory en dit registreren bij uw Azure AD. Zie voor meer informatie [Hybrid Azure AD joined devices](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid)(Engelstalig).
 - *Http*: voor de eigenschappen van het beheer punt stelt u de client verbindingen in op **http**.
 - *Https*: voor de eigenschappen van het beheer punt stelt u de client verbindingen in op **https**.
-- *E-http*: op het tabblad site-eigenschappen, **client computer communicatie** , stelt u de site systeem instellingen in op **https of http**en schakelt u de optie voor het **gebruik van door Configuration Manager gegenereerde certificaten voor http-site systemen**in. U configureert het beheer punt voor HTTP, het HTTP-beheer punt is gereed voor HTTP-en HTTPS-communicatie (scenario's voor token verificatie).
+- *E-http*: op de site-eigenschappen, het tabblad **communicatie beveiliging** , stelt u de site systeem instellingen in op **https of http**en schakelt u de optie voor het **gebruik van door Configuration Manager gegenereerde certificaten voor http-site systemen**in. U configureert het beheer punt voor HTTP, het HTTP-beheer punt is gereed voor HTTP-en HTTPS-communicatie (scenario's voor token verificatie).
 
     > [!Note]
-    > Vanaf versie 1906 wordt dit tabblad **communicatie beveiliging**genoemd.<!-- SCCMDocs#1645 -->
+    > In versie 1902 en eerder wordt dit tabblad **client computer communicatie**genoemd.<!-- SCCMDocs#1645 -->
 
 ## <a name="azure-management-certificate"></a><a name="bkmk_azuremgmt"></a>Azure-beheer certificaat
 

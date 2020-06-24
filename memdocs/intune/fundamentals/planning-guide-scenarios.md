@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d277b47b2d753b5068e871fe33ce0cab48cfb1e4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f4e98a9c25121bacf1759dc73464e3a51dfe61d9
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357360"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795683"
 ---
 # <a name="identify-mobile-device-management-use-case-scenarios"></a>Gebruiksscenario's voor het beheer van mobiele apparaten identificeren
 
@@ -60,7 +60,6 @@ Hier volgen enkele voorbeelden van gebruiksscenario's en subgebruiksscenario's:
 | BYOD | Informatiemedewerker |           
 | BYOD | Leidinggevenden |
 
-U kunt [een sjabloon van de bovenstaande tabel downloaden](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) om de gebruiksscenario's en subgebruiksscenario's van uw organisatie in te voeren.
 
 ## <a name="organizational-groups-for-your-scenarios"></a>Organisatiegroepen voor uw scenario's
 
@@ -81,7 +80,7 @@ In de volgende stap stelt u vast welke platformen voor mobiele apparaten zijn ge
 
 Uw bedrijfsgebruiksscenario kan bijvoorbeeld de iOS-/iPadOS- en Android Samsung Knox-apparaatplatformen ondersteunen. Uw BYOD-beleid kan ondersteuning omvatten voor aanvullende platformen voor mobiele apparaten, zoals Android (behalve Samsung Knox) en Windows 10 Mobile. Voortbouwend op de voorgaande voorbeelden hebben we platformen voor mobiele apparaten gekoppeld aan elk gebruiksscenario.
 
-| **Use cases** | **Subgebruikssituaties** | **GROEPEN** | **Apparaatplatformen** |   
+| **Use cases** | **Subgebruikssituaties** | **Groepen** | **Apparaatplatformen** |   
 |:---:|:---:|:---:|:---:|
 | Bedrijf | Informatiemedewerker | HR, Financiën | iOS/iPadOS |                                                           
 | Bedrijf | Leidinggevenden | HR, Financiën | iOS/iPadOS |                                                           

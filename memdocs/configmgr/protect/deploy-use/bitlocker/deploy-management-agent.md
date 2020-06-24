@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e33ba8df84239b4a438ff0c526bb255c5b7d0052
-ms.sourcegitcommit: e618ea7cb864635c838b672bc71a1e926bf7c047
+ms.openlocfilehash: 4a050ab523730adbfdd2ecf541557fabbf95081b
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84458148"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715693"
 ---
 # <a name="deploy-bitlocker-management"></a>BitLocker-beleid implementeren
 
@@ -173,7 +173,7 @@ Zie [herstel gegevens versleutelen](encrypt-recovery-data.md)voor meer informati
 Als u momenteel micro soft BitLocker Administration and monitoring (MBAM) gebruikt, kunt u het beheer naadloos migreren naar Configuration Manager. Wanneer u het beleid voor het beheren van BitLocker-beheer in Configuration Manager implementeert, uploaden clients automatisch herstel sleutels en pakketten naar de Configuration Manager Recovery-service.
 
 > [!IMPORTANT]
-> Wanneer u migreert van zelfstandige MBAM naar Configuration Manager BitLocker-beheer, moet u zelfstandige MBAM-servers of-onderdelen niet opnieuw gebruiken met Configuration Manager BitLocker-beheer als u bestaande functionaliteit van zelfstandige MBAM nodig hebt. Als u deze servers opnieuw gebruikt, werkt zelfstandige MBAM niet meer wanneer de onderdelen van Configuration Manager BitLocker-beheer op die servers worden geïnstalleerd. Voer het script MBAMWebSiteInstaller. ps1 niet uit om de BitLocker-portals op zelfstandige MBAM-servers in te stellen. Wanneer u Configuration Manager BitLocker-beheer instelt, gebruikt u afzonderlijke servers.
+> Wanneer u migreert van zelfstandige MBAM naar Configuration Manager BitLocker-beheer, moet u zelfstandige MBAM-servers of-onderdelen niet opnieuw gebruiken met Configuration Manager BitLocker-beheer als u bestaande functionaliteit van zelfstandige MBAM nodig hebt. Als u deze servers opnieuw gebruikt, werkt zelfstandige MBAM niet meer wanneer de onderdelen van Configuration Manager BitLocker-beheer op die servers worden geïnstalleerd. Voer het MBAMWebSiteInstaller.ps1 script niet uit om de BitLocker-portals op zelfstandige MBAM-servers in te stellen. Wanneer u Configuration Manager BitLocker-beheer instelt, gebruikt u afzonderlijke servers.
 
 ### <a name="group-policy"></a>Groeps beleid
 
@@ -191,7 +191,7 @@ Als u momenteel micro soft BitLocker Administration and monitoring (MBAM) gebrui
 
 Configuration Manager stations die al met BitLocker-stationsversleuteling zijn beveiligd, worden niet opnieuw versleuteld. Als u een BitLocker-beheer beleid implementeert dat niet overeenkomt met de huidige beveiliging van het station, wordt het als niet-compatibel gerapporteerd. Het station is nog steeds beveiligd.
 
-U hebt bijvoorbeeld MBAM gebruikt voor het versleutelen van het station zonder pincode beveiliging, maar voor het Configuration Manager-beleid is een pincode vereist. Het station voldoet niet aan het beleid, ook al is het station versleuteld.
+U hebt bijvoorbeeld MBAM gebruikt voor het versleutelen van het station met het AES-XTS 128-versleutelings algoritme, maar voor het Configuration Manager-beleid is AES-XTS 256 vereist. Het station voldoet niet aan het beleid, ook al is het station versleuteld.
 
 U kunt dit probleem omzeilen door BitLocker op het apparaat uit te scha kelen. Implementeer vervolgens een nieuw beleid met de nieuwe instellingen.
 
@@ -201,7 +201,7 @@ U kunt dit probleem omzeilen door BitLocker op het apparaat uit te scha kelen. I
 
 De Configuration Manager-client-handler voor BitLocker is op zichzelfe hoogte. Als het apparaat wordt beheerd door co-beheer en u de [Endpoint Protection workload](../../../comanage/workloads.md#endpoint-protection) overschakelt naar intune, wordt het BitLocker-beleid door de Configuration Manager-client genegeerd. Het apparaat ontvangt een Windows-versleutelings beleid van intune.
 
-Wanneer u overschakelt op versleutelings beheer, moet u een [reencryptie](#re-encryption)plannen.
+Wanneer u overschakelt van versleutelings beheer instanties en de gewenste versleutelings algoritme wordt ook gewijzigd, moet u de [hercodering](#re-encryption) plannen.
 
 Raadpleeg de volgende artikelen voor meer informatie over het beheren van BitLocker met intune:
 

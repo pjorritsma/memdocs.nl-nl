@@ -1,5 +1,5 @@
 ---
-title: Micro soft Endpoint Manager-Tenant koppelen
+title: Microsoft Endpoint Manager-tenant koppelen
 titleSuffix: Configuration Manager
 description: Upload uw Configuration Manager-apparaten naar de Cloud service en onderneem acties vanuit het beheer centrum.
 ms.date: 04/10/2020
@@ -10,12 +10,12 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: e2b8c07a64265d33ade0b1c2c08c2d9c4096b741
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.openlocfilehash: be1c938cfcf332edb37e24e4094567f88f363560
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693470"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795615"
 ---
 # <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a>Micro soft Endpoint Manager-Tenant bijvoegen: synchronisatie van apparaten en acties van apparaten
 <!--3555758 live 3/4/2020-->
@@ -39,10 +39,7 @@ Vanaf Configuration Manager versie 2002 kunt u uw Configuration Manager-apparate
 ## <a name="internet-endpoints"></a>Internet-eind punten
 
 - `https://aka.ms/configmgrgateway`
-- `https://gateway.configmgr.manage.microsoft.com`
-- `https://us.gateway.configmgr.manage.microsoft.com`
-- `https://eu.gateway.configmgr.manage.microsoft.com`
-
+- `https://*.manage.microsoft.com` <!--7424742-->
 
 ## <a name="enable-device-upload"></a>Apparaat uploaden inschakelen
 
@@ -55,40 +52,40 @@ Vanaf Configuration Manager versie 2002 kunt u uw Configuration Manager-apparate
 
 Als u co-beheer momenteel hebt ingeschakeld, bewerkt u de eigenschappen voor co-beheer om het uploaden van apparaten in te scha kelen met behulp van de onderstaande instructies:
 
-1. Ga in de Configuration Manager-beheer console naar **beheer** > **overzicht** > **Cloud Services** > **co-beheer**.
-1. Klik met de rechter muisknop op uw instellingen voor co-beheer en selecteer **Eigenschappen**.
-1. Selecteer **uploaden naar het beheer centrum van micro soft Endpoint Manager**op het tabblad **Upload configureren** . Klik op **Toepassen**.
-   - De standaard instelling voor het uploaden van apparaten is dat **alle apparaten die door micro soft Endpoint Configuration Manager worden beheerd**. Als dat nodig is, kunt u het uploaden beperken tot één verzameling apparaten.
+1. Ga in de Configuration Manager-beheerconsole naar **Beheer** > **Overzicht** > **Cloudservices** > **Co-beheer**.
+1. Klik met de rechtermuisknop op uw instellingen voor co-beheer en selecteer **Eigenschappen**.
+1. Selecteer **Uploaden naar Microsoft Endpoint Manager-beheercentrum** in het tabblad **Upload configureren**. Klik op **Toepassen**.
+   - De standaardinstelling voor het uploaden van apparaten is **Alle apparaten die worden beheerd door Microsoft Endpoint Configuration Manager**. Als dat nodig is, kunt u het uploaden beperken tot één verzameling apparaten.
 
    [![Wizard Configuratie van co-beheer](./media/3555758-configure-upload.png)](./media/3555758-configure-upload.png#lightbox)
-1. Meld u aan met uw *globale beheerders* account wanneer u hierom wordt gevraagd.
-1. Klik op **Ja** om de melding **Aad-toepassing maken** te accepteren. Met deze actie wordt een Service-Principal ingericht en wordt een Azure AD-toepassings registratie gemaakt om de synchronisatie te vergemakkelijken.
+1. Meld u aan met uw *globale beheerder*-account wanneer u hierom wordt gevraagd.
+1. Klik op **Ja** om de melding **AAD-toepassing maken** te accepteren. Met deze actie wordt een service-principal ingericht en wordt een Azure AD-toepassingsregistratie gemaakt om de synchronisatie te vergemakkelijken.
 1. Klik op **OK** om de eigenschappen voor co-beheer af te sluiten nadat u de wijzigingen hebt aangebracht.
 
 
 ### <a name="use-the-configure-co-management-wizard-to-enable-device-upload"></a><a name="bkmk_config"></a>Gebruik de wizard voor co-beheer configureren om het uploaden van apparaten in te scha kelen
 Als er geen co-beheer is ingeschakeld, gebruikt u de wizard voor het **configureren van co-beheer** om het uploaden van apparaten in te scha kelen. U kunt uw apparaten uploaden zonder automatische inschrijving in te scha kelen voor co-beheer of switch-workloads naar intune. Schakel het uploaden van apparaten in met behulp van de onderstaande instructies:
 
-1. Ga in de Configuration Manager-beheer console naar **beheer** > **overzicht** > **Cloud Services** > **co-beheer**.
-1. Klik in het lint op **co-beheer configureren** om de wizard te openen.
-1. Selecteer op de pagina voor het **voorbereiden van tenants** de optie **AzurePublicCloud** voor uw omgeving. Azure Government Cloud wordt niet ondersteund.
-1. Klik op **Aanmelden**. Gebruik uw *globale beheerders* account om u aan te melden.
+1. Ga in de Configuration Manager-beheerconsole naar **Beheer** > **Overzicht** > **Cloudservices** > **Co-beheer**.
+1. Klik in het lint op **Co-beheer configureren** om de wizard te openen.
+1. Selecteer op de pagina **Tenant-onboarding** de optie **AzurePublicCloud** voor uw omgeving. Azure Government-cloud wordt niet ondersteund.
+1. Klik op **Aanmelden**. Gebruik uw *globale beheerder*-account om u aan te melden.
 1. Zorg ervoor dat de optie **uploaden naar micro soft Endpoint Manager-beheer centrum** is geselecteerd op de pagina voor **onboarding** van de Tenant.
    - Zorg ervoor dat de optie **automatische client registratie voor co-beheer inschakelen** niet is ingeschakeld als u co-beheer nu niet wilt inschakelen. Als u co-beheer wilt inschakelen, selecteert u de optie.
    - Als u co-beheer samen met het uploaden van het apparaat inschakelt, krijgt u extra pagina's in de wizard om te volt ooien. Zie [co-beheer inschakelen](../comanage/how-to-enable.md)voor meer informatie.
 
    [![Wizard Configuratie van co-beheer](./media/3555758-comanagement-wizard.png)](./media/3555758-comanagement-wizard.png#lightbox)
-1. Klik op **volgende** en vervolgens op **Ja** om de melding **Aad-toepassing maken** te accepteren. Met deze actie wordt een Service-Principal ingericht en wordt een Azure AD-toepassings registratie gemaakt om de synchronisatie te vergemakkelijken.
+1. Klik op **Volgende** en daarna op **Ja** om de melding **Een AAD-toepassing maken** te accepteren. Met deze actie wordt een service-principal ingericht en wordt een Azure AD-toepassingsregistratie gemaakt om de synchronisatie te vergemakkelijken.
 1. Selecteer op de pagina **Upload configureren** de aanbevolen instelling voor het uploaden van apparaten voor **alle apparaten die door micro soft endpoint Configuration Manager worden beheerd**. Als dat nodig is, kunt u het uploaden beperken tot één verzameling apparaten.
-1. Klik op **samen vatting** om uw selectie te controleren en klik vervolgens op **volgende**.
-1. Wanneer de wizard is voltooid, klikt u op **sluiten**.  
+1. Klik op **Samenvatting** om uw selectie te controleren en klik vervolgens op **Volgende**.
+1. Klik op **Sluiten** als de wizard is voltooid.  
 
 
 ## <a name="review-your-upload"></a><a name="bkmk_review"></a>Uw uploads controleren
 
-1. Open **CMGatewaySyncUploadWorker. log** van &lt;de ConfigMgr-installatiemap> \logs.
-1. De volgende synchronisatie tijd wordt aangegeven door logboek vermeldingen die vergelijkbaar `Next run time will be at approximately: 02/28/2020 16:35:31`zijn met.
-1. Voor het uploaden van apparaten zoekt u naar logboek vermeldingen die vergelijkbaar `Batching N records`zijn met. **N** is het aantal apparaten dat is geüpload naar de Cloud. 
+1. Open **CMGatewaySyncUploadWorker. log** van de ConfigMgr-installatiemap &lt;> \logs.
+1. De volgende synchronisatie tijd wordt aangegeven door logboek vermeldingen die vergelijkbaar zijn met `Next run time will be at approximately: 02/28/2020 16:35:31` .
+1. Voor het uploaden van apparaten zoekt u naar logboek vermeldingen die vergelijkbaar zijn met `Batching N records` . **N** is het aantal apparaten dat is geüpload naar de Cloud. 
 1. De upload vindt elke 15 minuten plaats voor wijzigingen. Zodra de wijzigingen zijn geüpload, kan het vijf tot tien minuten duren voordat client wijzigingen worden weer gegeven in het **micro soft Endpoint Manager-beheer centrum**.
 
 ## <a name="perform-device-actions"></a>Acties op het apparaat uitvoeren
@@ -98,9 +95,9 @@ Als er geen co-beheer is ingeschakeld, gebruikt u de wizard voor het **configure
    [![Alle apparaten in het micro soft Endpoint Manager-beheer centrum](./media/3555758-all-devices.png)](./media/3555758-all-devices.png#lightbox)
 1. Klik op een apparaat om de pagina **overzicht** te laden.
 1. Klik op een van de volgende acties:
-   - **Computer beleid synchroniseren**
-   - **Gebruikers beleid synchroniseren**
-   - **App-evaluatie cyclus**
+   - **Computerbeleid synchroniseren**
+   - **Gebruikersbeleid synchroniseren**
+   - **App-evaluatiecyclus**
 
    [![Overzicht van apparaten in het beheer centrum van micro soft Endpoint Manager](./media/3555758-device-overview-actions.png)](./media/3555758-device-overview-actions.png#lightbox)
 

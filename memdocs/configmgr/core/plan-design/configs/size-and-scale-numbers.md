@@ -10,12 +10,12 @@ ms.assetid: c5a42100-2f60-4952-b495-918025ea6559
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 0861bb73769beb6c7595b896afc8d0e156eef94d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 5109ababd00011784618f9c989e1d2b756a322d9
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709640"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715625"
 ---
 # <a name="size-and-scale-numbers-for-configuration-manager"></a>Grootte en schaalgrootte voor Configuration Manager
 
@@ -136,6 +136,9 @@ Zie CMG [prestaties en schalen](../../clients/manage/cmg/plan-cloud-management-g
 
 Zie de sectie [beheer punten](#bkmk_mp) voor meer informatie over het aantal clients en apparaten dat door een beheer punt kan worden ondersteund.  
 
+> [!NOTE]
+> Als u het beheer punt inschakelt voor de ondersteuning van een [Cloud beheer gateway](../../clients/manage/cmg/plan-cloud-management-gateway.md), worden aanvragen voor Internet clients per normaal door IT Services uitgevoerd. Het aanpassen van de richt lijnen voor een beheer punt is niet van invloed op of IT Services on-premises of op internet gebaseerde clients.
+
 ### <a name="software-update-point"></a>Software-updatepunt  
 
 Gebruik de volgende aanbevelingen als basis lijn. Deze basis lijn helpt u bij het bepalen van de informatie voor de capaciteits planning voor software-updates die geschikt is voor uw organisatie. De werkelijke capaciteits vereisten kunnen afwijken van de aanbevelingen die in dit artikel worden vermeld, afhankelijk van de volgende criteria:
@@ -144,6 +147,9 @@ Gebruik de volgende aanbevelingen als basis lijn. Deze basis lijn helpt u bij he
 - De hardware die u gebruikt om het site systeem van het software-update punt te hosten
 - Het aantal beheerde clients
 - De andere site systeem rollen die op de server zijn geïnstalleerd  
+
+> [!NOTE]
+> Als u het software-update punt inschakelt voor de ondersteuning van een [Cloud beheer gateway](../../clients/manage/cmg/plan-cloud-management-gateway.md), worden aanvragen voor Internet clients per normaal door IT Services uitgevoerd. Aanpassings richtlijnen voor een software-update punt worden niet gewijzigd, ongeacht of IT-Services on-premises of op internet gebaseerde clients zijn.
 
 #### <a name="capacity-planning-for-the-software-update-point"></a><a name="BKMK_SUMCapacity"></a> Capaciteitsplanning voor het software-updatepunt  
 

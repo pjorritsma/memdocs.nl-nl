@@ -10,12 +10,12 @@ ms.assetid: 5beb5564-2fdf-4f0a-8801-d0cec8214c43
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 27994107c32fac87a465240f07b68d57fddfc140
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: d481976a6c86da67670871690ba16985a67c80d8
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983819"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746456"
 ---
 # <a name="paths-to-co-management"></a>Paden naar co-beheer
 
@@ -60,6 +60,5 @@ U moet het volgende instellen:
 3. [Het beheer punt en clients configureren voor het gebruik van de Cloud beheer gateway](../core/clients/manage/cmg/setup-cloud-management-gateway.md)  
 4. [InTune gebruiken om de Configuration Manager-client te implementeren](how-to-prepare-Win10.md)  
 
-> [!Note]  
-> Binnenkort vindt u een zelf studie voor dit pad.
+Zie [zelf studie: co-beheer inschakelen voor nieuwe apparaten op Internet](tutorial-co-manage-new-devices.md)voor een zelf studie over dit pad.
 

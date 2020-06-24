@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 70d4930da712eccff8bdb1f1986a68aa5fe77644
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: 5bea4fab3b32464cc0d03469d4966fe3611d2f76
+ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455273"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84814911"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Met micro soft verbonden cache in Configuration Manager
 
@@ -37,7 +37,7 @@ Deze cache is gescheiden van de inhoud van het distributie punt van Configuratio
 
 ## <a name="how-it-works"></a>Hoe werkt het?
 
-Wanneer u clients configureert voor het gebruik van de verbonden cache server, vragen ze geen door micro soft Cloud beheerde inhoud meer via internet. Clients vragen deze inhoud van de cache server die is geïnstalleerd op het distributie punt. De on-premises server slaat deze inhoud op in de cache met behulp van de IIS-functie voor Application Request Routing (ARR). Vervolgens kan de cache server snel reageren op toekomstige aanvragen voor dezelfde inhoud. Als de verbonden cache server niet beschikbaar is, of als de inhoud nog niet in de cache is opgeslagen, downloaden clients de inhoud van het internet. Clients gebruiken ook Delivery Optimization, dus downloaden delen van de inhoud van peers in hun netwerk.
+Wanneer u clients configureert voor het gebruik van de verbonden cache server, vragen ze geen door micro soft Cloud beheerde inhoud meer via internet. Clients vragen deze inhoud van de cache server die is geïnstalleerd op het distributie punt. De on-premises server slaat deze inhoud op in de cache met behulp van de IIS-functie voor Application Request Routing (ARR). Vervolgens kan de cache server snel reageren op toekomstige aanvragen voor dezelfde inhoud. Als de verbonden cache server niet beschikbaar is, of als de inhoud nog niet in de cache is opgeslagen, downloaden clients de inhoud van het internet. Clients gebruiken ook Delivery Optimization om delen van de inhoud te downloaden van peers in hun netwerk.
 
 ![Diagram van de werking van de verbonden cache](media/3555764-microsoft-connected-cache.png)
 

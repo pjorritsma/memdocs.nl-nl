@@ -2,7 +2,7 @@
 title: Vereisten voor internettoegang
 titleSuffix: Configuration Manager
 description: Meer informatie over de Internet-eind punten zodat u de volledige functionaliteit van Configuration Manager-functies kunt toestaan.
-ms.date: 04/21/2020
+ms.date: 06/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8423af8d4c743965f627a94a07f587fd97d45bdf
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: fb965ec6547ff1c06586464780b6db224b943000
+ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84454967"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84740762"
 ---
 # <a name="internet-access-requirements"></a>Vereisten voor internettoegang
 
@@ -77,7 +77,8 @@ Zie [Windows als een service beheren](../../../osd/deploy-use/manage-windows-as-
 
 Zie [Azure-Services configureren voor gebruik met Configuration Manager](../../servers/deploy/configure/azure-services-wizard.md)voor meer informatie over deze functie.
 
-- `management.azure.com`  
+- `management.azure.com`(Open bare Azure-Cloud)
+- `management.usgovcloudapi.net`(Azure-Cloud voor de Amerikaanse overheid)
 
 ## <a name="co-management"></a>Co-beheer
 
@@ -110,31 +111,66 @@ In deze sectie komen de volgende functies aan bod:
 - Integratie van Azure Active Directory (Azure AD)
 - Detectie op basis van Azure AD
 
-Voor de implementatie van CMG/CDP-Services moet het **service aansluitpunt** toegang hebben tot:
+Zie [plan for CMG](../../clients/manage/cmg/plan-cloud-management-gateway.md)voor meer informatie over de CMG.
 
-- Specifieke Azure-eind punten zijn per omgeving verschillend, afhankelijk van de configuratie. Configuration Manager worden deze eind punten opgeslagen in de site database. Query's uitvoeren op de **AzureEnvironments** -tabel in SQL Server voor de lijst met Azure-eind punten.  
+De volgende secties geven een lijst van de eind punten op rol. Sommige eind punten verwijzen naar een service op `<name>` . Dit is de naam van de Cloud service van de CMG of CDP. Als uw CMG bijvoorbeeld is `GraniteFalls.CloudApp.Net` , is het werkelijke opslag eindpunt `GraniteFalls.blob.core.windows.net` .<!-- SCCMDocs#2288 -->
 
-Het **CMG-verbindings punt** moet toegang hebben tot de volgende service-eind punten:
+### <a name="service-connection-point"></a>Serviceverbindingspunt
+
+Voor de implementatie van CMG/CDP-Services moet het service aansluitpunt toegang hebben tot:
+
+- Specifieke Azure-eind punten zijn per omgeving verschillend, afhankelijk van de configuratie. Configuration Manager worden deze eind punten opgeslagen in de site database. Query's uitvoeren op de **AzureEnvironments** -tabel in SQL Server voor de lijst met Azure-eind punten.
+
+- [Azure-services](#azure-services)
+
+- Voor Azure AD-gebruikers detectie:
+
+  - Versie 1902 en hoger: Microsoft Graph eind punt`https://graph.microsoft.com/`
+
+  - Versie 1810 en eerder: Azure AD Graph-eind punt`https://graph.windows.net/`  
+
+### <a name="cmg-connection-point"></a>CMG-verbindings punt
+
+Het CMG-verbindings punt moet toegang hebben tot de volgende service-eind punten:
+
+- Naam van Cloud service (voor CMG of CDP):
+  - `<name>.cloudapp.net`(Open bare Azure-Cloud)
+  - `<name>.usgovcloudapp.net`(Azure-Cloud voor de Amerikaanse overheid)
 
 - Service Management-eind punt:`https://management.core.windows.net/`  
 
-- Opslag eindpunt: `<name>.blob.core.windows.net` en`<name>.table.core.windows.net`
+- Opslag eindpunt (voor CMG of CDP met ingeschakelde inhoud):
+  - `<name>.blob.core.windows.net`(Open bare Azure-Cloud)
+  - `<name>.blob.core.usgovcloudapi.net`(Azure-Cloud voor de Amerikaanse overheid)
+<!--  and `<name>.table.core.windows.net` per DC, only used internally -->
 
-    Waar `<name>` de naam is van de Cloud service van uw CMG of CDP. Als uw CMG bijvoorbeeld is `GraniteFalls.CloudApp.Net` , dan is het eerste opslag eindpunt dat is toegestaan `GraniteFalls.blob.core.windows.net` .<!-- SCCMDocs#2288 -->
+Het site systeem van het CMG-verbindings punt ondersteunt het gebruik van een webproxy. Zie [ondersteuning voor proxy server](proxy-server-support.md#configure-the-proxy-for-a-site-system-server)voor meer informatie over het configureren van deze rol voor een proxy. Het CMG-verbindings punt hoeft alleen verbinding te maken met de CMG-service-eind punten. De service heeft geen toegang nodig tot andere Azure-eind punten.
 
-Voor het ophalen van Azure AD-tokens door de **Configuration Manager-console** en- **client**:
+### <a name="configuration-manager-client"></a>Configuration Manager-client
 
-- ActiveDirectoryEndpoint`https://login.microsoftonline.com/`  
+- Naam van Cloud service (voor CMG of CDP):
+  - `<name>.cloudapp.net`(Open bare Azure-Cloud)
+  - `<name>.usgovcloudapp.net`(Azure-Cloud voor de Amerikaanse overheid)
 
-Voor Azure AD-gebruikers detectie moet het **service verbindings punt** toegang hebben tot:
+- Opslag eindpunt (voor CMG of CDP met ingeschakelde inhoud):
+  - `<name>.blob.core.windows.net`(Open bare Azure-Cloud)
+  - `<name>.blob.core.usgovcloudapi.net`(Azure-Cloud voor de Amerikaanse overheid)
 
-- Versie 1810 en eerder: Azure AD Graph-eind punt`https://graph.windows.net/`  
+- Voor het ophalen van Azure AD-tokens, het Azure AD-eind punt:
+  - `login.microsoftonline.com`(Open bare Azure-Cloud)
+  - `login.microsoftonline.us`(Azure-Cloud voor de Amerikaanse overheid)
 
-- Versie 1902 en hoger: Microsoft Graph eind punt`https://graph.microsoft.com/`
+### <a name="configuration-manager-console"></a>Configuration Manager-console
 
-Het site systeem van het CMG-verbindings punt (Cloud Management Point) ondersteunt het gebruik van een webproxy. Zie [ondersteuning voor proxy server](proxy-server-support.md#configure-the-proxy-for-a-site-system-server)voor meer informatie over het configureren van deze rol voor een proxy. Het CMG-verbindings punt hoeft alleen verbinding te maken met de CMG-service-eind punten. De service heeft geen toegang nodig tot andere Azure-eind punten.
+- Voor het ophalen van Azure AD-tokens, het Azure AD-eind punt:
 
-Zie [plan for CMG](../../clients/manage/cmg/plan-cloud-management-gateway.md)voor meer informatie over de CMG.
+  - Openbare Azure-cloud
+    - `login.microsoftonline.com`
+    - `aadcdn.msauth.net`<!-- MEMDocs#351 -->
+    - `aadcdn.msftauth.net`
+
+  - Azure-Cloud voor de Amerikaanse overheid
+    - `login.microsoftonline.us`
 
 ## <a name="software-updates"></a><a name="bkmk_sum"></a>Software-updates
 
@@ -204,18 +240,23 @@ Computers met de Configuration Manager-console moeten toegang hebben tot de volg
 
 Zie [product feedback](../../understand/find-help.md#product-feedback)voor meer informatie over deze functie.
 
-### <a name="community-workspace-documentation-node"></a>Community-werk ruimte, documentatie knooppunt
+### <a name="community-workspace"></a>Community-werk ruimte
+
+#### <a name="documentation-node"></a>Documentatie knooppunt
+
+Zie [de Configuration Manager-console gebruiken](../../servers/manage/admin-console.md)voor meer informatie over dit console knooppunt.
 
 - `https://aka.ms`
 
 - `https://raw.githubusercontent.com`
 
-Zie [de Configuration Manager-console gebruiken](../../servers/manage/admin-console.md)voor meer informatie over dit console knooppunt.
+#### <a name="community-hub"></a>Community Hub
 
-<!-- 
-Community Hub
-when in current branch, get details from SCCMDocs-pr #3403 
- -->
+Zie [Community hub](../../servers/manage/community-hub.md)voor meer informatie over deze functie.
+
+- `https://github.com`
+
+- `https://communityhub.microsoft.com`
 
 ### <a name="monitoring-workspace-site-hierarchy-node"></a>Bewakings werkruimte, knoop punt site hiërarchie
 

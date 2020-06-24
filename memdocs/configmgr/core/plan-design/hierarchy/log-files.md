@@ -2,7 +2,7 @@
 title: Verwijzing naar logboekbestand
 titleSuffix: Configuration Manager
 description: Een verwijzing naar alle logboek bestanden voor Configuration Manager-client, server en afhankelijke onderdelen.
-ms.date: 04/24/2020
+ms.date: 06/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 11efada9eaf7e16a68902d7d6d78fb6708916d05
-ms.sourcegitcommit: e618ea7cb864635c838b672bc71a1e926bf7c047
+ms.openlocfilehash: 63f8ad6827a1aa72c3aaa51e21fecbf639fbb405
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84458131"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715574"
 ---
 # <a name="log-file-reference"></a>Verwijzing naar logboekbestand
 
@@ -190,10 +190,10 @@ De volgende tabel geeft een lijst van de logboek bestanden die informatie bevatt
 
 |Logboeknaam|Beschrijving|  
 |--------------|-----------------|  
-|ccmsetup.log|Registreert ccmsetup. exe-taken voor client installatie, client upgrade en client verwijdering. Kan worden gebruikt voor het oplossen van problemen tijdens de installatie van de client.|  
-|ccmsetup-ccmeval.log|Registreert ccmsetup. exe-taken voor client status en herstel bewerkingen.|  
+|ccmsetup.log|Registreert ccmsetup.exe taken voor client installatie, client upgrade en client verwijdering. Kan worden gebruikt voor het oplossen van problemen tijdens de installatie van de client.|  
+|ccmsetup-ccmeval.log|Registreert ccmsetup.exe taken voor de client status en herstel bewerkingen.|  
 |CcmRepair.log|Registreert de herstelactiviteiten van de clientagent.|  
-|client.msi.log|Registreert installatie taken uitgevoerd door client. msi. Kan worden gebruikt voor het oplossen van problemen tijdens de installatie van de client.|  
+|client.msi.log|Registreert instellings taken die worden uitgevoerd door client.msi. Kan worden gebruikt voor het oplossen van problemen tijdens de installatie van de client.|  
 
 ### <a name="client-for-linux-and-unix"></a><a name="BKMK_LogFilesforLnU"></a>Client voor Linux en UNIX
 
@@ -366,7 +366,7 @@ De volgende tabel geeft een lijst van de logboek bestanden die informatie bevatt
 |--------------|-----------------|----------------------------|  
 |DWSSMSI. log|Registreert berichten die zijn gegenereerd door de installatie van een Data Warehouse-service punt.|Sitesysteemserver|  
 |DWSSSetup. log|Registreert berichten die zijn gegenereerd door de installatie van een Data Warehouse-service punt.|Sitesysteemserver|  
-|Micro soft. ConfigMgrDataWarehouse. log|Registreert informatie over gegevens synchronisatie tussen de site database en de Data Warehouse-data base.|Sitesysteemserver|  
+|Microsoft.ConfigMgrDataWarehouse. log|Registreert informatie over gegevens synchronisatie tussen de site database en de Data Warehouse-data base.|Sitesysteemserver|  
 
 ### <a name="fallback-status-point"></a><a name="BKMK_FSPLog"></a>Terugval status punt
 
@@ -384,7 +384,9 @@ De volgende tabel bevat de logboekbestanden die informatie bevatten over het beh
 
 |Logboeknaam|Beschrijving|Computer met logboekbestand|  
 |--------------|-----------------|----------------------------|  
-|CcmIsapi.log|Registreert activiteiten met betrekking tot clientberichten op het eindpunt.|Sitesysteemserver|  
+|CcmIsapi.log|Registreert activiteiten met betrekking tot clientberichten op het eindpunt.|Sitesysteemserver|
+|CCM_STS. log|Registreert activiteiten voor verificatie tokens, hetzij van Azure Active Directory of door de site uitgegeven client tokens.|Sitesysteemserver|
+|ClientAuth.log|Registreert ondertekening en verificatie activiteit.|Sitesysteemserver|
 |MP_CliReg.log|Registreert activiteiten met betrekking tot clientregistratie, verwerkt door het beheerpunt.|Sitesysteemserver|  
 |MP_Ddr.log|Registreert de conversie van XML. DDR-records van clients en kopieert deze vervolgens naar de site server.|Sitesysteemserver|  
 |MP_Framework.log|Registreert de activiteiten van het kernbeheerpunt en componenten van het clientframework.|Sitesysteemserver|  
@@ -394,6 +396,7 @@ De volgende tabel bevat de logboekbestanden die informatie bevatten over het beh
 |MP_Location.log|Registreert activiteiten met betrekking tot locatieaanvragen en antwoorden van clients.|Sitesysteemserver|  
 |MP_OOBMgr.log|Registreert de beheer punt activiteiten met betrekking tot het ontvangen van een OTP van een client.|Sitesysteemserver|  
 |MP_Policy.log|Registreert beleidcommunicatie.|Sitesysteemserver|  
+|MP_RegistrationManager. log|Registreert activiteiten die betrekking hebben op client registratie, zoals het valideren van certificaten, CRL en tokens.|Sitesysteemserver|
 |MP_Relay.log|Registreert het overdragen van bestanden die worden opgehaald van de client.|Sitesysteemserver|  
 |MP_Retry.log|Registreert processen voor nieuwe pogingen voor hardware-inventarisatie.|Sitesysteemserver|  
 |MP_Sinv.log|Registreert details over de conversie van XML software-inventarisrecords van clients en de kopie van die bestanden naar de siteserver.|Sitesysteemserver|  
@@ -472,7 +475,7 @@ De volgende tabel geeft een lijst van de logboek bestanden die informatie bevatt
 |NotiCtrl. log|Meldingen over toepassings aanvragen.|Siteserver|  
 |portlctl.log|Registreert de bewakingsactiviteiten voor de sitesysteemrol van het Application Catalog-websitepunt.|Sitesysteemserver|  
 |portlwebMSI.log|Registreert de MSI installatieactiviteit voor de Application Catalog-website.|Sitesysteemserver|  
-|PrestageContent.log|Registreert gegevens over het gebruik van het hulp programma Extract content. exe op een extern, vooraf geplaatst distributie punt. Dit hulpprogramma extraheert inhoud die werd geëxporteerd naar een bestand.|Sitesysteemserver|  
+|PrestageContent.log|Registreert gegevens over het gebruik van het hulp programma ExtractContent.exe op een extern, vooraf geplaatst distributie punt. Dit hulpprogramma extraheert inhoud die werd geëxporteerd naar een bestand.|Sitesysteemserver|  
 |ServicePortalWebService.log|Registreert de activiteit van de Application Catalog-webservice.|Sitesysteemserver|  
 |ServicePortalWebSite.log|Registreert de activiteit van de Application Catalog-website.|Sitesysteemserver|  
 |SettingsAgent. log|Afdwinging van specifieke toepassingen, registratie van de evaluatie van de toepassings groep en Details van het beleid voor co-beheer.|Client|
@@ -607,10 +610,10 @@ De volgende tabel geeft een lijst van de logboekbestanden die informatie bevatte
 |CloudMgr.log|Registreert gegevens over het inrichten van inhoud, verzamelen van opslag-en bandbreedte statistieken en door de beheerder geïnitieerde acties om de Cloud service die een cloud-gebaseerd distributie punt uitvoert, te stoppen of te starten.|Sitesysteemserver|  
 |DataTransferService.log|Registreert alle BITS-communicatie voor beleids- of pakkettoegang. Dit logboek wordt ook gebruikt voor inhouds beheer door pull-distributie punten.|Computer die is geconfigureerd als een pull-distributie punt|  
 |PullDP.log|Registreert gegevens over inhoud die het pull-distributiepunt overdraagt van brondistributiepunten.|Computer die is geconfigureerd als een pull-distributie punt|  
-|PrestageContent.log|Registreert de details over het gebruik van het hulp programma Extract content. exe op een extern, vooraf geplaatst distributie punt. Dit hulpprogramma extraheert inhoud die werd geëxporteerd naar een bestand.|Sitesysteemrol|  
+|PrestageContent.log|Registreert de details over het gebruik van het hulp programma ExtractContent.exe op een extern, vooraf geplaatst distributie punt. Dit hulpprogramma extraheert inhoud die werd geëxporteerd naar een bestand.|Sitesysteemrol|  
 |SMSdpmon.log|Registreert gegevens over geplande taken voor status controle van distributie punten die zijn geconfigureerd op een distributie punt.|Sitesysteemrol|  
 |smsdpprov.log|Registreert gegevens over de extractie van gecomprimeerde bestanden die ontvangen worden van een primaire site. Dit logboek wordt gegenereerd door de WMI-provider van het externe distributie punt.|Distributiepunt computer die zich niet op de site server bevindt|  
-|smsdpusage. log|Registreert Details over de smsdpusage. exe die gegevens uitvoert en verzamelt voor het overzichts rapport over het gebruik van distributie punten.|Sitesysteemrol|  
+|smsdpusage. log|Registreert gegevens over de smsdpusage.exe die worden uitgevoerd en verzamelt gegevens voor het overzichts rapport van het distributiepunt gebruik.|Sitesysteemrol|  
 
 ### <a name="desktop-analytics"></a>Desktop Analytics
 

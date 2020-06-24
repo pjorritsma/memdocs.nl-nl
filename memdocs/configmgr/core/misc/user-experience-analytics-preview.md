@@ -2,7 +2,7 @@
 title: Preview van endpoint Analytics
 titleSuffix: Configuration Manager
 description: Instructies voor de preview-versie van endpoint Analytics.
-ms.date: 05/11/2020
+ms.date: 06/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: da8c52dabf27ddf0992d9f405400b3ac984f2ecc
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: f33f79d1a2fb6144e25d6153c48caa90d86006e6
+ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455120"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879765"
 ---
 # <a name="endpoint-analytics-preview"></a><a name="bkmk_uea"></a>Preview van endpoint Analytics
 
@@ -67,7 +67,7 @@ Voor deze preview kunt u apparaten inschrijven via Configuration Manager of Micr
 #### <a name="to-enroll-devices-via-configuration-manager-this-preview-requires"></a><a name="bkmk_uea__cm_prereq"></a>Als u apparaten wilt registreren via Configuration Manager, is voor deze preview het volgende vereist:
 - Configuration Manager versie 2002 of hoger
 - Clients bijgewerkt naar versie 2002 of hoger
-- [Micro soft Endpoint Manager-Tenant](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) is ingeschakeld met een Azure-Tenant locatie van Noord-Amerika of Europa (binnenkort worden de andere regio's uitgebreid)
+- [Micro soft Endpoint Manager-Tenant koppelen](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) is ingeschakeld.
 
 #### <a name="proactive-remediation-scripting-requires"></a><a name="bkmk_uea__prs_prereq"></a>Voor proactieve herstel scripting is het volgende vereist:
 Bij het inschrijven van apparaten via intune of Configuration Manager, hebben [**proactieve herstel scripts**](#bkmk_uea_prs) de volgende vereisten:
@@ -136,9 +136,13 @@ Voordat u Configuration Manager-apparaten inschrijft, controleert u de [vereiste
 ### <a name="onboard-in-the-endpoint-analytics-portal"></a><a name="bkmk_uea_onboard"></a>Onboarding in de Endpoint Analytics-Portal
 Het voorbereiden van de portal voor het endpoint Analytics is vereist voor zowel Configuration Manager als door intune beheerde apparaten.
 
-1. Ga naar `https://endpoint.microsoft.com/#blade/Microsoft_Intune_Enrollment/UXAnalyticsMenu`
+1. Ga naar `https://aka.ms/endpointanalytics`
 1. Klik op **Start**. Hiermee wordt automatisch een configuratie profiel toegewezen voor het verzamelen van opstart prestatie gegevens van alle apparaten die in aanmerking komen. U kunt later [toegewezen apparaten wijzigen](#bkmk_uea_profile) . Het kan tot 24 uur duren voordat de prestatie gegevens van uw intune-apparaten zijn Inge schreven nadat de computer opnieuw is opgestart.
-   - Zie [problemen met de registratie van opstart prestatie apparaten oplossen](#bkmk_uea_enrollment_tshooter)voor meer informatie over veelvoorkomende problemen.
+
+> [!Important]  
+> We anoniem makenen de scores van alle geregistreerde organisaties en voegen deze samen om de basis lijn van **alle organisaties (mediaan)** up-to-date te houden. U kunt het [verzamelen van gegevens](#bkmk_uea_stop) op elk gewenst moment stoppen.
+
+   - Zie [problemen met apparaatregistratie en opstart prestaties oplossen](#bkmk_uea_enrollment_tshooter)voor meer informatie over veelvoorkomende problemen.
 
 ## <a name="overview-page"></a>Overzichts pagina
 
@@ -151,8 +155,6 @@ Zodra de gegevens klaar zijn, ziet u een aantal informatie op de pagina **overzi
    - Basislijn markeringen worden weer gegeven voor uw algemene score en subscores. Als een van de scores meer dan de Configureer bare drempel waarde van de geselecteerde basis lijn heeft teruggedraaide, wordt de Score rood weer gegeven en wordt de score op het hoogste niveau gemarkeerd als behoefte aan aandacht.
   - Een status van **onvoldoende gegevens** betekent dat u niet genoeg apparaten rapporteert om een zinvolle score te bieden. Er zijn momenteel ten minste vijf apparaten vereist.
 
-- Met **filters** kunt u uw score weer geven op een subset van apparaten of gebruikers. De filter functionaliteit is echter niet ingeschakeld in deze preview.
-
 - **Inzichten en aanbevelingen** zijn een lijst met prioriteiten voor het verbeteren van uw score. Deze lijst wordt gefilterd op de context van het subknooppunt wanneer u navigeert naar **Aanbevolen procedures** of **Aanbevolen software**.
 
 [![Overzichts pagina van het eind punt analyse](media/overview-page.png)](media/overview-page.png#lightbox)
@@ -160,7 +162,7 @@ Zodra de gegevens klaar zijn, ziet u een aantal informatie op de pagina **overzi
 ## <a name="recommended-software"></a><a name="bkmk_uea_rs"></a>Aanbevolen software
 
 > [!Important]  
-> Endpoint Analytics berekent de score voor **Software-acceptatie** voor al uw door intune beheerde apparaten, ongeacht of deze zijn Inge schreven in de Endpoint Analytics of niet.
+> Endpoint Analytics berekent de score voor **Software-acceptatie** voor al uw intune-en gezamenlijk beheerde apparaten, ongeacht of ze zijn geconfigureerd met het [intune-gegevensverzamelings beleid](#bkmk_uea_profile) of niet. Voor door Configuration Manager beheerde apparaten worden scores alleen berekend voor [Inge schreven apparaten](#bkmk_uea_cm_enroll) 
 
 Bepaalde software is bekend bij het verbeteren van de ervaring van de eind gebruiker, onafhankelijk van de status waarden op lagere niveaus. Zo heeft Windows 10 een veel hogere onderpromor score dan Windows 7. De score voor **Software-acceptatie** is een getal tussen 0 en 100 dat een gewogen gemiddelde vertegenwoordigt van het percentage apparaten dat verschillende aanbevolen software heeft geïmplementeerd. De huidige weging is hoger voor Windows dan voor de andere meet gegevens, omdat gebruikers vaker met hen communiceren. De metrische gegevens worden hieronder beschreven: 
 
@@ -192,9 +194,11 @@ Uw door micro soft intune beheerde apparaten zijn al geregistreerd in azure AD. 
 
 ### <a name="cloud-management"></a><a name="bkmk_uea_intune"></a>Cloud beheer
 
-Microsoft Intune biedt gebruikers verschillende productiviteits voordelen, waaronder het inschakelen van toegang tot bedrijfs bronnen, zelfs wanneer ze zich niet op het bedrijfs netwerk bevinden, en u geen behoefte hebt aan de nood zaak van en de prestatie overhead van groepsbeleid, wat resulteert in een betere ervaring voor de eind gebruiker. Deze metrische waarde meet het percentage Pc's dat is inge schreven in Microsoft Intune. Zie hoe [micro soft dit inschakelt voor onze mede werkers](https://www.microsoft.com/en-us/itshowcase/managing-windows-10-devices-with-microsoft-intune).
+Configuration Manager en intune bieden geïntegreerde hulpprogram ma's voor Cloud beheer en unieke opties voor co-beheer voor het inrichten, implementeren, beheren en beveiligen van eind punten en toepassingen in een organisatie. Met de kracht van Cloud Management kunt u diverse productiviteits voordelen bereiken, waaronder het inschakelen van toegang tot bedrijfs bronnen, zelfs wanneer ze zich niet op het bedrijfs netwerk bevinden, en de nood zaak en de prestatie overhead van groepsbeleid elimineren, wat resulteert in een betere ervaring voor de eind gebruiker. 
 
-De aanbevolen herstel actie voor apparaten die worden beheerd door Configuration Manager die nog niet zijn Inge schreven bij intune, is om [ze gezamenlijk te beheren](../../comanage/overview.md).
+Met deze metriek wordt het percentage Pc's gemeten dat is gekoppeld aan de Microsoft 365 Cloud om extra mogelijkheden te ontgrendelen. Zie hoe [micro soft dit inschakelt voor onze mede werkers](https://www.microsoft.com/en-us/itshowcase/managing-windows-10-devices-with-microsoft-intune).
+
+De aanbevolen actie voor apparaten die worden beheerd door Configuration Manager die nog niet zijn Inge schreven bij intune, is het [co-beheer](../../comanage/overview.md) voor het ontgrendelen van extra Cloud mogelijkheden zoals voorwaardelijke toegang.
 
 ### <a name="no-commercial-median"></a><a name="bkmk_uea_np"></a>Geen bedrijfs mediaan
 
@@ -203,7 +207,7 @@ De ingebouwde basis lijn van de **commerciële mediaan** heeft momenteel geen me
 ## <a name="startup-performance"></a><a name="bkmk_uea_bp"></a>Opstart prestaties
 
 > [!NOTE]
-> Als u geen opstart prestatie gegevens van al uw apparaten ziet, raadpleegt u [problemen met de registratie van opstart prestatie apparaten oplossen](#bkmk_uea_enrollment_tshooter).
+> Als u geen prestatie gegevens van het opstart proces van al uw apparaten ziet, raadpleegt u [problemen met de registratie van apparaten en opstart prestaties oplossen](#bkmk_uea_enrollment_tshooter).
 
 Met de score voor het opstarten van prestaties kunnen gebruikers snel aan de slag met productiviteit, zonder langdurige opstart-en aanmeldings vertragingen. De **opstart Score** is een getal tussen 0 en 100. Deze score is een gewogen gemiddelde **opstart Score** en de **aanmeldings** Score, die als volgt worden berekend:
 
@@ -330,45 +334,52 @@ Met een basis lijn kunt u uw huidige scores en subscores vergelijken met anderen
 
 De onderstaande secties kunnen worden gebruikt voor het oplossen van problemen die kunnen optreden.
 
-### <a name="troubleshooting-startup-performance-device-enrollment"></a><a name="bkmk_uea_enrollment_tshooter"></a>Problemen met de registratie van opstart prestatie apparaten oplossen
+### <a name="troubleshooting-device-enrollment-and-startup-performance"></a><a name="bkmk_uea_enrollment_tshooter"></a>Problemen met de registratie van apparaten en opstart prestaties oplossen
 
 Als op de pagina overzicht een prestatie Score van nul wordt weer gegeven, vergezeld van een banner met de melding dat deze op gegevens wordt gewacht, of als het tabblad prestaties van opstart prestaties van apparaat minder apparaten bevat dan u verwacht, zijn er enkele stappen die u kunt ondernemen om het probleem op te lossen.
 
-Hier volgt een kort overzicht van de beperkingen voor het verzamelen van prestatie gegevens voor opstarten:
-1. Apparaten moet Windows 10 versie 1903 of hoger zijn.
-2. Apparaten moeten lid zijn van Azure AD. We ondersteunen momenteel geen apparaten die aan werk plek zijn toegevoegd, maar er wordt geadviseerd om deze functionaliteit toe te voegen aan Windows.
-3. Apparaten moeten Windows 10 Enter prise Edition zijn. Windows 10 Home en Professional worden op dit moment niet ondersteund, hoewel het niet mogelijk is om deze functionaliteit toe te voegen aan Windows.
+Zorg er eerst voor dat apparaten voldoen aan de [technische vereisten](#technical-prerequisites)
 
-Houd er rekening mee dat deze problemen niet van toepassing zijn op gegevens die afkomstig zijn van de aanstaande Configuration Manager-connector. Dit kan gegevens verzamelen van elke Configuration Manager client-PC, ongeacht versie, editie of Directory configuratie.
-
-Ten tweede is hier een korte controle lijst voor het oplossen van problemen:
-1. Zorg ervoor dat u beschikt over het Windows-status bewaken profiel dat is gericht op alle apparaten waarvoor u prestatie gegevens wilt. U vindt een koppeling naar dit profiel via de pagina instellingen voor het endpoint Analytics of u navigeert naar de gewenste naam, net zoals bij andere intune-profielen. Ga naar het tabblad toewijzing om te controleren of deze is toegewezen aan de verwachte set apparaten. 
-1. Bekijk de apparaten die zijn geconfigureerd voor het verzamelen van gegevens. U kunt deze informatie ook bekijken op de pagina overzicht van profielen.  
+Voor intune-of gezamenlijk beheerde apparaten die zijn geconfigureerd met het intune-beleid voor gegevens verzameling:
+1. Zorg ervoor dat het beleid voor het [verzamelen van intune-gegevens](#bkmk_uea_profile) is gericht op alle apparaten waarvoor u prestatie gegevens wilt bekijken. Ga naar het tabblad toewijzing om te controleren of deze is toegewezen aan de verwachte set apparaten. 
+1. Zoek naar apparaten die niet met succes zijn geconfigureerd voor het verzamelen van gegevens. U kunt deze informatie ook bekijken op de pagina overzicht van profielen.  
    - Er is een bekend probleem waarbij klanten profiel toewijzings fouten kunnen zien, waarbij de betrokken apparaten een fout code van weer geven `-2016281112 (Remediation failed)` . Dit probleem wordt momenteel onderzocht.
-1. Apparaten die zijn geconfigureerd voor het verzamelen van gegevens moeten opnieuw worden gestart nadat het verzamelen van gegevens is ingeschakeld en u moet vervolgens tot 24 uur wachten voordat het apparaat wordt weer gegeven op het tabblad prestaties van apparaat.
-1. Als uw apparaat is geconfigureerd voor het verzamelen van gegevens, vervolgens opnieuw is gestart en u na 24 uur nog steeds niet meer ziet, kan het zijn dat het apparaat de eind punten van de verzameling niet kan bereiken. Dit probleem kan zich voordoen als uw bedrijf gebruikmaakt van een proxy server en de eind punten niet zijn ingeschakeld in de proxy. Zie [Troubleshooting endpoints (eind punten](#bkmk_uea_endpoints)) voor meer informatie.
+1. Apparaten die zijn geconfigureerd voor het verzamelen van gegevens moeten opnieuw worden gestart nadat het verzamelen van gegevens is ingeschakeld en u moet vervolgens tot 25 uur wachten totdat het apparaat wordt weer gegeven op het tabblad prestaties van apparaat. [Gegevens stroom](#data-flow) weer geven
+1. Als uw apparaat is geconfigureerd voor het verzamelen van gegevens, vervolgens opnieuw is gestart en u deze 25 uur nog niet ziet, is het mogelijk dat het apparaat niet kan communiceren met de vereiste eind punten. Zie [proxy configuratie](#bkmk_uea_endpoints).
 
-### <a name="data-collection-for-intune-managed-devices"></a>Gegevens verzameling voor door intune beheerde apparaten
+Voor door Configuration Manager beheerde apparaten:
+1. Zorg ervoor dat alle apparaten die u wilt weer geven de prestatie gegevens zijn [Inge schreven](#bkmk_uea_cm_enroll)
+1. Controleer of de gegevens die worden geüpload van Configuration Manager naar de Gateway Service zijn geslaagd door te kijken naar de fout berichten in het bestand **UXAnalyticsUploadWorker. log** op de site server.
+1. Controleer of een beheerder aangepaste onderdrukkingen voor client instellingen heeft.  Ga in de Configuration Manager-console naar de werk ruimte **apparaten** , zoek de doel apparaten en selecteer de **resulterende client instellingen**in de groep **client instellingen** . Als endpoint Analytics is uitgeschakeld, worden de client instellingen genegeerd. De client instellingen overschrijven en endpoint Analytics hierop inschakelen.  
+1. Controleer of ontbrekende client apparaten gegevens verzenden naar de site server door het bestand **SensorEndpoint. log** te bekijken `C:\Windows\CCM\Logs\` op client apparaten. Zoeken naar berichten die zijn *verzonden* .
+1. Controleer en los eventuele fouten ocurring tijdens de verwerking van de opstart gebeurtenissen op door het bestand **SensorManagedProvider. log** te bekijken `C:\Windows\CCM\Logs\` op client apparaten.
 
-Endpoint Analytics maakt gebruik van Windows 10 en Windows Server verbonden gebruikers ervaringen en telemetrie-onderdelen (DiagTrack) voor het verzamelen van de gegevens van door intune beheerde apparaten. Zorg ervoor dat de **verbonden gebruikers ervaring en telemetrie** -service op het apparaat wordt uitgevoerd.
 
-#### <a name="endpoints"></a><a name="bkmk_uea_endpoints"></a>Eind punten
+### <a name="proxy-configuration"></a><a name="bkmk_uea_endpoints"></a>Proxy configuratie
 
-Voor het inschrijven van apparaten bij Endpoint Analytics moeten de vereiste functionele gegevens naar micro soft worden verzonden. Als uw omgeving gebruikmaakt van een proxy server, gebruikt u deze informatie om de proxy te configureren.
+Als uw omgeving een proxy server gebruikt, configureert u de proxy server zo dat de volgende eind punten zijn toegestaan:
 
-Als u het delen van functionele gegevens wilt inschakelen, configureert u de proxy server zo dat de volgende eind punten zijn toegestaan:
+#### <a name="endpoints-required-for-configuration-manager-managed-devices"></a>Vereiste eind punten voor door Configuration Manager beheerde apparaten
+
+Configuration Manager-beheerde apparaten verzenden gegevens naar intune via de connector van de Configuration Manager-rol en hebben geen rechtstreekse toegang tot de open bare cloud van micro soft.
+
+| Eindpunt  | Functie  |
+|-----------|-----------|
+| `https://graph.windows.net` | Wordt gebruikt om automatisch instellingen op te halen wanneer u uw hiërarchie koppelt aan endpoint Analytics op Configuration Manager serverrol. Zie [Configure the proxy for a site System server](../plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server)(Engelstalig) voor meer informatie. |
+| `https://*.manage.microsoft.com` | Wordt gebruikt voor het synchroniseren van apparaten verzameling en apparaten met endpoint Analytics op Configuration Manager server functie. Zie [Configure the proxy for a site System server](../plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server)(Engelstalig) voor meer informatie. |
+
+#### <a name="endpoints-required-for-intune-managed-devices"></a>Vereiste eind punten voor door intune beheerde apparaten
+
+Als u apparaten wilt registreren bij Endpoint Analytics, moeten ze de vereiste functionele gegevens verzenden naar de open bare cloud van micro soft. Endpoint Analytics maakt gebruik van Windows 10 en Windows Server verbonden gebruikers ervaringen en telemetrie-onderdelen (DiagTrack) voor het verzamelen van de gegevens van door intune beheerde apparaten. Zorg ervoor dat de **verbonden gebruikers ervaring en telemetrie** -service op het apparaat wordt uitgevoerd.
+
+| Eindpunt  | Functie  |
+|-----------|-----------|
+| `https://*.events.data.microsoft.com` | Wordt gebruikt door door intune beheerde apparaten om [vereiste functionele gegevens](#bkmk_uea_datacollection) te verzenden naar het eind punt van de intune-gegevens verzameling. |
 
 > [!Important]  
 > Voor privacy-en gegevens integriteit controleert Windows naar een micro soft SSL-certificaat (certificaat vastmaken) bij het communiceren met de vereiste eind punten voor het delen van gegevens. SSL-onderscheping en-inspectie zijn niet mogelijk. Als u endpoint Analytics wilt gebruiken, moet u deze eind punten uitsluiten van SSL-inspectie.<!-- BUG 4647542 -->
 
-| Eindpunt  | Functie  |
-|-----------|-----------|
-| `https://*.events.data.microsoft.com` | Wordt gebruikt voor het verzenden van [vereiste functionele gegevens](#bkmk_uea_datacollection) naar het eind punt van de intune-gegevens verzameling. |
-| `https://graph.windows.net` | Wordt gebruikt om automatisch instellingen op te halen bij het koppelen van uw hiërarchie aan endpoint Analytics (op Configuration Manager server functie). Zie [Configure the proxy for a site System server](../plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server)(Engelstalig) voor meer informatie. |
-| `https://*.manage.microsoft.com` | Wordt gebruikt voor het synchroniseren van Apparaatsets en apparaten met endpoint Analytics (alleen op Configuration Manager server functie). Zie [Configure the proxy for a site System server](../plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server)(Engelstalig) voor meer informatie. |
-
-
-#### <a name="proxy-server-authentication"></a>Verificatie van de proxy server
+##### <a name="proxy-server-authentication"></a>Verificatie van de proxy server
 
 Als uw organisatie verificatie van de proxy server gebruikt voor Internet toegang, moet u ervoor zorgen dat de gegevens niet worden geblokkeerd vanwege de verificatie. Als uw proxy niet toestaat dat apparaten deze gegevens verzenden, worden ze niet weer gegeven in Desktop Analytics.
 
@@ -443,7 +454,7 @@ In deze tabel worden de script namen, beschrijvingen, detecties, herstel bewerki
 
 ## <a name="powershell-scripts"></a><a name="bkmk_uea_ps_scripts"></a>Power shell-scripts
 
-### <a name="detect_stale_group_policiesps1"></a>Detect_stale_Group_Policies. ps1
+### <a name="detect_stale_group_policiesps1"></a>Detect_stale_Group_Policies.ps1
 
 ```powershell
 #=============================================================================================================================
@@ -482,7 +493,7 @@ catch {
 }
 ```
 
-### <a name="remediate_stale_grouppoliciesps1"></a>Remediate_stale_GroupPolicies. ps1
+### <a name="remediate_stale_grouppoliciesps1"></a>Remediate_stale_GroupPolicies.ps1
 
 ```powershell
 #=============================================================================================================================
@@ -505,7 +516,7 @@ catch{
 }
 ```
 
-### <a name="detect_click_to_run_service_stateps1"></a>Detect_Click_To_Run_Service_State. ps1
+### <a name="detect_click_to_run_service_stateps1"></a>Detect_Click_To_Run_Service_State.ps1
 
 ```powershell
 #=============================================================================================================================
@@ -552,7 +563,7 @@ Else{
 }
 ```
 
-### <a name="remediate_click_to_run_service_stateps1"></a>Remediate_Click_To_Run_Service_State. ps1
+### <a name="remediate_click_to_run_service_stateps1"></a>Remediate_Click_To_Run_Service_State.ps1
 
 ```powershell
 #=============================================================================================================================
@@ -614,7 +625,7 @@ Catch{
 Return $curSvcStat
 ```
 
-### <a name="detect_expired_issuer_certificatesps1"></a>Detect_Expired_Issuer_Certificates. ps1
+### <a name="detect_expired_issuer_certificatesps1"></a>Detect_Expired_Issuer_Certificates.ps1
 
 ```powershell
 #=============================================================================================================================
@@ -656,7 +667,7 @@ catch{
 }
 ```
 
-### <a name="remediate_expired_issuer_certificatesps1"></a>Remediate_Expired_Issuer_Certificates. ps1
+### <a name="remediate_expired_issuer_certificatesps1"></a>Remediate_Expired_Issuer_Certificates.ps1
 
 ```powershell
 #=============================================================================================================================
@@ -700,7 +711,7 @@ $toast = New-Object Windows.UI.Notifications.ToastNotification $xml
 [Windows.UI.Notifications.ToastNotificationManager]::CreateToastNotifier($APP_ID).Show($toast)
 ```
 
-### <a name="detect_expired_user_certificatesps1"></a>Detect_Expired_User_Certificates. ps1
+### <a name="detect_expired_user_certificatesps1"></a>Detect_Expired_User_Certificates.ps1
 
 ```powershell
 #=============================================================================================================================
@@ -737,7 +748,7 @@ catch{
 }
 ```
 
-### <a name="remediate_expired_user_certificatesps1"></a>Remediate_Expired_User_Certificates. ps1
+### <a name="remediate_expired_user_certificatesps1"></a>Remediate_Expired_User_Certificates.ps1
 
 ```powershell
 #=============================================================================================================================
@@ -767,27 +778,30 @@ catch{
 
 ### <a name="data-flow"></a>Gegevensstroom
 
-In de volgende afbeelding ziet u hoe vereiste functionele gegevens stromen van afzonderlijke apparaten via onze gegevens Services, tijdelijke opslag en uw Tenant. Gegevens stromen via onze bestaande bedrijfs pijplijnen zonder afhankelijkheid van diagnostische gegevens van Windows.
+In de volgende afbeelding ziet u hoe vereiste functionele gegevens stromen van afzonderlijke apparaten via onze gegevens Services, tijdelijke opslag en uw Tenant. 
 
-[![Diagram voor gegevens stroom van gebruikers ervaring](media/dataflow.png)](media/dataflow.png#lightbox)
+[![Diagram voor gegevens stroom van gebruikers ervaring](media/endpoint-analytics-dataflow.png)](media/endpoint-analytics-dataflow.png#lightbox)
 
-1. Configureer het **intune** -beleid voor gegevens verzameling voor Inge schreven apparaten. Dit beleid wordt standaard toegewezen aan alle apparaten wanneer u endpoint Analytics **Start** . U kunt [de toewijzing](#bkmk_uea_set) echter op elk gewenst moment wijzigen in een subset van apparaten of helemaal geen apparaten.
+1. De [rol van de intune-service beheerder](../../../intune/fundamentals/role-based-access-control.md) [begint](#bkmk_uea_start)met het verzamelen van gegevens.
 
-2. Apparaten verzenden vereiste functionele gegevens.
+    - Voor apparaten die door intune worden beheerd, wordt met deze stap het intune-beleid voor **gegevens verzameling** geconfigureerd. Dit beleid wordt standaard toegewezen aan alle apparaten. U kunt [de toewijzing](#bkmk_uea_set) op elk gewenst moment wijzigen in een subset van apparaten of helemaal geen apparaten.
 
-    - Voor intune-apparaten met het toegewezen beleid worden gegevens verzonden vanuit de intune-beheer extensie. Zie [vereisten](#bkmk_uea_prereq)voor meer informatie.
-    - Voor Configuration Manager beheerde apparaten kunnen gegevens ook via de ConfigMgr-connector naar micro soft endpoint Management stromen. De ConfigMgr-connector is verbonden met de Cloud. Er is alleen een verbinding met een intune-Tenant vereist, die geen co-beheer inschakelt.
+    - Schakel voor door Configuration Manager beheerde apparaten [endpoint Analytics-gegevens verzameling en registratie van apparaten](#bkmk_uea_cm_enroll)in.
+
+1. Apparaten verzenden vereiste functionele gegevens.
+
+    - Voor intune-en gezamenlijk beheerde apparaten met het toegewezen beleid, hebben apparaten rechtstreeks functionele gegevens nodig voor de micro soft endpoint Management-service in de open bare cloud van micro soft, waar in bijna realtime wordt verwerkt. Zie voor meer informatie [vereiste eind punten voor door intune beheerde apparaten](#bkmk_uea_endpoints).
+
+    - Voor door Configuration Manager beheerde apparaten worden gegevens naar micro soft-eindpunt beheer geleid via de ConfigMgr-connector. Apparaten hebben geen directe toegang tot de open bare cloud van micro soft nodig, maar de ConfigMgr-connector is verbonden met de Cloud en vereist een verbinding met een intune-Tenant. Apparaten verzenden elke 24 uur gegevens naar de Configuration Manager-server functie en de Configuration Manager-connector stuurt elk uur gegevens naar de Gateway Service.
+
+1. De micro soft endpoint Management-service verwerkt gegevens voor elk apparaat en publiceert de resultaten voor zowel afzonderlijke apparaten als organisatie aggregaten in de beheer console met behulp van MS Graph Api's. De maximale latentie end-to-end is 25 uur en wordt gegatedeerd op de tijd die nodig is om de dagelijkse verwerking van inzichten en aanbevelingen uit te voeren.
 
 > [!Note]  
-> De gegevens die nodig zijn voor het berekenen van de opstart score voor een apparaat, worden tijdens de opstart tijd gegenereerd. Afhankelijk van de energie-instellingen en het gedrag van de gebruiker, kan het weken duren nadat het beleid is toegewezen aan het apparaat om de opstart Score weer te geven op de beheer console.  
-
-3. De micro soft endpoint Management-service verwerkt gegevens voor elk apparaat en publiceert de resultaten voor zowel afzonderlijke apparaten als organisatie aggregaten in de beheer console met behulp van MS Graph Api's.
-
-Het gemiddelde aantal latentie-einden is ongeveer 12 uur en wordt gegatedeerd op de tijd die nodig is om de dagelijkse verwerking uit te voeren. Alle andere delen van de gegevens stroom zijn bijna in realtime.
+> Wanneer u endpoint Analytics voor het eerst [inschakelt](../../tenant-attach/device-sync-actions.md#enable-device-upload) , nieuwe clients toevoegt aan het beleid voor het [verzamelen van intune-gegevens](#bkmk_uea_profile), of het uploaden van apparaten voor een nieuwe verzameling mogelijk maakt, worden in de rapporten in de Endpoint Analytics-Portal niet de volledige gegevens meteen weer gegeven. De gegevens die nodig zijn voor het berekenen van de opstart score voor een apparaat, worden tijdens de opstart tijd gegenereerd. Afhankelijk van de energie-instellingen en gebruikers gedrag kan het weken duren nadat een apparaat is inge schreven om de opstart Score weer te geven op de beheer console.
 
 ### <a name="data-collection"></a><a name="bkmk_uea_datacollection"></a>Gegevensverzameling
 
-Momenteel verzamelt de basis functionaliteit van endpoint Analytics informatie die is gekoppeld aan opstart prestatie records die in de [geïdentificeerde](https://docs.microsoft.com/mem/intune/protect/privacy-data-collect#identified-data) en [gepseudoniemde](https://docs.microsoft.com/mem/intune/protect/privacy-data-collect#pseudonymized-data) categorieën vallen. Wanneer we meer functionaliteit gedurende een bepaalde periode toevoegen, worden de verzamelde gegevens zo nodig verschillend. Het belangrijkste data Points dat momenteel wordt verzameld:
+Momenteel verzamelt de basis functionaliteit van endpoint Analytics informatie die is gekoppeld aan opstart prestatie records die in de [geïdentificeerde](../../../intune/protect/privacy-data-collect.md#identified-data) en [gepseudoniemde](../../../intune/protect/privacy-data-collect.md#pseudonymized-data) categorieën vallen. Wanneer we meer functionaliteit gedurende een bepaalde periode toevoegen, worden de verzamelde gegevens zo nodig verschillend. Het belangrijkste data Points dat momenteel wordt verzameld:
 
 #### <a name="identified-data"></a>Geïdentificeerde gegevens
 
@@ -809,9 +823,9 @@ Momenteel verzamelt de basis functionaliteit van endpoint Analytics informatie d
   - **totalBootTimeInMilliseconds:** Totale opstart tijd
   - **updateTimeInMilliseconds:** Tijdstip waarop de besturingssysteem updates zijn voltooid
   - **gpLogonDurationInMilliseconds**: tijd voor het verwerken van groeps beleid
-  - **desktopShownDurationInMilliseconds:** Tijd voor het laden van bureau blad (Explorer. exe)
-  - **desktopUsableDurationInMilliseconds:** Tijd voor het gebruik van bureau blad (Explorer. exe)
-  - **topProcesses:** Lijst met processen die tijdens het opstarten worden geladen met de naam, met statistieken voor CPU-gebruik en app-Details (naam, uitgever, versie). Bijvoorbeeld *{ \" verwerker \" : \" svchost \" , \" CpuUsage \" : 43, \" ProcessFullPath \" : \" C: \\ \\ Windows \\ \\ System32 \\ \\ svchost. exe \" , \" ProductName \" : \" micro soft &reg; Windows &reg; -besturings systeem \" , \" Uitgever \" : \" micro soft Corporation \" , \" productVersion \" : \" 10.0.18362.1 \" }*
+  - **desktopShownDurationInMilliseconds:** De tijd voor het laden van bureau blad (explorer.exe)
+  - **desktopUsableDurationInMilliseconds:** De tijd voor het bureau blad (explorer.exe) kan alleen worden gebruikt
+  - **topProcesses:** Lijst met processen die tijdens het opstarten worden geladen met de naam, met statistieken voor CPU-gebruik en app-Details (naam, uitgever, versie). Bijvoorbeeld *{ \" verwerker \" : \" svchost \" , \" CpuUsage \" : 43, \" ProcessFullPath \" : \" C: \\ \\ Windows \\ \\ System32 \\ \\svchost.exe\" , \" ProductName \" : \" micro soft &reg; Windows- &reg; besturings systeem \" , \" Uitgever \" : \" micro soft Corporation \" , \" productVersion \" : \" 10.0.18362.1 \" }*
 - Gegevens van apparaten die niet zijn gekoppeld aan een apparaat of gebruiker (als deze gegevens zijn gekoppeld aan een apparaat of gebruiker, worden deze gegevens behandeld als geïdentificeerde gegevens)
   - **Id:** Unieke apparaat-ID die wordt gebruikt door Windows Update
   - **localId:** Een lokaal gedefinieerde unieke ID voor het apparaat. Dit is niet de door de mens lees bare apparaatnaam. Waarschijnlijk gelijk aan de waarde die is opgeslagen op HKLM\Software\Microsoft\SQMClient\MachineId.
@@ -819,8 +833,25 @@ Momenteel verzamelt de basis functionaliteit van endpoint Analytics informatie d
   - **orgId:** Unieke GUID die de micro soft O365-Tenant vertegenwoordigt
   
 > [!Important]  
-> Ons beleid voor gegevens verwerking wordt beschreven in de [privacyverklaring van Microsoft intune](https://docs.microsoft.com/legal/intune/microsoft-intune-privacy-statement). We gebruiken alleen uw klant gegevens om u de services te bieden die u hebt geregistreerd voor. Zoals beschreven tijdens het voorbereidings proces, anoniem maken de scores van alle geregistreerde organisaties samen om de basis lijnen up-to-date te houden.
+> Ons beleid voor gegevens verwerking wordt beschreven in de [privacyverklaring van Microsoft intune](https://docs.microsoft.com/legal/intune/microsoft-intune-privacy-statement). We gebruiken alleen uw klant gegevens om u de services te bieden die u hebt geregistreerd voor. Zoals beschreven tijdens het voorbereidings proces, kunnen we de scores van alle geregistreerde organisaties anoniem makeneren en samen voegen om de basis lijn van **alle organisaties (mediaan)** up-to-date te houden.
 
+### <a name="stop-gathering-data"></a><a name="bkmk_uea_stop"></a>Geen gegevens meer verzamelen
+
+- Als u alleen door intune beheerde apparaten wilt inschrijven, verwijdert u het [intune-gegevensverzamelings beleid](#bkmk_uea_gen) dat is gemaakt tijdens de registratie.
+
+- Als u apparaten registreert die worden beheerd door Configuration Manager, moet u de volgende stappen uitvoeren om het uploaden van gegevens in Configuration Manager uit te scha kelen:
+
+   1. Ga in de Configuration Manager-console naar **beheer**  >  **Cloud Services**  >  **co-beheer**.
+   1. Selecteer **CoMgmtSettingsProd** en klik vervolgens op **Eigenschappen**.
+   1. Schakel op het tabblad **Upload configureren** de optie uit om **endpoint Analytics in te scha kelen voor apparaten die zijn geüpload naar micro soft Endpoint Manager**.
+
+- Gegevens verzameling voor endpoint Analytics in Configuration Manager uitschakelen (optioneel):
+
+   1. Ga in de Configuration Manager-console naar de client instellingen voor de **beheerders**  >  **Client Settings**  >  **instelling**.
+   1. Klik met de rechter muisknop en selecteer **Eigenschappen** en selecteer vervolgens de instellingen van de **computer agent** .
+   1. Stel **endpoint Analytics-gegevens verzameling** in op **Nee**.
+   > [!Important]
+   > Als u een bestaande aangepaste client agent hebt ingesteld die op uw apparaten is geïmplementeerd, moet u de optie voor het **verzamelen van endpoint Analytics-gegevens** in deze aangepaste instelling bijwerken en vervolgens opnieuw implementeren op uw computers om deze van kracht te laten worden.
 
 ### <a name="resources"></a>Resources
 

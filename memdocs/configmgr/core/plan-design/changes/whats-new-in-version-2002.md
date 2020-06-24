@@ -2,7 +2,7 @@
 title: Wat is er nieuw in versie 2002
 titleSuffix: Configuration Manager
 description: Krijg informatie over wijzigingen en nieuwe mogelijkheden die zijn geïntroduceerd in versie 2002 van Configuration Manager current branch.
-ms.date: 05/26/2020
+ms.date: 06/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: afdcc608133d306042c9c6dc817396bb2fc3f387
-ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
+ms.openlocfilehash: 4100f8747418bff769a7830fa63383ce545895ce
+ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84126478"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84721853"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 2002 van Configuration Manager current branch
 
@@ -329,7 +329,7 @@ Zie voor meer informatie [Office 365-updates synchroniseren vanaf een niet-verbo
 <!-- 5229962 -->
 Configuration Manager heeft de ondersteuning voor onboarding-apparaten uitgebreid naar micro soft Defender ATP. Zie [micro soft Defender Advanced Threat Protection](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md#onboard-devices)(Engelstalig) voor meer informatie.
 
-## <a name="onboard-configuration-manager-clients-to-microsoft-defender-atp-via-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a>Configuration Manager-clients onboarden naar micro soft Defender ATP via het beheer centrum van micro soft Endpoint Manager
+### <a name="onboard-configuration-manager-clients-to-microsoft-defender-atp-via-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a>Configuration Manager-clients onboarden naar micro soft Defender ATP via het beheer centrum van micro soft Endpoint Manager
 <!--5691658-->
 U kunt nu het voorbereidings beleid voor micro soft Defender ATP-eindpunt detectie en-antwoorden (EDR) implementeren voor het Configuration Manager van beheerde clients. Voor deze clients is Azure AD of MDM-inschrijving niet vereist en het beleid is gericht op ConfigMgr-verzamelingen in plaats van met Azure AD-groepen.
 
@@ -386,6 +386,16 @@ Zie [product feedback](../../understand/find-help.md#BKMK_1806Feedback)voor meer
 <!--5891241-->
 
 Net als bij verbeteringen in eerdere versies kunt u nu de zoek optie **alle submappen** gebruiken van de knoop punten **configuratie-items** en **configuratie basislijnen** .
+
+### <a name="community-hub"></a>Community Hub
+
+<!--3555935, 3555936-->
+
+_Eerste geïntroduceerd in juni 2020_
+
+De IT-beheerder heeft een schat aan kennis ontwikkeld over de jaren. In plaats van items zoals scripts en rapporten helemaal opnieuw te hoeven maken, hebben we een Configuration Manager **Community-hub** gemaakt waar u met elkaar kunt delen. Door gebruik te maken van anderen, kunt u uren werk besparen. De Community-hub bevordert creativiteit door te bouwen op het werk van anderen en andere mensen op uw bedrijf te bouwen. GitHub heeft al branchespecifieke processen en hulpprogram ma's die zijn ontworpen voor delen. De Community-hub maakt nu gebruik van deze hulpprogram ma's rechtstreeks in de Configuration Manager-console als basis onderdelen voor het aansturen van deze nieuwe community.
+
+Zie [Community hub en github](../../servers/manage/community-hub.md)voor meer informatie.
 
 ## <a name="tools"></a><a name="bkmk_tools"></a>Software
 

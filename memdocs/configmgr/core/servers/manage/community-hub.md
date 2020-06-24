@@ -2,7 +2,7 @@
 title: Community-hub en GitHub
 titleSuffix: Configuration Manager
 description: Community hub inschakelen en gebruiken in Configuration Manager
-ms.date: 06/10/2020
+ms.date: 06/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 88cead9a-64fe-471e-b57c-81707cefe46c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 606c9490e56d932176b17eef95ea4ed0c956770e
-ms.sourcegitcommit: a198e4efa52b16f87049853b9d8c9854fd9fa057
+ms.openlocfilehash: e0ef065cce691ce6f0b251d70ea8c4bd08904071
+ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84680418"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84740789"
 ---
 # <a name="community-hub-and-github"></a>Community-hub en GitHub
 <!--3555935, 3555936-->
@@ -46,6 +46,8 @@ Community hub ondersteunt de volgende objecten:
    1. Ga naar **beheer**  >  **site configuratie**  >  **sites**.
    1. Selecteer de site en kies **Eigenschappen** in het lint.
    1. Selecteer op het tabblad **communicatie beveiliging** de optie voor het **gebruik van door Configuration Manager gegenereerde certificaten voor http-site systemen**.
+
+- Als uw organisatie netwerk communicatie met Internet beperkt met behulp van een firewall of proxy apparaat, moet u de Configuration Manager-console toestaan om toegang te krijgen tot internet-eind punten. Zie [vereisten voor Internet toegang](../../plan-design/network/internet-endpoints.md#community-hub)voor meer informatie.
 
 ## <a name="permissions"></a>Machtigingen
 

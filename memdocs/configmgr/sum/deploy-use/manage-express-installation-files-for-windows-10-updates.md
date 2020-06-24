@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b8d8af88-e8ac-4deb-921b-975e2d2afd80
-ms.openlocfilehash: 4093eafe9f8a337ce322165a529f630a759b365f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ff018bc81ecdb3d11ebb71f1850804a5679c67f7
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718642"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746575"
 ---
 # <a name="manage-express-installation-files-for-windows-10-updates"></a>Bestanden voor snelle installatie voor Windows 10-updates beheren
 
@@ -59,7 +59,9 @@ Zodra u client instellingen hebt geïmplementeerd om deze functionaliteit op de 
 3. Selecteer de juiste client instellingen en klik op **Eigenschappen** op het lint.  
 
 4. Selecteer de groep met **software-updates** . Stel deze optie in op **Ja** om de **installatie van snelle updates op clients in te scha kelen**. Configureer de **poort die wordt gebruikt voor het downloaden van inhoud voor snelle updates** met de poort die wordt gebruikt door de HTTP-listener op de client.
+    - In versie 1902 is de **installatie van snelle updates op clients** zodanig gewijzigd dat **clients Delta-inhoud kunnen downloaden wanneer deze beschikbaar zijn**.
     - In versie 1902, **poort die wordt gebruikt voor het downloaden van inhoud voor snelle updates** is gewijzigd in **poort die door clients wordt gebruikt om aanvragen voor Delta-inhoud te ontvangen**.
+    
 
 ## <a name="next-steps"></a>Volgende stappen
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 06/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,16 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: f98d7a30d219aee63e38a63a74d8f1713deb198a
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: aa518036aa99d5de003fbc56f99748267f3cc87b
+ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431615"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84776868"
 ---
 # <a name="firewall-policy-for-endpoint-security-in-intune"></a>Firewallbeleid voor eindpuntbeveiliging in Intune
 
-Gebruik het firewallbeleid voor eindpuntbeveiliging in Intune om een in apparaten ingebouwde firewall te configureren voor apparaten met macOS en Windows 10. Ingebouwde firewalls zijn onder andere BitLocker voor Windows-apparaten en FileVault voor macOS.
+Gebruik het firewallbeleid voor eindpuntbeveiliging in Intune om een in apparaten ingebouwde firewall te configureren voor apparaten met macOS en Windows 10.
 
 Hoewel u dezelfde firewallinstellingen kunt configureren met behulp van Endpoint Protection-apparaatconfiguratieprofielen, bevatten de apparaatconfiguratieprofielen aanvullende categorieën instellingen. Deze extra instellingen zijn niet gerelateerd aan firewalls en kunnen de taak voor het configureren van alleen firewall-instellingen voor uw omgeving bemoeilijken.
 

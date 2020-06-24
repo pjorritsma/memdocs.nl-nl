@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 82c8495391dcc22aa2784657bc1461887e412577
-ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
+ms.openlocfilehash: 34005a63b372198bbc2e3079f8ab560ef6b2b791
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84223653"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795632"
 ---
 # <a name="desktop-analytics-data-privacy"></a>Gegevens privacy voor desktop Analytics
 
@@ -57,6 +57,8 @@ In de volgende afbeelding ziet u hoe diagnostische gegevens van afzonderlijke ap
 
 3. Apparaten verzenden diagnostische gegevens naar de micro soft Diagnostic Gegevensbeheer-service voor Windows. Alle diagnostische gegevens worden versleuteld via HTTPS en maakt gebruik van een certificaat dat wordt vastgemaakt tijdens de overdracht van het apparaat naar deze service. De micro soft Gegevensbeheer-service wordt gehost in de Verenigde Staten.
 
+      - Toepassings fouten, kernel-fouten, niet-reagerende toepassingen en andere toepassingsspecifieke problemen gebruiken de Windows Foutrapportage-API voor het verzenden van toepassingsspecifieke probleem rapporten naar micro soft. Zie [wer gebruiken](https://docs.microsoft.com/windows/win32/wer/using-wer) voor specifieke informatie over deze gegevens stroom.
+      
 4. Micro soft produceert elke dag een moment opname van de inzichten die IT-gericht zijn. In deze moment opname worden de diagnostische gegevens van Windows gecombineerd met de invoer voor de Inge schreven apparaten. Dit proces treedt op in tijdelijke opslag, wat alleen wordt gebruikt door Desktop Analytics. De tijdelijke opslag wordt gehost in micro soft-data centers in de Verenigde Staten. Alle gegevens worden verzonden via een met SSL (HTTPS) versleuteld kanaal. De moment opnamen worden gescheiden door de commerciële ID.  
 
 5. De moment opnamen worden vervolgens gekopieerd naar uw Azure Log Analytics-werk ruimte. Deze gegevens overdracht vindt plaats via HTTPS via het webhook-opname protocol, een functie van Log Analytics. Desktop Analytics heeft geen lees-of schrijf machtigingen voor uw Log Analytics-opslag. Desktop Analytics roept de webhook-API aan met een SAS-URI (Shared Access Signature). Vervolgens haalt Log Analytics de gegevens op uit de opslag tabellen via HTTPS.
@@ -78,6 +80,8 @@ Raadpleeg de volgende artikelen voor meer informatie over verwante privacy-aspec
 - [Windows 10, versie 1809 basis niveau Windows diagnostische gebeurtenissen en velden](https://docs.microsoft.com/windows/privacy/basic-level-windows-diagnostic-events-and-fields-1809)  
 
 - [Windows 10, versie 1709 uitgebreide diagnostische gegevens gebeurtenissen en velden die worden gebruikt door Desktop Analytics](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)  
+
+- [Windows Setup fout rapportage](https://docs.microsoft.com/windows/deployment/upgrade/windows-error-reporting)
 
 - [Overzicht van viewer voor diagnostische gegevens](https://docs.microsoft.com/windows/privacy/diagnostic-data-viewer-overview)  
 

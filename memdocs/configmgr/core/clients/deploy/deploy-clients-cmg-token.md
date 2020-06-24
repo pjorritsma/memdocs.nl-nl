@@ -2,7 +2,7 @@
 title: Verificatie op basis van tokens voor CMG
 titleSuffix: Configuration Manager
 description: Registreer een client in het interne netwerk voor een uniek token of maak een bulk registratie token voor apparaten op internet.
-ms.date: 04/29/2020
+ms.date: 06/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5054d44371fd3114a9644f90d37dabf1e81d1997
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: 8146c9c2605f8693ad7375b974a5dd13c089d946
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455018"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715659"
 ---
 # <a name="token-based-authentication-for-cloud-management-gateway"></a>Verificatie op basis van tokens voor Cloud beheer gateway
 
@@ -70,6 +70,16 @@ Als u dit wilt controleren, controleert u het volgende logboek bestand op een ve
 ```ClientLocation.log
 Rotating internet management point, new management point [1] is: https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 (0) with capabilities: <Capabilities SchemaVersion ="1.0"><Property Name="SSL" Version="1" /></Capabilities>
 ```
+
+Controleer `%WinDir%\ccmsetup\logs\ccmsetup.log` op de client om de installatie van problemen op te lossen. Controleer na de installatie `%WinDir%\ccm\logs\ClientIDManagerStartup.log` .
+
+Bekijk de volgende logboeken op de-server:
+
+- [CMG-logboeken](../../plan-design/hierarchy/log-files.md#cloud-management-gateway)
+- Beheerpunt
+  - CCM_STS. log
+  - MP_RegistrationManager. log
+  - ClientAuth.log
 
 ### <a name="known-issues"></a>Bekende problemen
 

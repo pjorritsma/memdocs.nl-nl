@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 0811c695acba4859bf32de535a28ea55cf8eee07
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 7403dc26f5fe1789fcda6b3eddf30136a4cd6e68
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268739"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795648"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>Gegevens delen inschakelen voor desktop Analytics
 
@@ -35,8 +35,8 @@ De basis functionaliteit van Desktop Analytics werkt op het niveau van de **eenv
 
 - App-gebruik
 - [Aanvullende app-inzichten](compat-assessment.md#additional-insights)
-- Implementatie status gegevens
-- Status bewakings gegevens
+- [Implementatie status gegevens](deploy-prod.md#address-deployment-alerts)
+- [Status bewakings gegevens](health-status-monitoring.md)
 
 Micro soft raadt u aan het **uitgebreide (beperkte)** diagnostische gegevens niveau in te scha kelen met Desktop Analytics om de voor delen van het apparaat optimaal te benutten.
 

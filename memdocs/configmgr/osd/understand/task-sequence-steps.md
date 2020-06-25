@@ -10,12 +10,12 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 385a7222b33275951de294554a870d8e490a5ddc
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 114a0a18b3eb5d416b45379ccb3ac68128e529c5
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719090"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353595"
 ---
 # <a name="task-sequence-steps"></a>Stappen voor takenreeksen
 
@@ -215,11 +215,11 @@ Selecteer deze optie om de doelcomputer toe te voegen aan de opgegeven werkgroep
 
 #### <a name="join-a-domain"></a>Lid worden van een domein
 
-Selecteer deze optie om de doelcomputer toe te voegen aan het opgegeven domein. Geef op of blader naar het domein, zoals `fabricam.com`. Geef een LDAP-pad (Lightweight Directory Access Protocol) op of blader naar een organisatie-eenheid. Bijvoorbeeld: `LDAP//OU=computers, DC=Fabricam.com, C=com`.  
+Selecteer deze optie om de doelcomputer toe te voegen aan het opgegeven domein. Geef op of blader naar het domein, zoals `fabricam.com` . Geef een LDAP-pad (Lightweight Directory Access Protocol) op of blader naar een organisatie-eenheid. Bijvoorbeeld: `LDAP//OU=computers, DC=Fabricam.com, C=com`.  
 
 #### <a name="account"></a>Account
 
-Selecteer **instellen** om een account op te geven met de vereiste machtigingen om de computer aan het domein toe te voegen. Voer in het dialoog venster **Windows-gebruikers account** de gebruikers naam in met de volgende indeling `Domain\User`:. Zie voor meer informatie [domein deelname aan account](../../core/plan-design/hierarchy/accounts.md#task-sequence-domain-join-account).
+Selecteer **instellen** om een account op te geven met de vereiste machtigingen om de computer aan het domein toe te voegen. Voer in het dialoog venster **Windows-gebruikers account** de gebruikers naam in met de volgende indeling: `Domain\User` . Zie voor meer informatie [domein deelname aan account](../../core/plan-design/hierarchy/accounts.md#task-sequence-domain-join-account).
 
 #### <a name="adapter-settings"></a>Adapterinstellingen
 
@@ -274,25 +274,25 @@ Met deze stap worden verschillende acties uitgevoerd, afhankelijk van of het een
 
 Met de stap **besturingssysteem installatie kopie Toep assen** worden de volgende acties uitgevoerd wanneer u een installatie kopie van een besturings systeem gebruikt:  
 
-1. Verwijder alle inhoud op het doel volume, met uitzonde ring van de bestanden in ** \_** de map die is opgegeven door de variabele SMSTSUserStatePath.  
+1. Verwijder alle inhoud op het doel volume, met uitzonde ring van de bestanden in de map die is opgegeven door de variabele ** \_ SMSTSUserStatePath** .  
 
 2. Pak de inhoud van het opgegeven Wim-bestand uit naar de opgegeven doel partitie.  
 
 3. Het antwoord bestand voorbereiden:  
 
-    1. Maak een nieuw standaard Windows Setup antwoord bestand (Sysprep. inf of Unattend. XML) voor het geïmplementeerde besturings systeem.  
+    1. Maak een nieuw standaard Windows Setup antwoord bestand (Sysprep. inf of unattend.xml) voor het geïmplementeerde besturings systeem.  
 
     2. Alle waarden van het door de gebruiker opgegeven antwoord bestand samen voegen.  
 
 4. Kopieer Windows-opstart laad Programma's naar de actieve partitie.  
 
-5. Stel het bestand Boot. ini of de Boot Configuration Data Base (BCD) in om te verwijzen naar het nieuw geïnstalleerde besturings systeem.  
+5. Stel de boot.ini of de Boot Configuration Data Base (BCD) in om te verwijzen naar het zojuist geïnstalleerde besturings systeem.  
 
 #### <a name="os-upgrade-package-actions"></a>Acties voor het upgrade pakket van het besturings systeem
 
 Met de stap **besturingssysteem installatie kopie Toep assen** worden de volgende acties uitgevoerd wanneer u een upgrade pakket voor het besturings systeem gebruikt:  
 
-1. Verwijder alle inhoud op het doel volume, met uitzonde ring van de bestanden in ** \_** de map die is opgegeven door de variabele SMSTSUserStatePath.  
+1. Verwijder alle inhoud op het doel volume, met uitzonde ring van de bestanden in de map die is opgegeven door de variabele ** \_ SMSTSUserStatePath** .  
 
 2. Het antwoord bestand voorbereiden:  
 
@@ -321,10 +321,10 @@ Installeert een besturings systeem met behulp van een upgrade pakket voor het be
 
 #### <a name="use-an-unattended-or-sysprep-answer-file-for-a-custom-installation"></a>Installatie zonder toezicht of Sysprep-antwoordbestand gebruiken voor aangepaste installatie
 
-Gebruik deze optie om een Windows Setup-antwoord bestand op te geven (**Unattend. XML**, **Unattend. txt**of **Sysprep. inf**), afhankelijk van de versie van het besturings systeem en de installatie methode. Het opgegeven bestand kan de standaardconfiguratieopties bevatten die worden ondersteund voor Windows-antwoordbestanden. Bijvoorbeeld: u kunt hiermee de standaardstartpagina voor Internet Explorer opgeven. Geef het pakket op dat het antwoord bestand bevat en het bijbehorende pad naar het bestand in het pakket.  
+Gebruik deze optie om een Windows Setup-antwoord bestand (**unattend.xml**, **unattend.txt**of **Sysprep. inf**) te bieden, afhankelijk van de versie van het besturings systeem en de installatie methode. Het opgegeven bestand kan de standaardconfiguratieopties bevatten die worden ondersteund voor Windows-antwoordbestanden. Bijvoorbeeld: u kunt hiermee de standaardstartpagina voor Internet Explorer opgeven. Geef het pakket op dat het antwoord bestand bevat en het bijbehorende pad naar het bestand in het pakket.  
 
 > [!NOTE]  
-> Het Windows Setup-antwoord bestand dat u opgeeft kan Inge sloten taken reeks variabelen van het `%varname%`formulier bevatten, waarbij *varnaam* de naam van de variabele is. In de stap **Windows en ConfigMgr installeren** wordt de variabele String vervangen door de werkelijke waarde van de variabele. U kunt deze Inge sloten taken reeks variabelen niet gebruiken in velden die alleen numeriek zijn in het antwoord bestand Unattend. XML.  
+> Het Windows Setup-antwoord bestand dat u opgeeft kan Inge sloten taken reeks variabelen van het formulier bevatten `%varname%` , waarbij *varnaam* de naam van de variabele is. In de stap **Windows en ConfigMgr installeren** wordt de variabele String vervangen door de werkelijke waarde van de variabele. U kunt deze Inge sloten taken reeks variabelen niet gebruiken in velden die alleen numeriek zijn in een unattend.xml antwoord bestand.  
 
 Als u geen Windows Setup-antwoord bestand opgeeft, genereert de taken reeks automatisch een antwoord bestand.  
 
@@ -450,7 +450,7 @@ Configureer de volgende instellingen:
 Zie [micro soft-Windows-International-core](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core)(Engelstalig) voor meer informatie over deze waarden voor Windows Setup-antwoord bestanden.
 
 > [!NOTE]
-> Als u een aangepast Windows Setup-antwoord bestand (Unattend. XML) maakt, overschrijft deze stap alle bestaande waarden. Als u een dynamisch proces voor deze instellingen wilt automatiseren, gebruikt u de gerelateerde taken reeks variabelen. Bijvoorbeeld [OSDWindowsSettingsInputLocale](task-sequence-variables.md#OSDWindowsSettingsInputLocale). 
+> Als u een aangepast Windows Setup-antwoord bestand (unattend.xml) maakt, overschrijft deze stap alle bestaande waarden. Als u een dynamisch proces voor deze instellingen wilt automatiseren, gebruikt u de gerelateerde taken reeks variabelen. Bijvoorbeeld [OSDWindowsSettingsInputLocale](task-sequence-variables.md#OSDWindowsSettingsInputLocale). 
 
 ## <a name="auto-apply-drivers"></a><a name="BKMK_AutoApplyDrivers"></a>Stuur Programma's automatisch Toep assen
 
@@ -704,7 +704,7 @@ Selecteer deze optie om de configuratiebestanden in het USMT-pakket te selectere
 
 #### <a name="enable-verbose-logging"></a>Uitgebreide logboekregistratie inschakelen
 
-Schakel deze optie in om meer gedetailleerde informatie in het logboekbestand te genereren. Bij het vastleggen van de status genereert de taken reeks standaard **Scan State. log** in de map taken reeks logboek `%WinDir%\ccm\logs`.  
+Schakel deze optie in om meer gedetailleerde informatie in het logboekbestand te genereren. Bij het vastleggen van de status genereert de taken reeks standaard **Scan State. log** in de map taken reeks logboek `%WinDir%\ccm\logs` .  
 
 #### <a name="skip-files-using-encrypted-file-system"></a>Bestanden met Encrypted File System overslaan
 
@@ -856,7 +856,7 @@ Controleer vanaf versie 2002 of op het huidige besturings systeem een eerdere ve
 
 #### <a name="minimum-client-version"></a>Minimale client versie
 
-Controleer vanaf versie 2002 of de versie van de Configuration Manager-client ten minste de opgegeven versie is. Geef de client versie op in de volgende indeling `5.00.8913.1005`:.
+Controleer vanaf versie 2002 of de versie van de Configuration Manager-client ten minste de opgegeven versie is. Geef de client versie op in de volgende indeling: `5.00.8913.1005` .
 
 #### <a name="language-of-current-os"></a>Taal van het huidige besturings systeem
 
@@ -1019,7 +1019,7 @@ Kies ervoor om het pakket op te slaan op een van de volgende locaties:
 
 - **Werkmap voor taken reeksen**: deze locatie wordt ook wel de taken reeks cache genoemd.  
 
-- **Configuration Manager-client cache**: gebruik deze optie om de inhoud in de client cache op te slaan. Dit pad is `%WinDir%\ccmcache`standaard.  
+- **Configuration Manager-client cache**: gebruik deze optie om de inhoud in de client cache op te slaan. Dit pad is standaard `%WinDir%\ccmcache` .  
 
 - **Aangepast pad**: de taken reeks engine downloadt eerst het pakket naar de werkmap van de taken reeks. Vervolgens wordt de inhoud verplaatst naar dit pad dat u opgeeft. De taken reeks engine voegt het pad toe met de pakket-ID.  
 
@@ -1027,7 +1027,7 @@ Kies ervoor om het pakket op te slaan op een van de volgende locaties:
 
 Sla het pad van het pakket op in een aangepaste taken reeks variabele. Gebruik deze variabele vervolgens in een andere taken reeks stap.
 
-Configuration Manager voegt een numeriek achtervoegsel toe aan de naam van de variabele. U kunt bijvoorbeeld een variabele opgeven `%MyContent%` als een aangepaste variabele. Het is de hoofdmap waar de taken reeks alle inhoud waarnaar wordt verwezen voor deze stap opslaat. Deze inhoud kan meerdere pakketten bevatten. Wanneer u naar de variabele verwijst, voegt u een numeriek achtervoegsel toe. Raadpleeg voor het eerste pakket `%MyContent01%`. Wanneer u in de volgende stappen naar de variabele verwijst, zoals **besturings systeem bijwerken**, gebruikt `%MyContent02%` u `%MyContent03%`of, waarbij het nummer overeenkomt met de volg orde waarin de pakketten worden weer gegeven in de stap **pakket inhoud downloaden** .  
+Configuration Manager voegt een numeriek achtervoegsel toe aan de naam van de variabele. U kunt bijvoorbeeld een variabele opgeven `%MyContent%` als een aangepaste variabele. Het is de hoofdmap waar de taken reeks alle inhoud waarnaar wordt verwezen voor deze stap opslaat. Deze inhoud kan meerdere pakketten bevatten. Wanneer u naar de variabele verwijst, voegt u een numeriek achtervoegsel toe. Raadpleeg voor het eerste pakket `%MyContent01%` . Wanneer u in de volgende stappen naar de variabele verwijst, zoals **besturings systeem bijwerken**, gebruikt u `%MyContent02%` of `%MyContent03%` , waarbij het nummer overeenkomt met de volg orde waarin de pakketten worden weer gegeven in de stap **pakket inhoud downloaden** .  
 
 #### <a name="if-a-package-download-fails-continue-downloading-other-packages-in-the-list"></a>Als het downloaden van een pakket mislukt, ga dan door met het downloaden van andere pakketten in de lijst
 
@@ -1530,7 +1530,7 @@ Typ optioneel een organisatie-eenheid (OE) of blader ernaartoe in het opgegeven 
 
 #### <a name="enter-the-account-which-has-permission-to-join-the-domain"></a>Voer het account in dat is gemachtigd om lid te worden van het domein.
 
-Selecteer **instellen** om de gebruikers naam en het wacht woord in te voeren voor een account met machtigingen om lid te worden van het domein. Voer het account in met de volgende `Domain\account`indeling:. Zie [accounts](../../core/plan-design/hierarchy/accounts.md#task-sequence-domain-join-account)voor meer informatie over het domein voor het samen voegen van taken reeksen.  
+Selecteer **instellen** om de gebruikers naam en het wacht woord in te voeren voor een account met machtigingen om lid te worden van het domein. Voer het account in met de volgende indeling: `Domain\account` . Zie [accounts](../../core/plan-design/hierarchy/accounts.md#task-sequence-domain-join-account)voor meer informatie over het domein voor het samen voegen van taken reeksen.  
 
 
 
@@ -1861,13 +1861,19 @@ Gaat verder met het herstellen van de gebruikers status en-instellingen, zelfs a
 
 #### <a name="enable-verbose-logging"></a>Uitgebreide logboekregistratie inschakelen
 
-Schakel deze optie in om meer gedetailleerde informatie in het logboekbestand te genereren. Bij het herstellen van de status genereert de taken reeks standaard **Load State. log** in de map met de taken `%WinDir%\ccm\logs`reeks Logboeken.  
+Schakel deze optie in om meer gedetailleerde informatie in het logboekbestand te genereren. Bij het herstellen van de status genereert de taken reeks standaard **Load State. log** in de map met de taken reeks logboeken `%WinDir%\ccm\logs` .  
 
 
 
 ## <a name="run-command-line"></a><a name="BKMK_RunCommandLine"></a>Opdracht regel uitvoeren
 
 Gebruik deze stap om de opgegeven opdracht regel uit te voeren.  
+
+De opdracht die wordt uitgevoerd, moet voldoen aan de volgende criteria:  
+
+- Het mag niet communiceren met het bureau blad. De opdracht moet op de achtergrond of in een modus zonder toezicht worden uitgevoerd.  
+
+- De toepassing mag zelf geen herstart initiëren. De opdracht moet een herstart aanvragen via de standaard herstart code, 3010. Dit gedrag zorgt ervoor dat de taken reeks de herstart correct afhandelt. Als de opdracht een afsluit code van 3010 retourneert, start de taken reeks engine de computer opnieuw op. Na het opnieuw opstarten wordt de takenreeks automatisch voortgezet.
 
 Deze stap kan worden uitgevoerd in het volledige besturings systeem of in Windows PE.
 
@@ -1901,7 +1907,7 @@ Configureer op het tabblad **Eigenschappen** voor deze stap de instellingen die 
 
 Hiermee geeft u de opdracht regel op die door de taken reeks wordt uitgevoerd. Dit veld is vereist. Bestandsnaam extensies toevoegen, bijvoorbeeld. vbs en. exe. Neem alle vereiste instellingen bestanden en opdracht regel opties op.  
 
-Als u de bestandsnaam extensie niet opgeeft, Configuration Manager probeert. com,. exe en. bat. Als de bestands naam een extensie heeft die geen uitvoerbaar type is, Configuration Manager probeert een lokale koppeling toe te passen. Als de opdracht regel bijvoorbeeld README. gif is, start Configuration Manager de toepassing die op de doel computer is opgegeven voor het openen van. GIF-bestanden.  
+Als u de bestandsnaam extensie niet opgeeft, Configuration Manager probeert. com,. exe en. bat. Als de bestands naam een extensie heeft die geen uitvoerbaar type is, Configuration Manager probeert een lokale koppeling toe te passen. Als de opdracht regel bijvoorbeeld readme.gif is, start Configuration Manager de toepassing die is opgegeven op de doel computer voor het openen van. GIF-bestanden.  
 
 Voorbeelden:  
 
@@ -1910,7 +1916,7 @@ Voorbeelden:
 `cmd.exe /c copy Jan98.dat c:\sales\Jan98.dat`  
 
 > [!NOTE]  
-> Als u wilt uitvoeren, moet u voorafgaand aan opdracht regel acties met de opdracht **cmd. exe/c** . Voor beelden van deze acties zijn uitvoer omleiding, pijpleiding en kopieer opdrachten.  
+> Als u wilt uitvoeren, moet u voorafgaand aan opdracht regel acties met de opdracht **cmd.exe/c** . Voor beelden van deze acties zijn uitvoer omleiding, pijpleiding en kopieer opdrachten.  
 
 #### <a name="output-to-task-sequence-variable"></a>De variabele output to task sequence
 
@@ -1976,6 +1982,12 @@ Neem andere afsluit codes op uit het script dat door de stap als geslaagd moet w
 ## <a name="run-powershell-script"></a><a name="BKMK_RunPowerShellScript"></a>Power shell-script uitvoeren
 
 Gebruik deze stap om het opgegeven Windows Power shell-script uit te voeren.  
+
+Het script moet voldoen aan de volgende criteria:  
+
+- Het mag niet communiceren met het bureau blad. Het script moet op de achtergrond of in een modus zonder toezicht worden uitgevoerd.  
+
+- De toepassing mag zelf geen herstart initiëren. De sscript moet een herstart aanvragen via de standaard herstart code, 3010. Dit gedrag zorgt ervoor dat de taken reeks de herstart correct afhandelt. Als het script een afsluit code van 3010 retourneert, start de taken reeks engine de computer opnieuw op. Na het opnieuw opstarten wordt de takenreeks automatisch voortgezet.
 
 Deze stap kan worden uitgevoerd in het volledige besturings systeem of in Windows PE. Als u deze stap wilt uitvoeren in Windows PE, schakelt u Power shell in de opstart installatie kopie in. Schakel het onderdeel WinPE-Power shell in op het tabblad **optionele onderdelen** in de eigenschappen voor de opstart installatie kopie. Zie [opstart installatie kopieën beheren](../get-started/manage-boot-images.md)voor meer informatie over het wijzigen van een opstart installatie kopie.  
 
@@ -2050,11 +2062,11 @@ Het volgende voorbeeld bevat ongeldige parameters. De eerste twee items zijn Win
 `-NoLogo -ExecutionPolicy Unrestricted -File MyScript.ps1 -MyParameter1 MyValue1 -MyParameter2 MyValue2`
 
 <!-- SCCMDocs-pr issue 3561 -->
-Als een parameter waarde een speciaal teken bevat, gebruikt u enkele aanhalings`'`tekens () rond de waarde. Het gebruik van dubbele aanhalings tekens (`"`) kan ertoe leiden dat de para meter in de taken reeks stap onjuist wordt verwerkt.
+Als een parameter waarde een speciaal teken bevat, gebruikt u enkele aanhalings tekens ( `'` ) rond de waarde. Het gebruik van dubbele aanhalings tekens ( `"` ) kan ertoe leiden dat de para meter in de taken reeks stap onjuist wordt verwerkt.
 
 Bijvoorbeeld: `-Arg1 '%TSVar1%' -Arg2 '%TSVar2%'`
 
-Met ingang van versie 2002 stelt u deze eigenschap in op een variabele.<!-- 5690481 --> Als u bijvoorbeeld opgeeft `%MyScriptVariable%`, wanneer het script door de taken reeks wordt uitgevoerd, wordt de waarde van deze aangepaste variabele toegevoegd aan de Power shell-opdracht regel.
+Met ingang van versie 2002 stelt u deze eigenschap in op een variabele.<!-- 5690481 --> Als u bijvoorbeeld opgeeft `%MyScriptVariable%` , wanneer het script door de taken reeks wordt uitgevoerd, wordt de waarde van deze aangepaste variabele toegevoegd aan de Power shell-opdracht regel.
 
 #### <a name="powershell-execution-policy"></a>PowerShell-uitvoeringsbeleid
 
@@ -2223,7 +2235,7 @@ Als u een dynamische variabele voor gebruik in de taken reeks wilt instellen, vo
 
 - **Merk en model**: Beoordeel waarden voor het merk en model van een computer. Zowel het merk als het model moet resulteren in waar om de regel te laten resulteren in waar.
 
-    Geef een asterisk (`*`) en een vraag teken`?`() op als joker tekens. Het sterretje komt overeen met meerdere tekens en het vraag teken komt overeen met één teken. De teken reeks `DELL*900?` komt bijvoorbeeld overeen met `DELL-ABC-9001` zowel `DELL9009`als.  
+    Geef een asterisk ( `*` ) en een vraag teken ( `?` ) op als joker tekens. Het sterretje komt overeen met meerdere tekens en het vraag teken komt overeen met één teken. De teken reeks komt bijvoorbeeld `DELL*900?` overeen met zowel `DELL-ABC-9001` als `DELL9009` .  
 
 - **Taken reeks variabele**: Voeg een taken reeks variabele, voor waarde en waarde toe om te evalueren. Deze regel resulteert in waar wanneer de ingestelde waarde voor de variabele voldoet aan de opgegeven voorwaarde.  
 
@@ -2282,7 +2294,7 @@ Schakel deze optie in om gevoelige gegevens te maskeren die zijn opgeslagen in t
 
 #### <a name="value"></a>Waarde  
 
-De taken reeks stelt de variabele in op deze waarde. Stel deze taken reeks variabele in op de waarde van een andere taken reeks variabele met `%varname%`de syntaxis.  
+De taken reeks stelt de variabele in op deze waarde. Stel deze taken reeks variabele in op de waarde van een andere taken reeks variabele met de syntaxis `%varname%` .  
 
 
 
@@ -2292,7 +2304,7 @@ Gebruik deze stap om de overgang van Windows PE naar het nieuwe besturings syste
 
 Deze stap is verantwoordelijk voor het overstappen van de taken reeks van Windows PE naar het volledige besturings systeem. De stap wordt in Windows PE en het volledige besturings systeem uitgevoerd door deze overgang. Omdat de overgang echter wordt gestart in Windows PE, kan deze alleen worden toegevoegd tijdens het Windows PE-gedeelte van de taken reeks.  
 
-Deze stap vervangt Sysprep. inf-of Unattend. XML-Directory variabelen, `%WINDIR%` zoals `%ProgramFiles%`en, door de installatiemap van Windows PE `X:\Windows`. De taken reeks negeert variabelen die zijn opgegeven met behulp van deze omgevings variabelen.  
+Deze stap vervangt Sysprep. inf-of unattend.xml Directory-variabelen, zoals `%WINDIR%` en `%ProgramFiles%` , met de installatiemap van Windows PE `X:\Windows` . De taken reeks negeert variabelen die zijn opgegeven met behulp van deze omgevings variabelen.  
 
 Als u deze stap wilt toevoegen in de taken reeks editor, selecteert u **toevoegen**, selecteert u **installatie kopieën**en selecteert u **Windows en ConfigMgr installeren**.
 
@@ -2302,7 +2314,7 @@ Met deze stap worden de volgende acties uitgevoerd:
 
 #### <a name="preliminaries-windows-pe"></a>Voor bereidingen: Windows PE  
 
-1. Vervang taken reeks variabelen in het bestand Unattend. XML.  
+1. Vervang taken reeks variabelen in het unattend.xml bestand.  
 
 2. Down load het pakket dat de Configuration Manager-client bevat. Voeg het pakket toe aan de geïmplementeerde installatie kopie.  
 
@@ -2316,7 +2328,7 @@ Met deze stap worden de volgende acties uitgevoerd:
 
     3. Start opnieuw op in het geïmplementeerde besturings systeem.  
 
-    4. Windows Mini-Setup wordt uitgevoerd met behulp van het eerder opgegeven bestand Sysprep. inf of Unattend. XML, waarbij alle interactie van de eind gebruiker wordt onderdrukt. Als u de stap **netwerk instellingen Toep assen** gebruikt om lid te worden van een domein, bevindt die informatie zich in het antwoord bestand. Windows Mini-Setup voegt de computer toe aan het domein.  
+    4. Windows Mini-Setup wordt uitgevoerd met behulp van het eerder opgegeven bestand Sysprep. inf of unattend.xml, waarbij alle interactie van de eind gebruiker wordt onderdrukt. Als u de stap **netwerk instellingen Toep assen** gebruikt om lid te worden van een domein, bevindt die informatie zich in het antwoord bestand. Windows Mini-Setup voegt de computer toe aan het domein.  
 
 - Installatie op basis van setup.exe. Voert Setup.exe uit, die de standaard Windows-installatieprocedure volgt:  
 
@@ -2324,7 +2336,7 @@ Met deze stap worden de volgende acties uitgevoerd:
 
     2. Start opnieuw op naar het nieuw geïmplementeerde besturings systeem.  
 
-    3. Windows Mini-Setup wordt uitgevoerd met behulp van het eerder opgegeven bestand Sysprep. inf of Unattend. XML waarin alle gebruikers interface-instellingen worden onderdrukt. Als u de stap **netwerk instellingen Toep assen** gebruikt om lid te worden van een domein, bevindt die informatie zich in het antwoord bestand. Windows Mini-Setup voegt de computer toe aan het domein.  
+    3. Windows Mini-Setup wordt uitgevoerd met behulp van het eerder opgegeven Sysprep. inf-of unattend.xml antwoord bestand met alle gebruikers interface-instellingen onderdrukt. Als u de stap **netwerk instellingen Toep assen** gebruikt om lid te worden van een domein, bevindt die informatie zich in het antwoord bestand. Windows Mini-Setup voegt de computer toe aan het domein.  
 
 #### <a name="set-up-the-configuration-manager-client"></a>De Configuration Manager-client instellen  
 
@@ -2375,7 +2387,7 @@ Als er een pre-production-client pakket beschikbaar is en de computer lid is van
 
 In de taken reeks stap worden automatisch site toewijzing en de standaard configuratie opgegeven. Gebruik dit veld om eventuele aanvullende installatie-eigenschappen op te geven die moeten worden gebruikt wanneer u de-client installeert. Als u meerdere installatie-eigenschappen wilt invoeren, scheidt u deze met een spatie.  
 
-Geef opdracht regel opties op die moeten worden gebruikt tijdens de client installatie. Voer `/skipprereq: silverlight.exe` bijvoorbeeld in om CCMSetup. exe te informeren dat de vereiste voor micro soft Silverlight niet moet worden geïnstalleerd. Zie [over de eigenschappen van client installatie](../../core/clients/deploy/about-client-installation-properties.md)voor meer informatie over de beschik bare opdracht regel opties voor CCMSetup. exe.  
+Geef opdracht regel opties op die moeten worden gebruikt tijdens de client installatie. Voer bijvoorbeeld `/skipprereq: silverlight.exe` in om aan CCMSetup.exe te informeren dat de micro soft Silverlight-vereiste niet moet worden geïnstalleerd. Zie [over de eigenschappen van client installatie](../../core/clients/deploy/about-client-installation-properties.md)voor meer informatie over de beschik bare opdracht regel opties voor CCMSetup.exe.  
 
 ### <a name="options-for-setup-windows-and-configmgr"></a>Opties voor het instellen van Windows en ConfigMgr
 
@@ -2424,9 +2436,9 @@ Selecteer deze optie om het Windows 10 OS-upgrade pakket op te geven dat moet wo
 
 #### <a name="source-path"></a>Bronpad
 
-Hiermee geeft u een lokaal pad of netwerkpad naar de Windows 10-media die Windows Setup gebruikt. Deze instelling komt overeen met de Windows Setup opdracht regel optie `/InstallFrom`.
+Hiermee geeft u een lokaal pad of netwerkpad naar de Windows 10-media die Windows Setup gebruikt. Deze instelling komt overeen met de Windows Setup opdracht regel optie `/InstallFrom` .
 
-U kunt ook een variabele opgeven, zoals `%MyContentPath%` of. `%DPC01%` Wanneer u een variabele voor het bronpad gebruikt, stelt u de waarde ervan eerder in de taken reeks in. Gebruik bijvoorbeeld de stap [pakket inhoud downloaden](#BKMK_DownloadPackageContent) om een variabele op te geven voor de locatie van het upgrade pakket van het besturings systeem. Vervolgens gebruikt u deze variabele voor het bronpad voor deze stap.  
+U kunt ook een variabele opgeven, zoals `%MyContentPath%` of `%DPC01%` . Wanneer u een variabele voor het bronpad gebruikt, stelt u de waarde ervan eerder in de taken reeks in. Gebruik bijvoorbeeld de stap [pakket inhoud downloaden](#BKMK_DownloadPackageContent) om een variabele op te geven voor de locatie van het upgrade pakket van het besturings systeem. Vervolgens gebruikt u deze variabele voor het bronpad voor deze stap.  
 
 #### <a name="edition"></a>Editie
 
@@ -2438,7 +2450,7 @@ Geef de product code op die u wilt Toep assen op het upgrade proces.
 
 #### <a name="provide-the-following-driver-content-to-windows-setup-during-upgrade"></a>Geef de volgende stuurprogramma-inhoud op aan Windows Setup tijdens de upgrade
 
-Stuur Programma's toevoegen aan de doel computer tijdens het upgrade proces. De stuurprogramma's moeten compatibel zijn met Windows 10. Deze instelling komt overeen met de Windows Setup opdracht regel optie `/InstallDriver`. Zie [Windows Setup opdracht regel opties](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#installdrivers)voor meer informatie.
+Stuur Programma's toevoegen aan de doel computer tijdens het upgrade proces. De stuurprogramma's moeten compatibel zijn met Windows 10. Deze instelling komt overeen met de Windows Setup opdracht regel optie `/InstallDriver` . Zie [Windows Setup opdracht regel opties](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#installdrivers)voor meer informatie.
 
 Geef een van de volgende opties op:  
 
@@ -2459,7 +2471,7 @@ Geef het aantal minuten op waarna Configuration Manager deze stap mislukt. Deze 
 
 #### <a name="perform-windows-setup-compatibility-scan-without-starting-upgrade"></a>Windows-installatiecompatibiliteitsscan uitvoeren zonder dat de upgrade wordt gestart
 
-Voer de Windows Setup compatibiliteits scan uit zonder het upgrade proces te starten. Deze instelling komt overeen met de Windows Setup opdracht regel optie `/Compat ScanOnly`. Implementeer het hele OS-upgrade pakket met deze optie.
+Voer de Windows Setup compatibiliteits scan uit zonder het upgrade proces te starten. Deze instelling komt overeen met de Windows Setup opdracht regel optie `/Compat ScanOnly` . Implementeer het hele OS-upgrade pakket met deze optie.
 
 <!--SCCMDocs-pr issue 2812-->
 Wanneer u deze optie inschakelt, wordt de Configuration Manager-client niet in de inrichtings modus geplaatst. Windows Setup wordt op de achtergrond uitgevoerd en de client blijft normaal functioneren. Zie [inrichtings modus](provisioning-mode.md)voor meer informatie.
@@ -2478,11 +2490,11 @@ Zie [Windows Setup opdracht regel opties](https://docs.microsoft.com/windows-har
 
 #### <a name="ignore-any-dismissible-compatibility-messages"></a>Verwijder compatibiliteitsberichten die kunnen worden genegeerd
 
-Hiermee geeft u op dat de installatie door Setup wordt voltooid en dat er dismissible-compatibiliteits berichten worden genegeerd. Deze instelling komt overeen met de Windows Setup opdracht regel optie `/Compat IgnoreWarning`.  
+Hiermee geeft u op dat de installatie door Setup wordt voltooid en dat er dismissible-compatibiliteits berichten worden genegeerd. Deze instelling komt overeen met de Windows Setup opdracht regel optie `/Compat IgnoreWarning` .  
 
 #### <a name="dynamically-update-windows-setup-with-windows-update"></a>Installatie van Windows dynamisch bijwerken met Windows Update
 
-Schakel Setup in om dynamische update bewerkingen uit te voeren, zoals zoeken, downloaden en installeren van updates. Deze instelling komt overeen met de Windows Setup opdracht regel optie `/DynamicUpdate`. Deze instelling is niet compatibel met Configuration Manager software-updates. Schakel deze optie in als u updates beheert met zelfstandige Windows Server Update Services (WSUS) of Windows Update voor bedrijven.  
+Schakel Setup in om dynamische update bewerkingen uit te voeren, zoals zoeken, downloaden en installeren van updates. Deze instelling komt overeen met de Windows Setup opdracht regel optie `/DynamicUpdate` . Deze instelling is niet compatibel met Configuration Manager software-updates. Schakel deze optie in als u updates beheert met zelfstandige Windows Server Update Services (WSUS) of Windows Update voor bedrijven.  
 
 #### <a name="override-policy-and-use-default-microsoft-update"></a>Beleid negeren en standaard Microsoft Update gebruiken
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e2ace9e8a0fb8ba9e9071a2dc9db09434fe5279e
-ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
+ms.openlocfilehash: 0e38f35f49e827893be5e7763a52dd3b5a901bf7
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84613951"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353527"
 ---
 <!-- 
 - Feature 1357546
@@ -107,12 +107,10 @@ Begeleide procedures voor hulp bij het oplossen van problemen Configuration Mana
 
 ## <a name="new-and-updated-support-articles"></a>Nieuwe en bijgewerkte ondersteunings artikelen
 
-Ondersteunings artikelen die nieuw zijn of worden bijgewerkt tussen 20 maart en 15 mei 2020.
+Ondersteunings artikelen die nieuw zijn of worden bijgewerkt tussen 16 mei en 22 juni 2020.
 
-- [KB 4561494 micro soft Edge-toepassing kan niet worden gemaakt Configuration Manager](https://support.microsoft.com/help/4561494)
-- [KB 4551059 Remote Configuration Manager console loopt 20 seconden per 10 minuten vast](https://support.microsoft.com/help/4551059)
-- [KB 4556203-samen vatting van wijzigingen in micro soft endpoint Configuration Manager huidige vertakking, versie 2002](https://support.microsoft.com/help/4556203)
-- [KB 4553501-update voor micro soft endpoint Configuration Manager versie 2002, eerste update ring](https://support.microsoft.com/help/4553501)
-- [KB 4561945 fout ' de onderliggende verbinding is gesloten ' wanneer het service verbindings programma het bestand ConfigMgr. AdminUIContent. cab downloadt](https://support.microsoft.com/help/4561945)
+- [KB 4564442 Windows 10-implementaties mislukken met micro soft Deployment Toolkit op computers met BIOS-type firmware](https://support.microsoft.com/help/4564442)
+- [KB 4563473-update pakket voor Configuration Manager versie 2002 Tenant koppel problemen](https://support.microsoft.com/help/4563473)
+- [KB 4567007 PXE-opstart fouten of vertraging van taken reeksen na het bijwerken van Configuration Manager current branch, versie 2002](https://support.microsoft.com/help/4567007)
 
 Als u zich wilt abonneren op Atom of RSS-melding van nieuwe Configuration Manager-ondersteunings artikelen, raadpleegt u [content updates ondersteunen](https://support.microsoft.com/help/4089498/) en selecteert u **micro soft endpoint Configuration Manager**.  

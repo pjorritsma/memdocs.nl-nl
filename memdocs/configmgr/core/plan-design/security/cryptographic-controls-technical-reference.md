@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 623a8dab52e13c4674b961e825033430d34a8f88
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: fe50aad3cb35ab5908f604560f4dcd22800919a5
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906562"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353442"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>Technische naslaginformatie voor cryptografische besturingselementen
 
@@ -24,7 +24,7 @@ Configuration Manager gebruikt ondertekening en versleuteling om het beheer van 
 
  Het primaire hash-algoritme dat Configuration Manager gebruikt voor ondertekening is SHA-256. Wanneer twee Configuration Manager-sites met elkaar communiceren, ondertekenen ze hun communicatie met SHA-256. Het primaire versleutelings algoritme dat in Configuration Manager is geïmplementeerd, is 3DES. Dit wordt gebruikt voor het opslaan van gegevens in de Configuration Manager-Data Base en voor client-HTTP-communicatie. Wanneer u client communicatie via HTTPS gebruikt, kunt u uw open bare-sleutel infrastructuur (PKI) configureren voor het gebruik van RSA-certificaten met de maximale hash-algoritmen en sleutel lengten die zijn gedocumenteerd in [vereisten voor PKI-certificaten](../network/pki-certificate-requirements.md).  
 
- Voor de meeste cryptografische bewerkingen voor op Windows gebaseerde besturings systemen maakt Configuration Manager gebruik van SHA-2, 3DES en AES en RSA-algoritmen van de Windows CryptoAPI-bibliotheek Rsaenh. dll.  
+ Voor de meeste cryptografische bewerkingen voor op Windows gebaseerde besturings systemen maakt Configuration Manager gebruik van SHA-2, 3DES en AES en RSA-algoritmen van de Windows CryptoAPI-bibliotheek rsaenh.dll.  
 
 > [!IMPORTANT]  
 >  Zie [About SSL Vulnerabilities](#about-ssl-vulnerabilities)voor informatie over de aanbevolen wijzigingen in reactie op SSL-beveiligingslekken in.  
@@ -70,7 +70,7 @@ Niet alle apparaten kunnen inhoud-hashing ondersteunen. De uitzonde ringen zijn 
  Voor elk pakket voor besturingssysteemimplementatie kunt u versleuteling inschakelen wanneer het pakket wordt verzonden naar computers door gebruik te maken van multicast. De versleuteling gebruikt Advanced Encryption Standard (AES). Als u versleuteling inschakelt, is er geen aanvullende certificaatconfiguratie vereist. Het multicast-distributiepunt genereert automatisch symmetrische sleutels voor het versleutelen van het pakket. Elk pakket heeft een andere versleutelingssleutel. De sleutel wordt opgeslagen op het multicast-distributiepunt met standaard Windows-API's. Wanneer de client verbinding maakt met de multicast-sessie, gebeurt de uitwisseling van de sleutel over een kanaal dat is versleuteld met het door PKI uitgegeven certificaat voor clientverificatie (als de client HTTPS gebruikt) of met het zelfondertekende certificaat (als de client HTTP gebruikt). De client slaat de sleutel alleen op in het geheugen voor de duur van de multicast-sessie.  
 
 ### <a name="encryption-for-media-to-deploy-operating-systems"></a>Versleuteling voor media om besturings systemen te implementeren  
- Als u media gebruikt om besturingssystemen te implementeren en een wachtwoord opgeeft om de media te beveiligen, worden de omgevingsvariabelen versleuteld met Advanced Encryption Standard (AES). Andere gegevens op de media, waaronder pakketten en inhoud voor toepassingen, worden niet versleuteld.  
+ Wanneer u media gebruikt om besturings systemen te implementeren en een wacht woord opgeeft om de media te beveiligen, worden de omgevings variabelen versleuteld met behulp van Advanced Encryption Standard (AES) met een 128-bits sleutel grootte. Andere gegevens op de media, waaronder pakketten en inhoud voor toepassingen, worden niet versleuteld.  
 
 ### <a name="encryption-for-content-that-is-hosted-on-cloud-based-distribution-points"></a>Versleuteling voor inhoud die wordt gehost op cloud-gebaseerde distributie punten  
  Vanaf System Center 2012 Configuration Manager SP1, wanneer u Cloud distributiepunten gebruikt, wordt de inhoud die u uploadt naar deze distributie punten versleuteld met behulp van Advanced Encryption Standard (AES) met een 256-bits sleutel grootte. De inhoud wordt opnieuw versleuteld wanneer u die bijwerkt. Als clients de inhoud downloaden, wordt deze versleuteld en beveiligd door de HTTPS-verbinding.  
@@ -260,5 +260,5 @@ Ga als volgt te werk om de beveiliging van uw Configuration Manager-clients en-s
 - SSL 3,0, TLS 1,0 en TLS 1,1 uitschakelen 
 - De aan TLS gerelateerde coderings suites opnieuw ordenen 
 
-Zie [het gebruik van bepaalde cryptografische algoritmen en protocollen in Schannel. dll beperken en de prioriteit van](https://support.microsoft.com/help/245030/) [Schannel-coderings suites bepalen](https://docs.microsoft.com/windows/win32/secauthn/prioritizing-schannel-cipher-suites)voor meer informatie. Deze procedures hebben geen invloed op de functionaliteit van Configuration Manager.
+Zie [het gebruik van bepaalde cryptografische algoritmen en protocollen in Schannel.dll](https://support.microsoft.com/help/245030/) en [prioriteiten voor Schannel-coderings suites](https://docs.microsoft.com/windows/win32/secauthn/prioritizing-schannel-cipher-suites)beperken voor meer informatie. Deze procedures hebben geen invloed op de functionaliteit van Configuration Manager.
 

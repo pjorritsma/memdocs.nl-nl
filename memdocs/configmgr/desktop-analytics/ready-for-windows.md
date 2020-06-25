@@ -12,16 +12,34 @@ ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
 ROBOTS: NOINDEX
-ms.openlocfilehash: 75dd74e3c1019c9819b44a0ffa8936eeb9eee366
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 18e703691696a2cfc02a5b9715fb6062360229e2
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268348"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353459"
 ---
 # <a name="ready-for-modern-desktop-retirement-faq"></a>Veelgestelde vragen over het voorbereiden van moderne Desktop-pensioen
 
 <!-- placeholder -->
+
+## <a name="ready-for-windows-adoption-status"></a>Gereed voor Windows-acceptatie status
+
+De status van de goed keuring is gebaseerd op informatie van commerciële apparaten die gegevens delen met micro soft. De status is geïntegreerd met ondersteunings instructies van software leveranciers.
+
+Desktop Analytics biedt de acceptatie status voor elke versie van een Asset die is gevonden op commerciële apparaten. Deze status bevat geen gegevens van consumenten apparaten of apparaten die geen gegevens delen. De status kan niet representatief zijn voor het acceptatie tempo van alle Windows 10-apparaten.
+
+De mogelijke categorieën zijn:
+
+- **Sterk goedgekeurd**: op ten minste 100.000 commerciële Windows 10-apparaten is deze app geïnstalleerd.
+
+- **Goedgekeurd**: ten minste 10.000 commerciële Windows 10-apparaten hebben deze app geïnstalleerd.
+
+- **Onvoldoende gegevens**: te weinig commerciële Windows 10-apparaten delen informatie voor deze app voor micro soft om de toepassing te categoriseren.
+
+- **Contact opnemen met ontwikkel aars**: er zijn mogelijk compatibiliteits problemen met deze versie van de app. Micro soft raadt aan om contact op te nemen met de software provider voor meer informatie.
+
+- **Onbekend**: er is geen informatie beschikbaar voor deze versie van deze toepassing. Er is mogelijk informatie beschikbaar voor andere versies van de toepassing.
 
 ## <a name="general"></a>Algemeen
 

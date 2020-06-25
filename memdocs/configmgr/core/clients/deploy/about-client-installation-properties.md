@@ -2,7 +2,7 @@
 title: Client installatie parameters en eigenschappen
 titleSuffix: Configuration Manager
 description: Meer informatie over de ccmsetup-opdracht regel parameters en eigenschappen voor het installeren van de Configuration Manager-client.
-ms.date: 04/01/2020
+ms.date: 06/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,40 +10,40 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fda1e877f8e0bc211b36e288af13de204305cc5a
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: 4065f320ec27f53e50c64bc7ca0c97d3f6923853
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455035"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353272"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Over para meters en eigenschappen van client installatie in Configuration Manager
 
 *Van toepassing op: Configuration Manager (huidige vertakking)*
 
-Gebruik de opdracht CCMSetup. exe om de Configuration Manager-client te installeren. Als u client installatie *parameters* op de opdracht regel opgeeft, wordt het installatie gedrag gewijzigd. Als u *Eigenschappen* voor client installatie op de opdracht regel opgeeft, wordt de oorspronkelijke configuratie van de geïnstalleerde client agent gewijzigd.
+Gebruik de opdracht CCMSetup.exe om de Configuration Manager-client te installeren. Als u client installatie *parameters* op de opdracht regel opgeeft, wordt het installatie gedrag gewijzigd. Als u *Eigenschappen* voor client installatie op de opdracht regel opgeeft, wordt de oorspronkelijke configuratie van de geïnstalleerde client agent gewijzigd.
 
-## <a name="about-ccmsetupexe"></a><a name="aboutCCMSetup"></a>Over CCMSetup. exe
+## <a name="about-ccmsetupexe"></a><a name="aboutCCMSetup"></a>Over CCMSetup.exe
 
-De CCMSetup. exe-opdracht downloadt de benodigde bestanden om de client te installeren vanaf een beheer punt of een bron locatie. Deze bestanden kunnen het volgende omvatten:  
+De CCMSetup.exe opdracht downloadt de benodigde bestanden om de client te installeren vanaf een beheer punt of een bron locatie. Deze bestanden kunnen het volgende omvatten:  
 
-- De Windows Installer package client. msi waarmee de client software wordt geïnstalleerd
+- Het Windows Installer-pakket client.msi waarmee de client software wordt geïnstalleerd
 
 - Client vereisten
 
 - Updates en oplossingen voor de Configuration Manager-client
 
 > [!NOTE]
-> U kunt client. msi niet rechtstreeks installeren.  
+> U kunt client.msi niet rechtstreeks installeren.  
 
-CCMSetup. exe biedt opdracht regel *parameters* voor het aanpassen van de installatie. Para meters worden voorafgegaan door een slash ( `/` ) en per Conventie zijn in kleine letters. U geeft de waarde van een para meter op wanneer dit nodig is met behulp van een dubbele punt ( `:` ) direct gevolgd door de waarde. Zie voor meer informatie [CCMSetup. exe opdracht regel parameters](#ccmsetupexe-command-line-parameters).
+CCMSetup.exe biedt opdracht regel *parameters* voor het aanpassen van de installatie. Para meters worden voorafgegaan door een slash ( `/` ) en per Conventie zijn in kleine letters. U geeft de waarde van een para meter op wanneer dit nodig is met behulp van een dubbele punt ( `:` ) direct gevolgd door de waarde. Zie [CCMSetup.exe opdracht regel parameters](#ccmsetupexe-command-line-parameters)voor meer informatie.
 
-U kunt ook *Eigenschappen* voor de CCMSetup. exe-opdracht regel opgeven om het gedrag van client. msi te wijzigen. eigenschappen per Conventie zijn hoofd letters. U geeft een waarde voor een eigenschap op met behulp van een gelijkteken ( `=` ) direct gevolgd door de waarde. Zie [client. msi-eigenschappen](#clientMsiProps)voor meer informatie.
+U kunt ook *Eigenschappen* opgeven op de CCMSetup.exe opdracht regel om het gedrag van client.msi te wijzigen. Eigenschappen per Conventie zijn hoofd letters. U geeft een waarde voor een eigenschap op met behulp van een gelijkteken ( `=` ) direct gevolgd door de waarde. Zie [Client.msi eigenschappen](#clientMsiProps)voor meer informatie.
 
 > [!IMPORTANT]  
-> Geef CCMSetup-para meters op voordat u eigenschappen voor client. msi opgeeft.  
+> Geef CCMSetup-para meters op voordat u eigenschappen voor client.msi opgeeft.  
 
-CCMSetup. exe en de ondersteunende bestanden bevinden zich op de site server in de map **client** van de installatiemap Configuration Manager. Configuration Manager deze map te delen met het netwerk onder de site share. Bijvoorbeeld `\\SiteServer\SMS_ABC\Client`.
+CCMSetup.exe en de ondersteunende bestanden bevinden zich op de site server in de map **client** van de installatiemap van Configuration Manager. Configuration Manager deze map te delen met het netwerk onder de site share. Bijvoorbeeld `\\SiteServer\SMS_ABC\Client`.
 
 Aan de opdrachtregel gebruikt de opdracht CCMSetup.exe de volgende indeling:  
 
@@ -68,11 +68,11 @@ In dit voor beeld worden de volgende dingen gedaan:
 
 Als u het Active Directory schema voor Configuration Manager uitbreidt, publiceert de site veel client installatie-eigenschappen in Active Directory Domain Services. Deze eigenschappen worden automatisch door de Configuration Manager-client gelezen. Zie [over eigenschappen van client installatie die zijn gepubliceerd op Active Directory Domain Services](about-client-installation-properties-published-to-active-directory-domain-services.md) voor meer informatie.  
 
-## <a name="ccmsetupexe-command-line-parameters"></a>CCMSetup. exe opdracht regel parameters
+## <a name="ccmsetupexe-command-line-parameters"></a>CCMSetup.exe opdracht regel parameters
 
 ### <a name=""></a><a name="bkmk_help"></a> /?
 
-Bevat beschik bare opdracht regel parameters voor ccmsetup. exe.  
+Bevat beschik bare opdracht regel parameters voor ccmsetup.exe.  
 
 Voorbeeld: `ccmsetup.exe /?`
 
@@ -142,13 +142,13 @@ De volgende voorbeeld opdracht regel bevat de andere vereiste installatie parame
 
 ### <a name="retry"></a>/Retry
 
-Als CCMSetup. exe de installatie bestanden niet kan downloaden, gebruikt u deze para meter om het interval voor nieuwe pogingen in minuten op te geven. CCMSetup blijft het opnieuw proberen totdat het de limiet bereikt die is opgegeven in de para meter [**/downloadtimeout**](#downloadtimeout) .
+Als CCMSetup.exe installatie bestanden niet kunt downloaden, gebruikt u deze para meter om het interval voor nieuwe pogingen in minuten op te geven. CCMSetup blijft het opnieuw proberen totdat het de limiet bereikt die is opgegeven in de para meter [**/downloadtimeout**](#downloadtimeout) .
 
 Voorbeeld: `ccmsetup.exe /retry:20`  
 
 ### <a name="noservice"></a>/noservice
 
-Met deze para meter wordt voor komen dat CCMSetup als een service wordt uitgevoerd. dit gebeurt standaard. Wanneer CCMSetup als een service wordt uitgevoerd, wordt dit uitgevoerd in de context van het lokale systeem account van de computer. Dit account heeft mogelijk onvoldoende rechten voor toegang tot de vereiste netwerk bronnen voor de installatie. Met **/noservice**wordt CCMSetup. exe uitgevoerd in de context van het gebruikers account dat u gebruikt om de installatie te starten.
+Met deze para meter wordt voor komen dat CCMSetup als een service wordt uitgevoerd. dit gebeurt standaard. Wanneer CCMSetup als een service wordt uitgevoerd, wordt dit uitgevoerd in de context van het lokale systeem account van de computer. Dit account heeft mogelijk onvoldoende rechten voor toegang tot de vereiste netwerk bronnen voor de installatie. Met **/noservice**wordt CCMSetup.exe uitgevoerd in de context van het gebruikers account dat u gebruikt om de installatie te starten.
 
 Voorbeeld: `ccmsetup.exe /noservice`  
 
@@ -157,7 +157,7 @@ Voorbeeld: `ccmsetup.exe /noservice`
 Specificeert dat CCMSetup moet worden uitgevoerd als een service die gebruikmaakt van het lokale systeem account.  
 
 > [!TIP]
-> Als u een script gebruikt om CCMSetup. exe uit te voeren met de para meter **/service** , wordt ccmsetup. exe afgesloten nadat de service is gestart. De installatie Details worden mogelijk niet goed gerapporteerd aan het script.
+> Als u een script gebruikt om CCMSetup.exe uit te voeren met de para meter **/service** , wordt CCMSetup.exe afgesloten nadat de service is gestart. De installatie Details worden mogelijk niet goed gerapporteerd aan het script.
 
 Voorbeeld: `ccmsetup.exe /service`  
 
@@ -224,7 +224,7 @@ Met deze para meter geeft u een tekst bestand op dat de eigenschappen van de cli
 
 - Als CCMSetup als een service wordt uitgevoerd, plaatst u dit bestand in de map CCMSetup System: `%Windir%\Ccmsetup` .
 
-- Als u de para meter [**/noservice**](#noservice) opgeeft, plaatst u dit bestand in dezelfde map als CCMSetup. exe.
+- Als u de para meter [**/noservice**](#noservice) opgeeft, plaatst u dit bestand in dezelfde map als CCMSetup.exe.
 
 Voorbeeld: `CCMSetup.exe /config:"configuration file name.txt"`
 
@@ -234,7 +234,7 @@ Voor beeld van `[Client Install]` sectie vermelding:`Install=INSTALL=ALL SMSSITE
 
 ### <a name="skipprereq"></a>/skipprereq
 
-Met deze para meter wordt aangegeven dat de opgegeven vereiste niet wordt geïnstalleerd met CCMSetup. exe. U kunt meer dan één waarde invoeren. Gebruik de punt komma ( `;` ) als scheidings teken voor elke waarde.
+Deze para meter geeft aan dat CCMSetup.exe de opgegeven vereiste niet installeert. U kunt meer dan één waarde invoeren. Gebruik de punt komma ( `;` ) als scheidings teken voor elke waarde.
 
 Voorbeelden:
 
@@ -246,20 +246,35 @@ Zie [vereisten voor Windows-clients](prerequisites-for-deploying-clients-to-wind
 
 ### <a name="forceinstall"></a>/forceinstall
 
-Specificeert dat CCMSetup. exe alle bestaande clients verwijdert en een nieuwe client installeert.  
+Opgeven dat CCMSetup.exe elke bestaande client verwijdert en een nieuwe client installeert.  
 
 ### <a name="excludefeatures"></a>/ExcludeFeatures
 
-Met deze para meter geeft u op dat CCMSetup. exe de opgegeven functie niet installeert.
+Met deze para meter geeft u op dat CCMSetup.exe de opgegeven functie niet installeert.
 
 Voor beeld: `CCMSetup.exe /ExcludeFeatures:ClientUI` installeert software Center niet op de client.  
 
 > [!NOTE]  
 > `ClientUI`is de enige waarde die de para meter **/ExcludeFeatures** ondersteunt.
 
-## <a name="ccmsetupexe-return-codes"></a><a name="ccmsetupReturnCodes"></a>Retour codes van CCMSetup. exe
+### <a name="alwaysexcludeupgrade"></a>/AlwaysExcludeUpgrade
 
-De opdracht CCMSetup. exe biedt de volgende retour codes. Als u problemen wilt oplossen, controleert u `%WinDir%\ccmsetup\ccmsetup.log` op de client voor context en aanvullende details over retour codes.
+Met deze para meter wordt opgegeven of een client automatisch wordt bijgewerkt wanneer u [**automatische client upgrade**](../manage/upgrade/upgrade-clients-for-windows-computers.md#bkmk_autoupdate)inschakelt.
+
+Ondersteunde waarden:
+
+- `TRUE`: De client wordt niet automatisch bijgewerkt
+- `FALSE`: De client wordt automatisch bijgewerkt (standaard)
+
+Bijvoorbeeld:  
+
+`CCMSetup.exe /AlwaysExcludeUpgrade:TRUE`
+
+Zie [Extended interoperabiliteit client](../../understand/interoperability-client.md)voor meer informatie.
+
+## <a name="ccmsetupexe-return-codes"></a><a name="ccmsetupReturnCodes"></a>CCMSetup.exe retour codes
+
+De CCMSetup.exe opdracht bevat de volgende retour codes. Als u problemen wilt oplossen, controleert u `%WinDir%\ccmsetup\ccmsetup.log` op de client voor context en aanvullende details over retour codes.
 
 |Retourcode|Betekenis|  
 |-----------|-------|  
@@ -270,9 +285,9 @@ De opdracht CCMSetup. exe biedt de volgende retour codes. Als u problemen wilt o
 |9|Fout bij evaluatie van vereisten|  
 |10|De hash-validatie is mislukt voor Setup-manifest|  
 
-## <a name="ccmsetupmsi-properties"></a><a name="ccmsetupMsiProps"></a>Ccmsetup. msi-eigenschappen
+## <a name="ccmsetupmsi-properties"></a><a name="ccmsetupMsiProps"></a>Ccmsetup.msi eigenschappen
 
-De volgende eigenschappen kunnen het installatie gedrag van ccmsetup. msi wijzigen.
+De volgende eigenschappen kunnen het installatie gedrag van ccmsetup.msi wijzigen.
 
 ### <a name="ccmsetupcmd"></a>CCMSETUPCMD
 
@@ -283,9 +298,9 @@ Voorbeeld: `ccmsetup.msi CCMSETUPCMD="/mp:https://mp.contoso.com CCMHOSTNAME=mp.
 > [!Tip]
 > Microsoft Intune beperkt de opdracht regel tot 1024 tekens.
 
-## <a name="clientmsi-properties"></a><a name="clientMsiProps"></a>Eigenschappen van client. msi
+## <a name="clientmsi-properties"></a><a name="clientMsiProps"></a>Client.msi eigenschappen
 
-De volgende eigenschappen kunnen het installatie gedrag van client. msi wijzigen, dat ccmsetup. exe installeert. Als u de [Push-client installatie methode](plan/client-installation-methods.md#client-push-installation)gebruikt, geeft u deze eigenschappen op het tabblad **client** van de eigenschappen van de **client push installatie** op in de Configuration Manager-console.
+De volgende eigenschappen kunnen het installatie gedrag van client.msi wijzigen, dat ccmsetup.exe geïnstalleerd. Als u de [Push-client installatie methode](plan/client-installation-methods.md#client-push-installation)gebruikt, geeft u deze eigenschappen op het tabblad **client** van de eigenschappen van de **client push installatie** op in de Configuration Manager-console.
 
 ### <a name="aadclientappid"></a>AADCLIENTAPPID
 
@@ -429,7 +444,7 @@ Zie [over logboek bestanden](../../plan-design/hierarchy/about-log-files.md)voor
 
 ### <a name="ccmevalinterval"></a>CCMEVALINTERVAL
 
-De frequentie in minuten waarop het evaluatie hulpprogramma van de client status (ccmeval. exe) wordt uitgevoerd. Geef een geheel getal op van `1` tot `1440` . Ccmeval wordt standaard eenmaal per dag uitgevoerd (1440 minuten).
+De frequentie in minuten waarmee het hulp programma voor client status evaluatie (ccmeval.exe) wordt uitgevoerd. Geef een geheel getal op van `1` tot `1440` . Ccmeval wordt standaard eenmaal per dag uitgevoerd (1440 minuten).
 
 Voorbeeld: `CCMSetup.exe CCMEVALINTERVAL=1440`
 
@@ -437,7 +452,7 @@ Zie [clients controleren](../manage/monitor-clients.md#bkmk_health)voor meer inf
 
 ### <a name="ccmevalhour"></a>CCMEVALHOUR
 
-Het uur gedurende de dag waarop het hulp programma voor de evaluatie van de client status (ccmeval. exe) wordt uitgevoerd. Geef een geheel getal op tussen `0` (middernacht) tot en met `23` (11:00 pm). Ccmeval wordt standaard om middernacht uitgevoerd.
+Het uur gedurende de dag waarop het hulp programma voor de evaluatie van de client status (ccmeval.exe) wordt uitgevoerd. Geef een geheel getal op tussen `0` (middernacht) tot en met `23` (11:00 pm). Ccmeval wordt standaard om middernacht uitgevoerd.
 
 Zie [clients controleren](../manage/monitor-clients.md#bkmk_health)voor meer informatie over de evaluatie van de client status.
 
@@ -489,7 +504,7 @@ Voorbeeld: `CCMSetup.exe /UsePKICert CCMHTTPSPORT=443`
 Gebruik deze eigenschap om de map in te stellen voor de installatie van de Configuration Manager-client bestanden. De standaard instelling wordt gebruikt `%WinDir%\CCM` .
 
 > [!TIP]
-> Ongeacht waar u de client bestanden installeert, wordt altijd het **ccmcore. dll** -bestand in de map geïnstalleerd `%WinDir%\System32` . Op een 64-bits besturings systeem wordt een kopie van ccmcore. dll in de `%WinDir%\SysWOW64` map geïnstalleerd. Dit bestand ondersteunt 32-bits toepassingen die gebruikmaken van de 32-bits versie van de client-Api's van de Configuration Manager SDK.
+> Ongeacht waar u de client bestanden installeert, wordt altijd het **ccmcore.dll** -bestand in de map geïnstalleerd `%WinDir%\System32` . Op een 64-bits besturings systeem wordt een kopie van ccmcore.dll in de `%WinDir%\SysWOW64` map geïnstalleerd. Dit bestand ondersteunt 32-bits toepassingen die gebruikmaken van de 32-bits versie van de client-Api's van de Configuration Manager SDK.
 
 Voorbeeld: `CCMSetup.exe CCMINSTALLDIR="C:\ConfigMgr"`
 

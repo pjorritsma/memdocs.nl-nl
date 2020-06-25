@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: a2829c5bd86192c4f2421550af9f27aef64aa353
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: 774e77f62ee31daa89eeb4273f3c1e7db68a374d
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428652"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353476"
 ---
 # <a name="what-is-desktop-analytics"></a>Wat is Desktop Analytics?
 
@@ -81,7 +81,7 @@ Als u Desktop Analytics wilt gebruiken, moet u ervoor zorgen dat uw omgeving vol
 
     - Voor toegang tot de portal na onboarding hebt u het volgende nodig:
 
-      - De rol en [**eigenaar**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner)van de [**beheerder voor desktop Analytics**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions) of [**Inzender**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) machtigingen voor de resource groep waarin de werk ruimte is gemaakt.
+      - De rol en [**eigenaar**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner)van de [**beheerder van Desktop Analytics**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions) of [**inzender**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) machtigingen voor de gemaakte log Analytics werk ruimte.
 
 - Configuration Manager, versie 1902 met update pakket (4500571) of hoger. Zie [Update Configuration Manager](connect-configmgr.md#bkmk_hotfix)voor meer informatie.  
 

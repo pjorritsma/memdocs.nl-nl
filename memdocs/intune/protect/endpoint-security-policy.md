@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 06/15/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 9c2e6f742610eb8f2f526c6fc7a5afabfbadcbbf
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 071cab69b652193b835282603e187e4f3d0c7b0d
+ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990867"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879718"
 ---
 # <a name="manage-device-security-with-endpoint-security-policies-in-microsoft-intune"></a>Beveiliging van apparaten beheren met eindpuntbeveiligingsbeleid in Microsoft Intune
 
@@ -39,9 +39,9 @@ Hieronder vindt u een korte beschrijving van elk type eindpuntbeveiligingsbeleid
 
 - [Schijfversleuteling](../protect/endpoint-security-disk-encryption-policy.md): de schijfversleutelingsprofielen voor eindpuntbeveiliging zijn alleen gericht op de instellingen die relevant zijn voor een ingebouwde versleutelingsmethode voor apparaten, zoals FileVault of BitLocker. Op deze manier kunnen beveiligingsbeheerders de instellingen voor schijfversleuteling eenvoudig beheren zonder door een massa niet-gerelateerde instellingen te hoeven navigeren.
 
-- [Firewall](../protect/endpoint-security-firewall-policy.md): gebruik het firewallbeleid voor eindpuntbeveiliging in Intune om een in apparaten ingebouwde firewall te configureren voor apparaten met macOS en Windows 10. Ingebouwde firewalls zijn onder andere BitLocker voor Windows-apparaten en FileVault voor macOS.
+- [Firewall](../protect/endpoint-security-firewall-policy.md): gebruik het firewallbeleid voor eindpuntbeveiliging in Intune om een in apparaten ingebouwde firewall te configureren voor apparaten met macOS en Windows 10. 
 
-- [Eindpuntdetectie en -respons](../protect/endpoint-security-edr-policy.md): wanneer u Microsoft Defender Advanced Threat Protection (Defender ATP) integreert met Intune, kunt u eindpuntbeveiligingsbeleid gebruiken voor eindpuntdetectie en-respons (EDR) voor het beheren van de EDR-instellingen en de onboarding van apparaten naar Defender ATP.
+- [Eindpuntdetectie en -respons](../protect/endpoint-security-edr-policy.md): wanneer u Microsoft Defender ATP integreert met Intune, kunt u eindpuntbeveiligingsbeleid gebruiken voor eindpuntdetectie en-respons (EDR) voor het beheren van de EDR-instellingen en de onboarding van apparaten naar Microsoft Defender ATP.
 
 - [Kwetsbaarheid voor aanvallen verminderen](../protect/endpoint-security-asr-policy.md): wanneer Defender-antivirus wordt gebruikt op uw Windows 10-apparaten, gebruikt u Intune-eindpuntbeveiligingsbeleid voor het verminderen van de kwetsbaarheid voor aanvallen om die instellingen voor uw apparaten te beheren.
 

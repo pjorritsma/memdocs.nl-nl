@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b836d3d2f319ca5ec9833e5902e6fcbb94b8dd65
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 7101ad9bffcd80bd608690f22db37abbbc7a7895
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83987117"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093803"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-configurator"></a>Registratie van iOS-/iPadOS-apparaten instellen met Apple Configurator
 
@@ -48,15 +48,17 @@ Inschrijven met Apple Configurator kan niet worden gebruikt met de [apparaatinsc
 
 Met een inschrijvingsprofiel voor apparaten worden de instellingen tijdens het inschrijven gedefinieerd. Deze instellingen worden slechts eenmaal toegepast. Volg deze stappen om een inschrijvingsprofiel te maken om iOS-/iPadOS-apparaten in te schrijven met Apple Configurator.
 
-1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **iOS** > **iOS-inschrijving** > **Apple Configurator** > **Profielen** > **Maken**.
+1. Kis in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de optie **Apparaten** > **iOS/iPadOS** > **iOS/iPadOS-inschrijving** > **Apple Configurator**.
 
-    ![Een profiel maken voor Apple Configurator](./media/apple-configurator-enroll-ios/apple-config-create-profile.png)
+    ![Een profiel maken voor Apple Configurator](./media/apple-configurator-enroll-ios/apple-configurator.png)
 
-2. Typ onder **Inschrijvingsprofiel maken** een **naam** en **beschrijving** voor het profiel (voor administratieve doeleinden). Gebruikers zien deze gegevens niet. U kunt dit veld Naam gebruiken om een dynamische groep te maken in Azure Active Directory. Gebruik de profielnaam om de parameter enrollmentProfileName te definiëren om apparaten aan dit inschrijvingsprofiel toe te wijzen. Meer informatie over dynamische Azure Active Directory-groepen.
+2. Kies **Profielen** > **Maken**.
+
+3. Typ onder **Inschrijvingsprofiel maken** een **naam** en **beschrijving** voor het profiel (voor administratieve doeleinden). Gebruikers zien deze gegevens niet. U kunt dit veld Naam gebruiken om een dynamische groep te maken in Azure Active Directory. Gebruik de profielnaam om de parameter enrollmentProfileName te definiëren om apparaten aan dit inschrijvingsprofiel toe te wijzen. Meer informatie over dynamische Azure Active Directory-groepen.
 
     ![Schermafbeelding van het scherm Profiel maken met Inschrijven met gebruikersaffiniteit geselecteerd](./media/apple-configurator-enroll-ios/apple-configurator-profile-create.png)
 
-3. Geef voor **Gebruikersaffiniteit** aan of andere apparaten met dit profiel met of zonder toegewezen gebruiker moeten worden ingeschreven.
+4. Geef voor **Gebruikersaffiniteit** aan of andere apparaten met dit profiel met of zonder toegewezen gebruiker moeten worden ingeschreven.
 
     - **Inschrijven met gebruikersaffiniteit**: kies deze optie voor apparaten die eigendom zijn van gebruikers en die de bedrijfsportal willen gebruiken voor services zoals het installeren van apps. Het apparaat moet met de Configuratieassistent aan een gebruiker worden gekoppeld en kan vervolgens toegang krijgen tot bedrijfsgegevens en -e-mail. Alleen ondersteund bij inschrijving via Apple Configurator Setup Assistant. Gebruikersaffiniteit vereist [WS-Trust 1.3 gebruikersnaam/gemengd eindpunt](https://technet.microsoft.com/library/adfs2-help-endpoints). [Meer informatie](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 
@@ -65,7 +67,7 @@ Met een inschrijvingsprofiel voor apparaten worden de instellingen tijdens het i
      > [!NOTE]
      > Als **Inschrijven met gebruikersaffiniteit** is geselecteerd, zorgt u ervoor dat het apparaat, binnen 24 na de inschrijving ervan, met Configuratieassistent is gekoppeld aan een gebruiker. Anders mislukt de inschrijving en is er een herstel naar fabrieksinstellingen nodig om het apparaat in te schrijven.
 
-4. Als u kiest voor **Inschrijven met gebruikersaffiniteit**, hebt u de optie om gebruikers zich te laten verifiëren met de bedrijfsportal in plaats van de Apple-configuratieassistent.
+5. Als u kiest voor **Inschrijven met gebruikersaffiniteit**, hebt u de optie om gebruikers zich te laten verifiëren met de bedrijfsportal in plaats van de Apple-configuratieassistent.
 
     > [!NOTE]
     > Als u een van de volgende handelingen wilt uitvoeren, stelt u **Verifiëren met bedrijfsportal in plaats van Apple-configuratieassistent** in op **Ja**.
@@ -88,7 +90,7 @@ Met een inschrijvingsprofiel voor apparaten worden de instellingen tijdens het i
     DLXQPCWVGHMJ,apparaatdetails
 
    [Lees hier meer informatie over het vinden van het serienummer van een iOS-/iPadOS-apparaat](https://support.apple.com/HT204073).
-2. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **iOS** > **iOS-inschrijving** > **Apple Configurator** > **Apparaten** > **Maken**.
+2. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de optie **Apparaten** > **iOS/iPadOS** > **iOS/iPadOS-inschrijving** > **Apple Configurator** > **Apparaten** > **Toevoegen**.
 
 5. Selecteer een **inschrijvingsprofiel** om toe te passen op de serienummers die u importeert. Als u wilt dat bestaande details worden overschreven door de nieuwe details van serienummers, kiest u **Details voor bestaande id's overschrijven**.
 6. Zoek onder **Apparaten importeren** naar het CSV-bestand met serienummers en selecteer **Toevoegen**.
@@ -100,18 +102,18 @@ U kunt een inschrijvingsprofiel toewijzen als u iOS-/iPadOS-serienummers importe
 - **AC-profielen**
 
 #### <a name="assign-from-apple-configurator-devices"></a>Toewijzen vanaf Apple Configurator-apparaten
-1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **iOS** > **iOS-inschrijving** > **Apple Configurator** > **Apparaten** > kies de serienummers > **Profiel toewijzen**.
+1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de optie **Apparaten** > **iOS/iPadOS** > **iOS/iPadOS-inschrijving** > **Apple Configurator** > **Apparaten** > kies de serienummers > **Profiel toewijzen**.
 2. Kies onder **Profiel toewijzen** voor het **nieuwe profiel** dat u wilt toewijzen en kies vervolgens voor **Toewijzen**.
 
 #### <a name="assign-from-profiles"></a>Toewijzen vanaf profielen
-1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **iOS** > **iOS-inschrijving** > **Apple Configurator** > **Profielen** > kies een profiel.
+1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de optie **Apparaten** > **iOS/iPadOS** > **iOS/iPadOS-inschrijving** > **Apple Configurator** > **Profielen** > kies een profiel.
 2. Kies **Toegewezen apparaten** in het profiel en kies vervolgens **Toewijzen**.
 3. Filter op de serienummers die u aan het profiel wilt toewijzen, selecteer de apparaten en kies **Toewijzen**.
 
 ### <a name="export-the-profile"></a>Het profiel exporteren
 Nadat u het profiel hebt gemaakt en de serienummers toegewezen, moet u het profiel vanuit Intune als een URL exporteren. Vervolgens importeert u het profiel in Apple Configurator op een Mac om het met apparaten te implementeren.
 
-1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **iOS** > **iOS-inschrijving** > **Apple Configurator** > **Profielen** > kies het profiel dat u wilt exporteren.
+1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de optie **Apparaten** > **iOS/iPadOS** > **iOS/iPadOS-inschrijving** > **Apple Configurator** > **Profielen** >  kies het profiel dat u wilt exporteren.
 2. Selecteer **Profiel exporteren** in het profiel.
 3. Kopieer de **profiel-URL**. U kunt deze vervolgens aan Apple Configurator toevoegen om het Intune-profiel te definiëren dat wordt gebruikt door iOS-/iPadOS-apparaten.
 
@@ -132,7 +134,7 @@ Nadat u het profiel hebt gemaakt en de serienummers toegewezen, moet u het profi
 6. Selecteer in het deelvenster **Registreren bij MDM-server** de naam van de server die u hebt gemaakt en kies vervolgens **Volgende**.
 7. Selecteer in het deelvenster **Apparaten onder supervisie plaatsen** het toezichtsniveau en kies **Volgende**.
 8. Kies de **organisatie** in het deelvenster **Een organisatie maken** of maak een nieuwe organisatie en kies vervolgens **Volgende**.
-9. Kies in het deelvenster **iOS-/iPadOS-configuratieassistent configureren** de stappen die de gebruiker te zien krijgt en kies vervolgens **Voorbereiden**. Voer als u hierom wordt gevraagd een verificatie uit om de instellingen voor de vertrouwensrelatie bij te werken.  
+9. Kies in het deelvenster **iOS-/iPadOS-configuratieassistent configureren** de stappen die de gebruiker te zien krijgt en kies vervolgens **Voorbereiden**. Voer een verificatie uit om de vertrouwensinstellingen bij te werken als dit wordt gevraagd.  
 10. Zodra het iOS-/iPadOS-apparaat klaar is met de voorbereidingen, kunt u de USB-kabel verwijderen.  
 
 ### <a name="distribute-devices"></a>Apparaten distribueren
@@ -147,7 +149,7 @@ Apps waarvoor een gebruikersrelatie is vereist, zoals de bedrijfsportal-app die 
 
 ### <a name="export-the-profile-as-mobileconfig-to-iosipados-devices"></a>Het profiel als .mobileconfig exporteren naar iOS-/iPadOS-apparaten
 
-1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **iOS** > **iOS-inschrijving** > **Apple Configurator** > **Profielen** > kies het profiel dat u wilt exporteren > **Profiel exporteren**.
+1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de optie **Apparaten** > **iOS/iPadOS** > **iOS/iPadOS-inschrijving** > **Apple Configurator** > **Profielen** > kies het profiel dat u wilt exporteren > **Profiel exporteren**.
 2. Kies onder **Directe inschrijving** voor **Profiel downloaden** en sla het bestand op. Een inschrijvingsprofielbestand is slechts twee weken geldig. Na die tijd moet u weer een nieuw bestand maken.
 3. Breng het bestand over naar een Mac-computer waarop [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) wordt uitgevoerd om het rechtstreeks als een beheerprofiel naar iOS-/iPadOS-apparaten te pushen.
 4. Bereid het apparaat aan de hand van de volgende stappen voor met Apple Configurator:

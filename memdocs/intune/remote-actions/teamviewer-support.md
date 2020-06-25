@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b94146cc429f2a7f7b196f15527e8687368e6d78
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 3031e909b5bd330f9ec84f05f2c83c504022d50e
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988244"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746592"
 ---
 # <a name="use-teamviewer-to-remotely-administer-intune-devices"></a>TeamViewer gebruiken voor het extern beheren van Intune-apparaten
 
@@ -69,6 +69,6 @@ Wanneer u een externe sessie start, wordt er een vlag voor meldingen op het pict
 > [!NOTE]
 > Voor Windows-apparaten die zijn ingeschreven met behulp van methoden zonder tussenkomst van gebruikers, zoals de apparaatinschrijvingsmanager (DEM) en Windows Configuration Designer (WCD), wordt de TeamViewer-melding niet in de bedrijfsportal-app weergegeven. In deze scenario's is het raadzaam de sessie te genereren via de TeamViewer-portal.
 
-In TeamViewer kunt u een reeks acties op het apparaat uitvoeren, zoals het overnemen van het beheer van het apparaat. Zie de [TeamViewer-richtlijnen](https://www.teamviewer.com/support/documents/) voor meer informatie over wat u kunt doen.
+In TeamViewer kunt u een reeks acties op het apparaat uitvoeren, zoals het overnemen van het beheer van het apparaat. Zie de [TeamViewer-communitypagina](https://community.teamviewer.com/) voor meer informatie over wat u kunt doen.
 
 Als u klaar bent, sluit u het TeamViewer-venster.

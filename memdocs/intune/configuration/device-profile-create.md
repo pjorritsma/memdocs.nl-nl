@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 06/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74e365e50d73bb14f20376c92b43061b12d00003
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 886f572212a1af3e38fd5ea10afa21ce24c23411
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988461"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093302"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Een apparaatprofiel maken in Microsoft Intune
 
-Met apparaatprofielen kunt u instellingen toevoegen en configureren, en deze instellingen vervolgens naar apparaten in uw organisatie pushen. Meer details, onder andere over wat u allemaal kunt doen, vindt u in: [Functies en instellingen toepassen op uw apparaten met apparaatprofielen](device-profiles.md).
+Met apparaatprofielen kunt u instellingen toevoegen en configureren, en deze instellingen vervolgens naar apparaten in uw organisatie pushen. Raadpleeg [Functies en instellingen toepassen op uw apparaten met apparaatprofielen](device-profiles.md) voor meer informatie ondaer andere over wat u allemaal kunt doen.
 
 Dit artikel:
 
@@ -84,6 +84,7 @@ Kies vervolgens het profieltype. Welke instellingen u kunt configureren, is afha
 - [Vertrouwd certificaat](../protect/certificates-configure.md)
 - [VPN](vpn-settings-configure.md)
 - [Wi-Fi](wi-fi-settings-configure.md)
+- [Bedrade netwerken (macOS)](wired-network-settings-macos.md)
 
 Als u bijvoorbeeld **iOS/iPadOS** als platform selecteert, lijken uw profielopties op het volgende profiel:
 
@@ -178,7 +179,7 @@ Houd bij het maken van profielen rekening met de volgende aanbevelingen:
 
   :::image type="content" source="./media/device-profile-create/setting-applies-to-user-and-device.png" alt-text="Intune-beheersjabloon die van toepassing is op gebruikers en apparaten.":::
 
-- Informeer uw gebruikers bij elk restrictief beleid dat u maakt over de wijziging. Als u bijvoorbeeld de wachtwoordvereiste wijzigt van 4 tekens in 6 tekens, laat dit dan aan uw gebruikers weten voordat u het beleid toewijst.
+- Informeer uw gebruikers bij elk restrictief beleid dat u maakt over de wijziging. Als u bijvoorbeeld de wachtwoordvereiste wijzigt van vier (4) tekens in zes (6) tekens, laat dit dan aan uw gebruikers weten voordat u het beleid toewijst.
 
 ## <a name="next-steps"></a>Volgende stappen
 

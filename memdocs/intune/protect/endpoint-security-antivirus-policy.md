@@ -16,18 +16,18 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 2f3a378cdb3b5e24371edb2fd6dc240962f80342
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: bfefdee7e949faf9e484ea20e7fc203ee72a9784
+ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431901"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879660"
 ---
 # <a name="antivirus-policy-for-endpoint-security-in-intune"></a>Antivirusbeleid voor eindpuntbeveiliging in Intune
 
-Het antivirusbeleid van de Intune-eindpuntbeveiliging kan beveiligingsbeheerders helpen om zich te richten op het beheren van de afzonderlijke groep antivirusinstellingen voor beheerde apparaten. U kunt Intune integreren met Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) als Mobile Threat Defense-oplossing.
+Het antivirusbeleid van de Intune-eindpuntbeveiliging kan beveiligingsbeheerders helpen om zich te richten op het beheren van de afzonderlijke groep antivirusinstellingen voor beheerde apparaten. U kunt Intune integreren met Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) als Mobile Threat Defense-oplossing om een antivirusbeleid te gebruiken.
 
-Antivirusbeleid bevat verschillende profielen. Elk profiel bevat alleen de instellingen die relevant zijn voor Defender ATP-antivirus voor macOS, Windows 10 of voor de gebruikerservaring in de Windows-beveiligingstoepassing op Windows 10-apparaten.
+Antivirusbeleid bevat verschillende profielen. Elk profiel bevat alleen de instellingen die relevant zijn voor Microsoft Defender ATP-antivirus voor macOS, Windows 10 of voor de gebruikerservaring in de Windows-beveiligingstoepassing op Windows 10-apparaten.
 
 U vindt dit antivirusbeleid vinden onder **Beheren** in het knooppunt Eindpuntbeveiliging van het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -37,10 +37,10 @@ Het antivirusbeleid bevat dezelfde instellingen die zijn gevonden in *Endpoint P
 
 - **macOS**
   - Een ondersteunde versie van macOS
-  - Defender ATP moet op een apparaat zijn geïnstalleerd, zodat Intune om antivirus-instellingen op dat apparaat te beheren. Zie. [Defender-ATP voor macOS](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (in de documentatie van Defender ATP)
+  - Microsoft Defender ATP moet op een apparaat zijn geïnstalleerd om de antivirus-instellingen op dat apparaat te beheren met Intune. Zie. [Microsoft Defender ATP voor macOS](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (in de documentatie van Microsoft Defender ATP)
 
 - **Windows 10 en hoger**
-  - Defender ATP moet op een apparaat zijn geïnstalleerd, zodat Intune om antivirus-instellingen op dat apparaat te beheren. Zie [Microsoft Defender ATP voor Windows](../protect/advanced-threat-protection.md) in de Intune-documentatie.
+  - Microsoft Defender ATP moet op een apparaat zijn geïnstalleerd om de antivirus-instellingen op dat apparaat te beheren met Intune. Zie [Microsoft Defender ATP voor Windows](../protect/advanced-threat-protection.md) in de Intune-documentatie.
   - De Windows-beveiligings-app is geïnstalleerd op alle apparaten waarop Windows 10 wordt uitgevoerd, en er zijn geen aanvullende vereiste onderdelen vereist.
 
 ## <a name="antivirus-profiles"></a>Antivirus-profielen

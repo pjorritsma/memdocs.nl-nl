@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 49ec674f8aa0ec0fd00aaf4be25f307158d79781
-ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
+ms.openlocfilehash: 13623f92ac68855aefbd1900c5040004acba1f09
+ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84126495"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216498"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Netwerkeindpunten voor Microsoft Intune  
 
@@ -53,7 +53,7 @@ De volgende tabel bevat de poorten en services waartoe de Intune-client toegang 
 
 |Domains    |Het IP-adres      |
 |-----------|----------------|
-|login.microsoftonline.com <br> *.officeconfig.msocdn.com <br> config.office.com <br> graph.windows.net| Meer informatie [Office 365-URL's en IP-adresbereiken](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2) |
+| login.microsoftonline.com <br> *.officeconfig.msocdn.com <br> config.office.com <br> graph.windows.net <br> enterpriseregistration.windows.net | Meer informatie [Office 365-URL's en IP-adresbereiken](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2) |
 |portal.manage.microsoft.com<br> m.manage.microsoft.com |52.175.12.209<br>20.188.107.228<br>52.138.193.149<br>51.144.161.187<br>52.160.70.20<br>52.168.54.64 <br>13.72.226.202<br>52.189.220.232|
 | sts.manage.microsoft.com | 13.93.223.241 <br>52.170.32.182 <br>52.164.224.159 <br>52.174.178.4 <br>13.75.122.143 <br>52.163.120.84<br>13.73.112.122<br>52.237.192.112|
 |Manage.microsoft.com <br>i.manage.microsoft.com <br>r.manage.microsoft.com <br>a.manage.microsoft.com <br>p.manage.microsoft.com <br>EnterpriseEnrollment.manage.microsoft.com <br>EnterpriseEnrollment-s.manage.microsoft.com |40.83.123.72<br>13.76.177.110<br>52.169.9.87<br>52.174.26.23<br>104.40.82.191<br>13.82.96.212<br>52.147.8.239<br>40.115.69.185|
@@ -67,13 +67,11 @@ De volgende tabel bevat de poorten en services waartoe de Intune-client toegang 
 |fef.msua05.manage.microsoft.com|138.91.244.151|
 |fef.msua06.manage.microsoft.com|13.78.185.97|
 |fef.msub01.manage.microsoft.com|137.135.128.214|
-|fef.msub02.manage.microsoft.com|137.135.130.29|
 |fef.msub03.manage.microsoft.com|52.169.82.238|
 |fef.msub05.manage.microsoft.com|23.97.166.52|
 |fef.msuc03.manage.microsoft.com|23.101.0.100|
 |fef.amsua0502.manage.microsoft.com|13.85.68.142|
 |fef.amsua0602.manage.microsoft.com|52.161.28.64|
-|enterpriseregistration.windows.net|52.175.211.189|
 |fef.amsua0102.manage.microsoft.com|52.242.211.0|
 |fef.amsua0702.manage.microsoft.com|52.232.225.75|
 |fef.amsub0502.manage.microsoft.com|40.67.219.144|
@@ -127,3 +125,19 @@ Voor Delivery Optimization-metagegevens:
 |Verschillende functies waaronder toegang tot internet, de iTunes Store, de MacOS App Store, iCloud, berichten, enzovoort. |phobos.apple.com<br>ocsp.apple.com<br>ax.itunes.apple.com<br>ax.itunes.apple.com.edgesuite.net| HTTP/HTTPS |  80 of 443   |
 
 Zie voor meer informatie de documentatie van Apple: [TCP and UDP ports used by Apple software products](https://support.apple.com/HT202944) (TCP- en UDP-poorten die worden gebruikt voor Apple-softwareproducten), [About macOS, iOS/iPadOS, and iTunes server host connections and iTunes background processes](https://support.apple.com/HT201999) (Over serververbindingen van macOS-, iOS-/iPadOS- en iTunes-hosts, en iTunes-achtergrondprocessen), en [If your macOS and iOS/iPadOS clients aren't getting Apple push notifications](https://support.apple.com/HT203609) (Als uw macOS- en iOS-/iPadOS-clients geen Apple-pushmeldingen ontvangen).  
+
+## <a name="android-port-information"></a>Informatie over Android-poort
+
+Afhankelijk van de keuze om Android-apparaten te beheren, moet u mogelijk de Google Android Enterprise-poorten en/of de Android-pushmelding openen. Raadpleeg de [documentatie voor Android-inschrijving](https://docs.microsoft.com/mem/intune/enrollment/android-enroll) voor meer informatie over de ondersteunde Android-beheermethoden. 
+
+[!NOTE]
+Omdat Google Mobile Services niet beschikbaar is in China, kunnen apparaten in China beheerd door Intune geen functies gebruiken waarvoor Google Mobile Services is vereist. Het gaat om de volgende functies: Google Play-mogelijkheden voor beveiliging, zoals apparaatbevestiging van SafetyNet, het beheren van apps vanuit de Google Play Store, Android Enterprise-mogelijkheden (zie deze [Google-documentatie](https://support.google.com/work/android/answer/6270910)). De app Intune-bedrijfsportal voor Android maakt daarnaast gebruik van Google Mobile Services om te communiceren met de Microsoft Intune-service. Omdat Google Play Services niet beschikbaar is in China, kan het tot acht uur duren voordat sommige taken zijn voltooid. Zie dit [artikel](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable) voor meer informatie.
+
+### <a name="google-android-enterprise"></a>Google Android Enterprise 
+
+Google biedt documentatie over de vereiste netwerkpoorten en namen van doelhosts in hun [Android Enterprise Bluebook](https://static.googleusercontent.com/media/www.android.com/en//static/2016/pdfs/enterprise/Android-Enterprise-Migration-Bluebook_2019.pdf), onder de sectie **Firewall** van het document. 
+
+### <a name="android-push-notification"></a>Pushmelding van Android
+
+Intune maakt gebruik van Google Firebase Cloud Messaging (FCM) voor pushmeldingen om acties van apparaten en inchecken te activeren. Dit is vereist voor Android-apparaatbeheerder en Android Enterprise. Voor informatie over FCM-netwerkvereisten raadpleegt u de [FCM-poorten en uw firewall](https://firebase.google.com/docs/cloud-messaging/concept-options#messaging-ports-and-your-firewall) van Google.
+

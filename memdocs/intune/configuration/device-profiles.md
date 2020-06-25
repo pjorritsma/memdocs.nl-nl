@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2020
+ms.date: 06/11/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3437a1b9fe3c663844d366bbfda6c0bcb463c3ab
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5bf114edf17fa1f8959b5f26b83c771b711b83f5
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983800"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093186"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Functies en instellingen toepassen op uw apparaten met apparaatprofielen in Microsoft Intune
 
@@ -41,7 +41,7 @@ Dit artikel biedt een overzicht van de verschillende typen profielen die u kunt 
 
 ## <a name="administrative-templates"></a>Beheersjablonen
 
-[Beheersjablonen](administrative-templates-windows.md) bevatten honderden instellingen die u kunt configureren voor Internet Explorer, OneDrive, extern bureaublad, Word, Excel en andere Office-programma's.
+[Beheersjablonen](administrative-templates-windows.md) bevatten honderden instellingen die u kunt configureren voor Internet Explorer, Microsoft Edge, OneDrive, extern bureaublad, Word, Excel en andere Office-programma's.
 
 Deze sjablonen bieden beheerders een vereenvoudigde weergave van instellingen die vergelijkbaar zijn met groepsbeleid, maar ze zijn voor 100% gebaseerd op de cloud.
 
@@ -132,7 +132,7 @@ Deze functie ondersteunt:
 
 - Windows 10 en hoger
 
-## <a name="edition-upgrade"></a>Editie-upgrade
+## <a name="edition-upgrade-and-mode-switch"></a>Editie-upgrade en modusschakelaar
 
 [Windows 10-editie-upgrades](edition-upgrade-configure-windows-10.md) voert automatisch een upgrade naar een nieuwere functie uit op apparaten waarop een bepaalde versie van Windows 10 wordt uitgevoerd.
 
@@ -202,7 +202,15 @@ Deze functie ondersteunt:
 
 - Windows 10 en hoger
 
-Kiosk-instellingen zijn ook beschikbaar als apparaatbeperkingen voor [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices) en [iOS/iPadOS](device-restrictions-ios.md#kiosk).
+Kiosk-instellingen zijn ook beschikbaar als apparaatbeperkingen voor [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#device-experience) en [iOS/iPadOS](device-restrictions-ios.md#kiosk).
+
+## <a name="mx-profile-zebra"></a>MX-profiel (Zebra)
+
+[Mobiliteitsextensies (MX)](android-zebra-mx-overview.md) breiden de ingebouwde Intune-instellingen uit om meer instellingen aan te passen of toe te voegen speciaal voor Zebra-apparaten. Zebra-apparaten worden meestal gebruikt op fabrieks-en detailhandelsomgevingen. Als u honderden of duizenden Zebra-apparaten hebt, kunt u Intune gebruiken om deze apparaten te configureren en te beheren.
+
+Deze functie ondersteunt:
+
+- Android-apparaatbeheerder
 
 ## <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
 
@@ -214,7 +222,7 @@ Deze functie ondersteunt:
 
 ## <a name="oemconfig"></a>OEMConfig
 
-[OEMConfig](android-oem-configuration-overview.md) is een standaard waarmee OEM's (Original Equipment Manufacturers) en EMMs (Enterprise Mobility Management) OEM-specifieke functies op een gestandaardiseerde manier kunnen bouwen en ondersteunen op Android Enterprise-apparaten. Met OEMConfig kunnen OEM's een schema maken waarin OEM-specifieke beheerfuncties worden gedefinieerd en dat insluiten in een app die wordt geüpload naar Google Play. Het schema van de app wordt ingelezen in Intune zodat Intune-beheerders de instellingen in het schema kunnen configureren.
+Op Android Enterprise-apparaten, is [OEMConfig](android-oem-configuration-overview.md) een standaard waarmee OEM's (Original Equipment Manufacturers) en EMMs (Enterprise Mobility Management) OEM-specifieke functies op een gestandaardiseerde manier kunnen bouwen en ondersteunen. Met OEMConfig kunnen OEM's een schema maken waarin OEM-specifieke beheerfuncties worden gedefinieerd en dat insluiten in een app die wordt geüpload naar Google Play. Het schema van de app wordt ingelezen in Intune en zorgt dat Intune-beheerders de instellingen in het schema kunnen configureren.
 
 Deze functie ondersteunt:
 
@@ -222,7 +230,7 @@ Deze functie ondersteunt:
 
 ## <a name="powershell-scripts"></a>PowerShell-scripts
 
-[PowerShell-scripts op Windows 10-apparaten](../apps/intune-management-extension.md) gebruikt de Intune-beheerextensie om uw PowerShell-scripts te uploaden naar Intune en deze scripts vervolgens uit te voeren op uw apparaten. Zie ook de vereisten voor het gebruik van de extensie, hoe u deze toevoegt aan Intune, en andere belangrijke informatie.
+[PowerShell-scripts](../apps/intune-management-extension.md) gebruiken de Intune-beheerextensie om uw PowerShell-scripts te uploaden naar Intune en deze scripts vervolgens uit te voeren op uw apparaten. Zie ook de vereisten voor het gebruik van de extensie, hoe u deze toevoegt aan Intune, en andere belangrijke informatie.
 
 Deze functie ondersteunt:
 
@@ -278,7 +286,7 @@ Deze functie ondersteunt:
 
 [Wi-Fi-instellingen](wi-fi-settings-configure.md) wijst instellingen voor draadloze netwerken toe aan gebruikers en apparaten. Wanneer u een Wi-Fi-profiel toewijst, hebben uw gebruikers toegang tot uw zakelijke Wi-Fi zonder dat ze dit zelf hoeven te configureren. 
 
-Deze functie ondersteunt: 
+Deze functie ondersteunt:
 
 - Android-apparaatbeheerder
 - Android Enterprise
@@ -286,6 +294,16 @@ Deze functie ondersteunt:
 - macOS
 - Windows 8.1 (alleen importeren)
 - Windows 10 en hoger
+
+## <a name="wired-networks"></a>Bedrade netwerken
+
+Met [bekabelde netwerken](wired-networks-configure.md) kunt u bekabelde 802.1 x-verbindingen maken en beheren voor macOS-desktopcomputers. In uw profiel kiest u de netwerkinterface, selecteert u de geaccepteerde EAP-typen en voert u de instellingen voor de vertrouwensinstelling van de server in, met inbegrip van PKCS-en SCEP-certificaten.
+
+Wanneer u het profiel toewijst, hebben uw macOs-desktopgebruikers toegang tot uw zakelijke bekabelde netwerk zonder dat ze dit zelf hoeven te configureren.
+
+Deze functie ondersteunt:
+
+- macOS
 
 ## <a name="zebra-mobility-extensions-mx"></a>Zebra Mobility Extensions (MX)
 

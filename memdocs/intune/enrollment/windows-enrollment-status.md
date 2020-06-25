@@ -1,5 +1,5 @@
 ---
-title: Een pagina Status van de inschrijving instellen
+title: De pagina Status van de inschrijving instellen
 titleSuffix: Microsoft Intune
 description: Stel een begroetingspagina in voor gebruikers die Windows 10-apparaten registreren.
 keywords: ''
@@ -18,34 +18,37 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 33c57e5641934200120839ad48a9a4c8b8d0a8fa
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4f8991b772f5562538403492735f1f4c2fdc87e8
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988895"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093452"
 ---
-# <a name="set-up-an-enrollment-status-page"></a>Een pagina Status van de inschrijving instellen
+# <a name="set-up-the-enrollment-status-page"></a>De pagina Status van de inschrijving instellen
  
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
  
-Op de pagina Status van de inschrijving vindt u de installatie-informatie over Windows 10-apparaten (versie 1803 en later) tijdens de eerste apparaatinschrijving. Bijvoorbeeld:
-- bij het gebruik van [Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/) 
-- of telkens wanneer een beheerd apparaat de eerste keer wordt gestart nadat een beleid voor de pagina Status van de inschrijving is toegepast. 
+De pagina Status van de inschrijving (ESP) geeft de voortgang van de inrichting weer nadat een nieuw apparaat is geregistreerd, en wanneer nieuwe gebruikers zich aanmelden bij het apparaat.  Zo kunnen IT-beheerders toegang tot het apparaat voorkomen totdat het volledig is ingericht en tegelijkertijd gebruikers informatie geven over de taken die in het inrichtingsproces resteren.
 
-De pagina Status van de registratie is handig voor gebruikers om de status van hun apparaat te bekijken tijdens de installatie van het apparaat. U kunt voor de pagina Status van de registratie meerdere profielen maken en deze toepassen op verschillende groepen die gebruikers bevatten. Profielen kunnen worden ingesteld op:
-- De voortgang van de installatie weergeven.
-- Gebruik blokkeren totdat de installatie is voltooid.
-- Opgeven wat een gebruiker kan doen als de installatie van het apparaat mislukt.
+De ESP kan worden gebruikt als onderdeel van een [Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/)-inrichtingsscenario en kan ook afzonderlijk van Windows Autopilot worden gebruikt als onderdeel van de standaard out-of-box experience (OOBE) voor Azure AD-deelname, en voor nieuwe gebruikers die zich voor het eerst aanmelden bij het apparaat.
 
-U kunt ook de volgorde van prioriteit voor elk profiel instellen om problemen met conflicterende profieltoewijzingen aan dezelfde gebruiker te voorkomen.
+U kunt voor de pagina Status van de inschrijving meerdere profielen met verschillende configuraties die het volgende doen:
 
-> [!NOTE]
-> De pagina Status van de inschrijving kan alleen worden gebruikt voor een gebruiker die deel uitmaakt van een toegewezen groep en als het beleid is ingesteld op het apparaat op het moment van inschrijving voor alle gebruikers die het apparaat gebruiken.  Een apparaat koppelen aan profielen voor inschrijvingsstatuspagina wordt momenteel niet ondersteund.
+- De voortgang van de installatie weergeven
+- Toegang blokkeren tot het inrichtingsproces is voltooid
+- Tijdslimieten
+- Toegestane probleemoplossingsbewerkingen
+
+Deze profielen worden opgegeven in een volgorde van prioriteit. De hoogste prioriteit die van toepassing is, wordt gebruikt.  Elk ESP-profiel kan worden gericht op groepen die apparaten of gebruikers bevatten.  Bij het bepalen welk profiel u moet gebruiken, worden de volgende criteria gevolgd:
+
+- Het profiel met de hoogste prioriteit dat op het apparaat is gericht, wordt het eerst gebruikt.
+- Als er geen profielen zijn gericht op het apparaat, wordt het profiel met de hoogste prioriteit gebruikt dat is gericht op de huidige gebruiker.  (Dit geldt alleen voor scenario's waar een gebruiker aanwezig is. Bij scenario’s waar gebruikersregistratie met ondersteuning of automatisch implementeren wordt gebruikt, kan u zich alleen op een apparaat richten.)
+- Als er geen profielen zijn die zijn gericht op specifieke groepen, wordt het standaard ESP-profiel gebruikt.
 
 ## <a name="available-settings"></a>Beschikbare instellingen
 
- De volgende instellingen kunnen worden geconfigureerd om de werking van de pagina Status van de inschrijving aan te passen:
+De volgende instellingen kunnen worden geconfigureerd om de werking van de pagina Status van de inschrijving aan te passen:
 
 <table>
 <th align="left">Instelling<th align="left">Ja<th align="left">Nee
@@ -80,7 +83,7 @@ Volg de onderstaande stappen om de pagina Status van de registratie in te schake
 
 ## <a name="set-the-enrollment-status-page-priority"></a>De prioriteit instellen voor de pagina Status van de registratie
 
-Een gebruiker deel uitmaken van verschillende groepen en een groot aantal profielen voor de pagina Status van de inschrijving hebben. U kunt in dergelijke situaties conflicten voorkomen door voor elk profiel een prioriteit in te stellen. Als tijdens het inschrijven iemand meer dan een profiel heeft voor de pagina Status van de inschrijving, wordt alleen het profiel met de hoogste prioriteit toegepast op het apparaat dat wordt ingeschreven.
+Een apparaat of gebruiker kan zich in veel groepen bevinden en gericht zijn op meerdere profielen voor de pagina Status van de inschrijving. Als u wilt bepalen welke profielen het eerst worden beschouwd, kunt u de prioriteiten voor elk profiel instellen. Gebruikers met een hogere prioriteit worden als eerste overwogen.
 
 1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **Windows** > **Windows-inschrijving** > **Inschrijvingsstatuspagina**.
 2. Beweeg de muisaanwijzer over het profiel in de lijst.
@@ -88,7 +91,7 @@ Een gebruiker deel uitmaken van verschillende groepen en een groot aantal profie
 
 ## <a name="block-access-to-a-device-until-a-specific-application-is-installed"></a>Toegang blokkeren tot een apparaat tot een bepaalde toepassing is geïnstalleerd
 
-U kunt opgeven welke apps moeten worden geïnstalleerd voordat de gebruiker toegang krijgt tot het bureaublad.
+U kunt opgeven welke apps moeten worden geïnstalleerd voordat de pagina Status van de inschrijving (ESP) is voltooid.
 
 1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **Windows** > **Windows-inschrijving** > **Inschrijvingsstatuspagina**.
 2. Kies een profiel > **Instellingen**.
@@ -99,7 +102,7 @@ U kunt opgeven welke apps moeten worden geïnstalleerd voordat de gebruiker toeg
 
 De apps in deze lijst worden door Intune gebruikt om de lijst te filteren die als blokkering moet worden beschouwd.  De lijst geeft niet aan welke apps moeten worden geïnstalleerd.  Als u in deze lijst bijvoorbeeld 'App 1,'App 2' en 'App 3' opneemt en 'App 3', 'App 4 'aan het apparaat of de gebruiker worden gekoppeld, wordt op de inschrijvingsstatuspagina alleen 'App 3' bijgehouden.  'App 4' wordt wel nog geïnstalleerd, maar op de inschrijvingsstatuspagina wordt niet gewacht op voltooiing ervan.
 
-Er kunnen maximaal 25 apps worden opgegeven.
+Er kunnen maximaal 100 apps worden opgegeven.
 
 ## <a name="enrollment-status-page-tracking-information"></a>Traceringsinformatie op de pagina Status van de inschrijving
 
@@ -108,14 +111,16 @@ Er zijn drie fasen waarvoor gegevens worden bijgehouden op de pagina Status van 
 ### <a name="device-preparation"></a>Voorbereiding van het apparaat
 
 Deze gegevens worden bijgehouden voor de voorbereiding van het apparaat:
-- verklaringen van TPM-sleutels (Trusted Platform Module) (indien van toepassing)
-- voortgang van deelnemen aan Azure Active Directory
-- inschrijven bij Intune
-- installatie van Intune-beheeruitbreidingen
+
+- Verklaring van TPM-sleutels (Trusted Platform Module) (indien van toepassing)
+- Toevoegingsproces voor Azure Active Directory
+- Intune (MDM)-inschrijving
+- Installatie van de Intune-beheerextensies (gebruikt voor het installeren van Win32-apps)
 
 ### <a name="device-setup"></a>Installatie van het apparaat
 
-Op de pagina Status van de inschrijving worden de volgende installatie-items van het apparaat bijgehouden (als deze zijn toegewezen aan Alle apparaten of een apparaatgroep waarvan het registrerende apparaat lid is):
+De pagina voor de status van de inschrijving houdt de volgende items voor de installatie van het apparaat:
+
 - Beveiligingsbeleid
   - Eén configuratieprovider (CSP) voor alle inschrijvingen.
   - Werkelijke CSP's die door Intune zijn geconfigureerd, worden hier niet bijgehouden.
@@ -129,7 +134,9 @@ Op de pagina Status van de inschrijving worden de volgende installatie-items van
 - Certificaatprofielen die zijn toegewezen aan **Alle apparaten** of een groep apparaten waarvan het apparaat dat wordt geregistreerd lid is, maar alleen voor Autopilot-apparaten
 
 ### <a name="account-setup"></a>Account instellen
+
 Voor de installatie van het account worden op de pagina Status van de inschrijving de volgende items bijgehouden als deze zijn toegewezen aan de huidige aangemelde gebruiker:
+
 - Beveiligingsbeleid
   - Eén CSP voor alle inschrijvingen.
   - Werkelijke CSP's die door Intune zijn geconfigureerd, worden hier niet bijgehouden.
@@ -147,7 +154,8 @@ Voor de installatie van het account worden op de pagina Status van de inschrijvi
   - Certificaatprofielen die worden toegewezen aan alle gebruikers of aan een gebruikersgroep waarvan de gebruiker die het apparaat inschrijft, lid is.
 
 ### <a name="troubleshooting"></a>Probleemoplossing
-Beste vragen voor probleemoplossing.
+
+Hieronder volgen enkele veelgestelde vragen over het oplossen van problemen met betrekking tot de pagina Status van de inschrijving.
 
 - Waarom zijn mijn toepassingen niet geïnstalleerd en getraceerd met de pagina Inschrijvingsstatus?
   - Om te garanderen dat toepassingen worden geïnstalleerd en getraceerd met de pagina Inschrijvingsstatus, zorgt u ervoor dat:
@@ -193,14 +201,16 @@ Beste vragen voor probleemoplossing.
       ```
 
 ### <a name="known-issues"></a>Bekende problemen
-Hieronder worden enkele bekende problemen beschreven. 
+
+Hieronder vindt u bekende problemen met betrekking tot de pagina Status van de inschrijving.
+
 - Als u het ESP-profiel uitschakelt, blijft het ESP-beleid van kracht op apparaten en zien gebruikers nog steeds de pagina Status van de inschrijving wanneer ze zich voor de eerste keer aanmelden bij het apparaat. Het beleid wordt niet verwijderd wanneer het ESP-profiel wordt uitgeschakeld. U moet OMA-URI implementeren om de pagina Status van de inschrijving uit te schakelen. Hierboven vindt u instructies voor het uitschakelen van de pagina Status van de inschrijving met OMA-URI. 
 - Opnieuw opstarten tijdens apparaatinstallatie dwingt de gebruiker om referenties in te voeren voordat de fase voor installatie van het account wordt ingegaan. Gebruikersreferenties blijven niet behouden tijdens het opnieuw opstarten. Laat de gebruiker zijn of haar referenties invoeren, waarna de pagina Status van de inschrijving wordt weergegeven. 
 - Er treedt altijd een time-out op voor de pagina Status van de inschrijving tijdens een inschrijving met Werk- en schoolaccount toevoegen in Windows 10-versie 1903 en lager. De pagina Status van de inschrijving wacht totdat de Azure AD-registratie is voltooid. Het probleem is opgelost in Windows 10-versie 1903 en hoger.  
 - Hybride Azure AD Auto Pilot-implementatie met ESP duurt langer dan de time-outperiode die is gedefinieerd in het ESP-profiel. Bij hybride Azure AD Auto Pilot-implementaties duurt de ESP 40 minuten langer dan de waarde die is ingesteld in het ESP-profiel. Deze vertraging geeft de on-premises AD-connector tijd om de nieuwe apparaatrecord te maken in Azure AD. 
 - De Windows-aanmeldingspagina wordt niet vooraf ingevuld met de gebruikersnaam in de modus Op basis van gebruiker van Autopilot. Als het apparaat opnieuw wordt opgestart tijdens de installatiefase van het apparaat van ESP, gebeurt het volgende:
-    - de gebruikersreferenties blijven niet behouden
-    - de gebruiker moet de referenties opnieuw invoeren voordat de installatie van het apparaat kan worden gevolgd door de installatie van het account
+  - de gebruikersreferenties blijven niet behouden
+  - de gebruiker moet de referenties opnieuw invoeren voordat de installatie van het apparaat kan worden gevolgd door de installatie van het account
 - De ESP wordt erg lang weergegeven of de identificatiefase wordt nooit voltooid. In Intune worden de ESP-beleidsregels berekend tijdens de identificatiefase. De kans bestaat dat een apparaat nooit de ESP-beleidsregels kan berekenen als aan de huidige gebruiker geen Intune-licentie is toegewezen.  
 - De configuratie van Microsoft Defender Application Control heeft tot gevolg dat tijdens Autopilot een verzoek wordt weergegeven om het apparaat opnieuw op te starten. Het configureren van Microsoft Defender Application (AppLocker CSP) vereist opnieuw opstarten. Wanneer dit beleid is geconfigureerd, kan dit ertoe leiden dat het apparaat opnieuw wordt opgestart tijdens Autopilot. Op dit moment is er geen manier om het opnieuw opstarten te onderdrukken of uit te stellen.
 - Als het DeviceLock-beleid (https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock) ) is ingeschakeld als onderdeel van een ESP-profiel, kan de OOBE of het automatisch aanmelden bij het bureaublad van de gebruiker om twee redenen onverwacht mislukken.
@@ -208,4 +218,5 @@ Hieronder worden enkele bekende problemen beschreven.
   - De automatische aanmelding mislukt als het apparaat opnieuw is opgestart nadat de gebruiker Azure AD-referenties heeft ingevoerd, maar voordat de ESP-installatiefase van het apparaat is afgesloten. Deze fout treedt op omdat de ESP-installatiefase van het apparaat nooit is voltooid. De tijdelijke oplossing is om het apparaat opnieuw in te stellen.
 
 ## <a name="next-steps"></a>Volgende stappen
+
 Nadat u Windows-inschrijvingspagina's hebt ingesteld, kunt u leren hoe u Windows-apparaten beheert. Zie [Wat is Microsoft Intune-apparaatbeheer?](../remote-actions/device-management.md) voor meer informatie.

@@ -1,11 +1,11 @@
 ---
 title: Melding van niet-compatibele apparaten en acties met Microsoft Intune - Azure | Microsoft Docs
-description: Maak een e-mailmelding om te verzenden naar niet-compatibele apparaten. Voeg acties toe nadat een apparaat is gemarkeerd als niet-compatibel, door bijvoorbeeld een respijtperiode toe te voegen om compatibel te worden, of maak een planning om toegang te blokkeren totdat het apparaat compatibel is. U doet dit met Microsoft Intune in Azure.
+description: Maak een e-mailmelding om te verzenden naar niet-compatibele apparaten. Voeg acties toe om van toepassing te zijn op apparaten die niet voldoen aan uw nalevingsbeleid. Acties kunnen een respijtperiode omvatten om compatibel te zijn, toegang tot netwerkresources te blokkeren of het niet-compatibele apparaat buiten gebruik te stellen.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 06/19/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fff21eac61f7b68e00989aefc1f9ea6dc3ad7c0a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 330dd566599d6bdb1fa667d8797878ea8c92f098
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989307"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093730"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Acties configureren voor niet-compatibele apparaten in Intune
 
@@ -29,11 +29,11 @@ Voor apparaten die niet aan uw nalevingsbeleid of -regels voldoen, kunt u **Acti
 
 ## <a name="overview"></a>Overzicht
 
-Elk nalevingsbeleid bevat standaard de actie voor niet-naleving van **Apparaat als niet-compatibel markeren** met een planning van nul dagen (**0**). Het resultaat van deze standaardactie is dat wanneer Intune een apparaat detecteert dat niet compatibel is, Intune het apparaat onmiddellijk als niet-compatibel markeert. Via [Voorwaardelijke toegang](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) van Azure Active Directory (AD) kan het apparaat vervolgens worden geblokkeerd.
+Elk nalevingsbeleid bevat standaard de actie voor niet-naleving van **Apparaat als niet-compatibel markeren** met een planning van nul dagen (**0**). Het resultaat van deze standaardactie is dat wanneer Intune een apparaat detecteert dat niet compatibel is, Intune het apparaat onmiddellijk als niet-compatibel markeert. Nadat een apparaat als niet-compatibel is gemarkeerd, kan [Voorwaardelijke toegang](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) van Azure Active Directory (AD) het apparaat vervolgens blokkeren.
 
 Door **acties voor niet-naleving** te configureren, krijgt u meer flexibiliteit om te bepalen wat er moet gebeuren met niet-compatibele apparaten en wanneer u dit moet doen. U kunt er bijvoorbeeld voor kiezen het apparaat niet onmiddellijk te blokkeren en de gebruiker een respijtperiode te bieden om ervoor te zorgen dat het apparaat weer compatibel wordt.
 
-Voor elke actie die u kunt instellen, kunt u een planning configureren die bepaalt wanneer die actie van kracht wordt op basis van het aantal dagen dat het apparaat wordt gemarkeerd als niet-compatibel. U kunt ook meerdere exemplaren van een actie configureren. Wanneer u meerdere exemplaren van een actie in een beleid instelt, wordt de actie opnieuw uitgevoerd op die later geplande tijd als het apparaat niet-compatibel blijft.
+Voor elke actie die u instelt, kunt u een planning configureren die bepaalt wanneer die actie van kracht wordt. De planning neemt een aantal dagen in beslag waarna het apparaat wordt gemarkeerd als niet-compatibel. U kunt ook meerdere exemplaren van een actie configureren. Wanneer u meerdere exemplaren van een actie in een beleid instelt, wordt de actie opnieuw uitgevoerd op die later geplande tijd als het apparaat niet-compatibel blijft.
 
 Niet alle acties zijn beschikbaar voor alle platforms.
 
@@ -48,7 +48,7 @@ Hieronder vindt u de beschikbare acties voor niet-naleving. Tenzij anders vermel
 - **E-mail verzenden naar de eindgebruiker**: Met deze actie wordt een e-mailmelding verzonden naar de gebruiker.
 Handel als volgt wanneer u deze actie inschakelt:
 
-  - Selecteer een *sjabloon voor meldingsberichten* die door deze actie wordt verzonden. U moet een sjabloon voor een meldingsbericht [maken](#create-a-notification-message-template) voordat u er eentje kunt toewijzen aan deze actie. Wanneer u de aangepaste melding maakt, past u het onderwerp en de hoofdtekst van het bericht aan en kunt u het bedrijfslogo, de bedrijfsnaam en aanvullende contactgegevens opnemen.
+  - Selecteer een *sjabloon voor meldingsberichten* die door deze actie wordt verzonden. U moet [Een sjabloon voor een meldingsbericht maken](#create-a-notification-message-template) voordat u er eentje kunt toewijzen aan deze actie. Wanneer u de aangepaste melding maakt, past u het onderwerp en de hoofdtekst van het bericht aan en kunt u het bedrijfslogo, de bedrijfsnaam en aanvullende contactgegevens opnemen.
   - U kunt ervoor kiezen om het bericht naar extra ontvangers te verzenden door een of meer van uw Azure AD-groepen te selecteren.
 
 Wanneer het e-mailbericht wordt verzonden, geeft Intune meer informatie over het apparaat dat niet compatibel is in het e-mailbericht.
@@ -100,12 +100,12 @@ Wanneer het e-mailbericht wordt verzonden, geeft Intune meer informatie over het
   
   U kunt bijvoorbeeld de eerste actie voor nul dagen plannen en vervolgens een tweede exemplaar van de actie toevoegen dat op drie dagen is ingesteld. Door deze vertraging voor de tweede melding krijgt de gebruiker enkele dagen de tijd om het probleem op te lossen en de tweede melding te vermijden.
 
-  Als u wilt voorkomen dat u gebruikers met te veel dubbele berichten spamt, controleert en stroomlijnt u welk nalevingsbeleid een pushmelding voor niet-naleving omvat en bekijkt u de planningen om te voorkomen dat de meldingen voor hetzelfde probleem te vaak worden verzonden.
+  Als u wilt voorkomen dat u gebruikers met te veel dubbele berichten spamt, controleert en stroomlijnt u welk nalevingsbeleid een pushmelding voor niet-naleving omvat en bekijkt u de planningen om te voorkomen dat de meldingen voor hetzelfde te vaak worden verzonden.
 
   Overweeg het volgende:
   - Voor één beleid dat meerdere exemplaren van een pushmelding voor dezelfde dag bevat, wordt slechts één melding voor die dag verzonden.
 
-  - Wanneer meerdere nalevingsbeleidsregels dezelfde nalevingsvoorwaarden en de pushmeldingsactie met dezelfde planning bevatten, worden er op dezelfde dag meerdere meldingen naar hetzelfde apparaat verzonden.
+  - Wanneer meerdere nalevingsbeleidsregels dezelfde nalevingsvoorwaarden en de pushmeldingsactie met dezelfde planning bevatten, verzend Intune er op dezelfde dag meerdere meldingen naar hetzelfde apparaat.
 
 ## <a name="before-you-begin"></a>Voordat u begint
 
@@ -126,22 +126,22 @@ Zie de volgende platform-specifieke richtlijnen om een nalevingsbeleid voor appa
 Maak een sjabloon voor berichtmeldingen om een e-mail naar uw gebruikers te versturen. Wanneer een apparaat niet conform is, worden de gegevens die u in de sjabloon invoert, weergegeven in de e-mail die naar uw gebruikers wordt verzonden.
 
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecteer **Apparaten** > **Nalevingsbeleid** > **Meldingen** > **Melding maken**.
+2. Selecteer (**Eindpuntbeveiliging** > **Apparaatnaleving** > **Meldingen** > **Melding maken**).
 3. Geef onder *Basisprincipes* de volgende informatie op:
 
    - **Naam**
    - **Onderwerp**
    - **Bericht**
 
-4. Configureer, ook onder *Basisprincipes*, de volgende opties voor de melding, die alle de volgende standaardinstelling hebben: *Ingeschakeld*:
+4. Configureer, ook onder *Basisprincipes*, de volgende opties voor de melding:
 
-   - **E-mailkoptekst - Bedrijfslogo opnemen**
-   - **E-mailvoettekst - Bedrijfslogo opnemen**
-   - **E-mailvoettekst - Contactgegevens opnemen**
+   - **E-mailkoptekst - Bedrijfslogo opnemen** (standaardinstelling = *Inschakelen*): het logo dat u uploadt als onderdeel van de huisstijl voor de bedrijfsportal, zal worden gebruikt voor e-mailsjablonen. Zie [Aanpassing bedrijfshuisstijl](../apps/company-portal-app.md#customizing-the-user-experience) voor meer informatie over de huisstijl voor de bedrijfsportal.
+   - **E-mailvoettekst - Bedrijfsnaam opnemen** (standaardinstelling = *Inschakelen*)
+   - **E-mailvoettekst - Contactgegevens opnemen** (standaardinstelling = *Inschakelen*)
+   - **Koppeling naar website van bedrijfsportal** (standaardinstelling = *Uitschakelen*): wanneer deze optie is ingesteld op *Inschakelen*, bevat het e-mailbericht een koppeling naar de Bedrijfsportalwebsite.
 
-   Het logo dat u uploadt als onderdeel van de huisstijl voor de bedrijfsportal, zal worden gebruikt voor e-mailsjablonen. Zie [Aanpassing bedrijfshuisstijl](../apps/company-portal-app.md#customizing-the-user-experience) voor meer informatie over de huisstijl voor de bedrijfsportal.
-
-   ![Voorbeeld van een compatibel meldingsbericht in Intune](./media/actions-for-noncompliance/actionsfornoncompliance-1.PNG)
+   > [!div class="mx-imgBorder"]
+   > ![Voorbeeld van een compatibel meldingsbericht in Intune](./media/actions-for-noncompliance/actionsfornoncompliance-1.PNG)
 
    Selecteer **Volgende** om door te gaan.
 
@@ -185,7 +185,7 @@ U kunt optionele acties toevoegen wanneer u een nalevingsbeleid maakt of wanneer
 
    In uw compliancebeleid wilt u bijvoorbeeld ook de gebruiker op de hoogte stellen. U kunt de actie **E-mail verzenden naar de eindgebruiker** toevoegen. In de actie **E-mail verzenden** stelt u de **Planning** in op twee dagen. Als het apparaat of de eindgebruiker op de tweede dag nog steeds wordt beoordeeld als niet-compatibel, wordt uw e-mail op de tweede dag verzonden. Als u de gebruiker op de vijfde dag nog een keer wilt mailen over de niet-compatibele status, voegt u nog een actie toe en stelt u de **Planning** in op vijf dagen.
 
-  Voor meer informatie over compliance en de ingebouwde acties, raadpleegt u het [complianceoverzicht](device-compliance-get-started.md).
+   Voor meer informatie over compliance en de ingebouwde acties, raadpleegt u het [complianceoverzicht](device-compliance-get-started.md).
 
 6. Wanneer u klaart bent, selecteert u **Toevoegen** > **OK** om uw wijzigingen op te slaan.
 

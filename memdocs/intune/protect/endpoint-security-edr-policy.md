@@ -16,20 +16,20 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: d0ba328f1976d0463c6be042dfd6f8a7570d6dac
-ms.sourcegitcommit: eb51bb38d484e8ef2ca3ae3c867561249fa413f3
+ms.openlocfilehash: ae95fb48296f778fb98affa2270ba763d79fb766
+ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206329"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879677"
 ---
 # <a name="endpoint-detection-and-response-policy-for-endpoint-security-in-intune"></a>Eindpuntdetectie- en eindpuntresponsbeleid voor eindpuntbeveiliging in Intune
 
-Wanneer u Microsoft Defender Advanced Threat Protection (Defender ATP) integreert met Intune, kunt u eindpuntbeveiligingsbeleid gebruiken voor eindpuntdetectie en -respons (EDR) voor het beheren van de EDR-instellingen en de onboarding van apparaten naar Defender ATP.
+Wanneer u Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) integreert met Intune, kunt u eindpuntbeveiligingsbeleid gebruiken voor eindpuntdetectie en -respons (EDR) voor het beheren van de EDR-instellingen en de onboarding van apparaten naar Microsoft Defender ATP.
 
-De functionaliteit van de Defender ATP-eindpuntdetectie en -respons biedt geavanceerde aanvalsdetecties die bijna in realtime en praktisch kunnen worden uitgevoerd. Beveiligingsanalisten kunnen waarschuwingen effectief prioriteren, inzicht krijgen in de volledige reikwijdte van een inbreuk en responsacties ondernemen om bedreigingen te verhelpen.
+De functionaliteit van de Microsoft Defender ATP-eindpuntdetectie en -respons biedt geavanceerde aanvalsdetecties die bijna in realtime en praktisch kunnen worden uitgevoerd. Beveiligingsanalisten kunnen waarschuwingen effectief prioriteren, inzicht krijgen in de volledige reikwijdte van een inbreuk en responsacties ondernemen om bedreigingen te verhelpen.
 
-EDR-beleid bevat platformspecifieke profielen voor het beheren van instellingen voor EDR. De profielen bevatten automatisch een *onboardingpakket* voor Defender ATP. Onboardingpakketten geven aan hoe apparaten moeten worden geconfigureerd voor gebruik met Defender ATP. Nadat voor een apparaat onboarding is uitgevoerd, kunt u gebruik gaan maken van bedreigingsgegevens van dat apparaat.
+EDR-beleid bevat platformspecifieke profielen voor het beheren van instellingen voor EDR. De profielen bevatten automatisch een *onboardingpakket* voor Microsoft Defender ATP. Onboardingpakketten geven aan hoe apparaten moeten worden geconfigureerd voor gebruik met Microsoft Defender ATP. Nadat voor een apparaat onboarding is uitgevoerd, kunt u gebruik gaan maken van bedreigingsgegevens van dat apparaat.
 
 Er wordt EDR-beleid geïmplementeerd op groepen apparaten in Azure Active Directory (Azure AD) die u beheert met Intune en op verzamelingen on-premises apparaten die u beheert met Configuration Manager, waaronder Windows-servers. Voor het EDR-beleid zijn voor de verschillende beheerpaden verschillende onboardingpakketten vereist. Daarom maakt u afzonderlijke EDR-beleidsregels voor de verschillende typen apparaten die u beheert.
 
@@ -44,7 +44,7 @@ Bekijk [Profielinstellingen voor eindpuntdetectie en -respons](endpoint-security
 
 **Algemeen**:
 
-- **Tenant voor Microsoft Defender Advanced Threat Protection**: uw Defender ATP-tenant moet worden geïntegreerd met uw Microsoft Endpoint Manager-tenant (Intune-abonnement) voordat u een EDR-beleid kunt maken. Zie [Microsoft Defender ATP gebruiken](advanced-threat-protection.md) in de Intune-documentatie.
+- **Tenant voor Microsoft Defender Advanced Threat Protection**: uw Microsoft Defender ATP-tenant moet worden geïntegreerd met uw Microsoft Endpoint Manager-tenant (Intune-abonnement) voordat u een EDR-beleid kunt maken. Zie [Microsoft Defender ATP gebruiken](advanced-threat-protection.md) in de Intune-documentatie.
 
 **Apparaten vanuit Configuration Manager ondersteunen**:
 
@@ -258,12 +258,9 @@ U kunt uitgebreide informatie bekijken over de EDR-beleidsregels die u in het be
 
 - Voor beleidsregels die zijn gericht op het platform **Windows 10 en hoger** (Intune), ziet u een overzicht van de naleving van het beleid. U kunt ook de grafiek selecteren om een lijst weer te geven met apparaten waarvoor het beleid is ontvangen en inzoomen op afzonderlijke apparaten voor meer informatie.
 
-  De grafiek voor **apparaten met ATP-sensor** geeft alleen apparaten weer die naar Defender ATP onboarden door het profiel voor **Windows 10 en hoger** te gebruiken. Om ervoor te zorgen dat al uw apparaten in deze grafiek worden weergeven, implementeert u het onboarding-profiel op al uw apparaten. Apparaten die op externe wijze, bijv. via groepsbeleid of PowerShell, op Defender ATP worden uitgevoerd, behoren tot de **apparaten zonder ATP-sensor**.
+  De grafiek voor **apparaten met ATP-sensor** geeft alleen apparaten weer die naar Microsoft Defender ATP onboarden door het profiel voor **Windows 10 en hoger** te gebruiken. Om ervoor te zorgen dat al uw apparaten in deze grafiek worden weergeven, implementeert u het onboarding-profiel op al uw apparaten. Apparaten die op externe wijze, bijv. via groepsbeleid of PowerShell, op Microsoft Defender ATP worden uitgevoerd, behoren tot de **apparaten zonder ATP-sensor**.
 
 - Voor beleidsregels die zijn gericht op het **Windows 10- en Windows Server**-platform (Configuration Manager), ziet u een overzicht van de naleving van het beleid, maar u kunt niet inzoomen om aanvullende informatie te bekijken. De weergave is beperkt omdat het beheercentrum gegevens met een beperkte status ontvangt van Configuration Manager, waarmee de implementatie van het beleid op Configuration Manager apparaten wordt beheerd.
-
-
-
 
 
 [Bekijk de instellingen](endpoint-security-edr-profile-settings.md) die u voor de platformen en profielen kunt configureren.

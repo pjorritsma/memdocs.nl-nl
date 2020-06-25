@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/12/2020
+ms.date: 06/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8eaa636659cb9e2382f61fb668d8aec2ecd75f7a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 68f8eb2ab3b7e348daa99e982e640e9bd28692d8
+ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990177"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85264121"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Android Enterprise-apparaten met OEMConfig gebruiken en beheren in Microsoft Intune
 
@@ -116,6 +116,8 @@ Zorg ervoor dat het apparaat OEMConfig ondersteunt, dat de juiste OEMConfig-app 
       - Veel instellingen hebben standaardwaarden die zijn opgegeven door de OEM. Als u wilt zien of er een standaardwaarde is, wijst u het pictogram Info naast de instelling aan. Bij de Knopinfo vindt u de standaardwaarden voor die instelling (indien van toepassing) en meer informatie die door de OEM is verstrekt.
 
       - Als u op **Wissen** klikt, wordt een instelling uit het profiel verwijderd. Als een instelling zich niet in het profiel bevindt, wordt de waarde ervan op het apparaat niet gewijzigd wanneer het profiel wordt toegepast.
+      
+      - Gebruik de knop **Zoeken** om naar instellingen te zoeken. Typ in het deelvenster aan de zijkant een trefwoord om alle relevante instellingen en beschrijvingen ervan weer te geven. Selecteer een instelling om de instelling automatisch toe te voegen aan de structuur van Configuration Designer, als deze nog niet bestaat. De structuur wordt ook automatisch geopend, zodat u de instelling kunt zien. 
 
       - Als u in Configuration Designer een lege (niet-geconfigureerde) bundel maakt, wordt deze verwijderd wanneer u schakelt naar de JSON-editor.
 
@@ -155,15 +157,23 @@ Vergeleken met standaard-apps bieden OEMConfig-apps meer bevoegdheden voor behee
 
 | OEM | Bundel-id | OEM-documentatie (indien beschikbaar) |
 | --- | --- | ---|
+| Archos | com.archos.oemconfig | |
 | Ascom | com.ascom.myco.oemconfig | |
+| Bluebird | com.bluebird.android.oemconfig | |
 | Cipherlab | com.cipherlab.oemconfig | |
 | Datalogic | com.datalogic.settings.oemconfig | |
-| Honeywell | com.honeywell.oemconfig |  |
+| Honeywell | com.honeywell.oemconfig | |
 | HMDGlobal - 7.2 | com.hmdglobal.app.oemconfig.n7_2 | 
-| HMDGlobal - 4.2 | com.hmdglobal.app.oemconfig.n4_2 | 
+| HMDGlobal - 4.2 | com.hmdglobal.app.oemconfig.n4_2 |
+| HMDGlobal - 5.3 | com.hmdglobal.app.oemconfig.n5_3 |
+| Lenovo | com.lenovo.oemconfig.rel | |
+| LG | com.lge.android.oemconfig | |
 | Kyocera | jp.kyocera.enterprisedeviceconfig |  |
+| Panasonic | com.panasonic.mobile.oemconfig | |
+| Point Mobile | device.apps.emkitagent | |
 | Samsung | com.samsung.android.knox.kpu | [Beheerdershandleiding voor de KNOX-service-invoegtoepassing](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) |
 | Seuic | com.seuic.seuicoemconfig | |
+| Social Mobile | com.rhinomobility.oemconfig | |
 | Spectralink: streepjescodes | com.spectralink.barcode.service |  |
 | Spectralink: knoppen | com.spectralink.buttons |  |
 | Spectralink: apparaat | com.spectralink.slnkdevicesettings  |  |

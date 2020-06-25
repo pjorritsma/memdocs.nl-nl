@@ -258,6 +258,8 @@
               href: troubleshoot-scep-certificate-delivery.md
             - name: Rapportage voor certificaatimplementatie
               href: troubleshoot-scep-certificate-reporting.md
+        - name: Problemen met PKCS-certificaatprofielen oplossen
+          href: troubleshoot-pkcs-certificate-profiles.md
         - name: Problemen met Exchange Connector oplossen
           items:
             - name: Problemen met Exchange Connector oplossen

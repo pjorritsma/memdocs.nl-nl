@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 99ac1e069386c69011543ac40878dd62a0d50527
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e3ab2e31aa8a35ef04c150972cd7bb7650e46040
+ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990822"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879713"
 ---
 # <a name="manage-endpoint-security-in-microsoft-intune"></a>Eindpuntbeveiliging beheren in Microsoft Intune
 
@@ -31,15 +31,15 @@ Het knooppunt eindpuntbeveiliging groepeert de hulpprogramma's die beschikbaar z
 
 - **Bekijk de status van alle beheerde apparaten**. Gebruik de weergave [alle apparaten](#manage-devices) waar u de naleving van apparaten op een hoog niveau kunt bekijken en vervolgens inzoomen op specifieke apparaten om te begrijpen aan welke nalevingsbeleidsregels niet is voldaan zodat u deze kunt oplossen.
 
-- **Implementeer beveiligingsbasislijnen die best practice-beveiligingsconfiguraties voor apparaten tot stand brengen**. Intune bevat [beveiligingsbasislijnen](#manage-security-baselines) voor Windows-apparaten en een groeiende lijst met toepassingen, zoals Microsoft Defender Advanced Threat Protection (Defender ATP) en Microsoft Edge. Beveiligingsbasislijnen zijn vooraf geconfigureerde Windows-instellingen waarmee u een beproefde groep instellingen en standaardwaarden kunt toepassen die door relevante beveiligingsteams worden aanbevolen.
+- **Implementeer beveiligingsbasislijnen die best practice-beveiligingsconfiguraties voor apparaten tot stand brengen**. Intune bevat [beveiligingsbasislijnen](#manage-security-baselines) voor Windows-apparaten en een groeiende lijst met toepassingen, zoals Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) en Microsoft Edge. Beveiligingsbasislijnen zijn vooraf geconfigureerde Windows-instellingen waarmee u een beproefde groep instellingen en standaardwaarden kunt toepassen die door relevante beveiligingsteams worden aanbevolen.
 
-- **Beveiligingsconfiguraties op apparaten beheren door middel van nauwkeurig beleid**.  Elk [eindpuntbeveiligingsbeleid](#use-policies-to-manage-device-security) richt zich op aspecten van de beveiliging van apparaten, zoals virussen, schijfversleuteling, firewalls en verschillende gebieden die beschikbaar worden gesteld via integratie met Defender ATP.
+- **Beveiligingsconfiguraties op apparaten beheren door middel van nauwkeurig beleid**.  Elk [eindpuntbeveiligingsbeleid](#use-policies-to-manage-device-security) richt zich op aspecten van de beveiliging van apparaten, zoals virussen, schijfversleuteling, firewalls en verschillende gebieden die beschikbaar worden gesteld via integratie met Microsoft Defender ATP.
 
 - **Stel de apparaat- en gebruikersvereisten in via het nalevingsbeleid**. Met [nalevingsbeleid](../protect/device-compliance-get-started.md) stelt u de regels in waaraan apparaten en gebruikers moeten voldoen om als compatibel te worden beschouwd. Regels kunnen versies van het besturingssysteem, wachtwoordvereisten, bedreigingsniveaus van apparaten en meer zijn.
 
   Wanneer u integreert met het Azure Active Directory (Azure AD)-[beleid voor voorwaardelijke toegang](#configure-conditional-access) om een nalevingsbeleid af te dwingen, kunt u de toegang tot bedrijf resources voor zowel beheerde apparaten en apparaten die nog niet worden beheerd, op poort plaatsen.
 
-- **Intune integreren met uw Microsoft Defender ATP-team**. Door te [Integreren met Defender ATP](#set-up-integration-with-defender-atp) krijgt u toegang tot [beveiligingstaken](#review-security-tasks-from-defender-atp). Met beveiligingstaken worden de Defender-ATP en Intune met elkaar gecombineerd om uw beveiligingsteam te helpen bij het identificeren van apparaten die risico lopen en gedetailleerde herstelstappen aan Intune-beheerders te geven die vervolgens kunnen handelen.
+- **Intune integreren met uw Microsoft Defender ATP-team**. Door te [Integreren met Microsoft Defender ATP](#set-up-integration-with-microsoft-defender-atp) krijgt u toegang tot [beveiligingstaken](#review-security-tasks-from-microsoft-defender-atp). Met beveiligingstaken worden de Microsoft Defender-ATP en Intune met elkaar gecombineerd om uw beveiligingsteam te helpen bij het identificeren van apparaten die risico lopen en gedetailleerde herstelstappen aan Intune-beheerders te geven die vervolgens kunnen handelen.
 
 In de volgende secties van dit artikel vindt u informatie over de verschillende taken die u kunt uitvoeren vanuit het knooppunt eindpuntbeveiliging van het beheercentrum en de RBAC-machtigingen (op rollen gebaseerd toegangsbeheer) die nodig zijn om ze te gebruiken.
 
@@ -61,13 +61,13 @@ Zie [Beveiligingsbasislijnen gebruiken om Windows 10-apparaten te configureren i
 
 Beveiligingsbasislijnen zijn een van de verschillende methoden in Intune om instellingen op apparaten te configureren. Bij het beheren van instellingen is het belangrijk om te begrijpen welke andere methoden in uw omgeving worden gebruikt voor het configureren van uw apparaten, zodat u conflicten kunt voorkomen. Zie [Beleidsconflicten voorkomen](#avoid-policy-conflicts) verderop in dit artikel.
 
-## <a name="review-security-tasks-from-defender-atp"></a>Beveiligingstaken van Defender ATP controleren
+## <a name="review-security-tasks-from-microsoft-defender-atp"></a>Beveiligingstaken van Microsoft Defender ATP controleren
 
-Wanneer u Intune integreert met Microsoft Defender Advanced Threat Protection (Defender ATP), kunt u *Beveiligingstaken* in Intune controleren om te bepalen welke apparaten risico lopen en hoe dat risico kan worden verholpen. U kunt de taken vervolgens gebruiken om terug te rapporteren aan Defender ATP wanneer deze risico's worden verholpen.
+Wanneer u Intune integreert met Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP), kunt u *Beveiligingstaken* in Intune controleren om te bepalen welke apparaten risico lopen en hoe dat risico kan worden verholpen. U kunt de taken vervolgens gebruiken om terug te rapporteren aan Microsoft Defender ATP wanneer deze risico's worden verholpen.
 
-- Uw Defender ATP-team bepaalt welke apparaten risico lopen en geeft deze informatie door aan uw Intune-team als een beveiligingstaak. Met een paar klikken maken ze een beveiligingstaak voor Intune die de apparaten aanduidt die risico lopen, het beveiligingslek aangeven en richtlijnen geven voor het oplossen van dat risico.
+- Uw Microsoft Defender ATP-team bepaalt welke apparaten risico lopen en geeft deze informatie door aan uw Intune-team als een beveiligingstaak. Met een paar klikken maken ze een beveiligingstaak voor Intune die de apparaten aanduidt die risico lopen, het beveiligingslek aangeven en richtlijnen geven voor het oplossen van dat risico.
 
-- De Intune-beheerders controleren beveiligingstaken en handelen vervolgens in Intune om deze taken te herstellen. Zodra de taak is verholpen, wordt deze door de gebruiker ingesteld op voltooid, waardoor deze status weer wordt gecommuniceerd naar het Defender ATP-team.
+- De Intune-beheerders controleren beveiligingstaken en handelen vervolgens in Intune om deze taken te herstellen. Zodra de taak is verholpen, wordt deze door de gebruiker ingesteld op voltooid, waardoor deze status weer wordt gecommuniceerd naar het Microsoft Defender ATP-team.
 
 Met behulp van beveiligingstaken blijven beide teams in synchronisatie zien welke apparaten risico lopen en hoe en wanneer deze risico's worden hersteld.
 
@@ -93,7 +93,7 @@ De [beschikbare instellingen voor naleving](../protect/device-compliance-get-sta
 
 - Vereisen dat apparaten een minimale of specifieke versie van het besturingssysteem uitvoeren
 - Vereisten voor wachtwoorden instellen
-- Het opgeven van een maximaal toegestane bedreigingsniveau voor apparaten, zoals wordt bepaald door Defender ATP of een andere Mobile Threat Defense-partner
+- Het opgeven van een maximaal toegestane bedreigingsniveau voor apparaten, zoals wordt bepaald door Microsoft Defender ATP of een andere Mobile Threat Defense-partner
 
 Naast de beleidsregels ondersteunt het nalevingsbeleid:
 
@@ -119,18 +119,18 @@ Hieronder vindt u twee veelvoorkomende methoden voor het gebruik van voorwaardel
 
 Zie [Meer informatie over voorwaardelijke toegang en Intune](../protect/conditional-access.md) voor meer informatie over het gebruik van voorwaardelijke toegang met Intune.
 
-## <a name="set-up-integration-with-defender-atp"></a>Integratie met Windows Defender ATP instellen
+## <a name="set-up-integration-with-microsoft-defender-atp"></a>Integratie met Microsoft Windows Defender ATP instellen
 
-Wanneer u Microsoft Defender Advanced Threat Protection (Defender ATP) integreert met Intune, verbetert u de mogelijkheid om risico's te identificeren en erop te reageren.
+Wanneer u Microsoft Defender ATP integreert met Intune, verbetert u de mogelijkheid om risico's te identificeren en erop te reageren.
 
-Hoewel Intune kan worden geïntegreerd met verschillende [Mobile Threat Defense-partners](../protect/mobile-threat-defense.md), wanneer u Defender ATP gebruikt, hebt u een nauwe integratie tussen de Defender-ATP en Intune met toegang tot uitgebreide opties voor het beveiligen van apparaten, waaronder:
+Hoewel Intune kan worden geïntegreerd met verschillende [Mobile Threat Microsoft Defense-partners](../protect/mobile-threat-defense.md), wanneer u Defender ATP gebruikt, hebt u een nauwe integratie tussen de Microsoft Defender-ATP en Intune met toegang tot uitgebreide opties voor het beveiligen van apparaten, waaronder:
 
 - Beveiligingstaken: naadloze communicatie tussen ATP-en Intune-beheerders over apparaten die risico lopen, het herstellen ervan en de bevestiging wanneer deze risico's worden verholpen.
-- Gestroomlijnde onboarding voor Defender ATP op clients.
+- Gestroomlijnde onboarding voor Microsoft Defender ATP op clients.
 - Het gebruik van de risicosignalen van een ATP-apparaat in het Intune-nalevingsbeleid.
 - Toegang tot mogelijkheden voor *Manipulatiebeveiliging*.
 
- Zie [Naleving voor Microsoft Defender ATP met voorwaardelijke toegang in Intune afdwingen](../protect/advanced-threat-protection.md) voor meer informatie over Defender ATP met Intune gebruiken.
+ Zie [Naleving voor Microsoft Defender ATP met voorwaardelijke toegang in Intune afdwingen](../protect/advanced-threat-protection.md) voor meer informatie over Microsoft Defender ATP met Intune gebruiken.
 
 ## <a name="role-based-access-control-requirements"></a>Vereisten voor op rollen gebaseerd toegangsbeheer
 
@@ -230,4 +230,4 @@ Configureren:
 - [Beveiligingsbasislijnen](../protect/security-baselines.md)
 - [Nalevingsbeleid](../protect/device-compliance-get-started.md)
 - [Beleid voor voorwaardelijke toegang](#configure-conditional-access)
-- [Integratie met Windows Defender ATP](../protect/advanced-threat-protection.md)
+- [Integratie met Microsoft Windows Defender ATP](../protect/advanced-threat-protection.md)

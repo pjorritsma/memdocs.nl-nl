@@ -97,7 +97,7 @@ Het doel van de Intune App SDK voor iOS is het toevoegen van beheermogelijkheden
 
 Als u de Intune App SDK wilt inschakelen, voert u de volgende stappen uit:
 
-1. **Optie 1 - Framework (aanbevolen)** : Als u Xcode 10.2+ gebruikt en uw app/extensie bevat SWIFT-code, koppelt u `IntuneMAMSwift.framework` en `IntuneMAMSwiftStub.framework` aan uw doel: Sleep `IntuneMAMSwift.framework` en `IntuneMAMSwiftStub.framework` naar de lijst **Ingesloten binaire bestanden** van het projectdoel.
+1. **Optie 1 - Framework (aanbevolen)**: Als u Xcode 10.2+ gebruikt en uw app/extensie bevat SWIFT-code, koppelt u `IntuneMAMSwift.framework` en `IntuneMAMSwiftStub.framework` aan uw doel: Sleep `IntuneMAMSwift.framework` en `IntuneMAMSwiftStub.framework` naar de lijst **Ingesloten binaire bestanden** van het projectdoel.
 
     Koppel anders `IntuneMAM.framework` aan uw doel: Sleep `IntuneMAM.framework` naar de lijst met **ingesloten binaire bestanden** van het projectdoel.
 
@@ -178,7 +178,7 @@ Als de parameter 'o' niet wordt opgegeven, wordt in plaats daarvan het invoerbes
 
 ## <a name="configure-adalmsal"></a>ADAL/MSAL configureren
 
-De Intune App SDK kan ofwel gebruikmaken van de [Azure Active Directory Authentication Library](https://github.com/AzureAD/azure-activedirectory-library-for-objc) of van de [Microsoft Authentication Library](https://github.com/AzureAD/microsoft-authentication-library-for-objc) voor de scenario's voor verificatie en voorwaardelijk starten. Het is ook afhankelijk van ADAL/MSAL dat de gebruikers-id wordt geregistreerd bij de MAM-service om zonder scenario's voor apparaatinschrijving beheertaken uit te voeren.It also relies on ADAL/MSAL to register the user identity with the MAM service for management without device enrollment scenarios.
+De Intune App SDK kan ofwel gebruikmaken van de [Azure Active Directory Authentication Library](https://github.com/AzureAD/azure-activedirectory-library-for-objc) of van de [Microsoft Authentication Library](https://github.com/AzureAD/microsoft-authentication-library-for-objc) voor de scenario's voor verificatie en voorwaardelijk starten. De Intune App SDK is ook afhankelijk van ADAL/MSAL voor het registreren van de gebruikersidentiteit bij de MAM-service om beheertaken uit te voeren zonder scenario's voor apparaatinschrijving.
 
 Normaal gesproken vereist ADAL/MSAL dat apps worden geregistreerd via Azure Active Directory (AAD) en dat een unieke client-id en omleidings-URI worden gemaakt om de beveiliging te waarborgen van de tokens die aan de app worden toegekend. Als uw app al ADAL of MSAL gebruikt om gebruikers te verifiëren, moet de app de bestaande registratiewaarden gebruiken en de standaardwaarden van de Intune App SDK overschrijven. Dit zorgt ervoor dat eindgebruikers niet tweemaal om verificatie wordt gevraagd (eenmaal door de Intune App SDK en een tweede maal door de app).
 
@@ -225,7 +225,7 @@ Apps kunnen bovendien deze Azure AD-instellingen tijdens runtime overschrijven. 
 
 ### <a name="if-your-app-does-not-use-adal-or-msal"></a>Als uw app geen ADAL of MSAL gebruikt
 
-Zoals eerder vermeld kan de Intune App SDK ofwel gebruikmaken van de [Azure Active Directory Authentication Library](https://github.com/AzureAD/azure-activedirectory-library-for-objc) of van de [Microsoft Authentication Library](https://github.com/AzureAD/microsoft-authentication-library-for-objc) voor de scenario's voor verificatie en voorwaardelijk starten. Het is ook afhankelijk van ADAL/MSAL dat de gebruikers-id wordt geregistreerd bij de MAM-service om zonder scenario's voor apparaatinschrijving beheertaken uit te voeren.It also relies on ADAL/MSAL to register the user identity with the MAM service for management without device enrollment scenarios. Als **voor het eigen verificatiemechanisme van uw app geen ADAL of MSAL wordt gebruikt**, moet u mogelijk aangepaste AAD-instellingen configureren, afhankelijk van de verificatiebibliotheek die u wilt integreren:   
+Zoals eerder vermeld kan de Intune App SDK ofwel gebruikmaken van de [Azure Active Directory Authentication Library](https://github.com/AzureAD/azure-activedirectory-library-for-objc) of van de [Microsoft Authentication Library](https://github.com/AzureAD/microsoft-authentication-library-for-objc) voor de scenario's voor verificatie en voorwaardelijk starten. De Intune App SDK is ook afhankelijk van ADAL/MSAL voor het registreren van de gebruikersidentiteit bij de MAM-service om beheertaken uit te voeren zonder scenario's voor apparaatinschrijving. Als **voor het eigen verificatiemechanisme van uw app geen ADAL of MSAL wordt gebruikt**, moet u mogelijk aangepaste AAD-instellingen configureren, afhankelijk van de verificatiebibliotheek die u wilt integreren:   
 
 ADAL: de Intune App SDK zorgt voor de standaardwaarden voor ADAL-parameters en de verificatie met Azure AD. Ontwikkelaars hoeven geen waarden op te geven voor de eerder genoemde ADAL-instellingen. 
 

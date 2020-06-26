@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 79e83a7ba111b1d7f96fb623914ffe8e11f22f3d
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: 576f909be15a35f4c29e803236c220cdde33c0ac
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270868"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383152"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Het gebruik van SQL Server AlwaysOn-beschikbaarheids groepen met Configuration Manager voorbereiden
 
@@ -256,11 +256,7 @@ Configuration Manager Setup moet verbinding maken met elke replica. Wanneer u ee
 
 - SQL via TCP: **tcp 1433**
 
-Nadat de installatie is voltooid, moeten de volgende poorten open blijven voor Configuration Manager:  
-
-- SQL Server Service Broker: **TCP 4022**  
-
-- SQL via TCP: **tcp 1433**  
+Nadat de installatie is voltooid, moeten deze poorten open blijven voor Configuration Manager en Replication link Analyzer.<!-- MEMDocs#375 -->
 
 U kunt aangepaste poorten voor deze configuraties gebruiken. Gebruik dezelfde aangepaste poorten voor het eind punt en voor alle replica's in de beschikbaarheids groep.
 

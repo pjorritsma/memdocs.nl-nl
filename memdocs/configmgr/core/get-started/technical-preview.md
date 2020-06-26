@@ -2,7 +2,7 @@
 title: Technical Preview-releases
 titleSuffix: Configuration Manager
 description: Meer informatie over de technische preview-vertakking om nieuwe functies en mogelijkheden in Configuration Manager te testen.
-ms.date: 05/29/2020
+ms.date: 06/25/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e4c0842a3e23eb8503c945073a4be35db5173086
-ms.sourcegitcommit: 0d2f6132428b5fa994e5b770ab1d2bf7d78ac179
+ms.openlocfilehash: 5dfa3b33a46166cfa4e1233eb71125696f5aa39d
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226244"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383135"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Technical Preview voor Configuration Manager
 
@@ -116,28 +116,25 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](2020/technical-preview-2005.md) <!--ID-->
+<!-- - [title](2020/technical-preview-2006.md) <!--ID-->
 
 De volgende functies zijn beschikbaar met de meest recente versie van Configuration Manager Technical Preview:
 
-### <a name="technical-preview-version-2005"></a>Technical Preview-versie 2005
+### <a name="technical-preview-version-2006"></a>Technical Preview-versie 2006
 
-- [Tenant bijvoegen: tijd lijn van apparaat in het beheer centrum](2020/technical-preview-2005.md#bkmk_timeline) <!--7141381-->
-- [Tenant koppelen: een toepassing installeren vanuit het beheer centrum](2020/technical-preview-2005.md#bkmk_apps) <!--6024389-->
-- [Tenant bijvoegen: CMPivot van het beheer centrum](2020/technical-preview-2005.md#bkmk_cmpivot) <!--6024392-->
-- [Tenant bijvoegen: scripts uitvoeren vanuit het beheer centrum](2020/technical-preview-2005.md#bkmk_scripts) <!--6234688-->
-- [Type VPN-grens](2020/technical-preview-2005.md#bkmk_vpn) <!--7020519-->
-- [Azure AD-verificatie in Software Center](2020/technical-preview-2005.md#bkmk_availapp) <!--6935376-->
-- [De client installeren en upgraden op een verbinding met een Data limiet](2020/technical-preview-2005.md#bkmk_meter) <!--6976145-->
-- [Ondersteuning voor taken reeks media voor Cloud inhoud](2020/technical-preview-2005.md#bkmk_tsmedia) <!--6209223-->
-- [Verbeteringen in de Cloud Management Gateway-cmdlets](2020/technical-preview-2005.md#bkmk_pwshcmg) <!--6978300-->
-- [Community-hub en GitHub](2020/technical-preview-2005.md#community-hub-and-github) <!--3555935-->
-- [Microsoft 365-apps voor ondernemingen](2020/technical-preview-2005.md#bkmk_365_apps) <!--6298093-->
-- [Fouten bij het instellen van rapporten en upgrades naar micro soft](2020/technical-preview-2005.md#report-setup-and-upgrade-failures-to-microsoft) <!--5622909-->
-- [Melding voor het verlopen van geheime sleutels van Azure AD-apps](2020/technical-preview-2005.md#bkmk_alertkey) <!--6386392-->
-- [Verbeteringen in de taken reeks stappen van BitLocker](2020/technical-preview-2005.md#bkmk_tsbitlocker) <!--6995601-->
-- [Verbeteringen in het hulp programma voor het opschonen van inhouds bibliotheken](2020/technical-preview-2005.md#bkmk_content) <!--6887878-->
-- [Opdracht prompt verwijderen tijdens Windows 10 in-place upgrade](2020/technical-preview-2005.md#bkmk_ipucmd) <!--2837795-->
+- [De app Bedrijfsportal gebruiken op gezamenlijk beheerde apparaten](2020/technical-preview-2006.md#bkmk_portal) <!--3601237-->
+- [Verbeteringen in beschik bare apps via CMG](2020/technical-preview-2006.md#bkmk_availapp) <!--7033501-->
+- [Intranet-clients kunnen een CMG-software-update punt gebruiken](2020/technical-preview-2006.md#bkmk_cmg-sup) <!--7102873-->
+- [Verbeteringen in taken reeksen via CMG](2020/technical-preview-2006.md#bkmk_osdcmg) <!--6983320-->
+- [Beheer inzichten die u kunt optimaliseren voor externe werk nemers](2020/technical-preview-2006.md#bkmk_wfhmi) <!--6982226-->
+- [Verbeteringen voor het grens type van de VPN-verbinding](2020/technical-preview-2006.md#bkmk_vpn) <!--7020519-->
+- [Tenant bijvoegen: verbeteringen aan Configuration Manager acties in het beheer centrum van micro soft Endpoint Manager](2020/technical-preview-2006.md#bkmk_apps) <!--7518897-->
+- [CMG-ondersteuning voor Endpoint Protection-beleid](2020/technical-preview-2006.md#bkmk_epcmg) <!--4773948-->
+- [Eerder gemaakte Azure AD-toepassing importeren tijdens het voorbereiden van de Tenant bijvoegen](2020/technical-preview-2006.md#bkmk_aad-app) <!--6479246-->
+- [Verbeteringen in de client upgrade voor een verbinding met een Data limiet](2020/technical-preview-2006.md#bkmk_meter) <!--6976145-->
+- [Verbeteringen voor het beheren van het opnieuw opstarten van apparaten](2020/technical-preview-2006.md#bkmk_restart) <!--3601213-->
+- [Verbeterde ondersteuning voor virtueel bureau blad van Windows](2020/technical-preview-2006.md#bkmk_wvd) <!--6527576-->
+- [Directe koppelingen naar Configuration Manager Community-hub-items](2020/technical-preview-2006.md#bkmk_deeplink) <!--4224406-->
 
 > [!NOTE]
 > Functies die beschikbaar waren in een eerdere versie van de Technical Preview blijven beschikbaar in latere versies. Op dezelfde manier blijven functies die worden toegevoegd aan de Configuration Manager huidige vertakking beschikbaar in de vertakking Technical Preview.
@@ -154,6 +151,25 @@ De volgende functies zijn uitgebracht met eerdere versies van de Configuration M
 
 > [!TIP]
 > Wanneer er een nieuwe huidige branch-versie beschikbaar is, worden de functies die beschikbaar zijn in die versie weer gegeven in het laatste artikel *Wat is er nieuw* . Zie [Wat is er nieuw in incrementele versies](../plan-design/changes/whats-new-incremental-versions.md#supported-versions)? voor meer informatie.
+
+### <a name="technical-preview-version-2005"></a>Technical Preview-versie 2005
+
+- [Tenantkoppeling: Tijdlijn van het apparaat in het beheercentrum](2020/technical-preview-2005.md#bkmk_timeline) <!--7141381-->
+- [Tenantkoppeling: Een toepassing installeren vanuit het beheercentrum](2020/technical-preview-2005.md#bkmk_apps) <!--6024389-->
+- [Tenantkoppeling: CMPivot vanuit het beheercentrum](2020/technical-preview-2005.md#bkmk_cmpivot) <!--6024392-->
+- [Tenantkoppeling: Scripts uitvoeren vanuit het beheercentrum](2020/technical-preview-2005.md#bkmk_scripts) <!--6234688-->
+- [Type VPN-grens](2020/technical-preview-2005.md#bkmk_vpn) <!--7020519-->
+- [Azure AD-verificatie in Software Center](2020/technical-preview-2005.md#bkmk_availapp) <!--6935376-->
+- [De client installeren en upgraden op een verbinding met een Data limiet](2020/technical-preview-2005.md#bkmk_meter) <!--6976145-->
+- [Ondersteuning voor taken reeks media voor Cloud inhoud](2020/technical-preview-2005.md#bkmk_tsmedia) <!--6209223-->
+- [Verbeteringen in de Cloud Management Gateway-cmdlets](2020/technical-preview-2005.md#bkmk_pwshcmg) <!--6978300-->
+- [Community-hub en GitHub](2020/technical-preview-2005.md#community-hub-and-github) <!--3555935-->
+- [Microsoft 365-apps voor ondernemingen](2020/technical-preview-2005.md#bkmk_365_apps) <!--6298093-->
+- [Fouten bij het instellen van rapporten en upgrades naar micro soft](2020/technical-preview-2005.md#report-setup-and-upgrade-failures-to-microsoft) <!--5622909-->
+- [Melding voor het verlopen van geheime sleutels van Azure AD-apps](2020/technical-preview-2005.md#bkmk_alertkey) <!--6386392-->
+- [Verbeteringen in de taken reeks stappen van BitLocker](2020/technical-preview-2005.md#bkmk_tsbitlocker) <!--6995601-->
+- [Verbeteringen in het hulp programma voor het opschonen van inhouds bibliotheken](2020/technical-preview-2005.md#bkmk_content) <!--6887878-->
+- [Opdracht prompt verwijderen tijdens Windows 10 in-place upgrade](2020/technical-preview-2005.md#bkmk_ipucmd) <!--2837795-->
 
 ### <a name="technical-preview-version-2004"></a>Technical Preview-versie 2004
 

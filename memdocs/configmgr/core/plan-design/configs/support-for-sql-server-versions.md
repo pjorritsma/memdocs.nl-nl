@@ -2,7 +2,7 @@
 title: Ondersteunde SQL Server-versies
 titleSuffix: Configuration Manager
 description: SQL Server versie-en configuratie vereisten ophalen voor het hosten van een Configuration Manager-site database.
-ms.date: 04/03/2020
+ms.date: 06/24/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3c52008089a6d23d5c4efe44f0970bb186eb334a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: b30380f4e272050b7224b52d092f39aa8ab5bad4
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904636"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383169"
 ---
 # <a name="supported-sql-server-versions-for-configuration-manager"></a>Ondersteunde SQL Server versies voor Configuration Manager
 
@@ -74,7 +74,7 @@ Tenzij anders aangegeven, worden de volgende versies van SQL Server ondersteund 
 
 ### <a name="sql-server-2019-standard-enterprise"></a>SQL Server 2019: Standard, Enter prise
 
-Vanaf Configuration Manager versie 1910 kunt u deze versie gebruiken met elke cumulatieve update, mits de cumulatieve update versie wordt ondersteund door de SQL-levens cyclus.
+Vanaf Configuration Manager versie 1910 kunt u deze versie gebruiken met cumulatieve update 5 (CU5) of hoger, zolang de cumulatieve update versie wordt ondersteund door de SQL-levens cyclus. CU5 is de minimale vereiste voor SQL Server 2019, omdat hiermee een probleem met [scalaire UDF](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining)-INACTIE wordt opgelost.
 
 Deze versie van SQL kan worden gebruikt voor de volgende sites:
 
@@ -82,19 +82,20 @@ Deze versie van SQL kan worden gebruikt voor de volgende sites:
 - Een primaire site
 - Een secundaire site
 
-#### <a name="known-issue-with-sql-server-2019"></a>Bekend probleem met SQL Server 2019
+<!--
+#### Known issue with SQL Server 2019
 
-Er is een bekend probleem<!--6436234--> met de nieuwe functie voor het inbrengen van [scalaire](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining) functies in SQL 2019. U kunt dit probleem omzeilen en UDF-lijnen uitschakelen door het volgende script uit te voeren op de SQL 2019-server:
+There's a known issue<!--6436234 with the new [scalar UDF inlining](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining) feature in SQL 2019. To work around this issue and disable UDF lining, run the following script on the SQL 2019 server:
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = OFF  
 ```
 
-Het is niet altijd nodig om de SQL Server opnieuw op te starten nadat u dit script hebt uitgevoerd. Zie voor meer informatie [het uitschakelen van SCALAIR UDF inzien zonder het compatibiliteits niveau te wijzigen](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sql-server-ver15#disabling-scalar-udf-inlining-without-changing-the-compatibility-level).
+While not always necessary, you may need to restart the SQL server after you run this script. For more information, see [Disabling Scalar UDF Inlining without changing the compatibility level](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sql-server-ver15#disabling-scalar-udf-inlining-without-changing-the-compatibility-level).
 
-U kunt deze SQL-functie veilig uitschakelen voor de site database server, omdat Configuration Manager deze niet gebruikt.
+You can safely disable this SQL feature for the site database server because Configuration Manager doesn't use it.
 
-Als u scalaire inactief UDF niet uitschakelt in SQL 2019, kan de site server wille keurig geen query uitvoeren op de site database. U ziet bijvoorbeeld de volgende fouten in **hman. log**:
+If you don't disable scalar UDF inlining in SQL 2019, the site server will randomly fail to query the site database. For example, you'll see the following errors in **hman.log**:
 
 ```hman.log
 *** [HY000][0][Microsoft][SQL Server Native Client 11.0]Unspecified error occurred on SQL Server. Connection may have been terminated by the server.
@@ -103,13 +104,14 @@ Als u scalaire inactief UDF niet uitschakelt in SQL 2019, kan de site server wil
 Failed to execute SQL command select dbo.fnGetSiteMode(dbo.fnGetSiteCode())
 ```
 
-Mogelijk worden vergelijk bare fouten in andere logboeken weer gegeven, zoals **SmsAdminUI. log**.
+You may see similar errors in other logs, such as **SmsAdminUI.log**.
 
-SQL Server versie 2019 logboek registratie van de volgende fout:
+SQL Server version 2019 logs the following error:
 
 `Microsoft SQL Server reported SQL message 596, severity 21: [HY000][596][Microsoft][SQL Server Native Client 11.0][SQL Server]Cannot continue the execution because the session is in the kill state.`
 
-U ziet ook crash dumps ( `.mdump` bestanden) van SQL in de logboekmap, die standaard is `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log` .
+You'll also see crash dumps (`.mdump` files) from SQL in its log directory, which by default is `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log`.
+-->
 
 ### <a name="sql-server-2017-standard-enterprise"></a>SQL Server 2017: Standard, Enter prise
 

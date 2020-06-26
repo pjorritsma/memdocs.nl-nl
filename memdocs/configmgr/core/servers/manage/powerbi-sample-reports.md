@@ -1,8 +1,8 @@
 ---
-title: Voorbeeld rapporten van Power BI installeren
+title: Power BI-voorbeeldrapporten installeren
 titleSuffix: Configuration Manager
 description: Meer informatie over het installeren van de Power BI-voorbeeld rapporten in Configuration Manager
-ms.date: 06/23/2020
+ms.date: 06/25/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,14 +10,14 @@ ms.assetid: 7e9bc22c-67ac-4a86-b613-944a4928e583
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 340f10a486594f78053dcfd0febde40bb5a6697f
-ms.sourcegitcommit: c5c17af545fd9df94f9b99fd44b56f10ff1f695e
+ms.openlocfilehash: 39bec7e8b01b35a8411400399a74eb352406c023
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85310636"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383186"
 ---
-# <a name="install-power-bi-sample-reports"></a>Voorbeeld rapporten van Power BI installeren
+# <a name="install-power-bi-sample-reports"></a>Power BI-voorbeeldrapporten installeren
 <!--5679791-->
 *Van toepassing op: Configuration Manager (huidige vertakking)*
 
@@ -34,9 +34,12 @@ Vanaf versie 2002 kunt u [Power bi Report Server](https://docs.microsoft.com/pow
 
 ## <a name="download-the-sample-reports"></a>De voorbeeld rapporten downloaden
 
+> [!IMPORTANT]
+> De voorbeeld rapporten zijn momenteel niet beschikbaar om te downloaden. Ze zijn tijdelijk verwijderd om gemelde problemen op te lossen.
+
 De voorbeeld rapporten downloaden:
 
-1. De voorbeeld rapporten van Power BI downloaden van het [micro soft Download centrum](https://www.microsoft.com/download/details.aspx?id=101452).
+1. De voorbeeld rapporten van Power BI downloaden<!-- from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=101452)-->.
 1. Sla het bestand `ConfigMgrSamplePowerBIReports.exe` op. 
 1. Verplaats het bestand naar een computer met micro soft Power BI Desktop (geoptimaliseerd voor Power BI Report Server) geïnstalleerd als u het hebt gedownload vanaf een ander apparaat.
 1. Voer het `ConfigMgrSamplePowerBIReports.exe` bestand uit om de. pbit-bestanden uit te pakken.

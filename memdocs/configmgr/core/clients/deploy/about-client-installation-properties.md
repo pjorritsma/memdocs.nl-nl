@@ -10,12 +10,12 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4065f320ec27f53e50c64bc7ca0c97d3f6923853
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: 02a281b800c1156cf8492e8a897a5cf1b412006e
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353272"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383033"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Over para meters en eigenschappen van client installatie in Configuration Manager
 
@@ -271,6 +271,13 @@ Bijvoorbeeld:
 `CCMSetup.exe /AlwaysExcludeUpgrade:TRUE`
 
 Zie [Extended interoperabiliteit client](../../understand/interoperability-client.md)voor meer informatie.
+
+> [!NOTE]  
+> Wanneer u de para meter **/AlwaysExcludeUpgrade** gebruikt, wordt de automatische upgrade nog steeds uitgevoerd. Als CCMSetup echter wordt uitgevoerd om de upgrade uit te voeren, ziet u dat de para meter **/AlwaysExcludeUpgrade** is ingesteld en de volgende regel in het **CCMSetup. log**wordt geregistreerd:
+>
+> `Client is stamped with /alwaysexcludeupgrade. Stop proceeding.`
+>
+> CCMSetup wordt vervolgens onmiddellijk afgesloten en de upgrade niet uit te voeren.
 
 ## <a name="ccmsetupexe-return-codes"></a><a name="ccmsetupReturnCodes"></a>CCMSetup.exe retour codes
 

@@ -10,12 +10,12 @@ ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8d87b2cde9a9fadb7326939b7fe473ba2a757e91
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 6ad36978f3f3dc5207068a65d76bf8f5c7c3078c
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430121"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383237"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>Een taken reeks maken om een besturings systeem in Configuration Manager bij te werken
 
@@ -222,8 +222,10 @@ Een dergelijk hulp programma is Windows [SetupDiag](https://docs.microsoft.com/w
 - Maak in Configuration Manager [een pakket](../../apps/deploy-use/packages-and-programs.md#create-a-package-and-program) voor het hulp programma.  
 
 - Voeg een stap [opdracht regel uitvoeren](../understand/task-sequence-steps.md#BKMK_RunCommandLine) toe aan deze groep van uw taken reeks. Gebruik de **pakket** optie om te verwijzen naar het hulp programma. De volgende teken reeks is een voor beeld van een **opdracht regel**:  
-    `SetupDiag.exe /Output:"%_SMSTSLogPath%\SetupDiagResults.log" /Mode:Online`  
+    `SetupDiag.exe /Output:"%_SMSTSLogPath%\SetupDiagResults.log"`  
 
+> [!TIP]
+> Gebruik altijd de meest recente versie van SetupDiag voor de nieuwste functionaliteit en oplossingen voor bekende problemen. Zie [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag)voor meer informatie.
 
 ## <a name="additional-recommendations"></a>Extra aanbevelingen
 

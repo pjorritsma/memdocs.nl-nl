@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 06/10/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ea4b196a6b2fade8ca926d13c3436207cb4b764e
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: ee6ccebc9610f74f9f34c08bc8204e652e0a01db
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429773"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85092878"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Wi-Fi-instellingen toevoegen voor apparaten met Windows 10 en hoger in Intune
 
@@ -34,6 +34,8 @@ In dit artikel worden deze instellingen beschreven.
 [Maak een apparaatprofiel](wi-fi-settings-configure.md).
 
 ## <a name="basic-profile"></a>Basic-profiel
+
+Basic- of persoonlijke profielen gebruiken WPA/WPA2 om de Wi-Fi-verbinding op apparaten te beveiligen. Normaal gesproken wordt WPA/WPA2 gebruikt voor thuisnetwerken of privénetwerken. U kunt ook een vooraf gedeelde sleutel toevoegen om de verbinding te verifiëren.
 
 - **Wi-Fi-type**: Selecteer **Basic**. 
 
@@ -70,6 +72,8 @@ In dit artikel worden deze instellingen beschreven.
   - **Automatisch configureren**: voer de URL in die naar een proxyscript voor automatische configuratie (PAC) verwijst. Voer bijvoorbeeld `http://proxy.contoso.com/proxy.pac` in.
 
 ## <a name="enterprise-profile"></a>Enterprise-profiel
+
+Enterprise-profielen gebruiken Extensible Authentication Protocol (EAP) om Wi-Fi-verbindingen te verifiëren. EAP wordt vaak gebruikt door ondernemingen, omdat u certificaten kunt gebruiken om verbindingen te verifiëren en beveiligen, en om meer beveiligingsopties te configureren.
 
 - **Wi-Fi-type**: Kies **Enterprise**.
 
@@ -116,7 +120,7 @@ In dit artikel worden deze instellingen beschreven.
     **Extra instellingen EAP-TLS, EAP-TTLS en PEAP**:
 
     > [!NOTE]
-    > Momenteel worden alleen SCEP-certificaatprofielen ondersteund bij het gebruik van een EAP-type. PKCS-certificaatprofielen worden niet ondersteund. Steeds wanneer een gebruiker wordt gevraagd een certificaat in te voeren, moet u een SCEP-certificaat kiezen.
+    > SCEP- en PKCS-certificaatprofielen worden ondersteund bij het gebruik van een EAP-type.
 
     - **Server Trust**  
 

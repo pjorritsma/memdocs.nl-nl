@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1bbcfc953945f7e8525cb7dc7edf3b1dd8a2f5c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f807eabd2fabd51f7a7bb8eb43225a579784148c
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989074"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746490"
 ---
 # <a name="set-enrollment-restrictions"></a>Registratiebeperkingen instellen
 
@@ -64,7 +64,7 @@ Standaardbeperkingen worden automatisch opgegeven voor registratiebeperkingen vo
 3. Kies **Volgende** om naar de pagina **Platforminstellingen** te gaan.
 4. Kies onder **Platform** de optie **Toestaan** voor de platforms waarvoor u deze beperking wilt toestaan.
     ![Schermopname voor het kiezen van platforminstellingen](./media/enrollment-restrictions-set/choose-platform-settings.png)
-5. Kies onder **Versies** de minimale en maximale versies die u wilt ondersteunen op de toegestane platforms. Versiebeperkingen zijn alleen van toepassing op apparaten die zijn ingeschreven via de bedrijfsportal.
+5. Kies onder **Versies** de minimale en maximale versies die u wilt ondersteunen op de toegestane platforms. Voor iOS en Android zijn versiebeperkingen alleen van toepassing op apparaten die zijn ingeschreven via de bedrijfsportal.
      Ondersteunde versie-indelingen omvatten:
     - Android-apparaatbeheerder en Android Enterprise-werkprofiel bieden ondersteuning voor major.minor.rev.build.
     - iOS/iPadOS ondersteunt major.minor.rev. Versies van besturingssystemen zijn niet van toepassing op Apple-apparaten die worden ingeschreven met Device Enrollment Program, Apple School Manager of de app Apple Configurator.

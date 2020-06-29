@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d98f3f8205490848d9f5137e97e7796eee67a67
-ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
+ms.openlocfilehash: 73a222ee8f847071174ea7dee1c438b69a1bd0ae
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84436768"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093779"
 ---
 # <a name="set-up-iosipados-and-ipados-user-enrollment-preview"></a>Gebruikersinschrijving voor iOS/iPadOS en iPadOS instellen (preview)
 
@@ -42,7 +42,7 @@ Zie de [ondersteunde acties, wachtwoorden en andere opties voor gebruikersinschr
 
 Met een inschrijvingsprofiel worden de instellingen gedefinieerd die worden toegepast op een groep apparaten tijdens de inschrijving. 
 
-1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **iOS** > **iOS-inschrijving** > **Inschrijvingstypen (preview-versie)**  > **Profiel maken** > **iOS/iPadOS**. In dit profiel bepaalt u de inschrijvingstoepassing voor uw iOS-/iPadOS- en iPadOS-eindgebruikers op apparaten die niet zijn ingeschreven via een bedrijfsmethode van Apple. Als u wijzigingen wilt aanbrengen, kunt u dit profiel bewerken nadat u het hebt gemaakt.
+1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **iOS/iPadOS** > **iOS-inschrijving** > **Inschrijvingstypen (preview-versie)**  > **Profiel maken** > **iOS/iPadOS**. In dit profiel bepaalt u de inschrijvingstoepassing voor uw iOS-/iPadOS- en iPadOS-eindgebruikers op apparaten die niet zijn ingeschreven via een bedrijfsmethode van Apple. Als u wijzigingen wilt aanbrengen, kunt u dit profiel bewerken nadat u het hebt gemaakt.
 
     ![Apple-inschrijvingsprofiel maken](./media/ios-user-enrollment/create-profile.png)
 
@@ -77,7 +77,7 @@ Met een inschrijvingsprofiel worden de instellingen gedefinieerd die worden toeg
 
 Als u meerdere typen inschrijvingsprofielen hebt gemaakt, is het mogelijk de volgorde waarin ze worden toegepast te wijzigen.
 
-1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **iOS** > **iOS-inschrijving** > **Inschrijvingstypen (preview-versie)** .
+1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **iOS/iPadOS** > **iOS-inschrijving** > **Inschrijvingstypen (preview-versie)** .
 2. Sleep de profielen in de lijst en zet deze neer in de volgorde waarin u deze wilt toepassen.
 
 Als er conflicten tussen profielen voor een gebruiker optreden, wordt het profiel met de hoogste prioriteit toegepast voor de gebruiker.

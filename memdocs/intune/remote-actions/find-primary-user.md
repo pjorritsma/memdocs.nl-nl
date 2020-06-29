@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 761f46cdf8865694ba8960044954a16c415a3eba
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4319435b170203f6dfd3763f1d05d2752fc76f8e
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988232"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107525"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>De hoofdgebruiker van een Intune-apparaat zoeken
 
@@ -45,9 +45,8 @@ De primaire gebruiker van een apparaat kan worden bijgewerkt voor Windows 10-app
 Nadat de primaire gebruiker is bijgewerkt, wordt deze ook bijgewerkt in blades van Intune- en Azure AD-apparaten.
 >[!NOTE]
 >1. Het kan 10 minuten duren voor updates van de primaire gebruiker tussen Eindpuntbeheer en Azure AD worden weergegeven.
->2. De primaire gebruiker kan momenteel niet worden gewijzigd op Windows 10-apparaten die gezamenlijk worden beheerd. 
->3. Als u de primaire gebruiker van het apparaat wijzigt, worden er geen wijzigingen aangebracht in het lokale groepslidmaatschap, zoals het toevoegen of verwijderen van gebruikers uit de lokale groep Administrators
->4. Het wijzigen van de hoofdgebruiker heeft geen invloed op de 'Ingeschreven door'-gebruiker. 
+>2. Als u de primaire gebruiker van het apparaat wijzigt, worden er geen wijzigingen aangebracht in het lokale groepslidmaatschap, zoals het toevoegen of verwijderen van gebruikers uit de lokale groep Administrators
+>3. Het wijzigen van de hoofdgebruiker heeft geen invloed op de 'Ingeschreven door'-gebruiker. 
 
 
 ## <a name="what-is-the-primary-user"></a>Wat is de hoofdgebruiker?
@@ -89,6 +88,8 @@ Intune voegt tijdens of kort na de inschrijving automatisch een hoofdgebruiker t
 
 ## <a name="primary-user-and-azure-ad-device-owner"></a>Hoofdgebruiker en de eigenaar van het Azure AD-apparaat
 In sommige gevallen kan de hoofdgebruiker voor Intune verschillen van de eigenschap **Eigenaar** in Azure AD (te vinden via **Apparaten** > **Azure AD-apparaten**). De apparaateigenaar in Azure AD wordt toegevoegd tijdens de inschrijving van het apparaat in Azure Active Directory.
+
+Voor nieuw ingeschreven Azure AD-apparaten wordt de Azure AD-eigenschap **Eigenaar** automatisch ingesteld op hetzelfde moment dat de primaire gebruiker van Intune wordt ingesteld.
 
 ## <a name="next-steps"></a>Volgende stappen
 [Beheer uw Intune-apparaten.](device-management.md)

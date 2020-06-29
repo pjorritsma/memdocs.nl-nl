@@ -5,7 +5,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/02/2020
+ms.date: 06/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 71d5efbf8b61c08e9a2edbc5312c61279571339e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ef5f423b6ea33e4eeb77b8173cfc6355ae7daf71
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80620569"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093027"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Ontwikkelaarshandleiding voor Microsoft Intune App SDK voor Android
 
@@ -45,13 +45,14 @@ De SDK voor de Intune-app bevat de volgende bestanden:
 * **Microsoft.Intune.MAM.SDK.Support.Text.jar**: De klassen die nodig zijn om MAM in te schakelen in apps die gebruikmaken van klassen in de Android-ondersteuningsbibliotheek in het `android.support.text`-pakket.
 * **Microsoft.Intune.MAM.SDK.DownlevelStubs.aar**: Deze AAR bevat stubs voor Android-systeemklassen die alleen aanwezig zijn op nieuwere apparaten, maar waarnaar wordt verwezen door methoden in `MAMActivity`. Deze stub-klassen worden door nieuwere apparaten genegeerd. Deze AAR is alleen nodig als uw app reflectie uitvoert op klassen die zijn afgeleid van `MAMActivity`. Deze meeste apps hebben deze jar niet nodig. De AAR bevat ProGuard-regels om alle klassen uit te sluiten.
 * **com.microsoft.intune.mam.build.jar**: Een Gradle-invoegtoepassing die [helpt bij integratie van de SDK](#build-tooling).
-* **CHANGELOG.txt**: Bevat een overzicht van wijzigingen in elke SDK-versie.
+* **CHANGELOG.md**: Bevat een overzicht van wijzigingen in elke SDK-versie.
 * **THIRDPARTYNOTICES.TXT**:  Een bijdragekennisgeving waarin code van derden of OSS-code die in uw app wordt gecompileerd aan de rechthebbenden wordt toegeschreven.
+
 
 ## <a name="requirements"></a>Vereisten
 
 ### <a name="android-versions"></a>Android-versies
-De SDK biedt ondersteuning voor Android API 19 (Android 4.4+) tot en met Android API 28 (Android 9.0).
+De SDK biedt ondersteuning voor Android API 21 (Android 5.0) tot en met Android API 29 (Android 10.0). Het kan zijn geïntegreerd in een app met een Android-minSDKVersion van slechts 14, maar op die oudere versies van het besturingssysteem is het niet mogelijk om de Intune-bedrijfsportal-app te installeren of MAM-beleid te gebruiken.
 
 ### <a name="company-portal-app"></a>Bedrijfsportal-app
 De SDK voor de Intune-app voor Android is afhankelijk van de aanwezigheid van de [bedrijfsportal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)-app op het apparaat voor het inschakelen van app-beveiligingsbeleid. De bedrijfsportal haalt het app-beveiligingsbeleid op van de Intune-service. Tijdens de initialisatie van de app worden het beleid en de code geladen om het betreffende beleid af te dwingen bij de bedrijfsportal.
@@ -114,18 +115,19 @@ buildscript {
 ```
 
 Vervolgens past u de invoegtoepassing in het bestand `build.gradle` voor uw APK-project toe als
+
 ```groovy
 apply plugin: 'com.microsoft.intune.mam'
 ```
 
 Standaard is de invoegtoepassing **alleen** van invloed op `project`-afhankelijkheden.
 De testcompilatie wordt niet beïnvloed. Configuratie kan worden opgegeven voor het weergeven van
-*  Projecten die moeten worden uitgesloten
-*  [Externe afhankelijkheden die moeten worden ingesloten](#usage-of-includeexternallibraries) 
-*  Specifieke klassen die moeten worden uitgesloten van verwerking
-*  Varianten die moeten worden uitgesloten van verwerking. Deze kunnen verwijzen naar de volledige naam van een variant of naar een enkele smaak. Bijvoorbeeld
-     * Als u een app met de buildtypen `debug` en `release` met de smaken {`savory`, `sweet`} en {`vanilla`, `chocolate`} hebt, kunt u
-     * `savory` opgeven om alle varianten met de smaak 'hartig' uit te sluiten of `savoryVanillaRelease` opgeven om alleen die specifieke variant uit te sluiten.
+* Projecten die moeten worden uitgesloten
+* [Externe afhankelijkheden die moeten worden ingesloten](#usage-of-includeexternallibraries) 
+* Specifieke klassen die moeten worden uitgesloten van verwerking
+* Varianten die moeten worden uitgesloten van verwerking. Deze kunnen verwijzen naar de volledige naam van een variant of naar een enkele smaak. Bijvoorbeeld
+  * Als u een app met de buildtypen `debug` en `release` met de smaken {`savory`, `sweet`} en {`vanilla`, `chocolate`} hebt, kunt u
+  * `savory` opgeven om alle varianten met de smaak 'hartig' uit te sluiten of `savoryVanillaRelease` opgeven om alleen die specifieke variant uit te sluiten.
 
 #### <a name="example-partial-buildgradle"></a>Voorbeeld van gedeeltelijke build.gradle
 
@@ -200,6 +202,7 @@ intunemam {
 }
 ```
 
+
 #### <a name="incremental-builds"></a>Incrementele builds
 Als u de ondersteuning voor het incrementeel bouwen wilt inschakelen, geeft u `incremental = true` op in het configuratieblok `intunemam`.  Dit is een experimentele functie die is gericht op het verhogen van de prestaties van de build door alleen de invoerbestanden te verwerken die zijn gewijzigd.  De standaardconfiguratie is `false`.
 
@@ -208,6 +211,7 @@ intunemam {
     incremental = true
 }
 ```
+
 
 #### <a name="dependencies"></a>Afhankelijkheden
 
@@ -257,6 +261,8 @@ Hierdoor gebeurt het volgende:
 
 
 ## <a name="class-and-method-replacements"></a>Klasse- en methodevervangingen
+> [!NOTE] 
+> Apps *moeten* integreren met de SDK [build-hulpprogramma's](#build-tooling), die al deze vervangingen automatisch uitvoeren (met uitzondering van [manifestvervangingen](#manifest-replacements))
 
 Android-basisklassen moeten worden vervangen door hun respectieve MAM-equivalenten om Intune-beheer mogelijk te maken. De SDK-klassen begeven zich tussen de Android-basisklasse en de eigen afgeleide app-versie van die klasse. Een app-activiteit kan voorbeeld een overnamehiërarchie krijgen die er als volgt uitziet: `Activity` > `MAMActivity` >
 `AppSpecificActivity`. De MAM-laag filtert aanroepen naar systeembewerkingen om uw app naadloos te voorzien van een beheerde weergave van de wereld.
@@ -299,11 +305,12 @@ Naast basisklassen kunnen voor bepaalde klassen die uw app gebruikt zonder aflei
 | enroid.preference.PreferenceActivity | MAMPreferenceActivity |
 | android.support.multidex.MultiDexApplication | MAMMultiDexApplication |
 | android.widget.TextView | MAMTextView |
-| android.widget.AutoCompleteTextView |    MAMAutoCompleteTextView |
+| android.widget.AutoCompleteTextView | MAMAutoCompleteTextView |
 | android.widget.CheckedTextView | MAMCheckedTextView |
 | android.widget.EditText | MAMEditText |
 | android.inputmethodservice.ExtractEditText | MAMExtractEditText |
 | android.widget.MultiAutoCompleteTextView | MAMMultiAutoCompleteTextView |
+
 
 > [!NOTE]
 > Zelfs als uw toepassing geen eigen afgeleide `Application` klasse nodig heeft, [raadpleegt u `MAMApplication` hieronder](#mamapplication)
@@ -326,7 +333,7 @@ Naast basisklassen kunnen voor bepaalde klassen die uw app gebruikt zonder aflei
 |--|--|
 | android.support.v7.app.AlertDialog.Builder | MAMAlertDialogBuilder |
 | android.support.v7.app.AppCompatActivity | MAMAppCompatActivity |
-| android.support.v7.widget.AppCompatAutoCompleteTextView |    MAMAppCompatAutoCompleteTextView |
+| android.support.v7.widget.AppCompatAutoCompleteTextView | MAMAppCompatAutoCompleteTextView |
 | android.support.v7.widget.AppCompatCheckedTextView | MAMAppCompatCheckedTextView |
 | android.support.v7.widget.AppCompatEditText | MAMAppCompatEditText |
 | android.support.v7.widget.AppCompatMultiAutoCompleteTextView | MAMAppCompatMultiAutoCompleteTextView |
@@ -346,6 +353,7 @@ Naast basisklassen kunnen voor bepaalde klassen die uw app gebruikt zonder aflei
 | android.support.text.emoji.widget.EmojiTextView | MAMEmojiTextView |
 
 ### <a name="renamed-methods"></a>Methoden waarvan de naam is gewijzigd
+
 In veel gevallen is een methode die in de Android-klasse beschikbaar is, in de vervangende MAM-klasse als definitief gemarkeerd. De vervangende MAM klasse biedt in dit geval een gelijknamige methode (meestal voorafgegaan door `MAM`) die in plaats daarvan moet worden overschreven. Wanneer een activiteit wordt afgeleid van `MAMActivity`, moet niet `onCreate()` worden overschreven en niet `super.onCreate()` worden aangeroepen, maar moet `Activity``onMAMCreate()` overschrijven en `super.onMAMCreate()` aanroepen. De Java-compiler moet de laatste beperkingen afdwingen om het onbedoeld onderdrukken van de oorspronkelijke methode in plaats van de MAM-equivalent te voorkomen.
 
 ### <a name="mamapplication"></a>MAMApplication
@@ -384,6 +392,22 @@ In tegenstelling tot de Android-ondersteuningsbibliotheken bieden we geen MAM-va
 
 ### <a name="pre-androidx-architecture-components"></a>Architectuuronderdelen vóór AndroidX
 Veel Android-architectuuronderdelen, waaronder Room, ViewModel en WorkManager, zijn opnieuw ingepakt voor AndroidX. Als uw app gebruikmaakt van de varianten van vóór AndroidX van deze bibliotheken, moet u ervoor zorgen dat herschrijfbewerkingen van toepassing zijn door `android.arch.*` op te nemen in het veld `includeExternalLibraries` van de configuratie van de invoegtoepassing. U kunt de bibliotheken ook bijwerken naar de bijbehorende AndroidX-equivalenten.
+
+### <a name="troubleshooting-androidx-migration"></a>Problemen met AndroidX-migratie oplossen
+Tijdens het migreren van uw met SDK geïntegreerde app naar AndroidX kan een fout als de volgende optreden:
+
+```log
+incompatible types: android.support.v7.app.ActionBar cannot be converted to androidx.appcompat.app.ActionBar
+```
+
+Deze fouten kunnen optreden omdat uw app verwijst naar MAM-ondersteuningsklassen. MAM-ondersteuningsklassen verpakken Android-ondersteuningsklassen die zijn verplaatst in AndroidX. Als u dergelijke fouten wilt bestrijden, vervangt u alle MAM-ondersteuningsklasseverwijzingen door hun AndroidX-equivalenten. Dit kan worden bereikt door eerst de afhankelijkheden van de MAM-ondersteuningsbibliotheek te verwijderen uit uw Gradle-build-bestanden. De betreffende regels zien er ongeveer als volgt uit:
+
+```Gradle
+implementation "com.microsoft.intune.mam:android-sdk-support-v4:$intune_mam_version"
+implementation "com.microsoft.intune.mam:android-sdk-support-v7:$intune_mam_version"
+```
+
+Los vervolgens de resulterende compilatiefouten op door alle verwijzingen naar MAM-klassen in de pakketten `com.microsoft.intune.mam.client.support.v7` en `com.microsoft.intune.mam.client.support.v4` te vervangen door hun AndroidX-equivalenten. Verwijzingen naar `MAMAppCompatActivity` moeten bijvoorbeeld worden gewijzigd in de `AppCompatActivity` van AndroidX. Zoals hierboven wordt beschreven, herschrijft de invoegtoepassing/het hulpprogramma van de MAM-build automatisch klassen in de AndroidX-bibliotheken met de juiste MAM-equivalenten tijdens het compileren.
 
 ## <a name="sdk-permissions"></a>SDK-machtigingen
 
@@ -431,6 +455,78 @@ public interface MAMLogHandlerWrapper {
 }
 ```
 
+## <a name="diagnostics-information"></a>Diagnostische informatie
+Apps kunnen de methode `MAMPolicyManager.showDiagnostics(context)` aanroepen waarmee een activiteit wordt gestart die de gebruikersinterface weergeeft om logboeken van Bedrijfsportal te verzamelen en diagnostische MAM-gegevens weer te geven.
+Dit is een optionele functie die kan helpen bij het opsporen van fouten.
+
+Als Bedrijfsportal niet op het apparaat is geïnstalleerd, wordt er een dialoogvenster weergegeven om de gebruiker te informeren dat deze informatie op dit moment niet beschikbaar is. Wanneer apps worden beheerd door MAM-beleid, worden gedetailleerde MAM-beleidsinstellingen weergegeven.
+
+## <a name="mam-strict-mode"></a>Strict-modus voor MAM
+De Strict-modus voor MAM biedt een mechanisme om 'geuren' te detecteren in app-gebruik van MAM API's of door MAM beperkte platform-API's. Het is losjes gebaseerd op de StrictMode van Android en voert een set controles uit die fouten veroorzaken wanneer ze mislukken. Het is niet bedoeld om ingeschakeld te blijven in productieversies, maar het wordt *ten zeerste aangeraden* om het te gebruiken in de interne builds voor ontwikkeling, foutopsporing en/of testen van uw app.
+
+Als u deze optie wilt inschakelen, roept u
+
+```java
+MAMStrictMode.enable();
+```
+ vroeg in de initialisatie van de toepassing aan (bijvoorbeeld `Application.onCreate`). 
+
+Wanneer een MAM Strict Mode-controle mislukt, probeert u vast te stellen of het een echt probleem is dat in uw app kan worden opgelost of dat het een fout-positief is. Als u denkt dat het een fout-positief is, of als u het niet zeker weet, informeert u het Intune MAM-team. Wij kunnen dan kijken of de vaststelling van de fout-positief klopt en proberen detectie voor toekomstige releases te verbeteren. Als u fout-positieven wilt onderdrukken, schakelt u de mislukte controle uit (meer informatie hieronder).
+
+### <a name="handling-violations"></a>Overtredingen verwerken
+Wanneer een controle mislukt, wordt een `MAMStrictViolationHandler` uitgevoerd. De standaardhandler genereert een `Error`, waardoor de app waarschijnlijk zal vastlopen. Dit wordt gedaan om storingen zo opvallend mogelijk te maken en past bij de bedoeling dat de strikte modus niet moet worden ingeschakeld in productie-builds.
+
+Als uw app overtredingen op een andere manier wil afhandelen, kan deze een eigen handler leveren door het volgende aan te roepen:
+
+```java
+MAMStrictMode.global().setHandler(handler);
+```
+
+waar `handler` `MAMStrictViolationHandler` implementeert:
+
+```java
+public interface MAMStrictViolationHandler {
+    /**
+     * Called when a MAM Strict Mode check fails.
+     *
+     * @param check
+     *         the check that failed
+     * @param detail
+     *         additional detail. Note that this might contain usernames or filepaths.
+     * @param error
+     *         error containing a stack trace. The default implementation throws this error
+     */
+    void checkFailed(@NonNull MAMStrictCheck check, @NonNull String detail, @NonNull Error error);
+}
+```
+
+### <a name="suppressing-checks"></a>Controles onderdrukken
+Als een controle mislukt wanneer uw app niets verkeerd doet, meldt u dit dan zoals hierboven is vermeld. Soms kan het echter nodig zijn om de controle die een fout-positief tegenkomt uit te schakelen, in ieder geval tijdens het wachten op een bijgewerkte SDK. De controle die mislukt wordt weergegeven in de fout die wordt veroorzaakt door de standaardhandler, of wordt doorgegeven aan een aangepaste handler als deze is ingesteld.
+
+Onderdrukking kan op algemene schaal plaatsvinden, maar het tijdelijk uitschakelen per thread op de specifieke aanroepsite verdient de voorkeur. In de volgende voorbeelden ziet u verschillende manieren om `MAMStrictCheck.IDENTITY_NO_SUCH_FILE` uit te schakelen (deze gebeurtenis treedt op als wordt geprobeerd om een bestand te beveiligen dat niet bestaat).
+
+
+#### <a name="per-thread-temporary-suppression"></a>Tijdelijke onderdrukking per thread
+Dit is het voorkeursmechanisme voor onderdrukking.
+```java
+try (StrictScopedDisable disable = MAMStrictMode.thread().disableScoped(MAMStrictCheck.IDENTITY_NO_SUCH_FILE)) {
+    // Perform the operation which raised a violation here
+}
+// The check is no longer disabled once the block exits
+```
+
+#### <a name="per-thread-permanent-suppression"></a>Permanente onderdrukking per thread
+```java
+MAMStrictMode.thread().disable(MAMStrictCheck.IDENTITY_NO_SUCH_FILE);
+```
+
+#### <a name="global-process-wide-suppression"></a>Globale onderdrukking (procesbreed)
+```java
+MAMStrictMode.global().disable(MAMStrictCheck.IDENTITY_NO_SUCH_FILE);
+```
+
+
+
 ## <a name="enable-features-that-require-app-participation"></a>Functies inschakelen waarvoor app-deelname is vereist
 
 Er zijn verschillende beleidsregels voor de beveiliging van apps die de SDK niet op zichzelf kan implementeren. De app kan het eigen gedrag voor deze functies bepalen door gebruik te maken van de verschillende API's in de volgende `AppPolicy`-interface. Als u een exemplaar van `AppPolicy` wilt ophalen, gebruikt u `MAMPolicyManager.getPolicy`.
@@ -443,7 +539,7 @@ public interface AppPolicy {
 
 /**
  * Restrict where an app can save personal data.
-  * This function is now deprecated. Use getIsSaveToLocationAllowed(SaveLocation, String) instead
+ * This function is now deprecated. Use getIsSaveToLocationAllowed(SaveLocation, String) instead
  * @return True if the app is allowed to save to personal data stores; false otherwise.
  */
 @Deprecated
@@ -462,13 +558,25 @@ boolean getIsSaveToLocationAllowed(Uri location);
  * Determines if the SaveLocation passed in can be saved to by the username associated with the cloud service.
  *
  * @param service
- *           see {@link SaveLocation}.
+ *           The SaveLocation the data will be saved to.
  * @param username
- *           the username/email associated with the cloud service being saved to. Use null if a mapping between
+ *           The AAD UPN associated with the cloud service being saved to. Use null if a mapping between
  *           the AAD username and the cloud service username does not exist or the username is not known.
  * @return true if the location can be saved to by the identity, false if otherwise.
  */
 boolean getIsSaveToLocationAllowed(SaveLocation service, String username);
+
+/**
+ * Determines if data from the OpenLocation can be opened for the username associated with the data.
+ *
+ * @param location
+ *      The OpenLocation that the data will be opened from.
+ * @param username
+ *      The AAD UPN associated with the location the data is being opened from. Use null if a mapping between the
+ *      AAD username and the cloud service username does not exist or the username is not known.
+ * @return true if the data can be opened from the location for the identity, false if otherwise.
+ */
+boolean getIsOpenFromLocationAllowed(@NonNull OpenLocation location, @Nullable String username);
 
 /**
  * Checks whether any activities which could handle the given intent are allowed by policy. Returns false only if all
@@ -575,11 +683,17 @@ public interface MAMUserInfo {
 }
 ```
 
-### <a name="example-determine-if-saving-to-device-or-cloud-storage-is-permitted"></a>Voorbeeld: Bepalen of opslaan naar apparaat of in de cloud is toegestaan
+### <a name="example-data-transfer-between-apps-and-device-or-cloud-storage-locations"></a>Voorbeeld: Gegevensoverdracht tussen apps en apparaten of opslaglocaties in de cloud
 
-Veel apps implementeren functies waarmee de eindgebruiker bestanden lokaal of naar een cloudopslagservice kan opslaan. Met de Intune App SDK kunnen IT-beheerders beveiliging instellen tegen het lekken van gegevens door naar eigen goeddunken beleidsbeperkingen binnen hun organisatie toe te passen.  Een van de beleidsregels waarover IT controle kan uitvoeren, is of de eindgebruiker kan opslaan naar een 'persoonlijke', niet-beheerde gegevensopslag. Dit omvat het opslaan naar een lokale locatie, een SD-kaart of een back-upservice van derden.
+Veel apps implementeren functies waarmee de eindgebruiker gegevens kan opslaan of gegevens kan openen vanuit lokale bestands- of cloudopslagservices.
+Met de Intune App SDK kunnen IT-beheerders beveiliging instellen tegen inkomende gegevens en het lekken van gegevens door naar eigen goeddunken beleidsbeperkingen binnen hun organisatie toe te passen.
 
-**Voor het inschakelen van de functie is app-deelname vereist.** Als uw app de mogelijkheid biedt om rechtstreeks vanuit de app naar persoonlijke of cloudlocaties op te slaan, moet u deze functie implementeren om ervoor te zorgen dat de IT-beheerder kan bepalen of opslaan naar een locatie is toegestaan. De onderstaande API laat de app weten of opslaan naar een persoonlijke opslag volgens het huidige beleid van de Intune-beheerder is toegestaan. De app kan het beleid vervolgens afdwingen omdat deze weet of er via de app een persoonlijke gegevensopslag voor de eindgebruiker beschikbaar is.  
+**Voor het inschakelen van de functie is app-deelname vereist.**
+Als uw app de mogelijkheid biedt om rechtstreeks vanuit de app naar persoonlijke of cloudlocaties op te slaan *of* toestaat dat gegevens rechtstreeks in de app worden geopend, moet u deze functie implementeren om ervoor te zorgen dat de IT-beheerder kan bepalen of opslaan naar of openen vanaf een locatie is toegestaan.
+
+#### <a name="saving-to-device-or-cloud-storage"></a>Opslaan op apparaat of in cloudopslag
+
+De onderstaande API laat de app weten of opslaan naar een persoonlijke opslag volgens het huidige beleid van de Intune-beheerder is toegestaan.
 
 Voer de volgende aanroep uit om te bepalen of het beleid wordt afgedwongen:
 
@@ -590,22 +704,89 @@ SaveLocation service, String username);
 
 De parameter `service` moet een van de volgende `SaveLocation`-waarden hebben:
 
+* `SaveLocation.ONEDRIVE_FOR_BUSINESS`
+* `SaveLocation.SHAREPOINT`
+* `SaveLocation.LOCAL`
+* `SaveLocation.ACCOUNT_DOCUMENT`
+* `SaveLocation.OTHER`
 
-- `SaveLocation.ONEDRIVE_FOR_BUSINESS`
-- `SaveLocation.SHAREPOINT`
-- `SaveLocation.LOCAL`
-- `SaveLocation.OTHER`
+Als u wilt bepalen of `ACCOUNT_DOCUMENT` of `OTHER` moet worden door gegeven aan `getIsSaveToLocationAllowed`, raadpleegt u [Onbekende of niet-vermelde locaties](#unknown-or-unlisted-locations) voor meer informatie.
 
-De `username` moet de waarde voor UPN/gebruikersnaam/e-mailadres zijn die aan de cloudservice is gekoppeld waarin items worden opgeslagen (*niet* noodzakelijkerwijs dezelfde gebruiker als de eigenaar van het document dat wordt opgeslagen). Gebruik null als er geen toewijzing tussen de AAD UPN en de gebruikersnaam voor de cloudservice bestaat of als de gebruikersnaam onbekend is. `SaveLocation.LOCAL` is geen cloudservice en moet dus altijd worden gebruikt met een `null`-gebruikersnaamparameter.
+Zie [Gebruikersnaam voor gegevensoverdracht](#username-for-data-transfer) voor meer informatie voor de parameter `username`.
 
-De vorige methode waarmee kon worden bepaald of het overeenkomstig het beleid van een gebruiker was toegestaan om gegevens op te slaan naar verschillende locaties, was `getIsSaveToPersonalAllowed()` in dezelfde **AppPolicy**-klasse. Deze functie wordt nu **afgeschaft** en mag niet worden gebruikt. De volgende aanroep is gelijk aan `getIsSaveToPersonalAllowed()`:
+De vorige methode waarmee kon worden bepaald of het overeenkomstig het beleid van een gebruiker was toegestaan om gegevens op te slaan naar verschillende locaties, was `getIsSaveToPersonalAllowed()` in dezelfde **AppPolicy**-klasse.
+Deze functie wordt nu **afgeschaft** en mag niet worden gebruikt. De volgende aanroep is gelijk aan `getIsSaveToPersonalAllowed()`:
 
 ```java
 MAMPolicyManager.getPolicy(currentActivity).getIsSaveToLocationAllowed(SaveLocation.LOCAL, null);
 ```
 
->[!NOTE]
-> Gebruik `SaveLocation.OTHER` als de betreffende locatie niet wordt vermeld in de opsomming van **SaveLocations**.
+#### <a name="opening-data-from-a-local-or-cloud-storage-location"></a>Gegevens openen vanuit een lokale locatie of een cloudopslaglocatie
+
+De onderstaande API laat de app weten of openen vanaf een persoonlijke opslag volgens het huidige beleid van de Intune-beheerder is toegestaan.
+
+Voer de volgende aanroep uit om te bepalen of het beleid wordt afgedwongen:
+
+```java
+MAMPolicyManager.getPolicy(currentActivity).getIsOpenFromLocationAllowed(
+OpenLocation location, String username);
+```
+
+De parameter `location` moet een van de volgende `OpenLocation`-waarden hebben:
+
+* `OpenLocation.ONEDRIVE_FOR_BUSINESS`
+* `OpenLocation.SHAREPOINT`
+* `OpenLocation.CAMERA`
+* `OpenLocation.LOCAL`
+* `OpenLocation.ACCOUNT_DOCUMENT`
+* `OpenLocation.OTHER`
+
+De locatie `OpenLocation.CAMERA` moet worden door gegeven wanneer de app gegevens vanuit de camera opent.
+De locatie `OpenLocation.LOCAL` moet worden door gegeven wanneer de app gegevens opent vanuit de externe opslag op het lokale apparaat.
+De locatie `OpenLocation.ACCOUNT_DOCUMENT` moet worden doorgegeven wanneer de app gegevens opent die horen bij een AAD-account dat is aangemeld bij de app.
+
+Als u wilt bepalen of `ACCOUNT_DOCUMENT` of `OTHER` moet worden door gegeven aan `getIsOpenFromLocationAllowed`, raadpleegt u [Onbekende of niet-vermelde locaties](#unknown-or-unlisted-locations) voor meer informatie.
+
+Zie [Gebruikersnaam voor gegevensoverdracht](#username-for-data-transfer) voor meer informatie voor de parameter `username`.
+
+#### <a name="unknown-or-unlisted-locations"></a>Onbekende of niet-vermelde locaties
+
+Wanneer de gewenste locatie niet wordt weergegeven in de opsommingen `SaveLocation` of `OpenLocation` of onbekend is, zijn er twee opties voor de `service`/`location`-parameter, `ACCOUNT_DOCUMENT` en `OTHER`.
+`ACCOUNT_DOCUMENT` moet worden gebruikt wanneer de gegevens horen bij een AAD-account dat is aangemeld bij de app, maar niet `ONEDRIVE_FOR_BUSINESS` of `SHAREPOINT` is, terwijl `OTHER` moet worden gebruikt als dat niet het geval is.
+
+Het is belangrijk om het verschil duidelijk te maken tussen het beheerde account en een account dat de UPN van het beheerde account deelt.
+Een beheerd account met UPN user@contoso.com dat is aangemeld in OneDrive is bijvoorbeeld niet hetzelfde als een account met UPN user@contoso.com dat is aangemeld in Dropbox.
+Als een onbekende of niet-vermelde service wordt geopend door aanmelding bij het beheerde account (user@contoso.com is bijvoorbeeld aangemeld bij OneDrive), moet dit worden vertegenwoordigd door de `ACCOUNT_DOCUMENT`-locatie.
+Als de onbekende of niet-vermelde service wordt aangemeld via een ander account (bijvoorbeeld user@contoso.com, ondertekend in Dropbox), heeft het geen toegang tot de locatie met een beheerd account en moet het worden vertegenwoordigd door de `OTHER`-locatie.
+
+#### <a name="username-for-data-transfer"></a>Gebruikersnaam voor gegevensoverdracht
+
+Wanneer het beleid voor opslaan wordt gecontroleerd, moet de `username` de waarde voor UPN/gebruikersnaam/e-mailadres zijn die aan de cloudservice is gekoppeld waarin items worden opgeslagen (*niet* noodzakelijkerwijs dezelfde gebruiker als de eigenaar van het document dat wordt opgeslagen).
+`SaveLocation.LOCAL` is geen cloudservice en moet dus altijd worden gebruikt met een `null`-gebruikersnaamparameter.
+
+Bij het controleren van het beleid voor openen, moet de `username` het UPN/gebruikersnaam/e-mailadres zijn dat is gekoppeld aan de cloudservice die wordt geopend.
+`OpenLocation.LOCAL` en `OpenLocation.CAMERA` zijn geen cloudservicelocaties en moeten dus altijd worden gebruikt met een `null`-gebruikersnaamparameter.
+
+Op de volgende locaties wordt altijd een gebruikersnaam verwacht die een toewijzing bevat tussen de AAD-UPN en de gebruikersnaam van de cloudservice: `ONEDRIVE_FOR_BUSINESS`, `SHAREPOINT` en `ACCOUNT_DOCUMENT`.
+
+Als er geen toewijzing tussen de AAD UPN en de gebruikersnaam voor de cloudservice bestaat of als de gebruikersnaam onbekend is, gebruikt u `null`.
+
+#### <a name="sharing-blocked-dialog"></a>Dialoogvenster delen geblokkeerd
+
+De SDK biedt een dialoogvenster waarmee de gebruiker wordt gewaarschuwd dat een actie voor gegevensoverdracht is geblokkeerd door MAM-beleid.
+
+Het dialoogvenster moet worden weergegeven aan de gebruiker wanneer de API-aanroep `isSaveToAllowedForLocation` of `isOpenFromAllowedForLocation` ertoe leidt dat de actie opslaan/openen wordt geblokkeerd.
+In het dialoogvenster wordt een algemeen bericht weergegeven. Er wordt teruggekeerd naar de `Activity` die het heeft aangeroepen wanneer deze wordt genegeerd.
+
+Als u het dialoogvenster wilt weergeven, maakt u de volgende aanroep:
+
+``` java
+MAMUIHelper.showSharingBlockedDialog(currentActivity)
+```
+
+### <a name="allow-for-file-sharing"></a>Delen van bestanden toestaan
+
+Als het opslaan naar een openbare opslag locatie niet is toegestaan, moet uw app de gebruiker nog steeds bestanden laten weergeven door deze te downloaden naar [privé-opslag van de app](https://developer.android.com/training/data-storage) en deze vervolgens te openen met de systeemkiezer.
 
 ### <a name="example-determine-if-notifications-with-organization-data-need-to-be-restricted"></a>Voorbeeld: Bepalen of meldingen met organisatiegegevens moeten worden beperkt
 
@@ -635,7 +816,7 @@ public void onCreate() {
     .registerReceiver(
       new ToastNotificationReceiver(),
       MAMNotificationType.WIPE_USER_DATA);
-  }
+}
 ```
 
 ### <a name="mamnotificationreceiver"></a>MAMNotificationReceiver
@@ -777,6 +958,7 @@ Bekijk hieronder ook de vereisten voor [Voorwaardelijke toegang](#conditional-ac
 
 Autoriteit en NonBrokerRedirectURI kunnen indien gewenst worden opgegeven.
 
+
 ### <a name="conditional-access"></a>Voorwaardelijke toegang
 Voorwaardelijke toegang (CA) is een [functie](https://docs.microsoft.com/azure/active-directory/develop/active-directory-conditional-access-developer) van Azure Active Directory die kan worden gebruikt om toegang tot AAD-resources te beheren. [Intune-beheerders kunnen CA-regels definiëren](https://docs.microsoft.com/intune/conditional-access) waardoor toegang tot resources is beperkt tot apparaten of apps die worden beheerd door Intune. Als u ervoor wilt zorgen dat uw app waar nodig toegang heeft tot resources, moet u de onderstaande stappen volgen. Als uw app geen AAD-toegangstokens ophaalt, of alleen toegang heeft tot resources die niet door CA kunnen worden beveiligd, kunt u deze stappen overslaan.
 
@@ -809,6 +991,7 @@ De app is vereist voor het opgeven van een callback om namens de SDK het juiste 
 
 Wanneer de app een account volledig verwijdert, moet de registratie van dat account door de app ongedaan worden gemaakt om aan te geven dat de app geen beleid meer moet toepassen voor de betreffende gebruiker. Als de gebruiker is geregistreerd in de MAM-service, wordt de registratie van de gebruiker ongedaan gemaakt en wordt de app gewist.
 
+
 ### <a name="overview-of-app-requirements"></a>Een overzicht van de app-vereisten
 
 Als u APP-WE-integratie wilt implementeren, moet uw app het gebruikersaccount registreren bij de MAM SDK:
@@ -824,6 +1007,7 @@ Als u APP-WE-integratie wilt implementeren, moet uw app het gebruikersaccount re
 
 
 ### <a name="mamenrollmentmanager"></a>MAMEnrollmentManager
+
 Alle benodigde verificatie- en registratie-API's vindt u in de `MAMEnrollmentManager`-interface. Een verwijzing naar de `MAMEnrollmentManager` kunt u als volgt verkrijgen:
 
 ```java
@@ -867,11 +1051,12 @@ public interface MAMEnrollmentManager {
 ```
 
 ### <a name="account-authentication"></a>Accountverificatie
+
 In deze sectie worden de verificatie-API-methoden in `MAMEnrollmentManager` beschreven en hoe ze gebruikt.
 
 ```java
 interface MAMServiceAuthenticationCallback {
-        String acquireToken(String upn, String aadId, String resourceId);
+    String acquireToken(String upn, String aadId, String resourceId);
 }
 void registerAuthenticationCallback(MAMServiceAuthenticationCallback callback);
 void updateToken(String upn, String aadId, String resourceId, String token);
@@ -899,6 +1084,7 @@ void updateToken(String upn, String aadId, String resourceId, String token);
 
 
 ### <a name="account-registration"></a>Accountregistratie
+
 In deze sectie worden de accountregistratie-API-methoden in `MAMEnrollmentManager` beschreven en hoe ze gebruikt.
 
 ```java
@@ -917,6 +1103,7 @@ Result getRegisteredAccountStatus(String upn);
 3. Als u de registratie van een account bij Intune-beheer ongedaan wilt maken, moet de app `unregisterAccountForMAM()` aanroepen. Als het account is geregistreerd en wordt beheerd, wordt de SDK-registratie van het account ongedaan gemaakt en worden de gegevens gewist. Periodieke registratiepogingen voor het account worden gestopt. De SDK verstrekt op asynchrone wijze via een melding de status van aanvragen om de registratie ongedaan te maken.
 
 ### <a name="sovereign-cloud-registration"></a>Registratie bij onafhankelijke clouds
+
 Voor toepassingen die [bewust zijn van onafhankelijke clouds](https://www.microsoft.com/trustcenter/cloudservices/nationalcloud) **moet** de `authority` voor `registerAccountForMAM()` worden opgeven.  U krijgt deze door `instance_aware=true` op te geven in de [1.14.0+](https://github.com/AzureAD/azure-activedirectory-library-for-android/releases/tag/v1.14.0) acquireToken extraQueryParameters van ADAL, gevolgd door het intrekken van `getAuthority()` in het AuthenticationCallback AuthenticationResult.
 
 ```java
@@ -944,19 +1131,23 @@ mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBeha
 #### <a name="currently-supported-sovereign-clouds"></a>Momenteel ondersteunde onafhankelijke clouds
 
 1. Azure-cloud van de Amerikaanse overheid
+2. Microsoft Azure beheerd door 21Vianet (Azure China)
+
 
 ### <a name="important-implementation-notes"></a>Belangrijke opmerkingen voor de implementatie
 
 #### <a name="authentication"></a>Verificatie
+
 * Wanneer de app `registerAccountForMAM()` aanroept, wordt er mogelijk kort daarna, op een andere thread, een callback ontvangen op de `MAMServiceAuthenticationCallback`-interface. In het ideale geval heeft de app voorafgaand aan de registratie van het account zijn eigen token uit ADAL verkregen om het ophalen van het aangevraagde token te versnellen. Als de app een geldige token retourneert uit de callback, wordt de registratie voortgezet en ontvangt de app het uiteindelijke resultaat via een melding.
 
-* Als de app geen geldig AAD-token retourneert, is het uiteindelijke resultaat van de registratiepoging `AUTHENTICATION_NEEDED`. Als de app dit resultaat ontvangt via een melding, wordt ten zeerste aangeraden om het registratieproces te versnellen door het token voor de gebruiker en de resource die eerder zijn aangevraagd, op te halen bij `acquireToken()` en de methode `updateToken()` aan te roepen om het registratieproces opnieuw te initiëren.
+* Als de app geen geldig AAD-token retourneert, is het uiteindelijke resultaat van de registratiepoging `AUTHORIZATION_NEEDED`. Als de app dit resultaat ontvangt via een melding, wordt ten zeerste aangeraden om het registratieproces te versnellen door het token voor de gebruiker en de resource die eerder zijn aangevraagd, op te halen bij `acquireToken()` en de methode `updateToken()` aan te roepen om het registratieproces opnieuw te initiëren.
 
 * De geregistreerde `MAMServiceAuthenticationCallback` van de app wordt ook aangeroepen om een token te verkrijgen voor check-ins voor het periodiek vernieuwen van het app-beveiligingsbeleid. Als de app geen token kan verstrekken wanneer dit wordt aangevraagd, wordt er geen melding ontvangen, maar moet de app proberen een token te verkrijgen en op he volgende geschikte tijdstip `updateToken()` aanroepen om het check-inproces te versnellen. Als een token niet is opgegeven, wordt de callback bij de volgende check-inpoging gewoon aangeroepen.
 
 * Voor ondersteuning voor onafhankelijke clouds moet de autoriteit worden opgegeven.
 
 #### <a name="registration"></a>Registratie
+
 * Voor uw gemak zijnde registratiemethoden idempotent. `registerAccountForMAM()` zal bijvoorbeeld een account alleen registreren en een app alleen proberen te registreren als het account nog niet is geregistreerd, en `unregisterAccountForMAM()` maakt de registratie van een account alleen ongedaan als het account moment is geregistreerd. Alle volgende aanroepen zijn 'no-ops', zodat deze methoden zonder problemen meerdere keren kunnen worden aangeroepen. Daarnaast kan de correspondentie tussen aanroepen naar deze methoden en meldingen van de resultaten niet worden gegarandeerd: oftewel, als `registerAccountForMAM()` wordt aangeroepen voor een identiteit die al is geregistreerd, de melding mogelijk niet opnieuw wordt verzonden voor die identiteit. Het is mogelijk dat er meldingen worden verzonden die niet overeenkomen met de aanroepen voor deze methoden, aangezien de SDK mogelijk periodiek registratie op de achtergrond uitvoert en er registraties ongedaan kunnen worden gemaakt op basis van wisverzoeken die van de Intune-service zijn ontvangen.
 
 * De registratiemethoden kunnen worden aangeroepen voor elk aantal verschillende identiteiten, maar momenteel kan er slechts één gebruikersaccount worden geregistreerd. Als er op hetzelfde of vrijwel hetzelfde moment meerdere gebruikersaccounts met een licentie voor Intune en app-beveiligingsbeleid worden geregistreerd, kan niet worden gegarandeerd welk account de race wint.
@@ -964,6 +1155,7 @@ mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBeha
 * Tot slot kunt gegevens bij `MAMEnrollmentManager` opvragen om te zien of een bepaald account is geregistreerd en om de huidige status op te halen met de methode `getRegisteredAccountStatus()`. Als het opgegeven account niet is geregistreerd, resulteert deze methode **null**. Als het account is geregistreerd, retourneert deze methode de status van het account als een van de leden van de `MAMEnrollmentManager.Result`-opsomming.
 
 ### <a name="result-and-status-codes"></a>Resultaat en statuscodes
+
 Als een account voor het eerst wordt geregistreerd, krijgt het account eerst de status `PENDING`, waarmee wordt aangegeven dat de eerste registratie van de MAM-service nog niet is voltooid. Nadat de registratiepoging is voltooid, wordt er een melding met een van de resultaatcodes in de onderstaande tabel verzonden. Daarnaast retourneert de methode `getRegisteredAccountStatus()` de status van het account, zodat de app altijd kan bepalen of de toegang tot de bedrijfsinhoud voor die gebruiker is geblokkeerd. Als de registratiepoging mislukt, kan de status van het account na verloop van tijd worden gewijzigd, aangezien er op de achtergrond nieuwe registratiepogingen door de SDK worden uitgevoerd.
 
 |Resultaatcode | Uitleg |
@@ -980,6 +1172,7 @@ Als een account voor het eerst wordt geregistreerd, krijgt het account eerst de 
 
 
 ### <a name="company-portal-requirement-prompt-override-optional"></a>Vereisteprompt voor de bedrijfsportal negeren (optioneel)
+
 Als het resultaat `COMPANY_PORTAL_REQUIRED` wordt ontvangen, blokkeert de SDK het gebruik van activiteiten die gebruikmaken van de identiteit waarvoor de registratie is aangevraagd. In plaats daarvan zorgt de SDK ervoor dat er een prompt wordt weergegeven om de bedrijfsportal te downloaden. Als u dit gedrag in uw app wilt voorkomen, kunnen de activiteiten `MAMActivity.onMAMCompanyPortalRequired` implementeren.
 
 Deze methode wordt aangeroepen voordat de SDK de standaardblokkerings-UI weergeeft. Als de app de identiteit van de activiteit wijzigt of de registratie ongedaan maakt van de gebruiker die registratiepoging heeft uitgevoerd, wordt de activiteit niet door de SDK geblokkeerd. In deze situatie is het aan de app om te voorkomen dat er bedrijfsgegevens worden gelekt. Alleen apps met meerdere identiteiten (dit bespreken we later) kunnen de activiteitsidentiteit wijzigen.
@@ -987,6 +1180,7 @@ Deze methode wordt aangeroepen voordat de SDK de standaardblokkerings-UI weergee
 Als u `MAMActivity` niet expliciet overneemt (omdat die wijziging wordt aangebracht met een build-hulpprogramma), maar deze melding nog steeds moet afhandelen, kunt u in plaats daarvan `MAMActivityBlockingListener` implementeren.
 
 ### <a name="notifications"></a>Meldingen
+
 Als de app wordt geregistreerd voor meldingen van het type **MAM_ENROLLMENT_RESULT**, wordt een `MAMEnrollmentNotification` verzonden om de app ervan op de hoogte te brengen dat de aanvraag is voltooid. De `MAMEnrollmentNotification` worden ontvangen via de `MAMNotificationReceiver` interface zoals beschreven in de sectie [Registreren voor meldingen van de SDK](#register-for-notifications-from-the-sdk).
 
 ```java
@@ -998,6 +1192,7 @@ public interface MAMEnrollmentNotification extends MAMUserNotification {
 De methode `getEnrollmentResult()` retourneert het resultaat van het registratieverzoek.  Aangezien `MAMEnrollmentNotification``MAMUserNotification` uitbreidt, is ook de identiteit van de gebruiker beschikbaar voor wie de registratiepoging is uitgevoerd. De app moet de `MAMNotificationReceiver`-interface implementeren om deze meldingen te ontvangen, zoals uiteengezet in de sectie [Registreren voor meldingen van de SDK](#register-for-notifications-from-the-sdk).
 
 De status van een geregistreerd gebruikersaccount kan worden gewijzigd wanneer een registratiemelding wordt ontvangen, maar de status zal niet in alle gevallen worden gewijzigd. Als de melding `AUTHORIZATION_NEEDED` wordt ontvangen na een meer informatief resultaat als `WRONG_USER`, wordt het meer informatieve resultaat bijvoorbeeld gehandhaafd als de status van het account.  Zodra het account is ingeschreven, blijft de status `ENROLLMENT_SUCCEEDED` totdat het account wordt uitgeschreven of gewist.
+
 
 ## <a name="app-ca-with-policy-assurance"></a>Voorwaardelijke toegang tot apps (APP CA) met beleidsverzekering
 
@@ -1011,6 +1206,7 @@ De ADAL-bibliotheek heeft een nieuwe foutcode om de app te informeren dat het ni
 > Voor deze nieuwe foutcode en andere ondersteuning voor APP CA met beleidsverzekering is versie 1.15.0 (of hoger) van de ADAL-bibliotheek vereist.
 
 ### <a name="mamcompliancemanager"></a>MAMComplianceManager
+
 De `MAMComplianceManager`-interface wordt gebruikt wanneer er een door beleid vereiste fout van ADAL wordt ontvangen.  Deze bevat de `remediateCompliance()`-methode die moet worden aangeroepen om de app in een compatibele status te plaatsen. Een verwijzing naar de `MAMComplianceManager` kunt u als volgt verkrijgen:
 
 ```java
@@ -1058,6 +1254,7 @@ public void onError(@Nullable Exception exc) {
 ```
 
 ### <a name="status-notifications"></a>Statusmeldingen
+
 Als de app wordt geregistreerd voor meldingen van het type **COMPLIANCE_STATUS**, wordt `MAMComplianceNotification` verzonden om de app op de hoogte te brengen van de uiteindelijke status van de nalevingsherstelpoging. De `MAMComplianceNotification` worden ontvangen via de `MAMNotificationReceiver` interface zoals beschreven in de sectie [Registreren voor meldingen van de SDK](#register-for-notifications-from-the-sdk).
 
 ```java
@@ -1111,6 +1308,7 @@ notificationRegistry.registerReceiver(receiver, MAMNotificationType.COMPLIANCE_S
 > De meldingenontvanger moet worden geregistreerd voordat u `remediateCompliance()` aanroept om een racevoorwaarde te voorkomen die ertoe kan leiden dat u de melding mist.
 
 ### <a name="implementation-notes"></a>Implementatienotities
+
 > [!NOTE]
 > **Belangrijke wijziging!**  <br>
 > De methode `MAMServiceAuthenticationCallback.acquireToken()` van de app moet *false* voor de nieuwe `forceRefresh`-vlag doorgeven aan `acquireTokenSilentSync()`.
@@ -1126,9 +1324,11 @@ AuthenticationResult result = acquireTokenSilentSync(resourceId, clientId, userI
 > Het account wordt door `remediateCompliance()` geregistreerd en er wordt een inschrijvingspoging ondernomen.  Zodra het hoofdtoken is verkregen, is het niet nodig om `registerAccountForMAM()` aan te roepen. Dit kan echter geen kwaad. Anderzijds, als het token niet kan worden opgehaald en het gebruikersaccount moet worden verwijderd, moet `unregisterAccountForMAM()` via de app worden aangeroepen om het account te verwijderen en om te voorkomen dat op de achtergrond opnieuw wordt geprobeerd de app in te schrijven.
 
 ## <a name="protecting-backup-data"></a>Beveiligen van back-upgegevens
+
 Vanaf Android Marshmallow (API 23) biedt Android apps twee manieren om een back-up van gegevens te maken. Elke optie is beschikbaar voor uw app en vereist andere stappen om ervoor te zorgen dat Intune-gegevensbeveiliging correct worden geïmplementeerd. U kunt de onderstaande tabel gebruiken voor een overzicht van de bijbehorende acties die zijn vereist voor een correct gegevensbeveiligingsgedrag.  In de [Android-API-handleiding](https://developer.android.com/guide/topics/data/backup.html) vindt u meer informatie over de back-upmethoden.
 
 ### <a name="auto-backup-for-apps"></a>Automatische back-ups voor apps
+
 Android begon met het aanbieden van [automatische volledige back-ups](https://developer.android.com/guide/topics/data/autobackup.html) naar Google Drive for apps op Android Marshmallow-apparaten, ongeacht de doel-API van de app. Als u in uw AndroidManifest.xml `android:allowBackup` expliciet hebt ingesteld op **onwaar**, wordt uw app door Android nooit opgenomen in de wachtrij voor back-ups en blijven de bedrijfsgegevens in de app. In dit geval is er geen verdere actie nodig.
 
 Het kenmerk `android:allowBackup` is echter standaard ingesteld op waar, zelfs als `android:allowBackup` niet in het manifestbestand is opgegeven. Dit betekent dat van alle app-gegevens automatisch een back-up in het Google Drive-account van de gebruiker wordt gemaakt. Deze standaardwerking vormt een **risico op het lekken van gegevens**. Daarom vereist de SDK de wijzigingen die hieronder worden beschreven om ervoor te zorgen dat gegevensbescherming wordt toegepast.  Het is belangrijk dat u de onderstaande richtlijnen voor het beveiligen van klantgegevens volgt als u uw app op Android Marshmallow-apparaten wilt uitvoeren.  
@@ -1172,10 +1372,13 @@ U kunt met Intune alle [functies voor automatische back-ups](https://developer.a
     <meta-data android:name="com.microsoft.intune.mam.FullBackupContent" android:resource="@xml/my_scheme" />  
     ```
 
+
 ### <a name="keyvalue-backup"></a>Key/Value-back-up
+
 De optie [Key/Value-back-up](https://developer.android.com/guide/topics/data/keyvaluebackup.html) is beschikbaar voor alle API's 8+ en uploadt de app-gegevens naar de [Android Backup Service](https://developer.android.com/google/backup/index.html). De hoeveelheid gegevens per gebruiker van uw app is beperkt tot 5 MB. Als u Key/Value-back-up gebruikt, moet u een **BackupAgentHelper** of een **BackupAgent** gebruiken.
 
 ### <a name="backupagenthelper"></a>BackupAgentHelper
+
 BackupAgentHelper is eenvoudiger te implementeren dan BackupAgent, zowel op het gebied van systeemeigen Android-functionaliteit als Intune MAM-integratie. Met BackupAgentHelper kan de ontwikkelaar volledige bestanden en gedeelde voorkeuren registreren bij respectievelijk een **FileBackupHelper** en **SharedPreferencesBackupHelper**, die vervolgens worden toegevoegd aan de BackupAgentHelper wanneer deze wordt gemaakt. Volg de onderstaande stappen om een BackupAgentHelper met Intune MAM te gebruiken:
 
 1. Als u back-ups van meerdere identiteiten wilt maken met een BackupAgentHelper, volgt u de Android-richtlijn voor [het uitbreiden van BackupAgentHelper](https://developer.android.com/guide/topics/data/keyvaluebackup.html#BackupAgentHelper).
@@ -1210,11 +1413,13 @@ Met een BackupAgent kunt u veel explicieter aangeven van welke gegevens een back
 
 De handleiding voor het maken van gegevensback-ups bevat een algemeen algoritme voor het herstellen van de gegevens van uw toepassing. Daarnaast bevat de sectie [Extending BackupAgent](https://developer.android.com/guide/topics/data/keyvaluebackup.html#BackupAgent) een codevoorbeeld. Als u meerdere identiteiten wilt herstellen, moet u de algemene structuur in deze voorbeeldcode volgen en met name letten op het volgende:
 
-1. U moet een `while(data.readNextHeader())`-lus gebruiken om door de back-upentiteiten te gaan. In de vorige code is `data` de lokale variabelenaam voor de **MAMBackupDataInput** die tijdens de herstelbewerking wordt doorgegeven naar uw app.
+1. U moet een `while(data.readNextHeader())`-lus* gebruiken om door de back-upentiteiten te gaan.
 
-2. U moet `data.skipEntityData()` aanroepen als `data.getKey()` niet overeenkomt met de sleutel die u in `onBackup` hebt geschreven. Als deze stap niet wordt uitgevoerd, is het mogelijk dat uw herstelbewerkingen mislukken. In de vorige code is `data` de lokale variabelenaam voor de **MAMBackupDataInput** die tijdens de herstelbewerking wordt doorgegeven naar uw app.
+2. U moet `data.skipEntityData()`* aanroepen als `data.getKey()`* niet overeenkomt met de sleutel die u in `onBackup` hebt geschreven. Als deze stap niet wordt uitgevoerd, is het mogelijk dat uw herstelbewerkingen mislukken.
 
-3. Voorkom dat er tijdens het verbruik van back-entiteiten in de `while(data.readNextHeader())`-constructie wordt geretourneerd, zodat de automatisch geschreven entiteiten niet verloren gaan. In de vorige code is `data` de lokale variabelenaam voor de **MAMBackupDataInput** die tijdens de herstelbewerking wordt doorgegeven naar uw app.
+3. Voorkom dat er tijdens het verbruik van back-entiteiten in de `while(data.readNextHeader())`-constructie* wordt geretourneerd, zodat de automatisch geschreven entiteiten niet verloren gaan.
+
+* Waar `data` de lokale variabelenaam voor de **MAMBackupDataInput** is die tijdens de herstelbewerking wordt doorgegeven naar uw app.
 
 ## <a name="multi-identity-optional"></a>Meerdere identiteiten (optioneel)
 
@@ -1234,6 +1439,7 @@ Een identiteit wordt gedefinieerd als een tekenreeks. Identiteiten zijn **hoofdl
 De app *moet* aan de SDK melden wanneer de actieve identiteit zal worden gewijzigd. In sommige gevallen meldt de SDK ook aan de app wanneer er een identiteitswijziging is vereist. In de meeste gevallen kan MAM echter niet weten welke gegevens worden weergegeven in de gebruikersinterface of op enig moment in een thread worden gebruikt, en wordt ervan uitgegaan dat de app de juiste identiteit instelt om gegevensverlies te voorkomen. In de volgende secties worden een aantal specifieke scenario’s genoemd die actie door de app vereisen.
 
 ### <a name="enabling-multi-identity"></a>Meerdere identiteiten inschakelen
+
 Alle apps worden standaard beschouwd als apps met één identiteit. U kunt aangeven dat een app met meerdere identiteiten kan werken door de volgende metagegevens in het bestand AndroidManifest.xml te plaatsen.
 
 ```xml
@@ -1243,6 +1449,7 @@ Alle apps worden standaard beschouwd als apps met één identiteit. U kunt aange
 ```
 
 ### <a name="setting-the-identity"></a>De identiteit instellen
+
 Ontwikkelaars kunnen de identiteit van de app-gebruiker instellen op de volgende niveaus met aflopende prioriteit:
 
   1. Threadniveau
@@ -1252,6 +1459,8 @@ Ontwikkelaars kunnen de identiteit van de app-gebruiker instellen op de volgende
 Een identiteit die is ingesteld op threadniveau, vervangt een identiteit die is ingesteld op het niveau `Context`, die weer een identiteit vervangt die is ingesteld op procesniveau. Een identiteit die is ingesteld voor een `Context` wordt alleen gebruikt in de juiste gekoppelde scenario’s. Zo hebben bestands-I/O-bewerkingen geen gekoppelde `Context`. Meestal stellen apps de `Context`-identiteit in voor een `Activity`. Een app *mag* geen gegevens weergeven voor een beheerde identiteit, tenzij de identiteit van de `Activity` is ingesteld op dezelfde identiteit. In het algemeen is de identiteit op procesniveau alleen nuttig als de app voor alle threads werkt met een enkele gebruiker tegelijk. Veel apps hoeven hiervan geen gebruik te maken.
 
 Als uw app de `Application`-context gebruikt om systeemservices op te halen, moet u ervoor zorgen dat de thread- of procesidentiteit is ingesteld of dat u de UI-identiteit hebt ingesteld voor de `Application`-context van uw app.
+
+Als uw app gebruikmaakt van een `Service`-context voor het starten van intenties, gebruikt u inhoudsoplossers of andere systeemservices en moet u ervoor zorgen dat u de identiteit instelt op de context `Service`.
 
 Als u speciale gevallen wilt verwerken tijdens het bijwerken van de UI-identiteit met `setUIPolicyIdentity` of `switchMAMIdentity`, kunnen beide methoden worden doorgegeven als een set `IdentitySwitchOption`-waarden.
 
@@ -1265,38 +1474,40 @@ Als u speciale gevallen wilt verwerken tijdens het bijwerken van de UI-identitei
 
 >[!NOTE]
 > Omdat de `CLIPBOARD_SERVICE` voor bewerkingen in de gebruikersinterface wordt gebruikt, wordt de UI-identiteit van de activiteit op de voorgrond door de SDK gebruikt voor `ClipboardManager`-bewerkingen.
-> De volgende methoden in `MAMPolicyManager` kunnen worden gebruikt om de identiteit in te stellen en de eerder ingestelde identiteitswaarden op te halen.
+
+De volgende methoden in `MAMPolicyManager` kunnen worden gebruikt om de identiteit in te stellen en de eerder ingestelde identiteitswaarden op te halen.
 
 ```java
-public static void setUIPolicyIdentity(final Context context, final String identity, final MAMSetUIIdentityCallback mamSetUIIdentityCallback, final EnumSet<IdentitySwitchOption> options);
+public static void setUIPolicyIdentity(final Context context, final String identity, final MAMSetUIIdentityCallback mamSetUIIdentityCallback,
+final EnumSet<IdentitySwitchOption> options);
 
-  public static String getUIPolicyIdentity(final Context context);
+public static String getUIPolicyIdentity(final Context context);
 
-  public static MAMIdentitySwitchResult setProcessIdentity(final String identity);
+public static MAMIdentitySwitchResult setProcessIdentity(final String identity);
 
-  public static String getProcessIdentity();
+public static String getProcessIdentity();
 
-  public static MAMIdentitySwitchResult setCurrentThreadIdentity(final String identity);
+public static MAMIdentitySwitchResult setCurrentThreadIdentity(final String identity);
 
-  public static String getCurrentThreadIdentity();
+public static String getCurrentThreadIdentity();
 
 /**
-   * Get the current app policy. This does NOT take the UI (Context) identity into account.
-   * If the current operation has any context (e.g. an Activity) associated with it, use the overload below.
-   */
-  public static AppPolicy getPolicy();
+ * Get the current app policy. This does NOT take the UI (Context) identity into account.
+ * If the current operation has any context (e.g. an Activity) associated with it, use the overload below.
+ */
+public static AppPolicy getPolicy();
 
-  /**
-  * Get the current app policy. This DOES take the UI (Context) identity into account.
-   * If the current operation has any context (e.g. an Activity) associated with it, use this function.
-   */
-  public static AppPolicy getPolicy(final Context context);
+/**
+ * Get the current app policy. This DOES take the UI (Context) identity into account.
+ * If the current operation has any context (e.g. an Activity) associated with it, use this function.
+ */
+public static AppPolicy getPolicy(final Context context);
 
 
-  public static AppPolicy getPolicyForIdentity(final String identity);
+public static AppPolicy getPolicyForIdentity(final String identity);
 
-  public static boolean getIsIdentityManaged(final String identity);
-  ```
+public static boolean getIsIdentityManaged(final String identity);
+```
 
 >[!NOTE]
 > U kunt de identiteit van de app wissen door deze op null in te stellen.
@@ -1318,8 +1529,8 @@ De app moet garanderen dat een identiteitswijziging is voltooid voordat bedrijfs
 Bij het instellen van een `Context`-identiteit via `setUIPolicyIdentity` wordt het resultaat asynchroon gerapporteerd. Als de `Context` een `Activity` is, weet de SDK pas of de identiteitswijziging is geslaagd nadat de voorwaardelijke start is uitgevoerd, waarvoor de gebruiker mogelijk een pincode of de volledige bedrijfsreferenties moet invoeren. De app kan een `MAMSetUIIdentityCallback` implementeren om dit resultaat te ontvangen of kan null doorgeven voor het callback-object. Merk op dat als een aanroep wordt gedaan naar `setUIPolicyIdentity` terwijl het resultaat van een eerdere aanroep naar `setUIPolicyIdentity` *in dezelfde context* nog niet is bezorgd, de nieuwe callback de oude vervangt en dat de oorspronkelijke callback nooit een resultaat ontvangt.
 
 ```java
-    public interface MAMSetUIIdentityCallback {
-        void notifyIdentityResult(MAMIdentitySwitchResult identitySwitchResult);
+  public interface MAMSetUIIdentityCallback {
+    void notifyIdentityResult(MAMIdentitySwitchResult identitySwitchResult);
   }
 ```
 
@@ -1342,6 +1553,7 @@ Als u `onSwitchMAMIdentityComplete` niet overschrijft (of de `super`-methode nie
 
 
 ### <a name="implicit-identity-changes"></a>Impliciete identiteitswijzigingen
+
 Naast de mogelijkheid van de app om de identiteit in te stellen, kan de identiteit van een thread of context worden gewijzigd op basis van binnenkomende gegevens vanuit een andere door Intune beheerde app waarop app-beveiligingsbeleid is toegepast.
 
 #### <a name="examples"></a>Voorbeelden
@@ -1352,26 +1564,26 @@ Naast de mogelijkheid van de app om de identiteit in te stellen, kan de identite
 3. Aanroepen naar een `ContentProvider` stellen op dezelfde manier de threadidentiteit voor hun duur in.
 
 
-    Bovendien kan de gebruikersinteractie met een activiteit een impliciete identiteitswisseling veroorzaken.
+  Bovendien kan de gebruikersinteractie met een activiteit een impliciete identiteitswisseling veroorzaken.
 
-    **Voorbeeld:** Als een gebruiker tijdens `Resume` een autorisatieprompt annuleert, resulteert dit in een impliciete overgang naar een lege identiteit.
+  **Voorbeeld:** Als een gebruiker tijdens `Resume` een autorisatieprompt annuleert, resulteert dit in een impliciete overgang naar een lege identiteit.
 
-    De app wordt de mogelijkheid geboden om op de hoogte te worden gebracht van deze wijzigingen en ze zo nodig te verbieden. `MAMService` en `MAMContentProvider` maken de volgende methode beschikbaar die door subklassen kan worden overschreven:
+  De app wordt de mogelijkheid geboden om op de hoogte te worden gebracht van deze wijzigingen en ze zo nodig te verbieden. `MAMService` en `MAMContentProvider` maken de volgende methode beschikbaar die door subklassen kan worden overschreven:
 
-    ```java
-    public void onMAMIdentitySwitchRequired(final String identity,
-      final AppIdentitySwitchResultCallback callback);
-    ```
+  ```java
+  public void onMAMIdentitySwitchRequired(final String identity,
+          final AppIdentitySwitchResultCallback callback);
+  ```
 
-    In de klasse `MAMActivity` is een extra parameter aanwezig in de methode:
+  In de klasse `MAMActivity` is een extra parameter aanwezig in de methode:
 
-    ```java
-    public void onMAMIdentitySwitchRequired(final String identity,
-      final AppIdentitySwitchReason reason,
-      final AppIdentitySwitchResultCallback callback);
-    ```
+  ```java
+  public void onMAMIdentitySwitchRequired(final String identity,
+          final AppIdentitySwitchReason reason,
+          final AppIdentitySwitchResultCallback callback);
+  ```
 
-    * De `AppIdentitySwitchReason` registreert de bron van de impliciete wisseling en kan de waarden `CREATE`, `RESUME_CANCELLED` en `NEW_INTENT` accepteren.  De reden `RESUME_CANCELLED` wordt gebruikt wanneer het voortzetten van de activiteit ertoe leidt dat de gebruikersinterface voor een pincode, verificatie of andere naleving wordt weergegeven en de gebruiker die gebruikersinterface probeert te annuleren, meestal door de knop Terug te gebruiken.
+  * De `AppIdentitySwitchReason` registreert de bron van de impliciete wisseling en kan de waarden `CREATE`, `RESUME_CANCELLED` en `NEW_INTENT` accepteren.  De reden `RESUME_CANCELLED` wordt gebruikt wanneer het voortzetten van de activiteit ertoe leidt dat de gebruikersinterface voor een pincode, verificatie of andere naleving wordt weergegeven en de gebruiker die gebruikersinterface probeert te annuleren, meestal door de knop Terug te gebruiken.
 
 
     * De `AppIdentitySwitchResultCallback` ziet er als volgt uit:
@@ -1398,7 +1610,7 @@ De methode `onMAMIdentitySwitchRequired` wordt aangeroepen voor alle impliciete 
 
   * Als het overschakelen naar een andere identiteit wordt geblokkeerd, is het resultaat hetzelfde als wanneer de `Receive`-instellingen voor delen de gegevensinvoer verbieden.
 
-  * Als een service wordt uitgevoerd op de hoofdthread, **moet** `reportIdentitySwitchResult` synchroon worden aangeroepen, anders loopt de UI-thread vast.
+  * Als een service wordt uitgevoerd op de hoofdthread, **moet** `reportIdentitySwitchResult` synchroon worden aangeroepen, anders reageert de UI-thread niet meer.
 
   * Voor het maken van **`Activity`** wordt eerst `onMAMIdentitySwitchRequired` en vervolgens `onMAMCreate` aangeroepen. Als de app UI moet weergeven om te bepalen of de identiteitswisseling is toegestaan, moet die UI worden weergegeven met een *andere* activiteit.
 
@@ -1421,10 +1633,11 @@ Bewerkingen voor de UI-thread verzenden gewoonlijk achtergrondtaken naar een and
 Deze moeten worden gebruikt als via een asynchrone bewerking bedrijfsgegevens naar een bestand kunnen worden geschreven of als er met andere apps kan worden gecommuniceerd.
 
 #### <a name="mamasynctask"></a>MAMAsyncTask
+
 Als u `MAMAsyncTask` wilt gebruiken, neemt u deze over in plaats van een `AsyncTask` en vervangt u onderdrukkingen van `doInBackground` en `onPreExecute` door respectievelijk `doInBackgroundMAM` en `onPreExecuteMAM`. De constructor `MAMAsyncTask` neemt een activiteitscontext. Bijvoorbeeld:
 
 ```java
-  AsyncTask<Object, Object, Object> task = new MAMAsyncTask<Object, Object, Object>(thisActivity) {
+AsyncTask<Object, Object, Object> task = new MAMAsyncTask<Object, Object, Object>(thisActivity) {
 
     @Override
     protected Object doInBackgroundMAM(final Object[] params) {
@@ -1442,8 +1655,8 @@ Als u `MAMAsyncTask` wilt gebruiken, neemt u deze over in plaats van een `AsyncT
 Met `MAMIdentityExecutors` kunt u een bestaand exemplaar van `Executor` of `ExecutorService` verpakken als een `Executor`/`ExecutorService` met behoud van de identiteit met de methoden `wrapExecutor` en `wrapExecutorService`. Bijvoorbeeld
 
 ```java
-  Executor wrappedExecutor = MAMIdentityExecutors.wrapExecutor(originalExecutor, activity);
-  ExecutorService wrappedService = MAMIdentityExecutors.wrapExecutorService(originalExecutorService, activity);
+Executor wrappedExecutor = MAMIdentityExecutors.wrapExecutor(originalExecutor, activity);
+ExecutorService wrappedService = MAMIdentityExecutors.wrapExecutorService(originalExecutorService, activity);
 ```
 
 ### <a name="file-protection"></a>Bestandsbeveiliging
@@ -1459,9 +1672,9 @@ public final class MAMFileProtectionManager {
     * this method will silently do nothing.
     *
     * @param identity
-    *         Identity to set.
+    *        Identity to set.
     * @param file
-    *         File to protect.
+    *        File to protect.
     *
     * @throws IOException
     *         If the file cannot be protected.
@@ -1493,7 +1706,9 @@ public final class MAMFileProtectionManager {
     public static void protect(final ParcelFileDescriptor file, final String identity) throws IOException;
 
    /**
-    * Get the protection info on a file.
+    * Get the protection info on a file. This method should only be used if the file is located in the calling application's
+    * private storage or the device's shared storage. If opening a file with a content resolver, use the overload which
+    * takes a ParcelFileDescriptor instead.
     *
     * @param file
     *            File or directory to get information on.
@@ -1504,7 +1719,7 @@ public final class MAMFileProtectionManager {
     public static MAMFileProtectionInfo getProtectionInfo(final File file) throws IOException;
 
    /**
-    * Get the protection info on a file.
+    * Get the protection info on a file descriptor such as one opened through a content resolver.
     *
     * @param file
     *            File or directory to get information on.
@@ -1522,10 +1737,10 @@ public interface MAMFileProtectionInfo {
  ```
 
 #### <a name="app-responsibility"></a>App-verantwoordelijkheid
-MAM kan niet automatisch een relatie afleiden tussen bestanden die worden gelezen en gegevens die worden weergegeven in een `Activity`. Apps *moeten* de identiteit van de gebruikersinterface goed instellen voordat bedrijfsgegevens worden weergegeven. Dit geldt ook voor gegevens die worden gelezen uit bestanden. Als een bestand afkomstig is van buiten de app (van een `ContentProvider` of gelezen vanaf een openbaar leesbare locatie), *moet* de app proberen de bestandsidentiteit vast te stellen (met `MAMFileProtectionManager.getProtectionInfo`) voordat de uit het bestand gelezen informatie wordt weergegeven. Als `getProtectionInfo` aangeeft dat de identiteit niet null en niet leeg is, *moet* de identiteit van de gebruikersinterface worden ingesteld op deze identiteit (met `MAMActivity.switchMAMIdentity` of `MAMPolicyManager.setUIPolicyIdentity`). Als de identiteitswijziging mislukt, moeten de gegevens uit het bestand *niet* worden weergegeven.
+MAM kan niet automatisch een relatie afleiden tussen bestanden die worden gelezen en gegevens die worden weergegeven in een `Activity`. Apps *moeten* de identiteit van de gebruikersinterface goed instellen voordat bedrijfsgegevens worden weergegeven. Dit geldt ook voor gegevens die worden gelezen uit bestanden. Als een bestand afkomstig is van buiten de app (van een `ContentProvider` of gelezen vanaf een openbaar leesbare locatie), *moet* de app proberen de bestandsidentiteit vast te stellen (met de correcte `MAMFileProtectionManager.getProtectionInfo` overbelasting voor de gegevensbron) voordat de uit het bestand gelezen informatie wordt weergegeven. Als `getProtectionInfo` aangeeft dat de identiteit niet null en niet leeg is, *moet* de identiteit van de gebruikersinterface worden ingesteld op deze identiteit (met `MAMActivity.switchMAMIdentity` of `MAMPolicyManager.setUIPolicyIdentity`). Als de identiteitswijziging mislukt, moeten de gegevens uit het bestand *niet* worden weergegeven.
 
 Het proces verloopt ongeveer als volgt:
-* De gebruiker selecteert een document om in de app te openen.
+  * De gebruiker selecteert een document om in de app te openen.
   * Tijdens het openen en voordat gegevens van schijf worden gelezen, bevestigt de app de identiteit die moet worden gebruikt voor het weergeven van de inhoud:
 
     ```java
@@ -1536,8 +1751,10 @@ Het proces verloopt ongeveer als volgt:
 
   * De app wacht tot een resultaat wordt gerapporteerd voor retouraanroep.
   * Als het gerapporteerde resultaat ‘mislukt’ is, geeft de app het document niet weer.
-* De app opent het bestand en geeft het weer.
+  * De app opent het bestand en geeft het weer.
   
+Als een app gebruikmaakt van de `DownloadManager` van Android om bestanden te downloaden, probeert de MAM SDK deze bestanden automatisch te beveiligen met de procesidentiteit. Als de gedownloade bestanden bedrijfsgegevens bevatten, is het de verantwoordelijkheid van de app om `protect` aan te roepen als de bestanden na het downloaden worden verplaatst of opnieuw worden gemaakt.
+
 #### <a name="single-identity-to-multi-identity-transition"></a>Overgang van één identiteit naar meerdere identiteiten
 Als een app die eerder is uitgebracht met Intune-integratie met één identiteit, later wordt geïntegreerd met meerdere identiteiten, wordt voor eerder geïnstalleerde apps een overgang uitgevoerd (niet zichtbaar voor de gebruiker, er is geen gekoppelde UX). Het is niet *vereist* dat de app expliciet wordt gebruikt om deze overgang te verwerken. Alle bestanden die zijn gemaakt voordat de overgang wordt voorgezet, worden als beheerd beschouwd (ze blijven dus versleuteld als er versleutelingsbeleid is ingeschakeld). Indien gewenst kunt u de upgrade detecteren en `MAMFileProtectionManager.protect` gebruiken om specifieke bestanden of directory's met de lege identiteit te taggen (als deze zijn versleuteld, wordt hiermee de versleuteling verwijderd).
 
@@ -1551,12 +1768,15 @@ Het labelen van de bestandsidentiteit is gevoelig voor de offlinemodus. U moet r
 * Wanneer het taggen van bestandsidentiteit beschikbaar komt, worden alle eerder gemaakte bestanden als persoonlijk/onbeheerd behandeld (behorend bij de identiteit met een lege tekenreeks), tenzij de app eerder is geïnstalleerd als een beheerde app met één identiteit. In dat geval wordt deze behandeld als behorend tot de geregistreerde gebruiker.
 
 ### <a name="directory-protection"></a>Mapbeveiliging
+
 Mappen kunnen worden beveiligd met dezelfde `protect`-methode als voor de beveiliging van bestanden. Houd er rekening mee dat de mapbeveiliging recursief wordt toegepast op alle bestanden en submappen in de map en wordt toegepast op nieuwe bestanden die in de map worden gemaakt. Omdat mapbeveiliging recursief wordt toegepast, kan het even duren voordat de aanroep `protect` is voltooid voor grote mappen. Om die reden is het mogelijk dat apps die beveiliging toepassen op een map met een groot aantal bestanden, `protect` asynchroon willen uitvoeren op een thread op de achtergrond.
 
 ### <a name="data-protection"></a>Gegevensbescherming
+
 Het is niet mogelijk om een bestand te taggen als behorend bij meerdere identiteiten. Wanneer voor apps gegevens moeten worden opgeslagen die behoren tot verschillende gebruikers in hetzelfde bestand, kan dit handmatig worden gedaan met de functies van `MAMDataProtectionManager`. De app kan dan gegevens versleutelen en deze koppelen aan een bepaalde gebruiker. De versleutelde gegevens zijn geschikt voor het opslaan naar schijf in een bestand. U kunt de gegevens opvragen die aan de identiteit zijn gekoppeld. De gegevens kunnen later worden ontsleuteld.
 
 Apps die gebruikmaken van `MAMDataProtectionManager` moeten een ontvanger implementeren voor de melding `MANAGEMENT_REMOVED`. Nadat deze melding is voltooid, kunnen de buffers die via deze klasse zijn beveiligd, niet meer worden gelezen als bestandsversleuteling was ingeschakeld op het moment dat de buffers werden beveiligd. Een app kan deze situatie oplossen door tijdens deze melding `MAMDataProtectionManager.unprotect` aan te roepen voor alle buffers. U kunt ook zonder problemen de beveiliging aanroepen tijdens deze melding als u de identiteitsgegevens wilt behouden. De versleuteling is gegarandeerd uitgeschakeld tijdens de melding.
+
 
 ```java
 
@@ -1651,18 +1871,22 @@ public final class MAMDataProtectionManager {
 }
 ```
 
+
 ### <a name="content-providers"></a>Inhoudsproviders
+
 Als de app andere bedrijfsgegevens biedt dan een `ParcelFileDescriptor` via een `ContentProvider`, moet de app de methode `isProvideContentAllowed(String)` in `MAMContentProvider` aanroepen om de UPN (user principal name) van de identiteit van de eigenaar door te geven voor de inhoud. Als deze functie onwaar retourneert, moet de inhoud *niet* worden geretourneerd aan de oproepende functie. Bestandsdescriptors die zijn geretourneerd via een inhoudsprovider, worden automatisch verwerkt op basis van de bestandsidentiteit.
 
 Als u `MAMContentProvider` niet expliciet overneemt en in plaats daarvan toestaat dat de wijzigingen door de bouwhulpprogramma's kunnen worden gemaakt, kunt u een statische versie van dezelfde methode aanroepen: `MAMContentProvider.isProvideContentAllowed(provider,
 contentIdentity)`.
 
 ### <a name="selective-wipe"></a>Selectief wissen
+
 Als een app met meerdere identiteiten wordt geregistreerd voor de melding `WIPE_USER_DATA`, is het de verantwoordelijkheid van de app dat alle gegevens voor de gebruiker worden gewist, met inbegrip van alle bestanden waarvan de identiteit is getagd als behorend aan die gebruiker. Als de app gebruikersgegevens uit een bestand verwijdert maar andere gegevens in het bestand wil bewaren, *moet* het de identiteit van het bestand wijzigen (via `MAMFileProtectionManager.protect` voor een persoonlijke gebruiker of de lege identiteit). Als versleutelingsbeleid wordt gebruikt, worden alle resterende bestanden van de gebruiker die worden gewist, niet ontsleuteld, en zijn deze na het wissen niet langer toegankelijk voor de app.
 
 Een app die wordt geregistreerd voor `WIPE_USER_DATA` profiteert niet van het voordeel van het standaardgedrag van de SDK voor selectief wissen. Voor apps die met meerdere identiteiten kunnen werken, kan dit verlies belangrijker zijn omdat met de standaard-MAM-actie voor selectief wissen alleen bestanden worden gewist waarvan de identiteit het doel is van een wisbewerking. Als een app die met meerdere identiteiten kan werken, de standaard-MAM-functie voor selectief wissen wil uitvoeren _**en**_ eigen wisacties wil uitvoeren, moet de app worden geregistreerd voor `WIPE_USER_AUXILIARY_DATA`-meldingen. Deze melding wordt direct door de SDK verzonden, nog voordat u de standaard-MAM-actie voor selectief wissen wordt uitgevoerd. Een app mag nooit voor zowel `WIPE_USER_DATA` als `WIPE_USER_AUXILIARY_DATA` worden geregistreerd.
 
 Dankzij de standaardinstelling voor selectief wissen wordt de app zorgvuldig gesloten, worden activiteiten afgerond en wordt het app-proces beëindigd. Als de standaardbewerking voor selectief wissen door de app wordt overschreven, kunt u de app handmatig sluiten om te voorkomen dat gebruikers toegang hebben tot gegevens in het geheugen nadat een wisbewerking is uitgevoerd.
+
 
 ## <a name="enabling-mam-targeted-configuration-for-your-android-applications-optional"></a>Op MAM gerichte configuratie inschakelen voor Android-toepassingen (optioneel)
 Toepassingsspecifieke sleutel-waardeparen kunnen worden geconfigureerd in de Intune-console voor [MAM-WE](https://docs.microsoft.com/intune/app-configuration-policies-managed-app) en [Android Enterprise](https://docs.microsoft.com/intune/app-configuration-policies-use-android).
@@ -1754,6 +1978,7 @@ Uw app kan ook de onbewerkte gegevens aanvragen als een lijst met sets van sleut
 List<Map<String, String>> getFullData()
 ```
 
+
 ### <a name="full-example"></a>Compleet voorbeeld
 ```java
 MAMAppConfigManager configManager = MAMComponents.get(MAMAppConfigManager.class);
@@ -1782,7 +2007,7 @@ App-configuratie kan ook worden geconfigureerd met behulp van de Graph API. Zie 
 Er kan een aangepast thema worden ingesteld voor de MAM SDK die wordt toegepast op alle schermen en dialoogvensters van MAM. Als er geen thema wordt gegeven, wordt een standaard MAM-thema gebruikt.
 
 ### <a name="how-to-provide-a-theme"></a>Een thema opgeven
-Als u een thema wilt maken voor een app met behulp van de MAM SDK, moet u de volgende regel code toevoegen aan de methode `onCreate` van de toepassing:
+Als u een thema wilt opgeven, moet u de volgende regel code toevoegen in de methode `Application.onCreate`:
 
 ```java
 MAMThemeManager.setAppTheme(R.style.AppTheme);
@@ -1794,7 +2019,43 @@ In het bovenstaande voorbeeld moet u `R.style.AppTheme` vervangen door het stijl
 
 Dit is nu afgeschaft en Aangepaste thema's (hierboven) is de voorkeursmanier om weergaven aan te passen.
 
+Weergaven die worden gegenereerd door de MAM SDK kunnen visueel worden aangepast aan de app waarin de MAM SDK is geïntegreerd. U kunt de primaire, secundaire en achtergrondkleuren en de grootte van het app-logo aanpassen. Deze stijlaanpassing is optioneel. Als er geen aangepaste stijl is geconfigureerd, worden de standaardinstellingen gebruikt.
+
+
+### <a name="how-to-customize"></a>Aanpassingen maken
+Als de stijlwijzigingen moeten worden toegepast op de Intune MAM-weergavenviews, moet u eerst een XML-bestand met stijloverschrijvingen maken. Dit bestand moet in de map /res/xml van uw app worden geplaatst. U kunt het bestand elke gewenste naam geven. Hieronder volgt een voorbeeld van de indeling die voor dit bestand moet worden gevolgd.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<styleOverrides>
+    <item
+        name="foreground_color"
+        resource="@color/red"/>
+    <item
+        name="accent_color"
+        resource="@color/blue"/>
+    <item
+        name="background_color"
+        resource="@color/green"/>
+    <item
+        name="logo_image"
+        resource="@drawable/app_logo"/>
+</styleOverrides>
+```
+
+U moet de bestaande resources in uw app opnieuw gebruiken. U moet bijvoorbeeld de kleur groen in het bestand colors.xml file definiëren en een verwijzing aan het bestand toevoegen. U kunt niet de hexadecimale kleurencode #0000ff gebruiken. De maximale grootte voor het app-logo is 110 dip (dp). U kunt desgewenst een kleinere logoafbeelding gebruiken, maar de maximale grootte resulteert in de best uitziende resultaten. Als u de limiet van 110 dip overschrijdt, wordt de afbeelding verkleind, waardoor deze mogelijk onscherp wordt weergegeven.
+
+Hieronder volgt een compleet overzicht van de toegestane stijlkenmerken, de UI-elementen die ze besturen, hun itemnamen van de XML-kenmerken en het type resource dat voor elk kenmerk wordt verwacht.
+
+|Stijlkenmerk | UI-elementen die worden beïnvloed | Itemnaam van het kenmerk | Verwacht resourcetype |
+| -- | -- | -- | -- |
+| Achtergrondkleur | Achtergrondkleur van het scherm voor het invoeren van de pincode <Br>Opvulkleur van het vak voor de pincode | background_color | Kleur |
+| Voorgrondkleur | Kleur van de voorgrondtekst <br> Kaderrand van het pincodevak met standaardstatus <br> Tekens (inclusief verborgen tekens) in het pincodevak wanneer de gebruiker een pincode invoert| foreground_color | Kleur|
+| Accentkleur | Kaderrand van het gemarkeerde pincodevak <br> Hyperlinks |accent_color | Kleur |
+| App-logo | Grote pictogrammen die worden weergegeven in het pincodescherm van de Intune-app | logo_image | Tekenbaar |
+
 ## <a name="default-enrollment-optional"></a>Standaard inschrijving (optioneel)
+
 Hier volgen richtlijnen voor het vereisen van gebruikersprompts bij het starten van een app voor automatische registratie bij de APP-WE-service (dit wordt **standaardinschrijving** genoemd in deze sectie), waarvoor beveiligingsbeleid voor apps in Intune is vereist om uw in SDK geïntegreerde Android LOB-app te gebruiken. Ook wordt beschreven hoe u eenmalige aanmelding kunt inschakelen voor uw in SDK geïntegreerde Android LOB-apps. Dit wordt **niet** ondersteund voor Store-apps die kunnen worden gebruikt door niet-Intune-gebruikers.
 
 > [!NOTE] 
@@ -1807,19 +2068,24 @@ Schakel standaardinschrijving in aan de hand van de volgende stappen:
 
 1. Als ADAL in uw app is geïntegreerd of als u eenmalige aanmelding moet inschakelen, moet u [ADAL configureren](#configure-azure-active-directory-authentication-library-adal) volgens [algemene ADAL-configuratie](#common-adal-configurations) nummer 2. Als dit niet het geval is, kunt u deze stap overslaan.
    
-2. Schakel standaardinschrijving in door de volgende waarde in het manifest in te voeren:
+2. Schakel standaardinschrijving in door de volgende waarde toe te voegen in het manifest onder de tag `<application>`:
+
    ```xml 
    <meta-data android:name="com.microsoft.intune.mam.DefaultMAMServiceEnrollment" android:value="true" />
    ```
+
    > [!NOTE] 
    > Dit moet de enige MAM-WE-integratie in de app zijn. Als er andere pogingen zijn gedaan om MAMEnrollmentManager-API's aan te roepen, treden er conflicten op.
 
-3. U schakelt vereist MAM-beleid in door de volgende waarde in het manifest in te voeren:
+3. Schakel vereist MAM-beleid in door de volgende waarde toe te voegen in het manifest onder de tag `<application>`:
+
    ```xml 
    <meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />
    ```
+
    > [!NOTE] 
    > Dit zorgt ervoor dat de gebruiker de bedrijfsportal op het apparaat moet downloaden en de standaardstroom voor inschrijving moet voltooien vóór gebruik.
+
 
 ## <a name="limitations"></a>Beperkingen
 
@@ -1851,6 +2117,7 @@ Het testen van het MAM SDK-gedrag onder Robolectric wordt niet ondersteund. Er z
 Als u uw toepassing onder Robolectric moet testen, is het de aanbevolen tijdelijke oplossing om de klasselogica van uw toepassing te verplaatsen naar een helper en uw test-APK voor eenheden te produceren met een toepassingsklasse die niet erft van MAMApplication.
 
 ## <a name="expectations-of-the-sdk-consumer"></a>Verwachtingen van de SDK-consument
+
 De Intune SDK onderhoudt het contract geleverd door de Android-API, hoewel er vaker foutmeldingen als gevolg van beleidsafdwinging kunnen worden geactiveerd. Deze aanbevolen Android-procedures verminderen de kans op fouten:
 
 * Android SDK-functies die null kunnen retourneren, hebben nu een grotere kans om null te zijn.  Om problemen tot een minimum te beperken, zorgt u ervoor dat null-controles op de juiste plaatsen worden uitgevoerd.
@@ -1860,6 +2127,11 @@ De Intune SDK onderhoudt het contract geleverd door de Android-API, hoewel er va
 * Eventuele afgeleide functies moeten oproepen uitvoeren via de versies van hun bovenliggende klasse.
 
 * Vermijd het niet-eenduidige gebruik van API's. Bijvoorbeeld: wanneer u `Activity.startActivityForResult` zonder te controleren of de requestCode vreemd gedrag kan veroorzaken.
+
+### <a name="services"></a>Services
+Beleidsafdwinging kan invloed hebben op service-interacties.
+Methoden die verbinding maken met een afhankelijke service, zoals `Context.bindService`, kunnen mislukken vanwege het afdwingen van het onderliggende beleid in `Service.onBind` en kunnen leiden tot `ServiceConnection.onNullBinding` of `ServiceConnection.onServiceDisconnected`.
+Interactie met een gevestigde gebonden service kan een `SecurityException` veroorzaken vanwege het afdwingen van het beleid in `Binder.onTransact`.
 
 ## <a name="telemetry"></a>Telemetrie
 

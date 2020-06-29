@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf413dc551d8be8fd646a03826fb3e5507f4d272
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: ba44cca323dd2a3fbf756b86743dea403ce0b156
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988938"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093059"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>iOS-/iPadOS-apparaten inschrijven bij Intune
 
@@ -61,7 +61,7 @@ U kunt iOS-/iPadOS-apparaten die bedrijfseigendom zijn ook inschrijven met een [
 
 ## <a name="automated-device-enrollment"></a>Automatische apparaatinschrijving
 
-Organisaties kunnen nu iOS-/iPadOS-apparaten aanschaffen via de automatische apparaatinschrijving (ADE) van Apple. Met ADE kunt u een inschrijvingsprofiel draadloos implementeren om apparaten voor beheer in te schrijven. Zie [Device Enrollment Program](device-enrollment-program-enroll-ios.md) voor meer informatie.
+Organisaties kunnen nu iOS-/iPadOS-apparaten aanschaffen via de automatische apparaatinschrijving (ADE) van Apple. Met ADE kunt u een inschrijvingsprofiel draadloos implementeren om apparaten voor beheer in te schrijven. Zie [iOS/iPadOS-apparaten automatisch inschrijven met Automated Device Enrollment van Apple](device-enrollment-program-enroll-ios.md).
 
 ## <a name="user-enrollment"></a>Gebruikersinschrijving
 Gebruikersinschrijving biedt beheerders een subset van beheeropties vergeleken met andere inschrijvingsmethoden. Zie [Ondersteunde acties, wachtwoorden en andere opties voor gebruikersinschrijving](ios-user-enrollment-supported-actions.md) en [iOS-/iPadOS- en iPadOS-gebruikersinschrijving instellen](ios-user-enrollment.md) voor meer informatie.

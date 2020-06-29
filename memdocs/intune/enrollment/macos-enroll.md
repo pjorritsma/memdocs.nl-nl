@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 12/16/2019
+ms.date: 06/12/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3cd8c57dcaede1331838946d93c4fce16801651b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1de1b015daad50837142ce9628543f0b2d7587d7
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990511"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093749"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Inschrijving voor macOS-apparaten instellen in Intune
 
@@ -48,7 +48,7 @@ Voer de volgende vereisten uit voordat u inschrijving van macOS-apparaten instel
 ## <a name="user-owned-macos-devices-byod"></a>macOS-apparaten die het eigendom van gebruikers zijn (BYOD)
 
 U kunt gebruikers hun eigen persoonlijke apparaten laten registreren in Intune-beheer. Dit staat bekend als 'Bring Your Own Device' of BYOD. Nadat u aan de vereisten hebt voldaan en gebruikerslicenties hebt toegewezen, kunnen de gebruikers hun apparaten als volgt inschrijven:
-- door naar de [bedrijfswebsite](https://portal.manage.microsoft.com) te gaan; of
+- door naar de [bedrijfsportalwebsite](https://portal.manage.microsoft.com) te gaan; of
 - door de Mac-bedrijfsportal-app te downloaden via [aka.ms/EnrollMyMac](https://aka.ms/EnrollMyMac).
 
 U kunt uw gebruikers ook een koppeling sturen naar de stappen voor online registratie: [Uw Mac OS-apparaat registreren in Intune](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp).
@@ -78,9 +78,12 @@ Voor Parallels Desktop moet u het hardwaretype en het serienummer voor de virtue
 Voor VMware Fusion moet u [het VMX-bestand bewerken](https://kb.vmware.com/s/article/1014782) om het hardwaremodel en serienummer van de virtuele machine in te stellen. U wordt aangeraden het hardwaretype van het apparaat waarop de virtuele machines worden uitgevoerd, af te stemmen op het hardwaretype van de virtuele machines die u maakt. U vindt dit hardwaretype in **Apple-menu** > **Over deze Mac** > **Systeeminformatie** > **Modelnaam**. 
 
 ## <a name="user-approved-enrollment"></a>Door de gebruiker goedgekeurde inschrijving
+
 Door de gebruiker goedgekeurde MDM-inschrijving is een type macOS-inschrijving die u kunt gebruiken om bepaalde vertrouwelijke instellingen te beheren. Zie de [ondersteuningsdocumentatie van Apple](https://support.apple.com/HT208019) voor meer informatie.  
  
-Tijdens het BYOD-registratieproces wordt de gebruiker gevraagd het Apple-beheerprofiel handmatig goed te keuren. Instructies zijn opgenomen in de Bedrijfsportal-app voor macOS. Hoewel goedkeuring van het beheerprofiel niet vereist is om de registratie te voltooien, raadt Intune gebruikers goedgekeurde registraties aan. Als de gebruiker het profiel niet goedkeurt tijdens de registratie, kan de gebruiker naar **Systeemvoorkeuren** > **Profielen** gaan, het beheerprofiel kiezen en **Goedkeuren** selecteren.    
+Vanaf 2020 juni worden alle nieuwe macOS MDM-inschrijvingen in Intune, inclusief inschrijvingen die niet worden uitgevoerd via automatische apparaatregistratie (ADE), beschouwd als zijnde door de gebruiker goedgekeurd. De eindgebruiker moet het beheerprofiel handmatig installeren in **Systeemvoorkeuren** > **Profielen** en zo goedkeuring van het beheerprofiel bieden. Systeemvoorkeuren wordt automatisch gestart vanuit de Bedrijfsportal-app voor BYOD macOS-gebruikers. [Instructies voor het installeren van het beheerprofiel](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp) zijn beschikbaar in de bedrijfsportal-app.     
+
+BYOD macOS MDM-inschrijvingen voorafgaand aan juni 2020 kunnen niet door de gebruiker worden goedgekeurd als de eindgebruiker niet handmatig goedkeuring van het beheerprofiel heeft gegeven in **Systeemvoorkeuren** > **Profielen**. Voor BYOD-inschrijvingen na juni 2020 start de Bedrijfsportal-app **Systeemvoorkeuren** voor de gebruiker en moet de gebruiker Installeren selecteren. Als de gebruiker het beheerprofiel niet heeft goedgekeurd tijdens de registratie, kan de gebruiker naar **Systeemvoorkeuren** > **Profielen** gaan, het beheerprofiel kiezen en **Goedkeuren** selecteren om het profiel later goed te keuren.
 
 ### <a name="find-out-if-a-device-is-user-approved"></a>Nagaan of een apparaat 'Goedgekeurd door de gebruiker' is
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).

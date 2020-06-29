@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 06/11/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: efa965bc3dff2436a98602e3cb9dda96a1fe580d
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 11aba38d63621472b5e8513b066b96120d649c31
+ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166153"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84740865"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>UI-updates voor Intune-apps voor eindgebruikers
 
@@ -34,6 +34,14 @@ Informatie over de meest recente updates voor de Microsoft Intune-apps. We voege
 
 Zorg ervoor dat, als u een werknemer of student bent, u de schermafbeeldingen en koppelingen naar de Help-documentatie voor de bedrijfsportal bekijkt. Zie de [Help-documentatie voor bedrijfsportalgebruikers](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done) voor meer informatie over het gebruik van de bedrijfsportal-app.  
 
+
+## <a name="week-of-june-8-2020"></a>Week van 8 juni 2020 
+
+### <a name="updates-to-informational-screen-in-company-portal-for-iosipados----7032452---"></a>Updates voor het informatiescherm in Bedrijfsportal voor iOS/iPadOS <!-- 7032452 -->
+Een informatief scherm in Bedrijfsportal voor iOS/iPadOS is bijgewerkt om beter te kunnen uitleggen wat een beheerder op apparaten kan zien en doen. Deze uitleg gaat alleen over apparaten in bedrijfseigendom. Alleen de tekst is bijgewerkt, er zijn geen wijzigingen aangebracht in wat de beheerder op gebruikersapparaten kan zien of doen. Zie [Welke gegevens kan mijn organisatie zien wanneer ik mijn apparaat inschrijf?](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) voor meer informatie over wat er zichtbaar is voor een beheerder.  
+
+
+[![Schermopname van het informatieve scherm van Bedrijfsportal waarin bijgewerkte tekst wordt weergegeven.](./media/whats-new-app-ui/device-management-privacy-2005-02.png)](./media/whats-new-app-ui/device-management-privacy-2005-03.png#lightbox)
 
 
 ## <a name="week-of-may-18-2020"></a>Week van 18 mei 2020  
@@ -62,12 +70,6 @@ Gebruikers zien ook de nieuwe koppeling **Apps downloaden** in de het linkerpane
 Om ruimte te maken voor deze nieuwe en verbeterde ervaringen, is het tabblad **Apps**, zoals weergegeven in de volgende afbeelding, verwijderd.  
 
 ![Voorbeeldafbeelding van het verwijderde tabblad Apps in de bedrijfsportal.](./media/whats-new-app-ui/apps-tab-android-removed-2005.png)  
-
-
-
-
-
-
 
 ## <a name="week-of-march-2-2020"></a>Week van 2 maart 2020   
 ### <a name="improved-sign-in-experience-in-company-portal-for-android"></a>Bijgewerkte aanmeldervaring voor de bedrijfsportal-app voor Android   

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/03/2020
+ms.date: 06/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e386d382ceb785d886dfb931bb26222bd82b1a0
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: 9012cf55bcd74ab0786c3d961bc60914f9ade04e
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347318"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093318"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>iOS- en macOS-apps beheren die zijn aangeschaft via het Apple Volume Purchase Program met Microsoft Intune
 
@@ -134,7 +134,6 @@ U kunt de app-namen, metagegevens en licentiegegevens voor uw aangeschafte apps 
 > [!NOTE]  
 > Met Intune (of een andere MDM) worden niet daadwerkelijk VPP-apps geïnstalleerd. In plaats daarvan maakt Intune verbinding met uw VPP-account en vertelt Apple welke app-licenties aan welke apparaten moeten worden toegewezen. Daarna wordt de daadwerkelijke installatie verwerkt door Apple en het apparaat.
 > 
-> [Referentie voor Apple MDM-protocol, pagina 135](https://developer.apple.com/business/documentation/MDM-Protocol-Reference.pdf)
 
 ## <a name="end-user-prompts-for-vpp"></a>Eindgebruikerprompts voor VPP
 
@@ -188,6 +187,9 @@ Als u een Apple VPP-token wilt vernieuwen, volgt u de volgende stappen:
 2. Download het nieuwe token in **Apple Business (of School) Manager** door **Instellingen** > **Apps en Books** > **Mijn servertokens** te selecteren.
 3. Het token in [Beheercentrum voor Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) bijwerken door **Tenantbeheer** > **Connectors en tokens** > **Apple VPP-tokens** te selecteren. Upload het token vervolgens handmatig.
 
+>[!NOTE]
+>U moet een nieuw Apple VPP- of locatietoken downloaden van Apple Business Manager en het bestaande token bijwerken binnen Intune wanneer de gebruiker, die het token heeft ingesteld in Apple Business Manager, het wachtwoord wijzigt of wanneer de gebruiker uw Apple Business Manager-organisatie verlaat. Tokens die niet worden vernieuwd, worden weergegeven met de status 'ongeldig' in Intune.
+
 ## <a name="deleting-a-vpp-app"></a>Een VPP-app verwijderen
 
 U kunt een iOS/iPadOS VPP-app op dit moment niet verwijderen uit Microsoft Intune.
@@ -204,6 +206,8 @@ Toegang tot Apple VPP-tokens en VPP-apps kan onafhankelijk worden beheerd met be
 Apple biedt rechtstreekse hulp voor het maken en vernieuwen van VPP-tokens. Zie [Inhoud verdelen over uw gebruikers met het Volume Purchase Program (VPP)](https://go.microsoft.com/fwlink/?linkid=2014661) als onderdeel van de Apple-documentatie voor meer informatie. 
 
 Als **Toegewezen aan een externe MDM** wordt aangegeven in de Intune-portal, dan moet u (de beheerder) het VPP-token van de externe MDM verwijderen voordat u het VPP-token in Intune gebruikt.
+
+Als een token de status **Dubbel** heeft, zijn meerdere tokens met dezelfde **Tokenlocatie** geüpload. Verwijder het dubbele token om opnieuw te beginnen met het synchroniseren van het token. U kunt nog steeds licenties toewijzen en intrekken voor tokens die als dubbel zijn gemarkeerd. Licenties voor nieuwe apps en boeken die zijn aangeschaft, worden mogelijk niet weergegeven wanneer een token is gemarkeerd als zijnde dubbel.
 
 ## <a name="frequently-asked-questions"></a>Veelgestelde vragen
 

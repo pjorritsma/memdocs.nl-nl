@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 06/19/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5562199d3490085aca26517170745802a0aef489
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 6fef418394a37f0074ddb17cc170a61603b1d7f8
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989495"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093120"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Ondersteuning voor Microsoft Intune krijgen
 
@@ -41,9 +41,6 @@ Als Intune-beheerder kunt u de optie **Help en ondersteuning** gebruiken om vanu
 De Help en ondersteuning-ervaring van Intune is beschikbaar via het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) en via alle blades (of pagina's) onder Intune in Azure Portal.
 
 De *Help en ondersteuning*-ervaring is vergelijkbaar met de ervaring in het [Microsoft 365-beheercentrum](https://admin.microsoft.com/) en vervangt de vorige *Help en ondersteuning*, die beschikbaar blijft voor andere services in Azure.
-
-> [!TIP]
-> Vanaf 18 november 2019 wordt een bijgewerkte en gestroomlijnde console-ervaring voor het verkrijgen van help en ondersteuning voor tenants geïmplementeerd. Als deze nieuwe ervaring nog niet beschikbaar is voor u, komt dit binnenkort.
 
 ### <a name="options-to-access-help-and-support"></a>Opties voor toegang tot Help en ondersteuning
 
@@ -66,18 +63,23 @@ Dit probleem treedt op wanneer u uw nieuwe tenantaccount niet hebt geverifieerd 
 
 - **Vanuit het Microsoft Endpoint Manager-beheercentrum** doet u het volgende
 
-  - Selecteer vanuit elk willekeurig knooppunt in het Microsoft Endpoint Manager-beheercentrum het **?** in de rechterbovenhoek van de portal en gebruik vervolgens de vervolgkeuzelijst om het beheertype te selecteren waarvoor u hulp wilt. Het Microsoft Endpoint Manager-beheercentrum ondersteunt de volgende beheertypen. U moet het specifieke type selecteren waarbij u hulp nodig hebt, bijvoorbeeld Intune:
+  - Selecteer vanuit elk willekeurig knooppunt in het Microsoft Endpoint Manager-beheercentrum het **?** -pictogram in de rechterbovenhoek van de portal om het deelvenster **Help** te openen. Selecteer **Help en ondersteuning** om de pagina **Selecteer een beheertype** te openen.
 
-    - Configuration Manager (bevat Desktop Analytics)
+    > [!div class="mx-imgBorder"]
+    > ![Open de pagina selectie van beheertype](./media/get-support/management-types.png)
+
+    Gebruik de vervolgkeuzelijst om het beheertype te selecteren waarbij u hulp wilt om de toepasselijke pagina Help en ondersteuning te openen. Het Microsoft Endpoint Manager-beheercentrum ondersteunt de volgende beheertypen. U moet het specifieke type selecteren waarbij u hulp nodig hebt, bijvoorbeeld Intune:
+
+    - Configuration Manager
     - Intune
-    - Co-beheer  
+    - Co-beheer
 
     > [!div class="mx-imgBorder"]
     > ![Een beheertype selecteren](./media/get-support/select-management-type.png)
 
-    Nadat u een beheertype hebt geselecteerd, wordt de pagina *Help en ondersteuning* geopend, waar u details kunt opgeven voor [het zoeken naar oplossingen](#find-solutions) voor een specifiek probleem. Details worden gefilterd op basis van het geselecteerde beheertype.
+    Nadat u een beheertype hebt geselecteerd, wordt de van toepassing zijnde pagina *Help en ondersteuning* geopend, waar u details kunt opgeven voor [het zoeken naar oplossingen](#find-solutions) voor een specifiek probleem. Details worden gefilterd op basis van het geselecteerde beheertype.
 
-     Als het juiste beheertype niet is geselecteerd **(1)** , klikt u op *Een beheertype selecteren* **(2)** om terug te keren naar de vervolgkeuzelijst met beheertypen:
+     Als het correcte beheertype niet is geselecteerd **(1)** , klikt u op *Een beheertype selecteren* **(2)** om terug te keren naar de vervolgkeuzelijst met beheertypen:
 
     > [!div class="mx-imgBorder"]
     > ![Het beheertype bevestigen](./media/get-support/confirm-management-selection.png)

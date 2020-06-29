@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f6cafadbecbb0e0f0287b8a6ac4db5a1168e5e84
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 0ac6a5d848a0d02b72a4f7275a6b6df47b2cd834
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983083"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107337"
 ---
 # <a name="remotely-lock-devices-with-intune"></a>Apparaten extern vergrendelen met Intune
 
@@ -45,7 +45,7 @@ Met de apparaatactie **Extern vergrendelen** wordt het apparaat vergrendeld. De 
 - Windows 10 Desktop
 
 > [!NOTE]
-> Voor macOS-apparaten moet u een zescijferige pincode voor herstel instellen. Als het apparaat is vergrendeld, wordt in **Apparaatoverzicht** de pincode weergegeven totdat een andere apparaatactie wordt verzonden. Zorg ervoor dat u de pincode noteert, omdat deze slechts 7 dagen na het verzenden van de opdracht tot externe vergrendeling beschikbaar blijft. Na 7 dagen heeft Intune de pincode niet meer. Start deze opdracht ook niet opnieuw voor hetzelfde apparaat totdat de oorspronkelijke pincode met succes is gebruikt om het apparaat te ontgrendelen. U moet deze opdracht verzenden, de pincode noteren en totdat u deze gebruikt om het macOS-apparaat met succes te openen, deze opdracht niet opnieuw naar hetzelfde apparaat verzenden.  
+> Voor macOS-apparaten moet u een zescijferige pincode voor herstel instellen. Als het apparaat is vergrendeld, wordt in **Apparaatoverzicht** de pincode weergegeven totdat een andere apparaatactie wordt verzonden. Zorg ervoor dat u de pincode noteert, omdat deze slechts 30 dagen na het verzenden van de opdracht tot externe vergrendeling beschikbaar blijft. Na 30 dagen heeft Intune de pincode niet meer. Start deze opdracht ook niet opnieuw voor hetzelfde apparaat totdat de oorspronkelijke pincode met succes is gebruikt om het apparaat te ontgrendelen. U moet deze opdracht verzenden, de pincode noteren en totdat u deze gebruikt om het macOS-apparaat met succes te openen, deze opdracht niet opnieuw naar hetzelfde apparaat verzenden.  
 
 
 ## <a name="remote-lock-a-device"></a>Een apparaat vergrendelen op afstand

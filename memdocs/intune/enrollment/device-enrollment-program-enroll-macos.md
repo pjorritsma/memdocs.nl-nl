@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 196fc4f551596a6146513d25166b1b167aa44186
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: bfcc4a8e867041e0053697bbee605f9798e45bec
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986683"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093823"
 ---
 # <a name="automatically-enroll-macos-devices-with-the-apple-business-manager-or-apple-school-manager"></a>macOS-apparaten automatisch inschrijven met Apple Business Manager of Apple School Manager
 
@@ -46,7 +46,7 @@ Overigens werken Apple Business Manager-inschrijving en Apple School Manager nie
 -->
 ## <a name="prerequisites"></a>Vereisten
 
-- Apparaten die zijn gekocht in [Apple School Manager](http://deploy.apple.com) of het [Device Enrollment Program van Apple](https://school.apple.com/)
+- Apparaten die zijn gekocht in [Apple School Manager](http://deploy.apple.com) of [Automatische apparaatinschrijving van Apple](https://school.apple.com/)
 - Een lijst met serienummers of een inkoopordernummer.
 - [MDM-instantie](../fundamentals/mdm-authority-set.md)
 - [Apple MDM-pushcertificaat](../enrollment/apple-mdm-push-certificate-get.md)
@@ -62,24 +62,25 @@ U gebruikt de Apple-portal om een token te maken. U gebruikt de Apple-portal ook
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>Stap 1. Download het openbare-sleutelcertificaat van Intune dat is vereist om het token te maken.
 
-1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de optie **Apparaten** > **macOS** > **macOS-inschrijving** > **Tokens voor het inschrijvingsprogramma** > **Toevoegen**.
+1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) **Apparaten** > **macOS** > **macOS-inschrijving**. 
+> **Tokens voor het inschrijvingsprogramma** > **Toevoegen**.
 
-    ![Een token voor het inschrijvingsprogramma ophalen.](./media/device-enrollment-program-enroll-macos/image01.png)
+    ![Get an enrollment program token.](./media/device-enrollment-program-enroll-macos/image01.png)
 
 2. Geef Microsoft toestemming om gebruikers- en apparaatgegevens naar Apple te verzenden door **Ik ga akkoord** te selecteren.
 
-   ![Schermopname van het deelvenster Token voor het inschrijvingsprogramma in de werkruimte Apple-certificaten voor het downloaden van de openbare sleutel.](./media/device-enrollment-program-enroll-macos/add-enrollment-program-token-pane.png)
+   ![Schermopname van het deelvenster Token voor het inschrijvingsprogramma in de werkruimte Apple-certificaten voor het downloaden van de openbare sleutel.](./media/device-enrollment-program-enroll-ios/add-enrollment-program-token-pane.png)
 
 3. Kies **Uw openbare-sleutelcertificaat downloaden** en sla het bestand met de versleutelingssleutel (.pem) lokaal op. Het PEM-bestand wordt gebruikt om een vertrouwensrelatiecertificaat aan te vragen bij de Apple-portal.
 
 ### <a name="step-2-use-your-key-to-download-a-token-from-apple"></a>Stap 2. Gebruik uw sleutel om een token van Apple te downloaden.
 
-1. Kies **Een token voor Apple Device Enrollment Program maken** of **Een token maken via Apple School Manager** om de gewenste portal van Apple te openen en meld u aan met uw Apple ID. Deze Apple ID kunt u gebruiken om uw token te verlengen.
+1. Kies **Een token maken via Apple Business Manager** of **Een token maken via Apple School Manager** om de gewenste portal van Apple te openen en meld u aan met uw Apple ID. Deze Apple ID kunt u gebruiken om uw token te verlengen.
 2. Voor DEP: kies in de Apple-portal **Aan de slag** voor **Device Enrollment Program** > **Servers beheren** > **MDM-server toevoegen**.
 3. Voor Apple School Manager: kies in de Apple-portal **MDM-servers** > **MDM-server toevoegen**.
 4. Voer de **MDM-servernaam** in en kies **Volgende**. De servernaam is voor eigen referentie en dient om de MDM-server te identificeren. Het is niet de naam of URL van de Microsoft Intune-server.
 
-5. Het dialoogvenster **Voeg &lt;servernaam&gt;** wordt geopend, met de instructie dat u uw **openbare sleutel moet uploaden**. Kies **Bestand selecteren...** om het .pem-bestand te uploaden en kies **Volgende**.
+5. Het dialoogvenster **Voeg &lt;servernaam&gt;** wordt geopend, met de instructie dat u uw **openbare sleutel moet uploaden**. Selecteer **Bestand kiezen...** om het .pem-bestand te uploaden en kies **Volgende**.
 
 6. Ga naar **Implementatieprogramma** &gt; **Programma apparaatinschrijving** &gt; **Apparaten beheren**.
 7. Geef onder **Kies apparaten op** aan hoe apparaten worden geïdentificeerd:
@@ -95,7 +96,7 @@ U gebruikt de Apple-portal om een token te maken. U gebruikt de Apple-portal ook
 
 Geef in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de Apple ID op voor toekomstige referentie.
 
-![Schermopname van het invoeren van de Apple ID die is gebruikt voor het maken van het token voor het inschrijvingsprogramma en het uploaden van het token.](./media/device-enrollment-program-enroll-macos/image03.png)
+![Schermopname van het invoeren van de Apple ID die is gebruikt voor het maken van het token voor het inschrijvingsprogramma en het uploaden van het token.](./media/device-enrollment-program-enroll-ios/image03.png)
 
 ### <a name="step-4-upload-your-token"></a>Stap 4. Uw token uploaden
 Ga in het venster **Apple-token** naar het certificaatbestand (.pem), kies **Openen** en vervolgens **Maken**. Met het pushcertificaat kunnen macOS-apparaten worden ingeschreven en beheerd in Intune door beleid te pushen naar ingeschreven apparaten. Intune wordt automatisch gesynchroniseerd met Apple om het account voor het inschrijvingsprogramma weer te geven.
@@ -109,24 +110,28 @@ Na installatie van de token kunt u een inschrijvingsprofiel voor apparaten maken
 
     ![Maak een schermafdruk van het profiel.](./media/device-enrollment-program-enroll-macos/image04.png)
 
-3. Voer in het venster **Profiel maken** een **naam** en een **beschrijving** voor het profiel in voor administratieve doeleinden. Gebruikers zien deze gegevens niet. U kunt dit veld **Naam** gebruiken om een dynamische groep te maken in Azure Active Directory. Gebruik de profielnaam om de parameter enrollmentProfileName te definiëren om apparaten aan dit inschrijvingsprofiel toe te wijzen. Meer informatie over [Azure Active Directory dynamic groups](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) (dynamische Azure Active Directory-groepen).
+3. Voer op de pagina **Basisinformatie** een **Naam** en een **Beschrijving** voor het profiel in voor administratieve doeleinden. Gebruikers zien deze gegevens niet. U kunt dit veld **Naam** gebruiken om een dynamische groep te maken in Azure Active Directory. Gebruik de profielnaam om de parameter enrollmentProfileName te definiëren om apparaten aan dit inschrijvingsprofiel toe te wijzen. Meer informatie over [Azure Active Directory dynamic groups](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) (dynamische Azure Active Directory-groepen).
 
     ![Naam en beschrijving van het profiel.](./media/device-enrollment-program-enroll-macos/createprofile.png)
 
 4. Kies **macOS** als **platform**.
 
-5. Geef voor **Gebruikersaffiniteit** aan of andere apparaten met dit profiel met of zonder toegewezen gebruiker moeten worden ingeschreven.
+5. Selecteer **Volgende** om naar de pagina **Beheerinstellingen** te gaan.
+
+6. Geef voor **Gebruikersaffiniteit** aan of andere apparaten met dit profiel met of zonder toegewezen gebruiker moeten worden ingeschreven.
     - **Inschrijven met gebruikersaffiniteit**: kies deze optie voor apparaten die eigendom zijn van gebruikers en waarvoor de bedrijfsportal-app moet worden gebruikt voor services zoals het installeren van apps. Als u ADFS gebruikt, vereist gebruikersaffiniteit [WS-Trust 1.3 gebruikersnaam/gemengd eindpunt](https://technet.microsoft.com/library/adfs2-help-endpoints). [Meer informatie](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint). Meervoudige verificatie wordt niet ondersteund voor macOS ADE-apparaten met gebruikersaffiniteit.
 
     - **Inschrijven zonder gebruikersaffiniteit**: kies deze optie voor een apparaat dat niet aan één gebruiker is gelieerd. Gebruik dit voor apparaten waarmee taken worden uitgevoerd zonder toegang tot lokale gebruikersgegevens. Apps als de Bedrijfsportal-app werken niet.
 
-6. Kies **Instellingen voor apparaatbeheer** en kies of u vergrendelde inschrijving wilt gebruiken voor apparaten die gebruikmaken van dit profiel. Met **Vergrendelde inschrijving** worden de macOS-instellingen uitgeschakeld op basis waarvan het beheerprofiel kan worden verwijderd uit het menu **Systeemvoorkeuren** of via de **Terminal**. Als het apparaat is ingeschreven, kunt u deze instelling niet wijzigen zonder het apparaat te wissen.
+6. Als u **Inschrijven met gebruikersaffiniteit** kiest, onder **Verificatiemethode**, kiest u **Configuratieassistent (verouderd)** of **Configuratieassistent met moderne verificatie**.
 
-    ![Schermopname Instellingen voor apparaatbeheer.](./media/device-enrollment-program-enroll-macos/devicemanagementsettingsblade-macos.png)
+7. Voor **Vergrendelde inschrijving** kiest u of u vergrendelde inschrijving wilt voor apparaten die dit profiel gebruiken. Met **Ja** worden de macOS-instellingen uitgeschakeld op basis waarvan het beheerprofiel kan worden verwijderd uit het menu **Systeemvoorkeuren** of via de **Terminal**. Als het apparaat is ingeschreven, kunt u deze instelling niet wijzigen zonder het apparaat te wissen.
 
-7. Kies **OK**.
+8. Selecteer **Volgende** om naar de pagina **Configuratieassistent** te gaan.
 
-8. Kies **Instellingen voor Configuratieassistent** om de volgende profielinstellingen te configureren:  ![Aanpassing van Configuratieassistent](./media/device-enrollment-program-enroll-macos/setupassistantcustom-macos.png).
+9. Configureer op de pagina **Configuratieassistent** de volgende profielinstellingen:
+
+    ![Aanpassing van Configuratieassistent.](./media/device-enrollment-program-enroll-macos/setupassistantcustom-macos.png)
 
     | Afdelingsinstellingen | Beschrijving |
     |---|---|
@@ -139,34 +144,36 @@ Na installatie van de token kunt u een inschrijvingsprofiel voor apparaten maken
 
     | Instellingen van configuratieassistentschermen | Als u kiest voor **Weergeven**, zal het apparaat tijdens het instellen... |
     |------------------------------------------|------------------------------------------|
-    | <strong>Wachtwoordcode</strong> | De gebruiker om een wachtwoordcode vragen. Vraag altijd om een wachtwoordcode tenzij het apparaat wordt beveiligd of de toegang tot het apparaat op een andere manier wordt beheerd (bijvoorbeeld de kioskmodus waarmee op het apparaat maar één app kan worden uitgevoerd). |
-    | <strong>Locatieservices</strong> | De gebruiker om zijn of haar locatie vragen. |
-    | <strong>Herstellen</strong> | Geef het scherm Apps en gegevens weer. Dit scherm biedt de gebruiker de mogelijkheid tijdens het instellen van het apparaat gegevens te herstellen of over te brengen vanuit de iCloud-back-up. |
-    | <strong>iCloud en Apple-id</strong> | Geef de gebruiker de mogelijkheid zich aan te melden met zijn of haar **Apple ID** en **iCloud** te gebruiken.                         |
-    | <strong>Voorwaarden</strong> | Vraag de gebruiker om de voorwaarden van Apple te accepteren. |
-    | <strong>Touch-id</strong> | Geef de gebruiker de mogelijkheid identificatie met een vingerafdruk in te stellen voor het apparaat. |
-    | <strong>Apple Pay</strong> | Geef de gebruiker de mogelijkheid Apple Pay in te stellen op het apparaat. |
-    | <strong>In- en uitzoomen</strong> | Geef de gebruiker de mogelijkheid om in te zoomen op het scherm tijdens het instellen van het apparaat. |
-    | <strong>Siri</strong> | Geef de gebruiker de mogelijkheid Siri in te stellen. |
-    | <strong>Diagnostische gegevens</strong> | Geef het scherm Diagnose en gebruik weer voor de gebruiker. Met dit scherm heeft de gebruiker de mogelijkheid diagnostische gegevens naar Apple te verzenden. |
-    | <strong>FileVault</strong> | Geef de gebruiker de mogelijkheid Siri in te stellen. |
-    | <strong>Diagnostische gegevens over iCloud</strong> | Geef de gebruiker de mogelijkheid diagnostische gegevens naar Apple te verzenden. |
-    | <strong>iCloud-opslag</strong> | Geef de gebruiker de mogelijkheid iCloud-opslag in te stellen. |    
-    | <strong>Weergavetoon</strong> | Geef de gebruiker de mogelijkheid om Weergavetoon in te schakelen. |
-    | <strong>Uiterlijk</strong> | Geef het scherm Uiterlijk weer aan de gebruiker. |
-    | <strong>Registratie</strong>| Vraag de gebruiker het apparaat te registreren. |
-    | <strong>Privacy</strong>| Geef het scherm Privacy weer voor de gebruiker. |
-    | <strong>Schermtijd</strong>| Geef de Schermtijd weer voor de gebruiker. |
+    | <strong>Wachtwoordcode</strong> | De gebruiker om een wachtwoordcode vragen. Vraag altijd om een wachtwoordcode voor onbeveiligde apparaten, tenzij toegang op een andere manier wordt beheerd (bijvoorbeeld een kioskmodus die het apparaat tot één app beperkt). Voor iOS/iPadOS 7.0 en hoger. |
+    | <strong>Locatieservices</strong> | De gebruiker om zijn of haar locatie vragen. Voor macOS 10.11 en hoger en iOS/iPadOS 7.0 en hoger. |
+    | <strong>Herstellen</strong> | Geef het scherm Apps en gegevens weer. Dit scherm biedt de gebruiker de mogelijkheid tijdens het instellen van het apparaat gegevens te herstellen of over te brengen vanuit de iCloud-back-up. Voor macOS 10.9 en hoger en iOS/iPadOS 7.0 en hoger. |
+    | <strong>Apple-id</strong> | Geef de gebruiker de mogelijkheid zich aan te melden met zijn of haar Apple-id en iCloud te gebruiken. Voor macOS 10.9 en hoger en iOS/iPadOS 7.0 en hoger.   |
+    | <strong>Voorwaarden</strong> | Vraag de gebruiker om de voorwaarden van Apple te accepteren. Voor macOS 10.9 en hoger iOS/iPadOS 7.0 en hoger. |
+    | <strong>Touch-id</strong> | Geef de gebruiker de mogelijkheid identificatie met een vingerafdruk in te stellen voor het apparaat. Voor macOS 10.12.4 en hoger en iOS/iPadOS 8.1 en hoger. |
+    | <strong>Apple Pay</strong> | Geef de gebruiker de mogelijkheid Apple Pay in te stellen op het apparaat. Voor macOS 10.12.4 en hoger en iOS/iPadOS 7.0 en hoger. |
+    | <strong>In- en uitzoomen</strong> | Geef de gebruiker de mogelijkheid om in te zoomen op het scherm tijdens het instellen van het apparaat. Voor iOS/iPadOS 8.3 en hoger. |
+    | <strong>Siri</strong> | Geef de gebruiker de mogelijkheid Siri in te stellen. Voor macOS 10.12 en hoger iOS/iPadOS 7.0 en hoger. |
+    | <strong>Diagnostische gegevens</strong> | Geef het scherm Diagnose en gebruik weer voor de gebruiker. Met dit scherm heeft de gebruiker de mogelijkheid diagnostische gegevens naar Apple te verzenden. Voor macOS 10.9 en hoger en iOS/iPadOS 7.0 en hoger. |
+    | <strong>FileVault</strong> | Het FileVault 2-versleutelingsscherm weergeven voor de gebruiker. Voor macOS 10.10 en hoger. |
+    | <strong>Diagnostische gegevens over iCloud</strong> | Geef het iCloud Analytics-scherm weer voor de gebruiker. Voor macOS 10.12.4 en hoger. |
+    | <strong>iCloud-opslag</strong> | Geef het iCloud Documents- en Desktop-scherm weer aan de gebruiker. Voor macOS 10.13.4 en hoger. |
+    | <strong>Weergavetoon</strong> | Geef de gebruiker de mogelijkheid om Weergavetoon in te schakelen. Voor macOS 10.13.6 en hoger en iOS/iPadOS 9.3.2 en hoger. |
+    | <strong>Uiterlijk</strong> | Geef het scherm Uiterlijk weer aan de gebruiker. Voor macOS 10.14 en hoger en iOS/iPadOS 13.0 en hoger. |
+    | <strong>Registratie</strong> | Het registratiescherm weergeven voor de gebruiker. Voor macOS 10.9 en hoger. |
+    | <strong>Schermtijd</strong> | Hiermee wordt het scherm Schermtijd weergeven. Voor macOS 10.15 en hoger en iOS/iPadOS 12.0 en hoger. |
+    | <strong>Privacy</strong> | Geef het scherm Privacy weer voor de gebruiker. Voor macOS 10.13.4 en hoger en iOS/iPadOS 11.3 en hoger. |
+    
+10. Selecteer **Volgende** om naar de pagina **Controleren en maken** te gaan.
 
-9. Kies **OK**.
-
-10. Kies **Maken** om een profiel op te slaan.
+11. Kies **Maken** om een profiel op te slaan.
 
 ## <a name="sync-managed-devices"></a>Beheerde apparaten synchroniseren
 
 Nu Intune toestemming heeft om uw apparaten te beheren, kunt u Intune synchroniseren met Apple om uw beheerde apparaten weer te geven in Intune in Azure Portal.
 
-1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **macOS** > **macOS-inschrijving** > **Tokens voor het inschrijvingsprogramma** > kies een token in de lijst > **Apparaten** > **Synchroniseren**. ![Schermopname van het geselecteerde knooppunt Apparaten voor het inschrijvingsprogramma en een pijl naar de koppeling Synchroniseren.](./media/device-enrollment-program-enroll-macos/image06.png)
+1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de optie **Apparaten** > **macOS** > **macOS-inschrijving** > **Tokens voor het inschrijvingsprogramma**.
+
+2. Kies een token in de lijst > **Apparaten** > **Synchronisatie**. ![Schermopname van het geselecteerde knooppunt Apparaten voor het inschrijvingsprogramma en een pijl naar de koppeling Synchroniseren.](./media/device-enrollment-program-enroll-macos/image06.png)
 
    Om te voldoen aan de voorwaarden van Apple voor acceptabel verkeer van het inschrijvingsprogramma, legt Intune de volgende beperkingen op:
    - Een volledige synchronisatie kan niet vaker dan eens in de zeven dagen worden uitgevoerd. Tijdens een volledige synchronisatie haalt Intune de volledige bijgewerkte lijst met serienummers op die is toegewezen aan de Apple MDM-server die is verbonden met Intune. Wanneer een apparaat uit het inschrijvingsprogramma wordt verwijderd van de Intune-portal zonder dat het eerst is afgemeld bij de Apple MDM-server in de Apple-portal, wordt het apparaat pas opnieuw in Intune geïmporteerd wanneer de volledige synchronisatie wordt uitgevoerd.   
@@ -201,10 +208,10 @@ U hebt beheer en synchronisatie tussen Apple en Intune ingeschakeld, en een prof
 
 4. Kies **Your Server Token**.  
 5. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaatinschrijving** > **Apple-inschrijving** > **Tokens voor het inschrijvingsprogramma** > kies het token.
-    ![Schermopname van tokens voor het inschrijvingsprogramma.](./media/device-enrollment-program-enroll-macos/enrollmentprogramtokens.png)
+    ![Schermopname van tokens voor het inschrijvingsprogramma.](./media/device-enrollment-program-enroll-ios/enrollmentprogramtokens.png)
 
 6. Kies **Token vernieuwen** en voer de Apple ID in die is gebruikt om het oorspronkelijke token te maken.  
-    ![Schermopname van nieuw token genereren.](./media/device-enrollment-program-enroll-macos/renewtoken.png)
+    ![Schermopname van nieuw token genereren.](./media/device-enrollment-program-enroll-ios/renewtoken.png)
 
 7. Upload het token dat u net hebt gedownload.  
 8. Kies **Token vernieuwen**. U krijgt een bevestiging te zien dat het token is vernieuwd.

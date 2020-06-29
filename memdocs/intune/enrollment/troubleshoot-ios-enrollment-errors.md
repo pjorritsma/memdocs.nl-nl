@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 06/16/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 07612080f170c5f2bef448aa616a4422508218d1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2b0c65e12349f8b4c887b5a633a1cd94c272ca5a
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326942"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093355"
 ---
 # <a name="troubleshoot-iosipados-device-enrollment-problems-in-microsoft-intune"></a>Problemen met inschrijving van iOS-/iPadOS-apparaten in Microsoft Intune oplossen
 
@@ -66,25 +66,6 @@ Verzamel de volgende gegevens van het probleem:
 4. Selecteer onder **Beperking voor apparaattypen** de beperking die u wilt instellen > **Eigenschappen** > **Platformen selecteren** > selecteer **Toestaan** voor **iOS** en klik vervolgens op **OK**.
 5. Selecteer **Platformen configureren**, selecteer **Toestaan** voor iOS-/iPadOS-apparaten in persoonlijk eigendom en klik vervolgens op **OK**.
 6. Schrijf het apparaat opnieuw in.
-
-**Oorzaak**: De benodigde CNAME-records in DNS bestaan niet.
-
-#### <a name="resolution"></a>Oplossing
-Maak CNAME-DNS-resourcerecords voor uw bedrijfsdomein. Als het domein van uw bedrijf bijvoorbeeld contoso.com is, maakt u een CNAME in DNS die EnterpriseEnrollment.contoso.com omleidt naar EnterpriseEnrollment-s.manage.microsoft.com.
-
-Hoewel het maken van CNAME-DNS-vermeldingen optioneel is, maken CNAME-records het voor gebruikers makkelijker om zich in te schrijven. Als er geen CNAME-inschrijvingsrecord wordt gevonden, wordt gebruikers gevraagd de MDM-servernaam (enrollment.manage.microscoft.com) handmatig in te voeren.
-
-Als er meer dan één gecontroleerd domein is, maakt u een CNAME-record voor elk domein. De CNAME-resourcerecords moeten de volgende informatie bevatten:
-
-|TYPE|Hostnaam|Verwijst naar|TTL|
-|------|------|------|------|
-|CNAME|EnterpriseEnrollment.bedrijfsdomein.com|EnterpriseEnrollment-s.manage.microsoft.com|1 uur|
-|CNAME|EnterpriseRegistration.bedrijfsdomein.com|EnterpriseRegistration.windows.net|1 uur|
-
-Als uw bedrijf meerdere domeinen heeft voor gebruikersreferenties, maakt u CNAME-records voor elk domein.
-
-> [!NOTE]
-> Het kan 72 uur duren voordat wijzigingen in DNS-records zijn doorgegeven. U kunt de DNS-wijziging in Intune pas controleren wanneer de DNS-record is doorgegeven.
 
 **Oorzaak**: U schrijft een apparaat in dat eerder is ingeschreven met een ander gebruikersaccount en de vorige gebruiker is niet op de juiste manier verwijderd uit Intune.
 
@@ -239,6 +220,16 @@ Wanneer u een met ADE beheerd apparaat inschakelt waaraan een inschrijvingsprofi
 #### <a name="resolution"></a>Oplossing
 Schakel MFA uit en schrijf het apparaat opnieuw in.
 
+### <a name="authentication-doesnt-redirect-to-the-government-cloud"></a>Verificatie wordt niet omgeleid naar de overheidscloud 
+
+Overheidsgebruikers die zich aanmelden vanaf een ander apparaat, worden omgeleid naar de openbare cloud voor verificatie in plaats van naar de cloudomgeving voor de overheid. 
+
+**Oorzaak**: Azure AD biedt nog geen ondersteuning voor het omleiden naar de overheidscloud wanneer u zich aanmeldt vanaf een ander apparaat. 
+
+#### <a name="resolution"></a>Oplossing 
+Gebruik de instelling **Cloud** van iOS-bedrijfsportal in de app **Instellingen** om de verificatie van overheidsgebruikers naar de overheidscloud om te leiden. Standaard wordt de instelling **Cloud** ingesteld op **Automatisch** en stuurt Bedrijfsportal verificatie door naar de cloud die automatisch wordt gedetecteerd door het apparaat (zoals Openbaar of Overheid). Overheidsgebruikers die zich aanmelden vanaf een ander apparaat, moeten handmatig de overheidscloud selecteren voor verificatie. 
+
+Open de app **Instellingen** en selecteer Bedrijfsportal. Selecteer **Cloud** in de instellingen voor Bedrijfsportal. Stel de **Cloud** in op Overheid.  
 
 ## <a name="next-steps"></a>Volgende stappen
 

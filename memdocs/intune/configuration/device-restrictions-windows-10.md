@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/02/2020
+ms.date: 06/22/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f469d9646fad3b247743b6017f0ecbc7917f2cdf
-ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
+ms.openlocfilehash: 96b547c50cda0ef623370bae20d347d4ccf1976b
+ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84311167"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216481"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Apparaatinstellingen voor Windows 10 en hoger om functies toe te staan of te beperken met behulp van Intune
 
@@ -130,7 +130,7 @@ Deze instellingen gebruiken de beleids-CPS's [Connectivity](https://docs.microso
 Voor deze instellingen wordt de [beleid-CSP Bluetooth](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth) gebruikt, waarbij ook de ondersteunde Windows-edities worden vermeld.
 
 - **Bluetooth**: Met **Blokkeren** wordt voorkomen dat gebruikers Bluetooth inschakelen. Met **Niet geconfigureerd** (standaard) kan Bluetooth op het apparaat worden gebruikt.
-- **Bluetooth-detectie**: Met **Blokkeren** kan het apparaat niet worden gedetecteerd door andere Bluetooth-apparaten. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard kan het besturingssysteem andere Bluetooth-apparaten, zoals een headset, toestaan het apparaat te detecteren.
+- **Bluetooth-detectie**: Met **Blokkeren** kan het apparaat niet worden gedetecteerd door andere Bluetooth-apparaten. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem toestaat dat andere Bluetooth-apparaten, zoals een headset, het apparaat detecteren.
 
   [Bluetooth/AllowDiscoverableMode CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
 
@@ -138,9 +138,13 @@ Voor deze instellingen wordt de [beleid-CSP Bluetooth](https://docs.microsoft.co
 
   [Bluetooth/AllowPrepairing CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowprepairing)
 
-- **Bluetooth-promotie**: Met **Blokkeren** voorkomt u dat het apparaat Bluetooth-reclames verzendt. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard kan het besturingssysteem het apparaat toestaan Bluetooth-aankondigingen te verzenden.
+- **Bluetooth-promotie**: Met **Blokkeren** voorkomt u dat het apparaat Bluetooth-reclames verzendt. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem toestaat dat het apparaat Bluetooth-reclames verzendt.
 
   [Bluetooth/AllowAdvertising CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowadvertising)
+
+- **Dichtstbijzijnde Bluetooth-verbindingen**: Met **Blokkeren** wordt verhinderd dat een apparaatgebruiker Swift Pair en andere op nabijheid gebaseerde scenario's gebruikt. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem toestaat dat het apparaat Bluetooth-reclames verzendt.
+
+  [Bluetooth/AllowPromptedProximalConnections CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections)
 
 - **Services waarvoor Bluetooth is toegestaan**: U kunt een lijst met toegestane Bluetooth-services en -profielen **Toevoegen** in de vorm van hexadecimale tekenreeksen, zoals `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}`.
 
@@ -249,7 +253,7 @@ Deze instellingen gebruiken de [beleid-CSP Experience](https://docs.microsoft.co
   [Connectivity/AllowUSBConnection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection)
 
 - **Modus AntiTheft** (alleen mobiel): Met **Blokkeren** kunnen gebruikers de voorkeursinstelling voor de modus AntiTheft niet selecteren op het apparaat. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
-- **Cortana**: Met **Blokkeren** wordt de spraakassistent Cortana uitgeschakeld. Als Cortana is uitgeschakeld, kunnen gebruikers nog wel zoeken naar items op het apparaat. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard kan het besturingssysteem Cortana toestaan.
+- **Cortana**: Met **Blokkeren** wordt de spraakassistent Cortana uitgeschakeld. Als Cortana is uitgeschakeld, kunnen gebruikers nog wel zoeken naar items op het apparaat. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem Cortana toestaat.
 
   [Experience/AllowCortana CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowcortana)
 
@@ -322,6 +326,9 @@ Voor deze instellingen wordt de [beleid-CSP Messaging](https://docs.microsoft.co
 ## <a name="microsoft-edge-browser"></a>Microsoft Edge-browser
 
 Deze instellingen gebruiken de [beleid-CSP Browser](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser), waarbij ook de ondersteunde Windows-edities worden vermeld.
+
+> [!NOTE]
+> Gebruik van het browserbeleid CSP is van toepassing op Microsoft Edge versie 45 en eerder. Zie [Microsoft Edge-beleidsinstellingen configureren met Microsoft Intune](/DeployEdge/configure-edge-with-intune) voor Microsoft Edge Enterprise versie 77 en hoger.
 
 ### <a name="use-microsoft-edge-kiosk-mode"></a>Gebruik van Microsoft Edge-kioskmodus
 

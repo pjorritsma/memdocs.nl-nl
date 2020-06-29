@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2020
+ms.date: 06/08/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 235a79f644bf15b82eb9e8750f04519238760aca
-ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
+ms.openlocfilehash: 32d46374186596e8c8721b77510738caadcf78b8
+ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83551924"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84814951"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>iOS- en iPadOS-apparaatinstellingen voor het gebruik van algemene iOS-/iPadOS-functies in Intune
 
@@ -78,6 +78,11 @@ Deze functie is van toepassing op:
 - iPadOS 13.0 en hoger
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Deze instellingen zijn van toepassing op: Automatische apparaatinschrijving (onder toezicht)
+
+> [!NOTE]
+> Voeg slechts één app toe aan de dock, een pagina of een map op een pagina. Door dezelfde app op alle locaties toe te voegen, voorkomt u dat de app op apparaten wordt weergegeven en kunnen er rapportagefouten worden weergegeven.
+>
+> Als u bijvoorbeeld de camera-app toevoegt aan een dock en een pagina, wordt de camera-app niet weergegeven en geeft rapportage mogelijk een foutmelding voor het beleid weer. Als u de camera-app wilt toevoegen aan de indeling van het beginscherm, kiest u alleen de dock of een pagina, niet beide.
 
 ### <a name="dock"></a>Dock
 
@@ -210,7 +215,7 @@ Deze functie is van toepassing op:
 
 - **Voetnoot voor vergrendelingsscherm**: Als apparaten verloren of gestolen zijn, voert u een opmerking in waarmee u het apparaat wellicht kunt terugkrijgen. U kunt elke gewenste tekst invoeren. Voer bijvoorbeeld iets in zoals `If found, call Contoso at ...`.
 
-  Apparaattokens kunnen ook worden gebruikt om apparaatspecifieke informatie aan deze velden toe te voegen. Als u bijvoorbeeld het serienummer wilt weergeven, voert u `Serial Number: {{serialnumber}}` in. De tekst die in het vergrendelingsscherm wordt weergegeven, is vergelijkbaar met `Serial Number 123456789ABC`. Wanneer u variabelen opgeeft, moet u ervoor zorgen dat u accolades `{{ }}` gebruikt. [App-configuratietokens](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) bevat een lijst met variabelen die kunnen worden gebruikt. U kunt ook `deviceName` of een andere apparaatspecifieke waarde gebruiken.
+  Apparaattokens kunnen ook worden gebruikt om apparaatspecifieke informatie aan deze velden toe te voegen. Als u bijvoorbeeld het serienummer wilt weergeven, voert u `Serial Number: {{serialnumber}}` of `Device ID: {{DEVICEID}}` in. De tekst die in het vergrendelingsscherm wordt weergegeven, is vergelijkbaar met `Serial Number 123456789ABC`. Wanneer u variabelen opgeeft, moet u ervoor zorgen dat u accolades `{{ }}` gebruikt. [App-configuratietokens](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) bevat een lijst met variabelen die kunnen worden gebruikt. U kunt ook `DEVICENAME` of een andere apparaatspecifieke waarde gebruiken.
 
   > [!NOTE]
   > Variabelen worden niet gevalideerd in de gebruikersinterface en zijn hoofdlettergevoelig. Hierdoor ziet u mogelijk profielen die met onjuiste invoer zijn opgeslagen. Als u bijvoorbeeld `{{DeviceID}}` invoert in plaats van `{{deviceid}}` of '{{DEVICEID}}', wordt de letterlijke tekenreeks weergegeven in plaats van de unieke id van het apparaat. Zorg dat u de juiste informatie invoert. Alle variabelen in kleine letters of hoofdletters worden ondersteund, maar geen combinatie ervan. 
@@ -314,6 +319,10 @@ Deze functie is van toepassing op:
 - **Modus Gedeeld apparaat** (alleen Microsoft Azure AD): Kies **Inschakelen** als u de SSO-invoegtoepassing van Microsoft Enterprise implementeert op iOS/iPadOS-apparaten die zijn geconfigureerd voor de modus Gedeeld apparaat van Azure AD. Met apparaten in de gedeelde modus kunnen veel gebruikers zich globaal aan- en afmelden bij toepassingen die de modus Gedeeld apparaat ondersteunen. Wanneer dit is ingesteld op **Niet geconfigureerd**, wordt deze instelling niet door Intune gewijzigd of bijgewerkt. iOS/iPadOS-apparaten zijn standaard niet bedoeld om te worden gedeeld door meerdere gebruikers.
 
   Zie [Overzicht van de modus Gedeeld apparaat](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices) en [De modus Gedeeld apparaat voor iOS-apparaten](https://docs.microsoft.com/azure/active-directory/develop/msal-ios-shared-devices) voor meer informatie over de modus Gedeeld apparaat en hoe u deze kunt inschakelen.  
+
+  Deze functie is van toepassing op:
+  
+  - iOS/iPadOS 13.5 en hoger
 
 - **Extensie-id** (omleiding en referentie): voer de bundel-id in waarmee de app-extensie voor eenmalige aanmelding wordt aangeduid, zoals `com.apple.extensiblesso`.
 

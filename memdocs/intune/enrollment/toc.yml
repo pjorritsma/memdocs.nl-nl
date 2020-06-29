@@ -88,6 +88,20 @@
         - name: Samsung Knox Mobile Enrollment
           href: android-samsung-knox-mobile-enroll.md
           displayName: kda; kme
+        - name: Configuratieframework voor beveiliging van Android Enterprise
+          items:
+            - name: Configuratieframework voor beveiliging van Android Enterprise
+              href: android-configuration-framework.md
+            - name: Implementatiemethodologie van framework
+              href: framework-deployment-methodology.md
+            - name: Apparaatinschrijvingsbeperkingen
+              href: device-enrollment-restrictions.md
+            - name: App-configuratiebeleid instellen
+              href: android-app-configuration-policies.md
+            - name: Beveiligingsinstellingen voor Android-werkprofiel
+              href: android-work-profile-security-settings.md
+            - name: Volledig beheerde Android-beveiligingsinstellingen
+              href: android-fully-managed-security-settings.md
     - name: iOS-/iPadOS-inschrijving instellen
       href: ios-enroll.md
       items:

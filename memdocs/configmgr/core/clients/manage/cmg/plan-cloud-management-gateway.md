@@ -10,12 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 136e11f97849e5fd8a27d9f83ea1bd44791c492e
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 2d6165678331811f4b04e8b1f540f3dcbb7f015d
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715642"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502252"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Het plannen van de Cloud beheer gateway in Configuration Manager
 
@@ -227,15 +227,16 @@ De volgende tabel geeft een overzicht van de CMG-ondersteuning voor Configuratio
 | Hardware- en software-inventaris     | ![Ondersteund](media/green_check.png) |
 | Client status en meldingen     | ![Ondersteund](media/green_check.png) |
 | Scripts uitvoeren     | ![Ondersteund](media/green_check.png) |
+| CMPivot     | ![Ondersteund](media/green_check.png) |
 | Instellingen voor naleving     | ![Ondersteund](media/green_check.png) |
-| Client installeren<br>(met Azure AD-integratie)     | ![Ondersteund](media/green_check.png) |
+| Client installeren<br>(met [Azure AD-integratie](../../deploy/deploy-clients-cmg-azure.md)) | ![Ondersteund](media/green_check.png) |
+| Client installeren<br>(met [token verificatie](../../deploy/deploy-clients-cmg-token.md)) | ![Ondersteund](media/green_check.png) (2002) |
 | Software distributie (apparaat-doel)     | ![Ondersteund](media/green_check.png) |
 | Software distributie (op de gebruiker gericht, vereist)<br>(met Azure AD-integratie)     | ![Ondersteund](media/green_check.png) |
 | Software distributie (door de gebruiker gerichte, beschik bare)<br>([alle vereisten](../../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices)) | ![Ondersteund](media/green_check.png) |
-| Taken reeks Windows 10 in-place upgrade      | ![Ondersteund](media/green_check.png) |
-| Taken reeksen die geen opstart installatie kopieën gebruiken en worden geïmplementeerd met een optie: **alle inhoud lokaal downloaden voordat de taken reeks wordt gestart**      | ![Ondersteund](media/green_check.png) |
-| Taken reeksen die geen opstart installatie kopieën gebruiken  | ![Ondersteund](media/green_check.png) (1910)|
-| CMPivot     | ![Ondersteund](media/green_check.png) |
+| [Taken reeks](../../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md) Windows 10 in-place upgrade | ![Ondersteund](media/green_check.png) |
+| Taken reeksen die geen opstart installatie kopieën gebruiken en worden geïmplementeerd met een optie: **alle inhoud lokaal downloaden voordat de taken reeks wordt gestart** | ![Ondersteund](media/green_check.png) |
+| Taken reeksen die niet gebruikmaken van installatie kopieën met [een van de opties voor downloaden](../../../../osd/deploy-use/deploy-a-task-sequence.md#deploy-windows-10-in-place-upgrade-via-cmg) | ![Ondersteund](media/green_check.png) (1910)|
 | Een ander taken reeks scenario     | ![Niet ondersteund](media/Red_X.png) |
 | Client-push     | ![Niet ondersteund](media/Red_X.png) |
 | Automatische sitetoewijzing     | ![Niet ondersteund](media/Red_X.png) |

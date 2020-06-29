@@ -2,7 +2,7 @@
 title: Vereisten voor internettoegang
 titleSuffix: Configuration Manager
 description: Meer informatie over de Internet-eind punten zodat u de volledige functionaliteit van Configuration Manager-functies kunt toestaan.
-ms.date: 06/12/2020
+ms.date: 06/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fb965ec6547ff1c06586464780b6db224b943000
-ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
+ms.openlocfilehash: 78958809aeed5db9d2a36d960b91572b91eafe05
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84740762"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502354"
 ---
 # <a name="internet-access-requirements"></a>Vereisten voor internettoegang
 
@@ -230,6 +230,8 @@ Als u Configuration Manager gebruikt voor het implementeren en bijwerken van Mic
 
 - `config.office.com`aangepaste configuraties voor Microsoft 365-apps maken voor bedrijfs implementaties
 
+- `contentstorage.osi.office.net`ter ondersteuning van de evaluatie van de gereedheid voor Office-invoeg toepassingen<!-- MEMDocs#410 -->
+
 ## <a name="configuration-manager-console"></a>Configuration Manager-console
 
 Computers met de Configuration Manager-console moeten toegang hebben tot de volgende Internet eindpunten voor specifieke functies:
@@ -267,6 +269,10 @@ Als u de **geografische weer gave**gebruikt, verleent u toegang tot het volgende
 ## <a name="desktop-analytics"></a>Desktop Analytics
 
 Zie voor meer informatie over de vereiste eind punten voor de Cloud service van Desktop Analytics de optie voor het [delen van gegevens](../../../desktop-analytics/enable-data-sharing.md#endpoints).
+
+## <a name="tenant-attach"></a>Tenantkoppeling
+
+Zie [Tenant koppelen inschakelen](../../../tenant-attach/device-sync-actions.md#internet-endpoints)voor meer informatie over de vereiste eind punten voor Tenant koppelings functies.
 
 ## <a name="microsoft-public-ip-addresses"></a>Open bare IP-adressen van micro soft
 

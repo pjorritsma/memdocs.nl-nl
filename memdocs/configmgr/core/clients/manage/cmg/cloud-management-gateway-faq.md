@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 4c1a128d-22fb-49f1-8e0b-36513a8dc117
-ms.openlocfilehash: bd846b0155a0baddad76d6027ffbd239d7dbf26f
-ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
+ms.openlocfilehash: ecc91168cc90af58c40903ea3d288eeaa82be7a0
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721887"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502235"
 ---
 # <a name="frequently-asked-questions-about-the-cloud-management-gateway"></a>Veelgestelde vragen over de Cloud beheer gateway
 
@@ -87,6 +87,16 @@ Als u gevoelig verkeer wilt beveiligen dat via een CMG wordt verzonden, configur
 Als u ervoor kiest om een CMG te implementeren en PKI-certificaten te gebruiken voor HTTPS-communicatie op het beheer punt waarvoor CMG is ingeschakeld, selecteert u de optie voor het **toestaan van clients met alleen Internet toegang** tot de eigenschappen van het beheer punt. Deze instelling zorgt ervoor dat interne clients HTTP-beheer punten blijven gebruiken in uw omgeving.
 
 Als u verbeterde HTTP gebruikt, hoeft u deze instelling niet te configureren. Clients blijven HTTP gebruiken bij het rechtstreeks communiceren met het CMG-beheer punt. Zie [Enhanced http](../../../plan-design/hierarchy/enhanced-http.md)(Engelstalig) voor meer informatie.
+
+### <a name="what-are-the-differences-with-client-authentication-between-azure-ad-and-certificates"></a>Wat zijn de verschillen met client verificatie tussen Azure AD en certificaten?
+<!-- MEMDocs#277 -->
+U kunt Azure AD of een [certificaat voor client verificatie](certificates-for-cloud-management-gateway.md#bkmk_clientauth) gebruiken om apparaten te verifiëren bij de CMG-service.
+
+Als u traditionele Windows-clients beheert met Active Directory identiteit die lid is van een domein, hebben ze PKI-certificaten nodig om het communicatie kanaal te beveiligen. Deze clients kunnen Windows 8,1 en Windows 10 bevatten. U kunt alle functies die door CMG worden ondersteund, maar software distributie is beperkt tot alleen apparaten. Installeer de Configuration Manager-client voordat het apparaat naar het Internet gaat of met versie 2002 of hoger, gebruik token verificatie.
+
+U kunt ook Windows 10-clients met moderne identiteit beheren, ofwel hybride of zuivere Cloud domein, gekoppeld aan Azure AD. Clients gebruiken Azure AD voor de verificatie in plaats van PKI-certificaten. Het gebruik van Azure AD is eenvoudiger om meer complexe PKI-systemen in te stellen, te configureren en te onderhouden. U kunt alle dezelfde beheer activiteiten en software distributie aan de gebruiker doen. Het biedt ook aanvullende methoden om de-client op een extern apparaat te installeren.
+
+Micro soft raadt aan om apparaten te koppelen aan Azure AD. Op internet gebaseerde apparaten kunnen Azure AD gebruiken om te verifiëren met Configuration Manager. Het schakelt ook zowel apparaat-als gebruikers scenario's in, ongeacht of het apparaat op internet is of is verbonden met het interne netwerk. Zie [de client installeren en registreren met Azure AD Identity](../../deploy/deploy-clients-cmg-azure.md#install-and-register-the-client-using-azure-ad-identity)voor meer informatie.
 
 ## <a name="next-steps"></a>Volgende stappen
 

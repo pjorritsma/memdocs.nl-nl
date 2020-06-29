@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 06/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ce5424dee1b968684a792f594abde18f5223679
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 60fa6177bc127fc36ceb66e7b3a59572f8cfee90
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990025"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85092907"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Instellingen voor beveiligingsbeleid voor apps voor Android in Microsoft Intune
 In dit artikel worden de app-beveiligingsbeleidsinstellingen voor Android-apparaten beschreven. De beleidsinstellingen die worden beschreven, kunnen worden [geconfigureerd](app-protection-policies.md) voor een app-beveiligingsbeleid in het deelvenster **Instellingen** in Azure Portal.
@@ -42,7 +42,10 @@ Er zijn drie soorten beleidsinstellingen: gegevensbeschermingsinstellingen, toeg
 | **Organisatiegegevens naar andere apps verzenden** | Geef aan welke apps gegevens uit deze app kunnen ontvangen: <ul><li> **Door beleid beheerde apps**: overdracht alleen toestaan naar andere door beleid beheerde apps.</li> <li>**Alle apps**: overdracht naar alle apps toestaan. </li> <li>**Geen**: geen gegevensoverdracht naar apps toestaan, met inbegrip van andere door beleid beheerde apps.</li></ul> <p>Er zijn enkele uitzonderings-apps en -services waarnaar Intune standaard gegevens mag overbrengen. U kunt bovendien uw eigen uitzonderingen maken als u wilt toestaan dat gegevens worden overgedragen naar een app die geen ondersteuning biedt voor Intune-apps. Zie [Uitzonderingen voor gegevensoverdracht](app-protection-policy-settings-android.md#data-transfer-exemptions) voor meer informatie.<p>Dit beleid kan ook van toepassing zijn op koppelingen naar Android-apps.  Algemene webkoppelingen worden beheerd door de beleidsinstelling **App-koppelingen openen in Intune Managed Browser**.<p><div class="NOTE"><p>Opmerking</p><p>Intune biedt momenteel geen ondersteuning voor de functie Android Instant Apps. Via Intune worden gegevensverbindingen naar of van de app geblokkeerd. Zie [Android Instant Apps](https://developer.android.com/topic/instant-apps/index.html) in de documentatie voor Android-ontwikkelaars voor meer informatie.</p><p>Als **Organisatiegegevens naar andere apps verzenden** is ingesteld op **Alle apps**, worden er via het besturingssysteem mogelijk nog steeds tekstgegevens overgedragen naar het klembord.</p></div> | **Alle apps** | 
 |<ul><ui>**Apps selecteren die moeten worden uitgesloten** | Deze optie is beschikbaar wanneer u bij de vorige optie *Door beleid beheerde apps* selecteert. | |
 |<ul><ui>**Kopieën van de organisatiegegevens opslaan** | Kies **Blokkeren** als u het gebruik van de optie Opslaan als wilt uitschakelen in deze app. Kies **Toestaan** als u het gebruik van de optie Opslaan als wilt toestaan. **Opmerking:** *Deze instelling wordt ondersteund voor Microsoft Excel, OneNote, PowerPoint en Word. Het wordt mogelijk ook ondersteund door externe apps en LOB-apps.*| **Toestaan** |  
-|<ul><ui>**Gebruiker toestemming geven om kopieën naar geselecteerde services op te slaan** |Gebruikers kunnen naar de geselecteerde services opslaan (OneDrive voor Bedrijven, SharePoint en lokale opslag). Alle andere services worden geblokkeerd.  | **0 geselecteerd** |
+|<ul><ui><ul><ui>**Gebruiker toestemming geven om kopieën naar geselecteerde services op te slaan** |Gebruikers kunnen naar de geselecteerde services opslaan (OneDrive voor Bedrijven, SharePoint en lokale opslag). Alle andere services worden geblokkeerd.  | **0 geselecteerd** |
+|<ul><ui>**Telecommunicatiegegevens overdragen aan** | Wanneer een gebruiker een telefoonnummerkoppeling selecteert in een app, wordt meestal een kiezer-app geopend met het telefoonnummer automatisch ingevuld en klaar om te worden gebeld. Kies voor deze instelling hoe u dit type inhoudsoverdracht wilt afhandelen wanneer deze wordt gestart vanuit een door een beleid beheerde app:<ul><li>**Geen, deze gegevens niet overdragen tussen apps**: Geen communicatiegegevens overdragen wanneer een telefoonnummer wordt gedetecteerd.</li><li>**Een specifieke kiezer-app**: Toestaan dat een specifieke kiezer-app contact maakt als er een telefoonnummer wordt gedetecteerd.</li><li>**Een door beleid beheerde kiezer-app**: Toestaan dat een door een beleid beheerde kiezer-app contact kan initiëren wanneer een telefoonnummer wordt gedetecteerd.</li><li>**Elke kiezer-app**: Toestaan dat een kiezer-app wordt gebruikt om contact te initiëren wanneer een telefoonnummer wordt gedetecteerd.</li></ul>| **Elke kiezer-app** |  
+|<ul><ui><ul><ui>**Pakket-id van kiezer-app** | Wanneer een specifieke kiezer-app is geselecteerd, moet u de [id van het app-pakket opgeven](../apps/app-configuration-vpn-ae.md#get-the-app-package-id). | **Leeg** |
+|<ul><ui><ul><ui>**Naam van kiezer-app** | Wanneer een specifieke kiezer-app is geselecteerd, moet u de naam van de kiezer-app opgeven. | **Leeg** |
 | **Gegevens ontvangen van andere apps** | Geef aan welke apps gegevens naar deze app kunnen overdragen: <ul><li>**Door beleid beheerde apps**: overdracht alleen toestaan vanuit andere door beleid beheerde apps.</li><li>**Alle apps**: gegevensoverdracht vanuit alle apps toestaan.</li><li>**Geen**: geen gegevensoverdracht vanuit apps toestaan, met inbegrip van andere door beleid beheerde apps. </li></ul> <p>Er zijn enkele uitzonderingsapps en -services van waaruit Intune gegevensoverdracht kan toestaan. Zie [Uitzonderingen voor gegevensoverdracht](app-protection-policy-settings-android.md#data-transfer-exemptions) voor een volledige lijst met apps en services. | **Alle apps** |
 | **Knippen, kopiëren en plakken tussen andere apps beperken** | Geef op wanneer knip-, kopieer- en plakbewerkingen voor deze app kunnen worden gebruikt. U kunt kiezen uit: <ul><li>**Geblokkeerd**:  geen knip-, kopieer- en plakbewerkingen toestaan tussen deze app en andere apps.</li><li>**Door beleid beheerde apps**: alleen knip-, kopieer- en plakbewerkingen toestaan tussen deze app en andere door beleid beheerde apps.</li><li>**Door beleid beheerde apps met Plakken in**: knippen en kopiëren toestaan tussen deze app en andere door beleid beheerde apps. Gegevens uit alle apps mogen in deze app worden geplakt.</li><li>**Elke app**: geen beperkingen voor knip-, kopieer- en plakbewerkingen vanuit en naar deze app. | **Elke app** |
 | <ul><ui>**De tekenlimiet voor knippen en kopiëren voor elke app** | Hiermee geeft u het aantal tekens op dat kan worden geknipt of gekopieerd van gegevens van de organisatie en de accounts.  Hiermee kunt u het opgegeven aantal tekens delen, wanneer dit anders door de instelling Knippen, kopiëren en plakken met andere apps beperken wordt geblokkeerd.<p>Standaardwaarde = 0<p>**Opmerking**: Hiervoor is Intune-bedrijfsportal versie 5.0.4364.0 of hoger vereist.  | **0** |

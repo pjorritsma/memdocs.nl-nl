@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb376e9574dcbbbefca3c089dc4180356b1d5a89
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 0edb497b2dd9e4853f3fbc378992158c0757e1f6
+ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988756"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84973091"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>App-configuratiebeleidsregels toevoegen voor beheerde Android Enterprise-apparaten
 
@@ -103,7 +103,7 @@ U kunt de volgende opties kiezen als u Variabele als het waardetype kiest:
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Alleen geconfigureerde organisatieaccounts toestaan in apps met meerdere identiteiten 
 
-Als Microsoft Intune-beheerder kunt u bepalen welke gebruikersaccounts worden toegevoegd aan Microsoft-apps op beheerde apparaten. U kunt de toegang beperken tot uitsluitend toegestane gebruikersaccounts van de organisatie, en persoonlijke accounts blokkeren op ingeschreven apparaten. Gebruik voor Android-apparaten de volgende sleutel-/waardeparen:
+Als Microsoft Intune-beheerder kunt u bepalen welke werk- of schoolaccounts worden toegevoegd aan Microsoft-apps op beheerde apparaten. U kunt de toegang beperken tot uitsluitend toegestane gebruikersaccounts van de organisatie, en persoonlijke accounts blokkeren op ingeschreven apparaten. Voor Android-apparaten gebruikt u de volgende sleutel/waardeparen in een app-configuratiebeleid voor beheerde apparaten:
 
 | **Sleutel** | com.microsoft.intune.mam.AllowedAccountUPNs |
 |---|---|

@@ -1,11 +1,11 @@
 ---
-title: Testhandleiding voor Microsoft Intune App SDK voor Android
+title: Testhandleiding voor ontwikkelaars voor Microsoft Intune App SDK voor Android
 description: Met de testhandleiding voor de Intune App-SDK voor Android kunt u uw door Intune beheerde Android-app testen.
 keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 06/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,20 +17,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6875dc873d44b77a24fe68f637d9329c9f5e1d9c
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: dd4ece62215d48f3481923e099feecc992d7aa6d
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165597"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093362"
 ---
-# <a name="microsoft-intune-app-sdk-for-android-testing-guide"></a>Testhandleiding voor Microsoft Intune App SDK voor Android
+# <a name="microsoft-intune-app-sdk-for-android-developers-testing-guide"></a>Testhandleiding voor ontwikkelaars voor Microsoft Intune App SDK voor Android
 
-Deze handleiding helpt ontwikkelaars bij het testen van hun door Intune beheerde Android-apps.  
+De testhandleiding voor de Intune App-SDK voor Android is ontworpen om uw door Intune beheerde Android-app testen.
 
-## <a name="prerequisite-test-accounts"></a>Vereiste testaccounts
-U kunt nieuwe accounts maken met of zonder vooraf gegenereerde gegevens. Een nieuw account maken:
-1. Ga naar de site [Microsoft Demos](https://demos.microsoft.com/environments/create/tenant). 
+## <a name="demo-tenant-setup"></a>Demotenant installeren
+Als uw bedrijf nog niet over een tenant beschikt, kunt u een demotenant met of zonder vooraf gegenereerde gegevens maken. U moet zich registreren als [Microsoft-partner](https://partner.microsoft.com/en-us/business-opportunities/why-microsoft) om toegang te krijgen tot Microsoft CDX. Een nieuw account maken:
+1. Ga naar de [Microsoft CDX-website voor het maken van tenants](https://cdx.transform.microsoft.com/my-tenants/create-tenant) en maak een Microsoft 365 Enterprise-tenant.
 2. [Stel Intune in](../fundamentals/setup-steps.md) om Mobile Device Management (MDM) in te schakelen.
 3. [Gebruikers maken](../fundamentals/users-add.md).
 4. [Groepen maken](../fundamentals/groups-add.md).
@@ -45,7 +45,7 @@ U kunt nieuwe accounts maken met of zonder vooraf gegenereerde gegevens. Een nie
 
 ## <a name="test-cases"></a>Testcases
 
-De volgende testcases bieden configuratie- en bevestigingsstappen. Gebruik deze richtlijnen bij het oplossen van problemen door Intune beheerde Android-apps.
+De volgende testcases bieden configuratie- en bevestigingsstappen. Gebruik deze tests om uw nieuwe, geïntegreerde Android-app te verifiëren.
 
 ### <a name="required-pin-and-corporate-credentials"></a>Vereiste pincode en zakelijke referenties
 
@@ -64,11 +64,30 @@ U kunt een pincode vereisen voor toegang tot bedrijfsresources. U kunt ook een z
 U kunt de gegevensoverdracht tussen door het bedrijf beheerde toepassingen als volgt regelen:
 
 1. Stel **Apps toestaan om gegevens over te dragen aan andere apps** in op **Door beleid beheerde apps**.
-2. Stel **App mag gegevens ontvangen van andere apps** in op **Alle apps**. Het gebruik van intenties en inhoudsproviders wordt beïnvloed door dit beleid.
+2. Stel **App mag gegevens ontvangen van andere apps** in op **Alle apps**. 
+
+Het gebruik van intenties en inhoudsproviders wordt beïnvloed door dit beleid.
 3. Bevestig de volgende voorwaarden:
     - Het in uw app openen van gegevens uit een niet-beheerde app werkt correct.
-    - Het delen van inhoud tussen beheerde apps is toegestaan.
-    - Delen van beheerde apps op niet-beheerde apps (bijvoorbeeld Chrome) is geblokkeerd.
+    - Het delen van inhoud tussen uw app en beheerde apps is toegestaan.
+    - Delen van uw app op niet-beheerde apps (bijvoorbeeld Chrome) is geblokkeerd.
+
+
+#### <a name="restrict-receiving-data-from-other-apps"></a>De ontvangst van gegevens van andere apps beperken
+
+1. Stel de optie **Organisatiegegevens naar andere apps verzenden** in op **Alle apps**.
+2. Stel de optie **Gegevens ontvangen van andere apps** in op **Door beleid beheerde apps**. 
+3. Bevestig de volgende voorwaarden:
+    - Het naar een onbeheerde app verzenden vanuit uw app werkt correct.
+    - Het delen van inhoud tussen uw app en beheerde apps is toegestaan.
+    - Delen vanuit niet-beheerde apps (bijvoorbeeld Chrome) met uw app is geblokkeerd.
+
+Als v oor uw app [geïntegreerde Openen vanaf-besturingselementen](app-sdk-android.md#opening-data-from-a-local-or-cloud-storage-location) vereist zijn, kunt u de functionaliteit voor **Openen vanaf** als volgt beheren:
+
+1. Stel de optie **Gegevens ontvangen van andere apps** in op **Door beleid beheerde apps**. 
+2. Stel **Gegevens openen in organisatiedocumenten** in op **Blokkeren**. 
+3. Bevestig de volgende voorwaarden:
+    - Openen is beperkt tot alleen geschikte, beheerde locaties.
 
 ### <a name="restrict-cut-copy-and-paste"></a>Knippen, kopiëren en plakken beperken
 U kunt het systeemklembord als volgt beperken tot beheerde toepassingen:
@@ -78,9 +97,9 @@ U kunt het systeemklembord als volgt beperken tot beheerde toepassingen:
     - Tekst kopiëren van uw app naar een niet-beheerde app (bijvoorbeeld Berichten) is geblokkeerd.
 
 ### <a name="prevent-save"></a>Opslaan voorkomen
-U kunt de functionaliteit **Opslaan als** als volgt regelen:
+Als voor uw app [geïntegreerde Opslaan als-besturingselementen](app-sdk-android.md#example-data-transfer-between-apps-and-device-or-cloud-storage-locations) vereist zijn, kunt u de functionaliteit voor **Opslaan als** als volgt beheren:
 
-1. Als voor uw app [geïntegreerde Opslaan als-besturingselementen](app-sdk-android.md#example-determine-if-saving-to-device-or-cloud-storage-is-permitted) vereist zijn, stelt u **Opslaan als voorkomen** in op **Ja**.
+1. Stel **Opslaan als voorkomen** in op **Ja**.
 2. Bevestig de volgende voorwaarden:
     - Opslaan is beperkt tot alleen geschikte, beheerde locaties.
 
@@ -98,8 +117,8 @@ U kunt als volgt back-ups van apps regelen:
 2. Bevestig de volgende voorwaarden:
     - Back-ups zijn beperkt.
 
-### <a name="unenrollment"></a>Registratie ongedaan maken
-U kunt zakelijke e-mails en documenten op beheerde apps wissen op afstand, en zorgen dat persoonlijke gegevens worden ontsleuteld wanneer deze niet meer worden beheerd. Dit werkt als volgt:
+### <a name="wipe"></a>Wissen
+U kunt uit beheerde apps op afstand zakelijke e-mails en documenten wissen. Persoonsgegevens worden versleuteld wanneer ze niet meer worden beheerd. Dit werkt als volgt:
 
 1. [Geef opdracht om te wissen](../apps/apps-selective-wipe.md) vanuit Azure Portal.
 2. Controleer de volgende voorwaarden als uw app niet voor handlers voor wissen is geregistreerd:
@@ -108,19 +127,17 @@ U kunt zakelijke e-mails en documenten op beheerde apps wissen op afstand, en zo
     - De beheerde inhoud wordt verwijderd uit de app. Zie de [ontwikkelaarshandleiding voor de Microsoft Intune App-SDK voor Android - Selectief wissen](app-sdk-android.md#selective-wipe) voor meer informatie.
 
 ### <a name="multi-identity-support"></a>Ondersteuning voor meerdere identiteiten
-De integratie van [ondersteuning voor meerdere identiteiten](app-sdk-android.md#multi-identity-optional) is een wijziging met een hoog risico die grondig moet worden getest. De meest voorkomende problemen treden op vanwege een onjuiste instelling van de identiteit (context versus bedreigingsniveau) en het bijhouden van bestanden (`MAMFileProtectionManager`).
+De integratie van [ondersteuning voor meerdere identiteiten](app-sdk-android.md#multi-identity-optional) is een wijziging met een hoog risico die grondig moet worden getest. De meest voorkomende problemen treden op vanwege een onjuiste instelling van de actieve identiteit (`MAMFileProtectionManager` versus threadniveau) of het onjuist bijhouden van bestandsidentiteiten (`Context`).
 
 Controleer minimaal het volgende:
 
 - Het beleid voor **Opslaan als** werkt correct voor beheerde identiteiten.
 - Beperkingen voor kopiëren en plakken worden correct gehandhaafd van beheerd naar persoonlijk.
-- Alleen gegevens die behoren tot de beheerde identiteit worden versleuteld, en persoonlijke bestanden worden niet gewijzigd.
+- Alleen gegevens die behoren tot de beheerde identiteit worden versleuteld en persoonlijke bestanden worden niet gewijzigd.
 - Met selectief wissen worden tijdens het uitschrijven van apparaten alleen gegevens van de beheerde identiteit verwijderd.
-- De gebruiker wordt gevraagd om voorwaardelijk te starten wanneer een account wordt gewijzigd van een niet-beheerd in een beheerd account (alleen de eerste keer).
+- De eindgebruiker wordt gevraagd om voorwaardelijk te starten wanneer een account wordt gewijzigd van een niet-beheerd in een beheerd account (alleen de eerste keer).
 
 ### <a name="app-configuration-optional"></a>App-configuratie (optioneel)
 U kunt het gedrag van beheerde apps configureren. Als uw app de instellingen van de app-configuratie gebruikt, moet u testen of uw app alle waarden correct verwerkt die u (als beheerder) kunt instellen. U kunt [app-configuratiebeleidsregels](../apps/app-configuration-policies-overview.md) maken en toewijzen in Intune.
 
-## <a name="next-steps"></a>Volgende stappen
 
-- [Een Android Line-Of-Business-app toevoegen aan Microsoft Intune](../apps/lob-apps-android.md)

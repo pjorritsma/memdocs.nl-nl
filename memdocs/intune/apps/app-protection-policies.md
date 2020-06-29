@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/02/2020
+ms.date: 06/22/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: abd34733bd27ec150a92bf20cecbf7edc02c2bd6
-ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
+ms.openlocfilehash: d4beb6c5a91f9f379006df482ff10066831389b6
+ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330998"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216396"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>App-beveiligingsbeleid maken en toewijzen
 
@@ -183,14 +183,14 @@ Voor het maken van deze beleidsregels bladert u naar **Apps** > **App-beveiligin
 
 ### <a name="device-types"></a>Apparaattypen
 
-- **Onbeheerd**: Niet-beheerde apparaten zijn apparaten waarop Intune MDM niet is gedetecteerd. Dit omvat apparaten die worden beheerd door andere MDM-leveranciers.
+- **Onbeheerd**: Voor iOS-en iPadOS-apparaten zijn niet-beheerde apparaten alle apparaten waarvoor het Intune MDM-beheer of een MDM/EMM-oplossing van derden niet voldoet aan de `IntuneMAMUPN`-sleutel. Voor Android-apparaten zijn niet-beheerde apparaten alle apparaten waarop Intune MDM niet is gedetecteerd. Dit omvat apparaten die worden beheerd door andere MDM-leveranciers.
 - **Door Intune beheerde apparaten**: Beheerde apparaten worden beheerd door Intune MDM.
 - **Android-apparaatbeheerder**: Door Intune beheerde apparaten met de Android Device Administration-API.
 - **Android Enterprise**: Door Intune beheerde apparaten met Android Enterprise-werkprofielen of volledig apparaatbeheer van Android Enterprise.
 
 Op Android-apparaten wordt gevraagd of de Intune-bedrijfsportal-app moet worden geïnstalleerd, ongeacht welk apparaattype is gekozen. Als u bijvoorbeeld 'Android Enterprise ' selecteert, wordt deze vraag toch gesteld aan gebruikers met niet-beheerde Android-apparaten.
 
-Voor iOS/iPadOS zijn extra app-configuratie-instellingen nodig om de selectie 'Apparaattype' af te dwingen voor 'onbeheerde' apparaten. Deze configuraties communiceren aan de APP-service dat een bepaalde app wordt beheerd, en dat de APP-instellingen niet van toepassing zijn:
+Voor iOS/iPadOS zijn extra configuratie-instellingen voor de app nodig om de selectie Apparaattype af te dwingen voor door Intune beheerde apparaten. Deze configuraties communiceren aan de APP-service dat een bepaalde app wordt beheerd, en dat de APP-instellingen niet van toepassing zijn:
 
 - **IntuneMAMUPN** moet zijn geconfigureerd voor alle met MDM beheerde toepassingen. Zie [Gegevensoverdracht beheren tussen iOS-/iPadOS-apps met Microsoft Intune](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm) voor meer informatie.
 - **IntuneMAMDeviceID** moet zijn geconfigureerd voor alle door derden en met line-of-business MDM beheerde toepassingen. **IntuneMAMDeviceID** moet zijn geconfigureerd voor het apparaat-id-token. Bijvoorbeeld `key=IntuneMAMDeviceID, value={{deviceID}}`. Zie [App-configuratiebeleidsregels toevoegen voor beheerde iOS-/iPadOS-apparaten](app-configuration-policies-use-ios.md) voor meer informatie.

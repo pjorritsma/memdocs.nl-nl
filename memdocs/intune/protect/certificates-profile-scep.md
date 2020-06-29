@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 06/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dfa830f1e7bfd87c20c1aed78b933f81e96b8dca
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 35cf4b3afb766d8729d3438d2d8c61e1d79f4791
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988644"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531737"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>SCEP-certificaatprofielen maken en toewijzen in Intune
 
@@ -226,7 +226,17 @@ Nadat u [uw infrastructuur hebt geconfigureerd](certificates-scep-configure.md) 
 
    - **URL's van SCEP-server**:
 
-     Voer een of meer URL's in voor de NDES-servers die certificaten via SCEP verlenen. Voer bijvoorbeeld iets in zoals `https://ndes.contoso.com/certsrv/mscep/mscep.dll`. U kunt indien nodig aanvullende SCEP-URL's voor taakverdeling toevoegen, omdat URL's willekeurig op het apparaat met het profiel worden gepusht. Als een van de SCEP-servers niet beschikbaar is, mislukt de SCEP-aanvraag. Dan wordt de volgende keer dat er apparaten worden ingecheckt, de certificaataanvraag mogelijk uitgevoerd op dezelfde niet-actieve server.
+     Voer een of meer URL's in voor de NDES-servers die certificaten via SCEP verlenen. Voer bijvoorbeeld iets in zoals `https://ndes.contoso.com/certsrv/mscep/mscep.dll`.
+
+     U kunt indien nodig aanvullende SCEP-URL's voor taakverdeling toevoegen. Apparaten maken drie afzonderlijke aanroepen naar de NDES-server om de servermogelijkheden te verkrijgen, een openbare sleutel op te halen en vervolgens een aanvraag voor ondertekening te verzenden. Wanneer u meerdere URL's gebruikt, kan de taakverdeling ertoe leiden dat een andere URL wordt gebruikt voor volgende aanroepen naar een NDES-server. Als tijdens dezelfde aanvraag contact wordt opgenomen met een andere server voor een volgende aanroep, mislukt de aanvraag.
+
+     Het gedrag voor het beheren van de NDES-server-URL is specifiek voor elk apparaatplatform:
+
+     - **Android**: Het apparaat genereert een willekeurige lijst met URL's die zijn ontvangen in het SCEP-beleid en zoekt in de lijst naar een toegankelijke NDES-server. Het apparaat blijft dezelfde URL en server gebruiken tijdens het gehele proces. Als het apparaat geen toegang kan krijgen tot een van de NDES-servers, mislukt het proces.
+     - **iOS/iPadOS**: Intune genereert een willekeurige lijst van URL's en stuurt een enkele URL naar een apparaat. Als het apparaat geen toegang kan krijgen tot de NDES-server, mislukt de SCEP-aanvraag.
+     - **Windows**: De lijst met NDES URL's wordt willekeurig gegenereerd en vervolgens doorgegeven aan het Windows-apparaat, dat de URL's vervolgens in de ontvangen volgorde probeert totdat een beschikbare URL is gevonden. Als het apparaat geen toegang kan krijgen tot een van de NDES-servers, mislukt het proces.
+
+     Als een apparaat niet dezelfde NDES-server kan bereiken tijdens een van de drie aanroepen naar de NDES-server, mislukt de SCEP-aanvraag. Dit kan bijvoorbeeld gebeuren wanneer een taakverdelingsoplossing een andere URL levert voor de tweede of derde aanroep naar de NDES-server of een andere daadwerkelijke NDES-server levert op basis van een gevirtualiseerde URL voor NDES. Na een mislukte aanvraag probeert een apparaat het proces opnieuw uit te voeren voor de volgende beleidscyclus, beginnend met de willekeurige lijst met NDES URL's (of een enkele URL voor iOS/iPadOS).  
 
 8. Selecteer **Volgende**.
 

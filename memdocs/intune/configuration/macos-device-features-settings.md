@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/05/2020
+ms.date: 06/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9d4bc2de9e16cfcf9322cf343badafe3c9a35c70
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 91bf09a122031b7186840bc17cd44cc5738b2ffe
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428906"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093549"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Instellingen van apparaatfuncties voor macOS in Intune
 
@@ -106,11 +106,114 @@ Deze functie is van toepassing op:
 > [!TIP]
 > Als u problemen wilt oplossen, opent u **Systeemvoorkeuren** > **Profielen** op uw macOS-apparaat. Controleer of het profiel dat u hebt gemaakt, voorkomt in de lijst met apparaatprofielen. Zo ja, dan controleert u of de **configuratie voor gekoppelde domeinen** in het profiel voorkomt en de juiste app-id en domeinen bevat.
 
+## <a name="content-caching"></a>Cacheopslag van inhoud
+
+In cacheopslag van inhoud wordt een lokale kopie van de inhoud bewaard. Deze informatie kan worden opgehaald door andere Apple-apparaten zonder verbinding te maken met internet. Met dit opslaan in cache worden downloads versneld doordat software-updates, apps, foto's en andere inhoud de eerste keer dat ze worden gedownload, worden opgeslagen. Omdat apps eenmaal worden gedownload en gedeeld met andere apparaten, besparen scholen en organisaties met veel apparaten bandbreedte.
+
+> [!NOTE]
+> Gebruik slechts één profiel voor deze instellingen. Als u meerdere profielen met deze instellingen toewijst, treedt er een fout op.
+>
+> Zie [Logboeken en statistieken over cacheopslag van inhoud weergeven](https://support.apple.com/guide/mac-help/view-content-caching-logs-statistics-mac-mchl0d8533cd/10.15/mac/10.15) (opent de website van Apple) voor meer informatie over het bewaken van cacheopslag van inhoud.
+
+Deze functie is van toepassing op:
+
+- macOS 10.13.4 en hoger
+
+### <a name="settings-apply-to-all-enrollment-types"></a>Deze instellingen zijn van toepassing op: Alle inschrijvingstypen
+
+Raadpleeg [Nettoladinginstellingen voor cacheopslag van inhoud](https://support.apple.com/guide/mdm/content-caching-mdm163612d39/1/web/1) (hiermee opent u de website van Apple) voor meer informatie over deze instellingen.
+
+**Cacheopslag van inhoud inschakelen**: Met **Ja** wordt cacheopslag van inhoud ingeschakeld; gebruikers kunnen dit niet uitschakelen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard kan het besturingssysteem dit uitschakelen.
+
+- **Type inhoud dat moet worden opgeslagen in de cache**: Uw opties zijn:
+  - **Alle inhoud**: Slaat iCloud-inhoud en gedeelde inhoud op in de cache.
+  - **Allen gebruikersinhoud**: Slaat iCloud-inhoud, waaronder foto's en documenten, op in de cache.
+  - **Alleen gedeelde inhoud**: Slaat apps en software-updates op in de cache.
+
+- **Maximumcachegrootte**: Voer de maximale hoeveelheid schijfruimte (in bytes) in die wordt gebruikt voor het opslaan van inhoud in de cache. Als u dit leeg laat (standaard), wordt deze instelling niet gewijzigd of bijgewerkt door Intune. Standaard kan het besturingssysteem deze waarde instellen op nul (`0`) bytes, wat leidt tot onbeperkte schijfruimte voor de cache.
+
+  Zorg ervoor dat u de beschikbare ruimte op de apparaten niet overschrijdt. Zie [Hoe iOS en macOS de opslagcapaciteit rapporteren](https://support.apple.com/HT201402) (opent de website van Apple) voor meer informatie over de opslagcapaciteit van het apparaat.
+
+- **Locatie van cache**: Geef het pad op waarin u de inhoud in de cache wilt opslaan. De standaardlocatie is `/Library/Application Support/Apple/AssetCache/Data`. Het wordt aangeraden deze locatie niet te wijzigen.
+
+  Als u deze instelling wijzigt, wordt de inhoud in de cache niet verplaatst naar de nieuwe locatie. Gebruikers moeten de locatie op het apparaat wijzigen (**Systeemvoorkeuren** > **Delen** > **Cacheopslag van inhoud**) om het automatisch te verplaatsen.
+
+- **Poort**: Voer het TCP-poortnummer in op apparaten voor de cache om aanvragen voor downloaden en uploaden te accepteren, van 0-65535. Geef nul (`0`) (standaard) op om een willekeurige, beschikbare poort te gebruiken.
+- **Internetverbinding en delen van inhoud in cache blokkeren**: Dit wordt ook 'getethered opslaan in cache' genoemd. **Ja** verhindert delen van de internetverbinding en voorkomt dat inhoud in de cache wordt gedeeld met iOS/iPadOS-apparaten die via USB zijn verbonden met hun Mac. Gebruikers kunnen deze functie niet inschakelen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
+
+- **Het delen van een internetverbinding inschakelen**: Dit wordt ook 'getethered opslaan in cache' genoemd. Met **Ja** staat u delen van de internetverbinding toe en staat u toe dat inhoud in de cache wordt gedeeld met iOS/iPadOS-apparaten die via USB zijn verbonden met hun Mac. Gebruikers kunnen deze functie niet uitschakelen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard kan het besturingssysteem dit uitschakelen.
+
+  Deze functie is van toepassing op:
+
+  - macOS 10.15.4 en hoger
+
+- **Cache inschakelen voor het registreren van clientgegevens**: Met **Ja** registreert u het IP-adres en het poortnummer van de apparaten waarvandaan inhoud wordt opgevraagd. Als u problemen met het apparaat wilt oplossen, kan dit logboekbestand helpen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het kan zijn dat het besturingssysteem standaard deze informatie niet weergeeft op de menubalk.
+
+- **Inhoud van de cache altijd behouden, zelfs wanneer het systeem schijfruimte nodig heeft voor andere apps**: Met **Ja** bewaart u de cache-inhoud en zorgt u ervoor dat er niets wordt verwijderd, zelfs niet wanneer er weinig schijfruimte is. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard kan het besturingssysteem inhoud van de cache automatisch leegmaken wanneer er opslagruimte nodig is voor andere apps.
+
+  Deze functie is van toepassing op:
+
+  - macOS 10.15 of hoger
+
+- **Statuswaarschuwingen weergeven**: Met **Ja** worden waarschuwingen als systeemmeldingen weergegeven. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard worden deze waarschuwingen in het besturingssysteem mogelijk niet weergegeven als systeemmeldingen.
+
+  Deze functie is van toepassing op:
+
+  - macOS 10.15 of hoger
+
+- **Voorkomen dat het apparaat naar slaapstand schakelt terwijl caching is ingeschakeld**: Met **Ja** voorkomt u dat de computer in de slaapstand gaat wanneer opslaan in cache is ingeschakeld. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem toestaat dat het apparaat in de slaapstand gaat.
+
+  Deze functie is van toepassing op:
+
+  - macOS 10.15 of hoger
+
+- **Apparaten die in de cache moeten worden opgeslagen**: Kies de apparaten die inhoud kunnen opslaan in de cache. Uw opties zijn:
+  - **Niet geconfigureerd** (standaard): Deze instelling wordt niet gewijzigd of bijgewerkt door Intune. 
+  - **Apparaten die gebruikmaken van hetzelfde lokale netwerk**: De inhoudscache biedt inhoud aan apparaten in hetzelfde directe lokale netwerk. Er wordt geen inhoud aangeboden aan apparaten op andere netwerken, inclusief apparaten die bereikbaar zijn voor de inhoudscache.
+  - **Apparaten die gebruikmaken van hetzelfde openbare IP**: De inhoudscache biedt inhoud aan apparaten die gebruikmaken van hetzelfde openbare IP. Er wordt geen inhoud aangeboden aan apparaten op andere netwerken, inclusief apparaten die bereikbaar zijn voor de inhoudscache.
+  - **Apparaten die aangepaste lokale netwerken gebruiken**: De inhoudscache biedt inhoud aan apparaten in de IP-bereiken die u invoert.
+    - **Luisterbereiken van clients**: Voer het bereik in van IP-adressen die de inhoudscache kunnen ontvangen.
+  - **Apparaten die aangepaste lokale netwerken gebruiken met terugval**: De inhoudscache biedt inhoud aan apparaten in de luisterbereiken, de luisterbereiken van de peer en bovenliggende IP-adressen.
+    - **Luisterbereiken van clients**: Voer het bereik in van IP-adressen die de inhoudscache kunnen ontvangen.
+
+- **Aangepaste openbare IP-adressen**: Voer een bereik van openbare IP-adressen in. De cloudservers gebruiken dit bereik om clientapparaten te koppelen aan caches.
+
+- **Inhoud delen met andere caches**: Wanneer uw netwerk meer dan één inhoudscache heeft, worden de inhoudscaches op andere apparaten automatisch peers. Deze apparaten kunnen software in de cache raadplegen en delen. 
+
+  Wanneer een aangevraagd item niet beschikbaar is in een inhoudscache, worden de peers gecontroleerd op het item. Als het item beschikbaar is, wordt het gedownload uit de inhoudscache op het peer-apparaat. Als het nog steeds niet beschikbaar is, downloadt de inhoudscache het item van:
+
+  - Een bovenliggend IP-adres, indien een is geconfigureerd
+  
+    OF
+    
+  - van Apple via internet
+
+  Wanneer er meer dan één inhoudscache beschikbaar is, selecteren apparaten automatisch de juiste inhoudscache. 
+
+  Uw opties zijn:
+
+  - **Niet geconfigureerd** (standaard): Deze instelling wordt niet gewijzigd of bijgewerkt door Intune.
+  - **Inhoudscaches die gebruikmaken van hetzelfde lokale netwerk**: Inhoudscache maakt alleen een peer-verbinding met andere inhoudscaches op hetzelfde lokale netwerk.
+  - **Inhoudscaches die gebruikmaken van hetzelfde openbare IP**: Inhoudscache maakt alleen een peer-verbinding met andere inhoudscaches op hetzelfde openbare IP.
+  - **Inhoudscaches die aangepaste lokale netwerken gebruiken**: Inhoudscache maakt alleen een peer-verbinding met andere inhoudscaches in het luisterbereik van het IP-adres dat u invoert:
+
+    - **Luisterbereiken van peers**: Voer de begin- en eind-IP-adressen van IPv4 of IPv6 in voor uw bereik. De inhoudscache reageert alleen op cacheaanvragen van peers van inhoudscaches in de IP-adresbereiken die u invoert.
+    - **Filterbereiken van peers**: Voer de begin- en eind-IP-adressen van IPv4 of IPv6 in voor uw bereik. De inhoudscache filtert de lijst met peers op basis van de IP-adresbereiken die u invoert.
+
+- **Bovenliggende IP-adressen**: Voer het lokale IP-adres van een andere inhoudscache in om toe te voegen als een bovenliggende cache. Uw cache uploadt en downloadt inhoud naar deze caches, in plaats van ze rechtstreeks met Apple te uploaden/downloaden. Voeg maar eenmaal een bovenliggend IP-adres toe.
+- **Selectiebeleid bovenliggende cache**: Wanneer er veel bovenliggende caches zijn, selecteert u hoe het bovenliggende IP-adres wordt gekozen. Uw opties zijn:
+  - **Niet geconfigureerd** (standaard): Deze instelling wordt niet gewijzigd of bijgewerkt door Intune.
+  - **Round robin**: Gebruik de bovenliggende IP-adressen op volgorde. Deze optie is geschikt voor scenario's met taakverdeling.
+  - **Eerst beschikbare**: Gebruik altijd het eerste beschikbare IP-adres in de lijst.
+  - **Hash**: Hiermee maakt u een hash-waarde voor het padgedeelte van de aangevraagde URL. Deze optie zorgt ervoor dat hetzelfde bovenliggende IP-adres altijd wordt gebruikt voor dezelfde URL.
+  - **Willekeurig**: Willekeurig een IP-adres in de lijst gebruiken. Deze optie is geschikt voor scenario's met taakverdeling.
+  - **Plaknotitie beschikbaar**: Gebruik altijd het eerste IP-adres in de lijst. Als deze niet beschikbaar is, gebruikt u het tweede IP-adres in de lijst. Ga verder met het tweede IP-adres totdat het niet beschikbaar is, enzovoort.
+
 ## <a name="login-items"></a>Aanmeldingsitems
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Deze instellingen zijn van toepassing op: Alle inschrijvingstypen
 
-- **De bestanden, mappen en aangepaste apps toevoegen die worden gestart bij het aanmelden**: **voeg het pad toe** van een bestand, map, aangepaste app of systeem-app die u wilt openen wanneer gebruikers zich aanmelden bij hun apparaten. Voer ook in:
+- **De bestanden, mappen en aangepaste apps toevoegen die worden gestart bij het aanmelden**: U kunt het pad van een bestand, map, aangepaste app of systeem-app **toevoegen**  dat u wilt openen wanneer gebruikers zich aanmelden bij hun apparaten. Voer ook in:
 
   - **Pad van item**: Voer het pad naar het bestand, de map of de app in. Systeem-apps of apps die zijn gebouwd of aangepast voor uw organisatie, bevinden zich doorgaans in de map `Applications` en hebben een pad dat er als volgt uitziet: `/Applications/AppName.app`.
 
@@ -124,7 +227,7 @@ Deze functie is van toepassing op:
     Let erop dat u het juiste pad opgeeft bij het toevoegen van een app, map of bestand. Niet alle items bevinden zich in de map `Applications`. Als gebruikers een item naar een andere locatie verplaatsen, verandert het pad. Dit verplaatste item wordt niet geopend wanneer de gebruiker zich aanmeldt.
 
   - **Verbergen**: Kies of u wilt dat de app wordt weergegeven of verborgen. Uw opties zijn:
-    - **Niet geconfigureerd**: Dit is de standaardinstelling. Deze instelling wordt niet gewijzigd of bijgewerkt door Intune. Het besturingssysteem geeft standaard het item weer in de lijst met aanmeldingsitems voor gebruikers en groepen wanneer de optie voor verbergen is uitgeschakeld.
+    - **Niet geconfigureerd** (standaard): Deze instelling wordt niet gewijzigd of bijgewerkt door Intune. Het besturingssysteem kant standaard items weergeven in de lijst met aanmeldingsitems voor gebruikers en groepen wanneer de optie voor verbergen is uitgeschakeld.
     - **Ja**: De app wordt niet weergegeven in de lijst met aanmeldingsitems voor gebruikers en groepen.
 
 ## <a name="login-window"></a>Aanmeldingsvenster
@@ -161,7 +264,7 @@ Deze functie is van toepassing op:
 
 ### <a name="settings-apply-to-user-approved-device-enrollment-and-automated-device-enrollment"></a>Deze instellingen zijn van toepassing op: Door de gebruiker goedgekeurde apparaatinschrijving en automatische apparaatregistratie
 
-- **Type app-extensie voor eenmalige aanmelding**: kies Referentie als het type app-extensie voor SSO. Uw opties zijn:
+- **Type app-extensie voor eenmalige aanmelding**: Kies het type app-extensie voor eenmalige aanmelding. Uw opties zijn:
 
   - **Niet geconfigureerd**: er worden geen app-extensies gebruikt. Als u een app-extensie wilt uitschakelen, stelt u het type app-extensie voor SSO in op **Niet geconfigureerd**.
   - **Omleiding**: Gebruik een algemene, aanpasbare app-extensie van het type Omleiding om eenmalige aanmelding te gebruiken met moderne verificatiestromen. Zorg ervoor dat u de extensie- en team-id van de app-extensie van uw organisatie kent.
@@ -186,7 +289,7 @@ Deze functie is van toepassing op:
 - **URL's** (alleen omleiden): Voer de URL-voorvoegsels van uw id-providers in namens wie de eenmalige aanmelding de app-extensie van het type Omleiding gebruikt. Wanneer gebruikers worden omgeleid naar deze URL's, grijpt de app-extensie voor eenmalige aanmelding in en wordt er om eenmalige aanmelding gevraagd.
 
   - Alle URL's in uw app-extensie voor SSO bij Intune-profielen moeten uniek zijn. U kunt een domein niet herhalen in een app-extensieprofiel voor eenmalige aanmelding, zelfs niet als u verschillende typen app-extensies voor eenmalige aanmelding gebruikt.
-  - De URL's moeten beginnen met http:// of https://.
+  - De URL's moeten beginnen met `http://` of `https://`.
 
 - **Aanvullende configuratie** (omleiding en referentie): Voer aanvullende extensiegegevens in die moeten worden doorgegeven aan de app-extensie voor eenmalige aanmelding:
   - **Sleutel**: voer de naam in van het item dat u wilt toevoegen, zoals `user name`.
@@ -214,10 +317,10 @@ Deze functie is van toepassing op:
 - **Wachtwoordsynchronisatie** (alleen Kerberos): kies **Inschakelen** om de lokale wachtwoorden van de gebruikers te synchroniseren met Azure AD. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem kan standaard wachtwoordsynchronisatie met Azure AD uitschakelen. Gebruik deze instelling als alternatief of als back-up voor SSO. Deze instelling werkt niet als gebruikers zijn aangemeld met een mobiel Apple-account.
 - **Active Directory-wachtwoordcomplexiteit van Windows Server** (alleen Kerberos): Kies **Vereisen** zodat gebruikerswachtwoorden moeten voldoen aan de vereisten voor wachtwoordcomplexiteit van Active Directory. Zie [Wachtwoorden moeten voldoen aan complexiteitsvereisten](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements) voor meer informatie. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het kan zijn dat het besturingssysteem standaard niet vereist dat gebruikers moeten voldoen aan de wachtwoordvereisten van Active Directory.
 - **Minimale wachtwoordlengte** (alleen Kerberos): Voer het minimum aantal tekens in dat wachtwoorden van gebruikers moeten bevatten. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het kan zijn dat het besturingssysteem standaard geen minimumwachtwoordlengte afdwingt voor de gebruikers.
-- **Limiet voor het opnieuw gebruiken van een wachtwoord** (alleen Kerberos): voer het aantal nieuwe wachtwoorden in, van 1 tot 24, dat moet worden gebruikt voordat een eerder gebruikt wachtwoord opnieuw kan worden gebruikt in het domein. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het kan zijn dat het besturingssysteem standaard geen limiet voor het opnieuw gebruiken van wachtwoorden afdwingt.
-- **Minimale gebruiksduur wachtwoord** (alleen Kerberos): voer het aantal dagen in dat een wachtwoord moet worden gebruikt in het domein voordat gebruikers dit kunnen wijzigen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het kan zijn dat het besturingssysteem standaard geen minimumduur voor wachtwoorden afdwingt waarna deze kunnen worden gewijzigd.
+- **Limiet voor het opnieuw gebruiken van een wachtwoord** (alleen Kerberos): Voer het aantal nieuwe wachtwoorden in, van 1 tot 24, die worden gebruikt voordat een eerder gebruikt wachtwoord opnieuw kan worden gebruikt in het domein. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het kan zijn dat het besturingssysteem standaard geen limiet voor het opnieuw gebruiken van wachtwoorden afdwingt.
+- **Minimale gebruiksduur wachtwoord** (alleen Kerberos): Voer het aantal dagen in dat een wachtwoord wordt gebruikt in het domein voordat gebruikers dit kunnen wijzigen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het kan zijn dat het besturingssysteem standaard geen minimumduur voor wachtwoorden afdwingt waarna deze kunnen worden gewijzigd.
 - **Melding voor verlopen van wachtwoord** (alleen Kerberos): voer het aantal dagen vóór het verlopen van een wachtwoord in wanneer gebruikers op de hoogte worden gesteld dat hun wachtwoord zal verlopen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem kan standaard `15` dagen gebruiken.
-- **Wachtwoordverlooptijd** (alleen Kerberos): Geef op na hoeveel dagen het wachtwoord voor het apparaat moet worden gewijzigd. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het kan zijn dat het besturingssysteem standaard nooit wachtwoorden laat verlopen.
+- **Wachtwoordverlooptijd** (alleen Kerberos): Geef op na hoeveel dagen het wachtwoord voor het apparaat moet veranderen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het kan zijn dat het besturingssysteem standaard nooit wachtwoorden laat verlopen.
 - **URL voor het wijzigen van het wachtwoord** (alleen Kerberos): Voer de URL in die wordt geopend wanneer gebruikers een Kerberos-wachtwoord willen wijzigen.
 - **Principal-naam** (alleen Kerberos): voer de gebruikersnaam in van de Kerberos-principal. U hoeft de realmnaam niet op te nemen. In `user@contoso.com` is `user` bijvoorbeeld de principal-naam en `contoso.com` de realmnaam.
 

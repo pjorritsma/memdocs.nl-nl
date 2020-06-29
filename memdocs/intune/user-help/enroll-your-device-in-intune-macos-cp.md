@@ -5,7 +5,7 @@ keywords: Mac OS X, Mac OS, OS X
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/16/2019
+ms.date: 06/18/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,27 +19,27 @@ ms.reviewer: kakyker
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2f3fe39285542199cf214c4b5bf505a176663657
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: fe405b66892ec7777d8d1572b2fb6ab6ce1aaa91
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882419"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85094232"
 ---
 # <a name="enroll-your-macos-device-using-the-company-portal-app"></a>Uw macOS-apparaat inschrijven via de bedrijfsportal-app  
 
 Registreer uw macOS-apparaat met de bedrijfsportal-app van Intune voor beveiligde toegang tot e-mail, bestanden en apps van uw werk of school.
 
-Organisaties verplichten u vaak om uw apparaat in te schrijven voordat u toegang krijgt tot de vertrouwelijke gegevens van de organisatie. Nadat uw apparaat is geregistreerd, wordt het *beheerd*. Uw organisatie kan beleid en apps aan het apparaat toewijzen via een MDM-provider (Mobile Device Management), zoals Intune. Voor continue toegang tot werk- of schoolgegevens op uw apparaat moet u uw apparaat zo configureren dat het overeenkomt met de beleidsinstellingen van uw organisatie.  
+Organisaties verplichten u vaak om uw apparaat in te schrijven voordat u toegang krijgt tot de vertrouwelijke gegevens van de organisatie. Nadat uw apparaat is geregistreerd, wordt het *beheerd*. Uw organisatie kan beleid en apps aan het apparaat toewijzen via een MDM-provider (Mobile Device Management), zoals Intune. Voor continue toegang tot werk- of schoolgegevens op uw apparaat moet u uw apparaat zo instellen dat het overeenkomt met de beleidsinstellingen van uw organisatie.  
 
-In dit artikel wordt beschreven hoe u met behulp van de bedrijfsportal-app voor macOS uw apparaat zo kunt registreren, configureren en onderhouden dat dit voldoet aan de vereisten van uw organisatie.  
+In dit artikel wordt beschreven hoe u met behulp van de Bedrijfsportal-app voor macOS uw apparaat zo kunt instellen en onderhouden dat dit voldoet aan de vereisten van uw organisatie.  
 
 
 ## <a name="what-to-expect-from-the-company-portal-app"></a>Wat u kunt verwachten van de bedrijfsportal-app
 
 Tijdens de eerste configuratie verplicht de bedrijfsportal-app u om u aan te melden en uzelf te verifiëren bij uw organisatie. Bedrijfsportal vertelt u vervolgens welke apparaatinstellingen u moet configureren om te voldoen aan de vereisten van uw organisatie. Organisaties stellen bijvoorbeeld vaak wachtwoordvereisten van een minimum- of maximumaantal tekens waaraan u moet voldoen.    
 
-Nadat u uw apparaat hebt ingeschreven, wordt in de bedrijfsportal altijd gecontroleerd of uw apparaat is beveiligd volgens de vereisten van uw organisatie. Als u bijvoorbeeld een app van een niet-vertrouwde bron installeert, wordt in de bedrijfsportal een waarschuwing weergegeven en wordt de toegang tot de resources van uw organisatie mogelijk beperkt. Een app-beschermingsbeleid zoals dit komt veel voor. Om weer toegang te krijgen, moet u de niet-vertrouwde app waarschijnlijk verwijderen. 
+Nadat u uw apparaat hebt ingeschreven, wordt in de bedrijfsportal altijd gecontroleerd of uw apparaat is beveiligd volgens de vereisten van uw organisatie. Als u bijvoorbeeld een app installeert via een bron die niet vertrouwd is, wordt in de bedrijfsportal een waarschuwing weergegeven en wordt de toegang tot de resources van uw organisatie mogelijk beperkt. Een app-beschermingsbeleid zoals dit komt veel voor. Als u weer toegang wilt krijgen, moet u de app waarschijnlijk verwijderen. 
 
 Als uw organisatie na de registratie een nieuwe beveiligingsvereiste oplegt, zoals meervoudige verificatie, wordt u via de bedrijfsportal op de hoogte gebracht. U hebt de mogelijkheid om uw instellingen aan te passen, zodat u op uw apparaat kunt blijven werken.  
 
@@ -67,19 +67,20 @@ Gebruik de volgende stappen om uw macOS-apparaat in te schrijven bij uw organisa
 
 1. Meld u aan bij de bedrijfsportal met het account van uw werk of school.  
 2. Wanneer de app wordt geopend, selecteert u **Beginnen**.  
-3. Bekijk welke informatie op uw ingeschreven apparaat wel en niet zichtbaar is in uw organisatie. Selecteer vervolgens **Doorgaan**.
-4.  Als u hierom wordt gevraagd, typt u het wachtwoord van uw apparaat in het scherm **Beheerprofiel installeren**.
+3. Bekijk [welke informatie wel en niet zichtbaar is voor uw organisatie](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) op uw ingeschreven apparaat. Selecteer vervolgens **Doorgaan**.
+4. Selecteer **Profiel downloaden** in het scherm **Beheerprofiel installeren**.  
 
-    ![Voorbeeldschermopname van het scherm Beheerprofiel installeren in de bedrijfsportal met de wachtwoordprompt gemarkeerd.](./media/install-management-profile-macos-1912.PNG)   
-5. Selecteer **Systeemvoorkeuren openen** in het scherm **Apparaatbeheer bevestigen**.  
+    ![Voorbeeldschermopname van het scherm Beheerprofiel installeren in de bedrijfsportal met de wachtwoordprompt gemarkeerd.](./media/install-management-profile-macos-2006.png)   
 
-    ![Voorbeeldschermopname van het scherm Apparaatbeheer bevestigen, met de knop 'Systeemvoorkeuren openen' gemarkeerd.](./media/confirm-device-management-macos-1912.PNG)  
-6. De systeemvoorkeuren van uw apparaat worden geopend. Selecteer **Beheerprofiel** in de lijst met apparaatprofielen en selecteer vervolgens **Goedkeuren** > **Goedkeuren**.  
-    ![Voorbeeldschermopname van het scherm Beheerprofiel in Systeemvoorkeuren met de knop 'Goedkeuren' gemarkeerd.](./media/management-profile-approve-macos-1912.PNG)   
-1. Keer terug naar de bedrijfsportal en selecteer **Doorgaan**.    
-2. In uw organisatie is mogelijk vereist dat u de apparaatinstellingen bijwerkt. Wanneer u klaar bent met het bijwerken van de instellingen, selecteert u **Instellingen controleren**.  
+5. De systeemvoorkeuren van uw apparaat worden geopend.  
+    a. Selecteer **Installeren** en selecteer vervolgens nogmaals **Installeren**.  
+    b. Voer het wachtwoord van uw apparaat in als u hierom wordt gevraagd.   
+6. Zodra het profiel is geïnstalleerd, wordt het weergegeven in de lijst met profielen bij **Beheerprofiel**.
+    ![Voorbeeldschermopname van het scherm Beheerprofiel in Systeemvoorkeuren met de knop 'Goedkeuren' gemarkeerd.](./media/management-profile-approve-macos-2006.png)   
+7. Ga terug naar de bedrijfsportal.    
+8. In uw organisatie is mogelijk vereist dat u de apparaatinstellingen bijwerkt. Wanneer u klaar bent met het bijwerken van de instellingen, selecteert u **Opnieuw proberen**.  
 
-    ![Voorbeeldschermopname van het scherm Apparaatinstellingen bijwerken in de bedrijfsportal met de knop 'Instellingen controleren' gemarkeerd.](./media/update-settings-mac-1911.PNG)  
+    ![Voorbeeldschermopname van het scherm Apparaatinstellingen bijwerken in de bedrijfsportal met de knop Opnieuw proberen gemarkeerd.](./media/update-settings-mac-2006.png)  
 9. Wanneer de installatie is voltooid, selecteert u **Gereed**.  
 
 

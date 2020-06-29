@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9983eb211b816ae05a1f9d180a7dbb68e3fac505
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: be9a4257fec357c3dc124318fda98807df6c26b7
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428658"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093480"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Apparaten die aan hybride Azure AD zijn gekoppeld implementeren met Intune en Windows Autopilot
 U kunt Intune en Windows Autopilot gebruiken om apparaten in te stellen die zijn gekoppeld aan Hybrid Azure Active Directory (Azure AD). Volg hiervoor de stappen in dit artikel.
@@ -111,20 +111,18 @@ De Intune-connector voor Active Directory moet worden geïnstalleerd op een comp
 
 De Intune-connector vereist dat de [dezelfde eindpunten worden gebruikt als voor Intune](../fundamentals/intune-endpoints.md).
 
-1. Selecteer in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **Windows** > **Windows-inschrijving** > **Intune-connector voor Active Directory** > **Toevoegen**. 
-2. Volg de instructies voor het downloaden van de connector.
-3. Open het gedownloade installatiebestand *ODJConnectorBootstrapper.exe* voor de connector om deze te installeren.
-4. Aan het einde van de installatie selecteert u **Configureren**.
-5. Selecteer **Aanmelden.**
-6. Voer de referenties in voor de rol gebruiker, globale beheerder of Intune-beheerder.  
+1. Schakel de functie Verbeterde beveiliging van Internet Explorer uit. De functie Verbeterde beveiliging van Internet Explorer is standaard ingeschakeld in Windows Server. Als u zich niet kunt aanmelden bij de Intune-connector voor Active Directory, schakelt u de functie Verbeterde beveiliging van Internet Explorer uit voor de beheerder. [Verbeterde beveiliging van Internet Explorer uitschakelen](https://blogs.technet.microsoft.com/chenley/2011/03/10/how-to-turn-off-internet-explorer-enhanced-security-configuration). 
+2. Selecteer in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **Windows** > **Windows-inschrijving** > **Intune-connector voor Active Directory** > **Toevoegen**. 
+3. Volg de instructies voor het downloaden van de connector.
+4. Open het gedownloade installatiebestand *ODJConnectorBootstrapper.exe* voor de connector om deze te installeren.
+5. Aan het einde van de installatie selecteert u **Configureren**.
+6. Selecteer **Aanmelden.**
+7. Voer de referenties in voor de rol gebruiker, globale beheerder of Intune-beheerder.  
    Aan het gebruikersaccount moet een Intune-licentie zijn toegewezen.
-7. Ga naar **Apparaten** > **Windows** > **Windows-inschrijving** > **Intune-connector voor Active Directory** en controleer of de status **Actief** is.
+8. Ga naar **Apparaten** > **Windows** > **Windows-inschrijving** > **Intune-connector voor Active Directory** en controleer of de status **Actief** is.
 
 > [!NOTE]
 > Nadat u zich bij de Connector hebt aangemeld, kan het een aantal minuten duren voordat deze in [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) wordt weergegeven. De connector wordt alleen weergegeven als deze met de Intune-service kan communiceren.
-
-### <a name="turn-off-ie-enhanced-security-configuration"></a>Verbeterde beveiliging van Internet Explorer uitschakelen
-De functie Verbeterde beveiliging van Internet Explorer is standaard ingeschakeld in Windows Server. Als u zich niet kunt aanmelden bij de Intune-connector voor Active Directory, schakelt u de functie Verbeterde beveiliging van Internet Explorer uit voor de beheerder. [Verbeterde beveiliging van Internet Explorer uitschakelen](https://blogs.technet.microsoft.com/chenley/2011/03/10/how-to-turn-off-internet-explorer-enhanced-security-configuration)
 
 ### <a name="configure-web-proxy-settings"></a>Webproxyinstellingen configureren
 
@@ -193,12 +191,13 @@ Autopilot-profielen worden gebruikt om de Autopilot-apparaten te configureren.
 4. Selecteer **Volgende**.
 5. Ga op de pagina **Out-Of-Box Experience (OOBE)** naar **Implementatiemodus** en selecteer **Op basis van gebruiker**.
 6. Selecteer in het vak **Toevoegen aan Azure AD als** de optie **Gekoppeld aan Hybrid Azure AD**.
-7. Configureer zo nodig de resterende opties op de pagina **Out-Of-Box Experience (OOBE)** .
-8. Selecteer **Volgende**.
-9. Selecteer op de pagina **Scope-tags** de [scope-tags](../fundamentals/scope-tags.md) voor dit profiel.
-10. Selecteer **Volgende**.
-11. Selecteer op de pagina **Toewijzingen** de optie **Groepen selecteren die u wilt toevoegen** > zoek de apparaatgroep en selecteer deze > **Selecteren**.
-12. Selecteer **Volgende** > **Maken**.
+7. Als u apparaten via het netwerk van de organisatie implementeert met behulp van VPN-ondersteuning, stelt u de optie **Controle van domeinconnectiviteit overslaan** in op **Ja**.  Zie [Door de gebruiker gestuurde modus voor deelname aan hybride Azure Active Directory via VPN](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven#user-driven-mode-for-hybrid-azure-active-directory-join-with-VPN-support) voor meer informatie.
+8. Configureer zo nodig de resterende opties op de pagina **Out-Of-Box Experience (OOBE)** .
+9. Selecteer **Volgende**.
+10. Selecteer op de pagina **Scope-tags** de [scope-tags](../fundamentals/scope-tags.md) voor dit profiel.
+11. Selecteer **Volgende**.
+12. Selecteer op de pagina **Toewijzingen** de optie **Groepen selecteren die u wilt toevoegen** > zoek de apparaatgroep en selecteer deze > **Selecteren**.
+13. Selecteer **Volgende** > **Maken**.
 
 Het duurt ongeveer 15 minuten voordat de status van het apparaatprofiel is gewijzigd van *Niet toegewezen* in *Toewijzen* en tot slot in *Toegewezen*.
 

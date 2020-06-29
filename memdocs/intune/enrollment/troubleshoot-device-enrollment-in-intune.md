@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac29e27c85ad43ccc078c54dd9d5b8b659206f57
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e8f400c946f26de272b782194df3f1b1930ab0b4
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81397761"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093506"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Problemen bij de apparaatinschrijving in Microsoft Intune oplossen
 
@@ -339,7 +339,7 @@ Dit probleem kan zich voordoen als:
 4. Laat de gebruiker de inschrijvingsprocedure opnieuw starten.
 
 #### <a name="determine-if-theres-something-wrong-with-the-vpp-token"></a>Bepalen of er iets mis is met het VPP-token
-1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **iOS** > **iOS-inschrijving** > **Tokens voor het inschrijvingsprogramma** > tokennaam > **Profielen** > profielnaam > **Beheren** > **Eigenschappen**.
+1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **iOS/iPadOS** > **iOS-inschrijving** > **Tokens voor het inschrijvingsprogramma** > tokennaam > **Profielen** > profielnaam > **Beheren** > **Eigenschappen**.
 2. Controleer de eigenschappen om na te gaan of een van de volgende fouten optreden:
     - Dit token is verlopen.
     - Dit token is niet opgenomen in de bedrijfsportallicenties.
@@ -349,7 +349,7 @@ Dit probleem kan zich voordoen als:
 3. Los de problemen voor het token op.
 
 #### <a name="identify-which-devices-are-blocked-by-the-vpp-token"></a>Vaststellen welke apparaten zijn geblokkeerd door het VPP-token
-1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **iOS** > **iOS-inschrijving** > **Tokens voor inschrijvingsprogramma** > tokennaam > **Apparaten**.
+1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **iOS/iPadOS** > **iOS-inschrijving** > **Tokens voor inschrijvingsprogramma** > tokennaam > **Apparaten**.
 2. Filter de kolom **Profielstatus** op **Geblokkeerd**.
 3. Noteer de serienummers van alle apparaten die zijn **geblokkeerd**.
 

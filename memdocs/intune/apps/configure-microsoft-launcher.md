@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/22/2020
+ms.date: 06/09/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 228c6758feca348d2caed4eb3b54207cadf7a037
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 09ebf7fde0cedb907e105e42abe7338237d231af
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985842"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795700"
 ---
 # <a name="configure-microsoft-launcher"></a>Microsoft Launcher configureren
 
@@ -70,7 +70,7 @@ De volgende tabel bevat de configuratiesleutels, waardetypen, standaardwaarden e
 |    Feed inschakelen    |    Boolean-waarde    |    True    |    Hiermee kunt u de startfeed inschakelen op het apparaat, wanneer de gebruiker naar rechts swipet op het startscherm.<ul><li>Als dit is ingesteld op **True**, wordt de feed ingeschakeld.</li><li>Als dit is ingesteld op **False**, wordt de feed uitgeschakeld.</li></ul><br>JSON-sleutelnaam:<br>`com.microsoft.launcher.Feed.Enabled`    |
 |    Gebruiker toestaan het inschakelen van de feed te wijzigen    |    Boolean-waarde    |    True    |     Hiermee kunt u opgeven of de instelling **Feed inschakelen** kan worden gewijzigd door de eindgebruiker.<ul><li>Als dit is ingesteld op **True**, wordt de feed alleen afgedwongen bij de eerste implementatie. Vervolgens wordt het beleid niet afgedwongen om eventuele wijzigingen door te voeren die zijn aangebracht door de gebruiker.</li><li>Als dit is ingesteld op **False**, wordt de feed afgedwongen bij elke synchronisatie.</li></ul><br>JSON-sleutelnaam:`com.microsoft.launcher.Feed.Enabled.UserChangeAllowed`    |
 |    Plaatsing van de zoekbalk   |    Tekenreeks    |    Onderste    |  Hiermee kunt u de **plaatsing van de zoekbalk** op het startscherm opgeven. <ul><li>Als dit is ingesteld op **Onder**, bevindt de zoekbalk zich onderaan het startscherm.</li><li>Als dit is ingesteld op **Boven**, bevindt de zoekbalk zich bovenaan het startscherm.</li><li>Als dit is ingesteld op **Verbergen**, wordt de zoekbalk verwijderd uit het startscherm.</li></ul><br>JSON-sleutelnaam:<br>`com.microsoft.launcher.Search.SearchBar.Placement`    |
-|    Gebruikers toestaan de plaatsing van de zoekbalk te wijzigen   |    Booleaanse waarde    |    True    |  Hiermee kunt u opgeven of de instelling **Plaatsing van de zoekbalk** kan worden gewijzigd door de eindgebruiker. <ul><li>Als dit is ingesteld op **True**, wordt de plaatsing van de zoekbalk alleen afgedwongen bij de eerste implementatie. Vervolgens wordt het beleid niet afgedwongen om eventuele wijzigingen door te voeren die zijn aangebracht door de gebruiker.</li><li>Als dit is ingesteld op **False**, wordt de plaatsing van de zoekbalk afgedwongen bij elke synchronisatie.</li></ul><br>JSON-sleutelnaam:<br>`com.microsoft.launcher.Search.SearchBar.Placement.UserChangeAllowed`    |
+|    Gebruikers toestaan de plaatsing van de zoekbalk te wijzigen   |    Booleaanse waarde    |    True    |  Hiermee kunt u opgeven of de instelling **Plaatsing van de zoekbalk** kan worden gewijzigd door de eindgebruiker. <ul><li>Als dit is ingesteld op **True**, wordt de plaatsing van de zoekbalk alleen afgedwongen bij de eerste implementatie. Vervolgens wordt het beleid niet afgedwongen om eventuele wijzigingen door te voeren die zijn aangebracht door de gebruiker.</li><li>Als dit is ingesteld op **False**, wordt de plaatsing van de zoekbalk afgedwongen bij elke synchronisatie.</li></ul><br>JSON-sleutelnaam:<br>`com.microsoft.launcher.Search.SearchBar.Placement.UserChangeAllowed`<p>**OPMERKING:** Voor Microsoft Launcher v 6.2 en hoger wordt deze instelling niet meer afgedwongen. Daarom heeft het ook geen effect als u deze op `True` instelt. Uw eindgebruikers kunnen de locatie voor plaatsing van de zoekbalk niet aanpassen op hun apparaat.    |
 |    Dock-modus  |    Tekenreeks    |    Weergeven    | Hiermee kunt u het dock inschakelen op het apparaat, wanneer de gebruiker naar rechts veegt op het startscherm.<ul><li>Als dit is ingesteld op **Weergeven**, wordt het dock ingeschakeld.</li><li>Als dit is ingesteld op **Verbergen**, wordt het dock verborgen in het startscherm. De gebruiker kan het dock echter weergeven wanneer dat nodig is.</li><li>Als dit is ingesteld op **Uitgeschakeld**, wordt het dock uitgeschakeld.</li></ul><br>JSON-sleutelnaam:<br>`com.microsoft.launcher.Dock.Mode`    |
 |   Gebruiker toestaan het inschakelen van het dock te wijzigen   |    Tekenreeks    |    True    |  Hiermee kunt u opgeven of de instelling voor de Dock-modus kan worden gewijzigd door de eindgebruiker.<ul><li>Als dit is ingesteld op **True**, wordt de instelling voor de Dock-modus alleen afgedwongen bij de eerste implementatie. Vervolgens wordt het beleid niet afgedwongen om eventuele wijzigingen door te voeren die zijn aangebracht door de gebruiker.</li><li>Als dit is ingesteld op **False**, wordt de instelling voor de Dock-modus afgedwongen bij elke synchronisatie.</li></ul><br>JSON-sleutelnaam:<br>`com.microsoft.launcher.Dock.Mode.UserChangeAllowed`    |
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 06/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 77f0df858f94f3d0b8d6c3a4ee2b251e6b917da6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 43107ce98ee1c9d002b07470c224b2291819069b
+ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79364601"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85264104"
 ---
 # <a name="use-custom-settings-for-android-devices-in-microsoft-intune"></a>Aangepaste instellingen gebruiken voor Android-apparaten in Microsoft Intune
 
@@ -35,6 +35,7 @@ Door een aangepast profiel te gebruiken, kunt u de volgende Android-instellingen
 - [Een Wi-Fi-profiel maken met een vooraf gedeelde sleutel](/intune/wi-fi-profile-shared-key)
 - [Een VPN per app-profiel maken](/intune/android-pulse-secure-per-app-vpn)
 - [Apps toestaan of blokkeren voor Samsung KNOX Standard-apparaten](/intune/samsung-knox-apps-allow-block)
+- [ in Microsoft Defender Advanced Threat Protection voor Android](../protect/advanced-threat-protection.md#configure-web-protection-on-devices-that-run-android)
 
 >[!IMPORTANT]
 > Alleen de hierboven genoemde instellingen kunnen worden geconfigureerd in een aangepast profiel. Android-apparaten geven geen volledige lijst weer met OMA-URI-instellingen die u kunt configureren. Als u meer instellingen wilt bekijken, stemt u voor meer instellingen op de [Intune Uservoice-site](https://microsoftintune.uservoice.com/forums/291681-ideas).

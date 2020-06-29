@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 06/11/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.collection: ''
-ms.openlocfilehash: 028a568b9a588697139f97f292c70c50347217f3
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 740d9b68a0101e04e6bf690d09ecce7eaff4509e
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882077"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107322"
 ---
 # <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>Welke gegevens kan mijn organisatie zien wanneer ik mijn apparaat inschrijf?
 
@@ -55,7 +55,7 @@ Uw organisatie kan uw persoonlijke gegevens niet zien wanneer u een apparaat met
  
  > [!NOTE]
  > Een app wordt beschouwd als **beheerde app** wanneer deze op een van de volgende manieren wordt geïnstalleerd:
- > 1. Een gebruiker installeert deze vanuit de bedrijfsportal-app nadat deze door een Intune-beheerder als **beschikbaar** is gepubliceerd.
+ > 1. Een gebruiker installeert de app via de bedrijfsportal-app nadat de app door een Intune-beheerder als **beschikbaar** is gepubliceerd.
  > 2. De app is door een Intune-beheerder als **vereist** gepubliceerd en is geïnstalleerd op het apparaat. 
  >
  > Zie [De mogelijkheden van niet-beheerde apps, beheerde apps en MAM-apps](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/understanding-the-capabilities-of-unmanaged-apps-managed-apps/ba-p/249164) als u een IT-beheerder of ondersteuningsmedewerker in uw organisatie bent en meer informatie wilt over app-beheer in Intune.
@@ -64,6 +64,6 @@ Uw organisatie kan uw persoonlijke gegevens niet zien wanneer u een apparaat met
 
 - Telefoonnummer: Op apparaten die eigendom zijn van de organisatie is uw volledige telefoonnummer zichtbaar. Voor persoonlijke apparaten zijn alleen de laatste vier cijfers van uw telefoonnummer zichtbaar voor uw organisatie. U kunt het eigendomstype van elk afzonderlijk apparaat zien op de pagina **Apparaatdetails** van dat apparaat.
 - Apparaatopslagruimte: als u een vereiste app niet kunt installeren, kan uw organisatie kijken naar de opslagruimte van het apparaat om te controleren of er wellicht te weinig ruimte is.  
-- Locatie: uw organisatie kan nooit de locatie van uw apparaat zien, tenzij u een verloren iOS-apparaat onder supervisie moet herstellen. Raadpleeg de [Apple iOS-documentatie](https://go.microsoft.com/fwlink/?linkid=853816) voor meer informatie over apparaten onder supervisie.  
-- Details app-inventaris: als uw organisatie gebruikmaakt van Mobile Threat Defense, kunnen er details worden weergegeven over de apps die op uw iOS-apparaat zijn geïnstalleerd. Meer informatie over [Mobile Threat Defense](set-up-mobile-threat-defense.md). Als u een persoonlijk apparaat hebt, kan uw organisatie alleen uw beheerde apps zien. Als u een apparaat hebt dat eigendom is van het bedrijf waar u werkt, kan uw organisatie al uw apps zien.
+- Locatie: Op apparaten in bedrijfseigendom kan uw organisatie de locatie van een zoekgeraakt apparaat bekijken. Voor persoonlijke apparaten kan uw organisatie de locatie van het apparaat nooit bekijken, tenzij wordt geprobeerd om een zoekgeraakt iOS-apparaat onder supervisie op te sporen. Raadpleeg de [Apple iOS-documentatie](https://go.microsoft.com/fwlink/?linkid=853816) voor meer informatie over apparaten onder supervisie.  
+- Details app-inventaris: als uw organisatie gebruikmaakt van Mobile Threat Defense, kunnen er details worden weergegeven over de apps die op uw iOS-apparaat zijn geïnstalleerd. Meer informatie over [Mobile Threat Defense](set-up-mobile-threat-defense.md). Op persoonlijke apparaten kan uw organisatie alleen uw beheerde apps zien. Voor apparaten in bedrijfseigendom kan uw organisatie al uw apps zien.
 - Netwerkgegevens: bepaalde informatie over netwerkverbindingen voor Android-apparaten kan voor de ondersteuning van uw organisatie beschikbaar zijn. Als uw organisatie bijvoorbeeld vereist dat apparaten binnen een bepaald gebouw blijven, herkent uw apparaat het netwerk waarmee het is verbonden. 

@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/19/2019
+ms.date: 06/16/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 8094f9739f05a7e7c0ffc10e9b4835c67c5539b3
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 83a00368c7f47568497669c940e3c2904a479372
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882000"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85094021"
 ---
 # <a name="upload-and-email-logs"></a>Logboeken uploaden en e-mailen  
 
@@ -34,6 +34,8 @@ De daadwerkelijke foutdetails worden op uw apparaat opgeslagen in een speciaal d
 
 > [!Note]
 > Schakel _uitgebreide logboekregistratie_ in de bedrijfsportal in om het voor het ondersteuningsteam van het bedrijf eenvoudiger te maken de oorzaak van het probleem te achterhalen. Als u de Microsoft Intune-app gebruikt, stelt u het **Detailniveau van logboek** in op **Uitgebreid**. Via uitgebreide logboekregistratie worden alle gegevens over een fout geregistreerd en in het rapport vermeld. [Hier vindt u informatie over het inschakelen van uitgebreide logboekregistratie](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md).  
+>
+> Als u een onafhankelijke cloudomgeving gebruikt, is de functionaliteit voor het verzenden van logboeken niet voor u beschikbaar in de bedrijfsportal. U moet logboeken via e-mail verzenden. 
 
 ## <a name="upload-and-email-logs-from-company-portal"></a>Logboeken uploaden en e-mailen vanuit de bedrijfsportal  
 

@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 Customer intent: As an Intune admin, I want to set up the Apple's corporate device enrollment features so that corporate devices can automatically enroll in Intune.
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a3a949738056c9acf33ef09e28f7664690dfd77f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 47f249d105fbc2481dd1d66956032c91d5006834
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078903"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093526"
 ---
 # <a name="tutorial-use-apples-corporate-device-enrollment-features-in-apple-business-manager-abm-to-enroll-iosipados-devices-in-intune"></a>Zelfstudie: De inschrijvingsfuncties voor zakelijke Apple-apparaten in Apple Business Manager (ABM) gebruiken om iOS-/iPadOS-apparaten bij Intune in te schrijven
 Met behulp van de functies voor apparaatinschrijving in Apple Business Manager kunt u apparaten eenvoudiger inschrijven. Intune biedt ook ondersteuning voor de oudere DEP-portal (Device Enrollment Program) van Apple, maar we raden u aan opnieuw te beginnen met Apple Business Manager. Met Microsoft Intune en Apple Corporate Device Enrollment worden apparaten automatisch veilig ingeschreven wanneer gebruikers het apparaat voor de eerste keer inschakelen. U kunt apparaten daarom naar vele gebruikers verzenden zonder elk apparaat afzonderlijk te hoeven instellen. 
@@ -44,7 +44,7 @@ Voordat u iOS-/iPadOS-apparaten inschrijft met behulp van de zakelijke inschrijv
 
 U gebruikt de Apple-portal om een apparaatinschrijvingstoken te maken. U gebruikt de portals ook om apparaten aan Intune toe te wijzen voor beheer.
 
-1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **iOS** > **iOS-inschrijving** > **Tokens voor het inschrijvingsprogramma** > **Toevoegen**.
+1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **iOS/iPadOS** > **iOS-/iPadOS-inschrijving** > **Tokens voor het inschrijvingsprogramma** > **Toevoegen**.
 
 2. Geef Microsoft toestemming om gebruikers- en apparaatgegevens naar Apple te verzenden door **Ik ga akkoord** te selecteren.
 
@@ -80,9 +80,9 @@ U gebruikt de Apple-portal om een apparaatinschrijvingstoken te maken. U gebruik
 ## <a name="create-an-apple-enrollment-profile"></a>Een Apple-inschrijvingsprofiel maken
 Na installatie van de token kunt u een inschrijvingsprofiel voor iOS-/iPadOS-apparaten in het eigendom van uw bedrijf maken. Met een inschrijvingsprofiel voor apparaten worden de instellingen gedefinieerd die worden toegepast op een groep apparaten tijdens de inschrijving.
 
-1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **iOS** > **iOS-inschrijving** > **Tokens voor het inschrijvingsprogramma**.
+1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **iOS/iPadOS** > **iOS-inschrijving** > **Tokens voor het inschrijvingsprogramma**.
 
-2. Selecteer het token dat u zojuist hebt geïnstalleerd en kies **Profielen** > **Profiel maken** > **iOS**.
+2. Selecteer het token dat u zojuist hebt geïnstalleerd en kies **Profielen** > **Profiel maken** > **iOS/iPadOS**.
 
 3. Op de pagina **Basisinformatie** voert u *TestProfile* in als **Naam** en *ADE testen voor iOS-/iPadOS-apparaten* als **Beschrijving**. Gebruikers zien deze gegevens niet.
 
@@ -120,13 +120,13 @@ Na installatie van de token kunt u een inschrijvingsprofiel voor iOS-/iPadOS-app
 
 Zodra u een token voor het inschrijvingsprogramma hebt ingesteld via de ABM-, ASM- of ADE-portal en daar apparaten aan de MDM-server hebt toegewezen, wacht u totdat deze apparaten met de Intune-service zijn gesynchroniseerd of voert u handmatig een synchronisatie uit. Als u geen handmatige synchronisatie uitvoert, kan het tot 24 uur duren voordat apparaten in Azure Portal worden weergegeven.
 
-1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **iOS** > **iOS-inschrijving** > **Tokens voor het inschrijvingsprogramma** > kies een token in de lijst > **Apparaten** > **Synchroniseren**.
+1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **iOS/iPadOS** > **iOS-inschrijving** > **Tokens voor het inschrijvingsprogramma** > kies een token in de lijst > **Apparaten** > **Synchroniseren**.
 
 ## <a name="assign-an-enrollment-profile-to-iosipados-devices"></a>Een inschrijvingsprofiel toewijzen aan iOS-/iPadOS-apparaten
 
 U moet een profiel voor een inschrijvingsprogramma aan apparaten toewijzen voordat deze kunnen worden ingeschreven. Deze apparaten worden via Apple met Intune gesynchroniseerd en moeten aan de juiste MDM-servertoken in de ABM-, ASM- of ADE-portal worden toegewezen.
 
-1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **iOS** > **iOS-inschrijving** > **Tokens voor het inschrijvingsprogramma** > kies een token in de lijst.
+1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **iOS/iPadOS** > **iOS-inschrijving** > **Tokens voor het inschrijvingsprogramma** > kies een token in de lijst.
 2. Kies **Apparaten** > kies apparaten uit de lijst > **Profiel toewijzen**.
 3. Kies onder **Profiel toewijzen** een profiel voor de apparaten > **Toewijzen**.
 

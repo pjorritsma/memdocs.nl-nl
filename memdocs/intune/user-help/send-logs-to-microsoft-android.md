@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/12/2018
+ms.date: 06/16/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 7a842e97e0c276926c07f615a7f9089a64132b50
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: f83b5ae8cc621a6fab813267216900638ff27269
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881049"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85094112"
 ---
 # <a name="send-logs-to-the-company-portal-developers-for-android-devices"></a>Logboeken verzenden naar de bedrijfsportal-ontwikkelaars voor Android-apparaten
 
@@ -43,6 +43,9 @@ Logboeken naar Microsoft verzenden:
     > De knop **Menu** kan een softwareknop of een hardwareknop zijn, afhankelijk van het Android-apparaat dat u gebruikt.
 
 3. Tik op **Alleen logboeken uploaden**.
+
+    > [!NOTE]
+    > Als u een onafhankelijke cloudomgeving gebruikt, is de functionaliteit voor het verzenden van logboeken niet voor u beschikbaar in de bedrijfsportal. U moet logboeken via e-mail verzenden. 
 
 4. Nadat het uploaden is voltooid, ontvangt u een incident-id. Bewaar deze id.
 

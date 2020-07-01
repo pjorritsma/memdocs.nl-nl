@@ -10,12 +10,12 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cb91e62c4ffce37068b2de5e125865e28ff8c53b
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: ffd6487297bb682ef9bda7c5bf5ee9cb3beede15
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878959"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590453"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Basis concepten voor inhouds beheer in Configuration Manager
 
@@ -116,7 +116,7 @@ Gebruik de volgende tabel om de belangrijkste functies van deze technologieën t
 | Grootte van beheer cache op schijf | Ja | Ja | Ja |
 | Detectie van peer-bronnen | Hand matig (client instelling) | Automatisch | Automatisch |
 | Peer-detectie | Via beheer punt met behulp van grens groepen | Cloud service uitvoeren | Uitzenden |
-| Rapportage | Dash board client gegevens bronnen | Dash board client gegevens bronnen | Dash board client gegevens bronnen |
+| Rapporten | Dash board client gegevens bronnen | Dash board client gegevens bronnen | Dash board client gegevens bronnen |
 | Besturings element voor WAN-gebruik | Grensgroepen | GroupID | Alleen subnet |
 | Ondersteunde inhoud | Alle ConfigMgr-inhoud | Windows-updates, stuur Programma's, Store-apps | Alle ConfigMgr-inhoud |
 | Beleidsbeheer | Instellingen voor client agent | Instellingen van client agent (gedeeltelijk) | Instellingen voor client agent |
@@ -147,7 +147,7 @@ Zie [ondersteuning voor Windows BranchCache](../configs/support-for-windows-feat
 <!-- 1324696 -->
 U gebruikt Configuration Manager grens groepen om de distributie van inhoud in uw bedrijfs netwerk en externe kant oren te definiëren en te reguleren. [Windows Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) is een op de cloud gebaseerde peer-to-peer-technologie voor het delen van inhoud tussen Windows 10-apparaten. Configureer Delivery Optimization om uw grens groepen te gebruiken bij het delen van inhoud tussen peers. Client instellingen Toep assen de grens groep-ID als de id van de leverings optimalisatie groep op de client. Wanneer de client communiceert met de Delivery Optimization-Cloud service, wordt deze id gebruikt om peers te zoeken met de inhoud. Zie [Delivery Optimization](../../clients/deploy/about-client-settings.md#delivery-optimization) client settings voor meer informatie.
 
-Delivery Optimization is de aanbevolen technologie voor het optimaliseren van Windows 10 update levering van snelle installatie bestanden voor Windows 10-kwaliteits updates. Vanaf Configuration Manager versie 1910 is DeliveryInternet toegang tot de Cloud service voor leverings optimalisatie een vereiste om gebruik te maken van de peer-to-peer-functionaliteit. Zie [Veelgestelde vragen over Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)voor meer informatie over de benodigde Internet-eind punten. Optimalisatie kan worden gebruikt voor alle Windows-updates. Zie [Windows 10 update delivery](../../../sum/deploy-use/optimize-windows-10-update-delivery.md)voor meer informatie.
+Delivery Optimization is de aanbevolen technologie voor het optimaliseren van Windows 10 update levering van snelle installatie bestanden voor Windows 10-kwaliteits updates. Vanaf Configuration Manager versie 1910 is Internet toegang tot de Cloud Service Delivery Optimization een vereiste om gebruik te maken van de peer-to-peer-functionaliteit. Zie [Veelgestelde vragen over Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)voor meer informatie over de benodigde Internet-eind punten. Optimalisatie kan worden gebruikt voor alle Windows-updates. Zie [Windows 10 update delivery](../../../sum/deploy-use/optimize-windows-10-update-delivery.md)voor meer informatie.
 
 
 ## <a name="microsoft-connected-cache"></a>Microsoft verbonden cache

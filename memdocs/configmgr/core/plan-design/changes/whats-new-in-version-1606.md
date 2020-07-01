@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 4298a6a66d60d79d05f8b5cdc9ff8caa0e7f4426
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 070c616ed8411bcd90b2d3edb12b04edd57241e1
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074024"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590470"
 ---
 # <a name="what39s-new-in-version-1606-of-configuration-manager"></a>Wat&#39;s nieuw in versie 1606 van Configuration Manager
 
@@ -198,7 +198,7 @@ Configuration Manager kan u op twee manieren helpen met het beheer van de active
 
 Endpoint Protection kunt micro soft Defender Advanced Threat Protection (ATP) beheren en bewaken. Micro soft Defender ATP is een nieuwe service waarmee bedrijven geavanceerde aanvallen op hun netwerken kunnen detecteren, onderzoeken en hierop reageren. Met Configuration Manager-beleid kunt u beheerde computers met Windows 10, versie 1607 (build 14328) of hoger op de bewaken en controleren.
 
-Zie [micro soft Defender Advanced Threat Protection](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md)(Engelstalig) voor meer informatie.
+Zie [micro soft Defender Advanced Threat Protection](../../../protect/deploy-use/defender-advanced-threat-protection.md)(Engelstalig) voor meer informatie.
 
 ### <a name="device-categories"></a>Apparaatcategorieën
 U kunt apparaatcategorieën maken. deze kunnen worden gebruikt om apparaten automatisch in verzamelingen te plaatsen wanneer u Configuration Manager gebruikt met Microsoft Intune. Gebruikers moeten dan een apparaatcategorie kiezen wanneer ze een apparaat registreren bij intune. Daarnaast kunt u de categorie van een apparaat wijzigen vanuit de Configuration Manager-console.

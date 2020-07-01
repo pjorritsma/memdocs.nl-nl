@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de83a021343b733816330bc9be94c57a57afd9f1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 43d412fda772fd36710895496087e97d782b8dba
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989837"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502626"
 ---
 # <a name="enrolled-device-management-capabilities-of-microsoft-intune"></a>Beheermogelijkheden voor geregistreerde apparaten in Microsoft Intune
 
@@ -55,7 +55,7 @@ Gebruikers krijgen toegang tot de bedrijfsportal waar ze apps kunnen installeren
 |Beheer van mobiele toepassingen|Hiermee configureert u beperkingen voor apps met Mobile Application Management voor alle apparaten: zowel apparaten die met Intune worden beheerd als apparaten die niet met Intune worden beheerd. U kunt de beveiliging van uw bedrijfsgegevens verbeteren door bepaalde bewerkingen te beperken, zoals kopiëren en plakken, het maken van een externe back-up van gegevens en de gegevensoverdracht tussen apps.|[Mobile Application Management-beleid configureren en implementeren in de Microsoft Intune-console](../developer/app-wrapper-prepare-android.md)|
 |Configuratie van mobiele apps voor iOS-apparaten|Configuratiebeleidsregels voor mobiele apps worden gebruikt om voor iOS-/iPadOS-apps instellingen op te geven die mogelijk vereist zijn wanneer de gebruiker de app uitvoert. Een app kan bijvoorbeeld vereisen dat de gebruiker een poortnummer of aanmeldingsgegevens opgeeft. U kunt de app-configuratie stroomlijnen en het aantal telefonische ondersteuningsvragen verminderen.|[iOS-/iPadOS-apps configureren met configuratiebeleidsregels voor mobiele apps in Microsoft Intune](../apps/app-configuration-policies-use-ios.md)|
 |Profielen voor mobiele apps voor iOS-/iPadOS-apparaten inrichten|Deze helpen u bij het implementeren van inrichtingsprofielen voor iOS-/iPadOS-apps die bijna zijn verlopen. |[Beleidsregels voor profielinrichting voor mobiele iOS-/iPadOS-apps gebruiken om te voorkomen dat uw apps verlopen](../apps/app-provisioning-profile-ios.md)|
-|Beheerde browser|Hiermee configureert u Managed Browser-beleid waarmee u bepaalt welke websites apparaatgebruikers wel en niet kunnen bezoeken. U kunt bovendien ook Mobile Application Management-beleid toepassen op de beheerde browser.|[Internettoegang beheren met beheerde-browserbeleid met Microsoft Intune](../apps/app-configuration-managed-browser.md)|
+|Beheerde browser|Hiermee configureert u Managed Browser-beleid waarmee u bepaalt welke websites apparaatgebruikers wel en niet kunnen bezoeken. U kunt bovendien ook Mobile Application Management-beleid toepassen op de beheerde browser.|[Internettoegang beheren met beheerde-browserbeleid met Microsoft Intune](../apps/manage-microsoft-edge.md)|
 |Windows Hello voor Bedrijven|Hiermee maakt u integratie met Windows Hello voor Bedrijven mogelijk. Dit is een alternatieve aanmeldingsmethode voor Windows 10 waarbij on-premises Active Directory of Azure Active Directory wordt gebruikt ter vervanging van een wachtwoord, smartcards of virtuele smartcards.|[Instellingen van Windows Hello voor Bedrijven beheren op apparaten met Microsoft Intune](../protect/windows-hello.md)|
 |Apps die zijn gekocht via het volume-aankoopprogramma|Hiermee kunt u apps beheren die u via een volume-aankoopprogramma hebt gekocht, door de licentiegegevens uit de App Store te importeren en bij te houden hoeveel licenties u hebt gebruikt. Zo wordt voorkomen dat u meer exemplaren van de app installeert dan u hebt gekocht.|[Met Microsoft Intune apps beheren die zijn gekocht via het volume-aankoopprogramma](../apps/vpp-apps.md)|
 

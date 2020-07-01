@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 58c78b43fc90aba68fa20d20153b33e7879636e6
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: c0a732db0adf9d08bf8a453a365002d8e1f8b22d
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166073"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502711"
 ---
 # <a name="microsoft-intune-app-sdk-overview"></a>Overzicht van de Microsoft Intune App SDK
 Met de Intune App SDK voor iOS en Android kan uw app worden in geschakeld voor ondersteuning van [Intune-beleid voor app-beveiliging](../apps/app-protection-policy.md). Wanneer er app-beveiligingsbeleid op uw app is toegepast, kan deze worden beheerd door Intune en wordt deze door Intune herkend als een beheerde app. De SDK streeft ernaar om het aantal door de app-ontwikkelaar vereiste codewijzigingen zo klein mogelijk te maken. U ziet dat u de meeste van de SDK-functies kunt inschakelen zonder het gedrag van uw app te wijzigen. U kunt de API's van de SDK gebruiken voor het aanpassen van uw app-gedrag voor ondersteuning van functies waarvoor de deelname van uw app is vereist, voor een verbeterde ervaring voor eindgebruikers en IT-beheerders.
@@ -47,7 +47,7 @@ IT-beheerders kunnen beleid afdwingen dat ervoor zorgt dat de gegevens die door 
 IT-beheerders kunnen op afstand bedrijfsgegevens wissen uit een met Intune beheerde app. Deze functie is op de identiteit gebaseerd en verwijdert alleen bestanden die betrekking hebben op de zakelijke identiteit van de eindgebruiker. Hiertoe vereist de functie deelname van de app. De app aangeven voor welke identiteit het wissen moet plaatsvinden op basis van de instellingen van de gebruiker. Als dergelijke instellingen niet door de gebruiker in de app zijn opgegeven, is het standaardgedrag om de toepassingsmap te wissen en de eindgebruiker te informeren dat de toegang is verwijderd.
 
 ### <a name="enforce-the-use-of-a-managed-browser"></a>Het gebruik van een beheerde browser afdwingen
-IT-beheerders kunnen afdwingen dat webkoppelingen in de app worden geopend met de [Intune Managed Browser-app](../apps/app-configuration-managed-browser.md). Deze functionaliteit zorgt ervoor dat de koppelingen die worden weergegeven in een bedrijfsomgeving binnen het domein van door Intune beheerde apps worden gehouden.
+IT-beheerders kunnen afdwingen dat webkoppelingen in de app worden geopend met de [Intune Managed Browser-app](../apps/manage-microsoft-edge.md). Deze functionaliteit zorgt ervoor dat de koppelingen die worden weergegeven in een bedrijfsomgeving binnen het domein van door Intune beheerde apps worden gehouden.
 
 ### <a name="enforce-a-pin-policy"></a>Een pincodebeleid afdwingen
 IT-beheerders kunnen vereisen dat eindgebruikers een pincode invoeren om bedrijfsgegevens in de app te openen. Dit zorgt ervoor dat de persoon die de app gebruikt, dezelfde is als degene die zich aanvankelijk heeft aangemeld met een werk- of schoolaccount. Wanneer eindgebruikers hun pincode configureren, gebruikt Intune App SDK Azure Active Directory om te controleren of de referenties van eindgebruikers overeenkomen met het ingeschreven Intune account.

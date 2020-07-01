@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02e07ec75b7c0d07a81a9c6f555cf119310a9a9f
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 62348a4e551112a93f960388d6e21b398c447dfc
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093685"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502371"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Lijsten met apparaatbeperkingen voor Android en Samsung Knox Standard in Intune
 
@@ -178,7 +178,7 @@ Voeg voor elke instelling uw apps toe:
 
 Kioskinstellingen zijn alleen van toepassing op apparaten met Samsung Knox Standard en alleen op apps die u beheert via Intune.
 
-- Voeg apps toe die moeten worden uitgevoerd wanneer het apparaat in de kiosk-modus staat. In de kiosk-modus worden alleen de apps uitgevoerd die u toevoegt. Apps die niet zijn toegevoegd, worden niet uitgevoerd. Vooraf geïnstalleerde browsers worden niet uitgevoerd als een app wanneer het apparaat in de kiosk-modus staat. Als een browser is vereist, kunt u overwegen de [Managed Browser](../apps/app-configuration-managed-browser.md) te gebruiken.
+- Voeg apps toe die moeten worden uitgevoerd wanneer het apparaat in de kiosk-modus staat. In de kiosk-modus worden alleen de apps uitgevoerd die u toevoegt. Apps die niet zijn toegevoegd, worden niet uitgevoerd. Vooraf geïnstalleerde browsers worden niet uitgevoerd als een app wanneer het apparaat in de kiosk-modus staat. Als een browser is vereist, kunt u overwegen de [Managed Browser](../apps/manage-microsoft-edge.md) te gebruiken.
 
   Opties voor uw app:
 

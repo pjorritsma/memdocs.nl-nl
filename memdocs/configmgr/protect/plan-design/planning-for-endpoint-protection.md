@@ -9,12 +9,12 @@ ms.assetid: 7610bbd3-a67f-4a09-8115-e35d40d43b42
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 720b5060c913ff3157624c4b6060802af396d221
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2c733ef03482ddfc1f3e6502d7f5fe8ae0d20b76
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722170"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590504"
 ---
 # <a name="planning-for-endpoint-protection-in-configuration-manager"></a>Endpoint Protection plannen in Configuration Manager
 
@@ -81,7 +81,7 @@ Met Endpoint Protection in Configuration Manager kunt u een antimalwarebeleid ma
 
 ## <a name="microsoft-defender-advanced-threat-protection"></a>Microsoft Defender Advanced Threat Protection
 
-Vanaf versie 1606 van Configuration Manager (current branch) kan Endpoint Protection helpen bij het beheren en bewaken van micro soft Defender Advanced Threat Protection (ATP), voorheen bekend als Windows Defender ATP. Micro soft Defender ATP is een service waarmee bedrijven geavanceerde aanvallen op hun netwerken kunnen detecteren, onderzoeken en hierop reageren. Zie [micro soft Defender Advanced Threat Protection](../deploy-use/windows-defender-advanced-threat-protection.md)(Engelstalig).
+Vanaf versie 1606 van Configuration Manager (current branch) kan Endpoint Protection helpen bij het beheren en bewaken van micro soft Defender Advanced Threat Protection (ATP), voorheen bekend als Windows Defender ATP. Micro soft Defender ATP is een service waarmee bedrijven geavanceerde aanvallen op hun netwerken kunnen detecteren, onderzoeken en hierop reageren. Zie [micro soft Defender Advanced Threat Protection](../deploy-use/defender-advanced-threat-protection.md)(Engelstalig).
 
 ## <a name="endpoint-protection-workflow"></a>Endpoint Protection-werkstroom  
  Gebruik het volgende diagram om inzicht te krijgen in de werk stroom voor het implementeren van Endpoint Protection in uw Configuration Manager-hiërarchie.  

@@ -10,12 +10,12 @@ ms.assetid: 76c90f64-d729-456b-8304-01852cd66fb6
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5bdfd566682156e39e1dbed7c55af85b20a78671
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 0a7ee54e3bfa4a4231d0d57b48caa49cf9869b76
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906684"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85591099"
 ---
 # <a name="endpoint-protection"></a>Endpoint Protection
 
@@ -80,7 +80,7 @@ Vanaf Windows 10-en Windows Server 2016-computers is Windows Defender al geïnst
 
 ## <a name="microsoft-defender-advanced-threat-protection"></a>Microsoft Defender Advanced Threat Protection
 
-Endpoint Protection beheert en bewaakt micro soft Defender Advanced Threat Protection (ATP), voorheen bekend als Windows Defender ATP. De micro soft Defender ATP-service helpt ondernemingen bij het detecteren, onderzoeken en reageren op geavanceerde aanvallen op het bedrijfs netwerk. Zie [micro soft Defender Advanced Threat Protection](windows-defender-advanced-threat-protection.md)(Engelstalig) voor meer informatie.
+Endpoint Protection beheert en bewaakt micro soft Defender Advanced Threat Protection (ATP), voorheen bekend als Windows Defender ATP. De micro soft Defender ATP-service helpt ondernemingen bij het detecteren, onderzoeken en reageren op geavanceerde aanvallen op het bedrijfs netwerk. Zie [micro soft Defender Advanced Threat Protection](defender-advanced-threat-protection.md)(Engelstalig) voor meer informatie.
 
 ## <a name="endpoint-protection-workflow"></a>Endpoint Protection-werkstroom  
  Gebruik het volgende diagram om inzicht te krijgen in de werk stroom voor het implementeren van Endpoint Protection in uw Configuration Manager-hiërarchie.  
@@ -113,7 +113,7 @@ Gebruik de volgende stappen om het installatie kopie bestand te downloaden met d
 2. Selecteer het tabblad **down loads en sleutels** boven aan de website.
 3. Filteren op product **System Center Endpoint Protection (huidige branch)**.
 4. Klik op koppeling om te **downloaden**
-5. Klik op **Continue**. Er moeten verschillende bestanden worden weer geven, waaronder een met de naam: **System Center Endpoint Protection (huidige versie 1606) voor Linux OS en Macintosh OS multi taal 32/64 bits 1878 MB ISO**.
+5. Klik op **Doorgaan**. Er moeten verschillende bestanden worden weer geven, waaronder een met de naam: **System Center Endpoint Protection (huidige versie 1606) voor Linux OS en Macintosh OS multi taal 32/64 bits 1878 MB ISO**.
 6. Klik op het pijl pictogram om het bestand te downloaden. De bestands naam is **SW_DVD5_Sys_Ctr_Endpnt_Prtctn_1606_MultiLang_-3_EptProt_Lin_Mac_MLF_X21-67050. ISO**.
 
 De update van januari 2018 (X21-67050) bevat de volgende versies:

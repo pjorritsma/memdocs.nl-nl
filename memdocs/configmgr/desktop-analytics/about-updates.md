@@ -11,17 +11,21 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 1c79db413f8e37424b84d98d51fb584d168e3819
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 96a014f4919480854b57bae82e982ce783f5f59b
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268926"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590963"
 ---
 # <a name="updates-in-desktop-analytics"></a>Updates in Desktop Analytics
 
 Bekijk de status van beveiligings-en functie-updates in de Desktop Analytics-Portal. Selecteer deze knoop punten in de groep monitor van het hoofd menu van Desktop Analytics. Deze knoop punten geven u inzicht in de status van deze updates in uw omgeving.
 
+<!--7362999-->
+
+> [!IMPORTANT]
+> Desktop Analytics geeft de update status van beveiliging en onderdelen weer voor apparaten met de commerciële ID die is gekoppeld aan de werk ruimte van uw bureau blad Analytics. Dit gedrag treedt op of u de apparaten hebt Inge schreven bij Configuration Manager. Het totale aantal apparaten op deze tegels komt mogelijk niet overeen met het aantal geregistreerde apparaten in [**verbonden services**](monitor-connection-health.md#commercial-id-configuration).
 
 ## <a name="security-updates"></a>Beveiligingsupdates
 
@@ -52,7 +56,7 @@ Als u de trends van de acceptatie voor beveiligings updates wilt zien, selecteer
 Als u de implementatie status voor beveiligings updates wilt controleren, selecteert u **alles weer geven**. In deze weer gave ziet u de apparaten in de volgende categorieën:
 
 - Niet gestart
-- Actief
+- Wordt uitgevoerd
 - Voltooid
 - Aandacht vereist: apparaten (gesorteerd op apparaatnaam)
 - Aandacht vereist: problemen (gesorteerd op probleem type)

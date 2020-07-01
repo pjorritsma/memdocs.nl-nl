@@ -10,12 +10,12 @@ ms.assetid: e3e3c97f-5945-49ab-a622-9f6fe6b9737e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b97f9bb6be00129e0b88dc3943af1de166a801d4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 91b938b5ab64616a35773406cd18b54de80b40e7
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711285"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590398"
 ---
 # <a name="windows-autopilot-with-co-management"></a>Windows Autopilot met co-beheer
 
@@ -77,9 +77,9 @@ Met auto pilot kunt u nu een hand-free installatie van het besturings systeem le
 
 ## <a name="case-study"></a>Casestudy
 
-De Duitse logistiek-en rails-shenker maakt gebruik van auto pilot om de productiviteit van werk nemers te verg Roten en de IT-teams vrij te maken van werk op dagelijkse ondersteunings taken. Shenker is verwijderd van de traditionele Imaging en is vervangen door het inrichten via de Cloud. Ze maken nu gebruik van Azure AD-samen voegen en intune om nieuwe apparaten snel aan de slag te krijgen. 
+De Duitse logistiek-en rails-Schenker maakt gebruik van auto pilot om de productiviteit van werk nemers te verg Roten en de IT-teams vrij te maken van werk op dagelijkse ondersteunings taken. DB Schenker is verwijderd van traditionele Imaging en is vervangen door het inrichten via de Cloud. Ze maken nu gebruik van Azure AD-samen voegen en intune om nieuwe apparaten snel aan de slag te krijgen. 
 
-In plaats van dat hun externe werk nemers tijd verspillen op een locatie met IT-Services, gebruikt shenker nu Windows auto pilot. Ze leveren hun werk nemers rechtstreeks van de fabrikant naar hun lokale veld kantoor. De werk nemer verbindt het nieuwe apparaat met internet en meldt zich aan met hun Azure AD-referenties. Het apparaat maakt vervolgens verbinding met de toepassingen en services die door de IT-afdeling van Schenker worden toegewezen aan het afzonderlijke Profiel van de gebruiker.
+In plaats van dat hun externe werk nemers tijd verspillen op een locatie met IT-Services, maakt DB Schenker nu gebruik van Windows auto pilot. Ze leveren hun werk nemers rechtstreeks van de fabrikant naar hun lokale veld kantoor. De werk nemer verbindt het nieuwe apparaat met internet en meldt zich aan met hun Azure AD-referenties. Het apparaat maakt vervolgens verbinding met de toepassingen en services die door de IT-afdeling van de DB-Schenker worden toegewezen aan het afzonderlijke Profiel van de gebruiker.
 
 Zie voor meer informatie [Global logistiek Fiat centraliseren, werk nemers samen met moderne digitale werk plek](https://customers.microsoft.com/story/db-schenker-travel-transportation-windows-10).
 

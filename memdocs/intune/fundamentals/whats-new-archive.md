@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1881e43c1725d92a81d794fa240e6394eff1cbd4
-ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
+ms.openlocfilehash: 2cf8e493ed1318fbf1e1fee6ca8a50001a586cd6
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85264070"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502388"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Wat is er nieuw in Microsoft Intune - vorige maanden
 
@@ -1674,7 +1674,7 @@ U kunt met het nieuwe [versleutelingsrapport (preview)](../protect/encryption-mo
 U kunt nu Intune gebruiken om [details weer te geven](../protect/encryption-monitor.md) over BitLocker-sleutelidentificatie en BitLocker-herstelsleutels vanuit Azure Active Directory.
 
 #### <a name="microsoft-edge-support-for-intune-scenarios-on-ios-and-android-devices---3411007---"></a>Microsoft Edge-ondersteuning voor Intune-scenario's op iOS- en Android-apparaten<!-- 3411007 -->
-Microsoft Edge biedt ondersteuning voor dezelfde beheerscenario's als de Intune Managed Browser, met een verbeterde ervaring voor eindgebruikers. Microsoft Edge-functies voor bedrijven die zijn ingeschakeld door het Intune-beleid zijn onder meer dubbele identiteit, integratie van app-beveiligingsbeleid, integratie van Azure-toepassingsproxy's, beheerde favorieten en snelkoppelingen voor de startpagina. Zie de [ondersteuning voor Microsoft Edge](../apps/app-configuration-managed-browser.md#microsoft-edge-support) voor meer informatie.
+Microsoft Edge biedt ondersteuning voor dezelfde beheerscenario's als de Intune Managed Browser, met een verbeterde ervaring voor eindgebruikers. Microsoft Edge-functies voor bedrijven die zijn ingeschakeld door het Intune-beleid zijn onder meer dubbele identiteit, integratie van app-beveiligingsbeleid, integratie van Azure-toepassingsproxy's, beheerde favorieten en snelkoppelingen voor de startpagina. Zie de [ondersteuning voor Microsoft Edge](../apps/manage-microsoft-edge.md) voor meer informatie.
 
 #### <a name="exchange-onlineintune-connector-deprecate-support-for-eas-only-devices--3105122----"></a>Exchange Online-/Intune-connector bieden geen ondersteuning meer voor apparaten voor alleen EAS<!--3105122  -->
 De Intune-console ondersteunt niet langer de weergave en het beheer van apparaten voor alleen EAS die met Exchange Online zijn verbonden met de Intune-connector. U hebt in plaats daarvan de volgende opties:
@@ -1721,7 +1721,7 @@ U kunt een bereiktag toevoegen aan een inrichtingsprofiel voor iOS-apps, zodat a
 U kunt een bereiktag toevoegen aan app-configuratiebeleid, zodat alleen personen met rollen die ook zijn toegewezen aan de bereiktag, toegang hebben tot het app-configuratiebeleid. Het app-configuratiebeleid kan alleen doel zijn voor of worden gekoppeld aan apps waaraan dezelfde bereiktag is toegewezen. Zie [RBAC en bereiktags gebruiken](scope-tags.md) voor meer informatie.
 
 #### <a name="microsoft-edge-support-for-intune-scenarios-on-ios-and-android-devices---3411007---"></a>Microsoft Edge-ondersteuning voor Intune-scenario's op iOS- en Android-apparaten<!-- 3411007 -->
-Microsoft Edge biedt ondersteuning voor dezelfde beheerscenario's als de Intune Managed Browser met de toevoeging van verbeteringen in de eindgebruikerervaring. Microsoft Edge-functies voor bedrijven die zijn ingeschakeld door het Intune-beleid zijn onder meer dubbele identiteit, integratie van app-beveiligingsbeleid, integratie van Azure-toepassingsproxy's, beheerde favorieten en snelkoppelingen voor de startpagina. Zie de [ondersteuning voor Microsoft Edge](../apps/app-configuration-managed-browser.md#microsoft-edge-support) voor meer informatie.
+Microsoft Edge biedt ondersteuning voor dezelfde beheerscenario's als de Intune Managed Browser met de toevoeging van verbeteringen in de eindgebruikerervaring. Microsoft Edge-functies voor bedrijven die zijn ingeschakeld door het Intune-beleid zijn onder meer dubbele identiteit, integratie van app-beveiligingsbeleid, integratie van Azure-toepassingsproxy's, beheerde favorieten en snelkoppelingen voor de startpagina. Zie de [ondersteuning voor Microsoft Edge](../apps/manage-microsoft-edge.md) voor meer informatie.
 
 
 
@@ -3927,7 +3927,7 @@ Wanneer het profiel naar het apparaat is gepusht, is de volgende stap afhankelij
 #### <a name="access-to-managed-app-logs-for-ios---1469920---"></a>Toegang tot de logboeken van de beheerde app voor iOS<!-- 1469920 -->
 Eindgebruikers waarvoor de beheerde browser is geïnstalleerd kunnen de beheerstatus van alle gepubliceerde Microsoft-apps bekijken en logbestanden versturen om problemen met hun beheerde iOS-apps op te lossen.
 
-Zie [Toegang tot de logboeken van de beheerde app voor iOS](../apps/app-configuration-managed-browser.md) voor meer informatie over het inschakelen van de probleemoplossingsmodus in de beheerde browser op een iOS-apparaat.
+Zie [Toegang tot de logboeken van de beheerde app voor iOS](../apps/manage-microsoft-edge.md) voor meer informatie over het inschakelen van de probleemoplossingsmodus in de beheerde browser op een iOS-apparaat.
 
 #### <a name="improvements-to-device-setup-workflow-in-the-company-portal-for-ios-in-version-290---1417174---"></a>Verbeteringen in de werkstroom voor apparaatinstellingen in de bedrijfsportal voor iOS in versie 2.9.0<!-- 1417174 -->
 
@@ -4347,11 +4347,11 @@ Offlineapps die u hebt gekocht in Microsoft Store voor Bedrijven worden voortaan
 De Microsoft Teams-app voor iOS en Android is nu een goedgekeurde app voor toepassing van beleid voor voorwaardelijke toegang op basis van apps voor Exchange en SharePoint Online. De app kan via de blade Intune-app-beveiliging in Azure Portal worden geconfigureerd voor alle tenants die op dit moment gebruikmaken van voorwaardelijke toegang op basis van apps.
 
 #### <a name="managed-browser-and-app-proxy-integration---1287310---"></a>Managed Browser en app-proxy-integratie<!-- 1287310 -->
-De Intune-app Managed Browser kan nu worden geïntegreerd met de Azure AD-toepassingsproxy om gebruikers ook toegang te bieden tot interne websites als ze op afstand werken. Gebruikers van de browser voeren op de gebruikelijke manier de URL van de gewenste site in en de Managed Browser-app verstuurt de aanvraag via de webgateway van de toepassingsproxy. Zie [Internettoegang beheren met beleid van Managed Browser](../apps/app-configuration-managed-browser.md) voor meer informatie.
+De Intune-app Managed Browser kan nu worden geïntegreerd met de Azure AD-toepassingsproxy om gebruikers ook toegang te bieden tot interne websites als ze op afstand werken. Gebruikers van de browser voeren op de gebruikelijke manier de URL van de gewenste site in en de Managed Browser-app verstuurt de aanvraag via de webgateway van de toepassingsproxy. Zie [Internettoegang beheren met beleid van Managed Browser](../apps/manage-microsoft-edge.md) voor meer informatie.
 
 #### <a name="new-app-configuration-settings-for-the-intune-managed-browser---682951---"></a>Nieuw app-configuratie-instellingen voor Intune Managed Browser<!-- 682951 -->
 In deze release hebben we weer extra configuraties toegevoegd voor de Intune Managed Browser-app voor iOS en Android. U kunt nu een beleid voor app-configuratie gebruiken om de standaardstartpagina en -bladwijzers voor de browser te configureren.
-Zie [Internettoegang beheren met beleid van Managed Browser](../apps/app-configuration-managed-browser.md) voor meer informatie.
+Zie [Internettoegang beheren met beleid van Managed Browser](../apps/manage-microsoft-edge.md) voor meer informatie.
 
 #### <a name="bitlocker-settings-for-windows-10----951707---"></a>BitLocker-instellingen voor Windows 10 <!-- 951707 -->
 U kunt nu BitLocker-instellingen configureren voor Windows 10-apparaten met behulp van een nieuw Intune-apparaatprofiel. U kunt bijvoorbeeld afdwingen dat apparaten worden versleuteld en nog andere instellingen configureren die worden toegepast als BitLocker is ingeschakeld.
@@ -4438,10 +4438,10 @@ Zie [Beveiligingsbeleidsinstellingen voor iOS-apps](../apps/app-protection-polic
 Sommige Android-apps uit de store ondersteunen beheerde configuratieopties waarmee een IT-beheerder kan controleren hoe een app wordt uitgevoerd in het werkprofiel. Met Intune kunt u nu de configuraties weergeven die worden ondersteund door een app en deze configureren vanuit de Azure-portal met een configuratieontwerper of een JSON-editor. Zie [Use app configurations for Android for Work](../apps/app-configuration-policies-use-android.md) (App-configuraties gebruiken voor Android for Work) voor meer informatie.
 
 #### <a name="new-app-configuration-capability-for-mam-without-enrollment---677969---"></a>Nieuwe mogelijkheid voor app-configuratie voor MAM zonder inschrijving<!-- 677969 -->
-U kunt nu beleidsregels voor app-configuratie maken via het kanaal voor MAM zonder inschrijving. Deze functie is gelijk aan de beleidsregels voor app-configuratie die beschikbaar zijn in de MDM-app-configuratie (Mobile Device Management). Zie [Internettoegang beheren met beheerde-browserbeleid met Microsoft Intune](../apps/app-configuration-managed-browser.md) voor een voorbeeld van app-configuratie met MAM zonder inschrijving.
+U kunt nu beleidsregels voor app-configuratie maken via het kanaal voor MAM zonder inschrijving. Deze functie is gelijk aan de beleidsregels voor app-configuratie die beschikbaar zijn in de MDM-app-configuratie (Mobile Device Management). Zie [Internettoegang beheren met beheerde-browserbeleid met Microsoft Intune](../apps/manage-microsoft-edge.md) voor een voorbeeld van app-configuratie met MAM zonder inschrijving.
 
 #### <a name="configure-allowed-and-blocked-url-lists-for-the-managed-browser---682960---"></a>Lijsten met toegestane en geblokkeerde URL's voor Managed Browser configureren<!-- 682960 -->
-U kunt nu een lijst configureren met toegestane en geblokkeerde domeinen en URL's voor de Intune Managed Browser met app-configuratie-instellingen in Azure Portal. Deze instellingen kunnen altijd worden geconfigureerd, ongeacht of de lijst wordt gebruikt op een beheerd of onbeheerd apparaat. Zie [Internettoegang beheren met beheerde-browserbeleid met Microsoft Intune](../apps/app-configuration-managed-browser.md) voor meer informatie.
+U kunt nu een lijst configureren met toegestane en geblokkeerde domeinen en URL's voor de Intune Managed Browser met app-configuratie-instellingen in Azure Portal. Deze instellingen kunnen altijd worden geconfigureerd, ongeacht of de lijst wordt gebruikt op een beheerd of onbeheerd apparaat. Zie [Internettoegang beheren met beheerde-browserbeleid met Microsoft Intune](../apps/manage-microsoft-edge.md) voor meer informatie.
 
 #### <a name="app-protection-policy-helpdesk-view---1069473---"></a>Helpdeskweergave voor beveiligingsbeleidsinstellingen voor apps<!-- 1069473 -->
 IT-helpdeskgebruikers kunnen nu de status van de gebruikerslicentie en de status van aan gebruikers toegewezen app-beveiligingsbeleid controleren de blade voor probleemoplossing. Zie [Probleemoplossing](./help-desk-operators.md) voor meer informatie.

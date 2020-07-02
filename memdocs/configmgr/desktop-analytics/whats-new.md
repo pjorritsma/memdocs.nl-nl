@@ -2,7 +2,7 @@
 title: Wat is er nieuw in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Een samen vatting van de nieuwe functies in de meest recente maandelijkse versie van de Desktop Analytics-Cloud service.
-ms.date: 06/04/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 5265ee88cbe6dc119d6d14dadd3fadad6a52b253
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: ec554d755b92d1c710def580a34fdbbddc7b4d45
+ms.sourcegitcommit: 2c5fd7c8603b88b753765f3cc298d0a0bacaf521
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84454950"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85819968"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>Wat is er nieuw in Desktop Analytics
 
@@ -27,6 +27,28 @@ Meer informatie over wat er elke maand nieuw is in Desktop Analytics.
 
 Als u een melding wilt ontvangen wanneer deze pagina wordt bijgewerkt, kopieert en plakt u de volgende URL in uw RSS feed-lezer:`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
+
+## <a name="july-2020"></a>2020 juli
+
+### <a name="windows-10-version-2004-now-available-in-desktop-analytics"></a>Windows 10, versie 2004, nu beschikbaar in Desktop Analytics
+
+<!-- 7370207 -->
+
+Wanneer u de updates voor beveiliging en onderdelen bewaken in de portal van de Desktop Analytics, ziet u nu Windows 10, versie 2004. Wanneer u een implementatie plan maakt, kunt u Windows 10, versie 2004, als doel versie selecteren.
+
+### <a name="improved-support-for-viewing-the-portal-from-any-device"></a>Verbeterde ondersteuning voor het weer geven van de portal vanaf elk apparaat
+
+<!-- 6270240 -->
+
+U kunt nu de bureau blad Analytics-Portal in het micro soft Endpoint Manager-beheer centrum bekijken vanuit diverse typen apparaten. Het voldoet nu aan de richt lijnen voor toegankelijkheid van webinhoud (WCAG) 2,1 voor een weergave resolutie van minder dan 320 x 256 pixels. De volgende afbeelding is bijvoorbeeld van de portal van een Apple iPhone 8:
+
+:::image type="content" source="media/dashboard-iphone8.png" alt-text="Desktop Analytics-Portal op een iPhone 8":::
+
+### <a name="notifications-for-service-impacting-events"></a>Meldingen voor gebeurtenissen die betrekking hebben op de service
+
+<!-- 4982509 -->
+
+De Desktop Analytics-Portal kan nu meldings banners weer geven. Met deze meldingen kan micro soft met u communiceren over belang rijke gebeurtenissen en problemen. Bijvoorbeeld bekende problemen met de service, gegevens latentie of nieuwe vereisten. Zie [service meldingen](troubleshooting.md#service-notifications)voor meer informatie.
 
 ## <a name="june-2020"></a>Juni 2020
 

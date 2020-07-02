@@ -2,7 +2,7 @@
 title: Problemen met Desktop Analytics oplossen
 titleSuffix: Configuration Manager
 description: Technische Details voor hulp bij het oplossen van problemen met Desktop Analytics.
-ms.date: 04/01/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: cfd329b7edb695c1e7316323555bfc18a2fd479e
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: 68506ba11e356a1e9f14d58880a80bdf3cfcb5f4
+ms.sourcegitcommit: fb03634b8494903fc6855ad7f86c8694ffada8df
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428580"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85828972"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>Problemen met Desktop Analytics oplossen
 
@@ -53,7 +53,7 @@ Vanaf versie 2002, als de Configuration Manager-site geen verbinding kan maken m
 
 Zie [logboek bestanden voor desktop Analytics](../core/plan-design/hierarchy/log-files.md#desktop-analytics) voor meer informatie
 
-Vanaf Configuration Manager versie 1906, gebruikt u het hulp programma **DesktopAnalyticsLogsCollector. ps1** van de installatiemap van Configuration Manager om problemen met Desktop Analytics op te lossen. Er worden enkele basis stappen voor probleem oplossing uitgevoerd en de relevante logboeken worden in één werkmap verzameld. Zie [Logboeken](log-collector.md)voor meer informatie.
+Vanaf Configuration Manager versie 1906 gebruikt u het **DesktopAnalyticsLogsCollector.ps1** hulp programma van de Configuration Manager installatiemap om te helpen bij het oplossen van problemen met Desktop Analytics. Er worden enkele basis stappen voor probleem oplossing uitgevoerd en de relevante logboeken worden in één werkmap verzameld. Zie [Logboeken](log-collector.md)voor meer informatie.
 
 ### <a name="enable-verbose-logging"></a>Uitgebreide logboekregistratie inschakelen
 
@@ -113,7 +113,7 @@ Als u de Azure AD-App voor Configuration Manager niet kunt maken met de wizard A
 
     4. Selecteer de groep **toepassings machtigingen** . Vouw **CmCollectionData**uit en selecteer beide van de volgende machtigingen: gegevens over het **verzamelen van cm** en lees bewerkingen in **cm verzamelen**.  
 
-    5. Selecteer **machtigingen toevoegen**.  
+    5. Selecteer **Machtigingen toevoegen**.  
 
 6. Selecteer in het deel venster **API-machtigingen** de optie **beheerder toestemming geven...**. Selecteer **Ja**.  
 
@@ -129,7 +129,7 @@ Als u de Azure AD-App voor Configuration Manager niet kunt maken met de wizard A
 
     - Selecteer **Desktop Analytics** in de lijst met beschik bare Services.  
   
-   Selecteer **Volgende**.  
+   Selecteer **Next**.  
 
 3. Selecteer op de pagina **app** de juiste **Azure-omgeving**. Selecteer vervolgens **importeren** voor de web-app. Configureer de volgende instellingen in het venster **apps importeren** :  
 
@@ -205,7 +205,7 @@ In de portal voor desktop Analytics zijn er twee soorten gegevens: **beheerders 
 
 - **Diagnostische gegevens** verwijzen naar de meta gegevens van het systeem die van client apparaten naar micro soft worden geüpload. Met deze gegevens worden Desktop Analytics gebevoegdheidd. Het bevat kenmerken zoals de inventaris van apparaten en de update status van de beveiliging en onderdelen.
 
-Standaard worden alle gegevens in de Desktop Analytics-Portal dagelijks automatisch vernieuwd. Deze vernieuwing bevat wijzigingen in diagnostische gegevens en eventuele wijzigingen die u aanbrengt in de configuratie (beheerders gegevens). Deze moet worden weer gegeven in uw Desktop Analytics-Portal met een UTC van 08:00 uur per dag.
+Standaard worden alle gegevens in de Desktop Analytics-Portal dagelijks automatisch vernieuwd. Deze vernieuwing omvat wijzigingen in diagnostische gegevens van twee dagen geleden en alle wijzigingen die u aanbrengt in de configuratie (beheerders gegevens). Deze moet worden weer gegeven in uw Desktop Analytics-Portal met een UTC van 08:00 uur per dag.
 
 Wanneer u wijzigingen aanbrengt aan de beheerders gegevens, kunt u een vernieuwing op aanvraag van de beheerders gegevens in uw werk ruimte activeren. Open vanuit een pagina in de Desktop Analytics-Portal de gegevens in de flyout data currency:
 
@@ -221,3 +221,39 @@ Als u geen wijzigingen ziet die zijn bijgewerkt binnen de hierboven vermelde tij
 
 > [!IMPORTANT]
 > De optie Desktop Analytics om **recente gegevens weer te geven** , is afgeschaft. Deze actie wordt verwijderd in een toekomstige versie van de Desktop Analytics-service. Zie [afgeschafte functies](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)voor meer informatie.<!--7080949-->  
+
+## <a name="service-notifications"></a>Servicemeldingen
+
+<!-- 4982509 -->
+
+De Desktop Analytics-Portal kan meldings banners voor beheerders weer geven. Met deze meldingen kan micro soft met u communiceren over belang rijke gebeurtenissen en problemen. In de volgende secties worden de meldingen beschreven die mogelijk worden weer gegeven.
+
+### <a name="see-whats-new-this-month-in-desktop-analytics"></a>Wat is er nieuw in deze maand in Desktop Analytics?
+
+Met deze informatieve melding wordt u op de hoogte gebracht van wijzigingen in de service. Zie [what's New in Desktop Analytics](whats-new.md) () voor meer informatie `https://aka.ms/danews` .
+
+### <a name="there-are-new-prerequisites-to-continue-using-desktop-analytics-review-the-new-requirements"></a>Er zijn nieuwe vereisten. Als u wilt door gaan met het gebruik van Desktop Analytics, raadpleegt u de nieuwe vereisten
+
+Met deze informatieve melding wordt u op de hoogte gebracht van wijzigingen in de vereisten. Bijvoorbeeld een nieuw Internet-eind punt of software-update. Zie [vereisten](overview.md#prerequisites) () voor meer informatie `https://aka.ms/daprereqs` .
+
+### <a name="were-investigating-an-issue-that-impacts-desktop-analytics"></a>Er wordt een probleem onderzocht dat van invloed is op Desktop Analytics
+
+Deze waarschuwing geeft aan dat micro soft op de hoogte is van een probleem dat van invloed is op de Desktop Analytics-service. Het probleem wordt meestal veroorzaakt door het genereren van moment opnamen. Wanneer u deze melding ziet, onderzoekt micro soft het probleem om het bereik en de bron van de impact te bepalen. U hoeft geen contact op te nemen met Microsoft Ondersteuning. Zie [Data flow](privacy.md#data-flow)voor meer informatie.
+
+### <a name="were-investigating-an-issue-with-data-latency-if-you-enrolled-new-devices-or-changed-any-assets-in-the-last-24-hours-they-may-not-appear-right-away"></a>Er wordt een probleem met de gegevens latentie onderzocht. Als u nieuwe apparaten hebt Inge schreven of activa in de afgelopen 24 uur hebt gewijzigd, worden ze mogelijk niet meteen weer gegeven
+
+Deze waarschuwing geeft aan dat micro soft op de hoogte is van een probleem dat van invloed is op de Desktop Analytics-service. Micro soft bewaakt voortdurend de service om te bevestigen dat alle onderdelen moment opnamen bijwerken op de juiste tijdstippen. Tijdens deze bewaking is een van deze onderdelen niet voltooid zoals verwacht. Wanneer u deze melding ziet, onderzoekt micro soft het probleem. U hoeft geen contact op te nemen met Microsoft Ondersteuning. Zie [Data flow](privacy.md#data-flow)voor meer informatie.
+
+Als u onlangs [apparaten](enroll-devices.md) of gewijzigde [assets](about-assets.md)hebt geregistreerd, wacht u totdat het probleem door micro soft is opgelost. U hoeft geen acties te herhalen.
+
+### <a name="weve-resolved-a-temporary-issue-with-data-latency-daily-refresh-of-portal-data-is-delayed"></a>Er is een tijdelijk probleem met de gegevens latentie opgelost. Het dagelijks vernieuwen van de portal gegevens is vertraagd
+
+Deze melding laat u weten dat er een probleem is met de gegevens latentie. De service verwerkt nog steeds de moment opname en het vernieuwen van de gegevens is vertraagd. Zie [Data latentie](#data-latency)voor meer informatie.
+
+### <a name="weve-resolved-an-issue-with-data-latency-if-you-enrolled-new-devices-or-changed-any-assets-in-the-last-24-hours-they-may-not-appear-right-away"></a>Er is een probleem met de gegevens latentie opgelost. Als u nieuwe apparaten hebt Inge schreven of activa in de afgelopen 24 uur hebt gewijzigd, worden ze mogelijk niet meteen weer gegeven
+
+Deze melding laat u weten dat micro soft een eerder gemeld probleem met de gegevens latentie heeft opgelost. Mogelijk ziet u verouderde gegevens voor de moment opname van morgen. Als u apparaten in de afgelopen 24 uur hebt [Inge schreven](enroll-devices.md) of wijzigingen in de apparaatconfiguratie hebt aangebracht, worden deze niet meteen weer gegeven in de portal. U kunt Desktop Analytics blijven gebruiken om [activa](about-assets.md) te categoriseren en [implementatie plannen](about-deployment-plans.md)voor te bereiden. Deze acties kunnen gebruikmaken van gegevens uit de vorige moment opname.
+
+### <a name="weve-resolved-an-issue-with-desktop-analytics-daily-refresh-of-the-portal-data-is-on-track"></a>Er is een probleem met Desktop Analytics opgelost. Dagelijkse vernieuwing van de portal gegevens is op schema
+
+Deze melding laat u weten dat micro soft een moment opname onderdeel heeft geïdentificeerd dat tijdens de verwerking niet meer werkt. Micro soft heeft het onderdeel opnieuw gestart, wat tijd zal duren om de moment opname te verwerken. Micro soft bewaakt voortdurend de service om te bevestigen dat alle onderdelen moment opnamen bijwerken op de juiste tijdstippen.

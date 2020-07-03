@@ -10,12 +10,12 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 02a281b800c1156cf8492e8a897a5cf1b412006e
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 388a051f899369aa6a7754f94b0a7727f943f0ec
+ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383033"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85854402"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Over para meters en eigenschappen van client installatie in Configuration Manager
 
@@ -601,7 +601,11 @@ Zie [How to configure client status](configure-client-status.md)voor meer inform
 
 Vanaf versie 2002 gebruikt u deze eigenschap om een taken reeks op een client te starten nadat deze is geregistreerd bij de site.
 
+> [!NOTE]
+> Als de taken reeks software-updates of-toepassingen installeert, hebben clients een geldig certificaat voor client verificatie nodig. Alleen token verificatie werkt niet. Zie [release opmerkingen-OS-implementatie](../../servers/deploy/install/release-notes.md#os-deployment)voor meer informatie.<!--7527072-->
+      
 U kunt bijvoorbeeld een nieuw Windows 10-apparaat met Windows auto pilot inrichten, het automatisch inschrijven voor Microsoft Intune en vervolgens de Configuration Manager-client installeren voor co-beheer. Als u deze nieuwe optie opgeeft, voert de zojuist ingerichte client een taken reeks uit. Dit proces biedt extra flexibiliteit voor het installeren van toepassingen en software-updates, of het configureren van instellingen.
+
 
 Gebruik het volgende proces:
 
@@ -617,6 +621,8 @@ Gebruik het volgende proces:
       > Deze methode kan extra vereisten hebben. U kunt bijvoorbeeld de site inschrijven voor Azure Active Directory of een Cloud beheer gateway maken die geschikt is voor inhoud.
 
 Nadat de client is geïnstalleerd en op de juiste wijze is geregistreerd bij de site, wordt de taken reeks waarnaar wordt verwezen, gestart. Als de client registratie mislukt, wordt de taken reeks niet gestart.
+
+
 
 ### <a name="resetkeyinformation"></a>RESETKEYINFORMATION
 

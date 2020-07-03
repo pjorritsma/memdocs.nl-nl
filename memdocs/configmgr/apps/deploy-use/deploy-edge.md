@@ -2,7 +2,7 @@
 title: Micro soft Edge, versie 77 en hoger implementeren en bijwerken
 titleSuffix: Configuration Manager
 description: Micro soft Edge, versie 77 en hoger met Configuration Manager implementeren en bijwerken
-ms.date: 04/01/2020
+ms.date: 07/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 73b420be-5d6a-483a-be66-c4d274437508
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 141a60a72038156fff2579419e92e558dab5a9b8
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: 2061a6701bf40233593e2e5d683e36f2814d3978
+ms.sourcegitcommit: f999131e513d50967f88795e400d5b089ebc5878
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776930"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85914563"
 ---
 # <a name="microsoft-edge-management"></a>Micro soft Edge-beheer
 
@@ -33,6 +33,8 @@ Voor clients die zijn gericht op een micro soft Edge-implementatie:
 
 - Het Power shell- [uitvoerings beleid](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies) kan niet worden ingesteld op beperkt.
   - Power shell wordt uitgevoerd om de installatie uit te voeren.
+
+- Micro soft Edge Installer en [CMPivot](../../core/servers/manage/cmpivot.md) zijn ondertekend met het **micro soft** -certificaat voor ondertekening van programma code. Als dat certificaat niet in het archief **vertrouwde uitgevers** wordt vermeld, moet u het toevoegen. Anders wordt micro soft Edge Installer en CMPivot niet uitgevoerd wanneer het Power shell-uitvoerings beleid is ingesteld op **Alles ondertekend**. <!--7585106-->
 
 Het apparaat waarop de Configuration Manager-console wordt uitgevoerd, heeft toegang tot de volgende eind punten nodig:
 
@@ -135,6 +137,22 @@ Schakel de volgende eigenschappen in in de [hardware-inventaris](../../core/clie
 Klik in de werk ruimte **software bibliotheek** op **micro soft Edge Management** om het dash board weer te geven. Wijzig de verzameling voor de grafiek gegevens door te klikken op **Bladeren** en een andere verzameling te kiezen. Uw vijf grootste verzamelingen bevinden zich standaard in de vervolg keuzelijst. Wanneer u een verzameling selecteert die zich niet in de lijst bevindt, neemt de zojuist geselecteerde verzameling de onderste plaats in de vervolg keuzelijst.
 
 [![Micro soft Edge Management dash board](./media/3871913-microsoft-edge-dashboard.png)](./media/3871913-microsoft-edge-dashboard.png#lightbox)
+
+## <a name="known-issues"></a>Bekende problemen
+
+### <a name="hardware-inventory-may-fail-to-process"></a>Hardware-inventarisatie kan niet worden verwerkt
+<!--7535675-->
+Hardware-inventarisatie van apparaten kan mogelijk niet worden verwerkt. De fouten die vergelijkbaar zijn met de hieronder hieronder, worden mogelijk weer gegeven in het bestand Dataldr. log:
+
+```text
+Begin transaction: Machine=<machine>
+*** [23000][2627][Microsoft][SQL Server Native Client 11.0][SQL Server]Violation of PRIMARY KEY constraint 'BROWSER_USAGE_HIST_PK'. Cannot insert duplicate key in object 'dbo.BROWSER_USAGE_HIST'. The duplicate key value is (XXXX, Y). : dbo.dBROWSER_USAGE_DATA
+ERROR - SQL Error in
+ERROR - is NOT retyrable.
+Rollback transaction: XXXX
+```
+
+**Risico beperking:** U kunt dit probleem omzeilen door de verzameling van de hardware-inventaris klasse voor het gebruik van de browser (SMS_BrowerUsage) uit te scha kelen. Deze klasse heeft momenteel geen gebruik van.
 
 ## <a name="next-steps"></a>Volgende stappen
 

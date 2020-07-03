@@ -2,7 +2,7 @@
 title: CMPivot voor realtime gegevens
 titleSuffix: Configuration Manager
 description: Meer informatie over hoe u CMPivot in Configuration Manager kunt gebruiken om clients in realtime te doorzoeken.
-ms.date: 04/08/2020
+ms.date: 07/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: dcd441c7f35748f42adc8824c68ec703291a13e0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7bf9d6018acb74ccd1a33b6101d5cceb119ca982
+ms.sourcegitcommit: f999131e513d50967f88795e400d5b089ebc5878
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719139"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85914640"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>CMPivot voor realtime gegevens in Configuration Manager
 
@@ -46,6 +46,7 @@ De volgende onderdelen zijn vereist voor het gebruik van CMPivot:
   - IP
   - SMBConfig
 
+- CMPivot en [micro soft Edge](../../../apps/deploy-use/deploy-edge.md) Installer zijn ondertekend met het **micro soft** -certificaat voor ondertekening van programma code. Als dat certificaat niet in het archief **vertrouwde uitgevers** wordt vermeld, moet u het toevoegen. Anders worden CMPivot en micro soft Edge Installer niet uitgevoerd wanneer het Power shell-uitvoerings beleid is ingesteld op **Alles ondertekend**. <!--7585106-->
 
 - Machtigingen voor CMPivot:
   - **Lees** machtiging voor het object **SMS-scripts**
@@ -56,6 +57,8 @@ De volgende onderdelen zijn vereist voor het gebruik van CMPivot:
 
 >[!NOTE]
 > **Run scripts** is een superset van de machtiging **Run CMPivot** .
+
+CMPivot en Edge Installer zijn ondertekend met het micro soft-certificaat voor **ondertekening van programma code** . Als dat certificaat niet in het archief **vertrouwde uitgevers** wordt vermeld, moet u het toevoegen. Anders wordt het installatie programma CMPivot en Edge niet uitgevoerd wanneer het Power shell-uitvoerings beleid is ingesteld op **Alles ondertekend**.
  
 ## <a name="limitations"></a>Beperkingen
 
@@ -129,7 +132,7 @@ Het venster CMPivot bevat de volgende elementen:
 
     - Inhoud knippen, kopiëren of plakken in het query venster.  
     <!-- markdownlint-disable MD038 -->
-    - Dit deel venster maakt standaard gebruik van IntelliSense. Als u bijvoorbeeld begint te typen `D`, worden alle entiteiten voorgesteld die met die letter beginnen. Selecteer een optie en druk op TAB om deze in te voegen. Typ een sluis teken en een spatie `| `en vervolgens worden alle tabel operators voorgesteld door IntelliSense. Voeg `summarize` een spatie in en typ een ruimte. IntelliSense stelt alle aggregatie functies voor. Klik op het tabblad **Start** in CMPivot voor meer informatie over deze opera tors en functies.  
+    - Dit deel venster maakt standaard gebruik van IntelliSense. Als u bijvoorbeeld begint te typen `D` , worden alle entiteiten voorgesteld die met die letter beginnen. Selecteer een optie en druk op TAB om deze in te voegen. Typ een sluis teken en een spatie `| ` en vervolgens worden alle tabel operators voorgesteld door IntelliSense. Voeg `summarize` een spatie in en typ een ruimte. IntelliSense stelt alle aggregatie functies voor. Klik op het tabblad **Start** in CMPivot voor meer informatie over deze opera tors en functies.  
 
     - Het query deel venster bevat ook de volgende opties:  
 
@@ -217,7 +220,7 @@ U kunt alle apparaten tegelijk selecteren, met de rechter muisknop op de selecti
 
 ### <a name="example-2-proactively-resolve-application-failures"></a>Voor beeld 2: problemen met toepassingen proactief oplossen  
 
-Als u proactief met operationeel onderhoud wilt maken, kunt u één keer per week CMPivot uitvoeren op een verzameling van servers die u beheert en selecteert u **query all** op de entiteit **AppCrash** . Klik met de rechter muisknop op de kolom **filename** en selecteer **Oplopend sorteren**. Eén apparaat retourneert zeven resultaten voor sqlsqm. exe met een tijds tempel van ongeveer 03:00 elke dag. Selecteer de bestands naam in een van de rijen, klik er met de rechter muisknop op en selecteer **Bing it**. Door de zoek resultaten in de webbrowser bladeren, vindt u een micro soft-ondersteunings artikel voor dit probleem met meer informatie en oplossingen. 
+Als u proactief met operationeel onderhoud wilt maken, kunt u één keer per week CMPivot uitvoeren op een verzameling van servers die u beheert en selecteert u **query all** op de entiteit **AppCrash** . Klik met de rechter muisknop op de kolom **filename** en selecteer **Oplopend sorteren**. Eén apparaat retourneert zeven resultaten voor sqlsqm.exe met een tijds tempel van ongeveer 03:00 elke dag. Selecteer de bestands naam in een van de rijen, klik er met de rechter muisknop op en selecteer **Bing it**. Door de zoek resultaten in de webbrowser bladeren, vindt u een micro soft-ondersteunings artikel voor dit probleem met meer informatie en oplossingen. 
 
 
 ### <a name="example-3-bios-version"></a>Voor beeld 3: BIOS-versie
@@ -385,15 +388,15 @@ Selecteer bijvoorbeeld het aantal apparaten met de status mislukt. Zie het speci
 
 ### <a name="cmpivot-audit-status-messages"></a>Controle status berichten CMPivot
 
-Vanaf versie 1810, wanneer u CMPivot uitvoert, wordt een controle status bericht gemaakt met **MessageID 40805**. U kunt de status berichten weer geven door naar **bewaking** > **systeem status** > **status bericht query's**te gaan. U kunt **alle controle status berichten voor een specifieke gebruiker**uitvoeren, **alle controle status berichten voor een specifieke site**of uw eigen status bericht query maken.
+Vanaf versie 1810, wanneer u CMPivot uitvoert, wordt een controle status bericht gemaakt met **MessageID 40805**. U kunt de status berichten weer geven door naar **bewaking**  >  **systeem status**  >  **status bericht query's**te gaan. U kunt **alle controle status berichten voor een specifieke gebruiker**uitvoeren, **alle controle status berichten voor een specifieke site**of uw eigen status bericht query maken.
 
 De volgende indeling wordt gebruikt voor het bericht:
 
-MessageId 40805: gebruiker &lt;gebruikers naam> script &lt;script-GUID> met hash &lt;-script-hash-> &lt;in verzamelings verzameling-id> wordt uitgevoerd.
+MessageId 40805: gebruiker &lt; gebruikers naam> script &lt; script-GUID> met hash &lt; -script-hash-> in verzamelings &lt; verzameling-id> wordt uitgevoerd.
 
 - 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14 is de script-GUID voor CMPivot.
 - De script-hash kan worden weer gegeven in het logboek bestand van de client.
-- U kunt ook de hash zien die is opgeslagen in het script archief van de client. De bestands naam op de client &lt;is script-GUID&lt;>_ script-hash->.
+- U kunt ook de hash zien die is opgeslagen in het script archief van de client. De bestands naam op de client is &lt; script-Guid>_ &lt; script-Hash->.
     - Voor beeld van bestands naam: C:\Windows\CCM\ScriptStore\7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14_abc1d23e45678901fabc123d456ce789fa1b2cd3e456789123fab4c56789d0123. PS
    
 
@@ -476,7 +479,7 @@ U hebt nu extra reken kundige Opera Tors, aggregators en de mogelijkheid om toev
 
 #### <a name="table-operators"></a>Tabel operators
 
-|Tabel operators| Beschrijving|
+|Tabel operators| Description|
 |-----|-----|
 | [Jointypen](https://docs.microsoft.com/azure/kusto/query/joinoperator)| De rijen van twee tabellen samen voegen om een nieuwe tabel te vormen door overeenkomende rij voor hetzelfde apparaat te zoeken|
 |waardoor|Hiermee worden resultaten weer gegeven als grafische uitvoer|
@@ -501,14 +504,14 @@ De render-operator bestaat al in CMPivot. Er is ondersteuning voor meerdere reek
 
 #### <a name="aggregation-functions"></a>Aggregatiefuncties
 
-|Functie| Beschrijving|
+|Functie| Description|
 |-----|-----|
 | percentiel ()| Retourneert een schatting voor het opgegeven dichtstbijzijnde-positie percentiel van de populatie die is gedefinieerd met expr|
 | sumif() | Retourneert een som van de expr waarvoor het predicaat resulteert in waar|
 
 #### <a name="scalar-functions"></a>Scalaire functies
 
-|Functie| Beschrijving|
+|Functie| Description|
 |-----|-----|
 | case()| Evalueert een lijst met predikaten en retourneert de eerste resultaat expressie waarvan het predicaat is voldaan |
 | IFF () | Evalueert het eerste argument en retourneert de waarde van de tweede of derde argumenten, afhankelijk van het feit of het predicaat is geëvalueerd als waar (seconde) of ONWAAR (derde)|
@@ -566,7 +569,7 @@ U kunt de kracht van CMPivot delen met andere personen, zoals helpdesk medewerke
 #### <a name="install-cmpivot-standalone"></a>Zelfstandige installatie van CMPivot
 
 1. Stel de machtigingen in die nodig zijn om CMPivot uit te voeren. Zie [vereisten](#prerequisites)voor meer informatie. U kunt ook de [rol beveiligings beheerder](#bkmk_cmpivot_secadmin1906) gebruiken als de machtigingen geschikt zijn voor de gebruiker.
-2. Zoek het installatie programma van de CMPivot-app op `<site install path>\tools\CMPivot\CMPivot.msi`het volgende pad:. U kunt het vanuit dat pad uitvoeren of het naar een andere locatie kopiëren.
+2. Zoek het installatie programma van de CMPivot-app op het volgende pad: `<site install path>\tools\CMPivot\CMPivot.msi` . U kunt het vanuit dat pad uitvoeren of het naar een andere locatie kopiëren.
 3. Wanneer u de zelfstandige CMPivot-app uitvoert, wordt u gevraagd verbinding te maken met een site. Geef de naam van de Fully Qualified Domain Name of computer op van de server voor Centraal beheer of de primaire site.
    - Telkens wanneer u CMPivot standalone opent, wordt u gevraagd verbinding te maken met een site server.
 4. Blader naar de verzameling waarop u CMPivot wilt uitvoeren en voer de query uit.
@@ -617,7 +620,7 @@ De CMPivot-optimalisaties verlagen het netwerk en de CPU-belasting van de server
    | project Device, MalwareFound = iif( isnull(FileName), 'No', 'Yes')
    ```
 
-### <a name="wineventlognametimespan"></a><a name="bkmk_WinEvent"></a>Wine vent (\<logname>, [\<time span>])
+### <a name="wineventlognametimespan"></a><a name="bkmk_WinEvent"></a>Wine vent ( \<logname> , [ \<timespan> ])
 
 Deze entiteit wordt gebruikt voor het ophalen van gebeurtenissen uit gebeurtenis logboeken en logboek bestanden voor gebeurtenis tracering. De entiteit haalt gegevens op uit gebeurtenis logboeken die worden gegenereerd door de Windows-gebeurtenis logboek technologie. De entiteit haalt ook gebeurtenissen op in logboek bestanden die zijn gegenereerd door Event Tracing for Windows (ETW). Wine vent bekijkt de gebeurtenissen die standaard in de afgelopen 24 uur zijn opgetreden. De standaard instelling voor 24 uur kan echter worden overschreven door een time span op te nemen.
 
@@ -627,7 +630,7 @@ WinEvent('Microsoft-Windows-HelloForBusiness/Operational', 1d)
 | summarize count() by Device
 ```
 
-### <a name="filecontentfilename"></a><a name="bkmk_File"></a>FileContent (\<bestands naam>)
+### <a name="filecontentfilename"></a><a name="bkmk_File"></a>FileContent ( \<filename> )
 
 FileContent wordt gebruikt om de inhoud van een tekst bestand op te halen.
 
@@ -637,7 +640,7 @@ FileContent('c:\\windows\\SMSCFG.ini')
 | project Device, SMSId= substring(Content,22)
 ```
 
-### <a name="processmoduleprocessname"></a><a name="bkmk_ProcessModule"></a>ProcessModule (\<verwerkings>)  
+### <a name="processmoduleprocessname"></a><a name="bkmk_ProcessModule"></a>ProcessModule ( \<processname> )  
 
 Deze entiteit wordt gebruikt voor het inventariseren van de modules (dll's) die door een bepaald proces zijn geladen. ProcessModule is handig bij het zoeken naar malware die in legitieme processen wordt verborgen.  
 
@@ -682,7 +685,7 @@ Wanneer u CMPivot gebruikt buiten de Configuration Manager-console, kunt u allee
 
 ### <a name="other-enhancements"></a><a name="bkmk_Other"></a>Andere verbeteringen
 
-- U kunt reguliere expressie type query's uitvoeren met behulp `like` van de operator new. Bijvoorbeeld:<!--3056858-->
+- U kunt reguliere expressie type query's uitvoeren met behulp van de `like` operator new. Bijvoorbeeld:<!--3056858-->
   
    ```kusto
    //Find BIOS manufacture that contains any word like Micro, such as Microsoft

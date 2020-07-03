@@ -5,17 +5,17 @@ description: Informatie over het gelijktijdig beheren van Windows 10-apparaten m
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 01/24/2020
+ms.date: 07/01/2020
 ms.topic: overview
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: 86bd566e9582c7dd7c83f93c22430edcc8ea0d0d
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: a7f38f48946244deb6026d040c44159d0384f7b1
+ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347182"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85854436"
 ---
 # <a name="what-is-co-management"></a>Wat is co-beheer?
 
@@ -88,7 +88,7 @@ Co-beheer heeft deze vereisten op de volgende gebieden:
     > [!Tip]
     > Zorg ervoor dat u een intune-licentie toewijst aan het account dat u gebruikt om u aan te melden bij uw Tenant. Als dat niet het geval is, mislukt de fout melding ' de gebruiker wordt niet herkend '.
     >
-    > U hoeft geen afzonderlijke intune-of EMS-licenties meer aan uw gebruikers te kopen en toe te wijzen. Zie [Veelgestelde vragen over producten en licenties](../core/understand/product-and-licensing-faq.md#bkmk_mem)voor meer informatie.
+    > U hoeft geen afzonderlijke intune-of EMS-licenties aan uw gebruikers te kopen en toe te wijzen. Zie [Veelgestelde vragen over producten en licenties](../core/understand/product-and-licensing-faq.md#bkmk_mem)voor meer informatie.
 
 ### <a name="configuration-manager"></a>Configuration Manager
 

@@ -2,7 +2,7 @@
 title: Hulp programma voor service verbindingen
 titleSuffix: Configuration Manager
 description: Meer informatie over dit hulp programma waarmee u verbinding kunt maken met de Cloud service van Configuration Manager om hand matig gebruiks gegevens te uploaden.
-ms.date: 09/06/2017
+ms.date: 07/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,180 +10,250 @@ ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e535653e0f31e186a6bdbde8da77750f2afdfdb0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 48aa08f3318aaa4629691bfb30b60580cd3e25f0
+ms.sourcegitcommit: 03d2331876ad61d0a6bb1efca3aa655b88f73119
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81710816"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85946841"
 ---
 # <a name="use-the-service-connection-tool-for-configuration-manager"></a>Gebruik het hulp programma voor service verbindingen voor Configuration Manager
 
 *Van toepassing op: Configuration Manager (huidige vertakking)*
 
-Gebruik het **hulp programma voor service verbindingen** wanneer uw service verbindings punt zich in de offline modus bevindt, of wanneer uw Configuration Manager-site systeem servers niet zijn verbonden met internet. Het hulp programma kan u helpen uw site up-to-date te houden met de meest recente updates voor Configuration Manager.  
+Gebruik het **hulp programma voor service verbindingen** wanneer uw service verbindings punt zich in de offline modus bevindt. U kunt deze ook gebruiken wanneer uw Configuration Manager-site systeem servers niet zijn verbonden met internet. Het hulp programma kan u helpen uw site up-to-date te houden met de meest recente updates voor Configuration Manager.
 
-Wanneer het hulp programma wordt uitgevoerd, maakt het hand matig verbinding met de Cloud service van Configuration Manager om gebruiks gegevens voor uw hiërarchie te uploaden en updates te downloaden. Het uploaden van gebruiksgegevens is noodzakelijk om ervoor te zorgen dat de cloudservice de juiste updates voor uw implementatie kan leveren.  
+Wanneer u het hulp programma uitvoert, maakt het verbinding met de Configuration Manager Cloud service, worden gebruiks gegevens voor uw hiërarchie geüpload en worden updates gedownload. Het uploaden van gebruiks gegevens is nood zakelijk om ervoor te zorgen dat de Cloud service de juiste updates voor uw omgeving kan leveren.
 
-## <a name="prerequisites-for-using-the-service-connection-tool"></a>Vereisten voor het gebruik van het hulp programma voor service verbindingen
-Hieronder vindt u de vereisten en bekende problemen.
+## <a name="prerequisites"></a>Vereisten
 
-**Vereisten**
+- De site heeft een service verbindings punt en u configureert deze voor een **offline-verbinding op aanvraag**.
 
-- U hebt een serviceverbindingspunt geïnstalleerd dat is ingesteld op **Offline, verbinding op aanvraag**.  
+- Voer het hulp programma uit vanaf een opdracht prompt als beheerder. Er is geen gebruikers interface.
 
-- Het hulpprogramma moet worden uitgevoerd vanaf een opdrachtprompt.  
+- U voert het hulp programma uit vanaf het service aansluitpunt en een computer die verbinding kan maken met internet. Elk van deze computers moet een x64-bits besturings systeem hebben en de volgende onderdelen hebben:
 
-- Elke computer waarop het hulpprogramma wordt uitgevoerd (de computer met het serviceaansluitpunt en de computer die is verbonden met internet), moet een x64 bitssysteem zijn waarop het volgende moet zijn geïnstalleerd:  
+  - De x86- en x64-bestanden van **Visual C++ Redistributable** . Configuration Manager installeert standaard de x64-versie op de computer die het service verbindings punt host. Zie [herdistribueerbare Visual C++-pakketten voor Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784)voor informatie over het downloaden van dit onderdeel.
 
-  - De x86- en x64-bestanden van **Visual C++ Redistributable** .   Configuration Manager installeert standaard de x64-versie op de computer die het service verbindings punt host.  
+  - **.NET Framework 4.5.2** of hoger
 
-    Als u een kopie van de Visual C++-bestanden wilt downloaden, gaat u naar [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784) in het Microsoft Downloadcentrum.  
+- Het account dat u gebruikt om het hulp programma uit te voeren, heeft de volgende machtigingen nodig:
 
-  - .NET Framework 4.5.2 of hoger.  
+  - **Lokale beheerder** op de computer die het service verbindings punt host
 
-- Het account waarmee u het hulpprogramma uitvoert, moet beschikken over:
-  - **Lokale beheerdersmachtigingen** op de computer waarop het serviceverbindingspunt wordt gehost (waarop het hulpprogramma wordt uitgevoerd).
-  - **Lezen** -machtigingen voor de sitedatabase.  
+  - **Lees** machtigingen voor de site database
 
+- U hebt een methode nodig om de bestanden over te dragen tussen de computer met Internet toegang en het service verbindings punt. Bijvoorbeeld een USB-station met voldoende beschik bare ruimte voor het opslaan van bestanden en updates.
 
+## <a name="overview"></a>Overzicht
 
-- U hebt een USB-station met voldoende beschikbare ruimte voor het opslaan van bestanden en updates of een andere methode nodige om bestanden over te dragen tussen de serviceverbindingspuntcomputer en de computer met toegang tot internet. (Dit scenario veronderstelt dat uw site en de beheerde computers geen directe verbinding met internet hebben.)  
+1. **Voorbereiden**: Voer het hulp programma uit op het service aansluitpunt. Hiermee worden de gebruiks gegevens in een CAB-bestand geplaatst op de locatie die u opgeeft. Kopieer het gegevens bestand naar de computer met een Internet verbinding.
 
+2. **Verbinding maken**: Voer het hulp programma uit op de computer met een Internet verbinding. Uw gebruiks gegevens worden geüpload en vervolgens Configuration Manager updates gedownload. Kopieer de gedownloade updates naar het service verbindings punt.
 
+    U kunt meerdere gegevens bestanden tegelijk uploaden, elk uit een andere hiërarchie. U kunt ook een proxy server en een gebruiker voor de proxy server opgeven.
 
-## <a name="use-the-service-connection-tool"></a>Het hulpprogramma voor serviceverbindingen gebruiken  
+3. **Importeren**: Voer het hulp programma uit op het service verbindings punt. De updates worden geïmporteerd en toegevoegd aan uw site. U kunt [deze updates](install-in-console-updates.md) vervolgens weer geven en installeren in de Configuration Manager-console.
 
- U vindt het hulp programma voor service verbindingen (**serviceconnectiontool. exe**) in de map Configuration Manager-installatie media in **%Path%\smssetup\tools\ServiceConnectionTool** . Gebruik altijd het hulp programma voor service verbindingen dat overeenkomt met de versie van Configuration Manager die u gebruikt.
+### <a name="upload-multiple-data-files"></a>Meerdere gegevens bestanden uploaden
 
+- Plaats alle geëxporteerde gegevens bestanden van afzonderlijke hiërarchieën in dezelfde map. Geef elk bestand een unieke naam. Als dat nodig is, kunt u ze hand matig een andere naam geven.
 
- In deze procedure worden de volgende bestandsnamen en maplocaties in de voorbeelden van de opdrachtregels gebruikt (u hoeft deze paden en bestandsnamen en kunt in plaats daarvan alternatieven gebruiken die overeenkomen met uw omgeving en voorkeuren):  
+- Wanneer u het hulp programma uitvoert om gegevens te uploaden naar micro soft, geeft u de map op die de gegevens bestanden bevat.
 
-- Het pad naar een USB-stick waarop gegevens zijn opgeslagen voor de overdracht tussen servers:  **D:\USB\\**  
+- Wanneer u het hulp programma uitvoert om gegevens te importeren, worden met het hulp programma alleen de gegevens voor die hiërarchie geïmporteerd.
 
-- De naam van het CAB-bestand dat geëxporteerde gegevens van uw site bevat: **UsageData.cab**  
+### <a name="specify-a-proxy-server"></a>Een proxy server opgeven
 
-- De naam van de lege map waar de gedownloade updates voor Configuration Manager worden opgeslagen voor de overdracht tussen servers: **UpdatePacks**  
+Als voor de computer met een Internet verbinding een proxy server is vereist, ondersteunt het hulp programma een basis proxy configuratie. Gebruik de optionele para meters **-proxyserveruri** en **-proxy username**. Zie [opdracht regel parameters](#bkmk_cmd)voor meer informatie.
 
-Op de computer die het serviceverbindingspunt host:  
+### <a name="specify-the-type-of-updates-to-download"></a>Geef het type updates op dat u wilt downloaden
 
-- Open een opdrachtprompt met beheerdersbevoegdheden en wijzig vervolgens de mappen in de locatie waarin **serviceconnectiontool.exe**zich bevindt.  
+Het hulp programma ondersteunt opties om te bepalen welke bestanden u downloadt. Het hulp programma downloadt standaard alleen de meest recente beschik bare update die van toepassing is op de versie van uw site. Hotfixes worden niet gedownload.
 
-  U vindt dit hulp programma standaard in de map Configuration Manager installatie media in **%Path%\smssetup\tools\ServiceConnectionTool** . Alle bestanden in deze map moeten in dezelfde map staan. Als dit niet het geval is, werkt het hulpprogramma voor serviceverbindingen niet.  
+Als u dit gedrag wilt wijzigen, gebruikt u een van de volgende para meters om te wijzigen welke bestanden worden gedownload:
 
-Wanneer u de volgende opdracht uitvoert, bereidt het hulpprogramma een CAB-bestand voor met gebruiksgegevens en kopieert dit naar een locatie die u opgeeft. De gegevens in het CAB-bestand zijn gebaseerd op het niveau van het verzamelen van diagnostische gebruiksgegevens waarvoor uw site is geconfigureerd. (Zie [Diagnostische en gebruiks gegevens voor Configuration Manager](../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)).  Voer de volgende opdracht uit om het CAB-bestand maken:  
+- **-downloadall**: down load alle updates, inclusief updates en hotfixes, ongeacht de versie van uw site.
+- **-downloadhotfix**: down load alle hotfixes, ongeacht de versie van uw site.
+- **-downloadsiteversion**: downloadt updates en hotfixes met een latere versie dan de versie van uw site.
 
-- **serviceconnectiontool.exe -prepare -usagedatadest D:\USB\UsageData.cab**  
+    > [!IMPORTANT]
+    > Vanwege een bekend probleem in Configuration Manager versie 2002, werkt het standaard gedrag niet zoals verwacht. Gebruik de para meter **-downloadsiteversion** om de benodigde updates voor versie 2002 te downloaden.<!-- 7594517 -->
 
-U moet ook de map ServiceConnectionTool inclusief alle inhoud kopiëren naar het USB-station of op een andere wijze beschikbaar maken op de computer die u wilt gebruiken voor stap 3 en 4.  
+Zie [opdracht regel parameters](#bkmk_cmd)voor meer informatie.
 
-### <a name="overview"></a>Overzicht
-#### <a name="there-are-three-primary-steps-to-using-the-service-connection-tool"></a>Er zijn drie primaire stappen voor het gebruik van het hulp programma voor service verbindingen  
+> [!TIP]
+> Het hulp programma bepaalt de versie van uw site van het gegevens bestand. Als u de versie wilt controleren, zoekt u in het CAB-bestand naar het tekst bestand met de naam met de site versie.
 
-1.  **Voorbereiden**: deze stap wordt uitgevoerd op de computer die het service verbindings punt host. Wanneer het hulp programma wordt uitgevoerd, worden uw gebruiks gegevens in een CAB-bestand geplaatst en opgeslagen op een USB-station (of een alternatieve overdrachts locatie die u opgeeft).  
+## <a name="use-the-tool"></a>Het hulp programma gebruiken  
 
-2.  **Verbinden**: voor deze stap voert u het hulp programma uit op een externe computer die verbinding maakt met internet, zodat u uw gebruiks gegevens kunt uploaden en vervolgens updates moet downloaden.  
+Het hulp programma voor service verbindingen bevindt zich in de Configuration Manager installatie media op het volgende pad: `SMSSETUP\TOOLS\ServiceConnectionTool\ServiceConnectionTool.exe` . Gebruik altijd het hulp programma voor service verbindingen dat overeenkomt met de versie van Configuration Manager die u gebruikt. Al deze bestanden moeten zich in dezelfde map bevindt om te kunnen werken met het hulp programma voor service verbindingen.
 
-3.  **Importeren**: deze stap wordt uitgevoerd op de computer die het service verbindings punt host. Wanneer het hulp programma wordt uitgevoerd, worden de updates die u hebt gedownload, geïmporteerd en toegevoegd aan uw site, zodat u deze updates vervolgens kunt weer geven en installeren vanuit de Configuration Manager-console.  
+Kopieer de map **ServiceConnectionTool** met alle inhoud ervan naar de computer met een Internet verbinding.
 
-Wanneer u vanaf versie 1606 verbinding maakt met Microsoft, kunt u meerdere CAB-bestanden tegelijk uploaden (elk uit een andere hiërarchie) en een proxyserver en gebruiker voor de proxyserver opgeven.   
+In deze procedure worden de volgende bestands namen en maplocaties in de voor beelden van de opdracht regels gebruikt. U hoeft deze paden en bestands namen niet te gebruiken. U kunt alternatieven gebruiken die overeenkomen met uw omgeving en voor keuren.
 
-#### <a name="to-upload-multiple-cab-files"></a>Meerdere CAB-bestanden uploaden
-- Zet alle CAB-bestanden die u uit verschillende hiërarchieën exporteert in dezelfde map. De naam van elk bestand moet uniek zijn. Zo nodig kunt u de naam handmatig wijzigen.
-- Wanneer u vervolgens de opdracht voor het uploaden van gegevens naar Microsoft uitvoert, geeft u de naam op van de map met de CAB-bestanden. (Vóór update 1606 kon u alleen gegevens uit één hiërarchie tegelijk uploaden en voor het hulpprogramma was het nodig dat u de naam van het CAB-bestand in de map opgaf.)
-- Wanneer u vervolgens de importtaak voor het serviceverbindingspunt van een hiërarchie uitvoert, importeert het hulpprogramma automatisch alleen de gegevens voor die hiërarchie.  
+- Het pad naar de bron bestanden voor de Configuration Manager installatie media op het service verbindings punt:`C:\Source`
 
-#### <a name="to-specify-a-proxy-server"></a>Een proxy server opgeven
-U kunt de volgende optionele parameters gebruiken om een proxyserver op te geven (meer informatie over het gebruik van deze parameters vindt u in de sectie Opdrachtregelparameters van dit onderwerp):
-- **-proxyserveruri [FQDN_of_proxy_server]**  Gebruik deze para meter om de proxy server op te geven die moet worden gebruikt voor deze verbinding.
-- **-proxyusername [gebruikersnaam]**  Gebruik deze parameter als u een gebruiker voor de proxyserver moet opgeven.
+- Het pad naar een USB-station waar u de gegevens opslaat voor overdracht tussen computers:`D:\USB\`
 
-#### <a name="specify-the-type-of-updates-to-download"></a>Geef het type updates op dat u wilt downloaden
-Vanaf versie 1706 is het standaard Download gedrag van de hulpprogram ma's gewijzigd. het hulp programma ondersteunt opties om te bepalen welke bestanden u downloadt.
-- Het hulp programma downloadt standaard alleen de meest recente beschik bare update die van toepassing is op de versie van uw site. Hotfixes worden niet gedownload.
+- De naam van het gegevens bestand dat u van de site exporteert:`UsageData.cab`
 
-Als u dit gedrag wilt wijzigen, gebruikt u een van de volgende para meters om te wijzigen welke bestanden worden gedownload. 
+- De naam van de lege map waar het hulp programma gedownloade updates opslaat voor Configuration Manager:`UpdatePacks`
 
-> [!NOTE]
-> De versie van uw site wordt bepaald op basis van de gegevens in het CAB-bestand dat wordt geüpload wanneer het hulp programma wordt uitgevoerd.
->
-> U kunt de versie controleren door te zoeken naar het bestand *SiteVersion*. txt in het CAB-bestand.
+### <a name="prepare"></a>Voorbereiden
 
-- **-downloadall**  Met deze optie worden alle updates en hotfixes gedownload, ongeacht de versie van uw site.
-- **-downloadhotfix**  Met deze optie worden alle hotfixes gedownload, ongeacht de versie van uw site.
-- **-downloadsiteversion**  Met deze optie worden updates en hotfixes gedownload die een versie hebben die hoger is dan de versie van uw site.
+1. Open een opdracht prompt als beheerder op de computer die als host fungeert voor het service aansluitpunt en wijzig de map in de locatie van het hulp programma. Bijvoorbeeld:
 
-Voor beeld van een opdracht regel die gebruikmaakt van *-downloadsiteversion*:
-- **serviceconnectiontool. exe-Connect *-downloadsiteversion* -usagedatasrc D:\USB-updatepackdest D:\USB\UpdatePacks**
+    `cd C:\Source\SMSSETUP\TOOLS\ServiceConnectionTool\`
 
+1. Voer de volgende opdracht uit om het gegevens bestand voor te bereiden:
 
+    `ServiceConnectionTool.exe -prepare -usagedatadest D:\USB\UsageData.cab`
 
+    > [!NOTE]
+    > Als u gegevens bestanden van meer dan één hiërarchie tegelijk uploadt, geeft u elk gegevens bestand een unieke naam. Indien nodig kunt u later de naam van bestanden wijzigen.
 
-### <a name="to-use-the-service-connection-tool"></a>Het hulpprogramma voor serviceverbindingen gebruiken  
+    De gegevens in het bestand zijn gebaseerd op het niveau van de diagnostische en gebruiks gegevens die u voor de site configureert. Zie [overzicht van diagnose-en gebruiks gegevens](../../plan-design/diagnostics/diagnostics-and-usage-data.md)voor meer informatie. U kunt het hulp programma gebruiken om de gegevens naar een CSV-bestand te exporteren om de inhoud weer te geven. Zie [exporteren](#-export)voor meer informatie.
 
-1. Op de computer die het serviceverbindingspunt host:  
+1. Wanneer het hulp programma klaar is met het exporteren van de gebruiks gegevens, kopieert u het gegevens bestand naar een computer die toegang heeft tot internet.
 
-   - Open een opdrachtprompt met beheerdersbevoegdheden en wijzig vervolgens de mappen in de locatie waarin **serviceconnectiontool.exe**zich bevindt.   
+### <a name="connect"></a>Verbinding maken
 
-2. Voer de volgende opdracht zodat het hulpprogramma een CAB-bestand met gebruiksgegevens voorbereidt en dat kopieert naar een locatie die u opgeeft:  
+1. Open op de computer met Internet toegang een opdracht prompt als beheerder en wijzig de map naar de locatie van het hulp programma. Deze locatie is een kopie van de volledige map **ServiceConnectionTool** . Bijvoorbeeld:
 
-   - **serviceconnectiontool.exe -prepare -usagedatadest D:\USB\UsageData.cab**  
+    `cd D:\USB\ServiceConnectionTool\`
 
-   Als u CAB-bestanden uit meer dan één hiërarchie tegelijk uploadt, moet elk CAB-bestand in de map een unieke naam hebben. Bestanden die u aan de map toevoegt, kunt u handmatig wijzigen.
+1. Voer de volgende opdracht uit om het gegevens bestand te uploaden en de Configuration Manager-updates te downloaden:
 
-   Als u de gebruiksgegevens wilt weergeven die worden verzameld voor het uploaden naar de cloudservice van Configuration Manager, voert u de volgende opdracht uit voor het exporteren van dezelfde gegevens als CSV-bestand. Dit bestand kunt u vervolgens bekijken met behulp van een toepassing zoals Excel:  
+    `ServiceConnectionTool.exe -connect -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks`
 
-   - **serviceconnectiontool.exe -export -dest D:\USB\UsageData.csv**  
+    Zie [opdracht regel parameters](#bkmk_cmd)voor meer voor beelden.
 
-3. Nadat de voorbereidingsstap is voltooid, verplaatst u het USB-station (of draagt u de geëxporteerde gegevens via een andere methode over) naar een computer die toegang heeft tot internet.  
+    > [!NOTE]  
+    > Wanneer u deze opdracht regel uitvoert, ziet u mogelijk de volgende fout:
+    >
+    > **Onverwerkte uitzonde ring: System. UnauthorizedAccessException: toegang tot het pad ' C:\Users\jqpublic\AppData\Local\Temp\extractmanifestcab\95F8A562.sql ' is geweigerd.**
+    >
+    > U kunt deze fout gewoon negeren. Sluit het fout venster om door te gaan.
 
-4. Open een opdrachtprompt met beheerdersbevoegdheden op de computer met internettoegang en wijzig de mappen in de locatie met een kopie van het hulpprogramma  **serviceconnectiontool.exe** en de aanvullende bestanden uit die map.  
+1. Wanneer het hulp programma de updates heeft gedownload, kopieert u deze naar het service verbindings punt.
 
-5. Voer de volgende opdracht uit om de gebruiksgegevens te uploaden en de updates voor Configuration Manager te downloaden:  
+### <a name="import"></a>Importeren
 
-   - **serviceconnectiontool. exe-Connect-usagedatasrc D:\USB-updatepackdest D:\USB\UpdatePacks**
+1. Open een opdracht prompt als beheerder op de computer die als host fungeert voor het service aansluitpunt en wijzig de map in de locatie van het hulp programma. Bijvoorbeeld:
 
-   Zie de sectie [Opdrachtregelopties](../../../core/servers/manage/use-the-service-connection-tool.md#bkmk_cmd) verderop in dit onderwerp voor meer voorbeelden van deze opdrachtregel.
+    `cd C:\Source\SMSSETUP\TOOLS\ServiceConnectionTool\`
 
-   > [!NOTE]  
-   >  Wanneer u de opdrachtregel uitvoert om verbinding met de Configuration Manager-cloudservice te maken, wordt er mogelijk een foutbericht weergegeven dat vergelijkbaar is met het volgende bericht:  
-   >   
-   > - Onverwerkte uitzondering: System.UnauthorizedAccessException:  
-   >   
-   >      Toegang tot het pad ' C:\  
-   >     Users\br\AppData\Local\Temp\extractmanifestcab\95F8A562.sql' wordt geweigerd.  
-   >   
-   > Deze fout kan worden genegeerd en u kunt het foutvenster sluiten en doorgaan.  
+1. Voer de volgende opdracht uit om de updates te importeren:
 
-6. Nadat de updates voor Configuration Manager zijn gedownload, verplaatst u het USB-station (of draagt u de geëxporteerde gegevens via een andere methode over) naar de computer die het serviceverbindingspunt host.  
+    `ServiceConnectionTool.exe -import -updatepacksrc D:\USB\UpdatePacks`
 
-7. Open op de computer waarop het serviceverbindingspunt wordt gehost, een opdrachtprompt met beheerdersbevoegdheden, wijzig de mappen in de locatie waarin **serviceconnectiontool.exe**zich bevindt en voer de volgende opdracht uit:  
+1. Nadat het importeren is voltooid, sluit u de opdracht prompt. Er worden alleen updates voor de toepasselijke hiërarchie geïmporteerd.
 
-   - **serviceconnectiontool.exe -import -updatepacksrc D:\USB\UpdatePacks**  
+1. Ga in de Configuration Manager-console naar de werk ruimte **beheer** en selecteer het knoop punt **updates en onderhoud** . Geïmporteerde updates zijn nu beschikbaar om te installeren. Zie [updates binnen de console installeren](install-in-console-updates.md)voor meer informatie.
 
-8. Nadat het importeren is voltooid, kunt u de opdrachtprompt sluiten. (Alleen updates voor de van toepassing zijnde hiërarchie worden geïmporteerd).  
+## <a name="log-files"></a>Logboekbestanden
 
-9. Open de Configuration Manager-console en ga naar **beheer** > **updates en onderhoud**. De geïmporteerde updates kunnen nu worden geïnstalleerd. (Vóór versie 1702 werden updates en onderhoud onder **beheer** > **Cloud Services**.)
+- **ServiceConnectionTool. log**: telkens wanneer u het hulp programma voor service verbindingen uitvoert, wordt het naar dit logboek bestand geschreven. Het pad van het logboek bestand is altijd dezelfde locatie als het hulp programma. Dit logboek bestand bevat eenvoudige Details over het gebruik van het hulp programma op basis van de para meters die u gebruikt. Telkens wanneer u het hulp programma uitvoert, vervangt het hulp programma een bestaand logboek bestand.
 
-   Zie [updates in de console installeren voor Configuration Manager](../../../core/servers/manage/install-in-console-updates.md)voor meer informatie over het installeren van updates.  
+- **ConfigMgrSetup. log**: tijdens de [verbindings](#connect) fase schrijft het hulp programma naar dit logboek bestand in de hoofdmap van het systeem station. Dit logboek bestand bevat meer gedetailleerde informatie. Bijvoorbeeld welk bestand het hulp programma downloadt en als de hash-controles zijn geslaagd.
 
-## <a name="log-files"></a><a name="bkmk_cmd"></a>Logboek bestanden
+## <a name="command-line-parameters"></a><a name="bkmk_cmd"></a>Opdracht regel parameters
 
-**ServiceConnectionTool. log**
+In deze sectie worden alle beschik bare para meters voor het hulp programma voor service verbindingen alfabetisch gesorteerd.
 
-Telkens wanneer u het hulp programma voor service verbindingen uitvoert, wordt een logboek bestand gegenereerd op dezelfde locatie als het hulp programma met de naam **ServiceConnectionTool. log**.  Dit logboek bestand bevat eenvoudige Details over de uitvoering van het hulp programma op basis van de opdrachten die worden gebruikt.  Telkens wanneer u het hulp programma uitvoert, wordt een bestaand logboek bestand vervangen.
+### <a name="-connect"></a>-verbinden
 
-**ConfigMgrSetup. log**
+Gebruiken tijdens de [verbindings](#connect) fase op de computer met Internet toegang. Er wordt verbinding gemaakt met de Configuration Manager Cloud service om het gegevens bestand te uploaden en updates te downloaden.
 
-Wanneer u het hulp programma gebruikt om verbinding te maken en updates te downloaden, wordt een logboek bestand gegenereerd op de hoofdmap van het systeem station met de naam **ConfigMgrSetup. log**.  Dit logboek bestand bevat meer gedetailleerde informatie, zoals welke bestanden worden gedownload, geëxtraheerd en als de hash-controles zijn geslaagd.
+Hiervoor zijn de volgende para meters vereist:
 
-## <a name="command-line-options"></a><a name="bkmk_cmd"></a> Opdrachtregelopties  
-Als u Help-informatie voor het hulpprogramma voor serviceverbindingspunten wilt weergeven, opent u via de opdrachtprompt de map waarin het hulpprogramma zich bevindt en voert u de volgende opdracht uit:  **serviceconnectiontool.exe**.  
+- **-usagedatasrc**: de locatie van het gegevens bestand dat moet worden geüpload
+- **-updatepackdest**: een pad voor de gedownloade updates
 
+U kunt ook de volgende optionele para meters gebruiken:
 
-|Opdrachtregelopties|Details|  
-|---------------------------|-------------|  
-|**-prepare -usagedatadest [station:][pad][bestandsnaam.cab]**|Met deze opdracht worden de huidige gebruiksgegevens opgeslagen in een CAB-bestand.<br /><br /> Voer deze opdracht uit als **lokale beheerder** op de server waarop het serviceverbindingspunt wordt gehost.<br /><br /> Voorbeeld:   **-prepare -usagedatadest D:\USB\Usagedata.cab**|    
-|**-connect -usagedatasrc [station:][pad] -updatepackdest [station:][pad] -proxyserveruri [FQDN van proxyserver] -proxyusername [gebruikersnaam]** <br /> <br /> Als u voor Configuration Manager een eerdere versie dan 1606 gebruikt, moet u de naam van het CAB-bestand opgeven en kunt u niet de opties voor een proxyserver gebruiken.  De ondersteunde opdrachtparameters zijn: <br /> **-connect -usagedatasrc [station:][pad][bestandsnaam] -updatepackdest [station:][pad]** |Deze opdracht maakt verbinding met de Configuration Manager-cloudservice om de CAB-bestanden met gebruiksgegevens te uploaden vanaf de opgegeven locatie en om beschikbare updatepakketten en console-inhoud te downloaden. De opties voor proxyservers zijn optioneel.<br /><br /> Voer deze opdracht uit als **lokale beheerder** op een computer die verbinding met internet kan maken.<br /><br /> Voorbeeld van verbinding maken zonder proxyserver: **-connect -usagedatasrc D:\USB\ -updatepackdest D:\USB\UpdatePacks** <br /><br /> Voorbeeld van verbinding maken wanneer u een proxyserver gebruikt: **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks -proxyserveruri itgproxy.redmond.corp.microsoft.com -proxyusername Meg** <br /><br /> Als u een eerdere versie dan 1606 gebruikt, moet u een bestandsnaam opgeven voor het CAB-bestand en kunt u geen proxyserver opgeven. Gebruik daarbij het volgende voorbeeld voor een opdrachtregel: **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks**|      
-|**-import -updatepacksrc [station:][pad]**|Met deze opdracht worden de updatepakketten en de inhoud van de console geïmporteerd die u eerder hebt gedownload naar de Configuration Manager-console.<br /><br /> Voer deze opdracht uit als **lokale beheerder** op de server waarop het serviceverbindingspunt wordt gehost.<br /><br /> Voorbeeld:  **-import -updatepacksrc D:\USB\UpdatePacks**|  
-|**-export -dest [station:][pad][bestandsnaam.csv]**|Met deze opdracht exporteert u de gebruiksgegevens naar een CSV-bestand, dat u vervolgens kunt weergeven.<br /><br /> Voer deze opdracht uit als **lokale beheerder** op de server waarop het serviceverbindingspunt wordt gehost.<br /><br /> Voorbeeld: **-export -dest D:\USB\usagedata.csv**|  
+- **-proxyserveruri**: de FQDN-naam van de proxy server
+- **-proxy username**: een gebruikers naam voor de proxy server
+- **-downloadall**: down load alles, inclusief updates en hotfixes, ongeacht de versie van uw site.
+- **-downloadhotfix**: down load alle hotfixes, ongeacht de versie van uw site.
+- **-downloadsiteversion**: down load updates en hotfixes die een hogere versie hebben dan de versie van uw site.
+
+#### <a name="example-of-connect-without-a-proxy-server"></a>Voor beeld van verbinding maken zonder proxy server
+
+`ServiceConnectionTool.exe -connect -usagedatasrc D:\USB\ -updatepackdest D:\USB\UpdatePacks`
+
+#### <a name="example-of-connect-with-a-proxy-server"></a>Voor beeld van verbinding maken met een proxy server
+
+`ServiceConnectionTool.exe -connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks -proxyserveruri itproxy.contoso.com -proxyusername jqpublic`
+
+#### <a name="example-of-connect-to-download-only-site-version-applicable-updates"></a>Voor beeld van verbinding maken om alleen updates te downloaden die van toepassing zijn op de site versie
+
+`ServiceConnectionTool.exe -connect -downloadsiteversion -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks`
+
+### <a name="-dest"></a>-doel
+
+Een vereiste para meter met de para meter **-export** om het pad en de bestands naam op te geven van het CSV-bestand dat moet worden geëxporteerd. Zie [exporteren](#-export)voor meer informatie.
+
+### <a name="-downloadall"></a>-downloadall
+
+Een optionele para meter met de para meter **-Connect** voor het downloaden van alles, inclusief updates en hotfixes, ongeacht de versie van uw site. Zie [-Connect](#connect)voor meer informatie.
+
+### <a name="-downloadhotfix"></a>-downloadhotfix
+
+Een optionele para meter met de para meter **-Connect** om alleen alle hotfixes te downloaden, ongeacht de versie van uw site. Zie [-Connect](#-connect)voor meer informatie.
+
+### <a name="-downloadsiteversion"></a>-downloadsiteversion
+
+Een optionele para meter met de para meter **-Connect** voor het downloaden van updates en hotfixes met een latere versie dan de versie van uw site. Zie [-Connect](#-connect)voor meer informatie.
+
+### <a name="-export"></a>-exporteren
+
+Gebruik tijdens de [voorbereidings](#prepare) fase om gebruiks gegevens te exporteren naar een CSV-bestand. Voer deze uit als beheerder op het service verbindings punt. Met deze actie kunt u de inhoud van de gebruiks gegevens controleren voordat u naar micro soft uploadt. Hiervoor is de para meter **-doel** vereist om de locatie van het CSV-bestand op te geven.
+
+#### <a name="example-of-export"></a>Voor beeld van exporteren
+
+`-export -dest D:\USB\usagedata.csv`
+
+### <a name="-import"></a>-importeren
+
+Gebruik tijdens de [import](#import) fase op het service verbindings punt om de updates te importeren op de site. Hiervoor is de para meter **-updatepacksrc** vereist voor het opgeven van de locatie van de gedownloade updates.
+
+#### <a name="example-of-import"></a>Voor beeld van importeren
+
+`ServiceConnectionTool.exe -import -updatepacksrc D:\USB\UpdatePacks`
+
+### <a name="-prepare"></a>-voorbereiden
+
+Gebruiken tijdens de [voorbereidings](#prepare) fase op het service verbindings punt om gebruiks gegevens van de site te exporteren. Hiervoor is de para meter **-usagedatadest** vereist om de locatie van het geëxporteerde-gegevens bestand op te geven.
+
+#### <a name="example-of-prepare"></a>Voor beeld van voorbereiden
+
+`ServiceConnectionTool.exe -prepare -usagedatadest D:\USB\UsageData.cab`
+
+### <a name="-proxyserveruri"></a>-proxyserveruri
+
+Een optionele para meter met de para meter **-Connect** om de FQDN-naam van uw proxy server op te geven. Zie [-Connect](#-connect)voor meer informatie.
+
+### <a name="-proxyusername"></a>-proxy username
+
+Een optionele para meter met de para meter **-Connect** om de gebruikers naam op te geven die bij de proxy server moet worden geverifieerd. Zie [-Connect](#-connect)voor meer informatie.
+
+### <a name="-updatepackdest"></a>-updatepackdest
+
+Een vereiste para meter met de para meter **-Connect** om een pad op te geven voor de gedownloade updates. Zie [-Connect](#-connect)voor meer informatie.
+
+### <a name="-updatepacksrc"></a>-updatepacksrc
+
+Een vereiste para meter met de para meter **-import** om een pad van de gedownloade updates op te geven. Zie [-importeren](#-import)voor meer informatie.
+
+### <a name="-usagedatadest"></a>-usagedatadest
+
+Een vereiste para meter met de para meter **-Prepare** voor het opgeven van een pad en een bestands naam van het geëxporteerde-gegevens bestand. Zie voor meer informatie [-voor bereiding](#-prepare).
+
+## <a name="next-steps"></a>Volgende stappen
+
+[Updates binnen de console installeren](install-in-console-updates.md)
+
+[Diagnostische gegevens en gebruiksgegevens weergeven](../../plan-design/diagnostics/view-diagnostics-and-usage-data.md)

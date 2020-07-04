@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 63f8ad6827a1aa72c3aaa51e21fecbf639fbb405
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 0f69b42ce0396148c67eaade967ef4fd87dea7bb
+ms.sourcegitcommit: 03d2331876ad61d0a6bb1efca3aa655b88f73119
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715574"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85946892"
 ---
 # <a name="log-file-reference"></a>Verwijzing naar logboekbestand
 
@@ -427,6 +427,7 @@ In de volgende tabel worden de logboekbestanden vermeld die gegevens bevatten di
 |objreplmgr.log|Registreert de verwerking van beleid en toewijzing.|Primaire siteserver|  
 |PolicyPV.log|Registreert het beleid van het genereren van alle beleidsregels.|Siteserver|  
 |outgoingcontentmanager.log|Registreert inhoud die is geüpload naar Microsoft Intune.|Computer met het serviceverbindingspunt|  
+|ServiceConnectionTool. log|Registreert gegevens over het gebruik van het [hulp programma voor service verbindingen](../../servers/manage/use-the-service-connection-tool.md) op basis van de para meter die u gebruikt. Telkens wanneer u het hulp programma uitvoert, wordt een bestaand logboek bestand vervangen.|Dezelfde locatie als het hulp programma|
 |Sitecomp.log|Hierin worden de gegevens over de installatie van het serviceverbindingspunt vastgelegd.|Siteserver|  
 |SmsAdminUI.log|Registreert Configuration Manager-console activiteit.|Computer waarop de Configuration Manager-console wordt uitgevoerd|  
 |SMS_CLOUDCONNECTION. log|Registreert informatie over Cloud Services.|Computer met het serviceverbindingspunt|

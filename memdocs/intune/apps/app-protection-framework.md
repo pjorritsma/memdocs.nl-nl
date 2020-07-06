@@ -55,7 +55,7 @@ Zoals in de bovenstaande tabel wordt aangegeven, moeten alle wijzigingen in het 
 
 Bij het testen van wijzigingen in een beleid voor app-beveiliging moet u zich bewust zijn van de [leveringstiming](app-protection-policy-delivery.md). De status van de levering van het beleid voor app-beveiliging voor een bepaalde gebruiker kan worden gecontroleerd. Zie [How to monitor app protection policies](app-protection-policies-monitor.md) (App-beveiligingsbeleid controleren) voor meer informatie.
 
-Afzonderlijke instellingen van het beleid voor app-beveiliging voor elke app kunnen worden gevalideerd op apparaten met Edge en de URL *about:Intunehelp*. Zie [Logboeken voor beveiliging van de client-app controleren](app-protection-policy-settings-log.md) en [Edge voor iOS en Android gebruiken voor toegang tot logboeken voor beheerde apps](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs) voor meer informatie.
+Afzonderlijke instellingen van het beleid voor app-beveiliging voor elke app kunnen worden gevalideerd op apparaten met Edge en de URL *about:Intunehelp*. Zie [Logboeken voor beveiliging van de client-app controleren](app-protection-policy-settings-log.md) en [Microsoft Edge voor iOS en Android gebruiken voor toegang tot logboeken voor beheerde apps](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs) voor meer informatie.
 
 ## <a name="app-data-protection-framework-settings"></a>Gegevensbeschermingsframework met beleid voor app-beveiliging
 

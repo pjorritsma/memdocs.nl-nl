@@ -107,7 +107,7 @@ U kunt op de volgende drie manieren het app-configuratiebeleid valideren:
 
 ### <a name="iosipados-configuration-on-unmanaged-devices"></a>iOS/iPadOS-configuratie op niet-beheerde apparaten
 
-U kunt de iOS-/iPadOS-configuratie valideren met het **diagnostische logboek van Intune** op niet-beheerde apparaten voor de configuratie van beheerde apps. Behalve met de onderstaande stappen, kunt u ook toegang krijgen tot de logboeken van beheerde apps met behulp van Microsoft Edge. Zie [Edge voor iOS en Android gebruiken voor toegang tot logboeken voor beheerde apps](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs) voor meer informatie.
+U kunt de iOS-/iPadOS-configuratie valideren met het **diagnostische logboek van Intune** op niet-beheerde apparaten voor de configuratie van beheerde apps. Behalve met de onderstaande stappen, kunt u ook toegang krijgen tot de logboeken van beheerde apps met behulp van Microsoft Edge. Zie [Microsoft Edge voor iOS en Android gebruiken voor toegang tot logboeken voor beheerde apps](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs) voor meer informatie.
 
 1. Download en installeer **Microsoft Edge** vanuit de App Store als het nog niet is geïnstalleerd op het apparaat. Zie [Met Microsoft Intune beveiligde apps](apps-supported-intune-apps.md) voor meer informatie.
 2. Start **Microsoft Edge** en selecteer **Info** > **Help bij Intune** in de navigatiebalk.

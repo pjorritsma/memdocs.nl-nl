@@ -47,7 +47,7 @@ Ondersteunde platforms en profielen:
   - **Niet geconfigureerd** (*standaard*)
   - **Ingeschakeld voor Edge** Application Guard is ingeschakeld voor Microsoft Edge, worden hiermee niet-goedgekeurde sites in een door Hyper-V gevirtualiseerde browsercontainer geopend.
 
-  Indien ingesteld op *Ingeschakeld voor Edge* zijn de volgende instellingen beschikbaar:
+  Indien ingesteld op *Ingeschakeld voor Microsoft Edge* zijn de volgende instellingen beschikbaar:
   
   - **Klembordgedrag**  
     CSP: [ClipboardSettings](https://go.microsoft.com/fwlink/?linkid=872351)

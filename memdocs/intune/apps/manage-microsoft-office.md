@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 41b85299057f172fec224873607509aaaec60024
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: 5d23eaeee839122bad46cd9619a790b9ca6332a6
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84977259"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383254"
 ---
 # <a name="manage-collaboration-experiences-using-office-for-ios-and-android-with-microsoft-intune"></a>Samenwerkingservaringen beheren met Office voor iOS en Android met Microsoft Intune
 
@@ -37,7 +37,7 @@ De meest veelzijdige en breedste beveiligingsmogelijkheden voor Office 365-gegev
 ## <a name="apply-conditional-access"></a>Voorwaardelijke toegang toepassen
 Organisaties kunnen gebruikmaken van het beleid voor voorwaardelijke toegang van Azure AD om ervoor te zorgen dat gebruikers alleen toegang hebben tot werk- of schoolinhoud met behulp van Office voor iOS en Android. Hiervoor hebt u een beleid voor voorwaardelijke toegang nodig dat zich richt op alle potentiële gebruikers. Meer informatie over het maken van dit beleid vindt u in [Beveiligingsbeleid voor apps vereisen voor toegang tot cloud-apps met voorwaardelijke toegang](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access).
 
-1. Volg "Stap 1: Een beleid voor voorwaardelijke toegang tot Azure AD voor Office 365 configureren" in [scenario 1: Voor Office 365-apps zijn goedgekeurde apps met app-beveiligingsbeleid vereist](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies), waarmee Office voor iOS en Android is toegestaan, maar externe clients voor mobiele apparaten met OAuth worden geblokkeerd en geen verbinding kunnen maken met Office 365-eindpunten.
+1. Volg stap 1: Een beleid voor voorwaardelijke toegang tot Azure AD voor Office 365 configureren" in [scenario 1: Voor Office 365-apps zijn goedgekeurde apps met app-beveiligingsbeleid vereist](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies), waarmee Office voor iOS en Android is toegestaan, maar externe clients voor mobiele apparaten met OAuth worden geblokkeerd en geen verbinding kunnen maken met Office 365-eindpunten.
 
    >[!NOTE]
    > Dit beleid zorgt ervoor dat mobiele gebruikers toegang hebben tot alle Office-eindpunten met behulp van de toepasselijke apps.
@@ -108,7 +108,13 @@ Deze instellingen kunnen worden geïmplementeerd in de app, ongeacht de inschrij
 
 ### <a name="manage-file-transfers"></a>Bestandsoverdrachten beheren
 
-Office stelt gebruikers standaard in staat bestanden te delen met gebruikers in de buurt en bestanden over te dragen naar de desktopsystemen.
+Office voor iOS en Android stelt gebruikers automatisch in staat om inhoud te delen met behulp van verschillende mechanismen:
+
+- Als het bestand wordt gehost in OneDrive of SharePoint, kunnen gebruikers rechtstreeks vanuit het bestand een share-aanvraag initiëren.
+- Gebruikers kunnen bestanden overdragen naar desktopsystemen met behulp van de actie **Bestanden overdragen**.
+- Gebruikers kunnen bestanden delen met mobiele apparaten in de buurt met behulp van de actie **Delen in de buurt**.
+
+De acties **Bestanden overdragen** en **Delen in de buurt** werken alleen met mediabestanden en lokale bestanden, en met bestanden die niet zijn beveiligd met een app-beveiligingsbeleid. 
 
 |    Sleutel    |    Waarde    |
 |-------------------------------------------------------------------|-------------|

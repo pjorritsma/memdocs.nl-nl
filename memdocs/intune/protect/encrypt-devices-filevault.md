@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
+ms.date: 06/24/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 99facc87d068239962ab0d40874aa081f5e19189
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1f2a6955a430427fe3f4e2791da6bbaecdd90523
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989691"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353565"
 ---
 # <a name="use-filevault-disk-encryption-for--macos-with-intune"></a>FileVault-schijfversleuteling gebruiken voor macOS met Intune
 
@@ -30,18 +30,18 @@ Intune biedt ondersteuning voor macOS FileVault-schijfversleuteling. FileVault i
 
 Gebruik een van de volgende beleidstypen om FileVault op uw beheerde apparaten te configureren:
 
-- **[Een eindpuntbeveiligingsbeleid voor macOS FileVault opstellen](#create-an-endpoint-security-policy-for-filevault)** . Het FileVault-profiel in *eindpuntbeveiliging* is een gerichte groep instellingen die is toegewezen aan het configureren van FileVault.
+- **[Een eindpuntbeveiligingsbeleid voor macOS FileVault opstellen](#create-endpoint-security-policy-for-filevault)** . Het FileVault-profiel in *eindpuntbeveiliging* is een gerichte groep instellingen die is toegewezen aan het configureren van FileVault.
 
   Bekijk de FileVault-instellingen die beschikbaar zijn in [de profielen voor het schijfversleutelingsbeleid](../protect/endpoint-security-disk-encryption-profile-settings.md).
 
-- **[Configuratieprofiel van het apparaat voor eindpuntbescherming voor macOs FileVault](#create-an-endpoint-security-policy-for-filevault)** . De FileVault-instellingen vormen een eigen instellingencategorie in Endpoint Protection voor macOS. Zie [een apparaatprofiel maken in Intune](../configuration/device-profile-create.md) voor meer informatie over het gebruik van een configuratieprofiel voor apparaten.
+- **[Configuratieprofiel van het apparaat voor eindpuntbescherming voor macOs FileVault](#create-endpoint-security-policy-for-filevault)** . De FileVault-instellingen vormen een eigen instellingencategorie in Endpoint Protection voor macOS. Zie [een apparaatprofiel maken in Intune](../configuration/device-profile-create.md) voor meer informatie over het gebruik van een configuratieprofiel voor apparaten.
 
   Bekijk de FileVault-instellingen die beschikbaar zijn voor [Bin eindpuntbeschermingsprofielen op het formulier voor het apparaatconfiguratiebeleid](../protect/endpoint-protection-macos.md#filevault).
 
 Zie [BitLocker-beleid beheren](../protect/encrypt-devices.md) als u BitLocker voor Windows 10 wilt beheren.
 
 > [!TIP]
-> [versleutelingsrapport](encryption-monitor.md) met informatie over de versleutelingsstatus van apparaten, voor alle beheerde apparaten.
+> Intune biedt een ingebouwd [versleutelingsrapport](encryption-monitor.md) met informatie over de versleutelingsstatus van al uw beheerde apparaten.
 
 Wanneer u een beleid hebt gemaakt voor het met FileVault versleutelen van apparaten, wordt het beleid in twee fasen toegepast op apparaten. In eerste instantie wordt het apparaat voorbereid zodat Intune kan worden gebruikt voor het ophalen van en het maken van back-ups van de herstelsleutel. Deze actie heet ook wel 'escrow'. Wanneer er een escrow-sleutel is gemaakt, kan worden gestart met de schijfversleuteling.
 
@@ -60,17 +60,15 @@ Hieronder vindt u de FileVault-machtigingen die deel uitmaken van de categorie *
 - **FileVault-sleutel roteren**
   - Helpdeskmedewerker
 
-## <a name="create-and-deploy-policy"></a>Beleid opstellen en implementeren
-
-### <a name="create-an-endpoint-security-policy-for-filevault"></a>Een eindpuntbeveiligingsbeleid voor FileVault opstellen
+## <a name="create-endpoint-security-policy-for-filevault"></a>Eindpuntbeveiligingsbeleid voor FileVault opstellen
 
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Selecteer **eindpuntbeveiliging** > **schijfversleuteling** > **Maak beleid**.
 
-3. Voer op de pagina **Basisinstellingen** de volgende eigenschappen in en kies vervolgens **Volgende**.
-   1. **Platform**: macOS
-   2. **Profiel**: FileVault
+3. Voer op de pagina **Basisinformatie** de volgende eigenschappen in en kies vervolgens **Volgende**.
+   - **Platform**: macOS
+   - **Profiel**: FileVault
 
    ![Het FileVault-profiel selecteren](./media/encrypt-devices-filevault/select-macos-filevault-es.png)
 
@@ -94,33 +92,49 @@ Selecteer **Volgende**.
 
 8. Kies op de pagina **Controleren en maken** de optie **Maken** zodra u klaar bent. Het nieuwe profiel wordt weergegeven in de lijst wanneer u het beleidstype selecteert voor het profiel dat u hebt gemaakt.
 
-### <a name="create-a-device-configuration-policy-for-filevault"></a>Een configuratiebeleid voor FileVault maken
+## <a name="create-device-configuration-policy-for-filevault"></a>Configuratiebeleid voor FileVault maken
 
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Selecteer **Apparaten** > **Configuratieprofielen** > **Profiel maken**.
 
-3. Stel de volgende opties in:
-   1. **Platform**: macOS
-   2. **Profiel**: Endpoint Protection
+3. Stel op de pagina **Een profiel maken** de volgende opties in. Klik vervolgens op **Maken**:
+   - **Platform**: macOS
+   - **Profiel**: Endpoint Protection
 
    ![Het FileVault-profiel selecteren](./media/encrypt-devices-filevault/select-macos-filevault-dc.png)
 
-4. Selecteer **Instellingen** > **FileVault**.
+4. Voer op de pagina **Basisinformatie** de volgende eigenschappen in:
 
-   ![FileVault-instellingen](./media/encrypt-devices-filevault/filevault-settings.png)
+   - **Naam**: Voer een beschrijvende naam in voor het beleid. Geef uw beleid een naam zodat u het later eenvoudig kunt identificeren. Een goede beleidsnaam bevat bijvoorbeeld mogelijk het profieltype en het platform.
 
-5. Bij *FileVault* selecteert u **Inschakelen**.
+   - **Beschrijving**: Voer een beschrijving in voor het beleid. Deze instelling is optioneel, maar wordt aanbevolen.
 
-6. Bij *Herstelsleuteltype* wordt alleen de optie **Persoonlijke sleutel** ondersteund.
+5. Selecteer op de pagina **Configuratie-instellingen** de optie **FileVault** om de beschikbare instellingen uit te vouwen:
 
-   Overweeg een bericht toe te voegen om gebruikers te helpen bij het ophalen van de herstelsleutel voor hun apparaat. Deze informatie kan nuttig zijn voor uw gebruikers wanneer u de instelling voor wijziging van persoonlijke herstelsleutels gebruikt. Met deze instelling kan periodiek automatisch een nieuwe herstelsleutel voor een apparaat worden gegenereerd.
+   > [!div class="mx-imgBorder"]
+   > ![FileVault-instellingen](./media/encrypt-devices-filevault/filevault-settings.png)
 
-   Bijvoorbeeld: Als u een verloren of onlangs vernieuwde herstelsleutel wilt ophalen, meldt u zich aan op de website van de Intune-bedrijfsportal. Dit kan vanaf elk apparaat. Ga in de portal naar *Apparaten* en selecteer het apparaat waarvoor FileVault is ingeschakeld. Selecteer dan *Herstelsleutel ophalen*. De huidige herstelsleutel wordt weergegeven.
+6. Configureer de volgende instellingen:
+  
+   - Selecteer voor *FileVault* de optie **Ja**.
 
-7. Configureer de overige [FileVault-instellingen](endpoint-protection-macos.md#filevault) zodanig dat er aan de vereisten van uw bedrijf wordt voldaan. Selecteer vervolgens **OK**.
+   - Selecteer voor *Type herstelsleutel* de optie **Persoonlijke sleutel**.
 
-8. Voltooi de configuratie van de aanvullende instellingen en sla het profiel op.
+   - Voeg voor *Escrow-locatiebeschrijving van persoonlijke herstelsleutel* een bericht toe om gebruikers te helpen bij het ophalen van de herstelsleutel voor hun apparaat. Deze informatie kan nuttig zijn voor uw gebruikers wanneer u de instelling voor wijziging van persoonlijke herstelsleutels gebruikt. Met deze instelling kan periodiek automatisch een nieuwe herstelsleutel voor een apparaat worden gegenereerd.
+
+     Bijvoorbeeld: Als u een verloren of onlangs vernieuwde herstelsleutel wilt ophalen, meldt u zich aan op de website van de Intune-bedrijfsportal. Dit kan vanaf elk apparaat. Ga in de portal naar *Apparaten* en selecteer het apparaat waarvoor FileVault is ingeschakeld. Selecteer dan *Herstelsleutel ophalen*. De huidige herstelsleutel wordt weergegeven.
+
+   Configureer de overige [FileVault-instellingen](endpoint-protection-macos.md#filevault) zodanig dat er aan de vereisten van uw bedrijf wordt voldaan. Selecteer vervolgens **Volgende**.
+
+7. Selecteer op de pagina **Bereik (tags)** de optie **Bereiktags selecteren** om het deelvenster Tags selecteren te openen en bereiktags aan het profiel toe te wijzen.
+
+   Selecteer **Volgende** om door te gaan.
+
+8. Selecteer op de pagina **Toewijzingen** de groepen die dit profiel zullen ontvangen. Zie Gebruikers- en apparaatprofielen toewijzen voor meer informatie over het toewijzen van profielen.
+Selecteer **Volgende**.
+
+9. Kies op de pagina **Controleren en maken** de optie **Maken** zodra u klaar bent. Het nieuwe profiel wordt weergegeven in de lijst wanneer u het beleidstype selecteert voor het profiel dat u hebt gemaakt.
 
 ## <a name="manage-filevault"></a>FileVault beheren
 

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/23/2020
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87cf4d9fc21b951386c496e49fe482810febcda3
-ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
+ms.openlocfilehash: 89703c8aec11517417f9459391c431b9db75456c
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85263951"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502286"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Wat is er nieuw in Microsoft Intune?
 
@@ -58,18 +58,32 @@ Ontdek elke week wat er nieuw is in Microsoft Intune in het [Microsoft Endpoint 
 
 ## <a name="week-of-june-22-2020"></a>Week van 22 juni 2020
 
+### <a name="app-management"></a>Appbeheer
+
+#### <a name="newly-available-protected-apps-for-intune---7248952---"></a>Nieuw beschikbare, beveiligde apps voor Intune<!-- 7248952 -->
+De volgende beveiligde apps zijn nu beschikbaar:
+- BlueJeans-videovergaderingen
+- Cisco Jabber voor Intune
+- Tableau Mobile voor Intune
+- ZERO voor Intune
+
+Zie [Met Microsoft Intune beveiligde apps](../apps/apps-supported-intune-apps.md) voor meer informatie over beveiligde apps.
+
 ### <a name="monitor-and-troubleshoot"></a>Bewaken en problemen oplossen
+
+#### <a name="use-endpoint-analytics-to-improve-user-productivity-and-reduce-it-support-costs---5653063---"></a>Eindpuntanalyse gebruiken om gebruikersproductiviteit te verbeteren en ondersteuningskosten voor IT te verlagen<!-- 5653063 --> 
+Deze functie wordt de komende week geïmplementeerd. Eindpuntanalyse heeft als doel het verbeteren van de productiviteit van gebruikers en het verlagen van de kosten voor IT-ondersteuning, door inzicht te bieden in de gebruikerservaring. De inzichten stellen de IT-afdeling in staat om de eindgebruikerservaring te optimaliseren met proactieve ondersteuning, en om regressies in de gebruikerservaring te detecteren door de impact van configuratiewijzigingen voor de gebruiker te evalueren. Zie [Preview-versie van Eindpuntanalyse](https://aka.ms/uea) voor meer informatie.
 
 #### <a name="proactively-remediate-end-user-device-issues-using-script-packages---5933328---"></a>Problemen met het apparaat van eindgebruikers proactief herstellen met behulp van scriptpakketten<!-- 5933328 -->
 U kunt scriptpakketten maken en uitvoeren op apparaten van eindgebruikers om de belangrijkste ondersteuningsproblemen in uw organisatie proactief te vinden en op te lossen. Door scriptpakketten te implementeren, kunt u de ondersteuningsaanvragen verminderen. Kies ervoor om uw eigen scriptpakketten te maken of een van de scriptpakketten te implementeren die we in onze omgeving hebben geschreven en gebruikt om het aantal ondersteuningstickets te verminderen. Met Intune kunt u de status van uw geïmplementeerde scriptpakketten bekijken en de detectie- en herstelresultaten controleren. Selecteer in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) **Rapporten** > **Eindpuntanalyse** > **Proactieve herstelbewerkingen**. Zie [Proactieve herstelbewerkingen](https://aka.ms/uea_prs) voor meer informatie.
 
 ### <a name="device-security"></a>Apparaatbeveiliging
 
-### <a name="use-microsoft-defender-atp-in-compliance-policies-for-android---4425686----"></a>Microsoft Defender ATP gebruiken in nalevingsbeleid voor Android<!-- 4425686  -->
+#### <a name="use-microsoft-defender-atp-in-compliance-policies-for-android---4425686----"></a>Microsoft Defender ATP gebruiken in nalevingsbeleid voor Android<!-- 4425686  -->
 
 U kunt nu Intune gebruiken om [Android-apparaten in Microsoft Defender Advanced Threat Protection te onboarden](../protect/advanced-threat-protection.md#onboard-android-devices) (MicrosoftDefender ATP). Nadat de onboarding van uw ingeschreven apparaten is voltooid, kan uw nalevingsbeleid voor Android de *bedreigingsniveausignalen* van Microsoft Defender ATP gebruiken. Dit zijn dezelfde signalen die u eerder kon gebruiken voor Windows 10-apparaten.
 
-### <a name="configure-defender-atp-web-protection-for-android-devices---6185563-wnready---"></a>Defender ATP-webbeveiliging configureren voor Android-apparaten<!-- 6185563 WNReady -->
+#### <a name="configure-defender-atp-web-protection-for-android-devices---6185563-wnready---"></a>Defender ATP-webbeveiliging configureren voor Android-apparaten<!-- 6185563 WNReady -->
 
 Wanneer u Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) gebruikt voor Android-apparaten, kunt u [ Microsoft Defender ATP-webbeveiliging](../protect/advanced-threat-protection.md#configure-web-protection-on-devices-that-run-android) configureren om de scanfunctie voor phishing uit te schakelen of te voorkomen dat de VPN door de scan wordt gebruikt.
 
@@ -456,7 +470,7 @@ Naast de beschikbaarheid van inhoud zijn de volgende punten deze maand nieuw voo
 
 - U kunt nu [**een duplicaat van een beveiligingsbasislijn maken**](../protect/security-baselines.md#duplicate-a-security-baseline). Duplicaten behouden de instellingen van de configuratie van de oorspronkelijke basislijn, maar krijgen een nieuwe naam. Het nieuwe exemplaar van de basislijn bevat geen toewijzingen aan groepen voordat u het nieuwe exemplaar van de basislijn bewerkt om deze toe te voegen.
 
-- Er is een nieuw rapport voor het antivirusbeleid van de eindpuntbeveiliging beschikbaar: [**Beschadigde eindpunten voor Windows 10**](../protect/endpoint-security-antivirus-policy.md#windows-10-unhealthy-endpoints). Dit rapport is een nieuwe pagina die u kunt selecteren wanneer u uw antivirusbeleid van de eindpuntbeveiliging bekijkt. In het rapport wordt de antivirusstatus van uw door MDM beheerde Windows 10-apparaten weergegeven.  
+- Er is een nieuw rapport voor het antivirusbeleid van de eindpuntbeveiliging beschikbaar: [**Beschadigde eindpunten voor Windows 10**](../protect/endpoint-security-antivirus-policy.md#windows-10-unhealthy-endpoints). Dit rapport is een nieuwe pagina die u kunt selecteren wanneer u uw antivirusbeleid van de eindpuntbeveiliging bekijkt. In het rapport wordt de antivirusstatus van uw met MDM beheerde Windows 10-apparaten weergegeven.  
 
 #### <a name="support-for-smime-signing-and-encryption-certificates-with-outlook-on-android---7207474----"></a>Ondersteuning voor S/MIME-ondertekening en versleutelingscertificaten met Outlook op Android<!-- 7207474  -->
 U kunt nu certificaten voor S/MIME-ondertekening en versleuteling gebruiken met Outlook op Android. Met deze ondersteuning kunt u deze certificaten inrichten door gebruik te maken van SCEP, PKCS en van geïmporteerde certificaatprofielen van PKCS. De volgende platformen van Android worden ondersteund:

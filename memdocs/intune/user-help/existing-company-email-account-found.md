@@ -1,11 +1,11 @@
 ---
-title: Er is een bestaand zakelijk e-mailaccount gevonden | Microsoft Docs
-description: Beschrijft hoe u updates kunt toepassen op uw apparaat zodat u weer toegang hebt tot uw e-mail van werk of school.
+title: Er is een bestaand e-mailaccount van uw werk gevonden | Microsoft Docs
+description: Beschrijft hoe u uw apparaat kunt bijwerken zodat u weer toegang hebt tot uw e-mail van werk of school.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/17/2018
+ms.date: 06/29/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,29 +15,28 @@ ms.assetid: 74c51f7b-7bd8-45cf-99bd-02d1972267cb
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: chrisgre
+ms.reviewer: samyada
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: c6917c2ad2650ae093293ba172934661a4f9863f
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 78beb08555a9c276bec79a65bb10bb9dad816926
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881274"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590980"
 ---
-# <a name="an-existing-company-email-account-was-found"></a>Er is een bestaand zakelijk e-mailaccount gevonden
+# <a name="an-existing-email-account-was-found"></a>Er is een bestaand e-mailaccount van uw werk gevonden
 
-Mogelijk had u al toegang met uw mobiele apparaat tot uw e-mailaccount van uw bedrijf of school *voordat* uw apparaat werd beheerd. Als uw apparaat nu wordt beheerd, raden we u het volgende aan:
+Als u de e-mail van uw werk op uw apparaat hebt ingesteld vóór de registratie, moet uw organisatie dit adres mogelijk verwijderen. 
 
-* Koppel het bestaande e-mailaccount van uw bedrijf los van uw apparaat.
-* Synchroniseer de apparaatinstellingen opnieuw vanuit de bedrijfsportal-app.  
+Door dit te doen kan uw organisatie een e-mailprofiel instellen dat voldoet aan de netwerk- en beveiligingsvereisten. Nadat u de verbinding hebt verbroken, hoeft u alleen maar uw apparaat te synchroniseren. U hebt dan weer toegang tot uw e-mail. 
 
-Deze stappen zorgen ervoor dat uw apparaat voldoet aan de beveiligingsvereisten van uw bedrijf en dat uw e-mails veilig blijven.
+Voer de volgende stappen uit om de verbinding met het bestaande account te verbreken en de apparaatinstellingen bij te werken. Als u deze stappen niet voltooit, verliest u mogelijk toegang tot uw werkaccount of wordt de toegang beperkt.
 
-1. Ga op uw apparaat naar **Instellingen** en zoek uw verbonden accounts. Op een iOS 11+ apparaat selecteert u bijvoorbeeld **Accounts en wachtwoorden**.
+1. Ga op uw apparaat naar **Instellingen** en zoek uw verbonden accounts. Op een iOS 11+-apparaat selecteert u bijvoorbeeld **Wachtwoord en accounts**.
  
-2. Selecteer en verwijder het e-mailaccount van uw bedrijf.
+2. Selecteer en verwijder het account dat u hebt gekoppeld aan het e-mailadres van uw werk. 
 
 3. Open de bedrijfsportal-app op uw apparaat.  
 
@@ -45,6 +44,8 @@ Deze stappen zorgen ervoor dat uw apparaat voldoet aan de beveiligingsvereisten 
 
 5. Selecteer **Instellingen controleren**. Binnen enkele ogenblikken synchroniseert het apparaat uw nieuwe e-mailinstellingen.
 
-6. Meld u aan bij uw e-mailaccount van uw werk of school.
+6. Meld u aan bij uw e-mailaccount. 
+
+## <a name="next-steps"></a>Volgende stappen
 
 Nog hulp nodig? Neem contact op met het ondersteuningsteam van uw bedrijf. Controleer of hun contactgegevens beschikbaar zijn op de [bedrijfsportalwebsite](https://go.microsoft.com/fwlink/?linkid=2010980).

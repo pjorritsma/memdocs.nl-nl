@@ -6,30 +6,33 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/29/2019
+ms.date: 06/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ac77b590-a7ec-45a0-9516-ebf5243b6210
-ms.reviewer: davidra
+ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0aa02c58f2a2d75389be357ac7c700c2bac99027
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 1b9aedb7595db5ff0f40f2d12b8cee985fb7be99
+ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79351575"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332862"
 ---
 # <a name="mobile-threat-defense-integration-with-intune"></a>Integratie van Mobile Threat Defense met Intune
 
 Intune kan gegevens van een Mobile Threat Defense-leverancier (MTD) integreren als een gegevensbron voor apparaatnalevingsbeleid en regels voor voorwaardelijke toegang tot apparaten. U kunt deze gegevens gebruiken voor de beveiliging van bedrijfsresources zoals Exchange en SharePoint door de toegang te blokkeren voor mobiele apparaten die zijn gecompromitteerd.
 
 Intune kan dezelfde gegevens gebruiken als een bron voor niet-ingeschreven apparaten met behulp van het Intune-beveiligingsbeleid voor apps. Beheerders kunnen daarom deze informatie gebruiken om bedrijfsgegevens te beschermen binnen een [met Microsoft Intune beveiligde app](../apps/apps-supported-intune-apps.md) en een blok uitgeven of selectief wissen.
+
+> [!NOTE]
+> Integratie van Mobile Threat Defense met de Intune GCC High en DoD-aanbieding wordt momenteel *niet* ondersteund. Krijg meer informatie over [ondersteuning voor Microsoft Intune GCC High voor de Amerikaanse overheid](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-intune-govt-service-description).
 
 ## <a name="protect-corporate-resources"></a>Bedrijfsresources beveiligen
 

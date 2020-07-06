@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/22/2020
+ms.date: 06/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96b547c50cda0ef623370bae20d347d4ccf1976b
-ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
+ms.openlocfilehash: 6f4fd580a2e36a1cf7a29766c7a5e325e17fc528
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216481"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85591065"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Apparaatinstellingen voor Windows 10 en hoger om functies toe te staan of te beperken met behulp van Intune
 
@@ -30,6 +30,8 @@ Deze instellingen worden toegevoegd aan een apparaatconfiguratieprofiel in Intun
 
 > [!Note]
 > Niet alle opties zijn beschikbaar in alle edities van Windows. Bekijk de ondersteunde edities op [Beleid-CSP's](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider) (wordt op een andere Microsoft-website geopend).
+>  
+> De meeste configureerbare instellingen in een profiel voor Windows 10-apparaatbeperkingen worden geïmplementeerd op apparaatniveau. Beleid dat is geïmplementeerd voor gebruikersgroepen, wordt van kracht voor zowel de doelgebruiker als voor eventuele andere gebruikers die zich hierna aanmelden bij het apparaat en beschikken over een Intune-licentie.
 
 ## <a name="before-you-begin"></a>Voordat u begint
 

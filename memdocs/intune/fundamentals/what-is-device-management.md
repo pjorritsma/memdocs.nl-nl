@@ -4,7 +4,7 @@ description: Microsoft 365 Enterprise bevat Microsoft Intune. Bekijk hoe op welk
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/28/2020
+ms.date: 06/24/2020
 ms.topic: overview
 audience: microsoft-business
 ms.service: microsoft-intune
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 540faaca71d3694b95d32a24c947a977989a3223
-ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
+ms.openlocfilehash: 0dedb4746c40ff1cc2f5a2f166b1e0277997cb88
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84223628"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353612"
 ---
 # <a name="device-management-overview"></a>Overzicht van apparaatbeheer
 
-Beheerders hebben de belangrijke taak om de resources en gegevens van en organisatie te beschermen en beveiligen. Dit heet *apparaatbeheer*. Gebruikers hebben veel apparaten waarop ze persoonlijke bestanden openen en delen, websites bezoeken en apps en games installeren. Diezelfde gebruikers zijn ook werknemers en studenten. Ze willen hun apparaten gebruiken om werk- en schoolresources te openen, zoals e-mail en OneNote.
+Beheerders hebben de belangrijke taak om de resources en gegevens van een organisatie te beschermen en te beveiligen op gebruikersapparaten in hun organisatie. Dit heet **apparaatbeheer**. Gebruikers ontvangen en verzenden e-mail vanaf persoonlijke accounts, bladeren op websites (vanuit huis of vanuit een restaurant), en installeren apps en games. Deze gebruikers zijn ook werknemers en leerlingen/studenten. Ze willen op hun apparaten toegang hebben tot werk- en schoolresources, zoals e-mail en OneNote, en ze willen dat dit snel gaat. Als beheerder is het uw doel om deze resources te beveiligen, en gebruikers eenvoudig toegang te bieden op veel apparaten, allemaal tegelijkertijd.
 
 Met apparaatbeheer kunnen organisaties hun resources en gegevens beschermen en beveiligen, vanaf verschillende apparaten.
 

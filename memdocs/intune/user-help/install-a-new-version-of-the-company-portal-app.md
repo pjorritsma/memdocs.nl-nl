@@ -1,11 +1,11 @@
 ---
 title: De bedrijfsportal-app bijwerken| Microsoft Docs
-description: ''
+description: Download de nieuwste versie van de bedrijfsportal-app op Android-, iOS-, macOS- en Windows-apparaten.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/11/2019
+ms.date: 06/29/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,49 +17,69 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 975a1c2805144e0a5248b04e32cea33dc4b88415
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: e9ae2411018f9250ad74f2497fe43f43e200412a
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83877388"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590419"
 ---
-# <a name="how-to-update-the-company-portal-app"></a>De bedrijfsportal-app bijwerken
+# <a name="update-the-company-portal-app"></a>De bedrijfsportal-app bijwerken  
+ 
+Download de nieuwste versie van de bedrijfsportal-app op uw Android-, iOS-, macOS- en Windows-apparaat. In uw organisatie is mogelijk vereist dat u de app op uw apparaat bijwerkt, wanneer:  
 
-In dit artikel wordt beschreven hoe u uw versie van de bedrijfsportal-app kunt bijwerken wanneer:  
 * Er een nieuwere versie van de bedrijfsportal beschikbaar is.
-* Uw versie van de bedrijfsportal niet meer wordt ondersteund.
+* Uw versie van de bedrijfsportal niet meer wordt ondersteund. 
 
-Met deze stappen wordt beschreven hoe u de app op Android-, iOS-, macOS- en Windows-apparaten bijwerkt of de nieuwste versie van de app downloadt.    
+Als een update is vereist, ontvangt u een melding van de bedrijfsportal.  
 
-## <a name="update-the-company-portal-app-on-your-android-device"></a>De bedrijfsportal-app op uw Android-apparaat bijwerken  
+## <a name="update-on-android-device"></a>Bijwerken op Android-apparaat  
 
-Google Play geeft een melding wanneer er een nieuwe versie van de bedrijfsportal beschikbaar is. Er wordt geen prompt in de bedrijfsportal-app zelf weergegeven. Selecteer de melding en volg de instructies om de app bij te werken. 
+U ontvangt een melding van Google Play Store wanneer een nieuwe versie van de bedrijfsportal beschikbaar is. Er wordt geen prompt in de bedrijfsportal-app zelf weergegeven. Selecteer de waarschuwing van Google Play en volg de aanwijzingen op het scherm om de app bij te werken. 
 
-## <a name="update-the-company-portal-app-on-your-ios-device"></a>De bedrijfsportal-app op uw iOS-apparaat bijwerken  
+## <a name="update-on-ios-device"></a>Bijwerken op iOS-apparaat  
 
-Wanneer een nieuwe versie beschikbaar is, wordt de optie **Update** weergegeven in de lijst met geïnstalleerde apps, naast de bedrijfsportal-app.  
+Wanneer een nieuwe versie van bedrijfsportal beschikbaar is, ziet u de optie **Bijwerken** in de App Store. 
 
 1. Ga naar de App Store en zoek naar **Intune**.  
-2. Wanneer u de app hebt gevonden, tikt u op **Bijwerken**.  
+2. Ga naar de optie **Bijwerken** naast de vermelding Intune-bedrijfsportal. Tik op **Bijwerken**, indien beschikbaar. 
+3. Volg de prompts op het scherm om de update te installeren.
+4. Nadat u de update hebt geïnstalleerd, keert u terug naar Bedrijfsportal > **Apparaten**. 
+5. Selecteer het apparaat dat u momenteel gebruikt.
+6. Tik op **Status controleren** om de wijzigingen te synchroniseren.  
 
-## <a name="update-the-company-portal-app-on-your-macos-device"></a>De bedrijfsportal-app op uw macOS-apparaat bijwerken
+## <a name="update-on-macos-device"></a>Bijwerken op macOS-apparaat  
 
-Stel Bedrijfsportal zo in dat updates automatisch worden geïnstalleerd zodra deze beschikbaar zijn. 
+Beschikbare updates weergeven en installeren op een macOS-apparaat: 
 
-1. Open Bedrijfsportal en ga naar **Help**. 
-2. Selecteer **Controleren op updates**. 
-3. Selecteer in het scherm Microsoft AutoUpdate de optie **Automatisch downloaden en installeren**. 
+1. Open Bedrijfsportal en ga naar **Help**.  
+2. Selecteer **Controleren op updates** en selecteer vervolgens de beschikbare update om te beginnen met de installatie.  
+4. Wanneer de up is voltooid, keert u terug naar Bedrijfsportal > **Apparaten**. 
+5. Selecteer het apparaat dat u momenteel gebruikt.
+6. Selecteer **Meer [...]** en kies vervolgens **Status controleren** om uw apparaat te synchroniseren.  
 
-Als u beschikbare updates wilt weergeven, selecteert u **Controleren op updates**.  
+Automatische app-updates inschakelen: 
+1. Open Bedrijfsportal en ga naar **Help**.  
+2. Selecteer **Controleren op updates**.
+3. Selecteer in het scherm Microsoft AutoUpdate de optie **Automatisch downloaden en installeren**.  
 
-## <a name="update-the-company-portal-app-on-your-windows-device"></a>De bedrijfsportal-app op uw Windows-apparaat bijwerken
-Als u automatisch updates wilt ontvangen zodra deze beschikbaar zijn, opent u de Microsoft Store en gaat u naar **Instellingen**. Schakel **App-updates** in. Als u recente updates en apps in de downloadwachtrij wilt bekijken, gaat u naar **Downloads en updates**.  
 
-Voer de volgende stappen uit als u de app liever handmatig bijwerkt of als **App-updates** door uw bedrijf zijn uitgeschakeld.  
+## <a name="update-on-windows-10-device"></a>Bijwerken op Windows 10-apparaat  
+
+De nieuwste versie van de bedrijfsportal-app installeren: 
 1. Open de Microsoft Store.
-2. Typ **bedrijfsportal** in de zoekbalk.
-3. Klik op de app om de meest recente versie op uw apparaat te installeren. 
+2. Typ **bedrijfsportal** in de zoekbalk.  
+3. Selecteer de app om de meest recente versie te installeren op uw apparaat. 
+4. Wanneer de update is voltooid, keert u terug naar de bedrijfsportal en selecteert u het apparaat dat u momenteel gebruikt.
+5. Selecteer **Toegang controleren** om het apparaat te synchroniseren. 
 
+Automatische updates inschakelen:  
+1. Open de Microsoft Store en ga naar **Instellingen**.  
+2. Schakel **App-updates** in.  
+3. Als u een lijst wilt zien met alle updates en apps die in de wachtrij staan om te worden gedownload, gaat u naar **Downloads en updates**.  
 
-Nog hulp nodig? Neem contact op met het ondersteuningsteam van uw bedrijf. Controleer of de contactgegevens beschikbaar zijn op de [bedrijfsportalwebsite](https://go.microsoft.com/fwlink/?linkid=2010980).
+In sommige organisaties zijn app-updates mogelijk uitgeschakeld. Als deze optie niet beschikbaar is op het apparaat, gebruikt u de eerste set met Windows 10-instructies om de app bij te werken. 
+
+## <a name="next-steps"></a>Volgende stappen  
+
+Nog hulp nodig? Neem contact op met IT-ondersteuning. Controleer of de contactgegevens beschikbaar zijn op de [bedrijfsportalwebsite](https://go.microsoft.com/fwlink/?linkid=2010980).

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0739b27d5b2b6bb21809b2a9f109c894765ea7e
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 17f1d045d89df3ad5bb37d85957e872ec6692b7e
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988560"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353493"
 ---
 # <a name="enroll-android-devices"></a>Android-apparaten inschrijven
 
@@ -39,6 +39,8 @@ Als Intune-beheerder kunt u Android-apparaten op de volgende manieren inschrijve
 ## <a name="prerequisites"></a>Vereisten
 
 U moet de MDM-instantie instellen op **Microsoft Intune** als voorbereiding op het beheer van mobiele apparaten. Zie [Set the MDM authority](../fundamentals/mdm-authority-set.md) (De MDM-instantie instellen) voor instructies. U stelt de instantie slechts één keer in, wanneer u Intune voor het eerst instelt voor het beheer van mobiele apparaten.
+
+Raadpleeg voor Android Enterprise het volgende ondersteuningsartikel van Google om te controleren of Android Enterprise beschikbaar is in uw land of regio: https://support.google.com/work/android/answer/6270910
 
 Voor apparaten die zijn gemaakt door Zebra Technologies moet u de bedrijfsportal mogelijk extra machtigingen verlenen, afhankelijk van de mogelijkheden van het specifieke apparaat. [Mobility-extensies op Zebra-apparaten](../configuration/android-zebra-mx-overview.md) bevat meer informatie hierover.
 

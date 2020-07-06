@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/20/2020
+ms.date: 06/29/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 13824c82b426e1efb00dce2db7c9f4a2dd5bb9ee
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 9bf55564cabce9a060c15100ad974c59bf858b15
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990330"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85591116"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Geïmporteerde PKCS-certificaten configureren en gebruiken met Intune
 
@@ -271,6 +271,12 @@ De volgende partners leveren ondersteunde methoden of hulpprogramma's die u kunt
 Als u de DigiCert PKI Platform-service gebruikt, kunt u het **importhulpprogamma voor Intune S/MIME-certificaten** van DigiCert gebruiken om PFX-certificaten te importeren in Intune. Als u dit hulpprogramma gebruikt, hoeft u de eerdere instructies in dit artikel in het gedeelte [PFX-certificaten importeren in Intune](#import-pfx-certificates-to-intune) niet meer te volgen.
 
 Zie https://knowledge.digicert.com/tutorials/microsoft-intune.html in de Knowledge Base van DigiCert voor meer informatie over het importhulpprogramma van DigiCert en hoe u dit hulpprogramma kunt verkrijgen.
+
+### <a name="keytalk"></a>KeyTalk
+
+Als u de KeyTalk-service gebruikt, kunt u deze service configureren om PFX-certificaten te importeren in Intune. Nadat de integratie is voltooid, hoeft u de eerdere instructies in dit artikel in de sectie [PFX-certificaten importeren in Intune](#import-pfx-certificates-to-intune) niet te volgen, die eerder dit artikel worden beschreven.
+
+Raadpleeg https://keytalk.com/support in de Knowledge Base van KeyTalk voor meer informatie over de integratie van KeyTalk met Intune.
 
 ## <a name="next-steps"></a>Volgende stappen
 

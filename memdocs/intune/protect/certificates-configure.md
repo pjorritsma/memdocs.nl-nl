@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4441fdaf8c3fb8bfb6613805df9eca27cc3ebf0c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e5de1268b8b04c98ac7a9cfa96d42349fc0f8890
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990391"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383203"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Certificaten voor verificatie gebruiken in Microsoft Intune
 
@@ -104,6 +104,11 @@ U moet een vertrouwd certificaatprofiel maken en implementeren voordat u een SCE
 SCEP-certificaat profielen verwijzen rechtstreeks naar een vertrouwd certificaatprofiel. PKCS-certificaatprofielen verwijzen niet rechtstreeks naar het vertrouwde certificaatprofiel, maar wel naar de server die als host fungeert voor uw CA. Geïmporteerde PKCS-certificaatprofielen verwijzen niet rechtstreeks naar het vertrouwde certificaatprofiel, maar kunnen er wel gebruik van maken op het apparaat. Het implementeren van een vertrouwd certificaatprofiel op apparaten zorgt ervoor dat deze vertrouwensrelatie tot stand wordt gebracht. Wanneer een apparaat de basis-CA niet vertrouwt, mislukt het SCEP- of PKCS-certificaatprofielbeleid.
 
 Maak een afzonderlijk vertrouwd certificaatprofiel voor elk apparaatplatform dat u wilt ondersteunen, net zoals u dat voor SCEP-, PKCS- en geïmporteerde PKCS-certificaatprofielen gaat doen.
+
+> [!IMPORTANT]
+> Vertrouwde basisprofielen die u maakt voor het platform *Windows 10 en hoger*, worden in het Microsoft Endpoint Manager-beheercentrum weergegeven voor het platform *Windows 8.1 en hoger*. 
+>
+> Dit is een bekend probleem met de presentatie van het platform voor vertrouwde certificaatprofielen. Terwijl in het profiel het platform Windows 8.1 en hoger wordt weergegeven, is het functioneel voor Windows 10 en hoger.
 
 ### <a name="to-create-a-trusted-certificate-profile"></a>Een profiel voor een vertrouwd certificaat maken
 

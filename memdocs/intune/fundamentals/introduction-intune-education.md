@@ -16,20 +16,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 57878ee1f87d53c05ad7eddd39714a5fc5a8ae08
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 1b3c3485496b6f72bd51241d47c12de3990a6802
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79358829"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353544"
 ---
 # <a name="how-is-intune-for-education-different-from-the-full-device-management-experience-in-intune"></a>Waarin verschilt Intune for Education van het volledige Intune-beheer?
 
-Intune for Education biedt uw docenten en studenten productiviteit terwijl schoolgegevens worden beveiligd. Intune is een cloudservice voor het beheer van bedrijfsmobiliteit (EMM) die de basis is voor Intune for Education.
+Intune for Education biedt uw docenten en studenten productiviteit terwijl schoolgegevens worden beveiligd. Intune for Education wordt mogelijk gemaakt met de Intune-service van Microsoft, een EMM-cloudservice (Enterprise Mobility Management).
 
 ![Intune for Education-console vergeleken met de Intune-console.](./media/introduction-intune-education/intune-azure-vs-intuneEDU.png)
 
-Met Intune for Education kunt u Windows 10- en iOS-/iPadOS-apparaten beheren met de volledige MDM-functionaliteit die beschikbaar is in Intune. Met het volledige apparaatbeheer kunt u Windows-, iOS-/iPadOS- en Android-apparaten beheren.  
+Met Intune for Education kunt u Windows 10- en iOS-/iPadOS-apparaten beheren met de volledige MDM-functionaliteit die beschikbaar is in Intune. Met het volledige apparaatbeheer kunt u Windows-, iOS-/iPadOS- en Android-apparaten beheren. 
 
 U kunt Intune for Education zelfstandig gebruiken of in samenwerking met het [volledige apparaatbeheer dat beschikbaar is in Intune](what-is-intune.md). U kunt het ook gebruiken samen met de overige hulpprogramma's die beschikbaar zijn in [Microsoft Education](https://microsoft.com/education), zodat u Intune for Education gemakkelijker kunt gebruiken met andere handige educatieve hulpmiddelen van Microsoft.  
 

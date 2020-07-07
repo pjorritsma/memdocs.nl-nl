@@ -10,12 +10,11 @@ ms.assetid: bc7de742-9e5c-4a70-945c-df4153a61cc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c043cfabc411dbd5ae4984110fc2904d37669300
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
-ms.translationtype: MT
+ms.openlocfilehash: 1cf428b479e9311c92f6d14d9c376817ee5e3ab5
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81717823"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022259"
 ---
 # <a name="how-to-use-task-sequence-variables-in-configuration-manager"></a>Taken reeks variabelen gebruiken in Configuration Manager
 
@@ -37,13 +36,13 @@ Er zijn verschillende typen variabelen:
 - [Actie](#bkmk_action)  
 - [Aangepast](#bkmk_custom)  
 - [Alleen-lezen](#bkmk_read-only)  
-- [Array](#bkmk_array)  
+- [Matrix](#bkmk_array)  
 
 ### <a name="built-in-variables"></a><a name="bkmk_built-in"></a>Ingebouwde variabelen
 
 Ingebouwde variabelen bieden informatie over de omgeving waarin de taken reeks wordt uitgevoerd. Hun waarden zijn beschikbaar in de hele taken reeks. De taken reeks engine initialiseert doorgaans ingebouwde variabelen voordat de stappen worden uitgevoerd.
 
-`_SMSTSLogPath` Is bijvoorbeeld een omgevings variabele die het pad specificeert naar Configuration Manager-onderdelen logboek bestanden schrijven. Elke taken reeks stap heeft toegang tot deze omgevings variabele.
+`_SMSTSLogPath`Is bijvoorbeeld een omgevings variabele die het pad specificeert naar Configuration Manager-onderdelen logboek bestanden schrijven. Elke taken reeks stap heeft toegang tot deze omgevings variabele.
 
 De taken reeks evalueert enkele variabelen voor elke stap. Een voor beeld `_SMSTSCurrentActionName` bevat een lijst met de naam van de huidige stap.
 
@@ -51,9 +50,9 @@ De taken reeks evalueert enkele variabelen voor elke stap. Een voor beeld `_SMST
 
 Variabelen voor taken reeks acties geven configuratie-instellingen op die door één taken reeks stap worden gebruikt. Standaard worden de instellingen van de stap geïnitialiseerd voordat deze wordt uitgevoerd. Deze instellingen zijn alleen beschikbaar wanneer de gekoppelde taken reeks stap wordt uitgevoerd. De taken reeks voegt de waarde van de actie variabele toe aan de omgeving voordat de stap wordt uitgevoerd. Daarna wordt de waarde uit de omgeving verwijderd nadat de stap is uitgevoerd.
 
-U kunt bijvoorbeeld de stap **opdracht regel uitvoeren** toevoegen aan een taken reeks. Deze stap bevat een **Start in** -eigenschap. De taken reeks slaat een standaard waarde voor deze eigenschap op als `WorkingDirectory` de variabele. De taken reeks initialiseert deze waarde voordat de stap **opdracht regel uitvoeren** wordt uitgevoerd. Terwijl deze stap wordt uitgevoerd, opent u de waarde van de eigenschap **begin in** van de `WorkingDirectory` waarde. Nadat de stap is voltooid, verwijdert de taken reeks de waarde van de `WorkingDirectory` variabele uit de omgeving. Als de taken reeks een andere stap **opdracht regel uitvoeren** bevat, wordt een nieuwe `WorkingDirectory` variabele geïnitialiseerd. Op dat moment stelt de taken reeks de variabele in op de begin waarde voor de huidige stap. Zie [variabele workingdirectory](task-sequence-variables.md#WorkingDirectory)voor meer informatie.  
+U kunt bijvoorbeeld de stap **opdracht regel uitvoeren** toevoegen aan een taken reeks. Deze stap bevat een **Start in** -eigenschap. De taken reeks slaat een standaard waarde voor deze eigenschap op als de `WorkingDirectory` variabele. De taken reeks initialiseert deze waarde voordat de stap **opdracht regel uitvoeren** wordt uitgevoerd. Terwijl deze stap wordt uitgevoerd, opent u de waarde van de eigenschap **begin in** van de `WorkingDirectory` waarde. Nadat de stap is voltooid, verwijdert de taken reeks de waarde van de `WorkingDirectory` variabele uit de omgeving. Als de taken reeks een andere stap **opdracht regel uitvoeren** bevat, wordt een nieuwe `WorkingDirectory` variabele geïnitialiseerd. Op dat moment stelt de taken reeks de variabele in op de begin waarde voor de huidige stap. Zie [variabele workingdirectory](task-sequence-variables.md#WorkingDirectory)voor meer informatie.  
 
-De *standaard* waarde voor een actie variabele is aanwezig wanneer de stap wordt uitgevoerd. Als u een *nieuwe* waarde instelt, is deze beschikbaar voor meerdere stappen in de taken reeks. Als u een standaard waarde overschrijft, blijft de nieuwe waarde in de omgeving. Deze nieuwe waarde overschrijft de standaard waarde voor de overige stappen in de taken reeks. U kunt bijvoorbeeld een set variabele-stap voor **taken reeks** toevoegen als de eerste stap van de taken reeks. Met deze stap stelt `WorkingDirectory` u de `C:\`variabele in op. Elke **uitvoerings opdracht regel** stap in de taken reeks maakt gebruik van de nieuwe waarde voor het starten van de map.  
+De *standaard* waarde voor een actie variabele is aanwezig wanneer de stap wordt uitgevoerd. Als u een *nieuwe* waarde instelt, is deze beschikbaar voor meerdere stappen in de taken reeks. Als u een standaard waarde overschrijft, blijft de nieuwe waarde in de omgeving. Deze nieuwe waarde overschrijft de standaard waarde voor de overige stappen in de taken reeks. U kunt bijvoorbeeld een set variabele-stap voor **taken reeks** toevoegen als de eerste stap van de taken reeks. Met deze stap stelt `WorkingDirectory` u de variabele in op `C:\` . Elke **uitvoerings opdracht regel** stap in de taken reeks maakt gebruik van de nieuwe waarde voor het starten van de map.  
 
 Sommige taken reeks stappen markeren bepaalde actie variabelen als *uitvoer*. Stappen verderop in de taken reeks lezen deze uitvoer variabelen.
 
@@ -66,15 +65,15 @@ Deze variabelen zijn die Configuration Manager niet worden gemaakt. Initialiseer
 
 Wanneer u een naam voor een nieuwe taken reeks variabele opgeeft, volgt u deze richt lijnen:  
 
-- De naam van de taken reeks variabele kan letters, cijfers, het onderstrepings`_`teken () en een koppel`-`teken () bevatten.  
+- De naam van de taken reeks variabele kan letters, cijfers, het onderstrepings teken ( `_` ) en een koppel teken ( `-` ) bevatten.  
 
 - Namen van taken reeks variabelen hebben een minimum lengte van één teken en een maximale lengte van 256 tekens.  
 
-- Door de gebruiker gedefinieerde variabelen moeten beginnen met een letter`A-Z` ( `a-z`of).  
+- Door de gebruiker gedefinieerde variabelen moeten beginnen met een letter ( `A-Z` of `a-z` ).  
 
 - Namen van door de gebruiker gedefinieerde variabelen mogen niet beginnen met een onderstrepings teken. Alleen alleen-lezen taken reeks variabelen worden voorafgegaan door het onderstrepings teken.  
 
-- Namen van taken reeks variabelen zijn niet hoofdletter gevoelig. `OSDVAR` En `osdvar` zijn bijvoorbeeld dezelfde taken reeks variabele.  
+- Namen van taken reeks variabelen zijn niet hoofdletter gevoelig. `OSDVAR`En `osdvar` zijn bijvoorbeeld dezelfde taken reeks variabele.  
 
 - Namen van taken reeks variabelen kunnen niet beginnen of eindigen met een spatie. Ze kunnen ook geen Inge sloten spaties bevatten. Alle spaties aan het begin of het einde van de naam van een variabele worden door de taken reeks genegeerd.  
 
@@ -82,7 +81,7 @@ Er is geen limiet ingesteld voor het aantal taken reeks variabelen dat u kunt ma
 
 ### <a name="read-only-variables"></a><a name="bkmk_read-only"></a>Alleen-lezen variabelen
 
-U kunt de waarde van sommige variabelen niet wijzigen, wat alleen-lezen is. Meestal begint de naam met een onderstrepings teken`_`(). De taken reeks gebruikt deze voor de bewerkingen ervan. Alleen-lezen variabelen zijn zichtbaar in de taken reeks omgeving.
+U kunt de waarde van sommige variabelen niet wijzigen, wat alleen-lezen is. Meestal begint de naam met een onderstrepings teken ( `_` ). De taken reeks gebruikt deze voor de bewerkingen ervan. Alleen-lezen variabelen zijn zichtbaar in de taken reeks omgeving.
 
 Deze variabelen zijn handig in scripts of op opdracht regels. U kunt bijvoorbeeld een opdracht regel uitvoeren en de uitvoer naar een logboek bestand in `_SMSTSLogPath` met de andere logboek bestanden belichten.
 
@@ -126,7 +125,7 @@ Als u dezelfde variabele op verschillende manieren instelt, gebruikt de taken re
 
 - Waarden van taken reeks variabelen mogen niet langer zijn dan 4.000 tekens.  
 
-- U kunt een alleen-lezen taken reeks variabele niet wijzigen. Alleen-lezen variabelen hebben namen die beginnen met een onderstrepings teken`_`().  
+- U kunt een alleen-lezen taken reeks variabele niet wijzigen. Alleen-lezen variabelen hebben namen die beginnen met een onderstrepings teken ( `_` ).  
 
 - Waarden van taken reeks variabelen kunnen hoofdletter gevoelig zijn, afhankelijk van het gebruik van de waarde. In de meeste gevallen zijn de waarden van taken reeks variabelen niet hoofdletter gevoelig. Een variabele met een wacht woord is hoofdletter gevoelig.  
 
@@ -157,7 +156,7 @@ Zie [Power shell-script uitvoeren](task-sequence-steps.md#BKMK_RunPowerShellScri
 
 #### <a name="example-scenario-with-run-powershell-script-step"></a>Voorbeeld scenario met de stap Power shell-script uitvoeren
 
-Uw omgeving heeft gebruikers in meerdere landen, dus u wilt een query uitvoeren op de taal van het besturings systeem om in te stellen als voor waarde voor meerdere taalspecifieke stappen voor het **besturings systeem** .
+Uw omgeving heeft gebruikers in meerdere landen/regio's, dus u wilt een query uitvoeren op de taal van het besturings systeem om in te stellen als voor waarde voor meerdere taalspecifieke stappen voor het **besturings systeem** .
 
 1. Voeg een exemplaar van het **Power shell-script uitvoeren** toe aan de taken reeks vóór de stappen voor het **Toep assen van het besturings systeem** .
 
@@ -169,7 +168,7 @@ Uw omgeving heeft gebruikers in meerdere landen, dus u wilt een query uitvoeren 
 
     Zie [Get-Culture](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-culture)voor meer informatie over de cmdlet. Zie [lijst met iso 639-1-codes](https://wikipedia.org/wiki/List_of_ISO_639-1_codes)voor meer informatie over de ISO-taal namen van twee letters.
 
-1. Geef `CurrentOSLanguage`voor de optie voor **uitvoer naar de taken reeks variabele**op.
+1. Geef voor de optie voor **uitvoer naar de taken reeks variabele**op `CurrentOSLanguage` .
 
     ![Scherm afbeelding van voor beeld van Power shell-script stap uitvoeren](media/run-powershell-script-example-language.png)
 
@@ -182,7 +181,7 @@ Uw omgeving heeft gebruikers in meerdere landen, dus u wilt een query uitvoeren 
 
 1. Sla de taken reeks op en implementeer deze.
 
-Wanneer de stap **Power shell-script uitvoeren** op een apparaat met de Engelse taal versie van Windows wordt uitgevoerd, retourneert de `en`opdracht de waarde. Vervolgens wordt die waarde opgeslagen in de aangepaste variabele. Wanneer de stap **besturings systeem Toep assen** voor de Engelse taal op hetzelfde apparaat wordt uitgevoerd, wordt de voor waarde geëvalueerd als waar. Als u meerdere exemplaren van de stap **besturings systeem Toep assen** voor verschillende talen hebt, voert de taken reeks de stap die overeenkomt met de taal van het besturings systeem, dynamisch uit.
+Wanneer de stap **Power shell-script uitvoeren** op een apparaat met de Engelse taal versie van Windows wordt uitgevoerd, retourneert de opdracht de waarde `en` . Vervolgens wordt die waarde opgeslagen in de aangepaste variabele. Wanneer de stap **besturings systeem Toep assen** voor de Engelse taal op hetzelfde apparaat wordt uitgevoerd, wordt de voor waarde geëvalueerd als waar. Als u meerdere exemplaren van de stap **besturings systeem Toep assen** voor verschillende talen hebt, voert de taken reeks de stap die overeenkomt met de taal van het besturings systeem, dynamisch uit.
 
 ### <a name="collection-and-device-variables"></a><a name="bkmk_set-coll-var"></a>Verzamelings-en apparaat-variabelen
 
@@ -273,7 +272,7 @@ Gebruik de volgende methoden voor toegang tot variabelen waarden in de taken ree
   
 ### <a name="use-in-a-step"></a><a name="bkmk_access-step"></a>Gebruiken in een stap
 
-Geef een waarde voor de variabele op voor een instelling in een taken reeks stap. Bewerk de stap in de taken reeks editor en geef de naam van de variabele op als de veld waarde. Plaats de naam van de variabele tussen procent`%`tekens ().
+Geef een waarde voor de variabele op voor een instelling in een taken reeks stap. Bewerk de stap in de taken reeks editor en geef de naam van de variabele op als de veld waarde. Plaats de naam van de variabele tussen procent tekens ( `%` ).
 
 Gebruik bijvoorbeeld de naam van de variabele als onderdeel van het veld **opdracht regel** van de stap **opdracht regel uitvoeren** . De volgende opdracht regel schrijft de naam van de computer naar een tekst bestand.
 
@@ -331,11 +330,11 @@ $tsenv.Value("startTime") = (Get-Date -Format HH:mm:ss) + ".000+000"
 
 ### <a name="windows-setup-answer-file"></a><a name="bkmk_access-answer"></a>Antwoord bestand voor Windows Setup
 
-Het Windows Setup-antwoord bestand dat u opgeeft, kan Inge sloten taken reeks variabelen bevatten. Gebruik het formulier `%varname%`, waarbij *varnaam* de naam van de variabele is. De stap **Windows en ConfigMgr installeren** vervangt de teken reeks met de variabelenaam voor de werkelijke waarde van de variabele. Deze Inge sloten taken reeks variabelen kunnen niet worden gebruikt in velden die alleen numeriek zijn in het antwoord bestand Unattend. XML.
+Het Windows Setup-antwoord bestand dat u opgeeft, kan Inge sloten taken reeks variabelen bevatten. Gebruik het formulier `%varname%` , waarbij *varnaam* de naam van de variabele is. De stap **Windows en ConfigMgr installeren** vervangt de teken reeks met de variabelenaam voor de werkelijke waarde van de variabele. Deze Inge sloten taken reeks variabelen kunnen niet worden gebruikt in velden die alleen numeriek zijn in een unattend.xml antwoord bestand.
 
 Zie [Setup Windows and ConfigMgr](task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr)voor meer informatie.
 
-## <a name="see-also"></a>Zie ook
+## <a name="see-also"></a>Zie tevens
 
 - [Stappen voor takenreeksen](task-sequence-steps.md)
 

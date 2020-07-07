@@ -20,7 +20,6 @@ ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 68e337f6315fc6d198e27c494b7689bb1cb9bc97
 ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
-ms.translationtype: HT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 05/27/2020
 ms.locfileid: "83989624"
@@ -219,7 +218,7 @@ Een voorbeeld van een werk- of zakelijke context is een gebruiker die de OneDriv
 Outlook heeft een gecombineerde weergave van e-mail met persoonlijke en zakelijke e-mail. In dit geval vraagt de Outlook-app om de Intune-pincode bij het starten van de app.
 
   >[!NOTE]
-  > Hoewel Edge zich in de bedrijfscontext bevindt, kan de gebruiker opzettelijk OneDrive-bestanden uit de bedrijfscontext verplaatsen naar een onbekende persoonlijke cloudopslaglocatie. Als u dit wilt voorkomen, raadpleegt u [Beperkte websites beheren](manage-microsoft-edge.md#manage-restricted-web-sites) en configureert u de lijst met toegestane/geblokkeerde sites voor Microsoft Edge.
+  > Hoewel Microsoft Edge zich in de bedrijfscontext bevindt, kan de gebruiker opzettelijk OneDrive-bestanden uit de bedrijfscontext verplaatsen naar een onbekende persoonlijke cloudopslaglocatie. Als u dit wilt voorkomen, raadpleegt u [Beperkte websites beheren](manage-microsoft-edge.md#manage-restricted-web-sites) en configureert u de lijst met toegestane/geblokkeerde sites voor Microsoft Edge.
 
 Zie [MAM en meerdere identiteiten](apps-supported-intune-apps.md) voor meer informatie over meerdere identiteiten in Intune.
 

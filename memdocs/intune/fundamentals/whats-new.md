@@ -20,7 +20,6 @@ ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 89703c8aec11517417f9459391c431b9db75456c
 ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
-ms.translationtype: HT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 06/27/2020
 ms.locfileid: "85502286"
@@ -638,7 +637,7 @@ In een toekomstige release komt een derde provider, DISA Purebred, beschikbaar v
 
 #### <a name="microsoft-edge-security-baseline-is-now-generally-available--6586139---"></a>De functie Beveiligingsbasislijn van Microsoft Edge is nu algemeen beschikbaar<!--6586139 -->
 
-Er is nu een nieuwe versie van de functie [Beveiligingsbasislijn van Microsoft Edge](../protect/security-baselines.md#available-security-baselines) beschikbaar. Deze wordt uitgebracht als algemeen beschikbaar (GA). De voorgaande Edge-basislijn was in preview.  De nieuwe basislijnversie van april 2020 (Edge versie 80 en hoger). 
+Er is nu een nieuwe versie van de functie [Beveiligingsbasislijn van Microsoft Edge](../protect/security-baselines.md#available-security-baselines) beschikbaar. Deze wordt uitgebracht als algemeen beschikbaar (GA). De voorgaande Microsoft Edge-basislijn was in preview.  De nieuwe basislijnversie van april 2020 (Microsoft Edge versie 80 en hoger). 
 
 Met de release van deze nieuwe basislijn is het niet meer mogelijk om profielen te maken op basis van de vorige basislijnversies, maar u kunt nog steeds profielen gebruiken die u hebt gemaakt met deze versies. U kunt er ook voor kiezen om [uw bestaande profielen bij te werken, zodat u de meest recente basislijnversie kunt gebruiken](../protect/security-baselines.md#change-the-baseline-version-for-a-profile). 
 

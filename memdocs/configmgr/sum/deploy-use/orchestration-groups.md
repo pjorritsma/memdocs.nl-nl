@@ -2,7 +2,7 @@
 title: Orchestration-groepen
 titleSuffix: Configuration Manager
 description: Maak indelings groepen en implementeer er updates voor.
-ms.date: 04/28/2020
+ms.date: 07/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: cddbebea-b418-4839-b0a8-7809486c8a4c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e9a307df23900abb985535b2ab59a5ff172cafb7
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 5b42a0260b347fb12444e8611e7ec02be38cc387
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254908"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088408"
 ---
 # <a name="orchestration-groups-in-configuration-manager"></a>Orchestration-groepen in Configuration Manager
 <!--3098816-->
@@ -89,7 +89,7 @@ De functie **Orchestration groups** is de ontwikkeling van de functie [Server gr
 
 1. Voer op de pagina **vóór script** een Power shell-script in dat moet worden uitgevoerd op elk apparaat *voordat* de implementatie wordt uitgevoerd. Het script moet de waarde `0` voor geslaagd of `3010` voor geslaagde herstart retour neren.
 
-1. Voer op de pagina **na het script** een Power shell-script in dat moet worden uitgevoerd op elk apparaat *nadat* de implementatie is uitgevoerd. Het gedrag is anders hetzelfde als het voor-script.
+1. Voer op de pagina **na het script** een Power shell-script in dat moet worden uitgevoerd op elk apparaat *nadat* de implementatie is uitgevoerd en opnieuw opstarten, indien nodig. Het gedrag is anders hetzelfde als het voor-script.
 
 1. Voltooi de wizard.
 
@@ -123,7 +123,8 @@ Als u de Orchestration-groep wilt verwijderen, selecteert u deze en klikt u verv
        - Voer een Power shell-script in dat op elk apparaat wordt uitgevoerd *voordat* de implementatie wordt uitgevoerd. Het script moet de waarde `0` voor geslaagd of `3010` voor geslaagde herstart retour neren.
        
    - **Post-script**:
-      - Voer een Power shell-script in dat moet worden uitgevoerd op elk apparaat *nadat* de implementatie is uitgevoerd. Het script moet de waarde `0` voor geslaagd of `3010` voor geslaagde herstart retour neren.
+      - Voer een Power shell-script in dat op elk apparaat moet worden uitgevoerd *nadat* de implementatie is uitgevoerd en dat, indien nodig, opnieuw wordt opgestart. Het script moet de waarde `0` voor geslaagd of `3010` voor geslaagde herstart retour neren.
+  
    > [!WARNING]
    > Zorg ervoor dat pre-scripts en post scripts worden getest voordat u deze voor Orchestration-groepen gebruikt. De pre-scripts en post scripts zijn niet time-out en worden uitgevoerd totdat de time-out voor de groeps beleidsleden is bereikt.
 
@@ -176,7 +177,7 @@ Selecteer een indelings groep in het knoop punt van de **groep met Orchestrator*
    - **Wachten**: Hiermee wordt aangegeven dat de client op de vergren deling wacht om updates te installeren.
    - **Niet-actief** wanneer de indeling is voltooid of niet wordt uitgevoerd.
 - **Status code**: u kunt met de rechter muisknop op het lid van de groep voor Orchestrator klikken en lid van de **groep van Orchestrator opnieuw instellen**selecteren. Met deze instelling kunt u de indeling opnieuw uitvoeren. Statussen zijn onder andere: 
-   - Actieve
+   - Niet-actief
    - In afwachting van het apparaat wacht op de beurt
    - De installatie van een update wordt uitgevoerd
    - Mislukt

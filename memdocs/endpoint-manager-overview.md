@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d9e3d03211907f31008b31d68c4ed5cd11ae1a6e
-ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
+ms.openlocfilehash: 2095fdd349437e03c673fb9f7906511c5e3af388
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83791731"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088374"
 ---
 # <a name="microsoft-endpoint-manager-overview"></a>Overzicht van Microsoft Endpoint Manager
 
@@ -43,7 +43,6 @@ Endpoint Manager omvat onder andere de volgende services:
   Als u een on-premises infrastructuur hebt, zoals Exchange of Active Directory, zijn de Intune-connectors ook beschikbaar:
 
   - De **Intune Connector voor Active Directory** voegt vermeldingen toe aan uw on-premises Active Directory-domein voor computers die worden ingeschreven met Windows Autopilot. Zie [Hybride apparaten die aan Azure AD zijn toegevoegd](/mem/intune/enrollment/windows-autopilot-hybrid) voor meer informatie.
-  - Met de **Intune Exchange Connector** kan de toegang tot uw Exchange-servers worden toegestaan (of geblokkeerd) mits apparaten bij Intune zijn ingeschreven en als ze voldoen aan uw beleidsregels. Zie [De on-premises Intune Exchange Connector instellen](/mem/intune/protect/exchange-connector-install).
   - Met de **Intune Certificate Connector** worden certificaataanvragen verwerkt van apparaten die voor verificatie gebruikmaken van certificaten en S/MIME-e-mailversleuteling. Zie [Certificaten gebruiken voor verificatie](/mem/intune/protect/certificates-configure) voor meer informatie.
 
   Gebruik Intune als onderdeel van Endpoint Manager om nalevingsregels te maken en controleren, om apps, functies en instellingen te implementeren op uw apparaten met behulp van de cloud.

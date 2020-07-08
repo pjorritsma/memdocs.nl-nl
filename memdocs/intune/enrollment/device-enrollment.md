@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d907aaac6c37cbe7cad71e850fbc44322c93841
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: d3ca95db3297a6ca251f91a79fda705aebb6d18d
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986386"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088459"
 ---
 # <a name="what-is-device-enrollment"></a>Wat is apparaatinschrijving?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -45,6 +45,7 @@ Standaard kunnen apparaten voor alle platforms worden ingeschreven in Intune. U 
 |**[USB-Direct](#usb-direct)**| Nee | Nee | Nee|[Meer informatie](apple-configurator-enroll-ios.md)|
 
 ## <a name="macos-enrollment-methods"></a>macOS-inschrijvingsmethoden
+
 | **Methode** |  **Opnieuw instellen vereist** |  **Gebruikersaffiniteit** | **Vergrendeld** | **Details**|
 |:---:|:---:|:---:|:---:|:---:|
 |**[BYOD](#bring-your-own-device)** | Nee| Ja | Nee | [Meer informatie](macos-enroll.md)|
@@ -54,7 +55,7 @@ Standaard kunnen apparaten voor alle platforms worden ingeschreven in Intune. U 
 ## <a name="windows-enrollment-methods"></a>Windows-registratiemethoden
 
 | **Methode** | **Opnieuw instellen vereist** | **Gebruikersaffiniteit** | **Vergrendeld** | **Details**|
-|:---:|:---:|:---:|:---:|:---:|:---:|
+|:---:|:---:|:---:|:---:|:---:|
 |**[BYOD](#bring-your-own-device)** | Nee | Ja | Nee | [Meer informatie](windows-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| Nee |Nee |Nee |[Meer informatie](device-enrollment-manager-enroll.md)|
 |**Automatisch inschrijven** | Nee |Ja |Nee | [Meer informatie](windows-enroll.md#enable-windows-10-automatic-enrollment)|
@@ -77,7 +78,7 @@ Standaard kunnen apparaten voor alle platforms worden ingeschreven in Intune. U 
 |**Android-apparaatbeheer**|**(Vooraf gedeclareerde IMEI of SN) Door gebruiker geïnitieerd via bedrijfsportal**| Nee | Ja | Nee | [Meer informatie](corporate-identifiers-add.md)|
 |**Android-apparaatbeheer met Zebra-mobiliteitsextensies**|**Door gebruiker of [DEM](#device-enrollment-manager) geïnitieerd via de bedrijfsportal**| Nee | Ja, als dit door de gebruiker is geïnitieerd, Nee als dit door [DEM](#device-enrollment-manager) is geïnitieerd | Nee | [Meer informatie](../configuration/android-zebra-mx-overview.md)|
 |**Toegewezen Android Enterprise-apparaten**|**NFC, Token, QR-code, Zero Touch**| Ja | Nee | Configureerbaar via beleid | [Meer informatie](android-kiosk-enroll.md)|
-|**Volledig beheerde Android Enterprise-apparaten**|**NFC, Token, QR-code, Zero Touch**| Ja | Ja. Nee als dit door [DEM](device-enrollment.md#device-enrollment-manager) is geïnitieerd | Configureerbaar via beleid | [Meer informatie](android-dedicated-devices-fully-managed-enroll.md)|
+|**Volledig beheerde Android Enterprise-apparaten**|**NFC, Token, QR-code, Zero Touch**| Ja | Ja | Configureerbaar via beleid | [Meer informatie](android-dedicated-devices-fully-managed-enroll.md)|
 
 
 ## <a name="bring-your-own-device"></a>Bring Your Own Device

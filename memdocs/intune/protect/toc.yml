@@ -52,6 +52,8 @@
       items:
         - name: Nalevingsoverzicht
           href: device-compliance-get-started.md
+        - name: Partners voor apparaatnaleving
+          href: device-compliance-partners.md
         - name: Een beleid maken
           href: create-compliance-policy.md
         - name: Naleving op basis van locatie

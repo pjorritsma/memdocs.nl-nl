@@ -2,7 +2,7 @@
 title: Veelgestelde vragen over producten en licenties
 titleSuffix: Configuration Manager
 description: Vind antwoorden op veelgestelde vragen over producten en licenties voor Configuration Manager.
-ms.date: 07/01/2020
+ms.date: 07/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7b2c785fb41fa78ea0bd5d480560d45a3a7a7eda
-ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
+ms.openlocfilehash: 1ce9024fa610c6af19eb40ccf0da662a3e99234f
+ms.sourcegitcommit: 01c1ca337e82c5e8e92153079ed89f79e20bde9e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85854419"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86157821"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Veelgestelde vragen over Configuration Manager branches en licenties
 
@@ -78,11 +78,11 @@ Met de licentie voor co-beheer kunnen Configuration Manager klanten met Software
 
 - Als u een Windows 10-apparaat op een andere manier inschrijft bij intune, is er nog steeds een volledige intune-licentie vereist. U kunt bijvoorbeeld auto pilot gebruiken om een apparaat in te richten, of een gebruiker voert hand matig registratie van de self-service uit.
 
-- Voor bestaande door Configuration Manager beheerde apparaten om in intune te worden inge schreven voor co-beheer op schaal zonder tussen komst van de gebruiker, gebruikt co-beheer een functie van Azure Active Directory (Azure AD) met de naam automatische inschrijving voor Windows 10. Voor automatische inschrijving is een Azure AD Premium-licentie (AADP1) vereist, die is gescheiden van micro soft Endpoint Manager. Om het co-beheer in dit scenario te laten werken, moet u er voor zorgen dat u een AADP1 en een intune-licentie aan elke afzonderlijke gebruiker toewijst. Licentie voor co-beheer is gewijzigd vanaf 1 december 2019. U hoeft nu geen afzonderlijke intune-licenties toe te wijzen voor dit scenario, maar ze zijn nog steeds vereist in andere inschrijvings scenario's. De AADP1-licentie vereisten blijven hetzelfde voor automatische inschrijving en co-beheer.
+- Voor bestaande door Configuration Manager beheerde apparaten om in intune te worden inge schreven voor co-beheer op schaal zonder tussen komst van de gebruiker, gebruikt co-beheer een functie van Azure Active Directory (Azure AD) met de naam automatische inschrijving voor Windows 10. Automatische inschrijving met co-beheer vereist licenties voor zowel Azure AD Premium (AADP1) als intune. Vanaf 1 december 2019 hoeft u geen afzonderlijke intune-licenties meer toe te wijzen voor dit scenario. Micro soft Endpoint Manager bevat nu de intune-licenties voor co-beheer. De afzonderlijke AADP1-licentie vereisten blijven hetzelfde voor dit scenario. U moet nog steeds intune-licenties toewijzen voor andere inschrijvings scenario's.
 
 - Als u intune wilt gebruiken voor het beheren van iOS-, Android-of macOS-apparaten, hebt u het juiste intune-abonnement nodig via een zelfstandige licentie, Enterprise Mobility + Security (EMS) of Microsoft 365.
 
-- Als u geen abonnement op intune hebt, ter ondersteuning van co-beheer moet u ten minste één intune-licentie aanschaffen. Deze licentie is voor een beheerder om toegang te krijgen tot het micro soft Endpoint Manager-beheer centrum.
+- Als u geen abonnement op intune hebt, ter ondersteuning van co-beheer moet u ten minste één intune-licentie aanschaffen. Deze licentie is voor een beheerder om het abonnement te activeren en toegang te krijgen tot het micro soft Endpoint Manager-beheer centrum.
 
 - Als u de Microsoft 365 ingebouwde [eenvoudige mobiliteit en beveiliging](https://support.microsoft.com/office/capabilities-of-built-in-mobile-device-management-for-microsoft-365-a1da44e5-7475-4992-be91-9ccec25905b0)gebruikt, kunt u de nieuwe licentie voor gezamenlijk beheer niet gebruiken voor een gebruiker die ook apparaten heeft die worden beheerd door de basis mobiliteit en beveiliging. Voer een van de volgende acties uit om de co-beheer licentie te gebruiken voor het door Configuration Manager beheerde apparaat van de gebruiker:
 
@@ -93,18 +93,18 @@ Met de licentie voor co-beheer kunnen Configuration Manager klanten met Software
 
 |Functie | Licentie voor co-beheer | Volledige intune-licentie |
 |---------|---------|---------|
-|Windows 10-inschrijving|Ja (alleen voor bestaande door ConfigMgr beheerde apparaten)|Yes|
-|iOS-, Android-, macOS-inschrijving|Nee|Yes|
-|Autopilot|Nee|Yes|
-|Mobile Application Management (MAM)|Nee|Yes|
+|Windows 10-inschrijving|Ja (alleen voor bestaande door ConfigMgr beheerde apparaten)|Ja|
+|iOS-, Android-, macOS-inschrijving|Nee|Ja|
+|Autopilot|Nee|Ja|
+|Mobile Application Management (MAM)|Nee|Ja|
 |Voorwaardelijke toegang<br>(aanvullende AADP1 vereist)|Ja|Ja|
 |Apparaatprofielen|Ja|Ja|
 |Beheer van software-updates|Ja|Ja|
 |Inventaris|Ja|Ja|
 |Appbeheer|Ja|Ja|
 |Hulp op afstand<br>(Team Viewer-licentie vereist)|Ja|Ja|
-|Desktop Analytics<br>(Windows-abonnements licenties vereist|Yes|N.v.t.|
-|Tenantkoppeling|Yes|N.v.t.|
+|Desktop Analytics<br>(Windows-abonnements licenties vereist|Ja|N.v.t.|
+|Tenantkoppeling|Ja|N.v.t.|
 |Eindpuntanalyse|Ja|Ja|
 
 Raadpleeg voor meer informatie de volgende artikelen:

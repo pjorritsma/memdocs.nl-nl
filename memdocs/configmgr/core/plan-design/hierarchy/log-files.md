@@ -2,7 +2,7 @@
 title: Verwijzing naar logboekbestand
 titleSuffix: Configuration Manager
 description: Een verwijzing naar alle logboek bestanden voor Configuration Manager-client, server en afhankelijke onderdelen.
-ms.date: 06/10/2020
+ms.date: 07/09/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0f69b42ce0396148c67eaade967ef4fd87dea7bb
-ms.sourcegitcommit: 03d2331876ad61d0a6bb1efca3aa655b88f73119
+ms.openlocfilehash: 296ac8448292b46318921cb952b5b8545a34f1fa
+ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85946892"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86210323"
 ---
 # <a name="log-file-reference"></a>Verwijzing naar logboekbestand
 
@@ -55,7 +55,7 @@ De volgende secties bevatten informatie over de verschillende logboek bestanden 
 
 - [Logboek bestanden op functionaliteit](#BKMK_FunctionLogs)  
 
-  - [Toepassingsbeheer](#BKMK_AppManageLog)  
+  - [Toepassings beheer](#BKMK_AppManageLog)  
 
   - [Asset Intelligence](#BKMK_AILog)  
 
@@ -77,6 +77,8 @@ De volgende secties bevatten informatie over de verschillende logboek bestanden 
 
   - [Detectie](#BKMK_DiscoveryLog)  
 
+  - [Eindpuntanalyse](#bkmk_analytics)
+  
   - [Endpoint Protection](#BKMK_EPLog)  
 
   - [Extensies](#BKMK_Extensions)  
@@ -171,7 +173,10 @@ De volgende tabel geeft een lijst van de logboek bestanden die zich op de Config
 |SCClient_ &lt; *domein* \> @ &lt; *gebruikers naam* \> _2. log|Registreert de historische activiteit in Software Center voor de gespecificeerde gebruiker op de clientcomputer.|  
 |Scheduler.log|Registreert activiteiten van geplande taken voor alle clientbewerkingen.|  
 |SCNotify_ &lt; *domein* \> @ &lt; *gebruikers naam* \> _1. log|Registreert de activiteit voor het verwittigen van gebruikers met betrekking tot software voor de opgegeven gebruiker.|  
-|SCNotify_ &lt; *domein* \> @ &lt; *gebruikers naam* \> _1- &lt; *Date_Time*>. log|Registreert de historische activiteit voor het verwittigen van gebruikers met betrekking tot software voor de opgegeven gebruiker.|  
+|SCNotify_ &lt; *domein* \> @ &lt; *gebruikers naam* \> _1- &lt; *Date_Time*>. log|Registreert de historische activiteit voor het verwittigen van gebruikers met betrekking tot software voor de opgegeven gebruiker.|
+|SensorWmiProvider. log|Registreert de activiteit van de WMI-provider voor de Endpoint Analytics-sensor.|
+|SensorEndpoint. log|Registreert de uitvoering van het endpoint Analytics-beleid en het uploaden van client gegevens naar de site server.|
+|SensorManagedProvider. log|Registreert het verzamelen en verwerken van gebeurtenissen en informatie voor endpoint Analytics.|
 |setuppolicyevaluator.log|Registreert configuratie- en inventarisbeleid maken in WMI.|  
 |SleepAgent_ &lt; *domein*\>@SYSTEM_0.log|Het hoofd logboek bestand voor wake-up proxy.|  
 |smscliui.log|Registreert het gebruik van de Configuration Manager-client in het configuratie scherm.|  
@@ -344,7 +349,8 @@ De volgende tabel geeft een lijst van de logboek bestanden op de Configuration M
 |srsrpsetup.log|Registreert resultaten van het installatieproces van het rapportagepunt.|Sitesysteemserver|  
 |statesys.log|Registreert de verwerking van statussysteemberichten.|Siteserver|  
 |statmgr.log|Registreert het schrijven van alle statusberichten naar de database.|Siteserver|  
-|swmproc.log|Registreert de verwerking van meterbestanden en instellingen.|Siteserver|  
+|swmproc.log|Registreert de verwerking van meterbestanden en instellingen.|Siteserver|
+|UXAnalyticsUploadWorker. log|Registreert gegevens upload naar de service voor endpoint Analytics.|Siteserver|   
 
 ### <a name="site-server-installation"></a><a name="BKMK_SiteInstallLog"></a>Installatie van de site server
 
@@ -623,7 +629,7 @@ Gebruik de volgende logboek bestanden voor hulp bij het oplossen van problemen m
 De logboek bestanden op het service verbindings punt bevinden zich in de volgende map: `%ProgramFiles%\Configuration Manager\Logs\M365A` .
 De logboek bestanden op de Configuration Manager-client bevinden zich in de volgende map: `%WinDir%\CCM\logs` .
 
-| Logboek | Beschrijving |Computer met logboekbestand|
+| Log | Beschrijving |Computer met logboekbestand|
 |---------|---------|---------|
 | M365ADeploymentPlanWorker. log | Informatie over het implementatie plan synchronisatie van de Cloud service van Desktop Analytics naar een on-premises Configuration Manager |Serviceverbindingspunt|
 | M365ADeviceHealthWorker. log | Informatie over het uploaden van apparaatstatus van Configuration Manager naar micro soft Cloud |Serviceverbindingspunt|
@@ -644,6 +650,15 @@ De volgende tabel geeft een lijst van de logboek bestanden die informatie bevatt
 |ddm.log|Registreert activiteiten van de Discovery Data Manager.|Siteserver|  
 |InventoryAgent.log|Registreert activiteiten van hardware-inventaris, software-inventaris en heartbeat-detectieacties op de client.|Client|  
 |netdisc.log|Registreert netwerkdetectieacties.|Siteserver|  
+
+### <a name="endpoint-analytics"></a><a name="bkmk_analytics"></a>Endpoint Analytics
+
+|Logboeknaam|Beschrijving|Computer met logboekbestand|  
+|--------------|-----------------|----------------------------|  
+|UXAnalyticsUploadWorker. log|Registreert gegevens upload naar de service voor endpoint Analytics.|Siteserver|  
+|SensorWmiProvider. log|Registreert de activiteit van de WMI-provider voor de Endpoint Analytics-sensor.|Client|  
+|SensorEndpoint. log|Registreert de uitvoering van het endpoint Analytics-beleid en het uploaden van client gegevens naar de site server.|Client|
+|SensorManagedProvider. log|Registreert het verzamelen en verwerken van gebeurtenissen en informatie voor endpoint Analytics.|Client|
 
 ### <a name="endpoint-protection"></a><a name="BKMK_EPLog"></a>Endpoint Protection
 

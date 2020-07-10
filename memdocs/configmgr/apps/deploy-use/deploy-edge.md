@@ -10,12 +10,12 @@ ms.assetid: 73b420be-5d6a-483a-be66-c4d274437508
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2061a6701bf40233593e2e5d683e36f2814d3978
-ms.sourcegitcommit: f999131e513d50967f88795e400d5b089ebc5878
+ms.openlocfilehash: 423864c2c954cc67da4ef54d55d7263ae346e786
+ms.sourcegitcommit: 24ce7df7dadf2385afe364b817ec58feeb04c700
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85914563"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86212283"
 ---
 # <a name="microsoft-edge-management"></a>Micro soft Edge-beheer
 
@@ -38,7 +38,7 @@ Voor clients die zijn gericht op een micro soft Edge-implementatie:
 
 Het apparaat waarop de Configuration Manager-console wordt uitgevoerd, heeft toegang tot de volgende eind punten nodig:
 
-|Locatie|Gebruiken|
+|Locatie|Gebruik|
 |---|---|
 |`https://edgeupdates.microsoft.com/api/products?view=enterprise`|Informatie over versies van micro soft Edge|
 |`http://dl.delivery.mp.microsoft.com`|Inhoud voor micro soft Edge-releases|
@@ -76,7 +76,7 @@ Maak een micro soft Edge-toepassing met behulp van de ingebouwde toepassings erv
 
 ### <a name="log-files-for-deployment"></a>Logboek bestanden voor implementatie
 
-|Locatie|Logboek|Gebruiken|
+|Locatie|Log|Gebruik|
 |---|---|---|
 | Siteserver|SMSProv.log|Geeft details weer als het maken van de app of implementatie mislukt.|
 | [Varieert](../../core/plan-design/hierarchy/log-files.md)|PatchDownloader.log| Geeft details weer als het downloaden van de inhoud mislukt|
@@ -152,7 +152,7 @@ ERROR - is NOT retyrable.
 Rollback transaction: XXXX
 ```
 
-**Risico beperking:** U kunt dit probleem omzeilen door de verzameling van de hardware-inventaris klasse voor het gebruik van de browser (SMS_BrowerUsage) uit te scha kelen. Deze klasse heeft momenteel geen gebruik van.
+**Risico beperking:** U kunt dit probleem omzeilen door de verzameling van de hardware-inventaris klasse voor het gebruik van de browser (SMS_BrowerUsage) uit te scha kelen.
 
 ## <a name="next-steps"></a>Volgende stappen
 

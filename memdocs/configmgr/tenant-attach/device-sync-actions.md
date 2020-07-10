@@ -2,20 +2,20 @@
 title: Microsoft Endpoint Manager-tenant koppelen
 titleSuffix: Configuration Manager
 description: Upload uw Configuration Manager-apparaten naar de Cloud service en onderneem acties vanuit het beheer centrum.
-ms.date: 04/10/2020
+ms.date: 07/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
-ms.technology: configmgr-sum
+ms.technology: configmgr-core
 ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: be1c938cfcf332edb37e24e4094567f88f363560
-ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
+ms.openlocfilehash: a9e97c74e4825dc49ce628b3ae176c55f4288966
+ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84795615"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86210304"
 ---
 # <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a>Micro soft Endpoint Manager-Tenant bijvoegen: synchronisatie van apparaten en acties van apparaten
 <!--3555758 live 3/4/2020-->
@@ -56,8 +56,9 @@ Als u co-beheer momenteel hebt ingeschakeld, bewerkt u de eigenschappen voor co-
 1. Klik met de rechtermuisknop op uw instellingen voor co-beheer en selecteer **Eigenschappen**.
 1. Selecteer **Uploaden naar Microsoft Endpoint Manager-beheercentrum** in het tabblad **Upload configureren**. Klik op **Toepassen**.
    - De standaardinstelling voor het uploaden van apparaten is **Alle apparaten die worden beheerd door Microsoft Endpoint Configuration Manager**. Als dat nodig is, kunt u het uploaden beperken tot één verzameling apparaten.
+1. Schakel de optie in om **endpoint Analytics in te scha kelen voor apparaten die zijn geüpload naar micro soft Endpoint Manager** als u ook inzicht wilt krijgen in het optimaliseren van de eindgebruikers ervaring in [endpoint Analytics](../../analytics/overview.md).
 
-   [![Wizard Configuratie van co-beheer](./media/3555758-configure-upload.png)](./media/3555758-configure-upload.png#lightbox)
+   [![Apparaten uploaden naar het beheer centrum van micro soft Endpoint Manager](../../analytics/media/6051638-configure-upload-configmgr.png)](../../analytics/media/6051638-configure-upload-configmgr.png#lightbox)
 1. Meld u aan met uw *globale beheerder*-account wanneer u hierom wordt gevraagd.
 1. Klik op **Ja** om de melding **AAD-toepassing maken** te accepteren. Met deze actie wordt een service-principal ingericht en wordt een Azure AD-toepassingsregistratie gemaakt om de synchronisatie te vergemakkelijken.
 1. Klik op **OK** om de eigenschappen voor co-beheer af te sluiten nadat u de wijzigingen hebt aangebracht.
@@ -77,6 +78,7 @@ Als er geen co-beheer is ingeschakeld, gebruikt u de wizard voor het **configure
    [![Wizard Configuratie van co-beheer](./media/3555758-comanagement-wizard.png)](./media/3555758-comanagement-wizard.png#lightbox)
 1. Klik op **Volgende** en daarna op **Ja** om de melding **Een AAD-toepassing maken** te accepteren. Met deze actie wordt een service-principal ingericht en wordt een Azure AD-toepassingsregistratie gemaakt om de synchronisatie te vergemakkelijken.
 1. Selecteer op de pagina **Upload configureren** de aanbevolen instelling voor het uploaden van apparaten voor **alle apparaten die door micro soft endpoint Configuration Manager worden beheerd**. Als dat nodig is, kunt u het uploaden beperken tot één verzameling apparaten.
+1. Schakel de optie in om **endpoint Analytics in te scha kelen voor apparaten die zijn geüpload naar micro soft Endpoint Manager** als u ook inzicht wilt krijgen in het optimaliseren van de ervaring van de eind gebruiker in [endpoint Analytics](../../analytics/overview.md)
 1. Klik op **Samenvatting** om uw selectie te controleren en klik vervolgens op **Volgende**.
 1. Klik op **Sluiten** als de wizard is voltooid.  
 
@@ -120,4 +122,4 @@ Gebruik de volgende logboeken die zich op het service verbindings punt bevinden:
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Zie [problemen met Tenant koppeling oplossen](technical-reference.md)voor meer informatie over het toevoegen van logboek bestanden voor de Tenant.
+Zie [problemen met Tenant koppeling oplossen](troubleshoot.md)voor meer informatie over het toevoegen van logboek bestanden voor de Tenant.

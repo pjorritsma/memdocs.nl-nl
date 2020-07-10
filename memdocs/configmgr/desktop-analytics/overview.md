@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 3a1aa67c51998de62f6390db848a458876327ea7
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 0ef2d09423e7bb51e94cb626bf513aa7e98992c9
+ms.sourcegitcommit: d647eefa23c8849f49584442df568284d51d7525
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85590912"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86195647"
 ---
 # <a name="what-is-desktop-analytics"></a>Wat is Desktop Analytics?
 
@@ -72,7 +72,7 @@ Als u Desktop Analytics wilt gebruiken, moet u ervoor zorgen dat uw omgeving vol
 - Een actief globaal Azure-abonnement met [globale beheerders](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions) machtigingen. [Micro soft-accounts](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts) worden niet ondersteund.  
 
     > [!IMPORTANT]
-    > Desktop Analytics is een Windows-service die wordt gehost in azure Global en gebruikmaakt van diagnostische gegevens van Windows. De wereld wijde Azure-service is beschikbaar voor klanten van de Amerikaanse overheid, maar komt niet overeen met de [gcc-kenmerken (Government compliance) van de Amerikaanse overheid](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance) . Zie het [vertrouwens centrum van micro soft](https://docs.microsoft.com/microsoft-365/compliance/offering-home?view=o365-worldwide)voor een lijst met compliance-aanbiedingen voor micro soft-producten en-services. Desktop Analytics is niet beschikbaar voor klanten met een hoog of Amerikaans Ministerie van defensie (DOD) van GCC. Het gebruik van Azure Government-abonnementen voor het hosten van Desktop Analytics-werk ruimten wordt niet ondersteund.
+    > Desktop Analytics is een Windows-service die wordt gehost in azure Global en gebruikmaakt van diagnostische gegevens van Windows. Desktop Analytics is een wereld wijde Azure-service die beschikbaar is voor klanten van de Amerikaanse overheid en niet voldoet aan de [Amerikaanse gcc-kenmerken (Government Community compliance)](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance) . Zie het [vertrouwens centrum van micro soft](https://docs.microsoft.com/microsoft-365/compliance/offering-home?view=o365-worldwide)voor een lijst met compliance-aanbiedingen voor micro soft-producten en-services. Desktop Analytics is niet beschikbaar voor klanten met een hoog of Amerikaans Ministerie van defensie (DOD) van GCC. Het gebruik van Azure Government-abonnementen voor het hosten van Desktop Analytics-werk ruimten wordt niet ondersteund.
 
     - **Eigenaars machtigingen voor werk ruimten** voor het **instellen van uw werk ruimte**en de volgende rollen:  
 
@@ -107,7 +107,7 @@ Als u Desktop Analytics wilt gebruiken, moet u ervoor zorgen dat uw omgeving vol
     >
     > Desktop Analytics is ontworpen om het in-place upgrade-scenario het beste te ondersteunen. Als u belang rijke wijzigingen wilt aanbrengen, zoals van 32-bits tot 64-bits architectuur, gebruikt u een Imaging-scenario. Desktop Analytics Insights is nog steeds waardevol in deze klassieke implementatie scenario's voor besturings systemen, maar u kunt de in-place upgrade specifieke richt lijnen negeren. Zie [scenario's voor het implementeren van ENTER prise-besturings systemen met Configuration Manager](../osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems.md)voor meer informatie.
 
-- Diagnostische gegevens van Windows. Raadpleeg voor meer informatie de volgende artikelen:  
+- Diagnostische gegevens van Windows. Raadpleeg de volgende artikelen voor meer informatie:  
 
     - [Niveaus van diagnostische gegevens](enable-data-sharing.md#diagnostic-data-levels)  
 

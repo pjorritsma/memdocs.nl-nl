@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 309b9a09-a611-4ba2-90ab-dde51582cf87
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: 4f70a956051858fce5b4ba5f519c7e1035600793
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.author: mstewart
+ms.openlocfilehash: 3c31f97e2a494fa4b0d3e9e825a81b562859e5dd
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712307"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240351"
 ---
 # <a name="import-configuration-data-with-configuration-manager"></a>Configuratie gegevens importeren met Configuration Manager
 
@@ -47,7 +47,7 @@ Hieronder worden enkele andere scenario's beschreven waarin het importproces kan
 
 ### <a name="import-configuration-data"></a>Configuratiegegevens importeren  
 
-1.  Klik in de Configuration Manager-console op **activa en nalevings** > **configuratie-items** of **configuratie basislijnen**
+1.  Klik in de Configuration Manager-console op **activa en nalevings**  >  **configuratie-items** of **configuratie basislijnen**
 2.  Klik op het tabblad **Start** in de groep **maken** op **configuratie gegevens importeren**.  
 3.  Klik op de pagina **Bestanden selecteren** van de wizard **Configuratiegegevens importeren**op **Toevoegen**en selecteer in het dialoogvenster **Openen** de CAB-bestanden die u wilt importeren.  
 4.  Schakel het selectie vakje **een nieuwe kopie maken van de geïmporteerde configuratie basislijnen en configuratie-items** in als u wilt dat de geïmporteerde configuratie gegevens kunnen worden bewerkt in de Configuration Manager-console.  

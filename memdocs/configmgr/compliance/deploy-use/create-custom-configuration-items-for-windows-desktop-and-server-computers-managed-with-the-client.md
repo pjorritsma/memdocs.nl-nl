@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 1eb2fcaf-acac-4388-9b31-6cccafacaabe
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 63f11066918854d72af0f1160d7d7569a93d7ebe
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 24637862326b029f974843c18ccba835ee5501ba
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712384"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240419"
 ---
 # <a name="create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-configuration-manager-client"></a>Aangepaste configuratie-items maken voor Windows Desktop-en Server computers die worden beheerd met de Configuration Manager-client
 
@@ -84,7 +84,7 @@ Een detectie methode in Configuration Manager bevat regels die worden gebruikt o
     - **PowerShell**  
 
         > [!Note]  
-        > Vanaf versie 1810, wanneer een Windows Power shell-script wordt uitgevoerd als detectie methode, roept de Configuration Manager-client Power `-NoProfile` shell aan met de para meter. Met deze optie wordt Power shell zonder profielen gestart. Een Power shell-profiel is een script dat wordt uitgevoerd wanneer Power shell wordt gestart. <!--3607762-->  
+        > Vanaf versie 1810, wanneer een Windows Power shell-script wordt uitgevoerd als detectie methode, roept de Configuration Manager-client Power shell aan met de `-NoProfile` para meter. Met deze optie wordt Power shell zonder profielen gestart. Een Power shell-profiel is een script dat wordt uitgevoerd wanneer Power shell wordt gestart. <!--3607762-->  
 
 3. Selecteer **openen**, blader naar het script dat u wilt gebruiken en selecteer vervolgens **openen**.  
 
@@ -97,7 +97,7 @@ Selecteer op de pagina **ondersteunde platforms** van de **wizard Configuratie-i
 U kunt **de versie van Windows ook hand matig opgeven**. Selecteer **toevoegen** en geef elk deel van het Windows-buildnummer op.
 
 > [!NOTE]
-> Wanneer u Windows Server 2016 opgeeft, bevat de `All Windows Server 2016 and higher 64-bit)` selectie voor ook windows server 2019. Als u alleen Windows Server 2016 wilt opgeven, gebruikt u de optie om **de versie van Windows hand matig**op te geven. <!--5866480-->
+> Wanneer u Windows Server 2016 opgeeft, bevat de selectie voor `All Windows Server 2016 and higher 64-bit)` ook Windows server 2019. Als u alleen Windows Server 2016 wilt opgeven, gebruikt u de optie om **de versie van Windows hand matig**op te geven. <!--5866480-->
 
 
 
@@ -118,11 +118,11 @@ Instellingen vertegenwoordigen de zakelijke of technische voorwaarden die worden
     - **Instellings type**: Kies in de lijst een van de volgende instellings typen voor deze instelling:  
         - [Active Directory-query](#bkmk_adquery)
         - [Assembly](#bkmk_assembly)
-        - [Bestands systeem](#bkmk_file)
+        - [Bestandssysteem](#bkmk_file)
         - [IIS Metabase](#bkmk_iis)
-        - [Registersleutel](#bkmk_regkey)
+        - [Register sleutel](#bkmk_regkey)
         - [Register waarde](#bkmk_regval)
-        - [Schriften](#bkmk_script)
+        - [Script](#bkmk_script)
         - [SQL-query](#bkmk_sql)
         - [WQL-query](#bkmk_wql)
         - [XPath-query](#bkmk_xpath)
@@ -139,11 +139,11 @@ Instellingen vertegenwoordigen de zakelijke of technische voorwaarden die worden
 
 ### <a name="active-directory-query"></a><a name="bkmk_adquery"></a>Active Directory query
 
-- **LDAP-voor voegsel**: Geef een geldig voor voegsel op voor de Active Directory Domain Services query om naleving op client computers te beoordelen. Als u een globale catalogus wilt zoeken, gebruikt `LDAP://` u `GC://`of.  
+- **LDAP-voor voegsel**: Geef een geldig voor voegsel op voor de Active Directory Domain Services query om naleving op client computers te beoordelen. Als u een globale catalogus wilt zoeken, gebruikt u `LDAP://` of `GC://` .  
 
 - **Distinguished name (DN)**: Geef de DN-naam op van het Active Directory Domain Services-object dat wordt beoordeeld op naleving op client computers.  
 
-- **Zoek filter**: Geef een optioneel LDAP-filter op om de resultaten van de Active Directory Domain Services query te verfijnen om de compatibiliteit op client computers te beoordelen. Als u alle resultaten van de query wilt retour `(objectclass=*)`neren, voert u in.  
+- **Zoek filter**: Geef een optioneel LDAP-filter op om de resultaten van de Active Directory Domain Services query te verfijnen om de compatibiliteit op client computers te beoordelen. Als u alle resultaten van de query wilt retour neren, voert u in `(objectclass=*)` .  
 
 - **Zoek bereik**: Geef het zoek bereik op in Active Directory Domain Services  
 
@@ -155,7 +155,7 @@ Instellingen vertegenwoordigen de zakelijke of technische voorwaarden die worden
 
 - **Eigenschap**: Geef de eigenschap op van het Active Directory Domain Services-object dat wordt gebruikt om de naleving op client computers te beoordelen.  
 
-    Als u bijvoorbeeld een query wilt uitvoeren op de eigenschap Active Directory waarmee het aantal keren dat een gebruiker onjuist een wacht woord invoert, invoert `badPwdCount` , voert u in dit veld in.  
+    Als u bijvoorbeeld een query wilt uitvoeren op de eigenschap Active Directory waarmee het aantal keren dat een gebruiker onjuist een wacht woord invoert, invoert, voert u `badPwdCount` in dit veld in.  
 
 - **Query**: geeft de query weer die is samengesteld op basis van de vermeldingen in **LDAP-voor voegsel**, **DN-naam**, **Zoek filter** (indien opgegeven) en **eigenschap**.  
 
@@ -171,7 +171,7 @@ Een assembly is een stuk code dat tussen toepassingen kan worden gedeeld. Assemb
 
 - **Type**: Selecteer in de lijst of u wilt zoeken naar een **bestand** of een **map**.  
 
-- **Pad**: Geef het pad op naar het opgegeven bestand of de map op client computers. U kunt in het pad systeem omgevingsvariabelen `%USERPROFILE%` en de omgevings variabele opgeven.  
+- **Pad**: Geef het pad op naar het opgegeven bestand of de map op client computers. U kunt in het pad systeem omgevingsvariabelen en de `%USERPROFILE%` omgevings variabele opgeven.  
 
     > [!NOTE]  
     > Als u de `%USERPROFILE%` omgevings variabele gebruikt in het vak **pad** of **bestand of mapnaam** , zoekt de Configuration Manager-client alle gebruikers profielen op de client computer. Dit gedrag kan ertoe leiden dat er meerdere exemplaren van het bestand of de map worden gevonden.  
@@ -188,7 +188,7 @@ Een assembly is een stuk code dat tussen toepassingen kan worden gedeeld. Assemb
 
 - **Inclusief submappen**: Doorzoek ook submappen onder het opgegeven pad.  
 
-- **Dit bestand of deze map is gekoppeld aan een 64-bits toepassing**: als deze functie is ingeschakeld, worden alleen `%ProgramFiles%` op 64-bits bestands locaties gezocht, zoals op 64-bits computers. Als deze optie niet is ingeschakeld, zoekt u in `%ProgramFiles(x86)%`zowel 64-bits als op 32-bits locatie, zoals.  
+- **Dit bestand of deze map is gekoppeld aan een 64-bits toepassing**: als deze functie is ingeschakeld, worden alleen op 64-bits bestands locaties gezocht, zoals `%ProgramFiles%` op 64-bits computers. Als deze optie niet is ingeschakeld, zoekt u in zowel 64-bits als op 32-bits locatie, zoals `%ProgramFiles(x86)%` .  
 
     > [!NOTE]  
     > Als hetzelfde bestand of dezelfde map zowel op de 64-bits als op de 32-bits systeembestandslocatie van dezelfde 64-bits computer bestaat, worden meerdere bestanden gedetecteerd door de globale voorwaarde.  
@@ -246,7 +246,7 @@ De geretourneerde waarde door het script wordt gebruikt om de naleving van de gl
 - **Scripts uitvoeren met de referenties van de aangemelde gebruiker**: als u deze optie inschakelt, wordt het script uitgevoerd op client computers die gebruikmaken van de referenties van de aangemelde gebruiker.  
 
 > [!Note]  
-> Vanaf versie 1810, wanneer u Windows Power shell als een script voor detectie of herstel gebruikt, roept de Configuration Manager-client Power shell `-NoProfile` aan met de para meter. Met deze optie wordt Power shell zonder profielen gestart. Een Power shell-profiel is een script dat wordt uitgevoerd wanneer Power shell wordt gestart. <!--3607762-->  
+> Vanaf versie 1810, wanneer u Windows Power shell als een script voor detectie of herstel gebruikt, roept de Configuration Manager-client Power shell aan met de `-NoProfile` para meter. Met deze optie wordt Power shell zonder profielen gestart. Een Power shell-profiel is een script dat wordt uitgevoerd wanneer Power shell wordt gestart. <!--3607762-->  
 
 
 ### <a name="sql-query"></a><a name="bkmk_sql"></a>SQL-query
@@ -274,18 +274,18 @@ De geretourneerde waarde door het script wordt gebruikt om de naleving van de gl
 
 - **Eigenschap**: Geef de WMI-doel eigenschap in de bovenstaande klasse op.  
 
-- **WHERE-component van WQL-query**: Geef een component kwalificeren op om de resultaten te verminderen. Als u bijvoorbeeld alleen de DHCP-service in de klasse Win32_Service wilt opvragen, zou de component WHERE `Name = 'DHCP' and StartMode = 'Auto'`kunnen zijn.   
+- **WHERE-component van WQL-query**: Geef een component kwalificeren op om de resultaten te verminderen. Als u bijvoorbeeld alleen de DHCP-service in de klasse Win32_Service wilt opvragen, zou de component WHERE kunnen zijn `Name = 'DHCP' and StartMode = 'Auto'` .   
 
 
 ### <a name="xpath-query"></a><a name="bkmk_xpath"></a>XPath-query
 
-- **Pad**: Geef het pad op naar het XML-bestand op client computers die wordt gebruikt om naleving te beoordelen. Configuration Manager ondersteunt het gebruik van alle Windows-systeem omgevingsvariabelen en `%USERPROFILE%` de gebruikers variabele in de naam van het pad.  
+- **Pad**: Geef het pad op naar het XML-bestand op client computers die wordt gebruikt om naleving te beoordelen. Configuration Manager ondersteunt het gebruik van alle Windows-systeem omgevingsvariabelen en de `%USERPROFILE%` gebruikers variabele in de naam van het pad.  
 
 - **XML-bestands naam**: Geef de naam van het bestand op dat de XML-query bevat in het bovenstaande pad.  
 
 - **Inclusief submappen**: Schakel deze optie in om submappen onder het opgegeven pad te doorzoeken.  
 
-- **Dit bestand is gekoppeld aan een 64-bits toepassing**: zoeken naar de bestands locatie `%Windir%\System32` van het 64-bits systeem, naast de locatie `%Windir%\Syswow64` van het 32-bits systeem bestand op Configuration Manager clients met een 64-bits versie van Windows.  
+- **Dit bestand is gekoppeld aan een 64-bits toepassing**: zoeken naar de bestands locatie van het 64-bits systeem, `%Windir%\System32` naast de locatie van het 32-bits systeem bestand `%Windir%\Syswow64` op Configuration Manager clients met een 64-bits versie van Windows.  
 
 - **XPath-query**: Geef een geldige volledige XML Path-taal (XPath)-query op.  
 
@@ -380,7 +380,7 @@ Met compliantieregels geeft u de voorwaarden voor naleving van een configuratie-
 
 Vanaf Configuration Manager versie 2002 kunt u de **herstel geschiedenis volgen wanneer** deze wordt ondersteund in de nalevings regels van uw configuratie-item. Wanneer deze optie is ingeschakeld, genereert een herstel dat zich voordoet op de client voor het configuratie-item een status bericht. De geschiedenis wordt opgeslagen in de Configuration Manager-Data Base.
 
-Aangepaste rapporten bouwen om de herstel geschiedenis weer te geven met behulp van de open bare weer gave **v_CIRemediationHistory**. De `RemediationDate` kolom is de tijd, in UTC, die door de client is uitgevoerd. `ResourceID` Hiermee wordt het apparaat geïdentificeerd. Door aangepaste rapporten te bouwen met de **v_CIRemediationHistory** weer gave kunt u het volgende doen:
+Aangepaste rapporten bouwen om de herstel geschiedenis weer te geven met behulp van de open bare weer gave **v_CIRemediationHistory**. De `RemediationDate` kolom is de tijd, in UTC, die door de client is uitgevoerd. `ResourceID`Hiermee wordt het apparaat geïdentificeerd. Door aangepaste rapporten te bouwen met de **v_CIRemediationHistory** weer gave kunt u het volgende doen:
 
 - Mogelijke problemen met uw herstel scripts identificeren
 - Vind trends in herbemiddelingen, zoals een-client, die consistent niet-naleving van elke evaluatie cyclus zijn.

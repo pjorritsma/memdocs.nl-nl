@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 14226fbe-dd07-4432-910b-130790624a4e
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: 9a1bda440ab3ccd02432f0b023a134b9f54cdafb
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.author: mstewart
+ms.openlocfilehash: ade07cf23807d340ee5e0c7955a042a44f9031c5
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712398"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240436"
 ---
 # <a name="create-configuration-items-for-windows-10-devices"></a>Configuratie-items maken voor Windows 10-apparaten
 
@@ -87,13 +87,13 @@ Gebruik het configuratie-item Configuration Manager **Windows 10** om instelling
   
 ###  <a name="device"></a>Apparaat  
   
-|Naam van instelling|Details|  
+|Naam van de instelling|Details|  
 |------------------|-------------|  
 |**Bluetooth**|Staat het gebruik van de Bluetooth-functie op het apparaat toe.|  
   
 ### <a name="cloud"></a>Cloud  
   
-|Naam van instelling|Details|  
+|Naam van de instelling|Details|  
 |------------------|-------------|  
 |**Synchronisatie van instellingen**|De synchronisatie van instellingen tussen apparaten toestaan.|  
 |**Synchronisatie van referenties**|De synchronisatie van referenties tussen apparaten toestaan.|  
@@ -101,19 +101,19 @@ Gebruik het configuratie-item Configuration Manager **Windows 10** om instelling
   
 ### <a name="roaming"></a>Roaming  
   
-|Naam van instelling|Details|  
+|Naam van de instelling|Details|  
 |------------------|-------------|  
 |**Gegevens roaming**|Staat roaming tussen netwerken toe tijdens het verkrijgen van toegang tot gegevens.|  
   
 ### <a name="encryption"></a>Versleuteling  
   
-|Naam van instelling|Details|  
+|Naam van de instelling|Details|  
 |------------------|-------------|  
 |**Bestandsversleuteling op apparaat**|Vereist dat bestanden op het apparaat zijn versleuteld.|  
   
 ### <a name="system-security"></a>Systeembeveiliging  
   
-|Naam van instelling|Details|  
+|Naam van de instelling|Details|  
 |------------------|-------------|  
 |**Gebruikersaccountbeheer**|Hiermee configureert u hoe Windows Gebruikersaccountbeheer werkt op het apparaat.<br />U kunt het bijvoorbeeld uitschakelen of het niveau instellen waarbij u een melding moet ontvangen.|  
 |**Netwerkfirewall**|Schakelt de Windows-firewall in of uit.|  

@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 4e345791-74db-41ad-b472-024ce6521daf
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: 1ccb0f0a042a0dd82817e030f96bbbc729e752f0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.author: mstewart
+ms.openlocfilehash: 5920229331bca8d2a47b0bf1ab663530ef63c51e
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712174"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240657"
 ---
 # <a name="common-tasks-for-managing-compliance-on-devices-with-the-configuration-manager-client"></a>Algemene taken voor het beheren van de naleving op apparaten met de Configuration Manager-client
 
@@ -30,7 +30,7 @@ In dit artikel vindt u een inleiding op het gebruik van Configuration Manager in
 ## <a name="general-information-for-each-scenario"></a>Algemene informatie voor elk scenario  
  In elk scenario maakt u een configuratie-item waarmee een specifieke taak wordt uitgevoerd. Ga als volgt te werk om de wizard Configuratie-item maken te openen en aan de slag te gaan:  
 
-1.  Selecteer in de Configuration Manager-console **assets en** > **Compliance Settings** > **configuratie-items**voor nalevings instellingen voor naleving.  
+1.  Selecteer in de Configuration Manager-console **assets en**  >  **Compliance Settings**  >  **configuratie-items**voor nalevings instellingen voor naleving.  
 
 1.  Selecteer **configuratie-item maken**in het tabblad **Start** , in de groep **maken** .  
 
@@ -77,25 +77,25 @@ In dit artikel vindt u een inleiding op het gebruik van Configuration Manager in
 
 4. Configureer de volgende instellingen op het tabblad **Algemeen** van het dialoog venster **instelling maken** :  
 
-   -   **Name** > **Instelling voor beeld** van naam  
+   -   **Naam**  >  **Voor beeld van instelling**  
 
-   -   **Instelling type** > **register waarde**  
+   -   **Instellings type**  >  **Register waarde**  
 
-   -   **Data type** > **Geheel getal** gegevens type (omdat de waarde alleen een getal bevat)  
+   -   **Gegevens type**  >  **Geheel getal** (omdat de waarde alleen een getal bevat)  
 
-   -   **Hive** > **HKEY_LOCAL_MACHINE**  
+   -   **Hive**  >  **HKEY_LOCAL_MACHINE**  
 
-   -   **Key** > **SOFTWARE\Woodgrove\LOB App\Configuration\Configuration1**  
+   -   **Sleutel**  >  **SOFTWARE\Woodgrove\LOB App\Configuration\Configuration1**  
 
-   -   **Waarde** > **1** (de vereiste waarde)  
+   -   **Waarde**  >  **1** (de vereiste waarde)  
 
 5. Selecteer op het tabblad **compliantie regels** van het dialoog venster **instelling maken** de optie **Nieuw**. Configureer in het dialoog venster **regel maken** de volgende instellingen:  
 
-   -   **Naam** > **voorbeeld regel**  
+   -   **Naam**  >  **Voorbeeld regel**  
 
    -   De **geselecteerde instelling** > Controleer of de instelling **voor beeld**is geselecteerd.
 
-   -   **Rule type** > **Waarde** van regel type  
+   -   **Regel type**  >  **Waarde**  
 
    -   **De instelling moet voldoen aan de volgende regel** > Controleer of de naam van de instelling juist is en configureer de optie om op te geven dat de waarde van de instelling gelijk moet zijn aan **1**.  
 

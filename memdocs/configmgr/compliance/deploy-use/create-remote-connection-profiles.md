@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 8c6eabc4-5dda-4682-b03e-3a450e6ef65a
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: c9a06e1b7c14cda02a8029925785c2109ea4204b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.author: mstewart
+ms.openlocfilehash: f9f4e1ffe8b28efda0f59e6a252f39c95e2b7749
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712349"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240113"
 ---
 # <a name="remote-connection-profiles-in-configuration-manager"></a>Profielen voor externe verbindingen in Configuration Manager
 
@@ -37,10 +37,10 @@ Configuration Manager maakt een beveiligings groep op clients, **verbinding met 
 
 - Als u wilt dat gebruikers verbinding kunnen maken via internet, moet u een Extern bureaublad-gateway-server installeren en configureren. Zie [extern bureaublad-services-Access vanaf elke locatie](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/rds-plan-access-from-anywhere)voor meer informatie over het installeren en configureren van een extern bureaublad-gateway server.
 
-- Als clients een op een host gebaseerde Firewall uitvoeren, moeten ze het mstsc. exe-programma inschakelen. Wanneer u een profiel voor externe verbindingen configureert, schakelt u de instelling in om **Windows Firewall-uitzonde ring voor verbindingen in Windows-domeinen en particuliere netwerken toe te staan**. Met deze instelling kunt Configuration Manager automatisch Windows Firewall configureren.
+- Als clients een op een host gebaseerde Firewall uitvoeren, moet het mstsc.exe-programma worden ingeschakeld. Wanneer u een profiel voor externe verbindingen configureert, schakelt u de instelling in om **Windows Firewall-uitzonde ring voor verbindingen in Windows-domeinen en particuliere netwerken toe te staan**. Met deze instelling kunt Configuration Manager automatisch Windows Firewall configureren.
 
     > [!TIP]
-    > Met de groepsbeleidinstellingen voor het configureren van Windows Firewall kunt u de configuratie die u instelt in Configuration Manager overschrijven. Als u groepsbeleid gebruikt om Windows Firewall te configureren, moet u ervoor zorgen dat groepsbeleid instellingen geen mstsc. exe blok keren.
+    > Met de groepsbeleidinstellingen voor het configureren van Windows Firewall kunt u de configuratie die u instelt in Configuration Manager overschrijven. Als u groepsbeleid gebruikt om Windows Firewall te configureren, moet u ervoor zorgen dat groepsbeleid instellingen geen mstsc.exe blok keren.
 
     Als clients een andere, op een host gebaseerde Firewall uitvoeren, moet u deze firewall-afhankelijkheid hand matig configureren.  
 
@@ -80,7 +80,7 @@ Wanneer een gebruiker extern verbinding maakt met een werk computer, downloaden 
 
         - De server naam mag niet langer zijn dan 256 tekens.
         - Het kan bestaan uit hoofd letters, kleine letters en cijfers.
-        - Afgezien van punten (`.`) tussen segmenten en een dubbele punt (`:`) voor de poort, zijn de enige speciale tekens streepje (`–`) en onderstrepings`_`teken ().
+        - Afgezien van punten ( `.` ) tussen segmenten en een dubbele punt ( `:` ) voor de poort, zijn de enige speciale tekens streepje ( `–` ) en onderstrepings teken ( `_` ).
         - Configuration Manager biedt geen ondersteuning voor het gebruik van een internationale domein naam voor deze waarde.
 
     - **Alleen verbindingen toestaan vanaf computers waarop Extern bureaublad wordt uitgevoerd met verificatie op netwerkniveau**: standaard ingeschakeld, wordt met deze instelling een extra beveiligings niveau voor de verbinding toegevoegd. Zie [granting extern bureaublad Access](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/clients/remote-desktop-allow-access#why-allow-connections-only-with-network-level-authentication)(Engelstalig) voor meer informatie.
@@ -132,7 +132,7 @@ Als een apparaat een verzameling verlaat waarop u een profiel voor externe verbi
 
 Implementeer niet meer dan een profiel voor externe verbindingen met conflicterende instellingen op hetzelfde apparaat. U implementeert bijvoorbeeld twee profielen met verschillende instellingen voor dezelfde verzameling. U kunt slechts één profiel implementatie configureren om niet- **compatibele regels te herstellen wanneer**deze worden ondersteund. Deze implementatie kan de instellingen in het andere profiel overschrijven. Configuration Manager biedt geen ondersteuning voor dit type implementatie van een profiel voor externe verbindingen.
 
-## <a name="monitor"></a>Controleren
+## <a name="monitor"></a>Monitor
 
 Ga in de Configuration Manager-console naar de werk ruimte **bewaking** en selecteer **implementaties**. Selecteer in de lijst **implementaties** de implementatie van het profiel voor externe verbindingen.
 
@@ -160,6 +160,6 @@ In het deel venster **activum gegevens** worden de apparaten weer gegeven met de
 Configuration Manager bevat ingebouwde rapporten die u kunt gebruiken om informatie over profielen voor externe verbindingen te bewaken. Deze rapporten hebben de rapportcategorie van **Compatibiliteit en instellingen beheren**.  
 
 > [!IMPORTANT]  
-> Gebruik het Joker teken (`%`) wanneer u de para meters **apparaat filter** en **gebruikers filter** in de rapporten voor nalevings instellingen gebruikt.  
+> Gebruik het Joker teken ( `%` ) wanneer u de para meters **apparaat filter** en **gebruikers filter** in de rapporten voor nalevings instellingen gebruikt.  
 
 Zie [Introduction to Reporting](../../core/servers/manage/introduction-to-reporting.md)(Engelstalig) voor meer informatie over het configureren van rapportage in Configuration Manager.  

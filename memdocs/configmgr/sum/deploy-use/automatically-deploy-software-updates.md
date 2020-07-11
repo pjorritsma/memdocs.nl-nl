@@ -5,17 +5,17 @@ description: Software-updates automatisch implementeren met behulp van automatis
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 05/20/2020
+ms.date: 07/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: bf172c4cb34a17ac793ea5568b0505505baf97a0
-ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
+ms.openlocfilehash: ae1f52b0744f79f79e00e5dfe2d6a76c903cf4a4
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83709431"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240028"
 ---
 #  <a name="automatically-deploy-software-updates"></a>Software-updates automatisch implementeren  
 
@@ -197,7 +197,7 @@ Automatisch goed keuren en implementeren van software-updates met behulp van een
 
         -  **Prioriteit voor verzenden**: geef de prioriteit op voor verzenden van het implementatiepakket. Configuration Manager gebruikt deze prioriteit wanneer het pakket naar distributie punten wordt verzonden. Implementatie pakketten worden in volg orde van prioriteit verzonden: hoog, gemiddeld of laag. Pakketten met een identieke prioriteit worden verzonden in de volgorde waarin deze zijn gemaakt. Als er geen achterstand is, wordt het pakket onmiddellijk verwerkt, ongeacht de prioriteit.  
 
-        - **Binary Differential Replication inschakelen**: Schakel deze instelling in om netwerk verkeer tussen sites te minimaliseren. Met binaire Differentiële replicatie (BDR) wordt alleen de inhoud bijgewerkt die is gewijzigd in het pakket, in plaats van de hele pakket inhoud bij te werken. Zie [binaire Differentiële replicatie](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#binary-differential-replication)voor meer informatie.  
+        - **Binary Differential Replication inschakelen**: Schakel deze instelling in om binary Differential Replication te gebruiken voor het implementatie pakket. Zie [binaire Differentiële replicatie](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#binary-differential-replication)voor meer informatie.  
 
     - **Geen implementatie pakket**: vanaf versie 1806 kunt u software-updates implementeren op apparaten zonder eerst inhoud te downloaden en te distribueren naar distributie punten. Deze instelling is nuttig bij het verwerken van extreem grote update-inhoud. Gebruik dit ook wanneer u altijd wilt dat clients inhoud ophalen van de Microsoft Update Cloud service. Clients in dit scenario kunnen ook inhoud downloaden van peers die al over de benodigde inhoud beschikken. De Configuration Manager-client blijft het downloaden van de inhoud blijven beheren, maar kan ook gebruikmaken van de functie voor Configuration Manager peer-cache of andere technologieën zoals Delivery Optimization. Deze functie ondersteunt elk update type dat wordt ondersteund door Configuration Manager beheer van software-updates, waaronder Windows-en Office-updates.<!--1357933-->  
 

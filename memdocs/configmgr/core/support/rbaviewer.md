@@ -2,7 +2,7 @@
 title: Op rollen gebaseerd beheer programma
 titleSuffix: Configuration Manager
 description: Gebruik het op rollen gebaseerd beheer en controle programma om beveiligings rollen en bereiken in Configuration Manager te model leren en te controleren.
-ms.date: 07/30/2018
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6372ff17-7f56-4d7b-a21b-87fb8bdd6d3a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ff940db21711aabb5d57a45b05d90d04415639bb
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4cf9d4d3f9d1b2f439d2e87d41cc280e7af0805a
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723185"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86239705"
 ---
 # <a name="role-based-administration-and-auditing-tool"></a>Hulpprogramma voor beheer en controle op basis van rollen
 
@@ -31,7 +31,7 @@ Het beheer-en controle programma op basis van rollen is een van de [Configuratio
 
 ## <a name="requirements"></a>Vereisten
 
-- Uitvoeren op dezelfde computer als de Configuration Manager-console  
+- Dit op dezelfde computer uitvoeren als de Configuration Manager site server 
 
 - U hebt de rol **volledige beheerder**, **alleen-lezen analist**of **beveiligings beheerder**  
 
@@ -50,7 +50,7 @@ Het beheer-en controle programma op basis van rollen is een van de [Configuratio
 
 Gebruik de volgende procedure om machtigingen te modelsen voor een nieuwe rol die u wilt maken: 
 
-1. Voer **RBAViewer. exe**uit.  
+1. Voer **RBAViewer.exe**uit.  
 
 2. Selecteer de basis beveiligings rollen die u wilt bouwen, of begin met een lege machtigingenset. Selecteer de benodigde machtigingen.  
 
@@ -66,7 +66,7 @@ Gebruik de volgende procedure om machtigingen te modelsen voor een nieuwe rol di
 
 Gebruik de volgende procedure om alle bestaande gebruikers met beheerders rechten, verzamelingen en beveiligingsbereiken in Configuration Manager te controleren:
 
-1. Voer **RBAViewer. exe**uit.  
+1. Voer **RBAViewer.exe**uit.  
 
 2. Selecteer de knop **controle RBA** in de werk balk.  
 
@@ -79,7 +79,7 @@ Gebruik de volgende procedure om alle bestaande gebruikers met beheerders rechte
 
 Gebruik de volgende procedure om de op rollen gebaseerde beheer configuratie voor een specifieke gebruiker te controleren:
 
-1. Voer **RBAViewer. exe**uit.  
+1. Voer **RBAViewer.exe**uit.  
 
 2. Selecteer de knop **uitvoeren als** op de werk balk.  
 

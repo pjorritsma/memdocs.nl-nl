@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 722d5bf5-bedc-4dfc-b324-6eeb773874e9
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: 219ddd4c828cdabd022deb9fe372718184a4c024
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.author: mstewart
+ms.openlocfilehash: 9323fc3c1203d20c77af1f2fd27cee0a377e8d68
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713021"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240079"
 ---
 # <a name="create-configuration-items-for-mac-os-x-devices"></a>Configuratie-items maken voor Mac OS X-apparaten
 Gebruik het configuratie **-item Configuration Manager Mac OS X (aangepast)** om instellingen te beheren voor Mac OS X-apparaten die worden beheerd door de Configuration Manager-client.  
@@ -55,7 +55,7 @@ Het Mac OS X-besturings systeem gebruikt eigenschappen lijst bestanden (. plist)
             > [!IMPORTANT]  
             >  De sleutel naam is hoofdletter gevoelig en wordt niet geëvalueerd als deze verschilt van de sleutel naam op de Mac-computer. Daarnaast kunt u de sleutel naam niet bewerken nadat u deze hebt opgegeven. Als u de sleutel naam wilt bewerken, verwijdert u de instelling en maakt u deze opnieuw.  
   
-    -   **Schriften**  
+    -   **Script**  
   
         -   **Detectie script**: Selecteer **script toevoegen**en voer vervolgens een shell script in om de instellingen op de Mac-computer te beoordelen op naleving. Gebruik de **echo** opdracht in het shell script om waarden te retour neren die moeten worden Configuration Manager voor naleving. Configuration Manager gebruikt de resultaten die in **stdout** worden geretourneerd om de naleving te evalueren.  
   
@@ -99,7 +99,7 @@ Het Mac OS X-besturings systeem gebruikt eigenschappen lijst bestanden (. plist)
   
         -   **De instelling moet voldoen aan de volgende regel**: Selecteer een operator en een waarde die wordt beoordeeld op naleving van de geselecteerde instelling. U kunt de volgende operatoren gebruiken:  
   
-            -   **Gelijk is aan**  
+            -   **Gelijk aan**  
   
             -   **Niet gelijk aan**  
   
@@ -107,7 +107,7 @@ Het Mac OS X-besturings systeem gebruikt eigenschappen lijst bestanden (. plist)
   
             -   **Kleiner dan**  
   
-            -   **Tussen**  
+            -   **Verdeeld**  
   
             -   **Groter dan of gelijk aan**  
   

@@ -2,7 +2,7 @@
 title: Toepassingen maken
 titleSuffix: Configuration Manager
 description: Maak toepassingen met implementatie typen, detectie methoden en vereisten voor het installeren van software.
-ms.date: 04/01/2020
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 33a95ae78fdc80c6c08b59cfe5ec5b2e88485a8f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 60ca31b73e31ea59b7a854f87262be7fdc4ab5c5
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074653"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240334"
 ---
 # <a name="create-applications-in-configuration-manager"></a>Toepassingen maken in Configuration Manager
 
@@ -63,10 +63,10 @@ Vervolgens automatisch detecteren of hand matig informatie over de toepassing op
 
 2. Selecteer in de vervolg keuzelijst **type** het installatie bestands type van de toepassing die u wilt gebruiken voor het detecteren van toepassings informatie. Zie [implementatie typen die worden ondersteund door Configuration Manager](create-applications.md#bkmk_deploy-types)voor meer informatie over de beschik bare installatie typen.  
 
-3. Geef in het vak **locatie** het installatie bestand van de toepassing op dat u wilt gebruiken voor het detecteren van toepassings informatie. Deze locatie is een netwerkpad () of`\\server\share\filename`een Store-koppeling. U moet toegang hebben tot het netwerkpad en alle submappen die toepassings inhoud bevatten.  
+3. Geef in het vak **locatie** het installatie bestand van de toepassing op dat u wilt gebruiken voor het detecteren van toepassings informatie. Deze locatie is een netwerkpad ( `\\server\share\filename` ) of een Store-koppeling. U moet toegang hebben tot het netwerkpad en alle submappen die toepassings inhoud bevatten.  
 
     > [!IMPORTANT]  
-    > Wanneer u **Windows Installer (\*MSI-bestand)** selecteert als een toepassings type, importeert de site alle bestanden in de opgegeven map. Vervolgens worden deze bestanden naar distributie punten verzonden. Zorg ervoor dat de opgegeven map alleen de bestanden bevat die nodig zijn om de toepassing te installeren. Micro soft TESTT Configuration Manager voor de ondersteuning van Maxi maal 20.000 bestanden in het toepassings pakket. Als uw toepassing meer bestanden bevat, kunt u overwegen om meerdere toepassingen met minder bestanden te maken.  
+    > Wanneer u **Windows Installer ( \* MSI-bestand)** selecteert als een toepassings type, importeert de site alle bestanden in de opgegeven map. Vervolgens worden deze bestanden naar distributie punten verzonden. Zorg ervoor dat de opgegeven map alleen de bestanden bevat die nodig zijn om de toepassing te installeren. Micro soft TESTT Configuration Manager voor de ondersteuning van Maxi maal 20.000 bestanden in het toepassings pakket. Als uw toepassing meer bestanden bevat, kunt u overwegen om meerdere toepassingen met minder bestanden te maken.  
 
 4. Controleer de informatie op de pagina **informatie importeren** van de wizard toepassing maken en selecteer **volgende**. Selecteer indien nodig **vorige** om terug te gaan en eventuele fouten op te lossen.  
 
@@ -193,7 +193,7 @@ Gebruik vervolgens een van de volgende procedures om informatie over het impleme
 
     2. Selecteer **automatisch informatie identificeren over dit implementatie type vanuit installatie bestanden**.  
 
-    3. Geef in het vak **locatie** het installatie bestand van de toepassing op dat u wilt gebruiken voor het detecteren van de implementatie type-informatie. Deze locatie is een netwerkpad () of`\\server\share\filename`een Store-koppeling. U moet toegang hebben tot het netwerkpad en alle submappen die toepassings inhoud bevatten.  
+    3. Geef in het vak **locatie** het installatie bestand van de toepassing op dat u wilt gebruiken voor het detecteren van de implementatie type-informatie. Deze locatie is een netwerkpad ( `\\server\share\filename` ) of een Store-koppeling. U moet toegang hebben tot het netwerkpad en alle submappen die toepassings inhoud bevatten.  
 
 2. Controleer de informatie op de pagina **informatie importeren** van de wizard implementatie type maken en selecteer **volgende**. Selecteer indien nodig **vorige** om terug te gaan en eventuele fouten op te lossen.  
 
@@ -311,7 +311,7 @@ Met deze procedure wordt een detectie methode ingesteld die de aanwezigheid van 
 
         - **Naam van bestand of map** (vereist): Geef de naam op van het specifieke bestand of de map die moet worden gedetecteerd in het bovenstaande pad. Als de client dit bestand of deze map op het apparaat detecteert, beschouwt deze de toepassing als geïnstalleerd op het apparaat.  
 
-        - **Dit bestand of deze map is gekoppeld aan een 32-bits toepassing op 64-bits systemen**: deze optie is standaard geselecteerd. De client controleert eerst 32-bits bestands locaties voor het bestand of de map die is opgegeven. Als het bestand of de map niet wordt gevonden, zoekt de client vervolgens naar 64-bits locaties.  
+        - **Dit bestand of deze map is gekoppeld aan een 32-bits toepassing op 64-bits systemen**: de client controleert eerst de 32-bits bestands locaties voor het opgegeven bestand of map. Als het bestand of de map niet wordt gevonden, zoekt de client vervolgens naar 64-bits locaties.  
 
     - **REGI ster**: detecteert of een opgegeven register sleutel of register waarde bestaat op een client apparaat. Deze detectie geeft aan dat de toepassing is geïnstalleerd. Geef de volgende aanvullende informatie op:  
 
@@ -343,7 +343,7 @@ Wanneer u meer dan één detectie methode voor een implementatie type maakt, kun
     |------------|----|------------------|-----|
     |            |    | MSI-product code |     |
     | of         | (  | bestand1. Text bestaat|     |
-    | And        |    | bestand2. txt bestaat al | )   |
+    | And        |    | file2.txt bestaat | )   |
 
 3. Als u de groep wilt verwijderen, selecteert u de gegroepeerde componenten en selecteert u **groep opheffen**.  
 
@@ -356,7 +356,7 @@ Wanneer u meer dan één detectie methode voor een implementatie type maakt, kun
 2. Selecteer in het dialoog venster **Script Editor** een **script type** om het implementatie type te detecteren: Power shell, VBScript of JScript.  
 
     > [!Note]  
-    > Wanneer een Windows Power shell-script wordt uitgevoerd als een app-detectie methode, roept de Configuration Manager `-NoProfile` -client Power shell aan met de para meter. Met deze optie wordt Power shell zonder profielen gestart. Een Power shell-profiel is een script dat wordt uitgevoerd wanneer Power shell wordt gestart. <!--3607762-->  
+    > Wanneer een Windows Power shell-script wordt uitgevoerd als een app-detectie methode, roept de Configuration Manager-client Power shell aan met de `-NoProfile` para meter. Met deze optie wordt Power shell zonder profielen gestart. Een Power shell-profiel is een script dat wordt uitgevoerd wanneer Power shell wordt gestart. <!--3607762-->  
 
 3. Voer in het vak **script inhoud** het script in dat u wilt gebruiken of plak de inhoud van een bestaand script. Kies **openen** om naar een bestaand opgeslagen script te bladeren. Selecteer **wissen** om de tekst in het veld script inhoud te verwijderen. Schakel, indien nodig, de optie voor het **uitvoeren van een script als 32-bits proces op 64-bits-clients**.  
 
@@ -540,7 +540,7 @@ Configuration Manager controleert deze vereisten op apparaten voordat het implem
 
 3. Selecteer in de vervolg keuzelijst **voor waarde** de voor waarde om te beoordelen of de gebruiker of het apparaat voldoet aan de installatie vereisten. De inhoud van deze lijst varieert, afhankelijk van de geselecteerde categorie.  
 
-4. Selecteer in de vervolg keuzelijst **operator** de operator die u wilt gebruiken. Met deze operator wordt de geselecteerde voor waarde vergeleken met de opgegeven waarde. Hiermee wordt beoordeeld of de gebruiker of het apparaat voldoet aan de installatie vereiste. De beschik bare Opera tors variëren afhankelijk van de geselecteerde voor waarde.  
+4. Selecteer in de vervolg keuzelijst **operator** de operator die u wilt gebruiken. Met deze operator wordt de geselecteerde voor waarde vergeleken met de opgegeven waarde. Hiermee wordt beoordeeld of de gebruiker of het apparaat voldoet aan de installatie vereiste. De beschik bare Opera tors variëren afhankelijk van de geselecteerde voor waarde. Wanneer u de `One Of` operator gebruikt, heeft het veld waarden de validatie dat u één vermelding per rij moet invoeren.
 
     > [!Note]  
     > De beschik bare vereisten variëren, afhankelijk van het apparaattype dat door het implementatie type wordt gebruikt.  
@@ -587,7 +587,7 @@ Geef retour codes op voor het beheren van gedrag nadat het implementatie type is
 
 1. Selecteer **toevoegen**op het tabblad **retour codes** van het venster Eigenschappen van implementatie type.  
 
-2. Geef in het venster retour code toevoegen de **retour code waarde** op die u verwacht van dit implementatie type. Deze waarde is een positief of negatief geheel getal `-2147483648` tussen `2147483647`en.  
+2. Geef in het venster retour code toevoegen de **retour code waarde** op die u verwacht van dit implementatie type. Deze waarde is een positief of negatief geheel getal tussen `-2147483648` en `2147483647` .  
 
 3. Selecteer een **code type** in de vervolg keuzelijst. Met deze instelling definieert u hoe Configuration Manager de opgegeven retour code van dit implementatie type interpreteert. De beschik bare typen variëren op basis van de technologie van het implementatie type.  
 
@@ -607,13 +607,13 @@ Geef retour codes op voor het beheren van gedrag nadat het implementatie type is
 
 #### <a name="example-non-zero-success"></a>Voor beeld: niet-nul geslaagd
 
-U implementeert een toepassing die een afsluit code retourneert van `1` het moment waarop de installatie wordt uitgevoerd. Configuration Manager detecteert deze niet-nul retour code standaard als fout. Geef de retour code waarde van `1`op en selecteer het code type **geslaagd (niet opnieuw opstarten)**. Nu Configuration Manager interpreteert dat de retour code als een succes is voor dit implementatie type.
+U implementeert een toepassing die een afsluit code retourneert van `1` het moment waarop de installatie wordt uitgevoerd. Configuration Manager detecteert deze niet-nul retour code standaard als fout. Geef de retour code waarde van `1` op en selecteer het code type **geslaagd (niet opnieuw opstarten)**. Nu Configuration Manager interpreteert dat de retour code als een succes is voor dit implementatie type.
 
 #### <a name="default-return-codes"></a>Standaard retour codes
 
 Wanneer u een aantal implementatie typen maakt, voegt Configuration Manager automatisch de volgende retour codes toe die gemeen schappelijk zijn voor die technologie:  
 
-##### <a name="windows-installer-msi-file"></a>Windows Installer (\*MSI-bestand)
+##### <a name="windows-installer-msi-file"></a>Windows Installer ( \* MSI-bestand)
 
 |Waarde    |Code type|
 |---------|---------|
@@ -632,7 +632,7 @@ Wanneer u een aantal implementatie typen maakt, voegt Configuration Manager auto
 |3010     |Zacht opnieuw opstarten|
 |1618     |Snel opnieuw proberen|
 
-##### <a name="windows-app-package-appx-appxbundle-msix-msixbundle"></a>Windows-app-\*pakket (. \*appx,. \*appxbundle,. \*msix,. msixbundle)
+##### <a name="windows-app-package-appx-appxbundle-msix-msixbundle"></a>Windows-app-pakket ( \* . appx, \* . appxbundle, \* . msix, \* . msixbundle)
 
 |Waarde    |Code type|
 |---------|---------|
@@ -698,17 +698,17 @@ Configuration Manager ondersteunt de volgende implementatie typen voor toepassin
 
 | Naam van implementatietype | Beschrijving |
 |--------------------------|----------------------|  
-| **Windows Installer (\*MSI-bestand)** | Een Windows Installer-bestand. |  
-| **Windows-app-\*pakket (. \*appx,. \*appxbundle,. \*msix,. msixbundle)** | Een Windows-app-pakket bestand (. appx), een Windows-app-bundel pakket (. appxbundle), een Windows 10-app-pakket (. msix) of Windows 10 app-bundel (. msixbundle).<!--1357427--> |  
+| **Windows Installer ( \* MSI-bestand)** | Een Windows Installer-bestand. |  
+| **Windows-app-pakket ( \* . appx, \* . appxbundle, \* . msix, \* . msixbundle)** | Een Windows-app-pakket bestand (. appx), een Windows-app-bundel pakket (. appxbundle), een Windows 10-app-pakket (. msix) of Windows 10 app-bundel (. msixbundle).<!--1357427--> |  
 | **Windows-app-pakket (in de Windows Store)** | Geef een koppeling op naar de app in de Windows Store of blader door de Store om de app te selecteren.<sup>[Opmerking 1](#bkmk_note1)</sup> |  
-| **Script Installer** | Geef een script of programma op dat wordt uitgevoerd op Windows-clients om inhoud te installeren of om een actie uit te voeren. Gebruik dit implementatie type voor Setup. exe-installatie Programma's of script wrappers. |  
+| **Script Installer** | Geef een script of programma op dat wordt uitgevoerd op Windows-clients om inhoud te installeren of om een actie uit te voeren. Gebruik dit implementatie type voor setup.exe installatie Programma's of script wrappers. |  
 | **Microsoft Application Virtualization 4** | Een micro soft app-V v4-manifest. |  
 | **Microsoft Application Virtualization 5** | Een micro soft app-V V5-pakket bestand. |  
-| **Windows Phone-app-\*pakket (XAP-bestand)** | Een Windows Phone-app-pakket bestand. |  
+| **Windows Phone-app-pakket ( \* XAP-bestand)** | Een Windows Phone-app-pakket bestand. |  
 | **Windows Phone-app-pakket (in de Windows Phone Store)** | Geef een koppeling op naar de app in de Windows Store. |  
 | **Mac OS X** | Voor macOS-computers waarop de Configuration Manager-client wordt uitgevoerd. Maak een. cmmac-bestand met het **CMAppUtil** -hulp programma. |  
 | **Webtoepassing** | Geef een koppeling op naar een webtoepassing. Met dit implementatie type wordt een snelkoppeling naar de webtoepassing op het apparaat van de gebruiker geïnstalleerd. |  
-| **Windows Installer via MDM (\*. msi)** | Op Windows Installer gebaseerde apps maken en implementeren op Windows 10-apparaten. Zie [Windows Installer-apps implementeren op MDM-geregistreerde Windows 10-apparaten](../get-started/creating-windows-applications.md#bkmk_mdm-msi)voor meer informatie. |
+| **Windows Installer via MDM ( \* . msi)** | Op Windows Installer gebaseerde apps maken en implementeren op Windows 10-apparaten. Zie [Windows Installer-apps implementeren op MDM-geregistreerde Windows 10-apparaten](../get-started/creating-windows-applications.md#bkmk_mdm-msi)voor meer informatie. |
 | **Takenreeks** | Met ingang van versie 2002 kunt u complexe toepassingen installeren of verwijderen met taken reeksen. Zie [implementatie type voor taken reeksen](../get-started/creating-windows-applications.md#bkmk_tsdt)voor meer informatie. <!--3555953--> |
 
 > [!NOTE]

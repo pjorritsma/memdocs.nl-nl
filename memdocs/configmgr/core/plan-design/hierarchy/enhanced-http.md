@@ -2,7 +2,7 @@
 title: Verbeterde HTTP
 titleSuffix: Configuration Manager
 description: Gebruik moderne verificatie om client communicatie te beveiligen zonder dat PKI-certificaten nodig zijn.
-ms.date: 03/28/2020
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4deac022-e397-4f1f-bc0a-cea6c6c6368d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bb14830e99600da1b71c516a44d51a0090cdc673
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1a6ec98bd350eb0ac8643254f64a9480f156bb13
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720175"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86239756"
 ---
 # <a name="enhanced-http"></a>Verbeterde HTTP
 
@@ -93,8 +93,6 @@ De volgende Configuration Manager functies ondersteunen of vereisen verbeterde H
 - Een distributie punt dat is geconfigureerd voor HTTP-client verbindingen. Stel deze optie in op het tabblad **communicatie** van de eigenschappen van het distributie punt. Schakel de optie niet in om **toe te staan dat clients anoniem verbinding maken**.  
 
 - Onboarding van de site naar Azure AD voor Cloud beheer.  
-
-    - Als u al aan deze vereiste voor uw site hebt voldaan, moet u de Azure AD-toepassing bijwerken. Ga in de Configuration Manager-console naar de werk ruimte **beheer** , vouw **Cloud Services**uit en selecteer **Azure Active Directory tenants**. Selecteer de Azure AD-Tenant, selecteer de webtoepassing in het deel venster **toepassingen** en selecteer vervolgens **toepassings instelling bijwerken** in het lint.  
 
 - *Alleen voor [scenario 3](#bkmk_scenario3) *: een client met Windows 10 versie 1803 of hoger en is gekoppeld aan Azure AD. Voor de client is deze configuratie vereist voor de verificatie van Azure AD-apparaten.<!-- SCCMDocs issue 1126 -->
 

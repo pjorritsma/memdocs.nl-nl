@@ -2,7 +2,7 @@
 title: Veelgestelde vragen over Endpoint Protection-client
 titleSuffix: Configuration Manager
 description: Krijg antwoorden op veelgestelde vragen over Windows Defender en Endpoint Protection.
-ms.date: 12/09/2017
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3b206c1556c2e9550ade5c2322acd65ad2b19412
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 0eafa09275220cdf07f837388aa6cb848fbd5e5a
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906834"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240283"
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Veelgestelde vragen over Endpoint Protection-client
 
@@ -34,7 +34,6 @@ Deze veelgestelde vragen zijn voor computergebruikers waarvan de IT-beheerder Wi
 -   [Waar komen virussen, spyware en andere mogelijk ongewenste software vandaan?](#where-do-viruses-spyware-and-other-potentially-unwanted-software-come-from)  
 -   [Kan ik schadelijke software krijgen zonder het te weten?](#can-i-get-malicious-software-without-knowing-it)  
 -   [Waarom is het belangrijk om licentieovereenkomsten te lezen voordat u software installeert?](#why-is-it-important-to-review-license-agreements-before-installing-software)  
--   [Wat is het verschil tussen Endpoint Protection en Windows Defender?](#whats-the-difference-between-endpoint-protection-and-windows-defender)  
 -   [Waarom detecteert Windows Defender geen cookies?](#why-doesnt-windows-defender-detect-cookies)  
 -   [Hoe voorkom ik dat schadelijke software wordt geïnstalleerd?](#how-can-i-prevent-malware)  
 -   [Wat zijn virus- en spywaredefinities?](#what-are-virus-and-spyware-definitions)  
@@ -132,9 +131,6 @@ U kunt alle ongewenste of mogelijk schadelijke items die Windows Defender detect
 ##  <a name="why-is-it-important-to-review-license-agreements-before-installing-software"></a>Waarom is het belangrijk om licentieovereenkomsten te lezen voordat u software installeert?  
  Wanneer u websites bezoekt, ga dan niet automatisch akkoord met het downloaden van alle aanbiedingen van de site. Lees zorgvuldig de gebruiksrechtovereenkomst van gratis software, zoals programma's voor het delen van bestanden of schermbeveiligers. Wees bedacht op zinnen waarin u wordt verplicht advertenties en pop-ups van het bedrijf te accepteren of waarin wordt aangegeven dat de software bepaalde gegevens verzendt naar de software-uitgever.  
 
-##  <a name="whats-the-difference-between-endpoint-protection-and-windows-defender"></a>Wat is het verschil tussen Endpoint Protection en Windows Defender?  
- Endpoint Protection is antimalwaresoftware. Dit betekent dat de software is ontworpen om een breed scala aan schadelijke software, inclusief virussen, spyware en andere mogelijk ongewenste software te detecteren en uw computer hiertegen te beschermen. Windows Defender wordt automatisch samen met uw Windows-besturingssysteem geïnstalleerd en is software die spyware detecteert en stopt.  
-
 ##  <a name="why-doesnt-windows-defender-detect-cookies"></a>Waarom detecteert Windows Defender geen cookies?  
  Cookies zijn kleine tekst bestanden die door websites op uw computer worden geplaatst om informatie over u en uw voor keuren op te slaan. Websites gebruiken cookies om u een persoonlijke ervaring te bieden en om informatie over het gebruik van de website te verzamelen. Windows Defender detecteert geen cookies omdat deze niet worden beschouwd als een bedreiging voor uw privacy of voor de beveiliging van uw computer. Met de meeste Internet browsers kunt u cookies blok keren.  
 
@@ -200,9 +196,8 @@ U kunt alle ongewenste of mogelijk schadelijke items die Windows Defender detect
 
   U kunt kiezen welke software en instellingen Windows Defender moet bewaken, maar het wordt aangeraden om realtime-beveiliging en alle opties voor realtime-beveiliging in te schakelen. In de volgende tabel worden de beschikbare opties verklaard.  
 
-|||  
-|-|-|  
 |**Optie realtime-beveiliging**|**Doel**|  
+|-|-|  
 |Alle downloads scannen|Deze optie controleert bestanden en programma's die worden gedownload, inclusief bestanden die automatisch worden gedownload via Windows Internet Explorer en Microsoft Outlook Express ®, zoals ® ActiveX-besturingselementen en software-installatieprogramma's. Deze bestanden kunnen door de browser worden gedownload, geïnstalleerd of uitgevoerd. Schadelijke software, inclusief virussen, spyware en andere mogelijk ongewenste software, kan worden opgenomen in deze bestanden en zonder uw medeweten worden geïnstalleerd.<br /><br /> Met de optie realtime-beveiliging bewaakt Windows Defender voortdurend de computer en controleert deze op mogelijke schadelijke bestanden of programma's die u hebt gedownload. Dankzij deze bewakingsfunctie hoeft Windows Defender uw browser- of e-mailervaring niet te vertragen om bestanden of programma's die u wilt downloaden te controleren.|  
 |De activiteit van bestanden en programma's op de computer controleren|Deze optie houdt in de gaten wanneer bestanden en programma's op uw computer worden gestart en waarschuwt u over de acties die ze uitvoeren en over de acties die erop worden uitgevoerd. Dit is belangrijk, omdat schadelijke software gebruik kan maken van beveiligingslekken in programma's die u hebt geïnstalleerd om buiten uw medeweten schadelijke of ongewenste software uit te voeren. Spyware zichzelf bijvoorbeeld op de achtergrond uitvoeren wanneer u een programma start dat u vaak gebruikt. Windows Defender controleert uw programma's en waarschuwt u als er verdachte activiteiten worden gedetecteerd.|  
 |Gedragscontrole inschakelen|Met deze optie controleert u verzamelingen gedragingen op verdachte patronen die door traditionele methoden voor antivirusdetectie niet zouden worden gedetecteerd.|  

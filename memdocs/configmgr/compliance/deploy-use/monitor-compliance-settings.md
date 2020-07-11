@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 92c1ccca-a748-44cd-a52e-e41d34bf981d
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: 839c08c8782a815703a19999bf1315fd65980ed8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.author: mstewart
+ms.openlocfilehash: e2a378c1f54eb9bccbcc21f50419176bd39cb3ac
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712293"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240045"
 ---
 # <a name="monitor-compliance-settings-in-configuration-manager"></a>Nalevings instellingen in Configuration Manager bewaken
 
@@ -31,7 +31,7 @@ Nadat u Configuration Manager configuratie basislijnen hebt geïmplementeerd op 
 
 ### <a name="view-compliance-results-in-the-configuration-manager-console"></a>Nalevingsresultaten weergeven in de Configuration Manager-console  
 
-1.  Klik in de Configuration Manager-console op **bewakings** > **implementaties**.  
+1.  Klik in de Configuration Manager-console op **bewakings**  >  **implementaties**.  
 
 3.  Selecteer in de lijst **Implementaties** de implementatie van de configuratiebasislijn waarvoor u compatibiliteitsgegevens wilt bekijken.  
 
@@ -56,7 +56,7 @@ Nadat u Configuration Manager configuratie basislijnen hebt geïmplementeerd op 
  De instellingen voor naleving in Configuration Manager bevatten een aantal ingebouwde rapporten waarmee u informatie over configuratie-items, configuratie basislijnen en implementaties kunt bewaken. Deze rapporten hebben de rapportcategorie van **Compatibiliteit en instellingen beheren**.  
 
 > [!IMPORTANT]  
->  U moet een Joker teken (**%**) gebruiken wanneer u de para meters **apparaat filter** en gebruikers filter gebruikt in de rapporten met instellingen voor naleving.  
+>  U moet een Joker teken ( **%** ) gebruiken wanneer u de para meters **apparaat filter** en gebruikers filter gebruikt in de rapporten met instellingen voor naleving.  
 
  Zie [Introduction to Reporting](../../core/servers/manage/introduction-to-reporting.md)(Engelstalig) voor meer informatie over het configureren van rapportage in Configuration Manager.
 
@@ -88,7 +88,7 @@ Nadat u Configuration Manager configuratie basislijnen hebt geïmplementeerd op 
 ##  <a name="create-collections-based-on-configuration-baseline-compliance"></a>Verzamelingen maken op basis van naleving van de configuratie basislijn  
  Gebruik de volgende procedure om een Configuration Manager verzameling te maken op basis van apparaten met een opgegeven naleving. U kunt verzamelingen maken op basis van de volgende nalevingsstatussen:  
 
--   **Compatibel**  
+-   **ACPI**  
 
 -   **Fout**  
 
@@ -96,7 +96,7 @@ Nadat u Configuration Manager configuratie basislijnen hebt geïmplementeerd op 
 
 -   **Onbekend**  
 
-1.  Klik in de Configuration Manager-console op **activa en naleving** > **instellingen** > **configuratie basislijnen**.  
+1.  Klik in de Configuration Manager-console op **activa en naleving**  >  **instellingen**  >  **configuratie basislijnen**.  
 
 3.  Selecteer in de lijst **Configuratiebasislijnen** de configuratiebasislijn vanwaaruit u een verzameling wilt maken.  
 

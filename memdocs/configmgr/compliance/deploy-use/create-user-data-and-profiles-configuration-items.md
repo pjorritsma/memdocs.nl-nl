@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 9fcbcc81-cd6f-496e-b075-ef1afa2b8ccc
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: 2a99384772895ff2675ade671076163b74cecee2
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.author: mstewart
+ms.openlocfilehash: 51c97ae3cd947e0bdfa82c595cb6446351412d21
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075299"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240368"
 ---
 # <a name="create-user-data-and-profiles-configuration-items-in-configuration-manager"></a>Configuratie-items voor gebruikers gegevens en-profielen maken in Configuration Manager
 
@@ -37,7 +37,7 @@ Configuratie-items voor gebruikers gegevens en-profielen in Configuration Manage
 ## <a name="enable-user-data-and-profiles-for-compliance-settings"></a>Gebruikersgegevens en -profielen inschakelen voor instellingen voor naleving  
  Gebruik de volgende procedure om de standaardclientinstelling te configureren voor de instellingen voor de naleving van gebruikersgegevens en -profielen en die van toepassing zijn op alle computers in uw hiërarchie. Als u deze instellingen alleen wilt toepassen op bepaalde computers, maakt u een aangepaste apparaatclientinstelling en wijst u deze toe aan een verzameling waartoe de computers behoren waarvoor u de instellingen voor de naleving van de gebruikersgegeven en -profielen wilt gebruiken. Zie [client instellingen configureren](../../core/clients/deploy/configure-client-settings.md)voor meer informatie over het maken van aangepaste apparaatinstellingen.  
 
-1.  Klik in de Configuration Manager-console op**standaard instellingen**voor de **beheer** > **client instellingen** > .  
+1.  Klik in de Configuration Manager-console **Administration**op standaard instellingen voor de beheer  >  **client instellingen**  >  **Default Settings**.  
 
 4.  Klik op **Eigenschappen** in het tabblad **Start**, in de groep **Eigenschappen**.  
 
@@ -49,7 +49,7 @@ Configuratie-items voor gebruikers gegevens en-profielen in Configuration Manage
 
 ## <a name="create-a-user-data-and-profiles-configuration-item"></a>Een configuratie-item voor gebruikers gegevens en-profielen maken  
 
-1. Klik in de Configuration Manager-console op **activa en** > nalevings**instellingen** > voor naleving**gebruikers gegevens en-profielen**.  
+1. Klik in de Configuration Manager-console op **activa en**nalevings  >  **instellingen voor naleving**  >  **gebruikers gegevens en-profielen**.  
 
 2. Op het tabblad **Start** in de groep **Maken** klikt u op **Configuratie-item voor gebruikersgegevens en -profielen maken**.  
 
@@ -86,7 +86,7 @@ Configuratie-items voor gebruikers gegevens en-profielen in Configuration Manage
 
 ## <a name="deploy-a-user-data-and-profiles-configuration-item"></a>Een configuratie-item voor gebruikers gegevens en-profielen implementeren  
 
-1.  Klik in de Configuration Manager-console op **activa en** > nalevings**instellingen** > voor naleving**gebruikers gegevens en-profielen**.  
+1.  Klik in de Configuration Manager-console op **activa en**nalevings  >  **instellingen voor naleving**  >  **gebruikers gegevens en-profielen**.  
 
 3.  Selecteer het configuratie-item voor gebruikersgegevens en -profielen dat u wilt implementeren en klik vervolgens op het tabblad **Start** in de groep **Implementatie** op **Implementeren**.  
 

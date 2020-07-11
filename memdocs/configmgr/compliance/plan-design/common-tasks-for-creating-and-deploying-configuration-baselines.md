@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 4bb6afeb-d267-4f9b-ade2-26e5400c223b
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 52e83639029db9eeb4ef64657e70e3dc11aab8f2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 40f0fe1adc723587316dcc5f03d710ae4b31b78b
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712202"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240691"
 ---
 # <a name="common-tasks-for-creating-and-deploying-configuration-baselines-with-configuration-manager"></a>Algemene taken voor het maken en implementeren van configuratie basislijnen met Configuration Manager
 
@@ -34,7 +34,7 @@ Dit onderwerp bevat algemene scenario's voor informatie over het maken en implem
 
 Gebruik de volgende procedure om te leren hoe u dit configuratie-item toevoegt aan een configuratie basislijn om dit voor te bereiden voor implementatie.  
 
-1. Klik in de Configuration Manager-console op **activa en naleving** > **instellingen** > **configuratie basislijnen**.  
+1. Klik in de Configuration Manager-console op **activa en naleving**  >  **instellingen**  >  **configuratie basislijnen**.  
 
 2. Klik op het tabblad **Start** in de groep **Maken** op **Configuratiebasislijn maken**.  
 
@@ -42,7 +42,7 @@ Gebruik de volgende procedure om te leren hoe u dit configuratie-item toevoegt a
 
    -   **Naam** : voer **Windows 10-wachtwoorden** (of een andere naam van uw keuze) in  
 
-4. Klik op**configuratie-items** **toevoegen** > .  
+4. Klik **Add**op  >  **configuratie-items**toevoegen.  
 
 5. Selecteer in het dialoogvenster **Configuratie-items toevoegen** het configuratie-item **Windows 10-wachtwoordafdwinging** dat u eerder hebt gemaakt en klik op **Toevoegen**.  
 
@@ -55,7 +55,7 @@ Gebruik de volgende procedure om te leren hoe u dit configuratie-item toevoegt a
 ## <a name="deploy-the-configuration-baseline"></a>De configuratie basislijn implementeren  
  In dit voor beeld implementeert u de configuratie basislijn die u in de vorige procedure hebt gemaakt voor een verzameling computers.  
 
-1. Klik in de Configuration Manager-console op **activa en naleving** > **instellingen** > **configuratie basislijnen**.  
+1. Klik in de Configuration Manager-console op **activa en naleving**  >  **instellingen**  >  **configuratie basislijnen**.  
 
 2. Selecteer **Windows 10-wachtwoorden**in de lijst met configuratiebasislijnen.  
 

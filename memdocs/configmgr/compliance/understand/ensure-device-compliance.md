@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 7568c9aa-b99e-4466-bfc8-0301aa376930
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: e9844c20373f2442be2c5c1f06f893eae3b0fe57
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.author: mstewart
+ms.openlocfilehash: 4c0d78eb1ba6d8306d40fdb1e05b70b0f462b5be
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712132"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240622"
 ---
 # <a name="ensure-device-compliance-with-configuration-manager"></a>De apparaatcompatibiliteit met Configuration Manager garanderen
 
@@ -46,7 +46,7 @@ Instellingen voor naleving in Configuration Manager biedt u de hulp middelen en 
 ## <a name="plan-and-design"></a>Plannen en ontwerpen  
  Voordat u aan de slag gaat met de instellingen voor naleving, moet u ervoor zorgen dat u de benodigde vereisten hebt geïmplementeerd die in dit onderwerp worden beschreven.  
 
- [De instellingen voor naleving plannen en configureren](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)  
+ [Nalevings instellingen plannen en configureren](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)  
 
 ## <a name="common-tasks"></a>Algemene taken  
  In deze sectie vindt u enkele algemene scenario's waarmee u leert hoe u de instellingen voor naleving in Configuration Manager kunt gebruiken.  

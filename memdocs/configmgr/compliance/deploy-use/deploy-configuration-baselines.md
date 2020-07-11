@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 9be8aaf3-075e-4acd-abd2-7459254e16e2
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: 55b559f9b16eabfe2c2096497e6f63816b400803
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.author: mstewart
+ms.openlocfilehash: 94a5d0af5636236ffba3f15c05823ead083f2948
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712335"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240266"
 ---
 # <a name="how-to-deploy-configuration-baselines-in-configuration-manager"></a>Configuratie basislijnen implementeren in Configuration Manager
 
@@ -27,7 +27,7 @@ Gebruik de **Configuratiebasislijnen implementeren** in het dialoogvenster voor 
 
 ## <a name="deploy-a-configuration-baseline"></a>Een configuratiebasislijn implementeren  
 
-1.  Klik in de Configuration Manager-console op **activa en naleving** > **instellingen** > **configuratie basislijnen**.  
+1.  Klik in de Configuration Manager-console op **activa en naleving**  >  **instellingen**  >  **configuratie basislijnen**.  
 
 3.  Selecteer in de lijst **Configuratiebasislijnen** de configuratiebasislijn die u wilt implementeren en klik vervolgens op het tabblad **Start** in de groep **Implementatie** op **Implementeren**.  
 

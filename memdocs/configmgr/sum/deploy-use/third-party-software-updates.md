@@ -10,12 +10,12 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f5461f888bfa2b749061eef4000f0d7c5f756b84
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 2f5aa622ca5d98f2cb5eb0b0c3154625df11a42e
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906751"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240759"
 ---
 # <a name="enable-third-party-updates"></a>Updates van derden inschakelen 
 
@@ -35,6 +35,7 @@ Vanaf versie 1806 kunt u met het knoop punt **Software-update catalogi** van der
     - Voor de lijst met partner catalogi is download.microsoft.com via HTTPS-poort 443 vereist. 
     -  Internet toegang tot catalogi van derden en het bijwerken van inhouds bestanden. Andere andere poorten dan 443 zijn mogelijk nodig.
     - Updates van derden gebruiken dezelfde proxy instellingen als de SUP.
+- Voor Configuration Manager versies voorafgaand aan 1910 kan de beveiligingsrol **Software-update beheer** geen catalogi van derden synchroniseren. U hebt de beveiligingsrol **volledige beheerder** nodig om de catalogussen te synchroniseren.
 
 
 ## <a name="additional-requirements-when-the-sup-is-remote-from-the-top-level-site-server"></a>Aanvullende vereisten wanneer het SUP op afstand van de site server op het hoogste niveau is 

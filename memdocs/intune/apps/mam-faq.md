@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c544109b170d25f4d9a2999a11bc47d4b4a090c5
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 81ba50c9822ff5672fd52bab1d89f444aafdb402
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989979"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022327"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Veelgestelde vragen over MAM en app-beveiliging
 
@@ -79,7 +79,7 @@ Alle apps die zijn geïntegreerd met de [Intune App SDK](../developer/app-sdk.md
 Het Intune SDK-ontwikkelingsteam houdt zich actief bezig met het testen en onderhouden van ondersteuning voor apps die zijn gebouwd met de systeemeigen Android-, iOS-/iPadOS- (Obj-C, Swift), Xamarin- en Xamarin.Forms-platforms. Hoewel het sommige klanten is gelukt om de Intune SDK te integreren in andere platforms, zoals React Native en NativeScript, bieden we geen specifieke instructies of plug-ins voor app-ontwikkelaars die andere platforms gebruiken dan de platforms die door ons worden ondersteund.
 
 **Ondersteunt de Intune APP SDK de bibliotheek voor Microsoft-verificatie (MSAL)?**<br></br>
-De Intune App SDK kan ofwel gebruikmaken van de Azure Active Directory Authentication Library of van de Microsoft Authentication Library voor de scenario's voor verificatie en voorwaardelijk starten. Het is ook afhankelijk van ADAL/MSAL dat de gebruikers-id wordt geregistreerd bij de MAM-service om zonder scenario's voor apparaatinschrijving beheertaken uit te voeren.It also relies on ADAL/MSAL to register the user identity with the MAM service for management without device enrollment scenarios.
+De Intune App SDK kan de Microsoft Authentication Library gebruiken voor de verificatie en voorwaardelijke startscenario's. De SDK maakt ook gebruik van MSAL om de gebruikers-id te registreren bij de MAM-service om zonder scenario's voor apparaatinschrijving beheertaken uit te voeren.
 
 **Wat zijn de aanvullende vereisten voor het gebruik van de [mobiele app van Outlook](https://products.office.com/outlook)?**
 

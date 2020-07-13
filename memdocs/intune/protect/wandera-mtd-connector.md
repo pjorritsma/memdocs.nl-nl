@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/09/2020
+ms.date: 07/2/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 382bf47807634fa9a5d6abde768fe6ee9bed23d1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1655c7b18262d0515308a00c617f06d917d976de
+ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990947"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85972171"
 ---
 # <a name="wandera-mobile-threat-defense-connector-with-intune"></a>Wandera Mobile Threat Defense-connector met Intune  
 
@@ -32,9 +32,6 @@ Beheer de toegang van mobiele apparaten tot zakelijke resources met behulp van v
 
 U kunt beleid voor *voorwaardelijke toegang* configureren dat is gebaseerd op de risicoanalyse van Wandera en dat via Intune-nalevingsbeleid wordt ingeschakeld. Met beleid voor risicoanalyse kunt u apparaten die niet conform zijn op basis van gedetecteerde bedreigingen toegang weigeren tot bedrijfsresources.  
 
-> [!NOTE]
-> Deze Mobile Threat Defense-leverancier wordt niet ondersteund voor niet-ingeschreven apparaten.
-
 ## <a name="how-do-intune-and-wandera-mobile-threat-defense-help-protect-your-company-resources"></a>Hoe kunnen uw bedrijfsresources worden beveiligd met Intune en Wandera Mobile Threat Defense?  
 
 De mobiele app van Wandera wordt met Microsoft Intune moeiteloos geïnstalleerd. De app legt het bestandssysteem, de netwerkstacks en de apparaat- en toepassingstelemetrie vast (indien beschikbaar). Deze informatie wordt gesynchroniseerd met de Wandera-cloudservice om het risico van het apparaat met betrekking tot mobiele bedreigingen te beoordelen. De classificaties van het risiconiveau zijn in de Wandera-console, RADAR, naar wens te configureren.
@@ -42,6 +39,14 @@ De mobiele app van Wandera wordt met Microsoft Intune moeiteloos geïnstalleerd.
 Het compliancebeleid in Intune omvat een regel voor MTD op basis van de risicobeoordeling van Wandera. Als deze regel is ingeschakeld, controleert Intune of het apparaat voldoet aan het beleid dat u hebt ingeschakeld.
 
 Voor apparaten die niet-compatibel zijn, kan toegang tot resources als Office 365 worden geblokkeerd. Gebruikers van een geblokkeerd apparaat ontvangen richtlijnen van de Wandera-app, zodat ze het probleem kunnen oplossen en weer toegang kunnen krijgen.
+
+Met Wandera wordt Intune bijgewerkt met het meest recente bedreigingsniveau (Beveiligd, Laag, Gemiddeld of Hoog) wanneer het wordt gewijzigd. Dit bedreigingsniveau wordt voortdurend herberekend door de Wandera Security Cloud en is gebaseerd op de status van het apparaat, de netwerkactiviteit en tal van mobiele bedreigingsinformatiefeeds over verschillende bedreigingscategorieën.
+
+Deze categorieën en de bijbehorende bedreigingsniveaus kunnen worden geconfigureerd in de RADAR-console van Wandera, zodat het totale berekende bedreigingsniveau voor elk apparaat kan worden aangepast aan de beveiligingsvereisten van uw organisatie. Aan de hand van het bedreigingsniveau zijn er twee beleidstypen van Intune die deze informatie gebruiken om de toegang tot bedrijfsgegevens te beheren:
+
+* Met behulp van **Apparaatnalevingsbeleid** met voorwaardelijke toegang stellen beheerders beleidsregels in om een beheerd apparaat automatisch te markeren als niet-conform op basis van het door Wandera gerapporteerde bedreigingsniveau. Deze nalevingsvlag stuurt vervolgens beleidsregels voor voorwaardelijke toegang aan om toegang tot toepassingen die moderne verificatie gebruiken toe te staan of te weigeren.  Zie [MTD-nalevingsbeleid (Mobile Threat Defense) voor apparaten maken](../protect/mtd-device-compliance-policy-create.md) met Intune voor configuratiedetails.
+
+* Met behulp van **beleid voor app-beveiliging** met voorwaardelijke toegang kunnen beheerders beleidsregels instellen die worden afgedwongen op het niveau van de systeemeigen app (bijvoorbeeld Android- en iOS-/iPadOS-apps zoals Outlook, OneDrive, enzovoort) op basis van het door Wandera gerapporteerde bedreigingsniveau.  Deze beleidsregels kunnen ook worden gebruikt met niet-beheerde apparaten (MAM-WE) om uniform beleid te bieden voor alle platformen en eigendomsmodi. Zie [App-beveiligingsbeleid voor Mobile Threat Defense maken](../protect/mtd-app-protection-policy.md) met Intune voor configuratiedetails.
 
 ## <a name="supported-platforms"></a>Ondersteunde platforms  
 
@@ -104,17 +109,15 @@ Bedreigingen voor uw netwerk worden gedetecteerd, zoals man-in-the-middle-aanval
 
 ![Voorbeeld waarin na herstel toegang is verleend aan SharePoint](./media/wandera-mtd-connector/wandera-network-spo-unblocked.png)  
 
-<!-- 
-### Control access on unenrolled devices based on threats from malicious apps
+### <a name="control-access-on-unenrolled-devices-based-on-threats-from-malicious-apps"></a>Toegangsbeheer voor uitgeschreven apparaten op basis van bedreigingen van schadelijke apps
 
-When the Wandera Mobile Threat Defense solution considers a device to be infected:
+Wanneer de oplossing Wandera Mobile Threat Defense een apparaat als geïnfecteerd beschouwt:
 
-![App protection policy blocks due to detected malware](./media/wandera-mtd-connector/wandera-mobile-app-policy-block.png)
+![App-beveiligingsbeleid wordt geblokkeerd vanwege gedetecteerde malware](./media/wandera-mtd-connector/wandera-mobile-app-policy-block.png)
 
-Access is granted on remediation:
+Toegang wordt verleend na herstel:
 
-![Access is granted on remediation for App protection policy](./media/wandera-mtd-connector/wandera-mobile-app-policy-remediated.png)
--->
+![Er wordt toegang verleend na herstel voor App-beveiligingsbeleid](./media/wandera-mtd-connector/wandera-mobile-app-policy-remediated.png)
 
 ## <a name="next-steps"></a>Volgende stappen
 

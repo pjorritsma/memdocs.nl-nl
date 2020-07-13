@@ -5,7 +5,7 @@ description: Beveiligingsbasislijninstellingen die door Intune worden ondersteun
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/01/2020
+ms.date: 07/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 zone_pivot_groups: atp-baseline-versions
-ms.openlocfilehash: 330a4387ef1a079b2a0f691bfb0b887117dd9e4b
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 8046318c55e2a9791f01fca4a5a54de3f1487782
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429341"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022179"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="atp-april-2020"
@@ -859,9 +859,9 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
 - **Blokkeren dat gebruikers SmartScreen-waarschuwingen kunnen negeren**  
   CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
-   Voor deze instelling moet de instelling SmartScreen afdwingen voor apps en bestanden worden ingeschakeld.
-  - **Ja** (*standaard*): er wordt in SmartScreen geen optie weergegeven voor de gebruiker om de waarschuwing te negeren en de app uit te voeren. De waarschuwing wordt weergegeven, maar de gebruiker kan deze omzeilen.
-  - **Niet-geconfigureerd**: hiermee wordt de Windows-standaardinstelling teruggezet, waardoor de gebruiker kan overschrijven.
+   Voor deze instelling moet de instelling Windows SmartScreen inschakelen zijn ingesteld op Ja.
+  - **Ja** (*standaard*): SmartScreen is ingeschakeld en gebruikers kunnen geen waarschuwingen over bestanden of schadelijke apps overslaan.
+  - **Niet geconfigureerd**: gebruikers kunnen SmartScreen-waarschuwingen voor bestanden en schadelijke apps negeren.
 
 - **Alleen apps uit store vereisen**  
 

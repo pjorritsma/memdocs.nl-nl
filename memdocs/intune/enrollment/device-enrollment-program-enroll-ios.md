@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8fe0b1748a40858bca55cc66b250c96725bfd9f1
-ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
+ms.openlocfilehash: 299b09c57f0cff44c465102d85628c8f2605adea
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85332864"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088493"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>iOS-/iPadOS-apparaten automatisch inschrijven met Automated Device Enrollment van Apple
 
@@ -69,7 +69,7 @@ Ondersteuning voor ADE-apparaten zonder supervisie is afgeschaft in iOS/iPadOS 1
 - Maximum aantal inschrijvingsprofielen per token: 1000  
 - Maximum aantal Automated Device Enrollment-apparaten per profiel: geen limiet (binnen het maximum aantal apparaten per token)
 - Maximum aantal Automated Device Enrollment-tokens per Intune-account: 2,000
-- Maximum aantal Automated Device Enrollment-apparaten per token: De limiet voor de eerste synchronisatie is 75.000 - 80.000 apparaten. Intune blijft bij elke check-in, die om de 12 uur plaatsvinden, synchroniseren met ABM of ASM, en telkens worden weer 80.000 apparaten toegevoegd. Met een handmatige synchronisatie kunt u nog 80.000 apparaten extra toevoegen. Er blijven synchronisaties plaatsvinden, en apparaten worden gesynchroniseerd van ABM/ASM naar Intune in batches van 75.000 - 80.000 apparaten. 
+- Maximum aantal Automated Device Enrollment-apparaten per token: De limiet voor de eerste synchronisatie is 75.000 - 80.000 apparaten. Intune blijft bij elke check-in, die om de 12 uur plaatsvinden, synchroniseren met ABM of ASM, waarbij steeds meer apparaten worden toegevoegd. Bij handmatige synchronisatie (die elke 15 minuten kan worden geactiveerd) wordt een andere apparaatbatch aan Intune toegevoegd. Er blijven synchronisaties plaatsvinden en apparaten worden in grote aantallen gesynchroniseerd van ABM/ASM naar Intune. 
 
 ## <a name="get-an-apple-ade-token"></a>Een Apple ADE-token ophalen
 

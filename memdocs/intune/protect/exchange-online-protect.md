@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8746a6dee0b35dec7886a596d0448874dfb04f16
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f9669625225f8ad3960ece39e2a6b04849421ce6
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79352017"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022178"
 ---
 # <a name="protect-office-365-exchange-online-without-requiring-device-management"></a>Office 365 Exchange Online beveiligen zonder dat apparaatbeheer is vereist
 
@@ -36,7 +36,7 @@ Als u een apparaatbeheersysteem wilt instellen, is dat mogelijk. Dit type app-be
 1. [Meer informatie over voorwaardelijke toegang](conditional-access.md). 
 2. [Meer informatie over voorwaardelijke toegang op basis van een app](app-based-conditional-access-intune.md).
 3. [Beleid voor voorwaardelijke toegang op basis van een app instellen voor Exchange Online](app-based-conditional-access-intune-create.md).
-4. [Blokkeer apps die niet kunnen worden beheerd](app-modern-authentication-block.md), met name apps die geen gebruik maken van de Azure Active Directory Authentication Library (ADAL).
+4. [Blokkeer apps die niet kunnen worden beheerd](app-modern-authentication-block.md), met name apps die geen gebruik maken van de Azure Active Directory Authentication Library (ADAL) of de Microsoft Authentication Library (MSAL).
 5. (Optioneel) [Beleid voor voorwaardelijke toegang op basis van een app instellen voor SharePoint Online](app-based-conditional-access-intune-create.md). Deze beleidsregels blokkeren de toegang tot uw bedrijfsgegevens vanuit apps die niet kunnen worden beheerd en beveiligd. Dit beleid beperkt bovendien de toegang via mobiele SharePoint. 
 
 ## <a name="what-to-tell-employees-and-students"></a>Wat u werknemers en leerlingen/studenten over Intune kunt vertellen

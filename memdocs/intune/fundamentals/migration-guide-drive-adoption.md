@@ -17,12 +17,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da332528854af2b53879d30d6de90c927b49a889
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4998dab72196d904e2530e85481b0498c8e23c21
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79358205"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022208"
 ---
 # <a name="drive-end-user-adoption-with-conditional-access-in-microsoft-intune"></a>Eindgebruikers accepteren door middel van voorwaardelijke toegang in Microsoft Intune
 
@@ -73,7 +73,7 @@ Kies een van de volgende opties:
 
 - [Beleid voor voorwaardelijke toegang op basis van apps instellen voor SharePoint Online](../protect/app-based-conditional-access-intune-create.md)
 
-- [Apps die geen gebruik maken van moderne verificatie (ADAL) blokkeren](../protect/app-modern-authentication-block.md)
+- [Apps die geen gebruik maken van moderne verificatie blokkeren (ADAL of MSAL)](../protect/app-modern-authentication-block.md) 
 
 ## <a name="next-steps"></a>Volgende stappen
 

@@ -1,5 +1,5 @@
 ---
-title: Intune-bedrijfsportal-app installeren op het vasteland van China | Microsoft Docs
+title: Intune-bedrijfsportal-app installeren in de Volksrepubliek China | Microsoft Docs
 description: ''
 keywords: ''
 author: lenewsad
@@ -19,16 +19,16 @@ ms.reviewer: jeyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 39aa0108d160aea74e1ac47b19877763a9ffefa5
-ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
+ms.openlocfilehash: 58ba595b65ade57fee0ff3fe40242b27a2ff8ba4
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85332772"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86021834"
 ---
-# <a name="install-company-portal-app-in-mainland-china"></a>Bedrijfsportal-app installeren op het vasteland van China   
+# <a name="install-company-portal-app-in-peoples-republic-of-china"></a>Bedrijfsportal-app installeren in de Volksrepubliek China
 
-Installeer de Intune-bedrijfsportal-app om vanaf uw Android-apparaat toegang te krijgen tot school- of werkresources. De app is beschikbaar op het vasteland van China en kan worden geïnstalleerd vanuit de volgende app stores: 
+Installeer de Intune-bedrijfsportal-app om vanaf uw Android-apparaat toegang te krijgen tot school- of werkresources. De app is beschikbaar in de Volksrepubliek China en kan worden geïnstalleerd vanuit de volgende app stores: 
 
 
 * [Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947) 

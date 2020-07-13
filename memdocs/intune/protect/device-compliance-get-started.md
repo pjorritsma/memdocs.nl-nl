@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/28/2020
+ms.date: 07/15/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 227a44436f4490c9b3e2188609a9714a0e842149
-ms.sourcegitcommit: eb51bb38d484e8ef2ca3ae3c867561249fa413f3
+ms.openlocfilehash: 832ddbde9e3cf4782c7d3867ad6a09cc250960c7
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206312"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088323"
 ---
 # <a name="use-compliance-policies-to-set-rules-for-devices-you-manage-with-intune"></a>Beleidsregels voor compliance gebruiken om regels in te stellen voor apparaten die u beheert met Intune
 
@@ -31,7 +31,9 @@ Nalevingsbeleid in Intune:
 
 - De regels en instellingen vaststellen waaraan gebruikers en apparaten moeten voldoen om compatibel te zijn.
 - Neem daarbij ook acties op die van toepassing zijn op apparaten die niet compatibel zijn. Met acties voor niet-naleving kunnen gebruikers op de hoogte worden gebracht van de voorwaarden van niet-naleving en de gegevens op niet-compatibele apparaten beveiligen.
-- Kan [worden gecombineerd met Voorwaardelijke toegang](#integrate-with-conditional-access), waardoor gebruikers en apparaten die niet aan de regels voldoen vervolgens kunnen worden geblokkeerd.
+- Kan [worden gecombineerd met voorwaardelijke toegang](#integrate-with-conditional-access) om gebruikers en apparaten te blokkeren die niet aan de regels voldoen en als niet-conform zijn gemarkeerd.
+
+  Voorwaardelijke toegang kan ook worden gebruikt met nalevingsstatusgegevens van apparaten die u beheert met externe partners voor beheer van mobiele apparaten. Als u deze mogelijkheid wilt inschakelen, voegt u ondersteuning voor de partner toe aan zowel Azure AD als Intune. Zie Ondersteuning voor apparaatnalevingspartners toevoegen voor meer informatie. 
 
 Er zijn twee onderdelen voor nalevingsbeleid in Intune:
 

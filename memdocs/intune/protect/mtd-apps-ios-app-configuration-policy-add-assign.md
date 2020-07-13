@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 03dbdccd1626db5ad97bc230a3d6b9a82060ee2e
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 4782c2a8f2c8791929ca4e585dab96031bf550fa
+ms.sourcegitcommit: f999131e513d50967f88795e400d5b089ebc5878
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85590487"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85914618"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>MTD-apps (Mobile Threat Defense) toevoegen en toewijzen met Intune
 
@@ -136,21 +136,21 @@ Maak het configuratiebeleid voor iOS-apps volgens de instructies in het artikel 
 - **Android**
   - Bekijk de instructies voor het [gebruik van app-configuratiebeleid voor Android van Microsoft Intune](../apps/app-configuration-policies-use-android.md) om het configuratiebeleid voor de Wandera Android-app toe te voegen, wanneer u hierom wordt gevraagd, met behulp van de informatie hieronder.
 
-1. Klik in de **RADAR Wandera-portal** op de knop **Toevoegen +** onder de indeling van de **Configuratie-instellingen**.
+1. Klik in de **RADAR Wandera-portal** op de knop **Toevoegen** onder de indeling van de **Configuratie-instellingen**.
 2. Selecteer **Activeringsprofiel-URL** in de lijst met **Configuratiesleutels**. Klik op **OK**.
-3. Selecteer voor **Activeringsprofiel-URL** de **tekenreeks** uit het menu **Waardetype**. Kopieer en plak vervolgens de **URL voor deelbare koppeling** uit het gewenste activeringsprofiel in RADAR.
-4. In de **Instellingen** definieert u **indeling van de Configuratie-instellingen > Configuratieontwerper gebruiken**. Volg daarna onderstaande stappen.
+3. Selecteer voor **Activeringsprofiel-URL** de **tekenreeks** uit het menu **Waardetype**. Kopieer vervolgens de **URL voor deelbare koppeling** uit het gewenste activeringsprofiel in RADAR.
+4. Selecteer in de **gebruikersinterface van de Intune-beheerconsole-app** **Instellingen**, definieer **Configuratie-instellingenindeling > Configuration Designer gebruiken** en plak de **deelbare URL**.  
 
 > [!NOTE] 
-> In tegenstelling tot bij iOS moet u uniek configuratiebeleid voor de Android Enterprise-app definiëren voor elk Wandera-activeringsprofiel. Als u niet meerdere Wandera-activeringsprofielen nodig hebt, kunt u één Android-app-configuratie gebruiken voor alle doelapparaten. Als u activeringsprofielen maakt in Wandera, moet u ervoor zorgen dat u Azure Active Directory selecteert onder de configuratie voor de gekoppelde gebruiker, om er zeker van te zijn dat het apparaat in Wandera kan worden gesynchroniseerd met Microsoft Endpoint Manager via UEM Connect.
+> In tegenstelling tot bij iOS moet u uniek configuratiebeleid voor de Android Enterprise-app definiëren voor elk Wandera-activeringsprofiel. Als u niet meerdere Wandera-activeringsprofielen nodig hebt, kunt u één Android-app-configuratie gebruiken voor alle doelapparaten. Als u activeringsprofielen maakt in Wandera, moet u ervoor zorgen dat u Azure Active Directory selecteert onder de configuratie voor de gekoppelde gebruiker om er zeker van te zijn dat het apparaat in Wandera kan worden gesynchroniseerd met Intune via UEM Connect.
 
 - **iOS**
   - Bekijk de instructies voor het [gebruik van app-configuratiebeleid voor iOS van Microsoft Intune](../apps/app-configuration-policies-use-ios.md) om het configuratiebeleid voor de Wandera iOS-app toe te voegen, wanneer u hierom wordt gevraagd, met behulp van de informatie hieronder.
 
 1. Ga in de **RADAR Wandera-portal** naar **Apparaten > Activeringen** en selecteer een activeringsprofiel. Klik op **Implementatiestrategieën > Beheerde apparaten > Microsoft Intune** en zoek de **Configuratie-instellingen voor iOS-apps**.  
 2. Vouw het vak uit om de configuratie-XML voor de iOS-app weer te geven en kopieer deze op het systeemklembord.  
-3. In **Instellingen** definieert u **indeling van de Configuratie-instellingen > XML-gegevens invoeren**. Volg daarna onderstaande stappen:
-4. Plak de XML in het tekstvak voor de app-configuratie in Microsoft Endpoint Manager.
+3. Definieer in de **instellingen voor de gebruikersinterface van de Intune-beheerconsole-app** **Configuratie-instellingenindeling > XML-gegevens invoeren**. 
+4. Plak de XML in het tekstvak voor de app-configuratie.
 
 > [!NOTE]
 > U kunt één iOS-configuratiebeleid gebruiken op alle apparaten die moeten worden ingericht met Wandera.  

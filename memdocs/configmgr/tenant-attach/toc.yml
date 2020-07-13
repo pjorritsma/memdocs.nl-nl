@@ -4,11 +4,17 @@
   items:
     - name: Tenantkoppeling inschakelen
       href: device-sync-actions.md
-    - name: Problemen met apparaatacties oplossen
-      href: technical-reference.md
+    - name: Clientdetails (preview)
+      href: client-details.md
 - name: CMPivot voor aan tenant gekoppelde apparaten (preview)
   items:
     - name: Overzicht van CMPivot
       href: cmpivot-overview-attached.md
     - name: CMPivot-voorbeeldscripts
       href: cmpivot-samples-attached.md
+- name: Problemen oplossen
+  items:
+    - name: Tenantkoppeling en apparaatacties
+      href: troubleshoot.md
+    - name: Clientdetails (preview)
+      href: troubleshoot-client-details.md

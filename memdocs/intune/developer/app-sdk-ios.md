@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b34235f5e8a2badd61e39f43f8a5cc724f64dbd9
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: a69176e347453131c76d669b14fd7ec37b331071
+ms.sourcegitcommit: ba36a60b08bb85d592bfb8c4bbe6d02a47858b09
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383271"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052490"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Ontwikkelaarshandleiding voor Microsoft Intune App SDK voor iOS
 
@@ -97,7 +97,7 @@ Het doel van de Intune App SDK voor iOS is het toevoegen van beheermogelijkheden
 
 Als u de Intune App SDK wilt inschakelen, voert u de volgende stappen uit:
 
-1. **Optie 1 - Framework (aanbevolen)**: Als u Xcode 10.2+ gebruikt en uw app/extensie bevat SWIFT-code, koppelt u `IntuneMAMSwift.framework` en `IntuneMAMSwiftStub.framework` aan uw doel: Sleep `IntuneMAMSwift.framework` en `IntuneMAMSwiftStub.framework` naar de lijst **Ingesloten binaire bestanden** van het projectdoel.
+1. **Optie 1 - Framework (aanbevolen)** : Als u Xcode 10.2+ gebruikt en uw app/extensie bevat SWIFT-code, koppelt u `IntuneMAMSwift.framework` en `IntuneMAMSwiftStub.framework` aan uw doel: Sleep `IntuneMAMSwift.framework` en `IntuneMAMSwiftStub.framework` naar de lijst **Ingesloten binaire bestanden** van het projectdoel.
 
     Koppel anders `IntuneMAM.framework` aan uw doel: Sleep `IntuneMAM.framework` naar de lijst met **ingesloten binaire bestanden** van het projectdoel.
 
@@ -120,17 +120,17 @@ Als u de Intune App SDK wilt inschakelen, voert u de volgende stappen uit:
      ![Intune App SDK iOS: bundelresources kopiëren](./media/app-sdk-ios/intune-app-sdk-ios-copy-bundle-resources.png)
          
 2. Voeg de volgende iOS-frameworks toe aan het project:  
--  MessageUI.framework  
--  Security.framework  
--  CoreServices.framework  
--  SystemConfiguration.framework  
--  libsqlite3.tbd  
--  libc++.tbd  
--  ImageIO.framework  
--  LocalAuthentication.framework  
--  AudioToolbox.framework  
--  QuartzCore.framework  
--  WebKit.framework
+   -  MessageUI.framework  
+   -  Security.framework  
+   -  CoreServices.framework  
+   -  SystemConfiguration.framework  
+   -  libsqlite3.tbd  
+   -  libc++.tbd  
+   -  ImageIO.framework  
+   -  LocalAuthentication.framework  
+   -  AudioToolbox.framework  
+   -  QuartzCore.framework  
+   -  WebKit.framework
 
 3. Schakel het delen van sleutelhangers in (indien nog niet ingeschakeld) door in elk projectdoel op **Capabilities** te klikken en de schakelaar **Keychain Sharing** in te schakelen. Het delen van sleutelhangers is vereist als u wilt doorgaan met de volgende stap.
 
@@ -177,6 +177,9 @@ Als u de Intune App SDK wilt inschakelen, voert u de volgende stappen uit:
 Als de parameter 'o' niet wordt opgegeven, wordt in plaats daarvan het invoerbestand gewijzigd. Het hulpprogramma is idempotent en moet telkens worden gestart wanneer er wijzigingen in de Info.plist of rechten van de app zijn aangebracht. U moet ook de meest recente versie van het hulpprogramma downloaden en dat uitvoeren wanneer u de Intune SDK bijwerkt, voor het geval de config-vereisten voor Info.plist in de nieuwste versie zijn gewijzigd.
 
 ## <a name="configure-adalmsal"></a>ADAL/MSAL configureren
+
+> [!NOTE]
+> Azure Active Directory (Azure AD) Authentication Library (ADAL) en Azure AD Graph API worden afgeschaft. Zie [Uw toepassingen bijwerken voor het gebruik van Microsoft Authentication Library (MSAL) en Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363) voor meer informatie.
 
 De Intune App SDK kan ofwel gebruikmaken van de [Azure Active Directory Authentication Library](https://github.com/AzureAD/azure-activedirectory-library-for-objc) of van de [Microsoft Authentication Library](https://github.com/AzureAD/microsoft-authentication-library-for-objc) voor de scenario's voor verificatie en voorwaardelijk starten. De Intune App SDK is ook afhankelijk van ADAL/MSAL voor het registreren van de gebruikersidentiteit bij de MAM-service om beheertaken uit te voeren zonder scenario's voor apparaatinschrijving.
 
@@ -287,6 +290,9 @@ Apps moeten een aanvraag voor registratie bij de Intune MAM-service starten om b
 > De Intune App-SDK voor iOS gebruikt 256-bits versleutelingssleutels wanneer versleuteling is ingeschakeld door app-beveiligingsbeleid. Alle apps moeten eerst over een huidige SDK-versie beschikken, als u het delen van beveiligde gegevens wilt toestaan.
 
 ### <a name="apps-that-already-use-adal-or-msal"></a>Apps die al gebruikmaken van ADAL of MSAL
+
+> [!NOTE]
+> Azure Active Directory (Azure AD) Authentication Library (ADAL) en Azure AD Graph API worden afgeschaft. Zie [Uw toepassingen bijwerken voor het gebruik van Microsoft Authentication Library (MSAL) en Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363) voor meer informatie.
 
 Apps die al gebruikmaken van ADAL of MSAL, moeten de methode `registerAndEnrollAccount` in het exemplaar `IntuneMAMEnrollmentManager` aanroepen nadat de gebruiker is geverifieerd:
 
@@ -467,7 +473,7 @@ De Intune App SDK heeft verschillende API's die u kunt aanroepen met informatie 
 Klasse | Beschrijving
 ----- | -----------
 IntuneMAMPolicyManager.h | De klasse IntuneMAMPolicyManager beschrijft het Intune APP-beleid voor apps dat in de toepassing wordt geïmplementeerd. Beschrijft met name API's die nuttig zijn voor [Meerdere identiteiten inschakelen](app-sdk-ios.md#enable-multi-identity-optional). |
-IntuneMAMPolicy.h | De klasse IntuneMAMPolicy beschrijft enkele MAM-beleidsinstellingen die van toepassing zijn op de app. Deze beleidsinstellingen worden beschreven, zodat de app de gebruikersinterface kan aanpassen. De meeste beleidsinstellingen worden afgedwongen door de SDK en niet door de app. Het enige dat de app moet implementeren is het besturingselement Opslaan als. Deze klasse beschrijft een aantal API's die nodig zijn voor het implementeren van Opslaan als. |
+IntuneMAMPolicy.h | De klasse IntuneMAMPolicy beschrijft enkele MAM-beleidsinstellingen die van toepassing zijn op de app. De meeste van deze beleidsinstellingen worden beschreven, zodat de app de gebruikersinterface kan aanpassen. De meeste beleidsinstellingen worden afgedwongen door de SDK en niet door de app. Er zijn echter enkele uitzonderingen. App-ontwikkelaars moeten de opmerkingen in deze koptekst controleren om te bepalen welke API's van toepassing zijn op hun toepassingsscenario's. |
 IntuneMAMDataProtectionManager.h | De klasse IntuneMAMFileProtectionManager beschrijft API’s die de app kan gebruiken voor het expliciet beveiligen van bestanden en mappen op basis van een opgegeven identiteit. De identiteit kan worden beheerd door Intune of onbeheerd blijven, en de SDK past het juiste MAM-beleid toe. Het gebruik van deze klasse is optioneel. |
 IntuneMAMDataProtectionManager.h | De klasse IntuneMAMDataProtectionManager beschrijft API’s die de app kan gebruiken voor het beveiligen van gegevensbuffers op basis van een opgegeven identiteit. De identiteit kan worden beheerd door Intune of onbeheerd blijven, en de SDK past de versleuteling op correcte wijze toe. |
 
@@ -478,6 +484,12 @@ Met Intune kunnen IT-beheerders opgeven bij welke accounts de gebruiker zich kan
 Als u wilt zoeken naar toegestane accounts, moet de app de eigenschap `allowedAccounts` op de `IntuneMAMEnrollmentManager`controleren. De eigenschap `allowedAccounts` is een matrix met de toegestane accounts of is nil. Als de eigenschap nil is, zijn er geen toegestane accounts opgegeven.
 
 Apps kunnen ook reageren op wijzigingen van de eigenschap `allowedAccounts` door de melding `IntuneMAMAllowedAccountsDidChangeNotification` in acht te nemen. De melding wordt geplaatst wanneer de eigenschap `allowedAccounts` verandert van waarde.
+
+## <a name="implement-file-encryption-required"></a>Vereiste bestandsversleuteling implementeren
+
+De `isFileEncryptionRequired`-API die in `IntuneMAMPolicy.h` is gedefinieerd, informeert toepassingen als de IT-beheerder vereist dat toepassingen Intune-versleuteling gebruiken voor bestanden die op schijf worden opgeslagen. Als `isFileEncryptionRequired` waar is, is het de verantwoordelijkheid van de app om ervoor te zorgen dat alle bestanden die door de app op schijf worden opgeslagen, worden versleuteld met behulp van de API's in `IntuneMAMFile.h`, `IntuneMAMFileProtectionManager.h` en `IntuneMAMFDataProtectionManager.h`.
+
+Apps kunnen reageren op wijzigingen in dit beleid door de `IntuneMAMDataProtectionDidChangeNotification`-melding in acht te nemen die is gedefinieerd in `IntuneMAMFDataProtectionManager.h`.
 
 ## <a name="implement-save-as-and-open-from-controls"></a>Besturingselementen voor Opslaan als en Openen vanuit implementeren
 
@@ -496,13 +508,14 @@ De `isSaveToAllowedForLocation`-API biedt constanten om te controleren of de IT-
 * IntuneMAMSaveLocationOneDriveForBusiness
 * IntuneMAMSaveLocationSharePoint
 * IntuneMAMSaveLocationLocalDrive
+* IntuneMAMSaveLocationCameraRoll
 * IntuneMAMSaveLocationAccountDocument
 
 Apps moeten de constanten in de `isSaveToAllowedForLocation` gebruiken om te controleren of gegevens kunnen worden opgeslagen op locaties die worden beschouwd als 'beheerd', zoals OneDrive voor Bedrijven, of als 'persoonlijk'. Daarnaast moet de API worden gebruikt wanneer de app niet kan controleren of een locatie wordt 'beheerd' of 'persoonlijk' is.
 
-De `IntuneMAMSaveLocationLocalDrive`-constante moet worden gebruikt wanneer de app gegevens opslaat op een locatie op het lokale apparaat.
+De `IntuneMAMSaveLocationLocalDrive`-constante moet worden gebruikt wanneer de app gegevens opslaat op een locatie op het lokale apparaat. Op dezelfde manier moet de `IntuneMAMSaveLocationCameraRoll`-constante worden gebruikt als de app een foto opslaat in het camera-album.
 
-Als het account voor de doellocatie onbekend is, moet `nil` worden doorgegeven. De `IntuneMAMSaveLocationLocalDrive`-locatie moet altijd worden gekoppeld aan een `nil`-account.
+Als het account voor de doellocatie onbekend is, moet `nil` worden doorgegeven. De `IntuneMAMSaveLocationLocalDrive`- en `IntuneMAMSaveLocationCameraRoll`-locaties moeten altijd worden gekoppeld aan een `nil`-account.
 
 ### <a name="supported-open-locations"></a>Ondersteunde open locaties
 

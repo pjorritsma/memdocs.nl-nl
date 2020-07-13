@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 07/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 7f200e5cb5bb4aa0f29cbd3adc0f177bb14e5476
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: ac5b4685249ffa46be63e9ad55ca6067edec1b03
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431693"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022395"
 ---
 # <a name="attack-surface-reduction-policy-settings-for-endpoint-security-in-intune"></a>Beleidsinstellingen om kwetsbaarheid voor aanvallen te verminderen voor eindpuntbeveiliging in Intune
 
@@ -92,7 +92,7 @@ Ondersteunde platforms en profielen:
 - **Application Guard: afdrukken naar lokale printers toestaan**  
 
   - **Niet geconfigureerd** (*standaard*)
-  - **Ja**: afdrukken naar lokale printers toestaan.
+  - **Ja** : afdrukken naar lokale printers toestaan.
 
 - **Application Guard: afdrukken naar netwerkprinters toestaan**  
 
@@ -114,7 +114,7 @@ Ondersteunde platforms en profielen:
   - **Niet geconfigureerd** (*standaard*)
   - **Ja**: Windows-beleid voor netwerkisolatie configureren.  
   
-  Als de optie is ingesteld op *Configureren*, kunt u de volgende instellingen configureren.
+  Als de optie is ingesteld op *Ja*, kunt u de volgende instellingen configureren.
 
   - **IP-bereiken**  
     Vouw de vervolgkeuzelijst uit, selecteer **Toevoegen** en geef een *lager adres* en vervolgens een *hoger adres* op.
@@ -186,9 +186,9 @@ Ondersteunde platforms en profielen:
 - **Blokkeren dat gebruikers SmartScreen-waarschuwingen kunnen negeren**  
   [PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
-  Voor deze instelling moet de instelling SmartScreen afdwingen voor apps en bestanden worden ingeschakeld.
-  - **Niet-geconfigureerd** (*standaard*): hiermee wordt de Windows-standaardinstelling teruggezet, waardoor de gebruiker kan overschrijven.
-  - **Ja**: er wordt in SmartScreen geen optie weergegeven voor de gebruiker om de waarschuwing te negeren en de app uit te voeren. De waarschuwing wordt weergegeven, maar de gebruiker kan deze niet omzeilen.
+  - **Niet geconfigureerd** (*standaard*): gebruikers kunnen SmartScreen-waarschuwingen voor bestanden en schadelijke apps negeren.
+  - **Ja**: SmartScreen is ingeschakeld en gebruikers kunnen geen waarschuwingen over bestanden of schadelijke apps overslaan.
+
 
 - **Windows SmartScreen inschakelen**  
   CSP: [SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)

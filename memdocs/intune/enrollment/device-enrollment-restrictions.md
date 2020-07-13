@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/24/2020
+ms.date: 07/02/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,16 +18,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d26040c5a009a9c3877abbc25512e317f584f114
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 6629f416dbbc9555514dfc305db8f224f6b76526
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502932"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088442"
 ---
 # <a name="android-enterprise-device-enrollment-restrictions"></a>Inschrijvingsbeperkingen voor Android Enterprise-apparaten
 
-Voordat apparaten worden ingeschreven voor het [configuratieframework voor beveiliging van Android Enterprise]() moeten organisaties de juiste beperkingen configureren. Deze beperkingen zorgen ervoor dat gebruikers alleen het volgende kunnen inschrijven:
+Voordat apparaten worden ingeschreven voor het [configuratieframework voor beveiliging van Android Enterprise](android-configuration-framework.md) moeten organisaties de juiste beperkingen configureren. Deze beperkingen zorgen ervoor dat gebruikers alleen het volgende kunnen inschrijven:
+
 - goedgekeurde apparaten.
 - een opgegeven aantal apparaten.
 - apparaten met opgegeven platformen.
@@ -54,7 +55,12 @@ Voor hoge beveiliging voor Android Enterprise-werkprofielen (niveau 3) moeten de
 | Android-apparaatbeheerder| Blokkeren | Alle versies | Ja |
 
 ## <a name="fully-managed-security-restrictions"></a>Volledig beheerd: beveiligingsbeperkingen
-Zorg ervoor dat de organisatie ondersteuning biedt voor de inschrijving van volledig beheerde Android Enterprise-apparaten, door de inschrijving van volledig beheerde Android Enterprise-apparaten te controleren. 
+Zorg ervoor dat de organisatie inschrijving van volledig beheerde apparaten bij Android Enterprise ondersteunt door [De volledig beheerde ingeschreven apparaten](android-fully-managed-enroll.md#enroll-the-fully-managed-devices) te bekijken. 
+
+## <a name="conditional-access-policies"></a>Beleid voor voorwaardelijke toegang
+Organisaties kunnen gebruikmaken van het beleid voor voorwaardelijke toegang van Azure AD om ervoor te zorgen dat gebruikers alleen toegang hebben tot werk- of schoolinhoud op ingeschreven Android-apparaten. Hiervoor hebt u een beleid voor voorwaardelijke toegang nodig dat zich richt op alle potentiële gebruikers. Meer informatie over het maken van dit beleid vindt u in [Beheerde apparaten vereisen voor toegang tot cloud-apps met voorwaardelijke toegang](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices). 
+
+Volg de stappen in [Scenario: Apparaatinschrijving vereisen voor iOS- en Android-apparaten](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices#scenario-require-device-enrollment-for-ios-and-android-devices), wat ervoor zorgt dat alleen ingeschreven mobiele apparaten die aan de eisen voldoen verbinding kunnen maken met Office 365-eindpunten.
 
 ## <a name="next-steps"></a>Volgende stappen
 

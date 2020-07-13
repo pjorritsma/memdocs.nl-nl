@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: ''
-ms.openlocfilehash: a6b45cef3cc13357638753efd5b8179c5ce41f6c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f1d4e483f02cf73b2c7afe949e4145692adccc9d
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80085698"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088340"
 ---
 # <a name="intune-enrollment-methods-for-windows-devices"></a>Intune-inschrijvingsmethoden voor Windows-apparaten
 
@@ -36,7 +36,7 @@ U kunt apparaten op twee manieren in Intune inschrijven:
 
 Gebruikers kunnen hun eigen Windows-apparaat zelf inschrijven via een van deze methoden:
 
-- [BYOD (Bring Your Own Device)](https://docs.microsoft.com/mem/intune/user-help/enroll-windows-10-device): Gebruikers schrijven hun persoonlijke apparaten in door bij de **instellingen** van het apparaat verbinding te maken met een **werk- en schoolaccount**. Dit gebeurt er tijdens dit proces:
+- [BYOD (Bring Your Own Device)](https://docs.microsoft.com/mem/intune/user-help/enroll-windows-10-device): Gebruikers schrijven hun persoonlijke apparaten in door de **Bedrijfsportal-app** te downloaden en te installeren. Dit proces:
   - Het apparaat wordt bij Azure Active Directory ingeschreven voor toegang tot zakelijke resources, zoals e-mail.
   - Het apparaat wordt als persoonlijk apparaat (BYOD) in Intune ingeschreven.
 Als een beheerder Automatische inschrijving heeft geconfigureerd (beschikbaar voor Azure AD Premium-abonnementen), hoeft de gebruiker zijn of haar referenties maar eenmaal in te voeren. Anders moet hij of zij zich afzonderlijk inschrijven via Alleen MDM-inschrijving en de referenties opnieuw invoeren.  

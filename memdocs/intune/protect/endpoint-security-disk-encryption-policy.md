@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: a8eeb8263e337fa7427818c05f183fdea3c9dbea
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: 3e01e54eb6e74c8139c266d677a6406554119273
+ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353629"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85972064"
 ---
 # <a name="disk-encryption-policy-for-endpoint-security-in-intune"></a>Schijfversleutelingsbeleid voor eindpuntbeveiliging in Intune
 
@@ -29,7 +29,7 @@ De schijfversleutelingsprofielen voor eindpuntbeveiliging zijn alleen gericht op
 
 Hoewel u dezelfde apparaatinstellingen kunt configureren met behulp van *Endpoint Protection*-apparaatconfiguratieprofielen, bevatten de apparaatconfiguratieprofielen aanvullende categorieën instellingen. Deze extra instellingen zijn niet gerelateerd aan schijfversleuteling en kunnen de taak voor het configureren van alleen schijfversleuteling voor uw omgeving bemoeilijken.
 
-U kunt het eindpuntbeveiligingsbeleid voor het beleid voor schijfversleuteling vinden onder *Beheren* in het knooppunt **Eindpuntbeveiliging** van het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
+U vindt het eindpuntbeveiligingsbeleid voor schijfversleuteling onder *Beheren* in het knooppunt **Eindpuntbeveiliging** van het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 ## <a name="prerequisites-for-disk-encryption-policy"></a>Vereisten voor het beleid voor schijfversleuteling
 

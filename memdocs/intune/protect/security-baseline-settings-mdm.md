@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf43608bd6eb9132cef1b97198e724bcada81d30
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.openlocfilehash: afc823a906d76edfe8d3d635bcbfdbe845867266
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693364"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022293"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>MDM-beveiligingsbasislijninstellingen voor Intune  
 
@@ -1125,7 +1125,7 @@ Zie [Beleids-CSP - InternetExplorer](https://docs.microsoft.com/windows/client-m
   
   **Standaardinstelling**: Java uitschakelen  
   
-- **Uitgebreide beveiligde modus van Internet Explorer**   
+- **Uitgebreide beveiligde modus van Internet Explorer**  
   De uitgebreide beveiligde modus biedt extra bescherming tegen schadelijke websites door gebruik te maken van 64-bits processen op 64-bits versies van Windows. Op computers met minimaal Windows 8 beperkt de uitgebreide beveiligde modus ook de locaties die Internet Explorer in het register en bestandssysteem kan lezen. Als u deze beleidsinstelling inschakelt, wordt Uitgebreide beveiligde modus ingeschakeld. Voor elke zone waarvoor Beveiligde modus is ingeschakeld, wordt Uitgebreide beveiligde modus gebruikt. Gebruikers kunnen Uitgebreide beveiligde modus niet uitschakelen. Als u deze beleidsinstelling uitschakelt, wordt Uitgebreide beveiligde modus uitgeschakeld. In een zone waarvoor Beveiligde modus is ingeschakeld, wordt de Beveiligde modus-versie gebruikt die is geïntroduceerd in Internet Explorer 7 voor Windows Vista. Als u dit beleid niet configureert, kunnen gebruikers Uitgebreide beveiligde modus inschakelen of uitschakelen op het tabblad Geavanceerd van het dialoogvenster Internetopties.  
   [Meer informatie](https://go.microsoft.com/fwlink/?linkid=2067158)  
   
@@ -1437,7 +1437,7 @@ Zie [Beleids-CSP - RemoteDesktopServices](https://docs.microsoft.com/windows/cli
   **Standaardinstelling**: Ingeschakeld
   
 - **Stationsomleiding blokkeren**  
-  Met deze beleidsinstelling geeft u aan of u de toewijzing van clientstations in een sessie van Extern bureaublad-services wilt voorkomen (stationsomleiding). Standaard wijst een Extern bureaublad-sessiehostserver clientstations automatisch toe wanneer verbinding wordt gemaakt. Toegewezen stations worden in de structuur van de sessiemap in Verkenner of Computer in de indeling *\<stationsletter>* op *\<computernaam>* weergegeven. Met deze beleidsinstelling kunt u dit gedrag negeren. Als u deze beleidsinstelling inschakelt, is clientstationsomleiding niet toegestaan in sessies van Extern bureaublad-services en is omleiding van kopieën van Klembord-bestanden niet toegestaan op computers met Windows Server 2003, Windows 8 en Windows XP. Als u deze beleidsinstelling uitschakelt, is clientstationsomleiding is altijd toegestaan. Omleiding van kopieën van Klembord-bestanden is bovendien altijd toegestaan als Klembord-omleiding is toegestaan. Als u deze beleidsinstelling niet configureert, worden omleiding van clientstations en omleiding voor kopieën van Klembord-bestanden niet opgegeven op groepsbeleidsniveau.  
+  Met deze beleidsinstelling geeft u aan of u de toewijzing van clientstations in een sessie van Extern bureaublad-services wilt voorkomen (stationsomleiding). Standaard wijst een Extern bureaublad-sessiehostserver clientstations automatisch toe wanneer verbinding wordt gemaakt. Toegewezen stations worden in de sessiemapstructuur in Bestandenverkenner of Computer in de indeling *\<driveletter>* weergegeven op *\<computername>* . Met deze beleidsinstelling kunt u dit gedrag negeren. Als u deze beleidsinstelling inschakelt, is clientstationsomleiding niet toegestaan in sessies van Extern bureaublad-services en is omleiding van kopieën van Klembord-bestanden niet toegestaan op computers met Windows Server 2003, Windows 8 en Windows XP. Als u deze beleidsinstelling uitschakelt, is clientstationsomleiding is altijd toegestaan. Omleiding van kopieën van Klembord-bestanden is bovendien altijd toegestaan als Klembord-omleiding is toegestaan. Als u deze beleidsinstelling niet configureert, worden omleiding van clientstations en omleiding voor kopieën van Klembord-bestanden niet opgegeven op groepsbeleidsniveau.  
   [Meer informatie](https://go.microsoft.com/fwlink/?linkid=2067197)  
   
   **Standaardinstelling**: Ingeschakeld
@@ -1521,10 +1521,10 @@ Zie [Beleids-CSP - Search](https://docs.microsoft.com/windows/client-management/
   **Standaardinstelling**: Ja
   
 ## <a name="smart-screen"></a>SmartScreen  
-Zie [Beleids-CSP - SmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen) in de Windows-documentatie voor meer informatie.  
+Zie [Beleids-CSP - SmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen) in de Windows-documentatie voor meer informatie. 
 
 - **Uitvoering van niet-geverifieerde bestanden blokkeren**  
-  Verhinderen dat een gebruiker niet-geverifieerde bestanden uitvoert. 
+  Verhinderen dat een gebruiker niet-geverifieerde bestanden uitvoert.
   - *Niet geconfigureerd*: werknemers kunnen SmartScreen-waarschuwingen negeren en schadelijke bestanden uitvoeren. 
   - *Ja*: werknemers kunnen SmartScreen-waarschuwingen negeren en schadelijke bestanden uitvoeren.
 

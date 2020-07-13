@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 879cb5d1659b886a01e564574452bd9e5370664c
-ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
+ms.openlocfilehash: f82664cbc9f6970d494945cfdf6fc72e8d95ae8b
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84126811"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022344"
 ---
 # <a name="intune-operated-by-21vianet-in-china"></a>Door Intune beheerd via 21Vianet in China  
 
@@ -50,7 +50,7 @@ Omdat de services in China worden beheerd door een partner vanuit China, zijn er
 - De app Intune-bedrijfsportal voor Android maakt gebruik van Google Mobile Services om te communiceren met de Microsoft Intune-service. Omdat Google Play Services niet beschikbaar is in China, kan het tot acht uur duren voordat sommige taken zijn voltooid. Zie dit [artikel](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable) voor meer informatie. 
 - De klantervaring met Intune (Bedrijfsportal-app) kan verschillen in China om lokale regelgeving na te volgen en verbeterde functionaliteit te bieden.
 - Begrenzing is niet beschikbaar.
-- De beschikbaarheid van Mobile Application Management (MAM) is afhankelijk van de apps die beschikbaar zijn op het vasteland van China.
+- De beschikbaarheid van Mobile Application Management (MAM) is afhankelijk van de beschikbaarheid van deze apps in de Volksrepubliek China.
 
 ## <a name="you-control-customer-data"></a>U beheert klantgegevens
 

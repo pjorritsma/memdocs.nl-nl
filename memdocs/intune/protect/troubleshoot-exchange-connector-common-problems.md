@@ -5,7 +5,7 @@ description: Algemene problemen voor on-premises Microsoft Intune Exchange Conne
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 07/06/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 55f51f94cf26aa2486ef390d5fbb668eaf013e10
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 57f8b8193fd2f4e871f744743b768ec6248ae0b9
+ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79350626"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85972127"
 ---
 # <a name="resolve-common-problems-with-the-intune-exchange-connector"></a>Algemene problemen met Intune Exchange Connector oplossen
  
@@ -74,7 +74,7 @@ Lees de volgende secties door om problemen met e-mailmeldingen op te lossen.
    U kunt ook de service voor Automatisch opsporen testen vanaf internet, op https://testconnectivity.microsoft.com. Of test de service vanaf een lokaal domein met behulp van het hulpprogramma Microsoft Connectivity Analyzer. Zie [Het hulpprogramma Microsoft Connectivity Analyzer](https://docs.microsoft.com/previous-versions/office/exchange-remote-connectivity/jj851141(v=exchg.80)) voor meer informatie.
 
 
-### <a name="check-autodiscovery"></a>Automatisch opsporen controleren
+### <a name="check-autodiscover"></a>Automatisch opsporen controleren
 
 Als Automatisch opsporen niet kan worden uitgevoerd, probeert u de volgende stappen:
 

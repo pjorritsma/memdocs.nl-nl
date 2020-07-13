@@ -15,16 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c65235caa7e53dbe8dee4605803a6e58d6ab31a0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b9580a5cb99192f81fc83f8d61119f5368f0a5ee
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79344113"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088391"
 ---
 # <a name="overview-of-the-microsoft-intune-mobile-device-management-mdm-lifecycle"></a>Overzicht van de MDM-levenscyclus (Mobile Device Management) van Microsoft Intune
 
-Alle apparaten die u beheert, hebben een *levensduur*. Intune kan u helpen met het beheren van deze levensduur: van de inschrijving, configuratie en beveiliging tot de buitengebruikstelling van het apparaat, wanneer het niet meer nodig is.
+Alle apparaten die u beheert, hebben een *levensduur*. Intune kan u helpen met het beheren van deze levensduur: van de inschrijving, configuratie en beveiliging tot de buitengebruikstelling van het apparaat, wanneer het niet meer nodig is. Hier is een voorbeeld: een door uw bedrijf gekochte iPad moet eerst worden ingeschreven met uw Microsoft Intune-account om uw bedrijf in staat te stellen deze te beheren. Vervolgens moet deze worden geconfigureerd naar behoefte van uw bedrijf en moeten de gegevens die er door een gebruiker op worden opgeslagen, worden beschermd. Ten slotte, wanneer die iPad niet meer nodig is, moet u alle gevoelige gegevens die hierop staan [buiten gebruik stellen of wissen](https://docs.microsoft.com/mem/intune/remote-actions/devices-wipe).
 
 ![De levenscyclus van apparaten](./media/device-lifecycle/device-lifecycle.png "de levenscyclus van Intune-apparaten")
 

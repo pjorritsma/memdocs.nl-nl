@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 06/26/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,110 +15,125 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02ee6eb85e5ce330233711fe276a585eb80553cc
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: fc44bb114d6ff9089a01da2d0b7db7aa7527f4b5
+ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990973"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85972144"
 ---
 # <a name="integrate-wandera-mobile-threat-protection-with-intune"></a>Wandera Mobile Threat Protection integreren met Intune  
 
 Voer de volgende stappen uit om de Wandera Mobile Threat Defense-oplossing te integreren met Intune.  
 
-> [!NOTE]
-> Deze Mobile Threat Defense-leverancier wordt niet ondersteund voor niet-ingeschreven apparaten.
-
 ## <a name="before-you-begin"></a>Voordat u begint  
 
 Voordat u het integratieproces van Wandera met Intune begint, moet u ervoor zorgen dat u beschikt over het volgende:
-- Microsoft Intune-abonnement  
-- Azure Active Directory-beheerdersreferenties om de volgende machtigingen te verlenen:  
-  - Aanmelden en gebruikersprofiel lezen  
-  - Toegang tot de map als de aangemelde gebruiker  
-  - Mapgegevens lezen  
-  - Gegevens van een apparaat verzenden naar Intune  
 
-- Wandera-abonnement:
-  - Een of meer Wandera-accounts met een licentie voor EMM Connect  
-  - Een account met superbeheerdersrechten in Wandera  
+- Intune-abonnement
+- Azure Active Directory-beheerdersreferenties en toegewezen rol om de volgende machtigingen te verlenen:
+
+    - Aanmelden en gebruikersprofiel lezen
+    - Toegang tot de map als de aangemelde gebruiker
+    - Mapgegevens lezen
+    - Risicogegevens van een apparaat naar Intune verzenden
  
-### <a name="wandera-mobile-threat-defense-app-authorization"></a>Wandera Mobile Threat Defense-appautorisatie  
+- Een geldig Wandera-abonnement
+    - Een beheerdersaccount met superbeheerdersbevoegdheden
 
-Het proces voor Wandera Mobile Threat Defense-appautorisatie:  
-- Sta de Wandera Mobile Threat Defense-service toe informatie met betrekking tot de status van apparaten naar Intune te verzenden.  
-- Wandera wordt gesynchroniseerd met het Azure AD Enrollment-groepslidmaatschap om de database van het apparaat te vullen.  
-- Sta toe dat de Wandera RADAR-beheerdersportal eenmalige aanmelding van Azure AD gebruikt.  
-- Sta toe dat de Wandera Mobile Threat Defense-app zich via eenmalige aanmelding van Azure AD kan aanmelden.  
+## <a name="integration-overview"></a>Integratieoverzicht
 
+Inschakeling van Mobile Threat Defense-integratie tussen Wandera en Intune omvat het volgende:
 
-## <a name="set-up-wandera-mobile-threat-defense-integration"></a>Wandera Mobile Threat Defense-integratie instellen  
-Voor het instellen van *EMM Connect* voor Wandera is een eenmalig configuratieproces nodig dat u in zowel de Intune- als de Wandera-console doorloopt. De configuratie duurt ongeveer 15 minuten. U kunt de configuratie doorlopen zonder hulp van een technisch accountvertegenwoordiger of ondersteuningsmedewerker van Wandera.  
+- UEM Connect-service van Wandera inschakelen voor het synchroniseren van informatie met Azure en Intune. Dit omvat de LCM-metagegevens (Life Cycle Management) van de gebruiker en het apparaat, samen met het dreigingsniveau van de Mobile Threat Defense (MTD) van het apparaat.
+- Activeringsprofielen in Wandera maken om het gedrag van de apparaatinschrijving te bepalen.
+- Wandera draadloos implementeren op beheerde iOS- en Android-apparaten.
+- Wandera configureren voor selfservice voor eindgebruikers met MAM-WE op niet-beheerde iOS-en Android-apparaten.
+
+## <a name="set-up-wandera-mobile-threat-defense-integration"></a>Wandera Mobile Threat Defense-integratie instellen
+
+Het instellen van de integratie tussen Wandera en Intune kan gemakkelijk binnen enkele minuten worden gerealiseerd. Hiervoor is geen ondersteuning van Wandera-personeel vereist.
 
 ### <a name="enable-support-for-wandera-in-intune"></a>Ondersteuning voor Wandera in Intune inschakelen
 
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecteer **Tenantbeheer** > **Connectors en tokens** > **Mobile Threat Defense** > **Toevoegen**.
 3. Ga naar de pagina **Connector toevoegen** en gebruik de vervolgkeuzelijst om **Wandera** te selecteren. En selecteer vervolgens **Maken**.  
-4. Selecteer in het Mobile Threat Defense-venster de MTD-connector **Wandera** uit de lijst met connectors om het deelvenster *Connector bewerken* te openen. Selecteer **Open de Wandera-beheerdersconsole** om [RADAR](https://radar.wandera.com/login), de beheerdersconsole van Wandera, te openen en meld u aan. 
-5. Ga in de Wandera-console naar **Instellingen** > **EMM-integratie** en selecteer het tabblad **EMM Connect**. Gebruik de vervolgkeuzelijst *EMM-leverancier* om *Microsoft Intune* te selecteren.
-
-   ![Intune selecteren](./media/wandera-mtd-connector-integration/set-up-intune-in-radar.png)
-
-6. Selecteer **Machtiging toekennen** om een verbinding met de Intune-portal te openen. Meld u aan met uw Intune-beheerdersreferenties, selecteer het selectievakje en klik vervolgens op **Accepteren** om akkoord te gaan met de machtigingsaanvraag.  
-
-   ![Machtigingen accepteren](./media/wandera-mtd-connector-integration/permissions.png) 
-
-7. Wandera voltooit de verbinding en stuurt u terug naar de RADAR-beheerdersconsole. Herhaal het proces desgewenst om **toegang te verlenen** voor aanvullende configuraties.  
+4. Selecteer in het Mobile Threat Defense-venster de MTD-connector **Wandera** uit de lijst met connectors om het deelvenster **Connector bewerken** te openen. Selecteer **Open de Wandera-beheerdersconsole** om [RADAR](https://radar.wandera.com/login), de beheerdersconsole van Wandera, te openen en meld u aan. 
+5. Ga in de Wandera RADAR-console naar **Integraties > UEM-integratie** en selecteer het tabblad **UEM Connect**. Gebruik de vervolgkeuzelijst EMM-leverancier om **Microsoft Intune** te selecteren.
+6. Er wordt een scherm weergegeven dat lijkt op het onderstaande, met de machtigingen die zijn vereist voor het voltooien van de integratie:
 
    ![Integraties en machtigingen](./media/wandera-mtd-connector-integration/integrations-and-permissions.png) 
 
-8. Kopieer in de RADAR-console de naam van de **SyncOnly**-groep die onder **EMM-label** wordt weergegeven. U hebt deze naam nodig om in Intune een groep te configureren voor synchronisatie met Wandera.
+7. Naast Intune User and Device Sync klikt u op de knop Toekennen om het proces te starten en Wandera toestemming te geven om de LCM-functies (Life Cycle Management) met Azure en Intune uit te voeren.
+8. Selecteer of voer uw Azure-beheerdersreferenties in wanneer daarom wordt gevraagd. Controleer de aangevraagde machtigingen en schakel het selectievakje in om namens uw organisatie toestemming te geven. Klik ten slotte op Accepteren om de LCM-integratie te autoriseren.
 
-   ![Synchronisatiegroep](./media/wandera-mtd-connector-integration/sync-group-name.png) 
+   ![Machtigingen accepteren](./media/wandera-mtd-connector-integration/permissions.png)
 
-9. Ga terug naar de [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)-console en bewerk de Wandera MTD-connector. Stel de beschikbare schakelknoppen in op **Aan** en klik op **Opslaan** om de configuratie op te slaan.  
+10. U keert automatisch terug naar de RADAR-beheerconsole.  Als de autorisatie is geslaagd, ziet u een groen vinkje naast de knop Toekennen.
+11. Herhaal het toestemmingsproces voor de resterende lijstintegraties door op de bijbehorende toekenningsknoppen te klikken totdat er groene vinkjes naast elke integratie staan.
 
-   ![Wandera inschakelen](./media/wandera-mtd-connector-integration/enable-wandera.png) 
+    ![Synchronisatiegroep](./media/wandera-mtd-connector-integration/sync-group-name.png)
 
-Intune en Wandera zijn nu verbonden.  
+12. Ga terug naar de Intune-console en bewerk de Wandera MTD-connector. Stel de beschikbare schakelknoppen in op Aan en klik op Opslaan om de configuratie op te slaan.
 
-## <a name="configure-the-wandera-applications-and-synchronization-group"></a>De Wandera-toepassingen en de synchronisatiegroep configureren  
-Als u Wandera wilt implementeren, voegt u de mobiele Wandera-apps voor de platforms die u gebruikt (iOS en Android), toe aan Intune en wijst u ze vervolgens toe aan een specifieke synchronisatiegroep: *SyncOnly*. 
+    ![Wandera inschakelen](./media/wandera-mtd-connector-integration/enable-wandera.png)
 
-De volgende secties en procedures leiden u door dit proces.
+Intune en Wandera zijn nu verbonden.
 
-Voor meer informatie van Wandera over dit proces meldt zich aan bij Wandera [RADAR](https://radar.wandera.com/login). Ga naar **Instellingen** > **EMM-integratie**, selecteer het tabblad **App-push** en kies vervolgens **Microsoft Intune**. Het tabblad App-push wordt bijgewerkt met instructies die specifiek zijn voor Intune.  
+## <a name="create-activation-profiles-in-wandera"></a>Maak activeringsprofielen in Wandera
 
-### <a name="add-the-wandera-apps"></a>De Wandera-apps toevoegen  
-Maak client-apps in Intune om de Wandera-app te implementeren op Android- en iOS/iPadOS-apparaten. Raadpleeg [MTD-apps toevoegen](mtd-apps-ios-app-configuration-policy-add-assign.md) voor de procedures en aangepaste details die specifiek zijn voor Wandera-apps.  
+Implementaties op basis van Intune worden mogelijk gemaakt met behulp van Wandera-activeringsprofielen die zijn gedefinieerd in RADAR.  Elk activeringsprofiel definieert specifieke configuratieopties, zoals verificatievereisten, servicemogelijkheden en eerste groepslidmaatschap.
 
-Nadat u de apps hebt gemaakt, komt u hier terug om de synchronisatiegroep te maken en de apps toe te wijzen.
+Nadat u een activeringsprofiel in Wandera hebt gemaakt, wijst u dit toe aan gebruikers en apparaten in Intune.  Hoewel een activeringsprofiel universeel is voor apparaatplatforms en beheerstrategieën, wordt met de volgende stappen gedefinieerd hoe Intune moet worden geconfigureerd op basis van deze verschillen.
 
-### <a name="create-the-synchronization-group-and-assign-the-apps"></a>De synchronisatiegroep maken en de apps toewijzen
+Voor de komende stappen wordt ervan uitgegaan dat u in Wandera een activeringsprofiel hebt gemaakt dat u via Intune wilt implementeren op uw doelapparaten. Zie de [handleiding voor activeringsprofielen](https://radar.wandera.com/?return_to=https://wandera.force.com/Customer/s/article/Enrollment-Links) voor meer informatie over het maken en gebruiken van Wandera-activeringsprofielen.
 
-1. Haal de naam van de **SyncOnly**-groep op die onder **EMM-label** wordt weergegeven in de Wandera RADAR-console. Mogelijk hebt u deze naam al ergens opgeslagen tijdens stap 7, toen u [ondersteuning voor Wandera in Intune inschakelde](#enable-support-for-wandera-in-intune). Gebruik deze naam als de naam van de groep in Intune voor Wandera-synchronisatie.  
+> [!NOTE]
+> Bij het maken van activeringsprofielen voor implementatie via Intune of MAM-WE moet de optie Gekoppelde gebruiker zijn ingesteld op Geverifieerd door id-provider > Azure Active Directory voor maximale beveiliging, compatibiliteit met andere platformen en een gestroomlijnde eindgebruikerservaring.
 
-2. Ga in het beheercentrum Eindpuntbeheer naar **Groepen** en selecteer **Nieuwe groep**. Geef het volgende op om de synchronisatiegroep te configureren die door Wandera moet worden gebruikt:
-   - **Groepstype**: **Beveiliging**
-   - **Groepsnaam**: Geef de **SyncOnly**-naam op die u hebt opgehaald uit de Wandera RADAR-beheerdersconsole.
+## <a name="deploying-wandera-over-the-air-to-mdm-managed-devices"></a>Wandera draadloos implementeren op door MDM beheerde apparaten
 
-   ![De synchronisatiegroep configureren](./media/wandera-mtd-connector-integration/configure-sync-group.png)
+Voor iOS- en Android-apparaten die worden beheerd door Intune, kan Wandera draadloos worden geïmplementeerd voor snelle activeringen op basis van pushberichten. Zorg ervoor dat u de benodigde activeringsprofielen al hebt gemaakt voordat u doorgaat met deze sectie. Voor het implementeren van Wandera voor beheerde apparaten is het volgende vereist:
+- Wandera-configuratieprofielen aan Intune toevoegen en aan doelapparaten toewijzen.
+- De Wandera-app en de bijbehorende app-configuraties toevoegen aan Intune en toewijzen aan doelapparaten.
 
-3. Selecteer **Leden** en wijs groepen toe met de Android- en iOS/iPadOS-apparaten die u met Wandera wilt gebruiken.
+### <a name="configure-and-deploy-ios-configuration-profiles"></a>iOS-configuratieprofielen configureren en implementeren 
 
-4. Selecteer **Maken** om de groep op te slaan.
+In deze sectie downloadt u **vereiste** configuratiebestanden voor iOS-apparaten en stuurt u ze draadloos via MDM aan uw door Intune beheerde apparaten.
 
-Raadpleeg [Apps implementeren](../apps/apps-deploy.md) voor meer informatie
+1. In **RADAR** gaat u naar het activeringsprofiel dat u wilt implementeren (Apparaten > Activeringen) en klikt u op het tabblad **Implementatiestrategieën > Beheerde apparaten > Microsoft Endpoint Manager**.
+2. Vouw de sectie **Apple iOS onder supervisie** of **Apple iOS niet onder supervisie** uit op basis van de configuratie van uw apparaatfleet.
+3. Download de opgegeven configuratieprofielen en bereid ze voor om ze in een volgende stap te uploaden.
+4. Open de **Microsoft Intune-beheerconsole** en ga naar **Apparaten > iOS/iPadOS > Configuratieprofielen**.  Klik op **Profiel maken**.
+5. Kies in het deelvenster dat wordt geopend **iOS/iPadOS** onder **Platform** en vervolgens **Aangepast** onder Profiel. Klik vervolgens op **Maken**.
+6. Geef in het veld **Naam** een beschrijvende titel op voor de configuratie, in het ideale geval met de naam van het activeringsprofiel in RADAR. Dit zal in de toekomst helpen om kruisverwijzingen te vergemakkelijken. Indien gewenst kunt u ook de code van het activeringsprofiel opgeven. Geef aan of de configuratie bestemd is voor apparaten onder of zonder supervisie door een achtervoegsel aan de naam toe te voegen.
+7. U kunt eventueel een **Beschrijving** opgeven om meer informatie te bieden voor andere beheerders over het doel/gebruik van de configuratie. Klik op **Volgende**.
+8. Klik op **Een bestand selecteren** en zoek het gedownloade configuratieprofiel dat overeenkomt met het juiste activeringsprofiel dat u in stap 3 hebt gedownload. Zorg ervoor dat u het juiste profiel onder of zonder supervisie selecteert als u beide downloadt. Klik op **Volgende**.
+   <!-- image placeholder - ending future availability -->
+9.  Definieer **Bereiktags** zoals vereist door uw Intune RBAC-praktijken.  Klik op **Volgende**.
+10. U moet het configuratieprofiel **toewijzen** aan groepen gebruikers of apparaten waarop Wandera moet worden geïnstalleerd.  U kunt het beste beginnen met een testgroep en deze vervolgens uitbreiden nadat u hebt gecontroleerd of de activeringen correct werken. Klik op **Volgende**.
+11. Controleer of de configuratie correct is en pas deze aan waar nodig. Klik op **Maken** om het configuratieprofiel te maken en te implementeren.
 
-### <a name="assign-the-wandera-apps-to-the-synchronization-group"></a>De Wandera-apps toewijzen aan de synchronisatiegroep  
-Herhaal de volgende procedure voor de Wandera-app die u hebt gemaakt voor iOS/iPadOS en voor Android.
+> [!NOTE]
+> Wandera biedt een uitgebreid implementatieprofiel voor iOS-apparaten onder supervisie. Als u een gemengde fleet met apparaten onder of zonder supervisie hebt, herhaalt u de bovenstaande stappen voor het andere profieltype naar behoefte. Deze stappen moeten worden gevolgd voor toekomstige activeringsprofielen die moeten worden geïmplementeerd via Intune. Neem contact op met de Wandera-ondersteuning als u een gemengde fleet hebt van iOS-apparaten onder en zonder supervisie en u hulp nodig hebt met beleidstoewijzingen op basis van supervisiemodus. 
 
-1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecteer **Apps** > **Alle apps** en selecteer de Wandera-app.
-3. Selecteer **Toewijzingen** en vervolgens **Groep toevoegen**.  
-4. Selecteer in het venster *Groep toevoegen* voor *Toewijzingstype* de optie **Vereist**.
-5. Selecteer vervolgens **Opgenomen groepen** en daarna **Groepen selecteren die moeten worden opgenomen**. Geef de groep op die u voor Wandera-synchronisatie hebt gemaakt en klik vervolgens op **Selecteren** > **OK** > **OK**. Selecteer **Opslaan** om de groepstoewijzing te voltooien. 
+## <a name="deploying-wandera-to-mam-we-devices"></a>Wandera implementeren op MAM-WE-apparaten
+Voor apparaten die niet worden beheerd door Intune en MAM-WE-apparaten zijn, maakt Wandera gebruik van een geïntegreerde, op verificatie gebaseerde onboardingervaring om bedrijfsgegevens binnen MAM-apps te activeren en te beveiligen. 
 
-## <a name="next-steps"></a>Volgende stappen  
-Nadat u de integratie hebt geconfigureerd, kunt u in de Wandera-beheerdersconsole beleid configureren, geavanceerde voorwaardelijke toegang instellen en rapporten bekijken. Voor meer informatie over hoe u Wandera beheert en configureert, raadpleegt u de handleiding [Aan de slag van het ondersteuningscentrum](https://radar.wandera.com/?return_to=https://wandera.force.com/Customer/s/getting-started) in de Wandera-documentatie. 
+In de volgende secties wordt beschreven hoe u Wandera en Intune configureert om eindgebruikers in staat te stellen Wandera naadloos te activeren voordat ze toegang krijgen tot bedrijfsgegevens. 
+
+### <a name="configure-azure-device-provisioning-in-a-wandera-activation-profile"></a>Azure-apparaatinrichting configureren in een Wandera-activeringsprofiel
+Voor activeringsprofielen die moeten worden gebruikt met MAM-WE moet Gekoppelde gebruiker zijn ingesteld op Geverifieerd op id-provider > Azure Active Directory.
+1. Selecteer in de **Wandera RADAR**-portal een bestaand activeringsprofiel of maak een nieuw profiel dat MAM-WE-apparaten zullen gebruiken tijdens de inschrijving in Apparaten > Activeringen. 
+2. Klik op het **tabblad Implementatiestrategieën en vervolgens op Niet-beheerde apparaten**. Schuif vervolgens naar de sectie **Azure-apparaatinrichting**.
+3. Voer uw **Azure AD-tenant-id** in het bijbehorende tekstveld in. Als u uw tenant-id niet bij de hand hebt, klikt u op de koppeling **Mijn tenant-id ophalen** om Azure AD te openen op een nieuw tabblad waar u deze waarde eenvoudig kunt kopiëren naar uw klembord.
+4. (Optioneel) Geef **Groep-id('s)** op om de activering van gebruikers te beperken tot specifieke groepen.
+   - Als een of meer **Groep-id's** zijn gedefinieerd, moet een gebruiker die MAM-WE activeert, lid zijn van ten minste een van de opgegeven groepen om dit activeringsprofiel te activeren.
+   - U kunt meerdere activeringsprofielen instellen die zijn geconfigureerd met dezelfde Azure-tenant-id, maar met verschillende groep-id's. Zo kunt u apparaten inschrijven in Wandera op basis van het lidmaatschap van een Azure-groep, waardoor er gedifferentieerde mogelijkheden per groep worden geboden tijdens de activering.
+   - U kunt een standaard activeringsprofiel configureren waarmee geen groeps-id's worden opgegeven.  Deze groep zal dienen als vangnet voor alle activeringen waarbij de geverifieerde gebruiker geen lid is van een groep die is gekoppeld met een ander activeringsprofiel.
+5. Klik op **Opslaan** in de rechterbovenhoek van de pagina.
+
+## <a name="next-steps"></a>Volgende stappen
+- Maak client-apps in Intune met uw Wandera-activeringsprofielen in RADAR geladen om de Wandera-app op Android- en iOS/iPadOS-apparaten te implementeren. De configuratie van de Wandera-app biedt essentiële functionaliteit als aanvulling op gepushte apparaatconfiguratieprofielen en wordt aanbevolen voor alle implementaties. Raadpleeg [MTD-apps toevoegen](mtd-apps-ios-app-configuration-policy-add-assign.md) voor de procedures en aangepaste details die specifiek zijn voor Wandera-apps. 
+- Nu Wandera is geïntegreerd met Endpoint Manager, kunt u uw configuratie aanpassen, rapporten weergeven en breder implementeren op uw mobiele apparaten. Zie de [handleiding Aan de slag voor het ondersteuningscentrum](https://radar.wandera.com/?return_to=https://wandera.force.com/Customer/s/getting-started) in de Wandera-documentatie voor gedetailleerde configuratiehandleidingen.

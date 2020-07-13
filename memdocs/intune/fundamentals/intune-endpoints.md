@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 13623f92ac68855aefbd1900c5040004acba1f09
-ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
+ms.openlocfilehash: 74152e28d1c78ea911b1f4e2cca31d6382283c19
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216498"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088476"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Netwerkeindpunten voor Microsoft Intune  
 
@@ -67,7 +67,6 @@ De volgende tabel bevat de poorten en services waartoe de Intune-client toegang 
 |fef.msua05.manage.microsoft.com|138.91.244.151|
 |fef.msua06.manage.microsoft.com|13.78.185.97|
 |fef.msub01.manage.microsoft.com|137.135.128.214|
-|fef.msub03.manage.microsoft.com|52.169.82.238|
 |fef.msub05.manage.microsoft.com|23.97.166.52|
 |fef.msuc03.manage.microsoft.com|23.101.0.100|
 |fef.amsua0502.manage.microsoft.com|13.85.68.142|
@@ -130,8 +129,8 @@ Zie voor meer informatie de documentatie van Apple: [TCP and UDP ports used by A
 
 Afhankelijk van de keuze om Android-apparaten te beheren, moet u mogelijk de Google Android Enterprise-poorten en/of de Android-pushmelding openen. Raadpleeg de [documentatie voor Android-inschrijving](https://docs.microsoft.com/mem/intune/enrollment/android-enroll) voor meer informatie over de ondersteunde Android-beheermethoden. 
 
-[!NOTE]
-Omdat Google Mobile Services niet beschikbaar is in China, kunnen apparaten in China beheerd door Intune geen functies gebruiken waarvoor Google Mobile Services is vereist. Het gaat om de volgende functies: Google Play-mogelijkheden voor beveiliging, zoals apparaatbevestiging van SafetyNet, het beheren van apps vanuit de Google Play Store, Android Enterprise-mogelijkheden (zie deze [Google-documentatie](https://support.google.com/work/android/answer/6270910)). De app Intune-bedrijfsportal voor Android maakt daarnaast gebruik van Google Mobile Services om te communiceren met de Microsoft Intune-service. Omdat Google Play Services niet beschikbaar is in China, kan het tot acht uur duren voordat sommige taken zijn voltooid. Zie dit [artikel](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable) voor meer informatie.
+> [!NOTE]
+> Omdat Google Mobile Services niet beschikbaar is in China, kunnen apparaten in China beheerd door Intune geen functies gebruiken waarvoor Google Mobile Services is vereist. Het gaat om de volgende functies: Google Play-mogelijkheden voor beveiliging, zoals apparaatbevestiging van SafetyNet, het beheren van apps vanuit de Google Play Store, Android Enterprise-mogelijkheden (zie deze [Google-documentatie](https://support.google.com/work/android/answer/6270910)). De app Intune-bedrijfsportal voor Android maakt daarnaast gebruik van Google Mobile Services om te communiceren met de Microsoft Intune-service. Omdat Google Play Services niet beschikbaar is in China, kan het tot acht uur duren voordat sommige taken zijn voltooid. Zie dit [artikel](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable) voor meer informatie.
 
 ### <a name="google-android-enterprise"></a>Google Android Enterprise 
 
@@ -141,3 +140,6 @@ Google biedt documentatie over de vereiste netwerkpoorten en namen van doelhosts
 
 Intune maakt gebruik van Google Firebase Cloud Messaging (FCM) voor pushmeldingen om acties van apparaten en inchecken te activeren. Dit is vereist voor Android-apparaatbeheerder en Android Enterprise. Voor informatie over FCM-netwerkvereisten raadpleegt u de [FCM-poorten en uw firewall](https://firebase.google.com/docs/cloud-messaging/concept-options#messaging-ports-and-your-firewall) van Google.
 
+## <a name="endpoint-analytics"></a>Eindpuntanalyse
+
+Zie [Proxyconfiguratie voor eindpuntanalyse](https://docs.microsoft.com/mem/analytics/troubleshoot#bkmk_endpoints) voor meer informatie over de vereiste eindpunten voor eindpuntanalyse.

@@ -5,7 +5,7 @@ description: Controleer de standaardwaarden en beschikbare instellingen voor de 
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/04/2020
+ms.date: 07/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67bb805df6406226c67084ed832f5cc590b1664a
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: 9cc2cf4531c2e2d7a2847ccdbce87c8b938a46d6
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943906"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022225"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Windows MDM-beveiligingsbasislijninstellingen voor Intune
 
@@ -1851,7 +1851,7 @@ Zie [Beleids-CSP - RemoteDesktopServices](https://docs.microsoft.com/windows/cli
   **Standaardinstelling**: Ingeschakeld
 
 - **Stationsomleiding blokkeren**:  
-  Met deze beleidsinstelling geeft u aan of u de toewijzing van clientstations in een sessie van Extern bureaublad-services wilt voorkomen (stationsomleiding). Standaard wijst een Extern bureaublad-sessiehostserver clientstations automatisch toe wanneer verbinding wordt gemaakt. Toegewezen stations worden in de structuur van de sessiemap in Verkenner of Computer in de indeling *\<stationsletter>* op *\<computernaam>* weergegeven. Met deze beleidsinstelling kunt u dit gedrag negeren. Als u deze beleidsinstelling inschakelt, is clientstationsomleiding niet toegestaan in sessies van Extern bureaublad-services en is omleiding van kopieën van Klembord-bestanden niet toegestaan op computers met Windows Server 2003, Windows 8 en Windows XP. Als u deze beleidsinstelling uitschakelt, is clientstationsomleiding is altijd toegestaan. Omleiding van kopieën van Klembord-bestanden is bovendien altijd toegestaan als Klembord-omleiding is toegestaan. Als u deze beleidsinstelling niet configureert, worden omleiding van clientstations en omleiding voor kopieën van Klembord-bestanden niet opgegeven op groepsbeleidsniveau.  
+  Met deze beleidsinstelling geeft u aan of u de toewijzing van clientstations in een sessie van Extern bureaublad-services wilt voorkomen (stationsomleiding). Standaard wijst een Extern bureaublad-sessiehostserver clientstations automatisch toe wanneer verbinding wordt gemaakt. Toegewezen stations worden in de sessiemapstructuur in Bestandenverkenner of Computer in de indeling *\<driveletter>* weergegeven op *\<computername>* . Met deze beleidsinstelling kunt u dit gedrag negeren. Als u deze beleidsinstelling inschakelt, is clientstationsomleiding niet toegestaan in sessies van Extern bureaublad-services en is omleiding van kopieën van Klembord-bestanden niet toegestaan op computers met Windows Server 2003, Windows 8 en Windows XP. Als u deze beleidsinstelling uitschakelt, is clientstationsomleiding is altijd toegestaan. Omleiding van kopieën van Klembord-bestanden is bovendien altijd toegestaan als Klembord-omleiding is toegestaan. Als u deze beleidsinstelling niet configureert, worden omleiding van clientstations en omleiding voor kopieën van Klembord-bestanden niet opgegeven op groepsbeleidsniveau.  
   [Meer informatie](https://go.microsoft.com/fwlink/?linkid=2067197)
 
   **Standaardinstelling**: Ingeschakeld
@@ -1968,7 +1968,7 @@ Zie [Beleids-CSP - SmartScreen](https://docs.microsoft.com/windows/client-manage
   **Standaardinstelling**: Ja
 
 ::: zone-end
-::: zone pivot="mdm-may-201"
+::: zone pivot="mdm-may-2019"
 
 - **Windows SmartScreen inschakelen**  
   CSP: [SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)
@@ -1980,7 +1980,9 @@ Zie [Beleids-CSP - SmartScreen](https://docs.microsoft.com/windows/client-manage
 - **Blokkeren dat gebruikers SmartScreen-waarschuwingen kunnen negeren**  
   CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
-  Wanneer deze instelling is ingesteld op Ja, wordt in SmartScreen geen optie weergegeven voor de gebruiker om de waarschuwing te negeren en de app uit te voeren. De waarschuwing wordt weergegeven, maar de gebruiker kan deze omzeilen. Wanneer deze instelling is ingesteld op Niet geconfigureerd, wordt de instelling teruggezet op de Windows-standaardwaarde, waarbij overschrijven door de gebruiker is toegestaan. Voor deze instelling moet de instelling SmartScreen afdwingen voor apps en bestanden worden ingeschakeld.
+  Wanneer de instelling Ja is, wordt SmartScreen ingeschakeld en kunnen gebruikers geen waarschuwingen over bestanden of schadelijke apps overslaan. Wanneer de instelling Niet geconfigureerd is, kunnen gebruikers SmartScreen-waarschuwingen voor bestanden en schadelijke apps negeren.  
+
+  Voor deze instelling moet de instelling Windows SmartScreen inschakelen zijn ingesteld op Ja.
 
   **Standaardinstelling**: Ja
 

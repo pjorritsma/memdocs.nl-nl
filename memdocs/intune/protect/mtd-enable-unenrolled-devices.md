@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/20/2020
+ms.date: 06/26/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6c762aafbc1d82e7e51746806f8ba15cc5ad83c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 933810cb079ac405d15a18a26efd07fb69a6e3f1
+ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83984924"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85972030"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune-for-unenrolled-devices"></a>De Mobile Threat Defense-connector in Intune inschakelen voor niet-ingeschreven apparaten
 
@@ -33,8 +33,9 @@ Tijdens de configuratie van Mobile Threat Defense (MTD) hebt u een beleid geconf
 > Dit artikel is van toepassing op alle Mobile Threat Defense-partners die ondersteuning bieden aan beleid voor app-beveiliging:
 >
 > - Better Mobile (Android, iOS/iPadOS)
+> - Lookout for Work (Android,iOS/iPadOS)
+> - Wandera (Android, iOS/iPadOS)
 > - Zimperium (Android, iOS/iPadOS)
-> - Lookout for Work (Android, iOS/iPadOS)
 
 ## <a name="classic-conditional-access-policies-for-mtd-apps"></a>Klassiek beleid voor voorwaardelijke toegang voor MTD-apps
 
@@ -74,9 +75,9 @@ U kunt bepalen welke wisselopties voor MTD overeenkomstig de wensen van uw organ
 
 **Instellingen voor app-beveiligingsbeleid**
 
-- **Android-apparaten van versie 4.4 en hoger verbinden met *\<MTD-partnernaam>* voor evaluatie van het app-beveiligingsbeleid**: Als u deze optie inschakelt, worden apparaten (inclusief gegevens van deze connector) geëvalueerd door app-beveiligingsbeleid met behulp van de Device Threat Level-regel.
+- **Android-apparaten met versie 4.4 of hoger verbinden met *\<MTD partner name>* voor evaluatie van het beleid voor app-beveiliging**: Als u deze optie inschakelt, worden apparaten (inclusief gegevens van deze connector) geëvalueerd door app-beveiligingsbeleid met behulp van de Device Threat Level-regel.
 
-- **iOS-apparaten van versie 11 verbinden met *\<MTD-partnernaam>* voor evaluatie van het app-beveiligingsbeleid**: Als u deze optie inschakelt, worden apparaten (inclusief gegevens van deze connector) geëvalueerd door app-beveiligingsbeleid met behulp van de Device Threat Level-regel.
+- **iOS-apparaten met versie 11 of hoger verbinden met *\<MTD partner name>* voor evaluatie van het beleid voor app-beveiliging**: Als u deze optie inschakelt, worden apparaten (inclusief gegevens van deze connector) geëvalueerd door app-beveiligingsbeleid met behulp van de Device Threat Level-regel.
 
 **Algemene gedeelde instellingen**
 

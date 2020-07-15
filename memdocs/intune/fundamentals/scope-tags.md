@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 665b88932c88f523b19fec596bfd969bb93ecdd4
-ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
+ms.openlocfilehash: a229b9159c4c3613edc2d718db1fd0931f94cf9f
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721904"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240734"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Op rollen gebaseerd toegangsbeheer (RBAC) en bereiktags gebruiken voor gedistribueerde IT
 
@@ -81,13 +81,11 @@ Wanneer u met bereiktags werkt, moet u deze details onthouden:
 - U kunt bereiktags toewijzen aan een Intune-objecttype als de tenant meerdere versies van dat object kan hebben (zoals roltoewijzingen of apps).
   De volgende Intune-objecten zijn uitzonderingen op deze regel en ondersteunen momenteel geen bereiktags:
     - Windows ESP-profielen
-    - Registratiebeperkingen
     - Bedrijfsapparaat-id's
     - Autopilot-apparaten
     - Nalevingslocaties voor apparaat
     - Jamf-apparaten
 - VPP-apps en ebooks die zijn gekoppeld aan het VPP-token nemen de bereiktags over die zijn toegewezen aan het gekoppelde VPP-token.
-- DEP-apparaten (Device Enrollment Program) en DEP-profielen die zijn gekoppeld aan het DEP-token, nemen de bereiktags over die zijn toegewezen aan het bijbehorende DEP-token.
 - Wanneer een beheerder een object in Intune maakt, worden alle aan die beheerder toegewezen bereiktags automatisch toegewezen aan het nieuwe object.
 - Intune RBAC is niet van toepassing op Azure Active Directory-rollen. Dus hebben de rollen Intune-servicebeheerders en Globale beheerders volledige beheerderstoegang tot Intune, ongeacht welke bereiktags ze hebben.
 - Als een roltoewijzing geen bereiktag heeft, kan de IT-beheerder alle objecten zien op basis van de machtigingen voor de IT-beheerder. Beheerders die geen bereiktags hebben, hebben in wezen alle bereiktags.

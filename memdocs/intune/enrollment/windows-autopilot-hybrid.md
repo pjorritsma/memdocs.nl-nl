@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: be9a4257fec357c3dc124318fda98807df6c26b7
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: c26af63691fc4b198d308f39a7c1cc0d719933cb
+ms.sourcegitcommit: 6e9375afc0ba21893f51a40cce16d03a8ed21038
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093480"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86285297"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Apparaten die aan hybride Azure AD zijn gekoppeld implementeren met Intune en Windows Autopilot
 U kunt Intune en Windows Autopilot gebruiken om apparaten in te stellen die zijn gekoppeld aan Hybrid Azure Active Directory (Azure AD). Volg hiervoor de stappen in dit artikel.
@@ -35,7 +35,7 @@ Configureer uw [gekoppelde Hybrid Azure AD-apparaten](https://docs.microsoft.com
 De te registreren apparaten moeten ook voldoen aan de volgende voorwaarden:
 - Apparaten werken met Windows 10 v1809 of hoger.
 - Toegang hebben tot internet [op basis van de gedocumenteerde Windows Autopilot-netwerkvereisten](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements#networking-requirements).
-- Toegang tot een Active Directory-domeincontroller, zodat het kan worden verbonden met het netwerk van de organisatie. (Waar het DNS-records voor het AD-domein en de AD-domeincontroller kan oplossen en kan communiceren met de domeincontroller om de gebruiker te verifiëren. Een VPN-verbinding wordt momenteel niet ondersteund.)
+- Toegang tot een Active Directory-domeincontroller, zodat het kan worden verbonden met het netwerk van de organisatie. (Waar het DNS-records voor het AD-domein en de AD-domeincontroller kan oplossen en kan communiceren met de domeincontroller om de gebruiker te verifiëren.
 - Zorg ervoor dat u de domeincontroller van het domein dat u probeert samen te voegen kunt pingen.
 - Als u een proxy gebruikt, moet de optie WPAD Proxy-instellingen zijn ingeschakeld en geconfigureerd.
 - Doorloop de OOBE (Out-of-Box Experience).

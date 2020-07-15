@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 07/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8f79ac0ef70eb9eccf47837517e3e69df3fdb3e8
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 89e3111ef902b0ea0f7f66e6be6aa0c227fdb3c4
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165716"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86239943"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>De Intune-bedrijfsportal-apps, de bedrijfsportalwebsite en de Intune-app aanpassen
 
@@ -110,9 +110,7 @@ De volgende tabel bevat specifieke configuratiedetails voor inschrijving:
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
 |    Beschikbaar, met prompts    |    De standaardervaring met prompts voor inschrijving op alle mogelijke locaties.    |    Ja    |    Ja    |    Ja    |    Ja    |
 |    Beschikbaar, geen prompts    |    De gebruiker kan een apparaat inschrijven via de status in Apparaatgegevens voor zijn/haar huidige apparaat of vanuit apps waarvoor inschrijving is vereist.    |    Nee    |    Nee    |    Ja    |    Ja    |
-|    Niet beschikbaar    |    Gebruikers kunnen een apparaat niet inschrijven.    |    Nee    |    Nee    |    Nee    |    Nee<sup>(1)</sup>    |
-
-<sup>(1)</sup> **Bekend probleem:** Als u apps zo instelt dat inschrijving voor installatie is vereist en als u eveneens apparaatinschrijving instelt op 'Niet beschikbaar', worden gebruikers in de bedrijfsportal-app op Android alsnog geholpen bij de inschrijving. Dit wordt binnenkort verwijderd.
+|    Niet beschikbaar    |    Gebruikers kunnen een apparaat niet inschrijven.    |    Nee    |    Nee    |    Nee    |    Nee    |
 
 ### <a name="privacy"></a>Privacy
 
@@ -221,7 +219,7 @@ Zie [Customizing user self-service actions for the Company Portal](../apps/compa
 
 Voor sommige platforms en configuraties zijn geen selfserviceacties voor apparaten toegestaan. De onderstaande tabel bevat meer informatie over selfserviceacties:
 
-|  | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
+| Actie | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
 | Buiten gebruik stellen | Beschikbaar<sup>(1)</sup> | Beschikbaar<sup>(9)</sup> | Beschikbaar | Beschikbaar<sup>(7)</sup> |
 | Wissen | Beschikbaar | Beschikbaar<sup>(5)</sup><sup>(9)</sup> | NA | Beschikbaar<sup>(7)</sup> |

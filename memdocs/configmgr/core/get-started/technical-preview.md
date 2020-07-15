@@ -2,7 +2,7 @@
 title: Technical Preview-releases
 titleSuffix: Configuration Manager
 description: Meer informatie over de technische preview-vertakking om nieuwe functies en mogelijkheden in Configuration Manager te testen.
-ms.date: 06/25/2020
+ms.date: 07/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5dfa3b33a46166cfa4e1233eb71125696f5aa39d
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 64e784ec7313dfa778ee39f6e1f52e7c09fcfd95
+ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383135"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86384822"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Technical Preview voor Configuration Manager
 
@@ -91,9 +91,10 @@ Micro soft biedt ondersteuning voor elke technische preview-versie tot drie opee
 
 ### <a name="active-baseline-versions"></a>Actieve basislijn versies
 
-Installeer een basislijn versie van Maxi maal één jaar na de release. Gebruik de meest recente basislijn versie wanneer u een nieuwe Technical Preview-site installeert.
+Installeer een basislijn versie van Maxi maal één jaar na de release. Gebruik de meest recente basislijn versie wanneer u een nieuwe Technical Preview-site installeert. De volgende Configuration Manager Technical Preview-versies van branches zijn beschikbaar als updates in de-console en als nieuwe basislijn versies:
 
-- **Technical Preview-versie 2002**: de Configuration Manager Technical Preview-vertakking versie 2002 is beschikbaar als een update in de console en als nieuwe basislijn versie.
+- **Technical Preview-versie 2007**
+- **Technical Preview-versie 2002**
 
 Down load een basislijn versie van het [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
 
@@ -116,25 +117,17 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](2020/technical-preview-2006.md) <!--ID-->
+<!-- - [title](2020/technical-preview-2007.md) <!--ID-->
 
 De volgende functies zijn beschikbaar met de meest recente versie van Configuration Manager Technical Preview:
 
-### <a name="technical-preview-version-2006"></a>Technical Preview-versie 2006
+### <a name="technical-preview-version-2007"></a>Technical Preview-versie 2007
 
-- [De app Bedrijfsportal gebruiken op gezamenlijk beheerde apparaten](2020/technical-preview-2006.md#bkmk_portal) <!--3601237-->
-- [Verbeteringen in beschik bare apps via CMG](2020/technical-preview-2006.md#bkmk_availapp) <!--7033501-->
-- [Intranet-clients kunnen een CMG-software-update punt gebruiken](2020/technical-preview-2006.md#bkmk_cmg-sup) <!--7102873-->
-- [Verbeteringen in taken reeksen via CMG](2020/technical-preview-2006.md#bkmk_osdcmg) <!--6983320-->
-- [Beheer inzichten die u kunt optimaliseren voor externe werk nemers](2020/technical-preview-2006.md#bkmk_wfhmi) <!--6982226-->
-- [Verbeteringen voor het grens type van de VPN-verbinding](2020/technical-preview-2006.md#bkmk_vpn) <!--7020519-->
-- [Tenant bijvoegen: verbeteringen aan Configuration Manager acties in het beheer centrum van micro soft Endpoint Manager](2020/technical-preview-2006.md#bkmk_apps) <!--7518897-->
-- [CMG-ondersteuning voor Endpoint Protection-beleid](2020/technical-preview-2006.md#bkmk_epcmg) <!--4773948-->
-- [Eerder gemaakte Azure AD-toepassing importeren tijdens het voorbereiden van de Tenant bijvoegen](2020/technical-preview-2006.md#bkmk_aad-app) <!--6479246-->
-- [Verbeteringen in de client upgrade voor een verbinding met een Data limiet](2020/technical-preview-2006.md#bkmk_meter) <!--6976145-->
-- [Verbeteringen voor het beheren van het opnieuw opstarten van apparaten](2020/technical-preview-2006.md#bkmk_restart) <!--3601213-->
-- [Verbeterde ondersteuning voor virtueel bureau blad van Windows](2020/technical-preview-2006.md#bkmk_wvd) <!--6527576-->
-- [Directe koppelingen naar Configuration Manager Community-hub-items](2020/technical-preview-2006.md#bkmk_deeplink) <!--4224406-->
+- [Tenant bijvoegen: hardware-inventaris weer geven in micro soft Endpoint Manager-beheer centrum](2020/technical-preview-2007.md#bkmk_mem) <!--6479284-->
+- [Verbeteringen in het dash board van client gegevens bronnen](2020/technical-preview-2007.md#bkmk_content) <!--7102084-->
+- [Het letter type met de vaste breedte wordt nu in sommige console gebieden gebruikt](2020/technical-preview-2007.md#bkmk_font) <!--7632637-->
+- [Grootte van taken reeks beleid beheren](2020/technical-preview-2007.md#bkmk_tspol) <!--6888853-->
+- [Verbeteringen in de tijd lijn van het apparaat in het beheer centrum](2020/technical-preview-2007.md#bkmk_timeline)<!--7141381-->
 
 > [!NOTE]
 > Functies die beschikbaar waren in een eerdere versie van de Technical Preview blijven beschikbaar in latere versies. Op dezelfde manier blijven functies die worden toegevoegd aan de Configuration Manager huidige vertakking beschikbaar in de vertakking Technical Preview.
@@ -151,6 +144,22 @@ De volgende functies zijn uitgebracht met eerdere versies van de Configuration M
 
 > [!TIP]
 > Wanneer er een nieuwe huidige branch-versie beschikbaar is, worden de functies die beschikbaar zijn in die versie weer gegeven in het laatste artikel *Wat is er nieuw* . Zie [Wat is er nieuw in incrementele versies](../plan-design/changes/whats-new-incremental-versions.md#supported-versions)? voor meer informatie.
+
+### <a name="technical-preview-version-2006"></a>Technical Preview-versie 2006
+
+- [De app Bedrijfsportal gebruiken op gezamenlijk beheerde apparaten](2020/technical-preview-2006.md#bkmk_portal) <!--3601237-->
+- [Verbeteringen in beschik bare apps via CMG](2020/technical-preview-2006.md#bkmk_availapp) <!--7033501-->
+- [Intranet-clients kunnen een CMG-software-update punt gebruiken](2020/technical-preview-2006.md#bkmk_cmg-sup) <!--7102873-->
+- [Verbeteringen in taken reeksen via CMG](2020/technical-preview-2006.md#bkmk_osdcmg) <!--6983320-->
+- [Beheer inzichten die u kunt optimaliseren voor externe werk nemers](2020/technical-preview-2006.md#bkmk_wfhmi) <!--6982226-->
+- [Verbeteringen voor het grens type van de VPN-verbinding](2020/technical-preview-2006.md#bkmk_vpn) <!--7020519-->
+- [Tenant bijvoegen: verbeteringen aan Configuration Manager acties in het beheer centrum van micro soft Endpoint Manager](2020/technical-preview-2006.md#bkmk_apps) <!--7518897-->
+- [CMG-ondersteuning voor Endpoint Protection-beleid](2020/technical-preview-2006.md#bkmk_epcmg) <!--4773948-->
+- [Eerder gemaakte Azure AD-toepassing importeren tijdens het voorbereiden van de Tenant bijvoegen](2020/technical-preview-2006.md#bkmk_aad-app) <!--6479246-->
+- [Verbeteringen in de client upgrade voor een verbinding met een Data limiet](2020/technical-preview-2006.md#bkmk_meter) <!--6976145-->
+- [Verbeteringen voor het beheren van het opnieuw opstarten van apparaten](2020/technical-preview-2006.md#bkmk_restart) <!--3601213-->
+- [Verbeterde ondersteuning voor virtueel bureau blad van Windows](2020/technical-preview-2006.md#bkmk_wvd) <!--6527576-->
+- [Directe koppelingen naar Configuration Manager Community-hub-items](2020/technical-preview-2006.md#bkmk_deeplink) <!--4224406-->
 
 ### <a name="technical-preview-version-2005"></a>Technical Preview-versie 2005
 

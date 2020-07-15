@@ -3,13 +3,13 @@ author: mestew
 ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
-ms.date: 06/05/2020
-ms.openlocfilehash: 3672127798b66d857b4a1dbd5014c02dfed8a7ee
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.date: 07/13/2020
+ms.openlocfilehash: 80302a1c369c36a08cc1a55e20cf339dbc8d2883
+ms.sourcegitcommit: 6d987bb69d0eb9955a3003202864f58d6aaa426a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84466854"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381042"
 ---
 <!--This file is shared by the CMPivot overview articles for both Microsoft Endpoint Manager tenant attach and Configuration Manager-->
 
@@ -20,7 +20,7 @@ Query's kunnen worden gebruikt om termen te zoeken, trends te identificeren, pat
 In het volgende voor beeld is de entiteit `CCMRecentlyUsedApplications` (een verwijzing naar de recent gebruikte toepassingen) en de operator is waar (die records uit de invoer uitfiltert op basis van een predikaat per record):
 
 ```
-CCMRecentlyUsedApplications | where CompanyName like '%Microsoft%'
+CCMRecentlyUsedApplications | where CompanyName like '%Microsoft%' | project CompanyName, ExplorerFileName, LastUsedTime, LaunchCount, FolderPath
 ```
 
 ## <a name="entities"></a>Entiteiten
@@ -68,7 +68,7 @@ Entiteiten zijn objecten die kunnen worden opgevraagd van de client. Momenteel w
 |EPStatus|Status van de antimalware-software op de computer|
 |EventLog ()|Gebeurtenissen binnen 24 uur (standaard) vanuit een gebeurtenis logboek|
 |Bestand ()|Informatie over een specifiek bestand|
-|Bestands share|Informatie over de actieve bestands share|
+|Bestandsshare|Informatie over de actieve bestands share|
 |Firmware|Firmware|
 |IDEController|IDE-controller|
 |InstalledExecutable|Geïnstalleerd uitvoerbaar bestand|
@@ -189,9 +189,9 @@ U kunt tabel operators gebruiken om gegevens stromen te filteren, samen te vatte
 |sorteren op|Sorteer de rijen van de invoer tabel in volg orde van een of meer kolommen|
 |project|De kolommen selecteren die u wilt opnemen, de naam ervan wijzigen of verwijderen, en nieuwe berekende kolommen invoegen|
 |samenvatten|Hiermee wordt een tabel gegenereerd waarin de inhoud van de invoer tabel wordt geaggregeerd|
-|Houd|Naar het opgegeven aantal rijen retour neren|
+|take|Naar het opgegeven aantal rijen retour neren|
 |top|Retourneert de eerste N records gesorteerd op de opgegeven kolommen|
-|waarbij het volgende geldt|Hiermee wordt een tabel gefilterd op de subset rijen die voldoen aan een predikaat|
+|waar|Hiermee wordt een tabel gefilterd op de subset rijen die voldoen aan een predikaat|
 
 ## <a name="scalar-operators"></a>Scalaire Opera tors
 
@@ -212,7 +212,7 @@ De volgende tabel bevat een overzicht van Opera tors:
 |%|Modulo|`2 % 1`|
 |zo|Aan de linkerkant (LHS) bevat een overeenkomst voor de rechter kant (RHS)|`'abc' like '%B%'`|
 |! like|LHS bevat geen overeenkomst voor RHS|`'abc' !like '_d_'`|
-|bevat|RHS treedt op als een subreeks van LHS|`'abc' contains 'b'`|
+|contains|RHS treedt op als een subreeks van LHS|`'abc' contains 'b'`|
 |! bevat|RHS vindt niet plaats in LHS|`'team' !contains 'i'`|
 |startsWith|RHS is een initiële subreeks van LHS|`'team' startswith 'tea'`|
 |! startsWith|RHS is geen initiële subreeks van LHS|`'abc' !startswith 'bc'`|

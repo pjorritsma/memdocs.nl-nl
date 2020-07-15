@@ -2,7 +2,7 @@
 title: Windows-apparaten upgraden naar een andere versie
 titleSuffix: Configuration Manager
 description: Gebruik Configuration Manager om Windows 10-apparaten automatisch te upgraden naar een andere Windows-editie.
-ms.date: 09/03/2019
+ms.date: 07/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b0c9db74-841e-46eb-8924-957cde968bf7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 57f8c503d8a8ac54604a2435641bb29d0b4a1847
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 7a82a635eafcc0ecb5251457db9d4fbb301fce33
+ms.sourcegitcommit: 1edcfb3ce4350ba1a6f36a6150e86301d35c631b
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240674"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86390837"
 ---
 # <a name="upgrade-windows-devices-to-a-new-edition-with-configuration-manager"></a>Windows-apparaten upgraden naar een nieuwe versie met Configuration Manager
 
@@ -37,7 +37,7 @@ Voordat u begint met het upgraden van apparaten naar de nieuwste versie, control
 
 - Voor desktop-edities van Windows 10: een geldige product code voor de nieuwe versie van Windows op alle apparaten waarop het beleid is gericht. Deze product code kan een meervoudige activerings code (MAK) of een algemene volume licentie code (GVLK) zijn. Een GVLK wordt ook wel een configuratie sleutel voor de KMS-client (Key Management service) genoemd. Zie [volume activering plannen](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client)voor meer informatie. Zie [bijlage a](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) van de Windows Server-activerings handleiding voor een lijst met installatie sleutels voor KMS-clients. <!--496871-->  
 
-- Voor Windows 10 Mobile: een XML-licentie bestand van de Microsoft Volume Licensing Service Center (VLSC). Dit bestand bevat de licentie gegevens voor de nieuwe versie van Windows op alle apparaten waarop het beleid is gericht.
+- Voor Windows 10 Mobile: een XML-licentie bestand van de Microsoft Volume Licensing Service Center (VLSC). Dit bestand bevat de licentie gegevens voor de nieuwe versie van Windows op alle apparaten waarop het beleid is gericht. Down load het ISO-bestand voor **Windows 10 Mobile Enter prise**, dat de licentie-XML bevat.<!-- SCCMDocs#2033 -->
 
 - Als u dit beleids type wilt beheren, moet u de beveiligingsrol **volledige beheerder** Configuration Manager hebben.
 

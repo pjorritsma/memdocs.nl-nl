@@ -2,7 +2,7 @@
 title: SQL Server Always On
 titleSuffix: Configuration Manager
 description: Gebruik van een SQL Server always on-beschikbaarheids groep plannen met Configuration Manager
-ms.date: 07/26/2019
+ms.date: 07/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 576f909be15a35f4c29e803236c220cdde33c0ac
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 9ce8c10d9d59d97caa53ece12dd43d90c78546bb
+ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383152"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86384839"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Het gebruik van SQL Server AlwaysOn-beschikbaarheids groepen met Configuration Manager voorbereiden
 
@@ -247,6 +247,9 @@ Elk lid van een replica moet de volgende configuratie hebben:
 #### <a name="replica-member-location"></a>Locatie van replica-lid
 
 Host alle replica's in een beschikbaarheids groep op locatie of host deze allemaal op Microsoft Azure. Een groep die een on-premises lid bevat en een lid in azure, wordt niet ondersteund.
+
+> [!NOTE]
+> Als u een virtuele machine van Azure gebruikt voor de SQL-Server, schakelt u **zwevende IP**in. Zie [een Load Balancer configureren voor een SQL Server AlwaysOn-beschikbaarheids groep in virtuele machines van Azure](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/availability-group-load-balancer-portal-configure)voor meer informatie.<!-- SCCMDocs#1928 -->
 
 Configuration Manager Setup moet verbinding maken met elke replica. Wanneer u een beschikbaarheids groep in azure instelt en de groep zich achter een interne of externe load balancer bevindt, opent u de volgende standaard poorten:
 

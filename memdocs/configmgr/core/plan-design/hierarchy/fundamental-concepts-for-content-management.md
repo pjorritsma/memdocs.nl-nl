@@ -2,7 +2,7 @@
 title: De grondbeginselen van inhoudsbeheer
 titleSuffix: Configuration Manager
 description: Gebruik hulpprogram ma's en opties in Configuration Manager voor het beheren van de inhoud die u implementeert.
-ms.date: 12/17/2019
+ms.date: 07/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ffd6487297bb682ef9bda7c5bf5ee9cb3beede15
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: d8f29ed1e3201da139daeaa1fadca739ff44dc8e
+ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85590453"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86384941"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Basis concepten voor inhouds beheer in Configuration Manager
 
@@ -85,7 +85,7 @@ De volgende lijsten geven een overzicht van de verschillen tussen *binary Differ
 - Verschillen op *blok*niveau
 - Altijd ingeschakeld voor apps
 - Optioneel voor oudere pakketten
-- Als er al een bestand op het distributie punt bestaat en er een wijziging is, gebruikt de site BDR om de wijziging op blok niveau te repliceren in plaats van het hele bestand.
+- Als er al een bestand op het distributie punt bestaat en er een wijziging is, gebruikt de site BDR om de wijziging op blok niveau te repliceren in plaats van het hele bestand. Dit gedrag geldt alleen wanneer u het object inschakelt voor het gebruik van BDR.<!-- SCCMDocs#2026 -->
 
 #### <a name="summary-of-delta-replication"></a>Samen vatting van Delta replicatie
 
@@ -116,7 +116,7 @@ Gebruik de volgende tabel om de belangrijkste functies van deze technologieën t
 | Grootte van beheer cache op schijf | Ja | Ja | Ja |
 | Detectie van peer-bronnen | Hand matig (client instelling) | Automatisch | Automatisch |
 | Peer-detectie | Via beheer punt met behulp van grens groepen | Cloud service uitvoeren | Uitzenden |
-| Rapporten | Dash board client gegevens bronnen | Dash board client gegevens bronnen | Dash board client gegevens bronnen |
+| Rapportage | Dash board client gegevens bronnen | Dash board client gegevens bronnen | Dash board client gegevens bronnen |
 | Besturings element voor WAN-gebruik | Grensgroepen | GroupID | Alleen subnet |
 | Ondersteunde inhoud | Alle ConfigMgr-inhoud | Windows-updates, stuur Programma's, Store-apps | Alle ConfigMgr-inhoud |
 | Beleidsbeheer | Instellingen voor client agent | Instellingen van client agent (gedeeltelijk) | Instellingen voor client agent |
@@ -220,7 +220,9 @@ Op de volgende locaties wordt door clients inhoud opgehaald:
 
 ## <a name="content-source-priority"></a>Prioriteit van inhouds bron
 
-Wanneer een client inhoud nodig heeft, wordt er een aanvraag voor een inhouds locatie naar het beheer punt gemaakt. Het beheer punt retourneert een lijst met bron locaties die geldig zijn voor de aangevraagde inhoud. Deze lijst varieert, afhankelijk van het specifieke scenario, gebruikte technologieën, site ontwerp, grens groepen en implementatie-instellingen. De volgende lijst bevat alle mogelijke inhouds bron locaties die een client kan gebruiken, in de volg orde waarin deze de prioriteit krijgt:  
+Wanneer een client inhoud nodig heeft, wordt er een aanvraag voor een inhouds locatie naar het beheer punt gemaakt. Het beheer punt retourneert een lijst met bron locaties die geldig zijn voor de aangevraagde inhoud. Deze lijst varieert, afhankelijk van het specifieke scenario, gebruikte technologieën, site ontwerp, grens groepen en implementatie-instellingen. Wanneer bijvoorbeeld een taken reeks wordt uitgevoerd, is de volledige Configuration Manager-client niet altijd actief, waardoor het gedrag kan verschillen.<!-- SCCMDocs#1960 -->
+
+De volgende lijst bevat alle mogelijke inhouds bron locaties die de Configuration Manager-client kan gebruiken, in de volg orde waarin deze de prioriteit krijgt:  
 
 1. Het distributie punt op dezelfde computer als de client
 2. Een peer bron in hetzelfde subnet van het netwerk

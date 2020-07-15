@@ -2,7 +2,7 @@
 title: Client status configureren
 titleSuffix: Configuration Manager
 description: Selecteer client status instellingen in Configuration Manager.
-ms.date: 04/23/2017
+ms.date: 07/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,100 +10,100 @@ ms.assetid: a2275ba2-c83d-43e7-90ed-418963a707fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5bb77e1e9f55919a03368d549946ee4dd1cda58a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a352e53a672f7fb47416214884fe7adf0fb829cc
+ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713574"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86384907"
 ---
 # <a name="how-to-configure-client-status-in-configuration-manager"></a>De client status in Configuration Manager configureren
 
 *Van toepassing op: Configuration Manager (huidige vertakking)*
 
-Voordat u Configuration Manager client status kunt bewaken en problemen die worden gevonden, moet u uw site configureren om de para meters op te geven die worden gebruikt om clients als inactief te markeren en opties te configureren om u te waarschuwen als client activiteit onder een opgegeven drempel waarde valt. U kunt ook uitschakelen dat computers automatisch problemen oplossen die worden gevonden door de client status.  
+Configureer de client status instellingen van de site voordat u Configuration Manager-clients kunt bewaken en problemen wilt oplossen. Met deze instellingen geeft u de para meters op die de site gebruikt om-clients als inactief te markeren. Configureer ook opties om u te waarschuwen als client activiteit onder een opgegeven drempel waarde valt.
 
-##  <a name="to-configure-client-status"></a><a name="BKMK_1"></a>De client status configureren  
+## <a name="configure-client-status"></a>Client status configureren
 
-1.  Klik in de Configuration Manager-console op **bewaking**.  
+1. Ga in de Configuration Manager-console naar de werk ruimte **bewaking** en selecteer het knoop punt **client status** . Op het tabblad **Start** van het lint selecteert u **client status instellingen**in de groep **client status** .
 
-2.  Klik in de werk ruimte **bewaking** op **client status**en klik vervolgens op het tabblad **Start** in de groep **client status** op **client status instellingen**.  
+1. Configureer de volgende instellingen:
 
-3.  Geef in het dialoog venster **Eigenschappen van client status instellingen** de volgende waarden op om client activiteiten te bepalen:  
+    > [!NOTE]
+    > Als een client niet voldoet aan een van de instellingen, markeert de site deze als inactief.
 
-    > [!NOTE]  
-    >  Als aan geen van de instellingen wordt voldaan, wordt de client als inactief gemarkeerd.  
+    - **Client beleids aanvragen gedurende de volgende dagen:** Geef op hoeveel dagen sinds de client beleid heeft aangevraagd van de site. De standaard waarde is `7` dagen.
 
-    -   **Client beleids aanvragen gedurende de volgende dagen:** Geef op hoeveel dagen geleden een client beleid heeft aangevraagd. De standaardwaarde is **7** dagen.  
+      Vergelijk deze waarde met de instelling voor het **polling interval voor client beleid** in de **client beleids** groep van client instellingen. De standaard waarde is 60 minuten. Met andere woorden, een client moet elk uur de site controleren op beleid. Als er na een week geen beleid wordt aangevraagd, markeert de site dit als inactief.
 
-    -   **Heartbeat-detectie gedurende de volgende dagen:** Geef op hoeveel dagen geleden de client computer een heartbeat-detectie record naar de site database heeft verzonden. De standaardwaarde is **7** dagen.  
+    - **Heartbeat-detectie gedurende de volgende dagen:** Geef op hoeveel dagen geleden de client een heartbeat-detectie record naar de site heeft verzonden. De standaard waarde is `7` dagen.
 
-    -   **Hardware-inventarisatie gedurende de volgende dagen:** Geef op hoeveel dagen geleden de client computer een hardware-inventarisatie record naar de site database heeft verzonden. De standaardwaarde is **7** dagen.  
+      Vergelijk deze waarde met de planning voor de [heartbeat-detectie methode](../../servers/deploy/configure/about-discovery-methods.md). De site voert standaard eenmaal per week heartbeat-detectie uit.
 
-    -   **Software-inventarisatie gedurende de volgende dagen:** Geef op hoeveel dagen geleden de client computer een software-inventarisatie record naar de site database heeft verzonden. De standaardwaarde is **7** dagen.  
+    - **Hardware-inventarisatie gedurende de volgende dagen:** Geef het aantal dagen op sinds de client een hardware-inventarisatie record naar de site heeft verzonden. De standaard waarde is `7` dagen.
 
-    -   **Status berichten gedurende de volgende dagen:** Geef op hoeveel dagen geleden de client computer status berichten naar de site database heeft verzonden. De standaardwaarde is **7** dagen.  
+      Vergelijk deze waarde met de instelling voor de **Hardware-inventarisatie planning** in de **Hardware-inventarisatie** groep van client instellingen. De standaard waarde is zeven dagen.
 
-4.  Geef in het dialoog venster **Eigenschappen van client status instellingen** de volgende waarde op om te bepalen hoe lang geschiedenis gegevens van de client status behouden moeten blijven:  
+    - **Software-inventarisatie gedurende de volgende dagen:** Geef het aantal dagen op sinds de client een software-inventarisatie record naar de site heeft verzonden. De standaard waarde is `7` dagen.
 
-    -   **Geschiedenis van client status bewaren gedurende het volgende aantal dagen:** Geef op hoelang u wilt dat de geschiedenis van de client status in de site database blijft. De standaard waarde is **31** dagen.  
+      Vergelijk deze waarde met de instelling **software-inventarisatie en bestands verzameling** in de **software-inventarisatie** groep van client instellingen. De standaard waarde is zeven dagen.
 
-5.  Klik op **OK** om de eigenschappen op te slaan en het dialoog venster **Eigenschappen van client status instellingen** te sluiten.  
+    - **Status berichten gedurende de volgende dagen:** Geef op hoeveel dagen geleden de client status berichten naar de site heeft verzonden. De standaard waarde is `7` dagen. De client kan status berichten verzenden voor verschillende soorten activiteiten, zoals het uitvoeren van een taken reeks. De site verwijdert oude status berichten als onderdeel van de onderhouds taak en **verwijdert verouderde status berichten**.
 
-##  <a name="to-configure-the-schedule-for-client-status"></a><a name="BKMK_Schedule"></a>Het schema voor de client status configureren  
+1. Geef de volgende waarde op om te bepalen hoelang de site geschiedenis gegevens van de client status houdt:
 
-1.  Klik in de Configuration Manager-console op **bewaking**.  
+    - **Geschiedenis van client status bewaren gedurende het volgende aantal dagen:** De site houdt standaard informatie over de client status voor `31` dagen. Deze instelling heeft geen invloed op het gedrag van de client of de site. Dit is vergelijkbaar met een onderhouds taak voor de geschiedenis van de client status.
 
-2.  Klik in de werk ruimte **bewaking** op **client status**en klik vervolgens op het tabblad **Start** in de groep **client status** op **client status update plannen**.  
+## <a name="configure-the-schedule"></a>De planning configureren
 
-3.  Configureer in het dialoog venster **client status update plannen** het interval waarvoor u de client status wilt bijwerken en klik vervolgens op OK.  
+1. Ga in de Configuration Manager-console naar de werk ruimte **bewaking** en selecteer het knoop punt **client status** . Selecteer op het tabblad **Start** van het lint in de groep **client status** de optie **Schedule client status update**.
 
-    > [!NOTE]  
-    >  Wanneer u de planning voor client status updates wijzigt, wordt de update pas van kracht nadat de volgende geplande client status update (voor het eerder geconfigureerde schema) is uitgevoerd.  
+1. Configureer het interval waarmee de client status moet worden bijgewerkt.
 
-##  <a name="to-configure-alerts-for-client-status"></a><a name="BKMK_2"></a>Waarschuwingen voor de client status configureren  
+    > [!NOTE]
+    > Wanneer u het schema voor client status updates wijzigt, wordt dit pas van kracht nadat de volgende geplande client status is bijgewerkt volgens het vorige schema.
 
-1. Klik op **Activa en naleving**op de Configuration Manager-console.  
+## <a name="configure-alerts"></a>Waarschuwingen configureren
 
-2. Klik op **Apparaatverzamelingen** in de werkruimte **Activa en naleving**.  
+1. Ga in de Configuration Manager-console naar de werk ruimte **activa en naleving** en selecteer het knoop punt **Apparaatsets** .
 
-3. Selecteer in de lijst **Apparaatverzamelingen** de verzameling waarvoor u waarschuwingen wilt configureren en klik vervolgens op het tabblad **Start** in de groep **Eigenschappen** op **Eigenschappen**.  
+1. Selecteer de verzameling waarvoor u waarschuwingen wilt configureren. Klik op het tabblad **Start** van het lint in de groep **Eigenschappen** op **Eigenschappen**.
 
-   > [!NOTE]  
-   >  U kunt geen waarschuwingen voor gebruikersverzamelingen configureren.  
+    > [!NOTE]
+    > U kunt geen waarschuwingen voor gebruikers verzamelingen configureren.
 
-4. Klik op het tabblad **waarschuwingen** van het**Properties** **Add** <em> &lt;dialoog\>venster Eigenschappen van verzamelings naam</em>op toevoegen.  
+1. Ga naar het tabblad **waarschuwingen** en selecteer **toevoegen**.
 
-   > [!NOTE]  
-   >  Het tabblad **Waarschuwingen** is alleen zichtbaar als aan de beveiligingsrol waaraan u gekoppeld bent machtigingen voor waarschuwingen zijn toegewezen.  
+   > [!TIP]
+   > U kunt het tabblad **waarschuwingen** alleen weer geven als uw beveiligingsrol machtigingen heeft voor waarschuwingen.
 
-5. Geef in het dialoogvenster **Nieuwe verzamelingmeldingen toevoegen** op welke meldingen moeten worden gegenereerd wanneer clientstatuswaarden onder een bepaalde drempelwaarde vallen en klik vervolgens op **OK**.  
+    Kies de waarschuwingen die de site moet genereren voor de drempel waarden voor de client status en selecteer **OK**.
 
-6. Selecteer elke clientstatuswaarschuwing in de lijst **Voorwaarden** van het tabblad **Waarschuwingen** en geef vervolgens de volgende gegevens op.  
+1. Selecteer elke client status waarschuwing in de lijst **voor waarden** van het tabblad **waarschuwingen** en geef vervolgens de volgende gegevens op:
 
-   -   **Naam van waarschuwing** : accepteer de standaard naam of voer een nieuwe naam in voor de waarschuwing.  
+    - **Naam van waarschuwing**: accepteer de standaard naam of voer een nieuwe naam in voor de waarschuwing.
 
-   -   **Ernst van waarschuwing** : Kies in de vervolg keuzelijst het waarschuwings niveau dat wordt weer gegeven in de Configuration Manager-console.  
+    - **Ernst van waarschuwing**: Kies het waarschuwings niveau dat door de Configuration Manager-console wordt weer gegeven.
 
-   -   **Waarschuwing activeren** : Geef het drempel percentage voor de waarschuwing op.  
+    - **Waarschuwing activeren**: Geef het drempel percentage voor de waarschuwing op.
 
-7. Klik op **OK** om het**Properties** <em> &lt;dialoog venster\>eigenschappen van verzamelings naam</em>te sluiten.  
+## <a name="automatic-remediation-exclusion"></a>Uitsluiting van automatisch herstel
 
-##  <a name="to-exclude-computers-from-automatic-remediation"></a><a name="BKMK_3"></a>Computers uitsluiten van automatisch herstel  
+1. Open de REGI ster-editor op de client computer waarop u automatisch herstel wilt uitschakelen.
 
-1. Open de REGI ster-editor op de client computer waarvoor u automatisch herstel wilt uitschakelen.  
+    > [!WARNING]
+    > Als u de REGI ster-editor onjuist gebruikt, kunt u ernstige problemen veroorzaken waardoor u Windows opnieuw moet installeren. Micro soft kan niet garanderen dat u problemen kunt oplossen die het gevolg zijn van een onjuist gebruik van de REGI ster-editor. Gebruik het op eigen risico.
 
-   > [!WARNING]  
-   >  Als u de REGI ster-editor onjuist gebruikt, kunt u ernstige problemen veroorzaken waardoor u het besturings systeem opnieuw moet installeren. Microsoft biedt geen garantie dat u problemen kunt oplossen die veroorzaakt worden door onjuist gebruik van de Registry Editor. Gebruik de Registry Editor op eigen risico.  
+1. Navigeer naar de register sleutel **HKEY_LOCAL_MACHINE \software\microsoft\ccm\ccmeval**.
 
-2. Ga naar **HKEY_LOCAL_MACHINE \software\microsoft\ccm\ccmeval\notifyonly**.  
+1. Wijzig de waarde voor de vermelding **NotifyOnly** :
 
-3. Voer een van de volgende waarden in voor deze register sleutel:  
+    - `TRUE`: De client herstelt geen problemen die worden gevonden. De site waarschuwt u nog steeds in de werk ruimte **bewaking** over eventuele problemen met deze client.
 
-   -   **Waar** : de problemen die worden gevonden door de client computer worden niet automatisch hersteld. Er wordt echter nog steeds een waarschuwing weer in de werk ruimte **bewaking** over problemen met deze client.  
+    - `FALSE`: Dit is de standaard instelling. De client herstelt problemen automatisch wanneer deze worden gevonden en de site waarschuwt u in de werk ruimte **bewaking** .
 
-   -   **Onwaar** : de client computer zal automatisch problemen oplossen wanneer ze worden gevonden en u wordt gewaarschuwd in de werk ruimte **bewaking** . Dit is de standaardinstelling.  
+Wanneer u clients installeert, kunt u deze uitsluiten van automatisch herstel met de **NotifyOnly** -installatie-eigenschap. Zie [over eigenschappen van client installatie](about-client-installation-properties.md)voor meer informatie.
 
-4. Sluit de Register-editor.  
+## <a name="next-steps"></a>Volgende stappen
 
-   U kunt ook clients installeren met behulp van de CCMSetup **NotifyOnly** -installatie-eigenschap om ze uit te sluiten van automatisch herstel. Zie [over eigenschappen van client installatie](../../../core/clients/deploy/about-client-installation-properties.md)voor meer informatie over deze client installatie-eigenschap.  
+[Clients bewaken](../manage/monitor-clients.md)

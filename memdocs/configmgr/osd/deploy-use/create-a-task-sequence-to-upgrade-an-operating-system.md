@@ -2,7 +2,7 @@
 title: Een takenreeks voor een besturingssysteem maken
 titleSuffix: Configuration Manager
 description: Een taken reeks gebruiken om automatisch bij te werken van Windows 7 of hoger naar Windows 10
-ms.date: 07/26/2019
+ms.date: 07/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6ad36978f3f3dc5207068a65d76bf8f5c7c3078c
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 84e6ea21f2bb9627ae6b40c62f8f856fb426bdaf
+ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383237"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86384889"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>Een taken reeks maken om een besturings systeem in Configuration Manager bij te werken
 
@@ -253,13 +253,17 @@ Gebruik de **SMSTSDownloadRetryCount** [taken reeks variabele](../understand/tas
 
     `cmd /c exit %_SMSTSOSUpgradeActionReturnCode%`
 
+    Met deze opdracht wordt de opdracht prompt afgesloten met de opgegeven afsluit code die niet gelijk is aan nul, waarbij de taken reeks een fout beschouwt.
+
 1. Voeg op het tabblad **Opties** de volgende voor waarde toe:
 
     `Task Sequence Variable _SMSTSOSUpgradeActionReturnCode not equals 3247440400`
 
-Deze retour code is het decimale equivalent van MOSETUP_E_COMPAT_SCANONLY (0xC1900210). Dit is een geslaagde compatibiliteits scan zonder problemen. Als de stap *upgrade beoordeling* slaagt en deze code retourneert, slaat de taken reeks deze stap over. Als de evaluatie stap een andere retour code retourneert, mislukt deze stap de taken reeks met de retour code van de Windows Setup compatibiliteits scan. Zie [taken reeks variabelen](../understand/task-sequence-variables.md#SMSTSOSUpgradeActionReturnCode)voor meer informatie over **_SMSTSOSUpgradeActionReturnCode**.
+    Dit betekent dat de taken reeks alleen de stap **opdracht regel uitvoeren uitvoert** als de retour code geen succes code is.
 
-Zie [upgrade van besturings systeem](../understand/task-sequence-steps.md#BKMK_UpgradeOS)voor meer informatie.  
+De retour code `3247440400` is het decimale equivalent van MOSETUP_E_COMPAT_SCANONLY (0xC1900210). Dit is een geslaagde compatibiliteits scan zonder problemen. Als de stap *upgrade beoordeling* slaagt en retourneert `3247440400` , slaat de taken reeks de stap **opdracht regel uitvoeren** over en gaat verder. Als de evaluatie stap een andere retour code retourneert, wordt deze **opdracht regel** stap uitgevoerd. Omdat de opdracht wordt afgesloten met een retour code die niet gelijk is aan nul, mislukt de taken reeks ook. Het taken reeks logboek en status berichten bevatten de retour code van de Windows Setup compatibiliteits scan. Zie [taken reeks variabelen](../understand/task-sequence-variables.md#SMSTSOSUpgradeActionReturnCode)voor meer informatie over **_SMSTSOSUpgradeActionReturnCode**.
+
+Zie de taken reeks stap [besturings systeem bijwerken](../understand/task-sequence-steps.md#BKMK_UpgradeOS) voor meer informatie.
 
 ### <a name="convert-from-bios-to-uefi"></a>Converteren van BIOS naar UEFI
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 0960637f534bfe1361b55b2d63be87abc7894d7b
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: d1e7b2c359e21ac4a12219d27655603954702fa8
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715234"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410862"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Cloud beheer gateway instellen voor Configuration Manager
 
@@ -247,6 +247,9 @@ Nadat u een CMG hebt gemaakt, kunt u enkele instellingen wijzigen. Selecteer de 
 
 - **Certificaat bestand**: Wijzig het Server verificatie certificaat voor de CMG. Deze optie is handig wanneer u het certificaat bijwerkt voordat het verloopt.  
 
+  > [!NOTE]
+  > Wanneer u het Server verificatie certificaat voor de CMG verlengt, is de FQDN die is opgegeven voor de algemene naam (CN) van het certificaat hoofdletter gevoelig.  Als het certificaat dat momenteel in gebruik is, bijvoorbeeld een CN van heeft `https://contoso-cmg.contoso.com` , maakt u het nieuwe certificaat met dezelfde kleine letter cn. De wizard accepteert geen certificaat met de CN `https://CONTOSO-CMG.CONTOSO.COM` .
+
 - **VM-exemplaar**: Wijzig het aantal virtuele machines dat door de service in azure wordt gebruikt. Met deze instelling kunt u de service dynamisch omhoog of omlaag schalen op basis van gebruik of kosten overwegingen.  
 
 - **Certificaten**: vertrouwde basis-of tussenliggende CA-certificaten toevoegen of verwijderen. Deze optie is handig bij het toevoegen van nieuwe Ca's of het buiten gebruik stellen van verlopen certificaten.  
@@ -267,7 +270,7 @@ Meer belang rijke wijzigingen, zoals de volgende configuraties, vereisen het opn
 - Abonnement
 - Servicenaam
 - Privé voor open bare PKI
-- Regio
+- Region
 
 Behoud altijd ten minste één actieve CMG voor Internet-clients om bijgewerkte beleids regels te ontvangen. clients op internet kunnen niet communiceren met een verwijderde CMG. Clients weten een nieuw abonnement pas wanneer ze teruggaan naar het intranet. Wanneer u een tweede CMG-exemplaar maakt om de eerste te verwijderen, maakt u ook een ander CMG-verbindings punt.
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 0ef2d09423e7bb51e94cb626bf513aa7e98992c9
-ms.sourcegitcommit: d647eefa23c8849f49584442df568284d51d7525
+ms.openlocfilehash: 09f829bd1695426211ff94381a63b8f23d1b4fe8
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86195647"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86411011"
 ---
 # <a name="what-is-desktop-analytics"></a>Wat is Desktop Analytics?
 
@@ -103,11 +103,11 @@ Als u Desktop Analytics wilt gebruiken, moet u ervoor zorgen dat uw omgeving vol
     - Apparaten moeten ook beschikken over de Configuration Manager-client versie 1902 met update pakket (4500571) of hoger. Zie [Update Configuration Manager](connect-configmgr.md#bkmk_hotfix)voor meer informatie.  
 
     > [!Note]  
-    > Desktop Analytics biedt geen ondersteuning voor upgrades naar Windows 10 Long-term Servicing Channel (LTSC). Zie [Windows as a Service Overview](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel)(Engelstalig) voor meer informatie.
+    > Desktop Analytics biedt geen ondersteuning voor upgrades naar of van Windows 10 Long-term Servicing Channel (LTSC). Zie [Windows as a Service Overview](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel)(Engelstalig) voor meer informatie.
     >
     > Desktop Analytics is ontworpen om het in-place upgrade-scenario het beste te ondersteunen. Als u belang rijke wijzigingen wilt aanbrengen, zoals van 32-bits tot 64-bits architectuur, gebruikt u een Imaging-scenario. Desktop Analytics Insights is nog steeds waardevol in deze klassieke implementatie scenario's voor besturings systemen, maar u kunt de in-place upgrade specifieke richt lijnen negeren. Zie [scenario's voor het implementeren van ENTER prise-besturings systemen met Configuration Manager](../osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems.md)voor meer informatie.
 
-- Diagnostische gegevens van Windows. Raadpleeg de volgende artikelen voor meer informatie:  
+- Diagnostische gegevens van Windows. Raadpleeg voor meer informatie de volgende artikelen:  
 
     - [Niveaus van diagnostische gegevens](enable-data-sharing.md#diagnostic-data-levels)  
 

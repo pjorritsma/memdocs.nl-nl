@@ -1,5 +1,5 @@
 ---
-title: Edge voor iOS en Android beheren met Intune
+title: Microsoft Edge voor iOS en Android beheren met Intune
 titleSuffix: ''
 description: Hanteer het Intune-beveiligings - en configuratiebeleid voor apps met Microsoft Edge voor iOS en Android zodat bedrijfswebsites altijd onder veilige omstandigheden toegankelijk zijn.
 keywords: ''
@@ -63,7 +63,7 @@ Als u de specifieke aanbevelingen voor elk configuratieniveau en de apps die min
 
 Of het apparaat nu wel of niet is ingeschreven in een UEM-oplossing (Unified endpoint Management), er moet een Intune-app-beveiligingsbeleid worden gemaakt voor zowel iOS- als Android-apps, met behulp van de stappen in [App-beveiligingsbeleid maken en toewijzen](app-protection-policies.md). Deze beleidsregels moeten minimaal voldoen aan de volgende voorwaarden:
 
-1. Ze omvatten alle mobiele Microsoft 365-toepassingen, zoals Edge, Outlook, OneDrive, Office of Teams, omdat dit ervoor zorgt dat gebruikers op een veilige manier toegang hebben tot werk- of schoolgegevens binnen elke Microsoft-app.
+1. Ze omvatten alle mobiele Microsoft 365-toepassingen, zoals Microsoft Edge, Outlook, OneDrive, Office of Teams, omdat dit ervoor zorgt dat gebruikers op een veilige manier toegang hebben tot werk- of schoolgegevens binnen elke Microsoft-app.
 
 2. Ze worden toegewezen aan alle gebruikers. Dit zorgt ervoor dat alle gebruikers worden beveiligd, ongeacht of ze Microsoft Edge voor iOS of Android gebruiken.
 

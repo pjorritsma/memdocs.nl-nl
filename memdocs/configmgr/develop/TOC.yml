@@ -1,0 +1,998 @@
+- name: SDK-documentatie voor Configuration Manager
+  href: index.yml
+- name: Overzicht
+  items:
+    - name: Overzicht van Configuration Manager SDK
+      href: core/misc/system-center-configuration-manager-sdk.md
+    - name: Privacy-informatie
+      href: core/misc/privacy/privacy-information.md
+    - name: Wat is er nieuw in SDK
+      href: core/changes/what-s-new-in-the-system-center-configuration-manager-sdk.md
+- name: Vereisten
+  items:
+    - name: Over SDK-vereisten
+      href: core/reqs/about-configuration-manager-sdk-requirements.md
+    - name: Runtime-vereisten client
+      href: core/reqs/client-runtime-requirements.md
+    - name: Runtime-vereisten server
+      href: core/reqs/server-runtime-requirements.md
+    - name: Ontwikkelingsvereisten client
+      href: core/reqs/client-development-requirements.md
+    - name: Ontwikkelingsvereisten server
+      href: core/reqs/server-development-requirements.md
+    - name: SDK-bibliotheken en header-bestanden
+      href: core/reqs/configuration-manager-sdk-libraries-and-header-files.md
+- name: SDK steekproeven
+  href: core/understand/configuration-manager-sdk-samples.md
+- name: Basisprincipes van programmeren
+  items:
+    - name: Aan de slag met het programmeren van Configuration Manager
+      items:
+        - name: Aan de slag met het programmeren van Configuration Manager
+          href: core/understand/getting-started-with-configuration-manager-programming.md
+        - name: Architectuuroverzicht
+          href: core/understand/architectural-overview.md
+        - name: Inleiding tot WBEMTEST
+          href: core/understand/introduction-to-wbemtest.md
+        - name: 'Eenvoudige voorbeelden van lijst maken, maken, wijzigen en verwijderen'
+          href: core/understand/simple-example-of-list--create--modify--and-delete.md
+    - name: Roep de codefragmenten van Configuration Manager op
+      href: core/understand/calling-code-snippets.md
+    - name: Versleutel wachtwoorden of gegevens voor een site
+      href: core/understand/how-to-encrypt-passwords-or-data-for-a-site.md
+    - name: Errors
+      items:
+        - name: Over fouten
+          href: core/understand/about-configuration-manager-errors.md
+        - name: Behandel asynchrone fouten met behulp van beheerde code
+          href: core/understand/how-to-handle-configuration-manager-asynchronous-errors-by-using-managed-code.md
+        - name: Behandel synchrone fouten met behulp van beheerde code
+          href: core/understand/how-to-handle-configuration-manager-synchronous-errors-by-using-managed-code.md
+        - name: Behandel asynchrone fouten met WMI
+          href: core/understand/how-to-handle-configuration-manager-asynchronous-errors-by-using-wmi.md
+        - name: Behandel synchrone fouten met WMI
+          href: core/understand/how-to-handle-configuration-manager-synchronous-errors-by-using-wmi.md
+    - name: Objecten
+      items:
+        - name: Over objecten
+          items:
+            - name: Overzicht van objecten
+              href: core/understand/configuration-manager-objects-overview.md
+            - name: Objectbeveiliging
+              href: core/understand/configuration-manager-object-security.md
+            - name: Ingesloten objecten
+              href: core/understand/embedded-objects.md
+            - name: Koppelingsklassen
+              href: core/understand/association-classes.md
+            - name: Datum- en tijdnotaties
+              href: core/understand/date-and-time-formats.md
+            - name: Bitveldeigenschappen
+              href: core/understand/configuration-manager-bit-field-properties.md
+            - name: Luie eigenschappen
+              href: core/understand/configuration-manager-lazy-properties.md
+            - name: Uitgebreide WMI-querytaal
+              href: core/understand/extended-wmi-query-language.md
+            - name: Resultaatsets
+              href: core/understand/result-sets.md
+            - name: Speciale query's
+              href: core/understand/special-queries.md
+        - name: Gebruik objecten met beheerde code
+          items:
+            - name: Een object maken
+              href: core/understand/how-to-create-a-configuration-manager-object-by-using-managed-code.md
+            - name: Een object lezen
+              href: core/understand/how-to-read-a-configuration-manager-object-by-using-managed-code.md
+            - name: Een object wijzigen
+              href: core/understand/how-to-modify-a-configuration-manager-object-by-using-managed-code.md
+            - name: Een object verwijderen
+              href: core/understand/how-to-delete-a-configuration-manager-object-by-using-managed-code.md
+            - name: Voer een asynchrone query uit
+              href: core/understand/how-to-perform-an-asynchronous-query-by-using-managed-code.md
+            - name: Voer een synchrone query uit
+              href: core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-managed-code.md
+            - name: Lees luie eigenschappen
+              href: core/understand/how-to-read-lazy-properties-by-using-managed-code.md
+            - name: Roep een objectklasse-methode aan
+              href: core/understand/how-to-call-a-configuration-manager-object-class-method-by-using-managed-code.md
+        - name: Gebruik objecten met WMI
+          items:
+            - name: Een object maken
+              href: core/understand/how-to-create-a-configuration-manager-object-by-using-wmi.md
+            - name: Een object lezen
+              href: core/understand/how-to-read-a-configuration-manager-object-by-using-wmi.md
+            - name: Een object wijzigen
+              href: core/understand/how-to-modify-a-configuration-manager-object-by-using-wmi.md
+            - name: Een object verwijderen
+              href: core/understand/how-to-delete-a-configuration-manager-object-by-using-wmi.md
+            - name: Voer een synchrone query uit
+              href: core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-wmi.md
+            - name: Voer een asynchrone query uit
+              href: core/understand/how-to-perform-an-asynchronous-configuration-manager-query-by-using-wmi.md
+            - name: Lees luie eigenschappen
+              href: core/understand/how-to-read-lazy-properties-by-using-wmi.md
+            - name: Roep een objectklasse-methode aan
+              href: core/understand/how-to-call-a-configuration-manager-object-class-method-by-using-wmi.md
+    - name: Query's
+      items:
+        - name: Over query's
+          href: core/understand/about-configuration-manager-queries.md
+        - name: Een query uitvoeren
+          href: core/understand/how-to-run-a-query.md
+        - name: Een query maken
+          href: core/understand/how-to-create-a-configuration-manager-query.md
+    - name: SEDO
+      items:
+        - name: SEDO-overzicht
+          href: core/understand/sedo.md
+        - name: Vergrendel een SEDO-geactiveerd object
+          href: core/understand/how-to-acquire-a-lock-on-a-sedo-enabled-object.md
+        - name: Ontgrendel een SEDO-geactiveerd object
+          href: core/understand/how-to-release-a-lock-on-a-sedo-enabled-object.md
+    - name: Schema's
+      items:
+        - name: Over clientschema's
+          href: core/understand/about-configuration-manager-schedules.md
+        - name: Een planningstoken maken
+          href: core/understand/how-to-create-a-schedule-token.md
+    - name: Sitebesturingsbestand
+      items:
+        - name: Over het sitebesturingsbestand
+          href: core/understand/about-the-configuration-manager-site-control-file.md
+        - name: Lees en schrijf met beheerde code
+          href: core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md
+        - name: Lees en schrijf met WMI
+          href: core/understand/how-to-read-and-write-to-the-site-control-file-by-using-wmi.md
+        - name: Een ingesloten eigenschappenlijst van een sitebesturingsbestand lezen
+          href: core/understand/how-to-read-a-configuration-manager-site-control-file-embedded-property-list.md
+        - name: Implementeer een sitesysteemrol
+          href: core/understand/how-to-deploy-a-site-system-role--example---fallback-status-point-.md
+    - name: Klassenschema
+      items:
+        - name: Overzicht van klassenschema
+          href: core/understand/configuration-manager-class-schema.md
+        - name: Datum- en tijdnotaties
+          href: core/understand/date-and-time-formats.md
+        - name: Bitveld-eigenschappen interpreteren
+          href: core/understand/interpreting-bitfield-properties.md
+        - name: Luie eigenschappen
+          href: core/understand/lazy-properties.md
+        - name: Veldlengtebeperkingen SMS-provider
+          href: core/understand/sms-provider-field-length-restrictions.md
+    - name: Databaseschema en weergaven
+      items:
+        - name: Over het databaseschema
+          items:
+            - name: Schema-overzicht
+              href: core/understand/configuration-manager-schema-overview.md
+            - name: Schema SQL-weergaven
+              href: core/understand/configuration-manager-schema-sql-views.md
+            - name: Toewijzing schemaweergave
+              href: core/understand/configuration-manager-schema-view-mapping.md
+            - name: Beveiliging SQL-weergaven
+              href: core/understand/sql-view-security.md
+        - name: Een Configuration Manager-weergave weergeven met SQL Server
+          href: core/understand/how-to-see-a-configuration-manager-view-by-using-sql-server.md
+        - name: Maak aangepaste rapporten met behulp van SQL Server-weergaven
+          items:
+            - name: Overzicht
+              href: core/understand/sqlviews/create-custom-reports-using-sql-server-views.md
+            - name: SQL server-weergaven
+              items:
+                - name: Overzicht
+                  href: core/understand/sqlviews/sql-server-views-configuration-manager.md
+                - name: Toepassingsbeheerweergaven
+                  href: core/understand/sqlviews/application-management-views-configuration-manager.md
+                - name: Clientimplementatieweergaven
+                  href: core/understand/sqlviews/client-deployment-views-configuration-manager.md
+                - name: Clientstatusweergaven
+                  href: core/understand/sqlviews/client-status-views-configuration-manager.md
+                - name: Collectieweergaven
+                  href: core/understand/sqlviews/collection-views-configuration-manager.md
+                - name: Weergaven van compliance-instellingen
+                  href: core/understand/sqlviews/compliance-settings-views-configuration-manager.md
+                - name: Content management weergaven
+                  href: core/understand/sqlviews/content-management-views-configuration-manager.md
+                - name: Ontdekkingsweergaven
+                  href: core/understand/sqlviews/discovery-views-configuration-manager.md
+                - name: Endpoint Protection-weergaven
+                  href: core/understand/sqlviews/endpoint-protection-views-configuration-manager.md
+                - name: Inventarisoverzichten
+                  items:
+                    - name: Overzicht van voorraadweergaven
+                      href: core/understand/sqlviews/inventory-views-configuration-manager.md
+                    - name: Weergaven van hardware-inventaris
+                      href: core/understand/sqlviews/hardware-inventory-views-configuration-manager.md
+                    - name: Weergaven van software-inventaris
+                      href: core/understand/sqlviews/software-inventory-views-configuration-manager.md
+                    - name: Asset Intelligence-weergaven
+                      href: core/understand/sqlviews/asset-intelligence-views-configuration-manager.md
+                - name: Migratieweergaven
+                  href: core/understand/sqlviews/migration-views-configuration-manager.md
+                - name: MDM-weergaven
+                  href: core/understand/sqlviews/mobile-device-management-views-configuration-manager.md
+                - name: Weergaven van OS-implementatie
+                  href: core/understand/sqlviews/operating-system-deployment-views-configuration-manager.md
+                - name: Weergaven voor energiebeheer
+                  href: core/understand/sqlviews/power-management-views-configuration-manager.md
+                - name: Queryweergaven
+                  href: core/understand/sqlviews/query-views-configuration-manager.md
+                - name: Rapportageweergaven
+                  href: core/understand/sqlviews/reporting-views-configuration-manager.md
+                - name: Schemaweergaven
+                  href: core/understand/sqlviews/schema-views-configuration-manager.md
+                - name: Beveiligingsweergaven
+                  href: core/understand/sqlviews/security-views-configuration-manager.md
+                - name: Sitebeheerweergaven
+                  href: core/understand/sqlviews/site-admin-views-configuration-manager.md
+                - name: Weergaven van softwaremetingen
+                  href: core/understand/sqlviews/software-metering-views-configuration-manager.md
+                - name: Weergaven van software-updates
+                  href: core/understand/sqlviews/software-updates-views-configuration-manager.md
+                - name: Status- en waarschuwingsweergaven
+                  href: core/understand/sqlviews/status-alert-views-configuration-manager.md
+                - name: Wake On LAN-weergaven
+                  href: core/understand/sqlviews/wake-lan-views-configuration-manager.md
+            - name: Werk met rapporten
+              items:
+                - name: Evaluatie van bestaande rapporten
+                  items:
+                    - name: Evaluatie van het rapport alle verzamelingen
+                      href: core/understand/sqlviews/evaluation-all-collections-report-configuration-manager.md
+                    - name: Evaluatie van het computerinformatierapport
+                      href: core/understand/sqlviews/evaluation-computer-information-report-configuration-manager.md
+                - name: Bekijk de SQL-instructie voor rapporten
+                  href: core/understand/sqlviews/how-to-view-sql-statement-configuration-manager-reports.md
+                - name: Wijzig rapporten
+                  href: core/understand/sqlviews/how-to-modify-configuration-manager-reports.md
+                - name: Maak rapporten
+                  href: core/understand/sqlviews/how-to-create-configuration-manager-reports.md
+                - name: Rapporten uitvoeren
+                  href: core/understand/sqlviews/how-to-run-configuration-manager-reports.md
+                - name: Oefeningen voor het maken van aangepaste rapporten
+                  items:
+                    - name: Oefening 1 - Voer een bestaand rapport uit
+                      href: core/understand/sqlviews/exercise-1-run-existing-configuration-manager-report.md
+                    - name: Oefening 2 - Pas een bestaand rapport aan
+                      href: core/understand/sqlviews/exercise-2-modify-existing-configuration-manager-report.md
+                    - name: Oefening 3 - Maak een nieuw rapport
+                      href: core/understand/sqlviews/exercise-3-create-new-configuration-manager-report.md
+                    - name: Geavanceerde oefening 1 - Maak een nieuw rapport voor compliance-instellingen
+                      href: core/understand/sqlviews/advanced-exercise-1-create-new-report-compliance-settings-configuration-manager.md
+                    - name: Geavanceerde oefening 1 - Oplossing
+                      href: core/understand/sqlviews/advanced-exercise-1-solution-create-new-report-compliance-settings-configuration-manager.md
+                    - name: Geavanceerde oefening 2 - Maak een nieuw rapport voor hardware-inventaristie
+                      href: core/understand/sqlviews/advanced-exercise-2-create-new-report-hardware-inventory-configuration-manager.md
+                    - name: Geavanceerde oefening 2 - Oplossing
+                      href: core/understand/sqlviews/advanced-exercise-2-solution-create-new-report-hardware-inventory-configuration-manager.md
+            - name: Technische referentie voor SQL Server-weergaven
+              items:
+                - name: Voorbeeldquery's met behulp van de SQL-weergaven
+                  items:
+                    - name: Toepassingsbeheer
+                      href: core/understand/sqlviews/sample-queries-application-management-configuration-manager.md
+                    - name: Clientimplementatie
+                      href: core/understand/sqlviews/sample-queries-client-deployment-configuration-manager.md
+                    - name: Clientstatus
+                      href: core/understand/sqlviews/sample-queries-client-status-configuration-manager.md
+                    - name: Verzamelingen
+                      href: core/understand/sqlviews/sample-queries-collections-configuration-manager.md
+                    - name: Instellingen voor naleving
+                      href: core/understand/sqlviews/sample-queries-compliance-settings-configuration-manager.md
+                    - name: Inhoudbeheer
+                      href: core/understand/sqlviews/sample-queries-content-management-configuration-manager.md
+                    - name: Detectie
+                      href: core/understand/sqlviews/sample-queries-discovery-configuration-manager.md
+                    - name: Endpoint Protection
+                      href: core/understand/sqlviews/sample-queries-endpoint-protection-configuration-manager.md
+                    - name: Inventaris
+                      items:
+                        - name: Hardware-inventaris
+                          href: core/understand/sqlviews/sample-queries-hardware-inventory-configuration-manager.md
+                        - name: Software-inventaris
+                          href: core/understand/sqlviews/sample-queries-software-inventory-configuration-manager.md
+                        - name: Asset Intelligence
+                          href: core/understand/sqlviews/sample-queries-asset-intelligence-configuration-manager.md
+                    - name: MDM
+                      href: core/understand/sqlviews/sample-queries-mobile-device-management-configuration-manager.md
+                    - name: Besturingssysteemimplementatie
+                      href: core/understand/sqlviews/sample-queries-operating-system-deployment-configuration-manager.md
+                    - name: Energiebeheer
+                      href: core/understand/sqlviews/sample-queries-power-management-configuration-manager.md
+                    - name: Query's
+                      href: core/understand/sqlviews/sample-queries-for-queries-configuration-manager.md
+                    - name: Beveiliging
+                      href: core/understand/sqlviews/sample-queries-security-configuration-manager.md
+                    - name: Sitebeheer
+                      href: core/understand/sqlviews/sample-queries-site-administration-configuration-manager.md
+                    - name: Softwarelicentiecontrole
+                      href: core/understand/sqlviews/sample-queries-software-metering-configuration-manager.md
+                    - name: Software-updates
+                      href: core/understand/sqlviews/sample-queries-software-updates-configuration-manager.md
+                    - name: Status en meldingen
+                      href: core/understand/sqlviews/sample-queries-status-alerts-configuration-manager.md
+                    - name: Wake on LAN
+                      href: core/understand/sqlviews/sample-queries-wake-lan-views-configuration-manager.md
+                - name: Documentatie over SQL Server voor Configuration Manager-rapporten
+                  items:
+                    - name: Referentie voor SQL-instructies voor rapporten
+                      href: core/understand/sqlviews/sql-statement-reference-configuration-manager-reports.md
+                    - name: Gebruik Query Designer om SQL-rapportages te schrijven
+                      href: core/understand/sqlviews/use-query-designer-write-configuration-manager-report-sql-statements.md
+                    - name: Maak een SQL-instructie met behulp van Query Designer
+                      href: core/understand/sqlviews/how-to-create-sql-statement-using-query-designer.md
+                - name: SMS Provider WMI-schema referentie
+                  items:
+                    - name: Overzicht
+                      href: core/understand/sqlviews/sms-provider-wmi-schema-reference-configuration-manager.md
+                    - name: WMI-naamruimten en klassen voor rapporten
+                      href: core/understand/sqlviews/wmi-namespaces-classes-configuration-manager-reports.md
+            - name: Lijst met rapporten in Configuration Manager
+              href: core/understand/sqlviews/reports-supplied-with-configuration-manager.md
+    - name: SMS-provider
+      items:
+        - name: Over de SMS-provider
+          items:
+            - name: Basisprincipes van SMS-providers
+              href: core/understand/sms-provider-fundamentals.md
+            - name: Grondbeginselen van de WMI-provider
+              href: core/understand/wmi-configuration-manager-provider-fundamentals.md
+            - name: Grondbeginselen van de beheerde SMS-provider
+              href: core/understand/managed-sms-provider-fundamentals-in-configuration-manager.md
+            - name: Configuration Manager-contextkwalificatie
+              href: core/understand/context-qualifiers.md
+            - name: Veldlengtebeperkingen SMS-provider
+              href: core/understand/sms-provider-field-length-restrictions-in-configuration-manager.md
+        - name: Maak verbinding met een SMS-provider met behulp van beheerde code
+          href: core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md
+        - name: Voeg een contextkwalificatie toe met behulp van beheerde code
+          href: core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-managed-code.md
+        - name: Maak verbinding met een SMS-provider via WMI
+          href: core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md
+        - name: Voeg een contextkwalificatie toe met behulp van WMI
+          href: core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md
+    - name: Beveiligde Configuration Manager-toepassingen
+      href: core/understand/securing-configuration-manager-applications.md
+- name: Toepassingsbeheer
+  items:
+    - name: Maak een applicatie met het scriptimplementatietype
+      href: apps/how-to-create-an-application-with-the-script-deployment-type.md
+    - name: Goedkeuringsproces voor toepassingen
+      href: apps/application-approval-process.md
+    - name: Toepassingsbeheeruitbreiding
+      items:
+        - name: Versiebeheer van implementatietype-uitbreiding
+          href: apps/deployment-type-extension-versioning.md
+        - name: Scenario - toepassingsbeheer uitbreiden
+          items:
+            - name: Scenario-overzicht
+              href: apps/extending-application-management-overview.md
+            - name: Maak de aangepaste SDK-assembly
+              items:
+                - name: Definieer de implementatietechnologie
+                  href: apps/how-to-define-the-deployment-technology.md
+                - name: Definieer de hostingtechnologie
+                  href: apps/how-to-define-the-hosting-technology.md
+                - name: Definieer de installatietechnologie
+                  href: apps/how-to-define-the-installer-technology.md
+                - name: Definieer de inhoudimporteur
+                  href: apps/how-to-define-the-content-importer.md
+                - name: Definieer het installatieprogramma
+                  href: apps/how-to-define-the-installer.md
+                - name: Definieer de bronnen
+                  href: apps/how-to-define-the-resources.md
+            - name: Maak de XML-registratiebestanden
+              items:
+                - name: Definieer het registratiebestand voor de implementatietechnologie
+                  href: apps/how-to-define-the-deployment-technology-registration-file.md
+                - name: Definieer het registratiebestand voor de hostingtechnologie
+                  href: apps/how-to-define-the-hosting-technology-registration-file.md
+                - name: Definieer het registratiebestand voor de installatietechnologie
+                  href: apps/how-to-define-the-installer-technology-registration-file.md
+            - name: Maak de UI-extensie
+              items:
+                - name: Definieer de UI-uitbreidingsassemblage
+                  href: apps/how-to-define-the-ui-extension-assembly.md
+                - name: Definieer het XML-bestand voor het maken van een toepassingswizard
+                  href: apps/how-to-define-the-create-application-wizard-xml-file.md
+                - name: Definieer het XML-bestand van de wizard voor het maken van een implementatietype
+                  href: apps/how-to-define-the-create-deployment-type-wizard-xml-file.md
+                - name: Definieer het XML-bestand met eigenschappen van het type implementatieblad
+                  href: apps/how-to-define-the-deployment-type-property-sheet-xml-file.md
+            - name: Maak de clientbestanden
+              items:
+                - name: Definieer het AppSynclet MOF-bestand
+                  href: apps/how-to-define-the-appsynclet-mof-file.md
+                - name: Definieer de handler aan de clientzijde
+                  href: apps/how-to-define-the-client-side-handler.md
+            - name: Installeer de extensie voor toepassingsbeheer
+              items:
+                - name: Maak het implementatie-extensie-bestand (cmdtx)
+                  href: apps/how-to-create-the-deployment-type-extension-file-cmdtx.md
+                - name: Maak het Windows-installatiebestand (MSI)
+                  href: apps/how-to-create-the-windows-installer-file-msi.md
+            - name: Controleer de extensie voor toepassingsbeheer
+              href: apps/verifying-the-application-management-extension.md
+- name: Client programmeren
+  items:
+    - name: WMI-programmering van Configuration Manager-clients
+      items:
+        - name: Over WMI-programmering
+          href: core/clients/programming/about-configuration-manager-wmi-programming.md
+        - name: Maak verbinding met de WMI-naamruimte van de client met behulp van System.Management
+          href: core/clients/programming/how-to-connect-to-the-client-wmi-namespace.md
+        - name: Lees een WMI-object met System.Management
+          href: core/clients/programming/how-to-read-a-wmi-object-by-using-system.management.md
+        - name: Voer een synchrone query uit met System.Management
+          href: core/clients/programming/how-to-perform-a-synchronous-query-by-using-system.management.md
+        - name: Voer een asynchrone query uit met System.Management
+          href: core/clients/programming/how-to-perform-an-asynchronous-query-by-using-system.management.md
+        - name: Roep een WMI-klassemethode aan met System.Management
+          href: core/clients/programming/how-to-call-a-wmi-class-method-by-using-system.management.md
+    - name: Voorwaarden voor clientbronnen
+      href: core/clients/programming/client-resource-conditions.md
+    - name: Pas aangepaste clientinstellingen toe
+      href: core/clients/programming/how-to-apply-custom-client-settings.md
+- name: Verzamelingen
+  items:
+    - name: Maak een dynamische collectie
+      href: core/clients/collections/how-to-create-a-dynamic-collection.md
+    - name: Maak een statische collectie
+      href: core/clients/collections/how-to-create-a-static-collection.md
+    - name: Noem de leden van een collectie
+      href: core/clients/collections/how-to-enumerate-the-members-of-a-collection.md
+    - name: Wijzig een collectie
+      href: core/clients/collections/how-to-modify-a-collection.md
+    - name: Verwijder een collectie
+      href: core/clients/collections/how-to-delete-a-collection.md
+    - name: Verkrijg de eigenschappen van een collectie
+      href: core/clients/collections/how-to-get-the-properties-of-a-collection.md
+    - name: Start een eenmalige lidmaatschapsevaluatie
+      href: core/clients/collections/how-to-initiate-a-one-time-membership-evaluation-for-a-collection.md
+- name: Instellingen voor naleving
+  items:
+    - name: Installatie en configuratie
+      items:
+        - name: Over installatie en configuratie
+          href: compliance/about-compliance-settings--dcm--setup-and-configuration.md
+        - name: Schakel de agent voor compliance-instellingen in of uit
+          href: compliance/how-to-enable-or-disable-the-compliance-settings--dcm--agent.md
+        - name: Configureer het standaard nalevingsevaluatieschema
+          href: compliance/how-to-configure-the-default-compliance-evaluation-schedule.md
+    - name: Configuratiebasislijnen en configuratie-items
+      items:
+        - name: Over configuratiebasislijnen en items
+          href: compliance/about-configuration-baselines-and-configuration-items.md
+        - name: Importeer configuratiebasislijnen en items
+          href: compliance/how-to-import-configuration-baselines-and-configuration-items.md
+        - name: Exporteer configuratiebasislijnen en items
+          href: compliance/how-to-export-configuration-baselines-and-configuration-items.md
+        - name: Configuratiebasislijnen toewijzen
+          href: compliance/how-to-assign-configuration-baselines.md
+        - name: Configuratietoewijzingen vermelden
+          href: compliance/how-to-list-configuration-assignments.md
+    - name: Uitbreidbaarheid nalevingsinstellingen
+      href: compliance/about-compliance-settings--dcm--extensibility.md
+    - name: Configuratiebasislijnen en configuratie-items van de auteur
+      items:
+        - name: Over het schrijven van configuratiebasislijnen en items
+          href: compliance/about-authoring-configuration-baselines-and-configuration-items.md
+        - name: Configuratiebasislijn voorbeeld
+          items:
+            - name: Over configuratiebasislijnen
+              href: compliance/about-configuration-baselines.md
+            - name: Configuratiebasislijn voorbeeld
+              href: compliance/configuration-baseline-example-1.md
+        - name: Voorbeelden van toepassingsconfiguratie-items
+          items:
+            - name: Over toepassingsconfiguratie-items
+              href: compliance/about-application-configuration-items.md
+            - name: Toepassingsconfiguratie-item voorbeeld 1
+              href: compliance/application-configuration-item-example-1.md
+            - name: Toepassingsconfiguratie-item voorbeeld 2
+              href: compliance/application-configuration-item-example-2.md
+        - name: Voorbeeld van OS-configuratie-item
+          items:
+            - name: Over OS-configuratie-items
+              href: compliance/about-operating-system-configuration-item-examples.md
+            - name: Voorbeeld van OS-configuratie-item
+              href: compliance/operating-system-configuration-item-example-1.md
+        - name: Algemene configuratie-items voorbeeld
+          items:
+            - name: Over algemene configuratie-items
+              href: compliance/about-general-configuration-items.md
+            - name: Algemene configuratie-items voorbeeld
+              href: compliance/general-configuration-item-example-1.md
+- name: Console-extensies
+  items:
+    - name: Over console-extensies
+      href: core/servers/console/about-configuration-manager-console-extension.md
+    - name: Architectuur van de console-extensie
+      href: core/servers/console/console-extension-architecture.md
+    - name: Implementatie van de console-uitbreiding
+      href: core/servers/console/console-extension-deployment.md
+    - name: Consoleacties
+      items:
+        - name: Over consoleacties
+          items:
+            - name: Acties
+              href: core/servers/console/configuration-manager-actions.md
+            - name: Actie-XML
+              href: core/servers/console/configuration-manager-action-xml.md
+            - name: Voorwaardelijke acties
+              href: core/servers/console/conditional-actions.md
+            - name: Uitvoerbare actie
+              href: core/servers/console/executable-action.md
+            - name: ShowDialog-actie
+              href: core/servers/console/showdialog-action.md
+            - name: Actie rapporteren
+              href: core/servers/console/report-action.md
+            - name: Actie AssemblyType
+              href: core/servers/console/assemblytype-action.md
+            - name: Actie groep
+              href: core/servers/console/group-action.md
+        - name: Maak een actie
+          href: core/servers/console/how-to-create-a-configuration-manager-action.md
+    - name: Consoleformulieren
+      items:
+        - name: Over consoleformulieren
+          href: core/servers/console/about-configuration-manager-console-forms.md
+        - name: Een eigenschappenvenster maken
+          href: core/servers/console/how-to-create-a-configuration-manager-property-sheet.md
+        - name: Formulier-XML voor een eigenschappenvenster maken
+          href: core/servers/console/how-to-create-form-xml-for-a-configuration-manager-property-sheet.md
+        - name: Een eigenschappenpagina aan een bestaand eigenschappenvenster toevoegen
+          href: core/servers/console/how-to-add-a-property-page-to-an-existing-configuration-manager-property-sheet.md
+        - name: Actie-XML voor een eigenschappenvenster maken
+          href: core/servers/console/how-to-create-action-xml-for-a-configuration-manager-property-sheet.md
+        - name: Een dialoogvenster maken
+          href: core/servers/console/how-to-create-a-configuration-manager-dialog-box.md
+        - name: Formulier-XML voor een dialoogvenster maken
+          href: core/servers/console/how-to-create-form-xml-for-a-configuration-manager-dialog-box.md
+        - name: Actie-XML voor een dialoogvenster maken
+          href: core/servers/console/how-to-create-action-xml-for-a-configuration-manager-dialog-box.md
+        - name: Objecten gebruiken die zijn doorgegeven aan een formulier
+          href: core/servers/console/how-to-use-objects-passed-to-a-configuration-manager-form.md
+        - name: Bind gegevens aan een formulier
+          href: core/servers/console/how-to-bind-configuration-manager-data-to-a-form.md
+    - name: Console managementklassen
+      items:
+        - name: Over console managementklassen
+          href: core/servers/console/about-configuration-manager-console-management-classes.md
+        - name: Console managementklassen XML
+          href: core/servers/console/console-management-class-xml.md
+    - name: Console-knooppunten
+      items:
+        - name: Over console-knooppunten
+          href: core/servers/console/about-configuration-manager-console-nodes.md
+        - name: Console-knooppunt XML
+          href: core/servers/console/console-node-xml.md
+        - name: Console RootNodes-element
+          href: core/servers/console/console-rootnodes-element.md
+        - name: Console ResourceAssembly-element
+          href: core/servers/console/console-resourceassembly-element.md
+        - name: Een console-knooppunt maken
+          href: core/servers/console/how-to-create-a-configuration-manager-console-node.md
+        - name: Zoek een console-code GUID
+          href: core/servers/console/how-to-find-a-configuration-manager-console-node-guid.md
+    - name: Consoleweergaven
+      items:
+        - name: Over consoleweergaven
+          href: core/servers/console/about-configuration-manager-console-views.md
+        - name: Een aangepaste weergave maken
+          href: core/servers/console/how-to-create-a-configuration-manager-console-custom-view.md
+        - name: Knooppunt-XML voor een rasterweergave maken
+          href: core/servers/console/how-to-create-node-xml-for-a-configuration-manager-console-grid-view.md
+- name: Detectie
+  items:
+    - name: Configureer Heartbeat Discovery
+      href: core/servers/configure/how-to-configure-heartbeat-discovery.md
+    - name: Netwerkdetectie configureren
+      href: core/servers/configure/how-to-configure-network-discovery.md
+    - name: Configureren van detectie Active Directory-groepen
+      href: core/servers/configure/how-to-configure-active-directory-group-discovery.md
+    - name: Configureren van detectie Active Directory-systemen
+      href: core/servers/configure/how-to-configure-active-directory-system-discovery.md
+    - name: Configureren van detectie Active Directory-gebruikers
+      href: core/servers/configure/how-to-configure-active-directory-user-discovery.md
+    - name: Brondetectie uitbreiden
+      items:
+        - name: DDR’s in brondetectie gebruiken
+          items:
+            - name: Over DDR-eigenschappen
+              href: core/servers/configure/about-ddr-properties.md
+            - name: Een bestaand bronexemplaar bijwerken
+              href: core/servers/configure/about-updating-an-existing-resource-instance.md
+            - name: Een gegevensdetectierecord maken (DDR)
+              href: core/servers/configure/about-creating-a-data-discovery-record.md
+            - name: Over de unieke id-waarde voor een bron
+              href: core/servers/configure/about-the-unique-identifier-value-for-a-resource.md
+        - name: De unieke id-waarde voor een client ophalen
+          href: core/servers/configure/how-to-get-the-unique-identifier-value-for-a-client.md
+        - name: Nieuwe eigenschappen aan een bestaand brontype toevoegen
+          href: core/servers/configure/how-to-add-new-properties-to-an-existing-resource-type.md
+        - name: Een DDR maken
+          href: core/servers/configure/how-to-create-a-data-discovery-record.md
+- name: Inventaris
+  items:
+    - name: Over inventaris
+      href: core/clients/inventory/about-configuration-manager-inventory.md
+    - name: Hardware-inventaris
+      items:
+        - name: Hardware-inventaris inschakelen
+          href: core/clients/inventory/how-to-enable-hardware-inventory.md
+        - name: Hardware-inventarisinstellingen configureren
+          href: core/clients/inventory/how-to-configure-hardware-inventory-settings.md
+        - name: Vereisten voor IDMIF-bestanden
+          href: core/clients/inventory/requirements-of-idmif-files.md
+        - name: De hardware-inventariscache opnieuw instellen
+          href: core/clients/inventory/how-to-reset-the-hardware-inventory-cache.md
+    - name: Software-inventaris
+      items:
+        - name: Software-inventaris inschakelen
+          href: core/clients/inventory/how-to-enable-software-inventory.md
+        - name: Software-inventarisinstellingen configureren
+          href: core/clients/inventory/how-to-configure-software-inventory-settings.md
+        - name: De software-inventariscache opnieuw instellen
+          href: core/clients/inventory/how-to-reset-the-software-inventory-cache.md
+    - name: Een MOF-bestand importeren voor het uitbreiden van de inventaris
+      href: core/clients/inventory/how-to-import-a-mof-file-to-extend-inventory.md
+    - name: Start Asset Intelligence-synchronisatie
+      href: core/clients/asset-intelligence/how-to-initiate-a-synchronization.md
+- name: Verouderde MDM-client
+  items:
+    - name: Configureer de instellingen van de clientagent voor mobiele apparaten
+      href: mdm/how-to-configure-mobile-device-client-agent-settings.md
+    - name: 'Maak softwaredistributiepakketten, programma''s en advertenties voor mobiele apparaten'
+      href: mdm/how-to-create-software-distribution-packages-for-mobile-devices.md
+- name: Besturingssysteemimplementatie
+  items:
+    - name: Configuratie van de site-rol van het besturingssysteem
+      items:
+        - name: Over configuratie van de site-rol van het besturingssysteem
+          href: osd/about-operating-system-deployment-site-role-configuration.md
+        - name: Een rol voor het statusmigratiepunt maken
+          href: osd/how-to-create-a-state-migration-point-role.md
+        - name: Een rol voor het statusmigratiepunt verwijderen
+          href: osd/how-to-delete-a-state-migration-point-role.md
+        - name: Een map voor het statusmigratiepunt toevoegen
+          href: osd/how-to-add-a-state-migration-point-folder.md
+        - name: De modus alleen herstellen instellen voor een statusmigratiepunt
+          href: osd/how-to-set-the-restore-only-mode-for-a-state-migration-point.md
+        - name: Het verwijderingsbeleid instellen voor een statusmigratiepunt
+          href: osd/how-to-set-the-deletion-policy-for-a-state-migration-point.md
+        - name: Schakel een voor PXE ingeschakelde distributiepuntrol in
+          href: osd/how-to-enable-a-pxe-service-point-role.md
+        - name: Schakel een voor PXE ingeschakelde distributiepuntrol uit
+          href: osd/how-to-disable-a-pxe-service-point-role.md
+        - name: Ondersteuning van onbekende computers inschakelen
+          href: osd/how-to-enable-unknown-computer-support-for-a-pxe-service-point.md
+        - name: Stel het antwoord in op PXE-verzoeken
+          href: osd/how-to-set-the-pxe-service-point-response-to-pxe-requests.md
+        - name: Stel de PXE-reactievertraging in
+          href: osd/how-to-set-the-response-delay-for-a-pxe-service-point.md
+        - name: Stel de PXE-respons in op alle netwerkinterfaces
+          href: osd/how-to-set-the-pxe-service-point-response-to-all-network-interfaces.md
+        - name: Stel het PXE-respons in voor een specifieke netwerkinterface
+          href: osd/how-to-set-the-pxe-service-point-response-for-a-specific-network-interface.md
+        - name: Merkinformatie over de implementatie van het besturingssysteem instellen
+          href: osd/how-to-set-operating-system-deployment-branding-information.md
+    - name: Taakvolgorde van OS-implementatie
+      items:
+        - name: Over takenreeksen
+          items:
+            - name: Overzicht van takenreeks
+              href: osd/operating-system-deployment-task-sequences-overview.md
+            - name: Taakvolgorde objectmodel
+              href: osd/operating-system-deployment-task-sequence-object-model.md
+        - name: Een takenreeks maken
+          href: osd/how-to-create-an-operating-system-deployment-task-sequence.md
+        - name: Maak een takenreekspakket
+          href: osd/how-to-create-an-operating-system-deployment-task-sequence-package.md
+        - name: Een takenreeks lezen uit een takenreekspakket
+          href: osd/how-to-read-a-task-sequence-from-a-task-sequence-package.md
+        - name: Noem de beschikbare takenreeksen
+          href: osd/how-to-enumerate-the-available-operating-system-deployment-task-sequences.md
+        - name: Voeg een takenreeksactie toe
+          href: osd/how-to-add-an-operating-system-deployment-task-sequence-action.md
+        - name: Verwijder een takenreeksactie
+          href: osd/how-to-delete-an-operating-system-deployment-task-sequence-action.md
+        - name: Voeg een voorwaarde toe aan een takenreeksstap
+          href: osd/how-to-add-a-condition-to-an-operating-system-deployment-task-sequence-step.md
+        - name: Noem de stappen in een takenreeks
+          href: osd/how-to-enumerate-the-steps-in-an-operating-system-deployment-task-sequence.md
+        - name: Sorteer een takenreeks opnieuw
+          href: osd/how-to-reorder-an-operating-system-deployment-task-sequence.md
+        - name: Maak een takenreeksgroep
+          href: osd/how-to-create-an-operating-system-deployment-task-sequence-group.md
+        - name: Voeg een stap toe aan een takenreeksgroep
+          href: osd/how-to-add-a-step-to-an-operating-system-deployment-group.md
+        - name: Verwijder een stap uit een takenreeksgroep
+          href: osd/how-to-remove-a-step-from-an-operating-system-deployment-group.md
+        - name: Verplaats een stap naar een andere takenreeksgroep
+          href: osd/how-to-move-a-step-to-a-different-task-sequence-group.md
+        - name: Takenreeksvariabelen gebruiken
+          href: osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md
+        - name: Stel een takenreeksvariabele in
+          href: osd/how-to-set-an-operating-system-deployment-task-sequence-variable.md
+    - name: Computerbeheer voor implementatie van besturingssysteem
+      items:
+        - name: Over computerbeheer
+          href: osd/about-computer-management.md
+        - name: Importeer een nieuwe computer
+          href: osd/how-to-import-a-new-computer-into-configuration-manager.md
+        - name: Een koppeling tussen twee computers maken
+          href: osd/how-to-create-an-association-between-two-computers-in-configuration-manager.md
+        - name: Een verzamelingsvariabele maken
+          href: osd/how-to-create-a-collection-variable.md
+        - name: Een computervariabele maken
+          href: osd/how-to-create-a-computer-variable.md
+        - name: Volg migraties van OS-implementatie
+          href: osd/how-to-track-operating-system-deployment-migrations.md
+    - name: Beeldbeheer voor implementatie van besturingssysteem
+      items:
+        - name: Over beeldbeheer
+          href: osd/about-operating-system-deployment-image-management.md
+        - name: Voeg een OS-afbeeldingspakket toe
+          href: osd/how-to-add-an-operating-system-image-package-in-configuration-manager.md
+        - name: Werk een OS-afbeeldingspakket bij
+          href: osd/how-to-update-an-operating-system-image-package.md
+        - name: Bekijk de eigenschappen voor een OS-afbeelding
+          href: osd/how-to-view-the-properties-for-an-operating-system-image.md
+        - name: Voeg een opstartinstallatiekopie toe vanuit een WIM-bestand
+          href: osd/how-to-add-a-boot-image-from-a-wim-file.md
+        - name: Voeg een opstartinstallatiekopie toe vanuit een WIM-bestand
+          href: osd/how-to-add-an-operating-system-install-package.md
+        - name: Wis een PXE-advertentie voor een verzameling
+          href: osd/how-to-clear-a-pxe-advertisement-for-a-configuration-manager-collection.md
+        - name: Een PXE-aankondiging voor een bron wissen
+          href: osd/how-to-clear-a-pxe-advertisement-for-a-configuration-manager-resource.md
+    - name: Stuurprogramma voor besturingssysteemimplementatie
+      items:
+        - name: Over stuurprogrammabeheer
+          href: osd/about-operating-system-deployment-driver-management.md
+        - name: Importeer een stuurprogramma beschreven door een INF-bestand
+          href: osd/how-to-import-a-windows-driver-described-by-an-inf-file.md
+        - name: Importeer een stuurprogramma beschreven door een txtsetup.oem-bestand
+          href: osd/how-to-import-a-windows-driver-described-by-a-txtsetup-oem-file.md
+        - name: Maak een stuurprogrammapakket voor een bestuurder
+          href: osd/how-to-create-a-driver-package-for-a-windows-driver.md
+        - name: Voeg een stuurprogramma toe aan een opstartinstallatiekopie
+          href: osd/how-to-add-a-windows-driver-to-a-configuration-manager-boot-image-package.md
+        - name: Verwijder een stuurprogramma uit een opstartinstallatiekopie
+          href: osd/how-to-remove-a-windows-driver-from-a-boot-image-package.md
+        - name: Schakel een stuurprogramma in of uit
+          href: osd/how-to-enable-or-disable-a-windows-driver.md
+        - name: Een stuurprogramma verwijderen
+          href: osd/how-to-delete-a-windows-driver-from-configuration-manager.md
+        - name: Een stuurprogrammapakket verwijderen
+          href: osd/how-to-delete-a-driver-package-in-configuration-manager.md
+        - name: Ondersteunde platforms voor een stuurprogramma opgeven
+          href: osd/how-to-specify-the-supported-platforms-for-a-driver.md
+        - name: Een categorie toevoegen aan een stuurprogramma
+          href: osd/how-to-add-a-category-to-a-windows-driver.md
+        - name: Verwijder een categorie uit een stuurprogramma
+          href: osd/how-to-remove-a-category-from-a-windows-driver.md
+    - name: Breid de implementatie van het besturingssysteem uit
+      items:
+        - name: Over aangepaste acties in Configuration Manager
+          href: osd/about-configuration-manager-custom-actions.md
+        - name: Over clienttoepassingen met aangepaste acties
+          href: osd/about-configuration-manager-custom-action-client-applications.md
+        - name: Over MOF-bestanden met aangepaste acties
+          href: osd/about-configuration-manager-custom-action-mof-files.md
+        - name: Over de voortgang van de rapportage over aangepaste acties
+          href: osd/about-reporting-configuration-manager-custom-action-progress.md
+        - name: Een besturingselement voor een aangepaste actie maken
+          href: osd/how-to-create-a-configuration-manager-custom-action-control.md
+        - name: MOF-bestand voor een aangepaste actie maken
+          href: osd/how-to-create-a-mof-file-for-a-configuration-manager-custom-action.md
+        - name: Een besturingselement voor een aangepaste actie gebruiken
+          href: osd/how-to-use-a-configuration-manager-custom-action-control.md
+- name: Op rollen gebaseerd beheer
+  items:
+    - name: Overzicht van op rollen gebaseerd beheer
+      href: core/servers/configure/role-based-administration.md
+    - name: Beheer van gebruiker met beheerdersrechten
+      items:
+        - name: Controleren of een gebruiker machtigingen heeft voor een object
+          href: core/servers/configure/how-to-check-if-a-user-has-permissions-for-an-object.md
+        - name: Controleren of een gebruiker machtigingen heeft voor een bron
+          href: core/servers/configure/how-to-check-if-a-user-has-permissions-for-a-resource.md
+        - name: Beheertoewijzingen voor een gebruiker of beveiligingsgroep opsommen
+          href: core/servers/configure/how-to-enumerate-the-administrative-assignments-for-a-user-or-security-group.md
+        - name: Nieuwe beheerder maken
+          href: core/servers/configure/how-to-create-a-new-administrator.md
+        - name: Nieuwe beveiligingsrol maken
+          href: core/servers/configure/how-to-create-a-new-security-role.md
+    - name: Beheer van beveiligingsbereik
+      items:
+        - name: Nieuw beveiligingsbereik maken
+          href: core/servers/configure/how-to-create-a-new-security-scope.md
+        - name: Een beveiligingsbereik verwijderen
+          href: core/servers/configure/how-to-delete-a-security-scope.md
+        - name: Object koppelen aan een beveiligingsbereik
+          href: core/servers/configure/how-to-associate-an-object-with-a-security-scope.md
+        - name: Objectkoppeling met een beveiligingsbereik verwijderen
+          href: core/servers/configure/how-to-remove-an-object-association-with-a-security-scope.md
+- name: Externe hulpprogramma's
+  items:
+    - name: Externe hulpprogramma’s in- en uitschakelen
+      href: core/clients/remote-control/how-to-enable-and-disable-remote-tools.md
+    - name: Instellingen van externe hulpprogramma’s configureren
+      href: core/clients/remote-control/how-to-configure-remote-tools-settings.md
+- name: Softwaredistributie
+  items:
+    - name: Overzicht van softwaredistributie
+      href: core/servers/configure/software-distribution-overview.md
+    - name: Pakketten
+      items:
+        - name: Over pakketdefinitiebestanden
+          href: core/servers/configure/about-package-definition-files.md
+        - name: Een pakket maken
+          href: core/servers/configure/how-to-create-a-package.md
+        - name: Een pakket maken met een sjabloon voor het pakketdefinitiebestand
+          href: core/servers/configure/how-to-create-a-package-by-using-a-package-definition-file-template.md
+        - name: Pakketeigenschappen configureren
+          href: core/servers/configure/how-to-configure-package-properties.md
+        - name: Een pakket configureren voor het gebruik van replicatie binaire verschillen
+          href: core/servers/configure/how-to-configure-a-package-to-use-binary-delta-replication.md
+        - name: Een pakket verwijderen
+          href: core/servers/configure/how-to-delete-a-package.md
+        - name: Een pakket toewijzen aan een distributiepunt
+          href: core/servers/configure/how-to-assign-a-package-to-a-distribution-point.md
+    - name: Programma's
+      items:
+        - name: Over programma's
+          href: core/servers/configure/about-software-distribution-programs.md
+        - name: Een programma maken
+          href: core/servers/configure/how-to-create-a-program.md
+        - name: Programma-eigenschappen wijzigen
+          href: core/servers/configure/how-to-modify-program-properties.md
+        - name: De maximale uitvoeringstijd voor een programma wijzigen
+          href: core/servers/configure/how-to-change-the-maximum-run-time-for-a-program.md
+        - name: Alle programma’s met hun maximale uitvoeringstijden vermelden
+          href: core/servers/configure/how-to-list-all-programs-and-their-maximum-run-time-value.md
+        - name: Ondersteunde platforms voor een programma wijzigen
+          href: core/servers/configure/how-to-modify-the-supported-platforms-for-a-program.md
+    - name: Implementaties
+      items:
+        - name: Over implementaties
+          href: core/servers/configure/about-software-distribution-deployments.md
+        - name: Een implementatie maken
+          href: core/servers/configure/how-to-create-an-advertisement.md
+        - name: Wijs een implementatie toe aan een verzameling computers
+          href: core/servers/configure/how-to-assign-an-advertisement-to-a-collection-of-computers.md
+        - name: Wijzig implementatie-eigenschappen
+          href: core/servers/configure/how-to-modify-advertisement-properties.md
+        - name: Configureer een implementatie om opnieuw opstarten mogelijk te maken buiten een onderhoudsvenster
+          href: core/servers/configure/how-to-allow-reboots-outside-of-a-maintenance-window.md
+        - name: Configureer een implementatie om een onderhoudsvenster te negeren
+          href: core/servers/configure/how-to-configure-an-advertisement-to-override-a-maintenance-window.md
+    - name: Onderhoudsvensters
+      items:
+        - name: Over onderhoudsvensters
+          href: core/servers/configure/about-maintenance-windows.md
+        - name: Een onderhoudsvenster maken
+          href: core/servers/configure/how-to-create-a-maintenance-window-for-a-collection.md
+        - name: Wijzig de eigenschappen van het onderhoudsvenster
+          href: core/servers/configure/how-to-change-the-maintenance-window-properties-for-a-collection.md
+        - name: Een onderhoudsvenster verwijderen
+          href: core/servers/configure/how-to-delete-a-maintenance-window-for-a-collection.md
+        - name: Maak een lijst van de onderhoudsvensters en eigenschappen voor een specifieke collectie
+          href: core/servers/configure/how-to-list-the-maintenance-windows-and-properties-for-a-specific-collection.md
+    - name: Installatie en configuratie
+      items:
+        - name: Over het instellen en configureren van softwaredistributie
+          href: core/servers/configure/about-software-distribution-setup-and-configuration.md
+        - name: De geadverteerde programma-clientagent in-of uitschakelen
+          href: core/servers/configure/how-to-enable-or-disable-the-advertised-programs-client-agent.md
+        - name: Configureer de instellingen van de clientagent voor geadverteerde programma's
+          href: core/servers/configure/how-to-configure-advertised-programs-client-agent-settings.md
+        - name: Pas informatie over implementatiebranding aan
+          href: core/servers/configure/how-to-customize-advertisement-branding-information.md
+    - name: Wake on LAN
+      items:
+        - name: Configureer een vereiste implementatie voor Wake On LAN
+          href: core/servers/configure/how-to-configure-a-mandatory-advertisement-for-wake-on-lan.md
+        - name: Schakel de partner-melding-API in
+          href: core/servers/configure/how-to-enable-the-partner-notification-api.md
+    - name: Distributiepunten
+      items:
+        - name: Distributiepunten voor een site vermelden
+          href: core/servers/configure/how-to-list-distribution-points-for-a-site.md
+        - name: Stel de vlag in om op verzoek te verspreiden
+          href: core/servers/configure/how-to-set-the-distribute-on-demand-flag.md
+- name: Softwarelicentiecontrole
+  items:
+    - name: Softwaremeting in- of uitschakelen
+      href: apps/how-to-enable-or-disable-software-metering.md
+    - name: Configureer het automatisch genereren van software-meetregels
+      href: apps/how-to-configure-automatic-software-metering-rule-generation.md
+    - name: Een softwaremeterregel maken
+      href: apps/how-to-create-a-software-metering-rule.md
+    - name: Een softwaremeterregel verwijderen
+      href: apps/how-to-delete-a-software-metering-rule.md
+    - name: Softwaremeterregel in- of uitschakelen
+      href: apps/how-to-enable-or-disable-a-software-metering-rule.md
+    - name: Samenvattingsinformatie over bestandsgebruik weergeven
+      href: apps/how-to-view-file-usage-summary-information.md
+    - name: Samenvattingsinformatie over maandelijks gebruik weergeven
+      href: apps/how-to-view-monthly-usage-summary-information.md
+- name: Software-updates
+  items:
+    - name: Installatie en configuratie
+      items:
+        - name: Over het instellen en configureren van software-updates
+          href: sum/about-software-updates-setup-and-configuration.md
+        - name: Het software-updatepunt configureren
+          href: sum/how-to-configure-the-software-update-point.md
+        - name: WSUS-instellingen configureren
+          href: sum/how-to-configure-the-wsus-settings.md
+        - name: De client-agent voor software-updates inschakelen of uitschakelen
+          href: sum/how-to-enable-or-disable-the-software-updates-client-agent.md
+        - name: De huisstijlinformatie voor software-updates instellen
+          href: sum/how-to-set-software-updates-branding-information.md
+    - name: Implementaties
+      items:
+        - name: Over software-update-implementaties
+          href: sum/about-software-updates-deployments.md
+        - name: Updates die voldoen aan een specifiek criterium opsommen
+          href: sum/how-to-enumerate-updates-matching-a-specific-criteria.md
+        - name: Een updatelijst maken
+          href: sum/how-to-create-an-update-list.md
+        - name: Een implementatiesjabloon maken
+          href: sum/how-to-create-a-deployment-template.md
+        - name: Een implementatiepakket maken
+          href: sum/how-to-create-a-deployment-package.md
+        - name: Updates aan een implementatiepakket toevoegen
+          href: sum/how-to-add-updates-to-a-deployment-package.md
+        - name: Updates uit een implementatiepakket verwijderen
+          href: sum/how-to-delete-updates-from-a-deployment-package.md
+        - name: Updates configureren en implementeren
+          href: sum/how-to-configure-and-deploy-updates.md
+        - name: De bron van het implementatiepakket wijzigen
+          href: sum/how-to-change-the-deployment-package-source.md
+    - name: Het software-updatepunt synchroniseren
+      items:
+        - name: Over het synchroniseren van het software-updatepunt
+          href: sum/about-synchronizing-the-software-update-point.md
+        - name: Het software-updatepunt synchroniseren
+          href: sum/how-to-synchronize-with-the-software-update-point.md
+    - name: Software-updates configureren voor het onderdrukken van onderhoudsvensters
+      href: sum/how-to-configure-software-updates-to-override-maintenance-windows.md
+- name: Status en overzichten
+  items:
+    - name: Over Configuration Manager-status
+      items:
+        - name: Over statusberichten
+          href: core/servers/manage/about-configuration-manager-status-messages.md
+        - name: Over componentstatusberichten
+          href: core/servers/manage/about-configuration-manager-component-status-messages.md
+        - name: Over het gebruik van SMSCSTAT.DLL voor het maken van statusberichten
+          href: core/servers/manage/about-using-smscstat.dll-to-create-status-messages.md
+        - name: Over het melden van statusberichten van klanten
+          href: core/servers/manage/about-reporting-status-messages-from-configuration-manager-clients.md
+    - name: Over statusoverzichten
+      items:
+        - name: Over Configuration Manager-statusoverzichten
+          href: core/servers/manage/about-configuration-manager-status-summarizers.md
+        - name: Over Configuration Manager-tally-intervallen
+          href: core/servers/manage/about-configuration-manager-tally-intervals.md
+    - name: Bepaal de gezondheid van een site
+      href: core/servers/manage/how-to-determine-the-health-of-a-configuration-manager-site.md
+    - name: Lees de telintervallen voor een site
+      href: core/servers/manage/how-to-read-the-tally-intervals-for-a-configuration-manager-site.md
+    - name: Door de gebruiker gedefinieerde statusberichten lezen
+      href: core/servers/manage/how-to-read-user-defined-status-messages.md
+    - name: Door de gebruiker gedefinieerde statusberichten rapporteren
+      href: core/servers/manage/how-to-report-user-defined-status-messages.md
+    - name: Statusberichten verwijderen
+      href: core/servers/manage/how-to-delete-status-messages.md
+    - name: De status van een pakket bepalen
+      href: core/servers/manage/how-to-determine-package-status.md
+    - name: De status van een aankondiging bepalen
+      href: core/servers/manage/how-to-determine-advertisement-status.md
+- name: Naslaginformatie Configuration Manager-API
+  href: reference/configuration-manager-reference.md
+- name: REST API van de beheerservice
+  href: adminservice/index.yml

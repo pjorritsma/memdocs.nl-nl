@@ -232,8 +232,6 @@
           href: plan-design/security/plan-for-security.md
         - name: Aanbevolen beveiligingsprocedures en privacy-informatie
           href: plan-design/security/security-best-practices-and-privacy-information.md
-        - name: Privacyverklaring – Cmdlet-bibliotheek van Configuration Manager
-          href: plan-design/security/privacy-statement-cmdlet-library.md
         - name: Aanvullende privacy-informatie
           href: plan-design/security/additional-privacy.md
         - name: Beveiliging configureren

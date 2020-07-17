@@ -10,12 +10,12 @@ ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e3f178b41fbb305ef938063bd9b9743daa6b5c69
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: def7a40091f6c9a45e67f5e4de7d7dca94b3cba2
+ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714358"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86422809"
 ---
 # <a name="how-to-create-collections-in-configuration-manager"></a>Verzamelingen maken in Configuration Manager
 
@@ -229,16 +229,16 @@ U kunt de synchronisatie van verzamelings lidmaatschappen inschakelen voor een g
 
 De Azure AD-synchronisatie gebeurt elke vijf minuten. Het is een eenrichtings proces van Configuration Manager naar Azure AD. Wijzigingen die zijn aangebracht in azure AD, worden niet weer gegeven in Configuration Manager verzamelingen, maar worden niet overschreven door Configuration Manager. Als de verzameling Configuration Manager bijvoorbeeld twee apparaten heeft en de Azure AD-groep drie verschillende apparaten heeft, heeft de Azure AD-groep na het synchroniseren vijf apparaten.
 
-
 ### <a name="prerequisites"></a>Vereisten
 
-- [Cloudbeheer](../../../servers/deploy/configure/azure-services-wizard.md)
+- Integratie met Azure AD voor [Cloud beheer](../../../servers/deploy/configure/azure-services-wizard.md)
 - [Gebruikers detectie Azure Active Directory](../../../servers/deploy/configure/about-discovery-methods.md#azureaddisc)
+- Een HTTPS [-of Enhanced HTTP-](../../../plan-design/hierarchy/enhanced-http.md) beheer punt
 
 ### <a name="create-a-group-and-set-the-owner-in-azure-ad"></a>Een groep maken en de eigenaar instellen in azure AD
 
 1. Ga naar [https://portal.azure.com](https://portal.azure.com).
-1. Navigeer naar **Azure Active Directory** > **groepen** > **alle groepen**.
+1. Navigeer naar **Azure Active Directory**  >  **groepen**  >  **alle groepen**.
 1. Klik op **nieuwe groep** en typ een **groeps naam** en optioneel een beschrijving voor de **groep**.
 1. Zorg ervoor dat het **lidmaatschaps type** is **toegewezen**.
 1. Selecteer **eigen aren**en voeg vervolgens de identiteit toe waarmee de synchronisatie relatie wordt gemaakt in Configuration Manager.
@@ -246,14 +246,14 @@ De Azure AD-synchronisatie gebeurt elke vijf minuten. Het is een eenrichtings pr
 
 ### <a name="enable-collection-synchronization-for-the-azure-service"></a>Verzamelings synchronisatie voor de Azure-service inschakelen
 
-1. Ga in de Configuration Manager-console naar **beheer** > **overzicht** > **Cloud Services** > **Azure-Services**.
+1. Ga in de Configuration Manager-console naar **beheer**  >  **overzicht**  >  **Cloud Services**  >  **Azure-Services**.
 1. Klik met de rechter muisknop op de Azure AD-Tenant waar u de groep hebt gemaakt en selecteer **Eigenschappen**.
 1. Schakel op het tabblad Synchronisatie van de **verzameling** het selectie vakje in voor de **synchronisatie van Azure Directory-groepen inschakelen**.
 1. Klik op **OK** om de instelling op te slaan.
 
 ### <a name="enable-the-collection-to-synchronize"></a>De verzameling voor synchronisatie inschakelen
 
-1. Ga in de Configuration Manager-console naar **activa en naleving** > **overzicht** > **apparaat verzamelingen**.
+1. Ga in de Configuration Manager-console naar **activa en naleving**  >  **overzicht**  >  **apparaat verzamelingen**.
 1. Klik met de rechter muisknop op de verzameling die u wilt synchroniseren en klik vervolgens op **Eigenschappen**. 
 1. Klik op het tabblad **Aad-groep synchroniseren** op **toevoegen**.
 1. Selecteer in de vervolg keuzelijst de **Tenant** waar u uw Azure AD-groep hebt gemaakt.
@@ -267,7 +267,7 @@ De Azure AD-synchronisatie gebeurt elke vijf minuten. Het is een eenrichtings pr
 ### <a name="verify-the-azure-ad-group-membership"></a>Het lidmaatschap van de Azure AD-groep controleren
 
 1. Ga naar [https://portal.azure.com](https://portal.azure.com).
-1. Navigeer naar **Azure Active Directory** > **groepen** > **alle groepen**.
+1. Navigeer naar **Azure Active Directory**  >  **groepen**  >  **alle groepen**.
 1. Zoek de groep die u hebt gemaakt en selecteer **leden**. 
 1. Controleer of de leden overeenkomen met die in de verzameling Configuration Manager.
    - Alleen apparaten met Azure AD-identiteit worden weer gegeven in de groep.

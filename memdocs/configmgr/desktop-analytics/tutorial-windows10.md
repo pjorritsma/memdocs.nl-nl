@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: b991c2ddd0ea121251eb19afbdb032844be8738d
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 15cf7f3621f25a82f0e16d5275369ec93225bbf7
+ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268195"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86422833"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>Zelf studie: Windows 10 implementeren naar pilot
 
@@ -236,7 +236,7 @@ Gebruik deze procedure voor het maken van een implementatie plan in Desktop Anal
 
     - **Naam**: een unieke naam voor het implementatie plan, bijvoorbeeld`Windows 10 pilot`  
 
-    - **Producten en versies**: Selecteer het **Windows** -product en de laatst beschik bare aanbevolen versie. Bijvoorbeeld **Windows 10, versie 1809 (aanbevolen)**.  
+    - **Producten en versies**: Kies de versie van Windows 10 die u wilt implementeren. Micro soft raadt aan om implementatie plannen te maken die gebruikmaken van de meest recente versie.
 
     - **Apparaatgroepen**: Selecteer een of meer groepen op het tabblad Configuration Manager en selecteer vervolgens **instellen als doel groepen**. Deze groepen zijn verzamelingen gesynchroniseerd vanuit Configuration Manager.  
 
@@ -301,7 +301,7 @@ Gebruik deze procedure om Windows 10 in Configuration Manager te implementeren i
 3. Geef op de pagina **gegevens bron** **het netwerkpad op naar de** installatie bron bestanden van het upgrade pakket van het besturings systeem. Bijvoorbeeld `\\server\share\path`.  
 
     > [!NOTE]  
-    > De bron bestanden voor installatie bevatten Setup. exe en andere bestanden en mappen om het besturings systeem te installeren.  
+    > De bron bestanden van de installatie bevatten setup.exe en andere bestanden en mappen om het besturings systeem te installeren.  
 
 4. Geef op de pagina **Algemeen** een unieke **naam** op voor het upgrade pakket van het besturings systeem.  
 

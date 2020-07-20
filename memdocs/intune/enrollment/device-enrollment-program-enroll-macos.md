@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bfcc4a8e867041e0053697bbee605f9798e45bec
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 8c4d66638ffbeded5bf514bba1501e5797e38aac
+ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093823"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86210357"
 ---
 # <a name="automatically-enroll-macos-devices-with-the-apple-business-manager-or-apple-school-manager"></a>macOS-apparaten automatisch inschrijven met Apple Business Manager of Apple School Manager
 
@@ -62,10 +62,9 @@ U gebruikt de Apple-portal om een token te maken. U gebruikt de Apple-portal ook
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>Stap 1. Download het openbare-sleutelcertificaat van Intune dat is vereist om het token te maken.
 
-1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) **Apparaten** > **macOS** > **macOS-inschrijving**. 
-> **Tokens voor het inschrijvingsprogramma** > **Toevoegen**.
+1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de optie **Apparaten** > **macOS** > **macOS-inschrijving** > **Tokens voor het inschrijvingsprogramma** > **Toevoegen**.
 
-    ![Get an enrollment program token.](./media/device-enrollment-program-enroll-macos/image01.png)
+    ![Een token voor het inschrijvingsprogramma ophalen.](./media/device-enrollment-program-enroll-macos/image01.png)
 
 2. Geef Microsoft toestemming om gebruikers- en apparaatgegevens naar Apple te verzenden door **Ik ga akkoord** te selecteren.
 
@@ -106,7 +105,7 @@ Ga in het venster **Apple-token** naar het certificaatbestand (.pem), kies **Ope
 Na installatie van de token kunt u een inschrijvingsprofiel voor apparaten maken. Met een inschrijvingsprofiel voor apparaten worden de instellingen gedefinieerd die worden toegepast op een groep apparaten tijdens de inschrijving.
 
 1. Kies in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de optie **Apparaten** > **macOS** > **macOS-inschrijving** > **Tokens voor het inschrijvingsprogramma**.
-2. Selecteer een token, kies **Profielen** en kies vervolgens **Profiel maken**.
+2. Selecteer een token, kies **Profielen** en kies vervolgens **Profiel maken** > **macOS**.
 
     ![Maak een schermafdruk van het profiel.](./media/device-enrollment-program-enroll-macos/image04.png)
 
@@ -123,13 +122,11 @@ Na installatie van de token kunt u een inschrijvingsprofiel voor apparaten maken
 
     - **Inschrijven zonder gebruikersaffiniteit**: kies deze optie voor een apparaat dat niet aan één gebruiker is gelieerd. Gebruik dit voor apparaten waarmee taken worden uitgevoerd zonder toegang tot lokale gebruikersgegevens. Apps als de Bedrijfsportal-app werken niet.
 
-6. Als u **Inschrijven met gebruikersaffiniteit** kiest, onder **Verificatiemethode**, kiest u **Configuratieassistent (verouderd)** of **Configuratieassistent met moderne verificatie**.
+6. Voor **Vergrendelde inschrijving** kiest u of u vergrendelde inschrijving wilt voor apparaten die dit profiel gebruiken. Met **Ja** worden de macOS-instellingen uitgeschakeld op basis waarvan het beheerprofiel kan worden verwijderd uit het menu **Systeemvoorkeuren** of via de **Terminal**. Als het apparaat is ingeschreven, kunt u deze instelling niet wijzigen zonder het apparaat te wissen.
 
-7. Voor **Vergrendelde inschrijving** kiest u of u vergrendelde inschrijving wilt voor apparaten die dit profiel gebruiken. Met **Ja** worden de macOS-instellingen uitgeschakeld op basis waarvan het beheerprofiel kan worden verwijderd uit het menu **Systeemvoorkeuren** of via de **Terminal**. Als het apparaat is ingeschreven, kunt u deze instelling niet wijzigen zonder het apparaat te wissen.
+7. Selecteer **Volgende** om naar de pagina **Configuratieassistent** te gaan.
 
-8. Selecteer **Volgende** om naar de pagina **Configuratieassistent** te gaan.
-
-9. Configureer op de pagina **Configuratieassistent** de volgende profielinstellingen:
+8. Configureer op de pagina **Configuratieassistent** de volgende profielinstellingen:
 
     ![Aanpassing van Configuratieassistent.](./media/device-enrollment-program-enroll-macos/setupassistantcustom-macos.png)
 
@@ -163,9 +160,9 @@ Na installatie van de token kunt u een inschrijvingsprofiel voor apparaten maken
     | <strong>Schermtijd</strong> | Hiermee wordt het scherm Schermtijd weergeven. Voor macOS 10.15 en hoger en iOS/iPadOS 12.0 en hoger. |
     | <strong>Privacy</strong> | Geef het scherm Privacy weer voor de gebruiker. Voor macOS 10.13.4 en hoger en iOS/iPadOS 11.3 en hoger. |
     
-10. Selecteer **Volgende** om naar de pagina **Controleren en maken** te gaan.
+9. Selecteer **Volgende** om naar de pagina **Controleren en maken** te gaan.
 
-11. Kies **Maken** om een profiel op te slaan.
+10. Kies **Maken** om een profiel op te slaan.
 
 ## <a name="sync-managed-devices"></a>Beheerde apparaten synchroniseren
 

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/04/2020
+ms.date: 07/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 299b09c57f0cff44c465102d85628c8f2605adea
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: 9a7943fb33cf670eedd600db083b77e981da9029
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088493"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240776"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>iOS-/iPadOS-apparaten automatisch inschrijven met Automated Device Enrollment van Apple
 
@@ -156,7 +156,7 @@ Na installatie van het token kunt u een inschrijvingsprofiel voor ADE-apparaten 
 5. Geef voor **Gebruikersaffiniteit** aan of andere apparaten met dit profiel met of zonder toegewezen gebruiker moeten worden ingeschreven.
     - **Inschrijven met gebruikersaffiniteit**: kies deze optie voor apparaten die eigendom zijn van gebruikers en waarvoor de bedrijfsportal moet worden gebruikt voor services zoals het installeren van apps. Als u gebruikmaakt van ADFS en u Configuratieassistent gebruikt voor verificatie, is [Gebruikersnaam/gemengd eindpunt voor WS-Trust 1.3](https://technet.microsoft.com/library/adfs2-help-endpoints) [Meer informatie](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint) vereist.
 
-    - **Inschrijven zonder gebruikersaffiniteit**: kies deze optie voor apparaten die niet aan één gebruiker zijn gelieerd. Gebruik deze optie voor apparaten die geen toegang hebben tot lokale gebruikersgegevens en gedeelde iPad van Apple voor bedrijfsapparaten. Apps als de Bedrijfsportal-app werken niet.
+    - **Inschrijven zonder gebruikersaffiniteit**: kies deze optie voor een apparaat dat niet aan één gebruiker is gelieerd. Gebruik deze optie voor apparaten die geen toegang hebben tot lokale gebruikersgegevens. Als u een eindgebruiker wilt toestaan zich aan te melden bij de iOS-bedrijfsportal en zichzelf in te stellen als de primaire gebruiker van het apparaat, verzendt u de sleutel `IntuneUDAUserlessDevice` naar de iOS-bedrijfsportal in een app-configuratiebeleid voor beheerde apparaten. Alleen de eerste gebruiker die zich aanmeldt, wordt ingesteld als de primaire gebruiker. Als de eerste gebruiker zich afmeldt en een tweede gebruiker zich aanmeldt, blijft de eerste gebruiker de primaire gebruiker van het apparaat. Zie voor meer informatie [De bedrijfsportal-app configureren voor ondersteuning van iOS en iPadOS DEP-apparaten](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-dep-devices). 
 
 6. Als u kiest voor **Inschrijven met gebruikersaffiniteit**, kunt u gebruikers zich te laten verifiëren met de bedrijfsportal in plaats van de Apple-configuratieassistent.
 

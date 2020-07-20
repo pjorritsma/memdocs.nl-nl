@@ -171,6 +171,7 @@
 
 ## [De Intune-bedrijfsportalwebsite gebruiken](using-the-intune-company-portal-website.md)
 ### [Apps beheren](manage-apps-cpweb.md)  
+### [Herstelsleutel opslaan](store-recovery-key.md)
 ### [Herstelsleutel ophalen](get-recovery-key-cpweb.md)
 ### [Apparaat extern vergrendelen](remote-lock-your-device-cpwebsite.md)  
 ### [Naam van apparaat wijzigen](rename-your-device-cpwebsite.md)  

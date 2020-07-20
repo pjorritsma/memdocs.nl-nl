@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 07/08/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: e24a03f3706256c1d18efb2eaebf520a4312edb1
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: e849936e7e0686af3377fd4d10182d3a4eb84458
+ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881532"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86137441"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-entrust-datacard"></a>iOS- of iPadOS-apparaat instellen met Intune-bedrijfsportal en Entrust Datacard
 
@@ -43,7 +43,7 @@ In dit artikel gaat u het volgende doen:
    * Een afgeleide referentie ophalen van de provider van afgeleide referenties van uw organisatie, [Entrust Datacard](https://www.entrustdatacard.com/).  
 
 ### <a name="what-are-derived-credentials"></a>Wat zijn afgeleide referenties?  
-Een afgeleide referentie is een certificaat dat is afgeleid van uw smartcardreferenties en op uw apparaat is geïnstalleerd. Het biedt u externe toegang tot werkresources, waarbij wordt voorkomen dat onbevoegde gebruikers toegang krijgen tot gevoelige informatie.  
+Een afgeleide referentie is een certificaat dat is afgeleid van uw smartcardreferenties en dat op uw apparaat is geïnstalleerd. Het biedt u externe toegang tot werkresources, waarbij wordt voorkomen dat onbevoegde gebruikers toegang krijgen tot gevoelige informatie.  
 
 Afgeleide referenties worden gebruikt voor het volgende: 
 * Studenten en medewerkers verifiëren die zich aanmelden bij school-of werk-apps, Wi-Fi en VPN
@@ -62,7 +62,7 @@ Afgeleide referenties zijn een implementatie van de NIST-richtlijnen (National I
 
 
 ## <a name="enroll-device"></a>Een apparaat inschrijven  
-1. Open de bedrijfsportal-app voor iOS/iPadOS op uw mobiele apparaat en meld u aan met uw werkaccount.  
+1. Open de bedrijfsportal-app voor iOS/iPadOS op uw mobiele apparaat en selecteer de optie om u aan te melden vanaf een ander apparaat.  
 
 2. Schrijf de code op het scherm op.  
 

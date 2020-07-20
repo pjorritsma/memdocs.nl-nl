@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/01/2020
+ms.date: 07/13/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2cc40eb4a8b094cd933a6bb3f4f8c7fdae927f7b
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: 8a1ed521067548f43dbcdca3dcbbf7455f255adf
+ms.sourcegitcommit: 6e9375afc0ba21893f51a40cce16d03a8ed21038
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270888"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86285280"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Problemen met app-installatie oplossen
 
@@ -119,6 +119,9 @@ App-typen die worden ondersteund op ARM64-apparaten zijn onder andere:
 - Mobiele MSI Line-Of-Business-apps
 - Win32-apps met de vereiste regel 32 bits.
 - Windows Office Klik-en-Klaar-apps als 32-bits of de x86-architectuur is geselecteerd.
+
+> [!NOTE]
+> Als u de ARM64-apps beter wilt kunnen herkennen in de Bedrijfsportal, kunt u **ARM64** toevoegen aan de naam van uw ARM64-apps. 
 
 ## <a name="troubleshooting-apps-from-the-microsoft-store"></a>Het oplossen van problemen met apps van Microsoft Store
 

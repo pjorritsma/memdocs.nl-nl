@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/09/2020
+ms.date: 07/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa3cf14b6afd8504a0918b5d61d2a7cae0c308b9
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: d2c3e663b7bc5dfb263d8caad0a7c21d89ed2a93
+ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093673"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303433"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Met instellingen voor iOS- en iPadOS-apparaten kunt u functies toestaan of beperken met behulp van Intune
 
@@ -161,6 +161,10 @@ Deze instellingen worden toegevoegd aan een apparaatconfiguratieprofiel in Intun
   - **Standaardwaarde apparaat**
   - **Numeriek**: Het wachtwoord mag alleen uit getallen bestaan, bijvoorbeeld 123456789.
   - **Alfanumeriek**: Dit zijn hoofdletters, kleine letters en numerieke tekens.
+
+  > [!NOTE]
+  > Het selecteren van alfanumeriek kan van invloed zijn op een gekoppelde Apple Watch. Zie [Toegangscodebeperkingen instellen voor een Apple Watch](https://support.apple.com/HT204953) (opent de website van Apple) voor meer informatie.
+
 - **Het aantal niet-alfanumerieke tekens in het wachtwoord**: Geef het aantal symbooltekens op tussen 1 en 4, zoals `#` of `@`, dat het wachtwoord moet bevatten. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
 
 - **Minimale wachtwoordlengte**: Voer de minimale lengte van het wachtwoord in, tussen 4 en 16 tekens. Voer een lengte tussen 4 en 6 tekens in voor door de gebruiker ingeschreven apparaten.
@@ -414,7 +418,7 @@ Deze instellingen worden toegevoegd aan een apparaatconfiguratieprofiel in Intun
 - **Lijst met typen beperkte apps**: Hiermee maakt u een lijst met apps die gebruikers niet mogen installeren of gebruiken. Uw opties zijn:
 
   - **Niet geconfigureerd** (standaard): Deze instelling wordt niet gewijzigd of bijgewerkt door Intune. Standaard is het mogelijk dat het besturingssysteem toegang toestaat tot door u toegewezen apps en ingebouwde apps.
-  - **Niet-toegestane apps**: Hiermee maakt u een lijst met apps die niet worden beheerd door Intune en die gebruikers niet mogen installeren en uitvoeren. Gebruikers kunnen geen verboden apps installeren. Als een gebruiker een app uit deze lijst installeert, wordt deze in Intune gerapporteerd.
+  - **Niet-toegestane apps**: Hiermee maakt u een lijst met apps die niet worden beheerd door Intune en die gebruikers niet mogen installeren en uitvoeren. Gebruikers kunnen geen verboden apps installeren. Als een gebruiker een app installeert vanuit deze lijst, wordt het apparaat gerapporteerd in het rapport **Apparaten met beperkte apps** ([Beheercentrum van Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Apparaten** > **Monitor** > **Apparaten met beperkte apps**). 
   - **Goedgekeurde apps**: Hiermee maakt u een lijst met apps die gebruikers mogen installeren. Om te voldoen aan het beleid, mogen gebruikers geen andere apps installeren. Apps die worden beheerd door Intune worden automatisch toegestaan, zoals de bedrijfsportal-app. Er wordt niet voorkomen dat gebruikers een app installeren die niet in de goedgekeurde lijst wordt vermeld. Maar als dat wel het geval is, wordt dit in Intune gerapporteerd.
 
 Als u apps wilt toevoegen aan deze lijsten, kunt u:
@@ -619,15 +623,17 @@ Ga op een van de volgende manieren te werk om apps toe te voegen:
 
 Gebruik deze instellingen om iOS-/iPadOS-apparaten te configureren om specifieke apps in de autonome modus voor één app (ASAM) uit te voeren. Als deze modus is geconfigureerd en gebruikers een van de geconfigureerde apps starten, wordt het apparaat vergrendeld voor deze app. Schakelen tussen apps/taken is uitgeschakeld totdat gebruikers de toegestane app verlaten.
 
+Gebruikers moeten de specifieke app handmatig openen om de ASAM-configuratie toe te passen. Deze taak is ook van toepassing op de Bedrijfsportal-app.
+
 - Voeg bijvoorbeeld in een school- of universiteitsomgeving een app toe waarmee gebruikers een test kunnen uitvoeren op het apparaat. Of vergrendel het apparaat in de Bedrijfsportal-app totdat de gebruiker zich verifieert. Wanneer de acties van de app zijn voltooid door gebruikers, of wanneer u het beleid verwijdert, keert het apparaat terug naar de normale staat.
 
 - Niet alle apps ondersteunen de autonome modus voor één app. Als u een app in de autonome modus voor één app wilt plaatsen, is doorgaans een bundel-ID of een sleutel-/waardepaar geleverd door een app-configuratiebeleid vereist. Zie de [`autonomousSingleAppModePermittedAppIDs` beperking](https://developer.apple.com/documentation/devicemanagement/restrictions) in de MDM-documentatie van Apple voor meer informatie. Zie de documentatie van de leverancier voor meer informatie over de specifieke instellingen die nodig zijn voor de app die u wilt configureren.
 
   Als u bijvoorbeeld Zoom Rooms wilt configureren in de autonome modus voor één app, geeft Zoom aan dat de bundel-id van `us.zoom.zpcontroller` moet worden gebruikt. In dit geval kunt u ook een wijziging aanbrengen in de Zoom-webportal. Zie voor meer informatie het [Zoom-helpcentrum](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
 
-- Op iOS-en iPadOS-apparaten ondersteunt de Bedrijfsportal-app ASAM. Wanneer de Bedrijfsportal-app zich in ASAM bevindt, wordt het apparaat in de Bedrijfsportal-app vergrendeld totdat de gebruiker zich verifieert. Wanneer gebruikers zich aanmelden bij de Bedrijfsportal-app, kunnen ze andere apps en de knop Start scherm op het apparaat gebruiken. Wanneer gebruikers zich afmelden bij de Bedrijfsportal-app, keert het apparaat terug naar de modus voor één app en wordt de Bedrijfsportal-app vergrendeld.
+- Op iOS-en iPadOS-apparaten ondersteunt de Bedrijfsportal-app ASAM. Wanneer de Bedrijfsportal-app zich in ASAM bevindt, moeten gebruikers de Bedrijfsportal-app handmatig openen. Het apparaat wordt vergrendeld in de Bedrijfsportal-app totdat de gebruiker zich verifieert. Wanneer gebruikers zich aanmelden bij de Bedrijfsportal-app, kunnen ze andere apps en de knop Start scherm op het apparaat gebruiken. Wanneer gebruikers zich afmelden bij de Bedrijfsportal-app, keert het apparaat terug naar de modus voor één app en wordt de Bedrijfsportal-app vergrendeld.
 
-  Als u de app Bedrijfsportal wilt omzetten in een app voor aanmelden/afmelden (ASAM inschakelen), voert u de naam van de Bedrijfsportal-app, zoals `Microsoft Intune Company Portal`, en de bundel-ID (`com.microsoft.CompanyPortal`) in deze instellingen in. Nadat dit profiel is toegewezen, moet u de app Bedrijfsportal openen om de app te vergrendelen, zodat gebruikers zich kunnen aanmelden en afmelden.
+  Als u de app Bedrijfsportal wilt omzetten in een app voor aanmelden/afmelden (ASAM inschakelen), voert u de naam van de Bedrijfsportal-app, zoals `Microsoft Intune Company Portal`, en de bundel-ID (`com.microsoft.CompanyPortal`) in deze instellingen in. Nadat dit profiel is toegewezen, moet u de app Bedrijfsportal openen om de app te vergrendelen, zodat gebruikers zich kunnen aanmelden en afmelden. Gebruikers moeten de Bedrijfsportal-app handmatig openen om de ASAM-configuratie toe te passen.
   
   Wanneer het configuratieprofiel voor het apparaat is verwijderd en de gebruiker zich afmeldt, wordt het apparaat niet in de Bedrijfsportal-app vergrendeld.
 

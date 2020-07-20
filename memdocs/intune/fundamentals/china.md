@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/27/2020
+ms.date: 07/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f82664cbc9f6970d494945cfdf6fc72e8d95ae8b
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 1c4e567c7812f53a7497f368ded47d72640443f6
+ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022344"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86137389"
 ---
 # <a name="intune-operated-by-21vianet-in-china"></a>Door Intune beheerd via 21Vianet in China  
 
@@ -39,6 +39,7 @@ Omdat de services in China worden beheerd door een partner vanuit China, zijn er
 - Intune beheerd door 21Vianet ondersteunt alleen zelfstandige implementaties. Ondersteuning voor co-beheer met System Center Configuration Manager is momenteel in ontwikkeling.
 - Migraties van openbare clouds naar onafhankelijke clouds worden niet ondersteund. Klanten die willen overstappen naar Intune beheerd door 21Vianet, moeten handmatig worden gemigreerd.
 - De functie voor het koppelen van tenants (het synchroniseren van apparaten met Intune zonder inschrijving in de cloudconsole) wordt momenteel niet ondersteund.
+- Afgeleide referenties worden niet ondersteund met Intune beheerd door 21Vianet.
 - Intune beheerd door 21Vianet biedt geen ondersteuning voor de Intune-agent en biedt daarom geen ondersteuning voor het beheer van verouderde pc's.
 - Het beheer van Windows 10 wordt ondersteund met behulp van het moderne MDM-kanaal.
 - Intune beheerd door 21Vianet biedt geen ondersteuning voor de on-premises Exchange connector.

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9b0fab472f9bef682666d743c8a53b1308f32b40
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 974636ae787be0d454cc3a4fea98832aa4400c7c
+ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022429"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303484"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>De instantie voor het beheer van mobiele apparaten instellen
 
@@ -42,7 +42,9 @@ Mogelijke configuraties zijn:
 
 ## <a name="set-mdm-authority-to-intune"></a>MDM-instantie instellen op Intune
 
-Als u de MDM-instantie nog niet hebt ingesteld, volgt u de onderstaande stappen.
+Voor tenants die gebruikmaken van de 1911-servicerelease en hoger wordt de MDM-instantie automatisch ingesteld op Intune.
+
+Voor tenants die gebruikmaken van een lagere versie dan de 1911-servicerelease en wanneer u de MDM-instantie nog niet hebt ingesteld, volgt u de onderstaande stappen.
 
 1. Selecteer in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de oranje banner om de instelling **Instantie voor beheer van mobiele apparaten** te openen. De oranje banner wordt alleen weergegeven als u de MDM-instantie nog niet hebt ingesteld.
 2. Kies onder **Instantie voor beheer van mobiele apparaten** uw MDM-instantie uit de volgende opties:

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/11/2020
+ms.date: 07/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 15c1e1e943d9fd03476c0605c4d41cd417354fce
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: 730a8974753575b2726d821106f7b3c937b30207
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84973023"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86239977"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>App-configuratiebeleidsregels voor beheerde iOS-/iPadOS-apparaten toevoegen
 
@@ -193,20 +193,33 @@ DEP-inschrijvingen (Device Enrollment Program van Apple) zijn niet compatibel me
 2. Ga naar **Apps** > **App-configuratiebeleid** om een app-configuratiebeleid voor de bedrijfsportal-app te maken.
 3. Maak een app-configuratiebeleid met de onderstaande XML. Meer informatie over het maken van een app-configuratiebeleid en het invoeren van XML-gegevens vindt u in [Add app configuration policies for managed iOS/iPadOS devices](app-configuration-policies-use-ios.md) (App-configuratiebeleidsregels voor beheerde iOS-/iPadOS-apparaten toevoegen).
 
-    ``` xml
-    <dict>
-        <key>IntuneCompanyPortalEnrollmentAfterUDA</key>
-        <dict>
-            <key>IntuneDeviceId</key>
-            <string>{{deviceid}}</string>
-            <key>UserId</key>
-            <string>{{userid}}</string>
-        </dict>
-    </dict>
-    ```
+    - **Gebruik de Bedrijfsportal op een DEP-apparaat dat is ingeschreven met gebruikersaffiniteit:**
 
-3. Implementeer de bedrijfsportal op apparaten met het app-configuratiebeleid voor de gewenste groepen. Implementeer het beleid alleen voor groepen apparaten die al via DEP zijn ingeschreven.
-4. Informeer eindgebruikers dat ze zich bij de bedrijfsportal-app moeten aanmelden nadat deze automatisch is geïnstalleerd.
+        ``` xml
+        <dict>
+            <key>IntuneCompanyPortalEnrollmentAfterUDA</key>
+            <dict>
+                <key>IntuneDeviceId</key>
+                <string>{{deviceid}}</string>
+                <key>UserId</key>
+                <string>{{userid}}</string>
+            </dict>
+        </dict>
+        ```
+    - **Gebruik de Bedrijfsportal op een DEP-apparaat dat is ingeschreven zonder gebruikersaffiniteit**:
+
+        > [!NOTE]
+        > De gebruiker die zich aanmeldt bij de Bedrijfsportal wordt ingesteld als de primaire gebruiker van het apparaat.
+
+        ``` xml
+        <dict>
+            <key>IntuneUDAUserlessDevice</key>
+            <string>{{SIGNEDDEVICEID}}</string>
+        </dict>
+        ```     
+
+4. Implementeer de bedrijfsportal op apparaten met het app-configuratiebeleid voor de gewenste groepen. Implementeer het beleid alleen voor groepen apparaten die al via DEP zijn ingeschreven.
+5. Informeer eindgebruikers dat ze zich bij de bedrijfsportal-app moeten aanmelden nadat deze automatisch is geïnstalleerd.
 
 ## <a name="monitor-iosipados--app-configuration-status-per-device"></a>Configuratiestatus van een iOS-/iPadOS-app per apparaat controleren 
 Nadat een configuratiebeleid is toegewezen, kunt u de configuratiestatus van een iOS-/iPadOS-app voor elk beheerd apparaat controleren. Selecteer vanaf **Microsoft Intune** in Azure Portal de optie **Apparaten** > **Alle apparaten**. Selecteer in de lijst met beheerde apparaten een specifiek apparaat om een deelvenster voor het apparaat weer te geven. Selecteer **App-configuratie** op het deelvenster van het apparaat.  

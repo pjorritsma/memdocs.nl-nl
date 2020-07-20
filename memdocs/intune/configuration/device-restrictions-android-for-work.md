@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/16/2020
+ms.date: 07/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 88843cfa1c4f98d87e5eaaefdc0dcd87daf8cb68
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 7aee865b2a16ce3a9114433f9e10e185b26997f7
+ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093704"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303467"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Met Android Enterprise-apparaatinstellingen kunt u functies toestaan of beperken met behulp van Intune
 
@@ -89,7 +89,7 @@ Deze instellingen zijn van toepassing op Android Enterprise-inschrijvingstypen w
 
 ### <a name="device-experience"></a>Apparaatervaring
 
-Gebruik deze instellingen om een kioskstijlervaring op uw toegewezen apparaten of volledig beheerde apparaten te configureren. U kunt apparaten configureren voor het uitvoeren van één app of een aantal apps. Wanneer een apparaat op de kioskmodus is ingesteld, zijn alleen de apps beschikbaar die u expliciet hebt toegevoegd.
+Gebruik deze instellingen om een kioskstijlervaring op uw toegewezen apparaten te configureren of om de ervaring van het startscherm voor uw volledig beheerde apparaten te configureren. U kunt apparaten configureren voor het uitvoeren van één app of een aantal apps. Wanneer een apparaat op de kioskmodus is ingesteld, zijn alleen de apps beschikbaar die u expliciet hebt toegevoegd.
 
 **Type inschrijvingsprofiel**: Selecteer een inschrijvingsprofieltype om Microsoft Launcher of het beheerde Microsoft-startscherm op uw apparaten te configureren. Uw opties zijn:
 

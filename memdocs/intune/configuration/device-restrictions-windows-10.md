@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/30/2020
+ms.date: 07/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f4fd580a2e36a1cf7a29766c7a5e325e17fc528
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: e6304c35d93d717be13a564b5bf5dd2bdc0f84d5
+ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85591065"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303450"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Apparaatinstellingen voor Windows 10 en hoger om functies toe te staan of te beperken met behulp van Intune
 
@@ -31,7 +31,7 @@ Deze instellingen worden toegevoegd aan een apparaatconfiguratieprofiel in Intun
 > [!Note]
 > Niet alle opties zijn beschikbaar in alle edities van Windows. Bekijk de ondersteunde edities op [Beleid-CSP's](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider) (wordt op een andere Microsoft-website geopend).
 >  
-> De meeste configureerbare instellingen in een profiel voor Windows 10-apparaatbeperkingen worden geïmplementeerd op apparaatniveau. Beleid dat is geïmplementeerd voor gebruikersgroepen, wordt van kracht voor zowel de doelgebruiker als voor eventuele andere gebruikers die zich hierna aanmelden bij het apparaat en beschikken over een Intune-licentie.
+> De meeste configureerbare instellingen in een profiel voor Windows 10-apparaatbeperkingen worden geïmplementeerd op apparaatniveau met behulp van apparaatgroepen. Beleidsregels die worden geïmplementeerd naar gebruikersgroepen worden toegepast op specifieke gebruikers en gebruikers die een Intune-licentie hebben en zich aanmelden bij dat apparaat.
 
 ## <a name="before-you-begin"></a>Voordat u begint
 
@@ -1108,7 +1108,7 @@ Deze instellingen gebruiken de [beleid-CSP Defender](https://docs.microsoft.com/
   - **Inschakelen**: Microsoft Defender detecteert PUA’s en gedetecteerde items worden geblokkeerd. Deze items worden weergegeven in de geschiedenis, samen met andere dreigingen.
   - **Controleren**: Microsoft Defender detecteert PUA’s, maar onderneemt geen actie. U kunt de gegevens bekijken van toepassingen waarvoor acties zouden worden ondernomen. Zoek bijvoorbeeld naar gebeurtenissen die door Microsoft Defender in Logboeken zijn vastgelegd.
 
-  Zie [Detect and block potentially unwanted applications](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus) (Mogelijk ongewenste toepassingen detecteren en blokkeren) voor meer informatie over mogelijk ongewenste apps.
+  Zie [Detect and block potentially unwanted applications](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus) (Mogelijk ongewenste toepassingen detecteren en blokkeren) voor meer informatie over mogelijk ongewenste apps.
 
   [Defender/PUAProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
 

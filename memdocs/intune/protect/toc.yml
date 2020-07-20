@@ -52,8 +52,6 @@
       items:
         - name: Nalevingsoverzicht
           href: device-compliance-get-started.md
-        - name: Partners voor apparaatnaleving
-          href: device-compliance-partners.md
         - name: Een beleid maken
           href: create-compliance-policy.md
         - name: Naleving op basis van locatie
@@ -93,6 +91,8 @@
               href: endpoint-security-account-protection-policy.md
         - name: Microsoft Defender ATP
           href: advanced-threat-protection.md
+        - name: Migratie van firewallregels
+          href: endpoint-security-firewall-rule-tool.md
         - name: Schijven versleutelen
           items:
             - name: BitLocker-beleid beheren

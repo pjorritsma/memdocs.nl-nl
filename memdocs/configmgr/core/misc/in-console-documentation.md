@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 55cecac47accf6dfa2efdc3b0905497260a652e5
-ms.sourcegitcommit: 1edcfb3ce4350ba1a6f36a6150e86301d35c631b
+ms.openlocfilehash: e7d80d2f528365e7759ce7ceb50639b0d474e329
+ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86390871"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86891459"
 ---
 <!-- 
 - Feature 1357546
@@ -108,8 +108,11 @@ Begeleide procedures voor hulp bij het oplossen van problemen Configuration Mana
 
 ## <a name="new-and-updated-support-articles"></a>Nieuwe en bijgewerkte ondersteunings artikelen
 
-Ondersteunings artikelen die nieuw zijn of worden bijgewerkt tussen 16 mei en 22 juni 2020.
+Ondersteunings artikelen die nieuw zijn of worden bijgewerkt tussen 16 mei en 17 juli 2020.
 
+- [KB 4560496-update pakket voor micro soft endpoint Configuration Manager versie 2002](https://support.microsoft.com/help/4560496)
+- [KB 4569513 fout "niet gevonden" wanneer u probeert update-toepassingscatalogus tabellen te bewerken](https://support.microsoft.com/help/4569513)
+- [KB 4574419 time-out opgetreden in het micro soft endpoint Configuration Manager-beheer centrum](https://support.microsoft.com/help/4574416)
 - [KB 4564442 Windows 10-implementaties mislukken met micro soft Deployment Toolkit op computers met BIOS-type firmware](https://support.microsoft.com/help/4564442)
 - [KB 4563473-update pakket voor Configuration Manager versie 2002 Tenant koppel problemen](https://support.microsoft.com/help/4563473)
 - [KB 4567007 PXE-opstart fouten of vertraging van taken reeksen na het bijwerken van Configuration Manager current branch, versie 2002](https://support.microsoft.com/help/4567007)

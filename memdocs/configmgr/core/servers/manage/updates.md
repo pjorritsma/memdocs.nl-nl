@@ -2,7 +2,7 @@
 title: Updates en onderhoud
 titleSuffix: Configuration Manager
 description: Meer informatie over de service methode in de console, met de naam updates en onderhoud waarmee u gemakkelijk aanbevolen updates kunt zoeken en installeren.
-ms.date: 06/30/2020
+ms.date: 07/17/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5eb1a5ef844a8dbf94cbde9d2c99986ce0634260
-ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
+ms.openlocfilehash: a177c51aad6bfd85adc0da8019646453eb969517
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86422801"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871964"
 ---
 # <a name="updates-and-servicing-for-configuration-manager"></a>Updates en onderhoud voor Configuration Manager
 
@@ -40,7 +40,7 @@ Nadat u een basislijnversie hebt geïnstalleerd, zijn aanvullende versies van Co
 
 - U installeert de updates in de console om de versie van uw site op het hoogste niveau bij te werken.  
 
-- Updates die u op de centrale beheer site installeert, worden automatisch geïnstalleerd op onderliggende primaire sites. Deze timing beheren via een onderhouds venster op de primaire site.  
+- Updates die u op de centrale beheer site installeert, worden automatisch geïnstalleerd op onderliggende primaire sites. Deze timing beheren door middel van een service venster op de primaire site. Zie [service Windows](service-windows.md)voor meer informatie.  
 
 - Secundaire sites hand matig bijwerken naar een nieuwe update versie vanuit de-console.  
 
@@ -60,11 +60,11 @@ De volgende ondersteunde versies van Configuration Manager zijn momenteel beschi
 
 | Versie | Beschikbaarheidsdatum | [Einddatum voor de ondersteuning](current-branch-versions-supported.md) | Basislijn | Update in de console |  
 |-------------|-----------|------------|--------------|------------------------|  
-| [**2002**](../../plan-design/changes/whats-new-in-version-2002.md)<br /> (5.00.8968) | 1 april 2020 | 1 oktober 2021 | Ja,<sup>[Opmerking 1](#bkmk_note1)</sup> | Ja |
-| [**1910**](../../plan-design/changes/whats-new-in-version-1910.md)<br /> (5.00.8913) | 29 november 2019 | 29 mei 2021 | Nee | Ja |
-| [**1906**](../../plan-design/changes/whats-new-in-version-1906.md)<br /> (5.00.8853) | 26 juli 2019 | 26 januari 2021 | Nee | Ja |
+| [**2002**](../../plan-design/changes/whats-new-in-version-2002.md)<br /> (5.00.8968) | 1 april 2020 | 1 oktober 2021 | Ja,<sup>[Opmerking 1](#bkmk_note1)</sup> | Yes |
+| [**1910**](../../plan-design/changes/whats-new-in-version-1910.md)<br /> (5.00.8913) | 29 november 2019 | 29 mei 2021 | Nee | Yes |
+| [**1906**](../../plan-design/changes/whats-new-in-version-1906.md)<br /> (5.00.8853) | 26 juli 2019 | 26 januari 2021 | Nee | Yes |
 | [**1902**](../../plan-design/changes/whats-new-in-version-1902.md)<br /> (5.00.8790) | 27 maart 2019 | 27 september 2020 | Ja | Ja |
-| [**1810**](../../plan-design/changes/whats-new-in-version-1810.md)<br /> (5.00.8740) | 27 november 2018 | 1 december 2020 | Nee | Ja |
+| [**1810**](../../plan-design/changes/whats-new-in-version-1810.md)<br /> (5.00.8740) | 27 november 2018 | 1 december 2020 | Nee | Yes |
 
 De **beschikbaarheids datum** is het moment waarop de [eerste update ring](checklist-for-installing-update-2002.md#early-update-ring) wordt uitgebracht. De basis lijn is beschikbaar op het Volume License Service Center nadat de update wereld wijd beschikbaar is.
 
@@ -85,16 +85,16 @@ De volgende tabel bevat historische versies van Configuration Manager huidige ve
 
 | Versie | Beschikbaarheidsdatum | Einddatum voor ondersteuning | Basislijn | Update in de console |  
 |-------------|-----------|------------|--------------|------------------------|  
-| **1806** <br /> (5.00.8692) | 31 juli 2018 | 31 januari 2020 | Nee | Ja |
+| **1806** <br /> (5.00.8692) | 31 juli 2018 | 31 januari 2020 | Nee | Yes |
 | **1802** <br /> (5.00.8634) | 22 maart 2018 | 22 september 2019 | Ja | Ja |
-| **1710** <br /> (5.00.8577) | 20 november 2017 | 20 mei 2019 | Nee | Ja |
-| **1706** <br /> (5.00.8540) | 31 juli 2017 | 31 juli 2018 | Nee | Ja |
+| **1710** <br /> (5.00.8577) | 20 november 2017 | 20 mei 2019 | Nee | Yes |
+| **1706** <br /> (5.00.8540) | 31 juli 2017 | 31 juli 2018 | Nee | Yes |
 | **1702** <br /> (5.00.8498) | 27 maart 2017 | 27 maart 2018 | Ja | Ja |
-| **1610** <br /> (5.00.8458) | 18 november 2016 | 18 november 2017 | Nee | Ja |
-| **1606** <br /> (5.00.8412.1000) | 22 juli 2016 | 22 juli 2017 | Nee | Ja |
-| **1606 met KB3186654** <br />5.00.8412.1307) | 12 oktober 2016 | 12 oktober 2017 | Ja | Nee |
-| **1602** <br /> (5.00.8355) | 11 maart 2016 | 11 maart 2017 | Nee | Ja |
-| **1511** <br /> (5.00.8325) | 8 december 2015 | 8 december 2016 | Ja | Nee |  
+| **1610** <br /> (5.00.8458) | 18 november 2016 | 18 november 2017 | Nee | Yes |
+| **1606** <br /> (5.00.8412.1000) | 22 juli 2016 | 22 juli 2017 | Nee | Yes |
+| **1606 met KB3186654** <br />5.00.8412.1307) | 12 oktober 2016 | 12 oktober 2017 | Yes | Nee |
+| **1602** <br /> (5.00.8355) | 11 maart 2016 | 11 maart 2017 | Nee | Yes |
+| **1511** <br /> (5.00.8325) | 8 december 2015 | 8 december 2016 | Yes | Nee |  
 
 #### <a name="how-to-check-the-version"></a>De versie controleren
 

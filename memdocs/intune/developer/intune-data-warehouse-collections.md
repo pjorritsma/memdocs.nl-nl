@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/16/2020
+ms.date: 07/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b58a24340741621a4034ed4f77ad1298251a692
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: f2718c73cb34e01c84ef07d5085c698028ca285c
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165869"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461994"
 ---
 # <a name="intune-data-warehouse-collections"></a>Intune-datawarehouse-verzamelingen
 
@@ -193,6 +193,8 @@ De entiteit **DeviceConfigurationProfileUserActivity** bevat het aantal gebruike
 | OSVersion                  | Versie besturingssysteem.                                                                                                                                                                          |
 | JailBroken                 | Of het apparaat jailbroken of geroot is.                                                                                                                                         |
 | DeviceCategoryKey          | Sleutel van het kenmerk voor de apparaatcategorie voor dit apparaat.                                                                                                                                    |
+| physicalMemoryInBytes      | Het fysieke geheugen in bytes.                                                                                                                                    |
+| totalStorageSpaceInBytes      | Totale opslagcapaciteit in bytes.                                                                                                                                    |
 
 
 ## <a name="deviceregistrationstates"></a>deviceRegistrationStates
@@ -224,6 +226,7 @@ Met de entiteit **devices** worden alle geregistreerde apparaten voor beheer en 
 | DeviceRegistrationState    | Sleutel van het kenmerk voor de clientregistratiestatus voor dit apparaat.                                                                                                                      |
 | OwnerTypeKey               | Sleutel van het kenmerk voor het type eigenaar voor dit apparaat: zakelijk, persoonlijk of onbekend.                                                                                                    |
 | EnrolledDateTime           | De datum en tijd waarop het apparaat is ingeschreven.                                                                                                                                         |
+| EthernetMacAddress           | De unieke netwerk-id van dit apparaat.                                                                                                                                         |
 | LastSyncDateTime           | Laatste bekende keer dat een apparaat is ingecheckt bij Intune.                                                                                                                                              |
 | ManagementAgentKey         | Sleutel van de beheeragent die is gekoppeld aan dit apparaat.                                                                                                                             |
 | ManagementStateKey         | Sleutel van de aan dit apparaat gekoppelde beheerstatus waarmee de laatste status van een externe actie wordt aangegeven of dat het apparaat is gekraakt of geroot.                                                |
@@ -232,6 +235,7 @@ Met de entiteit **devices** worden alle geregistreerde apparaten voor beheer en 
 | DeviceCategoryKey          | Sleutel van de categorie die is gekoppeld aan dit apparaat.                                                                                                                                     |
 | DeviceEnrollmentType       | Sleutel van het registratietype dat is gekoppeld aan dit apparaat (geeft de registratiemethode aan).                                                                                             |
 | ComplianceStateKey         | Sleutel van de Nalevingsstatus die is gekoppeld aan dit apparaat.                                                                                                                             |
+| office365Version           | De versie van Office 365 die op het apparaat is geïnstalleerd.                                                                                                                             |
 | OSVersion                  | De versie van het besturingssysteem van het apparaat.                                                                                                                                                |
 | EasDeviceId                | De Exchange ActiveSync-id van het apparaat.                                                                                                                                                  |
 | SerialNumber               | SerialNumber                                                                                                                                                                           |

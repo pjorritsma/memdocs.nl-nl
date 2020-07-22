@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99b17cc165fc8d24fdf1b0f48525f3b23d8cc9b7
-ms.sourcegitcommit: d647eefa23c8849f49584442df568284d51d7525
+ms.openlocfilehash: 01c8c0ffba349966c99e1cbd90dbdfc10a5c9782
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86195630"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461161"
 ---
 # <a name="android-enterprise-fully-managed-security-configurations"></a>Volledig beheerde configuraties voor Android Enterprise-beveiliging
 
-Als onderdeel van het [configuratieframework voor beveiliging van Android Enterprise](android-configuration-framework.md) past u de volgende instellingen toe voor gebruikers van volledig beheerde mobiele Android Enterprise-apparaten. Zie [Instellingen voor Android Enterprise-apparaateigenaren om apparaten te markeren als niet compatibel met behulp van Intune](../protect/compliance-policy-create-android-for-work.md#device-owner) en [Android Enterprise-apparaatinstellingen voor het toestaan of beperken van functies met behulp van Intune](../configuration/device-restrictions-android-for-work.md#device-owner-only) voor meer informatie over elke beleidsinstelling.
+Als onderdeel van het [configuratieframework voor beveiliging van Android Enterprise](android-configuration-framework.md) past u de volgende instellingen toe voor gebruikers van volledig beheerde mobiele Android Enterprise-apparaten. Zie [Instellingen voor Android Enterprise-apparaateigenaren om apparaten te markeren als niet compatibel met behulp van Intune](../protect/compliance-policy-create-android-for-work.md#fully-managed-dedicated-and-corporate-owned-work-profile) en [Android Enterprise-apparaatinstellingen voor het toestaan of beperken van functies met behulp van Intune](../configuration/device-restrictions-android-for-work.md#fully-managed-dedicated-and-corporate-owned-work-profile) voor meer informatie over elke beleidsinstelling.
 
 Wanneer u de instellingen kiest, moet u gebruiksscenario's controleren en categoriseren. Configureer vervolgens gebruikers volgens de richtlijnen voor het gekozen beveiligingsniveau. U kunt de voorgestelde instellingen aanpassen op basis van de behoeften van uw organisatie. Zorg ervoor dat uw beveiligingsteam de dreigingsomgeving, risicobereidheid en impact op de bruikbaarheid evalueert.
 

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/26/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fc44bb114d6ff9089a01da2d0b7db7aa7527f4b5
-ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
+ms.openlocfilehash: b227148a6e16f7c9f8d62cb58eeb628afbd84123
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85972144"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86872015"
 ---
 # <a name="integrate-wandera-mobile-threat-protection-with-intune"></a>Wandera Mobile Threat Protection integreren met Intune  
 
@@ -70,12 +70,10 @@ Het instellen van de integratie tussen Wandera en Intune kan gemakkelijk binnen 
 
    ![Machtigingen accepteren](./media/wandera-mtd-connector-integration/permissions.png)
 
-10. U keert automatisch terug naar de RADAR-beheerconsole.  Als de autorisatie is geslaagd, ziet u een groen vinkje naast de knop Toekennen.
-11. Herhaal het toestemmingsproces voor de resterende lijstintegraties door op de bijbehorende toekenningsknoppen te klikken totdat er groene vinkjes naast elke integratie staan.
+9. U keert automatisch terug naar de RADAR-beheerconsole.  Als de autorisatie is geslaagd, ziet u een groen vinkje naast de knop Toekennen.
+10. Herhaal het toestemmingsproces voor de resterende lijstintegraties door op de bijbehorende toekenningsknoppen te klikken totdat er groene vinkjes naast elke integratie staan.
 
-    ![Synchronisatiegroep](./media/wandera-mtd-connector-integration/sync-group-name.png)
-
-12. Ga terug naar de Intune-console en bewerk de Wandera MTD-connector. Stel de beschikbare schakelknoppen in op Aan en klik op Opslaan om de configuratie op te slaan.
+11. Ga terug naar de Intune-console en bewerk de Wandera MTD-connector. Stel de beschikbare schakelknoppen in op Aan en klik op Opslaan om de configuratie op te slaan.
 
     ![Wandera inschakelen](./media/wandera-mtd-connector-integration/enable-wandera.png)
 

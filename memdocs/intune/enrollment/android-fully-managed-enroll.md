@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e270afc0c2ef84af0f44c0b9fc767319bdf2d30b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 78ed3fe234fb4ab236fe35b5e1778582f3eb731d
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990423"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461705"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices"></a>Intune-inschrijving van volledig beheerde Android Enterprise-apparaten instellen 
 
@@ -68,6 +68,6 @@ Wanneer deze instelling is ingesteld op **Ja**, ontvangt u een inschrijvingstoke
 U kunt uw [volledig beheerde apparaten nu inschrijven](android-dedicated-devices-fully-managed-enroll.md) (maar niet bij het gebruik van DEM-accounts).
 
 ## <a name="next-steps"></a>Volgende stappen
-- [Configuratiebeleid voor volledig beheerde Android Enterprise-apparaten toevoegen](../configuration/device-restrictions-android-for-work.md#device-owner-only)
+- [Configuratiebeleid voor volledig beheerde Android Enterprise-apparaten toevoegen](../configuration/device-restrictions-android-for-work.md#fully-managed-dedicated-and-corporate-owned-work-profile)
 - [App-configuratiebeleid voor volledig beheerde Android Enterprise-apparaten configureren](../apps/app-configuration-policies-use-android.md)
 

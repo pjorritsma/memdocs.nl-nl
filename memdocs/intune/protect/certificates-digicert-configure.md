@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99cad94d0d0f56aba94e8d00a091efea914f418e
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: ab862efd37bfeffc392d1d18cbf1f8a2f3deb50e
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990346"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565696"
 ---
 # <a name="set-up-intune-certificate-connector-for-digicert-pki-platform"></a>Intune Certificate Connector instellen voor het DigiCert PKI-platform
 
@@ -51,30 +51,32 @@ Als u de connector gebruikt met alleen de DigiCert-CA, kunt u de instructies in 
 
 1. Sla het volgende codefragment op in een bestand genaamd **certreq.ini** en werk dit bij zoals vereist (bijvoorbeeld: *onderwerpnaam in CN-indeling*).
 
-        [Version] 
-        Signature="$Windows NT$" 
-        
-        [NewRequest] 
-        ;Change to your,country code, company name and common name 
-        Subject = "Subject Name in CN format"
-        
-        KeySpec = 1 
-        KeyLength = 2048 
-        Exportable = TRUE 
-        MachineKeySet = TRUE 
-        SMIME = False 
-        PrivateKeyArchive = FALSE 
-        UserProtected = FALSE 
-        UseExistingKeySet = FALSE 
-        ProviderName = "Microsoft RSA SChannel Cryptographic Provider" 
-        ProviderType = 12 
-        RequestType = PKCS10 
-        KeyUsage = 0xa0 
-        
-        [EnhancedKeyUsageExtension] 
-        OID=1.3.6.1.5.5.7.3.2 ; Client Authentication  // Uncomment if you need a mutual TLS authentication
-        
-        ;----------------------------------------------- 
+   ```
+   [Version] 
+   Signature="$Windows NT$" 
+
+   [NewRequest] 
+   ;Change to your,country code, company name and common name 
+   Subject = "Subject Name in CN format"
+
+   KeySpec = 1 
+   KeyLength = 2048 
+   Exportable = TRUE 
+   MachineKeySet = TRUE 
+   SMIME = False 
+   PrivateKeyArchive = FALSE 
+   UserProtected = FALSE 
+   UseExistingKeySet = FALSE 
+   ProviderName = "Microsoft RSA SChannel Cryptographic Provider" 
+   ProviderType = 12 
+   RequestType = PKCS10 
+   KeyUsage = 0xa0 
+
+   [EnhancedKeyUsageExtension] 
+   OID=1.3.6.1.5.5.7.3.2 ; Client Authentication  // Uncomment if you need a mutual TLS authentication
+
+   ;----------------------------------------------- 
+   ```
 
 2. Open een opdrachtprompt met verhoogde bevoegdheid en genereer een CSR (certificaatondertekeningsaanvraag) met behulp van de volgende opdracht:
 
@@ -82,13 +84,14 @@ Als u de connector gebruikt met alleen de DigiCert-CA, kunt u de instructies in 
 
 3. Open het bestand request.csr in Kladblok en kopieer de CSR-inhoud in de volgende indeling:
 
-        -----BEGIN NEW CERTIFICATE REQUEST-----
-        MIID8TCCAtkCAQAwbTEMMAoGA1UEBhMDVVNBMQswCQYDVQQIDAJXQTEQMA4GA1UE
-        …
-        …
-        fzpeAWo=
-        -----END NEW CERTIFICATE REQUEST-----
-
+   ``` 
+   -----BEGIN NEW CERTIFICATE REQUEST-----
+   MIID8TCCAtkCAQAwbTEMMAoGA1UEBhMDVVNBMQswCQYDVQQIDAJXQTEQMA4GA1UE
+   …
+   …
+   fzpeAWo=
+   -----END NEW CERTIFICATE REQUEST-----
+   ```
 
 4. Meld u aan bij de DigiCert-CA en blader in de taken naar **RA-certificaat verkrijgen**.
 
@@ -136,7 +139,7 @@ Als u de connector gebruikt met alleen de DigiCert-CA, kunt u de instructies in 
 
    g. Leg een kopie van de vingerafdruk van het RA-certificaat vast, zonder spaties. Dit is een voorbeeld van de vingerafdruk:
 
-        RA Cert Thumbprint: "EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"
+      `RA Cert Thumbprint: "EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"`
 
     > [!NOTE]
     > Voor hulp bij het ophalen van het RA-certificaat van de DigiCert-CA, neemt u contact op met de [klantenondersteuning van DigiCert](mailto:enterprise-pkisupport@digicert.com).
@@ -196,8 +199,10 @@ Standaard wordt Intune Certificate Connector hier geïnstalleerd: **%ProgramFile
 
    a. Werk de waarde van de sleutel `RACertThumbprint` bij met de waarde van de certificaatvingerafdruk die u in het vorige gedeelte hebt gekopieerd. Bijvoorbeeld:
 
-        <add key="RACertThumbprint"
-        value="EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"/>
+      ```
+      <add key="RACertThumbprint"
+      value="EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"/>
+      ```
 
    b. Sla het bestand op en sluit het.
 
@@ -272,7 +277,7 @@ De certificaatprofiel-OID is gekoppeld aan een certificaatprofielsjabloon in de 
 3. Selecteer het certificaatprofiel dat u wilt gebruiken.
 4. Kopieer de certificaatprofiel-OID. Deze ziet er ongeveer uit zoals in het volgende voorbeeld:
 
-       Certificate Profile OID = 2.16.840.1.113733.1.16.1.2.3.1.1.47196109 
+   `Certificate Profile OID = 2.16.840.1.113733.1.16.1.2.3.1.1.47196109`
 
 > [!NOTE]
 > Als u hulp nodig hebt bij het ophalen van de certificaatprofiel-OID, neemt u contact op met [klantenondersteuning van DigiCert](mailto:enterprise-pkisupport@digicert.com).

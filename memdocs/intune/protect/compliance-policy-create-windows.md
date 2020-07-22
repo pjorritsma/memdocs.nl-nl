@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 972596cd3973c84c4f00409464f2fe621efc1369
-ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
+ms.openlocfilehash: 6c42ec6b7b67a1c000702e6e53747270d0eda28c
+ms.sourcegitcommit: 16bc2ed5b64eab7f5ae74391bd9d7b66c39d8ca6
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85107395"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86437341"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Instellingen in Windows 10 en later om te markeren of apparaten wel of niet conform zijn met behulp van Intune
 
@@ -244,7 +244,7 @@ Windows Holographic for Business gebruikt het **Windows 10 en hoger**-platform. 
 
 - **Systeembeveiliging** > **Versleuteling** > **Versleuteling van opslag van gegevens op apparaat**.
 
-Zie [Verify device encryption](https://docs.microsoft.com/hololens/hololens-encryption#verify-device-encryption) (Apparaatversleuteling controleren) om apparaatversleuteling te controleren op de Microsoft HoloLens.
+Zie [Verify device encryption](https://docs.microsoft.com/hololens/security-encryption-data-protection) (Apparaatversleuteling controleren) om apparaatversleuteling te controleren op de Microsoft HoloLens.
 
 ## <a name="surface-hub"></a>Surface Hub
 

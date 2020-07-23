@@ -18,11 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 68e337f6315fc6d198e27c494b7689bb1cb9bc97
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 28401c314d70f1d810fe12e815d8558afc8aab89
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989624"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502592"
 ---
 # <a name="app-protection-policies-overview"></a>Overzicht van App-beveiligingsbeleid
 
@@ -311,7 +312,7 @@ Als de gebruiker de app gebruikt wanneer selectief wissen wordt gestart, control
 Voor de app-beveiliging van Intune moet de identiteit van de gebruiker voor de toepassing en [Intune-SDK](../developer/app-sdk.md) consistent zijn. Dit kan alleen worden gegarandeerd via moderne verificatie. Er zijn scenario's waarin apps met een on-premisses configuratie werken, maar deze zijn niet consistent en kunnen ook niet worden gegarandeerd.
 
 **Veilige manier om webkoppelingen te openen vanuit beheerde apps**<br>
-De IT-beheerder kan een app-beveiligingsbeleid implementeren en instellen voor [Microsoft Edge](app-configuration-managed-browser.md), een webbrowser die eenvoudig kan worden beheerd met Intune. De IT-beheerder kan ervoor zorgen dat alle webkoppelingen in de door Intune beheerde apps moeten worden geopend met de Managed Browser-app.
+De IT-beheerder kan een app-beveiligingsbeleid implementeren en instellen voor [Microsoft Edge](manage-microsoft-edge.md), een webbrowser die eenvoudig kan worden beheerd met Intune. De IT-beheerder kan ervoor zorgen dat alle webkoppelingen in de door Intune beheerde apps moeten worden geopend met de Managed Browser-app.
 
 ## <a name="app-protection-experience-for-ios-devices"></a>App-beveiligingservaring voor iOS-apparaten
 

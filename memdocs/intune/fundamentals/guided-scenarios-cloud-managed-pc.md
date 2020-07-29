@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c43b74b6ca20fa3f140ad688be49daa928c54b5f
-ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
+ms.openlocfilehash: 4991ced4517ffe5902f876c196b47c2c2b50a8a6
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85264036"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262758"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>Begeleid scenario: in de cloud beheerde moderne desktop
 
@@ -47,7 +47,7 @@ Voor het geval u een in de cloud beheerde moderne desktop wilt evalueren in uw e
 
 ## <a name="step-1---introduction"></a>Stap 1: inleiding
 
-Met behulp van dit begeleide scenario stelt u een testgebruiker in, schrijft u een apparaat in bij Intune en implementeert u het apparaat met aanbevolen Intune-instellingen en met Windows 10 en Microsoft 365-apps. Uw apparaat wordt ook geconfigureerd voor Microsoft Defender Advanced Threat Protection als u ervoor kiest om [deze beveiliging in te inschakelen in Intune](../protect/advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune). De gebruiker die u instelt en het apparaat dat u inschrijft worden toegevoegd aan een nieuwe beveiligingsgroep en geconfigureerd met de aanbevolen instellingen voor beveiliging en productiviteit.
+Met behulp van dit begeleide scenario stelt u een testgebruiker in, schrijft u een apparaat in bij Intune en implementeert u het apparaat met aanbevolen Intune-instellingen en met Windows 10 en Microsoft 365-apps. Uw apparaat wordt ook geconfigureerd voor Microsoft Defender Advanced Threat Protection als u ervoor kiest om [deze beveiliging in te inschakelen in Intune](../protect/advanced-threat-protection-configure.md#enable-microsoft-defender-atp-in-intune). De gebruiker die u instelt en het apparaat dat u inschrijft worden toegevoegd aan een nieuwe beveiligingsgroep en geconfigureerd met de aanbevolen instellingen voor beveiliging en productiviteit.
 
 ### <a name="what-you-will-need-to-continue"></a>Wat u nodig hebt om verder te gaan
 
@@ -127,5 +127,5 @@ Zodra de gebruiker het apparaat heeft toegevoegd aan Azure Active Directory word
 
 ## <a name="next-steps"></a>Volgende stappen
 
-- Als u Microsoft Defender Advanced Threats Detection wilt gebruiken, moet u [Intune-nalevingsbeleid maken](../protect/advanced-threat-protection.md#create-and-assign-compliance-policy-to-set-device-risk-level) om Defender Threat Analysis te laten voldoen aan de vereisten.
-- Maak [beleid voor voorwaardelijke toegang op basis van het apparaat](../protect/advanced-threat-protection.md#create-a-conditional-access-policy) om de toegang te blokkeren als het apparaat niet voldoet aan de Intune-vereisten.
+- Als u Microsoft Defender Advanced Threats Detection wilt gebruiken, moet u [Intune-nalevingsbeleid maken](../protect/advanced-threat-protection-configure.md#create-and-assign-compliance-policy-to-set-device-risk-level) om Defender Threat Analysis te laten voldoen aan de vereisten.
+- Maak [beleid voor voorwaardelijke toegang op basis van het apparaat](../protect/advanced-threat-protection-configure.md#create-a-conditional-access-policy) om de toegang te blokkeren als het apparaat niet voldoet aan de Intune-vereisten.

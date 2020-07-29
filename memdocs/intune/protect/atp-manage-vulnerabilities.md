@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72fb278070e2d5b8581fb1b2e263aa06c90b5df9
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: a1d410da2cbedb9bcd2418fac1ddb783529ee8c6
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989756"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262588"
 ---
 # <a name="use-intune-to-remediate-vulnerabilities-identified-by-microsoft-defender-atp"></a>Intune gebruiken voor het oplossen van beveiligingsproblemen geïdentificeerd door Microsoft Defender ATP
 
@@ -75,7 +75,7 @@ Hier volgt een voorbeeld van een werkstroom:
 - Configureer een verbinding tussen services met Microsoft Defender ATP.
 - Implementeer een configuratiebeleid voor apparaten met het profieltype **Microsoft Defender ATP (Windows 10 Desktop)** op apparaten waarvan het risico wordt beoordeeld door ATP.
 
-  Zie [Naleving voor Windows Defender ATP met voorwaardelijke toegang in Intune afdwingen](advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune) voor meer informatie over het instellen van Intune voor gebruik met ATP.
+  Zie [Naleving voor Windows Defender ATP met voorwaardelijke toegang in Intune afdwingen](advanced-threat-protection-configure.md#enable-microsoft-defender-atp-in-intune) voor meer informatie over het instellen van Intune voor gebruik met ATP.
 
 ## <a name="work-with-security-tasks"></a>Werken met beveiligingstaken
 
@@ -103,6 +103,7 @@ Hier volgt een voorbeeld van een werkstroom:
 Als het probleem is opgelost, kan de risicoscore in ATP afnemen, gebaseerd op nieuwe informatie van de herstelde apparaten.
 
 ## <a name="next-steps"></a>Volgende stappen
+
 Meer informatie over Intune en [Microsoft Defender ATP](advanced-threat-protection.md).
 
 Bekijk Intune [Mobile Threat Defense](mobile-threat-defense.md).

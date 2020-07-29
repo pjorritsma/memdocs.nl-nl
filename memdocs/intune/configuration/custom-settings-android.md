@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43107ce98ee1c9d002b07470c224b2291819069b
-ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
+ms.openlocfilehash: 8012b11557971ff8a7e3a05360243010d891fa2e
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85264104"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262775"
 ---
 # <a name="use-custom-settings-for-android-devices-in-microsoft-intune"></a>Aangepaste instellingen gebruiken voor Android-apparaten in Microsoft Intune
 
@@ -35,7 +35,7 @@ Door een aangepast profiel te gebruiken, kunt u de volgende Android-instellingen
 - [Een Wi-Fi-profiel maken met een vooraf gedeelde sleutel](/intune/wi-fi-profile-shared-key)
 - [Een VPN per app-profiel maken](/intune/android-pulse-secure-per-app-vpn)
 - [Apps toestaan of blokkeren voor Samsung KNOX Standard-apparaten](/intune/samsung-knox-apps-allow-block)
-- [ in Microsoft Defender Advanced Threat Protection voor Android](../protect/advanced-threat-protection.md#configure-web-protection-on-devices-that-run-android)
+- [ in Microsoft Defender Advanced Threat Protection voor Android](../protect/advanced-threat-protection-manage-android.md)
 
 >[!IMPORTANT]
 > Alleen de hierboven genoemde instellingen kunnen worden geconfigureerd in een aangepast profiel. Android-apparaten geven geen volledige lijst weer met OMA-URI-instellingen die u kunt configureren. Als u meer instellingen wilt bekijken, stemt u voor meer instellingen op de [Intune Uservoice-site](https://microsoftintune.uservoice.com/forums/291681-ideas).

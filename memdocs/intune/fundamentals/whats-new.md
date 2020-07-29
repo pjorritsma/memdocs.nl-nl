@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da2f2b1155e6760d23d4ead65899b82e277fbd3e
-ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
+ms.openlocfilehash: 2cd5e8f6e1975adf33131ca47049eb2d4a6f68cd
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86891544"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262877"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Wat is er nieuw in Microsoft Intune?
 
@@ -290,11 +290,11 @@ U kunt scriptpakketten maken en uitvoeren op apparaten van eindgebruikers om de 
 
 #### <a name="use-microsoft-defender-atp-in-compliance-policies-for-android---4425686----"></a>Microsoft Defender ATP gebruiken in nalevingsbeleid voor Android<!-- 4425686  -->
 
-U kunt nu Intune gebruiken om [Android-apparaten in Microsoft Defender Advanced Threat Protection te onboarden](../protect/advanced-threat-protection.md#onboard-android-devices) (MicrosoftDefender ATP). Nadat de onboarding van uw ingeschreven apparaten is voltooid, kan uw nalevingsbeleid voor Android de *bedreigingsniveausignalen* van Microsoft Defender ATP gebruiken. Dit zijn dezelfde signalen die u eerder kon gebruiken voor Windows 10-apparaten.
+U kunt nu Intune gebruiken om [Android-apparaten in Microsoft Defender Advanced Threat Protection te onboarden](../protect/advanced-threat-protection-configure.md#onboard-devices) (MicrosoftDefender ATP). Nadat de onboarding van uw ingeschreven apparaten is voltooid, kan uw nalevingsbeleid voor Android de *bedreigingsniveausignalen* van Microsoft Defender ATP gebruiken. Dit zijn dezelfde signalen die u eerder kon gebruiken voor Windows 10-apparaten.
 
 #### <a name="configure-defender-atp-web-protection-for-android-devices---6185563----"></a>Defender ATP-webbeveiliging configureren voor Android-apparaten<!-- 6185563  -->
 
-Wanneer u Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) gebruikt voor Android-apparaten, kunt u [ Microsoft Defender ATP-webbeveiliging](../protect/advanced-threat-protection.md#configure-web-protection-on-devices-that-run-android) configureren om de scanfunctie voor phishing uit te schakelen of te voorkomen dat de VPN door de scan wordt gebruikt.
+Wanneer u Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) gebruikt voor Android-apparaten, kunt u [ Microsoft Defender ATP-webbeveiliging](../protect/advanced-threat-protection-manage-android.md) configureren om de scanfunctie voor phishing uit te schakelen of te voorkomen dat de VPN door de scan wordt gebruikt.
 
 Afhankelijk van hoe uw Android-apparaat wordt ingeschreven met Intune, zijn de volgende opties beschikbaar:
 

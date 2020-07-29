@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8073cb1dbe872d9c7fd1ad05235707be4b969519
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 0c1029c4641d9ff07bf4254427cb08dfa583b5f8
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461416"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262608"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Wat is er nieuw in Microsoft Intune - vorige maanden
 
@@ -2562,7 +2562,7 @@ De pagina [Maak kennis met Windows 10 in S-⁠modus](https://www.microsoft.com/w
 Van toepassing op: de meeste recente build van [Windows Insider](https://docs.microsoft.com/windows-insider/at-work-pro/) (in preview).
 
 #### <a name="windows-defender-atp-configuration-package-automatically-added-to-configuration-profile---2144658---"></a>Windows Defender ATP configuratiepakket automatisch toegevoegd aan configuratieprofiel<!-- 2144658 -->
-Wanneer u [Advanced Threat Protection en onboarding](../protect/advanced-threat-protection.md#onboard-windows-devices-by-using-a-configuration-profile)-apparaten gebruikt in Intune, moest u voorheen een configuratiepakket downloaden en dit aan uw configuratieprofiel toevoegen. Met deze update haalt Intune het pakket automatisch op uit het Windows Defender-beveiligingscentrum en voegt het toe aan uw profiel.
+Wanneer u [Advanced Threat Protection en onboarding](../protect/advanced-threat-protection-configure.md#onboard-devices)-apparaten gebruikt in Intune, moest u voorheen een configuratiepakket downloaden en dit aan uw configuratieprofiel toevoegen. Met deze update haalt Intune het pakket automatisch op uit het Windows Defender-beveiligingscentrum en voegt het toe aan uw profiel.
 Van toepassing op Windows 10 en hoger.
 
 #### <a name="require-users-to-connect-during-device-setup--2311457--"></a>Gebruikers verplichten om verbinding te maken tijdens de installatie van het apparaat<!--2311457-->

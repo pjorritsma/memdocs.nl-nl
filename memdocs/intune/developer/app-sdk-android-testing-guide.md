@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd4ece62215d48f3481923e099feecc992d7aa6d
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: b47361bf4812de91d12c779a6eb58fef35e9d0f2
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093362"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262044"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developers-testing-guide"></a>Testhandleiding voor ontwikkelaars voor Microsoft Intune App SDK voor Android
 
 De testhandleiding voor de Intune App-SDK voor Android is ontworpen om uw door Intune beheerde Android-app testen.
 
 ## <a name="demo-tenant-setup"></a>Demotenant installeren
-Als uw bedrijf nog niet over een tenant beschikt, kunt u een demotenant met of zonder vooraf gegenereerde gegevens maken. U moet zich registreren als [Microsoft-partner](https://partner.microsoft.com/en-us/business-opportunities/why-microsoft) om toegang te krijgen tot Microsoft CDX. Een nieuw account maken:
+Als uw bedrijf nog niet over een tenant beschikt, kunt u een demotenant met of zonder vooraf gegenereerde gegevens maken. U moet zich registreren als [Microsoft-partner](https://partner.microsoft.com/business-opportunities/why-microsoft) om toegang te krijgen tot Microsoft CDX. Een nieuw account maken:
 1. Ga naar de [Microsoft CDX-website voor het maken van tenants](https://cdx.transform.microsoft.com/my-tenants/create-tenant) en maak een Microsoft 365 Enterprise-tenant.
 2. [Stel Intune in](../fundamentals/setup-steps.md) om Mobile Device Management (MDM) in te schakelen.
 3. [Gebruikers maken](../fundamentals/users-add.md).

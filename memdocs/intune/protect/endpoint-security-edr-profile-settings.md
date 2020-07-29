@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/22/2020
+ms.date: 07/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: dd53ec47435ba9dc416d2b152719b393d1647f90
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: e26719bb9bf322e3e4bf11b39911e98788707629
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83823993"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86460413"
 ---
 # <a name="endpoint-detection-and-response-policy-settings-for-endpoint-security-in-intune"></a>Instellingen voor het beleid voor eindpuntdetectie en -reactie van eindpuntbeveiliging in Intune
 
@@ -33,9 +33,7 @@ Ondersteunde platformen en profielen:
   - Profiel: **Eindpuntdetectie en -respons (MDM)**
 
 - **Windows 10 en Windows Server**: Gebruik dit platform voor het beleid dat u wilt implementeren op apparaten die worden beheerd door Configuration Manager.
-  - Profiel: **Eindpuntdetectie en -respons (ConfigMgr) (preview-versie)**
-  
-  *Dit platform en profiel zijn beschikbaar als openbare preview*.
+  - Profiel: **Eindpuntdetectie en -respons (ConfigMgr)**
 
 ## <a name="endpoint-detection-and-response-mdm"></a>Eindpuntdetectie en -respons (MDM)
 
@@ -70,7 +68,7 @@ Ondersteunde platformen en profielen:
   - **Niet-geconfigureerd**   (*default*)
   - **Ja** - De frequentie van telemetrierapporten van Microsoft Defender Advanced Threat Protection versnellen.
 
-## <a name="endpoint-detection-and-response-configmgr-preview"></a>Eindpuntdetectie en -respons (ConfigMgr) (preview-versie)
+## <a name="endpoint-detection-and-response-configmgr"></a>Eindpuntdetectie en -respons (ConfigMgr)
 
 **Eindpuntdetectie en -respons**:
 

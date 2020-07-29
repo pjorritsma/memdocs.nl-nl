@@ -17,14 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d3ca95db3297a6ca251f91a79fda705aebb6d18d
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: e5d673c5688c4ab4f3219256412a098855af63ec
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088459"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461875"
 ---
-# <a name="what-is-device-enrollment"></a>Wat is apparaatinschrijving?
+# <a name="what-is-device-enrollment-in-intune"></a>Wat is apparaatinschrijving in Intune?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Met Intune kunt u de apparaten en apps van uw werknemers beheren en bepalen hoe zij toegang hebben tot uw bedrijfsgegevens. Om gebruik te kunnen maken van MDM (Mobile Device Management), moeten de apparaten eerst worden geregistreerd bij de Intune-service. Wanneer een apparaat is geregistreerd, wordt een MDM-certificaat voor het apparaat uitgegeven. Dit certificaat wordt gebruikt om te communiceren met de Intune-service.
@@ -72,6 +72,8 @@ Standaard kunnen apparaten voor alle platforms worden ingeschreven in Intune. U 
 |**Android Enterprise - Werkprofiel**|**Gebruiker geïnitieerd via bedrijfsportal**| Nee | Ja | Nee | [Meer informatie](android-work-profile-enroll.md)|
 
 
+&nbsp;
+
 | **Bedrijf** | **Inschrijvingsmethoden** | **Opnieuw instellen vereist** | **Gebruikersaffiniteit** | **Vergrendeld** | **Details**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |**Android-apparaatbeheer**|**[DEM](#device-enrollment-manager) geïnitieerd via de bedrijfsportal**| Nee | Nee | Nee |[Meer informatie](device-enrollment-manager-enroll.md)|
@@ -79,7 +81,7 @@ Standaard kunnen apparaten voor alle platforms worden ingeschreven in Intune. U 
 |**Android-apparaatbeheer met Zebra-mobiliteitsextensies**|**Door gebruiker of [DEM](#device-enrollment-manager) geïnitieerd via de bedrijfsportal**| Nee | Ja, als dit door de gebruiker is geïnitieerd, Nee als dit door [DEM](#device-enrollment-manager) is geïnitieerd | Nee | [Meer informatie](../configuration/android-zebra-mx-overview.md)|
 |**Toegewezen Android Enterprise-apparaten**|**NFC, Token, QR-code, Zero Touch**| Ja | Nee | Configureerbaar via beleid | [Meer informatie](android-kiosk-enroll.md)|
 |**Volledig beheerde Android Enterprise-apparaten**|**NFC, Token, QR-code, Zero Touch**| Ja | Ja | Configureerbaar via beleid | [Meer informatie](android-dedicated-devices-fully-managed-enroll.md)|
-
+|**Android Enterprise in bedrijfseigendom met een werkprofiel** | **NFC, Token, QR-code, Zero Touch** | Ja | Ja | Configureerbaar via beleid | [Meer informatie](android-corporate-owned-work-profile-enroll.md)|
 
 ## <a name="bring-your-own-device"></a>Bring Your Own Device
 BYOD-apparaten (Bring Your Own Devices) zijn persoonlijke telefoons, tablets en pc's. BYOD-gebruikers gebruiken de bedrijfsportal-app om hun apparaten te registreren. Met dit programma hebben gebruikers toegang tot de bedrijfsresources als e-mail.

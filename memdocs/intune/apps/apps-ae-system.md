@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a1d994960e28deb3e48e4f778b6b496440037052
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4ee71bdcf45c4dc99b9c6b3eb889ba373ecadca9
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83984738"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461841"
 ---
 # <a name="add-android-enterprise-system-apps-to-microsoft-intune"></a>Android Enterprise-systeem-apps toevoegen aan Microsoft Intune
 
-Voordat u een app toewijst aan een apparaat of een groep gebruikers, moet u de app toevoegen aan Microsoft Intune. Systeem-apps worden ondersteund op Android Enterprise-apparaten. U kunt een systeem-app inschakelen voor [toegewezen Android Enterprise-apparaten](../enrollment/android-kiosk-enroll.md) of [volledig beheerde apparaten](../enrollment/android-fully-managed-enroll.md).
+Voordat u een app toewijst aan een apparaat of een groep gebruikers, moet u de app toevoegen aan Microsoft Intune. Systeem-apps worden ondersteund op Android Enterprise-apparaten. U kunt een systeem-app inschakelen voor [toegewezen Android Enterprise-apparaten](../enrollment/android-kiosk-enroll.md), [volledig beheerde apparaten](../enrollment/android-fully-managed-enroll.md) of [Android Enterprise-apparaten met een werkprofiel in bedrijfseigendom](../enrollment/android-corporate-owned-work-profile-enroll.md).
 
 ## <a name="add-the-app"></a>De app toevoegen
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ca2a5ddd3d2b4c0aa93c7c955d0d688944ee8f95
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 25b07dcbb76f6d4a8aae964d0123a880d179784e
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985511"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871930"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>Wi-Fi-instellingen toevoegen en gebruiken op uw apparaten in Microsoft Intune
 
@@ -68,7 +68,7 @@ Wi-Fi-profielen ondersteunen de volgende apparaatplatformen:
 
       > [!TIP]
       >
-      > - Voor **Android Enterprise**-apparaten die als een toegewezen apparaat (kiosk) worden uitgevoerd, kiest u **Alleen apparaateigenaar** > **Wi-Fi**.
+      > - Kies voor **Android Enterprise**-apparaten die worden uitgevoerd als een toegewezen apparaat (kiosk) **Volledig beheerd, Toegewezen en Werkprofiel in bedrijfseigendom** > **Wi-Fi**.
       > - Voor **Windows 8.1 en hoger** kunt u **Wi-Fi importeren** kiezen. Met deze optie kunt u Wi-Fi-instellingen die u eerder vanaf een ander apparaat hebt geëxporteerd, importeren als een XML-bestand.
 
 4. Selecteer **Maken**.
@@ -101,9 +101,8 @@ Wi-Fi-profielen ondersteunen de volgende apparaatplatformen:
 > [!TIP]
 > Als u gebruikmaakt van verificatie op basis van certificaten voor uw Wi-Fi-profiel, implementeert u het Wi-Fi-profiel, het certificaatprofiel en het vertrouwde basisprofiel in dezelfde groepen om ervoor te zorgen dat elk apparaat de geldigheid van uw certificeringsinstantie kan herkennen.  Zie [Certificaten configureren met Microsoft Intune](../protect/certificates-configure.md) voor meer informatie.
 
-
 ## <a name="next-steps"></a>Volgende stappen
 
-Het profiel is gemaakt, maar er gebeurt niets. Vervolgens moet u [dit profiel toewijzen](device-profile-assign.md) en [de status ervan controleren](device-profile-monitor.md).
+Het profiel is gemaakt, maar er gebeurt mogelijk niets. Vervolgens moet u [dit profiel toewijzen](device-profile-assign.md) en [de status ervan controleren](device-profile-monitor.md).
 
 [Problemen met Wi-Fi-profielen in Intune](troubleshoot-wi-fi-profiles.md).

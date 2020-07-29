@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 07/17/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,16 +18,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a2cee7e57f303f798f3484e52462a22e981ed59
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 3e7f9c984b81bbe98269b0123371d8097d960ffb
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079124"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462130"
 ---
 # <a name="troubleshoot-the-intune-exchange-connector"></a>Problemen met Intune Exchange Connector oplossen
 
 In dit artikel wordt beschreven hoe u problemen met betrekking tot de Intune Exchange-connector kunt oplossen.
+
+> [!IMPORTANT]
+>
+> Vanaf juli 2020 wordt de ondersteuning voor de Exchange connector afgeschaft en vervangen door Exchange [HMA](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (Hybrid Modern Authentication, hybride moderne verificatie) en de mogelijkheid om een Exchange-connector toe te voegen aan Intune wordt verwijderd.
+>
+> Klanten die eerder de Exchange-connector hebben geconfigureerd en deze gebruiken, hebben nog steeds de ondersteuning voor de connector.
+
 
 ## <a name="before-you-start"></a>Voordat u begint
 

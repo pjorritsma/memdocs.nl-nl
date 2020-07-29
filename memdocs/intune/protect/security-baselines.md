@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/21/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: laarrizz
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d533acfa60672bed3d6919116f11f43d525b6551
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: a3a9ae0c697cb6cd60f0f9bddce50057bcfcd3a3
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988323"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462096"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Beveiligingsbasislijnen gebruiken om Windows 10-apparaten te gebruiken in Intune
 
@@ -75,12 +75,12 @@ Wanneer u klaar bent om over te stappen op een recentere versie van een basislij
 In elke nieuwe versie-instantie van een basislijn kunnen instellingen worden toegevoegd, verwijderd of veranderd. Als er in een nieuwe versie van Windows 10 bijvoorbeeld nieuwe Windows 10-instellingen beschikbaar komen, ontvangt de MDM-beveiligingsbasislijn mogelijk een nieuwe versie-instantie met de nieuwste instellingen.
 
 U ziet in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) onder **Endpoint Security** > **Beveiligingsbasislijnen** een lijst met de beschikbare basislijnen. De lijst bevat:
-- de naam van de basislijnsjabloon
-- hoeveel profielen u hebt die gebruikmaken van dat type basislijn
-- hoeveel afzonderlijke exemplaren (versies) van het basislijntype beschikbaar zijn
-- een *Laatst gepubliceerd*-datum die aangeeft wanneer de nieuwste versie van de basislijnsjabloon beschikbaar werd
+- De naam van de basislijnsjabloon.
+- Hoeveel profielen u hebt die gebruikmaken van dat type basislijn.
+- Hoeveel afzonderlijke exemplaren (versies) van het basislijntype beschikbaar zijn.
+- Een *Laatst gepubliceerd*-datum die aangeeft wanneer de nieuwste versie van de basislijnsjabloon beschikbaar werd.
 
-Als u meer gegevens wilt bekijken over de basislijnversies die u gebruikt, selecteert u een basislijn. Het deelvenster *Overzicht* wordt dan geopend. Selecteer vervolgens **Versies**. Intune geeft details weer over de versies van die basislijn die door uw profielen worden gebruikt. De details omvatten de recentste en de huidige basislijnversie. U kunt een versie selecteren om meer informatie weer te geven over de profielen die hiervan gebruikmaken.
+Als u meer gegevens wilt bekijken over de basislijnversies die u gebruikt, selecteert u een basislijn zoals *MDM-beveiligingsbasislijn* om het deelvenster *Profielen* te openen. Selecteer vervolgens **Versies**. Intune geeft details weer over de versies van die basislijn die door uw profielen worden gebruikt. De details omvatten de recentste en de huidige basislijnversie. U kunt een versie selecteren om meer informatie weer te geven over de profielen die hiervan gebruikmaken.
 
 U kunt kiezen of u [de versie wilt wijzigen](#change-the-baseline-version-for-a-profile) van een basislijn die wordt gebruikt met een bepaald profiel. Wanneer u de versie wijzigt, hoeft u geen nieuw basislijnprofiel te maken om gebruik te maken van bijgewerkte versies. In plaats daarvan selecteert u een basislijnprofiel en gebruikt u de ingebouwde optie om de exemplaarversie van dat profiel te wijzigen in een nieuwe versie.
 

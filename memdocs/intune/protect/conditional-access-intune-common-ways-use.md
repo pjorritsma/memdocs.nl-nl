@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/23/2019
+ms.date: 07/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,17 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c8c78106125b45f52b45cb5fc6494b8e13b7a15
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9c1d4dacf29aa0c87a8356306d10bf05acbf3afb
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084937"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462164"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Wat zijn gebruikelijke manieren om voorwaardelijke toegang met Intune te gebruiken?
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
 
 Er zijn twee soorten voorwaardelijke toegang met Intune: voorwaardelijke toegang op basis van apparaten en voorwaardelijke toegang op basis van apps. U moet het gerelateerde nalevingsbeleid configureren voor naleving van de voorwaardelijke toegang binnen uw organisatie. Voorwaardelijke toegang wordt meestal gebruikt voor zaken als toegang tot Exchange toestaan of blokkeren, toegang tot het netwerk bepalen of integratie realiseren met een Mobile Threat Defense-oplossing.
  
@@ -113,34 +110,44 @@ Wanneer er beleidsregels voor apparaatcompatibiliteit en voorwaardelijke toegang
 
 Wanneer apparaten niet voldoen aan de gestelde voorwaarden, wordt de eindgebruiker door de registratieprocedure voor het apparaat geleid om het probleem te verhelpen dat ervoor zorgt dat het apparaat niet-compatibel is.
 
-#### <a name="how-conditional-access-for-exchange-on-premises-works"></a>Hoe voorwaardelijke toegang voor Exchange On-Premises werkt
+> [!NOTE]
+> Vanaf juli 2020 wordt de ondersteuning voor de Exchange connector afgeschaft en vervangen door Exchange [HMA](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (Hybrid Modern Authentication, hybride moderne verificatie). Voor het gebruik van HMA hebt u Intune niet nodig om de Exchange-connector in te stellen en te gebruiken. Met deze wijziging wordt de gebruikersinterface voor het configureren en beheren van de Exchange-connector voor Intune verwijderd uit het Microsoft Endpoint Manager-beheercentrum, tenzij u al een Exchange-connector gebruikt met uw abonnement.
+>
+> Als u een Exchange-connector hebt ingesteld in uw omgeving, blijft de Intune-tenant ondersteund voor het gebruik ervan en houdt u toegang tot de gebruikersinterface die de configuratie ervan ondersteunt. Raadpleeg [Exchange on-premises-connector installeren](../protect/exchange-connector-install.md) voor meer informatie. U kunt de connector blijven gebruiken of HMA configureren en vervolgens de connector verwijderen.
+>
+> Hybrid Modern Authentication biedt functionaliteit die eerder is geleverd door de Exchange connector voor Intune: Toewijzing van een apparaat-id aan het Exchange-record.  Deze toewijzing vindt nu plaats buiten een configuratie die u in Intune maakt of de vereiste van de Intune-connector om Intune en Exchange te koppelen. Met HMA is de vereiste voor het gebruik van de specifieke configuratie voor ‘Intune’ (de connector) verwijderd.
 
-Voorwaardelijke toegang voor Exchange On-Premises werkt anders dan het beleid voor voorwaardelijke toegang op basis van Azure. U installeert de Intune Exchange On-Premises-connector om rechtstreeks te communiceren met Exchange Server. Intune Exchange Connector haalt alle EAS-records (Exchange Active Sync) op de Exchange-server op, zodat de EAS-records via Intune kunnen worden gekoppeld aan records Intune-apparaten. Deze records zijn apparaten die zijn geregistreerd bij Intune en door Intune worden herkend. Met dit proces wordt de toegang tot e-mail toegestaan of geblokkeerd.
 
-Als de EAS-record nieuw is en deze niet door Intune wordt herkend, wordt er een cmdlet (uitgesproken als commandlet) uitgegeven waarmee de Exchange-server opdracht wordt gegeven de toegang tot e-mail te blokkeren. Hier volgt meer informatie over de werking van dit proces:
+<!-- Deprecated with change from the connector to Exchange hybrid modern authentication)
 
-![Exchange on-Premises met CA-stroomdiagram](./media/conditional-access-intune-common-ways-use/ca-intune-common-ways-1.png)
+#### How conditional access for Exchange on-premises works
 
-1. De gebruiker probeert toegang te krijgen tot de bedrijfs-e-mail, die wordt gehost op Exchange On-Premises 2010 SP1 of later.
+Conditional access for Exchange on-premises works differently than Azure Conditional Access based policies. You install the Intune Exchange on-premises connector to directly interact with Exchange server. The Intune Exchange connector pulls in all the Exchange Active Sync (EAS) records that exist at the Exchange server so Intune can take these EAS records and map them to Intune device records. These records are devices enrolled and recognized by Intune. This process allows or blocks e-mail access.
 
-2. Als het apparaat niet wordt beheerd door Intune, wordt de toegang tot e-mail geblokkeerd. Intune verzendt een blokmelding naar de EAS-client.
+If the EAS record is new and Intune isn't aware of it, Intune issues a cmdlet (pronounced "command-let") that directs the Exchange server to block access to e-mail. Following are more details on how this process works:
 
-3. EAS ontvangt de blokmelding, waarna het apparaat in quarantaine wordt geplaatst. Vervolgens wordt de quarantaine-e-mail verzonden. Deze bevat herstelstappen met koppelingen, zodat de gebruikers hun apparaten kunnen registreren.
+![Exchange on-premises with CA flow-chart](./media/conditional-access-intune-common-ways-use/ca-intune-common-ways-1.png)
 
-4. Het Workplace Join-proces wordt uitgevoerd. Dit is de eerste stap om een apparaat met Intune te beheren.
+1. User tries to access corporate email, which is hosted on Exchange on-premises 2010 SP1 or later.
 
-5. Het apparaat wordt geregistreerd bij Intune.
+2. If the device is not managed by Intune, access to email will be blocked. Intune sends a block notification to the EAS client.
 
-6. Intune wijst de EAS-record toe aan een apparaatrecord en slaat de nalevingsstatus voor het apparaat op.
+3. EAS receives the block notification, moves the device to quarantine, and sends the quarantine email with remediation steps that contain links so the users can enroll their devices.
 
-7. De EAS-client-id wordt geregistreerd middels het apparaatregistratieproces van Azure AD, zodat er een relatie tussen de Intune-apparaatrecord en de EAS-client-id wordt gemaakt.
+4. The Workplace join process happens, which is the first step to have the device managed by Intune.
 
-8. De apparaatregistratie van Azure AD slaat de informatie over de apparaatstatus op.
+5. The device gets enrolled into Intune.
 
-9. Als de gebruiker aan de beleidsregels voor voorwaardelijke toegang voldoet, geeft Intune een cmdlet via Intune Exchange Connector uit, zodat het postvak kan worden gesynchroniseerd.
+6. Intune maps the EAS record to a device record, and saves the device compliance state.
 
-10. De Exchange-server verzendt de melding naar de EAS-client, zodat de gebruiker toegang heeft tot e-mail.
+7. The EAS client ID gets registered by the Azure AD Device Registration process, which creates a relationship between the Intune device record, and the EAS client ID.
 
+8. The Azure AD Device Registration saves the device state information.
+
+9. If the user meets the conditional access policies, Intune issues a cmdlet through the Intune Exchange connector that allows the mailbox to sync.
+
+10. Exchange server sends the notification to EAS client so the user can access e-mail.
+-->
 
 #### <a name="whats-the-intune-role"></a>Wat is de rol van Intune?
 
@@ -158,7 +165,5 @@ De Exchange-server biedt de API en infrastructuur om apparaten in quarantaine te
 [Voorwaardelijke toegang in Azure Active Directory configureren](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
 
 [Op apps gebaseerd beleid voor voorwaardelijke toegang instellen](app-based-conditional-access-intune-create.md)
-
-[De on-premises Exchange-connector installeren met Intune](exchange-connector-install.md).
 
 [Beleid maken voor voorwaardelijke toegang voor Exchange On-premises](conditional-access-exchange-create.md)

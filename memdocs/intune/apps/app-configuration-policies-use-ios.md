@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/10/2020
+ms.date: 07/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 730a8974753575b2726d821106f7b3c937b30207
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: b60d37c4da0b706dc109b5800b362d448224f116
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86239977"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410960"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>App-configuratiebeleidsregels voor beheerde iOS-/iPadOS-apparaten toevoegen
 
@@ -117,7 +117,8 @@ Als Microsoft Intune-beheerder kunt u bepalen welke werk- of schoolaccounts word
    > De volgende apps verwerken de bovenstaande app-configuratie en staan alleen organisatieaccounts toe:
    > - Edge voor iOS (44.8.7 en hoger)
    > - OneDrive voor iOS (10.34 en hoger)
-   > - Outlook voor iOS (2.99.0 of hoger)
+   > - Outlook voor iOS (2.99.0 en hoger)
+   > - Teams voor iOS (2.0.15 en hoger)
 
 ## <a name="enter-xml-data"></a>XML-gegevens invoeren
 

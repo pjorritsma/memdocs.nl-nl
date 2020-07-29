@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 609f7209d79acd944d141930f2287b5572a51c89
-ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
+ms.openlocfilehash: 29cb970dd7148496f1a4f200ba32505e6f2c0e16
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85332833"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461586"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>PKCS-certificaten configureren en gebruiken met Intune
 
@@ -221,7 +221,7 @@ Voor verificatie van een apparaat met VPN, Wi-Fi of andere resources hebt u op e
 3. Voer de volgende eigenschappen in:
    - **Platform**: Kies het platform van uw apparaten. Uw opties zijn:
      - Android-apparaatbeheerder
-     - Android Enterprise > Alleen apparaateigenaar
+     - Android Enterprise > Volledig beheerd, toegewezen werkprofiel in bedrijfseigendom
      - Android Enterprise > Alleen werkprofiel
      - iOS/iPadOS
      - macOS

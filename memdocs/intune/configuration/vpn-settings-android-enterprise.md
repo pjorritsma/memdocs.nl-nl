@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8bc627e7b9efb68e8d5cb777b5d8e659b06cab92
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3981f40650544cdfdbfd0208e127a3e0aaecb823
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086810"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462011"
 ---
 # <a name="android-enterprise-device-settings-to-configure-vpn-in-intune"></a>Instellingen voor Android Enterprise-apparaten voor het configureren van VPN in Intune
 
@@ -37,7 +37,7 @@ Zie [VPN-profielen](vpn-settings-configure.md) voor meer informatie over VPN-pro
 
 [Maak een apparaatconfiguratieprofiel](vpn-settings-configure.md) en kies **Android Enterprise**.
 
-## <a name="device-owner-only"></a>Alleen eigenaar van het apparaat
+## <a name="fully-managed-dedicated-and-corporate-owned-work-profile"></a>Volledig beheerd en toegewezen werkprofiel in bedrijfseigendom
 
 - **Verbindingsnaam**: voer een naam voor deze verbinding in. Eindgebruikers zien deze naam wanneer ze op hun apparaat de beschikbare VPN-verbindingen zoeken. Voer bijvoorbeeld `Contoso VPN` in.
 - **IP-adres of FQDN**: geef het IP-adres of de FQDN (Fully Qualified Domain Name) op van de VPN-server waarmee apparaten verbinding maken. Voer bijvoorbeeld **192.168.1.1** of **vpn.contoso.com** in.

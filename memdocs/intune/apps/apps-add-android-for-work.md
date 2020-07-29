@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b9cd6d0292c07b2f1a987efba6d1ad9f8d81d99
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 8404c475bc5a84177abeba3a96fb613f04b9aa2b
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989576"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461943"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Beheerde Google Play-apps toevoegen aan Android Enterprise-apparaten met Intune
 
-Beheerde Google Play is de zakelijke App Store van Google en tevens de enige bron van toepassingen voor Android Enterprise. U kunt Intune gebruiken om de implementatie van apps te organiseren via Beheerde Google Play voor elk Android Enterprise-scenario (inclusief werkprofiel, toegewezen en volledig beheerde inschrijvingen). Hoe u beheerde Google Play-apps toevoegt aan Intune, verschilt van de manier waarop Android-apps worden toegevoegd voor niet-Android Enterprise-apparaten. Store-apps, LOB-apps (Line-Of-Business) en web-apps worden goedgekeurd in of toegevoegd aan beheerde Google Play en vervolgens gesynchroniseerd met Intune, zodat ze worden weergegeven in de lijst met client-apps. Als ze in de lijst met client-apps worden weergegeven, kunt u de toewijzing van elke beheerde Google Play-app beheren zoals elke andere app.
+Beheerde Google Play is de zakelijke App Store van Google en tevens de enige bron van toepassingen voor Android Enterprise. U kunt Intune gebruiken om de implementatie van apps te organiseren via Beheerde Google Play voor elk Android Enterprise-scenario (inclusief werkprofiel, toegewezen, volledig beheerde inschrijvingen en werkprofielen in bedrijfseigendom). Hoe u beheerde Google Play-apps toevoegt aan Intune, verschilt van de manier waarop Android-apps worden toegevoegd voor niet-Android Enterprise-apparaten. Store-apps, LOB-apps (Line-Of-Business) en web-apps worden goedgekeurd in of toegevoegd aan beheerde Google Play en vervolgens gesynchroniseerd met Intune, zodat ze worden weergegeven in de lijst met client-apps. Als ze in de lijst met client-apps worden weergegeven, kunt u de toewijzing van elke beheerde Google Play-app beheren zoals elke andere app.
 
 In Intune worden automatisch vier veelgebruikte Android Enterprise-apps toegevoegd aan de Intune-beheerconsole, bij het verbinding maken tussen uw Intune-tenant en beheerde Google Play, om het u gemakkelijker te maken Android Enterprise-beheer te configureren en te gebruiken. Die vier apps zijn:
 
@@ -179,7 +179,7 @@ Als u een app uit de Store hebt goedgekeurd maar deze nog niet wordt weergegeven
 6. Selecteer in het Microsoft Endpoint Manager-beheercentrum de opties **Apps** > **Alle apps**.  
     De zojuist beschikbaar geworden beheerde Google Play Store-app wordt weergegeven.
 
-## <a name="assigning-a-managed-google-play-app-to-android-enterprise-work-profile-devices"></a>Beheerde Google Play-app toewijzen aan apparaten met Android Enterprise-werkprofiel
+## <a name="assigning-a-managed-google-play-app-to-android-enterprise-work-profile-and-corporate-owned-work-profile-devices"></a>Een beheerde Google Play-app toewijzen aan apparaten met een Android Enterprise-werkprofiel en apparaten met een werkprofiel in bedrijfseigendom
 
 Als de app wordt weergegeven in het knooppunt **App-licenties** van het workloadvenster **Apps**, kunt u de app [net als alle andere apps toewijzen](/mem/intune/apps/apps-deploy) door de app aan groepen gebruikers toe te wijzen.
 
@@ -219,7 +219,7 @@ Voor beheerde Google Play-apps die op apparaten met een Android Enterprise-werkp
 
 ## <a name="working-with-managed-google-play-closed-testing-tracks"></a>Werken met gesloten testtrajecten van Beheerde Google Play
 
-U kunt een niet-productieversie van een beheerde Google Play-app distribueren naar apparaten die zijn ingeschreven in een Android Enterprise-scenario (**Android Enterprise-werkprofiel**, **Volledig beheerd**en **toegewezen**) om tests uit te voeren. In Intune kunt u ook zien of er voor een app een testtraject voor een build voorafgaand aan de productiefase is gepubliceerd en u kunt dat traject ook toewijzen aan AAD-gebruikersgroepen of -apparaatgroepen. De workflow voor het toewijzen van een productieversie aan een groep die momenteel bestaat, is hetzelfde als bij toewijzingen aan een niet-productiekanaal. Na de implementatie komt de installatiestatus van elk traject overeen met het versienummer van het traject in Beheerde Google Play. Zie [De gesloten testtrajecten van Google Play voor het testen van de voorlopige versie van apps](https://support.google.com/googleplay/android-developer/answer/3131213).
+U kunt een niet-productieversie van een beheerde Google Play-app distribueren naar apparaten die zijn ingeschreven in een Android Enterprise-scenario (**Android Enterprise-werkprofiel**, **volledig beheerd**, **toegewezen** en **werkprofiel in bedrijfseigendom**) om tests uit te voeren. In Intune kunt u ook zien of er voor een app een testtraject voor een build voorafgaand aan de productiefase is gepubliceerd en u kunt dat traject ook toewijzen aan AAD-gebruikersgroepen of -apparaatgroepen. De workflow voor het toewijzen van een productieversie aan een groep die momenteel bestaat, is hetzelfde als bij toewijzingen aan een niet-productiekanaal. Na de implementatie komt de installatiestatus van elk traject overeen met het versienummer van het traject in Beheerde Google Play. Zie [De gesloten testtrajecten van Google Play voor het testen van de voorlopige versie van apps](https://support.google.com/googleplay/android-developer/answer/3131213).
 
 ## <a name="delete-managed-google-play-apps"></a>Beheerde Google Play-apps verwijderen
 Indien noodzakelijk, kunt u beheerde Google Play-apps verwijderen uit Microsoft Intune. Als u een beheerde Google Play-app wilt verwijderen, opent u Microsoft Intune in Azure Portal en selecteert u **Apps** > **Alle apps**. In de lijst met apps selecteert u het beletselteken (...) rechts naast de beheerde Google Play-app en vervolgens **Verwijderen** in de weergegeven lijst. Wanneer u een beheerde Google Play-app uit de lijst met apps verwijdert, wordt de goedkeuring voor de beheerde Google Play-app automatisch verwijderd.

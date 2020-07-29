@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8b70d1e8b64a9000d10e46a17b0d3cb6133088f5
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 479dd1fede23c902d7be0f38ad0f16aa9f4917cf
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989122"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565510"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Jamf Pro integreren met Intune in verband met nalevingsbeleid
 
@@ -102,7 +102,7 @@ Om Intune te verbinden met Jamf Pro:
 
 9. Selecteer op de pagina **API-machtigingen aanvragen** de optie **Intune** en selecteer vervolgens **Toepassingsmachtigingen**. Schakel alleen het selectievakje voor **update_device_attributes** in en sla de nieuwe machtiging op.
 
-10. Verleen vervolgens beheerderstoestemming voor deze app door **Beheerderstoestemming verlenen voor _\<uw tenant>_** in de linkerbovenhoek van de pagina **API-machtigingen** te selecteren. Mogelijk moet u uw account opnieuw verifiëren in het nieuwe venster en de aanwijzingen volgen om toegang tot de toepassing te verlenen.  
+10. Verleen vervolgens beheerderstoestemming voor deze app door **Beheerderstoestemming verlenen voor _\<your tenant>_** in de linkerbovenhoek van de pagina **API-machtigingen** te selecteren. Mogelijk moet u uw account opnieuw verifiëren in het nieuwe venster en de aanwijzingen volgen om toegang tot de toepassing te verlenen.  
 
 11. Klik op de knop **Vernieuwen** bovenaan de pagina om de pagina te vernieuwen. Bevestig dat beheerderstoestemming is verleend voor de machtiging **update_device_attributes**. 
 
@@ -110,10 +110,10 @@ Om Intune te verbinden met Jamf Pro:
 
    ![Verlenen van machtigingen geslaagd](./media/conditional-access-integrate-jamf/sucessfull-app-registration.png)
 
-   Het registratieproces voor de app in Azure AD is voltooid.
+Het registratieproces voor de app in Azure AD is voltooid.
 
-    > [!NOTE]
-    > Als het clientgeheim is verlopen, moet u een nieuw clientgeheim maken in Azure en vervolgens de gegevens voor voorwaardelijke toegang in Jamf Pro bijwerken. In Azure kan zowel het oude geheim als de nieuwe sleutel actief zijn om serviceonderbrekingen te voorkomen.
+> [!NOTE]
+> Als het clientgeheim is verlopen, moet u een nieuw clientgeheim maken in Azure en vervolgens de gegevens voor voorwaardelijke toegang in Jamf Pro bijwerken. In Azure kan zowel het oude geheim als de nieuwe sleutel actief zijn om serviceonderbrekingen te voorkomen.
 
 ### <a name="enable-intune-to-integrate-with-jamf-pro"></a>Intune instellen op integratie met Jamf Pro
 

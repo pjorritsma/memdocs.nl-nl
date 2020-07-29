@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 07/20/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 82706356f82008798dc8c9b9de02ad55606ee87b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 78b7a0ea6e25754e2839e1fda788b3440eaf3880
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83987847"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86872049"
 ---
 # <a name="troubleshoot-wi-fi-device-configuration-profiles-in-microsoft-intune"></a>Problemen met Wi-Fi-apparaatconfiguratieprofielen oplossen in Microsoft Intune
 
@@ -177,7 +177,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
 
 ## <a name="common-issues"></a>Veelvoorkomende problemen
 
-### <a name="issue-1-the-wi-fi-profile-isnt-deployed-to-the-device"></a>Probleem 1: Het Wi-Fi-profiel wordt niet op het apparaat geïmplementeerd
+### <a name="the-wi-fi-profile-isnt-deployed-to-the-device"></a>Het Wi-Fi-profiel wordt niet op het apparaat geïmplementeerd
 
 - Bevestig dat het Wi-Fi-profiel is toegewezen aan de juiste groep:
 
@@ -248,7 +248,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
 
     Als er een fout in het logboek wordt weergeven, kopieert u het tijdstempel van de fout en maakt u het filter voor het logboek ongedaan. Gebruik vervolgens de optie find met de tijdstempel om te zien wat er is gebeurd vóór de fout.
 
-### <a name="issue-2-the-wi-fi-profile-is-deployed-to-the-device-but-the-device-cant-connect-to-the-network"></a>Probleem 2: Het Wi-Fi-profiel wordt geïmplementeerd op het apparaat, maar het apparaat kan geen verbinding maken met het netwerk
+### <a name="the-wi-fi-profile-is-deployed-to-the-device-but-the-device-cant-connect-to-the-network"></a>Het Wi-Fi-profiel wordt geïmplementeerd op het apparaat, maar het apparaat kan geen verbinding maken met het netwerk
 
 Dit probleem wordt meestal veroorzaakt door iets buiten Intune. Met de volgende taken krijgt u inzicht in verbindingsproblemen en kunt u ze oplossen:
 
@@ -256,6 +256,22 @@ Dit probleem wordt meestal veroorzaakt door iets buiten Intune. Met de volgende 
 
   Als u verbinding kunt maken, bekijkt u de eigenschappen van het certificaat in de handmatige verbinding. Werk vervolgens het Wi-Fi-profiel van Intune bij met dezelfde certificaateigenschappen.
 - Connectiviteitsfouten worden gewoonlijk vastgelegd in het logboek van de RADIUS-server. Hier moet bijvoorbeeld staan of het apparaat heeft geprobeerd verbinding te maken met het Wi-Fi-profiel.
+
+### <a name="users-dont-get-new-profile-after-changing-password-on-existing-profile"></a>Gebruikers krijgen geen nieuw profiel na het wijzigen van het wachtwoord voor het bestaande profiel
+
+U maakt een zakelijk Wi-Fi-profiel maakt, implementeert het profiel voor een groep, wijzigt het wachtwoord en slaat het profiel op. Wanneer het profiel wordt gewijzigd, ontvangen sommige gebruikers het nieuwe profiel mogelijk niet.
+
+Voor het oplossen van dit probleem stelt u een Wi-Fi-profiel voor gasten in. Als het zakelijke Wi-Fi-profiel niet naar behoren werkt, kunnen gebruikers verbinding maken met het profiel voor gasten. Zorg ervoor dat u alle instellingen voor automatisch verbinden inschakelt. Implementeer het Wi-Fi-profiel voor gasten voor alle gebruikers.
+
+Enkele extra aanbevelingen:  
+
+- Als voor het wifi-netwerk waarmee u verbinding maakt een wachtwoord of wachtwoordzin wordt gebruikt, moet u ervoor zorgen dat u direct verbinding met de wifi-router kunt maken. U kunt dit testen met een iOS-/iPadOS-apparaat.
+- Als u bent verbonden met het Wi-Fi-eindpunt (de Wi-Fi-router), noteert u de SSID en de referentie die wordt gebruikt (dit is het wachtwoord of de wachtwoordzin).
+- Voer de SSID en referentie (wachtwoord of wachtwoordzin) in het veld vooraf gedeelde sleutel in. 
+- Stel deze instelling in voor een testgroep met een beperkt aantal gebruikers, bij voorkeur het liefst alleen voor het IT-team. 
+- Synchroniseer uw iOS-/iPadOS-apparaat naar Intune. Schrijf u in als dit nog niet is gebeurd. 
+- Test de verbinding met hetzelfde Wi-Fi-eindpunt opnieuw (zoals vermeld in de eerste stap).
+- Implementeer deze instelling naar grotere groepen en uiteindelijk naar alle eindgebruikers in uw organisatie. 
 
 ## <a name="need-more-help"></a>Meer hulp nodig?
 

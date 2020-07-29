@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6e99922c920966f4f0bb1037b5fc74799cfca7c5
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: eeab1155a7a0035c5e0db15c3a5402d3636edaca
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988778"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461654"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>App-configuratiebeleid voor Microsoft Intune
 
@@ -75,15 +75,15 @@ Als u **Beheerde apps** selecteert als het **Type apparaatregistratie**, verwijs
 
 ## <a name="android-app-configuration-policies"></a>Configuratiebeleidsregels voor Android-apps
 
-Voor Android-app-configuratiebeleid kunt u het type apparaatinschrijving selecteren voordat er een app-configuratieprofiel wordt gemaakt. U bent op de hoogte van de certificaatprofielen die worden gebaseerd op het type inschrijving (werkprofiel of apparaateigenaar). Deze update biedt het volgende:
+Voor Android-app-configuratiebeleid kunt u het type apparaatinschrijving selecteren voordat er een app-configuratieprofiel wordt gemaakt. U bent op de hoogte van de certificaatprofielen die worden gebaseerd op het type inschrijving (werkprofiel, volledig beheerd en toegewezen werkprofiel in bedrijfseigendom). Deze update biedt het volgende:
 
-1. Als er een nieuw profiel wordt gemaakt en Werkprofiel en Apparaateigenaarprofiel als het type apparaatinschrijving zijn geselecteerd, kunt u geen certificaatprofiel aan het app-configuratiebeleid koppelen.
+1. Als er een nieuw profiel wordt gemaakt en **Alle profieltypen** wordt geselecteerd als inschrijvingstype voor het apparaat, kunt u geen certificaatprofiel aan het app-configuratiebeleid koppelen.
 2. Als er een nieuw profiel wordt gemaakt en alleen Werkprofiel is geselecteerd, kan Werkprofiel-certificaatbeleid dat is gemaakt onder Apparaatconfiguratie worden gebruikt.
-3. Als er een nieuw profiel wordt gemaakt en alleen Apparaateigenaar is geselecteerd, kan Apparaateigenaar-certificaatbeleid dat is gemaakt onder Apparaatconfiguratie worden gebruikt. 
+3. Als er een nieuw profiel wordt gemaakt en **Alleen volledig beheerd en toegewezen werkprofiel in bedrijfseigendom** wordt geselecteerd, kan het certificaatbeleid voor **Volledig beheerd en toegewezen werkprofiel in bedrijfseigendom** worden gebruikt dat is gemaakt onder Apparaatconfiguratie. 
 4. Als u een Gmail- of Nine-configuratieprofiel implementeert op een toegewezen Android Enterprise-apparaat dat geen gebruiker heeft, mislukt dit omdat de gebruiker niet kan worden omgezet met Intune.
 
 > [!IMPORTANT]
-> Bestaand beleid dat is gemaakt voorafgaand aan de release van deze functie (release april 2020 - 2004) en waarvoor geen certificaatprofielen zijn gekoppeld aan het beleid, wordt voor het type apparaatinschrijving standaard ingesteld op Werkprofiel en Apparaateigenaarprofiel. Bestaand beleid dat is gemaakt voorafgaand aan de release van deze functie en waaraan certificaatprofielen zijn gekoppeld, wordt bovendien standaard ingesteld op uitsluitend Werkprofiel.
+> Bestaand beleid dat is gemaakt voorafgaand aan de release van deze functie (release april 2020 - 2004) en waarvoor geen certificaatprofielen zijn gekoppeld aan het beleid, wordt het type apparaatinschrijving standaard ingesteld op **Alle profieltypen**. Bestaand beleid dat is gemaakt voorafgaand aan de release van deze functie en waaraan certificaatprofielen zijn gekoppeld, wordt bovendien standaard ingesteld op uitsluitend Werkprofiel.
 > 
 > Met bestaand beleid worden geen nieuwe certificaten hersteld of uitgegeven.
 

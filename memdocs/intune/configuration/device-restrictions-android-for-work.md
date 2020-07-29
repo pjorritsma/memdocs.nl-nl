@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/13/2020
+ms.date: 07/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7aee865b2a16ce3a9114433f9e10e185b26997f7
-ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
+ms.openlocfilehash: 7f49ba4fffd84ffae3e5b47ad74088b65d599533
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86303467"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491249"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Met Android Enterprise-apparaatinstellingen kunt u functies toestaan of beperken met behulp van Intune
 
@@ -31,9 +31,18 @@ In dit artikel vindt u een overzicht en beschrijving van de verschillende instel
 
 [Maak een apparaatconfiguratieprofiel](device-restrictions-configure.md).
 
-## <a name="device-owner-only"></a>Alleen eigenaar van het apparaat
+## <a name="fully-managed-dedicated-and-corporate-owned-work-profile"></a>Volledig beheerd en toegewezen werkprofiel in bedrijfseigendom
 
-Deze instellingen zijn van toepassing op Android Enterprise-inschrijvingstypen waarbij het hele apparaat wordt beheerd in Intune, zoals volledig beheerde Android Enterprise-apparaten of toegewezen apparaten.
+Deze instellingen zijn van toepassing op Android Enterprise-inschrijvingstypen waarbij het hele apparaat wordt beheerd in Intune, zoals volledig beheerde, toegewezen Android Enterprise-apparaten met een werkprofiel in bedrijfseigendom.
+
+Sommige instellingen worden niet door alle inschrijvingstypen ondersteund. Zie de gebruikersinterface om na te gaan welke instellingen door welke inschrijvingstypen worden ondersteund. Elke instelling bevindt zich onder een kop die aangeeft welke inschrijvingstypen deze instelling kunnen gebruiken.
+
+![Headers instellen.](./media/device-restrictions-android-for-work/setting-headers.png)
+
+Sommige instellingen zijn alleen van toepassing op het niveau van het werkprofiel voor apparaten in bedrijfseigendom met een werkprofiel. Ten aanzien van volledig beheerde en toegewezen apparaten zijn deze instellingen nog steeds van toepassing op het hele apparaat. Deze instellingen zijn gemarkeerd met een descriptor *(op het niveau van het werkprofiel)* in de gebruikersinterface.
+
+![Headers instellen.](./media/device-restrictions-android-for-work/work-profile-level.png)
+
 
 ### <a name="general"></a>Algemeen
 
@@ -115,7 +124,9 @@ Gebruik deze instellingen om een kioskstijlervaring op uw toegewezen apparaten t
       >
       > De app **Managed Home Screen** hoeft niet te zijn opgenomen in het configuratieprofiel, maar moet wel worden toegevoegd als een app. Wanneer de app **Managed Home Screen** is toegevoegd, worden andere apps die u aan het configuratieprofiel toevoegt, weergegeven als pictogrammen in de app **Managed Home Screen**.
       >
-      > Wanneer u de kiosk modus voor meerdere apps gebruikt, werken de apps voor kiezer/telefoon mogelijk niet goed. 
+      > Wanneer u de kiosk modus voor meerdere apps gebruikt, werken de apps voor kiezer/telefoon mogelijk niet goed.
+      >
+      > Zie [Microsoft Managed Home Screen instellen op toegewezen apparaten in de kioskmodus voor meerdere apps](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-managed-home-screen-on-dedicated-devices/ba-p/1388060) voor meer informatie over Managed Home Screen.
 
       - **Toevoegen**: Selecteer uw apps in de lijst.
 
@@ -123,9 +134,31 @@ Gebruik deze instellingen om een kioskstijlervaring op uw toegewezen apparaten t
 
         U kunt ook andere [Android-apps](../apps/apps-add-android-for-work.md) toevoegen aan het apparaat, evenals [web-apps](../apps/web-app.md) die zijn gemaakt door uw organisatie. Zorg ervoor dat u [de app toewijst](../apps/apps-deploy.md) aan de apparaatgroep die is gemaakt voor uw toegewezen apparaten.
 
+      - **Mappictogram**: Selecteer de kleur en vorm van het mappictogram dat wordt weergegeven op Managed Home Screen. Uw opties zijn:
+        - Niet geconfigureerd 
+        - Rechthoek met donker thema
+        - Cirkel met donker thema
+        - Rechthoek met licht thema
+        - Cirkel met licht thema
+      - **Pictogramgrootte voor de app en de map**: Selecteer de grootte van het mappictogram dat wordt weergegeven op Managed Home Screen. Uw opties zijn:
+        - Niet geconfigureerd 
+        - Extra klein
+        - Klein
+        - Gemiddeld
+        - Groot
+        - Extra groot
+
+          De werkelijke grootte van het pictogram kan verschillen afhankelijk van de grootte van het scherm.
+
+      - **Schermstand instellen**: Selecteer de richting waarin Managed Home Screen wordt weergegeven op apparaten. Uw opties zijn:
+        - Niet geconfigureerd
+        - Staand
+        - Liggend
+        - Automatisch draaien
+      - **Badges voor app-meldingen**: Met **Inschakelen** wordt het aantal nieuwe en ongelezen meldingen op app-pictogrammen weergegeven. Wanneer dit is ingesteld op **Niet geconfigureerd**, wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
       - **Virtuele startknop**: Een schermtoets waarmee gebruikers terugkeren naar Managed Home Screen zodat ze kunnen schakelen tussen apps. Uw opties zijn:
         - **Niet geconfigureerd** (standaard): Er wordt geen knop Start weergegeven. Gebruikers moeten de knop Terug gebruiken om tussen apps te schakelen.
-        - **Omhoog vegen**: er wordt een knop Start weergegeven wanneer een gebruiker naar boven veegt op het apparaat.
+        - **Omhoog swipen**: er wordt een knop Start weergegeven wanneer een gebruiker naar boven veegt op het apparaat.
         - **Zwevend**: toont een permanente, zwevende knop Start op het apparaat.
 
       - **Kioskmodus verlaten**: Met **Inschakelen** kunnen beheerders de kioskmodus tijdelijk onderbreken om het apparaat bij te werken. Voor gebruik van deze functie moet de beheerder het volgende doen:
@@ -150,7 +183,31 @@ Gebruik deze instellingen om een kioskstijlervaring op uw toegewezen apparaten t
         >
         > Moderne schermen hebben een hogere pixeldichtheid met de mogelijkheid om definitie-installatiekopieën gelijkwaardig aan 2K/4K weer te geven.
 
+      - **Snelkoppeling naar menu Instellingen**: Met **Uitschakelen** wordt de snelkoppeling Beheerde instellingen op Managed Home Screen verborgen. Gebruikers kunnen nog steeds omlaag swipen om toegang te krijgen tot de instellingen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard wordt de snelkoppeling Beheerde instellingen op apparaten weergegeven. Gebruikers kunnen ook omlaag swipen om toegang te krijgen tot deze instellingen.
+
+      - **Snelle toegang tot menu voor foutopsporing**: Met deze instelling bepaalt u hoe gebruikers toegang krijgen tot het menu voor foutopsporing. Uw opties zijn:
+
+        - **Inschakelen**: Gebruikers kunnen eenvoudiger toegang krijgen tot het menu voor foutopsporing. Ze kunnen namelijk naar beneden swipen of de snelkoppeling Beheerde Instellingen gebruiken. Zoals altijd kunnen ze de knop Vorige 15 keer blijven selecteren.
+        - **Niet geconfigureerd** (standaard): Deze instelling wordt niet gewijzigd of bijgewerkt door Intune. Eenvoudige toegang tot het menu voor foutopsporing is standaard uitgeschakeld. Gebruikers moeten de knop Vorige 15 keer selecteren om het menu voor foutopsporing te openen.
+
+        Met het menu voor foutopsporing kunnen gebruikers het volgende doen:
+
+        - Managed Home Screen-logboeken bekijken en uploaden
+        - De app Android Device Policy van Google openen
+        - Open de [Microsoft Intune-app](https://play.google.com/store/apps/details?id=com.microsoft.intune)
+        - Kioskmodus verlaten
+
       - **Wi-Fi-configuratie**: Met **Inschakelen** wordt het Wi-Fi-besturingselement weergegeven in Managed Home Screen en krijgen gebruikers de mogelijkheid om het apparaat te verbinden met verschillende Wi-Fi-netwerken. Als u deze functie inschakelt, wordt ook de apparaatlocatie ingeschakeld. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem niet het Wi-Fi-besturingselement weergeeft in Managed Home Screen. Hiermee voorkomt u dat gebruikers verbinding kunnen maken met Wi-Fi-netwerken terwijl ze Managed Home Screen gebruiken.
+
+        - **Acceptatielijst voor Wi-Fi**: Maak een lijst met geldige namen voor draadloze netwerken, ook wel de SSID's (Service Set Identifier) genoemd. Managed Home Screen-gebruikers kunnen alleen verbinding maken met de SSID's die u invoert.
+
+          Als u dit leeg laat, wordt deze instelling niet gewijzigd of bijgewerkt door Intune. Standaard zijn alle beschikbare Wi-Fi-netwerken toegestaan.
+
+          **Importeer** een CSV-bestand dat een lijst met geldige SSID's bevat.
+
+          **Exporteer** uw huidige lijst naar een CSV-bestand.
+
+        - **SSID**: U kunt ook de Wi-Fi-netwerknamen (SSID) invoeren waarmee de Managed Home Screen-gebruikers verbinding kunnen maken. Let op dat u geldige SSID's invoert.
 
       - **Bluetooth-configuratie**: Met **Inschakelen** wordt het Bluetooth-besturingselement weergegeven in Managed Home Screen en krijgen gebruikers de mogelijkheid om apparaten te koppelen via Bluetooth. Als u deze functie inschakelt, wordt ook de apparaatlocatie ingeschakeld. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem niet het Bluetooth-besturingselement weergeeft in Managed Home Screen. Hiermee voorkomt u dat gebruikers Bluetooth configureren en apparaten koppelen terwijl ze Managed Home Screen gebruiken.
 
@@ -158,17 +215,19 @@ Gebruik deze instellingen om een kioskstijlervaring op uw toegewezen apparaten t
 
       - **Volumeregeling voor media**: Met **Inschakelen** wordt de volumeregeling voor media weergegeven in Managed Home Screen en krijgen gebruikers de mogelijkheid om het mediavolume van het apparaat aan te passen met een schuifregelaar. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem niet het Volumeregeling voor media-besturingselement weergeeft in Managed Home Screen. Hiermee voorkomt u dat gebruikers het mediavolume van het apparaat aanpassen terwijl ze Managed Home Screen gebruiken, tenzij de hardwareknoppen hier ondersteuning voor bieden.
 
+      - **Snel toegang krijgen tot apparaatgegevens**: Met **Inschakelen** kunnen gebruikers omlaag swipen om de apparaatgegevens op Managed Home Screen te zien, zoals het serienummer, het merk, het modelnummer en het SDK-niveau. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. De apparaatgegevens worden standaard mogelijk niet weergegeven.
+
       - **Schermbeveiligingsmodus**: Met **Inschakelen** wordt de schermbeveiliging weergegeven in Managed Home Screen wanneer het apparaat is vergrendeld of er een time-out optreedt. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem niet een schermbeveiliging weergeeft in Managed Home Screen.
 
         Wanneer deze functie is ingeschakeld, moet u ook het volgende configureren:
 
-        - **Een aangepaste afbeelding voor schermbeveiliging instellen**: Voer de URL in van een aangepaste PNG-, JPG-, JPEG-, GIF-, BMP-, WebP- of ICO-afbeelding. Als u geen URL opgeeft, wordt de standaardafbeelding van het apparaat gebruikt, indien aanwezig. 
-        
+        - **Een aangepaste afbeelding voor schermbeveiliging instellen**: Voer de URL in van een aangepaste PNG-, JPG-, JPEG-, GIF-, BMP-, WebP- of ICO-afbeelding. Als u geen URL opgeeft, wordt de standaardafbeelding van het apparaat gebruikt, indien aanwezig.
+
           Voer bijvoorbeeld het volgende in:
 
           - `http://www.contoso.com/image.jpg`
           - `www.contoso.com/image.bmp`
-          - `https://www.contoso.com/image.webp`          
+          - `https://www.contoso.com/image.webp`
 
           > [!TIP]
           > Elke bestandsresource-URL die in een bitmap kan worden omgezet, wordt ondersteund.
@@ -180,30 +239,27 @@ Gebruik deze instellingen om een kioskstijlervaring op uw toegewezen apparaten t
 - **Volledig beheerd**: Hiermee configureert u de Microsoft Launcher-app op volledig beheerde apparaten.
 
   - **Microsoft Launcher instellen als standaardstartprogramma**: Als u **Inschakelen** kiest, wordt Microsoft Launcher ingesteld als het standaardstartprogramma op het startscherm. Als u Launcher de standaard maakt, kunnen gebruikers geen ander startprogramma gebruiken. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Microsoft Launcher wordt niet als het standaardstartprogramma afgedwongen.
+  - **Aangepaste achtergrond configureren**: Met **Inschakelen** kunt u uw eigen afbeelding toepassen als achtergrond voor het startscherm en kiezen of gebruikers de afbeelding kunnen wijzigen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard behoudt het apparaat de huidige achtergrond.
+    - **De URL van de achtergrondafbeelding invoeren**: Voer de URL van de achtergrondafbeelding in. Deze afbeelding wordt weergegeven op het startscherm van het apparaat. Voer bijvoorbeeld `http://www.contoso.com/image.jpg` in. 
+    - **Gebruiker toestaan om de achtergrond te wijzigen**: Met **Inschakelen** worden gebruikers toegestaan om de achtergrondafbeelding te wijzigen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard kunnen gebruikers de achtergrond niet wijzigen.
+  - **De startfeed inschakelen**: Met **Inschakelen** wordt de startfeed ingeschakeld, waarmee agenda's, documenten en recente activiteiten worden weergegeven. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard wordt deze feed niet weergegeven.
+    - **Gebruikers toestaan om feed in/uit te schakelen**: met **Inschakelen** kunnen gebruikers de startfeed in-of uitschakelen. Met **Inschakelen** wordt deze instelling alleen geforceerd wanneer het profiel voor de eerste keer wordt toegewezen. Bij toekomstige profieltoewijzingen wordt deze instelling niet geforceerd. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard kunnen gebruikers de instellingen voor de startfeed niet wijzigen.
+  - **Aanwezigheid van dock**: De dock biedt gebruikers snelle toegang tot hun apps en hulpprogramma's. Uw opties zijn:
+    - **Niet geconfigureerd** (standaard): Deze instelling wordt niet gewijzigd of bijgewerkt door Intune.
+    - **Weergeven**: De dock wordt weergegeven op apparaten.
+    - **Verbergen**: De dock is verborgen. Gebruikers moeten omhoog swipen om toegang te krijgen tot de dock.
+    - **Uitgeschakeld**: De dock wordt niet weergegeven op apparaten en gebruikers kunnen deze niet weergeven.
 
-<!-- The following settings are in a future release. Per PM, we can leave them in GitHub, not live. Remove comment tags when they release.
+  - **Gebruikers toestaan de aanwezigheid van het dock te wijzigen**: Met **Inschakelen** kunnen gebruikers de dock weergeven of verbergen. Met **Inschakelen** wordt deze instelling alleen geforceerd wanneer het profiel voor de eerste keer wordt toegewezen. Bij toekomstige profieltoewijzingen wordt deze instelling niet geforceerd. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard mogen gebruikers de configuratie van de apparaatdock niet wijzigen.
 
-  - **Configure custom wallpaper**: **Enable** lets you apply your own image as the home screen wallpaper, and choose if users can change the image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the device keeps its current wallpaper.
-    - **Enter URL of wallpaper image**: Enter the URL of your wallpaper image. This image shows on the device home screen. For example, enter `http://www.contoso.com/image.jpg`. 
-    - **Allow user to modify wallpaper**: **Enable** allows users to change the wallpaper image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the wallpaper.
-  - **Enable launcher feed**: **Enable** turns on the launcher feed, which shows calendars, documents, and recent activities. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, this feed isn't shown.
-    - **Allow user to enable/disable feed**: **Enable** lets users enable or disable the launcher feed. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the launcher feed settings.
-  - **Dock presence**: The dock gives users quick access to their apps and tools. Your options:
-    - **Not configured** (default): Intune doesn't change or update this setting.
-    - **Show**: The dock is shown on devices.
-    - **Hide**: The dock is hidden. Users must swipe up to access the dock.
-    - **Disabled**: The dock isn't shown on devices, and users are prevented from showing it.
+  - **Plaatsing van de zoekbalk**: Kies waar u de zoekbalk wilt plaatsen. Uw opties zijn:
+    - **Niet geconfigureerd** (standaard): Deze instelling wordt niet gewijzigd of bijgewerkt door Intune.
+    - **Boven**: De zoekbalk wordt weergegeven aan de bovenkant van apparaten.
+    - **Onder**: De zoekbalk wordt weergegeven aan de onderkant van apparaten.
+    - **Verbergen**: De zoekbalk is verborgen.
 
-  - **Allow user to change dock presence**: **Enable** allows users to show or hide the dock. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users aren't allowed to change the device dock configuration.
-
-  - **Search bar replacement**: Choose where to put the search bar. Your options:
-    - **Not configured** (default): Intune doesn't change or update this setting.
-    - **Top**: Search bar is shown at the top of devices.
-    - **Bottom**: Search bar is shown at the bottom of devices.
-    - **Hide**: Search bar is hidden.
-
+<!-- MandiA (7.16.2020) The following settings may be in a future release. Per PM, we can leave it in GitHub, not live. Remove comment tags if/when it releases.
   - **Allow user to change search bar placement**: **Enable** allows users to change the location of the search bar. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the location.
-
 End of comment -->
 
 ### <a name="password"></a>Wachtwoord
@@ -240,7 +296,7 @@ End of comment -->
 - **Aantal mislukte aanmeldingen voordat een apparaat wordt gewist**: Voer het aantal onjuiste wachtwoorden tussen 4 en 11 in dat is toegestaan voordat het apparaat wordt gewist. Met `0` (nul) kan de functionaliteit voor het wissen van het apparaat worden uitgeschakeld. Wanneer de waarde leeg is, wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
 
   > [!NOTE]
-  > Op Apparaateigenaar-apparaten wordt niet gevraagd om een wachtwoord in te stellen. De instellingen worden afgedwongen en u moet het wachtwoord handmatig instellen. Het beleid waarmee dit wordt afgedwongen wordt als mislukt gerapporteerd totdat u een wachtwoord instelt dat aan uw vereisten voldoet.
+  > Op volledig beheerde, toegewezen apparaten met een werkprofiel in bedrijfseigendom worden gebruikers niet gevraagd om een wachtwoord in te stellen. De instellingen worden afgedwongen en u moet het wachtwoord handmatig instellen. Het beleid waarmee dit wordt afgedwongen wordt als mislukt gerapporteerd totdat u een wachtwoord instelt dat aan uw vereisten voldoet.
 
 ### <a name="power-settings"></a>Energie-instellingen
 
@@ -255,7 +311,7 @@ End of comment -->
 - **Accountwijzigingen** (alleen toegewezen apparaten): Met **Blokkeren** voorkomt u dat gebruikers accounts wijzigen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem toestaat dat gebruikers gebruikersaccounts op het apparaat bijwerkt.
 
   > [!NOTE]
-  > Deze instelling geldt niet op apparaten van apparaateigenaar (volledig beheerd). Als u deze instelling configureert, wordt de instelling genegeerd en heeft deze geen invloed.
+  > Deze instelling wordt niet nageleefd op volledig beheerde, toegewezen apparaten met een werkprofiel in bedrijfseigendom. Als u deze instelling configureert, wordt de instelling genegeerd en heeft deze geen invloed.
 
 - **Gebruiker kan referenties configureren**: **Blokkeren** voorkomt dat gebruikers certificaten configureren die zijn toegewezen aan apparaten, ook bij apparaten die niet zijn gekoppeld aan een gebruikersaccount. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem gebruikers de mogelijkheid biedt om hun referenties te configureren of te wijzigen wanneer ze deze openen in de sleutelopslag.
 - **Persoonlijke Google-accounts**: Met **Blokkeren** wordt voorkomen dat gebruikers hun persoonlijke Google-account toevoegen aan het apparaat. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem gebruikers toestaat om hun persoonlijke Google-account toe te voegen.

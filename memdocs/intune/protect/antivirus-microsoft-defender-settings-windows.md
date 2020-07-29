@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 07/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: be850b2351de138ddacb087b2acf198e164dcd67
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 0eae6837ff2ef1d8b2e47118a20d4aa4e6b0f22b
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430101"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461280"
 ---
 # <a name="settings-for-windows-10-microsoft-defender-antivirus-policy-in-microsoft-intune"></a>Instellingen voor het Microsoft Defender Antivirus-beleid voor Windows 10 in Microsoft Intune
 
@@ -282,6 +282,18 @@ Meer informatie
   CSP: [SignatureUpdateInterval](https://go.microsoft.com/fwlink/?linkid=2113936)
 
   Geef een interval van nul tot 24 (in uren) op dat wordt gebruikt om op handtekeningen te controleren. De waarde nul betekent dat er niet wordt gecontroleerd op nieuwe handtekeningen. Met de waarde 2 wordt elke twee uur gecontroleerd, enzovoort.
+
+- **De bestandsshares voor het downloaden van definitie-updates definiëren**  
+  CSP: [SignatureUpdateFallbackOrder](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefallbackorder)
+
+  Beheer locaties, zoals een UNC-bestandsshare, als bronlocatie voor het downloaden om definitie-updates op te halen. Zodra de definitie-updates van een opgegeven bron zijn gedownload, wordt er geen contact meer gemaakt met de resterende bronnen in de lijst.
+
+  U kunt afzonderlijke locaties **toevoegen** of een lijst met locaties als een CSV-bestand **importeren**.
+
+- **De volgorde definiëren van de bronnen voor het downloaden van definitie-updates**  
+  CSP: [SignatureUpdateFileSharesSources](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefilesharessources)
+
+  Geef op in welke volgorde contact moet worden opgenomen met de bronlocaties die u hebt opgegeven om definitie-updates op te halen. Nadat de definitie-updates van een opgegeven bron zijn gedownload, wordt er geen contact meer gemaakt met de resterende bronnen in de lijst.
 
 ## <a name="user-experience"></a>Gebruikerservaring
 

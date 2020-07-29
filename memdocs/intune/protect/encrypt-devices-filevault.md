@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/24/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 1f2a6955a430427fe3f4e2791da6bbaecdd90523
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: cdfec1d82d68e97544172c56cecc416846b4a0f6
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353565"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86460481"
 ---
 # <a name="use-filevault-disk-encryption-for--macos-with-intune"></a>FileVault-schijfversleuteling gebruiken voor macOS met Intune
 
@@ -45,6 +45,8 @@ Zie [BitLocker-beleid beheren](../protect/encrypt-devices.md) als u BitLocker vo
 
 Wanneer u een beleid hebt gemaakt voor het met FileVault versleutelen van apparaten, wordt het beleid in twee fasen toegepast op apparaten. In eerste instantie wordt het apparaat voorbereid zodat Intune kan worden gebruikt voor het ophalen van en het maken van back-ups van de herstelsleutel. Deze actie heet ook wel 'escrow'. Wanneer er een escrow-sleutel is gemaakt, kan worden gestart met de schijfversleuteling.
 
+Naast het gebruik van Intune-beleid voor het versleutelen van een apparaat met FileVault kunt u beleid implementeren op een beheerd apparaat zodat er in Intune vanuit kan worden gegaan dat [het apparaat wordt beheerd door FileVault als het is versleuteld door de gebruikers](#assume-management-of-filevault-on-previously-encrypted-devices). Voor dit scenario is het vereist dat het apparaat het FileVault-beleid van Intune ontvangt, waarna de gebruiker de persoonlijke herstelsleutel uploadt naar Intune.
+
 Door de gebruiker goedgekeurde apparaatinschrijving is vereist om FileVault op een apparaat te laten werken. De inschrijving geldt alleen als goedgekeurd door de gebruiker als deze het beheerprofiel handmatig goedkeurt vanuit de systeemvoorkeuren.
 
 ## <a name="permissions-to-manage-filevault"></a>Machtigingen voor het beheren van FileVault
@@ -59,38 +61,6 @@ Hieronder vindt u de FileVault-machtigingen die deel uitmaken van de categorie *
 
 - **FileVault-sleutel roteren**
   - Helpdeskmedewerker
-
-## <a name="create-endpoint-security-policy-for-filevault"></a>Eindpuntbeveiligingsbeleid voor FileVault opstellen
-
-1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
-
-2. Selecteer **eindpuntbeveiliging** > **schijfversleuteling** > **Maak beleid**.
-
-3. Voer op de pagina **Basisinformatie** de volgende eigenschappen in en kies vervolgens **Volgende**.
-   - **Platform**: macOS
-   - **Profiel**: FileVault
-
-   ![Het FileVault-profiel selecteren](./media/encrypt-devices-filevault/select-macos-filevault-es.png)
-
-4. Op de pagina **Configuratie-instellingen**:
-   1. Stel *FileVault inschakelen* in op **Ja**.
-   2. Bij *Herstelsleuteltype* wordt alleen de optie **Persoonlijke herstelsleutel** ondersteund.
-   3. Configureer aanvullende instellingen om te voldoen aan uw vereisten.
-
-   Overweeg een bericht toe te voegen om gebruikers te helpen bij het ophalen van de herstelsleutel voor hun apparaat. Deze informatie kan nuttig zijn voor uw gebruikers wanneer u de instelling voor wijziging van persoonlijke herstelsleutels gebruikt. Met deze instelling kan periodiek automatisch een nieuwe herstelsleutel voor een apparaat worden gegenereerd.
-
-   Bijvoorbeeld: Als u een verloren of onlangs vernieuwde herstelsleutel wilt ophalen, meldt u zich aan op de website van de Intune-bedrijfsportal. Dit kan vanaf elk apparaat. Ga in de portal naar Apparaten en selecteer het apparaat waarvoor FileVault is ingeschakeld. Selecteer dan *Herstelsleutel ophalen*. De huidige herstelsleutel wordt weergegeven.
-
-5. Wanneer u klaar bent met het configureren van instellingen, selecteert u **Volgende**.
-
-6. Selecteer op de pagina **Bereik (tags)** de optie **Bereiktags selecteren** om het deelvenster Tags selecteren te openen en bereiktags aan het profiel toe te wijzen.
-
-   Selecteer **Volgende** om door te gaan.
-
-7. Selecteer op de pagina **Toewijzingen** de groepen die dit profiel zullen ontvangen. Zie Gebruikers- en apparaatprofielen toewijzen voor meer informatie over het toewijzen van profielen.
-Selecteer **Volgende**.
-
-8. Kies op de pagina **Controleren en maken** de optie **Maken** zodra u klaar bent. Het nieuwe profiel wordt weergegeven in de lijst wanneer u het beleidstype selecteert voor het profiel dat u hebt gemaakt.
 
 ## <a name="create-device-configuration-policy-for-filevault"></a>Configuratiebeleid voor FileVault maken
 
@@ -121,7 +91,7 @@ Selecteer **Volgende**.
 
    - Selecteer voor *Type herstelsleutel* de optie **Persoonlijke sleutel**.
 
-   - Voeg voor *Escrow-locatiebeschrijving van persoonlijke herstelsleutel* een bericht toe om gebruikers te helpen bij het ophalen van de herstelsleutel voor hun apparaat. Deze informatie kan nuttig zijn voor uw gebruikers wanneer u de instelling voor wijziging van persoonlijke herstelsleutels gebruikt. Met deze instelling kan periodiek automatisch een nieuwe herstelsleutel voor een apparaat worden gegenereerd.
+   - Voeg voor *Escrow-locatiebeschrijving van persoonlijke herstelsleutel* een bericht toe om gebruikers te helpen bij [het ophalen van de herstelsleutel](#retrieve-a-personal-recovery-key) voor hun apparaat. Deze informatie kan nuttig zijn voor uw gebruikers wanneer u de instelling voor wijziging van persoonlijke herstelsleutels gebruikt. Met deze instelling kan periodiek automatisch een nieuwe herstelsleutel voor een apparaat worden gegenereerd.
 
      Bijvoorbeeld: Als u een verloren of onlangs vernieuwde herstelsleutel wilt ophalen, meldt u zich aan op de website van de Intune-bedrijfsportal. Dit kan vanaf elk apparaat. Ga in de portal naar *Apparaten* en selecteer het apparaat waarvoor FileVault is ingeschakeld. Selecteer dan *Herstelsleutel ophalen*. De huidige herstelsleutel wordt weergegeven.
 
@@ -136,6 +106,38 @@ Selecteer **Volgende**.
 
 9. Kies op de pagina **Controleren en maken** de optie **Maken** zodra u klaar bent. Het nieuwe profiel wordt weergegeven in de lijst wanneer u het beleidstype selecteert voor het profiel dat u hebt gemaakt.
 
+## <a name="create-endpoint-security-policy-for-filevault"></a>Eindpuntbeveiligingsbeleid voor FileVault opstellen
+
+1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Selecteer **eindpuntbeveiliging** > **schijfversleuteling** > **Maak beleid**.
+
+3. Voer op de pagina **Basisinformatie** de volgende eigenschappen in en kies vervolgens **Volgende**.
+   - **Platform**: macOS
+   - **Profiel**: FileVault
+
+   ![Het FileVault-profiel selecteren](./media/encrypt-devices-filevault/select-macos-filevault-es.png)
+
+4. Op de pagina **Configuratie-instellingen**:
+   1. Stel *FileVault inschakelen* in op **Ja**.
+   2. Bij *Herstelsleuteltype* wordt alleen de optie **Persoonlijke herstelsleutel** ondersteund.
+   3. Configureer aanvullende instellingen om te voldoen aan uw vereisten.
+
+   U kunt een bericht toevoegen om gebruikers te helpen bij [het ophalen van de herstelsleutel](#retrieve-a-personal-recovery-key) voor hun apparaat. Deze informatie kan nuttig zijn voor uw gebruikers wanneer u de instelling voor wijziging van persoonlijke herstelsleutels gebruikt. Met deze instelling kan periodiek automatisch een nieuwe herstelsleutel voor een apparaat worden gegenereerd.
+
+   Bijvoorbeeld: Als u een verloren of onlangs vernieuwde herstelsleutel wilt ophalen, meldt u zich aan op de website van de Intune-bedrijfsportal. Dit kan vanaf elk apparaat. Ga in de portal naar Apparaten en selecteer het apparaat waarvoor FileVault is ingeschakeld. Selecteer dan *Herstelsleutel ophalen*. De huidige herstelsleutel wordt weergegeven.
+
+5. Wanneer u klaar bent met het configureren van instellingen, selecteert u **Volgende**.
+
+6. Selecteer op de pagina **Bereik (tags)** de optie **Bereiktags selecteren** om het deelvenster Tags selecteren te openen en bereiktags aan het profiel toe te wijzen.
+
+   Selecteer **Volgende** om door te gaan.
+
+7. Selecteer op de pagina **Toewijzingen** de groepen die dit profiel zullen ontvangen. Zie Gebruikers- en apparaatprofielen toewijzen voor meer informatie over het toewijzen van profielen.
+Selecteer **Volgende**.
+
+8. Kies op de pagina **Controleren en maken** de optie **Maken** zodra u klaar bent. Het nieuwe profiel wordt weergegeven in de lijst wanneer u het beleidstype selecteert voor het profiel dat u hebt gemaakt.
+
 ## <a name="manage-filevault"></a>FileVault beheren
 
 Zie [schrijfversleuteling controleren](../protect/encryption-monitor.md) voor informatie over apparaten die het FileVault-beleid ontvangen.
@@ -144,17 +146,60 @@ Wanneer Intune een macOS-apparaat voor het eerst versleutelt met FileVault, word
 
 Bij beheerde apparaten kan Intune een escrow-sleutel maken van de persoonlijke herstelsleutel. Met escrow-sleutels kunnen Intune-beheerders sleutels vernieuwen om de bescherming van apparaten te verbeteren en kunnen gebruikers verloren geraakte of vernieuwde persoonlijke herstelsleutels herstellen.
 
-Nadat Intune een macOS-apparaat versleutelt met FileVault:
+Intune borgt een herstelsleutel wanneer Intune-beleid een apparaat versleutelt of nadat een gebruiker zijn of haar herstelsleutel heeft geüpload voor een apparaat dat handmatig is versleuteld.
 
-- Beheerders kunnen de FileVault-herstelsleutels weergeven en beheren met behulp van het Intune-versleutelingsrapport.
-- Gebruikers kunnen de persoonlijke herstelsleutel van een apparaat weergeven vanuit de online Bedrijfsportal op het apparaat. Kies in de online bedrijfsportal het versleutelde macOS-apparaat en kies vervolgens 'Herstelsleutel ophalen' als externe actie.
+Nadat Intune de persoonlijke herstelsleutel heeft geborgd:
+
+- Beheerders kunnen de FileVault-herstelsleutels voor elk beheerd macOS-apparaat beheren en draaien met behulp van het Intune-versleutelingsrapport.
+- Beheerders kunnen de persoonlijke herstelsleutel alleen weergeven voor beheerde macOS-apparaten die zijn gemarkeerd als *zakelijk*. Ze kunnen de herstelsleutel voor persoonlijke apparaten niet weergeven.
+- Gebruikers kunnen hun persoonlijke herstelsleutel weergeven en [ophalen van een ondersteunde locatie](#retrieve-a-personal-recovery-key). De gebruiker kan op de bedrijfsportalwebsite bijvoorbeeld kiezen om *de herstelsleutel op te halen*  als een actie voor een extern apparaat.
+
+### <a name="assume-management-of-filevault-on-previously-encrypted-devices"></a>Het beheer van FileVault veronderstellen op apparaten die eerder zijn versleuteld
+
+Intune kan FileVault-schijfversleuteling beheren op macOS-apparaten die zijn versleuteld door middel van Intune-beleid. Intune kan ook het beheer overnemen van FileVault op apparaten die zijn versleuteld door gebruikers van het apparaat en niet via Intune-beleid.
+
+#### <a name="prerequisites-to-assume-management-of-filevault"></a>Vereisten om het beheer van FileVault te veronderstellen
+
+Om het beheer van eerder versleutelde apparaten te veronderstellen, moet aan de volgende voorwaarden worden voldaan:
+
+1. **Implementeer een FileVault-beleid op het apparaat**. Het eerder versleutelde apparaat moet een beleid van Intune ontvangen waarmee FileVault-schijfversleuteling wordt ingeschakeld.
+
+   In dit scenario wordt het apparaat niet ontsleuteld of opnieuw versleuteld met het beleid. In plaats daarvan kan Intune het beheer veronderstellen van de FileVault-versleuteling die al op het apparaat is ingeschakeld.  U kunt het versleutelingsbeleid voor de eindpuntbeveiliging gebruiken of eindpuntbeveiligingsbeleid voor apparaatconfiguratie gebruiken om apparaten te versleutelen met FileVault.
+
+   Raadpleeg [Beleid opstellen en implementeren](#create-device-configuration-policy-for-filevault).
+
+2. **Gebruikers uploaden hun persoonlijke herstelsleutel naar Intune**.  Nadat het apparaat het FileVault-beleid heeft ontvangen, instrueert u de apparaatgebruiker die het apparaat heeft versleuteld om de persoonlijke herstelsleutel te uploaden naar Intune. Als de sleutel met succes is ingevoerd, veronderstelt Intune het beheer van de FileVault-versleuteling en wordt er een nieuwe persoonlijke herstelsleutel gemaakt voor het apparaat en de gebruiker.
+
+   > [!IMPORTANT]
+   > Intune waarschuwt gebruikers niet dat ze hun persoonlijke herstelsleutel moeten uploaden om de versleuteling te voltooien. Gebruik in plaats daarvan uw normale IT-communicatiekanalen om gebruikers die eerder hun macOS-apparaat met FileVault hebben versleuteld te waarschuwen dat ze hun persoonlijke herstelsleutel moeten uploaden naar Intune.  
+   >
+   > Afhankelijk van uw nalevingsbeleid kan de toegang van uw apparaat tot zakelijke resources mogelijk worden geblokkeerd totdat Intune het beheer van FileVault-versleuteling op het apparaat heeft verondersteld.
+
+#### <a name="upload-a-personal-recovery-key"></a>Een persoonlijke herstelsleutel uploaden
+
+Als u Intune wilt inschakelen om FileVault te beheren op een eerder versleuteld apparaat, moet de gebruiker van het apparaat de huidige persoonlijke herstelsleutel voor het apparaat via de bedrijfsportalwebsite uploaden naar Intune.  Bij het uploaden draait Intune de sleutel om een nieuwe persoonlijke herstelsleutel te maken, die vervolgens door Intune wordt opgeslagen voor eventueel toekomstig herstel.
+
+De gebruiker zoekt op de bedrijfsportalwebsite het versleutelde macOS-apparaat en selecteert de optie **Herstelsleutel opslaan**. Zodra de persoonlijke herstelsleutel is ingevoerd, probeert Intune de sleutel te draaien om een nieuwe sleutel te genereren. Het draaien wordt uitgevoerd om te controleren of de ingevoerde sleutel klopt voor dat apparaat. Deze nieuwe sleutel wordt vervolgens door Intune opgeslagen en beheerd voor het geval de gebruiker het apparaat in de toekomst moet herstellen.
+
+Als het draaien van de sleutel mislukt, is het FileVault-beleid van het apparaat niet verwerkt of klopt de ingevoerde sleutel niet voor het apparaat.
+
+Na een geslaagde rotatie kan een gebruiker [de nieuwe persoonlijke herstelsleutel ophalen op een ondersteunde locatie](#retrieve-a-personal-recovery-key).
+
+ Bekijk de [inhoud van de eindgebruiker voor het uploaden van de persoonlijke herstelsleutel](../user-help/store-recovery-key.md).
 
 > [!IMPORTANT]
-> Apparaten die door gebruikers zijn versleuteld (en niet door Intune), kunnen niet door Intune worden beheerd. Dit betekent dat Intune geen escrow-sleutel kan maken voor het persoonlijke herstel van de apparaten en dat de vernieuwing van de herstelsleutel niet kan worden beheerd. Voordat Intune kan worden gebruikt voor het beheer van FileVault en herstelsleutels voor het apparaat, moet de gebruiker het apparaat ontsleutelen. Daarna kan het apparaat met Intune worden versleuteld.
+> Intune kan de FileVault-versleuteling niet beheren voor een apparaat dat door een gebruiker en niet door Intune is versleuteld totdat het apparaat een FileVault-beleid ontvangt en de gebruiker van het apparaat zijn of haar persoonlijke herstelsleutel uploadt.
 
-### <a name="retrieve-personal-recovery-key"></a>Persoonlijke herstelsleutel ophalen
+### <a name="retrieve-a-personal-recovery-key"></a>Een persoonlijke herstelsleutel ophalen
 
-Bij een macOS-apparaat dat door Intune is versleuteld, kunnen eindgebruikers hun persoonlijke herstelsleutel (FileVault-sleutel) ophalen met behulp van de iOS-bedrijfsportal-app, de Android-bedrijfsportal-app of via de Android Intune-app.
+Eindgebruikers kunnen voor een macOS-apparaat met FileVault-versleuteling die door Intune wordt beheerd hun persoonlijke herstelsleutel (FileVault-sleutel) ophalen uit de volgende locaties, met behulp van elk apparaat:
+
+- Bedrijfsportalwebsite
+- Bedrijfsportal-app voor iOS/iPadOS
+- Android-bedrijfsportal-app
+- Intune-app
+
+Beheerders kunnen persoonlijke herstelsleutels weergeven voor versleutelde macOS-apparaten die zijn gemarkeerd als een *zakelijk* apparaat. Ze kunnen de herstelsleutel voor een persoonlijk apparaat niet weergeven.
 
 Het apparaat met de persoonlijke herstelsleutel moet zijn geregistreerd bij Intune en moet zijn versleuteld met FileVault via Intune. Met de iOS-bedrijfsportal-app, Android-bedrijfsportal-app, de Android Intune-app of de Bedrijfsportal-website kunnen gebruikers de **FileVault**-herstelsleutel zien die nodig is om toegang te krijgen tot hun Mac-apparaten.
 

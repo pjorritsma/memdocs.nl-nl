@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 1199c6db96325a103394cfb53a4ca70092cd3767
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: c20d2ef806df46036d3a785bb5f8603d485d3880
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989649"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86460464"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Apparaatversleuteling bewaken met Intune
 
@@ -118,7 +118,7 @@ Wanneer u een apparaat selecteert in het versleutelingsrapport, wordt in Intune 
 
   - Het apparaat is al versleuteld. De gebruiker van het apparaat moet het apparaat ontsleutelen om door te gaan.
 
-    *Overweeg het volgende: Intune kan FileVault niet instellen op een apparaat dat al is versleuteld. In een dergelijk geval moet de gebruiker het apparaat handmatig ontsleutelen; daarna kan het pas worden beheerd met een apparaatconfiguratiebeleid en Intune*.
+    *Overweeg het volgende: Intune kan FileVault niet instellen op een apparaat dat al is versleuteld. Nadat een apparaat echter beleid heeft ontvangen om FileVault in te schakelen, kunnen gebruikers [hun persoonlijke herstelsleutel uploaden, zodat zij met Intune de versleuteling op dat apparaat kunnen beheren](../protect/encrypt-devices-filevault.md#assume-management-of-filevault-on-previously-encrypted-devices). Een andere mogelijkheid, die echter niet wordt aanbevolen omdat hiermee een apparaat een tijd lang onversleuteld wordt gelaten, is dat gebruikers vooraf het apparaat handmatig ontsleutelen zodat het vervolgens door Intune-beleid kan worden versleuteld.*
 
   - Voor FileVault is vereist dat de gebruiker het beheer goedkeurt als er gebruik wordt gemaakt van macOS Catalina of hoger.
 
@@ -174,7 +174,7 @@ Dit rapport kan worden gebruikt bij het identificeren van problemen voor groepen
 Bekijk voor meer informatie over het beheren van de herstelsleutels het volgende in de Intune-documentatie:
 
 macOS FileVault:
-- [Persoonlijke herstelsleutel ophalen](../protect/encrypt-devices-filevault.md#retrieve-personal-recovery-key)
+- [Persoonlijke herstelsleutel ophalen](../protect/encrypt-devices-filevault.md#retrieve-a-personal-recovery-key)
 - [Herstelsleutels draaien](../protect/encrypt-devices-filevault.md#rotate-recovery-keys)
 - [Herstelsleutels herstellen](../protect/encrypt-devices-filevault.md#recover-recovery-keys)
 

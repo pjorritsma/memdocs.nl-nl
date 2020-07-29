@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/03/2020
+ms.date: 07/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35cf4b3afb766d8729d3438d2d8c61e1d79f4791
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: ebf6a71a4d462e1025b6c44557a9513887488673
+ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531737"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86891527"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>SCEP-certificaatprofielen maken en toewijzen in Intune
 
@@ -40,15 +40,15 @@ Nadat u [uw infrastructuur hebt geconfigureerd](certificates-scep-configure.md) 
    - **Platform**: Kies het platform van uw apparaten.
    - **Profiel**: Selecteer **SCEP-certificaat**
 
-     Voor het **Android Enterprise**-platform is het *Profieltype* onderverdeeld in twee categorieën: *Alleen apparaateigenaar* en *Alleen werkprofiel*. Zorg ervoor dat u het juiste SCEP-certificaatprofiel selecteert voor de apparaten die u beheert.  
+     Voor het **Android Enterprise**-platform is het *Profieltype* onderverdeeld in twee categorieën: *Volledig beheerd en toegewezen werkprofiel in bedrijfseigendom* en *Alleen werkprofiel*. Zorg ervoor dat u het juiste SCEP-certificaatprofiel selecteert voor de apparaten die u beheert.  
 
-     SCEP-certificaatprofielen voor het profiel *Alleen apparaateigenaar* hebben de volgende beperkingen:
+     SCEP-certificaat profielen voor het profiel *Volledig beheerd en toegewezen werkprofiel in bedrijfseigendom* hebben de volgende beperkingen:
 
       1. Certificaatrapportage is onder Bewaking niet beschikbaar voor de SCEP-certificaatprofielen voor apparaateigenaar.
 
       2. U kunt Intune niet gebruiken om certificaten in te trekken die zijn ingericht door SCEP-certificaatprofielen voor eigenaren van apparaten. U kunt het intrekken beheren via een extern proces of rechtstreeks met de certificeringsinstantie.
 
-      3. Bij toegewezen Android Enterprise-apparaten worden SCEP-certificaatprofielen alleen ondersteund voor het configureren en verifiëren van Wi-Fi-netwerken.  SCEP-certificaatprofielen op toegewezen Android Enterprise-apparaten worden niet ondersteund voor VPN- of app-verificatie.
+      3. Bij toegewezen Android Enterprise-apparaten worden SCEP-certificaatprofielen ondersteund voor het configureren van Wi-Fi-netwerken, VPN en verificatie. SCEP-certificaatprofielen op toegewezen Android Enterprise-apparaten worden niet ondersteund voor app-verificatie.
 
 4. Selecteer **Maken**.
 
@@ -71,6 +71,9 @@ Nadat u [uw infrastructuur hebt geconfigureerd](certificates-scep-configure.md) 
 
        Gebruik **Apparaat** voor scenario's als apparaten zonder gebruiker, zoals kiosken, of voor Windows-apparaten. Op Windows-apparaten wordt het certificaat in het certificaatarchief van de lokale computer geplaatst.
 
+     > [!NOTE]
+     > In macOS worden certificaten die u met SCEP hebt ingericht altijd opgenomen in de systeem-keychain (systeemarchief) van het apparaat.
+ 
    - **Indeling van de onderwerpnaam**:
 
      Selecteer hoe de onderwerpnaam in de certificaataanvraag automatisch wordt gemaakt met Intune. De opties voor de indeling van de onderwerpnaam zijn afhankelijk van het certificaattype dat u selecteert: **Gebruiker** of **Apparaat**.
@@ -112,7 +115,7 @@ Nadat u [uw infrastructuur hebt geconfigureerd](certificates-scep-configure.md) 
 
          Dat voorbeeld bevat een indeling van de onderwerpnaam waarin gebruik wordt gemaakt van de variabelen CN en E, plus tekenreeksen voor de waarden Organizational Unit, Organization, Location, State en Country. [De functie CertStrToName](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) beschrijft deze functie en de ondersteunde tekenreeksen.
          
-         \* Voor profielen met alleen een Android-apparaateigenaar werkt de instelling **CN={{UserPrincipalName}}** niet. Profielen met alleen een Android-apparaateigenaar kunnen worden gebruikt voor apparaten zonder gebruiker; zo kunnen dergelijke profielen niet worden gebruikt om de user principal name van een gebruiker te achterhalen. Als u deze optie voor apparaten met gebruikers echt nodig hebt, kunt u een tijdelijke oplossing als volgt gebruiken: **CN={{UserName}}\@contoso.com** Dit biedt de gebruikersnaam en het domein dat u handmatig hebt toegevoegd, bijvoorbeeld janedoe@contoso.com
+         \* Voor volledig beheerd en toegewezen Android-werkprofielen in bedrijfseigendom zal de instelling **CN={{UserPrincipalName}}** niet werken. Profielen met volledig beheerde en toegewezen Android-werkprofielen in bedrijfseigendom kunnen worden gebruikt voor apparaten zonder gebruiker; zo kunnen dergelijke profielen niet worden gebruikt om de user principal name van een gebruiker te achterhalen. Als u deze optie voor apparaten met gebruikers echt nodig hebt, kunt u een tijdelijke oplossing als volgt gebruiken: **CN={{UserName}}\@contoso.com** Dit biedt de gebruikersnaam en het domein dat u handmatig hebt toegevoegd, bijvoorbeeld janedoe@contoso.com
 
       - **Certificaattype Apparaat**
 

@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: db23ee1742934e8545c03c529d6a05c13cc59f1a
-ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
+ms.openlocfilehash: 3760aa9820495db6c2460bf2e6d2e9a08d705a10
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83633288"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462028"
 ---
 # <a name="disk-encryption-policy-settings-for-endpoint-security-in-intune"></a>Instellingen voor schijfversleutelingsbeleid voor eindpuntbeveiliging in Intune
 
@@ -66,6 +66,11 @@ Ondersteunde platforms en profielen:
     Voorkom dat de gebruiker bij het afmelden wordt gevraagd om FileVault in te schakelen. Wanneer Uitschakelen is ingesteld, wordt de vraag niet gesteld als de gebruiker zich afmeldt, maar als deze zich aanmeldt.
     - **Niet geconfigureerd** (*standaard*)
     - **Ja**: schakel de prompt om FileVault in te schakelen uit die wordt weergegeven bij afmelden.
+
+  - **Herstelsleutel verbergen**  
+     Verberg de persoonlijke herstelsleutel tijdens de versleuteling in Intune voor de gebruiker van het macOS-apparaat. Nadat de schijf is versleuteld, kan een gebruiker elk apparaat gebruiken om de persoonlijke herstelsleutel weer te geven via de Intune-bedrijfsportalwebsite of de Bedrijfsportal-app op een ondersteund platform.
+    - **Niet geconfigureerd** (*standaard*)
+    - **Ja**: Verberg de persoonlijke herstelsleutel tijdens het versleutelen van het apparaat.
 
 ## <a name="bitlocker"></a>BitLocker
 

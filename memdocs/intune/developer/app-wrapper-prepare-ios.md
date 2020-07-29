@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 69940fc8e3f495a1738f2b7b4c6769e431821f30
-ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
+ms.openlocfilehash: c10738d20b793de2ba1adbca548290a517ca5d9e
+ms.sourcegitcommit: 764142960005ea0cb5afa00757f2b403ce5032c6
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84436802"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405916"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>iOS-apps voorbereiden voor app-beveiligingsbeleid met Intune App Wrapping Tool
 
@@ -225,7 +225,7 @@ Open in de map IntuneMAMPackager/Contents/MacOS `Parameters.plist` (een lege PLI
 | ADAL-client-id |Tekenreeks|leeg| Zelfde als -ac|
 | ADAL-antwoord-URI |Tekenreeks|leeg| Zelfde als -ar|
 | Uitgebreid ingeschakeld |Boolean-waarde|onjuist| Gelijk aan -v|
-| Ontbrekende rechten verwijderen |Boolean-waarde|onjuist| Gelijk aan -c|
+| Ontbrekende rechten verwijderen |Boolean-waarde|onjuist| Gelijk aan -e|
 | Standaardbuildupdate voorkomen |Boolean-waarde|onjuist| Komt overeen met het gebruik van -b zonder argumenten|
 | Tekenreeks voor build overschrijven |Tekenreeks|leeg| De aangepaste CFBundleVersion van de verpakte uitvoer-app|
 | Citrix XenMobile App SDK (alleen-netwerk variant) opnemen|Boolean-waarde|onjuist| Gelijk aan -citrix|

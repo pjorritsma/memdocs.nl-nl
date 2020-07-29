@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de23dc438ac176383cf5f5fbfac4da22f91bd4b2
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e541eb04f8de689ee76a68556bb1b2eb90914b96
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988823"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461433"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Een nalevingsbeleid maken in Microsoft Intune
 
@@ -75,7 +75,7 @@ Neem het volgende in acht voor het gebruik van het nalevingsbeleid voor apparate
    - *Windows 10 en hoger*
 
     Voor *Android Enterprise* selecteert u ook een **Beleidstype**:
-     - *Nalevingsbeleid van de apparaateigenaar van het Android-apparaat*
+     - *Android-beleid voor volledig beheerde, toegewezen werkprofielapparaten in bedrijfseigendom*
      - *Nalevingsbeleid voor Android-werkprofiel*
 
     Selecteer vervolgens **Maken** om het configuratievenster **Beleid maken** te openen.

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 38c3c4adb7029303eaad34b1d5a9fdef774c0f00
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 65b5c7c0b9cb8a587213d237854e69705b5a7f63
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086433"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461688"
 ---
 # <a name="add-wi-fi-settings-for-android-enterprise-dedicated-and-fully-managed-devices-in-microsoft-intune"></a>Wi-Fi-instellingen toevoegen voor volledig beheerde en toegewezen Android Enterprise-apparaten in Microsoft Intune
 
@@ -33,14 +33,14 @@ In dit artikel worden deze instellingen beschreven. [Wi-Fi gebruiken op uw appar
 
 [Maak een apparaatprofiel](wi-fi-settings-configure.md).
 
-## <a name="device-owner-only"></a>Alleen eigenaar van het apparaat
+## <a name="fully-managed-dedicated-and-corporate-owned-work-profile"></a>Volledig beheerd en toegewezen werkprofiel in bedrijfseigendom
 
 Selecteer deze optie als u implementeert op een volledig beheerd of toegewezen Android Enterprise-apparaat.  Volledig beheerde en toegewezen Android Enterprise-apparaten ondersteunen momenteel de implementatie van SCEP-certificaten, maar niet van PKCS.
 
 ### <a name="basic"></a>Basic
 
 - **Wi-Fi-type**: kies **Basic**.
-- **Netwerknaam**: voer een naam in voor deze Wi-Fi-verbinding. Eindgebruikers zien deze naam wanneer ze op hun apparaat beschikbare wifi-verbindingen zoeken. Voer bijvoorbeeld **Contoso WiFi** in.
+- **Netwerknaam**: voer een naam in voor deze Wi-Fi-verbinding. Eindgebruikers zien deze naam wanneer ze op hun apparaat beschikbare Wi-Fi-verbindingen zoeken. Voer bijvoorbeeld **Contoso WiFi** in.
 - **SSID**: voer de **serviceset-id** in, wat de echte naam is van het draadloze netwerk waarmee apparaten verbinding maken. Gebruikers zien echter alleen de **netwerknaam** die u hebt geconfigureerd wanneer ze de verbinding kiezen.
 - **Verborgen netwerk**: kies **Inschakelen** om te voorkomen dat dit netwerk op het apparaat wordt weergegeven in de lijst met beschikbare netwerken. De SSID wordt niet verzonden. Kies **Uitschakelen** om dit netwerk in de lijst met beschikbare netwerken op het apparaat weer te geven.
 - **Wi-Fi-type**: selecteer het beveiligingsprotocol voor de verificatie bij het Wi-Fi-netwerk. Uw opties zijn:

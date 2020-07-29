@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/29/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: ae95fb48296f778fb98affa2270ba763d79fb766
-ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
+ms.openlocfilehash: b1711dad8163409d05c5299e8d3b54ad619b48ec
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84879677"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462062"
 ---
 # <a name="endpoint-detection-and-response-policy-for-endpoint-security-in-intune"></a>Eindpuntdetectie- en eindpuntresponsbeleid voor eindpuntbeveiliging in Intune
 
@@ -32,9 +32,6 @@ De functionaliteit van de Microsoft Defender ATP-eindpuntdetectie en -respons bi
 EDR-beleid bevat platformspecifieke profielen voor het beheren van instellingen voor EDR. De profielen bevatten automatisch een *onboardingpakket* voor Microsoft Defender ATP. Onboardingpakketten geven aan hoe apparaten moeten worden geconfigureerd voor gebruik met Microsoft Defender ATP. Nadat voor een apparaat onboarding is uitgevoerd, kunt u gebruik gaan maken van bedreigingsgegevens van dat apparaat.
 
 Er wordt EDR-beleid geïmplementeerd op groepen apparaten in Azure Active Directory (Azure AD) die u beheert met Intune en op verzamelingen on-premises apparaten die u beheert met Configuration Manager, waaronder Windows-servers. Voor het EDR-beleid zijn voor de verschillende beheerpaden verschillende onboardingpakketten vereist. Daarom maakt u afzonderlijke EDR-beleidsregels voor de verschillende typen apparaten die u beheert.
-
-> [!TIP]
-> Ondersteuning voor apparaten die u beheert met Configuration Manager bevindt zich in *openbare preview*.
 
 U kunt het eindpuntbeveiligingsbeleid voor EDR vinden onder *Beheren* in het knooppunt **Eindpuntbeveiliging** van het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -74,10 +71,10 @@ Voor ondersteuning bij het gebruik van een EDR-beleid bij Configuration Manager-
 - Platform: **Windows 10 en hoger**: Intune implementeert het beleid op apparaten in uw Azure AD-groepen.
 - Profiel: **Eindpuntdetectie en -respons (MDM)**
 
-**Configuration Manager** *(in preview)* : het onderstaande wordt ondersteund voor apparaten die u met Configuration Manager beheert:
+**Configuration Manager**: De volgende instellingen worden ondersteund voor apparaten die u beheert met Configuratiebeheer:
 
 - Platform: **Windows 10- en Windows Server**: Configuration Manager implementeert het beleid op apparaten in uw Configuration Manager-verzamelingen.
-- Profiel: **Eindpuntdetectie en -respons (ConfigMgr) (preview-versie)**
+- Profiel: **Eindpuntdetectie en -respons (ConfigMgr)**
 
 ## <a name="set-up-configuration-manager-to-support-edr-policy"></a>Configuration Manager instellen om het EDR-beleid te ondersteunen
 
@@ -223,7 +220,7 @@ Voordat u beleid kunt implementeren op apparaten die worden beheerd door Configu
 
    - Configuration Manager: Configuration Manager implementeert het beleid op apparaten in uw Configuration Manager-verzamelingen. Wanneer u het beleid maakt, selecteert u:
      - Platform: **Windows 10 en Windows Server**
-     - Profiel: **Eindpuntdetectie en -respons (ConfigMgr) (preview-versie)**
+     - Profiel: **Eindpuntdetectie en -respons (ConfigMgr)**
 
 4. Selecteer **Maken**.
 

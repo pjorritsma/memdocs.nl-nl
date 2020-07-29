@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/09/2020
+ms.date: 07/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 771741ed0e07a6373c63dd2e81745fe53adc4242
-ms.sourcegitcommit: aa876a9b5aa9437ae59a68e1cc6355d7070f89f4
+ms.openlocfilehash: cdb8ca0ca24d196bb21f9d7e484374555d6fefd2
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86236389"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410841"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Gegevensoverdracht beheren tussen iOS-apps met Microsoft Intune
 
 Beperk bestandsoverdrachten ter beveiliging van bedrijfsgegevens tot alleen de apps die u beheert. U kunt iOS-apps op de volgende manieren beheren:
 
-- Beveilig organisatiegegevens voor werk-of schoolaccounts door een app-beveiligingsbeleid te configureren voor de apps. Dit noemen we *door beleid beheerde apps*.  Bekijk [alle door Intune beheerde apps die u met app-beveiligingsbeleid kunt beheren](https://www.microsoft.com/cloud-platform/microsoft-intune-apps)
+- Beveilig organisatiegegevens voor werk-of schoolaccounts door een app-beveiligingsbeleid te configureren voor de apps. Dit noemen we *door beleid beheerde apps*.  Zie [Met Microsoft Intune beveiligde apps](apps-supported-intune-apps.md).
 
 - Implementeer en beheer apps via iOS-apparaatbeheer. Hiervoor moeten apparaten worden ingeschreven in een MDM-oplossing (Mobile Device Management). De apps die u implementeert, kunnen *door beleid beheerde apps* of andere door iOS beheerde apps zijn.
 
@@ -40,10 +40,10 @@ Gebruik een app-beveiligingsbeleid met de beheerde **Open-in-functie** van iOS o
 
 - **Apparaten die niet worden beheerd door een MDM-oplossing:** U kunt de instellingen voor het beveiligingsbeleid voor apps instellen om het delen van gegevens met andere toepassingen te beheren via *Open-in* of *share-extensies*.  Als u dit wilt doen, moet u **Organisatiegegevens naar andere apps verzenden** instellen op de waarde **Door beleid beheerde apps met filteren op 'Openen in/delen'** .  Het gedrag *Openen in/delen* in de *door beleid beheerde app* presenteert alleen andere *door beleid beheerde apps* als opties voor delen. 
 
-- **Apparaten die worden beheerd door MDM-oplossingen**: Voor apparaten die zijn ingeschreven bij Intune of externe MDM-oplossingen, wordt het delen van gegevens tussen apps met app-beveiligingsbeleid en andere beheerde iOS-apps die via MDM zijn geïmplementeerd, beheerd door Intune App-beleid en de iOS-functie **Openen in management**. Als u ervoor wilt zorgen dat apps die u implementeert met behulp van een MDM-oplossing, ook onderhevig zijn aan het app-beveiligingsbeleid in Intune, configureert u de UPN-gebruikersinstelling zoals beschreven in het volgende gedeelte: [UPN-gebruikersinstelling configureren](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). Als u wilt opgeven hoe u gegevensoverdracht naar andere apps wilt toestaan, schakelt u **Organisatiegegevens naar andere apps verzenden** in en kiest u vervolgens het gewenste deelniveau. Als u wilt opgeven hoe u apps wilt toestaan om gegevens te ontvangen van andere apps, schakelt u **Organisatiegegevens naar andere apps verzenden** in en kiest u vervolgens het gewenste niveau voor het ontvangen van gegevens. Zie [Instellingen voor herlocatie van gegevens](app-protection-policy-settings-ios.md#data-protection) voor meer informatie over het ontvangen en delen van app-gegevens.
+- **Apparaten die worden beheerd door MDM-oplossingen**: Voor apparaten die zijn ingeschreven bij Intune of externe MDM-oplossingen, wordt het delen van gegevens tussen apps met app-beveiligingsbeleid en andere beheerde iOS-apps die via MDM zijn geïmplementeerd, beheerd door Intune App-beleid en de iOS-functie **Openen in management**. Als u ervoor wilt zorgen dat apps die u implementeert met behulp van een MDM-oplossing, ook onderhevig zijn aan het app-beveiligingsbeleid in Intune, configureert u de UPN-gebruikersinstelling zoals beschreven in het volgende gedeelte: [UPN-gebruikersinstelling configureren](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). Als u wilt opgeven hoe u gegevensoverdracht wilt toestaan naar andere *door beleid beheerde apps* en door iOS beheerde apps, configureert u de instelling **Organisatiegegevens naar andere apps verzenden** op **Door beleid beheerde apps met delen van het besturingssysteem**. Als u wilt opgeven hoe u apps wilt toestaan om gegevens te ontvangen van andere apps, schakelt u **Organisatiegegevens naar andere apps verzenden** in en kiest u vervolgens het gewenste niveau voor het ontvangen van gegevens. Zie [Instellingen voor herlocatie van gegevens](app-protection-policy-settings-ios.md#data-protection) voor meer informatie over het ontvangen en delen van app-gegevens.
 
 ## <a name="configure-user-upn-setting-for-microsoft-intune-or-third-party-emm"></a>UPN-gebruikersinstelling configureren voor Microsoft Intune of EMM van derden
-Deze configuratie van de UPN-gebruikersinstelling is **vereist** voor apparaten die worden beheerd door Intune of een EMM-oplossing van derden om het geregistreerde gebruikersaccount vast te stellen. De UPN-configuratie werkt met het app-beveiligingsbeleid dat u via Intune implementeert. De volgende procedure is een algemene werkstroom voor het configureren van de UPN-instelling en de daaruit voortvloeiende gebruikerservaring:
+Deze configuratie van de UPN-gebruikersinstelling is **vereist** voor apparaten die worden beheerd door Intune of een EMM-oplossing van derden om het geregistreerde gebruikersaccount vast te stellen voor de verzendende *door beleid beheerde app* bij gegevensoverdracht naar een door een iOS beheerde app. De UPN-configuratie werkt met het app-beveiligingsbeleid dat u via Intune implementeert. De volgende procedure is een algemene werkstroom voor het configureren van de UPN-instelling en de daaruit voortvloeiende gebruikerservaring:
 
 1. Maak in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) [een appbeveiligingsbeleid](app-protection-policies.md) voor iOS/iPadOS en wijs het toe. Configureer beleidsinstellingen via de bedrijfsvereisten en selecteer de iOS-apps waarop dit beleid van toepassing moet zijn.
 
@@ -70,7 +70,7 @@ Deze configuratie van de UPN-gebruikersinstelling is **vereist** voor apparaten 
 
 1. Ga naar de beheerconsole van Intune of uw MDM-provider van derden. Ga naar de sectie van de console waarin u configuratie-instellingen van toepassingen implementeert op ingeschreven iOS-apparaten.
 
-2. Voer in de sectie Toepassingsconfiguratie de volgende instelling in:
+2. Voer in de sectie Toepassingsconfiguratie de volgende instelling in voor elke *door beleid beheerde app* die gegevens overdraagt naar door iOS beheerde apps:
 
    **sleutel** = IntuneMAMUPN, **waarde** = <username@company.com>
 

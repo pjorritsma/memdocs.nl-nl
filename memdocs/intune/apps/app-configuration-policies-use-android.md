@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/15/2020
+ms.date: 07/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0edb497b2dd9e4853f3fbc378992158c0757e1f6
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: 5fca2bfab84807311f7a23dd5b4cf42090246353
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84973091"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461620"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>App-configuratiebeleidsregels toevoegen voor beheerde Android Enterprise-apparaten
 
@@ -115,6 +115,7 @@ Als Microsoft Intune-beheerder kunt u bepalen welke werk- of schoolaccounts word
    > - Office, Word, Excel en PowerPoint voor Android (16.0.9327.1000 en hoger)
    > - OneDrive voor Android (5.28 en hoger)
    > - Outlook voor Android (2.2.222 en hoger)
+   > - Teams voor Android (1416/1.0.0.2020061103 en hoger)
 
 ## <a name="enter-json-data"></a>JSON-gegevens invoeren
 
@@ -153,7 +154,7 @@ Een app maakt bijvoorbeeld gebruik van de microfoon van het apparaat. De gebruik
 
 ## <a name="additional-information"></a>Aanvullende informatie
 
-- [Een beheerde Google Play-app toewijzen aan Android Enterprise-apparaten](apps-add-android-for-work.md#assigning-a-managed-google-play-app-to-android-enterprise-work-profile-devices)
+- [Een beheerde Google Play-app toewijzen aan Android Enterprise-apparaten](apps-add-android-for-work.md#assigning-a-managed-google-play-app-to-android-enterprise-work-profile-and-corporate-owned-work-profile-devices)
 - [Configuratie-instellingen voor de Outlook-app voor iOS/iPadOS en Android implementeren](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
 
 ## <a name="next-steps"></a>Volgende stappen

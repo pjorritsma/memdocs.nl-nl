@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 07/20/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,32 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7893e845d2f4c73d4fc6fdecd8691b288c33bb48
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b6004526d8c9340e70e5149f2261eea07a916ed7
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078240"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871978"
 ---
-# <a name="common-questions-issues-and-resolutions-with-device-policies-and-profiles-in-microsoft-intune"></a>Algemene vragen, problemen en oplossingen met apparaatbeleid en -profielen in Microsoft Intune
+# <a name="common-questions-and-answers-with-device-policies-and-profiles-in-microsoft-intune"></a>Algemene vragen en antwoorden over apparaatbeleid en -profielen in Microsoft Intune
 
 Antwoorden op algemene vragen wanneer u werkt met apparaatprofielen en -beleid in Intune. In dit artikel worden ook de inchecktijdsintervallen vermeld, worden meer gegevens over problemen gegeven en meer.
-
-## <a name="why-doesnt-a-user-get-a-new-profile-when-changing-a-password-or-passphrase-on-an-existing-wi-fi-profile"></a>Waarom krijgt een gebruiker een nieuw profiel als een wachtwoord of wachtwoordzin wordt gewijzigd voor een bestaand Wi-Fi-profiel?
-
-U maakt een zakelijk Wi-Fi-profiel maakt, implementeert het profiel voor een groep, wijzigt het wachtwoord en slaat het profiel op. Wanneer het profiel wordt gewijzigd, ontvangen sommige gebruikers het nieuwe profiel mogelijk niet.
-
-Voor het oplossen van dit probleem stelt u een Wi-Fi-profiel voor gasten in. Als het zakelijke Wi-Fi-profiel niet naar behoren werkt, kunnen gebruikers verbinding maken met het profiel voor gasten. Zorg ervoor dat u alle instellingen voor automatisch verbinden inschakelt. Implementeer het Wi-Fi-profiel voor gasten voor alle gebruikers.
-
-Enkele extra aanbevelingen:  
-
-- Als voor het wifi-netwerk waarmee u verbinding maakt een wachtwoord of wachtwoordzin wordt gebruikt, moet u ervoor zorgen dat u direct verbinding met de wifi-router kunt maken. U kunt dit testen met een iOS-/iPadOS-apparaat.
-- Als u bent verbonden met het Wi-Fi-eindpunt (de Wi-Fi-router), noteert u de SSID en de referentie die wordt gebruikt (dit is het wachtwoord of de wachtwoordzin).
-- Voer de SSID en referentie (wachtwoord of wachtwoordzin) in het veld vooraf gedeelde sleutel in. 
-- Stel deze instelling in voor een testgroep met een beperkt aantal gebruikers, bij voorkeur het liefst alleen voor het IT-team. 
-- Synchroniseer uw iOS-/iPadOS-apparaat naar Intune. Schrijf u in als dit nog niet is gebeurd. 
-- Test de verbinding met hetzelfde Wi-Fi-eindpunt opnieuw (zoals vermeld in de eerste stap).
-- Implementeer deze instelling naar grotere groepen en uiteindelijk naar alle eindgebruikers in uw organisatie. 
 
 ## <a name="how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned"></a>Hoe lang duurt het voor apparaten een beleid, profiel of app hebben ontvangen nadat deze zijn toegewezen?
 

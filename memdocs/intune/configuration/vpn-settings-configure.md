@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c92220fabf8d1cb2a34ac702dd4157ef848762b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1916004d8e61239d7de92a77769ee970cc7a3118
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990272"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565613"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>VPN-profielen maken om verbinding te maken met VPN-servers in Intune
 
@@ -49,6 +49,7 @@ U kunt VPN-profielen met de volgende verbindingstypen maken:
 - Check Point Capsule VPN
   - Android-apparaatbeheerder
   - Android Enterprise-werkprofielen
+  - Volledig beheerd Android Enterprise-werkprofiel in bedrijfseigendom: [App-configuratiebeleid](../apps/app-configuration-vpn-ae.md) gebruiken
   - iOS/iPadOS
   - macOS
   - Windows 10
@@ -58,7 +59,7 @@ U kunt VPN-profielen met de volgende verbindingstypen maken:
 - Cisco AnyConnect
   - Android-apparaatbeheerder
   - Android Enterprise-werkprofielen
-  - Android Enterprise-apparaten in zakelijk eigendom (volledig beheerd)
+  - Volledig beheerd Android Enterprise-werkprofiel in bedrijfseigendom
   - iOS/iPadOS
   - macOS
 
@@ -67,8 +68,8 @@ U kunt VPN-profielen met de volgende verbindingstypen maken:
 
 - Citrix SSO
   - Android-apparaatbeheerder
-  - Android Enterprise-werkprofielen: [App-configuratiebeleid](../apps/app-configuration-policies-use-android.md) gebruiken
-  - Android Enterprise-apparaateigenaar (volledig beheerd): [App-configuratiebeleid](../apps/app-configuration-policies-use-android.md) gebruiken
+  - Android Enterprise-werkprofielen: [App-configuratiebeleid](../apps/app-configuration-vpn-ae.md) gebruiken
+  - Volledig beheerde Android Enterprise-werkprofielen in bedrijfseigendom: [App-configuratiebeleid](../apps/app-configuration-vpn-ae.md) gebruiken
   - iOS/iPadOS
   - Windows 10
 
@@ -81,7 +82,7 @@ U kunt VPN-profielen met de volgende verbindingstypen maken:
 - F5-toegang
   - Android-apparaatbeheerder
   - Android Enterprise-werkprofielen
-  - Android Enterprise-apparaten in zakelijk eigendom (volledig beheerd)
+  - Volledig beheerd Android Enterprise-werkprofiel in bedrijfseigendom
   - iOS/iPadOS
   - macOS
   - Windows 10
@@ -96,7 +97,8 @@ U kunt VPN-profielen met de volgende verbindingstypen maken:
   - Windows 10
 
 - Palo Alto Networks GlobalProtect
-  - Android Enterprise-werkprofielen: [App-configuratiebeleid](../apps/app-configuration-policies-use-android.md) gebruiken
+  - Android Enterprise-werkprofielen: [App-configuratiebeleid](../apps/app-configuration-vpn-ae.md) gebruiken
+  - Volledig beheerd Android Enterprise-werkprofiel in bedrijfseigendom: [App-configuratiebeleid](../apps/app-configuration-vpn-ae.md) gebruiken
   - iOS/iPadOS
   - Windows 10
 
@@ -106,7 +108,7 @@ U kunt VPN-profielen met de volgende verbindingstypen maken:
 - Pulse Secure
   - Android-apparaatbeheerder
   - Android Enterprise-werkprofielen
-  - Android Enterprise-apparaten in zakelijk eigendom (volledig beheerd)
+  - Volledig beheerd Android Enterprise-werkprofiel in bedrijfseigendom
   - iOS/iPadOS
   - Windows 10
   - Windows 8.1
@@ -115,6 +117,7 @@ U kunt VPN-profielen met de volgende verbindingstypen maken:
 - SonicWall Mobile Connect
   - Android-apparaatbeheerder
   - Android Enterprise-werkprofielen
+  - Volledig beheerd Android Enterprise-werkprofiel in bedrijfseigendom
   - iOS/iPadOS
   - macOS
   - Windows 10
@@ -122,7 +125,8 @@ U kunt VPN-profielen met de volgende verbindingstypen maken:
   - Windows Phone 8.1
 
 - Zscaler
-  - Android Enterprise-werkprofielen: [App-configuratiebeleid](../apps/app-configuration-policies-use-android.md) gebruiken
+  - Android Enterprise-werkprofielen: [App-configuratiebeleid](../apps/app-configuration-vpn-ae.md) gebruiken
+  - Volledig beheerd Android Enterprise-werkprofiel in bedrijfseigendom: [App-configuratiebeleid](../apps/app-configuration-vpn-ae.md) gebruiken
   - iOS/iPadOS
 
 > [!IMPORTANT]
@@ -136,8 +140,8 @@ U kunt VPN-profielen met de volgende verbindingstypen maken:
 
     - **Platform**: Kies het platform van uw apparaten. Uw opties zijn:
       - **Android-apparaatbeheerder**
-      - **Alleen Android Enterprise** >  **-apparaateigenaar**
-      - **Alleen Android Enterprise** >  **-werkprofiel**
+      - Volledig beheerd, toegewezen **Android Enterprise** >  **-werkprofiel in bedrijfseigendom**
+      - **Android Enterprise** >  **-werkprofiel**
       - **iOS/iPadOS**
       - **macOS**
       - **Windows 10 en hoger**

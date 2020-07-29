@@ -1,7 +1,7 @@
 ---
-title: Toegewezen Android Enterprise-apparaten of volledig beheerde apparaten inschrijven in Intune
+title: Toegewezen Android Enterprise-apparaten, volledig beheerde apparaten of apparaten met een werkprofiel in bedrijfseigendom inschrijven in Intune
 titleSuffix: Microsoft Intune
-description: Informatie over het inschrijven van toegewezen of volledig beheerde Android Enterprise-apparaten in Intune.
+description: Meer informatie over toegewezen Android Enterprise-apparaten, volledig beheerde apparaten of apparaten met een werkprofiel in bedrijfseigendom inschrijven in Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93cd7c7e852e3d8d8fe576cec66ce7a7020f06b7
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 858d813d3df2b020a869e1f18327d35e68bde7e0
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990209"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461722"
 ---
-# <a name="enroll-your-android-enterprise-dedicated-devices-or-fully-managed-devices"></a>Uw toegewezen of volledig beheerde Android Enterprise-apparaten inschrijven
+# <a name="enroll-your-android-enterprise-dedicated-fully-managed-or-corporate-owned-with-work-profile-devices"></a>Uw toegewezen Android Enterprise-apparaten, volledig beheerde apparaten of apparaten met een werkprofiel in bedrijfseigendom inschrijven
 
-Nadat u uw [toegewezen Android Enterprise-apparaten](android-kiosk-enroll.md) of [volledig beheerde Android Enterprise-apparaten](android-fully-managed-enroll.md) in Intune hebt ingesteld, kunt u de apparaten inschrijven. Registratie van Intune voor zowel toegewezen apparaten als volledig beheerde apparaten begint met het terugzetten van de fabrieksinstellingen. De manier waarop u uw Android Enterprise-apparaten inschrijft, is afhankelijk van het besturingssysteem.
+Nadat u uw [toegewezen Android Enterprise-apparaten](android-kiosk-enroll.md), [volledig beheerde apparaten](android-fully-managed-enroll.md) of [apparaten met een werkprofiel in bedrijfseigendom](android-corporate-owned-work-profile-enroll.md) in Intune hebt ingesteld, kunt u de apparaten inschrijven. Registratie van Intune voor zowel toegewezen apparaten als volledig beheerde apparaten begint met het terugzetten van de fabrieksinstellingen. De manier waarop u uw Android Enterprise-apparaten inschrijft, is afhankelijk van het besturingssysteem.
 
 | Inschrijvingsmethode | Minimumversie van het Android-besturingssysteem voor toegewezen en volledig beheerde apparaten |
 | ----- | ----- |

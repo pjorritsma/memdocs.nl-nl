@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 08d53bd7ffedc2679fca675b88e021301d15fb62
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5259fe84b11ce5d1ec4a3110dcbc188afb2e6d3e
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989020"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565679"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Gebruikers- en apparaatprofielen toewijzen in Microsoft Intune
 
@@ -85,11 +85,13 @@ Bijvoorbeeld:
 
 - Op een aantal specifieke Windows-apparaten wilt u altijd bepaalde instellingen voor Microsoft Edge kunnen beheren, ongeacht wie het apparaat gebruikt. U wilt bijvoorbeeld alle downloads blokkeren, alle cookies beperken tot de huidige browsersessie en de browsegeschiedenis verwijderen. Voor dit scenario plaatst u deze specifieke Windows-apparaten in een apparaatgroep. Maak vervolgens een [beheersjabloon in Intune](administrative-templates-windows.md), voeg deze apparaatinstellingen toe en wijs dit profiel vervolgens toe aan de apparaatgroep.
 
-Gebruik apparaatgroepen dus wanneer u niet weet wie zich op het apparaat heeft aangemeld of dat er überhaupt iemand is aangemeld. U wilt dat uw instellingen zich altijd op het apparaat bevinden.
+Gebruik apparaatgroepen dus wanneer u niet weet wie zich op het apparaat heeft aangemeld of dat er überhaupt iemand zich aanmeldt. U wilt dat uw instellingen zich altijd op het apparaat bevinden.
 
 ### <a name="user-groups"></a>Gebruikersgroepen
 
 Profielinstellingen die worden toegepast op gebruikersgroepen, gaan altijd mee met de gebruiker, en met de gebruiker als deze op een van zijn vele apparaten is aangemeld. Het is normaal dat gebruikers veel apparaten hebben, zoals een Surface Pro voor op het werk en een persoonlijk iOS-/iPadOS-apparaat. En het is normaal dat een persoon vanaf deze apparaten toegang heeft tot e-mail en andere bronnen van de organisatie.
+
+Volg deze algemene regel: Als een functie deel uitmaakt van een gebruiker, zoals e-mail- of gebruikerscertificaten, wijst u deze toe aan gebruikersgroepen.
 
 Bijvoorbeeld:
 

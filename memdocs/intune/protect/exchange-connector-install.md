@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/24/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,16 +18,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 390a80f6333229a99daec9627e3810c27ca6b580
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e646ce40acaa156910f516c475cd6b0885989941
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990843"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462185"
 ---
 # <a name="set-up-the-on-premises-intune-exchange-connector"></a>De on-premises Intune Exchange-connector instellen
 
+> [!IMPORTANT]
+> De informatie in dit artikel is van toepassing op klanten die worden ondersteund voor het gebruik van een Exchange-connector.
+>
+> Vanaf juli 2020 wordt de ondersteuning voor de Exchange connector afgeschaft en vervangen door Exchange [HMA](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (Hybrid Modern Authentication, hybride moderne verificatie).  Als u een Exchange-connector hebt ingesteld in uw omgeving, blijft de Intune-tenant ondersteund voor het gebruik ervan en houdt u toegang tot de gebruikersinterface die de configuratie ervan ondersteunt. U kunt de connector blijven gebruiken of HMA configureren en vervolgens de connector verwijderen.
+>
+>U hebt Intune niet nodig om via HMA de Exchange-connector in te stellen en te gebruiken. Met deze wijziging wordt de gebruikersinterface voor het configureren en beheren van de Exchange-connector voor Intune verwijderd uit het Microsoft Endpoint Manager-beheercentrum, tenzij u al een Exchange-connector gebruikt met uw abonnement.
+
 Voor het beveiligen van de toegang tot Exchange is Intune afhankelijk van het on-premises onderdeel Microsoft Intune Exchange Connector. Deze connector wordt op sommige plaatsen in de Intune-console ook wel de *On-premises Exchange ActiveSync-connector* genoemd.
+
+> [!IMPORTANT]
+> In Intune wordt de ondersteuning voor de functie Exchange On-Premises Connector verwijderd uit Intune-serviceversies vanaf 2007 (juli). Bestaande klanten met een actieve connector kunnen op dit moment verder gaan met de huidige functionaliteit. Nieuwe klanten en bestaande klanten die geen actieve connector hebben, kunnen geen nieuwe connectors meer maken of Exchange ActiveSync-apparaten (EAS) beheren vanuit Intune. Voor deze tenants raadt Microsoft aan om met Exchange [HMA (Hybrid Modern Authentication)](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) de toegang tot Exchange On-Premises te beveiligen. Met HMA kunt u zowel beleidsregels voor Intune-app-beveiliging (ook bekend als MAM) als voorwaardelijke toegang via Outlook Mobile voor Exchange On-Premises inschakelen.
 
 Met behulp van de informatie in dit artikel kunt u Microsoft Intune Exchange Connector installeren en controleren. U kunt de connector met uw [beleid voor voorwaardelijke toegang](conditional-access-exchange-create.md) gebruiken om toegang tot uw on-premises Exchange-postvakken toe te staan of te blokkeren.
 
@@ -45,6 +55,35 @@ Volg deze algemene stappen voor het instellen van een verbinding waarmee Intune 
 2. Installeer en configureer de Exchange-connector op een computer in de on-premises Exchange-organisatie.
 3. Valideer de Exchange-verbinding.
 4. Herhaal deze stappen voor elke aanvullende Exchange-organisatie die u wilt koppelen aan Intune.
+
+## <a name="how-conditional-access-for-exchange-on-premises-works"></a>Hoe voorwaardelijke toegang voor Exchange On-Premises werkt
+
+Voorwaardelijke toegang voor Exchange On-Premises werkt anders dan het beleid voor voorwaardelijke toegang op basis van Azure. U installeert de Intune Exchange On-Premises-connector om rechtstreeks te communiceren met Exchange Server. Intune Exchange Connector haalt alle EAS-records (Exchange Active Sync) op de Exchange-server op, zodat de EAS-records via Intune kunnen worden gekoppeld aan records Intune-apparaten. Deze records zijn apparaten die zijn geregistreerd bij Intune en door Intune worden herkend. Met dit proces wordt de toegang tot e-mail toegestaan of geblokkeerd.
+
+Als de EAS-record nieuw is en deze niet door Intune wordt herkend, wordt er een cmdlet (uitgesproken als commandlet) uitgegeven waarmee de Exchange-server opdracht wordt gegeven de toegang tot e-mail te blokkeren. Hier volgt meer informatie over de werking van dit proces:
+
+> [!div class="mx-imgBorder"]
+> ![Exchange on-Premises met CA-stroomdiagram](./media/exchange-connector-install/ca-intune-common-ways-1.png)
+
+1. De gebruiker probeert toegang te krijgen tot de bedrijfs-e-mail, die wordt gehost op Exchange On-Premises 2010 SP1 of later.
+
+2. Als het apparaat niet wordt beheerd door Intune, wordt de toegang tot e-mail geblokkeerd. Intune verzendt een blokmelding naar de EAS-client.
+
+3. EAS ontvangt de blokmelding, waarna het apparaat in quarantaine wordt geplaatst. Vervolgens wordt de quarantaine-e-mail verzonden. Deze bevat herstelstappen met koppelingen, zodat de gebruikers hun apparaten kunnen registreren.
+
+4. Het Workplace Join-proces wordt uitgevoerd. Dit is de eerste stap om een apparaat met Intune te beheren.
+
+5. Het apparaat wordt geregistreerd bij Intune.
+
+6. Intune wijst de EAS-record toe aan een apparaatrecord en slaat de nalevingsstatus voor het apparaat op.
+
+7. De EAS-client-id wordt geregistreerd middels het apparaatregistratieproces van Azure AD, zodat er een relatie tussen de Intune-apparaatrecord en de EAS-client-id wordt gemaakt.
+
+8. De apparaatregistratie van Azure AD slaat de informatie over de apparaatstatus op.
+
+9. Als de gebruiker aan de beleidsregels voor voorwaardelijke toegang voldoet, geeft Intune een cmdlet via Intune Exchange Connector uit, zodat het postvak kan worden gesynchroniseerd.
+
+10. De Exchange-server verzendt de melding naar de EAS-client, zodat de gebruiker toegang heeft tot e-mail.
 
 ## <a name="intune-exchange-connector-requirements"></a>Vereisten voor Intune Exchange Connector
 
@@ -174,7 +213,7 @@ Detectie van aanvullende CAS-exemplaren is standaard ingeschakeld. U kunt failov
 
 2. Open **OnPremisesExchangeConnectorServiceConfiguration.xml** met behulp van een teksteditor.
 
-3. Wijzig **\<IsCasFailoverEnabled>*true*\</IsCasFailoverEnabled>** in **\<IsCasFailoverEnabled>*false*\</IsCasFailoverEnabled>** .
+3. Wijzig **\<IsCasFailoverEnabled>*waar*\</IsCasFailoverEnabled>** in **\<IsCasFailoverEnabled>*onwaar*\</IsCasFailoverEnabled>** .
 
 ## <a name="performance-tune-the-exchange-connector-optional"></a>Prestatie-afstemming voor de Exchange-connector (optioneel)
 

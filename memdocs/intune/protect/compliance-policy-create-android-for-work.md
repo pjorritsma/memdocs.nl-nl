@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d419eb341d3d15a8307396d1bcf13235201606f4
-ms.sourcegitcommit: 56bb5419c41c2e150ffed0564350123135ea4592
+ms.openlocfilehash: 9897f824bb1bd13c1d12ff0c705b42cea275b9d4
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82729246"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462079"
 ---
 # <a name="android-enterprise-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Android Enterprise-instellingen om te markeren of apparaten wel of niet conform zijn met behulp van Intune
 
@@ -42,7 +42,7 @@ Gebruik deze nalevingsinstellingen als Intune-beheerder om de resources van uw o
 [Een nalevingsbeleid maken](create-compliance-policy.md#create-the-policy). Selecteer voor **Platform** de optie **Android Enterprise**.
 
 
-## <a name="device-owner"></a>Eigenaar van het apparaat
+## <a name="fully-managed-dedicated-and-corporate-owned-work-profile"></a>Volledig beheerd en toegewezen werkprofiel in bedrijfseigendom
 
 ### <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
 
@@ -67,7 +67,7 @@ Gebruik deze nalevingsinstellingen als Intune-beheerder om de resources van uw o
   - **Hoog** - Deze optie is het minst veilig, omdat alle bedreigingsniveaus zijn toegestaan. Deze optie kan handig zijn als u deze alleen gebruikt voor rapportagedoeleinden.
   
 > [!NOTE]
-> Alle Mobile Threat Defense-providers (MTD) worden ondersteund op implementaties van Android Enterprise-apparaateigenaren door middel van app-configuratie. Neem contact op met uw MTD-provider voor de exacte configuratie die nodig is voor de ondersteuning van platformen voor Android Enterprise-apparaten op Intune.
+> Alle MTD-providers (Mobile Threat Defense) worden ondersteund op implementaties van volledig beheerde en toegewezen Android Enterprise-werkprofielen in bedrijfseigendom door middel van app-configuratie. Neem contact op met uw MTD-provider voor de exacte configuratie die nodig is voor de ondersteuning van platformen voor volledig beheerde en toegewezen Android Enterprise-werkprofielen in bedrijfseigendom op Intune.
 
 #### <a name="google-play-protect"></a>Google Play Protect
 

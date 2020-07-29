@@ -6,7 +6,7 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 01/02/2018
+ms.date: 07/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,12 +17,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4998dab72196d904e2530e85481b0498c8e23c21
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 5eb3f743e90dc4f2769b455a981676676ab43704
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022208"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462215"
 ---
 # <a name="drive-end-user-adoption-with-conditional-access-in-microsoft-intune"></a>Eindgebruikers accepteren door middel van voorwaardelijke toegang in Microsoft Intune
 
@@ -67,7 +67,7 @@ Kies een van de volgende opties:
 
 - [Voorwaardelijke toegang in Azure Active Directory configureren](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
 
-- [De on-premises Exchange-connector installeren met Intune](../protect/exchange-connector-install.md)
+- [Hybride moderne authenticatie (HMA) configureren](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview)
 
 - [Beleid voor voorwaardelijke toegang op basis van een app instellen voor Exchange Online](../protect/app-based-conditional-access-intune-create.md)
 

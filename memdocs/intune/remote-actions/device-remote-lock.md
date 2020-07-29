@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ac6a5d848a0d02b72a4f7275a6b6df47b2cd834
-ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
+ms.openlocfilehash: 220a2ac92d46c1279d4498c8673e2ceef28c470f
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85107337"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462045"
 ---
 # <a name="remotely-lock-devices-with-intune"></a>Apparaten extern vergrendelen met Intune
 
@@ -36,6 +36,8 @@ Met de apparaatactie **Extern vergrendelen** wordt het apparaat vergrendeld. De 
 - Android
 - Kioskapparaten voor Android Enterprise
 - Apparaten met Android Enterprise-werkprofiel
+- Volledig beheerde Android Enterprise-apparaten
+- Android Enterprise-apparaten in bedrijfseigendom met een werkprofiel
 - iOS
 - macOS
 - Windows 10 Mobile
@@ -45,7 +47,7 @@ Met de apparaatactie **Extern vergrendelen** wordt het apparaat vergrendeld. De 
 - Windows 10 Desktop
 
 > [!NOTE]
-> Voor macOS-apparaten moet u een zescijferige pincode voor herstel instellen. Als het apparaat is vergrendeld, wordt in **Apparaatoverzicht** de pincode weergegeven totdat een andere apparaatactie wordt verzonden. Zorg ervoor dat u de pincode noteert, omdat deze slechts 30 dagen na het verzenden van de opdracht tot externe vergrendeling beschikbaar blijft. Na 30 dagen heeft Intune de pincode niet meer. Start deze opdracht ook niet opnieuw voor hetzelfde apparaat totdat de oorspronkelijke pincode met succes is gebruikt om het apparaat te ontgrendelen. U moet deze opdracht verzenden, de pincode noteren en totdat u deze gebruikt om het macOS-apparaat met succes te openen, deze opdracht niet opnieuw naar hetzelfde apparaat verzenden.  
+> Voor macOS-apparaten moet u een zescijferige pincode voor herstel instellen. Als het apparaat is vergrendeld, wordt in **Apparaatoverzicht** de pincode weergegeven totdat een andere apparaatactie wordt verzonden. Zorg ervoor dat u de pincode noteert, omdat deze slechts 30 dagen na het verzenden van de opdracht tot externe vergrendeling beschikbaar blijft. Na 30 dagen heeft Intune de pincode niet meer. U ziet ook een mislukte status in de rapportage als u deze opdracht opnieuw voor hetzelfde apparaat start terwijl de oorspronkelijke pincode niet is gebruikt om het apparaat te ontgrendelen. U moet deze opdracht slechts eenmaal verzenden, de pincode noteren en totdat u deze gebruikt om het macOS-apparaat met succes te openen, deze opdracht niet proberen opnieuw naar hetzelfde apparaat te verzenden.
 
 
 ## <a name="remote-lock-a-device"></a>Een apparaat vergrendelen op afstand

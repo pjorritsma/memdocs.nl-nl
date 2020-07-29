@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a1c47a157e4ee5bd4337d840515a340dcf1fd9c
-ms.sourcegitcommit: d647eefa23c8849f49584442df568284d51d7525
+ms.openlocfilehash: 8073cb1dbe872d9c7fd1ad05235707be4b969519
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86195715"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461416"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Wat is er nieuw in Microsoft Intune - vorige maanden
 
@@ -801,7 +801,7 @@ We hebben de volgende ondersteuning toegevoegd voor volledig beheerde Android-ap
     - SCEP-certificaten koppelen aan DO-e-mailprofielen voor verificatie (via AppConfig)
 - Systeem-apps worden ondersteund op Android Enterprise-apparaten. Voeg in Intune een Android Enterprise-systeem-app toe door **Client-apps** > **Apps** > **Toevoegen** te selecteren. Selecteer in de lijst **App-type** het type **Android Enterprise-systeem-app**. Zie [Android Enterprise-systeem-apps toevoegen aan Microsoft Intune](../apps/apps-ae-system.md) voor meer informatie. <!-- 4062195 -->
 - In **Apparaatcompatibiliteit** > **Android Enterprise** > **Apparaateigenaar**, kunt u nalevingsbeleid maken waarmee het niveau van SafetyNet-attestation wordt ingesteld.   <!-- 4631425 -->
-- Op volledig beheerde Android Enterprise-apparaten worden de Mobile Threat Defense-providers ondersteund. In **Apparaatcompatibiliteit** > **Android Enterprise** > **Apparaateigenaar**, kunt u een acceptabel bedreigingsniveau kiezen. <!-- 4631440 --> In [Android Enterprise-instellingen om te markeren of apparaten wel of niet conform zijn met behulp van Intune](../protect/compliance-policy-create-android-for-work.md#device-owner) worden de huidige instellingen vermeld.
+- Op volledig beheerde Android Enterprise-apparaten worden de Mobile Threat Defense-providers ondersteund. In **Apparaatcompatibiliteit** > **Android Enterprise** > **Apparaateigenaar**, kunt u een acceptabel bedreigingsniveau kiezen. <!-- 4631440 --> In [Android Enterprise-instellingen om te markeren of apparaten wel of niet conform zijn met behulp van Intune](../protect/compliance-policy-create-android-for-work.md) worden de huidige instellingen vermeld.
 - De Microsoft Launcher-app kan nu op volledig beheerde Android Enterprise-apparaten worden geconfigureerd via app-configuratiebeleid, voor een gestandaardiseerde eindgebruikerservaring op volledig beheerde apparaten. De Microsoft Launcher-app kan worden gebruikt om uw Android-apparaat te personaliseren. Door de app te gebruiken samen met een Microsoft-account of werk/school-account hebt u toegang tot uw agenda, documenten en recente activiteiten in uw gepersonaliseerde feed. <!-- 5334044 -->
 
 We zijn blij te kunnen aankondigen dat met deze update Intune-ondersteuning voor volledig beheerde Android Enterprise-apparaten nu algemeen beschikbaar is.
@@ -833,7 +833,7 @@ Gebruik Intune Endpoint Protection om [Clientgestuurde rotatie van herstelwachtw
 Met deze instelling wordt een clientgestuurde vernieuwing van het herstelwachtwoord geïnitieerd na het herstellen van het OS-station (hetzij met behulp van bootmgr of WinRE) en het ontgrendelen van het herstelwachtwoord op een vaste-gegevensstations. Met deze instelling wordt het specifieke gebruikte herstelwachtwoord vernieuwd. Andere niet-gebruikte wachtwoorden in het volume blijven ongewijzigd. Raadpleeg de BitLocker CSP-documentatie voor [ConfigureRecoveryPasswordRotation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) voor meer informatie.
 
 #### <a name="tamper-protection-for-windows-defender-antivirus---4705448----------"></a>Manipulatiebeveiliging voor Windows Defender Antivirus<!-- 4705448        -->
-Gebruik Intune om *Manipulatiebeveiliging* te beheren voor Windows Defender Antivirus. U vindt de [instelling voor Manipulatiebeveiliging](../protect/endpoint-protection-windows-10.md#microsoft-defender-security-center) in de groep Microsoft Defender-beveiligingscentrum wanneer u apparaatconfiguratieprofielen gebruikt voor Windows 10 Endpoint Protection. U kunt Manipulatiebeveiliging instellen op *Ingeschakeld* om beperkingen voor manipulatiebeveiliging in te schakelen, op *Uitgeschakeld* om deze uit te schakelen, of op *Niet geconfigureerd* om de huidige configuratie van apparaten te behouden.  
+Gebruik Intune om *Manipulatiebeveiliging* te beheren voor Windows Defender Antivirus. U vindt de [instelling voor Manipulatiebeveiliging](../protect/endpoint-protection-windows-10.md#microsoft-defender-security-center) in de groep Microsoft Defender-beveiligingscentrum wanneer u apparaatconfiguratieprofielen gebruikt voor Windows 10 Endpoint Protection. U kunt Manipulatiebeveiliging instellen op **Ingeschakeld** om beperkingen voor manipulatiebeveiliging in te schakelen, op **Uitgeschakeld** om deze uit te schakelen, of op **Niet geconfigureerd** om de huidige configuratie van een apparaat te behouden.  
 
 Zie [Wijzigingen in beveiligingsinstellingen voorkomen met Manipulatiebeveiliging](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/prevent-changes-to-security-settings-with-tamper-protection) voor meer informatie over Manipulatiebeveiliging in de Windows-documentatie.
 
@@ -1603,7 +1603,7 @@ Deze functie is vertraagd en wordt in een toekomstige release geïntroduceerd.
 Toen V1.0 voor het eerst werd uitgebracht in 1808, verschilde deze op belangrijke punten van de bètaversie-API. In 1903 zullen deze wijzigingen in de bètaversie-API worden doorgevoerd. Als u belangrijke rapporten hebt die gebruikmaken van de bètaversie-API, wordt u ten zeerste aangeraden deze rapporten over te zetten naar V1.0 om wijzigingen te voorkomen die fouten veroorzaken. Zie [Wijzigingenlogboek voor Intune Data Warehouse-API](../developer/reports-changelog.md#1903-part-2) voor meer informatie.
 
 #### <a name="monitor-security-baseline-status-public-preview----3082047---"></a>Status beveiligingsbasislijnen controleren (openbare preview) <!-- 3082047 --> 
-We hebben een [weergave per categorie](../protect/security-baselines-monitor.md#per-category-view) toegevoegd aan de controle van beveiligingsbasislijnen. (Beveiligingsbasislijnen blijven in preview). De weergave per categorie geeft elke categorie weer van de basislijn, samen met het percentage apparaten dat in elke statusgroep voor die categorie kan worden onderverdeeld. U kunt nu zien hoeveel apparaten niet overeenkomen met de afzonderlijke categorieën, onjuist zijn geconfigureerd of niet van toepassing zijn.
+We hebben een [weergave per categorie](../protect/security-baselines-monitor.md) toegevoegd aan de controle van beveiligingsbasislijnen. (Beveiligingsbasislijnen blijven in preview). De weergave per categorie geeft elke categorie weer van de basislijn, samen met het percentage apparaten dat in elke statusgroep voor die categorie kan worden onderverdeeld. U kunt nu zien hoeveel apparaten niet overeenkomen met de afzonderlijke categorieën, onjuist zijn geconfigureerd of niet van toepassing zijn.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="role-based-access-control"></a>Op rollen gebaseerd toegangsbeheer
@@ -1623,7 +1623,7 @@ U kunt nu Microsoft Visio Pro voor Office 365 en Microsoft Project Online-deskto
 **Microsoft Visio Pro voor Office 365** heet nu **Microsoft Visio Online-abonnement 2**.  Zie [Visio Online-abonnement 2](https://products.office.com/visio/visio-online-plan-2) voor meer informatie over Microsoft Visio. Zie [Office 365-apps toewijzen aan Windows 10-apparaten met Microsoft Intune](../apps/apps-add-office365.md) voor meer informatie over Office 365-apps voor Windows 10-apparaten.
 
 #### <a name="intune-app-protection-policy-app-character-limit-setting---3291302----"></a>Instelling van Intune app-beveiligingsbeleid (APP) voor maximum aantal tekens<!-- 3291302  -->
-Intune-beheerders kunnen een uitzondering opgeven voor de Intune-app-beveiligingsbeleidsinstelling **Knippen, kopiëren en plakken met andere apps beperken**.  Als beheerder kunt u het aantal tekens opgeven dat mag worden geknipt of gekopieerd uit een beheerde app. Met deze instelling kunt u het opgegeven aantal tekens voor elke app delen, ongeacht de instelling Knippen, kopiëren en plakken met andere apps beperken. Houd er rekening mee dat de versie van de Intune-bedrijfsportal-app voor Android versie 5.0.4364.0 of hoger moet zijn. Zie [iOS-gegevensbeveiliging](../apps/app-protection-policy-settings-ios.md#data-protection), [Android-gegevensbeveiliging](../apps/app-protection-policy-settings-android.md#data-protection) en [Logboeken voor client-app-beveiliging controleren](../apps/app-protection-policy-settings-log.md#app-protection-policy-settings) voor meer informatie.
+Intune-beheerders kunnen een uitzondering opgeven voor de Intune-app-beveiligingsbeleidsinstelling **Knippen, kopiëren en plakken met andere apps beperken**.  Als beheerder kunt u het aantal tekens opgeven dat mag worden geknipt of gekopieerd uit een beheerde app. Met deze instelling kunt u het opgegeven aantal tekens voor elke app delen, ongeacht de instelling Knippen, kopiëren en plakken met andere apps beperken. Houd er rekening mee dat de versie van de Intune-bedrijfsportal-app voor Android versie 5.0.4364.0 of hoger moet zijn. Zie [iOS-gegevensbeveiliging](../apps/app-protection-policy-settings-ios.md#data-protection), [Android-gegevensbeveiliging](../apps/app-protection-policy-settings-android.md#data-protection) en [Logboeken voor client-app-beveiliging controleren](../apps/app-protection-policy-settings-log.md) voor meer informatie.
 
 #### <a name="office-deployment-tool-odt-xml-for-office-proplus-deployment---3192477-----"></a>ODT-XML (ODT: Office Deployment Tool) voor de implementatie van Office ProPlus<!-- 3192477   -->
 U kunt voorzien in een ODT-XML bij het maken van een Office Professional Plus-exemplaar in de Intune-beheerconsole. Dit biedt meer aanpassingsmogelijkheden, indien de bestaande Intune gebruikersinterfaceopties niet voldoen aan uw behoeften. Zie [Office 365-apps toewijzen aan Windows 10-apparaten met Microsoft Intune](../apps/apps-add-office365.md) en [Configuratieopties voor de Office Deployment Tool](https://docs.microsoft.com/DeployOffice/configuration-options-for-the-office-2016-deployment-tool) voor meer informatie.
@@ -3897,7 +3897,7 @@ U kunt bedrijfscloudresources, IP-adresbereiken en interne proxyservers definië
 #### <a name="two-additional-settings-for-windows-defender-antivirus---1338409---"></a>Twee aanvullende instellingen voor Windows Defender Antivirus<!-- 1338409 -->  
 **Blokkeringsniveau voor bestanden**
 
-| | |
+| Instelling | Details |
 |---|---|
 | Niet geconfigureerd | **Niet geconfigureerd** gebruikt het standaard Windows Defender Antivirus-blokkeringsniveau en biedt sterke detectie zonder het risico te vergroten dat legitieme bestanden worden gedetecteerd. |
 | Hoog | **Hoog** past een sterk detectieniveau toe.
@@ -3909,7 +3909,7 @@ Het is raadzaam het Blokkeringsniveau voor bestanden in te stellen op de standaa
 
 **Time-outverlenging voor het scannen van bestanden door de cloud**  
 
-| | |
+| Instelling | Detail |
 |--|--|
 | Aantal seconden (0-50) | Geef op hoelang Windows Defender Antivirus een bestand maximaal moet blokkeren terwijl u op een resultaat van de cloud wacht. De standaardinstelling is 10 seconden: de aanvullende tijd die u hier opgeeft (tot 50 seconden) wordt toegevoegd aan die 10 seconden. In de meeste gevallen duurt de scan veel korter dan de maximuminstelling. Als u de tijd verlengt, kan de cloud verdachte bestanden grondig onderzoeken. Het is raadzaam deze instelling in te schakelen en ten minste 20 aanvullende seconden op te geven. |
 
@@ -4027,7 +4027,7 @@ Intune kan de afzonderlijk verkrijgbare [TeamViewer](https://www.teamviewer.com)
 #### <a name="scan-devices-with-windows-defender---1280988--1280990-----"></a>Apparaten scannen met Windows Defender<!-- 1280988  1280990   -->
 U kunt nu een **Snelle scan** en **Volledige scan** uitvoeren en **Handtekeningen bijwerken** met Windows Defender Antivirus op beheerde Windows 10-apparaten. Kies op de overzichtsblade van het apparaat de actie die u op het apparaat wilt uitvoeren. U wordt gevraagd om de actie te bevestigen voordat de opdracht naar het apparaat wordt verzonden. 
 
-**Snelle scan**: Een snelle scan scant locaties waar malware zich registreert om te worden gestart, zoals registercodes en bekende opstartmappen in Windows. Een snelle scan duurt gemiddeld vijf minuten. In combinatie met de instelling **Realtimebeveiliging altijd ingeschakeld**, die bestanden scant wanneer ze worden geopend en gesloten en wanneer een gebruiker naar een map gaat, helpt een snelle scan om bescherming te bieden tegen malware die zich mogelijk in het systeem of de kernel bevindt. Gebruikers zien de scanresultaten op hun apparaat wanneer de scan is voltooid. 
+**Snelle scan**: Een snelle scan scant locaties waar malware zich registreert om te worden gestart, zoals registercodes en bekende opstartmappen in Windows. Een snelle scan duurt gemiddeld vijf minuten. In combinatie met de instelling **Realtimebeveiliging altijd ingeschakeld**, die bestanden scant wanneer ze worden geopend en gesloten en wanneer een gebruiker naar een map gaat, helpt een snelle scan om bescherming te bieden tegen malware die zich mogelijk in het systeem of de kernel bevindt. Gebruikers zien de scanresultaten op hun apparaten wanneer hij is voltooid. 
 
 **Volledige scan**: Een volledige scan kan handig zijn om vast te stellen of er inactieve componenten zijn waarvoor een diepgaandere opschoning is vereist op apparaten die met een malwarebedreiging te maken hebben gekregen. De scan is handig voor het uitvoeren van scans op aanvraag. Het uitvoeren van volledige scans kan een uur duren. Gebruikers zien de scanresultaten op hun apparaat wanneer de scan is voltooid. 
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 07/20/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: bfefdee7e949faf9e484ea20e7fc203ee72a9784
-ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
+ms.openlocfilehash: b0d0bbeb174d8f90d47ea6242ce6bd4be2dcfac6
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84879660"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491164"
 ---
 # <a name="antivirus-policy-for-endpoint-security-in-intune"></a>Antivirusbeleid voor eindpuntbeveiliging in Intune
 
@@ -40,8 +40,7 @@ Het antivirusbeleid bevat dezelfde instellingen die zijn gevonden in *Endpoint P
   - Microsoft Defender ATP moet op een apparaat zijn geïnstalleerd om de antivirus-instellingen op dat apparaat te beheren met Intune. Zie. [Microsoft Defender ATP voor macOS](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (in de documentatie van Microsoft Defender ATP)
 
 - **Windows 10 en hoger**
-  - Microsoft Defender ATP moet op een apparaat zijn geïnstalleerd om de antivirus-instellingen op dat apparaat te beheren met Intune. Zie [Microsoft Defender ATP voor Windows](../protect/advanced-threat-protection.md) in de Intune-documentatie.
-  - De Windows-beveiligings-app is geïnstalleerd op alle apparaten waarop Windows 10 wordt uitgevoerd, en er zijn geen aanvullende vereiste onderdelen vereist.
+  - Er zijn geen aanvullende voorwaarden vereist. 
 
 ## <a name="antivirus-profiles"></a>Antivirus-profielen
 

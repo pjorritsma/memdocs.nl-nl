@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/20/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 205c892c885682d10877aae4c92429cf59adb0ac
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5bb01770909192b17f0e72b852e4094ff7ad3a04
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989156"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565645"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>E-mailinstellingen toevoegen aan apparaten met Intune
 
@@ -75,15 +75,35 @@ In dit artikel wordt uitgelegd hoe u een e-mailprofiel maakt in Microsoft Intune
 
     Selecteer **Volgende**.
 
-10. Selecteer in **Toewijzingen** de gebruikers of groepen die uw profiel zullen ontvangen. Zie [Gebruikers- en apparaatprofielen toewijzen](device-profile-assign.md) voor meer informatie over het toewijzen van profielen.
+10. Selecteer in **Toewijzingen** de gebruikers of apparaatgroepen die uw profiel zullen ontvangen. Zie [Wat u moet weten](#what-you-need-to-know) (in dit artikel) voor meer informatie over het toewijzen van profielen. [Gebruikers- en apparaatprofielen toewijzen](device-profile-assign.md) biedt ook enkele richtlijnen.
 
     Selecteer **Volgende**.
 
 11. Controleer uw instellingen in **Beoordelen en maken**. Wanneer u **Maken**selecteert, worden uw wijzigingen opgeslagen en wordt het profiel toegewezen. Het beleid wordt ook weergegeven in de lijst met profielen.
 
+## <a name="what-you-need-to-know"></a>Wat u dient te weten
+
+- E-mailprofielen worden geïmplementeerd voor de gebruiker die het apparaat heeft geregistreerd. Om het e-mailprofiel te configureren, gebruikt Intune de Azure Active Directory-eigenschappen in het e-mailprofiel van de gebruiker tijdens de inschrijving.
+
+- Microsoft Outlook voor iOS/iPadOS- en Android-apparaten bieden geen ondersteuning voor e-mailprofielen. Implementeer in plaats daarvan een app-configuratiebeleid. Zie [Configuratie-instellingen voor Outlook](../apps/app-configuration-policies-outlook.md) voor meer informatie.
+
+  Op Android Enterprise-apparaten implementeert u Gmail of Nine for Work met behulp van de beheerde Google Play Store. In [Beheerde Google Play-apps toevoegen](../apps/apps-add-android-for-work.md) worden de stappen weergegeven.
+
+- E-mail is gebaseerd op identiteits- en gebruikersinstellingen. E-mailprofielen worden meestal toegewezen aan gebruikersgroepen, niet aan apparaatgroepen. Enkele aandachtspunten:
+
+  - Als het e-mailprofiel gebruikerscertificaten bevat, moet u het e-mailprofiel aan gebruikersgroepen toewijzen. Het is mogelijk dat u meerdere profielen voor gebruikerscertificaten hebt die zijn toegewezen. Deze meerdere profielen zorgen voor een keten van profielimplementaties. Implementeer deze profielketen in gebruikersgroepen.
+
+    Als één profiel in deze keten wordt geïmplementeerd in een apparaatgroep, worden gebruikers mogelijk voortdurend gevraagd om hun wachtwoord in te voeren.
+
+  - Apparaatgroepen worden meestal gebruikt wanneer er geen primaire gebruiker is of als u niet weet wie de gebruiker wordt. E-mailprofielen die zijn gericht op apparaatgroepen (niet gebruikersgroepen), worden mogelijk niet bezorgd op het apparaat.
+
+    Als uw e-mailprofiel bijvoorbeeld is gericht op een groep met allemaal iOS/iPadOS-apparaten, moet u ervoor zorgen dat al deze apparaten een gebruiker hebben. Als een apparaat geen gebruiker heeft, kan het e-mail profiel niet worden geïmplementeerd. Vervolgens beperkt u het profiel en kunnen bepaalde apparaten ontbreken. Wanneer het apparaat een primaire gebruiker heeft, zou de implementatie in apparaatgroepen moeten werken.
+
+    Zie [Bekende problemen met e-mailprofielen](troubleshoot-email-profiles-in-microsoft-intune.md) voor meer informatie over mogelijke problemen met het gebruik van apparaatgroepen.
+
 ## <a name="remove-an-email-profile"></a>Een e-mailprofiel verwijderen
 
-E-mailprofielen worden toegewezen aan apparaatgroepen, niet aan gebruikersgroepen. Er zijn verschillende manieren om een e-mailprofiel van een apparaat te verwijderen, zelfs als het apparaat maar één e-mailprofiel bevat:
+Er zijn verschillende manieren om een e-mailprofiel van een apparaat te verwijderen, zelfs als het apparaat maar één e-mailprofiel bevat:
 
 - **Optie 1**: Open het e-mailprofiel (**Apparaten** > **Configuratieprofielen** > selecteer uw profiel) en kies **Toewijzingen**. Op het tabblad **Opnemen** worden de groepen weergegeven waaraan het profiel is toegewezen. Klik met de rechtermuisknop op de groep > **Verwijderen**. Klik vervolgens op **Opslaan** om uw wijzigingen op te slaan.
 
@@ -95,7 +115,7 @@ U kunt e-mailprofielen beveiligen met behulp van de volgende opties:
 
 - **Certificaten**: wanneer u het e-mailprofiel maakt, kiest u een certificaatprofiel dat u eerder hebt gemaakt in Intune. Dit certificaat wordt het identiteitscertificaat genoemd. Het wordt geverifieerd aan de hand van een vertrouwd-certificaatprofiel of een basiscertificaat om te bepalen of een apparaat van de gebruiker verbinding mag maken. Het vertrouwde certificaat wordt toegewezen aan de computer die de e-mailverbinding verifieert. Dit is meestal de systeemeigen e-mailserver.
 
-  Als u gebruikmaakt van verificatie op basis van certificaten voor uw e-mailprofiel, implementeert u het e-mailprofiel, het certificaatprofiel en het vertrouwde basisprofiel in dezelfde groepen om ervoor te zorgen dat elk apparaat de geldigheid van uw certificeringsinstantie kan herkennen.
+  Als u gebruikmaakt van verificatie op basis van certificaten voor uw e-mailprofiel, implementeert u het e-mailprofiel, het certificaatprofiel en het vertrouwde basisprofiel in dezelfde groepen. Door deze implementatie kan elk apparaat de geldigheid van uw certificeringsinstantie herkennen.
 
   Zie [How to configure certificates with Intune](../protect/certificates-configure.md) (Certificaten configureren met Intune) voor meer informatie over het gebruiken en maken van certificaatprofielen in Intune.
 
@@ -111,7 +131,7 @@ Als de gebruiker al een e-mailaccount heeft geconfigureerd, is wordt het e-mailp
 
 - **Android Samsung Knox - Standard**: Een bestaand, dubbel e-mailprofiel wordt gedetecteerd op basis van het e-mailadres. Het bestaande e-mailprofiel wordt overschreven door het Intune-profiel. Android gebruikt geen hostnaam om het profiel te identificeren. Maak niet meerdere e-mailprofielen met hetzelfde e-mailadres op verschillende hosts. De profielen overschrijven elkaar.
 
-- **Android-werkprofielen**: Intune bevat twee Android-profielen voor zakelijke e-mail, een voor de app van Gmail en een voor de app van Nine Work. Deze apps zijn beschikbaar in de Google Play Store en worden geïnstalleerd in het werkprofiel van het apparaat. Door deze apps worden geen dubbele profielen gemaakt. Beide apps ondersteunen verbindingen met Exchange. Voor het gebruik van connectiviteit voor e-mail, implementeert u een van deze e-mail-apps op apparaten van uw gebruikers. Maak en implementeer vervolgens het juiste e-mailprofiel. U kunt Gmail- en Nine-e-mailconfiguratieprofielen gebruiken die werken voor zowel het inschrijvingstype Werkprofiel als het inschrijvingstype Apparaateigenaar, waaronder het gebruik van certificaatprofielen voor beide e-mailconfiguratietypen. Gmail- of Nine-beleid dat u onder Apparaatconfiguratie voor werkprofielen hebt gemaakt, blijft van toepassing op het apparaat en het is niet nodig om ze te verplaatsen naar het app-configuratiebeleid. E-mail-apps zoals Nine Work zijn mogelijk niet gratis. Raadpleeg de licentiegegevens van de app of neem contact op met het bedrijf dat de app heeft gemaakt voor meer informatie. 
+- **Android-werkprofielen**: Intune bevat twee Android-profielen voor zakelijke e-mail, een voor de app van Gmail en een voor de app van Nine Work. Deze apps zijn beschikbaar in de Google Play Store en worden geïnstalleerd in het werkprofiel van het apparaat. Door deze apps worden geen dubbele profielen gemaakt. Beide apps ondersteunen verbindingen met Exchange. Voor het gebruik van connectiviteit voor e-mail implementeert u een van deze e-mail-apps op uw gebruikersapparaten. Maak en implementeer vervolgens het e-mailprofiel. U kunt Gmail- en Nine-e-mailconfiguratieprofielen gebruiken die werken voor de inschrijvingstypen Werkprofiel en Volledig beheerd, toegewezen werkprofiel in bedrijfseigendom, waaronder het gebruik van certificaatprofielen voor beide e-mailconfiguratietypen. Gmail- of Nine-beleidsregels die u in Apparaatconfiguratie voor werkprofielen maakt, blijven van toepassing op het apparaat. Het is niet nodig om deze naar het app-configuratiebeleid te verplaatsen. E-mail-apps zoals Nine Work zijn mogelijk niet gratis. Raadpleeg de licentiegegevens van de app of neem contact op met het bedrijf dat de app heeft gemaakt voor meer informatie.
 
 ## <a name="changes-to-assigned-email-profiles"></a>Wijzigingen in toegewezen e-mailprofielen
 

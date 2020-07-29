@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5de1268b8b04c98ac7a9cfa96d42349fc0f8890
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 0242e7725afa23ed94400c79eae27118b7dbb8c5
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383203"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491181"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Certificaten voor verificatie gebruiken in Microsoft Intune
 
@@ -109,6 +109,9 @@ Maak een afzonderlijk vertrouwd certificaatprofiel voor elk apparaatplatform dat
 > Vertrouwde basisprofielen die u maakt voor het platform *Windows 10 en hoger*, worden in het Microsoft Endpoint Manager-beheercentrum weergegeven voor het platform *Windows 8.1 en hoger*. 
 >
 > Dit is een bekend probleem met de presentatie van het platform voor vertrouwde certificaatprofielen. Terwijl in het profiel het platform Windows 8.1 en hoger wordt weergegeven, is het functioneel voor Windows 10 en hoger.
+
+> [!NOTE]
+> Het profiel *vertrouwd certificaat* in Intune kan alleen worden gebruikt voor het leveren van basiscertificaten of tussenliggende certificaten. De implementatie van dergelijke certificaten is bedoeld om een vertrouwensketen tot stand te brengen. Het gebruik van het vertrouwd certificaat-profiel voor het leveren van andere certificaten dan basiscertificaten of tussenliggende certificaten wordt niet door Microsoft ondersteund. Mogelijk kunt u geen certificaten importeren die niet als basiscertificaten of tussenliggende certificaten worden beschouwd als u het vertrouwd certificaat-profiel in de Intune-portal selecteert. Zelfs als u met dit profieltype een certificaat kunt importeren en implementeren dat geen basiscertificaat of tussenliggend certificaat is, zult u waarschijnlijk onverwachte resultaten ondervinden tussen verschillende platformen, zoals iOS en Android.
 
 ### <a name="to-create-a-trusted-certificate-profile"></a>Een profiel voor een vertrouwd certificaat maken
 

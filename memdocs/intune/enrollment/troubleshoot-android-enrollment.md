@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bcc524a69d0fb41da84a2e882b81a205fe7192cc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b51ed6653dff5b7d0aeef40892e16e2826f30204
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79363327"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461246"
 ---
 # <a name="troubleshoot-android-enterprise-device-problems-in-microsoft-intune"></a>Problemen met Android Enterprise-apparaten in Microsoft Intune oplossen
 
@@ -76,6 +76,8 @@ Samsung heeft deze beperking ingevoerd op apparaten met Android 8.0 of hoger. Mi
 
 ### <a name="wipe-factory-reset-option-isnt-available-for-work-profile-enrolled-device"></a>De optie Wissen (fabrieksinstellingen herstellen) is niet beschikbaar voor een apparaat dat op een werkprofiel is ingeschreven
 Dit is normaal. In het werkprofielscenario heeft de MDM-provider geen volledige controle over het apparaat. De enige beschikbare optie is Buiten gebruik stellen (bedrijfsgegevens verwijderen), welke het volledige werkprofiel en alle inhoud daarvan verwijdert.
+
+Wissen wordt ondersteund voor [Android Enterprise-apparaten met een werkprofiel in bedrijfseigendom](android-corporate-owned-work-profile-enroll.md).
 
 ### <a name="is-device-passcode-reset-supported"></a>Wordt wachtwoordcode van het apparaat opnieuw instellen ondersteund?
 Voor apparaten die op een werkprofiel zijn ingeschreven, kunt u alleen op apparaten met Android 8.0 of hoger de wachtwoordcode herstellen als:

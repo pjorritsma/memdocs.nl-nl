@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 07/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91683280a2e48d82fd145bf19228c33b432b6b49
-ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
+ms.openlocfilehash: 444fb116150cf3d7a3ab4dcfe4eb450b20119df0
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83853567"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410926"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>Gegevensbeschermingsframework met beleid voor app-beveiliging 
 
@@ -148,8 +148,10 @@ De beleidsinstellingen die in niveau 2 worden afgedwongen, bevatten alle beleids
 |---------------|----------------------------------------------------------|-----------------------------------------------|---------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Gegevensoverdracht |       Back-up van organisatiegegevens naar...  |          Blokkeren  |          iOS/iPadOS, Android  |                  |
 | Gegevensoverdracht |       Organisatiegegevens naar andere apps verzenden  |          Door beleid beheerde apps  |          iOS/iPadOS, Android  |          <p>Bij iOS/iPadOS kunnen beheerders deze waarde configureren als Door beleid beheerde apps, Door beleid beheerde apps met delen van het besturingssysteem of Door beleid beheerde apps met filteren op openen in/delen. </p><p>Door beleid beheerde apps met delen van het besturingssysteem is beschikbaar wanneer het apparaat ook is ingeschreven bij Intune. Met deze instelling is gegevensoverdracht naar andere door beleid beheerde apps toegestaan, evenals bestandsoverdracht naar andere apps die worden beheerd met Intune. </p><p>Met Door beleid beheerde apps met filteren op openen in/delen worden de dialoogvensters Openen in/Delen van het besturingssysteem zo gefilterd dat alleen door beleid beheerde apps worden weergegeven. </p><p> Zie [Beveiligingsbeleidsinstellingen voor iOS-apps](app-protection-policy-settings-ios.md) voor meer informatie.</p> |
+| Gegevensoverdracht |       Apps selecteren die moeten worden uitgesloten  |          Default / skype;app-settings;calshow;itms;itmss;itms-apps;itms-appss;itms-services;  |          iOS/iPadOS  |                  |
 | Gegevensoverdracht |       Kopieën van de organisatiegegevens opslaan  |          Blokkeren  |          iOS/iPadOS, Android  |                  |
 | Gegevensoverdracht |       De gebruiker toestaan om kopieën op te slaan in de geselecteerde services  |          OneDrive voor Bedrijven, SharePoint Online |          iOS/iPadOS, Android  |                  |
+| Gegevensoverdracht |       Telecommunicatiegegevens overdragen aan  |          Alle apps |          iOS/iPadOS, Android  |                  |
 | Gegevensoverdracht |       Knippen, kopiëren en plakken tussen apps beperken  |          Door beleid beheerde apps met plakken in  |          iOS/iPadOS, Android  |                  |
 | Gegevensoverdracht |       Schermopname en Google Assistant  |          Blokkeren  |          Android  |                  |
 | Functionaliteit |       Overdracht van webinhoud met andere apps beperken  |          Microsoft Edge  |          iOS/iPadOS, Android  |                  |
@@ -173,9 +175,12 @@ De beleidsinstellingen die in niveau 3 worden afgedwongen, bevatten alle beleids
 
 | Instelling | Beschrijving van instelling |             Waarde  |             Platform        | Opmerkingen |
 |---------------|---------------------------------------|----------------------------------------|--------------------------------------|---------------------------------------------------------------------------------------------------------|
+| Gegevensoverdracht |       Telecommunicatiegegevens overdragen aan  |          Een door beleid beheerde kiezer-app |          Android  | Beheerders kunnen deze instelling ook configureren voor het gebruik van een kiezer-app die geen ondersteuning biedt voor het beveiligingsbeleid voor apps door **Een specifieke kiezer-app** te selecteren en de **pakket-id van de kiezer-app** en **naam van de kiezer-app** op te geven.   |
+| Gegevensoverdracht |       Telecommunicatiegegevens overdragen aan  |          Een specifieke kiezer-app |          iOS/iPadOS  |  |
+| Gegevensoverdracht |       URL-schema van kiezer-app  |          *replace_with_dialer_app_url_scheme* |          iOS/iPadOS  | Op iOS/iPadOS moet deze waarde worden vervangen door het URL-schema voor de aangepaste kiezer-app die wordt gebruikt. Als het URL-schema niet bekend is, moet u contact opnemen met de app-ontwikkelaar voor meer informatie. Zie [Een aangepast URL-schema definiëren voor uw app](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app) voor meer informatie over URL-schema's.|
 | Gegevensoverdracht |       Gegevens ontvangen van andere apps  |          Door beleid beheerde apps  |          iOS/iPadOS, Android         |  |
-| Gegevensoverdracht |       Toetsenborden van derden  |          Blokkeren  |          iOS/iPadOS        | Hiermee worden in iOS alle toetsenborden van derden in de app geblokkeerd.  |
-| Gegevensoverdracht |       Goedgekeurde toetsenborden  |          Vereist  |          Android        | Bij Android moeten er toetsenborden worden geselecteerd voor gebruik op de geïmplementeerde Android-apparaten.  |
+| Gegevensoverdracht |       Toetsenborden van derden  |          Blokkeren  |          iOS/iPadOS        | Hiermee worden in iOS/iPadOS alle toetsenborden van derden in de app geblokkeerd.  |
+| Gegevensoverdracht |       Goedgekeurde toetsenborden  |          Vereist  |          Android        |  |
 | Gegevensoverdracht |       Toetsenborden selecteren voor goedkeuring  |          *toetsenborden toevoegen/verwijderen*  |          Android        | Bij Android moeten er toetsenborden worden geselecteerd voor gebruik op de geïmplementeerde Android-apparaten.  |
 | Functionaliteit |       Organisatiegegevens afdrukken  |          Blokkeren  |          iOS/iPadOS, Android         |  |
 

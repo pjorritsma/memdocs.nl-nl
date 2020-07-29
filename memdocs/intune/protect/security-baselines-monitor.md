@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,88 +16,99 @@ ms.reviewer: laarrizz
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3c6e18bb6c58138d42565d70ab69a6cbd7169ff0
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: cecd39bcba7e16cc933086c99bbc0b403381d75d
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988368"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461790"
 ---
-# <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>De beveiligingsbasislijn en het beveiligingsprofiel controleren in Microsoft Intune
+# <a name="monitor-security-baselines-and-profiles-in-microsoft-intune"></a>De beveiligingsbasislijnen en beveiligingsprofielen controleren in Microsoft Intune
 
-Intune biedt verschillende opties om uw beveiligingsbasislijnen te bewaken. U kunt het beveiligingsbasislijnprofiel bewaken dat op uw gebruikers en apparaten van toepassing is. U kunt tevens de daadwerkelijke basislijn controleren evenals apparaten die (al dan niet) overeenkomen met de aanbevolen waarden.
+Intune biedt verschillende opties om uw beveiligingsbasislijnen te bewaken. U kunt het volgende doen:
 
-Dit artikel bespreekt beide controleopties.
+- Controleer een beveiligingsbasislijn, evenals apparaten die (al dan niet) overeenkomen met de aanbevolen waarden.
+- Controleer het beveiligingsbasislijnprofiel dat op uw gebruikers en apparaten van toepassing is.
+- Bekijk hoe de instellingen van een geselecteerd profiel worden ingesteld op een geselecteerd apparaat.
+
+U kunt ook de *configuraties voor Eindpuntbeveiliging* bekijken die van toepassing zijn op afzonderlijke apparaten, waaronder beveiligingsbasislijnen.
+
+In dit artikel worden beide controleopties besproken.
 
 In [Security baselines in Intune](security-baselines.md) (Beveiligingsbasislijnen in Intune) vindt u meer informatie over de basislijnbeveiligingsfunctie in Microsoft Intune.
 
 ## <a name="monitor-the-baseline-and-your-devices"></a>Bewaak de basislijn en uw apparaten
 
-Als u een basislijn controleert, krijgt u inzicht in de beveiligingsstatus van uw apparaten op basis van de aanbevelingen van Microsoft. U kunt deze inzichten weergeven in het overzichtsvenster van de beveiligingsbasislijn op de Intune-console.  Het kan tot 24 uur na de eerste toewijzing van een basislijn duren voordat gegevens worden weergegeven. Latere wijzigingen worden na maximaal zes uur weergegeven.
+Als u een basislijn controleert, krijgt u inzicht in de beveiligingsstatus van uw apparaten op basis van de aanbevelingen van Microsoft. Als u deze inzichten wilt bekijken, meldt u zich aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431), gaat u naar **Eindpuntbeveiliging** > **Beveiligingsbasislijnen** en selecteert u een type beveiligingsbasislijn, zoals de *MDM-beveiligingsbasislijn*. Selecteer vervolgens in het deelvenster *Profiel* het profielexemplaar waarvan u de details wilt weergeven. Hiermee opent u het deelvenster *Eigenschappen* van het profiel, waarin u vervolgens een van de profielrapporten kunt selecteren in de sectie *Controleren*. 
 
-Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) om bewakingsgegevens voor de basislijn en apparaten weer te geven. Selecteer vervolgens **Eindpuntbeveiliging** > **Beveiligingsbasislijnen**, selecteer een basislijn en bekijk het **overzichtsvenster**.
+Het kan tot 24 uur na de eerste toewijzing van een basislijn duren voordat gegevens worden weergegeven. Latere wijzigingen worden na maximaal zes uur weergegeven.
 
-In het **overzichtsvenster** staan twee methoden om de status te bewaken:
+Bij het inzoomen op rapporten en apparaten zijn er verschillende details beschikbaar.
 
-- **Apparaatweergave**: een samenvatting van het aantal apparaten in elke statuscategorie voor de basislijn.
-- **Per categorie**: een weergave waarbij elke categorie in de basislijn wordt weergegeven, inclusief het percentage apparaten voor elke statusgroep voor elke basislijncategorie.
+<!-- UI is changing, unclear how yet: 
 
-Elk apparaat wordt vertegenwoordigd door een van de volgende statussen, die in de *apparaatweergave* als de *weergave per categorie* worden gebruikt:
 
-- **Komt overeen met de basislijn**: alle instellingen in de basislijn komen overeen met de aanbevolen instellingen.
-- **Komt niet overeen met basislijn**: een of meer instellingen in de basislijn zijn gewijzigd ten opzichte van hun standaardwaarden in de oorspronkelijke basislijn. De standaardwaarden in elke beveiligingsbasislijn zijn de aanbevolen waarden voor die basislijn.
+- **Device view** – A summary of how many devices are in each status category for the baseline.
+- **Per-category** - A view that displays each category in the baseline and includes the percentage of devices for each status group for each baseline category.
+
+Each device is represented by one of the following statuses (used in the *device* view and also the *per-category* views):
+
+- **Matches baseline** - All the settings in the baseline match the recommended settings.
+- **Does not match baseline** - One or more settings in the baseline were modified from their default values in the original baseline. The default values in each security baseline are the recommended values for that baseline.
 
   > [!NOTE]
-  > Wanneer u een basislijnprofiel maakt of bewerkt, leiden wijzigingen in een standaardwaarde of configuratie-instelling tot de status *Komt niet overeen met de basislijn*. Neem contact op met Microsoft Ondersteuning voor hulp bij het bepalen van de gewijzigde instellingen. 
+  > When you create or edit a baseline profile, any change that is made to a default value or configuration setting causes a *Does not match baseline* status to occur. For help to determine the settings that were changed, contact Microsoft Support. 
 
-- **Onjuist geconfigureerd**: minstens één instelling is niet juist geconfigureerd. Deze status betekent dat de instelling een conflict of fout ervaart of in behandeling is.
-- **Niet van toepassing**: minstens één instelling is niet van toepassing en wordt niet toegepast.
+- **Misconfigured** - At least one setting isn't correctly configured. This status means that the setting is in a conflict, error, or pending state.
+- **Not applicable** - At least one setting isn't applicable and isn't applied.
 
-### <a name="device-view"></a>Apparaatweergave
+### Device view
 
-In het overzichtsvenster staat een op diagrammen gebaseerde samenvatting van het aantal apparaten met een specifieke status voor de basislijn; **Security baseline posture for assigned Windows 10 devices** (Postuur van de beveiligingsbasislijn voor toegewezen Windows 10-apparaten).
+The Overview pane displays a chart-based summary of how many devices have a specific status for the baseline; **Security baseline posture for assigned Windows 10 devices**.
 
-![Controleer de status van de apparaten](./media/security-baselines-monitor/overview.png)
+![Check the status of the devices](./media/security-baselines-monitor/overview.png)
 
-Als de status van een apparaat afwijkt van verschillende categorieën in de basislijn, wordt het apparaat door één status vertegenwoordigd. De status die het apparaat vertegenwoordigt, is afkomstig uit de volgende volgorde van prioriteit: **Onjuist geconfigureerd**, **Komt niet overeen met basislijn**, **Niet van toepassing**, **Komt overeen met basislijn**.
+When a device has different status from different categories in the baseline, the device is represented by a single status. The status that represents the device is taken from the following order of precedence: **Misconfigured**, **Does not match baseline**, **Not applicable**, **Matches baseline**.
 
-Als een apparaat bijvoorbeeld over een instelling beschikt die als *onjuist geconfigureerd* is geclassificeerd en een of meer instellingen die als *Komt niet overeen met basislijn* zijn geclassificeerd, dan wordt het apparaat als *Onjuist geconfigureerd* geclassificeerd.
+For example, if a device has a setting that's classified as *misconfigured* and one or more settings that are classified as *Does not match baseline*, the device is classified as *Misconfigured*.
 
-Klik op het diagram om in te zoomen en door een lijst met apparaten met verschillende statussen te bladeren. U kunt vervolgens afzonderlijke apparaten uit die lijst selecteren om details over die afzonderlijke apparaten weer te geven. Bijvoorbeeld:
+You can click on the chart to drill through and view a list of devices with various statuses. You can then select individual devices from that list to view details about individual devices. For example:
 
-- Selecteer **Apparaatconfiguratie** > selecteer het profiel met een foutstatus:
+- Select **Device configuration** > Select the profile with an Error state:
 
-  ![De status van een profiel weergeven](./media/security-baselines-monitor/device-configuration-profile-list.png)
+  ![View the status of a profile](./media/security-baselines-monitor/device-configuration-profile-list.png)
 
-- Selecteer het foutenprofiel. Er wordt een lijst met alle instellingen in het profiel en hun status weergegeven. Nu kunt u schuiven om de instelling te vinden die de fout veroorzaakt:
+- Select the Error profile. A list of all settings in the profile, and their state is shown. Now, you can scroll to find the setting causing the error:
 
-  ![Bekijk de instelling die de fout veroorzaakt](./media/security-baselines-monitor/profile-with-error-status.png)
+  ![See the setting causing the error](./media/security-baselines-monitor/profile-with-error-status.png)
 
-Gebruik deze rapportage om instellingen in een profiel te bekijken die een probleem veroorzaken. Krijg daarnaast meer informatie over beleidsregels en profielen die zijn geïmplementeerd op apparaten.
+Use this reporting to see any settings in a profile that are causing an issue. Also get more details of policies and profiles deployed to devices.
 
 > [!NOTE]
-> Wanneer een eigenschap in de basislijn is ingesteld op **Niet geconfigureerd**, wordt de instelling genegeerd en gelden er geen beperkingen. De eigenschap wordt niet in rapporten weergegeven.
+> When a property is set to **Not configured** in the baseline, the setting is ignored, and no restrictions are enforced. The property isn't shown in any reporting.
 
-### <a name="per-category-view"></a>Per categorieweergave
+### Per category view
 
-In het overzichtsvenster wordt een grafiek per categorie weergegeven voor de basislijn; **Security baseline posture by category** (Postuur van de beveiligingsbasislijn per categorie).  In deze weergave ziet u elke categorie van de basislijn en wordt het percentage apparaten geïdentificeerd dat in een bepaalde statusclassificiatie voor elk van die categorieën valt.
+The Overview pane displays a per-category chart for the baseline named **Security baseline posture by category**.  This view displays each category from the baseline, and identifies the percentage of devices that fall into a status classification for each of those categories.
 
-![Statusweergave per categorie](./media/security-baselines-monitor/monitor-baseline-per-category.png)
+![Per-Category view of status](./media/security-baselines-monitor/monitor-baseline-per-category.png)
 
-De status voor **Komt overeen met basislijn** wordt pas weergegeven wanneer 100% van de apparaten die status voor de categorie hebben.
+Status for **Matches baseline** doesn't display until 100% of devices report that status for the category.
 
-U kunt de weergave per categorie sorteren op elke kolom door bovenaan de kolom het pictogram met de pijl omhoog/omlaag te selecteren.
+You can sort the by-category view by each column, by selecting up-down arrow icon at the top of the column.
+-->
 
 ## <a name="monitor-the-profile"></a>Bewaak het profiel
 
-Het bewaken van het profiel geeft u inzicht in de implementatiestatus van uw apparaten, maar niet in de beveiligingsstatus op basis van de aanbevelingen uit de basislijn.
+Het bewaken van het profiel geeft inzicht in de implementatiestatus van uw apparaten, maar niet in de beveiligingsstatus op basis van de aanbevelingen uit de basislijn.
 
-1. Selecteer in Intune **Beveiligingsbasislijnen** > selecteer een basislijn > **Gemaakte profielen**.
+1. Selecteer in Intune **Beveiligingsbasislijnen** > selecteer een basislijn om het bijbehorende deelvenster *Profielen* te openen.
 
-2. Selecteer een profiel. In **Overzicht** geeft de afbeelding weer aan hoeveel apparaten en gebruikers dit profiel is toegewezen:
+<!-- More churn  
+2. Select a profile. In **Overview**, the image shows how many devices and users have this profile assigned:
 
-   ![Bekijk aan hoeveel apparaten en gebruikers het beveiligingsbasislijnprofiel is toegewezen](./media/security-baselines-monitor/existing-profile-overview.png)
-
+   ![See how many devices and users are assigned the security baselines profile](./media/security-baselines-monitor/existing-profile-overview.png)
+--> 
 3. Onder **Eigenschappen** > **beheren** staat een overzicht van alle instellingen in de basislijn. U kunt deze instellingen eveneens wijzigen:
 
    ![Bekijk en update instellingen in het beveiligingsbasislijnprofiel](./media/security-baselines-monitor/manage-settings.png)
@@ -105,6 +116,19 @@ Het bewaken van het profiel geeft u inzicht in de implementatiestatus van uw app
 4. In **Bewaken** ziet u de implementatiestatus van het profiel op afzonderlijke apparaten, de status voor elke gebruiker en de status voor elke instelling in de basislijn:
 
    ![Bekijk de verschillende controleopties voor een beveiligingsbasislijnprofiel](./media/security-baselines-monitor/monitor-status-options.png)
+
+## <a name="view-settings-from-profiles-that-apply-to-a-device"></a>Instellingen weergeven van profielen die van toepassing zijn op een apparaat
+
+U kunt een profiel voor een beveiligingsbasislijn selecteren en inzoomen om een lijst met instellingen van dat profiel te bekijken, aangezien deze van toepassing zijn op een afzonderlijk apparaat.  Als u deze lijst wilt bekijken, zoomt u in op **Eindpuntbeveiliging** > **Beveiligingsbasislijnen** >  *, selecteert u het type beveiligingsbasislijn*  >  *en het profiel dat u wilt bekijken* > **Apparaatstatus**. U kunt de lijst ook weergeven door naar **Eindpuntbeveiliging** > **Alle apparaten** > *Een apparaat selecteren* > **Configuratie eindpuntbeveiliging** > *Een basislijnversie selecteren* te gaan.
+
+Nadat u een apparaat hebt geselecteerd, wordt in het Microsoft Endpoint Manager-beheercentrum een lijst weergegeven met de instellingen van dat profiel, met inbegrip van de categorie waarvan de instelling afkomstig is en de configuratiestatus op het apparaat. Configuratiestatussen zijn onder andere de volgende waarden:
+
+- **Geslaagd**: de instelling op het apparaat komt overeen met de waarde die is geconfigureerd in het profiel. Dit is de aanbevolen standaardwaarde voor basislijnen of een aangepaste waarde die door een beheerder is opgegeven toen het profiel werd geconfigureerd.
+- **Conflict**: de instelling is in conflict met een ander beleid, bevat een fout of is in afwachting van een update.
+- **Niet van toepassing**: de instelling wordt niet toegepast door het profiel.
+
+> [!NOTE]
+> De statuswaarden voor instellingen worden in een toekomstige versie bijgewerkt en bieden meer gedetailleerde informatie.
 
 ## <a name="view-endpoint-security-configurations-per-device"></a>Configuratie van eindpuntbeveiliging per apparaat weergeven
 
@@ -122,7 +146,7 @@ Bekijk details over de beveiligingsconfiguraties die van toepassing zijn op afzo
 
 U hebt een beveiligingsbasislijn geïmplementeerd, maar de implementatiestatus bevat een fout. De volgende stappen leggen uit hoe u de fout oplost.
 
-1. Selecteer in Intune **Beveiligingsbasislijnen** > selecteer een basislijn > **Gemaakte profielen**.
+1. Selecteer in Intune **Beveiligingsbasislijnen** > selecteer een basislijn > **Profielen**.
 
 2. Selecteer een profiel > onder **Bewaken** > **Status per instelling**.
 

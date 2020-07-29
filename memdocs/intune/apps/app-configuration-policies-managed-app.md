@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 07/09/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ed731cdb4efddaedbfcde47acce3fc24d344d80
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: b493443a86d7cd1769ce6f66c77acc87063521f6
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988797"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461637"
 ---
 # <a name="add-app-configuration-policies-for-managed-apps-without-device-enrollment"></a>App-configuratiebeleidsregels toevoegen voor beheerde apps zonder apparaatinschrijving
 
@@ -39,11 +39,19 @@ U kunt app-configuratiebeleidsregels gebruiken voor beheerde apps die de Intune 
     - **Type apparaatinschrijving**: Beheerde apps is geselecteerd.
 4. Kies **Openbare apps selecteren** of **Aangepaste apps selecteren** om de app te kiezen die u wilt configureren. Selecteer de app in de lijst met apps die u hebt goedgekeurd en die zijn gesynchroniseerd met Intune.
 5. Klik op **Volgende** om de pagina **Instelling** weer te geven.
-6. Voor elk door de app ondersteunde configuratie-instelling typt u de **naam** en **waarde**. 
+6. De pagina **Instellingen** bevat opties die worden weergegeven op basis van de app die u configureert:
 
-   Voor Intune App SDK-functionaliteit geschikte apps ondersteunen configuraties in sleutel-waardeparen. Raadpleeg de documentatie van elke app voor meer informatie over welke sleutel-waardeconfiguraties worden ondersteund. Houd er rekening mee dat u tokens kunt gebruiken die dynamisch worden gevuld met gegevens die zijn gegenereerd door de app. Zie [Configuratiewaarden voor het gebruik van tokens](app-configuration-policies-managed-app.md#configuration-values-for-using-tokens) voor meer informatie. Ga voor meer informatie over app-configuratiebeleidsinstellingen van Outlook voor iOS/iPadOS naar [App-configuratie van Outlook voor iOS/iPadOS beheren met Microsoft Intune](https://technet.microsoft.com/library/mt813789(v=exchg.150).aspx).
+    - **Algemene configuratie-instellingen**: voor elke algemene, door de app ondersteunde configuratie-instelling typt u de **Naam** en **Waarde**. 
+ 
+        Voor Intune App SDK-functionaliteit geschikte apps ondersteunen configuraties in sleutel-waardeparen. Raadpleeg de documentatie van elke app voor meer informatie over welke sleutel-waardeconfiguraties worden ondersteund. Houd er rekening mee dat u tokens kunt gebruiken die dynamisch worden gevuld met gegevens die zijn gegenereerd door de app. Als u een algemene configuratie-instelling wilt verwijderen, kiest u het beletselteken ( **...** ) en selecteert u **Verwijderen**. Zie [Configuratiewaarden voor het gebruik van tokens](app-configuration-policies-managed-app.md#configuration-values-for-using-tokens) voor meer informatie. 
 
-    Als u een configuratie wilt verwijderen, kiest u het weglatingsteken ( **...** ) en selecteert u **Verwijderen**.  
+    - **Configuratie-instellingen voor Outlook**: Outlook voor iOS en Android biedt beheerders de mogelijkheid om de standaardconfiguratie voor verschillende in-app-instellingen aan te passen. Zie [Outlook voor iOS en Android - Scenario's voor algemene configuratie-instellingen](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#general-app-configuration-scenarios) voor meer informatie.
+   
+    - **S/MIME**: Secure Multipurpose Internet Mail Extensions (S/MIME) is een specificatie waarmee gebruikers e-mailberichten die digitaal zijn ondertekend en versleuteld, kunnen verzenden en ontvangen.
+        - **S/MIME inschakelen**: Geef op of S/MIME-besturingselementen zijn ingeschakeld bij het opstellen van een e-mailbericht. Standaardwaarde: **Niet geconfigureerd**.
+        - **Gebruiker toestaan om de instelling te wijzigen**: Geef aan of de gebruiker de synchronisatie-instelling mag wijzigen. S/MIME moet zijn ingeschakeld. Standaardwaarde: **Ja**.
+        
+    Zie [Configuratie-instellingen voor de Outlook-app voor iOS en Android implementeren](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune) voor informatie over configuratiebeleidsinstellingen voor de Outlook-app.
 
 7. Klik op **Volgende** om de pagina **Toewijzingen** weer te geven.
 8. Klik op **Groepen selecteren die moeten worden opgenomen**.

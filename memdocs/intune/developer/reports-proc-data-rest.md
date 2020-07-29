@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1fa3f6e96b46b27be4f6cbbe475d03eed007b0d4
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 4f00ba5049401c07f5112061172dc3e7cda4f46c
+ms.sourcegitcommit: 16bc2ed5b64eab7f5ae74391bd9d7b66c39d8ca6
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022412"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86437358"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Gegevens ophalen uit de Intune-datawarehouse-API met een REST-client
 
@@ -63,6 +63,7 @@ U hebt nu een app gedefinieerd in Azure. Verleen via de systeemeigen app toegang
 6. Schakel het selectievakje **Gedelegeerde machtigingen** in en klik op **Datawarehouse-gegevens ophalen uit Microsoft Intune**.
 7. Klik op **Machtigingen toevoegen**.
 8. Selecteer eventueel **Beheerderstoestemming verlenen voor Microsoft** in het deelvenster Geconfigureerde machtigingen en selecteer **Ja**. Er wordt nu toegang verleend aan alle accounts in de huidige map. Zo wordt voorkomen dat het dialoogvenster voor toestemming wordt weergegeven voor elke gebruiker in de tenant. Raadpleeg [Toepassingen integreren met Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications) voor meer informatie.
+9. Selecteer **Certificaten en geheimen** >  **+ Nieuw clientgeheim** en genereer een nieuw geheim. Zorg ervoor dat u het naar een veilige locatie kopieert, omdat u het niet opnieuw kunt openen.
 
 ## <a name="get-data-from-the-microsoft-intune-api-with-postman"></a>Gegevens van de Microsoft Intune-API ophalen met Postman
 
@@ -79,6 +80,7 @@ U hebt de volgende informatie nodig om een REST-aanroep te doen met Postman:
 | Auth.-URL         | Dit is de URL die wordt gebruikt voor verificatie. | https://login.microsoftonline.com/common/oauth2/authorize?resource=https://api.manage.microsoft.com/ |
 | URL van toegangstoken | Dit is de URL die wordt gebruikt om het token te verlenen.                                                                                                                                              | https://login.microsoftonline.com/common/oauth2/token |
 | Client-id        | U hebt deze gemaakt en genoteerd toen u de systeemeigen app in Azure maakte.                                                                                               | 4184c61a-e324-4f51-83d7-022b6a81b991                                                          |
+| Clientgeheim        | U hebt deze gemaakt en genoteerd toen u de systeemeigen app in Azure maakte.                                                                                               | Ksml3dhDJs+jfK1f8Mwc8                                                          |
 | Scope (optioneel) | Leeg                                                                                                                                                                               | U kunt het veld leeg laten.                                                                     |
 | Toekenningstype       | Het token is een autorisatiecode.                                                                                                                                                  | Autorisatiecode                                                                            |
 
@@ -122,14 +124,18 @@ Om een nieuw toegangstoken voor Postman te verkrijgen, moet u de autorisatie-URL
 
      `88C8527B-59CB-4679-A9C8-324941748BB4`
 
-11. Selecteer **Autorisatiecode** en vraag het toegangstoken lokaal aan.
+11. Voeg het **Clientgeheim** toe dat u hebt gegenereerd vanuit de systeemeigen app die u in Azure hebt gemaakt. Het resultaat ziet er ongeveer als volgt uit:  
 
-12. Selecteer **Token aanvragen**.
+     `Ksml3dhDJs+jfK1f8Mwc8 `
+
+12. Selecteer **Autorisatiecode** als toekenningstype.
+
+13. Selecteer **Token aanvragen**.
 
     ![Informatie voor het toegangstoken](./media/reports-proc-data-rest/reports-postman_getnewtoken.png)
 
-13. Typ uw referenties op de autorisatiepagina voor Active AD. De lijst met tokens in Postman bevat nu het token met de naam `Bearer`.
-14. Selecteer **Token gebruiken**. De lijst met headers bevat de nieuwe sleutelwaarde voor Autorisatie en de waarde `Bearer <your-authorization-token>`.
+14. Typ uw referenties op de autorisatiepagina voor Active AD. De lijst met tokens in Postman bevat nu het token met de naam `Bearer`.
+15. Selecteer **Token gebruiken**. De lijst met headers bevat de nieuwe sleutelwaarde voor Autorisatie en de waarde `Bearer <your-authorization-token>`.
 
 #### <a name="send-the-call-to-the-endpoint-using-postman"></a>De aanroep naar het eindpunt verzenden met Postman
 

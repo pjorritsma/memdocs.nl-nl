@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a915ffc908c985b38533a362f2a17ec561ddf6f
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 16b212bde0f46861b8acb1470588b784c6f2a7fb
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79351237"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565662"
 ---
 # <a name="use-apis-to-add-third-party-cas-for-scep-to-intune"></a>API's gebruiken om CA's van derden voor SCEP aan Intune toe te voegen
 
@@ -78,17 +78,17 @@ De volgende stappen moeten worden uitgevoerd om de bibliotheek in uw producten t
 5. De bibliotheek opnemen in het project waarmee uw SCEP-server wordt gemaakt
 6. Voer de volgende taken uit op de SCEP-server:
 
-    - Sta de administrator toe de [Azure-app-id, Azure-app-sleutel en tenant-id](#onboard-scep-server-in-azure) (in dit artikel) te configureren die door de bibliotheek voor verificatie worden gebruikt. Administrators moeten de Azure-app-sleutel kunnen bijwerken.
-    - SCEP-aanvragen identificeren die een door Intune gegenereerd SCEP-wachtwoord bevatten
-    - De bibliotheek **API voor aanvraag valideren** gebruiken om door Intune gegenereerde SCEP-wachtwoorden te valideren
-    - Gebruik de API's voor bibliotheekmeldingen om Intune te informeren over certificaten die zijn uitgegeven voor SCEP-aanvragen die de door Intune gegenereerde SCEP-wachtwoorden bevatten. Informeer Intune ook over fouten die kunnen optreden bij het verwerken van deze SCEP-aanvragen.
-    - Controleer of de server voldoende gegevens vastlegt om administrators te helpen problemen op te lossen
+   - Sta de administrator toe de [Azure-app-id, Azure-app-sleutel en tenant-id](#onboard-scep-server-in-azure) (in dit artikel) te configureren die door de bibliotheek voor verificatie worden gebruikt. Administrators moeten de Azure-app-sleutel kunnen bijwerken.
+   - SCEP-aanvragen identificeren die een door Intune gegenereerd SCEP-wachtwoord bevatten
+   - De bibliotheek **API voor aanvraag valideren** gebruiken om door Intune gegenereerde SCEP-wachtwoorden te valideren
+   - Gebruik de API's voor bibliotheekmeldingen om Intune te informeren over certificaten die zijn uitgegeven voor SCEP-aanvragen die de door Intune gegenereerde SCEP-wachtwoorden bevatten. Informeer Intune ook over fouten die kunnen optreden bij het verwerken van deze SCEP-aanvragen.
+   - Controleer of de server voldoende gegevens vastlegt om administrators te helpen problemen op te lossen
 
 7. Voltooi [het testen van de integratie](#integration-testing) (in dit artikel) en los eventuele problemen op
 8. Bied de klant schriftelijke richtlijnen waarin het volgende wordt uitgelegd:
 
-    - Hoe u onboarding van de SCEP-server voor Azure Portal uitvoert
-    - Hoe de Azure-app-id en Azure-app-sleutel moeten worden opgehaald die nodig zijn om de bibliotheek te configureren
+   - Hoe u onboarding van de SCEP-server voor Azure Portal uitvoert
+   - Hoe de Azure-app-id en Azure-app-sleutel moeten worden opgehaald die nodig zijn om de bibliotheek te configureren
 
 ### <a name="onboard-scep-server-in-azure"></a>Onboarding van de SCEP-server voor Azure uitvoeren
 
@@ -108,38 +108,38 @@ De klasse `IntuneScepServiceClient` bevat de methoden die door de SCEP-service w
 
 ##### <a name="intunescepserviceclient-constructor"></a>IntuneScepServiceClient-constructor
 
-Handtekening:
+**Handtekening**:
 
 ```java
 IntuneScepServiceClient(
     Properties configProperties)
 ```
 
-Beschrijving:
+**Beschrijving**:
 
 Hiermee wordt een instantie van een `IntuneScepServiceClient`-object gemaakt en wordt de instantie geconfigureerd.
 
-Parameters:
+**Parameters**:
 
-    - configProperties    Eigenschappenobject met clientconfiguratiegegevens
+- **configProperties**: Eigenschappenobject met clientconfiguratiegegevens
 
 De configuratie moet de volgende eigenschappen bevatten:
 
-    - AAD_APP_ID=De Azure-app-id die is verkregen tijdens onboarding
-    - AAD_APP_KEY=De Azure-app-sleutel die is verkregen tijdens onboarding
-    - TENANT=De tenant-id die is verkregen tijdens onboarding
-    - PROVIDER_NAME_AND_VERSION=Informatie die wordt gebruikt om uw product en de versie ervan te identificeren
-    
+- AAD_APP_ID=De Azure-app-id die is verkregen tijdens onboarding
+- AAD_APP_KEY=De Azure-app-sleutel die is verkregen tijdens onboarding
+- TENANT=De tenant-id die is verkregen tijdens onboarding
+- PROVIDER_NAME_AND_VERSION=Informatie die wordt gebruikt om uw product en de versie ervan te identificeren
+
 Als voor uw oplossing een proxy is vereist, al dan niet met verificatie, kunt u de volgende eigenschappen toevoegen:
 
-    - PROXY_HOST=De host waarop de proxy wordt gehost.
-    - PROXY_PORT=De poort waarnaar de proxy luistert.
-    - PROXY_USER=De gebruikersnaam die moet worden gebruikt als de proxy basisverificatie gebruikt.
-    - PROXY_USER=Het wachtwoord dat moet worden gebruikt als de proxy basisverificatie gebruikt.
+- PROXY_HOST=De host waarop de proxy wordt gehost.
+- PROXY_PORT=De poort waarnaar de proxy luistert.
+- PROXY_USER=De gebruikersnaam die moet worden gebruikt als de proxy basisverificatie gebruikt.
+- PROXY_USER=Het wachtwoord dat moet worden gebruikt als de proxy basisverificatie gebruikt.
 
-Genereert:
+**Genereert**:
 
-    - IllegalArgumentException    Gegenereerd als de constructor wordt uitgevoerd zonder het juiste eigenschappenobject.
+- **IllegalArgumentException**: Gegenereerd als de constructor wordt uitgevoerd zonder het juiste eigenschappenobject.
 
 > [!IMPORTANT]
 > Het wordt aanbevolen een instantie van deze klasse te maken en deze te gebruiken om meerdere SCEP-aanvragen te verwerken. In dat geval is er minder overhead nodig omdat verificatietokens en servicelocatiegegevens in de cache worden opgeslagen.
@@ -149,7 +149,7 @@ De implementeerder van de SCEP-server moet de gegevens die in de configuratie-ei
 
 ##### <a name="validaterequest-method"></a>ValidateRequest-methode
 
-Handtekening:
+**Handtekening**:
 
 ```java
 void ValidateRequest(
@@ -157,32 +157,32 @@ void ValidateRequest(
     String certificateRequest)
 ```
 
-Beschrijving:
+**Beschrijving**:
 
 Hiermee wordt een SCEP-certificaataanvraag gevalideerd.
 
-Parameters:
+**Parameters**:
 
-    - transactionId         De SCEP-transactie-id
-    - certificateRequest    DER-gecodeerde PKCS #10-certificaataanvraag met Base64-gecodeerde tekenreeks
+- **transactionId**: De SCEP-transactie-id
+- **certificateRequest**: DER-gecodeerde PKCS #10-certificaataanvraag met Base64-gecodeerde tekenreeks
 
-Genereert:
+**Genereert**:
 
-    - IllegalArgumentException      Gegenereerd indien aangeroepen met een ongeldige parameter
-    - IntuneScepServiceException    Gegenereerd als is vastgesteld dat de certificaataanvraag ongeldig is
-    - Exception                     Gegenereerd als er een onverwachte fout wordt aangetroffen
+- **IllegalArgumentException**: Gegenereerd indien aangeroepen met een ongeldige parameter
+- **IntuneScepServiceException**: Gegenereerd als is vastgesteld dat de certificaataanvraag ongeldig is
+- **Exception**: Gegenereerd als er een onverwachte fout wordt aangetroffen
 
 > [!IMPORTANT]
 > Uitzonderingen die door deze methode worden gegenereerd, moeten worden vastgelegd door de server. De `IntuneScepServiceException`-eigenschappen bevatten gedetailleerde informatie over de reden waarom de validatie van de certificaataanvraag is mislukt.
 
-**Beveiligingsopmerkingen**  
+**Beveiligingsopmerkingen**:
 
 - Als deze methode een uitzondering genereert, mag de SCEP-server **geen** certificaat aan de client verlenen.
 - Het mislukken van de validatie van een SCEP-certificaataanvraag kan duiden op een probleem in de Intune-infrastructuur. Ook kan dit een teken zijn dat een aanvaller een certificaat probeert te krijgen.
 
 ##### <a name="sendsuccessnotification-method"></a>SendSuccessNotification-methode
 
-Handtekening:
+**Handtekening**:
 
 ```java
 void SendSuccessNotification(
@@ -194,36 +194,36 @@ void SendSuccessNotification(
     String certIssuingAuthority)
 ```
 
-Beschrijving:
+**Beschrijving**:
 
 Hiermee wordt Intune geïnformeerd dat een certificaat is gemaakt als onderdeel van het verwerken van een SCEP-aanvraag.
 
-Parameters:
+**Parameters**:
 
-    - transactionId           De SCEP-transactie-id
-    - certificateRequest      DER-gecodeerde PKCS #10-certificaataanvraag, met Base64-gecodeerde tekenreeks
-    - certThumprint           SHA1-hash van de vingerafdruk van het ingerichte certificaat
-    - certSerialNumber        Serienummer van het ingerichte certificaat
-    - certExpirationDate      Vervaldatum van het ingerichte certificaat. De tekenreeks met de datum en tijd moet worden opgemaakt als web-UTC-tijd (jjjj-MM-DDThh:mm:ss.sssTZD) ISO 8601.
-    - certIssuingAuthority    De naam van de instantie die het certificaat heeft uitgegeven
+- **transactionId**: De SCEP-transactie-id
+- **certificateRequest**: DER-gecodeerde PKCS #10-certificaataanvraag met Base64-gecodeerde tekenreeks
+- **certThumprint**: SHA1-hash van de vingerafdruk van het ingerichte certificaat
+- **certSerialNumber**: Serienummer van het ingerichte certificaat
+- **certExpirationDate**: Vervaldatum van het ingerichte certificaat. De tekenreeks met de datum en tijd moet worden opgemaakt als web-UTC-tijd (jjjj-MM-DDThh:mm:ss.sssTZD) ISO 8601.
+- **certIssuingAuthority**: De naam van de instantie die het certificaat heeft uitgegeven
 
-Genereert:
+**Genereert**:
 
-    - IllegalArgumentException      Gegenereerd indien aangeroepen met een ongeldige parameter
-    - IntuneScepServiceException    Gegenereerd als is vastgesteld dat de certificaataanvraag ongeldig is
-    - Exception                     Gegenereerd als er een onverwachte fout wordt aangetroffen
+- **IllegalArgumentException**: Gegenereerd indien aangeroepen met een ongeldige parameter
+- **IntuneScepServiceException**: Gegenereerd als is vastgesteld dat de certificaataanvraag ongeldig is
+- **Exception**: Gegenereerd als er een onverwachte fout wordt aangetroffen
 
 > [!IMPORTANT]
 > Uitzonderingen die door deze methode worden gegenereerd, moeten worden vastgelegd door de server. De `IntuneScepServiceException`-eigenschappen bevatten gedetailleerde informatie over de reden waarom de validatie van de certificaataanvraag is mislukt.
 
-**Beveiligingsopmerkingen**
+**Beveiligingsopmerkingen**:
 
 - Als deze methode een uitzondering genereert, mag de SCEP-server **geen** certificaat aan de client verlenen.
 - Het mislukken van de validatie van een SCEP-certificaataanvraag kan duiden op een probleem in de Intune-infrastructuur. Ook kan dit een teken zijn dat een aanvaller een certificaat probeert te krijgen.
 
 ##### <a name="sendfailurenotification-method"></a>SendFailureNotification-methode
 
-Handtekening:
+**Handtekening**:
 
 ```java
 void SendFailureNotification(
@@ -233,51 +233,51 @@ void SendFailureNotification(
     String errorDescription)
 ```
 
-Beschrijving:
+**Beschrijving**:
 
 Hiermee wordt Intune geïnformeerd dat er een fout is opgetreden tijdens het verwerken van een SCEP-aanvraag. Deze methode mag niet worden aangeroepen voor uitzonderingen die door de methoden van deze klasse zijn gegenereerd.
 
-Parameters:
+**Parameters**:
 
-    - transactionId         De SCEP-transactie-id
-    - certificateRequest    DER-gecodeerde PKCS #10-certificaataanvraag met Base64-gecodeerde tekenreeks
-    - hResult               Win32-foutcode waarmee de opgetreden fout het beste kan worden beschreven. Zie [Win32-foutcodes](https://msdn.microsoft.com/library/cc231199.aspx)
-    - errorDescription      Beschrijving van de opgetreden fout
+- **transactionId**: De SCEP-transactie-id
+- **certificateRequest**: DER-gecodeerde PKCS #10-certificaataanvraag met Base64-gecodeerde tekenreeks
+- **hResult**: Win32-foutcode waarmee de opgetreden fout het beste kan worden beschreven. Zie [Win32-foutcodes](https://msdn.microsoft.com/library/cc231199.aspx)
+- **errorDescription**: Beschrijving van de opgetreden fout
 
-Genereert:
+**Genereert**:
 
-    - IllegalArgumentException      Gegenereerd indien aangeroepen met een ongeldige parameter
-    - IntuneScepServiceException    Gegenereerd als is vastgesteld dat de certificaataanvraag ongeldig is
-    - Exception                     Gegenereerd als er een onverwachte fout wordt aangetroffen
+- **IllegalArgumentException**: Gegenereerd indien aangeroepen met een ongeldige parameter
+- **IntuneScepServiceException**: Gegenereerd als is vastgesteld dat de certificaataanvraag ongeldig is
+- **Exception**: Gegenereerd als er een onverwachte fout wordt aangetroffen
 
 > [!IMPORTANT]
 > Uitzonderingen die door deze methode worden gegenereerd, moeten worden vastgelegd door de server. De `IntuneScepServiceException`-eigenschappen bevatten gedetailleerde informatie over de reden waarom de validatie van de certificaataanvraag is mislukt.
 
-**Beveiligingsopmerkingen**
+**Beveiligingsopmerkingen**:
 
 - Als deze methode een uitzondering genereert, mag de SCEP-server **geen** certificaat aan de client verlenen.
 - Het mislukken van de validatie van een SCEP-certificaataanvraag kan duiden op een probleem in de Intune-infrastructuur. Ook kan dit een teken zijn dat een aanvaller een certificaat probeert te krijgen.
 
 ##### <a name="setsslsocketfactory-method"></a>SetSslSocketFactory-methode
 
-Handtekening:
+**Handtekening**:
 
 ```java
 void SetSslSocketFactory(
     SSLSocketFactory factory)
 ```
 
-Beschrijving:
+**Beschrijving**:
 
 Gebruik deze methode om de client te informeren dat deze de opgegeven SSL-socketfactory (in plaats van de standaardinstelling) moet gebruiken bij de communicatie met Intune.
 
-Parameters:
+**Parameters**:
 
-    - factory    De SSL-socketfactory die de client voor HTTPS-aanvragen moet gebruiken
+- **factory**: De SSL-socketfactory die de client voor HTTPS-aanvragen moet gebruiken
 
-Genereert:
+**Genereert**:
 
-    - IllegalArgumentException    Gegenereerd indien aangeroepen met een ongeldige parameter
+- **IllegalArgumentException**: Gegenereerd indien aangeroepen met een ongeldige parameter
 
 > [!NOTE]
 > Wanneer de SSL-socketfactory moet worden ingesteld, moet dit worden gedaan voordat de andere methoden van deze klasse worden uitgevoerd.

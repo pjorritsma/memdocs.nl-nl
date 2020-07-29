@@ -6,7 +6,7 @@ keywords: Intune-datawarehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/28/2020
+ms.date: 07/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,18 +18,37 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 90d1ab0792e329616fce525cfe672c07219908b5
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: d6f460039aaff282476c3e8e3d074a332cde716f
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165852"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461212"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Wijzigingenlogboek voor de API van Intune-datawarehouse
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Houd updates voor Intune-datawarehouse bij.
+
+## <a name="2007"></a>2007 
+_Uitgebracht in juli 2020_
+
+### <a name="v10-changes"></a>Wijzigingen v1.0
+
+De volgende tabel bevat de toegevoegde eigenschap voor de entiteit [device](../developer/intune-data-warehouse-collections.md#devices) in het Intune Data Warehouse.
+
+|    Verzameling                          |    Wijziging     |    Beschrijving                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    ethernetMacAddress    |    Toegevoegd    |    De unieke netwerk-id van dit apparaat.                                                                                                                                                                                                                                                                     |
+|    office365Version    |    Toegevoegd    |    De versie van Office 365 die op het apparaat is geïnstalleerd.                                                                                                                                                                                                                                                                     |
+
+De volgende tabel bevat de toegevoegde eigenschap voor de entiteit [devicePropertyHistories](../developer/intune-data-warehouse-collections.md#devicepropertyhistories) in het Intune Data Warehouse.
+
+|    Verzameling                          |    Wijziging     |    Beschrijving                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    physicalMemoryInBytes    |    Toegevoegd    |    Het fysieke geheugen in bytes.                                                                                                                                                                                                                                                                     |
+|    totalStorageSpaceInBytes    |    Toegevoegd    |    Totale opslagcapaciteit in bytes.                                                                                                                                                                                                                                                                     |
 
 ## <a name="2004"></a>2004 
 _Uitgebracht in april 2020_

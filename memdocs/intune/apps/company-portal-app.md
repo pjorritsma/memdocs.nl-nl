@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/10/2020
+ms.date: 07/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89e3111ef902b0ea0f7f66e6be6aa0c227fdb3c4
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 0ad862ff1f04558bd699db2ef0c09d4da4654e23
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86239943"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461960"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>De Intune-bedrijfsportal-apps, de bedrijfsportalwebsite en de Intune-app aanpassen
 
@@ -157,6 +157,17 @@ Hiervoor zijn de volgende opties beschikbaar:
 
 > [!NOTE]
 > Deze acties kunnen worden gebruikt om apparaatacties in de Bedrijfsportal-app en op de website te beperken zonder een restrictiebeleid voor apparaten te implementeren. Als u wilt voorkomen dat gebruikers de fabrieksinstellingen opnieuw instellen of MDM verwijderen, moet u een restrictiebeleid voor apparaten configureren. 
+
+## <a name="opening-web-company-portal-applications"></a>Online bedrijfsportal-apps openen
+Als de eindgebruiker de Bedrijfsportal-app heeft geïnstalleerd voor online bedrijfsportaltoepassingen, zien eindgebruikers een dialoogvenster waarin wordt gevraagd hoe ze de toepassing willen openen wanneer ze deze buiten de browser openen. Als de app zich niet in het pad van de bedrijfsportal bevindt, zal de bedrijfsportal de startpagina openen. Als de app zich in het pad bevindt, wordt de specifieke app door de bedrijfsportal geopend. 
+
+Als u de bedrijfsportal selecteert, wordt de gebruiker omgeleid naar de corresponderende pagina in de toepassing wanneer het URI-pad een van de volgende is:
+
+- `/apps`: de online bedrijfsportal opent de pagina Apps waarop alle apps worden weergegeven.
+- `/apps/[appID]`: de online bedrijfsportal opent de pagina Details van de bijbehorende app.
+- *Het URI-pad is anders of onverwacht*: de startpagina van de online bedrijfsportal wordt weergegeven.
+
+Als de gebruiker de Bedrijfsportal-app niet heeft geïnstalleerd, wordt de gebruiker naar de online bedrijfsportal geleid.
 
 ## <a name="company-portal-derived-credentials-for-iosipados-devices"></a>Van de bedrijfsportal afgeleide referenties voor iOS/iPadOS-apparaten
 

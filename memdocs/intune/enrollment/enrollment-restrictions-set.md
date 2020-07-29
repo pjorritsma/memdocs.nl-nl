@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f807eabd2fabd51f7a7bb8eb43225a579784148c
-ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
+ms.openlocfilehash: 535def8c7504d8cd1ea1890c419c2f8b98d4f6f6
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746490"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491198"
 ---
 # <a name="set-enrollment-restrictions"></a>Registratiebeperkingen instellen
 
@@ -164,7 +164,7 @@ Ook de volgende persoonlijke registratiemethoden worden geblokkeerd:
 
 ## <a name="blocking-personal-iosipados-devices"></a>Persoonlijke iOS-/iPadOS-apparaten blokkeren
 iOS-/iPadOS-apparaten worden in Intune standaard geclassificeerd als persoonlijk eigendom. Een iOS-/iPadOS-apparaat moet voldoen aan een van de volgende voorwaarden om te worden geclassificeerd als bedrijfseigendom:
-- Het apparaat moet zijn geregistreerd met een serienummer of IMEI.
+- [Geregistreerd met een serienummer](corporate-identifiers-add.md).
 - Het apparaat moet zijn ingeschreven met behulp van Automatische apparaatinschrijving (voorheen Device Enrollment Program)
 
 

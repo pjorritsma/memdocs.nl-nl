@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/01/2020
+ms.date: 07/20/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 536ad36120a8fb5dc4ad0d16b8f265e56260d461
-ms.sourcegitcommit: 56bb5419c41c2e150ffed0564350123135ea4592
+ms.openlocfilehash: e57cd425ca89fa875b89c73a9eba30cecb7516d7
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82729263"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871913"
 ---
 # <a name="iosipados-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>iOS-/iPadOS-instellingen om te markeren of apparaten wel of niet conform zijn met behulp van Intune
 
@@ -149,7 +149,7 @@ Zie [De toegang tot zakelijke e-mail configureren met e-mailprofielen bij Intune
   U kunt apps beperken door de bundel-id’s toe te voegen aan het beleid. Als de app op een apparaat is geïnstalleerd, wordt het apparaat gemarkeerd als niet-conform.
 
   - **App-naam** - Voer een gebruiksvriendelijke naam in om u te helpen de bundel-id te identificeren.
-  - **App-bundel-id** - Voer de unieke bundel-id in die is toegewezen door de app-provider. Zie [De bundel-id vinden voor een iOS-/iPadOS-app](https://support.microsoft.com/help/4294074/how-to-find-the-bundle-id-for-an-ios-app) (opent een andere Microsoft-website) om de bundel-id te vinden.  
+  - **App-bundel-id** - Voer de unieke bundel-id in die is toegewezen door de app-provider. Zie [Bundle IDs for native iOS and iPadOS apps](https://support.apple.com/guide/mdm/native-ios-and-ipados-app-bundle-ids-mdm90f60c1ce/web) (Bundel-id's voor systeemeigen iOS- en iPadOS-apps) op support.apple.com of neem contact op met de softwareleverancier van de app om de bundel-id te vinden.
 
 ## <a name="next-steps"></a>Volgende stappen
 

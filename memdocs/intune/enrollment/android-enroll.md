@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17f1d045d89df3ad5bb37d85957e872ec6692b7e
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: d8506661c49fa4f9c8481a3caa96883c91e6d8bb
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353493"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461756"
 ---
 # <a name="enroll-android-devices"></a>Android-apparaten inschrijven
 
@@ -33,7 +33,8 @@ Als Intune-beheerder kunt u Android-apparaten op de volgende manieren inschrijve
 - Android Enterprise (biedt een reeks registratie-opties waardoor gebruikers over de meest recente en veilige functies beschikken):
     - [**Apparaten met Android Enterprise-werkprofiel**](android-work-profile-enroll.md): Voor persoonlijke apparaten die zijn gemachtigd voor toegang tot bedrijfsgegevens. Beheerders kunnen werkaccounts, apps en gegevens beheren. Persoonlijke gegevens op het apparaat worden geïsoleerd van bedrijfsgegevens en beheerders hebben geen toegang tot persoonlijke instellingen of gegevens. 
     - [**Toegewezen Android Enterprise-apparaten**](android-kiosk-enroll.md): Voor apparaten in bedrijfseigendom voor eenmalig gebruik, bijvoorbeeld voor digitale ondertekening, het afdrukken van tickets of inventarisbeheer. Beheerders vergrendelen het gebruik van een apparaat voor een beperkt aantal apps en webkoppelingen. Ook wordt voorkomen dat gebruikers andere apps kunnen toevoegen of andere acties op het apparaat kunnen uitvoeren.
-    - [**Volledig beheerde Android Enterprise-apparaten**](android-fully-managed-enroll.md): Voor apparaten in bedrijfseigendom voor één gebruiker, die exclusief worden gebruikt voor werk, niet voor persoonlijk gebruik. Beheerders kunnen het hele apparaat beheren en beleidscontroles afdwingen die niet beschikbaar zijn voor werkprofielen. 
+    - [**Volledig beheerde Android Enterprise-apparaten**](android-fully-managed-enroll.md): Voor apparaten in bedrijfseigendom voor één gebruiker, die exclusief worden gebruikt voor werk, niet voor persoonlijk gebruik. Beheerders kunnen het hele apparaat beheren en beleidscontroles afdwingen die niet beschikbaar zijn voor werkprofielen.
+    - [**Android Enterprise-apparaten in bedrijfseigendom met een werkprofiel**](android-corporate-owned-work-profile-enroll.md): Voor apparaten in bedrijfseigendom met één gebruiker, die zijn bedoeld voor zakelijk en persoonlijk gebruik.
 - [**Android-apparaatbeheerder**](android-enroll-device-administrator.md), waaronder Samsung Knox Standard-apparaten en [Zebra-apparaten](../configuration/android-zebra-mx-overview.md). 
 
 ## <a name="prerequisites"></a>Vereisten

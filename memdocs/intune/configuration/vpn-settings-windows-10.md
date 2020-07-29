@@ -1,11 +1,11 @@
 ---
 title: VPN-instellingen voor Windows 10 in Microsoft Intune - Azure | Microsoft Docs
-description: Meer informatie over alle beschikbare VPN-instellingen in Microsoft Intune, waarvoor ze worden gebruikt en wat ze doen, zoals regels voor netwerkverkeer, voorwaardelijke toegang en DNS- en proxy-instellingen voor Windows 10- en Windows Holographic for Business-apparaten.
+description: Meer informatie over alle beschikbare VPN-instellingen in Microsoft Intune, waarvoor ze worden gebruikt en wat ze doen. Zie de regels voor netwerkverkeer, voorwaardelijke toegang en DNS- en proxy-instellingen voor apparaten met Windows 10 en Windows Holographic for Business.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 06/22/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9fbe28a6585fe9fe5cf7772b559924675ac39a30
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 25950311b5a6936340dbdba01961a5dab6f6ff91
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429477"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461349"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Instellingen voor Windows 10- en Windows Holographic-apparaten om VPN-verbindingen met Intune toe te voegen
 
@@ -65,16 +65,69 @@ Afhankelijk van de instellingen die u kiest, kunnen niet alle waarden worden gec
   - **L2TP**
   - **PPTP**
 
-  Als u een VPN-verbindingstype kiest, wordt u mogelijk ook om de volgende instellingen gevraagd:  
+  Als u een VPN-verbindingstype kiest, wordt u mogelijk ook om de volgende instellingen gevraagd:
+
   - **AlwaysOn**: Met **Inschakelen** wordt automatisch verbinding gemaakt met de VPN-verbinding wanneer het volgende gebeurt:
     - Gebruikers zich aanmelden op hun apparaten
     - Het netwerk op het apparaat wijzigt
     - Het scherm op het apparaat wordt ingeschakeld nadat het was uitgeschakeld
 
-  - **Verificatiemethode**: Selecteer hoe gebruikers zich moeten verifiëren bij de VPN-server. Het gebruik van **certificaten** biedt verbeterde functies, zoals zero-touch, VPN op aanvraag en VPN per app.
+    Als u tunnelverbindingen voor apparaten wilt gebruiken, zoals IKEv2, kunt u deze instelling **Inschakelen**.
+
+  - **Verificatiemethode**: Selecteer hoe gebruikers zich moeten verifiëren bij de VPN-server. Uw opties zijn:
+    - **Gebruikersnaam en wachtwoord**: Gebruikers verplichten hun domeingebruikersnaam en -wachtwoord in te voeren om te verifiëren, zoals `user@contoso.com`, of `contoso\user`.
+    - **Certificaten**: Selecteer een bestaand clientcertificaatprofiel voor gebruikers om de gebruiker te verifiëren. Deze optie biedt verbeterde functies, zoals zero-touch-ervaring, VPN op aanvraag en VPN per app.
+
+      Zie [Certificaten gebruiken voor verificatie](../protect/certificates-configure.md) voor het maken van certificaatprofielen in Intune.
+
+    - **Machinecertificaten** (alleen IKEv2): Selecteer een bestaand clientcertificaatprofiel voor apparaten om het apparaat te verifiëren.
+
+      Als u [Tunnelverbindingen voor apparaten](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/vpn-device-tunnel-config) gebruikt, moet u deze optie selecteren.
+
+      Zie [Certificaten gebruiken voor verificatie](../protect/certificates-configure.md) voor het maken van certificaatprofielen in Intune.
+
+    - **EAP** (alleen IKEv2): Selecteer een bestaand EAP-clientcertificaatprofiel (Extensible Authentication Protocol) om te verifiëren. Voer de verificatieparameters in de instelling **EAP XML-** in.
   - **Referenties onthouden bij elke aanmelding**: Kies ervoor om de verificatiereferenties op te slaan in het cachegeheugen.
   - **Aangepaste XML**: Geef aangepaste XML-opdrachten op waarmee de VPN-verbinding wordt geconfigureerd.
-  - **EAP XML**: Voer EAP XML-opdrachten in waarmee de VPN-verbinding wordt geconfigureerd
+  - **EAP XML**: Voer EAP XML-opdrachten in waarmee de VPN-verbinding wordt geconfigureerd. Zie [Configuratie van EAP](https://docs.microsoft.com/windows/client-management/mdm/eap-configuration) voor meer informatie.
+
+  - **Apparaattunnel** (alleen IKEv2): Met **Inschakelen** wordt het apparaat automatisch met het VPN verbonden zonder tussenkomst of aanmelding van de gebruiker. Deze instelling is van toepassing op pc's die zijn toegevoegd aan Azure Active Directory (AD).
+
+    Als u deze functie wilt gebruiken, moet u het volgende opgeven:
+
+    - De instelling **Verbindingstype** is ingesteld op **IKEv2**.
+    - De instelling **AlwaysOn** is ingesteld op **Inschakelen**.
+    - De instelling **Verificatiemethode** is ingesteld op **Machinecertificaten**.
+
+    Wijs slechts één profiel per apparaat toe waarbij **Apparaattunnel** is ingeschakeld.
+
+  **Parameters voor IKE-beveiligingskoppeling** (alleen IKEv2): Deze cryptografie-instellingen worden gebruikt tijdens de onderhandelingen over IKE-beveiligingskoppelingen (ook wel bekend als `main mode` of `phase 1`) voor IKEv2-verbindingen. Deze instellingen moeten overeenkomen met de VPN-serverinstellingen. Als de instellingen niet overeenkomen, maakt het VPN-profiel geen verbinding.
+
+  - **Versleutelingsalgoritme**: Selecteer het versleutelingsalgoritme dat op de VPN-server wordt gebruikt. Als uw VPN-server bijvoorbeeld AES 128-bits gebruikt, selecteert u **AES-128** in de lijst.
+
+    Wanneer dit is ingesteld op **Niet geconfigureerd**, wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
+
+  - **Algoritme voor integriteitscontrole**: Selecteer het integriteitsalgoritme dat op de VPN-server wordt gebruikt. Als uw VPN-server bijvoorbeeld SHA1-96 gebruikt, selecteert u **SHA1-96** in de lijst.
+
+    Wanneer dit is ingesteld op **Niet geconfigureerd**, wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
+
+  - **Diffie-Hellman-groep**: Selecteer de Diffie-Hellman-berekeningsgroep die op de VPN-server wordt gebruikt. Als uw VPN-server bijvoorbeeld Group2 (1024-bits) gebruikt, selecteert u **2** in de lijst.
+
+    Wanneer dit is ingesteld op **Niet geconfigureerd**, wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
+
+  **Parameters voor onderliggende beveiligingskoppelingen** (alleen IKEv2): Deze cryptografie-instellingen worden gebruikt tijdens de onderhandelingen over onderliggende beveiligingskoppelingen (ook wel bekend als `quick mode` of `phase 2`) voor IKEv2-verbindingen. Deze instellingen moeten overeenkomen met de VPN-serverinstellingen. Als de instellingen niet overeenkomen, maakt het VPN-profiel geen verbinding.
+
+  - **Transformatiealgoritme voor codering**: Selecteer het algoritme dat op de VPN-server wordt gebruikt. Als uw VPN-server bijvoorbeeld AES-CBC 128-bits gebruikt, selecteert u **CBC-AES-128** in de lijst.
+
+    Wanneer dit is ingesteld op **Niet geconfigureerd**, wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
+
+  - **Transformatiealgoritme voor verificatie**: Selecteer het algoritme dat op de VPN-server wordt gebruikt. Als uw VPN-server bijvoorbeeld AES-GCM 128-bits gebruikt, selecteert u **GCM-AES-128** in de lijst.
+
+    Wanneer dit is ingesteld op **Niet geconfigureerd**, wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
+
+  - **Perfect Forward Secrecy-groep (PFS)** : Selecteer de Diffie-Hellman-berekeningsgroep die voor Perfect Forward Secrecy-groep (PFS) wordt gebruikt. Als uw VPN-server bijvoorbeeld Group2 (1024-bits) gebruikt, selecteert u **2** in de lijst.
+
+    Wanneer dit is ingesteld op **Niet geconfigureerd**, wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
 
 ### <a name="pulse-secure-example"></a>Voorbeeld van Pulse Secure
 

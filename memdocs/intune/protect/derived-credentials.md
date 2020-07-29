@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/01/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 038dfccd49b25546b5edddc785c7ee4c86bf83a3
-ms.sourcegitcommit: fb03634b8494903fc6855ad7f86c8694ffada8df
+ms.openlocfilehash: 25d3813d79ec20cc396c3127be6be5371c20247f
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85828989"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461179"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Afgeleide referenties gebruiken in Microsoft Intune
 
-*Dit artikel is van toepassing op iOS/iPadOS en volledig beheerde Android Enterprise-apparaten met versie 7.0 en hoger*
+*Dit artikel is van toepassing op iOS/iPadOS en volledig beheerde Android Enterprise-apparaten met versie 7.0 en hoger, en apparaten met Windows*
 
 In een omgeving waarin smartcards vereist zijn voor verificatie of versleuteling en ondertekening, kunt u nu Intune gebruiken om mobiele apparaten in te richten met een certificaat dat is afgeleid van de smartcard van een gebruiker. Dit certificaat wordt een *afgeleide referentie* genoemd. Intune [ondersteunt diverse verleners van afgeleide referenties](#supported-issuers), maar u kunt per tenant slechts één verlener tegelijk gebruiken.
 
@@ -37,16 +37,19 @@ Afgeleide referenties zijn een implementatie van de NIST-richtlijnen (National I
 - De Intune-beheerder configureert de tenant zodanig dat deze werkt met een ondersteunde verlener van afgeleide referenties. U hoeft geen specifieke Intune-instellingen te configureren in het systeem van de verlener van afgeleide referenties.
 - De Intune-beheerder geeft **Afgeleide referentie** op als de *Verificatiemethode* voor de volgende objecten:
   
+  **Voor volledig beheerde Android Enterprise-apparaten**:
+  - Algemene profieltypen, zoals Wi-Fi en VPN
+  - App-verificatie
+
   **Voor iOS/iPadOS**:
   - Algemene profieltypen, zoals Wi-Fi, VPN en E-mail, inclusief de systeemeigen mail-app van iOS/iPadOS
   - App-verificatie
   - S/MIME-ondertekening en -versleuteling
 
-  **Voor volledig beheerde Android Enterprise-apparaten**:
+  **Voor Windows**:
   - Algemene profieltypen, zoals Wi-Fi en VPN
-  - App-verificatie
   
-- Gebruikers verkrijgen een afgeleide referentie door hun smartcard op een computer te gebruiken om zich te verifiëren bij de verlener van afgeleide referenties. De verlener verleent vervolgens een van de smartcard afgeleid certificaat aan het mobiele apparaat.
+- Voor Android en iOS/iPadOS verkrijgen gebruikers een afgeleide referentie door hun smartcard op een computer te gebruiken om zich te verifiëren bij de verlener van afgeleide referenties. De verlener verleent vervolgens een van de smartcard afgeleid certificaat aan het mobiele apparaat. Voor Windows installeren gebruikers de app vanuit de afgeleide referentieprovider, die het certificaat op het apparaat installeert voor later gebruik.
 - Nadat de afgeleide referentie is ontvangen op het apparaat, wordt deze gebruikt voor verificatie en voor S/MIME-ondertekening en -versleuteling wanneer de afgeleide referentie vereist is volgens profielen voor toegang tot apps of resources.
 
 ## <a name="prerequisites"></a>Vereisten
@@ -59,6 +62,8 @@ Intune biedt ondersteuning voor afgeleide referenties op de volgende platformen:
 
 - iOS/iPadOS
 - Volledig beheerde Android Enterprise-apparaten (versie 7.0 en hoger)
+- Android Enterprise - Werkprofiel in bedrijfseigendom
+- Windows 10 en hoger
 
 ### <a name="supported-issuers"></a>Ondersteunde verleners
 
@@ -84,7 +89,9 @@ Plan de implementatie van de Intune-bedrijfsportal-app op apparaten die worden i
 
 ## <a name="plan-for-derived-credentials"></a>Plannen voor afgeleide referenties
 
-Verdiep u in de volgende aandachtspunten voordat u een verlener van afgeleide referenties instelt.
+Verdiep u in de volgende aandachtspunten voordat u een verlener van afgeleide referenties instelt voor Android en iOS/iPadOS.
+
+Zie voor Windows-apparaten [Afgeleide referenties voor Windows](#derived-credentials-for-windows) verderop in dit artikel.
 
 ### <a name="1-review-the-documentation-for-your-chosen-derived-credential-issuer"></a>1) Raadpleeg de documentatie voor de door u gekozen verlener van afgeleide referenties
 
@@ -274,7 +281,7 @@ Afgeleide referenties gebruiken voor verificatie op basis van certificaten voor 
    - **Naam**: Voer een beschrijvende naam in voor het profiel. Geef uw profielen een naam zodat u ze later eenvoudig kunt identificeren. Een goede profielnaam is bijvoorbeeld **Afgeleide referentie voor het profiel van Android-apparaten**.
    - **Beschrijving**: Voer een beschrijving in met een overzicht van de instelling en eventuele andere belangrijke details.
    - **Platform**: Selecteer **Android Enterprise**.
-   - **Profieltype**: Selecteer onder *Alleen apparaateigenaar* de optie **Afgeleide referentie**.
+   - **Profieltype**: Selecteer onder *Volledig beheerd, toegewezen werkprofiel in bedrijfseigendom* **Afgeleide referentie**.
 
 4. Selecteer **OK** om uw wijzigingen op te slaan.
 5. Wanneer u klaar bent, selecteert u **OK** > **Maken** om het Intune-profiel te maken. Wanneer het profiel is gemaakt, wordt dit weergegeven in de lijst **Apparaten - Configuratieprofielen**.
@@ -282,9 +289,29 @@ Afgeleide referenties gebruiken voor verificatie op basis van certificaten voor 
 
 Gebruikers ontvangen de app- of e-mailmelding, afhankelijk van de instellingen die u hebt opgegeven bij het instellen van de verlener van afgeleide referenties. Via de melding wordt de gebruiker geïnstrueerd de bedrijfsportal te starten zodat het beleid voor afgeleide referenties kan worden verwerkt.
 
+## <a name="derived-credentials-for-windows"></a>Afgeleide referenties voor Windows
+
+U kunt afgeleide certificaten gebruiken als verificatiemethode voor Wi-Fi- en VPN-profielen op Windows-apparaten. Dezelfde providers die worden ondersteund door Android-en iOS/iPadOS-apparaten worden ondersteund als providers voor Windows:
+
+- **DISA Purebred**
+- **Entrust Datacard**
+- **Intercede**
+
+Bij Windows werken gebruikers niet via een registratieproces via een smartcard om een certificaat te verkrijgen dat kan worden gebruikt als afgeleide referentie. In plaats daarvan moeten gebruikers de app voor Windows installeren. Deze krijgen ze van de afgeleide referentieprovider. Als u afgeleide referenties bij Windows wilt gebruiken, voert u de volgende configuraties uit:
+
+1. **Installeer de app van de afgeleide referentieproviders op het Windows-apparaat**.
+
+   Wanneer u de Windows-app vanuit een afgeleide referentieprovider op een Windows-apparaat installeert, wordt het afgeleide certificaat toegevoegd aan het Windows-certificaatarchief van dat apparaat. Nadat het certificaat aan het apparaat is toegevoegd, kan dit worden gebruikt voor een verificatiemethode via afgeleide referentie.
+
+   Nadat u de app hebt opgehaald van de provider van uw keuze, kan de app worden geïmplementeerd in de map Gebruikers of rechtstreeks worden geïnstalleerd door de gebruiker van het apparaat.
+
+2. **Configureer Wi-Fi- en VPN-profielen om afgeleide referenties te gebruiken als verificatiemethode**.
+
+   Selecteer bij het configureren van een Windows-profiel voor Wi-Fi of VPN **Afgeleide referentie** als *Verificatiemethode*. Met deze configuratie gebruikt het profiel het certificaat dat op het apparaat is geïnstalleerd toen de app van de provider werd geïnstalleerd.
+
 ## <a name="renew-a-derived-credential"></a>Een afgeleide referentie vernieuwen
 
-Afgeleide referenties kunnen niet worden verlengd of vernieuwd. In plaats daarvan moeten gebruikers de werkstroom voor referentieaanvragen gebruiken om een nieuwe afgeleide referentie voor hun apparaat aan te vragen.
+Afgeleide referenties voor Android-of iOS/iPadOS-apparaten kunnen niet worden uitgebreid of verlengd. In plaats daarvan moeten gebruikers de werkstroom voor referentieaanvragen gebruiken om een nieuwe afgeleide referentie voor hun apparaat aan te vragen. Raadpleeg voor Windows-apparaten de documentatie voor de app afkomstig van uw afgeleide referentieprovider.
 
 Als u een of meer methoden als **Meldingstype**configureert, krijgen gebruikers automatisch een Intune-melding wanneer de huidige afgeleide referentie tachtig procent van de levensduur heeft bereikt. Via de melding worden gebruikers geïnstrueerd naar het referentieaanvraagproces te gaan om een nieuwe afgeleide referentie te verkrijgen.
 

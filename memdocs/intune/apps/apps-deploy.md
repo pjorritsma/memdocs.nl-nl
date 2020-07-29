@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b80527921172201dc86c5f3241e9978525afa083
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 665e06e6aca0a4ba4f71147325eb587b1b8b4d40
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83984819"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461535"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Apps toewijzen aan groepen met Microsoft Intune
 
@@ -36,7 +36,7 @@ Nadat u [een app hebt toegevoegd](apps-add.md) aan Microsoft Intune, kunt u de a
 
 In de volgende tabellen worden de verschillende opties vermeld voor het toewijzen van apps aan gebruikers en apparaten:
 
-|   | Apparaten die zijn ingeschreven met Intune | Apparaten die niet zijn ingeschreven met Intune |
+| Optie  | Apparaten die zijn ingeschreven met Intune | Apparaten die niet zijn ingeschreven met Intune |
 |-------------------------------------------------------------------------------------------|------------------------------|----------------------------------|
 | Toewijzen aan gebruikers | Ja | Ja |
 | Toewijzen aan apparaten | Ja | Nee |
@@ -122,7 +122,7 @@ Voor Android-apparaten in een niet-ingeschreven APP-WE-implementatiescenario (Ap
 
 Stappen voor het toewijzen van beheerde Google Play-apps aan niet-beheerde apparaten:
 
-1. Verbind uw Intune-tenant met de beheerde Google Play Store. Als u dit al hebt gedaan om het Android Enterprise-werkprofiel, of toegewezen of volledig beheerde Android Enterprise-apparaten te beheren, hoeft u dit niet opnieuw te doen.
+1. Verbind uw Intune-tenant met de beheerde Google Play Store. Als u dit al hebt gedaan om apparaten met een Android Enterprise-werkprofiel of toegewezen, volledig beheerd werkprofiel in bedrijfseigendom te beheren, hoeft u dit niet opnieuw te doen.
 2. Apps vanuit de beheerde Google Play Store toevoegen aan uw Intune-console.
 3. Toon beheerde Google Play-apps aan de gewenste gebruikersgroep als **Beschikbaar met of zonder inschrijving**. De instellingen **Vereist** en **Verwijderen** voor app-targeting worden niet ondersteund voor niet-ingeschreven apparaten.
 4. Een beveiligingsbeleid voor apps toewijzen aan de gebruikersgroep.

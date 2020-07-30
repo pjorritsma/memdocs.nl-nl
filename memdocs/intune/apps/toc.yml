@@ -149,7 +149,7 @@
               href: manage-microsoft-teams.md
             - name: Google Chrome configureren voor Android
               href: apps-configure-chrome-android.md
-            - name: Een VPN voor Android Enterprise configureren
+            - name: VPN en VPN per app in Android Enterprise
               href: app-configuration-vpn-ae.md
         - name: Apps en boeken die zijn gekocht via het volume-aankoopprogramma
           items:

@@ -2,7 +2,7 @@
 title: BitLocker-beleid implementeren
 titleSuffix: Configuration Manager
 description: De BitLocker-beheer agent implementeren voor het Configuration Manager van clients en de herstel service naar beheer punten
-ms.date: 04/01/2020
+ms.date: 07/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4a050ab523730adbfdd2ecf541557fabbf95081b
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 786a7a528c027ab46237dac92378224705b0e026
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715693"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262826"
 ---
 # <a name="deploy-bitlocker-management"></a>BitLocker-beleid implementeren
 
@@ -179,7 +179,13 @@ Als u momenteel micro soft BitLocker Administration and monitoring (MBAM) gebrui
 
 - De instellingen voor BitLocker-beheer zijn volledig compatibel met instellingen voor groeps beleid voor MBAM. Als apparaten zowel instellingen voor groeps beleid als Configuration Manager beleid ontvangen, moet u deze configureren om te vergelijken.
 
+  > [!NOTE]
+  > Als er een groeps beleids instelling bestaat voor zelfstandige MBAM, wordt de equivalente instelling die wordt geprobeerd door Configuration Manager, overschreven. Zelfstandige MBAM maakt gebruik van groeps beleid van domein, terwijl Configuration Manager lokaal beleid instelt voor BitLocker-beheer. Domein beleid overschrijft de lokale Configuration Manager BitLocker-beheer beleidsregels. Als het groeps beleid van de zelfstandige MBAM niet overeenkomt met het Configuration Manager beleid, mislukt Configuration Manager BitLocker-beheer. Als een domein groeps beleid bijvoorbeeld de zelfstandige MBAM-server voor sleutel herstel Services instelt, kan Configuration Manager BitLocker-beheer niet dezelfde instelling instellen voor het beheer punt. Dit gedrag zorgt ervoor dat clients hun herstel sleutels niet rapporteren aan de Configuration Manager BitLocker-beheer sleutel herstel service op het beheer punt.
+
 - Configuration Manager implementeert niet alle groeps beleids instellingen voor MBAM. Als u aanvullende instellingen in groeps beleid configureert, voldoet de BitLocker-beheer agent op Configuration Manager-clients over deze instellingen.
+
+  > [!IMPORTANT]
+  > Stel geen groeps beleid in voor een instelling die door Configuration Manager BitLocker-beheer al is opgegeven. Stel alleen groeps beleidsregels in voor instellingen die momenteel niet bestaan in Configuration Manager BitLocker-beheer. Configuration Manager versie 2002 heeft pariteit van functies met zelfstandige MBAM. Met Configuration Manager versie 2002 en hoger mag in de meeste gevallen geen reden zijn voor het instellen van een domein groeps beleid voor het configureren van BitLocker-beleid. Vermijd het gebruik van groeps beleid voor BitLocker om conflicten en problemen te voor komen. Configureer alle instellingen via Configuration Manager beleid voor het beheer van BitLocker.
 
 ### <a name="tpm-password-hash"></a>TPM-wachtwoord-hash
 

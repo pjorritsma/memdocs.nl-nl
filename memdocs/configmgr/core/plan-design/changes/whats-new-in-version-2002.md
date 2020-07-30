@@ -2,7 +2,7 @@
 title: Wat is er nieuw in versie 2002
 titleSuffix: Configuration Manager
 description: Krijg informatie over wijzigingen en nieuwe mogelijkheden die zijn geïntroduceerd in versie 2002 van Configuration Manager current branch.
-ms.date: 07/15/2020
+ms.date: 07/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3c5107ffe26c72852cbc1dbaa15eb19a990c7939
-ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
+ms.openlocfilehash: 5b2fcaeb9cb5bd4ce3e41aed8e1bafcc7f76bbb4
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86422845"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262112"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 2002 van Configuration Manager current branch
 
@@ -434,16 +434,17 @@ Afgezien van nieuwe functies bevat deze release ook aanvullende wijzigingen, zoa
 
 Het volgende update pakket (4560496) is beschikbaar in de-console vanaf 15 juli 2020: [Update pakket voor micro soft Endpoint Configuration Manager versie 2002](https://support.microsoft.com/help/4560496).
 
-<!--
-### Hotfixes
+### <a name="hotfixes"></a>Hotfixes
 
-The following additional hotfixes are available to address specific issues:
+De volgende aanvullende hotfixes zijn beschikbaar om specifieke problemen op te lossen:
 
-| ID | Title | Date | In-console |
+| Id | Titel | Date | In-console |
 |---------|---------|---------|---------|
-| [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune connector certificate does not renew in Configuration Manager | 18 January 2019 | Yes |
+| [4575339](https://support.microsoft.com/help/4575339) | Apparaten worden twee keer weer gegeven in micro soft endpoint Configuration Manager beheer centrum | 23 juli 2020 | Nee |
+| [4575774](https://support.microsoft.com/help/4575774) | De cmdlet New-CMTSStepPrestartCheck mislukt in Configuration Manager, versie 2002 | 24 juli 2020 | Nee |
 
-> [!NOTE]  
+<!--
+> [!NOTE]
 > Starting in version 1902, in-console hotfixes now have supersedence relationships. For more information, see [Supersedence for in-console hotfixes](../../servers/manage/updates.md#bkmk_supersede).
 -->
 

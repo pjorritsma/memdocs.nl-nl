@@ -2,7 +2,7 @@
 title: Clientinstellingen
 titleSuffix: Configuration Manager
 description: Meer informatie over de standaard-en aangepaste instellingen voor het beheren van client gedrag
-ms.date: 04/21/2020
+ms.date: 07/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 21e837d5d97c42f095159a87e015f181c5e53419
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: 9f6bb29930a6e2d4faf4ffdd141d3c9cd1831305
+ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347165"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87365505"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Over client instellingen in Configuration Manager
 
@@ -329,6 +329,11 @@ Als u gebruikers meer tijd wilt geven om de vereiste implementaties van software
 
 Stel een respijt periode van 0 tot 120 uur in. Gebruik deze instelling samen met de implementatie-eigenschap **vertraging afdwingen van deze implementatie op basis van gebruikers voorkeuren**. Zie [toepassingen implementeren](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period)voor meer informatie.
 
+
+### <a name="enable-endpoint-analytics-data-collection"></a>Endpoint Analytics-gegevens verzameling inschakelen
+
+Hiermee wordt het verzamelen van lokale gegevens op de client ingeschakeld voor upload naar endpoint Analytics. Ingesteld op **Ja** om apparaten te configureren voor het verzamelen van lokale gegevens. Ingesteld op **Nee** om het verzamelen van lokale gegevens uit te scha kelen. Zie [Configuration Manager apparaten inschrijven bij Endpoint Analytics](../../../../analytics/enroll-configmgr.md)voor meer informatie.
+
 ## <a name="computer-restart"></a>Computer opnieuw opstarten
 
 Zie meldingen over het [opnieuw opstarten van apparaten](device-restart-notifications.md)voor meer informatie over deze instellingen.<!-- 7182335 -->
@@ -539,7 +544,7 @@ Configureer vervolgens de volgende extra instellingen, indien nodig:
 
 
 
-## <a name="remote-tools"></a>Externe hulpprogram ma's  
+## <a name="remote-tools"></a>Externe hulpprogramma's  
 
 ### <a name="enable-remote-control-on-clients-and-firewall-exception-profiles"></a>Beheer op afstand inschakelen op clients en firewall-uitzonderings profielen
 
@@ -919,15 +924,15 @@ Vanaf Configuration Manager versie 1902 kunt u de prioriteit aanpassen waarmee c
 
 Deze client instelling biedt de volgende opties:
 
-- **Niet geconfigureerd**: Configuration Manager de instelling niet wijzigt. Beheerders kunnen hun eigen setupconfig. ini-bestand vooraf faseren. Dit is de standaardwaarde.
+- **Niet geconfigureerd**: Configuration Manager de instelling niet wijzigt. Beheerders kunnen hun eigen setupconfig.ini-bestand vooraf faseren. Dit is de standaardwaarde.
 
 - **Normaal**: Windows Setup maakt meer systeem bronnen en updates sneller. Er wordt meer processor tijd gebruikt, waardoor de totale installatie tijd korter is, maar de storing van de gebruiker langer is.  
 
-    - Hiermee configureert u het setupconfig. ini-bestand op het apparaat met de `/Priority Normal` [Windows Setup-opdracht regel optie](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
+    - Hiermee configureert u het setupconfig.ini-bestand op het apparaat met de `/Priority Normal` [Windows Setup-opdracht regel optie](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
 
 - **Laag**: u kunt op het apparaat blijven werken terwijl het op de achtergrond wordt gedownload en bijgewerkt. De totale installatie tijd is langer, maar de onderbreking van de gebruiker is korter. Mogelijk moet u de maximale uitvoerings tijd van de update verhogen om een time-out te voor komen wanneer u deze optie gebruikt.  
 
-    - Hiermee verwijdert u de `/Priority` [Windows Setup-opdracht regel optie](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) uit het bestand setupconfig. ini.
+    - Hiermee verwijdert u de `/Priority` [Windows Setup-opdracht regel optie](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) uit het setupconfig.ini-bestand.
 
 
 ### <a name="enable-third-party-software-updates"></a>Updates van software van derden inschakelen

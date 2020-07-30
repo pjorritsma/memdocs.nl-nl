@@ -2,7 +2,7 @@
 title: Community-hub en GitHub
 titleSuffix: Configuration Manager
 description: Community hub inschakelen en gebruiken in Configuration Manager
-ms.date: 07/10/2020
+ms.date: 07/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 88cead9a-64fe-471e-b57c-81707cefe46c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8aadc391c5c0b259ab1a1736f3654f25b98dbae0
-ms.sourcegitcommit: aa876a9b5aa9437ae59a68e1cc6355d7070f89f4
+ms.openlocfilehash: c0b812fa3b373d6bd5bd2bebed8b1540ceb7bdd6
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86236406"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262078"
 ---
 # <a name="community-hub-and-github"></a>Community-hub en GitHub
 <!--3555935, 3555936-->
@@ -44,10 +44,7 @@ Community hub ondersteunt de volgende objecten:
       - Windows Server wordt niet ondersteund, dus de Configuration Manager-console moet worden geïnstalleerd op een Windows 10-apparaat dat gescheiden is van de site server.
    - Het aangemelde gebruikers account kan niet het ingebouwde Administrator account zijn
 
-- Als u rapporten wilt downloaden, moet u de optie **Configuration Manager gegenereerde certificaten gebruiken voor HTTP-site systemen** op de site die u in importeert. Zie [Enhanced http](/sccm/core/plan-design/hierarchy/enhanced-http)(Engelstalig) voor meer informatie.
-   1. Ga naar **beheer**  >  **site configuratie**  >  **sites**.
-   1. Selecteer de site en kies **Eigenschappen** in het lint.
-   1. Selecteer op het tabblad **communicatie beveiliging** de optie voor het **gebruik van door Configuration Manager gegenereerde certificaten voor http-site systemen**.
+- De [beheer service](../../../develop/adminservice/set-up.md) in Configuration Manager moet worden ingesteld en werkt.
 
 - Als uw organisatie netwerk communicatie met Internet beperkt met behulp van een firewall of proxy apparaat, moet u de Configuration Manager-console toestaan om toegang te krijgen tot internet-eind punten. Zie [vereisten voor Internet toegang](../../plan-design/network/internet-endpoints.md#community-hub)voor meer informatie.
 

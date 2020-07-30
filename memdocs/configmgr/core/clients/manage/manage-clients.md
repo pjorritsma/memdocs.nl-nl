@@ -10,12 +10,12 @@ ms.assetid: 3986a992-c175-4b6f-922e-fc561e3d7cb7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7b9111e3be82424425561e0a664fee955d73ee63
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: b6d1ee82e116a6d4375e37ccca84c8b35707f8e1
+ms.sourcegitcommit: e8076576f5c0ea7e72358d233782f8c38c184c8f
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270817"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87334586"
 ---
 # <a name="how-to-manage-clients-in-configuration-manager"></a>Clients beheren in Configuration Manager
 
@@ -249,22 +249,24 @@ De standaard locatie voor de Configuration Manager-client cache is `%windir%\ccm
 
 ### <a name="about-the-client-cache"></a>Over de client cache  
 
-De Configuration Manager-client downloadt de inhoud voor vereiste software kort nadat deze de implementatie heeft ontvangen, maar wacht tot de geplande implementatie tijd. Op het geplande tijdstip controleert de Configuration Manager-client of de inhoud beschikbaar is in de cache. Als de inhoud in de cache is opgeslagen en de juiste versie is, gebruikt de client de inhoud in de cache. Wanneer de vereiste versie van de inhoud verandert, of als de client de inhoud verwijdert om ruimte te maken voor een ander pakket, wordt de inhoud opnieuw door de client naar de cache gedownload.  
+De Configuration Manager-client downloadt de inhoud voor vereiste software kort na de beschik bare tijd van de implementatie, maar wacht tot de geplande tijd van de implementatie. Op het geplande tijdstip controleert de Configuration Manager-client of de inhoud beschikbaar is in de cache. Als de inhoud in de cache is opgeslagen en de juiste versie is, gebruikt de client de inhoud in de cache. Wanneer de vereiste versie van de inhoud verandert, of als de client de inhoud verwijdert om ruimte te maken voor een ander pakket, wordt de inhoud opnieuw door de client naar de cache gedownload.  
 
 Als de client inhoud probeert te downloaden voor een programma of toepassing die groter is dan de grootte van de cache, mislukt de implementatie vanwege onvoldoende cache grootte. De client genereert status bericht 10050 voor onvoldoende cache grootte. Als u later de cache grootte verg root, is dit het resultaat:  
 
 - Voor een vereist programma: de client probeert de inhoud niet automatisch opnieuw te downloaden. Implementeer het pakket en programma opnieuw naar de client.  
 - Voor een vereiste toepassing: de client probeert automatisch de inhoud te downloaden wanneer het client beleid wordt gedownload.  
 
-Als de client een pakket probeert te downloaden dat kleiner is dan de grootte van de cache, maar de cache vol is, blijven alle *vereiste* implementaties opnieuw proberen tot:
+Als de client inhoud probeert te downloaden die kleiner is dan de grootte van de cache, maar de cache vol is, blijven alle *vereiste* implementaties opnieuw proberen tot:
 
 - De cache ruimte is beschikbaar
 - Time-out bij het downloaden
 - De limiet voor het aantal pogingen is bereikt
 
-Als u later de cache grootte verg root, probeert de client het pakket opnieuw te downloaden tijdens het volgende interval voor nieuwe pogingen. De client probeert de inhoud elke vier uur te downloaden tot deze 18 keer wordt geprobeerd.  
+Als u later de cache grootte verg root, probeert de client de inhoud opnieuw te downloaden tijdens het volgende interval voor nieuwe pogingen. De client probeert de inhoud elke vier uur te downloaden tot deze 18 keer wordt geprobeerd.  
 
-De inhoud in de cache wordt niet automatisch verwijderd. Het blijft in de cache voor ten minste één dag nadat de client die inhoud gebruikt. Als u de pakket eigenschappen configureert met de optie om inhoud op te slaan in de client cache, wordt deze niet automatisch verwijderd door de client. Als de cache ruimte wordt gebruikt door pakketten die in de afgelopen 24 uur zijn gedownload en de client nieuwe pakketten moet downloaden, verg root u de cache grootte of kiest u de optie voor het verwijderen van blijvende cache-inhoud.  
+De inhoud in de cache wordt niet automatisch verwijderd. Het blijft in de cache voor ten minste één dag nadat de client die inhoud gebruikt. Als u de inhoud configureert met de optie om inhoud op te slaan in de client cache, wordt deze niet automatisch verwijderd door de client. Als de cache ruimte wordt gebruikt door inhoud die in de afgelopen 24 uur is gedownload en de client nieuwe inhoud moet downloaden, verg root u de cache grootte of kiest u de optie voor het verwijderen van blijvende cache-inhoud.
+
+Alleen voor toepassingen, als de inhoud voor een gerelateerde implementatie momenteel in de cache bestaat, downloadt de client alleen nieuwe of gewijzigde bestanden. Gerelateerde implementaties omvatten die voor oudere revisies van hetzelfde implementatie type en vervangen toepassingen.
 
 Gebruik de volgende procedures om de clientcache te configureren tijdens de handmatige clientinstallatie of nadat de client is geïnstalleerd.  
 
@@ -283,7 +285,7 @@ Voer de opdracht CCMSetup.exe uit vanaf de installatiebronlocatie en geef de vol
     > [!NOTE]
     > Gebruik de instellingen voor de cache grootte die beschikbaar zijn in **client instellingen** in de Configuration Manager-console in plaats van SMSCACHESIZE. Zie [client cache-instellingen](../deploy/about-client-settings.md#client-cache-settings)voor meer informatie.
 
-Zie [over eigenschappen van client installatie](../deploy/about-client-installation-properties.md)voor meer informatie over het gebruik van deze opdracht regel eigenschappen voor CCMSetup. exe.
+Zie [over eigenschappen van client installatie](../deploy/about-client-installation-properties.md)voor meer informatie over het gebruik van deze opdracht regel eigenschappen voor CCMSetup.exe.
 
 ### <a name="configure-the-cache-during-client-push-installation"></a>De cache configureren tijdens de Push-client installatie  
 
@@ -304,13 +306,13 @@ Zie [over eigenschappen van client installatie](../deploy/about-client-installat
      > [!NOTE]
      > Gebruik de instellingen voor de cache grootte die beschikbaar zijn in **client instellingen** in de Configuration Manager-console in plaats van SMSCACHESIZE. Zie [client cache-instellingen](../deploy/about-client-settings.md#client-cache-settings)voor meer informatie.
 
-     Zie [over eigenschappen van client installatie](../deploy/about-client-installation-properties.md)voor meer informatie over het gebruik van deze opdracht regel eigenschappen voor CCMSetup. exe.  
+     Zie [over eigenschappen van client installatie](../deploy/about-client-installation-properties.md)voor meer informatie over het gebruik van deze opdracht regel eigenschappen voor CCMSetup.exe.  
 
 ### <a name="configure-the-cache-on-the-client-computer"></a>De cache op de client computer configureren  
 
 1. Open op de client computer het onderdeel **Configuration Manager** van het configuratie scherm.  
 
-2. Ga naar het tabblad **cache** . Stel de ruimte-en locatie-eigenschappen in. De standaard locatie is `%windir%\ccmcache` .  
+2. Ga naar het tabblad **cache** . Stel de ruimte-en locatie-eigenschappen in. De standaardlocatie is `%windir%\ccmcache`.  
 
 3. Als u de bestanden in de cachemap wilt verwijderen, kiest u **bestanden verwijderen**.  
 
@@ -321,12 +323,12 @@ Pas de grootte van de client cache aan zonder de client opnieuw te hoeven instal
 
 ## <a name="uninstall-the-client"></a><a name="BKMK_UninstalClient"></a>De client verwijderen
 
-U kunt de Configuration Manager-client software van een computer verwijderen door **CCMSetup. exe** te gebruiken met de eigenschap **/Uninstall** . Voer CCMSetup. exe op een afzonderlijke computer uit vanaf de opdracht prompt of implementeer een pakket om de client te verwijderen voor een verzameling computers.  
+U kunt de Configuration Manager-client software van een computer verwijderen door **CCMSetup.exe** te gebruiken met de eigenschap **/Uninstall** . Voer CCMSetup.exe uit op een afzonderlijke computer vanaf de opdracht prompt of implementeer een pakket om de client te verwijderen voor een verzameling computers.  
 
 > [!NOTE]  
 > U kunt de Configuration Manager-client niet verwijderen van een mobiel apparaat. Als u de Configuration Manager-client van een mobiel apparaat moet verwijderen, moet u het apparaat wissen, waardoor alle gegevens op het mobiele apparaat worden verwijderd.  
 
-1. Open een Windows-opdracht prompt als beheerder. Wijzig de map in de locatie waarin CCMSetup. exe zich bevindt, bijvoorbeeld:`cd %windir%\ccmsetup`
+1. Open een Windows-opdracht prompt als beheerder. Wijzig de map in de locatie waar CCMSetup.exe zich bevindt, bijvoorbeeld:`cd %windir%\ccmsetup`
 
 2. Voer de volgende opdracht uit:`CCMSetup.exe /uninstall`
 

@@ -10,12 +10,12 @@ ms.assetid: 4deac022-e397-4f1f-bc0a-cea6c6c6368d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1a6ec98bd350eb0ac8643254f64a9480f156bb13
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 79b4119a12826596fcc91fa1b4ead4e151e2ddd8
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86239756"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262095"
 ---
 # <a name="enhanced-http"></a>Verbeterde HTTP
 
@@ -53,10 +53,10 @@ De volgende scenario's profiteren van deze verbeteringen:
 ### <a name="scenario-1-client-to-management-point"></a><a name="bkmk_scenario1"></a>Scenario 1: client naar beheer punt
 
 <!--1356889-->
-[Apparaten die zijn toegevoegd aan Azure Active Directory (Azure AD)](/azure/active-directory/devices/concept-azure-ad-join) kunnen communiceren met een beheer punt dat is geconfigureerd voor http. De site server genereert een certificaat voor het beheer punt zodat het kan communiceren via een beveiligd kanaal.
+Apparaten en apparaten van [Azure Active Directory (Azure AD) die zijn toegevoegd](/azure/active-directory/devices/concept-azure-ad-join) aan een [Configuration Manager uitgegeven token](../../clients/deploy/deploy-clients-cmg-token.md) kunnen communiceren met een beheer punt dat is geconfigureerd voor http als u Enhanced http voor de site inschakelt. Als verbeterde HTTP-functionaliteit is ingeschakeld, genereert de site server een certificaat voor het beheer punt zodat het kan communiceren via een beveiligd kanaal.
 
 > [!Note]  
-> Dit gedrag is gewijzigd ten opzichte van Configuration Manager 1802 versie van de huidige vertakking, waarvoor een HTTPS-ingeschakeld beheer punt is vereist voor Azure AD-gekoppelde clients die communiceren via een Cloud beheer gateway. Zie [beheer punt voor HTTPS inschakelen](../../clients/manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_mphttps)voor meer informatie.  
+> Voor dit scenario is geen gebruik te maken van een beheer punt waarvoor HTTPS is ingeschakeld, maar het wordt wel ondersteund als alternatief voor het gebruik van verbeterde HTTP. Zie voor meer informatie over het gebruik van een HTTPS-beheer punt [beheer punt inschakelen voor HTTPS](../../clients/manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_mphttps).  
 
 ### <a name="scenario-2-client-to-distribution-point"></a><a name="bkmk_scenario2"></a>Scenario 2: client naar distributie punt
 

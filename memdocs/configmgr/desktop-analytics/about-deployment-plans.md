@@ -2,7 +2,7 @@
 title: Implementatie plannen in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Meer informatie over implementatie plannen in Desktop Analytics.
-ms.date: 05/11/2020
+ms.date: 07/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: ccc325ac4b8e02142a1442862ad661a77b0561f2
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: acaa7c8a906edd78f0c54c5735c97c55434d848b
+ms.sourcegitcommit: 7ee69b207261ffc282e535f793a536540d160557
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268484"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87400712"
 ---
 # <a name="about-deployment-plans-in-desktop-analytics"></a>Implementatie plannen in Desktop Analytics
 
@@ -47,6 +47,8 @@ Als onderdeel van uw implementatie plan voert u de volgende acties uit:
 Standaard worden de gegevens van het implementatie plan door Desktop Analytics dagelijks vernieuwd. Alle wijzigingen die u aanbrengt in een implementatie plan, zoals het toewijzen van belang aan een app of het kiezen van een apparaat dat in een pilot moet worden meegenomen, duurt Maxi maal 24 uur om te verwerken. U kunt dit proces versnellen door een gegevens vernieuwing op aanvraag in te dienen. Zie [Veelgestelde vragen over desktop Analytics](faq.md#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal)voor meer informatie.  
 
 Nadat u de verbinding met Desktop Analytics hebt gemaakt met Configuration Manager, selecteert u uw verzamelingen in de implementatie plannen. Met deze integratie kunt u Windows vervolgens implementeren op een verzameling op basis van de gegevens van de Desktop Analytics.
+
+Implementatie plannen bieden ondersteuning voor de drie meest recente versies van Windows 10. Met Desktop Analytics wordt binnen 45 dagen ondersteuning toegevoegd voor een nieuwe Windows 10-versie. Op dat moment wordt de oudste versie ook door de service verwijderd. U kunt geen implementatie plannen gebruiken die gericht zijn op de oudste versie. Als u doorlopende implementatie plannen hebt die gericht zijn op de oudste versie die wordt ondersteund in Desktop Analytics, voltooit u de implementatie binnen 45 dagen nadat een nieuwe Windows 10-versie beschikbaar is.
 
 ## <a name="readiness-rules"></a>Gereedheids regels
 

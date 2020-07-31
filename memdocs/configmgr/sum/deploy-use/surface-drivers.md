@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: e9f9f4e6-5b4f-4b8f-94d6-db9b2b239113
-ms.openlocfilehash: 04793a053e85be051ce9ffafd2f15d274cf166f0
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: f276db618a2e67832ffa5575622e00eea02c7422
+ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84973074"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87438616"
 ---
 # <a name="manage-surface-drivers-with-configuration-manager"></a>Surface-Stuur Programma's beheren met Configuration Manager
 
@@ -138,7 +138,7 @@ Als u wilt controleren of het software-update punt correct is geconfigureerd, ge
 
 ##  <a name="frequently-asked-questions-faq"></a><a name="bkmk_faq"></a>Veelgestelde vragen
 
-### <a name="after-i-follow-the-steps-in-this-article-my-surface-drivers-are-still-not-synchronized-why"></a>Nadat ik de stappen in dit artikel heb gevolgd, worden de Surface-Stuur Programma's nog steeds niet gesynchroniseerd. Hoe kan dat?
+### <a name="after-i-follow-the-steps-in-this-article-my-surface-drivers-are-still-not-synchronized-why"></a>Nadat ik de stappen in dit artikel heb gevolgd, worden de Surface-Stuur Programma's nog steeds niet gesynchroniseerd. Hoe komt dat?
 
 Als u synchroniseert vanaf een upstream-server (Windows Server Update Services) in plaats van Microsoft Update, moet u ervoor zorgen dat de upstream-WSUS-server is geconfigureerd voor ondersteuning en synchronisatie van updates voor Surface-Stuur Programma's. Alle downstream-servers zijn beperkt tot updates die aanwezig zijn in de upstream-WSUS-Server database.
 
@@ -162,4 +162,4 @@ Raadpleeg de volgende artikelen voor meer informatie over Surface-Stuur Programm
 
 - [Overwegingen voor Opper vlak en System Center Configuration Manager](https://docs.microsoft.com/surface/considerations-for-surface-and-system-center-configuration-manager#deploy-surface-app-with-configuration-manager)
 - [Geschiedenis van Surface update](https://support.microsoft.com/help/4036283/surface-surface-update-history)
-- [Down load de nieuwste firmware en stuur Programma's voor Surface-apparaten](https://docs.microsoft.com/surface/deploy-the-latest-firmware-and-drivers-for-surface-devices)
+- [Down load de nieuwste firmware en stuur Programma's voor Surface-apparaten](/surface/manage-surface-driver-and-firmware-updates)

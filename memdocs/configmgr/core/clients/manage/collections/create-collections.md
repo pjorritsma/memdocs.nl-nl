@@ -10,12 +10,12 @@ ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: def7a40091f6c9a45e67f5e4de7d7dca94b3cba2
-ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
+ms.openlocfilehash: 7eccc3bf6b7ded9db93f5af78d55f090e9704cbc
+ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86422809"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87438611"
 ---
 # <a name="how-to-create-collections-in-configuration-manager"></a>Verzamelingen maken in Configuration Manager
 
@@ -234,6 +234,7 @@ De Azure AD-synchronisatie gebeurt elke vijf minuten. Het is een eenrichtings pr
 - Integratie met Azure AD voor [Cloud beheer](../../../servers/deploy/configure/azure-services-wizard.md)
 - [Gebruikers detectie Azure Active Directory](../../../servers/deploy/configure/about-discovery-methods.md#azureaddisc)
 - Een HTTPS [-of Enhanced HTTP-](../../../plan-design/hierarchy/enhanced-http.md) beheer punt
+- Toegang tot de verzameling **alle systemen**
 
 ### <a name="create-a-group-and-set-the-owner-in-azure-ad"></a>Een groep maken en de eigenaar instellen in azure AD
 
@@ -255,7 +256,7 @@ De Azure AD-synchronisatie gebeurt elke vijf minuten. Het is een eenrichtings pr
 
 1. Ga in de Configuration Manager-console naar **activa en naleving**  >  **overzicht**  >  **apparaat verzamelingen**.
 1. Klik met de rechter muisknop op de verzameling die u wilt synchroniseren en klik vervolgens op **Eigenschappen**. 
-1. Klik op het tabblad **Aad-groep synchroniseren** op **toevoegen**.
+1. Klik op het tabblad **Cloud Sync** op **toevoegen**.
 1. Selecteer in de vervolg keuzelijst de **Tenant** waar u uw Azure AD-groep hebt gemaakt.
 1. Typ uw zoek criteria in het veld **naam begint met** en klik vervolgens op **zoeken**.
   - Als u wordt gevraagd om u aan te melden, gebruikt u de identiteit die u hebt opgegeven als de eigenaar van de Azure AD-groep.

@@ -10,12 +10,12 @@ ms.assetid: d24257d8-8136-47f4-8e0d-34021356dc37
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c12372325573c6795396ff0832ca60cba68b8c29
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: c9d398d7fddab61014547fc0f8f64cd180e58ab6
+ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078495"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87438573"
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Configuration Manager op veelgestelde vragen over Azure
 
@@ -27,7 +27,7 @@ Met de volgende vragen en antwoorden krijgt u inzicht in het gebruik en het conf
 ### <a name="my-company-is-trying-to-move-as-many-physical-servers-as-possible-to-microsoft-azure-can-i-move-configuration-manager-servers-to-azure"></a>Mijn bedrijf probeert zo veel mogelijk fysieke servers te verplaatsen naar Microsoft Azure, kan ik Configuration Manager servers verplaatsen naar Azure?
 Dit is zeker een ondersteund scenario.  Zie [ondersteuning voor de virtualisatie-omgevingen voor Configuration Manager](../plan-design/configs/support-for-virtualization-environments.md).
 
-### <a name="great-my-environment-requires-multiple-sites-should-all-child-primary-sites-be-in-azure-with-the-central-administration-site-or-on-premises-what-about-secondary-sites"></a>Goed gedaan. Mijn omgeving vereist meerdere sites. Moeten alle onderliggende primaire sites zich in azure bezien met de centrale beheer site of on-premises? Hoe zit het met secundaire sites?
+### <a name="great-my-environment-requires-multiple-sites-should-all-child-primary-sites-be-in-azure-with-the-central-administration-site-or-on-premises-what-about-secondary-sites"></a>Mooi! Mijn omgeving vereist meerdere sites. Moeten alle onderliggende primaire sites zich in azure bezien met de centrale beheer site of on-premises? Hoe zit het met secundaire sites?
 Site-naar-site-communicatie (op basis van bestanden en database replicatie) is voor delen van de nabijheid van hosten in Azure. Alle client-gerelateerde verkeer zou echter extern van site servers en site systemen zijn. Als u een snelle en betrouw bare netwerk verbinding tussen Azure en uw intranet met een onbeperkt data-abonnement gebruikt, is het hosten van al uw infra structuur in azure een optie.
 
 Als u echter een data-abonnement met data limiet of een beschik bare band breedte gebruikt, of als de netwerk verbinding tussen Azure en uw intranet niet snel is of onbetrouwbaar is, kunt u overwegen om specifieke sites (en site systemen) on-premises te plaatsen en vervolgens de besturings elementen voor band breedte te gebruiken die zijn ingebouwd in Configuration Manager.
@@ -84,7 +84,7 @@ Hoewel Configuration Manager niet wordt getest met Azure load balancers, en als 
 
 ## <a name="performance"></a>Prestaties
 ### <a name="what-factors-affect-performance-in-this-scenario"></a>Welke factoren zijn van invloed op de prestaties in dit scenario?
-[Azure VM-grootte en-type](https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs), virtuele Azure-schijven (Premium-opslag wordt aanbevolen, met name voor SQL Server), netwerk latentie en snelheid zijn de belangrijkste gebieden.
+[Azure VM-grootte en-type](/azure/virtual-machines/sizes), virtuele Azure-schijven (Premium-opslag wordt aanbevolen, met name voor SQL Server), netwerk latentie en snelheid zijn de belangrijkste gebieden.
 
 ### <a name="so-tell-me-more-about-azure-virtual-machines-what-size-vms-should-i-use"></a>Vertel me meer over Azure virtual machines. welk formaat Vm's moet ik gebruiken?
 In het algemeen moet uw reken kracht (CPU en geheugen) voldoen aan de [Aanbevolen hardware voor Configuration Manager](../plan-design/configs/recommended-hardware.md). Maar er zijn enkele verschillen tussen gewone computerhardware en Azure-Vm's, met name wanneer het gaat om de schijven die door deze Vm's worden gebruikt.  Welk formaat Vm's u gebruikt, is afhankelijk van de grootte van uw omgeving, maar hier volgen enkele aanbevelingen:
@@ -113,7 +113,7 @@ In de volgende tabellen worden de eerste aanbevolen schijf aantallen weer geven 
 |**25k naar 50.000**      | Site Server: F4S </br>Database server: DS13_V2 | Site Server: 1xP30 </br>Database server: 2xP30 (striped)   |
 |**50.000 naar 100.000**     | Site Server: F8S </br>Database server: DS14_V2 | Site Server: 2xP30 (striped)   </br>Database server: 3xP30 (striped)   |
 
-Hieronder ziet u een voor beeld van een configuratie voor 50.000 naar 100.000-clients op DS14_V2 met 3xP30-schijven in een striped volume met afzonderlijke logische volumes voor de Configuration Manager ![installatie-en database bestanden: VM-schijven)](media/vm_disks.png)  
+Hieronder ziet u een voor beeld van een configuratie voor 50.000 naar 100.000-clients op DS14_V2 met 3xP30-schijven in een striped volume met afzonderlijke logische volumes voor de Configuration Manager installatie-en database bestanden: ![ VM-schijven)](media/vm_disks.png)  
 
 
 
@@ -157,7 +157,7 @@ Het is moeilijk om te zeggen omdat elke omgeving afwijkt. U kunt het beste uw om
 **Fundamentals:**https://azure.microsoft.com/documentation/articles/fundamentals-introduction-to-azure/
 
 **Azure VM-computer typen:**
-- Grootte van Azure-machines:https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs/  
+- Grootte van Azure-machines:https://docs.microsoft.com/azure/virtual-machines/sizes  
 - VM-prijzen:https://azure.microsoft.com/pricing/details/virtual-machines/  
 - Prijzen voor opslag:https://azure.microsoft.com/pricing/details/storage/
 
@@ -169,7 +169,7 @@ Het is moeilijk om te zeggen omdat elke omgeving afwijkt. U kunt het beste uw om
 
 **Availability**
 - SLA voor Azure IaaS uptime:https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_0/  
-- Uitleg over beschikbaarheids sets:https://azure.microsoft.com/documentation/articles/virtual-machines-manage-availability/
+- Uitleg over beschikbaarheids sets:https://docs.microsoft.com/azure/virtual-machines/windows/manage-availability
 
 **Mogelijkheden**
 - Express route versus Azure VPN:https://azure.microsoft.com/blog/2014/06/10/expressroute-or-virtual-network-vpn-whats-right-for-me/

@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9ce8c10d9d59d97caa53ece12dd43d90c78546bb
-ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
+ms.openlocfilehash: 05553af3e973805eed62c68f13afc3cf7d3d2ee3
+ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86384839"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87438586"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Het gebruik van SQL Server AlwaysOn-beschikbaarheids groepen met Configuration Manager voorbereiden
 
@@ -28,7 +28,7 @@ Configuration Manager ondersteunt het gebruik van beschikbaarheids groepen:
 - Op primaire sites en de centrale beheer site.
 - On-premises of in Microsoft Azure.
 
-Als u beschikbaarheids groepen gebruikt in Microsoft Azure, kunt u de beschik baarheid van uw site database verder verhogen met behulp van *Azure-beschikbaarheids sets*. Zie voor meer informatie over beschikbaarheidssets van Azure [Manage the availability of virtual machines](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-manage-availability/)(De beschikbaarheid van virtuele machines beheren).
+Als u beschikbaarheids groepen gebruikt in Microsoft Azure, kunt u de beschik baarheid van uw site database verder verhogen met behulp van *Azure-beschikbaarheids sets*. Zie voor meer informatie over beschikbaarheidssets van Azure [Manage the availability of virtual machines](/azure/virtual-machines/windows/manage-availability)(De beschikbaarheid van virtuele machines beheren).
 
 > [!Important]
 > Voordat u doorgaat, moet u vertrouwd zijn met het configureren van SQL Server en SQL Server beschikbaarheids groepen. De volgende informatie bevat verwijzingen naar de documentatie bibliotheek en-procedures van SQL Server.

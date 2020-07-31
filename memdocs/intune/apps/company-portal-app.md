@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/14/2020
+ms.date: 07/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ad862ff1f04558bd699db2ef0c09d4da4654e23
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: d979001f159b427314f8bc53788ccce0acd13d11
+ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461960"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87365539"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>De Intune-bedrijfsportal-apps, de bedrijfsportalwebsite en de Intune-app aanpassen
 
@@ -178,9 +178,9 @@ Intune ondersteunt referenties die zijn afgeleid van Personal Identity Verificat
 
 Zie [Afgeleide referenties gebruiken in Microsoft Intune](../protect/derived-credentials.md) voor meer informatie over afgeleide referenties voor iOS/iPadOS-apparaten.
 
-## <a name="dark-mode-for-iosipados-company-portal"></a>Donkere modus voor iOS/iPadOS-bedrijfsportal
+## <a name="dark-mode-for-the-company-portal"></a>Donkere modus voor de bedrijfsportal
 
-Donkere modus is beschikbaar voor de iOS/iPadOS-bedrijfsportal. Gebruikers kunnen apps downloaden, hun apparaten beheren en IT-ondersteuning krijgen in het gewenste kleurenschema op basis van hun apparaatinstellingen. De iOS/iPadOS-bedrijfsportal wordt automatisch afgestemd op de apparaatinstellingen van de eindgebruiker voor donkere of lichte modus.
+Donkere modus is beschikbaar voor de iOS/iPadOS-, macOS- en Windows-bedrijfsportal. Gebruikers kunnen apps downloaden, hun apparaten beheren en IT-ondersteuning krijgen in het gewenste kleurenschema op basis van hun apparaatinstellingen. De iOS/iPadOS-, macOS- en Windows-bedrijfsportal wordt automatisch afgestemd op de apparaatinstellingen van de eindgebruiker voor donkere of lichte modus.
 
 ## <a name="windows-company-portal-keyboard-shortcuts"></a>Sneltoetsen voor Windows-bedrijfsportal
 

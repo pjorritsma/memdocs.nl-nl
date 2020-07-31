@@ -6,7 +6,7 @@ keywords: Intune-datawarehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/29/2020
+ms.date: 07/27/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c7ba3c7397298ea25eecc1147319760892434720
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: a6cabb4f89d1ad105b88f54ac7a1c43405d1a65d
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270987"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262571"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Verbinding maken met het datawarehouse met Power BI
 
@@ -52,6 +52,9 @@ Installeer de nieuwste versie van [Power BI Desktop](https://aka.ms/intune/dataw
 ## <a name="load-the-data-and-reports-using-the-power-bi-intune-compliance-data-warehouse-app"></a>De gegevens en rapporten laden met behulp van de Intune Compliance Data Warehouse-app van Power BI
 
 De [Intune Compliance Data Warehouse-app](https://aka.ms/intune/datawarehouseapi/getpowerbiapp) van Power BI bevat verbindingsgegevens voor uw tenant en een set vooraf gedefinieerde rapporten op basis van het datawarehouse-gegevensmodel.
+
+> [!NOTE]
+> De Power BI Intune Compliance Data Warehouse-app wordt niet ondersteund voor Azure Government-cloudomgevingen.
 
 1. Navigeer naar de pagina **AppSource** van de [Intune Compliance (Data Warehouse)-app](https://aka.ms/intune/datawarehouseapi/getpowerbiapp) om te beginnen met het installatieproces.
 2. Klik op de knop **Nu downloaden** en klik vervolgens op **Doorgaan**.

@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d246ea2811e0fb561bc623ae29d3fb5ef0de66f9
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 70f8033f694dfafefc92696df0b0e6ea652e2feb
+ms.sourcegitcommit: 24fcf19054dcd62429f6181cdc568d894e01b99a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989388"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86946657"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Windows 10-software-updates beheren in Intune
 
@@ -221,6 +221,8 @@ Aan de volgende vereisten moet worden voldaan om Windows 10-onderdelenupdates te
   - Onderdelenupdates voor de updatering moeten *actief* zijn. Ze mogen niet worden gepauzeerd.
 
 - Beleidsregels voor de Windows 10-onderdelenupdates kunnen niet worden toegepast tijdens de OOBE (Out of Box Experience) van Autopilot en worden alleen toegepast nadat de eerste scan van Windows Update is uitgevoerd nadat een apparaat is ingericht (doorgaans een dag).
+
+- Hoewel de updates voor Windows 10-onderdelen in de openbare preview blijven, is er een beperking bij co-beheer van apparaten met Configuration Manager en Intune waarbij beleid voor onderdeelupdates niet onmiddellijk van kracht wordt, waardoor apparaten worden bijgewerkt naar een latere onderdeelupdate dan in Intune is geconfigureerd. Deze beperking wordt verwijderd in een toekomstige update van Configuration Manager.
 
 ### <a name="create-and-assign-windows-10-feature-updates"></a>Windows 10-onderdelenupdates maken en toewijzen
 

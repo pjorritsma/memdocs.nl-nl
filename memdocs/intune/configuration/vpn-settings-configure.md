@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/20/2020
+ms.date: 07/28/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,18 +16,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1916004d8e61239d7de92a77769ee970cc7a3118
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: 72d0345c91f525fb6dc28adeabe8522801c51a9f
+ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565613"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87365420"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>VPN-profielen maken om verbinding te maken met VPN-servers in Intune
 
 Met virtuele particuliere netwerken (VPN's) geeft u gebruikers veilige externe toegang tot het netwerk van uw organisatie. Apparaten gebruiken een VPN-verbindingsprofiel om een verbinding met de VPN-server op te zetten. **VPN-profielen** in Microsoft Intune wijzen VPN-instellingen toe aan gebruikers en apparaten in uw organisatie. Gebruik deze instellingen, zodat gebruikers eenvoudig en veilig verbinding kunnen maken met uw bedrijfsnetwerk.
 
 U wilt bijvoorbeeld alle iOS/iPadOS-apparaten configureren met de instellingen die vereist zijn om verbinding te maken met een bestandsshare in het netwerk van de organisatie. U maakt een VPN-profiel dat deze instellingen bevat. U wijst dit profiel vervolgens toe aan alle gebruikers die over iOS/iPadOS-apparaten beschikken. De gebruikers zien de VPN-verbinding in de lijst met beschikbare netwerken en kunnen moeiteloos verbinding maken.
+
+> [!NOTE]
+> Gebruikersregistratie voor iOS/iPadOS en macOS biedt alleen ondersteuning voor [VPN per app](vpn-setting-configure-per-app.md).
 
 > [!NOTE]
 > U kunt [aangepast Intune-configuratiebeleid](custom-settings-configure.md) gebruiken om VPN-profielen te maken voor de volgende platformen:

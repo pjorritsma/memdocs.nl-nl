@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/19/2020
+ms.date: 07/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9e5786289e54071d54c11fbb08790e95e54a9377
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 2e881dc386fa0fe0b98b5e3d4480e1957c251808
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461858"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262673"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Acties configureren voor niet-compatibele apparaten in Intune
 
@@ -147,8 +147,12 @@ Maak een sjabloon voor berichtmeldingen om een e-mail naar uw gebruikers te vers
 
 5. Controleer onder **Controleren en maken** de configuraties, zodat u zeker weet dat de sjabloon voor het meldingsbericht gereed is voor gebruik. Selecteer **Maken** om de melding te voltooien.
 
-> [!NOTE]
-> U kunt ook een meldingssjabloon selecteren die u eerder hebt gemaakt en de gegevens **bewerken** om de sjabloon bij te werken.
+### <a name="view-and-edit-notifications"></a>Meldingen weergeven en bewerken
+
+Meldingen die zijn gemaakt, zijn beschikbaar op de pagina *Nalevingsbeleid* > *Meldingen*. Op de pagina kunt u een melding selecteren om de configuratie ervan weer te geven en:
+
+- **Een voorbeeld van het e-mailbericht verzenden** selecteren om een voorbeeld van de e-mailmelding naar het account te verzenden dat u hebt gebruikt om u aan te melden bij Intune. 
+- **Bewerken** voor *Basisinformatie* of *Bereiktags* selecteren om een wijziging aan te brengen.
 
 ## <a name="add-actions-for-noncompliance"></a>Acties voor niet-naleving toevoegen
 

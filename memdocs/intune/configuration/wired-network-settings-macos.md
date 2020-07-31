@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/11/2020
+ms.date: 07/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 41b11a29cdfd61382e68130479a1ab465bf354c6
-ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
+ms.openlocfilehash: 1da738611dd5fe114054645170d2b49ef12f0523
+ms.sourcegitcommit: e8076576f5c0ea7e72358d233782f8c38c184c8f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85107414"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87334603"
 ---
 # <a name="add-wired-network-settings-for-macos-devices-in-microsoft-intune"></a>Bekabeld netwerkinstellingen voor macOS-apparaten in Microsoft Intune toevoegen
 
-U kunt een profiel maken met specifieke instellingen voor een bekabeld netwerk en dit profiel vervolgens implementeren op uw macOS-apparaten. Microsoft Intune biedt veel functies, waaronder het verifiëren bij het netwerk, het toevoegen van een PKCS- of SCEP-certificaat en meer.
+U kunt een profiel maken met specifieke instellingen voor een bekabeld netwerk en dit profiel vervolgens implementeren op uw macOS-apparaten. Microsoft Intune biedt veel functies, waaronder verifiëren bij het netwerk, toevoegen van een SCEP-certificaat en meer.
 
 In dit artikel worden de instellingen beschreven die u kunt configureren.
 
@@ -63,8 +63,8 @@ In dit artikel worden de instellingen beschreven die u kunt configureren.
 
     - **Vertrouwelijke server** - **Namen van certificaatservers**: **voeg** een of meer algemene namen toe die worden gebruikt in de certificaten die zijn uitgegeven door uw vertrouwde certificeringsinstantie (CA). Wanneer u deze informatie verstrekt, kunt u het venster Dynamisch vertrouwen negeren dat wordt weergegeven op apparaten van gebruikers als zij verbinding maken met dit netwerk.
     - **Basiscertificaat voor servervalidatie**: Selecteer een bestaand profiel voor een vertrouwd basiscertificaat. Als vanuit de client verbinding wordt gemaakt met het netwerk wordt dit certificaat aan de server gepresenteerd. Het wordt gebruikt om de verbinding te verifiëren.
-    - **Clientverificatie** - **Certificaten**: Selecteer het profiel van het SCEP- of PKCS-clientcertificaat dat ook op het apparaat is geïmplementeerd. Dit certificaat is de identiteit die door het apparaat wordt gepresenteerd aan de server om de verbinding te verifiëren.
-    - **Identiteitsprivacy (externe identiteit)** : Voer de tekst in die wordt verzonden in antwoord op een EAP-identiteitsaanvraag. Deze tekst kan elke waarde hebben, zoals `anonymous`. Tijdens verificatie wordt deze anonieme identiteit in eerste instantie verzonden en wordt deze gevolgd door de echte identificatie in een beveiligde tunnel.
+    - **Clientverificatie** - **Certificaten**: Selecteer het profiel van het SCEP-clientcertificaat dat ook op het apparaat is geïmplementeerd. Dit certificaat is de identiteit die door het apparaat wordt gepresenteerd aan de server om de verbinding te verifiëren. PKCS-certificaten worden niet ondersteund.
+    - **Identiteitsprivacy (externe identiteit)** : voer de tekst in die wordt verzonden als reactie op een EAP-identiteitsaanvraag. Deze tekst kan elke waarde hebben, zoals `anonymous`. Tijdens verificatie wordt deze anonieme identiteit in eerste instantie verzonden en wordt deze gevolgd door de echte identificatie in een beveiligde tunnel.
 
   - **EAP-TTLS**: Voer ook in:
 
@@ -77,8 +77,8 @@ In dit artikel worden de instellingen beschreven die u kunt configureren.
           - **Challenge Henshake Authentication Protocol (CHAP)**
           - **Microsoft CHAP (MS-CHAP)**
           - **Microsoft CHAP versie 2 (MS-CHAP v2)**
-      - **Certificaten**: Selecteer het profiel van het SCEP- of PKCS-clientcertificaat dat ook op het apparaat is geïmplementeerd. Dit certificaat is de identiteit die door het apparaat wordt gepresenteerd aan de server om de verbinding te verifiëren.
-      - **Identiteitsprivacy (externe identiteit)** : Voer de tekst in die wordt verzonden in antwoord op een EAP-identiteitsaanvraag. Deze tekst kan elke waarde hebben, zoals `anonymous`. Tijdens verificatie wordt deze anonieme identiteit in eerste instantie verzonden en wordt deze gevolgd door de echte identificatie in een beveiligde tunnel.
+      - **Certificaten**: Selecteer het profiel van het SCEP-clientcertificaat dat ook op het apparaat is geïmplementeerd. Dit certificaat is de identiteit die door het apparaat wordt gepresenteerd aan de server om de verbinding te verifiëren. PKCS-certificaten worden niet ondersteund.
+      - **Identiteitsprivacy (externe identiteit)** : voer de tekst in die wordt verzonden als reactie op een EAP-identiteitsaanvraag. Deze tekst kan elke waarde hebben, zoals `anonymous`. Tijdens verificatie wordt deze anonieme identiteit in eerste instantie verzonden en wordt deze gevolgd door de echte identificatie in een beveiligde tunnel.
 
   - **LEAP**
 
@@ -88,8 +88,8 @@ In dit artikel worden de instellingen beschreven die u kunt configureren.
     - **Basiscertificaat voor servervalidatie**: Selecteer een bestaand profiel voor een vertrouwd basiscertificaat. Als vanuit de client verbinding wordt gemaakt met het netwerk wordt dit certificaat aan de server gepresenteerd. Het wordt gebruikt om de verbinding te verifiëren.
     - **Clientverificatie**: Een **verificatiemethode** selecteren. Uw opties zijn:
       - **Gebruikersnaam en wachtwoord**: De gebruiker wordt gevraagd om een gebruikersnaam en wachtwoord om de verbinding te verifiëren.
-      - **Certificaten**: Selecteer het profiel van het SCEP- of PKCS-clientcertificaat dat ook op het apparaat is geïmplementeerd. Dit certificaat is de identiteit die door het apparaat wordt gepresenteerd aan de server om de verbinding te verifiëren.
-      - **Identiteitsprivacy (externe identiteit)** : Voer de tekst in die wordt verzonden in antwoord op een EAP-identiteitsaanvraag. Deze tekst kan elke waarde hebben, zoals `anonymous`. Tijdens verificatie wordt deze anonieme identiteit in eerste instantie verzonden en wordt deze gevolgd door de echte identificatie in een beveiligde tunnel.
+      - **Certificaten**: Selecteer het profiel van het SCEP-clientcertificaat dat ook op het apparaat is geïmplementeerd. Dit certificaat is de identiteit die door het apparaat wordt gepresenteerd aan de server om de verbinding te verifiëren. PKCS-certificaten worden niet ondersteund.
+      - **Identiteitsprivacy (externe identiteit)** : voer de tekst in die wordt verzonden als reactie op een EAP-identiteitsaanvraag. Deze tekst kan elke waarde hebben, zoals `anonymous`. Tijdens verificatie wordt deze anonieme identiteit in eerste instantie verzonden en wordt deze gevolgd door de echte identificatie in een beveiligde tunnel.
 
 ## <a name="next-steps"></a>Volgende stappen
 

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/08/2020
+ms.date: 07/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: 64a76911725e5d596a80ecc67e42f088666017de
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: d120ee0f55651ab1661e426e5889aaf8a4c7e670
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531890"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262860"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Windows Hello voor Bedrijven integreren in Microsoft Intune  
 
@@ -32,13 +32,21 @@ Hello voor Bedrijven biedt een alternatieve aanmeldingsmethode waarbij Active Di
 
 Intune integreert op twee manieren met Hello voor bedrijven:
 
-- **Voor de hele tenant**: Een Intune-beleid kan worden gemaakt onder *apparaatinschrijving*. Dit beleid is gericht op de hele organisatie (tenant-breed). Het biedt ondersteuning voor het Windows AutoPilot out-of-box-experience (OOBE) en wordt toegepast wanneer een apparaat wordt ingeschreven.
-- **Discrete groepen**: U kunt beleidsregels implementeren die Windows Hello voor Bedrijven beheren op apparaten die zijn ingeschreven bij Intune. Beleidstypen die Windows Hello kunnen beheren, zijn onder andere *identiteitsbeveiligingsprofielen* die u maakt onder *Apparaatconfiguratie*, verschillende *beveiligingsbasislijnen* en *accountbeveiligingsprofielen* voor eindpuntbeveiliging. Deze profieltypen zijn gericht op toegewezen gebruikers of apparaten en gelden tijdens het inchecken.
+- **Voor de hele tenant** (*dit artikel)* : Een Intune-beleid kan worden gemaakt onder *apparaatinschrijving*. Dit beleid is gericht op de hele organisatie (tenant-breed). Het biedt ondersteuning voor het Windows AutoPilot out-of-box-experience (OOBE) en wordt toegepast wanneer een apparaat wordt ingeschreven.
+- **Discrete groepen**: Voor apparaten die eerder zijn geregistreerd bij Intune gebruikt u een [identiteitsbeveiligings**profiel voor** apparaatconfiguratie](../protect/identity-protection-configure.md) voor het configureren van apparaten voor Windows Hello voor Bedrijven. Identiteitsbeveiligingsprofielen zijn gericht op toegewezen gebruikers of apparaten en gelden tijdens het inchecken.
 
-Gebruik dit artikel om een standaard Windows Hello voor Bedrijven-beleid te maken dat is gericht op uw hele organisatie. Zie [Een identiteitsbeschermingprofiel configureren](identity-protection-configure.md) voor het maken van een identiteitsbeschermingprofiel dat is toegepast om gebruikers- en apparaatgroepen te selecteren.  
+Daarnaast biedt Intune ondersteuning voor de volgende typen beleid voor het beheren van bepaalde instellingen voor Windows Hello voor Bedrijven:
+
+- [**Beveiligingsbasislijnen**](../protect/security-baselines.md). De volgende basislijnen bevatten instellingen voor Windows Hello voor Bedrijven:
+  - [Microsoft Defender Advanced Threat Protection-basislijninstellingen](../protect/security-baseline-settings-defender-atp.md#windows-hello-for-business)
+  - [Instellingen voor Windows MDM-beveiligingsbasislijn](../protect/security-baseline-settings-mdm-all.md#windows-hello-for-business)
+- [Eindpuntbeveiligingsbeleid**voor**accountbeveiliging](../protect/endpoint-security-account-protection-policy.md). Bekijk de [beveiligingsinstellingen voor het account](../protect/endpoint-security-account-protection-profile-settings.md#account-protection).
+
+De rest van dit artikel gaat over het maken van een standaard Windows Hello voor Bedrijven-beleid dat gericht is op uw hele organisatie.
 
 > [!IMPORTANT]
 > In Windows 10 Desktop en Windows 10 Mobile vóór de jubileumupdate kunt u twee verschillende pincodes instellen voor het verifiëren van resources:
+>
 > - U kunt de **pincode van het apparaat** gebruiken om het apparaat te ontgrendelen en verbinding te maken met cloudresources.
 > - De **pincode voor werk** werd gebruikt om toegang tot krijgen tot de Azure AD-resources op de persoonlijke apparaten van de gebruiker (BYOD).
 > 

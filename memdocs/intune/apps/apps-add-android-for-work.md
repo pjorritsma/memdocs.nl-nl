@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/13/2020
+ms.date: 07/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8404c475bc5a84177abeba3a96fb613f04b9aa2b
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: bc8fb5b50475c523741128d64582be29d4bf5ffe
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461943"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262656"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Beheerde Google Play-apps toevoegen aan Android Enterprise-apparaten met Intune
 
@@ -122,6 +122,8 @@ Er zijn twee manieren om LOB-apps toe te voegen aan Beheerd Google Play:
 5. Selecteer **Privé-apps** (naast het pictogram *Vergrendelen*) in het Google Play-venster. 
 6. Klik op de knop **+** rechts onderaan om een nieuwe app toe te voegen.
 7. Voeg een **Titel** toe voor de app en klik op **APK uploaden** om het app-pakket toe te voegen.
+   > [!NOTE]
+   > De pakketnaam van uw app moet wereldwijd uniek zijn in Google Play (niet alleen uniek binnen uw onderneming of Google Play-ontwikkelaarsaccount). Als dat niet het geval is, wordt de fout **Upload een nieuw APK-bestand met een andere pakketnaam** weergegeven.
 8. Klik op **Maken**.
 9. Sluit het deelvenster Beheerde Google Play als u klaar bent met het toevoegen van apps.
 10. Klik op **Synchroniseren** in het deelvenster **App-app** om te synchroniseren met de Beheerd Google Play-service. 

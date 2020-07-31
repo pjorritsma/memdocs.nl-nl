@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 07/22/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 29cb970dd7148496f1a4f200ba32505e6f2c0e16
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: d71326dc46d404925bdd94bd5d1140f23151748c
+ms.sourcegitcommit: 24fcf19054dcd62429f6181cdc568d894e01b99a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461586"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86946640"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>PKCS-certificaten configureren en gebruiken met Intune
 
@@ -59,7 +59,7 @@ Als u PKCS-certificaten wilt gebruiken met Intune, hebt u de volgende infrastruc
 - **Microsoft Intune Certificate Connector** (ook wel de *NDES-certificaatconnector* genoemd):  
   Ga in de Intune-portal naar **Apparaatconfiguratie** > **Certificaatconnectors** > **Toevoegen** en volgt u de *stappen om de connector te installeren voor PKCS #12*. Gebruik de downloadkoppeling om het downloaden van het installatieprogramma voor de certificaatconnector **NDESConnectorSetup.exe** te starten.  
 
-  Intune ondersteunt maximaal honderd exemplaren van deze connector per tenant. Elk exemplaar van de connector moet zich op een afzonderlijke Windows-server bevinden. U kunt een instantie van deze connector op dezelfde server installeren als een instantie van de PFX-certificaatconnector voor Microsoft Intune. Wanneer u meerdere connectors gebruikt, ondersteunt de infrastructuur van de connector hoge beschikbaarheid en taakverdeling als een beschikbare connectorexempplaar uw PKCS-certificaataanvragen kan verwerken. 
+  Intune ondersteunt maximaal honderd exemplaren van deze connector per tenant. Elk exemplaar van de connector moet zich op een afzonderlijke Windows-server bevinden. U kunt een instantie van deze connector op dezelfde server installeren als een instantie van de PFX-certificaatconnector voor Microsoft Intune. Wanneer u meerdere connectors gebruikt, biedt de infrastructuur van de connector ondersteuning voor redundantie en taakverdeling, aangezien elk beschikbaar connectorexemplaar uw PKCS-certificaataanvragen kan verwerken. 
 
   Met deze connector worden PKCS-certificaataanvragen verwerkt die worden gebruikt voor verificatie of S/MIME-e-mailondertekening.
 
@@ -68,9 +68,7 @@ Als u PKCS-certificaten wilt gebruiken met Intune, hebt u de volgende infrastruc
 - **PFX-certificaatconnector voor Microsoft Intune**:  
   Als u van plan bent om S/MIME-versleuteling te gebruiken voor e-mailberichten, moet u via de Intune-portal de connector voor *PFX-certificaten* downloaden die ondersteuning biedt voor het importeren van PFX-certificaten.  Ga naar **Apparaatconfiguratie** > **Certificaatconnectors** > **Toevoegen** en volg de *stappen om de connector installeren voor geïmporteerde PFX-certificaten*. Gebruik de downloadkoppeling om het downloaden van het installatieprogramma **PfxCertificateConnectorBootstrapper.exe** te starten.
 
-  Elke Intune-tenant ondersteunt één instantie van deze connector. U kunt deze connector op dezelfde server installeren als een instantie van de Microsoft Intune Certificate Connector.
-
-  Deze connector verwerkt aanvragen voor PFX-bestanden die zijn geïmporteerd in Intune voor S/MIME-e-mailversleuteling voor een specifieke gebruiker.  
+  Deze connector verwerkt aanvragen voor PFX-bestanden die zijn geïmporteerd in Intune voor S/MIME-e-mailversleuteling voor een specifieke gebruiker. U kunt deze connector op dezelfde server installeren als een instantie van de Microsoft Intune Certificate Connector. 
 
   Deze connector kan automatisch worden bijgewerkt wanneer nieuwe versies beschikbaar komen. Als u de updatemogelijkheid wilt gebruiken, moet u:
   - De connector voor PFX-certificaten voor Microsoft Intune installeren op uw server.  
@@ -260,7 +258,7 @@ Voor verificatie van een apparaat met VPN, Wi-Fi of andere resources hebt u op e
 
    Selecteer **Volgende**.
 
-10. Selecteer in **Toewijzingen** de gebruiker of groepen die uw profiel zullen ontvangen. Plan de implementatie van dit certificaatprofiel zodat dit naar dezelfde groepen wordt geïmplementeerd die het vertrouwde certificaatprofiel ontvangen. Zie [Gebruikers- en apparaatprofielen toewijzen](../configuration/device-profile-assign.md) voor meer informatie over het toewijzen van profielen.
+10. Selecteer in **Toewijzingen** de gebruiker of groepen die uw profiel zullen ontvangen. Plan de implementatie van dit certificaatprofiel zodanig dat het in dezelfde groepen wordt geïmplementeerd die het vertrouwde certificaatprofiel ontvangen. Zie [Gebruikers- en apparaatprofielen toewijzen](../configuration/device-profile-assign.md) voor meer informatie over het toewijzen van profielen.
 
     Selecteer **Volgende**.
 

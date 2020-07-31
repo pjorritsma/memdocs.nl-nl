@@ -1,12 +1,12 @@
 ---
-title: Een VPN voor Android Enterprise-apparaten configureren
+title: Een VPN of VPN per app configureren voor Android Enterprise-apparaten in Microsoft Intune | Microsoft Docs
 titleSuffix: Microsoft Intune
-description: Gebruik een app-beveiligingsbeleid om een VPN te configureren voor Android Enterprise-apparaten.
+description: Een app-configuratiebeleid gebruiken om een VPN- of VPN per app-profiel toe te voegen of te maken voor Android Enterprise-apparaten in Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/01/2020
+ms.date: 07/23/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,155 +18,209 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bcb7bd506d92befa3c73faf7270de28765f5b192
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: 7e869ad933e86d9330dbb8d6a26b1886a71cee07
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347415"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262894"
 ---
-# <a name="configure-a-vpn-for-android-enterprise-devices"></a>Een VPN voor Android Enterprise-apparaten configureren
+# <a name="use-a-vpn-and-per-app-vpn-policy-on-android-enterprise-devices-in-microsoft-intune"></a>Een VPN- of VPN per app-beleid gebruiken op Android Enterprise-apparaten in Microsoft Intune
 
-In dit onderwerp wordt beschreven hoe u een app-configuratiebeleid maakt dat in combinatie met een VPN-client kan worden geïmplementeerd op Android Enterprise-apparaten. Met deze configuratie kan het netwerkverkeer voor gekozen toepassingen toegang krijgen tot bedrijfsbronnen.
+Met een virtueel particulier netwerk (VPN) kunnen gebruikers op afstand toegang tot bedrijfsbronnen krijgen, zoals vanuit huis, een hotel of café. In Microsoft Intune kunt u VPN-client-apps configureren op Android Enterprise-apparaten met behulp van een app-configuratiebeleid. Vervolgens implementeert u dit beleid met de bijbehorende VPN-configuratie op apparaten in uw organisatie.
+
+U kunt ook VPN-beleid maken dat wordt gebruikt door specifieke apps. Deze functie wordt VPN per app genoemd. Wanneer de app actief is, kan deze verbinding maken met het VPN en toegang krijgen tot bronnen via het VPN. Wanneer de app niet actief is, wordt de VPN-verbinding niet gebruikt.
+
+Deze functie is van toepassing op:
+
+- Android Enterprise
+
+U kunt het app-configuratiebeleid voor uw VPN-client-app op twee manieren maken:
+
+- Configuration Designer
+- JSON-gegevens
+
+In dit artikel wordt beschreven hoe u een VPN- en VPN per app-configuratiebeleid kunt maken met behulp van beide opties.
 
 > [!NOTE]
-> Het Android-platform biedt momenteel geen ondersteuning voor de automatische activering van een VPN-clientverbinding wanneer een van de gekozen toepassingen wordt geopend. De VPN-verbinding moet eerst handmatig worden geïnitieerd of u kunt [Always-on-VPN](../configuration/vpn-settings-android-enterprise.md) gebruiken.
+> Veel van de parameters voor de VPN-clientconfiguratie zijn vergelijkbaar. Maar elke app heeft zijn unieke sleutels en opties. Neem contact op met uw VPN-leverancier als u vragen hebt.
 
-De vereisten voor het maken van een configuratiebeleid om succesvolle VPN-toegang te verkrijgen, omvat de mogelijkheid van de gekozen VPN-client om configuratieprofielen voor beheerde toepassingen te ondersteunen. Op dit moment bieden de volgende VPN-clients ondersteuning voor het configuratiebeleid van Intune-apps:
-- Cisco AnyConnect
-- Citrix SSO
-- F5-toegang
-- Palo Alto Global Protect
-- Pulse Secure
-- SonicWall Mobile Connect
+## <a name="before-you-begin"></a>Voordat u begint
 
-Als voor de verificatiemethode voor toegang tot het VPN-eindpunt clientcertificaten moeten worden gebruikt, moeten de certificaatprofielen vooraf worden gemaakt om de vereiste waarden voor het app-configuratiebeleid in te vullen.
+- In Android wordt niet automatisch een VPN-clientverbinding geactiveerd wanneer een app wordt geopend. De VPN-verbinding moet handmatig worden gestart. U kunt ook [always-on-VPN](../configuration/vpn-settings-android-enterprise.md) gebruiken om de verbinding te starten.
 
-> [!NOTE]
-> De scenario's van het Android Enterprise-werkprofiel ondersteunen zowel SCEP- als PKCS-certificaten, maar scenario's voor Android Enterprise-apparaateigenaar ondersteunen alleen SCEP-certificaten. 
+- De volgende VPN-clients ondersteunen configuratiebeleidsregels voor Intune-apps:
 
-De basisstroom voor het maken en testen van het per-app VPN-profiel bestaat uit de volgende stappen:
-1.  Kies de juiste VPN-clienttoepassing voor uw infrastructuur.
-2.  Identificeer de toepassingspakket-id's van de productiviteitsapps die u wilt gebruiken met de VPN-verbinding.
-3.  Implementeer certificaatprofielen die vereist zijn om te voldoen aan de verificatievereisten van de VPN-verbinding. Controleer of de implementatie is geslaagd.
-4.  Implementeer de VPN-clienttoepassing.
-5.  Bereid het op app-configuratie gebaseerde VPN-profiel voor met behulp van de gegevens die tijdens de eerdere stappen zijn verzameld.
-6.  Implementeer het zojuist gemaakte VPN-profiel.
-7.  Controleer of de VPN-client-app verbinding kan maken met de VPN-serverinfrastructuur.
-8.  Controleer of het verkeer van uw gekozen productiviteitsapps door de VPN-verbinding wordt geleid wanneer deze actief is.
+  - Cisco AnyConnect
+  - Citrix SSO
+  - F5-toegang
+  - Palo Alto Networks GlobalProtect
+  - Pulse Secure
+  - SonicWall Mobile Connect
+
+- Wanneer u het VPN-beleid in Intune maakt, selecteert u verschillende sleutels om te configureren. Deze sleutelnamen zijn afhankelijk van de verschillende VPN-client-apps. De sleutelnamen in uw omgeving kunnen dus afwijken van de voorbeelden in dit artikel.
+
+- De Configuration Designer- en JSON-gegevens kunnen gebruikmaken van verificatie op basis van certificaten. Als voor VPN-verificatie clientcertificaten zijn vereist, moet u de certificaatprofielen maken voordat u het VPN-beleid maakt. Het configuratiebeleid voor de VPN-app gebruikt de waarden uit de certificaatprofielen.
+
+  Apparaten met een Android Enterprise-werkprofiel bieden ondersteuning voor SCEP-en PKCS-certificaten. Volledig beheerde, toegewezen en in bedrijfseigendom zijnde apparaten met een Android Enterprise-werkprofiel bieden alleen ondersteuning voor SCEP-certificaten. Zie [Certificaten gebruiken voor verificatie](../protect/certificates-configure.md) in Microsoft Intune voor meer informatie.
+
+## <a name="per-app-vpn-overview"></a>Overzicht van VPN per app
+
+De basisstroom voor het maken en testen van VPN per app bestaat uit de volgende stappen:
+
+1. Selecteer de VPN-clienttoepassing. In [Voordat u begint](#before-you-begin) (in dit artikel) worden de ondersteunde apps vermeld.
+2. Haal de toepassingspakket-id's op van de apps die gebruik gaan maken van de VPN-verbinding. In [De id voor het app-pakket ophalen](#get-the-app-package-id) (in dit artikel) ziet u hoe u dit doet.
+3. Als u certificaten gebruikt om de VPN-verbinding te verifiëren, maakt en implementeert u de certificaatprofielen voordat u het VPN-beleid implementeert. Zorg ervoor dat de certificaatprofielen goed zijn geïmplementeerd. Zie [Certificaten gebruiken voor verificatie](../protect/certificates-configure.md) in Microsoft Intune voor meer informatie.
+4. Voeg de [VPN-clienttoepassing toe](apps-add-android-for-work.md) aan Intune en implementeer de app voor uw gebruikers en apparaten.
+5. Het VPN-app-configuratiebeleid maken. Gebruik de app-pakket-id's en certificaatgegevens in het beleid.
+6. Implementeer het nieuwe VPN-beleid.
+7. Controleer of de VPN-client-app verbinding maakt met de VPN-server.
+8. Wanneer de app actief is, controleert u of het verkeer van uw app via de VPN-verbinding verloopt.
 
 ## <a name="get-the-app-package-id"></a>De id voor het app-pakket ophalen
 
-Identificeer de pakket-id voor elke toepassing waaraan u VPN-toegang wilt verlenen. Voor openbaar beschikbare toepassingen kunt u de pakket-id's ophalen voor elk van de toepassingen in de Google Play Store. De weergegeven URL voor elke toepassing bevat de pakket-id. De pakket-id voor de Android-versie van de Microsoft Edge-browser is bijvoorbeeld `com.microsoft.emmx`. De pakket-id is opgenomen als onderdeel van de URL.
+Haal de pakket-id op voor elke toepassing die het VPN gaat gebruiken. Voor openbaar beschikbare toepassingen kunt u de app-pakket-id ophalen in de Google Play Store. De weergegeven URL voor elke toepassing bevat de pakket-id.
 
-![Een voorbeeld van het zoeken naar de pakket-id van een app.](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-01.png)
+In het volgende voorbeeld is de pakket-id van de Microsoft Edge-browser-app `com.microsoft.emmx`. De pakket-id maakt deel uit van de URL:
 
-Voor Line-of-Business-apps (LOB) vraagt u uw leverancier of het ontwikkelteam van de toepassing naar de relevante pakket-id.
+:::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-01.png" alt-text="Haal de app-pakket-id in de URL op in Google Play Store.":::
+
+Voor Line-of-Business-apps (LOB) haalt u de pakket-id op bij de leverancier of ontwikkelaar of toepassing.
 
 ## <a name="certificates"></a>Certificaten
 
-In dit onderwerp wordt ervan uitgegaan dat uw VPN-verbinding gebruikmaakt van verificatie op basis van certificaten en dat u alle certificaten in de keten hebt geïmplementeerd die nodig zijn voor het slagen van de clientverificatie. Dit zijn normaal gesproken het clientcertificaat, eventuele tussenliggende certificaten en het basiscertificaat.
-Als u meer informatie wilt over de implementatie van certificaten voor Android Enterprise, bestudeert u eerst het onderwerp [Certificaten voor verificatie gebruiken in Microsoft Intune](../protect/certificates-configure.md).
+In dit artikel wordt ervan uitgegaan dat uw VPN-verbinding gebruikmaakt van verificatie op basis van certificaten. Ook wordt ervan uitgegaan dat u alle certificaten in de keten die nodig zijn voor het verifiëren van clients hebt geïmplementeerd. Deze certificaatketen bevat normaal gesproken het clientcertificaat, eventuele tussenliggende certificaten en het basiscertificaat.
 
-Wanneer het certificaatprofiel voor clientverificatie is geïmplementeerd, hebt u enkele details over dat profiel nodig om het configuratiebeleid voor de VPN-app te maken.
-Als u niet bekend bent met het maken van app-configuratieprofielen, raadpleegt u het onderwerp [App-configuratiebeleidsregels toevoegen voor beheerde Android Enterprise-apparaten](../apps/app-configuration-policies-use-android.md).
- 
+Zie [Certificaten gebruiken voor verificatie in Microsoft Intune](../protect/certificates-configure.md) voor meer informatie over certificaten.
 
-## <a name="build-the-vpn-profile"></a>Het VPN-profiel bouwen
+Wanneer uw certificaatprofiel voor clientverificatie wordt geïmplementeerd, maakt het een certificaattoken in het certificaatprofiel. Dit token wordt gebruikt om het configuratiebeleid voor de VPN-app te maken.
 
-U kunt op twee manieren het app-configuratiebeleid voor uw VPN-app maken. U kunt de **Configuratieontwerper** gebruiken of de optie **JSON-gegevens**. De optie **JSON-gegevens** is vereist wanneer niet alle vereiste VPN-instellingen beschikbaar zijn in de methode **Configuratieontwerper**. Neem contact op met de leverancier van uw VPN voor ondersteuning als u hebt vastgesteld dat de JSON-optie nodig is. In dit onderwerp ziet u voorbeelden van beide methoden. In zowel de methode **JSON-gegevens** als de methode **Configuratieontwerper** kunt u verificatie op basis van certificaten implementeren. Wanneer u de methode **JSON-gegevens** gebruikt, kunt u beginnen met behulp van de **Configuratieontwerper** om de benodigde profielwaarden uit te pakken.
+Als u niet bekend bent met het maken van app-configuratieprofielen, raadpleegt u [App-configuratiebeleidsregels toevoegen voor beheerde Android Enterprise-apparaten](app-configuration-policies-use-android.md).
 
-> [!NOTE]
-> Hoewel veel van de configuratieparameters voor de VPN-client vergelijkbaar zijn, heeft elke app zijn unieke sleutels en opties. Neem contact op met uw VPN-leverancier als er vragen ontstaan. 
+## <a name="use-the-configuration-designer"></a>De Configuration Designer gebruiken
 
-## <a name="use-the-configuration-designer-flow"></a>De stroom Configuratieontwerper gebruiken
+1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Selecteer **Apps** > **App-configuratiebeleid** > **Toevoegen** > **Beheerde apparaten**.
+3. Voer in **Basisinformatie** de volgende eigenschappen in:
 
-1.  Begin met het toevoegen van een nieuw app-configuratiebeleid voor **Beheerde apparaten**.
-2.  Voer een geschikte naam in.
-3.  Selecteer **Android Enterprise** als het platform.
-4.  Selecteer ofwel **Alleen werkprofiel** ofwel **Alleen apparaateigenaar** als het profieltype als verificatie op basis van een certificaat is vereist. Het **Profiel werkeigenaar en apparaateigenaar** is niet compatibel met verificatie op basis van certificaten.
-5.  Selecteer voor de doeltoepassing de VPN-client die u hebt geïmplementeerd. In dit voorbeeld gebruiken we de eerder geïmplementeerde Cisco AnyConnect VPN-client
+    - **Naam**: Voer een beschrijvende naam in voor het beleid. Geef uw beleid een naam zodat u het later eenvoudig kunt identificeren. Een goede beleidsnaam is bijvoorbeeld **App-configuratiebeleid: Cisco AnyConnect VPN-beleid voor apparaten met een Android Enterprise-werkprofiel**.
+    - **Beschrijving**: Voer een beschrijving in voor het beleid. Deze instelling is optioneel, maar wordt aanbevolen.
+    - **Platform**: Selecteer **Android Enterprise**.
+    - **Profieltype**: Uw opties zijn:
+      - **Alle profieltypen**: Deze optie biedt ondersteuning voor verificatie op basis van gebruikersnaam en wachtwoord. Gebruik deze optie niet als u verificatie op basis van certificaten gebruikt.
+      - **Alleen volledig beheerde en toegewezen werkprofielen in bedrijfseigendom**: Deze optie biedt ondersteuning voor verificatie op basis van certificaten en verificatie op basis van gebruikersnaam en wachtwoord.
+      - **Alleen werkprofiel**: Deze optie biedt ondersteuning voor verificatie op basis van certificaten en verificatie op basis van gebruikersnaam en wachtwoord.
+    - **Beoogde app**: Selecteer de VPN-client-app die u eerder hebt toegevoegd. In het volgende voorbeeld wordt de Cisco AnyConnect VPN-client-app gebruikt:
 
-  ![Voorbeeld van het maken van een app-configuratiebeleid: basisbeginselen.](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-02.png)
+      :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-02.png" alt-text="Een app-configuratiebeleid maken om VPN of VPN per app in Microsoft Intune te configureren":::
 
-6. Op de volgende pagina gebruikt u de vervolgkeuzelijst met configuratie-instellingen en selecteert u de optie **Configuratieontwerper gebruiken**.
+4. Selecteer **Volgende**.
+5. Voer in **Instellingen** de volgende eigenschappen in:
 
-  ![Voorbeeld van het gebruiken van de stroom Configuratieontwerper: instellingen.](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-03.png)
+    - **Indeling van de configuratie-instellingen**: Selecteer **Configuration Designer gebruiken**:
 
-7. Klik op **Toevoegen** om de lijst met configuratiesleutels weer te geven.
-8.  Selecteer alle configuratiesleutels die u nodig hebt voor de gekozen configuratie. In dit voorbeeld gebruiken we een minimale lijst om in te stellen voor een AnyConnect VPN, inclusief verificatie op basis van certificaten en VPN per app.
+      :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-03.png" alt-text="Een configuratiebeleid voor VPN-apps maken in Microsoft Intune met Configuration Designer.":::
+
+    - **Toevoegen**: Hiermee wordt de lijst met configuratiesleutels weergegeven. Selecteer alle configuratiesleutels die nodig zijn voor uw configuratie > **OK**.
+
+      In het volgende voorbeeld gebruiken we een minimale lijst voor AnyConnect VPN, inclusief verificatie op basis van certificaten en VPN per app:
   
-  <img alt="Example of using the Configuration Designer Flow - Configuration keys." src="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-04.png" width="350">
+      :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-04.png" alt-text="Configuratiesleutels toevoegen aan een configuratiebeleid voor VPN-apps maken in Microsoft Intune met Configuration Designer - voorbeeld.":::
 
-9. Voer de juiste waarden in voor de sleutels **Verbindingsnaam**, **Host** en **Protocol**.
+    - **Configuratiewaarde**: Voer de waarden in voor de configuratiesleutels die u hebt geselecteerd. Houd er rekening mee dat de sleutelnamen afhankelijk zijn van de VPN-client-app die u gebruikt. In de geselecteerde sleutels in het voorbeeld:
 
-  ![Voorbeeld van het gebruiken van de stroom Configuratieontwerper: selectie van configuratiesleutel.](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-05.png)  
+      - **Toegestane apps voor VPN per app**: Voer de toepassingspakket-id('s) in die u eerder hebt verzameld. Bijvoorbeeld:
 
-  > [!NOTE]
-  > De namen van deze sleutels kunnen variëren en zijn afhankelijk van de VPN-clienttoepassing waarvoor u het beleid bouwt.
+        :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-06.png" alt-text="De toegestane app-pakket-id’s invoeren voor een configuratiebeleid voor VPN-apps in Microsoft Intune met Configuration Designer - voorbeeld.":::
 
-10. Voer de toepassingspakket-id('s) in die u eerder hebt verzameld in de sleutel **Toegestane apps per-app VPN**.
+      - **Certificaatalias voor sleutelhanger** (optioneel): Wijzig het **Waardetype** van **tekenreeks** in **certificaat**. Selecteer het clientcertificaatprofiel dat u wilt gebruiken met VPN-verificatie. Bijvoorbeeld:
 
-  ![Voorbeeld van het gebruiken van de stroom Configuratieontwerper: toepassingspakket-id's.](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-06.png)  
+        :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-07.png" alt-text="De certificaatalias voor de sleutelhanger wijzigen in een configuratiebeleid voor VPN-apps in Microsoft Intune met Configuration Designer - voorbeeld.":::
 
-11. Wijzig in de sleutel **Alias sleutelhangercertificaat** (optioneel) het **Waardetype** van **tekenreeks** in **certificaat**, zodat u het juiste clientcertificaatprofiel kunt kiezen dat moet worden gebruikt voor VPN-verificatie.
+      - **Protocol**: Selecteer het **SSL**- of **IPsec**-tunnelprotocol van de VPN-verbinding.
+      - **Verbindingsnaam**: Voer een beschrijvende naam voor de VPN-verbinding in. Gebruikers zien deze verbindingsnaam op hun apparaat. Voer bijvoorbeeld `ContosoVPN` in.
+      - **Host**: Voer de hostnaam-URL naar de head-endrouter in. Voer bijvoorbeeld `vpn.contoso.com` in.
 
-  ![Voorbeeld van het gebruik van de stroom Configuratieontwerper: certificaatalias sleutelhanger bijwerken.](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-07.png)  
+        :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-05.png" alt-text="Voorbeelden van protocol, verbindingsnaam en hostnaam in een configuratiebeleid voor VPN-apps in Microsoft Intune met Configuration Designer":::
 
-12. Kies op de volgende pagina de gewenste bereiktags.
-13. Voer op de volgende pagina de juiste groepen in waarop u het app-configuratiebeleid wilt implementeren.
-14. Selecteer **Maken** om het maken en implementeren van het beleid te voltooien.
+6. Selecteer **Volgende**.
+7. Selecteer in **Toewijzingen** de groepen waaraan u het configuratiebeleid voor VPN-apps wilt toewijzen.
 
-  ![Voorbeeld van het gebruiken van de stroom Configuratieontwerper: controle.](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-08.png)  
+    Selecteer **Volgende**.
 
-## <a name="use-the-json-flow"></a>De JSON-stroom gebruiken
+8. Controleer uw instellingen in **Beoordelen en maken**. Wanneer u **Maken** selecteert, worden uw wijzigingen opgeslagen en wordt het beleid geïmplementeerd in uw groepen. Het beleid wordt ook weergegeven in de lijst met app-configuratiebeleid.
 
-Maak een tijdelijk profiel:
-1.  Begin met het toevoegen van een nieuw app-configuratiebeleid voor **Beheerde apparaten**.
-2.  Voer een passende naam in (het gebruik van dit profiel is tijdelijk, omdat het niet wordt opgeslagen).
-3.  Selecteer **Android Enterprise** als het platform.
-4.  Selecteer voor de doeltoepassing de VPN-client die u hebt geïmplementeerd.
-5.  Selecteer ofwel **Alleen werkprofiel** ofwel **Alleen apparaateigenaar** als het profieltype als verificatie op basis van een certificaat is vereist. Het **Profiel werkeigenaar en apparaateigenaar** is niet compatibel met verificatie op basis van certificaten.
+    :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-08.png" alt-text="Het app-configuratiebeleid controleren met behulp van de Configuration Designer-stroom in Microsoft Intune - voorbeeld.":::
 
-  ![Voorbeeld van het gebruik van de JSON-stroom: basisbeginselen.](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-09.png)  
+## <a name="use-json"></a>JSON gebruiken
 
-6.  Op de volgende pagina gebruikt u de vervolgkeuzelijst **Configuratie-instellingen** en selecteert u de optie **Configuratieontwerper** gebruiken.
+Gebruik deze optie als u niet beschikt over alle vereiste VPN-instellingen die in **Configuration Designer** worden gebruikt of deze niet weet. Neem voor hulp contact op met de leverancier van uw VPN.
 
-  ![Voorbeeld van het gebruik van de JSON-stroom: indeling van de configuratie-instellingen.](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-10.png)  
+### <a name="get-the-certificate-token"></a>Het certificaattoken ophalen
 
-7.  Klik op **Toevoegen** om de lijst met configuratiesleutels weer te geven.
-8.  Selecteer een van de sleutels met het **Waardetype** **tekenreeks** en klik op **OK**.
+In deze stappen maakt u een tijdelijk beleid. Het beleid wordt niet opgeslagen. Het doel is om het certificaattoken te kopiëren. U gebruikt dit token bij het maken van het VPN-beleid met behulp van JSON (volgende sectie).
 
-  <img alt="Example of using the JSON Flow - Select a key." src="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-11.png" width="350">
+1. Selecteer in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de optie **Apps** > **App-configuratiebeleid** > **Toevoegen** > **Beheerde apparaten**.
+2. Voer in **Basisinformatie** de volgende eigenschappen in:
 
-9.  Wijzig nu het **Waardetype** van **tekenreeks** in **certificaat**. Zo kunt u het juiste clientcertificaatprofiel kiezen dat moet worden gebruikt voor VPN-verificatie.
+    - **Naam**: Voer een willekeurige naam in. Dit beleid is tijdelijk en wordt niet opgeslagen.
+    - **Platform**: Selecteer **Android Enterprise**.
+    - **Profieltype**: Selecteer **Alleen werkprofiel**.
+    - **Beoogde app**: Selecteer de VPN-client-app die u eerder hebt toegevoegd.
 
-  ![Voorbeeld van het gebruik van de JSON-stroom: verbindingsnaam.](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-12.png)  
+3. Selecteer **Volgende**.
+4. Voer in **Instellingen** de volgende eigenschappen in:
 
-10. Wijzig direct het **Waardetype** weer in **tekenreeks**. Denk erom dat de **Configuratiewaarde** verandert in een token met de indeling `{{cert:GUID}}`.
-11. Selecteer de tokenweergave van het certificaat en kopieer deze naar een alternatieve locatie, zoals een teksteditor.
+    - **Indeling van de configuratie-instellingen**: Selecteer **Configuration Designer gebruiken**.
+    - **Toevoegen**: Hiermee wordt de lijst met configuratiesleutels weergegeven. Selecteer een willekeurige sleutel met een **tekenreeks** als **Waardetype**. Selecteer **OK**.
 
-  ![Voorbeeld van het gebruik van de JSON-stroom: configuratiewaarde.](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-13.png)  
+      :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-11.png" alt-text="In Configuration Designer een willekeurige sleutel met een tekenreeks als waardetype selecteren in configuratiebeleid voor VPN-apps van Microsoft Intune":::
 
-12. Negeer het profiel dat wordt gemaakt: het enige doel van de vorige stappen is om het certificaattoken te bepalen.
+5. Wijzig het **Waardetype** van **tekenreeks** in **certificaat**. Met deze stap kunt u het juiste clientcertificaatprofiel selecteren dat de VPN verifieert:
 
-### <a name="create-the-vpn-profile"></a>Het VPN-profiel maken
+    :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-12.png" alt-text="De naam van de verbinding wijzigen in een configuratiebeleid voor VPN-apps in Microsoft Intune - voorbeeld":::
 
-1.  Begin met het toevoegen van een nieuw toepassingsconfiguratieprofiel voor **Beheerde apparaten**.
-2.  Voer een geschikte naam in.
-3.  Selecteer **Android Enterprise** als het platform.
-4.  Selecteer voor de doeltoepassing de VPN-client die u hebt geïmplementeerd.
-5.  Selecteer ofwel **Alleen werkprofiel** ofwel **Alleen apparaateigenaar** als het profieltype als verificatie op basis van een certificaat is vereist. Het **Profiel werkeigenaar en apparaateigenaar** is niet compatibel met verificatie op basis van certificaten.
-6.  Gebruik de vervolgkeuzelijst **Configuratie-instellingen** en selecteer de optie **JSON-gegevens invoeren**.
-7.  U kunt de JSON rechtstreeks bewerken, maar u kunt ook de knop **JSON-sjabloon downloaden** gebruiken om het sjabloon te downloaden en vervolgens te wijzigen in een externe editor van uw keuze. Pas op met teksteditors die de optie hebben om **Gekrulde aanhalingstekens** te gebruiken, omdat hiermee de JSON ongeldig zou worden.
+6. Wijzig direct het **Waardetype** weer in **tekenreeks**. De **Configuratiewaarde** verandert in een token `{{cert:GUID}}`:
 
-  ![Voorbeeld van het gebruik van de JSON-stroom: JSON bewerken.](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-14.png)  
+    :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-13.png" alt-text="De configuratiewaarde toont het certificaattoken in een configuratiebeleid voor VPN-apps in Microsoft Intune":::
 
-8.  Welke methode u ook gebruikt, nadat u de waarden hebt ingevuld die u nodig hebt voor de gewenste configuratie, moeten alle resterende instellingen met een 'STRING_VALUE'- of STRING_VALUE-waarde in de volledige JSON worden verwijderd.
+7. Kopieer en plak dit certificaattoken in een ander bestand, zoals een teksteditor.
 
-#### <a name="example-json-for-f5-access-vpn"></a>Voorbeeld van JSON voor F5 Access VPN
+8. Negeer dit beleid. Sla het niet op. Het enige doel is het certificaattoken te kopiëren en te plakken.
 
-Hierna volgt een voorbeeld van JSON-gegevens voor F5 Acces VPN.
+### <a name="create-the-vpn-policy-using-json"></a>Het VPN-beleid maken met behulp van JSON
+
+1. Selecteer in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de optie **Apps** > **App-configuratiebeleid** > **Toevoegen** > **Beheerde apparaten**.
+
+2. Voer in **Basisinformatie** de volgende eigenschappen in:
+
+    - **Naam**: Voer een beschrijvende naam in voor het beleid. Geef uw beleid een naam zodat u het later eenvoudig kunt identificeren. Een goede beleidsnaam is bijvoorbeeld **App-configuratiebeleid: Cisco AnyConnect VPN-beleid voor apparaten met een Android Enterprise-werkprofiel in het hele bedrijf**.
+    - **Beschrijving**: Voer een beschrijving in voor het beleid. Deze instelling is optioneel, maar wordt aanbevolen.
+    - **Platform**: Selecteer **Android Enterprise**.
+    - **Profieltype**: Uw opties zijn:
+      - **Alle profieltypen**: Deze optie biedt ondersteuning voor verificatie op basis van gebruikersnaam en wachtwoord. Gebruik deze optie niet als u verificatie op basis van certificaten gebruikt.
+      - **Alleen volledig beheerde en toegewezen werkprofielen in bedrijfseigendom**: Deze optie biedt ondersteuning voor verificatie op basis van certificaten en verificatie op basis van gebruikersnaam en wachtwoord.
+      - **Alleen werkprofiel**: Deze optie biedt ondersteuning voor verificatie op basis van certificaten en verificatie op basis van gebruikersnaam en wachtwoord.
+    - **Beoogde app**: Selecteer de VPN-client-app die u eerder hebt toegevoegd. 
+
+3. Selecteer **Volgende**.
+4. Voer in **Instellingen** de volgende eigenschappen in:
+
+    - **Indeling van de configuratie-instellingen**: Selecteer **JSON-gegevens invoeren**. U kunt de JSON rechtstreeks bewerken.
+    - **JSON-sjabloon downloaden**: Gebruik deze optie om de sjabloon in een externe editor te downloaden en bij te werken. Wees voorzichtig met teksteditors die gebruikmaken van **gekrulde aanhalingstekens**, omdat deze mogelijk een ongeldige JSON maken.
+
+    Nadat u de benodigde waarden voor uw configuratie hebt opgegeven, verwijdert u alle instellingen die `"STRING_VALUE"` of `STRING_VALUE` hebben.
+
+    :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-14.png" alt-text="Voorbeeld van het gebruik van de JSON-stroom: JSON bewerken.":::
+
+5. Selecteer **Volgende**.
+6. Selecteer in **Toewijzingen** de groepen waaraan u het configuratiebeleid voor VPN-apps wilt toewijzen.
+
+    Selecteer **Volgende**.
+
+7. Controleer uw instellingen in **Beoordelen en maken**. Wanneer u **Maken** selecteert, worden uw wijzigingen opgeslagen en wordt het beleid geïmplementeerd in uw groepen. Het beleid wordt ook weergegeven in de lijst met app-configuratiebeleid.
+
+#### <a name="json-example-for-f5-access-vpn"></a>Voorbeeld van JSON voor F5 Access VPN
 
 ``` JSON
 {
@@ -238,14 +292,9 @@ Hierna volgt een voorbeeld van JSON-gegevens voor F5 Acces VPN.
 }
 ```
 
-## <a name="summary"></a>Samenvatting
-
-Door gebruik te maken van een app-configuratiebeleid voor in Android Enterprise ingeschreven apparaten kunt u gebruikmaken van per-app VPN-gedrag, ondanks dat er geen rechtstreekse ondersteuning voor is in het platform. 
-
 ## <a name="additional-information"></a>Aanvullende informatie
 
-Zie de volgende onderwerpen voor gerelateerde informatie:
-- [App-configuratiebeleid toevoegen voor beheerde Android Enterprise-apparaten](../apps/app-configuration-policies-use-android.md)
+- [App-configuratiebeleid toevoegen voor beheerde Android Enterprise-apparaten](app-configuration-policies-use-android.md)
 - [Instellingen voor Android Enterprise-apparaten voor het configureren van VPN in Intune](../configuration/vpn-settings-android-enterprise.md)
 
 ## <a name="next-steps"></a>Volgende stappen

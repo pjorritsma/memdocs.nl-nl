@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/18/2020
+ms.date: 07/28/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 16a2558a0f4b002528e749f4a66d3341e83c8576
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: a9fad599342cf358409c7be09ebb8b4eb1c0c4a5
+ms.sourcegitcommit: e8076576f5c0ea7e72358d233782f8c38c184c8f
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989667"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87334620"
 ---
 # <a name="manage-bitlocker-policy-for-windows-10-in-intune"></a>Het BitLocker-beleid voor Windows 10 in Intune beheren
 
@@ -168,11 +168,11 @@ Apparaten moeten voldoen aan de volgende vereisten om rotatie van de BitLocker-h
 
 - Op de apparaten moet Windows 10 versie 1909 of hoger aanwezig zijn
 
-- Op aan Azure AD gekoppelde apparaten en aan Hybrid gekoppelde apparaten moet ondersteuning voor het roteren van sleutels zijn ingeschakeld:
+- Op aan Azure AD gekoppelde apparaten en hybride gekoppelde apparaten moet ondersteuning voor het roteren van sleutels zijn ingeschakeld via configuratie van BitLocker-beleid:
 
-  - **Clientgestuurde rotatie van herstelwachtwoorden**
-
-  Deze instelling vindt u onder *Windows-versleuteling* als onderdeel van een configuratiebeleid voor Endpoint Protection in Windows 10.
+  - **Clientgestuurde rotatie van herstelwachtwoorden** moet zijn ingesteld op *Rotatie inschakelen op apparaten die zijn toegevoegd aan Azure AD* of *Rotatie inschakelen op apparaten die zijn toegevoegd aan Azure AD en op hybride apparaten*
+  - **BitLocker-herstelgegevens opslaan in Azure Active Directory** moet zijn ingesteld op *Ingeschakeld*
+  - **Herstelgegevens opslaan in Azure Active Directory voordat BitLocker wordt ingeschakeld**moet zijn ingesteld op *Vereist*
 
 #### <a name="to-rotate-the-bitlocker-recovery-key"></a>De BitLocker-herstelsleutel roteren
 

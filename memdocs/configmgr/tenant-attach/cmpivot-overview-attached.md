@@ -2,7 +2,7 @@
 title: CMPivot-overzicht van gekoppelde Tenant
 titleSuffix: Configuration Manager
 description: Overzicht van CMPivot voor aan micro soft Endpoint Manager gekoppelde apparaten.
-ms.date: 07/13/2020
+ms.date: 07/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -10,12 +10,12 @@ ms.assetid: 31bf1359-54e5-4416-9f39-6bb0070db542
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f334bcce832c07a4d4394305b9aa33189166a9cf
-ms.sourcegitcommit: 6d987bb69d0eb9955a3003202864f58d6aaa426a
+ms.openlocfilehash: 07bb8cd913c945198d181e6191c540eeb8b2dffc
+ms.sourcegitcommit: 5a58af4f7d40bbde88a273fba859bf69eeff6107
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381041"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87473665"
 ---
 # <a name="tenant-attach-cmpivot-overview"></a>Tenant koppelen: overzicht van CMPivot
 
@@ -34,6 +34,10 @@ Wanneer u CMPivot gebruikt vanuit de beheer console van micro soft Endpoint Mana
 - Gebruik deze `project` Als u alleen specifieke kolommen nodig hebt.
 - Gebruiken `take` om het opgegeven aantal rijen te retour neren.
 - Gebruiken `top` om de eerste N records te retour neren, gesorteerd op opgegeven kolommen.
+
+> [!Important]
+> Wanneer u CMPivot gebruikt om een apparaat op te vragen, als er niet binnen tien minuten een reactie is, is de query een time-out. <!--7802754-->
+
 
 [!INCLUDE [Overview article sections for both Microsoft Endpoint Manager and Configuration Manager use](../core/servers/manage/includes/cmpivot-overview-shared.md)]
 

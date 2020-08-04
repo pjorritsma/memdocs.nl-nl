@@ -10,12 +10,12 @@ ms.assetid: 2c8f57cf-1968-48de-87fb-4897432ed6e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1f31ac96f29fc302e601b8da071b1486f4e7df90
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 00a10e169db36c62b083c56114159b54185a1040
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81715345"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87525910"
 ---
 # <a name="how-to-monitor-clients-in-configuration-manager"></a>Clients controleren in Configuration Manager
 
@@ -53,8 +53,8 @@ Configuration Manager biedt de volgende soorten informatie als client status:
 
     De pictogrammen aan het begin van elke rij geven de online status van het apparaat aan:  
 
-    |||  
-    |-|-|  
+    | Pictogram | Beschrijving |
+    | ---- | ----------- |  
     |![online-statuspictogram voor clients](../../../core/clients/manage/media/online-status-icon.png)|Apparaat is online|  
     |![offline-statuspictogram voor clients](../../../core/clients/manage/media/offline-status-icon.png)|Het apparaat is offline|  
     |![onbekende-statuspictogram voor clients](../../../core/clients/manage/media/unknown-status-icon.png)|Online status is onbekend|  

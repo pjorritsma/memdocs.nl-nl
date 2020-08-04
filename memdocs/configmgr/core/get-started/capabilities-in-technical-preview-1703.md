@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: fb13844dd05049b9186909884aa0c457a8cfacd9
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 98a82d118442a7ca37ff7b2df62bf4702c15ba2c
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428410"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87526012"
 ---
 # <a name="capabilities-in-technical-preview-1703-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1703 voor Configuration Manager
 
@@ -31,24 +31,23 @@ Dit artikel bevat een inleiding tot de functies die beschikbaar zijn in de Techn
 
 U kunt nu gelicentieerde Apps implementeren op apparaten en gebruikers. Afhankelijk van de mogelijkheden van de apps om de ondersteuning van een apparaat te ondersteunen, wordt een geschikte licentie gevraagd wanneer u deze implementeert, als volgt:
 
-|||||
-|-|-|-|-|
-|Configuration Manager versie|App ondersteunt apparaat-licenties?|Type implementatie verzameling|Geclaimde licentie|
-|Ouder dan 1702|Ja|Gebruiker|Gebruikers licentie|
-|Ouder dan 1702|Nee|Gebruiker|Gebruikers licentie|
-|Ouder dan 1702|Ja|Apparaat|Gebruikers licentie|
-|Ouder dan 1702|Nee|Apparaat|Gebruikers licentie|
-|1702 en hoger|Ja|Gebruiker|Gebruikers licentie|
-|1702 en hoger|Nee|Gebruiker|Gebruikers licentie|
-|1702 en hoger|Ja|Apparaat|Apparaatlicentie|
-|1702 en hoger|Nee|Apparaat|Gebruikers licentie|
+| Configuration Manager versie | App ondersteunt apparaat-licenties? | Type implementatie verzameling | Geclaimde licentie |
+| ----------------------------- | ------------------------------ | -------------------------- | --------------- |
+|Ouder dan 1702|Yes|Gebruiker|Gebruikers licentie|
+|Ouder dan 1702|No|Gebruiker|Gebruikers licentie|
+|Ouder dan 1702|Yes|Apparaat|Gebruikers licentie|
+|Ouder dan 1702|No|Apparaat|Gebruikers licentie|
+|1702 en hoger|Yes|Gebruiker|Gebruikers licentie|
+|1702 en hoger|No|Gebruiker|Gebruikers licentie|
+|1702 en hoger|Yes|Apparaat|Apparaatlicentie|
+|1702 en hoger|No|Apparaat|Gebruikers licentie|
 
 
 ## <a name="direct-links-to-applications-in-software-center"></a>Directe koppelingen naar toepassingen in Software Center
 
 U kunt eind gebruikers nu voorzien van een directe koppeling naar een toepassing in Software Center. Dit betekent dat ze software Center niet meer hoeven te openen en te zoeken naar een toepassing voordat ze deze kunnen installeren. Dit is alleen beschikbaar voor Configuration Manager toepassingen, niet voor pakketten en Program ma's of taken reeksen.
 
-### <a name="try-it-out"></a>Beleid uitproberen                 
+### <a name="try-it-out"></a>Probeer het eens                 
 
 Gebruik de volgende URL-indeling om software Center te openen voor een bepaalde toepassing:
 
@@ -70,7 +69,7 @@ Met deze koppeling kunnen eind gebruikers software Center rechtstreeks openen in
 
 U kunt nu PFX-certificaat profielen implementeren die u hebt geïmporteerd op Configuration Manager-client computers met Windows 10.
 
-### <a name="try-it-out"></a>Beleid uitproberen
+### <a name="try-it-out"></a>Probeer het eens
 
 Volg de instructies in [PFX-certificaat profielen maken](../../mdm/deploy-use/create-pfx-certificate-profiles.md) om een pfx-profiel te importeren, het profiel te implementeren en vervolgens te controleren of het certificaat is geïnstalleerd voor de doel gebruiker.
 

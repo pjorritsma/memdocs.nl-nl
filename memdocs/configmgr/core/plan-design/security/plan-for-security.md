@@ -10,12 +10,12 @@ ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 53a30f376bd288e8d50d88ea8f33af37f3cd599e
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: b15b3017dd49c75f4281a3c0bfd1c8a695ab8bae
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110148"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87525995"
 ---
 # <a name="plan-for-security-in-configuration-manager"></a>Beveiliging plannen in Configuration Manager
 
@@ -97,7 +97,7 @@ Clients kunnen niet veilig een kopie van het certificaat van de site server opha
 
 2.  Exporteer het certificaat zonder de persoonlijke sleutel, sla het bestand veilig op en open het alleen vanuit een beveiligd kanaal.  
 
-3.  Installeer de client met behulp van de volgende client. msi-eigenschap:`SMSSIGNCERT=<full path and file name>`  
+3.  Installeer de client met behulp van de volgende client.msi eigenschap:`SMSSIGNCERT=<full path and file name>`  
 
 
 ###  <a name="plan-for-pki-certificate-revocation"></a><a name="BKMK_PlanningForCRLs"></a>Het intrekken van het PKI-certificaat plannen  
@@ -160,9 +160,11 @@ In veel gevallen zijn de standaard configuratie en-gedrag voldoende. De Configur
 
 3.  Het certificaat is geldig, is niet ingetrokken en niet verlopen. De geldigheids controle controleert ook of de persoonlijke sleutel toegankelijk is.  
 
-4.  Het certificaat heeft een mogelijkheid voor client verificatie of het is verleend aan de computer naam.  
+4.  Het certificaat heeft een mogelijkheid voor client verificatie.
 
-5.  Het certificaat heeft de langste geldigheidsduur.  
+5.  De onderwerpnaam van het certificaat bevat de naam van de lokale computer als een subtekenreeks.  
+
+6.  Het certificaat heeft de langste geldigheidsduur.  
 
 Clients configureren voor het gebruik van de lijst met certificaat verleners met behulp van de volgende mechanismen:  
 
@@ -172,7 +174,7 @@ Clients configureren voor het gebruik van de lijst met certificaat verleners met
 
 - Clients downloaden deze van het beheer punt nadat ze zijn toegewezen aan hun site.  
 
-- Geef deze tijdens de client installatie op als een CCMSetup client. msi-eigenschap van CCMCERTISSUERS.  
+- Geef deze tijdens de client installatie op als een CCMSetup client.msi-eigenschap van CCMCERTISSUERS.  
 
 Clients die geen lijst met certificaat verleners hebben wanneer ze voor het eerst worden geïnstalleerd en nog niet zijn toegewezen aan de site, slaan deze controle over. Als clients de lijst met certificaat verleners hebben en geen PKI-certificaat hebben dat is gekoppeld aan een vertrouwd basis certificaat in de lijst met certificaat verleners, mislukt de certificaat selectie. Clients blijven niet verder met de selectie criteria van het certificaat.  
 
@@ -200,7 +202,7 @@ De volgende tabel bevat de kenmerk waarden die Configuration Manager ondersteunt
 |2.5.4.4|SN|Onderwerpnaam|  
 |2.5.4.5|SERIENUMMER|Serienummer|  
 |2.5.4.6|C|Landcode|  
-|2.5.4.7|L|Plaats|  
+|2.5.4.7|L|Lokaliteit|  
 |2.5.4.8|S of ST|Naam van staat of provincie|  
 |2.5.4.9|STRAAT|Adres|  
 |2.5.4.10|O|Organisatienaam|  
@@ -208,7 +210,10 @@ De volgende tabel bevat de kenmerk waarden die Configuration Manager ondersteunt
 |2.5.4.12|T of titel|Titel|  
 |2.5.4.42|G of GN of voornaam|Voornaam|  
 |2.5.4.43|I of initialen|Initialen|  
-|2.5.29.17|(geen waarde)|Alternatieve onderwerpnaam|  
+|2.5.29.17|(geen waarde)|Alternatieve onderwerpnaam| 
+
+  > [!NOTE]
+  > Als u een van de bovenstaande alternatieve certificaat selectie methoden configureert, hoeft de onderwerpnaam van het certificaat de naam van de lokale computer niet te bevatten.
 
 Als er meer dan één geschikt certificaat zich bevindt nadat de selectie criteria zijn toegepast, kunt u de standaard configuratie onderdrukken om het certificaat te selecteren dat de langste geldigheids periode heeft en in plaats daarvan opgeven dat er geen certificaat is geselecteerd. In dit scenario kan de client niet communiceren met IIS-site systemen met een PKI-certificaat. De client stuurt een fout bericht naar het toegewezen terugval status punt om u te waarschuwen over het mislukken van de certificaat selectie zodat u de selectie criteria voor certificaten kunt wijzigen of verfijnen. Het clientgedrag is dan afhankelijk van of de mislukte verbinding zich voordeed via HTTPS of HTTP:  
 
@@ -242,15 +247,15 @@ Vanwege het aantal configuratie opties en-opties in Configuration Manager is er 
 
 6. Volg hoeveel clients een PKI-clientcertificaat gebruiken in de kolom **Clientcertificaat** in de werkruimte **Activa en naleving** en het knooppunt **Apparaten** .  
 
-    U kunt het Configuration Manager HTTPS Readiness Assessment Tool (**cmHttpsReadiness. exe**) ook implementeren op computers. Gebruik vervolgens de rapporten om te zien hoeveel computers een PKI-client certificaat kunnen gebruiken met Configuration Manager.  
+    U kunt ook het Configuration Manager HTTPS Readiness Assessment Tool (**cmHttpsReadiness.exe**) implementeren op computers. Gebruik vervolgens de rapporten om te zien hoeveel computers een PKI-client certificaat kunnen gebruiken met Configuration Manager.  
 
    > [!NOTE]
-   >  Wanneer u de Configuration Manager-client installeert, wordt het hulp programma **CMHttpsReadiness. exe** in `%windir%\CCM` de map geïnstalleerd. De volgende opdracht regel opties zijn beschikbaar wanneer u dit hulp programma uitvoert:  
+   >  Wanneer u de Configuration Manager-client installeert, wordt het **CMHttpsReadiness.exe** -hulp programma geïnstalleerd in de `%windir%\CCM` map. De volgende opdracht regel opties zijn beschikbaar wanneer u dit hulp programma uitvoert:  
    > 
-   > - `/Store:<name>`: Deze optie is hetzelfde als de **CCMCERTSTORE** client. msi-eigenschap  
-   > - `/Issuers:<list>`: Deze optie is hetzelfde als de **CCMCERTISSUERS** client. msi-eigenschap    
-   > - `/Criteria:<criteria>`: Deze optie is hetzelfde als de **CCMCERTSEL** client. msi-eigenschap    
-   > - `/SelectFirstCert`: Deze optie is hetzelfde als de **CCMFIRSTCERT** client. msi-eigenschap    
+   > - `/Store:<name>`: Deze optie is hetzelfde als de eigenschap **CCMCERTSTORE** client.msi  
+   > - `/Issuers:<list>`: Deze optie is hetzelfde als de eigenschap **CCMCERTISSUERS** client.msi    
+   > - `/Criteria:<criteria>`: Deze optie is hetzelfde als de eigenschap **CCMCERTSEL** client.msi    
+   > - `/SelectFirstCert`: Deze optie is hetzelfde als de eigenschap **CCMFIRSTCERT** client.msi    
    > 
    >   Zie [over eigenschappen van client installatie](../../clients/deploy/about-client-installation-properties.md)voor meer informatie.  
 
@@ -315,10 +320,10 @@ Gebruik de volgende procedures om de vertrouwde basis sleutel voor een Configura
 
 4.  Sla het bestand op een locatie op waar alle computers toegang tot hebben, maar waarbij het bestand veilig kan worden geknoeid.  
 
-5.  Installeer de client met behulp van een installatie methode die client. msi-eigenschappen accepteert. Geef de volgende eigenschap op:`SMSROOTKEYPATH=<full path and file name>`  
+5.  Installeer de client met behulp van een installatie methode die client.msi eigenschappen accepteert. Geef de volgende eigenschap op:`SMSROOTKEYPATH=<full path and file name>`  
 
     > [!IMPORTANT]  
-    > Wanneer u de vertrouwde basis sleutel tijdens de client installatie opgeeft, moet u ook de site code opgeven. Gebruik de volgende client. msi-eigenschap:`SMSSITECODE=<site code>`   
+    > Wanneer u de vertrouwde basis sleutel tijdens de client installatie opgeeft, moet u ook de site code opgeven. Gebruik de volgende client.msi eigenschap:`SMSSITECODE=<site code>`   
 
 
 ### <a name="pre-provision-a-client-with-the-trusted-root-key-without-using-a-file"></a><a name="bkmk_trk-provision-nofile"></a>Een client vooraf inrichten met de vertrouwde basis sleutel zonder een bestand te gebruiken  
@@ -327,10 +332,10 @@ Gebruik de volgende procedures om de vertrouwde basis sleutel voor een Configura
 
 2.  Zoek de vermelding **SMSPublicRootKey =**. Kopieer de sleutel van die regel en sluit het bestand zonder wijzigingen.  
 
-3.  Installeer de client met behulp van een installatie methode die client. msi-eigenschappen accepteert. Geef de volgende client. msi-eigenschap `SMSPublicRootKey=<key>` op `<key>` : waar is de teken reeks die u hebt gekopieerd uit mobileclient. TCF.  
+3.  Installeer de client met behulp van een installatie methode die client.msi eigenschappen accepteert. Geef de volgende client.msi eigenschap `SMSPublicRootKey=<key>` op: waar `<key>` is de teken reeks die u hebt gekopieerd uit mobileclient. TCF.  
 
     > [!IMPORTANT]  
-    >  Wanneer u de vertrouwde basis sleutel tijdens de client installatie opgeeft, moet u ook de site code opgeven. Gebruik de volgende client. msi-eigenschap:`SMSSITECODE=<site code>`   
+    >  Wanneer u de vertrouwde basis sleutel tijdens de client installatie opgeeft, moet u ook de site code opgeven. Gebruik de volgende client.msi eigenschap:`SMSSITECODE=<site code>`   
 
 
 ### <a name="verify-the-trusted-root-key-on-a-client"></a><a name="bkmk_trk-verify"></a>De vertrouwde basis sleutel op een client controleren  
@@ -348,9 +353,9 @@ De geretourneerde teken reeks is de vertrouwde basis sleutel. Controleer of deze
 
 ### <a name="remove-or-replace-the-trusted-root-key"></a><a name="bkmk_trk-reset"></a>De vertrouwde basis sleutel verwijderen of vervangen  
 
-Verwijder de vertrouwde basis sleutel van een client met behulp van de client. msi-eigenschap **RESETKEYINFORMATION = True**. 
+Verwijder de vertrouwde basis sleutel van een client met behulp van de eigenschap client.msi, **RESETKEYINFORMATION = True**. 
 
-Als u de vertrouwde basis sleutel wilt vervangen, installeert u de client samen met de nieuwe vertrouwde basis sleutel. Gebruik bijvoorbeeld client-push of geef de client. msi-eigenschap **SMSPublicRootKey**op.  
+Als u de vertrouwde basis sleutel wilt vervangen, installeert u de client samen met de nieuwe vertrouwde basis sleutel. Gebruik bijvoorbeeld client-push of geef de client.msi eigenschap **SMSPublicRootKey**op.  
 
 Zie [over para meters en eigenschappen van client installatie](../../clients/deploy/about-client-installation-properties.md)voor meer informatie over deze installatie-eigenschappen.
 

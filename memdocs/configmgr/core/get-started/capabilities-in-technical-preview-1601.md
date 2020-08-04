@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: ed3f53b6e2e9557def20fc459dfcf4641b0e396d
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: be1401f28ccbd15de2561a19169ed67a81a91550
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905827"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87526029"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1601 voor Configuration Manager
 
@@ -79,7 +79,7 @@ In de 1601 Technical Preview is ondersteuning toegevoegd voor de volgende functi
 
     Als u de optie wilt gebruiken, moet u een nalevings beleid maken in Configuration Manager met specifieke regels die hieronder worden beschreven en een beleid voor voorwaardelijke toegang instellen in de intune-console.  Als u er zeker van wilt zijn dat alleen compatibele Pc's toegang hebben, moet u de Windows-PC-vereiste instellen op **apparaten moet voldoen** aan het beleid. Hieronder vindt u de regels die voldoen aan het beleid dat van toepassing is op Pc's die worden beheerd door Configuration Manager.  
 
-    -   **Registratie in azure ActiveDirectory vereisen:** Deze regel controleert of het apparaat van de gebruiker is toegevoegd aan Azure AD. als dit niet het geval is, wordt het apparaat automatisch geregistreerd in azure AD. Automatische inschrijving wordt alleen ondersteund op Windows 8.1. Implementeer een MSI-bestand om automatische inschrijving voor Windows 7-pc's uit te voeren. Zie [hier](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1)voor meer informatie.  
+    -   **Registratie in azure ActiveDirectory vereisen:** Deze regel controleert of het apparaat van de gebruiker is toegevoegd aan Azure AD. als dit niet het geval is, wordt het apparaat automatisch geregistreerd in azure AD. Automatische inschrijving wordt alleen ondersteund op Windows 8.1. Implementeer een MSI-bestand om automatische inschrijving voor Windows 7-pc's uit te voeren. Klik [hier](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1) voor meer informatie.  
 
     -   **Alle vereiste updates met een deadline die ouder is dan een bepaald aantal dagen, zijn geïnstalleerd:** Deze regel controleert of het apparaat van de gebruiker alle vereiste updates heeft (opgegeven in de regel **vereiste automatische updates** ) binnen de door u opgegeven deadline en respijt periode, en installeert automatisch de vereiste updates die nog niet zijn geïnstalleerd.  
 
@@ -130,8 +130,8 @@ Een client is online als deze momenteel is verbonden met een Configuration Manag
 
 ### <a name="icons-for-client-status"></a>Pictogrammen voor de client status  
 
-|||  
-|-|-|  
+| Pictogram | Beschrijving |
+| ---- | ----------- |
 |![online-statuspictogram voor clients](media/online-status-icon.png)|De client is online.|  
 |![offline-statuspictogram voor clients](media/offline-status-icon.png)|De client is offline.|  
 |![onbekende-statuspictogram voor clients](media/unknown-status-icon.png)|De client status is onbekend.|  

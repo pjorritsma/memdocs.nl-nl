@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa70da636d619a52c0ec8591a43e85e11ff7f9f2
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: 35ee8b225abe48aa4b8b0ca78b9e5b137d0721f6
+ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86410892"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87758360"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>Internettoegang beheren met behulp van Microsoft Edge voor iOS en Android met Microsoft Intune
 
@@ -320,7 +320,7 @@ U kunt verschillende URL-indelingen gebruiken om uw lijsten met toegestane/geblo
     |-------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
     |    `http://www.contoso.com`    |    Komt overeen met één pagina    |    `www.contoso.com`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`contoso.com/`    |
     |    `http://contoso.com`    |    Komt overeen met één pagina    |    `contoso.com/`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com`    |
-    |    `http://www.contoso.com/*;`   |    Komt overeen met alle URL's die beginnen met `www.contoso.com`    |    `www.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com/videos/tvshows`    |    `host.contoso.com`<br>`host.contoso.com/images`    |
+    |    `http://www.contoso.com/*`   |    Komt overeen met alle URL's die beginnen met `www.contoso.com`    |    `www.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com/videos/tvshows`    |    `host.contoso.com`<br>`host.contoso.com/images`    |
     |    `http://*.contoso.com/*`    |    Komt overeen met alle subdomeinen onder `contoso.com`    |    `developer.contoso.com/resources`<br>`news.contoso.com/images`<br>`news.contoso.com/videos`    |    `contoso.host.com`
     |    `http://*contoso.com/*`    |    Komt overeen met alle subdomeinen die eindigen op `contoso.com/`    |    `http://news-contoso.com`<br>`http://news-contoso.com.com/daily`    |    `http://news-contoso.host.com`    |
     `http://www.contoso.com/images`    |    Komt overeen met een afzonderlijke map    |    `www.contoso.com/images`    |    `www.contoso.com/images/dogs`    |

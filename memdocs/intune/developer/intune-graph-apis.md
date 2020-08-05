@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d300be679d54a5f565fb2c42f889a7dcd23894a
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: 7acbd455ef720dd0ab17cce40eae8060c7a68c87
+ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088544"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87438640"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Azure AD gebruiken voor toegang tot de Intune-API's in Microsoft Graph
 
@@ -351,11 +351,11 @@ In dit voorbeeld ziet u hoe u C# gebruikt voor het ophalen van een lijst met app
   > Azure Active Directory (Azure AD) Authentication Library (ADAL) en Azure AD Graph API worden afgeschaft. Zie [Uw toepassingen bijwerken voor het gebruik van Microsoft Authentication Library (MSAL) en Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363) voor meer informatie.
 
 
-    1. Klik met de rechtermuisknop op Solution Explorer.
-    2. Kies **NuGet-pakketten beheren...** &gt; **Bladeren**.
-    3. Selecteer `Microsoft.IdentityModel.Clients.ActiveDirectory` en kies vervolgens **Installeren**.
+   1. Klik met de rechtermuisknop op Solution Explorer.
+   2. Kies **NuGet-pakketten beheren...** &gt; **Bladeren**.
+   3. Selecteer `Microsoft.IdentityModel.Clients.ActiveDirectory` en kies vervolgens **Installeren**.
 
-    <img src="../media/aad-auth-cpp-install-package.png" width="624" height="458" alt="Selecting the Azure AD identity model module" />
+   <img src="../media/aad-auth-cpp-install-package.png" width="624" height="458" alt="Selecting the Azure AD identity model module" />
 
 4. Voeg de volgende instructies toe bovenaan **Program.cs**:
 
@@ -447,7 +447,7 @@ namespace IntuneGraphExample
 
 ### <a name="authenticate-azure-ad-powershell"></a>Azure AD verifiëren (PowerShell)
 
-Voor het volgende PowerShell-script wordt de AzureAD PowerShell-module gebruikt voor de verificatie.  Zie [Azure Active Directory PowerShell versie 2](https://docs.microsoft.com/powershell/azure/install-adv2?view=azureadps-2.0) en de [voorbeelden voor Intune PowerShell](https://github.com/microsoftgraph/powershell-intune-samples).
+Voor het volgende PowerShell-script wordt de AzureAD PowerShell-module gebruikt voor de verificatie.  Zie [Azure Active Directory PowerShell versie 2](/powershell/azure/active-directory/install-adv2) en de [voorbeelden voor Intune PowerShell](https://github.com/microsoftgraph/powershell-intune-samples).
 
 In dit voorbeeld werkt u de waarde bij `$clientID` zodat deze overeenkomt met een geldige toepassings-ID.
 

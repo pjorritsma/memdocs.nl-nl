@@ -5,17 +5,17 @@ description: Meer informatie over het voorbereiden van uw Windows 10-apparaten o
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 07/06/2020
 ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: d58faa57fa1459bbc8d821d117d20b3f404dc8e0
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: 076a4b6d1bf5773287d4a0b32109023039a3b399
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776885"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546413"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>Het voorbereiden van op internet gebaseerde apparaten voor co-beheer
 
@@ -25,7 +25,7 @@ Dit artikel is gericht op het tweede pad naar co-beheer, voor nieuwe apparaten o
 
 Voor nieuwe Windows 10-apparaten kunt u de auto pilot-service gebruiken om de out of Box Experience (OOBE) te configureren. Dit proces omvat het toevoegen van het apparaat aan Azure AD en het inschrijven van het apparaat bij intune.  
 
-Zie [overzicht van Windows auto pilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot)voor meer informatie.
+Zie [overzicht van Windows auto pilot](../../autopilot/windows-autopilot.md)voor meer informatie.
 
 Als u uw apparaten zo wilt configureren dat deze automatisch worden inge schreven bij intune wanneer ze lid worden van Azure AD, raadpleegt u [Windows-apparaten inschrijven voor Microsoft intune](https://docs.microsoft.com/intune/windows-enroll).  
 
@@ -46,9 +46,9 @@ Zie [apparaten toevoegen in intune](https://docs.microsoft.com/intune/enrollment
 ### <a name="autopilot-for-existing-devices"></a>Automatische pilot voor bestaande apparaten
 <!--1358333-->
 
-[Windows auto pilot voor bestaande apparaten](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) is beschikbaar in Windows 10, versie 1809 of hoger. Met deze functie kunt u de installatie kopie van een Windows 7-apparaat voor de door de [gebruiker gestuurde Windows-modus voor automatische Piloting](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) en het inrichten met één systeem eigen Configuration Manager taken reeks.
+[Windows auto pilot voor bestaande apparaten](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) is beschikbaar in Windows 10, versie 1809 of hoger. Met deze functie kunt u de installatie kopie van een Windows 7-apparaat voor de door de [gebruiker gestuurde Windows-modus voor automatische Piloting](../../autopilot/user-driven.md) en het inrichten met één systeem eigen Configuration Manager taken reeks.
 
-Zie voor meer informatie [Windows auto pilot voor bestaande apparaten taken reeks](../osd/deploy-use/windows-autopilot-for-existing-devices.md).
+Zie voor meer informatie [Windows auto pilot voor bestaande apparaten taken reeks](../../autopilot/existing-devices.md).
 
 ## <a name="install-the-configuration-manager-client"></a>De Configuration Manager-client installeren
 

@@ -2,7 +2,7 @@
 title: Wat is er nieuw in versie 1810
 titleSuffix: Configuration Manager
 description: Krijg informatie over wijzigingen en nieuwe mogelijkheden die zijn geïntroduceerd in versie 1810 van Configuration Manager current branch.
-ms.date: 04/23/2019
+ms.date: 07/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2a3b322f868c5c203114de4d974ba6682272c5d7
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: f08b7449b4232d55c4be6227d23965231aa7a273
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906253"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546447"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 1810 van Configuration Manager current branch
 
@@ -237,7 +237,7 @@ Zie [toepassingen maken](../../../apps/deploy-use/create-applications.md) en [aa
 <!--3607717, fka 1358333-->
 [Windows auto pilot voor bestaande apparaten](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) is nu beschikbaar in Windows 10 versie 1809 of hoger. Met deze nieuwe functie kunt u de installatie kopie van een Windows 7-apparaat voor de door de [gebruiker gestuurde Windows-modus voor automatische prototypen](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) opnieuw maken en inrichten met één systeem eigen Configuration Manager taken reeks.
 
-Zie [Windows Autopilot voor bestaande apparaten](../../../osd/deploy-use/windows-autopilot-for-existing-devices.md) voor meer informatie.
+Zie [Windows Autopilot voor bestaande apparaten](../../../../autopilot/existing-devices.md) voor meer informatie.
 
 
 ### <a name="specify-the-drive-for-offline-os-image-servicing"></a>Het station opgeven voor offline-installatie kopie onderhoud van besturings systemen
@@ -435,7 +435,7 @@ Het volgende update pakket (4488598) is beschikbaar in de-console vanaf 25 maart
 
 De volgende aanvullende hotfixes zijn beschikbaar om specifieke problemen op te lossen:
 
-| Id | Titel | Datum | In-console |
+| Id | Titel | Date | In-console |
 |---------|---------|---------|---------|
 | [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune connector certificaat wordt niet vernieuwd in Configuration Manager | 18 januari 2019 | Ja |
 | [4490434](https://support.microsoft.com/help/4490434) | Er worden dubbele kolommen voor gebruikers detectie gemaakt in Configuration Manager | 22 februari 2019 | Ja |

@@ -2,7 +2,7 @@
 title: Windows Autopilot met co-beheer
 titleSuffix: Configuration Manager
 description: Gebruik Windows auto pilot met co-beheer in Configuration Manager om het instellen van nieuwe Windows 10-apparaten te vereenvoudigen.
-ms.date: 02/21/2019
+ms.date: 07/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: e3e3c97f-5945-49ab-a622-9f6fe6b9737e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 91b938b5ab64616a35773406cd18b54de80b40e7
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: f77cb76e3cfd9c932a6f3789f98e5616cdaa27eb
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85590398"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546430"
 ---
 # <a name="windows-autopilot-with-co-management"></a>Windows Autopilot met co-beheer
 
@@ -97,5 +97,4 @@ Raadpleeg voor meer informatie de volgende artikelen:
 
 [InTune gebruiken om Windows auto pilot-profielen te maken](https://docs.microsoft.com/intune/enrollment-autopilot)
 
-[Windows auto pilot voor bestaande apparaten](../osd/deploy-use/windows-autopilot-for-existing-devices.md) taken reeks
-
+[Windows Autopilot implementeren voor bestaande apparaten](../../autopilot/existing-devices.md)

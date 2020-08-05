@@ -2,7 +2,7 @@
 title: Stappen voor takenreeksen
 titleSuffix: Configuration Manager
 description: Meer informatie over de stappen die u kunt toevoegen aan een Configuration Manager taken reeks.
-ms.date: 04/01/2020
+ms.date: 07/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 114a0a18b3eb5d416b45379ccb3ac68128e529c5
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: 61070d98c5b7d453f493cf7ea2995705ee43f325
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353595"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546617"
 ---
 # <a name="task-sequence-steps"></a>Stappen voor takenreeksen
 
@@ -1599,7 +1599,7 @@ Selecteer deze optie om te voorkomen dat Sysprep de markering voor productactive
 <!--SCCMDocs-pr issue 2695-->
 Met deze optie geeft u aan dat Sysprep de computer moet afsluiten in plaats van het standaard gedrag voor opnieuw opstarten.
 
-De taken reeks [Windows auto pilot voor bestaande apparaten](../deploy-use/windows-autopilot-for-existing-devices.md) gebruikt deze stap met deze optie.
+De taken reeks [Windows auto pilot voor bestaande apparaten](../../../autopilot/existing-devices.md) gebruikt deze stap met deze optie.
 
 - Als u wilt dat de taken reeks het apparaat vernieuwt en vervolgens de OOBE voor auto pilot onmiddellijk start, moet u deze optie uitschakelen.  
 

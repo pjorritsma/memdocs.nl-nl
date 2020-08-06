@@ -10,12 +10,12 @@ ms.assetid: b89bcfbf-f5b6-4fb1-bb5e-a5cc18ec0c78
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 5e154f2859a7541ac8f67b8588da7dfb8877c940
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 414d1138a7682d6b9acbc7731035fff1842a1fe7
+ms.sourcegitcommit: c1afc8abd0d7da48815bd2b0e45147774c72c2df
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713714"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87815409"
 ---
 # <a name="operations-and-maintenance-for-reporting-in-configuration-manager"></a>Bewerkingen en onderhoud voor rapportage in Configuration Manager
 
@@ -33,7 +33,7 @@ Configuration Manager de rapporten worden opgeslagen in SQL Server Reporting Ser
 Wanneer u een rapport uitvoert, worden de rapport titel, beschrijving en categorie weer gegeven in de taal van het lokale besturings systeem. Zie [talen voor rapporten](configuring-reporting.md#-languages-for-reports)voor meer informatie.
 
 > [!NOTE]  
-> Report Manager is een webgebaseerd rapport toegang en beheer programma. U kunt dit gebruiken om één exemplaar van een rapport server te beheren via een HTTPS-verbinding. Gebruik Report Manager voor operationele taken: rapporten weer geven, rapport eigenschappen wijzigen en gekoppelde rapport abonnementen beheren. Dit artikel bevat de stappen om een rapport weer te geven en rapport eigenschappen te wijzigen in Report Manager. Zie [Wat is Report Manager?](https://docs.microsoft.com/sql/reporting-services/report-manager-ssrs-native-mode) voor meer informatie over andere opties in Report Manager.
+> Report Manager is een webgebaseerd rapport toegang en beheer programma. U kunt dit gebruiken om één exemplaar van een rapport server te beheren via een HTTPS-verbinding. Gebruik Report Manager voor operationele taken: rapporten weer geven, rapport eigenschappen wijzigen en gekoppelde rapport abonnementen beheren. Dit artikel bevat de stappen om een rapport weer te geven en rapport eigenschappen te wijzigen in Report Manager. Zie [Wat is Report Manager?](https://docs.microsoft.com/sql/reporting-services/report-server/manage-a-reporting-services-native-mode-report-server) voor meer informatie over andere opties in Report Manager.
 
 Gebruik de volgende procedures om een Configuration Manager-rapport uit te voeren.
 
@@ -50,7 +50,7 @@ Gebruik de volgende procedures om een Configuration Manager-rapport uit te voere
 
 ### <a name="run-a-report-in-a-web-browser"></a>Een rapport uitvoeren in een webbrowser
 
-1. Ga in uw webbrowser naar de URL van de Report Manager, bijvoorbeeld `https://Server1/Reports`. Dit adres vindt u op de pagina **Report Manager URL** in Reporting Services-Configuration Manager.
+1. Ga in uw webbrowser naar de URL van de Report Manager, bijvoorbeeld `https://Server1/Reports` . Dit adres vindt u op de pagina **Report Manager URL** in Reporting Services-Configuration Manager.
 
 1. Selecteer in Report Manager de rapportmap voor Configuration Manager, bijvoorbeeld **ConfigMgr_CAS**.
 
@@ -67,7 +67,7 @@ Rapport eigenschappen bevatten de naam en beschrijving van het rapport. U kunt d
 
 Als u de eigenschappen wilt wijzigen, gebruikt u Report Manager:
 
-1. Ga in uw webbrowser naar de URL van de Report Manager, bijvoorbeeld `https://Server1/Reports`.
+1. Ga in uw webbrowser naar de URL van de Report Manager, bijvoorbeeld `https://Server1/Reports` .
 
 1. Selecteer in Report Manager de rapportmap voor Configuration Manager, bijvoorbeeld **ConfigMgr_CAS**.
 
@@ -84,7 +84,7 @@ Wanneer een bestaand Configuration Manager rapport niet de informatie ophaalt di
 Als u een rapport wilt bewerken, hebt u de machtiging **site wijzigen** nodig en kunt u de machtigingen voor het **rapport wijzigen** voor de specifieke objecten in het rapport.
 
 > [!IMPORTANT]
-> Met site-updates worden ingebouwde rapporten bewaard. Als u een standaard rapport wijzigt, wordt de naam van het rapport gewijzigd wanneer de site wordt bijgewerkt met een onderstrepings`_`teken (). Dit gedrag zorgt ervoor dat het gewijzigde rapport niet door de site-update wordt overschreven door het standaard rapport.
+> Met site-updates worden ingebouwde rapporten bewaard. Als u een standaard rapport wijzigt, wordt de naam van het rapport gewijzigd wanneer de site wordt bijgewerkt met een onderstrepings teken ( `_` ). Dit gedrag zorgt ervoor dat het gewijzigde rapport niet door de site-update wordt overschreven door het standaard rapport.
 >
 > Als u vooraf gedefinieerde rapporten wijzigt, maakt u een back-up van uw aangepaste rapporten voordat u een site-update installeert. Na de update herstelt u het rapport in Reporting Services. Als u belang rijke wijzigingen aanbrengt in een vooraf gedefinieerd rapport, maakt u in plaats daarvan een nieuw rapport. Nieuwe rapporten die u maakt voordat u een site upgradet, worden niet overschreven.
 
@@ -141,9 +141,9 @@ Gebruik de volgende procedure om een Configuration Manager rapport op basis van 
 
 ### <a name="create-a-sql-based-report"></a>Een rapport op basis van SQL maken
 
-Wanneer u een SQL-instructie voor een aangepast rapport maakt, verwijst u niet rechtstreeks naar SQL Server tabellen. Altijd verwijzen naar ondersteunde rapportage SQL Server weergaven van de site database. Deze weer gaven hebben namen die beginnen `v_`met. Zie voor meer informatie [aangepaste rapporten maken met behulp van SQL Server weer gaven in Configuration Manager](../../../develop/core/understand/sqlviews/create-custom-reports-using-sql-server-views.md).
+Wanneer u een SQL-instructie voor een aangepast rapport maakt, verwijst u niet rechtstreeks naar SQL Server tabellen. Altijd verwijzen naar ondersteunde rapportage SQL Server weergaven van de site database. Deze weer gaven hebben namen die beginnen met `v_` . Zie voor meer informatie [aangepaste rapporten maken met behulp van SQL Server weer gaven in Configuration Manager](../../../develop/core/understand/sqlviews/create-custom-reports-using-sql-server-views.md).
 
-U kunt ook verwijzen naar open bare opgeslagen procedures vanuit de site database. Deze opgeslagen procedures hebben namen die beginnen met `sp_`.
+U kunt ook verwijzen naar open bare opgeslagen procedures vanuit de site database. Deze opgeslagen procedures hebben namen die beginnen met `sp_` .
 
 Gebruik de volgende procedure om een Configuration Manager rapport op basis van SQL te maken.
 
@@ -181,7 +181,7 @@ Met rapport abonnementen in SQL Server Reporting Services kunt u de automatische
 
 Wanneer u een rapport abonnement maakt om een rapport te leveren aan een bestands share, kopieert Reporting Services het rapport in de opgegeven indeling naar de bestands share die u opgeeft. U kunt zich abonneren op en slechts één rapport per keer bezorgen.
 
-Wanneer u een abonnement maakt dat gebruikmaakt van een bestands share, geeft u een bestaande gedeelde map op als doel. De rapport server maakt de map of netwerk share niet. Wanneer u de doelmap opgeeft in een abonnement, gebruikt u een UNC-pad en neemt u geen afsluitende`\`backslashes () op in het mappad. Het volgende voor beeld is een geldig UNC-pad voor de doelmap `\\server\reportfiles\operations\2001`:.
+Wanneer u een abonnement maakt dat gebruikmaakt van een bestands share, geeft u een bestaande gedeelde map op als doel. De rapport server maakt de map of netwerk share niet. Wanneer u de doelmap opgeeft in een abonnement, gebruikt u een UNC-pad en neemt u geen afsluitende backslashes ( `\` ) op in het mappad. Het volgende voor beeld is een geldig UNC-pad voor de doelmap: `\\server\reportfiles\operations\2001` .
 
 > [!NOTE]
 > Wanneer u het abonnement maakt, geeft u een gebruikers naam en wacht woord op. Dit account moet toegang hebben tot deze share met **Schrijf** machtigingen voor de doelmap.
@@ -286,7 +286,7 @@ Gebruik de volgende procedure om een rapport abonnement te maken voor het levere
     - **Aan**: Geef een geldig e-mail adres op als ontvanger.
 
         > [!NOTE]
-        > Als u meerdere ontvangers wilt invoeren, scheidt u elk e-`;`mail adres met een punt komma ().
+        > Als u meerdere ontvangers wilt invoeren, scheidt u elk e-mail adres met een punt komma ( `;` ).
 
     - **CC**: Geef eventueel een e-mail adres op om een kopie van dit rapport te ontvangen.
 

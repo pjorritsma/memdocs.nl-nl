@@ -10,12 +10,12 @@ ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a7640fade49c70c013cf1d7c0939957a07f223fd
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: f8d116879b0a85f3276d848b01c69d575b8b69fd
+ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546898"
+ms.locfileid: "87758309"
 ---
 # <a name="configure-endpoint-protection-on-a-standalone-client"></a>Endpoint Protection op een zelfstandige client configureren
 
@@ -101,3 +101,7 @@ C:\Program Files\Microsoft Security Client\ConfigSecurityPolicy.exe <full path>\
 ```
 
 Vervang door `full path` het pad waar u het nieuwe XML-bestand van het antimalwarebeleid hebt opgeslagen en `policy file` met de bestands naam voor het antimalwarebeleid.
+
+## <a name="next-steps"></a>Volgende stappen
+
+Zie [Endpoint Protection configureren](endpoint-protection-configure.md)voor meer informatie over het gebruik van Endpoint Protection voor het beheren van beveiliging en malware op Configuration Manager-client computers.

@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 7fb02a5c-e286-46b1-a972-6335c858429a
-ms.openlocfilehash: 67d86850dc0440481916984af8635d9e005044c6
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 742cd1e86ac0bff6563c0d3ee4edce7324629480
+ms.sourcegitcommit: c1afc8abd0d7da48815bd2b0e45147774c72c2df
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428621"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87815460"
 ---
 # <a name="tutorial-enable-co-management-for-new-internet-based-devices"></a>Zelf studie: co-beheer inschakelen voor nieuwe apparaten op Internet
 
@@ -96,14 +96,14 @@ Over dit certificaat:
 
 ### <a name="identify-a-unique-name-for-your-cloud-management-gateway-in-azure"></a>Een unieke naam voor uw Cloud beheer gateway in azure identificeren
 
-Wanneer u het CMG Server-verificatie certificaat aanvraagt, geeft u aan wat een unieke naam moet zijn om uw *Cloud service (klassiek)* in azure te identificeren. De open bare Azure-Cloud maakt standaard gebruik van *cloudapp.net*en de CMG wordt in het cloudapp.net-domein gehost als * \< YourUniqueDnsName>. cloudapp.net*.  
+Wanneer u het CMG Server-verificatie certificaat aanvraagt, geeft u aan wat een unieke naam moet zijn om uw *Cloud service (klassiek)* in azure te identificeren. De open bare Azure-Cloud maakt standaard gebruik van *cloudapp.net*en de CMG wordt gehost in het cloudapp.net-domein als * \<YourUniqueDnsName> . cloudapp.net*.  
 
 > [!TIP]  
 > In deze zelf studie gebruikt het **certificaat voor CMG-Server verificatie** een FQDN die eindigt op *contoso.com*.  Nadat we de CMG hebben gemaakt, configureren we een canonieke naam record (CNAME) in de open bare DNS van de organisatie. Met deze record wordt een alias gemaakt voor de CMG die wordt toegewezen aan de naam die wordt gebruikt in het open bare certificaat.  
 
 Controleer voordat u uw open bare certificaat aanvraagt of de naam die u wilt gebruiken, beschikbaar is in Azure. U maakt de service niet rechtstreeks in Azure. In plaats daarvan wordt de naam die is opgegeven in het open bare certificaat dat u hebt aangevraagd, gebruikt door Configuration Manager om de Cloud service te maken wanneer u de CMG installeert.  
 
-1. Meld u aan bij de [Microsoft Azure-Portal](https://portal.azure.com/).  
+1. Meld u aan bij de [Microsoft Azure-portal](https://portal.azure.com/).  
 
 2. Selecteer **een resource maken**, kies de categorie **berekening** en selecteer vervolgens **Cloud service**. De pagina Cloud service (klassiek) wordt geopend.
 
@@ -125,7 +125,9 @@ Vraag een provider type van versie 2 aan wanneer u een CSR genereert. Alleen cer
 > [!TIP]  
 > Wanneer we de CMG implementeren, zullen we ook een Cloud distributiepunt (CDP) tegelijkertijd installeren. Wanneer u bijvoorbeeld een CMG implementeert, kan de optie **CMG als een Cloud distributiepunt functioneren en inhoud van Azure Storage verwerken** worden geselecteerd. Als u de CDP op de server met de CMG, verwijdert u de nood zaak voor afzonderlijke certificaten en configuraties om de CDP te ondersteunen. Hoewel de CDP niet vereist is voor het gebruik van co-beheer, is het nuttig in de meeste omgevingen.  
 >
-> Als u aanvullende Cloud distributiepunten voor co-beheer wilt gebruiken, moet u afzonderlijke certificaten aanvragen voor elke extra server. Als u een openbaar certificaat voor de CDP wilt aanvragen, gebruikt u dezelfde Details als voor de CSR van de Cloud beheer gateway. U hoeft alleen de algemene naam te wijzigen zodat deze uniek is voor elke CDP.  
+> Als u bijkomende, afzonderlijke Cdp's gebruikt, moet u afzonderlijke certificaten aanvragen voor elke extra CDP. Als u een openbaar certificaat wilt aanvragen voor een CDP, gebruikt u dezelfde Details als voor de CSR van de Cloud beheer gateway. U hoeft alleen de algemene naam te wijzigen zodat deze uniek is voor elke CDP.
+>
+> Het gebruik van een extra, afzonderlijke CDP is afgeschaft en wordt niet meer aanbevolen. Zie [afgeschafte functies](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#deprecated-features)voor meer informatie.
 
 #### <a name="details-for-the-cloud-management-gateway-csr"></a>Details voor de CSR van de Cloud beheer gateway
 
@@ -387,7 +389,7 @@ Wanneer een eerder niet-beheerd Windows 10-apparaat wordt geregistreerd bij intu
 
 2. Selecteer bij app-type de optie **line-of-Business-app** onder **andere**.
 
-3. Voor het **app-pakket bestand**bladert u naar de locatie van het Configuration Manager bestand **ccmsetup. msi**en selecteert u vervolgens **openen > OK**.
+3. Voor het **app-pakket bestand**bladert u naar de locatie van het Configuration Manager bestand **ccmsetup.msi**en selecteert u vervolgens **openen > OK**.
 Bijvoorbeeld: *C:\Program Files\Microsoft Configuration Manager\bin\i386\ccmsetup.msi*
 
 4. Selecteer **app-gegevens**en geef vervolgens de volgende gegevens op:
@@ -395,7 +397,7 @@ Bijvoorbeeld: *C:\Program Files\Microsoft Configuration Manager\bin\i386\ccmsetu
 
    - **Uitgever**: micro soft  
 
-   - **Opdracht regel argumenten**: * \< Geef de **CCMSETUPCMD** -opdracht regel op. U kunt de opdracht regel gebruiken die u hebt opgeslagen op de* *pagina activering van de wizard voor het configureren van co-beheer. Deze opdracht regel bevat de namen van uw Cloud service en aanvullende waarden waarmee apparaten de Configuration Manager-client software kunnen installeren. >*  
+   - **Opdracht regel argumenten**:*\<Specify the **CCMSETUPCMD** command line. You can use the command line you saved from the* Enablement *page of the Co-management Configuration Wizard. This command line includes the names of your cloud service and additional values that enable devices to install the Configuration Manager client software.>*  
 
      De opdracht regel structuur moet er als volgt uitzien in dit voor beeld met alleen de para meters CCMSETUPCMD en SMSSiteCode:  
 
@@ -414,7 +416,7 @@ De volgende procedure implementeert de app voor het installeren van de Configura
 
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://endpoint.microsoft.com). Selecteer **apps**  >  **alle apps** en selecteer vervolgens **Boots trap client installeren**, de app die u hebt gemaakt om de Configuration Manager-client te implementeren.  
 
-2. Klik op **Eigenschappen** en vervolgens op **bewerken** voor **toewijzingen**. Selecteer **groep toevoegen** onder **vereiste** toewijzingen om de Azure Active Directory-groepen (AD) in te stellen met gebruikers en apparaten die u wilt laten deel nemen aan co-beheer.  
+2. Selecteer **Eigenschappen** en vervolgens **bewerken** voor **toewijzingen**. Selecteer **groep toevoegen** onder **vereiste** toewijzingen om de Azure Active Directory-groepen (AD) in te stellen met gebruikers en apparaten die u wilt laten deel nemen aan co-beheer.  
 
 3. Selecteer **controleren + opslaan** en **Sla** de configuratie op.
 De app is nu vereist voor gebruikers en apparaten waaraan u deze hebt toegewezen. Nadat de app de Configuration Manager-client op een apparaat heeft geïnstalleerd, wordt deze beheerd door co-beheer.

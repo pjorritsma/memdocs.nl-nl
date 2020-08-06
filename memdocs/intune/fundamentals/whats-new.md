@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 07/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2cd5e8f6e1975adf33131ca47049eb2d4a6f68cd
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 46c58437fab66b0a4fd22ea8452856ca701e9eb7
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262877"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546806"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Wat is er nieuw in Microsoft Intune?
 
@@ -54,6 +54,14 @@ Ontdek elke week wat er nieuw is in Microsoft Intune in het [Microsoft Endpoint 
 ### Role-based access control
 ### Scripts
 
+<!-- ########################## -->
+## <a name="week-of-july-27-2020"></a>Week van 27 juli 2020
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="monitor-and-troubleshoot"></a>Bewaken en problemen oplossen
+
+#### <a name="power-bi-compliance-report-template-v20---636958---"></a>Sjabloon voor Power BI-nalevingsrapport BI V 2.0<!-- 636958 -->
+Met behulp van Power BI-sjabloon-apps kunnen Power BI-partners Power BI-apps bouwen met weinig tot geen codering en deze naar elke Power BI-klant implementeren. Beheerders kunnen de versie van de Power BI-compatibiliteitsrapportsjabloon bijwerken van V 1.0 naar V 2.0. V 2.0 bevat een verbeterd ontwerp, evenals wijzigingen in de berekeningen en gegevens die worden opgehaald als onderdeel van de sjabloon. Zie [Verbinding maken met het datawarehouse met Power BI](../developer/reports-proc-get-a-link-powerbi.md) en [Een sjabloon-app bijwerken](https://docs.microsoft.com/power-bi/service-template-apps-install-distribute#update-a-template-app) voor meer informatie. Lees ook de blogpost [Announcing a New Version of the PowerBI Compliance Report with Intune Data Warehouse](https://aka.ms/new_compliance_report).
 
 <!-- ########################## -->
 ## <a name="week-of-july-13-2020--2007-service-release"></a>Week van 13 juli 2020 (2007 servicerelease)
@@ -67,8 +75,8 @@ Eindgebruikers kunnen nu bepalen of de toepassingen die worden weergegeven in de
 #### <a name="exchange-on-premises-connector-support---7138486----"></a>Ondersteuning voor Exchange On-Premises Connector<!-- 7138486  -->
 In Intune wordt de ondersteuning voor de functie Exchange On-Premises Connector verwijderd uit de Intune-serviceversie vanaf 2007 (juli). Bestaande klanten met een actieve connector kunnen op dit moment verder gaan met de huidige functionaliteit. Nieuwe klanten en bestaande klanten die geen actieve connector hebben, kunnen geen nieuwe connectors meer maken of Exchange ActiveSync-apparaten (EAS) beheren vanuit Intune. Voor deze klanten raadt Microsoft aan om met Exchange [HMA (Hybrid Modern Authentication)](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) de toegang tot Exchange On-Premises te beveiligen. Met HMA kunt u zowel beleidsregels voor Intune-app-beveiliging (ook bekend als MAM) als voorwaardelijke toegang via Outlook Mobile voor Exchange On-Premises inschakelen.
 
-#### <a name="smime-for-outlook-on-ios-and-android-enterprise-devices-managed-without-enrollment---6517155----"></a>S/MIME voor Outlook op iOS- en Android Enterprise-apparaten die worden beheerd zonder inschrijving<!-- 6517155  -->
-U kunt nu S/MIME voor Outlook op iOS- en Android Enterprise-apparaten inschakelen met behulp van app-configuratiebeleid voor apparaten die worden beheerd zonder inschrijving. Selecteer in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de optie **Apps** > **App-configuratiebeleid** > **Toevoegen** > **Beheerde apps**. Bovendien kunt u eventueel toestaan dat gebruikers deze instelling wijzigen in Outlook. Zie [S/MIME-overzicht voor het ondertekenen en versleutelen van e-mail in Intune](../protect/certificates-s-mime-encryption-sign.md) voor algemene informatie over S/MIME. Zie [Configuratie-instellingen van Microsoft Outlook](../apps/app-configuration-policies-outlook.md) en [App Configuration-beleid voor beheerde apps toevoegen zonder apparaatregistratie](../apps/app-configuration-policies-managed-app.md) voor meer informatie over configuratie-instellingen van Outlook. Zie [S/MIME-scenario's](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-scenarios) en [Configuratiesleutels - S/MIME-instellingen](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-settings) voor meer informatie over S/MIME met betrekking tot Microsoft Exchange.
+#### <a name="smime-for-outlook-on-ios-and-android-devices-without-enrollment---6517155---"></a>S/MIME voor Outlook op iOS- en Android-apparaten zonder inschrijving<!-- 6517155 -->
+U kunt nu S/MIME voor Outlook op iOS- en Android-apparaten inschakelen met behulp van app-configuratiebeleid voor beheerde apps. Hierdoor kan het beleid worden geleverd, ongeacht de status van de apparaatinschrijving. Selecteer in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de optie **Apps** > **App-configuratiebeleid** > **Toevoegen** > **Beheerde apps**. Bovendien kunt u eventueel toestaan dat gebruikers deze instelling wijzigen in Outlook. Als u echter automatisch S/MIME-certificaten naar Outlook wilt implementeren voor iOS en Android, moet het apparaat worden ingeschreven. Zie [S/MIME-overzicht voor het ondertekenen en versleutelen van e-mail in Intune](https://docs.microsoft.com/mem/intune/protect/certificates-s-mime-encryption-sign) voor algemene informatie over S/MIME. Zie [Configuratie-instellingen van Microsoft Outlook](../apps/app-configuration-policies-outlook.md) en [App Configuration-beleid voor beheerde apps toevoegen zonder apparaatregistratie](../apps/app-configuration-policies-managed-app.md) voor meer informatie over configuratie-instellingen van Outlook. Zie [S/MIME-scenario's](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-scenarios) en [Configuratiesleutels - S/MIME-instellingen](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-settings) voor meer informatie over S/MIME met betrekking tot Outlook voor iOS en Android. 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-configuration"></a>Apparaatconfiguratie

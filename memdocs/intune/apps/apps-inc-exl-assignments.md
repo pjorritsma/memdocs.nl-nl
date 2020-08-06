@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 07/30/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a7f382c604d4cddef487871e47ad004389669982
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 8bbeb0c3db963e858230ce9a45f45f976bbfbbef
+ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83984305"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87443881"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>App-toewijzingen opnemen en uitsluiten in Microsoft Intune
 
@@ -88,7 +88,12 @@ U kunt een app toewijzen aan groepen met behulp van de toewijzing voor opnemen e
 
 Als u groepstoewijzingen maakt, kunnen groepen die al zijn toegewezen, niet worden gewijzigd. Als u een groep wilt selecteren die momenteel niet beschikbaar is, verwijdert u eerst de app uit de lijst met toegewezen apps.
 
-Als u toewijzingen wilt bewerken, selecteert u in de lijst **Toewijzingen** in de app de rij met de specifieke toewijzing die u wilt wijzigen. U kunt een toewijzing ook verwijderen door aan het eind van een rij op het weglatingsteken ( **...** ) te klikken en **Verwijderen** te selecteren. Groepeer op **Toewijzingstype** of op **Opgenomen/uitgesloten** om de weergave van de lijst **Toewijzingen** te wijzigen.
+Als u toewijzingen wilt bewerken, selecteert u in de lijst **Toewijzingen** in de app de rij met de specifieke toewijzing die u wilt wijzigen. U kunt een toewijzing ook verwijderen door aan het eind van een rij op het weglatingsteken ( **...** ) te klikken en **Verwijderen** te selecteren. 
+
+> [!NOTE]
+> Wanneer u een groepstoewijzing verwijdert, wordt de gerelateerde app niet verwijderd. De geïnstalleerde app blijft op het apparaat.  
+
+Groepeer op **Toewijzingstype** of op **Opgenomen/uitgesloten** om de weergave van de lijst **Toewijzingen** te wijzigen.
 
 ![App-toewijzingen van Intune - Voltooid](./media/apps-inc-exl-assignments/apps-inc-exl-05.png)
 

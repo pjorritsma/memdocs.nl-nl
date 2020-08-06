@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 07/30/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 665e06e6aca0a4ba4f71147325eb587b1b8b4d40
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: cafc7549dfb04bff14b0cdfe8c737ee4971d4db1
+ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461535"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87443818"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Apps toewijzen aan groepen met Microsoft Intune
 
@@ -32,7 +32,7 @@ ms.locfileid: "86461535"
 Nadat u [een app hebt toegevoegd](apps-add.md) aan Microsoft Intune, kunt u de app toewijzen aan gebruikers en apparaten. Het is belangrijk dat u weet dat u een app kunt toewijzen aan een apparaat, ongeacht of het apparaat wordt beheerd in Intune.
 
 > [!NOTE]
-> De Beschikbare implementatie-opzet wordt niet ondersteund voor apparaatgroepen. Alleen gebruikersgroepen worden ondersteund.
+> De implementatie-intentie **Beschikbaar** wordt alleen ondersteund voor **apparaatgroepen** bij het richten op volledig beheerde Android Enterprise-apparaten (COBO) en Android Enterprise-apparaten in bedrijfseigendom die voor persoonlijk gebruik zijn ingeschakeld.
 
 In de volgende tabellen worden de verschillende opties vermeld voor het toewijzen van apps aan gebruikers en apparaten:
 

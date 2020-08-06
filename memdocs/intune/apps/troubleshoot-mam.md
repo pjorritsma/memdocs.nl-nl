@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8405ef9c8d83583fe2ceb5da668ccfd79d23a39a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b91751e9879d06b40bdd9518926759da2331115f
+ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79334090"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87758258"
 ---
 # <a name="troubleshoot-mobile-application-management"></a>Problemen met Mobile Application Management oplossen
 
@@ -102,7 +102,7 @@ Dialoogvenster/foutbericht | Oorzaak | Herstel |
 -- | --- | --- |
 **De app is niet ingesteld**: Deze app is niet ingesteld om door u te worden gebruikt. Neem contact op met uw IT-beheerder voor hulp. | Kan het vereiste app-beveiligingsbeleid voor de app niet detecteren. |Controleer of er een beveiligingsbeleid voor Android-apps is geïmplementeerd voor de beveiligingsgroep van de gebruiker en op deze app wordt toegepast.
 **Kan de app niet starten**: er is een probleem met het starten van uw app. Probeer de app of de bedrijfsportal-app van Intune bij te werken. Neem contact op met de IT-beheerder als u hulp nodig hebt. | Intune heeft een geldige app-beveiligingsbeleid voor de app gedetecteerd, maar de app loopt vast tijdens de MAM-initialisatie. | Zorg ervoor dat de versie van de app is bijgewerkt. <br><br> Zorg ervoor dat de bedrijfsportal van Intune op het apparaat is geïnstalleerd en is bijgewerkt. <br><br> Als de fout zich blijft voordoen, gebruikt u de bedrijfsportal-app om logboeken naar Intune te verzenden of maakt u een [ondersteuningsticket](../fundamentals/get-support.md#create-an-online-support-ticket).
-**Geen apps gevonden**: Er staan geen apps op dit apparaat waarmee u van uw organisatie inhoud mag openen. Neem contact op met uw IT-beheerder voor hulp. Neem contact op met uw IT-beheerder voor hulp. | De gebruiker probeert werk- of schoolgegevens te openen met een andere app, maar Intune kan geen andere beheerde apps vinden die de gegevens mogen openen. | Zorg ervoor dat er een beveiligingsbeleid voor Android-apps is geïmplementeerd voor de beveiliging van de gebruiker en dat het beleid wordt toegepast op minimaal nog één andere MAM-app waarmee de desbetreffende gegevens kunnen worden geopend.
+**Geen apps gevonden**: Er staan geen apps op dit apparaat waarmee u van uw organisatie inhoud mag openen. Neem contact op met uw IT-beheerder voor hulp. Neem contact op met uw IT-beheerder voor hulp. | De gebruiker probeert werk- of schoolgegevens te openen met een andere app, maar Intune kan geen andere beheerde apps vinden die de gegevens mogen openen. | Zorg ervoor dat er een beveiligingsbeleid voor Android-apps is geïmplementeerd voor de beveiligingsgroep van de gebruiker en dat het beleid wordt toegepast op minimaal nog één andere MAM-app waarmee de desbetreffende gegevens kunnen worden geopend.
 **Aanmelden is mislukt**: probeer opnieuw aan te melden. Als dit probleem zich blijft voordoen, neemt u contact op met uw IT-beheerder voor ondersteuning. | Fout bij het verifiëren van het account waarmee de gebruiker zich probeert aan te melden. | Zorg ervoor dat de gebruiker zich aanmeldt met het werk- of schoolaccount dat al is geregistreerd bij de Intune MAM-service (het eerste werk- of schoolaccount dat is aangemeld bij deze app). <br><br> Wis de gegevens van de app. <br><br> Zorg ervoor dat de versie van de app is bijgewerkt. <br><br> Zorg ervoor de versie van de bedrijfsportal up-to-date is.
 **Internetverbinding vereist**: U moet zijn verbonden met internet om te kunnen verifiëren of u deze app mag gebruiken. | Het apparaat is niet verbonden met internet. | Verbind het apparaat met een WiFi- of datanetwerk.
 **Het apparaat voldoet niet aan het beleid**: deze app kan niet worden gebruikt, omdat u een geroot apparaat gebruikt. Neem contact op met uw IT-beheerder voor hulp. | Intune heeft gedetecteerd dat de gebruiker een gekraakt geroot gebruikt. | Zet de fabrieksinstellingen van het apparaat terug.

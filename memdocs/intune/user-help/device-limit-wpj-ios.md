@@ -1,5 +1,5 @@
 ---
-title: De limiet voor geregistreerde apparaten is bereikt | Microsoft Docs
+title: De limiet voor iOS-apparaten is bereikt
 titlesuffix: Intune Company Portal
 description: ''
 keywords: ''
@@ -19,14 +19,14 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 7920450185bbc3d198777893a303f4fdec1cd5f7
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 9e808ced9ad2d4f8ce8aded4fe572fea8d55884f
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880506"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546396"
 ---
-# <a name="the-limit-of-devices-you-can-register-has-been-reached"></a>De limiet voor het aantal apparaten dat u kunt registreren is bereikt
+# <a name="the-limit-of-ios-devices-you-can-register-has-been-reached"></a>De limiet voor het aantal iOS-apparaten dat u kunt registreren is bereikt
 
 Alle bedrijven stellen een limiet in voor het aantal apparaten dat elke persoon mag gebruiken voor het openen van bedrijfsresources. Dit helpt bij het beveiligen van bedrijfsgegevens én u weet op deze manier zeker dat elke gebruiker is gemachtigd om de gegevens te openen vanaf het gebruikte apparaat en de gebruikte locatie. Er zijn drie dingen die u doen kunt als u het bericht ziet dat **uw apparaat niet kan worden geregistreerd** omdat de limiet voor het aantal apparaten is bereikt:
 

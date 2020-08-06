@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 03/30/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 22dc48a60d03a0cc6bc10e04bc3facbf36983ff9
-ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
+ms.openlocfilehash: 79e2694cfd34f1db8bf11969506ec3d8cbc453d4
+ms.sourcegitcommit: 8a9b85d1c879060ea541f7c8ad1ae34a4ed33ed0
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84637579"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87507653"
 ---
 Deze mededelingen bevatten belangrijke informatie die u kan helpen om voorbereid te zijn op toekomstige wijzigingen en functies in Intune.
 
@@ -75,6 +75,9 @@ Apparaten worden niet beïnvloed als ze een van de volgende zijn:
 - **Minimale wachtwoordlengte** instellen
 - **Het aantal dagen totdat het wachtwoord verloopt** instellen
 - **Aantal eerdere wachtwoorden dat niet opnieuw mag worden gebruikt** instellen
+
+
+![Schermopname van de pagina met het Android-nalevingsbeleid](../fundamentals/media/notices/android-compliance-settings.png)
 
 ###### <a name="additional-impacts-based-on-android-os-version"></a>Extra effecten op basis van de Android-besturingssysteemversie
 

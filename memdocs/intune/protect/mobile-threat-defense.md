@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/23/2020
+ms.date: 07/29/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,16 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b9aedb7595db5ff0f40f2d12b8cee985fb7be99
-ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
+ms.openlocfilehash: 7bc7f526db4cb9fd269d2d48845cc5dc4096b5df
+ms.sourcegitcommit: 0c5d09bfefbedeb561658cf7274483896e84e5d3
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85332862"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87412338"
 ---
 # <a name="mobile-threat-defense-integration-with-intune"></a>Integratie van Mobile Threat Defense met Intune
 
 Intune kan gegevens van een Mobile Threat Defense-leverancier (MTD) integreren als een gegevensbron voor apparaatnalevingsbeleid en regels voor voorwaardelijke toegang tot apparaten. U kunt deze gegevens gebruiken voor de beveiliging van bedrijfsresources zoals Exchange en SharePoint door de toegang te blokkeren voor mobiele apparaten die zijn gecompromitteerd.
+
+> [!NOTE]
+> In dit artikel worden externe leveranciers voor Mobile Threat Defense besproken. Zie [Microsoft Defender ATP](../protect/advanced-threat-protection.md) voor meer informatie over Microsoft Defender.
 
 Intune kan dezelfde gegevens gebruiken als een bron voor niet-ingeschreven apparaten met behulp van het Intune-beveiligingsbeleid voor apps. Beheerders kunnen daarom deze informatie gebruiken om bedrijfsgegevens te beschermen binnen een [met Microsoft Intune beveiligde app](../apps/apps-supported-intune-apps.md) en een blok uitgeven of selectief wissen.
 
@@ -97,3 +100,4 @@ Meer informatie over het beveiligen van de toegang tot bedrijfsresources op basi
 - [Better Mobile](better-mobile-threat-defense-connector.md)
 - [Sophos Mobile](sophos-mtd-connector.md)
 - [Wandera Mobile Threat Defense](wandera-mtd-connector.md)
+- [Microsoft Defender](../protect/advanced-threat-protection.md)

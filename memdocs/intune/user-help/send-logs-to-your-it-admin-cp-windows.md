@@ -1,5 +1,5 @@
 ---
-title: Logboeken verzenden naar het ondersteuningsteam van het bedrijf voor Windows 10-apparaten | Microsoft Docs
+title: Logboeken verzenden met de bedrijfsportal-app voor Windows
 description: Fout- en logboekgegevens per e-mail verzenden waarmee het ondersteuningsteam van het bedrijf problemen met uw app kan oplossen
 keywords: ''
 author: lenewsad
@@ -19,12 +19,12 @@ ms.reviewer: scottduf
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: b2adca8ed11148e80967c231f79f33b18bb3b113
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 1212dae09da7f4420913d18adc404db266f70c45
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881971"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546739"
 ---
 # <a name="email-your-company-support-about-problem-from-company-portal-for-windows"></a>Het ondersteuningsteam van het bedrijf een e-mailbericht over een probleem verzenden vanuit Bedrijfsportal voor Windows
 

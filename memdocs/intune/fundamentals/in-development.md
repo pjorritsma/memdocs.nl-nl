@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b55c8cced4e559655018b36843e1599cc6e2d1bf
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: e76816768090a624247db7a84da8c6bdffb800bc
+ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262734"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87443830"
 ---
 # <a name="in-development-for-microsoft-intune"></a>In ontwikkeling voor Microsoft Intune
 
@@ -66,8 +66,8 @@ We zijn bezig met het bijwerken van de apparaatpictogrammen in de bedrijfsportal
 ### <a name="ios-company-portal-will-support-apples-automated-device-enrollment-without-user-affinity---7282707----"></a>iOS-bedrijfsportal biedt ondersteuning voor Automatische apparaatinschrijving van Apple zonder gebruikersaffiniteit<!-- 7282707  --> 
 iOS-bedrijfsportal wordt ondersteund op apparaten die zijn ingeschreven met behulp van Automatische apparaatinschrijving van Apple zonder dat een toegewezen gebruiker is vereist. Een eindgebruiker kan zich aanmelden bij de iOS-bedrijfsportal om zichzelf de primaire gebruiker te maken op een iOS-/iPadOS-apparaat dat is ingeschreven zonder apparaataffiniteit. Zie [iOS/iPadOS-apparaten automatisch inschrijven met automatische apparaatinschrijving van Apple](../enrollment/device-enrollment-program-enroll-ios.md) voor meer informatie over automatische apparaatinschrijving.
 
-### <a name="the-company-portal-adds-configuration-manager-application-support---4297660---"></a>De bedrijfsportal voegt ondersteuning voor Configuration Manager-toepassingen toe<!-- 4297660 -->
-De bedrijfsportal biedt nu ondersteuning voor Configuration Manager-toepassingen. Met deze functie kunnen eindgebruikers zowel Configuration Manager-toepassingen als met Intune geïmplementeerde toepassingen zien in de bedrijfsportal voor co-beheerde klanten. Deze ondersteuning helpt beheerders bij het consolideren van de verschillende portal-ervaringen van eindgebruikers. Zie [De bedrijfsportal-app configureren op co-beheerde apparaten](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2006#bkmk_portal) voor meer informatie.
+### <a name="the-windows-company-portal-adds-configuration-manager-application-support---4297660---"></a>De Windows-bedrijfsportal voegt ondersteuning voor Configuration Manager-toepassingen toe<!-- 4297660 -->
+De Windows-bedrijfsportal biedt nu ondersteuning voor Configuration Manager-toepassingen. Met deze functie kunnen eindgebruikers zowel Configuration Manager-toepassingen als met Intune geïmplementeerde toepassingen zien in de Windows-bedrijfsportal voor co-beheerde klanten. Deze ondersteuning helpt beheerders bij het consolideren van de verschillende portal-ervaringen van eindgebruikers. Zie [De bedrijfsportal-app configureren op co-beheerde apparaten](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2006#bkmk_portal) voor meer informatie.
 
 <!-- ***********************************************-->
 ## <a name="device-configuration"></a>Apparaatconfiguratie
@@ -155,9 +155,6 @@ U kunt profiteren van alle voordelen van [CMPivot](../../configmgr/tenant-attach
 
 ### <a name="tenant-attach-run-scripts-from-the-admin-center--7220536-cm6234688---"></a>Tenantkoppeling: Scripts uitvoeren vanuit het beheercentrum<!--7220536, CM6234688 -->
 U kunt de krachtige on-premises functie [Scripts uitvoeren](../../configmgr/apps/deploy-use/create-deploy-scripts.md) van Configuration Manager in het Microsoft Endpoint Manager-beheercentrum gebruiken. Sta extra persona's, zoals Helpdesk, toe om PowerShell-scripts vanuit de cloud uit te voeren met een individueel door Configuration Manager beheerd apparaat. Hiermee krijgt u alle bekende voordelen van PowerShell-scripts die al zijn gedefinieerd en goedgekeurd door de Configuration Manager-beheerder voor deze nieuwe omgeving. Zie [Configuration Manager Technical Preview 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_scripts) voor meer informatie. 
-
-### <a name="new-merge-logic-for-windows-10-devices--179048--"></a>Nieuwe samenvoeglogica voor Windows 10-apparaten<!--179048-->
-Als een klant nu de installatiekopie terugzet op een apparaat en het vervolgens opnieuw inschrijft, worden er meerdere records voor het apparaat weergegeven in de beheerconsole van Microsoft Endpoint Manager. Er wordt een nieuwe samenvoeglogica ontwikkeld voor het samenvoegen van dergelijke dubbele records voor Windows 10-apparaten.
 
 ### <a name="deploy-software-updates-to-macos-devices----3194876---"></a>Software-updates implementeren op macOS-apparaten <!-- 3194876 -->
 U kunt software-updates implementeren voor groepen macOS-apparaten. Deze functie omvat essentiële updates, firmware-updates, configuratiebestanden en andere updates. U kunt updates verzenden de volgende keer dat het apparaat wordt ingecheckt, of een wekelijkse planning selecteren om updates te implementeren binnen of buiten tijdvensters die u instelt. Dit is handig als u apparaten wilt bijwerken buiten standaardwerkuren of wanneer de helpdesk werkt met een volledige bezetting. U krijgt ook een gedetailleerd rapport met alle macOS-apparaten waarop updates zijn geïmplementeerd. U kunt de rapportgegevens filteren per apparaat, om de status van bepaalde updates te bekijken.

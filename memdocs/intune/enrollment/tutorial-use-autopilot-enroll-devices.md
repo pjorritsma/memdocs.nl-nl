@@ -19,16 +19,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e031acf6964c2e43bb355db85dd5e365db1a08ad
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 619974819575936912b6a5c386116bdf26448252
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326897"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546840"
 ---
 # <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>Zelfstudie: Autopilot gebruiken om Windows-apparaten in Intune in te schrijven
 
-Windows Autopilot maakt het makkelijker om apparaten in te schrijven. Met Microsoft Intune en Autopilot geeft u nieuwe apparaten aan uw eindgebruikers zonder dat u aangepaste installatiekopieën van besturingssystemen hoeft te bouwen, onderhouden en toe te passen.
+[Windows Autopilot](../../autopilot/index.yml) maakt het makkelijker om apparaten in te schrijven. Met Microsoft Intune en Autopilot geeft u nieuwe apparaten aan uw eindgebruikers zonder dat u aangepaste installatiekopieën van besturingssystemen hoeft te bouwen, onderhouden en toe te passen.
 
 In deze zelfstudie leert u het volgende:
 > [!div class="checklist"]
@@ -127,6 +127,6 @@ Als u de Autopilot-apparaten niet meer wilt gebruiken, kunt u deze verwijderen.
 Er bestaat aanvullende informatie over andere opties die voor Windows Autopilot beschikbaar zijn.
 
 > [!div class="nextstepaction"]
-> [Diepgaand artikel over Autopilot-inschrijving](enrollment-autopilot.md)
+> [Diepgaand artikel over Autopilot-inschrijving](../../autopilot/enrollment-autopilot.md)
 
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 535def8c7504d8cd1ea1890c419c2f8b98d4f6f6
-ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
+ms.openlocfilehash: 1f706b2bb898f0969bf33d118291551d0f98d9ef
+ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491198"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87443900"
 ---
 # <a name="set-enrollment-restrictions"></a>Registratiebeperkingen instellen
 
@@ -175,6 +175,10 @@ Prioriteit wordt gebruikt wanneer een gebruiker voorkomt in meerdere groepen waa
 Wanneer u een beperking maakt, wordt deze net boven de standaardbeperking in de lijst geplaatst.
 
 Voor apparaatinschrijving gelden standaardbeperkingen voor zowel het apparaattype als de apparaatlimiet. Deze twee beperkingen gelden voor alle gebruikers, tenzij ze worden overschreven door beperkingen met een hogere prioriteit.
+
+>[!NOTE]
+>Beperkingen voor de inschrijving worden toegepast op gebruikers. In inschrijvingsscenario's die niet op gebruikers zijn gebaseerd (bijvoorbeeld de Windows Autopilot-modus voor automatisch implementeren of nauwkeurige inrichting), worden alleen standaardprioriteitsbeperkingen (gericht op Alle gebruikers) afgedwongen.
+
 
 U kunt de prioriteit van een niet-standaard-beperking wijzigen.
 

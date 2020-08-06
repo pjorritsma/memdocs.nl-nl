@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/27/2020
+ms.date: 08/04/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d979001f159b427314f8bc53788ccce0acd13d11
-ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
+ms.openlocfilehash: 33977676b4c144573965477154a7939f6061280a
+ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87365539"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87758343"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>De Intune-bedrijfsportal-apps, de bedrijfsportalwebsite en de Intune-app aanpassen
 
@@ -105,6 +105,8 @@ De volgende tabel bevat specifieke configuratiedetails voor inschrijving:
 
 > [!IMPORTANT]
 > De volgende instellingen zijn niet van toepassing op iOS-en iPadOS-apparaten die zijn geconfigureerd om te worden ingeschreven met [Automatische apparaatinschrijving](../enrollment/device-enrollment-program-enroll-ios.md). Ongeacht hoe deze instellingen zijn geconfigureerd, worden iOS/iPadOS-apparaten die zijn geconfigureerd voor inschrijving met automatische apparaatregistratie, ingeschreven tijdens de out of box flow en worden gebruikers gevraagd zich aan te melden wanneer ze de Bedrijfsportal starten.
+> 
+> De volgende instellingen zijn van toepassing op Android-apparaten die zijn geconfigureerd met [Samsung Knox Mobile Enrollment](../enrollment/android-samsung-knox-mobile-enroll.md) (KME). Als een apparaat voor KME is geconfigureerd en apparaatinschrijving is ingesteld op Niet beschikbaar, kan het apparaat niet worden ingeschreven tijdens de kant-en-klare stroom.
 
 |    Opties voor apparaatinschrijving    |    Beschrijving    |    Controlevragen    |    Melding    |    Status van apparaatgegevens    |    Status van app-details (van een app waarvoor inschrijving is vereist)    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|

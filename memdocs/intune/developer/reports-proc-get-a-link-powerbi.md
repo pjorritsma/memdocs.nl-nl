@@ -6,7 +6,7 @@ keywords: Intune-datawarehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/27/2020
+ms.date: 07/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a6cabb4f89d1ad105b88f54ac7a1c43405d1a65d
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: c3a20477b643da961f5c7281d92f3d24a4e7313d
+ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262571"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87443854"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Verbinding maken met het datawarehouse met Power BI
 
@@ -40,6 +40,9 @@ U kunt de Compliance-app van Power BI gebruiken om interactieve, dynamisch gegen
 - Apparaatinventarisatielogboeken
 
 Er worden ook trends gemarkeerd voor inschrijving, naleving, apparaatconfiguratieprofiel en software-updates. In de voorbeeldgrafieken en -rapporten worden gebruiksvriendelijke filters toegepast op het canvas. Als u geavanceerde filters wilt gebruiken, gaat u naar het deelvenster **Filter** in Power BI Desktop.
+
+> [!NOTE]
+> Power BI-partners kunnen met Power BI-sjabloon-apps Power BI-apps bouwen met weinig tot geen codering en deze naar elke Power BI-klant implementeren. U kunt bijvoorbeeld de Power BI-nalevingsrapportsjabloon in V2.0 gebruiken. V 2.0 bevat een verbeterd ontwerp, evenals wijzigingen in de berekeningen en gegevens die worden opgehaald als onderdeel van de sjabloon. Zie [Een sjabloon-app bijwerken](https://docs.microsoft.com/power-bi/service-template-apps-install-distribute#update-a-template-app), [De app Intune-naleving (datawarehouse)](https://appsource.microsoft.com/product/power-bi/pbi_intune.intune_compliance_dw_app-preview?flightCodes=65ede247-5273-43b8-8a25-b89c7d211fbd) en [Wat zijn Power BI-sjabloon-apps?](https://docs.microsoft.com/power-bi/service-template-apps-overview)
 
 De volgende stappen laten zien hoe u het Power BI-bestand downloadt en hoe u de OData-koppeling gebruikt met Power BI.
 

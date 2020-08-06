@@ -10,12 +10,12 @@ ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7eccc3bf6b7ded9db93f5af78d55f090e9704cbc
-ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
+ms.openlocfilehash: 5e81bc9b2135d17c445f8a86ff2214db394f63db
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87438611"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865486"
 ---
 # <a name="how-to-create-collections-in-configuration-manager"></a>Verzamelingen maken in Configuration Manager
 
@@ -171,9 +171,8 @@ Geef in het dialoog venster **query regel eigenschappen** de volgende informatie
 
 - **Query-instructie bewerken**: Hiermee opent u het dialoog venster **Eigenschappen van query-instructie** waarin u een query kunt schrijven om te gebruiken als regel voor de verzameling. Zie [Inleiding tot query's](../../../servers/manage/introduction-to-queries.md)voor meer informatie over query's.  
 
-        
-        > [!TIP]  
-        > On the General tab, selecting the checkbox to **Omit duplicate rows (select distinct)** may result in less rows returned and potentially quicker results. 
+    > [!TIP]  
+    > Schakel op het tabblad Algemeen het selectie vakje voor het **weglaten van dubbele rijen (DISTINCT selecteren)** uit, waardoor er minder rijen worden geretourneerd en mogelijk snellere resultaten.
 
 ### <a name="device-category-rule"></a><a name="bkmk-category"></a>Regel voor apparaatcategorie
 

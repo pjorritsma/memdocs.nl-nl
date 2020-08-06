@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f49ba4fffd84ffae3e5b47ad74088b65d599533
-ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
+ms.openlocfilehash: c23044b912b7f0edf2852477aad80dd9be66cf54
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491249"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87526063"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Met Android Enterprise-apparaatinstellingen kunt u functies toestaan of beperken met behulp van Intune
 
@@ -440,7 +440,7 @@ Deze instellingen zijn van toepassing op Android Enterprise-inschrijvingstypen w
 
   Gebruikers kunnen op apparaten geen tijdwaarde instellen die groter is dan de geconfigureerde tijd in het profiel. Gebruikers kunnen een lagere tijdwaarde instellen. Als het profiel bijvoorbeeld is ingesteld op `15` minuten, kunnen gebruikers de waarde instellen op 5 minuten. Gebruikers kunnen de waarde niet instellen op 30 minuten.
 
-- **Aantal mislukte aanmeldingen voordat een apparaat wordt gewist**: Voer het aantal onjuiste wachtwoorden tussen 4 en 11 in dat is toegestaan voordat het apparaat wordt gewist. Met `0` (nul) kan de functionaliteit voor het wissen van het apparaat worden uitgeschakeld. Wanneer de waarde leeg is, wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
+- **Aantal mislukte aanmeldingen voordat een apparaat wordt gewist**: Voer het aantal onjuiste wachtwoorden tussen 4 en 11 in dat is toegestaan voordat het werkprofiel op het apparaat wordt gewist. Met `0` (nul) kan de functionaliteit voor het wissen van het apparaat worden uitgeschakeld. Wanneer de waarde leeg is, wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
 
 - **Wachtwoordverlooptijd (dagen)** : Voer het aantal dagen in totdat het wachtwoorden van gebruikers moeten worden gewijzigd (van **1**-**365**).
 - **Vereist wachtwoordtype**: Voer het vereiste complexiteitsniveau voor het wachtwoord in en geef aan of biometrische apparaten kunnen worden gebruikt. Uw opties zijn:
@@ -468,7 +468,7 @@ Deze wachtwoordinstellingen zijn van toepassing op persoonlijke profielen op app
 
   Gebruikers kunnen op apparaten geen tijdwaarde instellen die groter is dan de geconfigureerde tijd in het profiel. Gebruikers kunnen een lagere tijdwaarde instellen. Als het profiel bijvoorbeeld is ingesteld op `15` minuten, kunnen gebruikers de waarde instellen op 5 minuten. Gebruikers kunnen de waarde niet instellen op 30 minuten.
 
-- **Aantal mislukte aanmeldingen voordat een apparaat wordt gewist**: Voer het aantal onjuiste wachtwoorden tussen 4 en 11 in dat is toegestaan voordat het apparaat wordt gewist. Met `0` (nul) kan de functionaliteit voor het wissen van het apparaat worden uitgeschakeld. Wanneer de waarde leeg is, wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
+- **Aantal mislukte aanmeldingen voordat een apparaat wordt gewist**: Voer het aantal onjuiste wachtwoorden tussen 4 en 11 in dat is toegestaan voordat het werkprofiel op het apparaat wordt gewist. Met `0` (nul) kan de functionaliteit voor het wissen van het apparaat worden uitgeschakeld. Wanneer de waarde leeg is, wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
 - **Wachtwoordverlooptijd (dagen)** : Geef het aantal dagen, tussen 1 en 365, op waarna het wachtwoord voor het apparaat moet worden gewijzigd. Voer bijvoorbeeld `90` als u wilt dat het wachtwoord na 90 dagen verloopt. Wanneer het wachtwoord is verlopen, wordt gebruikers gevraagd een nieuw wachtwoord te maken. Wanneer de waarde leeg is, wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
 - **Vereist wachtwoordtype**: Voer het vereiste complexiteitsniveau voor het wachtwoord in en geef aan of biometrische apparaten kunnen worden gebruikt. Uw opties zijn:
   - **Standaardwaarde apparaat**

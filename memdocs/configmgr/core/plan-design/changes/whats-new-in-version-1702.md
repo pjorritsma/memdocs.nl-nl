@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: eacf64245f4cfc779dc92be73e8d7e387b34f909
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: fa29c1b2474d6a0a42b7ff8e3624a3ec8d6a090e
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83427943"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912291"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Wat&#39;s nieuw in versie 1702 van Configuration Manager
 
@@ -271,9 +271,8 @@ Vanaf 1702, hybride Mobile Device Management met Microsoft Intune ondersteunt nu
 
 U kunt nu gelicentieerde Apps implementeren op apparaten en gebruikers. Afhankelijk van de mogelijkheden van de apps om de ondersteuning van een apparaat te ondersteunen, wordt een geschikte licentie gevraagd wanneer u deze implementeert, als volgt:
 
-|||||
-|-|-|-|-|
-|Configuration Manager versie|App ondersteunt apparaat-licenties?|Type implementatie verzameling|Geclaimde licentie|
+| Configuration Manager versie | App ondersteunt apparaat-licenties? | Type implementatie verzameling | Geclaimde licentie |
+| ----------------------------- | ------------------------------ | -------------------------- | --------------- |
 |Ouder dan 1702|Ja|Gebruiker|Gebruikers licentie|
 |Ouder dan 1702|Nee|Gebruiker|Gebruikers licentie|
 |Ouder dan 1702|Ja|Apparaat|Gebruikers licentie|

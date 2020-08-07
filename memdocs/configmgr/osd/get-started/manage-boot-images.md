@@ -10,12 +10,12 @@ ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4403c8d0c57fba8fb63e3df729fb8a48ff123362
-ms.sourcegitcommit: d8dc05476ecd5db7ecb36dc649b566b349ba263d
+ms.openlocfilehash: 76e0fd3ad8ceaecb43d2a61c3abe15accda5e5d8
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83732870"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912376"
 ---
 # <a name="manage-boot-images-with-configuration-manager"></a>Opstart installatie kopieën beheren met Configuration Manager
 
@@ -80,8 +80,8 @@ Wanneer een opstart installatie kopie is gebaseerd op een andere versie van Wind
 
 Tijdens de installatie van de site voegt Configuration Manager automatisch opstart installatie kopieën toe die zijn gebaseerd op een WinPE-versie van de ondersteunde versie van Windows ADK. Afhankelijk van de versie van Configuration Manager, kunt u opstart installatie kopieën toevoegen op basis van een andere WinPE-versie dan de ondersteunde versie van de Windows ADK. Er treedt een fout op wanneer u een opstart installatie kopie probeert toe te voegen die een niet-ondersteunde versie van WinPE bevat. De volgende lijst bevat de momenteel ondersteunde Windows ADK-en WinPE-versies:
 
-|  |  |
-|---------|---------|
+| Windows-type | Ondersteunde versies |
+|--------------|--------------------|
 | Windows ADK-versie | Windows ADK voor Windows 10 |
 | Windows PE-versies voor installatie kopieën die aanpasbaar zijn via de Configuration Manager-console | Windows PE 10 |
 | Ondersteunde Windows PE-versies voor installatie kopieën die *niet aanpasbaar* zijn via de Configuration Manager-console | -Windows PE 3,1<sup>[Opmerking 1](#bkmk_note1)</sup> <br> -Windows PE 5 |
@@ -297,6 +297,6 @@ Gebruik de volgende procedure om de WinPE-taal in te stellen voor met PXE of med
 
 ### <a name="set-the-windows-pe-language-for-a-pxe-or-media-initiated-os-deployment"></a>De Windows PE-taal instellen voor een door PXE of media geïnitieerde besturingssysteem implementatie  
 
-1. Voordat u de opstart installatie kopie bijwerkt, moet u controleren of het juiste resource bestand (tsres. dll) voor de taken reeks zich in de bijbehorende taalmap op de site server bevindt. Het Engelse bron bestand bevindt zich bijvoorbeeld op de volgende locatie:`<ConfigMgrInstallationFolder>\OSD\bin\x64\00000409\tsres.dll`  
+1. Voordat u de opstart installatie kopie bijwerkt, controleert u of het juiste resource bestand (tsres.dll) voor de taken reeks zich in de bijbehorende taalmap op de site server bevindt. Het Engelse bron bestand bevindt zich bijvoorbeeld op de volgende locatie:`<ConfigMgrInstallationFolder>\OSD\bin\x64\00000409\tsres.dll`  
 
 2. Als onderdeel van de prestart-opdracht stelt u de omgevings variabele **SMSTSLanguageFolder** in op de juiste taal-id. De taal-ID moet worden opgegeven met decimale en niet-hexadecimale notatie. Als u bijvoorbeeld de taal-ID op Engels wilt instellen, geeft u de decimale waarde **1033**op, niet de hexadecimale waarde 00000409 van de mapnaam.  

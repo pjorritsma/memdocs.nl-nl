@@ -121,6 +121,8 @@
       items:
         - name: Automatische apparaatinschrijving
           href: device-enrollment-program-enroll-macos.md
+        - name: Directe inschrijving voor macOS-apparaten
+          href: device-enrollment-direct-enroll-macos.md
     - name: Onvolledig inschrijvingsrapport
       href: enrollment-report-company-portal-abandon.md
     - name: Problemen met oplossen inschrijven

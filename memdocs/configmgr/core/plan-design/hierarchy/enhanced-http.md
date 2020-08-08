@@ -2,7 +2,7 @@
 title: Verbeterde HTTP
 titleSuffix: Configuration Manager
 description: Gebruik moderne verificatie om client communicatie te beveiligen zonder dat PKI-certificaten nodig zijn.
-ms.date: 07/10/2020
+ms.date: 08/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4deac022-e397-4f1f-bc0a-cea6c6c6368d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 79b4119a12826596fcc91fa1b4ead4e151e2ddd8
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 5d28e0ccef767770092d03898489104ae6f8c674
+ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262095"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87997909"
 ---
 # <a name="enhanced-http"></a>Verbeterde HTTP
 
@@ -118,6 +118,11 @@ U kunt deze certificaten bekijken in de Configuration Manager-console. Ga naar d
 
 Zie [communicatie van clients naar site systemen en-services](communications-between-endpoints.md#Planning_Client_to_Site_System)voor meer informatie over hoe de client communiceert met het beheer punt en distributie punt met deze configuratie.
 
+## <a name="validate-the-certificate"></a>Het certificaat valideren
+
+Wanneer u Enhanced HTTP inschakelt, genereert de site server een zelfondertekend certificaat met de naam **SMS-functie SSL-certificaat**. Dit certificaat wordt uitgegeven door het hoofd certificaat voor **SMS-verzen** ding. Het beheer punt voegt dit certificaat toe aan de IIS-standaard website gebonden aan poort 443.
+
+Raadpleeg **bestand mpcontrol. log**voor een overzicht van de status van de configuratie.
 
 ## <a name="see-also"></a>Zie ook
 

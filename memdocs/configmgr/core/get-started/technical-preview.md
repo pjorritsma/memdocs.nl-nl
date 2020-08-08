@@ -2,7 +2,7 @@
 title: Technical Preview-releases
 titleSuffix: Configuration Manager
 description: Meer informatie over de technische preview-vertakking om nieuwe functies en mogelijkheden in Configuration Manager te testen.
-ms.date: 07/14/2020
+ms.date: 08/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 64e784ec7313dfa778ee39f6e1f52e7c09fcfd95
-ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
+ms.openlocfilehash: 1d67ba33e2f2f9783b903e60aa64170e1fbb61a5
+ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86384822"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87997919"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Technical Preview voor Configuration Manager
 
@@ -94,7 +94,6 @@ Micro soft biedt ondersteuning voor elke technische preview-versie tot drie opee
 Installeer een basislijn versie van Maxi maal één jaar na de release. Gebruik de meest recente basislijn versie wanneer u een nieuwe Technical Preview-site installeert. De volgende Configuration Manager Technical Preview-versies van branches zijn beschikbaar als updates in de-console en als nieuwe basislijn versies:
 
 - **Technical Preview-versie 2007**
-- **Technical Preview-versie 2002**
 
 Down load een basislijn versie van het [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
 
@@ -121,13 +120,15 @@ bullet format:
 
 De volgende functies zijn beschikbaar met de meest recente versie van Configuration Manager Technical Preview:
 
-### <a name="technical-preview-version-2007"></a>Technical Preview-versie 2007
+### <a name="technical-preview-version-2008"></a>Technical Preview-versie 2008
 
-- [Tenant bijvoegen: hardware-inventaris weer geven in micro soft Endpoint Manager-beheer centrum](2020/technical-preview-2007.md#bkmk_mem) <!--6479284-->
-- [Verbeteringen in het dash board van client gegevens bronnen](2020/technical-preview-2007.md#bkmk_content) <!--7102084-->
-- [Het letter type met de vaste breedte wordt nu in sommige console gebieden gebruikt](2020/technical-preview-2007.md#bkmk_font) <!--7632637-->
-- [Grootte van taken reeks beleid beheren](2020/technical-preview-2007.md#bkmk_tspol) <!--6888853-->
-- [Verbeteringen in de tijd lijn van het apparaat in het beheer centrum](2020/technical-preview-2007.md#bkmk_timeline)<!--7141381-->
+- [Voor beeld van verzamelings query](2020/technical-preview-2008.md#collection-query-preview) <!--7380401-->
+- [SetupDiag-fouten analyseren voor onderdeel updates](2020/technical-preview-2008.md#bkmk_setupdiag) <!--4385028-->
+- [Scenario status bewaken](2020/technical-preview-2008.md#bkmk_health) <!--7699463-->
+- [Evaluatie weergave verzameling](2020/technical-preview-2008.md#bkmk_colleval) <!--6251274-->
+- [Zie de grootte van de taken reeks in de-console](2020/technical-preview-2008.md#bkmk_tssize) <!--7645732-->
+- [Taak verouderde verzamelde bestanden voor diagnostische gegevens verwijderen](2020/technical-preview-2008.md#bkmk_logs) <!--6503308-->
+- [Objecten importeren in huidige map](2020/technical-preview-2008.md#bkmk_folder) <!--6601203-->
 
 > [!NOTE]
 > Functies die beschikbaar waren in een eerdere versie van de Technical Preview blijven beschikbaar in latere versies. Op dezelfde manier blijven functies die worden toegevoegd aan de Configuration Manager huidige vertakking beschikbaar in de vertakking Technical Preview.
@@ -144,6 +145,14 @@ De volgende functies zijn uitgebracht met eerdere versies van de Configuration M
 
 > [!TIP]
 > Wanneer er een nieuwe huidige branch-versie beschikbaar is, worden de functies die beschikbaar zijn in die versie weer gegeven in het laatste artikel *Wat is er nieuw* . Zie [Wat is er nieuw in incrementele versies](../plan-design/changes/whats-new-incremental-versions.md#supported-versions)? voor meer informatie.
+
+### <a name="technical-preview-version-2007"></a>Technical Preview-versie 2007
+
+- [Tenant bijvoegen: hardware-inventaris weer geven in micro soft Endpoint Manager-beheer centrum](2020/technical-preview-2007.md#bkmk_mem) <!--6479284-->
+- [Verbeteringen in het dash board van client gegevens bronnen](2020/technical-preview-2007.md#bkmk_content) <!--7102084-->
+- [Het letter type met de vaste breedte wordt nu in sommige console gebieden gebruikt](2020/technical-preview-2007.md#bkmk_font) <!--7632637-->
+- [Grootte van taken reeks beleid beheren](2020/technical-preview-2007.md#bkmk_tspol) <!--6888853-->
+- [Verbeteringen in de tijd lijn van het apparaat in het beheer centrum](2020/technical-preview-2007.md#bkmk_timeline)<!--7141381-->
 
 ### <a name="technical-preview-version-2006"></a>Technical Preview-versie 2006
 

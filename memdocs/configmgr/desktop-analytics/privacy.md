@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 34005a63b372198bbc2e3079f8ab560ef6b2b791
-ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
+ms.openlocfilehash: eb393b05e1ee93239b43725a67b9a1b3e54e71ed
+ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84795632"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87997959"
 ---
 # <a name="desktop-analytics-data-privacy"></a>Gegevens privacy voor desktop Analytics
 
@@ -94,7 +94,5 @@ Raadpleeg de volgende artikelen voor meer informatie over verwante privacy-aspec
 - [Vertrouwen in de vertrouwde Cloud](https://azure.microsoft.com/overview/trusted-cloud/)  
 
 - [Vertrouwenscentrum](https://www.microsoft.com/trustcenter)  
-
-- [Privacy-schild](https://www.privacyshield.gov/)  
 
 Configuration Manager worden de diagnostische en gebruiks gegevens naar micro soft verzonden, gescheiden van de Desktop Analytics. Micro soft gebruikt deze gegevens voor het verbeteren van de installatie-ervaring, kwaliteit en beveiliging van toekomstige releases van Configuration Manager. Zie [Diagnostische en gebruiks gegevens voor Configuration Manager](../core/plan-design/diagnostics/diagnostics-and-usage-data.md)voor meer informatie.

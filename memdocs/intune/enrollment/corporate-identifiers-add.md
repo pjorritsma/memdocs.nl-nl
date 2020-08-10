@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9796df0da4974b860348bf52ef06db202219136
-ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
+ms.openlocfilehash: b90051e9062978fbc016e461d67fbf081f50c616
+ms.sourcegitcommit: 5a58af4f7d40bbde88a273fba859bf69eeff6107
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491113"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87473675"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Apparaten identificeren als bedrijfseigendom
 
@@ -52,7 +52,10 @@ Deze functie wordt ondersteund op de volgende platformen:
 | Windows | Ondersteund (Windows Phone) | Niet ondersteund |
 | iOS/macOS | Niet ondersteund (Zie Belangrijk hieronder)  | Ondersteund |
 | Door apparaatbeheerder beheerd Android OS V10 | Niet ondersteund | Niet ondersteund |
-| Andere Android | Niet ondersteund | Ondersteund |
+| Android Enterprise - Werkprofiel | Niet ondersteund | Ondersteund |
+| Volledig beheerde Android Enterprise-apparaten | Niet ondersteund | Ondersteund |
+| Toegewezen Android Enterprise-apparaten | Niet ondersteund | Niet ondersteund |
+| Android Enterprise-werkprofiel in bedrijfseigendom | Niet ondersteund | Ondersteund |
 
 <!-- When you upload serial numbers for corporate-owned iOS/iPadOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple's Automated Device Enrollment or Apple Configurator to have them appear as corporate-owned. -->
 
@@ -63,11 +66,6 @@ Deze functie wordt ondersteund op de volgende platformen:
 Maak een lijst met twee kolommen met door komma's gescheiden waarden (.csv) zonder koptekst. Plaats de IMEI- of serienummers van 14 cijfers in de linkerkolom en de details in de rechterkolom. U kunt in één CSV-bestand maar één type id, IMEI-nummer of serienummer importeren. De details zijn beperkt tot 128 tekens en zijn alleen bedoeld voor beheerders. De details worden niet op het apparaat weergegeven. De huidige limiet is 5.000 rijen per CSV-bestand.
 
 **Een CSV-bestand met serienummers uploaden**: maak een lijst in twee kolommen met door komma's gescheiden waarden (CSV) zonder koptekst. Zorg ervoor dat het CSV-bestand niet meer dan 5000 apparaten bevat en niet groter is dan 5 MB.
-
-|||
-|-|-|
-|&lt;Id 1&gt;|&lt;Details apparaat 1&gt;|
-|&lt;Id 2&gt;|&lt;Details apparaat 2&gt;|
 
 Dit CSV-bestand ziet er in een teksteditor als volgt uit:
 

@@ -10,17 +10,18 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: e8db4a7f877b5bd07f1aac76fc49b6efef31802e
-ms.sourcegitcommit: 16bc2ed5b64eab7f5ae74391bd9d7b66c39d8ca6
+ms.openlocfilehash: d966f0a509f5402846d0e671dbfaed571ac70d2a
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86437430"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051700"
 ---
 # <a name="tenant-attach-configmgr-client-details-in-the-admin-center-preview"></a><a name="bkmk_mem"></a>Tenant bijvoegen: client Details ConfigMgr in het beheer centrum (preview-versie)
 <!--6024387, 6374854, 6521921, intune 7552762 pubpreview July 7, 2020-->
+*Van toepassing op: Configuration Manager (huidige vertakking)*
 
-U kunt nu ConfigMgr-client gegevens weer geven, inclusief verzamelingen, lidmaatschap van grens groepen en real-time client informatie voor een specifiek apparaat in het micro soft Endpoint Manager-beheer centrum.
+Micro soft Endpoint Manager is een geïntegreerde oplossing voor het beheer van al uw apparaten. Micro soft brengt Configuration Manager en intune samen in één console met de naam **micro soft Endpoint Manager-beheer centrum**. U kunt ConfigMgr-client gegevens weer geven, inclusief verzamelingen, lidmaatschap van grens groepen en real-time client informatie voor een specifiek apparaat in het beheer centrum.
 
 > [!Important]
 > - Deze informatie is gekoppeld aan een preview-functie die aanzienlijk kan worden gewijzigd voordat deze commercieel wordt uitgebracht. Microsoft biedt geen enkele expliciete of impliciete garanties met betrekking tot de informatie die hier wordt verstrekt.
@@ -42,6 +43,8 @@ Het gebruikers account heeft de volgende machtigingen nodig:
 - De **Lees** machtiging voor de **verzameling** van het apparaat in Configuration Manager.
 - De gebruikersrol **beheerder** voor de Configuration Manager micro service-toepassing in azure AD.
   - Voeg de rol in azure AD toe uit **bedrijfs toepassingen**  >  **Configuration Manager micro service**-  >  **gebruikers en-groepen**  >  **gebruiker toevoegen**. Groepen worden ondersteund als u Azure AD Premium hebt.
+   > [!TIP]
+   > De [rol toepassings beheerder in azure AD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) beschikt over voldoende machtigingen om een gebruiker toe te voegen aan de gebruikersrol **admin** van de toepassing.
 
 ## <a name="view-configmgr-client-details"></a>Details van ConfigMgr-client weer geven
 

@@ -10,15 +10,17 @@ ms.assetid: 44c2eb8a-3ccc-471f-838b-55d7971bb79e
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 2a30e141bb5ea4d7508bf81f53f173e2a3154f08
-ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
+ms.openlocfilehash: d983e0c3d84f5bcbf411af1243ddc045d66d9199
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86210752"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051581"
 ---
 # <a name="troubleshoot-configmgr-client-details-in-the-admin-center-preview"></a>Problemen met ConfigMgr-client Details in het beheer centrum oplossen (preview-versie)
 <!--6374854, 6521921-->
+*Van toepassing op: Configuration Manager (huidige vertakking)*
+
 Gebruik het volgende om de details van ConfigMgr-clients in het beheer centrum van micro soft Endpoint Manager op te lossen:
 
 > [!Important]
@@ -63,7 +65,7 @@ Wanneer u de details van de ConfigMgr-client bekijkt, kunt u een van deze fouten
 
 1. Controleer of het service verbindings punt verbinding heeft met de Cloud met behulp van **CMGatewayNotificationWorker. log**.
 1. Controleer of de beheer service in orde is door het SMS_REST_PROVIDER onderdeel van de bewaking van site componenten op de centrale site te controleren.
-1. IIS moet zijn geïnstalleerd op de provider computer. Zie [vereisten voor de beheer service](../develop/adminservice/overview.md#prerequisites) voor meer informatie.
+1. IIS moet zijn geïnstalleerd op de provider computer. Zie [vereisten voor de beheer service](../develop/adminservice/overview.md#prerequisites)voor meer informatie.
 1. Controleer of de klok op het service verbindings punt synchroon is. Als de klok van het service aansluitpunt zich iets achter bevindt, past u [KB4563473-Update Rollup toe voor Configuration Manager versie 2002-Tenant problemen toevoegen](https://support.microsoft.com/help/4563473). Controleer **AdminService. log** op de provider computer op fouten.
 
 ## <a name="known-issues"></a>Bekende problemen

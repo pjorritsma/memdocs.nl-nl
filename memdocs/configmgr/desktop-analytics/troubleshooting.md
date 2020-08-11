@@ -2,7 +2,7 @@
 title: Problemen met Desktop Analytics oplossen
 titleSuffix: Configuration Manager
 description: Technische Details voor hulp bij het oplossen van problemen met Desktop Analytics.
-ms.date: 07/01/2020
+ms.date: 08/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 68506ba11e356a1e9f14d58880a80bdf3cfcb5f4
-ms.sourcegitcommit: fb03634b8494903fc6855ad7f86c8694ffada8df
+ms.openlocfilehash: e83e8d5d967b4cd3bbcb817c149cd40284bb5f9c
+ms.sourcegitcommit: 66c58078a32af3872d98f7c62af4f8047ee81b50
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85828972"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88089942"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>Problemen met Desktop Analytics oplossen
 
@@ -73,6 +73,9 @@ Desktop Analytics voegt de volgende toepassingen toe aan uw Azure AD:
 Als u deze apps na het volt ooien van de installatie wilt inrichten, gaat u naar het deel venster **verbonden services** . Selecteer **gebruikers en apps toegang configureren**en richt de apps in.  
 
 - **Azure AD-App voor Configuration Manager**. Als u verbindings problemen wilt inrichten of oplossen na het volt ooien van de installatie, raadpleegt u [app maken en importeren voor Configuration Manager](#create-and-import-app-for-configuration-manager). Deze app vereist het **schrijven van gegevens in cm** en het lezen van cm- **verzamelings gegevens** in de API van de **Configuration Manager-service** .  
+
+    > [!NOTE]
+    > Desktop Analytics ondersteunt meerdere Configuration Manager hiërarchieën die rapporteren aan één Azure AD-Tenant.<!-- 4814075 --> Als u meerdere hiërarchieën in uw omgeving hebt geconfigureerd met dezelfde commerciële ID, kunt u de Azure AD-Tenant en het bureau blad Analytics-exemplaar delen met [verschillende apps](connect-configmgr.md#bkmk_connect) voor elke hiërarchie.
 
 ### <a name="create-and-import-app-for-configuration-manager"></a>App voor Configuration Manager maken en importeren
 

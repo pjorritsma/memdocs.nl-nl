@@ -24,22 +24,6 @@
           href: deploy-use/install-new-windows-version-new-computer-bare-metal.md
         - name: Een bestaande computer vervangen en de instellingen overzetten
           href: deploy-use/replace-an-existing-computer-and-transfer-settings.md
-    - name: Methoden om enterprise-besturingssystemen te implementeren
-      items:
-        - name: Methoden voor de implementatie van besturingssystemen
-          href: deploy-use/methods-to-deploy-enterprise-operating-systems.md
-        - name: PXE gebruiken om Windows via het netwerk te implementeren
-          href: deploy-use/use-pxe-to-deploy-windows-over-the-network.md
-        - name: Windows met Software Center via het netwerk implementeren
-          href: deploy-use/use-software-center-to-deploy-windows-over-the-network.md
-        - name: Opstartbare media gebruiken om Windows te implementeren via het netwerk
-          href: deploy-use/use-bootable-media-to-deploy-windows-over-the-network.md
-        - name: Zelfstandige media gebruiken om Windows te implementeren zonder gebruik van het netwerk
-          href: deploy-use/use-stand-alone-media-to-deploy-windows-without-using-the-network.md
-        - name: Multicast gebruiken om Windows via het netwerk te implementeren
-          href: deploy-use/use-multicast-to-deploy-windows-over-the-network.md
-        - name: Een installatiekopie voor een OEM in de fabriek of bij een lokaal depot maken
-          href: deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot.md
     - name: Beveiliging en privacy voor besturingssysteemimplementatie
       href: plan-design/security-and-privacy-for-operating-system-deployment.md
     - name: Interoperabiliteit bij de implementatie van besturingssystemen plannen
@@ -78,6 +62,26 @@
       href: get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md
 - name: Implementeren en gebruiken
   items:
+    - name: Methoden om enterprise-besturingssystemen te implementeren
+      items:
+        - name: Methoden voor de implementatie van besturingssystemen
+          href: deploy-use/methods-to-deploy-enterprise-operating-systems.md
+        - name: PXE gebruiken om Windows via het netwerk te implementeren
+          href: deploy-use/use-pxe-to-deploy-windows-over-the-network.md
+        - name: Windows met Software Center via het netwerk implementeren
+          href: deploy-use/use-software-center-to-deploy-windows-over-the-network.md
+        - name: Opstartbare media gebruiken om Windows te implementeren via het netwerk
+          href: deploy-use/use-bootable-media-to-deploy-windows-over-the-network.md
+        - name: Zelfstandige media gebruiken om Windows te implementeren zonder gebruik van het netwerk
+          href: deploy-use/use-stand-alone-media-to-deploy-windows-without-using-the-network.md
+        - name: Multicast gebruiken om Windows via het netwerk te implementeren
+          href: deploy-use/use-multicast-to-deploy-windows-over-the-network.md
+        - name: Een installatiekopie voor een OEM in de fabriek of bij een lokaal depot maken
+          href: deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot.md
+        - name: Een takenreeks maken voor niet-besturingssysteemimplementaties
+          href: deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md
+        - name: Windows to Go implementeren
+          href: deploy-use/deploy-windows-to-go.md
     - name: Takenreeksen maken en beheren
       href: deploy-use/manage-task-sequences-to-automate-tasks.md
     - name: Takenreeksen maken om taken te automatiseren
@@ -94,8 +98,6 @@
           href: deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md
         - name: Een aangepaste takenreeks maken
           href: deploy-use/create-a-custom-task-sequence.md
-        - name: Een takenreeks maken voor niet-besturingssysteemimplementaties
-          href: deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md
     - name: Een takenreeks implementeren
       href: deploy-use/deploy-a-task-sequence.md
     - name: Een gefaseerde implementatie maken
@@ -104,8 +106,6 @@
       href: deploy-use/manage-monitor-phased-deployments.md
     - name: Windows beheren als een service
       href: deploy-use/manage-windows-as-a-service.md
-    - name: Windows to Go implementeren
-      href: deploy-use/deploy-windows-to-go.md
     - name: Besturingssysteemimplementaties bewaken
       href: deploy-use/monitor-operating-system-deployments.md
     - name: Fouten opsporen in een takenreeks

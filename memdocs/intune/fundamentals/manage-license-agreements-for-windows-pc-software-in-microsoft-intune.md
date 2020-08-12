@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f1bd1b5da0a45ce4291eba765742405e1e4ba43
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 080b7237eb95ba729e4152e646ff8de7466309a0
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077883"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912284"
 ---
 # <a name="manage-license-agreements-for-windows-pc-software-in-microsoft-intune"></a>Licentieovereenkomsten voor Windows-pc-software in Microsoft Intune beheren
 
@@ -178,10 +178,8 @@ De lijstweergave **Alle overeenkomsten** wordt weergegeven.
 ## <a name="manage-license-agreements"></a>Licentieovereenkomsten beheren
 Softwarelicentieovereenkomsten kunnen worden toegevoegd aan licentiegroepen. U kunt licentiegroepen gebruiken om uw licentieovereenkomsten te organiseren in groepen die logisch zijn voor uw organisatie. U kunt ook licentieovereenkomsten verwijderen die u eerder hebt gemaakt.
 
-
-|                            |                                                                                                                                                                                                                                                                                                                                                                          |
-|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|            Taak            |                                                                                                                                                                                 Details                                                                                                                                                                                  |
+| Taak | Details |
+| ---- | ------- |
 |   Een licentiegroep maken   |                                                            Kies op de pagina <strong>Overzicht</strong> in de werkruimte <strong>Licenties</strong> de optie <strong>Licentiegroep maken</strong> in het menu <strong>Taken</strong>. <strong>Opmerking:</strong> U kunt maximaal 500 licentiegroepen maken.                                                             |
 |   De naam van een licentiegroep wijzigen   |                                                                                                      Kies in de werkruimte <strong>Licenties</strong> een licentiegroep en kies dan <strong>Licentiegroep bewerken</strong> in het menu <strong>Taken</strong> .                                                                                                       |
 |   Een licentiegroep verwijderen   |                                 Kies in de werkruimte <strong>Licenties</strong> een licentiegroep en kies dan <strong>Licentiegroep verwijderen</strong> in het menu <strong>Taken</strong> . <strong>Tip:</strong> Alle licenties in de verwijderde groep worden verplaatst naar de licentiegroep <strong>Niet-toegewezen overeenkomsten</strong>.                                 |

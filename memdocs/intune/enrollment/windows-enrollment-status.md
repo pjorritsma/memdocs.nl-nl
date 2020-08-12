@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 08/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f8991b772f5562538403492735f1f4c2fdc87e8
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 75f6585144f62636033c94f701a57cb70e018c26
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093452"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051577"
 ---
 # <a name="set-up-the-enrollment-status-page"></a>De pagina Status van de inschrijving instellen
  
@@ -31,7 +31,7 @@ ms.locfileid: "85093452"
  
 De pagina Status van de inschrijving (ESP) geeft de voortgang van de inrichting weer nadat een nieuw apparaat is geregistreerd, en wanneer nieuwe gebruikers zich aanmelden bij het apparaat.  Zo kunnen IT-beheerders toegang tot het apparaat voorkomen totdat het volledig is ingericht en tegelijkertijd gebruikers informatie geven over de taken die in het inrichtingsproces resteren.
 
-De ESP kan worden gebruikt als onderdeel van een [Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/)-inrichtingsscenario en kan ook afzonderlijk van Windows Autopilot worden gebruikt als onderdeel van de standaard out-of-box experience (OOBE) voor Azure AD-deelname, en voor nieuwe gebruikers die zich voor het eerst aanmelden bij het apparaat.
+De ESP kan worden gebruikt als onderdeel van een [Windows Autopilot](../../autopilot/index.yml)-inrichtingsscenario en kan ook afzonderlijk van Windows Autopilot worden gebruikt als onderdeel van de standaard out-of-box experience (OOBE) voor Azure AD-deelname, en voor nieuwe gebruikers die zich voor het eerst aanmelden bij het apparaat.
 
 U kunt voor de pagina Status van de inschrijving meerdere profielen met verschillende configuraties die het volgende doen:
 

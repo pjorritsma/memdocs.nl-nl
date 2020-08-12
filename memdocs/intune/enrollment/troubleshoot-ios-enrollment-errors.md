@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2b0c65e12349f8b4c887b5a633a1cd94c272ca5a
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 37724c4d9acdfcdb9e371a21a7b15c509de78c60
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093355"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865469"
 ---
 # <a name="troubleshoot-iosipados-device-enrollment-problems-in-microsoft-intune"></a>Problemen met inschrijving van iOS-/iPadOS-apparaten in Microsoft Intune oplossen
 
@@ -109,8 +109,9 @@ Verzamel de volgende gegevens van het probleem:
 1. Verwijder de Bedrijfsportal-app van het apparaat.
 2. Download en installeer de **Microsoft Intune Company Portal**-app uit de **App Store**.
 3. Schrijf het apparaat opnieuw in.
- > [!NOTE]
-    > Deze fout kan ook optreden als de gebruiker probeert om meer apparaten in te schrijven dan is toegestaan. Volg de stappen hieronder voor **Apparaatlimiet bereikt** als u het probleem niet kunt oplossen met deze stappen.
+
+> [!NOTE]
+> Deze fout kan ook optreden als de gebruiker probeert om meer apparaten in te schrijven dan is toegestaan. Volg de stappen hieronder voor **Apparaatlimiet bereikt** als u het probleem niet kunt oplossen met deze stappen.
 
 ### <a name="device-cap-reached"></a>Apparaatlimiet bereikt
 
@@ -186,7 +187,7 @@ Vernieuw het APNs-certificaat en schrijf het apparaat opnieuw in.
 
 Wanneer u een met ADE beheerd apparaat inschakelt waaraan een inschrijvingsprofiel is toegewezen, mislukt de inschrijving en ziet u het volgende foutbericht:
 
-```
+```output
 asciidoc
 mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR Connection invalid <error: 0x1a49aebc0> { count = 1, transaction: 0, voucher = 0x0, contents = "XPCErrorDescription" => <string: 0x1a49aee18> { length = 18, contents = "Connection invalid" } }
 iPhone mobileassetd[83] <Notice>: Client connection invalid (Connection invalid); terminating connection

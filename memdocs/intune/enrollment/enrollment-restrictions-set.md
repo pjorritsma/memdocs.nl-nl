@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1f706b2bb898f0969bf33d118291551d0f98d9ef
-ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
+ms.openlocfilehash: e5ed799d01ea4fdae1f9ecb013b4cf73deb0e6f0
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87443900"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051652"
 ---
 # <a name="set-enrollment-restrictions"></a>Registratiebeperkingen instellen
 
@@ -147,7 +147,7 @@ De volgende methoden worden gezien als een zakelijke Windows-registratie:
 - De ingeschreven gebruiker maakt gebruik van [een apparaatinschrijvingsmanageraccount]( device-enrollment-manager-enroll.md).
 - Het apparaat is ingeschreven via [Windows AutoPilot](enrollment-autopilot.md).
 - Het apparaat wordt met Windows Autopilot geregistreerd, maar is geen Alleen MDM-inschrijving-optie van Windows-instellingen.
-- Het IMEI-nummer van het apparaat wordt vermeld onder **Apparaatinschrijving** >  **[Zakelijke apparaat-id's](corporate-identifiers-add.md)** . (Wordt niet ondersteund voor Windows Phone 8.1.)
+- Het IMEI-nummer van het apparaat wordt vermeld onder **Apparaatinschrijving** >  **[Zakelijke apparaat-id's](corporate-identifiers-add.md)** .
 - Het apparaat is geregistreerd via een [pakket voor bulkinrichting](windows-bulk-enroll.md).
 - Het apparaat is geregistreerd via GPO, of er is sprake van [automatische inschrijving met behulp van Configuration Manager voor co-beheer](https://docs.microsoft.com/configmgr/comanage/quickstart-paths#bkmk_path1).
  

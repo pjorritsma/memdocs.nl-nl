@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89f6c1d4498151eed87cf90ae24d0cc7a846d3f7
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 2c6152b4380abacde6dd6e8e014ebe91aa258edb
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262554"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912582"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>iOS- en macOS-apps beheren die zijn aangeschaft via het Apple Volume Purchase Program met Microsoft Intune
 
@@ -46,8 +46,8 @@ Locatietokens worden ook wel VPP-tokens (volume Purchase Program) genoemd. Deze 
 ## <a name="how-are-purchased-apps-licensed"></a>Hoe worden gekochte apps gelicentieerd?
 Aangeschafte apps kunnen aan groepen worden toegewezen met behulp van twee typen licenties die Apple biedt voor iOS/iPadOS-en macOS-apparaten.
 
-|  | Apparaatlicenties | Gebruikerslicenties |
-|-----------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Bewerking | Apparaatlicenties | Gebruikerslicenties |
+|------- | -----------------| ---------------|
 | Aanmelden bij de App Store | Niet vereist. | Elke eindgebruiker moet een unieke Apple-id gebruiken wanneer deze wordt gevraagd zich aan te melden bij de App Store. |
 | Apparaatconfiguratie blokkeert de toegang tot de App Store | Apps kunnen worden geïnstalleerd en bijgewerkt met behulp van Bedrijfsportal. | Voor de uitnodiging om lid te worden van Apple VPP is toegang tot de App Store vereist. Als u beleid hebt ingesteld om de App Store uit te schakelen, werkt de gebruikerslicentie voor VPP-apps niet. |
 | Automatische app-update | Zoals geconfigureerd door de Intune-beheerder in de instellingen van het Apple VPP-token.<p>Als het toewijzingstype beschikbaar is voor ingeschreven apparaten, kunnen beschikbare app-updates worden geïnstalleerd vanuit de bedrijfsportal door de actie **Bijwerken** te selecteren op de pagina met app-details. | Zoals geconfigureerd door de eindgebruiker in de persoonlijke instellingen voor App Store. Dit kan niet worden beheerd door de Intune-beheerder. |
@@ -157,8 +157,8 @@ De eindgebruiker wordt in een aantal scenario’s gevraagd om de VPP-app te inst
 
 U kunt alle bijbehorende licenties voor iOS/iPadOS of macOS VPP-apps intrekken op basis van een bepaald apparaat of een bepaalde gebruiker of app.  Maar er zijn wel enkele verschillen tussen iOS/iPadOS-en macOS-platforms. 
 
-|  | iOS/iPadOS | macOS |
-|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Bewerking | iOS/iPadOS | macOS |
+|------- | ---------- | ----- |
 | App-toewijzing verwijderen | Wanneer u een app verwijdert die is toegewezen aan een gebruiker, wordt de gebruiker of apparaatlicentie vrijgemaakt in Intune en wordt de app van het apparaat verwijderd. | Wanneer u een app verwijdert die is toegewezen aan een gebruiker, wordt de gebruiker of apparaatlicentie vrijgemaakt in Intune. De app wordt niet van het apparaat verwijderd. |
 | App-licentie intrekken | Als u een app-licentie intrekt, wordt de app-licentie van de gebruiker of het apparaat vrijgemaakt. U moet de toewijzing wijzigen in **Verwijderen** om de app van het apparaat te verwijderen. | Als u een app-licentie intrekt, wordt de app-licentie van de gebruiker of het apparaat vrijgemaakt. De macOS-app waarvan de licentie is ingetrokken, blijft bruikbaar op het apparaat, maar kan pas worden bijgewerkt als een licentie opnieuw wordt toegewezen aan de gebruiker of het apparaat. Volgens Apple worden dergelijke apps na een respijtperiode van 30 dagen verwijderd. Apple biedt echter geen manier om de app via Intune te verwijderen met de toewijzingsactie Verwijderen. |
 

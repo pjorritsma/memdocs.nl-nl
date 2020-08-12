@@ -10,12 +10,12 @@ ms.assetid: 0a2d6c3f-a4e4-4c19-b087-3caada480de9
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 62faf2fd736f9751e8b33e821cb814f527a1197c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c39d3380212debe97c2d2f33de6a98fecfb8402e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722856"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126049"
 ---
 # <a name="fundamentals-of-role-based-administration-for-configuration-manager"></a>Basis principes van beheer op basis van rollen voor Configuration Manager
 
@@ -27,7 +27,7 @@ Met Configuration Manager gebruikt u beheer op basis van rollen om de toegang te
 
 - *Beveiligings rollen* worden toegewezen aan gebruikers met beheerders rechten om die gebruikers (of groepen gebruikers) toestemming te geven voor verschillende Configuration Manager-objecten. Bijvoorbeeld machtiging voor het maken of wijzigen van client instellingen.  
 
-- *Beveiligingsbereiken* worden gebruikt voor het groeperen van specifieke exemplaren van objecten die een gebruiker met beheerders rechten moet beheren, zoals een toepassing die Microsoft Office 2010 installeert.  
+- *Beveiligingsbereiken* worden gebruikt voor het groeperen van specifieke exemplaren van objecten die een gebruiker met beheerders rechten moet beheren, zoals een toepassing die Microsoft 365-apps installeert.  
 
 - *Verzamelingen* worden gebruikt om groepen gebruikers-en apparaat bronnen op te geven die door de gebruiker met beheerders rechten kunnen worden beheerd.  
 
@@ -44,7 +44,7 @@ Met Configuration Manager gebruikt u beheer op basis van rollen om de toegang te
 
 Wanneer u administratieve beveiliging ontwerpt en implementeert voor Configuration Manager, kunt u het volgende gebruiken om een *beheer bereik* voor een gebruiker met beheerders rechten te maken:  
 
-- [Beveiligings rollen](#bkmk_Planroles)  
+- [Beveiligingsrollen](#bkmk_Planroles)  
 
 - [Verzamelingen](#bkmk_planCol)  
 

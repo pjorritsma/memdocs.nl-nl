@@ -2,7 +2,7 @@
 title: Gegevens delen inschakelen
 titleSuffix: Configuration Manager
 description: Een referentie gids voor het delen van diagnostische gegevens met Desktop Analytics.
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 7403dc26f5fe1789fcda6b3eddf30136a4cd6e68
-ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
+ms.openlocfilehash: 40ebeabaaf236377388660a2a1a328e308a708ab
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84795648"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125940"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>Gegevens delen inschakelen voor desktop Analytics
 
@@ -24,32 +24,43 @@ Als u apparaten wilt registreren bij Desktop Analytics, moeten ze diagnostische 
 
 ## <a name="diagnostic-data-levels"></a>Niveaus van diagnostische gegevens
 
-![Diagram van diagnostische gegevens niveaus voor desktop Analytics](media/diagnostic-data-levels.png)
+:::image type="content" source="media/diagnostic-data-levels.png" alt-text="Diagram van diagnostische gegevens niveaus voor desktop Analytics":::
 
 Wanneer u Configuration Manager integreert met Desktop Analytics, kunt u deze ook gebruiken om het diagnostische gegevens niveau op apparaten te beheren. Gebruik Configuration Manager voor de beste ervaring.
 
-> [!Important]  
+> [!IMPORTANT]
 > In de meeste gevallen gebruikt u Configuration Manager voor het configureren van deze instellingen. Deze instellingen zijn niet ook van toepassing op domein groeps beleidsobjecten. Zie [conflict oplossing](enroll-devices.md#conflict-resolution)voor meer informatie.
 
-De basis functionaliteit van Desktop Analytics werkt op het niveau van de **eenvoudige** [Diagnostische gegevens](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels). Als u het niveau **verbeterd (beperkt)** niet configureert in Configuration Manager, worden de volgende functies van Desktop Analytics niet weer geven:
+De basis functionaliteit van Desktop Analytics werkt op het **vereiste** [Diagnostische-gegevens niveau](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels). Als u het **optionele (beperkte)** niveau in Configuration Manager niet configureert, worden de volgende functies van Desktop Analytics niet weer geven:
 
 - App-gebruik
 - [Aanvullende app-inzichten](compat-assessment.md#additional-insights)
 - [Implementatie status gegevens](deploy-prod.md#address-deployment-alerts)
 - [Status bewakings gegevens](health-status-monitoring.md)
 
-Micro soft raadt u aan het **uitgebreide (beperkte)** diagnostische gegevens niveau in te scha kelen met Desktop Analytics om de voor delen van het apparaat optimaal te benutten.
+Micro soft raadt u aan het **optionele (beperkte)** diagnostische gegevens niveau in te scha kelen met Desktop Analytics om de voor delen van het apparaat te maximaliseren.
 
-> [!Tip]
-> De **verbeterde instelling (beperkt)** in Configuration Manager is dezelfde instelling als het **beperken van uitgebreide diagnostische gegevens tot de minimale vereisten die vereist zijn voor Windows Analytics** -beleid op apparaten met windows 10, versie 1709 en hoger.
+> [!TIP]
+> De **optionele (beperkte)** instelling in Configuration Manager is dezelfde instelling als **uitgebreide diagnostische gegevens beperken tot de minimale vereisten die vereist zijn voor Windows Analytics** -beleid op apparaten met windows 10, versie 1709 en hoger.
 >
-> Apparaten met Windows 10, versie 1703 en lager, Windows 8,1 of Windows 7 hebben deze beleids instelling niet. Wanneer u de instelling **uitgebreid (beperkt)** in Configuration Manager configureert, vallen deze apparaten terug op het niveau **basis** .
+> Apparaten met Windows 10, versie 1703 en lager, Windows 8,1 of Windows 7 hebben deze beleids instelling niet. Wanneer u de **optionele (beperkte)** instelling in Configuration Manager configureert, vallen deze apparaten terug naar het **vereiste** niveau.
 >
-> Apparaten met Windows 10, versie 1709 beschikken over deze beleids instelling. Wanneer u echter de instelling **uitgebreid (beperkt)** in Configuration Manager configureert, worden deze apparaten ook terugvallen op het niveau **basis** .
+> Apparaten met Windows 10, versie 1709 beschikken over deze beleids instelling. Wanneer u echter de **optionele (beperkte)** instelling in Configuration Manager configureert, vallen deze apparaten ook terug naar het **vereiste** niveau.
+>
+> In Configuration Manager versie 2002 en eerder hebben de instellingen verschillende namen:<!-- 7363467 -->
+>
+> | Versie 2006 en hoger | Versie 2002 en lager |
+> |---------|---------|
+> | Vereist | Basic |
+> | Optioneel (beperkt) | Verbeterd (beperkt) |
+> | N.v.t. | Verbeterd |
+> | Optioneel | Volledig |
+>
+> Als u eerder apparaten op het niveau **verbeterd** hebt geconfigureerd, worden deze teruggezet naar **optioneel (beperkt)** wanneer u een upgrade uitvoert naar versie 2006. Ze verzenden minder gegevens naar micro soft. Deze wijziging is niet van invloed op wat u ziet in Desktop Analytics.
 
-Zie voor meer informatie over diagnostische gegevens die worden gedeeld met micro soft met **uitgebreid (beperkt)** [Windows 10 uitgebreide diagnostische gegevens gebeurtenissen en velden](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields).
+Zie voor meer informatie over diagnostische gegevens die met micro soft worden gedeeld met **optioneel (beperkt)** [Windows 10 uitgebreide diagnostische gegevens gebeurtenissen en velden](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields).
 
-> [!Important]
+> [!IMPORTANT]
 > Micro soft heeft een sterke toezeg ging voor het leveren van de hulpprogram ma's en resources die u in staat stellen om uw privacy te beheren. Als desktop Analytics ondersteunt Windows 8,1-apparaten, verzamelt micro soft geen diagnostische gegevens van Windows van Windows 8,1-apparaten die zich in Europese landen (EER en Zwitser land) bevinden.
 
 Zie [privacy van Desktop Analytics](privacy.md)voor meer informatie.
@@ -60,8 +71,8 @@ De volgende artikelen zijn ook goede bronnen voor meer informatie over Windows d
 
 - [Windows diagnostische gegevens configureren in uw organisatie](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
 
-> [!Note]  
-> Clients die zijn geconfigureerd om uitgebreide diagnostische gegevens te beperken, verzenden ongeveer 2 MB aan gegevens naar de micro soft-Cloud op de eerste volledige scan. De dagelijkse Delta wijkt af van 250-400 KB per dag.
+> [!NOTE]
+> Clients die zijn geconfigureerd voor het verzenden van **optionele (beperkte)** diagnostische gegevens verzenden ongeveer 2 MB aan gegevens naar de micro soft-Cloud op de eerste volledige scan. De dagelijkse Delta wijkt af van 250-400 KB per dag.
 >
 > De dagelijkse Delta scan wordt uitgevoerd om 3:00 uur (lokale tijd van het apparaat). Sommige gebeurtenissen worden verzonden op het eerste beschik bare tijdstip gedurende de hele dag. Deze tijden kunnen niet worden geconfigureerd.
 >
@@ -71,7 +82,7 @@ De volgende artikelen zijn ook goede bronnen voor meer informatie over Windows d
 
 Als u het delen van gegevens wilt inschakelen, moet u uw proxy server configureren voor het toestaan van de volgende Internet-eind punten.
 
-> [!Important]  
+> [!IMPORTANT]
 > Voor privacy-en gegevens integriteit controleert Windows naar een micro soft SSL-certificaat (certificaat vastmaken) bij de communicatie met de eind punten van de diagnostische gegevens. SSL-onderscheping en-inspectie zijn niet mogelijk. Als u Desktop Analytics wilt gebruiken, moet u deze eind punten uitsluiten van SSL-inspectie.<!-- BUG 4647542 -->
 
 Vanaf versie 2002, als de Configuration Manager-site geen verbinding kan maken met de vereiste eind punten voor een Cloud service, wordt een kritieke status bericht-ID 11488 gegenereerd. Wanneer er geen verbinding kan worden gemaakt met de service, wordt de status van het SMS_SERVICE_CONNECTOR onderdeel gewijzigd in kritiek. Bekijk de gedetailleerde status in het knoop punt [onderdeel status](../core/servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus) van de Configuration Manager-console.<!-- 5566763 -->
@@ -79,47 +90,7 @@ Vanaf versie 2002, als de Configuration Manager-site geen verbinding kan maken m
 > [!NOTE]
 > Zie [open bare IP-adres ruimte van micro soft](https://www.microsoft.com/download/details.aspx?id=53602)voor meer informatie over de IP-adresbereiken van micro soft. Deze adressen worden regel matig bijgewerkt. Er is geen granulatie per service, elk IP-adres in deze bereiken kan worden gebruikt.
 
-### <a name="server-connectivity-endpoints"></a>Server connectiviteit-eind punten
-
-Het service verbindings punt moet met de volgende eind punten communiceren:
-
-| Eindpunt  | Functie  |
-|-----------|-----------|
-| `https://aka.ms` | Wordt gebruikt om de service te vinden |
-| `https://graph.windows.net` | Wordt gebruikt om automatisch instellingen op te halen, zoals CommercialId wanneer u uw hiërarchie koppelt aan Desktop Analytics (op Configuration Manager server functie). Zie [Configure the proxy for a site System server](../core/plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server)(Engelstalig) voor meer informatie. |
-| `https://*.manage.microsoft.com` | Wordt gebruikt voor het synchroniseren van lidmaatschappen van Apparaatsets, implementatie plannen en de gereedheids status van apparaten met Desktop Analytics (alleen op Configuration Manager server functie). Zie [Configure the proxy for a site System server](../core/plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server)(Engelstalig) voor meer informatie. |
-
-### <a name="user-experience-and-diagnostic-component-endpoints"></a>Gebruikers ervaring en eind punten van diagnostische onderdelen
-
-Client apparaten moeten met de volgende eind punten communiceren:
-
-| Eindpunt  | Functie  |
-|-----------|-----------|
-| `https://v10c.events.data.microsoft.com` | Eind punt voor verbonden gebruikers ervaring en diagnostische onderdelen. Wordt gebruikt door apparaten met Windows 10, versie 1809 of hoger of versie 1803 met de cumulatieve update van 2018-09 of later geïnstalleerd. |
-| `https://v10.events.data.microsoft.com` | Eind punt voor verbonden gebruikers ervaring en diagnostische onderdelen. Wordt gebruikt door apparaten met Windows 10, versie 1803 _zonder_ dat de cumulatieve update van 2018-09 is geïnstalleerd. |
-| `https://v10.vortex-win.data.microsoft.com` | Eind punt voor verbonden gebruikers ervaring en diagnostische onderdelen. Wordt gebruikt door apparaten met Windows 10, versie 1709 of eerder. |
-| `https://vortex-win.data.microsoft.com` | Eind punt voor verbonden gebruikers ervaring en diagnostische onderdelen. Gebruikt door apparaten met Windows 7 en Windows 8,1 |
-
-### <a name="client-connectivity-endpoints"></a>Client connectiviteits eindpunten
-
-Client apparaten moeten met de volgende eind punten communiceren:
-
-| Index | Eindpunt  | Functie  |
-|-------|-----------|-----------|
-| 1 | `https://settings-win.data.microsoft.com` | Hiermee wordt de compatibiliteits update ingeschakeld voor het verzenden van gegevens naar micro soft. |
-| 2 | `http://adl.windows.com` | Hiermee kan de compatibiliteits update de meest recente compatibiliteits gegevens van micro soft ontvangen. |
-| 3 | `https://watson.telemetry.microsoft.com` | [Windows Foutrapportage (wer)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Vereist voor het bewaken van de implementatie status in Windows 10, versie 1803 of eerder. |
-| 4 | `https://umwatsonc.events.data.microsoft.com` | [Windows Foutrapportage (wer)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Vereist voor status rapporten van apparaten in Windows 10, versie 1809 of hoger. |
-| 5 | `https://ceuswatcab01.blob.core.windows.net` | [Windows Foutrapportage (wer)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Vereist voor het bewaken van de implementatie status in Windows 10, versie 1809 of hoger. |
-| 6 | `https://ceuswatcab02.blob.core.windows.net` | [Windows Foutrapportage (wer)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Vereist voor het bewaken van de implementatie status in Windows 10, versie 1809 of hoger. |
-| 7 | `https://eaus2watcab01.blob.core.windows.net` | [Windows Foutrapportage (wer)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Vereist voor het bewaken van de implementatie status in Windows 10, versie 1809 of hoger. |
-| 8 | `https://eaus2watcab02.blob.core.windows.net` | [Windows Foutrapportage (wer)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Vereist voor het bewaken van de implementatie status in Windows 10, versie 1809 of hoger. |
-| 9 | `https://weus2watcab01.blob.core.windows.net` | [Windows Foutrapportage (wer)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Vereist voor het bewaken van de implementatie status in Windows 10, versie 1809 of hoger. |
-| 10 | `https://weus2watcab02.blob.core.windows.net` | [Windows Foutrapportage (wer)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Vereist voor het bewaken van de implementatie status in Windows 10, versie 1809 of hoger. |
-| 11 | `https://kmwatsonc.events.data.microsoft.com` | [Online Crash Analysis (OCA)](https://docs.microsoft.com/windows/win32/dxtecharts/crash-dump-analysis). Vereist voor status rapporten van apparaten in Windows 10, versie 1809 of hoger. |
-| 12 | `https://oca.telemetry.microsoft.com`  | [Online Crash Analysis (OCA)](https://docs.microsoft.com/windows/win32/dxtecharts/crash-dump-analysis). Vereist voor het bewaken van de implementatie status in Windows 10, versie 1803 of eerder. |
-| 13 | `https://login.live.com` | Vereist om een betrouwbaardere apparaat-id voor desktop Analytics te bieden. <br> <br>Als u Microsoft-account toegang door eind gebruikers wilt uitschakelen, gebruikt u de beleids instellingen in plaats van dit eind punt te blok keren. Zie [de Microsoft-account in de onderneming](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication)voor meer informatie. |
-| 14 | `https://v20.events.data.microsoft.com` | Eind punt voor verbonden gebruikers ervaring en diagnostische onderdelen. |
+[!INCLUDE [Internet endpoints for Desktop Analytics](../core/plan-design/network/includes/internet-endpoints-desktop-analytics.md)]
 
 ## <a name="proxy-server-authentication"></a>Verificatie van de proxy server
 

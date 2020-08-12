@@ -2,20 +2,20 @@
 title: Takenreeksen beheren
 titleSuffix: Configuration Manager
 description: Maken, bewerken, implementeren, importeren en exporteren van taken reeksen om ze te beheren en taken in uw omgeving te automatiseren.
-ms.date: 02/26/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f79829b7cd6ec70764a20fb05f4438176c41b470
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 609f5d010018fa23dd4a533b2f1079f07d8c2283
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85591031"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125062"
 ---
 # <a name="manage-task-sequences-to-automate-tasks"></a>Takenreeksen beheren om taken te automatiseren
 
@@ -40,6 +40,30 @@ Maak takenreeksen via de wizard Takenreeks maken. Met deze wizard kunt u de volg
 ## <a name="edit"></a><a name="BKMK_ModifyTaskSequence"></a>Wijzigt  
 
 U kunt een taken reeks wijzigen door stappen toe te voegen of te verwijderen, groepen toe te voegen of te verwijderen of door de volg orde van de stappen te wijzigen. Zie [de taken reeks editor gebruiken](../understand/task-sequence-editor.md)voor meer informatie.
+
+## <a name="reduce-the-size-of-task-sequence-policy"></a><a name="bkmk_policysize"></a>De grootte van het taken reeks beleid beperken
+
+<!--6982275-->
+Wanneer de grootte van het taken reeks beleid groter is dan 32 MB, kan de client het grote beleid niet verwerken. De client kan de taken reeks implementatie vervolgens niet uitvoeren.
+
+De grootte van de taken reeks zoals deze is opgeslagen in de site database is kleiner, maar kan nog steeds problemen veroorzaken als deze te groot zijn. Wanneer de client het volledige taken reeks beleid verwerkt, kan de uitgevouwen omvang problemen veroorzaken ten opzichte van 32 MB.
+
+Vanaf versie 2006, om te controleren op de grootte van het taken reeks beleid van 32 MB op clients, gebruikt u [Management Insights](../../core/servers/manage/management-insights.md#operating-system-deployment).
+
+Voer de volgende acties uit om de algehele grootte van het beleid van een taken reeks implementatie te verminderen:
+
+- Scheid functionele segmenten in onderliggende taken reeksen en gebruik de stap [taken reeks uitvoeren](../understand/task-sequence-steps.md#child-task-sequence) . Elke taken reeks heeft een afzonderlijke limiet van 32 MB voor de beleids grootte.
+
+    > [!NOTE]
+    > Het verminderen van het totale aantal stappen en groepen in een taken reeks heeft een minimale invloed op de grootte van het beleid. Elke stap is over het algemeen een aantal KB in het beleid. Het verplaatsen van groepen met stappen naar een onderliggende taken reeks is meer impact.
+
+- Verminder het aantal software-updates in implementaties naar dezelfde verzameling als de taken reeks.
+
+- In plaats van een script in te voeren in de stap [Power shell-script uitvoeren](../understand/task-sequence-steps.md#BKMK_RunPowerShellScript) , hiernaar verwijzen via een pakket.
+
+- Er is een limiet van 8 KB voor de grootte van de taken reeks omgeving wanneer deze wordt uitgevoerd. Bekijk het gebruik van aangepaste taken reeks variabelen, die ook kunnen bijdragen aan de beleids grootte.
+
+- Als laatste redmiddel splitst u een complexe, dynamische taken reeks in afzonderlijke taken reeksen met afzonderlijke implementaties naar verschillende verzamelingen.
 
 ## <a name="software-center-properties"></a><a name="bkmk_prop-general"></a>Eigenschappen van software Center
 

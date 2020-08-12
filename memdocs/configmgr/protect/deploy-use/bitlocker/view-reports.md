@@ -2,20 +2,20 @@
 title: BitLocker-rapporten weergeven
 titleSuffix: Configuration Manager
 description: Meer informatie over de BitLocker-beheer rapporten in Configuration Manager
-ms.date: 11/29/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 0bae9477-0500-41cf-8aa3-5e6efadd0554
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d10717f980922e1f6d1fca9224e288b4df709da2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7c44ec9a9ed91d8543fedbdd5fba191b3989da19
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81717354"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129206"
 ---
 # <a name="view-bitlocker-reports"></a>BitLocker-rapporten weergeven
 
@@ -49,7 +49,7 @@ U kunt al deze rapporten rechtstreeks openen via de website van het Reporting Se
 
 Gebruik dit rapport om informatie te verzamelen die specifiek is voor een computer. Het bevat gedetailleerde versleutelings informatie over het station van het besturings systeem en eventuele vaste gegevens stations. Als u de details van elk station wilt weer geven, vouwt u de vermelding voor de computer naam uit. Ook wordt het beleid aangegeven dat wordt toegepast op elk schijf type op de computer.
 
-[![Voor beeld van een scherm opname van het rapport met BitLocker-computer naleving](media/bitlocker-computer-compliance.png)](media/bitlocker-computer-compliance.png#lightbox)
+:::image type="content" source="media/bitlocker-computer-compliance.png" alt-text="Voor beeld van een scherm opname van het rapport met BitLocker-computer naleving" lightbox="media/bitlocker-computer-compliance.png":::
 
 U kunt dit rapport ook gebruiken om de laatst bekende BitLocker-versleutelings status van verloren of gestolen computers te bepalen. Configuration Manager bepaalt de naleving van het apparaat op basis van de BitLocker-beleids regels die u implementeert. Voordat u probeert de BitLocker-versleutelings status van een apparaat te bepalen, controleert u het beleid dat u hebt geïmplementeerd.
 
@@ -58,7 +58,7 @@ U kunt dit rapport ook gebruiken om de laatst bekende BitLocker-versleutelings s
 
 ### <a name="computer-details"></a>Computer Details
 
-|Kolom&nbsp;naam|Beschrijving|
+|Kolom &nbsp; naam|Beschrijving|
 |----------------|----|
 |Computernaam|Door de gebruiker opgegeven naam van de DNS-computer.|
 |Domeinnaam|De volledig gekwalificeerde domein naam voor de computer.|
@@ -81,7 +81,7 @@ U kunt dit rapport ook gebruiken om de laatst bekende BitLocker-versleutelings s
 
 ### <a name="computer-volume"></a><a name="bkmk_volume"></a>Computer volume
 
-|Kolom&nbsp;naam|Beschrijving|
+|Kolom &nbsp; naam|Beschrijving|
 |----------------|----|
 |Stationsletter|De stationsletter van de computer.|
 |Type station|Type station. Geldige waarden zijn het station van het **besturings systeem** en het **station met vaste gegevens**. Deze vermeldingen zijn fysieke stations in plaats van logische volumes.|
@@ -100,7 +100,7 @@ Dit rapport bevat de volgende grafieken, waarin de nalevings status van BitLocke
 
 - Distributie status van naleving per schijf type
 
-[![Voor beeld van een scherm opname van het dash board BitLocker Enter prise naleving](media/bitlocker-enterprise-compliance-dashboard.png)](media/bitlocker-enterprise-compliance-dashboard.png#lightbox)
+:::image type="content" source="media/bitlocker-enterprise-compliance-dashboard.png" alt-text="Voor beeld van een scherm opname van het dash board BitLocker Enter prise naleving" lightbox="media/bitlocker-enterprise-compliance-dashboard.png":::
 
 ### <a name="compliance-status-distribution"></a>Distributie status van naleving
 
@@ -108,7 +108,7 @@ In dit cirkel diagram wordt de nalevings status weer gegeven voor computers in d
 
 In het cirkel diagram worden de volgende nalevings statussen weer gegeven:
 
-- Compatibel
+- Compliant
 
 - Niet-compatibel
 
@@ -148,7 +148,7 @@ In dit staaf diagram wordt de huidige BitLocker-nalevings status weer gegeven op
 
 In dit rapport wordt informatie weer gegeven over de algemene BitLocker-naleving in uw organisatie voor de verzameling van computers waarop u het BitLocker-beheer beleid hebt geïmplementeerd.
 
-[![Voor beeld van een scherm opname van BitLocker Enter prise-nalevings Details](media/bitlocker-enterprise-compliance-details.png)](media/bitlocker-enterprise-compliance-details.png#lightbox)
+:::image type="content" source="media/bitlocker-enterprise-compliance-details.png" alt-text="Voor beeld van een scherm opname van BitLocker Enter prise-nalevings Details" lightbox="media/bitlocker-enterprise-compliance-details.png":::
 
 |Kolomnaam|Beschrijving|
 |--- |--- |
@@ -158,7 +158,7 @@ In dit rapport wordt informatie weer gegeven over de algemene BitLocker-naleving
 |% Onbekende compatibiliteit|Het percentage computers met een nalevings status die niet bekend is.|
 |% Uitgezonderd|Het percentage computers dat is uitgesloten van de BitLocker-versleutelings vereiste.|
 |% Niet-uitgesloten|Percentage computers die niet zijn uitgesloten van de BitLocker-versleutelings vereiste.|
-|Compatibel|Aantal compatibele computers in de organisatie.|
+|Compliant|Aantal compatibele computers in de organisatie.|
 |Niet-compatibel|Aantal niet-conforme computers in de organisatie.|
 |Onbekende naleving|Aantal computers met een nalevings status die niet bekend is.|
 |Uitgesloten|Telling van computers die zijn uitgesloten van de BitLocker-versleutelings vereiste.|
@@ -170,7 +170,7 @@ In dit rapport wordt informatie weer gegeven over de algemene BitLocker-naleving
 |--- |--- |
 |Computernaam|De naam van de DNS-computer van het beheerde apparaat.|
 |Domeinnaam|De volledig gekwalificeerde domein naam voor de computer.|
-|Nalevings status|Algemene nalevings status van de computer. Geldige statussen zijn **compatibel** met en **niet-compatibel**.|
+|Status van naleving|Algemene nalevings status van de computer. Geldige statussen zijn **compatibel** met en **niet-compatibel**.|
 |Gesteld|Hiermee wordt aangegeven of de gebruiker wordt uitgesloten van het BitLocker-beleid of niet is uitgesloten.|
 |Gebruikers van het apparaat|Gebruikers van het apparaat.|
 |Details van nalevings status|Fout-en status berichten over de nalevings status van de computer uit het opgegeven beleid.|
@@ -180,7 +180,7 @@ In dit rapport wordt informatie weer gegeven over de algemene BitLocker-naleving
 
 Gebruik dit rapport om de algemene BitLocker-naleving in uw organisatie weer te geven. Ook wordt de compatibiliteit weer gegeven voor afzonderlijke computers waarop u het BitLocker-beheer beleid hebt geïmplementeerd.
 
-[![Voor beeld van een scherm opname van het overzicht van BitLocker-bedrijfs naleving](media/bitlocker-enterprise-compliance-summary.png)](media/bitlocker-enterprise-compliance-summary.png#lightbox)
+:::image type="content" source="media/bitlocker-enterprise-compliance-summary.png" alt-text="Voor beeld van een scherm opname van het overzicht van BitLocker-bedrijfs naleving" lightbox="media/bitlocker-enterprise-compliance-summary.png":::
 
 |Kolomnaam|Beschrijving|
 |--- |--- |
@@ -190,7 +190,7 @@ Gebruik dit rapport om de algemene BitLocker-naleving in uw organisatie weer te 
 |% Onbekende compatibiliteit|Het percentage computers met een nalevings status die niet bekend is.|
 |% Uitgezonderd|Het percentage computers dat is uitgesloten van de BitLocker-versleutelings vereiste.|
 |% Niet-uitgesloten|Percentage computers die niet zijn uitgesloten van de BitLocker-versleutelings vereiste.|
-|Compatibel|Aantal compatibele computers in uw organisatie.|
+|Compliant|Aantal compatibele computers in uw organisatie.|
 |Niet-compatibel|Aantal niet-conforme computers in uw organisatie.|
 |Onbekende naleving|Aantal computers met een nalevings status die niet bekend is.|
 |Uitgesloten|Telling van computers die zijn uitgesloten van de BitLocker-versleutelings vereiste.|
@@ -199,9 +199,7 @@ Gebruik dit rapport om de algemene BitLocker-naleving in uw organisatie weer te 
 ## <a name="recovery-audit-report"></a><a name="bkmk-audit"></a>Controle rapport voor herstel
 
 > [!NOTE]
-> Dit rapport is ook beschikbaar via de [website van BitLocker-beheer en-bewaking](helpdesk-portal.md#reports).
->
-> Als u dit rapport wilt weer geven in de Configuration Manager-console, gaat u naar de werk ruimte **bewaking** . Vouw in het navigatie deel venster het knoop punt **rapportage** uit, vouw **rapporten**uit en vouw vervolgens de map **BitLocker-beheer** uit. Selecteer de submap voor de gelokaliseerde versie van het rapport, bijvoorbeeld en **-US**.
+> Vanaf versie 2002 is dit rapport alleen beschikbaar via de website voor [BitLocker-beheer en-bewaking](helpdesk-portal.md#reports).<!-- 7629549 -->
 
 Gebruik dit rapport om gebruikers te controleren die toegang tot BitLocker-herstel sleutels hebben aangevraagd. U kunt filteren op de volgende criteria:
 
@@ -210,9 +208,9 @@ Gebruik dit rapport om gebruikers te controleren die toegang tot BitLocker-herst
 - Het specifieke type sleutel aangevraagd: wacht woord voor de herstel sleutel, de herstel sleutel-ID of de TPM-wachtwoord-hash
 - Een datum bereik waarbinnen het ophalen is uitgevoerd
 
-[![Voor beeld van een scherm opname van het BitLocker-herstel controle rapport](media/bitlocker-recovery-audit-report.png)](media/bitlocker-recovery-audit-report.png#lightbox)
+:::image type="content" source="media/bitlocker-recovery-audit-report.png" alt-text="Voor beeld van een scherm opname van het BitLocker-herstel controle rapport" lightbox="media/bitlocker-recovery-audit-report.png":::
 
-|Kolom&nbsp;naam|Beschrijving|
+|Kolom &nbsp; naam|Beschrijving|
 |----------------|----|
 |Datum en tijd van aanvraag|De datum en tijd waarop een eind gebruiker of helpdesk gebruiker een sleutel heeft aangevraagd.|
 |Bron controle aanvraag|De site van waaruit de aanvraag afkomstig is. Geldige waarden zijn **selfservice Portal** of de **Help Desk**.|

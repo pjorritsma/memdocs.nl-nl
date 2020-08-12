@@ -2,20 +2,20 @@
 title: Herstelgegevens versleutelen
 titleSuffix: Configuration Manager
 description: Versleutel BitLocker-herstel sleutels, herstel pakketten en TPM-wachtwoord hashes via het netwerk en in de Configuration Manager-Data Base.
-ms.date: 04/15/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 1ee6541a-e243-43ea-be16-d0349f7f0c6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 79f50cf4b0d241df2fc8d12dc46c833af278bd5a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e887d594e80c0f92340081d9b922bfc334d1b3a5
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724438"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129185"
 ---
 # <a name="encrypt-recovery-data"></a>Herstelgegevens versleutelen
 
@@ -36,7 +36,7 @@ Gezien de gevoelige aard van deze informatie, moet u deze beveiligen in de volge
     > [!NOTE]
     > Het biedt momenteel geen ondersteuning voor verbeterde HTTP.
 
-- U kunt deze gegevens ook versleutelen wanneer deze worden opgeslagen in de site database. U kunt SQL Server versleuteling op cellen niveau gebruiken met uw eigen certificaat.
+- U kunt deze gegevens ook versleutelen wanneer deze worden opgeslagen in de site database. Als u een SQL-certificaat installeert, worden uw gegevens in SQL Configuration Manager versleuteld.
 
     Als u geen BitLocker-versleutelings certificaat wilt maken, moet u zich aanmelden voor onbewerkte tekst opslag van de herstel gegevens. Wanneer u een BitLocker-beheer beleid maakt, schakelt u de optie in om te **zorgen dat herstel gegevens worden opgeslagen als tekst zonder opmaak**.
 
@@ -68,7 +68,7 @@ De eigenschap **client verbindingen** van het beheer punt kan nu **http** of **h
 > [!TIP]
 > De enige clients die moeten communiceren met de Recovery-service, zijn de clients die u wilt richten op het beheer beleid van BitLocker en die een regel voor **client beheer** bevatten.
 
-Gebruik op de client de **BitLockerManagementHandler. log** om de verbinding op te lossen. Voor de connectiviteit met de herstel service wordt in het logboek de URL weer gegeven die door de client wordt gebruikt. Zoek een item dat begint met `Checking for Recovery Service at`.
+Gebruik op de client de **BitLockerManagementHandler. log** om de verbinding op te lossen. Voor de connectiviteit met de herstel service wordt in het logboek de URL weer gegeven die door de client wordt gebruikt. Zoek een item dat begint met `Checking for Recovery Service at` .
 
 > [!NOTE]
 > Als uw site meer dan één beheer punt heeft, schakelt u HTTPS in op alle beheer punten op de site waarmee een door BitLocker beheerde client mogelijk zou kunnen communiceren. Als het HTTPS-beheer punt niet beschikbaar is, kan de client een failover uitvoeren naar een HTTP-beheer punt en vervolgens de herstel sleutel niet meer borgen.
@@ -77,9 +77,9 @@ Gebruik op de client de **BitLockerManagementHandler. log** om de verbinding op 
 
 ### <a name="sql-encryption-certificate"></a>SQL-versleutelings certificaat
 
-Gebruik dit certificaat om SQL Server versleuteling op cellen niveau van BitLocker-herstel gegevens in te scha kelen. U kunt uw eigen proces gebruiken voor het maken en implementeren van het versleutelings certificaat voor BitLocker-beheer, mits dit aan de volgende vereisten voldoet:
+Gebruik dit SQL-certificaat voor Configuration Manager voor het versleutelen van BitLocker-herstel gegevens in de site database. U kunt uw eigen proces gebruiken voor het maken en implementeren van het versleutelings certificaat voor BitLocker-beheer, mits dit aan de volgende vereisten voldoet:
 
-- De naam van het BitLocker-beheer versleutelings `BitLockerManagement_CERT`certificaat moet zijn.
+- De naam van het BitLocker-beheer versleutelings certificaat moet zijn `BitLockerManagement_CERT` .
 
 - Dit certificaat versleutelen met een hoofd sleutel van de data base.
 
@@ -108,9 +108,9 @@ Met dit voorbeeld script worden de volgende acties uitgevoerd:
 
 Voordat u dit script in een productie omgeving gebruikt, wijzigt u de volgende waarden:
 
-- Site database naam (`CM_ABC`)
-- Wacht woord voor het maken van de`MyMasterKeyPassword`hoofd sleutel ()
-- Verval datum van het certificaat`20391022`()
+- Site database naam ( `CM_ABC` )
+- Wacht woord voor het maken van de hoofd sleutel ( `MyMasterKeyPassword` )
+- Verval datum van het certificaat ( `20391022` )
 
 ``` SQL
 USE CM_ABC
@@ -136,9 +136,9 @@ Met dit voorbeeld script maakt u een back-up van een certificaat. Wanneer u het 
 
 Voordat u dit script in een productie omgeving gebruikt, wijzigt u de volgende waarden:
 
-- Site database naam (`CM_ABC`)
-- Bestandspad en-naam (`C:\BitLockerManagement_CERT_KEY`)
-- Sleutel wachtwoord exporteren (`MyExportKeyPassword`)
+- Site database naam ( `CM_ABC` )
+- Bestandspad en-naam ( `C:\BitLockerManagement_CERT_KEY` )
+- Sleutel wachtwoord exporteren ( `MyExportKeyPassword` )
 
 ``` SQL
 USE CM_ABC
@@ -156,10 +156,10 @@ Met dit voorbeeld script wordt een certificaat uit een bestand hersteld. Gebruik
 
 Voordat u dit script in een productie omgeving gebruikt, wijzigt u de volgende waarden:
 
-- Site database naam (`CM_ABC`)
-- Hoofd sleutel wachtwoord (`MyMasterKeyPassword`)
-- Bestandspad en-naam (`C:\BitLockerManagement_CERT_KEY`)
-- Sleutel wachtwoord exporteren (`MyExportKeyPassword`)
+- Site database naam ( `CM_ABC` )
+- Hoofd sleutel wachtwoord ( `MyMasterKeyPassword` )
+- Bestandspad en-naam ( `C:\BitLockerManagement_CERT_KEY` )
+- Sleutel wachtwoord exporteren ( `MyExportKeyPassword` )
 
 ``` SQL
 USE CM_ABC
@@ -197,9 +197,9 @@ if(@count >= 3) select 1
 else select 0
 ```
 
-Als het certificaat geldig is, retourneert het script een waarde van `1`.
+Als het certificaat geldig is, retourneert het script een waarde van `1` .
 
-## <a name="see-also"></a>Zie tevens
+## <a name="see-also"></a>Zie ook
 
 Raadpleeg de volgende artikelen voor meer informatie over deze SQL-opdrachten:
 

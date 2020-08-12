@@ -2,7 +2,7 @@
 title: Updates binnen de console
 titleSuffix: Configuration Manager
 description: Updates voor Configuration Manager installeren vanuit de micro soft-Cloud
-ms.date: 06/02/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a0d7f36c921f782c0baad740d8e643f54cee0309
-ms.sourcegitcommit: 5e339c07001e911cf75ef922e6c66a7efdeab6f1
+ms.openlocfilehash: 65071493834c33dac7581075b835e023c74f5706
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84637666"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128083"
 ---
 # <a name="install-in-console-updates-for-configuration-manager"></a>Updates in de console installeren voor Configuration Manager
 
@@ -96,13 +96,13 @@ Bekijk de volgende stappen voordat u een update installeert in de Configuration 
 
 Bekijk de toepasselijke controle lijst voor updates voor acties die moeten worden uitgevoerd voordat u de update start:
 
+- [Controle lijst voor het installeren van update 2006](checklist-for-installing-update-2006.md)
+
 - [Controlelijst voor het installeren van update 2002](checklist-for-installing-update-2002.md)
 
 - [Controlelijst voor het installeren van update 1910](checklist-for-installing-update-1910.md)  
 
 - [Controlelijst voor het installeren van update 1906](checklist-for-installing-update-1906.md)  
-
-- [Controlelijst voor het installeren van update 1902](checklist-for-installing-update-1902.md)
 
 ### <a name="step-2-run-the-prerequisite-checker-before-installing-an-update"></a><a name="bkmk_step2"></a>Stap 2: de prerequisite Checker uitvoeren voordat u een update installeert  
 
@@ -194,7 +194,7 @@ Gebruik de volgende stappen om de voortgang te controleren:
 
   - **Replicatie**
 
-  - **Vereistencontrole**
+  - **Controle op vereisten**
 
   - **Installatie**
 
@@ -362,13 +362,13 @@ Ga naar de werk ruimte **bewaking** en selecteer het knoop punt **site onderhoud
 
 Nadat de site is bijgewerkt, controleert u de controle lijst na de update voor de betreffende versie:  
 
+- [Controle lijst na de update voor versie 2006](checklist-for-installing-update-2006.md#post-update-checklist)
+
 - [Controle lijst na de update voor versie 2002](checklist-for-installing-update-2002.md#post-update-checklist)
 
 - [Controle lijst na de update voor versie 1910](checklist-for-installing-update-1910.md#post-update-checklist)  
 
 - [Controle lijst na de update voor versie 1906](checklist-for-installing-update-1906.md#post-update-checklist)  
-
-- [Controle lijst na de update voor versie 1902](checklist-for-installing-update-1902.md#post-update-checklist)  
 
 ## <a name="enable-optional-features-from-updates"></a><a name="bkmk_options"></a>Optionele functies van updates inschakelen  
 
@@ -378,7 +378,7 @@ Als u beschik bare functies en hun status wilt weer geven, gaat u in de-console 
 
 Wanneer een functie niet optioneel is, wordt deze automatisch geïnstalleerd. Deze wordt niet weer gegeven in het knoop punt **functies** .  
 
-> [!Important]  
+> [!IMPORTANT]
 > Schakel in een hiërarchie met meerdere sites alleen optionele functies of voorlopige versies in vanaf de centrale beheer site. Dit gedrag zorgt ervoor dat er geen conflicten zijn tussen de hiërarchie. <!--507197-->  
 
 Wanneer u een nieuwe functie of voorlopige functie inschakelt, moet de Configuration Manager hiërarchie beheerder (HMAN) de wijziging verwerken voordat deze functie beschikbaar wordt. De verwerking van de wijziging is vaak direct. Afhankelijk van de HMAN-verwerkings cyclus kan het tot 30 minuten duren voordat deze is voltooid. Nadat de wijziging is verwerkt, start u de console opnieuw op voordat u de functie kunt gebruiken.
@@ -391,19 +391,20 @@ De volgende functies zijn optioneel in de meest recente versie van Configuration
 
 <!--Note to include in target articles
 
-> [!Note]  
+> [!NOTE]
 > Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](install-in-console-updates.md#bkmk_options).  
 
 -->
 
-- [Community-hub](community-hub.md)<!--3555935, C098DA03-C33C-4E15-B337-6C0FEEB3CB8A-->
+- [Community Hub](community-hub.md)<!--3555935, C098DA03-C33C-4E15-B337-6C0FEEB3CB8A-->
+- [Orchestration-groepen](../../../sum/deploy-use/orchestration-groups.md)<!--3098816, 290B66D8-C735-4895-B59A-DD732D84A697-->
+- [Implementatie type voor taken reeks](../../../apps/get-started/creating-windows-applications.md#bkmk_tsdt) <!-- 3555953, CB0CDFFB-9C6F-4B18-8954-A43A387302A2-->
 - [BitLocker-beheer](../../../protect/plan-design/bitlocker-management.md) <!-- 3601034,6DD56E46-C3EC-4E38-A16F-E98644BB6434 -->
 - [Resultaten van verzamelings lidmaatschap synchroniseren met Azure Active Directory](../../clients/manage/collections/create-collections.md#bkmk_aadcollsync) <!--3607475,C2127144-C8DE-49F6-9CB3-D4F5B59F9515-->
 - [Detectie van gebruikers groepen Azure Active Directory](../deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco) <!--3611956,023715E7-BFBA-4E9E-A80F-B5B626464ADD-->
 - [Toepassings groepen](../../../apps/deploy-use/create-app-groups.md) <!--3555907,EE16A1D8-EF1B-4094-845F-AC107E7C621D-->
 - [Fout opsporing voor taken reeksen](../../../osd/deploy-use/debug-task-sequence.md) <!--3612274,C3F37661-69E4-4D53-A39C-5D02F97E0E71-->
 - [Pakket conversie beheer](../../../apps/pcm/package-conversion-manager.md) <!--1357861,4E0C09AF-7FC1-4412-A8BB-166D9BCD0093-->
-- [Client-apps voor gezamenlijk beheerde apparaten](../../../comanage/workloads.md#client-apps) (voorheen bekend als *mobiele apps voor gezamenlijk beheerde apparaten*) <!--1357892,CC3AE625-BF72-49B1-8AB1-AF0DCF2D6F4C-->
 - [Software-updates van derden](../../../sum/deploy-use/third-party-software-updates.md)<!--1357605,1352101,1358714;B5E192AE-C81F-4348-9EF9-07A3C0FBE597-->
 - [Toepassings aanvragen voor gebruikers per apparaat goed keuren](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-settings) <!--1357015,4BA987C9-08FC-48E2-BFFE-C9DCF35B496A-->  
 - [Scripts maken en uitvoeren](../../../apps/deploy-use/create-deploy-scripts.md) <!--1236459,566F8720-F415-4E10-9A51-CDE682BA2B2E-->
@@ -416,7 +417,7 @@ De volgende functies zijn optioneel in de meest recente versie van Configuration
 - [Onderhoud van een cluster bewuste verzameling (Server groepen)](../../../sum/deploy-use/service-a-server-group.md) <!--1081776,290B66D8-C735-4895-B59A-DD732D84A697-->
 - [Windows hello voor bedrijven](../../../protect/deploy-use/windows-hello-for-business-settings.md) (voorheen bekend als *Pass Port for work*) <!--1245704,8BCA2642-3719-4862-A355-9D39C979E1B4-->
 
-> [!Tip]  
+> [!TIP]
 > Zie [functies van voorlopige versies](pre-release-features.md)voor meer informatie over functies die toestemming nodig hebben om in te scha kelen.  
 >
 > Zie [Technical Preview](../../get-started/technical-preview.md)voor meer informatie over functies die alleen beschikbaar zijn in de vertakking Technical Preview.

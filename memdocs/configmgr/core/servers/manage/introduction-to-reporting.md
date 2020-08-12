@@ -10,12 +10,12 @@ ms.assetid: 230be984-d2cd-4d53-bd7a-bc24dd93fc22
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 1aae76845d18d8191b6f773df5491d3a144940c1
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d28638cdf332adbb1d57526179222bb96d6d5c92
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713805"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128066"
 ---
 # <a name="introduction-to-reporting-in-configuration-manager"></a>Inleiding tot rapportage in Configuration Manager
 
@@ -97,7 +97,7 @@ De koppeling moet het kolom nummer opgeven met de waarde voor de prompt. Bijvoor
 
 - Er is één rapport met een lijst met computers die de site onlangs heeft gedetecteerd.
 - U kunt een koppeling maken naar een rapport met de laatste berichten die door de site worden ontvangen voor een specifieke computer.
-- U maakt de koppeling en geeft aan dat de `2` kolom in het bron rapport de computer naam bevat. Deze waarde is een vereiste prompt voor het doel rapport.
+- U maakt de koppeling en geeft aan dat de kolom `2` in het bron rapport de computer naam bevat. Deze waarde is een vereiste prompt voor het doel rapport.
 - U voert het bron rapport uit en er wordt links van elke rij met gegevens een koppelings pictogram weer gegeven.
 - U selecteert het pictogram op een rij, en rapport Viewer geeft de waarde in de opgegeven kolom voor die rij als de prompt waarde voor het doel rapport door.
 
@@ -124,7 +124,7 @@ Voor rapporten op basis van Reporting Services gebruikt Configuration Manager Mi
 
  De installatie van de Report Builder voegt ondersteuning toe voor meer dan 20 talen. Wanneer u Report Builder uitvoert, worden de gegevens weer gegeven in de taal van het besturings systeem van de lokale computer. Als Report Builder de taal niet ondersteunt, worden de gegevens in het Engels weer gegeven. Report Builder ondersteunt de volledige mogelijkheden van SQL Server Reporting Services. Dit omvat de volgende mogelijkheden:
 
-- Beschikt over een intuïtieve ontwerpomgeving voor rapporten met een uitzicht dat vergelijkbaar is aan Microsoft Office.  
+- Biedt een intuïtieve ontwerp omgeving voor rapporten met een vormgeving die vergelijkbaar is met Microsoft 365-apps.  
 
 - Biedt de flexibele rapport indeling van SQL Server Report Definition Language (RDL).  
 

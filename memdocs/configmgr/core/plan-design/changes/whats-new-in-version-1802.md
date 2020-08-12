@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e7bc30c4350d96654a0f6a6ae548d63c2928e791
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 87056482f098a440e5950b76520ab410844a1888
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904658"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128998"
 ---
 # <a name="whats-new-in-version-1802-of-configuration-manager"></a>Wat is er nieuw in versie 1802 van Configuration Manager
 
@@ -125,7 +125,7 @@ Bij het maken van een exemplaar van de [Cloud beheer gateway](../../clients/mana
 - Vanaf deze release is de **Cloud beheer gateway** geen functie meer voor de evaluatie versie.  
 
 - De functie documentatie is gereviseerd en uitgebreid. Raadpleeg voor meer informatie de volgende artikelen:
-    - [Plan voor de Cloud beheer gateway](../../clients/manage/cmg/plan-cloud-management-gateway.md)
+    - [De cloudbeheergateway plannen](../../clients/manage/cmg/plan-cloud-management-gateway.md)
     - [Grootte en schaal van de Cloud beheer gateway](../configs/size-and-scale-numbers.md#bkmk_cmg)
     - [Beveiliging en privacy voor cloudbeheergateway](../../clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md)
     - [Veelgestelde vragen over de Cloud beheer gateway](../../clients/manage/cmg/cloud-management-gateway-faq.md)
@@ -208,7 +208,7 @@ De standaard taken reeks sjabloon voor Windows 10 in-place upgrade bevat nu extr
 
 ### <a name="improvements-to-operating-system-deployment"></a>Verbeteringen in de implementatie van besturings systemen
 Deze release bevat de volgende verbeteringen voor de implementatie van besturings systemen:
-- Bij het starten van cmtrace. exe in Windows PE wordt u niet meer gevraagd om te kiezen of u dit programma wilt instellen als de standaard viewer voor logboek bestanden. <!-- SMS 500897 -->
+- Bij het starten van cmtrace.exe wordt u niet meer gevraagd om te kiezen of u dit programma wilt instellen als de standaard viewer voor logboek bestanden. <!-- SMS 500897 -->
 - Installatie kopieën toevoegen aan de taken reeks stap [pakket inhoud downloaden](../../../osd/understand/task-sequence-steps.md#BKMK_DownloadPackageContent) .
 - Verbeteringen in de stap [taken reeks uitvoeren](../../../osd/understand/task-sequence-steps.md#child-task-sequence) : <!-- 1261338 -->   
   - Ondersteuning voor alle implementatie scenario's voor besturings systemen vanuit software Center, PXE en media.
@@ -236,7 +236,7 @@ Als een eind gebruiker of een desktop technicus meerdere toepassingen op een app
 
 ### <a name="use-software-center-to-browse-and-install-user-available-applications-on-azure-ad-joined-devices"></a>Software Center gebruiken om door gebruikers beschik bare toepassingen te bladeren en te installeren op apparaten die zijn toegevoegd aan Azure AD
 <!-- 1322613 -->
-Als u toepassingen implementeert als beschikbaar voor gebruikers, kunnen ze deze nu bekijken en installeren via Software Center op Azure Active Directory Azure AD-apparaten. Zie voor meer informatie [gebruikers beschik bare toepassingen implementeren op apparaten die zijn toegevoegd aan Azure AD](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices).
+Als u toepassingen implementeert als beschikbaar voor gebruikers, kunnen ze deze nu bekijken en installeren via Software Center op Azure Active Directory Azure AD-apparaten. Zie voor meer informatie [gebruikers beschik bare toepassingen implementeren](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications).
 
 ### <a name="hide-installed-applications-in-software-center"></a>Geïnstalleerde toepassingen verbergen in Software Center
 <!--1357592-->
@@ -259,7 +259,7 @@ Regels voor automatische implementatie kunnen worden gepland om de offset van ee
 
 
 
-## <a name="reporting"></a>Rapportage
+## <a name="reporting"></a>Rapporten
 
 ### <a name="report-for-default-browser-counts"></a>Rapport voor standaard aantal browsers
 <!-- 1357830 -->

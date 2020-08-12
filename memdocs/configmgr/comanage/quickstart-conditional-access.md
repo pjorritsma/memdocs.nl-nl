@@ -10,12 +10,12 @@ ms.assetid: 4cf640b3-610c-4c3c-b966-c62e9f5654ff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 94f002ecd12d08ffd5f3d4767e315e0d83714929
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: f2ada7bfcef5714d8df3c476a6bbba695dc398e0
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764047"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127270"
 ---
 # <a name="conditional-access-with-co-management"></a>Voorwaardelijke toegang met co-beheer
 
@@ -81,7 +81,7 @@ Andere voor beelden zijn:
 
 - Nestlé, die gebruikmaakt van op apps gebaseerde voorwaardelijke toegang voor meer dan 150.000 werk nemers  
 
-- Het Automation-Software bedrijf, uitgebracht, kan er nu voor zorgen dat alleen beheerde apparaten toegang hebben tot Office 365-apps zoals teams en het intranet van het bedrijf. " Ze kunnen ook hun werk nemers veilig toegang bieden tot andere Cloud-apps, zoals workday en Sales Force. Meer informatie over de ervaring van uitgebracht met intune vindt u [in uitgebracht verhoogt het bedrijfs tempo met mobiele samenwerkings Programma's in Microsoft 365](https://customers.microsoft.com/story/cadence-partner-professional-services-microsoft-365).
+- Het Automation-Software bedrijf, uitgebracht, kan nu controleren of ' alleen beheerde apparaten toegang hebben tot Microsoft 365 apps zoals teams en het intranet van het bedrijf. ' Ze kunnen ook hun werk nemers veilig toegang bieden tot andere Cloud-apps, zoals workday en Sales Force. Meer informatie over de ervaring van uitgebracht met intune vindt u [in uitgebracht verhoogt het bedrijfs tempo met mobiele samenwerkings Programma's in Microsoft 365](https://customers.microsoft.com/story/cadence-partner-professional-services-microsoft-365).
 
 InTune is ook volledig geïntegreerd met partners zoals Cisco ISE, Aruba Clear Pass en Citrix NetScaler. Met deze partners kunt u toegangs beheer op basis van de intune-inschrijving en de nalevings status van het apparaat op deze andere platformen onderhouden.
 
@@ -110,7 +110,7 @@ Raadpleeg de volgende artikelen voor meer informatie over het gebruik van voorwa
 
 - [Voorwaardelijke toegang in Azure AD](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)  
 
-- [Intune apparaatnalevingsbeleid](https://docs.microsoft.com/intune/device-compliance)  
+- [InTune-nalevings beleid voor apparaten](https://docs.microsoft.com/intune/device-compliance)  
 
 - [Op apps gebaseerde voorwaardelijke toegang met Intune](https://docs.microsoft.com/intune/app-based-conditional-access-intune)  
 

@@ -10,12 +10,12 @@ ms.assetid: 140c522f-d09a-40b6-a4b0-e0d14742834a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: bb770a559904421f6bf01616504331dbebb9b549
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 9cb8097fbdd57184e5cd0e229cf96dcb317cf1e5
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268076"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127338"
 ---
 # <a name="tutorial-enable-co-management-for-existing-configuration-manager-clients"></a>Zelf studie: co-beheer inschakelen voor bestaande Configuration Manager-clients
 
@@ -98,10 +98,10 @@ Als u Azure AD Connect wilt configureren, hebt u referenties nodig van een globa
 
 1. Down load en installeer de [nieuwste versie van Azure AD Connect](https://www.microsoft.com/download/details.aspx?id=47594) (1.1.819.0 of hoger).  
 2. Start Azure AD Connect en selecteer vervolgens **configureren**.
-3. Selecteer op de pagina **extra taken** de optie **Apparaatinstellingen configureren**en selecteer vervolgens **volgende**.
-4. Selecteer op de pagina **overzicht** de optie **volgende**.
+3. Selecteer op de pagina **Extra taken** de optie **Apparaatopties configureren** en selecteer **Volgende**.
+4. Selecteer **Volgende** op de pagina **Overzicht**.
 5. Op de pagina **verbinding maken met Azure AD** voert u de referenties in van een globale beheerder voor Azure AD.
-6. Selecteer **hybride Azure AD-deelname configureren**op de pagina **apparaat opties** en selecteer **volgende**.
+6. Selecteer op de pagina **Apparaatopties** de optie **Hybride Azure AD-koppeling configureren** en selecteer **Volgende**.
 7. Selecteer op de pagina **besturings systemen** voor apparaten de besturings systemen die door apparaten in uw Active Directory omgeving worden gebruikt en selecteer vervolgens **volgende**.  
 
    U kunt de optie selecteren voor de ondersteuning van Windows-apparaten die lid zijn van een domein, maar u moet er wel voor zorgen dat gezamenlijk beheer van apparaten alleen wordt ondersteund voor Windows 10.
@@ -111,9 +111,9 @@ Als u Azure AD Connect wilt configureren, hebt u referenties nodig van een globa
    3. Klik op **Toevoegen** om de referenties van een ondernemingsbeheerder in te voeren.  
 9. Als u een beheerd domein hebt, slaat u deze stap over.  
 
-   Voer op de pagina **Federatie configuratie** de referenties van uw AD FS-beheerder in en selecteer vervolgens **volgende**.
-10. Selecteer **configureren**op de pagina **gereed voor configuratie** .
-11. Selecteer op de pagina **configuratie voltooid** de optie **Afsluiten**.
+   Voer op de pagina **Federatieconfiguratie** de referenties van uw AD FS-beheerder in en selecteer **Volgende**.
+10. Selecteer op de pagina **Gereed om te configureren** op **Configureren**.
+11. Selecteer de pagina **Configuratie voltooid** op **Afsluiten**.
 
 Als u problemen ondervindt met het volt ooien van hybride Azure AD join voor Windows-apparaten die lid zijn van een domein, raadpleegt u [problemen oplossen hybride Azure AD join voor Windows huidige apparaten](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current).
 
@@ -169,13 +169,9 @@ Met hybride Azure AD-configuratie en Configuration Manager-client configuraties,
 
 ### <a name="enable-co-management-starting-in-version-1906"></a>Co-beheer inschakelen vanaf versie 1906
 
-Als u co-beheer vanaf Configuration Manager versie 1906 wilt inschakelen, volgt u de onderstaande instructies:
-
 [!INCLUDE [Enable Co-management in version 1906 and later](includes/enable-co-management-1906-and-higher.md)]
 
 ### <a name="enable-co-management-in-version-1902-and-earlier"></a>Co-beheer inschakelen in versie 1902 en lager
-
-Volg de onderstaande instructies om co-beheer in te scha kelen voor Configuration Manager versie 1902 en eerder:
 
 [!INCLUDE [Enable Co-management in version 1902 and earlier](includes/enable-co-management-1902-and-earlier.md)]
 

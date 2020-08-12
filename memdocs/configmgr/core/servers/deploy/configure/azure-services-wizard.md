@@ -2,20 +2,20 @@
 title: Azure-services configureren
 titleSuffix: Configuration Manager
 description: Verbind uw Configuration Manager-omgeving met Azure-Services voor Cloud beheer, Microsoft Store voor bedrijven en Log Analytics.
-ms.date: 06/10/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6ca5307de5c7df54c3cf7924bc91b0175b1bfa39
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: ebdd07874f09ff6d97747826d6056df177e2c735
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715319"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128474"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>Azure-Services configureren voor gebruik met Configuration Manager
 
@@ -64,7 +64,7 @@ De volgende tabel bevat informatie over elk van de services.
 |---------|---------|---------|---------|---------|---------|
 |Cloud beheer met<br>Azure AD-detectie | Meerdere | Openbaar, privé | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | Importeren, maken |
 |Log Analytics-connector | Eén | Openbaar, privé | ![Ondersteund](media/green_check.png) | ![Niet ondersteund](media/Red_X.png) | Importeren |
-|Microsoft Store voor<br>Business | Eén | Public | ![Ondersteund](media/green_check.png) | ![Niet ondersteund](media/Red_X.png) | Importeren, maken |
+|Microsoft Store voor<br>Business | Eén | Openbaar | ![Ondersteund](media/green_check.png) | ![Niet ondersteund](media/Red_X.png) | Importeren, maken |
 
 ### <a name="about-azure-ad-apps"></a>Over Azure AD-apps
 
@@ -229,6 +229,17 @@ Nadat u de web-en systeem eigen apps op de pagina apps hebt opgegeven, gaat de w
 Ten slotte voltooit u de wizard Azure-Services via de pagina's samen vatting, voortgang en voltooiing. U hebt de configuratie van een Azure-service in Configuration Manager voltooid. Herhaal dit proces om andere Azure-Services te configureren.
 
 ## <a name="renew-secret-key"></a><a name="bkmk_renew"></a>Geheime sleutel vernieuwen
+
+U moet de geheime sleutel van de Azure AD-App vernieuwen vóór het einde van de geldigheids periode. Als u de sleutel verloopt, kan Configuration Manager niet verifiëren met Azure AD, waardoor uw verbonden Azure-Services niet meer werken.
+
+Vanaf versie 2006 geeft de Configuration Manager-console meldingen weer voor de volgende situaties:<!--6386392-->
+
+- Een of meer geheime sleutels van de Azure AD-App verlopen binnenkort
+- Een of meer geheime sleutels van Azure AD-app zijn verlopen
+
+Als u beide gevallen wilt beperken, moet u de geheime sleutel vernieuwen.
+
+Zie [Configuration Manager-console meldingen](../../manage/admin-console-notifications.md)voor meer informatie over het werken met deze meldingen.
 
 ### <a name="renew-key-for-created-app"></a>Sleutel voor gemaakte app vernieuwen
 

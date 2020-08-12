@@ -2,7 +2,7 @@
 title: Takenreeksvariabelen gebruiken
 titleSuffix: Configuration Manager
 description: Meer informatie over het gebruik van de variabelen in een Configuration Manager taken reeks.
-ms.date: 11/29/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: bc7de742-9e5c-4a70-945c-df4153a61cc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1cf428b479e9311c92f6d14d9c376817ee5e3ab5
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 433896e55b7701009e2870af8b0015fb15c1eda3
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022259"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88123933"
 ---
 # <a name="how-to-use-task-sequence-variables-in-configuration-manager"></a>Taken reeks variabelen gebruiken in Configuration Manager
 
@@ -77,7 +78,7 @@ Wanneer u een naam voor een nieuwe taken reeks variabele opgeeft, volgt u deze r
 
 - Namen van taken reeks variabelen kunnen niet beginnen of eindigen met een spatie. Ze kunnen ook geen Inge sloten spaties bevatten. Alle spaties aan het begin of het einde van de naam van een variabele worden door de taken reeks genegeerd.  
 
-Er is geen limiet ingesteld voor het aantal taken reeks variabelen dat u kunt maken. Het maximale aantal variabelen is echter wel beperkt door de grootte van de takenreeksomgeving. De limiet voor de totale grootte van de takenreeksomgeving is 32 MB.  
+Er is geen limiet ingesteld voor het aantal taken reeks variabelen dat u kunt maken. Het maximale aantal variabelen is echter wel beperkt door de grootte van de takenreeksomgeving. De limiet voor de totale grootte van de taken reeks omgeving is 8 KB. Zie [de grootte van het taken reeks beleid beperken](../deploy-use/manage-task-sequences-to-automate-tasks.md#bkmk_policysize)voor meer informatie.
 
 ### <a name="read-only-variables"></a><a name="bkmk_read-only"></a>Alleen-lezen variabelen
 
@@ -189,10 +190,10 @@ U kunt aangepaste taken reeks variabelen definiëren voor apparaten en verzameli
 
 Bijvoorbeeld, apparaat XYZ is lid van verzameling ABC. U wijst MyVariable toe aan verzameling ABC met de waarde 1. U wijst ook MyVariable toe aan het apparaat XYZ met de waarde 2. De variabele die is toegewezen aan XYZ heeft een hogere prioriteit dan de variabele die is toegewezen aan verzameling ABC. Wanneer een taken reeks met deze variabele wordt uitgevoerd op XYZ, heeft MyVariable de waarde 2.
 
-U kunt de variabelen per apparaat en per verzameling verbergen, zodat deze niet zichtbaar zijn in de Configuration Manager-console. Wanneer u de optie **deze waarde niet weer geven in de Configuration Manager-console**gebruikt, wordt de waarde van de variabele niet weer gegeven in de console. De variabele kan nog steeds worden gebruikt door de taken reeks wanneer deze wordt uitgevoerd. Als u deze variabelen niet meer wilt verbergen, verwijdert u deze eerst. Definieer de variabelen vervolgens opnieuw zonder de optie te selecteren om ze te verbergen.  
+U kunt de variabelen per apparaat en per verzameling verbergen, zodat deze niet zichtbaar zijn in de Configuration Manager-console. Wanneer u de optie **deze waarde niet weer geven in de Configuration Manager-console**gebruikt, wordt de waarde van de variabele niet weer gegeven in de console. De waarde van de variabele wordt niet weer gegeven in het logboek bestand van de taken reeks (**bestand smsts. log**) of het fout opsporingsprogramma voor de taken reeks. De variabele kan nog steeds worden gebruikt door de taken reeks wanneer deze wordt uitgevoerd. Als u deze variabelen niet meer wilt verbergen, verwijdert u deze eerst. Definieer de variabelen vervolgens opnieuw zonder de optie te selecteren om ze te verbergen.  
 
 > [!WARNING]  
-> De instelling om **deze waarde niet weer te geven in de Configuration Manager-console** is alleen van toepassing op de Configuration Manager-console. De waarden voor de variabelen worden nog steeds weer gegeven in het logboek bestand van de taken reeks (**bestand smsts. log**).
+> Als u variabelen opneemt in de stap **opdracht regel uitvoeren** , wordt in het logboek bestand van de taken reeks de volledige opdracht regel weer gegeven, inclusief de waarden van de variabele. Als u wilt voor komen dat mogelijk gevoelige gegevens in het logboek bestand worden weer gegeven, stelt u de taken reeks variabele **OSDDoNotLogCommand** in op `TRUE` .
 
 U kunt per apparaat variabelen op een primaire site of op een centrale beheer site beheren. Configuration Manager ondersteunt niet meer dan 1.000 toegewezen variabelen voor een apparaat.  
 
@@ -334,7 +335,7 @@ Het Windows Setup-antwoord bestand dat u opgeeft, kan Inge sloten taken reeks va
 
 Zie [Setup Windows and ConfigMgr](task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr)voor meer informatie.
 
-## <a name="see-also"></a>Zie tevens
+## <a name="see-also"></a>Zie ook
 
 - [Stappen voor takenreeksen](task-sequence-steps.md)
 

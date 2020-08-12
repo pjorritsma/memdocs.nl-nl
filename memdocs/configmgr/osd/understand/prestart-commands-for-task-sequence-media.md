@@ -5,17 +5,17 @@ description: Maak een script om te gebruiken voor de prestart-opdracht, Distribu
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: ccc9f652-2953-4c38-8a90-c799484105ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9dd921d58e6ef777017af3e2eb24dbf4bd611fab
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 06c96d668d3c37b107ae8e290ebcd124e8a2b773
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81717459"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124377"
 ---
 # <a name="prestart-commands-for-task-sequence-media-in-configuration-manager"></a>Prestart-opdrachten voor taken reeks media in Configuration Manager
 
@@ -64,7 +64,7 @@ env("MyCustomVariable") = "varname"
     -   Voer in het tekstvak **Opdrachtregel** het script of uitvoerbare bestand in dat u hebt gemaakt voor de prestart-opdracht.  
 
         > [!IMPORTANT]  
-        >  Gebruik **cmd/c <prestart-\> opdracht** om de prestart-opdracht op te geven. Als u bijvoorbeeld TSScript.vbs hebt gebruikt als de naam voor uw prestart-opdrachtscript, voert u dus **cmd /C TSScript.vbs** in op de opdrachtregel. Hierbij opent u met **cmd /C** een nieuw venster van de Windows-opdrachtinterpreter en wordt de omgevingsvariabele Path gebruikt om het script of uitvoerbare bestand voor de prestart-opdracht te vinden. U kunt ook het volledige pad naar de prestart-opdracht opgeven, maar de stationsletter kan afwijken op computers met andere stationsconfiguraties.  
+        >  Gebruik **cmd/c <prestart- \> opdracht** om de prestart-opdracht op te geven. Als u bijvoorbeeld TSScript.vbs hebt gebruikt als de naam voor uw prestart-opdrachtscript, voert u dus **cmd /C TSScript.vbs** in op de opdrachtregel. Hierbij opent u met **cmd /C** een nieuw venster van de Windows-opdrachtinterpreter en wordt de omgevingsvariabele Path gebruikt om het script of uitvoerbare bestand voor de prestart-opdracht te vinden. U kunt ook het volledige pad naar de prestart-opdracht opgeven, maar de stationsletter kan afwijken op computers met andere stationsconfiguraties.  
 
     -   Selecteer **Inclusief bestanden voor de prestart-opdracht**.  
 

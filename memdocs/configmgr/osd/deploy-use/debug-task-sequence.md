@@ -5,17 +5,17 @@ description: Gebruik het hulp programma voor het opsporen van taken reeksen om e
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 4b60b0e1-ffa4-4fd5-864e-70a0546c8b3b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 66f460b7ba5c870a9ee81d10835ceb9f660cba89
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 99ed8232a74b038b9b1cde4af257353252454c2b
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711033"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125148"
 ---
 # <a name="debug-a-task-sequence"></a>Fouten opsporen in een takenreeks
 
@@ -45,7 +45,7 @@ Vanaf versie 1906 is het fout opsporingsprogramma voor taken reeksen een nieuw h
 1. Selecteer een taken reeks. Selecteer in de implementatie groep van het lint **fout opsporing**.
 
     > [!Tip]  
-    > U kunt ook de variabele **TSDebugMode** `TRUE` instellen op een verzameling of computer object waarop de taken reeks wordt geïmplementeerd. Op elk apparaat waarop deze variabele is ingesteld, wordt elke taken reeks geïmplementeerd in de foutopsporingsmodus.
+    > U kunt ook de variabele **TSDebugMode** instellen op `TRUE` een verzameling of computer object waarop de taken reeks wordt geïmplementeerd. Op elk apparaat waarop deze variabele is ingesteld, wordt elke taken reeks geïmplementeerd in de foutopsporingsmodus.
 
 1. Maak een implementatie voor fout opsporing. De implementatie-instellingen zijn hetzelfde als een normale implementatie van een taken reeks. Zie [Een takenreeks implementeren](deploy-a-task-sequence.md#process)voor meer informatie.
 

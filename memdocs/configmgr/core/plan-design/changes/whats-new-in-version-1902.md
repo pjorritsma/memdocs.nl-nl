@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4972f6e8689ad44dbd1a19adcde104cd5f59038c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c192db8ccab336d05ef965e837fe17fc16a19200
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719356"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128930"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 1902 van Configuration Manager current branch
 
@@ -121,7 +121,7 @@ Zie [CMG Hierarchy design](../../clients/manage/cmg/plan-cloud-management-gatewa
 <!--3610960-->
 Configuration Manager ondersteunt nu het uitvoeren van CMPivot vanaf de centrale beheer site in een hiërarchie. De primaire site verwerkt nog steeds de communicatie met de client. Wanneer CMPivot vanaf de centrale beheer site wordt uitgevoerd, communiceert deze met de primaire site via het kanaal voor het abonnement op hoge snelheid van berichten. Deze communicatie vertrouwt niet op de standaard SQL-replicatie tussen sites.
 
-Zie [CMPivot voor realtime gegevens](../../servers/manage/cmpivot.md#bkmk_cmpivot1902)voor meer informatie.
+Zie [CMPivot voor realtime gegevens](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot1902)voor meer informatie.
 
 ### <a name="edit-or-copy-powershell-scripts"></a>Power shell-scripts bewerken of kopiëren
 
@@ -224,7 +224,7 @@ Deze versie bevat verschillende verbeteringen voor het verbeteren van het maken 
 
 Wanneer u taken reeks media maakt, past u nu de locatie aan die de site gebruikt voor tijdelijke opslag van gegevens. Dit proces kan veel tijdelijke schijf ruimte vergen. Met deze wijziging hebt u meer flexibiliteit om te kiezen waar deze tijdelijke bestanden moeten worden opgeslagen.
 
-Geef in de **wizard taken reeks media maken**een locatie op voor de **map voor gefaseerde installatie**. Deze locatie is standaard vergelijkbaar met het volgende pad: `%UserProfile%\AppData\Local\Temp`.
+Geef in de **wizard taken reeks media maken**een locatie op voor de **map voor gefaseerde installatie**. Deze locatie is standaard vergelijkbaar met het volgende pad: `%UserProfile%\AppData\Local\Temp` .
 
 #### <a name="add-a-label-to-the-media"></a>Een label toevoegen aan de media
 
@@ -413,7 +413,7 @@ Op basis van feedback van klanten op het gebied van de-versie 2018 van de Midwes
 - Weer gaven worden gesorteerd op gehele waarden in het knoop punt **implementaties** van de werk ruimte **bewaking**
 - De waarschuwing voor een groot aantal resultaten verplaatsen
 
-Zie [de Configuration Manager-console gebruiken](../../servers/manage/admin-console.md#tips)voor meer informatie.
+Zie [Configuration Manager-console tips](../../servers/manage/admin-console-tips.md)voor meer informatie.
 
 ### <a name="configuration-manager-console-notifications"></a>Meldingen over Configuration Manager-console
 
@@ -425,7 +425,7 @@ Om u beter op de hoogte te houden, zodat u de juiste actie kunt ondernemen, word
 
 Deze melding is een balk boven aan het console venster onder het lint. De vorige ervaring wordt vervangen wanneer Configuration Manager updates beschikbaar zijn. In deze meldingen in de console worden nog steeds essentiële gegevens weer gegeven, maar uw werk in de console wordt niet verstoord. U kunt geen kritieke meldingen negeren. In de-console worden alle meldingen in een nieuw systeemvak van de titel balk weer gegeven.
 
-Zie [de Configuration Manager-console gebruiken](../../servers/manage/admin-console.md)voor meer informatie.
+Zie [Configuration Manager-console meldingen](../../servers/manage/admin-console-notifications.md)voor meer informatie.
 
 ### <a name="confirmation-of-console-feedback"></a>Bevestiging van console feedback
 
@@ -453,7 +453,7 @@ Zie [de Configuration Manager-console gebruiken](../../servers/manage/admin-cons
 <!--3600878-->
 U kunt nu zoeken naar een MAC-adres in een apparaat weergave van de Configuration Manager-console. Deze eigenschap is handig voor beheerders van besturingssysteem implementaties bij het oplossen van problemen met PXE-implementaties. Wanneer u een lijst met apparaten bekijkt, voegt u de kolom **MAC-adres** toe aan de weer gave. Gebruik het zoek veld om de **MAC-adres** zoek criteria toe te voegen.
 
-Zie [de Configuration Manager-console gebruiken](../../servers/manage/admin-console.md#tips)voor meer informatie.
+Zie [Configuration Manager-console tips](../../servers/manage/admin-console-tips.md)voor meer informatie.
 
 ### <a name="use-net-47-for-improved-console-accessibility"></a>.NET 4,7 gebruiken voor verbeterde console toegankelijkheid
 
@@ -467,10 +467,10 @@ Zie [toegankelijkheids functies in Configuration Manager](../../understand/acces
 <!-- 3612513 -->
 Er zijn nieuwe onderdelen vereist bij het installeren van de Configuration Manager-console. Als u een pakket maakt voor het installeren van de-console op andere computers, moet u ervoor zorgen dat het pakket de volgende bestanden bevat:
 
-- ConsoleSetup. exe
-- AdminConsole. msi
-- ConfigMgr. AC_Extension. i386. cab
-- ConfigMgr. AC_Extension. amd64. cab
+- ConsoleSetup.exe
+- AdminConsole.msi
+- ConfigMgr.AC_Extension.i386.cab
+- ConfigMgr.AC_Extension.amd64.cab
 
 Wanneer u een site server installeert of bijwerkt, worden deze installatie bestanden en ondersteunde taal pakketten voor de site naar de submap **Tools\ConsoleSetup** gekopieerd. Zie [de Configuration Manager-console installeren](../../servers/deploy/install/install-consoles.md)voor meer informatie.
 

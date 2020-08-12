@@ -10,12 +10,12 @@ ms.assetid: 58849e40-30d5-4153-84b3-ca4af3a4f09d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5f92e76047a70f6d86406b1a364603163d902e62
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7ad20f80f4727fe18947bed05ded6e7b107fab12
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719930"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124081"
 ---
 # <a name="user-experiences-for-os-deployment"></a>Gebruikerservaring voor implementatie van besturingssysteem
 
@@ -37,7 +37,7 @@ Voor een implementatie met hoge impact kunt u het bericht aanpassen dat in Softw
 
 Zie [een aangepaste melding voor implementaties met een hoog risico maken](../deploy-use/manage-task-sequences-to-automate-tasks.md#create-a-custom-notification-for-high-risk-deployments)voor meer informatie over het aanpassen van het bericht in dit venster.
 
-U kunt ook de naam van de organisatie aan de bovenkant van het venster aanpassen. (In het bovenstaande voor beeld wordt de standaard `IT Organization`waarde weer gegeven). Wijzig de client instelling **organisatie naam** in de groep **computer agent** . Zie [over client instellingen](../../core/clients/deploy/about-client-settings.md#computer-agent)voor meer informatie.
+U kunt ook de naam van de organisatie aan de bovenkant van het venster aanpassen. (In het bovenstaande voor beeld wordt de standaard waarde weer gegeven `IT Organization` ). Wijzig de client instelling **organisatie naam** in de groep **computer agent** . Zie [over client instellingen](../../core/clients/deploy/about-client-settings.md#computer-agent)voor meer informatie.
 
 <!--
 optional vs required
@@ -48,7 +48,7 @@ Zie [Software Center gebruiken om Windows via het netwerk te implementeren](../d
 
 ## <a name="pxe"></a>PXE
 
-Verschillende hardwareprofielen hebben verschillende ervaringen voor PXE. Om het netwerk op te starten, gebruiken UEFI-apparaten doorgaans de `Enter` sleutel en gebruiken BIOS-apparaten de `F12` -sleutel.
+Verschillende hardwareprofielen hebben verschillende ervaringen voor PXE. Om het netwerk op te starten, gebruiken UEFI-apparaten doorgaans de `Enter` sleutel en gebruiken BIOS-apparaten de- `F12` sleutel.
 
 In het volgende voor beeld wordt de PXE-ervaring van Hyper-V gen1 (BIOS) weer gegeven:
 
@@ -111,12 +111,12 @@ Wanneer de taken reeks wordt uitgevoerd, wordt het venster voortgang van de **in
 
 - Dit venster bevindt zich altijd op de voor grond. u kunt deze verplaatsen, maar niet sluiten of minimaliseren.
 
-- U kunt de naam van de organisatie aan de bovenkant van het venster aanpassen. (In het bovenstaande voor beeld wordt de standaard `IT Organization`waarde weer gegeven). Wijzig de client instelling **organisatie naam** in de groep **computer agent** . Zie [over client instellingen](../../core/clients/deploy/about-client-settings.md#computer-agent)voor meer informatie.
+- U kunt de naam van de organisatie aan de bovenkant van het venster aanpassen. (In het bovenstaande voor beeld wordt de standaard waarde weer gegeven `IT Organization` ). Wijzig de client instelling **organisatie naam** in de groep **computer agent** . Zie [over client instellingen](../../core/clients/deploy/about-client-settings.md#computer-agent)voor meer informatie.
 
     > [!TIP]
     > De taken reeks slaat deze waarde op in de variabele met het kenmerk alleen-lezen [_SMSTSOrgName](task-sequence-variables.md#SMSTSOrgName).
 
-- U kunt de subkoppen aanpassen. (In het bovenstaande voor beeld ziet u de `Running: <task sequence name>`standaard waarde,.) Selecteer op de eigenschappen van de taken reeks de optie voor het **gebruik van aangepaste tekst** voor de voortgangs meldings tekst. Dit kan Maxi maal 255 tekens lang zijn.
+- U kunt de subkoppen aanpassen. (In het bovenstaande voor beeld ziet u de standaard waarde, `Running: <task sequence name>` .) Selecteer op de eigenschappen van de taken reeks de optie voor het **gebruik van aangepaste tekst** voor de voortgangs meldings tekst. Dit kan Maxi maal 255 tekens lang zijn.
 
 - **Actie uitvoeren**: de eerste regel bevat de naam van de huidige taken reeks stap. In de onderstaande voortgangs balk ziet u de algemene voltooiing van de taken reeks.
 
@@ -146,8 +146,7 @@ Het totale aantal stappen bevat niet de volgende items in de taken reeks:
 
 - Stappen die u expliciet uitschakelt. Een uitgeschakelde stap wordt niet uitgevoerd tijdens de taken reeks.
 
-    > [!NOTE]
-    > De ingeschakelde stappen in een uitgeschakelde groep worden nog steeds opgenomen in het totaal aantal.
+- Vanaf versie 2006 worden niet de ingeschakelde stappen in een uitgeschakelde groep geteld.<!--6448412--> In versie 2002 worden de ingeschakelde stappen in een uitgeschakelde groep nog steeds opgenomen in het totaal aantal.
 
 ## <a name="task-sequence-error"></a>Taken reeks fout
 

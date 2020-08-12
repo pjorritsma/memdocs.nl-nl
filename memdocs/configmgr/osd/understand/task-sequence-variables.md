@@ -2,20 +2,20 @@
 title: Referentie voor takenreeksvariabelen
 titleSuffix: Configuration Manager
 description: Meer informatie over de variabelen voor het beheren en aanpassen van een Configuration Manager taken reeks.
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b3ddd1a4b59ba750e9fca5f8386762b4a5dddb13
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 667d7451f467592bd0645b54d7068a20628ec98e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429829"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124138"
 ---
 # <a name="task-sequence-variables"></a>Takenreeksvariabelen
 
@@ -372,6 +372,13 @@ Een alleen-lezen variabele voor of de **netstroom die is aangesloten op het stop
 *Is van toepassing op de stap [gereedheid controleren](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
 Een alleen-lezen variabele voor of de controle van de **netwerk adapter die is verbonden** , True ( `1` ) of False ( `0` ) retourneert. Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
+
+### <a name="_ts_cruefi"></a><a name="TSCRUEFI"></a>_TS_CRUEFI
+
+*Vanaf versie 2006* <!--6452769-->
+*Is van toepassing op de stap [gereedheid controleren](task-sequence-steps.md#BKMK_CheckReadiness) .*
+
+Een alleen-lezen variabele voor of de **computer zich in de UEFI-modus bevindt** BIOS ( `0` ) of UEFI ( `1` ). Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
 
 ### <a name="_ts_crwired"></a><a name="TSCRWIRED"></a>_TS_CRWIRED
 

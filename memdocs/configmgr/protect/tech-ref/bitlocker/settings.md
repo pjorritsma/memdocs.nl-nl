@@ -5,17 +5,17 @@ description: Alle instellingen voor BitLocker-beheer die beschikbaar zijn in Con
 ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: f7ade768-2b2b-4aab-8ee1-73624d03a9c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9ce6a9c566fec22e69c0a4a7fde01b911330ec1d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cb95a05fd3d347b70dd5d53ce972bce0c23c18cc
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723927"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127879"
 ---
 # <a name="bitlocker-settings-reference"></a>Naslag informatie over BitLocker-instellingen
 
@@ -63,7 +63,7 @@ Schakel voor Windows 10-apparaten de optie voor de **versleutelings methode voor
 - AES-CBC 128-bits
 - AES-CBC 256-bits
 - XTS-AES 128-bits (standaard)
-- XTS-AES 256-bits
+- XTS-AES 256 bits
 
 > [!TIP]
 > BitLocker maakt gebruik van AES (Advanced Encryption Standard) als algoritme, met configureerbare sleutellengtes van 128 of 256 bits. Op Windows 10-apparaten ondersteunt de AES-versleuteling Cipher Block Chaining (CBC) of gecodeerde tekst stelen (XTS).
@@ -94,7 +94,7 @@ Wanneer u dit beleid niet configureert, verwijdert BitLocker de geheimen uit het
 
 Dit beleid configureren voor het gebruik van BitLocker-beveiliging op basis van smartcard certificaten. Geef vervolgens de **object-id**van het certificaat op.
 
-Wanneer u dit beleid niet configureert, gebruikt BitLocker de standaard object- `1.3.6.1.4.1.311.67.1.1` id om een certificaat op te geven.
+Wanneer u dit beleid niet configureert, gebruikt BitLocker de standaard object-id `1.3.6.1.4.1.311.67.1.1` om een certificaat op te geven.
 
 ### <a name="organization-unique-identifiers"></a>Unieke id's van de organisatie
 
@@ -125,10 +125,10 @@ Op apparaten met een compatibele TPM kunnen tijdens het opstarten twee typen ver
 
 - **Selecteer beveiliging voor het station van het besturings systeem**: Configureer dit voor het gebruik van een TPM en pincode, of alleen voor de TPM.
 
-- **Minimale lengte voor pincodes configureren voor opstarten**: als u een pincode nodig hebt, is deze waarde de kortste lengte die de gebruiker kan opgeven. De gebruiker voert deze pincode in wanneer de computer opstart om het station te ontgrendelen. De minimale lengte van de pincode is `4`standaard.
+- **Minimale lengte voor pincodes configureren voor opstarten**: als u een pincode nodig hebt, is deze waarde de kortste lengte die de gebruiker kan opgeven. De gebruiker voert deze pincode in wanneer de computer opstart om het station te ontgrendelen. De minimale lengte van de pincode is standaard `4` .
 
 > [!TIP]
-> Voor een betere beveiliging kunt u de volgende instellingen voor groeps beleid *uitschakelen* in de**slaap stand**van het **systeem** > **energie beheer** > als u apparaten met TPM + pincode-beveiliging inschakelt.
+> Voor een betere beveiliging kunt u de volgende instellingen voor groeps beleid *uitschakelen* in de slaap stand van het **systeem**  >  **energie beheer**als u apparaten met TPM + pincode-beveiliging inschakelt  >  **Sleep Settings**.
 >
 > - Stand-by statussen (S1-S3) toestaan wanneer de slaap stand wordt ingeschakeld (netstroom)
 >
@@ -157,7 +157,7 @@ Gebruik deze instellingen om de beperkingen voor wacht woorden in te stellen voo
 
 - **Wachtwoord complexiteit configureren voor besturingssysteem stations**: als u complexiteits vereisten voor het wacht woord wilt afdwingen, selecteert u **wachtwoord complexiteit vereisen**.
 
-- **Minimale wachtwoord lengte voor het besturings systeem station**: de minimum lengte is `8`standaard.
+- **Minimale wachtwoord lengte voor het besturings systeem station**: de minimum lengte is standaard `8` .
 
 - **Alleen ASCII-wacht woorden vereisen voor Verwissel bare OS-stations**
 
@@ -165,7 +165,7 @@ Als u deze beleids instelling inschakelt, kunnen gebruikers een wacht woord conf
 
 #### <a name="general-usage-notes-for-os-drive-password-policy"></a>Algemene gebruiks opmerkingen voor wachtwoord beleid voor het besturings systeem-station
 
-- Als u de instellingen voor de complexiteits vereisten effectief wilt maken, moet u ook het wacht woord voor groeps beleids instelling inschakelen om te **voldoen aan complexiteits vereisten** in **computer configuratie** > **Windows-instellingen** > **beveiligings instellingen** > **account** > beleid**wachtwoord beleid**.
+- Als u de instellingen voor de complexiteits vereisten effectief wilt maken, moet u ook het wacht woord voor groeps beleids instelling inschakelen om te **voldoen aan complexiteits vereisten** in **computer configuratie**  >  **Windows-instellingen**  >  **beveiligings instellingen**  >  **account**beleid  >  **wachtwoord beleid**.
 
 - BitLocker dwingt deze instellingen af wanneer u deze inschakelt, niet wanneer u een volume ontgrendelt. Met BitLocker kunt u een station ontgrendelen met een van de beveiligingen die beschikbaar zijn op het station.
 
@@ -181,7 +181,7 @@ Als u deze instelling inschakelt of niet configureert, vernieuwt Windows de plat
 
 Als u deze beleids instelling uitschakelt, worden de validatie gegevens van het platform in deze situatie niet vernieuwd.
 
-### <a name="pre-boot-recovery-message-and-url"></a>Pre-boot-herstel bericht en-URL
+### <a name="pre-boot-recovery-message-and-url"></a>Preboot-herstelbericht en -URL
 
 *Voorgestelde configuratie*: **niet geconfigureerd**
 
@@ -214,7 +214,7 @@ Als BitLocker geen gebruikers interactie vereist om een protector toe te voegen 
 
 Als u deze instelling uitschakelt of niet configureert, vereist Configuration Manager niet dat gebruikers voldoen aan het BitLocker-beleid.
 
-Als u het beleid onmiddellijk wilt afdwingen, stelt u `0`een respijt periode van in.
+Als u het beleid onmiddellijk wilt afdwingen, stelt u een respijt periode van in `0` .
 
 ## <a name="fixed-drive"></a>Vast station
 
@@ -264,7 +264,7 @@ Voor een betere beveiliging schakelt u deze instelling in en configureert u de v
 
 - **Wachtwoord complexiteit voor harde schijven configureren**: als u complexiteits vereisten voor het wacht woord wilt afdwingen, selecteert u **wachtwoord complexiteit vereisen**.
 
-- **Minimale wachtwoord lengte voor harde schijf**: standaard is `8`de minimum lengte.
+- **Minimale wachtwoord lengte voor harde schijf**: standaard is de minimum lengte `8` .
 
 Als u deze instelling uitschakelt, kunnen gebruikers geen wacht woord configureren.
 
@@ -272,7 +272,7 @@ Wanneer het beleid niet is geconfigureerd, ondersteunt BitLocker wacht woorden m
 
 #### <a name="general-usage-notes-for-fixed-data-drive-password-policy"></a>Algemene gebruiks notities voor het wachtwoord beleid voor vaste gegevens stations
 
-- Als u de instellingen voor de complexiteits vereisten effectief wilt maken, moet u ook het wacht woord voor groeps beleids instelling inschakelen om te **voldoen aan complexiteits vereisten** in **computer configuratie** > **Windows-instellingen** > **beveiligings instellingen** > **account** > beleid**wachtwoord beleid**.
+- Als u de instellingen voor de complexiteits vereisten effectief wilt maken, moet u ook het wacht woord voor groeps beleids instelling inschakelen om te **voldoen aan complexiteits vereisten** in **computer configuratie**  >  **Windows-instellingen**  >  **beveiligings instellingen**  >  **account**beleid  >  **wachtwoord beleid**.
 
 - BitLocker dwingt deze instellingen af wanneer u deze inschakelt, niet wanneer u een volume ontgrendelt. Met BitLocker kunt u een station ontgrendelen met een van de beveiligingen die beschikbaar zijn op het station.
 
@@ -290,7 +290,7 @@ Als BitLocker geen gebruikers interactie vereist om een protector toe te voegen 
 
 Als u deze instelling uitschakelt of niet configureert, vereist Configuration Manager niet dat gebruikers voldoen aan het BitLocker-beleid.
 
-Als u het beleid onmiddellijk wilt afdwingen, stelt u `0`een respijt periode van in.
+Als u het beleid onmiddellijk wilt afdwingen, stelt u een respijt periode van in `0` .
 
 ## <a name="removable-drive"></a>Verwisselbaar station
 
@@ -312,7 +312,7 @@ Wanneer u deze instelling inschakelt:
 
 - De instellingen voor het **wachtwoord beleid voor Verwissel bare gegevens stations** inschakelen
 
-- *Schakel* de volgende groeps beleids instellingen uit in de**toegang tot de Verwissel bare opslag** van het **systeem** > voor zowel gebruikers & computer configuraties:
+- *Schakel* de volgende groeps beleids instellingen **System**uit in de  >  **toegang tot de Verwissel bare opslag** van het systeem voor zowel gebruikers & computer configuraties:
 
   - **Alle Verwissel bare-opslag klassen: alle toegang weigeren**
   - **Verwissel bare schijven: schrijf toegang weigeren**
@@ -337,7 +337,7 @@ Wanneer u deze instelling inschakelt:
 Wanneer u deze instelling uitschakelt of niet configureert, koppelt Windows alle Verwissel bare stations met lees-en schrijf toegang.
 
 > [!NOTE]
-> U kunt deze instelling onderdrukken met de instellingen voor groeps beleid in de**toegang tot de Verwissel bare opslag**van het **systeem** > . Als u de groeps beleids instelling **Verwissel bare schijven inschakelt: schrijf toegang weigeren**, negeert BitLocker deze Configuration Manager instelling.
+> U kunt deze instelling onderdrukken met de instellingen voor groeps **System**beleid in de  >  **toegang tot de Verwissel bare opslag**van het systeem. Als u de groeps beleids instelling **Verwissel bare schijven inschakelt: schrijf toegang weigeren**, negeert BitLocker deze Configuration Manager instelling.
 
 <!-- ### Allow access to BitLocker-protected removable data drives from earlier versions of Windows -->
 
@@ -355,7 +355,7 @@ Voor een betere beveiliging schakelt u deze instelling in en configureert u de v
 
 - **Wachtwoord complexiteit voor Verwissel bare gegevens stations configureren**: als u complexiteits vereisten voor het wacht woord wilt afdwingen, selecteert u **wachtwoord complexiteit vereisen**.
 
-- **Minimale wachtwoord lengte voor Verwissel bare gegevens stations**: de minimum lengte is `8`standaard.
+- **Minimale wachtwoord lengte voor Verwissel bare gegevens stations**: de minimum lengte is standaard `8` .
 
 Als u deze instelling uitschakelt, kunnen gebruikers geen wacht woord configureren.
 
@@ -363,7 +363,7 @@ Wanneer het beleid niet is geconfigureerd, ondersteunt BitLocker wacht woorden m
 
 #### <a name="general-usage-notes-for-removable-data-drive-password-policy"></a>Algemene gebruiks opmerkingen voor het wachtwoord beleid voor Verwissel bare gegevens stations
 
-- Als u de instellingen voor de complexiteits vereisten effectief wilt maken, moet u ook het wacht woord voor groeps beleids instelling inschakelen om te **voldoen aan complexiteits vereisten** in **computer configuratie** > **Windows-instellingen** > **beveiligings instellingen** > **account** > beleid**wachtwoord beleid**.
+- Als u de instellingen voor de complexiteits vereisten effectief wilt maken, moet u ook het wacht woord voor groeps beleids instelling inschakelen om te **voldoen aan complexiteits vereisten** in **computer configuratie**  >  **Windows-instellingen**  >  **beveiligings instellingen**  >  **account**beleid  >  **wachtwoord beleid**.
 
 - BitLocker dwingt deze instellingen af wanneer u deze inschakelt, niet wanneer u een volume ontgrendelt. Met BitLocker kunt u een station ontgrendelen met een van de beveiligingen die beschikbaar zijn op het station.
 
@@ -393,17 +393,17 @@ Een contact wijze configureren voor gebruikers om een uitzonde ring van BitLocke
 
 Als u deze beleids instelling inschakelt, geeft u de volgende informatie op:
 
-- **Maximum aantal dagen dat moet worden uitgesteld**: het aantal dagen dat de gebruiker een afgedwongen beleid kan uitstellen. Deze waarde is `7` standaard ingesteld op dagen (één week).
+- **Maximum aantal dagen dat moet worden uitgesteld**: het aantal dagen dat de gebruiker een afgedwongen beleid kan uitstellen. Deze waarde is standaard ingesteld op `7` dagen (één week).
 
 - **Contact methode**: Geef op hoe gebruikers een uitzonde ring kunnen aanvragen: URL, e-mail adres of telefoon nummer.
 
 - **Contact persoon**: Geef de URL, het e-mail adres of het telefoon nummer op. Wanneer een gebruiker een uitzonde ring van BitLocker-beveiliging aanvraagt, wordt er een Windows-dialoog venster weer geven met instructies voor het Toep assen. Configuration Manager valideert niet de gegevens die u invoert.
 
-  - **URL**: gebruik de standaard-URL- `https://website.domain.tld`indeling,. Windows geeft de URL weer als een Hyper link.
+  - **URL**: gebruik de standaard-URL-indeling, `https://website.domain.tld` . Windows geeft de URL weer als een Hyper link.
 
-  - **E-mail adres**: gebruik de standaard indeling voor `user@domain.tld`e-mail adressen,. In Windows wordt het adres als de volgende Hyper `mailto:user@domain.tld?subject=Request exemption from BitLocker protection`link weer gegeven:.
+  - **E-mail adres**: gebruik de standaard indeling voor e-mail adressen, `user@domain.tld` . In Windows wordt het adres als de volgende Hyper link weer gegeven: `mailto:user@domain.tld?subject=Request exemption from BitLocker protection` .
 
-  - **Telefoon nummer**: Geef het nummer op dat uw gebruikers moeten bellen. In Windows wordt het nummer met de volgende beschrijving `Please call <your number> for applying exemption`weer gegeven:.
+  - **Telefoon nummer**: Geef het nummer op dat uw gebruikers moeten bellen. In Windows wordt het nummer met de volgende beschrijving weer gegeven: `Please call <your number> for applying exemption` .
 
 Als u deze instelling uitschakelt of niet configureert, worden de instructies voor de uitzonderings aanvraag niet door Windows weer gegeven aan gebruikers.
 

@@ -2,20 +2,20 @@
 title: Client installatie parameters en eigenschappen
 titleSuffix: Configuration Manager
 description: Meer informatie over de ccmsetup-opdracht regel parameters en eigenschappen voor het installeren van de Configuration Manager-client.
-ms.date: 07/10/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1de2cd1645687740986cc62514dbc990461cbbf6
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 2d26be4d3e3381a80fcbaa547cfcc7a3b8db42f5
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240572"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127015"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Over para meters en eigenschappen van client installatie in Configuration Manager
 
@@ -36,7 +36,7 @@ De CCMSetup.exe opdracht downloadt de benodigde bestanden om de client te instal
 > [!NOTE]
 > U kunt client.msi niet rechtstreeks installeren.  
 
-CCMSetup.exe biedt opdracht regel *parameters* voor het aanpassen van de installatie. Para meters worden voorafgegaan door een slash ( `/` ) en per Conventie zijn in kleine letters. U geeft de waarde van een para meter op wanneer dit nodig is met behulp van een dubbele punt ( `:` ) direct gevolgd door de waarde. Zie [CCMSetup.exe opdracht regel parameters](#ccmsetupexe-command-line-parameters)voor meer informatie.
+CCMSetup.exe biedt opdracht regel *parameters* voor het aanpassen van de installatie. Para meters worden voorafgegaan door een slash ( `/` ) en zijn in het algemeen kleine letters. U geeft de waarde van een para meter op wanneer dit nodig is met behulp van een dubbele punt ( `:` ) direct gevolgd door de waarde. Zie [CCMSetup.exe opdracht regel parameters](#ccmsetupexe-command-line-parameters)voor meer informatie.
 
 U kunt ook *Eigenschappen* opgeven op de CCMSetup.exe opdracht regel om het gedrag van client.msi te wijzigen. Eigenschappen per Conventie zijn hoofd letters. U geeft een waarde voor een eigenschap op met behulp van een gelijkteken ( `=` ) direct gevolgd door de waarde. Zie [Client.msi eigenschappen](#clientMsiProps)voor meer informatie.
 
@@ -76,16 +76,100 @@ Bevat beschik bare opdracht regel parameters voor ccmsetup.exe.
 
 Voorbeeld: `ccmsetup.exe /?`
 
-### <a name="source"></a>/source
+### <a name="allowmetered"></a>/AllowMetered
 
-Hiermee geeft u de locatie voor het downloaden van bestanden. Gebruik een lokaal of UNC-pad. Het apparaat downloadt bestanden met behulp van het SMB-protocol (Server Message Block). Voor het gebruik van **/Source**moet het Windows-gebruikers account voor de client installatie **Lees** machtigingen voor de locatie hebben.
+<!--6976145-->
 
-Zie [grens groepen-client installatie](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup)voor meer informatie over hoe ccmsetup inhoud downloadt. Dit artikel bevat ook informatie over ccmsetup-gedrag als u de para meters **/MP** en **/Source** gebruikt.
+Met ingang van versie 2006 kunt u deze para meter gebruiken om het gedrag van de client op een netwerk met data limiet te beheren. Deze para meter heeft geen waarden. Wanneer u client communicatie toestaat op een netwerk met data limiet voor ccmsetup, wordt de inhoud gedownload, geregistreerd bij de site en wordt het eerste beleid gedownload. Alle verdere client communicatie volgt de configuratie van de client instelling uit dat beleid. Zie [over client instellingen](../../clients/deploy/about-client-settings.md#client-communication-on-metered-internet-connections)voor meer informatie.
 
-> [!TIP]  
-> U kunt de para meter **/Source** meer dan één keer in een opdracht regel gebruiken om alternatieve download locaties op te geven.  
+Als u de-client opnieuw installeert op een bestaand apparaat, wordt de volgende prioriteit gebruikt om de configuratie te bepalen:
 
-Voorbeeld: `ccmsetup.exe /source:"\\server\share"`
+1. Bestaand lokaal client beleid
+1. De laatste opdracht regel die is opgeslagen in het Windows-REGI ster
+1. Para meters op de ccmsetup-opdracht regel
+
+### <a name="alwaysexcludeupgrade"></a>/AlwaysExcludeUpgrade
+
+Met deze para meter wordt opgegeven of een client automatisch wordt bijgewerkt wanneer u [**automatische client upgrade**](../manage/upgrade/upgrade-clients-for-windows-computers.md#bkmk_autoupdate)inschakelt.
+
+Ondersteunde waarden:
+
+- `TRUE`: De client wordt niet automatisch bijgewerkt
+- `FALSE`: De client wordt automatisch bijgewerkt (standaard)
+
+Bijvoorbeeld:  
+
+`CCMSetup.exe /AlwaysExcludeUpgrade:TRUE`
+
+Zie [Extended interoperabiliteit client](../../understand/interoperability-client.md)voor meer informatie.
+
+> [!NOTE]  
+> Wanneer u de para meter **/AlwaysExcludeUpgrade** gebruikt, wordt de automatische upgrade nog steeds uitgevoerd. Als CCMSetup echter wordt uitgevoerd om de upgrade uit te voeren, ziet u dat de para meter **/AlwaysExcludeUpgrade** is ingesteld en de volgende regel in het **CCMSetup. log**wordt geregistreerd:
+>
+> `Client is stamped with /alwaysexcludeupgrade. Stop proceeding.`
+>
+> CCMSetup wordt vervolgens onmiddellijk afgesloten en de upgrade niet uit te voeren.
+
+### <a name="bitspriority"></a>/BITSPriority
+
+Wanneer het apparaat client installatie bestanden via een HTTP-verbinding downloadt, gebruikt u deze para meter om de Download prioriteit op te geven. Geef een van de volgende mogelijke waarden op:
+
+- `FOREGROUND`
+
+- `HIGH`
+
+- `NORMAL`prijs
+
+- `LOW`
+
+Voorbeeld: `ccmsetup.exe /BITSPriority:HIGH`
+
+### <a name="config"></a>/config
+
+Met deze para meter geeft u een tekst bestand op dat de eigenschappen van de client installatie vermeldt.
+
+- Als CCMSetup als een service wordt uitgevoerd, plaatst u dit bestand in de map CCMSetup System: `%Windir%\Ccmsetup` .
+
+- Als u de para meter [**/noservice**](#noservice) opgeeft, plaatst u dit bestand in dezelfde map als CCMSetup.exe.
+
+Voorbeeld: `CCMSetup.exe /config:"configuration file name.txt"`
+
+Als u de juiste bestands indeling wilt opgeven, gebruikt u het bestand **bestand mobileclienttemplate. TCF** in de `\bin\<platform>` map in de installatiemap Configuration Manager op de site server. Dit bestand bevat opmerkingen over de secties en hoe u deze kunt gebruiken. Geef de client installatie-eigenschappen op in de `[Client Install]` sectie na de volgende tekst: `Install=INSTALL=ALL` .
+
+Voor beeld van `[Client Install]` sectie vermelding:`Install=INSTALL=ALL SMSSITECODE=ABC SMSCACHESIZE=100`  
+
+### <a name="downloadtimeout"></a>/downloadtimeout
+
+Als CCMSetup de client installatie bestanden niet kan downloaden, wordt met deze para meter de maximale time-out in minuten opgegeven. Na deze time-out stopt CCMSetup met het downloaden van de installatie bestanden. De standaard waarde is **1440** minuten (één dag).
+
+Gebruik de para meter [**/Retry**](#retry) om het interval tussen nieuwe pogingen op te geven.
+
+Voorbeeld: `ccmsetup.exe /downloadtimeout:100`
+
+### <a name="excludefeatures"></a>/ExcludeFeatures
+
+Met deze para meter geeft u op dat CCMSetup.exe de opgegeven functie niet installeert.
+
+Voor beeld: `CCMSetup.exe /ExcludeFeatures:ClientUI` installeert software Center niet op de client.  
+
+> [!NOTE]  
+> `ClientUI`is de enige waarde die de para meter **/ExcludeFeatures** ondersteunt.
+
+### <a name="forceinstall"></a>/forceinstall
+
+Opgeven dat CCMSetup.exe elke bestaande client verwijdert en een nieuwe client installeert.  
+
+### <a name="forcereboot"></a>/forcereboot
+
+Gebruik deze para meter om te zorgen dat de computer zo nodig opnieuw wordt opgestart om de installatie te volt ooien. Als u deze para meter niet opgeeft, wordt CCMSetup afgesloten wanneer opnieuw opstarten nodig is. Daarna wordt de volgende hand matig opnieuw opgestart.
+
+Voorbeeld: `CCMSetup.exe /forcereboot`
+
+### <a name="logon"></a>/logon
+
+Als er al een versie van de client is geïnstalleerd, wordt met deze para meter opgegeven dat de installatie van de client moet worden gestopt.  
+
+Voorbeeld: `ccmsetup.exe /logon`  
 
 ### <a name="mp"></a>/MP
 
@@ -123,6 +207,18 @@ Voor beeld voor wanneer u de URL voor de Cloud beheer gateway gebruikt:`ccmsetup
 > [!Important]
 > Wanneer u de URL van een Cloud beheer gateway opgeeft voor de para meter **/MP** , moet deze beginnen met `https://` .
 
+### <a name="nocrlcheck"></a>/NoCRLCheck
+
+Hiermee geeft u op dat een client de certificaatintrekkingslijst (CRL) niet moet controleren wanneer deze via HTTPS communiceert met een PKI-certificaat. Wanneer u deze para meter niet opgeeft, controleert de client de CRL voordat er een HTTPS-verbinding tot stand wordt gebracht. Zie [planning voor PKI-certificaat intrekking](../../plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs)voor meer informatie over de CRL-controle van de client.
+
+Voorbeeld: `CCMSetup.exe /UsePKICert /NoCRLCheck`  
+
+### <a name="noservice"></a>/noservice
+
+Met deze para meter wordt voor komen dat CCMSetup als een service wordt uitgevoerd. dit gebeurt standaard. Wanneer CCMSetup als een service wordt uitgevoerd, wordt dit uitgevoerd in de context van het lokale systeem account van de computer. Dit account heeft mogelijk onvoldoende rechten voor toegang tot de vereiste netwerk bronnen voor de installatie. Met **/noservice**wordt CCMSetup.exe uitgevoerd in de context van het gebruikers account dat u gebruikt om de installatie te starten.
+
+Voorbeeld: `ccmsetup.exe /noservice`  
+
 ### <a name="regtoken"></a>/regtoken
 
 <!--5686290-->
@@ -146,12 +242,6 @@ Als CCMSetup.exe installatie bestanden niet kunt downloaden, gebruikt u deze par
 
 Voorbeeld: `ccmsetup.exe /retry:20`  
 
-### <a name="noservice"></a>/noservice
-
-Met deze para meter wordt voor komen dat CCMSetup als een service wordt uitgevoerd. dit gebeurt standaard. Wanneer CCMSetup als een service wordt uitgevoerd, wordt dit uitgevoerd in de context van het lokale systeem account van de computer. Dit account heeft mogelijk onvoldoende rechten voor toegang tot de vereiste netwerk bronnen voor de installatie. Met **/noservice**wordt CCMSetup.exe uitgevoerd in de context van het gebruikers account dat u gebruikt om de installatie te starten.
-
-Voorbeeld: `ccmsetup.exe /noservice`  
-
 ### <a name="service"></a>/service
 
 Specificeert dat CCMSetup moet worden uitgevoerd als een service die gebruikmaakt van het lokale systeem account.  
@@ -160,77 +250,6 @@ Specificeert dat CCMSetup moet worden uitgevoerd als een service die gebruikmaak
 > Als u een script gebruikt om CCMSetup.exe uit te voeren met de para meter **/service** , wordt CCMSetup.exe afgesloten nadat de service is gestart. De installatie Details worden mogelijk niet goed gerapporteerd aan het script.
 
 Voorbeeld: `ccmsetup.exe /service`  
-
-### <a name="uninstall"></a>/uninstall
-
-Gebruik deze para meter om de Configuration Manager-client te verwijderen. Zie [de client verwijderen](../manage/manage-clients.md#BKMK_UninstalClient)voor meer informatie.
-
-Voorbeeld: `ccmsetup.exe /uninstall`  
-
-### <a name="logon"></a>/logon
-
-Als er al een versie van de client is geïnstalleerd, wordt met deze para meter opgegeven dat de installatie van de client moet worden gestopt.  
-
-Voorbeeld: `ccmsetup.exe /logon`  
-
-### <a name="forcereboot"></a>/forcereboot
-
-Gebruik deze para meter om te zorgen dat de computer zo nodig opnieuw wordt opgestart om de installatie te volt ooien. Als u deze para meter niet opgeeft, wordt CCMSetup afgesloten wanneer opnieuw opstarten nodig is. Daarna wordt de volgende hand matig opnieuw opgestart.
-
-Voorbeeld: `CCMSetup.exe /forcereboot`
-
-### <a name="bitspriority"></a>/BITSPriority
-
-Wanneer het apparaat client installatie bestanden via een HTTP-verbinding downloadt, gebruikt u deze para meter om de Download prioriteit op te geven. Geef een van de volgende mogelijke waarden op:
-
-- `FOREGROUND`
-
-- `HIGH`
-
-- `NORMAL`prijs
-
-- `LOW`
-
-Voorbeeld: `ccmsetup.exe /BITSPriority:HIGH`
-
-### <a name="downloadtimeout"></a>/downloadtimeout
-
-Als CCMSetup de client installatie bestanden niet kan downloaden, wordt met deze para meter de maximale time-out in minuten opgegeven. Na deze time-out stopt CCMSetup met het downloaden van de installatie bestanden. De standaard waarde is **1440** minuten (één dag).
-
-Gebruik de para meter [**/Retry**](#retry) om het interval tussen nieuwe pogingen op te geven.
-
-Voorbeeld: `ccmsetup.exe /downloadtimeout:100`
-
-### <a name="usepkicert"></a>/UsePKICert
-
-Geef deze para meter op voor de client om een PKI-certificaat voor client verificatie te gebruiken. Als u deze para meter niet opneemt of als de client geen geldig certificaat kan vinden, wordt een HTTP-verbinding met een zelfondertekend certificaat gebruikt.
-
-Voorbeeld: `CCMSetup.exe /UsePKICert`  
-
-> [!NOTE]
-> In sommige scenario's hoeft u deze para meter niet op te geven, maar toch een client certificaat te gebruiken. Bijvoorbeeld client-push en software-update-gebaseerde client installatie. Gebruik deze para meter wanneer u een client hand matig installeert en de para meter **/MP** gebruikt met een beheer punt waarvoor https is ingeschakeld.
->
-> Geef deze para meter ook op wanneer u een client installeert voor communicatie via internet. Gebruik de eigenschap **CCMALWAYSINF = 1** samen met de eigenschappen voor het beheer punt op internet (**CCMHOSTNAME**) en de site code (**SMSSITECODE**). Zie [overwegingen voor client communicatie via internet of een niet-vertrouwd forest](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan)voor meer informatie over client beheer op internet.  
-
-### <a name="nocrlcheck"></a>/NoCRLCheck
-
-Hiermee geeft u op dat een client de certificaatintrekkingslijst (CRL) niet moet controleren wanneer deze via HTTPS communiceert met een PKI-certificaat. Wanneer u deze para meter niet opgeeft, controleert de client de CRL voordat er een HTTPS-verbinding tot stand wordt gebracht. Zie [planning voor PKI-certificaat intrekking](../../plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs)voor meer informatie over de CRL-controle van de client.
-
-Voorbeeld: `CCMSetup.exe /UsePKICert /NoCRLCheck`  
-
-### <a name="config"></a>/config
-
-Met deze para meter geeft u een tekst bestand op dat de eigenschappen van de client installatie vermeldt.
-
-- Als CCMSetup als een service wordt uitgevoerd, plaatst u dit bestand in de map CCMSetup System: `%Windir%\Ccmsetup` .
-
-- Als u de para meter [**/noservice**](#noservice) opgeeft, plaatst u dit bestand in dezelfde map als CCMSetup.exe.
-
-Voorbeeld: `CCMSetup.exe /config:"configuration file name.txt"`
-
-Als u de juiste bestands indeling wilt opgeven, gebruikt u het bestand **bestand mobileclienttemplate. TCF** in de `\bin\<platform>` map in de installatiemap Configuration Manager op de site server. Dit bestand bevat opmerkingen over de secties en hoe u deze kunt gebruiken. Geef de client installatie-eigenschappen op in de `[Client Install]` sectie na de volgende tekst: `Install=INSTALL=ALL` .
-
-Voor beeld van `[Client Install]` sectie vermelding:`Install=INSTALL=ALL SMSSITECODE=ABC SMSCACHESIZE=100`  
 
 ### <a name="skipprereq"></a>/skipprereq
 
@@ -244,40 +263,33 @@ Voorbeelden:
 
 Zie [vereisten voor Windows-clients](prerequisites-for-deploying-clients-to-windows-computers.md)voor meer informatie over de vereisten van de client.
 
-### <a name="forceinstall"></a>/forceinstall
+### <a name="source"></a>/source
 
-Opgeven dat CCMSetup.exe elke bestaande client verwijdert en een nieuwe client installeert.  
+Hiermee geeft u de locatie voor het downloaden van bestanden. Gebruik een lokaal of UNC-pad. Het apparaat downloadt bestanden met behulp van het SMB-protocol (Server Message Block). Voor het gebruik van **/Source**moet het Windows-gebruikers account voor de client installatie **Lees** machtigingen voor de locatie hebben.
 
-### <a name="excludefeatures"></a>/ExcludeFeatures
+Zie [grens groepen-client installatie](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup)voor meer informatie over hoe ccmsetup inhoud downloadt. Dit artikel bevat ook informatie over ccmsetup-gedrag als u de para meters **/MP** en **/Source** gebruikt.
 
-Met deze para meter geeft u op dat CCMSetup.exe de opgegeven functie niet installeert.
+> [!TIP]  
+> U kunt de para meter **/Source** meer dan één keer in een opdracht regel gebruiken om alternatieve download locaties op te geven.  
 
-Voor beeld: `CCMSetup.exe /ExcludeFeatures:ClientUI` installeert software Center niet op de client.  
+Voorbeeld: `ccmsetup.exe /source:"\\server\share"`
 
-> [!NOTE]  
-> `ClientUI`is de enige waarde die de para meter **/ExcludeFeatures** ondersteunt.
+### <a name="uninstall"></a>/uninstall
 
-### <a name="alwaysexcludeupgrade"></a>/AlwaysExcludeUpgrade
+Gebruik deze para meter om de Configuration Manager-client te verwijderen. Zie [de client verwijderen](../manage/manage-clients.md#BKMK_UninstalClient)voor meer informatie.
 
-Met deze para meter wordt opgegeven of een client automatisch wordt bijgewerkt wanneer u [**automatische client upgrade**](../manage/upgrade/upgrade-clients-for-windows-computers.md#bkmk_autoupdate)inschakelt.
+Voorbeeld: `ccmsetup.exe /uninstall`  
 
-Ondersteunde waarden:
+### <a name="usepkicert"></a>/UsePKICert
 
-- `TRUE`: De client wordt niet automatisch bijgewerkt
-- `FALSE`: De client wordt automatisch bijgewerkt (standaard)
+Geef deze para meter op voor de client om een PKI-certificaat voor client verificatie te gebruiken. Als u deze para meter niet opneemt of als de client geen geldig certificaat kan vinden, wordt een HTTP-verbinding met een zelfondertekend certificaat gebruikt.
 
-Bijvoorbeeld:  
+Voorbeeld: `CCMSetup.exe /UsePKICert`  
 
-`CCMSetup.exe /AlwaysExcludeUpgrade:TRUE`
-
-Zie [Extended interoperabiliteit client](../../understand/interoperability-client.md)voor meer informatie.
-
-> [!NOTE]  
-> Wanneer u de para meter **/AlwaysExcludeUpgrade** gebruikt, wordt de automatische upgrade nog steeds uitgevoerd. Als CCMSetup echter wordt uitgevoerd om de upgrade uit te voeren, ziet u dat de para meter **/AlwaysExcludeUpgrade** is ingesteld en de volgende regel in het **CCMSetup. log**wordt geregistreerd:
+> [!NOTE]
+> In sommige scenario's hoeft u deze para meter niet op te geven, maar toch een client certificaat te gebruiken. Bijvoorbeeld client-push en software-update-gebaseerde client installatie. Gebruik deze para meter wanneer u een client hand matig installeert en de para meter **/MP** gebruikt met een beheer punt waarvoor https is ingeschakeld.
 >
-> `Client is stamped with /alwaysexcludeupgrade. Stop proceeding.`
->
-> CCMSetup wordt vervolgens onmiddellijk afgesloten en de upgrade niet uit te voeren.
+> Geef deze para meter ook op wanneer u een client installeert voor communicatie via internet. Gebruik de eigenschap **CCMALWAYSINF = 1** samen met de eigenschappen voor het beheer punt op internet (**CCMHOSTNAME**) en de site code (**SMSSITECODE**). Zie [overwegingen voor client communicatie via internet of een niet-vertrouwd forest](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan)voor meer informatie over client beheer op internet.  
 
 ## <a name="ccmsetupexe-return-codes"></a><a name="ccmsetupReturnCodes"></a>CCMSetup.exe retour codes
 
@@ -773,7 +785,7 @@ Configuration Manager ondersteunt de volgende kenmerk waarden voor de selectie c
 |2.5.4.4|SN|Onderwerpnaam|  
 |2.5.4.5|SERIENUMMER|Serienummer|  
 |2.5.4.6|C|Landcode|  
-|2.5.4.7|L|Plaats|  
+|2.5.4.7|L|Lokaliteit|  
 |2.5.4.8|S of ST|Naam van staat of provincie|  
 |2.5.4.9|STRAAT|Adres|  
 |2.5.4.10|O|Organisatienaam|  

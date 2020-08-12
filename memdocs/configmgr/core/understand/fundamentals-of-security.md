@@ -10,12 +10,12 @@ ms.assetid: 035b7f73-8b78-4ed1-835e-a31f9a5c4a02
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 95b8bf41d74e7011eed40116f4fe34e2c356d67e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6c702916f73d1fbc842966161a6958a61d24044a
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722835"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126066"
 ---
 # <a name="fundamentals-of-security-for-configuration-manager"></a>Basis principes van beveiliging voor Configuration Manager
 
@@ -82,7 +82,7 @@ De laatste beveiligingslaag is gebaseerd op machtigingen voor objecten in de sit
 
  Een beheerder wijst *beveiligings rollen* toe aan gebruikers met beheerders rechten en groeps machtigingen. De machtigingen zijn verbonden met verschillende Configuration Manager-object typen, bijvoorbeeld om client instellingen te maken of te wijzigen. 
 
- Met *beveiligingsbereiken* worden specifieke exemplaren van objecten gegroepeerd die door een gebruiker met beheerders rechten moeten worden beheerd, zoals een toepassing die Microsoft Office installeert. 
+ Met beveiligingsbereiken worden specifieke exemplaren van *objecten gegroepeerd die* door een gebruiker met beheerders rechten moeten worden beheerd, zoals een toepassing die Microsoft 365-apps installeert. 
 
  De combi natie van beveiligings rollen, beveiligingsbereiken en verzamelingen definiëren de objecten die een gebruiker met beheerders rechten kan weer geven en beheren. Configuration Manager installeert sommige standaard beveiligings rollen voor veelvoorkomende beheer taken. Maak uw eigen beveiligings rollen ter ondersteuning van uw specifieke bedrijfs vereisten.  
 

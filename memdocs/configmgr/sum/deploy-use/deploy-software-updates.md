@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 04536d51-3bf7-45e5-b4af-36ceed10583d
-ms.openlocfilehash: 00accfc5150226830b68beb194fa168c08148b84
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: 2adf22fd9c17863d7c29e2a29d2125d22f2d944f
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110420"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127668"
 ---
 # <a name="deploy-software-updates"></a>Software-updates implementeren  
 
@@ -70,7 +70,7 @@ Zie [software-updates hand matig implementeren](manually-deploy-software-updates
 
 > [!Note]
 > - Vanaf 21 april 2020, wordt de naam van Office 365 ProPlus gewijzigd in **Microsoft 365 apps voor bedrijven**. Zie [name wijzigen voor Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change)voor meer informatie. Mogelijk ziet u nog steeds verwijzingen naar de oude naam in de Configuration Manager-console en de ondersteunende documentatie terwijl de-console wordt bijgewerkt.
-> - Wanneer u Office 365-client updates hand matig implementeert, kunt u deze vinden in het knoop punt **office 365-updates** onder **Office 365 client management** van de werk ruimte **software bibliotheek** . 
+> - Wanneer u Microsoft 365 apps-client updates hand matig implementeert, kunt u deze vinden in het knoop punt **office 365-updates** onder **Office 365 client management** van de werk ruimte **software bibliotheek** . 
 
 ## <a name="automatically-deploy-software-updates"></a><a name="bkmk_auto"></a>Software-updates automatisch implementeren
 

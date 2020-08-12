@@ -2,20 +2,20 @@
 title: Hulp programma voor service verbindingen
 titleSuffix: Configuration Manager
 description: Meer informatie over dit hulp programma waarmee u verbinding kunt maken met de Cloud service van Configuration Manager om hand matig gebruiks gegevens te uploaden.
-ms.date: 07/02/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 48aa08f3318aaa4629691bfb30b60580cd3e25f0
-ms.sourcegitcommit: 03d2331876ad61d0a6bb1efca3aa655b88f73119
+ms.openlocfilehash: 8b56b849be6abd2634e29d35e58494d4d3215857
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85946841"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126083"
 ---
 # <a name="use-the-service-connection-tool-for-configuration-manager"></a>Gebruik het hulp programma voor service verbindingen voor Configuration Manager
 
@@ -78,7 +78,7 @@ Als u dit gedrag wilt wijzigen, gebruikt u een van de volgende para meters om te
 - **-downloadsiteversion**: downloadt updates en hotfixes met een latere versie dan de versie van uw site.
 
     > [!IMPORTANT]
-    > Vanwege een bekend probleem in Configuration Manager versie 2002, werkt het standaard gedrag niet zoals verwacht. Gebruik de para meter **-downloadsiteversion** om de benodigde updates voor versie 2002 te downloaden.<!-- 7594517 -->
+    > Vanwege een bekend probleem in Configuration Manager versie 2002, werkt het standaard gedrag niet zoals verwacht. Werk bij naar versie 2006, of gebruik de para meter **-downloadsiteversion** om de vereiste updates voor versie 2002 te downloaden.<!-- 7594517 -->
 
 Zie [opdracht regel parameters](#bkmk_cmd)voor meer informatie.
 

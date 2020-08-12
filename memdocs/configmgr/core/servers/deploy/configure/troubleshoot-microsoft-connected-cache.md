@@ -10,12 +10,12 @@ ms.assetid: 121e0341-4f51-4d54-a357-732c26caf7c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0a8c975798c506339a981e8648003387dc1e9838
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: a08b74552d5d17a737ec9e1802e10c87621f5b97
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878103"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126355"
 ---
 # <a name="troubleshoot-microsoft-connected-cache-in-configuration-manager"></a>Problemen met micro soft Connected cache in Configuration Manager oplossen
 
@@ -137,7 +137,7 @@ Als Configuration Manager het verbonden cache onderdeel op het distributie punt 
 | 0x00D00001 | Setup van verbonden cache kan alleen worden uitgevoerd als Internet Information Services (IIS) is geïnstalleerd |
 | 0x00D00002 | Setup van verbonden cache kan alleen worden uitgevoerd als een standaard website op de server bestaat |
 | 0x00D00003 | U kunt geen verbonden cache installeren als Application Request Routing (ARR) al is geïnstalleerd |
-| 0x00D00004 | Setup van verbonden cache kan alleen worden uitgevoerd als Application Request Routing (ARR) is geïnstalleerd door het script install. ps1 |
+| 0x00D00004 | Setup van verbonden cache kan alleen worden uitgevoerd als Application Request Routing (ARR) is geïnstalleerd door het Install.ps1 script |
 | 0x00D00005 | Setup van verbonden cache vereist een Power shell-sessie die wordt uitgevoerd als beheerder |
 | 0x00D00006 | Setup van verbonden cache kan alleen worden uitgevoerd vanuit een 64-bits Power shell-omgeving |
 | 0x00D00007 | Setup van verbonden cache kan alleen worden uitgevoerd op een Windows-Server |
@@ -148,21 +148,21 @@ Als Configuration Manager het verbonden cache onderdeel op het distributie punt 
 | 0x00D0000C | Fout: er moet een geldige percentage van de grootte van het cache station of de grootte van het cache station in GB worden opgegeven |
 | 0x00D0000D | Fout: een geldig percentage van de cache schijf grootte en de grootte van het cache station in GB kunnen niet beide worden opgegeven |
 | 0x00D0000E | Fout: het aantal opgegeven cache stations moet overeenkomen met de grootte van het cache station in GB opgegeven |
-| 0x00D0000F | Fout: kan geen back-up maken van het bestand ApplicationHost. config van $AppHostConfig naar $AppHostConfigDestinationName |
-| 0x00D00010 | Fout: kan geen back-up maken van het web. config-bestand van de standaard website van $WebsiteConfigFilePath naar $WebConfigDestinationName |
-| 0x00D00011 | Fout: er is een uitzonde ring opgetreden in SetupARRWebFarm. ps1 |
-| 0x00D00012 | Fout: er is een uitzonde ring opgetreden in SetupARRWebFarmRewriteRules. ps1 |
-| 0x00D00013 | Fout: er is een uitzonde ring opgetreden in SetupARRWebFarmProperties. ps1 |
-| 0x00D00014 | Fout: er is een uitzonde ring opgetreden in SetupAllowableServerVariables. ps1 |
-| 0x00D00015 | Fout: er is een uitzonde ring opgetreden in SetupFirewallRules. ps1 |
-| 0x00D00016 | Fout: er is een uitzonde ring opgetreden in SetupAppPoolProperties. ps1 |
-| 0x00D00017 | Fout: er is een uitzonde ring opgetreden in SetupARROutboundRules. ps1 |
-| 0x00D00018 | Fout: er is een uitzonde ring opgetreden in SetupARRDiskCache. ps1 |
-| 0x00D00019 | Fout: er is een uitzonde ring opgetreden in SetupARRProperties. ps1 |
-| 0x00D0001A | Fout: er is een uitzonde ring opgetreden in SetupARRHealthProbes. ps1 |
-| 0x00D0001B | Fout: er is een uitzonde ring opgetreden in VerifyIISSItesStarted. ps1 |
-| 0x00D0001C | Fout: er is een uitzonde ring opgetreden in SetDrivesToHealthy. ps1 |
-| 0x00D0001D | Fout: er is een uitzonde ring opgetreden in VerifyCacheNodeSetup. ps1 |
+| 0x00D0000F | Fout: kan geen back-up maken van het applicationhost.config-bestand van $AppHostConfig naar $AppHostConfigDestinationName |
+| 0x00D00010 | Fout: kan geen back-up maken van de standaard website web.config-bestand van $WebsiteConfigFilePath naar $WebConfigDestinationName |
+| 0x00D00011 | Fout: er is een uitzonde ring opgetreden in SetupARRWebFarm.ps1 |
+| 0x00D00012 | Fout: er is een uitzonde ring opgetreden in SetupARRWebFarmRewriteRules.ps1 |
+| 0x00D00013 | Fout: er is een uitzonde ring opgetreden in SetupARRWebFarmProperties.ps1 |
+| 0x00D00014 | Fout: er is een uitzonde ring opgetreden in SetupAllowableServerVariables.ps1 |
+| 0x00D00015 | Fout: er is een uitzonde ring opgetreden in SetupFirewallRules.ps1 |
+| 0x00D00016 | Fout: er is een uitzonde ring opgetreden in SetupAppPoolProperties.ps1 |
+| 0x00D00017 | Fout: er is een uitzonde ring opgetreden in SetupARROutboundRules.ps1 |
+| 0x00D00018 | Fout: er is een uitzonde ring opgetreden in SetupARRDiskCache.ps1 |
+| 0x00D00019 | Fout: er is een uitzonde ring opgetreden in SetupARRProperties.ps1 |
+| 0x00D0001A | Fout: er is een uitzonde ring opgetreden in SetupARRHealthProbes.ps1 |
+| 0x00D0001B | Fout: er is een uitzonde ring opgetreden in VerifyIISSItesStarted.ps1 |
+| 0x00D0001C | Fout: er is een uitzonde ring opgetreden in SetDrivesToHealthy.ps1 |
+| 0x00D0001D | Fout: er is een uitzonde ring opgetreden in VerifyCacheNodeSetup.ps1 |
 | 0x00D0001E | U kunt geen verbonden cache installeren als de standaard website zich niet op poort 80 bevindt |
 | 0x00D0001F | Fout: de toewijzing van het cache station in percentage kan niet groter zijn dan 100 |
 | 0x00D00020 | Fout: de toewijzing van het cache-station in GB kan niet groter zijn dan de beschik bare ruimte op het station |
@@ -223,7 +223,7 @@ De DO cache server voegt de volgende regels voor herschrijven toe:
 De benodigde schijf ruimte voor elke cache server kan variëren, afhankelijk van de update vereisten van uw organisatie. 100 GB moet voldoende ruimte hebben om de volgende inhoud in de cache op te slaan:
 
 - Een onderdeel Update
-- Twee tot drie maanden kwaliteits-en Office-updates
+- Twee tot drie maanden van kwaliteit en updates van Microsoft 365 apps
 - Microsoft Intune apps en Windows-apps in het postvak in
 
 De DO cache server mag niet veel systeem geheugen of processor tijd verbruiken. Nadat u de cache server hebt geïnstalleerd, moet u de IIS-en ARR-logboek bestanden analyseren als u belang rijk proces-of geheugen Resource verbruik ziet.

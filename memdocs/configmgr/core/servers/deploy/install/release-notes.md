@@ -2,20 +2,20 @@
 title: Releaseopmerkingen
 titleSuffix: Configuration Manager
 description: Meer informatie over urgente problemen die nog niet zijn opgelost in het product of die zijn opgenomen in een Microsoft Ondersteuning Knowledge Base-artikel.
-ms.date: 05/21/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 131b6104d5724c8a4eeb0bb68c4afd9a5319abb7
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: 9c1152b14da7c0a473e266b1ac1e6da2778aa105
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83823959"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126288"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Release opmerkingen voor Configuration Manager
 
@@ -29,10 +29,10 @@ Dit artikel bevat opmerkingen bij de release voor de huidige vertakking van Conf
 
 Raadpleeg de volgende artikelen voor meer informatie over de nieuwe functies die in verschillende versies worden geïntroduceerd:
 
+- [Wat is er nieuw in versie 2006](../../../plan-design/changes/whats-new-in-version-2006.md)
 - [Wat is er nieuw in versie 2002](../../../plan-design/changes/whats-new-in-version-2002.md)
 - [Wat is er nieuw in versie 1910](../../../plan-design/changes/whats-new-in-version-1910.md)
 - [Wat is er nieuw in versie 1906](../../../plan-design/changes/whats-new-in-version-1906.md)  
-- [Wat is er nieuw in versie 1902](../../../plan-design/changes/whats-new-in-version-1902.md)
 
 Zie [what's New in Desktop Analytics](../../../../desktop-analytics/whats-new.md)(Engelstalig) voor meer informatie over de nieuwe functies van bureau blad Analytics.
 
@@ -121,24 +121,15 @@ Er zijn twee exemplaren waarin taken reeksen niet kunnen worden uitgevoerd op ee
 
 - U configureert de site voor verbeterde HTTP en het beheer punt is HTTP.<!-- 6358851 -->
 
-    U kunt dit probleem omzeilen door het beheer punt voor HTTPS te configureren.
+    U kunt dit probleem omzeilen door bij te werken naar versie 2006. U kunt het beheer punt ook configureren voor HTTPS.
 
 - U hebt de client geïnstalleerd en geregistreerd met een token voor massa registratie voor verificatie.<!-- 6377921 -->
 
-    Gebruik een van de volgende verificatie methoden om dit probleem te omzeilen:
+    U kunt dit probleem omzeilen door bij te werken naar versie 2006. U kunt ook een van de volgende verificatie methoden gebruiken:
 
   - Registreer het apparaat vooraf in het interne netwerk
   - Het apparaat configureren met een certificaat voor client verificatie
   - Het apparaat toevoegen aan Azure AD
-
-### <a name="after-passive-site-server-is-promoted-the-default-boot-image-packages-still-have-package-source-on-the-previous-active-server"></a>Nadat de passieve site server is gepromoveerd, hebben de standaard installatie kopie pakketten nog steeds pakket bron op de vorige actieve server
-
-<!--3453224, SCCMDocs-pr issue 3097-->
-*Van toepassing op: Configuration Manager versie 1810*
-
-Als u een site server in de passieve modus (Server B) hebt, wordt de locatie van de inhoud van de standaard installatie kopieën naar de vorige actieve server (Server A) gepromoveerd wanneer u deze naar activeert. Als server A een hardwarestoring heeft, kunt u de standaard installatie kopieën niet bijwerken of wijzigen.
-
-Er is geen oplossing voor dit probleem.
 
 ## <a name="software-updates"></a>Software-updates
 
@@ -171,9 +162,9 @@ Zie [aangepaste beveiligings rollen maken](../configure/configure-role-based-adm
 ### <a name="an-extended-security-update-for-windows-7-causes-them-to-show-as-unable-to-enroll"></a><a name="dawin7-diagtrack"></a>Een uitgebreide beveiligings update voor Windows 7 geeft aan dat ze niet kunnen worden **Inge schreven**
 
 <!-- 7283186 -->
-_Van toepassing op: Configuration Manager versies 1902, 1906, 1910 en 2002_
+_Van toepassing op: Configuration Manager versies 2002 en eerder_
 
-De uitgebreide beveiligings update van april 2020 (ESU) voor Windows 7 heeft de mini maal vereiste versie van diagtrack. dll gewijzigd van 10586 naar 10240. Door deze wijziging worden Windows 7-apparaten weer gegeven als niet in staat **om in te schrijven** in het dash board **verbindings status** van de bureau blad Analytics. Wanneer u inzoomt op de weer gave apparaat voor deze status, wordt de volgende status weer gegeven in de eigenschap **DiagTrack service configuration** :`Connected User Experience and Telemetry (diagtrack.dll) component is outdated. Check requirements.`
+De ESU (Extended Security Update) van april 2020 voor Windows 7 heeft de mini maal vereiste versie van de diagtrack.dll gewijzigd van 10586 naar 10240. Door deze wijziging worden Windows 7-apparaten weer gegeven als niet in staat **om in te schrijven** in het dash board **verbindings status** van de bureau blad Analytics. Wanneer u inzoomt op de weer gave apparaat voor deze status, wordt de volgende status weer gegeven in de eigenschap **DiagTrack service configuration** :`Connected User Experience and Telemetry (diagtrack.dll) component is outdated. Check requirements.`
 
 Er is geen tijdelijke oplossing vereist voor dit probleem. Verwijder de ESU van april niet. Als op een andere manier op de juiste wijze is geconfigureerd, rapporteren de Windows 7-apparaten nog steeds diagnostische gegevens naar de Desktop Analytics-service en worden ze nog steeds weer gegeven in de portal.
 
@@ -252,7 +243,7 @@ Dit probleem omzeilen:
 
 - U kunt ook een traditioneel [Cloud distributiepunt](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md)gebruiken. Deze rol dwingt geen TLS 1,2 af, maar is compatibel met clients waarvoor TLS 1,2 vereist is.
 
-## <a name="protection"></a>Protection
+## <a name="protection"></a>Beveiliging
 
 ### <a name="bitlocker-management-appears-in-version-1906"></a>BitLocker-beheer wordt weer gegeven in versie 1906
 

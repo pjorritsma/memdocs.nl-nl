@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 2168f844f1c9ef98ea21da68b73531bca7aad999
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 4708c0d8e9a7d2a3b87310b64311d67d8b84a16a
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905177"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126787"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1806 voor Configuration Manager
 
@@ -240,7 +240,7 @@ Het hulp programma voor het aanpassen van Office is nu geïntegreerd met het ins
  Probeer de taken uit te voeren. Stuur vervolgens [feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) en laat ons weten hoe het heeft gewerkt.
 
 1. Ga in de Configuration Manager-console naar de werk ruimte **software bibliotheek** en selecteer het knoop punt **Office 365-client beheer** .
-2. Klik op de tegel **office 365-installatie programma** in het dash board om de Wizard Office 365-client installatie te starten. Zie [Deploying Office 365 apps](../../sum/deploy-use/manage-office-365-proplus-updates.md#deploy-office-365-apps)(Engelstalig) voor meer informatie.
+2. Klik op de tegel **office 365-installatie programma** in het dash board om de Wizard Office 365-client installatie te starten. Zie [Deploying Office 365 apps](../../sum/deploy-use/manage-office-365-proplus-updates.md)(Engelstalig) voor meer informatie.
 3. Klik op de pagina **Office-instellingen** op **Go to Office Web page**. Gebruik het hulp programma voor het aanpassen van het online kantoor om instellingen voor deze implementatie op te geven. 
 4. Klik op **verzenden** in de rechter bovenhoek wanneer dit is voltooid. Voltooi de wizard Office 365-client installatie.
 

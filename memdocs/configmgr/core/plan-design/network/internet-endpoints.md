@@ -2,20 +2,20 @@
 title: Vereisten voor internettoegang
 titleSuffix: Configuration Manager
 description: Meer informatie over de Internet-eind punten zodat u de volledige functionaliteit van Configuration Manager-functies kunt toestaan.
-ms.date: 07/07/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 71f2a75d59af6f8d5c77e96d780e6d02352e5045
-ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
+ms.openlocfilehash: bc3e1312c214f871635a65d8d0031e06ea4ad8d9
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86137359"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126448"
 ---
 # <a name="internet-access-requirements"></a>Vereisten voor internettoegang
 
@@ -201,8 +201,6 @@ Het actieve software-update punt toestaan om toegang te krijgen tot de volgende 
 
 - `http://*.download.windowsupdate.com`  
 
-- `http://test.stats.update.microsoft.com`  
-
 - `http://ntservicepack.microsoft.com`  
 
 Zie [software-updates plannen](../../../sum/plan-design/plan-for-software-updates.md)voor meer informatie over software-updates.
@@ -224,7 +222,7 @@ Mogelijk moet u eind punten toevoegen aan een firewall tussen twee site systemen
 
 - `https://<FQDN for software update point on parent site>`  
 
-## <a name="manage-office-365"></a>Office 365 beheren
+## <a name="manage-microsoft-365-apps"></a>Microsoft 365-apps beheren
 
 > [!NOTE]
 > Vanaf 21 april 2020, wordt de naam van Office 365 ProPlus gewijzigd in **Microsoft 365 apps voor bedrijven**. Zie [name wijzigen voor Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change)voor meer informatie. Mogelijk ziet u nog steeds verwijzingen naar de oude naam in de Configuration Manager-console en de ondersteunende documentatie terwijl de-console wordt bijgewerkt.
@@ -275,15 +273,21 @@ Als u de **geografische weer gave**gebruikt, verleent u toegang tot het volgende
 
 ## <a name="desktop-analytics"></a>Desktop Analytics
 
-Zie voor meer informatie over de vereiste eind punten voor de Cloud service van Desktop Analytics de optie voor het [delen van gegevens](../../../desktop-analytics/enable-data-sharing.md#endpoints).
+Zie voor meer informatie [delen van gegevens inschakelen](../../../desktop-analytics/enable-data-sharing.md#endpoints).
+
+[!INCLUDE [Internet endpoints for Desktop Analytics](includes/internet-endpoints-desktop-analytics.md)]
 
 ## <a name="tenant-attach"></a>Tenantkoppeling
 
-Zie [Tenant koppelen inschakelen](../../../tenant-attach/device-sync-actions.md#internet-endpoints)voor meer informatie over de vereiste eind punten voor Tenant koppelings functies.
+Zie [Enable Tenant attach](../../../tenant-attach/device-sync-actions.md)voor meer informatie.
+
+[!INCLUDE [Internet endpoints for tenant attach](includes/internet-endpoints-tenant-attach.md)]
 
 ## <a name="endpoint-analytics"></a>Eindpuntanalyse
 
-Zie voor meer informatie over de vereiste eind punten voor endpoint Analytics configuratie van de [endpoint Analytics-proxy](../../../../analytics/troubleshoot.md#bkmk_endpoints).
+Zie voor meer informatie configuratie van de [endpoint Analytics-proxy](../../../../analytics/troubleshoot.md#bkmk_endpoints).
+
+[!INCLUDE [Internet endpoints for Endpoint analytics](includes/internet-endpoints-endpoint-analytics.md)]
 
 ## <a name="asset-intelligence"></a>Asset Intelligence
 

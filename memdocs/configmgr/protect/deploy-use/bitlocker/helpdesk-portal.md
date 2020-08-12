@@ -5,17 +5,17 @@ description: De BitLocker-beheer-en bewakings website (helpdesk Portal) gebruike
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 81f03922-90f6-4e8f-be65-da64ccb21cf2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 84725ac494e1d9497524303b841207bd05cd3859
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7b64e09561def3d19c306b9cfcd4f7eb808763fd
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81717508"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129253"
 ---
 # <a name="bitlocker-administration-and-monitoring-website"></a>Website voor BitLocker-beheer en-bewaking
 
@@ -53,7 +53,7 @@ Zie voor meer informatie over TPM-eigendom [MBAM configureren om de TPM te borge
 > [!NOTE]
 > Vanaf Windows 10, versie 1607, houdt Windows het wacht woord voor TPM-eigenaar niet bij het inrichten van de TPM.
 
-1. Ga naar de website voor beheer en controle in de webbrowser `https://webserver.contoso.com/HelpDesk`.
+1. Ga naar de website voor beheer en controle in de webbrowser `https://webserver.contoso.com/HelpDesk` .
 
 1. Selecteer in het linkerdeel venster het gebied **TPM beheren** .
 
@@ -103,7 +103,7 @@ Als u een herstel wachtwoord wilt ophalen, gebruikt u het gedeelte **stations he
 > [!IMPORTANT]
 > Herstel wachtwoorden verlopen na één gebruik. Op stations voor het besturings systeem en vaste schijven wordt de regel voor eenmalig gebruik automatisch toegepast. Op Verwissel bare stations wordt toegepast wanneer u het station verwijdert en opnieuw plaatst.
 
-1. Ga naar de website voor beheer en controle in de webbrowser `https://webserver.contoso.com/HelpDesk`.
+1. Ga naar de website voor beheer en controle in de webbrowser `https://webserver.contoso.com/HelpDesk` .
 
 1. Selecteer in het linkerdeel venster het gebied voor het herstel van de **schijf** .
 
@@ -190,7 +190,7 @@ Zie [Repair-BDE](https://docs.microsoft.com/windows/security/information-protect
 
 De website beheer en controle bevat het **rapport herstel controle**. Andere rapporten zijn beschikbaar op het Configuration Manager Reporting Services-punt. Zie [BitLocker-rapporten weer geven](view-reports.md)voor meer informatie.
 
-1. Ga naar de website voor beheer en controle in de webbrowser `https://webserver.contoso.com/HelpDesk`.
+1. Ga naar de website voor beheer en controle in de webbrowser `https://webserver.contoso.com/HelpDesk` .
 
 1. Selecteer het gebied **rapporten** in het linkerdeel venster.
 

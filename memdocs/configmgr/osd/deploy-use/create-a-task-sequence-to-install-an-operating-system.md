@@ -5,17 +5,17 @@ description: Gebruik taken reeksen in Configuration Manager om automatisch een i
 ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 217c8a0e-5112-420e-a325-2a6d75326290
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6e1b298856edea3f81cab2e9cd5ab75af49dff51
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: dae4287b1e4a4a69209672f01f45eeaeb3b540d7
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723010"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125471"
 ---
 # <a name="create-a-task-sequence-to-install-an-os"></a>Een takenreeks maken voor het installeren van een besturingssysteem
 
@@ -70,7 +70,7 @@ Voordat u een taken reeks maakt om een besturings systeem te installeren, moet a
 
     - **De doel computer partitioneren en Format teren installeren van het besturings systeem**: Geef op of u de taken reeks wilt partitioneren en Format teren van de doel computer voordat u de OS installeert.  
 
-    - **Product code**: Geef de Windows-product code op, indien nodig. U kunt gecodeerde volumelicentiesleutels en standaardproductsleutels opgeven. Als u een niet-gecodeerde product code gebruikt, moet elke groep van vijf tekens gescheiden worden door een streepje (`-`). Bijvoorbeeld: *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
+    - **Product code**: Geef de Windows-product code op, indien nodig. U kunt gecodeerde volumelicentiesleutels en standaardproductsleutels opgeven. Als u een niet-gecodeerde product code gebruikt, moet elke groep van vijf tekens gescheiden worden door een streepje ( `-` ). Bijvoorbeeld: *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
 
     - **Serverlicentiemodus**: geef op of de serverlicentie **Per seat**of **Per server**is of dat er geen licentie wordt opgegeven. Als de serverlicentie **Per server**is, geef dan ook het maximum aantal serververbindingen op.  
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e7d80d2f528365e7759ce7ceb50639b0d474e329
-ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
+ms.openlocfilehash: f38e2fec40629b9ed6fc0b02f522092ce7fc2dc6
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86891459"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129100"
 ---
 <!-- 
 - Feature 1357546
@@ -49,7 +49,7 @@ Een gecuratorde lijst met belang rijke artikelen.
 - [CMPivot](https://docs.microsoft.com/mem/configmgr/core/servers/manage/cmpivot)  
 - [BitLocker-beheer plannen](https://docs.microsoft.com/mem/configmgr/protect/plan-design/bitlocker-management)  
 - [Microsoft Edge-beheer](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/deploy-edge)  
-- [Office 365 ProPlus-updates beheren](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/manage-office-365-proplus-updates)  
+- [Updates van Microsoft 365-apps beheren](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/manage-office-365-proplus-updates)  
 - [Basis principes van Configuration Manager huidige branch en Windows als een service](https://docs.microsoft.com/mem/configmgr/core/understand/configuration-manager-and-windows-as-service)
 - [De levering van Windows 10-updates optimaliseren met Configuration Manager](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/optimize-windows-10-update-delivery)
 - [Technical Preview-releases](https://docs.microsoft.com/mem/configmgr/core/get-started/technical-preview)

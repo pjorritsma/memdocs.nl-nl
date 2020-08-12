@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 295940337f191b791d8c7a86de4003466213df6b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ae2846c2a5f7fea86287a05c8cc8f6013d660df6
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719314"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128947"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 1806 van Configuration Manager current branch
 
@@ -92,7 +92,7 @@ Zie [Active Directory-systeem detectie configureren](../../servers/deploy/config
 
 
 
-## <a name="content-management"></a>Inhoudsbeheer
+## <a name="content-management"></a>Inhoudbeheer
 
 ### <a name="configure-a-remote-content-library-for-the-site-server"></a>Een externe inhouds bibliotheek voor de site server configureren
 <!--1357525-->
@@ -183,7 +183,7 @@ Zie [Enhanced http](../hierarchy/enhanced-http.md)(Engelstalig) voor meer inform
 
 ### <a name="cmtrace-installed-with-client"></a>CMTrace geïnstalleerd met client
 <!--1357971-->
-Het CMTrace-hulp programma voor logboek weergave wordt nu samen met de Configuration Manager-client automatisch geïnstalleerd. Deze wordt toegevoegd aan de installatiemap van de client. Dit is `%WinDir%\ccm\cmtrace.exe`standaard. 
+Het CMTrace-hulp programma voor logboek weergave wordt nu samen met de Configuration Manager-client automatisch geïnstalleerd. Deze wordt toegevoegd aan de installatiemap van de client. Dit is standaard `%WinDir%\ccm\cmtrace.exe` . 
 
 Zie [CMTrace](../../support/cmtrace.md) voor meer informatie.
 
@@ -296,7 +296,7 @@ Zie [Windows-toepassingen maken](../../../apps/get-started/creating-windows-appl
 <!--1358149-->
 Het hulp programma voor het aanpassen van Office is nu geïntegreerd met het installatie programma van Office 365 in de Configuration Manager-console. Bij het maken van een implementatie voor Office 365, kunt u de meest recente Office-beheer baarheid-instellingen dynamisch configureren. Micro soft werkt het hulp programma voor het aanpassen van Office bij wanneer nieuwe versies van Office 365 worden uitgebracht. Met deze integratie kunt u gebruikmaken van nieuwe beheer baarheids instellingen in Office 365 zodra deze beschikbaar zijn. 
 
-Zie [Deploying Office 365 apps](../../../sum/deploy-use/manage-office-365-proplus-updates.md#deploy-office-365-apps)(Engelstalig) voor meer informatie.
+Zie [Deploying Office 365 apps](../../../sum/deploy-use/manage-office-365-proplus-updates.md)(Engelstalig) voor meer informatie.
 
 
 ### <a name="support-for-new-windows-app-package-formats"></a>Ondersteuning voor nieuwe Windows-app-pakket indelingen
@@ -544,9 +544,9 @@ De volgende gebieden van de werk ruimte **bewaking** ondersteunen nu het kopiër
 
 - Vouw het knoop punt **distributie status** uit en selecteer **inhouds status**. Selecteer een software pakket en klik op **status weer geven**. Selecteer in het deel venster **activum gegevens** van de weer gave status van inhoud een of meer distributie punten. 
 
-Klik met de rechter muisknop op de Asset en selecteer **kopiëren**. Met deze actie worden de geselecteerde assets als een door komma's gescheiden lijst met de volledige details gekopieerd. De sneltoets **CTRL** + **C** werkt ook in deze weer gaven. 
+Klik met de rechter muisknop op de Asset en selecteer **kopiëren**. Met deze actie worden de geselecteerde assets als een door komma's gescheiden lijst met de volledige details gekopieerd. De sneltoets **CTRL**  +  **C** werkt ook in deze weer gaven. 
 
-Zie voor meer informatie [console verbeteringen in versie 1806](../../servers/manage/admin-console.md#copy-details-in-monitoring-views).
+Zie voor meer informatie [console verbeteringen in versie 1806](../../servers/manage/admin-console-tips.md#copy-details-in-monitoring-views).
 
 
 ### <a name="improvements-to-the-surface-dashboard"></a>Verbeteringen aan het Surface-dash board
@@ -568,7 +568,7 @@ Zie [Surface dash board](../../clients/manage/surface-device-dashboard.md)voor m
 <!--1358202-->
 Het knoop punt **apparaten** van de werk ruimte **activa en naleving** bevat nu standaard een kolom voor de **gebruiker die momenteel is aangemeld**. De lijst wordt ook weer gegeven voor een verzameling apparaten. Deze waarde is als actueel als de [client status](../../clients/manage/monitor-clients.md#bkmk_indStatus). Wanneer de gebruiker zich afmeldt, wordt deze waarde door de client gewist. Als er geen gebruiker is aangemeld, is de waarde leeg. 
 
-Zie voor meer informatie [console verbeteringen in versie 1806](../../servers/manage/admin-console.md#view-users-for-a-device).
+Zie voor meer informatie [console verbeteringen in versie 1806](../../servers/manage/admin-console-tips.md#view-users-for-a-device).
 
 
 ### <a name="submit-feedback-from-the-configuration-manager-console"></a>Feedback verzenden vanuit de Configuration Manager-console  
@@ -576,7 +576,7 @@ Zie voor meer informatie [console verbeteringen in versie 1806](../../servers/ma
 
 Glim lach verzenden U kunt nu direct het Configuration Manager team informeren over uw ervaringen. Het verzenden van feedback is eenvoudig vanuit de Configuration Manager-console. We willen al uw feedback horen: Praise, problemen en suggesties. Klik in de Configuration Manager-console op de knop glim lach in de rechter bovenhoek boven het lint. Deze feedback gaat rechtstreeks naar het micro soft-product team voor Configuration Manager. Hoewel de Windows 10 feedback-hub nog steeds wordt ondersteund, wordt u aangeraden het feedback mechanisme in de console te gebruiken.  
 
-Zie voor meer informatie [console verbeteringen in versie 1806](../../servers/manage/admin-console.md#send-feedback) en [product feedback](../../understand/find-help.md#BKMK_1806Feedback).
+Zie voor meer informatie [console verbeteringen in versie 1806](../../servers/manage/admin-console-tips.md#send-feedback) en [product feedback](../../understand/find-help.md#BKMK_1806Feedback).
 
 
 

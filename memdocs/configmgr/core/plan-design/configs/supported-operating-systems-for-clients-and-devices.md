@@ -2,7 +2,7 @@
 title: Ondersteunde clients en apparaten
 titleSuffix: Configuration Manager
 description: Meer informatie over de versies van het besturings systeem Configuration Manager worden ondersteund voor clients en apparaten.
-ms.date: 02/19/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e9e0ec6df5f80b318cb78ed8cddc986b613230e1
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 497a43fe6647f1dc2787f16a76f45ddd26d24796
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904537"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128845"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Ondersteunde versies van besturings systemen voor clients en apparaten voor Configuration Manager
 
@@ -58,6 +58,16 @@ Als u in dit scenario gebruikers beleid nodig hebt en mogelijke prestatie proble
 
 > [!Note]  
 > U kunt geen co-beheer gebruiken met een client met Windows 10 Enter prise multi-session. <!-- SCCMDocs-pr#3950 -->
+
+Vanaf versie 2006 is het platform voor **meerdere sessies van Windows 10 Enter prise** beschikbaar in de lijst met ondersteunde versies van besturings systemen voor objecten met vereisten regels of toepasings lijsten.<!--6527576-->
+
+> [!NOTE]
+> Als u eerder het **Windows 10** -platform op het hoogste niveau hebt geselecteerd, wordt met deze actie automatisch alle onderliggende platformen geselecteerd. Dit nieuwe platform wordt niet automatisch geselecteerd. Als u **Windows 10 Enter prise meerdere sessies**wilt toevoegen, selecteert u deze hand matig in de lijst.
+
+Raadpleeg voor meer informatie de volgende artikelen:
+
+- [Ondersteuning voor virtualisatieomgevingen](support-for-virtualization-environments.md)
+- [Configuration Manager-clients beheren in een virtuele desktop infrastructuur (VDI)](../../clients/deploy/plan/considerations-for-managing-clients-in-a-vdi.md)
 
 ### <a name="supported-server-os-versions"></a>Ondersteunde versies van het besturings systeem van de server
 
@@ -151,8 +161,8 @@ Beheer Windows CE apparaten met de Configuration Manager verouderde client van m
 
 - Windows CE 7,0 (ARM-en x86-processors)  
 
-    > [!Note]
-    > Ondersteuning is afgeschaft voor Windows CE 7,0 in Configuration Manager. Zie [verwijderde en afgeschafte items voor Configuration Manager-clients](../changes/deprecated/removed-and-deprecated-client.md)voor meer informatie.
+    > [!IMPORTANT]
+    > Configuration Manager versie 2006 daalt ondersteuning voor Windows CE 7,0 als een client. De afschaffing werd aangekondigd met [versie 1906](../changes/whats-new-in-version-1906.md#bkmk_deprecated).
 
 #### <a name="supported-languages-include"></a>Ondersteunde talen zijn
 
@@ -335,9 +345,8 @@ Configuration Manager heeft ingebouwde mogelijkheden voor het beheren van mobiel
 
 - **Windows 10 Mobile Enterprise**  
 
-    > [!Note]
-    > Ondersteuning is afgeschaft voor Windows 10 Mobile en Windows 10 Mobile Enter prise in Configuration Manager. Zie [verwijderde en afgeschafte items voor Configuration Manager-clients](../changes/deprecated/removed-and-deprecated-client.md)voor meer informatie.
-
+    > [!IMPORTANT]
+    > Configuration Manager versie 2006 daalt ondersteuning voor Windows 10 Mobile en Windows 10 Mobile Enter prise als een client. De afschaffing werd aangekondigd met [versie 1906](../changes/whats-new-in-version-1906.md#bkmk_deprecated).
 
 ## <a name="exchange-server-connector"></a><a name="bkmk_ExSrvConOS"></a>Exchange Server-connector  
 

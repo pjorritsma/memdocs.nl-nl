@@ -2,20 +2,20 @@
 title: Stappen voor takenreeksen
 titleSuffix: Configuration Manager
 description: Meer informatie over de stappen die u kunt toevoegen aan een Configuration Manager taken reeks.
-ms.date: 07/06/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 61070d98c5b7d453f493cf7ea2995705ee43f325
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: bab2050448e1c870aac8f3237c21b19498cdb674
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546617"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124233"
 ---
 # <a name="task-sequence-steps"></a>Stappen voor takenreeksen
 
@@ -216,6 +216,9 @@ Selecteer deze optie om de doelcomputer toe te voegen aan de opgegeven werkgroep
 #### <a name="join-a-domain"></a>Lid worden van een domein
 
 Selecteer deze optie om de doelcomputer toe te voegen aan het opgegeven domein. Geef op of blader naar het domein, zoals `fabricam.com` . Geef een LDAP-pad (Lightweight Directory Access Protocol) op of blader naar een organisatie-eenheid. Bijvoorbeeld: `LDAP//OU=computers, DC=Fabricam.com, C=com`.  
+
+> [!NOTE]
+> Wanneer een client die lid is van een Azure Active Directory (Azure AD) een taken reeks voor besturingssysteem implementatie uitvoert, wordt de client in het nieuwe besturings systeem niet automatisch toegevoegd aan Azure AD. Hoewel het geen lid is van Azure AD, wordt de client nog steeds beheerd.
 
 #### <a name="account"></a>Account
 
@@ -773,7 +776,6 @@ Leg de geregistreerde namen van de gebruiker en organisatie vast van de computer
 Leg de tijd zone-instelling op de computer vast.  
 
 
-
 ## <a name="check-readiness"></a><a name="BKMK_CheckReadiness"></a>Gereedheid controleren
 
 Gebruik deze stap om te controleren of de doel computer voldoet aan de opgegeven voor waarden voor de implementatie vereisten.  
@@ -791,6 +793,8 @@ Vanaf versie 2002 bevat deze stap acht nieuwe controles. Geen van deze nieuwe co
 - **Netwerk adapter verbonden**
   - **Netwerk adapter is niet draadloos**
 
+Vanaf versie 2006 is deze stap inclusief een controle om te bepalen of het apparaat gebruikmaakt van UEFI, de **computer bevindt zich in de UEFI-modus**.<!--6452769-->
+
 > [!IMPORTANT]
 > Als u deze nieuwe functie Configuration Manager wilt gebruiken, moet u na het bijwerken van de site ook clients bijwerken naar de nieuwste versie. Wanneer u de-site en-console bijwerkt terwijl er nieuwe functionaliteit wordt weer gegeven in de Configuration Manager-console, is het volledige scenario niet functioneel totdat de client versie ook het meest recent is.
 
@@ -804,14 +808,15 @@ Gebruik de volgende taken reeks variabelen met deze stap:
 - [_TS_CRSPEED](task-sequence-variables.md#TSCRSPEED)
 - [_TS_CRDISK](task-sequence-variables.md#TSCRDISK)
 - [_TS_CROSTYPE](task-sequence-variables.md#TSCROSTYPE)
-- [_TS_CRARCH](task-sequence-variables.md#TSCRARCH)
-- [_TS_CRMINOSVER](task-sequence-variables.md#TSCRMINOSVER)
-- [_TS_CRMAXOSVER](task-sequence-variables.md#TSCRMAXOSVER)
-- [_TS_CRCLIENTMINVER](task-sequence-variables.md#TSCRCLIENTMINVER)
-- [_TS_CROSLANGUAGE](task-sequence-variables.md#TSCROSLANGUAGE)
-- [_TS_CRACPOWER](task-sequence-variables.md#TSCRACPOWER)
-- [_TS_CRNETWORK](task-sequence-variables.md#TSCRNETWORK)
-- [_TS_CRWIRED](task-sequence-variables.md#TSCRWIRED)
+- [_TS_CRARCH](task-sequence-variables.md#TSCRARCH) (vanaf versie 2002)
+- [_TS_CRMINOSVER](task-sequence-variables.md#TSCRMINOSVER) (vanaf versie 2002)
+- [_TS_CRMAXOSVER](task-sequence-variables.md#TSCRMAXOSVER) (vanaf versie 2002)
+- [_TS_CRCLIENTMINVER](task-sequence-variables.md#TSCRCLIENTMINVER) (vanaf versie 2002)
+- [_TS_CROSLANGUAGE](task-sequence-variables.md#TSCROSLANGUAGE) (vanaf versie 2002)
+- [_TS_CRACPOWER](task-sequence-variables.md#TSCRACPOWER) (vanaf versie 2002)
+- [_TS_CRNETWORK](task-sequence-variables.md#TSCRNETWORK) (vanaf versie 2002)
+- [_TS_CRUEFI](task-sequence-variables.md#TSCRUEFI) (vanaf versie 2006)
+- [_TS_CRWIRED](task-sequence-variables.md#TSCRWIRED) (vanaf versie 2002)
 
 ### <a name="cmdlets-for-check-readiness"></a>Cmdlets voor de gereedheid controleren
 
@@ -869,6 +874,10 @@ Start in versie 2002, Controleer of het apparaat is aangesloten op en niet op ac
 #### <a name="network-adapter-connected"></a>Netwerk adapter verbonden
 
 Controleer vanaf versie 2002 of het apparaat een netwerk adapter heeft die is verbonden met het netwerk. U kunt ook de afhankelijke controle selecteren om te controleren of de **netwerk adapter niet draadloos is**.
+
+#### <a name="computer-is-in-uefi-mode"></a>Computer bevindt zich in de UEFI-modus
+
+Bepaal vanaf versie 2006 of het apparaat is geconfigureerd voor UEFI of BIOS.
 
 ### <a name="options-for-check-readiness"></a>Opties voor de gereedheid controleren
 
@@ -1054,12 +1063,9 @@ Als u de [taken reeks eigenschappen](../deploy-use/manage-task-sequences-to-auto
 
 ## <a name="enable-bitlocker"></a><a name="BKMK_EnableBitLocker"></a>BitLocker inschakelen
 
-Gebruik deze stap om BitLocker-versleuteling in te scha kelen op ten minste twee partities op de harde schijf. De eerste actieve partitie bevat de Windows-bootstrapcode. Een andere partitie bevat het besturings systeem. De bootstrappartitie moet onversleuteld blijven.  
+BitLocker-stationsversleuteling biedt versleuteling op laag niveau van de inhoud van een schijfvolume. Gebruik deze stap om BitLocker-versleuteling in te scha kelen op ten minste twee partities op de harde schijf. De eerste actieve partitie bevat de Windows-bootstrapcode. Een andere partitie bevat het besturings systeem. De bootstrappartitie moet onversleuteld blijven.  
 
-Gebruik de stap **BitLocker vooraf inrichten** om BitLocker in te scha kelen op een station in Windows PE. Zie voor meer informatie [Pre-provision BitLocker](#BKMK_PreProvisionBitLocker).  
-
-> [!NOTE]  
-> BitLocker-stationsversleuteling biedt versleuteling op laag niveau van de inhoud van een schijfvolume.  
+Gebruik de stap [BitLocker vooraf inrichten](#BKMK_PreProvisionBitLocker) om BitLocker in te scha kelen op een station in Windows PE.
 
 Deze stap kan alleen in het volledige besturings systeem worden uitgevoerd. Deze wordt niet uitgevoerd in Windows PE.
 
@@ -1071,7 +1077,9 @@ Wanneer u **alleen TPM**, **TPM en opstart sleutel op USB**of **TPM en pincode**
 - Geactiveerd  
 - Eigendom toegestaan  
 
-Met deze stap wordt de resterende TPM-initialisatie voltooid. De resterende stappen vereisen geen fysieke aanwezigheid of opnieuw opstarten. Met de stap **BitLocker inschakelen** wordt de volgende resterende TPM-initialisatie stappen op transparante wijze voltooid, indien nodig:  
+Vanaf versie 2006 kunt u deze stap overs laan voor computers die geen TPM hebben of wanneer de TPM niet is ingeschakeld. Met een nieuwe instelling kunt u het gedrag van taken reeksen eenvoudiger beheren op apparaten die BitLocker niet volledig ondersteunen.<!--6995601-->
+
+Met deze stap wordt de resterende TPM-initialisatie voltooid. Voor de resterende acties is geen fysieke aanwezigheid of opnieuw opstarten vereist. Met de stap **BitLocker inschakelen** wordt de volgende resterende TPM-initialisatie acties op transparante wijze voltooid, indien nodig:
 
 - Goedkeuringssleutelpaar maken  
 - Eigenaarautorisatiewaarde en escrow maken voor Active Directory, dat moet zijn uitgebreid ter ondersteuning van deze waarde  
@@ -1118,6 +1126,18 @@ Hiermee geeft u het te versleutelen station op. Selecteer het **huidige besturin
 
 Als u een specifieke niet-OS-gegevens schijf wilt versleutelen, selecteert u **specifieke schijf**. Selecteer vervolgens het station in de lijst.  
 
+#### <a name="disk-encryption-mode"></a>Schijf versleutelings modus
+
+<!--6995601-->
+Selecteer vanaf versie 2006 een van de volgende versleutelings algoritmen:
+
+- AES_128
+- AES_256
+- XTS_AES256
+- XTS_AES128
+
+Standaard of als dit niet is opgegeven, blijft de stap de standaard versleutelings methode voor de versie van het besturings systeem gebruiken. Als de stap wordt uitgevoerd op een versie van Windows die het opgegeven algoritme niet ondersteunt, wordt de standaard instelling van het besturings systeem hersteld. In dit geval verzendt de taken reeks engine status bericht 11911.
+
 #### <a name="use-full-disk-encryption"></a>Volledige schijf versleuteling gebruiken
 
 <!--SCCMDocs-pr issue 2671-->
@@ -1136,6 +1156,10 @@ Selecteer deze optie als u wilt dat BitLocker-stationsversleuteling is voltooid 
 
 Het versleutelings proces kan uren duren wanneer een grote harde schijf wordt versleuteld. Als u deze optie niet selecteert, kan de taken reeks onmiddellijk worden voortgezet.  
 
+#### <a name="skip-this-step-for-computers-that-do-not-have-a-tpm-or-when-tpm-is-not-enabled"></a>Deze stap overslaan voor computers die geen TMP hebben of wanneer TMP niet is ingeschakeld
+
+<!--6995601-->
+Selecteer met ingang van versie 2006 deze optie om stationsversleuteling over te slaan op een computer die geen ondersteunde of ingeschakelde TPM bevat. Gebruik deze optie bijvoorbeeld wanneer u een besturings systeem implementeert op een virtuele machine. Deze instelling is standaard uitgeschakeld voor de stap **BitLocker inschakelen** . Als u deze instelling inschakelt en het apparaat heeft geen functionele TPM, registreert de taken reeks engine een fout in bestand smsts. log en verzendt status bericht 11912. De taken reeks gaat verder dan deze stap.
 
 
 ## <a name="format-and-partition-disk"></a><a name="BKMK_FormatandPartitionDisk"></a>Schijf Format teren en partitioneren
@@ -1174,6 +1198,31 @@ Configureer op het tabblad **Eigenschappen** voor deze stap de instellingen die 
 #### <a name="disk-number"></a>Schijfnummer
 
 Het fysieke schijf nummer van de schijf die moet worden geformatteerd. Het nummer is gebaseerd op de rangschikking van Windows-schijfinventarisatie.  
+
+#### <a name="variable-name-to-store-disk-number"></a>Naam van de variabele voor het opslaan van het schijf nummer
+
+<!--6610288-->
+
+Vanaf versie 2006, gebruikt u een taken reeks variabele om de doel schijf op te geven die moet worden geformatteerd. Deze variabele-optie ondersteunt complexere taken reeksen met dynamische gedragingen. Een aangepast script kan bijvoorbeeld de schijf detecteren en de variabele instellen op basis van het hardwaretype. Vervolgens kunt u meerdere exemplaren van deze stap gebruiken om verschillende typen hardware en partities te configureren.
+
+Als u deze eigenschap selecteert, voert u een naam in voor de aangepaste variabele. Voeg een eerdere stap toe aan de taken reeks om de waarde van deze aangepaste variabele in te stellen op een geheel getal voor de fysieke schijf.
+
+In de volgende model stappen ziet u een voor beeld:
+
+- **Power shell-script uitvoeren**: een aangepast script voor het verzamelen van doel schijven
+  - Sets `myOSDisk` op`1`
+  - Sets `myDataDisk` op`2`
+
+- **Schijf Format teren en partitioneren** voor besturingssysteem schijf: `myOSDisk` variabele opgeven
+  - Schijf 1 als de systeem schijf configureren
+
+- **Schijf Format teren en partitioneren** voor gegevens schijf: `myDataDisk` variabele opgeven
+  - Hiermee wordt schijf 2 voor onbewerkte opslag geconfigureerd
+
+Een variant van dit voor beeld maakt gebruik van schijf nummers en partitielay-abonnementen voor verschillende typen hardware.
+
+> [!NOTE]
+> U kunt nog steeds de bestaande taken reeks variabele **OSDDiskIndex**gebruiken. Elk exemplaar van de schijf voor **Format teren en partitioneren** maakt echter gebruik van dezelfde index waarde. Als u het schijf nummer voor meerdere exemplaren van deze stap programmatisch wilt instellen, gebruikt u deze variabele-eigenschap.
 
 #### <a name="disk-type"></a>Schijftype
 
@@ -1489,6 +1538,9 @@ Als een van de updates de computer onverwacht opnieuw opstart, voert u deze stap
 
 Gebruik deze stap om de doel computer toe te voegen aan een werk groep of domein.  
 
+> [!NOTE]
+> Wanneer een client die lid is van een Azure Active Directory (Azure AD) een taken reeks voor besturingssysteem implementatie uitvoert, wordt de client in het nieuwe besturings systeem niet automatisch toegevoegd aan Azure AD. Hoewel het geen lid is van Azure AD, wordt de client nog steeds beheerd.
+
 Deze taken reeks stap kan alleen in het volledige besturings systeem worden uitgevoerd. Deze wordt niet uitgevoerd in Windows PE.
 
 Als u deze stap wilt toevoegen in de taken reeks editor, selecteert u **toevoegen**, selecteert u **Algemeen**en selecteert u **lid worden van domein of werk groep**.
@@ -1635,6 +1687,18 @@ Configureer op het tabblad **Eigenschappen** voor deze stap de instellingen die 
 
 Geef het station op waarvoor u BitLocker wilt inschakelen. BitLocker versleutelt alleen de gebruikte ruimte op het station.  
 
+#### <a name="disk-encryption-mode"></a>Schijf versleutelings modus
+
+<!--6995601-->
+Selecteer vanaf versie 2006 een van de volgende versleutelings algoritmen:
+
+- AES_128
+- AES_256
+- XTS_AES256
+- XTS_AES128
+
+Standaard of als dit niet is opgegeven, blijft de stap de standaard versleutelings methode voor de versie van het besturings systeem gebruiken. Als de stap wordt uitgevoerd op een versie van Windows die het opgegeven algoritme niet ondersteunt, wordt de standaard instelling van het besturings systeem hersteld. In dit geval verzendt de taken reeks engine status bericht 11911.
+
 #### <a name="use-full-disk-encryption"></a>Volledige schijf versleuteling gebruiken
 
 <!--SCCMDocs-pr issue 2671-->
@@ -1642,7 +1706,7 @@ Met deze stap wordt standaard alleen de gebruikte ruimte op het station versleut
 
 #### <a name="skip-this-step-for-computers-that-do-not-have-a-tpm-or-when-tpm-is-not-enabled"></a>Deze stap overslaan voor computers die geen TMP hebben of wanneer TMP niet is ingeschakeld
 
-Selecteer deze optie om stationsversleuteling over te slaan op een computer die geen ondersteunde of ingeschakelde TPM bevat. Gebruik deze optie bijvoorbeeld wanneer u een besturings systeem implementeert op een virtuele machine.  
+Selecteer deze optie om stationsversleuteling over te slaan op een computer die geen ondersteunde of ingeschakelde TPM bevat. Gebruik deze optie bijvoorbeeld wanneer u een besturings systeem implementeert op een virtuele machine. Deze instelling is standaard ingeschakeld voor de **BitLocker-stap vooraf inrichten** . De stap mislukt op een apparaat zonder TPM of een TPM die niet kan worden geïnitialiseerd. Vanaf versie 2006, wanneer het apparaat geen functionele TPM heeft, registreert de taken reeks engine een waarschuwing in bestand smsts. log en verzendt het status bericht 11912.
 
 
 
@@ -2169,10 +2233,10 @@ Houd rekening met de volgende punten wanneer u een onderliggende taken reeks toe
 
 Met ingang van versie 1906 beheert u deze stap met de volgende Power shell-cmdlets:<!-- 2839943, SCCMDocs#1118 -->
 
-- **Get-CMTSStepRunTaskSequence**
-- **New-CMTSStepRunTaskSequence**
-- **Remove-CMTSStepRunTaskSequence**
-- **Set-CMTSStepRunTaskSequence**
+- [Get-CMTSStepRunTaskSequence](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepruntasksequence?view=sccm-ps)
+- [New-CMTSStepRunTaskSequence](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepruntasksequence?view=sccm-ps)
+- [Remove-CMTSStepRunTaskSequence](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepruntasksequence?view=sccm-ps)
+- [Set-CMTSStepRunTaskSequence](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepruntasksequence?view=sccm-ps)
 
 Zie [1906 release opmerkingen-nieuwe cmdlets](https://docs.microsoft.com/powershell/sccm/1906-release-notes?view=sccm-ps#new-cmdlets)voor meer informatie.
 
@@ -2241,15 +2305,19 @@ Als u een dynamische variabele voor gebruik in de taken reeks wilt instellen, vo
 
     Geef een of meer variabelen op die moeten worden ingesteld voor een regel die resulteert in waar, of stel variabelen in zonder een regel te gebruiken. Selecteer een bestaande variabele of maak een aangepaste variabele.  
 
-    - **Bestaande taken reeks variabelen**: Selecteer een of meer variabelen uit een lijst met bestaande taken reeks variabelen. Matrix variabelen zijn niet beschikbaar om te selecteren.  
+  - **Bestaande taken reeks variabelen**: Selecteer een of meer variabelen uit een lijst met bestaande taken reeks variabelen. Matrix variabelen zijn niet beschikbaar om te selecteren.  
 
-    - **Aangepaste taken reeks variabelen**: Definieer een aangepaste taken reeks variabele. U kunt ook een bestaande takenreeksvariabele opgeven. Deze instelling is handig om een bestaande variabelen matrix op te geven, zoals **OSDAdapter**, omdat variabelen matrices niet voor komen in de lijst met bestaande taken reeks variabelen.  
+  - **Aangepaste taken reeks variabelen**: Definieer een aangepaste taken reeks variabele. U kunt ook een bestaande takenreeksvariabele opgeven. Deze instelling is handig om een bestaande variabelen matrix op te geven, zoals **OSDAdapter**, omdat variabelen matrices niet voor komen in de lijst met bestaande taken reeks variabelen.  
 
-Nadat u de variabelen voor een regel hebt geselecteerd, geeft u een waarde op voor elke variabele. De variabele wordt ingesteld op de opgegeven waarde wanneer de regel resulteert in waar. Voor elke variabele kunt u **Geheime waarde** selecteren om de waarde van de variabele te verbergen. Standaard verbergen sommige bestaande variabelen waarden, zoals de variabele **OSDCaptureAccountPassword** .  
+Nadat u de variabelen voor een regel hebt geselecteerd, geeft u een waarde op voor elke variabele. De variabele wordt ingesteld op de opgegeven waarde wanneer de regel resulteert in waar. Voor elke variabele kunt u **deze waarde niet weer geven** selecteren om de waarde van de variabele te verbergen. Standaard verbergen sommige bestaande variabelen waarden, zoals de variabele **OSDCaptureAccountPassword** .  
 
 > [!IMPORTANT]  
-> Configuration Manager verwijdert variabelen waarden die zijn gemarkeerd als **geheime waarde** wanneer u een taken reeks importeert met de stap **dynamische variabelen instellen** . Voer de waarde voor de dynamische variabele opnieuw in nadat u de taken reeks hebt geïmporteerd.  
+> Wanneer u een taken reeks importeert met de stap **dynamische variabelen instellen** , verwijdert Configuration Manager alle variabelen waarden die zijn gemarkeerd als **deze waarde niet weer geven**. Nadat u de taken reeks hebt geïmporteerd, voert u de waarde voor de dynamische variabele opnieuw in.
 
+Wanneer u de optie **deze waarde niet weer geven**gebruikt, wordt de waarde van de variabele niet weer gegeven in de editor voor taken reeksen. De waarde van de variabele wordt niet weer gegeven in het logboek bestand van de taken reeks (**bestand smsts. log**) of het fout opsporingsprogramma voor de taken reeks. De variabele kan nog steeds worden gebruikt door de taken reeks wanneer deze wordt uitgevoerd. Als u deze variabelen niet meer wilt verbergen, verwijdert u deze eerst. Definieer de variabelen vervolgens opnieuw zonder de optie te selecteren om ze te verbergen.  
+
+> [!WARNING]  
+> Als u variabelen opneemt in de stap **opdracht regel uitvoeren** , wordt in het logboek bestand van de taken reeks de volledige opdracht regel weer gegeven, inclusief de waarden van de variabele. Als u wilt voor komen dat mogelijk gevoelige gegevens in het logboek bestand worden weer gegeven, stelt u de taken reeks variabele **OSDDoNotLogCommand** in op `TRUE` .
 
 
 ## <a name="set-task-sequence-variable"></a><a name="BKMK_SetTaskSequenceVariable"></a>Taken reeks variabele instellen
@@ -2289,8 +2357,13 @@ Geef de naam op van een ingebouwde taken reeks of actie variabele, of geef uw ei
 <!--1358330-->
 Schakel deze optie in om gevoelige gegevens te maskeren die zijn opgeslagen in taken reeks variabelen. Bijvoorbeeld wanneer u een wacht woord opgeeft.
 
-> [!Note]  
+> [!NOTE]
 > Schakel deze optie in en stel vervolgens de waarde van de taken reeks variabele in. Anders is de waarde van de variabele niet ingesteld zoals u dat wilt, wat kan leiden tot onverwacht gedrag wanneer de taken reeks wordt uitgevoerd.<!--SCCMdocs issue #800-->
+
+Wanneer u de optie **deze waarde niet weer geven**gebruikt, wordt de waarde van de variabele niet weer gegeven in de editor voor taken reeksen. De waarde van de variabele wordt niet weer gegeven in het logboek bestand van de taken reeks (**bestand smsts. log**) of het fout opsporingsprogramma voor de taken reeks. De variabele kan nog steeds worden gebruikt door de taken reeks wanneer deze wordt uitgevoerd. Als u deze variabele niet meer wilt verbergen, verwijdert u deze eerst. Definieer de variabele vervolgens opnieuw, zonder de optie te selecteren om deze te verbergen.
+
+> [!WARNING]
+> Als u variabelen opneemt in de stap **opdracht regel uitvoeren** , wordt in het logboek bestand van de taken reeks de volledige opdracht regel weer gegeven, inclusief de waarden van de variabele. Als u wilt voor komen dat mogelijk gevoelige gegevens in het logboek bestand worden weer gegeven, stelt u de taken reeks variabele **OSDDoNotLogCommand** in op `TRUE` .<!-- 6963278 -->
 
 #### <a name="value"></a>Waarde  
 
@@ -2388,6 +2461,8 @@ Als er een pre-production-client pakket beschikbaar is en de computer lid is van
 In de taken reeks stap worden automatisch site toewijzing en de standaard configuratie opgegeven. Gebruik dit veld om eventuele aanvullende installatie-eigenschappen op te geven die moeten worden gebruikt wanneer u de-client installeert. Als u meerdere installatie-eigenschappen wilt invoeren, scheidt u deze met een spatie.  
 
 Geef opdracht regel opties op die moeten worden gebruikt tijdens de client installatie. Voer bijvoorbeeld `/skipprereq: silverlight.exe` in om aan CCMSetup.exe te informeren dat de micro soft Silverlight-vereiste niet moet worden geïnstalleerd. Zie [over de eigenschappen van client installatie](../../core/clients/deploy/about-client-installation-properties.md)voor meer informatie over de beschik bare opdracht regel opties voor CCMSetup.exe.  
+
+Wanneer u een taken reeks voor implementatie van een besturings systeem uitvoert op een client op het Internet, die deel uitmaakt van Azure AD of gebruikmaakt van op tokens gebaseerde verificatie, moet u de eigenschap [CCMHOSTNAME](../../core/clients/deploy/about-client-installation-properties.md#ccmhostname) opgeven in de stap **Windows en ConfigMgr van Setup** . Bijvoorbeeld `CCMHOSTNAME=OTTERFALLS.CLOUDAPP.NET/CCM_Proxy_MutualAuth/12345678907927939`.
 
 ### <a name="options-for-setup-windows-and-configmgr"></a>Opties voor het instellen van Windows en ConfigMgr
 

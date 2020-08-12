@@ -2,7 +2,7 @@
 title: Microsoft Endpoint Manager-tenant koppelen
 titleSuffix: Configuration Manager
 description: Upload uw Configuration Manager-apparaten naar de Cloud service en onderneem acties vanuit het beheer centrum.
-ms.date: 07/10/2020
+ms.date: 08/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -10,12 +10,12 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: a9e97c74e4825dc49ce628b3ae176c55f4288966
-ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
+ms.openlocfilehash: 784a287176066ce34c3499ecdc91a450e2d6160c
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86210304"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127542"
 ---
 # <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a>Micro soft Endpoint Manager-Tenant bijvoegen: synchronisatie van apparaten en acties van apparaten
 <!--3555758 live 3/4/2020-->
@@ -38,88 +38,98 @@ Vanaf Configuration Manager versie 2002 kunt u uw Configuration Manager-apparate
 
 ## <a name="internet-endpoints"></a>Internet-eind punten
 
-- `https://aka.ms/configmgrgateway`
-- `https://*.manage.microsoft.com` <!--7424742-->
+[!INCLUDE [Internet endpoints for tenant attach](../core/plan-design/network/includes/internet-endpoints-tenant-attach.md)]
 
-## <a name="enable-device-upload"></a>Apparaat uploaden inschakelen
+## <a name="enable-device-upload-when-co-management-is-already-enabled"></a><a name="bkmk_edit"></a>Het uploaden van apparaten inschakelen als co-beheer al is ingeschakeld
 
-- Als u co-beheer momenteel hebt ingeschakeld, [bewerkt u de eigenschappen voor co-beheer](#bkmk_edit) om het uploaden van apparaten in te scha kelen.
-- Als er geen co-beheer is ingeschakeld, [gebruikt u de wizard voor het **configureren van co-beheer** om het](#bkmk_config) uploaden van apparaten in te scha kelen.
-   - U kunt uw apparaten uploaden zonder automatische inschrijving in te scha kelen voor co-beheer of switch-workloads naar intune.
-- Alle apparaten die worden beheerd door Configuration Manager die **Ja** in de kolom **client** bevatten, worden geüpload. Als dat nodig is, kunt u het uploaden beperken tot één verzameling apparaten.
+Als u co-beheer momenteel hebt ingeschakeld, gebruikt u de co-beheer eigenschappen om het uploaden van apparaten in te scha kelen. Als co-beheer nog niet is ingeschakeld, [gebruikt u de wizard voor **co-beheer configureren** ](#bkmk_config) om het uploaden van apparaten in te scha kelen.
 
-### <a name="edit-co-management-properties-to-enable-device-upload"></a><a name="bkmk_edit"></a>Eigenschappen voor co-beheer bewerken om het uploaden van apparaten in te scha kelen
-
-Als u co-beheer momenteel hebt ingeschakeld, bewerkt u de eigenschappen voor co-beheer om het uploaden van apparaten in te scha kelen met behulp van de onderstaande instructies:
+Als co-beheer al is ingeschakeld, bewerkt u de eigenschappen voor co-beheer om het uploaden van apparaten in te scha kelen met behulp van de onderstaande instructies:
 
 1. Ga in de Configuration Manager-beheerconsole naar **Beheer** > **Overzicht** > **Cloudservices** > **Co-beheer**.
-1. Klik met de rechtermuisknop op uw instellingen voor co-beheer en selecteer **Eigenschappen**.
-1. Selecteer **Uploaden naar Microsoft Endpoint Manager-beheercentrum** in het tabblad **Upload configureren**. Klik op **Toepassen**.
+1. Selecteer in het lint **Eigenschappen** voor het productie beleid voor co-beheer.
+1. Selecteer **Uploaden naar Microsoft Endpoint Manager-beheercentrum** in het tabblad **Upload configureren**. Selecteer **Toepassen**.
    - De standaardinstelling voor het uploaden van apparaten is **Alle apparaten die worden beheerd door Microsoft Endpoint Configuration Manager**. Als dat nodig is, kunt u het uploaden beperken tot één verzameling apparaten.
 1. Schakel de optie in om **endpoint Analytics in te scha kelen voor apparaten die zijn geüpload naar micro soft Endpoint Manager** als u ook inzicht wilt krijgen in het optimaliseren van de eindgebruikers ervaring in [endpoint Analytics](../../analytics/overview.md).
 
    [![Apparaten uploaden naar het beheer centrum van micro soft Endpoint Manager](../../analytics/media/6051638-configure-upload-configmgr.png)](../../analytics/media/6051638-configure-upload-configmgr.png#lightbox)
 1. Meld u aan met uw *globale beheerder*-account wanneer u hierom wordt gevraagd.
-1. Klik op **Ja** om de melding **AAD-toepassing maken** te accepteren. Met deze actie wordt een service-principal ingericht en wordt een Azure AD-toepassingsregistratie gemaakt om de synchronisatie te vergemakkelijken.
-1. Klik op **OK** om de eigenschappen voor co-beheer af te sluiten nadat u de wijzigingen hebt aangebracht.
+1. Selecteer **Ja** om de melding voor **Aad-toepassingen maken** te accepteren. Met deze actie wordt een service-principal ingericht en wordt een Azure AD-toepassingsregistratie gemaakt om de synchronisatie te vergemakkelijken.
+1. Kies **OK** om de eigenschappen voor co-beheer af te sluiten nadat u de wijzigingen hebt aangebracht.
 
 
-### <a name="use-the-configure-co-management-wizard-to-enable-device-upload"></a><a name="bkmk_config"></a>Gebruik de wizard voor co-beheer configureren om het uploaden van apparaten in te scha kelen
-Als er geen co-beheer is ingeschakeld, gebruikt u de wizard voor het **configureren van co-beheer** om het uploaden van apparaten in te scha kelen. U kunt uw apparaten uploaden zonder automatische inschrijving in te scha kelen voor co-beheer of switch-workloads naar intune. Schakel het uploaden van apparaten in met behulp van de onderstaande instructies:
+## <a name="enable-device-upload-when-co-management-isnt-enabled"></a><a name="bkmk_config"></a>Het uploaden van apparaten inschakelen als co-beheer niet is ingeschakeld
+
+Als co-beheer niet is ingeschakeld, gebruikt u de wizard voor het **configureren van co-beheer** om het uploaden van apparaten in te scha kelen. U kunt uw apparaten uploaden zonder automatische inschrijving in te scha kelen voor co-beheer of switch-workloads naar intune. Alle apparaten die worden beheerd door Configuration Manager die **Ja** in de kolom **client** bevatten, worden geüpload. Als dat nodig is, kunt u het uploaden beperken tot één verzameling apparaten. Als co-beheer al is ingeschakeld in uw omgeving, [bewerkt u de eigenschappen voor co-beheer](#bkmk_edit) om het uploaden van apparaten in te scha kelen.
+
+Als co-beheer niet is ingeschakeld, gebruikt u de onderstaande instructies om het uploaden van apparaten in te scha kelen:
 
 1. Ga in de Configuration Manager-beheerconsole naar **Beheer** > **Overzicht** > **Cloudservices** > **Co-beheer**.
-1. Klik in het lint op **Co-beheer configureren** om de wizard te openen.
-1. Selecteer op de pagina **Tenant-onboarding** de optie **AzurePublicCloud** voor uw omgeving. Azure Government-cloud wordt niet ondersteund.
-1. Klik op **Aanmelden**. Gebruik uw *globale beheerder*-account om u aan te melden.
+1. Selecteer in het lint **co-beheer configureren** om de wizard te openen.
+1. Selecteer op de pagina **Tenant-onboarding** de optie **AzurePublicCloud** voor uw omgeving. Azure Government Cloud en Azure China 21Vianet worden niet ondersteund.
+1. Selecteer **Aanmelden.** Gebruik uw *globale beheerder*-account om u aan te melden.
 1. Zorg ervoor dat de optie **uploaden naar micro soft Endpoint Manager-beheer centrum** is geselecteerd op de pagina voor **onboarding** van de Tenant.
    - Zorg ervoor dat de optie **automatische client registratie voor co-beheer inschakelen** niet is ingeschakeld als u co-beheer nu niet wilt inschakelen. Als u co-beheer wilt inschakelen, selecteert u de optie.
    - Als u co-beheer samen met het uploaden van het apparaat inschakelt, krijgt u extra pagina's in de wizard om te volt ooien. Zie [co-beheer inschakelen](../comanage/how-to-enable.md)voor meer informatie.
 
    [![Wizard Configuratie van co-beheer](./media/3555758-comanagement-wizard.png)](./media/3555758-comanagement-wizard.png#lightbox)
-1. Klik op **Volgende** en daarna op **Ja** om de melding **Een AAD-toepassing maken** te accepteren. Met deze actie wordt een service-principal ingericht en wordt een Azure AD-toepassingsregistratie gemaakt om de synchronisatie te vergemakkelijken.
+1. Klik op **volgende** en vervolgens op **Ja** om de melding voor **Aad-toepassingen maken** te accepteren. Met deze actie wordt een service-principal ingericht en wordt een Azure AD-toepassingsregistratie gemaakt om de synchronisatie te vergemakkelijken.
+     - U kunt eventueel een eerder gemaakte Azure AD-toepassing importeren tijdens het voorbereiden van het toevoegen van een Tenant (vanaf versie 2006). Zie de sectie [een eerder gemaakte Azure AD-toepassing importeren](#bkmk_aad_app) voor meer informatie.
 1. Selecteer op de pagina **Upload configureren** de aanbevolen instelling voor het uploaden van apparaten voor **alle apparaten die door micro soft endpoint Configuration Manager worden beheerd**. Als dat nodig is, kunt u het uploaden beperken tot één verzameling apparaten.
 1. Schakel de optie in om **endpoint Analytics in te scha kelen voor apparaten die zijn geüpload naar micro soft Endpoint Manager** als u ook inzicht wilt krijgen in het optimaliseren van de ervaring van de eind gebruiker in [endpoint Analytics](../../analytics/overview.md)
-1. Klik op **Samenvatting** om uw selectie te controleren en klik vervolgens op **Volgende**.
-1. Klik op **Sluiten** als de wizard is voltooid.  
-
-
-## <a name="review-your-upload"></a><a name="bkmk_review"></a>Uw uploads controleren
-
-1. Open **CMGatewaySyncUploadWorker. log** van de ConfigMgr-installatiemap &lt;> \logs.
-1. De volgende synchronisatie tijd wordt aangegeven door logboek vermeldingen die vergelijkbaar zijn met `Next run time will be at approximately: 02/28/2020 16:35:31` .
-1. Voor het uploaden van apparaten zoekt u naar logboek vermeldingen die vergelijkbaar zijn met `Batching N records` . **N** is het aantal apparaten dat is geüpload naar de Cloud. 
-1. De upload vindt elke 15 minuten plaats voor wijzigingen. Zodra de wijzigingen zijn geüpload, kan het vijf tot tien minuten duren voordat client wijzigingen worden weer gegeven in het **micro soft Endpoint Manager-beheer centrum**.
+1. Selecteer **samen vatting** om uw selectie te controleren en klik vervolgens op **volgende**.
+1. Wanneer de wizard is voltooid, selecteert u **sluiten**.  
 
 ## <a name="perform-device-actions"></a>Acties op het apparaat uitvoeren
 
 1. Ga in een browser naar`endpoint.microsoft.com`
 1. Selecteer **apparaten** en vervolgens **alle apparaten** om de geüploade apparaten weer te geven. **ConfigMgr** wordt weer geven in de kolom **beheerd door** voor geüploade apparaten.
    [![Alle apparaten in het micro soft Endpoint Manager-beheer centrum](./media/3555758-all-devices.png)](./media/3555758-all-devices.png#lightbox)
-1. Klik op een apparaat om de pagina **overzicht** te laden.
-1. Klik op een van de volgende acties:
+1. Selecteer een apparaat om de **overzichts** pagina te laden.
+1. Kies een van de volgende acties:
    - **Computerbeleid synchroniseren**
    - **Gebruikersbeleid synchroniseren**
    - **App-evaluatiecyclus**
 
    [![Overzicht van apparaten in het beheer centrum van micro soft Endpoint Manager](./media/3555758-device-overview-actions.png)](./media/3555758-device-overview-actions.png#lightbox)
 
-## <a name="known-issues"></a>Bekende problemen
+## <a name="import-a-previously-created-azure-ad-application-optional"></a><a name="bkmk_aad_app"></a>Een eerder gemaakte Azure AD-toepassing importeren (optioneel)
+<!--6479246-->
+*(Geïntroduceerd in versie 2006)*
 
-### <a name="specific-devices-dont-synchronize"></a>Specifieke apparaten worden niet gesynchroniseerd
+Tijdens een [nieuwe onboarding](#bkmk_config)kan een beheerder een eerder gemaakte toepassing opgeven tijdens het voorbereiden op het koppelen van de Tenant. Deel of gebruik Azure AD-toepassingen niet over meerdere hiërarchieën. Als u meerdere hiërarchieën hebt, maakt u afzonderlijke Azure AD-toepassingen voor elk.
 
-<!--7099564-->
-Het is mogelijk dat bepaalde apparaten, die Configuration Manager-clients zijn, niet worden geüpload naar de service.
+Selecteer **optioneel een afzonderlijke web-app voor het synchroniseren van Configuration Manager-client gegevens naar het micro soft Endpoint Manager-beheer centrum**op de pagina voor **onboarding van tenants** in de wizard voor het **configureren van co-beheer**. Met deze optie wordt u gevraagd om de volgende informatie op te geven voor uw Azure AD-App:
 
-**Beïnvloede apparaten:** Als een apparaat een distributie punt is dat hetzelfde PKI-certificaat gebruikt voor de functionaliteit van het distributie punt en de client agent, wordt het apparaat niet opgenomen in de synchronisatie van het apparaat koppelen aan de Tenant.
+- Naam van Azure AD-Tenant
+- Azure AD-tenant-id
+- De naam van de toepassing
+- Client-id
+- Geheime sleutel
+- Verval datum van geheime sleutel
+- App-id-URI
 
-**Gedrag:** Wanneer u een Tenant bijvoegt tijdens de on-board fase, wordt de eerste keer een volledige synchronisatie uitgevoerd. Volgende synchronisatie cycli zijn Delta synchronisaties. Een update van de betrokken apparaten zorgt ervoor dat het apparaat wordt verwijderd uit de synchronisatie.
+### <a name="azure-ad-application-permissions-and-configuration"></a>Machtigingen en configuratie van Azure AD-toepassing
 
-## <a name="log-files"></a>Logboekbestanden
-Gebruik de volgende logboeken die zich op het service verbindings punt bevinden:
+Voor het gebruik van een eerder gemaakte toepassing tijdens het voorbereiden op een Tenant moet u de volgende machtigingen hebben:
 
-- **CMGatewaySyncUploadWorker. log**
-- **CMGatewayNotificationWorker. log**
+- Configuration Manager micro service-machtigingen:
+   - CmCollectionData. Read
+   - CmCollectionData. write
+
+- Microsoft Graph machtigingen:
+   - Directory. Read. alle [toepassingen, machtiging](https://docs.microsoft.com/graph/permissions-reference#application-permissions)
+   - Directory. Read. alle [gemachtigde Directory-machtigingen](https://docs.microsoft.com/graph/permissions-reference#directory-permissions)
+
+- Zorg ervoor dat de **beheerder toestemming geven voor de Tenant** is geselecteerd voor de Azure AD-toepassing. Zie [toestemming geven voor beheerders in app-registraties](https://docs.microsoft.com/azure/active-directory/manage-apps/grant-admin-consent)voor meer informatie.
+
+- De geïmporteerde toepassing moet als volgt worden geconfigureerd:
+   - Alleen geregistreerd voor **accounts in deze organisatie Directory**. Zie [wijzigen wie toegang heeft tot uw toepassing](https://docs.microsoft.com/azure/active-directory/develop/quickstart-modify-supported-accounts#to-change-who-can-access-your-application)voor meer informatie.
+   -  Heeft een geldige URI voor de toepassings-ID en een geheim
+
+
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Zie [problemen met Tenant koppeling oplossen](troubleshoot.md)voor meer informatie over het toevoegen van logboek bestanden voor de Tenant.
+- [Configuration Manager apparaten inschrijven bij Endpoint Analytics](../../analytics/enroll-configmgr.md#bkmk_cm_enroll)
+- Zie [problemen met Tenant koppeling oplossen](troubleshoot.md)voor meer informatie over het toevoegen van logboek bestanden voor de Tenant.

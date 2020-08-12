@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: ae1f52b0744f79f79e00e5dfe2d6a76c903cf4a4
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 1a64d49edca146c70a56b07cb304d1744b86a1bf
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240028"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127743"
 ---
 #  <a name="automatically-deploy-software-updates"></a>Software-updates automatisch implementeren  
 
@@ -47,7 +47,7 @@ Automatisch goed keuren en implementeren van software-updates met behulp van een
 
          - De sjabloon **Patch Tuesday** biedt algemene instellingen die u kunt gebruiken wanneer u software-updates implementeert op basis van een maandelijkse cyclus.  
 
-         - De sjabloon **Office 365-client updates** biedt algemene instellingen die u kunt gebruiken wanneer u updates implementeert voor Office 365 Pro Plus clients.
+         - De sjabloon **Office 365-client updates** biedt algemene instellingen die u kunt gebruiken wanneer u updates implementeert voor Microsoft 365 apps-clients.
              > [!Note]
              > Vanaf 21 april 2020, wordt de naam van Office 365 ProPlus gewijzigd in **Microsoft 365 apps voor bedrijven**. Als uw Adr's afhankelijk is van de eigenschap ' title ', moet u deze bewerken vanaf 9 juni 2020. `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)`is een voor beeld van de nieuwe titel. Zie voor meer informatie over het wijzigen van uw Adr's voor de titel wijziging [kanalen voor Microsoft 365 apps bijwerken](manage-office-365-proplus-updates.md#bkmk_channel). Zie voor meer informatie over de naamswijziging naam [wijzigen voor Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change).
 
@@ -199,7 +199,7 @@ Automatisch goed keuren en implementeren van software-updates met behulp van een
 
         - **Binary Differential Replication inschakelen**: Schakel deze instelling in om binary Differential Replication te gebruiken voor het implementatie pakket. Zie [binaire Differentiële replicatie](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#binary-differential-replication)voor meer informatie.  
 
-    - **Geen implementatie pakket**: vanaf versie 1806 kunt u software-updates implementeren op apparaten zonder eerst inhoud te downloaden en te distribueren naar distributie punten. Deze instelling is nuttig bij het verwerken van extreem grote update-inhoud. Gebruik dit ook wanneer u altijd wilt dat clients inhoud ophalen van de Microsoft Update Cloud service. Clients in dit scenario kunnen ook inhoud downloaden van peers die al over de benodigde inhoud beschikken. De Configuration Manager-client blijft het downloaden van de inhoud blijven beheren, maar kan ook gebruikmaken van de functie voor Configuration Manager peer-cache of andere technologieën zoals Delivery Optimization. Deze functie ondersteunt elk update type dat wordt ondersteund door Configuration Manager beheer van software-updates, waaronder Windows-en Office-updates.<!--1357933-->  
+    - **Geen implementatie pakket**: vanaf versie 1806 kunt u software-updates implementeren op apparaten zonder eerst inhoud te downloaden en te distribueren naar distributie punten. Deze instelling is nuttig bij het verwerken van extreem grote update-inhoud. Gebruik dit ook wanneer u altijd wilt dat clients inhoud ophalen van de Microsoft Update Cloud service. Clients in dit scenario kunnen ook inhoud downloaden van peers die al over de benodigde inhoud beschikken. De Configuration Manager-client blijft het downloaden van de inhoud blijven beheren, maar kan ook gebruikmaken van de functie voor Configuration Manager peer-cache of andere technologieën zoals Delivery Optimization. Deze functie ondersteunt elk update type dat wordt ondersteund door Configuration Manager beheer van software-updates, waaronder updates van Windows-en Microsoft 365-apps.<!--1357933-->  
 
         > [!Note]  
         > Wanneer u deze optie selecteert en de instellingen toepast, kan deze niet meer worden gewijzigd. De andere opties worden grijs weer gegeven.<!--SCCMDocs-pr issue 3003-->  

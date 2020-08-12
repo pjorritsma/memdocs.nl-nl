@@ -5,17 +5,17 @@ description: Meer informatie over het gebruik van de editor voor taken reeksen i
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: a4e8bb56-ee85-49fd-8b1c-c8f513cec671
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2047ae9e276ac94b633d1dc30814ed641cd34d03
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 405617277953eae61fbfce4fdb9b3a7d280aedcf
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711425"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124445"
 ---
 # <a name="use-the-task-sequence-editor"></a>De takenreekseditor gebruiken
 
@@ -121,9 +121,9 @@ Gebruik de volgende procedure om een bestaande taken reeks te wijzigen:
 
         U kunt een groep of een stap knippen, kopiëren en plakken. Klik met de rechter muisknop op het item en selecteer de actie. U kunt ook standaard snel toetsen gebruiken voor elke actie:
 
-        - Knippen: **CTRL** + **X**
-        - Kopiëren: **CTRL** + **C**
-        - Plakken: **CTRL** + **V**
+        - Knippen: **CTRL**  +  **X**
+        - Kopiëren: **CTRL**  +  **C**
+        - Plakken: **CTRL**  +  **V**
 
     - **Een stap of groep verwijderen**: Selecteer de stap of groep en kies **verwijderen**.  
 
@@ -155,7 +155,7 @@ De volgende typen voor waarden zijn beschikbaar:
 - **Taken reeks variabele**. Evalueer de huidige waarde van een ingebouwde, aangepaste of alleen-lezen [taken reeks variabele](task-sequence-variables.md) in de taken reeks omgeving. Zie voor meer informatie [stap voorwaarden](using-task-sequence-variables.md#bkmk_access-condition).
 
     > [!NOTE]
-    > U kunt in dit voor waarde een matrix variabele gebruiken, maar u moet het specifieke matrixlid opgeven. Hiermee geeft u `OSDAdapter0EnableDHCP` bijvoorbeeld op of de *eerste* netwerk adapter DHCP ondersteunt. Zie [matrix variabelen](using-task-sequence-variables.md#bkmk_array)voor meer informatie.
+    > U kunt in dit voor waarde een matrix variabele gebruiken, maar u moet het specifieke matrixlid opgeven. `OSDAdapter0EnableDHCP`Hiermee geeft u bijvoorbeeld op of de *eerste* netwerk adapter DHCP ondersteunt. Zie [matrix variabelen](using-task-sequence-variables.md#bkmk_array)voor meer informatie.
 
 - **Besturingssysteem versie**: Evalueer de versie van het besturings systeem van het apparaat waarop de taken reeks wordt uitgevoerd. Deze lijst bevat de algemene versies van het besturings systeem die in Configuration Manager worden gebruikt. Als u een gedetailleerdere versie van het besturings systeem, zoals een specifieke versie van Windows 10, wilt evalueren, gebruikt u de **WMI-** voor waarde voor de query.
 
@@ -194,7 +194,7 @@ Als u de voor waarden van de ene stap naar de andere opnieuw wilt gebruiken, van
 - Plakken na
 - Plakken onder (alleen van toepassing op geneste omstandigheden)
 
-Standaard snel toetsen gebruiken om te kopiëren (**CTRL +** + **c**) en knippen (**CTRL** + **X**). De standaardtoetsen bord van **CTRL** + **V** heeft de actie **Plakken na** .
+Standaard snel toetsen gebruiken om te kopiëren (**CTRL +**  +  **c**) en knippen (**CTRL**  +  **X**). De standaardtoetsen bord van **CTRL**  +  **V** heeft de actie **Plakken na** .
 
 Er zijn ook nieuwe opties om voor waarden omhoog of omlaag te verplaatsen in de lijst.
 
@@ -243,10 +243,10 @@ Wanneer u zoekt, markeert het editor venster in geel de stappen die overeenkomen
 
 Snel toegang krijgen tot deze zoek velden en door de zoek resultaten navigeren met de volgende sneltoetsen:
 
-- **CTRL** + **F**: Voer een zoek reeks in
-- **CTRL** + **O**: Selecteer de zoek opties om de resultaten te beperken
+- **CTRL**  +  **F**: Voer een zoek reeks in
+- **CTRL**  +  **O**: Selecteer de zoek opties om de resultaten te beperken
 - **F3** of **Enter**: stapsgewijs door de resultaten gaan
-- **Shift** + **F3**: een achterwaartse stap in de resultaten
+- **SHIFT**  +  **F3**: stap achterwaarts door de resultaten
 
 ## <a name="see-also"></a>Zie ook
 

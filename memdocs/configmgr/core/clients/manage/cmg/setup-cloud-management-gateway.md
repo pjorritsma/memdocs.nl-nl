@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: d1e7b2c359e21ac4a12219d27655603954702fa8
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: 9ba4466a40d49c4b78b75e6f85137dfd0a4ff5ce
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86410862"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129134"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Cloud beheer gateway instellen voor Configuration Manager
 
@@ -141,7 +141,7 @@ Het CMG-verbindings punt is de site systeemrol voor het communiceren met de CMG.
 
 Gebruik **CMGService. log** en **SMS_Cloud_ProxyConnector. log**om de CMG-service status op te lossen. Zie [logboek bestanden](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway)voor meer informatie.
 
-## <a name="configure-client-facing-roles-for-cmg-traffic"></a>Client gerichte rollen configureren voor CMG-verkeer
+## <a name="configure-client-facing-roles-for-cmg-traffic"></a><a name="bkmk_role"></a>Client gerichte rollen configureren voor CMG-verkeer
 
 Configureer de site systemen van het beheer punt en het software-update punt om CMG verkeer te accepteren. Voer deze procedure uit op de primaire site voor alle beheer punten en software-update punten die service op internet gebaseerde clients.  
 
@@ -158,7 +158,7 @@ Configureer de site systemen van het beheer punt en het software-update punt om 
 Herhaal deze stappen voor extra beheer punten, indien nodig, en voor alle software-update punten.
 
 ## <a name="configure-boundary-groups"></a>Grens groepen configureren
-
+ 
 <!--3640932-->
 Vanaf versie 1902 kunt u een CMG koppelen aan een grens groep. Met deze configuratie kunnen clients standaard of terugvallen op de CMG voor client communicatie, afhankelijk van de relaties tussen grens groepen.
 
@@ -270,7 +270,7 @@ Meer belang rijke wijzigingen, zoals de volgende configuraties, vereisen het opn
 - Abonnement
 - Servicenaam
 - Privé voor open bare PKI
-- Region
+- Regio
 
 Behoud altijd ten minste één actieve CMG voor Internet-clients om bijgewerkte beleids regels te ontvangen. clients op internet kunnen niet communiceren met een verwijderde CMG. Clients weten een nieuw abonnement pas wanneer ze teruggaan naar het intranet. Wanneer u een tweede CMG-exemplaar maakt om de eerste te verwijderen, maakt u ook een ander CMG-verbindings punt.
 

@@ -10,12 +10,12 @@ ms.assetid: e217699a-28b2-471a-b421-8fbd1d1fd638
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 47d44c96e0ae63504278c58a5838c54648665505
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4d13d9dfd75abb656a765ce8c91ce6f177636cd3
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712237"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127168"
 ---
 # <a name="onedrive-for-business-profiles"></a>Profielen van OneDrive voor Bedrijven
 
@@ -23,7 +23,7 @@ Vanaf Configuration Manager versie 1902 kunt u OneDrive voor bedrijven-profielen
 
 ## <a name="prerequisites"></a>Vereisten
 
-- [Uw Office 365-Tenant-ID zoeken](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id)  
+- [Uw Microsoft 365 Tenant-ID zoeken](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id)  
 
 - Implementeer de OneDrive Sync Client-versie 18.111.0603.0004 of hoger. Zie voor meer informatie [OneDrive-Apps implementeren met behulp van Configuration Manager](https://docs.microsoft.com/onedrive/deploy-on-windows).  
 
@@ -44,7 +44,7 @@ Gebruik Configuration Manager om bekende mappen van Windows te verplaatsen naar 
 
 5. Op de pagina **instellingen** :
 
-    1. Geef uw Office 365-Tenant-ID op.  
+    1. Geef uw Microsoft 365 Tenant-ID op.  
 
     2. Selecteer een van de volgende opties om de bekende mappen naar OneDrive te verplaatsen:  
 

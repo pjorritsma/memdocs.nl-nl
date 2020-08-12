@@ -10,12 +10,12 @@ ms.assetid: d17e1188-d277-438f-9236-db9cd213b421
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0665c6378ac81d6f6f254501760647048ce66b0b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4e43f5a36f2a1bf44959b9645c2fb48a22cc71f1
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714351"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126770"
 ---
 # <a name="introduction-to-collections-in-configuration-manager"></a>Inleiding tot verzamelingen in Configuration Manager
 
@@ -34,7 +34,7 @@ Hier volgen enkele voor beelden van het gebruik van de verzameling:
 |Bewerking|Voorbeeld|  
 |---------|-------|  
 |Groeperen van resources|U kunt verzamelingen maken waarmee resources worden gegroepeerd op basis van de hiërarchie van uw organisatie.<br /><br /> U kunt bijvoorbeeld een verzameling maken van alle computers in het hoofd kantoor Amsterdam Active Directory organisatie-eenheid (OE). Zie [verzamelingen maken](../../../../core/clients/manage/collections/create-collections.md)voor meer informatie over het maken van dit type verzameling.<br /><br /> U kunt deze verzameling gebruiken voor bewerkingen, zoals het configureren van Endpoint Protection instellingen, het configureren van energiebeheer instellingen voor apparaten of het installeren van de Configuration Manager-client.|  
-|Toepassingsimplementatie|U kunt een verzameling maken van alle computers waarop geen Microsoft Office 2013 is geïnstalleerd en deze vervolgens implementeren op alle computers in die verzameling.<br /><br /> U kunt ook toepassingsvereisten gebruiken om deze taak uit te voeren. Zie [toepassingen maken met Configuration Manager](../../../../apps/deploy-use/create-applications.md)voor meer informatie.|  
+|Toepassingsimplementatie|U kunt een verzameling maken van alle computers waarop geen micro soft Microsoft 365-apps zijn geïnstalleerd en deze vervolgens implementeren op alle computers in die verzameling.<br /><br /> U kunt ook toepassingsvereisten gebruiken om deze taak uit te voeren. Zie [toepassingen maken met Configuration Manager](../../../../apps/deploy-use/create-applications.md)voor meer informatie.|  
 |[Clientinstellingen beheren](../../../../core/clients/deploy/about-client-settings.md)|Hoewel de standaardclientinstellingen in Configuration Manager van toepassing zijn op alle apparaten en gebruikers, kunt u aangepaste clientinstellingen maken die van toepassing zijn op een verzameling apparaten of een verzameling gebruikers.<br /><br /> Als u bijvoorbeeld wilt dat extern beheer op alle apparaten beschikbaar is, configureert u de standaard client instellingen zodanig dat extern beheer is toegestaan en configureert u vervolgens aangepaste client instellingen die geen beheer op afstand toestaan en implementeert u deze voor de verzameling van buitengewone clients. |  
 |[Energiebeheer](../power/introduction-to-power-management.md)|U kunt specifieke energie-instellingen per verzameling configureren.|  
 |[Op rollen gebaseerd beheer](../../../../core/servers/deploy/configure/configure-role-based-administration.md)|Gebruik verzamelingen om te bepalen welke groepen gebruikers toegang hebben tot verschillende functies in de Configuration Manager-console.|  

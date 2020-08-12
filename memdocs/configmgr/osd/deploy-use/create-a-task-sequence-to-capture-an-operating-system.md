@@ -5,17 +5,17 @@ description: Een taken reeks voor bouwen en vastleggen bouwt een referentie comp
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 25e4ac68-0e78-4bbe-b8fc-3898b372c4e8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ceb63560c6000b1a76116d0791c98219a66066b8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 349ae2b8d574904d25f6f23bfb1707bb11df8af0
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723066"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125505"
 ---
 # <a name="create-a-task-sequence-to-capture-an-os"></a>Een takenreeks maken voor het vastleggen van een besturingssysteem
 
@@ -81,7 +81,7 @@ Gebruik de volgende procedure om een taken reeks te gebruiken om een referentie 
 
     - **Installatie kopie-index**: Geef de index op van het besturings systeem dat in de installatie kopie moet worden geïnstalleerd. Als de installatie kopie van het besturings systeem meerdere versies bevat, selecteert u de versie die u wilt installeren.  
 
-    - **Product code**: geef, indien nodig, de product code op voor het Windows-besturings systeem dat u wilt installeren. U kunt gecodeerde volumelicentiesleutels en standaardproductsleutels opgeven. Als u een niet-gecodeerde product code gebruikt, scheidt u elke groep van vijf tekens met een`-`streepje (). Bijvoorbeeld: `XXXXX-XXXXX-XXXXX-XXXXX-XXXXX`  
+    - **Product code**: geef, indien nodig, de product code op voor het Windows-besturings systeem dat u wilt installeren. U kunt gecodeerde volumelicentiesleutels en standaardproductsleutels opgeven. Als u een niet-gecodeerde product code gebruikt, scheidt u elke groep van vijf tekens met een streepje ( `-` ). Bijvoorbeeld: `XXXXX-XXXXX-XXXXX-XXXXX-XXXXX`  
 
     - **Server licentie modus**: als dat nodig is, geeft u op of de server licentie **per seat**of **per server**is of dat er geen licentie is opgegeven. Als de serverlicentie **Per server**is, geef dan ook het maximum aantal serververbindingen op.  
 
@@ -102,7 +102,7 @@ Gebruik de volgende procedure om een taken reeks te gebruiken om een referentie 
 
         U kunt ook een organisatie-eenheid (OE) opgeven. Deze instelling is optioneel en geeft de DN-naam van LDAP X. 500 van de organisatie-eenheid waarin het computer account moet worden gemaakt, als deze nog niet bestaat.  
 
-    - **Account**: geef de gebruikersnaam en het wachtwoord op voor het account dat machtigingen heeft om lid te worden van het opgegeven domein. Bijvoorbeeld: `domain\user` of `%variable%`.  
+    - **Account**: geef de gebruikersnaam en het wachtwoord op voor het account dat machtigingen heeft om lid te worden van het opgegeven domein. Bijvoorbeeld: `domain\user` of `%variable%` .  
 
         > [!IMPORTANT]  
         > Als u de instellingen van het domein of de werk groep tijdens de implementatie wilt migreren, moet u de juiste domein referenties invoeren.  
@@ -208,15 +208,15 @@ Deze groep bevat de acties die nodig zijn om een referentiecomputer te bouwen.
 
 |Takenreeksstap|Beschrijving|  
 |-------------------------------|---------------|  
-|**Opnieuw opstarten in Windows PE**|Start de doel computer opnieuw op naar de opstart installatie kopie die is toegewezen aan de taken reeks. In deze stap wordt een bericht voor de gebruiker weer gegeven dat de computer opnieuw wordt opgestart, zodat de installatie kan worden voortgezet.<br /><br />Deze stap maakt gebruik van de alleen `_SMSTSInWinPE` -lezen taken reeks variabele. Als de gekoppelde waarde gelijk is `false`aan, wordt de taken reeks stap voortgezet.|
-|**Schijf 0 - BIOS partitioneren**|Partitioneer en Format teer de vaste schijf op de doel computer in de BIOS-modus. Het standaard nummer van de `0`schijf is.<br /><br />Deze stap maakt gebruik van verschillende alleen-lezen taken reeks variabelen. Dit wordt bijvoorbeeld alleen uitgevoerd als de Configuration Manager-client cache niet bestaat en niet wordt uitgevoerd als de computer is geconfigureerd voor UEFI.|
-|**Schijf 0 - UEFI partitioneren**|Partitioneer en Format teer de vaste schijf op de doel computer in UEFI-modus. Het standaard nummer van de `0`schijf is.<br /><br />Deze stap maakt gebruik van verschillende alleen-lezen taken reeks variabelen. Dit wordt bijvoorbeeld alleen uitgevoerd als de Configuration Manager-client cache niet bestaat en alleen wordt uitgevoerd als de computer is geconfigureerd voor UEFI.|
+|**Opnieuw opstarten in Windows PE**|Start de doel computer opnieuw op naar de opstart installatie kopie die is toegewezen aan de taken reeks. In deze stap wordt een bericht voor de gebruiker weer gegeven dat de computer opnieuw wordt opgestart, zodat de installatie kan worden voortgezet.<br /><br />Deze stap maakt gebruik van de alleen-lezen `_SMSTSInWinPE` taken reeks variabele. Als de gekoppelde waarde gelijk is aan `false` , wordt de taken reeks stap voortgezet.|
+|**Schijf 0 - BIOS partitioneren**|Partitioneer en Format teer de vaste schijf op de doel computer in de BIOS-modus. Het standaard nummer van de schijf is `0` .<br /><br />Deze stap maakt gebruik van verschillende alleen-lezen taken reeks variabelen. Dit wordt bijvoorbeeld alleen uitgevoerd als de Configuration Manager-client cache niet bestaat en niet wordt uitgevoerd als de computer is geconfigureerd voor UEFI.|
+|**Schijf 0 - UEFI partitioneren**|Partitioneer en Format teer de vaste schijf op de doel computer in UEFI-modus. Het standaard nummer van de schijf is `0` .<br /><br />Deze stap maakt gebruik van verschillende alleen-lezen taken reeks variabelen. Dit wordt bijvoorbeeld alleen uitgevoerd als de Configuration Manager-client cache niet bestaat en alleen wordt uitgevoerd als de computer is geconfigureerd voor UEFI.|
 |**Besturingssysteem toepassen**|Installeer de opgegeven installatie kopie van het besturings systeem op de doel computer. Met deze stap worden eerst alle bestanden op het volume verwijderd, met uitzonde ring van Configuration Manager-specifieke besturings bestanden. Vervolgens worden alle volume kopieën in het WIM-bestand toegepast op het bijbehorende sequentiële schijf volume op de doel computer.|
 |**Windows-instellingen toepassen**|Configureer de Windows-instellingen voor de doel computer.|
 |**Netwerkinstellingen toepassen**|Geef de configuratie gegevens voor het netwerk of de werk groep op voor de doel computer.|
-|**Apparaatstuurprogramma's toepassen**|Zoek en installeer Stuur Programma's als onderdeel van deze implementatie van het besturings systeem. Zie voor meer informatie [Auto Apply Drivers](../understand/task-sequence-steps.md#BKMK_AutoApplyDrivers).<br /><br />Deze stap maakt gebruik van de alleen `_SMSTSMediaType` -lezen taken reeks variabele. Als de gekoppelde waarde niet gelijk `FullMedia`is, wordt deze stap niet uitgevoerd.|
+|**Apparaatstuurprogramma's toepassen**|Zoek en installeer Stuur Programma's als onderdeel van deze implementatie van het besturings systeem. Zie voor meer informatie [Auto Apply Drivers](../understand/task-sequence-steps.md#BKMK_AutoApplyDrivers).<br /><br />Deze stap maakt gebruik van de alleen-lezen `_SMSTSMediaType` taken reeks variabele. Als de gekoppelde waarde niet gelijk is `FullMedia` , wordt deze stap niet uitgevoerd.|
 |**Windows en Configuration Manager instellen**|Installeer de Configuration Manager-client software. Configuration Manager installeert en registreert de Configuration Manager-client-GUID. Neem de benodigde **installatie-eigenschappen**op.|
-|**Updates installeren**|Geef op hoe software-updates worden geïnstalleerd op de doel computer. De doel computer wordt pas geëvalueerd voor toepasselijke software-updates als deze stap wordt uitgevoerd. Op dat moment is de evaluatie vergelijkbaar met andere door Configuration Manager beheerde clients. Zie [software-updates installeren](../understand/install-software-updates.md)voor meer informatie.<br /><br />Deze stap maakt gebruik van de alleen `_SMSTSMediaType` -lezen taken reeks variabele. Als de gekoppelde waarde niet gelijk `FullMedia`is, wordt deze stap niet uitgevoerd.|
+|**Updates installeren**|Geef op hoe software-updates worden geïnstalleerd op de doel computer. De doel computer wordt pas geëvalueerd voor toepasselijke software-updates als deze stap wordt uitgevoerd. Op dat moment is de evaluatie vergelijkbaar met andere door Configuration Manager beheerde clients. Zie [software-updates installeren](../understand/install-software-updates.md)voor meer informatie.<br /><br />Deze stap maakt gebruik van de alleen-lezen `_SMSTSMediaType` taken reeks variabele. Als de gekoppelde waarde niet gelijk is `FullMedia` , wordt deze stap niet uitgevoerd.|
 |**Toepassingen installeren**|Hiermee geeft u de toepassingen op die moeten worden geïnstalleerd op de referentie computer.|
 
 ### <a name="group-capture-the-reference-machine"></a>Groep: de referentie computer vastleggen

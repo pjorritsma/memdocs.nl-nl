@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d554f4f6e0c68912f4fac91bc1a8db2807b26a04
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 79258786b56cc3e7fe4971391903772700768a89
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078784"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126753"
 ---
 # <a name="capabilities-in-technical-preview-1706-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1706 voor Configuration Manager
 
@@ -35,8 +35,8 @@ Dit artikel bevat een inleiding tot de functies die beschikbaar zijn in de Techn
 - **Distributie punt verplaatsen** : de opties in de console om een distributie punt tussen sites te verplaatsen, kunnen niet met deze release worden gebruikt vanwege de technische preview-limiet van één primaire site.
 
 - **Instellingen voor naleving van apparaten** : u kunt een tegenovergesteld gedrag ondervinden bij het gebruik van de twee nieuwe instellingen voor naleving van apparaten:
-  - **USB-fout opsporing blok keren op apparaat**
-  - **Apps van onbekende bronnen blok keren**
+  - **USB-foutopsporing op apparaat blokkeren**
+  - **Apps van onbekende bronnen blokkeren**
 
     Als beheerders bijvoorbeeld **blok-USB-fout opsporing op apparaat** instellen op **True**, worden alle apparaten waarvoor geen USB-fout opsporing is ingeschakeld, gemarkeerd als niet-compatibel.
 
@@ -72,7 +72,7 @@ Deze release bevat verbeteringen voor de werking van software-update punten met 
   - Deze cyclus wordt vervolgd totdat de client verbinding maakt met een software-update punt dat kan worden gebruikt.
   - Totdat de client een software-update punt vindt, worden er extra servers toegevoegd aan de groep beschik bare servers wanneer aan de terugval tijd voor elke grens groep van de neighbor wordt voldaan.
 
-Zie [Software-update punten](../servers/deploy/configure/boundary-groups.md#software-update-points) in het onderwerp grens groepen voor de current branch voor meer informatie.
+Zie [Software-update punten](../servers/deploy/configure/boundary-groups.md#bkmk_sup) in het onderwerp grens groepen voor de current branch voor meer informatie.
 
 
 ## <a name="site-server-role-high-availability"></a>Site serverrol hoge Beschik baarheid
@@ -129,7 +129,7 @@ In deze release worden de **status** voor de volgende voor waarden in de-console
 - 851967 – failover is mislukt
 
 ### <a name="add-a-site-server-in-passive-mode"></a>Een site server toevoegen in de passieve modus
-1. Ga in de-console naar **beheer** > **site configuratie** > **sites** en start de [wizard site systeem rollen toevoegen](../servers/deploy/configure/install-site-system-roles.md). U kunt ook de **wizard site systeem server maken**gebruiken.
+1. Ga in de-console naar **beheer**  >  **site configuratie**  >  **sites** en start de [wizard site systeem rollen toevoegen](../servers/deploy/configure/install-site-system-roles.md). U kunt ook de **wizard site systeem server maken**gebruiken.
 
 2. Geef op de pagina **Algemeen** de server op die als host moet fungeren voor de site server in de passieve modus. De server die u opgeeft, kan geen site systeem rollen hosten voordat een site server in de passieve modus wordt geïnstalleerd.
 
@@ -142,7 +142,7 @@ In deze release worden de **status** voor de volgende voor waarden in de-console
 
 5. Configuration Manager wordt de site server vervolgens in de passieve modus geïnstalleerd op de opgegeven server.
 
-Ga voor gedetailleerde installatie status naar **beheer** > **site configuratie** > **sites**.
+Ga voor gedetailleerde installatie status naar **beheer**  >  **site configuratie**  >  **sites**.
 - De status van de site server in de passieve modus wordt weer gegeven als **installatie**.
 
 - Selecteer de server en klik vervolgens op **status weer geven** om de **installatie status van de site server** te openen voor meer gedetailleerde informatie.
@@ -150,15 +150,15 @@ Ga voor gedetailleerde installatie status naar **beheer** > **site configuratie*
 
 
 ### <a name="promote-the-passive-mode-site-server-to-active-mode"></a>De site server in de passieve modus promo veren naar de actieve modus
-Wanneer u de site server van de passieve modus wilt wijzigen in de actieve modus, doet u dat in het deel venster **knoop punten** in de **beheer** > **site configuratie** > **sites**. Zolang u toegang hebt tot een exemplaar van de SMS_Provider, kunt u de site openen om deze wijziging door te voeren.
+Wanneer u de site server van de passieve modus wilt wijzigen in de actieve modus, doet u dat in het deel venster **knoop punten** in de **beheer**  >  **site configuratie**  >  **sites**. Zolang u toegang hebt tot een exemplaar van de SMS_Provider, kunt u de site openen om deze wijziging door te voeren.
 1. Selecteer in het deel venster **knoop punten** van de Configuration Manager-console de site server in de passieve modus en kies vervolgens **niveau verhogen naar actief**in het lint.
 
 2. De eenvoudige **status** van de **server die u**wilt promo veren wordt weer gegeven in het deel venster **knoop punten** .
 
 3. Nadat de promotie is voltooid, wordt in de kolom **status** **OK** weer gegeven voor de nieuwe site server in de *actieve* modus en voor de nieuwe site server in de *passieve* modus.
 
-4. In de **beheer** > **site configuratie** > **sites**, de naam van de primaire site server, wordt nu de naam van de nieuwe site server in de *actieve* modus weer gegeven.
-Ga voor gedetailleerde status naar **monitoring** > **site server status**.
+4. In de **beheer**  >  **site configuratie**  >  **sites**, de naam van de primaire site server, wordt nu de naam van de nieuwe site server in de *actieve* modus weer gegeven.
+Ga voor gedetailleerde status naar **monitoring**  >  **site server status**.
     - In de kolom **modus** wordt aangegeven welke server *actief* of *passief*is.
 
     - Bij het promo veren van een server van de passieve modus naar de actieve modus, selecteert u de site server die u promoveert naar actief en kiest u **status weer geven** op het lint. Hiermee opent u het venster **status van site server promotie** waarin extra details over het proces worden weer gegeven.
@@ -167,7 +167,7 @@ Wanneer een site server in de actieve modus overschakelt naar de passieve modus,
 
 
 ### <a name="daily-monitoring"></a>Dagelijkse bewaking
-Wanneer u een primaire site in de passieve modus hebt, controleert u deze dagelijks zodat deze synchroon blijft met de actieve modus site server en klaar voor gebruik. Als u dit wilt doen, gaat u naar **monitoring** > **site server status**. Hier kunt u de site servers van de actieve modus en de passieve modus weer geven.
+Wanneer u een primaire site in de passieve modus hebt, controleert u deze dagelijks zodat deze synchroon blijft met de actieve modus site server en klaar voor gebruik. Als u dit wilt doen, gaat u naar **monitoring**  >  **site server status**. Hier kunt u de site servers van de actieve modus en de passieve modus weer geven.
 
 Het tabblad **samen vatting** :
 - In de kolom **modus** wordt aangegeven welke server actief of passief is.
@@ -271,7 +271,7 @@ De vereisten voor een verbinding met Upgradegereedheid zijn niet gewijzigd ten o
 Nadat de vereisten zijn geconfigureerd, kunt u de wizard gebruiken om de verbinding te maken.
 
 ### <a name="use-the-azure-services-wizard-to-configure-upgrade-readiness"></a>Gebruik de wizard Azure-Services om Upgradegereedheid te configureren
-1. Ga in de-console naar **beheer** > **overzicht** > **Cloud Services** > **Azure-Services**en kies vervolgens **Azure-Services configureren** op het tabblad **Start** van het lint om de **wizard Azure-Services**te starten.
+1. Ga in de-console naar **beheer**  >  **overzicht**  >  **Cloud Services**  >  **Azure-Services**en kies vervolgens **Azure-Services configureren** op het tabblad **Start** van het lint om de **wizard Azure-Services**te starten.
 
 2. Selecteer op de pagina **Azure-Services** de **Upgradegereedheid-connector**en klik vervolgens op **volgende**.
 
@@ -309,7 +309,7 @@ Als u de verbinding verwijdert, worden apparaten niet ongedaan gemaakt, maar wor
    - **Clients inschakelen om een Cloud beheer gateway te gebruiken** : ingesteld op **Ja** (standaard) of **Nee**.
 2. Implementeer de client instellingen op de vereiste verzameling apparaten.
 
-Om te bevestigen dat het apparaat is gekoppeld aan Azure AD, voert u de opdracht **dsregcmd. exe/status** uit in een opdracht prompt venster. In het veld **AzureAdjoined** in de resultaten wordt **Ja** weer gegeven als het apparaat is toegevoegd aan Azure AD.
+Als u wilt controleren of het apparaat is gekoppeld aan Azure AD, voert u de opdracht uit **dsregcmd.exe/status** in een opdracht prompt venster. In het veld **AzureAdjoined** in de resultaten wordt **Ja** weer gegeven als het apparaat is toegevoegd aan Azure AD.
 
 ## <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Power shell-scripts maken en uitvoeren vanuit de Configuration Manager-console
 <!-- 1236459 -->
@@ -396,7 +396,7 @@ U kunt nu PXE-netwerk opstart ondersteuning inschakelen voor IPv6 om een impleme
 #### <a name="to-enable-pxe-boot-support-for-ipv6"></a>PXE-opstart ondersteuning inschakelen voor IPv6
 Gebruik de volgende procedure om de optie voor IPv6-ondersteuning voor PXE in te scha kelen.
 
-1. Ga in de Configuration Manager-console naar **beheer** > **overzicht** > **distributie punten**en klik op **Eigenschappen** voor distributie punten met PXE-functionaliteit.
+1. Ga in de Configuration Manager-console naar **beheer**  >  **overzicht**  >  **distributie punten**en klik op **Eigenschappen** voor distributie punten met PXE-functionaliteit.
 2. Op het tabblad **PXE** selecteert u **IPv6 ondersteunen** om IPv6-ondersteuning voor PXE in te scha kelen.
 
 ## <a name="manage-microsoft-surface-driver-updates"></a>Updates voor micro soft Surface drivers beheren
@@ -414,13 +414,13 @@ Voer de volgende taken uit en stuur ons **feedback** via het tabblad **Start** v
 
 ## <a name="configure-windows-update-for-business-deferral-policies"></a>Windows Update voor beleid voor bedrijfs uitstel configureren
 <!-- 1290890 -->
-U kunt nu uitstel beleid configureren voor Windows 10-onderdelen updates of kwaliteits updates voor Windows 10-apparaten die rechtstreeks worden beheerd door Windows Update voor bedrijven. U kunt het uitstel beleid beheren in het knoop punt nieuwe **Windows Update voor bedrijfs beleid** onder **software bibliotheek** > **Windows 10 Servicing**.
+U kunt nu uitstel beleid configureren voor Windows 10-onderdelen updates of kwaliteits updates voor Windows 10-apparaten die rechtstreeks worden beheerd door Windows Update voor bedrijven. U kunt het uitstel beleid beheren in het knoop punt nieuwe **Windows Update voor bedrijfs beleid** onder **software bibliotheek**  >  **Windows 10 Servicing**.
 
 ### <a name="prerequisites"></a>Vereisten
 Windows 10-apparaten die worden beheerd door Windows Update voor bedrijven, moeten verbinding hebben met internet.
 
 #### <a name="to-create-a-windows-update-for-business-deferral-policy"></a>Een Windows Update voor beleid voor bedrijfs uitstel maken
-1. In **software bibliotheek** > **Windows 10-onderhouds** > **Windows Update voor bedrijfs beleid**
+1. In **software bibliotheek**  >  **Windows 10-onderhouds**  >  **Windows Update voor bedrijfs beleid**
 2. Selecteer op het tabblad **Start** in de groep **maken** de optie **Windows Update maken voor bedrijfs beleid** om de wizard Windows Update voor bedrijven-beleid maken te openen.
 3. Geef op de pagina **Algemeen** een naam en beschrijving voor het beleid op.
 4. Configureer op de pagina **uitstel beleid** of functie-updates moeten worden uitstellen of onderbroken.    
@@ -437,7 +437,7 @@ Windows 10-apparaten die worden beheerd door Windows Update voor bedrijven, moet
 8. Voltooi de wizard om het nieuwe uitstel beleid te maken.
 
 #### <a name="to-deploy-a-windows-update-for-business-deferral-policy"></a>Een Windows Update voor beleid voor bedrijfs uitstel implementeren
-1. In **software bibliotheek** > **Windows 10-onderhouds** > **Windows Update voor bedrijfs beleid**
+1. In **software bibliotheek**  >  **Windows 10-onderhouds**  >  **Windows Update voor bedrijfs beleid**
 2. Selecteer op het tabblad **Start** in de groep **implementatie** de optie **Windows Update implementeren voor bedrijfs beleid**.
 3. Configureer de volgende instellingen:
     - **Te implementeren configuratie beleid**: selecteer de Windows Update voor bedrijfs beleid dat u wilt implementeren.
@@ -483,7 +483,7 @@ In deze release hebben we de volgende nieuwe instellingen toegevoegd die u kunt 
 - **Systeem tijd wijzigen**
 - **Apparaatnaam wijzigen**
 
-### <a name="store"></a>Winkel
+### <a name="store"></a>Opslaan
 
 - **Apps uit de Store automatisch bijwerken**
 - **Alleen persoonlijke Store gebruiken**
@@ -543,7 +543,7 @@ Vanaf deze release kunt u drie nieuwe Mobile Application Management-beleids inst
 <!-- 1290826 -->
 Vanaf deze release kunnen beheerders nu opgeven dat gebruikers geen persoonlijke Android-of iOS-apparaten kunnen inschrijven in hun hybride omgeving. Hierdoor kunt u geregistreerde apparaten beperken tot vooraf gedeclareerde apparaten die eigendom zijn van het bedrijf of iOS-apparaten die zijn Inge schreven met Device Enrollment Program.
 
-### <a name="try-it-out"></a>Uitproberen
+### <a name="try-it-out"></a>Probeer het eens
 1. Ga in de Configuration Management-console in de werkruimte **Beheer** naar **Cloudservices** > **Microsoft Intune-abonnement**.
 2. Klik op het tabblad **Start** in de groep **abonnement** op **platforms configureren** en selecteer vervolgens **Android** of **IOS**.
 3. Selecteer **apparaten met persoonlijke eigendom blok keren**.
@@ -564,8 +564,8 @@ Geen van deze opties voor komt dat het gedrag kopiëren en plakken wordt voor ko
 
 Als u DisallowCrossProfileCopyPaste instelt op True, wordt het gedrag van kopiëren en plakken tussen Android for work-persoonlijke en werk profielen voor komen.
 
-### <a name="try-it-out"></a>Uitproberen
-1. Selecteer in de Configuration Manager-console **activa en naleving** > **overzicht** > **configuratie-items**voor**compatibiliteits instellingen** > .
+### <a name="try-it-out"></a>Probeer het eens
+1. Selecteer in de Configuration Manager-console **activa en naleving**  >  **overzicht**  >  configuratie-items voor**compatibiliteits instellingen**  >  **Configuration items**.
 2. Kies **maken** om een nieuw configuratie-item te maken en geef **naam** en **Android for work**op.
 3. In de instellings groepen voor apparaten die u wilt configureren, selecteert u **werk profiel**en klikt u op **volgende**.
 4. Selecteer de waarde voor het **delen van gegevens tussen werk en persoonlijke profielen toestaan**en voltooi vervolgens de wizard.
@@ -574,5 +574,5 @@ Als u DisallowCrossProfileCopyPaste instelt op True, wordt het gedrag van kopië
 <!-- 1097546 -->
 Vanaf deze release kunt u Apparaatstatusverklaring status gebruiken als nalevings beleids regel voor voorwaardelijke toegang tot bedrijfs resources.
 
-### <a name="try-it-out"></a>Uitproberen
+### <a name="try-it-out"></a>Probeer het eens
 Selecteer een Apparaatstatusverklaring regel als onderdeel van een beoordeling van het nalevings beleid.

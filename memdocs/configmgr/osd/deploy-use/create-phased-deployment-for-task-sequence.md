@@ -5,17 +5,17 @@ description: Gebruik gefaseerde implementaties om de implementatie van software 
 ms.date: 04/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: b634ff68-b909-48d2-9e2c-0933486673c5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5af0b7c90225a1f42d55767a0296d7e2263f956f
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: 1845b381d8b37fed3a785475e961cd39c54cf42d
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110454"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125267"
 ---
 # <a name="create-phased-deployments-with-configuration-manager"></a>Gefaseerde implementaties met Configuration Manager maken
 
@@ -110,14 +110,14 @@ Include a timeline diagram
 
 2. Geef op de pagina **Algemeen** de gefaseerde implementatie een **naam**, **Beschrijving** (optioneel) en selecteer **automatisch een standaard implementatie met twee fasen maken**.  
 
-3. Selecteer **Bladeren** en kies een doel verzameling voor zowel de **eerste verzameling** als de **tweede verzamelings** velden. Voor een taken reeks en software-updates selecteert u uit apparaten verzamelen. Voor een toepassing selecteert u van gebruikers-of apparaat-verzamelingen. Selecteer **Volgende**.  
+3. Selecteer **Bladeren** en kies een doel verzameling voor zowel de **eerste verzameling** als de **tweede verzamelings** velden. Voor een taken reeks en software-updates selecteert u uit apparaten verzamelen. Voor een toepassing selecteert u van gebruikers-of apparaat-verzamelingen. Selecteer **Next**.  
 
     > [!Important]  
     > Met de wizard gefaseerde implementatie wordt u niet op de hoogte gesteld als een implementatie mogelijk een groot risico is. Zie instellingen voor het [beheren van implementaties met een hoog risico](../../core/servers/manage/settings-to-manage-high-risk-deployments.md) en de notitie wanneer u [een taken reeks implementeert](deploy-a-task-sequence.md)voor meer informatie.  
 
 4. Kies op de pagina **instellingen** één optie voor elk van de plannings instellingen. Zie [Phase Settings](#bkmk_settings)(Engelstalig) voor meer informatie. Selecteer **volgende** als u klaar bent.  
 
-5. Bekijk op de pagina **fasen** de twee fasen die de wizard voor de opgegeven verzamelingen maakt. Selecteer **Volgende**. Deze instructies beslaan de procedure om automatisch een standaard implementatie met twee fasen te maken. Met de wizard kunt u fasen voor een gefaseerde implementatie toevoegen, verwijderen, opnieuw rangschikken, bewerken of weer geven. Zie [een gefaseerde implementatie met hand matig geconfigureerde fasen maken](#bkmk_manual)voor meer informatie over deze aanvullende acties.  
+5. Bekijk op de pagina **fasen** de twee fasen die de wizard voor de opgegeven verzamelingen maakt. Selecteer **Next**. Deze instructies beslaan de procedure om automatisch een standaard implementatie met twee fasen te maken. Met de wizard kunt u fasen voor een gefaseerde implementatie toevoegen, verwijderen, opnieuw rangschikken, bewerken of weer geven. Zie [een gefaseerde implementatie met hand matig geconfigureerde fasen maken](#bkmk_manual)voor meer informatie over deze aanvullende acties.  
 
 6. Bevestig uw selecties op het tabblad **samen vatting** en selecteer vervolgens **volgende** om de wizard te volt ooien.  
 
@@ -169,7 +169,7 @@ Met ingang van versie 1806 maakt u een gefaseerde implementatie met hand matig g
        > - Criteria voor het slagen van de vorige fase  
        > - Voor waarden voor het starten van deze implementatie fase na een geslaagde uitvoering van de vorige fase   
 
-5. Selecteer **Volgende**. Controleer de instellingen op de pagina **samen vatting** en voltooi vervolgens de wizard gefaseerde implementatie maken.  
+5. Selecteer **Next**. Controleer de instellingen op de pagina **samen vatting** en voltooi vervolgens de wizard gefaseerde implementatie maken.  
 
 
 Nadat u een gefaseerde implementatie hebt gemaakt, opent u de eigenschappen ervan om wijzigingen aan te brengen:  

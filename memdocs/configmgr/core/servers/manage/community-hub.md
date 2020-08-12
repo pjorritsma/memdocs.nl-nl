@@ -2,7 +2,7 @@
 title: Community-hub en GitHub
 titleSuffix: Configuration Manager
 description: Community hub inschakelen en gebruiken in Configuration Manager
-ms.date: 07/27/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 88cead9a-64fe-471e-b57c-81707cefe46c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c0b812fa3b373d6bd5bd2bebed8b1540ceb7bdd6
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: ae0abdd4a159759037768c8f27d5643bdf612f6e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262078"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128168"
 ---
 # <a name="community-hub-and-github"></a>Community-hub en GitHub
 <!--3555935, 3555936-->
@@ -66,6 +66,37 @@ Community hub ondersteunt de volgende objecten:
 
 [![Alle items die zijn gedownload van de Community-hub](./media/3555935-community-hub-downloads.png)](./media/3555935-community-hub-downloads.png#lightbox)
 
+
+## <a name="direct-links-to-community-hub-items"></a><a name="bkmk_deeplink"></a>Directe koppelingen naar Community-hub-items
+<!--4224406-->
+*(Geïntroduceerd in versie 2006)* U kunt eenvoudig navigeren naar en verwijzen naar items in het knoop punt van de Configuration Manager console-hub met een directe koppeling. De bedoeling van deze functie is voor een eenvoudiger samen werking en het delen van koppelingen naar Community-hub-items met uw collega's. Deze diepe koppelingen zijn momenteel alleen voor items in het knoop punt Community-hub van de-console.
+
+### <a name="prerequisites-for-direct-links"></a>Vereisten voor directe koppelingen
+
+- Configuration Manager-console versie 2006 of hoger
+- U kunt het lokale ingebouwde Administrator-account niet gebruiken bij het volgen van een Community-hub-koppeling.
+
+### <a name="sharing-and-opening-direct-links"></a>Direct koppelingen delen en openen
+
+Een item delen:
+1. Ga naar het item in de hub en selecteer **delen**.
+1. Plak de gekopieerde koppeling en deel deze met anderen.
+
+Een gedeelde koppeling openen:
+1. Klik op de koppeling van een computer waarop de Configuration Manager-console is geïnstalleerd.
+   - U kunt deze koppeling bijvoorbeeld gebruiken om het [script voor automatische updates van de rand configureren](https://communityhub.microsoft.com/item/7200) () te delen `https://communityhub.microsoft.com/item/7200` .
+1. Selecteer **de hub van de Community starten** wanneer u hierom wordt gevraagd.
+1. De console wordt rechtstreeks naar het script in de Community-hub geopend.
+
+## <a name="known-issues"></a><a name="bkmk_known"></a>Bekende problemen
+
+### <a name="unable-to-access-community-hub-node-when-running-console-as-a-different-user"></a>Kan geen toegang krijgen tot het hub-knoop punt van de Community wanneer de console wordt uitgevoerd als een andere gebruiker
+<!--7826897-->
+Als u bent aangemeld als een gebruiker met lagere rechten en vervolgens **uitvoeren als** een andere gebruiker kiest om de Configuration Manager-console te openen, hebt u mogelijk geen toegang tot het knoop punt **Community hub** .
+
+### <a name="downloaded-reports-dont-get-removed-from-your-downloads-page"></a>Gedownloade rapporten worden niet verwijderd van de pagina down loads
+<!--7851305-->
+Als u een gedownload rapport verwijdert uit het knoop punt **bewakings**  >  **rapporten** , wordt het rapport niet verwijderd uit de **Community-hub**op  >  uw pagina met**down loads** en kunt u het rapport niet opnieuw downloaden. 
 
 ## <a name="next-steps"></a>Volgende stappen
 

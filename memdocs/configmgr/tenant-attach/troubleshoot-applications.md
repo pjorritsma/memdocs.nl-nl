@@ -2,7 +2,7 @@
 title: Problemen met de installatie van toepassingen oplossen
 titleSuffix: Configuration Manager
 description: Problemen met de installatie van een toepassing voor Configuration Manager Tenant koppelen
-ms.date: 08/10/2020
+ms.date: 08/11/2020
 ms.topic: troubleshooting
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -10,12 +10,12 @@ ms.assetid: 75f47456-cd8d-4c83-8dc5-98b336a7c6c8
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 6960c85f8e01e3686541e537dfb4823826a77920
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: 93b793dfbc6d7d0b5f4b24db65588ee1390604e9
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88057576"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129284"
 ---
 # <a name="troubleshoot-application-installation-for-devices-uploaded-to-the-admin-center-preview"></a>Problemen met de installatie van een toepassing oplossen voor apparaten die zijn geüpload naar het beheer centrum (preview-versie)
 <!--6374854, 6521921-->
@@ -60,11 +60,28 @@ Wanneer u toepassingen weergeeft of installeert vanuit het micro soft-beheer cen
 
 **Fout bericht:** Er is een onverwachte fout opgetreden
 
-**Mogelijke oorzaken:** Onverwachte fouten worden meestal veroorzaakt door een [service aansluitpunt](../core/servers/deploy/configure/about-the-service-connection-point.md), een [beheer service](../develop/adminservice/overview.md)of verbindings problemen.
+#### <a name="error-code-500-with-an-unexpected-error-occurred-message"></a>Fout code 500 met een onverwachte fout opgetreden bericht
+
+1. Als u `System.Security.SecurityException` in het **AdminService. log**ziet, controleert u of uw User Principal Name (UPN) die door [Active Directory gebruikers detectie](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) is gedetecteerd, niet is ingesteld op een Cloud-UPN in plaats van een lokale UPN. Een lege UPN-waarde is ook acceptabel omdat de naam van het Active Directory gedetecteerde domein wordt gebruikt. Als u alleen Cloud-UPN (voor beeld: onmicrosoft.com) ziet die geen geldig domein UPN (contoso.com) is, hebt u een probleem en moet u [het UPN-achtervoegsel instellen in Active Directory](https://docs.microsoft.com/office365/enterprise/prepare-a-non-routable-domain-for-directory-synchronization#add-upn-suffixes-and-update-your-users-to-them).
+1. [KB4576782-invoeg toepassingen in het micro soft Endpoint Manager-beheer centrum](https://support.microsoft.com/help/4576782) installeren als de onderstaande fout wordt weer gegeven in de **AdminService. log**:
+   ```log 
+   System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details.
+   System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+   System.ComponentModel.Win32Exception: The wait operation timed out
+   ```
+
+#### <a name="error-code-3-with-an-unexpected-error-occurred-message"></a>Fout code 3 met een onverwachte fout opgetreden bericht
+
+De beheer service is niet actief of IIS is niet geïnstalleerd. IIS moet zijn geïnstalleerd op de provider computer. Zie [vereisten voor de beheer service](../develop/adminservice/overview.md#prerequisites)voor meer informatie.
+
+#### <a name="other-possible-causes-of-unexpected-errors"></a>Andere mogelijke oorzaken van onverwachte fouten
+
+Onverwachte fouten worden meestal veroorzaakt door een [service aansluitpunt](../core/servers/deploy/configure/about-the-service-connection-point.md), een [beheer service](../develop/adminservice/overview.md)of verbindings problemen.
 
 1. Controleer of het service verbindings punt verbinding heeft met de Cloud met behulp van **CMGatewayNotificationWorker. log**.
 1. Controleer of de beheer service in orde is door het SMS_REST_PROVIDER onderdeel van de bewaking van site componenten op de centrale site te controleren.
 1. IIS moet zijn geïnstalleerd op de provider computer. Zie [vereisten voor de beheer service](../develop/adminservice/overview.md#prerequisites)voor meer informatie.
+
 
 ### <a name="the-site-information-hasnt-yet-synchronized"></a><a name="bkmk_sync"></a>De site gegevens zijn nog niet gesynchroniseerd
 
@@ -89,20 +106,6 @@ Wanneer u toepassingen weergeeft of installeert vanuit het micro soft-beheer cen
 **Mogelijke oorzaak:**  Zorg ervoor dat [Update pakket voor micro soft Endpoint Configuration Manager versie 2002](https://support.microsoft.com/help/4560496/) en de bijbehorende versie van de-console is geïnstalleerd. Zie [vereisten voor het installeren van een toepassing vanuit het beheer centrum](applications.md#prerequisites)voor meer informatie.
 
 ## <a name="known-issues"></a>Bekende problemen
-
-### <a name="unexpected-error-occurred-when-gettingapplications"></a>Er is een onverwachte fout opgetreden bij het ophalen van toepassingen
-
-**Scenario:** Het ophalen van de lijst met toepassingen duurt langer dan verwacht wanneer u Configuration Manager versie 2002 gebruikt en u ziet `unexpected error occurred` .
-
-**Fout bericht:** AdminService. log bevat:
-
-```log 
-System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details.
-System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
-System.ComponentModel.Win32Exception: The wait operation timed out
-```
-
-**Tijdelijke oplossing:** Er is momenteel geen tijdelijke oplossing beschikbaar.
 
 ### <a name="application-installation-times-out-if-application-requires-restart"></a>Er is een time-out opgeassen tijdens de installatie van de toepassing
 

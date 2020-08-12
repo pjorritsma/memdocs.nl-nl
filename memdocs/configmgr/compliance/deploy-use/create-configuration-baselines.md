@@ -10,12 +10,12 @@ ms.assetid: 678c9622-c61b-47d1-ba25-690616e431c7
 author: mestew
 manager: dougeby
 ms.author: mstewart
-ms.openlocfilehash: 01355230d0dc8969555740cc25a08e0b8d2967d0
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 4c96a7636902bd313f8e8868917b45d8fa49e1f7
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240470"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127134"
 ---
 # <a name="create-configuration-baselines-in-configuration-manager"></a>Configuratie basislijnen maken in Configuration Manager
 
@@ -84,7 +84,7 @@ Gebruik de volgende procedure om een configuratie basislijn te maken met behulp 
 <!--3608345-->
 *(Geïntroduceerd in versie 1910)*
 
-Vanaf versie 1910 kunt u evaluatie van aangepaste configuratie basislijnen toevoegen als beoordelings regel voor het nalevings beleid. Wanneer u een configuratie basislijn maakt of bewerkt, hebt u de optie om **deze basis lijn te evalueren als onderdeel van de beoordeling van het nalevings beleid**. Wanneer u een nalevings beleids regel toevoegt of bewerkt, hebt u een voor waarde met de naam **inclusief geconfigureerde basis lijnen in de beoordeling van het nalevings beleid**. Voor gezamenlijk beheerde apparaten en wanneer u intune configureert om de resultaten van de nalevings beoordeling te Configuration Manager als onderdeel van de algemene nalevings status, wordt deze informatie verzonden naar Azure AD. U kunt dit vervolgens gebruiken voor voorwaardelijke toegang tot uw Office 365-resources. Zie [voorwaardelijke toegang met co-beheer](../../comanage/quickstart-conditional-access.md)voor meer informatie.
+Vanaf versie 1910 kunt u evaluatie van aangepaste configuratie basislijnen toevoegen als beoordelings regel voor het nalevings beleid. Wanneer u een configuratie basislijn maakt of bewerkt, hebt u de optie om **deze basis lijn te evalueren als onderdeel van de beoordeling van het nalevings beleid**. Wanneer u een nalevings beleids regel toevoegt of bewerkt, hebt u een voor waarde met de naam **inclusief geconfigureerde basis lijnen in de beoordeling van het nalevings beleid**. Voor gezamenlijk beheerde apparaten en wanneer u intune configureert om de resultaten van de nalevings beoordeling te Configuration Manager als onderdeel van de algemene nalevings status, wordt deze informatie verzonden naar Azure AD. U kunt het vervolgens gebruiken voor voorwaardelijke toegang tot de resources van uw Microsoft 365-apps. Zie [voorwaardelijke toegang met co-beheer](../../comanage/quickstart-conditional-access.md)voor meer informatie.
 
 Ga als volgt te werk om aangepaste configuratie basislijnen op te nemen als onderdeel van de evaluatie van het nalevings beleid:
 

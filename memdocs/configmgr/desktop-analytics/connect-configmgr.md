@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: c7bb6d01a35ce42002207d57d27fc41c37646d15
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 7015ab4c180ed56b00149ffbff99c9e5a8112e95
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268858"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125998"
 ---
 # <a name="how-to-connect-configuration-manager-with-desktop-analytics"></a>Configuration Manager verbinding maken met Desktop Analytics
 
@@ -84,8 +84,11 @@ Gebruik deze procedure om Configuration Manager verbinding te maken met Desktop 
 
     - **Commerciële id**: deze waarde moet automatisch worden ingevuld met de id van uw organisatie. Als dat niet het geval is, moet u ervoor zorgen dat de proxy server zo is geconfigureerd dat alle vereiste [eind punten](enable-data-sharing.md#endpoints) worden toegestaan voordat u doorgaat. U kunt ook uw commerciële ID hand matig ophalen via de [Desktop Analytics-Portal](monitor-connection-health.md#bkmk_ViewCommercialID).
 
-    - **Niveau van diagnostische gegevens voor Windows 10**: Selecteer ten minste **Basic**. [Niveaus van diagnostische gegevens](enable-data-sharing.md#diagnostic-data-levels) weer geven
-  
+    - **Niveau van diagnostische gegevens voor Windows 10**: Selecteer mini maal **vereist**. Zie [Diagnostische gegevens niveaus](enable-data-sharing.md#diagnostic-data-levels)voor meer informatie.
+
+        > [!TIP]
+        > In Configuration Manager versie 2002 en eerder is deze waarde **Basic**genoemd.<!-- 7363467 -->
+
     - **Apparaatnaam in diagnostische gegevens toestaan**: Selecteer **inschakelen**
 
         > [!NOTE]

@@ -2,20 +2,20 @@
 title: Een takenreeks implementeren
 titleSuffix: Configuration Manager
 description: Gebruik deze informatie om een taken reeks te implementeren op de computers in een verzameling.
-ms.date: 11/29/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: b2abcdb0-72e0-4c70-a4b8-7827480ba5b2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 13c16e89cc75bff1ccecd03a98cd12782c419a40
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: fea9088a11310aedc95d2fdbeacdb98650eef361
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455154"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125199"
 ---
 # <a name="deploy-a-task-sequence"></a>Een takenreeks implementeren
 
@@ -146,9 +146,21 @@ Gebruik de volgende procedure om een takenreeks te implementeren voor de compute
 
     - **Verwerking van schrijf filters voor Windows Embedded-apparaten**: met deze instelling bepaalt u het installatie gedrag op Windows Embedded-apparaten waarvoor een schrijf filter is ingeschakeld. Kies de optie om wijzigingen door te voeren bij de deadline van de installatie of tijdens een onderhouds venster. Wanneer u deze optie selecteert, moet de computer opnieuw worden opgestart en worden de wijzigingen op het apparaat bewaard. Anders wordt de toepassing geïnstalleerd op de tijdelijke overlay en later vastgelegd. Wanneer u een taken reeks implementeert op een Windows Embedded-apparaat, moet u ervoor zorgen dat het apparaat lid is van een verzameling met een geconfigureerd onderhouds venster.  
 
-    - **Taken reeks mag voor client worden uitgevoerd op Internet**: Geef op of de taken reeks mag worden uitgevoerd op een client op internet. Bewerkingen waarvoor een opstart medium vereist is, zoals de installatie van een besturings systeem, worden niet ondersteund met deze instelling. Gebruik deze optie alleen voor algemene software-installaties of op scripts gebaseerde taken reeksen die bewerkingen uitvoeren in het standaard besturingssysteem.  
+    - **Taken reeks mag voor client worden uitgevoerd op Internet**: Geef op of de taken reeks mag worden uitgevoerd op een client op internet.
 
-        - Deze instelling wordt ondersteund voor implementaties van een Windows 10-in-place upgrade taken reeks naar op internet gebaseerde clients via de Cloud beheer gateway. Zie [Deploying Windows 10 in-place upgrade via CMG](#deploy-windows-10-in-place-upgrade-via-cmg)voor meer informatie.  
+        Deze instelling wordt ondersteund voor implementaties van een Windows 10-in-place upgrade taken reeks naar op internet gebaseerde clients via de Cloud Management Gateway (CMG). Zie [Deploying Windows 10 in-place upgrade via CMG](#deploy-windows-10-in-place-upgrade-via-cmg)voor meer informatie.
+
+        Vanaf versie 2006 kunt u een taken reeks met een opstart installatie kopie implementeren op een apparaat dat via de CMG communiceert. De gebruiker moet de taken reeks starten vanuit software Center.<!--6997525-->
+
+        > [!NOTE]
+        > Wanneer een client die lid is van een Azure Active Directory (Azure AD) een taken reeks voor besturingssysteem implementatie uitvoert, wordt de client in het nieuwe besturings systeem niet automatisch toegevoegd aan Azure AD. Hoewel het geen lid is van Azure AD, wordt de client nog steeds beheerd.
+        >
+        > Wanneer u een taken reeks voor implementatie van een besturings systeem uitvoert op een client op het Internet, die deel uitmaakt van Azure AD of gebruikmaakt van op tokens gebaseerde verificatie, moet u de eigenschap **CCMHOSTNAME** opgeven in de stap [Windows en ConfigMgr van Setup](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) .
+
+        In versie 2002 en eerder worden bewerkingen waarvoor een opstart medium is vereist, niet ondersteund met deze instelling. Gebruik deze optie alleen voor algemene software-installaties of op scripts gebaseerde taken reeksen die bewerkingen uitvoeren in het standaard besturingssysteem.
+
+        > [!NOTE]
+        > Voor alle taken reeks scenario's op internet start u de taken reeks vanuit software Center. Ze bieden geen ondersteuning voor Windows PE-, PXE-of taken reeks media.
 
 8. Geef op de pagina **waarschuwingen** de waarschuwings instellingen op die u wilt voor de implementatie van deze taken reeks.  
 

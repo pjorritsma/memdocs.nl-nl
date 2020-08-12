@@ -10,12 +10,12 @@ ms.assetid: e80d1151-91db-4a27-8411-a957297b67d0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b8ee7d00f3b5c98528d9999b83b07aa393b72e36
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: df3188e827623db8faa0b27be2fe282031e9fa50
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720588"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126389"
 ---
 # <a name="manage-network-bandwidth-for-content"></a>Netwerk bandbreedte voor inhoud beheren
 Om u te helpen bij het beheren van de netwerk bandbreedte die wordt gebruikt voor het inhouds beheerproces van Configuration Manager, kunt u ingebouwde besturings elementen gebruiken voor het plannen en beperken. U kunt ook voor bereide inhoud gebruiken. In de volgende secties worden deze scenario's gedetailleerd beschreven.
@@ -61,7 +61,7 @@ U kunt eventueel het distributie punt als voor **bereid** configureren om de dis
 
     -   **Automatisch inhoud downloaden wanneer pakketten worden toegewezen aan distributie punten**: gebruik deze optie wanneer u kleinere pakketten hebt, en de plannings-en bandbreedte beperkings instellingen bieden voldoende controle voor inhouds distributie.  
 
-    -   **Alleen inhouds wijzigingen downloaden naar het distributie punt**: gebruik deze optie wanneer u verwacht dat de inhoud in het pakket in de toekomst doorgaans kleiner is dan het oorspronkelijke pakket. U kunt bijvoorbeeld een toepassing voorbereiden zoals Microsoft Office, omdat de initiële pakket grootte groter is dan 700 MB en te groot is om over het netwerk te verzenden. Het bijwerken van inhoud naar dit pakket kan echter minder zijn dan 10 MB en kan worden gedistribueerd via het netwerk. Een ander voor beeld is mogelijk stuur programmapakketten, waarbij de oorspronkelijke grootte van het pakket groot is, maar incrementele Stuur Programma's kunnen klein zijn.  
+    -   **Alleen inhouds wijzigingen downloaden naar het distributie punt**: gebruik deze optie wanneer u verwacht dat de inhoud in het pakket in de toekomst doorgaans kleiner is dan het oorspronkelijke pakket. U kunt bijvoorbeeld een toepassing voorbereiden als Microsoft 365-apps, omdat de initiële pakket grootte groter is dan 700 MB en te groot is om over het netwerk te verzenden. Het bijwerken van inhoud naar dit pakket kan echter minder zijn dan 10 MB en kan worden gedistribueerd via het netwerk. Een ander voor beeld is mogelijk stuur programmapakketten, waarbij de oorspronkelijke grootte van het pakket groot is, maar incrementele Stuur Programma's kunnen klein zijn.  
 
     -   **De inhoud in dit pakket hand matig kopiëren naar het distributie punt**: gebruik deze optie wanneer u grote pakketten hebt, met inhoud zoals een besturings systeem, en u nooit het netwerk wilt gebruiken om de inhoud naar het distributie punt te distribueren. Wanneer u deze optie selecteert, moet u de inhoud op het distributie punt voorbereiden.  
 

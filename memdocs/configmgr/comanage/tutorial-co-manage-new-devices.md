@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 7fb02a5c-e286-46b1-a972-6335c858429a
-ms.openlocfilehash: 742cd1e86ac0bff6563c0d3ee4edce7324629480
-ms.sourcegitcommit: c1afc8abd0d7da48815bd2b0e45147774c72c2df
+ms.openlocfilehash: 0d7122942fe6a1455518b56159b48a11a2519d3e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87815460"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127297"
 ---
 # <a name="tutorial-enable-co-management-for-new-internet-based-devices"></a>Zelf studie: co-beheer inschakelen voor nieuwe apparaten op Internet
 
@@ -367,13 +367,9 @@ Met de Azure-configuraties, site systeem rollen en client instellingen op locati
 
 ### <a name="enable-co-management-starting-in-version-1906"></a>Co-beheer inschakelen vanaf versie 1906
 
-Als u co-beheer vanaf Configuration Manager versie 1906 wilt inschakelen, volgt u de onderstaande instructies:
-
 [!INCLUDE [Enable Co-management in version 1906 and later](includes/enable-co-management-1906-and-higher.md)]
 
 ### <a name="enable-co-management-in-version-1902-and-earlier"></a>Co-beheer inschakelen in versie 1902 en lager
-
-Volg de onderstaande instructies om co-beheer in te scha kelen voor Configuration Manager versie 1902 en eerder:
 
 [!INCLUDE [Enable Co-management in version 1902 and earlier](includes/enable-co-management-1902-and-earlier.md)]
 

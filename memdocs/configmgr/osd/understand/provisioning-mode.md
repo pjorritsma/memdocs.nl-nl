@@ -5,17 +5,17 @@ description: Meer informatie over de inrichtings modus van de client tijdens de 
 ms.date: 05/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.assetid: 3e3ff3a4-7a75-41bb-bdf9-33ede9c0e3a3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 815b32ecf7e9cd315c2365cb5ed73004b2a48718
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b0039648c6f444efdbbaeb16f55d29b630ee7f16
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723948"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124267"
 ---
 # <a name="provisioning-mode"></a>Inrichtingsmodus
 
@@ -42,9 +42,9 @@ Invoke-WmiMethod -Namespace root\CCM -Class SMS_Client -Name SetClientProvisioni
 
 Vanaf versie 1902 stelt de taken reeks een tijds tempel in wanneer de client in de inrichtings modus wordt gezet. Elke 60 minuten controleert een client in de inrichtings modus de duur van de tijd sinds de tijds tempel. Als de inrichtings modus langer is dan 48 uur, wordt de inrichtings modus door de client automatisch afgesloten en wordt het proces opnieuw gestart.
 
-48 uur is de standaard time-outwaarde voor de inrichtings modus. U kunt deze timer aanpassen op een apparaat door de waarde **ProvisioningMaxMinutes** in de volgende register sleutel in te `HKLM\Software\Microsoft\CCM\CcmExec`stellen:. Als deze waarde niet bestaat of is `0`, gebruikt de client de standaard 48 uur.
+48 uur is de standaard time-outwaarde voor de inrichtings modus. U kunt deze timer aanpassen op een apparaat door de waarde **ProvisioningMaxMinutes** in de volgende register sleutel in te stellen: `HKLM\Software\Microsoft\CCM\CcmExec` . Als deze waarde niet bestaat of is `0` , gebruikt de client de standaard 48 uur.
 
-De tijds tempel **ProvisioningEnabledTime** bevindt zich in de volgende `HKLM\Software\Microsoft\CCM\CcmExec`register sleutel:. De time stamp heeft een waarde van de laatste keer dat de computer de inrichtings modus heeft opgegeven. De indeling is epoche (UNIX-tijds tempel) en is in UTC.
+De tijds tempel **ProvisioningEnabledTime** bevindt zich in de volgende register sleutel: `HKLM\Software\Microsoft\CCM\CcmExec` . De time stamp heeft een waarde van de laatste keer dat de computer de inrichtings modus heeft opgegeven. De indeling is epoche (UNIX-tijds tempel) en is in UTC.
 
 Deze tijds tempel wordt ook opnieuw ingesteld op de huidige tijd wanneer u de computer hand matig in de inrichtings modus plaatst met behulp van de volgende opdracht:
 

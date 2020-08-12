@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: fa29c1b2474d6a0a42b7ff8e3624a3ec8d6a090e
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: f2486e838e01415786e24c077af1997b3dfb7638
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912291"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129066"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Wat&#39;s nieuw in versie 1702 van Configuration Manager
 
@@ -121,7 +121,7 @@ Gebruik het [hulp programma voor opruimen van inhouds bibliotheken](../hierarchy
 U kunt de OMS-connector gebruiken om verbinding te maken met OMS-Log Analytics in Microsoft Azure Government Cloud. Hiervoor moet u een configuratie bestand wijzigen voordat u de OMS-connector installeert, zodat de connector kan samen werken met de Government Cloud. Zie [de OMS-connector gebruiken met de Azure Government-Cloud](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)voor meer informatie.
 
 ### <a name="software-update-points-are-added-to-boundary-groups"></a>Software-update punten worden toegevoegd aan grens groepen
-Vanaf versie 1702 gebruiken de-clients grens groepen om een nieuw software-update punt te zoeken en om een nieuw software-update punt te vinden als het huidige item niet langer toegankelijk is. U kunt afzonderlijke software-update punten toevoegen aan verschillende grens groepen om te bepalen welke servers een client kan vinden. Zie [Software-update punten](../../servers/deploy/configure/boundary-groups.md#software-update-points) in het onderwerp [grens groepen configureren](../../servers/deploy/configure/boundary-groups.md) voor meer informatie.
+Vanaf versie 1702 gebruiken de-clients grens groepen om een nieuw software-update punt te zoeken en om een nieuw software-update punt te vinden als het huidige item niet langer toegankelijk is. U kunt afzonderlijke software-update punten toevoegen aan verschillende grens groepen om te bepalen welke servers een client kan vinden. Zie [Software-update punten](../../servers/deploy/configure/boundary-groups.md#bkmk_sup) in het onderwerp [grens groepen configureren](../../servers/deploy/configure/boundary-groups.md) voor meer informatie.
 
 
 <!-- ## Migration  -->
@@ -221,7 +221,7 @@ Vanaf deze release, wanneer u de Windows ADK-versie bijwerkt en vervolgens updat
 ## <a name="software-updates"></a>Software-updates
 
 ### <a name="deploy-office-365-apps-to-clients"></a>Office 365-Apps implementeren op clients
-Vanaf versie 1702 kunt u vanuit het Office 365 client management-dash board het Office 365-installatie programma starten waarmee u de installatie-instellingen van Office 365 kunt configureren, bestanden van Office Content Delivery Networks (Cdn's) downloadt en de bestanden als een toepassing implementeert in Configuration Manager. Zie [Office 365 ProPlus-updates beheren](../../../sum/deploy-use/manage-office-365-proplus-updates.md#deploy-office-365-apps)voor meer informatie.
+Vanaf versie 1702 kunt u vanuit het Office 365 client management-dash board het Office 365-installatie programma starten waarmee u de installatie-instellingen van Office 365 kunt configureren, bestanden van Office Content Delivery Networks (Cdn's) downloadt en de bestanden als een toepassing implementeert in Configuration Manager. Zie [Office 365 ProPlus-updates beheren](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_deploy)voor meer informatie.
 
 > [!IMPORTANT]
 > De Office 365-app die u maakt en implementeert met behulp van de wizard Office 365-toepassing in Configuration Manager wordt niet automatisch beheerd door Configuration Manager totdat u de instelling **beheer van de Office 365-client opnieuw inschakelen** hebt ingeschakeld. Zie [over client instellingen](../../clients/deploy/about-client-settings.md)voor meer informatie.

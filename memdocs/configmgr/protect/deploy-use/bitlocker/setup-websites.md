@@ -2,20 +2,20 @@
 title: BitLocker-portals instellen
 titleSuffix: Configuration Manager
 description: De BitLocker-beheer onderdelen voor de Self-Service Portal en de beheer-en bewakings website installeren
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 1cd8ac9f-b7ba-4cf4-8cd2-d548b0d6b1df
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 53fc4f694579fb8c53a4aea1054cf49dff21e1d2
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 5dbd782c97d11f8077c18796c87c7880eb26f3f3
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715676"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129151"
 ---
 # <a name="set-up-bitlocker-portals"></a>BitLocker-portals instellen
 
@@ -31,9 +31,46 @@ Als u de volgende BitLocker-beheer onderdelen in Configuration Manager wilt gebr
 U kunt de portals installeren op een bestaande site server of site systeem server waarop IIS is geïnstalleerd, of een zelfstandige webserver gebruiken om ze te hosten.
 
 > [!NOTE]
-> Installeer alleen de Self-Service Portal en de beheer-en bewakings website met een primaire site database. Installeer deze websites voor elke primaire site in een hiërarchie.
+> Vanaf versie 2006 kunt u de BitLocker Self-Service Portal en de beheer-en bewakings website op de centrale beheer site installeren.<!-- 5925693 -->
+>
+> In versie 2002 en eerder installeert u alleen de Self-Service Portal en de beheer-en bewakings website met een primaire site database. Installeer deze websites voor elke primaire site in een hiërarchie.
 
 Voordat u begint, moet u de [vereisten](../../plan-design/bitlocker-management.md#prerequisites) voor deze onderdelen bevestigen.
+
+## <a name="run-the-script"></a>Het script uitvoeren
+
+Voer op de doel webserver de volgende acties uit:
+
+> [!NOTE]
+> Afhankelijk van het ontwerp van uw site moet u het script mogelijk meerdere keren uitvoeren. Voer bijvoorbeeld het script uit op het beheer punt om de website beheer en controle te installeren. Voer de agent vervolgens opnieuw uit op een zelfstandige webserver om de Self-Service Portal te installeren.
+
+1. Kopieer de volgende bestanden vanuit `SMSSETUP\BIN\X64` de installatiemap Configuration Manager op de site server naar een lokale map op de doel server:
+
+    - `MBAMWebSite.cab`
+    - `MBAMWebSiteInstaller.ps1`
+
+1. Voer Power shell uit als beheerder en voer het script uit dat vergelijkbaar is met de volgende opdracht regel:
+
+    ``` PowerShell
+    .\MBAMWebSiteInstaller.ps1 -SqlServerName <ServerName> -SqlInstanceName <InstanceName> -SqlDatabaseName <DatabaseName> -ReportWebServiceUrl <ReportWebServiceUrl> -HelpdeskUsersGroupName <DomainUserGroup> -HelpdeskAdminsGroupName <DomainUserGroup> -MbamReportUsersGroupName <DomainUserGroup> -SiteInstall Both
+    ```
+
+    Bijvoorbeeld:
+
+    ``` PowerShell
+    .\MBAMWebSiteInstaller.ps1 -SqlServerName sql.contoso.com -SqlInstanceName instance1 -SqlDatabaseName CM_ABC -ReportWebServiceUrl https://rsp.contoso.com/ReportServer -HelpdeskUsersGroupName "contoso\BitLocker help desk users" -HelpdeskAdminsGroupName "contoso\BitLocker help desk admins" -MbamReportUsersGroupName "contoso\BitLocker report users" -SiteInstall Both
+    ```
+
+    > [!IMPORTANT]
+    > In dit voor beeld wordt gebruikgemaakt van alle mogelijke para meters om het gebruik ervan weer te geven. Pas uw gebruik aan volgens uw vereisten in uw omgeving.
+
+Na de installatie krijgt u toegang tot de portals via de volgende Url's:
+
+- Self-Service Portal:`https://webserver.contoso.com/SelfService`
+- Beheer-en bewakings website:`https://webserver.contoso.com/HelpDesk`
+
+> [!NOTE]
+> Micro soft raadt u aan, maar het gebruik van HTTPS is niet vereist. Zie [SSL instellen in IIS](https://docs.microsoft.com/iis/manage/configuring-security/how-to-set-up-ssl-on-iis)voor meer informatie.
 
 ## <a name="script-usage"></a>Script gebruik
 
@@ -71,42 +108,6 @@ Dit proces maakt gebruik van een Power shell-script, MBAMWebSiteInstaller.ps1, o
 - `-InstallDirectory`: Het pad waarin het script de Web-toepassings bestanden installeert. Dit pad is standaard `C:\inetpub` . Maak de aangepaste map voordat u deze para meter gebruikt.
 
 - `-Uninstall`: Hiermee verwijdert u de BitLocker Management Help Desk/self-service portal sites op een webserver waarop ze eerder zijn geïnstalleerd.
-
-
-## <a name="run-the-script"></a>Het script uitvoeren
-
-Voer op de doel webserver de volgende acties uit:
-
-> [!NOTE]
-> Afhankelijk van het ontwerp van uw site moet u het script mogelijk meerdere keren uitvoeren. Voer bijvoorbeeld het script uit op het beheer punt om de website beheer en controle te installeren. Voer de agent vervolgens opnieuw uit op een zelfstandige webserver om de Self-Service Portal te installeren.
-
-1. Kopieer de volgende bestanden vanuit `SMSSETUP\BIN\X64` de installatiemap Configuration Manager op de site server naar een lokale map op de doel server:
-
-    - `MBAMWebSite.cab`
-    - `MBAMWebSiteInstaller.ps1`
-
-1. Voer Power shell uit als beheerder en voer het script uit dat vergelijkbaar is met de volgende opdracht regel:
-
-    ``` PowerShell
-    .\MBAMWebSiteInstaller.ps1 -SqlServerName <ServerName> -SqlInstanceName <InstanceName> -SqlDatabaseName <DatabaseName> -ReportWebServiceUrl <ReportWebServiceUrl> -HelpdeskUsersGroupName <DomainUserGroup> -HelpdeskAdminsGroupName <DomainUserGroup> -MbamReportUsersGroupName <DomainUserGroup> -SiteInstall Both
-    ```
-
-    Bijvoorbeeld:
-
-    ``` PowerShell
-    .\MBAMWebSiteInstaller.ps1 -SqlServerName sql.contoso.com -SqlInstanceName instance1 -SqlDatabaseName CM_ABC -ReportWebServiceUrl https://rsp.contoso.com/ReportServer -HelpdeskUsersGroupName "contoso\BitLocker help desk users" -HelpdeskAdminsGroupName "contoso\BitLocker help desk admins" -MbamReportUsersGroupName "contoso\BitLocker report users" -SiteInstall Both
-    ```
-
-    > [!IMPORTANT]
-    > In dit voor beeld wordt gebruikgemaakt van alle mogelijke para meters om het gebruik ervan weer te geven. Pas uw gebruik aan volgens uw vereisten in uw omgeving.
-
-Na de installatie krijgt u toegang tot de portals via de volgende Url's:
-
-- Self-Service Portal:`https://webserver.contoso.com/SelfService`
-- Beheer-en bewakings website:`https://webserver.contoso.com/HelpDesk`
-
-> [!NOTE]
-> Micro soft raadt u aan, maar het gebruik van HTTPS is niet vereist. Zie [SSL instellen in IIS](https://docs.microsoft.com/iis/manage/configuring-security/how-to-set-up-ssl-on-iis)voor meer informatie.
 
 ## <a name="verify"></a>Verifiëren
 

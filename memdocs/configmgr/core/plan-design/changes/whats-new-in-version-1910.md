@@ -10,12 +10,12 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a52b70b0a753036c506e5d515cbac048d6771295
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 1567531ed83586f47ba2f79372e0b7962c1341dc
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83879059"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128913"
 ---
 # <a name="whats-new-in-version-1910-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 1910 van Configuration Manager current branch
 
@@ -98,19 +98,19 @@ Zie [what's New in Desktop Analytics](../../../desktop-analytics/whats-new.md)(E
 <!--3197353-->
 We hebben een aantal belang rijke optimalisaties toegevoegd aan de CMPivot-engine. U kunt nu meer van de verwerking naar de Configuration Manager-client pushen. De optimalisaties verminderen het netwerk en de CPU-belasting van de server die nodig is voor het uitvoeren van CMPivot-query's. Met deze optimalisaties kunt u nu Maxi maal gigabytes aan client gegevens in realtime door lopen. 
 
-Zie [optimalisaties voor de CMPivot-engine](../../servers/manage/cmpivot.md#bkmk_optimization)voor meer informatie.
+Zie [optimalisaties voor de CMPivot-engine](../../servers/manage/cmpivot-changes.md#bkmk_optimization)voor meer informatie.
 
 ### <a name="additional-cmpivot-entities-and-enhancements"></a>Aanvullende CMPivot-entiteiten en-verbeteringen
 <!--5410930-->
 We hebben een aantal nieuwe CMPivot-entiteiten en entiteits uitbreidingen toegevoegd om hulp te bieden bij het oplossen van problemen en jacht. We hebben de volgende entiteiten opgenomen voor het uitvoeren van query's:
 
-- Windows-gebeurtenis Logboeken ([Wine vent](../../servers/manage/cmpivot.md#bkmk_WinEvent))
-- Bestands inhoud ([FileContent](../../servers/manage/cmpivot.md#bkmk_File))
-- Door processen geladen Dll's ([ProcessModule](../../servers/manage/cmpivot.md#bkmk_ProcessModule))
-- Azure Active Directory informatie ([AADStatus](../../servers/manage/cmpivot.md#bkmk_AadStatus))
-- Endpoint Protection-status ([EPStatus](../../servers/manage/cmpivot.md#bkmk_EPStatus))
+- Windows-gebeurtenis Logboeken ([Wine vent](../../servers/manage/cmpivot-changes.md#bkmk_WinEvent))
+- Bestands inhoud ([FileContent](../../servers/manage/cmpivot-changes.md#bkmk_File))
+- Door processen geladen Dll's ([ProcessModule](../../servers/manage/cmpivot-changes.md#bkmk_ProcessModule))
+- Azure Active Directory informatie ([AADStatus](../../servers/manage/cmpivot-changes.md#bkmk_AadStatus))
+- Endpoint Protection-status ([EPStatus](../../servers/manage/cmpivot-changes.md#bkmk_EPStatus))
 
-Deze release bevat ook enkele [andere verbeteringen](../../servers/manage/cmpivot.md#bkmk_Other) in CMPivot. Zie [CMPivot vanaf versie 1910](../../servers/manage/cmpivot.md#bkmk_cmpivot1910)voor meer informatie.
+Deze release bevat ook enkele [andere verbeteringen](../../servers/manage/cmpivot-changes.md#bkmk_Other) in CMPivot. Zie [CMPivot vanaf versie 1910](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot1910)voor meer informatie.
 
 ## <a name="content-management"></a><a name="bkmk_content"></a>Inhouds beheer
 

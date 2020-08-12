@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-ms.openlocfilehash: 8bfd535c93cb9f1dcfc42705f3cce61874dfe226
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8ea95a04977038514c00f0199df42c8070e813c3
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724417"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127651"
 ---
 # <a name="integrate-with-windows-update-for-business"></a>Integreren met Windows Update voor bedrijven
 
@@ -38,7 +38,7 @@ Met Windows Update voor bedrijven (WUfB) kunt u Windows 10-apparaten in uw organ
 
 - Algemene Endpoint Protection rapportage voor Defender op basis van de status van de update naleving retourneert geen nauw keurige resultaten vanwege de ontbrekende scan gegevens.  
 
-- Configuration Manager kunnen geen micro soft-updates, zoals Office, Internet Explorer en Visual Studio, implementeren naar clients die zijn verbonden met WUfB voor het ontvangen van updates.  
+- Configuration Manager kunt geen micro soft-updates implementeren, zoals Microsoft 365 apps, IE en Visual Studio naar clients die zijn verbonden met WUfB voor het ontvangen van updates.  
 
 - Configuration Manager kunt nog steeds updates van derden implementeren die zijn gepubliceerd in WSUS en via Configuration Manager worden beheerd naar clients die zijn verbonden met WUfB voor het ontvangen van updates. Als u niet wilt dat er updates van derden worden geïnstalleerd op clients die verbinding maken met WUfB, schakelt u de client instelling [software-updates op clients inschakelen](../../core/clients/deploy/about-client-settings.md#software-updates)uit.
 
@@ -70,7 +70,7 @@ Gebruik de volgende procedure om clients te identificeren die gebruikmaken van W
 
 ## <a name="configure-windows-update-for-business-deferral-policies"></a>Windows Update voor beleid voor bedrijfs uitstel configureren
 <!-- 1290890 -->
-Vanaf Configuration Manager versie 1706 kunt u uitstel beleid configureren voor Windows 10-onderdelen updates of kwaliteits updates voor Windows 10-apparaten die rechtstreeks worden beheerd door Windows Update voor bedrijven. U kunt het uitstel beleid beheren in het knoop punt nieuwe **Windows Update voor bedrijfs beleid** onder **software bibliotheek** > **Windows 10 Servicing**.
+Vanaf Configuration Manager versie 1706 kunt u uitstel beleid configureren voor Windows 10-onderdelen updates of kwaliteits updates voor Windows 10-apparaten die rechtstreeks worden beheerd door Windows Update voor bedrijven. U kunt het uitstel beleid beheren in het knoop punt nieuwe **Windows Update voor bedrijfs beleid** onder **software bibliotheek**  >  **Windows 10 Servicing**.
 
 > [!NOTE]
 > Vanaf Configuration Manager versie 1802 kunt u uitstel beleid voor Windows Insider instellen. <!--507201-->  
@@ -83,7 +83,7 @@ Zie aan de slag [met Windows Insider Program for Business](https://docs.microsof
 
 #### <a name="to-create-a-windows-update-for-business-deferral-policy"></a>Een Windows Update voor beleid voor bedrijfs uitstel maken
 
-1. In **software bibliotheek** > **Windows 10-onderhouds** > **Windows Update voor bedrijfs beleid**
+1. In **software bibliotheek**  >  **Windows 10-onderhouds**  >  **Windows Update voor bedrijfs beleid**
 1. Selecteer op het tabblad **Start** in de groep **maken** de optie **Windows Update maken voor bedrijfs beleid** om de wizard Windows Update voor bedrijven-beleid maken te openen.
 1. Geef op de pagina **Algemeen** een naam en beschrijving voor het beleid op.
 1. Configureer op de pagina **uitstel beleid** of functie-updates moeten worden uitstellen of onderbroken. Upgrades van onderdelen zijn over het algemeen nieuwe functies van Windows. Nadat u de instelling voor het niveau van de **Branch-gereedheid** hebt geconfigureerd, kunt u opgeven of en hoe lang u de ontvangst van onderdelen wilt uitstellen na hun Beschik baarheid van micro soft.
@@ -105,7 +105,7 @@ Zie aan de slag [met Windows Insider Program for Business](https://docs.microsof
 
 #### <a name="to-deploy-a-windows-update-for-business-deferral-policy"></a>Een Windows Update voor beleid voor bedrijfs uitstel implementeren
 
-1. In **software bibliotheek** > **Windows 10-onderhouds** > **Windows Update voor bedrijfs beleid**
+1. In **software bibliotheek**  >  **Windows 10-onderhouds**  >  **Windows Update voor bedrijfs beleid**
 1. Selecteer op het tabblad **Start** in de groep **implementatie** de optie **Windows Update implementeren voor bedrijfs beleid**.
 1. Configureer de volgende instellingen:
     - **Te implementeren configuratie beleid**: selecteer de Windows Update voor bedrijfs beleid dat u wilt implementeren.

@@ -2,7 +2,7 @@
 title: Grenzen en grens groepen gebruiken
 titleSuffix: Configuration Manager
 description: Gebruik grenzen en grens groepen om netwerk locaties en toegankelijke site systemen te definiëren voor apparaten die u beheert.
-ms.date: 06/18/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 54aa20d5-791e-4416-9db4-5aaea472c0b7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 0b1a6bb6ff9fdffad65db884fe8c3b68d3fc3263
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 385dc1b2f542c964b52515e755a9202ee951bc5c
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711243"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126372"
 ---
 # <a name="define-site-boundaries-and-boundary-groups"></a>Site grenzen en grens groepen definiëren
 
@@ -29,6 +29,7 @@ Een hiërarchie kan een wille keurig aantal grens groepen bevatten. Elke grens g
 - Active Directory-sitenaam  
 - IPv6-voor voegsel  
 - IP-adresbereik  
+- VPN (vanaf versie 2006)
 
 Clients op het intranet evalueren hun huidige netwerklocatie en gebruiken deze informatie vervolgens om vast te stellen tot welke grensgroepen ze behoren.  
 

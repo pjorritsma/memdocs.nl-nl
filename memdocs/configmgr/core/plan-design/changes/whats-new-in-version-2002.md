@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4a9eac25de66eb4fb94ea1c5b4b8d0d46caa05d7
-ms.sourcegitcommit: 532a06163f462527254d23e7dc505b18c0c4f938
+ms.openlocfilehash: 66fcd9b7d4d25decb3aeef7cf38b469363eeb1fa
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88110712"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128896"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 2002 van Configuration Manager current branch
 
@@ -147,7 +147,7 @@ Zie [verbindings status controleren](../../../desktop-analytics/monitor-connecti
 
 We hebben het eenvoudiger gemaakt om te navigeren in CMPivot-entiteiten. U kunt nu CMPivot-entiteiten zoeken. Er zijn ook nieuwe pictogrammen toegevoegd om de entiteiten en de object typen van de entiteit eenvoudig te onderscheiden.
 
-Zie [CMPivot](../../servers/manage/cmpivot.md#bkmk_2002)voor meer informatie.
+Zie [CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_2002)voor meer informatie.
 
 ## <a name="content-management"></a><a name="bkmk_content"></a>Inhouds beheer
 
@@ -391,9 +391,9 @@ Net als bij verbeteringen in eerdere versies kunt u nu de zoek optie **alle subm
 
 <!--3555935, 3555936-->
 
-_Eerste geïntroduceerd in juni 2020_
+*(Voor het eerst geïntroduceerd in juni 2020)*
 
-De IT-beheerder heeft een schat aan kennis ontwikkeld over de jaren. In plaats van items zoals scripts en rapporten helemaal opnieuw te hoeven maken, hebben we een Configuration Manager **Community-hub** gemaakt waar u met elkaar kunt delen. Door gebruik te maken van anderen, kunt u uren werk besparen. De Community-hub bevordert creativiteit door te bouwen op het werk van anderen en andere mensen op uw bedrijf te bouwen. GitHub heeft al branchespecifieke processen en hulpprogram ma's die zijn ontworpen voor delen. De Community-hub maakt nu gebruik van deze hulpprogram ma's rechtstreeks in de Configuration Manager-console als basis onderdelen voor het aansturen van deze nieuwe community.
+De IT-beheerder heeft een schat aan kennis ontwikkeld over de jaren. In plaats van items zoals scripts en rapporten helemaal opnieuw te hoeven maken, hebben we een Configuration Manager **Community-hub** gemaakt waar u met elkaar kunt delen. Door gebruik te maken van anderen, kunt u uren werk besparen. De Community-hub bevordert creativiteit door te bouwen op het werk van anderen en andere mensen op uw bedrijf te bouwen. GitHub heeft al branchespecifieke processen en hulpprogram ma's die zijn ontworpen voor delen. De Community-hub maakt nu gebruik van deze hulpprogram ma's rechtstreeks in de Configuration Manager-console als basis onderdelen voor het aansturen van deze nieuwe community. Voor de eerste release wordt de inhoud die beschikbaar is in de Community hub alleen geüpload door micro soft.
 
 Zie [Community hub en github](../../servers/manage/community-hub.md)voor meer informatie.
 

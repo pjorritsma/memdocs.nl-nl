@@ -2,7 +2,7 @@
 title: Verwijzing naar logboekbestand
 titleSuffix: Configuration Manager
 description: Een verwijzing naar alle logboek bestanden voor Configuration Manager-client, server en afhankelijke onderdelen.
-ms.date: 07/09/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 296ac8448292b46318921cb952b5b8545a34f1fa
-ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
+ms.openlocfilehash: 7fa4fbc7cb4e66a1ad47cb0c14a5f7e52abb5bf5
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86210323"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126423"
 ---
 # <a name="log-file-reference"></a>Verwijzing naar logboekbestand
 
@@ -31,7 +31,7 @@ De volgende secties bevatten informatie over de verschillende logboek bestanden 
 
   - [Client bewerkingen](#BKMK_ClientOpLogs)  
 
-  - [Clientinstallatie](#BKMK_ClientInstallLog)  
+  - [Client installatie](#BKMK_ClientInstallLog)  
 
   - [Client voor Linux en UNIX](#BKMK_LogFilesforLnU)  
 
@@ -55,7 +55,7 @@ De volgende secties bevatten informatie over de verschillende logboek bestanden 
 
 - [Logboek bestanden op functionaliteit](#BKMK_FunctionLogs)  
 
-  - [Toepassings beheer](#BKMK_AppManageLog)  
+  - [Toepassingsbeheer](#BKMK_AppManageLog)  
 
   - [Asset Intelligence](#BKMK_AILog)  
 
@@ -71,7 +71,7 @@ De volgende secties bevatten informatie over de verschillende logboek bestanden 
 
   - [Configuration Manager-console](#BKMK_ConsoleLog)  
 
-  - [Inhoudsbeheer](#BKMK_ContentLog)  
+  - [Inhoudbeheer](#BKMK_ContentLog)  
 
   - [Desktop Analytics](#desktop-analytics)
 
@@ -99,11 +99,11 @@ De volgende secties bevatten informatie over de verschillende logboek bestanden 
 
   - [Op rollen gebaseerd beheer](#BKMK_RBALog)  
 
-  - [Software licentie controle](#BKMK_MeteringLog)  
+  - [Softwarelicentiecontrole](#BKMK_MeteringLog)  
 
   - [Software-updates](#BKMK_SU_NAPLog)  
 
-  - [Wake On LAN](#BKMK_WOLLog)  
+  - [Wake on LAN](#BKMK_WOLLog)  
 
   - [Onderhoud van Windows 10](#BKMK_WindowsServicingLog)
 
@@ -331,6 +331,7 @@ De volgende tabel geeft een lijst van de logboek bestanden op de Configuration M
 |sitestat.log|Registreert het bewakingsproces van beschikbaarheid en schijfruimte voor alle sitesystemen.|Siteserver|
 |SMS_AZUREAD_DISCOVERY_AGENT. log| Logboek bestand voor de detectie van gebruikers en gebruikers groepen voor Azure Active Directory (Azure AD). In versie 1910 en eerder is ook de synchronisatie van de verzamelings lidmaatschaps resultaten opgenomen in azure AD.| Siteserver|
 |SMS_BUSINESS_APP_PROCESS_MANAGER. log|Het logboek bestand voor het onderdeel dat apps synchroniseert vanuit de Microsoft Store voor bedrijven.|Siteserver|
+|SMS_DataEngine. log|Logboek bestand voor management Insights.|Siteserver|
 |SMS_ISVUPDATES_SYNCAGENT. log| Logboek bestand voor synchronisatie van software-updates van derden.| Software-update punt op het hoogste niveau in de hiërarchie van de Configuration Manager.|
 |SMS_OrchestrationGroup. log| Logboek bestand voor Orchestration-groepen|Siteserver|
 |SMS_PhasedDeployment. log| Logboek bestand voor gefaseerde implementaties|Site op het hoogste niveau in de hiërarchie van de Configuration Manager|
@@ -350,7 +351,7 @@ De volgende tabel geeft een lijst van de logboek bestanden op de Configuration M
 |statesys.log|Registreert de verwerking van statussysteemberichten.|Siteserver|  
 |statmgr.log|Registreert het schrijven van alle statusberichten naar de database.|Siteserver|  
 |swmproc.log|Registreert de verwerking van meterbestanden en instellingen.|Siteserver|
-|UXAnalyticsUploadWorker. log|Registreert gegevens upload naar de service voor endpoint Analytics.|Siteserver|   
+|UXAnalyticsUploadWorker. log|Registreert gegevens upload naar de service voor endpoint Analytics.|Siteserver|
 
 ### <a name="site-server-installation"></a><a name="BKMK_SiteInstallLog"></a>Installatie van de site server
 

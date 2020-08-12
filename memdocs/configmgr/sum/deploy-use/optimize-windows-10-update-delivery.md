@@ -10,12 +10,12 @@ ms.assetid: b670cfaf-96a4-4fcb-9caa-0f2e8c2c6198
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 835dcd0c86244c1731cb6c6e040d577160759614
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 6c42015880cae09be48feff9c42b6b2a0d2c8544
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83267787"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129311"
 ---
 # <a name="optimize-windows-10-update-delivery-with-configuration-manager"></a>De levering van Windows 10-updates optimaliseren met Configuration Manager
 
@@ -70,7 +70,7 @@ Als u Delivery Optimization voor alle installatie bestanden van Windows Update w
 > [!IMPORTANT]
 > - Optimalisatie van levering moet zijn ingeschakeld (standaard) en niet worden overgeslagen. Zie [Windows Delivery Optimization Reference](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference)(Engelstalig) voor meer informatie.
 > - Controleer uw [client instellingen voor Delivery Optimization](../../core/clients/deploy/about-client-settings.md#delivery-optimization) bij het wijzigen van de [client instellingen voor software-updates](../../core/clients/deploy/about-client-settings.md#software-updates) voor Delta-inhoud.
-> - Delivery Optimization kan niet worden gebruikt voor Office 365-client updates als Office COM is ingeschakeld. Office COM wordt door Configuration Manager gebruikt voor het beheren van updates voor Office 365-clients. U kunt de registratie van Office COM opheffen om het gebruik van leverings optimalisatie voor Office 365-updates toe te staan. Als Office COM is uitgeschakeld, worden software-updates voor Office 365 beheerd door de standaard Office Automatische updates 2,0-geplande taak. Dit betekent dat Configuration Manager het installatie proces voor Office 365-updates niet onderdicteert of bewaakt. Configuration Manager blijven gegevens verzamelen van hardware-inventaris om het Office 365-dash board voor client beheer te vullen in de-console. Zie [office 365-clients inschakelen voor het ontvangen van updates van het Office CDN in plaats van Configuration Manager](https://docs.microsoft.com/deployoffice/manage-office-365-proplus-updates-with-configuration-manager#enable-office-365-clients-to-receive-updates-from-the-office-cdn-instead-of-configuration-manager)voor meer informatie over het deregistreren van Office com.
+> - Delivery Optimization kan niet worden gebruikt voor Microsoft 365-apps client updates als Office COM is ingeschakeld. Office COM wordt door Configuration Manager gebruikt voor het beheren van updates voor Microsoft 365 apps-clients. U kunt de registratie van Office COM opheffen om het gebruik van leverings optimalisatie voor updates van Microsoft 365-apps toe te staan. Als Office COM is uitgeschakeld, worden software-updates voor Microsoft 365-apps beheerd door de standaard Office Automatische updates 2,0-geplande taak. Dit betekent dat Configuration Manager het installatie proces voor het bijwerken van Microsoft 365 apps niet onderdicteert of bewaakt. Configuration Manager blijven gegevens verzamelen van hardware-inventaris om het Office 365-dash board voor client beheer te vullen in de-console. Zie [office 365-clients inschakelen voor het ontvangen van updates van het Office CDN in plaats van Configuration Manager](https://docs.microsoft.com/deployoffice/manage-office-365-proplus-updates-with-configuration-manager#enable-office-365-clients-to-receive-updates-from-the-office-cdn-instead-of-configuration-manager)voor meer informatie over het deregistreren van Office com.
 > - Wanneer u een CMG gebruikt voor de opslag van inhoud, worden de inhoud voor updates van derden niet gedownload naar clients als de instelling **Delta-inhoud downloaden wanneer de beschik bare** [client](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) is ingeschakeld. <!--6598587-->
 
 
@@ -98,12 +98,12 @@ Het selecteren van de juiste peer cache technologie voor bestanden voor snelle i
 |---------|---------|---------|---------|
 | Ondersteund in meerdere subnetten | Ja | Ja | Nee |
 | Bandbreedte regeling | Ja (systeem eigen) | Ja (via BITS) | Ja (via BITS) |
-| Ondersteuning voor gedeeltelijke inhoud | Ja, voor alle ondersteunde inhouds typen die in de volgende rij van deze kolom worden weer gegeven. | Alleen voor Office 365-en Express-updates | Ja, voor alle ondersteunde inhouds typen die in de volgende rij van deze kolom worden weer gegeven. |
-| Ondersteunde inhouds typen | **Via ConfigMgr:** </br> -Snelle updates </br> -Alle Windows-updates (vanaf versie 1910). Dit omvat geen Office-updates.</br> </br> **Via micro soft Cloud:**</br> -Windows-en beveiligings updates</br> -Stuur Programma's</br> -Windows Store-apps</br> -Windows Store voor bedrijven-apps | Alle inhouds typen van ConfigMgr, inclusief afbeeldingen die zijn gedownload in [Windows PE](../../osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md) | Alle inhouds typen van ConfigMgr, behalve afbeeldingen |
+| Ondersteuning voor gedeeltelijke inhoud | Ja, voor alle ondersteunde inhouds typen die in de volgende rij van deze kolom worden weer gegeven. | Alleen voor Microsoft 365-apps en snelle updates | Ja, voor alle ondersteunde inhouds typen die in de volgende rij van deze kolom worden weer gegeven. |
+| Ondersteunde inhouds typen | **Via ConfigMgr:** </br> -Snelle updates </br> -Alle Windows-updates (vanaf versie 1910). Dit omvat geen updates van Microsoft 365-apps.</br> </br> **Via micro soft Cloud:**</br> -Windows-en beveiligings updates</br> -Stuur Programma's</br> -Windows Store-apps</br> -Windows Store voor bedrijven-apps | Alle inhouds typen van ConfigMgr, inclusief afbeeldingen die zijn gedownload in [Windows PE](../../osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md) | Alle inhouds typen van ConfigMgr, behalve afbeeldingen |
 | Cache grootte op schijf beheer | Ja | Ja | Ja |
 | Detectie van een peer bron | Automatisch | Hand matig (instelling client agent) | Automatisch |
 | Peer-detectie | Via Delivery Optimization Cloud service (Internet toegang vereist) | Via beheer punt (gebaseerd op client grens groepen) | Cast |
-| Rapportage | Ja (met Desktop Analytics) | Dash board client gegevens bronnen ConfigMgr | Dash board client gegevens bronnen ConfigMgr |
+| Rapporten | Ja (met Desktop Analytics) | Dash board client gegevens bronnen ConfigMgr | Dash board client gegevens bronnen ConfigMgr |
 | Besturings element voor WAN-gebruik | Ja (systeem eigen, kan worden beheerd via groeps beleids instellingen) | Grensgroepen | Alleen subnet-ondersteuning |
 | Beheer via ConfigMgr | Gedeeltelijk (instelling client agent) | Ja (instelling client agent) | Ja (instelling client agent) |
 

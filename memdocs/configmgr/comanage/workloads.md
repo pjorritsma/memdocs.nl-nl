@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
-ms.openlocfilehash: 928ef8a8ebc90807912f22901743725df9aa67e7
-ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
+ms.openlocfilehash: b03b57ff9797eb4fbe5a269723e98d39ae438803
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82842220"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127219"
 ---
 # <a name="co-management-workloads"></a>Werk belastingen voor co-beheer
 
@@ -104,7 +104,7 @@ Zie [een apparaatprofiel maken in Microsoft intune](https://docs.microsoft.com/i
 
 <!--1357841-->
 
-Deze workload beheert Office 365-apps op gezamenlijk beheerde apparaten.
+Deze workload beheert Microsoft 365-apps op gezamenlijk beheerde apparaten.
 
 - Nadat de werk belasting is verplaatst, wordt de app weer gegeven in de **bedrijfsportal** op het apparaat  
 
@@ -139,7 +139,7 @@ Met ingang van versie 1910, wanneer u micro soft Connected cache op uw Configura
 
 Wanneer de Endpoint Protection werk belasting wordt verplaatst naar intune, kan de client nog steeds beleid naleven dat door Configuration Manager en micro soft Defender is ingesteld. <!--5024559-->
 
-U kunt dit probleem omzeilen door de CleanUpPolicy. XML toe te passen met behulp van ConfigSecurityPolicy. exe nadat de intune-beleids regels zijn ontvangen door de client met behulp van de onderstaande stappen:
+U kunt dit probleem omzeilen door de CleanUpPolicy.xml toe te passen met ConfigSecurityPolicy.exe nadat de intune-beleids regels zijn ontvangen door de client met behulp van de volgende stappen:
 
 1. Kopieer de onderstaande tekst en sla deze op als `CleanUpPolicy.xml` .
 

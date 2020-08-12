@@ -5,17 +5,17 @@ description: Vastleg media in Configuration Manager gebruiken om een installatie
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 10eb8958-3848-49d7-95c0-16119b624580
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fbbec355356a74d61f263fe2b16d44c0cd15ba80
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d85ab7e9d66c1206c6741117d7b379c998078708
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711145"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125369"
 ---
 # <a name="create-capture-media"></a>Vastelegmedia maken
 
@@ -74,7 +74,7 @@ Voordat u de wizard taken reeks media maken uitvoert voor het maken van media vo
         > [!IMPORTANT]  
         > Als u een bestaande .iso-afbeelding selecteert, verwijdert de wizard voor het maken van takenreeksmedia die afbeelding uit het station of de share wanneer u doorgaat naar de volgende pagina van de wizard. De bestaande installatiekopie wordt gewist, zelfs als u de wizard annuleert.  
 
-    - **Tijdelijke map**<!--1359388-->: Voor het maken van media kan veel tijdelijke schijf ruimte nodig zijn. Deze locatie is standaard vergelijkbaar met het volgende pad: `%UserProfile%\AppData\Local\Temp`. Vanaf versie 1902, om u meer flexibiliteit te bieden bij het opslaan van deze tijdelijke bestanden, wijzigt u deze waarde in een ander station en pad.  
+    - **Tijdelijke map**<!--1359388-->: Voor het maken van media kan veel tijdelijke schijf ruimte nodig zijn. Deze locatie is standaard vergelijkbaar met het volgende pad: `%UserProfile%\AppData\Local\Temp` . Vanaf versie 1902, om u meer flexibiliteit te bieden bij het opslaan van deze tijdelijke bestanden, wijzigt u deze waarde in een ander station en pad.  
 
     - **Media label**<!--1359388-->: Vanaf versie 1902 voegt u een label toe aan de taken reeks media. Dit label helpt u de media beter te identificeren nadat u deze hebt gemaakt. De standaardwaarde is `Configuration Manager`. Dit tekst veld wordt weer gegeven op de volgende locaties:  
 
@@ -82,7 +82,7 @@ Voordat u de wizard taken reeks media maken uitvoert voor het maken van media vo
 
         - Als u een USB-station formatteert, worden de eerste elf tekens van het label als naam gebruikt  
 
-        - Configuration Manager schrijft een tekst bestand met `MediaLabel.txt` de naam naar de hoofdmap van de media. Het bestand bevat standaard één tekst regel: `label=Configuration Manager`. Als u het label voor media aanpast, gebruikt deze lijn uw aangepaste label in plaats van de standaard waarde.  
+        - Configuration Manager schrijft een tekst bestand `MediaLabel.txt` met de naam naar de hoofdmap van de media. Het bestand bevat standaard één tekst regel: `label=Configuration Manager` . Als u het label voor media aanpast, gebruikt deze lijn uw aangepaste label in plaats van de standaard waarde.  
 
     - **Autorun. inf-bestand op media toevoegen**<!-- 4090666 -->: Vanaf versie 1906 wordt Configuration Manager standaard geen autorun. inf-bestand toegevoegd. Dit bestand wordt doorgaans geblokkeerd door antimalware-producten. Zie [een cd-rom-toepassing](https://docs.microsoft.com/windows/desktop/shell/autoplay)voor automatisch aanmelden maken voor meer informatie over de autorun-functie van Windows. Als het scenario nog steeds nodig is, selecteert u deze optie om het bestand op te laten voegen.  
 

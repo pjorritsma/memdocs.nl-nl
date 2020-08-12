@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 119f787f15b8c907d0c760a12b973ca984f4348c
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: b4663ca5640bcfea4338912ff471a3253b744d5f
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268535"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125828"
 ---
 # <a name="health-status-monitoring-in-desktop-analytics"></a>Controle van de status van de Desktop Analytics
 
@@ -27,7 +27,7 @@ Zie [de status van bijgewerkte apparaten bewaken](deploy-prod.md#bkmk_monitor)vo
 ![Scherm afbeelding van de pagina status controleren van Desktop Analytics](media/monitor-health.png)
 
 > [!NOTE]  
-> Desktop Analytics verzamelt alleen status gegevens van apparaten die gebruiks gegevens leveren die kunnen worden gebruikt als noemer. Dit betekent dat er geen apparaten worden geleverd met Windows 7 en Windows 10 die niet zijn ingesteld voor het delen van diagnostische gegevens op het niveau verbeterd (beperkt). Als er meer dan 10% van de apparaten met Windows 10 zijn ingesteld op het delen van diagnostische gegevens op andere niveaus dan uitgebreid (beperkt), wordt op de pagina **status controleren** een waarschuwing weer gegeven in het gebied banner.  
+> Desktop Analytics verzamelt alleen status gegevens van apparaten die gebruiks gegevens leveren die kunnen worden gebruikt als noemer. Dit betekent dat er geen apparaten worden geleverd met Windows 7 en Windows 10 die niet zijn ingesteld voor het delen van diagnostische gegevens op het optionele (beperkte) niveau. Als er meer dan 10% van de apparaten met Windows 10 zijn ingesteld op het delen van diagnostische gegevens op andere niveaus dan optioneel (beperkt), wordt op de pagina **status controleren** een waarschuwing weer gegeven in het gebied banner.  
 
 Als u meer informatie over een specifieke app wilt weer geven, selecteert u deze in de lijst.
 

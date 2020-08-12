@@ -5,17 +5,17 @@ description: Technische Naslag informatie over de mogelijke BitLocker (MBAM)-ser
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: c3279b7d-654d-444b-bd17-1262894590c3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8d49a24b6fea08f12d1fe70c1e0b7415adf98719
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: fe7d24bc1cad27094d720a5cb5aa487caec9199d
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074806"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127862"
 ---
 # <a name="server-event-logs"></a>Servergebeurtenislogboeken
 
@@ -83,7 +83,7 @@ Mogelijke fout berichten:
 
 - Kan het gebruikers account voor de client computer of de gegevens migratie niet detecteren.
 
-    Wanneer een aanroep wordt gedaan aan de `PostKeyRecoveryInfo`- `IsRecoveryKeyResetRequired` `CommitRecoveryKeyRest`,-of `GetTpmHash` -webmethode, wordt de context van de aanroeper opgehaald om de aanroeper-referenties te verkrijgen. Als de aanroeper-context null of leeg is, wordt dit bericht door de service geregistreerd.
+    Wanneer een aanroep wordt gedaan aan de `PostKeyRecoveryInfo` -,- `IsRecoveryKeyResetRequired` of- `CommitRecoveryKeyRest` `GetTpmHash` webmethode, wordt de context van de aanroeper opgehaald om de aanroeper-referenties te verkrijgen. Als de aanroeper-context null of leeg is, wordt dit bericht door de service geregistreerd.
 
 - Account verificatie is mislukt voor de identiteit van de aanroeper.
 
@@ -93,7 +93,7 @@ Mogelijke fout berichten:
 
 De connection string van de nalevings database in het REGI ster is leeg.
 
-Dit bericht wordt vastgelegd wanneer het connection string van de nalevings database ongeldig is. Controleer de waarde bij de register sleutel `HKLM\Software\Microsoft\MBAM Server\Web\ComplianceDBConnectionString`.
+Dit bericht wordt vastgelegd wanneer het connection string van de nalevings database ongeldig is. Controleer de waarde bij de register sleutel `HKLM\Software\Microsoft\MBAM Server\Web\ComplianceDBConnectionString` .
 
 ### <a name="105-statusservicecompliancedberror"></a>105: StatusServiceComplianceDbError
 
@@ -137,11 +137,11 @@ Bekende fouten en mogelijke oorzaken:
 
 - Er is een fout opgetreden tijdens het omzetten van de domein naam {DomainName}. er is een geheugen toewijzings fout opgetreden.
 
-    De Windows-API wordt aangeroepen om de `DsGetDcName` domein naam op te lossen. Dit bericht wordt geregistreerd wanneer deze API retourneert `ERROR_NOT_ENOUGH_MEMORY`, wat aangeeft dat er een geheugen toewijzing is mislukt.
+    De Windows-API wordt aangeroepen om de domein naam op te lossen `DsGetDcName` . Dit bericht wordt geregistreerd wanneer deze API retourneert `ERROR_NOT_ENOUGH_MEMORY` , wat aangeeft dat er een geheugen toewijzing is mislukt.
 
 - Kan de DsGetDcName-methode niet aanroepen
 
-    Dit bericht geeft aan dat `DsGetDcName` de API niet beschikbaar is op de host.
+    Dit bericht geeft aan dat de `DsGetDcName` API niet beschikbaar is op de host.
 
 ### <a name="109-webapprecoverydberror"></a>109: WebAppRecoveryDbError
 
@@ -149,7 +149,7 @@ Bekende fouten en mogelijke oorzaken:
 
 - Er is een fout opgetreden tijdens het lezen van de configuratie van de herstel database. Het connection string naar de herstel database is niet geconfigureerd.
 
-    Dit bericht geeft aan dat de gegevens van de `HKLM\Software\Microsoft\MBAM Server\Web\RecoveryDBConnectionString` herstel database connection string op ongeldig zijn. Controleer de opgegeven register sleutel waarde.
+    Dit bericht geeft aan dat de gegevens van de herstel database connection string op `HKLM\Software\Microsoft\MBAM Server\Web\RecoveryDBConnectionString` ongeldig zijn. Controleer de opgegeven register sleutel waarde.
 
 Als u een van de volgende berichten ziet, controleert u of de referenties van de groep van toepassingen van de IIS-server verbinding kunnen maken met de herstel database:
 
@@ -164,7 +164,7 @@ Bekende fouten en mogelijke oorzaken:
 
 - Er is een fout opgetreden tijdens het lezen van de configuratie van de nalevings database. De connection string voor de nalevings database is niet geconfigureerd.
 
-    Dit bericht geeft aan dat de gegevens van de `HKLM\Software\Microsoft\MBAM Server\Web\ComplianceDBConnectionString` nalevings database connection string op ongeldig zijn. Controleer de waarde van deze register sleutel.
+    Dit bericht geeft aan dat de gegevens van de nalevings database connection string op `HKLM\Software\Microsoft\MBAM Server\Web\ComplianceDBConnectionString` ongeldig zijn. Controleer de waarde van deze register sleutel.
 
 Als u een van de volgende berichten ziet, controleert u of de referenties van de groep van toepassingen van de IIS-server verbinding kunnen maken met de nalevings database:
 
@@ -177,21 +177,21 @@ Als u een van de volgende berichten ziet, controleert u of de referenties van de
 Deze fouten duiden op een van de volgende twee voor waarden
 
 - MBAM websites/webservices kunnen geen verbinding maken met de compatibiliteits-of herstel database
-- MBAM websites/webservices-uitvoerings account (account voor de groep van toepassingen `GetVersion` ) kan de opgeslagen procedure niet uitvoeren voor de nalevings-of herstel database
+- MBAM websites/webservices-uitvoerings account (account voor de groep van toepassingen) kan de `GetVersion` opgeslagen procedure niet uitvoeren voor de nalevings-of herstel database
 
 In het bericht dat in de gebeurtenis is opgenomen, vindt u meer informatie over de uitzonde ring.
 
-Controleer of het groeps account van de app verbinding kan maken met de data bases voor naleving of herstel. Controleer of het machtigingen heeft om de `GetVersion` opgeslagen procedure uit te voeren.
+Controleer of het groeps account van de app verbinding kan maken met de data bases voor naleving of herstel. Controleer of het machtigingen heeft om de opgeslagen procedure uit te voeren `GetVersion` .
 
 ### <a name="112-webapperror"></a>112: WebAppError
 
 Er is een fout opgetreden tijdens het controleren van de registratie van de SPN (Service Principal Name).
 
-Om de SPN te verifiëren, vraagt de IT Active Directory om een lijst op te halen met het uitvoerings account voor Spn's toegewezen. Er wordt ook een `ApplicationHost.config` query uitgevoerd op de om de website bindingen op te halen. Dit fout bericht geeft aan dat er niet kan worden gecommuniceerd met Active Directory of `ApplicationHost.config` dat het bestand niet kan worden geladen.
+Om de SPN te verifiëren, vraagt de IT Active Directory om een lijst op te halen met het uitvoerings account voor Spn's toegewezen. Er wordt ook een query uitgevoerd `ApplicationHost.config` op de om de website bindingen op te halen. Dit fout bericht geeft aan dat er niet kan worden gecommuniceerd met Active Directory of dat het bestand niet kan worden geladen `ApplicationHost.config` .
 
-Controleer of het app-groeps account machtigingen heeft om Active Directory of `ApplicationHost.config` het bestand te zoeken. Controleer ook de vermeldingen van de site binding `ApplicationHost.config` in het bestand.
+Controleer of het app-groeps account machtigingen heeft om Active Directory of het bestand te zoeken `ApplicationHost.config` . Controleer ook de vermeldingen van de site binding in het `ApplicationHost.config` bestand.
 
-## <a name="operational"></a>Functioneren
+## <a name="operational"></a>Operationeel
 
 ### <a name="4-performancecountererror"></a>4: PerformanceCounterError
 
@@ -212,7 +212,7 @@ Het tracerings bericht bevat het werkelijke uitzonderings bericht, sommige worde
 
 In het bericht in de gebeurtenis vindt u meer informatie over de uitzonde ring.
 
-Controleer voor `System.UnauthorizedAccessException`de of het app-groeps account toegang heeft tot api's voor prestatie meter items.
+Controleer voor de `System.UnauthorizedAccessException` of het app-groeps account toegang heeft tot api's voor prestatie meter items.
 
 ### <a name="200-helpdeskinformation"></a>200: HelpDeskInformation
 

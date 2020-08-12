@@ -5,17 +5,17 @@ description: Meer informatie over de methoden voor het beheren van besturingssys
 ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: fab13949-371c-4a4c-978e-471db1e54966
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 190a203494cecfd28c198197f3a582adff745265
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: aa574cd3db2e7a3d3277912ed4a383f71d33e59c
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724116"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124284"
 ---
 # <a name="manage-os-images-with-configuration-manager"></a>Installatie kopieën van besturings systemen beheren met Configuration Manager
 
@@ -30,7 +30,7 @@ U kunt een [standaard installatie kopie van het besturings systeem](#default-ima
 
 ### <a name="default-image"></a>Standaardinstallatiekopie
 
-De Windows-installatie bestanden bevatten de standaard installatie kopie van het besturings systeem. Deze installatie kopie is een basis installatie kopie van het besturings systeem die een standaardset Stuur Programma's bevat. Wanneer u de standaard installatie kopie van het besturings systeem gebruikt, kunt u met taken reeks stappen apps installeren en andere configuraties uitvoeren nadat het besturings systeem op een apparaat is geïnstalleerd. Zoek de standaard installatie kopie van het besturings systeem in de `\Sources\install.wim`Windows-bron bestanden:.  
+De Windows-installatie bestanden bevatten de standaard installatie kopie van het besturings systeem. Deze installatie kopie is een basis installatie kopie van het besturings systeem die een standaardset Stuur Programma's bevat. Wanneer u de standaard installatie kopie van het besturings systeem gebruikt, kunt u met taken reeks stappen apps installeren en andere configuraties uitvoeren nadat het besturings systeem op een apparaat is geïnstalleerd. Zoek de standaard installatie kopie van het besturings systeem in de Windows-bron bestanden: `\Sources\install.wim` .  
 
 #### <a name="default-image-advantages"></a>Voor delen standaard afbeelding
 
@@ -75,7 +75,7 @@ Voordat u een installatie kopie van het besturings systeem kunt gebruiken, moet 
         > [!Note]  
         > Configuration Manager wijzigt het bron installatie kopie bestand niet. Er wordt een nieuw afbeeldings bestand gemaakt in dezelfde bron directory.
         >
-        > Dit uitpak proces kan mislukken voor extreem grote afbeeldings bestanden, bijvoorbeeld meer dan 60 GB. De DISM-fout `Not enough storage is available to process this command.` is de opdracht regel die Configuration Manager gebruikt, bevindt zich in de smsprov. log en DISM. log. Voer dezelfde opdracht hand matig uit en importeer vervolgens de installatie kopie.<!-- SCCMDocs-pr issue 3502 -->  
+        > Dit uitpak proces kan mislukken voor extreem grote afbeeldings bestanden, bijvoorbeeld meer dan 60 GB. De DISM-fout is `Not enough storage is available to process this command.` de opdracht regel die Configuration Manager gebruikt, bevindt zich in de smsprov. log en DISM. log. Voer dezelfde opdracht hand matig uit en importeer vervolgens de installatie kopie.<!-- SCCMDocs-pr issue 3502 -->  
 
     - Vanaf versie 1906 kunt u de **architectuur** en **taal** van de installatie kopie opgeven als u inhoud vooraf in de cache wilt opslaan op een client. Zie [inhoud vooraf in cache configureren](../deploy-use/configure-precache-content.md)voor meer informatie.<!--4224642-->  
 

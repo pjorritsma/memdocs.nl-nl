@@ -5,17 +5,17 @@ description: Meer informatie over het beheren van upgrade pakketten voor besturi
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: b9b22655-b8c1-461f-8047-3a7e906f647a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cc50fc60601b63bca7b4a4b01ba3fb4a39fd8b91
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a50592815ed4581c01489f90b6c3701e53bb4981
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724102"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124411"
 ---
 # <a name="manage-os-upgrade-packages-with-configuration-manager"></a>Upgrade pakketten van het besturings systeem beheren met Configuration Manager
 
@@ -39,7 +39,7 @@ Voordat u een upgrade pakket voor het besturings systeem kunt gebruiken, moet u 
     - Het netwerkpad **naar de** installatie bron bestanden van het upgrade pakket voor het besturings systeem. Bijvoorbeeld `\\server\share\path`.  
 
         > [!NOTE]  
-        >  De bron bestanden voor installatie bevatten Setup. exe en andere bestanden en mappen om het besturings systeem te installeren.  
+        >  De bron bestanden van de installatie bevatten setup.exe en andere bestanden en mappen om het besturings systeem te installeren.  
 
         > [!IMPORTANT]  
         >  Beperk de toegang tot deze installatie bron bestanden om ongewenste manipulatie te voor komen.  

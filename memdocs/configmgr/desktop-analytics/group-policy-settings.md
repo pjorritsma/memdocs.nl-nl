@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 4536adad3114b944baa6c75ac4e246ecddf4a2d2
-ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
+ms.openlocfilehash: 2ee472b89f45e744e43915e51e98f11841208b73
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84153461"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125796"
 ---
 # <a name="group-policy-settings-for-desktop-analytics"></a>Groeps beleids instellingen voor desktop Analytics
 
@@ -37,7 +37,7 @@ Configuration Manager stelt Windows-beleid in een of beide van de volgende regis
 | Beleid | Pad | Van toepassing op | Waarde |
 |--------|------|------------|-------|
 | **CommercialId** | Lokaal | Alle Windows-versies | Als u een apparaat wilt weer geven in Desktop Analytics, configureert u dit met de commerciële ID van uw organisatie. |
-| **AllowTelemetry**  | GPO | Windows 10 | Instellen `1` voor **Basic**, `2` voor **uitgebreid**of `3` voor **volledige** diagnostische gegevens. Voor desktop Analytics zijn ten minste eenvoudige diagnostische gegevens vereist. Micro soft raadt u aan het verbeterde niveau (beperkt) te gebruiken met Desktop Analytics. Zie [Diagnostische gegevens van Windows in uw organisatie configureren](https://docs.microsoft.com/windows/configuration/configure-windows-diagnostic-data-in-your-organization) voor meer informatie. |
+| **AllowTelemetry**  | GPO | Windows 10 | Instellen `1` voor **basis** (vereist), `2` voor **uitgebreid**of `3` voor **volledige** (optionele) diagnostische gegevens. Voor desktop Analytics zijn ten minste eenvoudige diagnostische gegevens vereist. Micro soft raadt u aan om het **optionele (beperkte** ) (uitgebreid)-niveau te gebruiken met Desktop Analytics. Zie [Diagnostische gegevens van Windows in uw organisatie configureren](https://docs.microsoft.com/windows/configuration/configure-windows-diagnostic-data-in-your-organization) voor meer informatie. |
 | **LimitEnhancedDiagnosticDataWindowsAnalytics** | GPO | Windows 10, versie 1803 en hoger | Deze instelling is alleen van toepassing wanneer de AllowTelemetry-instelling is `2` . Hiermee worden de uitgebreide diagnostische gegevens gebeurtenissen die naar micro soft worden verzonden, beperkt tot alleen die gebeurtenissen die nodig zijn voor desktop Analytics. Zie voor meer informatie [gebeurtenissen van Windows 10 diagnostische gegevens en velden die zijn verzameld via het beleid uitgebreide diagnostische gegevens beperken](https://docs.microsoft.com/windows/configuration/enhanced-diagnostic-data-windows-analytics-events-and-fields). |
 | **AllowDeviceNameInTelemetry** | GPO | Windows 10, versie 1803 en hoger | Apparaten kunnen de naam van het apparaat verzenden. De naam van het apparaat wordt niet standaard naar micro soft verzonden. Als u de apparaatnaam niet verzendt, wordt deze in Desktop Analytics weer gegeven als ' onbekend '. Zie [device name (apparaatnaam](enroll-devices.md#device-name)) voor meer informatie. |
 | **CommercialDataOptIn** | Lokaal | Windows 8,1 en eerder | Desktop Analytics vereist een waarde van `1` . Zie voor meer informatie [commerciële gegevens opt-in Windows 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/ee126127\(v=ws.10\)). |
@@ -62,7 +62,7 @@ Als u het Upgradegereedheid onboarding-script op een apparaat hebt uitgevoerd, k
 
 In het algemeen gebruikt u Configuration Manager verzamelingen om instellingen en registraties voor desktop Analytics te richten. Gebruik direct lidmaatschap of query's om apparaten op te nemen of uit te sluiten van de verzameling. Zie [verzamelingen maken](../core/clients/manage/collections/create-collections.md)voor meer informatie.
 
-Configuration Manager configureert de instellingen voor commerciële ID en diagnostische gegevens in uw doel verzameling. Als u verschillende instellingen voor diagnostische gegevens wilt configureren voor een andere groep apparaten, gebruikt u instellingen voor groeps beleid om Configuration Manager instellingen te overschrijven. U moet bijvoorbeeld een **verbeterd (beperkt)** niveau instellen voor sommige apparaten en **basis** voor anderen. Sommige apparaten hebben mogelijk verschillende verificatie-instellingen voor de [proxy server](enable-data-sharing.md#proxy-server-authentication) .
+Configuration Manager configureert de instellingen voor commerciële ID en diagnostische gegevens in uw doel verzameling. Als u verschillende instellingen voor diagnostische gegevens wilt configureren voor een andere groep apparaten, gebruikt u instellingen voor groeps beleid om Configuration Manager instellingen te overschrijven. U moet bijvoorbeeld een **optioneel (beperkt)** niveau instellen voor sommige apparaten en **vereist** voor anderen. Sommige apparaten hebben mogelijk verschillende verificatie-instellingen voor de [proxy server](enable-data-sharing.md#proxy-server-authentication) .
 
 De relevante groeps beleids instellingen bevinden zich op het volgende pad: **computer configuratie**  >  **Beheersjablonen**  >  **Windows Components**  >  **gegevens verzameling en Preview-versies**van Windows-onderdelen.
 

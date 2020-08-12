@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: a8a4ce1c3d54311db18decc85f57d3e03298d339
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: f6087011a0390997d704278af6ffd5e6071bf031
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904682"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129015"
 ---
 # <a name="what39s-new-in-version-1706-of-configuration-manager"></a>Wat&#39;s nieuw in versie 1706 van Configuration Manager
 
@@ -65,7 +65,7 @@ Zie voor meer informatie voor [bereiding voor het gebruik van](../../servers/dep
 
 ### <a name="update-reset-tool"></a>Hulpprogramma voor het opnieuw instellen van updates
 <!-- 1324589 -->
-Vanaf versie 1706, Configuration Manager primaire sites en centrale beheer sites bevatten het hulp programma Configuration Manager Update reset, **CMUpdateReset. exe**. Gebruik dit hulp programma met een wille keurige versie van de huidige vertakking die nog niet wordt ondersteund, om problemen op te lossen wanneer er problemen zijn met het downloaden of repliceren van updates in de console. Zie het [hulp programma voor het opnieuw instellen van updates](../../servers/manage/update-reset-tool.md)voor meer informatie.
+Vanaf versie 1706, Configuration Manager primaire sites en centrale beheer sites bevatten het hulp programma Configuration Manager Update reset **CMUpdateReset.exe**. Gebruik dit hulp programma met een wille keurige versie van de huidige vertakking die nog niet wordt ondersteund, om problemen op te lossen wanneer er problemen zijn met het downloaden of repliceren van updates in de console. Zie het [hulp programma voor het opnieuw instellen van updates](../../servers/manage/update-reset-tool.md)voor meer informatie.
 
 ### <a name="high-dpi-console-support"></a>Ondersteuning voor hoge DPI-console  
 <!-- 1353476 -->
@@ -78,7 +78,7 @@ Deze release bevat verbeteringen voor de werking van software-update punten met 
 - Onafhankelijk van de terugval configuratie probeert een client het laatste software-update punt te bereiken dat gedurende 120 minuten wordt gebruikt. Wanneer de server gedurende 120 minuten niet kan worden bereikt, controleert de client de groep beschik bare software-update punten, zodat er een nieuwe kan worden gevonden.
 - Als de oorspronkelijke server gedurende twee uur niet kan worden bereikt, schakelt de client over naar een kortere cyclus voor het maken van contact met een nieuw software-update punt. Dit betekent dat als een client geen verbinding kan maken met een nieuwe server, de volgende server snel wordt geselecteerd uit de groep beschik bare servers en er wordt geprobeerd contact op te nemen.
 
-Zie [Software-update punten](../../servers/deploy/configure/boundary-groups.md#software-update-points) in het onderwerp grens groepen voor de current branch voor meer informatie.
+Zie [Software-update punten](../../servers/deploy/configure/boundary-groups.md#bkmk_sup) in het onderwerp grens groepen voor de current branch voor meer informatie.
 
 ### <a name="azure-ad-integration-with-configuration-manager"></a>Azure AD-integratie met Configuration Manager
 <!-- 1248187, 1290765, 1258052, 1298097, 1319334, 1319883, 1352135, 1353331 -->
@@ -125,7 +125,7 @@ In deze release hebben we nieuwe instellingen voor configuratie-items toegevoegd
   - Taal instellingen wijzigen
   - Systeem tijd wijzigen
   - Apparaatnaam wijzigen
-- **Winkel**
+- **Opslaan**
   - Apps uit de Store automatisch bijwerken
   - Alleen persoonlijke Store gebruiken
   - Door store afkomstige app starten
@@ -228,9 +228,9 @@ U kunt nu uitstel beleid configureren voor Windows 10-onderdelen updates of kwal
 Zie [integratie met Windows Update voor bedrijven in Windows 10](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md#configure-windows-update-for-business-deferral-policies)voor meer informatie.
 
 ### <a name="improved-user-notifications-for-office-365-updates"></a>Verbeterde gebruikers meldingen voor Office 365-updates
-Er zijn verbeteringen aangebracht in het gebruik van de Office-klik-en-klaar-gebruikers ervaring wanneer een client een update van Office 365 installeert. Dit omvat pop-up-en in-app-meldingen en een aftellings ervaring. Zie voor meer informatie [gedrag voor opnieuw opstarten en client meldingen voor Office 365-updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md#restart-behavior-and-client-notifications-for-office-365-updates)
+Er zijn verbeteringen aangebracht in het gebruik van de Office-klik-en-klaar-gebruikers ervaring wanneer een client een update van Office 365 installeert. Dit omvat pop-up-en in-app-meldingen en een aftellings ervaring. Zie voor meer informatie [gedrag voor opnieuw opstarten en client meldingen voor Office 365-updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md)
 
-## <a name="reporting"></a>Rapportage
+## <a name="reporting"></a>Rapporten
 
 ### <a name="use-windows-analytics-with-configuration-manager"></a>Gebruik Windows Analytics met Configuration Manager
 <!-- 1318608 -->

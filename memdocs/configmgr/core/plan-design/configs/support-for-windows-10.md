@@ -2,7 +2,7 @@
 title: Ondersteuning voor Windows 10
 titleSuffix: Configuration Manager
 description: Meer informatie over de Windows 10-versies die worden ondersteund als clients of voor OSD met Configuration Manager
-ms.date: 05/27/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a1626a65-da22-49e0-9564-d2f752ea3f4b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a67a22f788af39dacb9f3a39e91e0f28444c6988
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 6a30fc55fb4129b8ea3493b76fd6871a2a62f881
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83879076"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126736"
 ---
 # <a name="support-for-windows-10-in-configuration-manager"></a>Ondersteuning voor Windows 10 in Configuration Manager  
 
@@ -26,7 +26,7 @@ Meer informatie over de Windows 10-versies die Configuration Manager ondersteunt
 - [Windows 10 als Configuration Manager-client](#windows-10-as-a-client)
 - [De Windows Assessment and Deployment Kit (ADK) voor Windows 10](#windows-10-adk)
 
-> [!Tip]
+> [!TIP]
 > Windows Server bouwt voort als een client die hetzelfde is als de bijbehorende Windows 10-versie. Windows Server 2016 is bijvoorbeeld dezelfde build-versie als Windows 10 LTSB 2016, en Windows Server versie 1803 is dezelfde build-versie als Windows 10 versie 1803.
 >
 > Zie [ondersteunde besturings systemen voor Configuration Manager-site systeem servers](supported-operating-systems-for-site-system-servers.md#bkmk_core)voor meer informatie over Windows Server als een site systeem.
@@ -39,7 +39,7 @@ Een Configuration Manager versie valt buiten de matrix nadat de [ondersteuning v
 
 - De nieuwste versie van Configuration Manager current branch ontvangt zowel beveiliging als essentiële updates, die oplossingen kunnen bevatten voor problemen met Windows 10-versies. Wanneer micro soft een nieuwe versie van Configuration Manager current branch uitbrengt, ontvangen eerdere versies alleen beveiligings updates. Zie [ondersteuning voor Configuration Manager huidige branch-versies](../../servers/manage/current-branch-versions-supported.md)voor meer informatie.  
 
-    > [!Note]  
+    > [!NOTE]
     > De beste manier om op de hoogte te blijven van Windows 10 is om op de hoogte te blijven van Configuration Manager. Zie [Configuration Manager en Windows as a Service](../../understand/configuration-manager-and-windows-as-service.md)voor meer informatie.  
 
 - Deze informatie is een aanvulling [op ondersteunde besturings systemen voor clients en apparaten](supported-operating-systems-for-clients-and-devices.md).  
@@ -48,21 +48,22 @@ Een Configuration Manager versie valt buiten de matrix nadat de [ondersteuning v
 
 De volgende tabel geeft een lijst van de versies van Windows 10 die u kunt gebruiken als een client met verschillende versies van Configuration Manager.
 
-| Windows 10-versie | ConfigMgr 1810 | ConfigMgr 1902 | ConfigMgr 1906 | ConfigMgr 1910 | ConfigMgr 2002 |
-|---------------------|-----|-----|-----|-----|-----|
-| **Enter prise 2015 LTSB** <!--10/14/2025-->   | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) |
-| **Enter prise 2016 LTSB** <!--10/13/2026-->   | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) |
-| **Enter prise LTSC 2019** <!--01/09/2029-->   | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) |
-| **1709**<br>(10.0.16299)   <!--10/13/2020-->   | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) |
-| **1803**<br>(10.0.17134)   <!--11/10/2020-->   | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) |
-| **1809**<br>(10.0.17763)   <!--05/11/2021-->   | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) |
-| **1903**<br>(10.0.18362)   <!--12/08/2020-->   | ![Niet ondersteund](media/Red_X.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) |
-| **1909**<br>(10.0.18363)   <!--05/10/2022-->   | ![Niet ondersteund](media/Red_X.png) | ![Niet ondersteund](media/Red_X.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) |
-| **2004**<br>(10.0.19041)   <!--??/??/2021-->   | ![Niet ondersteund](media/Red_X.png) | ![Niet ondersteund](media/Red_X.png) | ![Niet ondersteund](media/Red_X.png) | ![Niet ondersteund](media/Red_X.png) | ![Ondersteund](media/green_check.png) |
+| Windows 10-versie | ConfigMgr 1810 | ConfigMgr 1902 | ConfigMgr 1906 | ConfigMgr 1910 | ConfigMgr 2002 | ConfigMgr 2006 |
+|---------------------|-----|-----|-----|-----|-----|-----|
+| **1709**<br>(10.0.16299)   <!--10/13/2020-->   | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) |
+| **1803**<br>(10.0.17134)   <!--11/10/2020-->   | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) |
+| **1809**<br>(10.0.17763)   <!--05/11/2021-->   | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) |
+| **1903**<br>(10.0.18362)   <!--12/08/2020-->   | ![Niet ondersteund](media/Red_X.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) |
+| **1909**<br>(10.0.18363)   <!--05/10/2022-->   | ![Niet ondersteund](media/Red_X.png) | ![Niet ondersteund](media/Red_X.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) |
+| **2004**<br>(10.0.19041)   <!--12/14/2021-->   | ![Niet ondersteund](media/Red_X.png) | ![Niet ondersteund](media/Red_X.png) | ![Niet ondersteund](media/Red_X.png) | ![Niet ondersteund](media/Red_X.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) |
 
-<!-- lifecycle reference: https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet -->
+Alle momenteel ondersteunde versies van Configuration Manager huidige branch ondersteunen de volgende edities van Windows 10 LTSB/LTSC:
 
-Voor meer informatie over Windows levenscyclus raadpleegt u het overzicht van de [Windows-levens cyclus](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet)
+- **Enter prise 2015 LTSB** <!--10/14/2025-->
+- **Enter prise 2016 LTSB** <!--10/13/2026-->
+- **Enter prise LTSC 2019** <!--01/09/2029-->
+
+Zie het overzicht van [Windows levenscyclus](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet)voor meer informatie over Windows lifecycle.
 
 | Sleutel |
 |--|
@@ -107,13 +108,13 @@ Wanneer u besturings systemen met Configuration Manager implementeert, is Window
 
 De volgende tabel geeft een lijst van de versies van Windows 10 ADK die u kunt gebruiken met verschillende versies van Configuration Manager.
 
-| Windows 10 ADK-versie  | ConfigMgr 1810 | ConfigMgr 1902 | ConfigMgr 1906 | ConfigMgr 1910 | ConfigMgr 2002 |
-|--------------------|-----|-----|-----|-----|-----|
-| **1709**<br>(10.1.16299) | ![Niet ondersteund](media/Red_X.png)   | ![Niet ondersteund](media/Red_X.png) | ![Niet ondersteund](media/Red_X.png) | ![Niet ondersteund](media/Red_X.png) | ![Niet ondersteund](media/Red_X.png) |
-| **1803**<br>(10.1.17134) | ![Achterwaarts compatibel](media/blue_compat.png) | ![Achterwaarts compatibel](media/blue_compat.png) | ![Niet ondersteund](media/Red_X.png) | ![Niet ondersteund](media/Red_X.png) | ![Niet ondersteund](media/Red_X.png) |
-| **1809**<br>(10.1.17763) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Achterwaarts compatibel](media/blue_compat.png) | ![Achterwaarts compatibel](media/blue_compat.png) | ![Niet ondersteund](media/Red_X.png) |
-| **1903**<br>(10.1.18362) | ![Niet ondersteund](media/Red_X.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) |
-| **2004**<br>(10.1.19041) | ![Niet ondersteund](media/Red_X.png) | ![Niet ondersteund](media/Red_X.png) | ![Niet ondersteund](media/Red_X.png) | ![Niet ondersteund](media/Red_X.png) | ![Ondersteund](media/green_check.png) |
+| Windows 10 ADK-versie  | ConfigMgr 1810 | ConfigMgr 1902 | ConfigMgr 1906 | ConfigMgr 1910 | ConfigMgr 2002 | ConfigMgr 2006 |
+|--------------------|-----|-----|-----|-----|-----|-----|
+| **1709**<br>(10.1.16299) | ![Niet ondersteund](media/Red_X.png)   | ![Niet ondersteund](media/Red_X.png) | ![Niet ondersteund](media/Red_X.png) | ![Niet ondersteund](media/Red_X.png) | ![Niet ondersteund](media/Red_X.png) | ![Niet ondersteund](media/Red_X.png) |
+| **1803**<br>(10.1.17134) | ![Achterwaarts compatibel](media/blue_compat.png) | ![Achterwaarts compatibel](media/blue_compat.png) | ![Niet ondersteund](media/Red_X.png) | ![Niet ondersteund](media/Red_X.png) | ![Niet ondersteund](media/Red_X.png) | ![Niet ondersteund](media/Red_X.png) |
+| **1809**<br>(10.1.17763) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Achterwaarts compatibel](media/blue_compat.png) | ![Achterwaarts compatibel](media/blue_compat.png) | ![Niet ondersteund](media/Red_X.png) | ![Niet ondersteund](media/Red_X.png) |
+| **1903**<br>(10.1.18362) | ![Niet ondersteund](media/Red_X.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) | ![Achterwaarts compatibel](media/blue_compat.png) |
+| **2004**<br>(10.1.19041) | ![Niet ondersteund](media/Red_X.png) | ![Niet ondersteund](media/Red_X.png) | ![Niet ondersteund](media/Red_X.png) | ![Niet ondersteund](media/Red_X.png) | ![Ondersteund](media/green_check.png) | ![Ondersteund](media/green_check.png) |
 
 |Sleutel|
 |--|

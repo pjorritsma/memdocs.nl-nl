@@ -2,7 +2,7 @@
 title: Wake on LAN configureren
 titleSuffix: Configuration Manager
 description: Selecteer Wake On LAN instellingen in Configuration Manager.
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b475a0c8-85d6-4cc4-b11f-32c0cc98239e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 512d942d79d11178f010c4f0adb41a25ee432743
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: dcf6005d0364106df8717a1151dbad617e455ff9
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713504"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127032"
 ---
 # <a name="how-to-configure-wake-on-lan-in-configuration-manager"></a>Wake on LAN configureren in Configuration Manager
 
@@ -28,7 +28,7 @@ Geef de instellingen voor Wake on LAN voor Configuration Manager op wanneer u co
 Vanaf Configuration Manager 1810 is er een nieuwe manier om slapende computers te activeren. U kunt clients uit de Configuration Manager-console ontwaken, zelfs als de client zich niet in hetzelfde subnet bevindt als de site server. Als u onderhoud of query apparaten wilt uitvoeren, bent u niet beperkt door externe clients die in de slaap stand zijn. De site server maakt gebruik van het kanaal voor client meldingen om andere clients te identificeren die zich in hetzelfde externe subnet bevinden. vervolgens worden deze clients gebruikt om een Wake on LAN-aanvraag (Magic Packet) te verzenden. Met behulp van het kanaal voor client meldingen voor komt u dat MAC-kleppen worden afgesloten. Dit kan ertoe leiden dat de poort wordt uitgeschakeld door de router. De nieuwe versie van Wake on LAN kan op hetzelfde moment als de [oudere versie](#bkmk_wol-previous)worden ingeschakeld.
 
 ### <a name="limitations"></a>Beperkingen
-
+<!--7323898, 7363492-->
 - Ten minste één client in het doel-subnet moet actief zijn.
 - Deze functie biedt geen ondersteuning voor de volgende netwerk technologieën:
    - IPv6
@@ -38,12 +38,6 @@ Vanaf Configuration Manager 1810 is er een nieuwe manier om slapende computers t
 - Machines die alleen worden geactiveerd wanneer u via de **Wake-up** -client melding op de hoogte wordt gebracht.
     - Voor wake-up wanneer er een deadline optreedt, wordt de oudere versie van Wake on LAN gebruikt.
     -  Als de oudere versie niet is ingeschakeld, treedt de client niet meer op voor implementaties die zijn gemaakt met de instellingen **Wake-on-LAN gebruiken om clients te laten ontwaken voor vereiste implementaties of voor** het **verzenden van Ontwaak pakketten**.  
-
-> [!IMPORTANT]
-> De functie Wake On LAN wordt aanbevolen voor gebruik op slechts een beperkte hoeveelheid apparaten (100) tegelijk.
->
-> Wanneer u de functie Wake On LAN gebruikt om computers te activeren vanuit Configuration Manager-beheer console, worden de Wake-aanvragen in een interne wachtrij geplaatst die wordt gedeeld door andere functies in realtime-acties. Voor beelden van deze andere functies zijn scripts, CMPivot en andere meldingen over Fast Channel-clients uitvoeren. Afhankelijk van de prestaties van uw site systemen, kan de Wake-up acties een lange tijd duren en de andere realtime-actie vertragen. Het is aan te raden om niet meer dan 100 machines tegelijk te activeren. Als u wilt weten of u op dit gebied een achterstand krijgt die vertraging kan veroorzaken, kunt u in de map. ..\inboxes\objmgr.Box zien of er een groot aantal bestanden is met. OPA-extensie.
-
 
 ### <a name="security-role-permissions"></a>Machtigingen voor beveiligings rollen
 

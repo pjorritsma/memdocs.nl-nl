@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: d1f18c135f200b2a9e40b970871c73a0d98893a2
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: b70a375eb35599a487eeeee95235d638de35e5e1
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429822"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125862"
 ---
 # <a name="desktop-analytics-faq"></a>Veelgestelde vragen over Desktop Analytics
 
@@ -126,7 +126,7 @@ Ja, de volgende Windows Analytics-functies zijn buiten gebruik gesteld of nog ni
 #### <a name="upgrade-readiness"></a>Upgradegereedheid
 
 - Site detectie gegevens van Internet Explorer
-- Inzichten over Office-invoeg toepassingen (nu [beschikbaar in Configuration Manager](#bkmk_office))
+- Inzichten voor de invoeg toepassing Microsoft 365 apps (nu [beschikbaar in Configuration Manager](#bkmk_office))
 - Inzichten over feedback hubs
 
 #### <a name="update-compliance"></a>Updatenaleving
@@ -149,11 +149,11 @@ Ja, de volgende Windows Analytics-functies zijn buiten gebruik gesteld of nog ni
 - Windows Information Protection
 - Ondersteuning voor Windows Server
 
-## <a name="other"></a>Anders
+## <a name="other"></a>Overige
 
-### <a name="can-i-use-desktop-analytics-for-my-office-365-proplus-upgrades"></a><a name="bkmk_office"></a>Kan ik Desktop Analytics voor mijn Office 365 ProPlus-upgrades gebruiken?
+### <a name="can-i-use-desktop-analytics-for-my-microsoft-365-apps-upgrades"></a><a name="bkmk_office"></a>Kan ik Desktop Analytics gebruiken voor de upgrades van mijn Microsoft 365-apps?
 
-Nee, Desktop Analytics is gericht op Windows. Micro soft heeft Desktop Analytics ontwikkeld in nauwe samen werking met veel klanten. Feedback van klanten is het verbeteren van de manier waarop Desktop Analytics de mogelijkheid biedt om Windows-implementaties vertrouwen te beheren. Ze vertellen dat ze in Configuration Manager en intune meer willen weten over [office 365 ProPlus-gereedheid](../sum/deploy-use/office-365-dashboard.md#bkmk_o365_readiness) met Office-beheer hulpprogramma's. Micro soft blijft investeren in deze gebieden en is gericht op Windows-scenario's in Desktop Analytics.
+Nee, Desktop Analytics is gericht op Windows. Micro soft heeft Desktop Analytics ontwikkeld in nauwe samen werking met veel klanten. Feedback van klanten is het verbeteren van de manier waarop Desktop Analytics de mogelijkheid biedt om Windows-implementaties vertrouwen te beheren. Ze vertellen dat ze de gereedheids functies van [Microsoft 365 apps](../sum/deploy-use/office-365-dashboard.md#bkmk_o365_readiness) nauw keuriger kunnen integreren met Microsoft 365-hulpprogram ma's voor het beheer van apps in Configuration Manager en intune. Micro soft blijft investeren in deze gebieden en is gericht op Windows-scenario's in Desktop Analytics.
 
 ### <a name="how-can-i-provide-feedback-about-desktop-analytics"></a>Hoe kan ik feedback geven over desktop Analytics?
 

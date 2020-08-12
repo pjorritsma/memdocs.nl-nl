@@ -2,63 +2,65 @@
 title: PXE voor OSD via het netwerk gebruiken
 titleSuffix: Configuration Manager
 description: Met PXE geïnitieerde besturingssysteem implementaties gebruiken om het besturings systeem van een computer te vernieuwen of een nieuwe versie van Windows op een nieuwe computer te installeren.
-ms.date: 02/26/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: da5f8b61-2386-4530-ad54-1a5c51911f07
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 11045ff31dc3832ac97d62f491561b3cf989813c
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 7d2d467a053689edad1dcf62fa9bb140d5f259d9
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079345"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124615"
 ---
 # <a name="use-pxe-to-deploy-windows-over-the-network-with-configuration-manager"></a>PXE gebruiken om Windows via het netwerk te implementeren met Configuration Manager
 
 *Van toepassing op: Configuration Manager (huidige vertakking)*
 
-Met PXE (Preboot Execution Environment) geïnitieerde besturingssysteem implementaties in Configuration Manager kunnen clients besturings systemen via het netwerk aanvragen en implementeren. In dit implementatie scenario verzendt u de installatie kopie van het besturings systeem en de opstart installatie kopieën naar een distributie punt met PXE-functionaliteit.
+Met PXE (Preboot Execution Environment) geïnitieerde besturingssysteem implementaties in Configuration Manager kunnen clients besturings systemen via het netwerk aanvragen en implementeren. Voor deze implementatie methode verzendt u de installatie kopie van het besturings systeem en de opstart installatie kopieën naar een distributie punt met PXE-functionaliteit.
 
-> [!NOTE]  
+> [!NOTE]
 > Wanneer u een besturingssysteem implementatie maakt die alleen is gericht op x64 BIOS-computers, moeten zowel de x64-opstart installatie kopie als de x86-opstart installatie kopie beschikbaar zijn op het distributie punt.
 
 U kunt met PXE geïnitieerde besturingssysteem implementaties gebruiken in de volgende scenario's:
 
-- [Een bestaande computer vernieuwen met een nieuwe versie van Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md)  
+- [Een bestaande computer vernieuwen met een nieuwe versie van Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md)
 
-- [Een nieuwe versie van Windows op een nieuwe computer (bare-metal) installeren](install-new-windows-version-new-computer-bare-metal.md)  
+- [Een nieuwe versie van Windows op een nieuwe computer (bare-metal) installeren](install-new-windows-version-new-computer-bare-metal.md)
 
 Voer de stappen in een van de implementatie scenario's voor besturings systemen uit en gebruik de secties in dit artikel om voor te bereiden op door PXE geïnitieerde implementaties.
 
 > [!WARNING]
-> Als u PXE-implementaties gebruikt en de hardware van het apparaat configureert met de netwerk adapter als het eerste opstart apparaat, kunnen deze apparaten automatisch een taken reeks voor besturingssysteem implementatie starten zonder tussen komst van de gebruiker. Deze configuratie wordt niet beheerd door implementatie verificatie. Hoewel deze configuratie het proces kan vereenvoudigen en de gebruikers interactie vermindert, wordt het apparaat voor een groter risico voor onbedoelde herinstallatie kopieën geplaatst.
+> Als u PXE-implementaties gebruikt en de hardware van het apparaat configureert met de netwerk adapter als het eerste opstart apparaat, kunnen deze apparaten automatisch een taken reeks voor besturingssysteem implementatie starten zonder tussen komst van de gebruiker. Deze configuratie wordt niet beheerd door [implementatie verificatie](../../core/servers/manage/settings-to-manage-high-risk-deployments.md) . Hoewel deze configuratie het proces kan vereenvoudigen en de gebruikers interactie vermindert, wordt het apparaat voor een groter risico voor onbedoelde herinstallatie kopieën geplaatst.
 
-## <a name="configure-at-least-one-distribution-point-to-accept-pxe-requests"></a><a name="BKMK_Configure"></a> Ten minste één bestaand distributiepunt configureren voor de acceptatie van PXE-aanvragen
+Met ingang van versie 2006 kunnen op PXE gebaseerde taken reeksen inhoud op basis van de cloud downloaden. Het distributie punt met PXE-functionaliteit vereist nog steeds de opstart installatie kopie en het apparaat heeft een intranet verbinding met het beheer punt nodig. Vervolgens kan er extra inhoud worden ontvangen van een CMG (Cloud Management Gateway) of een Cloud distributiepunt.<!--6209223--> Zie [ondersteuning voor Cloud inhoud](use-bootable-media-to-deploy-windows-over-the-network.md#support-for-cloud-based-content)voor meer informatie.
 
-Als u besturings systemen wilt implementeren om clients te Configuration Manager die PXE-opstart aanvragen maken, moet u een of meer distributie punten configureren voor de acceptatie van PXE-aanvragen. Zodra u het distributie punt configureert, reageert het op PXE-opstart aanvragen en bepaalt de juiste implementatie actie die moet worden uitgevoerd. Zie voor meer informatie [Install or modify a distribution point](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_config-pxe).  
+## <a name="configure-distribution-points-for-pxe"></a><a name="BKMK_Configure"></a>Distributie punten voor PXE configureren
 
-> [!NOTE]  
-> Bij het configureren van één PXE-distributie punt voor de ondersteuning van meerdere subnetten, wordt het niet ondersteund voor het gebruik van DHCP-opties. Configureer IP-helpers op de routers zodat PXE-aanvragen kunnen worden doorgestuurd naar uw PXE-distributie punten.
->
-> In versie 1810 wordt niet ondersteund voor het gebruik van de PXE-responder zonder WDS op servers waarop ook een DHCP-server wordt uitgevoerd.
->
-> Vanaf versie 1902, wanneer u een PXE-responder inschakelt op een distributie punt zonder Windows Deployment-service, kan het zich nu op dezelfde server bevinden als de DHCP-service.<!--3734270, SCCMDocs-pr #3416--> Voeg de volgende instellingen toe ter ondersteuning van deze configuratie:  
->
-> - Stel de DWord- **DoNotListenOnDhcpPort** waarde DoNotListenOnDhcpPort `1` in op in de volgende register `HKLM\Software\Microsoft\SMS\DP`sleutel:.
-> - Stel de DHCP-optie `PXEClient`60 in op.  
-> - Start de SCCMPXE-en DHCP-services op de server opnieuw op.  
+Als u besturings systemen wilt implementeren om clients te Configuration Manager die PXE-opstart aanvragen maken, configureert u een of meer distributie punten om PXE-aanvragen te accepteren. Vervolgens reageert het distributie punt op PXE-opstart aanvragen en bepaalt de juiste implementatie actie. Zie voor meer informatie [Install or modify a distribution point](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_config-pxe).
+
+> [!NOTE]
+> Wanneer u één distributie punt met PXE-functionaliteit configureert voor ondersteuning van meerdere subnetten, wordt het niet ondersteund voor het gebruik van DHCP-opties. Configureer IP-helpers op de routers om het netwerk toe te staan PXE-aanvragen van clients naar distributie punten met PXE-functionaliteit door te sturen.
+
+In versie 1810 wordt niet ondersteund voor het gebruik van de PXE-responder zonder WDS op servers waarop ook een DHCP-server wordt uitgevoerd.
+
+Vanaf versie 1902, wanneer u een PXE-responder inschakelt op een distributie punt zonder Windows Deployment-service, kan het zich nu op dezelfde server bevinden als de DHCP-service.<!--3734270, SCCMDocs-pr #3416--> Voeg de volgende instellingen toe ter ondersteuning van deze configuratie:
+
+- Stel de DWord- **DoNotListenOnDhcpPort** waarde DoNotListenOnDhcpPort `1` in op in de volgende register sleutel: `HKLM\Software\Microsoft\SMS\DP` .
+- Stel de DHCP-optie 60 in op `PXEClient` .
+- Start de SCCMPXE-en DHCP-services op de server opnieuw op.
 
 ## <a name="prepare-a-pxe-enabled-boot-image"></a>Een opstartinstallatiekopie die geschikt is voor gebruik met PXE voorbereiden
 
-Als u PXE wilt gebruiken om een besturings systeem te implementeren, moet u zowel x86-als x64-opstart installatie kopieën met PXE-functionaliteit hebben gedistribueerd naar een of meer distributie punten met PXE-functionaliteit. U kunt als volgt PXE inschakelen voor een opstartinstallatiekopie en deze distribueren naar distributiepunten:
+Als u PXE wilt gebruiken om een besturings systeem te implementeren, distribueert u zowel x86-als x64-opstart installatie kopieën met PXE-functionaliteit naar een of meer distributie punten met PXE-functionaliteit.
 
 - Selecteer **deze opstart installatie kopie implementeren vanaf het distributie punt met PXE-functionaliteit** op het tabblad **gegevens bron** in de eigenschappen van de opstart installatie kopie om PXE in te scha kelen op een opstart installatie kopie.
 
-- Als u de eigenschappen van de opstart installatie kopie wijzigt, moet u de opstart installatie kopie bijwerken en opnieuw distribueren naar distributie punten. Zie voor meer informatie [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).
+- Wanneer u de eigenschappen van de opstart installatie kopie wijzigt, moet u de opstart installatie kopie bijwerken en opnieuw distribueren naar distributie punten. Zie voor meer informatie [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).
 
 ## <a name="manage-duplicate-hardware-identifiers"></a>Dubbele hardware-id's beheren
 
@@ -66,7 +68,7 @@ Configuration Manager herkent mogelijk meerdere computers als hetzelfde apparaat
 
 ## <a name="create-an-exclusion-list-for-pxe-deployments"></a><a name="BKMK_PXEExclusionList"></a> Een uitsluitingslijst voor PXE-implementaties maken
 
-> [!Note]  
+> [!NOTE]
 > In sommige gevallen kan het proces voor het [beheren van dubbele hardware-id's](../../core/clients/manage/manage-clients.md#manage-duplicate-hardware-identifiers) eenvoudiger zijn.<!-- SCCMDocs issue 802 -->
 >
 > Het gedrag van elk kan in sommige scenario's verschillende resultaten veroorzaken. De uitsluitings lijst start nooit een client met het vermelde MAC-adres, ongeacht wat.
@@ -75,22 +77,18 @@ Configuration Manager herkent mogelijk meerdere computers als hetzelfde apparaat
 
 Wanneer u besturings systemen met PXE implementeert, kunt u op elk distributie punt een uitsluitings lijst maken. Voeg de MAC-adressen toe aan de uitsluitings lijst van de computers die u door het distributie punt wilt laten negeren. De vermelde computers ontvangen geen implementatie taken reeksen die Configuration Manager gebruikt voor de PXE-implementatie.
 
-### <a name="process-to-create-the-exclusion-list"></a>Proces voor het maken van de uitsluitings lijst
+1. Maak een tekst bestand op het distributie punt met PXE-functionaliteit. Geef bijvoorbeeld het bestand de naam **pxeExceptions.txt**.
 
-1. Maak een tekstbestand op het distributiepunt met PXE-functionaliteit. Geef dit tekstbestand bijvoorbeeld de naam **pxeExceptions.txt**.  
+1. Gebruik een tekst editor, zoals Klad blok, om het bestand te bewerken. Voeg de MAC-adressen toe van de computers die door het distributie punt met PXE-functionaliteit moeten worden genegeerd. Scheid de MAC-adressen met een dubbele punt van elkaar en geef elk adres op een aparte regel op. Bijvoorbeeld: `01:23:45:67:89:ab`
 
-2. Gebruik een tekst editor, zoals Klad blok, en voeg de MAC-adressen toe van de computers die moeten worden genegeerd door het distributie punt met PXE-functionaliteit. Scheid de MAC-adressen met een dubbele punt van elkaar en geef elk adres op een aparte regel op. Bijvoorbeeld: `01:23:45:67:89:ab`  
+1. Sla het tekst bestand op het distributie punt met PXE-functionaliteit op. U kunt deze opslaan op elke locatie op de server.
 
-3. Bewaar het tekstbestand op de sitesysteemserver voor het distributiepunt met PXE-functionaliteit. Het tekst bestand kan worden opgeslagen op een wille keurige locatie op de server.  
+1. Bewerk het REGI ster op het distributie punt met PXE-functionaliteit. Blader naar het volgende registerpad: `HKLM\Software\Microsoft\SMS\DP` . Maak een teken reeks waarde van **MACIgnoreListFile** . Voeg het volledige pad toe aan het tekst bestand op het distributie punt met PXE-functionaliteit.
 
-4. Bewerk het REGI ster van het distributie punt met PXE-functionaliteit om een **MACIgnoreListFile** -register sleutel te maken. Voeg de teken reeks waarde toe van het volledige pad voor het tekst bestand op de site systeem server met het distributie punt met PXE-functionaliteit. Gebruik het volgende registerpad:  
+    > [!WARNING]
+    > Als u de REGI ster-editor onjuist gebruikt, kunt u ernstige problemen veroorzaken waarvoor u mogelijk Windows opnieuw moet installeren. Micro soft kan niet garanderen dat u problemen kunt oplossen die het gevolg zijn van een onjuist gebruik van de REGI ster-editor. Gebruik de Registry Editor op eigen risico.
 
-    `HKLM\Software\Microsoft\SMS\DP`  
-
-    > [!WARNING]  
-    > Als u de REGI ster-editor onjuist gebruikt, kunt u ernstige problemen veroorzaken waarvoor u mogelijk Windows opnieuw moet installeren. Micro soft kan niet garanderen dat u problemen kunt oplossen die het gevolg zijn van een onjuist gebruik van de REGI ster-editor. Gebruik de Registry Editor op eigen risico.  
-
-5. Start de WDS-service of de PXE responder-service opnieuw nadat u deze wijziging in het REGI ster hebt aangebracht. U hoeft de server niet opnieuw op te starten.<!--512129-->  
+1. Nadat u deze wijziging in het REGI ster hebt aangebracht, start u de WDS-service of de PXE-responder-service opnieuw. U hoeft de server niet opnieuw op te starten.<!--512129-->
 
 ## <a name="ramdisk-tftp-block-size-and-window-size"></a><a name="BKMK_RamDiskTFTP"></a>RamDisk TFTP-blok grootte en venster grootte
 
@@ -107,7 +105,8 @@ Als u een door PXE geïnitieerde besturingssysteem implementatie wilt gebruiken,
 - Alleen media en PXE (verborgen)
 
 ## <a name="option-82-during-pxe-dhcp-handshake"></a>Optie 82 tijdens PXE DHCP-Handshake
-Vanaf versie 1906, optie 82 tijdens de PXE DHCP-Handshake wordt ondersteund door de PXE-responder zonder WDS. Als optie 82 is vereist, moet u ervoor zorgen dat u de PXE-responder zonder WDS gebruikt. De optie 82 wordt niet ondersteund met WDS.
+
+Vanaf versie 1906 ondersteunt Configuration Manager optie 82 tijdens de PXE DHCP-Handshake met de PXE-responder zonder WDS. Als u optie 82 nodig hebt, moet u ervoor zorgen dat u de PXE-responder zonder WDS gebruikt. Configuration Manager biedt geen ondersteuning voor optie 82 met WDS.
 
 ## <a name="deploy-the-task-sequence"></a><a name="BKMK_Deploy"></a> De takenreeks implementeren
 
@@ -119,8 +118,8 @@ Implementeer het besturings systeem in een doel verzameling. Zie [Een takenreeks
 
 U kunt een vereiste PXE-implementatie opnieuw implementeren door de status te wissen van de laatste PXE-implementatie die is toegewezen aan een Configuration Manager verzameling of een computer. Zie [clients beheren](../../core/clients/manage/manage-clients.md#BKMK_ManagingClients_DevicesNode) of [verzamelingen beheren](../../core/clients/manage/collections/manage-collections.md#bkmk_device)voor meer informatie over de vereiste actie voor het wissen van een **PXE-implementatie** . Met deze actie wordt de status van die implementatie opnieuw ingesteld en worden de meest recente vereiste implementaties opnieuw geïnstalleerd.
 
-> [!IMPORTANT]  
-> Het PXE-protocol is niet beveiligd. Zorg ervoor dat de PXE-server en de PXE-client zich op een fysiek beveiligd netwerk bevinden, bijvoorbeeld in een Data Center om onbevoegde toegang tot uw site te voor komen.
+> [!IMPORTANT]
+> Het PXE-protocol is niet beveiligd. Zorg ervoor dat de PXE-server en de PXE-client zich op een fysiek beveiligd netwerk, zoals in een Data Center, bevinden om onbevoegde toegang tot uw site te voor komen.
 
 ## <a name="how-the-boot-image-is-selected-for-pxe"></a>Hoe de opstart installatie kopie wordt geselecteerd voor PXE
 
@@ -140,3 +139,7 @@ De volgende lijst bevat informatie over de manier waarop een opstart installatie
     Als er meer dan één opstart installatie kopie wordt gevonden, wordt de *hoogste* of meest recente taken reeks implementatie-id gebruikt. In het geval van een hiërarchie met meerdere sites heeft de site van de *hogere* letter voor rang op de vergelijking van de teken reeks. Als ze bijvoorbeeld beide overeenkomen, wordt een jaar-oud-implementatie vanaf site ZZZ geselecteerd via de implementatie van gisteren van site AAA.<!-- SCCMDocs issue 877 -->  
 
 4. Als er geen opstart installatie kopie met dezelfde architectuur wordt gevonden, zoekt Configuration Manager naar een opstart installatie kopie die compatibel is met de architectuur van de client. Er wordt gezocht in de lijst met taken reeksen die u in stap 2 hebt gevonden. Een 64-bits BIOS/MBR-client is bijvoorbeeld compatibel met 32-bits en 64-bits opstart installatie kopieën. Een 32-bits BIOS/MBR-client is compatibel met alleen 32-bits opstart installatie kopieën. UEFI-clients zijn alleen compatibel met de overeenkomende architectuur. Een 64-bits UEFI-client is compatibel met alleen 64-bits opstart installatie kopieën en een 32-bits UEFI-client is compatibel met alleen 32-bits opstart installatie kopieën.
+
+## <a name="next-steps"></a>Volgende stappen
+
+[Gebruikerservaring voor implementatie van besturingssysteem](../understand/user-experience.md#pxe)

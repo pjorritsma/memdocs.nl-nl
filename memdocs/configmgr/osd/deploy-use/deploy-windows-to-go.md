@@ -5,17 +5,17 @@ description: Meer informatie over het inrichten van Windows to go in Configurati
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 8eed50f5-80a4-422e-8aa6-a7ccb2171475
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: add0d17205cc82b30f3a88558c690a813239b92a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: a3cf735dfa2dd73ed39a24c2d674a966acddf05a
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906937"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125114"
 ---
 # <a name="deploy-windows-to-go-with-configuration-manager"></a>Windows to go met Configuration Manager implementeren
 
@@ -311,7 +311,7 @@ Dit onderwerp bevat de stappen voor het inrichten van Windows to go in Configura
 
     1.  **Naam**: geef een naam voor de opdrachtregel op, bijvoorbeeld **Enable BitLocker for Windows To Go**.  
 
-    2.  **Opdracht regel**: i386 \ osdbitlocker_wtg. exe/enable/pwd: < *geen & #124; AD*>  
+    2.  **Opdracht regel**: i386\osdbitlocker_wtg.exe/Enable/pwd: < *geen&#124;AD*>  
 
          Parameters:  
 

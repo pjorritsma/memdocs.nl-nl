@@ -5,17 +5,17 @@ description: In Configuration Manager leert u hoe u de Windows PE-opstart instal
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 76e0fd3ad8ceaecb43d2a61c3abe15accda5e5d8
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: e68a3274a32d28ac0b4ad2a611c59870ee338472
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912376"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124538"
 ---
 # <a name="manage-boot-images-with-configuration-manager"></a>Opstart installatie kopieën beheren met Configuration Manager
 
@@ -80,11 +80,15 @@ Wanneer een opstart installatie kopie is gebaseerd op een andere versie van Wind
 
 Tijdens de installatie van de site voegt Configuration Manager automatisch opstart installatie kopieën toe die zijn gebaseerd op een WinPE-versie van de ondersteunde versie van Windows ADK. Afhankelijk van de versie van Configuration Manager, kunt u opstart installatie kopieën toevoegen op basis van een andere WinPE-versie dan de ondersteunde versie van de Windows ADK. Er treedt een fout op wanneer u een opstart installatie kopie probeert toe te voegen die een niet-ondersteunde versie van WinPE bevat. De volgende lijst bevat de momenteel ondersteunde Windows ADK-en WinPE-versies:
 
-| Windows-type | Ondersteunde versies |
-|--------------|--------------------|
-| Windows ADK-versie | Windows ADK voor Windows 10 |
-| Windows PE-versies voor installatie kopieën die aanpasbaar zijn via de Configuration Manager-console | Windows PE 10 |
-| Ondersteunde Windows PE-versies voor installatie kopieën die *niet aanpasbaar* zijn via de Configuration Manager-console | -Windows PE 3,1<sup>[Opmerking 1](#bkmk_note1)</sup> <br> -Windows PE 5 |
+- Windows ADK-versie: Windows ADK voor Windows 10
+
+- Windows PE-versies voor installatie kopieën die aanpasbaar zijn via de Configuration Manager-console: Windows PE 10
+
+- Ondersteunde Windows PE-versies voor installatie kopieën die *niet aanpasbaar* zijn via de Configuration Manager-console
+
+  - Windows PE 3,1<sup>[Opmerking 1](#bkmk_note1)</sup>
+
+  - Windows PE 5
 
 Gebruik bijvoorbeeld de Configuration Manager-console om opstart installatie kopieën op basis van Windows PE 10 van Windows ADK voor Windows 10 aan te passen. Voor een opstart installatie kopie die is gebaseerd op Windows PE 5, past u deze aan op een andere computer met behulp van de versie van DISM van Windows ADK voor Windows 8. Voeg vervolgens de aangepaste opstart installatie kopie toe aan de Configuration Manager-console. Raadpleeg voor meer informatie de volgende artikelen:
 

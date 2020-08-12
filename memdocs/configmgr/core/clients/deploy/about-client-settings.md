@@ -2,20 +2,20 @@
 title: Clientinstellingen
 titleSuffix: Configuration Manager
 description: Meer informatie over de standaard-en aangepaste instellingen voor het beheren van client gedrag
-ms.date: 07/28/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9f6bb29930a6e2d4faf4ffdd141d3c9cd1831305
-ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
+ms.openlocfilehash: e70a44fee7b4805884faeda0a5fb1eab72d3371e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87365505"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126998"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Over client instellingen in Configuration Manager
 
@@ -139,7 +139,7 @@ Stel deze optie in op **Ja** als u wilt dat gebruikers het gebruikers beleid op 
 
 - Het beheer punt op Internet verifieert de gebruiker met behulp van Windows-verificatie (Kerberos of NTLM). Zie [overwegingen voor client communicatie via internet](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan)voor meer informatie.  
 
-- De Cloud beheer gateway verifieert de gebruiker met behulp van Azure Active Directory. Zie voor meer informatie [gebruikers beschik bare toepassingen implementeren op apparaten die zijn toegevoegd aan Azure AD](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices).  
+- De Cloud beheer gateway verifieert de gebruiker met behulp van Azure Active Directory. Zie voor meer informatie [gebruikers beschik bare toepassingen implementeren](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications).
 
 Als u deze optie instelt op **Nee**, of als aan een van de vorige vereisten niet wordt voldaan, ontvangt een computer op internet alleen computer beleid. In dit scenario kunnen gebruikers nog steeds toepassingen zien, aanvragen en installeren vanuit een toepassings catalogus op internet. Als deze instelling **Nee**is, maar **gebruikers beleid op clients inschakelen** is **Ja**, worden gebruikers geen gebruikers beleid ontvangen totdat de computer is verbonden met het intranet.  
 
@@ -244,7 +244,7 @@ Zie [certificaten voor micro soft Silverlight 5 en verhoogde vertrouwens modus v
 
 ### <a name="organization-name-displayed-in-software-center"></a>Weergegeven organisatienaam in Software Center
 
-Typ de naam die wordt weergegeven in Software Center. Deze huismerkgegevens helpen gebruikers om deze toepassing als een vertrouwde bron te identificeren. Zie [huismerk Software Center](../../../apps/plan-design/plan-for-software-center.md#branding-software-center)(Engelstalig) voor meer informatie over de prioriteit van deze instelling.  
+Typ de naam die wordt weergegeven in Software Center. Deze huismerkgegevens helpen gebruikers om deze toepassing als een vertrouwde bron te identificeren. Zie [huismerk Software Center](../../../apps/plan-design/plan-for-software-center.md#brand-software-center)(Engelstalig) voor meer informatie over de prioriteit van deze instelling.  
 
 ### <a name="use-new-software-center"></a>Het nieuwe Software Center gebruiken
 
@@ -468,41 +468,40 @@ Voor een MIF-bestand dat door hardware-inventaris wordt verzameld, moet het op d
 > [!NOTE]  
 > Deze instelling is alleen beschikbaar in de standaard instellingen van de client.
 
+## <a name="metered-internet-connections"></a>Internet verbindingen naar gebruik
 
+Beheren hoe Internet verbindingen met een Data limiet worden gebruikt voor computers met Windows 8 en hoger om met Configuration Manager te communiceren. Internet providers worden soms kosten in rekening gebracht op basis van de hoeveelheid gegevens die u verzendt en ontvangt wanneer u gebruikmaakt van een Internet verbinding met data limiet.
 
-## <a name="metered-internet-connections"></a>Internet verbindingen naar gebruik  
-
-Beheren hoe Internet verbindingen met een Data limiet worden gebruikt voor computers met Windows 8 en hoger om met Configuration Manager te communiceren. Internet providers worden soms kosten in rekening gebracht op basis van de hoeveelheid gegevens die u verzendt en ontvangt wanneer u gebruikmaakt van een Internet verbinding met data limiet.  
-
-> [!NOTE]  
-> De geconfigureerde client instelling wordt niet toegepast in de volgende scenario's:  
+> [!NOTE]
+> De geconfigureerde client instelling wordt niet toegepast in de volgende scenario's:
 >
 > - Als de computer zich op een zwervende gegevens verbinding bevindt, voert de Configuration Manager-client geen taken uit waarvoor gegevens moeten worden overgedragen naar Configuration Manager-sites.  
 > - Als de eigenschappen van de Windows-netwerk verbinding zijn geconfigureerd als niet-data limiet, gedraagt de Configuration Manager-client zich alsof de verbinding niet-data limiet is en worden gegevens overgedragen naar de site.  
 
 ### <a name="client-communication-on-metered-internet-connections"></a>Client communicatie via Internet verbindingen met data limiet
 
-Kies een van de volgende opties voor deze instelling:  
+Kies een van de volgende opties voor deze instelling:
 
-- **Toestaan**: alle client communicatie is toegestaan via de Internet verbinding naar gebruik, tenzij het client apparaat een zwervende gegevens verbinding gebruikt.  
+- **Toestaan**: alle client communicatie is toegestaan via de Internet verbinding naar gebruik, tenzij het client apparaat een zwervende gegevens verbinding gebruikt.
 
-- **Limiet**: alleen de volgende client communicatie is toegestaan via de Internet verbinding met data limiet:  
+- **Limiet**: de client communiceert alleen via de Internet verbinding met data limiet voor het volgende gedrag:
 
-    - Clientbeleid ophalen  
+  - Client beleid downloaden
 
-    - Clientstatusberichten om te verzenden naar de site  
+  - Client status berichten verzenden
 
-    - Software-installatie aanvragen van software Center  
+  - Software-installaties aanvragen via Software Center
 
-    - Vereiste implementaties (zodra de installatiedeadline wordt bereikt)  
+  - Down load extra beleid en inhoud voor vereiste implementaties tegen de installatie deadline
 
-    Als de client de limiet voor gegevens overdracht voor de Internet verbinding met data limiet bereikt, probeert de client niet langer te communiceren met Configuration Manager-sites.  
+  Als de client de limiet voor gegevens overdracht voor de Internet verbinding met data limiet bereikt, communiceert de client niet meer met de-site.
 
-- **Blok keren**: de Configuration Manager-client probeert niet te communiceren met Configuration Manager-sites wanneer deze zich op een Internet verbinding met data limiet bevinden. Dit is de standaardoptie.  
+- **Blok keren**: wanneer het apparaat een Internet verbinding met data limiet heeft, probeert de Configuration Manager client niet met de site te communiceren. Dit is de standaardoptie.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > De client staat altijd software-installaties toe vanuit software Center, ongeacht de instellingen voor de Internet verbinding met data limiet. Als de gebruiker een software-installatie aanvraagt terwijl het apparaat zich op een netwerk met data limiet bevindt, wordt het doel van de gebruiker door het Software Center gerespecteerd.<!-- MEMDocs#285 -->
 
+Vanaf versie 2006 moet de client worden geïnstalleerd en bijgewerkt wanneer u deze client instelling instelt op **toestaan** of **beperken**. Dit gedrag zorgt ervoor dat de client op de hoogte blijft, maar nog steeds de client communicatie beheert op een netwerk met data limiet. U kunt dit gedrag beheren tijdens de installatie van de client met de ccmsetup-para meter **/AllowMetered**. Zie [over para meters en eigenschappen van client installatie](../../clients/deploy/about-client-installation-properties.md#allowmetered)voor meer informatie.<!--6976145-->
 
 ## <a name="power-management"></a>Energiebeheer  
 
@@ -894,7 +893,7 @@ Met deze instelling configureert u de lokale poort voor de HTTP-listener voor he
 
 ### <a name="enable-management-of-the-office-365-client-agent"></a>Beheer van de Office 365-client agent inschakelen
 
-Wanneer u deze optie instelt op **Ja**, wordt de configuratie van Office 365-installatie-instellingen ingeschakeld. Ook kunt u hiermee bestanden downloaden van Office Content Delivery Networks (Cdn's) en de bestanden implementeren als een toepassing in Configuration Manager. Zie [Office 365 ProPlus beheren](../../../sum/deploy-use/manage-office-365-proplus-updates.md)voor meer informatie.
+Wanneer u deze optie instelt op **Ja**, wordt de configuratie van de installatie-instellingen voor Microsoft 365 apps ingeschakeld. Ook kunt u hiermee bestanden downloaden van Office Content Delivery Networks (Cdn's) en de bestanden implementeren als een toepassing in Configuration Manager. Zie [Microsoft 365-apps beheren](../../../sum/deploy-use/manage-office-365-proplus-updates.md)voor meer informatie.
 
 ### <a name="enable-installation-of-software-updates-in-all-deployments-maintenance-window-when-software-update-maintenance-window-is-available"></a><a name="bkmk_SUMMaint"></a>Installatie van software-updates inschakelen in het onderhouds venster ' alle implementaties ' wanneer het onderhouds venster voor software-updates beschikbaar is
 
@@ -980,9 +979,9 @@ Kies **Ja** om automatische gebruikers affiniteit met apparaat te maken op basis
 <!--3485366-->
 Als deze instelling is ingesteld op **Ja**, kunnen gebruikers hun eigen primaire apparaten in Software Center identificeren. Zie de [Gebruikers handleiding voor Software Center](../../understand/software-center.md#work-information)voor meer informatie.
 
-## <a name="windows-analytics"></a>Windows Analytics
+## <a name="windows-diagnostic-data"></a>Diagnostische gegevens van Windows
 
-> [!Important]  
-> De Windows Analytics-service wordt vanaf 31 januari 2020 buiten gebruik gesteld. Zie [KB 4521815: Windows Analytics is buiten gebruik gesteld op 31 januari 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement)voor meer informatie.
+> [!IMPORTANT]
+> Deze groep werd eerder **Windows Analytics**genoemd. Micro soft heeft de Windows Analytics-service op 31 januari 2020 buiten gebruik gesteld. Zie [KB 4521815: Windows Analytics is buiten gebruik gesteld op 31 januari 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement)voor meer informatie.
 >
-> Desktop Analytics is de ontwikkeling van Windows Analytics. Zie [Wat is Desktop Analytics](../../../desktop-analytics/overview.md)? voor meer informatie.
+> Desktop Analytics is de ontwikkeling van Windows Analytics. Gebruik Desktop Analytics om instellingen voor Windows diagnostische gegevens te beheren. Zie [Wat is Desktop Analytics](../../../desktop-analytics/overview.md)? voor meer informatie.

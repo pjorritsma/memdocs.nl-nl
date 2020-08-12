@@ -5,17 +5,17 @@ description: Een plan voor de infra structuur van het software-update punt is es
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 08/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
-ms.openlocfilehash: dca6f3e4bf67ac4c947f785016d781e538ee0a4e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b7b3ef78924389232ea292d16c6840fbef9bb321
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724018"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88123588"
 ---
 # <a name="plan-for-software-updates-in-configuration-manager"></a>Software-updates plannen in Configuration Manager
 
@@ -71,7 +71,7 @@ De client selecteert wille keurig een software-update punt uit de lijst. Hiermee
 ###  <a name="software-update-point-switching"></a><a name="BKMK_SUPSwitching"></a> Overschakeling tussen software-updatepunten  
 
 > [!NOTE]  
-> Clients gebruiken grens groepen om een nieuw software-update punt te vinden. Als hun huidige software-update punt niet meer toegankelijk is, gebruiken ze ook grens groepen om een nieuwe te vinden. Voeg afzonderlijke software-update punten toe aan verschillende grens groepen om te bepalen welke servers door een client kunnen worden gevonden. Zie [Software-update punten](../../core/servers/deploy/configure/boundary-groups.md#software-update-points)voor meer informatie.  
+> Clients gebruiken grens groepen om een nieuw software-update punt te vinden. Als hun huidige software-update punt niet meer toegankelijk is, gebruiken ze ook grens groepen om een nieuwe te vinden. Voeg afzonderlijke software-update punten toe aan verschillende grens groepen om te bepalen welke servers door een client kunnen worden gevonden. Zie [Software-update punten](../../core/servers/deploy/configure/boundary-groups.md#bkmk_sup)voor meer informatie.  
 
 Als u meerdere software-update punten op een site hebt en één mislukt of niet beschikbaar is, zullen clients verbinding maken met een ander software-update punt. Met deze nieuwe server blijven clients scannen op de nieuwste software-updates. Wanneer een client voor het eerst een software-update punt krijgt toegewezen, blijft deze toegewezen aan dat software-update punt, tenzij het scannen niet kan worden uitgevoerd.  
 
@@ -111,7 +111,7 @@ Configuration Manager-clients overschakelen naar een nieuw software-update punt 
 > [!IMPORTANT]    
 > Wanneer u apparaten overschakelt om een nieuwe server te gebruiken, gebruiken de apparaten terugval om die nieuwe server te vinden. Clients scha kelen naar het nieuwe software-update punt tijdens de volgende scan cyclus voor software-updates.<!-- SCCMDocs#1537 -->
 >
-> Voordat u met deze wijziging begint, moet u de configuratie van de grens groep controleren om ervoor te zorgen dat uw software-update punten zich in de juiste grens groepen bevinden. Zie [Software-update punten](../../core/servers/deploy/configure/boundary-groups.md#software-update-points)voor meer informatie.  
+> Voordat u met deze wijziging begint, moet u de configuratie van de grens groep controleren om ervoor te zorgen dat uw software-update punten zich in de juiste grens groepen bevinden. Zie [Software-update punten](../../core/servers/deploy/configure/boundary-groups.md#bkmk_sup)voor meer informatie.  
 >
 > Als u overschakelt naar een nieuw software-update punt, wordt extra netwerk verkeer gegenereerd. De hoeveelheid verkeer is afhankelijk van de WSUS-configuratie-instellingen, bijvoorbeeld de gesynchroniseerde classificaties en producten, of het gebruik van een gedeelde WSUS-data base. Als u van plan bent meerdere apparaten te scha kelen, kunt u overwegen tijdens onderhouds Vensters. Deze tijds duur vermindert de invloed van uw netwerk wanneer clients scannen met het nieuwe software-update punt.  
 
@@ -151,7 +151,7 @@ Als u apparaten wilt beheren die uw netwerk naar het Internet roamen, ontwikkelt
 #### <a name="cloud-management-gateway"></a>Cloudbeheergateway
 Maak een Cloud beheer gateway in Microsoft Azure en schakel ten minste één on-premises software-update punt in om verkeer toe te staan van clients op internet. Wanneer clients naar het Internet roamen, blijven ze controleren op basis van uw software-update punten. Alle clients op Internet ontvangen altijd inhoud van de Microsoft Update-Cloud service. 
 
-Zie voor meer informatie [plannen voor de Cloud beheer gateway](../../core/clients/manage/cmg/plan-cloud-management-gateway.md).  
+Zie voor meer informatie [plannen van de Cloud beheer gateway](../../core/clients/manage/cmg/plan-cloud-management-gateway.md) en het [configureren van grens groepen](../../core/servers/deploy/configure/boundary-groups.md#bkmk_sup).  
 
 #### <a name="internet-based-client-management"></a>Clientbeheer via internet
 Plaats een software-update punt in een Internet gericht netwerk en schakel dit in om verkeer toe te staan van clients op internet. Wanneer clients naar het Internet zwerven, scha kelen ze naar dit software-update punt voor het scannen. Alle clients op Internet ontvangen altijd inhoud van de Microsoft Update-Cloud service.
@@ -289,7 +289,7 @@ Zie [vereisten voor Internet toegang](../../core/plan-design/network/internet-en
 Deze sectie bevat de volgende subonderwerpen:  
 - [Synchronisatie bron](#BKMK_SyncSource)
 - [Synchronisatie planning](#BKMK_SyncSchedule)
-- [Update classificaties](#BKMK_UpdateClassifications)
+- [Updateclassificaties](#BKMK_UpdateClassifications)
 - [Producten](#BKMK_UpdateProducts)
 - [Vervangingsregels](#BKMK_SupersedenceRules)
 - [Talen](#BKMK_UpdateLanguages)  
@@ -322,7 +322,7 @@ Configureer de synchronisatie planning alleen op het software-update punt op de 
 Nadat het software-update punt met succes is gesynchroniseerd, verzendt het een synchronisatie aanvraag naar onderliggende sites. Als u aanvullende software-update punten op een primaire site hebt, verzendt het een synchronisatie aanvraag naar elk software-update punt. Dit proces wordt herhaald op elke site in de hiërarchie.  
 
 
-###  <a name="update-classifications"></a><a name="BKMK_UpdateClassifications"></a> Updateclassificaties  
+###  <a name="update-classifications"></a><a name="BKMK_UpdateClassifications"></a>Update classificaties  
 
 Elke software-update wordt gedefinieerd met een updateclassificatie die helpt de verschillende types updates te organiseren. Tijdens het synchronisatie proces worden de meta gegevens voor de opgegeven classificaties gesynchroniseerd met de site. 
 
@@ -372,7 +372,7 @@ Een software-updat die een andere software-update vervangt, doet gewoonlijk een 
 
 -   Verbetert de efficiëntie van het vervangen update bestands pakket, dat wordt geïnstalleerd op clients als de update is goedgekeurd voor installatie. De vervangen update kan bijvoorbeeld bestanden bevatten die niet langer relevant zijn voor de oplossing of voor de besturings systemen die worden ondersteund door de nieuwe update. Deze bestanden zijn niet opgenomen in het vervangende bestands pakket van de update.  
 
--   Werkt nieuwere versies van het product bij. Met andere woorden, het werkt versies bij die niet langer toepasselijk zijn voor oudere versies of configuraties van een product. Updates kunnen ook andere updates vervangen als er wijzigingen zijn aangebracht om taalondersteuning uit te breiden. Een latere revisie van een product update voor Microsoft Office kan bijvoorbeeld de ondersteuning voor een ouder besturings systeem verwijderen, maar dit kan extra ondersteuning bieden voor nieuwe talen in de initiële update versie.  
+-   Werkt nieuwere versies van het product bij. Met andere woorden, het werkt versies bij die niet langer toepasselijk zijn voor oudere versies of configuraties van een product. Updates kunnen ook andere updates vervangen als er wijzigingen zijn aangebracht om taalondersteuning uit te breiden. Een latere revisie van een product update voor Microsoft 365-apps kan bijvoorbeeld de ondersteuning voor een ouder besturings systeem verwijderen, maar dit kan extra ondersteuning bieden voor nieuwe talen in de initiële update release.  
 
 Geef in de eigenschappen voor het software-update punt op dat de vervangen software-updates onmiddellijk verlopen zijn. Deze instelling voor komt dat ze worden opgenomen in nieuwe implementaties. Ook worden de bestaande implementaties gemarkeerd om aan te geven dat ze een of meer verlopen software-updates bevatten. Of geef een periode op voordat de vervangen software-updates zijn verlopen. Met deze actie kunt u de implementatie voortzetten. 
 
@@ -461,7 +461,8 @@ Wanneer het opnieuw opstarten in behandeling is voor een Configuration Manager s
 
 ## <a name="evaluate-software-updates-after-a-servicing-stack-update"></a><a name="bkmk_ssu"></a>Software-updates evalueren na een onderhouds stack-update
 <!--4639943-->
-Met ingang van versie 2002 detecteert Configuration Manager of een onderhouds stack-update (SSU) deel uitmaakt van een installatie voor meerdere updates. Wanneer een SSU wordt gedetecteerd, wordt het eerst geïnstalleerd. Na de installatie van de SSU wordt een evaluatie cyclus voor software-updates uitgevoerd om de resterende updates te installeren. Met deze wijziging kan een afhankelijke cumulatieve update worden geïnstalleerd na de onderhouds stack-update. Het apparaat hoeft niet opnieuw te worden opgestart tussen installaties en u hoeft geen extra onderhouds venster te maken. SSUs worden eerst alleen geïnstalleerd voor installaties die niet door de gebruiker zijn gestart. Als een gebruiker bijvoorbeeld een installatie voor meerdere updates vanuit software Center initieert, wordt de SSU mogelijk niet eerst geïnstalleerd.
+Met ingang van versie 2002 detecteert Configuration Manager of een onderhouds stack-update (SSU) deel uitmaakt van een installatie voor meerdere updates. Wanneer een SSU wordt gedetecteerd, wordt het eerst geïnstalleerd. Na de installatie van de SSU wordt een evaluatie cyclus voor software-updates uitgevoerd om de resterende updates te installeren. Met deze wijziging kan een afhankelijke cumulatieve update worden geïnstalleerd na de onderhouds stack-update. Het apparaat hoeft niet opnieuw te worden opgestart tussen installaties en u hoeft geen extra onderhouds venster te maken. SSUs worden eerst alleen geïnstalleerd voor installaties die niet door de gebruiker zijn gestart. Als een gebruiker bijvoorbeeld een installatie voor meerdere updates vanuit software Center initieert, wordt de SSU mogelijk niet eerst geïnstalleerd. De installatie van SSUs is voor het eerst niet beschikbaar voor Windows Server-besturings systemen wanneer u Configuration Manager versie 2002. <!--7813007-->Deze functionaliteit is toegevoegd aan Configuration Manager versie 2006 voor Windows Server-besturings systemen.
+
 
 
 ## <a name="next-steps"></a>Volgende stappen

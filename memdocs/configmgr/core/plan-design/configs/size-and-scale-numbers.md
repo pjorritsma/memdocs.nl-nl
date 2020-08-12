@@ -2,7 +2,7 @@
 title: Grootte en schaal
 titleSuffix: Configuration Manager
 description: Bepaal het aantal site systeem rollen en-sites dat u nodig hebt om de apparaten in uw omgeving te ondersteunen.
-ms.date: 11/29/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c5a42100-2f60-4952-b495-918025ea6559
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5109ababd00011784618f9c989e1d2b756a322d9
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 0d8057d61ebaaa8a545d21b31331faec1c04884e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715625"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126695"
 ---
 # <a name="size-and-scale-numbers-for-configuration-manager"></a>Grootte en schaalgrootte voor Configuration Manager
 
@@ -184,6 +184,8 @@ Beperk het aantal beveiligingsbereiken op automatische implementatie regels (Adr
 Elk exemplaar van de SMS-provider ondersteunt gelijktijdige verbindingen van meerdere aanvragen. De enige beperkingen met betrekking tot deze verbindingen zijn het aantal server verbindingen dat beschikbaar is voor Windows en de beschik bare bronnen op de server om de verbindings aanvragen te verwerken.
 
 Zie [de SMS-provider plannen](../hierarchy/plan-for-the-sms-provider.md)voor meer informatie.
+
+De beheer service is een REST API op elk exemplaar van de SMS-provider. Het ondersteunt Maxi maal 5.000 aanvragen per seconde en 200 aanvragen per client-IP-adres.
 
 ## <a name="client-numbers-for-sites-and-hierarchies"></a><a name="bkmk_clientnumbers"></a>Client nummers voor sites en hiërarchieën
 

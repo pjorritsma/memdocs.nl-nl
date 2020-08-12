@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 15cf7f3621f25a82f0e16d5275369ec93225bbf7
-ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
+ms.openlocfilehash: fc4309d3d09cd35c17b23bc46dcb1a28d210aa8e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86422833"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125743"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>Zelf studie: Windows 10 implementeren naar pilot
 
@@ -30,7 +30,7 @@ In deze zelfstudie leert u het volgende:
 > * Een desktop Analytics-implementatie plan voor Windows 10 maken  
 > * Configuration Manager gebruiken om Windows 10 te implementeren in de test groep  
 
-Als u nog geen abonnement op Azure hebt, maak dan een [gratis account](https://azure.microsoft.com/free) aan voordat u begint. Wanneer het gebruik van Desktop Analytics op de juiste wijze is geconfigureerd, worden er geen Azure-kosten in rekening gebracht.
+Als u nog geen Azure-abonnement hebt, maakt u een [gratis account](https://azure.microsoft.com/free) voordat u begint. Wanneer het gebruik van Desktop Analytics op de juiste wijze is geconfigureerd, worden er geen Azure-kosten in rekening gebracht.
 
 Desktop Analytics maakt gebruik van een *log Analytics-werk ruimte* in uw Azure-abonnement. Een werkruimte is in wezen een container met accountgegevens en eenvoudige configuratiegegevens voor het account. Zie [werk ruimten beheren](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor/toc.json)voor meer informatie.
 
@@ -56,7 +56,7 @@ Voordat u met deze zelf studie begint, moet u ervoor zorgen dat u over de volgen
 
     - Configuration Manager client versie 1902 met update pakket (4500571) of hoger  
 
-- Zakelijke goed keuring voor het configureren van het Windows diagnostische gegevens niveau op **uitgebreid (beperkt)** op de pilot-apparaten  
+- Zakelijke goed keuring voor het configureren van het Windows diagnostische gegevens niveau op **optioneel (beperkt)** op de pilot-apparaten  
 
     Zie [privacy van Desktop Analytics](privacy.md)voor meer informatie.
 
@@ -193,7 +193,7 @@ Installeer de Configuration Manager versie 1902 update pakket (4500571) ter onde
 
     - **Commerciële id**: deze waarde moet automatisch worden ingevuld met de id van uw organisatie  
 
-    - **Niveau van diagnostische gegevens voor Windows 10**: Selecteer ten minste **uitgebreid (beperkt)**  
+    - **Niveau van diagnostische gegevens voor Windows 10**: Selecteer ten minste **optioneel (beperkt)**  
 
     - **Apparaatnaam in diagnostische gegevens toestaan**: Selecteer **inschakelen**  
   

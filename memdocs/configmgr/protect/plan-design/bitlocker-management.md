@@ -2,7 +2,7 @@
 title: BitLocker-beheer plannen
 titleSuffix: Configuration Manager
 description: Plannen voor het beheer van BitLocker-stationsversleuteling met Configuration Manager
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2c03d5d06dc6b49ceff6af8ce862eb19cb4a517a
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 8370c3352778fa6bb7c6229beb1c7610c419a86d
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531465"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129294"
 ---
 # <a name="plan-for-bitlocker-management"></a>BitLocker-beheer plannen
 
@@ -25,7 +25,7 @@ ms.locfileid: "84531465"
 
 Vanaf versie 1910 gebruikt u Configuration Manager om BitLocker-stationsversleuteling (BDE) te beheren voor on-premises Windows-clients, die zijn gekoppeld aan Active Directory. Azure Active Directory lid zijn van een werk groep of clients worden niet ondersteund. Het biedt een volledig beheer van de BitLocker-levenscyclus waarmee het gebruik van micro soft BitLocker Administration and monitoring (MBAM) kan worden vervangen.
 
-> [!Note]  
+> [!NOTE]
 > Configuration Manager schakelt deze optionele functie standaard niet in. U moet deze functie inschakelen voordat u deze kunt gebruiken. Zie voor meer informatie [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).  
 
 Zie [overzicht van BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview)voor meer informatie.
@@ -59,7 +59,7 @@ Ingebouwde rapporten voor:
 
 - Versleutelings status per volume of per apparaat
 - De primaire gebruiker van het apparaat
-- Nalevings status
+- Status van naleving
 - Redenen voor niet-naleving
 
 ### <a name="administration-and-monitoring-website"></a>Website voor beheer en controle
@@ -81,6 +81,8 @@ Laat gebruikers zichzelf helpen met een sleutel voor eenmalig gebruik voor het o
   - Configureer het beheer punt voor HTTPS. Deze optie is van toepassing op Configuration Manager versie 1910 of 2002.
 
   Zie [herstel gegevens versleutelen](../deploy-use/bitlocker/encrypt-recovery-data.md)voor meer informatie.
+
+- Hoewel de BitLocker-herstel service wordt geïnstalleerd op een beheer punt dat gebruikmaakt van een database replica, kunnen de clients geen herstel sleutels meer borgen. Vervolgens versleutelt BitLocker het station niet. Als u de herstel service wilt gebruiken, hebt u ten minste één beheer punt in een replica configuratie nodig. Schakel de BitLocker-herstel service op een beheer punt met een database replica uit.<!-- 7813149 -->
 
 - Als u de BitLocker-beheer rapporten wilt gebruiken, installeert u de site systeemrol van het Reporting Services-punt. Zie [Configure Reporting](../../core/servers/manage/configuring-reporting.md)(Engelstalig) voor meer informatie.
 

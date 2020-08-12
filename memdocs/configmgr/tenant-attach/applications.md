@@ -2,7 +2,7 @@
 title: Tenant koppeling-toepassingen (preview) in het beheer centrum
 titleSuffix: Configuration Manager
 description: Toepassingen voor het uploaden van Configuration Manager-apparaten installeren vanuit het beheer centrum.
-ms.date: 08/10/2020
+ms.date: 08/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -10,12 +10,12 @@ ms.assetid: 963dda08-87b8-4e80-90a7-25625efe8861
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: c82feac1b9c841d90be66989c220c7b528597b7d
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: ca71d40b29a9dcd9c239ccd06a8a28321f50f62c
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88057579"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127682"
 ---
 # <a name="tenant-attach-install-an-application-from-the-admin-center-preview"></a><a name="bkmk_apps"></a>Tenant bijvoegen: een toepassing installeren vanuit het beheer centrum (preview-versie)
 <!--cm 6024389, in 7220536 pubpreview Aug 10, 2020-->
@@ -35,6 +35,11 @@ Micro soft Endpoint Manager is een geïntegreerde oplossing voor het beheer van 
 - De optionele functie **voor het goed keuren van toepassings aanvragen voor gebruikers per apparaat**inschakelen. Zie voor meer informatie [Enable optional features from updates](../core/servers/manage/install-in-console-updates.md#bkmk_options).
 - Ten minste één toepassing die is geïmplementeerd op een verzameling apparaten met de **beheerder moet een aanvraag voor deze toepassing goed keuren op de apparaat** -optie die is ingesteld op de implementatie. Zie [toepassingen goed keuren](../apps/deploy-use/app-approval.md#bkmk_opt)voor meer informatie.
    - Gebruikers gerichte toepassingen of toepassingen zonder de optie set goed keuring worden niet weer gegeven in de lijst met toepassingen wanneer u Configuration Manager versie 2002.
+
+Daarnaast hebt u het volgende nodig voor het installeren van [gebruikers gerichte toepassingen](#bkmk_user):<!--7518897-->
+
+- Configuration Manager versie 2006 en de bijbehorende versie van de console zijn geïnstalleerd.
+
 
 ## <a name="permissions"></a>Machtigingen
 
@@ -72,7 +77,16 @@ U kunt de lijst met toepassingen filteren op basis van de status. De toepassings
 - **Mislukt**: de installatie van de toepassing is mislukt.
 - **Niet voldaan aan vereisten**: er is niet voldaan aan de vereisten van de toepassing.
 - **Niet geïnstalleerd**: de toepassing is momenteel niet geïnstalleerd. Deze status wordt doorgaans gezien als een andere implementatie of een gebruiker de toepassing heeft verwijderd.
+- **Opnieuw opstarten in behandeling**: de toepassing is geïnstalleerd, maar moet opnieuw worden opgestart om te volt ooien (vanaf versie 2006).
 
+## <a name="deploy-an-application-to-a-user"></a><a name="bkmk_user"></a>Een toepassing implementeren voor een gebruiker
+<!--7518897-->
+Vanaf Configuration Manager versie 2006 worden toepassingen die beschikbaar zijn, weer gegeven in het knoop punt **toepassingen** voor een ConfigMgr-apparaat. De lijst met toepassingen die beschikbaar zijn voor het apparaat omvat ook toepassingen die zijn geïmplementeerd op de momenteel aangemelde gebruiker van het apparaat.
+
+Voor het implementeren van toepassingen voor een gebruiker gelden de volgende beperkingen:
+- Scenario's voor sessie met meerdere gebruikers worden niet ondersteund.
+- Apparaten die zijn toegevoegd aan Azure AD, worden momenteel niet ondersteund.
+   - Apparaten die deel uitmaken van een domein en Azure AD zijn toegevoegd, worden ondersteund.
 
 ## <a name="next-steps"></a>Volgende stappen
 

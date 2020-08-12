@@ -1,21 +1,21 @@
 ---
-title: 'De gebruikersstatus beheren '
+title: De gebruikersstatus beheren
 titleSuffix: Configuration Manager
 description: Configuration Manager gebruikt de Hulpprogramma voor migratie van gebruikersstatus om gebruikers status gegevens vast te leggen en te herstellen in implementatie scenario's voor besturings systemen.
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: d8d5c345-1e91-410b-b8a9-0170dcfa846e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 70c15fb3a108b22ffacad69d6a67bef3b2d29952
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0a720c68fc705187dedb6ff04fc3898a8b0b21c8
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724074"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124360"
 ---
 # <a name="manage-user-state-in-configuration-manager"></a>Gebruikers status beheren in Configuration Manager
 

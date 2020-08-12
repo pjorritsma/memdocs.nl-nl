@@ -2,76 +2,88 @@
 title: Zelfstandige media gebruiken om Windows te implementeren
 titleSuffix: Configuration Manager
 description: Gebruik zelfstandige media in Configuration Manager om Windows te implementeren waarbij band breedte beperkt is tot een optie om computers te vernieuwen, te installeren of bij te werken.
-ms.date: 10/06/2016
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 58a0d2ae-de76-401f-b854-7a5243949033
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a840636ae1be0d8d38819d0465be1211ff6d2f60
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 51b39e450fb5f8ffd7d83b4122d7514489383dfb
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724221"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124649"
 ---
-# <a name="use-stand-alone-media-to-deploy-windows-without-using-the-network"></a>Zelfstandige media gebruiken om Windows te implementeren zonder gebruik van het netwerk
+# <a name="use-standalone-media-to-deploy-windows-without-using-the-network"></a>Zelfstandige media gebruiken om Windows te implementeren zonder gebruik van het netwerk
 
 *Van toepassing op: Configuration Manager (huidige vertakking)*
 
-Zelfstandige media in Configuration Manager bevatten alles wat u nodig hebt om een besturings systeem op een computer te implementeren. Dit omvat de opstartinstallatiekopie, de installatiekopie van het besturingssysteem en de takenreeks voor het installeren van het besturingssysteem, met inbegrip van toepassingen en stuurprogramma's, enzovoort. Met implementaties met zelfstandige media kunt u besturingssystemen implementeren in volgende situaties:  
+Zelfstandige media in Configuration Manager bevatten alles wat u nodig hebt om een besturings systeem op een computer te implementeren. Het medium bevat de opstart installatie kopie, de installatie kopie van het besturings systeem, het taken reeks beleid, toepassingen, stuur Programma's en meer. Met implementaties met zelfstandige media kunt u besturings systemen implementeren in de volgende situaties:
 
--   In omgevingen waar het niet praktisch is om een installatiekopie van een besturingssysteem of andere grote pakketten over het netwerk te kopiëren.  
+- In omgevingen waar het niet praktisch is om een installatie kopie van een besturings systeem of andere grote pakketten over het netwerk te kopiëren.
 
--   In omgevingen zonder netwerkverbinding of de met lage netwerkbandbreedte.  
+- In omgevingen zonder netwerk verbinding of netwerk verbinding met een lage band breedte.
 
-U kunt voor de volgende scenario's voor besturingssysteemimplementaties zelfstandige media gebruiken:  
+Gebruik zelfstandige media in de volgende implementatie scenario's voor besturings systemen:
 
-- [Een bestaande computer vernieuwen met een nieuwe versie van Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md)  
+- [Een bestaande computer vernieuwen met een nieuwe versie van Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md)
 
-- [Een nieuwe versie van Windows op een nieuwe computer (bare-metal) installeren](install-new-windows-version-new-computer-bare-metal.md)  
+- [Een nieuwe versie van Windows op een nieuwe computer (bare-metal) installeren](install-new-windows-version-new-computer-bare-metal.md)
 
-- [Windows bijwerken naar de laatste versie](upgrade-windows-to-the-latest-version.md)  
+- [Windows bijwerken naar de laatste versie](upgrade-windows-to-the-latest-version.md)
 
-  Voer de stappen in een van de implementatiescenario’s voor besturingssystemen en gebruik de volgende secties om de zelfstandige media voor te bereiden en te maken.  
+Voer de stappen in een van deze scenario's voor implementatie van het besturings systeem uit. Gebruik vervolgens de volgende secties om de zelfstandige media voor te bereiden en te maken.
 
-## <a name="task-sequence-actions-not-supported-when-using-stand-alone-media"></a>Takenreeksacties die niet worden ondersteund bij het gebruik van zelfstandige media  
- Als u de stappen in een van de ondersteunde scenario's voor besturingssysteemimplementaties, de te implementeren takenreeks of upgrade hebt voltooid, is het besturingssysteem gemaakt en alle bijbehorende inhoud gedistribueerd naar een distributiepunt. Wanneer u zelfstandig media gebruikt, worden de volgende acties in de takenreeks niet ondersteund:  
+## <a name="unsupported-task-sequence-actions"></a>Niet-ondersteunde taken reeks acties
 
--   De stap Stuurprogramma's automatisch toepassen in de takenreeks. Automatische toepassing van apparaatstuurprogramma's uit de stuurprogrammacatalogus wordt niet ondersteund, maar u kunt de stap Stuurprogramma's automatisch toepassen kiezen om een specifieke reeks stuurprogramma's beschikbaar te maken voor Windows Setup.  
+Wanneer u zelfstandige media gebruikt, ondersteunt Configuration Manager de volgende acties in de taken reeks niet:
 
--   Installatie van software-updates.  
+- De stap [Stuur Programma's automatisch Toep assen](../understand/task-sequence-steps.md#BKMK_AutoApplyDrivers) . Automatische toepassing van apparaatstuurprogramma's uit de stuurprogrammacatalogus wordt niet ondersteund. Als u een specifieke set stuur Programma's beschikbaar wilt maken voor Windows Setup, gebruikt u de stap [Stuur programmapakket Toep assen](../understand/task-sequence-steps.md#BKMK_ApplyDriverPackage) .
 
--   Software installeren voordat het besturingssysteem wordt geïmplementeerd.  
+- Installatie van software-updates.
 
--   Koppelen van gebruikers aan de doelcomputer ter ondersteuning van de gebruikersaffiniteit van apparaten.  
+- Software installeren voordat het besturings systeem wordt geïmplementeerd.
 
--   Dynamische pakket wordt geïnstalleerd via de taak Pakketten installeren.  
+- Gebruikers koppelen aan de doel computer voor affiniteit tussen gebruikers en apparaten.
 
--   Dynamische toepassing wordt geïnstalleerd via de toepassing Taak installeren.  
+- Dynamisch pakket wordt geïnstalleerd met de stap [pakket installeren](../understand/task-sequence-steps.md#BKMK_InstallPackage) .
 
-> [!NOTE]  
->  Als uw takenreeks voor het implementeren van een besturingssysteem de stap [Install Package](../understand/task-sequence-steps.md#BKMK_InstallPackage) bevat en u de zelfstandige media op een centrale beheersite maakt, kan er een fout optreden. De centrale beheersite beschikt niet over de benodigde beleidsregels voor clientconfiguratie om de agent voor softwaredistributie in te schakelen tijdens het uitvoeren van de takenreeks. Mogelijk wordt de volgende fout in het bestand CreateTsMedia.log weergegeven:  
->   
->  `"WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)"`
->   
->  Bij zelfstandige media met de stap **Pakket installeren** moet u de zelfstandige media maken op een primaire site waarop de agent voor softwaredistributie is ingeschakeld, of moet u de stap [Run Command Line](../understand/task-sequence-steps.md#BKMK_RunCommandLine) toevoegen aan de takenreeks. Deze stap moet worden toegevoegd na de stap [Setup Windows and ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) en vóór de eerste stap **Pakket installeren** . Met de stap **Opdrachtregel uitvoeren** wordt een WMIC-opdracht uitgevoerd waarmee de agent voor softwaredistributie wordt ingeschakeld voordat de eerste stap Pakket installeren wordt uitgevoerd. U kunt de volgende opdracht gebruiken in de takenreeksstap **Opdrachtregel uitvoeren**:  
->   
->  **Opdrachtregel**: **WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE**  
+- Dynamische toepassing wordt geïnstalleerd met de stap [toepassing installeren](../understand/task-sequence-steps.md#BKMK_InstallApplication) .
 
-## <a name="configure-deployment-settings"></a>Implementatie-instellingen configureren  
- Als u het implementatieproces voor een besturingssysteem wilt starten vanaf zelfstandige media, moet u de implementatie configureren om het besturingssysteem beschikbaar te stellen voor media. U kunt dit configureren op de pagina **Implementatie-instellingen** van de wizard Software implementeren of op het tabblad **Implementatie-instellingen** in de eigenschappen voor de implementatie.  Configureer een van de volgende waarden voor de instelling **Toegankelijk maken voor de volgende** :  
+> [!NOTE]
+> Als uw taken reeks voor het implementeren van een besturings systeem de stap **pakket installeren** bevat en u de zelfstandige media op een centrale beheer site (CAS) maakt, kan er een fout optreden. De certificerings instanties beschikken niet over het benodigde beleid voor client configuratie om de Software Distribution agent in te scha kelen wanneer de taken reeks wordt uitgevoerd. De volgende fout kan worden weer gegeven in het bestand **CreateTsMedia. log** :
+>
+> `"WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)"`
+>
+> Voor zelfstandige media met de stap **pakket installeren** maakt u de zelfstandige media op een primaire site waarop de agent voor software distributie is ingeschakeld
+>
+> U kunt ook de taken reeks bewerken om een stap [opdracht regel uitvoeren](../understand/task-sequence-steps.md#BKMK_RunCommandLine) toe te voegen na de stap [Windows en ConfigMgr installeren](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) . Met deze **opdracht regel** stap voert u de volgende WMI-opdracht uit om de Software Distribution agent in te scha kelen voordat de eerste stap **pakket installeren** wordt uitgevoerd:
+>
+> ```command
+> WMIC /namespace:\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE
+> ```
 
--   **Configuration Manager-clients, media en PXE**  
+## <a name="configure-deployment-settings"></a>Implementatie-instellingen configureren
 
--   **Alleen media en PXE**  
+Wanneer u zelfstandige media gebruikt om het implementatie proces van het besturings systeem te starten, moet u de implementatie configureren om het besturings systeem beschikbaar te stellen voor media. Selecteer op de pagina **implementatie-instellingen** van de implementatie een van de volgende opties voor de instelling **beschikbaar maken voor de volgende** :
 
--   **Alleen media en PXE (verborgen)**  
+- Configuration Manager-clients, media en PXE
 
-## <a name="create-the-stand-alone-media"></a>Zelfstandige media maken  
- U kunt opgeven of de zelfstandige media een USB-flashstation of een cd/dvd-set is. De optie die u als opstartbaar station kiest, moet worden ondersteund door de computer waarop de media worden gestart. Zie voor meer informatie [maken van zelfstandige media](create-stand-alone-media.md).  
+- Alleen media en PXE
 
-## <a name="install-the-operating-system-from-stand-alone-media"></a>Het besturingssysteem installeren vanaf zelfstandige media  
- Plaats de zelfstandige media in een opstartbaar station op de computer en schakel deze vervolgens in om het besturingssysteem te installeren.  
+- Alleen media en PXE (verborgen)
+
+## <a name="create-the-standalone-media"></a>De zelfstandige media maken
+
+U kunt opgeven of de zelfstandige media een USB-flash station of een CD/DVD-set is. De computer die de media start, moet ondersteuning bieden voor de optie die u kiest als een opstartbaar station. Zie [zelfstandige media maken](create-stand-alone-media.md)voor meer informatie.
+
+## <a name="install-the-os-from-standalone-media"></a>Het besturings systeem installeren vanaf zelfstandige media
+
+Als u het besturings systeem wilt installeren, plaatst u het zelfstandige medium op de computer en schakelt u het vervolgens in.
+
+## <a name="next-steps"></a>Volgende stappen
+
+[Gebruikerservaring voor implementatie van besturingssysteem](../understand/user-experience.md#task-sequence-wizard)

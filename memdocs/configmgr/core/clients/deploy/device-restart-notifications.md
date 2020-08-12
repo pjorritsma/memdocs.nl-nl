@@ -2,7 +2,7 @@
 title: Meldingen over opnieuw starten van apparaat
 titleSuffix: Configuration Manager
 description: Meldings gedrag voor het opnieuw starten van verschillende client instellingen in Configuration Manager.
-ms.date: 06/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 5ef1bff8-9733-4b5a-b65f-26b94accd210
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: b326c4dd8112a72555239f2c3eda078ebf47bf82
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: feb9f4206df65ee34228577a9e589ddd1be72870
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347216"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127241"
 ---
 # <a name="device-restart-notifications-in-configuration-manager"></a>Meldingen voor het opnieuw opstarten van apparaten in Configuration Manager
 
@@ -33,25 +33,25 @@ De [client instellingen voor het opnieuw opstarten](#client-settings) van de com
 
 ## <a name="restart-notification-types"></a>Meldings typen opnieuw opstarten
 
-Wanneer een apparaat opnieuw moet worden opgestart, wordt door de client een melding weer gegeven aan de eind gebruiker van de eerstvolgende keer dat de computer opnieuw wordt opgestart. Er zijn vier algemene meldingen die gebruikers kunnen ontvangen.
+Wanneer een apparaat opnieuw moet worden opgestart, wordt door de client een melding weer gegeven aan de eind gebruiker van de eerstvolgende keer dat de computer opnieuw wordt opgestart.
 
 ### <a name="toast-notification"></a>Pop-upmelding
 
 Met een Windows-pop-upmelding wordt de gebruiker geïnformeerd dat het apparaat opnieuw moet worden opgestart. De informatie in de pop-upmelding kan verschillen, afhankelijk van welke versie van Configuration Manager u uitvoert. Dit type melding is systeem eigen voor het Windows-besturings systeem. Mogelijk ziet u ook software van derden met behulp van dit type melding.
 
-![Pop-upmelding van wacht op opnieuw starten](media/3555947-restart-toast.png)
+:::image type="content" source="media/3555947-restart-toast.png" alt-text="Pop-upmelding van wacht op opnieuw starten":::
 
 ### <a name="software-center-notification-with-snooze"></a>Melding over Software Center met uitstellen
 
 Software Center toont een melding met de optie uitstellen en de resterende tijd voordat de apparaten opnieuw worden opgestart. Het bericht kan afwijken, afhankelijk van uw versie van Configuration Manager.
 
-![Melding over opnieuw starten in behandeling Software Center met knop uitstellen](media/3976435-snooze-restart-countdown.png)
+:::image type="content" source="media/3976435-snooze-restart-countdown.png" alt-text="Melding over opnieuw starten in behandeling Software Center met knop uitstellen":::
 
 ### <a name="software-center-final-countdown-notification"></a>Melding over laatste aftelling Software Center
 
 Software Center toont deze laatste melding over aftelling die de gebruiker niet kan sluiten of uitstellen.
 
-![Melding over laatste aftelling Software Center](media/3976435-final-restart-countdown.png)
+:::image type="content" source="media/3976435-final-restart-countdown.png" alt-text="Melding over laatste aftelling Software Center":::
 
 Vanaf versie 1906 ziet de gebruiker geen voortgangs balk in de melding over opnieuw opstarten totdat de herstart van de computer minder dan 24 uur duurt.
 
@@ -59,17 +59,47 @@ Vanaf versie 1906 ziet de gebruiker geen voortgangs balk in de melding over opni
 
 Als de gebruiker de vereiste software proactief vóór de deadline installeert en opnieuw moet worden opgestart, wordt een andere melding weer geven. De volgende melding treedt op wanneer de instelling gebruikers ervaring meldingen toestaat en u geen pop-upmeldingen gebruikt voor de implementatie. Voor meer informatie over het configureren van deze instellingen raadpleegt u [instellingen voor **gebruikers ervaring** voor implementatie](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-ux) en [gebruikers meldingen voor vereiste implementaties](../../../apps/deploy-use/deploy-applications.md#bkmk_notify).
 
-![Melding voor proactief geïnstalleerde software](media/3976435-proactive-user-restart-notification.png)
+:::image type="content" source="media/3976435-proactive-user-restart-notification.png" alt-text="Melding voor proactief geïnstalleerde software":::
 
 #### <a name="available-apps"></a>Available apps
 
 Wanneer u geen pop-upmeldingen gebruikt, is het dialoog venster voor software dat is gemarkeerd als **beschikbaar** , vergelijkbaar met proactief geïnstalleerde software. Voor **beschik bare** software heeft de melding geen deadline voor het opnieuw opstarten en kan de gebruiker een eigen uitstel interval kiezen. Zie [goedkeurings instellingen](../../../apps/deploy-use/deploy-applications.md#bkmk_approval)voor meer informatie.
 
-![Software die is gemarkeerd als beschikbaar, heeft geen deadline om opnieuw op te starten in de melding.](media/3555947-deployment-marked-available-restart.png)
+:::image type="content" source="media/3555947-deployment-marked-available-restart.png" alt-text="De beschik bare software heeft geen deadline om opnieuw te worden opgestart in de melding":::
+
+### <a name="software-center-notification-of-required-restart"></a>Melding van software Center over vereiste herstart
+
+<!--3601213-->
+
+Vanaf versie 2006 kunt u client instellingen configureren om te voor komen dat apparaten automatisch opnieuw worden gestart wanneer een implementatie deze vereist. Wanneer een vereiste implementatie vereist dat het apparaat opnieuw wordt opgestart, maar u de client instelling uitschakelt **Configuration Manager kan een apparaat geforceerd opnieuw opstarten**, wordt de volgende melding weer geven:
+
+:::image type="content" source="media/3601213-restart-your-computer.png" alt-text="Melding van software Center om de computer opnieuw op te starten":::
+
+Als u **deze melding** uitstelt, wordt deze weer gegeven op basis van de manier waarop u de frequentie van herinneringen voor opnieuw starten configureert. Het apparaat wordt pas opnieuw opgestart als u Windows **opnieuw opstarten** selecteert of opnieuw opstart.
+
+> [!NOTE]
+> Standaard kunnen apparaten door Configuration Manager nog steeds opnieuw worden opgestart.
 
 ## <a name="client-settings"></a>Clientinstellingen
 
 Als u het gedrag van het opnieuw opstarten van de client wilt beheren, configureert u de volgende client instellingen voor het apparaat in de groep **computer opnieuw opstarten** . Zie [client instellingen configureren](configure-client-settings.md)voor meer informatie.
+
+### <a name="configuration-manager-can-force-a-device-to-restart"></a>Configuration Manager kan een apparaat geforceerd opnieuw opstarten
+
+<!--3601213-->
+
+Vanaf versie 2006 kunt u client instellingen configureren om te voor komen dat apparaten automatisch opnieuw worden gestart wanneer een implementatie deze vereist. Configuration Manager deze instelling standaard ingeschakeld.
+
+> [!IMPORTANT]
+> Deze client instelling is van toepassing op alle toepassingen, software-updates en pakket implementaties op het apparaat. Totdat een gebruiker het apparaat hand matig opnieuw opstart:
+>
+> - Software-updates en app-revisies zijn mogelijk niet volledig geïnstalleerd
+> - Extra software-installaties worden mogelijk niet uitgevoerd
+
+Wanneer u deze instelling uitschakelt, kunt u niet de hoeveelheid tijd opgeven na de deadline dat het apparaat opnieuw wordt opgestart of de gebruiker wordt een definitieve aftellings melding gegeven.
+
+> [!NOTE]
+> Als u optimaal wilt profiteren van de nieuwe functies van Configuration Manager, moet u na het bijwerken van de site ook clients bijwerken naar de nieuwste versie. Wanneer u de-site en-console bijwerkt terwijl er nieuwe functionaliteit wordt weer gegeven in de Configuration Manager-console, is het volledige scenario niet functioneel totdat de client versie ook het meest recent is.
 
 ### <a name="specify-the-amount-of-time-after-the-deadline-before-a-device-gets-restarted-minutes"></a>De hoeveelheid tijd na de deadline opgeven voordat een apparaat opnieuw wordt gestart (minuten)
 
@@ -123,17 +153,17 @@ Als de instelling voor het **opnieuw opstarten van een implementatie vereist is,
 
   - Als de herstart langer dan 24 uur duurt, wordt een geschatte start tijd weer gegeven. De timing van deze melding is gebaseerd op de instelling: **Geef de hoeveelheid tijd op na de deadline voordat een apparaat opnieuw wordt gestart (minuten)**.
 
-    ![De tijd voor opnieuw opstarten is langer dan 24 uur](media/3976435-notification-greater-than-24-hours.png)
+    :::image type="content" source="media/3976435-notification-greater-than-24-hours.png" alt-text="De tijd voor opnieuw opstarten is langer dan 24 uur":::
 
   - Als de herstart minder dan 24 uur duurt, wordt een voortgangs balk weer gegeven. De timing van deze melding is gebaseerd op de instelling: **Geef de hoeveelheid tijd op na de deadline voordat een apparaat opnieuw wordt gestart (minuten)**.
 
-    ![De herstart-tijd is minder dan 24 uur](media/3976435-notification-less-than-24-hours.png)
+    :::image type="content" source="media/3976435-notification-less-than-24-hours.png" alt-text="De herstart-tijd is minder dan 24 uur":::
 
 Als de gebruiker **uitstellen**selecteert, wordt er een andere tijdelijke melding weer gegeven nadat de uitstel periode is verstreken. Dit gedrag gaat ervan uit dat de laatste aftelling nog niet is bereikt. De timing van de volgende melding is gebaseerd op de instelling: **Geef de frequentie op van de herinnerings meldingen die aan de gebruiker worden gepresenteerd na de deadline voordat een apparaat opnieuw wordt opgestart (minuten)**. Als de gebruiker **uitstellen**selecteert en uw uitstel interval is één uur, stuurt Software Center de gebruiker opnieuw over 60 minuten. Dit gedrag gaat ervan uit dat de laatste aftelling nog niet is bereikt.
 
 Wanneer de laatste aftelling is bereikt, toont Software Center de gebruiker een melding dat ze niet kunnen worden gesloten. De voortgangs balk is rood en de gebruiker kan deze niet **uitstellen** .
 
-![Melding over laatste aftelling Software Center in versie 1906](media/3976435-1906-final-restart-countdown.png)
+:::image type="content" source="media/3976435-1906-final-restart-countdown.png" alt-text="Melding over laatste aftelling Software Center in versie 1906":::
 
 ### <a name="proactively-install-required-software-before-the-deadline"></a>Installeer de vereiste software proactief vóór de deadline
 
@@ -141,7 +171,7 @@ Als de gebruiker de vereiste software die vóór de deadline opnieuw moet worden
 
 De volgende melding treedt op wanneer de instelling gebruikers ervaring meldingen toestaat en u geen pop-upmeldingen gebruikt voor de implementatie:
 
-![Melding voor proactief geïnstalleerde software](media/3976435-proactive-user-restart-notification.png)
+:::image type="content" source="media/3976435-proactive-user-restart-notification.png" alt-text="Melding voor proactief geïnstalleerde software":::
 
 Zodra de deadline van de implementatie is bereikt, volgt Software Center het gedrag om de [vereiste software op of na de deadline te installeren](#install-required-software-at-or-after-the-deadline).
 
@@ -193,25 +223,25 @@ Schakel in de groep [computer opnieuw opstarten](#client-settings) van client in
 
 Als u deze client instelling configureert, wordt de gebruikers ervaring voor alle vereiste implementaties gewijzigd waarvoor opnieuw opstarten is vereist voor pop-upmeldingen:
 
-![Pop-upmelding dat opnieuw opstarten is vereist](media/3555947-restart-toast-initial.png)  
+:::image type="content" source="media/3555947-restart-toast-initial.png" alt-text="Pop-upmelding dat opnieuw opstarten is vereist":::
 
 Het dialoog venster Software Center meer opvallend:
 
-![Dialoog venster om de computer opnieuw op te starten](media/3976435-proactive-user-restart-notification.png)
+:::image type="content" source="media/3976435-proactive-user-restart-notification.png" alt-text="Dialoog venster om de computer opnieuw op te starten":::
 
 Als de gebruiker het apparaat na de installatie niet opnieuw heeft opgestart, krijgen ze een melding als een herinnering. Deze tijdelijke herinnering wordt weer gegeven aan de gebruiker op basis van de client instelling: **geeft een tijdelijke melding weer voor de gebruiker die het interval aangeeft voordat de gebruiker wordt afgemeld of de computer opnieuw wordt opgestart (minuten)**. Deze instelling is de totale tijd die de gebruiker heeft om de computer opnieuw op te starten voordat de herstart wordt afgedwongen.
 
 - Tijdelijke melding wanneer u pop-upmeldingen gebruikt:
 
-  ![Pop-upmelding van wacht op opnieuw starten](media/3555947-restart-toast.png)
+    :::image type="content" source="media/3555947-restart-toast.png" alt-text="Pop-upmelding van wacht op opnieuw starten":::
 
 - Tijdelijke melding wanneer u het dialoog venster Software Center gebruikt en niet op pop-up:
 
-  ![Melding over opnieuw starten in behandeling Software Center met knop uitstellen](media/3555947-1902-hide-notification.png)
+    :::image type="content" source="media/3555947-1902-hide-notification.png" alt-text="Melding over opnieuw starten in behandeling Software Center met knop uitstellen":::
 
 Als de gebruiker niet opnieuw wordt opgestart na de tijdelijke melding, krijgt deze de laatste melding over aftelling dat ze niet kunnen worden gesloten. Het tijdstip waarop de laatste melding wordt weer gegeven, is gebaseerd op de client instelling: **een dialoog venster weer geven dat de gebruiker niet kan sluiten, waarin het aftellings interval wordt weer gegeven voordat de gebruiker wordt afgemeld of de computer opnieuw wordt opgestart (minuten)**. Als de instelling bijvoorbeeld 60 is, wordt een uur voordat de computer opnieuw wordt opgestart, de laatste melding voor de gebruiker weer gegeven:
 
-![Melding over laatste aftelling Software Center](media/3555947-1902-final-countdown.png)
+:::image type="content" source="media/3555947-1902-final-countdown.png" alt-text="Melding over laatste aftelling Software Center":::
 
 De volgende instellingen moeten korter zijn dan het kortste [onderhouds venster](../manage/collections/use-maintenance-windows.md) dat wordt toegepast op de computer:
 

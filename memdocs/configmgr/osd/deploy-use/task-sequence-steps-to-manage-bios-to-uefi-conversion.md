@@ -5,17 +5,17 @@ description: Meer informatie over het aanpassen van een implementatie taken reek
 ms.date: 05/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: bd3df04a-902f-4e91-89eb-5584b47d9efa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0118dd448520a6f0c21bfeea5f8509bd8e49fd46
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 761270fe9419330e2d60d0483554ee6c932c1b26
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429407"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124882"
 ---
 # <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>Takenreeksstappen voor het beheren van de conversie van BIOS naar UEFI
 
@@ -89,9 +89,9 @@ Windows 10 bevat een eenvoudig conversie programma, **MBR2GPT**. Het proces voor
     1. Voeg de stap **opdracht regel uitvoeren** toe. Geef de opdracht regel op voor het hulp programma MBR2GPT. Wanneer u uitvoert in het volledige besturings systeem, moet u deze configureren om de schijf van MBR naar GPT te converteren zonder gegevens te wijzigen of te verwijderen. Voer de volgende opdracht in op de **opdracht regel**:`MBR2GPT.exe /convert /disk:0 /AllowFullOS`
 
     > [!TIP]
-    > U kunt er ook voor kiezen om de MBR2GPT uit te voeren. EXE-hulp programma in Windows PE in plaats van in het volledige besturings systeem. Voeg een stap toe om de computer opnieuw op te starten in Windows PE vóór de stap voor het uitvoeren van de MBR2GPT. EXE-hulp programma. Verwijder vervolgens de optie **/AllowFullOS** van de opdracht regel.
+    > U kunt er ook voor kiezen om het MBR2GPT.EXE-hulp programma uit te voeren in plaats van in het volledige besturings systeem in Windows PE. Voeg een stap toe om de computer opnieuw op te starten in Windows PE voordat de stap wordt uitgevoerd om het MBR2GPT.EXE-hulp programma uit te voeren. Verwijder vervolgens de optie **/AllowFullOS** van de opdracht regel.
 
-    Zie MBR2GPT voor meer informatie over het hulp programma en de beschik bare opties [. EXE](https://docs.microsoft.com/windows/deployment/mbr-to-gpt).
+    Zie [MBR2GPT.EXE](https://docs.microsoft.com/windows/deployment/mbr-to-gpt)voor meer informatie over het hulp programma en de beschik bare opties.
 
     1. Voeg een stap toe om het OEM-hulp programma uit te voeren dat de firmware converteert van BIOS naar UEFI. Deze stap wordt doorgaans **uitgevoerd**met een opdracht regel om het OEM-hulp programma uit te voeren.
 

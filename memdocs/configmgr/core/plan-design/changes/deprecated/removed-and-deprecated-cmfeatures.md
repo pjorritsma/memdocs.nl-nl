@@ -2,7 +2,7 @@
 title: 'Verouderde functies:'
 titleSuffix: Configuration Manager
 description: Meer informatie over de functies die Configuration Manager niet meer wordt ondersteund.
-ms.date: 05/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 40eda7184d7be5010bf51e3ac0d30d6d9442203c
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 5ee84a41a5c47ce554e4618b897c8e4933bdbe73
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905068"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129049"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Verwijderde en afgeschafte functies voor Configuration Manager
 
@@ -31,7 +31,6 @@ De volgende functies zijn afgeschaft. U kunt ze nu nog steeds gebruiken, maar mi
 
 |Functie|Afschaffing eerst aangekondigd|Ondersteuning &nbsp; verwijderd|
 |-----------|---|--------------|
-| Optie Desktop Analytics om **recente gegevens weer te geven** voor apparaatregistratie en beveiligings updates.<!-- 7080949 --> Zie [Data latentie](../../../../desktop-analytics/troubleshooting.md#data-latency)voor meer informatie.|Mei 2020|2020 juli|
 |De implementatie voor het delen van inhoud van Azure is gewijzigd. Gebruik een Cloud beheer gateway die is ingeschakeld voor inhoud. U kunt in de toekomst geen traditioneel Cloud distributiepunt maken.|Februari 2019|TBD<sup>[Opmerking 1](#bkmk_note1)</sup>|
 |Implementatie van de klassieke service naar Azure voor de Cloud beheer gateway en het Cloud distributiepunt. Zie [plan for CMG](../../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager)voor meer informatie.|November 2018|TBD<sup>[Opmerking 1](#bkmk_note1)</sup>|
 
@@ -45,6 +44,7 @@ De volgende functies worden niet meer ondersteund. In sommige gevallen bevinden 
 
 |Functie|Afschaffing eerst aangekondigd|Ondersteuning &nbsp; verwijderd|  
 |-----------|---|--------------|  
+| Optie Desktop Analytics om **recente gegevens weer te geven** voor apparaatregistratie en beveiligings updates.<!-- 7080949 --> Zie [Data latentie](../../../../desktop-analytics/troubleshooting.md#data-latency)voor meer informatie.|Mei 2020|Juli 2020|
 | Integratie van Windows Analytics en Upgradegereedheid. Zie [KB 4521815: Windows Analytics is buiten gebruik gesteld op 31 januari 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement)voor meer informatie. | 14 oktober 2019 | 31 januari 2020 |
 | Evaluatie van apparaatstatusverklaring voor nalevings beleid voor voorwaardelijke toegang <!--1235616 aka 3608202--> Zie [Wat is er gebeurd met hybride MDM](../../../../mdm/understand/what-happened-to-hybrid.md)voor meer informatie.| 3 juli 2019 | Versie 1910 |
 | De app Configuration Manager Bedrijfsportal | 21 mei 2019 | Versie 1910 |

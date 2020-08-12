@@ -10,12 +10,12 @@ ms.assetid: 5d388399-07ca-431c-a9b2-56c69771aa87
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5cdd0a9497f07d80813aca5dc169c4d61944e85d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 74b150b5a2157104b6a380489202fd309224a3bb
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722373"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129032"
 ---
 # <a name="features-and-capabilities-of-configuration-manager"></a>Functies en mogelijkheden van Configuration Manager
 
@@ -49,7 +49,7 @@ Gebruik CMPivot om direct online apparaten te doorzoeken en vervolgens de gegeve
 
 ## <a name="application-management"></a>Toepassingsbeheer
 
-Helpt u bij het maken, beheren, implementeren en bewaken van toepassingen naar een bereik van verschillende apparaten die u beheert. Implementeer, werk en beheer Office 365 vanuit de Configuration Manager-console. Daarnaast kan Configuration Manager worden geïntegreerd met de Microsoft Store voor bedrijven en onderwijs voor het leveren van Cloud-apps. Zie [Inleiding tot toepassings beheer](../../../apps/understand/introduction-to-application-management.md)voor meer informatie.
+Helpt u bij het maken, beheren, implementeren en bewaken van toepassingen naar een bereik van verschillende apparaten die u beheert. Microsoft 365-Apps implementeren, bijwerken en beheren via de Configuration Manager-console. Daarnaast kan Configuration Manager worden geïntegreerd met de Microsoft Store voor bedrijven en onderwijs voor het leveren van Cloud-apps. Zie [Inleiding tot toepassings beheer](../../../apps/understand/introduction-to-application-management.md)voor meer informatie.
 
 ## <a name="os-deployment"></a>Besturingssysteemimplementatie
 

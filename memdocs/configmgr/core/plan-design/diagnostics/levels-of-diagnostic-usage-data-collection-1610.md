@@ -5,18 +5,18 @@ description: Meer informatie over de niveaus van diagnostische en gebruiks gegev
 ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: eb20eb90-bcc0-41de-bfea-638ea470c0dd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 87049bb9799ba5764a3cdd5a14fbf622e7056f3c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 02b1eb010cc874e75b733b567ce4f41e59eab82e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81716318"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128794"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1610-of-configuration-manager"></a>Niveaus van het verzamelen van diagnostische gebruiks gegevens voor versie 1610 van Configuration Manager
 
@@ -33,7 +33,7 @@ Wijzigingen ten opzichte van vorige versies worden aangegeven met ***[New]***, *
 ##  <a name="how-to-change-the-level"></a><a name="bkmk_change"></a> Niveau wijzigen
  Beheerders met een op rollen gebaseerd administratief bereik met **wijzigings** machtigingen voor de object klasse **site** kunnen het niveau wijzigen van de gegevens die zijn verzameld in de instellingen voor diagnostische gegevens en gebruik in de Configuration Manager-console.
 
-Vanaf versie 1610 wijzigt u het niveau van de gegevens verzameling vanuit de-console door te navigeren naar **beheer** > **overzicht** > **site configuratie** > **sites**. Open de instellingen van de **hiërarchie**en selecteer vervolgens het gegevens niveau dat u wilt gebruiken.  
+Vanaf versie 1610 wijzigt u het niveau van de gegevens verzameling vanuit de-console door te navigeren naar **beheer**  >  **overzicht**  >  **site configuratie**  >  **sites**. Open de instellingen van de **hiërarchie**en selecteer vervolgens het gegevens niveau dat u wilt gebruiken.  
 
 ##  <a name="level-1---basic"></a><a name="bkmk_level1"></a> Niveau 1 - Basis
  Het niveau basis omvat gegevens over uw hiërarchie, gegevens die nodig zijn om uw installatie-of upgrade-ervaring te verbeteren en gegevens die u helpen bij het bepalen van de Configuration Manager updates die van toepassing zijn voor uw hiërarchie.
@@ -214,7 +214,7 @@ Voor Configuration Manager versie 1610 omvat dit niveau het volgende:
 
 
 
--   **Inhoud:**  
+-   **Inhoudbeheer**  
 
     -   Aantal grenzen per type  
 

@@ -10,12 +10,13 @@ ms.assetid: b87ac054-9b37-4725-a3f3-2340cfb10bff
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7f4acb19d1b3a28a4a53b30dd7838d24eda6c260
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ROBOTS: NOINDEX
+ms.openlocfilehash: a0e20915a8f3cda71fa3b23170ad6d3a6a34a756
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723206"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126185"
 ---
 # <a name="checklist-for-installing-update-1810-for-configuration-manager"></a>Controle lijst voor het installeren van update 1810 voor Configuration Manager
 
@@ -31,7 +32,7 @@ Als u de update voor versie 1810 wilt downloaden, moet u een service verbindings
 
     -   In het dmpdownloader. log kan worden aangegeven dat het dmpdownloader-proces wacht op een interval voordat op updates wordt gecontroleerd. Als u het downloaden van de herdistributie bestanden van de update opnieuw wilt starten, start u de **SMS_Executive** -service opnieuw op de site server.
 
-    -   Een ander algemeen Download probleem treedt op wanneer de instellingen van de `silverlight.dlservice.microsoft.com`proxy `download.microsoft.com`server downloaden `go.microsoft.com`van, en niet verhinderen.
+    -   Een ander algemeen Download probleem treedt op wanneer de instellingen van de proxy server downloaden van `silverlight.dlservice.microsoft.com` , en niet verhinderen `download.microsoft.com` `go.microsoft.com` .
 
 Zie [updates en onderhoud in de console](updates.md#bkmk_inconsole)voor meer informatie over het installeren van updates.
 
@@ -126,7 +127,7 @@ Voordat u de update installeert, moet u de onderhouds taak van de site uitschake
 
 Wanneer een onderhoudstaak van de sitedatabase wordt uitgevoerd tijdens de installatie van updates, kan de installatie van de update mislukken. Voordat u een taak uitschakelt, registreert u het schema van de taak zodat u de configuratie ervan kunt herstellen nadat de update is geïnstalleerd.
 
-Zie [onderhouds taken](maintenance-tasks.md) en [naslag voor onderhouds taken](reference-for-maintenance-tasks.md)voor meer informatie.
+Zie [onderhouds taken](maintenance-tasks.md)   en [naslag voor onderhouds taken](reference-for-maintenance-tasks.md)voor meer informatie.
 
 #### <a name="temporarily-stop-any-antivirus-software"></a>Antivirus software tijdelijk stoppen 
 Stop de antivirus software op de Configuration Manager-servers voordat u een site bijwerkt. <!--SMS.503481--> 
@@ -139,7 +140,7 @@ Zie [back-up en herstel](backup-and-recovery.md)voor meer informatie.
 #### <a name="plan-for-client-piloting"></a>Plannen voor client Piloting   
 Wanneer u een update installeert die de-client bijwerkt, kunt u de nieuwe client update in de pre-productie testen voordat u deze implementeert en een upgrade uitvoert voor al uw actieve clients. Als u deze optie wilt gebruiken, moet u uw site configureren voor ondersteuning van automatische upgrades voor pre-productie voordat u begint met de installatie van de update.
 
-Zie [clients](../../clients/manage/upgrade/upgrade-clients.md) bijwerken en [Client upgrades testen in een pre-productie verzameling](../../clients/manage/upgrade/test-client-upgrades.md)voor meer informatie.
+Zie [clients bijwerken](../../clients/manage/upgrade/upgrade-clients.md)   en [Client upgrades testen in een pre-productie verzameling](../../clients/manage/upgrade/test-client-upgrades.md)voor meer informatie.
 
 #### <a name="plan-to-use-service-windows"></a>Het gebruik van service vensters plannen   
 Als u een periode wilt definiëren waarin updates naar een site server kunnen worden geïnstalleerd, gebruikt u service Windows. Ze kunnen u helpen te bepalen wanneer sites in uw hiërarchie de update installeren. Zie [service Windows for site servers](service-windows.md)(Engelstalig) voor meer informatie.
@@ -156,7 +157,7 @@ Als u een controle op vereisten wilt uitvoeren vanuit de-console, gaat u naar de
 Zie voor meer informatie de sectie de **prerequisite Checker uitvoeren voordat u een update installeert** in [voordat u een update in de console installeert](install-in-console-updates.md#bkmk_beforeinstall).
 
 > [!IMPORTANT]  
-> Wanneer de prerequisite checker wordt uitgevoerd, werkt het proces enkele product bron bestanden bij die worden gebruikt voor site-onderhouds taken. Daarom voert u na het uitvoeren van de prerequisite Checker, maar voordat u de update installeert,, als u een site-onderhouds taak moet uitvoeren, **Setupwpf. exe** (Configuration Manager Setup) uit vanaf de cd. Meest recente map op de site server.
+> Wanneer de prerequisite checker wordt uitgevoerd, werkt het proces enkele product bron bestanden bij die worden gebruikt voor site-onderhouds taken. Na het uitvoeren van de prerequisite Checker, maar voordat u de update installeert, moet u, als u een onderhouds taak voor de site wilt uitvoeren, **Setupwpf.exe**   (Configuration Manager Setup) uitvoeren vanaf de cd. Meest recente map op de site server.
 
 #### <a name="update-sites"></a>Sites bijwerken   
 U bent nu klaar om de installatie van de update voor uw hiërarchie te starten. Zie [updates in de console installeren](install-in-console-updates.md#bkmk_install)voor meer informatie over het installeren van de update.

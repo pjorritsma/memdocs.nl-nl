@@ -2,7 +2,7 @@
 title: Een cloudbeheergateway plannen
 titleSuffix: Configuration Manager
 description: Plan en ontwerp de Cloud beheer gateway (CMG) om het beheer van clients op internet te vereenvoudigen.
-ms.date: 06/10/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2d6165678331811f4b04e8b1f540f3dcbb7f015d
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 7c57e6568ce60680d9febc533c60533055595bc3
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502252"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126930"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Het plannen van de Cloud beheer gateway in Configuration Manager
 
@@ -125,6 +125,8 @@ U kunt meerdere CMG-Services maken in Azure en u kunt meerdere CMG-verbindings p
 
 Vanaf versie 1902 kunt u een CMG koppelen aan een grens groep. Met deze configuratie kunnen clients standaard of terugvallen op de CMG voor client communicatie, afhankelijk van de [relaties tussen grens groepen](../../../servers/deploy/configure/boundary-groups.md). Dit gedrag is vooral nuttig in Branch-Office en VPN-scenario's. U kunt client verkeer door sturen naar dure en trage WAN-koppelingen om in plaats daarvan snellere services te gebruiken in Microsoft Azure.<!--3640932-->
 
+Vanaf versie 2006 hebben intranet-clients toegang tot een CMG-software-update punt wanneer het wordt toegewezen aan een grens groep. Zie [grens groepen configureren](../../../servers/deploy/configure/boundary-groups.md#bkmk_cmg-sup)voor meer informatie. <!--7102873-->
+
 > [!NOTE]
 > Clients op Internet vallen niet in een grens groep.
 >
@@ -223,7 +225,7 @@ De volgende tabel geeft een overzicht van de CMG-ondersteuning voor Configuratio
 |Functie  |Ondersteuning  |
 |---------|---------|
 | Software-updates     | ![Ondersteund](media/green_check.png) |
-| Endpoint Protection     | ![Ondersteunde ](media/green_check.png) <sup> [Opmerking 1](#bkmk_note1)</sup> |
+| Endpoint Protection     | ![Ondersteunde ](media/green_check.png) <sup> [Opmerking &nbsp; 1](#bkmk_note1)</sup> |
 | Hardware- en software-inventaris     | ![Ondersteund](media/green_check.png) |
 | Client status en meldingen     | ![Ondersteund](media/green_check.png) |
 | Scripts uitvoeren     | ![Ondersteund](media/green_check.png) |
@@ -233,16 +235,17 @@ De volgende tabel geeft een overzicht van de CMG-ondersteuning voor Configuratio
 | Client installeren<br>(met [token verificatie](../../deploy/deploy-clients-cmg-token.md)) | ![Ondersteund](media/green_check.png) (2002) |
 | Software distributie (apparaat-doel)     | ![Ondersteund](media/green_check.png) |
 | Software distributie (op de gebruiker gericht, vereist)<br>(met Azure AD-integratie)     | ![Ondersteund](media/green_check.png) |
-| Software distributie (door de gebruiker gerichte, beschik bare)<br>([alle vereisten](../../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices)) | ![Ondersteund](media/green_check.png) |
+| Software distributie (door de gebruiker gerichte, beschik bare)<br>([alle vereisten](../../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications)) | ![Ondersteund](media/green_check.png) |
 | [Taken reeks](../../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md) Windows 10 in-place upgrade | ![Ondersteund](media/green_check.png) |
-| Taken reeksen die geen opstart installatie kopieën gebruiken en worden geïmplementeerd met een optie: **alle inhoud lokaal downloaden voordat de taken reeks wordt gestart** | ![Ondersteund](media/green_check.png) |
-| Taken reeksen die niet gebruikmaken van installatie kopieën met [een van de opties voor downloaden](../../../../osd/deploy-use/deploy-a-task-sequence.md#deploy-windows-10-in-place-upgrade-via-cmg) | ![Ondersteund](media/green_check.png) (1910)|
+| Taken reeks zonder opstart installatie kopie, geïmplementeerd met de optie om **alle inhoud lokaal te downloaden voordat de taken reeks wordt gestart** | ![Ondersteund](media/green_check.png) |
+| Taken reeks zonder installatie kopie, geïmplementeerd met [een van beide download opties](../../../../osd/deploy-use/deploy-a-task-sequence.md#deploy-windows-10-in-place-upgrade-via-cmg) | ![Ondersteund](media/green_check.png) (1910) |
+| Taken reeks met een opstart installatie kopie, gestart vanuit software Center | ![Ondersteund](media/green_check.png) (2006) |
 | Een ander taken reeks scenario     | ![Niet ondersteund](media/Red_X.png) |
 | Client-push     | ![Niet ondersteund](media/Red_X.png) |
 | Automatische sitetoewijzing     | ![Niet ondersteund](media/Red_X.png) |
 | Aanvragen voor software goedkeuring     | ![Niet ondersteund](media/Red_X.png) |
 | Configuration Manager-console     | ![Niet ondersteund](media/Red_X.png) |
-| Externe hulpprogram ma's     | ![Niet ondersteund](media/Red_X.png) |
+| Externe hulpprogramma's     | ![Niet ondersteund](media/Red_X.png) |
 | Website voor rapporten     | ![Niet ondersteund](media/Red_X.png) |
 | Wake on LAN     | ![Niet ondersteund](media/Red_X.png) |
 | Mac-, Linux-en UNIX-clients     | ![Niet ondersteund](media/Red_X.png) |
@@ -257,12 +260,18 @@ De volgende tabel geeft een overzicht van de CMG-ondersteuning voor Configuratio
 |![Niet ondersteund](media/Red_X.png) = Deze functie wordt niet ondersteund met CMG |
 
 #### <a name="note-1-support-for-endpoint-protection"></a><a name="bkmk_note1"></a>Opmerking 1: ondersteuning voor Endpoint Protection
+
+Vanaf versie 2006 kunnen clients die via een CMG communiceren, direct Endpoint Protection-beleids regels Toep assen zonder een actieve verbinding met Active Directory.<!--4773948-->
+
 <!-- 4350561 -->
-Voor apparaten die lid zijn van een domein om Endpoint Protection-beleid toe te passen, is toegang tot het domein vereist. Apparaten met niet-frequente toegang tot het interne netwerk kunnen vertragingen ondervinden bij het Toep assen van Endpoint Protection-beleid. Als u wilt dat apparaten het Endpoint Protection-beleid direct Toep assen nadat ze het hebben ontvangen, moet u rekening houden met een van de volgende opties:
+In versie 2002 en eerder, voor apparaten die lid zijn van een domein om Endpoint Protection-beleid toe te passen, is toegang tot het domein vereist. Apparaten met niet-frequente toegang tot het interne netwerk kunnen vertragingen ondervinden bij het Toep assen van Endpoint Protection-beleid. Als u wilt dat apparaten het Endpoint Protection-beleid direct Toep assen nadat ze het hebben ontvangen, moet u rekening houden met een van de volgende opties:
+
+- Werk de site en clients bij naar versie 2006.
 
 - Gebruik co-beheer en schakel de [Endpoint Protection workload](../../../../comanage/workloads.md#endpoint-protection) naar intune en beheer [micro soft Defender anti virus](https://docs.microsoft.com/mem/intune/configuration/device-restrictions-windows-10#microsoft-defender-antivirus) vanuit de Cloud.
 
 - Gebruik [configuratie-items](../../../../compliance/deploy-use/create-configuration-items.md) in plaats van de functie systeem eigen [antimalware policies](../../../../protect/deploy-use/endpoint-antimalware-policies.md) om Endpoint Protection-beleid toe te passen.
+
 
 ## <a name="cost"></a>Kosten
 
@@ -368,7 +377,7 @@ Zie [een cloud-gebaseerd distributie punt gebruiken](../../../plan-design/hierar
 
 Deze tabel geeft een lijst van de vereiste netwerk poorten en protocollen. De *client* is het apparaat waarmee de verbinding wordt gestart en waarvoor een uitgaande poort nodig is. De- *Server* is het apparaat dat de verbinding accepteert, waarbij een binnenkomende poort is vereist.
 
-| Client | Protocol | Poort | server | Beschrijving |
+| Client | Protocol | Poort | Server | Beschrijving |
 |--------|----------|------|--------|-------------|
 | Serviceverbindingspunt | HTTPS | 443 | Azure | CMG-implementatie |
 | CMG-verbindings punt | TCP-TLS | 10140-10155 | CMG-service | Voorkeurs protocol voor het maken van CMG-kanaal <sup> [Opmerking 1](#bkmk_port-note1)</sup> |

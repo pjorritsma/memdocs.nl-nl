@@ -10,12 +10,12 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2db1a719aaf1cb79973f1af8e2de3c1bbb91d605
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 378a5de5633d7a526004d84ec5e6885e165eaadb
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83879092"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128981"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 1906 van Configuration Manager current branch
 
@@ -136,7 +136,7 @@ Zie [compatibiliteits beoordeling in Desktop Analytics](../../../desktop-analyti
 ### <a name="dalogscollector-tool"></a>Hulp programma DALogsCollector
 
 <!--4622989-->
-Gebruik het hulp programma DesktopAnalyticsLogsCollector. ps1 van de Configuration Manager installatiemap om te helpen bij het oplossen van problemen met Desktop Analytics. Er worden enkele basis stappen voor probleem oplossing uitgevoerd en de relevante logboeken worden in één werkmap verzameld.
+Gebruik het DesktopAnalyticsLogsCollector.ps1-hulp programma vanuit de Configuration Manager installatiemap om te helpen bij het oplossen van problemen met Desktop Analytics. Er worden enkele basis stappen voor probleem oplossing uitgevoerd en de relevante logboeken worden in één werkmap verzameld.
 
 Zie [Logboeken](../../../desktop-analytics/log-collector.md)voor meer informatie.
 
@@ -149,7 +149,7 @@ Zie [Logboeken](../../../desktop-analytics/log-collector.md)voor meer informatie
 
 Voor CMPivot hebt u nu extra reken kundige Opera Tors, aggregators en de mogelijkheid om query's toe te voegen, zoals het gebruik van het REGI ster en het bestand samen.
 
-Zie [CMPivot](../../servers/manage/cmpivot.md#bkmk_cmpivot1906)voor meer informatie.
+Zie [CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot1906)voor meer informatie.
 
 ### <a name="cmpivot-standalone"></a>Zelfstandige CMPivot
 
@@ -171,7 +171,7 @@ De volgende machtigingen zijn toegevoegd aan de ingebouwde rol [**beveiligings b
 - CMPivot uitvoeren op verzameling
 - Lezen op inventaris rapport
 
-Zie [CMPivot](../../servers/manage/cmpivot.md#bkmk_cmpivot_secadmin1906)voor meer informatie.
+Zie [CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot_secadmin1906)voor meer informatie.
 
 
 ## <a name="content-management"></a><a name="bkmk_content"></a>Inhouds beheer
@@ -438,7 +438,7 @@ Typ bijvoorbeeld deze URL in het venster Windows **uitvoeren** .
 
 U kunt deze syntaxis ook gebruiken om standaard tabbladen in Software Center te openen:
 
-|Opdrachtregel  |Tab  |
+|Opdrachtregel  |Tabblad  |
 |---------|---------|
 |`AvailableSoftware`|Toepassingen|
 |`Updates`|Updates|
@@ -505,7 +505,7 @@ De **weer gave** die is vereist, is beschikbaar op de volgende locaties:
    - **Software bibliotheek**  >  Onderhoud van Windows **10**  >  **Alle Windows 10-updates**
    - **Software bibliotheek**  >  **Office 365-client beheer**  >  **Office 365-updates**
 
-Zie [software-updates bewaken](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates), [Windows als een service beheren](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates)en [Office 365 ProPlus-updates beheren](../../../sum/deploy-use/manage-office-365-proplus-updates.md#drill-through-required-office-365-updates)voor meer informatie.
+Zie [software-updates bewaken](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates), [Windows als een service beheren](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates)en [Office 365 ProPlus-updates beheren](../../../sum/deploy-use/manage-office-365-proplus-updates.md)voor meer informatie.
 
 
 ## <a name="office-management"></a><a name="bkmk_o365"></a>Office-beheer
@@ -538,7 +538,7 @@ Zie [Windows Defender Application Guard-beleid maken en implementeren](../../../
 
 U kunt nu beveiligingsbereiken instellen voor mappen. Als u toegang hebt tot een object in de map, maar u geen toegang hebt tot de map, kunt u het object niet zien. En als u toegang hebt tot een map, maar geen object daarin, ziet u dat object niet. Klik met de rechter muisknop op een map, kies **Beveiligingsbereiken instellen**en kies vervolgens de beveiligingsbereiken die u wilt Toep assen.
 
-Zie [de Configuration Manager-console gebruiken](../../servers/manage/admin-console.md#tips) en [op rollen gebaseerd beheer configureren](../../servers/deploy/configure/configure-role-based-administration.md#bkmk_config-folder)voor meer informatie.
+Zie [Configuration Manager console tips](../../servers/manage/admin-console-tips.md) en [op rollen gebaseerd beheer configureren](../../servers/deploy/configure/configure-role-based-administration.md#bkmk_config-folder)voor meer informatie.
 
 ### <a name="add-smbios-guid-column-to-device-and-device-collection-nodes"></a>SMBIOS GUID-kolom toevoegen aan de knoop punten apparaat-en apparaat-verzameling
 

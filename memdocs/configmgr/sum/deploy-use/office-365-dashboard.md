@@ -1,21 +1,21 @@
 ---
 title: Office 365-dash board voor client beheer
 titleSuffix: Configuration Manager
-description: Office 365-client gegevens controleren via het Office 365 client management-dash board
+description: Microsoft 365 apps-client gegevens controleren via het Office 365-client beheer dashboard
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 08/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 69f234a2-b04b-445a-b81f-6b4acfc00eaf
-ms.openlocfilehash: 7e6ed38d0f4217bfc70d3ddb196527d421e5d7c1
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: ce3947c8ca3c562869fdfed2ddba4d9b160902be
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110386"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129365"
 ---
 # <a name="office-365-client-management-dashboard"></a>Office 365-dash board voor client beheer
 
@@ -24,7 +24,7 @@ ms.locfileid: "82110386"
 > [!Note]
 > Vanaf 21 april 2020, wordt de naam van Office 365 ProPlus gewijzigd in **Microsoft 365 apps voor bedrijven**. Zie [name wijzigen voor Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change)voor meer informatie. Mogelijk ziet u nog steeds verwijzingen naar de oude naam in de Configuration Manager-console en de ondersteunende documentatie terwijl de-console wordt bijgewerkt.
 
-Vanaf Configuration Manager versie 1802 kunt u de gegevens van Office 365-clients bekijken via het Office 365-client beheer dash board. Het Office 365-dash board voor client beheer geeft een lijst van relevante apparaten weer wanneer secties van de grafiek worden geselecteerd. <!--1357281 -->
+Vanaf Configuration Manager versie 1802 kunt u de client gegevens van Microsoft 365 apps controleren via het Office 365 client management-dash board. Het Office 365-dash board voor client beheer geeft een lijst van relevante apparaten weer wanneer secties van de grafiek worden geselecteerd. <!--1357281 -->
 
 ## <a name="prerequisites"></a>Vereisten
 
@@ -33,7 +33,7 @@ Vanaf Configuration Manager versie 1802 kunt u de gegevens van Office 365-client
 De gegevens die worden weer gegeven in het Office 365-dash board voor client beheer, zijn afkomstig van hardware-inventarisatie. Schakel de hardware-inventarisatie in en selecteer de hardware-inventaris klasse **Office 365 ProPlus-configuraties** voor gegevens die in het dash board moeten worden weer gegeven.
  
 1. Hardware-inventaris inschakelen, als deze nog niet is ingeschakeld. Zie [hardware-inventaris configureren](../../core/clients/manage/inventory/configure-hardware-inventory.md)voor meer informatie.
-2. Navigeer in de Configuration Manager-console naar **Administration** > **instellingen** > van de client voor beheer clients**standaard instellingen voor clients**.  
+2. Navigeer in de Configuration Manager-console naar instellingen van de client voor **beheer**  >  **clients**  >  **standaard instellingen voor clients**.  
 3. Klik op **Eigenschappen** in het tabblad **Start**, in de groep **Eigenschappen**.  
 4. Klik in het dialoogvenster **Standaardclientinstellingen** op **Hardware-inventarisatie**.  
 5. Klik in de lijst **Apparaatinstellingen** op **Klassen instellen**.  
@@ -53,20 +53,20 @@ De site server op het hoogste niveau moet toegang hebben tot het volgende eind p
 > [!NOTE]
 > Internet connectiviteit is niet vereist voor de client apparaten voor een van deze scenario's.
 
-### <a name="enable-data-collection-for-office-365-proplus"></a>Gegevens verzameling inschakelen voor Office 365 ProPlus
+### <a name="enable-data-collection-for-microsoft-365-apps"></a>Gegevens verzameling voor Microsoft 365-apps inschakelen
 
 *(Geïntroduceerd in versie 1910 als een vereiste)*
 
-Vanaf versie 1910 moet u het verzamelen van gegevens voor Office 365 ProPlus instellen om informatie in te vullen in het **office 365 ProPlus-prototype en het status dashboard**. De gegevens worden opgeslagen in de site database van Configuration Manager en worden niet naar micro soft verzonden.
+Vanaf versie 1910 moet u het verzamelen van gegevens voor Microsoft 365 apps inschakelen om gegevens in te vullen in het **Office 365 ProPlus-pilot-en status dashboard**. De gegevens worden opgeslagen in de site database van Configuration Manager en worden niet naar micro soft verzonden.
 
-Deze gegevens verschillen van de diagnostische gegevens, die worden beschreven in [Diagnostische gegevens die vanuit Office 365 ProPlus naar micro soft worden verzonden](https://docs.microsoft.com/deployoffice/privacy/overview-privacy-controls#diagnostic-data-sent-from-office-365-proplus-to-microsoft).
+Deze gegevens verschillen van de diagnostische gegevens, die worden beschreven in [Diagnostische gegevens die van Microsoft 365-apps naar micro soft worden verzonden](https://docs.microsoft.com/deployoffice/privacy/overview-privacy-controls#diagnostic-data-sent-from-office-365-proplus-to-microsoft).
 
 U kunt het verzamelen van gegevens inschakelen door gebruik te maken van groepsbeleid of door het REGI ster te bewerken.
 
 #### <a name="enable-data-collection-from-group-policy"></a>Gegevens verzameling van groepsbeleid inschakelen
 
 1. Down load de meest recente [beheer sjabloon bestanden van het micro soft Download centrum](https://www.microsoft.com/download/details.aspx?id=49030).
-2. Schakel de beleids instelling **telemetrie-gegevens verzameling** inschakelen `User Configuration\Policies\Administrative Templates\Microsoft Office 2016\Telemetry Dashboard`in.
+2. Schakel de beleids instelling **telemetrie-gegevens verzameling** inschakelen in `User Configuration\Policies\Administrative Templates\Microsoft Office 2016\Telemetry Dashboard` .
     - U kunt ook de beleids instelling Toep assen met de [Office-Cloud beleids service](https://docs.microsoft.com/DeployOffice/overview-office-cloud-policy-service).
     - De beleids instelling wordt ook gebruikt door het Office-telemetrie-dash board, dat u niet hoeft te implementeren voor het verzamelen van gegevens.
 
@@ -80,28 +80,28 @@ reg add HKCU\Software\Policies\Microsoft\office\16.0\OSM /v EnableLogging /t REG
 
 ## <a name="viewing-the-office-365-client-management-dashboard"></a>Het Office 365-dash board voor client beheer weer geven
 
-Als u het Office 365-dash board voor client beheer wilt weer geven in de Configuration Manager-console, gaat u naar **software bibliotheek** > **Overview** > **Office 365 client management**. Aan de bovenkant van het dash board gebruikt u de vervolg keuzelijst **verzameling** om de dashboard gegevens te filteren op leden van een bepaalde verzameling. Vanaf Configuration Manager versie 1802 wordt in het Office 365 client management-dash board een lijst met relevante apparaten weer gegeven wanneer de secties van de grafiek worden geselecteerd.
+Als u het Office 365-dash board voor client beheer wilt weer geven in de Configuration Manager-console, gaat u naar **software bibliotheek**  >  **Overview**  >  **Office 365 client management**. Aan de bovenkant van het dash board gebruikt u de vervolg keuzelijst **verzameling** om de dashboard gegevens te filteren op leden van een bepaalde verzameling. Vanaf Configuration Manager versie 1802 wordt in het dash board een lijst met relevante apparaten weer gegeven wanneer de secties van de grafiek worden geselecteerd.
 
 Het Office 365-dash board voor client beheer bevat grafieken voor de volgende informatie:
 
-- Aantal Office 365-clients
-- Office 365-client versies
-- Office 365-client talen
-- Office 365-client kanalen Zie [overzicht van update kanalen voor Office 365 ProPlus](/DeployOffice/overview-of-update-channels-for-office-365-proplus)voor meer informatie.
+- Aantal Microsoft 365-apps clients
+- Client versies van Microsoft 365-apps
+- Microsoft 365 apps client talen
+- Microsoft 365 apps-client kanalen Zie [overzicht van update kanalen voor Microsoft 365-apps](/DeployOffice/overview-of-update-channels-for-office-365-proplus)voor meer informatie.
 
 
-## <a name="integration-for-office-365-proplus-readiness"></a><a name="bkmk_o365_readiness"></a>Integratie voor Office 365 ProPlus gereedheid
+## <a name="integration-for-microsoft-365-apps-readiness"></a><a name="bkmk_o365_readiness"></a>Integratie voor de gereedheid van Microsoft 365 apps
 <!--3735402-->
-Vanaf Configuration Manager versie 1902 kunt u het dash board gebruiken om apparaten met hoge betrouw baarheid te identificeren die gereed zijn voor een upgrade naar Office 365 ProPlus. Deze integratie biedt inzicht in mogelijke compatibiliteits problemen met Office-invoeg toepassingen en macro's in uw omgeving. Gebruik vervolgens Configuration Manager om Office te implementeren op apparaten die klaar zijn voor gebruik.
+Vanaf Configuration Manager versie 1902 kunt u het dash board gebruiken om apparaten met hoge betrouw baarheid te identificeren die gereed zijn om te upgraden naar Microsoft 365 apps. Deze integratie biedt inzicht in mogelijke compatibiliteits problemen met invoeg toepassingen en macro's in uw omgeving. Gebruik vervolgens Configuration Manager om Microsoft 365 apps te implementeren op apparaten die klaar zijn.
 
 Het Office 365-dash board voor client beheer bevat een nieuwe tegel, **Office 365 ProPlus Upgradegereedheid**. Deze tegel is een staaf diagram met apparaten in de volgende statussen:
-- Niet beoordeeld
+- Niet geëvalueerd
 - Gereed voor de upgrade
 - Beoordeling vereist
 
-Selecteer een status om in te zoomen naar een lijst met apparaten. Dit gereedheids rapport bevat meer details over apparaten. Het bevat kolommen voor de compatibiliteits status van zowel Office-invoeg toepassingen als macro's.
+Selecteer een status om in te zoomen naar een lijst met apparaten. Dit gereedheids rapport bevat meer details over apparaten. Het bevat kolommen voor de compatibiliteits status van beide invoeg toepassingen en macro's.
 
-### <a name="prerequisites-for-office-365-proplus-readiness-integration"></a>Vereisten voor de integratie van Office 365 ProPlus-gereedheid
+### <a name="prerequisites-for-microsoft-365-apps-readiness-integration"></a>Vereisten voor de gereedheids integratie van Microsoft 365 apps
 
 - Hardware-inventaris in client instellingen inschakelen. Zie de sectie [vereisten](#prerequisites) voor meer informatie.  
 
@@ -116,7 +116,7 @@ De scan agent zoekt standaard naar de lijst met recent gebruikte bestanden (MRU)
 - Office-bestands indelingen met macro's, zoals Excel-werkmappen met macro's (. XLSM) of Word-document met macro's (. DOCM)  
 - Oudere Office-indelingen die niet aangeven of er macro-inhoud is. Bijvoorbeeld een Excel 97-2003-werkmap (. xls).
 
-Als u meer gedetailleerde informatie over de compatibiliteit van macro's nodig hebt, implementeert u de **Readiness Toolkit voor Office** om de code in de macro bestanden te analyseren. Er wordt gecontroleerd of er mogelijke compatibiliteits problemen zijn. Het bestand maakt bijvoorbeeld gebruik van een functie die is gewijzigd in een recentere versie van Office. Nadat u de Readiness Toolkit voor Office hebt uitgevoerd en de optie hebt geselecteerd voor de **meest recent gebruikte Office-documenten en geïnstalleerde invoeg toepassingen op deze computer**, of `-mru` als u de vlag gebruikt op de opdracht regel, kunnen de resultaten worden opgehaald door de hardware-inventaris agent van Configuration Manager. Deze extra gegevens verbeteren de berekening van de gereedheid van het apparaat. Zie voor meer informatie [de Readiness Toolkit voor Office gebruiken voor het beoordelen van de compatibiliteit van toepassingen voor office 365 ProPlus](https://aka.ms/readinesstoolkit).
+Als u meer gedetailleerde informatie over de compatibiliteit van macro's nodig hebt, implementeert u de **Readiness Toolkit voor Office** om de code in de macro bestanden te analyseren. Er wordt gecontroleerd of er mogelijke compatibiliteits problemen zijn. Het bestand maakt bijvoorbeeld gebruik van een functie die is gewijzigd in een recentere versie van Office. Nadat u de Readiness Toolkit voor Office hebt uitgevoerd en de optie hebt geselecteerd voor de **meest recent gebruikte Office-documenten en geïnstalleerde invoeg toepassingen op deze computer**, of als u de vlag gebruikt op `-mru` de opdracht regel, kunnen de resultaten worden opgehaald door de hardware-inventaris agent van Configuration Manager. Deze extra gegevens verbeteren de berekening van de gereedheid van het apparaat. Zie voor meer informatie [de Readiness Toolkit voor Office gebruiken om de compatibiliteit van toepassingen voor Microsoft 365-apps te evalueren](https://aka.ms/readinesstoolkit).
 
 Houd er rekening mee dat de Readiness Toolkit niet op elk doel apparaat hoeft te worden geïnstalleerd om de scan uit te voeren. U kunt de voor beeld-opdracht regel optie hieronder gebruiken om elk gewenst apparaat te scannen.  De uitvoer vlag is vereist, maar de bestanden worden niet gebruikt voor het genereren van de resultaten in het dash board, zodat er een geldige locatie kan worden geselecteerd.
 
@@ -126,12 +126,12 @@ ReadinessReportCreator.exe -mru -output c:\temp -silent
 
 Zie [gereedheids informatie voor meerdere gebruikers in een onderneming ophalen](/deployoffice/use-the-readiness-toolkit-to-assess-application-compatibility-for-office-365-pro#getting-readiness-information-for-multiple-users-in-an-enterprise)voor meer informatie.
 
-## <a name="office-365-proplus-upgrade-readiness-dashboard"></a><a name="bkmk_readiness-dash"></a>Office 365 ProPlus upgrade gereedheids dashboard
+## <a name="microsoft-365-apps-readiness-dashboard"></a><a name="bkmk_readiness-dash"></a>Dash board voor de gereedheids Microsoft 365 apps
 
 *(Geïntroduceerd in versie 1906)*
 
 <!--4021125-->
-Om u te helpen bepalen welke apparaten klaar zijn om te upgraden naar Office 365 ProPlus, is er een gereedheids dashboard vanaf versie 1906. Het bevat de **Office 365 ProPlus upgrade Readiness** -tegel die is uitgebracht in Configuration Manager huidige branch versie 1902. De volgende nieuwe tegels in dit dash board helpen u bij het evalueren van de Office-invoeg toepassing en macro gereedheid:
+Om te bepalen welke apparaten klaar zijn om te upgraden naar Microsoft 365-apps, is er een gereedheids dashboard vanaf versie 1906. Het bevat de **Office 365 ProPlus upgrade Readiness** -tegel die is uitgebracht in Configuration Manager huidige branch versie 1902. De volgende nieuwe tegels op dit dash board helpen u bij het evalueren van invoeg toepassingen en gereedheid voor macro's:
 
 - Implementatie
 - Gereedheid van apparaat
@@ -148,31 +148,31 @@ De volgende video is een sessie van Ignite 2019, die meer informatie bevat:
 
 [Aanbevolen procedures voor compatibiliteits beoordeling en Microsoft Office 365 ProPlus-upgrades met behulp van Office-gereedheid in Configuration Manager](https://myignite.techcommunity.microsoft.com/sessions/79338?source=sessions)
 
-### <a name="using-the-office-365-proplus-upgrade-readiness-dashboard"></a>Het Office 365 ProPlus upgrade Readiness dash board gebruiken
+### <a name="using-the-microsoft-365-apps-upgrade-readiness-dashboard"></a>Het dash board upgrade gereedheids van Microsoft 365 apps gebruiken
 
 Nadat u hebt gecontroleerd of aan de [vereisten wordt voldaan](#prerequisites), gebruikt u de volgende instructies voor het gebruik van het dash board:
  
 1. Ga in de Configuration Manager-console naar de werk ruimte **software bibliotheek** en vouw **Office 365 client management**uit.
-1. Selecteer het knoop punt **Office 365 ProPlus Upgradegereedheid** .
+1. Selecteer het knoop punt **Microsoft 365 Apps Upgradegereedheid** .
 1. Wijzig de **verzameling** en de **Office-architectuur** van het doel om de gegevens die in het dash board worden doorgestuurd, te wijzigen.
 
-![Office 365 ProPlus upgrade gereedheids dashboard](./media/4021125-office-365-upgrade-readiness-dashboard.png)
+[![Dash board upgrade gereedheids van Microsoft 365 apps](./media/4021125-office-365-upgrade-readiness-dashboard.png)](./media/4021125-office-365-upgrade-readiness-dashboard.png#lightbox)
 
-![Office 365 ProPlus upgrade gereedheids dashboard](./media/4021125-office-365-to-add-ins.png)
+[![Invoeg toepassingen voor upgrade gereedheids dashboard Microsoft 365-apps](./media/4021125-office-365-to-add-ins.png)](./media/4021125-office-365-to-add-ins.png#lightbox)
 
-![Office 365 ProPlus upgrade gereedheids dashboard](./media/4021125-office-365-macro-advisories.png)
+[![Advisor voor upgrade gereedheids dashboard macro van Microsoft 365-apps](./media/4021125-office-365-macro-advisories.png)](./media/4021125-office-365-macro-advisories.png#lightbox)
 
 ### <a name="device-readiness-information"></a>Informatie over gereedheid van apparaat
 
 Zodra de invoeg toepassing en de macro inventaris op elk apparaat worden geëvalueerd, worden de apparaten gegroepeerd op basis van de informatie. Apparaten waarvan de status is vermeld als **gereed voor de upgrade** , hebben waarschijnlijk geen compatibiliteits problemen.
 
-Als u de categorie **gereed voor upgrades** in de grafiek selecteert, ziet u meer informatie over de apparaten in de beperkende verzameling. U kunt de lijst met apparaten bekijken, selecties maken op basis van uw bedrijfs vereisten en een nieuwe apparaat verzameling maken op basis van uw selectie. Gebruik uw nieuwe verzameling om Office 365 ProPlus met Configuration Manager te implementeren.
+Als u de categorie **gereed voor upgrades** in de grafiek selecteert, ziet u meer informatie over de apparaten in de beperkende verzameling. U kunt de lijst met apparaten bekijken, selecties maken op basis van uw bedrijfs vereisten en een nieuwe apparaat verzameling maken op basis van uw selectie. Gebruik uw nieuwe verzameling om Microsoft 365-apps te implementeren met Configuration Manager.
 
-Apparaten die mogelijk kwetsbaar zijn voor compatibiliteits problemen, zijn gemarkeerd als **behoeften beoordeling**. Deze apparaten moeten mogelijk actie ondernemen voordat ze worden bijgewerkt naar Office 365 ProPlus. U kunt essentiële invoeg toepassingen bijvoorbeeld bijwerken naar een recentere versie.
+Apparaten die mogelijk kwetsbaar zijn voor compatibiliteits problemen, zijn gemarkeerd als **behoeften beoordeling**. Deze apparaten moeten mogelijk actie ondernemen voordat ze worden bijgewerkt naar Microsoft 365-apps. U kunt essentiële invoeg toepassingen bijvoorbeeld bijwerken naar een recentere versie.
 
 ### <a name="add-in-information"></a>Informatie van invoeg toepassing
 
- Op elk apparaat wordt een inventarisatie van alle geïnstalleerde invoeg toepassingen verzameld. De inventarisatie wordt vervolgens vergeleken met de informatie die micro soft heeft over de prestaties van de invoeg toepassing op Office 365 ProPlus. Als er een invoeg toepassing wordt gevonden die waarschijnlijk problemen veroorzaakt na de upgrade, worden alle apparaten met de invoeg toepassing gemarkeerd voor controle.
+ Op elk apparaat wordt een inventarisatie van alle geïnstalleerde invoeg toepassingen verzameld. De inventarisatie wordt vervolgens vergeleken met de informatie die micro soft heeft over de prestaties van de invoeg toepassing op Microsoft 365-apps. Als er een invoeg toepassing wordt gevonden die waarschijnlijk problemen veroorzaakt na de upgrade, worden alle apparaten met de invoeg toepassing gemarkeerd voor controle.
 
 ### <a name="macro-information"></a>Macro gegevens
 
@@ -181,7 +181,7 @@ Configuration Manager op elk apparaat de meest recent gebruikte bestanden bekijk
 - Office-bestands indelingen met macro's.
 - Oudere Office-indelingen, die niet aangeven of er macro-inhoud is.
 
-Dit rapport kan worden gebruikt om te bepalen welke apparaten recent gebruikte bestanden hebben die macro's kunnen bevatten. De **Readiness Toolkit voor Office** kan vervolgens worden geïmplementeerd met behulp van Configuration Manager om apparaten te scannen waar meer gedetailleerde informatie nodig is, en om te controleren of er mogelijke compatibiliteits problemen zijn. Als het bestand bijvoorbeeld gebruikmaakt van een functie die is gewijzigd in een recentere versie van Office.
+Dit rapport kan worden gebruikt om te bepalen welke apparaten recent gebruikte bestanden hebben die macro's kunnen bevatten. De **Readiness Toolkit voor Office** kan vervolgens worden geïmplementeerd met behulp van Configuration Manager om apparaten te scannen waar meer gedetailleerde informatie nodig is, en om te controleren of er mogelijke compatibiliteits problemen zijn. Als het bestand bijvoorbeeld gebruikmaakt van een functie die is gewijzigd in een recentere versie van Microsoft 365 apps.
 
 Zie voor meer informatie over het uitvoeren van de scan [gedetailleerde macro gereedheid](#bkmk_ort).
 
@@ -189,7 +189,7 @@ Zie voor meer informatie over het uitvoeren van de scan [gedetailleerde macro ge
 <!--4488272, 4488301-->
 *(Geïntroduceerd in versie 1910)*
 
-Vanaf versie 1910, het **office 365 ProPlus pilot en het status dashboard** , kunt u uw Office 365 ProPlus-implementatie plannen, testen en uitvoeren. Het dash board biedt status inzichten voor apparaten met Office 365 ProPlus om mogelijke problemen te identificeren die van invloed kunnen zijn op uw implementatie plannen. Het **Office 365 ProPlus-pilot-en status dashboard** biedt een aanbeveling voor pilot-apparaten op basis van de inventaris van invoeg toepassingen. De volgende tegels bevinden zich in het dash board:
+Vanaf versie 1910, het **Office 365 ProPlus pilot en het status dashboard** , kunt u de implementatie van uw Microsoft 365-apps plannen, testen en uitvoeren. Het dash board biedt status inzichten voor apparaten met Microsoft 365-apps om mogelijke problemen te identificeren die van invloed kunnen zijn op uw implementatie plannen. Het **Office 365 ProPlus-pilot-en status dashboard** biedt een aanbeveling voor pilot-apparaten op basis van de inventaris van invoeg toepassingen. De volgende tegels bevinden zich in het dash board:
 
 - Pilot genereren
 - Aanbevolen pilot-apparaten
@@ -215,15 +215,15 @@ Genereer een test aanbeveling van een beperkende verzameling bij het klikken op 
 
 ### <a name="recommended-pilot-devices"></a>Aanbevolen pilot-apparaten
 
-**Aanbevolen pilot-apparaten** zijn een minimale set apparaten die alle geïnstalleerde invoeg toepassingen voor de beperkende verzameling voor het genereren van de pilot gebruiken. Inzoomen om een lijst met deze apparaten weer te geven. Gebruik vervolgens de Details om eventuele apparaten van de pilot uit te sluiten, indien nodig. Als al uw invoeg toepassingen aanwezig zijn op Office 365 ProPlus-apparaten, worden apparaten met deze invoeg toepassingen niet opgenomen in de berekening. Dit betekent ook dat u geen resultaten krijgt in uw test verzameling omdat al uw invoeg toepassingen zijn gedetecteerd op apparaten waarop Office 365 ProPlus is geïnstalleerd.
+**Aanbevolen pilot-apparaten** zijn een minimale set apparaten die alle geïnstalleerde invoeg toepassingen voor de beperkende verzameling voor het genereren van de pilot gebruiken. Inzoomen om een lijst met deze apparaten weer te geven. Gebruik vervolgens de Details om eventuele apparaten van de pilot uit te sluiten, indien nodig. Als alle invoeg toepassingen al aanwezig zijn op Microsoft 365 apps-apparaten, worden apparaten met deze invoeg toepassingen niet opgenomen in de berekening. Dit betekent ook dat het mogelijk is dat u geen resultaten krijgt in uw test verzameling omdat al uw invoeg toepassingen zijn gedetecteerd op apparaten waarop Microsoft 365-apps zijn geïnstalleerd.
 
 ### <a name="deploy-pilot"></a>Pilot implementeren
 
-Nadat u uw test apparaten hebt geaccepteerd, implementeert u Office 365 ProPlus naar de pilot verzameling met behulp van de wizard gefaseerde implementatie. Beheerders kunnen de pilot-en beperkende verzameling in de wizard definiëren voor het beheren van implementaties.
+Wanneer u uw test apparaten hebt geaccepteerd, implementeert u Microsoft 365 apps in de test verzameling met behulp van de wizard gefaseerde implementatie. Beheerders kunnen de pilot-en beperkende verzameling in de wizard definiëren voor het beheren van implementaties.
 
 ### <a name="health-data"></a>Status gegevens
 
-Zodra Office 365 ProPlus is geïnstalleerd, schakelt u status gegevens in op uw test apparaten. Met de status gegevens krijgt u inzicht in welke invoeg toepassingen en macro's niet voldoen aan de status doelen. De **apparaten die gereed zijn voor het implementeren** van de grafiek, identificeren niet-pilot apparaten die gereed zijn voor implementatie met behulp van de status inzichten. Ontvang een telling van apparaten die status gegevens verzenden vanuit het diagram **apparaten verzenden** van de status.
+Als Microsoft 365 apps is geïnstalleerd, schakelt u status gegevens in op uw test apparaten. Met de status gegevens krijgt u inzicht in welke invoeg toepassingen en macro's niet voldoen aan de status doelen. De **apparaten die gereed zijn voor het implementeren** van de grafiek, identificeren niet-pilot apparaten die gereed zijn voor implementatie met behulp van de status inzichten. Ontvang een telling van apparaten die status gegevens verzenden vanuit het diagram **apparaten verzenden** van de status.
 
 ### <a name="devices-not-meeting-health-goals"></a>Apparaten die niet voldoen aan de gezondheids doelen
 
@@ -252,4 +252,4 @@ Er is een bekend probleem met de tegel **pilot implementeren** . Op dit moment k
 
 ## <a name="next-steps"></a>Volgende stappen
 
-[Office 365 ProPlus beheren met Configuration Manager](manage-office-365-proplus-updates.md)
+[Updates van Microsoft 365-apps beheren met Configuration Manager](manage-office-365-proplus-updates.md)

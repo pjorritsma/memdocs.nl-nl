@@ -2,7 +2,7 @@
 title: Grens groepen configureren
 titleSuffix: Configuration Manager
 description: Clients helpen site systemen te vinden door gebruik te maken van grens groepen om gerelateerde netwerk locaties logisch te organiseren met de naam grenzen
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 5db2926f-f03e-49c7-b44b-e89b1a5a6779
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c9567cc441636bbda31262e0857e2fc6484c2af7
-ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
+ms.openlocfilehash: 7a925c29b5d186f3ca6f320741f5ca602b0bbb79
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84153404"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128389"
 ---
 # <a name="configure-boundary-groups-for-configuration-manager"></a>Grens groepen voor Configuration Manager configureren
 
@@ -157,7 +157,7 @@ Als u de inhoud zodanig configureert dat deze op aanvraag wordt gedistribueerd e
 Het installatie programma van de Configuration Manager-client, ccmsetup, kan installatie-inhoud ophalen van een lokale bron of via een beheer punt. Het eerste gedrag is afhankelijk van de opdracht regel parameters die u gebruikt om de-client te installeren:<!-- MEMDocs#286 -->
 
 - Als u de para meters **/MP** of **/Source** niet gebruikt, probeert ccmsetup een lijst met beheer punten te verkrijgen van Active Directory of DNS.
-- Als u alleen **/Source**opgeeft, wordt de installatie van het opgegeven pad geforceerd. Er worden geen beheer punten gedetecteerd. Als ccmsetup. cab niet kan worden gevonden op het opgegeven pad, mislukt ccmsetup.
+- Als u alleen **/Source**opgeeft, wordt de installatie van het opgegeven pad geforceerd. Er worden geen beheer punten gedetecteerd. Als de ccmsetup.cab niet kan worden gevonden op het opgegeven pad, mislukt ccmsetup.
 - Als u zowel **/MP** als **/Source**opgeeft, worden de opgegeven beheer punten gecontroleerd en detecteert deze. Als er geen geldig beheer punt kan worden gevonden, valt het terug naar het opgegeven bronpad.
 
 Zie [para meters en eigenschappen van client installatie](../../../clients/deploy/about-client-installation-properties.md)voor meer informatie over deze ccmsetup-para meters.
@@ -312,7 +312,7 @@ In versie 1902 is deze instelling nu de titel van de **voor keur voor Cloud bron
 - Cloud distributiepunten
 - Microsoft Update (toegevoegd in versie 1902)
 
-## <a name="software-update-points"></a>Software-update punten
+## <a name="software-update-points"></a><a name="bkmk_sup"></a>Software-update punten 
 
 Clients gebruiken grens groepen om een nieuw software-update punt te vinden. Als u wilt bepalen welke servers een client kan vinden, voegt u afzonderlijke software-update punten toe aan verschillende grens groepen.
 
@@ -366,6 +366,13 @@ Controleer de configuratie van de grens groep. Voordat u met deze wijziging begi
 
 Zie [hand matig clients overschakelen naar een nieuw software-update punt](../../../../sum/plan-design/plan-for-software-updates.md#BKMK_ManuallySwitchSUPs)voor meer informatie.
 
+### <a name="intranet-clients-can-use-a-cmg-software-update-point"></a><a name="bkmk_cmg-sup"></a>Intranet-clients kunnen een CMG-software-update punt gebruiken
+<!--7102873-->
+Vanaf versie 2006 kunnen intranet-clients toegang krijgen tot een CMG-software-update punt wanneer het wordt toegewezen aan een grens groep en de [optie **Configuration Manager Cloud beheer gateway verkeer toestaan** is ingeschakeld](../../../clients/manage/cmg/setup-cloud-management-gateway.md#bkmk_role) op het software-update punt. U kunt intranet apparaten laten scannen op basis van een CMG-software-update punt in de volgende scenario's:
+
+- Wanneer een Internet machine verbinding maakt met de VPN, gaat deze door met scannen naar het software-update punt CMG via internet.
+- Als het enige software-update punt voor de grens groep het CMG software-update punt is, worden alle intranet-en Internet apparaten hierop gecontroleerd.
+
 ## <a name="management-points"></a>Beheer punten
 
 <!-- 1324594 -->
@@ -378,7 +385,7 @@ Voorheen werd een veelvoorkomend probleem opgetreden toen u een beveiligd beheer
 
 Als een client zich in een grens groep bevindt die geen toegewezen beheer punt heeft, geeft de site de client de volledige lijst met beheer punten. Dit gedrag zorgt ervoor dat een client altijd een lijst met beheer punten ontvangt.
 
-Terugval groep grens groepen van beheer punten wijzigt het gedrag tijdens client installatie (ccmsetup. exe) niet. Als de opdracht regel niet het initiële beheer punt opgeeft met de para meter/MP, ontvangt de nieuwe client de volledige lijst met beschik bare beheer punten. Voor het eerste Boots trap proces gebruikt de client het eerste beheer punt waartoe het toegang heeft. Zodra de client bij de site is geregistreerd, ontvangt de lijst met beheer punten correct gesorteerd met dit nieuwe gedrag.
+Terugval groep grens groepen van beheer punten wijzigt het gedrag tijdens client installatie (ccmsetup.exe) niet. Als de opdracht regel niet het initiële beheer punt opgeeft met de para meter/MP, ontvangt de nieuwe client de volledige lijst met beschik bare beheer punten. Voor het eerste Boots trap proces gebruikt de client het eerste beheer punt waartoe het toegang heeft. Zodra de client bij de site is geregistreerd, ontvangt de lijst met beheer punten correct gesorteerd met dit nieuwe gedrag.
 
 Zie [client installatie](#bkmk_ccmsetup)voor meer informatie over het gedrag van de client voor het verkrijgen van inhoud tijdens de installatie.
 

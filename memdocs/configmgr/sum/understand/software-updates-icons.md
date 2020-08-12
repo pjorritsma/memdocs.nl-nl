@@ -10,12 +10,12 @@ ms.technology: configmgr-sum
 ms.assetid: 63c5ef72-5715-4d86-85a2-71beba469fab
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 3843dd4ab4fe5a9aecaae8e6f207c3d037fc1950
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ff616c9ee61e85e4e77aeef6254ca9922427270c
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81717711"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129420"
 ---
 # <a name="icons-used-for-software-updates-in-configuration-manager"></a>Pictogrammen die worden gebruikt voor software-updates in Configuration Manager
 
@@ -59,7 +59,7 @@ Gesynchroniseerde software-updates worden weer gegeven in de Configuration Manag
 
 - Verbetert de efficiëntie van het bestandspakket van de software-update, dat clients installeren wanneer de software-update is goedgekeurd voor installatie. Bijvoorbeeld, de vervangen software-update kan bestanden bevatten die niet langer relevant zijn voor de oplossing of voor de besturings systemen die nu door de nieuwe software-update worden ondersteund, zodat deze bestanden niet zijn opgenomen in het vervangende bestands pakket van de software-update.  
 
-- Werkt nieuwere versies van een product bij, of met andere woorden, is niet langer van toepassing op oudere versies of configuraties van een product. Software-updates kunnen ook andere software-updates vervangen als er wijzigingen zijn aangebracht om de taalondersteuning uit te breiden. Bijvoorbeeld, een latere revisie van een productupdate voor Microsoft Office kan de ondersteuning voor een ouder besturingssysteem verwijderen, maar kan aanvullende ondersteuning voor nieuwe talen aan de initiële release van de software-update toevoegen.  
+- Werkt nieuwere versies van een product bij, of met andere woorden, is niet langer van toepassing op oudere versies of configuraties van een product. Software-updates kunnen ook andere software-updates vervangen als er wijzigingen zijn aangebracht om de taalondersteuning uit te breiden. Een latere revisie van een product update voor Microsoft 365-apps kan bijvoorbeeld ondersteuning voor een ouder besturings systeem verwijderen, maar extra ondersteuning toevoegen voor nieuwe talen in de oorspronkelijke software-update release.  
 
   Op het tabblad Vervangingsregels van het dialoogvenster Eigenschappen van software-updatepuntcomponent, kunt u aangeven hoe u vervangen software-updates wilt beheren. Zie [Supersedence rules](../plan-design/plan-for-software-updates.md#BKMK_SupersedenceRules)voor meer informatie.  
 

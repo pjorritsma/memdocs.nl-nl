@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5b2fcaeb9cb5bd4ce3e41aed8e1bafcc7f76bbb4
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 4a9eac25de66eb4fb94ea1c5b4b8d0d46caa05d7
+ms.sourcegitcommit: 532a06163f462527254d23e7dc505b18c0c4f938
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262112"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88110712"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 2002 van Configuration Manager current branch
 
@@ -442,6 +442,7 @@ De volgende aanvullende hotfixes zijn beschikbaar om specifieke problemen op te 
 |---------|---------|---------|---------|
 | [4575339](https://support.microsoft.com/help/4575339) | Apparaten worden twee keer weer gegeven in micro soft endpoint Configuration Manager beheer centrum | 23 juli 2020 | Nee |
 | [4575774](https://support.microsoft.com/help/4575774) | De cmdlet New-CMTSStepPrestartCheck mislukt in Configuration Manager, versie 2002 | 24 juli 2020 | Nee |
+| [4576782](https://support.microsoft.com/help/4576782) | Time-out voor toepassings blad in micro soft Endpoint Manager-beheer centrum | 11 augustus 2020 | Nee |
 
 <!--
 > [!NOTE]

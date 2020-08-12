@@ -10,12 +10,12 @@ ms.assetid: 681f0893-e83b-476e-9ec0-a5dc7c9deeb6
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 344ba7f6a6b0ee7683c3ac7661338f01be601a10
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a8091ecf4abc113d41f053c1152152262131a4bb
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718691"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146079"
 ---
 # <a name="websites-for-site-system-servers-in-configuration-manager"></a>Websites voor site systeem servers in Configuration Manager
 
@@ -29,7 +29,7 @@ Verschillende Configuration Manager site systeem rollen vereisen het gebruik van
 
 
 
-##  <a name="what-to-know-before-choosing-to-use-custom-websites"></a><a name="BKMK_What2Know"></a>Wat u moet weten voordat u aangepaste websites gaat gebruiken  
+##  <a name="what-to-know-before-choosing-to-use-custom-websites"></a><a name="BKMK_What2Know"></a> Wat u moet weten voordat u aangepaste websites gaat gebruiken  
  Sitesysteemrollen gebruiken standaard de **standaardwebsite** in IIS. Dit wordt automatisch ingesteld wanneer de site systeemrol wordt geïnstalleerd. Op primaire sites kunt u in plaats daarvan echter kiezen voor het gebruik van aangepaste websites. Wanneer u aangepaste websites gebruikt, geldt het volgende:  
 
 -   Aangepaste websites zijn ingeschakeld voor de hele site in plaats van voor afzonderlijke site systeem servers of-rollen.  
@@ -47,10 +47,10 @@ Verschillende Configuration Manager site systeem rollen vereisen het gebruik van
 
 -   Stel de aangepaste website zo in dat deze reageert op dezelfde poort die u hebt ingesteld voor Configuration Manager client communicatie (poort voor client aanvragen).  
 
--   Plaats voor elke aangepaste of standaard website die gebruikmaakt van een aangepaste map, een kopie van het standaard document type dat u gebruikt in de hoofdmap waarin de website wordt gehost. Bijvoorbeeld: op een Windows Server 2008 R2-computer met standaard configuraties is **iisstart. htm** een van de beschik bare standaard document typen. U vindt dit bestand in de hoofdmap van de standaard website en plaatst vervolgens een kopie van dit bestand (of een kopie van het standaard document type dat u gebruikt) in de hoofdmap die als host fungeert voor de aangepaste SMSWEB-website. Zie [Standaard document &lt;\> defaultDocument voor IIS](https://www.iis.net/configreference/system.webserver/defaultdocument)voor meer informatie over standaard document typen.  
+-   Plaats voor elke aangepaste of standaard website die gebruikmaakt van een aangepaste map, een kopie van het standaard document type dat u gebruikt in de hoofdmap waarin de website wordt gehost. Een voor beeld: op een Windows Server 2008 R2-computer met standaard configuraties is **iisstart.htm** een van de volgende beschik bare standaard document typen. U vindt dit bestand in de hoofdmap van de standaard website en plaatst vervolgens een kopie van dit bestand (of een kopie van het standaard document type dat u gebruikt) in de hoofdmap die als host fungeert voor de aangepaste SMSWEB-website. Zie [Standaard document &lt; DEFAULTDOCUMENT \> voor IIS](https://www.iis.net/configreference/system.webserver/defaultdocument)voor meer informatie over standaard document typen.  
 
-**Over IIS-vereisten:**
-**voor de volgende site systeem rollen zijn IIS en een website vereist om de site systeem services te hosten:**  
+**Over IIS-vereisten:** 
+ **Voor de volgende site systeem rollen zijn IIS en een website vereist om de site systeem services te hosten:**  
 
 -   Application Catalog-webservicepunt  
 
@@ -83,7 +83,7 @@ Aanvullende overwegingen:
 -   De TCP/IP-poorten die u in IIS voor de aangepaste website instelt, moeten overeenkomen met de client aanvraag poorten voor de site.  
 
 ## <a name="switch-between-default-and-custom-websites"></a>Scha kelen tussen standaard-en aangepaste websites  
-Hoewel u het selectie vakje voor het gebruik van aangepaste websites op een primaire site op elk gewenst moment kunt in-of uitschakelen (het vak bevindt zich op het tabblad Algemeen van de eigenschappen van de site), moet u zorgvuldig plannen voordat u deze wijziging aanbrengt. Wanneer deze configuratie wordt gewijzigd, moeten alle toepasselijke site systeem rollen op de primaire site en de onderliggende secundaire sites worden verwijderd en opnieuw worden geïnstalleerd:  
+Hoewel u het selectie vakje voor het gebruik van aangepaste websites op een primaire site op elk gewenst moment kunt in-of uitschakelen (het vak bevindt zich op het tabblad poorten van de eigenschappen van de site), moet u zorgvuldig plannen voordat u deze wijziging aanbrengt. Wanneer deze configuratie wordt gewijzigd, moeten alle toepasselijke site systeem rollen op de primaire site en de onderliggende secundaire sites worden verwijderd en opnieuw worden geïnstalleerd:  
 
 De volgende rollen **worden automatisch opnieuw geïnstalleerd**:  
 
@@ -107,7 +107,7 @@ De volgende rollen moeten **handmatig opnieuw worden geïnstalleerd**:
 
 -   Proxypunt voor inschrijving  
 
-En verder:  
+Aanvullend:  
 
 -   Wanneer u overschakelt van de standaard website naar een aangepaste website, Configuration Manager verwijdert de oude virtuele mappen niet. Als u de bestanden die Configuration Manager gebruikt, wilt verwijderen, moet u de virtuele mappen die zijn gemaakt op de standaard website hand matig verwijderen.  
 

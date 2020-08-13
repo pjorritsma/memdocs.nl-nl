@@ -10,12 +10,12 @@ ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7dd8daa7d41a6ad335f7c2d8a2a53e5ccbdf7b04
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: f624a207b5e9afded9b86312d1608a35005355f6
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129652"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179338"
 ---
 # <a name="whats-new-in-version-2006-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 2006 van Configuration Manager current branch
 
@@ -284,6 +284,18 @@ U kunt eenvoudig navigeren naar en verwijzen naar items in het knoop punt van de
 U kunt nu kiezen voor het ontvangen van meldingen van micro soft in de Configuration Manager-console. Met deze meldingen kunt u op de hoogte blijven van nieuwe of bijgewerkte functies, wijzigingen in Configuration Manager en gekoppelde services, en problemen waarvoor actie moet worden doorgevoerd.
 
 Zie [een site configureren voor het ontvangen van berichten van micro soft](../../servers/manage/admin-console-notifications.md#bkmk_msft)voor meer informatie.
+
+### <a name="power-bi-sample-reports"></a>Voorbeeld rapporten Power BI
+<!--5679791-->
+
+*(Voor het eerst geïntroduceerd in juni 2020)*
+
+Wanneer u Power BI Report Server integreert met Configuration Manager-rapportage, zijn er voorbeeld Power BI rapporten beschikbaar. Down load en installeer de volgende voorbeeld rapporten:
+
+- Status van software-Updatenaleving
+- Implementatie status van software-updates
+
+Zie [voorbeeld rapporten van Power bi installeren](../../servers/manage/powerbi-sample-reports.md)voor meer informatie.
 
 <!-- Unused sections in this release:
 ## Reporting

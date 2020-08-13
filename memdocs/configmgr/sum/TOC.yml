@@ -32,7 +32,7 @@
       items:
         - name: Software-updates vanaf een niet-verbonden software-updatepunt synchroniseren
           href: get-started/synchronize-software-updates-disconnected.md
-        - name: Office 365-updates vanaf een niet-verbonden software-updatepunt synchroniseren
+        - name: Microsoft 365-appupdates synchroniseren vanuit een niet-verbonden software-updatepunt
           href: get-started/synchronize-office-updates-disconnected.md
 - name: Implementeren en gebruiken
   items:
@@ -62,7 +62,7 @@
       href: deploy-use/service-a-server-group.md
     - name: Office 365-clientbeheerdashboard
       href: deploy-use/office-365-dashboard.md
-    - name: Office 365 ProPlus-updates beheren
+    - name: Microsoft 365-app-updates beheren
       href: deploy-use/manage-office-365-proplus-updates.md
     - name: Levering van Windows 10-update optimaliseren
       href: deploy-use/optimize-windows-10-update-delivery.md

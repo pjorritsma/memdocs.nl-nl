@@ -14,12 +14,18 @@
           href: understand/find-help.md
         - name: De documenten gebruiken
           href: understand/use-docs.md
-        - name: De console gebruiken
-          href: servers/manage/admin-console.md
         - name: Toegankelijkheidsfuncties
           href: understand/accessibility-features.md
         - name: Gebruikershandleiding van Software Center
           href: understand/software-center.md
+    - name: De console gebruiken
+      items:
+        - name: De console gebruiken
+          href: servers/manage/admin-console.md
+        - name: Consolemeldingen
+          href: servers/manage/admin-console-notifications.md
+        - name: Consolewijzigingen en tips
+          href: servers/manage/admin-console-tips.md
     - name: Basisprincipes
       items:
         - name: De grondbeginselen van Configuration Manager
@@ -76,6 +82,8 @@
           href: plan-design/changes/features-and-capabilities.md
         - name: Wat is er nieuw in incrementele versies
           href: plan-design/changes/whats-new-incremental-versions.md
+        - name: Wat is er nieuw in versie 2006
+          href: plan-design/changes/whats-new-in-version-2006.md
         - name: Wat is er nieuw in versie 2002
           href: plan-design/changes/whats-new-in-version-2002.md
         - name: Wat is er nieuw in versie 1910
@@ -84,8 +92,6 @@
           href: plan-design/changes/whats-new-in-version-1906.md
         - name: Wat is er nieuw in versie 1902
           href: plan-design/changes/whats-new-in-version-1902.md
-        - name: Wat is er nieuw in versie 1810
-          href: plan-design/changes/whats-new-in-version-1810.md
         - name: Wat is er veranderd in vergelijking met Configuration Manager 2012
           href: plan-design/changes/what-has-changed-from-configuration-manager-2012.md
         - name: Verwijderd en afgeschaft
@@ -212,6 +218,8 @@
           items:
             - name: Overzicht van niveaus
               href: plan-design/diagnostics/levels-overview.md
+            - name: Gegevens voor versie 2006
+              href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2006.md
             - name: Gegevens voor versie 2002
               href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2002.md
             - name: Gegevens voor versie 1910
@@ -220,8 +228,6 @@
               href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1906.md
             - name: Gegevens voor versie 1902
               href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1902.md
-            - name: Gegevens voor versie 1810
-              href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1810.md
         - name: Veelgestelde vragen (FAQ's)
           href: plan-design/diagnostics/frequently-asked-questions.md
     - name: Beveiliging en privacy voor Configuration Manager
@@ -470,6 +476,8 @@
           href: servers/manage/cmpivot-overview.md
         - name: CMPivot gebruiken
           href: servers/manage/cmpivot.md
+        - name: CMPivot-wijzigingen
+          href: servers/manage/cmpivot-changes.md
         - name: Problemen met CMPivot oplossen
           href: servers/manage/cmpivot-tsg.md
     - name: Onderhoudstaken
@@ -512,6 +520,8 @@
           href: servers/manage/use-the-update-registration-tool-to-import-hotfixes.md
         - name: Het installatieprogramma voor hotfixes gebruiken
           href: servers/manage/use-the-hotfix-installer-to-install-updates.md
+        - name: Controlelijst voor het installeren van update 2006
+          href: servers/manage/checklist-for-installing-update-2006.md
         - name: Controlelijst voor het installeren van update 2002
           href: servers/manage/checklist-for-installing-update-2002.md
         - name: Controlelijst voor het installeren van update 1910
@@ -520,8 +530,6 @@
           href: servers/manage/checklist-for-installing-update-1906.md
         - name: Controlelijst voor het installeren van update 1902
           href: servers/manage/checklist-for-installing-update-1902.md
-        - name: Controlelijst voor het installeren van update 1810
-          href: servers/manage/checklist-for-installing-update-1810.md
         - name: Ondersteuning voor Current Branch-versies
           href: servers/manage/current-branch-versions-supported.md
     - name: Back-up en herstel

@@ -135,7 +135,6 @@
 #### [Aan de slag met Windows-inschrijving](windows-enrollment-company-portal.md)
 #### [Windows 10-apparaat inschrijven](enroll-windows-10-device.md)
 #### [Uw Windows 8.1- of Windows RT 8.1-apparaat inschrijven](enroll-your-w81-or-rt81-windows.md)
-#### [Windows 10 Phone 8.1-apparaat inschrijven](enroll-your-wp81-windows.md)
 ### [Een apparaat versleutelen](encrypt-your-device-windows.md)
 ### [Een apparaatwachtwoord instellen of wijzigen](set-or-change-your-password-windows.md)
 ### [Uw apparaat uit Intune verwijderen](unenroll-your-device-from-intune-windows.md)

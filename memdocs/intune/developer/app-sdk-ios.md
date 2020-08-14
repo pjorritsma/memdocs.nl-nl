@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a69176e347453131c76d669b14fd7ec37b331071
-ms.sourcegitcommit: ba36a60b08bb85d592bfb8c4bbe6d02a47858b09
+ms.openlocfilehash: db975d15ec0c93bde8991872f6847364786aa429
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052490"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912417"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Ontwikkelaarshandleiding voor Microsoft Intune App SDK voor iOS
 
@@ -176,34 +176,29 @@ Als u de Intune App SDK wilt inschakelen, voert u de volgende stappen uit:
 
 Als de parameter 'o' niet wordt opgegeven, wordt in plaats daarvan het invoerbestand gewijzigd. Het hulpprogramma is idempotent en moet telkens worden gestart wanneer er wijzigingen in de Info.plist of rechten van de app zijn aangebracht. U moet ook de meest recente versie van het hulpprogramma downloaden en dat uitvoeren wanneer u de Intune SDK bijwerkt, voor het geval de config-vereisten voor Info.plist in de nieuwste versie zijn gewijzigd.
 
-## <a name="configure-adalmsal"></a>ADAL/MSAL configureren
+## <a name="configure-msal"></a>MSAL configureren
 
-> [!NOTE]
-> Azure Active Directory (Azure AD) Authentication Library (ADAL) en Azure AD Graph API worden afgeschaft. Zie [Uw toepassingen bijwerken voor het gebruik van Microsoft Authentication Library (MSAL) en Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363) voor meer informatie.
+Voor de Intune App SDK wordt de [Microsoft Authentication Library](https://github.com/AzureAD/microsoft-authentication-library-for-objc) gebruikt voor de verificatie en voorwaardelijke startscenario's. De SDK maakt ook gebruik van MSAL om de gebruikers-id te registreren bij de MAM-service om zonder scenario's voor apparaatinschrijving beheertaken uit te voeren.
 
-De Intune App SDK kan ofwel gebruikmaken van de [Azure Active Directory Authentication Library](https://github.com/AzureAD/azure-activedirectory-library-for-objc) of van de [Microsoft Authentication Library](https://github.com/AzureAD/microsoft-authentication-library-for-objc) voor de scenario's voor verificatie en voorwaardelijk starten. De Intune App SDK is ook afhankelijk van ADAL/MSAL voor het registreren van de gebruikersidentiteit bij de MAM-service om beheertaken uit te voeren zonder scenario's voor apparaatinschrijving.
+Normaal gesproken is voor MSAL vereist dat apps worden geregistreerd via Azure Active Directory (AAD) en dat een unieke client-id en omleidings-URI worden gemaakt om de beveiliging te waarborgen van de tokens die aan de app worden toegekend. Als uw app al MSAL gebruikt om gebruikers te verifiëren, moet de app de bestaande registratiewaarden gebruiken en de standaardwaarden van de Intune App SDK overschrijven. Dit zorgt ervoor dat eindgebruikers niet tweemaal om verificatie wordt gevraagd (eenmaal door de Intune App SDK en een tweede maal door de app).
 
-Normaal gesproken vereist ADAL/MSAL dat apps worden geregistreerd via Azure Active Directory (AAD) en dat een unieke client-id en omleidings-URI worden gemaakt om de beveiliging te waarborgen van de tokens die aan de app worden toegekend. Als uw app al ADAL of MSAL gebruikt om gebruikers te verifiëren, moet de app de bestaande registratiewaarden gebruiken en de standaardwaarden van de Intune App SDK overschrijven. Dit zorgt ervoor dat eindgebruikers niet tweemaal om verificatie wordt gevraagd (eenmaal door de Intune App SDK en een tweede maal door de app).
+Als u niet al MSAL voor uw app gebruikt en u geen toegang tot een AAD-resource nodig hebt, hoeft u geen registratie van client-apps in AAD in te stellen als u ervoor kiest om MSAL te integreren. Als u besluit MSAL te integreren, moet u een app-registratie configureren en de standaard-id en omleidings-URI van de Intune-client overschrijven.  
 
-Als u niet al ADAL of MSAL voor uw app gebruikt en u geen toegang tot een AAD-resource nodig hebt, hoeft u geen registratie van client-apps in AAD in te stellen als u ervoor kiest om ADAL te integreren. Als u besluit MSAL te integreren, moet u een app-registratie configureren en de standaard-id en omleidings-URI van de Intune-client overschrijven.  
+Het is raadzaam om uw app te koppelen aan de nieuwste versie van [MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-objc/releases).
 
-Het is raadzaam om uw app te koppelen aan de nieuwste versie van [ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-objc/releases) of [MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-objc/releases).
+### <a name="link-to-msal-binaries"></a>Koppelen aan binaire MSAL-bestanden
 
-### <a name="link-to-adal-or-msal-binaries"></a>Koppelen aan binaire ADAL- of MSAL-bestanden
-
-**Optie 1:** volg [deze stappen](https://github.com/AzureAD/azure-activedirectory-library-for-objc#download) om uw app te koppelen aan de binaire ADAL-bestanden.
-
-**Optie 2:** u kunt ook [deze instructies](https://github.com/AzureAD/microsoft-authentication-library-for-objc#installation) volgen om uw app te koppelen aan de binaire MSAL-bestanden.
+Volg [deze instructies](https://github.com/AzureAD/microsoft-authentication-library-for-objc#installation) om uw app te koppelen aan de binaire MSAL-bestanden.
 
 1. Als uw app geen toegangsgroepen voor de sleutelhanger heeft gedefinieerd, moet u de bundel-id van de app toevoegen als eerste groep.
 
-2. Schakel eenmalige aanmelding van ADAL/MSAL in door `com.microsoft.adalcache` toe te voegen aan de sleutelhangerrechten.
+2. Schakel eenmalige aanmelding van MSAL in door `com.microsoft.adalcache` toe te voegen aan de groepen voor sleutelhangertoegang.
 
-3. Als u de gedeelde cachesleutelketengroep van ADAL expliciet instelt, zorg er dan voor dat deze is ingesteld op `<appidprefix>.com.microsoft.adalcache`. ADAL stelt dit automatisch in tenzij u dit overschrijft. Als u wilt opgeven dat een aangepaste sleutelketengroep `com.microsoft.adalcache` vervangt, geeft u dat op in het bestand Info.plist onder 'IntuneMAMSettings', met de sleutel `ADALCacheKeychainGroupOverride`.
+3. Als u de gedeelde cachesleutelhangergroep van MSAL expliciet instelt, zorg er dan voor dat deze is ingesteld op `<appidprefix>.com.microsoft.adalcache`. MSAL stelt dit automatisch in tenzij u dit overschrijft. Als u wilt opgeven dat een aangepaste sleutelketengroep `com.microsoft.adalcache` vervangt, geeft u dat op in het bestand Info.plist onder 'IntuneMAMSettings', met de sleutel `ADALCacheKeychainGroupOverride`.
 
-### <a name="configure-adalmsal-settings-for-the-intune-app-sdk"></a>ADAL-/MSAL-instellingen voor de Intune App SDK configureren
+### <a name="configure-msal-settings-for-the-intune-app-sdk"></a>MSAL-instellingen voor de Intune App SDK configureren
 
-Als uw app al ADAL of MSAL voor verificatie gebruikt en eigen Azure Active Directory-instellingen heeft, kunt u afdwingen dat de Intune App SDK dezelfde instellingen gebruikt tijdens verificatie met AAD. Dit zorgt ervoor dat de app de gebruiker niet tweemaal om verificatie vraagt. Zie [Instellingen configureren voor de Intune App SDK](#configure-settings-for-the-intune-app-sdk) voor informatie over het invullen van de volgende instellingen:  
+Als uw app al MSAL voor verificatie gebruikt en eigen Azure Active Directory-instellingen heeft, kunt u afdwingen dat voor de Intune App SDK dezelfde instellingen worden gebruikt tijdens verificatie met AAD. Dit zorgt ervoor dat de app de gebruiker niet tweemaal om verificatie vraagt. Zie [Instellingen configureren voor de Intune App SDK](#configure-settings-for-the-intune-app-sdk) voor informatie over het invullen van de volgende instellingen:  
 
 * ADALClientId
 * ADALAuthority
@@ -211,13 +206,13 @@ Als uw app al ADAL of MSAL voor verificatie gebruikt en eigen Azure Active Direc
 * ADALRedirectScheme
 * ADALCacheKeychainGroupOverride
 
-Als uw app al ADAL of MSAL gebruikt, zijn de volgende configuraties vereist:
+Als uw app al MSAL gebruikt, zijn de volgende configuraties vereist:
 
-1. Geef in het bestand Info.plist van het project onder de woordenlijst **IntuneMAMSettings** met de sleutelnaam `ADALClientId` de client-id op die voor ADAL-aanroepen moet worden gebruikt.
+1. Geef in het bestand Info.plist van het project onder de woordenlijst **IntuneMAMSettings** met de sleutelnaam `ADALClientId` de client-id op die voor MSAL-aanroepen moet worden gebruikt.
 
 2. Geef onder de woordenlijst **IntuneMAMSettings** met de sleutelnaam `ADALAuthority` ook de Azure AD-instantie op.
 
-3. Geef onder de woordenlijst **IntuneMAMSettings** met de sleutelnaam `ADALRedirectUri` ook de omleidings-URI op die voor ADAL-aanroepen moet worden gebruikt. U kunt in plaats daarvan ook `ADALRedirectScheme` opgeven als de omleidings-URI van de toepassing de indeling `scheme://bundle_id` heeft.
+3. Geef onder de woordenlijst **IntuneMAMSettings** met de sleutelnaam `ADALRedirectUri` ook de omleidings-URI op die voor MSAL-aanroepen moet worden gebruikt. U kunt in plaats daarvan ook `ADALRedirectScheme` opgeven als de omleidings-URI van de toepassing de indeling `scheme://bundle_id` heeft.
 
 Apps kunnen bovendien deze Azure AD-instellingen tijdens runtime overschrijven. U kunt dit doen door de eigenschappen `aadAuthorityUriOverride`, `aadClientIdOverride` en `aadRedirectUriOverride` voor de instantie `IntuneMAMPolicyManager` in te stellen.
 
@@ -226,13 +221,13 @@ Apps kunnen bovendien deze Azure AD-instellingen tijdens runtime overschrijven. 
 > [!NOTE]
 > De methode Info.plist wordt aanbevolen voor alle instellingen die statisch zijn en niet tijdens runtime hoeven te worden vastgesteld. Waarden die zijn toegewezen aan de `IntuneMAMPolicyManager`-eigenschappen hebben voorrang op eventuele bijbehorende waarden die zijn opgegeven in de Info.plist en blijven behouden ook nadat de app opnieuw wordt gestart. De SDK blijft deze gebruiken voor het inchecken van beleid totdat de gebruiker wordt uitgeschreven of de waarden worden gewist of gewijzigd.
 
-### <a name="if-your-app-does-not-use-adal-or-msal"></a>Als uw app geen ADAL of MSAL gebruikt
+### <a name="if-your-app-does-not-use-msal"></a>Als uw app geen gebruik maakt van MSAL
 
-Zoals eerder vermeld kan de Intune App SDK ofwel gebruikmaken van de [Azure Active Directory Authentication Library](https://github.com/AzureAD/azure-activedirectory-library-for-objc) of van de [Microsoft Authentication Library](https://github.com/AzureAD/microsoft-authentication-library-for-objc) voor de scenario's voor verificatie en voorwaardelijk starten. De Intune App SDK is ook afhankelijk van ADAL/MSAL voor het registreren van de gebruikersidentiteit bij de MAM-service om beheertaken uit te voeren zonder scenario's voor apparaatinschrijving. Als **voor het eigen verificatiemechanisme van uw app geen ADAL of MSAL wordt gebruikt**, moet u mogelijk aangepaste AAD-instellingen configureren, afhankelijk van de verificatiebibliotheek die u wilt integreren:   
+Zoals eerder vermeld, wordt voor de Intune App SDK de [Microsoft Authentication Library](https://github.com/AzureAD/microsoft-authentication-library-for-objc) gebruikt voor de verificatie en voorwaardelijke startscenario's. De SDK maakt ook gebruik van MSAL om de gebruikers-id te registreren bij de MAM-service om zonder scenario's voor apparaatinschrijving beheertaken uit te voeren. Als **uw app geen gebruik maakt van MSAL voor het eigen verificatiemechanisme**, moet u wellicht aangepaste AAD-instellingen configureren:
 
-ADAL: de Intune App SDK zorgt voor de standaardwaarden voor ADAL-parameters en de verificatie met Azure AD. Ontwikkelaars hoeven geen waarden op te geven voor de eerder genoemde ADAL-instellingen. 
-
-MSAL: ontwikkelaars moeten een app-registratie in AAD maken met een aangepaste omleidings-URI in de indeling die [hier](https://github.com/AzureAD/microsoft-authentication-library-for-objc/wiki/Migrating-from-ADAL-Objective-C-to-MSAL-Objective-C#app-registration-migration) is opgegeven. Ontwikkelaars moeten de eerder genoemde `ADALClientID`- en `ADALRedirectUri`-instellingen of de equivalente eigenschappen `aadClientIdOverride` en `aadRedirectUriOverride` van de `IntuneMAMPolicyManager`-instantie instellen. Ook moeten ontwikkelaars ervoor zorgen dat ze stap 4 in de vorige sectie uitvoeren om de app-registratie toegang te geven tot de Intune-app-beveiligingsservice.
+* Ontwikkelaars moeten een app-registratie in AAD maken met een aangepaste omleidings-URI in de indeling die [hier](https://github.com/AzureAD/microsoft-authentication-library-for-objc/wiki/Migrating-from-ADAL-Objective-C-to-MSAL-Objective-C#app-registration-migration) is opgegeven. 
+* Ontwikkelaars moeten de eerder genoemde `ADALClientID`- en `ADALRedirectUri`-instellingen of de equivalente eigenschappen `aadClientIdOverride` en `aadRedirectUriOverride` van de `IntuneMAMPolicyManager`-instantie instellen. 
+* Ook moeten ontwikkelaars ervoor zorgen dat ze stap 4 in de vorige sectie uitvoeren om de app-registratie toegang te geven tot de Intune-app-beveiligingsservice.
 
 ### <a name="special-considerations-when-using-msal"></a>Speciale overwegingen bij het gebruik van MSAL 
 
@@ -250,16 +245,16 @@ Sommige van deze instellingen zijn mogelijk in eerdere secties aan bod gekomen e
 
 Instelling  | Type  | Definitie | Vereist?
 --       |  --   |   --       |  --
-ADALClientId  | Tekenreeks  | De Azure AD-client-id van de app. | Vereist voor alle apps die gebruikmaken van MSAL en elke ADAL-app die toegang heeft tot een AAD-resource die niet van Intune is. |
+ADALClientId  | Tekenreeks  | De Azure AD-client-id van de app. | Vereist voor alle apps die gebruikmaken van MSAL. |
 ADALAuthority | Tekenreeks | De Azure AD-instantie van de app wordt gebruikt. U moet uw eigen omgeving gebruiken waar AAD-accounts zijn geconfigureerd. | Optioneel. Aanbevolen als de app een aangepaste Line-Of-Business-toepassing is die is gebouwd voor gebruik binnen één organisatie-/AAD-tenant. Als deze waarde ontbreekt, wordt de gemeenschappelijke AAD-instantie gebruikt.|
 ADALRedirectUri  | Tekenreeks  | De Azure AD-omleidings-URI van de app. | ADALRedirectUri of ADALRedirectScheme is vereist voor alle apps die gebruikmaken van MSAL en elke ADAL-app die toegang heeft tot een AAD-resource die niet van Intune is.  |
 ADALRedirectScheme  | Tekenreeks  | Het Azure AD-omleidingsschema van de app. Dit kan worden gebruikt in plaats van ADALRedirectUri als de omleidings-URI van de app de notatie `scheme://bundle_id` heeft. | ADALRedirectUri of ADALRedirectScheme is vereist voor alle apps die gebruikmaken van MSAL en elke ADAL-app die toegang heeft tot een AAD-resource die niet van Intune is. |
-ADALLogOverrideDisabled | Boolean-waarde  | Geeft aan of de SDK alle ADAL-/MSAL-logboeken (inclusief ADAL-aanroepen van de app, indien van toepassing) naar een eigen logboekbestand routeert. De standaardwaarde is NO (Nee). De waarde is YES (Ja) als de app een eigen ADAL-/MSAL-logboek wil aanroepen. | Optioneel. |
-ADALCacheKeychainGroupOverride | Tekenreeks  | Hiermee wordt aangegeven welke sleutelhangergroep voor de ADAL-/MSAL-cache moet worden gebruikt in plaats van 'com.microsoft.adalcache'. Houd er rekening mee dat deze niet het voorvoegsel app-id heeft. Dat wordt tijdens runtime als voorvoegsel toegevoegd aan de gegeven tekenreeks. | Optioneel. |
+ADALLogOverrideDisabled | Boolean-waarde  | Geeft aan of de SDK alle MSAL-logboeken (inclusief MSAL-aanroepen van de app, indien van toepassing) naar een eigen logboekbestand routeert. De standaardwaarde is NO (Nee). De waarde is YES (Ja) als de app een eigen MSAL-logboek wil aanroepen. | Optioneel. |
+ADALCacheKeychainGroupOverride | Tekenreeks  | Hiermee wordt aangegeven welke sleutelhangergroep voor de MSAL-cache moet worden gebruikt in plaats van 'com.microsoft.adalcache'. Houd er rekening mee dat deze niet het voorvoegsel app-id heeft. Dat wordt tijdens runtime als voorvoegsel toegevoegd aan de gegeven tekenreeks. | Optioneel. |
 AppGroupIdentifiers | Matrix van tekenreeksen  | Matrix van toepassingsgroepen van het gedeelte com.apple.security.application-groups met rechten van de app. | Vereist als de app toepassingsgroepen gebruikt. |
 ContainingAppBundleId | Tekenreeks | Deze geeft de bundel-id aan van de extensie waarvan de app onderdeel uitmaakt. | Vereist voor iOS-extensies. |
 DebugSettingsEnabled| Boolean-waarde | Indien ingesteld op YES (Ja), kan testbeleid binnen de bundel Instellingen worden toegepast. Apps moeten *niet* worden verzonden als deze instelling is ingeschakeld. | Optioneel. De standaardwaarde is No (Nee). |
-AutoEnrollOnLaunch| Boolean-waarde| Hiermee geeft u op of de app moet proberen automatisch in te schrijven bij het starten als een bestaande beheerde identiteit wordt gedetecteerd en dit nog niet is gebeurd. De standaardwaarde is NO (Nee). <br><br> Notities: Als er geen beheerde identiteit wordt gevonden of er geen geldig token voor de identiteit beschikbaar is in de ADAL-/MSAL-cache, dan zal de poging om in te schrijven zonder melding en zonder te vragen om referenties mislukken, tenzij in de app MAMPolicyRequired tevens is ingesteld op YES (Ja). | Optioneel. De standaardwaarde is No (Nee). |
+AutoEnrollOnLaunch| Boolean-waarde| Hiermee geeft u op of de app moet proberen automatisch in te schrijven bij het starten als een bestaande beheerde identiteit wordt gedetecteerd en dit nog niet is gebeurd. De standaardwaarde is NO (Nee). <br><br> Notities: Als er geen beheerde identiteit wordt gevonden of er geen geldig token voor de identiteit beschikbaar is in de MSAL-cache, dan zal de poging om in te schrijven zonder melding en zonder te vragen om referenties mislukken, tenzij in de app MAMPolicyRequired tevens is ingesteld op YES (Ja). | Optioneel. De standaardwaarde is No (Nee). |
 MAMPolicyRequired| Boolean-waarde| Deze geeft aan of de app is geblokkeerd en niet kan worden gestart als de app geen Intune-beveiligingsbeleid voor apps heeft. De standaardwaarde is NO (Nee). <br><br> Notities: apps kunnen niet worden verzonden naar de App Store als MAMPolicyRequired is ingesteld op YES (Ja). Wanneer MAMPolicyRequired wordt ingesteld op YES, moet AutoEnrollOnLaunch ook worden ingesteld op YES. | Optioneel. De standaardwaarde is No (Nee). |
 MAMPolicyWarnAbsent | Boolean-waarde| Deze geeft aan of de app tijdens het opstarten een waarschuwing verzendt naar de gebruiker als de app geen Intune-beveiligingsbeleid voor apps heeft. <br><br> Opmerking: het is gebruikers nog steeds toegestaan de app zonder beleid te gebruiken, nadat ze de waarschuwing hebben genegeerd. | Optioneel. De standaardwaarde is No (Nee). |
 MultiIdentity | Boolean-waarde| Hiermee wordt aangegeven of de app in staat is om met meerdere identiteiten te werken. | Optioneel. De standaardwaarde is No (Nee). |

@@ -17,12 +17,12 @@ ROBOTS: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8df3c23417f146821d6f9b73e8b68f59c71a31df
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 28eaf0462a91f20bb6a3c5bc5d6de65845e1f06b
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988961"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051599"
 ---
 # <a name="require-multi-factor-authentication-for-intune-device-enrollments"></a>Multi-Factor Authentication vereisen voor Intune-apparaatinschrijvingen
 
@@ -36,7 +36,7 @@ MFA vereist twee of meer van de volgende verificatiemethoden:
 - Iets dat u hebt (een vertrouwd apparaat dat moeilijk kan worden gedupliceerd, zoals een telefoon).
 - Iets van u (biometrisch, zoals een vingerafdruk).
 
-MFA wordt ondersteund voor apparaten met iOS/iPadOS, Android, Windows 8.1 of hoger, Windows Phone 8.1 of hoger en Windows 10 Mobile of hoger.
+MFA wordt ondersteund voor apparaten met iOS/iPadOS, Android, Windows 8.1 of hoger.
 
 Als u MFA inschakelt, moeten eindgebruikers twee soorten referenties opgegeven om een apparaat te registreren.
 

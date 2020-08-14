@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 617c6b89bfc52d926e2ddb422c36db39edec6908
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 99dc504f8fc3148463288820dc810bab892e3081
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093048"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912404"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Wat is Microsoft Intune-appbeheer?
 
@@ -51,8 +51,8 @@ Intune MAM ondersteunt twee configuraties:
 
 Intune biedt een scala aan mogelijkheden om u te helpen de benodigde apps op de apparaten te krijgen waarop u deze wilt uitvoeren. De volgende tabel bevat een samenvatting van de mogelijkheden voor app-beheer.
 
-|  | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10 | Windows Phone 8.1 |
-|-------------------------------------------------------------------------------------|---------|-----|-------|------------|-------------------|
+| App-beheerfunctionaliteit | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10 | Windows Phone 8.1 |
+|-------------------------- | -------------------------- | ---------- | ----- | ---------- | ----------------- |
 | Apps toevoegen en aan apparaten en gebruikers toewijzen | Ja | Ja | Ja | Ja | Ja |
 | Apps toewijzen aan apparaten die niet zijn geregistreerd met Intune | Ja | Ja | Nee | Nee | Nee |
 | Beleidsregels voor app-configuratie gebruiken om het opstartgedrag van apps te beheren | Ja | Ja | Nee | Nee | Nee |

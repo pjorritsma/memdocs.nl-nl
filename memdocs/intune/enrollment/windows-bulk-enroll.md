@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7894e2648b58b1afd313250dc9724f117fe6c93a
-ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
+ms.openlocfilehash: 6d50d7f8e4edeaf6d88875fafef977936909d71f
+ms.sourcegitcommit: 532a06163f462527254d23e7dc505b18c0c4f938
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216532"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88110729"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Bulkregistratie voor Windows-apparaten
 
@@ -100,4 +100,4 @@ In het beheerlogboek **Provisioning-Diagnostics-Provider** in Logboeken kunt u c
 Wanneer u geen open netwerk gebruikt, moet u [certificaten op apparaatniveau](../protect/certificates-configure.md) gebruiken om verbindingen te initiëren. Voor in bulk ingeschreven apparaten kunnen geen op gebruikers gerichte certificaten voor netwerktoegang worden gebruikt. 
 
 ### <a name="conditional-access"></a>Voorwaardelijke toegang
-Voorwaardelijke toegang is niet beschikbaar voor Windows-apparaten die zijn geregistreerd via bulkinschrijving.
+Voorwaardelijke toegang is niet beschikbaar voor Windows-apparaten die zijn geregistreerd via bulkinschrijving, met uitzondering van Windows 10 1803+.

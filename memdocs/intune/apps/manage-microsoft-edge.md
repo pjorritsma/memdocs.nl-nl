@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/08/2020
+ms.date: 08/05/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35ee8b225abe48aa4b8b0ca78b9e5b137d0721f6
-ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
+ms.openlocfilehash: 49d731ef6e9508367ded8ed5d711b744be7d2db1
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87758360"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912548"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>Internettoegang beheren met behulp van Microsoft Edge voor iOS en Android met Microsoft Intune
 
@@ -114,7 +114,7 @@ Dit configuratiescenario werkt alleen met geregistreerde apparaten. Een UEM-prov
 
 ## <a name="general-app-configuration-scenarios"></a>Algemene configuratiescenario's voor apps
 
-Microsoft Edge voor iOS en Android biedt beheerders de mogelijkheid om de standaardconfiguratie voor verschillende in-app-instellingen aan te passen. Deze mogelijkheid is momenteel alleen beschikbaar wanneer voor Microsoft Edge voor iOS en Android een Intune-app-beveiligingsbeleid is toegepast op het werk- of schoolaccount dat is aangemeld bij de app.
+Microsoft Edge voor iOS en Android biedt beheerders de mogelijkheid om de standaardconfiguratie voor verschillende in-app-instellingen aan te passen. Deze mogelijkheid is momenteel alleen beschikbaar wanneer voor Microsoft Edge voor iOS en Android een Intune-app-beveiligingsbeleid is toegepast op het werk- of schoolaccount dat is aangemeld bij de app en de beleidsinstellingen worden geleverd door een App Configuration-beleid via beheerde apps.
 
 > [!IMPORTANT]
 > Microsoft Edge voor Android biedt geen ondersteuning voor Chromium-instellingen die beschikbaar zijn in Beheerde Google Play.
@@ -246,12 +246,12 @@ Microsoft Edge voor Android kan worden ingeschakeld als een kiosk-app met de vol
 |    Sleutel    |    Waarde    |
 |-----------|-------------|
 |    com.microsoft.intune.mam.managedbrowser.enableKioskMode    |    **waar** schakelt de kioskmodus voor Microsoft Edge voor Android in<br>**onwaar** (standaard) schakelt kioskmodus uit    |
-|    com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode    |    **waar** geeft de adresbalk in kioskmodus weer<br> **onwaar** (standaard) verbergt de adresbalk in kioskmodus    |
-|    com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode    |    **waar** geeft de onderste actiebalk weer in kioskmodus<br> **onwaar** (standaard) verbergt de onderste balk in kioskmodus    |
+|    com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode    |    **waar** geeft de adresbalk in kioskmodus weer<br> met **onwaar** (standaard) wordt de adresbalk verborgen wanneer de kioskmodus is ingeschakeld    |
+|    com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode    |    **waar** geeft de onderste actiebalk weer in kioskmodus<br> met **onwaar** (standaard) wordt de onderste balk verborgen wanneer de kioskmodus is ingeschakeld    |
 
 ## <a name="data-protection-app-configuration-scenarios"></a>App-configuratiescenario's voor gegevensbescherming
 
-Microsoft Edge voor iOS en Android ondersteunt beleidsregels voor app-configuratie door de instellingen voor gegevensbeveiliging te volgen wanneer de app wordt beheerd door Microsoft Endpoint Manager met een Intune-app-beveiligingsbeleid dat is toegepast op het werk- of schoolaccount dat is aangemeld bij de app:
+Microsoft Edge voor iOS en Android ondersteunt beleidsregels voor app-configuratie door de instellingen voor gegevensbeveiliging te volgen wanneer de app wordt beheerd door Microsoft Endpoint Manager met een Intune-app-beveiligingsbeleid dat is toegepast op het werk- of schoolaccount dat is aangemeld bij de app en de beleidsinstellingen worden geleverd door een App Configuration-beleid via beheerde apps:
 
 - Accountsynchronisatie beheren
 - Beperkte websites beheren

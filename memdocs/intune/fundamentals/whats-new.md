@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46c58437fab66b0a4fd22ea8452856ca701e9eb7
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 894ef12107b8e8b520ca69a463be47ef339bd9b4
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546806"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051623"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Wat is er nieuw in Microsoft Intune?
 
@@ -55,6 +55,15 @@ Ontdek elke week wat er nieuw is in Microsoft Intune in het [Microsoft Endpoint 
 ### Scripts
 
 <!-- ########################## -->
+## <a name="week-of-august-10-2020"></a>Week van 10 augustus 2020
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-management"></a>Apparaatbeheer
+
+#### <a name="tenant-attach-install-an-application-from-the-admin-center----in7220536-cm6024389--"></a>Tenantkoppeling: Een toepassing installeren vanuit het beheercentrum <!-- IN7220536 CM6024389-->
+Vanuit het Microsoft Endpoint Manager-beheercentrum kunt u nu de installatie van een toepassing in realtime initiëren voor een apparaat dat is gekoppeld via een tenant. Zie voor meer informatie [Tenant koppelen: Installeer een toepassing vanuit het beheercentrum](../../configmgr/tenant-attach/applications.md).
+
+<!-- ########################## -->
 ## <a name="week-of-july-27-2020"></a>Week van 27 juli 2020
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -68,9 +77,6 @@ Met behulp van Power BI-sjabloon-apps kunnen Power BI-partners Power BI-apps bou
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="app-management"></a>Appbeheer
-
-#### <a name="win32-app-installation-notifications-and-the-company-portal---7485945----"></a>Meldingen over Win32-app-installatie en de bedrijfsportal<!-- 7485945  -->
-Eindgebruikers kunnen nu bepalen of de toepassingen die worden weergegeven in de [Microsoft Intune-webbedrijfsportal](https://portal.manage.microsoft.com/) moeten worden geopend met de bedrijfsportal-app of via de bedrijfsportal-website. Deze optie is alleen beschikbaar als de eindgebruiker de bedrijfsportal-app heeft geïnstalleerd en een webbedrijfsportal-toepassing start buiten een browser. 
 
 #### <a name="exchange-on-premises-connector-support---7138486----"></a>Ondersteuning voor Exchange On-Premises Connector<!-- 7138486  -->
 In Intune wordt de ondersteuning voor de functie Exchange On-Premises Connector verwijderd uit de Intune-serviceversie vanaf 2007 (juli). Bestaande klanten met een actieve connector kunnen op dit moment verder gaan met de huidige functionaliteit. Nieuwe klanten en bestaande klanten die geen actieve connector hebben, kunnen geen nieuwe connectors meer maken of Exchange ActiveSync-apparaten (EAS) beheren vanuit Intune. Voor deze klanten raadt Microsoft aan om met Exchange [HMA (Hybrid Modern Authentication)](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) de toegang tot Exchange On-Premises te beveiligen. Met HMA kunt u zowel beleidsregels voor Intune-app-beveiliging (ook bekend als MAM) als voorwaardelijke toegang via Outlook Mobile voor Exchange On-Premises inschakelen.

@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8f400c946f26de272b782194df3f1b1930ab0b4
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 87f81c9f33fd267bcd57a14b59c88d36a937fecd
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093506"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865819"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Problemen bij de apparaatinschrijving in Microsoft Intune oplossen
 
@@ -290,7 +290,9 @@ Na het inschrijven krijgen de apparaten weer een goede status en is er weer toeg
 
 Voor het inschrijven van ADE-apparaten met gebruikersaffiniteit moet het WS-Trust 1.3 Username/Mixed-eindpunt zijn ingeschakeld om gebruikerstokens aan te vragen. Dit eindpunt wordt standaard door Active Directory ingeschakeld. U kunt een lijst van ingeschakelde eindpunten ophalen met de PowerShell-cmdlet Get-AdfsEndpoint en vervolgens naar het eindpunt trust/13/UsernameMixed zoeken. Bijvoorbeeld:
 
-      Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
+```powershell
+Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
+```
 
 Zie de [documentatie over Get-AdfsEndpoint](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint) voor meer informatie.
 
@@ -422,7 +424,7 @@ Het accountcertificaat van het vorige account staat nog op de computer.
 |--------------|--------------------|----------------------------------------|
 |0x80CF0437 |De klok op de clientcomputer is niet ingesteld op de juiste tijd.|Zorg ervoor dat de klok en de tijdzone op de clientcomputer zijn ingesteld op de juiste tijd en tijdzone.|
 |0x80240438, 0x80CF0438, 0x80CF402C|Er kan geen verbinding worden gemaakt met de Intune-service. Controleer de proxy-instellingen voor de client.|Controleer of Intune de proxyconfiguratie op de clientcomputer ondersteunt. Controleer of de clientcomputer internettoegang heeft.|
-|0x80240438, 0x80CF0438|De proxy-instellingen in Internet Explorer en Lokaal systeem zijn niet geconfigureerd.|Er kan geen verbinding worden gemaakt met de Intune-service. Controleer de proxy-instellingen voor de clientcomputer. Controleer of Intune de proxyconfiguratie op de clientcomputer ondersteunt. Controleer of de clientcomputer internettoegang heeft.|
+|0x80240438, 0x80CF0438|De proxy-instellingen in Internet Explorer en Lokaal systeem zijn niet geconfigureerd.|Er kan geen verbinding worden gemaakt met de Intune-service. Controleer de proxy-instellingen voor de client. Controleer of Intune de proxyconfiguratie op de clientcomputer ondersteunt. Controleer of de clientcomputer internettoegang heeft.|
 |0x80043001, 0x80CF3001, 0x80043004, 0x80CF3004|Inschrijvingspakket is verouderd.|Download en installeer het huidige clientsoftwarepakket via de beheerwerkruimte.|
 |0x80043002, 0x80CF3002|Account is in onderhoudsmodus.|U kunt geen nieuwe clientcomputers inschrijven wanneer het account in onderhoudsmodus is. Meld u aan bij uw account om uw accountinstellingen weer te geven.|
 |0x80043003, 0x80CF3003|Account is verwijderd.|Controleer of uw account en abonnement op Intune nog actief zijn. Meld u aan bij uw account om uw accountinstellingen weer te geven.|

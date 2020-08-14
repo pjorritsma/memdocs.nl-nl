@@ -19,14 +19,14 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 0c3254fb6e02bedd416f370f4cadcc16cab87d85
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 7eeb784f8deaf1cf74866e90aabaee99554faa8d
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881163"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865836"
 ---
-# <a name="how-to-turn-off-microsoft-data-collection"></a>Gegevensverzameling door Microsoft uitschakelen
+# <a name="how-to-turn-off-microsoft-data-collection-for-macos-devices"></a>Gegevensverzameling door Microsoft uitschakelen voor macOS-apparaten
 
 Microsoft verzamelt automatisch bepaalde gegevens over onze producten en services. We doen dit om de betrouwbaarheid en prestaties van onze producten, waaronder de bedrijfsportal-app, te verbeteren. Hoewel deze gegevens worden geanonimiseerd, is het mogelijk dat sommige gebruikers het verzamelen van deze gegevens niet prettig vinden. Het ondersteuningsteam van het bedrijf heeft geen controle over het verzamelen van deze gegevens en kan uw selectie voor deze instelling niet wijzigen.
 

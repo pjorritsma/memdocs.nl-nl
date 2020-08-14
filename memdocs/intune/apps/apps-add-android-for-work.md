@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc8fb5b50475c523741128d64582be29d4bf5ffe
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: b8ce02a86236e390983b4e1ecca8d48d4767e49e
+ms.sourcegitcommit: 9eebe77af18045fceb3d41b43d76b370fe92b30e
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262656"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87821628"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Beheerde Google Play-apps toevoegen aan Android Enterprise-apparaten met Intune
 
@@ -175,8 +175,8 @@ Webkoppelingen worden geopend met Microsoft Edge of een andere browser-app die u
 Als u een app uit de Store hebt goedgekeurd maar deze nog niet wordt weergegeven in het workloadvenster **Apps**, start u als volgt een onmiddellijke synchronisatie:
 
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Selecteer **Apps** > **Tenantbeheer** > **Connectors en tokens** > **Beheerde Google Play**.
-5. Kies in het deelvenster **Beheerde Google Play Store** **Vernieuwen**.  
+3. Selecteer **Tenantbeheer** > **Connectors en tokens** > **Beheerde Google Play**.
+5. Kies in het deelvenster **Beheerde Google Play Store** **Synchroniseren**.  
     De pagina werkt de tijd en de status van de laatste synchronisatie bij.
 6. Selecteer in het Microsoft Endpoint Manager-beheercentrum de opties **Apps** > **Alle apps**.  
     De zojuist beschikbaar geworden beheerde Google Play Store-app wordt weergegeven.

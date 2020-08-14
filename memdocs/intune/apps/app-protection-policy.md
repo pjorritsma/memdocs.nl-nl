@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 08/06/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28401c314d70f1d810fe12e815d8558afc8aab89
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 9688397218539ef3cc16f6fed91380e1820dbb15
+ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502592"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87997984"
 ---
 # <a name="app-protection-policies-overview"></a>Overzicht van App-beveiligingsbeleid
 
@@ -323,6 +323,11 @@ Dit proces heeft als doel de gegevens van uw organisatie in de app op app-niveau
   
 ### <a name="ios-share-extension"></a>iOS-extensie voor delen
 U kunt de iOS-/iPadOS-extensie voor delen gebruiken om werk- of schoolgegevens te openen in niet-beheerde apps, zelfs wanneer het beleid voor gegevensoverdracht is ingesteld op **Alleen voor beheerde apps** of **Geen apps**. De iOS-/iPadOS-extensie voor delen kan alleen met app-beveiligingsbeleid van Intune worden beheerd indien ook het apparaat wordt beheerd. Daarom worden _**'zakelijke' gegevens door Intune versleuteld voordat ze buiten de app worden gedeeld**_. U kunt dit versleutelingsgedrag controleren door een 'zakelijk' bestand te openen buiten de beheerde app. Het bestand moet zijn versleuteld en kan niet worden geopend bijten de beheerde app.
+
+### <a name="universal-links-support"></a>Ondersteuning voor universele koppelingen
+Het beveiligingsbeleid voor Intune-apps blokkeert standaard toegang tot niet-geautoriseerde toepassingsinhoud. In iOS/iPadOS is er functionaliteit voor het openen van specifieke inhoud of toepassingen met [Universele koppelingen](https://developer.apple.com/ios/universal-links/). 
+
+Gebruikers kunnen de universele koppelingen van een app uitschakelen door hier in Safari naartoe te gaan en **Open in nieuw tabblad** of **Open** te selecteren. Als u universele koppelingen wilt gebruiken met Intune-app-beveiligingsregels, is het belangrijk dat u de universele koppelingen opnieuw inschakelt. De eindgebruiker moet in Safari op de bijbehorende koppeling klikken en deze vasthouden, en **Open in** <***app-naam***> selecteren. Hiermee wordt een aanvullende beveiligde app gevraagd om alle universele koppelingen naar de beveiligde toepassing op het apparaat te leiden.
 
 ### <a name="multiple-intune-app-protection-access-settings-for-same-set-of-apps-and-users"></a>Meerdere toegangsinstellingen voor Intune-app-beveiligingsbeleid voor dezelfde set apps en gebruikers
 Het Intune-app-beveiligingsbeleid voor toegang wordt in een bepaalde volgorde toegepast op apparaten van eindgebruikers wanneer ze vanaf hun bedrijfsaccount proberen toegang te krijgen tot een doel-app. In het algemeen krijgt wissen voorrang, dan volgt een waarschuwing die kan worden gesloten. Indien van toepassing op de specifieke gebruiker/app, wordt een instelling van een minimumversie van het iOS-/iPadOS-besturingssysteem die een gebruiker waarschuwt om de iOS-/iPadOS-versie bij te werken bijvoorbeeld toegepast na de instelling van de minimumversie van het iOS-/iPadOS-besturingssysteem die toegang door de gebruiker blokkeert. Dus in het scenario waarin de IT-beheerder de minimumversie van het iOS-besturingssysteem configureert naar 11.0.0.0 en de minimumversie van het iOS-besturingssysteem (alleen Waarschuwing) naar 11.1.0.0, terwijl het apparaat dat de app probeert te openen op iOS 10 zit, wordt de eindgebruiker geblokkeerd op basis van de restrictievere instelling voor de minimumversie van het iOS-besturingssysteem die resulteert in geblokkeerde toegang.

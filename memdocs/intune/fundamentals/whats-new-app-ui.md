@@ -1,12 +1,12 @@
 ---
-title: UI-updates voor Intune-apps voor eindgebruikers
+title: UI-updates voor Intune-apps voor eindgebruikers | Microsoft Docs
 titleSuffix: Microsoft Intune
 description: Ontdek wat is gewijzigd in de gebruikersinterface voor apps op eindgebruikersapparaten met Microsoft Intune.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/11/2020
+ms.date: 08/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 11aba38d63621472b5e8513b066b96120d649c31
-ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
+ms.openlocfilehash: cbb66833397d16ec18ce015d26a19bd28a1113c4
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84740865"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048154"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>UI-updates voor Intune-apps voor eindgebruikers
 
@@ -34,6 +34,13 @@ Informatie over de meest recente updates voor de Microsoft Intune-apps. We voege
 
 Zorg ervoor dat, als u een werknemer of student bent, u de schermafbeeldingen en koppelingen naar de Help-documentatie voor de bedrijfsportal bekijkt. Zie de [Help-documentatie voor bedrijfsportalgebruikers](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done) voor meer informatie over het gebruik van de bedrijfsportal-app.  
 
+## <a name="week-of-august-10-2020"></a>Week van 10 augustus 2020
+
+### <a name="improvement-to-update-device-settings-page-in-company-portal-app-for-android-to-shows-descriptions---7414768---"></a>Verbetering van de pagina Apparaatinstellingen bijwerken in de bedrijfsportal-app voor Android om beschrijvingen weer te geven<!-- 7414768 -->
+
+In de bedrijfsportal-app op Android-apparaten worden op de pagina **Apparaatinstellingen bijwerken** de instellingen vermeld die moeten worden bijgewerkt om compatibel te zijn. Gebruikers vouwen het probleem uit voor meer informatie en om de knop **Oplossen** te zien.
+
+Deze gebruikerservaring is verbeterd. De vermelde instellingen worden standaard uitgevouwen om de beschrijving en de knop **Oplossen** (indien van toepassing) weer te geven. Voorheen werden de problemen standaard samengevouwen. Dit nieuwe standaardgedrag vermindert het aantal klikken, zodat gebruikers problemen sneller kunnen oplossen.
 
 ## <a name="week-of-june-8-2020"></a>Week van 8 juni 2020 
 

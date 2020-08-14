@@ -17,14 +17,14 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 41c80ee092e61f016c02e66690cf7f3601f89618
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: f72415900067793d41b0e6086cf3ee0c78e9ee85
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882547"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865649"
 ---
-# <a name="resolve-a-threat-found-by-zimperium-zips"></a>Een bedreiging oplossen die met Zimperium zIPS is gevonden
+# <a name="resolve-a-threat-found-by-zimperium-zips-on-ios"></a>Een bedreiging oplossen die met Zimperium zIPS is gevonden op iOS
 
 Zimperium zIPS is een Mobile Threat Defender-service waarmee potentiële bedreigingen op uw iOS-apparaten worden geïdentificeerd. Deze bedreigingen worden gerapporteerd aan de bedrijfsportal-app en worden weergegeven als onopgeloste, niet-compatibele problemen. Als uw apparaat is geïdentificeerd als niet-compatibel,kunt u mogelijk geen:
 

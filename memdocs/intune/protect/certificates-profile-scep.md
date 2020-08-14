@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/21/2020
+ms.date: 08/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ebf6a71a4d462e1025b6c44557a9513887488673
-ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
+ms.openlocfilehash: 77a69af395aee293f927682f9d1a095c11a1d8a5
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86891527"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048086"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>SCEP-certificaatprofielen maken en toewijzen in Intune
 
@@ -315,6 +315,8 @@ Denk na over het volgende voordat u verdergaat:
 
 > [!NOTE]
 > - Als op iOS-/iPadOS-apparaten een SCEP-certificaatprofiel of een PKCS-certificaatprofiel aan een extra profiel, zoals een Wi-Fi- of VPN-profiel, is gekoppeld, ontvangt het apparaat een certificaat voor al deze extra profielen. Hierdoor ontvangt het iOS-/iPadOS-apparaat meerdere certificaten na de SCEP- of PKCS-certificaataanvraag. 
+> 
+>   De door SCEP geleverde certificaten zijn allemaal uniek. Certificaten die door PKCS worden geleverd, zijn hetzelfde certificaat, maar lijken verschillend doordat elk profielexemplaar wordt weergegeven als een afzonderlijke regel in het beheerprofiel.
 > - Voor iOS 13 en macOS 10.15 zijn er enkele [aanvullende beveiligingsvereisten die door Apple worden gedocumenteerd](https://support.apple.com/HT210176) om rekening mee te houden.  
 
 

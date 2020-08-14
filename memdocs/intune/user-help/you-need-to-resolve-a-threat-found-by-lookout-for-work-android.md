@@ -17,14 +17,14 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 225006df484d0e65d6a78960d96a7fc70f251991
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 38f5b4ba6d243af74462046c243de34dc5cd8544
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878123"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866040"
 ---
-# <a name="resolve-a-threat-found-by-lookout-for-work"></a>Een bedreiging oplossen die met Lookout for Work is gevonden  
+# <a name="resolve-a-threat-found-by-lookout-for-work-on-android"></a>Een bedreiging oplossen die met Lookout for Work is gevonden op Android
 
 De Lookout for Work-app is een Mobile Threat Defender-service waarmee potentiële bedreigingen op uw Android-apparaten worden geïdentificeerd. Deze bedreigingen worden gerapporteerd aan de bedrijfsportal-app en worden daar weergegeven als onopgeloste, niet-compatibele problemen. Zolang deze bedreigingen aanwezig zijn, kunt u mogelijk geen:
 

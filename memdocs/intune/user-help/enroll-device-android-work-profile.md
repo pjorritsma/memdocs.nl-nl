@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/08/2020
+ms.date: 08/07/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,16 +19,18 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2be81c19a48d89876f71293e6f868d8cee0e1192
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 39d68f7cec9cdd4baef84d07d7284f6407f659c5
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531397"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048052"
 ---
 # <a name="enroll-device-with-android-work-profile"></a>Een apparaat met een Android-werkprofiel inschrijven
 
-Schrijf uw Android-apparaat in om toegang te krijgen tot een e-mailadres voor werk of school, apps en andere werkgegevens. Tijdens de inschrijving moet u een Android-werkprofiel instellen. Met dit profiel scheidt u de persoonlijke gegevens op het apparaat van uw werkgegevens. Uw organisatie beheert het werkprofiel, dat bestaat uit werkbestanden en gegevens. De ondersteuning van uw bedrijf kan geen persoonlijke gegevens op uw apparaat beheren.  
+Schrijf uw Android-apparaat in om toegang te krijgen tot een e-mailadres voor werk of school, apps en andere werkgegevens. Tijdens de inschrijving moet u een Android-werkprofiel instellen, zodat de persoonlijke gegevens op uw apparaat worden onderscheiden van uw werkgegevens. Als dit type installatie vereist is, wordt u vanuit uw organisatie op de hoogte gebracht van het gewenste communicatiekanaal of de gewenste Intune-bedrijfsportal-app. 
+
+Nadat uw profiel is ingesteld, beheert uw organisatie de werkzijde, die alleen bestaat uit de werkbestanden en werkgegevens. De ondersteuning van uw bedrijf kan geen persoonlijke gegevens op uw apparaat beheren.  
 </br>
 > [!VIDEO https://www.youtube.com/embed/9Dl8HsGk4tI]
 

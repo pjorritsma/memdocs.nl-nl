@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7acbd455ef720dd0ab17cce40eae8060c7a68c87
-ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
+ms.openlocfilehash: 541c607bebb57b1ee23df1af3ab80d29cdd0c6fc
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87438640"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866125"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Azure AD gebruiken voor toegang tot de Intune-API's in Microsoft Graph
 
@@ -308,7 +308,7 @@ In elk voorbeeld moet u een toepassings-ID opgeven met ten minste het `DeviceMan
 
 Wanneer u een van de voorbeelden test, worden mogelijk foutberichten voor HTTP-status 403 (verboden) weergegeven. Deze zien er ongeveer als volgt uit:
 
-``` javascript
+```json
 {
   "error": {
     "code": "Forbidden",
@@ -339,23 +339,22 @@ Als dit gebeurt, moet u de volgende punten controleren:
 
 In dit voorbeeld ziet u hoe u C# gebruikt voor het ophalen van een lijst met apparaten die zijn gekoppeld aan uw Intune-account.
 
+ > [!NOTE]
+  > Azure Active Directory (Azure AD) Authentication Library (ADAL) en Azure AD Graph API worden afgeschaft. Zie [Uw toepassingen bijwerken voor het gebruik van Microsoft Authentication Library (MSAL) en Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363) voor meer informatie.
+
 1. Start Visual Studio en maak een nieuw project voor een Visual C# Console-app (.NET Framework).
 
 2. Voer een naam in voor uw project en geef desgewenst andere informatie op.
 
     <img src="../media/aad-auth-cpp-new-console.png" width="624" height="433" alt="Creating a C# console app project in Visual Studio"  />
 
-3. Gebruik Solution Explorer om het Microsoft ADAL NuGet-pakket toe te voegen aan het project.
+3. Gebruik Solution Explorer om het Microsoft ADAL NuGet-pakket toe te voegen aan het project:
 
-  > [!NOTE]
-  > Azure Active Directory (Azure AD) Authentication Library (ADAL) en Azure AD Graph API worden afgeschaft. Zie [Uw toepassingen bijwerken voor het gebruik van Microsoft Authentication Library (MSAL) en Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363) voor meer informatie.
+    1. Klik met de rechtermuisknop op Solution Explorer.
+    1. Kies **NuGet-pakketten beheren...** &gt; **Bladeren**.
+    1. Selecteer `Microsoft.IdentityModel.Clients.ActiveDirectory` en kies vervolgens **Installeren**.
 
-
-   1. Klik met de rechtermuisknop op Solution Explorer.
-   2. Kies **NuGet-pakketten beheren...** &gt; **Bladeren**.
-   3. Selecteer `Microsoft.IdentityModel.Clients.ActiveDirectory` en kies vervolgens **Installeren**.
-
-   <img src="../media/aad-auth-cpp-install-package.png" width="624" height="458" alt="Selecting the Azure AD identity model module" />
+    <img src="../media/aad-auth-cpp-install-package.png" width="624" height="458" alt="Selecting the Azure AD identity model module" />
 
 4. Voeg de volgende instructies toe bovenaan **Program.cs**:
 

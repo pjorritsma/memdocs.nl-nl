@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/10/2020
+ms.date: 08/05/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c90e25469927bc4fc435ad4cbd36e09b1cf0a3af
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: b862a65ca087c5dbd0c47baf7af9cf369caac9e4
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262639"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912570"
 ---
 # <a name="ios-app-protection-policy-settings"></a>Beveiligingsbeleidsinstellingen voor iOS-apps
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -45,7 +45,7 @@ Er zijn drie soorten beleidsinstellingen: *Gegevensverplaatsing*, *Toegangsverei
 | <ul><ui>**Apps selecteren die moeten worden uitgesloten** | Deze optie is beschikbaar wanneer u bij de vorige optie *Door beleid beheerde apps* selecteert.   |   |
 | <ul><ui>**Kopieën van de organisatiegegevens opslaan** | Selecteer **Blokkeren** als u het gebruik van de optie *Opslaan als* wilt uitschakelen in deze app. Selecteer **Toestaan** als u het gebruik van de optie *Opslaan als* wilt toestaan. <br><br>**Opmerking:** *Deze instelling wordt ondersteund voor Microsoft Excel, OneNote, Outlook, PowerPoint en Word. Dit kan ook worden ondersteund door externe apps en LOB-apps.* <br><br> Wanneer dit is ingesteld op *Blokkeren*, kunt u de volgende instelling configureren: *Gebruiker toestaan om kopieën op te slaan naar de geselecteerde services*.   | <br><br> **Toestaan**   |
 | <ul><ui><ul><ui>**Gebruiker toestemming geven om kopieën naar geselecteerde services op te slaan** | Gebruikers kunnen naar de geselecteerde services opslaan (OneDrive voor Bedrijven, SharePoint en lokale opslag). Alle andere services worden geblokkeerd. OneDrive voor bedrijven: u kunt bestanden opslaan in OneDrive voor bedrijven en SharePoint Online. SharePoint: u kunt bestanden opslaan op een on-premises SharePoint. Lokale opslag: u kunt bestanden opslaan in lokale opslag.| **0 geselecteerd**  |
-|<ul><ui>**Telecommunicatiegegevens overdragen aan** | Wanneer een gebruiker een telefoonnummerkoppeling selecteert in een app, wordt meestal een kiezer-app geopend met het telefoonnummer automatisch ingevuld en klaar om te worden gebeld. Kies voor deze instelling hoe u dit type inhoudsoverdracht wilt afhandelen wanneer deze wordt gestart vanuit een door een beleid beheerde app:<ul><li>**Geen, deze gegevens niet overdragen tussen apps**: Geen communicatiegegevens overdragen wanneer een telefoonnummer wordt gedetecteerd.</li><li>**Een specifieke kiezer-app**: Toestaan dat een specifieke kiezer-app contact maakt als er een telefoonnummer wordt gedetecteerd.</li><li>**Elke kiezer-app**: Toestaan dat een kiezer-app wordt gebruikt om contact te initiëren wanneer een telefoonnummer wordt gedetecteerd.</li></ul>| **Elke kiezer-app** |  
+|<ul><ui>**Telecommunicatiegegevens overdragen aan** | Wanneer een gebruiker een telefoonnummerkoppeling selecteert in een app, wordt meestal een kiezer-app geopend met het telefoonnummer automatisch ingevuld en klaar om te worden gebeld. Kies voor deze instelling hoe u dit type inhoudsoverdracht wilt afhandelen wanneer deze wordt gestart vanuit een door een beleid beheerde app:<ul><li>**Geen, deze gegevens niet overdragen tussen apps**: Geen communicatiegegevens overdragen wanneer een telefoonnummer wordt gedetecteerd.</li><li>**Een specifieke kiezer-app**: Toestaan dat een specifieke kiezer-app contact maakt als er een telefoonnummer wordt gedetecteerd.</li><li>**Elke kiezer-app**: Toestaan dat een kiezer-app wordt gebruikt om contact te initiëren wanneer een telefoonnummer wordt gedetecteerd.</li></ul> <p>**Opmerking**: *Voor deze instelling is Intune SDK 12.7.0 of hoger vereist. Als uw apps afhankelijk zijn van toetsenblokfunctionaliteit en niet de juiste versie van de Intune SDK gebruiken, kunt u als tijdelijke oplossing 'tel;telprompt' toevoegen als uitzondering voor gegevensoverdracht. Als de apps de juiste versie van de Intune SDK ondersteunen, verwijdert u de uitzondering.*| **Elke kiezer-app** |  
 |<ul><ui><ul><ui>**URL-schema van kiezer-app** | Wanneer een kiezer-app is geselecteerd, moet u het URL-schema van de kiezer-app opgeven dat wordt gebruikt om de kiezer-app op iOS-apparaten te starten. Zie de documentatie van Apple [over telefoonkoppelingen](https://developer.apple.com/library/archive/featuredarticles/iPhoneURLScheme_Reference/PhoneLinks/PhoneLinks.html#//apple_ref/doc/uid/TP40007899-CH6-SW1) voor meer informatie. | **Leeg** |
 | **Gegevens ontvangen van andere apps** | Geef aan welke apps gegevens naar deze app kunnen overdragen: <ul><li>**Alle apps**: gegevensoverdracht vanuit alle apps toestaan.</li><li>**Geen**: geen gegevensoverdracht vanuit apps toestaan, met inbegrip van andere door beleid beheerde apps.</li><li>**Door beleid beheerde apps**: overdracht alleen toestaan vanuit andere door beleid beheerde apps.</li><li>**Alle apps met binnenkomende organisatiegegevens**: gegevensoverdracht vanuit alle apps toestaan. Behandel alle binnenkomende gegevens zonder een gebruikers-id als gegevens van uw organisatie. De gegevens worden gemarkeerd met de identiteit van de bij MDM geregistreerde gebruiker, zoals gedefinieerd in de instelling `IntuneMAMUPN`.<p><p>**Opmerking:** _de waarde **Alle apps met binnenkomende organisatiegegevens** is alleen van toepassing op bij MDM geregistreerde apparaten. Als deze instelling wordt toegepast op een gebruiker met een niet-geregistreerd apparaat, is het gedrag van de waarde **Elke app** van toepassing._</li></ul> Er zijn enkele uitzonderingsapps en -services van waaruit Intune gegevensoverdracht kan toestaan. Zie [Uitzonderingen voor gegevensoverdracht](#data-transfer-exemptions) voor een volledige lijst met apps en services. MAM-toepassingen met meerdere identiteiten op niet-geregistreerde iOS-/iPadOS-apparaten negeren dit beleid en laten alle binnenkomende gegevens toe.<br><br> | **Alle apps**    |
 | **Knippen, kopiëren en plakken tussen andere apps beperken** | Geef op wanneer knip-, kopieer- en plakbewerkingen voor deze app kunnen worden gebruikt. Kies uit: <ul><li>**Geblokkeerd**:  geen knip-, kopieer- en plakbewerkingen toestaan tussen deze app en andere apps.</li><li>**Door beleid beheerde apps**: alleen knip-, kopieer- en plakbewerkingen toestaan tussen deze app en andere door beleid beheerde apps.</li><li>**Door beleid beheerde apps met Plakken in**: knippen en kopiëren toestaan tussen deze app en andere door beleid beheerde apps. Gegevens uit alle apps mogen in deze app worden geplakt.</li><li>**Elke app**: geen beperkingen voor knip-, kopieer- en plakbewerkingen vanuit en naar deze app.</ul> | **Elke app**   |
@@ -80,6 +80,8 @@ Er zijn een aantal uitzonderingsapps en -platformservices waar het Intune-beveil
 | <code>itms; itmss; itms-apps; itms-appss; itms-services</code> | App Store |
 | <code>calshow</code> | Systeemeigen kalender |
 
+> [!IMPORTANT]
+> App-beveiligingsbeleid dat is gemaakt vóór 15 juni 2020 bevat het URL-schema *tel* en *telprompt* als onderdeel van de standaard uitzonderingen voor gegevensoverdracht. Met deze URL-schema's kunnen beheerde apps het toetsenblok starten. De App-beveiligingsbeleidsinstelling **Telecommunicatiegegevens overdragen aan** heeft deze functionaliteit vervangen. Beheerders moeten *tel; telprompt;* verwijderen uit de uitzonderingen voor gegevensoverdracht en vertrouwen op de App-beveiligingsbeleidsinstelling, mits de beheerde apps die de toetsenblokfunctionaliteit starten de Intune SDK 12.7.0 of hoger bevatten.
 
 ## <a name="access-requirements"></a>Vereisten voor toegang
 

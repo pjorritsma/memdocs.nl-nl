@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/05/2019
+ms.date: 08/07/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: aed17d518213f875e15f2261ec1a18640357203a
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 4f53aa731dbe7483f7fbe97c509a82677072c25c
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880941"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88047969"
 ---
 # <a name="device-password-requirements-for-enrolled-devices"></a>Wachtwoordvereisten voor ingeschreven apparaten
 
@@ -89,13 +89,15 @@ Voor extra hulp of meer informatie over de specifieke vereisten van uw organisat
 | Het wachtwoord is verlopen. | Stel een nieuw wachtwoord in. Uw organisatie vereist dat u uw wachtwoord na een bepaald aantal dagen wijzigt. |
 | Uw wachtwoord is recentelijk nog gebruikt. | Kies een wachtwoord dat u nog niet eerder hebt gebruikt. Uw organisatie vereist dat er een bepaalde hoeveelheid tijd is verstreken voordat u een wachtwoord opnieuw kunt gebruiken. |
 
-## <a name="next-steps"></a>Volgende stappen
+## <a name="update-password-passcode-pin"></a>Wachtwoord, wachtwoordcode en pincode bijwerken
 
-Raadpleeg de volgende artikelen om het wachtwoord, de wachtwoordcode of de pincode voor uw apparaat te maken of te wijzigen.  
+De volgende artikelen bevatten stapsgewijze instructies om het wachtwoord, de wachtwoordcode of de pincode voor uw apparaat te wijzigen. Raadpleeg de Help-documentatie van de fabrikant van het apparaat voor de meest recente instructies. 
 
 - [Wachtwoord voor Windows 10-apparaat instellen](set-or-change-your-password-windows.md)  
 - [Wachtwoordcode voor iOS-apparaat instellen](set-or-change-your-passcode-ios.md)  
 - [Een pincode of wachtwoord voor uw Android-apparaat instellen](set-your-pin-or-password-android.md)  
+
+## <a name="next-steps"></a>Volgende stappen
 
 Nog hulp nodig? Neem contact op met uw ondersteuningsmedewerker. Controleer of de contactgegevens beschikbaar zijn op de [bedrijfsportalwebsite](https://go.microsoft.com/fwlink/?linkid=2010980).  
 

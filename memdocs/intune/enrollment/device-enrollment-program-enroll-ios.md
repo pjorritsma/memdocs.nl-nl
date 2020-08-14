@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fa06e5fee4658ad3c7f19ec39bd126ce69d8cd41
-ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
+ms.openlocfilehash: 05a0c4e5a78281f78a986d0512abfeca155494dd
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86891510"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051669"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>iOS-/iPadOS-apparaten automatisch inschrijven met Automated Device Enrollment van Apple
 
@@ -328,23 +328,28 @@ Zie [Uw iOS-/iPadOS-apparaat inschrijven in Intune in met het Device Enrollment 
 > [!NOTE]
 > Naast het jaarlijks vernieuwen van uw ADE-token moet u uw inschrijvingsprogrammatoken in Intune en Apple Business Manager vernieuwen wanneer het beheerde Apple ID-wachtwoord voor de gebruiker die het token in Apple Business Manager heeft ingesteld, wordt gewijzigd of wanneer die gebruiker uw Apple Business Manager-organisatie verlaat.
 
-1. Ga naar business.apple.com.  
-2. Kies onder **Manage Servers** de MDM-server die is gekoppeld aan het tokenbestand dat u wilt vernieuwen.
-3. Kies **Generate New Token**.
+1. Ga naar business.apple.com.
+2. Klik op **Instellingen** (linksonder)
+3. Kies onder  **MDM-servers** de MDM-server die is gekoppeld aan het ADE/DEP-token dat u wilt vernieuwen.
+4. Klik op **Token downloaden**.
 
     ![Schermopname van nieuw token genereren.](./media/device-enrollment-program-enroll-ios/generatenewtoken.png)
 
-4. Kies **Your Server Token**.  
-5. Kies in het [Beheercentrum voor Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **iOS/iPadOS** > **iOS/iPadOS** > **Tokens voor het inschrijvingsprogramma** > kies het token.
+5. Selecteer bij de prompt Servertoken downloaden
+> [!NOTE]
+> Klik niet op **Servertoken downloaden** als u niet van plan bent het token te vernieuwen. Zoals vermeld in de prompt, wordt hierdoor het token dat momenteel wordt gebruikt door Intune (of een andere MDM-oplossing) ongeldig. Als u het token al hebt gedownload, gaat u door met de volgende stappen totdat het token wordt vernieuwd.
+
+6. Kies na het downloaden van het token in het [Beheercentrum voor Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **iOS/iPadOS** > **iOS/iPadOS** > **Tokens voor het inschrijvingsprogramma** > kies het token.
     ![Schermopname van tokens voor het inschrijvingsprogramma.](./media/device-enrollment-program-enroll-ios/enrollmentprogramtokens.png)
 
-6. Kies **Token vernieuwen** en voer de Apple ID in die is gebruikt om het oorspronkelijke token te maken.  
+7. Kies **Token vernieuwen** en voer de Apple ID in die is gebruikt om het oorspronkelijke token te maken (als dit niet automatisch wordt ingevuld).  
     ![Schermopname van nieuw token genereren.](./media/device-enrollment-program-enroll-ios/renewtoken.png)
 
-7. Selecteer **Volgende** om naar de pagina  **Bereiktags** te gaan en de gewenste bereiktags toe te wijzen.
+8. Upload het token dat u net hebt gedownload.
 
-8. Selecteer **Volgende** en upload het token dat u net hebt gedownload.  
-9. Kies **Token vernieuwen**. U krijgt een bevestiging te zien dat het token is vernieuwd.   
+9. Selecteer **Volgende** om naar de pagina  **Bereiktags** te gaan en de gewenste bereiktags toe te wijzen.
+
+10. Kies **Token vernieuwen**. U krijgt een bevestiging te zien dat het token is vernieuwd.   
     ![Schermopname van de bevestiging.](./media/device-enrollment-program-enroll-ios/confirmation.png)
 
 ## <a name="delete-an-automated-device-enrollment-token-from-intune"></a>Een token voor Automatische apparaatinschrijving uit Intune verwijderen

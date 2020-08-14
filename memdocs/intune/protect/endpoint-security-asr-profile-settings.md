@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 3ebca81f459f0e49345db08f992c288514a7331a
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: a0d1ee33e3aca6dbb6ff6e349eb9a578aad6ae88
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461603"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048069"
 ---
 # <a name="attack-surface-reduction-policy-settings-for-endpoint-security-in-intune"></a>Beleidsinstellingen om kwetsbaarheid voor aanvallen te verminderen voor eindpuntbeveiliging in Intune
 
@@ -181,10 +181,10 @@ Ondersteunde platforms en profielen:
   - **Onderdelen afdwingen en apps opslaan**
   - **Onderdelen controleren en apps opslaan**
   - **Onderdelen afdwingen, apps opslaan en Smartlocker**
-  - **Onderdelen controleren, apps storen en Smartlocker**
+  - **Onderdelen, Store-apps en Smartlocker controleren** CSP: [AppLocker-CSP](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
 
 - **Blokkeren dat gebruikers SmartScreen-waarschuwingen kunnen negeren**  
-  [PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
+  CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
   - **Niet geconfigureerd** (*standaard*): gebruikers kunnen SmartScreen-waarschuwingen voor bestanden en schadelijke apps negeren.
   - **Ja**: SmartScreen is ingeschakeld en gebruikers kunnen geen waarschuwingen over bestanden of schadelijke apps overslaan.

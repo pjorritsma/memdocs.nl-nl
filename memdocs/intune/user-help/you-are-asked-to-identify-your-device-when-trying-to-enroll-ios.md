@@ -19,14 +19,14 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 567942ca0e859c26d8cae11b5f0ba93bfa45524a
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: bc8ef369ae5072447fdd52a4fc7a3df45cfebfca
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881356"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866261"
 ---
-# <a name="you-need-to-identify-your-device-when-youre-trying-to-enroll"></a>U wordt gevraagd uw apparaat te identificeren wanneer u het probeert te registreren
+# <a name="youre-asked-to-identify-your-ios-device-during-enrollment"></a>Tijdens de inschrijving wordt u gevraagd om uw iOS-apparaat te identificeren
 
 Als u uw iOS-apparaat probeert te registeren in Intune en u een scherm ziet waarin u wordt gevraagd uw apparaat te identificeren, is ten minste een van uw apparaten al met een andere methode dan de bedrijfsportal-app geregistreerd en aan uw account toegewezen. Om de bedrijfsportal-app goed te laten werken, moet u aangeven of het apparaat dat u gebruikt, al bij Intune is geregistreerd.
 

@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 08/07/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: a8d48235141c0b5ad07fbdce4d24e894f8103e6f
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2e32b6e1c5e976669e78d3cf00610fbd57b68dd1
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882397"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048035"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>Toegang tot uw bedrijfsbronnen instellen voor uw iOS-apparaat  
 
@@ -35,12 +35,12 @@ Nadat uw apparaat is geregistreerd, wordt het *beheerd*. Uw organisatie kan bele
 > [!NOTE]
 > We verkopen gegevens die door onze service worden verzameld om geen enkele reden aan externe partijen.  
 
-Als u toegang wilt houden tot uw werk- of schoolgegevens op het apparaat, moet u de instellingen van uw apparaat aanpassen aan de voorkeursinstellingen van uw organisatie. In dit artikel wordt beschreven hoe u Bedrijfsportal gebruikt om uw apparaat te registreren en de vereiste instellingen van uw organisatie aan te houden.  
+Als u toegang wilt houden tot uw werk- of schoolgegevens op het apparaat, moet u de instellingen van uw apparaat aanpassen aan de voorkeursinstellingen van uw organisatie. In dit artikel wordt beschreven hoe u Bedrijfsportal gebruikt om uw apparaat in te schrijven en toegangsvereisten aan te houden.  
 </br>
 > [!VIDEO https://www.youtube.com/embed/mJyv6YcHi7c?rel=0]
 
 > [!NOTE]
-> Als u hebt geprobeerd toegang te krijgen tot zakelijke e-mail in de Mail-app en een prompt ontving om uw apparaat te laten beheren, bent u op de juiste plek. Volg de onderstaande instructies om op uw iOS-apparaat toegang te krijgen tot uw e-mail en andere bedrijfsbronnen.  
+> Als u hebt geprobeerd toegang te krijgen tot uw zakelijke e-mail in de Mail-app en een prompt hebt ontvangen om uw apparaat te laten beheren, bent u op de juiste plek. Met behulp van de onderstaande instructies kunt u op uw iOS-apparaat opnieuw toegang krijgen tot uw e-mail en andere bedrijfsresources.  
 
 
 ## <a name="what-to-expect-from-the-company-portal-app"></a>Wat u kunt verwachten van de bedrijfsportal-app  
@@ -56,13 +56,17 @@ Als uw organisatie na de registratie een nieuwe beveiligingsvereiste oplegt, zoa
 
 Zie [Wat gebeurt er wanneer ik de bedrijfsportal-app installeer en mijn apparaat inschrijf?](https://docs.microsoft.com//mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios) voor meer informatie over inschrijving.  
 
+## <a name="prerequisties"></a>Vereisten  
+
+* Ga naar de App Store om de [Intune-bedrijfsportal-app](install-and-sign-in-to-the-intune-company-portal-app-ios.md) te downloaden en op uw apparaat te installeren. 
+* Onderbreek uw Wi-Fi-verbinding niet totdat alle stappen zijn voltooid.
+* Zorg voor toegang tot de Safari-webbrowser op het apparaat.
+
 ## <a name="enroll-your-ios-device"></a>Uw iOS-apparaten inschrijven  
 
-Ga naar de App Store om de [Intune-bedrijfsportal-app](install-and-sign-in-to-the-intune-company-portal-app-ios.md) te downloaden en op uw apparaat te installeren. U hebt ook een continue wifiverbinding en toegang tot Safari nodig tijdens de inschrijving. 
+Als u uw inschrijving langer dan een paar minuten onderbreekt, kan de Bedrijfsportal-app worden gesloten of de installatie worden beëindigd. Als dit gebeurt, opent u de app opnieuw en probeert u het opnieuw.  
 
-Als u uw inschrijving langer dan een paar minuten onderbreekt, kan de app worden gesloten of de installatie worden beëindigd. Als dit het geval is, opent u de bedrijfsportal-app en probeert u het opnieuw.  
-
-1. Open Bedrijfsportal en meld u aan met uw werk- of schoolaccount.  
+1. Open de bedrijfsportal-app en meld u aan met het account van uw werk of school.  
 
 2. Wanneer u wordt gevraagd of u Bedrijfsportal-meldingen wilt ontvangen, tikt u op **Toestaan.** De bedrijfsportal-app maakt gebruik van meldingen om u te waarschuwen, bijvoorbeeld als uw apparaatinstellingen moeten worden bijgewerkt.  
 

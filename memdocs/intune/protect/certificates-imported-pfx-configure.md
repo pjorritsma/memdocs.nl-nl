@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d09f3a2e734709f769aebcd4e8aab4fec774d4fc
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 630d270202f1064c9e80e7cb87df3929138ee54a
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461824"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048103"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Geïmporteerde PKCS-certificaten configureren en gebruiken met Intune
 
@@ -56,7 +56,8 @@ Als u geïmporteerde PKCS-certificaten wilt gebruiken met Intune, hebt u de volg
 
 - **PFX-certificaatconnector voor Microsoft Intune**:
 
-  Elke Intune-tenant ondersteunt één instantie van deze connector. U kunt deze connector op dezelfde server installeren als een instantie van de Microsoft Intune Certificate Connector.
+  Elke Intune-tenant ondersteunt meerdere instanties van deze connector. Zorg ervoor dat elke connector toegang heeft tot de persoonlijke sleutel die wordt gebruikt voor het versleutelen van de wachtwoorden van de geüploade PFX-bestanden.
+  U kunt deze connector op dezelfde server installeren als een instantie van de Microsoft Intune Certificate Connector.
 
   Deze connector verwerkt aanvragen voor PFX-bestanden die zijn geïmporteerd in Intune voor S/MIME-e-mailversleuteling voor een specifieke gebruiker.
 

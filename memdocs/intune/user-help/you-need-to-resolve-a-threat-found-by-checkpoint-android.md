@@ -17,14 +17,14 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 86e2305692c1e50af7cc2518f394b5c91cfed4f3
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2f6ba59ccc2832a66eb1a7b081008aa43b0c75bc
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882276"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866227"
 ---
-# <a name="resolve-a-threat-found-by-sandblast-mobile-protect"></a>Een bedreiging oplossen die door SandBlast Mobile Protect is gevonden
+# <a name="resolve-a-threat-found-by-sandblast-mobile-protect-on-android"></a>Een bedreiging oplossen die door SandBlast Mobile Protect is gevonden op Android
 
 SandBlast Mobile Protect is een Mobile Threat Defender-service waarmee potentiële bedreigingen voor uw Android-apparaten worden geïdentificeerd. Hiermee worden bedreigingen gerapporteerd die u vervolgens vanuit de bedrijfsportal-app kunt weergeven. Bedreigingen worden aan u getoond als onopgeloste, niet-compatibele problemen. Zolang deze bedreigingen aanwezig zijn, kunt u mogelijk geen:   
 

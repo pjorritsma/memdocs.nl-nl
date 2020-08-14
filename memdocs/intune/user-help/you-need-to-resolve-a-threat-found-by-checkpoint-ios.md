@@ -17,14 +17,14 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 7ce384a835bbc4b8d990bbd3ebf93b812647aa1d
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 9ef18bc6554f5db364eaf320c66da12e7a5ffe7d
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882240"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866159"
 ---
-# <a name="resolve-a-threat-found-by-sandblast-mobile-protect"></a>Een bedreiging oplossen die door SandBlast Mobile Protect is gevonden
+# <a name="resolve-a-threat-found-by-sandblast-mobile-protect-on-ios"></a>Een bedreiging oplossen die door SandBlast Mobile Protect is gevonden op iOS
 
 SandBlast Mobile Protect is een Mobile Threat Defender-service waarmee potentiële bedreigingen voor uw iOS-apparaten worden geïdentificeerd en geopend. De bedreigingen wordt vervolgens gerapporteerd, zodat u ze vanuit de bedrijfsportal-app kunt bekijken. Bedreigingen worden aan u getoond als onopgeloste, niet-compatibele problemen. Zolang deze bedreigingen aanwezig zijn, kunt u mogelijk geen:   
 

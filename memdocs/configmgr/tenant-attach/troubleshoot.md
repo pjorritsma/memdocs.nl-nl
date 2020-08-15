@@ -10,12 +10,12 @@ ms.assetid: 44c2eb8a-3ccc-471f-838b-55d7971bb79e
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 6dfe7bb44a70d26a68c6d3743ecdb05e5d55e3f1
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: f89bf241410838fd98c8895ced6d49dbf3e99597
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129325"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252471"
 ---
 # <a name="troubleshooting-tenant-attach-and-device-actions"></a>Problemen met het koppelen van tenants en apparaten oplossen
 
@@ -48,7 +48,7 @@ Gebruik de volgende logboeken die zich op de client bevinden:
 
 - **CcmNotificationAgent.log**
 
-## <a name="review-your-upload"></a><a name="bkmk_review"></a>Uw uploads controleren
+## <a name="review-your-upload"></a><a name="bkmk_review"></a> Uw uploads controleren
 
 1. Open **CMGatewaySyncUploadWorker. log** van de ConfigMgr-installatiemap &lt;> \logs.
 1. De volgende synchronisatie tijd wordt aangegeven door logboek vermeldingen die vergelijkbaar zijn met `Next run time will be at approximately: 02/28/2020 16:35:31` .
@@ -114,7 +114,7 @@ Send Task response message <BgbResponseMessage TimeStamp="2020-01-21T15:43:43Z">
 
 ## <a name="common-issues"></a>Algemene problemen
 
-### <a name="unauthorized-to-perform-client-action"></a><a name="bkmk_noauth"></a>Niet gemachtigd om client actie uit te voeren
+### <a name="unauthorized-to-perform-client-action"></a><a name="bkmk_noauth"></a> Niet gemachtigd om client actie uit te voeren
 
 Als de beheerder niet over de vereiste machtigingen beschikt in Configuration Manager, ziet u een `Unauthorized` reactie in **CMGatewayNotificationWorker. log**.
 
@@ -125,6 +125,8 @@ Unauthorized to perform client action. TemplateID: RequestMachinePolicy TenantId
 ```  
 
 Zorg ervoor dat de gebruiker die de actie uitvoert vanuit het micro soft Endpoint Manager-beheer centrum over de vereiste machtigingen beschikt voor Configuration Manager-site. Zie voor meer informatie [micro soft Endpoint Manager-Tenant toevoegen van vereisten](device-sync-actions.md#prerequisites).
+
+
 
 ## <a name="known-issues"></a>Bekende problemen
 
@@ -137,6 +139,7 @@ Het is mogelijk dat bepaalde apparaten, die Configuration Manager-clients zijn, 
 
 **Gedrag:** Wanneer u een Tenant bijvoegt tijdens de on-board fase, wordt de eerste keer een volledige synchronisatie uitgevoerd. Volgende synchronisatie cycli zijn Delta synchronisaties. Een update van de betrokken apparaten zorgt ervoor dat het apparaat wordt verwijderd uit de synchronisatie.
 
+[!INCLUDE [Known issues shared across tenant attach features](includes/known-issues-shared.md)]
 
 ## <a name="next-steps"></a>Volgende stappen
 

@@ -10,12 +10,12 @@ ms.assetid: 44c2eb8a-3ccc-471f-838b-55d7971bb79e
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: d983e0c3d84f5bcbf411af1243ddc045d66d9199
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: 9ca99afa60ed5f8b9a1491381767ec4f6359826f
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051581"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252500"
 ---
 # <a name="troubleshoot-configmgr-client-details-in-the-admin-center-preview"></a>Problemen met ConfigMgr-client Details in het beheer centrum oplossen (preview-versie)
 <!--6374854, 6521921-->
@@ -30,13 +30,13 @@ Gebruik het volgende om de details van ConfigMgr-clients in het beheer centrum v
 
 Wanneer u de details van de ConfigMgr-client bekijkt, kunt u een van deze fouten uitvoeren.  
 
-### <a name="the-necessary-configuration-is-missing-in-azure-active-directory"></a><a name="bkmk_aad"></a>De benodigde configuratie ontbreekt in Azure Active Directory
+### <a name="the-necessary-configuration-is-missing-in-azure-active-directory"></a><a name="bkmk_aad"></a> De benodigde configuratie ontbreekt in Azure Active Directory
 
 **Fout bericht:** De benodigde configuratie ontbreekt in Azure Active Directory. Zorg ervoor dat u de Configuration Manager-site koppelt aan uw Azure-Tenant en wijs de juiste gebruikersrol toe in azure AD.
 
 **Mogelijke oorzaak:** In het gebruikers account ontbreekt waarschijnlijk de gebruikersrol **beheerder** voor de Configuration Manager micro service-toepassing in azure AD. Voeg de rol in azure AD toe uit **bedrijfs toepassingen**  >  **Configuration Manager micro service**-  >  **gebruikers en-groepen**  >  **gebruiker toevoegen**. Groepen worden ondersteund als u Azure AD Premium hebt. Het kan tot een uur duren voordat wijzigingen in deze machtiging van kracht worden.
 
-### <a name="unable-to-get-device-or-collection-information"></a><a name="bkmk_noinfo"></a>Kan geen apparaat-of verzamelings gegevens ophalen
+### <a name="unable-to-get-device-or-collection-information"></a><a name="bkmk_noinfo"></a> Kan geen apparaat-of verzamelings gegevens ophalen
 
 **Fout bericht 1:** Kan geen gegevens over client Details (of verzameling) ophalen. Zorg ervoor dat Azure AD en AD-gebruikers detectie zijn geconfigureerd en dat de gebruiker wordt gedetecteerd door beide. Controleer of de gebruiker de juiste machtigingen heeft in Configuration Manager.
 
@@ -57,7 +57,7 @@ Wanneer u de details van de ConfigMgr-client bekijkt, kunt u een van deze fouten
     Als de Azure AD-eigenschappen leeg zijn, controleert u de configuratie van de [Azure AD-gebruikers detectie](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc)van de site.
 
 
-### <a name="unexpected-error-occurred"></a><a name="bkmk_1603"></a>Er is een onverwachte fout opgetreden
+### <a name="unexpected-error-occurred"></a><a name="bkmk_1603"></a> Er is een onverwachte fout opgetreden
 
 **Fout bericht:** Er is een onverwachte fout opgetreden
 
@@ -85,6 +85,8 @@ Wanneer u de details van de ConfigMgr-client bekijkt, kunt u een van deze fouten
 De lege lijst is een bekend probleem voor Configuration Manager versie 2002 wanneer u een hiërarchie van Configuration Manager sites hebt.
 
 :::image type="content" source="media/6024387-known-issue-device-details.png" alt-text="Lijst met grens groepen is leeg" lightbox="media/6024387-known-issue-device-details.png":::
+
+[!INCLUDE [Known issues shared across tenant attach features](includes/known-issues-shared.md)]
 
 ## <a name="next-steps"></a>Volgende stappen
 

@@ -10,12 +10,12 @@ ms.assetid: 75f47456-cd8d-4c83-8dc5-98b336a7c6c8
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 93b793dfbc6d7d0b5f4b24db65588ee1390604e9
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 0d081c79a6267495a9738efcb19ceb8b7aa74958
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129284"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252507"
 ---
 # <a name="troubleshoot-application-installation-for-devices-uploaded-to-the-admin-center-preview"></a>Problemen met de installatie van een toepassing oplossen voor apparaten die zijn geüpload naar het beheer centrum (preview-versie)
 <!--6374854, 6521921-->
@@ -30,13 +30,13 @@ Gebruik het volgende om problemen met Configuration Manager-toepassingen in het 
 
 Wanneer u toepassingen weergeeft of installeert vanuit het micro soft-beheer centrum voor eind punten, kunt u een van deze fouten uitvoeren.  
 
-### <a name="the-necessary-configuration-is-missing-in-azure-active-directory"></a><a name="bkmk_aad"></a>De benodigde configuratie ontbreekt in Azure Active Directory
+### <a name="the-necessary-configuration-is-missing-in-azure-active-directory"></a><a name="bkmk_aad"></a> De benodigde configuratie ontbreekt in Azure Active Directory
 
 **Fout bericht:** De benodigde configuratie ontbreekt in Azure Active Directory. Zorg ervoor dat u de Configuration Manager-site koppelt aan uw Azure-Tenant en wijs de juiste gebruikersrol toe in azure AD.
 
 **Mogelijke oorzaak:** In het gebruikers account ontbreekt waarschijnlijk de gebruikersrol **beheerder** voor de Configuration Manager micro service-toepassing in azure AD. Voeg de rol in azure AD toe uit **bedrijfs toepassingen**  >  **Configuration Manager micro service**-  >  **gebruikers en-groepen**  >  **gebruiker toevoegen**. Groepen worden ondersteund als u Azure AD Premium hebt. Het kan tot een uur duren voordat wijzigingen in deze machtiging van kracht worden.
 
-### <a name="unable-to-get-application-information"></a><a name="bkmk_noinfo"></a>Kan geen toepassings gegevens ophalen
+### <a name="unable-to-get-application-information"></a><a name="bkmk_noinfo"></a> Kan geen toepassings gegevens ophalen
 
 **Fout bericht 1:** Kan geen toepassings gegevens ophalen. Zorg ervoor dat Azure AD en AD-gebruikers detectie zijn geconfigureerd en dat de gebruiker wordt gedetecteerd door beide. Controleer of de gebruiker de juiste machtigingen heeft in Configuration Manager.
 
@@ -56,7 +56,7 @@ Wanneer u toepassingen weergeeft of installeert vanuit het micro soft-beheer cen
 
     Als de Azure AD-eigenschappen leeg zijn, controleert u de configuratie van de [Azure AD-gebruikers detectie](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc)van de site.
 
-### <a name="unexpected-error-occurred"></a><a name="bkmk_1603"></a>Er is een onverwachte fout opgetreden
+### <a name="unexpected-error-occurred"></a><a name="bkmk_1603"></a> Er is een onverwachte fout opgetreden
 
 **Fout bericht:** Er is een onverwachte fout opgetreden
 
@@ -83,7 +83,7 @@ Onverwachte fouten worden meestal veroorzaakt door een [service aansluitpunt](..
 1. IIS moet zijn geïnstalleerd op de provider computer. Zie [vereisten voor de beheer service](../develop/adminservice/overview.md#prerequisites)voor meer informatie.
 
 
-### <a name="the-site-information-hasnt-yet-synchronized"></a><a name="bkmk_sync"></a>De site gegevens zijn nog niet gesynchroniseerd
+### <a name="the-site-information-hasnt-yet-synchronized"></a><a name="bkmk_sync"></a> De site gegevens zijn nog niet gesynchroniseerd
 
 **Fout bericht:** De site-informatie is nog niet gesynchroniseerd van Configuration Manager naar het micro soft Endpoint Manager-beheer centrum. Wacht tot 15 minuten nadat u de site hebt gekoppeld aan uw Azure-Tenant.
 
@@ -91,13 +91,13 @@ Onverwachte fouten worden meestal veroorzaakt door een [service aansluitpunt](..
 - Deze fout treedt doorgaans op wanneer nieuw onboarding wordt toegevoegd aan de Tenant. Wacht 15 minuten tot de gegevens zijn gesynchroniseerd.
 - Deze fout kan ook optreden als de centrale beheer site is bijgewerkt naar een nieuwe versie van Configuration Manager, maar er nog geen upgrade is uitgevoerd voor sommige onderliggende primaire sites.
 
-### <a name="application-shows-as-installed-after-creating-a-new-deployment"></a><a name="bkmk_installed"></a>De toepassing wordt weer gegeven als geïnstalleerd na het maken van een nieuwe implementatie
+### <a name="application-shows-as-installed-after-creating-a-new-deployment"></a><a name="bkmk_installed"></a> De toepassing wordt weer gegeven als geïnstalleerd na het maken van een nieuwe implementatie
 
 **Symptoom:** Een toepassing wordt weer gegeven als geïnstalleerd in het beheer centrum van micro soft Endpoint Manager na het maken van een nieuw apparaat vereist goedkeurings implementatie of een beschik bare implementatie van een gebruiker.
 
 **Mogelijke oorzaak:** De toepassings status die voor dat apparaat wordt weer gegeven, is van een andere actieve of eerdere implementatie.
 
-### <a name="errors-when-searching-or-retrying-an-installation"></a><a name="bkmk_hfru"></a>Fouten bij het zoeken of opnieuw proberen van een installatie
+### <a name="errors-when-searching-or-retrying-an-installation"></a><a name="bkmk_hfru"></a> Fouten bij het zoeken of opnieuw proberen van een installatie
 
 **Symptoom:** Er treden fouten op bij het uitvoeren van de volgende acties:
 - De zoekfunctie gebruiken
@@ -114,6 +114,9 @@ Onverwachte fouten worden meestal veroorzaakt door een [service aansluitpunt](..
 **Symptomen:** De gebruiker ziet `restart pending` meldingen en in Software Center. In het beheer centrum van micro soft Endpoint Manager blijft de toepassing in de `Installing` status.  
 
 **Tijdelijke oplossing:** Zodra de gebruiker het apparaat opnieuw opstart, wordt de juiste status weer gegeven in het beheer centrum.
+
+[!INCLUDE [Known issues shared across tenant attach features](includes/known-issues-shared.md)]
+
 
 ## <a name="next-steps"></a>Volgende stappen
 

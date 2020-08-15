@@ -10,14 +10,14 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 784a287176066ce34c3499ecdc91a450e2d6160c
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 676ae288003b257802eea495c4101a95129eaf34
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127542"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88251861"
 ---
-# <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a>Micro soft Endpoint Manager-Tenant bijvoegen: synchronisatie van apparaten en acties van apparaten
+# <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a> Micro soft Endpoint Manager-Tenant bijvoegen: synchronisatie van apparaten en acties van apparaten
 <!--3555758 live 3/4/2020-->
 *Van toepassing op: Configuration Manager (huidige vertakking)*
 
@@ -34,13 +34,13 @@ Vanaf Configuration Manager versie 2002 kunt u uw Configuration Manager-apparate
    - Is gedetecteerd met Azure Active Directory detectie van [gebruikers](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) en [Active Directory gebruikers detectie](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
       - Dit betekent dat het gebruikers account een gesynchroniseerd gebruikers object moet zijn in azure AD.
    - De machtiging **Configuration Manager actie initiëren** onder **externe taken** in het micro soft Endpoint Manager-beheer centrum.
-
+- Als uw centrale beheer site een [externe provider](../core/plan-design/hierarchy/plan-for-the-sms-provider.md)heeft, volgt u de instructies voor de [CAS bevat een scenario voor externe provider](../core/servers/manage/cmpivot-changes.md#cas-has-a-remote-provider) in het CMPivot-artikel. <!--7796824-->
 
 ## <a name="internet-endpoints"></a>Internet-eind punten
 
 [!INCLUDE [Internet endpoints for tenant attach](../core/plan-design/network/includes/internet-endpoints-tenant-attach.md)]
 
-## <a name="enable-device-upload-when-co-management-is-already-enabled"></a><a name="bkmk_edit"></a>Het uploaden van apparaten inschakelen als co-beheer al is ingeschakeld
+## <a name="enable-device-upload-when-co-management-is-already-enabled"></a><a name="bkmk_edit"></a> Het uploaden van apparaten inschakelen als co-beheer al is ingeschakeld
 
 Als u co-beheer momenteel hebt ingeschakeld, gebruikt u de co-beheer eigenschappen om het uploaden van apparaten in te scha kelen. Als co-beheer nog niet is ingeschakeld, [gebruikt u de wizard voor **co-beheer configureren** ](#bkmk_config) om het uploaden van apparaten in te scha kelen.
 
@@ -58,7 +58,7 @@ Als co-beheer al is ingeschakeld, bewerkt u de eigenschappen voor co-beheer om h
 1. Kies **OK** om de eigenschappen voor co-beheer af te sluiten nadat u de wijzigingen hebt aangebracht.
 
 
-## <a name="enable-device-upload-when-co-management-isnt-enabled"></a><a name="bkmk_config"></a>Het uploaden van apparaten inschakelen als co-beheer niet is ingeschakeld
+## <a name="enable-device-upload-when-co-management-isnt-enabled"></a><a name="bkmk_config"></a> Het uploaden van apparaten inschakelen als co-beheer niet is ingeschakeld
 
 Als co-beheer niet is ingeschakeld, gebruikt u de wizard voor het **configureren van co-beheer** om het uploaden van apparaten in te scha kelen. U kunt uw apparaten uploaden zonder automatische inschrijving in te scha kelen voor co-beheer of switch-workloads naar intune. Alle apparaten die worden beheerd door Configuration Manager die **Ja** in de kolom **client** bevatten, worden geüpload. Als dat nodig is, kunt u het uploaden beperken tot één verzameling apparaten. Als co-beheer al is ingeschakeld in uw omgeving, [bewerkt u de eigenschappen voor co-beheer](#bkmk_edit) om het uploaden van apparaten in te scha kelen.
 
@@ -82,7 +82,7 @@ Als co-beheer niet is ingeschakeld, gebruikt u de onderstaande instructies om he
 
 ## <a name="perform-device-actions"></a>Acties op het apparaat uitvoeren
 
-1. Ga in een browser naar`endpoint.microsoft.com`
+1. Ga in een browser naar `endpoint.microsoft.com`
 1. Selecteer **apparaten** en vervolgens **alle apparaten** om de geüploade apparaten weer te geven. **ConfigMgr** wordt weer geven in de kolom **beheerd door** voor geüploade apparaten.
    [![Alle apparaten in het micro soft Endpoint Manager-beheer centrum](./media/3555758-all-devices.png)](./media/3555758-all-devices.png#lightbox)
 1. Selecteer een apparaat om de **overzichts** pagina te laden.
@@ -93,7 +93,7 @@ Als co-beheer niet is ingeschakeld, gebruikt u de onderstaande instructies om he
 
    [![Overzicht van apparaten in het beheer centrum van micro soft Endpoint Manager](./media/3555758-device-overview-actions.png)](./media/3555758-device-overview-actions.png#lightbox)
 
-## <a name="import-a-previously-created-azure-ad-application-optional"></a><a name="bkmk_aad_app"></a>Een eerder gemaakte Azure AD-toepassing importeren (optioneel)
+## <a name="import-a-previously-created-azure-ad-application-optional"></a><a name="bkmk_aad_app"></a> Een eerder gemaakte Azure AD-toepassing importeren (optioneel)
 <!--6479246-->
 *(Geïntroduceerd in versie 2006)*
 

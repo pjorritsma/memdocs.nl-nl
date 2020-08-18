@@ -2,7 +2,7 @@
 title: Releaseopmerkingen
 titleSuffix: Configuration Manager
 description: Meer informatie over urgente problemen die nog niet zijn opgelost in het product of die zijn opgenomen in een Microsoft Ondersteuning Knowledge Base-artikel.
-ms.date: 08/11/2020
+ms.date: 08/17/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
@@ -10,12 +10,12 @@ ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9c1152b14da7c0a473e266b1ac1e6da2778aa105
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: a29c165e13e82144d7fea767ca719a0c84c88023
+ms.sourcegitcommit: da5bfbe16856fdbfadc40b3797840e0b5110d97d
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126288"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512645"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Release opmerkingen voor Configuration Manager
 
@@ -37,7 +37,7 @@ Raadpleeg de volgende artikelen voor meer informatie over de nieuwe functies die
 Zie [what's New in Desktop Analytics](../../../../desktop-analytics/whats-new.md)(Engelstalig) voor meer informatie over de nieuwe functies van bureau blad Analytics.
 
 > [!Tip]  
-> Als u een melding wilt ontvangen wanneer deze pagina wordt bijgewerkt, kopieert en plakt u de volgende URL in uw RSS feed-lezer:`https://docs.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us`
+> Als u een melding wilt ontvangen wanneer deze pagina wordt bijgewerkt, kopieert en plakt u de volgende URL in uw RSS feed-lezer: `https://docs.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us`
 
 ## <a name="set-up-and-upgrade"></a>Instellen en bijwerken  
 
@@ -113,6 +113,20 @@ U kunt dit probleem omzeilen door een map te maken `scripts` met de naam in de `
 
 ## <a name="os-deployment"></a>Besturingssysteemimplementatie
 
+### <a name="client-policy-error-when-you-deploy-a-task-sequence"></a>Fout in client beleid bij het implementeren van een taken reeks
+
+<!-- 7970134 -->
+
+*Van toepassing op: Configuration Manager versie 2006 eerste update ring*
+
+Wanneer u een taken reeks implementeert voor een-client, wordt een vereiste taken reeks niet bij de deadline geïnstalleerd en wordt een beschik bare taken reeks niet weer gegeven in Software Center. U ziet status bericht 10803 met een beschrijving die vergelijkbaar is met het volgende fout bericht:
+
+*Het downloaden van het beleid door de client is mislukt. De service voor gegevens overdracht heeft de volgende BITS-fout geretourneerd: het antwoord van de server is ongeldig. De server heeft het gedefinieerde protocol niet volgen. (-2145386469).*
+
+Dit probleem doet zich voor wanneer u het beheer punt voor HTTPS configureert en het apparaat gebruikt Configuration Manager client versie 1906 of eerder.
+
+U kunt dit probleem omzeilen door de Configuration Manager-client op het apparaat bij te werken naar versie 1910 of hoger.
+
 ### <a name="task-sequences-cant-run-over-cmg"></a>Taken reeksen kunnen niet worden uitgevoerd via CMG
 
 *Van toepassing op: Configuration Manager versie 2002*
@@ -159,12 +173,12 @@ Zie [aangepaste beveiligings rollen maken](../configure/configure-role-based-adm
 
 ## <a name="desktop-analytics"></a>Desktop Analytics
 
-### <a name="an-extended-security-update-for-windows-7-causes-them-to-show-as-unable-to-enroll"></a><a name="dawin7-diagtrack"></a>Een uitgebreide beveiligings update voor Windows 7 geeft aan dat ze niet kunnen worden **Inge schreven**
+### <a name="an-extended-security-update-for-windows-7-causes-them-to-show-as-unable-to-enroll"></a><a name="dawin7-diagtrack"></a> Een uitgebreide beveiligings update voor Windows 7 geeft aan dat ze niet kunnen worden **Inge schreven**
 
 <!-- 7283186 -->
 _Van toepassing op: Configuration Manager versies 2002 en eerder_
 
-De ESU (Extended Security Update) van april 2020 voor Windows 7 heeft de mini maal vereiste versie van de diagtrack.dll gewijzigd van 10586 naar 10240. Door deze wijziging worden Windows 7-apparaten weer gegeven als niet in staat **om in te schrijven** in het dash board **verbindings status** van de bureau blad Analytics. Wanneer u inzoomt op de weer gave apparaat voor deze status, wordt de volgende status weer gegeven in de eigenschap **DiagTrack service configuration** :`Connected User Experience and Telemetry (diagtrack.dll) component is outdated. Check requirements.`
+De ESU (Extended Security Update) van april 2020 voor Windows 7 heeft de mini maal vereiste versie van de diagtrack.dll gewijzigd van 10586 naar 10240. Door deze wijziging worden Windows 7-apparaten weer gegeven als niet in staat **om in te schrijven** in het dash board **verbindings status** van de bureau blad Analytics. Wanneer u inzoomt op de weer gave apparaat voor deze status, wordt de volgende status weer gegeven in de eigenschap **DiagTrack service configuration** : `Connected User Experience and Telemetry (diagtrack.dll) component is outdated. Check requirements.`
 
 Er is geen tijdelijke oplossing vereist voor dit probleem. Verwijder de ESU van april niet. Als op een andere manier op de juiste wijze is geconfigureerd, rapporteren de Windows 7-apparaten nog steeds diagnostische gegevens naar de Desktop Analytics-service en worden ze nog steeds weer gegeven in de portal.
 
@@ -243,7 +257,7 @@ Dit probleem omzeilen:
 
 - U kunt ook een traditioneel [Cloud distributiepunt](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md)gebruiken. Deze rol dwingt geen TLS 1,2 af, maar is compatibel met clients waarvoor TLS 1,2 vereist is.
 
-## <a name="protection"></a>Beveiliging
+## <a name="protection"></a>Protection
 
 ### <a name="bitlocker-management-appears-in-version-1906"></a>BitLocker-beheer wordt weer gegeven in versie 1906
 

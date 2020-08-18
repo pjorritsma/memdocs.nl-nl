@@ -2,7 +2,7 @@
 title: Controle lijst voor 2006
 titleSuffix: Configuration Manager
 description: Meer informatie over de acties die u moet uitvoeren voordat u bijwerkt naar Configuration Manager versie 2006.
-ms.date: 08/11/2020
+ms.date: 08/17/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6d359306-69ae-4873-ba90-964b6ae51d79
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7a3c66863e7768c5ca90151bf85d61aa1e3a0e17
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 97ad8c947c634f43a53e1fac68f0a3255aa89809
+ms.sourcegitcommit: da5bfbe16856fdbfadc40b3797840e0b5110d97d
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129643"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512747"
 ---
 # <a name="checklist-for-installing-update-2006-for-configuration-manager"></a>Controle lijst voor het installeren van update 2006 voor Configuration Manager
 
@@ -81,7 +81,11 @@ Micro soft ondertekent het script digitaal en bundelt dit in een ondertekend zel
 
 Om u aan te melden voor de eerste update ring:
 
-1. Open Windows Power shell en **Voer als Administrator uit**
+1. Een Windows Power shell versie 5-sessie openen **als beheerder**
+
+    > [!IMPORTANT]
+    > Configuration Manager huidige vertakking biedt momenteel geen ondersteuning voor Power shell-versie 7. Als u Power shell versie 7 al hebt geïnstalleerd, kunt u nog steeds Power shell versie 5 gebruiken. Zie [using Power shell 7 side-by-side with Windows Power shell 5,1](https://docs.microsoft.com/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7#using-powershell-7-side-by-side-with-windows-powershell-51)(Engelstalig) voor meer informatie.
+
 1. Voer het **EnableEarlyUpdateRing2006.ps1** script uit met de volgende syntaxis:
 
     `EnableEarlyUpdateRing2006.ps1 <SiteServer_Name> | SiteServer_IP>`

@@ -2,7 +2,7 @@
 title: Verificatie op basis van tokens voor CMG
 titleSuffix: Configuration Manager
 description: Registreer een client in het interne netwerk voor een uniek token of maak een bulk registratie token voor apparaten op internet.
-ms.date: 06/10/2020
+ms.date: 08/17/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8146c9c2605f8693ad7375b974a5dd13c089d946
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 55997c9185a221d105aa8ad40bbb14021463d07b
+ms.sourcegitcommit: da5bfbe16856fdbfadc40b3797840e0b5110d97d
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715659"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512696"
 ---
 # <a name="token-based-authentication-for-cloud-management-gateway"></a>Verificatie op basis van tokens voor Cloud beheer gateway
 
@@ -25,13 +25,13 @@ ms.locfileid: "84715659"
 
 De Cloud Management Gateway (CMG) ondersteunt veel soorten clients, maar zelfs met [verbeterde http](../../plan-design/hierarchy/enhanced-http.md), hebben deze clients een [certificaat voor client verificatie](../manage/cmg/certificates-for-cloud-management-gateway.md#for-internet-based-clients-communicating-with-the-cloud-management-gateway)nodig. Deze certificaat vereiste kan lastig zijn om in te richten op Internet-clients die niet vaak verbinding maken met het interne netwerk, geen lid kunnen worden van Azure Active Directory (Azure AD) en geen methode hebben voor het installeren van een door PKI uitgegeven certificaat.
 
-Om deze problemen op te lossen, vanaf versie 2002, wordt de ondersteuning van het apparaat door Configuration Manager uitgebreid met de volgende methoden:
+Om deze problemen op te lossen, vanaf versie 2002, wordt de ondersteuning van het apparaat door Configuration Manager uitgebreid met de eigen verificatie tokens van apparaten. Als u deze functie optimaal wilt benutten, moet u na het bijwerken van de site ook clients bijwerken naar de nieuwste versie. Het volledige scenario werkt pas als de client versie ook het meest recent is. Als dat nodig is, zorgt u ervoor dat u [de nieuwe client versie promoveert naar productie](../manage/upgrade/test-client-upgrades.md#to-promote-the-new-client-to-production).
 
-- Registreer u voor een uniek token op het interne netwerk
+ Clients registreren zich in eerste instantie voor deze tokens met behulp van een van de volgende twee methoden:
 
-- Een token voor bulk registratie maken voor apparaten op Internet
+- Intern netwerk
 
-Als u deze functie optimaal wilt benutten, moet u na het bijwerken van de site ook clients bijwerken naar de nieuwste versie. Het volledige scenario werkt pas als de client versie ook het meest recent is. Als dat nodig is, zorgt u ervoor dat u [de nieuwe client versie promoveert naar productie](../manage/upgrade/test-client-upgrades.md#to-promote-the-new-client-to-production).
+- Bulk registratie
 
 De Configuration Manager-client samen met het beheer punt beheert dit token, dus er is geen besturingssysteem versie afhankelijkheid. Deze functie is beschikbaar voor alle [ondersteunde client besturingssysteem versies](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md).
 
@@ -40,15 +40,20 @@ De Configuration Manager-client samen met het beheer punt beheert dit token, dus
 >
 > Micro soft raadt aan om apparaten te koppelen aan Azure AD. Op internet gebaseerde apparaten kunnen Azure AD gebruiken om te verifiëren met Configuration Manager. Het schakelt ook zowel apparaat-als gebruikers scenario's in, ongeacht of het apparaat op internet is of is verbonden met het interne netwerk. Zie [de client installeren en registreren met Azure AD Identity](deploy-clients-cmg-azure.md#install-and-register-the-client-using-azure-ad-identity)voor meer informatie.
 
-## <a name="register-on-the-internal-network"></a>Registreren op het interne netwerk
+## <a name="internal-network-registration"></a>Registratie van intern netwerk
 
-Voor deze methode moet de client eerst worden geregistreerd bij het beheer punt op het interne netwerk. Client registratie gebeurt doorgaans direct na de installatie. Het beheer punt geeft de client een uniek token waarmee het een zelfondertekend certificaat gebruikt. Wanneer de client verbinding maakt met internet om te communiceren met de CMG, wordt het zelfondertekende certificaat gekoppeld aan het token dat door het beheer punt is uitgegeven. De client vernieuwt het token eenmaal per maand en is geldig gedurende 90 dagen.
+Voor deze methode moet de client eerst worden geregistreerd bij het beheer punt op het interne netwerk. Client registratie gebeurt doorgaans direct na de installatie. Het beheer punt geeft de client een uniek token waarmee het een zelfondertekend certificaat gebruikt. Wanneer de client verbinding maakt met internet om te communiceren met de CMG, wordt het zelfondertekende certificaat gekoppeld aan het token dat door het beheer punt is uitgegeven.
 
 Dit gedrag wordt standaard ingeschakeld door de site.
 
-## <a name="create-a-bulk-registration-token"></a>Een bulk registratie token maken
+## <a name="bulk-registration-token"></a>Token voor bulk registratie
 
 Als u geen clients in het interne netwerk kunt installeren en registreren, maakt u een token voor bulk registratie. Gebruik dit token wanneer de client wordt geïnstalleerd op een op internet gebaseerd apparaat en registreert via de CMG. Het bulk registratie token heeft een korte geldigheids periode en wordt niet opgeslagen op de client of de site. Hiermee kan de client een uniek token genereren dat is gekoppeld aan het zelfondertekende certificaat, waarmee het kan worden geverifieerd met de CMG.
+
+> [!NOTE]
+> Verkent geen tokens voor bulk registratie met die voor het Configuration Manager van problemen aan afzonderlijke clients. Het bulk registratie token stelt de client in staat om in eerste instantie te installeren en te communiceren met de-site. Deze eerste communicatie is lang genoeg voor de site om de client een eigen, uniek client verificatie token te geven. De client gebruikt vervolgens het verificatie token voor alle communicatie met de site terwijl het op internet is. Na de eerste registratie gebruikt de client geen bulk registratie token.
+
+Voer de volgende acties uit om een token voor bulk registratie te maken voor gebruik tijdens de client installatie op op internet gebaseerde apparaten:
 
 1. Meld u aan bij de site server op het hoogste niveau in de hiërarchie met lokale Administrator bevoegdheden.
 
@@ -140,6 +145,12 @@ U kunt filteren of sorteren op de kolom **type** . Identificeer specifieke bulk 
 2. Vouw **beveiliging**uit, selecteer het knoop punt **certificaten** en selecteer het bulk registratie token dat u wilt blok keren.
 
 3. Klik op het tabblad **Start** van de lint balk of het snelmenu van de rechter muisknop op **blok keren**. Als u eerder geblokkeerde bulk registratie tokens wilt blok keren, selecteert u de **blok kering opheffen** .
+
+## <a name="token-renewal"></a>Token vernieuwing
+
+De client vernieuwt het unieke, door Configuration Manager uitgegeven token eenmaal per maand en is geldig gedurende 90 dagen. Een client hoeft geen verbinding te maken met het interne netwerk om het token te vernieuwen. Als het token nog geldig is, is het maken van een verbinding met de site met behulp van een CMG voldoende. Als het token niet binnen 90 dagen wordt vernieuwd, moet de client rechtstreeks verbinding maken met een beheer punt op een intern netwerk om een nieuw token te ontvangen.
+
+U kunt geen bulk registratie token vernieuwen. Wanneer een bulk registratie token verloopt, genereert u een nieuw-apparaat voor registratie op Internet basis van een CMG.
 
 ## <a name="see-also"></a>Zie ook
 

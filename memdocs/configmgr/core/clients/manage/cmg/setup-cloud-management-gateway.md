@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 9ba4466a40d49c4b78b75e6f85137dfd0a4ff5ce
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 6b56f9848f497b7167b478b427f37a00bb2656b9
+ms.sourcegitcommit: da5bfbe16856fdbfadc40b3797840e0b5110d97d
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129134"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512713"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Cloud beheer gateway instellen voor Configuration Manager
 
@@ -80,7 +80,7 @@ Voer deze procedure uit op de site op het hoogste niveau. Deze site is een zelfs
 
 4. Geef de **Azure-omgeving** voor deze CMG op. De opties in de vervolg keuzelijst kunnen variëren, afhankelijk van de implementatie methode.  
 
-5. Selecteer **Next**. Wacht tot de site de verbinding met Azure test.  
+5. Selecteer **Volgende**. Wacht tot de site de verbinding met Azure test.  
 
 6. Selecteer op de pagina instellingen van de wizard eerst **Bladeren** en kies de. PFX-bestand voor het CMG-Server verificatie certificaat. De naam van dit certificaat vult de vereiste velden **FQDN** en **service naam** van de service in.  
 
@@ -108,7 +108,7 @@ Voer deze procedure uit op de site op het hoogste niveau. Deze site is een zelfs
 
 13. Standaard maakt de wizard de volgende optie: **CMG toestaan als een Cloud distributiepunt te functioneren en inhoud van Azure Storage te bewaren**. Een CMG kan ook inhoud leveren aan clients. Deze functionaliteit vermindert de vereiste certificaten en kosten van virtuele Azure-machines.
 
-14. Selecteer **Next**.  
+14. Selecteer **Volgende**.  
 
 15. Als u CMG-verkeer met een drempel van 14 dagen wilt bewaken, kiest u het selectie vakje om de drempel waarschuwing in te scha kelen. Geef vervolgens de drempel waarde en het percentage op waarmee de verschillende waarschuwings niveaus moeten worden verhoogd. Kies **volgende** wanneer u klaar bent.  
 
@@ -141,7 +141,7 @@ Het CMG-verbindings punt is de site systeemrol voor het communiceren met de CMG.
 
 Gebruik **CMGService. log** en **SMS_Cloud_ProxyConnector. log**om de CMG-service status op te lossen. Zie [logboek bestanden](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway)voor meer informatie.
 
-## <a name="configure-client-facing-roles-for-cmg-traffic"></a><a name="bkmk_role"></a>Client gerichte rollen configureren voor CMG-verkeer
+## <a name="configure-client-facing-roles-for-cmg-traffic"></a><a name="bkmk_role"></a> Client gerichte rollen configureren voor CMG-verkeer
 
 Configureer de site systemen van het beheer punt en het software-update punt om CMG verkeer te accepteren. Voer deze procedure uit op de primaire site voor alle beheer punten en software-update punten die service op internet gebaseerde clients.  
 
@@ -207,7 +207,7 @@ Als u de Configuration Manager-client wilt installeren op systemen die momenteel
 
 Voor opties 1 en 2, wanneer u **ccmsetup.exe**uitvoert, gebruikt u de para meter **/MP** om de URL van de CMG op te geven. Zie [over para meters en eigenschappen van client installatie](../../deploy/about-client-installation-properties.md#mp)voor meer informatie.
 
-Voor optie 3, vanaf Configuration Manager versie 2002, kunt u de-client installeren op systemen die niet zijn verbonden met uw intranet met behulp van een bulk registratie token. Zie [een token voor bulk registratie maken](../../deploy/deploy-clients-cmg-token.md#create-a-bulk-registration-token)voor meer informatie over deze methode.
+Voor optie 3, vanaf Configuration Manager versie 2002, kunt u de-client installeren op systemen die niet zijn verbonden met uw intranet met behulp van een bulk registratie token. Zie [een token voor bulk registratie maken](../../deploy/deploy-clients-cmg-token.md#bulk-registration-token)voor meer informatie over deze methode.
 
 ### <a name="configure-off-premises-clients-for-cmg"></a>On-premises clients configureren voor CMG
 

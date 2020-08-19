@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/20/2020
+ms.date: 08/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5bb01770909192b17f0e72b852e4094ff7ad3a04
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: de260f56753e292ed95ac22c76b9cc16457c981b
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565645"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88145994"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>E-mailinstellingen toevoegen aan apparaten met Intune
 
@@ -33,8 +33,7 @@ U kunt e-mailprofielen gebruiken om de ingebouwde e-mailinstellingen te configur
 - Android Enterprise
 - iOS 11.0 en hoger
 - iPadOS 13.0 en hoger
-- Windows Phone 8.1 en hoger
-- Windows 10 (Desktop) en Windows 10 Mobile
+- Windows 10 (desktop)
 
 In dit artikel wordt uitgelegd hoe u een e-mailprofiel maakt in Microsoft Intune. Het bevat ook koppelingen naar de verschillende platforms voor meer specifieke instellingen.
 
@@ -50,7 +49,6 @@ In dit artikel wordt uitgelegd hoe u een e-mailprofiel maakt in Microsoft Intune
         - **Android Enterprise**
         - **iOS/iPadOS**
         - **Windows 10 en hoger**
-        - **Windows Phone 8.1**
 
     - **Profiel**: Selecteer **E-mail**.
 
@@ -68,7 +66,6 @@ In dit artikel wordt uitgelegd hoe u een e-mailprofiel maakt in Microsoft Intune
     - [Android Enterprise](email-settings-android-enterprise.md)
     - [iOS/iPadOS](email-settings-ios.md)
     - [Windows 10](email-settings-windows-10.md)
-    - [Windows Phone 8.1](email-settings-windows-phone-8-1.md)
 
 8. Selecteer **Volgende**.
 9. Wijs in **Bereiktags** (optioneel) een tag toe om het profiel te filteren op specifieke IT-groepen, zoals `US-NC IT Team` of `JohnGlenn_ITDepartment`. Zie [RBAC en bereiktags gebruiken voor gedistribueerde IT](../fundamentals/scope-tags.md) voor meer informatie over bereiktags.

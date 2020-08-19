@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/11/2020
-ms.topic: how-to
+ms.date: 08/12/2020
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f01baaf8ca48229242b6f65d10ef28a294a632bc
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: ccbd923ba1110f99c57b499115a41a03ec3317c1
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428623"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252806"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Apps toevoegen aan Microsoft Intune 
 
@@ -54,7 +54,6 @@ De volgende tabel bevat de specifieke app-typen en informatie over hoe u deze ku
 | Android Store-apps  | Store-app  | Selecteer **Android** als het **app-type** en voer de Google Play Store-URL in voor de app. |
 | Android Enterprise-apps  | Store-app  | Selecteer **Android** als het **app-type** en voer de beheerde Google Play Store-URL in voor de app. <sup>1</sup> |
 | iOS/iPadOS Store-app  | Store-app  | Selecteer **iOS** als het **app-type**, zoek de app en selecteer de app in Intune. |
-| Windows Phone 8.1 Store-apps  | Store-app  | Selecteer **Windows Phone 8.1** als het **app-type** en voer de URL van de Microsoft Store in voor de app. |
 | Microsoft Store-apps  | Store-app  | Selecteer **Windows** als het **app-type** en voer de URL van de Microsoft Store in voor de app. |
 | Beheerde Google Play-apps | Store-app  | Selecteer **Beheerde Google Play** als het **apptype**, zoek de app en selecteer de app in Intune. |
 | Office 365-apps voor Windows 10  | Store-app (Office 365) | Selecteer **Windows 10** bij **Microsoft 365-apps** als het **app-type**, en selecteer vervolgens de Office 365-app die u wilt installeren.  |
@@ -63,7 +62,6 @@ De volgende tabel bevat de specifieke app-typen en informatie over hoe u deze ku
 | Microsoft Edge versie 77 en hoger voor macOS | Store-app | Selecteer **macOS** bij **Microsoft Edge versie 77 en hoger** als het **app-type**. |
 | Android LOB-apps (Line-Of-Business) | LOB-app | Selecteer **Line-Of-Business**-app als het **app-type**, selecteer het **app-pakketbestand** en voeg vervolgens een Android-installatiebestand toe met de extensie **.apk**.  |
 | iOS/iPadOS LOB-apps | LOB-app | Selecteer **Line-Of-Business**-app als het **app-type**, selecteer het **app-pakketbestand** en voeg vervolgens een iOS-/iPadOS-installatiebestand toe met de extensie **.ipa**.  |
-| Windows Phone LOB-apps | LOB-app | Selecteer **Line-Of-Business**-app als het **app-type**, selecteer het **app-pakketbestand** en voeg vervolgens een Windows Phone-installatiebestand toe met de extensie **.xap**.  |
 | Windows LOB-app | LOB-app | Selecteer **Line-Of-Business**-app als het app-type, selecteer het **app-pakketbestand** en voeg vervolgens een Windows-installatiebestand toe met de extensie **.msi**, **.appx**, **.appxbundle**, **.msix** of **.msixbundle**. |
 | Ingebouwde iOS-/iPadOS-app  | Ingebouwde app | Selecteer **Ingebouwde app** als het **app-type** en selecteer vervolgens de ingebouwde app in de lijst beschikbare apps.  |
 | Ingebouwde Android-app  | Ingebouwde app | Selecteer **Ingebouwde app** als het **app-type** en selecteer vervolgens de ingebouwde app in de lijst beschikbare apps.  |
@@ -221,8 +219,6 @@ Als u wilt leren hoe u voor elk platform apps aan Intune toevoegt, raadpleegt u:
 - [iOS LOB-apps](lob-apps-ios.md)
 - [macOS LOB-apps](lob-apps-macos.md)
 - [Web-apps (voor alle platformen)](web-app.md)
-- [Windows Phone 8.1 Store-apps](store-apps-windows-phone-8-1.md)
-- [Windows Phone LOB-apps](lob-apps-windows-phone.md)
 - [Microsoft Store-apps](store-apps-windows.md)
 - [Windows LOB-app](lob-apps-windows.md)
 - [Office 365-apps voor Windows 10](apps-add-office365.md)

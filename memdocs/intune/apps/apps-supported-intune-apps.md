@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/15/2020
+ms.date: 08/12/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ab05388b6062cb0e3bd7e249a6755a642f404b93
-ms.sourcegitcommit: 16bc2ed5b64eab7f5ae74391bd9d7b66c39d8ca6
+ms.openlocfilehash: 258f2bddc86da7bdd9160ecc82f5fa96343ffe33
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86437440"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179664"
 ---
 # <a name="microsoft-intune-protected-apps"></a>Met Microsoft Intune beveiligde apps  
 
@@ -122,8 +122,6 @@ Als u wilt leren hoe u voor elk platform apps aan Intune toevoegt, raadpleegt u:
 - [iOS Store-apps](store-apps-ios.md)
 - [iOS LOB-apps](lob-apps-ios.md)
 - [Web-apps (voor alle platformen)](web-app.md)
-- [Windows Phone 8.1 Store-apps](store-apps-windows-phone-8-1.md)
-- [Windows Phone LOB-apps](lob-apps-windows-phone.md)
 - [Microsoft Store-apps](store-apps-windows.md)
 - [Windows LOB-app](lob-apps-windows.md)
 - [Office 365-apps voor Windows 10](apps-add-office365.md)

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 896574f956353c526858356fea40c2248ce70dd3
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 835105b12da44f34f23c3d1162ced27a7eca6868
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990800"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252534"
 ---
 # <a name="use-windows-hello-for-business-on-windows-10-devices-with-microsoft-intune"></a>Gebruik Windows Hello voor Bedrijven op Windows 10-apparaten met Microsoft Intune
 
@@ -33,7 +33,6 @@ Windows Hello voor Bedrijven is een aanmeldmethode voor Windows-apparaten die wa
 Deze functie is van toepassing op apparaten met:
 
 - Windows 10 en hoger
-- Windows 10 Mobile
 - Windows Holographic for Business
 
 Intune maakt gebruik van configuratieprofielen om deze instellingen te maken voor en af te stemmen op de behoeften van uw organisatie. Voeg deze functies aan een profiel toe en push of implementeer deze instellingen vervolgens naar gebruikers- en apparaatgroepen binnen uw organisatie.

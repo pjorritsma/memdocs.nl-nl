@@ -12,18 +12,21 @@ ms.subservice: remote-actions
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 5027d012-d6c2-4971-a9ac-217f91d67d87
+ROBOTS: NOINDEX
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5794894bb7a38e9823305647e584026c6d05b59f
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: d74a89cf9a2a049d067205ef556d1a178bfc69fd
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83982985"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252738"
 ---
 # <a name="reset-the-passcode-on-windows-devices-using-intune"></a>De wachtwoordcode opnieuw instellen op Windows-apparaten met Intune
+
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 U kunt de wachtwoordcode voor Windows-apparaten opnieuw instellen. De functie voor het opnieuw instellen van de wachtwoordcode gebruikt de Microsoft Pin Reset Service om een nieuwe wachtwoordcode te genereren voor apparaten met Windows 10 Mobile. 
 

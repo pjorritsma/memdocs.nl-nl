@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/28/2020
+ms.date: 08/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72d0345c91f525fb6dc28adeabe8522801c51a9f
-ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
+ms.openlocfilehash: 649b9417f349509e4d1630d0cfecfe8e5b6b1430
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87365420"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146487"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>VPN-profielen maken om verbinding te maken met VPN-servers in Intune
 
@@ -37,9 +37,7 @@ U wilt bijvoorbeeld alle iOS/iPadOS-apparaten configureren met de instellingen d
 >
 > * Android 4 en hoger
 > * Geregistreerde apparaten met Windows 8.1 en hoger
-> * Windows Phone 8.1 en hoger
 > * Geregistreerde apparaten met Windows 10 Desktop
-> * Windows 10 Mobile
 > * Windows Holographic for Business
 
 ## <a name="vpn-connection-types"></a>VPN-verbindingstypen
@@ -57,7 +55,6 @@ U kunt VPN-profielen met de volgende verbindingstypen maken:
   - macOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - Cisco AnyConnect
   - Android-apparaatbeheerder
@@ -90,7 +87,6 @@ U kunt VPN-profielen met de volgende verbindingstypen maken:
   - macOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - IKEv2
   - iOS/iPadOS
@@ -115,7 +111,6 @@ U kunt VPN-profielen met de volgende verbindingstypen maken:
   - iOS/iPadOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - SonicWall Mobile Connect
   - Android-apparaatbeheerder
@@ -125,7 +120,6 @@ U kunt VPN-profielen met de volgende verbindingstypen maken:
   - macOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - Zscaler
   - Android Enterprise-werkprofielen: [App-configuratiebeleid](../apps/app-configuration-vpn-ae.md) gebruiken
@@ -149,7 +143,6 @@ U kunt VPN-profielen met de volgende verbindingstypen maken:
       - **macOS**
       - **Windows 10 en hoger**
       - **Windows 8.1 en hoger**
-      - **Windows Phone 8.1**
     - **Profiel**: Selecteer **VPN**.
 
 4. Selecteer **Maken**.
@@ -167,7 +160,6 @@ U kunt VPN-profielen met de volgende verbindingstypen maken:
     - [macOS](vpn-settings-macos.md)
     - [Windows 10](vpn-settings-windows-10.md) (inclusief Windows Holographic for Business)
     - [Windows 8.1](vpn-settings-windows-8-1.md)
-    - [Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)
 
 8. Selecteer **Volgende**.
 9. Wijs in **Bereiktags** (optioneel) een tag toe om het profiel te filteren op specifieke IT-groepen, zoals `US-NC IT Team` of `JohnGlenn_ITDepartment`. Zie [RBAC en bereiktags gebruiken voor gedistribueerde IT](../fundamentals/scope-tags.md) voor meer informatie over bereiktags.

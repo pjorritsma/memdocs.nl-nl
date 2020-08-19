@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/21/2019
+ms.date: 08/12/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: cffdadab0518fbc6a52d0f2bf60752c165fd1c3e
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: cb9812505bb1a4560c7b5668aee5b83d5cc0aec7
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881502"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179584"
 ---
 # <a name="enroll-windows-10-devices-with-intune-company-portal"></a>Windows 10-apparaten inschrijven bij de Intune-bedrijfsportal
 
@@ -37,7 +37,7 @@ Windows 10 wordt ondersteund voor verschillende apparaattypen, met inbegrip van 
 ## <a name="enroll-windows-10-version-1607-and-later-device"></a>Een apparaat met Windows 10 versie 1607 en hoger inschrijven 
 In deze stappen wordt beschreven hoe u een apparaat inschrijft met Windows 10 versie 1607 en hoger.  
 
-1. Ga naar **Start**. Als u van een Windows 10 Mobile-apparaat gebruikmaakt, gaat u verder naar de lijst **Alle Apps**.
+1. Ga naar **Start**. 
 
 2. Open de app **Instellingen**. Als de app niet direct beschikbaar is in de lijst met apps, gaat u naar de zoekbalk en typt u 'instellingen'.
 
@@ -72,7 +72,7 @@ Nog steeds geen toegang tot uw e-mail, bestanden of andere gegevens voor werk of
 ## <a name="enroll-windows-10-version-1511-and-earlier-device"></a>Een apparaat met Windows 10 versie 1511 en lager inschrijven  
 In deze stappen wordt beschreven hoe u een apparaat inschrijft met Windows 10 versie 1511 en lager.  
 
-1. Ga naar **Start**. Als u van een Windows 10 Mobile-apparaat gebruikmaakt, gaat u verder naar de lijst **Alle Apps**.
+1. Ga naar **Start**. 
 
 2. Open de app **Instellingen**. Als de app niet direct beschikbaar is in de lijst met apps, gaat u naar de zoekbalk en typt u 'instellingen'.
 

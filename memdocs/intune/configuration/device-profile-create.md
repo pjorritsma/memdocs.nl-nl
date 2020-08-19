@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/11/2020
+ms.date: 08/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 886f572212a1af3e38fd5ea10afa21ce24c23411
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: bd1cb0445ceb4c9434b93949973125422aa1df19
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093302"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146419"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Een apparaatprofiel maken in Microsoft Intune
 
@@ -52,7 +52,6 @@ Wanneer u een profiel maakt (**Configuratieprofielen** > **Profiel maken**), kie
 - **macOS**
 - **Windows 10 en hoger**
 - **Windows 8.1 en hoger**
-- **Windows Phone 8.1**
 
 Kies vervolgens het profieltype. Welke instellingen u kunt configureren, is afhankelijk van het platform dat u kiest. In de volgende artikelen worden de instellingen voor de verschillende profieltypen beschreven:
 

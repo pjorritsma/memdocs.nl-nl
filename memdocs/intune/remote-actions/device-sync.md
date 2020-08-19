@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 650a91d17223c31e02d660e47874a42731de572a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: de0c6694f046d9df61f136e830d220ab0b688d28
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983016"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252687"
 ---
 # <a name="sync-devices-to-get-the-latest-policies-and-actions-with-intune"></a>Apparaten synchroniseren met Intune om het meest recente beleid en de meest recente acties te verkrijgen
 
@@ -31,7 +31,6 @@ Met apparaatactie **Synchroniseren** wordt het geselecteerde apparaat direct ing
 ## <a name="supported-platforms"></a>Ondersteunde platforms
 
 - Windows
-- Windows Phone
 - iOS
 - macOS
 - Android

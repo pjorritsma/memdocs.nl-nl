@@ -2,7 +2,7 @@
 title: Wat is er nieuw in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Een samen vatting van de nieuwe functies in de meest recente maandelijkse versie van de Desktop Analytics-Cloud service.
-ms.date: 07/01/2020
+ms.date: 08/19/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: ec554d755b92d1c710def580a34fdbbddc7b4d45
-ms.sourcegitcommit: 2c5fd7c8603b88b753765f3cc298d0a0bacaf521
+ms.openlocfilehash: c41c6333cfee1b6a24bb84c0f020c14c303fd904
+ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85819968"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88614754"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>Wat is er nieuw in Desktop Analytics
 
@@ -25,10 +25,22 @@ Meer informatie over wat er elke maand nieuw is in Desktop Analytics.
 > [!TIP]
 > Het kan tot drie dagen duren voordat elke maandelijkse update is geïmplementeerd. Sommige functies worden gedurende een aantal weken geïmplementeerd en zijn mogelijk niet voor alle gebruikers in de eerste week beschikbaar.
 
-Als u een melding wilt ontvangen wanneer deze pagina wordt bijgewerkt, kopieert en plakt u de volgende URL in uw RSS feed-lezer:`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
+Als u een melding wilt ontvangen wanneer deze pagina wordt bijgewerkt, kopieert en plakt u de volgende URL in uw RSS feed-lezer: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
 
-## <a name="july-2020"></a>2020 juli
+## <a name="august-2020"></a>Augustus 2020
+
+### <a name="apps-deployed-from-configuration-manager-are-important-by-default"></a>Apps die zijn geïmplementeerd vanuit Configuration Manager zijn standaard belang rijk
+
+<!-- 4859763 -->
+
+De **urgentie** configuratie van een app is essentieel voor desktop Analytics om te bepalen welke apparaten moeten worden toegevoegd voor test implementaties. Een beheerder heeft nodig om het belang voor alle apps in Desktop Analytics hand matig te configureren. Alleen wanneer u de test valideert, kunt u door gaan met een productie-implementatie.
+
+Voor elke app die u met Configuration Manager implementeert, wordt deze door Desktop Analytics standaard automatisch geconfigureerd als belang rijk. Met dit gedrag kunt u de apps in uw omgeving sneller configureren, zodat u sneller kunt werken in een productie-implementatie.
+
+Zie [assets-apps](about-assets.md#apps)voor meer informatie.
+
+## <a name="july-2020"></a>Juli 2020
 
 ### <a name="windows-10-version-2004-now-available-in-desktop-analytics"></a>Windows 10, versie 2004, nu beschikbaar in Desktop Analytics
 

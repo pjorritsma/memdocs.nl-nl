@@ -10,12 +10,12 @@ ms.assetid: 31bf1359-54e5-4416-9f39-6bb0070db542
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 93460b08b7ba47951656e1107aae56e687acf4e8
-ms.sourcegitcommit: f6b14e6fe694a2a05c6ed92e67089e80a00a0908
+ms.openlocfilehash: 529cf0c27793262abb2902477ceab11201212b1e
+ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88501195"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88614717"
 ---
 # <a name="tenant-attach-cmpivot-overview"></a>Tenant koppelen: overzicht van CMPivot
 
@@ -41,18 +41,6 @@ Wanneer u CMPivot gebruikt vanuit de beheer console van micro soft Endpoint Mana
 
 [!INCLUDE [Overview article sections for both Microsoft Endpoint Manager and Configuration Manager use](../core/servers/manage/includes/cmpivot-overview-shared.md)]
 
-## <a name="known-issues"></a>Bekende problemen
-
-### <a name="inconsistent-results-for-some-operators-with-configuration-manager-version-2002"></a>Inconsistente resultaten voor sommige Opera tors met Configuration Manager versie 2002
-<!--7784718, 7884272-->
-Wanneer u CMPivot gebruikt vanuit het micro soft Endpoint Manager-beheer centrum met Configuration Manager versie 2002, krijgt u mogelijk inconsistente resultaten voor de volgende Opera tors:
-
-- Samenvatten op
-- Houd
-- Sorteren op
-- Boven
-- Aantal
-- Distinct
 
 ## <a name="next-steps"></a>Volgende stappen
 

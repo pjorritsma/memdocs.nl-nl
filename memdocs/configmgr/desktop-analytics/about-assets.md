@@ -2,7 +2,7 @@
 title: Assets in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Meer informatie over apparaten, stuur Programma's en apps in Desktop Analytics.
-ms.date: 05/11/2020
+ms.date: 08/19/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: f87c4cc1bcbe8039acb5876dc8e26ac597f12e59
-ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
+ms.openlocfilehash: d4328aee2bc08054fbeaa7147ceed30fe61b61a7
+ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85107304"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88614807"
 ---
 # <a name="assets-in-desktop-analytics"></a>Assets in Desktop Analytics
 
@@ -42,6 +42,9 @@ Op het tabblad **apps** worden alle geïnstalleerde apps weer gegeven die de ser
 
 Op meer dan 2% van geregistreerde apparaten zijn **interessante** apps geïnstalleerd.
 
+> [!TIP]
+> U kunt deze waarde voor een specifiek implementatie plan configureren. Geef in de eigenschappen van een implementatie plan in **gereedheids regels**de waarde op voor het **definiëren van een drempel waarde voor een laag aantal installaties voor uw apps**.
+
 De instelling Details van de **App-versies** is standaard uitgeschakeld. op dit tabblad worden alle versies van apps met dezelfde naam en uitgever gecombineerd.<!-- 5542186 --> Het standaard gedrag helpt bij het verminderen van het totale aantal apps dat u ziet, waardoor u minder inspanningen krijgt om aantekeningen aan de apps te maken. Het aantal apps in de tegel **apps** op de achtergrond is ook gelijk aan deze instelling. In plaats van honderden exemplaren van micro soft Edge te vermelden, is er bijvoorbeeld één exemplaar voor alle versies. U kunt beslissingen voor alle versies eenmaal maken. Als u beslissingen moet nemen over specifieke versies van een app, schakelt u deze instelling in. U kunt deze instelling ook configureren bij het werken met een implementatie plan. Zie [activa plannen](about-deployment-plans.md#plan-assets)voor meer informatie.
 
 Selecteer de app in de lijst en selecteer **bewerken**. Met deze actie worden Details voor de app weer gegeven. Selecteer de vervolg keuzelijst **urgentie** en stel een waarde in. U kunt ook een **eigenaar**toewijzen. Als u wijzigingen aanbrengt, selecteert u **Opslaan**.
@@ -53,6 +56,9 @@ Configureer het **belang** van apps door een van de volgende categorieën in te 
 - Negeren
 - Niet gecontroleerd
 - Niet belang rijk<!-- 3587232 -->
+
+> [!NOTE]
+> Als u de app hebt geïmplementeerd met Configuration Manager, wordt deze door Desktop Analytics standaard automatisch geconfigureerd als **belang rijk** . Met dit gedrag kunt u de apps in uw omgeving sneller configureren, zodat u sneller kunt werken in een productie-implementatie.<!-- 4859763 -->
 
 Wanneer de instelling Details van de **App-versie** is uitgeschakeld, wordt in het deel venster app-Details het aantal versies en talen van de app weer gegeven dat wordt gecombineerd. Als u wijzigingen in de app-details opslaat, geldt dit voor alle versies. Stel bijvoorbeeld het **belang** of de **eigenaar**in. Bij sommige waarden wordt ' multiple ' weer gegeven, wat betekent dat er niet één consistente waarde in alle versies is.
 

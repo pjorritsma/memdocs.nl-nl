@@ -2,7 +2,7 @@
 title: Power BI-voorbeeldrapporten installeren
 titleSuffix: Configuration Manager
 description: Meer informatie over het installeren van de Power BI-voorbeeld rapporten in Configuration Manager
-ms.date: 08/12/2020
+ms.date: 08/18/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7e9bc22c-67ac-4a86-b613-944a4928e583
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 450c76617cf12a3201aa990c90843cb2e0f0edee
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: cb55fc79c44af83c7bb7a5e0802800f55e28e6b3
+ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179430"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88614768"
 ---
 # <a name="install-power-bi-sample-reports"></a>Power BI-voorbeeldrapporten installeren
 <!--5679791-->
@@ -54,7 +54,7 @@ De voorbeeld rapporten installeren:
 
 1. Maak op de Power BI rapport server een nieuwe map `Sample Reports` met de naam in de map root Configuration Manager Reporting.
 
-    :::image type="content" source="media/create-sample-reports-folder.png" alt-text="De map voor het voorbeeld rapport wordt gemaakt in de map root Configuration Manager Reporting van" lightbox="media/create-sample-reports-folder.png":::
+    :::image type="content" source="media/create-sample-reports-folder.png" alt-text="De map voor het voorbeeld rapport wordt gemaakt in de map root Configuration Manager Reporting van " lightbox="media/create-sample-reports-folder.png":::
 
 1. Start micro soft Power BI Desktop (geoptimaliseerd voor Power BI Report Server).
 
@@ -64,9 +64,14 @@ De voorbeeld rapporten installeren:
 
 1. Geef de naam van uw Configuration Manager database en de database server op wanneer u hierom wordt gevraagd en selecteer vervolgens **laden**.
 
-    Wanneer u het gegevens model laadt of toepast, negeert u eventuele fouten als u er een hebt.
-
     :::image type="content" source="media/sample-report-database.png" alt-text="De naam van de data base en database server opgeven" lightbox="media/sample-report-database.png":::
+
+    > [!NOTE]
+    > Wanneer u het gegevens model laadt of toepast, negeert u eventuele fouten als u er een hebt. Als u bijvoorbeeld de volgende fout ziet: ' verbinding maken met tabellen vanuit meer dan één Data Base wordt niet ondersteund in de DirectQuery-modus ', selecteert u **sluiten**. Vernieuw vervolgens de instellingen voor de gegevens Bron:
+    >
+    > 1. Selecteer in Power BI Desktop in het lint de optie **Query's bewerken**en selecteer vervolgens **gegevens bron instellingen**.
+    > 1. Selecteer **Bron wijzigen**, bevestig de namen van de server en de data base en selecteer **OK**.
+    > 1. Sluit het venster instellingen voor gegevens bron en selecteer vervolgens **wijzigingen Toep assen**.
 
 1. Wanneer de rapport gegevens zijn geladen, selecteert u **bestand**  >  **Opslaan als**en selecteert u **Power bi Report Server**.
 

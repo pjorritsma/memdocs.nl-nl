@@ -750,7 +750,7 @@
         - name: Clients voor Linux- en UNIX-servers beheren
           href: clients/manage/manage-clients-for-linux-and-unix-servers.md
         - name: Gegevens synchroniseren naar Azure Monitor
-          href: 'https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=sccm/core/context/core-context'
+          href: 'https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=/mem/configmgr/core/context/core-context'
         - name: Mac-clients onderhouden
           href: clients/manage/maintain-mac-clients.md
         - name: Surface Device-dashboard

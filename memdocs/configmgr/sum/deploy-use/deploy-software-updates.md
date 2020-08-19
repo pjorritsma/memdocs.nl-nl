@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 04536d51-3bf7-45e5-b4af-36ceed10583d
-ms.openlocfilehash: 2adf22fd9c17863d7c29e2a29d2125d22f2d944f
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 5cee950e2b42d73f20921c2baf08b98d2d206586
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127668"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88591185"
 ---
 # <a name="deploy-software-updates"></a>Software-updates implementeren  
 
@@ -48,7 +48,7 @@ Normaal gesp roken begint u met het hand matig implementeren van software-update
 
 
 
-## <a name="manually-deploy-software-updates"></a><a name="BKMK_ManualDeployment"></a>Software-updates hand matig implementeren
+## <a name="manually-deploy-software-updates"></a><a name="BKMK_ManualDeployment"></a> Software-updates hand matig implementeren
 Selecteer software-updates in de Configuration Manager-console en start het implementatie proces hand matig. Normaal gesp roken gebruikt u deze implementatie methode voor het volgende:  
 
 - Clients up-to-date ophalen met vereiste software-updates voordat u automatische implementatie regels maakt voor het beheren van maandelijkse implementaties  
@@ -72,7 +72,7 @@ Zie [software-updates hand matig implementeren](manually-deploy-software-updates
 > - Vanaf 21 april 2020, wordt de naam van Office 365 ProPlus gewijzigd in **Microsoft 365 apps voor bedrijven**. Zie [name wijzigen voor Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change)voor meer informatie. Mogelijk ziet u nog steeds verwijzingen naar de oude naam in de Configuration Manager-console en de ondersteunende documentatie terwijl de-console wordt bijgewerkt.
 > - Wanneer u Microsoft 365 apps-client updates hand matig implementeert, kunt u deze vinden in het knoop punt **office 365-updates** onder **Office 365 client management** van de werk ruimte **software bibliotheek** . 
 
-## <a name="automatically-deploy-software-updates"></a><a name="bkmk_auto"></a>Software-updates automatisch implementeren
+## <a name="automatically-deploy-software-updates"></a><a name="bkmk_auto"></a> Software-updates automatisch implementeren
 
 Automatische implementatie van software-updates configureren met behulp van een regel voor automatische implementatie (ADR). Deze implementatie methode is gebruikelijk voor maandelijkse software-updates (meestal ' patch dinsdag ' genoemd) en voor het beheren van definitie-updates. U definieert de criteria voor een ADR om het implementatie proces te automatiseren. De volgende lijst bevat de algemene werk stroom voor het automatisch implementeren van software-updates:  
 
@@ -110,10 +110,10 @@ Zie [software-updates automatisch implementeren](automatically-deploy-software-u
 
 
 
-## <a name="deploy-software-updates-in-phases"></a><a name="bkmk_phased"></a>Software-updates implementeren in fasen
+## <a name="deploy-software-updates-in-phases"></a><a name="bkmk_phased"></a> Software-updates implementeren in fasen
 
 <!--1358146-->
 Vanaf versie 1810 maakt u gefaseerde implementaties voor software-updates. Met gefaseerde implementaties kunt u een gecoördineerde, geordende implementatie van software organiseren op basis van aanpas bare criteria en groepen.
 
-Zie voor meer informatie [gefaseerde implementaties maken](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json).
+Zie voor meer informatie [gefaseerde implementaties maken](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json).
 

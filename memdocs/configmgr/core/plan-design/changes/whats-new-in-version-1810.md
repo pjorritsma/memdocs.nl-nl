@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: a0d7f561a324d20f503b8fee3e8a869774c70d89
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 05a6950708da04effe230d0d5637c4e3bcedd7e6
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128964"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88591578"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 1810 van Configuration Manager current branch
 
@@ -34,11 +34,11 @@ Als u gebruik wilt maken van nieuwe Configuration Manager functies, moet u clien
 -->  
 
 > [!Tip]  
-> Als u een melding wilt ontvangen wanneer deze pagina wordt bijgewerkt, kopieert en plakt u de volgende URL in uw RSS feed-lezer:`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1810+-+Configuration+Manager%22&locale=en-us`
+> Als u een melding wilt ontvangen wanneer deze pagina wordt bijgewerkt, kopieert en plakt u de volgende URL in uw RSS feed-lezer: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1810+-+Configuration+Manager%22&locale=en-us`
 
 
 
-## <a name="deprecated-features-and-operating-systems"></a><a name="bkmk_deprecated"></a>Afgeschafte functies en besturings systemen
+## <a name="deprecated-features-and-operating-systems"></a><a name="bkmk_deprecated"></a> Afgeschafte functies en besturings systemen
 
 Meer informatie over ondersteunings wijzigingen voordat ze worden geïmplementeerd in [verwijderde en afgeschafte items](deprecated/removed-and-deprecated.md).
 
@@ -50,7 +50,7 @@ Klassieke service-implementaties in azure zijn nu afgeschaft in Configuration Ma
 
 
 
-## <a name="site-infrastructure"></a><a name="bkmk_infra"></a>Site-infra structuur
+## <a name="site-infrastructure"></a><a name="bkmk_infra"></a> Site-infra structuur
 
 ### <a name="support-for-windows-server-2019"></a>Ondersteuning voor Windows Server 2019
 
@@ -95,7 +95,7 @@ Zie [client meldingen](../../clients/manage/client-notification.md)voor meer inf
 
 
 
-## <a name="content-management"></a><a name="bkmk_content"></a>Inhouds beheer
+## <a name="content-management"></a><a name="bkmk_content"></a> Inhouds beheer
 
 ### <a name="new-boundary-group-options"></a>Nieuwe opties voor grens groepen
 
@@ -118,7 +118,7 @@ Zie [Management Insights](../../servers/manage/management-insights.md)voor meer 
 
 
 
-## <a name="client-management"></a><a name="bkmk_client"></a>Client beheer
+## <a name="client-management"></a><a name="bkmk_client"></a> Client beheer
 
 ### <a name="new-client-notification-action-to-wake-up-device"></a>Nieuwe client meldings actie voor het activeren van het apparaat
 
@@ -156,7 +156,7 @@ Zie [grens groepen configureren](../../servers/deploy/configure/boundary-groups.
 
 
 
-## <a name="co-management"></a><a name="bkmk_comgmt"></a>Co-beheer
+## <a name="co-management"></a><a name="bkmk_comgmt"></a> Co-beheer
 
 ### <a name="required-app-compliance-policy-for-co-managed-devices"></a>Vereist app-nalevings beleid voor gezamenlijk beheerde apparaten
 
@@ -191,7 +191,7 @@ Zie [hoe u op internet gebaseerde apparaten voorbereidt voor co-beheer](../../..
 
 
 
-## <a name="application-management"></a><a name="bkmk_app"></a>Toepassings beheer
+## <a name="application-management"></a><a name="bkmk_app"></a> Toepassings beheer
 
 ### <a name="convert-applications-to-msix"></a>Toepassingen converteren naar MSIX
 
@@ -231,7 +231,7 @@ Zie [toepassingen maken](../../../apps/deploy-use/create-applications.md) en [aa
 
 
 
-## <a name="os-deployment"></a><a name="bkmk_osd"></a>Implementatie van besturings systeem
+## <a name="os-deployment"></a><a name="bkmk_osd"></a> Implementatie van besturings systeem
 
 ### <a name="task-sequence-support-of-windows-autopilot-for-existing-devices"></a>Ondersteuning voor taken reeksen van Windows auto pilot voor bestaande apparaten
 
@@ -280,14 +280,14 @@ Zie [taken reeks variabelen](../../../osd/understand/task-sequence-variables.md#
 
 
 
-## <a name="software-updates"></a><a name="bkmk_sum"></a>Software-updates
+## <a name="software-updates"></a><a name="bkmk_sum"></a> Software-updates
 
 ### <a name="phased-deployment-of-software-updates"></a>Gefaseerde implementatie van software-updates
 
 <!--1358146-->
 Gefaseerde implementaties maken voor software-updates. Met gefaseerde implementaties kunt u een gecoördineerde, geordende implementatie van software organiseren op basis van aanpas bare criteria en groepen.
 
-Zie voor meer informatie [gefaseerde implementaties maken](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json).
+Zie voor meer informatie [gefaseerde implementaties maken](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json).
 
 
 ### <a name="improvement-to-maintenance-windows-for-software-updates"></a>Verbetering van onderhouds Vensters voor software-updates
@@ -314,7 +314,7 @@ U kunt nu vervangings regels voor onderdeel updates afzonderlijk van updates zon
 
 Zie [Supersedence rules](../../../sum/get-started/install-a-software-update-point.md#supersedence-rules)voor meer informatie.
 
-## <a name="reporting"></a><a name="bkmk_report"></a>Rapporteren
+## <a name="reporting"></a><a name="bkmk_report"></a> Rapporteren
 
 ### <a name="improvement-to-lifecycle-dashboard"></a>Dash board voor verbetering van levens cyclus
 
@@ -335,7 +335,7 @@ Zie [Data Warehouse](../../servers/manage/data-warehouse.md)voor meer informatie
 
 
 
-## <a name="configuration-manager-console"></a><a name="bkmk_admin"></a>Configuration Manager-console
+## <a name="configuration-manager-console"></a><a name="bkmk_admin"></a> Configuration Manager-console
 
 ### <a name="configuration-manager-administrator-authentication"></a>Beheerders verificatie Configuration Manager
 
@@ -385,7 +385,7 @@ Zie [verbeteringen in scripts](#bkmk_scripts)voor meer informatie over aanvullen
 Zie [CMPivot](../../servers/manage/cmpivot.md)voor meer informatie over CMPivot.
 
 
-### <a name="improvements-to-scripts"></a><a name="bkmk_scripts"></a>Verbeteringen in scripts
+### <a name="improvements-to-scripts"></a><a name="bkmk_scripts"></a> Verbeteringen in scripts
 
 <!--1358239-->
 U kunt nu gedetailleerde script uitvoer weer geven in de RAW-of Structured JSON-indeling. Met deze opmaak wordt de uitvoer eenvoudiger te lezen en te analyseren.
@@ -414,7 +414,7 @@ Zie [de SMS-provider plannen](../hierarchy/plan-for-the-sms-provider.md#bkmk_adm
 
 
 
-## <a name="on-premises-mdm"></a><a name="bkmk_opmdm"></a>On-premises MDM
+## <a name="on-premises-mdm"></a><a name="bkmk_opmdm"></a> On-premises MDM
 
 ### <a name="an-intune-connection-is-no-longer-required-for-new-on-premises-mdm-deployments"></a>Er is geen intune-verbinding meer vereist voor nieuwe on-premises MDM-implementaties
 
@@ -436,7 +436,7 @@ Het volgende update pakket (4488598) is beschikbaar in de-console vanaf 25 maart
 
 De volgende aanvullende hotfixes zijn beschikbaar om specifieke problemen op te lossen:
 
-| Id | Titel | Date | In-console |
+| Id | Titel | Datum | In-console |
 |---------|---------|---------|---------|
 | [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune connector certificaat wordt niet vernieuwd in Configuration Manager | 18 januari 2019 | Ja |
 | [4490434](https://support.microsoft.com/help/4490434) | Er worden dubbele kolommen voor gebruikers detectie gemaakt in Configuration Manager | 22 februari 2019 | Ja |

@@ -10,25 +10,25 @@ ms.assetid: dc245916-bc11-4983-9c4d-015f655007c1
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 66f31983e34ff37cd2df8532cd9d45d372ef1f3b
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: fe8bbbf311baa335640ca7dea90ccd46da4fa5ea
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125097"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88591707"
 ---
 # <a name="manage-and-monitor-phased-deployments"></a>Gefaseerde implementaties beheren en bewaken
 
 In dit artikel wordt beschreven hoe u gefaseerde implementaties kunt beheren en bewaken. Beheer taken zijn het hand matig starten van de volgende fase en het onderbreken of hervatten van een-fase. 
 
 Eerst moet u een gefaseerde implementatie maken: 
-- [Toepassing](create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
-- [Software-update](create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json)  
+- [Toepassing](create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
+- [Software-update](create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json)  
 - [Takenreeks](create-phased-deployment-for-task-sequence.md)  
 
 
 
-## <a name="move-to-the-next-phase"></a><a name="bkmk_move"></a>Naar de volgende fase gaan
+## <a name="move-to-the-next-phase"></a><a name="bkmk_move"></a> Naar de volgende fase gaan
 
 Wanneer u de instelling selecteert, **begint hand matig met de tweede fase van de implementatie**, wordt de volgende fase niet automatisch door de site gestart op basis van de criteria voor geslaagde pogingen. U moet de gefaseerde implementatie naar de volgende fase verplaatsen.  
 
@@ -55,7 +55,7 @@ Wanneer u de instelling selecteert, **begint hand matig met de tweede fase van d
 
 
 
-## <a name="suspend-and-resume-phases"></a><a name="bkmk_suspend"></a>Fasen onderbreken en hervatten 
+## <a name="suspend-and-resume-phases"></a><a name="bkmk_suspend"></a> Fasen onderbreken en hervatten 
 
 U kunt een gefaseerde implementatie hand matig onderbreken of hervatten. U kunt bijvoorbeeld een gefaseerde implementatie voor een taken reeks maken. Tijdens het bewaken van de fase voor uw test groep ziet u een groot aantal fouten. U onderbreekt de gefaseerde implementatie om te voor komen dat verdere apparaten de taken reeks uitvoeren. Nadat u het probleem hebt opgelost, kunt u de gefaseerde implementatie hervatten om de implementatie voort te zetten. 
 
@@ -86,7 +86,7 @@ When you suspend a phased deployment, it sets the available and deadline times o
 -->
 
 
-## <a name="monitor"></a><a name="bkmk_monitor"></a>Monitoren
+## <a name="monitor"></a><a name="bkmk_monitor"></a> Monitoren
 <!--1358577-->
 Vanaf versie 1902 hebben gefaseerde implementaties hun eigen specifieke bewakings knooppunt, waardoor het eenvoudiger wordt om gefaseerde implementaties te identificeren die u hebt gemaakt en naar de bewakings weergave met gefaseerde implementatie te navigeren. Selecteer in de werk ruimte **bewaking** de optie **gefaseerde implementaties**en dubbel klik vervolgens op een van de gefaseerde implementaties om de status weer te geven. <!--3555949-->
 

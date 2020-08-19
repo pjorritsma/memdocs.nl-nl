@@ -10,12 +10,12 @@ ms.assetid: 2629c376-ec43-4f0e-a78b-4223cc9302bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6c2fcd583e860273e2fbfc9fcda1e08053336345
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: a4afb066a5f07ff2347bc64b7811c2f09f3bd548
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127510"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88590931"
 ---
 # <a name="deploy-applications-with-configuration-manager"></a>Toepassingen implementeren met Configuration Manager
 
@@ -34,7 +34,7 @@ U kunt de implementatie van een toepassing ook simuleren. Deze simulatie test de
 >
 > Door MDM Inge schreven apparaten bieden geen ondersteuning voor gesimuleerde implementaties, gebruikers ervaring of plannings instellingen.
 
-## <a name="deploy-an-application"></a><a name="bkmk_deploy"></a>Een toepassing implementeren
+## <a name="deploy-an-application"></a><a name="bkmk_deploy"></a> Een toepassing implementeren
 
 1. In de Configuration Manager-console gaat u naar de werk ruimte **software bibliotheek** , vouwt u **toepassings beheer**uit en selecteert u het knoop punt **toepassingen** of **toepassings groepen** .
 
@@ -110,7 +110,7 @@ Geef op de pagina **implementatie-instellingen** de volgende informatie op:
     >
     > Voor het **beschik bare** installatie doel kunt u deze optie in-of uitschakelen. <!--1351266-->
 
-#### <a name="approval-settings"></a><a name="bkmk_approval"></a>Goedkeurings instellingen
+#### <a name="approval-settings"></a><a name="bkmk_approval"></a> Goedkeurings instellingen
 
 Het goedkeurings gedrag van de toepassing is afhankelijk van het feit of u de aanbevolen optionele functie inschakelt, **toepassings aanvragen voor gebruikers per apparaat goed keuren**.
 
@@ -155,7 +155,7 @@ Na de deadline installeert de-client de toepassing in het eerste niet-zakelijke 
 > [!NOTE]
 > In de meeste gevallen behandelt deze functie het scenario wanneer het apparaat wordt uitgeschakeld terwijl de gebruiker zich niet op kantoor bevindt. Technisch gezien begint de respijt periode wanneer de client beleid na de deadline van de implementatie ontvangt. Hetzelfde gedrag treedt op als u de Configuration Manager-client service (CcmExec) stopt en deze na de deadline van de implementatie op een later tijdstip opnieuw opstart.
 
-### <a name="deployment-user-experience-settings"></a><a name="bkmk_deploy-ux"></a>Instellingen voor **gebruikers ervaring** voor implementatie
+### <a name="deployment-user-experience-settings"></a><a name="bkmk_deploy-ux"></a> Instellingen voor **gebruikers ervaring** voor implementatie
 
 Geef op de pagina **gebruikers ervaring** informatie op over hoe gebruikers kunnen communiceren met de installatie van de toepassing.
 
@@ -169,22 +169,22 @@ Geef op de pagina **gebruikers ervaring** informatie op over hoe gebruikers kunn
 
   - Wanneer u een software-update implementeert op een Windows Embedded-apparaat, moet u ervoor zorgen dat het apparaat lid is van een verzameling met een geconfigureerd onderhouds venster. Zie [Windows Embedded-toepassingen maken](../get-started/creating-windows-embedded-applications.md)voor meer informatie over onderhouds Vensters en Windows Embedded-apparaten.  
 
-### <a name="deployment-alerts"></a><a name="bkmk_deploy-alerts"></a>Implementatie **waarschuwingen**
+### <a name="deployment-alerts"></a><a name="bkmk_deploy-alerts"></a> Implementatie **waarschuwingen**
 
 Configureer op de pagina **waarschuwingen** hoe Configuration Manager waarschuwingen genereert voor deze implementatie. Als u ook System Center Operations Manager gebruikt, moet u de waarschuwingen ook configureren. U kunt bepaalde waarschuwingen alleen configureren voor vereiste implementaties.
 
-## <a name="create-a-phased-deployment"></a><a name="bkmk_phased"></a>Een gefaseerde implementatie maken
+## <a name="create-a-phased-deployment"></a><a name="bkmk_phased"></a> Een gefaseerde implementatie maken
 
 <!--1358147-->
 Met gefaseerde implementaties kunt u een gecoördineerde, geordende implementatie van software organiseren op basis van aanpas bare criteria en groepen. U kunt bijvoorbeeld de toepassing implementeren in een pilot verzameling en vervolgens de implementatie automatisch voortzetten op basis van de criteria voor geslaagde pogingen.
 
 Raadpleeg voor meer informatie de volgende artikelen:  
 
-- [Een gefaseerde implementatie maken](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+- [Een gefaseerde implementatie maken](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
 
-- [Gefaseerde implementaties beheren en bewaken](../../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+- [Gefaseerde implementaties beheren en bewaken](../../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
 
-## <a name="delete-a-deployment"></a><a name="bkmk_delete"></a>Een implementatie verwijderen
+## <a name="delete-a-deployment"></a><a name="bkmk_delete"></a> Een implementatie verwijderen
 
 1. In de Configuration Manager-console gaat u naar de werk ruimte **software bibliotheek** , vouwt u **toepassings beheer**uit en selecteert u het knoop punt **toepassingen** of **toepassings groepen** .  
 
@@ -196,7 +196,7 @@ Raadpleeg voor meer informatie de volgende artikelen:
 
 Wanneer u een toepassings implementatie verwijdert, worden alle exemplaren van de toepassing die clients al hebben geïnstalleerd, niet verwijderd. Als u deze **toepassingen wilt verwijderen**, implementeert u de toepassing op computers om te verwijderen. Als u een toepassings implementatie verwijdert, is de toepassing niet meer zichtbaar in Software Center. Hetzelfde gedrag treedt op wanneer u een resource verwijdert uit de doel verzameling voor de implementatie.
 
-## <a name="user-notifications-for-required-deployments"></a><a name="bkmk_notify"></a>Gebruikers meldingen voor vereiste implementaties
+## <a name="user-notifications-for-required-deployments"></a><a name="bkmk_notify"></a> Gebruikers meldingen voor vereiste implementaties
 
 Wanneer gebruikers de vereiste software ontvangen en de instelling **uitstellen en herinneren** selecteren, kunnen ze kiezen uit de volgende opties:  
 
@@ -220,7 +220,7 @@ Voor een implementatie met een hoog risico, zoals een taken reeks die een bestur
 
 :::image type="content" source="media/client-toast-notification.png" alt-text="Dialoog venster met vereiste software waarschuwt u voor kritiek software onderhoud":::
 
-## <a name="check-for-running-executable-files"></a><a name="bkmk_exe-check"></a>Controleren op het uitvoeren van uitvoer bare bestanden
+## <a name="check-for-running-executable-files"></a><a name="bkmk_exe-check"></a> Controleren op het uitvoeren van uitvoer bare bestanden
 
 Configureer een implementatie om te controleren of bepaalde uitvoer bare bestanden worden uitgevoerd op de client. Gebruik deze optie om te controleren of er processen zijn die de installatie van de toepassing kunnen verstoren. Als een van deze uitvoer bare bestanden wordt uitgevoerd, blokkeert de client de installatie van het implementatie type. De gebruiker moet het uitgevoerde uitvoer bare bestand sluiten voordat de client het implementatie type kan installeren. Voor implementaties met een doel van vereist, kan de client automatisch het uitgevoerde uitvoer bare bestand sluiten.
 

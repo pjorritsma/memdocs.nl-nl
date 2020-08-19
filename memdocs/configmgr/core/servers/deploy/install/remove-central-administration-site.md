@@ -10,12 +10,12 @@ ms.assetid: 16975644-8dfa-4f22-b45a-c54a9250dbd2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 237c326c4420aec13ad6c9ca9b07d9f5304b6945
-ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
+ms.openlocfilehash: 5b8b7ee17077c859a1f0a9eb41c5f9d0857db550
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84613973"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88591507"
 ---
 # <a name="remove-the-central-administration-site"></a>De centrale beheer site verwijderen
 
@@ -119,7 +119,7 @@ Wanneer het installatie programma is voltooid, wordt de primaire site opnieuw in
 
 Controleer de volgende logboeken tijdens het installatie proces:
 
-- `C:\ConfigMgrSetup.log`op de CAS-server
+- `C:\ConfigMgrSetup.log` op de CAS-server
 
 - **hman. log** in de map Configuration Manager logs op de primaire site server
 
@@ -141,7 +141,7 @@ Nadat u de certificerings instanties hebt verwijderd, controleert u de volgende 
 
   - Maak [media voor besturingssysteem implementatie](../../../../osd/deploy-use/create-task-sequence-media.md)opnieuw.
 
-- Als u Configuration Manager verbindt met [Azure monitor](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=configmgr/core/context/core-context), moet u de verbinding opnieuw instellen. De eerste stap voor het oplossen van problemen is [het vernieuwen van de geheime sleutel](../configure/azure-services-wizard.md#bkmk_renew). Als het probleem niet is opgelost, maakt u de verbinding opnieuw.<!-- 5584635 -->
+- Als u Configuration Manager verbindt met [Azure monitor](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=/mem/configmgr/core/context/core-context), moet u de verbinding opnieuw instellen. De eerste stap voor het oplossen van problemen is [het vernieuwen van de geheime sleutel](../configure/azure-services-wizard.md#bkmk_renew). Als het probleem niet is opgelost, maakt u de verbinding opnieuw.<!-- 5584635 -->
 
 - Als u in versie 2002 synchronisatie van Surface-Stuur Programma's inschakelt, moet u deze functie opnieuw configureren nadat u de CA'S hebt verwijderd. Zie voor meer informatie [micro soft Surface-Stuur Programma's en firmware-updates](../../../../sum/deploy-use/surface-drivers.md).<!-- 5728727 -->
 

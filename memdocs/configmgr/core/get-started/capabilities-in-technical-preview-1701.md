@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: f100d28b3fd4ce0d310ddb2f0b4e777c72f72881
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 20c560925b2c1abec282b8c5f8dae3f6f42f4d64
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076200"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88591202"
 ---
 # <a name="capabilities-in-technical-preview-1701-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1701 voor Configuration Manager
 
@@ -61,7 +61,7 @@ Hieronder vindt u een beschrijving van het gedrag van software-update punten met
   Wanneer een client terugval gebruikt, worden de configuratie van de grens groep gebruikt voor terugval om een groep beschik bare software-update punten te maken. Deze groep bevat alle software-update punten van de *huidige grens groep*van de client, grens groepen in de *grenzen*en de *standaard grens groep*van de clients-site.
 
 - **De standaard site grens groep configureren:**  
-  Overweeg een software-update punt toe te voegen aan de *standaard-site&lt;-Boundary-Group>*. Dit zorgt ervoor dat clients die geen deel uitmaken van een andere grens groep, een software-update punt kunnen vinden.
+  Overweeg een software-update punt toe te voegen aan de *standaard-site-boundary-Group &lt;>*. Dit zorgt ervoor dat clients die geen deel uitmaken van een andere grens groep, een software-update punt kunnen vinden.
 
 
 Als u software-update punten voor grens groepen wilt beheren, gebruikt u de [procedures in de current branch-documentatie](../servers/deploy/configure/boundary-group-procedures.md), maar vergeet niet dat u de door u geconfigureerde terugval tijden nog niet gebruikt voor software-update punten.
@@ -94,10 +94,10 @@ Zie voor meer informatie over het gebruik van cloud-gebaseerde distributie punte
 
 Met ingang van deze preview-versie kunt u beheer punten configureren om rapportage gegevens van Health Attestation te valideren voor de Cloud of on-premises Health Attestation-service. Op het tabblad nieuwe **Geavanceerde opties** in het dialoog venster **Eigenschappen van beheer punt componenten** kunt u de **URL van de on-premises**apparaatstatusverklaring-service **toevoegen**, **bewerken**of **verwijderen** . U kunt ook **aangepaste apparaatinstellingen** opgeven voor de client agent voor het **gebruik van de on-premises Health Attestation-service**.  Als **Ja** voor deze instelling is ingesteld, wordt rapportage op het on-premises beheer punt in plaats van de Cloud service ingeschakeld.
 
-### <a name="try-it-out"></a>Uitproberen
+### <a name="try-it-out"></a>Probeer het eens
 
-- **On-premises apparaatstatusverklaring inschakelen op een beheer punt**<br>  Navigeer in de Configuration Manager-console naar de eigenschappen van het beheer punt en open **beheer punt componenten** en klik vervolgens op het tabblad **Geavanceerde opties** . Klik op **toevoegen** en geef de on-premises https://10.10.10.10) URL op (bijvoorbeeld voor de **url's van on-premises**apparaatstatusverklaring-service).
-- **On-premises rapportage van de status verklaring van het beheer punt inschakelen voor de client agent**<br>Kies in de Configuration Manager-console **Administration** > **instellingen voor client** beheer en dubbel klik of maak een nieuwe **aangepaste apparaatinstellingen**. Selecteer **computer agent** en stel **on-premises Health Attestation-service gebruiken** in op **Ja**. Als de **optie communicatie met Apparaatstatusverklaring-service inschakelen** is ingesteld op **Ja** en **on-premises status verklaring gebruiken** is ingesteld op **Nee**, wordt het beheer punt gebruikt de Cloud service voor apparaatstatusverklaring.
+- **On-premises apparaatstatusverklaring inschakelen op een beheer punt**<br>  Navigeer in de Configuration Manager-console naar de eigenschappen van het beheer punt en open **beheer punt componenten** en klik vervolgens op het tabblad **Geavanceerde opties** . Klik op **toevoegen** en geef de on-premises URL op (bijvoorbeeld https://10.10.10.10) voor de url's van **on-premises**apparaatstatusverklaring-service).
+- **On-premises rapportage van de status verklaring van het beheer punt inschakelen voor de client agent**<br>Kies in de Configuration Manager-console **Administration**  >  **instellingen voor client** beheer en dubbel klik of maak een nieuwe **aangepaste apparaatinstellingen**. Selecteer **computer agent** en stel **on-premises Health Attestation-service gebruiken** in op **Ja**. Als de **optie communicatie met Apparaatstatusverklaring-service inschakelen** is ingesteld op **Ja** en **on-premises status verklaring gebruiken** is ingesteld op **Nee**, wordt het beheer punt gebruikt de Cloud service voor apparaatstatusverklaring.
 
 ## <a name="use-the-oms-connector-for-microsoft-azure-government-cloud"></a>De OMS-connector gebruiken voor Microsoft Azure Government Cloud
 Met deze technische preview kunt u nu de Microsoft Operations Management Suite (OMS)-connector gebruiken om verbinding te maken met een OMS-werk ruimte die zich op Microsoft Azure Government Cloud bevindt.  
@@ -105,27 +105,27 @@ Met deze technische preview kunt u nu de Microsoft Operations Management Suite (
 Als u dit wilt doen, wijzigt u een configuratie bestand zodat dit verwijst naar de Government Cloud en installeert u de OMS-connector.
 
 ### <a name="set-up-an-oms-connector-to-microsoft-azure-government-cloud"></a>Een OMS-connector instellen voor Microsoft Azure Government Cloud
-1. Op elke computer waarop de Configuration Manager-console is geïnstalleerd, bewerkt u het volgende configuratie bestand zodat dit verwijst naar de Government Cloud: *** &lt;cm-installatiepad> \adminconsole\bin\microsoft.configurationmanagmenet.exe.config***
+1. Op elke computer waarop de Configuration Manager-console is geïnstalleerd, bewerkt u het volgende configuratie bestand dat verwijst naar de Government Cloud: cm-installatiepad *** &lt; # C0\AdminConsole\bin\Microsoft.configurationManagmenet.exe.config***
 
    **Bewerkingen**
 
    Wijzig de waarde voor de naam van de instelling *FairFaxArmResourceID* gelijk is aan '<https://management.usgovcloudapi.net/">
 
-   - **Origineel:** &lt;setting name = "FairFaxArmResourceId" serializeAs = "string" >   
-     &lt;waarde>&lt;/value>   
+   - **Origineel:** &lt; setting name = "FairFaxArmResourceId" serializeAs = "string" >   
+     &lt;waarde>&lt; /value>   
      &lt;/setting>
 
    - **Aangepast**     
-     &lt;setting name = "FairFaxArmResourceId" serializeAs = "string" > &lt;waarde><https://management.usgovcloudapi.net/&lt;/value>>  
+     &lt;setting name = "FairFaxArmResourceId" serializeAs = "string" > &lt; Value &gt; https://management.usgovcloudapi.net/&lt ;/Value&gt;  
      &lt;/setting>
 
-   Wijzig de waarde voor de naam van de instelling *FairFaxAuthorityResource* gelijk<https://login.microsoftonline.com/>is aan
+   Wijzig de waarde voor de naam van de instelling *FairFaxAuthorityResource* gelijk is aan <https://login.microsoftonline.com/>
 
-   - **Origineel:** &lt;setting name = "FairFaxAuthorityResource" serializeAs = "string" >   
-     &lt;waarde>&lt;/value>
+   - **Origineel:** &lt; setting name = "FairFaxAuthorityResource" serializeAs = "string" >   
+     &lt;waarde>&lt; /value>
 
-   - **Bewerkt:** &lt;setting name = "FairFaxAuthorityResource" serializeAs = "string" >   
-     &lt;waarde><https://login.microsoftonline.com/&lt;/value>>
+   - **Bewerkt:** &lt; setting name = "FairFaxAuthorityResource" serializeAs = "string" >   
+     &lt;waarde &gt; [https://login.microsoftonline.com](https://login.microsoftonline.com) &lt; /Value&gt;
 
 2. Nadat u het bestand met de twee wijzigingen hebt opgeslagen, start u de Configuration Manager-console op dezelfde computer opnieuw op en gebruikt u die console om de OMS-connector te installeren. Als u de connector wilt installeren, gebruikt u de gegevens in [synchronisatie gegevens van Configuration Manager naar de Microsoft Operations Management Suite](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)en selecteert u de **Operations Management Suite-werk ruimte** die zich op de Microsoft Azure Government Cloud bevindt.
 
@@ -143,7 +143,7 @@ Vanaf deze Technical Preview voor hybride Mobile Device Management (MDM) hoeft u
 Deze wijziging is van invloed op de wizards voor het maken van de volgende items:
 
 - Configuratie-items
-- Compliance beleidsregels
+- Nalevingsbeleid
 - Certificaatprofielen
 - E-mailprofielen
 - VPN-profielen

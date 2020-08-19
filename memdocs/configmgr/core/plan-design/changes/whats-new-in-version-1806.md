@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: ae2846c2a5f7fea86287a05c8cc8f6013d660df6
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: d6703f0889590b3d37d05b7c9b283a16c0150649
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128947"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88591629"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 1806 van Configuration Manager current branch
 
@@ -165,7 +165,7 @@ Wanneer u de client push methode voor het installeren van de Configuration Manag
 Zie [clients installeren met client push](../../clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientPush)voor meer informatie.
 
 
-### <a name="enhanced-http-site-system"></a><a name="bkmk_ehttp"></a>Verbeterd HTTP-site systeem
+### <a name="enhanced-http-site-system"></a><a name="bkmk_ehttp"></a> Verbeterd HTTP-site systeem
 <!--1356889,1358228-->
 Het gebruik van HTTPS-communicatie wordt aanbevolen voor alle Configuration Manager communicatie paden, maar dit kan lastig zijn voor sommige klanten vanwege de overhead van het beheer van PKI-certificaten.
 
@@ -280,9 +280,9 @@ Een gefaseerde implementatie maken voor een toepassing. Met gefaseerde implement
 
 Raadpleeg voor meer informatie de volgende artikelen:  
 
-- [Een gefaseerde implementatie maken](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+- [Een gefaseerde implementatie maken](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
 
-- [Gefaseerde implementaties beheren en bewaken](../../../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+- [Gefaseerde implementaties beheren en bewaken](../../../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
 
 
 ### <a name="provision-windows-app-packages-for-all-users-on-a-device"></a>Windows-app-pakketten inrichten voor alle gebruikers op een apparaat
@@ -493,7 +493,7 @@ Zie onderhoud van software- [updates](../../../sum/deploy-use/software-updates-m
 
 
 
-## <a name="reporting"></a>Rapporten
+## <a name="reporting"></a>Rapportage
 
 ### <a name="new-software-updates-compliance-report"></a>Rapport voor naleving van nieuwe software-updates
 <!--1357775-->
@@ -505,7 +505,7 @@ Zie [software-updates rapporten](../../../sum/deploy-use/monitor-software-update
 
 ## <a name="inventory"></a>Inventaris
 
-### <a name="improvement-to-hardware-inventory-for-large-integer-values"></a><a name="bkmk_bigint"></a>Verbetering van de hardware-inventaris voor grote waarden met gehele getallen
+### <a name="improvement-to-hardware-inventory-for-large-integer-values"></a><a name="bkmk_bigint"></a> Verbetering van de hardware-inventaris voor grote waarden met gehele getallen
 <!--1357880-->
 Voor hardware-inventarisatie was eerder een limiet voor gehele getallen groter dan 4.294.967.296 (2 ^ 32). Deze limiet kan worden bereikt voor kenmerken zoals de grootte van harde schijven in bytes. Het beheer punt heeft geen gehele waarden verwerkt die hoger zijn dan deze limiet, waardoor er geen waarde is opgeslagen in de data base. Nu in deze release wordt de limiet verhoogd naar 18446744073709551616 (2 ^ 64). 
 
@@ -593,7 +593,7 @@ Het volgende update pakket (4462978) is beschikbaar in de-console vanaf 24 oktob
 
 De volgende aanvullende hotfixes zijn beschikbaar om specifieke problemen op te lossen:
 
-| Id | Titel | Date | In-console |
+| Id | Titel | Datum | In-console |
 |---------|---------|---------|---------|
 | [4346645](https://support.microsoft.com/help/4346645) | Update voor Configuration Manager versie 1806, eerste golf | 31 augustus 2018 | Ja |
 | [4465865](https://support.microsoft.com/help/4465865) | Software-updates worden niet gedownload in Configuration Manager omgeving als de verbinding met WSUS is verbroken<br><br>Deze update bevindt zich ook in het update pakket (4462978) | 01 oktober 2018 | Ja |

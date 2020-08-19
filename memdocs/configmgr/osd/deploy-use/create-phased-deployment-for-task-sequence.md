@@ -10,12 +10,12 @@ ms.assetid: b634ff68-b909-48d2-9e2c-0933486673c5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1845b381d8b37fed3a785475e961cd39c54cf42d
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 36da7d35b75d2675fc775ed46e49e8adf2e6af3f
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125267"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88591732"
 ---
 # <a name="create-phased-deployments-with-configuration-manager"></a>Gefaseerde implementaties met Configuration Manager maken
 
@@ -51,7 +51,7 @@ Voordat u een gefaseerde implementatie maakt, distribueert u de gekoppelde inhou
 
 
 
-## <a name="phase-settings"></a><a name="bkmk_settings"></a>Fase-instellingen
+## <a name="phase-settings"></a><a name="bkmk_settings"></a> Fase-instellingen
 
 Deze instellingen zijn uniek voor gefaseerde implementaties. Configureer deze instellingen bij het maken of bewerken van de fasen om de planning en het gedrag van het gefaseerde implementatie proces te bepalen. 
 
@@ -91,7 +91,7 @@ Include a timeline diagram
 
 
 
-## <a name="automatically-create-a-default-two-phase-deployment"></a><a name="bkmk_auto"></a>Automatisch een standaard implementatie met twee fasen maken
+## <a name="automatically-create-a-default-two-phase-deployment"></a><a name="bkmk_auto"></a> Automatisch een standaard implementatie met twee fasen maken
 
 1. Start de wizard gefaseerde implementatie maken in de Configuration Manager-console. Deze actie is afhankelijk van het type software dat u implementeert:  
 
@@ -124,7 +124,7 @@ Include a timeline diagram
 > [!NOTE]
 > Vanaf 21 april 2020, wordt de naam van Office 365 ProPlus gewijzigd in **Microsoft 365 apps voor bedrijven**. Zie [name wijzigen voor Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change)voor meer informatie. Mogelijk ziet u nog steeds de oude naam in het Configuration Manager product en de documentatie terwijl de-console wordt bijgewerkt.  
 
-## <a name="create-a-phased-deployment-with-manually-configured-phases"></a><a name="bkmk_manual"></a>Een gefaseerde implementatie met hand matig geconfigureerde fasen maken
+## <a name="create-a-phased-deployment-with-manually-configured-phases"></a><a name="bkmk_manual"></a> Een gefaseerde implementatie met hand matig geconfigureerde fasen maken
 <!--1358148--> 
 
 Met ingang van versie 1806 maakt u een gefaseerde implementatie met hand matig geconfigureerde fasen voor een taken reeks. Voeg Maxi maal 10 extra fasen toe op het tabblad **fasen** van de wizard gefaseerde implementatie maken. 
@@ -187,7 +187,7 @@ Nadat u een gefaseerde implementatie hebt gemaakt, opent u de eigenschappen erva
 ## <a name="next-steps"></a>Volgende stappen
 
 Gefaseerde implementaties beheren en bewaken:
-- [Toepassing](manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)
-- [Software-update](manage-monitor-phased-deployments.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json)  
+- [Toepassing](manage-monitor-phased-deployments.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)
+- [Software-update](manage-monitor-phased-deployments.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json)  
 - [Takenreeks](manage-monitor-phased-deployments.md)  
 

@@ -121,7 +121,7 @@
     - name: 'Wi-Fi-, VPN-, e-mail- en certificaatprofielen implementeren'
       href: deploy-use/deploy-wifi-vpn-email-cert-profiles.md
     - name: Instellen van voorwaarden
-      href: ../mdm/understand/what-happened-to-hybrid.md?toc=/sccm/protect/toc.json&bc=/sccm/protect/breadcrumb/toc.json
+      href: ../mdm/understand/what-happened-to-hybrid.md?toc=/mem/configmgr/protect/toc.json&bc=/mem/configmgr/protect/breadcrumb/toc.json
     - name: Beveiliging controleren
       items:
         - name: 'Wi-Fi-, e-mail- en VPN-profielen controleren'

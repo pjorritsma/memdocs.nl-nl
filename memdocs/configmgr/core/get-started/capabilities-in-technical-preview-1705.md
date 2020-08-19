@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3259bd1b20740046e70b1ef53281b0ff235a3896
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: d4594a50f42d6b8e6ea0b88b83920eda11615815
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905464"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88590999"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1705 voor Configuration Manager
 
@@ -49,7 +49,7 @@ Dit artikel bevat een inleiding tot de functies die beschikbaar zijn in de Techn
 -->
 
 ## <a name="update-reset-tool"></a>Hulpprogramma voor het opnieuw instellen van updates  
-U kunt het hulp programma Configuration Manager Update reset, **CMUpdateReset. exe**, gebruiken om problemen op te lossen wanneer de updates in de console problemen ondervinden of repliceren. Dit hulp programma is opgenomen in Technical Preview versie 1705. U kunt het vinden op de site server van uw Technical Preview-site nadat u de preview-versie hebt geïnstalleerd in de map ***\Cd.latest\SMSSETUP\TOOLS*** .
+U kunt het hulp programma Configuration Manager Update reset **CMUpdateReset.exe**gebruiken om problemen op te lossen wanneer de updates in de console problemen ondervinden of repliceren. Dit hulp programma is opgenomen in Technical Preview versie 1705. U kunt het vinden op de site server van uw Technical Preview-site nadat u de preview-versie hebt geïnstalleerd in de map ***\Cd.latest\SMSSETUP\TOOLS*** .
 
 U kunt dit hulp programma gebruiken met Technical Preview versie 1606 of hoger. Deze neerwaartse ondersteuning wordt geboden zodat het hulp programma kan worden gebruikt met een aantal Technical Preview-update scenario's en zonder te hoeven wachten tot de volgende Technical Preview beschikbaar is.
 
@@ -92,9 +92,9 @@ Wanneer het hulp programma wordt uitgevoerd:
 |                       **-FDELETE**                       |                      *Optioneel* <br> Gebruik deze om het verwijderen van een geslaagd update pakket af te dwingen.                      |
 
  **Voorbeelden:**  
- In een typisch scenario wilt u een update met Download problemen opnieuw instellen. De FQDN van de SQL-servers is *Server1.fabrikam.com*, de site database is *CM_XYZ*en de pakket-GUID is *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  U voert de volgende handelingen uit: ***CMUpdateReset. exe-S server1.fabrikam.com-D CM_XYZ-P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
+ In een typisch scenario wilt u een update met Download problemen opnieuw instellen. De FQDN van de SQL-servers is *Server1.fabrikam.com*, de site database is *CM_XYZ*en de pakket-GUID is *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  U voert de volgende handelingen uit: ***CMUpdateReset.exe S server1.fabrikam.com-D CM_XYZ-P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
 
- In een meer extreme scenario wilt u het verwijderen van problematische update pakketten afdwingen. De FQDN van de SQL-servers is *Server1.fabrikam.com*, de site database is *CM_XYZ*en de pakket-GUID is *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  U voert de volgende handelingen uit: ***CMUpdateReset. exe-FDELETE-S server1.fabrikam.com-D CM_XYZ-P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
+ In een meer extreme scenario wilt u het verwijderen van problematische update pakketten afdwingen. De FQDN van de SQL-servers is *Server1.fabrikam.com*, de site database is *CM_XYZ*en de pakket-GUID is *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  U voert: ***CMUpdateReset.exe-FDELETE-S server1.fabrikam.com-D CM_XYZ-P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
 
 ### <a name="test-the-tool-with-the-technical-preview"></a>Het hulp programma testen met de Technical Preview  
 U kunt dit hulp programma gebruiken met Technical Preview versie 1606 of hoger. Deze achterwaartse ondersteuning wordt geboden zodat het hulp programma kan worden gebruikt met een groter aantal Technical Preview-update scenario's, zonder dat u hoeft te wachten tot de volgende Technical Preview-versie beschikbaar is.
@@ -131,7 +131,7 @@ Als u een asynchrone replica wilt toevoegen aan een [beschikbaarheids groep die 
 ### <a name="use-the-asynchronous-replica-to-recover-your-site"></a>De asynchrone replica gebruiken om uw site te herstellen
 Voordat u een asynchrone replica gebruikt om de site database te herstellen, moet u de actieve primaire site stoppen om te voor komen dat er extra schrijf bewerkingen naar de site database worden uitgevoerd. Nadat u de site hebt gestopt, kunt u een asynchrone replica gebruiken in plaats van een [hand matig herstelde data base](../servers/manage/recover-sites.md#use-a-site-database-that-has-been-manually-recovered)te gebruiken.
 
-Als u de site wilt stoppen, kunt u het [hulp programma voor hiërarchie onderhoud](../servers/manage/hierarchy-maintenance-tool-preinst.exe.md) gebruiken om de belangrijkste services op de site server te stoppen. Gebruik de opdracht regel: **preinst. exe/stopsite**   
+Als u de site wilt stoppen, kunt u het [hulp programma voor hiërarchie onderhoud](../servers/manage/hierarchy-maintenance-tool-preinst.exe.md) gebruiken om de belangrijkste services op de site server te stoppen. Gebruik de opdracht regel: **Preinst.exe/stopsite**   
 
 Het stoppen van de site is gelijk aan het stoppen van de Site Component Manager-service (sitecomp), gevolgd door de SMS_Executive-service op de site server.
 
@@ -175,7 +175,7 @@ Een beleid maken en bladeren door de beschik bare instellingen:
 4.  Als u het blog bericht als referentie wilt gebruiken, kunt u door de beschik bare instellingen bladeren en deze configureren om de functie uit te proberen.
 5.  Wanneer u klaar bent, voltooit u de wizard en implementeert u het beleid op een of meer Windows 10-apparaten.
 
-### <a name="further-reading"></a>Meer informatie
+### <a name="further-reading"></a>Meer lezen
 
 Zie [dit blog bericht]( https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#BmJGKPfSjHHzsMmI.97)voor meer informatie over Windows Defender Application Guard.
 Zie [dit blog bericht](https://techcommunity.microsoft.com/t5/Windows-Insider-Program/Windows-Defender-Application-Guard-Standalone-mode/td-p/66903)voor meer informatie over de zelfstandige Windows Defender Application Guard-modus.
@@ -246,14 +246,14 @@ U hebt uw Configuration Manager-site op dit moment verbonden met Azure AD.
 Voordat u begint, moet u ervoor zorgen dat de bron bestanden van de client installatie lokaal worden opgeslagen op het apparaat waarop u de client wilt installeren.
 Gebruik vervolgens de instructies in [Hoe clients implementeren op Windows-computers](../clients/deploy/deploy-clients-to-windows-computers.md#BKMK_Manual) met behulp van de volgende opdracht regel voor de installatie (Vervang de waarden in het voor beeld met uw eigen waarden):
 
-**ccmsetup. exe/NoCrlCheck/Source: C:\CLIENT CCMHOSTNAME = SCCMPROXYCONTOSO. CLOUDAPP. NET/CCM_Proxy_ServerAuth/72457598037527932 SMSSiteCode = HEC AADTENANTID = 780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME = contoso AADCLIENTAPPID = \< GUID > AADRESOURCEURI =<https://contososerver>**
+**ccmsetup.exe/NoCrlCheck/Source: C:\CLIENT CCMHOSTNAME = SCCMPROXYCONTOSO. CLOUDAPP. NET/CCM_Proxy_ServerAuth/72457598037527932 SMSSiteCode = HEC AADTENANTID = 780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME = contoso AADCLIENTAPPID = \<GUID> AADRESOURCEURI =<code>https://contososerver</code>**
 
 - **/NoCrlCheck**: als uw beheer punt of Cloud beheer gateway een niet-openbaar server certificaat gebruikt, kan de client de locatie van de CRL mogelijk niet bereiken.
 - **/Source**: lokale map: locatie van de client installatie bestanden.
 - **CCMHOSTNAME**: de naam van uw Internet beheer punt. U kunt dit vinden door **gwmi-naam ruimte root\ccm\locationservices-klasse-SMS_ActiveMPCandidate** uit te voeren vanaf een opdracht prompt op een beheerde client.
 - **SMSMP**: de naam van uw lookup-beheer punt: dit kan zich op uw intranet bevinden.
 - **SMSSiteCode**: de site code van uw Configuration Manager-site.
-- **AADTENANTID**, **AADTENANTNAME**: de id en de naam van de Azure AD-tenant die u aan Configuration Manager hebt gekoppeld. U kunt dit vinden door dsregcmd. exe/status uit te voeren vanaf een opdracht prompt op een aan Azure AD toegevoegd apparaat.
+- **AADTENANTID**, **AADTENANTNAME**: de id en de naam van de Azure AD-tenant die u aan Configuration Manager hebt gekoppeld. U kunt dit vinden door dsregcmd.exe/status uit te voeren vanaf een opdracht prompt op een aan Azure AD toegevoegd apparaat.
 - **AADCLIENTAPPID**: de id van de Azure AD-client-app. Zie [Portal gebruiken om een Azure Active Directory toepassing en Service-Principal te maken die toegang hebben tot resources](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)voor meer informatie.
 - **AADResourceUri**: de id-URI van de onboarded Azure ad server-app.
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
-ms.openlocfilehash: 4f13ff305ba5fc2b5c5080bafb6fed2412ff8366
-ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
+ms.openlocfilehash: a5254ba5a25b10df2943eaa7f80b32b17ea3680f
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84614083"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88591490"
 ---
 # <a name="configure-classifications-and-products-to-synchronize"></a>Classificaties en producten configureren voor synchronisatie  
 
@@ -106,7 +106,7 @@ Wanneer u functie-updates voor Windows 10, versie 1909, goed keuren, ziet u een 
 
 ### <a name="windows-10-version-1903-and-later"></a>Windows 10, versie 1903 en hoger
 
-**Windows 10, versie 1903 en hoger** is toegevoegd aan Microsoft Update als een eigen product in plaats van dat ze deel uitmaken van het **Windows 10** -product zoals eerdere versies. Als gevolg van deze wijziging hebt u een aantal hand matige stappen uitgevoerd om ervoor te zorgen dat uw clients deze updates zien. We hebben geholpen het aantal hand matige stappen te verminderen dat u moet ondernemen voor het nieuwe product in Configuration Manager versie 1906. <!--4682946-->
+**Windows 10, versie 1903 en hoger** is toegevoegd aan Microsoft Update als een eigen product in plaats van dat ze deel uitmaken van het **Windows 10**  -product zoals eerdere versies. Als gevolg van deze wijziging hebt u een aantal hand matige stappen uitgevoerd om ervoor te zorgen dat uw clients deze updates zien. We hebben geholpen het aantal hand matige stappen te verminderen dat u moet ondernemen voor het nieuwe product in Configuration Manager versie 1906. <!--4682946-->
 
 #### <a name="windows-10-version-1903-and-later-with-configuration-manager-version-1906"></a>Windows 10, versie 1903 en hoger met Configuration Manager versie 1906
 Wanneer u bijwerkt naar Configuration Manager versie 1906 en het **Windows 10** -product hebt geselecteerd voor synchronisatie, worden de volgende acties automatisch uitgevoerd:
@@ -120,7 +120,7 @@ Als u Configuration Manager 1902 met Windows 10, versie 1903-clients gebruikt, m
 - Alle [regels voor automatische implementatie](../deploy-use/automatically-deploy-software-updates.md#bkmk_adr-process) van Windows 10 versie 1903-clients bijwerken.
 - [Onderhouds plannen](../../osd/deploy-use/manage-windows-as-a-service.md#servicing-plan-workflow) voor Windows 10, versie 1903-clients bijwerken.
 
-## <a name="windows-insider-program"></a><a name="bkmk_WIfB"></a>Windows Insider-programma
+## <a name="windows-insider-program"></a><a name="bkmk_WIfB"></a> Windows Insider-programma
 <!--3556023-->
 Vanaf september 2019 kunt u apparaten met Windows Insider preview-builds met Configuration Manager onderhouden en bijwerken. Deze wijziging betekent dat u deze apparaten kunt beheren zonder uw normale processen te wijzigen of Windows Update voor bedrijven in te scha kelen. U kunt functie-updates en cumulatieve updates voor Windows Insider preview-builds downloaden naar Configuration Manager, net als bij elke andere update of upgrade van Windows 10. Zie voor meer informatie het blog bericht release [-updates van Windows 10 publiceren naar WSUS](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/Publishing-pre-release-Windows-10-feature-updates-to-WSUS/ba-p/845054) .
 
@@ -146,7 +146,7 @@ U moet de producten en classificaties inschakelen voor Windows Insider-upgrades 
     - Uitvoeren
     - Beveiligingsupdates
     - Updates (optioneel)
-6. Klik op **OK** om de **Eigenschappen van software-update punt componenten**te sluiten.
+6. Klik op **OK** om de  **Eigenschappen van software-update punt componenten**te sluiten.
 
 ### <a name="upgrading-windows-insider-devices"></a>Windows Insider-apparaten bijwerken
 
@@ -160,7 +160,7 @@ Implementeer functie-updates voor Windows Insider naar uw doel verzameling net a
 - Er zijn licentie voorwaarden. uw implementatie moet de voor waarden accepteren om te kunnen installeren.
 - U kunt de [thread prioriteit in client instellingen](../../core/clients/deploy/about-client-settings.md#bkmk_thread-priority)gebruiken.
 - Dynamische update installeert automatisch essentiële updates, met inbegrip van de meest recente cumulatieve update, rechtstreeks vanuit Microsoft Update. Dit gedrag is gestart met functie-updates voor Windows 10 versie 1903. 
-  - U kunt [dynamische update expliciet uitschakelen in client instellingen](../../core/clients/deploy/about-client-settings.md#bkmk_du) of met een [setupconfig. ini-bestand](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options). 
+  - U kunt [dynamische update expliciet uitschakelen in client instellingen](../../core/clients/deploy/about-client-settings.md#bkmk_du) of met een [setupconfig.ini-bestand](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options). 
   - Zie het blog bericht over [dynamische updates voor Windows 10](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847) voor meer informatie.
 
 Zie [Windows als een service beheren](../../osd/deploy-use/manage-windows-as-a-service.md)voor meer informatie over het implementeren van upgrades.
@@ -168,9 +168,9 @@ Zie [Windows als een service beheren](../../osd/deploy-use/manage-windows-as-a-s
 
 ### <a name="keeping-insider-devices-up-to-date"></a>Insider-apparaten up-to-date houden
 
-Cumulatieve updates voor Windows insider zijn beschikbaar voor WSUS en op uitbrei ding van Configuration Manager. Deze cumulatieve updates worden uitgebracht met een frequentie die overeenkomt met de cumulatieve updates voor Windows 10 versie 1903. De cumulatieve updates voor Windows Insider bevinden zich in de **pre-release** product categorie van Windows Insider en zijn geclassificeerd als **beveiligings updates** of **updates**. U kunt de cumulatieve updates voor Windows Insider implementeren met behulp van uw reguliere software-update proces, zoals het gebruik van [automatische implementatie regels](../deploy-use/automatically-deploy-software-updates.md) of [gefaseerde implementaties](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json).
+Cumulatieve updates voor Windows insider zijn beschikbaar voor WSUS en op uitbrei ding van Configuration Manager. Deze cumulatieve updates worden uitgebracht met een frequentie die overeenkomt met de cumulatieve updates voor Windows 10 versie 1903. De cumulatieve updates voor Windows Insider bevinden zich in de **pre-release** product categorie van Windows Insider en zijn geclassificeerd als **beveiligings updates** of **updates**. U kunt de cumulatieve updates voor Windows Insider implementeren met behulp van uw reguliere software-update proces, zoals het gebruik van [automatische implementatie regels](../deploy-use/automatically-deploy-software-updates.md) of [gefaseerde implementaties](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json).
 
-## <a name="extended-security-updates-and-configuration-manager"></a><a name="bkmk_ESU"></a>Uitgebreide beveiligings updates en Configuration Manager
+## <a name="extended-security-updates-and-configuration-manager"></a><a name="bkmk_ESU"></a> Uitgebreide beveiligings updates en Configuration Manager
 
 Het [ESU-programma (Extended Security updates)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) is een laatste redmiddel-optie voor klanten die bepaalde verouderde micro soft-producten na het einde van de ondersteuning moeten uitvoeren. Het bevat essentiële en/of belang rijke beveiligings updates (zoals gedefinieerd door het [micro soft Security Response Center (MSRC)](https://www.microsoft.com/msrc)) voor een maximum van drie jaar na het einde van de uitgebreide ondersteunings datum van het product.
 

@@ -10,12 +10,12 @@ ms.assetid: b670cfaf-96a4-4fcb-9caa-0f2e8c2c6198
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6c42015880cae09be48feff9c42b6b2a0d2c8544
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 2e832feb6f5a56225cd63a0b0d6290fc0c70e53a
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129311"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88591551"
 ---
 # <a name="optimize-windows-10-update-delivery-with-configuration-manager"></a>De levering van Windows 10-updates optimaliseren met Configuration Manager
 
@@ -58,7 +58,7 @@ Voor de beste resultaten moet u de [Download modus](https://docs.microsoft.com/w
 
 Het hand matig configureren van deze groeps-Id's is lastig wanneer clients via verschillende netwerken roamen. Configuration Manager versie 1802 heeft een nieuwe functie toegevoegd om het beheer van dit proces te vereenvoudigen door [grens groepen te integreren met leverings optimalisatie](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization). Wanneer een client actief is, wordt er naar het beheer punt gecommuniceerd om het beleid op te halen en worden de netwerk-en grens groeps gegevens verstrekt. Configuration Manager maakt een unieke ID voor elke grens groep. De site gebruikt de locatie gegevens van de client om de client-ID van de leverings optimalisatie automatisch te configureren met de grens-ID van de Configuration Manager. Wanneer de client naar een andere grens groep verdeelt, wordt deze omleiding naar het beheer punt en wordt deze automatisch opnieuw geconfigureerd met een nieuwe grens groep-ID. Met deze integratie kan bezorgings optimalisatie gebruikmaken van de gegevens van de Configuration Manager grens groep om een peer te vinden van waaruit updates moeten worden gedownload.
 
-### <a name="delivery-optimization-starting-in-version-1910"></a><a name="bkmk_DO-1910"></a>Bezorgings optimalisatie vanaf versie 1910
+### <a name="delivery-optimization-starting-in-version-1910"></a><a name="bkmk_DO-1910"></a> Bezorgings optimalisatie vanaf versie 1910
 <!--4699118-->
 Vanaf Configuration Manager versie 1910 kunt u bezorgings optimalisatie gebruiken voor de distributie van alle Windows Update-inhoud voor clients met Windows 10 versie 1709 of hoger, niet alleen bestanden voor snelle installatie.
 
@@ -66,13 +66,22 @@ Als u Delivery Optimization voor alle installatie bestanden van Windows Update w
 
 - **Clients toestaan om Delta-inhoud te downloaden wanneer deze beschikbaar is** ingesteld op **Ja**.
 - **Poort die clients gebruiken voor het ontvangen van aanvragen voor Delta-inhoud** die is ingesteld op 8005 (standaard) of een aangepast poort nummer.
-
+ 
 > [!IMPORTANT]
 > - Optimalisatie van levering moet zijn ingeschakeld (standaard) en niet worden overgeslagen. Zie [Windows Delivery Optimization Reference](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference)(Engelstalig) voor meer informatie.
 > - Controleer uw [client instellingen voor Delivery Optimization](../../core/clients/deploy/about-client-settings.md#delivery-optimization) bij het wijzigen van de [client instellingen voor software-updates](../../core/clients/deploy/about-client-settings.md#software-updates) voor Delta-inhoud.
 > - Delivery Optimization kan niet worden gebruikt voor Microsoft 365-apps client updates als Office COM is ingeschakeld. Office COM wordt door Configuration Manager gebruikt voor het beheren van updates voor Microsoft 365 apps-clients. U kunt de registratie van Office COM opheffen om het gebruik van leverings optimalisatie voor updates van Microsoft 365-apps toe te staan. Als Office COM is uitgeschakeld, worden software-updates voor Microsoft 365-apps beheerd door de standaard Office Automatische updates 2,0-geplande taak. Dit betekent dat Configuration Manager het installatie proces voor het bijwerken van Microsoft 365 apps niet onderdicteert of bewaakt. Configuration Manager blijven gegevens verzamelen van hardware-inventaris om het Office 365-dash board voor client beheer te vullen in de-console. Zie [office 365-clients inschakelen voor het ontvangen van updates van het Office CDN in plaats van Configuration Manager](https://docs.microsoft.com/deployoffice/manage-office-365-proplus-updates-with-configuration-manager#enable-office-365-clients-to-receive-updates-from-the-office-cdn-instead-of-configuration-manager)voor meer informatie over het deregistreren van Office com.
 > - Wanneer u een CMG gebruikt voor de opslag van inhoud, worden de inhoud voor updates van derden niet gedownload naar clients als de instelling **Delta-inhoud downloaden wanneer de beschik bare** [client](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) is ingeschakeld. <!--6598587-->
 
+#### <a name="configuration-recommendations-for-clients-downloading-delta-content"></a>Configuratie aanbevelingen voor clients die Delta-inhoud downloaden
+<!--7913814-->
+Wanneer de optie **clients toestaan om Delta-inhoud te downloaden wanneer de beschik bare** [client instelling](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) is ingeschakeld op clients voor inhoud van software-updates, zijn er beperkingen in het terugval gedrag van het [distributie punt](../../core/servers/deploy/configure/boundary-group-procedures.md#bkmk_site-fallback) . Om ervoor te zorgen dat deze clients software-update-inhoud correct kunnen downloaden, raden wij de volgende configuraties aan:
+
+- Zorg ervoor dat clients zich in een grens groep bevinden en dat er een betrouwbaar distributie punt is dat de benodigde inhoud bevat die aan de grens groep is gekoppeld.
+- Implementatie van software-updates met terugval op Microsoft Update ingeschakeld voor clients die rechtstreeks vanaf internet kunnen worden gedownload.
+   - De implementatie-instelling voor dit terugval gedrag is **als software-updates niet beschikbaar zijn op het distributie punt in de huidige, neighbor-of site grens groepen, inhoud van micro soft-updates downloaden** en deze op de pagina **Download instellingen** vinden. Zie [software-updates implementeren](manually-deploy-software-updates.md#process-to-manually-deploy-the-software-updates-in-a-software-update-group)voor meer informatie.
+
+Als een van de bovenstaande opties niet haalbaar is, kunnen **clients Delta-inhoud downloaden wanneer beschikbaar** kan worden uitgeschakeld in de client instellingen om terugval functionaliteit toe te staan. De leverings optimalisatie peering wordt in dit geval niet gebruikt omdat de client het Delta kanaal niet zal gebruiken.
 
 ### <a name="configuration-manager-peer-cache"></a>Peer-cache Configuration Manager
 
@@ -103,7 +112,7 @@ Het selecteren van de juiste peer cache technologie voor bestanden voor snelle i
 | Cache grootte op schijf beheer | Ja | Ja | Ja |
 | Detectie van een peer bron | Automatisch | Hand matig (instelling client agent) | Automatisch |
 | Peer-detectie | Via Delivery Optimization Cloud service (Internet toegang vereist) | Via beheer punt (gebaseerd op client grens groepen) | Cast |
-| Rapporten | Ja (met Desktop Analytics) | Dash board client gegevens bronnen ConfigMgr | Dash board client gegevens bronnen ConfigMgr |
+| Rapportage | Ja (met Desktop Analytics) | Dash board client gegevens bronnen ConfigMgr | Dash board client gegevens bronnen ConfigMgr |
 | Besturings element voor WAN-gebruik | Ja (systeem eigen, kan worden beheerd via groeps beleids instellingen) | Grensgroepen | Alleen subnet-ondersteuning |
 | Beheer via ConfigMgr | Gedeeltelijk (instelling client agent) | Ja (instelling client agent) | Ja (instelling client agent) |
 
@@ -119,7 +128,7 @@ Als de server zijde van grotere updates blok keren is voor de acceptatie van sne
 
 
 
-## <a name="frequently-asked-questions"></a><a name="bkmk_faq"></a>Veelgestelde vragen
+## <a name="frequently-asked-questions"></a><a name="bkmk_faq"></a> Veelgestelde vragen
 
 #### <a name="how-do-windows-express-downloads-work-with-configuration-manager"></a>Hoe werkt Windows Express-down loads met Configuration Manager?
 

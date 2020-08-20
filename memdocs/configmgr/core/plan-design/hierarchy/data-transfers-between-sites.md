@@ -10,12 +10,12 @@ ms.assetid: dc526e8d-fac3-4bb5-b206-03ad29b0ae11
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6b6d4eab77d0543f9001cef2c1e2b618ba3e4328
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c3b74ceab892c67abbd56e8cb2a5c123374a92be
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720210"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663308"
 ---
 # <a name="data-transfers-between-sites"></a>Gegevensoverdracht tussen sites
 
@@ -25,13 +25,13 @@ Configuration Manager gebruikt *replicatie op basis van bestanden* en *database 
 
 ## <a name="types-of-replication"></a>Typen replicatie
 
-### <a name="file-based-replication"></a><a name="bkmk_fileroute" />Replicatie op basis van een bestand
+### <a name="file-based-replication"></a><a name="bkmk_fileroute" /></a> File-based replication
 
 Configuration Manager maakt gebruik van op bestanden gebaseerde replicatie om gegevens op basis van bestanden over te dragen tussen sites in uw hiërarchie. Deze gegevens omvatten toepassingen en pakketten die u wilt implementeren naar distributie punten in onderliggende sites. Ook worden niet-verwerkte detectie gegevens records verwerkt die door de site worden overgedragen naar de bovenliggende site en vervolgens processen.  
 
 Zie [replicatie op basis](file-based-replication.md)van een bestand voor meer informatie.
 
-### <a name="database-replication"></a><a name="bkmk_dbrep" />Database replicatie
+### <a name="database-replication"></a><a name="bkmk_dbrep" /></a> Database replication
 
 Configuration Manager database replicatie gebruikt SQL Server om gegevens over te dragen. Deze methode wordt gebruikt om wijzigingen in de site database samen te voegen met de informatie uit de Data Base op andere sites in de hiërarchie.
 

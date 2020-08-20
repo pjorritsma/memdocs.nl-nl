@@ -60,6 +60,8 @@
           href: actions-for-noncompliance.md
         - name: Apparaatcompatibiliteit bewaken
           href: compliance-policy-monitor.md
+        - name: Partners voor apparaatnaleving
+          href: device-compliance-partners.md
     - name: Eindpuntbeveiliging
       href: endpoint-security.md
       items:

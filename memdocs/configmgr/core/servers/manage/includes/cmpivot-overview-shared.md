@@ -4,18 +4,18 @@ ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
 ms.date: 07/13/2020
-ms.openlocfilehash: 80302a1c369c36a08cc1a55e20cf339dbc8d2883
-ms.sourcegitcommit: 6d987bb69d0eb9955a3003202864f58d6aaa426a
+ms.openlocfilehash: 8e95fce122a3e153f2aa391dcd5e40439f8e5820
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381042"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88702967"
 ---
 <!--This file is shared by the CMPivot overview articles for both Microsoft Endpoint Manager tenant attach and Configuration Manager-->
 
 ## <a name="queries"></a>Query's
 
-Query's kunnen worden gebruikt om termen te zoeken, trends te identificeren, patronen te analyseren en veel andere inzichten te bieden op basis van uw gegevens. CMPivot maakt gebruik van een subset van het [Azure log Analytics](https://docs.microsoft.com/azure/kusto/query) -gegevens stroom model voor de tabellaire expressie-instructie. De typische structuur van een tabellaire expressie-instructie is een samen stelling van client entiteiten en tabellaire gegevens operators (zoals filters en projecties). De samen stelling wordt vertegenwoordigd door het sluis teken (|), waarbij de instructie een gewone vorm heeft die de stroom van gegevens in tabel vorm visueel van links naar rechts vertegenwoordigt. Elke operator accepteert een tabellaire gegevensset van de pipe en extra invoer (inclusief andere tabellaire gegevens sets) van de hoofd tekst van de operator. vervolgens wordt er een tabellaire gegevensset met de volgende-operator ingesteld die volgt:`entity | operator1 | operator2 | ...`
+Query's kunnen worden gebruikt om termen te zoeken, trends te identificeren, patronen te analyseren en veel andere inzichten te bieden op basis van uw gegevens. CMPivot maakt gebruik van een subset van het [Azure log Analytics](/azure/kusto/query) -gegevens stroom model voor de tabellaire expressie-instructie. De typische structuur van een tabellaire expressie-instructie is een samen stelling van client entiteiten en tabellaire gegevens operators (zoals filters en projecties). De samen stelling wordt vertegenwoordigd door het sluis teken (|), waarbij de instructie een gewone vorm heeft die de stroom van gegevens in tabel vorm visueel van links naar rechts vertegenwoordigt. Elke operator accepteert een tabellaire gegevensset van de pipe en extra invoer (inclusief andere tabellaire gegevens sets) van de hoofd tekst van de operator. vervolgens wordt er een tabellaire gegevensset met de volgende-operator ingesteld die volgt: `entity | operator1 | operator2 | ...`
 
 In het volgende voor beeld is de entiteit `CCMRecentlyUsedApplications` (een verwijzing naar de recent gebruikte toepassingen) en de operator is waar (die records uit de invoer uitfiltert op basis van een predikaat per record):
 
@@ -56,7 +56,7 @@ Entiteiten zijn objecten die kunnen worden opgevraagd van de client. Momenteel w
 |ComputerSystemProduct|Computer systeem product|
 |ConnectedDevice|Verbonden apparaat|
 |Verbinding|Een actieve TCP-verbinding in of uit het apparaat|
-|Bureaublad|Bureaublad|
+|Desktop|Desktop|
 |DesktopMonitor|Bureaublad monitor|
 |Apparaat|Algemene informatie over het apparaat|
 |Schijf|Gegevens van het lokale opslag apparaat op een computer waarop Windows wordt uitgevoerd|
@@ -258,7 +258,7 @@ Scalaire functies kunnen worden gebruikt in expressies. Momenteel worden de volg
 |substring()|Hiermee wordt een subtekenreeks geëxtraheerd van een bron teken reeks, beginnend bij een index naar het einde van de teken reeks|
 |tostring()|Converteert invoer naar een teken reeks representatie|
 
-## <a name="additional-entities-operators-and-functions-for-cmpivot-from-configuration-manager"></a><a name="bkmk_onprem_only"></a>Aanvullende entiteiten, Opera tors en functies voor CMPivot van Configuration Manager
+## <a name="additional-entities-operators-and-functions-for-cmpivot-from-configuration-manager"></a><a name="bkmk_onprem_only"></a> Aanvullende entiteiten, Opera tors en functies voor CMPivot van Configuration Manager
 
 > [!Important]
 > Deze items worden niet ondersteund wanneer u CMPivot uitvoert vanuit het micro soft Endpoint Manager-beheer centrum.

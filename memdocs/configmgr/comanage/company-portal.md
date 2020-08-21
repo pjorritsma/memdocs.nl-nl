@@ -1,5 +1,5 @@
 ---
-title: Apps in Bedrijfsportal
+title: Apps in de bedrijfsportal
 titleSuffix: Configuration Manager
 description: Geef een consistente gebruikers ervaring op voor gezamenlijk beheerde apparaten om de Bedrijfsportal-app te gebruiken.
 ms.date: 08/20/2020
@@ -17,7 +17,7 @@ ms.contentlocale: nl-NL
 ms.lasthandoff: 08/20/2020
 ms.locfileid: "88700900"
 ---
-# <a name="use-the-company-portal-app-on-co-managed-devices"></a>De app Bedrijfsportal gebruiken op gezamenlijk beheerde apparaten
+# <a name="use-the-company-portal-app-on-co-managed-devices"></a>Gebruik de bedrijfsportal-app op gezamenlijk beheerde apparaten
 
 *Van toepassing op: Configuration Manager (huidige vertakking)*
 

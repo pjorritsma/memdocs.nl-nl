@@ -50,5 +50,7 @@
       href: how-to-prepare-Win10.md
     - name: Workloads overhevelen naar Intune
       href: how-to-switch-workloads.md
+    - name: Apps in de bedrijfsportal
+      href: company-portal.md
     - name: Co-beheer bewaken
       href: how-to-monitor.md

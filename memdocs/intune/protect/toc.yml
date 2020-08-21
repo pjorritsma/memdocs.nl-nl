@@ -302,8 +302,6 @@
           href: compliance-policy-create-windows.md
         - name: 'Instellingen voor nalevingsbeleid: Windows 8.1'
           href: compliance-policy-create-windows-8-1.md
-        - name: 'Instellingen voor nalevingsbeleid: Windows Phone 8.1'
-          href: compliance-policy-create-windows-8-1.md
     - name: Instellingen voor beleid voor eindpuntbeveiliging
       items:
         - name: Beleidsinstellingen voor Antivirus

@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 05553af3e973805eed62c68f13afc3cf7d3d2ee3
-ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
+ms.openlocfilehash: c9cf8e74793213e47dd503de1fdf1284bdc7d6a9
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87438586"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699225"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Het gebruik van SQL Server AlwaysOn-beschikbaarheids groepen met Configuration Manager voorbereiden
 
@@ -76,13 +76,13 @@ Gebruik een *Enter prise* -editie van SQL Server.
 
 Elk exemplaar van SQL Server kan worden uitgevoerd onder een domein gebruikers account (**Service account**) of een niet-domein account. Elke replica in een groep kan een andere configuratie hebben.
 
-- Gebruik een account met de laagst mogelijke machtigingen. Zie [beveiligings overwegingen voor een SQL Server-installatie](https://docs.microsoft.com/sql/sql-server/install/security-considerations-for-a-sql-server-installation)voor meer informatie.  
+- Gebruik een account met de laagst mogelijke machtigingen. Zie [beveiligings overwegingen voor een SQL Server-installatie](/sql/sql-server/install/security-considerations-for-a-sql-server-installation)voor meer informatie.  
 
-- Zie [Windows-service accounts en-machtigingen configureren](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions)voor meer informatie over het configureren van service accounts en machtigingen voor SQL Server.  
+- Zie [Windows-service accounts en-machtigingen configureren](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions)voor meer informatie over het configureren van service accounts en machtigingen voor SQL Server.  
 
-- Als u een niet-domein account wilt gebruiken, moet u certificaten gebruiken. Zie [certificaten gebruiken voor een Data Base mirroring-eind punt (Transact-SQL)](https://docs.microsoft.com/sql/database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql)voor meer informatie.  
+- Als u een niet-domein account wilt gebruiken, moet u certificaten gebruiken. Zie [certificaten gebruiken voor een Data Base mirroring-eind punt (Transact-SQL)](/sql/database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql)voor meer informatie.  
 
-- Zie [een Data Base mirroring-eind punt maken voor](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell)AlwaysOn-beschikbaarheids groepen voor meer informatie.  
+- Zie [een Data Base mirroring-eind punt maken voor](/sql/database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell)AlwaysOn-beschikbaarheids groepen voor meer informatie.  
 
 
 ### <a name="database"></a>Database
@@ -104,7 +104,7 @@ Configureer de data base van elke replica met de volgende instellingen:
     GO
     ```
 
-    Zie [CLR-integratie](https://docs.microsoft.com/sql/relational-databases/clr-integration/clr-integration-enabling)voor meer informatie.  
+    Zie [CLR-integratie](/sql/relational-databases/clr-integration/clr-integration-enabling)voor meer informatie.  
 
 - Stel **maximale grootte van tekst repl** in op `2147483647` :  
 
@@ -120,7 +120,7 @@ Configureer de data base van elke replica met de volgende instellingen:
     ALTER DATABASE [CM_xxx] SET TRUSTWORTHY ON;
     ```
 
-    Zie de [eigenschap TRUSTWORTHY data base](https://docs.microsoft.com/sql/relational-databases/security/trustworthy-database-property)voor meer informatie.
+    Zie de [eigenschap TRUSTWORTHY data base](/sql/relational-databases/security/trustworthy-database-property)voor meer informatie.
 
 - De **Service Broker**inschakelen:  
 
@@ -217,9 +217,9 @@ Voer het volgende SQL-script uit om database configuraties te controleren voor z
 - U kunt een replica met asynchrone door Voer gebruiken om uw synchrone replica te herstellen. Zie Opties voor herstel van de [site database](../../manage/recover-sites.md#site-database-recovery-options)voor meer informatie.  
 
     > [!Warning]  
-    > Configuration Manager biedt geen ondersteuning voor *failover* om de asynchrone doorvoer replica als uw site database te gebruiken. Zie [failover-en failover-modi (AlwaysOn-beschikbaarheids groepen)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups)voor meer informatie.  
+    > Configuration Manager biedt geen ondersteuning voor *failover* om de asynchrone doorvoer replica als uw site database te gebruiken. Zie [failover-en failover-modi (AlwaysOn-beschikbaarheids groepen)](/sql/database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups)voor meer informatie.  
 
-Configuration Manager valideert de status van de asynchrone doorvoer replica niet om te controleren of deze actueel is. Het gebruik van een asynchrone doorvoer replica als de site database kan de integriteit van uw site en gegevens risico in beslaan. Deze replica kan niet worden gesynchroniseerd met het ontwerp. Zie [overzicht van SQL Server](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)AlwaysOn-beschikbaarheids groepen voor meer informatie.
+Configuration Manager valideert de status van de asynchrone doorvoer replica niet om te controleren of deze actueel is. Het gebruik van een asynchrone doorvoer replica als de site database kan de integriteit van uw site en gegevens risico in beslaan. Deze replica kan niet worden gesynchroniseerd met het ontwerp. Zie [overzicht van SQL Server](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)AlwaysOn-beschikbaarheids groepen voor meer informatie.
 
 Elk lid van een replica moet de volgende configuratie hebben:
 
@@ -239,17 +239,17 @@ Elk lid van een replica moet de volgende configuratie hebben:
     > - U voert Configuration Manager Setup uit om het gebruik van de site database in de beschikbaarheids groep op te geven.  
     > - U installeert een update voor Configuration Manager. (Niet alleen updates die van toepassing zijn op de site database).  
 
-- Alle leden hebben dezelfde [seeding-modus](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas)nodig.<!-- SCCMDocs-pr#3899 --> Configuration Manager Setup bevat een controle van vereisten om deze configuratie te controleren bij het maken van een Data Base via installeren of herstellen.
+- Alle leden hebben dezelfde [seeding-modus](/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas)nodig.<!-- SCCMDocs-pr#3899 --> Configuration Manager Setup bevat een controle van vereisten om deze configuratie te controleren bij het maken van een Data Base via installeren of herstellen.
 
     > [!Note]  
-    > Wanneer de data base door Setup wordt gemaakt en u **automatische** seeding configureert, moet de beschikbaarheids groep machtigingen hebben voor het maken van de data base. Deze vereiste is van toepassing op zowel een nieuwe Data Base als een herstel bewerking. Zie [automatische seeding voor secundaire replica](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas#security)voor meer informatie.<!-- SCCMDocs-pr#3900 -->
+    > Wanneer de data base door Setup wordt gemaakt en u **automatische** seeding configureert, moet de beschikbaarheids groep machtigingen hebben voor het maken van de data base. Deze vereiste is van toepassing op zowel een nieuwe Data Base als een herstel bewerking. Zie [automatische seeding voor secundaire replica](/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas#security)voor meer informatie.<!-- SCCMDocs-pr#3900 -->
 
 #### <a name="replica-member-location"></a>Locatie van replica-lid
 
 Host alle replica's in een beschikbaarheids groep op locatie of host deze allemaal op Microsoft Azure. Een groep die een on-premises lid bevat en een lid in azure, wordt niet ondersteund.
 
 > [!NOTE]
-> Als u een virtuele machine van Azure gebruikt voor de SQL-Server, schakelt u **zwevende IP**in. Zie [een Load Balancer configureren voor een SQL Server AlwaysOn-beschikbaarheids groep in virtuele machines van Azure](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/availability-group-load-balancer-portal-configure)voor meer informatie.<!-- SCCMDocs#1928 -->
+> Als u een virtuele machine van Azure gebruikt voor de SQL-Server, schakelt u **zwevende IP**in. Zie [een Load Balancer configureren voor een SQL Server AlwaysOn-beschikbaarheids groep in virtuele machines van Azure](/azure/azure-sql/virtual-machines/windows/availability-group-load-balancer-portal-configure)voor meer informatie.<!-- SCCMDocs#1928 -->
 
 Configuration Manager Setup moet verbinding maken met elke replica. Wanneer u een beschikbaarheids groep in azure instelt en de groep zich achter een interne of externe load balancer bevindt, opent u de volgende standaard poorten:
 
@@ -263,11 +263,11 @@ Nadat de installatie is voltooid, moeten deze poorten open blijven voor Configur
 
 U kunt aangepaste poorten voor deze configuraties gebruiken. Gebruik dezelfde aangepaste poorten voor het eind punt en voor alle replica's in de beschikbaarheids groep.
 
-Voor SQL om gegevens tussen sites te repliceren, maakt u een taakverdelings regel voor elke poort in de Azure-load balancer. Zie [poorten met hoge Beschik baarheid configureren voor een interne Load Balancer](https://docs.microsoft.com/azure/load-balancer/load-balancer-configure-ha-ports)voor meer informatie.<!-- MEMDocs#252 -->
+Voor SQL om gegevens tussen sites te repliceren, maakt u een taakverdelings regel voor elke poort in de Azure-load balancer. Zie [poorten met hoge Beschik baarheid configureren voor een interne Load Balancer](/azure/load-balancer/load-balancer-configure-ha-ports)voor meer informatie.<!-- MEMDocs#252 -->
 
 #### <a name="listener"></a>Listener
 
-De beschikbaarheidsgroep moet ten minste één *beschikbaarheidsgroeplistener*hebben. Wanneer u Configuration Manager configureert om de site database in de beschikbaarheids groep te gebruiken, gebruikt deze de virtuele naam van deze listener. Hoewel een beschikbaarheids groep meerdere listeners kan bevatten, kan Configuration Manager slechts één listener gebruiken. Zie [een SQL Server beschikbaarheids groep-listener maken of configureren](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server)voor meer informatie.
+De beschikbaarheidsgroep moet ten minste één *beschikbaarheidsgroeplistener*hebben. Wanneer u Configuration Manager configureert om de site database in de beschikbaarheids groep te gebruiken, gebruikt deze de virtuele naam van deze listener. Hoewel een beschikbaarheids groep meerdere listeners kan bevatten, kan Configuration Manager slechts één listener gebruiken. Zie [een SQL Server beschikbaarheids groep-listener maken of configureren](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server)voor meer informatie.
 
 #### <a name="file-paths"></a>Bestands paden
 
@@ -294,7 +294,7 @@ Denk bijvoorbeeld eens aan het volgende scenario:
 #### <a name="multi-subnet-failover"></a>Failover met meerdere subnetten
 
 <!-- SCCMDocs-pr#3734 -->
-Vanaf versie 1906 kunt u het [sleutel woord MultiSubnetFailover Connection String](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) in SQL Server inschakelen. U moet ook de volgende waarden hand matig toevoegen aan het Windows-REGI ster op de site server:
+Vanaf versie 1906 kunt u het [sleutel woord MultiSubnetFailover Connection String](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) in SQL Server inschakelen. U moet ook de volgende waarden hand matig toevoegen aan het Windows-REGI ster op de site server:
 
 ``` Registry
 HKLM:\SOFTWARE\Microsoft\SMS\Identification
@@ -315,11 +315,11 @@ De volgende beperkingen zijn van toepassing op alle scenario's.
 
 ### <a name="unsupported-sql-server-options-and-configurations"></a>Niet-ondersteunde SQL Server opties en configuraties
 
-- **Basis beschikbaarheids groepen**die zijn geïntroduceerd met SQL Server 2016 Standard Edition, bieden geen ondersteuning voor lees toegang tot secundaire replica's. Voor de configuratie is deze toegang vereist. Zie voor meer informatie [Basic-SQL Server-beschikbaarheids groepen](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups?view=sql-server-2017).  
+- **Basis beschikbaarheids groepen**die zijn geïntroduceerd met SQL Server 2016 Standard Edition, bieden geen ondersteuning voor lees toegang tot secundaire replica's. Voor de configuratie is deze toegang vereist. Zie voor meer informatie [Basic-SQL Server-beschikbaarheids groepen](/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups?view=sql-server-2017).  
 
-- **Failover-cluster exemplaar**: exemplaren van failoverclusters worden niet ondersteund voor een replica die u gebruikt met Configuration Manager. Zie [SQL Server always on failover cluster instances](https://docs.microsoft.com/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server)voor meer informatie.  
+- **Failover-cluster exemplaar**: exemplaren van failoverclusters worden niet ondersteund voor een replica die u gebruikt met Configuration Manager. Zie [SQL Server always on failover cluster instances](/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server)voor meer informatie.  
 
-- **MultiSubnetFailover**: in versie 1902 en lager, wordt niet ondersteund voor het gebruik van een beschikbaarheids groep met Configuration Manager in een configuratie met meerdere subnetten. U kunt ook het tref woord connection string [MutliSubnetFailover](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) niet gebruiken.
+- **MultiSubnetFailover**: in versie 1902 en lager, wordt niet ondersteund voor het gebruik van een beschikbaarheids groep met Configuration Manager in een configuratie met meerdere subnetten. U kunt ook het tref woord connection string [MutliSubnetFailover](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) niet gebruiken.
 
     Als u deze configuratie wilt ondersteunen, moet u Configuration Manager bijwerken naar versie 1906 of hoger. Zie voor meer informatie de [failover-vereiste voor meerdere subnetten](sql-server-alwayson-for-a-highly-available-site-database.md#multi-subnet-failover) .
 
@@ -382,7 +382,7 @@ Wanneer een site database gebruikmaakt van een beschikbaarheids groep, voert u d
 
 ### <a name="transaction-log"></a>Transactie logboek  
 
-Stel het herstel model van de site database in op **Full**. Deze configuratie is een vereiste voor het Configuration Manager gebruiken in een beschikbaarheids groep. Plan de grootte van het transactie logboek van de site database te controleren en te onderhouden. In het volledige herstel model worden de trans acties niet gehard totdat een volledige back-up van de data base of het transactie logboek wordt gemaakt. Zie [back-up en herstel van SQL server-data bases](https://docs.microsoft.com/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases)voor meer informatie.
+Stel het herstel model van de site database in op **Full**. Deze configuratie is een vereiste voor het Configuration Manager gebruiken in een beschikbaarheids groep. Plan de grootte van het transactie logboek van de site database te controleren en te onderhouden. In het volledige herstel model worden de trans acties niet gehard totdat een volledige back-up van de data base of het transactie logboek wordt gemaakt. Zie [back-up en herstel van SQL server-data bases](/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases)voor meer informatie.
 
 
 ## <a name="changes-for-site-recovery"></a>Wijzigingen voor site Recovery

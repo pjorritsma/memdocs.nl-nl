@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 66fcd9b7d4d25decb3aeef7cf38b469363eeb1fa
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: d54354c82a6487690aa571eb72554f4eee45747b
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128896"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700562"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 2002 van Configuration Manager current branch
 
@@ -28,17 +28,17 @@ Bekijk altijd de laatste controle lijst voor het installeren van deze update. Zi
 Als u optimaal wilt profiteren van de nieuwe functies van Configuration Manager, moet u na het bijwerken van de site ook clients bijwerken naar de nieuwste versie. Wanneer u de-site en-console bijwerkt terwijl er nieuwe functionaliteit wordt weer gegeven in de Configuration Manager-console, is het volledige scenario niet functioneel totdat de client versie ook het meest recent is.
 
 > [!TIP]
-> Als u een melding wilt ontvangen wanneer deze pagina wordt bijgewerkt, kopieert en plakt u de volgende URL in uw RSS feed-lezer:`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2002+-+Configuration+Manager%22&locale=en-us`
+> Als u een melding wilt ontvangen wanneer deze pagina wordt bijgewerkt, kopieert en plakt u de volgende URL in uw RSS feed-lezer: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2002+-+Configuration+Manager%22&locale=en-us`
 
-## <a name="microsoft-endpoint-manager-tenant-attach"></a><a name="bkmk_tenant"></a>Micro soft Endpoint Manager-Tenant koppelen
+## <a name="microsoft-endpoint-manager-tenant-attach"></a><a name="bkmk_tenant"></a> Micro soft Endpoint Manager-Tenant koppelen
 
-### <a name="device-sync-and-device-actions"></a><a name="bkmk_attach"></a>Synchronisatie van apparaten en acties van apparaten
+### <a name="device-sync-and-device-actions"></a><a name="bkmk_attach"></a> Synchronisatie van apparaten en acties van apparaten
 <!--3555758-->
 Micro soft Endpoint Manager is een geïntegreerde oplossing voor het beheer van al uw apparaten. Micro soft brengt Configuration Manager en intune samen in één console met de naam **micro soft Endpoint Manager-beheer centrum**. Vanaf deze release kunt u uw Configuration Manager-apparaten uploaden naar de Cloud service en acties uitvoeren op de Blade **apparaten** in het beheer centrum.
 
 Zie voor meer informatie [micro soft Endpoint Manager-Tenant koppelen](../../../tenant-attach/device-sync-actions.md).
 
-## <a name="site-infrastructure"></a><a name="bkmk_infra"></a>Site-infra structuur
+## <a name="site-infrastructure"></a><a name="bkmk_infra"></a> Site-infra structuur
 
 ### <a name="remove-a-central-administration-site"></a>Een centrale beheer site verwijderen
 <!-- 3607277 -->
@@ -98,7 +98,7 @@ De proxy-instellingen van het site systeem, inclusief verificatie, worden nu geb
 
 Zie [ondersteuning voor proxy server](../network/proxy-server-support.md#bkmk_other)voor meer informatie.
 
-## <a name="cloud-attached-management"></a><a name="bkmk_cloud"></a>Cloud-gekoppeld beheer
+## <a name="cloud-attached-management"></a><a name="bkmk_cloud"></a> Cloud-gekoppeld beheer
 
 ### <a name="critical-status-message-shows-server-connection-errors-to-required-endpoints"></a>Kritiek status bericht toont server verbindings fouten aan vereiste eind punten
 
@@ -125,7 +125,7 @@ Zie [verificatie op basis van tokens voor CMG](../../clients/deploy/deploy-clien
 
 Wanneer er nieuwe Cloud functies beschikbaar zijn in het beheer centrum van micro soft Endpoint Manager of door andere gekoppelde cloud services voor uw on-premises Configuration Manager-installatie, kunt u zich nu aanmelden bij deze nieuwe functies in de Configuration Manager-console. Zie [optionele functies van updates inschakelen](../../servers/manage/install-in-console-updates.md#bkmk_options)voor meer informatie over het inschakelen van functies in de Configuration Manager-console.
 
-## <a name="desktop-analytics"></a><a name="bkmk_da"></a>Desktop Analytics
+## <a name="desktop-analytics"></a><a name="bkmk_da"></a> Desktop Analytics
 
 Zie [what's New in Desktop Analytics](../../../desktop-analytics/whats-new.md)(Engelstalig) voor meer informatie over de maandelijkse wijzigingen in de Cloud service van Desktop Analytics.
 
@@ -139,7 +139,7 @@ Gebruik het dash board verbindings status van de bureau blad Analytics in Config
 
 Zie [verbindings status controleren](../../../desktop-analytics/monitor-connection-health.md)voor meer informatie.
 
-## <a name="real-time-management"></a><a name="bkmk_real"></a>Real-time beheer
+## <a name="real-time-management"></a><a name="bkmk_real"></a> Real-time beheer
 
 ### <a name="improvements-to-cmpivot"></a>Verbeteringen in CMPivot
 
@@ -149,7 +149,7 @@ We hebben het eenvoudiger gemaakt om te navigeren in CMPivot-entiteiten. U kunt 
 
 Zie [CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_2002)voor meer informatie.
 
-## <a name="content-management"></a><a name="bkmk_content"></a>Inhouds beheer
+## <a name="content-management"></a><a name="bkmk_content"></a> Inhouds beheer
 
 ### <a name="exclude-certain-subnets-for-peer-content-download"></a>Bepaalde subnetten uitsluiten voor het downloaden van inhoud van peer
 
@@ -165,7 +165,7 @@ Zie [Opties voor grens groepen](../../servers/deploy/configure/boundary-groups.m
 
 Als uw omgeving een niet-geverifieerde proxy server gebruikt voor Internet toegang, kunt u nu wanneer u een Configuration Manager distributie punt voor micro soft Connected cache inschakelt, communiceren via de proxy. Zie [micro soft Connected cache](../hierarchy/microsoft-connected-cache.md)(Engelstalig) voor meer informatie.
 
-## <a name="client-management"></a><a name="bkmk_client"></a>Client beheer
+## <a name="client-management"></a><a name="bkmk_client"></a> Client beheer
 
 ### <a name="client-log-collection"></a>Client logboek verzameling
 
@@ -202,7 +202,7 @@ Zie [aangepaste configuratie-items maken voor Windows-bureau blad en Server comp
 
 <!-- ## <a name="bkmk_comgmt"></a> Co-management -->
 
-## <a name="application-management"></a><a name="bkmk_app"></a>Toepassings beheer
+## <a name="application-management"></a><a name="bkmk_app"></a> Toepassings beheer
 
 ### <a name="microsoft-edge-management-dashboard"></a>Micro soft Edge Management dash board
 
@@ -239,7 +239,7 @@ U kunt nu complexe toepassingen installeren met behulp van taken reeksen via het
 
 Zie [Windows-toepassingen maken](../../../apps/get-started/creating-windows-applications.md#bkmk_tsdt)voor meer informatie.
 
-## <a name="os-deployment"></a><a name="bkmk_osd"></a>Implementatie van besturings systeem
+## <a name="os-deployment"></a><a name="bkmk_osd"></a> Implementatie van besturings systeem
 
 ### <a name="bootstrap-a-task-sequence-immediately-after-client-registration"></a>Een taken reeks onmiddellijk Boots trappen na client registratie
 
@@ -290,7 +290,7 @@ Deze release bevat de volgende verbeteringen voor de implementatie van het bestu
 
 <!-- ## <a name="bkmk_userxp"></a> Software Center -->
 
-## <a name="software-updates"></a><a name="bkmk_sum"></a>Software-updates
+## <a name="software-updates"></a><a name="bkmk_sum"></a> Software-updates
 
 ### <a name="orchestration-groups"></a>Orchestration-groepen
 
@@ -322,14 +322,14 @@ Zie voor meer informatie [Office 365-updates synchroniseren vanaf een niet-verbo
 
 <!-- ## <a name="bkmk_o365"></a> Office management -->
 
-## <a name="protection"></a><a name="bkmk_protect"></a>Kantel
+## <a name="protection"></a><a name="bkmk_protect"></a> Kantel
 
 ### <a name="expand-microsoft-defender-advanced-threat-protection-atp-onboarding"></a>Vouw het voorbereidings proces van micro soft Defender Advanced Threat Protection (ATP) uit
  
 <!-- 5229962 -->
 Configuration Manager heeft de ondersteuning voor onboarding-apparaten uitgebreid naar micro soft Defender ATP. Zie [micro soft Defender Advanced Threat Protection](../../../protect/deploy-use/defender-advanced-threat-protection.md)(Engelstalig) voor meer informatie.
 
-### <a name="onboard-configuration-manager-clients-to-microsoft-defender-atp-via-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a>Configuration Manager-clients onboarden naar micro soft Defender ATP via het beheer centrum van micro soft Endpoint Manager
+### <a name="onboard-configuration-manager-clients-to-microsoft-defender-atp-via-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> Configuration Manager-clients onboarden naar micro soft Defender ATP via het beheer centrum van micro soft Endpoint Manager
 <!--5691658-->
 U kunt nu het voorbereidings beleid voor micro soft Defender ATP-eindpunt detectie en-antwoorden (EDR) implementeren voor het Configuration Manager van beheerde clients. Voor deze clients is Azure AD of MDM-inschrijving niet vereist en het beleid is gericht op ConfigMgr-verzamelingen in plaats van met Azure AD-groepen.
 
@@ -346,7 +346,7 @@ Met deze mogelijkheid kunnen klanten zowel intune MDM als Configuration Manager 
 
     Vanaf deze versie is de HTTPS-vereiste voor de IIS-website die als host fungeert voor de Recovery-service, niet de volledige rol van het beheer punt. Met deze wijziging worden de certificaat vereisten versoepeld en worden de herstel sleutels tijdens de overdracht nog steeds versleuteld.<!-- 5925660 --> Zie [herstel gegevens versleutelen](../../../protect/deploy-use/bitlocker/encrypt-recovery-data.md)voor meer informatie.
 
-## <a name="reporting"></a><a name="bkmk_report"></a>Rapporteren
+## <a name="reporting"></a><a name="bkmk_report"></a> Rapporteren
 
 ### <a name="integrate-with-power-bi-report-server"></a>Integreren met Power BI Report Server
 
@@ -356,7 +356,7 @@ U kunt Power BI Report Server nu integreren met Configuration Manager-rapportage
 
 Zie [integreren met Power bi Report Server](../../servers/manage/powerbi-report-server.md)voor meer informatie.
 
-## <a name="configuration-manager-console"></a><a name="bkmk_admin"></a>Configuration Manager-console
+## <a name="configuration-manager-console"></a><a name="bkmk_admin"></a> Configuration Manager-console
 
 ### <a name="show-boundary-groups-for-devices"></a>Grens groepen voor apparaten weer geven
 
@@ -397,7 +397,7 @@ De IT-beheerder heeft een schat aan kennis ontwikkeld over de jaren. In plaats v
 
 Zie [Community hub en github](../../servers/manage/community-hub.md)voor meer informatie.
 
-## <a name="tools"></a><a name="bkmk_tools"></a>Software
+## <a name="tools"></a><a name="bkmk_tools"></a> Software
 
 ### <a name="onetrace-log-groups"></a>OneTrace-logboek groepen
 
@@ -411,7 +411,7 @@ OneTrace biedt nu ondersteuning voor aanpas bare logboek groepen, vergelijkbaar 
 
 Zie [ondersteunings centrum OneTrace](../../support/support-center-onetrace.md)voor meer informatie.
 
-### <a name="improvements-to-extend-and-migrate-on-premises-site-to-microsoft-azure"></a><a name="bkmk_extend"></a>Verbeteringen voor het uitbreiden en migreren van een on-premises site naar Microsoft Azure
+### <a name="improvements-to-extend-and-migrate-on-premises-site-to-microsoft-azure"></a><a name="bkmk_extend"></a> Verbeteringen voor het uitbreiden en migreren van een on-premises site naar Microsoft Azure
 <!--5665775, 6307931-->
 Het hulp programma voor het uitbreiden en migreren van een on-premises site naar Microsoft Azure ondersteunt nu het inrichten van meerdere site systeem rollen op één virtuele Azure-machine. U kunt site systeem rollen toevoegen nadat de eerste implementatie van de virtuele Azure-machine is voltooid.
 
@@ -426,7 +426,7 @@ Vanaf deze versie zijn de volgende functies niet meer [voorlopige versie](../../
 - [Zelfstandige CMPivot](../../servers/manage/cmpivot.md#bkmk_standalone)<!--3555890/4692885-->
 - [Client-apps voor gezamenlijk beheerde apparaten](../../../comanage/workloads.md#client-apps) (voorheen bekend als *mobiele apps voor gezamenlijk beheerde apparaten*)<!-- 1357892/3600959 -->
 
-Zie [release opmerkingen voor Power shell versie 2002](https://docs.microsoft.com/powershell/sccm/2002-release-notes?view=sccm-ps)voor meer informatie over wijzigingen in de Windows Power shell-cmdlets voor Configuration Manager.
+Zie [release opmerkingen voor Power shell versie 2002](/powershell/sccm/2002-release-notes?view=sccm-ps)voor meer informatie over wijzigingen in de Windows Power shell-cmdlets voor Configuration Manager.
 
 Zie [release opmerkingen voor de beheer service](../../../develop/adminservice/release-notes.md#bkmk_2002)voor meer informatie over wijzigingen in de beheer service rest API.
 

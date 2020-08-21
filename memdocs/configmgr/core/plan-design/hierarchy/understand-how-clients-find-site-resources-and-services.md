@@ -10,12 +10,12 @@ ms.assetid: ae72df4b-5f5d-4e19-9052-bda28edfbace
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b012dd1e7da0d6a3efb4d1cc33b8a79ef319bc0a
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 262234edbd6fac6973653ca6cac62853fde23b2d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268994"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700109"
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-configuration-manager"></a>Meer informatie over hoe clients site bronnen en-services vinden voor Configuration Manager
 
@@ -31,7 +31,7 @@ Voor beelden van site systeem rollen die services bieden zijn:
 
 
 
-##  <a name="fundamentals-of-service-location"></a><a name="bkmk_fund"></a>Basis principes van service locatie  
+##  <a name="fundamentals-of-service-location"></a><a name="bkmk_fund"></a> Basis principes van service locatie  
  Een client evalueert de huidige netwerk locatie, de voor keur voor het communicatie protocol en de toegewezen site wanneer de service locatie wordt gebruikt om een beheer punt te vinden waarmee kan worden gecommuniceerd.  
 
 **Een client communiceert met een beheer punt tot:**  
@@ -43,16 +43,16 @@ Voor beelden van site systeem rollen die services bieden zijn:
 **Een Configuration Manager-client maakt een service locatie aanvraag:**  
 - Elke 25 uur van een doorlopende bewerking.  
 - Wanneer de client een wijziging in de netwerk configuratie of-locatie detecteert.  
-- Wanneer de service **ccmexec. exe** op de computer (de kern client service) wordt gestart.  
+- Wanneer de **ccmexec.exe** -service op de computer (de kern client service) wordt gestart.  
 - Wanneer de client een site systeemrol moet vinden die een vereiste service levert.  
 
 **Wanneer een client probeert servers te vinden die site systeem rollen hosten**, gebruikt deze service locatie om een site systeemrol te vinden die het client protocol (http of https) ondersteunt. Standaard gebruiken clients de meest beveiligde methode die voor hen beschikbaar is. Overweeg de volgende:  
 
 - U moet een PKI (Public Key Infrastructure) hebben en u moet PKI-certificaten installeren op clients en servers om HTTPS te gebruiken. Zie [PKI-certificaat vereisten voor Configuration Manager](../../../core/plan-design/network/pki-certificate-requirements.md)voor meer informatie over het gebruik van certificaten.  
 
-- Wanneer u een sitesysteemrol implementeert die gebruikmaakt van Internet Information Services (IIS) en communicatie van clients ondersteunt, moet u opgeven of clients verbinding met het sitesysteem maken via HTTP of HTTPS. Als u HTTP gebruikt, dient u ook opties voor ondertekening en versleuteling te overwegen. Zie voor meer informatie [planning voor ondertekening en versleuteling](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForSigningEncryption) in de [Beveiliging plannen](../../../core/plan-design/security/plan-for-security.md).  
+- Wanneer u een sitesysteemrol implementeert die gebruikmaakt van Internet Information Services (IIS) en communicatie van clients ondersteunt, moet u opgeven of clients verbinding met het sitesysteem maken via HTTP of HTTPS. Als u HTTP gebruikt, dient u ook opties voor ondertekening en versleuteling te overwegen. Zie voor meer informatie  [planning voor ondertekening en versleuteling](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForSigningEncryption) in de [Beveiliging plannen](../../../core/plan-design/security/plan-for-security.md).  
 
-##  <a name="service-location-and-how-clients-determine-their-assigned-management-point"></a><a name="BKMK_Plan_Service_Location"></a>Service locatie en hoe clients hun toegewezen beheer punt bepalen  
+##  <a name="service-location-and-how-clients-determine-their-assigned-management-point"></a><a name="BKMK_Plan_Service_Location"></a> Service locatie en hoe clients hun toegewezen beheer punt bepalen  
 Wanneer een client voor het eerst wordt toegewezen aan een primaire site, wordt er een standaard beheer punt voor die site geselecteerd. Primaire sites bieden ondersteuning voor meerdere beheer punten en elke client identificeert onafhankelijk een beheer punt als het standaard beheer punt. Dit standaard beheer punt wordt dan het toegewezen beheer punt van de client. (U kunt ook client installatie opdrachten gebruiken om het toegewezen beheer punt voor een client in te stellen wanneer deze wordt geïnstalleerd.)  
 
 Een client selecteert een beheer punt om mee te communiceren op basis van de huidige netwerk locatie en grens groeps configuraties van de client. Hoewel er een beheer punt aan is toegewezen, is dit mogelijk niet het beheer punt dat door de client wordt gebruikt.  
@@ -62,7 +62,7 @@ Een client selecteert een beheer punt om mee te communiceren op basis van de hui
 
 U kunt voorkeursbeheerpunten gebruiken. Voorkeurs beheer punten zijn beheer punten van de toegewezen site van een client die zijn gekoppeld aan een grens groep die de client gebruikt om site systeem servers te vinden. De koppeling van een voorkeurs beheer punt met een grens groep als een site systeem server is vergelijkbaar met de manier waarop distributie punten of status migratie punten zijn gekoppeld aan een grens groep. Als u voorkeursbeheerpunten voor de hiërarchie inschakelt, zal een client die een beheerpunt van de toegewezen site gebruikt, proberen eerst een voorkeursbeheerpunt te gebruiken voordat andere beheerpunten worden gebruikt.  
 
-U kunt ook de informatie in de blog van het [affiniteit van beheer punten](https://docs.microsoft.com/archive/blogs/jchalfant/management-point-affinity-added-in-configmgr-2012-r2-cu3) gebruiken om de affiniteit van het beheer punt te configureren. Beheer punt affiniteit overschrijft het standaard gedrag voor toegewezen beheer punten en stelt de client in staat om een of meer specifieke beheer punten te gebruiken.  
+U kunt ook de informatie in de blog van het [affiniteit van beheer punten](/archive/blogs/jchalfant/management-point-affinity-added-in-configmgr-2012-r2-cu3) gebruiken om de affiniteit van het beheer punt te configureren. Beheer punt affiniteit overschrijft het standaard gedrag voor toegewezen beheer punten en stelt de client in staat om een of meer specifieke beheer punten te gebruiken.  
 
 Telkens wanneer een client contact moet opnemen met een beheer punt, wordt de MP-lijst gecontroleerd, die lokaal wordt opgeslagen in Windows Management Instrumentation (WMI). De client maakt een initiële MP-lijst wanneer deze wordt geïnstalleerd. De client werkt de lijst vervolgens regel matig bij met details over elk beheer punt in de hiërarchie.  
 
@@ -130,7 +130,7 @@ Nadat een client communicatie tot stand heeft gebracht met een beheer punt, blij
 
 De client selecteert dan een wille keurig nieuw beheer punt dat moet worden gebruikt.  
 
-##  <a name="active-directory"></a><a name="bkmk_ad"></a>Active Directory  
+##  <a name="active-directory"></a><a name="bkmk_ad"></a> Active Directory  
 Clients die lid zijn van een domein kunnen AD DS gebruiken voor servicelocatiebepaling. Hiervoor moeten sites [gegevens publiceren naar Active Directory](../../servers/deploy/configure/publish-site-data.md).  
 
 Een client kan AD DS gebruiken voor service locatie wanneer alle volgende voor waarden waar zijn:  
@@ -141,7 +141,7 @@ Een client kan AD DS gebruiken voor service locatie wanneer alle volgende voor w
 
 Als een client geen beheer punt kan vinden om te gebruiken voor service locatie vanaf AD DS, wordt geprobeerd om DNS te gebruiken.  
 
-##  <a name="dns"></a><a name="bkmk_dns"></a>DNS  
+##  <a name="dns"></a><a name="bkmk_dns"></a> DNS  
 Clients op intranet kunnen DNS gebruiken voor servicelocatiebepaling. Hiervoor moet ten minste één site in een hiërarchie informatie over beheerpunten publiceren naar DNS.  
 
 Overweeg het gebruik van DNS voor servicelocatiebepaling als aan de volgende voorwaarden wordt voldaan:
@@ -170,7 +170,7 @@ De volgende voorwaarden moeten waar zijn om beheerpunten te publiceren naar DNS:
 > [!IMPORTANT]  
 > Configuration Manager DNS-publicatie biedt geen ondersteuning voor een niet-aaneengesloten naam ruimte. Als u een niet-aaneengesloten naam ruimte hebt, kunt u beheer punten hand matig naar DNS publiceren of een van de andere service locatie methoden gebruiken die in deze sectie worden beschreven.  
 
-**Als uw DNS-servers automatische updates ondersteunen**, kunt u Configuration Manager zodanig configureren dat beheer punten op het intranet automatisch naar DNS worden gepubliceerd, of u kunt deze records hand matig publiceren naar DNS. Als beheerpunten naar DNS worden gepubliceerd, worden hun intranet-FQDN en poortnummer gepubliceerd in het servicelocatierecord (SRV-record). U configureert DNS-publicatie op een site in de eigenschappen van de beheer punt component van de site. Zie [site onderdelen voor Configuration Manager](../../../core/servers/deploy/configure/site-components.md)voor meer informatie.  
+**Als uw DNS-servers automatische updates ondersteunen**, kunt u Configuration Manager zodanig configureren dat beheer punten op het intranet automatisch naar DNS worden gepubliceerd, of u kunt deze records hand matig publiceren naar DNS. Als beheerpunten naar DNS worden gepubliceerd, worden hun intranet-FQDN en poortnummer gepubliceerd in het servicelocatierecord (SRV-record). U configureert DNS-publicatie op een site in de eigenschappen van de beheer punt component van de site. Zie  [site onderdelen voor Configuration Manager](../../../core/servers/deploy/configure/site-components.md)voor meer informatie.  
 
 **Als uw DNS-zone is ingesteld op ' alleen beveiligd ' voor dynamische updates**, kan alleen het eerste beheer punt dat naar DNS wordt gepubliceerd, worden uitgevoerd met de standaard machtigingen.
 
@@ -179,7 +179,7 @@ Als slechts één beheer punt de DNS-record kan publiceren en wijzigen en de beh
 
 **U kunt beheerpunten handmatig naar DNS publiceren als uw DNS-servers geen automatische updates**, maar wel servicelocatierecords ondersteunen. Hiervoor moet u handmatig het servicelocatiebronrecord (SRV RR) in DNS opgeven.  
 
-Configuration Manager ondersteunt RFC 2782 voor service locatie records. Deze records hebben de volgende indeling: *_Service. _Proto. naam TTL class SRV-prioriteits gewicht poort doel*  
+Configuration Manager ondersteunt RFC 2782 voor service locatie records. Deze records hebben de volgende indeling:   *_Service. _Proto. naam TTL class SRV-prioriteits gewicht poort doel*  
 
 Geef de volgende waarden op om een beheer punt te publiceren naar Configuration Manager:  
 
@@ -239,9 +239,9 @@ Als u Windows Server DNS gebruikt, kunt u de volgende procedure gebruiken om dit
 
 Herhaal deze stappen voor elk beheerpunt op het intranet dat u wilt publiceren naar DNS.  
 
-##  <a name="wins"></a><a name="bkmk_wins"></a>WINS  
+##  <a name="wins"></a><a name="bkmk_wins"></a> WINS  
 Als andere servicelocatiemechanismen mislukken, kunnen clients een initieel beheerpunt vinden door WINS te controleren.  
 
 Standaard publiceert een primaire site het eerste beheer punt op de site die is geconfigureerd voor HTTP en het eerste beheer punt dat is geconfigureerd voor HTTPS.  
 
-Als u niet wilt dat clients een HTTP-beheerpunt in WINS vinden, kunt u clients configureren met de Client.msi-eigenschap **SMSDIRECTORYLOOKUP=NOWINS**van CCMSetup.exe.  
+Als u niet wilt dat clients een HTTP-beheerpunt in WINS vinden, kunt u clients configureren met de Client.msi-eigenschap **SMSDIRECTORYLOOKUP=NOWINS**van CCMSetup.exe.

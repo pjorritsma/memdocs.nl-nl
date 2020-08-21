@@ -10,12 +10,12 @@ ms.assetid: 0cf4bacb-6b6d-4d4f-8640-b13fe15873de
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7e8e65571a3902661176ca3840690c159faef416
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4f9266668a488b6331857bf860d874a48161fcd0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709619"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700211"
 ---
 # <a name="support-for-windows-features-and-networks-in-configuration-manager"></a>Ondersteuning voor Windows-onderdelen en-netwerken in Configuration Manager
 
@@ -23,7 +23,7 @@ ms.locfileid: "81709619"
 
 In dit artikel wordt Configuration Manager ondersteuning voor algemene Windows-en netwerk functies aangeduid.  
 
-## <a name="branchcache"></a><a name="bkmk_branchcache"></a>BranchCache  
+## <a name="branchcache"></a><a name="bkmk_branchcache"></a> BranchCache  
 
 Gebruik Windows BranchCache met Configuration Manager wanneer u deze inschakelt op distributie punten en configureer clients voor gebruik in de gedistribueerde-cache modus.
 
@@ -49,13 +49,13 @@ Voeg de functie **Windows BranchCache** toe aan de site systeem server die is ge
 - De clients die BranchCache kunnen ondersteunen, moeten zijn geconfigureerd voor de modus gedistribueerde cache van BranchCache.  
 - De besturingssysteem instelling voor BITS-client instellingen moet zijn ingeschakeld voor de ondersteuning van BranchCache.  
 
-Zie [Configure clients for BranchCache](https://docs.microsoft.com/windows/deployment/update/waas-branchcache#configure-clients-for-branchcache) in de Windows-documentatie voor meer informatie.
+Zie [Configure clients for BranchCache](/windows/deployment/update/waas-branchcache#configure-clients-for-branchcache) in de Windows-documentatie voor meer informatie.
 
 Alle Configuration Manager ondersteunde versies van Windows ondersteunen BranchCache standaard.
 
-Zie [BranchCache voor Windows](https://docs.microsoft.com/windows-server/networking/branchcache/branchcache) in de Windows Server-documentatie voor meer informatie.  
+Zie [BranchCache voor Windows](/windows-server/networking/branchcache/branchcache) in de Windows Server-documentatie voor meer informatie.  
 
-## <a name="computers-in-workgroups"></a><a name="bkmk_Workgroups"></a>Computers in werk groepen  
+## <a name="computers-in-workgroups"></a><a name="bkmk_Workgroups"></a> Computers in werk groepen  
 
 Configuration Manager biedt ondersteuning voor clients in werk groepen.  
 
@@ -64,7 +64,7 @@ Configuration Manager biedt ondersteuning voor clients in werk groepen.
 > [!NOTE]
 > Hoewel clients in werk groepen worden ondersteund, moeten alle site systemen lid zijn van een ondersteund Active Directory domein.  
 
-## <a name="data-deduplication"></a><a name="bkmmk_datadedup"></a>Gegevensontdubbeling
+## <a name="data-deduplication"></a><a name="bkmmk_datadedup"></a> Gegevensontdubbeling
 
 Configuration Manager ondersteunt het gebruik van gegevensontdubbeling met distributie punten in Windows Server 2012 of hoger.
 
@@ -75,9 +75,9 @@ Voor meer informatie raadpleegt u de volgende berichten:
 
 - [Configuration Manager distributie punten en Windows Server 2012-gegevensontdubbeling](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-distribution-points-and-windows-server/ba-p/273385) op het Configuration Manager team blog
 
-- [Overzicht van gegevensontdubbeling](https://docs.microsoft.com/windows-server/storage/data-deduplication/overview) in de Windows Server-documentatie
+- [Overzicht van gegevensontdubbeling](/windows-server/storage/data-deduplication/overview) in de Windows Server-documentatie
 
-## <a name="directaccess"></a><a name="bkmk_DA"></a>-  
+## <a name="directaccess"></a><a name="bkmk_DA"></a> -  
 
 Configuration Manager ondersteunt de DirectAccess-functie voor communicatie tussen clients en site server systemen.  
 
@@ -93,11 +93,11 @@ Configuration Manager biedt geen ondersteuning voor de volgende functionaliteit 
 
 - Communicatie tussen Configuration Manager-site systeem servers binnen een site  
 
-## <a name="dual-boot-computers"></a><a name="bkmk_dualboot"></a>Dual-boot computers  
+## <a name="dual-boot-computers"></a><a name="bkmk_dualboot"></a> Dual-boot computers  
 
 Configuration Manager kunt niet meer dan één besturings systeem op één computer beheren. Als er meer dan één besturings systeem op een computer wordt beheerd, past u de detectie-en client installatie methoden van de site aan om ervoor te zorgen dat de Configuration Manager-client alleen wordt geïnstalleerd op het besturings systeem dat moet worden beheerd.  
 
-## <a name="ipv6"></a><a name="bkmk_IPv6"></a>Ipconfiguration  
+## <a name="ipv6"></a><a name="bkmk_IPv6"></a> Ipconfiguration  
 
 Naast Internet Protocol versie 4 (IPv4) ondersteunt Configuration Manager Internet Protocol versie 6 (IPv6), met de volgende uitzonde ringen:  
 
@@ -111,11 +111,11 @@ Naast Internet Protocol versie 4 (IPv4) ondersteunt Configuration Manager Intern
 |Communicatie van de wake-up proxy|IPv4 is vereist voor de ondersteuning van de pakketten voor de wake-up proxy van clients.|  
 |Windows CE|IPv4 is vereist voor de ondersteuning van de Configuration Manager-client op Windows CE apparaten.|  
 
-## <a name="network-address-translation"></a><a name="bkmk_NAT"></a>Netwerkadresomzetting  
+## <a name="network-address-translation"></a><a name="bkmk_NAT"></a> Netwerkadresomzetting  
 
 Netwerkadresomzetting (NAT) wordt niet ondersteund in Configuration Manager, tenzij de site ondersteuning biedt voor clients op internet en de client detecteert dat deze verbinding heeft met internet. Zie voor meer informatie over het op internet gebaseerde client beheer [plannen voor het beheren van clients op Internet](../../clients/manage/plan-internet-based-client-management.md).  
 
-## <a name="specialized-storage-technology"></a><a name="bkmk_storage"></a>Gespecialiseerde opslag technologie  
+## <a name="specialized-storage-technology"></a><a name="bkmk_storage"></a> Gespecialiseerde opslag technologie  
 
 Configuration Manager werkt met alle hardware die is gecertificeerd in de lijst met compatibele Windows-hardware voor de versie van het besturings systeem waarop het Configuration Manager-onderdeel is geïnstalleerd.
 
@@ -129,4 +129,4 @@ Voor Site Server functies is NTFS vereist, zodat Configuration Manager Directory
 
      Daarnaast wordt de cache van een Configuration Manager-client niet ondersteund op een SIS-volume.  
 
-- **Verwissel bare schijf**: Configuration Manager biedt geen ondersteuning voor de installatie van Configuration Manager-site systemen of-clients op een verwisselbaar schijf station.  
+- **Verwissel bare schijf**: Configuration Manager biedt geen ondersteuning voor de installatie van Configuration Manager-site systemen of-clients op een verwisselbaar schijf station.

@@ -10,12 +10,12 @@ ms.assetid: 1dc74219-7ff5-4e3b-b4f6-5aad663bb75b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f34c803cb2b43a2c69cee4c16f5029474e318eb2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c9bb07bd2b82a9411bc527d04a9a64a0bb6e12f8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724431"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697667"
 ---
 # <a name="infrastructure-requirements-for-os-deployment-in-configuration-manager"></a>Vereisten voor de infra structuur voor de implementatie van besturings systemen in Configuration Manager
 
@@ -23,7 +23,7 @@ ms.locfileid: "81724431"
 
 De besturingssysteem implementatie in Configuration Manager heeft externe afhankelijkheden en afhankelijkheden binnen het product. Gebruik dit artikel om u te helpen de infra structuur voor te bereiden voor implementatie van het besturings systeem.  
 
-##  <a name="dependencies-external-to-configuration-manager"></a><a name="BKMK_ExternalDependencies"></a>Externe afhankelijkheden voor Configuration Manager  
+##  <a name="dependencies-external-to-configuration-manager"></a><a name="BKMK_ExternalDependencies"></a> Externe afhankelijkheden voor Configuration Manager  
 
 Deze sectie bevat informatie over externe hulpprogram ma's, installatie kits en besturingssysteem versies die vereist zijn voor het implementeren van besturings systemen in Configuration Manager.  
 
@@ -33,9 +33,9 @@ De Windows Assessment and Deployment Kit (ADK) is een set hulpprogram ma's en do
 
 Raadpleeg voor meer informatie de volgende artikelen:  
 
-- [Windows ADK voor Windows 10-scenario's voor IT-professionals](https://docs.microsoft.com/windows/deployment/windows-adk-scenarios-for-it-pros)  
+- [Windows ADK voor Windows 10-scenario's voor IT-professionals](/windows/deployment/windows-adk-scenarios-for-it-pros)  
 
-- [Download Windows ADK voor Windows 10](https://docs.microsoft.com/windows-hardware/get-started/adk-install)  
+- [Download Windows ADK voor Windows 10](/windows-hardware/get-started/adk-install)  
 
     > [!IMPORTANT]
     > Zorg ervoor dat u de **Windows ADk voor Windows 10** en de **Windows PE-invoeg toepassing voor de ADk**downloadt.
@@ -79,7 +79,7 @@ Configuration Manager gebruikt een USMT-pakket dat de USMT 10-bron bestanden bev
 
 Raadpleeg voor meer informatie de volgende artikelen:  
 
-- [Algemene migratiescenario's voor USMT 10](https://docs.microsoft.com/windows/deployment/usmt/usmt-common-migration-scenarios)  
+- [Algemene migratiescenario's voor USMT 10](/windows/deployment/usmt/usmt-common-migration-scenarios)  
 
 - [De gebruikersstatus beheren](../get-started/manage-user-state.md)  
 
@@ -133,7 +133,7 @@ Windows-apparaatstuurprogramma's kunnen worden gebruikt wanneer u het besturings
 
 
 
-##  <a name="configuration-manager-dependencies"></a><a name="BKMK_InternalDependencies"></a>Configuration Manager afhankelijkheden  
+##  <a name="configuration-manager-dependencies"></a><a name="BKMK_InternalDependencies"></a> Configuration Manager afhankelijkheden  
 
 Deze sectie bevat informatie over Configuration Manager vereisten voor de implementatie van besturings systemen.  
 
@@ -207,7 +207,7 @@ Gebruik beveiligingsbereiken om gebruikers met beheerders rechten toegang te gev
 
 
 
-##  <a name="windows-deployment-services"></a><a name="BKMK_WDS"></a>Windows Deployment Services  
+##  <a name="windows-deployment-services"></a><a name="BKMK_WDS"></a> Windows Deployment Services  
 
 In versie 1802 en eerder, Windows Deployment Services (WDS) moet zijn geïnstalleerd op dezelfde server als de distributie punten die u configureert om PXE of multi cast te ondersteunen. WDS is opgenomen in het besturings systeem van de server. Voor PXE-implementaties is WDS de service die het opstarten van PXE uitvoert. Wanneer het distributie punt is geïnstalleerd en ingeschakeld voor PXE, wordt door Configuration Manager een provider in WDS geïnstalleerd die gebruikmaakt van de WDS PXE-opstart functies.  
 
@@ -227,7 +227,7 @@ Vanaf versie 1806 kunt u PXE inschakelen op een distributie punt zonder WDS. Zie
 -   Als de provider is geïnstalleerd op een externe server, moet u WDS installeren op de site server en de externe provider.  
 
 
-###  <a name="considerations-when-you-have-wds-and-dhcp-on-the-same-server"></a><a name="BKMK_WDSandDHCP"></a>Overwegingen wanneer u WDS en DHCP op dezelfde server hebt  
+###  <a name="considerations-when-you-have-wds-and-dhcp-on-the-same-server"></a><a name="BKMK_WDSandDHCP"></a> Overwegingen wanneer u WDS en DHCP op dezelfde server hebt  
 
 Als u van plan bent het distributie punt te hosten op een server waarop DHCP wordt uitgevoerd, moet u rekening houden met de volgende configuratie problemen:  
 
@@ -266,13 +266,13 @@ Als u van plan bent het distributie punt te hosten op een server waarop DHCP wor
 > Vanaf versie 1902, wanneer u een PXE-responder inschakelt op een distributie punt zonder Windows Deployment-service, kan het zich nu op dezelfde server bevinden als de DHCP-service. Zie [Configure ten minste één distributie punt voor het accepteren van PXE-aanvragen](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md#BKMK_Configure)voor meer informatie.
 
 
-##  <a name="supported-operating-systems"></a><a name="BKMK_SupportedOS"></a>Ondersteunde besturings systemen  
+##  <a name="supported-operating-systems"></a><a name="BKMK_SupportedOS"></a> Ondersteunde besturings systemen  
 
 Alle Windows-besturings systemen die worden vermeld als ondersteunde clients in [ondersteunde besturings systemen voor clients en apparaten](../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md) , worden ondersteund voor de implementatie van het besturings systeem.  
 
 
 
-##  <a name="supported-disk-configurations"></a><a name="BKMK_SupportedDiskConfig"></a>Ondersteunde schijf configuraties  
+##  <a name="supported-disk-configurations"></a><a name="BKMK_SupportedDiskConfig"></a> Ondersteunde schijf configuraties  
 
 De combi Naties van de harde-schijf configuratie op de referentie-en doel computers die worden ondersteund voor Configuration Manager besturingssysteem implementatie worden weer gegeven in de volgende tabel:  
 

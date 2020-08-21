@@ -11,12 +11,12 @@ ms.assetid: e179e30a-a1fc-461e-8087-ff3a55803450
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3d854e4b70a59a364b8611947feea89d4678e7e6
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: e0db550369ca2d81f42a25e68960b5f8f27be168
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721953"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700477"
 ---
 # <a name="install-and-configure-the-exchange-connector"></a>De Exchange-connector installeren en configureren
 
@@ -76,10 +76,10 @@ De volgende Exchange Server-beheer rollen bevatten deze cmdlets:
 - Alleen-lezen organisatie beheer
 - Server Management
 
-Zie [Management Role groups](https://docs.microsoft.com/exchange/understanding-management-role-groups-exchange-2013-help) in de Exchange Server 2013-documentatie voor meer informatie.
+Zie [Management Role groups](/exchange/understanding-management-role-groups-exchange-2013-help) in de Exchange Server 2013-documentatie voor meer informatie.
 
 > [!TIP]  
-> Als u de Exchange Server-connector probeert te installeren of gebruiken zonder de vereiste cmdlets, ziet u de volgende fout code in het bestand bestand easdisc. log op de site Server computer `Invoking cmdlet <cmdlet> failed`:.
+> Als u de Exchange Server-connector probeert te installeren of gebruiken zonder de vereiste cmdlets, ziet u de volgende fout code in het bestand bestand easdisc. log op de site Server computer: `Invoking cmdlet <cmdlet> failed` .
 
 ## <a name="install-the-connector"></a>De connector installeren
 
@@ -91,7 +91,7 @@ Zie [Management Role groups](https://docs.microsoft.com/exchange/understanding-m
 
     - **On-premises Exchange Server**: Geef één server of een server matrix voor client toegang op voor elke Active Directory-site.
 
-        Als de server of matrix offline is, probeert Configuration Manager een server voor client toegang te detecteren die u wilt gebruiken. Als dat niet lukt, Configuration Manager terugvallen op het gebruik van een postvak server om verbinding te maken met een server voor client toegang. Wanneer de verbinding opnieuw probeert te worden uitgevoerd, worden de volgende waarschuwingen in het bestand bestand easdisc. log op de site Server computer `Failed to open runspace for site <site_name>`geregistreerd:.
+        Als de server of matrix offline is, probeert Configuration Manager een server voor client toegang te detecteren die u wilt gebruiken. Als dat niet lukt, Configuration Manager terugvallen op het gebruik van een postvak server om verbinding te maken met een server voor client toegang. Wanneer de verbinding opnieuw probeert te worden uitgevoerd, worden de volgende waarschuwingen in het bestand bestand easdisc. log op de site Server computer geregistreerd: `Failed to open runspace for site <site_name>` .
 
     - **Gehoste Exchange-Server**: Geef het server adres op van uw Exchange Online-omgeving.
 
@@ -123,7 +123,7 @@ Controleer de installatie van de Exchange Server-connector met status berichten 
 
     De installatie kan mislukken als de opgegeven server voor client toegang offline is. Als Configuration Manager de connector niet goed kunt installeren, Configuration Manager wordt de installatie elke 60 minuten opnieuw geprobeerd. U kunt het opnieuw proberen totdat de installatie is geslaagd of u de Exchange Server-connector verwijdert.
 
-- Controleer **SiteComp. log** op de site Server computer voor de volgende vermelding: `Component SMS_EXCHANGE_CONNECTOR flagged for installation`. Vervolgens wordt de geslaagde installatie geregistreerd met de volgende tekst `STATMSG: ID=1015`:.
+- Controleer **SiteComp. log** op de site Server computer voor de volgende vermelding: `Component SMS_EXCHANGE_CONNECTOR flagged for installation` . Vervolgens wordt de geslaagde installatie geregistreerd met de volgende tekst: `STATMSG: ID=1015` .
 
 Nadat u de installatie hebt voltooid, controleert u de mobiele apparaten die worden gevonden en beheerd door de connector. Bekijk de verzamelingen met mobiele apparaten en gebruik de rapporten voor mobiele apparaten.
 

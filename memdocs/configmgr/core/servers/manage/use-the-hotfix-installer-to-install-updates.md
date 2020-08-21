@@ -10,26 +10,26 @@ ms.assetid: f3058277-c597-4dac-86d1-41b6f7e62b36
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a8eed671b723091f2a43350f42ca82d90e0d9da3
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 8c5cc09b7c2723a5dbdd1030cb0053ae75b1ff22
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906135"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699463"
 ---
 # <a name="use-the-hotfix-installer-to-install-updates-for-configuration-manager"></a>Het installatie programma voor hotfixes gebruiken om updates te installeren voor Configuration Manager
 
 *Van toepassing op: Configuration Manager (huidige vertakking)*
 
 Sommige updates voor Configuration Manager zijn niet beschikbaar in de micro soft-Cloud service en worden alleen out-of-band verkregen. Een voorbeeld is een beperkt uitgegeven hotfix voor een specifiek probleem.   
-Wanneer u een update (of hotfix) die u van micro soft ontvangt, moet installeren en die update een bestands naam heeft die eindigt op de extensie **. exe** (niet **Update. exe**), gebruikt u het installatie programma voor hotfixes dat is opgenomen in die hotfix downloaden om de update rechtstreeks op de site server van Configuration Manager te installeren.  
+Wanneer u een update (of hotfix) die u van micro soft ontvangt, moet installeren en die update een bestands naam heeft die eindigt op de extensie **. exe** (niet **update.exe**), gebruikt u het installatie programma voor hotfixes dat is opgenomen in die hotfix downloaden om de update rechtstreeks op de Configuration Manager-site server te installeren.  
 
-Als het hotfixbestand de bestands extensie **. update. exe** heeft, raadpleegt u [het hulp programma Registratie bijwerken om hotfixes te importeren in Configuration Manager](../../../core/servers/manage/use-the-update-registration-tool-to-import-hotfixes.md).  
+Als het hotfixbestand de bestands extensie **.update.exe** heeft, raadpleegt u [het hulp programma Registratie bijwerken gebruiken om hotfixes te importeren naar Configuration Manager](../../../core/servers/manage/use-the-update-registration-tool-to-import-hotfixes.md).  
 
 > [!NOTE]  
 > In dit onderwerp vindt u algemene richt lijnen voor het installeren van hotfixes die Configuration Manager bijwerken. Raadpleeg voor meer informatie over specifieke updates het betreffende Knowledge Base-artikel op Microsoft Ondersteuning.  
 
-##  <a name="overview-of-hotfixes-for-configuration-manager"></a><a name="bkmk_Overview"></a>Overzicht van hotfixes voor Configuration Manager  
+##  <a name="overview-of-hotfixes-for-configuration-manager"></a><a name="bkmk_Overview"></a> Overzicht van hotfixes voor Configuration Manager  
 Hotfixes voor Configuration Manager zijn vergelijkbaar met die voor andere micro soft-producten, zoals SQL Server, bevatten één afzonderlijke correctie of een bundel (een samen stelling van oplossingen) en worden beschreven in een micro soft Knowledge Base-artikel.  
 
 Afzonderlijke updates bevatten één gerichte update voor een specifieke versie van Configuration Manager.  
@@ -73,16 +73,16 @@ De volgende drie groepen in Configuration Manager kunnen worden bijgewerkt:
 
 Elke update bundel voor Configuration Manager is een zelfuitpakkend uitvoerbaar. exe-bestand (SFX) dat de benodigde bestanden bevat voor het installeren van de update op de betreffende onderdelen van Configuration Manager. Het SFX-bestand kan normaal gesproken de volgende bestanden bevatten:  
 
-|File|Details|  
+|Bestand|Details|  
 |----------|-------------|  
-|&lt;Product versie \> -QFE-KB &lt; KB-artikel-id \> - &lt; platform \> - &lt; taal \> . exe|Dit is het updatebestand. De opdrachtregel voor dit bestand wordt beheerd door Updatesetup.exe.<br /><br /> Bijvoorbeeld:<br />CM1511RTM-QFE-KB123456-X64-ENU. exe|  
+|&lt;Product versie \> -QFE-KB &lt; KB-artikel-id \> - &lt; platform \> - &lt; taal \> . exe|Dit is het updatebestand. De opdrachtregel voor dit bestand wordt beheerd door Updatesetup.exe.<br /><br /> Bijvoorbeeld:<br />CM1511RTM-QFE-KB123456-X64-ENU.exe|  
 |Updatesetup.exe|Deze MSI-wrapper beheert de installatie van de updatebundel.<br /><br /> Wanneer u de update uitvoert, detecteert Updatesetup.exe de weergavetaal van de computer waarop hij wordt uitgevoerd. De gebruikersinterface voor de update is standaard in het Engels. Wanneer de weergavetaal echter wordt ondersteund, geeft de gebruikersinterface inhoud in de lokale taal van de computer weer.|  
 |License_&lt;taal\>.rtf|Wanneer van toepassing bevat iedere update een of meerdere licentiebestanden voor ondersteunde talen.|  
 |&lt;Product&updatetype>- &lt; product versie \> - &lt; KB-artikel-id \> - &lt; platform \> . msp|Als de update van toepassing is op de Configuration Manager-console of-clients, bevat de update bundel afzonderlijke Windows Installer patch-bestanden (. msp).<br /><br /> Bijvoorbeeld:<br /><br /> **Configuration Manager-console-update:** ConfigMgr1511-AdminUI-KB1234567-i386.msp<br /><br /> **Client update:** ConfigMgr1511-client-KB1234567-i386. msp<br />ConfigMgr1511-client-KB1234567-x64. msp|  
 
 De updatebundel registreert standaard zijn bewerkingen in een logboekbestand op de siteserver. Het logboekbestand heeft dezelfde naam als de updatebundel en wordt naar de map **%SystemRoot%/Temp** geschreven.  
 
-Wanneer u de updatebundel uitvoert, pakt deze een bestand uit met dezelfde naam als de updatebundel in een tijdelijke map op de computer en voert Updatesetup.exe uit. Updatesetup. exe start de wizard software-update voor Configuration Manager &lt; product versie \> &lt; KB-nummer \> .  
+Wanneer u de updatebundel uitvoert, pakt deze een bestand uit met dezelfde naam als de updatebundel in een tijdelijke map op de computer en voert Updatesetup.exe uit. Updatesetup.exe start de wizard software-update voor Configuration Manager &lt; product versie \> &lt; KB-nummer \> .  
 
 Afhankelijk van het bereik van de update maakt de wizard een aantal mappen aan onder de installatiemap Configuration Manager op de site server. De mapstructuur lijkt op het volgende:   
 ** \\ \\ &lt; Server naam \> \ SMS_ &lt; site code \> \Hotfix \\ &lt; KB number \> \\ &lt; Update type \> \\ &lt; platform \> **.  
@@ -123,15 +123,15 @@ Als u een client, Configuration Manager-console of SMS-provider opnieuw installe
 
 Gebruik de informatie in de volgende secties om updates te installeren voor elk van de onderdelen voor Configuration Manager.  
 
-###  <a name="update-servers"></a><a name="bkmk_servers"></a> Updateservers  
+###  <a name="update-servers"></a><a name="bkmk_servers"></a> Servers bijwerken  
 Updates voor servers kunnen updates zijn voor **sites**, de **site database**en computers waarop een exemplaar van de SMS- **provider**wordt uitgevoerd:  
 
-####  <a name="update-a-site"></a><a name="bkmk_site"></a>Een site bijwerken  
+####  <a name="update-a-site"></a><a name="bkmk_site"></a> Een site bijwerken  
 Als u een Configuration Manager site wilt bijwerken, kunt u de update bundel rechtstreeks op de site server installeren of u kunt de updates implementeren op een site server nadat u de update bundel op een andere site hebt geïnstalleerd.  
 
 Als u een update installeert op een siteserver, beheert het update-installatieproces aanvullende bewerkingen die nodig zijn om de update toe te passen, zoals het bijwerken van sitesysteemrollen. De uitzondering hierop is de sitedatabase. De volgende rubrieken bevatten informatie over hoe u de sitedatabase kunt bijwerken.  
 
-####  <a name="update-a-site-database"></a><a name="bkmk_database"></a>Een site database bijwerken  
+####  <a name="update-a-site-database"></a><a name="bkmk_database"></a> Een site database bijwerken  
 Voor het bijwerken van de sitedatabase, voert het installatieproces een bestand met de naam **update.sql** uit op de sitedatabase. U kunt het updateproces instellen op het automatisch bijwerken van de sitedatabase of u kunt dit later zelf handmatig doen.  
 
 **Automatische update van de site database**  
@@ -163,12 +163,12 @@ Als u ervoor kiest de sitedatabase niet automatisch te laten bijwerken wanneer u
 
 5.  Wanneer de update bundel wordt geïnstalleerd, wordt **Update. SQL** naar de volgende locatie op de site server geëxtraheerd: ** \\ \\ &lt; Server naam \> \ SMS_ &lt; site code \> \Hotfix KB- \\ &lt; nummer \> \Update.SQL**  
 
-####  <a name="update-a-computer-that-runs-the-sms-provider"></a><a name="bkmk_provider"></a>Een computer bijwerken waarop de SMS-provider wordt uitgevoerd  
+####  <a name="update-a-computer-that-runs-the-sms-provider"></a><a name="bkmk_provider"></a> Een computer bijwerken waarop de SMS-provider wordt uitgevoerd  
 Wanneer u een updatebundel installeert met updates voor de SMS-provider, moet u de update voor elke computer implementeren waarop de SMS-provider draait. De enige uitzondering hierop is het exemplaar van de SMS-provider dat voorheen op de siteserver was geïnstalleerd, waarop u de updatebundel installeert. Het lokale exemplaar van de SMS-provider op de siteserver wordt bijgewerkt wanneer u de updatebundel installeert.  
 
 Als u de SMS-provider eerst verwijdert en opnieuw installeert op een computer, moet u de update voor de SMS-provider op die computer opnieuw installeren.  
 
-###  <a name="update-clients"></a><a name="BKMK_clients"></a>Clients bijwerken  
+###  <a name="update-clients"></a><a name="BKMK_clients"></a> Clients bijwerken  
 Wanneer u een update installeert die updates bevat voor de Configuration Manager-client, krijgt u de optie om clients automatisch te upgraden met de installatie van de update of om clients op een later tijdstip hand matig bij te werken. Zie [clients voor Windows-computers bijwerken voor](../../clients/manage/upgrade/upgrade-clients-for-windows-computers.md)meer informatie over automatische client upgrade.  
 
 U kunt updates implementeren met Updates Publisher of een software-implementatiepakket. Ook kunt u ervoor kiezen om een update handmatig op elke client te installeren. Zie de sectie [Updates implementeren voor Configuration Manager](#BKMK_Deploy) in dit onderwerp voor meer informatie over het gebruik van implementaties voor het installeren van updates.  
@@ -176,11 +176,11 @@ U kunt updates implementeren met Updates Publisher of een software-implementatie
 > [!IMPORTANT]  
 > Zorg ervoor, wanneer u updates installeert voor clients en de updatebundel updates voor servers bevat, dat u de serverupdates tevens op de primaire site installeert waaraan de clients zijn toegewezen.  
 
-Als u de client update hand matig wilt installeren op elke Configuration Manager-client, moet u **Msiexec. exe** uitvoeren en verwijzen naar het platformspecifieke client update. msp-bestand.  
+Als u de client update hand matig wilt installeren op elke Configuration Manager-client, moet u **Msiexec.exe** uitvoeren en verwijzen naar het platformspecifieke client update. msp-bestand.  
 
-U kunt bijvoorbeeld de volgende opdrachtregel gebruiken voor een clientupdate. Met deze opdracht regel wordt Msiexec op de client computer uitgevoerd en wordt gerefereerd aan het MSP-bestand dat de update bundel op de site server heeft uitgepakt: **Msiexec. exe/p \\ \\ &lt; Server naam \> \ SMS_ &lt; site \> \\ &lt; code \Hotfix KB number \> \Client \\ &lt; platform \> \\ &lt; MSP \> /l \* v &lt; logbestand \> REINSTALLMODE = Mous reinstall = all**  
+U kunt bijvoorbeeld de volgende opdrachtregel gebruiken voor een clientupdate. Met deze opdracht regel wordt Msiexec op de client computer uitgevoerd en wordt gerefereerd aan het MSP-bestand dat de update bundel op de site server heeft uitgepakt: **msiexec.exe/p \\ \\ &lt; Server naam \> \ SMS_ &lt; site \> \\ &lt; code \Hotfix KB number \> \Client \\ &lt; platform \> \\ &lt; MSP \> /l \* v file &lt; logboek \> REINSTALLMODE = Mous reinstall = all**  
 
-###  <a name="update-configuration-manager-consoles"></a><a name="BKMK_console"></a>Configuration Manager-consoles bijwerken  
+###  <a name="update-configuration-manager-consoles"></a><a name="BKMK_console"></a> Configuration Manager-consoles bijwerken  
 Als u een Configuration Manager-console wilt bijwerken, moet u de update installeren op de computer waarop de-console wordt uitgevoerd nadat de installatie van de console is voltooid.  
 
 > [!IMPORTANT]  
@@ -192,22 +192,22 @@ Als de computer die u bijwerkt, de Configuration Manager-client uitvoert:
 
 - Als u zich hebt aangemeld op de clientcomputer, kunt u de installatie interactief uitvoeren.  
 
-- U kunt handmatig de update installeren op elke computer. Als u de Configuration Manager-console-update hand matig wilt installeren op elke computer waarop de Configuration Manager-console wordt uitgevoerd, kunt u Msiexec. exe uitvoeren en verwijzen naar het bestand Configuration Manager console update. msp.  
+- U kunt handmatig de update installeren op elke computer. Als u de Configuration Manager-console-update hand matig wilt installeren op elke computer waarop de Configuration Manager-console wordt uitgevoerd, kunt u Msiexec.exe uitvoeren en verwijzen naar het Configuration Manager-bestand Update. msp van de console.  
 
-U kunt bijvoorbeeld de volgende opdracht regel gebruiken om een Configuration Manager-console bij te werken. Met deze opdracht regel wordt Msiexec op de computer uitgevoerd en wordt gerefereerd aan het MSP-bestand dat de update bundel op de site server heeft geëxtraheerd: **Msiexec. exe/p \\ \\ &lt; Server naam \> \ SMS_ &lt; site \> \\ &lt; code \Hotfix KB number \> \AdminConsole \\ &lt; platform \> \\ &lt; MSP \> /l \* v &lt; logbestand \> REINSTALLMODE = Mous reinstall = all**  
+U kunt bijvoorbeeld de volgende opdracht regel gebruiken om een Configuration Manager-console bij te werken. Met deze opdracht regel wordt Msiexec op de computer uitgevoerd en wordt gerefereerd aan het MSP-bestand dat de update bundel op de site server heeft uitgepakt: **msiexec.exe/p \\ \\ &lt; Server naam \> \ SMS_ &lt; site \> \\ &lt; code \Hotfix KB number \> \AdminConsole \\ &lt; platform \> \\ &lt; MSP/l MS file \> \* &lt; logboek \> REINSTALLMODE = Mous reinstall = all**  
 
 ##  <a name="deploy-updates-for-configuration-manager"></a><a name="BKMK_Deploy"></a> Updates implementeren voor Configuration Manager  
 Wanneer u de updatebundel op een siteserver installeert, kunt u een van de volgende drie methoden gebruiken om updates te implementeren op extra computers.  
 
-###  <a name="use-updates-publisher-2011-to-install-updates"></a><a name="BKMK_DeploySCUP"></a>Updates Publisher 2011 gebruiken om updates te installeren  
+###  <a name="use-updates-publisher-2011-to-install-updates"></a><a name="BKMK_DeploySCUP"></a> Updates Publisher 2011 gebruiken om updates te installeren  
 Wanneer u de updatebundel op een siteserver installeert, maakt de installatiewizard een catalogusbestand aan voor Updates Publisher dat u kunt gebruiken om de updates op de toepasselijke computers te implementeren. De wizard maakt deze catalogus altijd, zelfs wanneer u de optie **pakket en programma gebruiken om deze update te implementeren**selecteert.  
 
-De catalogus voor updates Publisher heet **bestand scupcatalog. cab** en is te vinden op de volgende locatie op de computer waarop de update bundel wordt uitgevoerd: ** \\ \\ &lt; Server naam \> \ SMS_ &lt; site \> code \Hotfix \\ &lt; KB-nummer \> \SCUP\SCUPCatalog.cab**  
+De catalogus voor updates Publisher heet **SCUPCatalog.cab** en bevindt zich op de volgende locatie op de computer waarop de update bundel wordt uitgevoerd: ** \\ \\ &lt; Server naam \> \ SMS_ &lt; site \> \\ &lt; code \Hotfix KB-nummer \>\SCUP\SCUPCatalog.cab**  
 
 > [!IMPORTANT]  
 > Omdat het bestand SCUPCatalog.cab wordt gemaakt door gebruik te maken van paden die specifiek zijn voor de siteserver waarop de updatebundel is geïnstalleerd, kan het niet op andere siteservers worden gebruikt.  
 
-Nadat de wizard is voltooid, kunt u de catalogus importeren in updates Publisher en vervolgens Configuration Manager software-updates gebruiken om de updates te implementeren. Zie [updates publisher 2011](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10))voor informatie over updates Publisher.  
+Nadat de wizard is voltooid, kunt u de catalogus importeren in updates Publisher en vervolgens Configuration Manager software-updates gebruiken om de updates te implementeren. Zie [updates publisher 2011](/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10))voor informatie over updates Publisher.  
 
 Gebruik de volgende procedure om het bestand SCUPCatalog.cab te importeren in Updates Publisher en de updates te publiceren.  
 
@@ -227,7 +227,7 @@ Gebruik de volgende procedure om het bestand SCUPCatalog.cab te importeren in Up
 
 7.  Voer de wizard uit om de updates te publiceren.  
 
-###  <a name="use-software-deployment-to-install-updates"></a><a name="BKMK_DeploySWDist"></a>Software-implementatie gebruiken om updates te installeren  
+###  <a name="use-software-deployment-to-install-updates"></a><a name="BKMK_DeploySWDist"></a> Software-implementatie gebruiken om updates te installeren  
 Wanneer u de updatebundel op de siteserver van een primaire site of een centrale beheersite installeert, kunt u de installatiewizard configureren om updatepakketten te maken voor software-implementatie. U kunt vervolgens elk pakket implementeren op een verzameling van computers die u wilt bijwerken.  
 
 Als u een software-implementatiepakket wilt maken, schakelt u op de pagina **Implementatie software-update configureren** van de wizard het selectievakje in voor elk updatepakkettype dat u wilt bijwerken. De beschik bare typen kunnen servers, Configuration Manager-consoles en clients zijn. Er wordt voor elk door u geselecteerde type update een apart pakket gemaakt.  
@@ -245,7 +245,7 @@ Nadat de wizard is voltooid, kunt u de pakketten weer geven die worden gemaakt i
 
 Zie [pakketten en Program ma's](../../../apps/deploy-use/packages-and-programs.md)voor meer informatie over het implementeren van pakketten naar Configuration Manager-clients.  
 
-###  <a name="create-collections-for-deploying-updates-to-configuration-manager"></a><a name="BKMK_DeployCollections"></a>Verzamelingen maken voor het implementeren van updates voor Configuration Manager  
+###  <a name="create-collections-for-deploying-updates-to-configuration-manager"></a><a name="BKMK_DeployCollections"></a> Verzamelingen maken voor het implementeren van updates voor Configuration Manager  
 U kunt specifieke updates implementeren naar toepasselijke clients. De volgende informatie kan u helpen om verzamelingen te maken voor de verschillende onderdelen voor Configuration Manager.  
 
 |Onderdeel van Configuration Manager|Instructies|  
@@ -253,12 +253,12 @@ U kunt specifieke updates implementeren naar toepasselijke clients. De volgende 
 |Server centrale beheersite|Maak een directe lidmaatschapquery en voeg de servercomputer van de centrale beheersite toe.|  
 |Alle primaire siteservers|Maak een directe lidmaatschapquery en voeg de servercomputer van elke primaire site toe.|  
 |Alle secundaire siteservers|Maak een directe lidmaatschapquery en voeg de servercomputer van elke secundaire site toe.|  
-|Alle x 86-clients|Maak een verzameling met de volgende querycriteria:<br /><br /> **Selecteer \* in SMS_R_System inner join SMS_G_System_SYSTEM op SMS_G_System_SYSTEM. ResourceID = SMS_R_System. ResourceId waarbij SMS_G_System_SYSTEM. System type = "op x86 gebaseerde PC"**|  
-|Alle x 64-clients|Maak een verzameling met de volgende querycriteria:<br /><br /> **Selecteer \* in SMS_R_System inner join SMS_G_System_SYSTEM op SMS_G_System_SYSTEM. ResourceID = SMS_R_System. ResourceId waarbij SMS_G_System_SYSTEM. System type = "op x64 gebaseerde PC"**|  
+|Alle x 86-clients|Maak een verzameling met de volgende querycriteria:<br /><br /> **Selecteer \* in SMS_R_System inner join SMS_G_System_SYSTEM op SMS_G_System_SYSTEM. ResourceID = SMS_R_System. ResourceId waarbij SMS_G_System_SYSTEM.SystemType = "x86-based PC"**|  
+|Alle x 64-clients|Maak een verzameling met de volgende querycriteria:<br /><br /> **Selecteer \* in SMS_R_System inner join SMS_G_System_SYSTEM op SMS_G_System_SYSTEM. ResourceID = SMS_R_System. ResourceId waarbij SMS_G_System_SYSTEM.SystemType = "x64-based PC"**|  
 |Alle computers waarop de Configuration Manager-console wordt uitgevoerd|Maak een directe lidmaatschapquery en voeg elke computer toe.|  
 |Externe computers waarop een exemplaar van de SMS-provider wordt uitgevoerd|Maak een directe lidmaatschapquery en voeg elke computer toe.|  
 
 > [!NOTE]  
 > Implementeer de update op de siteserver van de site voor het bijwerken van een sitedatabase.  
 
-Zie [verzamelingen maken](../../../core/clients/manage/collections/create-collections.md)voor meer informatie over het maken van verzamelingen.  
+Zie [verzamelingen maken](../../../core/clients/manage/collections/create-collections.md)voor meer informatie over het maken van verzamelingen.

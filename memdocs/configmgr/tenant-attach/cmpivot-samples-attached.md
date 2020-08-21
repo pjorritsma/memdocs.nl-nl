@@ -10,12 +10,12 @@ ms.assetid: 1d589306-9537-4306-a9bf-02c9771df514
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: b2e3202a58737e2559d295e5177675300ee8f0ee
-ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
+ms.openlocfilehash: f32418b9351644f4c01ffadc7f9115ddf9325558
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86210343"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700385"
 ---
 # <a name="tenant-attach-cmpivot-sample-scripts"></a>Tenant bijvoegen: CMPivot-voorbeeld scripts
 <!---->
@@ -24,7 +24,7 @@ ms.locfileid: "86210343"
 > [!Important]
 > Dit artikel is van toepassing op de Technical Preview-vertakking voor Configuration Manager. Zie [Configuration Manager Technical Preview versie 2005](../core/get-started/2020/technical-preview-2005.md#bkmk_cmpivot)voor meer informatie.
 
-Hieronder vindt u enkele algemene query behoeften en hoe CMPivot kunnen worden gebruikt om te voldoen aan deze vereisten. CMPivot maakt gebruik van een subset van de [Kusto query language (KQL)](https://docs.microsoft.com/azure/kusto/query/).
+Hieronder vindt u enkele algemene query behoeften en hoe CMPivot kunnen worden gebruikt om te voldoen aan deze vereisten. CMPivot maakt gebruik van een subset van de [Kusto query language (KQL)](/azure/kusto/query/).
 
 [!INCLUDE [Sample scripts for both Microsoft Endpoint Manager and Configuration Manager use](../core/servers/manage/includes/cmpivot-samples-shared.md)]
 

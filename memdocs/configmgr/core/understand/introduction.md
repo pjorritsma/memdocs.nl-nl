@@ -10,12 +10,12 @@ ms.assetid: 3343eccf-bf09-41cd-9e68-03e893c7f904
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 13c3be302ecefad36d7be8617a4cc9354db1b685
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 99e02c190e02a5e017fe2c3f41682ad1624b6051
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906060"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699344"
 ---
 # <a name="what-is-configuration-manager"></a>Wat is Configuration Manager?
 
@@ -29,10 +29,10 @@ Micro soft Endpoint Manager is een geïntegreerde oplossing voor het beheer van 
 
 De volgende micro soft-beheer oplossingen maken nu deel uit van het merk van **micro soft Endpoint Manager** :
 
-- [Configuration Manager](https://docs.microsoft.com/configmgr)
-- [Intune](https://docs.microsoft.com/intune)
+- [Configuration Manager](/configmgr)
+- [Intune](/intune)
 - [Desktop Analytics](../../desktop-analytics/overview.md)
-- [Autopilot](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
+- [Autopilot](/intune/enrollment/enrollment-autopilot)
 - Andere functies in de beheer [console voor Apparaatbeheer](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760)
 
 Zie [Veelgestelde vragen over micro soft Endpoint Configuration Manager](microsoft-endpoint-manager-faq.md)voor meer informatie.
@@ -77,7 +77,7 @@ Als u wilt slagen met Configuration Manager in een productie omgeving, moet u de
 
 ## <a name="user-interfaces"></a>Gebruikers interfaces
 
-### <a name="the-configuration-manager-console"></a><a name="BKMK_Console"></a>De Configuration Manager-console
+### <a name="the-configuration-manager-console"></a><a name="BKMK_Console"></a> De Configuration Manager-console
 
 Nadat u Configuration Manager hebt geïnstalleerd, kunt u met de Configuration Manager-console sites en clients configureren en beheer taken uitvoeren en controleren. Deze console is het belangrijkste beheer punt, waarmee u meerdere sites kunt beheren.  
 
@@ -85,7 +85,7 @@ U kunt de Configuration Manager-console op extra computers installeren, de toega
 
 Zie [de Configuration Manager-console gebruiken](../servers/manage/admin-console.md)voor meer informatie.
 
-### <a name="software-center"></a><a name="BKMK_ApplicationCatalog"></a>Software Center
+### <a name="software-center"></a><a name="BKMK_ApplicationCatalog"></a> Software Center
 
 **Software Center** is een toepassing die wordt geïnstalleerd wanneer u de Configuration Manager-client op een Windows-apparaat installeert. Gebruikers gebruiken software Center om software te vragen en te installeren die u implementeert. Met Software Center kunnen gebruikers de volgende acties uitvoeren:  
 
@@ -110,4 +110,4 @@ Wanneer u bekend bent met de basis concepten, gebruikt u deze documentatie bibli
 - [Functies en mogelijkheden van Configuration Manager](../plan-design/changes/features-and-capabilities.md)  
 - [Een oplossing voor apparaatbeheer kiezen](../plan-design/choose-a-device-management-solution.md)  
 - [Configuration Manager evalueren door uw eigen test omgeving te bouwen](../get-started/set-up-your-lab.md)
-- [Hulp zoeken voor het gebruik van Configuration Manager](find-help.md)  
+- [Hulp zoeken voor het gebruik van Configuration Manager](find-help.md)

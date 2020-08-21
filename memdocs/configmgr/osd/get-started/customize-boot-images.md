@@ -10,12 +10,12 @@ ms.assetid: 9cbfc406-d009-446d-8fee-4938de48c919
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b16ba822cb538b62fac06ee550dd17cfa8f077be
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 0e4fc5b019de25234ae964137f6b374ecbbca7d8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124558"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697786"
 ---
 # <a name="customize-boot-images-with-configuration-manager"></a>Opstart installatie kopieën aanpassen met Configuration Manager
 
@@ -49,7 +49,7 @@ Elke versie van Configuration Manager ondersteunt een specifieke versie van de W
 
 - **WinPE-WDS-Tools**: installeert hulpprogramma's voor Windows Deployment Services.  
 
-  Er zijn andere Windows PE-pakketten beschikbaar die u kunt toevoegen. Zie voor meer informatie over de optionele onderdelen die u kunt toevoegen aan de opstart installatie kopie [WinPE: add packages (optionele onderdelen Reference)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
+  Er zijn andere Windows PE-pakketten beschikbaar die u kunt toevoegen. Zie voor meer informatie over de optionele onderdelen die u kunt toevoegen aan de opstart installatie kopie [WinPE: add packages (optionele onderdelen Reference)](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
 
 > [!NOTE]
 >Wanneer u WinPE opstart vanuit een aangepaste installatiekopie die hulpprogramma's bevat die u hebt toegevoegd, kunt u een opdrachtprompt openen vanuit WinPE en de naam typen van het hulpprogramma om dit uit te voeren. De locatie van deze hulpprogram ma's wordt automatisch toegevoegd aan de padvariabele. De opdracht prompt kan alleen worden toegevoegd als de instelling **opdracht ondersteuning inschakelen (alleen testen)** is geselecteerd op het tabblad **aanpassing** in de eigenschappen van de opstart installatie kopie.
@@ -72,7 +72,7 @@ Elke versie van Configuration Manager ondersteunt een specifieke versie van de W
     Waar C:\WinPEWAIK de map is waar de installatiekopie in staat en C:\WinPEMount de gekoppelde map.  
 
    > [!NOTE]
-   >  Zie de [Naslag Gids voor DISM (Deployment Image Servicing and Management)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management)voor meer informatie.
+   >  Zie de [Naslag Gids voor DISM (Deployment Image Servicing and Management)](/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management)voor meer informatie.
 
 5. Gebruik, nadat u de installatiekopie gekoppeld hebt, DISM om optionele componenten aan de installatiekopie toe te voegen. In Windows PE 5 bevinden de optionele 64-bits componenten zich op de volgende locatie: <*Installation path*>\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs.  
 
@@ -108,7 +108,7 @@ Elke versie van Configuration Manager ondersteunt een specifieke versie van de W
     **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files (x86)\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-WDS-Tools_en-us.cab"**  
 
    > [!TIP]
-   >  Zie voor meer informatie over de optionele onderdelen die u kunt toevoegen aan de opstart installatie kopie de [Naslag informatie over optionele onderdelen van Windows PE](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
+   >  Zie voor meer informatie over de optionele onderdelen die u kunt toevoegen aan de opstart installatie kopie de [Naslag informatie over optionele onderdelen van Windows PE](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
 
 6. Gebruik DISM om specifieke stuurprogramma's aan de installatiekopie toe te voegen, indien nodig. Typ het volgende om stuurprogramma's aan de installatiekopie toe te voegen:  
 
@@ -194,7 +194,7 @@ Elke versie van Configuration Manager ondersteunt een specifieke versie van de W
     Waar C:\WinPEWAIK de map is waar de installatiekopie in staat en C:\WinPEMount de gekoppelde map.  
 
    > [!NOTE]
-   > Zie de [Naslag Gids voor DISM (Deployment Image Servicing and Management)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management)voor meer informatie.
+   > Zie de [Naslag Gids voor DISM (Deployment Image Servicing and Management)](/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management)voor meer informatie.
 
 5. Gebruik, nadat u de installatiekopie gekoppeld hebt, DISM om optionele componenten aan de installatiekopie toe te voegen. In Windows PE 3,1 bevinden de optionele onderdelen zich bijvoorbeeld in <*InstallationPath*> \windows aik\tools\petools\amd64\ WinPE_FPs \\ .  
 
@@ -224,7 +224,7 @@ Elke versie van Configuration Manager ondersteunt een specifieke versie van de W
     **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files\Windows AIK\Tools\PETools\amd64\WinPE_FPs\en-us\winpe-wds-tools_en-us.cab"**  
 
    > [!TIP]
-   >  Zie [een pakket toevoegen aan een Windows PE-installatie kopie](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd799312(v=ws.10))voor meer informatie over de verschillende pakketten die u aan de installatie kopie kunt toevoegen.
+   >  Zie [een pakket toevoegen aan een Windows PE-installatie kopie](/previous-versions/windows/it-pro/windows-7/dd799312(v=ws.10))voor meer informatie over de verschillende pakketten die u aan de installatie kopie kunt toevoegen.
 
 6. Gebruik DISM om specifieke stuurprogramma's aan de installatiekopie toe te voegen, indien nodig. Typ het volgende om stuurprogramma's aan de installatiekopie toe te voegen, indien nodig:  
 
@@ -290,4 +290,4 @@ Elke versie van Configuration Manager ondersteunt een specifieke versie van de W
 
     3.  Klik op de installatiekopie die u in stap 3 hebt geïdentificeerd.  
 
-    4.  Klik op het tabblad **Start** in de groep **Implementatie** op **Distributiepunten bijwerken**.  
+    4.  Klik op het tabblad **Start** in de groep **Implementatie** op **Distributiepunten bijwerken**.

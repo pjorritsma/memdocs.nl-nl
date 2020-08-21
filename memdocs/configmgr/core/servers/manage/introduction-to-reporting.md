@@ -10,12 +10,12 @@ ms.assetid: 230be984-d2cd-4d53-bd7a-bc24dd93fc22
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: d28638cdf332adbb1d57526179222bb96d6d5c92
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 25ccc3936d156a4d9b5442190ea957b2d1eaf1f6
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128066"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699701"
 ---
 # <a name="introduction-to-reporting-in-configuration-manager"></a>Inleiding tot rapportage in Configuration Manager
 
@@ -39,7 +39,7 @@ Configuration Manager gebruikt SQL Server Reporting Services als de primaire rap
 
 - Exporteert rapporten in verschillende soorten populaire indelingen.  
 
-Zie [Wat is SQL Server Reporting Services (SSRS)?](https://docs.microsoft.com/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports?view=sql-server-ver15) voor meer informatie.
+Zie [Wat is SQL Server Reporting Services (SSRS)?](/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports?view=sql-server-ver15) voor meer informatie.
 
 ## <a name="power-bi-report-server"></a>Power BI Report Server
 
@@ -47,7 +47,7 @@ Zie [Wat is SQL Server Reporting Services (SSRS)?](https://docs.microsoft.com/sq
 
 Met ingang van versie 2002 integreert u Power BI Report Server met Configuration Manager-rapportage. Deze integratie biedt u moderne visualisaties en betere prestaties. Het voegt console ondersteuning toe voor Power BI rapporten die vergelijkbaar zijn met wat er al bestaat met SQL Server Reporting Services. Zie [integreren met Power bi Report Server](powerbi-report-server.md)voor meer informatie.
 
-Power BI Report Server is een on-premises rapport server met een webportal waarin u rapporten kunt weer geven en beheren. Het bevat hulpprogram ma's voor het maken van Power BI rapporten, gepagineerde rapporten, mobiele rapporten en Kpi's. Zie [Wat is Power bi Report Server?](https://docs.microsoft.com/power-bi/report-server/get-started)voor meer informatie.
+Power BI Report Server is een on-premises rapport server met een webportal waarin u rapporten kunt weer geven en beheren. Het bevat hulpprogram ma's voor het maken van Power BI rapporten, gepagineerde rapporten, mobiele rapporten en Kpi's. Zie [Wat is Power bi Report Server?](/power-bi/report-server/get-started)voor meer informatie.
 
 ## <a name="reporting-services-point"></a>Reporting Services-punt
 

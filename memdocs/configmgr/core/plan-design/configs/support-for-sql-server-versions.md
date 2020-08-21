@@ -10,12 +10,12 @@ ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: b30380f4e272050b7224b52d092f39aa8ab5bad4
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: bda64f11d5d2ee9498ce69224ec9a52efc0df902
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383169"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700330"
 ---
 # <a name="supported-sql-server-versions-for-configuration-manager"></a>Ondersteunde SQL Server versies voor Configuration Manager
 
@@ -63,9 +63,9 @@ In een hiërarchie met meerdere sites kunnen verschillende sites verschillende v
 
 - Configuration Manager ondersteunt de versies van SQL Server die u gebruikt.
 - De SQL Server versies die u gebruikt, blijven in de ondersteuning van micro soft.
-- SQL Server ondersteunt replicatie tussen de twee versies van SQL Server. Zie [SQL Server replicatie achterwaartse compatibiliteit](https://docs.microsoft.com/sql/relational-databases/replication/replication-backward-compatibility)voor meer informatie.
+- SQL Server ondersteunt replicatie tussen de twee versies van SQL Server. Zie [SQL Server replicatie achterwaartse compatibiliteit](/sql/relational-databases/replication/replication-backward-compatibility)voor meer informatie.
 
-Voor SQL Server 2016 en voorafgaand aan de ondersteuning voor elke SQL-versie en Service Pack wordt het [micro soft Lifecycle-beleid](https://aka.ms/sqllifecycle)gevolgd. Ondersteuning voor een specifiek SQL Server Service Pack bevat cumulatieve updates, tenzij ze achterwaartse compatibiliteit met de versie van het basis Service Pack verstoren. Vanaf SQL Server 2017 worden service packs niet vrijgegeven, omdat het een [modern service model](https://docs.microsoft.com/archive/blogs/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server)volgt. Het SQL Server-team raadt voortdurend, [proactieve installatie van cumulatieve updates](https://docs.microsoft.com/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism) aan zodra deze beschikbaar komen.
+Voor SQL Server 2016 en voorafgaand aan de ondersteuning voor elke SQL-versie en Service Pack wordt het [micro soft Lifecycle-beleid](https://aka.ms/sqllifecycle)gevolgd. Ondersteuning voor een specifiek SQL Server Service Pack bevat cumulatieve updates, tenzij ze achterwaartse compatibiliteit met de versie van het basis Service Pack verstoren. Vanaf SQL Server 2017 worden service packs niet vrijgegeven, omdat het een [modern service model](/archive/blogs/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server)volgt. Het SQL Server-team raadt voortdurend, [proactieve installatie van cumulatieve updates](/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism) aan zodra deze beschikbaar komen.
 
 Tenzij anders aangegeven, worden de volgende versies van SQL Server ondersteund met alle actieve versies van Configuration Manager. Als ondersteuning voor een nieuwe SQL Server-versie wordt toegevoegd, wordt de Configuration Manager versie die ondersteuning biedt, vermeld. Als de ondersteuning is afgeschaft, zoekt u naar details over betrokken versies van Configuration Manager.
 
@@ -74,7 +74,7 @@ Tenzij anders aangegeven, worden de volgende versies van SQL Server ondersteund 
 
 ### <a name="sql-server-2019-standard-enterprise"></a>SQL Server 2019: Standard, Enter prise
 
-Vanaf Configuration Manager versie 1910 kunt u deze versie gebruiken met cumulatieve update 5 (CU5) of hoger, zolang de cumulatieve update versie wordt ondersteund door de SQL-levens cyclus. CU5 is de minimale vereiste voor SQL Server 2019, omdat hiermee een probleem met [scalaire UDF](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining)-INACTIE wordt opgelost.
+Vanaf Configuration Manager versie 1910 kunt u deze versie gebruiken met cumulatieve update 5 (CU5) of hoger, zolang de cumulatieve update versie wordt ondersteund door de SQL-levens cyclus. CU5 is de minimale vereiste voor SQL Server 2019, omdat hiermee een probleem met [scalaire UDF](/sql/relational-databases/user-defined-functions/scalar-udf-inlining)-INACTIE wordt opgelost.
 
 Deze versie van SQL kan worden gebruikt voor de volgende sites:
 
@@ -85,13 +85,13 @@ Deze versie van SQL kan worden gebruikt voor de volgende sites:
 <!--
 #### Known issue with SQL Server 2019
 
-There's a known issue<!--6436234 with the new [scalar UDF inlining](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining) feature in SQL 2019. To work around this issue and disable UDF lining, run the following script on the SQL 2019 server:
+There's a known issue<!--6436234 with the new [scalar UDF inlining](/sql/relational-databases/user-defined-functions/scalar-udf-inlining) feature in SQL 2019. To work around this issue and disable UDF lining, run the following script on the SQL 2019 server:
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = OFF  
 ```
 
-While not always necessary, you may need to restart the SQL server after you run this script. For more information, see [Disabling Scalar UDF Inlining without changing the compatibility level](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sql-server-ver15#disabling-scalar-udf-inlining-without-changing-the-compatibility-level).
+While not always necessary, you may need to restart the SQL server after you run this script. For more information, see [Disabling Scalar UDF Inlining without changing the compatibility level](/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sql-server-ver15#disabling-scalar-udf-inlining-without-changing-the-compatibility-level).
 
 You can safely disable this SQL feature for the site database server because Configuration Manager doesn't use it.
 
@@ -187,7 +187,7 @@ Configuration Manager ondersteunt twee uitzonde ringen op deze sortering voor de
 
 ### <a name="database-compatibility-level"></a>Compatibiliteits niveau van data base
 
-Configuration Manager vereist dat het compatibiliteits niveau voor de site database niet lager is dan de laagste versie die wordt ondersteund SQL Server voor uw Configuration Manager versie. Bijvoorbeeld, beginnend met versie 1702, moet u een [compatibiliteits niveau voor de data base](https://docs.microsoft.com/sql/relational-databases/databases/view-or-change-the-compatibility-level-of-a-database) hebben dat groter is dan of gelijk is aan 110. <!-- SMS.506266-->
+Configuration Manager vereist dat het compatibiliteits niveau voor de site database niet lager is dan de laagste versie die wordt ondersteund SQL Server voor uw Configuration Manager versie. Bijvoorbeeld, beginnend met versie 1702, moet u een [compatibiliteits niveau voor de data base](/sql/relational-databases/databases/view-or-change-the-compatibility-level-of-a-database) hebben dat groter is dan of gelijk is aan 110. <!-- SMS.506266-->
 
 ### <a name="sql-server-features"></a>SQL Server functies
 
@@ -205,7 +205,7 @@ Gebruik een toegewezen exemplaar van SQL Server voor elke site. Het exemplaar ka
 
 ### <a name="sql-server-memory"></a>SQL Server geheugen
 
-Reserveer geheugen voor de SQL Server met behulp van SQL Server Management Studio. Stel de instelling **minimum server geheugen** in onder **Server geheugen opties**. Zie [SQL Server-configuratie van geheugen server](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options)voor meer informatie over het configureren van deze instelling.  
+Reserveer geheugen voor de SQL Server met behulp van SQL Server Management Studio. Stel de instelling **minimum server geheugen** in onder **Server geheugen opties**. Zie [SQL Server-configuratie van geheugen server](/sql/database-engine/configure-windows/server-memory-server-configuration-options)voor meer informatie over het configureren van deze instelling.  
 
 - **Voor een database server die u installeert op dezelfde computer als de site server**: Beperk het geheugen voor SQL Server tot 50 tot 80 procent van het beschik bare systeem geheugen dat kan worden aanhouden.  
 
@@ -219,11 +219,11 @@ Reserveer geheugen voor de SQL Server met behulp van SQL Server Management Studi
 
 ### <a name="sql-nested-triggers"></a>Geneste SQL-triggers
 
-Genest SQL-triggers moet zijn ingeschakeld. Zie [configuratie van de geneste triggers-server configureren](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option) voor meer informatie.
+Genest SQL-triggers moet zijn ingeschakeld. Zie [configuratie van de geneste triggers-server configureren](/sql/database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option) voor meer informatie.
 
 ### <a name="sql-server-clr-integration"></a>SQL Server CLR-integratie
 
-SQL Server Common Language Runtime (CLR) moet zijn ingeschakeld voor de sitedatabase. Deze optie wordt automatisch ingeschakeld wanneer Configuration Manager wordt geïnstalleerd. Zie [Introduction to SQL Server CLR Integration](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration)(Engelstalig) voor meer informatie over CLR.  
+SQL Server Common Language Runtime (CLR) moet zijn ingeschakeld voor de sitedatabase. Deze optie wordt automatisch ingeschakeld wanneer Configuration Manager wordt geïnstalleerd. Zie [Introduction to SQL Server CLR Integration](/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration)(Engelstalig) voor meer informatie over CLR.  
 
 ### <a name="sql-server-service-broker-ssb"></a>SQL Server Service Broker (SSB)
 
@@ -231,9 +231,9 @@ De SQL Server Service Broker is vereist voor intersite-replicatie en voor één 
 
 ### <a name="trustworthy-setting"></a>Betrouw bare instelling
 
-Configuration Manager schakelt automatisch de [eigenschap SQL TRUSTWORTHY data base](https://docs.microsoft.com/sql/relational-databases/security/trustworthy-database-property)in. Configuration Manager moet zijn **ingeschakeld**voor deze eigenschap.
+Configuration Manager schakelt automatisch de [eigenschap SQL TRUSTWORTHY data base](/sql/relational-databases/security/trustworthy-database-property)in. Configuration Manager moet zijn **ingeschakeld**voor deze eigenschap.
 
-## <a name="optional-configurations-for-sql-server"></a><a name="bkmk_optional"></a>Optionele configuraties voor SQL Server
+## <a name="optional-configurations-for-sql-server"></a><a name="bkmk_optional"></a> Optionele configuraties voor SQL Server
 
 De volgende configuraties zijn optioneel voor elke database die een volledige installatie van SQL Server gebruikt.  
 
@@ -255,7 +255,7 @@ Wanneer de computer met SQL Server niet het lokale systeem account gebruikt om d
 
 Zie [de SPN voor de site database server beheren](../../servers/manage/modify-your-infrastructure.md#bkmk_SPN)voor meer informatie over spn's voor de site database.  
 
-Voor informatie over het wijzigen van het account dat wordt gebruikt door de SQL Server-service, raadpleegt u [SCM Services-het account voor het opstarten van de service wijzigen](https://docs.microsoft.com/sql/database-engine/configure-windows/scm-services-change-the-service-startup-account).  
+Voor informatie over het wijzigen van het account dat wordt gebruikt door de SQL Server-service, raadpleegt u [SCM Services-het account voor het opstarten van de service wijzigen](/sql/database-engine/configure-windows/scm-services-change-the-service-startup-account).  
 
 ### <a name="sql-server-reporting-services"></a>SQL Server Reporting Services
 
@@ -290,7 +290,7 @@ Wanneer een computer met SQL Server een Data Base van meer dan één site host, 
 
 Als u een firewall hebt ingeschakeld op de computer waarop SQL Server, moet u ervoor zorgen dat deze is geconfigureerd zodat de poorten die worden gebruikt door uw implementatie en op elke locatie in het netwerk tussen computers die met de SQL Server communiceren, worden toegestaan.  
 
-Zie [een server configureren om te Luis teren naar een specifieke TCP-poort](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port)voor een voor beeld van het configureren van SQL Server voor het gebruik van een specifieke poort.  
+Zie [een server configureren om te Luis teren naar een specifieke TCP-poort](/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port)voor een voor beeld van het configureren van SQL Server voor het gebruik van een specifieke poort.  
 
 ## <a name="upgrade-options-for-sql-server"></a>Upgrade opties voor SQL Server
 

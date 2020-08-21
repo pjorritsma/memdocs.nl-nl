@@ -10,12 +10,12 @@ ms.assetid: 95033a9b-ff13-4b70-b1de-bcb25bcb6024
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 652a0c5e36ce7c4bacf40531a82fdf4e16197d95
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 4f1d89707fa3e1765067c264d2abec12116bde88
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906921"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697718"
 ---
 # <a name="customize-operating-system-images-with-configuration-manager"></a>Installatie kopieën van een besturings systeem aanpassen met Configuration Manager
 
@@ -23,10 +23,10 @@ ms.locfileid: "82906921"
 
 Installatie kopieën van besturings systemen in Configuration Manager zijn WIM-bestanden en vertegenwoordigen een gecomprimeerde verzameling referentie bestanden en-mappen die zijn vereist om een besturings systeem correct te installeren en te configureren op een computer. Een installatiekopie van een besturingssysteem wordt samengesteld en vastgelegd vanaf een referentiecomputer die u configureert met alle vereiste besturingssysteembestanden, ondersteuningsbestanden, software-updates, hulpprogramma's en andere softwaretoepassingen. U bepaalt zelf de mate waarin u de referentiecomputer handmatig configureert. U kunt de configuratie van de referentiecomputer volledig automatiseren door een takenreeks samen te stellen en vast te leggen, u kunt een aantal aspecten van de referentiecomputer handmatig configureren en vervolgens de rest automatiseren met behulp takenreeksen of u kunt de referentiecomputer handmatig configureren zonder gebruik te maken van takenreeksen. Gebruik de volgende secties om een besturings systeem aan te passen.
 
-##  <a name="prepare-for-the--reference-computer"></a><a name="BKMK_PrepareReferenceComputer"></a>De referentie computer voorbereiden  
+##  <a name="prepare-for-the--reference-computer"></a><a name="BKMK_PrepareReferenceComputer"></a> De referentie computer voorbereiden  
  Voordat u een installatiekopie van besturingssysteem van een referentiecomputer vastlegt, moet u rekening houden met verschillende aspecten.  
 
-###  <a name="decide-between-an-automated-or-manual-configuration"></a><a name="BKMK_RefComputerDecide"></a>Kiezen tussen een automatische of hand matige configuratie  
+###  <a name="decide-between-an-automated-or-manual-configuration"></a><a name="BKMK_RefComputerDecide"></a> Kiezen tussen een automatische of hand matige configuratie  
  Verderop vindt u informatie over de voordelen en nadelen van een automatische en handmatige configuratie van de referentiecomputer.  
 
 #### <a name="automated-configuration"></a>Automatische configuratie  
@@ -61,7 +61,7 @@ Installatie kopieën van besturings systemen in Configuration Manager zijn WIM-b
 
 - Vereist een persoon die actief betrokken wordt tijdens het proces.  
 
-###  <a name="considerations-for-the-reference-computer"></a><a name="BKMK_RefComputerConsiderations"></a>Overwegingen voor de referentie computer  
+###  <a name="considerations-for-the-reference-computer"></a><a name="BKMK_RefComputerConsiderations"></a> Overwegingen voor de referentie computer  
  Verderop staat de lijst van basiselementen waarmee u rekening moet houden bij de configuratie van een referentiecomputer.  
 
 -   **Te implementeren besturingssysteem**  
@@ -95,7 +95,7 @@ Installatie kopieën van besturings systemen in Configuration Manager zijn WIM-b
     > [!IMPORTANT]  
     >  De [Windows voorbereiden voor vastleggen](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture) takenreeks tracht het lokale beheerderswachtwoord op de referentiecomputer opnieuw in te stellen op een lege waarde voordat Sysprep draait. Indien het lokale beveiligingsbeleid **Het wachtwoord moet aan de complexiteitsvereisten voldoen** ingeschakeld is, slaagt deze takenreeksstap er niet in om het beheerderswachtwoord opnieuw in te stellen. Schakel in dit geval het beleid uit indien u de takenreeks uitvoert.  
 
-     Zie [Sysprep (systeem voorbereiding) Overview (Engelstalig)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview)voor meer informatie over Sysprep.  
+     Zie [Sysprep (systeem voorbereiding) Overview (Engelstalig)](/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview)voor meer informatie over Sysprep.  
 
 -   **Juiste hulpprogramma's en scripts die zijn vereist om installatie-scenario's in te perken**  
 
@@ -105,7 +105,7 @@ Installatie kopieën van besturings systemen in Configuration Manager zijn WIM-b
 
      U kunt de referentiecomputer configureren met de aanpassingskenmerken voor het bureaublad die u wenst over te nemen wanneer u de installatiekopie van het besturingssysteem van de referentiecomputer vastlegt. Bureaubladkenmerken omvatten achtergrond, huisstijl van de organisatie en een standaardgebruikersprofiel.  
 
-##  <a name="manually-build-a-reference-computer"></a><a name="BKMK_ManuallyBuildReference"></a>Hand matig een referentie computer bouwen  
+##  <a name="manually-build-a-reference-computer"></a><a name="BKMK_ManuallyBuildReference"></a> Hand matig een referentie computer bouwen  
  Gebruik de volgende procedure om handmatig een referentiecomputer te bouwen.  
 
 > [!NOTE]  
@@ -128,7 +128,7 @@ Installatie kopieën van besturings systemen in Configuration Manager zijn WIM-b
 
    Zodra de referentiecomputer klaar is, gebruikt u een takenreeks om de installatiekopie van het besturingssysteem van de referentiecomputer vast te leggen.  Zie [Een installatiekopie van een besturingssysteem vastleggen vanaf een bestaande referentiecomputer](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_CaptureExistingRefComputer) voor gedetailleerde stappen.  
 
-##  <a name="use-a-task-sequence-to-build-a-reference-computer"></a><a name="BKMK_UseTSToBuildReference"></a>Een referentie computer bouwen met een taken reeks  
+##  <a name="use-a-task-sequence-to-build-a-reference-computer"></a><a name="BKMK_UseTSToBuildReference"></a> Een referentie computer bouwen met een taken reeks  
  U kunt het proces voor het maken van een referentiecomputer automatiseren door een takenreeks te gebruiken waarmee u het besturingsysteem, de stuurprogramma's, de toepassingen, enzovoort implementeert.  Voer de volgende stappen uit om de referentiecomputer te bouwen en vervolgens de installatiekopie van het besturingssysteem vanaf de referentiecomputer vast te leggen.  
 
--   Gebruik een takenreeks om de installatiekopie van het referentiebesturingssysteem te maken en vast te leggen.  Zie [Een referentiecomputer bouwen en vastleggen met behulp van een takenreeks](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_BuildCaptureTS) voor gedetailleerde stappen.  
+-   Gebruik een takenreeks om de installatiekopie van het referentiebesturingssysteem te maken en vast te leggen.  Zie [Een referentiecomputer bouwen en vastleggen met behulp van een takenreeks](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_BuildCaptureTS) voor gedetailleerde stappen.

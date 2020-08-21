@@ -10,12 +10,12 @@ ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9f0ed1d5913154d90242d1aa2a47efbcf7d22282
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: 2dd722ddcf0e5ea6e944a76366204ac83ede05ec
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943787"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698953"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Lijst met vereisten controles voor Configuration Manager
 
@@ -161,7 +161,7 @@ De primaire site die u wilt uitbreiden, is een zelfstandige primaire site. Deze 
 
 De Windows Firewall is uitgeschakeld of er bestaat een relevante uitzonde ring Windows Firewall voor SQL Server.
 
-Het maken van Sqlservr. exe of de vereiste TCP-poorten voor externe toegang. SQL Server luistert standaard op TCP-poort 1433 en gebruikt de SQL Server Service Broker (SSB) TCP-poort 4022.
+Toestaan dat Sqlservr.exe of de vereiste TCP-poorten extern toegankelijk zijn. SQL Server luistert standaard op TCP-poort 1433 en gebruikt de SQL Server Service Broker (SSB) TCP-poort 4022.
 
 ### <a name="free-disk-space-on-site-server"></a>Beschik bare schijf ruimte op site server
 
@@ -279,7 +279,7 @@ Zie het Microsoft Ondersteuning-artikel over [problemen bij het installeren van 
 
 Het exemplaar voor SQL Server is geconfigureerd voor het gebruik van de **SQL_Latin1_General_CP1_CI_AS** collatie.
 
-Als de Configuration Manager-site database al is geïnstalleerd, is deze controle ook van toepassing op de data base. Zie [ondersteuning voor SQL-sortering en Unicode](https://docs.microsoft.com/sql/relational-databases/collations/collation-and-unicode-support)voor meer informatie over het wijzigen van de SQL Server exemplaar-en database sorteringen.
+Als de Configuration Manager-site database al is geïnstalleerd, is deze controle ook van toepassing op de data base. Zie [ondersteuning voor SQL-sortering en Unicode](/sql/relational-databases/collations/collation-and-unicode-support)voor meer informatie over het wijzigen van de SQL Server exemplaar-en database sorteringen.
 
 Als u een Chinees besturings systeem gebruikt en ondersteuning voor GB18030 vereist, is deze controle niet van toepassing. Zie [internationale ondersteuning](../../../plan-design/hierarchy/international-support.md)voor meer informatie over het inschakelen van GB18030-ondersteuning.
 
@@ -379,7 +379,7 @@ Wanneer u SQL Server always on gebruikt, zijn de replica's van de beschikbaarhei
 <!-- SCCMDocs-pr#3899 -->
 *Van toepassing op: site database server*
 
-Vanaf versie 1906, wanneer u SQL Server always on gebruikt, moet u replica's van beschikbaarheids groepen configureren met dezelfde [seeding-modus](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas).
+Vanaf versie 1906, wanneer u SQL Server always on gebruikt, moet u replica's van beschikbaarheids groepen configureren met dezelfde [seeding-modus](/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas).
 
 ### <a name="sql-availability-group-replicas-must-be-healthy"></a>Replica's van de SQL-beschikbaarheids groep moeten in orde zijn
 
@@ -633,7 +633,7 @@ De Configuration Manager computer is lid van een Windows-domein.
 
 De Windows Firewall is uitgeschakeld of er bestaat een relevante Windows Firewall uitzonde ring voor SQL Server.
 
-Het maken van Sqlservr. exe of de vereiste TCP-poorten voor externe toegang. SQL Server luistert standaard op TCP-poort 1433 en maakt gebruik van TCP-poort 4022 op de Server Service Broker (SSB).
+Toestaan dat Sqlservr.exe of de vereiste TCP-poorten extern toegankelijk zijn. SQL Server luistert standaard op TCP-poort 1433 en maakt gebruik van TCP-poort 4022 op de Server Service Broker (SSB).
 
 ### <a name="firewall-exception-for-sql-server-for-management-point"></a>Firewall-uitzonde ring voor SQL Server voor beheer punt
 
@@ -673,7 +673,7 @@ Er zijn geen software-updates die zijn ingeschakeld voor NAP.
 
 Het schijf station is geformatteerd met het NTFS-bestands systeem. Voor betere beveiliging installeert u Site Server onderdelen op schijf stations die zijn geformatteerd met het NTFS-bestands systeem.
 
-### <a name="pending-configuration-item-policy-updates"></a><a name="bkmk_pending-policy"></a>Updates van beleid voor configuratie-items in behandeling
+### <a name="pending-configuration-item-policy-updates"></a><a name="bkmk_pending-policy"></a> Updates van beleid voor configuratie-items in behandeling
 
 <!--SCCMDocs-pr issue 2814-->
 
@@ -735,13 +735,13 @@ Pakketten bevatten ongeldige tekens in de share naam, zoals `#` .
 
 Het account dat u hebt geconfigureerd voor het uitvoeren van de SQL Server-service voor het exemplaar van de site database, heeft een geldige Service Principal Name (SPN) in Active Directory Domain Services. Registreer een geldige SPN in Active Directory ter ondersteuning van Kerberos-verificatie.
 
-### <a name="sql-server-change-tracking-cleanup"></a><a name="bkmk_changetracking"></a>SQL Server opschonen van wijzigingen bijhouden
+### <a name="sql-server-change-tracking-cleanup"></a><a name="bkmk_changetracking"></a> SQL Server opschonen van wijzigingen bijhouden
 
 *Van toepassing op: site database server*
 
 Start in versie 1810, Controleer of de site database een achterstand heeft voor het bijhouden van SQL-wijzigingen.<!--SCCMDocs-pr issue 3023-->  
 
-U moet deze controle hand matig controleren door een opgeslagen diagnostische procedure uit te voeren in de site database. Maak eerst een [Diagnostische verbinding](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017) met uw site database. De eenvoudigste methode is om de query-editor van de data base engine van SQL Server Management Studio te gebruiken en verbinding te maken met `admin:<instance name>` .
+U moet deze controle hand matig controleren door een opgeslagen diagnostische procedure uit te voeren in de site database. Maak eerst een [Diagnostische verbinding](/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017) met uw site database. De eenvoudigste methode is om de query-editor van de data base engine van SQL Server Management Studio te gebruiken en verbinding te maken met `admin:<instance name>` .
 
 Voer de volgende opdrachten uit in een exclusieve beheerders verbindings venster:
 
@@ -804,7 +804,7 @@ Configuration Manager gebruikt SQL Server Native Client op de volgende site syst
 
 SQL Server reserveert mini maal 8 GB aan geheugen voor de centrale beheer site en primaire site, en mini maal 4 GB geheugen voor de secundaire site.
 
-Zie [geheugen opties configureren met SQL Server Management Studio](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options#how-to-configure-memory-options-using-)voor meer informatie.
+Zie [geheugen opties configureren met SQL Server Management Studio](/sql/database-engine/configure-windows/server-memory-server-configuration-options#how-to-configure-memory-options-using-)voor meer informatie.
 
 > [!NOTE]  
 > Deze controle is niet van toepassing op SQL Server Express op een secundaire site. Deze editie is beperkt tot 1 GB gereserveerd geheugen.  
@@ -849,7 +849,7 @@ Zie [Active Directory voorbereiden voor het publiceren van sites](../../../plan-
 
 WinRM 1,1 is geïnstalleerd op de primaire site server of de Configuration Manager-console computer om de out-of-band-beheer console uit te voeren.
 
-WinRM wordt automatisch geïnstalleerd met alle versies van Windows die momenteel worden ondersteund. Zie [installatie en configuratie voor Windows Remote Management](https://docs.microsoft.com/windows/win32/winrm/installation-and-configuration-for-windows-remote-management)voor meer informatie.
+WinRM wordt automatisch geïnstalleerd met alle versies van Windows die momenteel worden ondersteund. Zie [installatie en configuratie voor Windows Remote Management](/windows/win32/winrm/installation-and-configuration-for-windows-remote-management)voor meer informatie.
 
 ### <a name="wsus-on-site-server"></a>WSUS op site server
 
@@ -857,4 +857,4 @@ WinRM wordt automatisch geïnstalleerd met alle versies van Windows die momentee
 
 Er is een ondersteunde versie van Windows Server Update Services (WSUS) geïnstalleerd op de site server.
 
-Wanneer u een software-update punt op een andere server dan de site server gebruikt, moet u de WSUS-beheer console op de site server installeren. Zie [Windows Server Update Services](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus)voor meer informatie over WSUS.
+Wanneer u een software-update punt op een andere server dan de site server gebruikt, moet u de WSUS-beheer console op de site server installeren. Zie [Windows Server Update Services](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus)voor meer informatie over WSUS.

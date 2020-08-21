@@ -10,12 +10,12 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 378a5de5633d7a526004d84ec5e6885e165eaadb
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 0401207ec98331c33e87a0ac03b5cd7f750c17e7
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128981"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698711"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 1906 van Configuration Manager current branch
 
@@ -28,7 +28,7 @@ Bekijk altijd de laatste controle lijst voor het installeren van deze update. Zi
 Als u optimaal wilt profiteren van de nieuwe functies van Configuration Manager, moet u na het bijwerken van de site ook clients bijwerken naar de nieuwste versie. Wanneer u de-site en-console bijwerkt terwijl er nieuwe functionaliteit wordt weer gegeven in de Configuration Manager-console, is het volledige scenario niet functioneel totdat de client versie ook het meest recent is.
 
 > [!Tip]  
-> Als u een melding wilt ontvangen wanneer deze pagina wordt bijgewerkt, kopieert en plakt u de volgende URL in uw RSS feed-lezer:`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1906+-+Configuration+Manager%22&locale=en-us`
+> Als u een melding wilt ontvangen wanneer deze pagina wordt bijgewerkt, kopieert en plakt u de volgende URL in uw RSS feed-lezer: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1906+-+Configuration+Manager%22&locale=en-us`
 
 
 ## <a name="requirement-changes"></a>Vereiste wijzigingen
@@ -45,7 +45,7 @@ Vanwege de nadelen van het algoritme SHA-1 en om af te stemmen op industrie stan
 Zie [vereisten voor Windows-clients](../../clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md#bkmk_sha2)voor meer informatie.
 
 
-## <a name="site-infrastructure"></a><a name="bkmk_infra"></a>Site-infra structuur
+## <a name="site-infrastructure"></a><a name="bkmk_infra"></a> Site-infra structuur
 
 ### <a name="site-server-maintenance-task-improvements"></a>Verbeteringen in de onderhouds taak van de site server
 
@@ -87,7 +87,7 @@ Zie [Management Insights](../../servers/manage/management-insights.md#security)v
 
 - Een nieuwe synchrone replica toevoegen vanuit Setup<!--3127336-->: U kunt nu een nieuw secundair replica-knoop punt toevoegen aan een bestaande SQL always on-beschikbaarheids groep. Gebruik Configuration Manager Setup om deze wijziging door te voeren in plaats van een hand matig proces. Zie SQL Server AlwaysOn- [beschikbaarheids groepen configureren](../../servers/deploy/configure/configure-aoag.md#bkmk_sync)voor meer informatie.
 
-- Failover met meerdere subnetten<!-- SCCMDocs-pr#3734 -->: U kunt het [sleutel woord MultiSubnetFailover Connection String](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) nu inschakelen in SQL Server. U moet de site server ook hand matig configureren. Zie voor meer informatie de [failover-vereiste voor meerdere subnetten](../../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md#multi-subnet-failover) .
+- Failover met meerdere subnetten<!-- SCCMDocs-pr#3734 -->: U kunt het [sleutel woord MultiSubnetFailover Connection String](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) nu inschakelen in SQL Server. U moet de site server ook hand matig configureren. Zie voor meer informatie de [failover-vereiste voor meerdere subnetten](../../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md#multi-subnet-failover) .
 
 - Ondersteuning voor gedistribueerde weer gaven<!-- SCCMDocs-pr#3792 -->: De site database kan worden gehost op een SQL Server AlwaysOn-beschikbaarheids groep, en u kunt database replicatie koppelingen inschakelen om [gedistribueerde weer gaven](../hierarchy/data-transfers-between-sites.md#bkmk_dbrep)te gebruiken.
 
@@ -101,7 +101,7 @@ Zie [Management Insights](../../servers/manage/management-insights.md#security)v
     - Replica's van de SQL-beschikbaarheids groep moeten allemaal dezelfde seeding-modus hebben
     - Replica's van de SQL-beschikbaarheids groep moeten in orde zijn
 
-## <a name="cloud-attached-management"></a><a name="bkmk_cloud"></a>Cloud-gekoppeld beheer
+## <a name="cloud-attached-management"></a><a name="bkmk_cloud"></a> Cloud-gekoppeld beheer
 
 ### <a name="azure-active-directory-user-group-discovery"></a>Detectie van gebruikers groepen Azure Active Directory
 
@@ -122,7 +122,7 @@ Met de synchronisatie kunt u uw bestaande on-premises groeperings regels in de C
 Zie [verzamelingen maken](../../clients/manage/collections/create-collections.md#bkmk_aadcollsync)voor meer informatie.
 
 
-## <a name="desktop-analytics"></a><a name="bkmk_da"></a>Desktop Analytics
+## <a name="desktop-analytics"></a><a name="bkmk_da"></a> Desktop Analytics
 
 ### <a name="readiness-insights-for-desktop-apps"></a>Gereedheids inzichten voor desktop-apps
 
@@ -141,7 +141,7 @@ Gebruik het DesktopAnalyticsLogsCollector.ps1-hulp programma vanuit de Configura
 Zie [Logboeken](../../../desktop-analytics/log-collector.md)voor meer informatie.
 
 
-## <a name="real-time-management"></a><a name="bkmk_real"></a>Real-time beheer
+## <a name="real-time-management"></a><a name="bkmk_real"></a> Real-time beheer
 
 ### <a name="add-joins-additional-operators-and-aggregators-in-cmpivot"></a>Voeg koppelingen, extra Opera tors en aggregators toe in CMPivot
 
@@ -174,7 +174,7 @@ De volgende machtigingen zijn toegevoegd aan de ingebouwde rol [**beveiligings b
 Zie [CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot_secadmin1906)voor meer informatie.
 
 
-## <a name="content-management"></a><a name="bkmk_content"></a>Inhouds beheer
+## <a name="content-management"></a><a name="bkmk_content"></a> Inhouds beheer
 
 ### <a name="delivery-optimization-download-data-in-client-data-sources-dashboard"></a>Bezorgings optimalisatie gegevens downloaden in het dash board client gegevens bronnen
 
@@ -193,12 +193,12 @@ Deze cache server fungeert als transparante cache op aanvraag voor inhoud die wo
 Zie [Delivery Optimization in-Network cache in Configuration Manager](../hierarchy/microsoft-connected-cache.md)voor meer informatie.
 
 
-## <a name="client-management"></a><a name="bkmk_client"></a>Client beheer
+## <a name="client-management"></a><a name="bkmk_client"></a> Client beheer
 
 ### <a name="support-for-windows-virtual-desktop"></a>Ondersteuning voor virtueel bureau blad van Windows
 
 <!--3556025-->
-[Virtueel bureau blad van Windows](https://docs.microsoft.com/azure/virtual-desktop/) is een preview-functie van Microsoft Azure en Microsoft 365. U kunt nu Configuration Manager gebruiken voor het beheren van deze virtuele apparaten waarop Windows wordt uitgevoerd in Azure.
+[Virtueel bureau blad van Windows](/azure/virtual-desktop/) is een preview-functie van Microsoft Azure en Microsoft 365. U kunt nu Configuration Manager gebruiken voor het beheren van deze virtuele apparaten waarop Windows wordt uitgevoerd in Azure.
 
 Net als bij een Terminal Server kunnen deze virtuele apparaten meerdere gelijktijdige actieve gebruikers sessies. Als u de client prestaties wilt helpen, schakelt Configuration Manager nu het gebruikers beleid uit op elk apparaat dat deze sessies met meerdere gebruikers mogelijk maakt. Zelfs als u gebruikers beleid inschakelt, schakelt de client deze standaard uit op deze apparaten, waaronder Windows Virtual Desktop en Terminal servers.
 
@@ -231,7 +231,7 @@ U kunt nu de minimale tijd opgeven waarop de Configuration Manager-client de inh
 Zie [client cache-instellingen](../../clients/deploy/about-client-settings.md#client-cache-settings)voor meer informatie.
 
 
-## <a name="co-management"></a><a name="bkmk_comgmt"></a>Co-beheer
+## <a name="co-management"></a><a name="bkmk_comgmt"></a> Co-beheer
 
 ### <a name="improvements-to-co-management-auto-enrollment"></a>Verbeteringen in de automatische inschrijving van co-beheer
 
@@ -263,7 +263,7 @@ Zie [co-beheer inschakelen](../../../comanage/how-to-enable.md)voor meer informa
 Klanten van de Amerikaanse overheid kunnen nu co-beheer gebruiken met de Azure-Cloud voor de Amerikaanse overheid (portal.azure.us). Zie [co-beheer inschakelen](../../../comanage/how-to-enable.md)voor meer informatie.
 
 
-## <a name="application-management"></a><a name="bkmk_app"></a>Toepassings beheer
+## <a name="application-management"></a><a name="bkmk_app"></a> Toepassings beheer
 
 ### <a name="filter-applications-deployed-to-devices"></a>Toepassingen die zijn geïmplementeerd op apparaten filteren
 
@@ -311,7 +311,7 @@ Deze release bevat de volgende verbeteringen voor het goed keuren van apps:
 Zie [toepassingen goed keuren](../../../apps/deploy-use/app-approval.md)voor meer informatie.
 
 
-## <a name="os-deployment"></a><a name="bkmk_osd"></a>Implementatie van besturings systeem
+## <a name="os-deployment"></a><a name="bkmk_osd"></a> Implementatie van besturings systeem
 
 ### <a name="task-sequence-debugger"></a>Fout opsporing voor taken reeksen
 
@@ -377,7 +377,7 @@ Deze release bevat de volgende verbeteringen voor de implementatie van het bestu
 De optie 82 tijdens de PXE DHCP-Handshake wordt nu ondersteund met de PXE-responder zonder WDS. De optie 82 wordt niet ondersteund met WDS.
 
 
-## <a name="software-center"></a><a name="bkmk_userxp"></a>Software Center
+## <a name="software-center"></a><a name="bkmk_userxp"></a> Software Center
 
 ### <a name="improvements-to-software-center-tab-customizations"></a>Verbeteringen aan het tabblad aanpassingen in het Software Center
 
@@ -449,7 +449,7 @@ U kunt deze syntaxis ook gebruiken om standaard tabbladen in Software Center te 
 
 Zie het [tabblad Software Center](../../clients/deploy/about-client-settings.md#software-center-tab-visibility)voor meer informatie.
 
-## <a name="software-updates"></a><a name="bkmk_sum"></a>Software-updates
+## <a name="software-updates"></a><a name="bkmk_sum"></a> Software-updates
 
 ### <a name="additional-options-for-wsus-maintenance"></a>Aanvullende opties voor WSUS-onderhoud
 
@@ -484,7 +484,7 @@ Zie [client instellingen voor software-updates](../../clients/deploy/about-clien
 
 <!--4682946-->
 
-**Windows 10, versie 1903 en hoger** is toegevoegd aan Microsoft Update als een eigen product in plaats van dat ze deel uitmaken van het **Windows 10** -product zoals eerdere versies. Als gevolg van deze wijziging hebt u een aantal hand matige stappen uitgevoerd om ervoor te zorgen dat uw clients deze updates zien. We hebben geholpen het aantal hand matige stappen te verminderen dat u voor het nieuwe product moet uitvoeren.
+**Windows 10, versie 1903 en hoger** is toegevoegd aan Microsoft Update als een eigen product in plaats van dat ze deel uitmaken van het **Windows 10**  -product zoals eerdere versies. Als gevolg van deze wijziging hebt u een aantal hand matige stappen uitgevoerd om ervoor te zorgen dat uw clients deze updates zien. We hebben geholpen het aantal hand matige stappen te verminderen dat u voor het nieuwe product moet uitvoeren.
 
 Wanneer u bijwerkt naar Configuration Manager versie 1906 en het **Windows 10** -product hebt geselecteerd voor synchronisatie, worden de volgende acties automatisch uitgevoerd:
 
@@ -508,7 +508,7 @@ De **weer gave** die is vereist, is beschikbaar op de volgende locaties:
 Zie [software-updates bewaken](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates), [Windows als een service beheren](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates)en [Office 365 ProPlus-updates beheren](../../../sum/deploy-use/manage-office-365-proplus-updates.md)voor meer informatie.
 
 
-## <a name="office-management"></a><a name="bkmk_o365"></a>Office-beheer
+## <a name="office-management"></a><a name="bkmk_o365"></a> Office-beheer
 
 ### <a name="office-365-proplus-upgrade-readiness-dashboard"></a>Office 365 ProPlus upgrade gereedheids dashboard
 
@@ -519,7 +519,7 @@ Om te bepalen welke apparaten klaar zijn om te upgraden naar Office 365 ProPlus,
 Zie voor meer informatie over het dash board, vereisten en het gebruik van deze gegevens [integratie voor Office 365 ProPlus-gereedheid](../../../sum/deploy-use/office-365-dashboard.md#bkmk_readiness-dash).
 
 
-## <a name="protection"></a><a name="bkmk_protect"></a>Kantel
+## <a name="protection"></a><a name="bkmk_protect"></a> Kantel
 
 ### <a name="windows-defender-application-guard-file-trust-criteria"></a>Vertrouwens criteria voor Windows Defender Application Guard-bestanden
 
@@ -530,7 +530,7 @@ Er is een nieuwe beleids instelling waarmee gebruikers bestanden kunnen vertrouw
 Zie [Windows Defender Application Guard-beleid maken en implementeren](../../../protect/deploy-use/create-deploy-application-guard-policy.md#bkmk_FM)voor meer informatie.
 
 
-## <a name="configuration-manager-console"></a><a name="bkmk_admin"></a>Configuration Manager-console
+## <a name="configuration-manager-console"></a><a name="bkmk_admin"></a> Configuration Manager-console
 
 ### <a name="role-based-access-for-folders"></a>Op rollen gebaseerde toegang voor mappen
 
@@ -598,7 +598,7 @@ Vouw in de werk ruimte **software bibliotheek** **besturings systemen**uit en se
 Selecteer **client bewerkingen**in de werk ruimte **bewaking** . De bewerking om **over te scha kelen naar het volgende software-update punt** heeft nu de juiste naam.
 
 
-## <a name="deprecated-features-and-operating-systems"></a><a name="bkmk_deprecated"></a>Afgeschafte functies en besturings systemen
+## <a name="deprecated-features-and-operating-systems"></a><a name="bkmk_deprecated"></a> Afgeschafte functies en besturings systemen
 
 Meer informatie over ondersteunings wijzigingen voordat ze worden geïmplementeerd in [verwijderde en afgeschafte items](deprecated/removed-and-deprecated.md).
 
@@ -622,7 +622,7 @@ Vanaf deze versie zijn de volgende functies niet meer voorlopige versie:
 
 Afgezien van nieuwe functies bevat deze release ook aanvullende wijzigingen, zoals oplossingen voor problemen. Zie [overzicht van wijzigingen in Configuration Manager current branch, versie 1906](https://support.microsoft.com/help/4514258)voor meer informatie.
 
-Zie [release opmerkingen voor Power shell versie 1906](https://docs.microsoft.com/powershell/sccm/1906-release-notes?view=sccm-ps)voor meer informatie over wijzigingen in de Windows Power shell-cmdlets voor Configuration Manager.
+Zie [release opmerkingen voor Power shell versie 1906](/powershell/sccm/1906-release-notes?view=sccm-ps)voor meer informatie over wijzigingen in de Windows Power shell-cmdlets voor Configuration Manager.
 
 Het volgende update pakket (4517869) is beschikbaar in de-console vanaf 1 oktober 2019: [Update pakket voor Configuration Manager current branch, versie 1906](https://support.microsoft.com/help/4517869).
 

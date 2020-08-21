@@ -10,12 +10,12 @@ ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 46d2af2d89e41e931add0f77931b442b68835235
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 8d766a172f934e27398ec2633ef0ec23ba4ade5e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906466"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700681"
 ---
 # <a name="back-up-a-configuration-manager-site"></a>Back-up van een Configuration Manager-site
 
@@ -47,7 +47,7 @@ De secties in dit artikel kunnen u helpen bij het maken van een back-up van uw s
 ####  <a name="using-data-protection-manager-to-back-up-your-site-database"></a>Data Protection Manager gebruiken om een back-up te maken van uw sitedatabase
 U kunt System Center Data Protection Manager (DPM) gebruiken om een back-up te maken van uw Configuration Manager-site database.
 
-Maak een nieuwe beveiligings groep in DPM voor de site database computer. Selecteer op de pagina **groeps leden selecteren** van de wizard nieuwe beveiligingsgroep maken de SMS Writer-service uit de lijst met gegevens bronnen. Selecteer vervolgens de site database als een geschikt lid. Zie de documentatie bibliotheek van [Data Protection Manager](https://docs.microsoft.com/system-center/dpm) voor meer informatie over het gebruik van DPM.  
+Maak een nieuwe beveiligings groep in DPM voor de site database computer. Selecteer op de pagina **groeps leden selecteren** van de wizard nieuwe beveiligingsgroep maken de SMS Writer-service uit de lijst met gegevens bronnen. Selecteer vervolgens de site database als een geschikt lid. Zie de documentatie bibliotheek van [Data Protection Manager](/system-center/dpm) voor meer informatie over het gebruik van DPM.  
 
 > [!IMPORTANT]  
 >  Configuration Manager ondersteunt geen DPM-back-up voor een SQL Server cluster dat een benoemd exemplaar gebruikt. Het biedt ondersteuning voor DPM-back-up op een SQL Server-cluster dat gebruikmaakt van het standaard exemplaar van SQL Server.  
@@ -67,7 +67,7 @@ U kunt back-up voor Configuration Manager-sites automatiseren door de vooraf ged
 
 Plan om de standaard back-uptaak voor de site mini maal elke vijf dagen uit te voeren. Dit schema is omdat Configuration Manager een Bewaar periode van vijf dagen gebruikt voor het *bijhouden van SQL Server wijzigingen* . Zie [SQL Server Bewaar periode](recover-sites.md#sql-server-change-tracking-retention-period)voor het bijhouden van wijzigingen voor meer informatie.
 
-Als u het back-upproces wilt vereenvoudigen, kunt u een **AfterBackup. bat** -bestand maken. Met dit script worden acties na de back-up automatisch uitgevoerd nadat de back-uptaak is voltooid. Gebruik het AfterBackup. bat-bestand om de moment opname van de back-up op een veilige locatie te archiveren. U kunt ook het bestand AfterBackup. bat gebruiken om bestanden te kopiëren naar de map met back-ups of om andere back-uptaken te starten.  
+Als u het back-upproces wilt vereenvoudigen, kunt u een **AfterBackup.bat** bestand maken. Met dit script worden acties na de back-up automatisch uitgevoerd nadat de back-uptaak is voltooid. Gebruik het AfterBackup.bat-bestand om de moment opname van de back-up op een veilige locatie te archiveren. U kunt ook het AfterBackup.bat-bestand gebruiken om bestanden te kopiëren naar de map met back-ups of om andere back-uptaken te starten.  
 
 U kunt een back-up maken van een centrale beheer site en primaire site. Secundaire sites of site systeem servers hebben geen back-uptaken.
 
@@ -137,16 +137,16 @@ Bewaar meerdere archieven van de back-upmomentopname om de volgende redenen:
 
 
 ## <a name="using-the-afterbackupbat-file"></a>Het bestand AfterBackup.bat gebruiken  
-Nadat een back-up van de site is gemaakt, probeert de back-uptaak automatisch een script met de naam **AfterBackup. bat**uit te voeren. Maak het bestand AfterBackup. bat hand matig op de site server in `<ConfigMgrInstallationFolder>\Inboxes\Smsbkup.box` . Als er een AfterBackup. bat-bestand in de juiste map aanwezig is, wordt dit automatisch uitgevoerd nadat de back-uptaak is voltooid.
+Nadat er een back-up van de site is gemaakt, probeert de back-uptaak automatisch een script uit te voeren met de naam **AfterBackup.bat**. Maak het AfterBackup.bat-bestand hand matig op de site server in `<ConfigMgrInstallationFolder>\Inboxes\Smsbkup.box` . Als er een AfterBackup.bat bestand in de juiste map bestaat, wordt dit automatisch uitgevoerd nadat de back-uptaak is voltooid.
 
-In het bestand AfterBackup. bat kunt u de moment opname van de back-up archiveren aan het einde van elke back-upbewerking. Er kunnen automatisch andere taken na back-ups worden uitgevoerd die geen deel uitmaken van de onderhouds taak van de back-upserver van site. Het AfterBackup.bat-bestand integreert het archief en de back-upbewerkingen, waardoor elke nieuwe back-upmomentopname wordt gearchiveerd.
+Met het AfterBackup.bat bestand kunt u de moment opname van de back-up archiveren aan het einde van elke back-upbewerking. Er kunnen automatisch andere taken na back-ups worden uitgevoerd die geen deel uitmaken van de onderhouds taak van de back-upserver van site. Het AfterBackup.bat-bestand integreert het archief en de back-upbewerkingen, waardoor elke nieuwe back-upmomentopname wordt gearchiveerd.
 
-Als het bestand AfterBackup. bat niet aanwezig is, slaat de back-uptaak het over zonder dat dit van invloed is op de back-upbewerking. Als u wilt controleren of de back-uptaak dit script heeft uitgevoerd, gaat u naar het knoop punt **onderdeel status** in de werk ruimte **bewaking** en bekijkt u de status berichten voor **SMS_SITE_BACKUP**. Wanneer de taak het AfterBackup. bat-opdracht bestand heeft gestart, ziet u bericht-ID **5040**.  
+Als het AfterBackup.bat bestand niet aanwezig is, slaat de back-uptaak het over zonder dat dit van invloed is op de back-upbewerking. Als u wilt controleren of de back-uptaak dit script heeft uitgevoerd, gaat u naar het knoop punt **onderdeel status** in de werk ruimte **bewaking** en bekijkt u de status berichten voor **SMS_SITE_BACKUP**. Wanneer de taak het AfterBackup.bat-opdracht bestand heeft gestart, ziet u bericht-ID **5040**.  
 
 > [!TIP]  
->  Als u back-upbestanden van de site server wilt archiveren met AfterBackup. bat, moet u een Kopieer opdracht gebruiken in het batch-bestand. Een dergelijk hulp programma is [Robocopy](https://docs.microsoft.com/windows-server/administration/windows-commands/robocopy) in Windows Server. Maak bijvoorbeeld het AfterBackup. bat-bestand met de volgende opdracht:`Robocopy E:\ConfigMgr_Backup \\ServerName\ShareName\ConfigMgr_Backup /MIR`  
+>  Als u de back-upbestanden van de site server met AfterBackup.bat wilt archiveren, moet u een Kopieer opdracht gebruiken in het batch-bestand. Een dergelijk hulp programma is [Robocopy](/windows-server/administration/windows-commands/robocopy) in Windows Server. Maak bijvoorbeeld het AfterBackup.bat bestand met de volgende opdracht: `Robocopy E:\ConfigMgr_Backup \\ServerName\ShareName\ConfigMgr_Backup /MIR`  
 
-Hoewel het beoogde gebruik van AfterBackup. bat het archiveren van back-upmomentopnamen bevat, kunt u een bestand AfterBackup. bat maken om extra taken aan het einde van elke back-upbewerking uit te voeren.  
+Hoewel het beoogde gebruik van de AfterBackup.bat het archiveren van back-upmomentopnamen is, kunt u een AfterBackup.bat bestand maken om extra taken aan het einde van elke back-upbewerking uit te voeren.  
 
 
 
@@ -165,7 +165,7 @@ Als u in SQL Server Reporting Services vooraf gedefinieerde of gemaakte aangepas
 > [!IMPORTANT]  
 >  Wanneer Configuration Manager bijgewerkt naar een nieuwere versie, worden de vooraf gedefinieerde rapporten mogelijk overschreven door nieuwe rapporten. Als u een vooraf gedefinieerd rapport wijzigt, zorg er dan voor dat u een back-up maakt van het rapport en dit vervolgens herstelt in Reporting Services.  
 
-Zie [back-up-en herstel bewerkingen voor Reporting Services](https://docs.microsoft.com/sql/reporting-services/install-windows/backup-and-restore-operations-for-reporting-services)voor meer informatie over het maken van een back-up van uw aangepaste rapporten in Reporting Services.  
+Zie [back-up-en herstel bewerkingen voor Reporting Services](/sql/reporting-services/install-windows/backup-and-restore-operations-for-reporting-services)voor meer informatie over het maken van een back-up van uw aangepaste rapporten in Reporting Services.  
 
 ### <a name="back-up-content-files"></a>Back-up maken van inhouds bestanden  
 De inhouds bibliotheek in Configuration Manager is de locatie waar alle inhouds bestanden worden opgeslagen voor alle software-implementaties. De inhouds bibliotheek bevindt zich op de site server en op elk distributie punt. De onderhouds taak van de back-upserver van de site maakt geen back-up van de inhouds bibliotheek of pakket bron bestanden. Wanneer een site server uitvalt, wordt de informatie over de inhouds bibliotheek teruggezet naar de site database, maar moet u de inhouds bibliotheek en pakket bron bestanden herstellen.  
@@ -231,9 +231,9 @@ De schrijver-ID voor de SMS Writer is **03ba67dd-dc6d-4729-a038-251f7018463b**.
 De SMS Writer-service moet onder het lokale systeemaccount worden uitgevoerd.  
 
 ### <a name="volume-shadow-copy-service"></a>Volume Shadow Copy-service  
-De VSS is een set van COM API's die een kader implementeert voor het maken van volume back-ups terwijl toepassingen op het systeem doorgaan met het schrijven naar de volumes. De VSS biedt een consistente interface die coördinatie toestaat tussen toepassingen die gegevens op schijf bijwerken (de SMS Writer-service) en toepassingen die back-ups maken van toepassingen (de Backup Manager-service). Zie de [Volume Shadow Copy service](https://docs.microsoft.com/windows-server/storage/file-server/volume-shadow-copy-service)voor meer informatie.  
+De VSS is een set van COM API's die een kader implementeert voor het maken van volume back-ups terwijl toepassingen op het systeem doorgaan met het schrijven naar de volumes. De VSS biedt een consistente interface die coördinatie toestaat tussen toepassingen die gegevens op schijf bijwerken (de SMS Writer-service) en toepassingen die back-ups maken van toepassingen (de Backup Manager-service). Zie de [Volume Shadow Copy service](/windows-server/storage/file-server/volume-shadow-copy-service)voor meer informatie.  
 
 
 
 ## <a name="next-steps"></a>Volgende stappen
-Nadat u een back-up hebt gemaakt, moet u de [site herstellen](recover-sites.md) met die back-up. Aan de hand van deze procedure kunt u vertrouwd raken met het herstel proces voordat u erop moet vertrouwen. Het kan ook helpen te controleren of de back-up is geslaagd voor het beoogde doel.  
+Nadat u een back-up hebt gemaakt, moet u de [site herstellen](recover-sites.md) met die back-up. Aan de hand van deze procedure kunt u vertrouwd raken met het herstel proces voordat u erop moet vertrouwen. Het kan ook helpen te controleren of de back-up is geslaagd voor het beoogde doel.

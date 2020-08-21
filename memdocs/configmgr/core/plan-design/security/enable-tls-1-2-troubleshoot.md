@@ -10,12 +10,12 @@ ms.assetid: 15083f28-8ff2-4e23-9f5e-b5dbd0859839
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7c07b0af1b3063619ac5f71965d96f611aefafd9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 316387bc42ed51dd9b581a25208091ed93cad1d1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720525"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699752"
 ---
 # <a name="common-issues-when-enabling-tls-12"></a>Algemene problemen bij het inschakelen van TLS 1.2
 
@@ -37,7 +37,7 @@ Als rapporten niet worden weer gegeven in de Configuration Manager-console, moet
 
 Als u de instelling voor het FIPS-beveiligings beleid voor de client of een server inschakelt, kan de onderhandeling door een beveiligd kanaal (Schannel) ervoor zorgen dat ze TLS 1,0 gebruiken. Dit gedrag treedt zelfs op als u het protocol in het REGI ster uitschakelt.
 
-Als u wilt onderzoeken, schakelt u logboek registratie van beveiligde kanalen in en bekijkt u Schannel-gebeurtenissen in het systeem logboek. Zie [het gebruik van bepaalde cryptografische algoritmen en protocollen in Schannel. dll beperken](https://support.microsoft.com/help/245030/how-to-restrict-the-use-of-certain-cryptographic-algorithms-and-protoc)voor meer informatie.
+Als u wilt onderzoeken, schakelt u logboek registratie van beveiligde kanalen in en bekijkt u Schannel-gebeurtenissen in het systeem logboek. Zie [het gebruik van bepaalde cryptografische algoritmen en protocollen in Schannel.dllbeperken ](https://support.microsoft.com/help/245030/how-to-restrict-the-use-of-certain-cryptographic-algorithms-and-protoc)voor meer informatie.
 
 ## <a name="sql-server-communication-failure"></a>Communicatie fout SQL Server
 
@@ -77,7 +77,7 @@ Volg deze stappen om dit probleem op te lossen:
 
 1. [Werk .NET Framework](enable-tls-1-2-client.md#bkmk_net)bij en schakel sterke crypto grafie in op alle relevante computers.
 
-1. Maak in de `%WinDir%\System32\InetSrv` map van de Application Catalog-server een bestand **W2SP. exe. config** met de volgende inhoud:
+1. Maak in de `%WinDir%\System32\InetSrv` map van de Application Catalog-server een **W2SP.exe.config** -bestand met de volgende inhoud:
 
     ``` XML
     <?xml version="1.0" encoding="utf-8" ?>
@@ -145,12 +145,12 @@ The underlying connection was closed: An unexpected error occurred on a receive.
 at System.Net.HttpWebRequest.GetResponse
 ```
 
-In het gebeurtenis logboek van het systeem kan SChannel-gebeurtenis-36874 worden geregistreerd met de volgende beschrijving:`An TLS 1.2 connection request was received from a remote client application, but none of the cipher suites supported by the client application are supported by the server. The TLS connection request has failed.`
+In het gebeurtenis logboek van het systeem kan SChannel-gebeurtenis-36874 worden geregistreerd met de volgende beschrijving: `An TLS 1.2 connection request was received from a remote client application, but none of the cipher suites supported by the client application are supported by the server. The TLS connection request has failed.`
 <!--SCCMDocs issue #1608-->
 
 ## <a name="additional-resources"></a>Aanvullende bronnen
 
-- [Aanbevolen procedures voor trans port Layer Security (TLS) met de .NET Framework](https://docs.microsoft.com/dotnet/framework/network-programming/tls#configuring-security-via-the-windows-registry)
+- [Aanbevolen procedures voor trans port Layer Security (TLS) met de .NET Framework](/dotnet/framework/network-programming/tls#configuring-security-via-the-windows-registry)
 - [KB 3135244: TLS 1,2-ondersteuning voor Microsoft SQL Server](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)
 - [Technische naslaginformatie voor cryptografische besturingselementen](cryptographic-controls-technical-reference.md)
 
@@ -158,4 +158,3 @@ In het gebeurtenis logboek van het systeem kan SChannel-gebeurtenis-36874 worden
 
 - [TLS 1.2 inschakelen op clients](enable-tls-1-2-client.md)
 - [TLS 1,2 inschakelen op de site servers en externe site systemen](enable-tls-1-2-server.md)
-

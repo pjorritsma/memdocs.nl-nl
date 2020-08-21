@@ -10,12 +10,12 @@ ms.assetid: 92b339ef-2723-4322-bec6-077b3e8846b0
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a7f7853b006d4ac8b11a30217d1b05b1eedd69dc
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: bf9ad15266c4e6615ba100d5ea5270e23b93ece7
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268977"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699123"
 ---
 # <a name="prerequisites-for-installing-configuration-manager-sites"></a>Vereisten voor het installeren van Configuration Manager-sites
 
@@ -34,7 +34,7 @@ De volgende vereisten zijn van toepassing op het installeren van een van de volg
 
 Als u een centrale beheer site wilt installeren als onderdeel van een hiërarchie-uitbrei ding, raadpleegt u [een zelfstandige primaire site uitbreiden](#bkmk_expand).
 
-### <a name="prerequisites-for-installing-a-primary-site-or-a-central-administration-site"></a><a name="bkmk_PrereqPri"></a>Vereisten voor het installeren van een primaire site of een centrale beheer site  
+### <a name="prerequisites-for-installing-a-primary-site-or-a-central-administration-site"></a><a name="bkmk_PrereqPri"></a> Vereisten voor het installeren van een primaire site of een centrale beheer site  
 
 - De benodigde Windows Server-functies,-onderdelen en Windows-onderdelen moeten worden geïnstalleerd. Zie [vereisten voor site systemen](../../../plan-design/configs/site-and-site-system-prerequisites.md#bkmk_2012sspreq) voor meer informatie.  
 
@@ -73,7 +73,7 @@ Als u een centrale beheer site wilt installeren als onderdeel van een hiërarchi
 
 - De site server en de site database server moeten voldoen aan alle vereiste configuraties. Voordat u begint met Configuration Manager Setup, voert u de [prerequisite Checker hand matig uit](prerequisite-checker.md) om problemen te identificeren en op te lossen.  
 
-### <a name="prerequisites-to-expand-a-stand-alone-primary-site"></a><a name="bkmk_expand"></a>Vereisten voor het uitbreiden van een zelfstandige primaire site
+### <a name="prerequisites-to-expand-a-stand-alone-primary-site"></a><a name="bkmk_expand"></a> Vereisten voor het uitbreiden van een zelfstandige primaire site
 
 Een zelfstandige primaire site moet voldoen aan de volgende vereisten voordat u deze kunt uitbreiden naar een hiërarchie met een centrale beheer site:
 
@@ -133,7 +133,7 @@ Als u gegevens wilt repliceren tussen een centrale beheer site en een primaire s
 
 Nadat u de site hebt uitgebreid, moet u de volgende Azure-Services opnieuw configureren met Configuration Manager:
 
-- [Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)  
+- [Log Analytics](/azure/azure-monitor/platform/collect-sccm)  
 - [Microsoft Store voor bedrijven](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)  
 - [Cloudbeheergateway](../../../clients/manage/cmg/plan-cloud-management-gateway.md)
 
@@ -148,7 +148,7 @@ U kunt ook de verbinding met die service verwijderen en opnieuw maken:
 3. Configureer de verbinding met de Azure-service opnieuw voor gebruik met Configuration Manager.  
 
 
-## <a name="secondary-sites"></a><a name="bkmk_secondary"></a>Secundaire sites
+## <a name="secondary-sites"></a><a name="bkmk_secondary"></a> Secundaire sites
 
 Hier volgen de vereisten voor het installeren van secundaire sites:  
 

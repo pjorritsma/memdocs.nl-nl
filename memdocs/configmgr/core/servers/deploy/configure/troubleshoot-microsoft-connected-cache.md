@@ -10,12 +10,12 @@ ms.assetid: 121e0341-4f51-4d54-a357-732c26caf7c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a08b74552d5d17a737ec9e1802e10c87621f5b97
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: b24ed0aa963373fc0933a2c34b7b036d77cc9a2b
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126355"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699208"
 ---
 # <a name="troubleshoot-microsoft-connected-cache-in-configuration-manager"></a>Problemen met micro soft Connected cache in Configuration Manager oplossen
 
@@ -30,11 +30,11 @@ Wanneer u de cache server voor de bezorg optimalisatie correct installeert en cl
 
 Controleer dit gedrag [op een client](#bkmk_verify-client) of [op de server](#bkmk_verify-server).
 
-### <a name="verify-on-a-client"></a><a name="bkmk_verify-client"></a>Controleren op een client
+### <a name="verify-on-a-client"></a><a name="bkmk_verify-client"></a> Controleren op een client
 
 1. Op de client met Windows 10, versie 1809 of hoger, kunt u in de Cloud beheerde inhoud downloaden. Zie voor meer informatie over de typen inhoud die in de cache zijn opgeslagen, [gekoppelde cache verifiëren](../../../plan-design/hierarchy/microsoft-connected-cache.md#verify).
 
-2. Open Power shell en voer de volgende opdracht uit:`Get-DeliveryOptimizationStatus`
+2. Open Power shell en voer de volgende opdracht uit: `Get-DeliveryOptimizationStatus`
 
 Bijvoorbeeld:
 
@@ -74,7 +74,7 @@ U ziet dat het `BytesFromCacheServer` kenmerk niet gelijk is aan nul.
 
 Als de client onjuist is geconfigureerd of de cache server niet correct is geïnstalleerd, gaat de Delivery Optimization-client terug naar de oorspronkelijke Cloud bron. Het kenmerk BytesFromCacheServer is dan nul.
 
-### <a name="verify-on-the-server"></a><a name="bkmk_verify-server"></a>Controleren op de server
+### <a name="verify-on-the-server"></a><a name="bkmk_verify-server"></a> Controleren op de server
 
 Controleer eerst of de register eigenschappen correct zijn geconfigureerd: `HKLM\SOFTWARE\Microsoft\Delivery Optimization In-Network Cache` . De locatie van de schijf cache is bijvoorbeeld `PrimaryDrivesInput\DOINC-E77D08D0-5FEA-4315-8C95-10D359D59294` , waar `PrimaryDrivesInput` meerdere stations kunnen zijn, zoals `C,D,E` .
 
@@ -114,13 +114,13 @@ De volgende kenmerken duiden op geslaagd:
 
 ## <a name="log-files"></a>Logboekbestanden
 
-- Setup-logboek voor ARR:`%temp%\arr_setup.log`
+- Setup-logboek voor ARR: `%temp%\arr_setup.log`
 
 - Logboek voor installatie van cache server: `SMS_DP$\Ms.Dsp.Do.Inc.Setup\DoincSetup.log` op het distributie punt en `DistMgr.log` op de site server
 
-- Operationele logboeken van IIS: standaard`%SystemDrive%\inetpub\logs\LogFiles`
+- Operationele logboeken van IIS: standaard `%SystemDrive%\inetpub\logs\LogFiles`
 
-- Operationeel logboek van cache server:`C:\Doinc\Product\Install\Logs`
+- Operationeel logboek van cache server: `C:\Doinc\Product\Install\Logs`
 
     > [!TIP]
     > Met dit logboek kunt u onder andere gebruikmaken van problemen met de connectiviteit met de micro soft-Cloud.
@@ -228,7 +228,7 @@ De benodigde schijf ruimte voor elke cache server kan variëren, afhankelijk van
 
 De DO cache server mag niet veel systeem geheugen of processor tijd verbruiken. Nadat u de cache server hebt geïnstalleerd, moet u de IIS-en ARR-logboek bestanden analyseren als u belang rijk proces-of geheugen Resource verbruik ziet.
 
-Als de IIS-en ARR-logboek bestanden te veel ruimte op de server in beslag nemen, zijn er verschillende methoden die u kunt gebruiken om de logboek bestanden te beheren. Zie [IIS-logboek File Storage beheren](https://docs.microsoft.com/iis/manage/provisioning-and-managing-iis/managing-iis-log-file-storage#overview)voor meer informatie.
+Als de IIS-en ARR-logboek bestanden te veel ruimte op de server in beslag nemen, zijn er verschillende methoden die u kunt gebruiken om de logboek bestanden te beheren. Zie [IIS-logboek File Storage beheren](/iis/manage/provisioning-and-managing-iis/managing-iis-log-file-storage#overview)voor meer informatie.
 
 ## <a name="see-also"></a>Zie ook
 

@@ -10,23 +10,23 @@ ms.assetid: 91f9de33-b277-4500-acd6-e7d90a2947c9
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ed155fb61491a273732ed3b974b6ddb5ac29bc89
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 4d57be201274c347e5dcd492734b2141c64d579b
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904003"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700007"
 ---
 # <a name="health-attestation-for-configuration-manager"></a>Status verklaring voor Configuration Manager
 
 *Van toepassing op: Configuration Manager (huidige vertakking)*
 
-Beheerders kunnen de status van[ Windows 10 Health Attestation](https://docs.microsoft.com/windows/security/threat-protection/protect-high-value-assets-by-controlling-the-health-of-windows-10-based-devices) van apparaten bekijken in de Configuration Manager-console.  Met Health Attestation van apparaten kan de beheerder ervoor zorgen dat clientcomputers over de volgende betrouwbare configuraties van BIOS, TPM en opstartsoftware beschikken:  
+Beheerders kunnen de status van[ Windows 10 Health Attestation](/windows/security/threat-protection/protect-high-value-assets-by-controlling-the-health-of-windows-10-based-devices) van apparaten bekijken in de Configuration Manager-console.  Met Health Attestation van apparaten kan de beheerder ervoor zorgen dat clientcomputers over de volgende betrouwbare configuraties van BIOS, TPM en opstartsoftware beschikken:  
 
 -   Early Launch Antimalware: Early Launch Antimalware (ELAM) beschermt uw computer wanneer deze wordt gestart en voordat de stuurprogramma's van derden worden geïnitialiseerd. [ELAM inschakelen](https://gallery.technet.microsoft.com/How-to-turn-on-Early-84552ec5)  
 -   BitLocker: Windows BitLocker-stationsversleuteling is software waarmee u alle gegevens kunt versleutelen die zijn opgeslagen op het Windows-besturingssysteemvolume.  [BitLocker inschakelen](https://gallery.technet.microsoft.com/How-to-turn-on-BitLocker-34294d3d)  
--   Beveiligd opstarten: beveiligd opstarten is een standaard die is ontwikkeld door leden van de pc-industrie om ervoor te zorgen dat uw pc opstart met alleen de software die wordt vertrouwd door de fabrikant van de computer. [Meer informatie over beveiligd opstarten](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh824987(v=win.10))  
--   Code-integriteit: code-integriteit is een functie die de beveiliging van het besturingssysteem verbetert door de integriteit van een stuurprogramma of systeembestand te valideren elke keer wanneer dit in het geheugen wordt geladen. [Meer informatie over code-integriteit](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd348642(v=ws.10))  
+-   Beveiligd opstarten: beveiligd opstarten is een standaard die is ontwikkeld door leden van de pc-industrie om ervoor te zorgen dat uw pc opstart met alleen de software die wordt vertrouwd door de fabrikant van de computer. [Meer informatie over beveiligd opstarten](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824987(v=win.10))  
+-   Code-integriteit: code-integriteit is een functie die de beveiliging van het besturingssysteem verbetert door de integriteit van een stuurprogramma of systeembestand te valideren elke keer wanneer dit in het geheugen wordt geladen. [Meer informatie over code-integriteit](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd348642(v=ws.10))  
 
 Deze functionaliteit is beschikbaar voor pc's en on-premises bronnen die worden beheerd door Configuration Manager en mobiele apparaten die met behulp van Microsoft Intune worden beheerd. Beheerders kunnen opgeven of rapportage plaatsvindt via de cloud of on-premises infrastructuur. Door de bewaking van on-premises apparaatstatusverklaring kan de beheerder client-Pc's zonder Internet toegang controleren.
 
@@ -34,7 +34,7 @@ Deze functionaliteit is beschikbaar voor pc's en on-premises bronnen die worden 
 
  **Vereiste**  
 
--   Client apparaten met Windows 10 versie 1607 of Windows Server 2016 versie 1607 met [Apparaatstatusverklaring ingeschakeld](https://docs.microsoft.com/windows-server/security/device-health-attestation).
+-   Client apparaten met Windows 10 versie 1607 of Windows Server 2016 versie 1607 met [Apparaatstatusverklaring ingeschakeld](/windows-server/security/device-health-attestation).
 -   TPM 1,2 of TPM 2 ingeschakelde apparaten.
 -   Wanneer u Cloud beheer gebruikt, wordt de communicatie tussen de Configuration Manager client agent en het beheer punt met de Health Attestation-service van *has.spserv.Microsoft.com* (poort 443) (Cloud beheer). Bij on-premises moet de client kunnen communiceren met het beheer punt voor apparaatstatusverklaring-functionaliteit.
 

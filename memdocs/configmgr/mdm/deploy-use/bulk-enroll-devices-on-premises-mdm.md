@@ -10,12 +10,12 @@ ms.assetid: b36f5e4a-2b57-4d18-83f6-197081ac2a0a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bfe2d395187f8af86e2d09156a45f7398a5bc670
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: 474d59ec22d1edaf8e662298e90555e6772d302b
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720679"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698793"
 ---
 # <a name="how-to-bulk-enroll-devices-with-on-premises-mdm-in-configuration-manager"></a>Apparaten bulksgewijs inschrijven met on-premises MDM in Configuration Manager
 
@@ -23,7 +23,7 @@ ms.locfileid: "81720679"
 
 Bulk inschrijving in Configuration Manager on-premises Mobile Device Management (MDM) is een geautomatiseerde methode voor het inschrijven van apparaten. De andere methode is gebruikers registratie, waarvoor gebruikers hun referenties moeten invoeren om het apparaat in te schrijven. Voor bulkinschrijving wordt gebruikgemaakt van een inschrijvingspakket om het apparaat tijdens de inschrijving te verifiëren. Het pakket is een. ppkg-bestand, dat ook certificaat-en Wi-Fi-profielen kan bevatten ter ondersteuning van de inschrijving.
 
-## <a name="create-a-certificate-profile"></a><a name="bkmk_createCert"></a>Een certificaat profiel maken
+## <a name="create-a-certificate-profile"></a><a name="bkmk_createCert"></a> Een certificaat profiel maken
 
 Neem een certificaat profiel op om automatisch een vertrouwd basis certificaat op het apparaat te installeren. Dit basis certificaat is vereist voor een vertrouwde communicatie tussen de apparaten en de site systeem rollen die nodig zijn voor on-premises MDM.
 
@@ -31,7 +31,7 @@ Wanneer u de site voorbereidt voor on-premises MDM, exporteert u het vertrouwde 
 
 Het geëxporteerde certificaat gebruiken om een certificaat profiel te maken. Zie [certificaat profielen maken](../../protect/deploy-use/create-certificate-profiles.md)voor meer informatie.
 
-## <a name="create-a-wi-fi-profile"></a><a name="CreateWifi"></a>Een Wi-Fi-profiel maken
+## <a name="create-a-wi-fi-profile"></a><a name="CreateWifi"></a> Een Wi-Fi-profiel maken
 
 Een ander onderdeel van het pakket voor bulk inschrijving is een Wi-Fi-profiel. Dit profiel kan ervoor zorgen dat het apparaat is verbonden met het netwerk om inschrijving te ondersteunen.
 
@@ -59,7 +59,7 @@ Hoewel Configuration Manager een instelling heeft voor proxyserver gegevens in h
 
 - Maak een tweede pakket met behulp van de Windows-installatie kopie en Configuration Designer (ICD) en implementeer het vervolgens samen met het pakket voor bulk inschrijving.
 
-## <a name="create-an-enrollment-profile"></a><a name="bkmk_createEnroll"></a>Een inschrijvings profiel maken
+## <a name="create-an-enrollment-profile"></a><a name="bkmk_createEnroll"></a> Een inschrijvings profiel maken
 
 Met het inschrijvings profiel kunt u instellingen opgeven die vereist zijn voor het inschrijven van apparaten. Deze instellingen omvatten een [certificaat profiel](#bkmk_createCert) en een [Wi-Fi-profiel](#CreateWifi).
 
@@ -88,11 +88,11 @@ Met het inschrijvings profiel kunt u instellingen opgeven die vereist zijn voor 
 
 1. Voltooi de wizard.
 
-## <a name="create-an-enrollment-package"></a><a name="bkmk_createPpkg"></a>Een inschrijvings pakket maken
+## <a name="create-an-enrollment-package"></a><a name="bkmk_createPpkg"></a> Een inschrijvings pakket maken
 
 Het inschrijvings pakket (ppkg) is het bestand dat u gebruikt voor het bulksgewijs inschrijven van apparaten voor on-premises MDM. Maak dit bestand met Configuration Manager. U kunt vergelijk bare typen pakketten maken met Windows ICD, maar alleen pakketten die u in Configuration Manager maakt, kunnen worden gebruikt om apparaten in te schrijven voor on-premises MDM. Een pakket dat u met Windows ICD maakt, kan alleen de user principal name (UPN) opgeven die nodig is voor de registratie. het kan echter niet starten met het feitelijke inschrijvings proces.
 
-Het proces voor het maken van het inschrijvingspakket vereist Windows Assessment and Deployment Toolkit (ADK) voor Windows 10. Installeer de nieuwste versie van Windows ADK op de computer waarop de Configuration Manager-console wordt uitgevoerd. Selecteer de functie **Imaging and Configuration Designer (ICD)** en eventuele afhankelijkheden. (Deze versie hoeft niet overeen te komen met de versie die wordt gebruikt voor de implementatie van het besturings systeem door de Configuration Manager-site.) Zie [de Windows ADk voor Windows 10 downloaden](https://docs.microsoft.com/windows-hardware/get-started/adk-install)voor meer informatie.
+Het proces voor het maken van het inschrijvingspakket vereist Windows Assessment and Deployment Toolkit (ADK) voor Windows 10. Installeer de nieuwste versie van Windows ADK op de computer waarop de Configuration Manager-console wordt uitgevoerd. Selecteer de functie **Imaging and Configuration Designer (ICD)** en eventuele afhankelijkheden. (Deze versie hoeft niet overeen te komen met de versie die wordt gebruikt voor de implementatie van het besturings systeem door de Configuration Manager-site.) Zie [de Windows ADk voor Windows 10 downloaden](/windows-hardware/get-started/adk-install)voor meer informatie.
 
 1. Ga in de Configuration Manager-console naar de werk ruimte **activa en naleving** , vouw **alle apparaten in bedrijfs eigendom**uit, vouw **Windows**uit en selecteer het knoop punt **inschrijvings profielen** .
 
@@ -116,7 +116,7 @@ Configuration Manager houdt geldige inschrijvings pakketten bij. Vouw in de-cons
 > [!TIP]
 > Als u een inschrijvings pakket uit de Configuration Manager-console verwijdert, kunt u dit niet gebruiken om apparaten in te schrijven. Gebruik deze methode om inschrijvings pakketten te beheren die u niet wilt dat anderen voor bulk inschrijving gebruiken.
 
-## <a name="bulk-enroll-a-device"></a><a name="bkmk_getPpkg"></a>Een apparaat bulksgewijs inschrijven
+## <a name="bulk-enroll-a-device"></a><a name="bkmk_getPpkg"></a> Een apparaat bulksgewijs inschrijven
 
 U kunt een pakket gebruiken om apparaten in te schrijven vóór of na het OOBE-proces (out-of-Box Experience) van het apparaat. Het inschrijvings pakket kan ook worden opgenomen als onderdeel van een OEM-inrichtings pakket (Original Equipment Manufacturer).
 
@@ -144,7 +144,7 @@ Als u het pakket voor bulk registratie wilt gebruiken, moet u het fysiek leveren
 
 Het registratie proces wordt gestart.
 
-## <a name="verify-enrollment"></a><a name="bkmk_verifyEnroll"></a>Inschrijving verifiëren
+## <a name="verify-enrollment"></a><a name="bkmk_verifyEnroll"></a> Inschrijving verifiëren
 
 ### <a name="verify-bulk-enrollment-on-the-device"></a>Bulk inschrijving op het apparaat controleren
 

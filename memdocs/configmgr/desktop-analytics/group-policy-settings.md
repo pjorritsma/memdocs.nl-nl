@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 2ee472b89f45e744e43915e51e98f11841208b73
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: d00edbfc30a87660adc65758dc9fbcb9113197f0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125796"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700647"
 ---
 # <a name="group-policy-settings-for-desktop-analytics"></a>Groeps beleids instellingen voor desktop Analytics
 
@@ -30,17 +30,17 @@ Wanneer Configuration Manager apparaten registreert bij Desktop Analytics, wordt
 
 Configuration Manager stelt Windows-beleid in een of beide van de volgende register sleutels in:
 
-- Groeps beleidsobject (**GPO**):`HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`
+- Groeps beleidsobject (**GPO**): `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`
 
-- **Lokale** beleids voorkeur:`HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`
+- **Lokale** beleids voorkeur: `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`
 
 | Beleid | Pad | Van toepassing op | Waarde |
 |--------|------|------------|-------|
 | **CommercialId** | Lokaal | Alle Windows-versies | Als u een apparaat wilt weer geven in Desktop Analytics, configureert u dit met de commerciële ID van uw organisatie. |
-| **AllowTelemetry**  | GPO | Windows 10 | Instellen `1` voor **basis** (vereist), `2` voor **uitgebreid**of `3` voor **volledige** (optionele) diagnostische gegevens. Voor desktop Analytics zijn ten minste eenvoudige diagnostische gegevens vereist. Micro soft raadt u aan om het **optionele (beperkte** ) (uitgebreid)-niveau te gebruiken met Desktop Analytics. Zie [Diagnostische gegevens van Windows in uw organisatie configureren](https://docs.microsoft.com/windows/configuration/configure-windows-diagnostic-data-in-your-organization) voor meer informatie. |
-| **LimitEnhancedDiagnosticDataWindowsAnalytics** | GPO | Windows 10, versie 1803 en hoger | Deze instelling is alleen van toepassing wanneer de AllowTelemetry-instelling is `2` . Hiermee worden de uitgebreide diagnostische gegevens gebeurtenissen die naar micro soft worden verzonden, beperkt tot alleen die gebeurtenissen die nodig zijn voor desktop Analytics. Zie voor meer informatie [gebeurtenissen van Windows 10 diagnostische gegevens en velden die zijn verzameld via het beleid uitgebreide diagnostische gegevens beperken](https://docs.microsoft.com/windows/configuration/enhanced-diagnostic-data-windows-analytics-events-and-fields). |
+| **AllowTelemetry**  | GPO | Windows 10 | Instellen `1` voor **basis** (vereist), `2` voor **uitgebreid**of `3` voor **volledige** (optionele) diagnostische gegevens. Voor desktop Analytics zijn ten minste eenvoudige diagnostische gegevens vereist. Micro soft raadt u aan om het **optionele (beperkte** ) (uitgebreid)-niveau te gebruiken met Desktop Analytics. Zie [Diagnostische gegevens van Windows in uw organisatie configureren](/windows/configuration/configure-windows-diagnostic-data-in-your-organization) voor meer informatie. |
+| **LimitEnhancedDiagnosticDataWindowsAnalytics** | GPO | Windows 10, versie 1803 en hoger | Deze instelling is alleen van toepassing wanneer de AllowTelemetry-instelling is `2` . Hiermee worden de uitgebreide diagnostische gegevens gebeurtenissen die naar micro soft worden verzonden, beperkt tot alleen die gebeurtenissen die nodig zijn voor desktop Analytics. Zie voor meer informatie [gebeurtenissen van Windows 10 diagnostische gegevens en velden die zijn verzameld via het beleid uitgebreide diagnostische gegevens beperken](/windows/configuration/enhanced-diagnostic-data-windows-analytics-events-and-fields). |
 | **AllowDeviceNameInTelemetry** | GPO | Windows 10, versie 1803 en hoger | Apparaten kunnen de naam van het apparaat verzenden. De naam van het apparaat wordt niet standaard naar micro soft verzonden. Als u de apparaatnaam niet verzendt, wordt deze in Desktop Analytics weer gegeven als ' onbekend '. Zie [device name (apparaatnaam](enroll-devices.md#device-name)) voor meer informatie. |
-| **CommercialDataOptIn** | Lokaal | Windows 8,1 en eerder | Desktop Analytics vereist een waarde van `1` . Zie voor meer informatie [commerciële gegevens opt-in Windows 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/ee126127\(v=ws.10\)). |
+| **CommercialDataOptIn** | Lokaal | Windows 8,1 en eerder | Desktop Analytics vereist een waarde van `1` . Zie voor meer informatie [commerciële gegevens opt-in Windows 7](/previous-versions/windows/it-pro/windows-7/ee126127\(v=ws.10\)). |
 | **RequestAllAppraiserVersions** | Beide | Windows 8,1 en eerder | Voor desktop Analytics moet de waarde `1` voor het verzamelen van gegevens correct zijn. |
 | **DisableEnterpriseAuthProxy** | GPO | Alle Windows-versies | Als uw omgeving een door een gebruiker geverifieerde proxy met geïntegreerde Windows-verificatie voor Internet toegang vereist, moet voor desktop Analytics de waarde `0` voor het verzamelen van gegevens correct worden gebruikt. Zie verificatie van de [proxy server](enable-data-sharing.md#proxy-server-authentication)voor meer informatie. |
 
@@ -66,7 +66,7 @@ Configuration Manager configureert de instellingen voor commerciële ID en diagn
 
 De relevante groeps beleids instellingen bevinden zich op het volgende pad: **computer configuratie**  >  **Beheersjablonen**  >  **Windows Components**  >  **gegevens verzameling en Preview-versies**van Windows-onderdelen.
 
-Groeps beleids instellingen wijzigen alleen register instellingen in de volgende sleutel:`HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`
+Groeps beleids instellingen wijzigen alleen register instellingen in de volgende sleutel: `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`
 
 > [!IMPORTANT]
 > Wanneer u instellingen voor groeps beleid gebruikt om complexe scenario's in te scha kelen, moet u speciale aandacht schenken aan beleids instellingen die configuratie conflicten kunnen veroorzaken. Configuration Manager configureert alleen [Windows-instellingen](#windows-settings) *als de waarde nog niet bestaat*. Groeps beleids instellingen hebben voor rang op Configuration Manager instellingen, waardoor bepaalde groeps beleids configuraties problemen kunnen veroorzaken met Desktop Analytics.
@@ -103,6 +103,6 @@ Deze groeps beleids instellingen zijn niet vereist voor Configuration Manager of
 | Weergavenaam | Registerwaarde | Effect op apparaten die zijn Inge schreven in Desktop Analytics |
 |--------------|----------------|-------------------------------------------------|
 | **Wijzigings meldingen voor het inschakelen van telemetrie configureren** | DisableTelemetryOptInChangeNotification | Vanaf Windows 10, versie 1803, ontvangt u een melding van gebruikers wanneer het niveau van diagnostische gegevens wordt gewijzigd. Gebruik dit beleid om meldingen uit te scha kelen. |
-| **Gebruikers interface voor het instellen van de telemetrie-instelling configureren** | DisableTelemetryOptInSettingsUx | Wanneer u het niveau van de diagnostische gegevens configureert, stelt u de bovenste grens voor het apparaat in. Met ingang van Windows 10 versie 1803 kunnen gebruikers een lager niveau instellen. Gebruik dit beleid om te voor komen dat gebruikers het diagnose niveau wijzigen. Zie [Diagnostische gegevens van Windows in uw organisatie configureren](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management) voor meer informatie. |
+| **Gebruikers interface voor het instellen van de telemetrie-instelling configureren** | DisableTelemetryOptInSettingsUx | Wanneer u het niveau van de diagnostische gegevens configureert, stelt u de bovenste grens voor het apparaat in. Met ingang van Windows 10 versie 1803 kunnen gebruikers een lager niveau instellen. Gebruik dit beleid om te voor komen dat gebruikers het diagnose niveau wijzigen. Zie [Diagnostische gegevens van Windows in uw organisatie configureren](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management) voor meer informatie. |
 | **Het verwijderen van diagnostische gegevens uitschakelen** | DisableDeviceDelete | Vanaf Windows 10 versie 1809 kunnen gebruikers diagnostische gegevens verwijderen van de pagina met instellingen voor **diagnostische &-feedback** . Gebruik dit beleid om te voor komen dat diagnostische gegevens die micro soft verzamelt van het apparaat worden verwijderd. |
 | **Diagnostische data viewer uitschakelen** | DisableDiagnosticDataViewer | Vanaf Windows 10 versie 1809 kunnen gebruikers de viewer voor diagnostische gegevens inschakelen en openen via de pagina met instellingen voor **diagnostische & feedback** . Gebruik dit beleid om de viewer voor diagnostische gegevens in Windows-instellingen uit te scha kelen en te voor komen dat diagnostische gegevens worden weer gegeven die micro soft verzamelt van het apparaat.|

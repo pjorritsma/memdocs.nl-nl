@@ -10,12 +10,12 @@ ms.assetid: c631197d-7daa-4faa-9e22-980cd6d604c2
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: da2fe2ad66617ffb5ad3058011f111b0aaf9e9ae
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 788c48599ac8a94b8690f3a88f9761b9ae8ac742
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82903912"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699429"
 ---
 # <a name="support-center-for-configuration-manager"></a>Ondersteunings centrum voor Configuration Manager
 
@@ -52,7 +52,7 @@ Vanaf versie 1906 is **OneTrace** een nieuwe logboek weergave met het ondersteun
 
 ### <a name="powershell-cmdlets"></a>PowerShell-cmdlets
 
-Ondersteunings centrum omvat ook [Power shell-cmdlets](https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps). Gebruik deze cmdlets om een externe verbinding met een andere Configuration Manager-client te maken, de opties voor gegevens verzameling te configureren en gegevens verzameling te starten.
+Ondersteunings centrum omvat ook [Power shell-cmdlets](/powershell/sccm/overview?view=sccm-ps). Gebruik deze cmdlets om een externe verbinding met een andere Configuration Manager-client te maken, de opties voor gegevens verzameling te configureren en gegevens verzameling te starten.
 
 
 ## <a name="prerequisites"></a>Vereisten
@@ -70,9 +70,9 @@ Zoek het installatie programma voor het ondersteunings centrum op de site server
 
 Nadat u deze hebt geïnstalleerd, gaat u naar de volgende items in het menu Start van de groep **micro soft System Center** :  
 
-- Ondersteunings centrum (ConfigMgrSupportCenter. exe)  
-- Logboek bestand viewer voor ondersteunings centrum (CMLogViewer. exe)  
-- Viewer voor ondersteunings centrum (ConfigMgrSupportCenterViewer. exe)  
+- Ondersteunings centrum (ConfigMgrSupportCenter.exe)  
+- Logboek bestand viewer voor ondersteunings centrum (CMLogViewer.exe)  
+- Viewer voor ondersteunings centrum (ConfigMgrSupportCenterViewer.exe)  
 
 
 ## <a name="known-issues"></a>Bekende problemen
@@ -95,7 +95,7 @@ Als u dit probleem wilt voor komen, gebruikt u de volgende indelingen voor gebru
 
 ### <a name="scripted-server-message-block-connections-to-remote-clients-might-require-removal"></a>Script server bericht blok verbindingen met externe clients moeten mogelijk worden verwijderd
 
-Wanneer u verbinding maakt met externe clients met behulp van de cmdlet [New-CMMachineConnection](https://go.microsoft.com/fwlink/p/?linkid=390542) Power shell, maakt het ondersteunings centrum een Server Message Block (SMB)-verbinding met elke externe client. Deze verbindingen blijven behouden nadat u het verzamelen van gegevens hebt voltooid. Om te voor komen dat het maximum aantal externe verbindingen voor Windows wordt overschreden, gebruikt u de `net use` opdracht om de momenteel actieve set met externe verbindingen weer te geven. Schakel vervolgens alle overbodige verbindingen uit met behulp van de volgende opdracht:`net use <connection_name> /d`
+Wanneer u verbinding maakt met externe clients met behulp van de cmdlet [New-CMMachineConnection](https://go.microsoft.com/fwlink/p/?linkid=390542) Power shell, maakt het ondersteunings centrum een Server Message Block (SMB)-verbinding met elke externe client. Deze verbindingen blijven behouden nadat u het verzamelen van gegevens hebt voltooid. Om te voor komen dat het maximum aantal externe verbindingen voor Windows wordt overschreden, gebruikt u de `net use` opdracht om de momenteel actieve set met externe verbindingen weer te geven. Schakel vervolgens alle overbodige verbindingen uit met behulp van de volgende opdracht: `net use <connection_name> /d`
 waarbij `<connection_name>` de naam is van de externe verbinding.
 
 ### <a name="application-deployment-evaluation-cycle-request-isnt-sent-correctly-to-remote-machines"></a>De aanvraag voor de evaluatie cyclus voor implementatie van de toepassing is niet correct naar externe computers verzonden

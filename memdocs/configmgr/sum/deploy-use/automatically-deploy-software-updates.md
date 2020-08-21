@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: 1a64d49edca146c70a56b07cb304d1744b86a1bf
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 3f49d7d001de07a7d3d6a7bdbb5f9ff90de018c9
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127743"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699871"
 ---
 #  <a name="automatically-deploy-software-updates"></a>Software-updates automatisch implementeren  
 
@@ -31,7 +31,7 @@ Automatisch goed keuren en implementeren van software-updates met behulp van een
 >  Voordat u voor de eerste keer een ADR maakt, moet u controleren of de site de synchronisatie van software-updates heeft voltooid. Deze stap is belang rijk wanneer u Configuration Manager uitvoert met een niet-Engelse taal. Software-update classificaties worden weer gegeven in het Engels vóór de eerste synchronisatie en worden vervolgens weer gegeven in de gelokaliseerde talen nadat de software-update synchronisatie is voltooid. Regels die u maakt voordat u software-updates synchroniseert, werken mogelijk niet goed na synchronisatie, omdat de tekst teken reeks mogelijk niet overeenkomt.  
 
 
-### <a name="process-to-create-an-adr"></a><a name="bkmk_adr-process"></a>Proces voor het maken van een ADR  
+### <a name="process-to-create-an-adr"></a><a name="bkmk_adr-process"></a> Proces voor het maken van een ADR  
 
 1.  Ga in de Configuration Manager-console naar de werk ruimte **software bibliotheek** , vouw **software-updates**uit en selecteer het knoop punt regels voor **automatische implementatie** .  
 
@@ -49,7 +49,7 @@ Automatisch goed keuren en implementeren van software-updates met behulp van een
 
          - De sjabloon **Office 365-client updates** biedt algemene instellingen die u kunt gebruiken wanneer u updates implementeert voor Microsoft 365 apps-clients.
              > [!Note]
-             > Vanaf 21 april 2020, wordt de naam van Office 365 ProPlus gewijzigd in **Microsoft 365 apps voor bedrijven**. Als uw Adr's afhankelijk is van de eigenschap ' title ', moet u deze bewerken vanaf 9 juni 2020. `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)`is een voor beeld van de nieuwe titel. Zie voor meer informatie over het wijzigen van uw Adr's voor de titel wijziging [kanalen voor Microsoft 365 apps bijwerken](manage-office-365-proplus-updates.md#bkmk_channel). Zie voor meer informatie over de naamswijziging naam [wijzigen voor Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change).
+             > Vanaf 21 april 2020, wordt de naam van Office 365 ProPlus gewijzigd in **Microsoft 365 apps voor bedrijven**. Als uw Adr's afhankelijk is van de eigenschap ' title ', moet u deze bewerken vanaf 9 juni 2020. `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)` is een voor beeld van de nieuwe titel. Zie voor meer informatie over het wijzigen van uw Adr's voor de titel wijziging [kanalen voor Microsoft 365 apps bijwerken](manage-office-365-proplus-updates.md#bkmk_channel). Zie voor meer informatie over de naamswijziging naam [wijzigen voor Office 365 ProPlus](/deployoffice/name-change).
 
          - De sjabloon **SCEP-en Windows Defender anti virus-updates** biedt algemene instellingen die u kunt gebruiken wanneer u Endpoint Protection definitie-updates implementeert.  
 
@@ -92,7 +92,7 @@ Automatisch goed keuren en implementeren van software-updates met behulp van een
      - Vanaf versie 1806 is er nu een eigenschappen Filter voor **architectuur** beschikbaar. Gebruik dit filter om architecturen zoals Itanium en ARM64 uit te sluiten die minder gangbaar zijn. Houd er rekening mee dat er 32-bits (x86) toepassingen en onderdelen op 64-bits (x64)-systemen worden uitgevoerd. Tenzij u er zeker van bent dat u geen x86 nodig hebt, schakelt u deze in en selecteert u x64.<!--1322266-->  
 
     > [!NOTE]  
-    > **Windows 10, versie 1903 en hoger** is toegevoegd aan Microsoft Update als een eigen product in plaats van dat ze deel uitmaken van het **Windows 10** -product zoals eerdere versies. Als gevolg van deze wijziging hebt u een aantal hand matige stappen uitgevoerd om ervoor te zorgen dat uw clients deze updates zien. We hebben geholpen het aantal hand matige stappen te verminderen dat u moet ondernemen voor het nieuwe product in Configuration Manager versie 1906. Zie voor meer informatie [producten configureren voor versies van Windows 10](../get-started/configure-classifications-and-products.md#windows-10-version-1903-and-later) <!--4682946-->
+    > **Windows 10, versie 1903 en hoger** is toegevoegd aan Microsoft Update als een eigen product in plaats van dat ze deel uitmaken van het **Windows 10**  -product zoals eerdere versies. Als gevolg van deze wijziging hebt u een aantal hand matige stappen uitgevoerd om ervoor te zorgen dat uw clients deze updates zien. We hebben geholpen het aantal hand matige stappen te verminderen dat u moet ondernemen voor het nieuwe product in Configuration Manager versie 1906. Zie voor meer informatie [producten configureren voor versies van Windows 10](../get-started/configure-classifications-and-products.md#windows-10-version-1903-and-later) <!--4682946-->
 
 
 6. Geef op de pagina **evaluatie planning** op of de ADR moet worden ingeschakeld voor uitvoering volgens een schema. Wanneer dit is ingeschakeld, klikt u op **Aanpassen** om de terugkerende planning in te schakelen.  
@@ -244,7 +244,7 @@ Nadat u een ADR hebt gemaakt, kunt u aanvullende implementaties aan de regel toe
      - Waarschuwingen
      - Downloadinstellingen  
 
-Implementaties kunnen ook programmatisch worden toegevoegd met behulp van Windows Power shell-cmdlets. Zie [New-CMSoftwareUpdateDeployment](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmsoftwareupdatedeployment) voor een volledige beschrijving van het gebruik van deze methode.
+Implementaties kunnen ook programmatisch worden toegevoegd met behulp van Windows Power shell-cmdlets. Zie [New-CMSoftwareUpdateDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdatedeployment) voor een volledige beschrijving van het gebruik van deze methode.
 
 Zie [Implementatieproces voor software-updates](../understand/software-updates-introduction.md#BKMK_DeploymentProcess)voor meer informatie over het implementatieproces.
 

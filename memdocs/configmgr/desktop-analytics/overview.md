@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 09f829bd1695426211ff94381a63b8f23d1b4fe8
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: 59f3d1a8a7b217a794440e2f75e0bb09e28634a9
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411011"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700788"
 ---
 # <a name="what-is-desktop-analytics"></a>Wat is Desktop Analytics?
 
@@ -69,22 +69,22 @@ Als u Desktop Analytics wilt gebruiken, moet u ervoor zorgen dat uw omgeving vol
 
 ### <a name="technical"></a>Technisch
 
-- Een actief globaal Azure-abonnement met [globale beheerders](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions) machtigingen. [Micro soft-accounts](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts) worden niet ondersteund.  
+- Een actief globaal Azure-abonnement met [globale beheerders](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions) machtigingen. [Micro soft-accounts](/windows/security/identity-protection/access-control/microsoft-accounts) worden niet ondersteund.  
 
     > [!IMPORTANT]
-    > Desktop Analytics is een Windows-service die wordt gehost in azure Global en gebruikmaakt van diagnostische gegevens van Windows. Desktop Analytics is een wereld wijde Azure-service die beschikbaar is voor klanten van de Amerikaanse overheid en niet voldoet aan de [Amerikaanse gcc-kenmerken (Government Community compliance)](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance) . Zie het [vertrouwens centrum van micro soft](https://docs.microsoft.com/microsoft-365/compliance/offering-home?view=o365-worldwide)voor een lijst met compliance-aanbiedingen voor micro soft-producten en-services. Desktop Analytics is niet beschikbaar voor klanten met een hoog of Amerikaans Ministerie van defensie (DOD) van GCC. Het gebruik van Azure Government-abonnementen voor het hosten van Desktop Analytics-werk ruimten wordt niet ondersteund.
+    > Desktop Analytics is een Windows-service die wordt gehost in azure Global en gebruikmaakt van diagnostische gegevens van Windows. Desktop Analytics is een wereld wijde Azure-service die beschikbaar is voor klanten van de Amerikaanse overheid en niet voldoet aan de [Amerikaanse gcc-kenmerken (Government Community compliance)](/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance) . Zie het [vertrouwens centrum van micro soft](/microsoft-365/compliance/offering-home?view=o365-worldwide)voor een lijst met compliance-aanbiedingen voor micro soft-producten en-services. Desktop Analytics is niet beschikbaar voor klanten met een hoog of Amerikaans Ministerie van defensie (DOD) van GCC. Het gebruik van Azure Government-abonnementen voor het hosten van Desktop Analytics-werk ruimten wordt niet ondersteund.
 
     - **Eigenaars machtigingen voor werk ruimten** voor het **instellen van uw werk ruimte**en de volgende rollen:  
 
-      - Rol van [**Desktop Analytics-beheerder**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions) .
+      - Rol van [**Desktop Analytics-beheerder**](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions) .
 
-      - [**Log Analytics Inzender**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#log-analytics-contributor) en [**beheerder van gebruikers toegang**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator) voor de resource groep een bestaande werk ruimte te gebruiken of een nieuwe werk ruimte in een bestaande resource groep te maken.
+      - [**Log Analytics Inzender**](/azure/role-based-access-control/built-in-roles#log-analytics-contributor) en [**beheerder van gebruikers toegang**](/azure/role-based-access-control/built-in-roles#user-access-administrator) voor de resource groep een bestaande werk ruimte te gebruiken of een nieuwe werk ruimte in een bestaande resource groep te maken.
 
-      - De machtigingen [**eigenaar**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner), of [**Inzender**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) en [**gebruikers toegang**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator) voor het abonnement om een werk ruimte te maken in een nieuwe resource groep.  
+      - De machtigingen [**eigenaar**](/azure/role-based-access-control/built-in-roles#owner), of [**Inzender**](/azure/role-based-access-control/built-in-roles#contributor) en [**gebruikers toegang**](/azure/role-based-access-control/built-in-roles#user-access-administrator) voor het abonnement om een werk ruimte te maken in een nieuwe resource groep.  
 
     - Voor toegang tot de portal na onboarding hebt u het volgende nodig:
 
-      - De rol en [**eigenaar**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner)van de [**beheerder van Desktop Analytics**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions) of [**inzender**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) machtigingen voor de gemaakte log Analytics werk ruimte.
+      - De rol en [**eigenaar**](/azure/role-based-access-control/built-in-roles#owner)van de [**beheerder van Desktop Analytics**](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions) of [**inzender**](/azure/role-based-access-control/built-in-roles#contributor) machtigingen voor de gemaakte log Analytics werk ruimte.
 
 - Configuration Manager, versie 1902 met update pakket (4500571) of hoger. Zie [Update Configuration Manager](connect-configmgr.md#bkmk_hotfix)voor meer informatie.  
 
@@ -103,7 +103,7 @@ Als u Desktop Analytics wilt gebruiken, moet u ervoor zorgen dat uw omgeving vol
     - Apparaten moeten ook beschikken over de Configuration Manager-client versie 1902 met update pakket (4500571) of hoger. Zie [Update Configuration Manager](connect-configmgr.md#bkmk_hotfix)voor meer informatie.  
 
     > [!Note]  
-    > Desktop Analytics biedt geen ondersteuning voor upgrades naar of van Windows 10 Long-term Servicing Channel (LTSC). Zie [Windows as a Service Overview](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel)(Engelstalig) voor meer informatie.
+    > Desktop Analytics biedt geen ondersteuning voor upgrades naar of van Windows 10 Long-term Servicing Channel (LTSC). Zie [Windows as a Service Overview](/windows/deployment/update/waas-overview#long-term-servicing-channel)(Engelstalig) voor meer informatie.
     >
     > Desktop Analytics is ontworpen om het in-place upgrade-scenario het beste te ondersteunen. Als u belang rijke wijzigingen wilt aanbrengen, zoals van 32-bits tot 64-bits architectuur, gebruikt u een Imaging-scenario. Desktop Analytics Insights is nog steeds waardevol in deze klassieke implementatie scenario's voor besturings systemen, maar u kunt de in-place upgrade specifieke richt lijnen negeren. Zie [scenario's voor het implementeren van ENTER prise-besturings systemen met Configuration Manager](../osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems.md)voor meer informatie.
 
@@ -139,7 +139,7 @@ Als u Desktop Analytics wilt gebruiken, moet u ervoor zorgen dat uw omgeving vol
   - Windows Virtual Desktop Access E3 of E5  
 
 > [!NOTE]
-> Naast de kosten van deze licentie abonnementen zijn er geen extra kosten verbonden aan het gebruik van Desktop Analytics in azure Log Analytics. De gegevens typen die door Desktop Analytics worden opgenomen, zijn gratis van de Log Analytics gegevens opname en de retentie kosten. In het geval van niet-factureer bare gegevens typen zijn deze gegevens ook niet onderhevig aan Log Analytics dagelijkse gegevens opname limiet. Zie [log Analytics gebruik en kosten](https://docs.microsoft.com/azure/azure-monitor/platform/manage-cost-storage)voor meer informatie.
+> Naast de kosten van deze licentie abonnementen zijn er geen extra kosten verbonden aan het gebruik van Desktop Analytics in azure Log Analytics. De gegevens typen die door Desktop Analytics worden opgenomen, zijn gratis van de Log Analytics gegevens opname en de retentie kosten. In het geval van niet-factureer bare gegevens typen zijn deze gegevens ook niet onderhevig aan Log Analytics dagelijkse gegevens opname limiet. Zie [log Analytics gebruik en kosten](/azure/azure-monitor/platform/manage-cost-storage)voor meer informatie.
 
 ## <a name="next-steps"></a>Volgende stappen
 

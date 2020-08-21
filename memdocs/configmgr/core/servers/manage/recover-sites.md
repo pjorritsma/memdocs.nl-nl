@@ -10,12 +10,12 @@ ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 37e4db2ad801c5923ba3db54554af0bb13968048
-ms.sourcegitcommit: 64727a4b025a589e270842da39516c4c42563a34
+ms.openlocfilehash: 9e71baef06349a00d49bc7fdc799d078c29939d8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84301432"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699514"
 ---
 # <a name="recover-a-configuration-manager-site"></a>Een Configuration Manager-site herstellen
 
@@ -49,7 +49,7 @@ Gebruik een van de volgende procedures om een bestaande server op te schonen:
 
 #### <a name="clean-an-existing-server-for-site-server-recovery-only"></a>Een bestaande server alleen voor herstel van de site server opschonen
 
-1. SMS-register sleutels verwijderen:`HKLM\Software\Microsoft\SMS`
+1. SMS-register sleutels verwijderen: `HKLM\Software\Microsoft\SMS`
 2. Verwijder register vermeldingen die beginnen met `SMS` van `HKLM\System\CurrentControlSet\Services` . Bijvoorbeeld:
     - SMS_DISCOVERY_DATA_MANAGER
     - SMS_EXECUTIVE
@@ -181,7 +181,7 @@ Gebruik deze optie wanneer u de data base van de Configuration Manager-site al h
     Nadat u de site database hebt hersteld met behulp van een methode buiten Configuration Manager, voert u Setup uit en selecteert u deze optie om het herstel van de site database te volt ooien.  
 
     > [!NOTE]  
-    > Wanneer u DPM gebruikt om een back-up te maken van uw site database, gebruikt u de DPM-procedures om de site database te herstellen naar een opgegeven locatie voordat u doorgaat met het herstel proces in Configuration Manager. Zie de documentatie bibliotheek van [Data Protection Manager](https://docs.microsoft.com/system-center/dpm) voor meer informatie over DPM.  
+    > Wanneer u DPM gebruikt om een back-up te maken van uw site database, gebruikt u de DPM-procedures om de site database te herstellen naar een opgegeven locatie voordat u doorgaat met het herstel proces in Configuration Manager. Zie de documentatie bibliotheek van [Data Protection Manager](/system-center/dpm) voor meer informatie over DPM.  
 
 - Wanneer u een primaire site database herstelt, haalt het herstel proces in een hiërarchie alle wijzigingen op die zijn aangebracht in de site database na de laatste back-up. Bij het herstellen van de CAS haalt het herstel proces deze wijzigingen op uit een primaire referentie site. Wanneer u de site database voor een zelfstandige primaire site herstelt, gaan de site wijzigingen na de laatste back-up verloren.  
 
@@ -193,7 +193,7 @@ Gebruik deze optie wanneer er geen gegevens verlies is opgetreden op de Configur
 
 Configuration Manager kunt wijzigingen bijhouden inschakelen voor de site database in SQL Server. Met de functie voor het bijhouden van wijzigingen kan Configuration Manager query's uitvoeren op informatie over de wijzigingen die zijn aangebracht in database tabellen na een eerder tijdstip. De Bewaar periode geeft aan hoe lang de gegevens voor het bijhouden van wijzigingen worden bewaard. De site database is standaard geconfigureerd voor een Bewaar periode van vijf dagen. Wanneer u een sitedatabase herstelt, vindt het herstelproces anders plaats als uw back-up binnen of buiten de bewaarperiode valt. Als uw SQL Server bijvoorbeeld uitvalt en uw laatste back-up zeven dagen oud is, is het buiten de Bewaar periode.
 
-Voor meer informatie over SQL Server interne wijzigingen bijhouden raadpleegt u de volgende blog berichten van het SQL Server team: [Wijzigingen bijhouden opschonen-deel 1](https://docs.microsoft.com/archive/blogs/sql_server_team/change-tracking-cleanup-part-1) en [Wijzigingen bijhouden opschoning onderdeel 2](https://docs.microsoft.com/archive/blogs/sql_server_team/change-tracking-cleanup-part-2).
+Voor meer informatie over SQL Server interne wijzigingen bijhouden raadpleegt u de volgende blog berichten van het SQL Server team: [Wijzigingen bijhouden opschonen-deel 1](/archive/blogs/sql_server_team/change-tracking-cleanup-part-1) en [Wijzigingen bijhouden opschoning onderdeel 2](/archive/blogs/sql_server_team/change-tracking-cleanup-part-2).
 
 ### <a name="reinitialization-of-site-or-global-data"></a>Opnieuw initialiseren van site of globale gegevens
 
@@ -263,7 +263,7 @@ Gebruik een van de volgende procedures om u te helpen uw site server en site dat
 
 1. Bereid het script voor de installatie zonder toezicht voor voor de opties die u nodig hebt voor het siteherstel. Zie [site Recovery zonder toezicht](unattended-recovery.md)voor meer informatie.  
 
-2. Voer Configuration Manager Setup uit met behulp van de `/script` opdracht regel optie. U maakt bijvoorbeeld een Setup-initialisatie bestand **installatie bijvoorbeeld configmgrunattend. ini**. U slaat deze op in de `C:\Temp` map van de computer waarop u het installatie programma uitvoert. Gebruik de volgende opdracht:  
+2. Voer Configuration Manager Setup uit met behulp van de `/script` opdracht regel optie. U kunt bijvoorbeeld een Setup-initialisatie bestand maken **ConfigMgrUnattend.ini**. U slaat deze op in de `C:\Temp` map van de computer waarop u het installatie programma uitvoert. Gebruik de volgende opdracht:  
 
     `setup.exe /script C:\temp\ConfigMgrUnattend.ini`  
 
@@ -378,7 +378,7 @@ Nadat een site is hersteld, moet u alle [out-of-band-hotfixes](updates.md#bkmk_o
 
 ### <a name="recover-custom-reports"></a>Aangepaste rapporten herstellen
 
-Sommige klanten maken aangepaste rapporten in SQL Server Reporting Services. Wanneer dit onderdeel mislukt, herstelt u de rapporten van een back-up van de rapport server. Zie [back-up-en herstel bewerkingen voor Reporting Services](https://docs.microsoft.com/sql/reporting-services/install-windows/backup-and-restore-operations-for-reporting-services)voor meer informatie over het herstellen van uw aangepaste rapporten in Reporting Services.
+Sommige klanten maken aangepaste rapporten in SQL Server Reporting Services. Wanneer dit onderdeel mislukt, herstelt u de rapporten van een back-up van de rapport server. Zie [back-up-en herstel bewerkingen voor Reporting Services](/sql/reporting-services/install-windows/backup-and-restore-operations-for-reporting-services)voor meer informatie over het herstellen van uw aangepaste rapporten in Reporting Services.
 
 ### <a name="recover-content-files"></a>Inhoudsbestanden herstellen
 
@@ -410,7 +410,7 @@ Als onderdeel van de eigenschappen van het status migratie punt geeft u de mappe
 
 ### <a name="regenerate-the-certificates-for-distribution-points"></a>De certificaten voor distributiepunten opnieuw genereren
 
-Nadat u een site hebt hersteld, kan in het **distmgr. log** de volgende vermelding voor een of meer distributie punten worden weer gegeven: `Failed to decrypt cert PFX data` . Deze vermelding geeft aan dat de certificaat gegevens van het distributie punt niet door de site kunnen worden ontsleuteld. U kunt dit probleem oplossen door het certificaat opnieuw te genereren of opnieuw te importeren voor de betrokken distributie punten. Gebruik de Power shell [-cmdlet Set-CMDistributionPoint](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmdistributionpoint) .
+Nadat u een site hebt hersteld, kan in het **distmgr. log** de volgende vermelding voor een of meer distributie punten worden weer gegeven: `Failed to decrypt cert PFX data` . Deze vermelding geeft aan dat de certificaat gegevens van het distributie punt niet door de site kunnen worden ontsleuteld. U kunt dit probleem oplossen door het certificaat opnieuw te genereren of opnieuw te importeren voor de betrokken distributie punten. Gebruik de Power shell [-cmdlet Set-CMDistributionPoint](/powershell/module/configurationmanager/set-cmdistributionpoint) .
 
 ### <a name="update-certificates-used-for-cloud-based-distribution-points"></a>Certificaten bijwerken die worden gebruikt voor distributie punten in de Cloud
 

@@ -10,12 +10,12 @@ ms.assetid: 2162d67d-31a9-45b2-bb9e-835f3ac6e6fe
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7f46c283bd533d67387ab0abac35e7625438addc
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: a0a434f013da48d660efa78f5e2cdca6ced0826d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129646"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700715"
 ---
 # <a name="configuration-manager-console-changes-and-tips"></a>Wijzigingen en tips van Configuration Manager-console
 
@@ -25,7 +25,7 @@ Gebruik de onderstaande informatie om te ontdekken over wijzigingen in de Config
 
 ## <a name="general-tips"></a>Algemene tips
 
-### <a name="improvements-to-console-search"></a><a name="bkmk_search"></a>Verbeteringen in zoeken in de console
+### <a name="improvements-to-console-search"></a><a name="bkmk_search"></a> Verbeteringen in zoeken in de console
 <!--4640570-->
 *(Geïntroduceerd in versie 1910)*
 
@@ -181,12 +181,12 @@ In de werk ruimte **software bibliotheek** vouwt u **toepassings beheer**uit, ga
    - **Software bibliotheek**  >  **Office 365-client beheer**  >  **Office 365-updates**
 
 1. Selecteer een update die vereist is voor ten minste één apparaat.
-1. Ga naar het tabblad **samen vatting** en zoek het cirkel diagram onder **Statistieken**.
+1. Ga naar het tabblad **samen vatting** en zoek het cirkel diagram onder  **Statistieken**.
 1. Selecteer de **weer gave vereiste** Hyper link naast het cirkel diagram om in te zoomen op de apparaten lijst.
 1. Met deze actie gaat u naar een tijdelijk knoop punt onder **apparaten** waar u de apparaten kunt zien waarvoor de update is vereist. U kunt ook acties uitvoeren voor het knoop punt, zoals het maken van een nieuwe verzameling in de lijst.
 
 > [!NOTE]
-> Vanaf 21 april 2020, wordt de naam van Office 365 ProPlus gewijzigd in **Microsoft 365 apps voor bedrijven**. Zie [name wijzigen voor Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change)voor meer informatie. Mogelijk ziet u nog steeds verwijzingen naar de oude naam in de Configuration Manager-console en de ondersteunende documentatie terwijl de-console wordt bijgewerkt.
+> Vanaf 21 april 2020, wordt de naam van Office 365 ProPlus gewijzigd in **Microsoft 365 apps voor bedrijven**. Zie [name wijzigen voor Office 365 ProPlus](/deployoffice/name-change)voor meer informatie. Mogelijk ziet u nog steeds verwijzingen naar de oude naam in de Configuration Manager-console en de ondersteunende documentatie terwijl de-console wordt bijgewerkt.
 
 ### <a name="maximize-the-browse-registry-window"></a>Het Blader register venster maximaliseren
 
@@ -245,7 +245,7 @@ Gegevens uit het deel venster **activum gegevens** kopiëren voor de volgende be
 
 - **Status van inhouds distributie**  
 
-- **Implementatie status**  
+- **Implementatiestatus**  
 
 ![Status weergave van de implementatie, Details van activum kopiëren](media/1810-deployment-status.PNG)
 
@@ -257,5 +257,5 @@ Vanaf versie 1906 kunt u enkele knoop punten inschakelen onder het knoop punt **
 ## <a name="next-steps"></a>Volgende stappen
 
 - [De console gebruiken](admin-console.md)
-- [Console meldingen](admin-console-notifications.md)
+- [Consolemeldingen](admin-console-notifications.md)
 - [Toegankelijkheidsfuncties](../../understand/accessibility-features.md)

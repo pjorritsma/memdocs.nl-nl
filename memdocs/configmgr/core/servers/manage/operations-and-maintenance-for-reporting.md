@@ -10,12 +10,12 @@ ms.assetid: b89bcfbf-f5b6-4fb1-bb5e-a5cc18ec0c78
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 414d1138a7682d6b9acbc7731035fff1842a1fe7
-ms.sourcegitcommit: c1afc8abd0d7da48815bd2b0e45147774c72c2df
+ms.openlocfilehash: 21bb81e9851ab80d7807df337a67005e5b6b292a
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87815409"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699650"
 ---
 # <a name="operations-and-maintenance-for-reporting-in-configuration-manager"></a>Bewerkingen en onderhoud voor rapportage in Configuration Manager
 
@@ -33,7 +33,7 @@ Configuration Manager de rapporten worden opgeslagen in SQL Server Reporting Ser
 Wanneer u een rapport uitvoert, worden de rapport titel, beschrijving en categorie weer gegeven in de taal van het lokale besturings systeem. Zie [talen voor rapporten](configuring-reporting.md#-languages-for-reports)voor meer informatie.
 
 > [!NOTE]  
-> Report Manager is een webgebaseerd rapport toegang en beheer programma. U kunt dit gebruiken om één exemplaar van een rapport server te beheren via een HTTPS-verbinding. Gebruik Report Manager voor operationele taken: rapporten weer geven, rapport eigenschappen wijzigen en gekoppelde rapport abonnementen beheren. Dit artikel bevat de stappen om een rapport weer te geven en rapport eigenschappen te wijzigen in Report Manager. Zie [Wat is Report Manager?](https://docs.microsoft.com/sql/reporting-services/report-server/manage-a-reporting-services-native-mode-report-server) voor meer informatie over andere opties in Report Manager.
+> Report Manager is een webgebaseerd rapport toegang en beheer programma. U kunt dit gebruiken om één exemplaar van een rapport server te beheren via een HTTPS-verbinding. Gebruik Report Manager voor operationele taken: rapporten weer geven, rapport eigenschappen wijzigen en gekoppelde rapport abonnementen beheren. Dit artikel bevat de stappen om een rapport weer te geven en rapport eigenschappen te wijzigen in Report Manager. Zie [Wat is Report Manager?](/sql/reporting-services/report-server/manage-a-reporting-services-native-mode-report-server) voor meer informatie over andere opties in Report Manager.
 
 Gebruik de volgende procedures om een Configuration Manager-rapport uit te voeren.
 
@@ -77,7 +77,7 @@ Als u de eigenschappen wilt wijzigen, gebruikt u Report Manager:
 
 Report Manager slaat de rapport eigenschappen op de rapport server op. De Configuration Manager-console bevat de bijgewerkte rapport eigenschappen voor het rapport.
 
-## <a name="edit-a-report"></a><a name="bkmk_edit"></a>Een rapport bewerken
+## <a name="edit-a-report"></a><a name="bkmk_edit"></a> Een rapport bewerken
 
 Wanneer een bestaand Configuration Manager rapport niet de informatie ophaalt die u wilt, kunt u deze bewerken in Report Builder. U kunt Report Builder ook gebruiken om de indeling of het ontwerp van het rapport te wijzigen. Hoewel u een standaard rapport rechtstreeks kunt bewerken, is het het beste om het te klonen. Open het rapport dat u wilt bewerken en selecteer vervolgens **Opslaan als**.
 
@@ -173,7 +173,7 @@ Gebruik de volgende procedure om een Configuration Manager rapport op basis van 
 
 1. Selecteer **Opslaan** om het rapport op de rapport server op te slaan.
 
-## <a name="manage-report-subscriptions"></a><a name="bkmk_subscription"></a>Rapport abonnementen beheren
+## <a name="manage-report-subscriptions"></a><a name="bkmk_subscription"></a> Rapport abonnementen beheren
 
 Met rapport abonnementen in SQL Server Reporting Services kunt u de automatische levering van opgegeven rapporten per e-mail of naar een bestands share op geplande intervallen configureren. Als u rapport abonnementen wilt configureren, gebruikt u de **wizard abonnement maken** in Configuration Manager.
 
@@ -256,12 +256,12 @@ Gebruik de volgende procedure om een rapport abonnement te maken voor het levere
 
 1. Controleer of Configuration Manager het rapport abonnement hebt gemaakt. Selecteer het knoop punt **abonnementen** om rapport abonnementen weer te geven en te wijzigen.
 
-### <a name="create-a-report-subscription-to-deliver-a-report-by-email"></a><a name="bkmk_subscription-email"></a>Een rapport abonnement maken om een rapport via e-mail te leveren
+### <a name="create-a-report-subscription-to-deliver-a-report-by-email"></a><a name="bkmk_subscription-email"></a> Een rapport abonnement maken om een rapport via e-mail te leveren
 
 Wanneer u een rapport abonnement maakt om een rapport per e-mail te leveren, stuurt Reporting Services een e-mail bericht naar de ontvangers die u configureert. Het e-mail bericht bevat het rapport als bijlage. De rapport server valideert geen e-mail adressen of ontvangt deze van een e-mail server. U kunt rapporten verzenden naar een geldig e-mail account binnen of buiten uw organisatie.
 
 > [!NOTE]
-> Als u de optie **e-mail** abonnement wilt inschakelen, moet u de e-mail instellingen configureren in Reporting Services. Zie [e-mail bezorging in Reporting Services](https://docs.microsoft.com/sql/reporting-services/subscriptions/e-mail-delivery-in-reporting-services)voor meer informatie.
+> Als u de optie **e-mail** abonnement wilt inschakelen, moet u de e-mail instellingen configureren in Reporting Services. Zie [e-mail bezorging in Reporting Services](/sql/reporting-services/subscriptions/e-mail-delivery-in-reporting-services)voor meer informatie.
 
 U kunt een of beide van de volgende bezorgings opties voor e-mail selecteren:
 

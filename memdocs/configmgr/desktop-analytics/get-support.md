@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: dd18355b9e472866a4d684162913795443ab07ef
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 112a1fe4a47cce330593d34da7ce8d9180457497
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268518"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698902"
 ---
 # <a name="get-support-for-desktop-analytics"></a>Ondersteuning voor desktop Analytics ophalen
 
@@ -31,11 +31,11 @@ Micro soft biedt wereld wijde technische, voor verkoop-, facturerings-en abonnem
 
 ## <a name="help-and-support"></a>Help en ondersteuning
 
-Als u hulp nodig hebt bij Desktop Analytics, gebruikt u de optie **Help en ondersteuning** in de portal onder **problemen oplossen en ondersteuning**. Met deze actie wordt een online ondersteunings ticket voor desktop Analytics gebestandeerd. Als u een ondersteunings incident wilt maken en beheren, moet uw account een Azure Active Directory-rol (Azure AD) hebben die de actie **micro soft. office365. supportTickets/tickets/beheren**bevat. Zie [beheerders rollen in azure AD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles)voor meer informatie.
+Als u hulp nodig hebt bij Desktop Analytics, gebruikt u de optie **Help en ondersteuning** in de portal onder **problemen oplossen en ondersteuning**. Met deze actie wordt een online ondersteunings ticket voor desktop Analytics gebestandeerd. Als u een ondersteunings incident wilt maken en beheren, moet uw account een Azure Active Directory-rol (Azure AD) hebben die de actie **micro soft. office365. supportTickets/tickets/beheren**bevat. Zie [beheerders rollen in azure AD](/azure/active-directory/users-groups-roles/directory-assign-admin-roles)voor meer informatie.
 
 Als het probleem breed is voor Configuration Manager dan alleen analyse, gaat u naar [micro soft ondersteuning](https://aka.ms/cmcbsupport) om een nieuwe ondersteunings aanvraag te openen. Gebruik de categorie **bureau blad Analytics** .
 
-## <a name="share-product-feedback"></a><a name="bkmk_feedback"></a>Feedback over het product delen
+## <a name="share-product-feedback"></a><a name="bkmk_feedback"></a> Feedback over het product delen
 
 <!-- 5451636 -->
 

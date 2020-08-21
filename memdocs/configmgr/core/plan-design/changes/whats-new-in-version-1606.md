@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 070c616ed8411bcd90b2d3edb12b04edd57241e1
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 2fa46770adfbf3e688bbdc561d8193967f3913cd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85590470"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698585"
 ---
 # <a name="what39s-new-in-version-1606-of-configuration-manager"></a>Wat&#39;s nieuw in versie 1606 van Configuration Manager
 
@@ -48,7 +48,7 @@ De volgende wijzigingen zijn aangebracht in het knoop punt updates en onderhoud 
     Wanneer u de update-installatie status voor een site bekijkt, worden in de console nu afzonderlijke details weer gegeven voor de volgende acties:
     - **Downloaden** (dit is alleen van toepassing op de site op het hoogste niveau waar de site systeemrol voor het service aansluitpunt is geïnstalleerd.)
     - **Replicatie**
-    - **Vereistencontrole**
+    - **Controle op vereisten**
     - **Installatie**
 
   Daarnaast vindt u hier meer gedetailleerde informatie over elke stap, waaronder het logboek bestand dat u kunt weer geven voor meer informatie.  
@@ -79,14 +79,14 @@ Wanneer u na de installatie van update 1606 een update installeert op die site w
 
 
 
-## <a name="accessibility"></a><a name="accessibility"></a>Toegankelijkheids
+## <a name="accessibility"></a><a name="accessibility"></a> Toegankelijkheids
 Als u wilt navigeren tussen de verschillende knoop punten van een werk ruimte, kunt u nu de eerste letter van de naam van een knoop punt invoeren. Bij elke toets wordt de cursor verplaatst naar het volgende knoop punt dat begint met die letter. Voor gebruikers met een scherm lezer leest de lezer de naam van het knoop punt. Zie [toegankelijkheids functies](../../../core/understand/accessibility-features.md)voor meer informatie over toegankelijkheids opties.
 
 ## <a name="administration"></a><a name="administration"></a>Beheer
 De volgende wijzigingen zijn aangebracht in beheer in de Configuration Manager-console:
 ### <a name="oms-connector"></a>OMS-connector
 
-U kunt Configuration Manager nu als verzamelingen verbinden van Configuration Manager aan de [Microsoft Operations Management Suite (OMS)](https://azure.microsoft.com/documentation/articles/operations-management-suite-overview/). Dit maakt gegevens zoals verzamelingen uit uw Configuration Manager-implementatie zichtbaar in OMS. Zie [gegevens van Configuration Manager naar het Microsoft Operations Management Suite synchroniseren voor](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)meer informatie.
+U kunt Configuration Manager nu als verzamelingen verbinden van Configuration Manager aan de [Microsoft Operations Management Suite (OMS)](/azure/azure-monitor/overview). Dit maakt gegevens zoals verzamelingen uit uw Configuration Manager-implementatie zichtbaar in OMS. Zie [gegevens van Configuration Manager naar het Microsoft Operations Management Suite synchroniseren voor](/azure/azure-monitor/platform/collect-sccm)meer informatie.
 
 De OMS-connector is een voorlopige versie-functie. Zie [functies van voorlopige versies van updates gebruiken](../../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease)om de functie in te scha kelen.
 

@@ -10,12 +10,12 @@ ms.assetid: 61f5c774-7667-44ae-b8e4-a4951318b183
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 102d07f29b9addd1f2c37dd741db09e972cd5802
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 30b57de75e637aa083070832783647b8ad35b4a7
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718838"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700528"
 ---
 # <a name="install-site-system-roles-for-configuration-manager"></a>Site systeem rollen voor Configuration Manager installeren
 
@@ -38,7 +38,7 @@ Wanneer Configuration Manager een site systeemrol installeert, worden de bestand
 
 Configuration Manager gebruikt het **installatie account van het site systeem** om functies te installeren. U geeft dit account op wanneer u de functie installeert. Dit account is standaard het lokale systeem account van de site Server computer. U kunt een domein gebruikers account opgeven als installatie account voor het site systeem. Zie [accounts-site systeem installatie account](../../../plan-design/hierarchy/accounts.md#site-system-installation-account)voor meer informatie.
 
-## <a name="install-roles-on-an-existing-site-system-server"></a><a name="bkmk_addrole"></a>Rollen installeren op een bestaande site systeem server
+## <a name="install-roles-on-an-existing-site-system-server"></a><a name="bkmk_addrole"></a> Rollen installeren op een bestaande site systeem server
 
 1. Ga in de Configuration Manager-console naar de werk ruimte **beheer** . Vouw **site configuratie**uit en selecteer het knoop punt **servers en site systeem rollen** . Selecteer de bestaande site systeem server waarop u nieuwe site systeem rollen wilt installeren.
 
@@ -56,9 +56,9 @@ Configuration Manager gebruikt het **installatie account van het site systeem** 
 1. Voltooi de wizard. Er kunnen extra pagina's voor specifieke rollen worden weer gegeven. Zie [configuratie opties voor site systeem rollen](configuration-options-for-site-system-roles.md)voor meer informatie.
 
 > [!TIP]
-> De Windows Power shell-cmdlet **New-CMSiteSystemServer**voert dezelfde functie uit als deze procedure. Zie [New-CMSiteSystemServer](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmsitesystemserver?view=sccm-ps)voor meer informatie.
+> De Windows Power shell-cmdlet **New-CMSiteSystemServer**voert dezelfde functie uit als deze procedure. Zie [New-CMSiteSystemServer](/powershell/module/configurationmanager/new-cmsitesystemserver?view=sccm-ps)voor meer informatie.
 
-## <a name="install-roles-on-a-new-site-system-server"></a><a name="bkmk_createnew"></a>Rollen installeren op een nieuwe site systeem server
+## <a name="install-roles-on-a-new-site-system-server"></a><a name="bkmk_createnew"></a> Rollen installeren op een nieuwe site systeem server
 
 1. Ga in de Configuration Manager-console naar de werk ruimte **beheer** . Vouw **site configuratie**uit en selecteer het knoop punt **servers en site systeem rollen** .
 
@@ -76,7 +76,7 @@ Configuration Manager gebruikt het **installatie account van het site systeem** 
 1. Voltooi de wizard. Er kunnen extra pagina's voor specifieke rollen worden weer gegeven. Zie [configuratie opties voor site systeem rollen](configuration-options-for-site-system-roles.md)voor meer informatie.
 
 > [!TIP]
-> De Windows Power shell-cmdlet **New-CMSiteSystemServer**voert dezelfde functie uit als deze procedure. Zie [New-CMSiteSystemServer](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmsitesystemserver?view=sccm-ps)voor meer informatie.
+> De Windows Power shell-cmdlet **New-CMSiteSystemServer**voert dezelfde functie uit als deze procedure. Zie [New-CMSiteSystemServer](/powershell/module/configurationmanager/new-cmsitesystemserver?view=sccm-ps)voor meer informatie.
 
 ## <a name="next-steps"></a>Volgende stappen
 

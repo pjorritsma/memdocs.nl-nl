@@ -10,12 +10,12 @@ ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 176280452039fd42dfef1d63cfdbb48169cda545
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: 17c22027ffc28f2e04e95b8223de27b8f26489fd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84777021"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698483"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Accounts die worden gebruikt in Configuration Manager
 
@@ -88,7 +88,7 @@ Gebruik de volgende informatie om de Windows-groepen, accounts en SQL-objecten t
   - [smsdbrole_WebPortal](#smsdbrole_webportal)
   - [smsschm_users](#smsschm_users)
 
-## <a name="windows-groups-that-configuration-manager-creates-and-uses"></a><a name="bkmk_groups"></a>Windows-groepen die Configuration Manager maken en gebruiken  
+## <a name="windows-groups-that-configuration-manager-creates-and-uses"></a><a name="bkmk_groups"></a> Windows-groepen die Configuration Manager maken en gebruiken  
 
 Configuration Manager maakt automatisch en in veel gevallen worden de volgende Windows-groepen automatisch bijgehouden:  
 
@@ -96,7 +96,7 @@ Configuration Manager maakt automatisch en in veel gevallen worden de volgende W
 > Wanneer Configuration Manager een groep maakt op een computer die lid is van een domein, is de groep een lokale beveiligings groep. Als de computer een domein controller is, is de groep een domeingebonden groep. Dit type groep wordt gedeeld tussen alle domein controllers in het domein.  
 
 
-### <a name="configuration-manager_collectedfilesaccess"></a><a name="configmgr_collectedfilesaccess"></a>Configuratie Manager_CollectedFilesAccess
+### <a name="configuration-manager_collectedfilesaccess"></a><a name="configmgr_collectedfilesaccess"></a> Configuratie Manager_CollectedFilesAccess
 
 Configuration Manager gebruikt deze groep om toegang te verlenen voor het weer geven van bestanden die zijn verzameld door software-inventarisatie.  
 
@@ -111,7 +111,7 @@ Wanneer u een site verwijdert, wordt deze groep niet automatisch verwijderd. Ver
 Configuration Manager beheert automatisch het groepslid maatschap. De leden zijn onder andere beheerders aan wie de machtiging **Verzamelde bestanden weergeven** is verleend op het beveiligbare object **Verzameling** van een toegewezen beveiligingsrol.
 
 #### <a name="permissions"></a>Machtigingen
-Deze groep heeft standaard **Lees** machtiging voor de volgende map op de site server:`C:\Program Files\Microsoft Configuration Manager\sinv.box\FileCol`  
+Deze groep heeft standaard **Lees** machtiging voor de volgende map op de site server: `C:\Program Files\Microsoft Configuration Manager\sinv.box\FileCol`  
 
 
 ### <a name="configuration-manager_dviewaccess"></a><a name="configmgr_dviewaccess"></a>Configuratie Manager_DViewAccess  
@@ -121,7 +121,7 @@ Deze groep is een lokale beveiligings groep die Configuration Manager maakt op d
 Zie [gegevens overdracht tussen sites](data-transfers-between-sites.md)voor meer informatie.
 
 
-### <a name="configuration-manager-remote-control-users"></a><a name="configmgr_rcusers"></a>Gebruikers met beheer op afstand Configuration Manager  
+### <a name="configuration-manager-remote-control-users"></a><a name="configmgr_rcusers"></a> Gebruikers met beheer op afstand Configuration Manager  
 
 Configuration Manager externe hulpprogram ma's deze groep gebruiken om de accounts en groepen op te slaan die u hebt ingesteld in de lijst met **toegestane viewers** . De site wijst deze lijst toe aan elke client.  
 
@@ -166,7 +166,7 @@ U kunt de rechten en machtigingen voor de SMS admins-groep weer geven in de MMC-
 Wanneer u een externe Configuration Manager-console gebruikt, configureert u de DCOM-machtigingen voor **externe activering** op zowel de site Server computer als de SMS-provider. Ken deze rechten toe aan de **SMS admins** -groep. Deze actie vereenvoudigt het beheer in plaats van deze rechten rechtstreeks aan gebruikers of groepen toe te kennen. Zie [DCOM-machtigingen voor externe Configuration Manager-consoles configureren](../../servers/manage/modify-your-infrastructure.md#BKMK_ConfigDCOMforRemoteConsole)voor meer informatie. 
 
 
-### <a name="sms_sitesystemtositeserverconnection_mp_ltsitecode"></a><a name="bkmk_remotemp"></a>SMS_SiteSystemToSiteServerConnection_MP_ &lt; site code\>  
+### <a name="sms_sitesystemtositeserverconnection_mp_ltsitecode"></a><a name="bkmk_remotemp"></a> SMS_SiteSystemToSiteServerConnection_MP_ &lt; site code\>  
  
 Beheer punten die zich op afstand van de site server bevinden, gebruiken deze groep om verbinding te maken met de site database. Deze groep biedt een beheerpunt toegang tot het Postvak IN op de siteserver en de sitedatabase.  
 
@@ -182,7 +182,7 @@ Configuration Manager beheert automatisch het groepslid maatschap. Lidmaatschap 
 Deze groep heeft standaard de machtiging **lezen**, **lezen & uitvoeren**en Mapinhoud **weer geven** voor de volgende map op de site server: `C:\Program Files\Microsoft Configuration Manager\inboxes` . Deze groep heeft de extra machtiging **schrijven** naar submappen onder **Postvak**in, waarnaar het beheer punt client gegevens schrijft.
 
 
-### <a name="sms_sitesystemtositeserverconnection_smsprov_ltsitecode"></a><a name="bkmk_remoteprov"></a>SMS_SiteSystemToSiteServerConnection_SMSProv_ &lt; site code\>  
+### <a name="sms_sitesystemtositeserverconnection_smsprov_ltsitecode"></a><a name="bkmk_remoteprov"></a> SMS_SiteSystemToSiteServerConnection_SMSProv_ &lt; site code\>  
  
 Externe SMS-provider computers gebruiken deze groep om verbinding te maken met de site server.  
 
@@ -207,7 +207,7 @@ Het bevat ook de volgende machtigingen voor de submappen hieronder `C:\Program F
 - **Wijzigen**   
 
 
-### <a name="sms_sitesystemtositeserverconnection_stat_ltsitecode"></a><a name="bkmk_remotestat"></a>SMS_SiteSystemToSiteServerConnection_Stat_ &lt; site code\>  
+### <a name="sms_sitesystemtositeserverconnection_stat_ltsitecode"></a><a name="bkmk_remotestat"></a> SMS_SiteSystemToSiteServerConnection_Stat_ &lt; site code\>  
 
 Het onderdeel Bestands verzendings beheer op Configuration Manager externe site systeem computers maakt gebruik van deze groep om verbinding te maken met de site server.  
 
@@ -225,7 +225,7 @@ Deze groep beschikt standaard over de machtigingen **lezen**, **lezen & uitvoere
 Deze groep heeft de extra machtigingen **schrijven** en **wijzigen** in de volgende map op de site server: `C:\Program Files\Microsoft Configuration Manager\inboxes\statmgr.box` .
 
 
-### <a name="sms_sitetositeconnection_ltsitecode"></a><a name="bkmk_filerepl"></a>SMS_SiteToSiteConnection_ &lt; site code\>  
+### <a name="sms_sitetositeconnection_ltsitecode"></a><a name="bkmk_filerepl"></a> SMS_SiteToSiteConnection_ &lt; site code\>  
 Configuration Manager gebruikt deze groep om op bestanden gebaseerde replicatie tussen sites in een hiërarchie in te scha kelen. Voor elke externe site die rechtstreeks bestanden overbrengt naar deze site, bevat deze groep accounts die zijn ingesteld als een **account voor bestands replicatie**.  
 
 #### <a name="type-and-location"></a>Type en locatie
@@ -241,7 +241,7 @@ Deze groep heeft standaard de **volledige controle** over de volgende map: `C:\P
 
 
 
-## <a name="accounts-that-configuration-manager-uses"></a><a name="bkmk_accounts"></a>Accounts die Configuration Manager gebruikt  
+## <a name="accounts-that-configuration-manager-uses"></a><a name="bkmk_accounts"></a> Accounts die Configuration Manager gebruikt  
 
 U kunt de volgende accounts instellen voor Configuration Manager.  
 
@@ -553,7 +553,7 @@ Als u beschikt over Configuration Manager 2007-distributie punten of secundaire 
 > [!NOTE]  
 > Zowel het bron site account als het [bron site database account](#source-site-database-account) worden als **migratie beheer** aangeduid in het knoop punt **accounts** van de werk ruimte **beheer** in de Configuration Manager-console.  
 
-Zie voor meer informatie [migreren van gegevens tussen hiërarchieën](https://docs.microsoft.com/sccm/core/migration/migrate-data-between-hierarchies).
+Zie voor meer informatie [migreren van gegevens tussen hiërarchieën](/sccm/core/migration/migrate-data-between-hierarchies).
 
 
 ### <a name="source-site-database-account"></a>Bron site database account  
@@ -569,7 +569,7 @@ Als u het computer account Configuration Manager (current branch) gebruikt, moet
 > [!NOTE]  
 > Zowel het bron site account als het [bron site database account](#source-site-database-account) worden als **migratie beheer** aangeduid in het knoop punt **accounts** van de werk ruimte **beheer** in de Configuration Manager-console.  
 
-Zie voor meer informatie [migreren van gegevens tussen hiërarchieën](https://docs.microsoft.com/sccm/core/migration/migrate-data-between-hierarchies).
+Zie voor meer informatie [migreren van gegevens tussen hiërarchieën](/sccm/core/migration/migrate-data-between-hierarchies).
 
 
 ### <a name="task-sequence-domain-join-account"></a>Lidmaatschaps account voor taken reeks domein 
@@ -620,7 +620,7 @@ Stel het account in op de minimale machtigingen die zijn vereist voor het uitvoe
 > Als de opdracht regel beheerders toegang op de computer vereist, kunt u overwegen om voor dit account een lokaal beheerders account te maken op alle computers waarop de taken reeks wordt uitgevoerd. Verwijder het account wanneer u het niet meer nodig hebt.  
 
 
-## <a name="user-objects-that-configuration-manager-uses-in-sql"></a><a name="bkmk_sqlusers"></a>Gebruikers objecten die door Configuration Manager worden gebruikt in SQL 
+## <a name="user-objects-that-configuration-manager-uses-in-sql"></a><a name="bkmk_sqlusers"></a> Gebruikers objecten die door Configuration Manager worden gebruikt in SQL 
 <!--SCCMDocs issue #1160-->
 Configuration Manager maakt en onderhoudt automatisch de volgende gebruikers objecten in SQL.  Deze objecten bevinden zich in de Configuration Manager-Data Base onder beveiliging/gebruikers.  
 

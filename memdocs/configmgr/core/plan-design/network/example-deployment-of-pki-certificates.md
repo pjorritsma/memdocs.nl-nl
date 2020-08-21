@@ -10,12 +10,12 @@ ms.assetid: 3417ff88-7177-4a0d-8967-ab21fe7eba17
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 45ef103645630b8e203710ec0ff36a71b3cef4cf
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 7781c20ca542d19c562574c554a08c38493911f6
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904255"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700075"
 ---
 # <a name="step-by-step-example-deployment-of-the-pki-certificates-for-configuration-manager-windows-server-2008-certification-authority"></a>Voor beeld van een stapsgewijze implementatie van de PKI-certificaten voor Configuration Manager: Windows Server 2008-certificerings instantie
 
@@ -31,7 +31,7 @@ Omdat er geen implementatie methode is voor de vereiste certificaten, raadpleegt
 > - **Certificeringsinstantie**: **Windows Server 2003**  
 >   - **Ontvanger van het certificaat**: **Windows XP / Server 2003**  
 
-## <a name="test-network-requirements"></a><a name="BKMK_testnetworkenvironment"></a>Test netwerk vereisten
+## <a name="test-network-requirements"></a><a name="BKMK_testnetworkenvironment"></a> Test netwerk vereisten
 
 De stapsgewijze instructies hebben de volgende vereisten:  
 
@@ -45,20 +45,20 @@ De stapsgewijze instructies hebben de volgende vereisten:
 
 - U kunt zich aanmelden met een beheerders account voor het hoofd domein of een beheerders account voor ondernemings domein en dit account gebruiken voor alle procedures in deze voorbeeld implementatie.  
 
-## <a name="overview-of-the-certificates"></a><a name="BKMK_overview2008"></a>Overzicht van de certificaten
+## <a name="overview-of-the-certificates"></a><a name="BKMK_overview2008"></a> Overzicht van de certificaten
 
 De volgende tabel bevat de typen PKI-certificaten die mogelijk vereist zijn voor Configuration Manager en beschrijft hoe ze worden gebruikt.  
 
 |Certificaatvereiste|Certificaatbeschrijving|  
 |-----------------------------|-----------------------------|  
 |Webservercertificaat voor sitesystemen die IIS uitvoeren|Dit certificaat wordt gebruikt om gegevens te coderen en de server te verifiëren naar clients. Het moet extern worden geïnstalleerd van Configuration Manager op site systeem servers waarop Internet Information Services (IIS) wordt uitgevoerd en die zijn ingesteld in Configuration Manager om HTTPS te gebruiken.<br /><br /> Zie [het webserver certificaat implementeren voor site systemen die IIS uitvoeren](#BKMK_webserver2008_cm2012) in dit onderwerp voor de stappen voor het instellen en installeren van dit certificaat.|  
-|Servicecertificaat voor clients voor verbinding maken met cloud-gebaseerde distributiepunten|Zie [het service certificaat voor cloud-gebaseerde distributie punten implementeren](#BKMK_clouddp2008_cm2012) in dit onderwerp voor de stappen voor het configureren en installeren van dit certificaat.<br /><br /> **Belangrijk:** dit certificaat wordt in combinatie met het Microsoft Azure-beheercertificaat gebruikt. Zie [How to Create a Management Certificate](https://docs.microsoft.com/azure/cloud-services/cloud-services-certs-create#create-a-new-self-signed-certificate) (een beheer certificaat maken) en [een beheer certificaat toevoegen aan een Windows Azure-abonnement](https://docs.microsoft.com/azure/cloud-services/cloud-services-configure-ssl-certificate-portal#step-3-upload-a-certificate)voor meer informatie over het beheer certificaat.|  
+|Servicecertificaat voor clients voor verbinding maken met cloud-gebaseerde distributiepunten|Zie [het service certificaat voor cloud-gebaseerde distributie punten implementeren](#BKMK_clouddp2008_cm2012) in dit onderwerp voor de stappen voor het configureren en installeren van dit certificaat.<br /><br /> **Belangrijk:** dit certificaat wordt in combinatie met het Microsoft Azure-beheercertificaat gebruikt. Zie [How to Create a Management Certificate](/azure/cloud-services/cloud-services-certs-create#create-a-new-self-signed-certificate) (een beheer certificaat maken) en [een beheer certificaat toevoegen aan een Windows Azure-abonnement](/azure/cloud-services/cloud-services-configure-ssl-certificate-portal#step-3-upload-a-certificate)voor meer informatie over het beheer certificaat.|  
 |Clientcertificaat voor Windows-computers|Dit certificaat wordt gebruikt om Configuration Manager-client computers te verifiëren naar site systemen die zijn ingesteld voor het gebruik van HTTPS. Het kan ook worden gebruikt voor beheer punten en status migratie punten om hun operationele status te controleren wanneer ze zijn ingesteld voor het gebruik van HTTPS. Het moet extern worden geïnstalleerd van Configuration Manager op computers.<br /><br /> Zie [het client certificaat voor Windows-computers implementeren](#BKMK_client2008_cm2012) in dit onderwerp voor de stappen voor het instellen en installeren van dit certificaat.|  
 |Clientcertificaat voor distributiepunten|Dit certificaat heeft twee doeleinden:<br /><br /> Het certificaat wordt gebruikt om het distributiepunt naar een HTTPS-beheerpunt te verifiëren voordat het distributiepunt statusberichten verzendt.<br /><br /> Wanneer de distributiepuntoptie **PXE-ondersteuning voor clients inschakelen** is geselecteerd, wordt het certificaat verzonden naar computers die een PXE-opstartbewerking uitvoeren, zodat ze verbinding kunnen maken met een HTTPS-beheerpunt tijdens de implementatie van het besturingssysteem.<br /><br /> Zie [het client certificaat voor distributie punten implementeren](#BKMK_clientdistributionpoint2008_cm2012) in dit onderwerp voor de stappen voor het instellen en installeren van dit certificaat.|  
 |Certificaat voor inschrijving voor mobiele apparaten|Dit certificaat wordt gebruikt voor het verifiëren van Configuration Manager clients voor mobiele apparaten naar site systemen die zijn ingesteld voor het gebruik van HTTPS. Het moet worden geïnstalleerd als onderdeel van inschrijving van mobiele apparaten in Configuration Manager en u kiest het geconfigureerde certificaat sjabloon als een client instelling voor mobiele apparaten.<br /><br /> Zie [het certificaat voor inschrijving voor mobiele apparaten implementeren](#BKMK_mobiledevices2008_cm2012) in dit onderwerp voor de stappen voor het instellen van dit certificaat.|  
 |Clientcertificaat voor Mac-computers|U kunt dit certificaat aanvragen en installeren vanaf een Mac-computer wanneer u Configuration Manager-inschrijving gebruikt en het geconfigureerde certificaat sjabloon als een client instelling voor mobiele apparaten kiest.<br /><br /> Zie [het client certificaat voor Mac-computers implementeren](#BKMK_MacClient_SP1) in dit onderwerp voor de stappen voor het instellen van dit certificaat.|  
 
-## <a name="deploy-the-web-server-certificate-for-site-systems-that-run-iis"></a><a name="BKMK_webserver2008_cm2012"></a>Het webserver certificaat implementeren voor site systemen die IIS uitvoeren
+## <a name="deploy-the-web-server-certificate-for-site-systems-that-run-iis"></a><a name="BKMK_webserver2008_cm2012"></a> Het webserver certificaat implementeren voor site systemen die IIS uitvoeren
 
 Deze certificaatimplementatie heeft de volgende procedures:  
 
@@ -68,7 +68,7 @@ Deze certificaatimplementatie heeft de volgende procedures:
 
 - IIS configureren voor het gebruik van het webserver certificaat  
 
-### <a name="create-and-issue-the-web-server-certificate-template-on-the-certification-authority"></a><a name="BKMK_webserver22008"></a>Maken en publiceren van het sjabloon webserver certificaat bij de certificerings instantie
+### <a name="create-and-issue-the-web-server-certificate-template-on-the-certification-authority"></a><a name="BKMK_webserver22008"></a> Maken en publiceren van het sjabloon webserver certificaat bij de certificerings instantie
 
 Met deze procedure maakt u een certificaat sjabloon voor Configuration Manager site systemen en voegt u het toe aan de certificerings instantie.  
 
@@ -103,14 +103,14 @@ Met deze procedure maakt u een certificaat sjabloon voor Configuration Manager s
 
 13. Sluit de **certificerings instantie**als u geen certificaten meer hoeft te maken en verlenen.  
 
-###  <a name="request-the-web-server-certificate"></a><a name="BKMK_webserver32008"></a>Het webserver certificaat aanvragen  
+###  <a name="request-the-web-server-certificate"></a><a name="BKMK_webserver32008"></a> Het webserver certificaat aanvragen  
  Met deze procedure kunt u de intranet-en Internet-FQDN-waarden opgeven die worden ingesteld in de eigenschappen van de site systeem server en vervolgens het webserver certificaat installeren op de lidserver waarop IIS wordt uitgevoerd.  
 
 ##### <a name="to-request-the-web-server-certificate"></a>Het webservercertificaat aanvragen  
 
 1.  Start de lidserver die IIS uitvoert opnieuw op om te controleren of de computer toegang heeft tot het certificaat sjabloon dat u hebt gemaakt met behulp van de **Lees** -en **registratie** -machtigingen die u hebt geconfigureerd.  
 
-2.  Kies **Start**, kies **uitvoeren**en typ vervolgens **MMC. exe.** Kies in de lege console **bestand**en kies vervolgens **module toevoegen/verwijderen**.  
+2.  Kies **Start**, kies **uitvoeren**en typ vervolgens **mmc.exe.** Kies in de lege console **bestand**en kies vervolgens **module toevoegen/verwijderen**.  
 
 3.  Kies in het dialoog venster **modules toevoegen of verwijderen** de optie **certificaten** in de lijst met **beschik bare**modules en kies vervolgens **toevoegen**.  
 
@@ -153,7 +153,7 @@ Met deze procedure maakt u een certificaat sjabloon voor Configuration Manager s
 
 16. Sluit **Certificaten (lokale computer)**.  
 
-###  <a name="configure-iis-to-use-the-web-server-certificate"></a><a name="BKMK_webserver42008"></a>IIS configureren voor het gebruik van het webserver certificaat  
+###  <a name="configure-iis-to-use-the-web-server-certificate"></a><a name="BKMK_webserver42008"></a> IIS configureren voor het gebruik van het webserver certificaat  
  Met deze procedure koppelt u het geïnstalleerde certificaat aan de **IIS-standaardwebsite**.  
 
 ##### <a name="to-set-up-iis-to-use-the-web-server-certificate"></a>IIS instellen voor het gebruik van het webserver certificaat  
@@ -178,7 +178,7 @@ Met deze procedure maakt u een certificaat sjabloon voor Configuration Manager s
 > [!IMPORTANT]  
 >  Wanneer u de Configuration Manager-site systeem server op deze computer installeert, moet u ervoor zorgen dat u dezelfde FQDN-namen opgeeft in de site systeem eigenschappen zoals opgegeven wanneer u het certificaat aanvraagt.  
 
-##  <a name="deploy-the-service-certificate-for-cloud-based-distribution-points"></a><a name="BKMK_clouddp2008_cm2012"></a>Het service certificaat voor cloud-gebaseerde distributie punten implementeren  
+##  <a name="deploy-the-service-certificate-for-cloud-based-distribution-points"></a><a name="BKMK_clouddp2008_cm2012"></a> Het service certificaat voor cloud-gebaseerde distributie punten implementeren  
 
 Deze certificaatimplementatie heeft de volgende procedures:  
 
@@ -188,7 +188,7 @@ Deze certificaatimplementatie heeft de volgende procedures:
 
 - [Het aangepaste webserver certificaat voor cloud-gebaseerde distributie punten exporteren](#BKMK_clouddpexporting2008)  
 
-###  <a name="create-and-issue-a-custom-web-server-certificate-template-on-the-certification-authority"></a><a name="BKMK_clouddpcreating2008"></a>Een aangepast webserver certificaat sjabloon maken en uitgeven bij de certificerings instantie  
+###  <a name="create-and-issue-a-custom-web-server-certificate-template-on-the-certification-authority"></a><a name="BKMK_clouddpcreating2008"></a> Een aangepast webserver certificaat sjabloon maken en uitgeven bij de certificerings instantie  
  Met deze procedure maakt u een aangepast certificaat sjabloon dat is gebaseerd op het sjabloon webserver certificaat. Het certificaat is voor Configuration Manager cloud-gebaseerde distributie punten en de persoonlijke sleutel moet exporteerbaar zijn. Na het maken van het certificaatsjabloon, wordt het toegevoegd aan de certificeringsinstantie.  
 
 > [!NOTE]
@@ -233,14 +233,14 @@ Deze certificaatimplementatie heeft de volgende procedures:
 
 14. Sluit de **certificerings instantie**als u geen certificaten meer moet maken en verlenen.  
 
-###  <a name="request-the-custom-web-server-certificate"></a><a name="BKMK_clouddprequesting2008"></a>Het aangepaste webserver certificaat aanvragen  
+###  <a name="request-the-custom-web-server-certificate"></a><a name="BKMK_clouddprequesting2008"></a> Het aangepaste webserver certificaat aanvragen  
  Met deze procedure vraagt u het aangepaste webserver certificaat aan en installeert u het op de lidserver die de site server gaat uitvoeren.  
 
 ##### <a name="to-request-the-custom-web-server-certificate"></a>Het aangepaste webservercertificaat aanvragen  
 
 1.  Start de lidserver opnieuw op nadat u de beveiligings groep **Configuration Manager-site servers** hebt gemaakt en geconfigureerd om ervoor te zorgen dat de computer toegang heeft tot het certificaat sjabloon dat u hebt gemaakt met behulp van de **Lees** -en **registratie** -machtigingen die u hebt geconfigureerd.  
 
-2.  Kies **Start**, kies **uitvoeren**en voer vervolgens **MMC. exe in.** Kies in de lege console **bestand**en kies vervolgens **module toevoegen/verwijderen**.  
+2.  Kies **Start**, kies **uitvoeren**en voer vervolgens **mmc.exe in.** Kies in de lege console **bestand**en kies vervolgens **module toevoegen/verwijderen**.  
 
 3.  Kies in het dialoog venster **modules toevoegen of verwijderen** de optie **certificaten** in de lijst met **beschik bare**modules en kies vervolgens **toevoegen**.  
 
@@ -275,7 +275,7 @@ Deze certificaatimplementatie heeft de volgende procedures:
 
 17. Sluit **Certificaten (lokale computer)**.  
 
-###  <a name="export-the-custom-web-server-certificate-for-cloud-based-distribution-points"></a><a name="BKMK_clouddpexporting2008"></a>Het aangepaste webserver certificaat voor cloud-gebaseerde distributie punten exporteren  
+###  <a name="export-the-custom-web-server-certificate-for-cloud-based-distribution-points"></a><a name="BKMK_clouddpexporting2008"></a> Het aangepaste webserver certificaat voor cloud-gebaseerde distributie punten exporteren  
  Met deze procedure exporteert u het aangepaste webservercertificaat naar een bestand zodat het kan worden geïmporteerd wanneer u het cloud-gebaseerde distributiepunt maakt.  
 
 ##### <a name="to-export-the-custom-web-server-certificate-for-cloud-based-distribution-points"></a>Exporteren van het aangepaste webservercertificaat voor cloud-gebaseerde distributiepunten  
@@ -303,7 +303,7 @@ Deze certificaatimplementatie heeft de volgende procedures:
 
    Het certificaat kan nu worden geïmporteerd wanneer u een cloud-gebaseerd distributiepunt maakt.  
 
-##  <a name="deploy-the-client-certificate-for-windows-computers"></a><a name="BKMK_client2008_cm2012"></a>Het client certificaat voor Windows-computers implementeren  
+##  <a name="deploy-the-client-certificate-for-windows-computers"></a><a name="BKMK_client2008_cm2012"></a> Het client certificaat voor Windows-computers implementeren  
  Deze certificaatimplementatie heeft de volgende procedures:  
 
 - Maken en uitgeven van het certificaat sjabloon voor verificatie van werk station bij de certificerings instantie  
@@ -312,7 +312,7 @@ Deze certificaatimplementatie heeft de volgende procedures:
 
 - Het certificaat voor verificatie van werk station automatisch inschrijven en de installatie ervan controleren op computers  
 
-###  <a name="create-and-issue-the-workstation-authentication-certificate-template-on-the-certification-authority"></a><a name="BKMK_client02008"></a>Maken en uitgeven van het certificaat sjabloon voor verificatie van werk station bij de certificerings instantie  
+###  <a name="create-and-issue-the-workstation-authentication-certificate-template-on-the-certification-authority"></a><a name="BKMK_client02008"></a> Maken en uitgeven van het certificaat sjabloon voor verificatie van werk station bij de certificerings instantie  
  Met deze procedure maakt u een certificaat sjabloon voor Configuration Manager-client computers en voegt u het toe aan de certificerings instantie.  
 
 ##### <a name="to-create-and-issue-the-workstation-authentication-certificate-template-on-the-certification-authority"></a>Maken en publiceren van het certificaatsjabloon voor verificatie van werkstation bij de certificeringsinstantie  
@@ -338,7 +338,7 @@ Deze certificaatimplementatie heeft de volgende procedures:
 
 9. Sluit de **certificerings instantie**als u geen certificaten meer hoeft te maken en verlenen.  
 
-###  <a name="configure-autoenrollment-of-the-workstation-authentication-template-by-using-group-policy"></a><a name="BKMK_client12008"></a>Automatische inschrijving configureren van de sjabloon voor verificatie van werk station met behulp van groepsbeleid  
+###  <a name="configure-autoenrollment-of-the-workstation-authentication-template-by-using-group-policy"></a><a name="BKMK_client12008"></a> Automatische inschrijving configureren van de sjabloon voor verificatie van werk station met behulp van groepsbeleid  
  Met deze procedure stelt u groepsbeleid in voor het automatisch inschrijven van het client certificaat op computers.  
 
 ##### <a name="to-set-up-autoenrollment-of-the-workstation-authentication-template-by-using-group-policy"></a>Automatische inschrijving van de sjabloon voor verificatie van werk station instellen met behulp van groepsbeleid  
@@ -362,7 +362,7 @@ Deze certificaatimplementatie heeft de volgende procedures:
 
 8.  Sluiten **Groepsbeleidsbeheer**.  
 
-###  <a name="automatically-enroll-the-workstation-authentication-certificate-and-verify-its-installation-on-computers"></a><a name="BKMK_client22008"></a>Het certificaat voor verificatie van werk station automatisch inschrijven en de installatie ervan controleren op computers  
+###  <a name="automatically-enroll-the-workstation-authentication-certificate-and-verify-its-installation-on-computers"></a><a name="BKMK_client22008"></a> Het certificaat voor verificatie van werk station automatisch inschrijven en de installatie ervan controleren op computers  
  Met deze procedure installeert u het clientcertificaat op computers en verifieert u de installatie.  
 
 ##### <a name="to-automatically-enroll-the-workstation-authentication-certificate-and-verify-its-installation-on-the-client-computer"></a>Het certificaat voor verificatie van werk station automatisch inschrijven en de installatie controleren op de client computer  
@@ -374,7 +374,7 @@ Deze certificaatimplementatie heeft de volgende procedures:
 
 2. Meld u aan met een account met beheerders bevoegdheden.  
 
-3. Voer in het zoekvak **MMC. exe.** en druk op **Enter**.  
+3. Voer **mmc.exe.** in het zoekvak in en druk op **Enter**.  
 
 4. Kies in de lege beheer console de optie **bestand**en kies vervolgens **module toevoegen/verwijderen**.  
 
@@ -396,7 +396,7 @@ Deze certificaatimplementatie heeft de volgende procedures:
 
     De computer is nu ingesteld met een Configuration Manager-client certificaat.  
 
-##  <a name="deploy-the-client-certificate-for-distribution-points"></a><a name="BKMK_clientdistributionpoint2008_cm2012"></a>Het client certificaat voor distributie punten implementeren  
+##  <a name="deploy-the-client-certificate-for-distribution-points"></a><a name="BKMK_clientdistributionpoint2008_cm2012"></a> Het client certificaat voor distributie punten implementeren  
 
 > [!NOTE]  
 >  Dit certificaat kan ook worden gebruikt voor media-afbeeldingen die geen PXE-opstartapparaat gebruiken omdat de certificaatvereisten dezelfde zijn.  
@@ -409,7 +409,7 @@ Deze certificaatimplementatie heeft de volgende procedures:
 
 - Het client certificaat voor distributie punten exporteren  
 
-###  <a name="create-and-issue-a-custom-workstation-authentication-certificate-template-on-the-certification-authority"></a><a name="BKMK_clientdistributionpoint02008"></a>Een aangepast certificaat sjabloon voor verificatie van werk station maken en uitgeven bij de certificerings instantie  
+###  <a name="create-and-issue-a-custom-workstation-authentication-certificate-template-on-the-certification-authority"></a><a name="BKMK_clientdistributionpoint02008"></a> Een aangepast certificaat sjabloon voor verificatie van werk station maken en uitgeven bij de certificerings instantie  
  Met deze procedure maakt u een aangepast certificaat sjabloon voor Configuration Manager distributie punten, zodat de persoonlijke sleutel kan worden geëxporteerd en het certificaat sjabloon kan worden toegevoegd aan de certificerings instantie.  
 
 > [!NOTE]
@@ -450,12 +450,12 @@ Deze certificaatimplementatie heeft de volgende procedures:
 
 12. Sluit de **certificerings instantie**als u geen certificaten meer moet maken en verlenen.  
 
-###  <a name="request-the-custom-workstation-authentication-certificate"></a><a name="BKMK_clientdistributionpoint12008"></a>Het aangepaste certificaat voor verificatie van werk station aanvragen  
+###  <a name="request-the-custom-workstation-authentication-certificate"></a><a name="BKMK_clientdistributionpoint12008"></a> Het aangepaste certificaat voor verificatie van werk station aanvragen  
  Met deze procedure vraagt u het aangepaste client certificaat aan en installeert u het op de lidserver die IIS uitvoert en die wordt ingesteld als een distributie punt.  
 
 ##### <a name="to-request-the-custom-workstation-authentication-certificate"></a>Het aangepaste certificaat voor verificatie van werkstation aanvragen  
 
-1.  Kies **Start**, kies **uitvoeren**en voer vervolgens **MMC. exe in.** Kies in de lege console **bestand**en kies vervolgens **module toevoegen/verwijderen**.  
+1.  Kies **Start**, kies **uitvoeren**en voer vervolgens **mmc.exe in.** Kies in de lege console **bestand**en kies vervolgens **module toevoegen/verwijderen**.  
 
 2.  Kies in het dialoog venster **modules toevoegen of verwijderen** de optie **certificaten** in de lijst met **beschik bare**modules en kies vervolgens **toevoegen**.  
 
@@ -481,7 +481,7 @@ Deze certificaatimplementatie heeft de volgende procedures:
 
 13. **Certificaten (lokale computer)** niet sluiten.  
 
-###  <a name="export-the-client-certificate-for-distribution-points"></a><a name="BKMK_exportclientdistributionpoint22008"></a>Het client certificaat voor distributie punten exporteren  
+###  <a name="export-the-client-certificate-for-distribution-points"></a><a name="BKMK_exportclientdistributionpoint22008"></a> Het client certificaat voor distributie punten exporteren  
  Met deze procedure exporteert u het aangepaste certificaat voor verificatie van werk station naar een bestand zodat het kan worden geïmporteerd in de eigenschappen van het distributie punt.  
 
 ##### <a name="to-export-the-client-certificate-for-distribution-points"></a>Exporteren van het clientcertificaat voor distributiepunten  
@@ -512,7 +512,7 @@ Deze certificaatimplementatie heeft de volgende procedures:
 > [!TIP]  
 >  U kunt hetzelfde certificaat bestand gebruiken bij het instellen van media kopieën voor een implementatie van een besturings systeem dat geen gebruik maakt van PXE-opstart bewerking en de taken reeks voor het installeren van de installatie kopie moet contact opnemen met een beheer punt waarvoor HTTPS-client verbindingen zijn vereist.  
 
-##  <a name="deploy-the-enrollment-certificate-for-mobile-devices"></a><a name="BKMK_mobiledevices2008_cm2012"></a>Het certificaat voor inschrijving voor mobiele apparaten implementeren  
+##  <a name="deploy-the-enrollment-certificate-for-mobile-devices"></a><a name="BKMK_mobiledevices2008_cm2012"></a> Het certificaat voor inschrijving voor mobiele apparaten implementeren  
  Voor deze certificaatimplementatie wordt een enkele procedure gebruikt om het certificaatsjabloon voor inschrijving te maken en het te publiceren bij de certificeringsinstantie.  
 
 ### <a name="create-and-issue-the-enrollment-certificate-template-on-the-certification-authority"></a>Maken en publiceren van het certificaat sjabloon voor inschrijving bij de certificerings instantie  
@@ -547,11 +547,11 @@ Deze certificaatimplementatie heeft de volgende procedures:
 
     Het certificaat sjabloon voor inschrijving van mobiele apparaten is nu klaar om te worden geselecteerd wanneer u een inschrijvings profiel voor mobiele apparaten instelt in de client instellingen.  
 
-##  <a name="deploy-the-client-certificate-for-mac-computers"></a><a name="BKMK_MacClient_SP1"></a>Het client certificaat voor Mac-computers implementeren  
+##  <a name="deploy-the-client-certificate-for-mac-computers"></a><a name="BKMK_MacClient_SP1"></a> Het client certificaat voor Mac-computers implementeren  
 
 Voor deze certificaatimplementatie wordt een enkele procedure gebruikt om het certificaatsjabloon voor inschrijving te maken en het te publiceren bij de certificeringsinstantie.  
 
-###  <a name="create-and-issue-a-mac-client-certificate-template-on-the-certification-authority"></a><a name="BKMK_MacClient_CreatingIssuing"></a>Een sjabloon voor een Mac-client certificaat maken en uitgeven voor de certificerings instantie  
+###  <a name="create-and-issue-a-mac-client-certificate-template-on-the-certification-authority"></a><a name="BKMK_MacClient_CreatingIssuing"></a> Een sjabloon voor een Mac-client certificaat maken en uitgeven voor de certificerings instantie  
  Met deze procedure maakt u een aangepast certificaat sjabloon voor Configuration Manager Mac-computers en voegt u het certificaat sjabloon toe aan de certificerings instantie.  
 
 > [!NOTE]  

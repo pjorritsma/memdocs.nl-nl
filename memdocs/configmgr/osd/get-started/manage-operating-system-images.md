@@ -10,12 +10,12 @@ ms.assetid: fab13949-371c-4a4c-978e-471db1e54966
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: aa574cd3db2e7a3d3277912ed4a383f71d33e59c
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 2f8b8a45ff83ce903f5737c94144e6ca5ab50826
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124284"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697650"
 ---
 # <a name="manage-os-images-with-configuration-manager"></a>Installatie kopieën van besturings systemen beheren met Configuration Manager
 
@@ -43,7 +43,7 @@ De Windows-installatie bestanden bevatten de standaard installatie kopie van het
 - De installatie van het besturings systeem kan meer tijd in beslag nemen. De installatie van de toepassing en andere configuraties worden uitgevoerd nadat de installatie van het besturings systeem is voltooid.  
 
 
-### <a name="captured-image-from-a-reference-computer"></a><a name="bkmk_capture"></a>Vastgelegde installatie kopie van een referentie computer
+### <a name="captured-image-from-a-reference-computer"></a><a name="bkmk_capture"></a> Vastgelegde installatie kopie van een referentie computer
 
 Als u een aangepaste installatie kopie van het besturings systeem wilt maken, bouwt u een referentie computer met het gewenste besturings systeem. Installeer vervolgens toepassingen en Configureer instellingen. Leg de installatie kopie van het besturings systeem van de referentie computer vast om het WIM-bestand te maken. Bouw de referentie computer hand matig op of gebruik een taken reeks om enkele of alle stappen van de build te automatiseren. Zie [installatie kopieën van besturings systemen aanpassen](customize-operating-system-images.md)voor meer informatie.  
 
@@ -58,7 +58,7 @@ Als u een aangepaste installatie kopie van het besturings systeem wilt maken, bo
 - U moet een nieuwe installatie kopie maken wanneer u updates voor toepassingen en hulpprogram ma's nodig hebt.  
 
 
-## <a name="add-an-os-image"></a><a name="BKMK_AddOSImages"></a>Een installatie kopie van een besturings systeem toevoegen  
+## <a name="add-an-os-image"></a><a name="BKMK_AddOSImages"></a> Een installatie kopie van een besturings systeem toevoegen  
 
 Voordat u een installatie kopie van het besturings systeem kunt gebruiken, moet u deze toevoegen aan uw Configuration Manager-site.
 
@@ -89,12 +89,12 @@ Voordat u een installatie kopie van het besturings systeem kunt gebruiken, moet 
 
 5. Voltooi de wizard.  
 
-Zie [New-CMOperatingSystemImage](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmoperatingsystemimage?view=sccm-ps)voor het equivalent van de Power shell-cmdlet van deze console wizard.
+Zie [New-CMOperatingSystemImage](/powershell/module/configurationmanager/new-cmoperatingsystemimage?view=sccm-ps)voor het equivalent van de Power shell-cmdlet van deze console wizard.
 
 Distribueer vervolgens de installatie kopie van het besturings systeem naar distributie punten.  
 
 
-## <a name="distribute-content-to-distribution-points"></a><a name="BKMK_DistributeBootImages"></a>Inhoud distribueren naar distributie punten  
+## <a name="distribute-content-to-distribution-points"></a><a name="BKMK_DistributeBootImages"></a> Inhoud distribueren naar distributie punten  
 
 Distribueer installatie kopieën van het besturings systeem naar distributie punten die hetzelfde zijn als andere inhoud. Voordat u de taken reeks implementeert, distribueert u de installatie kopie van het besturings systeem naar ten minste één distributie punt. Zie voor meer informatie [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).  
 
@@ -102,7 +102,7 @@ Distribueer installatie kopieën van het besturings systeem naar distributie pun
 [!INCLUDE [Apply software updates to an image](includes/wim-apply-updates.md)]
 
 
-## <a name="prepare-the-os-image-for-multicast-deployments"></a><a name="BKMK_OSImageMulticast"></a>De installatie kopie van het besturings systeem voorbereiden voor multi cast-implementaties  
+## <a name="prepare-the-os-image-for-multicast-deployments"></a><a name="BKMK_OSImageMulticast"></a> De installatie kopie van het besturings systeem voorbereiden voor multi cast-implementaties  
 
 Multi cast-implementaties gebruiken om ervoor te zorgen dat meerdere computers tegelijkertijd een installatie kopie van het besturings systeem downloaden. De installatie kopie is multi cast naar clients op het distributie punt, in plaats van dat elke client een kopie van de installatie kopie downloadt van het distributie punt over een afzonderlijke verbinding. Wanneer u de implementatie methode voor het besturings systeem kiest voor het [gebruik van multi cast om Windows via het netwerk te implementeren](../deploy-use/use-multicast-to-deploy-windows-over-the-network.md), moet u de installatie kopie van het besturings systeem configureren voor multi cast. Distribueer de installatie kopie vervolgens naar een multi cast-distributie punt.
 
@@ -122,4 +122,4 @@ Multi cast-implementaties gebruiken om ervoor te zorgen dat meerdere computers t
 
          Als u **Dit pakket alleen overdragen via multi cast**selecteert, moet u ook de optie voor de implementatie van taken reeksen opgeven om **inhoud lokaal te downloaden wanneer dit nodig is voor de taken reeks die wordt uitgevoerd**. Zie [Een takenreeks implementeren](../deploy-use/deploy-a-task-sequence.md)voor meer informatie.  
 
-5. Selecteer **OK** om de instellingen op te slaan en de eigenschappen van de installatie kopie te sluiten.  
+5. Selecteer **OK** om de instellingen op te slaan en de eigenschappen van de installatie kopie te sluiten.

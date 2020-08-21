@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
 ROBOTS: NOINDEX
-ms.openlocfilehash: 18e703691696a2cfc02a5b9715fb6062360229e2
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: 63aba639eea221c3a13f7ebeabaa1b96a8439a72
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353459"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700766"
 ---
 # <a name="ready-for-modern-desktop-retirement-faq"></a>Veelgestelde vragen over het voorbereiden van moderne Desktop-pensioen
 
@@ -49,10 +49,10 @@ Veel klanten hebben problemen met het ophalen en blijven actueel van Windows 10 
 
 De lijst met kant-en- *klare bureau blad* -software oplossingen die worden ondersteund en in gebruik zijn op commerciële apparaten met Windows 10 en Office 365 ProPlus. De Directory helpt IT-beheerders die de nieuwste versies van Windows 10 en Office 365 voor hun implementaties overwegen.
 
-Feedback van IT-managers is dat ze deze inzichten willen integreren met de hulpprogram ma's die ze al gebruiken om hun implementatie plannen te plannen. Gebruik [Desktop Analytics](https://aka.ms/dadocs) en [Office 365 ProPlus gereedheids functies](https://docs.microsoft.com/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) in Configuration Manager om uw Windows 10-en Office 365 ProPlus-upgrade projecten te plannen en te beheren. 
+Feedback van IT-managers is dat ze deze inzichten willen integreren met de hulpprogram ma's die ze al gebruiken om hun implementatie plannen te plannen. Gebruik [Desktop Analytics](https://aka.ms/dadocs) en [Office 365 ProPlus gereedheids functies](/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) in Configuration Manager om uw Windows 10-en Office 365 ProPlus-upgrade projecten te plannen en te beheren. 
 
 > [!Note]
-> Vanaf 21 april 2020, wordt de naam van Office 365 ProPlus gewijzigd in **Microsoft 365 apps voor bedrijven**. Zie [name wijzigen voor Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change)voor meer informatie. Mogelijk ziet u nog steeds verwijzingen naar de oude naam in de Configuration Manager-console en de ondersteunende documentatie terwijl de-console wordt bijgewerkt.
+> Vanaf 21 april 2020, wordt de naam van Office 365 ProPlus gewijzigd in **Microsoft 365 apps voor bedrijven**. Zie [name wijzigen voor Office 365 ProPlus](/deployoffice/name-change)voor meer informatie. Mogelijk ziet u nog steeds verwijzingen naar de oude naam in de Configuration Manager-console en de ondersteunende documentatie terwijl de-console wordt bijgewerkt.
 
 ### <a name="what-is-desktop-analytics"></a>Wat is Desktop Analytics?
 
@@ -114,12 +114,12 @@ Neem contact op met uw micro soft-contact persoon als uw ondersteunings instruct
 
 Evalueer de prestaties van uw oplossingen met rapporten over de status en de metrische gegevens via het ontwikkelaars centrum: 
 
-- [Windows Store](https://docs.microsoft.com/windows/uwp/publish/health-report)
-- [Bureaublad](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program)
-- [Office-invoegtoepassingen](https://docs.microsoft.com/office/dev/store/update-unpublish-and-view-metrics) 
+- [Windows Store](/windows/uwp/publish/health-report)
+- [Bureaublad](/windows/desktop/appxpkg/windows-desktop-application-program)
+- [Office-invoegtoepassingen](/office/dev/store/update-unpublish-and-view-metrics) 
 
 ### <a name="how-can-i-develop-compatible-assets-for-windows-10-and-office-365-proplus"></a>Hoe kan ik compatibele assets ontwikkelen voor Windows 10 en Office 365 ProPlus?
 
 Zorg ervoor dat uw desktop toepassingen nu compatibel zijn en blijf in de toekomst compatibel met Windows 10. Zie [toepassings compatibiliteit voor ontwikkel aars](https://developer.microsoft.com/windows/desktop/app-compatibility)voor meer informatie.
 
-Als u oplossingen voor Office 365 ProPlus ontwikkelt, raadpleegt u [Aanbevolen procedures voor het ontwikkelen van com-, VSTO-en VBA-invoeg toepassingen in Office](https://docs.microsoft.com/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office).
+Als u oplossingen voor Office 365 ProPlus ontwikkelt, raadpleegt u [Aanbevolen procedures voor het ontwikkelen van com-, VSTO-en VBA-invoeg toepassingen in Office](/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office).

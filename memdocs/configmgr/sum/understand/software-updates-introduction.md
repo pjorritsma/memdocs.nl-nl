@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: e9778b13-c8a3-40eb-8655-34ac8ce9cdaa
-ms.openlocfilehash: bd384edafd6464073b33a593a56bc88ba2fb0b87
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 3cb8d07c9bcc31353e16f01de9e60857d47d49e4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906767"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700419"
 ---
 # <a name="introduction-to-software-updates-in-configuration-manager"></a>Inleiding tot software-updates in Configuration Manager
 
@@ -177,7 +177,7 @@ Zie voor een voorbeeld scenario waarin wordt getoond hoe u software-updates in u
 
      Na het installeren van een software-update en het opnieuw opstarten van de computer, start de clientagent van software-updates een scan door gebruik te maken van de lokale metagegevens. De client maakt nooit verbinding met WSUS dat wordt uitgevoerd op het software-updatepunt om de metagegevens van software-updates op te halen.  
 
-##  <a name="software-update-deployment-packages"></a><a name="BKMK_DeploymentPackages"></a>Software-update-implementatie pakketten  
+##  <a name="software-update-deployment-packages"></a><a name="BKMK_DeploymentPackages"></a> Software-update-implementatie pakketten  
  Een implementatiepakket van een software-updatepunt is de drager die wordt gebruikt om software-updates naar een gedeelde netwerkmap te downloaden, en om de bronbestanden van de software-update te kopiëren naar de inhoudsbibliotheek op siteservers en op distributiepunten die in de implementatie worden gedefinieerd. Door de wizard Updates downloaden te gebruiken, kunt u software-updates downloaden en deze toevoegen aan implementatiepakketten voordat u ze implementeert. Met deze wizard kunt u software-updates inrichten op distributiepunten en verifiëren dat dit onderdeel van het implementatieproces succesvol is voordat u de software-updates naar clients implementeert.  
 
  De implementatie gebruikt automatisch het implementatiepakket dat de software-updates bevat als u gedownloade software-updates implementeert door gebruik te maken van de wizard Software-updates implementeren. Wanneer er software-updates worden geïmplementeerd die nog niet zijn gedownload, dient u een nieuw of bestaand implementatiepakket op te geven in de wizard Software-updates implementeren. De software-updates worden gedownload wanneer de wizard is voltooid.  
@@ -251,7 +251,7 @@ Zie voor een voorbeeld scenario waarin wordt getoond hoe u software-updates in u
 
   -   Afzonderlijke waarschuwingen voor deze implementatie  
 
-##  <a name="software-update-deployment-process"></a><a name="BKMK_DeploymentProcess"></a>Implementatie proces voor software-updates  
+##  <a name="software-update-deployment-process"></a><a name="BKMK_DeploymentProcess"></a> Implementatie proces voor software-updates  
  Nadat u software-updates implementeert of wanneer er een automatische implementatieregel wordt uitgevoerd en software-updates implementeert, wordt er een implementatietoewijzingsbeleid toegevoegd aan het machinebeleid voor de site. De software-updates worden naar de pakketbron gedownload vanaf de downloadlocatie, het internet of de gedeelde netwerkmap. De software-updates worden gekopieerd van de pakketbron naar de inhoudsbibliotheek op de siteserver en vervolgens gekopieerd naar de inhoudsbibliotheek op het distributiepunt.  
 
  Wanneer een clientcomputer in de doelverzameling voor de implementatie het machinebeleid ontvangt, start de clientagent voor software-updates een evaluatiescan. De client agent downloadt de inhoud voor vereiste software-updates van een distributie punt naar de lokale client cache op het **tijdstip waarop de software beschikbaar is** voor de implementatie en vervolgens kunnen de software-updates worden geïnstalleerd. De software-updates in optionele implementaties (implementaties zonder installatiedeadline) worden pas gedownload wanneer een gebruiker de installatie handmatig start.  
@@ -264,7 +264,7 @@ Zie voor een voorbeeld scenario waarin wordt getoond hoe u software-updates in u
 ### <a name="deployment-reevaluation-cycle"></a>Cyclus voor het opnieuw evalueren van implementaties  
  Clientcomputers starten standaard om de zeven dagen een cyclus voor het opnieuw evalueren van implementaties. Tijdens deze evaluatiecyclus controleert de clientcomputer of er software-updates aanwezig zijn die eerder zijn geïmplementeerd en geïnstalleerd. Als er software-updates ontbreken, worden de software-updates opnieuw geïnstalleerd vanuit de lokale cache. Als een software-updates niet langer beschikbaar is in de lokale cache, kan deze vanaf een distributiepunt worden gedownload en vervolgens worden geïnstalleerd. U kunt de planning voor opnieuw evalueren configureren op de pagina **Software-updates** in de clientinstellingen.  
 
-##  <a name="support-for-windows-embedded-devices-that-use-write-filters"></a><a name="BKMK_EmbeddedDevices"></a>Ondersteuning voor Windows Embedded-apparaten die gebruikmaken van schrijf filters  
+##  <a name="support-for-windows-embedded-devices-that-use-write-filters"></a><a name="BKMK_EmbeddedDevices"></a> Ondersteuning voor Windows Embedded-apparaten die gebruikmaken van schrijf filters  
  Wanneer u software-updates implementeert voor Windows Embedded-apparaten waarvoor een schrijffilter is ingeschakeld, kunt u opgeven of het schrijffilter op het apparaat tijdens de implementatie moet worden uitgeschakeld en of het apparaat vervolgens na de implementatie opnieuw moet worden opgestart. Als het schrijffilter niet wordt uitgeschakeld, wordt de software geïmplementeerd op een tijdelijke overlay en wordt de software niet meer geïnstalleerd wanneer het apparaat opnieuw start, tenzij een andere implementatie afdwingt dat wijzigingen blijvend zijn.  
 
 > [!NOTE]  
@@ -272,10 +272,10 @@ Zie voor een voorbeeld scenario waarin wordt getoond hoe u software-updates in u
 
  De gebruikerservaringinstelling die het gedrag van het schrijffilter bepaalt, is het selectievakje **Wijzigingen doorvoeren bij deadline of tijdens onderhoud (opnieuw opstarten noodzakelijk)**.  
 
- Zie [planning voor client implementatie op Windows Embedded-apparaten](../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md)voor meer informatie over de manier waarop Configuration Manager Inge sloten apparaten beheert die gebruikmaken van schrijf filters.  
+ Zie  [planning voor client implementatie op Windows Embedded-apparaten](../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md)voor meer informatie over de manier waarop Configuration Manager Inge sloten apparaten beheert die gebruikmaken van schrijf filters.  
 
 ##  <a name="extend-software-updates-in-configuration-manager"></a><a name="BKMK_ExtendSoftwareUpdates"></a> Software-updates uitbreiden in Configuration Manager  
- Gebruik System Center Updates Publisher om software-updates te beheren die niet beschikbaar zijn via Microsoft Update. Nadat u de software-updates naar de update server hebt gepubliceerd en de software-updates in Configuration Manager hebt gesynchroniseerd, kunt u de software-updates implementeren op Configuration Manager-clients. Zie [updates publisher 2011](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10))voor meer informatie over updates Publisher.  
+ Gebruik System Center Updates Publisher om software-updates te beheren die niet beschikbaar zijn via Microsoft Update. Nadat u de software-updates naar de update server hebt gepubliceerd en de software-updates in Configuration Manager hebt gesynchroniseerd, kunt u de software-updates implementeren op Configuration Manager-clients. Zie [updates publisher 2011](/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10))voor meer informatie over updates Publisher.  
 
 ## <a name="next-steps"></a>Volgende stappen
 [Software-updates plannen](../plan-design/plan-for-software-updates.md)

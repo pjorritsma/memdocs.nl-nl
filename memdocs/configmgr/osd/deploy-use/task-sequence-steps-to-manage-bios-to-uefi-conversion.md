@@ -10,12 +10,12 @@ ms.assetid: bd3df04a-902f-4e91-89eb-5584b47d9efa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 761270fe9419330e2d60d0483554ee6c932c1b26
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: bf108cec074129f9b70e7cd2658cf2b1c8c10bc2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124882"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697905"
 ---
 # <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>Takenreeksstappen voor het beheren van de conversie van BIOS naar UEFI
 
@@ -70,7 +70,7 @@ In een bestaande taken reeks om een besturings systeem te installeren, voegt u e
     > [!TIP]
     > De EFI-partitie grootte is standaard 500 MB. In sommige omgevingen is de opstart installatie kopie te groot om op deze partitie op te slaan. U kunt dit probleem omzeilen door de grootte van de EFI-partitie te verg Roten. Stel de waarde bijvoorbeeld in op 1 GB.<!-- SCCMDocs#1024 -->
 
-## <a name="convert-from-bios-to-uefi-during-in-place-upgrade"></a><a name="bkmk_ipu"></a>Converteren van BIOS naar UEFI tijdens in-place upgrade
+## <a name="convert-from-bios-to-uefi-during-in-place-upgrade"></a><a name="bkmk_ipu"></a> Converteren van BIOS naar UEFI tijdens in-place upgrade
 
 Windows 10 bevat een eenvoudig conversie programma, **MBR2GPT**. Het proces voor het opnieuw partitioneren van de harde schijf voor UEFI-hardware wordt geautomatiseerd. U kunt het conversie programma integreren in het in-place upgrade-proces naar Windows 10. Combi neer dit hulp programma met uw upgrade taken reeks en het OEM-hulp programma dat de firmware converteert van BIOS naar UEFI.
 
@@ -86,12 +86,12 @@ Windows 10 bevat een eenvoudig conversie programma, **MBR2GPT**. Het proces voor
 
 1. Bewerk de taken reeks. Breng de volgende wijzigingen aan in de groep **na verwerking** :
 
-    1. Voeg de stap **opdracht regel uitvoeren** toe. Geef de opdracht regel op voor het hulp programma MBR2GPT. Wanneer u uitvoert in het volledige besturings systeem, moet u deze configureren om de schijf van MBR naar GPT te converteren zonder gegevens te wijzigen of te verwijderen. Voer de volgende opdracht in op de **opdracht regel**:`MBR2GPT.exe /convert /disk:0 /AllowFullOS`
+    1. Voeg de stap **opdracht regel uitvoeren** toe. Geef de opdracht regel op voor het hulp programma MBR2GPT. Wanneer u uitvoert in het volledige besturings systeem, moet u deze configureren om de schijf van MBR naar GPT te converteren zonder gegevens te wijzigen of te verwijderen. Voer de volgende opdracht in op de **opdracht regel**: `MBR2GPT.exe /convert /disk:0 /AllowFullOS`
 
     > [!TIP]
     > U kunt er ook voor kiezen om het MBR2GPT.EXE-hulp programma uit te voeren in plaats van in het volledige besturings systeem in Windows PE. Voeg een stap toe om de computer opnieuw op te starten in Windows PE voordat de stap wordt uitgevoerd om het MBR2GPT.EXE-hulp programma uit te voeren. Verwijder vervolgens de optie **/AllowFullOS** van de opdracht regel.
 
-    Zie [MBR2GPT.EXE](https://docs.microsoft.com/windows/deployment/mbr-to-gpt)voor meer informatie over het hulp programma en de beschik bare opties.
+    Zie [MBR2GPT.EXE](/windows/deployment/mbr-to-gpt)voor meer informatie over het hulp programma en de beschik bare opties.
 
     1. Voeg een stap toe om het OEM-hulp programma uit te voeren dat de firmware converteert van BIOS naar UEFI. Deze stap wordt doorgaans **uitgevoerd**met een opdracht regel om het OEM-hulp programma uit te voeren.
 

@@ -10,12 +10,12 @@ ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 907c36b6f06bbf4fbbabb9ee1b2df6cadb0acb75
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: ca002664bd55dbac79ace5cfe4bf88cd41d65b89
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125454"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698092"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>Een taken reeks maken om een besturings systeem in Configuration Manager bij te werken
 
@@ -41,7 +41,7 @@ Voordat u de taken reeks maakt, moeten de volgende vereisten aanwezig zijn:
 - [Toepassingen](../../apps/deploy-use/create-applications.md) moeten worden toegevoegd aan de Configuration Manager-console.  
 
 
-## <a name="create-a-task-sequence-to-upgrade-an-os"></a><a name="BKMK_UpgradeOS"></a>Een taken reeks maken om een besturings systeem bij te werken  
+## <a name="create-a-task-sequence-to-upgrade-an-os"></a><a name="BKMK_UpgradeOS"></a> Een taken reeks maken om een besturings systeem bij te werken  
 
 Als u het besturings systeem op clients wilt upgraden, maakt u een taken reeks en selecteert u **een upgrade uitvoeren van een besturingssysteem van upgrade pakket** in de wizard taken reeks maken. De wizard voegt de taken reeks stappen toe om het besturings systeem bij te werken, software-updates toe te passen en toepassingen te installeren.
 
@@ -66,7 +66,7 @@ Als u het besturings systeem op clients wilt upgraden, maakt u een taken reeks e
     - **Product code**: Geef de Windows-product code op voor het besturings systeem dat u wilt installeren. Geef gecodeerde volume licentie sleutels of standaard product codes op. Als u een standaard product code gebruikt, scheidt u elke groep van vijf tekens met een streepje ( `-` ). Bijvoorbeeld: `XXXXX-XXXXX-XXXXX-XXXXX-XXXXX`. Wanneer de upgrade is voor een volume licentie-editie, is de product code mogelijk niet vereist.  
 
         > [!Note]  
-        > Deze product code kan een meervoudige activerings code (MAK) of een algemene volume licentie code (GVLK) zijn. Een GVLK wordt ook wel een configuratie sleutel voor de KMS-client (Key Management service) genoemd. Zie [volume activering plannen](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client)voor meer informatie. Zie [bijlage a](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) van de Windows Server-activerings handleiding voor een lijst met installatie sleutels voor KMS-clients.
+        > Deze product code kan een meervoudige activerings code (MAK) of een algemene volume licentie code (GVLK) zijn. Een GVLK wordt ook wel een configuratie sleutel voor de KMS-client (Key Management service) genoemd. Zie [volume activering plannen](/windows/deployment/volume-activation/plan-for-volume-activation-client)voor meer informatie. Zie [bijlage a](/windows-server/get-started/kmsclientkeys) van de Windows Server-activerings handleiding voor een lijst met installatie sleutels voor KMS-clients.
 
     - **Negeer mogelijke compatibiliteits berichten**: Selecteer deze instelling als u een upgrade uitvoert naar Windows Server 2016. Als u deze instelling niet selecteert, kan de taken reeks niet worden voltooid omdat Windows Setup wacht totdat de gebruiker op **bevestigen** klikt in het dialoog venster Windows-app-compatibiliteit.  
 
@@ -217,7 +217,7 @@ Als u logboeken van de client wilt verzamelen, voegt u de stappen in deze groep 
 
 Als u aanvullende diagnostische hulpprogram ma's wilt uitvoeren, voegt u de stappen in deze groep toe. Automatiseer deze hulpprogram ma's voor het verzamelen van aanvullende informatie uit het systeem, direct na de storing.  
 
-Een dergelijk hulp programma is Windows [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag). Het is een zelfstandig diagnostisch hulp programma voor het verkrijgen van informatie over waarom een Windows 10-upgrade is mislukt.  
+Een dergelijk hulp programma is Windows [SetupDiag](/windows/deployment/upgrade/setupdiag). Het is een zelfstandig diagnostisch hulp programma voor het verkrijgen van informatie over waarom een Windows 10-upgrade is mislukt.  
 
 - Maak in Configuration Manager [een pakket](../../apps/deploy-use/packages-and-programs.md#create-a-package-and-program) voor het hulp programma.  
 
@@ -225,13 +225,13 @@ Een dergelijk hulp programma is Windows [SetupDiag](https://docs.microsoft.com/w
     `SetupDiag.exe /Output:"%_SMSTSLogPath%\SetupDiagResults.log"`  
 
 > [!TIP]
-> Gebruik altijd de meest recente versie van SetupDiag voor de nieuwste functionaliteit en oplossingen voor bekende problemen. Zie [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag)voor meer informatie.
+> Gebruik altijd de meest recente versie van SetupDiag voor de nieuwste functionaliteit en oplossingen voor bekende problemen. Zie [SetupDiag](/windows/deployment/upgrade/setupdiag)voor meer informatie.
 
 ## <a name="additional-recommendations"></a>Extra aanbevelingen
 
 ### <a name="windows-documentation"></a>Windows-documentatie
 
-Raadpleeg de Windows-documentatie om [Windows 10-upgrade fouten op te lossen](https://docs.microsoft.com/windows/deployment/upgrade/resolve-windows-10-upgrade-errors). Dit artikel bevat ook gedetailleerde informatie over het upgrade proces.  
+Raadpleeg de Windows-documentatie om [Windows 10-upgrade fouten op te lossen](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors). Dit artikel bevat ook gedetailleerde informatie over het upgrade proces.  
 
 ### <a name="check-minimum-disk-space"></a>Controleer de minimale schijf ruimte
 
@@ -272,12 +272,12 @@ Als u het apparaat wilt wijzigen van BIOS in UEFI tijdens deze taken reeks, raad
 ### <a name="manage-bitlocker"></a>BitLocker beheren
 
 <!--SCCMDocs issue #494-->
-Als u BitLocker-schijf versleuteling gebruikt, wordt de standaard Windows Setup automatisch onderbroken tijdens de upgrade. Vanaf Windows 10 versie 1803 bevat Windows Setup de `/BitLocker` opdracht regel parameter om dit gedrag te bepalen. Als voor uw beveiligings vereisten altijd actieve schijf versleuteling moet worden ingeschakeld, gebruikt u de [taken reeks variabele](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) **OSDSetupAdditionalUpgradeOptions** in de **voor bereiding van de upgrade** groep die u wilt toevoegen `/BitLocker TryKeepActive` . Zie [Windows Setup opdracht regel opties](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#bitlocker)voor meer informatie.
+Als u BitLocker-schijf versleuteling gebruikt, wordt de standaard Windows Setup automatisch onderbroken tijdens de upgrade. Vanaf Windows 10 versie 1803 bevat Windows Setup de `/BitLocker` opdracht regel parameter om dit gedrag te bepalen. Als voor uw beveiligings vereisten altijd actieve schijf versleuteling moet worden ingeschakeld, gebruikt u de [taken reeks variabele](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) **OSDSetupAdditionalUpgradeOptions** in de **voor bereiding van de upgrade** groep die u wilt toevoegen `/BitLocker TryKeepActive` . Zie [Windows Setup opdracht regel opties](/windows-hardware/manufacture/desktop/windows-setup-command-line-options#bitlocker)voor meer informatie.
 
 ### <a name="remove-default-apps"></a>Standaard-apps verwijderen
 
 <!--SCCMDocs issue #526-->
-Sommige klanten verwijderen standaard ingerichte apps in Windows 10. Bijvoorbeeld de Bing weer-app of de micro soft Patience-verzameling. In sommige gevallen retour neren deze apps na het bijwerken van Windows 10. Zie [How to keep apps unmoved from Windows 10](https://docs.microsoft.com/windows/application-management/remove-provisioned-apps-during-update)(Engelstalig) voor meer informatie.
+Sommige klanten verwijderen standaard ingerichte apps in Windows 10. Bijvoorbeeld de Bing weer-app of de micro soft Patience-verzameling. In sommige gevallen retour neren deze apps na het bijwerken van Windows 10. Zie [How to keep apps unmoved from Windows 10](/windows/application-management/remove-provisioned-apps-during-update)(Engelstalig) voor meer informatie.
 
 Voeg een stap **opdracht regel uitvoeren** toe aan de taken reeks in de groep **voorbereiden voor upgrade** . Geef een opdracht regel op die vergelijkbaar is met het volgende voor beeld:
 

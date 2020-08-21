@@ -10,14 +10,14 @@ ms.assetid: 963dda08-87b8-4e80-90a7-25625efe8861
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: ca71d40b29a9dcd9c239ccd06a8a28321f50f62c
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 4c535cc41e1351b334e8eb7bb942de04ebbd00a2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127682"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700433"
 ---
-# <a name="tenant-attach-install-an-application-from-the-admin-center-preview"></a><a name="bkmk_apps"></a>Tenant bijvoegen: een toepassing installeren vanuit het beheer centrum (preview-versie)
+# <a name="tenant-attach-install-an-application-from-the-admin-center-preview"></a><a name="bkmk_apps"></a> Tenant bijvoegen: een toepassing installeren vanuit het beheer centrum (preview-versie)
 <!--cm 6024389, in 7220536 pubpreview Aug 10, 2020-->
 *Van toepassing op: Configuration Manager (huidige vertakking)*
 
@@ -51,9 +51,9 @@ Het gebruikers account heeft de volgende machtigingen nodig:
 - De gebruikersrol **beheerder** voor de Configuration Manager micro service-toepassing in azure AD. 
   - Voeg de rol in azure AD toe uit **bedrijfs toepassingen**  >  **Configuration Manager micro service**-  >  **gebruikers en-groepen**  >  **gebruiker toevoegen**. Groepen worden ondersteund als u Azure AD Premium hebt.
    > [!TIP]
-   > De [rol toepassings beheerder in azure AD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) beschikt over voldoende machtigingen om een gebruiker toe te voegen aan de gebruikersrol **admin** van de toepassing.
+   > De [rol toepassings beheerder in azure AD](/azure/active-directory/users-groups-roles/directory-assign-admin-roles) beschikt over voldoende machtigingen om een gebruiker toe te voegen aan de gebruikersrol **admin** van de toepassing.
 
-## <a name="deploy-an-application-to-a-device"></a><a name="bkmk_deploy"></a>Een toepassing implementeren op een apparaat
+## <a name="deploy-an-application-to-a-device"></a><a name="bkmk_deploy"></a> Een toepassing implementeren op een apparaat
 
 1. Ga in een browser naar [https://endpoint.microsoft.com](https://endpoint.microsoft.com) .
 1. Selecteer **apparaten** en vervolgens **alle apparaten**.
@@ -79,7 +79,7 @@ U kunt de lijst met toepassingen filteren op basis van de status. De toepassings
 - **Niet geïnstalleerd**: de toepassing is momenteel niet geïnstalleerd. Deze status wordt doorgaans gezien als een andere implementatie of een gebruiker de toepassing heeft verwijderd.
 - **Opnieuw opstarten in behandeling**: de toepassing is geïnstalleerd, maar moet opnieuw worden opgestart om te volt ooien (vanaf versie 2006).
 
-## <a name="deploy-an-application-to-a-user"></a><a name="bkmk_user"></a>Een toepassing implementeren voor een gebruiker
+## <a name="deploy-an-application-to-a-user"></a><a name="bkmk_user"></a> Een toepassing implementeren voor een gebruiker
 <!--7518897-->
 Vanaf Configuration Manager versie 2006 worden toepassingen die beschikbaar zijn, weer gegeven in het knoop punt **toepassingen** voor een ConfigMgr-apparaat. De lijst met toepassingen die beschikbaar zijn voor het apparaat omvat ook toepassingen die zijn geïmplementeerd op de momenteel aangemelde gebruiker van het apparaat.
 

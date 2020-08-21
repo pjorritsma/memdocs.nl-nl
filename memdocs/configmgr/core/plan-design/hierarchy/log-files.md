@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7fa4fbc7cb4e66a1ad47cb0c14a5f7e52abb5bf5
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 1e24a7fe6a81408de48a73889db923cc8c5094ea
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126423"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700545"
 ---
 # <a name="log-file-reference"></a>Verwijzing naar logboekbestand
 
@@ -111,11 +111,11 @@ De volgende secties bevatten informatie over de verschillende logboek bestanden 
 
   - [WSUS-server](#BKMK_WSUSLog)  
 
-## <a name="client-log-files"></a><a name="BKMK_ClientLogs"></a>Client logboek bestanden
+## <a name="client-log-files"></a><a name="BKMK_ClientLogs"></a> Client logboek bestanden
 
 De volgende secties geven een lijst van de logboek bestanden met betrekking tot client bewerkingen en client installatie.  
 
-### <a name="client-operations"></a><a name="BKMK_ClientOpLogs"></a>Client bewerkingen
+### <a name="client-operations"></a><a name="BKMK_ClientOpLogs"></a> Client bewerkingen
 
 De volgende tabel geeft een lijst van de logboek bestanden die zich op de Configuration Manager-client bevinden.  
 
@@ -189,7 +189,7 @@ De volgende tabel geeft een lijst van de logboek bestanden die zich op de Config
 |wakeprxy-install.log|Registreert installatie-informatie wanneer clients de optie voor client instelling ontvangen om wake-up proxy in te scha kelen.|  
 |wakeprxy-uninstall.log|Registreert informatie over het verwijderen van Wake-up proxy wanneer clients de optie client instelling ontvangen om wake-up proxy uit te scha kelen, als Wake-up proxy eerder is ingeschakeld.|  
 
-### <a name="client-installation"></a><a name="BKMK_ClientInstallLog"></a>Client installatie
+### <a name="client-installation"></a><a name="BKMK_ClientInstallLog"></a> Client installatie
 
 De volgende tabel geeft een lijst van de logboek bestanden die informatie bevatten met betrekking tot de installatie van de Configuration Manager-client.  
 
@@ -200,7 +200,7 @@ De volgende tabel geeft een lijst van de logboek bestanden die informatie bevatt
 |CcmRepair.log|Registreert de herstelactiviteiten van de clientagent.|  
 |client.msi.log|Registreert instellings taken die worden uitgevoerd door client.msi. Kan worden gebruikt voor het oplossen van problemen tijdens de installatie van de client.|  
 
-### <a name="client-for-linux-and-unix"></a><a name="BKMK_LogFilesforLnU"></a>Client voor Linux en UNIX
+### <a name="client-for-linux-and-unix"></a><a name="BKMK_LogFilesforLnU"></a> Client voor Linux en UNIX
 
 > [!Important]  
 > Vanaf versie 1902 biedt Configuration Manager geen ondersteuning voor Linux-of UNIX-clients.
@@ -219,7 +219,7 @@ De Configuration Manager-client voor Linux en UNIX registreert informatie in de 
 
 Beide logboekbestanden bieden ondersteuning voor verschillende niveaus van logboekregistratie:  
 
-- **scxcm. log**. Als u het logboek niveau wilt wijzigen, bewerkt u **/opt/Microsoft/ConfigMgr/etc/scxcm.conf** en wijzigt u elk exemplaar van de **module** -tag naar het gewenste logboek niveau:  
+- **scxcm. log**. Als u het logboek niveau wilt wijzigen, bewerkt u **/opt/Microsoft/ConfigMgr/etc/scxcm.conf** en wijzigt u elk exemplaar van de  **module** -tag naar het gewenste logboek niveau:  
 
   - FOUT: geeft aan dat er problemen zijn die aandacht vereisen  
 
@@ -239,7 +239,7 @@ Beide logboekbestanden bieden ondersteuning voor verschillende niveaus van logbo
 
 Gebruik onder normale bedrijfs omstandigheden het niveau van het fouten logboek. Dit logboek niveau maakt het kleinste logboek bestand. Naarmate het logboek niveau wordt verhoogd van fout naar waarschuwing, aan informatie en vervolgens om te TRACERen, wordt er een groter logboek bestand gemaakt, omdat er meer gegevens naar het bestand worden geschreven.  
 
-#### <a name="manage-log-files-for-the-linux-and-unix-client"></a><a name="BKMK_ManageLinuxLogs"></a>Logboek bestanden voor de Linux-en UNIX-client beheren
+#### <a name="manage-log-files-for-the-linux-and-unix-client"></a><a name="BKMK_ManageLinuxLogs"></a> Logboek bestanden voor de Linux-en UNIX-client beheren
 
 De client voor Linux en UNIX beperkt de maximum grootte van de client logboek bestanden niet. Ook wordt de inhoud van de. log-bestanden niet automatisch gekopieerd naar een ander bestand, bijvoorbeeld naar een. lo_-bestand. Als u de maximale grootte van logboek bestanden wilt bepalen, implementeert u een proces voor het beheren van de logboek bestanden onafhankelijk van de Configuration Manager-client voor Linux en UNIX.  
 
@@ -247,7 +247,7 @@ U kunt bijvoorbeeld de standaard Linux-en UNIX-opdracht **logrotate** gebruiken 
 
 Zie de documentatie voor de Linux- en UNIX-distributies die u gebruikt voor meer informatie over **logrotate**.  
 
-### <a name="client-for-mac-computers"></a><a name="BKMK_LogfilesforMac"></a>Client voor Mac-computers
+### <a name="client-for-mac-computers"></a><a name="BKMK_LogfilesforMac"></a> Client voor Mac-computers
 
 De Configuration Manager-client voor Mac-computers registreert informatie in de volgende logboek bestanden op de Mac-computer:  
 
@@ -260,11 +260,11 @@ De Configuration Manager-client voor Mac-computers registreert informatie in de 
 
 Het logboek bestand **SMS_DM. log** op de site systeem server registreert ook communicatie tussen Mac-computers en het beheer punt dat is ingesteld voor mobiele apparaten en Mac-computers.  
 
-## <a name="server-log-files"></a><a name="BKMK_ServerLogs"></a>Server-logboek bestanden
+## <a name="server-log-files"></a><a name="BKMK_ServerLogs"></a> Server-logboek bestanden
 
 De volgende secties bevatten een lijst met logboek bestanden die op de site server staan of die gerelateerd zijn aan specifieke site systeem rollen.  
 
-### <a name="site-server-and-site-systems"></a><a name="BKMK_SiteSiteServerLog"></a>Site server en site systemen
+### <a name="site-server-and-site-systems"></a><a name="BKMK_SiteSiteServerLog"></a> Site server en site systemen
 
 De volgende tabel geeft een lijst van de logboek bestanden op de Configuration Manager site server en site systeem servers.  
 
@@ -353,7 +353,7 @@ De volgende tabel geeft een lijst van de logboek bestanden op de Configuration M
 |swmproc.log|Registreert de verwerking van meterbestanden en instellingen.|Siteserver|
 |UXAnalyticsUploadWorker. log|Registreert gegevens upload naar de service voor endpoint Analytics.|Siteserver|
 
-### <a name="site-server-installation"></a><a name="BKMK_SiteInstallLog"></a>Installatie van de site server
+### <a name="site-server-installation"></a><a name="BKMK_SiteInstallLog"></a> Installatie van de site server
 
 De volgende tabel bevat de logboekbestanden die informatie bevatten over de site-installatie.  
 
@@ -365,7 +365,7 @@ De volgende tabel bevat de logboekbestanden die informatie bevatten over de site
 |SMS_BOOTSTRAP.log|Registreert informatie over de voortgang van de lancering van het installatieproces voor de secundaire site. Details van het werkelijke installatieproces zijn opgenomen in ConfigMgrSetup.log.|Siteserver|  
 |smstsvc.log|Registreert informatie over de installatie, het gebruik en de verwijdering van een Windows-service. Windows gebruikt deze service om de netwerk verbinding en machtigingen tussen servers te testen. Het computer account van de server die de verbinding maakt, wordt gebruikt.|Site server en site systeem server|  
 
-### <a name="data-warehouse-service-point"></a><a name="BKMK_DataWarehouse"></a>Data Warehouse-service punt
+### <a name="data-warehouse-service-point"></a><a name="BKMK_DataWarehouse"></a> Data Warehouse-service punt
 
 De volgende tabel geeft een lijst van de logboek bestanden die informatie bevatten met betrekking tot het Data Warehouse-service punt.  
 
@@ -375,7 +375,7 @@ De volgende tabel geeft een lijst van de logboek bestanden die informatie bevatt
 |DWSSSetup. log|Registreert berichten die zijn gegenereerd door de installatie van een Data Warehouse-service punt.|Sitesysteemserver|  
 |Microsoft.ConfigMgrDataWarehouse. log|Registreert informatie over gegevens synchronisatie tussen de site database en de Data Warehouse-data base.|Sitesysteemserver|  
 
-### <a name="fallback-status-point"></a><a name="BKMK_FSPLog"></a>Terugval status punt
+### <a name="fallback-status-point"></a><a name="BKMK_FSPLog"></a> Terugval status punt
 
 De volgende tabel bevat de logboekbestanden die informatie bevatten over het terugvalstatuspunt.  
 
@@ -415,7 +415,7 @@ De volgende tabel bevat de logboekbestanden die informatie bevatten over het beh
 |MPSetup.log|Registreert het wrapperproces van de beheerpuntinstallatie.|Siteserver|  
 |UserService. log|Registreert gebruikers aanvragen van software Center, waarbij gebruikers beschik bare toepassingen worden opgehaald van de server.|Sitesysteemserver|
 
-### <a name="service-connection-point"></a><a name="BKMK_WITLog"></a>Service verbindings punt
+### <a name="service-connection-point"></a><a name="BKMK_WITLog"></a> Service verbindings punt
 
 In de volgende tabel worden de logboekbestanden vermeld die gegevens bevatten die betrekking hebben op het serviceverbindingspunt.  
 
@@ -459,11 +459,11 @@ De volgende tabel geeft een lijst van de logboek bestanden die informatie bevatt
 |WUSSyncXML.log|Registreert gegevens over het inventarisatie hulpprogramma voor het micro soft updates-synchronisatie proces.|Client computer die is geconfigureerd als de synchronisatieclient voor het inventarisatie hulpprogramma voor micro soft updates|  
 
 
-## <a name="log-files-by-functionality"></a><a name="BKMK_FunctionLogs"></a>Logboek bestanden op functionaliteit
+## <a name="log-files-by-functionality"></a><a name="BKMK_FunctionLogs"></a> Logboek bestanden op functionaliteit
 
 De volgende secties bevatten een lijst met logboek bestanden met betrekking tot Configuration Manager-functies.  
 
-### <a name="application-management"></a><a name="BKMK_AppManageLog"></a>Toepassings beheer
+### <a name="application-management"></a><a name="BKMK_AppManageLog"></a> Toepassings beheer
 
 De volgende tabel geeft een lijst van de logboek bestanden die informatie bevatten met betrekking tot toepassings beheer.  
 
@@ -503,7 +503,7 @@ De volgende tabel geeft een lijst van de logboekbestanden die informatie bevatte
 |colleval.log|Registreert gegevens over wanneer verzamelingen worden gemaakt, gewijzigd en verwijderd door de Verzamelingevaluator.|Siteserver|  
 |execmgr.log|Registreert gegevens over pakketten en takenreeksen die worden uitgevoerd.|Client|  
 
-### <a name="asset-intelligence"></a><a name="BKMK_AILog"></a>Asset Intelligence
+### <a name="asset-intelligence"></a><a name="BKMK_AILog"></a> Asset Intelligence
 
 De volgende tabel geeft een lijst van de logboekbestanden die informatie bevatten met betrekking tot asset intelligence.  
 
@@ -517,7 +517,7 @@ De volgende tabel geeft een lijst van de logboekbestanden die informatie bevatte
 |ManagedProvider.log|Registreert gegevens over detectie van software met een gekoppelde software-identificatietag. Registreert ook activiteiten met betrekking tot de hardware-inventarisatie.|Sitesysteemserver|  
 |MVLSImport.log|Registreert gegevens over de verwerking van de geïmporteerde licentiegegevens bestanden.|Sitesysteemserver|  
 
-### <a name="backup-and-recovery"></a><a name="BKMK_BnRLog"></a>Back-up en herstel
+### <a name="backup-and-recovery"></a><a name="BKMK_BnRLog"></a> Back-up en herstel
 
 De volgende tabel geeft een lijst van de logboek bestanden die informatie bevatten met betrekking tot back-up-en herstel acties, waaronder site resets en wijzigingen aan de SMS-provider.  
 
@@ -528,7 +528,7 @@ De volgende tabel geeft een lijst van de logboek bestanden die informatie bevatt
 |smssqlbkup.log|Registreert uitvoer van het back-upproces van de site database wanneer SQL Server is geïnstalleerd op een server die niet de site server is.|Sitedatabaseserver|  
 |Smswriter.log|Registreert informatie over de status van de Configuration Manager VSS Writer die wordt gebruikt door het back-upproces.|Siteserver|  
 
-### <a name="certificate-enrollment"></a><a name="BKMK_CertificateEnrollment"></a>Certificaat inschrijving
+### <a name="certificate-enrollment"></a><a name="BKMK_CertificateEnrollment"></a> Certificaat inschrijving
 
 De volgende tabel bevat de Configuration Manager-logboek bestanden die informatie bevatten met betrekking tot certificaat inschrijving. Certificaat inschrijving maakt gebruik van het certificaat registratiepunt en de Configuration Manager-beleids module op de server waarop de registratie service voor netwerk apparaten (NDES) wordt uitgevoerd.  
 
@@ -553,7 +553,7 @@ U kunt ook de volgende logboekbestanden gebruiken:
     > [!NOTE]  
     > Dit bestand bevindt zich in de map voor het NDES-account profiel, bijvoorbeeld in C:\Users\SCEPSvc. Zie de sectie [logboek registratie inschakelen](https://social.technet.microsoft.com/wiki/contents/articles/9063.active-directory-certificate-services-ad-cs-network-device-enrollment-service-ndes.aspx#Enable_Logging) van de NDES-wiki voor meer informatie over het inschakelen van NDES-logboek registratie.  
 
-### <a name="client-notification"></a><a name="BKMK_BGB"></a>Client melding
+### <a name="client-notification"></a><a name="BKMK_BGB"></a> Client melding
 
 De volgende tabel geeft een lijst van de logboekbestanden die informatie bevatten met betrekking tot clientmelding.  
 
@@ -572,7 +572,7 @@ De volgende tabel geeft een lijst van de logboek bestanden die informatie bevatt
 
 |Logboeknaam|Beschrijving|Computer met logboekbestand|
 |--------------|-----------------|----------------------------|  
-|CloudMgr.log|Registreert gegevens over de implementatie van de Cloud beheer Gateway-Service, de status van de actieve service en het gebruik van gegevens die aan de service zijn gekoppeld. Als u het logboek registratie niveau wilt configureren, bewerkt u de waarde voor het **registratie niveau** in de volgende register sleutel:`HKLM\SOFTWARE\ Microsoft\SMS\COMPONENTS\ SMS_CLOUD_ SERVICES_MANAGER`|De map *InstallDir* op de primaire site server of de certificerings instantie.|
+|CloudMgr.log|Registreert gegevens over de implementatie van de Cloud beheer Gateway-Service, de status van de actieve service en het gebruik van gegevens die aan de service zijn gekoppeld. Als u het logboek registratie niveau wilt configureren, bewerkt u de waarde voor het **registratie niveau** in de volgende register sleutel: `HKLM\SOFTWARE\ Microsoft\SMS\COMPONENTS\ SMS_CLOUD_ SERVICES_MANAGER`|De map *InstallDir* op de primaire site server of de certificerings instantie.|
 |CMGSetup. log <sup> [Opmerking 1](#bkmk_note1)</sup>|Registreert gegevens over de tweede fase van de implementatie van de Cloud beheer gateway (lokale implementatie in Azure). Als u het logboek registratie niveau wilt configureren, gebruikt u het **tracerings niveau** instellen (**gegevens** (standaard), **verbose**, **fout**) op het tabblad **configuratie van Azure portal\Cloud Services** .|De **%AppRoot%\logs** op uw Azure-server, of de map SMS/logs op de site systeem server|
 |CMGService. log <sup> [Opmerking 1](#bkmk_note1)</sup>|Registreert gegevens over het kern onderdeel van de Cloud Management Gateway-Service in Azure. Als u het logboek registratie niveau wilt configureren, gebruikt u het **tracerings niveau** instellen (**gegevens** (standaard), **verbose**, **fout**) op het tabblad **configuratie van Azure portal\Cloud Services** .|De **%AppRoot%\logs** op uw Azure-server, of de map SMS/logs op de site systeem server|
 |SMS_Cloud_ProxyConnector. log|Registreert gegevens over het instellen van verbindingen tussen de Cloud beheer Gateway-Service en het verbindings punt van de Cloud beheer gateway.|Sitesysteemserver|
@@ -582,11 +582,11 @@ De volgende tabel geeft een lijst van de logboek bestanden die informatie bevatt
 - Gebruik **CMGService. log** en **SMS_Cloud_ProxyConnector. log**voor het oplossen van problemen met de service status.
 - Voor het oplossen van problemen met client verkeer gebruikt u **CMGHttpHandler. log**, **CMGService. log**en **SMS_Cloud_ProxyConnector. log**.
 
-#### <a name="note-1-logs-synchronized-from-azure"></a><a name="bkmk_note1"></a>Opmerking 1: logboeken die zijn gesynchroniseerd vanuit Azure
+#### <a name="note-1-logs-synchronized-from-azure"></a><a name="bkmk_note1"></a> Opmerking 1: logboeken die zijn gesynchroniseerd vanuit Azure
 
 Dit zijn lokale Configuration Manager-logboek bestanden die Cloud Service Manager elke vijf minuten synchroniseert vanuit Azure Storage. De Cloud beheer gateway pusht elke vijf minuten logboeken naar Azure Storage. De maximale vertraging is 10 minuten. Uitgebreide switches beïnvloeden zowel lokale als externe logboeken. De daad werkelijke bestands namen bevatten de service naam en de instantie-id van de rol. Bijvoorbeeld CMG-*servicenaam* - *RoleInstanceID*-CMGSetup. log
 
-### <a name="compliance-settings-and-company-resource-access"></a><a name="BKMK_CompSettingsLog"></a>Instellingen voor naleving en toegang tot bedrijfs bronnen
+### <a name="compliance-settings-and-company-resource-access"></a><a name="BKMK_CompSettingsLog"></a> Instellingen voor naleving en toegang tot bedrijfs bronnen
 
 De volgende tabel geeft een lijst van de logboekbestanden die informatie bevatten met betrekking tot nalevingsinstellingen en toegang tot bedrijfsbronnen.  
 
@@ -598,7 +598,7 @@ De volgende tabel geeft een lijst van de logboekbestanden die informatie bevatte
 |DCMReporting.log|Registreert informatie over rapportagebeleid van platformresultaten in statusberichten voor configuratie-items.|Client|  
 |DcmWmiProvider.log|Registreert informatie over het lezen van configuratie-item synclets van WMI.|Client|  
 
-### <a name="configuration-manager-console"></a><a name="BKMK_ConsoleLog"></a>Configuration Manager-console
+### <a name="configuration-manager-console"></a><a name="BKMK_ConsoleLog"></a> Configuration Manager-console
 
 De volgende tabel geeft een lijst van de logboek bestanden die informatie bevatten met betrekking tot de Configuration Manager-console.  
 
@@ -608,7 +608,7 @@ De volgende tabel geeft een lijst van de logboek bestanden die informatie bevatt
 |SmsAdminUI.log|Registreert informatie over de werking van de Configuration Manager-console.|Computer waarop de Configuration Manager-console wordt uitgevoerd|  
 |Smsprov.log|Registreert activiteiten van de SMS-provider. Configuration Manager-console activiteiten gebruiken de SMS-provider.|Siteserver of sitesysteemserver|  
 
-### <a name="content-management"></a><a name="BKMK_ContentLog"></a>Inhouds beheer
+### <a name="content-management"></a><a name="BKMK_ContentLog"></a> Inhouds beheer
 
 De volgende tabel geeft een lijst van de logboekbestanden die informatie bevatten met betrekking tot inhoudbeheer.  
 
@@ -638,7 +638,7 @@ De logboek bestanden op de Configuration Manager-client bevinden zich in de volg
 | M365AUploadWorker. log | Informatie over de verzameling en het uploaden van apparaten van Configuration Manager naar micro soft Cloud |Serviceverbindingspunt|
 | SmsAdminUI.log | Informatie over Configuration Manager-console activiteit, zoals het configureren van de Azure Cloud Services  |Serviceverbindingspunt|
 
-### <a name="discovery"></a><a name="BKMK_DiscoveryLog"></a>Detectie
+### <a name="discovery"></a><a name="BKMK_DiscoveryLog"></a> Detectie
 
 De volgende tabel geeft een lijst van de logboek bestanden die informatie bevatten met betrekking tot detectie.  
 
@@ -652,7 +652,7 @@ De volgende tabel geeft een lijst van de logboek bestanden die informatie bevatt
 |InventoryAgent.log|Registreert activiteiten van hardware-inventaris, software-inventaris en heartbeat-detectieacties op de client.|Client|  
 |netdisc.log|Registreert netwerkdetectieacties.|Siteserver|  
 
-### <a name="endpoint-analytics"></a><a name="bkmk_analytics"></a>Endpoint Analytics
+### <a name="endpoint-analytics"></a><a name="bkmk_analytics"></a> Endpoint Analytics
 
 |Logboeknaam|Beschrijving|Computer met logboekbestand|  
 |--------------|-----------------|----------------------------|  
@@ -661,7 +661,7 @@ De volgende tabel geeft een lijst van de logboek bestanden die informatie bevatt
 |SensorEndpoint. log|Registreert de uitvoering van het endpoint Analytics-beleid en het uploaden van client gegevens naar de site server.|Client|
 |SensorManagedProvider. log|Registreert het verzamelen en verwerken van gebeurtenissen en informatie voor endpoint Analytics.|Client|
 
-### <a name="endpoint-protection"></a><a name="BKMK_EPLog"></a>Endpoint Protection
+### <a name="endpoint-protection"></a><a name="BKMK_EPLog"></a> Endpoint Protection
 
 De volgende tabel geeft een lijst van de logboekbestanden die informatie bevatten met betrekking tot Endpoint Protection.  
 
@@ -672,7 +672,7 @@ De volgende tabel geeft een lijst van de logboekbestanden die informatie bevatte
 |EPMgr.log|Bewaakt de status van de Endpoint Protection-sitesysteemrol.|Sitesysteemserver|  
 |EPSetup.log|Geeft informatie over de installatie van de Endpoint Protection-sitesysteemrol.|Sitesysteemserver|  
 
-### <a name="extensions"></a><a name="BKMK_Extensions"></a>Extensions
+### <a name="extensions"></a><a name="BKMK_Extensions"></a> Extensions
 
 De volgende tabel geeft een lijst van de logboek bestanden die informatie bevatten met betrekking tot uitbrei dingen.  
 
@@ -682,7 +682,7 @@ De volgende tabel geeft een lijst van de logboek bestanden die informatie bevatt
 |FeatureExtensionInstaller.log|Registreert informatie over het installeren en verwijderen van afzonderlijke uitbrei dingen wanneer deze zijn in-of uitgeschakeld in de Configuration Manager-console.|Computer waarop de Configuration Manager-console wordt uitgevoerd|  
 |SmsAdminUI.log|Registreert Configuration Manager-console activiteit.|Computer waarop de Configuration Manager-console wordt uitgevoerd|  
 
-### <a name="inventory"></a><a name="BKMK_InventoryLog"></a>Tell
+### <a name="inventory"></a><a name="BKMK_InventoryLog"></a> Tell
 
 De volgende tabel geeft een lijst van de logboekbestanden die informatie bevatten met betrekking tot het verwerken van inventarisgegevens.  
 
@@ -692,7 +692,7 @@ De volgende tabel geeft een lijst van de logboekbestanden die informatie bevatte
 |invproc.log|Registreert het doorsturen van MIF-bestanden van een secundaire site naar de daarboven liggende site.|Secundaire siteserver|  
 |sinvproc.log|Registreert informatie over het verwerking van software-inventarisgegevens naar de sitedatabase.|Siteserver|  
 
-### <a name="metering"></a><a name="BKMK_MeteringLog"></a>Licentie controle
+### <a name="metering"></a><a name="BKMK_MeteringLog"></a> Licentie controle
 
 De volgende tabel geeft een lijst van de logboekbestanden die informatie bevatten met betrekking tot meting.  
 
@@ -702,7 +702,7 @@ De volgende tabel geeft een lijst van de logboekbestanden die informatie bevatte
 |SWMTRReportGen.log|Hiermee wordt een rapport met gebruiks gegevens gegenereerd dat wordt verzameld door de agent voor licentie controle. Deze gegevens worden geregistreerd in Mtrmgr.log.|Client|
 |swmproc.log|Registreert de verwerking van meterbestanden en instellingen.|Siteserver|
 
-### <a name="migration"></a><a name="BKMK_MigrationLog"></a>Virtuelemachinemigratie
+### <a name="migration"></a><a name="BKMK_MigrationLog"></a> Virtuelemachinemigratie
 
 De volgende tabel geeft een lijst van de logboekbestanden die informatie bevatten met betrekking tot migratie.  
 
@@ -710,11 +710,11 @@ De volgende tabel geeft een lijst van de logboekbestanden die informatie bevatte
 |--------------|-----------------|----------------------------|  
 |migmctrl.log|Registreert informatie over migratieacties die migratietaken, gedeelde distributiepunten en distributiepuntupdates bevatten.|Site op het hoogste niveau in de hiërarchie van de Configuration Manager en elke onderliggende primaire site. Gebruik, in een sitehiërarchie met meerdere primaire sites, het logboekbestand gemaakt in de centrale beheersite.|  
 
-### <a name="mobile-devices"></a><a name="BKMK_MDMLog"></a>Mobiele apparaten
+### <a name="mobile-devices"></a><a name="BKMK_MDMLog"></a> Mobiele apparaten
 
 De volgende secties geven een lijst van de logboek bestanden die informatie bevatten met betrekking tot het beheren van mobiele apparaten.  
 
-#### <a name="enrollment"></a><a name="BKMK_EnrollmentLog"></a>Inschrijving
+#### <a name="enrollment"></a><a name="BKMK_EnrollmentLog"></a> Inschrijving
 
 De volgende tabel geeft een lijst van de logboekbestanden die informatie bevatten met betrekking tot registratie van mobiele apparaten.  
 
@@ -729,7 +729,7 @@ De volgende tabel geeft een lijst van de logboekbestanden die informatie bevatte
 |enrollmentservice.log|Registreert communicatie tussen het registratieproxypunt en het registratiepunt.|Sitesysteemserver|  
 |SMS_DM.log|Registreert communicatie tussen mobiele apparaten, Mac-computers en het beheer punt dat is ingeschakeld voor mobiele apparaten en Mac-computers.|Sitesysteemserver|  
 
-#### <a name="exchange-server-connector"></a><a name="BKMK_ExchSrvLog"></a>Exchange Server-connector
+#### <a name="exchange-server-connector"></a><a name="BKMK_ExchSrvLog"></a> Exchange Server-connector
 
 De volgende logboeken bevatten informatie met betrekking tot de Exchange Server-connector.  
 
@@ -737,7 +737,7 @@ De volgende logboeken bevatten informatie met betrekking tot de Exchange Server-
 |--------------|-----------------|----------------------------|  
 |easdisc.log|Registreert de activiteiten en de status van de Exchange Server-connector.|Siteserver|  
 
-#### <a name="mobile-device-legacy"></a><a name="BKMK_MDLegLog"></a>Mobiel apparaat verouderd
+#### <a name="mobile-device-legacy"></a><a name="BKMK_MDLegLog"></a> Mobiel apparaat verouderd
 
 De volgende tabel geeft een lijst van de logboekbestanden die informatie bevatten met betrekking tot verouderde clients van mobiele apparaten.  
 
@@ -762,7 +762,7 @@ De volgende tabel geeft een lijst van de logboekbestanden die informatie bevatte
 |DmSvc.log|Registreert clientcommunicatie van verouderde clients van mobiele apparaten met een beheerpunt dat is ingeschakeld voor mobiele apparaten.|Client|  
 |FspIsapi.log|Registreert gegevens over communicatie naar een terugvalstatuspunt van verouderde clients van mobiele apparaten en clientcomputers.|Sitesysteemserver|  
 
-### <a name="os-deployment"></a><a name="BKMK_OSDLog"></a>Implementatie van besturings systeem
+### <a name="os-deployment"></a><a name="BKMK_OSDLog"></a> Implementatie van besturings systeem
 
 De volgende tabel geeft een lijst van de logboek bestanden die informatie bevatten met betrekking tot de implementatie van het besturings systeem.  
 
@@ -784,7 +784,7 @@ De volgende tabel geeft een lijst van de logboek bestanden die informatie bevatt
 |MP_ClientIDManager.log|Registreert beheer punt antwoorden op client-ID-aanvragen die door taken reeksen worden gestart vanaf PXE-of opstart media.|Sitesysteemserver|  
 |MP_DriverManager.log|Registreert beheerpuntantwoorden op actieverzoeken van automatisch toepassen-takenreeksen.|Sitesysteemserver|  
 |OfflineServicingMgr.log|Registreert gegevens van offline-onderhouds planningen en werk acties Toep assen op WIM-bestanden (Windows Imaging Format) van het besturings systeem.|Sitesysteemserver|  
-|Setupact.log|Registreert gegevens over Windows Sysprep en installatielogboeken. Zie [logboek bestanden](https://docs.microsoft.com/windows/deployment/upgrade/log-files)voor meer informatie.|Client|  
+|Setupact.log|Registreert gegevens over Windows Sysprep en installatielogboeken. Zie [logboek bestanden](/windows/deployment/upgrade/log-files)voor meer informatie.|Client|  
 |Setupapi.log|Registreert gegevens over Windows Sysprep en installatielogboeken.|Client|  
 |Setuperr.log|Registreert gegevens over Windows Sysprep en installatielogboeken.|Client|  
 |smpisapi.log|Registreert gegevens over de acties van vastleggen en herstellen van de clientstatus en drempelinformatie.|Client|  
@@ -800,7 +800,7 @@ De volgende tabel geeft een lijst van de logboek bestanden die informatie bevatt
 |Loadstate.log|Registreert gegevens over het hulpprogramma voor de migratie van gebruikersstatus (USMT) en het herstellen van gebruikerstatusgegevens.|Client|  
 |Scanstate.log|Registreert gegevens over het hulpprogramma voor de migratie van gebruikersstatus (USMT) en het vastleggen van gebruikerstatusgegevens.|Client|  
 
-### <a name="power-management"></a><a name="BKMK_PowerMgmtLog"></a>Energie beheer
+### <a name="power-management"></a><a name="BKMK_PowerMgmtLog"></a> Energie beheer
 
 De volgende tabel geeft een lijst van de logboekbestanden die informatie bevatten met betrekking tot energiebeheer.  
 
@@ -808,7 +808,7 @@ De volgende tabel geeft een lijst van de logboekbestanden die informatie bevatte
 |--------------|-----------------|----------------------------|  
 |pwrmgmt.log|Registreert gegevens over energiebeheer activiteiten op de client computer, met inbegrip van bewaking en het afdwingen van instellingen door de client agent voor energie beheer.|Client|  
 
-### <a name="remote-control"></a><a name="BKMK_RCLog"></a>Beheer op afstand
+### <a name="remote-control"></a><a name="BKMK_RCLog"></a> Beheer op afstand
 
 De volgende tabel geeft een lijst van de logboekbestanden die informatie bevatten met betrekking tot controle op afstand.  
 
@@ -816,7 +816,7 @@ De volgende tabel geeft een lijst van de logboekbestanden die informatie bevatte
 |--------------|-----------------|----------------------------|  
 |CMRcViewer.log|Registreert gegevens over de activiteit van beheer op afstand viewer.|Op de computer waarop de viewer voor beheer op afstand wordt uitgevoerd, in de map% Temp%.|  
 
-### <a name="reporting"></a><a name="BKMK_ReportLog"></a>Rapporteren
+### <a name="reporting"></a><a name="BKMK_ReportLog"></a> Rapporteren
 
 De volgende tabel bevat de Configuration Manager-logboek bestanden die informatie bevatten met betrekking tot rapportage.  
 
@@ -826,7 +826,7 @@ De volgende tabel bevat de Configuration Manager-logboek bestanden die informati
 |srsrpMSI.log|Registreert gedetailleerde resultaten van het installatieproces van het rapportageservicepunt vanuit de MSI-output.|Sitesysteemserver|  
 |srsrpsetup.log|Registreert resultaten van het installatieproces van Reporting Services-punt.|Sitesysteemserver|  
 
-### <a name="role-based-administration"></a><a name="BKMK_RBALog"></a>Op rollen gebaseerd beheer
+### <a name="role-based-administration"></a><a name="BKMK_RBALog"></a> Op rollen gebaseerd beheer
 
 De volgende tabel geeft een lijst van de logboekbestanden die informatie bevatten met betrekking tot het beheren van beheer op basis van rollen.  
 
@@ -835,7 +835,7 @@ De volgende tabel geeft een lijst van de logboekbestanden die informatie bevatte
 |hman.log|Registreert informatie over site configuratie wijzigingen en het publiceren van site-informatie naar Active Directory Domain Services.|Siteserver|  
 |SMSProv.log|Registreert toegang van de WMI-provider tot de sitedatabase.|Computer met de SMS-provider|  
 
-### <a name="software-metering"></a><a name="BKMK_MeteringLog"></a>Software licentie controle
+### <a name="software-metering"></a><a name="BKMK_MeteringLog"></a> Software licentie controle
 
 De volgende tabel geeft een lijst van de logboek bestanden die informatie bevatten met betrekking tot software licentie controle.  
 
@@ -843,7 +843,7 @@ De volgende tabel geeft een lijst van de logboek bestanden die informatie bevatt
 |--------------|-----------------|----------------------------|  
 |mtrmgr.log|Bewaakt alle softwarelicentiecontroleprocessen.|Siteserver|  
 
-### <a name="software-updates"></a><a name="BKMK_SU_NAPLog"></a>Software-updates
+### <a name="software-updates"></a><a name="BKMK_SU_NAPLog"></a> Software-updates
 
 In de volgende tabel worden de logboekbestanden vermeld die gegevens bevatten die betrekking hebben op software-updates.  
 
@@ -871,7 +871,7 @@ In de volgende tabel worden de logboekbestanden vermeld die gegevens bevatten di
 |wsyncmgr.log|Registreert gegevens over het synchronisatie proces van de software-update.|Siteserver|  
 |WUAHandler.log|Registreert gegevens over de Windows Update-agent op de client wanneer hij zoekt naar software-updates.|Client|  
 
-### <a name="wake-on-lan"></a><a name="BKMK_WOLLog"></a>Wake On LAN
+### <a name="wake-on-lan"></a><a name="BKMK_WOLLog"></a> Wake On LAN
 
 De volgende tabel geeft een lijst van de logboek bestanden die informatie bevatten met betrekking tot het gebruik van Wake On LAN.  
 
@@ -883,7 +883,7 @@ De volgende tabel geeft een lijst van de logboek bestanden die informatie bevatt
 |wolcmgr.log|Registreert gegevens over welke clients ontwaakpakketten moeten toegestuurd krijgen, het aantal te zenden ontwaakpakketten en het aantal van opnieuw geprobeerde ontwaakpakketten.|Siteserver|  
 |wolmgr.log|Registreert gegevens over ontwaakprocedures, zoals wanneer implementaties te activeren die geconfigureerd zijn voor Wake On LAN.|Siteserver|  
 
-### <a name="windows-10-servicing"></a><a name="BKMK_WindowsServicingLog"></a>Onderhoud van Windows 10
+### <a name="windows-10-servicing"></a><a name="BKMK_WindowsServicingLog"></a> Onderhoud van Windows 10
 
 De volgende tabel geeft een lijst van de logboek bestanden die informatie bevatten met betrekking tot Windows 10-onderhoud.  
 Onderhoud maakt gebruik van dezelfde infra structuur en hetzelfde proces als software-updates. Zie [software-updates](#BKMK_SU_NAPLog)voor andere logboeken die van toepassing zijn op het onderhouds scenario.
@@ -894,9 +894,9 @@ Onderhoud maakt gebruik van dezelfde infra structuur en hetzelfde proces als sof
 |DISM. log|Registreert alle acties met behulp van DISM. Als dat nodig is, verwijst DISM. log naar CBS. log voor meer informatie.|Client|
 |bestand Setupact. log|Primair logboek bestand voor de meeste fouten die optreden tijdens het installatie proces van Windows. Het logboek bestand bevindt zich in de map% windir% \$ Windows. ~ BT\sources\panther.|Client|
 
-Zie [logboek bestanden met betrekking tot online onderhoud](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-troubleshooting-and-log-files#online-servicing-related-log-files)voor meer informatie.
+Zie [logboek bestanden met betrekking tot online onderhoud](/windows-hardware/manufacture/desktop/deployment-troubleshooting-and-log-files#online-servicing-related-log-files)voor meer informatie.
 
-### <a name="windows-update-agent"></a><a name="BKMK_WULog"></a>Windows Update-Agent
+### <a name="windows-update-agent"></a><a name="BKMK_WULog"></a> Windows Update-Agent
 
 De volgende tabel geeft een lijst van de logboekbestanden die informatie bevatten met betrekking tot de Windows Update-agent.  
 
@@ -904,9 +904,9 @@ De volgende tabel geeft een lijst van de logboekbestanden die informatie bevatte
 |--------------|-----------------|----------------------------|  
 |WindowsUpdate.log|Registreert gegevens over wanneer de Windows Update Agent verbinding maakt met de WSUS-server en de software-updates voor de nalevings beoordeling ophaalt, en of er updates zijn voor de agent onderdelen.|Client|  
 
-Zie [Windows Update-logboek bestanden](https://docs.microsoft.com/windows/deployment/update/windows-update-logs)voor meer informatie.
+Zie [Windows Update-logboek bestanden](/windows/deployment/update/windows-update-logs)voor meer informatie.
 
-### <a name="wsus-server"></a><a name="BKMK_WSUSLog"></a>WSUS-server
+### <a name="wsus-server"></a><a name="BKMK_WSUSLog"></a> WSUS-server
 
 De volgende tabel geeft een lijst van de logboekbestanden die informatie bevatten met betrekking tot de WSUS-server.  
 

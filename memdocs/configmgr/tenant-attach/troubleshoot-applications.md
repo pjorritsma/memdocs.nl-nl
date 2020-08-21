@@ -10,12 +10,12 @@ ms.assetid: 75f47456-cd8d-4c83-8dc5-98b336a7c6c8
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 0d081c79a6267495a9738efcb19ceb8b7aa74958
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 6fb487b590773afd1b59133f647696d9f858b439
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252507"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700378"
 ---
 # <a name="troubleshoot-application-installation-for-devices-uploaded-to-the-admin-center-preview"></a>Problemen met de installatie van een toepassing oplossen voor apparaten die zijn geüpload naar het beheer centrum (preview-versie)
 <!--6374854, 6521921-->
@@ -62,7 +62,7 @@ Wanneer u toepassingen weergeeft of installeert vanuit het micro soft-beheer cen
 
 #### <a name="error-code-500-with-an-unexpected-error-occurred-message"></a>Fout code 500 met een onverwachte fout opgetreden bericht
 
-1. Als u `System.Security.SecurityException` in het **AdminService. log**ziet, controleert u of uw User Principal Name (UPN) die door [Active Directory gebruikers detectie](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) is gedetecteerd, niet is ingesteld op een Cloud-UPN in plaats van een lokale UPN. Een lege UPN-waarde is ook acceptabel omdat de naam van het Active Directory gedetecteerde domein wordt gebruikt. Als u alleen Cloud-UPN (voor beeld: onmicrosoft.com) ziet die geen geldig domein UPN (contoso.com) is, hebt u een probleem en moet u [het UPN-achtervoegsel instellen in Active Directory](https://docs.microsoft.com/office365/enterprise/prepare-a-non-routable-domain-for-directory-synchronization#add-upn-suffixes-and-update-your-users-to-them).
+1. Als u `System.Security.SecurityException` in het **AdminService. log**ziet, controleert u of uw User Principal Name (UPN) die door [Active Directory gebruikers detectie](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) is gedetecteerd, niet is ingesteld op een Cloud-UPN in plaats van een lokale UPN. Een lege UPN-waarde is ook acceptabel omdat de naam van het Active Directory gedetecteerde domein wordt gebruikt. Als u alleen Cloud-UPN (voor beeld: onmicrosoft.com) ziet die geen geldig domein UPN (contoso.com) is, hebt u een probleem en moet u [het UPN-achtervoegsel instellen in Active Directory](/office365/enterprise/prepare-a-non-routable-domain-for-directory-synchronization#add-upn-suffixes-and-update-your-users-to-them).
 1. [KB4576782-invoeg toepassingen in het micro soft Endpoint Manager-beheer centrum](https://support.microsoft.com/help/4576782) installeren als de onderstaande fout wordt weer gegeven in de **AdminService. log**:
    ```log 
    System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details.

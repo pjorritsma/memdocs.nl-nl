@@ -10,12 +10,12 @@ ms.assetid: 4a9dc4d9-e114-42ec-ae2b-73bee14ab04f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 41c0d08c5f445cd6d643542cfaa646bc2d89de76
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 13312c20edbda290daaa0d51908adeb7ab4a6860
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128423"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700058"
 ---
 # <a name="define-network-locations-as-boundaries-for-configuration-manager"></a>Netwerk locaties definiëren als grenzen voor Configuration Manager
 
@@ -35,9 +35,9 @@ U kunt hand matig afzonderlijke grenzen maken of [Active Directory forest-detect
 
 Als een apparaat zich niet in de door u verwachte grens bevindt, kan het zijn dat u de netwerk locatie niet hebt gedefinieerd als een grens. Wanneer de netwerk locatie van een apparaat onzeker is, gebruikt u de volgende Windows-opdrachten op het apparaat om te bevestigen:
 
-- IP-adres:`ipconfig`
-- Active Directory-site:`nltest /dsgetsite`
-- VPN`ipconfig /all`
+- IP-adres: `ipconfig`
+- Active Directory-site: `nltest /dsgetsite`
+- VPN `ipconfig /all`
 
 ## <a name="boundary-types"></a>Grens typen
 
@@ -59,7 +59,7 @@ Active Directory site grenzen werken niet voor zuivere Azure Active Directory-ap
 > [!TIP]
 > Gebruik de volgende Windows-opdracht om de huidige Active Directory-site van een apparaat weer te geven: `nltest /dsgetsite` .
 >
-> Gebruik de volgende Windows-opdracht om te bepalen of een client lid is van een Cloud domein: `dsregcmd /status` . Zie [dsregcmd Command-Apparaatstatus](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-device-dsregcmd)voor meer informatie.
+> Gebruik de volgende Windows-opdracht om te bepalen of een client lid is van een Cloud domein: `dsregcmd /status` . Zie [dsregcmd Command-Apparaatstatus](/azure/active-directory/devices/troubleshoot-device-dsregcmd)voor meer informatie.
 
 ### <a name="ipv6-prefix"></a>IPv6-voor voegsel
 

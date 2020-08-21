@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c192db8ccab336d05ef965e837fe17fc16a19200
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: f758456ad75c4acde1b050be75d653cc0e1dcfa1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128930"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700364"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 1902 van Configuration Manager current branch
 
@@ -32,10 +32,10 @@ Als u optimaal wilt profiteren van de nieuwe functies van Configuration Manager,
  -->
 
 > [!Tip]  
-> Als u een melding wilt ontvangen wanneer deze pagina wordt bijgewerkt, kopieert en plakt u de volgende URL in uw RSS feed-lezer:`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1902+-+Configuration+Manager%22&locale=en-us`
+> Als u een melding wilt ontvangen wanneer deze pagina wordt bijgewerkt, kopieert en plakt u de volgende URL in uw RSS feed-lezer: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1902+-+Configuration+Manager%22&locale=en-us`
 
 
-## <a name="deprecated-features-and-operating-systems"></a><a name="bkmk_deprecated"></a>Afgeschafte functies en besturings systemen
+## <a name="deprecated-features-and-operating-systems"></a><a name="bkmk_deprecated"></a> Afgeschafte functies en besturings systemen
 
 Meer informatie over ondersteunings wijzigingen voordat ze worden geïmplementeerd in [verwijderde en afgeschafte items](deprecated/removed-and-deprecated.md).
 
@@ -46,7 +46,7 @@ Versie 1902 daalt ondersteuning voor de volgende producten:
 - Linux en UNIX als een-client. De afschaffing werd aangekondigd met [versie 1802](whats-new-in-version-1802.md#deprecation-announcement-for-linux-and-unix-client-support). Overweeg Microsoft Azure beheer voor het beheer van Linux-servers. Azure-oplossingen hebben uitgebreide Linux-ondersteuning die in de meeste gevallen de functionaliteit van Configuration Manager overschrijden, waaronder end-to-end patch management voor Linux.
 
 
-## <a name="site-infrastructure"></a><a name="bkmk_infra"></a>Site-infra structuur
+## <a name="site-infrastructure"></a><a name="bkmk_infra"></a> Site-infra structuur
 
 ### <a name="client-health-dashboard"></a>Client status dashboard
 
@@ -88,7 +88,7 @@ Wanneer u installeert of bijwerkt naar versie 1902, bevat Configuration Manager 
 - **Opnieuw opstarten van systeem in behandeling op de externe SQL Server**: deze controle op vereisten is vergelijkbaar met de regel voor het **opnieuw opstarten** van het systeem, maar controleert een externe SQL Server. Zie [lijst met vereisten controles](../../servers/deploy/install/list-of-prerequisite-checks.md#pending-system-restart-on-the-remote-sql-server)voor meer informatie. <!--SCCMDocs-pr issue 3377-->  
 
 
-## <a name="cloud-attached-management"></a><a name="bkmk_cloud"></a>Cloud-gekoppeld beheer
+## <a name="cloud-attached-management"></a><a name="bkmk_cloud"></a> Cloud-gekoppeld beheer
 
 ### <a name="stop-cloud-service-when-it-exceeds-threshold"></a>Cloud service stoppen als deze de drempel waarde overschrijdt
 
@@ -114,7 +114,7 @@ U kunt nu een CMG (Cloud Management Gateway) koppelen aan een grens groep. Met d
 Zie [CMG Hierarchy design](../../clients/manage/cmg/plan-cloud-management-gateway.md#hierarchy-design) (Engelstalig) en [Stel CMG](../../clients/manage/cmg/setup-cloud-management-gateway.md#configure-boundary-groups)in voor meer informatie.
 
 
-## <a name="real-time-management"></a><a name="bkmk_real"></a>Real-time beheer
+## <a name="real-time-management"></a><a name="bkmk_real"></a> Real-time beheer
 
 ### <a name="run-cmpivot-from-the-central-administration-site"></a>CMPivot uitvoeren vanaf de centrale beheer site
 
@@ -131,7 +131,7 @@ U kunt nu een bestaand Power shell-script **bewerken** of **kopiëren** dat word
 Zie [scripts uitvoeren](../../../apps/deploy-use/create-deploy-scripts.md#bkmk_psedit)voor meer informatie.
 
 
-## <a name="content-management"></a><a name="bkmk_content"></a>Inhouds beheer
+## <a name="content-management"></a><a name="bkmk_content"></a> Inhouds beheer
 
 ### <a name="distribution-point-maintenance-mode"></a>Onderhouds modus van distributie punt
 
@@ -156,7 +156,7 @@ Zie [onderhouds modus](../../servers/deploy/configure/install-and-configure-dist
 Zie [methode SetDPMaintenanceMode in klasse SMS_DistributionPointInfo](../../../develop/reference/core/servers/configure/setdpmaintenancemode-method-in-class-sms-distributionpointinfo.md)voor meer informatie over het automatiseren van dit proces met de SDK van Configuration Manager.
 
 
-## <a name="client-management"></a><a name="bkmk_client"></a>Client beheer
+## <a name="client-management"></a><a name="bkmk_client"></a> Client beheer
 
 ### <a name="client-provisioning-mode-timeout"></a>Time-out voor client inrichtings modus
 
@@ -180,7 +180,7 @@ U kunt nu een aangepast poort nummer opgeven voor wake-up proxy. Configureer in 
 Zie [Wake on LAN configureren](../../clients/deploy/configure-wake-on-lan.md)voor meer informatie.
 
 
-## <a name="application-management"></a><a name="bkmk_app"></a>Toepassings beheer
+## <a name="application-management"></a><a name="bkmk_app"></a> Toepassings beheer
 
 ### <a name="improvements-to-application-approvals-via-email"></a>Verbeteringen in het goed keuren van toepassingen via e-mail
 
@@ -199,7 +199,7 @@ Deze versie bevat de volgende verbeteringen voor [package Conversion Manager](..
 - Algemene oplossingen voor fouten en verbeteringen
 
 
-## <a name="os-deployment"></a><a name="bkmk_osd"></a>Implementatie van besturings systeem
+## <a name="os-deployment"></a><a name="bkmk_osd"></a> Implementatie van besturings systeem
 
 ### <a name="progress-status-during-in-place-upgrade-task-sequence"></a>Voortgangs status tijdens in-place upgrade taken reeks
 
@@ -292,7 +292,7 @@ Deze versie bevat de volgende verbeteringen voor de implementatie van besturings
 - Wanneer u een PXE-responder inschakelt op een distributie punt zonder Windows Deployment-service, kan dit nu zich op dezelfde server bevinden als de DHCP-service. <!--3734270--> Zie [Configure ten minste één distributie punt voor het accepteren van PXE-aanvragen](../../../osd/deploy-use/use-pxe-to-deploy-windows-over-the-network.md#BKMK_Configure)voor meer informatie.
 
 
-## <a name="software-center"></a><a name="bkmk_userxp"></a>Software Center
+## <a name="software-center"></a><a name="bkmk_userxp"></a> Software Center
 
 ### <a name="replace-toast-notifications-with-dialog-window"></a>Pop-upmeldingen vervangen door dialoog venster
 
@@ -330,7 +330,7 @@ Geef deze instellingen op in de **Software Center** -groep van client instelling
 Zie [over client instellingen](../../clients/deploy/about-client-settings.md#bkmk_swctr_defaults)voor meer informatie.
 
 
-## <a name="software-updates"></a><a name="bkmk_sum"></a>Software-updates
+## <a name="software-updates"></a><a name="bkmk_sum"></a> Software-updates
 
 ### <a name="specify-priority-for-feature-updates-in-windows-10-servicing"></a>Prioriteit voor functie-updates opgeven in Windows 10 Servicing
 
@@ -342,16 +342,16 @@ Gebruik client instellingen om deze optie te configureren. Configureer in de gro
 Zie [over client instellingen](../../clients/deploy/about-client-settings.md#software-updates)voor meer informatie.
 
 
-## <a name="office-management"></a><a name="bkmk_o365"></a>Office-beheer
+## <a name="office-management"></a><a name="bkmk_o365"></a> Office-beheer
 
 ### <a name="redirect-windows-known-folders-to-onedrive"></a>Windows-bekende mappen omleiden naar OneDrive
 
 <!--3556021-->
 Gebruik Configuration Manager om bekende mappen van Windows te verplaatsen naar OneDrive voor bedrijven. Deze mappen omvatten bureau blad, documenten en afbeeldingen. Als u uw Windows 10-upgrades wilt vereenvoudigen, implementeert u deze instellingen voor Windows 7-clients voordat u een taken reeks implementeert.
 
-Zie [Windows bekende mappen omleiden en verplaatsen naar OneDrive](https://docs.microsoft.com/onedrive/redirect-known-folders)voor meer informatie over deze functie van OneDrive voor bedrijven.
+Zie [Windows bekende mappen omleiden en verplaatsen naar OneDrive](/onedrive/redirect-known-folders)voor meer informatie over deze functie van OneDrive voor bedrijven.
 
-Zoek eerst [uw Office 365-Tenant-id](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id). Implementeer vervolgens de OneDrive Sync Client versie 18.111.0603.0004 of hoger. Zie voor meer informatie [OneDrive-Apps implementeren met behulp van Configuration Manager](https://docs.microsoft.com/onedrive/deploy-on-windows).  
+Zoek eerst [uw Office 365-Tenant-id](/onedrive/find-your-office-365-tenant-id). Implementeer vervolgens de OneDrive Sync Client versie 18.111.0603.0004 of hoger. Zie voor meer informatie [OneDrive-Apps implementeren met behulp van Configuration Manager](/onedrive/deploy-on-windows).  
 
 Als u een OneDrive voor bedrijven-profiel wilt maken en implementeren, gaat u in de Configuration Manager-console naar de werk ruimte **activa en naleving** . Vouw **instellingen voor naleving**uit en selecteer het knoop punt **voor OneDrive voor bedrijven-profielen** .  
 
@@ -381,7 +381,7 @@ Het dash board voor product levenscyclus bevat nu informatie over geïnstalleerd
 Zie [het dash board product levenscyclus gebruiken](../../clients/manage/asset-intelligence/product-lifecycle-dashboard.md)voor meer informatie.
 
 
-## <a name="phased-deployments"></a><a name="bkmk_pod"></a>Gefaseerde implementaties
+## <a name="phased-deployments"></a><a name="bkmk_pod"></a> Gefaseerde implementaties
 
 ### <a name="dedicated-monitoring-for-phased-deployments"></a>Specifieke bewaking voor gefaseerde implementaties
 
@@ -400,9 +400,9 @@ Een gefaseerde implementatie voor een taken reeks, software-update of toepassing
 Zie voor meer informatie [gefaseerde implementaties maken](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md).
 
 
-## <a name="configuration-manager-console"></a><a name="bkmk_admin"></a>Configuration Manager-console
+## <a name="configuration-manager-console"></a><a name="bkmk_admin"></a> Configuration Manager-console
 
-### <a name="improvements-to-configuration-manager-console"></a><a name="bkmk_console"></a>Verbeteringen aan Configuration Manager-console
+### <a name="improvements-to-configuration-manager-console"></a><a name="bkmk_console"></a> Verbeteringen aan Configuration Manager-console
 
 <!--3594151-->
 Op basis van feedback van klanten op het gebied van de-versie 2018 van de Midwest Management Summit (MMS), bevat de volgende verbeteringen voor de Configuration Manager-console:
@@ -479,7 +479,7 @@ Wanneer u een site server installeert of bijwerkt, worden deze installatie besta
 
 Afgezien van nieuwe functies bevat deze release ook aanvullende wijzigingen, zoals oplossingen voor problemen. Zie [overzicht van wijzigingen in Configuration Manager current branch, versie 1902](https://support.microsoft.com/help/4498910)voor meer informatie.
 
-Zie [release opmerkingen voor Power shell versie 1902](https://docs.microsoft.com/powershell/sccm/1902-release-notes?view=sccm-ps)voor meer informatie over wijzigingen in de Windows Power shell-cmdlets voor Configuration Manager.
+Zie [release opmerkingen voor Power shell versie 1902](/powershell/sccm/1902-release-notes?view=sccm-ps)voor meer informatie over wijzigingen in de Windows Power shell-cmdlets voor Configuration Manager.
 
 Het volgende update pakket (4500571) is beschikbaar in de-console vanaf 17 juni 2019: [Update pakket voor Configuration Manager current branch, versie 1902](https://support.microsoft.com/help/4500571).
 

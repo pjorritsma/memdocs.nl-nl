@@ -10,12 +10,12 @@ ms.assetid: e3bb3e13-3037-4122-93bc-504bfd080a4d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3304d480f0650191a784a9152ae464e81c2207a1
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: df5dfdeab010012a258fe59612a348c269081c45
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906399"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700494"
 ---
 # <a name="import-pfx-certificate-profiles"></a>PFX-certificaatprofielen importeren
 
@@ -28,7 +28,7 @@ Configuration Manager ondersteunt verschillende soorten certificaat archieven vo
 Gebruik Configuration Manager om certificaat referenties te importeren en vervolgens PFX-bestanden op apparaten in te richten. U kunt deze bestanden gebruiken om gebruikersspecifieke certificaten te genereren voor de ondersteuning van versleutelde gegevens uitwisseling.
 
 > [!TIP]  
-> Zie het blog bericht [How to Create en DEPLOY pfx Certificate profiles in Configuration Manager](https://docs.microsoft.com/archive/blogs/karanrustagi/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager)(Engelstalig) voor stapsgewijze instructies voor het uitvoeren van dit proces.  
+> Zie het blog bericht [How to Create en DEPLOY pfx Certificate profiles in Configuration Manager](/archive/blogs/karanrustagi/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager)(Engelstalig) voor stapsgewijze instructies voor het uitvoeren van dit proces.  
 
 ## <a name="create-a-profile"></a>Een profiel maken
 
@@ -70,9 +70,9 @@ Wijs de doel gebruikers toe als primaire gebruikers op de Windows 10-apparaten w
 
 Als u een PFX-certificaat wilt importeren, gebruikt u de volgende Configuration Manager Power shell-cmdlets voor het inrichten van een PFX-script maken:
 
-- [Get-CMClientCertificatePfx](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmclientcertificatepfx?view=sccm-ps)
-- [Import-CMClientCertificatePfx](https://docs.microsoft.com/powershell/module/configurationmanager/import-cmclientcertificatepfx?view=sccm-ps)
-- [Remove-CMClientCertificatePfx](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmclientcertificatepfx?view=sccm-ps)
+- [Get-CMClientCertificatePfx](/powershell/module/configurationmanager/get-cmclientcertificatepfx?view=sccm-ps)
+- [Import-CMClientCertificatePfx](/powershell/module/configurationmanager/import-cmclientcertificatepfx?view=sccm-ps)
+- [Remove-CMClientCertificatePfx](/powershell/module/configurationmanager/remove-cmclientcertificatepfx?view=sccm-ps)
 
 ### <a name="example-script"></a>Voorbeeldscript
 

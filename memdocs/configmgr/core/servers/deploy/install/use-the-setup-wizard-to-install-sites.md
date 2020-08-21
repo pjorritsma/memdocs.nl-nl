@@ -9,41 +9,41 @@ ms.assetid: 1f703376-5f2c-4fd2-8209-7028c931ddc7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e32956d2ca9385c22e9073cfa2665e1f61b3ebd3
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 8325102e9a818191eae5061b7adf60dbbb7269b5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078631"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700698"
 ---
 # <a name="use-the-setup-wizard-to-install-configuration-manager-sites"></a>De installatie wizard gebruiken om Configuration Manager-sites te installeren
 
 *Van toepassing op: Configuration Manager (huidige vertakking)*
 
-Als u een nieuwe Configuration Manager-site wilt installeren met behulp van een begeleide gebruikers interface, gebruikt u de wizard Configuration Manager Setup (Setup. exe). De wizard ondersteunt het installeren van een primaire site of een centrale beheer site. U kunt de wizard ook gebruiken om [een evaluatie-installatie](upgrade-an-evaluation-install-to-a-full-install.md) van Configuration Manager naar een volledig gelicentieerde installatie bij te werken. Wanneer u de wizard niet wilt gebruiken, kunt u in plaats daarvan een [installatie script](use-a-command-line-to-install-sites.md) gebruiken en een installatie zonder toezicht uitvoeren vanaf de opdracht regel.
+Als u een nieuwe Configuration Manager-site wilt installeren met behulp van een begeleide gebruikers interface, gebruikt u de wizard Configuration Manager Setup (setup.exe). De wizard ondersteunt het installeren van een primaire site of een centrale beheer site. U kunt de wizard ook gebruiken om [een evaluatie-installatie](upgrade-an-evaluation-install-to-a-full-install.md) van Configuration Manager naar een volledig gelicentieerde installatie bij te werken. Wanneer u de wizard niet wilt gebruiken, kunt u in plaats daarvan een [installatie script](use-a-command-line-to-install-sites.md) gebruiken en een installatie zonder toezicht uitvoeren vanaf de opdracht regel.
 
 Installeer een secundaire site vanuit de Configuration Manager-console. Secundaire sites bieden geen ondersteuning voor een script opdracht regel installatie.
 
 > [!Note]  
 > Vanaf versie 1906 komt het bestand met de **welkomst. HTA** niet meer voor in de hoofdmap van het installatie medium. Het heeft koppelingen naar de volgende informatie verstrekt:<!--SCCMDocs-pr#3545-->
 >
-> - **Installatie site**: `smssetup\bin\x64\setup.exe`. Zie [install a Central Administration of Primary Site](#bkmk_primary)(Engelstalig) voor meer informatie.
+> - **Installatie site**: `smssetup\bin\x64\setup.exe` . Zie [install a Central Administration of Primary Site](#bkmk_primary)(Engelstalig) voor meer informatie.
 > - **Voordat u begint**: [een hiërarchie van sites ontwerpen](../../../plan-design/hierarchy/design-a-hierarchy-of-sites.md) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626543 -->
 > - **Gereedheid van de server evalueren**: [prerequisite Checker](prerequisite-checker.md) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626546 -->
-> - **Vereiste bestanden downloaden**: `smssetup\bin\x64\setupdl.exe`. Zie het [Download programma](setup-downloader.md)voor meer informatie.
-> - **Configuration Manager-console installeren**: `smssetup\bin\i386\consolesetup.exe`. Zie [consoles installeren](install-consoles.md)voor meer informatie.
+> - **Vereiste bestanden downloaden**: `smssetup\bin\x64\setupdl.exe` . Zie het [Download programma](setup-downloader.md)voor meer informatie.
+> - **Configuration Manager-console installeren**: `smssetup\bin\i386\consolesetup.exe` . Zie [consoles installeren](install-consoles.md)voor meer informatie.
 > - [**System Center Updates Publisher downloaden**](../../../../sum/tools/updates-publisher.md) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626548 -->
 > - **Clients downloaden voor extra besturings systemen**: <!-- https://go.microsoft.com/fwlink/p/?LinkId=626550 -->
 >   - [Micro soft endpoint Configuration Manager-macOS-client (64-bits)](https://www.microsoft.com/download/details.aspx?id=100850)
 >   - [Clients voor UNIX en Linux](https://www.microsoft.com/download/details.aspx?id=47719)
 > - [**Releaseopmerkingen**](release-notes.md) <!-- https://go.microsoft.com/fwlink/?LinkID=626571 -->
-> - [**Documentatie lezen**](https://docs.microsoft.com/sccm)<!-- https://go.microsoft.com/fwlink/p/?LinkId=626547 -->
+> - [**Documentatie lezen**](/sccm)<!-- https://go.microsoft.com/fwlink/p/?LinkId=626547 -->
 > - **Ondersteuning bij de installatie verkrijgen**: [TechNet forums: Configuration Manager (current branch) – site-en client implementatie](https://social.technet.microsoft.com/Forums/en-us/home?forum=ConfigMgrDeployment) <!--NOTE: this link requires en-us locale to work-->   <!-- https://go.microsoft.com/fwlink/p/?LinkId=626549 -->
 > - **Configuration Manager Community**: [System Center Community: deel nemen aan](https://social.technet.microsoft.com/wiki/contents/articles/11504.system-center-community-how-to-participate.aspx) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626544 -->
 > - [**Start pagina Configuration Manager**](https://www.microsoft.com/cloud-platform/system-center-configuration-manager) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626545 -->
 
 
-## <a name="install-a-central-administration-or-primary-site"></a><a name="bkmk_primary"></a>Een centrale beheer-of primaire site installeren
+## <a name="install-a-central-administration-or-primary-site"></a><a name="bkmk_primary"></a> Een centrale beheer-of primaire site installeren
 
 Gebruik de volgende procedure om een centrale beheer site of een primaire site te installeren. U kunt dit ook gebruiken om een evaluatie site bij te werken naar een volledig gelicentieerde Configuration Manager-site.
 
@@ -54,9 +54,9 @@ Voordat u met de installatie van de site begint, moet u bekend zijn met de infor
 
 Als u een centrale beheer site installeert als onderdeel van een scenario voor site-uitbrei ding, raadpleegt u [een zelfstandige primaire site uitbreiden](use-the-setup-wizard-to-install-sites.md#bkmk_expand) voordat u de volgende procedure uitvoert.
 
-### <a name="process-to-install-a-primary-or-central-administration-site"></a><a name="bkmk_installpri"></a>Proces voor het installeren van een primaire of centrale beheer site
+### <a name="process-to-install-a-primary-or-central-administration-site"></a><a name="bkmk_installpri"></a> Proces voor het installeren van een primaire of centrale beheer site
 
-1. Op de computer waarop u de site wilt installeren, voert u `<InstallationMedia>\SMSSETUP\BIN\X64\Setup.exe` uit om de **wizard Configuration Manager Setup**te starten.  
+1. Op de computer waarop u de site wilt installeren, voert `<InstallationMedia>\SMSSETUP\BIN\X64\Setup.exe` u uit om de **wizard Configuration Manager Setup**te starten.  
 
     > [!NOTE]  
     > Wanneer u een centrale beheer site installeert om uit te breiden op een zelfstandige primaire site of een nieuwe onderliggende primaire site in een bestaande hiërarchie installeert, gebruikt u installatie media (bron bestanden) die overeenkomen met de versie van de bestaande site of sites. Als u in-console-updates hebt geïnstalleerd die de versie van eerder geïnstalleerde sites hebben gewijzigd, gebruikt u de oorspronkelijke installatie media niet. Gebruik in plaats daarvan bron bestanden van de [cd. Meest recente map](../../manage/the-cd.latest-folder.md) van een bijgewerkte site. Configuration Manager moet u bron bestanden gebruiken die overeenkomen met de versie van de bestaande site waarmee de nieuwe site verbinding maakt.  
@@ -166,11 +166,11 @@ Als u een centrale beheer site installeert als onderdeel van een scenario voor s
 
     - **SQL Server naam (FQDN)**: deze waarde is standaard ingesteld op de site Server computer.  
 
-        Als u een aangepaste poort gebruikt, voegt u die poort toe aan de FQDN van de SQL Server. Volg de FQDN-namen van de SQL Server met een komma en vervolgens het poort nummer. Gebruik bijvoorbeeld voor server *SQLServer1.fabrikam.com*het volgende om poort *1551*op te geven:`SQLServer1.fabrikam.com,1551`  
+        Als u een aangepaste poort gebruikt, voegt u die poort toe aan de FQDN van de SQL Server. Volg de FQDN-namen van de SQL Server met een komma en vervolgens het poort nummer. Gebruik bijvoorbeeld voor server *SQLServer1.fabrikam.com*het volgende om poort *1551*op te geven: `SQLServer1.fabrikam.com,1551`  
 
     - **Exemplaar naam**: deze waarde is standaard leeg. Het maakt gebruik van het standaard exemplaar van SQL op de site Server computer.  
 
-    - **Database naam**: deze waarde is standaard ingesteld op `CM_<Sitecode>`. U kunt deze waarde aanpassen.  
+    - **Database naam**: deze waarde is standaard ingesteld op `CM_<Sitecode>` . U kunt deze waarde aanpassen.  
 
     - **Service Broker poort**: deze waarde is standaard ingesteld op het gebruik van de standaard poort voor SQL Server service BROKER (SSB) van 4022. SQL gebruikt IT om rechtstreeks te communiceren met de site database op andere sites.  
 
@@ -244,7 +244,7 @@ Als u een centrale beheer site installeert als onderdeel van een scenario voor s
     - Nadat de installatie is voltooid, kunt u verbinding maken met een console die objecten en instellingen kan bewerken.  
 
 
-## <a name="expand-a-stand-alone-primary-site"></a><a name="bkmk_expand"></a>Een zelfstandige primaire site uitbreiden
+## <a name="expand-a-stand-alone-primary-site"></a><a name="bkmk_expand"></a> Een zelfstandige primaire site uitbreiden
 
 Wanneer u een zelfstandige primaire site hebt geïnstalleerd als uw eerste site, hebt u de optie later om die site uit te breiden naar een grotere hiërarchie door een centrale beheer site te installeren.
 
@@ -271,7 +271,7 @@ Als u de site wilt uitbreiden, gebruikt u de installatie wizard van Configuratio
 Als u een zelfstandige primaire site wilt uitbreiden, raadpleegt u eerst de [vereisten om een site uit te breiden](prerequisites-for-installing-sites.md#bkmk_expand). Gebruik vervolgens de procedure om eerder in dit artikel [een primaire of centrale beheer site te installeren](use-the-setup-wizard-to-install-sites.md#bkmk_installpri) .
 
 
-## <a name="install-a-secondary-site"></a><a name="bkmk_secondary"></a>Een secundaire site installeren
+## <a name="install-a-secondary-site"></a><a name="bkmk_secondary"></a> Een secundaire site installeren
 
 Gebruik de Configuration Manager-console om een secundaire site te installeren.  
 
@@ -281,7 +281,7 @@ Gebruik de Configuration Manager-console om een secundaire site te installeren.
 
 - Wanneer u de secundaire site installeert, configureert Configuration Manager de nieuwe site voor het gebruik van de client communicatie poorten die zijn geconfigureerd op de bovenliggende primaire site.  
 
-### <a name="process-to-install-a-secondary-site"></a><a name="bkmk_installsecondary"></a>Proces voor het installeren van een secundaire site  
+### <a name="process-to-install-a-secondary-site"></a><a name="bkmk_installsecondary"></a> Proces voor het installeren van een secundaire site  
 
 1. Ga in de Configuration Manager-console naar de werk ruimte **beheer** , vouw **site configuratie**uit en selecteer het knoop punt **sites** . Selecteer de site die de bovenliggende primaire site van de nieuwe secundaire site wordt.  
 
@@ -330,9 +330,9 @@ Gebruik de Configuration Manager-console om een secundaire site te installeren.
         - De CD. De meest recente bron bestands locatie bevat een map met de naam **redist**. Verplaats deze map **redist** als een submap onder de map **SMSSETUP** .  
 
         - Kopieer de volgende bestanden van de map **redist** naar de map **SMSSETUP\BIN\X64** :  
-            - SharedManagementObjects. msi
-            - SQLSysClrTypes. msi
-            - SQLNCLI. msi
+            - SharedManagementObjects.msi
+            - SQLSysClrTypes.msi
+            - sqlncli.msi
 
     - Als een van de bestanden van **redist** niet beschikbaar is, mislukt de installatie van de secundaire site.  
 
@@ -411,11 +411,11 @@ Gebruik de Configuration Manager-console om een secundaire site te installeren.
 
 11. Controleer op de pagina **samen vatting** de instellingen en kies vervolgens **volgende** om de secundaire site te installeren. Wanneer de wizard de **voltooiings** pagina presenteert, kunt u de wizard sluiten. De installatie van de secundaire site wordt op de achtergrond voortgezet.  
 
-### <a name="how-to-verify-the-secondary-site-installation-status"></a><a name="bkmk_verify"></a>De status van de secundaire site-installatie controleren  
+### <a name="how-to-verify-the-secondary-site-installation-status"></a><a name="bkmk_verify"></a> De status van de secundaire site-installatie controleren  
 
 1. Ga in de Configuration Manager-console naar de werk ruimte **beheer** , vouw **site configuratie**uit en selecteer het knoop punt **sites** .  
 
 2. Selecteer de secundaire site die u wilt installeren en kies vervolgens **installatie status weer geven** in het lint.  
 
     > [!TIP]  
-    > Wanneer u meer dan één secundaire site tegelijk installeert, wordt de prerequisite Checker uitgevoerd op één site tegelijk. Het moet een site volt ooien voordat de volgende site wordt gecontroleerd.  
+    > Wanneer u meer dan één secundaire site tegelijk installeert, wordt de prerequisite Checker uitgevoerd op één site tegelijk. Het moet een site volt ooien voordat de volgende site wordt gecontroleerd.

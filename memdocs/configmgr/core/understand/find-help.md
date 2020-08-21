@@ -10,12 +10,12 @@ ms.assetid: 86810629-cf2a-43e8-86a2-847444119fc1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7bae98a8df1d8b8ff843bd333083c4c6ad68848c
-ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
+ms.openlocfilehash: 4ae2d837179e3b661bfbfa68d1db429674e20de5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83343181"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699395"
 ---
 # <a name="find-help-for-using-configuration-manager"></a>Hulp zoeken voor het gebruik van Configuration Manager
 
@@ -23,7 +23,7 @@ ms.locfileid: "83343181"
 
 In dit artikel vindt u de volgende secties met meerdere bronnen voor hulp bij het gebruik van Configuration Manager:  
 
-- [Product documentatie](#bkmk_Info)  
+- [Productdocumentatie](#bkmk_Info)  
 
 - [Feedback over het delen van producten](#product-feedback)  
 
@@ -35,9 +35,9 @@ Zie [toegankelijkheids functies](accessibility-features.md)voor meer informatie 
 
 
 
-##  <a name="product-documentation"></a><a name="bkmk_Info"></a>Product documentatie  
+##  <a name="product-documentation"></a><a name="bkmk_Info"></a> Product documentatie  
 
-Begin bij de [bibliotheek index](https://docs.microsoft.com/sccm/)om toegang te krijgen tot de meest actuele product documentatie.  
+Begin bij de [bibliotheek index](/sccm/)om toegang te krijgen tot de meest actuele product documentatie.  
 
 <a name="BKMK_SearchTips"></a>  
 
@@ -47,7 +47,7 @@ Zie [How to use the docs](use-docs.md)(Engelstalig) voor tips over het zoeken, h
 
 <a name="product-feedback"></a>
 
-## <a name="product-feedback-starting-with-version-1806"></a><a name="BKMK_1806Feedback"></a>Product feedback vanaf versie 1806
+## <a name="product-feedback-starting-with-version-1806"></a><a name="BKMK_1806Feedback"></a> Product feedback vanaf versie 1806
 
 Vanaf Configuration Manager versie 1806 kunt u rechtstreeks vanuit de-console product feedback verzenden. Als u logboeken wilt toevoegen, gebruikt u de [feedback hub](#BKMK_FeedbackHub). U kunt het volgende doen: <!--1357542-->
 
@@ -112,33 +112,33 @@ Wanneer u **een glim lach verzendt** of **een frons verzendt**, wordt de volgend
 
 
 
-### <a name="send-feedback-that-you-saved-for-later-submission"></a><a name="BKMK_NoInternet"></a>Feedback verzenden die u hebt opgeslagen om deze later te verzenden
+### <a name="send-feedback-that-you-saved-for-later-submission"></a><a name="BKMK_NoInternet"></a> Feedback verzenden die u hebt opgeslagen om deze later te verzenden
 
 1. Klik op **Opslaan** onder aan het venster **feedback geven** . 
 2. Sla het zip-bestand op. Als de lokale computer geen toegang tot internet heeft, kopieert u het bestand naar een computer die is verbonden met internet. 
-3. Als dat nodig is, kopieert u de map UploadOfflineFeedback in`cd.latest\SMSSETUP\Tools\UploadOfflineFeedback\`
+3. Als dat nodig is, kopieert u de map UploadOfflineFeedback in `cd.latest\SMSSETUP\Tools\UploadOfflineFeedback\`
     - Zie de CD voor meer informatie over de map cd. latest [. Meest recente map](../servers/manage/the-cd.latest-folder.md)
 
 4. Open een opdracht prompt op een computer die is verbonden met internet. 
-5. Voer de volgende opdracht uit:`UploadOfflineFeedback.exe -f c:\folder\location_of.zip`
+5. Voer de volgende opdracht uit: `UploadOfflineFeedback.exe -f c:\folder\location_of.zip`
     
     - U kunt desgewenst de volgende para meters opgeven:
-        -  `-t, --timeout`Time-out in seconden voor het verzenden van de gegevens. 0 is onbeperkt. De standaard waarde is 30.
-        - `-s --silent`Geen logboek registratie naar de console (kan niet combi neren met--verbose)
-        - `-v, --verbose`Uitvoer uitgebreide logboek registratie naar de console (kan niet combi neren met--Silent)
-        - `--help`Hiermee wordt het Help-scherm weer gegeven
+        -  `-t, --timeout` Time-out in seconden voor het verzenden van de gegevens. 0 is onbeperkt. De standaard waarde is 30.
+        - `-s --silent`  Geen logboek registratie naar de console (kan niet combi neren met--verbose)
+        - `-v, --verbose` Uitvoer uitgebreide logboek registratie naar de console (kan niet combi neren met--Silent)
+        - `--help` Hiermee wordt het Help-scherm weer gegeven
     
     - Vanaf versie 1910 biedt het hulp programma UploadOfflineFeedback ondersteuning voor het gebruik van een proxy server. U kunt de volgende para meters opgeven:
-        - `-x, --proxy`Hiermee geeft u een proxy server op om verbinding te maken met internet.
-        - `-o, --port`Hiermee geeft u de poort op waarmee de proxy server verbinding maakt met internet.
-        - `-u, --user`Hiermee geeft u de gebruikers naam op voor de proxy server om verbinding te maken met internet.
-        - `-w, --password`Hiermee geeft u het wacht woord op voor de proxy server om verbinding te maken met internet. Typ een asterisk (&#42;) om een prompt voor het wacht woord te maken. Het wachtwoord wordt niet weergegeven als u deze na de wachtwoordprompt invoert. We raden u ten zeerste aan een asterisk (&#42;) te gebruiken om een prompt te maken voor het invoeren van wacht woorden, omdat tekst zonder opmaak op de opdracht regel minder veilig is.
-        - `-i`Verbindings controle overs Laan: Hiermee slaat u de controle van de netwerk verbinding over, worden de feedback met de opgegeven instellingen geüpload.
+        - `-x, --proxy` Hiermee geeft u een proxy server op om verbinding te maken met internet.
+        - `-o, --port` Hiermee geeft u de poort op waarmee de proxy server verbinding maakt met internet.
+        - `-u, --user` Hiermee geeft u de gebruikers naam op voor de proxy server om verbinding te maken met internet.
+        - `-w, --password` Hiermee geeft u het wacht woord op voor de proxy server om verbinding te maken met internet. Typ een asterisk (&#42;) om een prompt voor het wacht woord te maken. Het wachtwoord wordt niet weergegeven als u deze na de wachtwoordprompt invoert. We raden u ten zeerste aan een asterisk (&#42;) te gebruiken om een prompt te maken voor het invoeren van wacht woorden, omdat tekst zonder opmaak op de opdracht regel minder veilig is.
+        - `-i` Verbindings controle overs Laan: Hiermee slaat u de controle van de netwerk verbinding over, worden de feedback met de opgegeven instellingen geüpload.
 
-## <a name="confirmation-of-console-feedback"></a><a name="bkmk_feedbackid"></a>Bevestiging van console feedback
+## <a name="confirmation-of-console-feedback"></a><a name="bkmk_feedbackid"></a> Bevestiging van console feedback
 
 <!--3556010-->
-Vanaf versie 1902, wanneer u feedback verzendt via de Configuration Manager-console of UploadOfflineFeedback. exe, wordt er een bevestigings bericht weer gegeven. Dit bericht bevat een **feedback-id**, die u aan micro soft kunt geven als tracking-ID.
+Vanaf versie 1902 wordt er een bevestigings bericht weer gegeven wanneer u feedback verzendt via de Configuration Manager-console of UploadOfflineFeedback.exe. Dit bericht bevat een **feedback-id**, die u aan micro soft kunt geven als tracking-ID.
 
 - Als u de **feedback-id**wilt kopiëren, selecteert u het Kopieer pictogram naast de id of gebruikt u de sneltoets **CTRL**  +  **C** .
   - Deze ID is niet opgeslagen op uw computer. Zorg er daarom voor dat u deze kopieert voordat u het venster sluit.
@@ -147,9 +147,9 @@ Vanaf versie 1902, wanneer u feedback verzendt via de Configuration Manager-cons
    ![Feedback bevestiging van de-console in Configuration Manager 1902](media/1902-feedback-id-example.png)
 - De **UploadOfflineFeedback** opdracht tool schrijft de **FeedbackID** naar de console tenzij-s of--Silent wordt gebruikt.
 
-  ![Feedback bevestiging van UploadOfflineFeedback. exe in Configuration Manager 1902](media/1902-offline-feedback-id-example.png)
+  ![Feedback bevestiging van UploadOfflineFeedback.exe in Configuration Manager 1902](media/1902-offline-feedback-id-example.png)
 
-##  <a name="product-feedback-for-versions-1802-and-earlier"></a><a name="BKMK_FeedbackHub"></a>Product feedback voor versie 1802 en eerder
+##  <a name="product-feedback-for-versions-1802-and-earlier"></a><a name="BKMK_FeedbackHub"></a> Product feedback voor versie 1802 en eerder
 
 Meld potentiële product defecten door de ingebouwde [app feedback hub](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app) van Windows 10. Wanneer u **nieuwe feedback toevoegt**, moet u ervoor zorgen dat u de categorie **ondernemings beheer** selecteert en vervolgens een van de volgende subcategorieën kiest:
 - Configuration Manager-client
@@ -167,12 +167,12 @@ Ga door met de [UserVoice-pagina](https://configurationmanager.uservoice.com/) o
   - We willen uw UserVoice-stemmen teruggeven zodat u ze op andere items kunt gebruiken.
   - U kunt nieuwe ontwerp wijzigings aanvragen naar deze functie verzenden om ons te helpen bij de volgende belang rijke verbetering van deze functie.
 
-##  <a name="configuration-manager-team-blog"></a><a name="BKMK_ProductGroupBlog"></a>Blog van Configuration Manager team  
+##  <a name="configuration-manager-team-blog"></a><a name="BKMK_ProductGroupBlog"></a> Blog van Configuration Manager team  
 
 De Configuration Manager Engineering en partner teams gebruiken de [Enterprise Mobility + Security Blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=system-center-configuration-manager) om u te voorzien van technische informatie en ander nieuws over Configuration Manager en gerelateerde technologieën. Onze blogberichten vormen een aanvulling op de productdocumentatie en ondersteunende informatie.  
 
 
-##  <a name="support-options-and-community-resources"></a><a name="BKMK_SupportOptions"></a>Ondersteunings opties en community-resources  
+##  <a name="support-options-and-community-resources"></a><a name="BKMK_SupportOptions"></a> Ondersteunings opties en community-resources  
 
 Via de volgende koppelingen vindt u informatie over ondersteuningsopties en bronnen van de community:  
 

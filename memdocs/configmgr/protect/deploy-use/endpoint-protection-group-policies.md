@@ -1,5 +1,5 @@
 ---
-title: Endpoint Protection beheren met groeps beleid
+title: Endpoint Protection beheren met groepsbeleid
 titleSuffix: Configuration Manager
 description: Meer informatie over het beheren van Endpoint Protection met behulp van groeps beleid.
 ms.date: 08/05/2020
@@ -10,12 +10,12 @@ ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6c43ca9e1007c62835015a8c26a478af7da34ebb
-ms.sourcegitcommit: c1afc8abd0d7da48815bd2b0e45147774c72c2df
+ms.openlocfilehash: d028dc6149ae1fee2d61634b96ccf450fc8f4b24
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87820007"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700596"
 ---
 # <a name="use-group-policy-settings-to-manage-endpoint-protection-in-previous-versions-of-windows"></a>groepsbeleid-instellingen gebruiken voor het beheren van Endpoint Protection in eerdere versies van Windows
 
@@ -42,7 +42,7 @@ U kunt Endpoint Protection op dergelijke apparaten met behulp van groepsbeleid-i
     - [Lokaal apparaat](#load-endpoint-protection-group-policy-settings-into-your-local-device)
 
 > [!NOTE]
-> Zie [Groepsbeleid-instellingen gebruiken voor het configureren en beheren van micro soft Defender anti virus](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/use-group-policy-microsoft-defender-antivirus)voor informatie over het gebruik van Groepsbeleid instellingen voor het beheren van micro soft Defender anti virus in Windows 10, windows server 2019 en windows server 2016.
+> Zie [Groepsbeleid-instellingen gebruiken voor het configureren en beheren van micro soft Defender anti virus](/windows/security/threat-protection/microsoft-defender-antivirus/use-group-policy-microsoft-defender-antivirus)voor informatie over het gebruik van Groepsbeleid instellingen voor het beheren van micro soft Defender anti virus in Windows 10, windows server 2019 en windows server 2016.
 
 ## <a name="copy-endpoint-protection-policy-definitions"></a>Endpoint Protection beleids definities kopiëren
 
@@ -75,7 +75,7 @@ Als u een [centraal archief voor groepsbeleid Beheersjablonen](https://support.m
     
     waarbij **DC** de naam van uw domein controller is en **contoso.com** uw domein is.
 
-3. Open de [console Groepsbeleidbeheer](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) en maak een nieuw Groepsbeleid-object (GPO) in uw domein, bijvoorbeeld **Endpoint Protection**.
+3. Open de [console Groepsbeleidbeheer](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) en maak een nieuw Groepsbeleid-object (GPO) in uw domein, bijvoorbeeld **Endpoint Protection**.
 4. Klik met de rechter muisknop op het groeps beleidsobject voor Endpoint Protection en klik op **bewerken**.
 5. Ga in Groepsbeleidsbeheer-editor naar **computer configuratie**  >  **beleid**  >  **Beheersjablonen: beleids definities**  >  **Windows-onderdelen**  >  **Endpoint Protection**.
 

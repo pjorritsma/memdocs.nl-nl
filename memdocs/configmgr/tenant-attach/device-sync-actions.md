@@ -10,12 +10,12 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 676ae288003b257802eea495c4101a95129eaf34
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 4bdfbabf27906eb8a79ec8ba24f51c3e176dc028
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88251861"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700402"
 ---
 # <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a> Micro soft Endpoint Manager-Tenant bijvoegen: synchronisatie van apparaten en acties van apparaten
 <!--3555758 live 3/4/2020-->
@@ -27,7 +27,7 @@ Vanaf Configuration Manager versie 2002 kunt u uw Configuration Manager-apparate
 
 ## <a name="prerequisites"></a>Vereisten
 
-- Een account dat een *globale beheerder* is voor het aanmelden bij het Toep assen van deze wijziging. Zie [Azure Active Directory (Azure AD)-beheerders rollen](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-ad-administrator-roles)voor meer informatie.
+- Een account dat een *globale beheerder* is voor het aanmelden bij het Toep assen van deze wijziging. Zie [Azure Active Directory (Azure AD)-beheerders rollen](/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-ad-administrator-roles)voor meer informatie.
    - Bij de voor bereiding wordt een app van derden en een service-principal voor de eerste partij gemaakt in uw Azure AD-Tenant.
 - Een open bare Azure-cloud omgeving.
 - De gebruikers accounts die acties voor apparaten activeren, hebben de volgende vereisten:
@@ -118,13 +118,13 @@ Voor het gebruik van een eerder gemaakte toepassing tijdens het voorbereiden op 
    - CmCollectionData. write
 
 - Microsoft Graph machtigingen:
-   - Directory. Read. alle [toepassingen, machtiging](https://docs.microsoft.com/graph/permissions-reference#application-permissions)
-   - Directory. Read. alle [gemachtigde Directory-machtigingen](https://docs.microsoft.com/graph/permissions-reference#directory-permissions)
+   - Directory. Read. alle [toepassingen, machtiging](/graph/permissions-reference#application-permissions)
+   - Directory. Read. alle [gemachtigde Directory-machtigingen](/graph/permissions-reference#directory-permissions)
 
-- Zorg ervoor dat de **beheerder toestemming geven voor de Tenant** is geselecteerd voor de Azure AD-toepassing. Zie [toestemming geven voor beheerders in app-registraties](https://docs.microsoft.com/azure/active-directory/manage-apps/grant-admin-consent)voor meer informatie.
+- Zorg ervoor dat de **beheerder toestemming geven voor de Tenant** is geselecteerd voor de Azure AD-toepassing. Zie [toestemming geven voor beheerders in app-registraties](/azure/active-directory/manage-apps/grant-admin-consent)voor meer informatie.
 
 - De geïmporteerde toepassing moet als volgt worden geconfigureerd:
-   - Alleen geregistreerd voor **accounts in deze organisatie Directory**. Zie [wijzigen wie toegang heeft tot uw toepassing](https://docs.microsoft.com/azure/active-directory/develop/quickstart-modify-supported-accounts#to-change-who-can-access-your-application)voor meer informatie.
+   - Alleen geregistreerd voor **accounts in deze organisatie Directory**. Zie [wijzigen wie toegang heeft tot uw toepassing](/azure/active-directory/develop/quickstart-modify-supported-accounts#to-change-who-can-access-your-application)voor meer informatie.
    -  Heeft een geldige URI voor de toepassings-ID en een geheim
 
 

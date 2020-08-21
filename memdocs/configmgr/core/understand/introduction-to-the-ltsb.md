@@ -10,12 +10,12 @@ ms.assetid: 694bc29f-a7fd-4e06-815a-1a9c5e9ac563
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d4f5ff0e1c8c92fbadc286e9909388eb66aa8f7b
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 1370c1bf80283ff30ad54378ad58ecd9a5d24d47
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906107"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699361"
 ---
 # <a name="introduction-to-the-long-term-servicing-branch-of-configuration-manager"></a>Inleiding tot de lange termijn onderhouds vertakking van Configuration Manager
 
@@ -26,7 +26,7 @@ De Long-term Servicing Branch (LTSB) van Configuration Manager is een afzonderli
 Op basis van Configuration Manager versie 1606 heeft de LTSB verminderde functionaliteit in vergelijking met de huidige vertakking van Configuration Manager.
 
 > [!TIP]   
-> De Configuration Manager LTSB is niet gerelateerd aan het System Center Suite-onderhouds kanaal (LTSC). Zie [overzicht van de release opties van System Center](https://docs.microsoft.com/system-center/ltsc-and-sac-overview)voor meer informatie.
+> De Configuration Manager LTSB is niet gerelateerd aan het System Center Suite-onderhouds kanaal (LTSC). Zie [overzicht van de release opties van System Center](/system-center/ltsc-and-sac-overview)voor meer informatie.
 
 ## <a name="features-that-arent-available"></a>Functies die niet beschikbaar zijn
 
@@ -53,7 +53,7 @@ Cloud integraties en functies die zijn opgenomen in Configuration Manager versie
 
 ## <a name="find-ltsb-documentation"></a>Documentatie voor LTSB zoeken
 
-De LTSB is gebaseerd op de huidige branch versie 1606. Gebruik de [huidige branch-documentatie](https://docs.microsoft.com/mem/configmgr/)met aanvullende opmerkingen en beperkingen die specifiek zijn voor de LTSB. Deze voor behoud en beperkingen worden in de volgende artikelen aangeduid:
+De LTSB is gebaseerd op de huidige branch versie 1606. Gebruik de [huidige branch-documentatie](../../index.yml)met aanvullende opmerkingen en beperkingen die specifiek zijn voor de LTSB. Deze voor behoud en beperkingen worden in de volgende artikelen aangeduid:
 
 - [De LTSB installeren](install-the-ltsb.md)
 - [De LTSB bijwerken naar de huidige vertakking](convert-to-current-branch.md)

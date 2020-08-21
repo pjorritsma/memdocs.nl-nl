@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0103ba8923698a31b86e7d34119caaeb54d54c90
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: cd44270d8662d9e7b1b26db92e2f66035edc24f1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128525"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699327"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Met micro soft verbonden cache in Configuration Manager
 
@@ -35,7 +35,7 @@ Deze cache is gescheiden van de inhoud van het distributie punt van Configuratio
 > [!Note]  
 > De verbonden cache server is een toepassing die is geïnstalleerd op Windows Server. Deze toepassing is nog in ontwikkeling.
 
-## <a name="how-it-works"></a>Hoe werkt het?
+## <a name="how-it-works"></a>Hoe het werkt
 
 Wanneer u clients configureert voor het gebruik van de verbonden cache server, vragen ze geen door micro soft Cloud beheerde inhoud meer via internet. Clients vragen deze inhoud van de cache server die is geïnstalleerd op het distributie punt. De on-premises server slaat deze inhoud op in de cache met behulp van de IIS-functie voor Application Request Routing (ARR). Vervolgens kan de cache server snel reageren op toekomstige aanvragen voor dezelfde inhoud. Als de verbonden cache server niet beschikbaar is, of als de inhoud nog niet in de cache is opgeslagen, downloaden clients de inhoud van het internet. Clients gebruiken ook Delivery Optimization om delen van de inhoud te downloaden van peers in hun netwerk.
 
@@ -61,7 +61,7 @@ Wanneer u clients configureert voor het gebruik van de verbonden cache server, v
 
   - De standaard website ingeschakeld op poort 80
 
-  - Installeer de functie IIS [Application Request Routing](https://docs.microsoft.com/iis/extensions/planning-for-arr/application-request-routing-version-2-overview) (arr) niet vooraf. Verbonden cache installeert ARR en configureert de instellingen. Micro soft kan niet garanderen dat de verbindings configuratie van de verbonden cache niet in conflict is met andere toepassingen op de server waarop ook deze functie wordt gebruikt.
+  - Installeer de functie IIS [Application Request Routing](/iis/extensions/planning-for-arr/application-request-routing-version-2-overview) (arr) niet vooraf. Verbonden cache installeert ARR en configureert de instellingen. Micro soft kan niet garanderen dat de verbindings configuratie van de verbonden cache niet in conflict is met andere toepassingen op de server waarop ook deze functie wordt gebruikt.
 
   - Het distributie punt vereist Internet toegang tot de micro soft-Cloud. De specifieke Url's kunnen variëren, afhankelijk van de specifieke Cloud inhoud. Zorg ervoor dat u ook de eind punten voor Delivery Optimization toestaat. Zie [vereisten voor Internet toegang](../network/internet-endpoints.md)voor meer informatie.
 
@@ -97,7 +97,7 @@ Wanneer u clients configureert voor het gebruik van de verbonden cache server, v
 
 1. Configureer in client instellingen in de groep **Delivery Optimization** de instelling zodat **apparaten die worden beheerd door Configuration Manager, gebruik kunnen maken van micro soft Connected cache servers voor het downloaden van inhoud**.  
 
-### <a name="note-1-about-drive-selection"></a><a name="bkmk_note1"></a>Opmerking 1: station selecteren
+### <a name="note-1-about-drive-selection"></a><a name="bkmk_note1"></a> Opmerking 1: station selecteren
 
 Als u **automatisch**selecteert en het verbonden cache onderdeel wordt geïnstalleerd door Configuration Manager, wordt het **no_sms_on_drive. SMS** -bestand geaccepteerd. Het distributie punt heeft bijvoorbeeld het bestand `C:\no_sms_on_drive.sms` . Zelfs als de station C: de meeste vrije ruimte heeft, configureert Configuration Manager verbonden cache om een ander station te gebruiken voor de cache.
 
@@ -109,7 +109,7 @@ Het station wijzigen nadat u de verbonden cache hebt geïnstalleerd:
 
 - Als deze is ingesteld op automatisch, moet u eerst het **no_sms_on_drive. SMS** -bestand maken. Breng vervolgens een wijziging aan in de eigenschappen van het distributie punt om een configuratie wijziging te activeren.
 
-### <a name="automation"></a>Automation
+### <a name="automation"></a>Automatisering
 
 <!-- SCCMDocs#1911 -->
 
@@ -118,10 +118,10 @@ U kunt de Configuration Manager SDK gebruiken voor het automatiseren van de conf
 Wanneer u het **SMS_SCI_SysResUse** -exemplaar voor het distributie punt bijwerkt, stelt u de volgende eigenschappen in:
 
 - **AgreeDOINCLicense**: ingesteld op `1` om de licentie voorwaarden te accepteren.
-- **Vlaggen**: inschakelen `|= 4` , uitschakelen`&= ~4`
-- **DiskSpaceDOINC**: ingesteld op `Percentage` of`GB`
-- **RetainDOINCCache**: ingesteld op `0` of`1`
-- **LocalDriveDOINC**: ingesteld op `Automatic` , of een specifieke stationsletter, zoals `C:` of`D:`
+- **Vlaggen**: inschakelen `|= 4` , uitschakelen `&= ~4`
+- **DiskSpaceDOINC**: ingesteld op `Percentage` of `GB`
+- **RetainDOINCCache**: ingesteld op `0` of `1`
+- **LocalDriveDOINC**: ingesteld op `Automatic` , of een specifieke stationsletter, zoals `C:` of `D:`
 
 ## <a name="verify"></a>Verifiëren
 
@@ -136,13 +136,13 @@ Wanneer clients door de Cloud beheerde inhoud downloaden, gebruiken ze Delivery 
   - Client-apps: Microsoft Store apps en updates
   - Endpoint Protection: definitie-updates voor Windows Defender
 
-Controleer op Windows 10 versie 1809 of hoger dit gedrag met de Windows Power shell **-cmdlet Get-DeliveryOptimizationStatus** . Controleer de **BytesFromCacheServer** -waarde in de uitvoer van de cmdlet. Zie [Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-setup#monitor-delivery-optimization)voor meer informatie.
+Controleer op Windows 10 versie 1809 of hoger dit gedrag met de Windows Power shell **-cmdlet Get-DeliveryOptimizationStatus** . Controleer de **BytesFromCacheServer** -waarde in de uitvoer van de cmdlet. Zie [Delivery Optimization](/windows/deployment/update/waas-delivery-optimization-setup#monitor-delivery-optimization)voor meer informatie.
 
 Als de cache server een HTTP-fout retourneert, valt de Delivery Optimization-client terug naar de oorspronkelijke Cloud bron.
 
 Zie [problemen met micro soft Connected cache in Configuration Manager oplossen](../../servers/deploy/configure/troubleshoot-microsoft-connected-cache.md)voor meer informatie.
 
-## <a name="support-for-intune-win32-apps"></a><a name="bkmk_intune"></a>Ondersteuning voor intune Win32-apps
+## <a name="support-for-intune-win32-apps"></a><a name="bkmk_intune"></a> Ondersteuning voor intune Win32-apps
 
 <!--5032900-->
 
@@ -184,7 +184,7 @@ Vanaf versie 1910, wanneer u verbonden cache inschakelt op uw Configuration Mana
 
 - Deze functie ondersteunt alleen het type van de intune Win32-app.
 
-  - Een nieuwe app maken en toewijzen (implementeren) in intune voor dit doel einde. (Apps die zijn gemaakt voor versie 1811 van intune werken niet.) Zie [intune Win32 app Management](https://docs.microsoft.com/intune/apps/apps-win32-app-management)voor meer informatie.
+  - Een nieuwe app maken en toewijzen (implementeren) in intune voor dit doel einde. (Apps die zijn gemaakt voor versie 1811 van intune werken niet.) Zie [intune Win32 app Management](/intune/apps/apps-win32-app-management)voor meer informatie.
 
   - De app moet ten minste 100 MB groot zijn.
   

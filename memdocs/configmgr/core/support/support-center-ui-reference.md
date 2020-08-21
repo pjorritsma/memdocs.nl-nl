@@ -10,12 +10,12 @@ ms.assetid: 41cdebfe-b595-40aa-a385-32e0746255ed
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 43bb35243b4f7e7b1e45b66319efd4ec21e92542
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 79d483f95c12c1da1e34ca556836a1f42bbffbef
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718614"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699446"
 ---
 # <a name="support-center-user-interface-reference"></a>Naslag informatie voor de gebruikers interface van ondersteunings centrum
 
@@ -41,7 +41,7 @@ In deze sectie wordt de gebruikers interface voor het hulp programma **ondersteu
 - [Tabblad logboeken](#bkmk_support-logs)  
 
 
-### <a name="window-menu"></a><a name="bkmk_support-window"></a>Venster menu
+### <a name="window-menu"></a><a name="bkmk_support-window"></a> Venster menu
 
 Selecteer in de linkerbovenhoek van het venster van het ondersteunings centrum de pijl in het blauwe vak om dit menu te openen.
 
@@ -51,7 +51,7 @@ Het ondersteunings centrum verzamelt logboek bestanden en voert probleem oplossi
 #### <a name="remote-connection"></a>Externe verbinding
 Een externe verbinding met een andere Configuration Manager-client tot stand brengen. Nadat de verbinding tot stand is gebracht, verzamelt het ondersteunings centrum logboek bestanden en voert het probleem op te lossen op de client waarmee de verbinding is gemaakt.
 
-#### <a name="about"></a>Info
+#### <a name="about"></a>Over
 Bevat informatie over het ondersteunings centrum.
 
 #### <a name="options"></a>Opties
@@ -60,14 +60,14 @@ In het dialoog venster **Opties** kunt u het volgende doen:
 - De standaard opslaglocatie voor gegevens bundel bestanden wijzigen  
 - De locatie van tijdelijke bestanden wijzigen    
 - Waarschuwingen opnieuw instellen. Eventuele waarschuwings berichten die u eerder hebt onderdrukt, worden opnieuw weer gegeven wanneer de trigger wordt geactiveerd.  
-- Het tijdelijke bestandspad opnieuw instellen op de standaard waarde,`%UserProfile%\AppData\Local\Microsoft\ConfigMgrSupportCenter`
+- Het tijdelijke bestandspad opnieuw instellen op de standaard waarde, `%UserProfile%\AppData\Local\Microsoft\ConfigMgrSupportCenter`
 
 #### <a name="exit"></a>Afsluiten
 Sluit ondersteunings centrum.
 
 
 
-### <a name="home-tab"></a><a name="bkmk_support-home"></a>Tabblad Start
+### <a name="home-tab"></a><a name="bkmk_support-home"></a> Tabblad Start
 
 #### <a name="collect-selected-data"></a>Geselecteerde gegevens verzamelen
 Ondersteunings centrum verzamelt gegevens van de Configuration Manager-client. Standaard worden de volgende typen verzameld:
@@ -114,7 +114,7 @@ Wanneer u het selectie vakje voor een optie selecteert, verzamelt het ondersteun
 
 
 
-### <a name="client-tab"></a><a name="bkmk_support-client"></a>Tabblad client
+### <a name="client-tab"></a><a name="bkmk_support-client"></a> Tabblad client
 
 #### <a name="load-or-refresh"></a>Laden of vernieuwen
 In ondersteunings centrum worden Details voor de Configuration Manager-client geladen of vernieuwd.
@@ -163,7 +163,7 @@ Wanneer u client Details laadt, worden in ondersteunings centrum de volgende eig
 
 
 
-### <a name="policy-tab"></a><a name="bkmk_support-policy"></a>Tabblad beleid
+### <a name="policy-tab"></a><a name="bkmk_support-policy"></a> Tabblad beleid
 
 Gebruik de acties op dit tabblad in plaats van het oudere [PolicySpy](policy-spy.md) -hulp programma.
 
@@ -186,7 +186,7 @@ Hiermee opent u de werkelijke beleids weergave
 #### <a name="requested-view"></a>Aangevraagde weer gave
 Hiermee opent u de aangevraagde beleids weergave
 
-#### <a name="default-view"></a>Standaardweergave
+#### <a name="default-view"></a>Standaard weergave
 Hiermee opent u de standaard beleids weergave. (Dit beleid is welke apparaten worden ontvangen wanneer u de Configuration Manager-client installeert.)
 
 #### <a name="request-and-evaluate-policy"></a>Beleid aanvragen en evalueren
@@ -208,7 +208,7 @@ In het ondersteunings centrum worden alle beleids gebeurtenissen gewist.
 
 
 
-### <a name="content-tab"></a><a name="bkmk_support-content"></a>Tabblad inhoud
+### <a name="content-tab"></a><a name="bkmk_support-content"></a> Tabblad inhoud
 
 Inhoud op de client weer geven, met inbegrip van inhoud in de cache. Bewaak de voortgang van software-update-en toepassings implementaties. 
 
@@ -278,7 +278,7 @@ Voor elke gebeurtenis worden de volgende eigenschappen weer gegeven:
 
 
 
-### <a name="inventory-tab"></a><a name="bkmk_support-inventory"></a>Tabblad voor Raad
+### <a name="inventory-tab"></a><a name="bkmk_support-inventory"></a> Tabblad voor Raad
 
 #### <a name="load-or-refresh"></a>Laden of vernieuwen
 Ondersteunings centrum laadt of vernieuwt de client inventarisatie lijst voor de momenteel geselecteerde weer gave.
@@ -330,7 +330,7 @@ Als een functie niet is ingeschakeld, worden in de weer gave geen gegevens weer 
 
 
 
-### <a name="troubleshooting-tab"></a><a name="bkmk_support-troubleshoot"></a>Tabblad probleem oplossing
+### <a name="troubleshooting-tab"></a><a name="bkmk_support-troubleshoot"></a> Tabblad probleem oplossing
 
 Los enkele van de meest voorkomende problemen met Configuration Manager-clients op:  
 - Problemen met Active Directory  
@@ -364,7 +364,7 @@ Als u de client problemen oplost en vervolgens opnieuw wilt proberen om het prob
 
 
 
-### <a name="logs-tab"></a><a name="bkmk_support-logs"></a>Tabblad logboeken
+### <a name="logs-tab"></a><a name="bkmk_support-logs"></a> Tabblad logboeken
 
 In deze sectie vindt u de items op het tabblad **Logboeken** van het hulp programma ondersteunings centrum. 
 
@@ -385,15 +385,15 @@ Stel de volgende opties in:
 In plaats van hand matig logboek bestanden te selecteren met behulp van de knop **Logboeken openen** , gebruikt u deze vervolg keuzelijst om alle logboek bestanden te openen die zijn gekoppeld aan de volgende onderdelen gebieden: 
 - **Gewenst configuratie beheer**
 - **Inventaris**
-- **Softwaredistributie**
+- **Software distributie**
 - **Software-updates**
 - **Toepassings beheer**
 - **Beleid**
 - **Client registratie**
-- **Implementatie van besturings systeem**
+- **Implementatie van besturingssystemen**
 
 
-## <a name="support-center-log-viewer-reference"></a><a name="bkmk_log-viewer"></a>Naslag informatie over Logboeken in ondersteunings centrum
+## <a name="support-center-log-viewer-reference"></a><a name="bkmk_log-viewer"></a> Naslag informatie over Logboeken in ondersteunings centrum
 
 In deze sectie wordt de gebruikers interface voor het hulp programma voor **logboek weergave van ondersteunings centrum** beschreven. 
 
@@ -403,7 +403,7 @@ In deze sectie wordt de gebruikers interface voor het hulp programma voor **logb
 Het hulp programma **logboeken viewer** is bijna identiek aan het tabblad **Logboeken** van het **ondersteunings centrum**. Het hulp programma voor **logboek weergave** bevat geen opties voor het **configureren van client logboek registratie** en **logboek groepen**.
 
 
-### <a name="window-menu"></a><a name="bkmk_log-window"></a>Venster menu
+### <a name="window-menu"></a><a name="bkmk_log-window"></a> Venster menu
 
 Selecteer in de linkerbovenhoek van het venster met de logboek weergave van de ondersteunings centrum de pijl in het blauwe vak om dit menu te openen.
 
@@ -416,14 +416,14 @@ In het dialoog venster **Opties** kunt u het volgende doen:
 - Log viewer registreren als de standaard-app voor logboek bestanden met de bestands extensies. log en. lo_  
 - Waarschuwingen opnieuw instellen. Eventuele waarschuwings berichten die u eerder hebt onderdrukt, worden opnieuw weer gegeven wanneer de trigger wordt geactiveerd.  
 
-#### <a name="about"></a>Info
+#### <a name="about"></a>Over
 Geeft informatie weer over de logboek weergave van ondersteunings centrum
 
 #### <a name="close"></a>Sluiten
 Hiermee sluit u de logboek viewer van ondersteunings centrum
 
 
-### <a name="home-tab"></a><a name="bkmk_log-home"></a>Tabblad Start
+### <a name="home-tab"></a><a name="bkmk_log-home"></a> Tabblad Start
 
 #### <a name="open-logs"></a>Logboeken openen 
 In het ondersteunings centrum wordt u gevraagd om een of meer logboek bestanden te selecteren die u wilt openen.
@@ -468,22 +468,22 @@ Wanneer u twee of meer overeenkomsten hebt gevonden voor de teken reeks die u zo
 
 #### <a name="error-lookup"></a>Fout bij zoeken
 Voer een fout code in om te zoeken naar de fout code in de logboek bestanden die momenteel zijn geopend. Gebruik de volgende fout code notaties:
-- **32-bits geheel getal (ondertekend)**: bijvoorbeeld`-2147024891`  
-- **32-bits geheel getal (niet-ondertekend)**: bijvoorbeeld`2147942405`  
-- **32-bits hexadecimaal**: bijvoorbeeld`0x80070005`  
+- **32-bits geheel getal (ondertekend)**: bijvoorbeeld `-2147024891`  
+- **32-bits geheel getal (niet-ondertekend)**: bijvoorbeeld `2147942405`  
+- **32-bits hexadecimaal**: bijvoorbeeld `0x80070005`  
 
 #### <a name="decode-certificate"></a>Certificaat decoderen
 Plak in het dialoog venster **certificaat decoderen** de geserialiseerde certificaat waarde voor een certificaat op de client. Zoek deze waarde in het REGI ster, in logboek bestanden of in WMI. Selecteer **proces** om algemene informatie en Details over het certificaat weer te geven. Deze informatie omvat het certificeringspad. Selecteer **exporteren** om het certificaat te exporteren als een **. CER** -bestand.
 
 
 
-## <a name="advanced-log-file-filters"></a><a name="bkmk_adv-filters"></a>Geavanceerde filters voor logboek bestanden
+## <a name="advanced-log-file-filters"></a><a name="bkmk_adv-filters"></a> Geavanceerde filters voor logboek bestanden
 
 Met geavanceerde filters voor logboek bestanden kunt u specifieke teken reeksen opnemen, uitsluiten of markeren. Deze teken reeksen kunnen zich voordoen in een logboek bestand of logboek bestand groep bij het zoeken naar logboek bestand vermeldingen. Zoek opdrachten met Joker tekens gebruiken bij het maken van een filter. Wanneer u een handige combi natie van filters hebt, slaat u ze op als een *Filterset*. 
 
 Geavanceerde filters voor logboek bestanden vervangen snelle filters. Beide tegelijk gebruiken, maar snelle filters zijn alleen van toepassing op de weer gegeven logboek gegevens. Geavanceerde filters bepalen welke gegevens in eerste instantie worden weer gegeven voordat een snelle filters worden toegepast.
 
-In het dialoog venster Geavanceerde filters kunt u complexe filter sets maken. Deze filter sets zoeken naar teken reeksen in veel logboek bestand onderdelen. Deze onderdelen zijn onder andere berichten, threads, logboek registratie niveaus en onderdelen. Een Filterset bevat meerdere filter instructies die u gebruikt om logboek bestand berichten op te nemen, uit te sluiten of te markeren. Een filter definieert een kolom van een logboek bestand om te zoeken in, een operator en een waarde. De waarde kan reguliere expressies bevatten, zoals het *Joker* teken `*`.
+In het dialoog venster Geavanceerde filters kunt u complexe filter sets maken. Deze filter sets zoeken naar teken reeksen in veel logboek bestand onderdelen. Deze onderdelen zijn onder andere berichten, threads, logboek registratie niveaus en onderdelen. Een Filterset bevat meerdere filter instructies die u gebruikt om logboek bestand berichten op te nemen, uit te sluiten of te markeren. Een filter definieert een kolom van een logboek bestand om te zoeken in, een operator en een waarde. De waarde kan reguliere expressies bevatten, zoals het *Joker* teken `*` .
 
 
 ### <a name="add-a-filter"></a>Een filter toevoegen
@@ -492,7 +492,7 @@ In het dialoog venster Geavanceerde filters kunt u complexe filter sets maken. D
 
 2. Selecteer in het dialoog venster Geavanceerde filters de optie **toevoegen**. Selecteer vervolgens een van de volgende opties om te reageren op logboek vermeldingen die overeenkomen met uw filter:  
     - **Opnemen**  
-    - **Exclude**  
+    - **Weekend**  
     - **Markeren**  
 
 3. Kies in het dialoog venster **Geavanceerde filter configuratie** een kolom en een operator:  
@@ -528,7 +528,7 @@ In het dialoog venster Geavanceerde filters kunt u complexe filter sets maken. D
 
 
 
-## <a name="support-center-viewer-reference"></a><a name="bkmk_viewer"></a>Naslag informatie over ondersteunings centrum
+## <a name="support-center-viewer-reference"></a><a name="bkmk_viewer"></a> Naslag informatie over ondersteunings centrum
 
 In deze sectie wordt de gebruikers interface (UI) voor het Viewer hulpprogramma van het Configuration Manager- **ondersteunings centrum** beschreven. De beschik bare tabbladen variëren op basis van de inhoud van de bundel probleem oplossing. Het [menu venster](#bkmk_viewer-window) en het [tabblad Start](#bkmk_viewer-home) worden standaard weer gegeven.
 - [Venster menu](#bkmk_viewer-window)
@@ -543,14 +543,14 @@ In deze sectie wordt de gebruikers interface (UI) voor het Viewer hulpprogramma 
 - [Tabblad probleem oplossing](#bkmk_viewer-troubleshoot)
 
 
-### <a name="window-menu"></a><a name="bkmk_viewer-window"></a>Venster menu
+### <a name="window-menu"></a><a name="bkmk_viewer-window"></a> Venster menu
 
 Selecteer in de linkerbovenhoek van het viewer venster van de ondersteunings centrum de pijl in het blauwe vak om dit menu te openen.
 
 #### <a name="open-bundle"></a>Bundel openen
 Blader naar de locatie van een gegevens bundel die is gemaakt met het ondersteunings centrum.
 
-#### <a name="about"></a>Info
+#### <a name="about"></a>Over
 Geeft informatie weer over de viewer van ondersteunings centrum.
 
 #### <a name="options"></a>Opties
@@ -558,14 +558,14 @@ In het dialoog venster **Opties** kunt u het volgende doen:
 - Verminder de verplaatsing van elementen van de gebruikers interface met animatie  
 - De locatie van tijdelijke bestanden wijzigen    
 - Waarschuwingen opnieuw instellen. Eventuele waarschuwings berichten die u eerder hebt onderdrukt, worden opnieuw weer gegeven wanneer de trigger wordt geactiveerd.  
-- Het tijdelijke bestandspad opnieuw instellen op de standaard waarde,`%UserProfile%\AppData\Local\Microsoft\ConfigMgrSupportCenterViewer`  
+- Het tijdelijke bestandspad opnieuw instellen op de standaard waarde, `%UserProfile%\AppData\Local\Microsoft\ConfigMgrSupportCenterViewer`  
 
 
 #### <a name="exit"></a>Afsluiten
 Viewer voor ondersteunings centrum afsluiten
 
 
-### <a name="home-tab"></a><a name="bkmk_viewer-home"></a>Tabblad Start
+### <a name="home-tab"></a><a name="bkmk_viewer-home"></a> Tabblad Start
 
 #### <a name="open-bundle"></a>Bundel openen
 Blader naar de locatie van een gegevens bundel die is gemaakt met het ondersteunings centrum.
@@ -577,7 +577,7 @@ Selecteer een of meer logboek bestanden om te openen.
 Plak in het dialoog venster **certificaat decoderen** de geserialiseerde certificaat waarde voor een certificaat op de client. Zoek deze waarde in het REGI ster, in logboek bestanden of in WMI. Selecteer **proces** om algemene informatie en Details over het certificaat weer te geven. Deze informatie omvat het certificeringspad. Selecteer **exporteren** om het certificaat te exporteren als een **. CER** -bestand.
 
 
-### <a name="configuration-tab"></a><a name="bkmk_viewer-config"></a>Tabblad Configuratie
+### <a name="configuration-tab"></a><a name="bkmk_viewer-config"></a> Tabblad Configuratie
 
 Het tabblad **configuratie** van het hulp programma ondersteunings centrum biedt de volgende weer gaven met behulp van gegevens die zijn opgehaald van de WMI-providers:
 
@@ -585,30 +585,30 @@ Het tabblad **configuratie** van het hulp programma ondersteunings centrum biedt
 In deze weer gave wordt dezelfde informatie weer gegeven op het tabblad **client** van het ondersteunings centrum.
 
 #### <a name="operating-system"></a>Besturingssysteem
-Details van het besturings systeem van de client. Er wordt gebruikgemaakt van de [Win32_OperatingSystem](https://docs.microsoft.com/windows/desktop/CIMWin32Prov/win32-operatingsystem) -klasse.
+Details van het besturings systeem van de client. Er wordt gebruikgemaakt van de [Win32_OperatingSystem](/windows/desktop/CIMWin32Prov/win32-operatingsystem) -klasse.
 
 #### <a name="computer"></a>Computer
-Details voor de client computer. Er wordt gebruikgemaakt van de [Win32_OperatingSystem](https://docs.microsoft.com/windows/desktop/CIMWin32Prov/win32-operatingsystem) -klasse.
+Details voor de client computer. Er wordt gebruikgemaakt van de [Win32_OperatingSystem](/windows/desktop/CIMWin32Prov/win32-operatingsystem) -klasse.
 
 #### <a name="services"></a>Services
-Details voor services die worden uitgevoerd op de client computer. Er wordt gebruikgemaakt van de [Win32_Service](https://docs.microsoft.com/windows/desktop/CIMWin32Prov/win32-service) -klasse.
+Details voor services die worden uitgevoerd op de client computer. Er wordt gebruikgemaakt van de [Win32_Service](/windows/desktop/CIMWin32Prov/win32-service) -klasse.
 
 #### <a name="network-adapters"></a>Netwerkadapters
-Details voor netwerk adapters die zijn geïnstalleerd op de client computer. Er wordt gebruikgemaakt van de [Win32_NetworkAdapterConfiguration](https://docs.microsoft.com/windows/desktop/CIMWin32Prov/win32-networkadapterconfiguration) -klasse.
+Details voor netwerk adapters die zijn geïnstalleerd op de client computer. Er wordt gebruikgemaakt van de [Win32_NetworkAdapterConfiguration](/windows/desktop/CIMWin32Prov/win32-networkadapterconfiguration) -klasse.
 
 
-### <a name="logs-tab"></a><a name="bkmk_viewer-logs"></a>Tabblad logboeken
+### <a name="logs-tab"></a><a name="bkmk_viewer-logs"></a> Tabblad logboeken
 
 Op het tabblad **Logboeken** ziet u een lijst van de logboek bestanden die in de bundel zijn opgenomen. Elke rij op dit tabblad bevat het pad, de naam en de grootte van het logboek bestand. 
 
-#### <a name="open"></a>Geopend
+#### <a name="open"></a>Open
 Klik na het selecteren van een logboek bestand op deze knop om **Logboeken**te openen. Het bevat een subset van de functionaliteit die wordt weer gegeven op het tabblad logboeken van het ondersteunings centrum.
 
 #### <a name="decode-certificate"></a>Certificaat decoderen
 Plak in het dialoog venster **certificaat decoderen** de geserialiseerde certificaat waarde voor een certificaat op de client. Zoek deze waarde in het REGI ster, in logboek bestanden of in WMI. Selecteer **proces** om algemene informatie en Details over het certificaat weer te geven. Deze informatie omvat het certificeringspad. Selecteer **exporteren** om het certificaat te exporteren als een **. CER** -bestand.
 
 
-### <a name="debug-dumps-tab"></a><a name="bkmk_viewer-debug"></a>Tabblad debug dumps
+### <a name="debug-dumps-tab"></a><a name="bkmk_viewer-debug"></a> Tabblad debug dumps
 
 Elke rij op dit tabblad bevat details over de dump bestanden voor fout opsporing die kunnen worden geëxporteerd. Op dit tabblad kunt u dump bestanden voor fout opsporing (. dmp) exporteren voor verdere analyse. Deze analyse maakt gebruik van een hulp programma voor fout opsporing, zoals WinDbg. 
 
@@ -619,7 +619,7 @@ Elke rij op dit tabblad bevat details over de dump bestanden voor fout opsporing
 Sla een kopie op van het geselecteerde dump bestand voor fout opsporing.
 
 
-### <a name="wmi-tab"></a><a name="bkmk_viewer-wmi"></a>Tabblad WMI
+### <a name="wmi-tab"></a><a name="bkmk_viewer-wmi"></a> Tabblad WMI
 
 Dit tabblad bevat de set WMI-gegevens van de Configuration Manager-client die de gegevens bundel bevat. 
 
@@ -639,7 +639,7 @@ Met deze knop opent u het volgende exemplaar van de teken reeks die u hebt opgeg
 Plak in het dialoog venster **certificaat decoderen** de geserialiseerde certificaat waarde voor een certificaat op de client. Zoek deze waarde in het REGI ster, in logboek bestanden of in WMI. Selecteer **proces** om algemene informatie en Details over het certificaat weer te geven. Deze informatie omvat het certificeringspad. Selecteer **exporteren** om het certificaat te exporteren als een **. CER** -bestand.
 
 
-### <a name="registry-tab"></a><a name="bkmk_viewer-registry"></a>Tabblad REGI ster
+### <a name="registry-tab"></a><a name="bkmk_viewer-registry"></a> Tabblad REGI ster
 
 Gebruik het tabblad **REGI ster** om register gegevens weer te geven die zijn opgenomen in de gegevens bundel en om die gegevens te exporteren voor verdere analyse.
 
@@ -662,7 +662,7 @@ Met deze knop opent u het volgende exemplaar van de teken reeks die u hebt opgeg
 Plak in het dialoog venster **certificaat decoderen** de geserialiseerde certificaat waarde voor een certificaat op de client. Zoek deze waarde in het REGI ster, in logboek bestanden of in WMI. Selecteer **proces** om algemene informatie en Details over het certificaat weer te geven. Deze informatie omvat het certificeringspad. Selecteer **exporteren** om het certificaat te exporteren als een **. CER** -bestand.
 
 
-### <a name="policy-tab"></a><a name="bkmk_viewer-policy"></a>Tabblad beleid
+### <a name="policy-tab"></a><a name="bkmk_viewer-policy"></a> Tabblad beleid
 
 Het tabblad **beleid** wordt gebruikt voor het weer geven van beleids gegevens die zijn opgenomen in de gegevens bundel. 
 
@@ -682,7 +682,7 @@ Met deze knop opent u het volgende exemplaar van de teken reeks die u hebt opgeg
 Plak in het dialoog venster **certificaat decoderen** de geserialiseerde certificaat waarde voor een certificaat op de client. Zoek deze waarde in het REGI ster, in logboek bestanden of in WMI. Selecteer **proces** om algemene informatie en Details over het certificaat weer te geven. Deze informatie omvat het certificeringspad. Selecteer **exporteren** om het certificaat te exporteren als een **. CER** -bestand.
 
 
-### <a name="certificates-tab"></a><a name="bkmk_viewer-certs"></a>Tabblad Certificaten
+### <a name="certificates-tab"></a><a name="bkmk_viewer-certs"></a> Tabblad Certificaten
 
 Het tabblad **certificaten** wordt gebruikt voor het weer geven van certificaten die zijn opgenomen in de gegevens bundel en om deze te exporteren.
 
@@ -693,7 +693,7 @@ Geeft informatie weer over een geselecteerd certificaat.
 Hiermee opent u een dialoog venster **Opslaan als** om een kopie op te slaan van het certificaat dat u selecteert.
 
 
-### <a name="troubleshooting-tab"></a><a name="bkmk_viewer-troubleshoot"></a>Tabblad probleem oplossing
+### <a name="troubleshooting-tab"></a><a name="bkmk_viewer-troubleshoot"></a> Tabblad probleem oplossing
 
 Gebruik het tabblad **probleem oplossing** om de logboek bestanden weer te geven die zijn gemaakt met het tabblad probleem oplossing van het ondersteunings centrum.
 

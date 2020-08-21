@@ -10,12 +10,12 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 497a43fe6647f1dc2787f16a76f45ddd26d24796
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: e573a2887bd527daac9a05fec2e83ef39fbfc4e1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128845"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700313"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Ondersteunde versies van besturings systemen voor clients en apparaten voor Configuration Manager
 
@@ -44,7 +44,7 @@ Als u de volgende versies van het Windows-besturings systeem wilt beheren, gebru
 #### <a name="windows-virtual-desktop"></a>Windows Virtual Desktop
 
 <!--3556025-->
-[Virtueel bureau blad van Windows](https://docs.microsoft.com/azure/virtual-desktop/) is een desktop-en app Virtualization-service die wordt uitgevoerd op Microsoft Azure. Vanaf versie 1906 gebruikt u Configuration Manager voor het beheren van deze virtuele apparaten waarop Windows wordt uitgevoerd in Azure.
+[Virtueel bureau blad van Windows](/azure/virtual-desktop/) is een desktop-en app Virtualization-service die wordt uitgevoerd op Microsoft Azure. Vanaf versie 1906 gebruikt u Configuration Manager voor het beheren van deze virtuele apparaten waarop Windows wordt uitgevoerd in Azure.
 
 Net als bij een Terminal Server, kunnen sommige van deze virtuele apparaten meerdere gelijktijdige actieve gebruikers sessies toestaan. Als u de client prestaties wilt helpen, schakelt Configuration Manager nu het gebruikers beleid uit op elk apparaat dat deze sessies met meerdere gebruikers mogelijk maakt. Zelfs als u gebruikers beleid inschakelt, schakelt de client deze standaard uit op deze apparaten, waaronder Windows 10 Enter prise-meerdere sessies en Terminal servers.
 
@@ -100,15 +100,15 @@ Windows Server Semi-Annual-kanaal versies zijn Server Core-installaties, zoals W
 
 - **Windows Server 2012** (x64) <sup> [Opmerking 2](#bkmk_note2)</sup>
 
-#### <a name="note-1"></a><a name="bkmk_note1"></a>Opmerking 1
+#### <a name="note-1"></a><a name="bkmk_note1"></a> Opmerking 1
 
 Configuration Manager tests en ondersteunt Windows Server Data Center Editions, maar is niet officieel gecertificeerd voor Windows Server. Configuration Manager hotfix-ondersteuning wordt niet aangeboden voor problemen die specifiek zijn voor Windows Server Data Center Edition. Zie [Windows Server Catalog](https://www.windowsservercatalog.com/)(Engelstalig) voor meer informatie over het Windows Server-certificerings programma.
 
-#### <a name="note-2"></a><a name="bkmk_note2"></a>Opmerking 2
+#### <a name="note-2"></a><a name="bkmk_note2"></a> Opmerking 2
 
-Als u [client push installatie](../../clients/deploy/plan/client-installation-methods.md#client-push-installation)wilt ondersteunen, voegt u de bestands Server-service van de server functie bestands-en opslag Services toe. Zie [functies, functie Services en onderdelen installeren met behulp van Windows Power shell-cmdlets](https://docs.microsoft.com/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#install-roles-role-services-and-features-by-using-windows-powershell-cmdlets)voor meer informatie over het installeren van Windows-onderdelen op Server Core.  
+Als u [client push installatie](../../clients/deploy/plan/client-installation-methods.md#client-push-installation)wilt ondersteunen, voegt u de bestands Server-service van de server functie bestands-en opslag Services toe. Zie [functies, functie Services en onderdelen installeren met behulp van Windows Power shell-cmdlets](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#install-roles-role-services-and-features-by-using-windows-powershell-cmdlets)voor meer informatie over het installeren van Windows-onderdelen op Server Core.  
 
-#### <a name="note-3"></a><a name="bkmk_note3"></a>Opmerking 3
+#### <a name="note-3"></a><a name="bkmk_note3"></a> Opmerking 3
 
 De nieuwe software Center-app wordt niet ondersteund op een versie van Windows Server Core.<!--SCCMDocs issue 683-->
 
@@ -135,7 +135,7 @@ Windows Embedded-apparaten beheren door de Configuration Manager-client op het a
 - **Windows 10 Enter prise** (x86, x64)  
 
 - **Windows 10 IOT Enter prise** (x86, x64)  
-    Deze versie bevat het Long-term Servicing Channel (LTSC). Zie [overzicht van Windows 10 IOT Enter prise](https://docs.microsoft.com/windows/iot-core/windows-iot-enterprise)(Engelstalig) voor meer informatie.<!--SCCMDocs issue 560-->  
+    Deze versie bevat het Long-term Servicing Channel (LTSC). Zie [overzicht van Windows 10 IOT Enter prise](/windows/iot-core/windows-iot-enterprise)(Engelstalig) voor meer informatie.<!--SCCMDocs issue 560-->  
 
 - **Windows Embedded 8,1 Industry** (x86, x64)
 
@@ -186,7 +186,7 @@ Beheer Windows CE apparaten met de Configuration Manager verouderde client van m
 
 - Spaans (Spanje)  
 
-## <a name="extended-security-updates-and-configuration-manager"></a><a name="bkmk_ESU"></a>Uitgebreide beveiligings updates en Configuration Manager
+## <a name="extended-security-updates-and-configuration-manager"></a><a name="bkmk_ESU"></a> Uitgebreide beveiligings updates en Configuration Manager
 
 Het [ESU-programma (Extended Security updates)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) is een laatste redmiddel-optie voor klanten die bepaalde verouderde micro soft-producten na het einde van de ondersteuning moeten uitvoeren. Bijvoorbeeld Windows 7. Het bevat essentiële en/of belang rijke beveiligings updates (zoals gedefinieerd door het [micro soft Security Response Center (MSRC)](https://www.microsoft.com/msrc)) voor een maximum van drie jaar na het einde van de uitgebreide ondersteunings datum van het product.
 
@@ -324,7 +324,7 @@ De volgende versies worden ondersteund door het aangegeven. tar-bestand te gebru
 |Versie 16,04 LTS x64|CCM-Universalx64. &lt; Build \> . tar|  
 
 
-## <a name="on-premises-mdm"></a><a name="bkmk_OnpremOS"></a>On-premises MDM
+## <a name="on-premises-mdm"></a><a name="bkmk_OnpremOS"></a> On-premises MDM
 
 Configuration Manager heeft ingebouwde mogelijkheden voor het beheren van mobiele apparaten die on-premises zijn, zonder client software te installeren. Zie [mobiele apparaten beheren met on-premises infra structuur](../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md)voor meer informatie.  
 
@@ -335,7 +335,7 @@ Configuration Manager heeft ingebouwde mogelijkheden voor het beheren van mobiel
 - **Windows 10 Pro Enter prise** (x86, x64)  
 
 - **Windows 10 IOT Enter prise** (x86, x64)  
-    Deze versie bevat het Long-term Servicing Channel (LTSC). Zie [overzicht van Windows 10 IOT Enter prise](https://docs.microsoft.com/windows/iot-core/windows-iot-enterprise)(Engelstalig) voor meer informatie.<!--SCCMDocs issue 560-->  
+    Deze versie bevat het Long-term Servicing Channel (LTSC). Zie [overzicht van Windows 10 IOT Enter prise](/windows/iot-core/windows-iot-enterprise)(Engelstalig) voor meer informatie.<!--SCCMDocs issue 560-->  
 
 - **Windows 10 IoT Mobile Enterprise**  
 
@@ -348,7 +348,7 @@ Configuration Manager heeft ingebouwde mogelijkheden voor het beheren van mobiel
     > [!IMPORTANT]
     > Configuration Manager versie 2006 daalt ondersteuning voor Windows 10 Mobile en Windows 10 Mobile Enter prise als een client. De afschaffing werd aangekondigd met [versie 1906](../changes/whats-new-in-version-1906.md#bkmk_deprecated).
 
-## <a name="exchange-server-connector"></a><a name="bkmk_ExSrvConOS"></a>Exchange Server-connector  
+## <a name="exchange-server-connector"></a><a name="bkmk_ExSrvConOS"></a> Exchange Server-connector  
 
 Configuration Manager ondersteunt beperkt beheer van apparaten die verbinding maken met uw Exchange-server zonder de Configuration Manager-client te installeren. Zie [mobiele apparaten beheren met Configuration Manager en Exchange](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)voor meer informatie.  
 

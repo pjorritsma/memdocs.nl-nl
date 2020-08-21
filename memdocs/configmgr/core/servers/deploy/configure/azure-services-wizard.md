@@ -10,12 +10,12 @@ ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ebdd07874f09ff6d97747826d6056df177e2c735
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 7cb0a2c71a3ea326348b87d6b34e3109a8ef9f20
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128474"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700126"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>Azure-Services configureren voor gebruik met Configuration Manager
 
@@ -39,10 +39,10 @@ Configureer de volgende Azure-Services met behulp van deze wizard:
 
   - [E-mail meldingen voor app-goed keuring](../../../../apps/deploy-use/app-approval.md#bkmk_email-approve)
 
-- **Log Analytics connector**: [Maak verbinding met Azure log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm). Verzamelings gegevens synchroniseren met Log Analytics.  
+- **Log Analytics connector**: [Maak verbinding met Azure log Analytics](/azure/azure-monitor/platform/collect-sccm). Verzamelings gegevens synchroniseren met Log Analytics.  
 
     > [!Note]  
-    > In dit artikel wordt verwezen naar de *log Analytics-connector*, voorheen de *OMS-connector*genoemd. Er is geen functioneel verschil. Zie [Azure Management-monitoring](https://docs.microsoft.com/azure/azure-monitor/terminology#log-analytics)voor meer informatie.  
+    > In dit artikel wordt verwezen naar de *log Analytics-connector*, voorheen de *OMS-connector*genoemd. Er is geen functioneel verschil. Zie [Azure Management-monitoring](/azure/azure-monitor/terminology#log-analytics)voor meer informatie.  
 
 - **Microsoft Store voor bedrijven**: Maak verbinding met de [Microsoft Store voor bedrijven](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md). Ontvang Store-apps voor uw organisatie die u kunt implementeren met Configuration Manager.  
 
@@ -78,10 +78,10 @@ Zie het betreffende Configuration Manager-artikel in de [beschik bare Services](
 
 Voor meer informatie over Azure-apps begint u met de volgende artikelen:
 
-- [Verificatie en autorisatie in Azure App Service](https://docs.microsoft.com/azure/app-service/app-service-authentication-overview)
-- [Overzicht van Web Apps](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview)
+- [Verificatie en autorisatie in Azure App Service](/azure/app-service/app-service-authentication-overview)
+- [Overzicht van Web Apps](/azure/app-service-web/app-service-web-overview)
 - [Basis beginselen van het registreren van een toepassing in azure AD](/azure/active-directory/develop/authentication-scenarios)  
-- [Uw toepassing registreren bij uw Azure Active Directory-Tenant](https://docs.microsoft.com/azure/active-directory/active-directory-app-registration)
+- [Uw toepassing registreren bij uw Azure Active Directory-Tenant](/azure/active-directory/active-directory-app-registration)
 
 ## <a name="before-you-begin"></a>Voordat u begint
 
@@ -93,7 +93,7 @@ Nadat u hebt bepaald welke service u wilt verbinden, raadpleegt u de tabel in [s
 
 Voor sommige services moet de Azure AD-app specifieke machtigingen hebben. Controleer de informatie voor elke service om de vereiste machtigingen te bepalen. Voordat u bijvoorbeeld een web-app kunt importeren, moet een Azure-beheerder deze eerst maken in de [Azure Portal](https://portal.azure.com).
 
-Wanneer u de Log Analytics-connector configureert, geeft u uw nieuw geregistreerde *Web app-* machtigings rechten voor de resource groep die de relevante werk ruimte bevat. Met deze machtiging kunnen Configuration Manager toegang krijgen tot die werk ruimte. Wanneer u de machtiging toewijst, zoekt u naar de naam van de app-registratie in het gedeelte **gebruikers toevoegen** van de Azure Portal. Dit proces is hetzelfde als bij het [leveren van Configuration Manager met machtigingen voor log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#grant-configuration-manager-with-permissions-to-log-analytics). Een Azure-beheerder moet deze machtigingen toewijzen voordat u de app in Configuration Manager importeert.
+Wanneer u de Log Analytics-connector configureert, geeft u uw nieuw geregistreerde *Web app-* machtigings rechten voor de resource groep die de relevante werk ruimte bevat. Met deze machtiging kunnen Configuration Manager toegang krijgen tot die werk ruimte. Wanneer u de machtiging toewijst, zoekt u naar de naam van de app-registratie in het gedeelte **gebruikers toevoegen** van de Azure Portal. Dit proces is hetzelfde als bij het [leveren van Configuration Manager met machtigingen voor log Analytics](/azure/log-analytics/log-analytics-sccm#grant-configuration-manager-with-permissions-to-log-analytics). Een Azure-beheerder moet deze machtigingen toewijzen voordat u de app in Configuration Manager importeert.
 
 ## <a name="start-the-azure-services-wizard"></a>De wizard Azure-Services starten
 
@@ -174,7 +174,7 @@ Selecteer **Aanmelden** om te verifiëren bij Azure als gebruiker met beheerders
 Selecteer **OK** om de web-app te maken in azure AD en sluit het dialoog venster Server toepassing maken. Met deze actie keert u terug naar het [dialoog venster van de server toepassing](#server-app-dialog).
 
 > [!NOTE]
-> Als u een beleid voor voorwaardelijke toegang voor Azure AD hebt gedefinieerd en dit geldt voor **alle Cloud-apps** , moet u de gemaakte server toepassing uitsluiten van dit beleid. Zie de [documentatie voor voorwaardelijke toegang van Azure AD](https://docs.microsoft.com/azure/active-directory/conditional-access/)voor meer informatie over het uitsluiten van specifieke apps.
+> Als u een beleid voor voorwaardelijke toegang voor Azure AD hebt gedefinieerd en dit geldt voor **alle Cloud-apps** , moet u de gemaakte server toepassing uitsluiten van dit beleid. Zie de [documentatie voor voorwaardelijke toegang van Azure AD](/azure/active-directory/conditional-access/)voor meer informatie over het uitsluiten van specifieke apps.
 
 ### <a name="native-client-app"></a>Systeem eigen client-app
 
@@ -222,13 +222,13 @@ Nadat u de web-en systeem eigen apps op de pagina apps hebt opgegeven, gaat de w
 
 - **Cloud Management** service, **detectie** pagina: [Azure AD-gebruikers detectie configureren](configure-discovery-methods.md#azureaadisc)  
 
-- **Log Analytics-connector** service, **configuratie** pagina: [de verbinding met log Analytics configureren](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)  
+- **Log Analytics-connector** service, **configuratie** pagina: [de verbinding met log Analytics configureren](/azure/azure-monitor/platform/collect-sccm)  
 
 - Pagina **configuraties** **van Microsoft Store for Business** -service: [Microsoft Store voor zakelijke synchronisatie configureren](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md#bkmk_config)  
 
 Ten slotte voltooit u de wizard Azure-Services via de pagina's samen vatting, voortgang en voltooiing. U hebt de configuratie van een Azure-service in Configuration Manager voltooid. Herhaal dit proces om andere Azure-Services te configureren.
 
-## <a name="renew-secret-key"></a><a name="bkmk_renew"></a>Geheime sleutel vernieuwen
+## <a name="renew-secret-key"></a><a name="bkmk_renew"></a> Geheime sleutel vernieuwen
 
 U moet de geheime sleutel van de Azure AD-App vernieuwen vóór het einde van de geldigheids periode. Als u de sleutel verloopt, kan Configuration Manager niet verifiëren met Azure AD, waardoor uw verbonden Azure-Services niet meer werken.
 

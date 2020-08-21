@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: eb393b05e1ee93239b43725a67b9a1b3e54e71ed
-ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
+ms.openlocfilehash: 5250d3296df19c454f55ed166e998f8c940c98db
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997959"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700787"
 ---
 # <a name="desktop-analytics-data-privacy"></a>Gegevens privacy voor desktop Analytics
 
 Desktop Analytics is volledig doorgevoerd in de privacy van klant gegevens, gecentreerd op deze grond beginselen:
 
-- **Transparantie:** De Windows-diagnose gebeurtenissen worden volledig gedocumenteerd. Bekijk ze met de beveiligings-en nalevings teams van uw bedrijf. Met de viewer voor diagnostische gegevens van Windows kunt u Diagnostische gegevens bekijken die vanaf een bepaald apparaat zijn verzonden. Zie voor meer informatie [overzicht van diagnostische gegevens Viewer](https://docs.microsoft.com/windows/configuration/diagnostic-data-viewer-overview).  
+- **Transparantie:** De Windows-diagnose gebeurtenissen worden volledig gedocumenteerd. Bekijk ze met de beveiligings-en nalevings teams van uw bedrijf. Met de viewer voor diagnostische gegevens van Windows kunt u Diagnostische gegevens bekijken die vanaf een bepaald apparaat zijn verzonden. Zie voor meer informatie [overzicht van diagnostische gegevens Viewer](/windows/configuration/diagnostic-data-viewer-overview).  
 
 - **Besturings element:** U bepaalt het niveau van diagnostische gegevens dat moet worden gedeeld met micro soft. Windows 10, versie 1709, voegt een nieuw beleid toe om uitgebreide diagnostische gegevens te beperken tot de minimale vereisten voor desktop Analytics.  
 
@@ -30,7 +30,7 @@ Desktop Analytics is volledig doorgevoerd in de privacy van klant gegevens, gece
 
 - **Vertrouwen:** Desktop Analytics ondersteunt de micro soft- [privacyverklaring](https://privacy.microsoft.com/privacystatement) en de [voor waarden voor Online Services](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46).  
 
-Zie voor meer informatie [Windows-services waarbij micro soft de processor onder de AVG is](https://docs.microsoft.com/windows/privacy/gdpr-it-guidance#windows-services-where-microsoft-is-the-processor-under-the-gdpr).<!-- 5353168 -->
+Zie voor meer informatie [Windows-services waarbij micro soft de processor onder de AVG is](/windows/privacy/gdpr-it-guidance#windows-services-where-microsoft-is-the-processor-under-the-gdpr).<!-- 5353168 -->
 
 ## <a name="data-flow"></a>Gegevensstroom
 
@@ -57,7 +57,7 @@ In de volgende afbeelding ziet u hoe diagnostische gegevens van afzonderlijke ap
 
 3. Apparaten verzenden diagnostische gegevens naar de micro soft Diagnostic Gegevensbeheer-service voor Windows. Alle diagnostische gegevens worden versleuteld via HTTPS en maakt gebruik van een certificaat dat wordt vastgemaakt tijdens de overdracht van het apparaat naar deze service. De micro soft Gegevensbeheer-service wordt gehost in de Verenigde Staten.
 
-      - Toepassings fouten, kernel-fouten, niet-reagerende toepassingen en andere toepassingsspecifieke problemen gebruiken de Windows Foutrapportage-API voor het verzenden van toepassingsspecifieke probleem rapporten naar micro soft. Zie [wer gebruiken](https://docs.microsoft.com/windows/win32/wer/using-wer) voor specifieke informatie over deze gegevens stroom.
+      - Toepassings fouten, kernel-fouten, niet-reagerende toepassingen en andere toepassingsspecifieke problemen gebruiken de Windows Foutrapportage-API voor het verzenden van toepassingsspecifieke probleem rapporten naar micro soft. Zie [wer gebruiken](/windows/win32/wer/using-wer) voor specifieke informatie over deze gegevens stroom.
       
 4. Micro soft produceert elke dag een moment opname van de inzichten die IT-gericht zijn. In deze moment opname worden de diagnostische gegevens van Windows gecombineerd met de invoer voor de Inge schreven apparaten. Dit proces treedt op in tijdelijke opslag, wat alleen wordt gebruikt door Desktop Analytics. De tijdelijke opslag wordt gehost in micro soft-data centers in de Verenigde Staten. Alle gegevens worden verzonden via een met SSL (HTTPS) versleuteld kanaal. De moment opnamen worden gescheiden door de commerciële ID.  
 
@@ -71,23 +71,23 @@ Zie [Veelgestelde vragen over privacy](faq.md#privacy)voor privacy-gerelateerde 
 
 Raadpleeg de volgende artikelen voor meer informatie over verwante privacy-aspecten:
 
-- [Windows 10 en de AVG voor IT-besluit vormers](https://docs.microsoft.com/windows/privacy/gdpr-it-guidance)  
+- [Windows 10 en de AVG voor IT-besluit vormers](/windows/privacy/gdpr-it-guidance)  
 
-- [Windows diagnostische gegevens configureren in uw organisatie](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
+- [Windows diagnostische gegevens configureren in uw organisatie](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
 
-- [Gebeurtenissen en velden van diagnostische gegevens voor Windows 7, Windows 8 en Windows 8,1-beoordeling](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/appraiser-diagnostic-data-events-and-fields)  
+- [Gebeurtenissen en velden van diagnostische gegevens voor Windows 7, Windows 8 en Windows 8,1-beoordeling](/previous-versions/windows/it-pro/windows-8.1-and-8/appraiser-diagnostic-data-events-and-fields)  
 
-- [Windows 10, versie 1809 basis niveau Windows diagnostische gebeurtenissen en velden](https://docs.microsoft.com/windows/privacy/basic-level-windows-diagnostic-events-and-fields-1809)  
+- [Windows 10, versie 1809 basis niveau Windows diagnostische gebeurtenissen en velden](/windows/privacy/basic-level-windows-diagnostic-events-and-fields-1809)  
 
-- [Windows 10, versie 1709 uitgebreide diagnostische gegevens gebeurtenissen en velden die worden gebruikt door Desktop Analytics](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)  
+- [Windows 10, versie 1709 uitgebreide diagnostische gegevens gebeurtenissen en velden die worden gebruikt door Desktop Analytics](/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)  
 
-- [Windows Setup fout rapportage](https://docs.microsoft.com/windows/deployment/upgrade/windows-error-reporting)
+- [Windows Setup fout rapportage](/windows/deployment/upgrade/windows-error-reporting)
 
-- [Overzicht van viewer voor diagnostische gegevens](https://docs.microsoft.com/windows/privacy/diagnostic-data-viewer-overview)  
+- [Overzicht van viewer voor diagnostische gegevens](/windows/privacy/diagnostic-data-viewer-overview)  
 
 - [Licentie voorwaarden en documentatie](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=31)  
 
-- [Log Analytics gegevens beveiliging](https://docs.microsoft.com/azure/azure-monitor/platform/data-security)
+- [Log Analytics gegevens beveiliging](/azure/azure-monitor/platform/data-security)
 
 - [Beveiliging en privacy op Microsoft Azure data centers](https://azure.microsoft.com/global-infrastructure/)  
 

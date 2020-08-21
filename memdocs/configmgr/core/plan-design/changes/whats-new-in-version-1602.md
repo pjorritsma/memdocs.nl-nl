@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 2e398795a14f5073141f103d93ccd82e61d4d7a8
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 9a54ee5fb427f276ec755e748513b178d0c026ab
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904900"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698568"
 ---
 # <a name="what39s-new-in-version-1602-of-configuration-manager"></a>Wat&#39;s nieuw in versie 1602 van Configuration Manager
 
@@ -36,17 +36,17 @@ Update 1602 voor Configuration Manager is alleen beschikbaar als een update in d
 
 ## <a name="site-infrastructure"></a>Site-infra structuur  
 
-###  <a name="in-place-upgrade-the-operating-system-of-site-servers-that-run-windows-server-2008-r2"></a><a name="bkmk_UpgradeOS"></a>In-place upgrade uitvoeren van het besturings systeem van site servers waarop Windows Server 2008 R2 wordt uitgevoerd  
+###  <a name="in-place-upgrade-the-operating-system-of-site-servers-that-run-windows-server-2008-r2"></a><a name="bkmk_UpgradeOS"></a> In-place upgrade uitvoeren van het besturings systeem van site servers waarop Windows Server 2008 R2 wordt uitgevoerd  
  Configuration Manager sites waarop versie 1602 of hoger wordt uitgevoerd, ondersteunen de in-place upgrade van het besturings systeem site servers van Windows Server 2008 R2 naar Windows Server 2012 R2.  
 
 > [!WARNING]  
 >  Voordat u de upgrade naar Windows Server 2012 R2 uitvoert, dient u WSUS 3.2 te verwijderen van de server.  
 >   
->  Zie de sectie nieuwe en gewijzigde functionaliteit in [Windows Server Update Services overzicht](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality)voor meer informatie over deze kritieke stap.  
+>  Zie de sectie nieuwe en gewijzigde functionaliteit in [Windows Server Update Services overzicht](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality)voor meer informatie over deze kritieke stap.  
 
- Als u een server wilt bijwerken, gebruikt u de upgrade procedures voor Windows Server 2012 R2. U hoeft na de upgrade geen Configuration Manager site server-herstel uit te voeren. Zie [Upgradeopties voor Windows Server 2012 R2](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11)) in de Windows Server-documentatie voor de upgradeprocedures.  
+ Als u een server wilt bijwerken, gebruikt u de upgrade procedures voor Windows Server 2012 R2. U hoeft na de upgrade geen Configuration Manager site server-herstel uit te voeren. Zie [Upgradeopties voor Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11)) in de Windows Server-documentatie voor de upgradeprocedures.  
 
-###  <a name="sql-server-alwayson-availability-groups"></a><a name="bkmk_AOAG"></a>SQL Server AlwaysOn-beschikbaarheids groepen  
+###  <a name="sql-server-alwayson-availability-groups"></a><a name="bkmk_AOAG"></a> SQL Server AlwaysOn-beschikbaarheids groepen  
  Gebruik SQL Server AlwaysOn-beschikbaarheids groepen voor het hosten van de site database op primaire sites en de centrale beheer site als oplossing voor hoge Beschik baarheid en herstel na nood gevallen.  
 
  Zie [SQL Server AlwaysOn voor een Maxi maal beschik bare site database voor Configuration Manager](../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)voor meer informatie.  
@@ -128,7 +128,7 @@ Deze apps vindt u in het knoop punt **toepassingen** van de Configuration Manage
 
 
 ### <a name="make-sure-enrolled-and-compliant-devices-always-have-access-to-exchange-on-premises"></a>Zorg ervoor dat Inge schreven en compatibele apparaten altijd toegang hebben tot Exchange on-premises  
- Wanneer u de volgende optie inschakelt, krijgen apparaten die zijn Inge schreven bij intune en voldoen aan het nalevings beleid, toegang tot Exchange on-premises: **standaard regel negeren-apparaten die zijn Inge schreven bij intune, altijd toegang tot Exchange on-premises toestaan:**. Deze regel is beschikbaar op de **pagina Algemeen** van de **wizard beleid voor voorwaardelijke toegang configureren** voor Exchange on-premises.
+ Wanneer u de volgende optie inschakelt, krijgen apparaten die zijn Inge schreven bij intune en voldoen aan het nalevings beleid, toegang tot Exchange on-premises: **standaard regel negeren-apparaten die zijn Inge schreven bij intune, altijd toegang tot Exchange on-premises toestaan:**. Deze regel is beschikbaar op de  **pagina Algemeen** van de **wizard beleid voor voorwaardelijke toegang configureren** voor Exchange on-premises.
 
  Met deze regel wordt de standaard regel overschreven, wat betekent dat zelfs als u de standaard regel instelt op quarantaine of toegang blokkeert, Inge schreven en compatibele apparaten nog steeds toegang hebben tot Exchange on-premises. Gebruik deze instelling als u wilt dat Inge schreven en compatibele apparaten altijd toegang hebben tot e-mail via Exchange on-premises.   
 
@@ -209,4 +209,4 @@ Configuration Manager kunt de Activeringsslot status van apparaten onder Super v
 
 -   Niet- **compatibel**: gebruikers hebben een versie van de voor waarden geaccepteerd, maar niet de meest recente versie.  
 
--   **Onbekend**: gebruikers hebben de voor waarden nooit geaccepteerd, inclusief verbindingen zonder Inge schreven apparaat.  
+-   **Onbekend**: gebruikers hebben de voor waarden nooit geaccepteerd, inclusief verbindingen zonder Inge schreven apparaat.

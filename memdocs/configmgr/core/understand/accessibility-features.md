@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b25b0137e24212cbad2ba688735e45d9fe9aac0
-ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
+ms.openlocfilehash: a6e406d55524caca71bf75b087c9fd78a470c939
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83556027"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699378"
 ---
 # <a name="accessibility-features-in-configuration-manager"></a>Toegankelijkheids functies in Configuration Manager
 
@@ -28,7 +28,7 @@ Configuration Manager bevat functies om het toegankelijk te maken voor iedereen.
 > [!Note]  
 > Vanaf versie 1902 kunt u .NET bijwerken naar versie 4,7 of hoger op de computer waarop de-console wordt uitgevoerd om de toegankelijkheids functies van de Configuration Manager-console te verbeteren. <!-- SCCMDocs-pr issue #3228 -->  
 > 
-> Zie [Wat is er nieuw in Accessibility in de .NET Framework](https://docs.microsoft.com/dotnet/framework/whats-new/whats-new-in-accessibility)voor meer informatie over de toegankelijkheids wijzigingen die zijn aangebracht in .net 4.7.1 en 4.7.2.  
+> Zie [Wat is er nieuw in Accessibility in de .NET Framework](/dotnet/framework/whats-new/whats-new-in-accessibility)voor meer informatie over de toegankelijkheids wijzigingen die zijn aangebracht in .net 4.7.1 en 4.7.2.  
 
 
 
@@ -57,14 +57,14 @@ Gebruik de volgende sneltoetsen om toegang te krijgen tot een werk ruimte:
 |CTRL + D|Stel de focus in op het deel venster Details, indien beschikbaar.|
 |Alt     |Wijzig de focus in en uit het lint.|
 
-### <a name="cmpivot-shortcuts"></a><a name="bkmk_cmpshortcuts"></a>CMPivot-snelkoppelingen
+### <a name="cmpivot-shortcuts"></a><a name="bkmk_cmpshortcuts"></a> CMPivot-snelkoppelingen
 
 De meeste [webbrowsers](https://support.microsoft.com/help/17456/windows-internet-explorer-ease-of-access-options) -sneltoetsen werken in CMPivot.
 
 |Sneltoets|Doel|
 |--------|--------|  
 |CTRL + 1|Stel de focus in op het eerste tabblad.|
-|ALT +&lt;|Terug naar het adres|
+|ALT + &lt;|Terug naar het adres|
 
 
 ## <a name="other-accessibility-features"></a>Andere toegankelijkheids functies
@@ -98,5 +98,4 @@ Raadpleeg de volgende artikelen voor meer informatie over de grond beginselen va
 - [Gebruikershandleiding van Software Center](software-center.md)
 
 > [!NOTE]  
-> De informatie in dit artikel is mogelijk alleen van toepassing op gebruikers die een licentie hebben voor micro soft-producten in de Verenigde Staten. Als u dit product buiten de Verenigde Staten hebt aangeschaft, kunt u de kaart van de dochter maatschappij gebruiken die bij uw software pakket is geleverd of de [micro soft-website voor toegankelijkheid](https://www.microsoft.com/accessibility/) bezoeken voor contact gegevens voor micro soft-ondersteunings services. U kunt contact opnemen met uw dochter onderneming als u wilt weten of het type producten en services dat in deze sectie wordt beschreven, beschikbaar is in uw omgeving. Informatie over toegankelijkheid is beschikbaar in andere talen, waaronder Japans en Frans.  
-
+> De informatie in dit artikel is mogelijk alleen van toepassing op gebruikers die een licentie hebben voor micro soft-producten in de Verenigde Staten. Als u dit product buiten de Verenigde Staten hebt aangeschaft, kunt u de kaart van de dochter maatschappij gebruiken die bij uw software pakket is geleverd of de [micro soft-website voor toegankelijkheid](https://www.microsoft.com/accessibility/) bezoeken voor contact gegevens voor micro soft-ondersteunings services. U kunt contact opnemen met uw dochter onderneming als u wilt weten of het type producten en services dat in deze sectie wordt beschreven, beschikbaar is in uw omgeving. Informatie over toegankelijkheid is beschikbaar in andere talen, waaronder Japans en Frans.

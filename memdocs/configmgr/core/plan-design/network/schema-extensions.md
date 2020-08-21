@@ -10,12 +10,12 @@ ms.assetid: 95c13c00-909f-4fbb-bbaa-1eba9d54d8c5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1ace560130e43fd5675b51b6d507e84043c01407
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 81371828078264e185dc0a1883dd383257949ef4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904075"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700092"
 ---
 # <a name="schema-extensions-for-configuration-manager"></a>Schema-uitbreidingen voor System Center Configuration
 
@@ -25,7 +25,7 @@ U kunt het Active Directory schema uitbreiden ter ondersteuning van Configuratio
 
 -   Het is een goed idee om het Active Directory schema uit te breiden, maar dit is niet vereist.  
 
-Voordat u het [Active Directory-schema uitbreidt](https://docs.microsoft.com/sccm/core/plan-design/network/extend-the-active-directory-schema), dient u bekend te zijn met Active Directory Domain Services en te weten hoe u [het Active Directory-schema wijzigt](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759402(v=ws.10)).  
+Voordat u het [Active Directory-schema uitbreidt](/sccm/core/plan-design/network/extend-the-active-directory-schema), dient u bekend te zijn met Active Directory Domain Services en te weten hoe u [het Active Directory-schema wijzigt](/previous-versions/windows/it-pro/windows-server-2003/cc759402(v=ws.10)).  
 
 ## <a name="considerations-for-extending-the-active-directory-schema-for-configuration-manager"></a>Overwegingen voor uitbrei ding van het Active Directory schema voor Configuration Manager  
 
@@ -88,7 +88,7 @@ Voordat u het [Active Directory-schema uitbreidt](https://docs.microsoft.com/scc
 
 -   **Tijdelijke oplossing:** als u het schema niet uitbreidt, kunt u het hulpprogramma voor hiërarchie-onderhoud, **preinst.exe**, gebruiken om informatie over de beveiligingssleutel uit te wisselen tussen sites.  
 
-     Als u bijvoorbeeld van plan bent om inhoud te maken op een primaire site en die inhoud op een secundaire site onder een andere primaire site te implementeren, moet u het Active Directory-schema uitbreiden zodat de secundaire site de open bare sleutel van de primaire bron site kan ophalen, of u kunt preinst. exe gebruiken om sleutels rechtstreeks te delen tussen de twee sites.  
+     Als u bijvoorbeeld van plan bent om inhoud te maken op een primaire site en die inhoud op een secundaire site onder een andere primaire site te implementeren, moet u het Active Directory-schema uitbreiden zodat de secundaire site de open bare sleutel van de bron primaire site kan ophalen, of u kunt preinst.exe gebruiken om sleutels rechtstreeks te delen tussen de twee sites.  
 
 ## <a name="active-directory-attributes-and-classes"></a>Kenmerken en klassen Active Directory  
 Wanneer u het schema voor Configuration Manager uitbreidt, worden de volgende klassen en kenmerken toegevoegd aan het schema en zijn deze beschikbaar voor alle Configuration Manager-sites in dat Active Directory forest.  
@@ -142,4 +142,4 @@ Wanneer u het schema voor Configuration Manager uitbreidt, worden de volgende kl
 > - Kenmerk: CN = MS-SMS-site-Boundary's  
 >   -   Klasse: CN = MS-SMS-server-Locator-Point  
 
-U kunt controleren of de voor gaande lijsten actueel zijn door de ConfigMgr_ad_schema weer te geven **. LDF** -bestanden uit de map **\SMSSETUP\BIN\x64** van de installatie media van Configuration Manager.  
+U kunt controleren of de voor gaande lijsten actueel zijn door de ConfigMgr_ad_schema weer te geven **. LDF** -bestanden uit de map **\SMSSETUP\BIN\x64** van de installatie media van Configuration Manager.

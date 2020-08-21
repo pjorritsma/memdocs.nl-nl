@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-ms.openlocfilehash: 8ea95a04977038514c00f0199df42c8070e813c3
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 51e64f8f815c4ba90522acf6529cff4d971dd553
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127651"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699803"
 ---
 # <a name="integrate-with-windows-update-for-business"></a>Integreren met Windows Update voor bedrijven
 
@@ -24,7 +24,7 @@ ms.locfileid: "88127651"
 Met Windows Update voor bedrijven (WUfB) kunt u Windows 10-apparaten in uw organisatie altijd up-to-date houden met de nieuwste beveiligings beveiligingen en Windows-onderdelen wanneer deze apparaten rechtstreeks verbinding maken met de service van Windows Update (WU). Configuration Manager kan onderscheid maken tussen Windows 10-computers die gebruikmaken van WUfB en WSUS voor het ophalen van software-updates.  
 
 > [!WARNING]
-> Als u co-beheer gebruikt voor uw apparaten en u het [Windows Update-beleid](../../comanage/workloads.md#windows-update-policies) naar intune hebt verplaatst, krijgen uw apparaten de [Windows Update voor bedrijfs beleid van intune](https://docs.microsoft.com/intune/windows-update-for-business-configure).
+> Als u co-beheer gebruikt voor uw apparaten en u het [Windows Update-beleid](../../comanage/workloads.md#windows-update-policies) naar intune hebt verplaatst, krijgen uw apparaten de [Windows Update voor bedrijfs beleid van intune](/intune/windows-update-for-business-configure).
 > - Als de Configuration Manager-client nog steeds is geïnstalleerd op het door co beheerde apparaat, worden de instellingen voor cumulatieve updates en functie-updates beheerd door intune. Patching van derden, als dit is ingeschakeld in de [**client instellingen**](../../core/clients/deploy/about-client-settings.md#enable-third-party-software-updates), wordt echter nog steeds beheerd door Configuration Manager.  
 
  Sommige Configuration Manager-functies zijn niet meer beschikbaar wanneer Configuration Manager-clients zijn geconfigureerd voor het ontvangen van updates van WU, waaronder WUfB of Windows insiders:  
@@ -52,7 +52,7 @@ Gebruik de volgende procedure om clients te identificeren die gebruikmaken van W
 
 - Clients met Windows 10 Desktop Pro of Windows 10 Enterprise Edition versie 1511 of hoger
 
-- [Windows Update voor bedrijven](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb) wordt geïmplementeerd en clients gebruiken WUfB om Windows 10-updates en -upgrades op te halen.  
+- [Windows Update voor bedrijven](/windows/deployment/update/waas-manage-updates-wufb) wordt geïmplementeerd en clients gebruiken WUfB om Windows 10-updates en -upgrades op te halen.  
 
 ### <a name="to-identify-clients-that-use-wufb"></a>Clients identificeren die gebruikmaken van WUfB  
 
@@ -74,7 +74,7 @@ Vanaf Configuration Manager versie 1706 kunt u uitstel beleid configureren voor 
 
 > [!NOTE]
 > Vanaf Configuration Manager versie 1802 kunt u uitstel beleid voor Windows Insider instellen. <!--507201-->  
-Zie aan de slag [met Windows Insider Program for Business](https://docs.microsoft.com/windows/deployment/update/waas-windows-insider-for-business)voor meer informatie over het Windows Insider-programma.
+Zie aan de slag [met Windows Insider Program for Business](/windows/deployment/update/waas-windows-insider-for-business)voor meer informatie over het Windows Insider-programma.
 
 ### <a name="prerequisites-for-deferral-policies"></a>Vereisten voor uitstel beleid
 

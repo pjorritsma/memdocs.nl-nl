@@ -10,12 +10,12 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1567531ed83586f47ba2f79372e0b7962c1341dc
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 6406a208de448e40e1d686440f41610266cde042
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128913"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700296"
 ---
 # <a name="whats-new-in-version-1910-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 1910 van Configuration Manager current branch
 
@@ -28,9 +28,9 @@ Bekijk altijd de laatste controle lijst voor het installeren van deze update. Zi
 Als u optimaal wilt profiteren van de nieuwe functies van Configuration Manager, moet u na het bijwerken van de site ook clients bijwerken naar de nieuwste versie. Wanneer u de-site en-console bijwerkt terwijl er nieuwe functionaliteit wordt weer gegeven in de Configuration Manager-console, is het volledige scenario niet functioneel totdat de client versie ook het meest recent is.
 
 > [!TIP]
-> Als u een melding wilt ontvangen wanneer deze pagina wordt bijgewerkt, kopieert en plakt u de volgende URL in uw RSS feed-lezer:`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1910+-+Configuration+Manager%22&locale=en-us`
+> Als u een melding wilt ontvangen wanneer deze pagina wordt bijgewerkt, kopieert en plakt u de volgende URL in uw RSS feed-lezer: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1910+-+Configuration+Manager%22&locale=en-us`
 
-## <a name="microsoft-endpoint-configuration-manager"></a><a name="bkmk_mem"></a>Micro soft endpoint Configuration Manager
+## <a name="microsoft-endpoint-configuration-manager"></a><a name="bkmk_mem"></a> Micro soft endpoint Configuration Manager
 
 <!--4960084-->
 
@@ -42,10 +42,10 @@ Micro soft Endpoint Manager is een geïntegreerde oplossing voor het beheer van 
 
 De volgende micro soft-beheer oplossingen maken nu deel uit van het merk van micro soft Endpoint Manager:
 
-- [Configuration Manager](https://docs.microsoft.com/configmgr)
-- [Intune](https://docs.microsoft.com/intune)
+- [Configuration Manager](/configmgr)
+- [Intune](/intune)
 - [Desktop Analytics](../../../desktop-analytics/overview.md)
-- [Autopilot](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
+- [Autopilot](/intune/enrollment/enrollment-autopilot)
 - Andere functies in de beheer [console voor Apparaatbeheer](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760)
 
 Raadpleeg voor meer informatie de volgende Posts van Mark Anderson, micro soft Corporate Vice President for Microsoft 365:
@@ -69,7 +69,7 @@ Zorg ervoor dat u de interne documentatie die u onderhoudt, bijwerkt om deze nie
 > [!TIP]
 > Wanneer u in Windows 10 het menu Start opent, typt u de naam om het pictogram te vinden. Voer bijvoorbeeld `Configuration Manager` of `Software Center` in.
 
-## <a name="site-infrastructure"></a><a name="bkmk_infra"></a>Site-infra structuur
+## <a name="site-infrastructure"></a><a name="bkmk_infra"></a> Site-infra structuur
 
 ### <a name="reclaim-sedo-lock"></a>SEDO-vergren deling vrijmaken
 
@@ -88,11 +88,11 @@ Zie [on-premises site uitbreiden en migreren naar Microsoft Azure](../../support
 
 <!-- ## <a name="bkmk_cloud"></a> Cloud-attached management -->
 
-## <a name="desktop-analytics"></a><a name="bkmk_da"></a>Desktop Analytics
+## <a name="desktop-analytics"></a><a name="bkmk_da"></a> Desktop Analytics
 
 Zie [what's New in Desktop Analytics](../../../desktop-analytics/whats-new.md)(Engelstalig) voor meer informatie over de maandelijkse wijzigingen in de Cloud service van Desktop Analytics.
 
-## <a name="real-time-management"></a><a name="bkmk_real"></a>Real-time beheer
+## <a name="real-time-management"></a><a name="bkmk_real"></a> Real-time beheer
 
 ### <a name="optimizations-to-the-cmpivot-engine"></a>Optimalisaties voor de CMPivot-engine
 <!--3197353-->
@@ -112,7 +112,7 @@ We hebben een aantal nieuwe CMPivot-entiteiten en entiteits uitbreidingen toegev
 
 Deze release bevat ook enkele [andere verbeteringen](../../servers/manage/cmpivot-changes.md#bkmk_Other) in CMPivot. Zie [CMPivot vanaf versie 1910](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot1910)voor meer informatie.
 
-## <a name="content-management"></a><a name="bkmk_content"></a>Inhouds beheer
+## <a name="content-management"></a><a name="bkmk_content"></a> Inhouds beheer
 
 ### <a name="microsoft-connected-cache-support-for-intune-win32-apps"></a>Ondersteuning voor micro soft Connected cache voor intune Win32-apps
 
@@ -127,7 +127,7 @@ Zie voor meer informatie [micro soft Connected cache in Configuration Manager](.
 >
 > Wanneer u een verbonden cache op een Configuration Manager distributie punt installeert, wordt het verkeer voor de leverings optimalisatie service naar lokale bronnen geoffload. Verbonden cache doet dit gedrag door inhoud op het niveau van byte bereik efficiënt op te slaan in de cache.
 
-## <a name="client-management"></a><a name="bkmk_client"></a>Client beheer
+## <a name="client-management"></a><a name="bkmk_client"></a> Client beheer
 
 ### <a name="include-custom-configuration-baselines-as-part-of-compliance-policy-assessment"></a>Aangepaste configuratie basislijnen opnemen als onderdeel van de beoordeling van het nalevings beleid
 <!--3608345-->
@@ -152,7 +152,7 @@ Zie [client instellingen configureren](../../clients/deploy/configure-client-set
 <!-- ## <a name="bkmk_comgmt"></a> Co-management -->
 
 
-## <a name="application-management"></a><a name="bkmk_app"></a>Toepassings beheer
+## <a name="application-management"></a><a name="bkmk_app"></a> Toepassings beheer
 
 ### <a name="deploy-microsoft-edge-version-77-and-later"></a>Microsoft Edge versie 77 en hoger implementeren
 <!--4561024-->
@@ -172,7 +172,7 @@ Vanaf de huidige versie 1906 van de branch kunt u een groep toepassingen maken e
 Zie [toepassings groepen maken](../../../apps/deploy-use/create-app-groups.md)voor meer algemene informatie.
 
 
-## <a name="os-deployment"></a><a name="bkmk_osd"></a>Implementatie van besturings systeem
+## <a name="os-deployment"></a><a name="bkmk_osd"></a> Implementatie van besturings systeem
 
 ### <a name="improvements-to-the-task-sequence-editor"></a>Verbeteringen in de editor voor taken reeksen
 
@@ -264,7 +264,7 @@ Zie [taken reeks variabelen-SetupCompletePause](../../../osd/understand/task-seq
 
 <!-- ## <a name="bkmk_userxp"></a> Software Center -->
 
-## <a name="software-updates"></a><a name="bkmk_sum"></a>Software-updates
+## <a name="software-updates"></a><a name="bkmk_sum"></a> Software-updates
 
 ### <a name="additional-options-for-third-party-update-catalogs"></a>Aanvullende opties voor update-catalogi van derden
 <!--4469002-->
@@ -287,7 +287,7 @@ U kunt nu **geïmplementeerd** gebruiken als een update filter voor uw regels vo
 
 Zie [software-updates automatisch implementeren](../../../sum/deploy-use/automatically-deploy-software-updates.md#bkmk_adr-process)voor meer informatie.
 
-## <a name="office-management"></a><a name="bkmk_o365"></a>Office-beheer
+## <a name="office-management"></a><a name="bkmk_o365"></a> Office-beheer
 
 
 ### <a name="office-365-proplus-pilot-and-health-dashboard"></a>Office 365 ProPlus pilot-en status dashboard
@@ -297,7 +297,7 @@ Het Office 365 ProPlus-pilot-en status dashboard helpt u bij het plannen, testen
 
 Zie voor meer informatie [Office 365 ProPlus pilot en Health dash board](../../../sum/deploy-use/office-365-dashboard.md#bkmk_pilot).
 
-## <a name="protection"></a><a name="bkmk_protect"></a>Kantel
+## <a name="protection"></a><a name="bkmk_protect"></a> Kantel
 
 ### <a name="bitlocker-management"></a>BitLocker-beheer
 
@@ -313,7 +313,7 @@ Configuration Manager biedt nu de volgende beheer mogelijkheden voor BitLocker-s
 
 Zie voor meer informatie [plannen voor BitLocker-beheer](../../../protect/plan-design/bitlocker-management.md).
 
-## <a name="configuration-manager-console"></a><a name="bkmk_admin"></a>Configuration Manager-console
+## <a name="configuration-manager-console"></a><a name="bkmk_admin"></a> Configuration Manager-console
 
 ### <a name="view-active-consoles-and-message-administrators-through-console-connections"></a>Actieve consoles en bericht beheerders weer geven via console verbindingen
 <!--4923997-->
@@ -346,7 +346,7 @@ Deze release bevat de volgende verbeteringen voor het zoeken in de Configuration
 
 ## <a name="other-updates"></a>Andere Updates
 
-Zie [release opmerkingen voor Power shell versie 1910](https://docs.microsoft.com/powershell/sccm/1910-release-notes?view=sccm-ps)voor meer informatie over wijzigingen in de Windows Power shell-cmdlets voor Configuration Manager.
+Zie [release opmerkingen voor Power shell versie 1910](/powershell/sccm/1910-release-notes?view=sccm-ps)voor meer informatie over wijzigingen in de Windows Power shell-cmdlets voor Configuration Manager.
 
 Zie [release opmerkingen voor de beheer service](../../../develop/adminservice/release-notes.md#bkmk_1910)voor meer informatie over wijzigingen in de beheer service rest API.
 

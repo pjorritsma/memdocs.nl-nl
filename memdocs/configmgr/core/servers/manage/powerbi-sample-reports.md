@@ -10,18 +10,18 @@ ms.assetid: 7e9bc22c-67ac-4a86-b613-944a4928e583
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: cb55fc79c44af83c7bb7a5e0802800f55e28e6b3
-ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
+ms.openlocfilehash: 025788a4ed4a26123f24ec667348eae97821295e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88614768"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699684"
 ---
 # <a name="install-power-bi-sample-reports"></a>Power BI-voorbeeldrapporten installeren
 <!--5679791-->
 *Van toepassing op: Configuration Manager (huidige vertakking)*
 
-Vanaf versie 2002 kunt u [Power bi Report Server](https://docs.microsoft.com/power-bi/report-server/get-started) integreren met Configuration Manager-rapportage. Er zijn voorbeeld rapporten beschikbaar voor down loads die u in Configuration Manager kunt installeren. In dit artikel wordt uitgelegd hoe u de Power BI voorbeeld rapporten kunt installeren in Configuration Manager.
+Vanaf versie 2002 kunt u [Power bi Report Server](/power-bi/report-server/get-started) integreren met Configuration Manager-rapportage. Er zijn voorbeeld rapporten beschikbaar voor down loads die u in Configuration Manager kunt installeren. In dit artikel wordt uitgelegd hoe u de Power BI voorbeeld rapporten kunt installeren in Configuration Manager.
 
 ## <a name="prerequisites"></a>Vereisten
 
@@ -34,7 +34,7 @@ Vanaf versie 2002 kunt u [Power bi Report Server](https://docs.microsoft.com/pow
     > [!IMPORTANT]
     > Gebruik alleen versies van Power BI Desktop van het [micro soft Download centrum](https://www.microsoft.com/download/). Gebruik geen versie van de Microsoft Store.
     >
-    > Gebruik alleen een versie van Power BI Desktop die is [geoptimaliseerd voor Power bi Report Server](https://docs.microsoft.com/power-bi/report-server/install-powerbi-desktop).
+    > Gebruik alleen een versie van Power BI Desktop die is [geoptimaliseerd voor Power bi Report Server](/power-bi/report-server/install-powerbi-desktop).
 
 ## <a name="download-the-sample-reports"></a>De voorbeeld rapporten downloaden
 

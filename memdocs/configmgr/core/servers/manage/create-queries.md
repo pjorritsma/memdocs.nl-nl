@@ -10,12 +10,12 @@ ms.assetid: 868049d3-3209-47ec-b34a-9cc26941893a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 63f815394414167ad4f887c5970538eab22c931a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 8d15252c3b3c93c7e90e517c502c4c3dd2dfcf20
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906144"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700041"
 ---
 # <a name="create-queries-in-configuration-manager"></a>Query's maken in Configuration Manager
 
@@ -23,7 +23,7 @@ ms.locfileid: "82906144"
 
 In dit artikel wordt beschreven hoe u query's maakt en importeert in Configuration Manager.  
 
-##  <a name="create-a-query"></a><a name="BKMK_Create"></a>Een query maken  
+##  <a name="create-a-query"></a><a name="BKMK_Create"></a> Een query maken  
  Gebruik deze procedure voor het maken van een query in Configuration Manager.  
 
 1.  Selecteer **bewaking**In de Configuration Manager-console.  
@@ -49,9 +49,9 @@ In dit artikel wordt beschreven hoe u query's maakt en importeert in Configurati
     > [!TIP]  
     > U kunt de volgende referentie documentatie gebruiken om u te helpen bij het bouwen van uw eigen WQL-query's:  
     >   
-    > -   [WQL (SQL voor WMI)](https://docs.microsoft.com/windows/win32/wmisdk/wql-sql-for-wmi)  
-    > -   [WHERE-component](https://docs.microsoft.com/windows/win32/wmisdk/where-clause)  
-    > -   [WQL-operators](https://docs.microsoft.com/windows/win32/wmisdk/wql-operators)  
+    > -   [WQL (SQL voor WMI)](/windows/win32/wmisdk/wql-sql-for-wmi)  
+    > -   [WHERE-component](/windows/win32/wmisdk/where-clause)  
+    > -   [WQL-operators](/windows/win32/wmisdk/wql-operators)  
 
 8.  Op het tabblad **criteria** van het &lt; dialoog venster Eigenschappen van query naam \> **instructie** geeft u criteria op die worden gebruikt om de resultaten van de query te verfijnen. U kunt bijvoorbeeld alleen resources met de site code **xyz**retour neren. U kunt meerdere criteria voor een query configureren.  
 
@@ -75,7 +75,7 @@ In dit artikel wordt beschreven hoe u query's maakt en importeert in Configurati
 
 12. Voltooi de wizard om de query te maken. De nieuwe query wordt weer gegeven in het knoop punt **query's** in de werk ruimte **bewaking** .  
 
-##  <a name="import-a-query"></a><a name="BKMK_Import"></a>Een query importeren  
+##  <a name="import-a-query"></a><a name="BKMK_Import"></a> Een query importeren  
  Gebruik deze procedure voor het importeren van een query in Configuration Manager. Zie [query's beheren](../../../core/servers/manage/manage-queries.md)voor meer informatie over het exporteren van query's.  
 
 1.  Selecteer **bewaking**In de Configuration Manager-console.  

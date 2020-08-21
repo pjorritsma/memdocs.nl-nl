@@ -10,12 +10,12 @@ ms.assetid: c21eec87-ad1c-4465-8e45-5feb60b92707
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a9ed8e1ece27117993761a3ce52c462e94e9f79a
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: eb7e2e5c564263c7172d70ec33bb33c0dd73409c
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124770"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697820"
 ---
 # <a name="upgrade-windows-to-the-latest-version-with-configuration-manager"></a>Windows upgraden naar de nieuwste versie met Configuration Manager
 
@@ -55,7 +55,7 @@ Op apparaten moet een van de volgende versies van het besturings systeem worden 
 - Windows 8.1
 - Een eerdere versie van Windows 10. U kunt bijvoorbeeld Windows 10 versie 1809 bijwerken naar Windows 10, versie 1903.  
 
-Zie [upgrade paden voor Windows 10](https://docs.microsoft.com/windows/deployment/upgrade/windows-10-upgrade-paths)voor meer informatie.
+Zie [upgrade paden voor Windows 10](/windows/deployment/upgrade/windows-10-upgrade-paths)voor meer informatie.
 
 #### <a name="windows-server"></a>Windows Server
 
@@ -64,10 +64,10 @@ Zie [upgrade paden voor Windows 10](https://docs.microsoft.com/windows/deploymen
 - Een eerdere versie van Windows Server 2016
 - Een eerdere versie van Windows Server 2019
 
-Zie [Windows server 2016 ondersteunde upgrade paden](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths#upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016) en [Windows Server Upgrade Center](https://aka.ms/upgradecenter)voor meer informatie over ondersteunde upgrade paden voor Windows Server.
+Zie [Windows server 2016 ondersteunde upgrade paden](/windows-server/get-started/supported-upgrade-paths#upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016) en [Windows Server Upgrade Center](https://aka.ms/upgradecenter)voor meer informatie over ondersteunde upgrade paden voor Windows Server.
 
 
-## <a name="plan"></a><a name="BKMK_Plan"></a>Fonds  
+## <a name="plan"></a><a name="BKMK_Plan"></a> Fonds  
 
 ### <a name="task-sequence-requirements-and-limitations"></a>Vereisten en beperkingen voor taken reeksen
 
@@ -95,7 +95,7 @@ De volgende taken zijn niet compatibel met de in-place upgrade. Hiervoor moet u 
 De enige vereiste voor het upgrade scenario is dat er een distributie punt beschikbaar is. Distribueer het upgrade pakket van het besturings systeem en eventuele andere pakketten die u in de taken reeks opneemt. Zie voor meer informatie [Install or modify a distribution point](../../core/servers/deploy/configure/install-and-configure-distribution-points.md).
 
 
-## <a name="configure"></a><a name="BKMK_Configure"></a>Geconfigureerd  
+## <a name="configure"></a><a name="BKMK_Configure"></a> Geconfigureerd  
 
 ### <a name="prepare-the-os-upgrade-package"></a>Het upgrade pakket voor het besturings systeem voorbereiden  
 
@@ -111,7 +111,7 @@ Volg de stappen in [een taken reeks maken om een besturings systeem](create-a-ta
 > U kunt een aangepaste taken reeks maken en de stap [besturings systeem bijwerken](../understand/task-sequence-steps.md#BKMK_UpgradeOS) toevoegen. Dit is de enige stap die is vereist om het besturings systeem te upgraden naar Windows 10. Als u deze methode kiest om de upgrade te volt ooien, voegt u ook de stap [computer opnieuw opstarten](../understand/task-sequence-steps.md#BKMK_RestartComputer) toe na de stap **besturings systeem bijwerken** . Zorg ervoor dat u de **standaard besturingssysteem** instelling gebruikt om de computer opnieuw op te starten in het geïnstalleerde besturings systeem en niet met Windows PE.  
 
 
-## <a name="deploy"></a><a name="BKMK_Deploy"></a>Zetten  
+## <a name="deploy"></a><a name="BKMK_Deploy"></a> Zetten  
 
 Gebruik een van de volgende implementatie methoden om het besturings systeem te implementeren:  
 
@@ -125,4 +125,4 @@ Gebruik een van de volgende implementatie methoden om het besturings systeem te 
 
 ## <a name="monitor"></a>Controleren  
 
-Zie [implementaties van besturings systemen bewaken](monitor-operating-system-deployments.md)voor het controleren van de taken reeks implementatie om het besturings systeem bij te werken.  
+Zie [implementaties van besturings systemen bewaken](monitor-operating-system-deployments.md)voor het controleren van de taken reeks implementatie om het besturings systeem bij te werken.

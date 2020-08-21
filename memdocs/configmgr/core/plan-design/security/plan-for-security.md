@@ -10,12 +10,12 @@ ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6fa5ebf25de0f695661b18c4379c080dad42cf08
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 0cdb14d282cbfa93655d6678b12b5f0837a225aa
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128491"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699276"
 ---
 # <a name="plan-for-security-in-configuration-manager"></a>Beveiliging plannen in Configuration Manager
 
@@ -45,7 +45,7 @@ In dit artikel worden de concepten beschreven waarmee u rekening moet houden bij
 
 
 
-##  <a name="plan-for-certificates-self-signed-and-pki"></a><a name="BKMK_PlanningForCertificates"></a>Certificaten plannen (zelf ondertekend en PKI)  
+##  <a name="plan-for-certificates-self-signed-and-pki"></a><a name="BKMK_PlanningForCertificates"></a> Certificaten plannen (zelf ondertekend en PKI)  
 
 Configuration Manager gebruikt een combi natie van zelfondertekende certificaten en PKI-certificaten (Public Key Infrastructure).  
 
@@ -58,24 +58,24 @@ Wanneer u een PKI gebruikt, kunt u ook IPsec gebruiken om de server-naar-server-
 Als er geen PKI-certificaten beschikbaar zijn, genereert Configuration Manager automatisch zelfondertekende certificaten. Sommige certificaten in Configuration Manager zijn altijd zelfondertekend. In de meeste gevallen beheert Configuration Manager automatisch de zelfondertekende certificaten en hoeft u geen verdere actie te ondernemen. Een voor beeld is het handtekening certificaat van de site server. Dit certificaat is altijd zelfondertekend. Het zorgt ervoor dat de beleids regels die clients downloaden van het beheer punt zijn verzonden vanaf de site server en niet zijn gemanipuleerd.  
 
 
-### <a name="cryptography-next-generation-cng-certificates"></a><a name="bkmk_plan-cng"></a>Crypto grafie: Next Generation (CNG)-certificaten  
+### <a name="cryptography-next-generation-cng-certificates"></a><a name="bkmk_plan-cng"></a> Crypto grafie: Next Generation (CNG)-certificaten  
 
 Configuration Manager ondersteunt crypto grafie: Next Generation (CNG)-certificaten. Configuration Manager-clients kunnen een PKI-certificaat voor client verificatie gebruiken met een persoonlijke sleutel in de SLEUTELARCHIEFPROVIDER. Met de SLEUTELARCHIEFPROVIDER-ondersteuning ondersteunen Configuration Manager-clients op hardware gebaseerde persoonlijke sleutel, zoals TPM-SLEUTELARCHIEFPROVIDER voor PKI-client verificatie certificaten. Zie voor meer informatie [overzicht CNG-certificaten](../network/cng-certificates-overview.md).
 
 
-### <a name="enhanced-http"></a><a name="bkmk_plan-ehttp"></a>Verbeterde HTTP  
+### <a name="enhanced-http"></a><a name="bkmk_plan-ehttp"></a> Verbeterde HTTP  
 
 Het gebruik van HTTPS-communicatie wordt aanbevolen voor alle Configuration Manager communicatie paden, maar is lastig voor sommige klanten vanwege de overhead van het beheer van PKI-certificaten. De introductie van de integratie van Azure Active Directory (Azure AD) vermindert enkele, maar niet alle certificaat vereisten. Vanaf versie 1806 kunt u de site inschakelen voor het gebruik van **verbeterde http**. Deze configuratie ondersteunt HTTPS op site systemen door gebruik te maken van een combi natie van zelfondertekende certificaten en Azure AD. Hiervoor is geen PKI vereist. Zie [Enhanced http](../hierarchy/enhanced-http.md)(Engelstalig) voor meer informatie.  
 
 
-### <a name="certificates-for-cmg-and-cdp"></a><a name="bkmk_plan-cmgcdp"></a>Certificaten voor CMG en CDP
+### <a name="certificates-for-cmg-and-cdp"></a><a name="bkmk_plan-cmgcdp"></a> Certificaten voor CMG en CDP
 
 Het gebruik van certificaten is vereist voor het beheren van clients op Internet via de Cloud beheer gateway (CMG) en het Cloud distributiepunt (CDP). Het aantal en het type certificaten variëren afhankelijk van uw specifieke scenario's. Raadpleeg voor meer informatie de volgende artikelen:
 - [Certificaten voor de Cloud beheer gateway](../../clients/manage/cmg/certificates-for-cloud-management-gateway.md)  
 - [Certificaten voor het Cloud distributiepunt](../hierarchy/use-a-cloud-based-distribution-point.md#bkmk_certs)  
 
 
-### <a name="plan-for-the-site-server-signing-certificate-self-signed"></a><a name="bkmk_plansitesign"></a>Het handtekening certificaat van de site server (zelf-ondertekend) plannen  
+### <a name="plan-for-the-site-server-signing-certificate-self-signed"></a><a name="bkmk_plansitesign"></a> Het handtekening certificaat van de site server (zelf-ondertekend) plannen  
 
 Clients kunnen veilig een kopie van het handtekening certificaat van de site server verkrijgen van Active Directory Domain Services en van client push installatie. Als clients geen kopie van dit certificaat kunnen verkrijgen met een van deze mechanismen, installeert u dit wanneer u de-client installeert. Dit proces is vooral belang rijk als de eerste communicatie van de client met de site een beheer punt op internet is. Omdat deze server is verbonden met een niet-vertrouwd netwerk, is dit kwetsbaar voor aanvallen. Als u deze extra stap niet uitvoert, downloaden clients automatisch een kopie van het handtekening certificaat van de site server van het beheer punt.  
 
@@ -97,10 +97,10 @@ Clients kunnen niet veilig een kopie van het certificaat van de site server opha
 
 2.  Exporteer het certificaat zonder de persoonlijke sleutel, sla het bestand veilig op en open het alleen vanuit een beveiligd kanaal.  
 
-3.  Installeer de client met behulp van de volgende client.msi eigenschap:`SMSSIGNCERT=<full path and file name>`  
+3.  Installeer de client met behulp van de volgende client.msi eigenschap: `SMSSIGNCERT=<full path and file name>`  
 
 
-###  <a name="plan-for-pki-certificate-revocation"></a><a name="BKMK_PlanningForCRLs"></a>Het intrekken van het PKI-certificaat plannen  
+###  <a name="plan-for-pki-certificate-revocation"></a><a name="BKMK_PlanningForCRLs"></a> Het intrekken van het PKI-certificaat plannen  
 
 Wanneer u PKI-certificaten gebruikt met Configuration Manager, kunt u het gebruik van een certificaatintrekkingslijst (CRL) plannen. Apparaten gebruiken de CRL om het certificaat op de verbinding computer te verifiëren. De CRL is een bestand dat door een certificerings instantie (CA) wordt gemaakt en ondertekend. Het bevat een lijst met certificaten die de CA heeft uitgegeven, maar ingetrokken. Wanneer een certificaat beheerder certificaten intrekt, wordt de vinger afdruk toegevoegd aan de CRL. Als een uitgegeven certificaat bijvoorbeeld bekend is of wordt vermoed dat het is aangetast.
 
@@ -123,7 +123,7 @@ Neem contact op met uw PKI-beheerders voordat u besluit of Configuration Manager
   - Het risico van clients die geen verbinding kunnen maken met servers als de CRL niet kan worden gevonden  
 
 
-###  <a name="plan-for-the-pki-trusted-root-certificates-and-the-certificate-issuers-list"></a><a name="BKMK_PlanningForRootCAs"></a>Plan voor de vertrouwde PKI-basis certificaten en de lijst met certificaat verleners  
+###  <a name="plan-for-the-pki-trusted-root-certificates-and-the-certificate-issuers-list"></a><a name="BKMK_PlanningForRootCAs"></a> Plan voor de vertrouwde PKI-basis certificaten en de lijst met certificaat verleners  
 
 Als uw IIS-site systemen PKI-client certificaten gebruiken voor client verificatie via HTTP of voor client verificatie en versleuteling over HTTPS, moet u mogelijk basis-CA-certificaten importeren als een site-eigenschap. Dit zijn de twee scenario's:  
 
@@ -145,7 +145,7 @@ Deze geïmporteerde basis-CA-certificaten en het basis-CA-certificaat van elk be
 - Wanneer clients een PKI-certificaat selecteren en een lijst met certificaat verleners hebben, selecteren ze een certificaat dat is gekoppeld aan een vertrouwd basis certificaat in de lijst met certificaat verleners. Als er geen overeenkomst is, selecteert de client geen PKI-certificaat. Zie voor meer informatie [plannen voor het selecteren van PKI-client certificaten](#BKMK_PlanningForClientCertificateSelection).  
 
 
-###  <a name="plan-for-pki-client-certificate-selection"></a><a name="BKMK_PlanningForClientCertificateSelection"></a>De selectie van het PKI-client certificaat plannen  
+###  <a name="plan-for-pki-client-certificate-selection"></a><a name="BKMK_PlanningForClientCertificateSelection"></a> De selectie van het PKI-client certificaat plannen  
 
 Als uw IIS-site systemen PKI-client certificaten gebruiken voor client verificatie via HTTP of voor client verificatie en versleuteling over HTTPS, plan dan hoe Windows-clients het certificaat selecteren dat moet worden gebruikt voor Configuration Manager.  
 
@@ -226,7 +226,7 @@ U kunt een uniek PKI-client certificaat helpen identificeren door ook een aangep
 Zie [instellingen voor client-PKI-certificaten configureren](configure-security.md#BKMK_ConfigureClientPKI)voor meer informatie.  
 
 
-###  <a name="plan-a-transition-strategy-for-pki-certificates-and-internet-based-client-management"></a><a name="BKMK_PlanningForPKITransition"></a>Een overgangs strategie plannen voor PKI-certificaten en client beheer op Internet  
+###  <a name="plan-a-transition-strategy-for-pki-certificates-and-internet-based-client-management"></a><a name="BKMK_PlanningForPKITransition"></a> Een overgangs strategie plannen voor PKI-certificaten en client beheer op Internet  
 
 Met de flexibele configuratie opties in Configuration Manager kunt u clients en de site geleidelijk laten overstappen om PKI-certificaten te gebruiken om client eindpunten te helpen beveiligen. PKI-certificaten bieden betere beveiliging en stellen u in staat om internetclients te beheren.  
 
@@ -278,7 +278,7 @@ Vanwege het aantal configuratie opties en-opties in Configuration Manager is er 
 
     Dit plan introduceert eerst PKI-certificaten voor verificatie via HTTP en vervolgens voor verificatie en versleuteling via HTTPS. Wanneer u dit plan volgt om deze certificaten geleidelijk te introduceren, verkleint u het risico dat clients niet meer worden beheerd. U profiteert ook van de hoogste beveiliging die Configuration Manager ondersteunt.  
 
-##  <a name="plan-for-the-trusted-root-key"></a><a name="BKMK_PlanningForRTK"></a>Plan voor de vertrouwde basis sleutel  
+##  <a name="plan-for-the-trusted-root-key"></a><a name="BKMK_PlanningForRTK"></a> Plan voor de vertrouwde basis sleutel  
 
 De Configuration Manager vertrouwde basis sleutel biedt een mechanisme voor Configuration Manager-clients om te controleren of site systemen deel uitmaken van hun hiërarchie. Elke siteserver genereert een uitwisselingssleutel om te communiceren met andere sites. De uitwisselingssleutel van de site op het hoogste niveau in de hiërarchie wordt de vertrouwde basissleutel genoemd.  
 
@@ -310,9 +310,9 @@ Gebruik de volgende procedures om de vertrouwde basis sleutel voor een Configura
   > Wanneer clients HTTPS-communicatie naar beheer punten gebruiken, hoeft u de vertrouwde basis sleutel niet vooraf in te richten. Ze maken vertrouwen aan de PKI-certificaten.  
 
 
-### <a name="pre-provision-a-client-with-the-trusted-root-key-by-using-a-file"></a><a name="bkmk_trk-provision-file"></a>Een client vooraf inrichten met de vertrouwde basis sleutel met behulp van een bestand  
+### <a name="pre-provision-a-client-with-the-trusted-root-key-by-using-a-file"></a><a name="bkmk_trk-provision-file"></a> Een client vooraf inrichten met de vertrouwde basis sleutel met behulp van een bestand  
 
-1.  Open het volgende bestand in een tekst editor op de site server:`<Configuration Manager install directory>\bin\mobileclient.tcf`  
+1.  Open het volgende bestand in een tekst editor op de site server: `<Configuration Manager install directory>\bin\mobileclient.tcf`  
 
 2.  Zoek de vermelding **SMSPublicRootKey =**. Kopieer de sleutel van die regel en sluit het bestand zonder wijzigingen.  
 
@@ -320,25 +320,25 @@ Gebruik de volgende procedures om de vertrouwde basis sleutel voor een Configura
 
 4.  Sla het bestand op een locatie op waar alle computers toegang tot hebben, maar waarbij het bestand veilig kan worden geknoeid.  
 
-5.  Installeer de client met behulp van een installatie methode die client.msi eigenschappen accepteert. Geef de volgende eigenschap op:`SMSROOTKEYPATH=<full path and file name>`  
+5.  Installeer de client met behulp van een installatie methode die client.msi eigenschappen accepteert. Geef de volgende eigenschap op: `SMSROOTKEYPATH=<full path and file name>`  
 
     > [!IMPORTANT]  
-    > Wanneer u de vertrouwde basis sleutel tijdens de client installatie opgeeft, moet u ook de site code opgeven. Gebruik de volgende client.msi eigenschap:`SMSSITECODE=<site code>`   
+    > Wanneer u de vertrouwde basis sleutel tijdens de client installatie opgeeft, moet u ook de site code opgeven. Gebruik de volgende client.msi eigenschap: `SMSSITECODE=<site code>`   
 
 
-### <a name="pre-provision-a-client-with-the-trusted-root-key-without-using-a-file"></a><a name="bkmk_trk-provision-nofile"></a>Een client vooraf inrichten met de vertrouwde basis sleutel zonder een bestand te gebruiken  
+### <a name="pre-provision-a-client-with-the-trusted-root-key-without-using-a-file"></a><a name="bkmk_trk-provision-nofile"></a> Een client vooraf inrichten met de vertrouwde basis sleutel zonder een bestand te gebruiken  
 
-1.  Open het volgende bestand in een tekst editor op de site server:`<Configuration Manager install directory>\bin\mobileclient.tcf`  
+1.  Open het volgende bestand in een tekst editor op de site server: `<Configuration Manager install directory>\bin\mobileclient.tcf`  
 
 2.  Zoek de vermelding **SMSPublicRootKey =**. Kopieer de sleutel van die regel en sluit het bestand zonder wijzigingen.  
 
 3.  Installeer de client met behulp van een installatie methode die client.msi eigenschappen accepteert. Geef de volgende client.msi eigenschap `SMSPublicRootKey=<key>` op: waar `<key>` is de teken reeks die u hebt gekopieerd uit mobileclient. TCF.  
 
     > [!IMPORTANT]  
-    >  Wanneer u de vertrouwde basis sleutel tijdens de client installatie opgeeft, moet u ook de site code opgeven. Gebruik de volgende client.msi eigenschap:`SMSSITECODE=<site code>`   
+    >  Wanneer u de vertrouwde basis sleutel tijdens de client installatie opgeeft, moet u ook de site code opgeven. Gebruik de volgende client.msi eigenschap: `SMSSITECODE=<site code>`   
 
 
-### <a name="verify-the-trusted-root-key-on-a-client"></a><a name="bkmk_trk-verify"></a>De vertrouwde basis sleutel op een client controleren  
+### <a name="verify-the-trusted-root-key-on-a-client"></a><a name="bkmk_trk-verify"></a> De vertrouwde basis sleutel op een client controleren  
 
 1. Open een Windows Power shell-console als beheerder.  
 
@@ -351,7 +351,7 @@ Gebruik de volgende procedures om de vertrouwde basis sleutel voor een Configura
 De geretourneerde teken reeks is de vertrouwde basis sleutel. Controleer of deze overeenkomt met de waarde **SMSPublicRootKey** in het bestand mobileclient. TCF op de site server.  
 
 
-### <a name="remove-or-replace-the-trusted-root-key"></a><a name="bkmk_trk-reset"></a>De vertrouwde basis sleutel verwijderen of vervangen  
+### <a name="remove-or-replace-the-trusted-root-key"></a><a name="bkmk_trk-reset"></a> De vertrouwde basis sleutel verwijderen of vervangen  
 
 Verwijder de vertrouwde basis sleutel van een client met behulp van de eigenschap client.msi, **RESETKEYINFORMATION = True**. 
 
@@ -361,7 +361,7 @@ Zie [over para meters en eigenschappen van client installatie](../../clients/dep
 
 
 
-##  <a name="plan-for-signing-and-encryption"></a><a name="BKMK_PlanningForSigningEncryption"></a>Plan voor ondertekening en versleuteling  
+##  <a name="plan-for-signing-and-encryption"></a><a name="BKMK_PlanningForSigningEncryption"></a> Plan voor ondertekening en versleuteling  
  
 Wanneer u PKI-certificaten gebruikt voor alle client communicatie, hoeft u zich niet te plannen voor ondertekening en versleuteling om communicatie van client gegevens te helpen beveiligen. Als u site systemen hebt ingesteld die IIS uitvoeren om HTTP-client verbindingen toe te staan, moet u bepalen hoe u de client communicatie voor de site kunt beveiligen.  
 
@@ -373,13 +373,13 @@ Zie [ondertekening en versleuteling configureren](configure-security.md#BKMK_Con
 
 
 
-##  <a name="plan-for-role-based-administration"></a><a name="BKMK_PlanningForRBA"></a>Plannen voor op rollen gebaseerd beheer  
+##  <a name="plan-for-role-based-administration"></a><a name="BKMK_PlanningForRBA"></a> Plannen voor op rollen gebaseerd beheer  
 
 Zie [basis principes van beheer op basis van rollen](../../understand/fundamentals-of-role-based-administration.md)voor meer informatie.  
 
 
 
-## <a name="plan-for-azure-active-directory"></a><a name="bkmk_planazuread"></a>Azure Active Directory plannen
+## <a name="plan-for-azure-active-directory"></a><a name="bkmk_planazuread"></a> Azure Active Directory plannen
 
 Configuration Manager integreert met Azure Active Directory (Azure AD) om de site en clients in staat te stellen moderne verificatie te gebruiken. Het onboarden van uw site met Azure AD biedt ondersteuning voor de volgende Configuration Manager scenario's:
 
@@ -404,7 +404,7 @@ Configuration Manager integreert met Azure Active Directory (Azure AD) om de sit
 
 - [Desktop Analytics](../../../desktop-analytics/overview.md)  
 
-- [Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)  
+- [Azure Log Analytics](/azure/azure-monitor/platform/collect-sccm)  
 
 - [Community Hub](../../get-started/capabilities-in-technical-preview-1807.md#bkmk_hub)  
 
@@ -416,11 +416,11 @@ Configuration Manager integreert met Azure Active Directory (Azure AD) om de sit
 Zie [Azure-Services configureren](../../servers/deploy/configure/azure-services-wizard.md)voor meer informatie over het verbinden van uw site met Azure AD.
 
 
-Zie [Azure Active Directory-documentatie](https://docs.microsoft.com/azure/active-directory/)voor meer informatie over Azure AD.
+Zie [Azure Active Directory-documentatie](/azure/active-directory/)voor meer informatie over Azure AD.
 
 
 
-## <a name="plan-for-sms-provider-authentication"></a><a name="bkmk_auth"></a>Verificatie van de SMS-provider plannen
+## <a name="plan-for-sms-provider-authentication"></a><a name="bkmk_auth"></a> Verificatie van de SMS-provider plannen
 <!--1357013--> 
 
 Vanaf versie 1810 kunt u het minimale verificatie niveau voor beheerders opgeven om toegang te krijgen tot Configuration Manager-sites. Deze functie dwingt beheerders af om zich aan te melden bij Windows met het vereiste niveau. Dit geldt voor alle onderdelen die toegang hebben tot de SMS-provider. Bijvoorbeeld de Configuration Manager-console, SDK-methoden en Windows Power shell-cmdlets. 
@@ -448,5 +448,4 @@ Zie [de SMS-provider plannen](../hierarchy/plan-for-the-sms-provider.md#bkmk_aut
 
 - [Technische naslaginformatie voor cryptografische besturingselementen](cryptographic-controls-technical-reference.md)  
 
-- [Vereisten voor PKI-certificaten](../network/pki-certificate-requirements.md)  
-
+- [Vereisten voor PKI-certificaten](../network/pki-certificate-requirements.md)

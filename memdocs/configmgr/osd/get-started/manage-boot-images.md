@@ -10,20 +10,20 @@ ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e68a3274a32d28ac0b4ad2a611c59870ee338472
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 74b8b0f29172140a19c402c79b7ea9b7339cf3e5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124538"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697633"
 ---
 # <a name="manage-boot-images-with-configuration-manager"></a>Opstart installatie kopieën beheren met Configuration Manager
 
 *Van toepassing op: Configuration Manager (huidige vertakking)*
 
-Een opstart installatie kopie in Configuration Manager is een [Windows PE](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-intro) -installatie kopie (WinPE) die wordt gebruikt tijdens de implementatie van een besturings systeem. Opstart installatie kopieën worden gebruikt om een computer te starten in WinPE. Dit minimale besturings systeem bevat beperkte onderdelen en services. Configuration Manager gebruikt WinPE om de doel computer voor te bereiden voor de installatie van Windows.
+Een opstart installatie kopie in Configuration Manager is een [Windows PE](/windows-hardware/manufacture/desktop/winpe-intro) -installatie kopie (WinPE) die wordt gebruikt tijdens de implementatie van een besturings systeem. Opstart installatie kopieën worden gebruikt om een computer te starten in WinPE. Dit minimale besturings systeem bevat beperkte onderdelen en services. Configuration Manager gebruikt WinPE om de doel computer voor te bereiden voor de installatie van Windows.
 
-## <a name="default-boot-images"></a><a name="BKMK_BootImageDefault"></a>Standaard installatie kopieën
+## <a name="default-boot-images"></a><a name="BKMK_BootImageDefault"></a> Standaard installatie kopieën
 
 Configuration Manager biedt twee standaard opstart installatie kopieën: één ter ondersteuning van x86-platformen en één ter ondersteuning van x64-platformen. Deze installatie kopieën worden opgeslagen in de *x64* -of *i386* -mappen in de volgende share op de site server: `\\<SiteServerName>\SMS_<sitecode>\osd\boot\` . De standaard installatie kopieën worden bijgewerkt of opnieuw gegenereerd, afhankelijk van de actie die u uitvoert.
 
@@ -70,13 +70,13 @@ Als de versies in de opstart installatie kopie verouderd zijn, gebruikt u de opt
 
 Het knoop punt **opstart installatie kopieën** bevat ook een nieuwe kolom voor (**client versie**). Gebruik deze kolom om snel de versie van de Configuration Manager-client in elke opstart installatie kopie weer te geven.
 
-## <a name="customize-a-boot-image"></a><a name="BKMK_BootImageCustom"></a>Een opstart installatie kopie aanpassen  
+## <a name="customize-a-boot-image"></a><a name="BKMK_BootImageCustom"></a> Een opstart installatie kopie aanpassen  
 
 Wanneer een opstart installatie kopie is gebaseerd op de WinPE-versie van de ondersteunde versie van Windows ADK, kunt u [een opstart installatie kopie](#BKMK_ModifyBootImages) aanpassen of aanpassen via de-console. Wanneer u een site bijwerkt en een nieuwe versie van Windows ADK installeert, worden aangepaste opstart installatie kopieën niet bijgewerkt met de nieuwe versie van Windows ADK. Als dat gebeurt, kunt u de opstart installatie kopieën niet aanpassen in de Configuration Manager-console. Ze blijven echter werken zoals voor de upgrade.  
 
 Wanneer een opstart installatie kopie is gebaseerd op een andere versie van Windows ADK die op een site is geïnstalleerd, moet u de opstart installatie kopieën aanpassen. Gebruik een andere methode voor het aanpassen van deze opstart installatie kopieën, zoals het gebruik van het opdracht regel programma Deployment Image Servicing and Management (DISM). DISM maakt deel uit van de Windows ADK. Zie [opstart installatie kopieën aanpassen](customize-boot-images.md)voor meer informatie.  
 
-## <a name="add-a-boot-image"></a><a name="BKMK_AddBootImages"></a>Een opstart installatie kopie toevoegen  
+## <a name="add-a-boot-image"></a><a name="BKMK_AddBootImages"></a> Een opstart installatie kopie toevoegen  
 
 Tijdens de installatie van de site voegt Configuration Manager automatisch opstart installatie kopieën toe die zijn gebaseerd op een WinPE-versie van de ondersteunde versie van Windows ADK. Afhankelijk van de versie van Configuration Manager, kunt u opstart installatie kopieën toevoegen op basis van een andere WinPE-versie dan de ondersteunde versie van de Windows ADK. Er treedt een fout op wanneer u een opstart installatie kopie probeert toe te voegen die een niet-ondersteunde versie van WinPE bevat. De volgende lijst bevat de momenteel ondersteunde Windows ADK-en WinPE-versies:
 
@@ -94,7 +94,7 @@ Gebruik bijvoorbeeld de Configuration Manager-console om opstart installatie kop
 
 - [Opstartinstallatiekopieën aanpassen](customize-boot-images.md)
 - [Ondersteuning voor Windows 10 ADK](../../core/plan-design/configs/support-for-windows-10.md#windows-10-adk)
-- [Door DISM ondersteunde platforms](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms)
+- [Door DISM ondersteunde platforms](/windows-hardware/manufacture/desktop/dism-supported-platforms)
 
 <a name="bkmk_note1"></a>
 
@@ -128,7 +128,7 @@ De opstart installatie kopie wordt nu weer gegeven in het knoop punt **opstart i
 > [!Tip]  
 > In het knoop punt **opstart installatie kopie** van de-console wordt in de kolom **grootte (KB)** de gedecomprimeerde grootte voor elke opstart installatie kopie weer gegeven. Wanneer de site een opstart installatie kopie via het netwerk verzendt, wordt een gecomprimeerde kopie verzonden. Deze kopie is doorgaans kleiner dan de grootte die wordt weer gegeven in de kolom **grootte (KB)** .  
 
-## <a name="distribute-boot-images"></a><a name="BKMK_DistributeBootImages"></a>Opstart installatie kopieën distribueren  
+## <a name="distribute-boot-images"></a><a name="BKMK_DistributeBootImages"></a> Opstart installatie kopieën distribueren  
 
 Opstartinstallatiekopieën worden op dezelfde manier naar distributiepunten gedistribueerd als bij het distribueren van andere inhoud. Voordat u een besturings systeem implementeert of media maakt, distribueert u de opstart installatie kopie naar ten minste één distributie punt.
 
@@ -142,7 +142,7 @@ Als u PXE wilt gebruiken om een besturings systeem te implementeren, moet u reke
   
 Zie [PXE gebruiken om Windows via het netwerk te implementeren](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md)voor meer informatie over het gebruik van PXE voor het implementeren van besturings systemen.  
 
-## <a name="modify-a-boot-image"></a><a name="BKMK_ModifyBootImages"></a>Een opstart installatie kopie wijzigen  
+## <a name="modify-a-boot-image"></a><a name="BKMK_ModifyBootImages"></a> Een opstart installatie kopie wijzigen  
 
 Stuur Programma's aan de installatie kopie toevoegen of eruit verwijderen of bewerk de eigenschappen van de opstart installatie kopie. De Stuur Programma's die u toevoegt of verwijdert, kunnen netwerk-of opslag Stuur Programma's zijn. Houd rekening met de volgende factoren wanneer u opstartinstallatiekopieën wijzigt:  
 
@@ -206,11 +206,11 @@ Selecteer op het tabblad **Aanpassen** één van de volgende instellingen:
 - **Standaard toetsenbord indeling instellen in WinPE**: <!--4910348-->Configureer vanaf versie 1910 de standaardtoetsen bord indeling voor een opstart installatie kopie. Als u een andere taal dan en-US selecteert, bevat Configuration Manager nog steeds en-us in de beschik bare land instellingen voor invoer. Op het apparaat is de oorspronkelijke toetsenbord indeling de geselecteerde land instelling, maar de gebruiker kan het apparaat overschakelen naar en-US als dat nodig is.
 
 > [!Tip]
-> Gebruik de Power shell [-cmdlet Set-CMBootImage](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) om deze instellingen te configureren van een script.
+> Gebruik de Power shell [-cmdlet Set-CMBootImage](/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) om deze instellingen te configureren van een script.
 
 #### <a name="optional-components"></a>Optionele onderdelen
 
-Geef op het tabblad **optionele onderdelen** de onderdelen op die zijn toegevoegd aan Windows PE voor gebruik met Configuration Manager. Zie [Een Windows PE-installatiekopie bouwen met optionele onderdelen](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference) voor meer informatie over beschikbare optionele onderdelen.  
+Geef op het tabblad **optionele onderdelen** de onderdelen op die zijn toegevoegd aan Windows PE voor gebruik met Configuration Manager. Zie [Een Windows PE-installatiekopie bouwen met optionele onderdelen](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference) voor meer informatie over beschikbare optionele onderdelen.  
 
 De volgende onderdelen zijn vereist voor Configuration Manager en worden altijd toegevoegd aan installatie kopieën:
 
@@ -271,7 +271,7 @@ Selecteer op het tabblad **inhouds locaties** het distributie punt of distributi
 
 Bekijk op het tabblad **beveiliging** de gebruikers met beheerders rechten die machtigingen hebben voor dit object.
 
-## <a name="configure-a-boot-image-for-pxe"></a><a name="BKMK_BootImagePXE"></a>Een opstart installatie kopie configureren voor PXE  
+## <a name="configure-a-boot-image-for-pxe"></a><a name="BKMK_BootImagePXE"></a> Een opstart installatie kopie configureren voor PXE  
 
 Voordat u een opstart installatie kopie kunt gebruiken voor een implementatie op basis van PXE, moet u de opstart installatie kopie configureren voor implementatie vanaf een distributie punt met PXE-functionaliteit.  
 
@@ -283,7 +283,7 @@ Voordat u een opstart installatie kopie kunt gebruiken voor een implementatie op
 
 4. Selecteer op het tabblad **Gegevensbron** de optie **Deze opstartinstallatiekopie implementeren vanaf het PXE-distributiepunt**. Zie [PXE gebruiken om Windows via het netwerk te implementeren](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md)voor meer informatie.  
 
-## <a name="configure-multiple-languages"></a><a name="BKMK_BootImageLanguage"></a>Meerdere talen configureren
+## <a name="configure-multiple-languages"></a><a name="BKMK_BootImageLanguage"></a> Meerdere talen configureren
 
 > [!TIP]
 > Vanaf versie 1910 configureert u de standaardtoetsen bord-indeling voor de eigenschappen van een opstart installatie kopie. Zie [aanpassing](#customization)voor meer informatie.<!--4910348-->
@@ -301,6 +301,6 @@ Gebruik de volgende procedure om de WinPE-taal in te stellen voor met PXE of med
 
 ### <a name="set-the-windows-pe-language-for-a-pxe-or-media-initiated-os-deployment"></a>De Windows PE-taal instellen voor een door PXE of media geïnitieerde besturingssysteem implementatie  
 
-1. Voordat u de opstart installatie kopie bijwerkt, controleert u of het juiste resource bestand (tsres.dll) voor de taken reeks zich in de bijbehorende taalmap op de site server bevindt. Het Engelse bron bestand bevindt zich bijvoorbeeld op de volgende locatie:`<ConfigMgrInstallationFolder>\OSD\bin\x64\00000409\tsres.dll`  
+1. Voordat u de opstart installatie kopie bijwerkt, controleert u of het juiste resource bestand (tsres.dll) voor de taken reeks zich in de bijbehorende taalmap op de site server bevindt. Het Engelse bron bestand bevindt zich bijvoorbeeld op de volgende locatie: `<ConfigMgrInstallationFolder>\OSD\bin\x64\00000409\tsres.dll`  
 
-2. Als onderdeel van de prestart-opdracht stelt u de omgevings variabele **SMSTSLanguageFolder** in op de juiste taal-id. De taal-ID moet worden opgegeven met decimale en niet-hexadecimale notatie. Als u bijvoorbeeld de taal-ID op Engels wilt instellen, geeft u de decimale waarde **1033**op, niet de hexadecimale waarde 00000409 van de mapnaam.  
+2. Als onderdeel van de prestart-opdracht stelt u de omgevings variabele **SMSTSLanguageFolder** in op de juiste taal-id. De taal-ID moet worden opgegeven met decimale en niet-hexadecimale notatie. Als u bijvoorbeeld de taal-ID op Engels wilt instellen, geeft u de decimale waarde **1033**op, niet de hexadecimale waarde 00000409 van de mapnaam.

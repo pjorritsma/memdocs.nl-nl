@@ -10,12 +10,12 @@ ms.assetid: 1fcc921f-085f-4b0b-9c53-1e0707211076
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f877de32c9915f91d1e2d7f2d90b9b40ab69df11
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: f6d3f6dbbbb407ee63eb8253cbf3ca740a10479c
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906576"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699786"
 ---
 # <a name="additional-information-about-privacy-for-configuration-manager"></a>Aanvullende informatie over privacy voor Configuration Manager
 
@@ -47,7 +47,7 @@ Zie voor meer informatie over niveaus en instellingen voor gebruiks gegevens [Di
 
 De Log Analytics-Connector synchroniseert gegevens, zoals verzamelingen, van Configuration Manager tot de Azure-Cloud service. De Azure-abonnements-ID en de geheime sleutel worden opgeslagen in de Configuration Manager-Data Base wanneer een beheerder de functie configureert. Zowel het Azure Active Directory client geheim als de gedeelde Azure Workspace-sleutel worden opgeslagen in de on-premises Configuration Manager-Data Base. Alle communicatie tussen Configuration Manager en Azure gebruiken HTTPS. Er is geen aanvullende informatie over de verzamelingen aan micro soft verstrekt Buiten wille keurige diagnose-en gebruiks gegevens. 
 
-Zie [log Analytics Data Security](https://docs.microsoft.com/azure/log-analytics/log-analytics-data-security)(Engelstalig) voor meer informatie over de informatie die log Analytics verzameld.
+Zie [log Analytics Data Security](/azure/log-analytics/log-analytics-data-security)(Engelstalig) voor meer informatie over de informatie die log Analytics verzameld.
 
 
 

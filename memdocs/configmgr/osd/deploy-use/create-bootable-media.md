@@ -10,12 +10,12 @@ ms.assetid: ead79e64-1b63-4d0d-8bd5-addff8919820
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6e18c5e9e029900e10cebfb8e7bcdee29fd928ba
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: a3ec1476a9b5374eb91d147e2b22fd0f669d6251
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125403"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698041"
 ---
 # <a name="create-bootable-media"></a>Opstartbare media maken
 
@@ -128,7 +128,7 @@ Voordat u de wizard taken reeks media maken uitvoert voor het maken van media vo
 
         - Configuration Manager schrijft een tekst bestand `MediaLabel.txt` met de naam naar de hoofdmap van de media. Het bestand bevat standaard één tekst regel: `label=Configuration Manager` . Als u het label voor media aanpast, gebruikt deze lijn uw aangepaste label in plaats van de standaard waarde.
 
-    - **Autorun. inf-bestand op media toevoegen**<!-- 4090666 -->: Vanaf versie 1906 wordt Configuration Manager standaard geen autorun. inf-bestand toegevoegd. Dit bestand wordt doorgaans geblokkeerd door antimalware-producten. Zie [een cd-rom-toepassing](https://docs.microsoft.com/windows/desktop/shell/autoplay)voor automatisch aanmelden maken voor meer informatie over de autorun-functie van Windows. Als het scenario nog steeds nodig is, selecteert u deze optie om het bestand op te laten voegen.
+    - **Autorun. inf-bestand op media toevoegen**<!-- 4090666 -->: Vanaf versie 1906 wordt Configuration Manager standaard geen autorun. inf-bestand toegevoegd. Dit bestand wordt doorgaans geblokkeerd door antimalware-producten. Zie [een cd-rom-toepassing](/windows/desktop/shell/autoplay)voor automatisch aanmelden maken voor meer informatie over de autorun-functie van Windows. Als het scenario nog steeds nodig is, selecteert u deze optie om het bestand op te laten voegen.
 
 1. Geef op de pagina **beveiliging** de volgende opties op:
 
@@ -200,4 +200,4 @@ U kunt opstart bare media maken op een verwisselbaar USB-station wanneer het sta
 
 ## <a name="next-steps"></a>Volgende stappen
 
-[Opstartbare media gebruiken om Windows te implementeren via het netwerk](use-bootable-media-to-deploy-windows-over-the-network.md)  
+[Opstartbare media gebruiken om Windows te implementeren via het netwerk](use-bootable-media-to-deploy-windows-over-the-network.md)

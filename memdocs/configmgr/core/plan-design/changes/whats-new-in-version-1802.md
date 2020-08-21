@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 87056482f098a440e5950b76520ab410844a1888
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: aaba31a8a017f75338cf4d6dee3c2f2d80d7e377
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128998"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698517"
 ---
 # <a name="whats-new-in-version-1802-of-configuration-manager"></a>Wat is er nieuw in versie 1802 van Configuration Manager
 
@@ -259,7 +259,7 @@ Regels voor automatische implementatie kunnen worden gepland om de offset van ee
 
 
 
-## <a name="reporting"></a>Rapporten
+## <a name="reporting"></a>Rapportage
 
 ### <a name="report-for-default-browser-counts"></a>Rapport voor standaard aantal browsers
 <!-- 1357830 -->
@@ -267,7 +267,7 @@ Er is nu een nieuw rapport om het aantal clients met een specifieke webbrowser w
 
 ### <a name="report-on-windows-autopilot-device-information"></a>Gegevens over Windows auto pilot-apparaten rapporteren
 <!-- 1351442 -->
-Windows auto pilot is een oplossing voor het voorbereiden en configureren van nieuwe Windows 10-apparaten op een moderne manier. Zie voor meer informatie een [overzicht van Windows auto pilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot). Eén methode voor het registreren van bestaande apparaten met Windows auto pilot is het uploaden van apparaatgegevens naar het Microsoft Store voor bedrijven en onderwijs. Deze informatie omvat het serie nummer van het apparaat, de Windows-product-id en een hardware-id. Gebruik Configuration Manager om deze apparaatgegevens te verzamelen en te rapporteren met het nieuwe rapport, **Windows auto pilot-apparaatgegevens**, in het knoop punt **Hardware-algemeen** rapporten. Zie voor meer informatie [over het voorbereiden van op internet gebaseerde apparaten voor co-beheer bij het](../../../comanage/how-to-prepare-Win10.md#windows-autopilot) voorbereiden van co-beheer.
+Windows auto pilot is een oplossing voor het voorbereiden en configureren van nieuwe Windows 10-apparaten op een moderne manier. Zie voor meer informatie een [overzicht van Windows auto pilot](/windows/deployment/windows-autopilot/windows-10-autopilot). Eén methode voor het registreren van bestaande apparaten met Windows auto pilot is het uploaden van apparaatgegevens naar het Microsoft Store voor bedrijven en onderwijs. Deze informatie omvat het serie nummer van het apparaat, de Windows-product-id en een hardware-id. Gebruik Configuration Manager om deze apparaatgegevens te verzamelen en te rapporteren met het nieuwe rapport, **Windows auto pilot-apparaatgegevens**, in het knoop punt **Hardware-algemeen** rapporten. Zie voor meer informatie [over het voorbereiden van op internet gebaseerde apparaten voor co-beheer bij het](../../../comanage/how-to-prepare-Win10.md#windows-autopilot) voorbereiden van co-beheer.
 
 ### <a name="report-on-windows-10-servicing-details-for-a-specific-collection"></a>Rapport over Windows 10-onderhouds Details voor een specifieke verzameling
 <!--1357653-->
@@ -287,7 +287,7 @@ In de **Windows 10-onderhouds Details voor een specifiek verzamelings** rapport 
 
 ### <a name="improvements-to-configuration-manager-policies-for-windows-defender-exploit-guard"></a>Verbeteringen aan Configuration Manager-beleid voor Windows Defender exploit Guard
 <!-- 1356220 -->
-Er zijn aanvullende beleids instellingen voor de onderdelen [kwets](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md#bkmk_ASR) baarheid voor aanvallen en [Controlled folder access](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md#bkmk_CFA) toegevoegd in Configuration Manager voor [Windows Defender exploit Guard](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-attack-surface-reduction).
+Er zijn aanvullende beleids instellingen voor de onderdelen [kwets](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md#bkmk_ASR) baarheid voor aanvallen en [Controlled folder access](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md#bkmk_CFA) toegevoegd in Configuration Manager voor [Windows Defender exploit Guard](/windows/security/threat-protection/microsoft-defender-atp/configure-attack-surface-reduction).
 
 ### <a name="new-host-interaction-settings-for-windows-defender-application-guard"></a>Nieuwe instellingen voor interactie met de host voor Windows Defender Application Guard
 <!-- 1356256 -->

@@ -10,12 +10,12 @@ ms.assetid: dc245916-bc11-4983-9c4d-015f655007c1
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: fe8bbbf311baa335640ca7dea90ccd46da4fa5ea
-ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
+ms.openlocfilehash: efc43258e65752e7371c9baadf61598aac820062
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88591707"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697990"
 ---
 # <a name="manage-and-monitor-phased-deployments"></a>Gefaseerde implementaties beheren en bewaken
 
@@ -79,7 +79,7 @@ U kunt een gefaseerde implementatie hand matig onderbreken of hervatten. U kunt 
 4. Selecteer de gefaseerde implementatie en klik op **onderbreken** of **hervatten** in het lint. 
 
 > [!NOTE]
-> Vanaf 21 april 2020, wordt de naam van Office 365 ProPlus gewijzigd in **Microsoft 365 apps voor bedrijven**. Zie [name wijzigen voor Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change)voor meer informatie. Mogelijk ziet u nog steeds de oude naam in het Configuration Manager product en de documentatie terwijl de-console wordt bijgewerkt. 
+> Vanaf 21 april 2020, wordt de naam van Office 365 ProPlus gewijzigd in **Microsoft 365 apps voor bedrijven**. Zie [name wijzigen voor Office 365 ProPlus](/deployoffice/name-change)voor meer informatie. Mogelijk ziet u nog steeds de oude naam in het Configuration Manager product en de documentatie terwijl de-console wordt bijgewerkt. 
 
 <!-- Removed for 1806, need to clarify behavior with engineering
 When you suspend a phased deployment, it sets the available and deadline times on the active deployments to a future time. When you resume, it generates a new schedule based on when you resume the phased deployment. The new schedule helps to avoid problems if you resume after the original deadline. For example, the initial schedule has the required deadline seven days after the deployment is available. You suspend it on the second day. If you aren't ready to resume it until day eight, you don't want the deployment to be immediately past the deadline. So it generates a new deadline starting from when you resume the phased deployment on day eight. 
@@ -128,4 +128,3 @@ Het doel van de fase is hetzelfde als het **voltooiings percentage** van de impl
 
 De volgende eigenschappen zijn bijvoorbeeld voor dezelfde fase als de tegel criteria die hierboven wordt weer gegeven, waarbij de criteria 65% zijn:  
 ![Tabblad fase-instellingen op de fase-eigenschappen](media/phase-properties-phase-settings.png)
-

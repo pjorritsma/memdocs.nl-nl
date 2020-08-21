@@ -10,12 +10,12 @@ ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d4fb94d0ab64cb7c3dc3128c982b0c2b162b22b7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ce3420a6e229b5987616c5c0c1c41d50cdc499c8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719188"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700347"
 ---
 # <a name="site-and-site-system-prerequisites-for-configuration-manager"></a>Site-en site systeem vereisten voor Configuration Manager
 
@@ -28,7 +28,7 @@ Voor sommige producten, zoals Windows Server Update Services (WSUS) voor het sof
 Zie voor meer informatie over .NET Framework [levenscyclus Veelgestelde vragen-.NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework).
 
 
-## <a name="general-requirements-and-limitations"></a><a name="bkmk_generalprerewq"></a>Algemene vereisten en beperkingen
+## <a name="general-requirements-and-limitations"></a><a name="bkmk_generalprerewq"></a> Algemene vereisten en beperkingen
 
 De volgende vereisten zijn van toepassing op alle site systeem servers:
 
@@ -52,7 +52,7 @@ De volgende vereisten zijn van toepassing op alle site systeem servers:
 
 - Het wordt niet ondersteund om het opstart type of de instellingen voor aanmelden als voor een Configuration Manager-service te wijzigen. Als u dat wel doet, kan het voor komen dat Key Services goed worden uitgevoerd.  
 
-### <a name="prerequisites-for-windows-server-2012-and-later-operating-systems"></a><a name="bkmk_2012Prereq"></a>Vereisten voor Windows Server 2012 en latere besturings systemen  
+### <a name="prerequisites-for-windows-server-2012-and-later-operating-systems"></a><a name="bkmk_2012Prereq"></a> Vereisten voor Windows Server 2012 en latere besturings systemen  
 
 Zie de belangrijkste secties in dit artikel voor de specifieke vereisten voor site systeem servers en-rollen op Windows Server 2012 en hoger:
 
@@ -75,7 +75,7 @@ Zie de belangrijkste secties in dit artikel voor de specifieke vereisten voor si
 - [Software-updatepunt](#bkmk_2012SUPpreq)
 - [Status migratie punt](#bkmk_2012SMPpreq)
 
-## <a name="central-administration-site-and-primary-site-servers"></a><a name="bkmk_2012sspreq"></a>Centrale beheer site en primaire site servers
+## <a name="central-administration-site-and-primary-site-servers"></a><a name="bkmk_2012sspreq"></a> Centrale beheer site en primaire site servers
 
 ### <a name="windows-server-roles-and-features"></a>Windows Server-functies en-onderdelen
 
@@ -93,7 +93,7 @@ Installeer ook een ondersteunde versie van de .NET Framework versie 4,5 of hoger
 
 Raadpleeg de volgende artikelen voor meer informatie over .NET Framework versies:
 
-- [Versies en afhankelijkheden .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Versies en afhankelijkheden .NET Framework](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Veelgestelde vragen over levens cyclus-.NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="windows-adk"></a>Windows ADK  
@@ -113,7 +113,7 @@ Raadpleeg de volgende artikelen voor meer informatie over .NET Framework versies
 Wanneer u een nieuwe site installeert, installeert Configuration Manager automatisch SQL Server Native Client als een herdistribueerbaar onderdeel. Nadat de site is geïnstalleerd, wordt Configuration Manager SQL Server Native Client niet bijgewerkt. Zorg ervoor dat dit onderdeel up-to-date is. Zie [prerequisite checks-SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client)voor meer informatie.
 
 
-## <a name="secondary-site-server"></a><a name="bkmk_2012secpreq"></a>Secundaire site server
+## <a name="secondary-site-server"></a><a name="bkmk_2012secpreq"></a> Secundaire site server
 
 ### <a name="windows-server-roles-and-features"></a>Windows Server-functies en-onderdelen
 
@@ -129,7 +129,7 @@ Installeer ook een ondersteunde versie van de .NET Framework versie 4,5 of hoger
 
 Raadpleeg de volgende artikelen voor meer informatie over .NET Framework versies:
 
-- [Versies en afhankelijkheden .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Versies en afhankelijkheden .NET Framework](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Veelgestelde vragen over levens cyclus-.NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="visual-c-redistributable"></a>Te distribueren pakket Visual C++
@@ -149,7 +149,7 @@ Raadpleeg de volgende artikelen voor meer informatie over .NET Framework versies
 Wanneer u een nieuwe site installeert, installeert Configuration Manager automatisch SQL Server Native Client als een herdistribueerbaar onderdeel. Nadat de site is geïnstalleerd, wordt Configuration Manager SQL Server Native Client niet bijgewerkt. Zorg ervoor dat dit onderdeel up-to-date is. Zie [prerequisite checks-SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client)voor meer informatie.
 
 
-## <a name="database-server"></a><a name="bkmk_2012dbpreq"></a>Database server  
+## <a name="database-server"></a><a name="bkmk_2012dbpreq"></a> Database server  
 
 ### <a name="remote-registry-service"></a>Remote Registry-service  
 
@@ -168,7 +168,7 @@ Wanneer u een nieuwe site installeert, installeert Configuration Manager automat
 Wanneer u een nieuwe site installeert, installeert Configuration Manager automatisch SQL Server Native Client als een herdistribueerbaar onderdeel. Nadat de site is geïnstalleerd, wordt Configuration Manager SQL Server Native Client niet bijgewerkt. Zorg ervoor dat dit onderdeel up-to-date is. Zie [prerequisite checks-SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client)voor meer informatie.
 
 
-## <a name="sms-provider-server"></a><a name="bkmk_2012smsprovpreq"></a>Server van SMS-provider  
+## <a name="sms-provider-server"></a><a name="bkmk_2012smsprovpreq"></a> Server van SMS-provider  
 
 ### <a name="windows-adk"></a>Windows ADK
 
@@ -190,7 +190,7 @@ Wanneer u een nieuwe site installeert, installeert Configuration Manager automat
 Wanneer u een nieuwe site installeert, installeert Configuration Manager automatisch SQL Server Native Client als een herdistribueerbaar onderdeel. Nadat de site is geïnstalleerd, wordt Configuration Manager SQL Server Native Client niet bijgewerkt. Zorg ervoor dat dit onderdeel up-to-date is. Zie [prerequisite checks-SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client)voor meer informatie.
 
 
-## <a name="application-catalog-website-point"></a><a name="bkmk_2012acwspreq"></a>Application catalog-website punt  
+## <a name="application-catalog-website-point"></a><a name="bkmk_2012acwspreq"></a> Application catalog-website punt  
 
 > [!Important]  
 > De Silverlight-gebruikers ervaring van de toepassings catalogus wordt niet ondersteund vanaf de huidige branch-versie 1806. Vanaf versie 1906 gebruiken bijgewerkte clients automatisch het beheer punt voor toepassings implementaties die beschikbaar zijn voor gebruikers. U kunt ook geen nieuwe functies van de toepassings catalogus installeren. Ondersteuning voor de functies van de toepassings catalogus wordt beëindigd met versie 1910.  
@@ -214,7 +214,7 @@ Installeer ook een ondersteunde versie van de .NET Framework versie 4,5 of hoger
 
 Raadpleeg de volgende artikelen voor meer informatie over .NET Framework versies:
 
-- [Versies en afhankelijkheden .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Versies en afhankelijkheden .NET Framework](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Veelgestelde vragen over levens cyclus-.NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>IIS-configuratie  
@@ -244,7 +244,7 @@ Raadpleeg de volgende artikelen voor meer informatie over .NET Framework versies
     - Compatibiliteit met IIS 6-metabase  
 
 
-## <a name="application-catalog-web-service-point"></a><a name="bkmk_2012ACwsitepreq"></a>Application Catalog-webservicepunt  
+## <a name="application-catalog-web-service-point"></a><a name="bkmk_2012ACwsitepreq"></a> Application Catalog-webservicepunt  
 
 > [!Important]  
 > De Silverlight-gebruikers ervaring van de toepassings catalogus wordt niet ondersteund vanaf de huidige branch-versie 1806. Vanaf versie 1906 gebruiken bijgewerkte clients automatisch het beheer punt voor toepassings implementaties die beschikbaar zijn voor gebruikers. U kunt ook geen nieuwe functies van de toepassings catalogus installeren. Ondersteuning voor de functies van de toepassings catalogus wordt beëindigd met versie 1910.  
@@ -270,7 +270,7 @@ Installeer ook een ondersteunde versie van de .NET Framework versie 4,5 of hoger
 
 Raadpleeg de volgende artikelen voor meer informatie over .NET Framework versies:
 
-- [Versies en afhankelijkheden .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Versies en afhankelijkheden .NET Framework](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Veelgestelde vragen over levens cyclus-.NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>IIS-configuratie
@@ -304,7 +304,7 @@ Raadpleeg de volgende artikelen voor meer informatie over .NET Framework versies
 Wanneer u een nieuwe site installeert, installeert Configuration Manager automatisch SQL Server Native Client als een herdistribueerbaar onderdeel. Nadat de site is geïnstalleerd, wordt Configuration Manager SQL Server Native Client niet bijgewerkt. Zorg ervoor dat dit onderdeel up-to-date is. Zie [prerequisite checks-SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client)voor meer informatie.
 
 
-## <a name="asset-intelligence-synchronization-point"></a><a name="bkmk_2012AIpreq"></a>Synchronisatie punt Asset Intelligence  
+## <a name="asset-intelligence-synchronization-point"></a><a name="bkmk_2012AIpreq"></a> Synchronisatie punt Asset Intelligence  
 
 ### <a name="net-framework"></a>.NET Framework
 
@@ -312,7 +312,7 @@ Installeer een ondersteunde versie van de .NET Framework versie 4,5 of hoger. Va
 
 Raadpleeg de volgende artikelen voor meer informatie over .NET Framework versies:
 
-- [Versies en afhankelijkheden .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Versies en afhankelijkheden .NET Framework](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Veelgestelde vragen over levens cyclus-.NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="sql-server-native-client"></a>SQL Server Native Client
@@ -320,7 +320,7 @@ Raadpleeg de volgende artikelen voor meer informatie over .NET Framework versies
 Wanneer u een nieuwe site installeert, installeert Configuration Manager automatisch SQL Server Native Client als een herdistribueerbaar onderdeel. Nadat de site is geïnstalleerd, wordt Configuration Manager SQL Server Native Client niet bijgewerkt. Zorg ervoor dat dit onderdeel up-to-date is. Zie [prerequisite checks-SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client)voor meer informatie.
 
 
-## <a name="certificate-registration-point"></a><a name="bkmk_2012crppreq"></a>Certificaat registratiepunt  
+## <a name="certificate-registration-point"></a><a name="bkmk_2012crppreq"></a> Certificaat registratiepunt  
 
 ### <a name="windows-server-roles-and-features"></a>Windows Server-functies en-onderdelen
 
@@ -334,7 +334,7 @@ Installeer een ondersteunde versie van de .NET Framework versie 4,5 of hoger. Va
 
 Raadpleeg de volgende artikelen voor meer informatie over .NET Framework versies:
 
-- [Versies en afhankelijkheden .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Versies en afhankelijkheden .NET Framework](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Veelgestelde vragen over levens cyclus-.NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>IIS-configuratie
@@ -410,7 +410,7 @@ Zie [distributie punten installeren en configureren](../../servers/deploy/config
 > Wanneer het distributie punt inhoud overdraagt, wordt dit overgedragen met behulp van de **Background Intelligent Transfer service** (bits) die in Windows zijn ingebouwd. De functie van het distributie punt vereist niet dat de optionele BITS IIS-server uitbreiding wordt geïnstalleerd, omdat de client geen informatie naar de rol uploadt.  
 
 
-## <a name="endpoint-protection-point"></a><a name="bkmk_2012EPPpreq"></a>Endpoint Protection punt  
+## <a name="endpoint-protection-point"></a><a name="bkmk_2012EPPpreq"></a> Endpoint Protection punt  
 
 ### <a name="windows-server-roles-and-features"></a>Windows Server-functies en-onderdelen  
 
@@ -446,7 +446,7 @@ Installeer ook een ondersteunde versie van de .NET Framework versie 4,5 of hoger
 
 Raadpleeg de volgende artikelen voor meer informatie over .NET Framework versies:
 
-- [Versies en afhankelijkheden .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Versies en afhankelijkheden .NET Framework](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Veelgestelde vragen over levens cyclus-.NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>IIS-configuratie
@@ -497,7 +497,7 @@ Installeer ook een ondersteunde versie van de .NET Framework versie 4,5 of hoger
 
 Raadpleeg de volgende artikelen voor meer informatie over .NET Framework versies:
 
-- [Versies en afhankelijkheden .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Versies en afhankelijkheden .NET Framework](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Veelgestelde vragen over levens cyclus-.NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>IIS-configuratie
@@ -533,7 +533,7 @@ Raadpleeg de volgende artikelen voor meer informatie over .NET Framework versies
 - Als deze site systeemrol is gekoppeld aan een andere site systeemrol die dezelfde vereiste heeft, neemt dit geheugen vereiste voor de computer niet toe, maar blijft het mini maal 5%.  
 
 
-## <a name="fallback-status-point"></a><a name="bkmk_2012FSPpreq"></a>Terugval status punt
+## <a name="fallback-status-point"></a><a name="bkmk_2012FSPpreq"></a> Terugval status punt
 
 ### <a name="windows-server-roles-and-features"></a>Windows Server-functies en-onderdelen
 
@@ -560,7 +560,7 @@ Installeer een ondersteunde versie van de .NET Framework versie 4,5 of hoger. Va
 
 Raadpleeg de volgende artikelen voor meer informatie over .NET Framework versies:
 
-- [Versies en afhankelijkheden .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Versies en afhankelijkheden .NET Framework](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Veelgestelde vragen over levens cyclus-.NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>IIS-configuratie
@@ -584,7 +584,7 @@ Raadpleeg de volgende artikelen voor meer informatie over .NET Framework versies
 Wanneer u een nieuwe site installeert, installeert Configuration Manager automatisch SQL Server Native Client als een herdistribueerbaar onderdeel. Nadat de site is geïnstalleerd, wordt Configuration Manager SQL Server Native Client niet bijgewerkt. Zorg ervoor dat dit onderdeel up-to-date is. Zie [prerequisite checks-SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client)voor meer informatie.
 
 
-## <a name="reporting-services-point"></a><a name="bkmk_2012RSpoint"></a>Reporting Services-punt  
+## <a name="reporting-services-point"></a><a name="bkmk_2012RSpoint"></a> Reporting Services-punt  
 
 ### <a name="net-framework"></a>.NET Framework
 
@@ -592,7 +592,7 @@ Installeer een ondersteunde versie van de .NET Framework versie 4,5 of hoger. Va
 
 Raadpleeg de volgende artikelen voor meer informatie over .NET Framework versies:
 
-- [Versies en afhankelijkheden .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Versies en afhankelijkheden .NET Framework](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Veelgestelde vragen over levens cyclus-.NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="sql-server-reporting-services"></a>SQL Server Reporting Services  
@@ -608,7 +608,7 @@ Raadpleeg de volgende artikelen voor meer informatie over .NET Framework versies
 Wanneer u een nieuwe site installeert, installeert Configuration Manager automatisch SQL Server Native Client als een herdistribueerbaar onderdeel. Nadat de site is geïnstalleerd, wordt Configuration Manager SQL Server Native Client niet bijgewerkt. Zorg ervoor dat dit onderdeel up-to-date is. Zie [prerequisite checks-SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client)voor meer informatie.
 
 
-## <a name="service-connection-point"></a><a name="bkmk_SCPpreq"></a>Service verbindings punt  
+## <a name="service-connection-point"></a><a name="bkmk_SCPpreq"></a> Service verbindings punt  
 
 ### <a name="net-framework"></a>.NET Framework
 
@@ -621,7 +621,7 @@ Installeer ook een ondersteunde versie van de .NET Framework versie 4,5 of hoger
 
 Raadpleeg de volgende artikelen voor meer informatie over .NET Framework versies:
 
-- [Versies en afhankelijkheden .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Versies en afhankelijkheden .NET Framework](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Veelgestelde vragen over levens cyclus-.NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="visual-c-redistributable"></a>Te distribueren pakket Visual C++
@@ -651,7 +651,7 @@ Installeer ook een ondersteunde versie van de .NET Framework versie 4,5 of hoger
 
 Raadpleeg de volgende artikelen voor meer informatie over .NET Framework versies:
 
-- [Versies en afhankelijkheden .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Versies en afhankelijkheden .NET Framework](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Veelgestelde vragen over levens cyclus-.NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="windows-server-update-services"></a>Windows Server Update Services  
@@ -690,7 +690,7 @@ Installeer ook een ondersteunde versie van de .NET Framework versie 4,5 of hoger
 
 Raadpleeg de volgende artikelen voor meer informatie over .NET Framework versies:
 
-- [Versies en afhankelijkheden .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [Versies en afhankelijkheden .NET Framework](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Veelgestelde vragen over levens cyclus-.NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>IIS-configuratie
@@ -716,4 +716,3 @@ Raadpleeg de volgende artikelen voor meer informatie over .NET Framework versies
 ### <a name="sql-server-native-client"></a>SQL Server Native Client
 
 Wanneer u een nieuwe site installeert, installeert Configuration Manager automatisch SQL Server Native Client als een herdistribueerbaar onderdeel. Nadat de site is geïnstalleerd, wordt Configuration Manager SQL Server Native Client niet bijgewerkt. Zorg ervoor dat dit onderdeel up-to-date is. Zie [prerequisite checks-SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client)voor meer informatie.
-

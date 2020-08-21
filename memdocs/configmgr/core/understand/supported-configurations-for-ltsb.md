@@ -10,12 +10,12 @@ ms.assetid: f0f818d4-7f45-402f-8758-dc88bc024953
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7de7d562131f97ac21d1c394b176d3b7f4ce7747
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: b72e0a14abd2b468056d4303497625633b8f64a8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906440"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698919"
 ---
 # <a name="supported-configurations-for-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>Ondersteunde configuraties voor de Long-term Servicing Branch van System Center Configuration Manager
 
@@ -72,7 +72,7 @@ U kunt de LTSB gebruiken om de volgende besturings systemen van Windows-computer
 - De Server Core-installatie van Windows Server 2012 (x64) (Opmerking 2)
 
 **(Opmerking 1)** Data Center-releases worden ondersteund, maar niet gecertificeerd voor Configuration Manager.  
-**(Opmerking 2)** Ter ondersteuning van client push installatie moet op de computer waarop deze besturingssysteem versie wordt uitgevoerd, de functie service Bestands server worden uitgevoerd voor de server functie bestands-en opslag Services. Zie [Server functies en-onderdelen installeren op een server core-server](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574158(v=ws.11))voor meer informatie over het installeren van Windows-onderdelen op een server core-computer.
+**(Opmerking 2)** Ter ondersteuning van client push installatie moet op de computer waarop deze besturingssysteem versie wordt uitgevoerd, de functie service Bestands server worden uitgevoerd voor de server functie bestands-en opslag Services. Zie [Server functies en-onderdelen installeren op een server core-server](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574158(v=ws.11))voor meer informatie over het installeren van Windows-onderdelen op een server core-computer.
 
 ### <a name="windows-embedded"></a>Windows Embedded
 U kunt de LTSB gebruiken om de volgende Windows Embedded-apparaten te beheren door de-client software op het apparaat te installeren.  Zie [planning voor client implementatie op Windows Embedded-apparaten](../clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md)voor meer informatie.
@@ -91,7 +91,7 @@ U kunt de LTSB gebruiken om de volgende Windows Embedded-apparaten te beheren do
 
 -   De toepassingscatalogus wordt niet ondersteund voor Windows Embedded-apparaten.  
 
--   Voordat u gedetecteerde malware op Windows Embedded-apparaten op basis van Windows XP kunt bewaken, moet u het micro soft Windows WMI-script pakket op het Inge sloten apparaat installeren. Gebruik Windows Embedded target Designer om dit pakket te installeren. De *WBEMDISP. DLL* en *WBEMDISP. TLB* -bestanden moeten bestaan en moeten worden geregistreerd in de map%windir%\System32\WBEM op het Inge sloten apparaat om ervoor te zorgen dat gedetecteerde malware wordt gerapporteerd.  
+-   Voordat u gedetecteerde malware op Windows Embedded-apparaten op basis van Windows XP kunt bewaken, moet u het micro soft Windows WMI-script pakket op het Inge sloten apparaat installeren. Gebruik Windows Embedded target Designer om dit pakket te installeren. De *WBEMDISP.DLL* en *WBEMDISP. TLB* -bestanden moeten bestaan en moeten worden geregistreerd in de map%windir%\System32\WBEM op het Inge sloten apparaat om ervoor te zorgen dat gedetecteerde malware wordt gerapporteerd.  
 
 **Ondersteunde besturings systemen:**  
 -   Windows 10 Enter prise 2016 LTSB (x86, x64)  
@@ -161,7 +161,7 @@ Ondersteuning voor Linux-en UNIX-besturings systemen is beperkt tot die in deze 
 De volgende versies worden ondersteund door het aangegeven. tar-bestand te gebruiken.  
 ### <a name="aix"></a>AIX  
 
-|Versie|File|  
+|Versie|Bestand|  
 |-|-|  
 |Versie 5,3 (voeding)|CCM-Aix53ppc. &lt; Build \> . tar|  
 |Versie 6,1 (voeding)|CCM-Aix61ppc. &lt; Build \> . tar|  
@@ -169,7 +169,7 @@ De volgende versies worden ondersteund door het aangegeven. tar-bestand te gebru
 
 ### <a name="centos"></a>CentOS  
 
-|Versie|File|  
+|Versie|Bestand|  
 |-|-|  
 |Versie 5 x86|CCM-Universalx86. &lt; Build \> . tar|  
 |Versie 5 x64|CCM-Universalx64. &lt; Build \> . tar|  
@@ -179,7 +179,7 @@ De volgende versies worden ondersteund door het aangegeven. tar-bestand te gebru
 
 ### <a name="debian"></a>Debian  
 
-|Versie|File|    
+|Versie|Bestand|    
 |-|-|  
 |Versie 5 x86|CCM-Universalx86. &lt; Build \> . tar|  
 |Versie 5 x64|CCM-Universalx64. &lt; Build \> . tar|  
@@ -192,7 +192,7 @@ De volgende versies worden ondersteund door het aangegeven. tar-bestand te gebru
 
 ### <a name="hp-ux"></a>HP-UX  
 
-|Versie|File|  
+|Versie|Bestand|  
 |-|-|  
 |Versie 11iv2 IA64|CCM-HpuxB. 11.23 i64. &lt; Build \> . tar|  
 |Versie 11iv2 PA-RISC|CCM-HpuxB. 11.23 PA. &lt; Build \> . tar|  
@@ -201,7 +201,7 @@ De volgende versies worden ondersteund door het aangegeven. tar-bestand te gebru
 
 ### <a name="oracle-linux"></a>Oracle Linux  
 
-|Versie|File|    
+|Versie|Bestand|    
 |-|-|  
 |Versie 5 x86|CCM-Universalx86. &lt; Build \> . tar|  
 |Versie 5 x64|CCM-Universalx64. &lt; Build \> . tar|  
@@ -211,7 +211,7 @@ De volgende versies worden ondersteund door het aangegeven. tar-bestand te gebru
 
 ### <a name="red-hat-enterprise-linux-rhel"></a>Red Hat Enterprise Linux (RHEL)  
 
-|Versie|File|  
+|Versie|Bestand|  
 |-|-|  
 |Versie 4 x86|CCM-RHEL4x86. &lt; Build \> . tar|  
 |Versie 4 x64|CCM-RHEL4x64. &lt; Build \> . tar|  
@@ -223,7 +223,7 @@ De volgende versies worden ondersteund door het aangegeven. tar-bestand te gebru
 
 ### <a name="solaris"></a>Sun  
 
-|Versie|File|   
+|Versie|Bestand|   
 |-|-|  
 |Versie 9 SPARC|CCM-Sol9sparc. &lt; Build \> . tar|  
 |Versie 10 x86|CCM-Sol10x86. &lt; Build \> . tar|  
@@ -233,7 +233,7 @@ De volgende versies worden ondersteund door het aangegeven. tar-bestand te gebru
 
 ### <a name="suse-linux-enterprise-server-sles"></a>SUSE Linux Enterprise Server (SLES)  
 
-|Versie|File|  
+|Versie|Bestand|  
 |-|-|  
 |Versie 9 x86|CCM-SLES9x86. &lt; Build \> . tar|  
 |Versie 10 SP1 x86|CCM-Universalx86. &lt; Build \> . tar|  
@@ -244,7 +244,7 @@ De volgende versies worden ondersteund door het aangegeven. tar-bestand te gebru
 
 ### <a name="ubuntu"></a>Ubuntu  
 
-|Versie|File|    
+|Versie|Bestand|    
 |-|-|  
 |Versie 10,04 LTS x86|CCM-Universalx86. &lt; Build \> . tar|  
 |Versie 10,04 LTS x64|CCM-Universalx64. &lt; Build \> . tar|  

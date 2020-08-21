@@ -10,12 +10,12 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 06e2a90e8c481fba834cbd1b6b1f5233572e4b17
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 11b5a58a6d9501b0368fcb0b47bf31df1bd8a6af
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128325"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700579"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>CMPivot voor realtime gegevens in Configuration Manager
 
@@ -90,7 +90,7 @@ De volgende machtigingen zijn nodig voor CMPivot:
 
      - Klik op een van de **entiteiten** om deze toe te voegen aan de query reeks.  
 
-     - De koppelingen voor **tabel operators**, **aggregatie functies**en **scalaire functies** openen taal referentie documentatie in de webbrowser. CMPivot maakt gebruik van de [Kusto query language (KQL)](https://docs.microsoft.com/azure/kusto/query/).  
+     - De koppelingen voor **tabel operators**, **aggregatie functies**en **scalaire functies** openen taal referentie documentatie in de webbrowser. CMPivot maakt gebruik van de [Kusto query language (KQL)](/azure/kusto/query/).  
 
 3. Houd het venster CMPivot geopend om de resultaten van clients te bekijken. Wanneer u het venster CMPivot sluit, wordt de sessie voltooid.
    - Als de query is verzonden, verzenden clients nog steeds een antwoord op een status bericht naar de server.  
@@ -123,7 +123,7 @@ Het venster CMPivot bevat de volgende elementen:
 
 5. In het query deel venster maakt of typt u een query die u wilt uitvoeren op clients in de verzameling.  
 
-    - CMPivot maakt gebruik van een subset van de [Kusto query language (KQL)](https://docs.microsoft.com/azure/kusto/query/).  
+    - CMPivot maakt gebruik van een subset van de [Kusto query language (KQL)](/azure/kusto/query/).  
 
     - Inhoud knippen, kopiëren of plakken in het query venster.  
     <!-- markdownlint-disable MD038 -->
@@ -162,9 +162,9 @@ Het venster CMPivot bevat de volgende elementen:
 
      - **Kopiëren**: Kopieer de tekst van de cel naar het klem bord.  
 
-     - **Apparaten weer geven met**: een query voor apparaten met deze waarde voor deze eigenschap. Selecteer bijvoorbeeld in de resultaten van de `OS` query deze optie in een cel in de rij versie:`OS | summarize countif( (Version == '10.0.17134') ) by Device | where (countif_ > 0)`  
+     - **Apparaten weer geven met**: een query voor apparaten met deze waarde voor deze eigenschap. Selecteer bijvoorbeeld in de resultaten van de `OS` query deze optie in een cel in de rij versie: `OS | summarize countif( (Version == '10.0.17134') ) by Device | where (countif_ > 0)`  
 
-     - **Apparaten weer geven zonder**deze waarde voor deze eigenschap. Selecteer bijvoorbeeld in de resultaten van de `OS` query deze optie in een cel in de rij versie:`OS | summarize countif( (Version == '10.0.17134') ) by Device | where (countif_ == 0) | project Device`  
+     - **Apparaten weer geven zonder**deze waarde voor deze eigenschap. Selecteer bijvoorbeeld in de resultaten van de `OS` query deze optie in een cel in de rij versie: `OS | summarize countif( (Version == '10.0.17134') ) by Device | where (countif_ == 0) | project Device`  
 
      - **Bing it**: Start de standaard webbrowser naar https://www.bing.com met deze waarde als de query reeks.  
 
@@ -190,7 +190,7 @@ Het venster CMPivot bevat de volgende elementen:
 
 
 
-## <a name="example-scenarios"></a>Voorbeeldscenario 's
+## <a name="example-scenarios"></a>Voorbeeldscenario's
 
 In de volgende secties vindt u voor beelden van hoe u CMPivot in uw omgeving kunt gebruiken:
 
@@ -233,7 +233,7 @@ U moet tijdelijk een groot bestand opslaan op een netwerk Bestands server, maar 
 `Disk | where (Description == 'Local Fixed Disk') | where isnotnull( FreeSpace ) | order by FreeSpace asc`
 
 
-## <a name="cmpivot-standalone"></a><a name="bkmk_standalone"></a>Zelfstandige CMPivot
+## <a name="cmpivot-standalone"></a><a name="bkmk_standalone"></a> Zelfstandige CMPivot
 
 [!INCLUDE [CMPivot standalone](includes/cmpivot-standalone.md)]
 
@@ -272,5 +272,3 @@ Zie [logboek bestanden](../../plan-design/hierarchy/log-files.md) en [probleemop
 - [Wijzigingen in CMPivot](cmpivot-changes.md)
 - [Problemen met CMPivot oplossen](cmpivot-tsg.md)
 - [PowerShell-scripts maken en uitvoeren](../../../apps/deploy-use/create-deploy-scripts.md)
-
-

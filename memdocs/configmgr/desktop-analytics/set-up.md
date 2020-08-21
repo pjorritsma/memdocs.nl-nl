@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: a90f3260782f08fdf8f7424a95e09b34e38e97d3
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: facfb2be1972933524c7ad632537fc8306939c1c
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268144"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700749"
 ---
 # <a name="how-to-set-up-desktop-analytics"></a>Desktop Analytics instellen
 
@@ -39,7 +39,7 @@ Gebruik deze procedure om u aan te melden bij Desktop Analytics en deze te confi
 
         Als u deze optie niet selecteert, voegt Desktop Analytics nog steeds gebruikers toe als leden van de beveiligings groep. Een **globale beheerder** moet hand matig de rol **Desktop Analytics-beheerder** voor de gebruikers toewijzen.
 
-        Zie [Administrator role permissions](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles)(Engelstalig) in azure Active Directory voor meer informatie over het toewijzen van machtigingen voor beheerdersrol in azure Active Directory en de machtigingen die zijn toegewezen aan **bureau blad Analytics-beheerders**.  
+        Zie [Administrator role permissions](/azure/active-directory/users-groups-roles/directory-assign-admin-roles)(Engelstalig) in azure Active Directory voor meer informatie over het toewijzen van machtigingen voor beheerdersrol in azure Active Directory en de machtigingen die zijn toegewezen aan **bureau blad Analytics-beheerders**.  
 
     - Met Desktop Analytics wordt de beveiligings groep **eigen aren van werk ruimten** vooraf geconfigureerd in azure Active Directory voor het maken en beheren van werk ruimten en implementatie plannen.
 
@@ -82,4 +82,4 @@ De **Start** pagina van bureau blad Analytics wordt weer gegeven op de Azure Por
 
 Ga naar het volgende artikel om Configuration Manager met Desktop Analytics te verbinden.
 > [!div class="nextstepaction"]  
-> [Verbinding maken met Configuration Manager](connect-configmgr.md)  
+> [Verbinding maken met Configuration Manager](connect-configmgr.md)

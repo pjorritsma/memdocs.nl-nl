@@ -10,12 +10,12 @@ ms.assetid: d8d5c345-1e91-410b-b8a9-0170dcfa846e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0a720c68fc705187dedb6ff04fc3898a8b0b21c8
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: b4975f67c84c2354d13457981ac90ba4481d292f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124360"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697582"
 ---
 # <a name="manage-user-state-in-configuration-manager"></a>Gebruikers status beheren in Configuration Manager
 
@@ -27,11 +27,11 @@ U kunt Configuration Manager taken reeksen gebruiken om de gebruikers status geg
 
 - Werk implementaties bij waarvan u de gebruikersstatus op dezelfde computer wilt vastleggen en herstellen.  
 
-Configuration Manager maakt gebruik van de Hulpprogramma voor migratie van gebruikersstatus (USMT) 10,0 voor het beheren van de migratie van gebruikers status gegevens van een bron computer naar een doel computer nadat de installatie van het besturings systeem is voltooid. Zie  [Algemene migratiescenario's](https://docs.microsoft.com/windows/deployment/usmt/usmt-common-migration-scenarios)voor meer informatie over algemene migratiescenario's voor USMT 10.0.
+Configuration Manager maakt gebruik van de Hulpprogramma voor migratie van gebruikersstatus (USMT) 10,0 voor het beheren van de migratie van gebruikers status gegevens van een bron computer naar een doel computer nadat de installatie van het besturings systeem is voltooid. Zie  [Algemene migratiescenario's](/windows/deployment/usmt/usmt-common-migration-scenarios)voor meer informatie over algemene migratiescenario's voor USMT 10.0.
 
 Gebruik de volgende secties om u te helpen bij het vastleggen en herstellen van gebruikers gegevens.
 
-## <a name="store-user-state-data"></a><a name="BKMK_StoringUserData"></a>Gebruikers status gegevens opslaan
+## <a name="store-user-state-data"></a><a name="BKMK_StoringUserData"></a> Gebruikers status gegevens opslaan
 
  Wanneer u de gebruikersstatus vastlegt, kunt u de gebruikersstatusgegevens opslaan op de doelcomputer of op een statusmigratiepunt. Als u de gebruikers status wilt opslaan op een gebruikers status migratie punt, moet u een Configuration Manager-site systeem server gebruiken die de site systeemrol van het status migratie punt host. U moet, om de gebruikersstatus op de doelcomputer op te slaan, uw takenreeks configureren om de gegevens lokaal op te slaan met behulp van koppelingen.
 
@@ -49,7 +49,7 @@ Als de gebruikersstatusinformatie wordt vastgelegd, kan de informatie op een van
 
 - U kunt vaste koppelingen opgeven die kunnen worden gebruikt om de gebruikersgegevens naar de oorspronkelijke locatie te herstellen. In dit scenario blijven de gebruikersstatusgegevens aanwezig op de schijf wanneer het oude besturingssysteem wordt verwijderd. Nadat het nieuwe besturingssysteem vervolgens is geïmplementeerd, worden via de takenreeks **Terugzetten** met de vaste koppelingen de gebruikersstatusgegevens teruggezet op de oorspronkelijke locatie.  
 
-### <a name="store-user-data-on-a-state-migration-point"></a><a name="BKMK_UserDataSMP"></a>Gebruikers gegevens opslaan op een status migratie punt
+### <a name="store-user-data-on-a-state-migration-point"></a><a name="BKMK_UserDataSMP"></a> Gebruikers gegevens opslaan op een status migratie punt
 
  Als u de gebruikersstatusgegevens op een statusmigratiepunt wilt opslaan, gaat u als volgt te werk:  
 
@@ -67,7 +67,7 @@ Als de gebruikersstatusinformatie wordt vastgelegd, kan de informatie op een van
 
     - [Release State Store](../understand/task-sequence-steps.md#BKMK_ReleaseStateStore) om aan het statusmigratiepunt te melden dat het vastleggen of terugzetten is voltooid.  
 
-### <a name="store-user-data-locally"></a><a name="BKMK_UserDataDestination"></a>Gebruikers gegevens lokaal opslaan
+### <a name="store-user-data-locally"></a><a name="BKMK_UserDataDestination"></a> Gebruikers gegevens lokaal opslaan
 
  U kunt de gebruikersstatusgegevens als volgt lokaal opslaan:  
 
@@ -80,7 +80,7 @@ Als de gebruikersstatusinformatie wordt vastgelegd, kan de informatie op een van
     > [!NOTE]
     > De gebruikersstatusgegevens waarnaar de vaste koppelingen verwijzen, blijven op de computer nadat de takenreeks het oude besturingssysteem verwijdert. Dit zijn de gegevens die worden gebruikt om de gebruikersstatus op te slaan wanneer het nieuwe besturingssysteem wordt geïmplementeerd.  
 
-## <a name="configure-a-state-migration-point"></a><a name="BKMK_StateMigrationPoint"></a>Een status migratie punt configureren
+## <a name="configure-a-state-migration-point"></a><a name="BKMK_StateMigrationPoint"></a> Een status migratie punt configureren
 
 Op het statusmigratiepunt worden gebruikersstatusgegevens opgeslagen die op de ene computer worden vastgelegd en vervolgens op een andere computer worden hersteld. Wanneer u echter gebruikersinstellingen voor een besturingssysteemimplementatie op dezelfde computer vastlegt, zoals een implementatie waarbij u het besturingssysteem op de doelcomputer vernieuwt, kunt u de gegevens opslaan op dezelfde computer via vaste koppelingen of op een statusmigratiepunt. Bij sommige computer implementaties maakt Configuration Manager automatisch een koppeling tussen het status archief en de doel computer wanneer u de status opslag maakt. U kunt de volgende methoden gebruiken om een statusmigratiepunt te configureren om de gebruikersstatusgegevens op te slaan:  
 
@@ -129,4 +129,4 @@ Maak een computerkoppeling om een relatie te definiëren tussen een broncomputer
 
 ## <a name="restore-user-state-data-when-an-operating-system-deployment-fails"></a><a name="BKMK_MigrationFails"></a> Gebruikersstatusgegevens terugzetten wanneer een besturingssysteemimplementatie mislukt
 
-Als de implementatie van het besturingssysteem mislukt, kunt u met de functie USMT 10.0 LoadState de gebruikersstatusgegevens ophalen die zijn vastgelegd tijdens de implementatie. Hiertoe behoren ook gegevens die op een statusmigratiepunt zijn opgeslagen en gegevens die lokaal op de doelcomputer zijn opgeslagen. Zie [LoadState Syntax (LoadState-syntax)](https://docs.microsoft.com/windows/deployment/usmt/usmt-loadstate-syntax)voor meer informatie over deze USMT-functie.
+Als de implementatie van het besturingssysteem mislukt, kunt u met de functie USMT 10.0 LoadState de gebruikersstatusgegevens ophalen die zijn vastgelegd tijdens de implementatie. Hiertoe behoren ook gegevens die op een statusmigratiepunt zijn opgeslagen en gegevens die lokaal op de doelcomputer zijn opgeslagen. Zie [LoadState Syntax (LoadState-syntax)](/windows/deployment/usmt/usmt-loadstate-syntax)voor meer informatie over deze USMT-functie.

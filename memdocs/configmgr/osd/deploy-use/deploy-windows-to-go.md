@@ -10,12 +10,12 @@ ms.assetid: 8eed50f5-80a4-422e-8aa6-a7ccb2171475
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a3cf735dfa2dd73ed39a24c2d674a966acddf05a
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: c2861214bcdc9162b0121304b342d1d9d48be170
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125114"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697939"
 ---
 # <a name="deploy-windows-to-go-with-configuration-manager"></a>Windows to go met Configuration Manager implementeren
 
@@ -23,7 +23,7 @@ ms.locfileid: "88125114"
 
 Dit onderwerp bevat de stappen voor het inrichten van Windows to go in Configuration Manager. Windows To Go is een ondernemingsfunctie van Windows 8, die het mogelijk maakt een Windows To Go-werkruimte te maken die kan worden opgestart vanaf een via een USB-verbinding aangesloten extern station op computers die voldoen aan de certificeringsvereisten van Windows 7 of Windows 8, ongeacht het besturingssysteem van de computer. Windows To Go-werkruimten kunnen dezelfde installatiekopie gebruiken die ondernemingen gebruiken voor hun desktops en laptops en kunnen op dezelfde wijze worden beheerd.  
 
- Zie [Windows to go Feature Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh831833(v=ws.11))(Engelstalig) voor meer informatie over Windows to go.  
+ Zie [Windows to go Feature Overview](/previous-versions/windows/it-pro/windows-8.1-and-8/hh831833(v=ws.11))(Engelstalig) voor meer informatie over Windows to go.  
 
 ## <a name="provision-windows-to-go"></a>Inrichting Windows To Go  
  Windows To Go is een besturingssysteem dat is opgeslagen op een extern station dat is aangesloten via een USB-verbinding. U kunt het Windows To Go-station inrichten zoals u andere implementaties van het besturingssysteem inricht. Niettemin moet u een lichtjes andere benadering gebruiken om deze stations in te richten, omdat Windows To Go is ontwikkeld als een op de gebruiker gerichte, zeer mobiele oplossing.  
@@ -67,7 +67,7 @@ Dit onderwerp bevat de stappen voor het inrichten van Windows to go in Configura
 
      U moet een takenreeks maken voor een implementatie van Windows 8 waarnaar u verwijst bij het maken van voorgefaseerde media. Raadpleeg taken [reeksen beheren om taken te automatiseren](manage-task-sequences-to-automate-tasks.md)voor meer informatie.  
 
-###  <a name="create-prestaged-media"></a><a name="BKMK_CreatePrestagedMedia"></a>Voor bereide media maken  
+###  <a name="create-prestaged-media"></a><a name="BKMK_CreatePrestagedMedia"></a> Voor bereide media maken  
  Voorbereide media bevatten de opstartinstallatiekopie die wordt gebruikt voor het starten van de doelcomputer en de installatiekopie van het besturingssysteem die op de doelcomputer wordt toegepast. De computer die u inricht met voorgefaseerde media kan worden gestart met behulp van de opstartinstallatiekopie. De computer kan vervolgens een bestaande takenreeks voor implementatie van een besturingssysteem uitvoeren om een volledige implementatie van het besturingssysteem te installeren. De takenreeks waarmee het besturingssysteem wordt geïmplementeerd, staat niet op de media.  
 
  U kunt inhoud toevoegen, zoals toepassingen en stuurprogramma's, naast de installatiekopie en de opstartinstallatiekopie van het besturingssysteem tijdens de voorbereidende fase. Dit verkort de termijn die nodig is om een besturingssysteem te implementeren en vermindert het netwerkverkeer want de inhoud bevindt zich reeds in het station.  
@@ -208,7 +208,7 @@ Dit onderwerp bevat de stappen voor het inrichten van Windows to go in Configura
     > [!NOTE]  
     >  De wizard kan er lang over doen om het voorgefaseerde mediabestand te voltooien.  
 
-###  <a name="create-a-windows-to-go-creator-package"></a><a name="BKMK_CreatePackage"></a>Een Windows to go Creator-pakket maken  
+###  <a name="create-a-windows-to-go-creator-package"></a><a name="BKMK_CreatePackage"></a> Een Windows to go Creator-pakket maken  
  Als onderdeel van de implementatie van Windows To Go, moet u een pakket maken om het voorgefaseerde mediabestand te implementeren. Het pakket moet het hulpprogramma bevatten dat het Windows To Go-station configureert en de voorgefaseerde media naar het station uitvoert. Gebruik de volgende procedure om het Windows To Go Creator-pakket te maken.  
 
 #### <a name="to-create-the-windows-to-go-creator-package"></a>Het Windows To Go Creator-pakket maken  
@@ -273,7 +273,7 @@ Dit onderwerp bevat de stappen voor het inrichten van Windows to go in Configura
 
       Klik op **Volgende** en voltooi de wizard.  
 
-###  <a name="update-the-task-sequence-to-enable-bitlocker-for-windows-to-go"></a><a name="BKMK_UpdateTaskSequence"></a>De taken reeks bijwerken om BitLocker voor Windows to go in te scha kelen  
+###  <a name="update-the-task-sequence-to-enable-bitlocker-for-windows-to-go"></a><a name="BKMK_UpdateTaskSequence"></a> De taken reeks bijwerken om BitLocker voor Windows to go in te scha kelen  
  Windows To Go schakelt BitLocker in op een extern opstartbaar station zonder het gebruik van TPM. Daarom moet u een afzonderlijk hulpprogramma gebruiken om BitLocker op het Windows To Go-station te configureren. Om BitLocker in te schakelen, moet u een actie toevoegen aan de takenreeks na de stap **Windows en ConfigMgr installeren** .  
 
 > [!NOTE]  
@@ -460,5 +460,5 @@ Dit onderwerp bevat de stappen voor het inrichten van Windows to go in Configura
 ###  <a name="configuration-manager-configures-and-stages-the-windows-to-go-drive"></a><a name="BKMK_ConfigureStageDrive"></a> Het Windows To Go-station wordt geconfigureerd en voorbereid door Configuration Manager  
  Nadat de computer opnieuw opgestart is naar het Windows To Go-station, zal het station opstarten naar Windows PE en een verbinding maken met het beheerpunt om het beleid te krijgen om de implementatie van het besturingssysteem te voltooien. Configuration Manager configureert en faseert het station. Nadat Configuration Manager het station heeft uitgevoerd, kan de gebruiker de computer opnieuw opstarten om het inrichtings proces te volt ooien (zoals het toevoegen aan een domein of het installeren van apps). Dit proces is hetzelfde voor alle voorgefaseerde media.  
 
-###  <a name="user-logs-in-to-windows-8"></a><a name="BKMK_UserLogsIn"></a>Gebruiker meldt zich aan bij Windows 8  
- Nadat Configuration Manager het inrichtings proces heeft voltooid en het Windows 8-vergrendelings scherm wordt weer gegeven, kan de gebruiker zich aanmelden bij het besturings systeem.  
+###  <a name="user-logs-in-to-windows-8"></a><a name="BKMK_UserLogsIn"></a> Gebruiker meldt zich aan bij Windows 8  
+ Nadat Configuration Manager het inrichtings proces heeft voltooid en het Windows 8-vergrendelings scherm wordt weer gegeven, kan de gebruiker zich aanmelden bij het besturings systeem.

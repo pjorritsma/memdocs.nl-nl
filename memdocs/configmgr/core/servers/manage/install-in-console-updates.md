@@ -10,12 +10,12 @@ ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 65071493834c33dac7581075b835e023c74f5706
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: f22a28c173c980bdf598a5afc8a969a86ec96cc2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128083"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699769"
 ---
 # <a name="install-in-console-updates-for-configuration-manager"></a>Updates in de console installeren voor Configuration Manager
 
@@ -88,15 +88,15 @@ De klasse **update pakketten** (SMS_CM_Updatepackages) is standaard onderdeel va
 
 - Wijs het account toe aan het bereik **Alles** .  
 
-## <a name="before-you-install-an-in-console-update"></a><a name="bkmk_beforeinstall"></a>Voordat u een update in de console installeert  
+## <a name="before-you-install-an-in-console-update"></a><a name="bkmk_beforeinstall"></a> Voordat u een update in de console installeert  
 
 Bekijk de volgende stappen voordat u een update installeert in de Configuration Manager-console.  
 
-### <a name="step-1-review-the-update-checklist"></a><a name="bkmk_step1"></a>Stap 1: de controle lijst voor updates controleren  
+### <a name="step-1-review-the-update-checklist"></a><a name="bkmk_step1"></a> Stap 1: de controle lijst voor updates controleren  
 
 Bekijk de toepasselijke controle lijst voor updates voor acties die moeten worden uitgevoerd voordat u de update start:
 
-- [Controle lijst voor het installeren van update 2006](checklist-for-installing-update-2006.md)
+- [Controlelijst voor het installeren van update 2006](checklist-for-installing-update-2006.md)
 
 - [Controlelijst voor het installeren van update 2002](checklist-for-installing-update-2002.md)
 
@@ -104,7 +104,7 @@ Bekijk de toepasselijke controle lijst voor updates voor acties die moeten worde
 
 - [Controlelijst voor het installeren van update 1906](checklist-for-installing-update-1906.md)  
 
-### <a name="step-2-run-the-prerequisite-checker-before-installing-an-update"></a><a name="bkmk_step2"></a>Stap 2: de prerequisite Checker uitvoeren voordat u een update installeert  
+### <a name="step-2-run-the-prerequisite-checker-before-installing-an-update"></a><a name="bkmk_step2"></a> Stap 2: de prerequisite Checker uitvoeren voordat u een update installeert  
 
 Het wordt aangeraden de controle op vereisten voor een update uit te voeren voordat u deze update installeert. Als u de prerequisite checker uitvoert voordat u een update installeert:  
 
@@ -135,7 +135,7 @@ Wanneer u de update later installeert, kunt u de update configureren om de waars
 
     3. Zie **ConfigMgrPrereq. log** op de site server voor meer informatie.  
 
-## <a name="install-in-console-updates"></a><a name="bkmk_install"></a>Updates in de console installeren  
+## <a name="install-in-console-updates"></a><a name="bkmk_install"></a> Updates in de console installeren  
 
 Wanneer u klaar bent om updates te installeren vanuit de Configuration Manager console, begint u met de site op het hoogste niveau van uw hiërarchie. Deze site is de centrale beheer site of een zelfstandige primaire site.  
 
@@ -149,7 +149,7 @@ Installeer de update buiten kantoor uren voor elke site om het effect op bedrijf
 
 - Nadat de installatie van een update door de site server is voltooid, worden automatisch alle toepasselijke site systeem rollen bijgewerkt. Alle distributie punten worden echter niet opnieuw geïnstalleerd en offline gaan om tegelijkertijd te worden bijgewerkt. In plaats daarvan gebruikt de site server de inhouds distributie-instellingen van de site om de update te distribueren naar een subset van distributie punten tegelijk. Het resultaat is dat slechts enkele distributie punten offline gaan om de update te installeren. Distributie punten die niet zijn begonnen met het bijwerken of die de update hebben voltooid, blijven online en kunnen inhoud aan clients leveren.
 
-### <a name="overview-of-in-console-update-installation"></a><a name="bkmk_overview"></a>Overzicht van de installatie van de update in de console  
+### <a name="overview-of-in-console-update-installation"></a><a name="bkmk_overview"></a> Overzicht van de installatie van de update in de console  
 
 #### <a name="1-when-the-update-installation-starts"></a>1. Wanneer de installatie van een update wordt gestart
 
@@ -235,11 +235,11 @@ Nadat de-console-update is voltooid, controleert u of de versies van de console 
 > [!Note]  
 > De console versie wijkt enigszins af van de versie van de site. De secundaire versie van de console komt overeen met de Configuration Manager Release versie. In Configuration Manager versie 1802 is de eerste site versie bijvoorbeeld 5.0.8634.1000 en is de oorspronkelijke console versie 5. **1802**. 1082,1700. De buildnummers (1082) en revisie (1700) kan veranderen met toekomstige hotfixes.
 
-### <a name="to-start-the-update-installation-at-the-top-level-site"></a><a name="bkmk_toptier"></a>De installatie van de update op de site op het hoogste niveau starten  
+### <a name="to-start-the-update-installation-at-the-top-level-site"></a><a name="bkmk_toptier"></a> De installatie van de update op de site op het hoogste niveau starten  
 
 Ga op de site op het hoogste niveau van uw hiërarchie naar de werk ruimte **beheer** in de Configuration Manager-console en selecteer het knoop punt **updates en onderhoud** . Selecteer een update met de status **beschikbaar**en kies vervolgens **Update pakket installeren** op het lint.  
 
-### <a name="to-start-the-update-installation-at-a-secondary-site"></a><a name="bkmk_secondary"></a>De installatie van de update op een secundaire site starten  
+### <a name="to-start-the-update-installation-at-a-secondary-site"></a><a name="bkmk_secondary"></a> De installatie van de update op een secundaire site starten  
 
 Nadat de bovenliggende primaire site van een secundaire site is bijgewerkt, werkt u de secundaire site bij vanuit de Configuration Manager-console. Hiervoor gebruikt u de **Wizard Upgrade van secundaire Site**.  
 
@@ -315,7 +315,7 @@ De taken na de installatie zijn onder andere:
   - Start niet totdat alle sites in de hiërarchie de installatie van de update volt ooien.
   - Afzonderlijke functies worden niet weer gegeven.
 
-## <a name="retry-installation-of-a-failed-update"></a><a name="bkmk_retry"></a>Installatie van een mislukte update opnieuw uitvoeren  
+## <a name="retry-installation-of-a-failed-update"></a><a name="bkmk_retry"></a> Installatie van een mislukte update opnieuw uitvoeren  
 
 Wanneer een update niet kan worden geïnstalleerd, bekijkt u de feedback in de console om oplossingen voor waarschuwingen en fouten te identificeren. Bekijk de **ConfigMgrPrereq. log** op de site server voor meer informatie. Voordat u de installatie van een update opnieuw probeert uit te voeren, moet u fouten oplossen en waarschuwingen herstellen.  
 
@@ -358,7 +358,7 @@ Ga naar de werk ruimte **bewaking** en selecteer het knoop punt **site onderhoud
 
 - **Waarschuwingen over vereisten negeren**: als de installatie van de update stopt vanwege een waarschuwing, kunt u **waarschuwingen voor vereisten negeren**selecteren. Met deze actie kan de installatie van de update na een paar minuten worden voortgezet en wordt de optie gebruikt om waarschuwingen over vereisten te negeren.  
 
-## <a name="after-a-site-installs-an-update"></a><a name="bkmk_after"></a>Nadat een site een update heeft geïnstalleerd  
+## <a name="after-a-site-installs-an-update"></a><a name="bkmk_after"></a> Nadat een site een update heeft geïnstalleerd  
 
 Nadat de site is bijgewerkt, controleert u de controle lijst na de update voor de betreffende versie:  
 
@@ -370,7 +370,7 @@ Nadat de site is bijgewerkt, controleert u de controle lijst na de update voor d
 
 - [Controle lijst na de update voor versie 1906](checklist-for-installing-update-1906.md#post-update-checklist)  
 
-## <a name="enable-optional-features-from-updates"></a><a name="bkmk_options"></a>Optionele functies van updates inschakelen  
+## <a name="enable-optional-features-from-updates"></a><a name="bkmk_options"></a> Optionele functies van updates inschakelen  
 
 Wanneer een update een of meer optionele functies bevat, hebt u de mogelijkheid om die functies in uw hiërarchie in te scha kelen. Schakel functies in wanneer de update wordt geïnstalleerd of ga later terug naar de-console om de optionele functies in te scha kelen.
 
@@ -411,7 +411,7 @@ De volgende functies zijn optioneel in de meest recente versie van Configuration
 - [Updates van Surface-Stuur Programma's](../../../sum/get-started/configure-classifications-and-products.md) <!--1098490,82AD973A-7CDF-4B67-A665-72875D6E099A-->
 - [Cloudbeheergateway](../../clients/manage/cmg/plan-cloud-management-gateway.md) <!--1101764,DD043119-789C-4158-AC79-725E999F385A-->
 - [PFX maken](../../../protect/deploy-use/introduction-to-certificate-profiles.md) <!--1321368,CED76B79-929C-4C45-981F-B9BCA6D38A17-->
-- [Azure Log Analytics-connector](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm) <!--1258052,73A7EC4D-EF22-4EA4-82A9-419C2A8CFC4D-->
+- [Azure Log Analytics-connector](/azure/azure-monitor/platform/collect-sccm) <!--1258052,73A7EC4D-EF22-4EA4-82A9-419C2A8CFC4D-->
 - [Windows Defender exploit Guard-beleid](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md) <!--1355468,8491D4C8-8484-46B8-BCD6-17DC2CADBAEB-->
 - [VPN voor Windows 10](../../../protect/deploy-use/vpn-profiles.md) <!--1283610,EDBEBA3D-3A4D-4465-84D9-D71EB811E7F6-->
 - [Onderhoud van een cluster bewuste verzameling (Server groepen)](../../../sum/deploy-use/service-a-server-group.md) <!--1081776,290B66D8-C735-4895-B59A-DD732D84A697-->
@@ -422,11 +422,11 @@ De volgende functies zijn optioneel in de meest recente versie van Configuration
 >
 > Zie [Technical Preview](../../get-started/technical-preview.md)voor meer informatie over functies die alleen beschikbaar zijn in de vertakking Technical Preview.
 
-## <a name="use-pre-release-features-from-updates"></a><a name="bkmk_prerelease"></a>Functies van voorlopige versies van updates gebruiken
+## <a name="use-pre-release-features-from-updates"></a><a name="bkmk_prerelease"></a> Functies van voorlopige versies van updates gebruiken
 
 De huidige vertakking bevat functies van de voorlopige versie voor vroege test doeleinden in een productie omgeving. Zie functies van de [voorlopige versie](pre-release-features.md)voor meer informatie.
 
-## <a name="frequently-asked-questions"></a><a name="bkmk_faq"></a>Veelgestelde vragen
+## <a name="frequently-asked-questions"></a><a name="bkmk_faq"></a> Veelgestelde vragen
 
 ### <a name="why-dont-i-see-certain-updates-in-my-console"></a>Waarom zie ik bepaalde updates niet in mijn console?
 
@@ -436,4 +436,4 @@ Als u een specifieke update niet kunt vinden in uw-console nadat de synchronisat
 
     Als u denkt dat u de vereiste configuraties en vereisten hebt voor een ontbrekende update, controleert u of het service aansluitpunt zich in de online modus bevindt. Gebruik vervolgens de optie **controleren op updates** in het knoop punt **updates en onderhoud** om een controle af te dwingen. Als uw service verbindings punt zich in de offline modus bevindt, gebruikt u het hulp programma voor service verbindingen om hand matig te synchroniseren met de Cloud service.  
 
-- Uw account beschikt niet over de juiste beheer machtigingen op basis van rollen om updates in de Configuration Manager-console weer te geven. Zie [machtigingen voor het beheren van updates](#assign-permissions-to-view-and-manage-updates-and-features)voor meer informatie.  
+- Uw account beschikt niet over de juiste beheer machtigingen op basis van rollen om updates in de Configuration Manager-console weer te geven. Zie [machtigingen voor het beheren van updates](#assign-permissions-to-view-and-manage-updates-and-features)voor meer informatie.

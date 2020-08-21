@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: db70eab54f319197f267173fe857d0fb147a7eba
-ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
+ms.openlocfilehash: ecd8b83224cbcbfe367a3b1db160d680952a4407
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746558"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700834"
 ---
 # <a name="monitor-connection-health"></a>Status van de verbinding bewaken
 
@@ -154,7 +154,7 @@ Deze kolommen komen overeen met de belangrijkste [vereisten](overview.md#prerequ
 
 Selecteer een apparaat om de volledige lijst met beschik bare eigenschappen weer te geven in het detail venster. U kunt ook een van deze eigenschappen als kolommen toevoegen aan de lijst met apparaten.
 
-## <a name="device-properties"></a><a name="bkmk_config-issues"></a>Apparaateigenschappen
+## <a name="device-properties"></a><a name="bkmk_config-issues"></a> Apparaateigenschappen
 
 De volgende eigenschappen van het bureau blad Analytics-apparaat zijn beschikbaar als kolommen in de lijst met apparaten van Configuration Manager:
 
@@ -334,7 +334,7 @@ Raadpleeg M365AHandler. log op de client voor meer informatie.
 <!--1004-->
 Als deze controle mislukt, een gebruiker heeft een lagere diagnostische gegevens van Windows op het apparaat geselecteerd. Dit kan ook worden veroorzaakt door een conflicterende groeps beleidsobject. Zie [Windows-instellingen](enroll-devices.md#windows-settings)voor meer informatie.
 
-Afhankelijk van uw bedrijfs vereisten kunt u de gebruikers keuze uitschakelen via groeps beleid. Gebruik de instelling voor het **configureren van de aanmeldings instellingen voor telemetrie voor het instellen van de gebruikers interface**. Zie [Diagnostische gegevens van Windows in uw organisatie configureren](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management) voor meer informatie.
+Afhankelijk van uw bedrijfs vereisten kunt u de gebruikers keuze uitschakelen via groeps beleid. Gebruik de instelling voor het **configureren van de aanmeldings instellingen voor telemetrie voor het instellen van de gebruikers interface**. Zie [Diagnostische gegevens van Windows in uw organisatie configureren](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management) voor meer informatie.
 
 ### <a name="check-user-proxy"></a>Gebruikers proxy controleren
 
@@ -343,7 +343,7 @@ De instelling DisableEnterpriseAuthProxy is standaard ingeschakeld voor Windows 
 
 Met deze eigenschap kunnen de volgende fouten worden weer gegeven:
 
-- Verificatie proxy is ingeschakeld. Stel DisableEnterpriseAuthProxy in op 0 in`HKLM:\Software\Policies\Microsoft\Windows\DataCollection`
+- Verificatie proxy is ingeschakeld. Stel DisableEnterpriseAuthProxy in op 0 in `HKLM:\Software\Policies\Microsoft\Windows\DataCollection`
 
 - Kan niet controleren op de status van de verificatie proxy. Raadpleeg de logboeken voor de uitzonderings Details
 
@@ -364,7 +364,7 @@ Anders kan een van de volgende fouten worden weer gegeven:
 
 - Kan de CommercialId in de register sleutel niet bijwerken `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection` . Raadpleeg de logboeken voor de uitzonderings Details  
 
-- Geef de juiste CommercialId-waarde op`HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`  
+- Geef de juiste CommercialId-waarde op `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`  
 
 Raadpleeg M365AHandler. log op de client voor meer informatie.  
 
@@ -372,7 +372,7 @@ Controleer de machtigingen voor deze register sleutel. Zorg ervoor dat het lokal
 
 Er is een andere ID voor het apparaat. Deze register sleutel wordt gebruikt door groeps beleid. Het heeft voor rang op de ID van Configuration Manager.  
 
-<a name="bkmk_ViewCommercialID"></a>Gebruik de volgende procedure om de commerciële ID in de Desktop Analytics-portal weer te geven:
+<a name="bkmk_ViewCommercialID"></a> Gebruik de volgende procedure om de commerciële ID in de Desktop Analytics-portal weer te geven:
 
 1. Ga naar de Desktop Analytics-Portal en selecteer **verbonden services** in de groep globale instellingen.  
 
@@ -455,7 +455,7 @@ Desktop Analytics maakt gebruik van de micro soft-account service voor een betro
 
 Zorg ervoor dat de service **micro soft-account aanmeld hulp** niet is uitgeschakeld. Het opstart type moet **hand matig zijn (start activeren)**.
 
-Als u Microsoft-account toegang door eind gebruikers wilt uitschakelen, gebruikt u de beleids instellingen in plaats van dit eind punt te blok keren. Zie [de Microsoft-account in de onderneming](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication)voor meer informatie.
+Als u Microsoft-account toegang door eind gebruikers wilt uitschakelen, gebruikt u de beleids instellingen in plaats van dit eind punt te blok keren. Zie [de Microsoft-account in de onderneming](/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication)voor meer informatie.
 
 ### <a name="windows-diagnostic-data-opt-in"></a>Opt-in voor Windows diagnostische gegevens
 

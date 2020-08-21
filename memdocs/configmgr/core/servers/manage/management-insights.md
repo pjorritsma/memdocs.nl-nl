@@ -10,12 +10,12 @@ ms.assetid: a79f83be-884c-48e6-94d6-ed0a68c22e2f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3d65c83d0a9fd009fa21a3b9e623145f87cc9498
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: de3c75982e19e6183260a2a5f99f65b9c785d27f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128108"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700511"
 ---
 # <a name="management-insights-in-configuration-manager"></a>Beheer inzichten in Configuration Manager
 
@@ -67,7 +67,7 @@ Met sommige inzichten kunt u actie ondernemen. Selecteer een inzicht, selecteer 
 
 - Navigeer naar een gefilterde weer gave op basis van een query. Als u bijvoorbeeld actie onderneemt op de lege verzamelingen inzicht, worden alleen deze verzamelingen weer gegeven in de lijst met verzamelingen. Onderneem vervolgens verdere actie, zoals het verwijderen van een verzameling of het wijzigen van de lidmaatschaps regels.
 
-## <a name="management-insights-dashboard"></a><a name="bkmk_insights"></a>Management Insights-dash board
+## <a name="management-insights-dashboard"></a><a name="bkmk_insights"></a> Management Insights-dash board
 
 <!--1357979-->
 
@@ -131,7 +131,7 @@ Helpt u te integreren met veel Cloud Services, waarmee u uw apparaten modern kun
 
 - **Cloud beheer gateway inschakelen**: de Cloud Management Gateway (CMG) biedt een eenvoudige manier om Configuration Manager-clients te beheren via internet. Door de CMG te implementeren als een Cloud service in Microsoft Azure, kunt u door gaan met het beheren en verwerken van inhoud aan clients die zwerven op internet. Met CMG hebt u geen extra on-premises infra structuur nodig die toegankelijk is via internet. Zie [plan for CMG](../../clients/manage/cmg/plan-cloud-management-gateway.md)voor meer informatie.<!-- 451B9B3A-D86A-4EF1-ACC3-FE6A207886BA -->
 
-- **Apparaten kunnen hybride Azure Active Directory lid zijn**: met Azure AD toegevoegde apparaten kunnen gebruikers zich aanmelden met hun domein referenties en ervoor zorgen dat apparaten voldoen aan de beveiligings-en nalevings normen van de organisatie. Zie [ontwerp overwegingen voor Azure AD Hybrid Identity](https://docs.microsoft.com/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-overview)voor meer informatie.<!-- 6DC6B149-8B48-45E9-B189-F1E12A62D994 -->
+- **Apparaten kunnen hybride Azure Active Directory lid zijn**: met Azure AD toegevoegde apparaten kunnen gebruikers zich aanmelden met hun domein referenties en ervoor zorgen dat apparaten voldoen aan de beveiligings-en nalevings normen van de organisatie. Zie [ontwerp overwegingen voor Azure AD Hybrid Identity](/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-overview)voor meer informatie.<!-- 6DC6B149-8B48-45E9-B189-F1E12A62D994 -->
 
 - **Sites die niet over de juiste HTTPS-configuratie beschikken**: vanaf versie 2002 is dit inzicht een lijst met sites in uw hiërarchie die niet juist zijn geconfigureerd voor HTTPS. Met deze configuratie wordt voor komen dat de site de resultaten van het [verzamelings lidmaatschap synchroniseert met Azure ad-groepen](../../clients/manage/collections/create-collections.md#bkmk_aadcollsync). Dit kan ertoe leiden dat Azure AD Sync niet alle apparaten uploadt. Het beheer van deze clients werkt mogelijk niet goed.<!--6268489--> [Verbeterde http](../../plan-design/hierarchy/enhanced-http.md)configureren of ten minste één beheer punt inschakelen voor HTTPS. Als u de site voor HTTPS-communicatie al hebt geconfigureerd, wordt dit inzicht niet weer gegeven.<!-- 73884047-3395-430E-B971-F853806D4349 -->
 
@@ -162,7 +162,7 @@ Inzichten die het beheer vereenvoudigen door verzamelingen te verwijderen en opn
 
 <!--3607758-->
 
-Vanaf versie 2002 is deze groep een beleefdheids van micro soft premier field engineering. Deze inzichten zijn een voor beeld van de vele meer controles die micro soft Premier biedt in de [Services hub](https://docs.microsoft.com/services-hub/health/getting_started_with_on_demand_assessments).
+Vanaf versie 2002 is deze groep een beleefdheids van micro soft premier field engineering. Deze inzichten zijn een voor beeld van de vele meer controles die micro soft Premier biedt in de [Services hub](/services-hub/health/getting_started_with_on_demand_assessments).
 
 - **Active Directory detectie van beveiligings groepen is zo geconfigureerd dat ze te vaak worden uitgevoerd**: u hoeft de detectie van Active Directory beveiligings groep doorgaans niet te configureren om vaker dan om de drie uur te doen. Een frequentere configuratie kan een negatieve invloed hebben op de prestaties van Active Directory, het netwerk en Configuration Manager. Schakel incrementele synchronisatie in in plaats van een volledige synchronisatie planning. Zie voor meer informatie [Active Directory groeps detectie](../deploy/configure/about-discovery-methods.md#bkmk_aboutGroup).<!-- 4E739B65-AEC9-4B1D-8B36-AC6AC4A72022 -->
 
@@ -182,7 +182,7 @@ Vanaf versie 2002 is deze groep een beleefdheids van micro soft premier field en
 
 - **Alle sites bijwerken naar dezelfde versie**: gebruik dezelfde versie van Configuration Manager in een hiërarchie. Deze configuratie zorgt ervoor dat alle sites dezelfde functionaliteit bieden. Sites van verschillende versies in dezelfde hiërarchie introduceren interoperabiliteits scenario's. Latere versies van Configuration Manager bevatten nieuwe functies en oplossingen voor bekende problemen. Zie [interoperabiliteit tussen verschillende versies](../../plan-design/hierarchy/interoperability-between-different-versions.md)voor meer informatie.<!-- 88C630A5-6D6B-4DDB-95D7-78E12107970D -->
 
-Zie [herstel stappen voor Configuration Manager management Insights](https://docs.microsoft.com/services-hub/health/remediation-steps-configmgr)voor meer informatie over deze inzichten.
+Zie [herstel stappen voor Configuration Manager management Insights](/services-hub/health/remediation-steps-configmgr)voor meer informatie over deze inzichten.
 
 > [!TIP]
 > Als u al een klant van micro soft Unified of micro soft premier bent, meldt u zich aan bij de [Services hub](https://serviceshub.microsoft.com/assessments/) voor aanvullende evaluaties op aanvraag.

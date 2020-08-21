@@ -10,12 +10,12 @@ ms.assetid: a1626a65-da22-49e0-9564-d2f752ea3f4b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6a30fc55fb4129b8ea3493b76fd6871a2a62f881
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 1e35a66c05a09455b3f2aded3d81daa2ccd5eff0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126736"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700245"
 ---
 # <a name="support-for-windows-10-in-configuration-manager"></a>Ondersteuning voor Windows 10 in Configuration Manager  
 
@@ -70,7 +70,7 @@ Zie het overzicht van [Windows levenscyclus](https://support.microsoft.com/help/
 | ![Ondersteund ](media/green_check.png)  =  **Supported** ondersteund  |
 | ![Niet ondersteund ](media/Red_X.png)  =  **niet** ondersteund |
 
-### <a name="windows-10-client-support-notes"></a><a name="bkmk_win10-notes"></a>Opmerkingen voor Windows 10-client ondersteuning
+### <a name="windows-10-client-support-notes"></a><a name="bkmk_win10-notes"></a> Opmerkingen voor Windows 10-client ondersteuning
 
 - Ondersteuning voor semi-Annual-kanaal versies van Windows 10 omvat de volgende edities: Enter prise, Pro, Education en Pro education.  
 
@@ -78,7 +78,7 @@ Zie het overzicht van [Windows levenscyclus](https://support.microsoft.com/help/
 
 - Voor Windows 10, versie 1909, wordt de versie van de besturingssysteem implementatie media weer gegeven als 10.0.18362.418.
 
-### <a name="windows-10-on-arm64"></a><a name="bkmk_arm64"></a>Windows 10 op ARM64
+### <a name="windows-10-on-arm64"></a><a name="bkmk_arm64"></a> Windows 10 op ARM64
 
 Configuration Manager ondersteunt de-client op Windows 10 ARM64-apparaten. Implementatie van het besturings systeem wordt niet ondersteund.<!-- 1353704 -->
 
@@ -87,11 +87,11 @@ Vanaf versie 2002,<!--5954175--> het **alle Windows 10-platform (ARM64)** is bes
 > [!NOTE]
 > Als u eerder het **Windows 10** -platform van het hoogste niveau hebt geselecteerd, wordt met deze actie automatisch zowel **alle Windows 10-(64-bits)** als **alle Windows 10 (32-bits)** geselecteerd. Dit nieuwe platform wordt niet automatisch geselecteerd. Als u **alle Windows 10 (ARM64)** wilt toevoegen, selecteert u deze hand matig in de lijst.
 
-### <a name="support-for-windows-insider"></a><a name="bkmk_WIfB-support"></a>Ondersteuning voor Windows Insider
+### <a name="support-for-windows-insider"></a><a name="bkmk_WIfB-support"></a> Ondersteuning voor Windows Insider
 
 Vanaf Configuration Manager versie 1906 kunt u Windows Insider-builds [bijwerken en onderhouden](../../../sum/get-started/configure-classifications-and-products.md#bkmk_WIfB) . Deze mogelijkheid kan worden geboden door onze klanten. Hoewel deze functionaliteit zou moeten werken, is de ondersteuning hiervoor het beste. Configuration Manager kan mogelijk geen hotfix uitgeven voor deze functionaliteit als deze niet meer werkt.  
 
-Als u feedback wilt geven over Windows Insider, gebruikt u de [feedback hub](https://docs.microsoft.com/windows-insider/at-work-pro/wip-4-biz-feedback).
+Als u feedback wilt geven over Windows Insider, gebruikt u de [feedback hub](/windows-insider/at-work-pro/wip-4-biz-feedback).
 
 ## <a name="windows-10-adk"></a>Windows 10 ADK
 
@@ -99,7 +99,7 @@ Wanneer u besturings systemen met Configuration Manager implementeert, is Window
 
 - [Vereisten voor de infrastructuur voor besturingssysteemimplementatie](../../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md#windows-adk-for-windows-10)
 
-- [Download Windows ADK voor Windows 10](https://docs.microsoft.com/windows-hardware/get-started/adk-install)
+- [Download Windows ADK voor Windows 10](/windows-hardware/get-started/adk-install)
 
     > [!IMPORTANT]
     > Vanaf Windows 10 versie 1809 is Windows PE een afzonderlijk installatie programma. Anders is er geen functioneel verschil.
@@ -118,11 +118,11 @@ De volgende tabel geeft een lijst van de versies van Windows 10 ADK die u kunt g
 
 |Sleutel|
 |--|
-| ![Ondersteund ](media/green_check.png)  =  **Supported** ondersteund <br/> In deze tabel wordt alleen de Windows ADK-ondersteuning weer gegeven ten opzichte van de versie van Configuration Manager. Micro soft raadt aan de Windows ADK te gebruiken die overeenkomt met de versie van Windows die u implementeert. Gebruik de meest recente versie van Windows ADK bij het implementeren van de nieuwste versie van Windows 10. De nieuwste versie van Windows ADK kan ondersteuning bieden voor de implementatie van oudere versies van besturings systemen, zoals Windows 8,1.<!-- SCCMDocs issue 1229 --> Zie voor meer informatie over de ondersteuning van Windows ADK-onderdelen [DISM-ondersteunde platforms](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms) en [USMT-vereisten](https://docs.microsoft.com/windows/deployment/usmt/usmt-requirements#bkmk-1). |
+| ![Ondersteund ](media/green_check.png)  =  **Supported** ondersteund <br/> In deze tabel wordt alleen de Windows ADK-ondersteuning weer gegeven ten opzichte van de versie van Configuration Manager. Micro soft raadt aan de Windows ADK te gebruiken die overeenkomt met de versie van Windows die u implementeert. Gebruik de meest recente versie van Windows ADK bij het implementeren van de nieuwste versie van Windows 10. De nieuwste versie van Windows ADK kan ondersteuning bieden voor de implementatie van oudere versies van besturings systemen, zoals Windows 8,1.<!-- SCCMDocs issue 1229 --> Zie voor meer informatie over de ondersteuning van Windows ADK-onderdelen [DISM-ondersteunde platforms](/windows-hardware/manufacture/desktop/dism-supported-platforms) en [USMT-vereisten](/windows/deployment/usmt/usmt-requirements#bkmk-1). |
 | ![Achterwaarts compatibel ](media/blue_compat.png)   =  **achterwaarts compatibel** <br/> Deze combi natie wordt niet getest, maar zou moeten werken. Er worden bekende problemen of voor behoud gedocumenteerd. |
 | ![Niet ondersteund ](media/Red_X.png)  =  **niet** ondersteund |
 
-### <a name="windows-10-adk-support-notes"></a><a name="bkmk_adk-notes"></a>Windows 10 ADK-ondersteunings opmerkingen
+### <a name="windows-10-adk-support-notes"></a><a name="bkmk_adk-notes"></a> Windows 10 ADK-ondersteunings opmerkingen
 
 - Configuration Manager ondersteunt alleen x86-en amd64-onderdelen van Windows 10 ADK. Het biedt momenteel geen ondersteuning voor ARM-of ARM64-onderdelen.
 

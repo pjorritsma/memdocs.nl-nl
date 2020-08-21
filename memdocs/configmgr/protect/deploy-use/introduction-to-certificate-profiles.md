@@ -10,12 +10,12 @@ ms.assetid: 41dcc259-f147-4420-bff2-b65bdf8cff77
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 35269e7c727031a9cd66072985f3d9ec362978cf
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3598c95d1431915431d96b16c10c7c913741fe3d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722303"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699990"
 ---
 # <a name="introduction-to-certificate-profiles-in-configuration-manager"></a>Inleiding tot certificaat profielen in Configuration Manager
 
@@ -59,11 +59,11 @@ Er zijn drie typen certificaat profielen:
 
 ## <a name="requirements"></a>Vereisten
 
-Als u certificaat profielen wilt implementeren die gebruikmaken van SCEP, installeert u het certificaat registratiepunt op een site systeem server. Installeer ook een beleids module voor NDES, de Configuration Manager-beleids module, op een server met Windows Server 2012 R2 of hoger. Voor deze server is de Active Directory-rol Certificate Services vereist. Er is ook een werkende NDES vereist die toegankelijk is voor de apparaten die de certificaten nodig hebben. Als uw apparaten moeten worden inge schreven voor certificaten van Internet, moet uw NDES-server toegankelijk zijn via internet. Als u bijvoorbeeld veilig verkeer naar de NDES-server via internet wilt inschakelen, kunt u [Azure-toepassing proxy](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy)gebruiken.
+Als u certificaat profielen wilt implementeren die gebruikmaken van SCEP, installeert u het certificaat registratiepunt op een site systeem server. Installeer ook een beleids module voor NDES, de Configuration Manager-beleids module, op een server met Windows Server 2012 R2 of hoger. Voor deze server is de Active Directory-rol Certificate Services vereist. Er is ook een werkende NDES vereist die toegankelijk is voor de apparaten die de certificaten nodig hebben. Als uw apparaten moeten worden inge schreven voor certificaten van Internet, moet uw NDES-server toegankelijk zijn via internet. Als u bijvoorbeeld veilig verkeer naar de NDES-server via internet wilt inschakelen, kunt u [Azure-toepassing proxy](/azure/active-directory/manage-apps/application-proxy)gebruiken.
 
 Voor PFX-certificaten is ook een certificaat registratiepunt vereist. Geef ook de certificerings instantie (CA) voor het certificaat en de relevante toegangs referenties op. U kunt micro soft of de belasters als certificerings instantie opgeven.  
 
-Zie [een beleids module gebruiken met de registratie service voor netwerk apparaten](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn473016\(v=ws.11\))voor meer informatie over hoe NDES een beleids module ondersteunt, zodat Configuration Manager certificaten kan implementeren.
+Zie [een beleids module gebruiken met de registratie service voor netwerk apparaten](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn473016\(v=ws.11\))voor meer informatie over hoe NDES een beleids module ondersteunt, zodat Configuration Manager certificaten kan implementeren.
 
 Afhankelijk van de vereisten ondersteunt Configuration Manager de implementatie van certificaten in verschillende certificaat archieven op verschillende apparaattypen en besturings systemen. De volgende apparaten en besturingssystemen worden ondersteund:  
 

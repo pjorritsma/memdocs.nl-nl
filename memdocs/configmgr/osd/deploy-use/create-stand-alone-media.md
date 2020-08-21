@@ -10,12 +10,12 @@ ms.assetid: c6b9ccd2-78d9-4f0e-b25a-70d0866300ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 62c667706a9d77b3bb7d2b6bbdfde3cde8bb8365
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 57b353dd9dd9fcf7f97d10480f4067bd65a1f483
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125182"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697973"
 ---
 # <a name="create-stand-alone-media"></a>Zelfstandige media maken
 
@@ -140,7 +140,7 @@ Voordat u de wizard taken reeks media maken uitvoert voor het maken van media vo
 
         - Configuration Manager schrijft een tekst bestand `MediaLabel.txt` met de naam naar de hoofdmap van de media. Het bestand bevat standaard één tekst regel: `label=Configuration Manager` . Als u het label voor media aanpast, gebruikt deze lijn uw aangepaste label in plaats van de standaard waarde.  
 
-    - **Autorun. inf-bestand op media toevoegen**<!-- 4090666 -->: Vanaf versie 1906 wordt Configuration Manager standaard geen autorun. inf-bestand toegevoegd. Dit bestand wordt doorgaans geblokkeerd door antimalware-producten. Zie [een cd-rom-toepassing](https://docs.microsoft.com/windows/desktop/shell/autoplay)voor automatisch aanmelden maken voor meer informatie over de autorun-functie van Windows. Als het scenario nog steeds nodig is, selecteert u deze optie om het bestand op te laten voegen.  
+    - **Autorun. inf-bestand op media toevoegen**<!-- 4090666 -->: Vanaf versie 1906 wordt Configuration Manager standaard geen autorun. inf-bestand toegevoegd. Dit bestand wordt doorgaans geblokkeerd door antimalware-producten. Zie [een cd-rom-toepassing](/windows/desktop/shell/autoplay)voor automatisch aanmelden maken voor meer informatie over de autorun-functie van Windows. Als het scenario nog steeds nodig is, selecteert u deze optie om het bestand op te laten voegen.  
 
 5. Geef op de pagina **beveiliging** de volgende opties op:
 
@@ -151,7 +151,7 @@ Voordat u de wizard taken reeks media maken uitvoert voor het maken van media vo
         >
         > Op zelfstandige media worden alleen de taken reeks stappen en hun variabelen versleuteld. De resterende inhoud van de media wordt niet versleuteld. Neem geen gevoelige informatie op in taken reeks scripts. U kunt alle gevoelige informatie opslaan en implementeren met behulp van takenreeksvariabelen.  
 
-    - **Selecteer een geldig datum bereik voor deze zelfstandige media**: stel optionele begin-en verval datums in op het medium. Deze instelling is standaard uitgeschakeld. De datums worden vergeleken met de systeem tijd op de computer voordat de zelfstandige media worden uitgevoerd. Wanneer de systeem tijd eerder is dan de begin tijd of later dan de verloop tijd, wordt de zelfstandige media niet gestart. Deze opties zijn ook beschikbaar met de Power shell [-cmdlet New-CMStandaloneMedia](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmstandalonemedia?view=sccm-ps) .  
+    - **Selecteer een geldig datum bereik voor deze zelfstandige media**: stel optionele begin-en verval datums in op het medium. Deze instelling is standaard uitgeschakeld. De datums worden vergeleken met de systeem tijd op de computer voordat de zelfstandige media worden uitgevoerd. Wanneer de systeem tijd eerder is dan de begin tijd of later dan de verloop tijd, wordt de zelfstandige media niet gestart. Deze opties zijn ook beschikbaar met de Power shell [-cmdlet New-CMStandaloneMedia](/powershell/module/configurationmanager/new-cmstandalonemedia?view=sccm-ps) .  
 
 6. Selecteer op de pagina **zelfstandige CD/DVD** de taken reeks die het besturings systeem implementeert. U kunt alleen die taken reeksen selecteren die aan een opstart installatie kopie zijn gekoppeld. Controleer de lijst met inhoud waarnaar wordt verwezen door de taken reeks.  
 

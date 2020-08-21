@@ -10,12 +10,12 @@ ms.assetid: 24fca61e-9cdb-447a-ad7a-f4d2e4fd6704
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 84cb878de3eea56dc68180a83fd4b6a32b2d1073
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: e5ea198f944cf44909e54e123889a3f0f29b1db5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906427"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699106"
 ---
 # <a name="use-cloud-services-with-configuration-manager"></a>Cloudservices met Configuration Manager gebruiken
 
@@ -75,7 +75,7 @@ Een Azure-abonnement is vereist voor het gebruik van Azure om distributie punten
 
 Voor deze aanvullende mogelijkheden hebt u geen Azure-abonnement nodig. U hoeft geen specifieke verbindingen, certificaten of services in te stellen in de Cloud. In plaats daarvan worden ze automatisch door Configuration Manager voor u beheerd. Het enige wat u hoeft te doen, is ervoor te zorgen dat toepasselijke site systemen en apparaten toegang hebben tot de Url's op internet.  
 
-##  <a name="security-for-cloud-based-services"></a><a name="BKMK_CloudSec"></a>Beveiliging voor Cloud Services  
+##  <a name="security-for-cloud-based-services"></a><a name="BKMK_CloudSec"></a> Beveiliging voor Cloud Services  
  Configuration Manager gebruikt certificaten voor het inrichten en openen van uw inhoud in azure, en voor het beheren van de services die u gebruikt. Configuration Manager versleutelt de gegevens die u in azure opslaat, maar brengt geen aanvullende beveiligings-of gegevens controles meer uit dan die die Azure biedt.  
 
- Zie de Details voor de verschillende Cloud resource scenario's voor meer informatie. Zie ook een [Inleiding tot Azure-beveiliging](https://docs.microsoft.com/azure/security/fundamentals/overview).
+ Zie de Details voor de verschillende Cloud resource scenario's voor meer informatie. Zie ook een [Inleiding tot Azure-beveiliging](/azure/security/fundamentals/overview).

@@ -10,12 +10,12 @@ ms.assetid: 5d5d6273-0d8a-43c7-865a-cdb1736dcae3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b01ea9b089da3cfcfc3e8d23e7ad25d27ab2fec7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c83d0da07474c8b078ee226d249b73f00562e0f5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712552"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700160"
 ---
 # <a name="plan-for-the-sms-provider"></a>Plannen voor de SMS-provider
 
@@ -23,7 +23,7 @@ ms.locfileid: "81712552"
 
 Als u Configuration Manager wilt beheren, gebruikt u een Configuration Manager-console die verbinding maakt met een exemplaar van de **SMS-provider**. Standaard wordt een SMS-provider geïnstalleerd op de site server wanneer u een centrale beheer site of primaire site installeert.
 
-## <a name="about-the-sms-provider"></a><a name="BKMK_PlanSMSProv"></a>Over de SMS-provider  
+## <a name="about-the-sms-provider"></a><a name="BKMK_PlanSMSProv"></a> Over de SMS-provider  
 
 De SMS-provider is een Windows Management Instrumentation provider (WMI) die **Lees** -en **Schrijf** toegang toewijst aan de Configuration Manager-Data Base op een site.  
 
@@ -67,7 +67,7 @@ Ter ondersteuning van de SMS-provider moet de doel server voldoen aan de volgend
     > [!Note]  
     > Elke SMS-provider probeert de beheer service te installeren. hiervoor is een certificaat vereist. Deze service heeft een afhankelijkheid van IIS om dat certificaat te binden aan HTTPS-poort 443. Als u [Enhanced http](enhanced-http.md)inschakelt, koppelt de site dat certificaat aan het gebruik van IIS api's. Als uw site gebruikmaakt van PKI, moet u een PKI-certificaat hand matig binden in IIS op de SMS-provider. Vanaf versie 2002 gebruikt de site automatisch het zelfondertekende certificaat van de site.
 
-## <a name="locations"></a><a name="bkmk_location"></a>Maplocaties  
+## <a name="locations"></a><a name="bkmk_location"></a> Maplocaties  
 
 Wanneer u een-site installeert, installeert u automatisch de eerste SMS-provider voor de site. U kunt elk van de volgende ondersteunde locaties opgeven voor de SMS-provider:  
 
@@ -135,7 +135,7 @@ In de volgende secties worden de voor delen en nadelen beschreven van het instal
 
   - Deze locatie kan systeembronnen gebruiken die anders aan andere services worden toegekend.  
 
-## <a name="authentication"></a><a name="bkmk_auth"></a>Verificatie
+## <a name="authentication"></a><a name="bkmk_auth"></a> Verificatie
 
 <!--1357013-->
 Vanaf versie 1810 kunt u het minimale verificatie niveau voor beheerders opgeven om toegang te krijgen tot Configuration Manager-sites. Deze functie dwingt beheerders af om zich aan te melden bij Windows met het vereiste niveau. Dit geldt voor alle onderdelen die toegang hebben tot de SMS-provider. Bijvoorbeeld de Configuration Manager-console, SDK-methoden en Windows Power shell-cmdlets.
@@ -165,13 +165,13 @@ De volgende niveaus zijn beschikbaar:
 
 - **Certificaat verificatie**: authenticatie vereisen met een geldig certificaat dat is uitgegeven door een vertrouwde PKI-certificerings instantie. U kunt dit certificaat niet configureren in Configuration Manager. Configuration Manager moet de beheerder zijn aangemeld bij Windows met behulp van PKI.  
 
-- **Windows hello voor bedrijven-verificatie**: authenticatie vereisen met een sterke twee ledige verificatie die is gekoppeld aan een apparaat en biometrie of een pincode gebruikt. Zie [Windows hello voor bedrijven](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification)voor meer informatie.  
+- **Windows hello voor bedrijven-verificatie**: authenticatie vereisen met een sterke twee ledige verificatie die is gekoppeld aan een apparaat en biometrie of een pincode gebruikt. Zie [Windows hello voor bedrijven](/windows/security/identity-protection/hello-for-business/hello-identity-verification)voor meer informatie.  
 
 ### <a name="exclusions"></a>Uitsluitingen
 
 Op het tabblad **verificatie** van hiërarchie-instellingen kunt u ook bepaalde gebruikers of groepen uitsluiten. Gebruik deze optie spaarzaam. Bijvoorbeeld wanneer specifieke gebruikers toegang nodig hebben tot de Configuration Manager-console, maar niet op het vereiste niveau kunnen verifiëren met Windows. Het kan ook nodig zijn voor Automation of services die worden uitgevoerd in de context van een systeem account.
 
-## <a name="about-sms-provider-languages"></a><a name="BKMK_SMSProvLanguages"></a>Over SMS-provider talen  
+## <a name="about-sms-provider-languages"></a><a name="BKMK_SMSProvLanguages"></a> Over SMS-provider talen  
 
 De SMS-provider werkt onafhankelijk van de weergave taal van de server waarop u deze installeert.  
 
@@ -185,7 +185,7 @@ Wanneer Configuration Manager gegevens opslaat voor een object in de-data base, 
 
 - Configuration Manager slaat objecten op die een gebruiker met beheerders rechten maakt met behulp van de taal die is gebruikt om het object te maken. Deze objecten worden in deze zelfde taal weer gegeven in de Configuration Manager-console. De SMS-provider kan deze niet omzetten en ze hebben geen meerdere taal opties.  
 
-## <a name="use-multiple-sms-providers"></a><a name="BKMK_MultiSMSProv"></a>Meerdere SMS-providers gebruiken  
+## <a name="use-multiple-sms-providers"></a><a name="BKMK_MultiSMSProv"></a> Meerdere SMS-providers gebruiken  
 
 Nadat het installeren van een site is voltooid, kunt u aanvullende SMS-providers voor de site installeren. Als u aanvullende SMS-providers wilt installeren, voert u Configuration Manager Setup uit op de site server.
 
@@ -204,7 +204,7 @@ Wanneer u meerdere SMS-providers op een site installeert en er een verbindings a
 
 Wanneer u een Configuration Manager-console voor het eerst verbindt met een site, wordt de verbindings query uitgevoerd op WMI op de site server. Met deze query wordt een exemplaar geïdentificeerd van de SMS-provider die de-console gebruikt. Deze specifieke instantie van de SMS-provider blijft in gebruik door de console totdat de sessie wordt beëindigd. Als de sessie wordt beëindigd omdat de server van de SMS-provider niet beschikbaar is op het netwerk, wordt de eerste query herhaald als u de-console opnieuw verbindt met de site. De site heeft mogelijk hetzelfde exemplaar van de SMS-provider toegewezen dat niet beschikbaar is. Als dit het geval is, probeert u opnieuw verbinding te maken met de console totdat de site een beschik bare SMS-provider retourneert.  
 
-## <a name="about-the-sms-provider-namespace"></a><a name="BKMK_SMSProvNamespace"></a>Over de SMS-provider naam ruimte  
+## <a name="about-the-sms-provider-namespace"></a><a name="BKMK_SMSProvNamespace"></a> Over de SMS-provider naam ruimte  
 
 Het WMI-schema Configuration Manager definieert de structuur van de SMS-provider. Schema naam ruimten beschrijven de locatie van Configuration Manager gegevens binnen het SMS-provider schema. De volgende tabel bevat enkele van de algemene naam ruimten die door de SMS-provider worden gebruikt:  
 
@@ -216,7 +216,7 @@ Het WMI-schema Configuration Manager definieert de structuur van de SMS-provider
 |`Root\CCM`|Configuration Manager client configuratie beleid en client gegevens.|  
 |`Root\CIMv2\SMS`|De locatie van de inventaris rapportage klassen die de inventaris-client agent verzamelt. Clients compileren deze instellingen tijdens de evaluatie van computer beleid. Deze instellingen zijn gebaseerd op de configuratie van client instellingen voor de computer.|  
 
-## <a name="os-deployment-requirements"></a><a name="BKMK_WAIKforSMSProv"></a>Implementatie vereisten voor besturings systemen
+## <a name="os-deployment-requirements"></a><a name="BKMK_WAIKforSMSProv"></a> Implementatie vereisten voor besturings systemen
 
 Op de computer waarop u een exemplaar van de SMS-provider installeert, moet een ondersteunde versie van de Windows ADK worden ondersteund.  
 
@@ -232,7 +232,7 @@ Wanneer u implementaties van besturings systemen beheert, laat de Windows ADK de
 
 De installatie van Windows ADK kan tot 650 MB vrije schijfruimte vereisen op elke computer waarop de SMS-provider wordt geïnstalleerd. Deze vereiste hoge schijf ruimte is nodig om Configuration Manager de Windows PE-opstart installatie kopieën te installeren.  
 
-## <a name="administration-service"></a><a name="bkmk_admin-service"></a>Beheer service
+## <a name="administration-service"></a><a name="bkmk_admin-service"></a> Beheer service
 
 <!--3607711, fka 1321523-->
 

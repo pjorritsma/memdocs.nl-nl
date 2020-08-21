@@ -10,12 +10,12 @@ ms.assetid: a95bc292-af10-4beb-ab56-2a815fc69304
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c60f30e306c6ff52849cfcdd4696d67a7d26f395
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4c8029cdda80d327cbed2a4c60c71ff1811e4723
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722233"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698694"
 ---
 # <a name="windows-hello-for-business-settings-in-configuration-manager"></a>Instellingen voor Windows hello voor bedrijven in Configuration Manager
 
@@ -31,7 +31,7 @@ Configuration Manager integreert met Windows hello voor bedrijven. (Deze functie
 >
 > Voor gezamenlijk beheerde apparaten kunt u overwegen om de [werk belasting van het **resource toegangs beleid** ](../../comanage/workloads.md#resource-access-policies) te verplaatsen naar intune. Gebruik vervolgens intune-beleid om deze certificaten te beheren. Zie [werk belastingen overschakelen](../../comanage/how-to-switch-workloads.md)voor meer informatie.
 
-Zie [Windows hello voor bedrijven](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification)voor meer informatie.
+Zie [Windows hello voor bedrijven](/windows/security/identity-protection/hello-for-business/hello-identity-verification)voor meer informatie.
 
 > [!Note]  
 > Configuration Manager schakelt deze optionele functie standaard niet in. U moet deze functie inschakelen voordat u deze kunt gebruiken. Zie voor meer informatie [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).<!--505213-->  
@@ -69,9 +69,9 @@ Configuration Manager integreert met Windows hello voor bedrijven op de volgende
         > [!NOTE]
         > Vanaf versie 1910 wordt verificatie op basis van certificaten met instellingen voor Windows hello voor bedrijven in Configuration Manager niet ondersteund.
 
-    - **Minimum lengte voor pincode configureren**: als u een minimum lengte voor de pincode van de gebruiker wilt vereisen, schakelt u deze optie in en geeft u een waarde op. Als deze functie is ingeschakeld, is `4`de standaard waarde.
+    - **Minimum lengte voor pincode configureren**: als u een minimum lengte voor de pincode van de gebruiker wilt vereisen, schakelt u deze optie in en geeft u een waarde op. Als deze functie is ingeschakeld, is de standaard waarde `4` .
 
-    - **Maximum lengte voor pincode configureren**: als u een maximum lengte voor de pincode van de gebruiker wilt vereisen, schakelt u deze optie in en geeft u een waarde op. Wanneer dit is ingeschakeld, is `127`de standaard waarde.
+    - **Maximum lengte voor pincode configureren**: als u een maximum lengte voor de pincode van de gebruiker wilt vereisen, schakelt u deze optie in en geeft u een waarde op. Wanneer dit is ingeschakeld, is de standaard waarde `127` .
 
     - **Verlopen van pincode vereisen (dagen)**: Hiermee geeft u het aantal dagen op voordat de gebruiker de pincode van het apparaat moet wijzigen.
 
@@ -145,7 +145,7 @@ De volgende scherm afbeelding is een voor beeld van Windows hello voor bedrijven
 
 1. Selecteer **Toevoegen**.
 
-1. Kies **een principal selecteren** en voer `Key Admins`in.
+1. Kies **een principal selecteren** en voer in `Key Admins` .
 
 1. Selecteer in de lijst **van toepassing op** de optie **onderliggende gebruikers objecten**.
 

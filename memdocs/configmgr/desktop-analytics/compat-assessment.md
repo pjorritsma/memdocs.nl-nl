@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 7b2bff4f8365693c86540c9b0578307340f13a49
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: c9268514b43f4f728d3fff4715d4d71308a712f3
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268892"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699072"
 ---
 # <a name="compatibility-assessment-in-desktop-analytics"></a>Compatibiliteits evaluatie in Desktop Analytics
 
@@ -180,13 +180,13 @@ Wanneer u de Configuration Manager-site en-clients bijwerkt naar versie 1906, ra
 
 #### <a name="16-bit-apps"></a>16-bits apps
 
-Verwijder alle 16-bits onderdelen van toepassingen en vervang door 32-bits of 64-bits-equivalenten. Zie voor meer informatie [het artikel over Windows Vista en Windows Server 2008 Developer: Application Compatibility Cookbook](https://docs.microsoft.com/previous-versions/aa480152\(v=msdn.10\))(Engelstalig).
+Verwijder alle 16-bits onderdelen van toepassingen en vervang door 32-bits of 64-bits-equivalenten. Zie voor meer informatie [het artikel over Windows Vista en Windows Server 2008 Developer: Application Compatibility Cookbook](/previous-versions/aa480152\(v=msdn.10\))(Engelstalig).
 
 De andere optie is NT Virtual DOS machine (NTVDM) inschakelen voor ondersteuning in Windows 10.
 
 #### <a name="requires-admin-privileges"></a>Beheerders bevoegdheden zijn vereist
 
-De gebruiker moet beheerders toegang tot het apparaat hebben voor de app. Gebruik een app-manifest voor deze apps waarvoor beheerders machtigingen zijn vereist. Zie [een toepassings manifest maken en insluiten](https://docs.microsoft.com/previous-versions/bb756929\(v=msdn.10\))voor meer informatie.
+De gebruiker moet beheerders toegang tot het apparaat hebben voor de app. Gebruik een app-manifest voor deze apps waarvoor beheerders machtigingen zijn vereist. Zie [een toepassings manifest maken en insluiten](/previous-versions/bb756929\(v=msdn.10\))voor meer informatie.
 
 Desktop Analytics raadt de app aan voor test doeleinden om eventuele regressies te detecteren.
 
@@ -196,7 +196,7 @@ Veel Java-toepassingen zijn afhankelijk van een afzonderlijk geïnstalleerd Java
 
 #### <a name="not-dpi-aware"></a>Niet-DPI-detectie
 
-Er zijn mogelijk problemen met de weer gave van de app met geavanceerde scherm resoluties in Windows 10. Gebruik een app-manifest om problemen met hoge DPI-resoluties te voor komen. Zie [toepassings manifesten](https://docs.microsoft.com/windows/desktop/SbsCs/application-manifests)voor meer informatie.
+Er zijn mogelijk problemen met de weer gave van de app met geavanceerde scherm resoluties in Windows 10. Gebruik een app-manifest om problemen met hoge DPI-resoluties te voor komen. Zie [toepassings manifesten](/windows/desktop/SbsCs/application-manifests)voor meer informatie.
 
 Desktop Analytics raadt de app aan voor test doeleinden om eventuele regressies te detecteren.
 
@@ -220,13 +220,13 @@ De .NET Framework versie 1,0 wordt niet ondersteund in Windows 10. Versie 1,1 is
 
 #### <a name="net-framework-2030"></a>.NET Framework 2.0/3.0
 
-.NET 2,0-en 3,5-frameworks worden ondersteund op Windows 10. Mogelijk moet u de Windows-functie inschakelen. Zie [install the .NET Framework 3,5 in Windows 10](https://docs.microsoft.com/dotnet/framework/install/dotnet-35-windows-10)(Engelstalig) voor meer informatie.
+.NET 2,0-en 3,5-frameworks worden ondersteund op Windows 10. Mogelijk moet u de Windows-functie inschakelen. Zie [install the .NET Framework 3,5 in Windows 10](/dotnet/framework/install/dotnet-35-windows-10)(Engelstalig) voor meer informatie.
 
 #### <a name="ui-access"></a>Toegang tot gebruikers interface
 
 Toepassingen die toegang hebben tot de gebruikers interface, kunnen de besturings niveaus van de configuratie van de gebruiker en de invoer op het bureau blad op de Windows-computer. Gebruik deze instelling alleen voor Program ma's die hulp bieden aan de gebruikers interface.
 
-Als u geen gebruik maakt van toegankelijkheids functies in uw app, stelt u de toegangs vlag voor de gebruikers interface in het app-manifest in op ONWAAR. Zie [een toepassings manifest maken en insluiten](https://docs.microsoft.com/previous-versions/bb756929\(v=msdn.10\))voor meer informatie.
+Als u geen gebruik maakt van toegankelijkheids functies in uw app, stelt u de toegangs vlag voor de gebruikers interface in het app-manifest in op ONWAAR. Zie [een toepassings manifest maken en insluiten](/previous-versions/bb756929\(v=msdn.10\))voor meer informatie.
 
 Desktop Analytics raadt de app aan voor test doeleinden om eventuele regressies te detecteren.
 
@@ -245,4 +245,4 @@ U kunt de evaluatie vinden in het stuur programma in Desktop Analytics. Selectee
 
 ## <a name="see-also"></a>Zie ook
 
-Het FastTrack Center-voor deel voor Windows 10 biedt toegang tot de **desktop-app**. Dit voor deel is een nieuwe service die is ontworpen om problemen met Windows 10-en Microsoft 365-apps te verhelpen voor compatibiliteit met bedrijven. Zie voor meer informatie [bureau blad-app garanderen](https://docs.microsoft.com/fasttrack/win-10-desktop-app-assure).
+Het FastTrack Center-voor deel voor Windows 10 biedt toegang tot de **desktop-app**. Dit voor deel is een nieuwe service die is ontworpen om problemen met Windows 10-en Microsoft 365-apps te verhelpen voor compatibiliteit met bedrijven. Zie voor meer informatie [bureau blad-app garanderen](/fasttrack/win-10-desktop-app-assure).

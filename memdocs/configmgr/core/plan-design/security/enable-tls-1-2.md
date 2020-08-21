@@ -10,12 +10,12 @@ ms.assetid: 31de47c9-891b-4de7-8d5e-fbbc1bff7c60
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5d9d7cea7e5653b338a3eb4adb01d9fded99035e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8e1334603bcf60ea3eb8c3d18b73d511570cdc5d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720518"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699735"
 ---
 # <a name="how-to-enable-tls-12"></a>TLS 1,2 inschakelen
 
@@ -23,7 +23,7 @@ ms.locfileid: "81720518"
 
 Transport Layer Security (TLS), zoals Secure Sockets Layer (SSL), is een versleutelings protocol dat is bedoeld om gegevens veilig te houden wanneer ze via een netwerk worden overgedragen. In deze artikelen worden de stappen beschreven die u moet uitvoeren om ervoor te zorgen dat Configuration Manager beveiligde communicatie gebruikmaakt van het TLS 1,2-protocol. In deze artikelen worden ook de update vereisten beschreven voor veelgebruikte onderdelen en voor het oplossen van veelvoorkomende problemen.
 
-## <a name="enabling-tls-12"></a>TLS 1,2 inschakelen
+## <a name="enabling-tls-12"></a>TLS 1.2 inschakelen
 
 Configuration Manager is afhankelijk van een aantal verschillende onderdelen voor beveiligde communicatie. Het protocol dat wordt gebruikt voor een bepaalde verbinding, is afhankelijk van de mogelijkheden van de relevante onderdelen op de client-en server zijde. Als een onderdeel verouderd is of niet juist is geconfigureerd, kan de communicatie gebruikmaken van een ouder, minder beveiligd protocol. Als u Configuration Manager wilt inschakelen voor de ondersteuning van TLS 1,2 voor alle beveiligde communicatie, moet u TLS 1,2 inschakelen voor alle vereiste onderdelen. De vereiste onderdelen zijn afhankelijk van uw omgeving en de Configuration Manager functies die u gebruikt.
 
@@ -62,7 +62,7 @@ In deze sectie worden de afhankelijkheden voor specifieke functies en scenario's
 |Sitesysteemrollen| - [.NET Framework bijwerken](enable-tls-1-2-server.md#bkmk_net) en sterke crypto grafie-instellingen verifiëren <br/> - [Update SQL Server en de bijbehorende client onderdelen](enable-tls-1-2-server.md#bkmk_sql) op rollen waarvoor deze nodig is, inclusief de [SQL Server Native Client](enable-tls-1-2-server.md#bkmk_sql-client)|
 |Reporting Services-punt|- [.NET Framework](enable-tls-1-2-server.md#bkmk_net) op de site server, de SQL Reporting Services-servers en elke computer met de console bijwerken<br/> -De SMS_Executive-service indien nodig opnieuw opstarten|
 |Software-updatepunt|[WSUS bijwerken](enable-tls-1-2-server.md#bkmk_wsus)|
-|Cloudbeheergateway|[TLS 1,2 afdwingen](../../clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md#bkmk_tls)|
+|Cloudbeheergateway|[Enforce TLS 1.2](../../clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md#bkmk_tls)|
 |Configuration Manager-console| - [.NET Framework bijwerken](enable-tls-1-2-client.md#bkmk_net)<br/> -Sterke crypto grafie-instellingen verifiëren|
 |Configuration Manager-client met HTTPS-site systeem rollen|[Windows bijwerken om TLS 1,2 voor client-server communicatie te ondersteunen met behulp van WinHTTP](enable-tls-1-2-client.md#bkmk_winhttp)|
 |Software Center| - [.NET Framework bijwerken](enable-tls-1-2-client.md#bkmk_net)<br/> -Sterke crypto grafie-instellingen verifiëren|
@@ -86,7 +86,7 @@ Er zijn in feite vijf gebieden die Configuration Manager gebruikmaken van versle
 
 ### <a name="what-determines-which-encryption-protocol-is-used"></a>Wat bepaalt welk versleutelings protocol wordt gebruikt?
 
-HTTPS zal altijd onderhandelen over de hoogste Protocol versie die door zowel de client als de server wordt ondersteund in een versleutelde conversatie. Wanneer een verbinding tot stand is gebracht, verzendt de client een bericht naar de server met het hoogste beschik bare protocol. Als de server dezelfde versie ondersteunt, verzendt het een bericht met deze versie. Deze onderhandelde versie is het nummer dat wordt gebruikt voor de verbinding. Als de-server de versie die door de client wordt gepresenteerd niet ondersteunt, geeft het server bericht de hoogste versie op die kan worden gebruikt. Zie [een beveiligde sessie tot stand brengen met behulp van TLS](https://docs.microsoft.com/windows/win32/secauthn/tls-handshake-protocol#establishing-a-secure-session-by-using-tls)voor meer informatie over het TLS-hand Shake protocol.
+HTTPS zal altijd onderhandelen over de hoogste Protocol versie die door zowel de client als de server wordt ondersteund in een versleutelde conversatie. Wanneer een verbinding tot stand is gebracht, verzendt de client een bericht naar de server met het hoogste beschik bare protocol. Als de server dezelfde versie ondersteunt, verzendt het een bericht met deze versie. Deze onderhandelde versie is het nummer dat wordt gebruikt voor de verbinding. Als de-server de versie die door de client wordt gepresenteerd niet ondersteunt, geeft het server bericht de hoogste versie op die kan worden gebruikt. Zie [een beveiligde sessie tot stand brengen met behulp van TLS](/windows/win32/secauthn/tls-handshake-protocol#establishing-a-secure-session-by-using-tls)voor meer informatie over het TLS-hand Shake protocol.
 
 ### <a name="what-determines-which-protocol-version-the-client-and-server-can-use"></a>Wat bepaalt welke Protocol versie door de client en server kan worden gebruikt?
 
@@ -103,7 +103,7 @@ Over het algemeen kunnen de volgende items bepalen welke Protocol versie wordt g
 ## <a name="additional-resources"></a>Aanvullende bronnen
 
 - [Technische naslaginformatie voor cryptografische besturingselementen](cryptographic-controls-technical-reference.md)
-- [Aanbevolen procedures voor trans port Layer Security (TLS) met de .NET Framework](https://docs.microsoft.com/dotnet/framework/network-programming/tls#configuring-security-via-the-windows-registry)
+- [Aanbevolen procedures voor trans port Layer Security (TLS) met de .NET Framework](/dotnet/framework/network-programming/tls#configuring-security-via-the-windows-registry)
 - [KB 3135244: TLS 1,2-ondersteuning voor Microsoft SQL Server](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)
 
 ## <a name="next-steps"></a>Volgende stappen

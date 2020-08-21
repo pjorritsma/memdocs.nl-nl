@@ -10,12 +10,12 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d8f29ed1e3201da139daeaa1fadca739ff44dc8e
-ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
+ms.openlocfilehash: 11649452012de33ef1e62007d71466d5a45c56ca
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86384941"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698602"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Basis concepten voor inhouds beheer in Configuration Manager
 
@@ -132,7 +132,7 @@ Gebruik de volgende tabel om de belangrijkste functies van deze technologieën t
 
 ## <a name="branchcache"></a>BranchCache
 
-[BranchCache](https://docs.microsoft.com/windows-server/networking/branchcache/branchcache) is een Windows-technologie. Clients die BranchCache ondersteunen en een implementatie hebben gedownload die u configureert voor BranchCache en vervolgens als inhouds bron voor andere BranchCache-clients fungeren.  
+[BranchCache](/windows-server/networking/branchcache/branchcache) is een Windows-technologie. Clients die BranchCache ondersteunen en een implementatie hebben gedownload die u configureert voor BranchCache en vervolgens als inhouds bron voor andere BranchCache-clients fungeren.  
 
 U hebt bijvoorbeeld een distributie punt waarop Windows Server 2012 of hoger wordt uitgevoerd en dat is geconfigureerd als een BranchCache-server. Wanneer de eerste client voor BranchCache-functionaliteit inhoud van deze server opvraagt, wordt die inhoud door de client gedownload en opgeslagen in de cache.  
 
@@ -145,9 +145,9 @@ Zie [ondersteuning voor Windows BranchCache](../configs/support-for-windows-feat
 ## <a name="delivery-optimization"></a>Delivery optimization
 
 <!-- 1324696 -->
-U gebruikt Configuration Manager grens groepen om de distributie van inhoud in uw bedrijfs netwerk en externe kant oren te definiëren en te reguleren. [Windows Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) is een op de cloud gebaseerde peer-to-peer-technologie voor het delen van inhoud tussen Windows 10-apparaten. Configureer Delivery Optimization om uw grens groepen te gebruiken bij het delen van inhoud tussen peers. Client instellingen Toep assen de grens groep-ID als de id van de leverings optimalisatie groep op de client. Wanneer de client communiceert met de Delivery Optimization-Cloud service, wordt deze id gebruikt om peers te zoeken met de inhoud. Zie [Delivery Optimization](../../clients/deploy/about-client-settings.md#delivery-optimization) client settings voor meer informatie.
+U gebruikt Configuration Manager grens groepen om de distributie van inhoud in uw bedrijfs netwerk en externe kant oren te definiëren en te reguleren. [Windows Delivery Optimization](/windows/deployment/update/waas-delivery-optimization) is een op de cloud gebaseerde peer-to-peer-technologie voor het delen van inhoud tussen Windows 10-apparaten. Configureer Delivery Optimization om uw grens groepen te gebruiken bij het delen van inhoud tussen peers. Client instellingen Toep assen de grens groep-ID als de id van de leverings optimalisatie groep op de client. Wanneer de client communiceert met de Delivery Optimization-Cloud service, wordt deze id gebruikt om peers te zoeken met de inhoud. Zie [Delivery Optimization](../../clients/deploy/about-client-settings.md#delivery-optimization) client settings voor meer informatie.
 
-Delivery Optimization is de aanbevolen technologie voor het optimaliseren van Windows 10 update levering van snelle installatie bestanden voor Windows 10-kwaliteits updates. Vanaf Configuration Manager versie 1910 is Internet toegang tot de Cloud Service Delivery Optimization een vereiste om gebruik te maken van de peer-to-peer-functionaliteit. Zie [Veelgestelde vragen over Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)voor meer informatie over de benodigde Internet-eind punten. Optimalisatie kan worden gebruikt voor alle Windows-updates. Zie [Windows 10 update delivery](../../../sum/deploy-use/optimize-windows-10-update-delivery.md)voor meer informatie.
+Delivery Optimization is de aanbevolen technologie voor het optimaliseren van Windows 10 update levering van snelle installatie bestanden voor Windows 10-kwaliteits updates. Vanaf Configuration Manager versie 1910 is Internet toegang tot de Cloud Service Delivery Optimization een vereiste om gebruik te maken van de peer-to-peer-functionaliteit. Zie [Veelgestelde vragen over Delivery Optimization](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)voor meer informatie over de benodigde Internet-eind punten. Optimalisatie kan worden gebruikt voor alle Windows-updates. Zie [Windows 10 update delivery](../../../sum/deploy-use/optimize-windows-10-update-delivery.md)voor meer informatie.
 
 
 ## <a name="microsoft-connected-cache"></a>Microsoft verbonden cache

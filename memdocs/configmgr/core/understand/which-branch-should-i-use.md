@@ -10,12 +10,12 @@ ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 542069b82ea4c68a48ccc47b79007fd2fa25322a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 1c54648f1f98ad5fef8efd16d2abe53f204a38f5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906014"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700664"
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>Welke vertakking van Configuration Manager moet ik gebruiken?
 
@@ -85,7 +85,7 @@ De LTSB is gebaseerd op versie 1606. Deze vertakking ontvangt geen updates in de
 Als u de LTSB wilt installeren als een nieuwe site of als een upgrade van een ondersteunde System Center 2012 Configuration Manager-site, gebruikt u de versie 1606 [baseline media](../servers/manage/updates.md#bkmk_Baselines) die u bij System Center 2016 krijgt. U kunt basis lijn media gebruiken om een nieuwe site te installeren waarop versie 1606 van de huidige vertakking wordt uitgevoerd, of een nieuwe site die de langlopende onderhouds vertakking uitvoert.
 
 > [!TIP]  
-> Zie [System center 2016-documentatie](https://docs.microsoft.com/system-center/index)voor meer informatie over system Center 2016. In deze documentatie wordt ook beschreven hoe u System Center 2016 kunt ophalen. hiervoor is een micro soft-licentie overeenkomst of vergelijk bare rechten vereist.  
+> Zie [System center 2016-documentatie](/system-center/index)voor meer informatie over system Center 2016. In deze documentatie wordt ook beschreven hoe u System Center 2016 kunt ophalen. hiervoor is een micro soft-licentie overeenkomst of vergelijk bare rechten vereist.  
 >  
 > Als u Configuration Manager versie 1606 in het Volume Licensing Service Center (VLSC) wilt vinden, gaat u naar het tabblad **down loads en sleutels** van de [VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx), zoekt u naar `System Center 2016` en selecteert u **System Center 2016 Data Center** of **System Center 2016 Standard**.  
 >  

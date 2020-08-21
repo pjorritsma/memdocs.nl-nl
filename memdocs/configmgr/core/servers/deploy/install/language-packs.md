@@ -10,12 +10,12 @@ ms.assetid: cd74e5f5-33f6-4566-8c9d-d6a93bfe71ed
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 53aa7e932e782254f63b422526b315f3ce91f397
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 2f07f1277a9e87ea3266473fc54dc96907a0f0e6
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906173"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698970"
 ---
 # <a name="language-packs-in-configuration-manager"></a>Taal pakketten in Configuration Manager
 
@@ -42,7 +42,7 @@ Wanneer u Configuration Manager Setup uitvoert, worden taal pakket bestanden ged
 
 ## <a name="server-languages"></a>Server talen  
 
-Gebruik de volgende tabel om een land instellingen-ID toe te wijzen aan een taal die u op servers wilt ondersteunen. Zie [locale-id's die door micro soft zijn toegewezen](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)voor meer informatie over land instellingen-id's.  
+Gebruik de volgende tabel om een land instellingen-ID toe te wijzen aan een taal die u op servers wilt ondersteunen. Zie [locale-id's die door micro soft zijn toegewezen](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)voor meer informatie over land instellingen-id's.  
 
 |Servertaal|Landinstellingen-id (LCID)|Code van drie letters|  
 |---------------------|------------------------|-----------------------|  
@@ -69,7 +69,7 @@ Gebruik de volgende tabel om een land instellingen-ID toe te wijzen aan een taal
 
 ## <a name="client-languages"></a>Client talen  
 
-Gebruik de volgende tabel om een land instellingen-ID toe te wijzen aan een taal die u wilt ondersteunen op client computers. Zie [locale-id's die door micro soft zijn toegewezen](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)voor meer informatie over land instellingen-id's.  
+Gebruik de volgende tabel om een land instellingen-ID toe te wijzen aan een taal die u wilt ondersteunen op client computers. Zie [locale-id's die door micro soft zijn toegewezen](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)voor meer informatie over land instellingen-id's.  
 
 |Clienttaal|Landinstellingen-id (LCID)|Code van drie letters|  
 |---------------------|------------------------|-----------------------|  

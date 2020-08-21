@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fe50aad3cb35ab5908f604560f4dcd22800919a5
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: 4ff86d203fc35167b5e35f81f171e7c00e468f3a
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353442"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699293"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>Technische naslaginformatie voor cryptografische besturingselementen
 
@@ -260,5 +260,4 @@ Ga als volgt te werk om de beveiliging van uw Configuration Manager-clients en-s
 - SSL 3,0, TLS 1,0 en TLS 1,1 uitschakelen 
 - De aan TLS gerelateerde coderings suites opnieuw ordenen 
 
-Zie [het gebruik van bepaalde cryptografische algoritmen en protocollen in Schannel.dll](https://support.microsoft.com/help/245030/) en [prioriteiten voor Schannel-coderings suites](https://docs.microsoft.com/windows/win32/secauthn/prioritizing-schannel-cipher-suites)beperken voor meer informatie. Deze procedures hebben geen invloed op de functionaliteit van Configuration Manager.
-
+Zie [het gebruik van bepaalde cryptografische algoritmen en protocollen in Schannel.dll](https://support.microsoft.com/help/245030/) en [prioriteiten voor Schannel-coderings suites](/windows/win32/secauthn/prioritizing-schannel-cipher-suites)beperken voor meer informatie. Deze procedures hebben geen invloed op de functionaliteit van Configuration Manager.

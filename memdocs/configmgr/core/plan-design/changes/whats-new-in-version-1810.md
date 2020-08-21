@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 05a6950708da04effe230d0d5637c4e3bcedd7e6
-ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
+ms.openlocfilehash: 04630815b3d10a232d7fc0eea50296062c823194
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88591578"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699837"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 1810 van Configuration Manager current branch
 
@@ -236,7 +236,7 @@ Zie [toepassingen maken](../../../apps/deploy-use/create-applications.md) en [aa
 ### <a name="task-sequence-support-of-windows-autopilot-for-existing-devices"></a>Ondersteuning voor taken reeksen van Windows auto pilot voor bestaande apparaten
 
 <!--3607717, fka 1358333-->
-[Windows auto pilot voor bestaande apparaten](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) is nu beschikbaar in Windows 10 versie 1809 of hoger. Met deze nieuwe functie kunt u de installatie kopie van een Windows 7-apparaat voor de door de [gebruiker gestuurde Windows-modus voor automatische prototypen](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) opnieuw maken en inrichten met één systeem eigen Configuration Manager taken reeks.
+[Windows auto pilot voor bestaande apparaten](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) is nu beschikbaar in Windows 10 versie 1809 of hoger. Met deze nieuwe functie kunt u de installatie kopie van een Windows 7-apparaat voor de door de [gebruiker gestuurde Windows-modus voor automatische prototypen](/windows/deployment/windows-autopilot/user-driven) opnieuw maken en inrichten met één systeem eigen Configuration Manager taken reeks.
 
 Zie [Windows Autopilot voor bestaande apparaten](../../../../autopilot/existing-devices.md) voor meer informatie.
 
@@ -427,7 +427,7 @@ De on-premises MDM-vereiste voor het configureren van een Microsoft Intune-abonn
 
 Afgezien van nieuwe functies bevat deze release ook aanvullende wijzigingen, zoals oplossingen voor problemen. Zie [overzicht van wijzigingen in Configuration Manager current branch, versie 1810](https://support.microsoft.com/help/4482169)voor meer informatie.
 
-Zie [release opmerkingen voor Power shell versie 1810](https://docs.microsoft.com/powershell/sccm/1810-release-notes?view=sccm-ps)voor meer informatie over wijzigingen in de Windows Power shell-cmdlets voor Configuration Manager.
+Zie [release opmerkingen voor Power shell versie 1810](/powershell/sccm/1810-release-notes?view=sccm-ps)voor meer informatie over wijzigingen in de Windows Power shell-cmdlets voor Configuration Manager.
 
 Het volgende update pakket (4488598) is beschikbaar in de-console vanaf 25 maart 2019: [Update pakket 2 voor Configuration Manager current branch, versie 1810](https://support.microsoft.com/help/4488598). Dit vervangt het vorige update pakket KB 4486457.
 
@@ -436,7 +436,7 @@ Het volgende update pakket (4488598) is beschikbaar in de-console vanaf 25 maart
 
 De volgende aanvullende hotfixes zijn beschikbaar om specifieke problemen op te lossen:
 
-| Id | Titel | Datum | In-console |
+| Id | Titel | Date | In-console |
 |---------|---------|---------|---------|
 | [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune connector certificaat wordt niet vernieuwd in Configuration Manager | 18 januari 2019 | Ja |
 | [4490434](https://support.microsoft.com/help/4490434) | Er worden dubbele kolommen voor gebruikers detectie gemaakt in Configuration Manager | 22 februari 2019 | Ja |

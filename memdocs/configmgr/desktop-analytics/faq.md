@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: b70a375eb35599a487eeeee95235d638de35e5e1
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: b24369f2c2f21208f188cf5c0c2ef3a28db83c04
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125862"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700817"
 ---
 # <a name="desktop-analytics-faq"></a>Veelgestelde vragen over Desktop Analytics
 
 ## <a name="prerequisites"></a>Vereisten
 
-### <a name="can-i-use-cloud-enabled-analytics-with-intune-managed-devices"></a><a name="bkmk_intune"></a>Kan ik analyse in de Cloud gebruiken met apparaten die door intune worden beheerd?
+### <a name="can-i-use-cloud-enabled-analytics-with-intune-managed-devices"></a><a name="bkmk_intune"></a> Kan ik analyse in de Cloud gebruiken met apparaten die door intune worden beheerd?
 
 Niet vandaag, maar zie de aankondiging van micro soft Ignite 2019 op inzichten op basis van het [beheer van apparaten](https://myignite.techcommunity.microsoft.com/sessions/81690?source=sessions). Deze geplande oplossing is een opvolger van Apparaatstatus en Upgradegereedheid.
 
@@ -73,7 +73,7 @@ Ja. Zie [conversie van BIOS naar UEFI tijdens een in-place upgrade](../osd/deplo
 
 ### <a name="can-i-use-desktop-analytics-with-windows-10-ltsc"></a>Kan ik Desktop Analytics gebruiken met Windows 10 LTSC?
 
-Desktop Analytics biedt geen ondersteuning voor LTSC-apparaten (Long-term Servicing Channel) van Windows 10. Zie [Windows as a Service Overview](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel)(Engelstalig) voor meer informatie.
+Desktop Analytics biedt geen ondersteuning voor LTSC-apparaten (Long-term Servicing Channel) van Windows 10. Zie [Windows as a Service Overview](/windows/deployment/update/waas-overview#long-term-servicing-channel)(Engelstalig) voor meer informatie.
 
 ### <a name="can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal"></a>Kan ik de hoeveelheid tijd verminderen die nodig is voor het vernieuwen van gegevens in mijn bureau blad Analytics Portal?
 
@@ -106,7 +106,7 @@ Windows diagnostische gegevens van uw computers zijn versleuteld, verzonden naar
 
 ### <a name="can-i-use-update-compliance-together-with-desktop-analytics"></a>Kan ik Updatenaleving gebruiken in combi natie met Desktop Analytics?
 
-Ja. Als u [Updatenaleving](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started) in het Azure Portal vandaag gebruikt, kunt u dit nu nog verder doen en na januari 2020.
+Ja. Als u [Updatenaleving](/windows/deployment/update/update-compliance-get-started) in het Azure Portal vandaag gebruikt, kunt u dit nu nog verder doen en na januari 2020.
 
 Zie [KB 4521815: Windows Analytics is buiten gebruik gesteld op 31 januari 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement)voor meer informatie.
 
@@ -149,9 +149,9 @@ Ja, de volgende Windows Analytics-functies zijn buiten gebruik gesteld of nog ni
 - Windows Information Protection
 - Ondersteuning voor Windows Server
 
-## <a name="other"></a>Overige
+## <a name="other"></a>Overig
 
-### <a name="can-i-use-desktop-analytics-for-my-microsoft-365-apps-upgrades"></a><a name="bkmk_office"></a>Kan ik Desktop Analytics gebruiken voor de upgrades van mijn Microsoft 365-apps?
+### <a name="can-i-use-desktop-analytics-for-my-microsoft-365-apps-upgrades"></a><a name="bkmk_office"></a> Kan ik Desktop Analytics gebruiken voor de upgrades van mijn Microsoft 365-apps?
 
 Nee, Desktop Analytics is gericht op Windows. Micro soft heeft Desktop Analytics ontwikkeld in nauwe samen werking met veel klanten. Feedback van klanten is het verbeteren van de manier waarop Desktop Analytics de mogelijkheid biedt om Windows-implementaties vertrouwen te beheren. Ze vertellen dat ze de gereedheids functies van [Microsoft 365 apps](../sum/deploy-use/office-365-dashboard.md#bkmk_o365_readiness) nauw keuriger kunnen integreren met Microsoft 365-hulpprogram ma's voor het beheer van apps in Configuration Manager en intune. Micro soft blijft investeren in deze gebieden en is gericht op Windows-scenario's in Desktop Analytics.
 

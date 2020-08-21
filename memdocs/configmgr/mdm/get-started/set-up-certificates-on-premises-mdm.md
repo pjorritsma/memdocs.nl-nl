@@ -10,12 +10,12 @@ ms.assetid: 2a7d7170-1933-40e9-96d6-74a6eb7278e2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bc63a21970bb522407c86d027690b83894b3cb99
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: 4ac8d416e05b97b824ae236c2b1a2ff958b946b5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721827"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700024"
 ---
 # <a name="set-up-certificates-for-trusted-communications-with-on-premises-mdm"></a>Certificaten instellen voor vertrouwde communicatie met on-premises MDM
 
@@ -34,9 +34,9 @@ Voor bulksgewijs Inge schreven apparaten kunt u het certificaat in het inschrijv
 Als u een bekende open bare certificerings instantie zoals VeriSign of GoDaddy gebruikt om de server certificaten te verlenen, kunt u voor komen dat u het vertrouwde basis certificaat op elk apparaat hand matig moet installeren. De meeste apparaten vertrouwen deze open bare instanties systeem eigen. Deze methode is een handig alternatief voor door de gebruiker Inge schreven apparaten, in plaats van het certificaat op een andere manier te installeren.
 
 > [!IMPORTANT]  
-> Er zijn veel manieren voor het instellen van de certificaten voor vertrouwde communicatie tussen apparaten en de site systeem servers voor on-premises MDM. De informatie in dit artikel is een voor beeld van een manier om dit te doen. Voor deze methode is Active Directory Certificate Services vereist, met een certificerings instantie en de rol webregistratie voor certificerings instantie. Zie voor meer informatie [Active Directory Certificate Services](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740\(v=ws.11\)).
+> Er zijn veel manieren voor het instellen van de certificaten voor vertrouwde communicatie tussen apparaten en de site systeem servers voor on-premises MDM. De informatie in dit artikel is een voor beeld van een manier om dit te doen. Voor deze methode is Active Directory Certificate Services vereist, met een certificerings instantie en de rol webregistratie voor certificerings instantie. Zie voor meer informatie [Active Directory Certificate Services](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740\(v=ws.11\)).
 
-## <a name="publish-the-crl"></a><a name="bkmk_configCa"></a>De CRL publiceren
+## <a name="publish-the-crl"></a><a name="bkmk_configCa"></a> De CRL publiceren
 
 De Active Directory certificerings instantie (CA) gebruikt standaard op LDAP gebaseerde certificaatintrekkingslijsten (Crl's). Hiermee kunnen verbindingen met de CRL worden toegestaan voor apparaten die lid zijn van een domein. Als u apparaten die niet lid zijn van een domein wilt toestaan certificaten te vertrouwen die zijn uitgegeven door de CA, voegt u een op HTTP gebaseerde CRL toe.
 
@@ -60,7 +60,7 @@ De Active Directory certificerings instantie (CA) gebruikt standaard op LDAP geb
 
 1. Selecteer in het venster CRL publiceren de optie **alleen Delta-CRL**en selecteer vervolgens **OK** om het venster te sluiten.
 
-## <a name="create-the-certificate-template"></a><a name="bkmk_certTempl"></a>De certificaat sjabloon maken
+## <a name="create-the-certificate-template"></a><a name="bkmk_certTempl"></a> De certificaat sjabloon maken
 
 De CA gebruikt het sjabloon webserver certificaat om certificaten uit te geven voor de servers die als host fungeren voor de site systeem rollen. Deze servers worden SSL-eind punten voor vertrouwde communicatie tussen de site systeem rollen en Inge schreven apparaten.
 
@@ -95,7 +95,7 @@ De CA gebruikt het sjabloon webserver certificaat om certificaten uit te geven v
 
 1. Selecteer in het venster **certificaat sjablonen inschakelen** de nieuwe sjabloon. Bijvoorbeeld **CONFIGMGR MDM-webserver**. Selecteer vervolgens **OK** om het venster op te slaan en te sluiten.
 
-## <a name="request-the-certificate"></a><a name="bkmk_requestCert"></a>Het certificaat aanvragen
+## <a name="request-the-certificate"></a><a name="bkmk_requestCert"></a> Het certificaat aanvragen
 
 In dit proces wordt beschreven hoe u het webserver certificaat voor IIS aanvraagt. Voer dit proces uit voor elke site systeem server die als host fungeert voor een van de rollen voor on-premises MDM.
 
@@ -121,7 +121,7 @@ In dit proces wordt beschreven hoe u het webserver certificaat voor IIS aanvraag
 
 Elke server moet een uniek webserver certificaat hebben. Herhaal dit proces voor elke server die als host fungeert voor een van de vereiste site systeem rollen. Als één server als host fungeert voor alle sitesysteemrollen, hoeft u maar één webservercertificaat aan te vragen.
 
-## <a name="bind-the-certificate"></a><a name="bkmk_bindCert"></a>Het certificaat binden
+## <a name="bind-the-certificate"></a><a name="bkmk_bindCert"></a> Het certificaat binden
 
 De volgende stap is het koppelen van het nieuwe certificaat aan de webserver. Volg deze procedure voor elke server die als host fungeert voor de site systeem rollen van het *inschrijvings punt* en het *inschrijvings proxy punt* . Als één server als host fungeert voor alle site systeem rollen, hoeft u dit proces maar één keer uit te voeren.
 
@@ -138,7 +138,7 @@ De volgende stap is het koppelen van het nieuwe certificaat aan de webserver. Vo
 
 1. Selecteer in de IIS-beheer console in de lijst met verbindingen de webserver. Selecteer **opnieuw opstarten**in het deel venster actie aan de rechter kant. Met deze actie wordt de Web Server-service opnieuw gestart.
 
-## <a name="export-the-trusted-root-certificate"></a><a name="bkmk_exportCert"></a>Het vertrouwde basis certificaat exporteren
+## <a name="export-the-trusted-root-certificate"></a><a name="bkmk_exportCert"></a> Het vertrouwde basis certificaat exporteren
 
 Active Directory Certificate Services installeert automatisch het vereiste certificaat van de certificerings instantie op alle apparaten die lid zijn van het domein. Als u het certificaat wilt ophalen dat is vereist voor apparaten die niet lid zijn van een domein om te communiceren met de site systeem rollen, moet u het exporteren van het certificaat dat is gebonden aan de webserver.
 

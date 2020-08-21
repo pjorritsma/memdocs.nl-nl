@@ -10,12 +10,12 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8370c3352778fa6bb7c6229beb1c7610c419a86d
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 22e78fdba1c004554d671ba2db96c61395f95ca2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129294"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699956"
 ---
 # <a name="plan-for-bitlocker-management"></a>BitLocker-beheer plannen
 
@@ -28,7 +28,7 @@ Vanaf versie 1910 gebruikt u Configuration Manager om BitLocker-stationsversleut
 > [!NOTE]
 > Configuration Manager schakelt deze optionele functie standaard niet in. U moet deze functie inschakelen voordat u deze kunt gebruiken. Zie voor meer informatie [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).  
 
-Zie [overzicht van BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview)voor meer informatie.
+Zie [overzicht van BitLocker](/windows/security/information-protection/bitlocker/bitlocker-overview)voor meer informatie.
 
 > [!TIP]
 > Als u versleuteling wilt beheren op met co beheerde Windows 10-apparaten met behulp van de micro soft Endpoint Manager-Cloud service, schakelt u de [ **Endpoint Protection** workload](../../comanage/workloads.md#endpoint-protection) over naar intune. Zie [Windows-versleuteling](/intune/protect/endpoint-protection-windows-10#windows-encryption)voor meer informatie over het gebruik van intune.
@@ -94,7 +94,7 @@ Laat gebruikers zichzelf helpen met een sleutel voor eenmalig gebruik voor het o
     > [!NOTE]
     > Installeer alleen de Self-Service Portal en de beheer-en bewakings website met een primaire site database. Installeer deze websites voor elke primaire site in een hiërarchie.
 
-- Op de webserver die als host fungeert voor de Self-Service Portal, installeert u [micro soft ASP.NET MVC 4,0](https://docs.microsoft.com/aspnet/mvc/mvc4) en .NET Framework 3,5 Feature voordat u het installatie proces indrukt. Andere vereiste Windows Server-functies en-onderdelen worden automatisch geïnstalleerd tijdens het installatie proces van de portal.
+- Op de webserver die als host fungeert voor de Self-Service Portal, installeert u [micro soft ASP.NET MVC 4,0](/aspnet/mvc/mvc4) en .NET Framework 3,5 Feature voordat u het installatie proces indrukt. Andere vereiste Windows Server-functies en-onderdelen worden automatisch geïnstalleerd tijdens het installatie proces van de portal.
 
 - Het gebruikers account dat het installatie script voor de portal uitvoert, heeft SQL **sysadmin** -rechten nodig op de site database server. Tijdens het installatie proces stelt het script aanmeldings-, gebruikers-en SQL-rollen rechten in voor het computer account van de webserver. U kunt dit gebruikers account verwijderen uit de sysadmin-rol nadat u de installatie van de Self-Service Portal en de beheer-en controle website hebt voltooid.
 

@@ -10,12 +10,12 @@ ms.assetid: 1098e8c5-9676-4c2b-841b-ec88bd04e495
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f7d774d620916f3d735a3545db5fe1e41988731d
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 4d2977fc34e9c398e9e266cbc9b223ea74a1dd18
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126678"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700228"
 ---
 # <a name="support-for-virtualization-environments-with-configuration-manager"></a>Ondersteuning voor virtualisatie-omgevingen met Configuration Manager
 
@@ -37,7 +37,7 @@ U kunt bijvoorbeeld Microsoft Hyper-V Server 2016 gebruiken om een VM te hosten 
 <a name="bkmk_note1"></a>
 
 > [!NOTE]
-> Configuration Manager biedt geen ondersteuning voor [geneste virtualisatie](https://docs.microsoft.com/windows-server/virtualization/hyper-v/What-s-new-in-Hyper-V-on-Windows#nested-virtualization-new), wat nieuw is in Windows Server 2016.
+> Configuration Manager biedt geen ondersteuning voor [geneste virtualisatie](/windows-server/virtualization/hyper-v/What-s-new-in-Hyper-V-on-Windows#nested-virtualization-new), wat nieuw is in Windows Server 2016.
 
 ### <a name="virtualization-environment-support"></a>Ondersteuning van de Virtualization Environment
 
@@ -51,7 +51,7 @@ Over het algemeen biedt Configuration Manager geen speciale aandacht voor Vm's. 
 
 Voor hulp bij de Configuration Manager client prestaties in virtuele omgevingen die ondersteuning bieden voor meerdere gebruikers sessies, wordt het gebruikers beleid standaard uitgeschakeld. Vanaf versie 1910 kunt u het gebruikers beleid inschakelen in dit scenario. Zie voor meer informatie [over client instellingen-gebruikers beleid inschakelen voor meerdere gebruikers sessies](../../clients/deploy/about-client-settings.md#enable-user-policy-for-multiple-user-sessions).
 
-## <a name="microsoft-azure-vms"></a><a name="bkmk_Azure"></a>Microsoft Azure Vm's
+## <a name="microsoft-azure-vms"></a><a name="bkmk_Azure"></a> Microsoft Azure Vm's
 
 Configuration Manager kunnen worden uitgevoerd op virtuele machines in azure, net zoals het on-premises wordt uitgevoerd binnen uw Data Center. Gebruik Configuration Manager met Azure-Vm's in de volgende scenario's:
 
@@ -70,7 +70,7 @@ Zie [Configuration Manager op Azure](../../understand/configuration-manager-on-a
 
 ## <a name="windows-virtual-desktop"></a>Windows Virtual Desktop
 
-[Virtueel bureau blad van Windows](https://docs.microsoft.com/azure/virtual-desktop/) is een desktop-en app Virtualization-service die wordt uitgevoerd op Microsoft Azure. Vanaf versie 1906 gebruikt u Configuration Manager voor het beheren van deze virtuele apparaten waarop Windows wordt uitgevoerd in Azure. Zie [ondersteunde besturings systemen voor clients en apparaten](supported-operating-systems-for-clients-and-devices.md#windows-virtual-desktop)voor meer informatie.
+[Virtueel bureau blad van Windows](/azure/virtual-desktop/) is een desktop-en app Virtualization-service die wordt uitgevoerd op Microsoft Azure. Vanaf versie 1906 gebruikt u Configuration Manager voor het beheren van deze virtuele apparaten waarop Windows wordt uitgevoerd in Azure. Zie [ondersteunde besturings systemen voor clients en apparaten](supported-operating-systems-for-clients-and-devices.md#windows-virtual-desktop)voor meer informatie.
 
 ## <a name="next-steps"></a>Volgende stappen
 

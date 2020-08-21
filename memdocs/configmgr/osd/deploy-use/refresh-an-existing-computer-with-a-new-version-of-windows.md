@@ -10,12 +10,12 @@ ms.assetid: b189a346-8c0d-4870-a876-0719fbb0ab04
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b635301d9d5bd8a0fb81771255acddb21097f23b
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 5972f930e0f8026f0ca1004d797bf34605af201e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124899"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697837"
 ---
 # <a name="refresh-an-existing-computer-with-a-new-version-of-windows"></a>Een bestaande computer vernieuwen met een nieuwe versie van Windows
 
@@ -25,7 +25,7 @@ Gebruik Configuration Manager om een bestaande computer te partitioneren en Form
 
 Zie [scenario's voor het implementeren van ENTER prise-besturings systemen](scenarios-to-deploy-enterprise-operating-systems.md)om het juiste scenario voor de implementatie van het besturings systeem te kiezen.  
 
-## <a name="plan"></a><a name="BKMK_Plan"></a>Fonds  
+## <a name="plan"></a><a name="BKMK_Plan"></a> Fonds  
 
 ### <a name="plan-for-and-implement-infrastructure-requirements"></a>Infrastructuur vereisten plannen en implementeren
 
@@ -35,7 +35,7 @@ Er zijn verschillende vereisten voor de infra structuur die moeten worden uitgev
 
 Als u instellingen van een bestaande computer wilt vastleggen en vervolgens de instellingen wilt herstellen naar het nieuwe besturings systeem, overweeg dan het gebruik van een status migratie punt. Zie [State migration point](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints)voor meer informatie.  
 
-## <a name="configure"></a><a name="BKMK_Configure"></a>Geconfigureerd  
+## <a name="configure"></a><a name="BKMK_Configure"></a> Geconfigureerd  
 
 ### <a name="prepare-a-boot-image"></a>Een opstartinstallatiekopie voorbereiden
 
@@ -69,7 +69,7 @@ Raadpleeg voor meer informatie de volgende artikelen:
 
 - [De gebruikersstatus beheren](../get-started/manage-user-state.md)
 
-## <a name="deploy"></a><a name="BKMK_Deploy"></a>Zetten
+## <a name="deploy"></a><a name="BKMK_Deploy"></a> Zetten
 
 - Gebruik een van de volgende implementatie methoden om het besturings systeem te implementeren:  
 
@@ -90,4 +90,4 @@ Raadpleeg voor meer informatie de volgende artikelen:
 Zie [implementaties van besturings systemen bewaken](monitor-operating-system-deployments.md)voor meer informatie.  
 
 > [!Note]
-> Wanneer u een installatie kopie van een UEFI-apparaat opnieuw wilt maken, wordt er in Windows Boot Manager een nieuwe vermelding in de opstart lader gemaakt. Dit gedrag is het meest merkbaar wanneer u een apparaat herhaaldelijk opnieuw beveiligt, bijvoorbeeld in een test omgeving of een student Lab. Dit heeft doorgaans geen invloed op de prestaties of het gebruik van het apparaat. Als de lijst te groot wordt, kunnen bepaalde hardwareapparaten problemen ondervinden. Bijvoorbeeld, niet opstarten naar een extern USB-station of kan de huidige opstart vermelding niet selecteren in de lijst. Gebruik de Windows **bcdedit** -opdracht om ongebruikte opstart vermeldingen te wissen. Zie [bcdedit/deletevalue](https://docs.microsoft.com/windows-hardware/drivers/devtest/bcdedit--deletevalue)voor meer informatie.<!-- 2841926 -->
+> Wanneer u een installatie kopie van een UEFI-apparaat opnieuw wilt maken, wordt er in Windows Boot Manager een nieuwe vermelding in de opstart lader gemaakt. Dit gedrag is het meest merkbaar wanneer u een apparaat herhaaldelijk opnieuw beveiligt, bijvoorbeeld in een test omgeving of een student Lab. Dit heeft doorgaans geen invloed op de prestaties of het gebruik van het apparaat. Als de lijst te groot wordt, kunnen bepaalde hardwareapparaten problemen ondervinden. Bijvoorbeeld, niet opstarten naar een extern USB-station of kan de huidige opstart vermelding niet selecteren in de lijst. Gebruik de Windows **bcdedit** -opdracht om ongebruikte opstart vermeldingen te wissen. Zie [bcdedit/deletevalue](/windows-hardware/drivers/devtest/bcdedit--deletevalue)voor meer informatie.<!-- 2841926 -->

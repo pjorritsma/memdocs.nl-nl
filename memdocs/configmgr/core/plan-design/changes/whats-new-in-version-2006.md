@@ -2,7 +2,7 @@
 title: Wat is er nieuw in versie 2006
 titleSuffix: Configuration Manager
 description: Krijg informatie over wijzigingen en nieuwe mogelijkheden die zijn geïntroduceerd in versie 2006 van Configuration Manager current branch.
-ms.date: 08/11/2020
+ms.date: 08/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f624a207b5e9afded9b86312d1608a35005355f6
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: bdfb122173c913274373f41c3932f1ac094ec953
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179338"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700279"
 ---
 # <a name="whats-new-in-version-2006-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 2006 van Configuration Manager current branch
 
@@ -27,23 +27,20 @@ Bekijk altijd de laatste controle lijst voor het installeren van deze update. Zi
 
 Als u optimaal wilt profiteren van de nieuwe functies van Configuration Manager, moet u na het bijwerken van de site ook clients bijwerken naar de nieuwste versie. Wanneer u de-site en-console bijwerkt terwijl er nieuwe functionaliteit wordt weer gegeven in de Configuration Manager-console, is het volledige scenario niet functioneel totdat de client versie ook het meest recent is.
 
-<!-- commenting this for now as it doesn't work 7422960
 > [!TIP]
-> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
-> `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2006+-+Configuration+Manager%22&locale=en-us`
- -->
+> Als u een melding wilt ontvangen wanneer deze pagina wordt bijgewerkt, kopieert en plakt u de volgende URL in uw RSS feed-lezer: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2006+-+Configuration+Manager%22&locale=en-us`
 
-## <a name="microsoft-endpoint-manager-tenant-attach"></a><a name="bkmk_tenant"></a>Micro soft Endpoint Manager-Tenant koppelen
+## <a name="microsoft-endpoint-manager-tenant-attach"></a><a name="bkmk_tenant"></a> Micro soft Endpoint Manager-Tenant koppelen
 
 ### <a name="install-applications-from-the-admin-center"></a>Toepassingen installeren vanuit het beheer centrum
 <!--7518897, 6024389-->
-Vanuit het micro soft Endpoint Manager-beheer centrum kunt u een installatie van een toepassing in realtime initiëren voor een apparaat dat is gekoppeld aan een Tenant. Vanaf Configuration Manager versie 2006 bevat de lijst met toepassingen die beschikbaar zijn voor het apparaat ook toepassingen die zijn geïmplementeerd op de momenteel aangemelde gebruiker van het apparaat. Zie [Tenant koppelen: een toepassing installeren vanuit het beheer centrum](../../../tenant-attach/applications.md)voor meer informatie.  
+Vanuit het micro soft Endpoint Manager-beheer centrum kunt u een installatie van een toepassing in realtime initiëren voor een apparaat dat is gekoppeld aan een Tenant. Vanaf Configuration Manager versie 2006 bevat de lijst met toepassingen die beschikbaar zijn voor het apparaat ook toepassingen die zijn geïmplementeerd op de momenteel aangemelde gebruiker van het apparaat. Zie voor meer informatie [Tenant koppelen: Installeer een toepassing vanuit het beheercentrum](../../../tenant-attach/applications.md).  
 
 ### <a name="import-previously-created-azure-ad-application-during-tenant-attach-onboarding"></a>Eerder gemaakte Azure AD-toepassing importeren tijdens het voorbereiden van de Tenant bijvoegen
 <!--6479246-->
 Tijdens een nieuwe onboarding kan een beheerder een eerder gemaakte toepassing opgeven tijdens het voorbereiden op het koppelen van de Tenant. Raadpleeg voor meer informatie [Microsoft Endpoint Manager-tenant koppelen: Synchronisatie van apparaten en apparaatacties](../../../tenant-attach/device-sync-actions.md#bkmk_aad_app).
 
-## <a name="endpoint-analytics"></a><a name="bkmk_ea"></a>Endpoint Analytics
+## <a name="endpoint-analytics"></a><a name="bkmk_ea"></a> Endpoint Analytics
 
 ### <a name="endpoint-analytics-data-collection-enabled-by-default"></a>Endpoint Analytics-gegevens verzameling is standaard ingeschakeld
 <!--7065447, 7741111-->
@@ -54,7 +51,7 @@ De client instelling **endpoint Analytics-gegevens verzameling inschakelen** is 
 
 Zie [Configure endpoint Analytics-gegevens verzameling in Configuration Manager](../../../../analytics/enroll-configmgr.md#bkmk_cm_upload)voor meer informatie.
 
-## <a name="site-infrastructure"></a><a name="bkmk_infra"></a>Site-infra structuur
+## <a name="site-infrastructure"></a><a name="bkmk_infra"></a> Site-infra structuur
 
 ### <a name="vpn-boundary-type"></a>Type VPN-grens
 
@@ -90,7 +87,15 @@ Zie [ondersteunde versies van besturings systemen voor clients en apparaten](../
 <!--7102873-->
 Intranet-clients hebben nu toegang tot een CMG-software-update punt wanneer het wordt toegewezen aan een grens groep. Zie [grens groepen configureren](../../servers/deploy/configure/boundary-groups.md#bkmk_cmg-sup)voor meer informatie.
 
-## <a name="cloud-attached-management"></a><a name="bkmk_cloud"></a>Cloud-gekoppeld beheer
+## <a name="cloud-attached-management"></a><a name="bkmk_cloud"></a> Cloud-gekoppeld beheer
+
+### <a name="use-the-company-portal-app-on-co-managed-devices"></a>De app Bedrijfsportal gebruiken op gezamenlijk beheerde apparaten
+
+<!--CMADO-3601237,INADO-4297660-->
+
+De Bedrijfsportal is nu de platformoverschrijdende app Portal-ervaring voor micro soft Endpoint Manager. Door gezamenlijk beheerde apparaten te configureren om ook gebruik te maken van de Bedrijfsportal, kunt u op alle apparaten een consistente gebruikers ervaring bieden.
+
+Zie [De bedrijfsportal-app configureren op co-beheerde apparaten](../../../comanage/company-portal.md) voor meer informatie.
 
 ### <a name="use-microsoft-azure-china-21vianet-for-co-management"></a>Gebruik Microsoft Azure China 21Vianet voor co-beheer
 <!--7133238-->
@@ -128,7 +133,7 @@ Als u eerder apparaten op het niveau **verbeterd** hebt geconfigureerd, worden d
 
 Zie voor meer informatie [delen van gegevens inschakelen voor desktop Analytics](../../../desktop-analytics/enable-data-sharing.md).
 
-## <a name="real-time-management"></a><a name="bkmk_real"></a>Real-time beheer
+## <a name="real-time-management"></a><a name="bkmk_real"></a> Real-time beheer
 
 ### <a name="improvements-to-cmpivot"></a>Verbeteringen in CMPivot
 <!--6518631-->
@@ -140,7 +145,7 @@ De volgende verbeteringen zijn aangebracht in CMPivot:
 
 Zie [CMPivot vanaf versie 2006](../../servers/manage/cmpivot-changes.md#bkmk_2006)voor meer informatie.
 
-## <a name="client-management"></a><a name="bkmk_client"></a>Client beheer
+## <a name="client-management"></a><a name="bkmk_client"></a> Client beheer
 
 ### <a name="install-and-upgrade-the-client-on-a-metered-connection"></a>De client installeren en upgraden op een verbinding met een Data limiet
 
@@ -163,7 +168,7 @@ Configuration Manager biedt veel opties voor het beheren van het opnieuw opstart
 
 Zie meldingen voor het [opnieuw opstarten van apparaten](../../clients/deploy/device-restart-notifications.md)voor meer informatie.
 
-## <a name="application-management"></a><a name="bkmk_app"></a>Toepassings beheer
+## <a name="application-management"></a><a name="bkmk_app"></a> Toepassings beheer
 
 ### <a name="improvements-to-available-apps-via-cmg"></a>Verbeteringen in beschik bare apps via CMG
 
@@ -182,7 +187,7 @@ Office 365 ProPlus is gewijzigd in Microsoft 365 apps voor ondernemingen op 21 a
 
 Zie [Microsoft 365 apps-kanaal namen](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_channel) en [Microsoft 365 apps Readiness dash board](../../../sum/deploy-use/office-365-dashboard.md#bkmk_readiness-dash)voor meer informatie.
 
-## <a name="os-deployment"></a><a name="bkmk_osd"></a>Implementatie van besturings systeem
+## <a name="os-deployment"></a><a name="bkmk_osd"></a> Implementatie van besturings systeem
 
 ### <a name="task-sequence-media-support-for-cloud-based-content"></a>Ondersteuning voor taken reeks media voor Cloud inhoud
 
@@ -246,7 +251,7 @@ Deze release bevat de volgende aanvullende verbeteringen voor de implementatie v
 
 - Sommige klanten bouwen aangepaste taken reeks interfaces met behulp van de methode **IProgressUI:: ShowMessage** , maar er wordt geen waarde geretourneerd voor het antwoord van de gebruiker. Deze release voegt de methode [IProgressUI:: ShowMessageEx](../../../develop/reference/core/clients/client-classes/iprogressui--showmessageex-method.md) toe. Deze nieuwe methode is vergelijkbaar met de bestaande methode, maar bevat ook een nieuwe integer-resultaat variabele, **pResult**.<!--6448458-->
 
-## <a name="protection"></a>Beveiliging
+## <a name="protection"></a>Protection
 
 ### <a name="cmg-support-for-endpoint-protection-policies"></a>CMG-ondersteuning voor Endpoint Protection-beleid
 
@@ -264,7 +269,7 @@ U kunt nu de BitLocker Self-Service Portal en de beheer-en bewakings website ins
 
 Zie [BitLocker-portals instellen](../../../protect/deploy-use/bitlocker/setup-websites.md)voor meer informatie.
 
-## <a name="configuration-manager-console"></a><a name="bkmk_admin"></a>Configuration Manager-console
+## <a name="configuration-manager-console"></a><a name="bkmk_admin"></a> Configuration Manager-console
 
 ### <a name="community-hub-and-github"></a>Community-hub en GitHub
 <!--3555935, 3555936, deep link included 4224406-->
@@ -275,7 +280,7 @@ De IT-beheerder heeft een schat aan kennis ontwikkeld over de jaren. In plaats v
 
 Zie [Community hub en github](../../servers/manage/community-hub.md)voor meer informatie.
 
-### <a name="direct-links-to-community-hub-items"></a><a name="bkmk_deeplink"></a>Directe koppelingen naar Community-hub-items
+### <a name="direct-links-to-community-hub-items"></a><a name="bkmk_deeplink"></a> Directe koppelingen naar Community-hub-items
 <!--4224406-->
 U kunt eenvoudig navigeren naar en verwijzen naar items in het knoop punt van de Configuration Manager console-hub met een directe koppeling. Zie [directe koppelingen naar Community-hub-items](../../servers/manage/community-hub.md#bkmk_deeplink)voor meer informatie.
 
@@ -306,7 +311,7 @@ Zie [voorbeeld rapporten van Power bi installeren](../../servers/manage/powerbi-
 ## <a name="bkmk_comgmt"></a> Co-management
 -->
 
-## <a name="deprecated-operating-systems"></a><a name="bkmk_deprecated"></a>Afgeschafte besturings systemen
+## <a name="deprecated-operating-systems"></a><a name="bkmk_deprecated"></a> Afgeschafte besturings systemen
 
 Meer informatie over ondersteunings wijzigingen voordat ze worden geïmplementeerd in [verwijderde en afgeschafte items](deprecated/removed-and-deprecated.md).
 
@@ -324,7 +329,7 @@ Starting with this version, the following features are no longer [pre-release](.
 ### Azure Active Directory user group discovery](../../servers/deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco)<!--3611956
 -->
 
-Zie [release opmerkingen voor Power shell versie 2006](https://docs.microsoft.com/powershell/sccm/2006-release-notes?view=sccm-ps)voor meer informatie over wijzigingen in de Windows Power shell-cmdlets voor Configuration Manager.
+Zie [release opmerkingen voor Power shell versie 2006](/powershell/sccm/2006-release-notes?view=sccm-ps)voor meer informatie over wijzigingen in de Windows Power shell-cmdlets voor Configuration Manager.
 
 Zie [release opmerkingen voor de beheer service](../../../develop/adminservice/release-notes.md#bkmk_2006)voor meer informatie over wijzigingen in de beheer service rest API.
 

@@ -10,12 +10,12 @@ ms.assetid: 104fb4cc-6e83-40a3-8e6b-ac909fb9ec7d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a32f0a59a0b3ce3ad864fecf61fe7281b8ebbdd2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 068511c5b3b0c15eb355c484b241a76d9dd512e2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720812"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700177"
 ---
 # <a name="plan-for-the-site-database-for-configuration-manager"></a>De site database voor Configuration Manager plannen
 
@@ -31,7 +31,7 @@ De site database server is een computer waarop een ondersteunde versie van Micro
 
 -  Voor gebruik van niet-SQL-beschikbaarheids groep moet het database herstel model zijn ingesteld op eenvoudig  
 
-Meer informatie over SQL-herstel modi vindt u in [herstel modellen (SQL Server)](https://docs.microsoft.com/sql/relational-databases/backup-restore/recovery-models-sql-server).
+Meer informatie over SQL-herstel modi vindt u in [herstel modellen (SQL Server)](/sql/relational-databases/backup-restore/recovery-models-sql-server).
 
 De volgende SQL Server-configuraties kunnen worden gebruikt om de sitedatabase te hosten:  
 
@@ -61,4 +61,4 @@ Als u een externe database server computer gebruikt, moet u ervoor zorgen dat de
 -   U kunt geen geclusterde SQL Server gebruiken voor de sitedatabaseserver wanneer de sitedatabase zich op dezelfde locatie als de siteserver bevindt.  
 
 
-Normaal gesp roken ondersteunt een site systeem Server site systeem rollen van slechts één Configuration Manager-site. U kunt echter verschillende exemplaren van SQL Server gebruiken op geclusterde of niet-geclusterde servers waarop SQL Server wordt uitgevoerd om een Data Base van verschillende Configuration Manager-sites te hosten. Om databases voor verschillende sites te ondersteunen, moet u elk exemplaar van SQL Server configureren om unieke poorten voor communicatie te gebruiken.  
+Normaal gesp roken ondersteunt een site systeem Server site systeem rollen van slechts één Configuration Manager-site. U kunt echter verschillende exemplaren van SQL Server gebruiken op geclusterde of niet-geclusterde servers waarop SQL Server wordt uitgevoerd om een Data Base van verschillende Configuration Manager-sites te hosten. Om databases voor verschillende sites te ondersteunen, moet u elk exemplaar van SQL Server configureren om unieke poorten voor communicatie te gebruiken.

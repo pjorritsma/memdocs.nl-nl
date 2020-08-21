@@ -10,12 +10,12 @@ ms.assetid: b3d755bd-0870-4f1f-a56d-bfd3c7b492b9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 31f9b1cb083400abd36858a177e87804a916362c
-ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
+ms.openlocfilehash: aca3322c245fa22a7c87f30e328833d8a8a128bc
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746508"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699038"
 ---
 # <a name="how-to-use-the-configuration-manager-docs"></a>De Configuration Manager docs gebruiken
 
@@ -30,7 +30,7 @@ In dit artikel vindt u bronnen en tips voor het gebruik van de documentatie bibl
 
 Zie [Help zoeken](find-help.md)voor algemene hulp bij het product.
 
-## <a name="search"></a><a name="bkmk_searchtips"></a>Opdracht
+## <a name="search"></a><a name="bkmk_searchtips"></a> Opdracht
 
 Gebruik de volgende zoektips om de benodigde informatie te vinden:
 
@@ -59,9 +59,9 @@ Gebruik de volgende zoektips om de benodigde informatie te vinden:
 > [!TIP]
 > Vanaf Configuration Manager versie 1902 is er een **documentatie** knooppunt in de nieuwe werk ruimte van de **Community** van de Configuration Manager-console. Dit knoop punt bevat actuele informatie over Configuration Manager documentatie en ondersteunings artikelen. Zie [de Configuration Manager-console gebruiken](../servers/manage/admin-console.md#bkmk_doc-dashboard)voor meer informatie.
 
-## <a name="feedback"></a><a name="bkmk_docfeedback"></a>Feedback
+## <a name="feedback"></a><a name="bkmk_docfeedback"></a> Feedback
 
-Selecteer de koppeling **feedback** in de rechter bovenhoek van een artikel om naar de sectie feedback onderaan te gaan. Deze sectie is geïntegreerd met GitHub-problemen. Zie het [blog bericht](https://docs.microsoft.com/teamblog/a-new-feedback-system-is-coming-to-docs)over het docs-platform voor meer informatie over de integratie met github-problemen.
+Selecteer de koppeling **feedback** in de rechter bovenhoek van een artikel om naar de sectie feedback onderaan te gaan. Deze sectie is geïntegreerd met GitHub-problemen. Zie het [blog bericht](/teamblog/a-new-feedback-system-is-coming-to-docs)over het docs-platform voor meer informatie over de integratie met github-problemen.
 
 Selecteer **product feedback**om feedback te geven over het Configuration Manager product zelf. Zie [product feedback](find-help.md#product-feedback)voor meer informatie.
 
@@ -83,21 +83,21 @@ Gebruik GitHub-problemen om de volgende typen feedback in te dienen:
 
 Als u een probleem voor niet-document-gerelateerde onderwerpen maakt, worden de problemen gesloten. Bijvoorbeeld:
 
-- [Product feedback](find-help.md#product-feedback)
+- [Productfeedback](find-help.md#product-feedback)
 - [Product vragen](https://social.technet.microsoft.com/Forums/en-US/home?category=ConfigMgrCB)
 - [Ondersteuningsaanvragen](https://aka.ms/cmcbsupport)
 
 Zie [opmerkingen over docs](https://aka.ms/sitefeedback)voor informatie over het delen van feedback op het belangrijkste docs.Microsoft.com-platform. Het platform bevat alle wrapper-onderdelen, zoals de koptekst, de inhouds opgave en het rechter menu. Ook hoe de artikelen worden weer gegeven in de browser, zoals het letter type, de waarschuwings vakken en pagina ankers.
 
-## <a name="notifications"></a><a name="bkmk_notifications"></a>Meldingen
+## <a name="notifications"></a><a name="bkmk_notifications"></a> Meldingen
 
 Als u meldingen wilt ontvangen wanneer inhoud in de documentatie bibliotheek wordt gewijzigd, gebruikt u de volgende stappen:
 
-1. Gebruik de [docs-zoek opdracht](https://docs.microsoft.com/search/index?scope=ConfigMgr) om een artikel of set artikelen te vinden. Bijvoorbeeld:
+1. Gebruik de [docs-zoek opdracht](/search/index?scope=ConfigMgr) om een artikel of set artikelen te vinden. Bijvoorbeeld:
 
-    - Zoeken naar één artikel op titel, [logboek bestanden voor probleem oplossing-Configuration Manager](https://docs.microsoft.com/search/index?search=%22Log+files+for+troubleshooting+-+Configuration+Manager%22&scope=ConfigMgr)
+    - Zoeken naar één artikel op titel, [logboek bestanden voor probleem oplossing-Configuration Manager](/search/index?scope=ConfigMgr&search=%22Log+files+for+troubleshooting+-+Configuration+Manager%22)
 
-    - Zoeken naar artikelen over [SQL](https://docs.microsoft.com/search/index?search=SQL&scope=ConfigMgr)
+    - Zoeken naar artikelen over [SQL](/search/index?scope=ConfigMgr&search=SQL)
 
 2. Selecteer in de rechter bovenhoek de koppeling **RSS** .
 
@@ -106,9 +106,9 @@ Als u meldingen wilt ontvangen wanneer inhoud in de documentatie bibliotheek wor
 > [!TIP]
 > U kunt ook de [SCCMdocs-opslag plaats](https://github.com/MicrosoftDocs/SCCMdocs) **bekijken** op github. Met deze methode worden veel meldingen gegenereerd. Het bevat ook geen wijzigingen van een privé-opslag plaats die wordt gebruikt door micro soft.
 
-## <a name="contribute"></a><a name="bkmk_contribute"></a>Noteer
+## <a name="contribute"></a><a name="bkmk_contribute"></a> Noteer
 
-De documentatie bibliotheek Configuration Manager, zoals de meeste inhoud op docs.microsoft.com, is open source op GitHub. In deze bibliotheek worden de bijdragen van de Community geaccepteerd en aangemoedigd. Zie de [gids voor inzenders](https://docs.microsoft.com/contribute)voor meer informatie over hoe u aan de slag kunt gaan. De enige vereiste is het maken van een [github-account](https://github.com/join).
+De documentatie bibliotheek Configuration Manager, zoals de meeste inhoud op docs.microsoft.com, is open source op GitHub. In deze bibliotheek worden de bijdragen van de Community geaccepteerd en aangemoedigd. Zie de [gids voor inzenders](/contribute)voor meer informatie over hoe u aan de slag kunt gaan. De enige vereiste is het maken van een [github-account](https://github.com/join).
 
 ### <a name="basic-steps-to-contribute-to-sccmdocs"></a>Basis stappen voor het bijdragen aan SCCMdocs
 
@@ -116,7 +116,7 @@ De documentatie bibliotheek Configuration Manager, zoals de meeste inhoud op doc
 
 2. Als u het bron bestand wilt bewerken, selecteert u het potlood pictogram.
 
-3. Wijzigingen aanbrengen in de bron voor de prijs verlaging. Zie voor meer informatie de [korting gebruiken voor het schrijven van docs](https://docs.microsoft.com/contribute/markdown-reference).
+3. Wijzigingen aanbrengen in de bron voor de prijs verlaging. Zie voor meer informatie de [korting gebruiken voor het schrijven van docs](/contribute/markdown-reference).
 
 4. Voer in de sectie bestands wijziging Voorst Ellen de open bare opmerking in die beschrijft *wat* u hebt gewijzigd. Selecteer vervolgens **Bestands wijziging**Voorst Ellen.
 
@@ -148,7 +148,7 @@ Volg deze algemene richt lijnen wanneer u bijdraagt aan Configuration Manager do
 
 - Zorg dat u geen grote pull-aanvragen verwacht. In plaats daarvan [een probleem in het bestand op te lossen](#bkmk_docfeedback) en een discussie te starten. Vervolgens kunnen we akkoord gaan met de richting voordat u een grote hoeveelheid tijd belegt.
 
-- Lees de [micro soft-stijl gids](https://aka.ms/MicrosoftStyle). De [10 belangrijkste tips voor micro soft-stijl en-stem](https://docs.microsoft.com/style-guide/top-10-tips-style-voice).
+- Lees de [micro soft-stijl gids](https://aka.ms/MicrosoftStyle). De [10 belangrijkste tips voor micro soft-stijl en-stem](/style-guide/top-10-tips-style-voice).
 
 - Gebruik de [sjabloon voor pull-aanvragen](https://github.com/MicrosoftDocs/SCCMdocs/blob/master/PULL_REQUEST_TEMPLATE.md) als uitgangs punt voor uw werk.
 
@@ -160,7 +160,7 @@ Volg deze algemene richt lijnen wanneer u bijdraagt aan Configuration Manager do
 
 ## <a name="consolidation-of-documentation-for-microsoft-endpoint-manager"></a>Consolidatie van documentatie voor micro soft Endpoint Manager
 
-Voor betere ondersteuning van gecombineerde scenario's voor intune en Configuration Manager worden de documentatie bibliotheken geconsolideerd op de [micro soft-site voor eindpunt beheer](https://docs.microsoft.com/mem). De intune-documentatie is nu op [docs.Microsoft.com/mem/intune](https://docs.microsoft.com/mem/intune)en de Configuration Manager documentatie is nu op [docs.Microsoft.com/mem/ConfigMgr](https://docs.microsoft.com/mem/configmgr). Als u nog steeds een oude URL gebruikt, wordt deze automatisch omgeleid, zodat u geen wijzigingen hoeft aan te brengen voor het lezen van deze inhoud.
+Voor betere ondersteuning van gecombineerde scenario's voor intune en Configuration Manager worden de documentatie bibliotheken geconsolideerd op de [micro soft-site voor eindpunt beheer](/mem). De intune-documentatie is nu op [docs.Microsoft.com/mem/intune](../../../intune/index.yml)en de Configuration Manager documentatie is nu op [docs.Microsoft.com/mem/ConfigMgr](../../index.yml). Als u nog steeds een oude URL gebruikt, wordt deze automatisch omgeleid, zodat u geen wijzigingen hoeft aan te brengen voor het lezen van deze inhoud.
 
 Als u feedback geeft of een bijdrage levert aan artikelen, zijn er nog enkele wijzigingen nodig:
 

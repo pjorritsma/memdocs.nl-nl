@@ -10,29 +10,29 @@ ms.assetid: 33a6c1d9-4dd8-411c-a748-693a5bd2ea5a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1189f8c89215bc228c533a88f38f5ae59b6855ee
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: 3fb7559f624afdb16ef228c61331387c163fbd54
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84454933"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697106"
 ---
 # <a name="create-and-deploy-microsoft-defender-application-guard-policy"></a>Micro soft Defender Application Guard-beleid maken en implementeren
 
 *Van toepassing op: Configuration Manager (huidige vertakking)*
 <!-- 1351960 -->  
-U kunt beleids regels voor [micro soft Defender Application Guard (toepassings beveiligings beleid)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview) maken en implementeren met behulp van de Configuration Manager Endpoint Protection. Met deze beleids regels kunt u uw gebruikers beschermen door niet-vertrouwde websites te openen in een beveiligde geïsoleerde container die niet toegankelijk is voor andere onderdelen van het besturings systeem.
+U kunt beleids regels voor [micro soft Defender Application Guard (toepassings beveiligings beleid)](/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview) maken en implementeren met behulp van de Configuration Manager Endpoint Protection. Met deze beleids regels kunt u uw gebruikers beschermen door niet-vertrouwde websites te openen in een beveiligde geïsoleerde container die niet toegankelijk is voor andere onderdelen van het besturings systeem.
 
 ## <a name="prerequisites"></a>Vereisten
 
-Als u een micro soft Defender Application Guard-beleid wilt maken en implementeren, moet u de update van Windows 10 najaar Maker (1709) gebruiken. De Windows 10-apparaten waarop u het beleid implementeert, moeten worden geconfigureerd met een [netwerk isolatie beleid](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard#network-isolation-settings). Zie voor meer informatie het [overzicht van micro soft Defender Application Guard](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview).
+Als u een micro soft Defender Application Guard-beleid wilt maken en implementeren, moet u de update van Windows 10 najaar Maker (1709) gebruiken. De Windows 10-apparaten waarop u het beleid implementeert, moeten worden geconfigureerd met een [netwerk isolatie beleid](/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard#network-isolation-settings). Zie voor meer informatie het [overzicht van micro soft Defender Application Guard](/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview).
 
 ## <a name="create-a-policy-and-to-browse-the-available-settings"></a>Een beleid maken en bladeren door de beschik bare instellingen
 
 1. Kies in de Configuration Manager-console **activa en naleving**.
 2. Kies **overzicht**Endpoint Protection **Assets and Compliance**  >  **Endpoint Protection**  >  **Windows Defender Application Guard**in de werk ruimte activa en naleving.
 3. Klik op het tabblad **Start** in de groep **maken** op **Windows Defender Application Guard-beleid maken**.
-4. Met behulp van het [artikel](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard) als referentie kunt u de beschik bare instellingen bekijken en configureren. Met Configuration Manager kunt u bepaalde beleids instellingen instellen:
+4. Met behulp van het [artikel](/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard) als referentie kunt u de beschik bare instellingen bekijken en configureren. Met Configuration Manager kunt u bepaalde beleids instellingen instellen:
    - [Instellingen voor interactie met host](#bkmk_HIS)
    - [Toepassings gedrag](#bkmk_ABS)
    - [Bestands beheer](#bkmk_FM)
@@ -44,11 +44,11 @@ Als u een micro soft Defender Application Guard-beleid wilt maken en implementer
     >  - een van Windows Information Protection
     >  - een van micro soft Defender Application Guard
     >
-    > Als u beide beleids regels implementeert, moeten deze netwerk isolatie lijsten overeenkomen. Als u lijsten implementeert die niet overeenkomen met dezelfde client, mislukt de implementatie. Zie de [Windows Information Protection-documentatie](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)voor meer informatie.
+    > Als u beide beleids regels implementeert, moeten deze netwerk isolatie lijsten overeenkomen. Als u lijsten implementeert die niet overeenkomen met dezelfde client, mislukt de implementatie. Zie de [Windows Information Protection-documentatie](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)voor meer informatie.
 
 6. Wanneer u klaar bent, voltooit u de wizard en implementeert u het beleid op een of meer Windows 10 1709-apparaten.
 
-### <a name="host-interaction-settings"></a><a name="bkmk_HIS"></a>Instellingen voor interactie met host
+### <a name="host-interaction-settings"></a><a name="bkmk_HIS"></a> Instellingen voor interactie met host
 
 Hiermee configureert u interacties tussen hostcomputers en de Application Guard-container. Vóór Configuration Manager versie 1802 bevonden zowel het toepassings gedrag als de interactie met de host zich op het tabblad **instellingen** .
 
@@ -66,19 +66,19 @@ Hiermee configureert u interacties tussen hostcomputers en de Application Guard-
 - **Bestanden:** (vanaf Configuration Manager versie 1802)
   - Gedownloade bestanden opslaan op de host
 
-### <a name="application-behavior-settings"></a><a name="bkmk_ABS"></a>Instellingen voor toepassings gedrag
+### <a name="application-behavior-settings"></a><a name="bkmk_ABS"></a> Instellingen voor toepassings gedrag
 
 Hiermee configureert u het gedrag van de toepassing in de Application Guard-sessie. Vóór Configuration Manager versie 1802 bevonden zowel het toepassings gedrag als de interactie met de host zich op het tabblad **instellingen** .
 
 - **Inhoudbeheer**
   - Enter prise-sites kunnen niet-bedrijfs inhoud laden, zoals invoeg toepassingen van derden.
-- **Daarenteg**
+- **Overige:**
   - Door de gebruiker gegenereerde browsergegevens behouden
   - Beveiligings gebeurtenissen in de geïsoleerde Application Guard-sessie controleren
 
-### <a name="file-management"></a><a name="bkmk_FM"></a>Bestands beheer
+### <a name="file-management"></a><a name="bkmk_FM"></a> Bestands beheer
 <!--3555858-->
-Vanaf Configuration Manager versie 1906 is er een beleids instelling waarmee gebruikers bestanden kunnen vertrouwen die normaal in Application Guard worden geopend. Wanneer de uitvoering is voltooid, worden de bestanden geopend op het hostapparaat in plaats van in Application Guard. Zie [beleids instellingen voor micro soft Defender Application Guard configureren](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard)voor meer informatie over het beleid voor toepassings beveiliging.
+Vanaf Configuration Manager versie 1906 is er een beleids instelling waarmee gebruikers bestanden kunnen vertrouwen die normaal in Application Guard worden geopend. Wanneer de uitvoering is voltooid, worden de bestanden geopend op het hostapparaat in plaats van in Application Guard. Zie [beleids instellingen voor micro soft Defender Application Guard configureren](/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard)voor meer informatie over het beleid voor toepassings beveiliging.
 
 - **Gebruikers toestaan bestanden te vertrouwen die worden geopend in Windows Defender Application Guard** : Hiermee stelt u de gebruiker in staat om bestanden te markeren als vertrouwd. Wanneer een bestand wordt vertrouwd, wordt het geopend op de host in plaats van in Application Guard. Is van toepassing op Windows 10-versie 1809 of hoger.
   - **Verboden:** Gebruikers niet toestaan om bestanden te markeren als vertrouwd (standaard).
@@ -103,5 +103,5 @@ Op apparaten met Windows 10, versie 2004 worden fouten weer gegeven in nalevings
 ## <a name="next-steps"></a>Volgende stappen
 
 Zie voor meer informatie over micro soft Defender Application Guard
- - [Overzicht van micro soft Defender Application Guard](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview).
-- [Veelgestelde vragen over micro soft Defender Application Guard](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/faq-md-app-guard).
+ - [Overzicht van micro soft Defender Application Guard](/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview).
+- [Veelgestelde vragen over micro soft Defender Application Guard](/windows/security/threat-protection/microsoft-defender-application-guard/faq-md-app-guard).

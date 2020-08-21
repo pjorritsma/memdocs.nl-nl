@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d6703f0889590b3d37d05b7c9b283a16c0150649
-ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
+ms.openlocfilehash: 3b153dad513107b118d11fa95e3feaa035a1bc90
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88591629"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692635"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 1806 van Configuration Manager current branch
 
@@ -308,7 +308,7 @@ Zie [Windows-toepassingen maken](../../../apps/get-started/creating-windows-appl
 
 ### <a name="uninstall-application-on-approval-revocation"></a>Toepassing verwijderen bij het intrekken van de goed keuring
 <!--1357891-->
-Het gedrag is gewijzigd wanneer u de goed keuring voor een toepassing intrekt. Wanneer u de aanvraag voor de toepassing weigert, verwijdert de client de toepassing van het apparaat van de gebruiker. Voor dit gedrag moet u de [optionele functie](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_options) **voor het goed keuren van toepassings aanvragen voor gebruikers per apparaat**inschakelen. 
+Het gedrag is gewijzigd wanneer u de goed keuring voor een toepassing intrekt. Wanneer u de aanvraag voor de toepassing weigert, verwijdert de client de toepassing van het apparaat van de gebruiker. Voor dit gedrag moet u de [optionele functie](/sccm/core/servers/manage/install-in-console-updates#bkmk_options) **voor het goed keuren van toepassings aanvragen voor gebruikers per apparaat**inschakelen. 
 
 Zie [toepassingen implementeren](../../../apps/deploy-use/deploy-applications.md#bkmk_approval)voor meer informatie.
 
@@ -348,7 +348,7 @@ Zie [Phase Settings](../../../osd/deploy-use/create-phased-deployment-for-task-s
 
 ### <a name="improvements-to-windows-10-in-place-upgrade-task-sequence"></a>Taken reeks voor verbeteringen in Windows 10 in-place upgrade
 <!--1358500-->
-De standaard taken reeks sjabloon voor Windows 10 in-place upgrade bevat nu een andere nieuwe groep met aanbevolen acties om toe te voegen wanneer het upgrade proces mislukt. Deze acties maken het gemakkelijker om problemen op te lossen. Een dergelijk hulp programma is Windows [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag). Het is een zelfstandig diagnostisch hulp programma voor het verkrijgen van informatie over waarom een Windows 10-upgrade is mislukt. 
+De standaard taken reeks sjabloon voor Windows 10 in-place upgrade bevat nu een andere nieuwe groep met aanbevolen acties om toe te voegen wanneer het upgrade proces mislukt. Deze acties maken het gemakkelijker om problemen op te lossen. Een dergelijk hulp programma is Windows [SetupDiag](/windows/deployment/upgrade/setupdiag). Het is een zelfstandig diagnostisch hulp programma voor het verkrijgen van informatie over waarom een Windows 10-upgrade is mislukt. 
 
 Zie [een taken reeks maken om een besturings systeem bij te werken](../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md#recommended-task-sequence-steps-on-failure)voor meer informatie.
 
@@ -584,7 +584,7 @@ Zie voor meer informatie [console verbeteringen in versie 1806](../../servers/ma
 
 Afgezien van nieuwe functies bevat deze release ook aanvullende wijzigingen, zoals oplossingen voor problemen. Zie [overzicht van wijzigingen in Configuration Manager current branch, versie 1806](https://support.microsoft.com/help/4459701)voor meer informatie.
 
-Zie [Power shell 1806 Release Notes](https://docs.microsoft.com/powershell/sccm/1806_release_notes?view=sccm-ps)(Engelstalig) voor meer informatie over wijzigingen in de Windows Power shell-cmdlets voor Configuration Manager.
+Zie [Power shell 1806 Release Notes](/powershell/sccm/1806_release_notes?view=sccm-ps)(Engelstalig) voor meer informatie over wijzigingen in de Windows Power shell-cmdlets voor Configuration Manager.
 
 Het volgende update pakket (4462978) is beschikbaar in de-console vanaf 24 oktober 2018: [Update pakket voor Configuration Manager current branch, versie 1806](https://support.microsoft.com/help/4462978).
 
@@ -593,7 +593,7 @@ Het volgende update pakket (4462978) is beschikbaar in de-console vanaf 24 oktob
 
 De volgende aanvullende hotfixes zijn beschikbaar om specifieke problemen op te lossen:
 
-| Id | Titel | Datum | In-console |
+| Id | Titel | Date | In-console |
 |---------|---------|---------|---------|
 | [4346645](https://support.microsoft.com/help/4346645) | Update voor Configuration Manager versie 1806, eerste golf | 31 augustus 2018 | Ja |
 | [4465865](https://support.microsoft.com/help/4465865) | Software-updates worden niet gedownload in Configuration Manager omgeving als de verbinding met WSUS is verbroken<br><br>Deze update bevindt zich ook in het update pakket (4462978) | 01 oktober 2018 | Ja |

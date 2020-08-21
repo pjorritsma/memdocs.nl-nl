@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: ace27e9035af6696e455382a32365be0e3824d65
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 8ead53c71e336001ac820a437fa67758c6375cbd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905204"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694369"
 ---
 # <a name="capabilities-in-configuration-manager-technical-preview-version-1807"></a>Mogelijkheden in Configuration Manager Technical Preview-versie 1807 
 
@@ -42,7 +42,7 @@ Steps to workaround, if any.
 
 ## <a name="known-issues"></a>Bekende problemen 
 
-### <a name="issues-with-office-365-software-updates"></a><a name="ki_o365"></a>Problemen met Office 365-software-updates
+### <a name="issues-with-office-365-software-updates"></a><a name="ki_o365"></a> Problemen met Office 365-software-updates
 <!--521365-->
 Als u updates voor Office 365 beheert met behulp van de branches van Technical Preview versie 1806 en 1806,2, kunnen ze niet worden geïnstalleerd op clients. 
 
@@ -58,7 +58,7 @@ Als u updates voor Office 365 beheert met behulp van de branches van Technical P
 **In de volgende secties worden de nieuwe functies beschreven voor het uitproberen van deze versie:**  
 
 
-## <a name="community-hub"></a><a name="bkmk_hub"></a>Community Hub
+## <a name="community-hub"></a><a name="bkmk_hub"></a> Community Hub
 <!--1357766-->
 
 De Community Hub is een centrale locatie voor het delen van nuttige Configuration Manager objecten met anderen. Bekijk de nieuwe **Community** -werk ruimte in de Configuration Manager-console en selecteer het knoop punt **hub** . Gebruik de Community Hub om de volgende typen Configuration Manager-objecten te downloaden: 
@@ -73,7 +73,7 @@ Als u meer informatie over een beschikbaar item wilt weer geven, klikt u op deze
 
 De werk ruimte **Community** bevat ook de volgende knoop punten:
 
-- **Documentatie**: de [documentatie bibliotheek](https://docs.microsoft.com/sccm/) van Configuration Manager wordt weer gegeven  
+- **Documentatie**: de [documentatie bibliotheek](/sccm/) van Configuration Manager wordt weer gegeven  
 
 - **Feedback**: de Configuration Manager [UserVoice-site](https://configurationmanager.uservoice.com/) wordt weer gegeven  
 
@@ -82,7 +82,7 @@ De werk ruimte **Community** bevat ook de volgende knoop punten:
 
 - Gebruik de Configuration Manager-console op het besturings systeem van de client.  
 
-    - Als alternatief, maar niet aanbevolen: Schakel op een server besturingssysteem [Internet Explorer uit: verbeterde beveiliging](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10)).
+    - Als alternatief, maar niet aanbevolen: Schakel op een server besturingssysteem [Internet Explorer uit: verbeterde beveiliging](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10)).
 
 - De computer met de-console vereist Internet toegang en connectiviteit met de volgende sites:  
     - `https://aka.ms`  
@@ -96,7 +96,7 @@ Items die bijdragen aan de hub, zijn momenteel niet beschikbaar in deze versie.
 
 
 
-## <a name="specify-the-drive-for-offline-os-image-servicing"></a><a name="bkmk_osd"></a>Het station opgeven voor offline-installatie kopie onderhoud van besturings systemen  
+## <a name="specify-the-drive-for-offline-os-image-servicing"></a><a name="bkmk_osd"></a> Het station opgeven voor offline-installatie kopie onderhoud van besturings systemen  
 <!--1358924-->
 
 Op basis van uw [UserVoice-feedback](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/33506009-gui-option-for-offline-os-image-servicing-drive)geeft u nu het station op dat Configuration Manager gebruikt tijdens het offline onderhoud van installatie kopieën van besturings systemen. Dit proces kan een grote hoeveelheid schijf ruimte in beslag nemen met tijdelijke bestanden, zodat u met deze optie de mogelijkheid hebt om het te gebruiken station te selecteren. 
@@ -118,10 +118,10 @@ Controleer het logboek bestand **OfflineServicingMgr. log** .
 
 
 
-## <a name="co-managed-device-sync-activity-from-intune"></a><a name="bkmk_comgmt"></a>Synchronisatie activiteit voor gezamenlijk beheerde apparaten vanuit intune
+## <a name="co-managed-device-sync-activity-from-intune"></a><a name="bkmk_comgmt"></a> Synchronisatie activiteit voor gezamenlijk beheerde apparaten vanuit intune
 <!--1358565-->
 
-Weer geven in de Configuration Manager-console of een door co beheerd apparaat actief is met Microsoft Intune. Deze status is gebaseerd op gegevens uit het [intune-Data Warehouse](https://docs.microsoft.com/intune/reports-nav-create-intune-reports). Het dash board **client status** in de Configuration Manager-console bevat **inactieve clients die gebruikmaken van intune**. Deze nieuwe categorie is voor door co beheerde apparaten die inactief zijn en Configuration Manager, maar die in de afgelopen week zijn gesynchroniseerd met de intune-service.
+Weer geven in de Configuration Manager-console of een door co beheerd apparaat actief is met Microsoft Intune. Deze status is gebaseerd op gegevens uit het [intune-Data Warehouse](/intune/reports-nav-create-intune-reports). Het dash board **client status** in de Configuration Manager-console bevat **inactieve clients die gebruikmaken van intune**. Deze nieuwe categorie is voor door co beheerde apparaten die inactief zijn en Configuration Manager, maar die in de afgelopen week zijn gesynchroniseerd met de intune-service.
 
 
 ### <a name="try-it-out"></a>Probeer het nu!
@@ -140,7 +140,7 @@ Zie [co-beheer voor Windows 10-apparaten](../../comanage/overview.md)voor meer i
 
 
 
-## <a name="repair-applications"></a><a name="bkmk_app-repair"></a>Toepassingen herstellen
+## <a name="repair-applications"></a><a name="bkmk_app-repair"></a> Toepassingen herstellen
 <!--1357866-->
 
 Op basis van uw [UserVoice-feedback](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8365071-force-reinstall-of-application)geeft u nu een herstel opdracht regel op voor de implementatie typen Windows Installer en script installatie. 
@@ -163,7 +163,7 @@ De knop Nieuw in Software Center voor gebruikers voor het **herstellen** van de 
 
 
 
-## <a name="approve-application-requests-via-email"></a><a name="bkmk_email-approve"></a>Toepassings aanvragen via e-mail goed keuren
+## <a name="approve-application-requests-via-email"></a><a name="bkmk_email-approve"></a> Toepassings aanvragen via e-mail goed keuren
 <!--1321550-->
 
 E-mail meldingen configureren voor aanvragen voor het goed keuren van toepassingen. Wanneer een gebruiker een toepassing aanvraagt, ontvangt u een e-mail bericht. Klik op koppelingen in het e-mail bericht om de aanvraag goed te keuren of te weigeren zonder dat de Configuration Manager-console is vereist.
@@ -193,7 +193,7 @@ Als u deze vereisten niet configureert, verzendt de site een e-mail melding voor
 
         - **Omleidings-URI**: `https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth` . Gebruik de Fully Qualified Domain Name (FQDN) van de CMG-service (Cloud Management Gateway), bijvoorbeeld GraniteFalls.Contoso.com.   
 
-        - **Manifest**: Stel **oauth2AllowImplicitFlow** in op True:`"oauth2AllowImplicitFlow": true,`  
+        - **Manifest**: Stel **oauth2AllowImplicitFlow** in op True: `"oauth2AllowImplicitFlow": true,`  
 
 
 ### <a name="try-it-out"></a>Probeer het nu!
@@ -216,13 +216,13 @@ Probeer de taken uit te voeren. Stuur vervolgens [feedback](capabilities-in-tech
 
 
 
-## <a name="improvement-to-script-output"></a><a name="bkmk_script"></a>Verbetering van de script uitvoer
+## <a name="improvement-to-script-output"></a><a name="bkmk_script"></a> Verbetering van de script uitvoer
 <!--1236459-->
 
 U kunt nu gedetailleerde script uitvoer weer geven in de RAW-of Structured JSON-indeling. Met deze opmaak wordt de uitvoer eenvoudiger te lezen en te analyseren. Als het script geldige tekst in JSON-indeling retourneert, bekijkt u de gedetailleerde uitvoer als **JSON-uitvoer** of **onbewerkte uitvoer**. Anders is de enige optie **script uitvoer**. 
 
 #### <a name="example-script-output-is-valid-json"></a>Voor beeld: script uitvoer is een geldige JSON
-Cmd`$PSVersionTable.PSVersion`  
+Cmd `$PSVersionTable.PSVersion`  
 
 ``` Output
 Major  Minor  Build  Revision
@@ -231,7 +231,7 @@ Major  Minor  Build  Revision
 ```
 
 #### <a name="example-script-output-isnt-valid-json"></a>Voor beeld: script uitvoer is geen geldige JSON
-Cmd`Write-Output (Get-WmiObject -Class Win32_OperatingSystem).Caption`  
+Cmd `Write-Output (Get-WmiObject -Class Win32_OperatingSystem).Caption`  
 
 ``` Output
 Microsoft Windows 10 Enterprise
@@ -252,7 +252,7 @@ Probeer de taken uit te voeren. Stuur vervolgens [feedback](capabilities-in-tech
 
 
 
-## <a name="improvement-to-third-party-software-updates"></a><a name="bkmk_3pupdate"></a>Verbetering van software-updates van derden
+## <a name="improvement-to-third-party-software-updates"></a><a name="bkmk_3pupdate"></a> Verbetering van software-updates van derden
 <!--1358714-->
 
 U kunt nu de eigenschappen van aangepaste catalogussen wijzigen.

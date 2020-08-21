@@ -10,12 +10,12 @@ ms.assetid: 20493c86-6454-4b35-8f22-0d049b68b8bb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f725c1b7dc380a84cd94e666b98dbd309df3744c
-ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
+ms.openlocfilehash: 15aba2a32e680ab9499f5295307c82daafbbed71
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82802052"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695338"
 ---
 # <a name="approve-applications-in-configuration-manager"></a>Toepassingen goed keuren in Configuration Manager
 
@@ -23,11 +23,11 @@ ms.locfileid: "82802052"
 
 Wanneer u [een toepassing implementeert](deploy-applications.md) in Configuration Manager, kunt u goed keuring vereisen vóór de installatie. Gebruikers aanvragen de toepassing in Software Center en vervolgens controleert u de aanvraag in de Configuration Manager-console. U kunt de aanvraag goed keuren of weigeren.
 
-## <a name="approval-settings"></a><a name="bkmk_approval"></a>Goedkeurings instellingen
+## <a name="approval-settings"></a><a name="bkmk_approval"></a> Goedkeurings instellingen
 
 Het goedkeurings gedrag van de toepassing is afhankelijk van of u de aanbevolen ervaring voor het [goed keuren van de optionele app](#bkmk_opt)inschakelt. Een van de volgende goedkeurings instellingen wordt weer gegeven op de pagina **implementatie-instellingen** van de implementatie van de toepassing:  
 
-### <a name="an-administrator-must-approve-a-request-for-this-application-on-the-device"></a><a name="bkmk_opt"></a>Een beheerder moet een aanvraag voor deze toepassing op het apparaat goed keuren
+### <a name="an-administrator-must-approve-a-request-for-this-application-on-the-device"></a><a name="bkmk_opt"></a> Een beheerder moet een aanvraag voor deze toepassing op het apparaat goed keuren
 
 > [!Note]  
 > Configuration Manager schakelt deze functie standaard niet in. Voordat u deze kunt gebruiken, moet u de optionele functie **toepassings aanvragen voor gebruikers per apparaat goed keuren**. Zie voor meer informatie [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).
@@ -49,11 +49,11 @@ Nadat u een toepassing hebt goedgekeurd voor installatie, kunt u de aanvraag in 
 
 Vanaf versie 1906, als u een app-aanvraag goedkeurt in de-console en deze vervolgens weigert, kunt u deze nu opnieuw goed keuren. Nadat u het hebt goedgekeurd, wordt de app opnieuw op de client geïnstalleerd.  <!-- 4224910 -->
 
-Automatiseer het goedkeurings proces met de Power shell [-cmdlet goed keuren-CMApprovalRequest](https://docs.microsoft.com/powershell/module/configurationmanager/approve-cmapprovalrequest?view=sccm-ps) . Vanaf versie 1902 bevat deze cmdlet de para meter **InstallActionBehavior** . Gebruik deze para meter om op te geven of de toepassing direct moet worden geïnstalleerd of buiten kantoor uren.<!-- SCCMDocs-pr issue #3418 -->
+Automatiseer het goedkeurings proces met de Power shell [-cmdlet goed keuren-CMApprovalRequest](/powershell/module/configurationmanager/approve-cmapprovalrequest?view=sccm-ps) . Vanaf versie 1902 bevat deze cmdlet de para meter **InstallActionBehavior** . Gebruik deze para meter om op te geven of de toepassing direct moet worden geïnstalleerd of buiten kantoor uren.<!-- SCCMDocs-pr issue #3418 -->
 
 Vanaf 1906 kunt u zien welke implementaties goed keuring vereisen. Selecteer een app in het knoop punt **toepassingen** . Ga in het detail venster naar het tabblad **implementaties** . Er is een nieuwe kolom die standaard wordt weer gegeven, **vereist goed keuring**.
 
-#### <a name="retry-the-install-of-pre-approved-applications"></a><a name="bkmk_retry"></a>De installatie van vooraf goedgekeurde toepassingen opnieuw uitvoeren
+#### <a name="retry-the-install-of-pre-approved-applications"></a><a name="bkmk_retry"></a> De installatie van vooraf goedgekeurde toepassingen opnieuw uitvoeren
 
 <!--4336307-->
 Vanaf versie 1906 kunt u de installatie opnieuw uitvoeren van een app die u eerder hebt goedgekeurd voor een gebruiker of apparaat. De goedkeurings optie is alleen voor beschik bare implementaties. Als de gebruiker de app verwijdert of als het eerste installatie proces mislukt, Configuration Manager de status ervan niet opnieuw evalueren en opnieuw installeren. Met deze functie kan een ondersteunings medewerker snel de installatie van de app opnieuw proberen voor een gebruiker die hulp aanroept.
@@ -76,7 +76,7 @@ Als de toepassing niet kan worden geïnstalleerd, of als de gebruiker de app ver
 - [Verbeteringen in de goedkeuring van toepassingen in ConfigMgr 1810](https://techcommunity.microsoft.com/t5/Configuration-Manager-Blog/Application-approval-improvements-in-ConfigMgr-1810/ba-p/303534)
 - [Updates voor het goedkeurings proces van de toepassing in Configuration Manager](https://techcommunity.microsoft.com/t5/Configuration-Manager-Blog/Updates-to-the-application-approval-process-in-Configuration/ba-p/275048)
 
-### <a name="require-administrator-approval-if-users-request-this-application"></a><a name="bkmk_prior"></a>Goed keuring van de beheerder vereisen als gebruikers deze toepassing aanvragen
+### <a name="require-administrator-approval-if-users-request-this-application"></a><a name="bkmk_prior"></a> Goed keuring van de beheerder vereisen als gebruikers deze toepassing aanvragen
 
 > [!Note]  
 > Deze ervaring is van toepassing als u de aanbevolen [ervaring voor het goed keuren van een optionele app](#bkmk_opt)niet inschakelt.
@@ -87,7 +87,7 @@ Aanvragen voor het goed keuren van toepassingen worden weer gegeven in het knoop
 
 Nadat u een toepassing hebt goedgekeurd voor installatie, kunt u de aanvraag in de Configuration Manager-console **weigeren** . Deze actie zorgt er niet voor dat de client de toepassing van alle apparaten verwijdert. Hiermee wordt voor komen dat gebruikers nieuwe exemplaren van de toepassing installeren vanuit software Center.  
 
-## <a name="email-notifications"></a><a name="bkmk_email-approve"></a>E-mail meldingen
+## <a name="email-notifications"></a><a name="bkmk_email-approve"></a> E-mail meldingen
 
 <!--1321550-->
 
@@ -146,7 +146,7 @@ Met deze aanvullende optionele vereisten kan de ontvanger de aanvraag vanaf elke
 
     1. Selecteer in het menu **beheren** de optie **verificatie**.  
 
-        1. Plak in het gedeelte **omleidings-uri's** in het volgende pad:`https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`  
+        1. Plak in het gedeelte **omleidings-uri's** in het volgende pad: `https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`  
 
         1. Vervang door `<CMG FQDN>` de Fully Qualified Domain Name (FQDN) van uw CMG-service (Cloud Management Gateway). Bijvoorbeeld GraniteFalls.Contoso.com.  
 
@@ -156,7 +156,7 @@ Met deze aanvullende optionele vereisten kan de ontvanger de aanvraag vanaf elke
 
         1. Zoek in het deel venster manifest bewerken de eigenschap **oauth2AllowImplicitFlow** .  
 
-        1. Wijzig de waarde in **True**. De volledige regel moet er bijvoorbeeld uitzien als in de volgende regel:`"oauth2AllowImplicitFlow": true,`  
+        1. Wijzig de waarde in **True**. De volledige regel moet er bijvoorbeeld uitzien als in de volgende regel: `"oauth2AllowImplicitFlow": true,`  
 
         1. Selecteer **Opslaan**.  
 

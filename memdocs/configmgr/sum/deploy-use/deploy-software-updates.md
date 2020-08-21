@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 04536d51-3bf7-45e5-b4af-36ceed10583d
-ms.openlocfilehash: 5cee950e2b42d73f20921c2baf08b98d2d206586
-ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
+ms.openlocfilehash: a6e27e2d03983fdf627016d0e3b41aaa378afe29
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88591185"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693468"
 ---
 # <a name="deploy-software-updates"></a>Software-updates implementeren  
 
@@ -69,7 +69,7 @@ De volgende lijst geeft de algemene werkstroom voor handmatige implementatie van
 Zie [software-updates hand matig implementeren](manually-deploy-software-updates.md)voor meer informatie en gedetailleerde stappen.
 
 > [!Note]
-> - Vanaf 21 april 2020, wordt de naam van Office 365 ProPlus gewijzigd in **Microsoft 365 apps voor bedrijven**. Zie [name wijzigen voor Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change)voor meer informatie. Mogelijk ziet u nog steeds verwijzingen naar de oude naam in de Configuration Manager-console en de ondersteunende documentatie terwijl de-console wordt bijgewerkt.
+> - Vanaf 21 april 2020, wordt de naam van Office 365 ProPlus gewijzigd in **Microsoft 365 apps voor bedrijven**. Zie [name wijzigen voor Office 365 ProPlus](/deployoffice/name-change)voor meer informatie. Mogelijk ziet u nog steeds verwijzingen naar de oude naam in de Configuration Manager-console en de ondersteunende documentatie terwijl de-console wordt bijgewerkt.
 > - Wanneer u Microsoft 365 apps-client updates hand matig implementeert, kunt u deze vinden in het knoop punt **office 365-updates** onder **Office 365 client management** van de werk ruimte **software bibliotheek** . 
 
 ## <a name="automatically-deploy-software-updates"></a><a name="bkmk_auto"></a> Software-updates automatisch implementeren

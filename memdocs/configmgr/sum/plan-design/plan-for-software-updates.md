@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
-ms.openlocfilehash: b7b3ef78924389232ea292d16c6840fbef9bb321
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 991f367dbd842037aecf4f808f27c4fb2961cc38
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88123588"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696715"
 ---
 # <a name="plan-for-software-updates-in-configuration-manager"></a>Software-updates plannen in Configuration Manager
 
@@ -24,7 +24,7 @@ ms.locfileid: "88123588"
 Voordat u software-updates in een Configuration Manager productie omgeving gebruikt, is het belang rijk dat u het plannings proces door lopen. Een goed plan voor de infra structuur van het software-update punt is essentieel voor een geslaagde implementatie van software-updates. Zie [grootte en schaal getallen](../../core/plan-design/configs/size-and-scale-numbers.md#software-update-point)voor informatie over capaciteits planning voor software-updates.
 
 
-##  <a name="determine-the-software-update-point-infrastructure"></a><a name="BKMK_SUPInfrastructure"></a>De infra structuur van het software-update punt bepalen  
+##  <a name="determine-the-software-update-point-infrastructure"></a><a name="BKMK_SUPInfrastructure"></a> De infra structuur van het software-update punt bepalen  
 
 Deze sectie bevat de volgende subonderwerpen:    
 - [Lijst met software-update punten](#BKMK_SUPList)
@@ -104,7 +104,7 @@ Wanneer Configuration Manager een van de volgende Windows Update fout codes voor
 Als u de betekenis van een fout code wilt opzoeken, converteert u de decimale fout code naar hexadecimaal en zoekt u naar de hexadecimale waarde op een site, zoals de [Windows Update Agent-fout codes wiki](https://social.technet.microsoft.com/wiki/contents/articles/15260.windows-update-agent-error-codes.aspx). de decimale fout code 2149842970 is bijvoorbeeld hexadecimaal 8024001A. Dit betekent dat WU_E_POLICY_NOT_SET een beleids waarde niet is ingesteld.  
 
 
-###  <a name="manually-switch-clients-to-a-new-software-update-point"></a><a name="BKMK_ManuallySwitchSUPs"></a>Clients hand matig overschakelen naar een nieuw software-update punt
+###  <a name="manually-switch-clients-to-a-new-software-update-point"></a><a name="BKMK_ManuallySwitchSUPs"></a> Clients hand matig overschakelen naar een nieuw software-update punt
 
 Configuration Manager-clients overschakelen naar een nieuw software-update punt wanneer er problemen zijn met het actieve software-update punt. Deze wijziging treedt alleen op wanneer een client meerdere software-update punten ontvangt van een beheer punt.
 
@@ -123,7 +123,7 @@ Start deze wijziging op een verzameling apparaten. Nadat de clients zijn geactiv
 2.  Selecteer de doel verzameling. Klik op het tabblad **Start** van het lint in de groep **verzameling** op **client melding**en klik vervolgens op **overschakelen naar het volgende software-update punt**.  
 
 
-###  <a name="software-update-points-in-an-untrusted-forest"></a><a name="BKMK_SUP_CrossForest"></a>Software-update punten in een niet-vertrouwd forest  
+###  <a name="software-update-points-in-an-untrusted-forest"></a><a name="BKMK_SUP_CrossForest"></a> Software-update punten in een niet-vertrouwd forest  
 
 Maak een of meer software-update punten op een site ter ondersteuning van clients in een niet-vertrouwd forest. Als u een software-update punt in een ander forest wilt toevoegen, moet u eerst een WSUS-server in dat forest installeren en configureren. Start vervolgens de wizard om een Configuration Manager site server toe te voegen met de site systeemrol van het software-update punt. Configureer de volgende instellingen in de wizard om verbinding te maken met WSUS in het niet-vertrouwde forest:  
 
@@ -134,7 +134,7 @@ Maak een of meer software-update punten op een site ter ondersteuning van client
 U kunt bijvoorbeeld primaire site hebben in forest A met twee software-updatepunten (SUP01 en SUP02).‎ Voor dezelfde primaire site hebt u ook twee software-update punten (SUP03 en SUP04) in forest B. Wanneer u overschakelt naar het volgende software-update punt, krijgen de clients prioriteit voor de servers uit hetzelfde forest.  
 
 
-###  <a name="use-an-existing-wsus-server-as-the-synchronization-source-at-the-top-level-site"></a><a name="BKMK_WSUSSyncSource"></a>Een bestaande WSUS-server gebruiken als synchronisatie bron op de site op het hoogste niveau  
+###  <a name="use-an-existing-wsus-server-as-the-synchronization-source-at-the-top-level-site"></a><a name="BKMK_WSUSSyncSource"></a> Een bestaande WSUS-server gebruiken als synchronisatie bron op de site op het hoogste niveau  
 
 Doorgaans wordt de site op het hoogste niveau van uw hiërarchie geconfigureerd om de metagegevens van software-updates te synchroniseren met Microsoft Update. Wanneer het beveiligings beleid van uw organisatie niet toestaat dat de site op het hoogste niveau toegang heeft tot internet, configureert u de synchronisatie bron voor de site op het hoogste niveau voor het gebruik van een bestaande WSUS-server. Deze WSUS-server bevindt zich niet in uw Configuration Manager-hiërarchie. U hebt bijvoorbeeld een WSUS-server in een netwerk met Internet verbinding (DMZ), maar uw site op het hoogste niveau bevindt zich in een intern netwerk zonder Internet toegang. Configureer de WSUS-server in de DMZ als uw synchronisatie bron voor de meta gegevens van software-updates. Configureer de WSUS-server in de DMZ om software-updates te synchroniseren met de criteria die u nodig hebt in Configuration Manager. Anders is het mogelijk dat de site op het hoogste niveau de software-updates die u verwacht, niet kan synchroniseren. Wanneer u het software-update punt installeert, configureert u een WSUS-server verbindings account. Dit account moet toegang hebben tot de WSUS-server in het DMZ. Controleer ook of de firewall verkeer toestaat voor de juiste poorten. Zie de [poorten die worden gebruikt door het software-update punt voor de synchronisatie bron](../../core/plan-design/hierarchy/ports.md#BKMK_PortsSUP-WSUS)voor meer informatie.  
 
@@ -144,7 +144,7 @@ Doorgaans wordt de site op het hoogste niveau van uw hiërarchie geconfigureerd 
 Het software-updatepunt is optioneel op een secundaire site. Installeer slechts één software-update punt op een secundaire site. Wanneer een software-update punt niet is geïnstalleerd op de secundaire site, gebruiken apparaten binnen de grenzen van een secundaire site een software-update punt op hun toegewezen primaire site. Doorgaans installeert u een software-update punt op een secundaire site wanneer er een beperkte netwerk bandbreedte is tussen de apparaten in de secundaire site en de software-update punten op de bovenliggende primaire site. U kunt deze configuratie ook gebruiken wanneer het software-update punt op de primaire site de capaciteits limiet nadert. Nadat u een software-update punt op de secundaire site hebt geïnstalleerd en geconfigureerd, wordt een beleid voor de hele site bijgewerkt voor clients en beginnen ze het nieuwe software-update punt te gebruiken.  
 
 
-### <a name="plan-for-internet-based-clients"></a><a name="bkmk_internet-clients"></a>Plannen voor clients op Internet
+### <a name="plan-for-internet-based-clients"></a><a name="bkmk_internet-clients"></a> Plannen voor clients op Internet
 
 Als u apparaten wilt beheren die uw netwerk naar het Internet roamen, ontwikkelt u een plan voor het beheren van software-updates op deze apparaten. Configuration Manager ondersteunt verschillende technologieën voor dit scenario. Gebruik één of een combi natie als dat nodig is om te voldoen aan de vereisten van uw organisatie.
 
@@ -164,7 +164,7 @@ Met Windows Update voor bedrijven kunt u Windows 10-apparaten altijd up-to-date 
 Zie [integratie met Windows Update voor bedrijven](../deploy-use/integrate-windows-update-for-business-windows-10.md)voor meer informatie.
 
 
-### <a name="plan-software-update-content"></a><a name="bkmk_content"></a>Inhoud van software-updates plannen
+### <a name="plan-software-update-content"></a><a name="bkmk_content"></a> Inhoud van software-updates plannen
 
 Clients moeten de inhouds bestanden voor software-updates downloaden om ze te kunnen installeren. Configuration Manager biedt verschillende technologieën ter ondersteuning van het beheer en de levering van deze inhoud. Of configureer software-update-implementaties zodat clients rechtstreeks vanuit de Microsoft Update Cloud service inhoud kunnen ophalen.
 
@@ -186,7 +186,7 @@ Vanaf versie 1806 hoeft u geen implementatie pakket te maken wanneer u software-
 Op internet gebaseerde clients downloaden altijd inhoud van de Microsoft Update-Cloud service. Distribueer geen software-update-implementatie pakketten naar een Cloud distributiepunt. Er worden kosten in rekening gebracht voor opslag met het Cloud distributiepunt, maar clients downloaden deze pakketten niet. 
 
 
-### <a name="plan-for-third-party-updates"></a><a name="bkmk_thirdparty"></a>Plan voor updates van derden
+### <a name="plan-for-third-party-updates"></a><a name="bkmk_thirdparty"></a> Plan voor updates van derden
 Configuration Manager integreert met WSUS, dat systeem eigen ondersteuning biedt voor software-updates die zijn gepubliceerd door micro soft. De meeste klanten gebruiken andere toepassingen van derden die ook updates nodig hebben. Er zijn verschillende opties waarmee u rekening moet houden voor het up-to-date houden van toepassingen van derden.
 
 #### <a name="supersede-applications-to-update"></a>Toepassingen die moeten worden bijgewerkt vervangen
@@ -206,7 +206,7 @@ Zie [System Center updates Publisher](../tools/updates-publisher.md)voor meer in
 
 
 
-##  <a name="plan-for-software-update-point-installation"></a><a name="BKMK_SUPInstallation"></a>Installatie van software-update punt plannen  
+##  <a name="plan-for-software-update-point-installation"></a><a name="BKMK_SUPInstallation"></a> Installatie van software-update punt plannen  
 
 Deze sectie bevat de volgende subonderwerpen:  
 - [Vereisten voor het software-updatepunt](#BKMK_SUPSystemRequirements)
@@ -216,16 +216,16 @@ Deze sectie bevat de volgende subonderwerpen:
 
 Deze sectie bevat informatie over de stappen die u moet uitvoeren om de installatie van het software-update punt goed te plannen en voor te bereiden. Voordat u een site systeemrol voor het software-update punt in Configuration Manager maakt, moet u rekening houden met verschillende vereisten. De specifieke vereisten zijn afhankelijk van uw Configuration Manager-infra structuur. Wanneer u het software-update punt configureert om te communiceren met behulp van HTTPS, is deze sectie vooral belang rijk om te controleren. Voor servers met HTTPS-functionaliteit moeten extra stappen worden uitgevoerd.  
 
-###  <a name="requirements-for-the-software-update-point"></a><a name="BKMK_SUPSystemRequirements"></a>Vereisten voor het software-update punt  
+###  <a name="requirements-for-the-software-update-point"></a><a name="BKMK_SUPSystemRequirements"></a> Vereisten voor het software-update punt  
 
 Installeer de rol van het software-update punt op een site systeem dat voldoet aan de minimum vereisten voor WSUS en de ondersteunde configuraties voor Configuration Manager-site systemen.  
 
--   Zie [aandachtspunten en systeem vereisten](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment#11-review-considerations-and-system-requirements)voor meer informatie over de minimale vereisten voor de WSUS-serverrol in Windows Server.  
+-   Zie [aandachtspunten en systeem vereisten](/windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment#11-review-considerations-and-system-requirements)voor meer informatie over de minimale vereisten voor de WSUS-serverrol in Windows Server.  
 
 -   Zie [site-en site systeem vereisten](../../core/plan-design/configs/site-and-site-system-prerequisites.md)voor meer informatie over de ondersteunde configuraties voor Configuration Manager-site systemen.  
 
 
-###  <a name="plan-for-wsus-installation"></a><a name="BKMK_PlanningForWSUS"></a>Installatie van WSUS plannen  
+###  <a name="plan-for-wsus-installation"></a><a name="BKMK_PlanningForWSUS"></a> Installatie van WSUS plannen  
 
 Installeer een ondersteunde versie van WSUS op alle site systeem servers die u configureert voor de rol software-update punt. Wanneer u het software-update punt niet op de site server installeert, installeert u de WSUS-beheer console op de site server. Met dit onderdeel kan de site server communiceren met WSUS die wordt uitgevoerd op het software-update punt.  
 
@@ -235,7 +235,7 @@ Wanneer u WSUS op Windows Server 2012 of hoger gebruikt, moet u extra machtiging
 
 -   Voeg het **NT AUTHORITY\SYSTEM** -account toe als een gebruiker voor de WSUS-data base (SUSDB). Configureer een minimum van het webService-databaserol lidmaatschap.  
   
-Zie [de WSUS](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/1-install-the-wsus-server-role)-serverrol installeren voor meer informatie over het installeren van WSUS op Windows Server.  
+Zie [de WSUS](/windows-server/administration/windows-server-update-services/deploy/1-install-the-wsus-server-role)-serverrol installeren voor meer informatie over het installeren van WSUS op Windows Server.  
 
 Wanneer u meer dan één software-updatepunt op een primaire site installeert, gebruikt u dezelfde WSUS-database voor elk software-updatepunt in hetzelfde Active Directory-forest. Als u dezelfde data base deelt, worden de prestaties verbeterd wanneer clients overschakelen naar een nieuw software-update punt. Zie [een gedeelde WSUS-Data Base voor software-update punten gebruiken](software-updates-best-practices.md#bkmk_shared-susdb)voor meer informatie.  
 
@@ -243,11 +243,11 @@ Wanneer u meer dan één software-updatepunt op een primaire site installeert, g
 
 Wanneer u WSUS installeert, moet u een pad naar een inhoudsmap opgeven. De WSUS-inhoudsmap wordt voornamelijk gebruikt voor het opslaan van de bestanden voor de micro soft-Software licentievoorwaarden die tijdens het scannen nodig zijn voor clients. De Configuration Manager de map met WSUS-inhoud mag niet overlappen met uw inhouds bron directory voor Configuration Manager software-implementatie pakketten. Het overlappen van de inhoud van de WSUS-map en de bron van het Configuration Manager-pakket leidt ertoe dat onjuiste bestanden worden verwijderd uit de map WSUS-inhoud.
 
-####  <a name="configure-wsus-to-use-a-custom-website"></a><a name="BKMK_CustomWebSite"></a>WSUS configureren voor het gebruik van een aangepaste website  
+####  <a name="configure-wsus-to-use-a-custom-website"></a><a name="BKMK_CustomWebSite"></a> WSUS configureren voor het gebruik van een aangepaste website  
 Wanneer u WSUS installeert, hebt u de optie de bestaande IIS Standaard website te gebruiken of een aangepaste WSUS-website te maken. Maak een aangepaste website voor WSUS, zodat de WSUS-Services door IIS worden gehost op een speciale virtuele website. Anders deelt deze dezelfde website die wordt gebruikt door de andere Configuration Manager-site systemen of-toepassingen. Deze configuratie is met name nodig wanneer u de rol van het software-update punt op de site server installeert. Wanneer u WSUS uitvoert in Windows Server 2012 of hoger, wordt WSUS standaard geconfigureerd om poort 8530 te gebruiken voor HTTP en poort 8531 voor HTTPS. Geef deze poorten op wanneer u het software-update punt op een site maakt.  
 
 
-####  <a name="use-an-existing-wsus-infrastructure"></a><a name="BKMK_WSUSInfrastructure"></a>Een bestaande WSUS-infra structuur gebruiken  
+####  <a name="use-an-existing-wsus-infrastructure"></a><a name="BKMK_WSUSInfrastructure"></a> Een bestaande WSUS-infra structuur gebruiken  
 Selecteer een WSUS-server die actief was in uw omgeving voordat u Configuration Manager als een software-update punt hebt geïnstalleerd. Wanneer het software-update punt is geconfigureerd, geeft u de synchronisatie-instellingen op. Configuration Manager maakt verbinding met de WSUS-server die op de software-update punt server wordt uitgevoerd en configureert WSUS met dezelfde instellingen. 
 
 Voordat u de server als een software-update punt configureert, moet u de configuratie voor de producten en classificaties vergelijken met de instellingen van uw Configuration Manager. Als u de bestaande WSUS-server hebt gesynchroniseerd voordat u deze configureert als een software-update punt en de lijsten met producten en classificaties verschillen, worden alle meta gegevens van software-updates gesynchroniseerd, ongeacht de geconfigureerde instellingen. Dit gedrag resulteert in onverwachte meta gegevens van software-updates in de site database. 
@@ -265,7 +265,7 @@ Gebruik het SSL-protocol om het software-update punt te beveiligen. WSUS gebruik
 Wanneer u het software-update punt installeert en configureert, selecteert u de optie om **SSL-communicatie voor de WSUS-server in te scha kelen**. Als dat niet het geval is, wordt WSUS door Configuration Manager geconfigureerd om SSL niet te gebruiken. Wanneer u SSL inschakelt op een software-update punt, moet u ook software-update punten op onderliggende sites configureren voor het gebruik van SSL.  
 
 
-###  <a name="configure-firewalls"></a><a name="BKMK_ConfigureFirewalls"></a>Firewalls configureren  
+###  <a name="configure-firewalls"></a><a name="BKMK_ConfigureFirewalls"></a> Firewalls configureren  
 
 Het software-update punt op een Configuration Manager centrale beheer site communiceert met WSUS op het software-update punt. WSUS communiceert met de synchronisatie bron om meta gegevens van software-updates te synchroniseren. Software-update punten op een onderliggende site communiceren met het software-update punt op de bovenliggende site. Wanneer er meer dan één software-update punt op een primaire site is, communiceren de extra software-update punten met het standaard software-update punt. De standaardrol is het eerste software-update punt dat op de site is geïnstalleerd.  
 
@@ -312,7 +312,7 @@ De synchronisatie bron instellingen voor het software-update punt geven de locat
 -   **WSUS-rapportage gebeurtenissen:** De Windows Update-Agent op client computers kan gebeurtenis berichten maken voor WSUS-rapportage. Deze gebeurtenissen worden niet gebruikt door Configuration Manager. Daarom is de optie, **geen WSUS-rapportage gebeurtenissen maken**standaard geselecteerd. Wanneer deze gebeurtenissen niet worden gemaakt, is de enige keer dat de client verbinding moet maken met de WSUS-server tijdens de evaluatie van software-updates en compatibiliteits scans. Als deze gebeurtenissen nodig zijn voor rapportage buiten Configuration Manager, wijzigt u deze instelling om WSUS-rapportage gebeurtenissen te maken.  
 
 
-###  <a name="synchronization-schedule"></a><a name="BKMK_SyncSchedule"></a>Synchronisatie planning  
+###  <a name="synchronization-schedule"></a><a name="BKMK_SyncSchedule"></a> Synchronisatie planning  
 
 Configureer de synchronisatie planning alleen op het software-update punt op de site op het hoogste niveau in de Configuration Manager-hiërarchie. Wanneer u de synchronisatieplanning configureert, synchroniseert het software-updatepunt met de synchronisatiebron op de datum en tijd die u hebt opgegeven. Met de aangepaste planning kunt u software-updates synchroniseren om te optimaliseren voor uw omgeving. Houd rekening met de prestatie vereisten van de WSUS-server, site server en het netwerk. 2:00 bijvoorbeeld eenmaal per week. U kunt ook de synchronisatie hand matig starten op de site op het hoogste niveau met behulp van de actie **synchronisatie software-updates** van de knoop punten **alle software-updates** of **Software-Update groepen** in de Configuration Manager-console.  
 
@@ -322,7 +322,7 @@ Configureer de synchronisatie planning alleen op het software-update punt op de 
 Nadat het software-update punt met succes is gesynchroniseerd, verzendt het een synchronisatie aanvraag naar onderliggende sites. Als u aanvullende software-update punten op een primaire site hebt, verzendt het een synchronisatie aanvraag naar elk software-update punt. Dit proces wordt herhaald op elke site in de hiërarchie.  
 
 
-###  <a name="update-classifications"></a><a name="BKMK_UpdateClassifications"></a>Update classificaties  
+###  <a name="update-classifications"></a><a name="BKMK_UpdateClassifications"></a> Update classificaties  
 
 Elke software-update wordt gedefinieerd met een updateclassificatie die helpt de verschillende types updates te organiseren. Tijdens het synchronisatie proces worden de meta gegevens voor de opgegeven classificaties gesynchroniseerd met de site. 
 
@@ -352,7 +352,7 @@ Configureer de update classificatie-instellingen alleen op de site op het hoogst
 >  Wis als best practice alle classificaties voordat u voor de eerste keer synchroniseert. Na de initiële synchronisatie selecteert u de gewenste classificaties en voert u de synchronisatie opnieuw uit.  
 
 
-###  <a name="products"></a><a name="BKMK_UpdateProducts"></a>Producten  
+###  <a name="products"></a><a name="BKMK_UpdateProducts"></a> Producten  
 
 De meta gegevens voor elke software-update definiëren een of meer producten waarvoor de update van toepassing is. Een product is een specifieke editie van een besturings systeem of toepassing. Een voor beeld van een product is micro soft Windows 10. Een product familie is het basis besturingssysteem of de toepassing van waaruit de afzonderlijke producten zijn afgeleid. Een voor beeld van een product familie is micro soft Windows, waarvan Windows 10 en Windows Server 2016 lid zijn. Selecteer een product familie of individuele producten binnen een product familie.  
 
@@ -364,7 +364,7 @@ Configureer de product instellingen alleen op de site op het hoogste niveau. De 
 >  Configuration Manager slaat een lijst van producten en product families op waaruit u kunt kiezen wanneer u het software-update punt voor het eerst installeert. Producten en product families die zijn vrijgegeven nadat Configuration Manager is uitgebracht, zijn mogelijk niet beschikbaar om te selecteren tot u de synchronisatie hebt voltooid. Het synchronisatie proces werkt de lijst met beschik bare producten en product families bij waaruit u kunt kiezen. Wis alle producten voordat u software-updates voor de eerste keer synchroniseert. Na de initiële synchronisatie selecteert u de gewenste producten en voert u de synchronisatie opnieuw uit.  
 
 
-###  <a name="supersedence-rules"></a><a name="BKMK_SupersedenceRules"></a>Vervangings regels  
+###  <a name="supersedence-rules"></a><a name="BKMK_SupersedenceRules"></a> Vervangings regels  
 
 Een software-updat die een andere software-update vervangt, doet gewoonlijk een of meerdere van de volgende acties:  
 
@@ -388,7 +388,7 @@ Denk eens aan de volgende scenario's waarin u een vervangen software-update moet
     > - Voor Configuration Manager versie 1806, wanneer Configuration Manager een vervangen software-update instelt op **verlopen**, wordt de update niet ingesteld op **geweigerd** in WSUS. Clients blijven scannen op een verlopen update totdat de update hand matig of via een aangepast script wordt geweigerd.  Na de Configuration Manager versie 1806, worden door Configuration Manager ook de vervangen updates in WSUS geweigerd. Zie [onderhoud van software-updates](../deploy-use/software-updates-maintenance.md)voor meer informatie over de WSUS-opschoon taak.
     > - Vanaf Configuration Manager versie 1810 kunt u het gedrag van de vervangings regels voor **onderdeel updates** afzonderlijk van **updates zonder onderdelen**opgeven.
 
-###  <a name="languages"></a><a name="BKMK_UpdateLanguages"></a>Talen  
+###  <a name="languages"></a><a name="BKMK_UpdateLanguages"></a> Talen  
 
 Met de taal instellingen voor het software-update punt kunt u het volgende configureren: 
 - De talen waarvoor de samenvattings gegevens (meta gegevens van software-updates) zijn gesynchroniseerd voor software-updates  
@@ -417,7 +417,7 @@ Configureer de instellingen voor de samenvattings informatie alleen op de site o
 >  Selecteer alle beknopte overzichts gegevens talen die u nodig hebt. Wanneer het software-update punt op de site op het hoogste niveau synchroniseert met de synchronisatie bron, bepalen de geselecteerde overzichts gegevens talen welke meta gegevens van de software-updates worden opgehaald. Als u de overzichts gegevens talen wijzigt nadat de synchronisatie ten minste één keer is uitgevoerd, worden de meta gegevens van software-updates voor de gewijzigde overzichts gegevens talen alleen voor nieuwe of bijgewerkte software-updates opgehaald. De software-updates die al zijn gesynchroniseerd, worden niet bijgewerkt met nieuwe meta gegevens voor de gewijzigde talen, tenzij er een wijziging is aangebracht in de software-update op de synchronisatie bron.
 
 
-###  <a name="maximum-run-time"></a><a name="bkmk_maxruntime"></a>Maximale uitvoerings tijd
+###  <a name="maximum-run-time"></a><a name="bkmk_maxruntime"></a> Maximale uitvoerings tijd
 <!--3734426-->
 *(Geïntroduceerd in versie 1906)*
 
@@ -444,7 +444,7 @@ Vanaf versie 1906 kunt u de maximale hoeveelheid tijd opgeven dat de installatie
 > [!NOTE]
 > In versie 1906 is de maximale runtime niet beschikbaar wanneer u het software-update punt op het hoogste niveau installeert. Na de installatie bewerkt u de maximale uitvoerings tijd op het software-update punt op het hoogste niveau.
 
-##  <a name="plan-for-a-software-updates-maintenance-window"></a><a name="BKMK_MaintenanceWindow"></a>Een onderhouds venster voor software-updates plannen  
+##  <a name="plan-for-a-software-updates-maintenance-window"></a><a name="BKMK_MaintenanceWindow"></a> Een onderhouds venster voor software-updates plannen  
 
 Een onderhouds venster toevoegen dat specifiek is voor de installatie van software-updates. Met deze actie kunt u een algemeen onderhouds venster en een ander onderhouds venster voor software-updates configureren. Wanneer u zowel een algemeen onderhouds venster als een onderhouds venster voor software-updates configureert, installeren clients software-updates alleen tijdens het onderhouds venster voor software-updates. 
 
@@ -459,7 +459,7 @@ Wanneer een software-update die opnieuw moet worden opgestart, wordt geïmplemen
 
 Wanneer het opnieuw opstarten in behandeling is voor een Configuration Manager software-update, is de optie voor **bijwerken en opnieuw opstarten** en **bijwerken en afsluiten** beschikbaar op Windows 10-computers in de Windows-energie opties. Nadat u een van deze opties hebt gebruikt, wordt het dialoog venster voor opnieuw opstarten niet weer gegeven nadat de computer opnieuw is opgestart. In bepaalde gevallen kan het besturings systeem de opties voor opnieuw opstarten in behandeling verwijderen. Dit kan gebeuren als de functie snel opstarten in Windows 10 is ingeschakeld. Zie [updates kunnen niet worden geïnstalleerd met snel opstarten in Windows 10](https://support.microsoft.com/help/4011287/windows-updates-not-install-with-fast-startup)voor meer informatie.
 
-## <a name="evaluate-software-updates-after-a-servicing-stack-update"></a><a name="bkmk_ssu"></a>Software-updates evalueren na een onderhouds stack-update
+## <a name="evaluate-software-updates-after-a-servicing-stack-update"></a><a name="bkmk_ssu"></a> Software-updates evalueren na een onderhouds stack-update
 <!--4639943-->
 Met ingang van versie 2002 detecteert Configuration Manager of een onderhouds stack-update (SSU) deel uitmaakt van een installatie voor meerdere updates. Wanneer een SSU wordt gedetecteerd, wordt het eerst geïnstalleerd. Na de installatie van de SSU wordt een evaluatie cyclus voor software-updates uitgevoerd om de resterende updates te installeren. Met deze wijziging kan een afhankelijke cumulatieve update worden geïnstalleerd na de onderhouds stack-update. Het apparaat hoeft niet opnieuw te worden opgestart tussen installaties en u hoeft geen extra onderhouds venster te maken. SSUs worden eerst alleen geïnstalleerd voor installaties die niet door de gebruiker zijn gestart. Als een gebruiker bijvoorbeeld een installatie voor meerdere updates vanuit software Center initieert, wordt de SSU mogelijk niet eerst geïnstalleerd. De installatie van SSUs is voor het eerst niet beschikbaar voor Windows Server-besturings systemen wanneer u Configuration Manager versie 2002. <!--7813007-->Deze functionaliteit is toegevoegd aan Configuration Manager versie 2006 voor Windows Server-besturings systemen.
 

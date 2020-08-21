@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 4ddae3e4c4cf31cb05376bfa437d722f16652fad
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6ff280a01b7388f3e4d296625a94c0184a0e6b09
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721316"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692975"
 ---
 # <a name="capabilities-in-technical-preview-1707-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1707 voor Configuration Manager
 
@@ -85,11 +85,11 @@ Als u Windows Defender Application Guard-beleid wilt maken en implementeren, moe
 3. Klik op het tabblad **Start** in de groep **maken** op **Windows Defender Application Guard-beleid maken**.
 4. Als u het blog bericht als referentie wilt gebruiken, kunt u door de beschik bare instellingen bladeren en deze configureren om de functie uit te proberen.
 5. In deze release hebben we de nieuwe **netwerk definitie** pagina aan de wizard toegevoegd. Op deze pagina geeft u de bedrijfs identiteit op en definieert u de grens van uw bedrijfs netwerk.<br>Windows 10-Pc's slaan slechts één netwerk isolatie lijst op de client op. In deze release kunt u twee verschillende soorten netwerk isolatie lijsten maken (één van Windows Information Protection en één van Windows Defender Application Guard) en implementeren op de client. Als u beide beleids regels implementeert, moeten deze netwerk isolatie lijsten overeenkomen. Als u lijsten implementeert die niet overeenkomen met dezelfde client, mislukt de implementatie.
-Meer informatie over het opgeven van netwerk definities vindt u in de [documentatie van Windows Information Protection](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr).
+Meer informatie over het opgeven van netwerk definities vindt u in de [documentatie van Windows Information Protection](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr).
 
 6. Wanneer u klaar bent, voltooit u de wizard en implementeert u het beleid op een of meer Windows 10-apparaten.
 
-### <a name="further-reading"></a>Meer informatie
+### <a name="further-reading"></a>Meer lezen
 Zie [dit blog bericht](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#BmJGKPfSjHHzsMmI.97)voor meer informatie over Windows Defender Application Guard. Zie [dit blog bericht](https://techcommunity.microsoft.com/t5/Windows-Insider-Program/Windows-Defender-Application-Guard-Standalone-mode/td-p/66903)voor meer informatie over de zelfstandige Windows Defender Application Guard-modus.
 
 ## <a name="add-parameters-when-you-deploy-powershell-scripts-from-configuration-manager"></a>Para meters toevoegen wanneer u Power shell-scripts van Configuration Manager implementeert

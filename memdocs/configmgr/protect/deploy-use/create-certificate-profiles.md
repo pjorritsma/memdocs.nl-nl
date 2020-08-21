@@ -10,12 +10,12 @@ ms.assetid: 634d612c-92d7-4c03-873a-b2e730c9a72d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 159afbf2c5aae9516fc5244ee06a2aa484290c20
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 84f1ea48887f89cf06ed4b41d0de0dfc24e9d508
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721757"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697123"
 ---
 # <a name="create-certificate-profiles"></a>Certificaatprofielen maken
 
@@ -75,7 +75,7 @@ Geef op de pagina **Algemeen** van de wizard Certificaatprofiel maken de volgend
 > - Naam van certificaatsjabloon
 > - Certificaattype
 > - Indeling van de onderwerpnaam
-> - Alternatieve naam voor onderwerp
+> - Alternatieve naam voor het onderwerp
 > - Geldigheidsduur van certificaat
 > - Sleutel gebruik
 > - Sleutel grootte
@@ -114,7 +114,7 @@ Voltooi de pagina **SCEP-registratie** van de wizard Certificaat profiel maken.
 
   - **Installeren in Trusted Platform Module (TPM), anders niet installeren**: de sleutel wordt in de TPM geïnstalleerd. Als de TPM-module niet aanwezig is, mislukt de installatie.  
 
-  - **Installeren in Windows hello voor bedrijven, anders mislukt**: deze optie is beschikbaar voor Windows 10-apparaten. U kunt het certificaat opslaan in de Windows hello voor bedrijven-Store, dat wordt beveiligd door multi-factor Authentication. Zie [Windows hello voor bedrijven](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification)voor meer informatie.
+  - **Installeren in Windows hello voor bedrijven, anders mislukt**: deze optie is beschikbaar voor Windows 10-apparaten. U kunt het certificaat opslaan in de Windows hello voor bedrijven-Store, dat wordt beveiligd door multi-factor Authentication. Zie [Windows hello voor bedrijven](/windows/security/identity-protection/hello-for-business/hello-identity-verification)voor meer informatie.
 
     > [!NOTE]  
     > Deze optie biedt geen ondersteuning voor smartcard aanmelding voor het uitgebreide sleutel gebruik op de pagina eigenschappen van certificaat.
@@ -138,10 +138,10 @@ Geef op de pagina **Certificaateigenschappen** van de wizard Certificaatprofiel 
 
   - Als u de naam van de certificaat sjabloon *typt* , moet u ervoor zorgen dat de naam exact overeenkomt met een van de certificaat sjablonen. De naam moet overeenkomen met de namen die worden vermeld in het REGI ster van de NDES-server. Zorg ervoor dat u de naam van het certificaat sjabloon opgeeft en niet de weergave naam van het certificaat sjabloon.  
 
-    Als u de namen van certificaat sjablonen wilt zoeken, bladert u naar de `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP`volgende register sleutel:. De certificaat sjablonen worden vermeld als de waarden voor **EncryptionTemplate**, **GeneralPurposeTemplate**en **SignatureTemplate**. Standaard is de waarde voor alle drie certificaat sjablonen **IPSECIntermediateOffline**, die wordt toegewezen aan de sjabloon weergave naam van **IPSec (offline-aanvraag)**.  
+    Als u de namen van certificaat sjablonen wilt zoeken, bladert u naar de volgende register sleutel: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP` . De certificaat sjablonen worden vermeld als de waarden voor **EncryptionTemplate**, **GeneralPurposeTemplate**en **SignatureTemplate**. Standaard is de waarde voor alle drie certificaat sjablonen **IPSECIntermediateOffline**, die wordt toegewezen aan de sjabloon weergave naam van **IPSec (offline-aanvraag)**.  
 
     > [!WARNING]  
-    > Wanneer u de naam van de certificaat sjabloon typt, kan Configuration Manager de inhoud van het certificaat sjabloon niet verifiëren. U kunt mogelijk opties selecteren die het certificaat sjabloon niet ondersteunt. Dit kan resulteren in een mislukte certificaat aanvraag. Als dit probleem zich voordoet, wordt er een fout bericht weer gegeven voor W3wp. exe in het CPR. log-bestand dat de sjabloon naam in de aanvraag voor certificaat ondertekening (CSR) en de uitdaging niet overeenkomen.  
+    > Wanneer u de naam van de certificaat sjabloon typt, kan Configuration Manager de inhoud van het certificaat sjabloon niet verifiëren. U kunt mogelijk opties selecteren die het certificaat sjabloon niet ondersteunt. Dit kan resulteren in een mislukte certificaat aanvraag. Als dit probleem zich voordoet, wordt er een fout bericht weer gegeven voor w3wp.exe in het CPR. log-bestand dat de sjabloon naam in de aanvraag voor certificaat ondertekening (CSR) en de uitdaging niet overeenkomen.  
     >
     > Wanneer u de naam van de certificaat sjabloon typt die is opgegeven voor de waarde **GeneralPurposeTemplate** , selecteert u de **sleutel codering** en de opties voor de **digitale hand tekening** voor dit certificaat profiel. Als u alleen de optie **sleutel codering** in dit certificaat profiel wilt inschakelen, geeft u de certificaat sjabloon naam op voor de sleutel **EncryptionTemplate** . Op dezelfde manier dient u, als u alleen de optie **Digitale handtekening** in dit certificaatprofiel wilt inschakelen, de naam van het certificaatsjabloon op te geven voor de sleutel **SignatureTemplate** .  
 
@@ -157,16 +157,16 @@ Geef op de pagina **Certificaateigenschappen** van de wizard Certificaatprofiel 
 - **Geldigheids**duur van certificaat: als u een aangepaste geldigheids periode op de verlenende CA instelt, geeft u de resterende tijd op voordat het certificaat verloopt.
 
     > [!TIP]
-    > Stel een aangepaste geldigheids periode in met de volgende opdracht regel:`certutil -setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE`
+    > Stel een aangepaste geldigheids periode in met de volgende opdracht regel: `certutil -setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE`
     > Zie [certificaat infrastructuur](certificate-infrastructure.md)voor meer informatie over deze opdracht.  
 
     U kunt een waarde opgeven die lager is dan de geldigheids periode in het opgegeven certificaat sjabloon, maar niet hoger. Als de geldigheids periode van het certificaat in het certificaat sjabloon bijvoorbeeld twee jaar is, kunt u een waarde van één jaar opgeven, maar geen waarde van vijf jaar. De waarde moet ook lager zijn dan de resterende geldigheidsperiode van het certificaat van de verlenende CA.  
 
 - **Sleutelgebruik**: geef opties voor sleutelgebruik voor het certificaat op. Kies uit de volgende opties:  
 
-  - **Sleutel codering**: sta alleen sleutel uitwisseling toe als de sleutel is versleuteld.  
+  - **Sleutelcodering**: Sta sleuteluitwisseling alleen toe als de sleutel is versleuteld.  
 
-  - **Digitale hand tekening**: sta sleutel uitwisseling alleen toe als een digitale hand tekening de sleutel helpt beveiligen.  
+  - **Digitale handtekening**: Sta sleuteluitwisseling alleen toe als de sleutel wordt beveiligd met een digitale handtekening.  
 
   Als u een certificaat sjabloon hebt bekeken, kunt u deze instellingen niet wijzigen, tenzij u een ander certificaat sjabloon selecteert.  
 
@@ -174,7 +174,7 @@ Geef op de pagina **Certificaateigenschappen** van de wizard Certificaatprofiel 
 
 - **Sleutelgrootte (bits)**: selecteer de grootte van de sleutel in bits.  
 
-- **Uitgebreide-sleutel gebruik**: Voeg waarden toe voor het beoogde doel van het certificaat. In de meeste gevallen vereist het certificaat **Clientverificatie** zodat de gebruiker of het apparaat bij een server kan worden geverifieerd. U kunt elk gewenst sleutel gebruik toevoegen als dat nodig is.  
+- **Uitgebreide-sleutel gebruik**: Voeg waarden toe voor het beoogde doel van het certificaat. In de meeste gevallen vereist het certificaat **client verificatie** zodat de gebruiker of het apparaat bij een server kan worden geverifieerd. U kunt elk gewenst sleutel gebruik toevoegen als dat nodig is.  
 
 - **Hash-algoritme**: selecteer een van de beschikbare typen hash-algoritme om met dit certificaat te gebruiken. Selecteer het sterkste beveiligingsniveau dat door de verbindende apparaten wordt ondersteund.  
 

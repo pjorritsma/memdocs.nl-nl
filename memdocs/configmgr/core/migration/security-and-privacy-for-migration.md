@@ -10,12 +10,12 @@ ms.assetid: 6893fce1-7ad5-4151-9ba9-3096871e8e4a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ad92e4906c45b5c720ab35efc055449a27cc0850
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: f219c6c6d4c9a5cbf04b1295c99184f345e68b83
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906221"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692856"
 ---
 # <a name="security-and-privacy-for-migration-to-configuration-manager-current-branch"></a>Beveiliging en privacy voor migratie naar Configuration Manager huidige branch
 
@@ -48,9 +48,9 @@ Wanneer u gegevens migreert van een bron site naar een doel site, verliest u de 
 
  Zie een van de volgende onderwerpen voor meer informatie over beveiligings-en privacy-informatie:  
 
--   Zie [beveiliging en privacy voor Configuration Manager 2007](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb680768(v=technet.10)) in de documentatie bibliotheek van Configuration Manager 2007 voor meer informatie over de privacy-informatie voor Configuration Manager 2007.  
+-   Zie [beveiliging en privacy voor Configuration Manager 2007](/previous-versions/system-center/configuration-manager-2007/bb680768(v=technet.10)) in de documentatie bibliotheek van Configuration Manager 2007 voor meer informatie over de privacy-informatie voor Configuration Manager 2007.  
 
--   Zie [beveiliging en privacy voor System center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682033(v=technet.10)) in de documentatie bibliotheek van system center 2012 Configuration Manager voor meer informatie over de privacy-informatie voor system center 2012 Configuration Manager.  
+-   Zie  [beveiliging en privacy voor System center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682033(v=technet.10)) in de documentatie bibliotheek van system center 2012 Configuration Manager voor meer informatie over de privacy-informatie voor system center 2012 Configuration Manager.  
 
 -   Zie voor meer informatie over de privacy-informatie voor Configuration Manager [beveiliging en privacy voor Configuration Manager](../../core/plan-design/security/security-and-privacy.md).  
 
@@ -58,4 +58,4 @@ U kunt enkele of alle ondersteunde gegevens van een bron site naar een doel hië
 
 Migratie is niet standaard ingeschakeld en vereist verschillende configuratie stappen. Migratie gegevens worden niet naar micro soft verzonden.  
 
-Voordat u gegevens migreert vanuit een-bron hiërarchie, moet u rekening houden met uw privacy-vereisten.  
+Voordat u gegevens migreert vanuit een-bron hiërarchie, moet u rekening houden met uw privacy-vereisten.

@@ -10,12 +10,12 @@ ms.assetid: 1ee6541a-e243-43ea-be16-d0349f7f0c6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e887d594e80c0f92340081d9b922bfc334d1b3a5
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 2c74f1ac74b120fac2dabcd5f84f288b41368324
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129185"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697293"
 ---
 # <a name="encrypt-recovery-data"></a>Herstelgegevens versleutelen
 
@@ -203,9 +203,9 @@ Als het certificaat geldig is, retourneert het script een waarde van `1` .
 
 Raadpleeg de volgende artikelen voor meer informatie over deze SQL-opdrachten:
 
-- [Versleutelings sleutels voor SQL Server en data base](https://docs.microsoft.com/sql/relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine)
-- [Certificaat maken](https://docs.microsoft.com/sql/t-sql/statements/create-certificate-transact-sql)
-- [Back-upcertificaat](https://docs.microsoft.com/sql/t-sql/statements/backup-certificate-transact-sql)
-- [Hoofd sleutel maken](https://docs.microsoft.com/sql/t-sql/statements/create-master-key-transact-sql)
-- [Hoofd sleutel voor back-up](https://docs.microsoft.com/sql/t-sql/statements/backup-master-key-transact-sql)
-- [Certificaat machtigingen verlenen](https://docs.microsoft.com/sql/t-sql/statements/grant-certificate-permissions-transact-sql)
+- [Versleutelings sleutels voor SQL Server en data base](/sql/relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine)
+- [Certificaat maken](/sql/t-sql/statements/create-certificate-transact-sql)
+- [Back-upcertificaat](/sql/t-sql/statements/backup-certificate-transact-sql)
+- [Hoofd sleutel maken](/sql/t-sql/statements/create-master-key-transact-sql)
+- [Hoofd sleutel voor back-up](/sql/t-sql/statements/backup-master-key-transact-sql)
+- [Certificaat machtigingen verlenen](/sql/t-sql/statements/grant-certificate-permissions-transact-sql)

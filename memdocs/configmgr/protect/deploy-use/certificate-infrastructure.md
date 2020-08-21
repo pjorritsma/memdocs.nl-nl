@@ -10,12 +10,12 @@ ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 590c6fd336ec19949b5f5b99b25b3104524a52d6
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 656cc80c929eb7e829dd06b642a83cb174d3b0c8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210108"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697242"
 ---
 # <a name="configure-certificate-infrastructure"></a>Certificaatinfrastructuur configureren
 
@@ -34,7 +34,7 @@ Gebruik deze stappen voor het configureren van uw infra structuur voor SCEP-of P
 
 ### <a name="to-install-and-configure-the-network-device-enrollment-service-and-dependencies"></a>De registratieservice en afhankelijkheden voor netwerkapparaten installeren en configureren  
 
-1. Installeer en configureer op een server met Windows Server 2012 R2 de rolservice Registratieservice voor netwerkapparaten voor de serverrol Active Directory Certificate Services. Zie [richt lijnen voor registratie service voor netwerk apparaten](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\))voor meer informatie.
+1. Installeer en configureer op een server met Windows Server 2012 R2 de rolservice Registratieservice voor netwerkapparaten voor de serverrol Active Directory Certificate Services. Zie [richt lijnen voor registratie service voor netwerk apparaten](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\))voor meer informatie.
 
 2. Controleer en wijzig indien nodig de beveiligingsmachtigingen voor de certificaatsjablonen die worden gebruikt door de registratieservice voor netwerkapparaten:  
 
@@ -44,7 +44,7 @@ Gebruik deze stappen voor het configureren van uw infra structuur voor SCEP-of P
 
    -   De machtigingen **Lezen** en **Inschrijven** voor het SCEP-serviceaccount waarvan de groep toepassingen in de registratieservice voor netwerkapparaten gebruikmaakt.  
 
-        Deze vereiste is niet specifiek voor Configuration Manager, maar maakt deel uit van het configureren van de registratie service voor netwerk apparaten. Zie [richt lijnen voor registratie service voor netwerk apparaten](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\))voor meer informatie.  
+        Deze vereiste is niet specifiek voor Configuration Manager, maar maakt deel uit van het configureren van de registratie service voor netwerk apparaten. Zie [richt lijnen voor registratie service voor netwerk apparaten](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\))voor meer informatie.  
 
    > [!TIP]  
    >  Gebruik de volgende registersleutel op de server die wordt uitgevoerd met de registratieservice voor netwerkapparaten om te identificeren welke sjablonen door de registratieservice voor netwerkapparaten worden gebruikt: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP.  
@@ -69,7 +69,7 @@ Gebruik deze stappen voor het configureren van uw infra structuur voor SCEP-of P
 
    - Stel de **MaxRequestBytes-sleutel** in op **16777216**.  
 
-     Zie Microsoft Ondersteuning artikel [820129: http. sys Registry Settings for Windows](https://support.microsoft.com/help/820129)(Engelstalig) voor meer informatie.
+     Zie Microsoft Ondersteuning artikel [820129: Http.sys register instellingen voor Windows](https://support.microsoft.com/help/820129)voor meer informatie.
 
 6. Op dezelfde server, in IIS-beheerder (Internet Information Services), de instellingen voor aanvraagfiltering voor de toepassing /certsrv/mscep wijzigen en vervolgens de server opnieuw opstarten. In het dialoogvenster **Instellingen voor aanvraagfiltering bewerken** moeten de instellingen van **Aanvraaglimieten** de volgende zijn:  
 
@@ -79,7 +79,7 @@ Gebruik deze stappen voor het configureren van uw infra structuur voor SCEP-of P
 
    - **Maximale queryreeks (bytes)**: **65534**  
 
-     Zie [limieten voor IIS-aanvragen](https://docs.microsoft.com/iis/configuration/system.webServer/security/requestFiltering/requestLimits/)voor meer informatie over deze instellingen en hoe u deze kunt configureren.
+     Zie [limieten voor IIS-aanvragen](/iis/configuration/system.webServer/security/requestFiltering/requestLimits/)voor meer informatie over deze instellingen en hoe u deze kunt configureren.
 
 7. Als u een certificaat wilt aanvragen met een kortere geldigheidsperiode dan de certificaatsjabloon die u gebruikt: deze configuratie is voor een ondernemings-CA standaard uitgeschakeld. Het opdrachtregelprogramma Certutil gebruiken, vervolgens de certificaatservice stopzetten en opnieuw opstarten met behulp de volgende opdrachten, om deze optie op een ondernemings-CA in te schakelen:  
 
@@ -89,9 +89,9 @@ Gebruik deze stappen voor het configureren van uw infra structuur voor SCEP-of P
 
    3. **net start certsvc**  
 
-      Zie [Certificate Services Tools and Settings](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc780742\(v=ws.10\))(Engelstalig) voor meer informatie.
+      Zie [Certificate Services Tools and Settings](/previous-versions/windows/it-pro/windows-server-2003/cc780742\(v=ws.10\))(Engelstalig) voor meer informatie.
 
-8. Controleer of de registratie service voor netwerk apparaten werkt door de volgende koppeling als voor beeld te gebruiken `https://server.contoso.com/certsrv/mscep/mscep.dll`:. U zou de ingebouwde webpagina van de registratieservice voor netwerkapparaten moeten zien. Deze webpagina legt uit waaruit de service bestaat en legt uit dat netwerkapparaten de URL gebruiken om certificaataanvragen te verzenden.  
+8. Controleer of de registratie service voor netwerk apparaten werkt door de volgende koppeling als voor beeld te gebruiken: `https://server.contoso.com/certsrv/mscep/mscep.dll` . U zou de ingebouwde webpagina van de registratieservice voor netwerkapparaten moeten zien. Deze webpagina legt uit waaruit de service bestaat en legt uit dat netwerkapparaten de URL gebruiken om certificaataanvragen te verzenden.  
 
    Nu dat de registratieservice voor netwerkapparaten en afhankelijkheden zijn geconfigureerd, bent u klaar om het certificaatregistratiepunt nu te installeren en configureren.
 
@@ -125,7 +125,7 @@ U moet ten minste één certificaat registratiepunt installeren en configureren 
    - Als u **SCEP-certificaat aanvragen verwerken**hebt geselecteerd, configureert u het volgende:
      -   De naam van de **website**, het **HTTPS-poort nummer**en de naam van de **virtuele toepassing** voor het certificaat registratiepunt. Deze velden worden automatisch ingevuld met standaard waarden. 
      -   **URL voor de registratie service voor netwerk apparaten en het basis-CA-certificaat** : Klik op **toevoegen**en geef in het dialoog venster **URL en basis-CA-certificaat toevoegen** het volgende op:
-         - **URL voor de registratieservice voor netwerkapparaten**: geef de URL in de volgende indeling op: https://*<server_FQDN>*/certsrv/mscep/mscep.dll. Als de FQDN-naam van de server waarop de registratie service voor netwerk apparaten wordt uitgevoerd bijvoorbeeld server1.contoso.com is, `https://server1.contoso.com/certsrv/mscep/mscep.dll`typt u.
+         - **URL voor de registratieservice voor netwerkapparaten**: geef de URL in de volgende indeling op: https://*<server_FQDN>*/certsrv/mscep/mscep.dll. Als de FQDN-naam van de server waarop de registratie service voor netwerk apparaten wordt uitgevoerd bijvoorbeeld server1.contoso.com is, typt u `https://server1.contoso.com/certsrv/mscep/mscep.dll` .
          - **Basis-CA-certificaat**: blader naar en selecteer het certificaatbestand (.cer) dat u in **Stap 1: De registratieservice en afhankelijkheden voor netwerkapparaten installeren en configureren hebt gemaakt en opgeslagen**. Met dit basis-CA-certificaat kan het certificaat registratiepunt het client verificatie certificaat valideren dat door de Configuration Manager-beleids module wordt gebruikt.  
 
    - Als u **PFX-certificaat aanvragen verwerken**hebt geselecteerd, configureert u de verbindings gegevens en referenties voor de geselecteerde certificerings instantie.
@@ -171,7 +171,7 @@ U moet de Configuration Manager-beleids module installeren en configureren op el
 
 ##### <a name="to-install-the-policy-module"></a>De beleidsmodule installeren  
 
-1. Op de server waarop de registratie service voor netwerk apparaten wordt uitgevoerd, meldt u zich aan als een domein beheerder en kopieert u de\>volgende bestanden uit de map <ConfigMgrInstallationMedia \SMSSETUP\POLICYMODULE\X64 op de Configuration Manager installatie media naar een tijdelijke map:  
+1. Op de server waarop de registratie service voor netwerk apparaten wordt uitgevoerd, meldt u zich aan als een domein beheerder en kopieert u de volgende bestanden uit de map <ConfigMgrInstallationMedia \> \SMSSETUP\POLICYMODULE\X64 op de Configuration Manager installatie media naar een tijdelijke map:  
 
    -   PolicyModule.msi  
 
@@ -179,13 +179,13 @@ U moet de Configuration Manager-beleids module installeren en configureren op el
 
    Als u een taalpakketmap hebt op de installatiemedia, kopieert u bovendien deze map en de inhoud hiervan.  
 
-2. Voer in de tijdelijke map PolicyModuleSetup. exe uit om de installatie wizard voor de Configuration Manager-beleids module te starten.  
+2. Voer in de tijdelijke map PolicyModuleSetup.exe uit om de installatie wizard van de Configuration Manager-beleids module te starten.  
 
 3. Klik op de eerste pagina van de wizard op **Volgende**, aanvaard de licentievoorwaarden en klik vervolgens op **Volgende**.  
 
 4. Op de pagina **Installatiemap**, aanvaardt u de standaardinstallatiemap voor de beleidsmodule of geeft u een alternatieve map op. Klik vervolgens op **Volgende**.  
 
-5. Geef op de pagina **Certificaatregistratiepunt** de URL van het certificaatregistratiepunt op met behulp van de FQDN van de sitesysteemserver en de virtuele toepassingsnaam die is opgegeven in de eigenschappen voor het certificaatregistratiepunt. De standaardnaam van de virtuele toepassing is CMCertificateRegistration. Bijvoorbeeld, als de site systeem server een FQDN van server1.contoso.com heeft en u de standaard naam van de virtuele toepassing hebt gebruikt `https://server1.contoso.com/CMCertificateRegistration`, geeft u op.
+5. Geef op de pagina **Certificaatregistratiepunt** de URL van het certificaatregistratiepunt op met behulp van de FQDN van de sitesysteemserver en de virtuele toepassingsnaam die is opgegeven in de eigenschappen voor het certificaatregistratiepunt. De standaardnaam van de virtuele toepassing is CMCertificateRegistration. Bijvoorbeeld, als de site systeem server een FQDN van server1.contoso.com heeft en u de standaard naam van de virtuele toepassing hebt gebruikt, geeft u op `https://server1.contoso.com/CMCertificateRegistration` .
 
 6. Aanvaard de standaardpoort **443** of geef het alternatieve poortnummer op dat door certificaatregistratiepunt wordt gebruikt en klik vervolgens op **Volgende**.  
 
@@ -201,4 +201,4 @@ U moet de Configuration Manager-beleids module installeren en configureren op el
    Als u de Configuration Manager-beleids module wilt verwijderen, gebruikt u **Program ma's en onderdelen** in het configuratie scherm. 
 
  
-Nu u de configuratie stappen hebt voltooid, bent u klaar om certificaten te implementeren voor gebruikers en apparaten door certificaat profielen te maken en te implementeren. Zie [certificaat profielen maken](../../protect/deploy-use/create-certificate-profiles.md)voor meer informatie over het maken van certificaat profielen.  
+Nu u de configuratie stappen hebt voltooid, bent u klaar om certificaten te implementeren voor gebruikers en apparaten door certificaat profielen te maken en te implementeren. Zie [certificaat profielen maken](../../protect/deploy-use/create-certificate-profiles.md)voor meer informatie over het maken van certificaat profielen.

@@ -10,24 +10,24 @@ ms.assetid: e217699a-28b2-471a-b421-8fbd1d1fd638
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4d13d9dfd75abb656a765ce8c91ce6f177636cd3
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: ca7d81ba112c9eb79fb8bcfff96fb213b87b44c3
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127168"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694811"
 ---
 # <a name="onedrive-for-business-profiles"></a>Profielen van OneDrive voor Bedrijven
 
-Vanaf Configuration Manager versie 1902 kunt u OneDrive voor bedrijven-profielen maken voor het verplaatsen van bekende Windows-mappen naar OneDrive voor bedrijven. Deze mappen omvatten bureau blad, documenten en afbeeldingen. In elk profiel kunt u instellingen opgeven voor het verplaatsen van de bekende Windows-mappen. Zie [Windows bekende mappen omleiden en verplaatsen naar OneDrive](https://docs.microsoft.com/onedrive/redirect-known-folders)voor meer informatie over Onedrive voor bedrijven. <!--3556021-->
+Vanaf Configuration Manager versie 1902 kunt u OneDrive voor bedrijven-profielen maken voor het verplaatsen van bekende Windows-mappen naar OneDrive voor bedrijven. Deze mappen omvatten bureau blad, documenten en afbeeldingen. In elk profiel kunt u instellingen opgeven voor het verplaatsen van de bekende Windows-mappen. Zie [Windows bekende mappen omleiden en verplaatsen naar OneDrive](/onedrive/redirect-known-folders)voor meer informatie over Onedrive voor bedrijven. <!--3556021-->
 
 ## <a name="prerequisites"></a>Vereisten
 
-- [Uw Microsoft 365 Tenant-ID zoeken](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id)  
+- [Uw Microsoft 365 Tenant-ID zoeken](/onedrive/find-your-office-365-tenant-id)  
 
-- Implementeer de OneDrive Sync Client-versie 18.111.0603.0004 of hoger. Zie voor meer informatie [OneDrive-Apps implementeren met behulp van Configuration Manager](https://docs.microsoft.com/onedrive/deploy-on-windows).  
+- Implementeer de OneDrive Sync Client-versie 18.111.0603.0004 of hoger. Zie voor meer informatie [OneDrive-Apps implementeren met behulp van Configuration Manager](/onedrive/deploy-on-windows).  
 
-## <a name="move-windows-known-folders-to-onedrive"></a><a name="bkmk_odfb"></a>Bekende Windows-mappen naar OneDrive verplaatsen
+## <a name="move-windows-known-folders-to-onedrive"></a><a name="bkmk_odfb"></a> Bekende Windows-mappen naar OneDrive verplaatsen
 <!--3556021-->
 Gebruik Configuration Manager om bekende mappen van Windows te verplaatsen naar OneDrive voor bedrijven. Deze mappen omvatten bureau blad, documenten en afbeeldingen. Als u uw Windows 10-upgrades wilt vereenvoudigen, implementeert u deze instellingen voor Windows 7-clients voordat u een taken reeks implementeert. 
 

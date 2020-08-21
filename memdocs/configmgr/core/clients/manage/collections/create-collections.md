@@ -10,12 +10,12 @@ ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5e81bc9b2135d17c445f8a86ff2214db394f63db
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: 5606d7bb5656fe4616ba416836dab2c04c490cfa
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865486"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693298"
 ---
 # <a name="how-to-create-collections-in-configuration-manager"></a>Verzamelingen maken in Configuration Manager
 
@@ -72,7 +72,7 @@ U maakt een verzameling met één verzamelings regel voor opnemen en één regel
 
 
 
-## <a name="create-a-collection"></a><a name="bkmk_create"></a>Een verzameling maken  
+## <a name="create-a-collection"></a><a name="bkmk_create"></a> Een verzameling maken  
 
 1. Ga in de Configuration Manager-console naar de werk ruimte **activa en naleving** .  
 
@@ -132,7 +132,7 @@ U maakt een verzameling met één verzamelings regel voor opnemen en één regel
 > U moet de Configuration Manager-console vernieuwen of opnieuw laden om de leden van de verzameling weer te geven. Ze worden pas na de eerste geplande update weer gegeven in de verzameling. U kunt ook hand matig **Update lidmaatschap** selecteren voor de verzameling. Het kan enkele minuten duren voordat een verzamelings update is voltooid.  
 
         
-### <a name="configure-a-direct-rule"></a><a name="bkmk-direct"></a>Een directe regel configureren  
+### <a name="configure-a-direct-rule"></a><a name="bkmk-direct"></a> Een directe regel configureren  
 
 1. Geef op de pagina **zoeken naar resources** van de **wizard regel voor direct lidmaatschap maken**de volgende informatie op.  
 
@@ -159,7 +159,7 @@ U maakt een verzameling met één verzamelings regel voor opnemen en één regel
 2. Op de pagina **resources selecteren** selecteert u de resources die u wilt toevoegen aan de verzameling in de lijst **resources** en selecteert u vervolgens **volgende**.  
 
 
-### <a name="configure-a-query-rule"></a><a name="bkmk-query"></a>Een query regel configureren  
+### <a name="configure-a-query-rule"></a><a name="bkmk-query"></a> Een query regel configureren  
 
 Geef in het dialoog venster **query regel eigenschappen** de volgende informatie op.  
 
@@ -174,7 +174,7 @@ Geef in het dialoog venster **query regel eigenschappen** de volgende informatie
     > [!TIP]  
     > Schakel op het tabblad Algemeen het selectie vakje voor het **weglaten van dubbele rijen (DISTINCT selecteren)** uit, waardoor er minder rijen worden geretourneerd en mogelijk snellere resultaten.
 
-### <a name="device-category-rule"></a><a name="bkmk-category"></a>Regel voor apparaatcategorie
+### <a name="device-category-rule"></a><a name="bkmk-category"></a> Regel voor apparaatcategorie
 
 De volgende acties zijn beschikbaar in het venster **apparaatcategorieën selecteren** .
 
@@ -185,18 +185,18 @@ De volgende acties zijn beschikbaar in het venster **apparaatcategorieën select
 Zie [apparaten automatisch categoriseren in verzamelingen](automatically-categorize-devices-into-collections.md)voor meer informatie.<!-- SCCMDocs issue 552 -->
 
 
-### <a name="configure-an-include-collection-rule"></a><a name="bkmk-include"></a>Een regel voor het insluiten van een verzameling configureren  
+### <a name="configure-an-include-collection-rule"></a><a name="bkmk-include"></a> Een regel voor het insluiten van een verzameling configureren  
 
 Selecteer in het dialoog venster **verzamelingen selecteren** de verzamelingen die u wilt toevoegen in de nieuwe verzameling en selecteer vervolgens **OK**.  
 
 
-### <a name="configure-an-exclude-collection-rule"></a><a name="bkmk-exclude"></a>Een regel voor het uitsluiten van een verzameling configureren  
+### <a name="configure-an-exclude-collection-rule"></a><a name="bkmk-exclude"></a> Een regel voor het uitsluiten van een verzameling configureren  
 
 Selecteer in het dialoog venster **verzamelingen selecteren** de verzamelingen die u wilt uitsluiten van de nieuwe verzameling en selecteer vervolgens **OK**.  
 
 
 
-## <a name="import-a-collection"></a><a name="bkmk_import"></a>Een verzameling importeren  
+## <a name="import-a-collection"></a><a name="bkmk_import"></a> Een verzameling importeren  
 
 Wanneer u een verzameling exporteert vanuit een-site, Configuration Manager deze opslaat als een Managed Object Format bestand (MOF). Gebruik deze procedure om dat bestand te importeren in de-site database. Als u deze procedure wilt uitvoeren, moet u de machtigingen **maken** voor de klasse Collections.
 
@@ -218,7 +218,7 @@ Zie [verzamelingen beheren](manage-collections.md)voor meer informatie over het 
 
 5. Voltooi de wizard om de verzameling te importeren. De nieuwe verzameling wordt weergegeven in het knooppunt **Gebruikersverzamelingen** of **Apparaatverzamelingen** van de werkruimte **Activa en naleving** . Vernieuw de Configuration Manager-console of laad deze opnieuw om de verzamelings leden voor de zojuist geïmporteerde verzameling te zien.  
 
-## <a name="synchronize-collection-membership-results-to-azure-active-directory-groups"></a><a name="bkmk_aadcollsync"></a>Resultaten van verzamelings lidmaatschap synchroniseren met Azure Active Directory groepen
+## <a name="synchronize-collection-membership-results-to-azure-active-directory-groups"></a><a name="bkmk_aadcollsync"></a> Resultaten van verzamelings lidmaatschap synchroniseren met Azure Active Directory groepen
 
 <!--3607475-->
 > [!Tip]  
@@ -275,13 +275,13 @@ De Azure AD-synchronisatie gebeurt elke vijf minuten. Het is een eenrichtings pr
 
 ![Verzamelingen synchroniseren met Azure AD](media/3607475-sync-collection-to-azuread.png)
 
-## <a name="using-powershell"></a><a name="bkmk_powershell"></a>Power shell gebruiken
+## <a name="using-powershell"></a><a name="bkmk_powershell"></a> Power shell gebruiken
 
 U kunt Power shell gebruiken om verzamelingen te maken en te importeren. Zie voor meer informatie:
 
-* [New-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmcollection)
-* [Set-CMCollection](https://docs.microsoft.com/powershell/module/ConfigurationManager/Set-CMCollection)
-* [Import-CMCollection](https://docs.microsoft.com/powershell/module/ConfigurationManager/Import-CMCollection)
+* [New-CMCollection](/powershell/module/configurationmanager/new-cmcollection)
+* [Set-CMCollection](/powershell/module/ConfigurationManager/Set-CMCollection)
+* [Import-CMCollection](/powershell/module/ConfigurationManager/Import-CMCollection)
 
 ## <a name="next-steps"></a>Volgende stappen
 

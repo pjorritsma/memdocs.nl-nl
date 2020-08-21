@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: be1401f28ccbd15de2561a19169ed67a81a91550
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: 1e86f331531d166e30ec7284d3852930fb3e62af
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87526029"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695814"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1601 voor Configuration Manager
 
@@ -57,7 +57,7 @@ Dit artikel bevat een inleiding tot de functies die beschikbaar zijn in de Techn
 
 **Hier volgen enkele nieuwe functies die u kunt uitproberen met deze versie.**  
 
-##  <a name="improvements-to-microsoft-intune-integration"></a><a name="bkmk_hybrid1"></a>Verbeteringen in Microsoft Intune integratie  
+##  <a name="improvements-to-microsoft-intune-integration"></a><a name="bkmk_hybrid1"></a> Verbeteringen in Microsoft Intune integratie  
 In de 1601 Technical Preview is ondersteuning toegevoegd voor de volgende functies:  
 
 ### <a name="improvements-to-conditional-access"></a>Verbeteringen in voorwaardelijke toegang  
@@ -75,11 +75,11 @@ In de 1601 Technical Preview is ondersteuning toegevoegd voor de volgende functi
 
     -   Een Microsoft Intune-abonnement. Het Microsoft Intune-abonnement moet worden geconfigureerd in Configuration Manager-console.  
 
-    -   [Vereisten voor automatische registratie van Azure AD](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1).  
+    -   [Vereisten voor automatische registratie van Azure AD](/azure/active-directory/devices/hybrid-azuread-join-plan?rnd=1).  
 
     Als u de optie wilt gebruiken, moet u een nalevings beleid maken in Configuration Manager met specifieke regels die hieronder worden beschreven en een beleid voor voorwaardelijke toegang instellen in de intune-console.  Als u er zeker van wilt zijn dat alleen compatibele Pc's toegang hebben, moet u de Windows-PC-vereiste instellen op **apparaten moet voldoen** aan het beleid. Hieronder vindt u de regels die voldoen aan het beleid dat van toepassing is op Pc's die worden beheerd door Configuration Manager.  
 
-    -   **Registratie in azure ActiveDirectory vereisen:** Deze regel controleert of het apparaat van de gebruiker is toegevoegd aan Azure AD. als dit niet het geval is, wordt het apparaat automatisch geregistreerd in azure AD. Automatische inschrijving wordt alleen ondersteund op Windows 8.1. Implementeer een MSI-bestand om automatische inschrijving voor Windows 7-pc's uit te voeren. Klik [hier](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1) voor meer informatie.  
+    -   **Registratie in azure ActiveDirectory vereisen:** Deze regel controleert of het apparaat van de gebruiker is toegevoegd aan Azure AD. als dit niet het geval is, wordt het apparaat automatisch geregistreerd in azure AD. Automatische inschrijving wordt alleen ondersteund op Windows 8.1. Implementeer een MSI-bestand om automatische inschrijving voor Windows 7-pc's uit te voeren. Klik [hier](/azure/active-directory/devices/hybrid-azuread-join-plan?rnd=1) voor meer informatie.  
 
     -   **Alle vereiste updates met een deadline die ouder is dan een bepaald aantal dagen, zijn geïnstalleerd:** Deze regel controleert of het apparaat van de gebruiker alle vereiste updates heeft (opgegeven in de regel **vereiste automatische updates** ) binnen de door u opgegeven deadline en respijt periode, en installeert automatisch de vereiste updates die nog niet zijn geïnstalleerd.  
 
@@ -98,7 +98,7 @@ In de 1601 Technical Preview is ondersteuning toegevoegd voor de volgende functi
 
     -   **Automatische updates vereisen:** U kunt apparaten met Windows 8,1 of hoger vereisen om automatische installatie van updates toe te staan en ook de klasse van geïnstalleerde updates op te geven.  U kunt kiezen uit: Installeer alleen updates die zijn gemarkeerd als belang rijk of installeer alle aanbevolen updates.  
 
-         Als u een regel voor automatische updates wilt maken, opent u de **wizard nalevings beleid maken**en voegt u een nieuwe regel toe.  Selecteer **minimale classificatie van vereiste updates** als voor waarde en stel de waarde in op een van de beschik bare waarden: **geen**, **Aanbevolen**en **belang rijk**.  
+         Als u een regel voor automatische updates wilt maken, opent u de **wizard nalevings beleid maken**en voegt u een nieuwe regel toe.  Selecteer  **minimale classificatie van vereiste updates** als voor waarde en stel de waarde in op een van de beschik bare waarden: **geen**, **Aanbevolen**en **belang rijk**.  
 
         -   **Geen:** Updates worden niet automatisch geïnstalleerd.  
 
@@ -123,7 +123,7 @@ In de 1601 Technical Preview is ondersteuning toegevoegd voor de volgende functi
 
      Als u deze optie wilt gebruiken, gaat u naar de pagina **Algemeen** van de **wizard beleid voor voorwaardelijke toegang configureren** voor Exchange on-premises.  
 
-##  <a name="client-online-status"></a><a name="bkmk_clientStatus"></a>Online status van client  
+##  <a name="client-online-status"></a><a name="bkmk_clientStatus"></a> Online status van client  
 Vanaf Technical Preview 1601 kunt u in een oogopslag zien of een client online of offline is in de Configuration Manager-console. Met bijgewerkte pictogrammen en kolommen in de lijst met apparaten kunt u de status van clients in uw omgeving beoordelen om probleem gebieden te identificeren en andere problemen die mogelijk uw aandacht vereisen.  
 
 Een client is online als deze momenteel is verbonden met een Configuration Manager beheer punt-site systeemrol. Zolang het beheer punt ping-achtige berichten van de client ontvangt, is de status online. Als het beleid gedurende vijf minuten geen bericht ontvangt, wordt de status van de client gewijzigd in offline.  
@@ -156,7 +156,7 @@ Een client is online als deze momenteel is verbonden met een Configuration Manag
 
    Vernieuw de console om recente wijzigingen in de client status weer te geven.  
 
-##  <a name="improvements-to-application-management"></a><a name="bkmk_appmgmt1601"></a>Verbeteringen aan toepassings beheer  
+##  <a name="improvements-to-application-management"></a><a name="bkmk_appmgmt1601"></a> Verbeteringen aan toepassings beheer  
  In de 1601 Technical Preview is ondersteuning toegevoegd voor de volgende functies:  
 
 ### <a name="manage-volume-purchased-apps-for-ios-devices"></a>Volume-purchased apps voor iOS-apparaten beheren  
@@ -191,7 +191,7 @@ Een client is online als deze momenteel is verbonden met een Configuration Manag
 
 -   In de wizard **software implementeren** koppelt u op de pagina **app-configuratie beleid** het app-configuratie beleid dat u hebt gemaakt met een compatibel implementatie type van de toepassing.  
 
-##  <a name="improvements-to-compliance-settings"></a><a name="bkmk_compliance1601"></a>Verbeteringen aan de instellingen voor naleving  
+##  <a name="improvements-to-compliance-settings"></a><a name="bkmk_compliance1601"></a> Verbeteringen aan de instellingen voor naleving  
  In de 1601 Technical Preview is ondersteuning toegevoegd voor de volgende functies:  
 
 ### <a name="microsoft-edge-browser-settings"></a>Micro soft Edge-browser instellingen  
@@ -213,4 +213,4 @@ Een client is online als deze momenteel is verbonden met een Configuration Manag
 
  Als u de nieuwe instellingen wilt zien, kiest u **kiosk modus-Samsung KNOX** op de pagina configuratie-item **Apparaatinstellingen** van de wizard **configuratie-item maken** .  
 
- Zie [configuratie-items maken voor windows 8,1-en Windows 10-apparaten die worden beheerd zonder de Configuration Manager-client](../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)voor meer informatie.  
+ Zie [configuratie-items maken voor windows 8,1-en Windows 10-apparaten die worden beheerd zonder de Configuration Manager-client](../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)voor meer informatie.

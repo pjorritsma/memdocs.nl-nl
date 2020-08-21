@@ -10,12 +10,12 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2f5aa622ca5d98f2cb5eb0b0c3154625df11a42e
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 3192cd8177075542ffc86ab236b817db5befca1d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240759"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696885"
 ---
 # <a name="enable-third-party-updates"></a>Updates van derden inschakelen 
 
@@ -30,7 +30,7 @@ Vanaf versie 1806 kunt u met het knoop punt **Software-update catalogi** van der
 ## <a name="prerequisites"></a>Vereisten 
 - Er is voldoende schijf ruimte op de WSUSContent-map van het hoogste niveau voor het opslaan van de binaire bron inhoud voor software-updates van derden.
     - De hoeveelheid vereiste opslag is afhankelijk van de leverancier, typen updates en specifieke updates die u voor implementatie publiceert.
-    - Als u de map WSUSContent naar een ander station met meer vrije ruimte wilt verplaatsen, raadpleegt u de [locatie wijzigen waar de update lokaal](https://docs.microsoft.com/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally) blog bericht wordt opgeslagen in WSUS.
+    - Als u de map WSUSContent naar een ander station met meer vrije ruimte wilt verplaatsen, raadpleegt u de [locatie wijzigen waar de update lokaal](/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally) blog bericht wordt opgeslagen in WSUS.
 - De synchronisatie service voor software-updates van derden vereist Internet toegang.
     - Voor de lijst met partner catalogi is download.microsoft.com via HTTPS-poort 443 vereist. 
     -  Internet toegang tot catalogi van derden en het bijwerken van inhouds bestanden. Andere andere poorten dan 443 zijn mogelijk nodig.
@@ -41,7 +41,7 @@ Vanaf versie 1806 kunt u met het knoop punt **Software-update catalogi** van der
 ## <a name="additional-requirements-when-the-sup-is-remote-from-the-top-level-site-server"></a>Aanvullende vereisten wanneer het SUP op afstand van de site server op het hoogste niveau is 
 
 1. SSL moet zijn ingeschakeld op de SUP als deze extern is. Hiervoor is een certificaat voor Server verificatie gegenereerd van een interne certificerings instantie of via een open bare provider.
-    - [SSL configureren op WSUS](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol)
+    - [SSL configureren op WSUS](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol)
         - Wanneer u SSL op WSUS configureert, noteert u enkele van de webservices en de virtuele mappen altijd HTTP en niet HTTPS. 
         - Configuration Manager downloaden van inhoud van derden voor software-update pakketten vanuit uw WSUS-inhoudsmap via HTTP.   
     - [SSL configureren voor het SUP](../get-started/install-a-software-update-point.md#configure-ssl-communications-to-wsus)
@@ -93,7 +93,7 @@ Als u het certificaat hand matig moet configureren, bijvoorbeeld als u een PKI-c
 
 
 ## <a name="enable-third-party-updates-on-the-clients"></a>Updates van derden op de clients inschakelen
-Schakel updates van derden in op de clients in de client instellingen. Met deze instelling wordt het beleid voor Windows Update Agent ingesteld voor het [toestaan van ondertekende updates voor een intranet locatie van micro soft-Update service](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates#allow-signed-updates-from-an-intranet-microsoft-update-service-location). Deze client instelling installeert ook het WSUS-handtekening certificaat in het archief met vertrouwde uitgevers van de client. De logboek registratie van certificaat beheer is te zien in `updatesdeployment.log` op de-clients.  Voer deze stappen uit voor elke aangepaste client instelling die u wilt gebruiken voor updates van derden. Zie het artikel [over client instellingen](../../core/clients/deploy/about-client-settings.md#enable-third-party-software-updates) voor meer informatie.
+Schakel updates van derden in op de clients in de client instellingen. Met deze instelling wordt het beleid voor Windows Update Agent ingesteld voor het [toestaan van ondertekende updates voor een intranet locatie van micro soft-Update service](/windows-server/administration/windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates#allow-signed-updates-from-an-intranet-microsoft-update-service-location). Deze client instelling installeert ook het WSUS-handtekening certificaat in het archief met vertrouwde uitgevers van de client. De logboek registratie van certificaat beheer is te zien in `updatesdeployment.log` op de-clients.  Voer deze stappen uit voor elke aangepaste client instelling die u wilt gebruiken voor updates van derden. Zie het artikel [over client instellingen](../../core/clients/deploy/about-client-settings.md#enable-third-party-software-updates) voor meer informatie.
 
 1. Ga in de Configuration Manager-console naar de werk ruimte **beheer** en selecteer het knoop punt **client instellingen** .
 2. Selecteer een bestaande aangepaste client instelling of maak een nieuwe. 
@@ -157,7 +157,7 @@ Zodra de updates van derden zich in het knoop punt **alle updates** bevinden, ku
 8. Clients moeten een scan uitvoeren en updates evalueren voordat u de nalevings resultaten kunt zien.  U kunt deze cyclus hand matig activeren vanuit het Configuration Manager configuratie scherm op een client door de actie **Scan cyclus voor software-updates** uit te voeren.
 
 
-## <a name="improvements-for-third-party-updates-starting-in-1910"></a><a name="bkmk_1910"></a>Verbeteringen voor updates van derden vanaf 1910
+## <a name="improvements-for-third-party-updates-starting-in-1910"></a><a name="bkmk_1910"></a> Verbeteringen voor updates van derden vanaf 1910
 <!--4469002-->
 U hebt nu meer gedetailleerde controle over de synchronisatie van catalogussen met updates van derden. Vanaf Configuration Manager versie 1910 kunt u de synchronisatie planning voor elke afzonderlijke catalogus afzonderlijk configureren. Wanneer u catalogi gebruikt die gecategoriseerde updates bevatten, kunt u synchronisatie zo configureren dat er alleen specifieke categorieën updates worden toegevoegd om te voor komen dat u de volledige catalogus synchroniseert. Als u zeker weet dat u een categorie wilt implementeren met gecategoriseerde catalogi, kunt u deze zo configureren dat deze automatisch wordt gedownload en gepubliceerd in WSUS.
 
@@ -235,7 +235,7 @@ Synchronisatie van software-updates van derden wordt afgehandeld door het SMS_IS
 -  Configuration Manager heeft een nieuwe versie voor de indeling van het CAB-bestand in de catalogus. De nieuwe versie bevat de certificaten voor de binaire bestanden van de leverancier. Deze certificaten worden toegevoegd aan het knoop punt **certificaten** onder **beveiliging** in de werk ruimte **beheer** zodra u de catalogus goed keurt en vertrouwt.  
      - U kunt nog steeds de oudere versie van het CAB-bestand voor de catalogus gebruiken zolang de download-URL https is en de updates worden ondertekend. De inhoud kan niet worden gepubliceerd omdat de certificaten voor de binaire bestanden niet aanwezig zijn in het CAB-bestand en al zijn goedgekeurd. U kunt dit probleem omzeilen door het certificaat in het knoop punt **certificaten** te zoeken, de blok kering ervan op te heffen en vervolgens de update opnieuw te publiceren. Als u meerdere updates publiceert die zijn ondertekend met verschillende certificaten, moet u elk certificaat dat wordt gebruikt, deblokkeren.
      - Zie status berichten 11523 en 11524 in de onderstaande status bericht tabel voor meer informatie.
--  Wanneer de synchronisatie service voor software-updates van derden op het software-update punt op het hoogste niveau een proxy server voor Internet toegang vereist, kunnen controles van digitale hand tekeningen mislukken. U kunt dit probleem oplossen door de WinHTTP-proxy-instellingen te configureren op het site systeem. Zie [Netsh Commands for WinHTTP](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731131(v=ws.10))(Engelstalig) voor meer informatie.
+-  Wanneer de synchronisatie service voor software-updates van derden op het software-update punt op het hoogste niveau een proxy server voor Internet toegang vereist, kunnen controles van digitale hand tekeningen mislukken. U kunt dit probleem oplossen door de WinHTTP-proxy-instellingen te configureren op het site systeem. Zie [Netsh Commands for WinHTTP](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731131(v=ws.10))(Engelstalig) voor meer informatie.
 - Wanneer u een CMG gebruikt voor de opslag van inhoud, worden de inhoud voor updates van derden niet gedownload naar clients als de instelling **Delta-inhoud downloaden wanneer de beschik bare** [client](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) is ingeschakeld. <!--6598587-->
 
 ## <a name="status-messages"></a>Statusberichten

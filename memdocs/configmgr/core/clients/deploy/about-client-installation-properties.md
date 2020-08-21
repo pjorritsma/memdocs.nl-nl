@@ -10,12 +10,12 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2d26be4d3e3381a80fcbaa547cfcc7a3b8db42f5
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: efc2cc22dc4edeacc00e521233eda383314b0b92
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127015"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693434"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Over para meters en eigenschappen van client installatie in Configuration Manager
 
@@ -23,7 +23,7 @@ ms.locfileid: "88127015"
 
 Gebruik de opdracht CCMSetup.exe om de Configuration Manager-client te installeren. Als u client installatie *parameters* op de opdracht regel opgeeft, wordt het installatie gedrag gewijzigd. Als u *Eigenschappen* voor client installatie op de opdracht regel opgeeft, wordt de oorspronkelijke configuratie van de geïnstalleerde client agent gewijzigd.
 
-## <a name="about-ccmsetupexe"></a><a name="aboutCCMSetup"></a>Over CCMSetup.exe
+## <a name="about-ccmsetupexe"></a><a name="aboutCCMSetup"></a> Over CCMSetup.exe
 
 De CCMSetup.exe opdracht downloadt de benodigde bestanden om de client te installeren vanaf een beheer punt of een bron locatie. Deze bestanden kunnen het volgende omvatten:  
 
@@ -118,7 +118,7 @@ Wanneer het apparaat client installatie bestanden via een HTTP-verbinding downlo
 
 - `HIGH`
 
-- `NORMAL`prijs
+- `NORMAL` prijs
 
 - `LOW`
 
@@ -136,7 +136,7 @@ Voorbeeld: `CCMSetup.exe /config:"configuration file name.txt"`
 
 Als u de juiste bestands indeling wilt opgeven, gebruikt u het bestand **bestand mobileclienttemplate. TCF** in de `\bin\<platform>` map in de installatiemap Configuration Manager op de site server. Dit bestand bevat opmerkingen over de secties en hoe u deze kunt gebruiken. Geef de client installatie-eigenschappen op in de `[Client Install]` sectie na de volgende tekst: `Install=INSTALL=ALL` .
 
-Voor beeld van `[Client Install]` sectie vermelding:`Install=INSTALL=ALL SMSSITECODE=ABC SMSCACHESIZE=100`  
+Voor beeld van `[Client Install]` sectie vermelding: `Install=INSTALL=ALL SMSSITECODE=ABC SMSCACHESIZE=100`  
 
 ### <a name="downloadtimeout"></a>/downloadtimeout
 
@@ -153,7 +153,7 @@ Met deze para meter geeft u op dat CCMSetup.exe de opgegeven functie niet instal
 Voor beeld: `CCMSetup.exe /ExcludeFeatures:ClientUI` installeert software Center niet op de client.  
 
 > [!NOTE]  
-> `ClientUI`is de enige waarde die de para meter **/ExcludeFeatures** ondersteunt.
+> `ClientUI` is de enige waarde die de para meter **/ExcludeFeatures** ondersteunt.
 
 ### <a name="forceinstall"></a>/forceinstall
 
@@ -186,9 +186,9 @@ U kunt de opdracht regel parameter **/MP** gebruiken om meer dan één beheer pu
 
 Als de client verbinding maakt met een beheer punt met behulp van HTTPS, geeft u de FQDN op, niet de computer naam. De waarde moet overeenkomen met het **onderwerp** of de **alternatieve naam**van het beheer punt PKI-certificaat. Hoewel Configuration Manager ondersteuning biedt voor het gebruik van een computer naam in het certificaat voor verbindingen op het intranet, wordt het gebruik van een FQDN aanbevolen.
 
-Voor beeld met de computer naam:`ccmsetup.exe /mp:SMSMP01`  
+Voor beeld met de computer naam: `ccmsetup.exe /mp:SMSMP01`  
 
-Voor beeld met de FQDN:`ccmsetup.exe /mp:smsmp01.contoso.com`  
+Voor beeld met de FQDN: `ccmsetup.exe /mp:smsmp01.contoso.com`  
 
 Met deze para meter kunt u ook de URL van een CMG (Cloud Management Gateway) opgeven. Gebruik deze URL om de-client te installeren op een op internet gebaseerd apparaat. Gebruik de volgende stappen om de waarde voor deze para meter op te halen:
 
@@ -202,7 +202,7 @@ Met deze para meter kunt u ook de URL van een CMG (Cloud Management Gateway) opg
 
 - Voeg het `https://` voor voegsel toe voor gebruik met de para meter **/MP** .
 
-Voor beeld voor wanneer u de URL voor de Cloud beheer gateway gebruikt:`ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72057598037248100`
+Voor beeld voor wanneer u de URL voor de Cloud beheer gateway gebruikt: `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72057598037248100`
 
 > [!Important]
 > Wanneer u de URL van een Cloud beheer gateway opgeeft voor de para meter **/MP** , moet deze beginnen met `https://` .
@@ -265,7 +265,7 @@ Zie [vereisten voor Windows-clients](prerequisites-for-deploying-clients-to-wind
 
 ### <a name="source"></a>/source
 
-Hiermee geeft u de locatie voor het downloaden van bestanden. Gebruik een lokaal of UNC-pad. Het apparaat downloadt bestanden met behulp van het SMB-protocol (Server Message Block). Voor het gebruik van **/Source**moet het Windows-gebruikers account voor de client installatie **Lees** machtigingen voor de locatie hebben.
+Hiermee geeft u de locatie voor het downloaden van bestanden. Gebruik een lokaal of UNC-pad. Het apparaat downloadt bestanden met behulp van het SMB-protocol (Server Message Block). Voor het gebruik van  **/Source**moet het Windows-gebruikers account voor de client installatie **Lees** machtigingen voor de locatie hebben.
 
 Zie [grens groepen-client installatie](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup)voor meer informatie over hoe ccmsetup inhoud downloadt. Dit artikel bevat ook informatie over ccmsetup-gedrag als u de para meters **/MP** en **/Source** gebruikt.
 
@@ -291,7 +291,7 @@ Voorbeeld: `CCMSetup.exe /UsePKICert`
 >
 > Geef deze para meter ook op wanneer u een client installeert voor communicatie via internet. Gebruik de eigenschap **CCMALWAYSINF = 1** samen met de eigenschappen voor het beheer punt op internet (**CCMHOSTNAME**) en de site code (**SMSSITECODE**). Zie [overwegingen voor client communicatie via internet of een niet-vertrouwd forest](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan)voor meer informatie over client beheer op internet.  
 
-## <a name="ccmsetupexe-return-codes"></a><a name="ccmsetupReturnCodes"></a>CCMSetup.exe retour codes
+## <a name="ccmsetupexe-return-codes"></a><a name="ccmsetupReturnCodes"></a> CCMSetup.exe retour codes
 
 De CCMSetup.exe opdracht bevat de volgende retour codes. Als u problemen wilt oplossen, controleert u `%WinDir%\ccmsetup\ccmsetup.log` op de client voor context en aanvullende details over retour codes.
 
@@ -304,7 +304,7 @@ De CCMSetup.exe opdracht bevat de volgende retour codes. Als u problemen wilt op
 |9|Fout bij evaluatie van vereisten|  
 |10|De hash-validatie is mislukt voor Setup-manifest|  
 
-## <a name="ccmsetupmsi-properties"></a><a name="ccmsetupMsiProps"></a>Ccmsetup.msi eigenschappen
+## <a name="ccmsetupmsi-properties"></a><a name="ccmsetupMsiProps"></a> Ccmsetup.msi eigenschappen
 
 De volgende eigenschappen kunnen het installatie gedrag van ccmsetup.msi wijzigen.
 
@@ -317,13 +317,13 @@ Voorbeeld: `ccmsetup.msi CCMSETUPCMD="/mp:https://mp.contoso.com CCMHOSTNAME=mp.
 > [!Tip]
 > Microsoft Intune beperkt de opdracht regel tot 1024 tekens.
 
-## <a name="clientmsi-properties"></a><a name="clientMsiProps"></a>Client.msi eigenschappen
+## <a name="clientmsi-properties"></a><a name="clientMsiProps"></a> Client.msi eigenschappen
 
 De volgende eigenschappen kunnen het installatie gedrag van client.msi wijzigen, dat ccmsetup.exe geïnstalleerd. Als u de [Push-client installatie methode](plan/client-installation-methods.md#client-push-installation)gebruikt, geeft u deze eigenschappen op het tabblad **client** van de eigenschappen van de **client push installatie** op in de Configuration Manager-console.
 
 ### <a name="aadclientappid"></a>AADCLIENTAPPID
 
-Hiermee geeft u de id van de client-app voor Azure Active Directory (Azure AD). U maakt of importeert de client-app wanneer u [Azure-Services configureert](../../servers/deploy/configure/azure-services-wizard.md) voor Cloud beheer. Een Azure-beheerder kan de waarde voor deze eigenschap ophalen uit de Azure Portal. Zie voor meer informatie [toepassings-id ophalen](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in). Voor de eigenschap **AADCLIENTAPPID** is deze toepassings-id voor het **systeem eigen** toepassings type.
+Hiermee geeft u de id van de client-app voor Azure Active Directory (Azure AD). U maakt of importeert de client-app wanneer u [Azure-Services configureert](../../servers/deploy/configure/azure-services-wizard.md) voor Cloud beheer. Een Azure-beheerder kan de waarde voor deze eigenschap ophalen uit de Azure Portal. Zie voor meer informatie [toepassings-id ophalen](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in). Voor de eigenschap **AADCLIENTAPPID** is deze toepassings-id voor het **systeem eigen** toepassings type.
 
 Voorbeeld: `ccmsetup.exe AADCLIENTAPPID=aa28e7f1-b88a-43cd-a2e3-f88b257c863b`
 
@@ -340,11 +340,11 @@ Voorbeeld: `ccmsetup.exe AADRESOURCEURI=https://contososerver`
 Hiermee geeft u de id van de Azure AD-Tenant. Configuration Manager koppelingen naar deze Tenant wanneer u [Azure-Services configureert](../../servers/deploy/configure/azure-services-wizard.md) voor Cloud beheer. Als u de waarde voor deze eigenschap wilt ophalen, gebruikt u de volgende stappen:
 
 - Open een opdracht prompt op een Windows 10-apparaat dat is gekoppeld aan dezelfde Azure AD-Tenant.
-- Voer de volgende opdracht uit:`dsregcmd.exe /status`
+- Voer de volgende opdracht uit: `dsregcmd.exe /status`
 - Zoek in de sectie Apparaatstatus de waarde **TenantId** op. Bijvoorbeeld: `TenantId : 607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
 
   > [!Note]
-  > Een Azure-beheerder kan deze waarde ook verkrijgen in de Azure Portal. Zie [Tenant-id ophalen](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)voor meer informatie.
+  > Een Azure-beheerder kan deze waarde ook verkrijgen in de Azure Portal. Zie [Tenant-id ophalen](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)voor meer informatie.
 
 Voorbeeld: `ccmsetup.exe AADTENANTID=607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
 
@@ -654,7 +654,7 @@ Hiermee geeft u de locatie van de cachemap van de client op de client computer. 
 
 Voorbeeld: `CCMSetup.exe SMSCACHEDIR="C:\Temp"`  
 
-Gebruik deze eigenschap met de eigenschap [**SMSCACHEFLAGS**](#smscacheflags) om de locatie van de cachemap van de client te beheren. Als u bijvoorbeeld de cachemap van de client wilt installeren op het grootste beschik bare client schijf station:`CCMSetup.exe SMSCACHEDIR=Cache SMSCACHEFLAGS=MAXDRIVE`
+Gebruik deze eigenschap met de eigenschap [**SMSCACHEFLAGS**](#smscacheflags) om de locatie van de cachemap van de client te beheren. Als u bijvoorbeeld de cachemap van de client wilt installeren op het grootste beschik bare client schijf station: `CCMSetup.exe SMSCACHEDIR=Cache SMSCACHEFLAGS=MAXDRIVE`
 
 ### <a name="smscacheflags"></a>SMSCACHEFLAGS
 
@@ -773,7 +773,7 @@ Met deze eigenschap geeft u een Configuration Manager site op waaraan u de clien
 
 Voorbeeld: `CCMSetup.exe SMSSITECODE=XZY`
 
-## <a name="attribute-values-for-certificate-selection-criteria"></a><a name="BKMK_attributevalues"></a>Kenmerk waarden voor de selectie criteria van het certificaat
+## <a name="attribute-values-for-certificate-selection-criteria"></a><a name="BKMK_attributevalues"></a> Kenmerk waarden voor de selectie criteria van het certificaat
 
 Configuration Manager ondersteunt de volgende kenmerk waarden voor de selectie criteria van PKI-certificaten:
 
@@ -793,4 +793,4 @@ Configuration Manager ondersteunt de volgende kenmerk waarden voor de selectie c
 |2.5.4.12|T of titel|Titel|  
 |2.5.4.42|G of GN of voornaam|Voornaam|  
 |2.5.4.43|I of initialen|Initialen|  
-|2.5.29.17|(geen waarde)|Alternatieve onderwerpnaam|  
+|2.5.29.17|(geen waarde)|Alternatieve onderwerpnaam|

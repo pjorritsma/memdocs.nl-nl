@@ -10,12 +10,12 @@ ms.assetid: 8c6eabc4-5dda-4682-b03e-3a450e6ef65a
 author: mestew
 manager: dougeby
 ms.author: mstewart
-ms.openlocfilehash: f9f4e1ffe8b28efda0f59e6a252f39c95e2b7749
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 1434d7802eb1ed68cb0a575778bdae1e5e99c9ec
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240113"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694743"
 ---
 # <a name="remote-connection-profiles-in-configuration-manager"></a>Profielen voor externe verbindingen in Configuration Manager
 
@@ -35,7 +35,7 @@ Configuration Manager maakt een beveiligings groep op clients, **verbinding met 
 
 ### <a name="external-dependencies"></a>Externe afhankelijkheden  
 
-- Als u wilt dat gebruikers verbinding kunnen maken via internet, moet u een Extern bureaublad-gateway-server installeren en configureren. Zie [extern bureaublad-services-Access vanaf elke locatie](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/rds-plan-access-from-anywhere)voor meer informatie over het installeren en configureren van een extern bureaublad-gateway server.
+- Als u wilt dat gebruikers verbinding kunnen maken via internet, moet u een Extern bureaublad-gateway-server installeren en configureren. Zie [extern bureaublad-services-Access vanaf elke locatie](/windows-server/remote/remote-desktop-services/rds-plan-access-from-anywhere)voor meer informatie over het installeren en configureren van een extern bureaublad-gateway server.
 
 - Als clients een op een host gebaseerde Firewall uitvoeren, moet het mstsc.exe-programma worden ingeschakeld. Wanneer u een profiel voor externe verbindingen configureert, schakelt u de instelling in om **Windows Firewall-uitzonde ring voor verbindingen in Windows-domeinen en particuliere netwerken toe te staan**. Met deze instelling kunt Configuration Manager automatisch Windows Firewall configureren.
 
@@ -83,7 +83,7 @@ Wanneer een gebruiker extern verbinding maakt met een werk computer, downloaden 
         - Afgezien van punten ( `.` ) tussen segmenten en een dubbele punt ( `:` ) voor de poort, zijn de enige speciale tekens streepje ( `–` ) en onderstrepings teken ( `_` ).
         - Configuration Manager biedt geen ondersteuning voor het gebruik van een internationale domein naam voor deze waarde.
 
-    - **Alleen verbindingen toestaan vanaf computers waarop Extern bureaublad wordt uitgevoerd met verificatie op netwerkniveau**: standaard ingeschakeld, wordt met deze instelling een extra beveiligings niveau voor de verbinding toegevoegd. Zie [granting extern bureaublad Access](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/clients/remote-desktop-allow-access#why-allow-connections-only-with-network-level-authentication)(Engelstalig) voor meer informatie.
+    - **Alleen verbindingen toestaan vanaf computers waarop Extern bureaublad wordt uitgevoerd met verificatie op netwerkniveau**: standaard ingeschakeld, wordt met deze instelling een extra beveiligings niveau voor de verbinding toegevoegd. Zie [granting extern bureaublad Access](/windows-server/remote/remote-desktop-services/clients/remote-desktop-allow-access#why-allow-connections-only-with-network-level-authentication)(Engelstalig) voor meer informatie.
 
     - Schakel de volgende Verbindings instellingen in:
 
@@ -132,7 +132,7 @@ Als een apparaat een verzameling verlaat waarop u een profiel voor externe verbi
 
 Implementeer niet meer dan een profiel voor externe verbindingen met conflicterende instellingen op hetzelfde apparaat. U implementeert bijvoorbeeld twee profielen met verschillende instellingen voor dezelfde verzameling. U kunt slechts één profiel implementatie configureren om niet- **compatibele regels te herstellen wanneer**deze worden ondersteund. Deze implementatie kan de instellingen in het andere profiel overschrijven. Configuration Manager biedt geen ondersteuning voor dit type implementatie van een profiel voor externe verbindingen.
 
-## <a name="monitor"></a>Monitor
+## <a name="monitor"></a>Controleren
 
 Ga in de Configuration Manager-console naar de werk ruimte **bewaking** en selecteer **implementaties**. Selecteer in de lijst **implementaties** de implementatie van het profiel voor externe verbindingen.
 
@@ -162,4 +162,4 @@ Configuration Manager bevat ingebouwde rapporten die u kunt gebruiken om informa
 > [!IMPORTANT]  
 > Gebruik het Joker teken ( `%` ) wanneer u de para meters **apparaat filter** en **gebruikers filter** in de rapporten voor nalevings instellingen gebruikt.  
 
-Zie [Introduction to Reporting](../../core/servers/manage/introduction-to-reporting.md)(Engelstalig) voor meer informatie over het configureren van rapportage in Configuration Manager.  
+Zie [Introduction to Reporting](../../core/servers/manage/introduction-to-reporting.md)(Engelstalig) voor meer informatie over het configureren van rapportage in Configuration Manager.

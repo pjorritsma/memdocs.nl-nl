@@ -10,12 +10,12 @@ ms.assetid: e102fd1a-76df-4d8e-b1b0-10ee18318f67
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2fc8347ae766cbd16075ef4170efa2f8042371f8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 063ce963e805651ffd795e830d2b21dfed6fc043
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714337"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693128"
 ---
 # <a name="how-to-manage-collections-in-configuration-manager"></a>Verzamelingen beheren in Configuration Manager
 
@@ -28,7 +28,7 @@ Gebruik de overzichts informatie in dit artikel om u te helpen bij het uitvoeren
 
 
 
-## <a name="how-to-manage-device-collections"></a><a name="bkmk_device"></a>Verzamelingen beheren  
+## <a name="how-to-manage-device-collections"></a><a name="bkmk_device"></a> Verzamelingen beheren  
 
 In de werkruimte **Activa en naleving** selecteert u **Apparaatverzamelingen**, selecteert u de te beheren verzameling en selecteert u vervolgens een beheertaak.  
 
@@ -84,7 +84,7 @@ Zie [client meldingen](../client-notification.md)voor meer informatie.
 Hiermee opent u de **wizard verzameling exporteren** waarmee u deze verzameling kunt exporteren naar een MOF-bestand (Managed Object Format). Dit bestand kan vervolgens worden gearchiveerd of geïmporteerd op een andere Configuration Manager-site. Wanneer u een verzameling exporteert, worden verzamelingen waarnaar wordt verwezen, niet geëxporteerd. Naar een verzameling waarnaar wordt verwezen, wordt verwezen door de geselecteerde verzameling door het gebruik van een regel voor **opnemen** of **uitsluiten** .
 
 
-#### <a name="copy"></a>Exemplaar
+#### <a name="copy"></a>Kopiëren
 Hiermee wordt een kopie gemaakt van de geselecteerde verzameling. De nieuwe verzameling gebruikt de geselecteerde verzameling als een beperkende verzameling.
 
 
@@ -128,7 +128,7 @@ Verplaats de geselecteerde verzameling naar een andere map in het knoop punt **a
 Zie [verzamelings eigenschappen](#BKMK_CollProp)voor meer informatie.  
 
 
-## <a name="how-to-manage-user-collections"></a><a name="bkmk_user"></a>Gebruikers verzamelingen beheren  
+## <a name="how-to-manage-user-collections"></a><a name="bkmk_user"></a> Gebruikers verzamelingen beheren  
 
 In de werkruimte **Activa en naleving** selecteert u **Gebruikersverzamelingen**, selecteert u de te beheren verzameling en selecteert u vervolgens een beheertaak.  
 
@@ -143,7 +143,7 @@ In de werkruimte **Activa en naleving** selecteert u **Gebruikersverzamelingen**
 - **Lidmaatschap bijwerken**  
 - **Resources toevoegen**  
 - **Exporteren**  
-- **Kopieer**  
+- **Kopiëren**  
 - **Vernieuwen**  
 - **Verwijderen**  
 - **Implementatie simuleren**  
@@ -188,32 +188,32 @@ Hiermee worden de gebruikers met beheerdersrechten weergegeven die beschikken ov
 
 #### <a name="alerts"></a>Waarschuwingen 
 Configureren wanneer waarschuwingen worden gegenereerd voor de client status en de Endpoint Protection. Zie [How to configure client status](../../deploy/configure-client-status.md) and [how to monitor Endpoint Protection](../../../../protect/deploy-use/monitor-endpoint-protection.md)voor meer informatie.  
-## <a name="using-powershell"></a><a name="bkmk_powershell"></a>Power shell gebruiken
+## <a name="using-powershell"></a><a name="bkmk_powershell"></a> Power shell gebruiken
 
 Power shell kan worden gebruikt om verzamelingen te beheren.  Zie voor meer informatie:
 
-* [Get-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollection)
-* [Set-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmcollection)
-* [New-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmcollection)
-* [Kopiëren-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/copy-cmcollection)
-* [Remove-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollection)
-* [Import-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/import-cmcollection)
-* [Exporteren-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/export-cmcollection)
-* [Get-CMCollectionMember](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionmember)
-* [Get-CMCollectionSetting](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionsetting)
-* [Invoke-CMCollectionUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/invoke-cmcollectionupdate)
-* [Add-CMCollectionMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/add-cmcollectionmembershiprule)
-* [Set-CMCollectionPowerManagement](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmcollectionpowermanagement)
-* [Get-CMCollectionMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionmembershiprule)
-* [Remove-CMCollectionMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollectionmembershiprule)
-* [Get-CMCollectionDirectMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectiondirectmembershiprule)
-* [Get-CMCollectionQueryMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionquerymembershiprule)
-* [Get-CMCollectionIncludeMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionincludemembershiprule)
-* [Add-CMCollectionToAdministrativeUser](https://docs.microsoft.com/powershell/module/configurationmanager/add-cmcollectiontoadministrativeuser)
-* [Remove-CMCollectionQueryMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollectionquerymembershiprule)
-* [Remove-CMCollectionDirectMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollectiondirectmembershiprule)
-* [Get-CMCollectionExcludeMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmcollectionexcludemembershiprule)
-* [Add-CMCollectionToDistributionPointGroup](https://docs.microsoft.com/powershell/module/configurationmanager/add-cmcollectiontodistributionpointgroup)
-* [Remove-CMCollectionIncludeMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollectionincludemembershiprule)
-* [Remove-CMCollectionExcludeMembershipRule](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollectionexcludemembershiprule)
-* [Remove-CMCollectionFromAdministrativeUser](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmcollectionfromadministrativeuser)
+* [Get-CMCollection](/powershell/module/configurationmanager/get-cmcollection)
+* [Set-CMCollection](/powershell/module/configurationmanager/set-cmcollection)
+* [New-CMCollection](/powershell/module/configurationmanager/new-cmcollection)
+* [Kopiëren-CMCollection](/powershell/module/configurationmanager/copy-cmcollection)
+* [Remove-CMCollection](/powershell/module/configurationmanager/remove-cmcollection)
+* [Import-CMCollection](/powershell/module/configurationmanager/import-cmcollection)
+* [Exporteren-CMCollection](/powershell/module/configurationmanager/export-cmcollection)
+* [Get-CMCollectionMember](/powershell/module/configurationmanager/get-cmcollectionmember)
+* [Get-CMCollectionSetting](/powershell/module/configurationmanager/get-cmcollectionsetting)
+* [Invoke-CMCollectionUpdate](/powershell/module/configurationmanager/invoke-cmcollectionupdate)
+* [Add-CMCollectionMembershipRule](/powershell/module/configurationmanager/add-cmcollectionmembershiprule)
+* [Set-CMCollectionPowerManagement](/powershell/module/configurationmanager/set-cmcollectionpowermanagement)
+* [Get-CMCollectionMembershipRule](/powershell/module/configurationmanager/get-cmcollectionmembershiprule)
+* [Remove-CMCollectionMembershipRule](/powershell/module/configurationmanager/remove-cmcollectionmembershiprule)
+* [Get-CMCollectionDirectMembershipRule](/powershell/module/configurationmanager/get-cmcollectiondirectmembershiprule)
+* [Get-CMCollectionQueryMembershipRule](/powershell/module/configurationmanager/get-cmcollectionquerymembershiprule)
+* [Get-CMCollectionIncludeMembershipRule](/powershell/module/configurationmanager/get-cmcollectionincludemembershiprule)
+* [Add-CMCollectionToAdministrativeUser](/powershell/module/configurationmanager/add-cmcollectiontoadministrativeuser)
+* [Remove-CMCollectionQueryMembershipRule](/powershell/module/configurationmanager/remove-cmcollectionquerymembershiprule)
+* [Remove-CMCollectionDirectMembershipRule](/powershell/module/configurationmanager/remove-cmcollectiondirectmembershiprule)
+* [Get-CMCollectionExcludeMembershipRule](/powershell/module/configurationmanager/get-cmcollectionexcludemembershiprule)
+* [Add-CMCollectionToDistributionPointGroup](/powershell/module/configurationmanager/add-cmcollectiontodistributionpointgroup)
+* [Remove-CMCollectionIncludeMembershipRule](/powershell/module/configurationmanager/remove-cmcollectionincludemembershiprule)
+* [Remove-CMCollectionExcludeMembershipRule](/powershell/module/configurationmanager/remove-cmcollectionexcludemembershiprule)
+* [Remove-CMCollectionFromAdministrativeUser](/powershell/module/configurationmanager/remove-cmcollectionfromadministrativeuser)

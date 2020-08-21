@@ -10,12 +10,12 @@ ms.assetid: e83a7b0d-b381-4b4a-8eca-850385abbebb
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: eab91146ec21bbee888d496012419f47bca4b599
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: ac3bbb7c755be82b171f35442d2dbaf446dfea84
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776970"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695117"
 ---
 # <a name="how-to-monitor-co-management-in-configuration-manager"></a>Co-beheer in Configuration Manager controleren
 
@@ -77,7 +77,7 @@ Toont de uitsplitsing van de apparaatstatus in de volgende categorieën:
     > [!NOTE]
     > Vanaf versie 1906, om het aantal apparaten met deze status in behandeling te verminderen, wordt nu automatisch een nieuw, door co beheerd apparaat Inge schreven bij de Microsoft Intune-service op basis van het Azure AD- *apparaat* -token. U hoeft niet te wachten totdat een gebruiker zich bij het apparaat aanmeldt voor het starten van de automatische inschrijving. Ter ondersteuning van dit gedrag moet Windows 10, versie 1803 of hoger worden uitgevoerd op het apparaat.
     >
-    > Als het token van het apparaat mislukt, wordt het terugvallen op het vorige gedrag met het gebruikers token. Zoek in het **ComanagementHandler. log** naar de volgende vermelding:`Enrolling device with RegisterDeviceWithManagementUsingAADDeviceCredentials`
+    > Als het token van het apparaat mislukt, wordt het terugvallen op het vorige gedrag met het gebruikers token. Zoek in het **ComanagementHandler. log** naar de volgende vermelding: `Enrolling device with RegisterDeviceWithManagementUsingAADDeviceCredentials`
 
 Selecteer een status in de tegel om uit te zoomen op een lijst met apparaten in die staat.  
 
@@ -102,8 +102,8 @@ Er zijn honderden mogelijke fouten. De volgende tabel bevat de meest voorkomende
 
 | Fout | Beschrijving |
 |---------|---------|
-| 2147549183 (0x8000FFFF) | MDM-registratie is nog niet geconfigureerd op Azure AD of de inschrijvings-URL wordt niet verwacht.<br><br>[Automatische inschrijving voor Windows 10 inschakelen](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment) |
-| 2149056536 (0x80180018)<br>MENROLL_E_USERLICENSE | De licentie van de gebruiker heeft de inschrijving van een ongeldige status geblokkeerd<br><br>[Licenties toewijzen aan gebruikers](https://docs.microsoft.com/intune/licenses-assign) |
+| 2147549183 (0x8000FFFF) | MDM-registratie is nog niet geconfigureerd op Azure AD of de inschrijvings-URL wordt niet verwacht.<br><br>[Automatische inschrijving voor Windows 10 inschakelen](/intune/windows-enroll#enable-windows-10-automatic-enrollment) |
+| 2149056536 (0x80180018)<br>MENROLL_E_USERLICENSE | De licentie van de gebruiker heeft de inschrijving van een ongeldige status geblokkeerd<br><br>[Licenties toewijzen aan gebruikers](/intune/licenses-assign) |
 | 2149056555 (0x8018002B)<br>MENROLL_E_MDM_NOT_CONFIGURED | Bij het automatisch inschrijven bij intune, maar de Azure AD-configuratie is niet volledig toegepast. Dit probleem moet tijdelijk zijn, omdat het apparaat na een korte tijd opnieuw wordt geprobeerd. |
 | 2149056554 (0x 8018002A)<br>&nbsp; | De gebruiker heeft de bewerking geannuleerd<br><br>Als voor MDM-inschrijving multi-factor Authentication is vereist en de gebruiker niet is aangemeld met een ondersteunde tweede factor, wordt door Windows een pop-upmelding voor de gebruiker weer gegeven die moet worden inge schreven. Deze fout treedt op als de gebruiker niet reageert op de pop-upmelding. Dit probleem zou tijdelijk moeten zijn, omdat Configuration Manager een nieuwe poging doet en de gebruiker wordt gevraagd. Gebruikers moeten gebruikmaken van multi-factor Authentication wanneer ze zich aanmelden bij Windows. Wees er ook aan om dit gedrag te verwachten, en als hierom wordt gevraagd, actie te ondernemen. |
 | 2149056532 (0x80180014)<br>MENROLL_E_DEVICENOTSUPPORTED | Het beheer van mobiele apparaten wordt niet ondersteund. Controleer de beperkingen van apparaten. |
@@ -114,7 +114,7 @@ Er zijn honderden mogelijke fouten. De volgende tabel bevat de meest voorkomende
 | 3399548929 | Gebruikers aanmelding vereist<br><br>Dit probleem zou tijdelijk moeten zijn. Deze gebeurtenis treedt op wanneer de gebruiker zich snel afmeldt voordat de inschrijvings taak plaatsvindt. |
 | 3400073236 | De aanvraag voor het ADAL-beveiligings token is mislukt.<br><br>Controleer uw Azure AD-configuratie en zorg ervoor dat de verificatie van gebruikers goed kan worden uitgevoerd. |
 | 2149122477 | Algemeen HTTP-probleem |
-| 3400073247 | ADAL geïntegreerde Windows-authenticatie wordt alleen ondersteund in federatieve stroom<br><br>[De implementatie van uw hybride Azure Active Directory-deelname plannen](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan) |
+| 3400073247 | ADAL geïntegreerde Windows-authenticatie wordt alleen ondersteund in federatieve stroom<br><br>[De implementatie van uw hybride Azure Active Directory-deelname plannen](/azure/active-directory/devices/hybrid-azuread-join-plan) |
 | 3399942148 | De server of proxy is niet gevonden.<br><br>Dit probleem zou zich moeten voordoen als de client niet kan communiceren met de Cloud. Als het probleem blijft bestaan, controleert u of de client een consistente verbinding met Azure heeft. | 
 | 2149056532 | Een specifiek platform of specifieke versie wordt niet ondersteund<br><br>Zorg ervoor dat het apparaat voldoet aan de [minimum vereisten](overview.md#windows-10) voor co-beheer. |
 | 2147943568 | Het element is niet gevonden<br><br>Dit probleem zou tijdelijk moeten zijn. Als het probleem blijft bestaan, neemt u contact op met Microsoft Ondersteuning. |
@@ -124,7 +124,7 @@ Er zijn honderden mogelijke fouten. De volgende tabel bevat de meest voorkomende
 | 2149134055 | WinHTTP-naam is niet omgezet<br><br>De client kan de naam van de service niet omzetten. Controleer de DNS-configuratie. |
 | 2149134050 | Internet time-out<br><br>Dit probleem zou zich moeten voordoen als de client niet kan communiceren met de Cloud. Als het probleem blijft bestaan, controleert u of de client een consistente verbinding met Azure heeft. |
 
-Zie [MDM-registratie fout waarden](https://docs.microsoft.com/windows/desktop/mdmreg/mdm-registration-constants)voor meer informatie.
+Zie [MDM-registratie fout waarden](/windows/desktop/mdmreg/mdm-registration-constants)voor meer informatie.
 
 ## <a name="deployment-policies"></a>Implementatie beleid
 

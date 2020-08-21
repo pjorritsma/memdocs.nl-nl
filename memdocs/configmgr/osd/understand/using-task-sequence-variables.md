@@ -10,12 +10,12 @@ ms.assetid: bc7de742-9e5c-4a70-945c-df4153a61cc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 433896e55b7701009e2870af8b0015fb15c1eda3
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 7013ae10de753cbcb664771bd30dc51b259aa390
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88123933"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697548"
 ---
 # <a name="how-to-use-task-sequence-variables-in-configuration-manager"></a>Taken reeks variabelen gebruiken in Configuration Manager
 
@@ -29,7 +29,7 @@ ms.locfileid: "88123933"
 
 Zie [taken reeks variabelen](task-sequence-variables.md)voor een overzicht van alle beschik bare taken reeks variabelen.
 
-## <a name="types-of-variables"></a><a name="bkmk_types"></a>Typen variabelen
+## <a name="types-of-variables"></a><a name="bkmk_types"></a> Typen variabelen
 
 Er zijn verschillende typen variabelen:  
 
@@ -39,7 +39,7 @@ Er zijn verschillende typen variabelen:
 - [Alleen-lezen](#bkmk_read-only)  
 - [Matrix](#bkmk_array)  
 
-### <a name="built-in-variables"></a><a name="bkmk_built-in"></a>Ingebouwde variabelen
+### <a name="built-in-variables"></a><a name="bkmk_built-in"></a> Ingebouwde variabelen
 
 Ingebouwde variabelen bieden informatie over de omgeving waarin de taken reeks wordt uitgevoerd. Hun waarden zijn beschikbaar in de hele taken reeks. De taken reeks engine initialiseert doorgaans ingebouwde variabelen voordat de stappen worden uitgevoerd.
 
@@ -47,7 +47,7 @@ Ingebouwde variabelen bieden informatie over de omgeving waarin de taken reeks w
 
 De taken reeks evalueert enkele variabelen voor elke stap. Een voor beeld `_SMSTSCurrentActionName` bevat een lijst met de naam van de huidige stap.
 
-### <a name="action-variables"></a><a name="bkmk_action"></a>Actie variabelen
+### <a name="action-variables"></a><a name="bkmk_action"></a> Actie variabelen
 
 Variabelen voor taken reeks acties geven configuratie-instellingen op die door één taken reeks stap worden gebruikt. Standaard worden de instellingen van de stap geïnitialiseerd voordat deze wordt uitgevoerd. Deze instellingen zijn alleen beschikbaar wanneer de gekoppelde taken reeks stap wordt uitgevoerd. De taken reeks voegt de waarde van de actie variabele toe aan de omgeving voordat de stap wordt uitgevoerd. Daarna wordt de waarde uit de omgeving verwijderd nadat de stap is uitgevoerd.
 
@@ -60,7 +60,7 @@ Sommige taken reeks stappen markeren bepaalde actie variabelen als *uitvoer*. St
 > [!Note]  
 > Niet alle taken reeks stappen hebben actie variabelen. Hoewel er bijvoorbeeld variabelen zijn gekoppeld aan de actie **BitLocker inschakelen** , zijn er geen variabelen gekoppeld aan de actie **BitLocker uitschakelen** .  
 
-### <a name="custom-variables"></a><a name="bkmk_custom"></a>Aangepaste variabelen
+### <a name="custom-variables"></a><a name="bkmk_custom"></a> Aangepaste variabelen
 
 Deze variabelen zijn die Configuration Manager niet worden gemaakt. Initialiseer uw eigen variabelen om te gebruiken als voor waarden, in opdracht regels of in scripts.
 
@@ -80,7 +80,7 @@ Wanneer u een naam voor een nieuwe taken reeks variabele opgeeft, volgt u deze r
 
 Er is geen limiet ingesteld voor het aantal taken reeks variabelen dat u kunt maken. Het maximale aantal variabelen is echter wel beperkt door de grootte van de takenreeksomgeving. De limiet voor de totale grootte van de taken reeks omgeving is 8 KB. Zie [de grootte van het taken reeks beleid beperken](../deploy-use/manage-task-sequences-to-automate-tasks.md#bkmk_policysize)voor meer informatie.
 
-### <a name="read-only-variables"></a><a name="bkmk_read-only"></a>Alleen-lezen variabelen
+### <a name="read-only-variables"></a><a name="bkmk_read-only"></a> Alleen-lezen variabelen
 
 U kunt de waarde van sommige variabelen niet wijzigen, wat alleen-lezen is. Meestal begint de naam met een onderstrepings teken ( `_` ). De taken reeks gebruikt deze voor de bewerkingen ervan. Alleen-lezen variabelen zijn zichtbaar in de taken reeks omgeving.
 
@@ -89,7 +89,7 @@ Deze variabelen zijn handig in scripts of op opdracht regels. U kunt bijvoorbeel
 > [!NOTE]  
 > Alleen-lezen taken reeks variabelen kunnen worden gelezen door stappen in een taken reeks, maar ze kunnen niet worden ingesteld. Gebruik bijvoorbeeld een alleen-lezen variabele als onderdeel van de opdracht regel voor de stap **opdracht regel uitvoeren** . U kunt geen alleen-lezen variabele instellen met behulp van de stap **taken reeks variabele instellen** .  
 
-### <a name="array-variables"></a><a name="bkmk_array"></a>Matrix variabelen
+### <a name="array-variables"></a><a name="bkmk_array"></a> Matrix variabelen
 
 De taken reeks slaat enkele variabelen op als een matrix. Elk element in de matrix staat voor de instellingen voor één object. Gebruik deze variabelen wanneer een apparaat meer dan één object heeft om te configureren. De volgende taken reeks stappen gebruiken matrix variabelen:
 
@@ -97,7 +97,7 @@ De taken reeks slaat enkele variabelen op als een matrix. Elk element in de matr
 
 - [Schijf formatteren en partitioneren](task-sequence-steps.md#BKMK_FormatandPartitionDisk)  
 
-## <a name="how-to-set-variables"></a><a name="bkmk_set"></a>Variabelen instellen
+## <a name="how-to-set-variables"></a><a name="bkmk_set"></a> Variabelen instellen
 
 Voor aangepaste variabelen of variabelen die niet alleen-lezen zijn, zijn er verschillende methoden om de waarde van de variabele te initialiseren en in te stellen:  
 
@@ -130,19 +130,19 @@ Als u dezelfde variabele op verschillende manieren instelt, gebruikt de taken re
 
 - Waarden van taken reeks variabelen kunnen hoofdletter gevoelig zijn, afhankelijk van het gebruik van de waarde. In de meeste gevallen zijn de waarden van taken reeks variabelen niet hoofdletter gevoelig. Een variabele met een wacht woord is hoofdletter gevoelig.  
 
-### <a name="set-task-sequence-variable"></a><a name="bkmk_set-ts-step"></a>Taken reeks variabele instellen
+### <a name="set-task-sequence-variable"></a><a name="bkmk_set-ts-step"></a> Taken reeks variabele instellen
 
 Gebruik deze stap in de taken reeks om één variabele in te stellen op een enkele waarde.
 
 Zie [set-variabele taken reeks](task-sequence-steps.md#BKMK_SetTaskSequenceVariable)voor meer informatie.
 
-### <a name="set-dynamic-variables"></a><a name="bkmk_set-dyn-step"></a>Dynamische variabelen instellen
+### <a name="set-dynamic-variables"></a><a name="bkmk_set-dyn-step"></a> Dynamische variabelen instellen
 
 Gebruik deze stap in de taken reeks om een of meer taken reeks variabelen in te stellen. U definieert regels in deze stap om te bepalen welke variabelen en waarden u moet gebruiken.
 
 Zie [set Dynamic Varia bles](task-sequence-steps.md#BKMK_SetDynamicVariables)voor meer informatie.
 
-### <a name="run-powershell-script"></a><a name="bkmk_run-ps"></a>Power shell-script uitvoeren
+### <a name="run-powershell-script"></a><a name="bkmk_run-ps"></a> Power shell-script uitvoeren
 
 <!-- 6315548 -->
 
@@ -167,13 +167,13 @@ Uw omgeving heeft gebruikers in meerdere landen/regio's, dus u wilt een query ui
     (Get-Culture).TwoLetterISOLanguageName
     ```
 
-    Zie [Get-Culture](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-culture)voor meer informatie over de cmdlet. Zie [lijst met iso 639-1-codes](https://wikipedia.org/wiki/List_of_ISO_639-1_codes)voor meer informatie over de ISO-taal namen van twee letters.
+    Zie [Get-Culture](/powershell/module/microsoft.powershell.utility/get-culture)voor meer informatie over de cmdlet. Zie [lijst met iso 639-1-codes](https://wikipedia.org/wiki/List_of_ISO_639-1_codes)voor meer informatie over de ISO-taal namen van twee letters.
 
 1. Geef voor de optie voor **uitvoer naar de taken reeks variabele**op `CurrentOSLanguage` .
 
     ![Scherm afbeelding van voor beeld van Power shell-script stap uitvoeren](media/run-powershell-script-example-language.png)
 
-1. Maak in de stap **besturings systeem Toep assen** voor de installatie kopie van de Engelse taal de volgende voor waarde:`Task Sequence Variable CurrentOSLanguage equals "en"`
+1. Maak in de stap **besturings systeem Toep assen** voor de installatie kopie van de Engelse taal de volgende voor waarde: `Task Sequence Variable CurrentOSLanguage equals "en"`
 
     ![Scherm afbeelding van voor waarde voor beeld in de stap besturings systeem Toep assen](media/condition-custom-task-sequence-variable.png)
 
@@ -184,7 +184,7 @@ Uw omgeving heeft gebruikers in meerdere landen/regio's, dus u wilt een query ui
 
 Wanneer de stap **Power shell-script uitvoeren** op een apparaat met de Engelse taal versie van Windows wordt uitgevoerd, retourneert de opdracht de waarde `en` . Vervolgens wordt die waarde opgeslagen in de aangepaste variabele. Wanneer de stap **besturings systeem Toep assen** voor de Engelse taal op hetzelfde apparaat wordt uitgevoerd, wordt de voor waarde geëvalueerd als waar. Als u meerdere exemplaren van de stap **besturings systeem Toep assen** voor verschillende talen hebt, voert de taken reeks de stap die overeenkomt met de taal van het besturings systeem, dynamisch uit.
 
-### <a name="collection-and-device-variables"></a><a name="bkmk_set-coll-var"></a>Verzamelings-en apparaat-variabelen
+### <a name="collection-and-device-variables"></a><a name="bkmk_set-coll-var"></a> Verzamelings-en apparaat-variabelen
 
 U kunt aangepaste taken reeks variabelen definiëren voor apparaten en verzamelingen. Variabelen die u voor een apparaat definieert, worden taken reeks variabelen per apparaat genoemd. Naar variabelen die voor een verzameling zijn gedefinieerd, wordt verwezen als verzamelingtakenreeksvariabelen. Als er sprake is van een conflict, hebben variabelen per apparaat voor rang op variabelen van het verzamelings niveau. Dit gedrag houdt in dat taken reeks variabelen die aan een specifiek apparaat zijn toegewezen automatisch een hogere prioriteit hebben dan variabelen die zijn toegewezen aan de verzameling die het apparaat bevat.  
 
@@ -228,23 +228,23 @@ U kunt per apparaat variabelen op een primaire site of op een centrale beheer si
 
 5. Wanneer u alle variabelen aan de verzamelings eigenschappen hebt toegevoegd, selecteert u **OK**.  
 
-### <a name="tsenvironment-com-object"></a><a name="bkmk_set-com"></a>COM-object TSEnvironment
+### <a name="tsenvironment-com-object"></a><a name="bkmk_set-com"></a> COM-object TSEnvironment
 
 Als u wilt werken met variabelen uit een script, gebruikt u het **TSEnvironment** -object.
 
 Zie [variabelen gebruiken in een taken reeks die wordt uitgevoerd](../../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md) in de Configuration Manager SDK voor meer informatie.
 
-### <a name="prestart-command"></a><a name="bkmk_set-prestart"></a>Prestart-opdracht
+### <a name="prestart-command"></a><a name="bkmk_set-prestart"></a> Prestart-opdracht
 
 De prestart-opdracht is een script of een uitvoerbaar bestand dat wordt uitgevoerd in Windows PE voordat de gebruiker de taken reeks selecteert. De prestart-opdracht kan een query uitvoeren op een variabele of de gebruiker vragen om informatie en deze vervolgens opslaan in de omgeving. Gebruik het COM-object [TSEnvironment](#bkmk_set-com) om variabelen van de prestart-opdracht te lezen en te schrijven.
 
 Zie [prestart-opdrachten voor taken reeks media](prestart-commands-for-task-sequence-media.md)voor meer informatie.
 
-### <a name="task-sequence-wizard"></a><a name="bkmk_set-tswiz"></a>Wizard taken reeks
+### <a name="task-sequence-wizard"></a><a name="bkmk_set-tswiz"></a> Wizard taken reeks
 
 Vanaf versie 1906, nadat u een taken reeks in het venster taken reeks hebt geselecteerd, bevat de pagina voor het bewerken van taken reeks variabelen een knop **bewerken** . U kunt toegankelijke sneltoetsen gebruiken om de variabelen te bewerken. Deze wijziging helpt in gevallen waarin een muis niet beschikbaar is.<!-- 4668846 -->
 
-### <a name="task-sequence-media-wizard"></a><a name="bkmk_set-media"></a>Wizard taken reeks media
+### <a name="task-sequence-media-wizard"></a><a name="bkmk_set-media"></a> Wizard taken reeks media
 
 Variabelen opgeven voor taken reeksen die vanaf media worden uitgevoerd. Wanneer u media gebruikt om het besturings systeem te implementeren, voegt u de taken reeks variabelen toe en geeft u hun waarden op wanneer u de media maakt. De variabelen en hun waarden worden opgeslagen op de media.  
 
@@ -260,7 +260,7 @@ Gebruik de mediavariabelen in plaats van per-verzameling- of per-computer-variab
 
 Zie [taken reeks media maken](../deploy-use/create-task-sequence-media.md)voor meer informatie.
 
-## <a name="how-to-access-variables"></a><a name="bkmk_access"></a>Toegang tot variabelen
+## <a name="how-to-access-variables"></a><a name="bkmk_access"></a> Toegang tot variabelen
 
 Nadat u de variabele en de waarde ervan hebt opgegeven met behulp van een van de methoden uit de vorige sectie, gebruikt u deze in uw taken reeksen. U kunt bijvoorbeeld de standaard waarden voor ingebouwde taken reeks variabelen openen, of een stap voorwaardelijk maken op basis van de waarde van een variabele.  
 
@@ -271,7 +271,7 @@ Gebruik de volgende methoden voor toegang tot variabelen waarden in de taken ree
 - [Aangepast script](#bkmk_access-script)  
 - [Antwoord bestand voor Windows Setup](#bkmk_access-answer)  
   
-### <a name="use-in-a-step"></a><a name="bkmk_access-step"></a>Gebruiken in een stap
+### <a name="use-in-a-step"></a><a name="bkmk_access-step"></a> Gebruiken in een stap
 
 Geef een waarde voor de variabele op voor een instelling in een taken reeks stap. Bewerk de stap in de taken reeks editor en geef de naam van de variabele op als de veld waarde. Plaats de naam van de variabele tussen procent tekens ( `%` ).
 
@@ -279,7 +279,7 @@ Gebruik bijvoorbeeld de naam van de variabele als onderdeel van het veld **opdra
 
 `cmd.exe /c %_SMSTSMachineName% > C:\File.txt`
 
-### <a name="step-condition"></a><a name="bkmk_access-condition"></a>Stap voorwaarde
+### <a name="step-condition"></a><a name="bkmk_access-condition"></a> Stap voorwaarde
 
 Ingebouwde of aangepaste taken reeks variabelen gebruiken als onderdeel van een voor waarde voor een stap of groep. De taken reeks evalueert de waarde van de variabele voordat de stap of groep wordt uitgevoerd.
 
@@ -305,7 +305,7 @@ Zie deze voor waarde in de groep **bestanden en instellingen vastleggen** van de
 
 Zie [taken reeks editor-voor waarden](task-sequence-editor.md#bkmk_conditions)voor meer informatie over voor waarden.
 
-### <a name="custom-script"></a><a name="bkmk_access-script"></a>Aangepast script
+### <a name="custom-script"></a><a name="bkmk_access-script"></a> Aangepast script
 
 Lees en schrijf variabelen met behulp van het COM-object **Microsoft. SMS. TSEnvironment** terwijl de taken reeks wordt uitgevoerd.
 
@@ -329,7 +329,7 @@ Write-Output "Hello world!" | Out-File -FilePath "$_SMSTSLogPath\mylog.log" -Enc
 $tsenv.Value("startTime") = (Get-Date -Format HH:mm:ss) + ".000+000"
 ```
 
-### <a name="windows-setup-answer-file"></a><a name="bkmk_access-answer"></a>Antwoord bestand voor Windows Setup
+### <a name="windows-setup-answer-file"></a><a name="bkmk_access-answer"></a> Antwoord bestand voor Windows Setup
 
 Het Windows Setup-antwoord bestand dat u opgeeft, kan Inge sloten taken reeks variabelen bevatten. Gebruik het formulier `%varname%` , waarbij *varnaam* de naam van de variabele is. De stap **Windows en ConfigMgr installeren** vervangt de teken reeks met de variabelenaam voor de werkelijke waarde van de variabele. Deze Inge sloten taken reeks variabelen kunnen niet worden gebruikt in velden die alleen numeriek zijn in een unattend.xml antwoord bestand.
 

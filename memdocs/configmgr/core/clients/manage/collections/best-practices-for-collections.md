@@ -10,12 +10,12 @@ ms.assetid: 7a2abb79-9ae5-4a25-9e18-5dcf528de3bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3ee640a70eea9f2e8470e852409911d28e542bc2
-ms.sourcegitcommit: 1d8bf691780b94a945e94945115d4d1df4242808
+ms.openlocfilehash: b1bc72a3691e4a6f47c29a5a91ef11c92f0f7e7c
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84663367"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693281"
 ---
 # <a name="best-practices-for-collections-in-configuration-manager"></a>Aanbevolen procedures voor verzamelingen in Configuration Manager
 
@@ -45,7 +45,7 @@ In een omgeving met een drukke Configuration Manager kunt u de prestaties van de
 
 Houd rekening met de werking van de verzamelings evaluatie grafiek, zodat u een geschikte verzamelings structuur kunt ontwerpen. Vertrouw niet op de evaluatie van de volledige verzameling om alle verzamelingen altijd bij te werken. Als een incrementeel bijgewerkte verzameling updates volgens een planning wordt uitgevoerd, worden verwijzingen naar verzamelingen die niet zijn ingeschakeld voor incrementele updates, mogelijk niet bijgewerkt. Omdat er waarschijnlijk updates zijn opgetreden tijdens incrementele evaluaties, wordt de verzameling mogelijk niet bijgewerkt door een volledige evaluatie, waardoor de verzamelings evaluatie grafiek voor die cyclus wordt beëindigd. In dat geval worden er geen verwijzende verzamelings evaluaties uitgevoerd. Zie [evaluatie grafiek verzameling](collection-evaluation.md#collection-evaluation-graph)voor meer informatie.
 
-## <a name="limit-incremental-updates"></a><a name="bkmk_incremental"></a>Incrementele updates beperken
+## <a name="limit-incremental-updates"></a><a name="bkmk_incremental"></a> Incrementele updates beperken
 
 Het inschakelen van incrementele updates voor veel verzamelingen kan leiden tot evaluatie vertragingen. Het is het beste om het aantal incrementele bijgewerkte verzamelingen te beperken tot 200. Het exacte aantal is afhankelijk van:
 
@@ -96,7 +96,7 @@ Weekend
 
 ## <a name="use-ceviewer-to-monitor-collection-evaluation"></a>CEViewer gebruiken om verzamelings evaluaties te bewaken
 
-U kunt de [verzameling evaluatie Viewer (CEViewer)](https://docs.microsoft.com/mem/configmgr/core/support/ceviewer) gebruiken om te controleren hoeveel verzamelingen worden geëvalueerd en hoe lang elke verzameling moet worden bijgewerkt. De CEViewer bevindt zich op de *cd. Meest recente* map op de site server.
+U kunt de [verzameling evaluatie Viewer (CEViewer)](../../../support/ceviewer.md) gebruiken om te controleren hoeveel verzamelingen worden geëvalueerd en hoe lang elke verzameling moet worden bijgewerkt. De CEViewer bevindt zich op de *cd. Meest recente* map op de site server.
 
 Als u hand matig een vergelijk bare controle met SQL wilt uitvoeren, kunt u de volgende query gebruiken:
 
@@ -111,5 +111,3 @@ FROM (
 WHERE ([t2].[IncrementalEvaluationStartTime] IS NOT NULL) AND ([t2].[LastIncrementalRefreshTime] IS NOT NULL) and (refreshtype='4' or refreshtype='6')
 ORDER BY [t2].[value] DESC
 ```
-
-

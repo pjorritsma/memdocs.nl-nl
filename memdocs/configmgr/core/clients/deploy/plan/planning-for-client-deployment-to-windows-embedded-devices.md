@@ -10,18 +10,18 @@ ms.assetid: 038e61f9-f49d-41d1-9a9f-87bec9e00d5d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7848e3c0c38391ab61d10ad46cbb772c812539c7
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: c3f069225ec1af364a8580559ac4019e1bdd5f0f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906641"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693349"
 ---
 # <a name="planning-for-client-deployment-to-windows-embedded-devices-in-configuration-manager"></a>Het plannen van client implementatie op Windows Embedded-apparaten in Configuration Manager
 
 *Van toepassing op: Configuration Manager (huidige vertakking)*
 
-<a name="BKMK_DeployClientEmbedded"></a>Als uw Windows Embedded-apparaat de Configuration Manager-client niet bevat, kunt u een van de client installatie methoden gebruiken als het apparaat voldoet aan de vereiste afhankelijkheden. Als het Embedded-apparaat schrijffilters ondersteunt, moet u deze filters uitschakelen voordat u de client installeert, en de filters vervolgens opnieuw inschakelen nadat de client is geïnstalleerd en is toegewezen aan een site.  
+<a name="BKMK_DeployClientEmbedded"></a> Als uw Windows Embedded-apparaat de Configuration Manager-client niet bevat, kunt u een van de client installatie methoden gebruiken als het apparaat voldoet aan de vereiste afhankelijkheden. Als het Embedded-apparaat schrijffilters ondersteunt, moet u deze filters uitschakelen voordat u de client installeert, en de filters vervolgens opnieuw inschakelen nadat de client is geïnstalleerd en is toegewezen aan een site.  
 
  Wanneer u de filters uitschakelt, moet u ervoor zorgen dat u niet de stuurprogramma's voor het filter uitschakelt. Deze stuurprogramma's worden doorgaans automatisch gestart wanneer de computer wordt gestart. Als u de stuurprogramma's uitschakelt, wordt de installatie van de client verhinderd of wordt de indelingstaak voor schrijffilters verstoord, waardoor de clientbewerkingen mislukken. Hieronder ziet u de services die zijn gekoppeld aan elk type schrijffilter dat actief moet blijven:  
 
@@ -46,11 +46,11 @@ ms.locfileid: "82906641"
 
  Configuration Manager biedt ondersteuning voor het beheren van de volgende typen schrijf filters:  
 
-- Op bestand gebaseerd schrijf filter (FBWF): Zie [op bestanden gebaseerde schrijf filter](https://docs.microsoft.com/previous-versions/windows/embedded/aa940926(v=winembedded.5))voor meer informatie.  
+- Op bestand gebaseerd schrijf filter (FBWF): Zie [op bestanden gebaseerde schrijf filter](/previous-versions/windows/embedded/aa940926(v=winembedded.5))voor meer informatie.  
 
-- Enhanced Write Filter-RAM-geheugen (EWF): Zie [Enhanced Write Filter](https://docs.microsoft.com/previous-versions/windows/embedded/ms912906(v=winembedded.5))voor meer informatie.  
+- Enhanced Write Filter-RAM-geheugen (EWF): Zie [Enhanced Write Filter](/previous-versions/windows/embedded/ms912906(v=winembedded.5))voor meer informatie.  
 
-- Gecombineerd schrijf filter (UWF): Zie [Unified Write Filter](https://docs.microsoft.com/windows-hardware/customize/enterprise/unified-write-filter)(Engelstalig) voor meer informatie.  
+- Gecombineerd schrijf filter (UWF): Zie [Unified Write Filter](/windows-hardware/customize/enterprise/unified-write-filter)(Engelstalig) voor meer informatie.  
 
   Configuration Manager ondersteunt geen schrijf filter bewerkingen wanneer het Windows Embedded-apparaat zich in de EWF RAM reg-modus bevindt.  
 

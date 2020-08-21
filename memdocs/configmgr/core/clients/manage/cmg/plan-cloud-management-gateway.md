@@ -10,12 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7c57e6568ce60680d9febc533c60533055595bc3
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: d5b9a65b768d02d02084d778fd36255341a808b2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126930"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692839"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Het plannen van de Cloud beheer gateway in Configuration Manager
 
@@ -105,10 +105,10 @@ De implementatie en het gebruik van de CMG omvat de volgende onderdelen:
 ### <a name="azure-resource-manager"></a>Azure Resource Manager
 
 <!-- 1324735 -->
-Maak de CMG met behulp van een **Azure Resource Manager-implementatie**. [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) is een modern platform voor het beheren van alle oplossings resources als één entiteit, een zogenaamde [resource groep](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups). Bij het implementeren van CMG met Azure Resource Manager gebruikt de site Azure Active Directory (Azure AD) om de benodigde cloud resources te verifiëren en te maken. Het klassieke Azure-beheer certificaat is niet vereist voor deze moderne implementatie.  
+Maak de CMG met behulp van een **Azure Resource Manager-implementatie**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is een modern platform voor het beheren van alle oplossings resources als één entiteit, een zogenaamde [resource groep](/azure/azure-resource-manager/resource-group-overview#resource-groups). Bij het implementeren van CMG met Azure Resource Manager gebruikt de site Azure Active Directory (Azure AD) om de benodigde cloud resources te verifiëren en te maken. Het klassieke Azure-beheer certificaat is niet vereist voor deze moderne implementatie.  
 
 > [!NOTE]
-> Deze mogelijkheid biedt geen ondersteuning voor Azure Cloud service providers (CSP). De CMG-implementatie met Azure Resource Manager blijft de klassieke Cloud service gebruiken, die niet wordt ondersteund door de CSP. Zie [beschik bare Azure-Services in azure CSP](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services)voor meer informatie.
+> Deze mogelijkheid biedt geen ondersteuning voor Azure Cloud service providers (CSP). De CMG-implementatie met Azure Resource Manager blijft de klassieke Cloud service gebruiken, die niet wordt ondersteund door de CSP. Zie [beschik bare Azure-Services in azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services)voor meer informatie.
 
 Vanaf Configuration Manager versie 1902 is Azure Resource Manager het enige implementatie mechanisme voor nieuwe exemplaren van de Cloud beheer gateway. Bestaande implementaties blijven werken.<!-- 3605704 -->
 
@@ -216,7 +216,7 @@ Zie de volgende veelgestelde vragen voor meer informatie: [de gebruikers account
 
 - Software-update punten die gebruikmaken van een netwerk load balancer werken niet met CMG. <!--505311-->  
 
-- CMG-implementaties die gebruikmaken van het Azure-resource model, bieden geen ondersteuning voor Azure Cloud service providers (CSP). De CMG-implementatie met Azure Resource Manager blijft de klassieke Cloud service gebruiken, die niet wordt ondersteund door de CSP. Zie [Azure-Services die beschikbaar zijn in het Azure CSP-programma](https://docs.microsoft.com/partner-center/azure-plan-available)voor meer informatie.
+- CMG-implementaties die gebruikmaken van het Azure-resource model, bieden geen ondersteuning voor Azure Cloud service providers (CSP). De CMG-implementatie met Azure Resource Manager blijft de klassieke Cloud service gebruiken, die niet wordt ondersteund door de CSP. Zie [Azure-Services die beschikbaar zijn in het Azure CSP-programma](/partner-center/azure-plan-available)voor meer informatie.
 
 ### <a name="support-for-configuration-manager-features"></a>Ondersteuning voor Configuration Manager-functies
 
@@ -259,7 +259,7 @@ De volgende tabel geeft een overzicht van de CMG-ondersteuning voor Configuratio
 |![Ondersteund ](media/green_check.png) (*YYMM*) = deze functie wordt ondersteund met CMG vanaf versie *YYMM* van Configuration Manager  |
 |![Niet ondersteund](media/Red_X.png) = Deze functie wordt niet ondersteund met CMG |
 
-#### <a name="note-1-support-for-endpoint-protection"></a><a name="bkmk_note1"></a>Opmerking 1: ondersteuning voor Endpoint Protection
+#### <a name="note-1-support-for-endpoint-protection"></a><a name="bkmk_note1"></a> Opmerking 1: ondersteuning voor Endpoint Protection
 
 Vanaf versie 2006 kunnen clients die via een CMG communiceren, direct Endpoint Protection-beleids regels Toep assen zonder een actieve verbinding met Active Directory.<!--4773948-->
 
@@ -268,7 +268,7 @@ In versie 2002 en eerder, voor apparaten die lid zijn van een domein om Endpoint
 
 - Werk de site en clients bij naar versie 2006.
 
-- Gebruik co-beheer en schakel de [Endpoint Protection workload](../../../../comanage/workloads.md#endpoint-protection) naar intune en beheer [micro soft Defender anti virus](https://docs.microsoft.com/mem/intune/configuration/device-restrictions-windows-10#microsoft-defender-antivirus) vanuit de Cloud.
+- Gebruik co-beheer en schakel de [Endpoint Protection workload](../../../../comanage/workloads.md#endpoint-protection) naar intune en beheer [micro soft Defender anti virus](../../../../../intune/configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) vanuit de Cloud.
 
 - Gebruik [configuratie-items](../../../../compliance/deploy-use/create-configuration-items.md) in plaats van de functie systeem eigen [antimalware policies](../../../../protect/deploy-use/endpoint-antimalware-policies.md) om Endpoint Protection-beleid toe te passen.
 
@@ -325,7 +325,7 @@ CMG maakt gebruik van de volgende Azure-onderdelen, die kosten in rekening worde
 
 - Een CMG kan ook een Cloud distributiepunt zijn voor het leveren van inhoud aan clients. Deze functionaliteit vermindert de vereiste certificaten en kosten van virtuele Azure-machines. Zie [een CMG wijzigen](setup-cloud-management-gateway.md#modify-a-cmg)voor meer informatie.<!--1358651-->  
 
-- CMG maakt gebruik van lokaal redundante opslag (LRS) van Azure. Zie [lokaal redundante opslag](https://docs.microsoft.com/azure/storage/common/storage-redundancy-lrs)voor meer informatie.  
+- CMG maakt gebruik van lokaal redundante opslag (LRS) van Azure. Zie [lokaal redundante opslag](/azure/storage/common/storage-redundancy-lrs)voor meer informatie.  
 
 ### <a name="other-costs"></a>Andere kosten
 
@@ -388,15 +388,15 @@ Deze tabel geeft een lijst van de vereiste netwerk poorten en protocollen. De *c
 | CMG-verbindings punt | HTTPS of HTTP | 443 of 80 | Beheerpunt | On-premises verkeer, poort is afhankelijk van de configuratie van het beheer punt |
 | CMG-verbindings punt | HTTPS of HTTP | 443 of 80 | Software-updatepunt | On-premises verkeer, poort is afhankelijk van de configuratie van het software-update punt |
 
-#### <a name="note-1-cmg-connection-point-tcp-tls-ports"></a><a name="bkmk_port-note1"></a>Opmerking 1: TCP-TLS-poorten van CMG-verbindings punt
+#### <a name="note-1-cmg-connection-point-tcp-tls-ports"></a><a name="bkmk_port-note1"></a> Opmerking 1: TCP-TLS-poorten van CMG-verbindings punt
 
 Het CMG-verbindings punt probeert eerst een langdurige TCP-TLS-verbinding tot stand te brengen met elk CMG VM-exemplaar. Er wordt verbinding gemaakt met het eerste VM-exemplaar op poort 10140. De tweede VM-instantie gebruikt poort 10141, tot de 16de op poort 10155. Een TCP-TLS-verbinding voert het beste uit, maar biedt geen ondersteuning voor de Internet proxy. Als het CMG-verbindings punt geen verbinding kan maken via TCP-TLS, terugvallen op de HTTPS-<sup>[Opmerking 2](#bkmk_port-note2)</sup>.
 
-#### <a name="note-2-cmg-connection-point-https-ports-for-one-vm"></a><a name="bkmk_port-note2"></a>Opmerking 2: HTTPS-poorten van CMG-verbindings punt voor één VM
+#### <a name="note-2-cmg-connection-point-https-ports-for-one-vm"></a><a name="bkmk_port-note2"></a> Opmerking 2: HTTPS-poorten van CMG-verbindings punt voor één VM
 
 Als het CMG-verbindings punt geen verbinding kan maken met de CMG via TCP-TLS-<sup>[Opmerking 1](#bkmk_port-note1)</sup>, wordt er verbinding gemaakt met het Azure-netwerk Load Balancer meer dan HTTPS 443 voor één VM-exemplaar.  
 
-#### <a name="note-3-cmg-connection-point-https-ports-for-two-or-more-vms"></a><a name="bkmk_port-note3"></a>Opmerking 3: HTTPS-poorten van CMG-verbindings punt voor twee of meer virtuele machines
+#### <a name="note-3-cmg-connection-point-https-ports-for-two-or-more-vms"></a><a name="bkmk_port-note3"></a> Opmerking 3: HTTPS-poorten van CMG-verbindings punt voor twee of meer virtuele machines
 
 Als er twee of meer VM-exemplaren zijn, gebruikt het CMG-verbindings punt HTTPS 10124 naar de eerste VM-instantie, niet HTTPS 443. Er wordt verbinding gemaakt met het tweede VM-exemplaar op HTTPS 10125, tot de 16de op HTTPS-poort 10139.
 

@@ -2,7 +2,7 @@
 title: Clientinstellingen
 titleSuffix: Configuration Manager
 description: Meer informatie over de standaard-en aangepaste instellingen voor het beheren van client gedrag
-ms.date: 08/11/2020
+ms.date: 08/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e70a44fee7b4805884faeda0a5fb1eab72d3371e
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 8045df681560972a353e08ee43c10b6ae86dc50f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126998"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693417"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Over client instellingen in Configuration Manager
 
@@ -167,7 +167,7 @@ Stel deze optie in op **Ja** als u wilt dat clients inhoud ophalen van een Cloud
 
 ### <a name="automatically-register-new-windows-10-domain-joined-devices-with-azure-active-directory"></a>Automatisch nieuwe aan Windows 10-domein gekoppelde apparaten registreren met Azure Active Directory
 
-Wanneer u Azure Active Directory configureert ter ondersteuning van hybride deelname, Configuration Manager Windows 10-apparaten configureren voor deze functionaliteit. Zie [Configure hybrid Azure Active Directory joind devices](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)(Engelstalig) voor meer informatie.
+Wanneer u Azure Active Directory configureert ter ondersteuning van hybride deelname, Configuration Manager Windows 10-apparaten configureren voor deze functionaliteit. Zie [Configure hybrid Azure Active Directory joind devices](/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)(Engelstalig) voor meer informatie.
 
 ### <a name="enable-clients-to-use-a-cloud-management-gateway"></a>Clients inschakelen om een Cloud beheer gateway te gebruiken
 
@@ -341,11 +341,11 @@ Zie meldingen over het [opnieuw opstarten van apparaten](device-restart-notifica
 ## <a name="delivery-optimization"></a>Delivery optimization
 
 <!-- 1324696 -->
-U gebruikt Configuration Manager grens groepen om de distributie van inhoud in uw bedrijfs netwerk en externe kant oren te definiëren en te reguleren. [Windows Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) is een op de cloud gebaseerde peer-to-peer-technologie voor het delen van inhoud tussen Windows 10-apparaten. Configureer Delivery Optimization om uw grens groepen te gebruiken bij het delen van inhoud tussen peers.
+U gebruikt Configuration Manager grens groepen om de distributie van inhoud in uw bedrijfs netwerk en externe kant oren te definiëren en te reguleren. [Windows Delivery Optimization](/windows/deployment/update/waas-delivery-optimization) is een op de cloud gebaseerde peer-to-peer-technologie voor het delen van inhoud tussen Windows 10-apparaten. Configureer Delivery Optimization om uw grens groepen te gebruiken bij het delen van inhoud tussen peers.
 
 > [!Note]
 > - Delivery Optimization is alleen beschikbaar op Windows 10-clients.
-> - Internet toegang tot de Cloud service voor leverings optimalisatie is een vereiste voor het gebruik van de peer-to-peer-functionaliteit. Zie [Veelgestelde vragen over Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)voor meer informatie over de benodigde Internet-eind punten.
+> - Internet toegang tot de Cloud service voor leverings optimalisatie is een vereiste voor het gebruik van de peer-to-peer-functionaliteit. Zie [Veelgestelde vragen over Delivery Optimization](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)voor meer informatie over de benodigde Internet-eind punten.
 > - Wanneer u een CMG gebruikt voor de opslag van inhoud, worden de inhoud voor updates van derden niet gedownload naar clients als de instelling **Delta-inhoud downloaden wanneer de beschik bare** [client](#allow-clients-to-download-delta-content-when-available) is ingeschakeld. <!--6598587--> 
 
 ### <a name="use-configuration-manager-boundary-groups-for-delivery-optimization-group-id"></a>Configuration Manager grens groepen gebruiken voor de ID van de leverings optimalisatie groep
@@ -641,6 +641,17 @@ Stel deze optie in op **Ja** als u verificatie op netwerk niveau (NLA) wilt gebr
 
 ## <a name="software-center"></a>Software Center
 
+### <a name="select-the-user-portal"></a>De gebruikers Portal selecteren
+
+<!--CMADO-3601237,INADO-4297660-->
+Als u vanaf versie 2006 de Bedrijfsportal op door co beheerde apparaten implementeert, configureert u deze instelling in **bedrijfsportal**. Deze instelling zorgt ervoor dat gebruikers alleen meldingen ontvangen van Bedrijfsportal.
+
+Als u de Bedrijfsportal op een gezamenlijk beheerd apparaat installeert, maar deze instelling configureert in **Software Center**, zien gebruikers meldingen van beide portals. Deze ervaring kan verwarrend zijn voor gebruikers.
+
+Als u de client instelling voor Bedrijfsportal wijzigt, wordt de Bedrijfsportal gestart wanneer een gebruiker een Configuration Manager melding selecteert. Als de melding betrekking heeft op een scenario, wordt de Bedrijfsportal niet ondersteund door het selecteren van de melding Software Center.
+
+Het gedrag van de Bedrijfsportal is afhankelijk van de configuratie van de werk belasting voor co-beheer. Zie [De bedrijfsportal-app configureren op co-beheerde apparaten](../../../comanage/company-portal.md) voor meer informatie.
+
 ### <a name="select-these-new-settings-to-specify-company-information"></a>Selecteer deze nieuwe instellingen om bedrijfs gegevens op te geven
 
 Stel deze optie in op **Ja**en geef de volgende instellingen op voor het logo Software Center voor uw organisatie:
@@ -651,15 +662,15 @@ Stel deze optie in op **Ja**en geef de volgende instellingen op voor het logo So
 
 - **Selecteer een logo voor Software Center**: Klik op **Bladeren** om een installatie kopie te selecteren die u wilt weer geven in Software Center. Het logo moet een JPEG, PNG of BMP van 400 x 100 pixels zijn, met een maximale grootte van 750 KB. De naam van het logo bestand mag geen spaties bevatten.  
 
-### <a name="hide-unapproved-applications-in-software-center"></a><a name="bkmk_HideUnapproved"></a>Niet-goedgekeurde toepassingen verbergen in Software Center
+### <a name="hide-unapproved-applications-in-software-center"></a><a name="bkmk_HideUnapproved"></a> Niet-goedgekeurde toepassingen verbergen in Software Center
 
 Wanneer u deze optie inschakelt, worden gebruikers beschik bare toepassingen die goed keuring vereisen, verborgen in Software Center.<!--1355146-->
 
-### <a name="hide-installed-applications-in-software-center"></a><a name="bkmk_HideInstalled"></a>Geïnstalleerde toepassingen verbergen in Software Center
+### <a name="hide-installed-applications-in-software-center"></a><a name="bkmk_HideInstalled"></a> Geïnstalleerde toepassingen verbergen in Software Center
 
 Wanneer u deze optie inschakelt, worden toepassingen die al zijn geïnstalleerd, niet meer weer gegeven op het tabblad toepassingen. Deze optie wordt ingesteld als de standaard waarde wanneer u Configuration Manager installeert of als u een upgrade naar uitvoert. Geïnstalleerde toepassingen zijn nog steeds beschikbaar voor controle op het tabblad installatie status. <!--1357592-->
 
-### <a name="hide-application-catalog-link-in-software-center"></a><a name="bkmk_HideAppCat"></a>toepassingscatalogus koppeling verbergen in Software Center
+### <a name="hide-application-catalog-link-in-software-center"></a><a name="bkmk_HideAppCat"></a> toepassingscatalogus koppeling verbergen in Software Center
 
 De zicht baarheid van de Application catalog-website koppeling in Software Center opgeven. Als deze optie is ingesteld, krijgen gebruikers de koppeling Application catalog-website niet te zien in het knoop punt installatie status van software Center. <!--1358214-->
 
@@ -671,7 +682,7 @@ De zicht baarheid van de Application catalog-website koppeling in Software Cente
 #### <a name="starting-in-version-1906"></a>Vanaf versie 1906
 <!--4063773-->
 
-Kies de tabbladen die moeten worden weer gegeven in Software Center. Gebruik de knop **toevoegen** om een tabblad naar **zicht bare tabbladen**te verplaatsen. Gebruik de knop **verwijderen** om deze naar de lijst met **verborgen tabbladen** te verplaatsen. Volg de tabbladen met de knoppen **omhoog** of **omlaag** . 
+Kies de tabbladen die moeten worden weer gegeven in Software Center. Gebruik de knop **toevoegen** om een tabblad naar **zicht bare tabbladen**te verplaatsen. Gebruik de knop **verwijderen**  om deze naar de lijst met **verborgen tabbladen** te verplaatsen. Volg de tabbladen met de knoppen **omhoog** of **omlaag** . 
 
 Beschik bare tabbladen:
 - **Toepassingen**
@@ -709,7 +720,7 @@ Stel de extra instellingen in deze groep in op **Ja** om de volgende tabbladen z
 
 Als uw organisatie bijvoorbeeld geen nalevings beleid gebruikt en u het tabblad apparaatcompatibiliteit in Software Center wilt verbergen, stelt u het tabblad apparaatcompatibiliteit **inschakelen** in op **Nee**.
 
-### <a name="configure-default-views-in-software-center"></a><a name="bkmk_swctr_defaults"></a>Standaard weergaven in Software Center configureren
+### <a name="configure-default-views-in-software-center"></a><a name="bkmk_swctr_defaults"></a> Standaard weergaven in Software Center configureren
 <!--3612112-->
 *(Geïntroduceerd in versie 1902)*
 
@@ -895,7 +906,7 @@ Met deze instelling configureert u de lokale poort voor de HTTP-listener voor he
 
 Wanneer u deze optie instelt op **Ja**, wordt de configuratie van de installatie-instellingen voor Microsoft 365 apps ingeschakeld. Ook kunt u hiermee bestanden downloaden van Office Content Delivery Networks (Cdn's) en de bestanden implementeren als een toepassing in Configuration Manager. Zie [Microsoft 365-apps beheren](../../../sum/deploy-use/manage-office-365-proplus-updates.md)voor meer informatie.
 
-### <a name="enable-installation-of-software-updates-in-all-deployments-maintenance-window-when-software-update-maintenance-window-is-available"></a><a name="bkmk_SUMMaint"></a>Installatie van software-updates inschakelen in het onderhouds venster ' alle implementaties ' wanneer het onderhouds venster voor software-updates beschikbaar is
+### <a name="enable-installation-of-software-updates-in-all-deployments-maintenance-window-when-software-update-maintenance-window-is-available"></a><a name="bkmk_SUMMaint"></a> Installatie van software-updates inschakelen in het onderhouds venster ' alle implementaties ' wanneer het onderhouds venster voor software-updates beschikbaar is
 
 Wanneer u deze optie instelt op **Ja**en de client ten minste één onderhouds venster voor software-updates heeft gedefinieerd, worden software-updates geïnstalleerd tijdens het onderhouds venster ' alle implementaties '.
 
@@ -916,7 +927,7 @@ U kunt bijvoorbeeld de volgende onderhouds Vensters configureren:
 De client installeert standaard alleen software-updates tijdens het tweede onderhouds venster. Het onderhouds venster voor alle implementaties in dit scenario wordt genegeerd. Wanneer u deze instelling wijzigt in **Ja**, installeert de client software-updates tussen 02:00-06:00.
 
 
-### <a name="specify-thread-priority-for-feature-updates"></a><a name="bkmk_thread-priority"></a>De thread prioriteit voor onderdeel updates opgeven
+### <a name="specify-thread-priority-for-feature-updates"></a><a name="bkmk_thread-priority"></a> De thread prioriteit voor onderdeel updates opgeven
 
 <!--3734525-->
 Vanaf Configuration Manager versie 1902 kunt u de prioriteit aanpassen waarmee clients met Windows 10 versie 1709 of hoger een onderdeel Update installeren via [Windows 10 Servicing](../../../osd/deploy-use/manage-windows-as-a-service.md). Deze instelling heeft geen invloed op Windows 10-in-place upgrade taken reeksen.
@@ -927,11 +938,11 @@ Deze client instelling biedt de volgende opties:
 
 - **Normaal**: Windows Setup maakt meer systeem bronnen en updates sneller. Er wordt meer processor tijd gebruikt, waardoor de totale installatie tijd korter is, maar de storing van de gebruiker langer is.  
 
-    - Hiermee configureert u het setupconfig.ini-bestand op het apparaat met de `/Priority Normal` [Windows Setup-opdracht regel optie](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
+    - Hiermee configureert u het setupconfig.ini-bestand op het apparaat met de `/Priority Normal` [Windows Setup-opdracht regel optie](/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
 
 - **Laag**: u kunt op het apparaat blijven werken terwijl het op de achtergrond wordt gedownload en bijgewerkt. De totale installatie tijd is langer, maar de onderbreking van de gebruiker is korter. Mogelijk moet u de maximale uitvoerings tijd van de update verhogen om een time-out te voor komen wanneer u deze optie gebruikt.  
 
-    - Hiermee verwijdert u de `/Priority` [Windows Setup-opdracht regel optie](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) uit het setupconfig.ini-bestand.
+    - Hiermee verwijdert u de `/Priority` [Windows Setup-opdracht regel optie](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) uit het setupconfig.ini-bestand.
 
 
 ### <a name="enable-third-party-software-updates"></a>Updates van software van derden inschakelen
@@ -940,7 +951,7 @@ Wanneer u deze optie instelt op **Ja**, wordt het beleid ingesteld voor het **to
 
 ### <a name="enable-dynamic-update-for-feature-updates"></a><a name="bkmk_du"></a>Dynamische updates voor functie-updates inschakelen
 <!--4062619-->
-Vanaf Configuration Manager versie 1906 kunt u de [dynamische update voor Windows 10](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847)configureren. Met de dynamische update worden taal pakketten, onderdelen op aanvraag, stuur Programma's en cumulatieve updates geïnstalleerd tijdens de installatie van Windows door de client te sturen om deze updates via internet te downloaden. Als deze instelling is ingesteld op **Ja** of **Nee**, wordt het [setupconfig](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) -bestand dat wordt gebruikt tijdens de installatie van de functie-update, door Configuration Manager gewijzigd.
+Vanaf Configuration Manager versie 1906 kunt u de [dynamische update voor Windows 10](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847)configureren. Met de dynamische update worden taal pakketten, onderdelen op aanvraag, stuur Programma's en cumulatieve updates geïnstalleerd tijdens de installatie van Windows door de client te sturen om deze updates via internet te downloaden. Als deze instelling is ingesteld op **Ja** of **Nee**, wordt het [setupconfig](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) -bestand dat wordt gebruikt tijdens de installatie van de functie-update, door Configuration Manager gewijzigd.
 
 - **Niet geconfigureerd** : de standaard waarde. Er worden geen wijzigingen aangebracht in het setupconfig-bestand.
   - Dynamische updates is standaard ingeschakeld op alle ondersteunde versies van Windows 10.

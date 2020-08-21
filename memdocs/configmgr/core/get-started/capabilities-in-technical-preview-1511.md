@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 337b494bdce24463c19dd22ae975af5e99d6d895
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 59d343d09f827edec5db0dd5302c75c00a0c8455
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905853"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694505"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1511 voor Configuration Manager
 
@@ -26,7 +26,7 @@ Dit artikel bevat een inleiding tot de functies die beschikbaar zijn in de Techn
 
 Hier volgen enkele nieuwe functies die u kunt uitproberen met deze versie.  
 
-##  <a name="integration-with-windows-update-for-business-in-windows-10"></a><a name="BKMK_WUfB"></a>Integratie met Windows Update voor bedrijven in Windows 10  
+##  <a name="integration-with-windows-update-for-business-in-windows-10"></a><a name="BKMK_WUfB"></a> Integratie met Windows Update voor bedrijven in Windows 10  
  Configuration Manager heeft nu de mogelijkheid om onderscheid te maken tussen een Windows 10-computer die rechtstreeks is verbonden via Windows Update for Business (WUfB) en de computers die met WSUS zijn verbonden voor het ophalen van updates en upgrades voor Windows 10.  Voor computers die zijn verbonden via WUfB kunnen de updates en upgrades worden beheerd op de uitgebracht die is ingesteld door een gebruiker met beheerders rechten via groeps beleid of MDM-beleid. deze updates/upgrades kunnen rechtstreeks vanuit WUfB worden geïnstalleerd.    
 Voor computers die zijn verbonden via WUfB is Configuration Manager niet in staat om te rapporteren over de nalevings status (inclusief Windows-updates of definitie-updates). Het is ook Configuration Manager niet mogelijk om micro soft-updates of updates van derden te implementeren op deze computers.  
 
@@ -34,7 +34,7 @@ Voor computers die zijn verbonden via WUfB is Configuration Manager niet in staa
 
 -   Windows 10 Desktop Pro of Windows 10 Enter prise Edition versie 1511 of hoger  
 
--   Computers die worden beheerd via [Windows Update voor bedrijven](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb).  
+-   Computers die worden beheerd via [Windows Update voor bedrijven](/windows/deployment/update/waas-manage-updates-wufb).  
 
 ### <a name="try-it-out"></a>Probeer het nu!  
  Voer de volgende taak uit en gebruik vervolgens de feedback informatie boven aan dit onderwerp om ons te laten weten hoe het werkt:  
@@ -50,7 +50,7 @@ Voor computers die zijn verbonden via WUfB is Configuration Manager niet in staa
 
 5.  Op de computers die via WUfB worden beheerd, wordt **onbekend** weer gegeven in de compatibiliteits status en worden niet geteld als onderdeel van het algehele compatibiliteits percentage.  
 
-##  <a name="managing-office-365-proplus-client-update-through-configuration-manager"></a><a name="BKMK_Office365ProPlus"></a>Office 365 ProPlus-client update beheren via Configuration Manager  
+##  <a name="managing-office-365-proplus-client-update-through-configuration-manager"></a><a name="BKMK_Office365ProPlus"></a> Office 365 ProPlus-client update beheren via Configuration Manager  
  Configuration Manager hebt nu de mogelijkheid om updates voor Office 365 desktop-clients te beheren met behulp van de Configuration Manager Software Update Management-werk stroom.    
 Wanneer micro soft een nieuwe Office 365 desktop-client update publiceert op Windows Server updates Services (WSUS), kan Configuration Manager de update synchroniseren naar de catalogus als de Office 365-Update zodanig is geconfigureerd dat deze deel uitmaakt van de catalogus synchronisatie.  Op de Configuration Manager-site server worden de Office 365-client updates gedownload en wordt het pakket gedistribueerd naar Configuration Manager distributie punten.  De Configuration Manager-client brengt vervolgens Office 365 desktop-clients op de hoogte waar de updates worden opgehaald en wanneer het installatie proces van de update wordt gestart.  
 
@@ -67,9 +67,9 @@ Wanneer micro soft een nieuwe Office 365 desktop-client update publiceert op Win
 
 4. U kunt naleving voor Office 365-updates controleren met behulp van de controle of rapporten in de console.  
 
-   Zie [Office 365-client updates beheren met Configuration Manager Technical Preview](https://docs.microsoft.com/deployoffice/manage-microsoft-365-apps-updates-configuration-manager)voor gedetailleerde stappen.  
+   Zie [Office 365-client updates beheren met Configuration Manager Technical Preview](/deployoffice/manage-microsoft-365-apps-updates-configuration-manager)voor gedetailleerde stappen.  
 
-##  <a name="support-for-sql-server-alwayson-for-highly-available-databases"></a><a name="BKMK_AlwasyOn"></a>Ondersteuning voor SQL Server AlwaysOn voor Maxi maal beschik bare data bases  
+##  <a name="support-for-sql-server-alwayson-for-highly-available-databases"></a><a name="BKMK_AlwasyOn"></a> Ondersteuning voor SQL Server AlwaysOn voor Maxi maal beschik bare data bases  
  Configuration Manager ondersteunt nu het gebruik van een SQL Server AlwaysOn-beschikbaarheids groepen voor het hosten van de site database.  Wanneer u een nieuwe site installeert, kunt u instellen dat de beschikbaarheids groep wordt gebruikt in plaats van een normaal exemplaar van SQL Server.  
 
 > [!NOTE]  
@@ -110,7 +110,7 @@ Voer de volgende taken uit en gebruik daarna de feedback informatie boven aan di
  Gebruik de volgende procedures om eerst de beschikbaarheids groep te maken en te configureren en vervolgens een nieuwe Configuration Manager-site te installeren die gebruikmaakt van de beschikbaarheids groep.  
 
 #### <a name="to-create-a-sql-server-alwayson-availability-group"></a>Een SQL Server AlwaysOn-beschikbaarheids groep maken  
-Het proces voor het [maken van een SQL Server beschikbaarheids groep](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-ver15) wordt beschreven in de documentatie bibliotheek van SQL Server.  Wanneer u de beschikbaarheids groep maakt, moet u ervoor zorgen dat aan de volgende vereisten wordt voldaan voor gebruik met Configuration Manager:  
+Het proces voor het [maken van een SQL Server beschikbaarheids groep](/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-ver15) wordt beschreven in de documentatie bibliotheek van SQL Server.  Wanneer u de beschikbaarheids groep maakt, moet u ervoor zorgen dat aan de volgende vereisten wordt voldaan voor gebruik met Configuration Manager:  
 
 -   Maxi maal drie leden:  
 
@@ -145,7 +145,7 @@ Een site installeren die gebruikmaakt van een SQL Server beschikbaarheids groep:
 
 3.  Nadat u deze informatie hebt verstrekt, voltooit u de installatie met uw normale proces en configuraties.  
 
-##  <a name="service-a--server-cluster"></a><a name="BKMK_ClusterServerUpdates"></a>Een server cluster onderhouden  
+##  <a name="service-a--server-cluster"></a><a name="BKMK_ClusterServerUpdates"></a> Een server cluster onderhouden  
 U kunt nu een verzameling maken die servers in een cluster bevat en vervolgens de cluster instellingen configureren die moeten worden gebruikt bij het implementeren van updates voor het cluster. U kunt het percentage servers beheren dat op elk gewenst moment online is, evenals voor het configureren van Power shell-scripts voor vóór de implementatie en na de implementatie om aangepaste acties uit te voeren.  
 
 **Bekende problemen voor deze release:**  
@@ -161,7 +161,7 @@ Voer de volgende taak uit en gebruik vervolgens de feedback informatie boven aan
 
 -   Ik kan opgeven dat slechts 50% van de servers in het cluster offline kunnen zijn op elk moment in cluster onderhoud. Gebruik de voorbeeld scripts in de procedure om de scripts voor de pre-implementatie en na de implementatie op te geven.  
 
--   Implementeer een update voor deze verzameling. Controleer de bestanden start. txt en end. txt in C:\Temp en controleer de begin-en eind tijden voor de implementatie op de servers in het cluster. Raadpleeg het bestand UpdatesDeployment. log voor meer informatie.  
+-   Implementeer een update voor deze verzameling. Controleer de start.txt-en end.txt bestanden in C:\Temp en controleer de begin-en eind tijden voor de implementatie op de servers in het cluster. Raadpleeg het bestand UpdatesDeployment. log voor meer informatie.  
 
 #### <a name="to-create-a-collection-for-a-server-cluster"></a>Een verzameling voor een server cluster maken  
 
@@ -202,4 +202,4 @@ Voer de volgende taak uit en gebruik vervolgens de feedback informatie boven aan
 
 1.  [Software-updates implementeren](../../sum/deploy-use/deploy-software-updates.md) in de server cluster verzameling.  
 
-2.  [Controleer de implementatie van de software-update](../../sum/deploy-use/monitor-software-updates.md).  
+2.  [Controleer de implementatie van de software-update](../../sum/deploy-use/monitor-software-updates.md).

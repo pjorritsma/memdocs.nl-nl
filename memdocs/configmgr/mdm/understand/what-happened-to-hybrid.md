@@ -10,12 +10,12 @@ ms.assetid: e9e0da6d-bd5a-48d9-930a-e74b34b9286c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d07a014cdcb3f371a90028ec09be3c0c939b8424
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: 95ac4160895394eb075589ed18a317923f317b45
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721813"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695389"
 ---
 # <a name="what-happened-to-hybrid-mdm"></a>Wat is er gebeurd met hybride MDM?
 
@@ -80,6 +80,6 @@ De volgende opmerking is de oorspronkelijke aankondiging van de afschaffing:
 
 Zie de volgende artikelen voor meer informatie over ondersteunde functies voor het beheren van MDM-apparaten:
 
-- [Wat is Microsoft Intune?](https://docs.microsoft.com/intune/what-is-intune)
+- [Wat is Microsoft Intune?](/intune/what-is-intune)
 - [Wat is on-premises MDM?](manage-mobile-devices-with-on-premises-infrastructure.md)
 - [Apparaatbeheer met Exchange](../deploy-use/manage-mobile-devices-with-exchange-activesync.md)

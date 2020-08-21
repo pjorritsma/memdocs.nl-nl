@@ -10,20 +10,20 @@ ms.assetid: a5fc033e-828e-4e45-9097-bbbd0697ebdf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: cbf7dd3e35db8d2020e96e2511017e43863f724e
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 5feaf05a6829d902b1d8dcbe57722dfce410de6f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85613489"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693536"
 ---
 # <a name="microsoft-defender-advanced-threat-protection"></a>Microsoft Defender Advanced Threat Protection
 
 *Van toepassing op: Configuration Manager (huidige vertakking)*
 
-Endpoint Protection kunt [micro soft Defender Advanced Threat Protection (ATP)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) (voorheen bekend als Windows Defender ATP) beheren en bewaken. Micro soft Defender ATP helpt ondernemingen bij het detecteren, onderzoeken en reageren op geavanceerde aanvallen op hun netwerken. Met Configuration Manager-beleid kunt u Windows 10-clients voorbereiden en bewaken.
+Endpoint Protection kunt [micro soft Defender Advanced Threat Protection (ATP)](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) (voorheen bekend als Windows Defender ATP) beheren en bewaken. Micro soft Defender ATP helpt ondernemingen bij het detecteren, onderzoeken en reageren op geavanceerde aanvallen op hun netwerken. Met Configuration Manager-beleid kunt u Windows 10-clients voorbereiden en bewaken.
 
-Micro soft Defender ATP is een service in [micro soft defender Security Center](https://securitycenter.windows.com). Als u een configuratie bestand voor het voorbereiden van de client toevoegt en implementeert, kunt Configuration Manager de status van de implementatie en de status van micro soft Defender ATP-agent bewaken. Micro soft Defender ATP wordt ondersteund op Pc's met de Configuration Manager-client of worden [beheerd door Microsoft intune](https://docs.microsoft.com/intune/protect/advanced-threat-protection).
+Micro soft Defender ATP is een service in [micro soft defender Security Center](https://securitycenter.windows.com). Als u een configuratie bestand voor het voorbereiden van de client toevoegt en implementeert, kunt Configuration Manager de status van de implementatie en de status van micro soft Defender ATP-agent bewaken. Micro soft Defender ATP wordt ondersteund op Pc's met de Configuration Manager-client of worden [beheerd door Microsoft intune](/intune/protect/advanced-threat-protection).
 
 ## <a name="prerequisites"></a>Vereisten
 
@@ -31,7 +31,7 @@ Micro soft Defender ATP is een service in [micro soft defender Security Center](
 - Clients computers waarop de Configuration Manager-client wordt uitgevoerd
 - Clients die een besturings systeem gebruiken dat wordt vermeld in de sectie [ondersteunde client besturingssystemen](#bkmk_os) .
 
-### <a name="supported-client-operating-systems"></a><a name="bkmk_os"></a>Ondersteunde client besturingssystemen
+### <a name="supported-client-operating-systems"></a><a name="bkmk_os"></a> Ondersteunde client besturingssystemen
 
 Op basis van de versie van Configuration Manager die u uitvoert, kunnen de volgende client besturingssystemen onboarding worden uitgevoerd:
 
@@ -74,7 +74,7 @@ Wanneer u apparaten uitschakelt tot ATP met Configuration Manager, implementeert
 > - Als uw doel verzameling apparaten op het hoogste niveau bevat, en u de instructies voor apparaten op een lager niveau gebruikt, worden de op het niveau van de apparaten op het upniveau niet uitgevoerd.
 > - Als uw doel verzameling apparaten van een lager niveau bevat en u de instructies voor apparaten op het hoogste niveau gebruikt, worden de Down Level-apparaten niet meer onboarded.
 
-## <a name="onboard-devices-with-any-supported-operating-system-to-atp-recommended"></a><a name="bkmk_any_os"></a>Onboarding van apparaten met elk ondersteund besturings systeem naar ATP (aanbevolen)
+## <a name="onboard-devices-with-any-supported-operating-system-to-atp-recommended"></a><a name="bkmk_any_os"></a> Onboarding van apparaten met elk ondersteund besturings systeem naar ATP (aanbevolen)
  U kunt apparaten met een van de [ondersteunde besturings systemen](#bkmk_os) op ATP onboarden door het configuratie bestand, de **werkruimte sleutel**en de **werk ruimte-id** op te geven Configuration Manager.
 
 ### <a name="get-the-configuration-file-workspace-id-and-workspace-key"></a>Het configuratie bestand, de werk ruimte-ID en de werkruimte sleutel ophalen
@@ -112,7 +112,7 @@ Wanneer u apparaten uitschakelt tot ATP met Configuration Manager, implementeert
 1. Bekijk de samen vatting en voltooi de wizard.  
 1. Klik met de rechter muisknop op het beleid dat u hebt gemaakt en selecteer vervolgens **implementeren** om het micro soft Defender ATP-beleid te richten op clients.
 
-## <a name="onboard-devices-running-up-level-operating-systems-to-atp"></a><a name="bkmk_uplevel"></a>Onboarding van apparaten met besturings systemen op het niveau van ATP
+## <a name="onboard-devices-running-up-level-operating-systems-to-atp"></a><a name="bkmk_uplevel"></a> Onboarding van apparaten met besturings systemen op het niveau van ATP
 
 Op up-Level-clients is een voorbereidings configuratie bestand vereist voor onboarding naar ATP. Besturings systemen op een hoger niveau zijn:
 - Windows 10, versie 1607 en hoger 
@@ -147,7 +147,7 @@ Als uw doel verzameling apparaten op niveau van hoger of lager niveau bevat, of 
 1. Bekijk de samen vatting en voltooi de wizard.  
 1. Klik met de rechter muisknop op het beleid dat u hebt gemaakt en selecteer vervolgens **implementeren** om het micro soft Defender ATP-beleid te richten op clients.
 
-## <a name="onboard-devices-running-down-level-operating-systems-to-atp"></a><a name="bkmk_downlevel"></a>Onboarding van apparaten met lagere besturings systemen naar ATP
+## <a name="onboard-devices-running-down-level-operating-systems-to-atp"></a><a name="bkmk_downlevel"></a> Onboarding van apparaten met lagere besturings systemen naar ATP
 
 Down Level-clients vereisen de **werkruimte sleutel** en **werk ruimte-id** voor het voorbereiden op ATP. Besturings systemen van lager niveau zijn onder andere:
 - Windows 8.1
@@ -220,6 +220,6 @@ Selecteer **implementeren** om het micro soft Defender ATP-beleid te richten op 
 
 ## <a name="next-steps"></a>Volgende stappen
 
-- [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)
+- [Microsoft Defender Advanced Threat Protection](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)
 
-- [Problemen met onboarding van micro soft Defender Advanced Threat Protection oplossen](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-onboarding)
+- [Problemen met onboarding van micro soft Defender Advanced Threat Protection oplossen](/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-onboarding)

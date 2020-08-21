@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: e24c2ee19093dd12af6e87280a31851a1f593782
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: b8d22d7f011fb87dc1105fd8447d2e93adc80c6e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268467"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693366"
 ---
 # <a name="how-to-close-your-account"></a>Uw account sluiten
 
@@ -114,9 +114,9 @@ Als u niet wilt dat uw apparaten diagnostische gegevens gaan verzenden:
 Stel deze waarden in met een van de volgende methoden:
 
 - Groeps beleid, in **computer configuratie**  >  **Beheersjablonen**van  >  **Windows Components**  >  **gegevens verzameling en Preview-versies** van Windows-onderdelen
-- Beheer van mobiele apparaten (MDM), zoals [Microsoft intune](https://docs.microsoft.com/intune/device-restrictions-windows-10#reporting-and-telemetry)
+- Beheer van mobiele apparaten (MDM), zoals [Microsoft intune](/intune/device-restrictions-windows-10#reporting-and-telemetry)
 
-Zie [Diagnostische gegevens van Windows in uw organisatie configureren](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization) voor meer informatie.
+Zie [Diagnostische gegevens van Windows in uw organisatie configureren](/windows/privacy/configure-windows-diagnostic-data-in-your-organization) voor meer informatie.
 
 > [!NOTE]  
 > Wanneer u deze wijzigingen toepast, stoppen apparaten direct met het verzenden van diagnostische gegevens. Het kan 24-48 uur duren voordat micro soft het verwerken van inzichten voor uw werk ruimte stopt. Micro soft verwijdert deze gegevens binnen 30 dagen of minder in de Cloud Services.

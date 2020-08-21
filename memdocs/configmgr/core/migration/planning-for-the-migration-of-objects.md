@@ -10,12 +10,12 @@ ms.assetid: 066caf00-e419-4efb-93d3-ba4ba878297c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 93c3887307c32ea636a6dbb064cda13f4b9130c6
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 996cff4b8b333a59b774afb979bbdd89aae536a1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905132"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692890"
 ---
 # <a name="plan-for-the-migration-of-configuration-manager-objects-to-configuration-manager-current-branch"></a>Plannen voor de migratie van Configuration Manager objecten naar Configuration Manager huidige vertakking
 
@@ -23,7 +23,7 @@ ms.locfileid: "82905132"
 
 Met Configuration Manager current branch kunt u veel van de verschillende objecten migreren die zijn gekoppeld aan verschillende functies die op een bron site zijn gevonden.
 
-##  <a name="plan-to-migrate-software-updates"></a><a name="Plan_migrate_Software_updates"></a>Migratie van software-updates plannen  
+##  <a name="plan-to-migrate-software-updates"></a><a name="Plan_migrate_Software_updates"></a> Migratie van software-updates plannen  
  U kunt software-update objecten migreren, zoals software-update pakketten en software-update-implementaties.  
 
  Om software-update objecten met succes te migreren, moet u eerst uw doel hiërarchie instellen met configuraties die overeenkomen met uw bron hiërarchie omgeving. Dit vereist de volgende acties:  
@@ -54,7 +54,7 @@ Wanneer u migreert vanaf een Configuration Manager 2007-bron hiërarchie, wijzig
 
 Wanneer u objecten migreert vanuit een System Center 2012-Configuration Manager of Configuration Manager huidige branch-bron hiërarchie, worden de software-update objecten niet gewijzigd.  
 
-##  <a name="plan-to-migrate-content"></a><a name="Plan_Migrate_content"></a>Migratie van inhoud plannen  
+##  <a name="plan-to-migrate-content"></a><a name="Plan_Migrate_content"></a> Migratie van inhoud plannen  
  U kunt inhoud migreren vanaf een ondersteunde bronhiërarchie naar uw doelhiërarchie. Voor een Configuration Manager 2007-bron hiërarchie omvat deze inhoud software distributie pakketten en Program ma's en virtuele toepassingen, zoals micro soft Application Virtualization (app-V). Voor System Center 2012 Configuration Manager en Configuration Manager huidige branch-bron hiërarchieën bevat deze inhoud toepassingen en app-V virtuele toepassingen. Wanneer u inhoud migreert tussen hiërarchieën, worden de gecomprimeerde bron bestanden gemigreerd naar de doel hiërarchie.  
 
 ### <a name="packages-and-programs"></a>Pakketten en programma's  
@@ -96,12 +96,12 @@ U kunt advertenties migreren vanaf een ondersteunde Configuration Manager 2007-b
 ### <a name="applications"></a>Toepassingen  
  U kunt toepassingen migreren van een ondersteund System Center 2012 Configuration Manager of Configuration Manager huidige branch-bron hiërarchie naar een doel hiërarchie. Indien u een client opnieuw toewijst vanaf een bronhiërarchie naar de doelhiërarchie, behoudt de client de geschiedenis van voordien geïnstalleerde toepassingen om te voorkomen dat de client opnieuw een gemigreerde toepassing uitvoert.  
 
-##  <a name="plan-to-migrate-collections"></a><a name="BKMK_MigrateCollections"></a>Migratie van verzamelingen plannen  
+##  <a name="plan-to-migrate-collections"></a><a name="BKMK_MigrateCollections"></a> Migratie van verzamelingen plannen  
  U kunt de criteria voor verzamelingen migreren vanuit een ondersteund System Center 2012 Configuration Manager of Configuration Manager huidige branch-bron hiërarchie. Hiervoor gebruikt u een migratie taak op basis van een object. Wanneer u een verzameling migreert, migreert u de regels voor de verzameling en niet informatie over de leden van de verzameling of informatie of objecten gerelateerd tot leden van de verzameling.  
 
  Migratie van het verzamelings object wordt niet ondersteund wanneer u migreert vanaf een Configuration Manager 2007-bron hiërarchie.  
 
-##  <a name="plan-to-migrate-operating-system-deployments"></a><a name="Plan_migrate_OSD"></a>Migratie van implementaties van besturings systemen plannen  
+##  <a name="plan-to-migrate-operating-system-deployments"></a><a name="Plan_migrate_OSD"></a> Migratie van implementaties van besturings systemen plannen  
 U kunt de volgende implementatieobjecten van besturingssystemen migreren vanaf een ondersteunde bronhiërarchie:  
 
 -   Installatiekopieën van besturingssystemen en pakketten. Het bronpad van opstart installatie kopieën wordt bijgewerkt naar de standaard locatie van de installatie kopie voor de Windows-beheer installatie kit (Windows AIK) op de doel site. Het volgende zijn vereisten en beperking voor het migreren van besturingssystemen en pakketten:  
@@ -119,22 +119,22 @@ U kunt de volgende implementatieobjecten van besturingssystemen migreren vanaf e
 
 -   Stuurprogramma's en stuurprogrammapakketten. Wanneer u stuur programmapakketten migreert, moet het computer account van de SMS-provider in de doel hiërarchie volledig beheer hebben over de pakket bron.
 
-##  <a name="plan-to-migrate-desired-configuration-management"></a><a name="Plan_Migrate_Compliance_settings"></a>Migratie van Desired Configuration Management plannen  
+##  <a name="plan-to-migrate-desired-configuration-management"></a><a name="Plan_Migrate_Compliance_settings"></a> Migratie van Desired Configuration Management plannen  
 U kunt de configuratie-items en configuratiebasislijnen migreren.  
 
 > [!NOTE]  
->  Niet-geïnterpreteerde configuratie-items van Configuration Manager 2007-bron hiërarchieën worden niet ondersteund voor migratie. U kunt deze configuratie-items niet migreren of importeren naar de doelhiërarchie. Voor meer informatie over niet-geïnterpreteerde configuratie-items raadpleegt u niet-geïnterpreteerde configuratie-items in het onderwerp [over configuratie-items in desired Configuration Management](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694136(v=technet.10)#uninterpreted-configuration-item) in de documentatie bibliotheek van Configuration Manager 2007.  
+>  Niet-geïnterpreteerde configuratie-items van Configuration Manager 2007-bron hiërarchieën worden niet ondersteund voor migratie. U kunt deze configuratie-items niet migreren of importeren naar de doelhiërarchie. Voor meer informatie over niet-geïnterpreteerde configuratie-items raadpleegt u niet-geïnterpreteerde configuratie-items in het onderwerp [over configuratie-items in desired Configuration Management](/previous-versions/system-center/configuration-manager-2007/bb694136(v=technet.10)#uninterpreted-configuration-item) in de documentatie bibliotheek van Configuration Manager 2007.  
 
 U kunt Configuration Manager 2007-configuratie pakketten importeren. Tijdens het import proces worden de configuratie pakketten automatisch geconverteerd zodat deze compatibel zijn met Configuration Manager huidige vertakking.  
 
-##  <a name="plan-to-migrate-boundaries"></a><a name="Plan_migrate_Boundaries"></a>Migratie van grenzen plannen  
+##  <a name="plan-to-migrate-boundaries"></a><a name="Plan_migrate_Boundaries"></a> Migratie van grenzen plannen  
  U kunt grenzen tussen hiërarchieën migreren. Wanneer u grenzen migreert vanaf Configuration Manager 2007, wordt elke grens van de bron site tegelijk gemigreerd en wordt deze toegevoegd aan een nieuwe grens groep die in de doel hiërarchie wordt gemaakt. Wanneer u grenzen migreert van een System Center 2012-Configuration Manager of Configuration Manager huidige branch-hiërarchie, wordt elke door u geselecteerde grens toegevoegd aan een nieuwe grens groep in de doel hiërarchie.  
 
  Voor elke automatisch gemaakte grensgroep is locatie van inhoud ingeschakeld, maar niet sitetoewijzing. Hiermee wordt voorkomen dat grenzen voor sitetoewijzing tussen de bron- en doelhiërarchieën elkaar overlappen. Wanneer u migreert vanaf een Configuration Manager 2007-bron site, kunt u hiermee voor komen dat nieuwe Configuration Manager 2007-clients die worden geïnstalleerd, onjuist worden toegewezen aan de doel hiërarchie. Configuration Manager huidige branch-clients worden standaard niet automatisch toegewezen aan Configuration Manager 2007-sites.  
 
  Als u tijdens de migratie een distributiepunt deelt met de doelhiërarchie, migreren aan dit distributiepunt gekoppelde grenzen automatisch naar de doelhiërarchie. In de doel hiërarchie maakt migratie een nieuwe alleen-lezen grens groep voor elk gedeeld distributie punt. Als u de grenzen van het distributiepunt in de bronhiërarchie wijzigt, wordt de grensgroep in de doelhiërarchie tijdens de volgende gegevensverzamelingscyclus bijgewerkt met deze wijzigingen.  
 
-##  <a name="plan-to-migrate-reports"></a><a name="Plan_Migrate_reports"></a>De migratie van rapporten plannen  
+##  <a name="plan-to-migrate-reports"></a><a name="Plan_Migrate_reports"></a> De migratie van rapporten plannen  
 Configuration Manager biedt geen ondersteuning voor de migratie van rapporten. In plaats daarvan kunt u met SQL Server Reporting Services Report Builder rapporten uit de bronhiërarchie exporteren en vervolgens in de doelhiërarchie importeren.  
 
 > [!NOTE]  
@@ -142,7 +142,7 @@ Configuration Manager biedt geen ondersteuning voor de migratie van rapporten. I
 
 Zie [Introduction to Reporting](../servers/manage/introduction-to-reporting.md)(Engelstalig) voor meer informatie over rapportage.  
 
-##  <a name="plan-to-migrate-organizational-and-search-folders"></a><a name="Plan_Migrate_Org_Folders"></a>De migratie van organisatie-en zoek mappen plannen  
+##  <a name="plan-to-migrate-organizational-and-search-folders"></a><a name="Plan_Migrate_Org_Folders"></a> De migratie van organisatie-en zoek mappen plannen  
  U kunt organisatorische mappen en zoekmappen vanuit een ondersteunde bronhiërarchie naar een doelhiërarchie migreren. Daarnaast kunt u vanuit een System Center 2012-Configuration Manager of Configuration Manager huidige branch-bron hiërarchie de criteria voor een opgeslagen zoek opdracht naar een doel hiërarchie migreren.  
 
  Wanneer u migreert, wordt in het migratieproces standaard de structuur van uw zoekmap en beheermap gehandhaafd voor objecten en verzamelingen. U kunt in de wizard Migratie taak maken op de pagina **instellingen** echter een migratie taak instellen om de organisatie structuur voor objecten niet te migreren, door het selectie vakje voor deze optie uit te vinken. De organisatiestructuren van verzamelingen worden altijd gehandhaafd.  
@@ -151,13 +151,13 @@ Zie [Introduction to Reporting](../servers/manage/introduction-to-reporting.md)(
 
  Wanneer u een opgeslagen zoek opdracht van een System Center 2012-Configuration Manager of Configuration Manager huidige branch-bron hiërarchie migreert, migreert u de criteria voor de zoek opdracht en niet de informatie over de zoek resultaten. De migratie van een opgeslagen zoek opdracht is niet van toepassing op een Configuration Manager 2007-bron site.  
 
-##  <a name="plan-to-migrate-asset-intelligence-customizations"></a><a name="Plan_Migrate_AI"></a>Migratie van Asset Intelligence aanpassingen plannen  
+##  <a name="plan-to-migrate-asset-intelligence-customizations"></a><a name="Plan_Migrate_AI"></a> Migratie van Asset Intelligence aanpassingen plannen  
  U kunt aanpassingen voor Asset Intelligence vanuit een ondersteunde bronhiërarchie naar een doelhiërarchie migreren. Er zijn geen belang rijke wijzigingen aangebracht in de structuur van Asset Intelligence aanpassingen tussen Configuration Manager 2007 en Configuration Manager huidige vertakking.  
 
 > [!NOTE]  
 > Configuration Manager current branch biedt geen ondersteuning voor de migratie van Asset Intelligence-objecten van een Configuration Manager 2007-site die Asset Intelligence Service 2,0 (AIS 2,0) gebruikt.  
 
-##  <a name="plan-to-migrate-software-metering-rules-customizations"></a><a name="Plan_Migrate_SWM_Rules"></a>Planning voor het migreren van aanpassingen van de software meter regels  
+##  <a name="plan-to-migrate-software-metering-rules-customizations"></a><a name="Plan_Migrate_SWM_Rules"></a> Planning voor het migreren van aanpassingen van de software meter regels  
  Er zijn geen belang rijke wijzigingen in software meter tussen Configuration Manager 2007 en Configuration Manager huidige branch. U kunt uw regels voor softwarelicentiecontrole vanuit een ondersteunde bronhiërarchie naar een doelhiërarchie migreren.  
 
- Standaard worden de door u naar een doelhiërarchie gemigreerde regels voor softwarelicentiecontrole niet aan een specifieke site in de doelhiërarchie gekoppeld en zijn daarentegen van toepassing op alle clients in de hiërarchie. Wanneer u een regel voor softwarelicentiecontrole wilt laten gelden voor clients op een specifieke site, moet u de regel voor softwarelicentiecontrole bewerken na de migratie ervan.  
+ Standaard worden de door u naar een doelhiërarchie gemigreerde regels voor softwarelicentiecontrole niet aan een specifieke site in de doelhiërarchie gekoppeld en zijn daarentegen van toepassing op alle clients in de hiërarchie. Wanneer u een regel voor softwarelicentiecontrole wilt laten gelden voor clients op een specifieke site, moet u de regel voor softwarelicentiecontrole bewerken na de migratie ervan.

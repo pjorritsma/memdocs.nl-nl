@@ -10,12 +10,12 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2113baf43c377379a2a996c59fd13e55072cf898
-ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
+ms.openlocfilehash: db3a673d99efc40bd6fa0da7930c66c648136e03
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82605181"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695354"
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Power shell-scripts maken en uitvoeren vanuit de Configuration Manager-console
 
@@ -101,10 +101,10 @@ Deze goed keuring wordt hoofd zakelijk gebruikt voor de test fase van het ontwik
   
 Run scripts gebruiken beveiligingsbereiken, een bestaande functie van Configuration Manager, om scripts te ontwerpen en uit te voeren via het toewijzen van labels die gebruikers groepen vertegenwoordigen. Zie op [rollen gebaseerd beheer configureren voor Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md)voor meer informatie over het gebruik van beveiligingsbereiken.
 
-## <a name="create-security-roles-for-scripts"></a><a name="bkmk_ScriptRoles"></a>Beveiligings rollen maken voor scripts
+## <a name="create-security-roles-for-scripts"></a><a name="bkmk_ScriptRoles"></a> Beveiligings rollen maken voor scripts
 De drie beveiligings rollen die worden gebruikt voor het uitvoeren van scripts, worden niet standaard in Configuration Manager gemaakt. Volg de stappen in het overzicht om de rollen script lopers, script auteurs en script-fiatteurs te maken.
 
-1. Ga in de Configuration Manager-console naar **Administration** >**beveiligings** >**rollen** voor beheer beveiliging
+1. Ga in de Configuration Manager-console naar **Administration**  > **beveiligings**  > **rollen** voor beheer beveiliging
 2. Klik met de rechter muisknop op een rol en klik op **kopiëren**. Aan de rol die u hebt gekopieerd, zijn machtigingen al toegewezen. Zorg ervoor dat u alleen de gewenste machtigingen neemt. 
 3. Geef een **naam** en **Beschrijving**voor de aangepaste rol op. 
 4. Wijs aan de beveiligingsrol de machtigingen toe die hieronder worden beschreven.  
@@ -203,9 +203,9 @@ De sectie validatie van het dialoog venster **Eigenschappen van script parameter
 
 #### <a name="using-regular-expression-validation"></a>Reguliere expressie validatie gebruiken
 
-Een reguliere expressie is een compacte vorm van programmering voor het controleren van een reeks tekens op basis van een gecodeerde validatie. U kunt bijvoorbeeld controleren op het ontbreken van een hoofdletter alfabet in het veld voor *naam* door het in het `[^A-Z]` veld *regex* te plaatsen.
+Een reguliere expressie is een compacte vorm van programmering voor het controleren van een reeks tekens op basis van een gecodeerde validatie. U kunt bijvoorbeeld controleren op het ontbreken van een hoofdletter alfabet in het veld voor *naam* door het `[^A-Z]` in het veld *regex* te plaatsen.
 
-De normale expressie verwerking voor dit dialoog venster wordt ondersteund door de .NET Framework. Voor hulp bij het gebruik van reguliere expressies raadpleegt u de [reguliere .net-expressie](https://docs.microsoft.com/dotnet/standard/base-types/regular-expressions) en de taal van de [reguliere expressie](https://docs.microsoft.com/dotnet/standard/base-types/regular-expression-language-quick-reference).
+De normale expressie verwerking voor dit dialoog venster wordt ondersteund door de .NET Framework. Voor hulp bij het gebruik van reguliere expressies raadpleegt u de [reguliere .net-expressie](/dotnet/standard/base-types/regular-expressions) en de taal van de [reguliere expressie](/dotnet/standard/base-types/regular-expression-language-quick-reference).
 
 
 ## <a name="script-examples"></a>Voorbeeldscripts
@@ -236,7 +236,7 @@ Dit script maakt gebruik van WMI om de computer te doorzoeken op de versie van h
 Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
 ```
 
-## <a name="edit-or-copy-powershell-scripts"></a><a name="bkmk_psedit"></a>Power shell-scripts bewerken of kopiëren
+## <a name="edit-or-copy-powershell-scripts"></a><a name="bkmk_psedit"></a> Power shell-scripts bewerken of kopiëren
 <!--3705507-->
 *(Geïntroduceerd bij versie 1902)*  
 U kunt een bestaand Power shell-script **bewerken** of **kopiëren** dat wordt gebruikt met de functie **scripts uitvoeren** . In plaats van een script opnieuw te maken dat u moet wijzigen, kunt u dit nu rechtstreeks bewerken. Beide acties gebruiken dezelfde wizard-ervaring als wanneer u een nieuw script maakt. Wanneer u een script bewerkt of kopieert, wordt Configuration Manager de goedkeurings status niet behouden.
@@ -294,7 +294,7 @@ Nadat u het uitvoeren van een script op een verzameling apparaten hebt gestart, 
 
 ## <a name="script-output"></a>Script uitvoer
 
-De uitvoer van het retour script van de client met behulp van JSON-indeling door de resultaten van het script te sluizen naar de [ConvertTo-JSON-](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-json) cmdlet. De JSON-indeling retourneert consequent Lees bare script uitvoer. Voor scripts die geen objecten retour neren als uitvoer, converteert de ConvertTo-JSON-cmdlet de uitvoer naar een eenvoudige teken reeks die door de client wordt geretourneerd in plaats van JSON.  
+De uitvoer van het retour script van de client met behulp van JSON-indeling door de resultaten van het script te sluizen naar de [ConvertTo-JSON-](/powershell/module/microsoft.powershell.utility/convertto-json) cmdlet. De JSON-indeling retourneert consequent Lees bare script uitvoer. Voor scripts die geen objecten retour neren als uitvoer, converteert de ConvertTo-JSON-cmdlet de uitvoer naar een eenvoudige teken reeks die door de client wordt geretourneerd in plaats van JSON.  
 
 - Scripts die een onbekend resultaat krijgen of waarbij de client offline was, worden niet weer gegeven in de grafieken of gegevensset. <!--507179-->
 - Vermijd het retour neren van een grote script uitvoer omdat deze is afgekapt tot 4 KB. <!--508488-->
@@ -302,11 +302,11 @@ De uitvoer van het retour script van de client met behulp van JSON-indeling door
 
    ![Enum-object converteren naar een Sting-waarde](./media/run-scripts/enum-tostring-JSON.png)
 
-U kunt gedetailleerde script uitvoer weer geven in de RAW-of Structured JSON-indeling. Met deze opmaak wordt de uitvoer eenvoudiger te lezen en te analyseren. Als het script geldige tekst in JSON-indeling retourneert of de uitvoer kan worden geconverteerd naar JSON met behulp van de [ConvertTo-JSON](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-json) Power shell-cmdlet, bekijkt u de gedetailleerde uitvoer als **JSON-uitvoer** of **onbewerkte uitvoer**. Anders is de enige optie **script uitvoer**.
+U kunt gedetailleerde script uitvoer weer geven in de RAW-of Structured JSON-indeling. Met deze opmaak wordt de uitvoer eenvoudiger te lezen en te analyseren. Als het script geldige tekst in JSON-indeling retourneert of de uitvoer kan worden geconverteerd naar JSON met behulp van de [ConvertTo-JSON](/powershell/module/microsoft.powershell.utility/convertto-json) Power shell-cmdlet, bekijkt u de gedetailleerde uitvoer als **JSON-uitvoer** of **onbewerkte uitvoer**. Anders is de enige optie **script uitvoer**.
 
 ### <a name="example-script-output-is-convertible-to-valid-json"></a>Voor beeld: script uitvoer is converteerbaar naar een geldige JSON
 
-Cmd`$PSVersionTable.PSVersion`  
+Cmd `$PSVersionTable.PSVersion`  
 
 ``` Output
 Major  Minor  Build  Revision
@@ -316,7 +316,7 @@ Major  Minor  Build  Revision
 
 ### <a name="example-script-output-isnt-valid-json"></a>Voor beeld: script uitvoer is geen geldige JSON
 
-Cmd`Write-Output (Get-WmiObject -Class Win32_OperatingSystem).Caption`  
+Cmd `Write-Output (Get-WmiObject -Class Win32_OperatingSystem).Caption`  
 
 ``` Output
 Microsoft Windows 10 Enterprise

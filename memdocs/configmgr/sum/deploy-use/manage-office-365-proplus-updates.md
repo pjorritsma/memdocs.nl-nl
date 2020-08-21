@@ -1,5 +1,5 @@
 ---
-title: Updates van Microsoft 365-apps beheren
+title: Microsoft 365-app-updates beheren
 titleSuffix: Configuration Manager
 description: Configuration Manager synchroniseert Microsoft 365 apps-client updates van de WSUS-catalogus naar de site server om updates beschikbaar te maken voor de implementatie op clients.
 author: mestew
@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: d2a7f5ec31359cdd1a69bad3204d5119f8998e92
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 907c8d63d68ee4f34b9d22be24f32ffb1878b715
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129168"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696171"
 ---
 # <a name="manage-microsoft-365-apps-with-configuration-manager"></a>Microsoft 365-apps beheren met Configuration Manager
 
 *Van toepassing op: Configuration Manager (huidige vertakking)*
 
 > [!Note]
-> Vanaf 21 april 2020, wordt de naam van Office 365 ProPlus gewijzigd in **Microsoft 365 apps voor bedrijven**. Zie [name wijzigen voor Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change)voor meer informatie. Mogelijk ziet u nog steeds verwijzingen naar de oude naam in de Configuration Manager-console en de ondersteunende documentatie terwijl de-console wordt bijgewerkt.
+> Vanaf 21 april 2020, wordt de naam van Office 365 ProPlus gewijzigd in **Microsoft 365 apps voor bedrijven**. Zie [name wijzigen voor Office 365 ProPlus](/deployoffice/name-change)voor meer informatie. Mogelijk ziet u nog steeds verwijzingen naar de oude naam in de Configuration Manager-console en de ondersteunende documentatie terwijl de-console wordt bijgewerkt.
 
 Met Configuration Manager kunt u Microsoft 365 apps op de volgende manieren beheren:
 
@@ -39,8 +39,8 @@ Met Configuration Manager kunt u Microsoft 365 apps op de volgende manieren behe
 
 Gebruik het [Office 365-dash board voor client beheer](office-365-dashboard.md)om de client gegevens van Microsoft 365 apps te controleren en enkele van deze bewerkingen voor het beheren van de Microsoft 365-apps te starten.
 
-## <a name="deploy-microsoft-365-apps"></a><a name="bkmk_deploy"></a>Microsoft 365-Apps implementeren
-Start het installatie programma voor de Microsoft 365-apps vanuit het Office 365-client beheer dashboard voor de eerste installatie van de Microsoft 365-apps. Met de wizard kunt u de installatie-instellingen voor Microsoft 365 apps configureren, bestanden downloaden van de Office Content Delivery Networks (Cdn's) en een script toepassing maken en implementeren voor de bestanden. Microsoft 365 app-updates zijn niet van toepassing totdat Microsoft 365-apps zijn geïnstalleerd op clients en de [Microsoft 365 apps automatische updates](https://docs.microsoft.com/deployoffice/overview-update-process-microsoft-365-apps) worden uitgevoerd. Voor test doeleinden kunt u de update taak hand matig uitvoeren.
+## <a name="deploy-microsoft-365-apps"></a><a name="bkmk_deploy"></a> Microsoft 365-Apps implementeren
+Start het installatie programma voor de Microsoft 365-apps vanuit het Office 365-client beheer dashboard voor de eerste installatie van de Microsoft 365-apps. Met de wizard kunt u de installatie-instellingen voor Microsoft 365 apps configureren, bestanden downloaden van de Office Content Delivery Networks (Cdn's) en een script toepassing maken en implementeren voor de bestanden. Microsoft 365 app-updates zijn niet van toepassing totdat Microsoft 365-apps zijn geïnstalleerd op clients en de [Microsoft 365 apps automatische updates](/deployoffice/overview-update-process-microsoft-365-apps) worden uitgevoerd. Voor test doeleinden kunt u de update taak hand matig uitvoeren.
 
 Voor eerdere versies van Configuration Manager moet u de volgende stappen uitvoeren om Microsoft 365-apps voor de eerste keer te installeren op clients:
 - Office Deployment Tool (ODT) downloaden
@@ -76,7 +76,7 @@ Vanaf Configuration Manager 1806 is het hulp programma voor het aanpassen van Of
 
     Wanneer u een bestaand configuratie bestand hebt, voert u de locatie voor het bestand in en gaat u verder met stap 7. U moet de locatie opgeven in de vorm &#92;&#92;*server*&#92;*share*&#92;*Bestands naam*. Indeling.
     > [!IMPORTANT]    
-    > Het XML-configuratie bestand mag alleen [talen bevatten die worden ondersteund door Office 2016](https://docs.microsoft.com/deployoffice/office2016/language-identifiers-and-optionstate-id-values-in-office-2016).
+    > Het XML-configuratie bestand mag alleen [talen bevatten die worden ondersteund door Office 2016](/deployoffice/office2016/language-identifiers-and-optionstate-id-values-in-office-2016).
 
 5. Selecteer op de pagina **client producten** de Microsoft 365 Apps-suite die u gebruikt. Selecteer de toepassingen die u wilt toevoegen. Selecteer eventuele extra producten die moeten worden opgenomen en klik vervolgens op **volgende**.
 6. Kies op de pagina **client instellingen** de instellingen die u wilt toevoegen en klik vervolgens op **volgende**.
@@ -98,12 +98,12 @@ U kunt inzoomen op nalevings statistieken om te zien welke apparaten een specifi
 
 1. Ga naar **Software Library**  >  **Office 365 client management**  >  **Office 365 updates**.
 1. Selecteer een update die vereist is voor ten minste één apparaat.
-1. Ga naar het tabblad **samen vatting** en zoek het cirkel diagram onder **Statistieken**.
+1. Ga naar het tabblad **samen vatting** en zoek het cirkel diagram onder  **Statistieken**.
 1. Selecteer de **weer gave vereiste** Hyper link naast het cirkel diagram om in te zoomen op de apparaten lijst.
 1. Met deze actie gaat u naar een tijdelijk knoop punt onder **apparaten** waar u de apparaten kunt zien waarvoor de update is vereist. U kunt ook acties uitvoeren voor het knoop punt, zoals het maken van een nieuwe verzameling in de lijst.
 
 
-## <a name="deploy-microsoft-365-apps-updates"></a><a name="bkmk_update"></a>Updates van Microsoft 365-Apps implementeren
+## <a name="deploy-microsoft-365-apps-updates"></a><a name="bkmk_update"></a> Updates van Microsoft 365-Apps implementeren
 
 Gebruik de volgende stappen om updates van Microsoft 365-apps te implementeren met Configuration Manager:
 
@@ -120,13 +120,13 @@ Gebruik de volgende stappen om updates van Microsoft 365-apps te implementeren m
 
       3. Klik op **software-updates** en selecteer **Ja** voor de instelling **beheer van de Office 365-client agent inschakelen** .  
 
-    **Methode 2**: [Schakel Microsoft 365 apps in om updates van Configuration Manager te ontvangen](/DeployOffice/manage-updates-to-office-365-proplus-with-system-center-configuration-manager#BKMK_EnableClient) met behulp van de Office Deployment Tool of Groepsbeleid.  
+    **Methode 2**:  [Schakel Microsoft 365 apps in om updates van Configuration Manager te ontvangen](/DeployOffice/manage-updates-to-office-365-proplus-with-system-center-configuration-manager#BKMK_EnableClient) met behulp van de Office Deployment Tool of Groepsbeleid.  
 
 4. [Implementeer de updates van de Microsoft 365-apps](deploy-software-updates.md) op-clients.
 
 > [!NOTE]  
 >
-> Als Microsoft 365-apps onlangs zijn geïnstalleerd en afhankelijk van hoe de app is geïnstalleerd, is het mogelijk dat het update kanaal nog niet is ingesteld. In dat geval worden geïmplementeerde updates gedetecteerd als niet van toepassing. Er is een [geplande automatische updates taak](https://docs.microsoft.com/deployoffice/overview-of-the-update-process-for-office-365-proplus) gemaakt wanneer Microsoft 365-apps worden geïnstalleerd. In deze situatie moet deze taak ten minste één keer worden uitgevoerd om het update kanaal in te stellen en gedetecteerde updates.
+> Als Microsoft 365-apps onlangs zijn geïnstalleerd en afhankelijk van hoe de app is geïnstalleerd, is het mogelijk dat het update kanaal nog niet is ingesteld. In dat geval worden geïmplementeerde updates gedetecteerd als niet van toepassing. Er is een [geplande automatische updates taak](/deployoffice/overview-of-the-update-process-for-office-365-proplus) gemaakt wanneer Microsoft 365-apps worden geïnstalleerd. In deze situatie moet deze taak ten minste één keer worden uitgevoerd om het update kanaal in te stellen en gedetecteerde updates.
 >
 > Als Microsoft 365 apps recent is geïnstalleerd en geïmplementeerde updates niet zijn gedetecteerd, kunt u voor test doeleinden de taak Office Automatische updates hand matig starten en vervolgens de [evaluatie cyclus](../understand/software-updates-introduction.md#scan-for-software-updates-compliance-process) voor de implementatie van software-updates op de client starten. Zie [Microsoft 365-apps bijwerken in een taken reeks](manage-office-365-proplus-updates.md#bkmk_ts)voor instructies over het uitvoeren van dit in een taken reeks.
 
@@ -151,10 +151,10 @@ Wanneer u een update implementeert op een Microsoft 365 apps-client, zijn het ge
 >- Als de gebruiker een update van de Microsoft 365-apps vóór de deadline installeert, Configuration Manager verifieert of de update wordt geïnstalleerd wanneer de deadline wordt bereikt. Als de update niet op het apparaat wordt gedetecteerd, wordt de update geïnstalleerd. 
 >- De in-app-meldings balk wordt niet weer gegeven in een app die wordt uitgevoerd voordat de update wordt gedownload. Nadat de update is gedownload, wordt de in-app-melding alleen weer gegeven voor onlangs geopende apps.
 >- Voor updates van Microsoft 365-apps die zijn geactiveerd door een service venster of die zijn gepland voor niet-werk uren, is het mogelijk dat het uitvoeren van Office-apps wordt afgesloten om de update te installeren zonder meldingen. 
->- Zie voor meer informatie [meldingen voor eind gebruikers updates voor Microsoft 365-apps](https://docs.microsoft.com/deployoffice/end-user-update-notifications-microsoft-365-apps)
+>- Zie voor meer informatie [meldingen voor eind gebruikers updates voor Microsoft 365-apps](/deployoffice/end-user-update-notifications-microsoft-365-apps)
 
 
-## <a name="add-languages-for-microsoft-365-apps-update-downloads"></a><a name="bkmk_o365_lang"></a>Talen toevoegen voor het downloaden van updates voor Microsoft 365-apps
+## <a name="add-languages-for-microsoft-365-apps-update-downloads"></a><a name="bkmk_o365_lang"></a> Talen toevoegen voor het downloaden van updates voor Microsoft 365-apps
 U kunt ondersteuning voor Configuration Manager toevoegen om updates te downloaden voor alle talen die door Microsoft 365 apps worden ondersteund.
 
 ### <a name="download-updates-for-additional-languages-in-version-1902"></a>Updates downloaden voor extra talen in versie 1902
@@ -197,7 +197,7 @@ Gebruik de volgende procedure op het software-update punt op de centrale beheer 
 11. Wanneer u nu updates van Microsoft 365 apps downloadt, worden de updates gedownload in de talen die u in de wizard hebt geselecteerd en geconfigureerd in deze procedure. Als u wilt controleren of de updates in de juiste talen worden gedownload, gaat u naar de pakket bron voor de update en zoekt u naar bestanden met de taal code in de bestands naam.  
     ![Bestands namen met extra talen](../media/5-verification.png)
 
-## <a name="updating-microsoft-365-apps-in-a-task-sequence"></a><a name="bkmk_ts"></a>Microsoft 365 apps in een taken reeks bijwerken
+## <a name="updating-microsoft-365-apps-in-a-task-sequence"></a><a name="bkmk_ts"></a> Microsoft 365 apps in een taken reeks bijwerken
 Wanneer u de taken reeks stap [software-updates installeren](../../osd/understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates) gebruikt om updates van Microsoft 365 apps te installeren, worden geïmplementeerde updates gedetecteerd als niet van toepassing.  Dit kan gebeuren als de geplande Office Automatische updates-taak niet ten minste eenmaal is uitgevoerd (Zie de opmerking in [Deploy Microsoft 365 apps updates](manage-office-365-proplus-updates.md#bkmk_update)). Dit kan bijvoorbeeld gebeuren als Microsoft 365-Apps onmiddellijk zijn geïnstalleerd voordat u deze stap uitvoert.
 
 Gebruik een van de volgende methoden om ervoor te zorgen dat het update kanaal zodanig is ingesteld dat geïmplementeerde updates correct worden gedetecteerd:
@@ -220,7 +220,7 @@ Gebruik een van de volgende methoden om ervoor te zorgen dat het update kanaal z
     Voorbeeld: `schtasks /run /tn "\Microsoft\Office\Office Automatic Updates 2.0"`
 5. Klik op **OK**. 
 
-## <a name="update-channels-for-microsoft-365-apps"></a><a name="bkmk_channel"></a>Kanalen voor Microsoft 365-apps bijwerken
+## <a name="update-channels-for-microsoft-365-apps"></a><a name="bkmk_channel"></a> Kanalen voor Microsoft 365-apps bijwerken
 <!--6298093-->
 Wanneer Office 365 ProPlus is gewijzigd in **Microsoft 365 apps voor bedrijven**, zijn de update kanalen ook hernoemd. Als u een regel voor automatische implementatie (ADR) gebruikt om updates te implementeren, moet u wijzigingen aanbrengen in uw Adr's als ze afhankelijk zijn van de eigenschap **title** . Dat komt doordat de naam van de update pakketten in de Microsoft Update catalogus wordt gewijzigd.
 
@@ -238,17 +238,17 @@ Voor update pakketten die zijn uitgebracht op en na 9 juni, begint de titel met 
 |--|--|
 |Semi-Annual-kanaal voor ondernemingen|Semi-Annual-kanaal|
 |Semi-Annual Enter prise-kanaal (preview-versie)|Semi-Annual-kanaal (Targeted)|
-|Maandelijks bedrijfs kanaal|NA|
+|Maandelijks bedrijfs kanaal|N.v.t.|
 |Huidig kanaal|Monthly-kanaal|
 |Huidig kanaal (preview-versie)|Monthly-kanaal (targeted)|
 |Bèta-kanaal|Handel|
 
-Zie [software-updates automatisch implementeren](automatically-deploy-software-updates.md)voor meer informatie over het wijzigen van uw adr's. Zie voor meer informatie over de naamswijziging naam [wijzigen voor Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change).
+Zie [software-updates automatisch implementeren](automatically-deploy-software-updates.md)voor meer informatie over het wijzigen van uw adr's. Zie voor meer informatie over de naamswijziging naam [wijzigen voor Office 365 ProPlus](/deployoffice/name-change).
 
 
 ## <a name="change-the-update-channel-after-you-enable-microsoft-365-apps-clients-to-receive-updates-from-configuration-manager"></a>Wijzig het update kanaal nadat u hebt ingeschakeld Microsoft 365 apps-clients updates van Configuration Manager ontvangen
 
-Na de implementatie van Microsoft 365-apps, kunt u het update kanaal wijzigen met groepsbeleid of de Office Deployment Tool (ODT). U kunt bijvoorbeeld een apparaat verplaatsen van een semi-Annual-kanaal naar een semi-Annual-kanaal (targeted). Wanneer u het kanaal wijzigt, wordt Office automatisch bijgewerkt zonder dat de volledige versie opnieuw moet worden geïnstalleerd of gedownload. Zie voor meer informatie [het Microsoft 365-apps-update kanaal wijzigen voor apparaten in uw organisatie](https://docs.microsoft.com//deployoffice/change-update-channels).
+Na de implementatie van Microsoft 365-apps, kunt u het update kanaal wijzigen met groepsbeleid of de Office Deployment Tool (ODT). U kunt bijvoorbeeld een apparaat verplaatsen van een semi-Annual-kanaal naar een semi-Annual-kanaal (targeted). Wanneer u het kanaal wijzigt, wordt Office automatisch bijgewerkt zonder dat de volledige versie opnieuw moet worden geïnstalleerd of gedownload. Zie voor meer informatie [het Microsoft 365-apps-update kanaal wijzigen voor apparaten in uw organisatie](//deployoffice/change-update-channels).
 
 
 ## <a name="next-steps"></a>Volgende stappen

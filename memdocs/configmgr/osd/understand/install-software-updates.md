@@ -10,12 +10,12 @@ ms.assetid: 72d1ccd5-3763-4f88-9273-e1a73e8f4286
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2c5fdc15ba05786c25361c394bc0aa8dc305d666
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 73acd43ef9d7924682de9df66487c5a04297e640
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124250"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697497"
 ---
 # <a name="install-software-updates"></a>Software-updates installeren
 
@@ -47,7 +47,7 @@ Veel afbeeldings bestanden bevatten meerdere indexen, zoals voor verschillende v
 
 Vanaf versie 1902 kunt u dit proces automatiseren wanneer u een installatie kopie van een besturings systeem toevoegt aan de site. Zie [een installatie kopie van een besturings systeem toevoegen](../get-started/manage-operating-system-images.md#BKMK_AddOSImages)voor meer informatie.<!--3719699-->
 
-### <a name="reduce-image-size"></a><a name="bkmk_resetbase"></a>Afbeeldings grootte reduceren
+### <a name="reduce-image-size"></a><a name="bkmk_resetbase"></a> Afbeeldings grootte reduceren
 
 Wanneer u software-updates op de installatie kopie toepast, optimaliseert u de uitvoer door vervangen updates te verwijderen. Gebruik het opdracht regel programma DISM, bijvoorbeeld:
 
@@ -68,7 +68,7 @@ Wanneer u uw imaging-proces ontwerpt, zijn er verschillende opties die van invlo
 - [Offline onderhoud gebruiken](#bkmk_offline)  
 - [Alleen de standaard installatie kopie gebruiken](#bkmk_installwim)
 
-### <a name="periodically-recapture-the-image"></a><a name="bkmk_goldimage"></a>De installatie kopie periodiek opnieuw vastleggen
+### <a name="periodically-recapture-the-image"></a><a name="bkmk_goldimage"></a> De installatie kopie periodiek opnieuw vastleggen
 
 U hebt een geautomatiseerd proces om een aangepaste installatie kopie van het besturings systeem vast te leggen volgens een regel matig schema. Met deze taken reeks voor vastleggen worden de nieuwste software-updates geïnstalleerd. Deze updates kunnen cumulatieve, niet-cumulatieve en andere essentiële updates omvatten, zoals het onderhouds stack-updates (SSU). Met de taken reeks implementatie worden na het vastleggen extra updates geïnstalleerd.
 
@@ -88,7 +88,7 @@ Zie [een taken reeks maken voor het vastleggen van een besturings systeem](../de
 - De tijd die nodig is om te testen via pre-productie omgevingen is langer dan de besturingssysteem patch cyclus, waardoor de bijgewerkte installatie kopie irrelevant kan worden
 
 
-### <a name="use-offline-servicing"></a><a name="bkmk_offline"></a>Offline onderhoud gebruiken
+### <a name="use-offline-servicing"></a><a name="bkmk_offline"></a> Offline onderhoud gebruiken
 
 Plan Configuration Manager om software-updates toe te passen op uw installatie kopieën.
 
@@ -107,7 +107,7 @@ Zie [software-updates Toep assen op een installatie kopie](../get-started/manage
 - Ondersteunt alleen op CBS gebaseerde updates. Er kunnen geen updates van Microsoft 365 apps worden toegepast
 
 > [!Tip]  
-> U kunt de selectie van software-updates automatiseren met behulp van Power shell. Gebruik de cmdlet [Get-CMSoftwareUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmsoftwareupdate?view=sccm-ps) om een lijst met updates op te halen. Gebruik vervolgens de cmdlet [New-CMOperatingSystemImageUpdateSchedule](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmoperatingsystemimageupdateschedule?view=sccm-ps) om het offline-onderhouds schema te maken. In het volgende voor beeld ziet u een methode om deze actie te automatiseren:
+> U kunt de selectie van software-updates automatiseren met behulp van Power shell. Gebruik de cmdlet [Get-CMSoftwareUpdate](/powershell/module/configurationmanager/get-cmsoftwareupdate?view=sccm-ps) om een lijst met updates op te halen. Gebruik vervolgens de cmdlet [New-CMOperatingSystemImageUpdateSchedule](/powershell/module/configurationmanager/new-cmoperatingsystemimageupdateschedule?view=sccm-ps) om het offline-onderhouds schema te maken. In het volgende voor beeld ziet u een methode om deze actie te automatiseren:
 >
 > ```PowerShell
 > # Get the OS image
@@ -123,7 +123,7 @@ Zie [software-updates Toep assen op een installatie kopie](../get-started/manage
 > ```
 
 
-### <a name="use-default-image-only"></a><a name="bkmk_installwim"></a>Alleen de standaard installatie kopie gebruiken
+### <a name="use-default-image-only"></a><a name="bkmk_installwim"></a> Alleen de standaard installatie kopie gebruiken
 
 Gebruik het standaard installatie kopie bestand voor Windows Install. Wim in de taken reeksen van uw implementatie.
 

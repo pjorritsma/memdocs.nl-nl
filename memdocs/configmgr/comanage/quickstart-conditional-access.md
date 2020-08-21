@@ -10,12 +10,12 @@ ms.assetid: 4cf640b3-610c-4c3c-b966-c62e9f5654ff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f2ada7bfcef5714d8df3c476a6bbba695dc398e0
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: f5b9addd35dd3e9252c1b988de4bb006e9a5bc0d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127270"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694964"
 ---
 # <a name="conditional-access-with-co-management"></a>Voorwaardelijke toegang met co-beheer
 
@@ -108,12 +108,11 @@ Voorwaardelijke toegang is gemakkelijk te gebruiken wanneer u [co-beheer inschak
 
 Raadpleeg de volgende artikelen voor meer informatie over het gebruik van voorwaardelijke toegang: 
 
-- [Voorwaardelijke toegang in Azure AD](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)  
+- [Voorwaardelijke toegang in Azure AD](/azure/active-directory/conditional-access/overview)  
 
-- [InTune-nalevings beleid voor apparaten](https://docs.microsoft.com/intune/device-compliance)  
+- [InTune-nalevings beleid voor apparaten](/intune/device-compliance)  
 
-- [Op apps gebaseerde voorwaardelijke toegang met Intune](https://docs.microsoft.com/intune/app-based-conditional-access-intune)  
+- [Op apps gebaseerde voorwaardelijke toegang met Intune](/intune/app-based-conditional-access-intune)  
 
 > [!Note]  
-> Functies voor voorwaardelijke toegang worden onmiddellijk beschikbaar gesteld voor hybride apparaten die lid zijn van Azure AD. Deze functies omvatten multi-factor Authentication en hybride toegangs beheer voor Azure AD. Dit gedrag is omdat ze zijn gebaseerd op Azure AD-eigenschappen. Schakel het co-beheer in om de evaluatie op basis van een configuratie van intune en Configuration Manager te benutten. Met deze configuratie hebt u rechtstreeks toegang tot het beheer van intune voor compatibele apparaten. Het biedt ook de evaluatie functie van het nalevings beleid van intune.  
-
+> Functies voor voorwaardelijke toegang worden onmiddellijk beschikbaar gesteld voor hybride apparaten die lid zijn van Azure AD. Deze functies omvatten multi-factor Authentication en hybride toegangs beheer voor Azure AD. Dit gedrag is omdat ze zijn gebaseerd op Azure AD-eigenschappen. Schakel het co-beheer in om de evaluatie op basis van een configuratie van intune en Configuration Manager te benutten. Met deze configuratie hebt u rechtstreeks toegang tot het beheer van intune voor compatibele apparaten. Het biedt ook de evaluatie functie van het nalevings beleid van intune.

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 4708c0d8e9a7d2a3b87310b64311d67d8b84a16a
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 44fcea129b6f45c292bcdd6b83004131ce2d4e96
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126787"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694420"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1806 voor Configuration Manager
 
@@ -39,7 +39,7 @@ Steps to workaround, if any.
 -->
 ## <a name="known-issues-in-this-technical-preview"></a>Bekende problemen in deze Technical Preview
 
-### <a name="site-fails-to-upgrade-with-remote-content-library"></a><a name="ki_contentlib"></a>Site kan niet worden bijgewerkt met externe inhouds bibliotheek
+### <a name="site-fails-to-upgrade-with-remote-content-library"></a><a name="ki_contentlib"></a> Site kan niet worden bijgewerkt met externe inhouds bibliotheek
 <!--514642-->
 De site kan niet worden bijgewerkt met de volgende fouten in **cmupdate. log**:  
 
@@ -62,13 +62,13 @@ Verplaats de inhouds bibliotheek naar een lokaal station op de site server. Zie 
 
 
 
-## <a name="third-party-software-updates"></a><a name="bkmk-3pupdate"></a>Software-updates van derden
+## <a name="third-party-software-updates"></a><a name="bkmk-3pupdate"></a> Software-updates van derden
 <!--1352101-->
 In deze release wordt de ondersteuning voor software-updates van derden verder herhaald als gevolg van uw [UserVoice-feedback](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8803711-3rd-party-patching-scup-integration-with-sccm-co). U hebt het gebruik van System Center Updates Publisher (SCUP gemaakt) niet meer nodig voor een aantal algemene scenario's. Met het nieuwe knoop punt **Software-update catalogussen** van derden in de Configuration Manager-console kunt u zich abonneren op catalogi van derden, hun updates publiceren op uw software-update punt en deze vervolgens implementeren op clients. 
 
 De volgende software-update catalogussen van derden zijn beschikbaar in deze release:
 
- | Uitgever | Catalogus naam |
+ | Publisher | Catalogus naam |
  |--------|---------------------|
  | HP | Catalogus met HP client-updates |
 
@@ -81,10 +81,10 @@ SCUP gemaakt blijft ondersteuning bieden voor andere catalogussen en scenario's.
 
     > [!Tip]  
     > Het software-update punt vereist HTTPS omdat het een vereiste is voor de WSUS-Api's die worden gebruikt voor het afhandelen van handtekening certificaten. Clients hoeven ook geen HTTPS-functionaliteit te hebben. Raadpleeg de volgende artikelen voor hulp voor meer informatie over het inschakelen van HTTPS op WSUS:  
-    > - [Beveiligde WSUS met het Secure Sockets Layer-protocol](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) 
-    > - [Blog bericht over WSUS-ondersteuning](https://docs.microsoft.com/archive/blogs/sus/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names)
+    > - [Beveiligde WSUS met het Secure Sockets Layer-protocol](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) 
+    > - [Blog bericht over WSUS-ondersteuning](/archive/blogs/sus/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names)
 
-- Er voldoende schijf ruimte op het software-update punt, WSUSContent-map, om de binaire bron inhoud op te slaan voor software-updates van derden. De hoeveelheid vereiste opslag is afhankelijk van de leverancier, typen updates en specifieke updates die u voor implementatie publiceert. Als u de map WSUSContent naar een ander station met meer vrije ruimte wilt verplaatsen, raadpleegt u het blog bericht van het WSUS-ondersteunings team [hoe u de locatie wijzigt waar WSUS lokaal updates opslaat](https://docs.microsoft.com/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally).  
+- Er voldoende schijf ruimte op het software-update punt, WSUSContent-map, om de binaire bron inhoud op te slaan voor software-updates van derden. De hoeveelheid vereiste opslag is afhankelijk van de leverancier, typen updates en specifieke updates die u voor implementatie publiceert. Als u de map WSUSContent naar een ander station met meer vrije ruimte wilt verplaatsen, raadpleegt u het blog bericht van het WSUS-ondersteunings team [hoe u de locatie wijzigt waar WSUS lokaal updates opslaat](/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally).  
 
 - Inschakelen en implementeren van de client instelling [software-updates](../clients/deploy/about-client-settings.md#enable-third-party-software-updates) van derden inschakelen in de groep met software- **updates** .  
 
@@ -354,4 +354,4 @@ In [Configuration Manager versie 1710](../plan-design/changes/whats-new-in-versi
 
 
 ## <a name="next-steps"></a>Volgende stappen
-Zie [Technical Preview voor Configuration Manager voor](technical-preview.md)meer informatie over het installeren of bijwerken van de technische preview-vertakking.    
+Zie [Technical Preview voor Configuration Manager voor](technical-preview.md)meer informatie over het installeren of bijwerken van de technische preview-vertakking.

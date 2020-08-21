@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: acaa7c8a906edd78f0c54c5735c97c55434d848b
-ms.sourcegitcommit: 7ee69b207261ffc282e535f793a536540d160557
+ms.openlocfilehash: 0e9f1551f75c1cb8499c5eab846588ee6ddc1d80
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87400712"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693383"
 ---
 # <a name="about-deployment-plans-in-desktop-analytics"></a>Implementatie plannen in Desktop Analytics
 
@@ -70,7 +70,7 @@ Zie de **Windows-upgrade beslissing** voor elk apparaat in het implementatie pla
 
 Het Windows-upgrade besluit om het **apparaat te vervangen** , kan een van de volgende oorzaken hebben:
 
-- Er is een Windows 10-vereiste processor controle mislukt. Zie [minimale hardwarevereisten](https://docs.microsoft.com/windows-hardware/design/minimum/minimum-hardware-requirements-overview#31-processor)voor meer informatie.
+- Er is een Windows 10-vereiste processor controle mislukt. Zie [minimale hardwarevereisten](/windows-hardware/design/minimum/minimum-hardware-requirements-overview#31-processor)voor meer informatie.
 - Er is een BIOS-blok
 - Er is onvoldoende geheugen beschikbaar
 - Een essentieel onderdeel van het opstarten van het systeem heeft een geblokkeerd stuur programma
@@ -132,4 +132,4 @@ Nadat u een implementatie plan hebt gemaakt, gebruikt u Configuration Manager om
 
 - [Meer informatie over beveiliging en functie-updates](about-updates.md)  
 
-- [Een implementatie plan maken](create-deployment-plans.md)  
+- [Een implementatie plan maken](create-deployment-plans.md)

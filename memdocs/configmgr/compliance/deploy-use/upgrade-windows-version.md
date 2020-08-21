@@ -10,12 +10,12 @@ ms.assetid: b0c9db74-841e-46eb-8924-957cde968bf7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7a82a635eafcc0ecb5251457db9d4fbb301fce33
-ms.sourcegitcommit: 1edcfb3ce4350ba1a6f36a6150e86301d35c631b
+ms.openlocfilehash: 920f3c9aabcdec1242a6f5e5fc8e6b65c5cc0b53
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86390837"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694607"
 ---
 # <a name="upgrade-windows-devices-to-a-new-edition-with-configuration-manager"></a>Windows-apparaten upgraden naar een nieuwe versie met Configuration Manager
 
@@ -35,7 +35,7 @@ Op de apparaten moet de Configuration Manager-client software worden uitgevoerd.
 
 Voordat u begint met het upgraden van apparaten naar de nieuwste versie, controleert u de volgende vereisten:  
 
-- Voor desktop-edities van Windows 10: een geldige product code voor de nieuwe versie van Windows op alle apparaten waarop het beleid is gericht. Deze product code kan een meervoudige activerings code (MAK) of een algemene volume licentie code (GVLK) zijn. Een GVLK wordt ook wel een configuratie sleutel voor de KMS-client (Key Management service) genoemd. Zie [volume activering plannen](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client)voor meer informatie. Zie [bijlage a](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) van de Windows Server-activerings handleiding voor een lijst met installatie sleutels voor KMS-clients. <!--496871-->  
+- Voor desktop-edities van Windows 10: een geldige product code voor de nieuwe versie van Windows op alle apparaten waarop het beleid is gericht. Deze product code kan een meervoudige activerings code (MAK) of een algemene volume licentie code (GVLK) zijn. Een GVLK wordt ook wel een configuratie sleutel voor de KMS-client (Key Management service) genoemd. Zie [volume activering plannen](/windows/deployment/volume-activation/plan-for-volume-activation-client)voor meer informatie. Zie [bijlage a](/windows-server/get-started/kmsclientkeys) van de Windows Server-activerings handleiding voor een lijst met installatie sleutels voor KMS-clients. <!--496871-->  
 
 - Voor Windows 10 Mobile: een XML-licentie bestand van de Microsoft Volume Licensing Service Center (VLSC). Dit bestand bevat de licentie gegevens voor de nieuwe versie van Windows op alle apparaten waarop het beleid is gericht. Down load het ISO-bestand voor **Windows 10 Mobile Enter prise**, dat de licentie-XML bevat.<!-- SCCMDocs#2033 -->
 
@@ -43,7 +43,7 @@ Voordat u begint met het upgraden van apparaten naar de nieuwste versie, control
 
 ## <a name="configure-the-policy"></a>Het beleid configureren  
 
-1. Ga in de Configuration Manager-console naar de werk ruimte **activa en naleving** , vouw **instellingen voor naleving**uit en selecteer het knoop punt upgrade van **Windows 10-editie** .  
+1. Ga in de Configuration Manager-console naar de werk ruimte **activa en naleving** , vouw **instellingen voor naleving**uit en selecteer het knoop punt upgrade van  **Windows 10-editie** .  
 
 2. Selecteer **editie-upgrade beleid maken**op het tabblad **Start** van het lint in de groep **maken** .  
 
@@ -70,7 +70,7 @@ Voordat u begint met het upgraden van apparaten naar de nieuwste versie, control
 
 ## <a name="deploy-the-policy"></a>Het beleid implementeren  
 
-1. Ga in de Configuration Manager-console naar de werk ruimte **activa en naleving** , vouw **instellingen voor naleving**uit en selecteer het knoop punt upgrade van **Windows 10-editie** .  
+1. Ga in de Configuration Manager-console naar de werk ruimte **activa en naleving** , vouw **instellingen voor naleving**uit en selecteer het knoop punt upgrade van  **Windows 10-editie** .  
 
 2. Selecteer het beleid voor editie-upgrades voor Windows 10 dat u wilt implementeren. Klik op het tabblad **Start** van het lint in de groep **implementatie** op **implementeren**.  
 
@@ -89,16 +89,16 @@ Bewaak deze implementatie vanuit het knoop punt **implementaties** van de werk r
 
 Deze fouten betekenen niet dat de implementatie is mislukt. Controleer op het doel apparaat dat de upgrade is uitgevoerd.
 
-Zodra de client het doel beleid evalueert, wordt de upgrade binnen twee uur toegepast. Voor [sommige versies van Windows](https://docs.microsoft.com/windows/deployment/upgrade/windows-10-edition-upgrades) moet op dat moment opnieuw worden opgestart. Zorg ervoor dat u alle gebruikers op de hoogte stelt waarvoor u het beleid implementeert of plan het beleid om buiten de werk uren van de gebruiker te worden uitgevoerd.
+Zodra de client het doel beleid evalueert, wordt de upgrade binnen twee uur toegepast. Voor [sommige versies van Windows](/windows/deployment/upgrade/windows-10-edition-upgrades) moet op dat moment opnieuw worden opgestart. Zorg ervoor dat u alle gebruikers op de hoogte stelt waarvoor u het beleid implementeert of plan het beleid om buiten de werk uren van de gebruiker te worden uitgevoerd.
 
-Als de volgende fout wordt weer gegeven in **DcmWmiProvider. log** op de client, controleert u of u de juiste sleutel gebruikt voor het activerings scenario. Zie de sectie [voordat u begint](#before-you-start) voor meer informatie. Als u een Key Management service (KMS) gebruikt voor activering, moet u ervoor zorgen dat u een [configuratie sleutel voor KMS-clients](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys)gebruikt.  <!-- 496871 -->
+Als de volgende fout wordt weer gegeven in **DcmWmiProvider. log** op de client, controleert u of u de juiste sleutel gebruikt voor het activerings scenario. Zie de sectie [voordat u begint](#before-you-start) voor meer informatie. Als u een Key Management service (KMS) gebruikt voor activering, moet u ervoor zorgen dat u een [configuratie sleutel voor KMS-clients](/windows-server/get-started/kmsclientkeys)gebruikt.  <!-- 496871 -->
 
 `Failed to execute CheckApplicabilityMethod with error = 0x80041001 OsEditionUpgradeProvider`
 
 ## <a name="see-also"></a>Zie ook
 
-- [Volume activering plannen](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client)
+- [Volume activering plannen](/windows/deployment/volume-activation/plan-for-volume-activation-client)
 
-- [Upgrade Windows 10-editie](https://docs.microsoft.com/windows/deployment/upgrade/windows-10-edition-upgrades)
+- [Upgrade Windows 10-editie](/windows/deployment/upgrade/windows-10-edition-upgrades)
 
-- [Upgrade Windows 10-edities of schakel op apparaten de S-modus uit met behulp van Microsoft Intune](https://docs.microsoft.com/intune/edition-upgrade-configure-windows-10)
+- [Upgrade Windows 10-edities of schakel op apparaten de S-modus uit met behulp van Microsoft Intune](/intune/edition-upgrade-configure-windows-10)

@@ -10,12 +10,12 @@ ms.assetid: 2aca914f-641e-4bc8-98d4-bbf0a2a5276f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7e4e84b55c929dd878cb0720b3f61dfceedcf449
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 8585f04e6cedf9cb5158dbebc41b00565eabd989
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904100"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692720"
 ---
 # <a name="prepare-windows-servers-to-support-configuration-manager"></a>Windows-servers voorbereiden voor de ondersteuning van Configuration Manager
 
@@ -29,7 +29,7 @@ Voordat u een Windows-computer als een site systeem server voor Configuration Ma
 
 De informatie in dit artikel bevat een overzicht van de typen Windows-configuraties die nodig zijn voor de ondersteuning van Configuration Manager-site systemen. Zie [site-en site systeem vereisten](../configs/site-and-site-system-prerequisites.md)voor meer informatie over de configuratie van specifieke site systeem rollen.
 
-##  <a name="windows-features-and-roles"></a><a name="BKMK_WinFeatures"></a>Windows-onderdelen en-rollen  
+##  <a name="windows-features-and-roles"></a><a name="BKMK_WinFeatures"></a> Windows-onderdelen en-rollen  
 Wanneer u Windows-onderdelen en-functies op een computer instelt, moet u mogelijk de computer opnieuw opstarten om deze configuratie te volt ooien. Daarom is het een goed idee om computers te identificeren die specifieke site systeem rollen zullen hosten voordat u een Configuration Manager site of site systeem server installeert.
 
 ### <a name="features"></a>Functies  
@@ -95,10 +95,10 @@ De volgende Windows-rollen zijn vereist ter ondersteuning van specifieke functio
 - **Windows Server Update Services**: deze rol is vereist voor software-updates.  
 
 
-##  <a name="iis-request-filtering-for-distribution-points"></a><a name="BKMK_IISFiltering"></a>IIS-aanvraag filtering voor distributie punten  
+##  <a name="iis-request-filtering-for-distribution-points"></a><a name="BKMK_IISFiltering"></a> IIS-aanvraag filtering voor distributie punten  
 IIS gebruikt standaard aanvraagfiltering om de toegang tot verschillende bestandsnaamextensies en maplocaties voor HTTP- of HTTPS-communicatie te blokkeren. Op een distributie punt wordt hiermee voor komen dat clients pakketten downloaden die geblokkeerde extensies of maplocaties hebben.  
 
-Wanneer de bron bestanden van uw pakket extensies hebben die in IIS worden geblokkeerd door de configuratie van de aanvraag filtering, moet u aanvraag filtering instellen om ze toe te staan. Dit doet u door [de functie voor het filteren van aanvragen te bewerken](https://docs.microsoft.com/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)) in IIS-beheer op de distributiepunt computers.  
+Wanneer de bron bestanden van uw pakket extensies hebben die in IIS worden geblokkeerd door de configuratie van de aanvraag filtering, moet u aanvraag filtering instellen om ze toe te staan. Dit doet u door [de functie voor het filteren van aanvragen te bewerken](/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)) in IIS-beheer op de distributiepunt computers.  
 
 Daarnaast worden de volgende bestandsnaam extensies gebruikt door Configuration Manager voor pakketten en toepassingen. Zorg ervoor dat de configuraties voor het filteren van aanvragen deze bestands extensies niet blok keren:  
 
@@ -136,4 +136,4 @@ Bron bestanden voor een software-implementatie kunnen bijvoorbeeld een map met d
 - HEAD
 - PROPFIND
 
-Zie [aanvraag filtering configureren in IIS](https://docs.microsoft.com/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)#http-verbs)voor meer informatie. 
+Zie [aanvraag filtering configureren in IIS](/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)#http-verbs)voor meer informatie.

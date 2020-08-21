@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 79258786b56cc3e7fe4971391903772700768a89
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 8c3624f9fc903395b36846170ff3552f32db59dd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126753"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692941"
 ---
 # <a name="capabilities-in-technical-preview-1706-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1706 voor Configuration Manager
 
@@ -104,7 +104,7 @@ Als u een site server in de passieve modus wilt installeren, gebruikt u de **wiz
 
 - De computer waarop de site server van de passieve modus wordt uitgevoerd:
 
-    - Moet voldoen aan de [vereisten voor het installeren van een primaire site](https://docs.microsoft.com/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#primary-sites-and-the-central-administration-site).
+    - Moet voldoen aan de [vereisten voor het installeren van een primaire site](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#primary-sites-and-the-central-administration-site).
 
     - Wordt geïnstalleerd met behulp van bron bestanden die overeenkomen met de versie van de actieve modus site server.
 
@@ -261,7 +261,7 @@ De vereisten voor een verbinding met Upgradegereedheid zijn niet gewijzigd ten o
 
 **Vereisten**
 - Om de verbinding toe te voegen, moet uw Configuration Manager-omgeving eerst een [service aansluitpunt](../servers/deploy/configure/about-the-service-connection-point.md) in een [online modus](../servers/deploy/configure/about-the-service-connection-point.md#bkmk_modes)configureren. Wanneer u de verbinding aan uw omgeving toevoegt, wordt de micro soft monitoring agent ook geïnstalleerd op de computer waarop deze site systeemrol wordt uitgevoerd.
-- Registreer Configuration Manager als een hulp programma voor het beheer van webtoepassingen en/of Web-API en haal de [client-id op uit deze registratie](https://azure.microsoft.com/documentation/articles/active-directory-integrating-applications/).
+- Registreer Configuration Manager als een hulp programma voor het beheer van webtoepassingen en/of Web-API en haal de [client-id op uit deze registratie](/azure/active-directory/develop/quickstart-register-app).
 - Maak een client sleutel voor het geregistreerde beheer programma in Azure Active Directory.
 - Geef in de Azure Portal de geregistreerde Web-app met toestemming voor toegang tot OMS.
 

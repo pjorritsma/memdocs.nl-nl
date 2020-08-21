@@ -10,12 +10,12 @@ ms.assetid: d6a73e68-57d8-4786-842b-36669541d8ff
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: df0b632ccf7939bdc897d4a456f0e6cacc7a1760
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: ff364dc248519d0027ce96fe43f4f3f6cf373e68
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87525945"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692737"
 ---
 # <a name="pki-certificate-requirements-for-configuration-manager"></a>PKI-certificaatvereisten voor Configuration Manager
 
@@ -23,7 +23,7 @@ ms.locfileid: "87525945"
 
 De open bare-sleutel infrastructuur (PKI)-certificaten die u mogelijk nodig hebt voor Configuration Manager worden weer gegeven in de volgende tabellen. Bij deze informatie wordt ervan uitgegaan dat u basiskennis hebt van PKI-certificaten. Zie voor [beeld van een stapsgewijze implementatie van de PKI-certificaten voor Configuration Manager: Windows Server 2008-certificerings instantie](example-deployment-of-pki-certificates.md)voor meer informatie.
 
-Zie [Active Directory Certificate Services Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831740(v=ws.11))(Engelstalig) voor meer informatie over het Active Directory van Certificate Services.
+Zie [Active Directory Certificate Services Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831740(v=ws.11))(Engelstalig) voor meer informatie over het Active Directory van Certificate Services.
 
 Zie [overzicht van CNG-certificaten](cng-certificates-overview.md)voor meer informatie over het gebruik van crypto grafie API: Next Generation (CNG)-certificaten met Configuration Manager.
 
@@ -59,7 +59,7 @@ Wanneer u Active Directory Certificate Services en certificaat sjablonen gebruik
 |Sitesystemen die u een distributiepunt geïnstalleerd hebben|Clientverificatie|**Verificatie van werkstation**|**De waarde voor De waarde voor Enhanced Key Usage** moet de **verificatie van de server (1.3.6.1.5.5.7.3.2)**.<br /><br /> Er zijn geen specifieke vereisten voor het onderwerp van het certificaat of de alternatieve naam voor het onderwerp (SAN). U kunt hetzelfde certificaat gebruiken voor meerdere distributie punten. Het is echter een goed idee om een ander certificaat te gebruiken voor elk distributie punt.<br /><br /> De persoonlijke sleutel moet exporteerbaar zijn.<br /><br /> Het hash-algoritme SHA-2 wordt ondersteund.<br /><br /> De maximale ondersteunde sleutel lengte is 2.048 bits.|Dit certificaat heeft twee doeleinden:<br /><br /><ul><li> Hiermee verifieert u het distributiepunt naar een HTTPS-beheerpunt voordat het distributiepunt statusberichten verzendt.</li><li>Wanneer de optie **PXE-ondersteuning voor clients** -distributie punt inschakelen is geselecteerd, wordt het certificaat verzonden naar computers. Als taken reeksen in het implementatie proces van het besturings systeem client acties bevatten, zoals het ophalen van client beleid of het verzenden van inventaris gegevens, kunnen de client computers tijdens de implementatie van het besturings systeem verbinding maken met een HTTPS-beheer punt.</li></ul> Dit certificaat wordt alleen gebruikt voor de duur van het implementatieproces van het besturingssysteem en wordt niet op de client geïnstalleerd. Omdat het tijdelijk wordt gebruikt, kan hetzelfde certificaat voor ieder implementatieproces van besturingssystemen worden gebruikt als u geen meerdere clientcertificaten wilt gebruiken.<br /><br /> Dit certificaat moet worden geëxporteerd in een PKCS #12-indeling (Public Key Certificate Standard). Het wacht woord moet bekend zijn zodat het kan worden geïmporteerd in de eigenschappen van het distributie punt.<br /><br /> **Opmerking:** De vereisten voor dit certificaat zijn hetzelfde als het client certificaat voor opstart installatie kopieën die besturings systemen implementeren. U kunt hetzelfde certificaatbestand gebruiken omdat de vereisten dezelfde zijn.|  
 |Site systeem server waarop de Microsoft Intune-connector wordt uitgevoerd|Clientverificatie|Niet van toepassing: dit certificaat wordt automatisch gemaakt door intune.|De waarde voor **Enhanced Key Usage** bevat **client verificatie (1.3.6.1.5.5.7.3.2)**.<br /><br /> Drie aangepaste extensies zijn een unieke aanduiding voor het intune-abonnement van de klant.<br /><br /> De sleutel grootte is 2.048 bits en maakt gebruik van het hash-algoritme SHA-1.<br /><br /> **Opmerking:** U kunt deze instellingen niet wijzigen. Deze informatie is uitsluitend ter informatie bedoeld.|Dit certificaat wordt automatisch aangevraagd en geïnstalleerd naar de Configuration Manager-Data Base wanneer u zich abonneert op Microsoft Intune. Wanneer u de Microsoft Intune-connector installeert, wordt dit certificaat geïnstalleerd op de site systeem server waarop de Microsoft Intune-connector wordt uitgevoerd. Het wordt geïnstalleerd in het certificaat archief van de computer.<br /><br /> Dit certificaat wordt gebruikt om de Configuration Manager-hiërarchie te verifiëren bij het Microsoft Intune met behulp van de Microsoft Intune connector. Voor alle gegevens die worden overgebracht tussen deze twee wordt SSL (Secure Sockets Layer) gebruikt.|  
 
-###  <a name="proxy-web-servers-for-internet-based-client-management"></a><a name="BKMK_PKIcertificates_for_proxyservers"></a>Proxy webservers voor client beheer op Internet  
+###  <a name="proxy-web-servers-for-internet-based-client-management"></a><a name="BKMK_PKIcertificates_for_proxyservers"></a> Proxy webservers voor client beheer op Internet  
  Als de site internet-gebaseerd client beheer ondersteunt en u een proxy webserver gebruikt met behulp van SSL-beëindiging (bridging) voor binnenkomende Internet verbindingen, heeft de proxy webserver de certificaat vereisten die zijn opgenomen in de volgende tabel.  
 
 > [!NOTE]  
@@ -69,7 +69,7 @@ Wanneer u Active Directory Certificate Services en certificaat sjablonen gebruik
 |--------------------------------------|-------------------------|-------------------------------------------|---------------------------------------------|----------------------------------------------------------|  
 |Proxy webserver die client verbindingen via internet accepteert|Serververificatie en clientverificatie|1. <br />                        **Webserver**<br /><br /> 2. <br />                        **Verificatie van werkstation**|Internet-FQDN in het veld onderwerpnaam of in het veld alternatieve naam voor onderwerp. Als u micro soft-certificaat sjablonen gebruikt, is de alternatieve naam voor het onderwerp alleen beschikbaar in de sjabloon voor het werk station.<br /><br /> Het hash-algoritme SHA-2 wordt ondersteund.|Dit certificaat wordt gebruikt voor het verifiëren van de volgende servers bij internetclients en voor het versleutelen van alle gegevens die tussen de client en deze server worden overgedragen met behulp van SSL:<br /><br /><ul><li> Beheerpunt op internet</li><li> Distributiepunt op internet</li><li> Software-updatepunt op internet</li></ul> De client verificatie wordt gebruikt voor het overbruggen van client verbindingen tussen de Configuration Manager-clients en de site systemen op internet.|  
 
-##  <a name="pki-certificates-for-clients"></a><a name="BKMK_PKIcertificates_for_clients"></a>PKI-certificaten voor clients  
+##  <a name="pki-certificates-for-clients"></a><a name="BKMK_PKIcertificates_for_clients"></a> PKI-certificaten voor clients  
 
 |Configuration Manager onderdeel|Certificaatdoeleinde|Te gebruiken Microsoft-certificaatsjabloon|Specifieke informatie in het certificaat|Hoe het certificaat wordt gebruikt in Configuration Manager|  
 |-------------------------------------|-------------------------|-------------------------------------------|---------------------------------------------|----------------------------------------------------------|  

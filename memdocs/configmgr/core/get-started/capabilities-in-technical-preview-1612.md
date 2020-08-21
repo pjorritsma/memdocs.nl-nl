@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 0c2464bfba05d640868af7d5c8be7c32c0999946
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9cd0df25c64c4ca1e0d2ce98de5d2915f7564241
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721505"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693026"
 ---
 # <a name="capabilities-in-technical-preview-1612-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1612 voor Configuration Manager
 
@@ -81,12 +81,12 @@ Voordat de wizard een optie geeft om het Data Warehouse-service punt te selecter
 
 Pagina **Algemeen** : de volgende algemene informatie is vereist:
 - **Configuration Manager Data Base-instellingen:**   
-  - **Server naam** : Geef de FQDN op van de server die als host fungeert voor de site database. Als u geen standaard exemplaar van SQL Server gebruikt, moet u het exemplaar opgeven na de FQDN in de volgende notatie: *** &lt;Sqlserver_FQDN>\&lt; Instance_name>***
+  - **Server naam** : Geef de FQDN op van de server die als host fungeert voor de site database. Als u geen standaard exemplaar van SQL Server gebruikt, moet u het exemplaar opgeven na de FQDN in de volgende notatie: *** &lt; Sqlserver_FQDN>\& lt; Instance_name>***
   - **Database naam** : Geef de naam op van de site database.
   - **Controleer of** de verbinding met de site database is geslaagd en klik op **verifiëren** .
 </br></br>
 - **Data Warehouse-database instellingen:**
-  - **Server naam** : Geef de FQDN op van de server die als host fungeert voor het Data Warehouse-service punt en de data base. Als u geen standaard exemplaar van SQL Server gebruikt, moet u het exemplaar opgeven na de FQDN in de volgende notatie: *** &lt;Sqlserver_FQDN>\&lt; Instance_name>***
+  - **Server naam** : Geef de FQDN op van de server die als host fungeert voor het Data Warehouse-service punt en de data base. Als u geen standaard exemplaar van SQL Server gebruikt, moet u het exemplaar opgeven na de FQDN in de volgende notatie: *** &lt; Sqlserver_FQDN>\& lt; Instance_name>***
   - **Database naam** : Geef de FQDN op voor de Data Warehouse-data base.  Configuration Manager wordt de data base met deze naam gemaakt. Als u een database naam opgeeft die al bestaat op het exemplaar van SQL Server, zal Configuration Manager die data base gebruiken.
   - **Controleer of** de verbinding met de site database is geslaagd en klik op **verifiëren** .
 
@@ -104,10 +104,10 @@ Nadat de Data Warehouse-rol is geïnstalleerd, zorgt u ervoor dat het account da
 
 #### <a name="troubleshoot-installation-and-data-synchronization"></a>Problemen met de installatie en gegevens synchronisatie oplossen
 Gebruik de volgende logboeken om problemen met de installatie van het Data Warehouse-service punt of de synchronisatie van gegevens te onderzoeken:
-- **DWSSMSI. log** en **DWSSSetup. log** : gebruik deze logboeken om fouten te onderzoeken bij het installeren van het Data Warehouse-service punt.
-- **Micro soft. ConfigMgrDataWarehouse. log** : dit logboek gebruiken om de gegevens synchronisatie tussen de site database naar de Data Warehouse-data base te onderzoeken.
+- **DWSSMSI. log** en **DWSSSetup. log**  : gebruik deze logboeken om fouten te onderzoeken bij het installeren van het Data Warehouse-service punt.
+- **Microsoft.ConfigMgrDataWarehouse. log** : dit logboek gebruiken om de gegevens synchronisatie tussen de site database naar de Data Warehouse-data base te onderzoeken.
 
-### <a name="reporting"></a>Rapporten
+### <a name="reporting"></a>Rapportage
 Nadat u een Data Warehouse-site systeemrol hebt geïnstalleerd, zijn de volgende rapporten beschikbaar op uw Reporting Services-punt met een *categorie* **Data Warehouse:**
 
 |Rapport                   | Details                                  |
@@ -140,16 +140,16 @@ Gebruik de volgende stappen om de Data Warehouse-data base te verplaatsen naar e
 5. Wanneer de site systeemrol wordt geïnstalleerd, is de verplaatsing voltooid.
 
 U kunt de volgende Configuration Manager-logboeken bekijken om te bevestigen dat de site systeemrol opnieuw is geïnstalleerd:  
-- **DWSSMSI. log** en **DWSSSetup. log** : gebruik deze logboeken om fouten te onderzoeken bij het installeren van het Data Warehouse-service punt.
-- **Micro soft. ConfigMgrDataWarehouse. log** : dit logboek gebruiken om de gegevens synchronisatie tussen de site database naar de Data Warehouse-data base te onderzoeken.
+- **DWSSMSI. log** en **DWSSSetup. log**  : gebruik deze logboeken om fouten te onderzoeken bij het installeren van het Data Warehouse-service punt.
+- **Microsoft.ConfigMgrDataWarehouse. log** : dit logboek gebruiken om de gegevens synchronisatie tussen de site database naar de Data Warehouse-data base te onderzoeken.
 
 
 ## <a name="content-library-cleanup-tool"></a>Hulp programma inhouds bibliotheek opruimen
-Vanaf Technical Preview versie 1612 kunt u een nieuw opdracht regel programma (**ContentLibraryCleanup. exe**) gebruiken om inhoud te verwijderen die niet meer is gekoppeld aan een pakket of toepassing van een distributie punt (zwevende inhoud). Dit hulp programma wordt het hulp programma voor het opschonen van inhouds bibliotheken genoemd.
+Vanaf Technical Preview versie 1612 kunt u een nieuw opdracht regel programma (**ContentLibraryCleanup.exe**) gebruiken om inhoud te verwijderen die niet meer is gekoppeld aan een pakket of toepassing van een distributie punt (zwevende inhoud). Dit hulp programma wordt het hulp programma voor het opschonen van inhouds bibliotheken genoemd.
 
 Dit hulp programma is alleen van invloed op de inhoud van het distributie punt dat u opgeeft wanneer u het hulp programma uitvoert en kan inhoud niet verwijderen uit de inhouds bibliotheek op de site server.
 
-Nadat u Technical Preview 1612 hebt geïnstalleerd, kunt u **ContentLibraryCleanup. exe** vinden in de map *% CM_Installation_Path% \ cd\* . latest\SMSSETUP\TOOLS\ContentLibraryCleanup op de site Server Technical Preview.
+Nadat u Technical Preview 1612 hebt geïnstalleerd, kunt u **ContentLibraryCleanup.exe** vinden in de map *% CM_Installation_Path% \ cd. latest\SMSSETUP\TOOLS\ContentLibraryCleanup \* op de site Server Technical Preview.
 
 Het hulp programma dat bij deze Technical Preview is uitgebracht, is bedoeld ter vervanging van oudere versies van vergelijk bare hulpprogram ma's die zijn uitgebracht voor eerdere Configuration Manager producten. Hoewel deze versie van het hulp programma niet meer werkt na 1 maart, 2017, zullen nieuwe versies worden vrijgegeven met toekomstige technische previews totdat dit hulp programma wordt uitgebracht als onderdeel van de Current Branch of een kant-en-klare release van productie.
 
@@ -181,11 +181,11 @@ Wanneer het hulp programma voor het opschonen van de inhouds bibliotheek in een 
 
 ### <a name="run-the-tool"></a>Het hulp programma uitvoeren
 Het hulp programma uitvoeren:
-1. Open een opdracht prompt met beheerders rechten naar een map met **ContentLibraryCleanup. exe**.  
+1. Open een opdracht prompt met beheerders rechten naar een map met **ContentLibraryCleanup.exe**.  
 2. Voer vervolgens een opdracht regel in met de vereiste opdracht regel parameters en optionele Schakel opties die u wilt gebruiken.
 
 **Bekend probleem** Wanneer het hulp programma wordt uitgevoerd, kan er een fout melding als het volgende worden geretourneerd wanneer een pakket of implementatie mislukt of wordt uitgevoerd:
--  *System. InvalidOperationException: deze inhouds bibliotheek kan nu niet worden opgeruimd omdat pakket \<packageID> niet volledig is geïnstalleerd.*
+-  *System. InvalidOperationException: deze inhouds bibliotheek kan nu niet worden opgeruimd omdat het pakket \<packageID> niet volledig is geïnstalleerd.*
 
 **Tijdelijke oplossing:** geen. Het hulp programma kan geen zwevende bestanden identificeren wanneer de inhoud wordt uitgevoerd of niet kan worden geïmplementeerd. Daarom is het hulp programma niet in staat om inhoud op te schonen totdat het probleem is opgelost.
 
@@ -196,12 +196,12 @@ De volgende opdracht regel parameters kunnen in een wille keurige volg orde word
 
 |Switch|Details|
 |---------|-------|
-|**/Delete**  |**Beschrijving** </br> Gebruik deze schakel optie als u inhoud wilt verwijderen van het distributie punt. U wordt gevraagd om de inhoud te verwijderen. </br></br> Als deze schakel optie niet wordt gebruikt, registreert het hulp programma de resultaten van welke inhoud zou worden verwijderd, maar verwijdert geen inhoud van het distributie punt. </br></br> Voor beeld: ***ContentLibraryCleanup. exe/dp server1.contoso.com/delete*** |
-| **q**       |**Beschrijving** </br> Voer het hulp programma uit in de Stille modus dat alle prompts onderdrukt (zoals vragen wanneer u inhoud verwijdert) en open het logboek bestand niet automatisch. </br></br> Voor beeld: ***ContentLibraryCleanup. exe/q/dp server1.contoso.com*** |
-| **/DP &lt;-distributie punt FQDN->**  | **Vereist** </br> Geef de Fully Qualified Domain Name (FQDN) op van het distributie punt dat u wilt opschonen. </br></br> Voor beeld: ***ContentLibraryCleanup. exe/dp server1.contoso.com***|
-| **FQDN &lt;->van primaire site/PS**       | **Optioneel** bij het opschonen van inhoud van een distributie punt op een primaire site.</br>**Vereist** bij het opschonen van inhoud van een distributie punt op een secundaire site. </br></br> Geef de FQDN op van de primaire site waarvan het distributie punt deel uitmaakt, of van het bovenliggende primaire bovenliggend element wanneer het distributie punt zich op een secundaire site bevindt. </br></br> Voor beeld: ***ContentLibraryCleanup. exe/dp server1.contoso.com/ps siteserver1.contoso.com*** |
-| **/SC &lt;Primary site code>**  | **Optioneel** bij het opschonen van inhoud van een distributie punt op een primaire site.</br>**Vereist** bij het opschonen van inhoud van een distributie punt op een secundaire site. </br></br> Geef de site code op van de primaire site waarvan het distributie punt deel uitmaakt, of van de bovenliggende primaire site wanneer het distributie punt zich op een secundaire site bevindt.</br></br> Voor beeld: ***ContentLibraryCleanup. exe/dp server1.contoso.com/SC ABC*** |
-| **/Log \<logboek bestand map>**       |**Beschrijving** </br> Geef een map op waarin de logboek bestanden moeten worden geplaatst. Dit kan een lokaal station of een netwerk share zijn.</br></br> Als deze schakel optie niet wordt gebruikt, worden logboek bestanden automatisch in de map Temp van de gebruiker geplaatst.</br></br> Voor beeld van een lokaal station: ***ContentLibraryCleanup. exe/dp server1.contoso.com/log C:\Users\Administrator\Desktop*** </br></br>Voor beeld van een netwerk share: ***ContentLibraryCleanup. exe/DP \\ &lt;server1.contoso.com/Log \&share>lt; map>***|
+|**/Delete**  |**Optioneel** </br> Gebruik deze schakel optie als u inhoud wilt verwijderen van het distributie punt. U wordt gevraagd om de inhoud te verwijderen. </br></br> Als deze schakel optie niet wordt gebruikt, registreert het hulp programma de resultaten van welke inhoud zou worden verwijderd, maar verwijdert geen inhoud van het distributie punt. </br></br> Voor beeld: ***ContentLibraryCleanup.exe/dp server1.contoso.com/delete*** |
+| **q**       |**Optioneel** </br> Voer het hulp programma uit in de Stille modus dat alle prompts onderdrukt (zoals vragen wanneer u inhoud verwijdert) en open het logboek bestand niet automatisch. </br></br> Voor beeld: ***ContentLibraryCleanup.exe/q/dp server1.contoso.com*** |
+| **/DP- &lt; distributie punt FQDN->**  | **Vereist** </br> Geef de Fully Qualified Domain Name (FQDN) op van het distributie punt dat u wilt opschonen. </br></br> Voor beeld:  ***ContentLibraryCleanup.exe/dp server1.contoso.com***|
+| **&lt;FQDN->van primaire site/PS**       | **Optioneel** bij het opschonen van inhoud van een distributie punt op een primaire site.</br>**Vereist** bij het opschonen van inhoud van een distributie punt op een secundaire site. </br></br> Geef de FQDN op van de primaire site waarvan het distributie punt deel uitmaakt, of van het bovenliggende primaire bovenliggend element wanneer het distributie punt zich op een secundaire site bevindt. </br></br> Voor beeld: ***ContentLibraryCleanup.exe/dp server1.contoso.com/ps siteserver1.contoso.com*** |
+| **/SC &lt; Primary site code>**  | **Optioneel** bij het opschonen van inhoud van een distributie punt op een primaire site.</br>**Vereist** bij het opschonen van inhoud van een distributie punt op een secundaire site. </br></br> Geef de site code op van de primaire site waarvan het distributie punt deel uitmaakt, of van de bovenliggende primaire site wanneer het distributie punt zich op een secundaire site bevindt.</br></br> Voor beeld: ***ContentLibraryCleanup.exe/dp server1.contoso.com/SC ABC*** |
+| **/Log \<log file directory>**       |**Optioneel** </br> Geef een map op waarin de logboek bestanden moeten worden geplaatst. Dit kan een lokaal station of een netwerk share zijn.</br></br> Als deze schakel optie niet wordt gebruikt, worden logboek bestanden automatisch in de map Temp van de gebruiker geplaatst.</br></br> Voor beeld van een lokaal station: ***ContentLibraryCleanup.exe/dp server1.contoso.com/log C:\Users\Administrator\Desktop*** </br></br>Voor beeld van een netwerk share: ***ContentLibraryCleanup.exe/dp server1.contoso.com/Log \\ &lt; share>\& lt; map>***|
 
 
 ## <a name="improvements-for-in-console-search"></a>Verbeteringen voor zoeken in console
@@ -218,10 +218,10 @@ Op basis van feedback van gebruikers spraak hebben we de volgende verbeteringen 
 ## <a name="prevent-installation-of-an-application-if-a-specified-program-is-running"></a>Installatie van een toepassing voor komen als een opgegeven programma wordt uitgevoerd.
 U kunt nu een lijst met uitvoer bare bestanden (met de extensie. exe) configureren in de implementatie type-eigenschappen, zodat de installatie van een toepassing wordt geblokkeerd als deze wordt uitgevoerd. Nadat de installatie is uitgevoerd, krijgen gebruikers een dialoog venster te zien waarin wordt gevraagd om de processen te sluiten die de installatie blok keren.
 
-### <a name="try-it-out"></a>Uitproberen
+### <a name="try-it-out"></a>Probeer het eens
 Een lijst met uitvoer bare bestanden configureren
 1. Kies op de pagina eigenschappen van een implementatie type het tabblad **afhandeling van het installatie programma** .
-2. Klik op **toevoegen**om een of meer uitvoer bare bestanden toe te voegen aan de lijst (bijvoorbeeld **Edge. exe**)
+2. Klik op **toevoegen**om een of meer uitvoer bare bestanden toe te voegen aan de lijst (bijvoorbeeld **Edge.exe**)
 3. Klik op **OK** om het dialoog venster Eigenschappen van implementatie type te sluiten.
 
 Wanneer u deze toepassing nu implementeert voor een gebruiker of een apparaat en een van de uitvoer bare bestanden die u hebt toegevoegd, wordt het dialoog venster Software Center weer gegeven waarin wordt vermeld dat de installatie is mislukt omdat er een toepassing wordt uitgevoerd.
@@ -252,14 +252,14 @@ We hebben ondersteuning voor snelle installatie bestanden toegevoegd in Configur
 
 ### <a name="to-enable-the-download-of-express-installation-files-for-windows-10-updates-on-the-server"></a>Downloaden van bestanden voor snelle installatie voor Windows 10-updates op de server inschakelen
 Als u wilt beginnen met het synchroniseren van de meta gegevens voor Windows 10 Express-installatie bestanden, moet u deze inschakelen in de eigenschappen van het software-update punt.
-1. Ga in de Configuration Manager-console naar **beheer** > **site configuratie** > **sites**.
+1. Ga in de Configuration Manager-console naar **beheer**  >  **site configuratie**  >  **sites**.
 2. Selecteer de centrale beheer site of de zelfstandige primaire site.
 3. Klik op het tabblad **Start** in de groep **Instellingen** op **Sitecomponenten configureren** en klik op **Software-updatepunt**. Op het tabblad **Update bestanden** selecteert u **volledige bestanden downloaden voor alle goedgekeurde updates en bestanden voor snelle installatie voor Windows 10**.
 
 ### <a name="to-enable-support-for-clients-to-download-and-install-express-installation-files"></a>Ondersteuning inschakelen voor clients voor het downloaden en installeren van bestanden voor snelle installatie
 Als u ondersteuning voor bestanden voor snelle installatie op clients wilt inschakelen, moet u bestanden voor snelle installatie op clients inschakelen in de sectie Software-updates van client instellingen. Hiermee wordt een nieuwe HTTP-listener gemaakt waarmee wordt geluisterd naar aanvragen voor het downloaden van snelle installatie bestanden op de poort die u opgeeft. Zodra u client instellingen hebt geïmplementeerd om deze functionaliteit op de client in te scha kelen, wordt geprobeerd de verschillen tussen de cumulatieve update van Windows 10 van de huidige maand en de update van de vorige maand te downloaden (clients moeten een versie van Windows 10 uitvoeren die snelle installatie bestanden ondersteunt).
 1. Schakel ondersteuning voor snelle installatie bestanden in de eigenschappen van software-update punt componenten in (vorige procedure).
-2. Ga in de Configuration Manager-console naar **beheer** > **client instellingen**.
+2. Ga in de Configuration Manager-console naar **beheer**  >  **client instellingen**.
 3. Selecteer de juiste client instellingen en klik vervolgens op het tabblad **Start** op **Eigenschappen**.
 4. Selecteer de **pagina software-updates** , Configureer **Ja** voor de instelling de **installatie van snelle updates op clients inschakelen** en configureer de poort die wordt gebruikt door de HTTP-listener op de client voor de **poort die wordt gebruikt voor het downloaden van inhoud voor de instelling voor snelle updates** .
 
@@ -270,11 +270,11 @@ Als u ondersteuning voor bestanden voor snelle installatie op clients wilt insch
 
 Gegevens die momenteel beschikbaar zijn in de [WMI-provider van Configuration Manager](../../develop/reference/configuration-manager-reference.md) zijn nu ook toegankelijk met het nieuwe OData-eind punt. Met de entiteit sets die door het OData-eind punt worden weer gegeven, kunt u de gegevens die u met de WMI-provider wilt opvragen, opsommen.
 
-### <a name="try-it-out"></a>Uitproberen
+### <a name="try-it-out"></a>Probeer het eens
 
 Voordat u het OData-eind punt kunt gebruiken, moet u het inschakelen voor de site.
 
-1.  Ga naar **beheer** > **site configuratie** > **sites**.
+1.  Ga naar **beheer**  >  **site configuratie**  >  **sites**.
 2.  Selecteer de primaire site en klik op **Eigenschappen**.
 3.  Klik op het tabblad Algemeen van het eigenschappen venster van de primaire site op **rest-eind punt inschakelen voor alle providers op deze site**en klik vervolgens op **OK**.
 
@@ -300,7 +300,7 @@ Voer deze taak uit met een Azure-beheerder, omdat u Azure-beheerders referenties
 
 #### <a name="to-create-the-connection"></a>De verbinding maken:
 
-2. Kies in de werk ruimte **beheer** de optie **Cloud Services** > **Azure Active Directory** > **Azure Active Directory toevoegen**.
+2. Kies in de werk ruimte **beheer** de optie **Cloud Services**  >  **Azure Active Directory**  >  **Azure Active Directory toevoegen**.
 2. Klik op **Aanmelden** om de verbinding met Azure ad te maken.
 
 #### <a name="configuration-manager-client-requirements"></a>Client vereisten Configuration Manager
@@ -317,4 +317,4 @@ Nadat u deze configuratie wijzigingen hebt aangebracht, kunt u een gebruikers be
 
 ## <a name="change-to-configuring-multi-factor-authentication-for-device-enrollment"></a>Wijziging in het configureren van multi-factor Authentication voor apparaatregistratie
 
-Nu u multi-factor Authentication (MFA) voor apparaatregistratie kunt instellen in de Azure Portal, is de optie MFA verwijderd in de Configuration Manager-console. [In dit onderwerp](/mem/intune/enrollment/multi-factor-authentication)vindt u meer informatie over Microsoft intune het instellen van MFA voor inschrijving.
+Nu u multi-factor Authentication (MFA) voor apparaatregistratie kunt instellen in de Azure Portal, is de optie MFA verwijderd in de Configuration Manager-console. [In dit onderwerp](../../../intune/enrollment/multi-factor-authentication.md)vindt u meer informatie over Microsoft intune het instellen van MFA voor inschrijving.

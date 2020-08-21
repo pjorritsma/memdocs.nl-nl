@@ -10,12 +10,12 @@ ms.assetid: 01b30260-f03a-4851-a549-d1b76e8cfc69
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dd238319ba064f57911eee58e1299e17a2ce5b60
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: db59ad55c52f8d937b23704af310dc8879fe8a6d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713840"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692873"
 ---
 # <a name="evaluate-configuration-manager-by-building-your-own-lab-environment"></a>Configuration Manager evalueren door uw eigen test omgeving te bouwen
 
@@ -47,8 +47,8 @@ De clientcomputers zijn geïnstalleerd in Hyper-V. De testomgeving zelf kan ook 
 
  Wanneer u deze testomgeving opzet, beschikt u over een functionele omgeving waarin u kunt werken. Deze omgeving wordt echter niet geoptimaliseerd voor factoren zoals systeem prestaties, het beheer van vasteschijfruimte en SQL Server opslag.  
 
-##  <a name="recommended-reading-before-you-build-the-lab"></a><a name="BKMK_EvalRec"></a>Aanbevolen lezen voordat u het Lab maakt  
- Er is een schat aan inhoud beschikbaar in de [documentatie voor Configuration Manager](https://docs.microsoft.com/sccm/). We raden u aan de volgende onderwerpen in deze bibliotheek te lezen voordat u begint met het bouwen van het Lab:  
+##  <a name="recommended-reading-before-you-build-the-lab"></a><a name="BKMK_EvalRec"></a> Aanbevolen lezen voordat u het Lab maakt  
+ Er is een schat aan inhoud beschikbaar in de [documentatie voor Configuration Manager](/sccm/). We raden u aan de volgende onderwerpen in deze bibliotheek te lezen voordat u begint met het bouwen van het Lab:  
 
 -   Leer basis concepten over de Configuration Manager-console, portals voor eind gebruikers en voorbeeld scenario's in [Inleiding tot Configuration Manager](../../core/understand/introduction.md).  
 
@@ -60,4 +60,4 @@ De clientcomputers zijn geïnstalleerd in Hyper-V. De testomgeving zelf kan ook 
 
 -   Meer informatie over inhouds beheer in [concepten voor inhouds beheer](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md).  
 
--   Meer informatie over het ondersteunen van dagelijkse taken in uw implementatie in [begrijpen hoe clients site bronnen en-services vinden voor Configuration Manager](../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md).  
+-   Meer informatie over het ondersteunen van dagelijkse taken in uw implementatie in [begrijpen hoe clients site bronnen en-services vinden voor Configuration Manager](../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md).

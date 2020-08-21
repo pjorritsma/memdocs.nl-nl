@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: f2486e838e01415786e24c077af1997b3dfb7638
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: a947b332addbc3404617abdbbe199ede4e74dc63
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129066"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692788"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Wat&#39;s nieuw in versie 1702 van Configuration Manager
 
@@ -83,7 +83,7 @@ De volgende wijzigingen zijn van invloed op updates en onderhoud:
 - **Nieuwe update statussen**  
   Wanneer u beschik bare updates in de-console bekijkt, zijn er twee nieuwe statussen:  
   - **Beschikbaar voor installatie** -dit is een update die is gedownload en gereed is voor installatie.
-  - **Gereed voor downloaden** : deze update is beschikbaar, maar is niet gedownload. U kunt ervoor kiezen om deze update te downloaden, maar deze is vervangen door een meer recente update.
+  - **Gereed voor downloaden**  : deze update is beschikbaar, maar is niet gedownload. U kunt ervoor kiezen om deze update te downloaden, maar deze is vervangen door een meer recente update.
 
 
 - **Eenvoudigere Update opties**  
@@ -118,7 +118,7 @@ Gebruik het [hulp programma voor opruimen van inhouds bibliotheken](../hierarchy
 
 
 ### <a name="use-the-oms-connector-with-the-azure-government-cloud"></a>De OMS-connector gebruiken met de Azure Government Cloud
-U kunt de OMS-connector gebruiken om verbinding te maken met OMS-Log Analytics in Microsoft Azure Government Cloud. Hiervoor moet u een configuratie bestand wijzigen voordat u de OMS-connector installeert, zodat de connector kan samen werken met de Government Cloud. Zie [de OMS-connector gebruiken met de Azure Government-Cloud](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)voor meer informatie.
+U kunt de OMS-connector gebruiken om verbinding te maken met OMS-Log Analytics in Microsoft Azure Government Cloud. Hiervoor moet u een configuratie bestand wijzigen voordat u de OMS-connector installeert, zodat de connector kan samen werken met de Government Cloud. Zie [de OMS-connector gebruiken met de Azure Government-Cloud](/azure/azure-monitor/platform/collect-sccm)voor meer informatie.
 
 ### <a name="software-update-points-are-added-to-boundary-groups"></a>Software-update punten worden toegevoegd aan grens groepen
 Vanaf versie 1702 gebruiken de-clients grens groepen om een nieuw software-update punt te zoeken en om een nieuw software-update punt te vinden als het huidige item niet langer toegankelijk is. U kunt afzonderlijke software-update punten toevoegen aan verschillende grens groepen om te bepalen welke servers een client kan vinden. Zie [Software-update punten](../../servers/deploy/configure/boundary-groups.md#bkmk_sup) in het onderwerp [grens groepen configureren](../../servers/deploy/configure/boundary-groups.md) voor meer informatie.

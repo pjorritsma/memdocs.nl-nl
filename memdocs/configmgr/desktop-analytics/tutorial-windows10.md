@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: fc4309d3d09cd35c17b23bc46dcb1a28d210aa8e
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 5c5337433b0d64ec1f6bf1efae97bd2391031f2e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125743"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694263"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>Zelf studie: Windows 10 implementeren naar pilot
 
@@ -30,9 +30,9 @@ In deze zelfstudie leert u het volgende:
 > * Een desktop Analytics-implementatie plan voor Windows 10 maken  
 > * Configuration Manager gebruiken om Windows 10 te implementeren in de test groep  
 
-Als u nog geen Azure-abonnement hebt, maakt u een [gratis account](https://azure.microsoft.com/free) voordat u begint. Wanneer het gebruik van Desktop Analytics op de juiste wijze is geconfigureerd, worden er geen Azure-kosten in rekening gebracht.
+Als u nog geen abonnement op Azure hebt, maak dan een [gratis account](https://azure.microsoft.com/free) aan voordat u begint. Wanneer het gebruik van Desktop Analytics op de juiste wijze is geconfigureerd, worden er geen Azure-kosten in rekening gebracht.
 
-Desktop Analytics maakt gebruik van een *log Analytics-werk ruimte* in uw Azure-abonnement. Een werkruimte is in wezen een container met accountgegevens en eenvoudige configuratiegegevens voor het account. Zie [werk ruimten beheren](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor/toc.json)voor meer informatie.
+Desktop Analytics maakt gebruik van een *log Analytics-werk ruimte* in uw Azure-abonnement. Een werkruimte is in wezen een container met accountgegevens en eenvoudige configuratiegegevens voor het account. Zie [werk ruimten beheren](/azure/log-analytics/log-analytics-manage-access?toc=%2fazure%2fazure-monitor%2ftoc.json)voor meer informatie.
 
 
 
@@ -76,8 +76,8 @@ Voordat u met deze zelf studie begint, moet u ervoor zorgen dat u over de volgen
     - `https://kmwatsonc.events.data.microsoft.com`  
     - `https://oca.telemetry.microsoft.com`  
     - `https://login.live.com`  
-    - `https://graph.windows.net`(alleen bij Configuration Manager serverrol)
-    - `https://*.manage.microsoft.com`(alleen bij Configuration Manager serverrol)
+    - `https://graph.windows.net` (alleen bij Configuration Manager serverrol)
+    - `https://*.manage.microsoft.com` (alleen bij Configuration Manager serverrol)
 
     Zie voor meer informatie [delen van gegevens inschakelen voor desktop Analytics](enable-data-sharing.md#endpoints).  
 
@@ -102,7 +102,7 @@ Gebruik deze procedure om u aan te melden bij Desktop Analytics en deze te confi
 
         Als u deze optie niet selecteert, voegt Desktop Analytics nog steeds gebruikers toe als leden van de beveiligings groep. Een **globale beheerder** moet hand matig de rol **Desktop Analytics-beheerder** voor de gebruikers toewijzen.  
 
-        Zie [Administrator role permissions](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles)(Engelstalig) in azure Active Directory voor meer informatie over het toewijzen van machtigingen voor beheerdersrol in azure Active Directory en de machtigingen die zijn toegewezen aan **bureau blad Analytics-beheerders**.  
+        Zie [Administrator role permissions](/azure/active-directory/users-groups-roles/directory-assign-admin-roles)(Engelstalig) in azure Active Directory voor meer informatie over het toewijzen van machtigingen voor beheerdersrol in azure Active Directory en de machtigingen die zijn toegewezen aan **bureau blad Analytics-beheerders**.  
 
     - Met Desktop Analytics wordt de beveiligings groep **eigen aren van werk ruimten** vooraf geconfigureerd in azure Active Directory voor het maken en beheren van werk ruimten en implementatie plannen. 
 
@@ -234,7 +234,7 @@ Gebruik deze procedure voor het maken van een implementatie plan in Desktop Anal
 
 4. Configureer de volgende instellingen in het deel venster **implementatie plan maken** :  
 
-    - **Naam**: een unieke naam voor het implementatie plan, bijvoorbeeld`Windows 10 pilot`  
+    - **Naam**: een unieke naam voor het implementatie plan, bijvoorbeeld `Windows 10 pilot`  
 
     - **Producten en versies**: Kies de versie van Windows 10 die u wilt implementeren. Micro soft raadt aan om implementatie plannen te maken die gebruikmaken van de meest recente versie.
 
@@ -292,7 +292,7 @@ Gebruik deze procedure om Windows 10 in Configuration Manager te implementeren i
 - [Monitor](#bkmk_monitor-ts) status in Configuration Manager  
  -->
 
-### <a name="create-an-os-upgrade-package-for-windows-10"></a><a name="bkmk_create-package"></a>Een upgrade pakket voor het besturings systeem maken voor Windows 10
+### <a name="create-an-os-upgrade-package-for-windows-10"></a><a name="bkmk_create-package"></a> Een upgrade pakket voor het besturings systeem maken voor Windows 10
 
 1. Ga in de Configuration Manager-console naar de werk ruimte **software bibliotheek** , vouw **besturings systemen**uit en selecteer vervolgens het knoop punt **upgrade pakketten van het besturings systeem** .  
 
@@ -320,7 +320,7 @@ Distribueer vervolgens het upgrade pakket van het besturings systeem naar distri
 4. Voltooi de wizard inhoud distribueren.  
 
 
-### <a name="create-an-os-upgrade-task-sequence-for-windows-10"></a><a name="bkmk_create-ts"></a>Een taken reeks voor de upgrade van een besturings systeem maken voor Windows 10
+### <a name="create-an-os-upgrade-task-sequence-for-windows-10"></a><a name="bkmk_create-ts"></a> Een taken reeks voor de upgrade van een besturings systeem maken voor Windows 10
 
 1. Ga in de Configuration Manager-console naar de werk ruimte **software bibliotheek** , vouw **besturings systemen**uit en selecteer vervolgens **taken reeksen**.  
 
@@ -339,7 +339,7 @@ Distribueer vervolgens het upgrade pakket van het besturings systeem naar distri
     - **Product code**: Geef de Windows-product code op voor het besturings systeem dat u wilt installeren. Geef gecodeerde volume licentie sleutels of standaard product codes op. Als u een standaard product code gebruikt, scheidt u elke groep van vijf tekens met een streepje (-). Bijvoorbeeld: *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*. Wanneer de upgrade is voor een volume licentie-editie, is de product code mogelijk niet vereist.  
 
         > [!Note]  
-        > Deze product code kan een meervoudige activerings code (MAK) of een algemene volume licentie code (GVLK) zijn. Een GVLK wordt ook wel een configuratie sleutel voor de KMS-client (Key Management service) genoemd. Zie [volume activering plannen](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client)voor meer informatie. Zie [bijlage a](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) van de Windows Server-activerings handleiding voor een lijst met installatie sleutels voor KMS-clients.
+        > Deze product code kan een meervoudige activerings code (MAK) of een algemene volume licentie code (GVLK) zijn. Een GVLK wordt ook wel een configuratie sleutel voor de KMS-client (Key Management service) genoemd. Zie [volume activering plannen](/windows/deployment/volume-activation/plan-for-volume-activation-client)voor meer informatie. Zie [bijlage a](/windows-server/get-started/kmsclientkeys) van de Windows Server-activerings handleiding voor een lijst met installatie sleutels voor KMS-clients.
 
 6. Selecteer op de pagina **updates toevoegen** de optie **volgende** om software-updates te installeren.  
 
@@ -348,7 +348,7 @@ Distribueer vervolgens het upgrade pakket van het besturings systeem naar distri
 8. Voltooi de wizard taken reeks maken.  
 
 
-### <a name="deploy-the-task-sequence-using-the-desktop-analytics-deployment-plan"></a><a name="bkmk_deploy-ts"></a>De taken reeks implementeren met het implementatie plan voor desktop Analytics
+### <a name="deploy-the-task-sequence-using-the-desktop-analytics-deployment-plan"></a><a name="bkmk_deploy-ts"></a> De taken reeks implementeren met het implementatie plan voor desktop Analytics
 
 1. Ga in de Configuration Manager-console naar de **software bibliotheek**, vouw **Desktop Analytics Servicing**uit en selecteer het knoop punt **implementatie plannen** .  
 
@@ -376,7 +376,7 @@ Distribueer vervolgens het upgrade pakket van het besturings systeem naar distri
 10. Voltooi de wizard.  
 
 
-### <a name="install-the-task-sequence-from-software-center"></a><a name="bkmk_install-ts"></a>De taken reeks installeren vanuit software Center
+### <a name="install-the-task-sequence-from-software-center"></a><a name="bkmk_install-ts"></a> De taken reeks installeren vanuit software Center
 
 1. Meld u aan bij een apparaat dat lid is van het proef implementatie plan.  
 

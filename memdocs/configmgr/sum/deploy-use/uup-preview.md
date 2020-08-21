@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3871b51c85d0474c4bea2da24fc5a2f31d02f59f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c37fab775cdb90667ff1bc9f77dbbcaa1864b6f0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719734"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696783"
 ---
 # <a name="uup-private-preview-instructions"></a>UUP persoonlijke preview-instructies
 
@@ -62,7 +62,7 @@ $config.ServerId
 $config.MUUrl
 ```
 
-De eigenschap **MUUrl** moet zijn `https://sws.update.microsoft.com`. Als u deze wilt wijzigen, raadpleegt u de oplossing in het volgende ondersteunings artikel: [WSUS-synchronisatie mislukt met SoapException](https://support.microsoft.com/help/4482416/wsus-synchronization-fails-with-soapexception).
+De eigenschap **MUUrl** moet zijn `https://sws.update.microsoft.com` . Als u deze wilt wijzigen, raadpleegt u de oplossing in het volgende ondersteunings artikel: [WSUS-synchronisatie mislukt met SoapException](https://support.microsoft.com/help/4482416/wsus-synchronization-fails-with-soapexception).
 
 ### <a name="2-update-configuration-manager"></a>2. Configuration Manager bijwerken
 
@@ -155,11 +155,11 @@ Nadat u de UUP-updates in uw omgeving hebt gesynchroniseerd, kunt u deze vinden 
 
 - Omdat deze updates in een afzonderlijk product worden weer gegeven, gebruikt u het product om deze updates te filteren. Gebruik het product filter van het onderhouds plan om UUP of niet-UUP onderdeel updates te implementeren.  
 
-- In de knoop punten **alle software-updates** en **alle Windows 10-updates** van **software bibliotheek**is er een nieuwe optionele kolom **Label**. Deze eigenschap is ook beschikbaar als een filter in Adr's. Zoek in dit veld naar voor UUP- `UUP`updates. Het is leeg voor niet-UUP-updates.  
+- In de knoop punten **alle software-updates** en **alle Windows 10-updates** van **software bibliotheek**is er een nieuwe optionele kolom **Label**. Deze eigenschap is ook beschikbaar als een filter in Adr's. Zoek in dit veld naar voor UUP-updates `UUP` . Het is leeg voor niet-UUP-updates.  
 
 ### <a name="updates-available-during-preview"></a>Er zijn updates beschikbaar tijdens de preview-versie
 
-Zie [release-informatie voor Windows 10](https://docs.microsoft.com/windows/release-information/)voor meer informatie over alle Windows 10-updates die door micro soft worden uitgebracht.
+Zie [release-informatie voor Windows 10](/windows/release-information/)voor meer informatie over alle Windows 10-updates die door micro soft worden uitgebracht.
 
 #### <a name="cumulative-updates-to-test"></a>Cumulatieve updates die moeten worden getest
 

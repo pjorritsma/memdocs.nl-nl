@@ -10,12 +10,12 @@ ms.assetid: a7f91e63-4750-402e-9970-dd14be7f76a3
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5f441bc277f9c91cb1a83ce97879bd29b6349481
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: dc8e31245212136cd67f6f8cac062723c2cabefb
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718803"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696001"
 ---
 # <a name="manage-certificates-and-security-for-updates-publisher"></a>Certificaten en beveiliging voor updates Uitgever beheren
 
@@ -76,7 +76,7 @@ Hieronder vindt u een voor beeld van het configureren van het handtekening certi
    -   Voor verleende certificaten van certificerings instantie (CA): Voeg het certificaat toe aan het certificaat archief van **vertrouwde uitgevers** .
 
    > [!NOTE]
-   > De WUA controleert ook of de instelling **ondertekende inhoud van intranet locatie van micro soft-Update service toestaan** Groepsbeleid is ingeschakeld op de lokale computer. Deze beleidsinstelling moet worden ingeschakeld voor WUA om te scannen naar de updates die zijn gemaakt en gepubliceerd met Updates Publisher. Zie [How to configure the Groepsbeleid op client computers](https://docs.microsoft.com/previous-versions/bb530967(v=technet.10))(Engelstalig) voor meer informatie over het inschakelen van deze Groepsbeleid instelling.
+   > De WUA controleert ook of de instelling **ondertekende inhoud van intranet locatie van micro soft-Update service toestaan** Groepsbeleid is ingeschakeld op de lokale computer. Deze beleidsinstelling moet worden ingeschakeld voor WUA om te scannen naar de updates die zijn gemaakt en gepubliceerd met Updates Publisher. Zie [How to configure the Groepsbeleid op client computers](/previous-versions/bb530967(v=technet.10))(Engelstalig) voor meer informatie over het inschakelen van deze Groepsbeleid instelling.
 
 
 

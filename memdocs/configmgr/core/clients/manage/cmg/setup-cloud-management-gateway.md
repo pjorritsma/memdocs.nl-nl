@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 6b56f9848f497b7167b478b427f37a00bb2656b9
-ms.sourcegitcommit: da5bfbe16856fdbfadc40b3797840e0b5110d97d
+ms.openlocfilehash: a5800b40b581f2a65c4adcea0d229977ae61f774
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88512713"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693332"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Cloud beheer gateway instellen voor Configuration Manager
 
@@ -40,7 +40,7 @@ Gebruik de volgende controle lijst om ervoor te zorgen dat u over de benodigde i
 
   - Integratie met [Azure AD](../../../servers/deploy/configure/azure-services-wizard.md) voor **Cloud beheer**. Azure AD-gebruikers detectie is niet vereist. Als u de site wilt integreren met Azure AD om de CMG te implementeren met behulp van Azure Resource Manager, moet u een **globale beheerder**hebben.
 
-  - De resource providers **micro soft. ClassicCompute**  &  **micro soft. Storage** moeten zijn geregistreerd in het Azure-abonnement. Zie [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services)voor meer informatie.
+  - De resource providers **micro soft. ClassicCompute**  &  **micro soft. Storage** moeten zijn geregistreerd in het Azure-abonnement. Zie [Azure Resource Manager](/azure/azure-resource-manager/resource-manager-supported-services)voor meer informatie.
 
   - De **eigenaar** van een abonnement moet zich aanmelden om de CMG te implementeren.
 
@@ -80,7 +80,7 @@ Voer deze procedure uit op de site op het hoogste niveau. Deze site is een zelfs
 
 4. Geef de **Azure-omgeving** voor deze CMG op. De opties in de vervolg keuzelijst kunnen variëren, afhankelijk van de implementatie methode.  
 
-5. Selecteer **Volgende**. Wacht tot de site de verbinding met Azure test.  
+5. Selecteer **Next**. Wacht tot de site de verbinding met Azure test.  
 
 6. Selecteer op de pagina instellingen van de wizard eerst **Bladeren** en kies de. PFX-bestand voor het CMG-Server verificatie certificaat. De naam van dit certificaat vult de vereiste velden **FQDN** en **service naam** van de service in.  
 
@@ -108,7 +108,7 @@ Voer deze procedure uit op de site op het hoogste niveau. Deze site is een zelfs
 
 13. Standaard maakt de wizard de volgende optie: **CMG toestaan als een Cloud distributiepunt te functioneren en inhoud van Azure Storage te bewaren**. Een CMG kan ook inhoud leveren aan clients. Deze functionaliteit vermindert de vereiste certificaten en kosten van virtuele Azure-machines.
 
-14. Selecteer **Volgende**.  
+14. Selecteer **Next**.  
 
 15. Als u CMG-verkeer met een drempel van 14 dagen wilt bewaken, kiest u het selectie vakje om de drempel waarschuwing in te scha kelen. Geef vervolgens de drempel waarde en het percentage op waarmee de verschillende waarschuwings niveaus moeten worden verhoogd. Kies **volgende** wanneer u klaar bent.  
 

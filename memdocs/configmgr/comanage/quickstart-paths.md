@@ -10,12 +10,12 @@ ms.assetid: 5beb5564-2fdf-4f0a-8801-d0cec8214c43
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d481976a6c86da67670871690ba16985a67c80d8
-ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
+ms.openlocfilehash: a685e10ecdb2f6fac8d5634fd932facf52fddcb0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746456"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694947"
 ---
 # <a name="paths-to-co-management"></a>Paden naar co-beheer
 
@@ -28,16 +28,16 @@ Er zijn twee primaire manieren waarop u co-beheer kunt instellen. Het is belang 
 
 
 
-## <a name="path-1-auto-enroll-existing-clients"></a><a name="bkmk_path1"></a>Pad 1: bestaande clients automatisch inschrijven
+## <a name="path-1-auto-enroll-existing-clients"></a><a name="bkmk_path1"></a> Pad 1: bestaande clients automatisch inschrijven
 
 Door dit pad op te nemen, kunnen uw bestaande door Configuration Manager beheerde apparaten snel worden inge schreven bij intune. Het beheer van deze apparaten vanaf Configuration Manager verschilt van voordat u co-beheer inschakelt. Nu profiteert u van alle voor delen in de Cloud. Dit pad is transparant voor uw gebruikers.
 
 U moet het volgende instellen:
 - Hybride Azure AD
-    - Een van de volgende [Opties voor de hybride identiteit van Azure AD](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin):  
-       - [Wachtwoord hash-synchronisatie](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin#password-hash-synchronization) met [naadloze eenmalige aanmelding (SSO)](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso)
-       - [Pass-Through-verificatie](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-pta) met [naadloze eenmalige aanmelding (SSO)](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso)
-       - [Federatieve SSO (met Active Directory Federation Services (AD FS))](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin#federation-that-uses-a-new-or-existing-farm-with-ad-fs-in-windows-server-2012-r2)
+    - Een van de volgende [Opties voor de hybride identiteit van Azure AD](/azure/active-directory/hybrid/plan-connect-user-signin):  
+       - [Wachtwoord hash-synchronisatie](/azure/active-directory/hybrid/plan-connect-user-signin#password-hash-synchronization) met [naadloze eenmalige aanmelding (SSO)](/azure/active-directory/hybrid/how-to-connect-sso)
+       - [Pass-Through-verificatie](/azure/active-directory/hybrid/how-to-connect-pta) met [naadloze eenmalige aanmelding (SSO)](/azure/active-directory/hybrid/how-to-connect-sso)
+       - [Federatieve SSO (met Active Directory Federation Services (AD FS))](/azure/active-directory/hybrid/plan-connect-user-signin#federation-that-uses-a-new-or-existing-farm-with-ad-fs-in-windows-server-2012-r2)
     - Azure AD Connect
     - Een Azure AD Premium-licentie
     - Hybride Azure AD-samen voeging configureren (Kies één optie):
@@ -51,7 +51,7 @@ Zie [zelf studie: co-beheer inschakelen voor bestaande Configuration Manager-cli
 
 
 
-## <a name="path-2-bootstrap-with-modern-provisioning"></a><a name="bkmk_path2"></a>Pad 2: Boots trap met moderne inrichting
+## <a name="path-2-bootstrap-with-modern-provisioning"></a><a name="bkmk_path2"></a> Pad 2: Boots trap met moderne inrichting
 
 U moet het volgende instellen:
 
@@ -61,4 +61,3 @@ U moet het volgende instellen:
 4. [InTune gebruiken om de Configuration Manager-client te implementeren](how-to-prepare-Win10.md)  
 
 Zie [zelf studie: co-beheer inschakelen voor nieuwe apparaten op Internet](tutorial-co-manage-new-devices.md)voor een zelf studie over dit pad.
-

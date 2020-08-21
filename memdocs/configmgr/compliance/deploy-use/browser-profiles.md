@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.assetid: 76477b4d-df41-4b25-8318-7d18d46ca2c6
-ms.openlocfilehash: 57eb9bbaed39ec463afc00d12202a9829729a086
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: deededfe18275837ae93859c4075837eac870c35
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240543"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694777"
 ---
 # <a name="configure-microsoft-edge-legacy-settings-in-configuration-manager"></a>Verouderde instellingen voor micro soft Edge configureren in Configuration Manager
 
@@ -27,11 +27,11 @@ ms.locfileid: "86240543"
 *Van toepassing op: Configuration Manager (huidige vertakking)*
 
 <!-- 1357310 -->
-Voor klanten die de [micro soft Edge verouderde](https://docs.microsoft.com/microsoft-edge/deploy/) webbrowser op Windows 10-clients gebruiken, maakt u een Configuration Manager nalevings beleid om de browser instellingen te configureren.
+Voor klanten die de [micro soft Edge verouderde](/microsoft-edge/deploy/) webbrowser op Windows 10-clients gebruiken, maakt u een Configuration Manager nalevings beleid om de browser instellingen te configureren.
 
 Dit beleid is alleen van toepassing op clients met Windows 10, versie 1703 of hoger en micro soft Edge verouderde versie 45 en eerder. <!--511552-->
 
-Zie voor meer informatie over het beheren van micro soft Edge versie 77 of hoger met Configuration Manager de [implementatie van micro soft Edge, versie 77 en hoger](../../apps/deploy-use/deploy-edge.md). Zie [micro soft Edge-policies (](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies)Engelstalig) voor meer informatie over het configureren van beleids regels voor micro soft edge versie 77 of hoger.
+Zie voor meer informatie over het beheren van micro soft Edge versie 77 of hoger met Configuration Manager de [implementatie van micro soft Edge, versie 77 en hoger](../../apps/deploy-use/deploy-edge.md). Zie [micro soft Edge-policies (](/DeployEdge/microsoft-edge-policies)Engelstalig) voor meer informatie over het configureren van beleids regels voor micro soft edge versie 77 of hoger.
 
 ## <a name="policy-settings"></a>Beleidsinstellingen
 
@@ -39,42 +39,42 @@ Dit beleid bevat momenteel de volgende instellingen:
 
 - **Stel de micro soft Edge-browser in als standaard**: Hiermee wordt de Windows 10-standaard instelling voor apps voor de webbrowser geconfigureerd in micro soft Edge
 
-- **Vervolg keuzelijst voor de adres balk toestaan**: vereist Windows 10, versie 1703 of hoger. Zie [AllowAddressBarDropdown-browser beleid](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown)voor meer informatie.
+- **Vervolg keuzelijst voor de adres balk toestaan**: vereist Windows 10, versie 1703 of hoger. Zie [AllowAddressBarDropdown-browser beleid](/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown)voor meer informatie.
 
-- **Synchronisatie van favorieten tussen micro soft-browsers toestaan**: vereist Windows 10, versie 1703 of hoger. Zie [SyncFavoritesBetweenIEAndMicrosoftEdge-browser beleid](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge)voor meer informatie.
+- **Synchronisatie van favorieten tussen micro soft-browsers toestaan**: vereist Windows 10, versie 1703 of hoger. Zie [SyncFavoritesBetweenIEAndMicrosoftEdge-browser beleid](/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge)voor meer informatie.
 
-- **Browse gegevens wissen bij afsluiten toestaan**: vereist Windows 10, versie 1703 of hoger. Zie [ClearBrowsingDataOnExit-browser beleid](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit)voor meer informatie.
+- **Browse gegevens wissen bij afsluiten toestaan**: vereist Windows 10, versie 1703 of hoger. Zie [ClearBrowsingDataOnExit-browser beleid](/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit)voor meer informatie.
 
-- **Do not track-headers toestaan**: Zie [AllowDoNotTrack-browser beleid](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack)voor meer informatie.
+- **Do not track-headers toestaan**: Zie [AllowDoNotTrack-browser beleid](/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack)voor meer informatie.
 
-- **Automatisch invullen toestaan**: Zie [AllowAutofill-browser beleid](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowautofill)voor meer informatie.
+- **Automatisch invullen toestaan**: Zie [AllowAutofill-browser beleid](/windows/client-management/mdm/policy-csp-browser#browser-allowautofill)voor meer informatie.
 
-- **Cookies toestaan**: Zie [AllowCookies-browser beleid](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowcookies)voor meer informatie.
+- **Cookies toestaan**: Zie [AllowCookies-browser beleid](/windows/client-management/mdm/policy-csp-browser#browser-allowcookies)voor meer informatie.
 
-- **Pop-upblokkering toestaan**: Zie [AllowPopups-browser beleid](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpopups)voor meer informatie.
+- **Pop-upblokkering toestaan**: Zie [AllowPopups-browser beleid](/windows/client-management/mdm/policy-csp-browser#browser-allowpopups)voor meer informatie.
 
-- **Zoek suggesties in de adres balk toestaan**: Zie [AllowSearchSuggestionsinAddressBar-browser beleid](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar)voor meer informatie.
+- **Zoek suggesties in de adres balk toestaan**: Zie [AllowSearchSuggestionsinAddressBar-browser beleid](/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar)voor meer informatie.
 
-- **Verzenden van intranet verkeer naar Internet Explorer toestaan**: Zie [SendIntranetTraffictoInternetExplorer-browser beleid](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer)voor meer informatie.
+- **Verzenden van intranet verkeer naar Internet Explorer toestaan**: Zie [SendIntranetTraffictoInternetExplorer-browser beleid](/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer)voor meer informatie.
 
-- **Wachtwoord beheer toestaan**: Zie [AllowPasswordManager-browser beleid](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)voor meer informatie.
+- **Wachtwoord beheer toestaan**: Zie [AllowPasswordManager-browser beleid](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)voor meer informatie.
 
-- **Ontwikkelhulpprogramma's toestaan**: Zie [AllowDeveloperTools-browser beleid](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools)voor meer informatie.
+- **Ontwikkelhulpprogramma's toestaan**: Zie [AllowDeveloperTools-browser beleid](/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools)voor meer informatie.
 
-- **Extensies toestaan**: Zie [AllowExtensions-browser beleid](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowextensions)voor meer informatie.
+- **Extensies toestaan**: Zie [AllowExtensions-browser beleid](/windows/client-management/mdm/policy-csp-browser#browser-allowextensions)voor meer informatie.
 
 > [!TIP]
-> Zie voor meer informatie over het gebruik van groeps beleid voor het configureren van deze en andere instellingen [micro soft Edge verouderd groeps beleid](https://docs.microsoft.com/microsoft-edge/deploy/group-policies/).
+> Zie voor meer informatie over het gebruik van groeps beleid voor het configureren van deze en andere instellingen [micro soft Edge verouderd groeps beleid](/microsoft-edge/deploy/group-policies/).
 
 ### <a name="configure-windows-defender-smartscreen-settings-for-microsoft-edge-legacy"></a>Windows Defender SmartScreen-instellingen voor micro soft Edge verouderd configureren
 <!--1353701-->
-Dit beleid voegt drie instellingen voor [Windows Defender SmartScreen](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview)toe. Het beleid bevat nu de volgende aanvullende instellingen op de pagina **SmartScreen-instellingen** :
+Dit beleid voegt drie instellingen voor [Windows Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview)toe. Het beleid bevat nu de volgende aanvullende instellingen op de pagina **SmartScreen-instellingen** :
 
-- **SmartScreen toestaan**: Hiermee geeft u op of Windows Defender SmartScreen is toegestaan. Zie het [AllowSmartScreen-browser beleid](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)voor meer informatie.
+- **SmartScreen toestaan**: Hiermee geeft u op of Windows Defender SmartScreen is toegestaan. Zie het [AllowSmartScreen-browser beleid](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)voor meer informatie.
 
-- **Gebruikers kunnen SmartScreen-prompts voor sites overschrijven**: Hiermee geeft u op of gebruikers de waarschuwingen van het Windows Defender SmartScreen-filter kunnen negeren over mogelijk schadelijke websites. Zie het [PreventSmartScreenPromptOverride-browser beleid](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)voor meer informatie.
+- **Gebruikers kunnen SmartScreen-prompts voor sites overschrijven**: Hiermee geeft u op of gebruikers de waarschuwingen van het Windows Defender SmartScreen-filter kunnen negeren over mogelijk schadelijke websites. Zie het [PreventSmartScreenPromptOverride-browser beleid](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)voor meer informatie.
 
-- **Gebruikers kunnen SmartScreen-prompts negeren voor bestanden**: Hiermee geeft u aan of gebruikers de waarschuwingen van het Windows Defender SmartScreen-filter kunnen negeren over het downloaden van niet-geverifieerde bestanden. Zie het [PreventSmartScreenPromptOverrideForFiles-browser beleid](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)voor meer informatie.
+- **Gebruikers kunnen SmartScreen-prompts negeren voor bestanden**: Hiermee geeft u aan of gebruikers de waarschuwingen van het Windows Defender SmartScreen-filter kunnen negeren over het downloaden van niet-geverifieerde bestanden. Zie het [PreventSmartScreenPromptOverrideForFiles-browser beleid](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)voor meer informatie.
 
 ## <a name="create-the-browser-profile"></a>Het browser profiel maken
 

@@ -5,17 +5,17 @@ description: Meer informatie over de werk belastingen die u kunt omschakelen van
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 04/15/2020
+ms.date: 08/20/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
-ms.openlocfilehash: b03b57ff9797eb4fbe5a269723e98d39ae438803
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: e44576401d601c8c510aaf50b28e5924f5c4d6db
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127219"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694862"
 ---
 # <a name="co-management-workloads"></a>Werk belastingen voor co-beheer
 
@@ -43,19 +43,19 @@ Co-beheer ondersteunt de volgende werk belastingen:
 
 Nalevings beleid definieert de regels en instellingen waaraan een apparaat moet voldoen om te worden beschouwd als compatibel met het beleid voor voorwaardelijke toegang. U kunt ook nalevings beleid gebruiken om nalevings problemen met apparaten onafhankelijk van voorwaardelijke toegang te controleren en te herstellen. Vanaf Configuration Manager versie 1910 kunt u evaluatie van aangepaste configuratie basislijnen toevoegen als beoordelings regel voor nalevings beleid. Zie [aangepaste configuratie basislijnen opnemen als onderdeel van de evaluatie van het nalevings beleid](../compliance/deploy-use/create-configuration-baselines.md#bkmk_CAbaselines)voor meer informatie.
 
-Zie [nalevings beleid voor apparaten](https://docs.microsoft.com/intune/device-compliance-get-started)voor meer informatie over de intune-functie.  
+Zie [nalevings beleid voor apparaten](/intune/device-compliance-get-started)voor meer informatie over de intune-functie.  
 
 ## <a name="windows-update-policies"></a>Windows Update beleid
 
 Met Windows Update for business-beleid kunt u uitstel beleid configureren voor Windows 10-onderdelen updates of kwaliteits updates voor Windows 10-apparaten die rechtstreeks worden beheerd door Windows Update voor bedrijven.
 
-Zie voor meer informatie over de intune-functie [Windows update configureren voor bedrijfs beleid voor uitstel](https://docs.microsoft.com/intune/windows-update-for-business-configure).  
+Zie voor meer informatie over de intune-functie [Windows update configureren voor bedrijfs beleid voor uitstel](/intune/windows-update-for-business-configure).  
 
 ## <a name="resource-access-policies"></a>Toegangs beleid voor bronnen
 
 Bron toegangs beleid configureren VPN-, Wi-Fi-, e-mail-en certificaat instellingen op apparaten.
 
-Zie [toegangs profielen voor resources implementeren](https://docs.microsoft.com/intune/device-profiles)voor meer informatie over de intune-functie.
+Zie [toegangs profielen voor resources implementeren](/intune/device-profiles)voor meer informatie over de intune-functie.
 
 > [!Note]  
 > De werk belasting voor resource toegang maakt ook deel uit van de apparaatconfiguratie. Deze beleids regels worden beheerd door intune wanneer u de werk belasting van de [apparaatconfiguratie](#device-configuration) overschakelt.
@@ -76,7 +76,7 @@ De Endpoint Protection werk belasting bevat de Windows Defender-suite van antima
 - Windows Defender Security Center  
 - Windows Defender Advanced Threat Protection (nu bekend als micro soft Defender Threat Protection)
 
-Zie voor meer informatie over de intune-functie [Endpoint Protection voor Microsoft intune](https://docs.microsoft.com/intune/endpoint-protection-windows-10).
+Zie voor meer informatie over de intune-functie [Endpoint Protection voor Microsoft intune](/intune/endpoint-protection-windows-10).
 
 > [!Note]  
 > Wanneer u deze werk belasting overschakelt, blijft het Configuration Manager-beleid op het apparaat totdat het intune-beleid deze overschrijft. Dit gedrag zorgt ervoor dat het apparaat nog steeds beveiligings beleid heeft tijdens de overgang.
@@ -95,7 +95,7 @@ De werk belasting voor apparaatconfiguratie bevat instellingen die u beheert voo
 
 U kunt nog steeds instellingen van Configuration Manager implementeren op door co beheerde apparaten, zelfs als intune de configuratie-instantie van de apparaat is. Deze uitzonde ring kan worden gebruikt om instellingen te configureren die uw organisatie vereist, maar die nog niet beschikbaar zijn in intune. Geef deze uitzonde ring op een [Configuration Manager configuratie basislijn](../compliance/deploy-use/create-configuration-baselines.md)op. Schakel de optie om **deze basis lijn altijd toe te passen, zelfs voor clients die gezamenlijk worden beheerd** bij het maken van de basis lijn. U kunt dit later wijzigen op het tabblad **Algemeen** van de eigenschappen van een bestaande basis lijn.  
 
-Zie [een apparaatprofiel maken in Microsoft intune](https://docs.microsoft.com/intune/device-profile-create)voor meer informatie over de intune-functie.  
+Zie [een apparaatprofiel maken in Microsoft intune](/intune/device-profile-create)voor meer informatie over de intune-functie.  
 
 > [!NOTE]
 > Wanneer u de werk belasting van de apparaatconfiguratie overschakelt, bevat het ook beleids regels voor de functie Windows Information Protection, die niet is opgenomen in de werk belasting Endpoint Protection.<!-- 4184095 -->
@@ -112,7 +112,7 @@ Deze workload beheert Microsoft 365-apps op gezamenlijk beheerde apparaten.
 
 - Er is een nieuwe globale voor waarde, **zijn Office 365-toepassingen die worden beheerd door intune op het apparaat**. Deze voor waarde wordt standaard toegevoegd als vereiste voor nieuwe Office 365-toepassingen. Wanneer u deze werk belasting overstapt, voldoen gezamenlijk beheerde clients niet aan de vereiste voor de toepassing. Vervolgens installeren ze geen Office 365 dat is geïmplementeerd via Configuration Manager.  
 
-Zie [Office 365-apps toewijzen aan Windows 10-apparaten met Microsoft intune](https://docs.microsoft.com/intune/apps-add-office365)voor meer informatie over de intune-functie.
+Zie [Office 365-apps toewijzen aan Windows 10-apparaten met Microsoft intune](/intune/apps-add-office365)voor meer informatie over de intune-functie.
 
 ## <a name="client-apps"></a>Client-apps
 
@@ -120,7 +120,7 @@ Zie [Office 365-apps toewijzen aan Windows 10-apparaten met Microsoft intune](ht
 
 Gebruik intune voor het beheren van client-apps en Power shell-scripts op met co beheerde Windows 10-apparaten. Nadat u deze werk belasting hebt overgezet, zijn alle beschik bare apps die zijn geïmplementeerd vanuit intune, beschikbaar in de Bedrijfsportal. Apps die u vanaf Configuration Manager implementeert, zijn beschikbaar in Software Center.
 
-Zie [Wat is Microsoft intune app Management?](https://docs.microsoft.com/intune/app-management)voor meer informatie over de intune-functie.
+Zie [Wat is Microsoft intune app Management?](/intune/app-management)voor meer informatie over de intune-functie.
 
 > [!Tip]  
 > Deze functie werd voor het eerst in versie 1806 geïntroduceerd als een [voorlopige functie](../core/servers/manage/pre-release-features.md). Vanaf versie 2002 is het niet langer een functie van de voorlopige versie.  
@@ -131,9 +131,10 @@ Met ingang van versie 1910, wanneer u micro soft Connected cache op uw Configura
 
 ## <a name="diagram-for-app-workloads"></a>Diagram voor app-workloads
 
-![Diagram van werk belastingen van de app voor co-beheer](media/co-management-apps.svg)
+:::image type="content" source="media/co-management-apps.svg" alt-text="Diagram van werk belastingen van de app voor co-beheer" lightbox="media/co-management-apps.svg":::
 
-[Het diagram op volledige grootte weer geven](media/co-management-apps.svg)
+> [!TIP]
+> Vanaf versie 2006 kunt u de Bedrijfsportal zo configureren dat Configuration Manager-apps ook worden weer gegeven. Als u deze app Portal-ervaring wijzigt, worden de gedragingen die in het bovenstaande diagram worden beschreven, gewijzigd. Zie [De bedrijfsportal-app configureren op co-beheerde apparaten](company-portal.md) voor meer informatie.<!--CMADO-3601237,INADO-4297660-->
 
 ## <a name="known-issues"></a>Bekende problemen
 
@@ -147,11 +148,13 @@ U kunt dit probleem omzeilen door de CleanUpPolicy.xml toe te passen met ConfigS
    <?xml version="1.0" encoding="UTF-8"?>
    <SecurityPolicy xmlns="http://forefront.microsoft.com/FEP/2010/01/PolicyData" Name="FEP clean-up policy"><PolicySection Name="FEP.AmPolicy"><LocalGroupPolicySettings><IgnoreKey Name="SOFTWARE\Policies\Microsoft\Microsoft Antimalware"/><IgnoreKey Name="SOFTWARE\Policies\Microsoft\Windows Defender"/></LocalGroupPolicySettings></PolicySection></SecurityPolicy>
    ```
+
 1. Open een opdracht prompt met verhoogde bevoegdheden naar `ConfigSecurityPolicy.exe` . Dit uitvoer bare bestand bevindt zich doorgaans in een van de volgende directory's:
    - C:\Program Files\Windows Defender
    - C:\Program Files\Microsoft Security-client
+
 1. Geef vanuit de opdracht prompt het XML-bestand door om het beleid op te schonen. Bijvoorbeeld `ConfigSecurityPolicy.exe C:\temp\CleanUpPolicy.xml`.  
 
 ## <a name="next-steps"></a>Volgende stappen
 
-[Werk belastingen overschakelen](how-to-switch-workloads.md)  
+[Werk belastingen overschakelen](how-to-switch-workloads.md)

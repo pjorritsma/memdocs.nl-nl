@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d4594a50f42d6b8e6ea0b88b83920eda11615815
-ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
+ms.openlocfilehash: 0ddad23dfde87fa402c01d4eaa21a1b76db27d93
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88590999"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692924"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1705 voor Configuration Manager
 
@@ -121,12 +121,12 @@ Met deze versie kunt u nu asynchrone doorvoer replica's gebruiken in de SQL Serv
 
 - Deze release biedt geen ondersteuning voor failover voor het gebruik van de asynchrone doorvoer replica als uw site database.
   > [!CAUTION]  
-  > Omdat Configuration Manager de status van de asynchrone doorvoer replica niet valideert om te bevestigen dat deze actueel is, en [door het ontwerp van een dergelijke replica niet kan worden gesynchroniseerd](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-2014#AvailabilityModes), kunt u het gebruik van een asynchrone doorvoer replica, omdat de site database de integriteit van uw site en gegevens mogelijk maakt.  
+  > Omdat Configuration Manager de status van de asynchrone doorvoer replica niet valideert om te bevestigen dat deze actueel is, en [door het ontwerp van een dergelijke replica niet kan worden gesynchroniseerd](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-2014#AvailabilityModes), kunt u het gebruik van een asynchrone doorvoer replica, omdat de site database de integriteit van uw site en gegevens mogelijk maakt.  
 
 - U kunt hetzelfde aantal en type replica's in een beschikbaarheids groep gebruiken, zoals wordt ondersteund door de versie van SQL Server die u gebruikt.   (Eerdere ondersteuning is beperkt tot twee synchroon door Voer-replica's.)
 
 ### <a name="configure-an-asynchronous-commit-replica"></a>Een asynchrone doorvoer replica configureren
-Als u een asynchrone replica wilt toevoegen aan een [beschikbaarheids groep die u gebruikt met Configuration Manager](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md), hoeft u de vereiste configuratie scripts voor het configureren van een synchrone replica niet uit te voeren. (Dit komt doordat er geen ondersteuning is voor het gebruik van deze asynchrone replica als de site database.) Zie [een secundaire replica toevoegen aan een beschikbaarheids groep](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server?view=sql-server-2014)voor meer informatie.
+Als u een asynchrone replica wilt toevoegen aan een [beschikbaarheids groep die u gebruikt met Configuration Manager](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md), hoeft u de vereiste configuratie scripts voor het configureren van een synchrone replica niet uit te voeren. (Dit komt doordat er geen ondersteuning is voor het gebruik van deze asynchrone replica als de site database.) Zie [een secundaire replica toevoegen aan een beschikbaarheids groep](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server?view=sql-server-2014)voor meer informatie.
 
 ### <a name="use-the-asynchronous-replica-to-recover-your-site"></a>De asynchrone replica gebruiken om uw site te herstellen
 Voordat u een asynchrone replica gebruikt om de site database te herstellen, moet u de actieve primaire site stoppen om te voor komen dat er extra schrijf bewerkingen naar de site database worden uitgevoerd. Nadat u de site hebt gestopt, kunt u een asynchrone replica gebruiken in plaats van een [hand matig herstelde data base](../servers/manage/recover-sites.md#use-a-site-database-that-has-been-manually-recovered)te gebruiken.
@@ -254,7 +254,7 @@ Gebruik vervolgens de instructies in [Hoe clients implementeren op Windows-compu
 - **SMSMP**: de naam van uw lookup-beheer punt: dit kan zich op uw intranet bevinden.
 - **SMSSiteCode**: de site code van uw Configuration Manager-site.
 - **AADTENANTID**, **AADTENANTNAME**: de id en de naam van de Azure AD-tenant die u aan Configuration Manager hebt gekoppeld. U kunt dit vinden door dsregcmd.exe/status uit te voeren vanaf een opdracht prompt op een aan Azure AD toegevoegd apparaat.
-- **AADCLIENTAPPID**: de id van de Azure AD-client-app. Zie [Portal gebruiken om een Azure Active Directory toepassing en Service-Principal te maken die toegang hebben tot resources](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)voor meer informatie.
+- **AADCLIENTAPPID**: de id van de Azure AD-client-app. Zie [Portal gebruiken om een Azure Active Directory toepassing en Service-Principal te maken die toegang hebben tot resources](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)voor meer informatie.
 - **AADResourceUri**: de id-URI van de onboarded Azure ad server-app.
 
 ## <a name="use-azure-services-wizard-to-configure-a-connection-to-oms"></a>De wizard Azure-Services gebruiken om een verbinding met OMS te configureren
@@ -265,7 +265,7 @@ Met ingang van de 1705 Technical Preview-versie gebruikt u de **wizard Azure-Ser
 -   Configuration Manager maakt verbinding met OMS voor functies als Log Analytics of Upgradegereedheid.
 
 ### <a name="prerequisites-for-the-oms-connector"></a>Vereisten voor de OMS-connector
-Vereisten voor het configureren van een verbinding met OMS zijn niet gewijzigd ten opzichte van de onderdelen die zijn [gedocumenteerd voor de current branch versie 1702](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm). Deze informatie wordt hier herhaald:  
+Vereisten voor het configureren van een verbinding met OMS zijn niet gewijzigd ten opzichte van de onderdelen die zijn [gedocumenteerd voor de current branch versie 1702](/azure/azure-monitor/platform/collect-sccm). Deze informatie wordt hier herhaald:  
 
 -   Configuration Manager machtiging verlenen aan OMS.
 

@@ -10,12 +10,12 @@ ms.assetid: abd45393-d84e-4583-bc80-74bbb3709577
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6df9238cd81f14a64a42c45136c778357acb89c4
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 1d79edb5ad1a60c5876163281ec5c1d1c17eff0a
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126947"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692805"
 ---
 # <a name="manage-configuration-manager-clients-in-a-virtual-desktop-infrastructure-vdi"></a>Configuration Manager-clients beheren in een virtuele desktop infrastructuur (VDI)
 
@@ -41,7 +41,7 @@ Zie [ondersteuning voor virtualisatie omgevingen](../../../plan-design/configs/s
 
 U installeert de Configuration Manager-client niet voor afzonderlijke Extern bureaublad-sessies. Installeer het eenmaal op de server die als host fungeert voor Extern bureaublad-services. U kunt alle Configuration Manager-client functies op de Extern bureaublad-services-server gebruiken.
 
-Zie [Welkom bij extern bureaublad-services](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/welcome-to-rds)voor meer informatie.
+Zie [Welkom bij extern bureaublad-services](/windows-server/remote/remote-desktop-services/welcome-to-rds)voor meer informatie.
 
 ## <a name="pooled-vms"></a>Gegroepeerde Vm's
 

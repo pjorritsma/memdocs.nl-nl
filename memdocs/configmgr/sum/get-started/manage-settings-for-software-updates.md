@@ -10,20 +10,20 @@ ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 2b851c03424af0ba0f826716b401705879338855
-ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
+ms.openlocfilehash: e0395d41c2886bca1d623fb2736bfc86012f89b4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84436666"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696749"
 ---
-#  <a name="manage-settings-for-software-updates"></a><a name="BKMK_ManageSUSettings"></a>Instellingen voor software-updates beheren  
+#  <a name="manage-settings-for-software-updates"></a><a name="BKMK_ManageSUSettings"></a> Instellingen voor software-updates beheren  
 
 *Van toepassing op: Configuration Manager (huidige vertakking)*
 
 Nadat u software-updates in Configuration Manager hebt gesynchroniseerd, configureert en verifieert u de instellingen in de volgende secties.
 
-##  <a name="client-settings-for-software-updates"></a><a name="BKMK_ClientSettings"></a>Client instellingen voor software-updates  
+##  <a name="client-settings-for-software-updates"></a><a name="BKMK_ClientSettings"></a> Client instellingen voor software-updates  
 Wanneer u het software-updatepunt installeert, worden standaard software-updates ingeschakeld op clients en hebben de instellingen op de pagina **Software-updates** in de clientinstellingen de standaardwaarden. De client instellingen worden gebruikt voor de hele site en beïnvloeden wanneer software-updates worden gescand op naleving, en hoe en wanneer software-updates worden geïnstalleerd op client computers. Voordat u software-updates implementeert, controleert u of de client instellingen geschikt zijn voor software-updates op uw site.  
 
 > [!IMPORTANT]  
@@ -33,14 +33,14 @@ Zie [client instellingen configureren](../../core/clients/deploy/configure-clien
 
 Zie [over client instellingen](../../core/clients/deploy/about-client-settings.md)voor meer informatie over de client instellingen.  
 
-##  <a name="group-policy-settings-for-software-updates"></a><a name="BKMK_GroupPolicy"></a>Groeps beleids instellingen voor software-updates  
+##  <a name="group-policy-settings-for-software-updates"></a><a name="BKMK_GroupPolicy"></a> Groeps beleids instellingen voor software-updates  
 Er zijn specifieke door Windows Update Agent (WUA) gebruikte groepsbeleidinstellingen op clientcomputers om verbinding te maken met WSUS die op het software-updatespunt wordt gebruikt. U kunt met deze groepsbeleidinstellingen ook de naleving van software-updates scannen en automatisch de software-updates en WUA bijwerken.
 
 ### <a name="specify-intranet-microsoft-update-service-location-local-policy"></a>Lokaal beleid voor Locatie van Microsoft-updateservice in intranet  
 Wanneer er een software-updatepunt voor een site is gemaakt, ontvangen clients een machinebeleid dat de servernaam van het software-updatepunt verstrekt en het lokale beleid **Locatie van Microsoft-updateservice in intranet opgeven** op de computer configureert. De WUA haalt de in de instelling **De updateservice in intranet instellen voor het detecteren van updates** opgegeven servernaam op, waarna deze verbinding maakt met deze server wanneer de scan voor compatibiliteit van software-updates wordt uitgevoerd. Wanneer het domeinbeleid voor de instelling **Locatie van Microsoft-updateservice in intranet** wordt gemaakt, wordt het lokale beleid overschreven en maakt de WUA mogelijk verbinding met een andere server dan die van het software-updatepunt. Wanneer dit gebeurt, scant de client mogelijk voor compatibiliteit van software-updates op basis van andere producten, classificaties en talen. Daarom dient u het Active Directory-beleid voor clientcomputers niet te configureren.  
 
 ### <a name="allow-signed-content-from-intranet-microsoft-update-service-location-group-policy"></a>Ondertekende inhoud vanaf de locatie van de Microsoft-updateservice op een intranet toestaan  
-U moet de groepsbeleidinstelling **Ondertekende inhoud toestaan van groepsbeleid voor locatie van Microsoft-updateservice in intranet** inschakelen voordat de WUA computers gaat scannen op software-updates die door System Center Updates Publisher zijn gemaakt en gepubliceerd. Wanneer de beleidinstelling is ingeschakeld, accepteert WUA via een intranetlocatie ontvangen software-updates, als de software-updates zijn ondertekend in het certificaatarchief **Vertrouwde uitgevers** op de lokale computer. Zie de [documentatiebibliotheek van Updates Publisher 2011](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10))voor meer informatie over de voor Updates Publisher 2011 vereiste groepsbeleidinstellingen.  
+U moet de groepsbeleidinstelling **Ondertekende inhoud toestaan van groepsbeleid voor locatie van Microsoft-updateservice in intranet** inschakelen voordat de WUA computers gaat scannen op software-updates die door System Center Updates Publisher zijn gemaakt en gepubliceerd. Wanneer de beleidinstelling is ingeschakeld, accepteert WUA via een intranetlocatie ontvangen software-updates, als de software-updates zijn ondertekend in het certificaatarchief **Vertrouwde uitgevers** op de lokale computer. Zie de [documentatiebibliotheek van Updates Publisher 2011](/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10))voor meer informatie over de voor Updates Publisher 2011 vereiste groepsbeleidinstellingen.  
 
 ### <a name="automatic-updates-configuration"></a>Automatische updates configureren  
 Met automatische updates kunt u beveiligingsupdates en andere belangrijke downloads ontvangen op clientcomputers. Automatische updates wordt geconfigureerd via de groepsbeleidinstelling **Automatische updates configureren** of via het configuratiescherm op de lokale computer. Wanneer Automatische updates is ingeschakeld, ontvangen clientcomputers updatemeldingen en downloaden en installeren de clientcomputers de vereiste updates, afhankelijk van de geconfigureerde instellingen, Wanneer Automatische updates tegelijk met software-updates wordt gebruikt, geeft elke clientcomputer mogelijk meldingspictogrammen en pop-upweergavemeldingen weer voor dezelfde update. Wanneer opnieuw opstarten is vereist, geeft elke clientcomputer mogelijk een dialoogvenster voor opnieuw opstarten weer voor dezelfde update.  
@@ -65,7 +65,7 @@ Gebruik de volgende procedure om eigenschappen van software-updates te openen.
 ###  <a name="review-software-updates-information"></a><a name="BKMK_SoftwareUpdatesInformation"></a> Informatie over software-updates weergeven  
 U kunt in de eigenschappen van software-updates gedetailleerde informatie over een software-update controleren. De gedetailleerde informatie wordt niet weergegeven wanneer u meer dan één software-update selecteert. In de volgende secties is de informatie beschreven die beschikbaar is voor de geselecteerde software-update.  
 
-####  <a name="software-update-details"></a><a name="BKMK_SoftwareUpdateDetails"></a>Details van software-update  
+####  <a name="software-update-details"></a><a name="BKMK_SoftwareUpdateDetails"></a> Details van software-update  
 Op het tabblad met **updatedetails** wordt de volgende overzichtsinformatie over de geselecteerde software-update weergegeven:  
 
 - **Bulletin-id**: bevat de bulletin-id die aan beveiligingsupdates is gekoppeld. U kunt de details van het beveiligings Bulletin vinden door te zoeken op de Bulletin-ID op de webpagina [micro soft Security Response Center](https://portal.msrc.microsoft.com/) .  
@@ -139,4 +139,4 @@ Als u deze optie gebruikt, moet u CRL-controle inschakelen op de Configuration M
 #### <a name="to-enable-crl-checking"></a>Controle van certificaatintrekkingslijst inschakelen  
 Op de computer die de CRL-controle uitvoert, voert u vanaf de product-DVD het volgende uit vanaf een opdracht prompt: **\SMSSETUP\BIN\X64 \\ ** < *Language* > **\UpdDwnldCfg.exe/checkrevocation**.  
 
-Voor Engels (Verenigde Staten) voert u bijvoorbeeld **\SMSSETUP\BIN\X64\00000409\UpdDwnldCfg.exe/checkrevocation** uit  
+Voor Engels (Verenigde Staten) voert u bijvoorbeeld **\SMSSETUP\BIN\X64\00000409\UpdDwnldCfg.exe/checkrevocation**

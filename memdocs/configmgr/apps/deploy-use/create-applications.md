@@ -10,12 +10,12 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 60ca31b73e31ea59b7a854f87262be7fdc4ab5c5
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 42dc0f65e9e3765de35e6db7f5272aeeaab63fa2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240334"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695287"
 ---
 # <a name="create-applications-in-configuration-manager"></a>Toepassingen maken in Configuration Manager
 
@@ -45,7 +45,7 @@ Dit artikel bevat ook de volgende informatie over het configureren van een imple
 - [Retour codes](#bkmk_dt-return)
 - [Afhankelijkheden](#bkmk_dt-depend)
 
-## <a name="create-an-application"></a><a name="bkmk_create"></a>Een toepassing maken  
+## <a name="create-an-application"></a><a name="bkmk_create"></a> Een toepassing maken  
 
 1. Ga in de Configuration Manager-console naar de werk ruimte **software bibliotheek** , vouw **toepassings beheer**uit en selecteer het knoop punt **toepassingen** .  
 
@@ -57,7 +57,7 @@ Vervolgens automatisch detecteren of hand matig informatie over de toepassing op
 
 - [Hand matig](#bkmk_manual-app) toepassings informatie opgeven om complexere toepassingen te maken. Definieer meer dan één implementatie type, afhankelijkheden, detectie methoden of vereisten.  
 
-### <a name="automatically-detect-application-information"></a><a name="bkmk_auto-app"></a>Toepassings gegevens automatisch detecteren  
+### <a name="automatically-detect-application-information"></a><a name="bkmk_auto-app"></a> Toepassings gegevens automatisch detecteren  
 
 1. Selecteer op de pagina **Algemeen** van de wizard toepassing maken de optie **automatisch informatie over deze toepassing detecteren uit installatie bestanden**.  
 
@@ -97,7 +97,7 @@ De nieuwe toepassing wordt nu weer gegeven in het knoop punt **toepassingen** va
 
 Zie [implementatie typen voor de toepassing maken](#bkmk_create-dt)als u meer implementatie typen wilt toevoegen of andere instellingen wilt configureren.  
 
-### <a name="manually-specify-application-information"></a><a name="bkmk_manual-app"></a>Toepassings informatie hand matig opgeven  
+### <a name="manually-specify-application-information"></a><a name="bkmk_manual-app"></a> Toepassings informatie hand matig opgeven  
 
 1. Selecteer op de pagina **Algemeen** van de wizard toepassing maken **de optie hand matig de toepassings gegevens opgeven**en klik vervolgens op **volgende**.  
 
@@ -156,7 +156,7 @@ Zie [implementatie typen voor de toepassing maken](#bkmk_create-dt)als u meer im
 
 De nieuwe toepassing wordt nu weer gegeven in het knoop punt **toepassingen** van de Configuration Manager-console.  
 
-## <a name="create-deployment-types-for-the-application"></a><a name="bkmk_create-dt"></a>Implementatie typen voor de toepassing maken  
+## <a name="create-deployment-types-for-the-application"></a><a name="bkmk_create-dt"></a> Implementatie typen voor de toepassing maken  
 
 Als u [automatisch toepassings gegevens detecteert](#bkmk_auto-app), hoeft u de stappen in deze sectie mogelijk niet te volt ooien.  
 
@@ -185,7 +185,7 @@ Er zijn drie manieren om de wizard implementatie type maken te starten:
 
 Gebruik vervolgens een van de volgende procedures om informatie over het implementatie type [automatisch te identificeren](#bkmk_auto-dt) of [hand matig](#bkmk_manual-dt) op te geven.  
 
-### <a name="automatically-identify-deployment-type-information"></a><a name="bkmk_auto-dt"></a>Informatie over het implementatie type automatisch identificeren  
+### <a name="automatically-identify-deployment-type-information"></a><a name="bkmk_auto-dt"></a> Informatie over het implementatie type automatisch identificeren  
 
 1. Op de pagina **Algemeen** van de wizard implementatie type maken:  
 
@@ -217,7 +217,7 @@ Gebruik vervolgens een van de volgende procedures om informatie over het impleme
 
 4. Klik op **volgende**en ga vervolgens verder met de [inhouds opties voor het implementatie type](#bkmk_dt-content).  
 
-### <a name="manually-specify-the-deployment-type-information"></a><a name="bkmk_manual-dt"></a>Hand matig de implementatie type-informatie opgeven  
+### <a name="manually-specify-the-deployment-type-information"></a><a name="bkmk_manual-dt"></a> Hand matig de implementatie type-informatie opgeven  
 
 1. Kies op de pagina **Algemeen** van de wizard implementatie type maken in de vervolg keuzelijst **type** het installatie bestands type van de toepassing voor dit implementatie type.
 
@@ -275,7 +275,7 @@ Wanneer u de eigenschappen van een implementatie type bekijkt, worden de volgend
 
 - **Clients toestaan inhoud te delen met andere clients in hetzelfde subnet**: hier kunt u aangeven of het gebruik van BranchCache moet worden ingeschakeld voor het downloaden van inhoud. Zie [BranchCache](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache)voor meer informatie. BranchCache is altijd ingeschakeld op clients. Deze instelling is verwijderd in versie 1802, omdat clients BranchCache gebruiken als het distributie punt deze ondersteunt.  
 
-### <a name="deployment-type-task-sequence-options"></a><a name="bkmk_dt-ts"></a>Opties voor de **taken reeks** implementatie type
+### <a name="deployment-type-task-sequence-options"></a><a name="bkmk_dt-ts"></a> Opties voor de **taken reeks** implementatie type
 
 <!--3555953-->
 
@@ -290,14 +290,14 @@ Geef op de pagina **taken reeks** de volgende informatie op:
 > [!TIP]  
 > Als uw taken reeks niet in de lijst wordt weer gegeven, controleert u of deze geen besturingssysteem implementatie of upgrade stappen voor het besturings systeem bevat. Zorg er ook voor dat deze niet is gemarkeerd als een taken reeks met een hoge impact. Raadpleeg voor meer informatie de vereisten voor het [implementatie type van de taken reeks](../get-started/creating-windows-applications.md#bkmk_tsdt).
 
-### <a name="deployment-type-detection-method-options"></a><a name="bkmk_dt-detect"></a>Opties voor de **detectie methode** voor het implementatie type
+### <a name="deployment-type-detection-method-options"></a><a name="bkmk_dt-detect"></a> Opties voor de **detectie methode** voor het implementatie type
 
 Met deze procedure wordt een detectie methode ingesteld die de aanwezigheid van het implementatie type aangeeft. Met andere woorden, of op het Windows-apparaat al de toepassing is geïnstalleerd. Gebruik een van de volgende twee methoden om een detectie methode te maken:
 
 - [Regels configureren voor het detecteren van de aanwezigheid van dit implementatie type](#bkmk_detect-rule)
 - [Een aangepast script gebruiken om de aanwezigheid van dit implementatie type te detecteren](#bkmk_detect-script)
 
-#### <a name="configure-rules-to-detect-the-presence-of-this-deployment-type"></a><a name="bkmk_detect-rule"></a>Regels configureren voor het detecteren van de aanwezigheid van dit implementatie type
+#### <a name="configure-rules-to-detect-the-presence-of-this-deployment-type"></a><a name="bkmk_detect-rule"></a> Regels configureren voor het detecteren van de aanwezigheid van dit implementatie type
 
 1. Op de pagina **detectie methode** is de optie voor het **configureren van regels voor het detecteren van de aanwezigheid van dit implementatie type** standaard geselecteerd. Selecteer **component toevoegen**.  
 
@@ -349,7 +349,7 @@ Wanneer u meer dan één detectie methode voor een implementatie type maakt, kun
 
 *Ga door* naar de volgende sectie over het gebruik van een aangepast script als detectie methode. Of *Ga* door naar de opties voor de [gebruikers ervaring](#bkmk_dt-ux) voor het implementatie type.
 
-#### <a name="use-a-custom-script-to-check-for-the-presence-of-a-deployment-type"></a><a name="bkmk_detect-script"></a>Een aangepast script gebruiken om te controleren op de aanwezigheid van een implementatie type  
+#### <a name="use-a-custom-script-to-check-for-the-presence-of-a-deployment-type"></a><a name="bkmk_detect-script"></a> Een aangepast script gebruiken om te controleren op de aanwezigheid van een implementatie type  
 
 1. Schakel op de pagina **detectie methode** het selectie vakje **een aangepast script gebruiken om de aanwezigheid van dit implementatie type op te sporen** . Selecteer vervolgens **Edit**.  
 
@@ -454,7 +454,7 @@ WScript.StdErr.Write "Completed"
 WScript.Quit(0)
 ```
 
-### <a name="deployment-type-user-experience-options"></a><a name="bkmk_dt-ux"></a>Opties voor **gebruikers ervaring** implementatie type
+### <a name="deployment-type-user-experience-options"></a><a name="bkmk_dt-ux"></a> Opties voor **gebruikers ervaring** implementatie type
 
 Met deze instellingen geeft u op hoe de-client de toepassing installeert op apparaten en wat de gebruiker ziet.  
 
@@ -639,7 +639,7 @@ Wanneer u een aantal implementatie typen maakt, voegt Configuration Manager auto
 |15605    |Snel opnieuw proberen|
 |15618    |Snel opnieuw proberen|
 
-## <a name="additional-options-for-app-v-deployment-types"></a><a name="bkmk_appv"></a>Aanvullende opties voor app-V-implementatie typen  
+## <a name="additional-options-for-app-v-deployment-types"></a><a name="bkmk_appv"></a> Aanvullende opties voor app-V-implementatie typen  
 
 Configureer aanvullende opties die uniek zijn voor implementatie typen voor virtuele toepassingen (app-V).  
 
@@ -671,7 +671,7 @@ Configureer aanvullende opties die uniek zijn voor implementatie typen voor virt
 
 5. Selecteer **OK** om de implementatie type-eigenschappen te sluiten. Selecteer **OK** om de toepassings eigenschappen te sluiten.  
 
-## <a name="import-an-application"></a><a name="bkmk_import"></a>Een toepassing importeren  
+## <a name="import-an-application"></a><a name="bkmk_import"></a> Een toepassing importeren  
 
 Gebruik de volgende procedure om een toepassing in Configuration Manager te importeren:
 
@@ -688,11 +688,11 @@ Gebruik de volgende procedure om een toepassing in Configuration Manager te impo
 De nieuwe toepassing wordt weergegeven in het knooppunt **Toepassingen**.  
 
 > [!TIP]  
-> De Windows Power shell **-cmdlet Import-CMApplication** heeft dezelfde functie als deze procedure. Zie [import-CMApplication](https://docs.microsoft.com/powershell/module/configurationmanager/import-cmapplication?view=sccm-ps)voor meer informatie.  
+> De Windows Power shell **-cmdlet Import-CMApplication** heeft dezelfde functie als deze procedure. Zie [import-CMApplication](/powershell/module/configurationmanager/import-cmapplication?view=sccm-ps)voor meer informatie.  
 
 Zie [management tasks for Applications](management-tasks-applications.md)(Engelstalig) voor meer informatie over het exporteren van een toepassing.
 
-## <a name="supported-deployment-types"></a><a name="bkmk_deploy-types"></a>Ondersteunde implementatie typen  
+## <a name="supported-deployment-types"></a><a name="bkmk_deploy-types"></a> Ondersteunde implementatie typen  
 
 Configuration Manager ondersteunt de volgende implementatie typen voor toepassingen:
 
@@ -714,7 +714,7 @@ Configuration Manager ondersteunt de volgende implementatie typen voor toepassin
 > [!NOTE]
 > De Configuration Manager-console kan andere implementatie typen weer geven, maar ze zijn voor platforms die niet meer worden ondersteund. Zie [Wat is er gebeurd met hybride?](../../mdm/understand/what-happened-to-hybrid.md)voor meer informatie.
 
-### <a name="note-1-windows-app-package-in-the-windows-store"></a><a name="bkmk_note1"></a>Opmerking 1: Windows-app-pakket (in de Windows Store)
+### <a name="note-1-windows-app-package-in-the-windows-store"></a><a name="bkmk_note1"></a> Opmerking 1: Windows-app-pakket (in de Windows Store)
 
 Als u de app als een koppeling naar de Windows Store wilt implementeren, configureert u het groeps beleid **de toepassing Store uit te scha kelen**. Stel dit beleid in op **uitgeschakeld** of **niet geconfigureerd**. Als u deze instelling inschakelt, kunnen clients geen verbinding maken met de Windows Store om toepassingen te downloaden en te installeren.
 

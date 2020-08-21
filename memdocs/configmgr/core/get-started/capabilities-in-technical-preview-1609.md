@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 51a974247d7281d6134b699a5865f801d1ed6094
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 9d58ffee30986efeda1716358ab7aa6c1d36cbf5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905707"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695678"
 ---
 # <a name="capabilities-in-technical-preview-1609-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1609 voor Configuration Manager
 
@@ -91,7 +91,7 @@ De procedure voor het maken en implementeren van een Configuration Manager toepa
 
 Er zijn veel nieuwe instellingen toegevoegd die u kunt gebruiken in uw configuratie-items voor verschillende platformen.
 Dit zijn instellingen die voorheen aanwezig waren in Microsoft Intune in een zelfstandige configuratie en zijn nu beschikbaar wanneer u intune gebruikt met Configuration Manager.
-Als u hulp nodig hebt bij een van deze instellingen, opent u [instellingen en functies op uw apparaten beheren met Microsoft intune beleid](/mem/intune/configuration/device-profiles) en selecteert u vervolgens het subonderwerp instellingen voor het platform dat u wilt.
+Als u hulp nodig hebt bij een van deze instellingen, opent u [instellingen en functies op uw apparaten beheren met Microsoft intune beleid](../../../intune/configuration/device-profiles.md) en selecteert u vervolgens het subonderwerp instellingen voor het platform dat u wilt.
 
 
 ### <a name="new-settings-for-android-devices"></a>Nieuwe instellingen voor Android-apparaten
@@ -115,7 +115,7 @@ Als u hulp nodig hebt bij een van deze instellingen, opent u [instellingen en fu
 - **Cookies toestaan**
 - **Active Scripting toestaan**
 
-#### <a name="app-settings"></a>Instellingen voor apps
+#### <a name="app-settings"></a>App-instellingen
 
 - **Google Play Store toestaan**
 
@@ -238,7 +238,7 @@ In de volgende secties worden de wijzigingen beschreven die in deze preview-vers
 ### <a name="changes-in-ui-and-behavior-for-boundary-groups-and-content-locations"></a>Wijzigingen in de gebruikers interface en het gedrag voor grens groepen en inhouds locaties
 Hieronder vindt u belang rijke wijzigingen in grens groepen en hoe clients inhoud vinden. Veel van deze wijzigingen en concepten werken samen.
 - **Configuraties voor snelle of trage verbindingen worden verwijderd:** U kunt afzonderlijke distributie punten niet meer configureren om snel of traag te zijn.  In plaats daarvan wordt elk site systeem dat is gekoppeld aan een grens groep, op dezelfde manier behandeld. Als gevolg van deze wijziging wordt het tabblad **verwijzingen** van de eigenschappen van de grens groep niet meer ondersteund voor snelle of langzame configuratie.
-- **Nieuwe standaard grens groep op elke site:**  Elke primaire site heeft een nieuwe standaard grens groep met de naam ***standaard-site-boundary-group \<>***.  Wanneer een client zich niet op een netwerk locatie bevindt die is toegewezen aan een grens groep, zal die client de site systemen gebruiken die zijn gekoppeld aan de standaard groep van de toegewezen site. Plan het gebruik van deze grens groep als een vervanging van de locatie van de tijdelijke inhoud van het concept.    
+- **Nieuwe standaard grens groep op elke site:**  Elke primaire site heeft een nieuwe standaard grens groep met de naam ***standaard-site-grens \<sitecode> -groep***.  Wanneer een client zich niet op een netwerk locatie bevindt die is toegewezen aan een grens groep, zal die client de site systemen gebruiken die zijn gekoppeld aan de standaard groep van de toegewezen site. Plan het gebruik van deze grens groep als een vervanging van de locatie van de tijdelijke inhoud van het concept.    
   -  **' Terugval bron locaties voor inhoud toestaan '** wordt verwijderd: u hoeft niet langer expliciet een distributie punt te configureren dat moet worden gebruikt voor terugval en de opties die u kunt instellen, worden verwijderd uit de gebruikers interface.
 
   Daarnaast is het resultaat van de instelling **clients toestaan een terugval bron locatie te gebruiken voor inhoud** van een implementatie type voor toepassingen is gewijzigd. Met deze instelling voor een implementatie type kan een client de standaard site grens groep gebruiken als de locatie van de inhouds bron.
@@ -317,8 +317,8 @@ Door de verschillende groepen van de neighbor zo te configureren dat deze op ver
 
 ### <a name="update-existing-boundary-groups-to-the-new-model"></a><a name="bkmk_update"></a>Bestaande grens groepen bijwerken naar het nieuwe model
 Wanneer u versie 1609 installeert en uw site bijwerkt, worden de volgende configuraties automatisch gemaakt. Deze zijn bedoeld om ervoor te zorgen dat uw huidige terugval gedrag beschikbaar blijft, totdat u nieuwe grens groepen en relaties configureert.  
-- Niet-beveiligde distributie punten op een site worden toegevoegd aan de *standaard locatie van site-boundary-group \<>* grens groep van die site.
-- Er wordt een kopie gemaakt van elke bestaande grens groep die een site server bevat die is geconfigureerd met een trage verbinding. De naam van de nieuwe groep is de *** \< oorspronkelijke grens groepsnaam>-langzaam-tmp***:  
+- Niet-beveiligde distributie punten op een site worden toegevoegd aan de *standaard-site-boundary-groep \<sitecode> * grens groep van die site.
+- Er wordt een kopie gemaakt van elke bestaande grens groep die een site server bevat die is geconfigureerd met een trage verbinding. De naam van de nieuwe groep is *** \<original boundary group name> langzaam tmp***:  
   -   Site systemen met een snelle verbinding blijven in de oorspronkelijke grens groep.
   -   Een kopie van site systemen met een trage verbinding wordt toegevoegd aan de kopie van de grens groep. De oorspronkelijke site systemen die als langzaam zijn geconfigureerd, blijven in de oorspronkelijke grens groep voor compatibiliteit met eerdere versies, maar worden niet gebruikt vanuit die grens groep.
   -   Er zijn geen grenzen gekoppeld aan de kopie van deze grens groep. Er wordt echter een terugval koppeling gemaakt tussen de oorspronkelijke groep en de nieuwe kopie van de grens groep waarvan de terugval tijd is ingesteld op nul.
@@ -347,7 +347,7 @@ In het dash board worden grafieken weer gegeven voor het volgende:
 - Office 365-client versies
 - Office 365-client talen
 - Office 365-client kanalen     
-Zie [Overzicht van updatekanalen voor Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-update-channels) voor meer informatie.
+Zie [Overzicht van updatekanalen voor Office 365 ProPlus](/deployoffice/overview-update-channels) voor meer informatie.
 - Automatische implementatie regels waarbij Office 365-client is geselecteerd in de set beschik bare producten.
 
 U kunt de volgende acties uitvoeren op het dash board:
@@ -424,7 +424,7 @@ In deze release kunt u een snel overzicht krijgen van de algemene compatibilitei
 - Er wordt momenteel een fout gegenereerd door het inzoomen voor de **algemene nalevings** grafiek voor apparaten.
 - In de grafiek **best mogelijke redenen voor niet-naleving** worden de beleids naam en niet de afzonderlijke redenen voor niet-naleving vermeld. U kunt op het beleid klikken om in te zoomen op de apparaten die niet compatibel zijn voor dat beleid.
 
-### <a name="try-it-out"></a>Beleid uitproberen
+### <a name="try-it-out"></a>Probeer het eens
 Voer de volgende secties in de aangegeven volg orde uit:
 
 #### <a name="check-overall-compliance-chart"></a>Algemene nalevings grafiek controleren

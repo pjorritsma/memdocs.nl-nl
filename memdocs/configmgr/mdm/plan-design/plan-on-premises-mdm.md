@@ -10,12 +10,12 @@ ms.assetid: 02979fb8-ea7e-4ec6-b7e0-ecbfda73e52d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5690e4fe003939d00dee1185e6f6551813c346e5
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: 60139e3e26195f2feb8b5533c1d26e3e8fb8c3d0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721848"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693740"
 ---
 # <a name="plan-for-on-premises-mdm-in-configuration-manager"></a>On-premises MDM plannen in Configuration Manager
 
@@ -29,15 +29,15 @@ Er zijn verschillende belang rijke gebieden die u kunt controleren wanneer u van
 - Apparaatinschrijving
 
 > [!IMPORTANT]
-> Terwijl de site of een mobiel apparaat geen verbinding maakt met Microsoft Intune, heeft uw organisatie nog steeds intune-licenties nodig om deze functie te gebruiken. Zie [Microsoft intune Licensing](https://docs.microsoft.com/intune/fundamentals/licenses)voor meer informatie.
+> Terwijl de site of een mobiel apparaat geen verbinding maakt met Microsoft Intune, heeft uw organisatie nog steeds intune-licenties nodig om deze functie te gebruiken. Zie [Microsoft intune Licensing](/intune/fundamentals/licenses)voor meer informatie.
 
 Houd rekening met de volgende vereisten voordat u de Configuration Manager-infra structuur voorbereidt op het verwerken van on-premises MDM.
 
-## <a name="supported-devices"></a><a name="bkmk_devices"></a>Ondersteunde apparaten  
+## <a name="supported-devices"></a><a name="bkmk_devices"></a> Ondersteunde apparaten  
 
 De huidige vertakking van Configuration Manager ondersteunt inschrijving in on-premises Mobile Device Management voor apparaten met Windows 10. Deze apparaattypen bevatten voornamelijk laptops, IoT en Surface Hub. Zie [ondersteunde versies van besturings systemen voor clients en apparaten](../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md#bkmk_OnpremOS)voor meer informatie en de lijst met specifieke edities.
 
-## <a name="site-system-roles"></a><a name="bkmk_roles"></a>Site systeem rollen
+## <a name="site-system-roles"></a><a name="bkmk_roles"></a> Site systeem rollen
 
 On-premises MDM vereist ten minste één van de volgende site systeem rollen:
 
@@ -56,7 +56,7 @@ Afhankelijk van de behoeften van uw organisatie, kunt u deze rollen op de enkele
 
 Zie voor meer algemene informatie [plannen voor site systeem servers en-rollen](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md).
 
-## <a name="trusted-communications"></a><a name="bkmk_trustedComs"></a>Vertrouwde communicatie
+## <a name="trusted-communications"></a><a name="bkmk_trustedComs"></a> Vertrouwde communicatie
 
 Voor on-premises MDM moet u site systeem rollen inschakelen voor HTTPS-communicatie. Afhankelijk van uw behoeften kunt u de certificerings instantie (CA) van uw organisatie gebruiken om de vertrouwde verbindingen tussen servers en apparaten tot stand te brengen. U kunt ook een openbaar beschik bare CA gebruiken als vertrouwde instantie. In beide gevallen moet u de volgende certificaten configureren:
 
@@ -66,7 +66,7 @@ Voor on-premises MDM moet u site systeem rollen inschakelen voor HTTPS-communica
 
 Zie [certificaten voor vertrouwde communicatie instellen in on-premises MDM](../get-started/set-up-certificates-on-premises-mdm.md)voor meer informatie.
 
-## <a name="device-enrollment"></a><a name="bkmk_enrollment"></a>Registratie van apparaten
+## <a name="device-enrollment"></a><a name="bkmk_enrollment"></a> Registratie van apparaten
 
 Apparaatregistratie inschakelen voor on-premises MDM:
 

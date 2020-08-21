@@ -10,12 +10,12 @@ ms.assetid: 6bc26e36-9914-4606-ae8d-f7b23218942f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 220ebb558a0e01f701cab621381ad951a8fd0738
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: aa7f95e18775862427254839a2aab2c229e31057
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88123898"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697327"
 ---
 # <a name="customize-the-self-service-portal"></a>Selfservice portal implementeren
 
@@ -80,7 +80,7 @@ Als u de sessie van de gebruiker wilt laten verlopen na een opgegeven periode va
 
 1. Selecteer in het deel venster **acties** de optie **Toep assen**.
 
-## <a name="localize-helpdesk-text-and-url"></a><a name="bkmk_localize"></a>Help Desk-tekst en-URL lokaliseren
+## <a name="localize-helpdesk-text-and-url"></a><a name="bkmk_localize"></a> Help Desk-tekst en-URL lokaliseren
 
 U kunt gelokaliseerde versies van de instructie Self-Service Portal configureren `HelpdeskText` en `HelpdeskUrl` koppelen. Met deze teken reeks worden gebruikers geïnformeerd over aanvullende ondersteuning bij het gebruik van de portal. Als u gelokaliseerde tekst configureert, wordt in de Portal de gelokaliseerde versie voor webbrowsers in die taal weer gegeven. Als er geen gelokaliseerde versie wordt gevonden, wordt de standaard waarde in de `HelpdeskText` instellingen en weer gegeven `HelpdeskUrl` .
 
@@ -128,7 +128,7 @@ De Self-Service Portal geeft de bericht tekst weer op basis van de volgende rege
 
 1. Maak een `<language>` map voor elke ondersteunde taal in het `Self Service Website` pad van de toepassing. Bijvoorbeeld `es-es` voor Spaans (Spanje). Het volledige pad is standaard `C:\inetpub\Microsoft BitLocker Management Solution\Self Service Website\es-es` .
 
-    Voor een lijst met geldige taal codes die u kunt gebruiken, raadpleegt u [API-naslag informatie over nationale talen ondersteuning (NLS)](https://docs.microsoft.com/windows/win32/intl/locale-identifiers#predefined-locale-identifiers).
+    Voor een lijst met geldige taal codes die u kunt gebruiken, raadpleegt u [API-naslag informatie over nationale talen ondersteuning (NLS)](/windows/win32/intl/locale-identifiers#predefined-locale-identifiers).
 
     > [!TIP]
     > De naam van de taal map kan ook de taalneutrale-naam zijn. Bijvoorbeeld: **es** voor Spaans in plaats van **es-es** voor Spaans (Spanje) en **es-ar** voor Spaans (Argentinië). Als de gebruiker de browser instelt op **es-es**en die taalmap niet bestaat, controleert de webserver de bovenliggende landinstellings map (**sen**) recursief. (De bovenliggende land instellingen worden gedefinieerd in .NET.) Bijvoorbeeld `Self Service Website\es\Notice.txt` . Deze recursieve terugval simuleert de regels voor het laden van .NET-resources.

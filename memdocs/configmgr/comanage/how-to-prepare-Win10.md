@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: 076a4b6d1bf5773287d4a0b32109023039a3b399
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: c20f5e883c1b33c90218532dd6ae31f510fd8294
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546413"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695032"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>Het voorbereiden van op internet gebaseerde apparaten voor co-beheer
 
@@ -27,7 +27,7 @@ Voor nieuwe Windows 10-apparaten kunt u de auto pilot-service gebruiken om de ou
 
 Zie [overzicht van Windows auto pilot](../../autopilot/windows-autopilot.md)voor meer informatie.
 
-Als u uw apparaten zo wilt configureren dat deze automatisch worden inge schreven bij intune wanneer ze lid worden van Azure AD, raadpleegt u [Windows-apparaten inschrijven voor Microsoft intune](https://docs.microsoft.com/intune/windows-enroll).  
+Als u uw apparaten zo wilt configureren dat deze automatisch worden inge schreven bij intune wanneer ze lid worden van Azure AD, raadpleegt u [Windows-apparaten inschrijven voor Microsoft intune](/intune/windows-enroll).  
 
 ### <a name="gather-information-from-configuration-manager"></a>Gegevens van Configuration Manager verzamelen
 
@@ -41,7 +41,7 @@ Gebruik Configuration Manager om de apparaatgegevens te verzamelen en te rapport
 
 4. Nadat u het bestand hebt opgeslagen, uploadt u de gegevens naar intune.  
 
-Zie [apparaten toevoegen in intune](https://docs.microsoft.com/intune/enrollment-autopilot#add-devices)voor meer informatie.
+Zie [apparaten toevoegen in intune](/intune/enrollment-autopilot#add-devices)voor meer informatie.
 
 ### <a name="autopilot-for-existing-devices"></a>Automatische pilot voor bestaande apparaten
 <!--1358333-->
@@ -65,7 +65,7 @@ Voor apparaten op internet in het tweede pad moet u een app maken in intune. Imp
 
 3. Kopieer de opdracht regel op het tabblad **Activering** . Plak deze in Klad blok om op te slaan voor het volgende proces.  
 
-De volgende opdracht regel is een voor beeld:`CCMSETUPCMD="CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSITECODE=ABC"`
+De volgende opdracht regel is een voor beeld: `CCMSETUPCMD="CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSITECODE=ABC"`
 
 <!--1358215-->
 Bepaal welke opdracht regel eigenschappen u voor uw omgeving nodig hebt:  

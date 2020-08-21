@@ -10,12 +10,12 @@ ms.assetid: 4d26deed-3b16-4116-b640-f618f2c20f5a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7f7085b7ee6f0f723c9bcf9d10cb85b03f990a44
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e3ceb036180d002956eb0f62348ad317dfce6e7e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709955"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695134"
 ---
 # <a name="security-and-privacy-for-application-management-in-configuration-manager"></a>Beveiliging en privacy voor toepassings beheer in Configuration Manager
 
@@ -75,7 +75,7 @@ Als u de implementatie configureert om rechtstreeks vanaf een distributie punt t
 
 Als u implementaties rechtstreeks moet uitvoeren vanaf distributie punten, gebruikt u de minimale NTFS-machtigingen voor de pakketten op de distributie punten. Gebruik ook Internet Protocol Security (IPsec) om het kanaal tussen de client en de distributie punten en tussen de distributie punten en de site server te beveiligen.
 
-### <a name="dont-let-users-interact-with-elevated-processes"></a><a name="bkmk_interact"></a>Laat gebruikers niet werken met verhoogde processen
+### <a name="dont-let-users-interact-with-elevated-processes"></a><a name="bkmk_interact"></a> Laat gebruikers niet werken met verhoogde processen
   
 Als u de opties voor **uitvoeren met beheerders rechten** of **installeren voor systeem**inschakelt, kunnen gebruikers niet communiceren met deze toepassingen. Wanneer u een toepassing configureert, kunt u de optie instellen om **gebruikers toe te staan de programma-installatie te bekijken en ermee te werken**. Met deze instelling kunnen gebruikers reageren op eventuele vereiste prompts in de gebruikers interface. Als u de toepassing ook configureert om te worden **uitgevoerd met beheerders rechten**of vanaf versie 1802 **installeren voor systeem**, kan een aanvaller op de computer waarop het programma wordt uitgevoerd de gebruikers interface gebruiken om bevoegdheden te escaleren op de client computer.
 
@@ -168,7 +168,7 @@ Als u een implementatie type voor een webtoepassing configureert, gebruikt u HTT
      Wanneer een app-V-toepassing op een computer wordt gepubliceerd, kunnen alle gebruikers die zich aanmelden bij die computer de toepassing installeren. U kunt de gebruikers niet beperken die de toepassing kunnen installeren nadat deze is gepubliceerd.  
 
 
-## <a name="certificates-for-microsoft-silverlight-5-and-elevated-trust-mode-required-for-the-application-catalog"></a><a name="BKMK_CertificatesSilverlight5"></a>Certificaten voor micro soft Silverlight 5 en verhoogde vertrouwens modus vereist voor de Application Catalog  
+## <a name="certificates-for-microsoft-silverlight-5-and-elevated-trust-mode-required-for-the-application-catalog"></a><a name="BKMK_CertificatesSilverlight5"></a> Certificaten voor micro soft Silverlight 5 en verhoogde vertrouwens modus vereist voor de Application Catalog  
 
 > [!Important]  
 > Ondersteuning voor de functies van de toepassings catalogus wordt beëindigd met versie 1910. Zie [de Application Catalog verwijderen](plan-for-and-configure-application-management.md#bkmk_remove-appcat)voor meer informatie.  
@@ -182,7 +182,7 @@ Wanneer u de site systeemrol Application catalog-website punt installeert, insta
 
 Als u de instelling **toestaan dat Silverlight-toepassingen worden uitgevoerd in verhoogde vertrouwens modus** is ingesteld op **Nee**, wordt het micro soft-handtekening certificaat niet door clients verwijderd.  
 
-Zie [Trusted Applications (vertrouwde toepassingen](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ee721083\(v=vs.95\))) voor meer informatie over vertrouwde toepassingen in Silverlight.  
+Zie [Trusted Applications (vertrouwde toepassingen](/previous-versions/windows/silverlight/dotnet-windows-silverlight/ee721083\(v=vs.95\))) voor meer informatie over vertrouwde toepassingen in Silverlight.  
 
 
 ## <a name="privacy-information-for-application-management"></a> Privacyinformatie voor toepassingsbeheer  
@@ -208,7 +208,7 @@ De volgende functies helpen een efficiënte software-implementatie:
     > [!Important]  
     > Ondersteuning voor de functies van de toepassings catalogus wordt beëindigd met versie 1910. Zie [de Application Catalog verwijderen](plan-for-and-configure-application-management.md#bkmk_remove-appcat)voor meer informatie.  
 
-### <a name="user-device-affinity-privacy-information"></a><a name="bkmk_privacy-uda"></a>Privacygegevens van affiniteit van gebruiker met apparaat
+### <a name="user-device-affinity-privacy-information"></a><a name="bkmk_privacy-uda"></a> Privacygegevens van affiniteit van gebruiker met apparaat
 
 - Configuration Manager kan informatie verzenden tussen clients en beheer punt site systemen. De informatie kan de computer en het aanmeldings account en het overzichts gebruik voor aanmeldings accounts identificeren.  
 
@@ -220,7 +220,7 @@ De volgende functies helpen een efficiënte software-implementatie:
 
 - Informatie over het gebruik van computers en aanmeld gegevens die wordt gebruikt om de affiniteit van gebruikers en apparaten in te richten, is altijd ingeschakeld. Gebruikers en gebruikers met beheerders rechten kunnen informatie over de affiniteit van gebruikers apparaten opgeven.  
 
-### <a name="software-center-privacy-information"></a><a name="bkmk_privacy-userex"></a>Privacy-informatie voor Software Center
+### <a name="software-center-privacy-information"></a><a name="bkmk_privacy-userex"></a> Privacy-informatie voor Software Center
 
 - Met Software Center kan de Configuration Manager-beheerder elke toepassing of elk programma of script publiceren zodat gebruikers ze kunnen uitvoeren. Configuration Manager heeft geen controle over de typen Program ma's of scripts die zijn gepubliceerd in de catalogus of het type informatie dat ze verzenden.  
 
@@ -239,4 +239,4 @@ De volgende functies helpen een efficiënte software-implementatie:
 
 - Met de toepassings catalogus kan de Configuration Manager-beheerder elke toepassing of elk programma of script publiceren dat gebruikers kunnen uitvoeren. Configuration Manager heeft geen controle over de typen Program ma's of scripts die zijn gepubliceerd in de catalogus of het type informatie dat ze verzenden.  
 
-- Configuration Manager kan informatie verzenden tussen clients en de Application Catalog-site systeem rollen. De informatie kan de computer-en aanmeldings accounts identificeren. De gegevens die worden verzonden tussen de client en servers, worden niet versleuteld, tenzij deze site systeem rollen zodanig zijn geconfigureerd dat clients verbinding kunnen maken met behulp van HTTPS.  
+- Configuration Manager kan informatie verzenden tussen clients en de Application Catalog-site systeem rollen. De informatie kan de computer-en aanmeldings accounts identificeren. De gegevens die worden verzonden tussen de client en servers, worden niet versleuteld, tenzij deze site systeem rollen zodanig zijn geconfigureerd dat clients verbinding kunnen maken met behulp van HTTPS.

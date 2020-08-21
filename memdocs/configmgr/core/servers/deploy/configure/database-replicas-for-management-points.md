@@ -10,12 +10,12 @@ ms.assetid: b06f781b-ab25-4d9a-b128-02cbd7cbcffe
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3daf23f17719e111dacd45e6176c5f697a3d3224
-ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
+ms.openlocfilehash: e647672b02c0122709b3c80fc012ed1fb82b1519
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83343113"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696426"
 ---
 # <a name="database-replicas-for-management-points-for-configuration-manager"></a>Database replica's voor beheer punten voor Configuration Manager
 
@@ -28,7 +28,7 @@ Configuration Manager primaire sites kunnen een database replica gebruiken om de
 -   Zodoende kunt u mogelijk de CPU-verwerkingsvereisten voor de sitedatabaseserver reduceren door de offloading van frequente verwerkingstaken die aan clients zijn gerelateerd.  Een voorbeeld van een frequente verwerkingstaak voor clients is een site met een groot aantal clients die regelmatig aanvragen voor clientbeleid indienen.  
 
 
-##  <a name="prepare-to-use-database-replicas"></a><a name="bkmk_Prepare"></a>Voorbereiden op het gebruik van database replica's  
+##  <a name="prepare-to-use-database-replicas"></a><a name="bkmk_Prepare"></a> Voorbereiden op het gebruik van database replica's  
 **Databasereplica's voor beheerpunten:**  
 
 -   Een replica is een gedeeltelijke kopie van de sitedatabase die is gerepliceerd naar een apart exemplaar van SQL Server:  
@@ -57,7 +57,7 @@ Configuration Manager primaire sites kunnen een database replica gebruiken om de
 
     -   De sitedatabase moet de databasereplica **publiceren** en elke externe databasereplicaserver moet zijn **geabonneerd** op de gepubliceerde gegevens.  
 
-    -   Zowel de SQL Server die de sitedatabase host als de SQL Server die een databasereplica host, moet worden geconfigureerd voor ondersteuning van een **Max Text Repl Size** van 2 GB. Zie [Configure the max text repl size Server Configuration Option](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option?view=sql-server-ver15) (De serverconfiguratie-optie Max text repl size configureren) voor een voorbeeld om deze optie op SQL Server 2012 te configureren.  
+    -   Zowel de SQL Server die de sitedatabase host als de SQL Server die een databasereplica host, moet worden geconfigureerd voor ondersteuning van een **Max Text Repl Size** van 2 GB. Zie [Configure the max text repl size Server Configuration Option](/sql/database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option?view=sql-server-ver15) (De serverconfiguratie-optie Max text repl size configureren) voor een voorbeeld om deze optie op SQL Server 2012 te configureren.  
 
 -   **Zelfondertekend certificaat:** Als u een database replica wilt configureren, moet u een zelfondertekend certificaat maken op de data base-replica server en dit certificaat beschikbaar maken voor elk beheer punt dat die data base-replica server gaat gebruiken.  
 
@@ -85,7 +85,7 @@ Configuration Manager primaire sites kunnen een database replica gebruiken om de
 
 - Gebruikers implementaties in Software Center werken niet met een beheer punt met behulp van een SQL-replica. <!--sccmdocs-1011-->
 
-##  <a name="configure-database-replicas"></a><a name="BKMK_DBReplica_Config"></a>Database replica's configureren  
+##  <a name="configure-database-replicas"></a><a name="BKMK_DBReplica_Config"></a> Database replica's configureren  
 De volgende stappen zijn vereist voor het configureren van een databasereplica:  
 
 -   [Stap 1: de sitedatabaseserver configureren voor het publiceren van de databasereplica](#BKMK_DBReplica_ConfigSiteDB)  
@@ -98,7 +98,7 @@ De volgende stappen zijn vereist voor het configureren van een databasereplica:
 
 -   [Stap 5: de SQL Server Service Broker voor de data base-replica server configureren](#BKMK_DBreplica_SSB)  
 
-###  <a name="step-1---configure-the-site-database-server-to-publish-the-database-replica"></a><a name="BKMK_DBReplica_ConfigSiteDB"></a>Stap 1: de site database server configureren voor het publiceren van de database replica  
+###  <a name="step-1---configure-the-site-database-server-to-publish-the-database-replica"></a><a name="BKMK_DBReplica_ConfigSiteDB"></a> Stap 1: de site database server configureren voor het publiceren van de database replica  
  Gebruik de volgende procedure als een voorbeeld van hoe u de sitedatabaseserver configureert op een Windows Server 2008 R2-computer voor het publiceren van de databasereplica. Raadpleeg de documentatie van uw besturingssysteem als u een andere versie hebt en pas de stappen in deze procedure zo nodig aan.  
 
 ##### <a name="to-configure-the-site-database-server"></a>De sitedatabaseserver configureren  
@@ -130,7 +130,7 @@ De volgende stappen zijn vereist voor het configureren van een databasereplica:
 
 Wanneer de opgeslagen procedure is voltooid, wordt de sitedatabaseserver geconfigureerd op het publiceren van de databasereplica.  
 
-###  <a name="step-2---configuring-the-database-replica-server"></a><a name="BKMK_DBReplica_ConfigSrv"></a>Stap 2: de data base-replica server configureren  
+###  <a name="step-2---configuring-the-database-replica-server"></a><a name="BKMK_DBReplica_ConfigSrv"></a> Stap 2: de data base-replica server configureren  
 De database-replicaserver is een computer die SQL Server uitvoert en die een replica host van de sitedatabase voor gebruik door beheerpunten. De database-replicaserver synchroniseert op geplande tijden zijn kopie van de database met de databasereplica die wordt gepubliceerd door de sitedatabaseserver.  
 
 De database-replicaserver moet voldoen aan dezelfde vereisten als de sitedatabaseserver. De database-replicaserver kan wel een andere editie of versie van SQL Server uitvoeren dan de versie die de sitedatabaseserver gebruikt. Voor informatie over de ondersteunde versies van SQL Server raadpleegt u het onderwerp [ondersteuning voor SQL Server versies voor Configuration Manager](../../../../core/plan-design/configs/support-for-sql-server-versions.md) .  
@@ -158,7 +158,7 @@ Gebruik de volgende procedure als een voorbeeld van hoe u een databasereplicaser
 
       -   Selecteer **Nieuwe database** om een nieuwe database te maken voor de databasereplica. Geef op de pagina **Nieuwe database** een naam op voor de database en klik op **OK**.  
 
-   5. Klik op **Volgende** om door te gaan.  
+   5. Klik op **Volgende** om verder te gaan.  
 
    6. Klik op de pagina **beveiliging van distributie agent** op de eigenschappen knop **(....)** in de rij verbinding met abonnee server van het dialoog venster en configureer de beveiligings instellingen voor de verbinding.  
 
@@ -174,7 +174,7 @@ Gebruik de volgende procedure als een voorbeeld van hoe u een databasereplicaser
         -   Als de SQL Server Agent wordt uitgevoerd met een ander account, selecteert u **Uitvoeren onder het volgende Windows-account** en configureert u dat account. U kunt een Windows-account of een SQL Serveraccount opgeven.  
 
         > [!IMPORTANT]  
-        >  U moet aan het account dat de distributieagent uitvoert machtigingen verlenen voor de uitgever als een pull-abonnement. Zie [beveiliging van Distribution agent](https://docs.microsoft.com/sql/relational-databases/replication/distribution-agent-security?view=sql-server-ver15)voor meer informatie over het configureren van deze machtigingen.  
+        >  U moet aan het account dat de distributieagent uitvoert machtigingen verlenen voor de uitgever als een pull-abonnement. Zie [beveiliging van Distribution agent](/sql/relational-databases/replication/distribution-agent-security?view=sql-server-ver15)voor meer informatie over het configureren van deze machtigingen.  
 
       - Voor **Verbinding maken met de distributeur**selecteert u **Door het procesaccount te imiteren**.  
 
@@ -188,7 +188,7 @@ Gebruik de volgende procedure als een voorbeeld van hoe u een databasereplicaser
 
    9. Op de pagina **De wizard voltooien** klikt u op **Voltooien** en vervolgens op **Sluiten** om de wizard te voltooien.  
 
-3. Direct nadat de wizard Nieuw abonnement is voltooid, gebruikt u **SQL Server Management Studio** om verbinding te maken met de data base van de database replica server en voert u de volgende query uit om de eigenschap TRUSTWORTHY data base in te scha kelen:`ALTER DATABASE <MP Replica Database Name> SET TRUSTWORTHY ON;`  
+3. Direct nadat de wizard Nieuw abonnement is voltooid, gebruikt u **SQL Server Management Studio** om verbinding te maken met de data base van de database replica server en voert u de volgende query uit om de eigenschap TRUSTWORTHY data base in te scha kelen:  `ALTER DATABASE <MP Replica Database Name> SET TRUSTWORTHY ON;`  
 
 4. Controleer de synchronisatiestatus om te bevestigen dat het abonnement is voltooid:  
 
@@ -211,7 +211,7 @@ Gebruik de volgende procedure als een voorbeeld van hoe u een databasereplicaser
 
    De databasereplica is nu gereed voor gebruik door een beheerpunt.  
 
-###  <a name="step-3---configure-management-points-to-use-the-database-replica"></a><a name="BKMK_DBReplica_ConfigMP"></a>Stap 3: beheer punten voor het gebruik van de database replica configureren  
+###  <a name="step-3---configure-management-points-to-use-the-database-replica"></a><a name="BKMK_DBReplica_ConfigMP"></a> Stap 3: beheer punten voor het gebruik van de database replica configureren  
  U kunt een beheerpunt configureren op een primaire site voor gebruik van een databasereplica wanneer u de beheerpuntrol installeert. U kunt ook een bestaand beheerpunt opnieuw configureren voor gebruik van een databasereplica.  
 
  Gebruik de volgende informatie om een beheerpunt te configureren voor gebruik van een databasereplica:  
@@ -230,7 +230,7 @@ Naast het configureren van het beheerpunt voor gebruik van de database-replicase
 
 3.  Stel **Windows-verificatie** in op **ingeschakeld**en sluit vervolgens **Internet Information Services (IIS) Manager**.  
 
-###  <a name="step-4--configure-a-self-signed-certificate-for-the-database-replica-server"></a><a name="BKMK_DBReplica_Cert"></a>Stap 4: een zelfondertekend certificaat voor de data base-replica server configureren  
+###  <a name="step-4--configure-a-self-signed-certificate-for-the-database-replica-server"></a><a name="BKMK_DBReplica_Cert"></a> Stap 4: een zelfondertekend certificaat voor de data base-replica server configureren  
  U moet een zelfondertekend certificaat maken op de data base-replica server en dit certificaat beschikbaar maken voor elk beheer punt dat die data base-replica server gaat gebruiken.  
 
  Het certificaat wordt automatisch beschikbaar voor een beheerpunt dat is geïnstalleerd op de database-replicaserver. Als u dit certificaat echter beschikbaar wil maken op externe beheerpunten, moet u het certificaat exporteren en het dan toevoegen aan het vertrouwde personen-certificaatarchief op het externe beheerpunt.  
@@ -373,9 +373,9 @@ Naast het configureren van het beheerpunt voor gebruik van de database-replicase
 
 3.  Voer op de database-replicaserver de volgende opdracht uit die van toepassing is op de configuratie van uw SQL Server:  
 
-    -   Voor een standaard exemplaar van SQL Server: Klik met de rechter muisknop op het bestand **CreateMPReplicaCert. ps1** en selecteer **uitvoeren met Power shell**. Wanneer het script wordt uitgevoerd, wordt het zelfondertekende certificaat gemaakt en worden SQL Server geconfigureerd om het certificaat te gebruiken.  
+    -   Voor een standaard exemplaar van SQL Server: Klik met de rechter muisknop op het bestand **CreateMPReplicaCert.ps1** en selecteer **uitvoeren met Power shell**. Wanneer het script wordt uitgevoerd, wordt het zelfondertekende certificaat gemaakt en worden SQL Server geconfigureerd om het certificaat te gebruiken.  
 
-    -   Voor een benoemd exemplaar van SQL Server: gebruik Power shell om de opdracht **%Path%\CreateMPReplicaCert.ps1 xxxxxx** uit te voeren, waarbij **xxxxxx** de naam van de SQL Server instantie is.  
+    -   Voor een benoemd exemplaar van SQL Server: gebruik Power shell om de opdracht **% Path% \CreateMPReplicaCert.ps1 xxxxxx** uit te voeren, waarbij **xxxxxx** de naam van het SQL Server exemplaar is.  
 
     -   Controleer, nadat het script voltooid is, of de SQL Server Agent actief is. Als dit niet het geval is, start de SQL Server Agent dan opnieuw op.  
 
@@ -451,20 +451,20 @@ Om clientnotificatie met een databasereplica voor een beheerpunt te ondersteunen
 
    Enkele minuten na het voltooien van de configuratie van de sitedatabase en de database van de databasereplica zet de notificatiemanager op de primaire site het Service Broker-gesprek op voor clientnotificatie van de database van de primaire site naar de databasereplica.  
 
-###  <a name="supplemental-script-for-additional-database-replicas-on-a-single-sql-server"></a><a name="bkmk_supscript"></a>Aanvullend script voor extra database replica's op één SQL Server  
+###  <a name="supplemental-script-for-additional-database-replicas-on-a-single-sql-server"></a><a name="bkmk_supscript"></a> Aanvullend script voor extra database replica's op één SQL Server  
  Wanneer u het script uit stap 4 gebruikt voor het configureren van een zelfondertekend certificaat voor de data base-replica server op een SQL Server die al een database replica heeft die u wilt blijven gebruiken, moet u een gewijzigde versie van het oorspronkelijke script gebruiken. Met de volgende wijzigingen wordt voorkomen dat het script een bestaand certificaat op de server verwijdert en worden volgende certificaten met unieke beschrijvende namen gemaakt.  Bewerk het oorspronkelijke script als volgt:  
 
--   Commentaar uit (wordt niet uitgevoerd) elke regel tussen de script vermeldingen **# bestaand certificaat verwijderen als er een bestaat** en **# het nieuwe certificaat maken**. Als u dit wilt doen, voegt u een **#** als het eerste teken van elke betreffende regel toe.  
+-   Commentaar uit (wordt niet uitgevoerd) elke regel tussen de script vermeldingen **# bestaand certificaat verwijderen als er een bestaat** en **# het nieuwe certificaat maken**. Als u dit wilt doen, voegt u een  **#**  als het eerste teken van elke betreffende regel toe.  
 
--   Voor elke volgende databasereplica waarvoor u dit script gebruikt om te configureren, werkt u de beschrijvende naam voor het certificaat bij.  Als u dit wilt doen, bewerkt u de regel **$Enrollment. CertificateFriendlyName = "ConfigMgr-SQL Server-identificatie certificaat"** en vervang **configuration manager SQL Server Identification Certificate** door een nieuwe naam, zoals **ConfigMgr SQL Server identificatie Certificate1**.  
+-   Voor elke volgende databasereplica waarvoor u dit script gebruikt om te configureren, werkt u de beschrijvende naam voor het certificaat bij.  Als u dit wilt doen, bewerkt u de regel **$Enrollment. CertificateFriendlyName = "ConfigMgr-SQL Server-identificatie certificaat"** en vervang **configuration manager SQL Server Identification Certificate** door een nieuwe naam, zoals  **ConfigMgr SQL Server identificatie Certificate1**.  
 
-##  <a name="manage-database-replica-configurations"></a><a name="BKMK_DBReplicaOps"></a>Configuraties voor database replica's beheren  
- Wanneer u een databasereplica op een site gebruikt, moet u als aanvulling op het proces voor het verwijderen van een databasereplica, het verwijderen van een site die een databasereplica gebruikt, of het verplaatsen van de sitedatabase naar een nieuwe installatie van SQL Server, ook de informatie in de volgende secties gebruiken. Wanneer u informatie in de volgende secties gebruikt om publicaties te verwijderen, maak dan gebruik van de richtlijnen voor het verwijderen van transactionele replicatie voor de versie van SQL Server die u voor de databasereplica gebruikt. Zie [een publicatie verwijderen](https://docs.microsoft.com/sql/relational-databases/replication/publish/delete-a-publication?view=sql-server-ver15)voor meer informatie.  
+##  <a name="manage-database-replica-configurations"></a><a name="BKMK_DBReplicaOps"></a> Configuraties voor database replica's beheren  
+ Wanneer u een databasereplica op een site gebruikt, moet u als aanvulling op het proces voor het verwijderen van een databasereplica, het verwijderen van een site die een databasereplica gebruikt, of het verplaatsen van de sitedatabase naar een nieuwe installatie van SQL Server, ook de informatie in de volgende secties gebruiken. Wanneer u informatie in de volgende secties gebruikt om publicaties te verwijderen, maak dan gebruik van de richtlijnen voor het verwijderen van transactionele replicatie voor de versie van SQL Server die u voor de databasereplica gebruikt. Zie [een publicatie verwijderen](/sql/relational-databases/replication/publish/delete-a-publication?view=sql-server-ver15)voor meer informatie.  
 
 > [!NOTE]  
 >  Als u een sitedatabase herstelt die was geconfigureerd voor databasereplica's, moet u, voordat u de databasereplica's kunt gebruiken, elke databasereplica opnieuw configureren, waarbij zowel de publicaties als abonnementen opnieuw worden gemaakt.  
 
-###  <a name="uninstall-a-database-replica"></a><a name="BKMK_UninstallDbReplica"></a>Een database replica verwijderen  
+###  <a name="uninstall-a-database-replica"></a><a name="BKMK_UninstallDbReplica"></a> Een database replica verwijderen  
  Wanneer u een databasereplica voor een beheerpunt gebruikt, is het wellicht noodzakelijk om de databasereplica voor een bepaalde tijd te verwijderen en deze daarna opnieuw te configureren voor gebruik. U moet bijvoorbeeld database replica's verwijderen voordat u een Configuration Manager-site bijwerkt naar een nieuw Service Pack. Nadat de upgrade van de site voltooid is, kunt u de databasereplica terugzetten voor gebruik.  
 
  Gebruik de volgende stappen om een databasereplica te verwijderen.  
@@ -487,7 +487,7 @@ Om clientnotificatie met een databasereplica voor een beheerpunt te ondersteunen
 
 5.  Nadat u de publicatie, de distributie en de replica-database verwijderd hebt en het publiceren op de sitedatabaseserver hebt uitgeschakeld, is de databasereplica verwijderd.  
 
-###  <a name="uninstall-a-site-server-that-publishes-a-database-replica"></a><a name="BKMK_DBReplicaOps_Uninstall"></a>Een site server verwijderen die een database replica publiceert  
+###  <a name="uninstall-a-site-server-that-publishes-a-database-replica"></a><a name="BKMK_DBReplicaOps_Uninstall"></a> Een site server verwijderen die een database replica publiceert  
  Voordat u een site verwijdert die een databasereplica publiceert, moet u de volgende stappen uitvoeren om de publicatie en eventuele abonnementen op te schonen.  
 
 1.  Gebruik **SQL Server Management Studio** om de publicatie van de databasereplica van de siteserverdatabase te verwijderen.  
@@ -496,7 +496,7 @@ Om clientnotificatie met een databasereplica voor een beheerpunt te ondersteunen
 
 3.  Verwijder de site.  
 
-###  <a name="move-a-site-server-database-that-publishes-a-database-replica"></a><a name="BKMK_DBReplicaOps_Move"></a>Een site Server database verplaatsen die een database replica publiceert  
+###  <a name="move-a-site-server-database-that-publishes-a-database-replica"></a><a name="BKMK_DBReplicaOps_Move"></a> Een site Server database verplaatsen die een database replica publiceert  
  Wanneer u de sitedatabase naar een nieuwe computer verplaatst, voert u de volgende stappen uit:  
 
 1.  Gebruik **SQL Server Management Studio** om de publicatie voor de databasereplica van de siteserverdatabase te verwijderen.  
@@ -507,4 +507,4 @@ Om clientnotificatie met een databasereplica voor een beheerpunt te ondersteunen
 
 4.  Maak de publicatie voor de databasereplica op de sitedatabaseserver opnieuw. Zie [Stap 1: De sitedatabaseserver configureren voor het publiceren van de databasereplica](#BKMK_DBReplica_ConfigSiteDB) in dit onderwerp voor meer informatie.  
 
-5.  Maak de abonnementen voor de databasereplica op elke databasereplicaserver opnieuw. Zie [Stap 2: De databasereplicaserver configureren](#BKMK_DBReplica_ConfigSrv) in dit onderwerp voor meer informatie.  
+5.  Maak de abonnementen voor de databasereplica op elke databasereplicaserver opnieuw. Zie [Stap 2: De databasereplicaserver configureren](#BKMK_DBReplica_ConfigSrv) in dit onderwerp voor meer informatie.

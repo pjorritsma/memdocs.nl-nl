@@ -10,12 +10,12 @@ ms.assetid: 0ef5f3ce-b0e4-4775-b5c2-b245e45b4194
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1beec2f5ef7b6da9f1f093300ec6c2b239e7396e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 5d9331ce452e40944e4a9b363773d254a32f2c58
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724053"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697480"
 ---
 # <a name="prepare-site-system-roles-for-os-deployments-with-configuration-manager"></a>Site systeem rollen voorbereiden voor besturingssysteem implementaties met Configuration Manager
 
@@ -25,14 +25,14 @@ Voor het implementeren van besturings systemen in Configuration Manager moet u e
 
 
 
-##  <a name="distribution-points"></a><a name="BKMK_DistributionPoints"></a>Distributie punten  
+##  <a name="distribution-points"></a><a name="BKMK_DistributionPoints"></a> Distributie punten  
 
 De site systeemrol van het distributie punt bevat bron bestanden die clients kunnen downloaden. Deze inhoud is voor toepassingen, software-updates, installatie kopieën van besturings systemen, opstart installatie kopieën en stuur programmapakketten. Distributie van inhoud beheren door gebruik te maken van band breedte, bandbreedte beperking en plannings opties.  
 
 Het is belang rijk dat u over voldoende distributie punten beschikt ter ondersteuning van de implementatie van besturings systemen op computers. Het is ook belang rijk dat u de plaatsing van deze distributie punten in uw hiërarchie plant. Zie [inhoud en infra structuur voor inhoud beheren](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)voor meer informatie. Dit artikel bevat enkele aanvullende plannings overwegingen voor distributie punten die specifiek zijn voor de implementatie van het besturings systeem.  
 
 
-###  <a name="additional-planning-considerations-for-distribution-points"></a><a name="BKMK_AdditionalPlanning"></a>Aanvullende plannings overwegingen voor distributie punten  
+###  <a name="additional-planning-considerations-for-distribution-points"></a><a name="BKMK_AdditionalPlanning"></a> Aanvullende plannings overwegingen voor distributie punten  
 
 De volgende items zijn aanvullende plannings overwegingen voor distributie punten:  
 
@@ -63,7 +63,7 @@ U kunt een besturings systeem implementeren op een distributie punt, maar de ins
 Als u besturings systemen wilt implementeren om clients te Configuration Manager die PXE-opstart aanvragen maken, configureert u een of meer distributie punten om PXE-aanvragen te accepteren. Zodra u het distributie punt configureert, reageert het op PXE-opstart aanvragen en bepaalt de juiste implementatie actie die moet worden uitgevoerd. Zie voor meer informatie [Install or modify a distribution point](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_config-pxe).  
 
 
-###  <a name="customize-the-ramdisk-tftp-block-and-window-sizes-on-pxe-enabled-distribution-points"></a><a name="BKMK_RamDiskTFTP"></a>De RamDisk TFTP-blok-en venster grootte aanpassen op distributie punten met PXE-functionaliteit  
+###  <a name="customize-the-ramdisk-tftp-block-and-window-sizes-on-pxe-enabled-distribution-points"></a><a name="BKMK_RamDiskTFTP"></a> De RamDisk TFTP-blok-en venster grootte aanpassen op distributie punten met PXE-functionaliteit  
 
 U kunt de RamDisk TFTP-blok-en venster grootten aanpassen voor distributie punten met PXE-functionaliteit. Als u uw netwerk hebt aangepast, kan het downloaden van de opstart installatie kopie mislukken met een time-outfout vanwege een grote blok-of venster grootte. Met de aanpassingen van het RamDisk TFTP-blok en de venster grootte kunt u TFTP-verkeer optimaliseren wanneer u PXE gebruikt om te voldoen aan uw specifieke netwerk vereisten. Test de aangepaste instellingen in uw omgeving om te bepalen welke configuratie het meest efficiënt is.  
 
@@ -75,7 +75,7 @@ U kunt de RamDisk TFTP-blok-en venster grootten aanpassen voor distributie punte
 #### <a name="modify-the-ramdisk-tftp-window-size"></a>De grootte van het RamDisk TFTP-venster wijzigen  
 Als u de grootte van het RamDisk TFTP-venster wilt aanpassen, voegt u de volgende register sleutel toe aan distributie punten met PXE-functionaliteit:  
 
-- **Locatie**:`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP`  
+- **Locatie**: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP`  
 - **Naam**: RamDiskTFTPWindowSize  
 - **Type**: REG_DWORD  
 - **Waarde**: (aangepaste venster grootte)  
@@ -84,7 +84,7 @@ Als u de grootte van het RamDisk TFTP-venster wilt aanpassen, voegt u de volgend
 #### <a name="modify-the-ramdisk-tftp-block-size"></a>Wijzig de RamDisk TFTP-blok grootte  
 Als u de grootte van het RamDisk TFTP-venster wilt aanpassen, voegt u de volgende register sleutel toe aan distributie punten met PXE-functionaliteit:  
 
-- **Locatie**:`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP`  
+- **Locatie**: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP`  
 - **Naam**: RamDiskTFTPBlockSize  
 - **Type**: REG_DWORD  
 - **Waarde**: (aangepaste blok grootte)  
@@ -94,7 +94,7 @@ Als u de grootte van het RamDisk TFTP-venster wilt aanpassen, voegt u de volgend
 > Zowel Windows Deployment Services als de Configuration Manager PXE-responder-service ondersteunen deze TFTP-configuraties.  
 
 
-###  <a name="configure-distribution-points-to-support-multicast"></a><a name="BKMK_DPMulticast"></a>Distributie punten configureren voor de ondersteuning van multi cast  
+###  <a name="configure-distribution-points-to-support-multicast"></a><a name="BKMK_DPMulticast"></a> Distributie punten configureren voor de ondersteuning van multi cast  
 
 Multi cast is een methode voor netwerk optimalisatie. Gebruik het op distributie punten wanneer meerdere clients tegelijkertijd dezelfde installatie kopie van het besturings systeem downloaden. Wanneer u multi cast gebruikt, kunnen meerdere computers tegelijkertijd de installatie kopie van het besturings systeem downloaden als multi cast door het distributie punt. Zonder multi cast verzendt het distributie punt een kopie van de gegevens naar elke client via een afzonderlijke verbinding. Zie [multi cast gebruiken om Windows via het netwerk te implementeren](../deploy-use/use-multicast-to-deploy-windows-over-the-network.md)voor meer informatie.  
 
@@ -114,9 +114,9 @@ De grootte van de gebruikersstatus is direct van invloed op de schijfopslag op h
 
 ### <a name="user-state-migration-tool"></a>Hulpprogramma voor migratie van gebruikersstatus  
 
-Als u de gebruikers status wilt vastleggen en herstellen tijdens de implementatie van de besturings systemen, gebruikt u een Hulpprogramma voor migratie van gebruikersstatus (USMT)-pakket dat verwijst naar de USMT-bron bestanden. Configuration Manager maakt dit pakket automatisch in de Configuration Manager-console in **software bibliotheek** > **toepassings beheer** > **pakketten**. Configuration Manager gebruikt USMT 10 om de gebruikers status van het ene besturings systeem vast te leggen en vervolgens terug te zetten op een andere. De Windows Assessment and Deployment Kit (Windows ADK) voor Windows 10 bevat USMT 10.
+Als u de gebruikers status wilt vastleggen en herstellen tijdens de implementatie van de besturings systemen, gebruikt u een Hulpprogramma voor migratie van gebruikersstatus (USMT)-pakket dat verwijst naar de USMT-bron bestanden. Configuration Manager maakt dit pakket automatisch in de Configuration Manager-console in **software bibliotheek**  >  **toepassings beheer**  >  **pakketten**. Configuration Manager gebruikt USMT 10 om de gebruikers status van het ene besturings systeem vast te leggen en vervolgens terug te zetten op een andere. De Windows Assessment and Deployment Kit (Windows ADK) voor Windows 10 bevat USMT 10.
 
-Zie [algemene migratie scenario's](https://docs.microsoft.com/windows/deployment/usmt/usmt-common-migration-scenarios) in de Windows-documentatie voor een beschrijving van verschillende migratie SCENARIO'S voor USMT 10.  
+Zie [algemene migratie scenario's](/windows/deployment/usmt/usmt-common-migration-scenarios) in de Windows-documentatie voor een beschrijving van verschillende migratie SCENARIO'S voor USMT 10.  
 
 
 ### <a name="retention-policy"></a>Bewaarbeleid  
@@ -156,4 +156,4 @@ Wanneer u deze wizards gebruikt, wordt u gevraagd om de volgende informatie op t
 
 -   Of het statusmigratiepunt alleen moet reageren op aanvragen om gebruikersstatusgegevens terug te zetten. Wanneer u deze optie inschakelt, kunt u het status migratie punt niet gebruiken om de gebruikers status gegevens op te slaan.  
 
-Zie [site systeem rollen toevoegen](../../core/servers/deploy/configure/add-site-system-roles.md)voor de stappen om een site systeemrol te installeren.  
+Zie [site systeem rollen toevoegen](../../core/servers/deploy/configure/add-site-system-roles.md)voor de stappen om een site systeemrol te installeren.

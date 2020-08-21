@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
-ms.openlocfilehash: a5254ba5a25b10df2943eaa7f80b32b17ea3680f
-ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
+ms.openlocfilehash: 7dc3ef2ceb22f1c15c96127c593965ea31bdd7eb
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88591490"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696817"
 ---
 # <a name="configure-classifications-and-products-to-synchronize"></a>Classificaties en producten configureren voor synchronisatie  
 
@@ -129,7 +129,7 @@ Zie [ondersteuning voor Windows 10](../../core/plan-design/configs/support-for-w
 ### <a name="prerequisites"></a>Vereisten
 
 - Configuration Manager versie 1906 of hoger, geconfigureerd voor [Software-update beheer](../plan-design/plan-for-software-updates.md).
-- Windows 10-apparaten met [Windows Insider preview-versie](https://docs.microsoft.com/windows-insider/at-work-pro/wip-4-biz-get-started).
+- Windows 10-apparaten met [Windows Insider preview-versie](/windows-insider/at-work-pro/wip-4-biz-get-started).
 - Een verzameling die de Windows Insider-apparaten bevat.
 
 ### <a name="enable-windows-insider-upgrades-and-updates"></a>Windows Insider-upgrades en-updates inschakelen
@@ -160,7 +160,7 @@ Implementeer functie-updates voor Windows Insider naar uw doel verzameling net a
 - Er zijn licentie voorwaarden. uw implementatie moet de voor waarden accepteren om te kunnen installeren.
 - U kunt de [thread prioriteit in client instellingen](../../core/clients/deploy/about-client-settings.md#bkmk_thread-priority)gebruiken.
 - Dynamische update installeert automatisch essentiële updates, met inbegrip van de meest recente cumulatieve update, rechtstreeks vanuit Microsoft Update. Dit gedrag is gestart met functie-updates voor Windows 10 versie 1903. 
-  - U kunt [dynamische update expliciet uitschakelen in client instellingen](../../core/clients/deploy/about-client-settings.md#bkmk_du) of met een [setupconfig.ini-bestand](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options). 
+  - U kunt [dynamische update expliciet uitschakelen in client instellingen](../../core/clients/deploy/about-client-settings.md#bkmk_du) of met een [setupconfig.ini-bestand](/windows-hardware/manufacture/desktop/windows-setup-command-line-options). 
   - Zie het blog bericht over [dynamische updates voor Windows 10](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847) voor meer informatie.
 
 Zie [Windows als een service beheren](../../osd/deploy-use/manage-windows-as-a-service.md)voor meer informatie over het implementeren van upgrades.

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: e9f9f4e6-5b4f-4b8f-94d6-db9b2b239113
-ms.openlocfilehash: f276db618a2e67832ffa5575622e00eea02c7422
-ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
+ms.openlocfilehash: c0b4942e8a6e81477814e24281e0d9e3752c5f90
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87438616"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696868"
 ---
 # <a name="manage-surface-drivers-with-configuration-manager"></a>Surface-Stuur Programma's beheren met Configuration Manager
 
@@ -52,7 +52,7 @@ Voer de volgende stappen uit om de synchronisatie van Surface-Stuur Programma's 
 1. [Synchroniseer het software-update punt](../get-started/synchronize-software-updates.md) om de Surface-Stuur programma's naar Configuration Manager te brengen.
 1. Zodra de Surface-Stuur Programma's zijn gesynchroniseerd, implementeert u deze op dezelfde manier als u andere updates implementeert.
 
-## <a name="products-for-surface-drivers"></a><a name="bkmk_prod"></a>Producten voor Surface-Stuur Programma's
+## <a name="products-for-surface-drivers"></a><a name="bkmk_prod"></a> Producten voor Surface-Stuur Programma's
 
 De meeste Stuur Programma's horen bij de volgende product groepen:
 
@@ -83,7 +83,7 @@ De meeste Stuur Programma's horen bij de volgende product groepen:
 > [!NOTE]
 > De meeste Surface-Stuur Programma's behoren tot meerdere Windows 10-product groepen. Het is niet mogelijk om alle producten die hier worden vermeld, te selecteren. Om het aantal producten dat uw Update catalogus vult te beperken, raden we u aan om alleen de producten te selecteren die uw omgeving vereist voor synchronisatie.
 
-## <a name="surface-models"></a><a name="bkmk_models"></a>Surface-modellen
+## <a name="surface-models"></a><a name="bkmk_models"></a> Surface-modellen
 
 De volgende tabel bevat de Surface modellen en versies van Windows 10 waarop Configuration Manager Stuur Programma's kunt installeren. Updates voor Surface drivers zijn niet beschikbaar in Configuration Manager dezelfde dag dat ze worden gepubliceerd in de Microsoft Update catalogus. Configuration Manager behoudt een eigen lijst met de Stuur Programma's die worden geïmporteerd. Apparaten met Windows 10 S-producten moeten worden genoteerd. Micro soft streeft ernaar om de Surface-Stuur Programma's op de tweede dinsdag elke maand toe te voegen aan de acceptatie lijst om ze beschikbaar te maken voor synchronisatie met Configuration Manager. Zie [Veelgestelde vragen](#bkmk_faq)voor meer informatie.
 
@@ -136,9 +136,9 @@ Als u wilt controleren of het software-update punt correct is geconfigureerd, ge
    Dit item is een XML-element met een lijst met elke product groep en classificatie die momenteel is gesynchroniseerd door de server van uw software-update punt. Als u de producten die u hebt geselecteerd, niet kunt vinden, controleert u of de producten voor het software-update punt zijn opgeslagen.
 1. U kunt ook wachten tot de volgende synchronisatie is voltooid. Controleer vervolgens of het Surface-stuur programma en de firmware-updates worden weer gegeven in software-updates in de Configuration Manager-console. De-console kan bijvoorbeeld de volgende informatie weer geven: ![ gesynchroniseerde Surface-Stuur Programma's in Configuration Manager-console](media/synchronized-surface-drivers.png)
 
-##  <a name="frequently-asked-questions-faq"></a><a name="bkmk_faq"></a>Veelgestelde vragen
+##  <a name="frequently-asked-questions-faq"></a><a name="bkmk_faq"></a> Veelgestelde vragen
 
-### <a name="after-i-follow-the-steps-in-this-article-my-surface-drivers-are-still-not-synchronized-why"></a>Nadat ik de stappen in dit artikel heb gevolgd, worden de Surface-Stuur Programma's nog steeds niet gesynchroniseerd. Hoe komt dat?
+### <a name="after-i-follow-the-steps-in-this-article-my-surface-drivers-are-still-not-synchronized-why"></a>Nadat ik de stappen in dit artikel heb gevolgd, worden de Surface-Stuur Programma's nog steeds niet gesynchroniseerd. Waarom?
 
 Als u synchroniseert vanaf een upstream-server (Windows Server Update Services) in plaats van Microsoft Update, moet u ervoor zorgen dat de upstream-WSUS-server is geconfigureerd voor ondersteuning en synchronisatie van updates voor Surface-Stuur Programma's. Alle downstream-servers zijn beperkt tot updates die aanwezig zijn in de upstream-WSUS-Server database.
 
@@ -154,12 +154,12 @@ Nee. Zelfs als de update in WSUS wordt geïmporteerd, wordt de update niet geïm
 
 ### <a name="what-alternative-methods-do-i-have-to-deploy-surface-driver-and-firmware-updates"></a>Welke alternatieve methoden moet ik gebruiken voor het implementeren van Surface-Stuur Programma's en firmware-updates?
 
-Zie [Surface-Stuur Programma's en firmware-updates beheren](https://docs.microsoft.com/surface/manage-surface-driver-and-firmware-updates)voor meer informatie over het implementeren van Surface-Stuur Programma's en firmware-updates via alternatieve kanalen. Als u het MSI-of exe-bestand wilt downloaden en vervolgens wilt implementeren via traditionele software-implementatie kanalen, raadpleegt u [Surface firmware bijgewerkt met Configuration Manager](https://docs.microsoft.com/archive/blogs/thejoncallahan/keeping-surface-firmware-updated-with-configuration-manager).
+Zie [Surface-Stuur Programma's en firmware-updates beheren](/surface/manage-surface-driver-and-firmware-updates)voor meer informatie over het implementeren van Surface-Stuur Programma's en firmware-updates via alternatieve kanalen. Als u het MSI-of exe-bestand wilt downloaden en vervolgens wilt implementeren via traditionele software-implementatie kanalen, raadpleegt u [Surface firmware bijgewerkt met Configuration Manager](/archive/blogs/thejoncallahan/keeping-surface-firmware-updated-with-configuration-manager).
 
 ## <a name="next-steps"></a>Volgende stappen
 
 Raadpleeg de volgende artikelen voor meer informatie over Surface-Stuur Programma's:
 
-- [Overwegingen voor Opper vlak en System Center Configuration Manager](https://docs.microsoft.com/surface/considerations-for-surface-and-system-center-configuration-manager#deploy-surface-app-with-configuration-manager)
+- [Overwegingen voor Opper vlak en System Center Configuration Manager](/surface/considerations-for-surface-and-system-center-configuration-manager#deploy-surface-app-with-configuration-manager)
 - [Geschiedenis van Surface update](https://support.microsoft.com/help/4036283/surface-surface-update-history)
 - [Down load de nieuwste firmware en stuur Programma's voor Surface-apparaten](/surface/manage-surface-driver-and-firmware-updates)

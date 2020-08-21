@@ -10,12 +10,12 @@ ms.assetid: 1cd8ac9f-b7ba-4cf4-8cd2-d548b0d6b1df
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5dbd782c97d11f8077c18796c87c7880eb26f3f3
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: d1b07d30c7a593ec0bd70e6c330c57364186f2c8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129151"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697259"
 ---
 # <a name="set-up-bitlocker-portals"></a>BitLocker-portals instellen
 
@@ -66,21 +66,21 @@ Voer op de doel webserver de volgende acties uit:
 
 Na de installatie krijgt u toegang tot de portals via de volgende Url's:
 
-- Self-Service Portal:`https://webserver.contoso.com/SelfService`
-- Beheer-en bewakings website:`https://webserver.contoso.com/HelpDesk`
+- Self-Service Portal: `https://webserver.contoso.com/SelfService`
+- Beheer-en bewakings website: `https://webserver.contoso.com/HelpDesk`
 
 > [!NOTE]
-> Micro soft raadt u aan, maar het gebruik van HTTPS is niet vereist. Zie [SSL instellen in IIS](https://docs.microsoft.com/iis/manage/configuring-security/how-to-set-up-ssl-on-iis)voor meer informatie.
+> Micro soft raadt u aan, maar het gebruik van HTTPS is niet vereist. Zie [SSL instellen in IIS](/iis/manage/configuring-security/how-to-set-up-ssl-on-iis)voor meer informatie.
 
 ## <a name="script-usage"></a>Script gebruik
 
 Dit proces maakt gebruik van een Power shell-script, MBAMWebSiteInstaller.ps1, om deze onderdelen te installeren op de webserver. Het accepteert de volgende para meters:
 
-- `-SqlServerName <ServerName>`(vereist): de Fully Qualified Domain Name van de database server van de primaire site.
+- `-SqlServerName <ServerName>` (vereist): de Fully Qualified Domain Name van de database server van de primaire site.
 
 - `-SqlInstanceName <InstanceName>`: De SQL Server exemplaar naam voor de data base van de primaire site. Als SQL het standaard exemplaar gebruikt, neemt u deze para meter niet op.
 
-- `-SqlDatabaseName <DatabaseName>`(vereist): de naam van de data base van de primaire site, bijvoorbeeld `CM_ABC` .
+- `-SqlDatabaseName <DatabaseName>` (vereist): de naam van de data base van de primaire site, bijvoorbeeld `CM_ABC` .
 
 - `-ReportWebServiceUrl <ReportWebServiceUrl>`: De URL van de webservice van het Reporting service-punt van de primaire site. Dit is de **URL** van de webservice in **Reporting Services Configuration Manager**.
 
@@ -117,9 +117,9 @@ Controleren en problemen oplossen met behulp van de volgende logboeken:
 
 - Traceer logboeken voor elk onderdeel bevinden zich op de volgende standaard locaties:
 
-  - Self-Service Portal:`C:\inetpub\Microsoft BitLocker Management Solution\Logs\Self Service Website`
+  - Self-Service Portal: `C:\inetpub\Microsoft BitLocker Management Solution\Logs\Self Service Website`
 
-  - Beheer-en bewakings website:`C:\inetpub\Microsoft BitLocker Management Solution\Logs\Help Desk Website`
+  - Beheer-en bewakings website: `C:\inetpub\Microsoft BitLocker Management Solution\Logs\Help Desk Website`
 
 Zie [problemen met BitLocker oplossen](../../tech-ref/bitlocker/troubleshoot.md)voor meer informatie over probleem oplossing.
 

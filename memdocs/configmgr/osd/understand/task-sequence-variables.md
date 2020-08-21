@@ -10,12 +10,12 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 667d7451f467592bd0645b54d7068a20628ec98e
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 86a19970b58747d83ae8823eb8e2a85c40c03c4d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124138"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697344"
 ---
 # <a name="task-sequence-variables"></a>Takenreeksvariabelen
 
@@ -25,17 +25,17 @@ Dit artikel bevat een verwijzing voor alle beschik bare variabelen in alfabetisc
 
 Zie [using Task sequence Varia bles](using-task-sequence-variables.md)(Engelstalig) voor meer informatie.
 
-## <a name="task-sequence-variable-reference"></a><a name="bkmk_tsvar"></a>Naslag informatie over taken reeks variabelen
+## <a name="task-sequence-variable-reference"></a><a name="bkmk_tsvar"></a> Naslag informatie over taken reeks variabelen
 
-### <a name="_osddetectedwindir"></a><a name="OSDDetectedWinDir"></a>_OSDDetectedWinDir
+### <a name="_osddetectedwindir"></a><a name="OSDDetectedWinDir"></a> _OSDDetectedWinDir
 
 De taken reeks scant de harde schijven van de computer op een eerdere installatie van het besturings systeem wanneer Windows PE wordt gestart. De locatie van de Windows-map wordt opgeslagen in deze variabele. U kunt de takenreeks zo configureren dat deze waarde wordt opgehaald uit de omgeving en wordt gebruikt om dezelfde locatie van de Windows-map op te geven voor de installatie van het nieuwe besturingssysteem.
 
-### <a name="_osddetectedwindrive"></a><a name="OSDDetectedWinDrive"></a>_OSDDetectedWinDrive
+### <a name="_osddetectedwindrive"></a><a name="OSDDetectedWinDrive"></a> _OSDDetectedWinDrive
 
 De taken reeks scant de harde schijven van de computer op een eerdere installatie van het besturings systeem wanneer Windows PE wordt gestart. De locatie van de vaste schijf voor de installatie van het besturingssysteem wordt opgeslagen in deze variabele. U kunt de takenreeks zo configureren dat deze waarde wordt opgehaald uit de omgeving en wordt gebruikt om dezelfde locatie van de harde schijf op te geven voor het nieuwe besturingssysteem.
 
-### <a name="_osdmigrateusmtpackageid"></a><a name="OSDMigrateUsmtPackageID"></a>_OSDMigrateUsmtPackageID
+### <a name="_osdmigrateusmtpackageid"></a><a name="OSDMigrateUsmtPackageID"></a> _OSDMigrateUsmtPackageID
 
 *Is van toepassing op de stap [gebruikers status vastleggen](task-sequence-steps.md#BKMK_CaptureUserState) .*
 
@@ -43,7 +43,7 @@ De taken reeks scant de harde schijven van de computer op een eerdere installati
 
 Hiermee geeft u de pakket-ID op van het Configuration Manager-pakket dat de USMT-bestanden bevat. Deze variabele is vereist.
 
-### <a name="_osdmigrateusmtrestorepackageid"></a><a name="OSDMigrateUsmtRestorePackageID"></a>_OSDMigrateUsmtRestorePackageID
+### <a name="_osdmigrateusmtrestorepackageid"></a><a name="OSDMigrateUsmtRestorePackageID"></a> _OSDMigrateUsmtRestorePackageID
 
 *Is van toepassing op de stap [gebruikers status herstellen](task-sequence-steps.md#BKMK_RestoreUserState) .*
 
@@ -51,7 +51,7 @@ Hiermee geeft u de pakket-ID op van het Configuration Manager-pakket dat de USMT
 
 Hiermee geeft u de pakket-ID op van het Configuration Manager-pakket dat de USMT-bestanden bevat. Deze variabele is vereist.
 
-### <a name="_smstsadvertid"></a><a name="SMSTSAdvertID"></a>_SMSTSAdvertID
+### <a name="_smstsadvertid"></a><a name="SMSTSAdvertID"></a> _SMSTSAdvertID
 
 Slaat de unieke id van de huidige actieve takenreeksimplementatie op. Er wordt dezelfde indeling gebruikt als voor de implementatie-ID van een Configuration Manager software distributie. Deze variabele is niet gedefinieerd, als de takenreeks wordt uitgevoerd op zelfstandige media.
 
@@ -59,13 +59,13 @@ Slaat de unieke id van de huidige actieve takenreeksimplementatie op. Er wordt d
 
 `ABC20001`
 
-### <a name="_smstsassettag"></a><a name="SMSTSAssetTag"></a>_SMSTSAssetTag
+### <a name="_smstsassettag"></a><a name="SMSTSAssetTag"></a> _SMSTSAssetTag
 
 *Is van toepassing op de stap [dynamische variabelen instellen](task-sequence-steps.md#BKMK_SetDynamicVariables) .*
 
 Geeft de inventaristag voor de computer aan.
 
-### <a name="_smstsbootimageid"></a><a name="SMSTSBootImageID"></a>_SMSTSBootImageID
+### <a name="_smstsbootimageid"></a><a name="SMSTSBootImageID"></a> _SMSTSBootImageID
 
 Als de huidige actieve taken reeks naar een installatie kopie pakket verwijst, slaat deze variabele de pakket-ID van de opstart installatie kopie op. Als de taken reeks niet verwijst naar een installatie kopie pakket, wordt deze variabele niet ingesteld.
 
@@ -73,16 +73,16 @@ Als de huidige actieve taken reeks naar een installatie kopie pakket verwijst, s
 
 `ABC00001`  
 
-### <a name="_smstsbootuefi"></a><a name="SMSTSBootUEFI"></a>_SMSTSBootUEFI
+### <a name="_smstsbootuefi"></a><a name="SMSTSBootUEFI"></a> _SMSTSBootUEFI
 
 De taken reeks stelt deze variabele in wanneer een computer in de UEFI-modus wordt gedetecteerd.
 
-### <a name="_smstsclientcache"></a><a name="SMSTSClientCache"></a>_SMSTSClientCache
+### <a name="_smstsclientcache"></a><a name="SMSTSClientCache"></a> _SMSTSClientCache
 
 <!-- SCCMDocs issue 1400 -->
 De taken reeks stelt deze variabele in als de inhoud op het lokale station wordt opgeslagen in de cache. De variabele bevat het pad naar de cache. Als deze variabele niet bestaat, is er geen cache.
 
-### <a name="_smstsclientguid"></a><a name="SMSTSClientGUID"></a>_SMSTSClientGUID
+### <a name="_smstsclientguid"></a><a name="SMSTSClientGUID"></a> _SMSTSClientGUID
 
 Slaat de waarde op van Configuration Manager client-GUID. Als de taken reeks wordt uitgevoerd vanaf zelfstandige media, wordt deze variabele niet ingesteld.
 
@@ -90,7 +90,7 @@ Slaat de waarde op van Configuration Manager client-GUID. Als de taken reeks wor
 
 `0a1a9a4b-fc56-44f6-b7cd-c3f8ee37c04c`
 
-### <a name="_smstscurrentactionname"></a><a name="SMSTSCurrentActionName"></a>_SMSTSCurrentActionName
+### <a name="_smstscurrentactionname"></a><a name="SMSTSCurrentActionName"></a> _SMSTSCurrentActionName
 
 Hiermee geeft u de naam op van de huidige actieve stap van de takenreeks. Deze variabele wordt ingesteld voordat takenreeksbeheer elke afzonderlijke stap uitvoert.
 
@@ -98,31 +98,31 @@ Hiermee geeft u de naam op van de huidige actieve stap van de takenreeks. Deze v
 
 `run command line`
 
-### <a name="_smstsdefaultgateways"></a><a name="SMSTSDefaultGateways"></a>_SMSTSDefaultGateways
+### <a name="_smstsdefaultgateways"></a><a name="SMSTSDefaultGateways"></a> _SMSTSDefaultGateways
 
 *Is van toepassing op de stap [dynamische variabelen instellen](task-sequence-steps.md#BKMK_SetDynamicVariables) .*
 
 Geeft de standaardgateways aan die worden gebruikt door de computer.
 
-### <a name="_smstsdownloadondemand"></a><a name="SMSTSDownloadOnDemand"></a>_SMSTSDownloadOnDemand
+### <a name="_smstsdownloadondemand"></a><a name="SMSTSDownloadOnDemand"></a> _SMSTSDownloadOnDemand
 
 Als de huidige taken reeks wordt uitgevoerd in de modus voor downloaden op aanvraag, is deze variabele `true` . Down load-on-demand modus betekent dat taken reeks beheer alleen lokaal inhoud downloadt wanneer het toegang heeft tot de inhoud.
 
-### <a name="_smstsinwinpe"></a><a name="SMSTSInWinPE"></a>_SMSTSInWinPE
+### <a name="_smstsinwinpe"></a><a name="SMSTSInWinPE"></a> _SMSTSInWinPE
 
 Wanneer de huidige taken reeks stap wordt uitgevoerd in Windows PE, is deze variabele `true` . Test deze taken reeks variabele om de huidige besturingssysteem omgeving te bepalen.
 
-### <a name="_smstsipaddresses"></a><a name="SMSTSIPAddresses"></a>_SMSTSIPAddresses
+### <a name="_smstsipaddresses"></a><a name="SMSTSIPAddresses"></a> _SMSTSIPAddresses
 
 *Is van toepassing op de stap [dynamische variabelen instellen](task-sequence-steps.md#BKMK_SetDynamicVariables) .*
 
 Geeft de IP-adressen aan die door de computer worden gebruikt.
 
-### <a name="_smstslastactionname"></a><a name="SMSTSLastActionName"></a>_SMSTSLastActionName
+### <a name="_smstslastactionname"></a><a name="SMSTSLastActionName"></a> _SMSTSLastActionName
 
 Slaat de naam op van de laatste actie die is uitgevoerd. Deze variabele is gekoppeld aan **_SMSTSLastActionRetCode**. De taken reeks registreert deze waarden in het bestand bestand smsts. log. Deze variabele is handig bij het oplossen van problemen met een taken reeks. Wanneer een stap mislukt, kan een aangepast script de naam van de stap en de retour code bevatten.
 
-### <a name="_smstslastactionretcode"></a><a name="SMSTSLastActionRetCode"></a>_SMSTSLastActionRetCode
+### <a name="_smstslastactionretcode"></a><a name="SMSTSLastActionRetCode"></a> _SMSTSLastActionRetCode
 
 Slaat de retour code op van de laatste actie die is uitgevoerd. Deze variabele kan worden gebruikt als een voorwaarde om te bepalen of de volgende stap wordt uitgevoerd.
 
@@ -130,7 +130,7 @@ Slaat de retour code op van de laatste actie die is uitgevoerd. Deze variabele k
 
 `0`
 
-### <a name="_smstslastactionsucceeded"></a><a name="SMSTSLastActionSucceeded"></a>_SMSTSLastActionSucceeded
+### <a name="_smstslastactionsucceeded"></a><a name="SMSTSLastActionSucceeded"></a> _SMSTSLastActionSucceeded
 
 - Als de laatste stap is voltooid, is deze variabele `true` .  
 
@@ -138,12 +138,12 @@ Slaat de retour code op van de laatste actie die is uitgevoerd. Deze variabele k
 
 - Als de taken reeks de laatste actie heeft overgeslagen, omdat de stap is uitgeschakeld of de gekoppelde voor waarde is geëvalueerd als **Onwaar**, wordt deze variabele niet opnieuw ingesteld. Het bevat nog steeds de waarde voor de vorige actie.  
 
-### <a name="_smstslastcontentdownloadlocation"></a><a name="SMSTSLastContentDownloadLocation"></a>_SMSTSLastContentDownloadLocation
+### <a name="_smstslastcontentdownloadlocation"></a><a name="SMSTSLastContentDownloadLocation"></a> _SMSTSLastContentDownloadLocation
 
 <!-- 2840337 -->
 Vanaf versie 1906 bevat deze variabele de laatste locatie waar de taken reeks is gedownload of geprobeerd inhoud te downloaden. Inspecteer deze variabele in plaats van de client logboeken voor deze inhouds locatie te parseren.
 
-### <a name="_smstslaunchmode"></a><a name="SMSTSLaunchMode"></a>_SMSTSLaunchMode
+### <a name="_smstslaunchmode"></a><a name="SMSTSLaunchMode"></a> _SMSTSLaunchMode
 
 Specificeert dat de taken reeks is gestart via een van de volgende methoden:  
 
@@ -155,53 +155,53 @@ Specificeert dat de taken reeks is gestart via een van de volgende methoden:
 - **PXE**: opstarten via het netwerk met PXE
 - **HD**: voor bereide media op een harde schijf
 
-### <a name="_smstslogpath"></a><a name="SMSTSLogPath"></a>_SMSTSLogPath
+### <a name="_smstslogpath"></a><a name="SMSTSLogPath"></a> _SMSTSLogPath
 
 Slaat het volledige pad op van de logboekmap. Gebruik deze waarde om te bepalen waar de stappen van de taken reeks de acties registreren. Deze waarde wordt niet ingesteld als er geen vaste schijf beschikbaar is.
 
-### <a name="_smstsmacaddresses"></a><a name="SMSTSMacAddresses"></a>_SMSTSMacAddresses
+### <a name="_smstsmacaddresses"></a><a name="SMSTSMacAddresses"></a> _SMSTSMacAddresses
 
 *Is van toepassing op de stap [dynamische variabelen instellen](task-sequence-steps.md#BKMK_SetDynamicVariables) .*
 
 Geeft de MAC-adressen aan die door de computer worden gebruikt.
 
-### <a name="_smstsmachinename"></a><a name="SMSTSMachineName"></a>_SMSTSMachineName
+### <a name="_smstsmachinename"></a><a name="SMSTSMachineName"></a> _SMSTSMachineName
 
 Slaat de computernaam op en specificeert deze. Slaat de naam op van de computer die door de taken reeks wordt gebruikt om alle status berichten te registreren. Als u de naam van de computer in het nieuwe besturings systeem wilt wijzigen, gebruikt u de variabele [OSDComputerName](#OSDComputerName-input) .
 
-### <a name="_smstsmake"></a><a name="SMSTSMake"></a>_SMSTSMake
+### <a name="_smstsmake"></a><a name="SMSTSMake"></a> _SMSTSMake
 
 *Is van toepassing op de stap [dynamische variabelen instellen](task-sequence-steps.md#BKMK_SetDynamicVariables) .*
 
 Geeft het merk van de computer aan.
 
-### <a name="_smstsmdatapath"></a><a name="SMSTSMDataPath"></a>_SMSTSMDataPath
+### <a name="_smstsmdatapath"></a><a name="SMSTSMDataPath"></a> _SMSTSMDataPath
 
 Hiermee geeft u het pad op dat wordt gedefinieerd door de variabele [SMSTSLocalDataDrive](#SMSTSLocalDataDrive) . Dit pad geeft aan waar de taken reeks tijdelijke cache bestanden opslaat op de doel computer terwijl deze wordt uitgevoerd. Wanneer u SMSTSLocalDataDrive definieert voordat de taken reeks wordt gestart, bijvoorbeeld door een verzamelings variabele in te stellen, definieert Configuration Manager de _SMSTSMDataPath variabele zodra de taken reeks wordt gestart.
 
-### <a name="_smstsmediatype"></a><a name="SMSTSMediaType"></a>_SMSTSMediaType
+### <a name="_smstsmediatype"></a><a name="SMSTSMediaType"></a> _SMSTSMediaType
 
 Hiermee geeft u het type media op dat wordt gebruikt om de installatie te initiëren. Voorbeelden van typen media zijn opstartmedia, volledige media, PXE en voorgefaseerde media.
 
-### <a name="_smstsmodel"></a><a name="SMSTSModel"></a>_SMSTSModel
+### <a name="_smstsmodel"></a><a name="SMSTSModel"></a> _SMSTSModel
 
 *Is van toepassing op de stap [dynamische variabelen instellen](task-sequence-steps.md#BKMK_SetDynamicVariables) .*
 
 Geeft het model van de computer aan.
 
-### <a name="_smstsmp"></a><a name="SMSTSMP"></a>_SMSTSMP
+### <a name="_smstsmp"></a><a name="SMSTSMP"></a> _SMSTSMP
 
 Hiermee wordt de URL of het IP-adres van een Configuration Manager beheer punt opgeslagen.
 
-### <a name="_smstsmpport"></a><a name="SMSTSMPPort"></a>_SMSTSMPPort
+### <a name="_smstsmpport"></a><a name="SMSTSMPPort"></a> _SMSTSMPPort
 
 Hiermee wordt het poort nummer van een Configuration Manager beheer punt opgeslagen.
 
-### <a name="_smstsorgname"></a><a name="SMSTSOrgName"></a>_SMSTSOrgName
+### <a name="_smstsorgname"></a><a name="SMSTSOrgName"></a> _SMSTSOrgName
 
 Slaat de naam op van de titel van de brander die de taken reeks weergeeft in het voortgangs venster.
 
-### <a name="_smstsosupgradeactionreturncode"></a><a name="SMSTSOSUpgradeActionReturnCode"></a>_SMSTSOSUpgradeActionReturnCode
+### <a name="_smstsosupgradeactionreturncode"></a><a name="SMSTSOSUpgradeActionReturnCode"></a> _SMSTSOSUpgradeActionReturnCode
 
 *Is van toepassing op de stap [besturings systeem bijwerken](task-sequence-steps.md#BKMK_UpgradeOS) .*
 
@@ -211,7 +211,7 @@ Slaat de afsluit code waarde op die Windows Setup wordt geretourneerd om aan te 
 
 Na het volt ooien van een compatibiliteits scan moet u in latere stappen actie ondernemen, afhankelijk van de afsluit code van de fout of het succes. Begin met het uitvoeren van de upgrade. U kunt ook een markering in de omgeving instellen om te verzamelen met de hardware-inventarisatie. U kunt bijvoorbeeld een bestand toevoegen of een register sleutel instellen. Gebruik deze markering om een verzameling computers te maken die kunnen worden bijgewerkt of waarvoor actie moet worden uitgevoerd voordat de upgrade kan worden uitgevoerd.
 
-### <a name="_smstspackageid"></a><a name="SMSTSPackageID"></a>_SMSTSPackageID
+### <a name="_smstspackageid"></a><a name="SMSTSPackageID"></a> _SMSTSPackageID
 
 Slaat de id van de huidige actieve takenreeks op. Deze ID maakt gebruik van dezelfde indeling als een Configuration Manager pakket-ID.
 
@@ -219,7 +219,7 @@ Slaat de id van de huidige actieve takenreeks op. Deze ID maakt gebruik van deze
 
 `HJT00001`
 
-### <a name="_smstspackagename"></a><a name="SMSTSPackageName"></a>_SMSTSPackageName
+### <a name="_smstspackagename"></a><a name="SMSTSPackageName"></a> _SMSTSPackageName
 
 Slaat de naam op van de huidige actieve taken reeks. Een Configuration Manager beheerder geeft deze naam aan bij het maken van de taken reeks.
 
@@ -227,21 +227,21 @@ Slaat de naam op van de huidige actieve taken reeks. Een Configuration Manager b
 
 `Deploy Windows 10 task sequence`
 
-### <a name="_smstsrunfromdp"></a><a name="SMSTSRunFromDP"></a>_SMSTSRunFromDP
+### <a name="_smstsrunfromdp"></a><a name="SMSTSRunFromDP"></a> _SMSTSRunFromDP
 
 Ingesteld op `true` als de huidige taken reeks wordt uitgevoerd in de modus uitvoeren vanaf distributie punt. Deze modus geeft aan dat de taken reeks Manager vereiste pakket shares verkrijgt van het distributie punt.
 
-### <a name="_smstsserialnumber"></a><a name="SMSTSSerialNumber"></a>_SMSTSSerialNumber
+### <a name="_smstsserialnumber"></a><a name="SMSTSSerialNumber"></a> _SMSTSSerialNumber
 
 *Is van toepassing op de stap [dynamische variabelen instellen](task-sequence-steps.md#BKMK_SetDynamicVariables) .*
 
 Geeft het serienummer van de computer aan.
 
-### <a name="_smstssetuprollback"></a><a name="SMSTSSetupRollback"></a>_SMSTSSetupRollback
+### <a name="_smstssetuprollback"></a><a name="SMSTSSetupRollback"></a> _SMSTSSetupRollback
 
 Hiermee geeft u op of Windows Setup een terugdraai bewerking hebt uitgevoerd tijdens een in-place upgrade. De waarden van de variabele kunnen `true` of zijn `false` .
 
-### <a name="_smstssitecode"></a><a name="SMSTSSiteCode"></a>_SMSTSSiteCode
+### <a name="_smstssitecode"></a><a name="SMSTSSiteCode"></a> _SMSTSSiteCode
 
 Slaat de site code op van de Configuration Manager-site.
 
@@ -249,7 +249,7 @@ Slaat de site code op van de Configuration Manager-site.
 
 `ABC`
 
-### <a name="_smststimezone"></a><a name="SMSTSTimezone"></a>_SMSTSTimezone
+### <a name="_smststimezone"></a><a name="SMSTSTimezone"></a> _SMSTSTimezone
 
 Deze variabele slaat de tijdzone gegevens op in de volgende indeling:
 
@@ -261,18 +261,18 @@ Voor de tijd zone **Eastern Time (VS en Canada)**:
 
 `300,0,-60,0,11,0,1,2,0,0,0,0,3,0,2,2,0,0,0,Eastern Standard Time,Eastern Daylight Time`
 
-### <a name="_smststype"></a><a name="SMSTSType"></a>_SMSTSType
+### <a name="_smststype"></a><a name="SMSTSType"></a> _SMSTSType
 
 Hiermee geeft u het type op van de huidige actieve takenreeks. Dit kan een van de volgende waarden hebben:  
 
 - **1**: een algemene taken reeks
 - **2**: een taken reeks voor de implementatie van een besturings systeem
 
-### <a name="_smstsusecrl"></a><a name="SMSTSUseCRL"></a>_SMSTSUseCRL
+### <a name="_smstsusecrl"></a><a name="SMSTSUseCRL"></a> _SMSTSUseCRL
 
 Wanneer de taken reeks gebruikmaakt van HTTPS om te communiceren met het beheer punt, wordt met deze variabele opgegeven of de certificaatintrekkingslijst (CRL) wordt gebruikt.
 
-### <a name="_smstsuserstarted"></a><a name="SMSTSUserStarted"></a>_SMSTSUserStarted
+### <a name="_smstsuserstarted"></a><a name="SMSTSUserStarted"></a> _SMSTSUserStarted
 
 Hiermee wordt aangegeven of een gebruiker de taken reeks heeft gestart. Deze variabele wordt alleen ingesteld als de taken reeks wordt gestart vanuit software Center. Als [_SMSTSLaunchMode](#SMSTSLaunchMode) bijvoorbeeld is ingesteld op `SMS` .
 
@@ -282,112 +282,112 @@ Deze variabele kan de volgende waarden hebben:
 
 - `false`: Hiermee geeft u op dat de taken reeks automatisch wordt geïnitieerd door de Configuration Manager scheduler.
 
-### <a name="_smstsusessl"></a><a name="SMSTSUseSSL"></a>_SMSTSUseSSL
+### <a name="_smstsusessl"></a><a name="SMSTSUseSSL"></a> _SMSTSUseSSL
 
 Hiermee geeft u op of de taken reeks SSL gebruikt om te communiceren met het Configuration Manager beheer punt. Als u uw site systemen voor HTTPS configureert, wordt de waarde ingesteld op `true` .
 
-### <a name="_smstsuuid"></a><a name="SMSTSUUID"></a>_SMSTSUUID
+### <a name="_smstsuuid"></a><a name="SMSTSUUID"></a> _SMSTSUUID
 
 *Is van toepassing op de stap [dynamische variabelen instellen](task-sequence-steps.md#BKMK_SetDynamicVariables) .*
 
 Geeft de UUID van de computer aan.
 
-### <a name="_smstswtg"></a><a name="SMSTSWTG"></a>_SMSTSWTG
+### <a name="_smstswtg"></a><a name="SMSTSWTG"></a> _SMSTSWTG
 
 De variabele specificeert of de computer wordt gebruikt als een Windows To Go-apparaat.
 
-### <a name="_ts_crmemory"></a><a name="TSCRMEMORY"></a>_TS_CRMEMORY
+### <a name="_ts_crmemory"></a><a name="TSCRMEMORY"></a> _TS_CRMEMORY
 
 *Vanaf versie 2002* <!--6005561-->  
 *Is van toepassing op de stap [gereedheid controleren](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
 Een alleen-lezen variabele voor of de controle van het **minimale geheugen (MB)** de waarde True ( `1` ) of False ( `0` ) retourneert. Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
 
-### <a name="_ts_crspeed"></a><a name="TSCRSPEED"></a>_TS_CRSPEED
+### <a name="_ts_crspeed"></a><a name="TSCRSPEED"></a> _TS_CRSPEED
 
 *Vanaf versie 2002* <!--6005561-->  
 *Is van toepassing op de stap [gereedheid controleren](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
 Een alleen-lezen variabele voor of de **minimale processor snelheid (MHz)** controleren True ( `1` ) of False ( `0` ) retourneert. Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
 
-### <a name="_ts_crdisk"></a><a name="TSCRDISK"></a>_TS_CRDISK
+### <a name="_ts_crdisk"></a><a name="TSCRDISK"></a> _TS_CRDISK
 
 *Vanaf versie 2002* <!--6005561-->  
 *Is van toepassing op de stap [gereedheid controleren](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
 Een alleen-lezen variabele voor of de controle **minimale beschik bare schijf ruimte (MB)** de waarde True ( `1` ) of False ( `0` ) retourneert. Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
 
-### <a name="_ts_crostype"></a><a name="TSCROSTYPE"></a>_TS_CROSTYPE
+### <a name="_ts_crostype"></a><a name="TSCROSTYPE"></a> _TS_CROSTYPE
 
 *Vanaf versie 2002* <!--6005561-->  
 *Is van toepassing op de stap [gereedheid controleren](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
 Een alleen-lezen variabele voor of het **huidige besturings systeem dat moet worden vernieuwd, wordt geretourneerd als** True ( `1` ) of False ( `0` ). Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
 
-### <a name="_ts_crarch"></a><a name="TSCRARCH"></a>_TS_CRARCH
+### <a name="_ts_crarch"></a><a name="TSCRARCH"></a> _TS_CRARCH
 
 *Vanaf versie 2002* <!--6005561-->  
 *Is van toepassing op de stap [gereedheid controleren](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
 Een alleen-lezen variabele voor of de **architectuur van de huidige controle van het besturings systeem** True ( `1` ) of False ( `0` ) retourneert. Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
 
-### <a name="_ts_crminosver"></a><a name="TSCRMINOSVER"></a>_TS_CRMINOSVER
+### <a name="_ts_crminosver"></a><a name="TSCRMINOSVER"></a> _TS_CRMINOSVER
 
 *Vanaf versie 2002* <!--6005561-->  
 *Is van toepassing op de stap [gereedheid controleren](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
 Een alleen-lezen variabele voor of de minimale controle van de versie van het **besturings systeem** True ( `1` ) of False ( `0` ) retourneert. Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
 
-### <a name="_ts_crmaxosver"></a><a name="TSCRMAXOSVER"></a>_TS_CRMAXOSVER
+### <a name="_ts_crmaxosver"></a><a name="TSCRMAXOSVER"></a> _TS_CRMAXOSVER
 
 *Vanaf versie 2002* <!--6005561-->  
 *Is van toepassing op de stap [gereedheid controleren](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
 Een alleen-lezen variabele voor of de maximale controle van de versie van het **besturings systeem** True ( `1` ) of False ( `0` ) retourneert. Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
 
-### <a name="_ts_crclientminver"></a><a name="TSCRCLIENTMINVER"></a>_TS_CRCLIENTMINVER
+### <a name="_ts_crclientminver"></a><a name="TSCRCLIENTMINVER"></a> _TS_CRCLIENTMINVER
 
 *Vanaf versie 2002* <!--6005561-->  
 *Is van toepassing op de stap [gereedheid controleren](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
 Een alleen-lezen variabele voor of de controle van de **minimale client versie** True ( `1` ) of False ( `0` ) retourneert. Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
 
-### <a name="_ts_croslanguage"></a><a name="TSCROSLANGUAGE"></a>_TS_CROSLANGUAGE
+### <a name="_ts_croslanguage"></a><a name="TSCROSLANGUAGE"></a> _TS_CROSLANGUAGE
 
 *Vanaf versie 2002* <!--6005561-->  
 *Is van toepassing op de stap [gereedheid controleren](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
 Een alleen-lezen variabele voor of de **taal van de huidige controle van het besturings systeem** True ( `1` ) of False ( `0` ) retourneert. Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
 
-### <a name="_ts_cracpower"></a><a name="TSCRACPOWER"></a>_TS_CRACPOWER
+### <a name="_ts_cracpower"></a><a name="TSCRACPOWER"></a> _TS_CRACPOWER
 
 *Vanaf versie 2002* <!--6005561-->  
 *Is van toepassing op de stap [gereedheid controleren](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
 Een alleen-lezen variabele voor of de **netstroom die is aangesloten op het stop** contact, True ( `1` ) of False ( `0` ) retourneert. Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
 
-### <a name="_ts_crnetwork"></a><a name="TSCRNETWORK"></a>_TS_CRNETWORK
+### <a name="_ts_crnetwork"></a><a name="TSCRNETWORK"></a> _TS_CRNETWORK
 
 *Vanaf versie 2002* <!--6005561-->  
 *Is van toepassing op de stap [gereedheid controleren](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
 Een alleen-lezen variabele voor of de controle van de **netwerk adapter die is verbonden** , True ( `1` ) of False ( `0` ) retourneert. Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
 
-### <a name="_ts_cruefi"></a><a name="TSCRUEFI"></a>_TS_CRUEFI
+### <a name="_ts_cruefi"></a><a name="TSCRUEFI"></a> _TS_CRUEFI
 
 *Vanaf versie 2006* <!--6452769-->
 *Is van toepassing op de stap [gereedheid controleren](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
 Een alleen-lezen variabele voor of de **computer zich in de UEFI-modus bevindt** BIOS ( `0` ) of UEFI ( `1` ). Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
 
-### <a name="_ts_crwired"></a><a name="TSCRWIRED"></a>_TS_CRWIRED
+### <a name="_ts_crwired"></a><a name="TSCRWIRED"></a> _TS_CRWIRED
 
 *Vanaf versie 2002* <!--6005561-->  
 *Is van toepassing op de stap [gereedheid controleren](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
 Een alleen-lezen variabele voor of de **netwerk adapter niet draadloze** controle de waarde True ( `1` ) of False ( `0` ) retourneert. Als u de controle niet inschakelt, is de waarde van deze alleen-lezen variabele leeg.
 
-### <a name="_tsappinstallstatus"></a><a name="TSAppInstallStatus"></a>_TSAppInstallStatus
+### <a name="_tsappinstallstatus"></a><a name="TSAppInstallStatus"></a> _TSAppInstallStatus
 
 De taken reeks stelt deze variabele in met de installatie status voor de toepassing tijdens de stap [toepassing installeren](task-sequence-steps.md#BKMK_InstallApplication) . Hiermee wordt een van de volgende waarden ingesteld:  
 
@@ -399,7 +399,7 @@ De taken reeks stelt deze variabele in met de installatie status voor de toepass
 
 - **Geslaagd**: er zijn geen fouten of waarschuwingen gedetecteerd tijdens de stap toepassing installeren.  
 
-### <a name="_tssecureboot"></a><a name="TSSecureBoot"></a>_TSSecureBoot
+### <a name="_tssecureboot"></a><a name="TSSecureBoot"></a> _TSSecureBoot
 
 *Vanaf versie 2002* <!--5842295-->  
 
@@ -409,7 +409,7 @@ Gebruik deze variabele om de status van beveiligd opstarten op een apparaat met 
 - `Enabled`: Beveiligd opstarten is ingeschakeld op het apparaat.
 - `Disabled`: Beveiligd opstarten is uitgeschakeld op het apparaat.
 
-### <a name="osdadapter"></a><a name="OSDAdapter"></a>OSDAdapter
+### <a name="osdadapter"></a><a name="OSDAdapter"></a> OSDAdapter
 
 *Is van toepassing op de stap [netwerk instellingen Toep assen](task-sequence-steps.md#BKMK_ApplyNetworkSettings) .*
 
@@ -508,7 +508,7 @@ Index van de instellingen van de netwerk adapter in de matrix met instellingen.
 - **OSDAdapter0Gateways** = `192.168.0.1`  
 - **OSDAdapter0DNSSuffix** = `contoso.com`  
 
-### <a name="osdadaptercount"></a><a name="OSDAdapterCount"></a>OSDAdapterCount
+### <a name="osdadaptercount"></a><a name="OSDAdapterCount"></a> OSDAdapterCount
 
 *Is van toepassing op de stap [netwerk instellingen Toep assen](task-sequence-steps.md#BKMK_ApplyNetworkSettings) .*
 
@@ -520,7 +520,7 @@ Als u bijvoorbeeld de waarde **OSDAdapter0TCPIPNetbiosOptions** voor de eerste a
 
 Als u deze waarde niet opgeeft, negeert de taken reeks alle **OSDAdapter** -waarden.
 
-### <a name="osdapplydriverbootcriticalcontentuniqueid"></a><a name="OSDApplyDriverBootCriticalContentUniqueID"></a>OSDApplyDriverBootCriticalContentUniqueID
+### <a name="osdapplydriverbootcriticalcontentuniqueid"></a><a name="OSDApplyDriverBootCriticalContentUniqueID"></a> OSDApplyDriverBootCriticalContentUniqueID
 
 *Is van toepassing op de stap [Stuur programmapakket Toep assen](task-sequence-steps.md#BKMK_ApplyDriverPackage) .*
 
@@ -528,7 +528,7 @@ Als u deze waarde niet opgeeft, negeert de taken reeks alle **OSDAdapter** -waar
 
 Hiermee geeft u de inhoud-id op van het te installeren stuurprogramma voor massaopslagapparaten uit het stuurprogrammapakket. Als deze variabele niet is opgegeven, wordt er geen stuur programma voor massa opslag geïnstalleerd.
 
-### <a name="osdapplydriverbootcriticalhardwarecomponent"></a><a name="OSDApplyDriverBootCriticalHardwareComponent"></a>OSDApplyDriverBootCriticalHardwareComponent
+### <a name="osdapplydriverbootcriticalhardwarecomponent"></a><a name="OSDApplyDriverBootCriticalHardwareComponent"></a> OSDApplyDriverBootCriticalHardwareComponent
 
 *Is van toepassing op de stap [Stuur programmapakket Toep assen](task-sequence-steps.md#BKMK_ApplyDriverPackage) .*
 
@@ -538,7 +538,7 @@ Hiermee geeft u op of een stuur programma voor massaopslagapparaten wordt geïns
 
 Als [OSDApplyDriverBootCriticalContentUniqueID](#OSDApplyDriverBootCriticalContentUniqueID) is ingesteld, is deze variabele vereist.
 
-### <a name="osdapplydriverbootcriticalid"></a><a name="OSDApplyDriverBootCriticalID"></a>OSDApplyDriverBootCriticalID
+### <a name="osdapplydriverbootcriticalid"></a><a name="OSDApplyDriverBootCriticalID"></a> OSDApplyDriverBootCriticalID
 
 *Is van toepassing op de stap [Stuur programmapakket Toep assen](task-sequence-steps.md#BKMK_ApplyDriverPackage) .*
 
@@ -548,7 +548,7 @@ Hiermee geeft u de essentiële opstart-id op van het te installeren stuurprogram
 
 Als [OSDApplyDriverBootCriticalContentUniqueID](#OSDApplyDriverBootCriticalContentUniqueID) is ingesteld, is deze variabele vereist.
 
-### <a name="osdapplydriverbootcriticalinffile"></a><a name="OSDApplyDriverBootCriticalINFFile"></a>OSDApplyDriverBootCriticalINFFile
+### <a name="osdapplydriverbootcriticalinffile"></a><a name="OSDApplyDriverBootCriticalINFFile"></a> OSDApplyDriverBootCriticalINFFile
 
 *Is van toepassing op de stap [Stuur programmapakket Toep assen](task-sequence-steps.md#BKMK_ApplyDriverPackage) .*
 
@@ -558,7 +558,7 @@ Hiermee geeft u het INF-bestand op van het te installeren stuurprogramma voor ma
 
 Als [OSDApplyDriverBootCriticalContentUniqueID](#OSDApplyDriverBootCriticalContentUniqueID) is ingesteld, is deze variabele vereist.
 
-### <a name="osdautoapplydriverbestmatch"></a><a name="OSDAutoApplyDriverBestMatch"></a>OSDAutoApplyDriverBestMatch
+### <a name="osdautoapplydriverbestmatch"></a><a name="OSDAutoApplyDriverBestMatch"></a> OSDAutoApplyDriverBestMatch
 
 *Is van toepassing op de stap [Stuur Programma's automatisch Toep assen](task-sequence-steps.md#BKMK_AutoApplyDrivers) .*
 
@@ -568,11 +568,11 @@ Als er meerdere apparaatstuurprogramma's in de stuurprogrammacatalogus zijn die 
 
 #### <a name="valid-values"></a>Geldige waarden
 
-- `true`(standaard): Installeer alleen het beste apparaatstuurprogramma  
+- `true` (standaard): Installeer alleen het beste apparaatstuurprogramma  
 
 - `false`: Hiermee worden alle compatibele apparaatstuurprogramma's geïnstalleerd en kiest Windows het beste stuur programma dat moet worden gebruikt  
 
-### <a name="osdautoapplydrivercategorylist"></a><a name="OSDAutoApplyDriverCategoryList"></a>OSDAutoApplyDriverCategoryList
+### <a name="osdautoapplydrivercategorylist"></a><a name="OSDAutoApplyDriverCategoryList"></a> OSDAutoApplyDriverCategoryList
 
 *Is van toepassing op de stap [Stuur Programma's automatisch Toep assen](task-sequence-steps.md#BKMK_AutoApplyDrivers) .*
 
@@ -580,7 +580,7 @@ Als er meerdere apparaatstuurprogramma's in de stuurprogrammacatalogus zijn die 
 
 Een door komma's gescheiden lijst van unieke categorie-id's uit de stuurprogrammacatalogus. Met de stap **stuur programma automatisch Toep assen** worden alleen de Stuur Programma's in ten minste één van de opgegeven categorieën beschouwd. Deze waarde is optioneel en is niet standaard ingesteld. Haal de beschik bare categorie-Id's op door de lijst met **SMS_CategoryInstance** objecten op de site te inventariseren.
 
-### <a name="osdbitlockerrebootcount"></a><a name="OSDBitLockerRebootCount"></a>OSDBitLockerRebootCount
+### <a name="osdbitlockerrebootcount"></a><a name="OSDBitLockerRebootCount"></a> OSDBitLockerRebootCount
 
 *Is van toepassing op de stap [BitLocker uitschakelen](task-sequence-steps.md#BKMK_DisableBitLocker) .*
 
@@ -591,7 +591,7 @@ Met ingang van versie 1906 gebruikt u deze variabele om het aantal keer opnieuw 
 
 Een geheel getal van `1` tot `15` .
 
-### <a name="osdbitlockerrebootcountoverride"></a><a name="OSDBitLockerRebootCountOverride"></a>OSDBitLockerRebootCountOverride
+### <a name="osdbitlockerrebootcountoverride"></a><a name="OSDBitLockerRebootCountOverride"></a> OSDBitLockerRebootCountOverride
 
 *Is van toepassing op de stap [BitLocker uitschakelen](task-sequence-steps.md#BKMK_DisableBitLocker) .*
 
@@ -602,7 +602,7 @@ Met ingang van versie 1906 stelt u deze waarde in om het aantal te overschrijven
 
 Een geheel getal van `0` tot `15` .
 
-### <a name="osdbitlockerrecoverypassword"></a><a name="OSDBitLockerRecoveryPassword"></a>OSDBitLockerRecoveryPassword
+### <a name="osdbitlockerrecoverypassword"></a><a name="OSDBitLockerRecoveryPassword"></a> OSDBitLockerRecoveryPassword
 
 *Is van toepassing op de stap [BitLocker inschakelen](task-sequence-steps.md#BKMK_EnableBitLocker) .*
 
@@ -610,7 +610,7 @@ Een geheel getal van `0` tot `15` .
 
 In plaats van een wille keurig herstel wachtwoord te genereren, gebruikt de stap **BitLocker inschakelen** de opgegeven waarde als het herstel wachtwoord. De waarde moet een geldig numeriek BitLocker-herstelwachtwoord zijn.
 
-### <a name="osdbitlockerstartupkey"></a><a name="OSDBitLockerStartupKey"></a>OSDBitLockerStartupKey
+### <a name="osdbitlockerstartupkey"></a><a name="OSDBitLockerStartupKey"></a> OSDBitLockerStartupKey
 
 *Is van toepassing op de stap [BitLocker inschakelen](task-sequence-steps.md#BKMK_EnableBitLocker) .*
 
@@ -618,7 +618,7 @@ In plaats van een wille keurig herstel wachtwoord te genereren, gebruikt de stap
 
 In plaats van een wille keurige opstart sleutel te genereren voor de sleutel beheer optie **opstart sleutel op USB,** wordt met de stap **BitLocker inschakelen** de Trusted Platform Module (TPM) gebruikt als opstart sleutel. De waarde moet een geldige, 256-bits BitLocker-opstartsleutel met Base64-codering zijn.
 
-### <a name="osdcaptureaccount"></a><a name="OSDCaptureAccount"></a>OSDCaptureAccount
+### <a name="osdcaptureaccount"></a><a name="OSDCaptureAccount"></a> OSDCaptureAccount
 
 *Is van toepassing op de stap voor het [vastleggen van installatie kopieën van besturings systemen](task-sequence-steps.md#BKMK_CaptureOperatingSystemImage) .*
 
@@ -628,7 +628,7 @@ Hiermee geeft u een Windows-account naam op die machtigingen heeft voor het opsl
 
 Zie [accounts](../../core/plan-design/hierarchy/accounts.md#capture-os-image-account)voor meer informatie over de installatie kopie van het besturings systeem.
 
-### <a name="osdcaptureaccountpassword"></a><a name="OSDCaptureAccountPassword"></a>OSDCaptureAccountPassword
+### <a name="osdcaptureaccountpassword"></a><a name="OSDCaptureAccountPassword"></a> OSDCaptureAccountPassword
 
 *Is van toepassing op de stap voor het [vastleggen van installatie kopieën van besturings systemen](task-sequence-steps.md#BKMK_CaptureOperatingSystemImage) .*
 
@@ -636,7 +636,7 @@ Zie [accounts](../../core/plan-design/hierarchy/accounts.md#capture-os-image-acc
 
 Hiermee geeft u het wacht woord op voor het Windows-account ([OSDCaptureAccount](#OSDCaptureAccount)) dat wordt gebruikt voor het opslaan van de vastgelegde installatie kopie op een netwerk share ([OSDCaptureDestination](#OSDCaptureDestination)).
 
-### <a name="osdcapturedestination"></a><a name="OSDCaptureDestination"></a>OSDCaptureDestination
+### <a name="osdcapturedestination"></a><a name="OSDCaptureDestination"></a> OSDCaptureDestination
 
 *Is van toepassing op de stap voor het [vastleggen van installatie kopieën van besturings systemen](task-sequence-steps.md#BKMK_CaptureOperatingSystemImage) .*
 
@@ -644,7 +644,7 @@ Hiermee geeft u het wacht woord op voor het Windows-account ([OSDCaptureAccount]
 
 Hiermee geeft u de locatie op waar de vastgelegde installatie kopie van het besturings systeem wordt opgeslagen in de taken reeks. De maximale lengte van de mapnaam is 255 tekens. Als de netwerk share verificatie vereist, geeft u de variabelen [OSDCaptureAccount](#OSDCaptureAccount) en [OSDCaptureAccountPassword](#OSDCaptureAccountPassword) op.
 
-### <a name="osdcomputername-input"></a><a name="OSDComputerName-input"></a>OSDComputerName (invoer)
+### <a name="osdcomputername-input"></a><a name="OSDComputerName-input"></a> OSDComputerName (invoer)
 
 *Is van toepassing op de stap [Windows-instellingen Toep assen](task-sequence-steps.md#BKMK_ApplyWindowsSettings) .*
 
@@ -652,15 +652,15 @@ Geeft de naam van de doelcomputer op.
 
 #### <a name="example"></a>Voorbeeld
 
-`%_SMSTSMachineName%`prijs
+`%_SMSTSMachineName%` prijs
 
-### <a name="osdcomputername-output"></a><a name="OSDComputerName-output"></a>OSDComputerName (uitvoer)
+### <a name="osdcomputername-output"></a><a name="OSDComputerName-output"></a> OSDComputerName (uitvoer)
 
 *Is van toepassing op de stap [Windows-instellingen vastleggen](task-sequence-steps.md#BKMK_CaptureWindowsSettings) .*
 
 Ingesteld op de NetBIOS-naam van de computer. De waarde wordt alleen ingesteld als de variabele [OSDMigrateComputerName](#OSDMigrateComputerName) is ingesteld op `true` .
 
-### <a name="osdconfigfilename"></a><a name="OSDConfigFileName"></a>OSDConfigFileName
+### <a name="osdconfigfilename"></a><a name="OSDConfigFileName"></a> OSDConfigFileName
 
 *Is van toepassing op de stap [installatie kopie van besturings systeem Toep assen](task-sequence-steps.md#BKMK_ApplyOperatingSystemImage) .*
 
@@ -668,7 +668,7 @@ Ingesteld op de NetBIOS-naam van de computer. De waarde wordt alleen ingesteld a
 
 Hiermee geeft u de bestands naam op van het antwoord bestand voor de besturingssysteem implementatie dat is gekoppeld aan het installatie kopie pakket van de besturingssysteem implementatie.  
 
-### <a name="osddataimageindex"></a><a name="OSDDataImageIndex"></a>OSDDataImageIndex
+### <a name="osddataimageindex"></a><a name="OSDDataImageIndex"></a> OSDDataImageIndex
 
 *Is van toepassing op de stap afbeelding van het [Toep assen van gegevens](task-sequence-steps.md#BKMK_ApplyDataImage) .*
 
@@ -676,7 +676,7 @@ Hiermee geeft u de bestands naam op van het antwoord bestand voor de besturingss
 
 Hiermee geeft u de index waarde op van de installatie kopie die wordt toegepast op de doel computer.
 
-### <a name="osddiskindex"></a><a name="OSDDiskIndex"></a>OSDDiskIndex
+### <a name="osddiskindex"></a><a name="OSDDiskIndex"></a> OSDDiskIndex
 
 *Is van toepassing op de stap [schijf Format teren en partitioneren](task-sequence-steps.md#BKMK_FormatandPartitionDisk) .*
 
@@ -684,7 +684,7 @@ Hiermee geeft u de index waarde op van de installatie kopie die wordt toegepast 
 
 Hiermee geeft u het nummer van de te partitioneren fysieke schijf op.
 
-### <a name="osddnsdomain"></a><a name="OSDDNSDomain"></a>OSDDNSDomain
+### <a name="osddnsdomain"></a><a name="OSDDNSDomain"></a> OSDDNSDomain
 
 *Is van toepassing op de stap [netwerk instellingen Toep assen](task-sequence-steps.md#BKMK_ApplyNetworkSettings) .*
 
@@ -692,7 +692,7 @@ Hiermee geeft u het nummer van de te partitioneren fysieke schijf op.
 
 Hiermee geeft u de primaire DNS-server op die op de doel computer wordt gebruikt.
 
-### <a name="osddnssuffixsearchorder"></a><a name="OSDDNSSuffixSearchOrder"></a>OSDDNSSuffixSearchOrder
+### <a name="osddnssuffixsearchorder"></a><a name="OSDDNSSuffixSearchOrder"></a> OSDDNSSuffixSearchOrder
 
 *Is van toepassing op de stap [netwerk instellingen Toep assen](task-sequence-steps.md#BKMK_ApplyNetworkSettings) .*
 
@@ -700,7 +700,7 @@ Hiermee geeft u de primaire DNS-server op die op de doel computer wordt gebruikt
 
 Hiermee geeft u de DNS-zoekvolgorde op voor de doelcomputer.
 
-### <a name="osddomainname"></a><a name="OSDDomainName"></a>Osddomainname opgeven
+### <a name="osddomainname"></a><a name="OSDDomainName"></a> Osddomainname opgeven
 
 *Is van toepassing op de stap [netwerk instellingen Toep assen](task-sequence-steps.md#BKMK_ApplyNetworkSettings) .*
 
@@ -708,7 +708,7 @@ Hiermee geeft u de DNS-zoekvolgorde op voor de doelcomputer.
 
 Hiermee geeft u de naam op van het Active Directory domein waarvan de doel computer lid wordt. De opgegeven waarde moet een geldige domeinnaam van Active Directory Domain Services zijn.
 
-### <a name="osddomainouname"></a><a name="OSDDomainOUName"></a>OSDDomainOUName
+### <a name="osddomainouname"></a><a name="OSDDomainOUName"></a> OSDDomainOUName
 
 *Is van toepassing op de stap [netwerk instellingen Toep assen](task-sequence-steps.md#BKMK_ApplyNetworkSettings) .*
 
@@ -720,7 +720,7 @@ Hiermee geeft u de naam in RFC 1779-indeling op van de organisatie-eenheid (OE) 
 
 `LDAP://OU=MyOu,DC=MyDom,DC=MyCompany,DC=com`
 
-### <a name="osddonotlogcommand"></a><a name="OSDDoNotLogCommand"></a>OSDDoNotLogCommand
+### <a name="osddonotlogcommand"></a><a name="OSDDoNotLogCommand"></a> OSDDoNotLogCommand
 
 <!--1358493-->
 *Is van toepassing op de stap [pakket installeren](task-sequence-steps.md#BKMK_InstallPackage) .*
@@ -734,7 +734,7 @@ Als u wilt voor komen dat mogelijk gevoelige gegevens worden weer gegeven of ger
 
 Vanaf versie 1902, wanneer u deze variabele instelt op `TRUE` , wordt de opdracht regel ook verborgen met de stap **opdracht regel uitvoeren** in het logboek bestand.<!--3654172-->
 
-### <a name="osdenabletcpipfiltering"></a><a name="OSDEnableTCPIPFiltering"></a>OSDEnableTCPIPFiltering
+### <a name="osdenabletcpipfiltering"></a><a name="OSDEnableTCPIPFiltering"></a> OSDEnableTCPIPFiltering
 
 *Is van toepassing op de stap [netwerk instellingen Toep assen](task-sequence-steps.md#BKMK_ApplyNetworkSettings) .*
 
@@ -745,9 +745,9 @@ Hiermee geeft u aan of TCP/IP-filtering is ingeschakeld.
 #### <a name="valid-values"></a>Geldige waarden
 
 - `true`  
-- `false`prijs  
+- `false` prijs  
 
-### <a name="osdgptbootdisk"></a><a name="OSDGPTBootDisk"></a>OSDGPTBootDisk
+### <a name="osdgptbootdisk"></a><a name="OSDGPTBootDisk"></a> OSDGPTBootDisk
 
 *Is van toepassing op de stap [schijf Format teren en partitioneren](task-sequence-steps.md#BKMK_FormatandPartitionDisk) .*
 
@@ -758,9 +758,9 @@ Hiermee geeft u op of u een EFI-partitie op een GPT-vaste schijf wilt maken. EFI
 #### <a name="valid-values"></a>Geldige waarden
 
 - `true`  
-- `false`prijs
+- `false` prijs
 
-### <a name="osdimagecreator"></a><a name="OSDImageCreator"></a>OSDImageCreator
+### <a name="osdimagecreator"></a><a name="OSDImageCreator"></a> OSDImageCreator
 
 *Is van toepassing op de stap voor het [vastleggen van installatie kopieën van besturings systemen](task-sequence-steps.md#BKMK_CaptureOperatingSystemImage) .*
 
@@ -768,7 +768,7 @@ Hiermee geeft u op of u een EFI-partitie op een GPT-vaste schijf wilt maken. EFI
 
 Optioneel. De naam van de gebruiker die de installatiekopie heeft gemaakt. Deze naam wordt opgeslagen in het WIM-bestand. De maximale lengte van de gebruikersnaam is 255 tekens.
 
-### <a name="osdimagedescription"></a><a name="OSDImageDescription"></a>OSDImageDescription
+### <a name="osdimagedescription"></a><a name="OSDImageDescription"></a> OSDImageDescription
 
 *Is van toepassing op de stap voor het [vastleggen van installatie kopieën van besturings systemen](task-sequence-steps.md#BKMK_CaptureOperatingSystemImage) .*
 
@@ -776,7 +776,7 @@ Optioneel. De naam van de gebruiker die de installatiekopie heeft gemaakt. Deze 
 
 Een optionele, door de gebruiker gedefinieerde beschrijving van de vastgelegde installatie kopie van het besturings systeem. Deze beschrijving wordt opgeslagen in het WIM-bestand. De maximale lengte van de beschrijving is 255 tekens.
 
-### <a name="osdimageindex"></a><a name="OSDImageIndex"></a>OSDImageIndex
+### <a name="osdimageindex"></a><a name="OSDImageIndex"></a> OSDImageIndex
 
 *Is van toepassing op de stap [installatie kopie van besturings systeem Toep assen](task-sequence-steps.md#BKMK_ApplyOperatingSystemImage) .*
 
@@ -784,7 +784,7 @@ Een optionele, door de gebruiker gedefinieerde beschrijving van de vastgelegde i
 
 Hiermee geeft u de waarde van de installatie kopie-index van het WIM-bestand dat wordt toegepast op de doel computer.
 
-### <a name="osdimageversion"></a><a name="OSDImageVersion"></a>OSDImageVersion
+### <a name="osdimageversion"></a><a name="OSDImageVersion"></a> OSDImageVersion
 
 *Is van toepassing op de stap voor het [vastleggen van installatie kopieën van besturings systemen](task-sequence-steps.md#BKMK_CaptureOperatingSystemImage) .*
 
@@ -792,7 +792,7 @@ Hiermee geeft u de waarde van de installatie kopie-index van het WIM-bestand dat
 
 Een optioneel, door de gebruiker gedefinieerd versie nummer om toe te wijzen aan de vastgelegde installatie kopie van het besturings systeem. Dit versienummer wordt opgeslagen in het WIM-bestand. Deze waarde kan een combi natie van alfanumerieke tekens zijn met een maximale lengte van 32.
 
-### <a name="osdinstalldriversadditionaloptions"></a><a name="OSDInstallDriversAdditionalOptions"></a>OSDInstallDriversAdditionalOptions
+### <a name="osdinstalldriversadditionaloptions"></a><a name="OSDInstallDriversAdditionalOptions"></a> OSDInstallDriversAdditionalOptions
 
 <!--516679/2840016-->
 *Is van toepassing op de stap [Stuur programmapakket Toep assen](task-sequence-steps.md#BKMK_ApplyDriverPackage) .*
@@ -803,9 +803,9 @@ Hiermee geeft u aanvullende opties op die u wilt toevoegen aan de DISM-opdracht 
 
 Als u deze variabele wilt gebruiken, schakelt u de instelling in, installeert u het **Stuur programmapakket via DISM met de optie recursief met**behulp van de stap **Stuur programmapakket Toep assen** .
 
-Zie [opdracht regel opties voor Windows 10 DISM](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options)voor meer informatie.
+Zie [opdracht regel opties voor Windows 10 DISM](/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options)voor meer informatie.
 
-### <a name="osdjoinaccount"></a><a name="OSDJoinAccount"></a>OSDJoinAccount
+### <a name="osdjoinaccount"></a><a name="OSDJoinAccount"></a> OSDJoinAccount
 
 *Is van toepassing op de volgende stappen:*  
 
@@ -818,7 +818,7 @@ Hiermee geeft u het domein gebruikers account op dat wordt gebruikt om de doel c
 
 Zie [accounts](../../core/plan-design/hierarchy/accounts.md#task-sequence-domain-join-account)voor meer informatie over het domein voor het samen voegen van taken reeksen.
 
-### <a name="osdjoindomainname"></a><a name="OSDJoinDomainName"></a>OSDJoinDomainName
+### <a name="osdjoindomainname"></a><a name="OSDJoinDomainName"></a> OSDJoinDomainName
 
 *Is van toepassing op de stap [lid worden van domein of werk groep](task-sequence-steps.md#BKMK_JoinDomainorWorkgroup) .*
 
@@ -826,7 +826,7 @@ Zie [accounts](../../core/plan-design/hierarchy/accounts.md#task-sequence-domain
 
 Hiermee geeft u de naam op van een Active Directory domein waarvan de doel computer lid wordt. De domein naam moet tussen 1 en 255 tekens lang zijn.
 
-### <a name="osdjoindomainouname"></a><a name="OSDJoinDomainOUName"></a>OSDJoinDomainOUName
+### <a name="osdjoindomainouname"></a><a name="OSDJoinDomainOUName"></a> OSDJoinDomainOUName
 
 *Is van toepassing op de stap [lid worden van domein of werk groep](task-sequence-steps.md#BKMK_JoinDomainorWorkgroup) .*
 
@@ -838,7 +838,7 @@ Hiermee geeft u de naam in RFC 1779-indeling op van de organisatie-eenheid (OE) 
 
 `LDAP://OU=MyOu,DC=MyDom,DC=MyCompany,DC=com`  
 
-### <a name="osdjoinpassword"></a><a name="OSDJoinPassword"></a>OSDJoinPassword
+### <a name="osdjoinpassword"></a><a name="OSDJoinPassword"></a> OSDJoinPassword
 
 *Is van toepassing op de volgende stappen:*  
 
@@ -849,7 +849,7 @@ Hiermee geeft u de naam in RFC 1779-indeling op van de organisatie-eenheid (OE) 
 
 Hiermee geeft u het wacht woord op voor de [OSDJoinAccount](#OSDJoinAccount) die de doel computer gebruikt om lid te worden van het Active Directory domein. Als de taken reeks omgeving deze variabele niet bevat, probeert Windows Setup een leeg wacht woord. Als de variabele [OSDJoinType](#OSDJoinType) is ingesteld op `0` (lid worden van domein), is deze waarde vereist.
 
-### <a name="osdjoinskipreboot"></a><a name="OSDJoinSkipReboot"></a>OSDJoinSkipReboot
+### <a name="osdjoinskipreboot"></a><a name="OSDJoinSkipReboot"></a> OSDJoinSkipReboot
 
 *Is van toepassing op de stap [lid worden van domein of werk groep](task-sequence-steps.md#BKMK_JoinDomainorWorkgroup) .*
 
@@ -862,7 +862,7 @@ Hiermee geeft u aan of het opnieuw opstarten van de doelcomputer wordt overgesla
 - `true`  
 - `false`  
 
-### <a name="osdjointype"></a><a name="OSDJoinType"></a>OSDJoinType
+### <a name="osdjointype"></a><a name="OSDJoinType"></a> OSDJoinType
 
 *Is van toepassing op de stap [lid worden van domein of werk groep](task-sequence-steps.md#BKMK_JoinDomainorWorkgroup) .*
 
@@ -875,7 +875,7 @@ Hiermee geeft u aan of de doelcomputer lid wordt van een Windows-domein of een w
 - `0`: De doel computer toevoegen aan een Windows-domein  
 - `1`: De doel computer toevoegen aan een werk groep  
 
-### <a name="osdjoinworkgroupname"></a><a name="OSDJoinWorkgroupName"></a>OSDJoinWorkgroupName
+### <a name="osdjoinworkgroupname"></a><a name="OSDJoinWorkgroupName"></a> OSDJoinWorkgroupName
 
 *Is van toepassing op de stap [lid worden van domein of werk groep](task-sequence-steps.md#BKMK_JoinDomainorWorkgroup) .*
 
@@ -883,7 +883,7 @@ Hiermee geeft u aan of de doelcomputer lid wordt van een Windows-domein of een w
 
 Hiermee geeft u de naam van een werkgroep waarvan de doelcomputer lid wordt. De lengte van de werkgroepnaam moet liggen tussen 1 en 32 tekens.
 
-### <a name="osdkeepactivation"></a><a name="OSDKeepActivation"></a>OSDKeepActivation
+### <a name="osdkeepactivation"></a><a name="OSDKeepActivation"></a> OSDKeepActivation
 
 *Is van toepassing op de stap [Windows voorbereiden voor vastleggen](task-sequence-steps.md#BKMK_PrepareWindowsforCapture) .*
 
@@ -894,9 +894,9 @@ Hiermee geeft u op of Sysprep de markering voor product activering onderhoudt of
 #### <a name="valid-values"></a>Geldige waarden
 
 - `true`: behoud de activerings vlag
-- `false`(standaard): de activerings vlag opnieuw instellen
+- `false` (standaard): de activerings vlag opnieuw instellen
 
-### <a name="osdlocaladminpassword"></a><a name="OSDLocalAdminPassword"></a>OSDLocalAdminPassword
+### <a name="osdlocaladminpassword"></a><a name="OSDLocalAdminPassword"></a> OSDLocalAdminPassword
 
 *Is van toepassing op de stap [Windows-instellingen Toep assen](task-sequence-steps.md#BKMK_ApplyWindowsSettings) .*
 
@@ -904,7 +904,7 @@ Hiermee geeft u op of Sysprep de markering voor product activering onderhoudt of
 
 Hiermee geeft u het wacht woord van de lokale beheerders account op. Als u de optie inschakelt om **het lokale beheerders wachtwoord wille keurig te genereren en het account op alle ondersteunde platforms uit te scha kelen**, wordt deze variabele door de stap genegeerd. De opgegeven waarde moet tussen 1 en 255 tekens lang zijn.
 
-### <a name="osdlogpowershellparameters"></a><a name="OSDLogPowerShellParameters"></a>OSDLogPowerShellParameters
+### <a name="osdlogpowershellparameters"></a><a name="OSDLogPowerShellParameters"></a> OSDLogPowerShellParameters
 
 <!--3556028-->
 *Vanaf versie 1902*  
@@ -914,7 +914,7 @@ Hiermee geeft u het wacht woord van de lokale beheerders account op. Als u de op
 
 Om te voor komen dat mogelijk gevoelige gegevens worden geregistreerd, worden script parameters in het bestand **bestand smsts. log** niet door de stap **Power shell-script uitvoeren** geregistreerd. Als u de script parameters in het taken reeks logboek wilt toevoegen, stelt u deze variabele in op **True**.
 
-### <a name="osdmigrateadaptersettings"></a><a name="OSDMigrateAdapterSettings"></a>OSDMigrateAdapterSettings
+### <a name="osdmigrateadaptersettings"></a><a name="OSDMigrateAdapterSettings"></a> OSDMigrateAdapterSettings
 
 *Is van toepassing op de stap [netwerk instellingen vastleggen](task-sequence-steps.md#BKMK_CaptureNetworkSettings) .*
 
@@ -924,10 +924,10 @@ Hiermee geeft u op of de taken reeks de gegevens van de netwerk adapter vastlegt
 
 #### <a name="valid-values"></a>Geldige waarden
 
-- `true`prijs
+- `true` prijs
 - `false`
 
-### <a name="osdmigrateadditionalcaptureoptions"></a><a name="OSDMigrateAdditionalCaptureOptions"></a>Taken osdmigrateadditionalcaptureoptions
+### <a name="osdmigrateadditionalcaptureoptions"></a><a name="OSDMigrateAdditionalCaptureOptions"></a> Taken osdmigrateadditionalcaptureoptions
 
 *Is van toepassing op de stap [gebruikers status vastleggen](task-sequence-steps.md#BKMK_CaptureUserState) .*
 
@@ -939,7 +939,7 @@ De USMT-opties die zijn opgegeven met deze taken reeks variabele worden niet gev
 
 Zie [Scan State-syntaxis](https://docs.microsoft.com/windows/deployment/usmt/usmt-scanstate-syntax)voor meer informatie over de beschik bare opties.
 
-### <a name="osdmigrateadditionalrestoreoptions"></a><a name="OSDMigrateAdditionalRestoreOptions"></a>Taken osdmigrateadditionalrestoreoptions
+### <a name="osdmigrateadditionalrestoreoptions"></a><a name="OSDMigrateAdditionalRestoreOptions"></a> Taken osdmigrateadditionalrestoreoptions
 
 *Is van toepassing op de stap [gebruikers status herstellen](task-sequence-steps.md#BKMK_RestoreUserState) .*
 
@@ -951,7 +951,7 @@ De USMT-opties die zijn opgegeven met deze taken reeks variabele worden niet gev
 
 Zie [Load State-syntaxis](https://docs.microsoft.com/windows/deployment/usmt/usmt-loadstate-syntax)voor meer informatie over de beschik bare opties.
 
-### <a name="osdmigratecomputername"></a><a name="OSDMigrateComputerName"></a>OSDMigrateComputerName
+### <a name="osdmigratecomputername"></a><a name="OSDMigrateComputerName"></a> OSDMigrateComputerName
 
 *Is van toepassing op de stap [Windows-instellingen vastleggen](task-sequence-steps.md#BKMK_CaptureWindowsSettings) .*
 
@@ -961,10 +961,10 @@ Hiermee geeft u op of de naam van de computer wordt gemigreerd.
 
 #### <a name="valid-values"></a>Geldige waarden
 
-- `true`(standaard). De variabele [OSDComputerName (output)](#OSDComputerName-output) is ingesteld op de NetBIOS-naam van de computer.  
+- `true` (standaard). De variabele [OSDComputerName (output)](#OSDComputerName-output) is ingesteld op de NetBIOS-naam van de computer.  
 - `false`  
 
-### <a name="osdmigrateconfigfiles"></a><a name="OSDMigrateConfigFiles"></a>OSDMigrateConfigFiles
+### <a name="osdmigrateconfigfiles"></a><a name="OSDMigrateConfigFiles"></a> OSDMigrateConfigFiles
 
 *Is van toepassing op de stap [gebruikers status vastleggen](task-sequence-steps.md#BKMK_CaptureUserState) .*
 
@@ -976,7 +976,7 @@ Hiermee geeft u de configuratiebestanden op waarmee het vastleggen van gebruiker
 
 `miguser.xml,migsys.xml,migapps.xml`  
 
-### <a name="osdmigratecontinueonlockedfiles"></a><a name="OSDMigrateContinueOnLockedFiles"></a>OSDMigrateContinueOnLockedFiles
+### <a name="osdmigratecontinueonlockedfiles"></a><a name="OSDMigrateContinueOnLockedFiles"></a> OSDMigrateContinueOnLockedFiles
 
 *Is van toepassing op de stap [gebruikers status vastleggen](task-sequence-steps.md#BKMK_CaptureUserState) .*
 
@@ -986,10 +986,10 @@ Als USMT sommige bestanden niet kan vastleggen, kan met deze variabele het vastl
 
 #### <a name="valid-values"></a>Geldige waarden
 
-- `true`prijs  
+- `true` prijs  
 - `false`  
 
-### <a name="osdmigratecontinueonrestore"></a><a name="OSDMigrateContinueOnRestore"></a>OSDMigrateContinueOnRestore
+### <a name="osdmigratecontinueonrestore"></a><a name="OSDMigrateContinueOnRestore"></a> OSDMigrateContinueOnRestore
 
 *Is van toepassing op de stap [gebruikers status herstellen](task-sequence-steps.md#BKMK_RestoreUserState) .*
 
@@ -999,10 +999,10 @@ Ga verder met het proces, zelfs als USMT sommige bestanden niet kan herstellen.
 
 #### <a name="valid-values"></a>Geldige waarden
 
-- `true`prijs  
+- `true` prijs  
 - `false`  
 
-### <a name="osdmigrateenableverboselogging"></a><a name="OSDMigrateEnableVerboseLogging"></a>OSDMigrateEnableVerboseLogging
+### <a name="osdmigrateenableverboselogging"></a><a name="OSDMigrateEnableVerboseLogging"></a> OSDMigrateEnableVerboseLogging
 
 *Is van toepassing op de volgende stappen:*  
 
@@ -1016,9 +1016,9 @@ Hiermee schakelt u uitgebreide logboek registratie in voor USMT. Deze waarde is 
 #### <a name="valid-values"></a>Geldige waarden
 
 - `true`  
-- `false`prijs  
+- `false` prijs  
 
-### <a name="osdmigratelocalaccounts"></a><a name="OSDMigrateLocalAccounts"></a>OSDMigrateLocalAccounts
+### <a name="osdmigratelocalaccounts"></a><a name="OSDMigrateLocalAccounts"></a> OSDMigrateLocalAccounts
 
 *Is van toepassing op de stap [gebruikers status herstellen](task-sequence-steps.md#BKMK_RestoreUserState) .*
 
@@ -1029,9 +1029,9 @@ Hiermee geeft u op of het lokale computeraccount wordt hersteld.
 #### <a name="valid-values"></a>Geldige waarden
 
 - `true`  
-- `false`prijs  
+- `false` prijs  
 
-### <a name="osdmigratelocalaccountpassword"></a><a name="OSDMigrateLocalAccountPassword"></a>OSDMigrateLocalAccountPassword
+### <a name="osdmigratelocalaccountpassword"></a><a name="OSDMigrateLocalAccountPassword"></a> OSDMigrateLocalAccountPassword
 
 *Is van toepassing op de stap [gebruikers status herstellen](task-sequence-steps.md#BKMK_RestoreUserState) .*
 
@@ -1039,7 +1039,7 @@ Hiermee geeft u op of het lokale computeraccount wordt hersteld.
 
 Als de variabele [OSDMigrateLocalAccounts](#OSDMigrateLocalAccounts) is `true` , moet deze variabele het wacht woord bevatten dat is toegewezen aan *alle* gemigreerde lokale accounts. USMT wijst hetzelfde wacht woord toe aan alle gemigreerde lokale accounts. Beschouw dit wacht woord als tijdelijk en wijzig het later op een andere manier.
 
-### <a name="osdmigratemode"></a><a name="OSDMigrateMode"></a>OSDMigrateMode
+### <a name="osdmigratemode"></a><a name="OSDMigrateMode"></a> OSDMigrateMode
 
 *Is van toepassing op de stap [gebruikers status vastleggen](task-sequence-steps.md#BKMK_CaptureUserState) .*
 
@@ -1053,7 +1053,7 @@ Hiermee kunt u de bestanden aanpassen die worden vastgelegd door USMT.
 
 - `Advanced`: Met de taken reeks variabele [OSDMigrateConfigFiles](#OSDMigrateConfigFiles) worden de configuratie bestanden opgegeven die USMT gebruikt  
 
-### <a name="osdmigratenetworkmembership"></a><a name="OSDMigrateNetworkMembership"></a>OSDMigrateNetworkMembership
+### <a name="osdmigratenetworkmembership"></a><a name="OSDMigrateNetworkMembership"></a> OSDMigrateNetworkMembership
 
 *Is van toepassing op de stap [netwerk instellingen vastleggen](task-sequence-steps.md#BKMK_CaptureNetworkSettings) .*
 
@@ -1063,10 +1063,10 @@ Hiermee geeft u op of de taken reeks de werk groep-of domein lidmaatschaps gegev
 
 #### <a name="valid-values"></a>Geldige waarden
 
-- `true`prijs
+- `true` prijs
 - `false`
 
-### <a name="osdmigrateregistrationinfo"></a><a name="OSDMigrateRegistrationInfo"></a>OSDMigrateRegistrationInfo
+### <a name="osdmigrateregistrationinfo"></a><a name="OSDMigrateRegistrationInfo"></a> OSDMigrateRegistrationInfo
 
 *Is van toepassing op de stap [Windows-instellingen vastleggen](task-sequence-steps.md#BKMK_CaptureWindowsSettings) .*
 
@@ -1076,10 +1076,10 @@ Hiermee wordt aangegeven of de stap gebruikers-en organisatie gegevens migreert.
 
 #### <a name="valid-values"></a>Geldige waarden
 
-- `true`(standaard). De [OSDRegisteredOrgName-variabele (uitvoer)](#OSDRegisteredOrgName-output) wordt ingesteld op de geregistreerde organisatie naam van de computer.  
+- `true` (standaard). De [OSDRegisteredOrgName-variabele (uitvoer)](#OSDRegisteredOrgName-output) wordt ingesteld op de geregistreerde organisatie naam van de computer.  
 - `false`  
 
-### <a name="osdmigrateskipencryptedfiles"></a><a name="OSDMigrateSkipEncryptedFiles"></a>OSDMigrateSkipEncryptedFiles
+### <a name="osdmigrateskipencryptedfiles"></a><a name="OSDMigrateSkipEncryptedFiles"></a> OSDMigrateSkipEncryptedFiles
 
 *Is van toepassing op de stap [gebruikers status vastleggen](task-sequence-steps.md#BKMK_CaptureUserState) .*
 
@@ -1090,9 +1090,9 @@ Hiermee geeft u op of versleutelde bestanden worden vastgelegd.
 #### <a name="valid-values"></a>Geldige waarden
 
 - `true`  
-- `false`prijs  
+- `false` prijs  
 
-### <a name="osdmigratetimezone"></a><a name="OSDMigrateTimeZone"></a>OSDMigrateTimeZone
+### <a name="osdmigratetimezone"></a><a name="OSDMigrateTimeZone"></a> OSDMigrateTimeZone
 
 *Is van toepassing op de stap [Windows-instellingen vastleggen](task-sequence-steps.md#BKMK_CaptureWindowsSettings) .*
 
@@ -1102,10 +1102,10 @@ Hiermee geeft u op of de tijdzone van de computer wordt gemigreerd.
 
 #### <a name="valid-values"></a>Geldige waarden
 
-- `true`(standaard). De variabele [OSDTimeZone (uitvoer)](#OSDTimeZone-output) is ingesteld op de tijd zone van de computer.  
+- `true` (standaard). De variabele [OSDTimeZone (uitvoer)](#OSDTimeZone-output) is ingesteld op de tijd zone van de computer.  
 - `false`  
 
-### <a name="osdnetworkjointype"></a><a name="OSDNetworkJoinType"></a>OSDNetworkJoinType
+### <a name="osdnetworkjointype"></a><a name="OSDNetworkJoinType"></a> OSDNetworkJoinType
 
 *Is van toepassing op de stap [netwerk instellingen Toep assen](task-sequence-steps.md#BKMK_ApplyNetworkSettings) .*
 
@@ -1118,7 +1118,7 @@ Hiermee geeft u op of de doel computer lid wordt van een Active Directory domein
 - `0`: Lid worden van een Active Directory domein  
 - `1`: Lid worden van een werk groep
 
-### <a name="osdpartitions"></a><a name="OSDPartitions"></a>OSDPartitions
+### <a name="osdpartitions"></a><a name="OSDPartitions"></a> OSDPartitions
 
 *Is van toepassing op de stap [schijf Format teren en partitioneren](task-sequence-steps.md#BKMK_FormatandPartitionDisk) .*
 
@@ -1162,7 +1162,7 @@ Wanneer deze stap partities maakt, wordt altijd de eerstvolgende beschik bare st
 
 Als u meerdere partities met deze taken reeks stap definieert, worden de eigenschappen voor de *tweede* partitie gedefinieerd door gebruik te maken van de **1** index in de naam van de variabele. Bijvoorbeeld: **OSDPartitions1Type**, **OSDPartitions1FileSystem**, **OSDPartitions1Bootable**, **OSDPartitions1QuickFormat**en **OSDPartitions1VolumeName**.
 
-### <a name="osdpartitionstyle"></a><a name="OSDPartitionStyle"></a>OSDPartitionStyle
+### <a name="osdpartitionstyle"></a><a name="OSDPartitionStyle"></a> OSDPartitionStyle
 
 *Is van toepassing op de stap [schijf Format teren en partitioneren](task-sequence-steps.md#BKMK_FormatandPartitionDisk) .*
 
@@ -1175,7 +1175,7 @@ Hiermee geeft u de partitiestijl op die moet worden gebruikt bij het partitioner
 - `GPT`: Gebruik de GUID-partitie tabel stijl
 - `MBR`: De partitie stijl Master Boot Record gebruiken
 
-### <a name="osdproductkey"></a><a name="OSDProductKey"></a>OSDProductKey
+### <a name="osdproductkey"></a><a name="OSDProductKey"></a> OSDProductKey
 
 *Is van toepassing op de stap [Windows-instellingen Toep assen](task-sequence-steps.md#BKMK_ApplyWindowsSettings) .*
 
@@ -1183,7 +1183,7 @@ Hiermee geeft u de partitiestijl op die moet worden gebruikt bij het partitioner
 
 Geeft de Windows-productcode op. De opgegeven waarde moet tussen 1 en 255 tekens lang zijn.
 
-### <a name="osdrandomadminpassword"></a><a name="OSDRandomAdminPassword"></a>OSDRandomAdminPassword
+### <a name="osdrandomadminpassword"></a><a name="OSDRandomAdminPassword"></a> OSDRandomAdminPassword
 
 *Is van toepassing op de stap [Windows-instellingen Toep assen](task-sequence-steps.md#BKMK_ApplyWindowsSettings) .*
 
@@ -1193,23 +1193,23 @@ Hiermee geeft u een wille keurig gegenereerd wacht woord op voor het lokale behe
 
 #### <a name="valid-values"></a>Geldige waarden
 
-- `true`(standaard): Windows Setup schakelt het lokale beheerders account op de doel computer uit  
+- `true` (standaard): Windows Setup schakelt het lokale beheerders account op de doel computer uit  
 
 - `false`: Windows Setup maakt het lokale Administrator-account op de doel computer en stelt het account wachtwoord in op de waarde van [OSDLocalAdminPassword](#OSDLocalAdminPassword)  
 
-### <a name="osdregisteredorgname-input"></a><a name="OSDRegisteredOrgName-input"></a>OSDRegisteredOrgName (invoer)
+### <a name="osdregisteredorgname-input"></a><a name="OSDRegisteredOrgName-input"></a> OSDRegisteredOrgName (invoer)
 
 *Is van toepassing op de stap [Windows-instellingen Toep assen](task-sequence-steps.md#BKMK_ApplyWindowsSettings) .*
 
 Hiermee geeft u de standaard geregistreerde organisatie naam in het nieuwe besturings systeem op. De opgegeven waarde moet tussen 1 en 255 tekens lang zijn.
 
-### <a name="osdregisteredorgname-output"></a><a name="OSDRegisteredOrgName-output"></a>OSDRegisteredOrgName (uitvoer)
+### <a name="osdregisteredorgname-output"></a><a name="OSDRegisteredOrgName-output"></a> OSDRegisteredOrgName (uitvoer)
 
 *Is van toepassing op de stap [Windows-instellingen vastleggen](task-sequence-steps.md#BKMK_CaptureWindowsSettings) .*
 
 Ingesteld op de geregistreerde organisatienaam van de computer. De waarde wordt alleen ingesteld als de variabele [OSDMigrateRegistrationInfo](#OSDMigrateRegistrationInfo) is ingesteld op `true` .
 
-### <a name="osdregisteredusername"></a><a name="OSDRegisteredUserName"></a>OSDRegisteredUserName
+### <a name="osdregisteredusername"></a><a name="OSDRegisteredUserName"></a> OSDRegisteredUserName
 
 *Is van toepassing op de stap [Windows-instellingen Toep assen](task-sequence-steps.md#BKMK_ApplyWindowsSettings) .*
 
@@ -1217,7 +1217,7 @@ Ingesteld op de geregistreerde organisatienaam van de computer. De waarde wordt 
 
 Hiermee geeft u de standaard geregistreerde gebruikers naam in het nieuwe besturings systeem op. De opgegeven waarde moet tussen 1 en 255 tekens lang zijn.
 
-### <a name="osdserverlicenseconnectionlimit"></a><a name="OSDServerLicenseConnectionLimit"></a>OSDServerLicenseConnectionLimit
+### <a name="osdserverlicenseconnectionlimit"></a><a name="OSDServerLicenseConnectionLimit"></a> OSDServerLicenseConnectionLimit
 
 *Is van toepassing op de stap [Windows-instellingen Toep assen](task-sequence-steps.md#BKMK_ApplyWindowsSettings) .*
 
@@ -1225,7 +1225,7 @@ Hiermee geeft u de standaard geregistreerde gebruikers naam in het nieuwe bestur
 
 Hiermee geeft u het maximumaantal toegestane verbindingen op. Het opgegeven getal moet liggen tussen 5 en 9999 verbindingen.
 
-### <a name="osdserverlicensemode"></a><a name="OSDServerLicenseMode"></a>OSDServerLicenseMode
+### <a name="osdserverlicensemode"></a><a name="OSDServerLicenseMode"></a> OSDServerLicenseMode
 
 *Is van toepassing op de stap [Windows-instellingen Toep assen](task-sequence-steps.md#BKMK_ApplyWindowsSettings) .*
 
@@ -1238,7 +1238,7 @@ Hiermee geeft u de Windows Server-licentie modus op die wordt gebruikt.
 - `PerSeat`
 - `PerServer`
 
-### <a name="osdsetupadditionalupgradeoptions"></a><a name="OSDSetupAdditionalUpgradeOptions"></a>OSDSetupAdditionalUpgradeOptions
+### <a name="osdsetupadditionalupgradeoptions"></a><a name="OSDSetupAdditionalUpgradeOptions"></a> OSDSetupAdditionalUpgradeOptions
 
 *Is van toepassing op de stap [besturings systeem bijwerken](task-sequence-steps.md#BKMK_UpgradeOS) .*
 
@@ -1248,7 +1248,7 @@ Hiermee geeft u de aanvullende opdracht regel opties op die worden toegevoegd aa
 
 Zie [Windows Setup-opdrachtregelopties)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options)voor meer informatie.
 
-### <a name="osdstatefallbacktonaa"></a><a name="OSDStateFallbackToNAA"></a>OSDStateFallbackToNAA
+### <a name="osdstatefallbacktonaa"></a><a name="OSDStateFallbackToNAA"></a> OSDStateFallbackToNAA
 
 *Is van toepassing op de stap [status opslag opvragen](task-sequence-steps.md#BKMK_RequestStateStore) .*
 
@@ -1261,9 +1261,9 @@ Zie [accounts](../../core/plan-design/hierarchy/accounts.md#network-access-accou
 #### <a name="valid-values"></a>Geldige waarden
 
 - `true`  
-- `false`prijs  
+- `false` prijs  
 
-### <a name="osdstatesmpretrycount"></a><a name="OSDStateSMPRetryCount"></a>OSDStateSMPRetryCount
+### <a name="osdstatesmpretrycount"></a><a name="OSDStateSMPRetryCount"></a> OSDStateSMPRetryCount
 
 *Is van toepassing op de stap [status opslag opvragen](task-sequence-steps.md#BKMK_RequestStateStore) .*
 
@@ -1271,7 +1271,7 @@ Zie [accounts](../../core/plan-design/hierarchy/accounts.md#network-access-accou
 
 Hiermee wordt het aantal pogingen opgegeven dat met deze takenreeksstap wordt uitgevoerd om een statusmigratiepunt te zoeken voordat de stap mislukt. Het opgegeven aantal moet tussen 0 en 600 liggen.
 
-### <a name="osdstatesmpretrytime"></a><a name="OSDStateSMPRetryTime"></a>OSDStateSMPRetryTime
+### <a name="osdstatesmpretrytime"></a><a name="OSDStateSMPRetryTime"></a> OSDStateSMPRetryTime
 
 *Is van toepassing op de stap [status opslag opvragen](task-sequence-steps.md#BKMK_RequestStateStore) .*
 
@@ -1279,7 +1279,7 @@ Hiermee wordt het aantal pogingen opgegeven dat met deze takenreeksstap wordt ui
 
 Hiermee geeft u het aantal seconden op dat de takenreeksstap moet wachten tussen nieuwe pogingen. Het aantal seconden mag maximaal 30 tekens zijn.
 
-### <a name="osdstatestorepath"></a><a name="OSDStateStorePath"></a>Osdstatestorepath in
+### <a name="osdstatestorepath"></a><a name="OSDStateStorePath"></a> Osdstatestorepath in
 
 *Is van toepassing op de volgende stappen:*  
 
@@ -1292,7 +1292,7 @@ Hiermee geeft u het aantal seconden op dat de takenreeksstap moet wachten tussen
 
 De netwerk share of lokale padnaam van de map waarin de taken reeks de gebruikers status opslaat of herstelt. Er is geen standaard waarde.
 
-### <a name="osdtargetsystemdrive"></a><a name="OSDTargetSystemDrive"></a>OSDTargetSystemDrive
+### <a name="osdtargetsystemdrive"></a><a name="OSDTargetSystemDrive"></a> OSDTargetSystemDrive
 
 *Is van toepassing op de stap [installatie kopie van besturings systeem Toep assen](task-sequence-steps.md#BKMK_ApplyOperatingSystemImage) .*
 
@@ -1300,19 +1300,19 @@ De netwerk share of lokale padnaam van de map waarin de taken reeks de gebruiker
 
 Hiermee geeft u de stationsletter van de partitie die de besturingssysteem bestanden bevat nadat de installatie kopie is toegepast.
 
-### <a name="osdtargetsystemroot-input"></a><a name="OSDTargetSystemRoot-input"></a>OSDTargetSystemRoot (invoer)
+### <a name="osdtargetsystemroot-input"></a><a name="OSDTargetSystemRoot-input"></a> OSDTargetSystemRoot (invoer)
 
 *Is van toepassing op de stap voor het [vastleggen van installatie kopieën van besturings systemen](task-sequence-steps.md#BKMK_CaptureOperatingSystemImage) .*
 
 Hiermee geeft u het pad op naar de Windows-map van het geïnstalleerde besturings systeem op de referentie computer. De taken reeks verifieert deze als een ondersteund besturings systeem voor vastleggen door Configuration Manager.
 
-### <a name="osdtargetsystemroot-output"></a><a name="OSDTargetSystemRoot-output"></a>OSDTargetSystemRoot (uitvoer)
+### <a name="osdtargetsystemroot-output"></a><a name="OSDTargetSystemRoot-output"></a> OSDTargetSystemRoot (uitvoer)
 
 *Is van toepassing op de stap [Windows voorbereiden voor vastleggen](task-sequence-steps.md#BKMK_PrepareWindowsforCapture) .*
 
 Hiermee geeft u het pad op naar de Windows-map van het geïnstalleerde besturings systeem op de referentie computer. De taken reeks verifieert deze als een ondersteund besturings systeem voor vastleggen door Configuration Manager.
 
-### <a name="osdtimezone-input"></a><a name="OSDTimeZone-input"></a>OSDTimeZone (invoer)
+### <a name="osdtimezone-input"></a><a name="OSDTimeZone-input"></a> OSDTimeZone (invoer)
 
 *Is van toepassing op de stap [Windows-instellingen Toep assen](task-sequence-steps.md#BKMK_ApplyWindowsSettings) .*
 
@@ -1320,13 +1320,13 @@ Hiermee geeft u de standaard instelling voor de tijd zone op die wordt gebruikt 
 
 Stel de waarde van deze variabele in op de taal invariante naam van de tijd zone. Gebruik bijvoorbeeld de teken reeks in de `Std` waarde voor een tijd zone onder de volgende register sleutel: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones` .
 
-### <a name="osdtimezone-output"></a><a name="OSDTimeZone-output"></a>OSDTimeZone (uitvoer)
+### <a name="osdtimezone-output"></a><a name="OSDTimeZone-output"></a> OSDTimeZone (uitvoer)
 
 *Is van toepassing op de stap [Windows-instellingen vastleggen](task-sequence-steps.md#BKMK_CaptureWindowsSettings) .*
 
 Ingesteld op de tijdzone van de computer. De waarde wordt alleen ingesteld als de variabele [OSDMigrateTimeZone](#OSDMigrateTimeZone) is ingesteld op `true` .
 
-### <a name="osdwindowssettingsinputlocale"></a><a name="OSDWindowsSettingsInputLocale"></a>OSDWindowsSettingsInputLocale
+### <a name="osdwindowssettingsinputlocale"></a><a name="OSDWindowsSettingsInputLocale"></a> OSDWindowsSettingsInputLocale
 
 *Is van toepassing op de stap [Windows-instellingen Toep assen](task-sequence-steps.md#BKMK_ApplyWindowsSettings) .*
 
@@ -1334,7 +1334,7 @@ Hiermee geeft u de standaard land instelling voor invoer die wordt gebruikt in h
 
 Zie [micro soft-Windows-International-core-InputLocale](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-inputlocale)voor meer informatie over de waarde van het Windows Setup-antwoord bestand.
 
-### <a name="osdwindowssettingssystemlocale"></a><a name="OSDWindowsSettingsSystemLocale"></a>OSDWindowsSettingsSystemLocale
+### <a name="osdwindowssettingssystemlocale"></a><a name="OSDWindowsSettingsSystemLocale"></a> OSDWindowsSettingsSystemLocale
 
 *Is van toepassing op de stap [Windows-instellingen Toep assen](task-sequence-steps.md#BKMK_ApplyWindowsSettings) .*
 
@@ -1342,7 +1342,7 @@ Hiermee geeft u de standaard land instelling voor het systeem op die wordt gebru
 
 Zie [micro soft-Windows-International-core-SystemLocale](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-systemlocale)voor meer informatie over de waarde van het Windows Setup-antwoord bestand.
 
-### <a name="osdwindowssettingsuilanguage"></a><a name="OSDWindowsSettingsUILanguage"></a>OSDWindowsSettingsUILanguage
+### <a name="osdwindowssettingsuilanguage"></a><a name="OSDWindowsSettingsUILanguage"></a> OSDWindowsSettingsUILanguage
 
 *Is van toepassing op de stap [Windows-instellingen Toep assen](task-sequence-steps.md#BKMK_ApplyWindowsSettings) .*
 
@@ -1350,7 +1350,7 @@ Hiermee geeft u de standaard taal instelling voor de gebruikers interface op die
 
 Zie [micro soft-Windows-International-core-UILanguage](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-uilanguage)voor meer informatie over de waarde van het Windows Setup-antwoord bestand.
 
-### <a name="osdwindowssettingsuilanguagefallback"></a><a name="OSDWindowsSettingsUILanguageFallback"></a>OSDWindowsSettingsUILanguageFallback
+### <a name="osdwindowssettingsuilanguagefallback"></a><a name="OSDWindowsSettingsUILanguageFallback"></a> OSDWindowsSettingsUILanguageFallback
 
 *Is van toepassing op de stap [Windows-instellingen Toep assen](task-sequence-steps.md#BKMK_ApplyWindowsSettings) .*
 
@@ -1358,7 +1358,7 @@ Hiermee geeft u de terugval taal instelling van de gebruikers interface op die w
 
 Zie [micro soft-Windows-International-core-UILanguageFallback](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-uilanguagefallback)voor meer informatie over de waarde van het Windows Setup-antwoord bestand.
 
-### <a name="osdwindowssettingsuserlocale"></a><a name="OSDWindowsSettingsUserLocale"></a>OSDWindowsSettingsUserLocale
+### <a name="osdwindowssettingsuserlocale"></a><a name="OSDWindowsSettingsUserLocale"></a> OSDWindowsSettingsUserLocale
 
 *Is van toepassing op de stap [Windows-instellingen Toep assen](task-sequence-steps.md#BKMK_ApplyWindowsSettings) .*
 
@@ -1366,7 +1366,7 @@ Hiermee geeft u de standaard land instelling voor gebruikers die wordt gebruikt 
 
 Zie [micro soft-Windows-International-core-UserLocale](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-userlocale)voor meer informatie over de waarde van het Windows Setup-antwoord bestand.
 
-### <a name="osdwipedestinationpartition"></a><a name="OSDWipeDestinationPartition"></a>OSDWipeDestinationPartition
+### <a name="osdwipedestinationpartition"></a><a name="OSDWipeDestinationPartition"></a> OSDWipeDestinationPartition
 
 *Is van toepassing op de stap afbeelding van het [Toep assen van gegevens](task-sequence-steps.md#BKMK_ApplyDataImage) .*
 
@@ -1376,10 +1376,10 @@ Hiermee geeft u op of de bestanden op de doelpartitie worden verwijderd.
 
 #### <a name="valid-values"></a>Geldige waarden
 
-- `true`prijs
+- `true` prijs
 - `false`
 
-### <a name="osdworkgroupname"></a><a name="OSDWorkgroupName"></a>OSDWorkgroupName
+### <a name="osdworkgroupname"></a><a name="OSDWorkgroupName"></a> OSDWorkgroupName
 
 *Is van toepassing op de stap [netwerk instellingen Toep assen](task-sequence-steps.md#BKMK_ApplyNetworkSettings) .*
 
@@ -1389,7 +1389,7 @@ Hiermee geeft u de naam op van de werkgroep waarvan de doelcomputer lid wordt.
 
 Geef deze variabele of de variabele [osddomainname opgeven](#OSDDomainName) op. De werkgroepnaam mag maximaal 32 tekens lang zijn.
 
-### <a name="setupcompletepause"></a><a name="SetupCompletePause"></a>SetupCompletePause
+### <a name="setupcompletepause"></a><a name="SetupCompletePause"></a> SetupCompletePause
 
 *Is van toepassing op de stap [besturings systeem bijwerken](task-sequence-steps.md#BKMK_UpgradeOS) .*
 
@@ -1416,7 +1416,7 @@ De volgende logboek vermeldingen zijn veelvoorkomende voor beelden van dit probl
     Exiting setupcomplete.cmd
     ```
 
-### <a name="smsclientinstallproperties"></a><a name="SMSClientInstallProperties"></a>SMSClientInstallProperties
+### <a name="smsclientinstallproperties"></a><a name="SMSClientInstallProperties"></a> SMSClientInstallProperties
 
 *Is van toepassing op de stap [Windows en ConfigMgr installeren](task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) .*
 
@@ -1426,7 +1426,7 @@ Hiermee geeft u de client installatie-eigenschappen op die de taken reeks gebrui
 
 Zie [over para meters en eigenschappen van client installatie](../../core/clients/deploy/about-client-installation-properties.md)voor meer informatie.
 
-### <a name="smsconnectnetworkfolderaccount"></a><a name="SMSConnectNetworkFolderAccount"></a>SMSConnectNetworkFolderAccount
+### <a name="smsconnectnetworkfolderaccount"></a><a name="SMSConnectNetworkFolderAccount"></a> SMSConnectNetworkFolderAccount
 
 *Is van toepassing op de stap [verbinding maken met](task-sequence-steps.md#BKMK_ConnectToNetworkFolder) netwerkmap.*
 
@@ -1436,7 +1436,7 @@ Hiermee geeft u het gebruikers account op dat wordt gebruikt om verbinding te ma
 
 Zie [accounts](../../core/plan-design/hierarchy/accounts.md#task-sequence-network-folder-connection-account)voor meer informatie over het verbindings account voor de taken reeks netwerkmap.
 
-### <a name="smsconnectnetworkfolderdriveletter"></a><a name="SMSConnectNetworkFolderDriveLetter"></a>SMSConnectNetworkFolderDriveLetter
+### <a name="smsconnectnetworkfolderdriveletter"></a><a name="SMSConnectNetworkFolderDriveLetter"></a> SMSConnectNetworkFolderDriveLetter
 
 *Is van toepassing op de stap [verbinding maken met](task-sequence-steps.md#BKMK_ConnectToNetworkFolder) netwerkmap.*
 
@@ -1449,7 +1449,7 @@ Hiermee geeft u de netwerkstationsletter op waarmee verbinding wordt gemaakt. De
 - `D:`  
 - `E:`  
 
-### <a name="smsconnectnetworkfolderpassword"></a><a name="SMSConnectNetworkFolderPassword"></a>SMSConnectNetworkFolderPassword
+### <a name="smsconnectnetworkfolderpassword"></a><a name="SMSConnectNetworkFolderPassword"></a> SMSConnectNetworkFolderPassword
 
 *Is van toepassing op de stap [verbinding maken met](task-sequence-steps.md#BKMK_ConnectToNetworkFolder) netwerkmap.*
 
@@ -1457,7 +1457,7 @@ Hiermee geeft u de netwerkstationsletter op waarmee verbinding wordt gemaakt. De
 
 Hiermee geeft u het wacht woord op voor de [SMSConnectNetworkFolderAccount](#SMSConnectNetworkFolderAccount) die wordt gebruikt om verbinding te maken met de netwerk share in [SMSConnectNetworkFolderPath](#SMSConnectNetworkFolderPath).
 
-### <a name="smsconnectnetworkfolderpath"></a><a name="SMSConnectNetworkFolderPath"></a>SMSConnectNetworkFolderPath
+### <a name="smsconnectnetworkfolderpath"></a><a name="SMSConnectNetworkFolderPath"></a> SMSConnectNetworkFolderPath
 
 *Is van toepassing op de stap [verbinding maken met](task-sequence-steps.md#BKMK_ConnectToNetworkFolder) netwerkmap.*
 
@@ -1469,7 +1469,7 @@ Hiermee geeft u het netwerkpad voor de verbinding op. Als u dit pad moet toewijz
 
 `\\server\share`
 
-### <a name="smsinstallupdatetarget"></a><a name="SMSInstallUpdateTarget"></a>SMSInstallUpdateTarget
+### <a name="smsinstallupdatetarget"></a><a name="SMSInstallUpdateTarget"></a> SMSInstallUpdateTarget
 
 *Is van toepassing op de stap [software-updates installeren](task-sequence-steps.md#BKMK_InstallSoftwareUpdates) .*
 
@@ -1482,7 +1482,7 @@ Hiermee geeft u op of alle updates of alleen verplichte updates worden geïnstal
 - `All`  
 - `Mandatory`  
 
-### <a name="smsrebootmessage"></a><a name="SMSRebootMessage"></a>SMSRebootMessage
+### <a name="smsrebootmessage"></a><a name="SMSRebootMessage"></a> SMSRebootMessage
 
 *Is van toepassing op de stap [computer opnieuw opstarten](task-sequence-steps.md#BKMK_RestartComputer) .*
 
@@ -1494,7 +1494,7 @@ Hiermee geeft u het bericht op dat moet worden weergegeven voor gebruikers voord
 
 `Save your work before the computer restarts.`  
 
-### <a name="smsreboottimeout"></a><a name="SMSRebootTimeout"></a>SMSRebootTimeout
+### <a name="smsreboottimeout"></a><a name="SMSRebootTimeout"></a> SMSRebootTimeout
 
 *Is van toepassing op de stap [computer opnieuw opstarten](task-sequence-steps.md#BKMK_RestartComputer) .*
 
@@ -1504,22 +1504,22 @@ Hiermee geeft u het aantal seconden op dat de waarschuwing wordt weergegeven aan
 
 #### <a name="examples"></a>Voorbeelden
 
-- `0`(standaard): geen opnieuw opstarten bericht weer geven  
+- `0` (standaard): geen opnieuw opstarten bericht weer geven  
 - `60`: De waarschuwing voor één minuut weer geven  
 
-### <a name="smstsassignmentsdownloadinterval"></a><a name="SMSTSAssignmentsDownloadInterval"></a>SMSTSAssignmentsDownloadInterval
+### <a name="smstsassignmentsdownloadinterval"></a><a name="SMSTSAssignmentsDownloadInterval"></a> SMSTSAssignmentsDownloadInterval
 
 Het aantal seconden dat moet worden gewacht voordat de client het beleid probeert te downloaden sinds de laatste poging die geen beleid heeft geretourneerd. De client wacht standaard **0** seconden alvorens het opnieuw te proberen.
 
 U kunt deze variabele instellen door een prestart-opdracht te gebruiken vanaf media of PXE.
 
-### <a name="smstsassignmentsdownloadretry"></a><a name="SMSTSAssignmentsDownloadRetry"></a>SMSTSAssignmentsDownloadRetry
+### <a name="smstsassignmentsdownloadretry"></a><a name="SMSTSAssignmentsDownloadRetry"></a> SMSTSAssignmentsDownloadRetry
 
 Het aantal keren dat een client het beleid probeert te downloaden nadat er bij de eerste poging geen beleid is gevonden. De client probeert standaard **0** keer opnieuw te proberen.
 
 U kunt deze variabele instellen door een prestart-opdracht te gebruiken vanaf media of PXE.
 
-### <a name="smstsassignusersmode"></a><a name="SMSTSAssignUsersMode"></a>SMSTSAssignUsersMode
+### <a name="smstsassignusersmode"></a><a name="SMSTSAssignUsersMode"></a> SMSTSAssignUsersMode
 
 Hiermee geeft u op hoe een takenreeks gebruikers koppelt aan de doelcomputer. Stel de variabele in op een van de volgende waarden:  
 
@@ -1529,7 +1529,7 @@ Hiermee geeft u op hoe een takenreeks gebruikers koppelt aan de doelcomputer. St
 
 - **Uitgeschakeld**: de taken reeks koppelt geen gebruikers aan de doel computer wanneer het besturings systeem wordt geïmplementeerd.
 
-### <a name="smstsdisablestatusretry"></a><a name="SMSTSDisableStatusRetry"></a>SMSTSDisableStatusRetry
+### <a name="smstsdisablestatusretry"></a><a name="SMSTSDisableStatusRetry"></a> SMSTSDisableStatusRetry
 
 <!--512358-->
 In scenario's zonder verbinding probeert de taken reeks engine herhaaldelijk status berichten naar het beheer punt te verzenden. Dit gedrag in dit scenario veroorzaakt vertragingen bij het verwerken van taken reeksen.
@@ -1541,7 +1541,7 @@ Wanneer de taken reeks opnieuw wordt gestart, blijft de waarde van deze variabel
 > [!NOTE]  
 > De rapportage van de [taken reeks status](../../core/servers/manage/list-of-reports.md#task-sequence---deployment-status) vertrouwt op deze status berichten om de voortgang, geschiedenis en Details van elke stap weer te geven. Als status berichten niet kunnen worden verzonden, worden ze niet in de wachtrij geplaatst. Wanneer de verbinding met het beheer punt wordt hersteld, worden deze niet op een later tijdstip verzonden. Dit gedrag resulteert in het rapporteren van taken reeks status om onvolledige en ontbrekende items te zijn.
 
-### <a name="smstsdisablewow64redirection"></a><a name="SMSTSDisableWow64Redirection"></a>SMSTSDisableWow64Redirection
+### <a name="smstsdisablewow64redirection"></a><a name="SMSTSDisableWow64Redirection"></a> SMSTSDisableWow64Redirection
 
 *Is van toepassing op de stap [opdracht regel uitvoeren](task-sequence-steps.md#BKMK_RunCommandLine) .*
 
@@ -1549,65 +1549,65 @@ Wanneer de taken reeks opnieuw wordt gestart, blijft de waarde van deze variabel
 
 Standaard in een 64-bits besturings systeem zoekt en voert de taken reeks het programma uit op de opdracht regel met behulp van de WOW64-bestands systeem-redirector. Dit gedrag zorgt ervoor dat de opdracht 32-bits versies van OS-Program ma's en-Dll's kan zoeken. Als u deze variabele instelt, wordt `true` het gebruik van de WOW64-bestands systeem-redirector uitgeschakeld. De opdracht vindt systeem eigen 64-bits versies van OS-Program ma's en dll-bestanden. Deze variabele heeft geen effect als deze wordt uitgevoerd op een 32-bits besturings systeem.
 
-### <a name="smstsdownloadabortcode"></a><a name="SMSTSDownloadAbortCode"></a>SMSTSDownloadAbortCode
+### <a name="smstsdownloadabortcode"></a><a name="SMSTSDownloadAbortCode"></a> SMSTSDownloadAbortCode
 
 Deze variabele bevat de afbreek code waarde voor het download programma voor externe Program ma's. Dit programma is opgegeven in de variabele [SMSTSDownloadProgram](#SMSTSDownloadProgram) . Als het programma een fout code retourneert die gelijk is aan de waarde van de variabele SMSTSDownloadAbortCode, mislukt het downloaden van de inhoud en wordt er geen andere download methode geprobeerd.
 
-### <a name="smstsdownloadprogram"></a><a name="SMSTSDownloadProgram"></a>SMSTSDownloadProgram
+### <a name="smstsdownloadprogram"></a><a name="SMSTSDownloadProgram"></a> SMSTSDownloadProgram
 
 Gebruik deze variabele om een alternatieve inhouds provider (ACS) op te geven. Een ACS is een Downloader-programma dat wordt gebruikt om inhoud te downloaden. De taken reeks gebruikt de ACS in plaats van de standaard Configuration Manager Downloader. Als onderdeel van het proces voor het downloaden van inhoud, controleert de taken reeks deze variabele. Indien opgegeven, voert de taken reeks het programma uit om de inhoud te downloaden.
 
-### <a name="smstsdownloadretrycount"></a><a name="SMSTSDownloadRetryCount"></a>SMSTSDownloadRetryCount
+### <a name="smstsdownloadretrycount"></a><a name="SMSTSDownloadRetryCount"></a> SMSTSDownloadRetryCount
 
 Het aantal keren dat Configuration Manager probeert inhoud te downloaden vanaf een distributie punt. De client probeert standaard **twee** maal opnieuw te proberen.
 
-### <a name="smstsdownloadretrydelay"></a><a name="SMSTSDownloadRetryDelay"></a>SMSTSDownloadRetryDelay
+### <a name="smstsdownloadretrydelay"></a><a name="SMSTSDownloadRetryDelay"></a> SMSTSDownloadRetryDelay
 
 Het aantal seconden dat Configuration Manager wacht voordat het opnieuw probeert inhoud te downloaden vanaf een distributie punt. De client wacht standaard **15** seconden alvorens het opnieuw te proberen.
 
-### <a name="smstsdriverrequestconnecttimeout"></a><a name="SMSTSDriverRequestConnectTimeOut"></a>SMSTSDriverRequestConnectTimeOut
+### <a name="smstsdriverrequestconnecttimeout"></a><a name="SMSTSDriverRequestConnectTimeOut"></a> SMSTSDriverRequestConnectTimeOut
 
 *Is van toepassing op de stap [Stuur Programma's automatisch Toep assen](task-sequence-steps.md#BKMK_AutoApplyDrivers) .*
 
 Bij het aanvragen van de stuurprogrammacatalogus, is deze variabele het aantal seconden dat de taken reeks wacht op de HTTP-server verbinding. Als de verbinding langer duurt dan de time-outinstelling, annuleert de taken reeks de aanvraag. De time-out is standaard ingesteld op **60** seconden.
 
-### <a name="smstsdriverrequestreceivetimeout"></a><a name="SMSTSDriverRequestReceiveTimeOut"></a>SMSTSDriverRequestReceiveTimeOut
+### <a name="smstsdriverrequestreceivetimeout"></a><a name="SMSTSDriverRequestReceiveTimeOut"></a> SMSTSDriverRequestReceiveTimeOut
 
 *Is van toepassing op de stap [Stuur Programma's automatisch Toep assen](task-sequence-steps.md#BKMK_AutoApplyDrivers) .*
 
 Bij het aanvragen van de stuurprogrammacatalogus, is deze variabele het aantal seconden dat de taken reeks wacht op een antwoord. Als de verbinding langer duurt dan de time-outinstelling, annuleert de taken reeks de aanvraag. De time-out is standaard ingesteld op **480** seconden.
 
-### <a name="smstsdriverrequestresolvetimeout"></a><a name="SMSTSDriverRequestResolveTimeOut"></a>SMSTSDriverRequestResolveTimeOut
+### <a name="smstsdriverrequestresolvetimeout"></a><a name="SMSTSDriverRequestResolveTimeOut"></a> SMSTSDriverRequestResolveTimeOut
 
 *Is van toepassing op de stap [Stuur Programma's automatisch Toep assen](task-sequence-steps.md#BKMK_AutoApplyDrivers) .*
 
 Bij het aanvragen van de stuurprogrammacatalogus, is deze variabele het aantal seconden dat de taken reeks wacht op HTTP-naam omzetting. Als de verbinding langer duurt dan de time-outinstelling, annuleert de taken reeks de aanvraag. De time-out is standaard ingesteld op **60** seconden.
 
-### <a name="smstsdriverrequestsendtimeout"></a><a name="SMSTSDriverRequestSendTimeOut"></a>SMSTSDriverRequestSendTimeOut
+### <a name="smstsdriverrequestsendtimeout"></a><a name="SMSTSDriverRequestSendTimeOut"></a> SMSTSDriverRequestSendTimeOut
 
 *Is van toepassing op de stap [Stuur Programma's automatisch Toep assen](task-sequence-steps.md#BKMK_AutoApplyDrivers) .*
 
 Bij het verzenden van een aanvraag voor de stuurprogrammacatalogus, is deze variabele het aantal seconden dat de taken reeks wacht op het verzenden van de aanvraag. Als de aanvraag langer duurt dan de time-outinstelling, annuleert de taken reeks de aanvraag. De time-out is standaard ingesteld op **60** seconden.
 
-### <a name="smstserrordialogtimeout"></a><a name="SMSTSErrorDialogTimeout"></a>SMSTSErrorDialogTimeout
+### <a name="smstserrordialogtimeout"></a><a name="SMSTSErrorDialogTimeout"></a> SMSTSErrorDialogTimeout
 
 Als er een fout optreedt in een taken reeks, wordt er een dialoog venster met de fout weer gegeven. De taken reeks wordt automatisch gesloten na het aantal seconden dat door deze variabele is opgegeven. Deze waarde is standaard **900** seconden (15 minuten).
 
-### <a name="smstslanguagefolder"></a><a name="SMSTSLanguageFolder"></a>SMSTSLanguageFolder
+### <a name="smstslanguagefolder"></a><a name="SMSTSLanguageFolder"></a> SMSTSLanguageFolder
 
 Gebruik deze variabele als u de weergavetaal wilt wijzigen van een taalonafhankelijke installatiekopie.
 
-### <a name="smstslocaldatadrive"></a><a name="SMSTSLocalDataDrive"></a>SMSTSLocalDataDrive
+### <a name="smstslocaldatadrive"></a><a name="SMSTSLocalDataDrive"></a> SMSTSLocalDataDrive
 
 Hiermee geeft u op waar de taken reeks tijdelijke cache bestanden opslaat op de doel computer terwijl deze wordt uitgevoerd.
 
 Stel deze variabele in voordat de taken reeks wordt gestart, bijvoorbeeld door een verzamelings variabele in te stellen. Zodra de taken reeks is gestart, definieert Configuration Manager de [_SMSTSMDataPath](#SMSTSMDataPath) variabele op basis van de definitie van de variabele SMSTSLocalDataDrive.
 
-### <a name="smstsmp"></a><a name="SMSTSMP"></a>SMSTSMP
+### <a name="smstsmp"></a><a name="SMSTSMP"></a> SMSTSMP
 
 Gebruik deze variabele om de URL of het IP-adres van het Configuration Manager beheer punt op te geven.
 
-### <a name="smstsmplistrequesttimeoutenabled"></a><a name="SMSTSMPListRequestTimeoutEnabled"></a>SMSTSMPListRequestTimeoutEnabled
+### <a name="smstsmplistrequesttimeoutenabled"></a><a name="SMSTSMPListRequestTimeoutEnabled"></a> SMSTSMPListRequestTimeoutEnabled
 
 *Is van toepassing op de volgende stappen:*  
 
@@ -1620,7 +1620,7 @@ Als de client zich niet op het intranet bevindt, gebruikt u deze variabele om he
 
 Wanneer clients zich op het Internet bevinden, stelt u deze variabele in op `False` om onnodige vertragingen te voor komen.
 
-### <a name="smstsmplistrequesttimeout"></a><a name="SMSTSMPListRequestTimeout"></a>SMSTSMPListRequestTimeout
+### <a name="smstsmplistrequesttimeout"></a><a name="SMSTSMPListRequestTimeout"></a> SMSTSMPListRequestTimeout
 
 *Is van toepassing op de volgende stappen:*  
 
@@ -1631,31 +1631,31 @@ Wanneer clients zich op het Internet bevinden, stelt u deze variabele in op `Fal
 
 Als de taken reeks de lijst met beheer punten (MPList) niet kan ophalen van locatie Services, geeft deze variabele aan hoeveel milliseconden er moet worden gewacht voordat de stap opnieuw wordt geprobeerd. Standaard wacht de taken reeks op `60000` milliseconden (60 seconden) voordat deze opnieuw probeert. Het probeert Maxi maal drie keer.
 
-### <a name="smstspeerdownload"></a><a name="SMSTSPeerDownload"></a>SMSTSPeerDownload
+### <a name="smstspeerdownload"></a><a name="SMSTSPeerDownload"></a> SMSTSPeerDownload
 
 Gebruik deze variabele om de client in staat te stellen Windows PE-peer-cache te gebruiken. Als u deze variabele instelt, wordt `true` deze functionaliteit ingeschakeld.
 
-### <a name="smstspeerrequestport"></a><a name="SMSTSPeerRequestPort"></a>SMSTSPeerRequestPort
+### <a name="smstspeerrequestport"></a><a name="SMSTSPeerRequestPort"></a> SMSTSPeerRequestPort
 
 Een aangepaste netwerk poort die door Windows PE-peer-cache wordt gebruikt voor de eerste uitzending. De standaard poort die in de client instellingen is geconfigureerd, is **8004**.
 
-### <a name="smstspersistcontent"></a><a name="SMSTSPersistContent"></a>Smstspersiscontent
+### <a name="smstspersistcontent"></a><a name="SMSTSPersistContent"></a> Smstspersiscontent
 
 Gebruik deze variabele als u inhoud tijdelijk in de takenreekscache wilt houden. Deze variabele wijkt af van [SMSTSPreserveContent](#SMSTSPreserveContent), die inhoud in de Configuration Manager-client cache houdt nadat de taken reeks is voltooid. Smstspersiscontent maakt gebruik van de taken reeks cache, SMSTSPreserveContent maakt gebruik van de Configuration Manager-client cache.
 
-### <a name="smstspostaction"></a><a name="SMSTSPostAction"></a>SMSTSPostAction
+### <a name="smstspostaction"></a><a name="SMSTSPostAction"></a> SMSTSPostAction
 
 Hiermee geeft u een opdracht op die wordt uitgevoerd nadat de taken reeks is voltooid. Geef bijvoorbeeld `shutdown.exe /r /t 30 /f` op dat de computer 30 seconden nadat de taken reeks is voltooid, opnieuw moet worden opgestart.
 
-### <a name="smstspreferredadvertid"></a><a name="SMSTSPreferredAdvertID"></a>SMSTSPreferredAdvertID
+### <a name="smstspreferredadvertid"></a><a name="SMSTSPreferredAdvertID"></a> SMSTSPreferredAdvertID
 
 Hiermee wordt de taken reeks gedwongen een specifieke gerichte implementatie uit te voeren op de doel computer. Stel deze variabele in via een prestart-opdracht vanaf media of PXE. Als deze variabele is ingesteld, overschrijft de takenreeks alle vereiste implementaties.
 
-### <a name="smstspreservecontent"></a><a name="SMSTSPreserveContent"></a>SMSTSPreserveContent
+### <a name="smstspreservecontent"></a><a name="SMSTSPreserveContent"></a> SMSTSPreserveContent
 
 Met deze variabele wordt de inhoud in de taken reeks gemarkeerd die na de implementatie moet worden bewaard in de Configuration Manager-client cache. Deze variabele wijkt af van de [smstspersiscontent](#SMSTSPersistContent), waarbij alleen de inhoud voor de duur van de taken reeks wordt bewaard. Smstspersiscontent maakt gebruik van de taken reeks cache, SMSTSPreserveContent maakt gebruik van de Configuration Manager-client cache. Stel SMSTSPreserveContent in om `true` deze functionaliteit in te scha kelen.
 
-### <a name="smstsrebootdelay"></a><a name="SMSTSRebootDelay"></a>SMSTSRebootDelay
+### <a name="smstsrebootdelay"></a><a name="SMSTSRebootDelay"></a> SMSTSRebootDelay
 
 Hiermee wordt opgegeven hoeveel seconden er wordt gewacht voordat de computer opnieuw wordt opgestart. Als deze variabele nul (0) is, wordt in het taken reeks beheer geen meldings dialoogvenster weer gegeven voordat de computer opnieuw wordt opgestart.
 
@@ -1665,7 +1665,7 @@ Hiermee wordt opgegeven hoeveel seconden er wordt gewacht voordat de computer op
 
 - `60`: een melding voor één minuut weer geven  
 
-### <a name="smstsrebootdelaynext"></a><a name="SMSTSRebootDelayNext"></a>SMSTSRebootDelayNext
+### <a name="smstsrebootdelaynext"></a><a name="SMSTSRebootDelayNext"></a> SMSTSRebootDelayNext
 
 <!--4447680-->
 Vanaf versie 1906 gebruikt u deze variabele met de bestaande [SMSTSRebootDelay](task-sequence-variables.md#SMSTSRebootDelay) -variabele. Als u later opnieuw wilt opstarten met een andere time-out dan de eerste, stelt u SMSTSRebootDelayNext in op een andere waarde in seconden.
@@ -1675,7 +1675,7 @@ Vanaf versie 1906 gebruikt u deze variabele met de bestaande [SMSTSRebootDelay](
 U wilt gebruikers een melding van 60 minuten opnieuw opstarten aan het begin van de taken reeks van Windows 10 in-place upgrade geven. Na deze eerste lange time-out wilt u extra time-outs tot 60 seconden. Stel SMSTSRebootDelay in op `3600` en SMSTSRebootDelayNext naar `60` .  
 
 
-### <a name="smstsrebootmessage"></a><a name="SMSTSRebootMessage"></a>SMSTSRebootMessage
+### <a name="smstsrebootmessage"></a><a name="SMSTSRebootMessage"></a> SMSTSRebootMessage
 
 Hiermee geeft u het bericht op dat moet worden weer gegeven in het dialoog venster melding over opnieuw opstarten. Als deze variabele niet is ingesteld, wordt een standaard bericht weer gegeven.
 
@@ -1683,18 +1683,18 @@ Hiermee geeft u het bericht op dat moet worden weer gegeven in het dialoog venst
 
 `The task sequence is restarting this computer`
 
-### <a name="smstsrebootrequested"></a><a name="SMSTSRebootRequested"></a>SMSTSRebootRequested
+### <a name="smstsrebootrequested"></a><a name="SMSTSRebootRequested"></a> SMSTSRebootRequested
 
 Geeft aan dat opnieuw opstarten is aangevraagd nadat de huidige takenreeks is voltooid. Als voor de taken reeks stap opnieuw opstarten nodig is om de actie te volt ooien, stelt u deze variabele in. Nadat de computer opnieuw is opgestart, wordt de taken reeks nog steeds uitgevoerd vanaf de volgende taken reeks stap.
 
 - `HD`: Opnieuw opstarten naar het geïnstalleerde besturings systeem
 - `WinPE`: Opnieuw opstarten naar de gekoppelde opstart installatie kopie
 
-### <a name="smstsretryrequested"></a><a name="SMSTSRetryRequested"></a>SMSTSRetryRequested
+### <a name="smstsretryrequested"></a><a name="SMSTSRetryRequested"></a> SMSTSRetryRequested
 
 Hiermee wordt een nieuwe poging aangevraagd nadat de huidige takenreeksstap is voltooid. Als deze taken reeks variabele is ingesteld, stelt u ook de variabele [SMSTSRebootRequested](#SMSTSRebootRequested) in op `true` . Nadat de computer opnieuw is opgestart, voert het taken reeks beheer dezelfde taken reeks stap opnieuw uit.
 
-### <a name="smstsruncommandlineasuser"></a><a name="SMSTSRunCommandLineAsUser"></a>SMSTSRunCommandLineAsUser
+### <a name="smstsruncommandlineasuser"></a><a name="SMSTSRunCommandLineAsUser"></a> SMSTSRunCommandLineAsUser
 
 *Vanaf versie 2002* <!-- 5573175 -->  
 *Is van toepassing op de stap [opdracht regel uitvoeren](task-sequence-steps.md#BKMK_RunCommandLine) .*
@@ -1707,7 +1707,7 @@ Configureer `SMSTSRunCommandLineAsUser` met een van de volgende waarden:
 
 - `false`: Alle verdere **Uitvoeren opdracht regel** stappen worden uitgevoerd in de context die u in de stap hebt geconfigureerd.
 
-### <a name="smstsruncommandlineusername"></a><a name="SMSTSRunCommandLineUserName"></a>SMSTSRunCommandLineUserName
+### <a name="smstsruncommandlineusername"></a><a name="SMSTSRunCommandLineUserName"></a> SMSTSRunCommandLineUserName
 
 *Is van toepassing op de stap [opdracht regel uitvoeren](task-sequence-steps.md#BKMK_RunCommandLine) .*
 
@@ -1722,7 +1722,7 @@ Hiermee geeft u het account op waarmee de opdrachtregel wordt uitgevoerd. De waa
 
 Zie [accounts](../../core/plan-design/hierarchy/accounts.md#task-sequence-run-as-account)voor meer informatie over het run as-account van de taken reeks.
 
-### <a name="smstsruncommandlineuserpassword"></a><a name="SMSTSRunCommandLineUserPassword"></a>SMSTSRunCommandLineUserPassword
+### <a name="smstsruncommandlineuserpassword"></a><a name="SMSTSRunCommandLineUserPassword"></a> SMSTSRunCommandLineUserPassword
 
 *Is van toepassing op de stap [opdracht regel uitvoeren](task-sequence-steps.md#BKMK_RunCommandLine) .*
 
@@ -1730,7 +1730,7 @@ Zie [accounts](../../core/plan-design/hierarchy/accounts.md#task-sequence-run-as
 
 Hiermee geeft u het wacht woord op voor het account dat is opgegeven door de variabele [SMSTSRunCommandLineUserName](#SMSTSRunCommandLineUserName) .
 
-### <a name="smstsrunpowershellasuser"></a><a name="SMSTSRunPowerShellAsUser"></a>SMSTSRunPowerShellAsUser
+### <a name="smstsrunpowershellasuser"></a><a name="SMSTSRunPowerShellAsUser"></a> SMSTSRunPowerShellAsUser
 
 *Vanaf versie 2002* <!-- 5573175 -->  
 *Is van toepassing op de stap [Power shell-script uitvoeren](task-sequence-steps.md#BKMK_RunPowerShellScript) .*
@@ -1743,7 +1743,7 @@ Configureer `SMSTSRunPowerShellAsUser` met een van de volgende waarden:
 
 - `false`: Alle verdere **Power shell-script** stappen die worden uitgevoerd in de context die u hebt geconfigureerd in de stap.
 
-### <a name="smstsrunpowershellusername"></a><a name="SMSTSRunPowerShellUserName"></a>SMSTSRunPowerShellUserName
+### <a name="smstsrunpowershellusername"></a><a name="SMSTSRunPowerShellUserName"></a> SMSTSRunPowerShellUserName
 
 *Is van toepassing op de stap [Power shell-script uitvoeren](task-sequence-steps.md#BKMK_RunPowerShellScript) .*
 
@@ -1756,7 +1756,7 @@ Hiermee geeft u het account op waarmee het Power shell-script wordt uitgevoerd. 
 
 Zie [accounts](../../core/plan-design/hierarchy/accounts.md#task-sequence-run-as-account)voor meer informatie over het run as-account van de taken reeks.
 
-### <a name="smstsrunpowershelluserpassword"></a><a name="SMSTSRunPowerShellUserPassword"></a>SMSTSRunPowerShellUserPassword
+### <a name="smstsrunpowershelluserpassword"></a><a name="SMSTSRunPowerShellUserPassword"></a> SMSTSRunPowerShellUserPassword
 
 *Is van toepassing op de stap [Power shell-script uitvoeren](task-sequence-steps.md#BKMK_RunPowerShellScript) .*
 
@@ -1764,7 +1764,7 @@ Zie [accounts](../../core/plan-design/hierarchy/accounts.md#task-sequence-run-as
 
 Hiermee geeft u het wacht woord op voor het account dat is opgegeven door de variabele [SMSTSRunPowerShellUserName](#SMSTSRunPowerShellUserName) .
 
-### <a name="smstssoftwareupdatescantimeout"></a><a name="SMSTSSoftwareUpdateScanTimeout"></a>SMSTSSoftwareUpdateScanTimeout
+### <a name="smstssoftwareupdatescantimeout"></a><a name="SMSTSSoftwareUpdateScanTimeout"></a> SMSTSSoftwareUpdateScanTimeout
 
 *Is van toepassing op de stap [software-updates installeren](task-sequence-steps.md#BKMK_InstallSoftwareUpdates) .*
 
@@ -1772,7 +1772,7 @@ Hiermee geeft u het wacht woord op voor het account dat is opgegeven door de var
 
 Bepaal de time-out voor het scannen van software-updates tijdens deze stap. Als u bijvoorbeeld talloze updates verwacht tijdens de scan, verhoogt u de waarde. De standaard waarde is `3600` seconden (60 minuten). De waarde van de variabele wordt in seconden ingesteld.
 
-### <a name="smstsudausers"></a><a name="SMSTSUDAUsers"></a>SMSTSUDAUsers
+### <a name="smstsudausers"></a><a name="SMSTSUDAUsers"></a> SMSTSUDAUsers
 
 Hiermee geeft u de primaire gebruikers van de doel computer op met de volgende indeling: `<DomainName>\<UserName>` . Scheid meerdere gebruikers met behulp van een komma ( `,` ). Zie [gebruikers koppelen aan een doel computer](../get-started/associate-users-with-a-destination-computer.md)voor meer informatie.
 
@@ -1780,7 +1780,7 @@ Hiermee geeft u de primaire gebruikers van de doel computer op met de volgende i
 
 `contoso\jqpublic, contoso\megb, contoso\janedoh`
 
-### <a name="smstswaitforsecondreboot"></a><a name="SMSTSWaitForSecondReboot"></a>SMSTSWaitForSecondReboot
+### <a name="smstswaitforsecondreboot"></a><a name="SMSTSWaitForSecondReboot"></a> SMSTSWaitForSecondReboot
 
 *Is van toepassing op de stap [software-updates installeren](task-sequence-steps.md#BKMK_InstallSoftwareUpdates) .*
 
@@ -1795,14 +1795,14 @@ Als u bijvoorbeeld SMSTSWaitForSecondReboot instelt op, wordt `600` de taken ree
 > [!Note]
 > Deze variabele is alleen van toepassing op een taken reeks die een besturings systeem implementeert. Het werkt niet in een aangepaste taken reeks. <!-- 2839998 -->
 
-### <a name="tsdebugmode"></a><a name="TSDebugMode"></a>TSDebugMode
+### <a name="tsdebugmode"></a><a name="TSDebugMode"></a> TSDebugMode
 
 <!--3612274-->
 Met ingang van versie 1906 stelt u deze variabele in `TRUE` op een verzameling of computer object waarop de taken reeks wordt geïmplementeerd. Op elk apparaat waarop deze variabele is ingesteld, wordt elke taken reeks geïmplementeerd in de foutopsporingsmodus.
 
 Zie [debug a task sequence](../deploy-use/debug-task-sequence.md)voor meer informatie.
 
-### <a name="tsdebugonerror"></a><a name="TSDebugOnError"></a>TSDebugOnError
+### <a name="tsdebugonerror"></a><a name="TSDebugOnError"></a> TSDebugOnError
 
 <!-- 5012536 -->
 Met ingang van versie 1910 stelt u deze variabele in op `TRUE` automatisch starten van het [fout opsporingsprogramma voor de taken reeks](../deploy-use/debug-task-sequence.md) wanneer de taken reeks een fout retourneert.
@@ -1813,7 +1813,7 @@ Stel deze variabele in op:
 
 - Een verzamelings variabele. Zie [variabelen instellen](using-task-sequence-variables.md#bkmk_set)voor meer informatie.
 
-### <a name="tsdisableprogressui"></a><a name="TSDisableProgressUI"></a>TSDisableProgressUI
+### <a name="tsdisableprogressui"></a><a name="TSDisableProgressUI"></a> TSDisableProgressUI
 
 <!-- 1354291 -->
 Gebruik deze variabele om te bepalen wanneer de taken reeks voortgang weergeeft aan eind gebruikers. Als u de voortgang op verschillende tijdstippen wilt verbergen of weer geven, stelt u deze variabele meermaals in een taken reeks in.  
@@ -1822,7 +1822,7 @@ Gebruik deze variabele om te bepalen wanneer de taken reeks voortgang weergeeft 
 
 - `false`: Voortgang van taken reeks weer geven  
 
-### <a name="tserroronwarning"></a><a name="TSErrorOnWarning"></a>Tserroronwarning instelt
+### <a name="tserroronwarning"></a><a name="TSErrorOnWarning"></a> Tserroronwarning instelt
 
 *Is van toepassing op de stap [toepassing installeren](task-sequence-steps.md#BKMK_InstallApplication) .*
 
@@ -1830,7 +1830,7 @@ Gebruik deze variabele om te bepalen wanneer de taken reeks voortgang weergeeft 
 
 Geef op of de taken reeks engine een gedetecteerde waarschuwing beschouwt als een fout tijdens deze stap. De taken reeks stelt de [_TSAppInstallStatus](#TSAppInstallStatus) variabele in op `Warning` Wanneer een of meer toepassingen, of een vereiste afhankelijkheid, niet zijn geïnstalleerd omdat deze niet aan een vereiste voldoet. Wanneer u deze variabele instelt op `True` , en de taken reeks **_TSAppInstallStatus** op `Warning` , is het resultaat een fout. Een waarde van `False` is het standaard gedrag.
 
-### <a name="tsprogressinfolevel"></a><a name="TSProgressInfoLevel"></a>TSProgressInfoLevel
+### <a name="tsprogressinfolevel"></a><a name="TSProgressInfoLevel"></a> TSProgressInfoLevel
 
 *Vanaf versie 2002*<!--5932692-->  
 
@@ -1840,11 +1840,11 @@ Geef deze variabele op om te bepalen welk type informatie wordt weer gegeven in 
 - `2`: Voeg de huidige stap, het totale aantal stappen en het percentage voltooid toe. Bijvoorbeeld **2 van 10 (20% voltooid)**.
 - `3`: Geef het percentage voltooid op. Bijvoorbeeld **(20% voltooid)**.
 
-### <a name="tsuefidrive"></a><a name="TSUEFIDrive"></a>TSUEFIDrive
+### <a name="tsuefidrive"></a><a name="TSUEFIDrive"></a> TSUEFIDrive
 
 Gebruik de eigenschappen van een FAT32-partitie in het veld **variabele** . Wanneer de taken reeks deze variabele detecteert, bereidt deze de schijf voor op de overgang naar UEFI voordat de computer opnieuw wordt opgestart. Zie [taken reeks stappen voor het beheren van de conversie van BIOS naar UEFI](../deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md)voor meer informatie.
 
-### <a name="workingdirectory"></a><a name="WorkingDirectory"></a>Variabele workingdirectory
+### <a name="workingdirectory"></a><a name="WorkingDirectory"></a> Variabele workingdirectory
 
 *Is van toepassing op de stap [opdracht regel uitvoeren](task-sequence-steps.md#BKMK_RunCommandLine) .*
 

@@ -10,12 +10,12 @@ ms.technology: configmgr-sum
 ms.assetid: 4b0e2e90-aac7-4d06-a707-512eee6e576c
 manager: dougeby
 ms.author: mstewart
-ms.openlocfilehash: 560b432bb90f99207fd15bc07e7aff98ffd59ebf
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a327d50a2743f81407530355b6fd5101ce6a8b02
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719783"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696902"
 ---
 # <a name="software-updates-maintenance"></a>Onderhoud van software-updates
 
@@ -27,7 +27,7 @@ U kunt de WSUS-opschoon taken plannen en uitvoeren vanuit de Configuration Manag
 
 Voer de volgende stappen uit om de WSUS-opschoon taak te plannen:
 
-1. Ga in de Configuration Manager-console naar **beheer** > **overzicht** > **site configuratie** > **sites**.
+1. Ga in de Configuration Manager-console naar **beheer**  >  **overzicht**  >  **site configuratie**  >  **sites**.
 2. Selecteer de site boven aan uw Configuration Manager-hiërarchie.
 
 3. Klik op **Siteonderdelen configureren** in de groep **Instellingen** . Klik vervolgens op **Software-updatepunt** om Eigenschappen van software-updatepuntcomponent te openen.  
@@ -109,7 +109,7 @@ De volgende opties voor de **wizard WSUS-server opruimen** worden niet uitgevoer
 
 Het weigeren van updates in WSUS verbetert de prestaties door deze updates te verwijderen uit de catalogussen die naar clients worden verzonden. Als u updates afwijst die Configuration Manager markeren als vervangen, minimaliseert u de catalogussen en verbetert u de prestaties.
 
-1. Ga in de Configuration Manager-console naar **beheer** > **overzicht** > **site configuratie** > **sites**.
+1. Ga in de Configuration Manager-console naar **beheer**  >  **overzicht**  >  **site configuratie**  >  **sites**.
 2. Selecteer de site boven aan uw Configuration Manager-hiërarchie.
 3. Klik op **Siteonderdelen configureren** in de groep Instellingen . Klik vervolgens op **Software-updatepunt** om Eigenschappen van software-updatepuntcomponent te openen.
 4. Op het tabblad **onderhoud van WSUS** selecteert u **verlopen updates in WSUS afwijzen volgens de vervangings regels**.
@@ -118,7 +118,7 @@ Het weigeren van updates in WSUS verbetert de prestaties door deze updates te ve
 
 Het toevoegen van niet-geclusterde indexen verbetert de prestaties van de WSUS-opschoning die Configuration Manager.
 
-1. Ga in de Configuration Manager-console naar **beheer** > **overzicht** > **site configuratie** > **sites**.
+1. Ga in de Configuration Manager-console naar **beheer**  >  **overzicht**  >  **site configuratie**  >  **sites**.
 2. Selecteer de site boven aan uw Configuration Manager-hiërarchie.
 3. Klik op **Siteonderdelen configureren** in de groep Instellingen . Klik vervolgens op **Software-updatepunt** om Eigenschappen van software-updatepuntcomponent te openen.
 4. Op het tabblad **onderhoud van WSUS** selecteert **u niet-geclusterde indexen toevoegen aan de WSUS-data base**.
@@ -130,17 +130,17 @@ Het toevoegen van niet-geclusterde indexen verbetert de prestaties van de WSUS-o
 
 Wanneer de WSUS-data base zich op een externe SQL-Server bevindt, moet u mogelijk machtigingen toevoegen in SQL om indexen te maken. Het account dat wordt gebruikt voor verbinding met de WSUS-data base en het maken van de indexen kan variëren. Als u een [WSUS-server verbindings account opgeeft in de eigenschappen van het software-update punt](../get-started/install-a-software-update-point.md#wsus-server-connection-account), moet u ervoor zorgen dat het verbindings account de SQL-machtigingen heeft. Als u geen WSUS-server verbindings account opgeeft, moeten de SQL-machtigingen voor het computer account van de site server zijn vereist.
 
-- Voor het maken van `ALTER` een index is machtiging vereist voor de tabel of weer gave. Het account moet lid zijn van de `sysadmin` vaste serverrol of de `db_ddladmin` en `db_owner` vaste database rollen. Zie [Create Index (Transact-SQL) (Engelstalig)](https://docs.microsoft.com/sql/t-sql/statements/create-index-transact-sql?view=sql-server-2017#permissions)voor meer informatie over het maken en indexeren van machtigingen.
-- De `CONNECT SQL` Server machtiging moet aan het account worden verleend. Zie [granting server permissions (Transact-SQL) (Engelstalig)](https://docs.microsoft.com/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017)voor meer informatie.
+- Voor het maken van een index is `ALTER` machtiging vereist voor de tabel of weer gave. Het account moet lid zijn van de `sysadmin` vaste serverrol of de `db_ddladmin` en `db_owner` vaste database rollen. Zie [Create Index (Transact-SQL) (Engelstalig)](/sql/t-sql/statements/create-index-transact-sql?view=sql-server-2017#permissions)voor meer informatie over het maken en indexeren van machtigingen.
+- De `CONNECT SQL` Server machtiging moet aan het account worden verleend. Zie [granting server permissions (Transact-SQL) (Engelstalig)](/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017)voor meer informatie.
 
 > [!NOTE]  
->  Als de WSUS-data base zich op een externe SQL-Server bevindt met een niet-standaard poort, worden er mogelijk geen indexen toegevoegd. U kunt een [server alias maken met behulp van SQL Server Configuration Manager](https://docs.microsoft.com/sql/database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client?view=sql-server-2017) voor dit scenario. Zodra de alias is toegevoegd en Configuration Manager een verbinding met de WSUS-Data Base kunt maken, worden er indexen toegevoegd.
+>  Als de WSUS-data base zich op een externe SQL-Server bevindt met een niet-standaard poort, worden er mogelijk geen indexen toegevoegd. U kunt een [server alias maken met behulp van SQL Server Configuration Manager](/sql/database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client?view=sql-server-2017) voor dit scenario. Zodra de alias is toegevoegd en Configuration Manager een verbinding met de WSUS-Data Base kunt maken, worden er indexen toegevoegd.
 
 ### <a name="remove-obsolete-updates-from-the-wsus-database"></a>Verouderde updates verwijderen uit de WSUS-data base
 
 Verouderde updates zijn niet-gebruikte updates en update revisies in de WSUS-data base. Over het algemeen wordt een update als verouderd beschouwd als deze niet meer in de [Microsoft Update catalogus](https://www.catalog.update.microsoft.com/) staat en niet als vereisten of afhankelijkheid nodig is voor andere updates.
 
-1. Ga in de Configuration Manager-console naar **beheer** > **overzicht** > **site configuratie** > **sites**.
+1. Ga in de Configuration Manager-console naar **beheer**  >  **overzicht**  >  **site configuratie**  >  **sites**.
 2. Selecteer de site boven aan uw Configuration Manager-hiërarchie.
 3. Klik op **Siteonderdelen configureren** in de groep Instellingen . Klik vervolgens op **Software-updatepunt** om Eigenschappen van software-updatepuntcomponent te openen.
 4. Op het tabblad **onderhoud van WSUS** selecteert u **verouderde updates verwijderen uit de WSUS-data base**.
@@ -150,8 +150,8 @@ Verouderde updates zijn niet-gebruikte updates en update revisies in de WSUS-dat
 
 Wanneer de WSUS-data base zich op een externe SQL-Server bevindt, heeft het computer account van de site server de volgende SQL-machtigingen nodig:
 
-- De `db_datareader` en `db_datawriter` de vaste database rollen. Zie [functies op database niveau](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles?view=sql-server-2017#fixed-database-roles)voor meer informatie.
-- De `CONNECT SQL` Server machtiging moet worden verleend aan het computer account van de site server. Zie [granting server permissions (Transact-SQL) (Engelstalig)](https://docs.microsoft.com/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017)voor meer informatie.
+- De `db_datareader` en de `db_datawriter` vaste database rollen. Zie [functies op database niveau](/sql/relational-databases/security/authentication-access/database-level-roles?view=sql-server-2017#fixed-database-roles)voor meer informatie.
+- De `CONNECT SQL` Server machtiging moet worden verleend aan het computer account van de site server. Zie [granting server permissions (Transact-SQL) (Engelstalig)](/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017)voor meer informatie.
 
 #### <a name="wsus-cleanup-wizard"></a>Wizard WSUS opruimen
 
@@ -188,8 +188,8 @@ U kunt het probleem omzeilen door het WSUS-onderhoud voor de externe software-up
 
 U kunt deze opschoning controleren door de bestand Wsyncmgr. log te bekijken voor de volgende vermeldingen:
 
-- De weigering van vervangen updates in WSUS is voltooid wanneer u deze logboek vermelding ziet:`Cleanup processed <number> total updates and declined <number>`
-- De WSUS-opschoning wordt gestart wanneer u deze vermelding ziet:`Calling WSUS Cleanup.`
-- De WSUS-opruiming voor verlopen updates is voltooid wanneer u dit item ziet:`Successfully completed WSUS Cleanup.`
-- Het opruimen van de Configuration Manager configuratie-items voor verlopen updates wordt gestart wanneer u deze vermelding ziet:`Deleting old expired updates...`
-- Het opruimen van de Configuration Manager configuratie-items voor verlopen updates is voltooid wanneer u deze vermelding ziet:`Deleted <number> expired updates total`
+- De weigering van vervangen updates in WSUS is voltooid wanneer u deze logboek vermelding ziet: `Cleanup processed <number> total updates and declined <number>`
+- De WSUS-opschoning wordt gestart wanneer u deze vermelding ziet: `Calling WSUS Cleanup.`
+- De WSUS-opruiming voor verlopen updates is voltooid wanneer u dit item ziet: `Successfully completed WSUS Cleanup.`
+- Het opruimen van de Configuration Manager configuratie-items voor verlopen updates wordt gestart wanneer u deze vermelding ziet: `Deleting old expired updates...`
+- Het opruimen van de Configuration Manager configuratie-items voor verlopen updates is voltooid wanneer u deze vermelding ziet: `Deleted <number> expired updates total`

@@ -10,12 +10,12 @@ ms.topic: overview
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: a7f38f48946244deb6026d040c44159d0384f7b1
-ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
+ms.openlocfilehash: f9e1809447f8d8ea8f6e0382575b71bfdec71fac
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85854436"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695049"
 ---
 # <a name="what-is-co-management"></a>Wat is co-beheer?
 
@@ -102,15 +102,15 @@ Als u co-beheer zelf inschakelt, hoeft u uw site niet vrij te maken met Azure AD
 
 - Windows 10-apparaten moeten zijn verbonden met Azure AD. Dit kan een van de volgende typen zijn:  
 
-  - [Hybride Azure Ad-lid](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid), waarbij het apparaat wordt gekoppeld aan uw on-premises Active Directory en is geregistreerd bij uw Azure Active Directory.
+  - [Hybride Azure Ad-lid](/azure/active-directory/devices/concept-azure-ad-join-hybrid), waarbij het apparaat wordt gekoppeld aan uw on-premises Active Directory en is geregistreerd bij uw Azure Active Directory.
 
-  - Alleen [lid van Azure AD](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan) . (Dit type wordt soms aangeduid als lid van een Cloud domein)<!--SCCMDocs issue 605-->  
+  - Alleen [lid van Azure AD](/azure/active-directory/devices/azureadjoin-plan) . (Dit type wordt soms aangeduid als lid van een Cloud domein)<!--SCCMDocs issue 605-->  
 
 ### <a name="intune"></a>Intune
 
-- [Intune instellen](https://docs.microsoft.com/intune/setup-steps)  
+- [Intune instellen](/intune/setup-steps)  
 
-- [Automatische inschrijving voor Windows 10 inschakelen](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment)  
+- [Automatische inschrijving voor Windows 10 inschakelen](/intune/windows-enroll#enable-windows-10-automatic-enrollment)  
 
 ### <a name="windows-10"></a>Windows 10
 
@@ -129,7 +129,7 @@ Werk uw apparaten bij naar Windows 10, versie 1709 of hoger. Zie [Windows als ee
 | Azure-apps importeren in Configuration Manager | **Volledige beheerder** Configuration Manager<br>Er zijn geen extra Azure-rollen nodig |
 | Co-beheer inschakelen in Configuration Manager | Een Azure AD-gebruiker<br>Configuration Manager **volledige beheerder** met **alle** bereik rechten.<!--SCCMDoc issue 626--> |
 
-Zie [inzicht in de verschillende rollen](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles)voor meer informatie over Azure-rollen.
+Zie [inzicht in de verschillende rollen](/azure/role-based-access-control/rbac-and-directory-admin-roles)voor meer informatie over Azure-rollen.
 
 Zie de [basis principes van beheer op basis van rollen](../core/understand/fundamentals-of-role-based-administration.md)voor meer informatie over Configuration Manager rollen.
 
@@ -167,4 +167,4 @@ Zie [co-beheer controleren](how-to-monitor.md)voor meer informatie.
 
 - [Meer informatie over de onmiddellijke waarde en aan de slag met co-beheer](quickstarts.md)  
 
-- [Zelf studie: co-beheer inschakelen voor bestaande Configuration Manager-clients](tutorial-co-manage-clients.md)  
+- [Zelf studie: co-beheer inschakelen voor bestaande Configuration Manager-clients](tutorial-co-manage-clients.md)

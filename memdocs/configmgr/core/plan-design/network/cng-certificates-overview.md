@@ -10,12 +10,12 @@ ms.assetid: dba904ae-7c44-46db-ae63-999b9821cb46
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: deb3108d492a955eb0ec6b1635e306dcb85e0062
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 191325d05ccc23a4f07d8b39f7927c2b2e543f41
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904220"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692652"
 ---
 # <a name="cng-certificates-overview"></a>Overzicht van de CNG-certificaten
 <!-- 1356191 --> 
@@ -23,7 +23,7 @@ ms.locfileid: "82904220"
 Configuration Manager heeft beperkte ondersteuning voor crypto grafie: Next Generation (CNG)-certificaten. Configuration Manager-clients kunnen een PKI-certificaat voor client verificatie gebruiken met een persoonlijke sleutel in de SLEUTELARCHIEFPROVIDER. Met de SLEUTELARCHIEFPROVIDER-ondersteuning ondersteunen Configuration Manager-clients op hardware gebaseerde persoonlijke sleutel, zoals TPM-SLEUTELARCHIEFPROVIDER voor PKI-client verificatie certificaten.
 
 ## <a name="supported-scenarios"></a>Ondersteunde scenario's
-U kunt [crypto GRAFIE API: Next Generation (CNG)-](https://docs.microsoft.com/windows/win32/seccng/cng-features) certificaat sjablonen gebruiken voor de volgende scenario's:
+U kunt [crypto GRAFIE API: Next Generation (CNG)-](/windows/win32/seccng/cng-features) certificaat sjablonen gebruiken voor de volgende scenario's:
 
 - Client registratie en communicatie met een HTTPS-beheer punt   
 - Software distributie en toepassings implementatie met een HTTPS-distributie punt   

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 40ebeabaaf236377388660a2a1a328e308a708ab
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 999d8441e8c97f0a4b7ad4a92c8175300dcc4ead
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125940"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696443"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>Gegevens delen inschakelen voor desktop Analytics
 
@@ -31,7 +31,7 @@ Wanneer u Configuration Manager integreert met Desktop Analytics, kunt u deze oo
 > [!IMPORTANT]
 > In de meeste gevallen gebruikt u Configuration Manager voor het configureren van deze instellingen. Deze instellingen zijn niet ook van toepassing op domein groeps beleidsobjecten. Zie [conflict oplossing](enroll-devices.md#conflict-resolution)voor meer informatie.
 
-De basis functionaliteit van Desktop Analytics werkt op het **vereiste** [Diagnostische-gegevens niveau](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels). Als u het **optionele (beperkte)** niveau in Configuration Manager niet configureert, worden de volgende functies van Desktop Analytics niet weer geven:
+De basis functionaliteit van Desktop Analytics werkt op het **vereiste** [Diagnostische-gegevens niveau](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels). Als u het **optionele (beperkte)** niveau in Configuration Manager niet configureert, worden de volgende functies van Desktop Analytics niet weer geven:
 
 - App-gebruik
 - [Aanvullende app-inzichten](compat-assessment.md#additional-insights)
@@ -58,7 +58,7 @@ Micro soft raadt u aan het **optionele (beperkte)** diagnostische gegevens nivea
 >
 > Als u eerder apparaten op het niveau **verbeterd** hebt geconfigureerd, worden deze teruggezet naar **optioneel (beperkt)** wanneer u een upgrade uitvoert naar versie 2006. Ze verzenden minder gegevens naar micro soft. Deze wijziging is niet van invloed op wat u ziet in Desktop Analytics.
 
-Zie voor meer informatie over diagnostische gegevens die met micro soft worden gedeeld met **optioneel (beperkt)** [Windows 10 uitgebreide diagnostische gegevens gebeurtenissen en velden](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields).
+Zie voor meer informatie over diagnostische gegevens die met micro soft worden gedeeld met **optioneel (beperkt)** [Windows 10 uitgebreide diagnostische gegevens gebeurtenissen en velden](/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields).
 
 > [!IMPORTANT]
 > Micro soft heeft een sterke toezeg ging voor het leveren van de hulpprogram ma's en resources die u in staat stellen om uw privacy te beheren. Als desktop Analytics ondersteunt Windows 8,1-apparaten, verzamelt micro soft geen diagnostische gegevens van Windows van Windows 8,1-apparaten die zich in Europese landen (EER en Zwitser land) bevinden.
@@ -67,9 +67,9 @@ Zie [privacy van Desktop Analytics](privacy.md)voor meer informatie.
 
 De volgende artikelen zijn ook goede bronnen voor meer informatie over Windows diagnostische gegevens niveaus:
 
-- [Windows 10 en de AVG voor IT-besluit vormers](https://docs.microsoft.com/windows/privacy/gdpr-it-guidance)  
+- [Windows 10 en de AVG voor IT-besluit vormers](/windows/privacy/gdpr-it-guidance)  
 
-- [Windows diagnostische gegevens configureren in uw organisatie](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
+- [Windows diagnostische gegevens configureren in uw organisatie](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
 
 > [!NOTE]
 > Clients die zijn geconfigureerd voor het verzenden van **optionele (beperkte)** diagnostische gegevens verzenden ongeveer 2 MB aan gegevens naar de micro soft-Cloud op de eerste volledige scan. De dagelijkse Delta wijkt af van 250-400 KB per dag.
@@ -111,7 +111,7 @@ Apparaten configureren voor het gebruik van de context van de aangemelde gebruik
 - Zorg ervoor dat de gebruikers over proxy machtigingen beschikken om de eind punten van de diagnostische gegevens te bereiken. Deze optie vereist dat de apparaten console gebruikers hebben met proxy machtigingen, zodat u deze methode niet kunt gebruiken met headless apparaten.
 
 > [!IMPORTANT]
-> De verificatie methode voor de gebruikers proxy is niet compatibel met het gebruik van micro soft Defender Advanced Threat Protection. Dit gedrag is omdat deze verificatie afhankelijk is van de **DisableEnterpriseAuthProxy** -register sleutel die is ingesteld op `0` , terwijl micro soft Defender ATP vereist dat deze is ingesteld op `1` . Zie [instellingen voor machine proxy en Internet connectiviteit configureren in micro soft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection)voor meer informatie.
+> De verificatie methode voor de gebruikers proxy is niet compatibel met het gebruik van micro soft Defender Advanced Threat Protection. Dit gedrag is omdat deze verificatie afhankelijk is van de **DisableEnterpriseAuthProxy** -register sleutel die is ingesteld op `0` , terwijl micro soft Defender ATP vereist dat deze is ingesteld op `1` . Zie [instellingen voor machine proxy en Internet connectiviteit configureren in micro soft Defender ATP](/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection)voor meer informatie.
 
 ### <a name="device-proxy-authentication"></a>Verificatie van Device proxy
 
@@ -127,7 +127,7 @@ Deze benadering is het meest gecompliceerd omdat hiervoor de volgende configurat
 
 - Zorg ervoor dat apparaten de proxy server kunnen bereiken via WinHTTP in de context van het lokale systeem. Gebruik een van de volgende opties om dit gedrag te configureren:
 
-  - De opdracht regel`netsh winhttp set proxy`
+  - De opdracht regel `netsh winhttp set proxy`
 
   - WPAD-protocol (Web Proxy Auto-Discovery)
 
@@ -137,4 +137,4 @@ Deze benadering is het meest gecompliceerd omdat hiervoor de volgende configurat
 
   - Gerouteerde verbinding of die gebruikmaakt van Network Address Translation (NAT)
 
-- Configureer proxy servers zodanig dat de computer accounts in Active Directory toegang hebben tot de eind punten van de diagnostische gegevens. Voor deze configuratie zijn proxy servers vereist voor ondersteuning van geïntegreerde Windows-authenticatie.  
+- Configureer proxy servers zodanig dat de computer accounts in Active Directory toegang hebben tot de eind punten van de diagnostische gegevens. Voor deze configuratie zijn proxy servers vereist voor ondersteuning van geïntegreerde Windows-authenticatie.

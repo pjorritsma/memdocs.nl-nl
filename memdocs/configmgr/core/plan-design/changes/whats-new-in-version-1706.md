@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: f6087011a0390997d704278af6ffd5e6071bf031
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: e0f2801a9bf3d587d0117a720f4151f431441291
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129015"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692822"
 ---
 # <a name="what39s-new-in-version-1706-of-configuration-manager"></a>Wat&#39;s nieuw in versie 1706 van Configuration Manager
 
@@ -193,7 +193,7 @@ Vanaf deze release kunt u drie nieuwe Mobile Application Management-beleids inst
 ## <a name="operating-system-deployment"></a>Implementatie van besturingssystemen
 
 ### <a name="hardware-inventory-collects-secure-boot-information"></a>Hardware-inventaris verzamelt informatie over beveiligd opstarten
-Met de hardware-inventarisatie wordt nu informatie verzameld over of beveiligd opstarten is ingeschakeld op clients. Deze informatie wordt opgeslagen in de klasse **SMS_Firmware** (geïntroduceerd in versie 1702) en is standaard ingeschakeld in hardware-inventaris. Zie [hardware-inventaris configureren](../../clients/manage/inventory/configure-hardware-inventory.md)voor meer informatie over hardware-inventarisatie.
+Met de hardware-inventarisatie wordt nu informatie verzameld over of beveiligd opstarten is ingeschakeld op clients. Deze informatie wordt opgeslagen in de klasse **SMS_Firmware** (geïntroduceerd in versie 1702) en is standaard ingeschakeld in hardware-inventaris. Zie  [hardware-inventaris configureren](../../clients/manage/inventory/configure-hardware-inventory.md)voor meer informatie over hardware-inventarisatie.
 
 ### <a name="collapsible-task-sequence-groups"></a>Samenvouw bare taken reeks groepen
 Deze versie introduceert de mogelijkheid om taken reeks groepen uit te vouwen en samen te vouwen. U kunt afzonderlijke groepen uitvouwen of samen vouwen of alle groepen in één keer uitvouwen of samen vouwen.
@@ -213,7 +213,7 @@ U kunt nu Configuration Manager gebruiken om updates van micro soft Surface-Stuu
 
 #### <a name="prerequisites"></a>Vereisten
 - Alle software-update punten moeten Windows Server 2016 uitvoeren.    
-- Dit is een voorlopige functie die u moet inschakelen om deze beschikbaar te maken. Zie [Use pre-release features from updates](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease) (Functies van evaluatieversies gebruiken) voor meer informatie.
+- Dit is een voorlopige functie die u moet inschakelen om deze beschikbaar te maken. Zie [Use pre-release features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease) (Functies van evaluatieversies gebruiken) voor meer informatie.
 
 #### <a name="to-manage-surface-driver-updates"></a>Updates voor Surface drivers beheren
 
@@ -230,7 +230,7 @@ Zie [integratie met Windows Update voor bedrijven in Windows 10](../../../sum/de
 ### <a name="improved-user-notifications-for-office-365-updates"></a>Verbeterde gebruikers meldingen voor Office 365-updates
 Er zijn verbeteringen aangebracht in het gebruik van de Office-klik-en-klaar-gebruikers ervaring wanneer een client een update van Office 365 installeert. Dit omvat pop-up-en in-app-meldingen en een aftellings ervaring. Zie voor meer informatie [gedrag voor opnieuw opstarten en client meldingen voor Office 365-updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md)
 
-## <a name="reporting"></a>Rapporten
+## <a name="reporting"></a>Rapportage
 
 ### <a name="use-windows-analytics-with-configuration-manager"></a>Gebruik Windows Analytics met Configuration Manager
 <!-- 1318608 -->

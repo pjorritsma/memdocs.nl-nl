@@ -10,12 +10,12 @@ ms.assetid: a4e8bb56-ee85-49fd-8b1c-c8f513cec671
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 405617277953eae61fbfce4fdb9b3a7d280aedcf
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 6a4aaaab8eb9195f4f5dce4deb890540b0837852
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124445"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697448"
 ---
 # <a name="use-the-task-sequence-editor"></a>De takenreekseditor gebruiken
 
@@ -78,7 +78,7 @@ De editor voor taken reeksen bevat de volgende onderdelen:
 
 U kunt de grootte van de taken reeks editor wijzigen met behulp van standaard Windows-besturings elementen. Als u de breedte van de twee hoofd vensters wilt verg Roten of verkleinen, gebruikt u de muis om de balk tussen de taken reeks en de stap eigenschappen te selecteren en sleept u deze naar links of rechts.
 
-## <a name="view-a-task-sequence"></a><a name="bkmk_view"></a>Een taken reeks weer geven
+## <a name="view-a-task-sequence"></a><a name="bkmk_view"></a> Een taken reeks weer geven
 
 1. Ga in de Configuration Manager-console naar de werk ruimte **software bibliotheek** , vouw **besturings systemen**uit en selecteer vervolgens het knoop punt **taken reeksen** .  
 
@@ -140,7 +140,7 @@ Zie [taken reeks stappen](task-sequence-steps.md)voor een lijst met de beschik b
 
 U kunt gelijktijdig meer dan één exemplaar van de taken reeks editor openen. Met dit gedrag kunt u meerdere taken reeksen vergelijken, of de stappen ertussen kopiëren en plakken. U kunt een taken reeks **bewerken** en een andere **weer geven** , maar niet beide acties voor dezelfde taken reeks.
 
-## <a name="conditions"></a><a name="bkmk_conditions"></a>Nader
+## <a name="conditions"></a><a name="bkmk_conditions"></a> Nader
 
 Gebruik voor waarden om te bepalen hoe de taken reeks zich gedraagt. Voor waarden toevoegen aan één stap of een groep van stappen. De taken reeks evalueert de voor waarden voordat de stap op het apparaat wordt uitgevoerd. De stap wordt alleen uitgevoerd als aan de voor waarden wordt voldaan. Als een voor waarde wordt geëvalueerd als onwaar, slaat de taken reeks de groep of stap over.
 
@@ -175,14 +175,14 @@ De volgende typen voor waarden zijn beschikbaar:
 
 Voor waarden beheren met de volgende Power shell-cmdlets:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepConditionFile](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepConditionFile?view=sccm-ps)
-- [Get-CMTSStepConditionFolder](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepConditionFolder?view=sccm-ps)
-- [Get-CMTSStepConditionIfStatement](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepConditionIfStatement?view=sccm-ps)
-- [Get-CMTSStepConditionOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepConditionOperatingSystem?view=sccm-ps)
-- [Get-CMTSStepConditionQueryWmi](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepConditionQueryWmi?view=sccm-ps)
-- [Get-CMTSStepConditionRegistry](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepConditionRegistry?view=sccm-ps)
-- [Get-CMTSStepConditionSoftware](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepConditionSoftware?view=sccm-ps)
-- [Get-CMTSStepConditionVariable](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepConditionVariable?view=sccm-ps)
+- [Get-CMTSStepConditionFile](/powershell/module/configurationmanager/Get-CMTSStepConditionFile?view=sccm-ps)
+- [Get-CMTSStepConditionFolder](/powershell/module/configurationmanager/Get-CMTSStepConditionFolder?view=sccm-ps)
+- [Get-CMTSStepConditionIfStatement](/powershell/module/configurationmanager/Get-CMTSStepConditionIfStatement?view=sccm-ps)
+- [Get-CMTSStepConditionOperatingSystem](/powershell/module/configurationmanager/Get-CMTSStepConditionOperatingSystem?view=sccm-ps)
+- [Get-CMTSStepConditionQueryWmi](/powershell/module/configurationmanager/Get-CMTSStepConditionQueryWmi?view=sccm-ps)
+- [Get-CMTSStepConditionRegistry](/powershell/module/configurationmanager/Get-CMTSStepConditionRegistry?view=sccm-ps)
+- [Get-CMTSStepConditionSoftware](/powershell/module/configurationmanager/Get-CMTSStepConditionSoftware?view=sccm-ps)
+- [Get-CMTSStepConditionVariable](/powershell/module/configurationmanager/Get-CMTSStepConditionVariable?view=sccm-ps)
 
 ### <a name="copy-and-paste-conditions"></a>Voor waarden kopiëren en plakken
 
@@ -201,7 +201,7 @@ Er zijn ook nieuwe opties om voor waarden omhoog of omlaag te verplaatsen in de 
 > [!Note]  
 > U kunt voor waarden tussen stappen in een taken reeks kopiëren en plakken. Deze actie wordt niet ondersteund tussen verschillende taken reeksen.
 
-## <a name="reclaim-lock-for-editing"></a><a name="bkmk_sedo"></a>Vergren deling voor bewerken terugclaimen
+## <a name="reclaim-lock-for-editing"></a><a name="bkmk_sedo"></a> Vergren deling voor bewerken terugclaimen
 
 <!--3699337-->
 Als de Configuration Manager-console niet meer reageert, kunt u de vergren deling vergren delen om verdere wijzigingen aan te brengen tot de vergrendeling na 30 minuten verloopt. Deze vergren deling maakt deel uit van de Configuration Manager SEDO (geserialiseerd editing of Distributed Objects). Zie [Configuration Manager Sedo](../../develop/core/understand/sedo.md)voor meer informatie.
@@ -211,7 +211,7 @@ Vanaf versie 1906 kunt u de vergren deling van een taken reeks wissen. Deze acti
 > [!TIP]
 > Vanaf versie 1910 kunt u de vergren deling van een object in de Configuration Manager-console wissen. Zie [de Configuration Manager-console gebruiken](../../core/servers/manage/admin-console.md#bkmk_sedo)voor meer informatie.<!--4786915-->
 
-## <a name="search"></a><a name="bkmk_search"></a>Opdracht
+## <a name="search"></a><a name="bkmk_search"></a> Opdracht
 
 <!-- 4621085 -->
 

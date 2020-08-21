@@ -10,21 +10,21 @@ ms.assetid: a8fa7e7a-bf55-42de-b0c2-c56777dc1508
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 4739703436d7feec7c4c899e60b33d38ce28babf
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 49e0f5e1dff466e62cdba0def917dd34510e48ee
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125726"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696766"
 ---
-# <a name="synchronize-microsoft-365-apps-updates-from-a-disconnected-software-update-point"></a><a name="bkmk_O365"></a>Updates van Microsoft 365-apps synchroniseren vanaf een niet-verbonden software-update punt
+# <a name="synchronize-microsoft-365-apps-updates-from-a-disconnected-software-update-point"></a><a name="bkmk_O365"></a> Updates van Microsoft 365-apps synchroniseren vanaf een niet-verbonden software-update punt
 
 *Van toepassing op: Configuration Manager (huidige vertakking)*
 <!--4065163-->
 Vanaf Configuration Manager versie 2002 kunt u een hulp programma gebruiken om Microsoft 365 apps-updates te importeren van een met internet verbonden WSUS-server naar een niet-verbonden Configuration Manager omgeving. Als u eerder meta gegevens voor software die is bijgewerkt in omgevingen zonder verbinding hebt geëxporteerd en geïmporteerd, kunt u geen updates voor Microsoft 365 Apps implementeren. Voor updates van Microsoft 365-apps zijn aanvullende meta gegevens vereist die zijn gedownload van een Office-API en het Office CDN, wat niet mogelijk is met niet-verbonden omgevingen.
 
 > [!Note]
-> Vanaf 21 april 2020, wordt de naam van Office 365 ProPlus gewijzigd in **Microsoft 365 apps voor bedrijven**. Zie [name wijzigen voor Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change)voor meer informatie. Mogelijk ziet u nog steeds verwijzingen naar de oude naam in de Configuration Manager-console en de ondersteunende documentatie terwijl de-console wordt bijgewerkt.
+> Vanaf 21 april 2020, wordt de naam van Office 365 ProPlus gewijzigd in **Microsoft 365 apps voor bedrijven**. Zie [name wijzigen voor Office 365 ProPlus](/deployoffice/name-change)voor meer informatie. Mogelijk ziet u nog steeds verwijzingen naar de oude naam in de Configuration Manager-console en de ondersteunende documentatie terwijl de-console wordt bijgewerkt.
 
 ## <a name="prerequisites"></a>Vereisten
 
@@ -51,7 +51,7 @@ Vanaf Configuration Manager versie 2002 kunt u een hulp programma gebruiken om M
 1. Wanneer de synchronisatie is voltooid, moet u de updates van Microsoft 365-apps die u niet wilt implementeren met Configuration Manager weigeren. U hoeft geen updates van Microsoft 365 apps goed te keuren om ze te kunnen downloaden.  
    - Als u ongewenste Microsoft 365 Apps verwijdert in WSUS, worden deze niet gestopt tijdens het exporteren van een WsusUtil.exe, maar wordt de inhoud niet meer gedownload door het hulp programma OfflineUpdateExporter.
    - Het hulp programma OfflineUpdateExporter het downloaden van updates voor de Microsoft 365-apps. Andere producten moeten nog steeds worden goedgekeurd om te worden gedownload als u updates voor hen wilt exporteren.
-    - Maak een [nieuwe update weergave in WSUS](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/manage/viewing-and-managing-updates#to-create-a-new-update-view-on-wsus) om onnodige updates van Microsoft 365-apps in WSUS te bekijken en af te wijzen.
+    - Maak een [nieuwe update weergave in WSUS](/windows-server/administration/windows-server-update-services/manage/viewing-and-managing-updates#to-create-a-new-update-view-on-wsus) om onnodige updates van Microsoft 365-apps in WSUS te bekijken en af te wijzen.
 1. Als u andere product updates wilt goed keuren voor downloaden en exporteren, wacht u totdat de inhoud is gedownload voordat u de inhoud van de map WSUSContent exporteert WsusUtil.exe exporteren en kopiëren. Zie [software-updates synchroniseren vanaf een niet-verbonden software-update punt](synchronize-software-updates-disconnected.md) voor meer informatie
 
 ## <a name="exporting-the-microsoft-365-apps-updates"></a>De updates van de Microsoft 365-apps exporteren
@@ -101,7 +101,7 @@ Vanaf Configuration Manager versie 2002 kunt u een hulp programma gebruiken om M
    1. Ga `"D:\Office365updates\content"` naar het volledige pad van de gekopieerde map met de inhoud van de Microsoft 365 apps en de meta gegevens die zijn gegenereerd door OfflineUpdateExporter.
       > [!IMPORTANT]
       > Alleen lokale paden werken voor de eigenschap O365OflBaseUrlConfigured.
-   1. Sla het script op als`O365OflBaseUrlConfigured.ps1`
+   1. Sla het script op als `O365OflBaseUrlConfigured.ps1`
    1. Voer vanuit een Power shell-venster met verhoogde bevoegdheden uit op de niet-verbonden Configuration Manager site server op het hoogste niveau `.\O365OflBaseUrlConfigured.ps1` .
    1. Start de **SMS_Executive** -service opnieuw op de site server.
 1. Ga in de **Configuration Manager** -console naar **beheer**  >  **site configuratie**  >  **sites**.
@@ -110,14 +110,14 @@ Vanaf Configuration Manager versie 2002 kunt u een hulp programma gebruiken om M
 1. [Software-updates synchroniseren](synchronize-software-updates.md#manually-start-software-updates-synchronization) voor Configuration Manager
 1. Wanneer de synchronisatie is voltooid, gebruikt u uw normale proces voor het implementeren van updates van Microsoft 365-apps.
 
-## <a name="proxy-configuration"></a><a name="bkmk_O365_ki"></a>Proxy configuratie
+## <a name="proxy-configuration"></a><a name="bkmk_O365_ki"></a> Proxy configuratie
 
 - Proxy configuratie is niet ingebouwd in het hulp programma. Als proxy is ingesteld in de Internet opties op de server waarop het hulp programma wordt uitgevoerd, wordt dit in theorie gebruikt en moet het goed functioneren.
    - Voer vanaf een opdracht prompt uit `netsh winhttp show proxy` om de geconfigureerde proxy weer te geven.
 
 
 
-## <a name="modify-o365oflbaseurlconfigured-property"></a><a name="bkmk_o365_script"></a>Eigenschap O365OflBaseUrlConfigured wijzigen
+## <a name="modify-o365oflbaseurlconfigured-property"></a><a name="bkmk_o365_script"></a> Eigenschap O365OflBaseUrlConfigured wijzigen
 
 ```powershell
 # Name: O365OflBaseUrlConfigured.ps1

@@ -1,5 +1,5 @@
 ---
-title: Verzamelings evaluatie
+title: Evaluatie van verzameling
 titleSuffix: Configuration Manager
 description: Meer informatie over het verzamelings evaluatie proces, typen en triggers. Meer informatie over het verzamelings evaluatie diagram en de hiërarchie.
 ms.date: 06/05/2020
@@ -10,12 +10,12 @@ ms.assetid: d17e1188-d277-438f-9236-db9cd213b421
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: af90154b848ddcd7cbff21917ef122ab10585098
-ms.sourcegitcommit: 1d8bf691780b94a945e94945115d4d1df4242808
+ms.openlocfilehash: 15b58b841ca87cf2b5e04c98dfd35c487c941e78
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84663911"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693315"
 ---
 # <a name="collection-evaluation-in-configuration-manager"></a>Evaluatie van verzamelingen in Configuration Manager
 
@@ -27,7 +27,7 @@ Het is belang rijk om inzicht te krijgen in het beoordelings gedrag van verzamel
 
 ## <a name="evaluation-process"></a>Evaluatie proces
 
-De records in [colleval. log](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files#BKMK_ServerLogs) wanneer de verzameling-evaluator verzamelingen maakt, wijzigt en verwijdert.
+De records in [colleval. log](../../../plan-design/hierarchy/log-files.md#BKMK_ServerLogs) wanneer de verzameling-evaluator verzamelingen maakt, wijzigt en verwijdert.
 
 Op hoog niveau volgt elke evaluatie en update van afzonderlijke verzamelingen de volgende stappen:
 
@@ -63,7 +63,7 @@ In de volgende tabel worden de evaluatie triggers voor verzamelingen en de bijbe
 |---------|-----------------|-------------|
 |Handmatig|Eén of meer hulp|Hand matig is de evaluatie van de hoogste prioriteit. Wanneer een beheerder een hand matige verzamelings evaluatie aanvraagt, wijst de verzamelings evaluator de volgende beschik bare evaluatie-thread toe aan de evaluatie.|
 |Gepland|Primair|Het proces van geplande evaluatie is hetzelfde als hand matige evaluatie, met uitzonde ring van de evaluatie tijd in plaats van gebeurtenissen die worden gestuurd.|
-|Faseren|Eén of meer hulp|Alle verzamelingen zijn direct of indirect afhankelijk van **alle systemen** of **alle gebruikers en gebruikers groepen**. Beide verzamelingen voeren dagelijks een volledige verzamelings evaluatie uit op 4:00 uur. Een wijziging in een van deze verzamelingen activeert updates van afhankelijke verzamelingen, op basis van een [volledige verzamelings grafiek](#collection-evaluation-graph).
+|Staging|Eén of meer hulp|Alle verzamelingen zijn direct of indirect afhankelijk van **alle systemen** of **alle gebruikers en gebruikers groepen**. Beide verzamelingen voeren dagelijks een volledige verzamelings evaluatie uit op 4:00 uur. Een wijziging in een van deze verzamelingen activeert updates van afhankelijke verzamelingen, op basis van een [volledige verzamelings grafiek](#collection-evaluation-graph).
 |Incrementeel|Express|Incrementele evaluatie maakt gebruik van een verzamelings evaluatie grafiek om afhankelijke verzamelingen te evalueren en bij te werken als een update van het lidmaatschap van de incrementele verzameling wordt gewijzigd. Configuration Manager worden bronnen-objecten bewaakt en bijgewerkt in alle verzamelingen die zijn geconfigureerd voor incrementele updates.<br /><br />Als een verzamelings query is gebaseerd op gegevens die later worden bijgewerkt, zoals hardware-inventaris, wordt Configuration Manager alleen de resource toegevoegd aan of verwijderd uit de verzameling tijdens het bijwerken van de geplande verzameling.|
 
 ## <a name="collection-evaluation-graph"></a>Evaluatie grafiek verzameling
@@ -105,5 +105,5 @@ In het volgende voor beeld maakt de installatie van DNS op de bestaande server d
 ## <a name="next-steps"></a>Volgende stappen
 - [Verzamelingen maken](create-collections.md)
 - [Aanbevolen procedures voor verzamelingen](best-practices-for-collections.md)
-- [Viewer voor collectie-evaluatie](https://docs.microsoft.com/mem/configmgr/core/support/ceviewer)
+- [Viewer voor collectie-evaluatie](../../../support/ceviewer.md)
 - [ConfigMgrDogs voor het oplossen van problemen met de ConfigMgr 2012](https://channel9.msdn.com/Events/TechEd/Australia/2014/DCI411) -sessie bij TechEd Australië

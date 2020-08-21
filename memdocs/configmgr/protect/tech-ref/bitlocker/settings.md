@@ -10,12 +10,12 @@ ms.assetid: f7ade768-2b2b-4aab-8ee1-73624d03a9c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cb95a05fd3d347b70dd5d53ce972bce0c23c18cc
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: be9db7d0ee68f22073a3537e53fc93bf8faff9e0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127879"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693519"
 ---
 # <a name="bitlocker-settings-reference"></a>Naslag informatie over BitLocker-instellingen
 
@@ -119,7 +119,7 @@ Als u deze instelling inschakelt, moet de gebruiker het station van het besturin
 > [!NOTE]
 > Als het station al is versleuteld en u deze instelling uitschakelt, ontsleutelt BitLocker het station.  
 
-Als u apparaten hebt zonder een [Trusted Platform Module (TPM)](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-top-node), gebruikt u de optie voor het **toestaan van BitLocker zonder een compatibele TPM (vereist een wacht woord)**. Met deze instelling kan BitLocker het station van het besturings systeem versleutelen, zelfs als het apparaat geen TPM heeft. Als u deze optie toestaat, vraagt Windows de gebruiker om een wacht woord voor BitLocker op te geven.
+Als u apparaten hebt zonder een [Trusted Platform Module (TPM)](/windows/security/information-protection/tpm/trusted-platform-module-top-node), gebruikt u de optie voor het **toestaan van BitLocker zonder een compatibele TPM (vereist een wacht woord)**. Met deze instelling kan BitLocker het station van het besturings systeem versleutelen, zelfs als het apparaat geen TPM heeft. Als u deze optie toestaat, vraagt Windows de gebruiker om een wacht woord voor BitLocker op te geven.
 
 Op apparaten met een compatibele TPM kunnen tijdens het opstarten twee typen verificatie methoden worden gebruikt om extra beveiliging te bieden voor versleutelde gegevens. Wanneer de computer wordt gestart, kan deze alleen de TPM voor verificatie gebruiken, of kan de vermelding van een persoonlijk identificatie nummer (pincode) ook vereist zijn. Configureer de volgende instellingen:
 

@@ -10,12 +10,12 @@ ms.assetid: dba00e54-9d5b-4f6b-916d-ead48c66e288
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b4ed1c10e23b75dc4478a0409d197015c98aff8b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3db127deb353f30566a1f03cbc6ac0eef666cb37
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81710214"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695253"
 ---
 # <a name="import-and-export-applications"></a>Toepassingen importeren en exporteren
 
@@ -41,7 +41,7 @@ Gebruik Configuration Manager om toepassingen tussen twee hiërarchieën te impo
 
 1. Selecteer in de Configuration Manager-console het knoop punt **toepassingen** . Kies in de groep maken van het lint de optie **toepassing importeren**.
 1. Kies het ZIP-bestand dat u wilt importeren en selecteer **volgende**.
-1. In het venster bestands inhoud ziet u wat er gebeurt wanneer u de toepassing importeert. Selecteer **Volgende**.
+1. In het venster bestands inhoud ziet u wat er gebeurt wanneer u de toepassing importeert. Selecteer **Next**.
 1. Controleer het scherm samen vatting en selecteer **volgende**.
 1. Sluit de wizard. De toepassing is nu beschikbaar in de-site.
 
@@ -49,5 +49,5 @@ Gebruik Configuration Manager om toepassingen tussen twee hiërarchieën te impo
  
 Automatiseer het importeren en exporteren van toepassingen met behulp van Power shell.
 
-* [Import-CMApplication](https://docs.microsoft.com/powershell/module/configurationmanager/import-cmapplication)
-* [Exporteren-CMApplication](https://docs.microsoft.com/powershell/module/configurationmanager/export-cmapplication)
+* [Import-CMApplication](/powershell/module/configurationmanager/import-cmapplication)
+* [Exporteren-CMApplication](/powershell/module/configurationmanager/export-cmapplication)

@@ -10,12 +10,12 @@ ms.assetid: 81f03922-90f6-4e8f-be65-da64ccb21cf2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7b64e09561def3d19c306b9cfcd4f7eb808763fd
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: bf9301e4fcb279b7d79a6f6c3d0a90ab3d15e277
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129253"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697310"
 ---
 # <a name="bitlocker-administration-and-monitoring-website"></a>Website voor BitLocker-beheer en-bewaking
 
@@ -29,7 +29,7 @@ De website BitLocker-beheer en-controle is een beheer interface voor BitLocker-s
 
 Voordat u deze kunt gebruiken, installeert u dit onderdeel op een webserver. Zie [BitLocker-rapporten en-portals instellen](setup-websites.md)voor meer informatie.
 
-Open de website beheer en controle via de volgende URL:`https://webserver.contoso.com/HelpDesk`
+Open de website beheer en controle via de volgende URL: `https://webserver.contoso.com/HelpDesk`
 
 > [!NOTE]
 > U kunt het **rapport herstel controle** bekijken op de website beheer en controle. U voegt andere BitLocker-beheer rapporten toe aan het Reporting Services-punt. Zie [BitLocker-rapporten weer geven](view-reports.md)voor meer informatie.
@@ -48,7 +48,7 @@ Om toegang te krijgen tot specifieke gebieden van de beheer-en bewakings website
 
 Als een gebruiker de verkeerde pincode te vaak invoert, kan de TPM worden vergrendeld. Het aantal keren dat een gebruiker een onjuiste pincode mag invoeren voordat de TPM-vergren delingen variëren van fabrikant tot fabrikant. Vanuit het gebied **TPM beheren** van de website beheer en controle opent u het centrale sleutel herstel gegevens systeem.
 
-Zie voor meer informatie over TPM-eigendom [MBAM configureren om de TPM te borgen en OwnerAuth-wacht woorden op te slaan](https://docs.microsoft.com/microsoft-desktop-optimization-pack/mbam-v25/mbam-25-security-considerations#bkmk-tpm).
+Zie voor meer informatie over TPM-eigendom [MBAM configureren om de TPM te borgen en OwnerAuth-wacht woorden op te slaan](/microsoft-desktop-optimization-pack/mbam-v25/mbam-25-security-considerations#bkmk-tpm).
 
 > [!NOTE]
 > Vanaf Windows 10, versie 1607, houdt Windows het wacht woord voor TPM-eigenaar niet bij het inrichten van de TPM.
@@ -70,7 +70,7 @@ Zie voor meer informatie over TPM-eigendom [MBAM configureren om de TPM te borge
     - TPM uitschakelen
     - TPM-wacht woord wijzigen
     - TPM wissen
-    - Overige
+    - Overig
 
     Nadat u het formulier hebt **verzonden** , retourneert de website een van de volgende antwoorden:
 
@@ -91,7 +91,7 @@ Zie voor meer informatie over TPM-eigendom [MBAM configureren om de TPM te borge
 
 ## <a name="drive-recovery"></a>Herstel van station
 
-### <a name="recover-a-drive-in-recovery-mode"></a><a name="bkmk_recovery"></a>Een station herstellen in herstel modus
+### <a name="recover-a-drive-in-recovery-mode"></a><a name="bkmk_recovery"></a> Een station herstellen in herstel modus
 
 Stations gaan in de herstel modus in de volgende scenario's:
 
@@ -123,7 +123,7 @@ Als u een herstel wachtwoord wilt ophalen, gebruikt u het gedeelte **stations he
     - TPM opnieuw instellen
     - Verloren wachtwoordzin
     - Verloren Smart Card
-    - Overige
+    - Overig
 
     Nadat u het formulier hebt **verzonden** , retourneert de website een van de volgende antwoorden:
 
@@ -142,7 +142,7 @@ Als u een herstel wachtwoord wilt ophalen, gebruikt u het gedeelte **stations he
 
 Als u het station wilt ontgrendelen, voert u het herstel wachtwoord in of gebruikt u het herstel pakket.
 
-### <a name="recover-a-moved-drive"></a><a name="bkmk_moved"></a>Een verplaatste schijf herstellen
+### <a name="recover-a-moved-drive"></a><a name="bkmk_moved"></a> Een verplaatste schijf herstellen
 
 Wanneer u een station naar een nieuwe computer verplaatst, omdat de TPM anders is, accepteert BitLocker de vorige pincode niet. Als u het verplaatste station wilt herstellen, moet u de herstel sleutel-ID ophalen om het herstel wachtwoord op te halen.
 
@@ -159,11 +159,11 @@ Als u een verplaatste station wilt herstellen, gebruikt u het gebied voor **schi
 
 Als u het verplaatste station hebt geconfigureerd voor het gebruik van een TPM-chip op de oorspronkelijke computer, voert u de volgende stappen uit. Anders is het herstel proces voltooid.
 
-1. Nadat u het station hebt ontgrendeld, start u de computer in de modus WinRE. Open een opdracht prompt in WinRE en gebruik de `manage-bde` opdracht om het station te ontsleutelen. Dit hulp programma is de enige manier om de beveiliging van **TPM + pincode** te verwijderen zonder de oorspronkelijke TPM-chip. Zie [Manage-BDE](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker#bkmk-managebde)voor meer informatie over deze opdracht.
+1. Nadat u het station hebt ontgrendeld, start u de computer in de modus WinRE. Open een opdracht prompt in WinRE en gebruik de `manage-bde` opdracht om het station te ontsleutelen. Dit hulp programma is de enige manier om de beveiliging van **TPM + pincode** te verwijderen zonder de oorspronkelijke TPM-chip. Zie [Manage-BDE](/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker#bkmk-managebde)voor meer informatie over deze opdracht.
 
 1. Wanneer het is voltooid, start u de computer normaal op. Configuration Manager wordt het BitLocker-beleid afgedwongen voor het versleutelen van het station met de TPM plus pincode van de nieuwe computer.
 
-### <a name="recover-a-corrupted-drive"></a><a name="bkmk_corrupted"></a>Een beschadigd station herstellen
+### <a name="recover-a-corrupted-drive"></a><a name="bkmk_corrupted"></a> Een beschadigd station herstellen
 
 Gebruik de herstel sleutel-ID om een herstel sleutel pakket op te halen van de website beheer en controle. Zie [herstellen van een station in de herstel modus](#bkmk_recovery)voor meer informatie.
 
@@ -175,7 +175,7 @@ Gebruik de herstel sleutel-ID om een herstel sleutel pakket op te halen van de w
 
     Vervang de volgende waarden:
 
-    - `<corrupted drive>`: De stationsletter van het beschadigde station, bijvoorbeeld`D:`
+    - `<corrupted drive>`: De stationsletter van het beschadigde station, bijvoorbeeld `D:`
     - `<fixed drive>`: De stationsletter van een beschik bare harde schijf met een vergelijk bare of grotere grootte dan het beschadigde station. BitLocker herstelt en verplaatst gegevens op het beschadigde station naar het opgegeven station. Alle gegevens op dit station worden overschreven.
     - `<key package>`: De locatie van het herstel sleutel pakket
     - `<recovery password>`: Het bijbehorende herstel wachtwoord
@@ -184,7 +184,7 @@ Gebruik de herstel sleutel-ID om een herstel sleutel pakket op te halen van de w
 
     `repair-bde C: D: -kp F:\RecoveryKeyPackage -rp 111111-222222-333333-444444-555555-666666-777777-888888`
 
-Zie [Repair-BDE](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker#bkmk-repairbde)voor meer informatie over deze opdracht.
+Zie [Repair-BDE](/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker#bkmk-repairbde)voor meer informatie over deze opdracht.
 
 ## <a name="reports"></a>Rapporten
 

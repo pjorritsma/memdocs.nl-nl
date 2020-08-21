@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 98a82d118442a7ca37ff7b2df62bf4702c15ba2c
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: 9209a1a948c43a21f097ba836a6761b53ddc9530
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87526012"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692958"
 ---
 # <a name="capabilities-in-technical-preview-1703-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1703 voor Configuration Manager
 
@@ -33,14 +33,14 @@ U kunt nu gelicentieerde Apps implementeren op apparaten en gebruikers. Afhankel
 
 | Configuration Manager versie | App ondersteunt apparaat-licenties? | Type implementatie verzameling | Geclaimde licentie |
 | ----------------------------- | ------------------------------ | -------------------------- | --------------- |
-|Ouder dan 1702|Yes|Gebruiker|Gebruikers licentie|
-|Ouder dan 1702|No|Gebruiker|Gebruikers licentie|
-|Ouder dan 1702|Yes|Apparaat|Gebruikers licentie|
-|Ouder dan 1702|No|Apparaat|Gebruikers licentie|
-|1702 en hoger|Yes|Gebruiker|Gebruikers licentie|
-|1702 en hoger|No|Gebruiker|Gebruikers licentie|
-|1702 en hoger|Yes|Apparaat|Apparaatlicentie|
-|1702 en hoger|No|Apparaat|Gebruikers licentie|
+|Ouder dan 1702|Ja|Gebruiker|Gebruikers licentie|
+|Ouder dan 1702|Nee|Gebruiker|Gebruikers licentie|
+|Ouder dan 1702|Ja|Apparaat|Gebruikers licentie|
+|Ouder dan 1702|Nee|Apparaat|Gebruikers licentie|
+|1702 en hoger|Ja|Gebruiker|Gebruikers licentie|
+|1702 en hoger|Nee|Gebruiker|Gebruikers licentie|
+|1702 en hoger|Ja|Apparaat|Apparaatlicentie|
+|1702 en hoger|Nee|Apparaat|Gebruikers licentie|
 
 
 ## <a name="direct-links-to-applications-in-software-center"></a>Directe koppelingen naar toepassingen in Software Center
@@ -82,7 +82,7 @@ Met Technical Preview 1703 wordt alleen Windows Store voor bedrijven (WSfB) geco
 
 - Gebruik de informatie in dit voor beeld om de configuratie stappen te vervangen die zijn gevonden in de sectie [Windows Store voor bedrijven-synchronisatie instellen](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md#bkmk_setup) van het current branch onderwerp [apps beheren vanuit Windows Store voor bedrijven met Configuration Manager](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).
 
-- Zie [verificatie en autorisatie in azure app service](https://docs.microsoft.com/azure/app-service/app-service-authentication-overview)en [Web apps overzicht](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview)voor meer informatie over web-apps.
+- Zie [verificatie en autorisatie in azure app service](/azure/app-service/app-service-authentication-overview)en [Web apps overzicht](/azure/app-service-web/app-service-web-overview)voor meer informatie over web-apps.
 
 ### <a name="prerequisites-and-planning"></a>Vereisten en planning
 Wanneer u een verbinding instelt tussen Configuration Manager en Windows Store voor bedrijven, moet u een map opgeven waarin app-inhoud uit de Store wordt gesynchroniseerd. Om ervoor te zorgen dat deze map beveiligd is en dat de inhoud ervan kan worden geïmplementeerd op apparaten, moet u ervoor zorgen dat de volgende machtigingen aanwezig zijn:

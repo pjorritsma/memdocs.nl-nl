@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5ee84a41a5c47ce554e4618b897c8e4933bdbe73
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 29b5dd8fdceb803de77aff9adbd0614d1e201b18
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129049"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694251"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Verwijderde en afgeschafte functies voor Configuration Manager
 
@@ -34,7 +34,7 @@ De volgende functies zijn afgeschaft. U kunt ze nu nog steeds gebruiken, maar mi
 |De implementatie voor het delen van inhoud van Azure is gewijzigd. Gebruik een Cloud beheer gateway die is ingeschakeld voor inhoud. U kunt in de toekomst geen traditioneel Cloud distributiepunt maken.|Februari 2019|TBD<sup>[Opmerking 1](#bkmk_note1)</sup>|
 |Implementatie van de klassieke service naar Azure voor de Cloud beheer gateway en het Cloud distributiepunt. Zie [plan for CMG](../../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager)voor meer informatie.|November 2018|TBD<sup>[Opmerking 1](#bkmk_note1)</sup>|
 
-### <a name="note-1-support-removed-tbd"></a><a name="bkmk_note1"></a>Opmerking 1: ondersteuning verwijderd TBD
+### <a name="note-1-support-removed-tbd"></a><a name="bkmk_note1"></a> Opmerking 1: ondersteuning verwijderd TBD
 
 De specifieke periode moet worden bepaald (TBD). Micro soft raadt u aan het nieuwe proces of onderdeel te wijzigen, maar u kunt het afgeschafte proces of de verouderde functie voor de nabije toekomst blijven gebruiken.
 
@@ -68,7 +68,7 @@ De volgende functies worden niet meer ondersteund. In sommige gevallen bevinden 
 
 De volgende secties bevatten aanvullende informatie over functies die zijn verwijderd met versie 1511:
 
-#### <a name="out-of-band-management"></a><a name="bkmk_amt"></a>Out-of-band-beheer  
+#### <a name="out-of-band-management"></a><a name="bkmk_amt"></a> Out-of-band-beheer  
 
 Met Configuration Manager is systeem eigen ondersteuning voor op AMT gebaseerde computers vanuit de Configuration Manager-console verwijderd.  
 
@@ -76,11 +76,11 @@ Met Configuration Manager is systeem eigen ondersteuning voor op AMT gebaseerde 
 
 - Buiten-band beheer in System Center 2012 Configuration Manager wordt niet beïnvloed door deze wijziging.  
 
-#### <a name="network-access-protection"></a><a name="bkmk_nap"></a>Netwerk toegangs beveiliging
+#### <a name="network-access-protection"></a><a name="bkmk_nap"></a> Netwerk toegangs beveiliging
 
 Configuration Manager heeft ondersteuning voor netwerk toegangs beveiliging verwijderd. De functie is afgeschaft in Windows Server 2012 R2 en wordt uit Windows 10 verwijderd.  
 
-Bekijk het gedeelte *Afgeschafte functionaliteit* van [Overzicht van Services voor netwerkbeleid en -toegang](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831683(v=ws.11)) voor informatie over alternatieven voor netwerktoegangsbeveiliging.
+Bekijk het gedeelte *Afgeschafte functionaliteit* van [Overzicht van Services voor netwerkbeleid en -toegang](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831683(v=ws.11)) voor informatie over alternatieven voor netwerktoegangsbeveiliging.
 
 ## <a name="see-also"></a>Zie ook
 

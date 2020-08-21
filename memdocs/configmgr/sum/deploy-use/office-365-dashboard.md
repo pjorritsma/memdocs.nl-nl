@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 69f234a2-b04b-445a-b81f-6b4acfc00eaf
-ms.openlocfilehash: ce3947c8ca3c562869fdfed2ddba4d9b160902be
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: bae995b0704e2b2774d5f002cbf907777a3edcf0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129365"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697038"
 ---
 # <a name="office-365-client-management-dashboard"></a>Office 365-dash board voor client beheer
 
 *Van toepassing op: Configuration Manager (huidige vertakking)*
 
 > [!Note]
-> Vanaf 21 april 2020, wordt de naam van Office 365 ProPlus gewijzigd in **Microsoft 365 apps voor bedrijven**. Zie [name wijzigen voor Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change)voor meer informatie. Mogelijk ziet u nog steeds verwijzingen naar de oude naam in de Configuration Manager-console en de ondersteunende documentatie terwijl de-console wordt bijgewerkt.
+> Vanaf 21 april 2020, wordt de naam van Office 365 ProPlus gewijzigd in **Microsoft 365 apps voor bedrijven**. Zie [name wijzigen voor Office 365 ProPlus](/deployoffice/name-change)voor meer informatie. Mogelijk ziet u nog steeds verwijzingen naar de oude naam in de Configuration Manager-console en de ondersteunende documentatie terwijl de-console wordt bijgewerkt.
 
 Vanaf Configuration Manager versie 1802 kunt u de client gegevens van Microsoft 365 apps controleren via het Office 365 client management-dash board. Het Office 365-dash board voor client beheer geeft een lijst van relevante apparaten weer wanneer secties van de grafiek worden geselecteerd. <!--1357281 -->
 
@@ -57,9 +57,9 @@ De site server op het hoogste niveau moet toegang hebben tot het volgende eind p
 
 *(Geïntroduceerd in versie 1910 als een vereiste)*
 
-Vanaf versie 1910 moet u het verzamelen van gegevens voor Microsoft 365 apps inschakelen om gegevens in te vullen in het **Office 365 ProPlus-pilot-en status dashboard**. De gegevens worden opgeslagen in de site database van Configuration Manager en worden niet naar micro soft verzonden.
+Vanaf versie 1910 moet u het verzamelen van gegevens voor Microsoft 365 apps inschakelen om gegevens in te vullen in het  **Office 365 ProPlus-pilot-en status dashboard**. De gegevens worden opgeslagen in de site database van Configuration Manager en worden niet naar micro soft verzonden.
 
-Deze gegevens verschillen van de diagnostische gegevens, die worden beschreven in [Diagnostische gegevens die van Microsoft 365-apps naar micro soft worden verzonden](https://docs.microsoft.com/deployoffice/privacy/overview-privacy-controls#diagnostic-data-sent-from-office-365-proplus-to-microsoft).
+Deze gegevens verschillen van de diagnostische gegevens, die worden beschreven in [Diagnostische gegevens die van Microsoft 365-apps naar micro soft worden verzonden](/deployoffice/privacy/overview-privacy-controls#diagnostic-data-sent-from-office-365-proplus-to-microsoft).
 
 U kunt het verzamelen van gegevens inschakelen door gebruik te maken van groepsbeleid of door het REGI ster te bewerken.
 
@@ -67,7 +67,7 @@ U kunt het verzamelen van gegevens inschakelen door gebruik te maken van groepsb
 
 1. Down load de meest recente [beheer sjabloon bestanden van het micro soft Download centrum](https://www.microsoft.com/download/details.aspx?id=49030).
 2. Schakel de beleids instelling **telemetrie-gegevens verzameling** inschakelen in `User Configuration\Policies\Administrative Templates\Microsoft Office 2016\Telemetry Dashboard` .
-    - U kunt ook de beleids instelling Toep assen met de [Office-Cloud beleids service](https://docs.microsoft.com/DeployOffice/overview-office-cloud-policy-service).
+    - U kunt ook de beleids instelling Toep assen met de [Office-Cloud beleids service](/DeployOffice/overview-office-cloud-policy-service).
     - De beleids instelling wordt ook gebruikt door het Office-telemetrie-dash board, dat u niet hoeft te implementeren voor het verzamelen van gegevens.
 
 #### <a name="enable-data-collection-from-the-registry"></a>Gegevens verzameling inschakelen vanuit het REGI ster
@@ -90,7 +90,7 @@ Het Office 365-dash board voor client beheer bevat grafieken voor de volgende in
 - Microsoft 365 apps-client kanalen Zie [overzicht van update kanalen voor Microsoft 365-apps](/DeployOffice/overview-of-update-channels-for-office-365-proplus)voor meer informatie.
 
 
-## <a name="integration-for-microsoft-365-apps-readiness"></a><a name="bkmk_o365_readiness"></a>Integratie voor de gereedheid van Microsoft 365 apps
+## <a name="integration-for-microsoft-365-apps-readiness"></a><a name="bkmk_o365_readiness"></a> Integratie voor de gereedheid van Microsoft 365 apps
 <!--3735402-->
 Vanaf Configuration Manager versie 1902 kunt u het dash board gebruiken om apparaten met hoge betrouw baarheid te identificeren die gereed zijn om te upgraden naar Microsoft 365 apps. Deze integratie biedt inzicht in mogelijke compatibiliteits problemen met invoeg toepassingen en macro's in uw omgeving. Gebruik vervolgens Configuration Manager om Microsoft 365 apps te implementeren op apparaten die klaar zijn.
 
@@ -105,12 +105,12 @@ Selecteer een status om in te zoomen naar een lijst met apparaten. Dit gereedhei
 
 - Hardware-inventaris in client instellingen inschakelen. Zie de sectie [vereisten](#prerequisites) voor meer informatie.  
 
-- Het apparaat moet zijn verbonden met het Office Content Delivery Network (CDN) om een gereedheids bestand voor invoeg toepassingen te downloaden. Zie [Content Delivery Networks](https://docs.microsoft.com/office365/enterprise/content-delivery-networks)(Engelstalig) voor meer informatie. Als het apparaat dit bestand niet kan downloaden, moet de status van de invoeg toepassingen worden *gecontroleerd*.  
+- Het apparaat moet zijn verbonden met het Office Content Delivery Network (CDN) om een gereedheids bestand voor invoeg toepassingen te downloaden. Zie [Content Delivery Networks](/office365/enterprise/content-delivery-networks)(Engelstalig) voor meer informatie. Als het apparaat dit bestand niet kan downloaden, moet de status van de invoeg toepassingen worden *gecontroleerd*.  
 
     > [!Note]  
     > Er worden geen gegevens naar micro soft verzonden voor deze functie.  
 
-### <a name="detailed-macro-readiness"></a><a name="bkmk_ort"></a>Gedetailleerde macro gereedheid
+### <a name="detailed-macro-readiness"></a><a name="bkmk_ort"></a> Gedetailleerde macro gereedheid
 
 De scan agent zoekt standaard naar de lijst met recent gebruikte bestanden (MRU) op elk apparaat. Hiermee worden de bestanden in deze lijst geteld die macro's ondersteunen. Deze bestanden bevatten de volgende typen:
 - Office-bestands indelingen met macro's, zoals Excel-werkmappen met macro's (. XLSM) of Word-document met macro's (. DOCM)  
@@ -126,7 +126,7 @@ ReadinessReportCreator.exe -mru -output c:\temp -silent
 
 Zie [gereedheids informatie voor meerdere gebruikers in een onderneming ophalen](/deployoffice/use-the-readiness-toolkit-to-assess-application-compatibility-for-office-365-pro#getting-readiness-information-for-multiple-users-in-an-enterprise)voor meer informatie.
 
-## <a name="microsoft-365-apps-readiness-dashboard"></a><a name="bkmk_readiness-dash"></a>Dash board voor de gereedheids Microsoft 365 apps
+## <a name="microsoft-365-apps-readiness-dashboard"></a><a name="bkmk_readiness-dash"></a> Dash board voor de gereedheids Microsoft 365 apps
 
 *(Geïntroduceerd in versie 1906)*
 
@@ -185,7 +185,7 @@ Dit rapport kan worden gebruikt om te bepalen welke apparaten recent gebruikte b
 
 Zie voor meer informatie over het uitvoeren van de scan [gedetailleerde macro gereedheid](#bkmk_ort).
 
-## <a name="office-365-proplus-pilot-and-health-dashboard"></a><a name="bkmk_pilot"></a>Office 365 ProPlus pilot-en status dashboard
+## <a name="office-365-proplus-pilot-and-health-dashboard"></a><a name="bkmk_pilot"></a> Office 365 ProPlus pilot-en status dashboard
 <!--4488272, 4488301-->
 *(Geïntroduceerd in versie 1910)*
 
@@ -248,7 +248,7 @@ In deze tegel vindt u een overzicht van apparaten met problemen met invoeg toepa
 
 ### <a name="known-issues"></a>Bekende problemen
 
-Er is een bekend probleem met de tegel **pilot implementeren** . Op dit moment kan deze niet worden gebruikt om te implementeren in een pilot. De tijdelijke oplossing is de bestaande werk stroom voor het implementeren van een toepassing met behulp van de wizard gefaseerde implementatie. <!--5525871-->
+Er is een bekend probleem met de tegel **pilot implementeren**  . Op dit moment kan deze niet worden gebruikt om te implementeren in een pilot. De tijdelijke oplossing is de bestaande werk stroom voor het implementeren van een toepassing met behulp van de wizard gefaseerde implementatie. <!--5525871-->
 
 ## <a name="next-steps"></a>Volgende stappen
 

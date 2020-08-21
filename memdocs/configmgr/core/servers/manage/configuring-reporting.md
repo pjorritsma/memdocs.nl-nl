@@ -10,12 +10,12 @@ ms.assetid: 55ae86a7-f0ab-4c09-b4da-89cd0e7fa0e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1b7ada6f54a7642817a321937a4d7128994d5538
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: e53c61052b8ee1b217a5268e8877dc4f4415f477
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83823976"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692618"
 ---
 # <a name="configure-reporting-in-configuration-manager"></a>Rapportage in Configuration Manager configureren
 
@@ -39,7 +39,7 @@ SQL Server Reporting Services is een op een server gebaseerd rapportage platform
 
 Wanneer u een rapport uitvoert, maakt het Reporting Services-onderdeel verbinding met de Configuration Manager-site database om gegevens op te halen.  
 
-Voordat u het Reporting Services-punt op een Configuration Manager-site kunt installeren, moet u SQL Server Reporting Services op het doel site systeem installeren en configureren. Zie [Install SQL Server Reporting Services](https://docs.microsoft.com/sql/reporting-services/install-windows/install-reporting-services)(Engelstalig) voor meer informatie.  
+Voordat u het Reporting Services-punt op een Configuration Manager-site kunt installeren, moet u SQL Server Reporting Services op het doel site systeem installeren en configureren. Zie [Install SQL Server Reporting Services](/sql/reporting-services/install-windows/install-reporting-services)(Engelstalig) voor meer informatie.  
 
 ### <a name="verify-sql-server-reporting-services-installation"></a>De SQL Server Reporting Services-installatie controleren
 
@@ -96,11 +96,11 @@ Voordat u rapporten kunt weer geven of beheren in de Configuration Manager-conso
 
 - Wanneer u een Reporting Services-punt installeert, geeft u een account van het [Reporting Services-punt](../../plan-design/hierarchy/accounts.md#reporting-services-point-account)op. Voor gebruikers van een ander domein voor het uitvoeren van een rapport, maakt u een twee richtings vertrouwensrelatie tussen domeinen. Anders kan het rapport niet worden uitgevoerd.
 
-### <a name="install-the-reporting-services-point-on-a-site-system"></a><a name="bkmk_install" />Het Reporting Services-punt op een site systeem installeren  
+### <a name="install-the-reporting-services-point-on-a-site-system"></a><a name="bkmk_install" /> Het Reporting Services-punt op een site systeem installeren  
 
 Zie [site systeem rollen installeren](../deploy/configure/install-site-system-roles.md)voor meer informatie over het configureren van site systemen.  
 
-1. Ga in de Configuration Manager-console naar de werk ruimte **beheer** , vouw **site configuratie**uit en selecteer vervolgens het knoop punt **servers en site systeem rollen** .  
+1. Ga in de Configuration Manager-console naar de werk ruimte **beheer** , vouw **site configuratie**uit en selecteer vervolgens het knoop punt  **servers en site systeem rollen** .  
 
 1. Voeg het Reporting Services-punt toe aan een nieuwe of bestaande site systeem server:  
 
@@ -144,7 +144,7 @@ Nadat de wizard is voltooid, maakt Configuration Manager de rapport mappen in Re
 > [!TIP]  
 > Als u alleen site systemen wilt weer geven die de siterol van het Reporting Services-punt hosten, klikt u met de rechter muisknop op **servers en site systeem rollen**en selecteert u **Reporting Services-punt**.  
 
-### <a name="languages-for-reports"></a><a name="bkmk_languages" />Talen voor rapporten
+### <a name="languages-for-reports"></a><a name="bkmk_languages" /> Talen voor rapporten
 
 <!-- SCCMDocs#1067 -->
 
@@ -211,7 +211,7 @@ Wanneer Configuration Manager het Reporting Services-punt installeert, worden de
 
 - **ConfigMgr-rapport beheerders**: gebruikers die zijn toegewezen aan deze beveiligingsrol, kunnen alle taken in verband met rapportage in Configuration Manager uitvoeren.  
 
-## <a name="verify-installation"></a><a name="bkmk_verify"></a>Installatie controleren
+## <a name="verify-installation"></a><a name="bkmk_verify"></a> Installatie controleren
 
 Controleer de installatie van het Reporting Services-punt door te kijken naar specifieke status berichten en vermeldingen in logboek bestanden. Gebruik de volgende procedure om te controleren of de installatie van het Reporting Services-punt geslaagd is.  
 
@@ -241,7 +241,7 @@ Door lopen dit logboek bestand vanaf het tijdstip waarop het Reporting Services-
 Er zijn veel opties waarmee u rapporten in SQL Server Reporting Services kunt ontwerpen. Wanneer u rapporten in de Configuration Manager-console maakt of bewerkt, opent Configuration Manager Report Builder om te gebruiken als de ontwerp omgeving. Ongeacht de manier waarop u uw Configuration Manager-rapporten ontwerpt, hebt u een zelfondertekend certificaat voor Server verificatie nodig voor de site database server.
 
 > [!NOTE]  
-> Zie [Report Builder authoring Environment](https://docs.microsoft.com/sql/reporting-services/tools/report-builder-authoring-environment-ssrs)(Engelstalig) voor meer informatie over het ontwerpen van rapporten met SQL Server Reporting Services.  
+> Zie [Report Builder authoring Environment](/sql/reporting-services/tools/report-builder-authoring-environment-ssrs)(Engelstalig) voor meer informatie over het ontwerpen van rapporten met SQL Server Reporting Services.  
 
 Configuration Manager installeert automatisch het certificaat op de site server en eventuele SMS-provider rollen. U kunt rapporten maken of bewerken vanuit de Configuration Manager-console wanneer u deze uitvoert vanaf een van deze servers.
 
@@ -264,9 +264,9 @@ Nadat u deze rol hebt geïnstalleerd, kunt u de site database verbinding en veri
 
     - **Naam van site database server**
 
-    - **Database naam**
+    - **Databasenaam**
 
-    - **Gebruikers account**
+    - **Gebruikersaccount**
 
 1. Selecteer **OK** om de wijzigingen op te slaan en de eigenschappen te sluiten.  
 

@@ -9,12 +9,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e671118578d059e2b8416e6854a701ce7c405c0f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c6e4c0f7c6a1be519a33343508da3bd72cd2cd48
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718523"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695576"
 ---
 # <a name="mms-2019-docathon"></a>MMS 2019 Docathon
 
@@ -51,7 +51,7 @@ Een [github-account](https://github.com/join) maken
 
 - Micro soft-mede werkers hebben nog een aantal stappen voor eenmalige aanmelding en een enigszins ander bijdrage proces  
 
-Zie voor meer informatie [github account setup](https://docs.microsoft.com/contribute/get-started-setup-github) in de docs.Microsoft.com-hand leiding voor inzenders.
+Zie voor meer informatie [github account setup](/contribute/get-started-setup-github) in de docs.Microsoft.com-hand leiding voor inzenders.
 
 ## <a name="scope"></a>Bereik
 
@@ -68,7 +68,7 @@ Het is ook raadzaam om wijzigingen aan te brengen in andere docs.microsoft.com-i
 Lees informatie over [het oplossen van problemen](../understand/use-docs.md#bkmk_docfeedback) en [hoe u deze bijdraagt](../understand/use-docs.md#bkmk_contribute). De meeste basis wijzigingen kunnen worden uitgevoerd via de GitHub browser-ervaring.  
 
 > [!Note]  
-> Als u geïnteresseerd bent in de complexere werk stroom met Git en VSCode, raadpleegt u [hulpprogram Ma's voor het ontwerpen van inhoud installeren](https://docs.microsoft.com/contribute/get-started-setup-tools). En/of vraag Jan/Erik om hulp. De volgende acties zijn een aantal redenen waarom u de complexere werk stroom wilt gebruiken:
+> Als u geïnteresseerd bent in de complexere werk stroom met Git en VSCode, raadpleegt u [hulpprogram Ma's voor het ontwerpen van inhoud installeren](/contribute/get-started-setup-tools). En/of vraag Jan/Erik om hulp. De volgende acties zijn een aantal redenen waarom u de complexere werk stroom wilt gebruiken:
 >
 > - Een nieuw artikel maken
 > - Afbeeldingen toevoegen
@@ -79,8 +79,8 @@ Lees informatie over [het oplossen van problemen](../understand/use-docs.md#bkmk
 
 Begin met het nadenken over en het plannen van uw doel voor deze gebeurtenis. Wat wilt u doen?
 
-- Bekijk bestaande problemen in de opslag plaatsen in het bereik. Labels zoals **goed-eerste probleem** of **Help-wens** kunnen goede start punten identificeren. Als u een van deze problemen wilt voor komen, kunt u hierop een **#MMS2019Docathon** opmerking plaatsen met #MMS2019Docathon @authoren vervolgens het label van de opgeven, waarbij u wordt gevraagd het probleem aan u toe te wijzen. Met andere woorden, [roep dibs](https://www.merriam-webster.com/words-at-play/word-origin-dibs) op. Herhaal dit proces zo vaak als u wilt.  
-    Bijvoorbeeld in SCCMDocs, waarbij Jan het artikel auteur is:`@aczechowski I'm claiming this issue for #MMS2019Docathon`
+- Bekijk bestaande problemen in de opslag plaatsen in het bereik. Labels zoals **goed-eerste probleem** of **Help-wens** kunnen goede start punten identificeren. Als u een van deze problemen wilt voor komen, kunt u hierop een opmerking plaatsen met **#MMS2019Docathon** en vervolgens het label van de opgeven @author , waarbij u wordt gevraagd het probleem aan u toe te wijzen. Met andere woorden, [roep dibs](https://www.merriam-webster.com/words-at-play/word-origin-dibs) op. Herhaal dit proces zo vaak als u wilt.  
+    Bijvoorbeeld in SCCMDocs, waarbij Jan het artikel auteur is: `@aczechowski I'm claiming this issue for #MMS2019Docathon`
 
 - U kent een probleem met een artikel, maar er is nog geen feedback ingediend. Met andere woorden, er is niets in het gedeelte **feedback** onder aan het artikel. Maak een nieuw probleem en gebruik dezelfde instructies als hierboven voor het claimen.  
 
@@ -134,13 +134,13 @@ De volgende toekenningen worden berekend door het aantal rechtmatige bijdragen a
 
 - [Micro soft-stijl](https://aka.ms/MicrosoftStyle)
 
-    - [Snel starten](https://docs.microsoft.com/contribute/style-quick-start)
+    - [Snel starten](/contribute/style-quick-start)
 
-    - [Top 10 van tips voor micro soft stijl en spraak](https://docs.microsoft.com/style-guide/top-10-tips-style-voice)
+    - [Top 10 van tips voor micro soft stijl en spraak](/style-guide/top-10-tips-style-voice)
 
-- [Gids voor inzenders](https://docs.microsoft.com/contribute)
+- [Gids voor inzenders](/contribute)
 
-- [Markdown gebruiken voor het schrijven van documenten](https://docs.microsoft.com/contribute/markdown-reference)
+- [Markdown gebruiken voor het schrijven van documenten](/contribute/markdown-reference)
 
 ## <a name="official-rules"></a>Officiële regels
 
@@ -166,7 +166,7 @@ Microsoft Cloud + AI-ontwikkelaars inhoud & Learning MMS 2019 Docathon Event wed
 
 5. HET INVOEREN VAN
 
-    Als u een item wilt maken, dient u bewerkingen in te dienen bij artikelen in de volgende GitHub-opslag plaatsen: IntuneDocs, SCCMDocs, SCCM-docs-Power shell-Ref. Zie [How to Contribute](https://docs.microsoft.com/sccm/core/understand/use-docs#bkmk_contribute)(Engelstalig) voor meer informatie over het inzendings proces.
+    Als u een item wilt maken, dient u bewerkingen in te dienen bij artikelen in de volgende GitHub-opslag plaatsen: IntuneDocs, SCCMDocs, SCCM-docs-Power shell-Ref. Zie [How to Contribute](/sccm/core/understand/use-docs#bkmk_contribute)(Engelstalig) voor meer informatie over het inzendings proces.
 
     Als u een item wilt verzenden, moet u een pull-aanvraag indienen bij GitHub.
 
@@ -254,4 +254,4 @@ Microsoft Cloud + AI-ontwikkelaars inhoud & Learning MMS 2019 Docathon Event wed
 
     Bij micro soft zijn we van belang om uw privacy te beschermen. Micro soft gebruikt de informatie die u verstrekt in dit formulier om u te informeren over belang rijke informatie over onze producten, upgrades en verbeteringen en om informatie over andere micro soft-producten en-services te sturen. Micro soft deelt de gegevens die u verstrekt met derden zonder uw toestemming, behalve waar nodig voor het volt ooien van de services of trans acties die u hebt aangevraagd, of als vereist door de wet. Microsoft hecht groot belang aan de beveiliging van uw persoonlijke gegevens. We gebruiken diverse beveiligingstechnologieën en -procedures om u te helpen uw persoonlijke gegevens te beveiligen tegen onbevoegd(e) toegang, gebruik of vrijgave. Uw persoonlijke gegevens worden nooit buiten het bedrijf gedeeld zonder uw toestemming, met uitzonde ring van de voor waarden die hierboven worden uitgelegd.
 
-    Als u van mening bent dat micro soft zich niet aan deze verklaring heeft gehouden, kunt u contact opnemen met privrc@microsoft.com micro soft door een e-mail te verzenden naar of post naar micro soft Privacy Response Center, micro soft Corporation, One micro soft Way, REDMOND, WA 98052.
+    Als u van mening bent dat micro soft zich niet aan deze verklaring heeft gehouden, kunt u contact opnemen met micro soft door een e-mail te verzenden naar privrc@microsoft.com of post naar micro soft Privacy Response Center, micro soft Corporation, One micro soft Way, Redmond, WA 98052.

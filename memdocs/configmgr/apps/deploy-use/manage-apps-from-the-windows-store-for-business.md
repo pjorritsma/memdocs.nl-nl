@@ -10,18 +10,18 @@ ms.assetid: 8cdb22a6-72d7-41f5-9bed-c098b1bcf675
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7d6a61324f8c777ba5ed09dd26816152d6f17af9
-ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
+ms.openlocfilehash: a8125f55215fd597d9611723e1d36629850bff44
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82643205"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695219"
 ---
 # <a name="manage-apps-from-the-microsoft-store-for-business-and-education-with-configuration-manager"></a>Apps beheren via de Microsoft Store voor bedrijven en onderwijs met Configuration Manager
 
-De [Microsoft Store voor bedrijven en onderwijs](https://docs.microsoft.com/microsoft-store/) is waar u Windows-apps voor uw organisatie vindt en aanschaft. Wanneer u de Store verbindt met Configuration Manager, synchroniseert u vervolgens de lijst met apps die u hebt aangeschaft. Bekijk deze apps in de Configuration Manager-console en implementeer ze zoals u een andere app implementeert.
+De [Microsoft Store voor bedrijven en onderwijs](/microsoft-store/) is waar u Windows-apps voor uw organisatie vindt en aanschaft. Wanneer u de Store verbindt met Configuration Manager, synchroniseert u vervolgens de lijst met apps die u hebt aangeschaft. Bekijk deze apps in de Configuration Manager-console en implementeer ze zoals u een andere app implementeert.
 
-## <a name="online-and-offline-apps"></a><a name="bkmk_apps"></a>Online-en offline-Apps
+## <a name="online-and-offline-apps"></a><a name="bkmk_apps"></a> Online-en offline-Apps
 
 De Microsoft Store voor bedrijven en onderwijs ondersteunt twee typen apps:
 
@@ -29,7 +29,7 @@ De Microsoft Store voor bedrijven en onderwijs ondersteunt twee typen apps:
 
 - **Offline**: met dit type kunt u apps en licenties in de cache opslaan om deze rechtstreeks in uw on-premises netwerk te implementeren. Apparaten hoeven geen verbinding te maken met de Store of hebben geen verbinding met internet.
 
-Zie voor meer informatie het [overzicht van Microsoft Store voor bedrijven en onderwijs](https://docs.microsoft.com/microsoft-store/microsoft-store-for-business-overview).
+Zie voor meer informatie het [overzicht van Microsoft Store voor bedrijven en onderwijs](/microsoft-store/microsoft-store-for-business-overview).
 
 ### <a name="summary-of-capabilities"></a>Samen vatting van mogelijkheden
 
@@ -46,11 +46,11 @@ Configuration Manager biedt ondersteuning voor het beheren van Microsoft Store v
 |Line-of-Business-Apps uit de Store ondersteunen|Ja|Ja|
 |Een Store-app inrichten voor alle gebruikers op een apparaat<sup>[Opmerking 2](#bkmk_note2)</sup><!--1358310-->|Ja|Ja|
 
-#### <a name="note-1-online-licensed-apps-version-requirement"></a><a name="bkmk_note1"></a>Opmerking 1: vereiste versie van online gelicentieerde apps
+#### <a name="note-1-online-licensed-apps-version-requirement"></a><a name="bkmk_note1"></a> Opmerking 1: vereiste versie van online gelicentieerde apps
 
 Als u apps met een online licentie wilt implementeren op Windows 10-apparaten met de Configuration Manager-client, moet Windows 10, versie 1703 of hoger worden uitgevoerd.  
 
-#### <a name="note-2-configuration-manager-minimum-version"></a><a name="bkmk_note2"></a>Opmerking 2: minimale versie van Configuration Manager
+#### <a name="note-2-configuration-manager-minimum-version"></a><a name="bkmk_note2"></a> Opmerking 2: minimale versie van Configuration Manager
 
 Vanaf versie 1806. Zie [Windows-toepassingen maken](../get-started/creating-windows-applications.md#bkmk_provision)voor meer informatie.  
 
@@ -64,7 +64,7 @@ Houd rekening met de volgende punten voordat u Microsoft Store implementeert voo
 
 - Wanneer het lokale Administrator-account zich op het apparaat aanmeldt, heeft het geen toegang tot Microsoft Store voor zakelijke en onderwijs-apps.  
 
-- Apparaten moeten een Live Internet verbinding hebben met de Microsoft Store voor bedrijven en onderwijs. Zie [vereisten](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business)voor meer informatie, waaronder proxy configuratie.  
+- Apparaten moeten een Live Internet verbinding hebben met de Microsoft Store voor bedrijven en onderwijs. Zie [vereisten](/microsoft-store/prerequisites-microsoft-store-for-business)voor meer informatie, waaronder proxy configuratie.  
 
 ### <a name="notes-for-devices-running-earlier-versions-of-windows-10"></a>Opmerkingen voor apparaten met eerdere versies van Windows 10
 
@@ -104,23 +104,23 @@ Bij de volgende evaluatie fase van de toepassing:
 
 - Als u een groeps beleid implementeert om de toegang tot de consumenten versie van de Microsoft Store uit te scha kelen, werken implementaties van de Microsoft Store voor bedrijven en onderwijs niet. Dit gedrag treedt zelfs op als u de Microsoft Store voor bedrijven en onderwijs inschakelt.  
 
-## <a name="set-up-synchronization"></a><a name="bkmk_setup"></a>Synchronisatie instellen
+## <a name="set-up-synchronization"></a><a name="bkmk_setup"></a> Synchronisatie instellen
 
 Wanneer u de lijst met Microsoft Store voor zakelijke en onderwijs-apps synchroniseert die uw organisatie heeft aangeschaft, ziet u deze apps in de Configuration Manager-console.
 
 Verbind uw Configuration Manager-site met Azure AD en de Microsoft Store voor bedrijven en onderwijs. Zie [Azure-Services configureren](../../core/servers/deploy/configure/azure-services-wizard.md)voor meer informatie en Details van dit proces. Maak een verbinding met de service **Microsoft Store voor bedrijven** .
 
-Zorg ervoor dat het service aansluitpunt en de doel apparaten toegang hebben tot de Cloud service. Zie [vereisten voor Microsoft Store voor zakelijke en onderwijs-proxy configuratie](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration)voor meer informatie.
+Zorg ervoor dat het service aansluitpunt en de doel apparaten toegang hebben tot de Cloud service. Zie [vereisten voor Microsoft Store voor zakelijke en onderwijs-proxy configuratie](/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration)voor meer informatie.
 
-### <a name="supplemental-information-and-configuration"></a><a name="bkmk_config"></a>Aanvullende informatie en configuratie
+### <a name="supplemental-information-and-configuration"></a><a name="bkmk_config"></a> Aanvullende informatie en configuratie
 
 Configureer op de pagina **app** van de wizard Azure-Services eerst de **Azure-omgeving** en **Web-app**. Lees vervolgens de sectie **meer informatie** aan de onderkant van de pagina. Deze informatie bevat de volgende aanvullende acties in de Microsoft Store voor de Business-en Education-portal:  
 
-- Configureer Configuration Manager als het hulp programma voor het beheer van opslag. Zie [Configure Management provider](https://docs.microsoft.com/microsoft-store/configure-mdm-provider-microsoft-store-for-business)(Engelstalig) voor meer informatie.  
+- Configureer Configuration Manager als het hulp programma voor het beheer van opslag. Zie [Configure Management provider](/microsoft-store/configure-mdm-provider-microsoft-store-for-business)(Engelstalig) voor meer informatie.  
 
-- Schakel ondersteuning voor offline gelicentieerde apps in. Zie voor meer informatie het [distribueren van offline-Apps](https://docs.microsoft.com/microsoft-store/distribute-offline-apps).  
+- Schakel ondersteuning voor offline gelicentieerde apps in. Zie [Offline apps distribueren](/microsoft-store/distribute-offline-apps) voor meer informatie.  
 
-- U moet ten minste één app ophalen. Zie [apps zoeken en verkrijgen](https://docs.microsoft.com/microsoft-store/find-and-acquire-apps-overview)voor meer informatie.  
+- U moet ten minste één app ophalen. Zie [apps zoeken en verkrijgen](/microsoft-store/find-and-acquire-apps-overview)voor meer informatie.  
 
 Geef op de pagina **configuratie** van de wizard Azure-Services de volgende informatie op:  
 
@@ -133,7 +133,7 @@ Geef op de pagina **configuratie** van de wizard Azure-Services de volgende info
 > [!NOTE]
 > Configuration Manager synchroniseert het app-pictogram niet vanuit het archief. Als u een pictogram nodig hebt om weer te geven voor deze app in Software Center, voegt u dit hand matig toe in de app-eigenschappen. Zie [hand matig toepassings gegevens opgeven](create-applications.md#bkmk_manual-app)voor meer informatie.<!-- 2837053 -->
 
-## <a name="create-and-deploy-the-app"></a><a name="bkmk_deploy"></a>De app maken en implementeren
+## <a name="create-and-deploy-the-app"></a><a name="bkmk_deploy"></a> De app maken en implementeren
 
 Na de synchronisatie maakt en implementeert u de Microsoft Store voor zakelijke en onderwijs-apps die vergelijkbaar zijn met andere Configuration Manager toepassingen.
 
@@ -154,14 +154,14 @@ Vouw in de werk ruimte **software bibliotheek** de optie **toepassings beheer**u
 
 Voor elke Store-app die u beheert, bekijkt u de volgende informatie over de app:
 
-- App-naam
+- Naam van app
 - App-platform
 - Het aantal licenties voor de app waarvan u de eigenaar bent
 - Het aantal beschik bare licenties
 
 Na de implementatie van online-apps, komen alle updates voor die app rechtstreeks van de Microsoft Store. Daarnaast controleert Configuration Manager niet de versie compatibiliteit van online apps, alleen dat Windows de app rapporteert als geïnstalleerd.  
 
-Bij het implementeren van offline-Apps op Windows 10-apparaten met de Configuration Manager-client, mogen gebruikers geen toepassingen die extern kunnen worden bijgewerkt met Configuration Manager-implementaties. Het beheren van updates voor offline Apps is vooral belang rijk in omgevingen met meerdere gebruikers, zoals klas lokalen. Een optie om de Microsoft Store uit te scha kelen, is met behulp van [groeps beleid](https://docs.microsoft.com/windows/configuration/stop-employees-from-using-microsoft-store#block-microsoft-store-using-group-policy).
+Bij het implementeren van offline-Apps op Windows 10-apparaten met de Configuration Manager-client, mogen gebruikers geen toepassingen die extern kunnen worden bijgewerkt met Configuration Manager-implementaties. Het beheren van updates voor offline Apps is vooral belang rijk in omgevingen met meerdere gebruikers, zoals klas lokalen. Een optie om de Microsoft Store uit te scha kelen, is met behulp van [groeps beleid](/windows/configuration/stop-employees-from-using-microsoft-store#block-microsoft-store-using-group-policy).
 
 Nadat de Microsoft Store voor Business-en Education-beheerder een offline app heeft verkregen, publiceert u de app niet voor gebruikers via de Store. Deze configuratie zorgt ervoor dat gebruikers niet online kunnen installeren of bijwerken. Gebruikers ontvangen alleen offline-app-updates via Configuration Manager.
 

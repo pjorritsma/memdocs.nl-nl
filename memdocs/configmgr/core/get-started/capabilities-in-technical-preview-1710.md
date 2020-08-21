@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3dd4c3f22a0f2c24153e6d26be2e3098511c5dc4
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: e408bbe7ea88d70c5a9d02368c2d820584cae2b8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905313"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694437"
 ---
 # <a name="capabilities-in-technical-preview-1710-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1710 voor Configuration Manager
 
@@ -97,17 +97,17 @@ Deze release voegt ondersteuning toe voor Windows Defender exploit Guard. U kunt
 
 Compatibiliteits gegevens voor de implementatie van exploit Guard-beleid zijn beschikbaar vanuit de Configuration Manager-console.
 
-Zie [Windows Defender exploit Guard](https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard) in de Windows-documentatie bibliotheek voor meer informatie over Exploit Guard en specifieke onderdelen en regels.
+Zie [Windows Defender exploit Guard](/windows/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard) in de Windows-documentatie bibliotheek voor meer informatie over Exploit Guard en specifieke onderdelen en regels.
 
 ### <a name="prerequisites"></a>Vereisten
 Op beheerde apparaten moet Windows 10 1709 worden bijgewerkt of later en voldoen aan de volgende vereisten, afhankelijk van de geconfigureerde onderdelen en regels:
 
 |Onderdeel voor exploit Guard |Aanvullende vereisten|
 |------------------------|------------------------|
-| Kwetsbaarheid voor aanvallen verminderen  | Op apparaten moet [Windows Defender AV-real-time-beveiliging]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) zijn ingeschakeld.  |
-| Gecontroleerde mappentoegang  | Op apparaten moet [Windows Defender AV-real-time-beveiliging]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) zijn ingeschakeld.   |
+| Kwetsbaarheid voor aanvallen verminderen  | Op apparaten moet [Windows Defender AV-real-time-beveiliging]( /windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) zijn ingeschakeld.  |
+| Gecontroleerde mappentoegang  | Op apparaten moet [Windows Defender AV-real-time-beveiliging]( /windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) zijn ingeschakeld.   |
 | Exploit Protection  | Geen  |
-| Netwerk beveiliging  |  Op apparaten moet [Windows Defender AV-real-time-beveiliging]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) zijn ingeschakeld.  |
+| Netwerk beveiliging  |  Op apparaten moet [Windows Defender AV-real-time-beveiliging]( /windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) zijn ingeschakeld.  |
 
 ### <a name="create-an-exploit-guard-policy----1355468---"></a>Een exploit Guard-beleid maken  <!--1355468 -->
 1. Ga in de Configuration Manager-console naar **activa en nalevings**  >  **Endpoint Protection**en klik vervolgens op **Windows Defender exploit Guard**.
@@ -125,7 +125,7 @@ Nadat u exploit Guard-beleids regels hebt gemaakt, gebruikt u de wizard exploit 
 
 ## <a name="limited-support-for-cng-certificates"></a>Beperkte ondersteuning voor CNG-certificaten
 <!-- 1356191 -->
-Vanaf deze versie kunt u nu [crypto GRAFIE API: Next Generation (CNG)](https://docs.microsoft.com/windows/win32/seccng/cng-features) -certificaat sjablonen gebruiken voor de volgende scenario's:
+Vanaf deze versie kunt u nu [crypto GRAFIE API: Next Generation (CNG)](/windows/win32/seccng/cng-features) -certificaat sjablonen gebruiken voor de volgende scenario's:
 
 - Client registratie en communicatie met een HTTPS-beheer punt.   
 - Software distributie en toepassings implementatie met een HTTPS-distributie punt.   
@@ -210,13 +210,13 @@ Een beleid maken en bladeren door de beschik bare instellingen:
     > [!NOTE]
     > Windows 10-Pc's slaan slechts één netwerk isolatie lijst op de client op. In deze release kunt u twee verschillende soorten netwerk isolatie lijsten maken (één van Windows Information Protection en één van Windows Defender Application Guard) en implementeren op de client. Als u beide beleids regels implementeert, moeten deze netwerk isolatie lijsten overeenkomen. Als u lijsten implementeert die niet overeenkomen met dezelfde client, mislukt de implementatie.
 
-    Meer informatie over het opgeven van netwerk definities vindt u in de [Windows Information Protection-documentatie]- [uw ondernemings gegevens beveiligen met behulp van Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr).
+    Meer informatie over het opgeven van netwerk definities vindt u in de [Windows Information Protection-documentatie]- [uw ondernemings gegevens beveiligen met behulp van Windows Information Protection (WIP)](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr).
 
 6. Wanneer u klaar bent, voltooit u de wizard en implementeert u het beleid op een of meer Windows 10-apparaten.
 
-### <a name="further-reading"></a>Meer informatie
+### <a name="further-reading"></a>Meer lezen
 
 Zie [dit blog bericht](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#BmJGKPfSjHHzsMmI.97)voor meer informatie over Windows Defender Application Guard. Zie [dit blog bericht](https://techcommunity.microsoft.com/t5/Windows-Insider-Program/Windows-Defender-Application-Guard-Standalone-mode/td-p/66903)voor meer informatie over de zelfstandige Windows Defender Application Guard-modus.
 
 ## <a name="next-steps"></a>Volgende stappen
-Zie [Technical Preview voor Configuration Manager voor](technical-preview.md)meer informatie over het installeren of bijwerken van de technische preview-vertakking.    
+Zie [Technical Preview voor Configuration Manager voor](technical-preview.md)meer informatie over het installeren of bijwerken van de technische preview-vertakking.

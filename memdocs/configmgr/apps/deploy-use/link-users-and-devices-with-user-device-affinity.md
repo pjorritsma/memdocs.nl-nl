@@ -10,12 +10,12 @@ ms.assetid: 5b30b0d5-722d-4d4b-9ed7-5a43de315461
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2e74f969016d79254ceb8e8323b6e3914969ecc7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8e1a55efa6b23aa489ea65b3296e33847163a5c4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81710095"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695236"
 ---
 # <a name="link-users-and-devices-with-user-device-affinity-in-configuration-manager"></a>Gebruikers en apparaten koppelen met affiniteit tussen gebruiker en apparaat in Configuration Manager
 
@@ -96,7 +96,7 @@ Als u een groot aantal relaties tegelijk wilt maken, importeert u een bestand me
 
 1. Stel in de wizard affiniteit van gebruiker met apparaat importeren op de pagina **toewijzing kiezen** de volgende gegevens in:  
 
-    - **Bestands naam**. Geef een bestand met door komma's gescheiden waarden (CSV) op dat een lijst bevat met gebruikers en apparaten waartussen u een affiniteit wilt maken. In dit bestand moet elke combi natie van een gebruiker en apparaat op een eigen rij staan, met waarden gescheiden door een komma. Gebruik deze indeling:`<domain>\<username>,<device NetBIOS name>`  
+    - **Bestands naam**. Geef een bestand met door komma's gescheiden waarden (CSV) op dat een lijst bevat met gebruikers en apparaten waartussen u een affiniteit wilt maken. In dit bestand moet elke combi natie van een gebruiker en apparaat op een eigen rij staan, met waarden gescheiden door een komma. Gebruik deze indeling: `<domain>\<username>,<device NetBIOS name>`  
 
     - **Dit bestand heeft kolom koppen voor referentie doeleinden**. Selecteer deze optie als het CSV-bestand een kop van de bovenste rij bevat. De-site negeert de veldnamenrij tijdens het importeren.  
 
@@ -162,4 +162,4 @@ Wanneer u de client instelling uitschakelt om de **gebruikers affiniteit van het
 
 ## <a name="next-steps"></a>Volgende stappen
 
-U kunt ook Microsoft Intune gebruiken om het primaire gebruik van een geregistreerd apparaat te zoeken. Zie [de primaire gebruiker van een intune-apparaat zoeken](https://docs.microsoft.com/intune/find-primary-user) in de intune-documentatie voor meer informatie.
+U kunt ook Microsoft Intune gebruiken om het primaire gebruik van een geregistreerd apparaat te zoeken. Zie [de primaire gebruiker van een intune-apparaat zoeken](/intune/find-primary-user) in de intune-documentatie voor meer informatie.

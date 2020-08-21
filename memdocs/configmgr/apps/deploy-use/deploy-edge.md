@@ -10,20 +10,20 @@ ms.assetid: 73b420be-5d6a-483a-be66-c4d274437508
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 423864c2c954cc67da4ef54d55d7263ae346e786
-ms.sourcegitcommit: 24ce7df7dadf2385afe364b817ec58feeb04c700
+ms.openlocfilehash: cc10f262e4639ffdd8513bece662116f5ed39516
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86212283"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695365"
 ---
 # <a name="microsoft-edge-management"></a>Micro soft Edge-beheer
 
 *Van toepassing op: Configuration Manager (Current Branch)*
 
-De alles-nieuwe micro soft Edge is gereed voor bedrijven. Vanaf Configuration Manager versie 1910 kunt u nu [micro soft Edge, versie 77 en hoger](https://docs.microsoft.com/deployedge/) implementeren voor uw gebruikers. Er wordt een Power shell-script gebruikt om de geselecteerde Edge-build te installeren. Het script schakelt ook automatische updates voor rand uit zodat deze kunnen worden beheerd met Configuration Manager.
+De alles-nieuwe micro soft Edge is gereed voor bedrijven. Vanaf Configuration Manager versie 1910 kunt u nu [micro soft Edge, versie 77 en hoger](/deployedge/) implementeren voor uw gebruikers. Er wordt een Power shell-script gebruikt om de geselecteerde Edge-build te installeren. Het script schakelt ook automatische updates voor rand uit zodat deze kunnen worden beheerd met Configuration Manager.
 
-## <a name="deploy-microsoft-edge"></a><a name="bkmk_Microsoft_Edge"></a>Micro soft Edge implementeren
+## <a name="deploy-microsoft-edge"></a><a name="bkmk_Microsoft_Edge"></a> Micro soft Edge implementeren
 <!--4561024-->
 Beheerders kunnen de bèta, het dev of het stabiele kanaal kiezen, samen met een versie van de micro soft Edge-client die moet worden geïmplementeerd. Elke versie bevat informatie en verbeteringen van onze klanten en community.
 
@@ -31,7 +31,7 @@ Beheerders kunnen de bèta, het dev of het stabiele kanaal kiezen, samen met een
 
 Voor clients die zijn gericht op een micro soft Edge-implementatie:
 
-- Het Power shell- [uitvoerings beleid](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies) kan niet worden ingesteld op beperkt.
+- Het Power shell- [uitvoerings beleid](/powershell/module/microsoft.powershell.core/about/about_execution_policies) kan niet worden ingesteld op beperkt.
   - Power shell wordt uitgevoerd om de installatie uit te voeren.
 
 - Micro soft Edge Installer en [CMPivot](../../core/servers/manage/cmpivot.md) zijn ondertekend met het **micro soft** -certificaat voor ondertekening van programma code. Als dat certificaat niet in het archief **vertrouwde uitgevers** wordt vermeld, moet u het toevoegen. Anders wordt micro soft Edge Installer en CMPivot niet uitgevoerd wanneer het Power shell-uitvoerings beleid is ingesteld op **Alles ondertekend**. <!--7585106-->
@@ -43,11 +43,11 @@ Het apparaat waarop de Configuration Manager-console wordt uitgevoerd, heeft toe
 |`https://edgeupdates.microsoft.com/api/products?view=enterprise`|Informatie over versies van micro soft Edge|
 |`http://dl.delivery.mp.microsoft.com`|Inhoud voor micro soft Edge-releases|
 
-### <a name="verify-microsoft-edge-update-policies"></a><a name="bkmk_autoupdate"></a>Het update beleid van micro soft Edge controleren
+### <a name="verify-microsoft-edge-update-policies"></a><a name="bkmk_autoupdate"></a> Het update beleid van micro soft Edge controleren
 
 #### <a name="configuration-manager-version-1910"></a>Configuration Manager versie 1910
 
-In versie 1910, wanneer micro soft Edge wordt geïmplementeerd, schakelt het installatie script automatische updates voor micro soft Edge uit zodat deze kunnen worden beheerd met Configuration Manager. U kunt dit gedrag wijzigen met behulp van groepsbeleid. Zie [uw implementatie van micro soft Edge](https://docs.microsoft.com/deployedge/deploy-edge-plan-deployment#define-and-configure-policies) en [micro soft Edge update-beleid](https://docs.microsoft.com/DeployEdge/microsoft-edge-update-policies)plannen voor meer informatie.
+In versie 1910, wanneer micro soft Edge wordt geïmplementeerd, schakelt het installatie script automatische updates voor micro soft Edge uit zodat deze kunnen worden beheerd met Configuration Manager. U kunt dit gedrag wijzigen met behulp van groepsbeleid. Zie [uw implementatie van micro soft Edge](/deployedge/deploy-edge-plan-deployment#define-and-configure-policies) en [micro soft Edge update-beleid](/DeployEdge/microsoft-edge-update-policies)plannen voor meer informatie.
 
 #### <a name="configuration-manager-version-2002-and-later"></a>Configuration Manager versie 2002 en hoger
 <!--4561024-->
@@ -103,7 +103,7 @@ Vanaf Configuration Manager versie 1910 ziet u een knoop punt met de naam **alle
    - [Software-updates handmatig implementeren](../../sum/deploy-use/manually-deploy-software-updates.md)
    - [Software-updates downloaden](../../sum/deploy-use/download-software-updates.md)
 
-## <a name="microsoft-edge-management-dashboard"></a><a name="bkmk_edge-dash"></a>Micro soft Edge Management dash board
+## <a name="microsoft-edge-management-dashboard"></a><a name="bkmk_edge-dash"></a> Micro soft Edge Management dash board
 <!--3871913-->
 *(Geïntroduceerd in versie 2002)*
 

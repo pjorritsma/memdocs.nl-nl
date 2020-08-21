@@ -10,12 +10,12 @@ ms.assetid: 7d8f530b-1a39-4a9d-a2f0-675b516da7e4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c243897a4c52eff04263325b998c4b23d6b3dde4
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.openlocfilehash: 5f0993f6120735f8a614801f9ac14c29870ffefe
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166584"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692584"
 ---
 # <a name="use-a-pull-distribution-point-with-configuration-manager"></a>Een pull-distributie punt gebruiken met Configuration Manager
 
@@ -134,7 +134,7 @@ Wanneer u het pull-distributie punt configureert, geeft u een of meer bron distr
 
 - Pull-distributie punten gebruiken het onderdeel **CCMFramework** om de overdracht van inhoud te beheren. De Configuration Manager-client bevat dit onderdeel.  
 
-- Wanneer u het pull-distributie punt inschakelt, installeert de site **pulldp. msi**. Dit installatie programma voegt ook het onderdeel CCMFramework toe. De Configuration Manager-client is niet vereist voor het Framework.  
+- Wanneer u het pull-distributie punt inschakelt, installeert de site **pulldp.msi**. Dit installatie programma voegt ook het onderdeel CCMFramework toe. De Configuration Manager-client is niet vereist voor het Framework.  
 
 - Nadat het pull-distributie punt is geïnstalleerd, wordt in eerste instantie de **CCMExec** -service gebruikt om te werken.  
 
@@ -148,10 +148,10 @@ Wanneer u het pull-distributie punt configureert, geeft u een of meer bron distr
 > [!TIP]
 > Als er HTTP 403-fouten in de logboek bestanden worden weer geven nadat u een pull-distributie punt hebt toegevoegd, moet u de volgende wijziging aanbrengen:
 >
-> 1. Stel op het bron distributiepunt de volgende register waarde in:`HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL, ClientAuthTrustMode = 2 (REG_DWORD)`
+> 1. Stel op het bron distributiepunt de volgende register waarde in: `HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL, ClientAuthTrustMode = 2 (REG_DWORD)`
 > 1. Start de bron distributiepunt server opnieuw op.
 >
-> Vervolgens moet het pull-distributie punt beginnen met het downloaden van inhoud van de bron. Zie [overzicht van TLS-SSL (Schannel-SSP)](https://docs.microsoft.com/windows-server/security/tls/what-s-new-in-tls-ssl-schannel-ssp-overview)voor meer informatie over deze register sleutel.<!-- SCCMDocs#1973 -->
+> Vervolgens moet het pull-distributie punt beginnen met het downloaden van inhoud van de bron. Zie [overzicht van TLS-SSL (Schannel-SSP)](/windows-server/security/tls/what-s-new-in-tls-ssl-schannel-ssp-overview)voor meer informatie over deze register sleutel.<!-- SCCMDocs#1973 -->
 
 ## <a name="see-also"></a>Zie ook  
 

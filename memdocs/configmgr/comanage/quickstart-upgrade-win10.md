@@ -10,16 +10,16 @@ ms.assetid: 561eb5b6-f90c-485a-91c2-e45bb0ce7877
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e11a6130fb9f7d86b7d3377cc4120d4e61c43d2d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d41a0806a33ac627eceaafab54c73c31ea013365
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711460"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694828"
 ---
 # <a name="upgrade-windows-10-for-co-management"></a>Windows 10 bijwerken voor co-beheer
 
-Wanneer u uw organisatie naar co-beheer voorbereidt, is de actuele hindernis voor sommige klanten aanzienlijk. Voor co-beheer is [Windows 10 versie 1709](https://docs.microsoft.com/windows/whats-new/whats-new-windows-10-version-1709) of hoger vereist. Nadat u Windows hebt bijgewerkt en automatische inschrijving hebt geconfigureerd, worden uw-clients automatisch Inge schreven voor co-beheer.
+Wanneer u uw organisatie naar co-beheer voorbereidt, is de actuele hindernis voor sommige klanten aanzienlijk. Voor co-beheer is [Windows 10 versie 1709](/windows/whats-new/whats-new-windows-10-version-1709) of hoger vereist. Nadat u Windows hebt bijgewerkt en automatische inschrijving hebt geconfigureerd, worden uw-clients automatisch Inge schreven voor co-beheer.
 
 In de volgende video is Senior Program Manager Rob York en de vergren deling van productmarketing Manager Locky Ainley bespreken en de demo voor het uitvoeren van een upgrade naar Windows 10 voor co-beheer:
 
@@ -31,7 +31,7 @@ In de volgende video is Senior Program Manager Rob York en de vergren deling van
 
 Onder andere platform voorschotten biedt Windows 10 versie 1709 en hoger ondersteuning voor automatische inschrijving. Dit gedrag zorgt ervoor dat een apparaat automatisch wordt Inge schreven bij intune wanneer het is toegevoegd Azure Active Directory (Azure AD). 
 
-Zie [automatische inschrijving voor Windows 10 inschakelen](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment)voor meer informatie.
+Zie [automatische inschrijving voor Windows 10 inschakelen](/intune/windows-enroll#enable-windows-10-automatic-enrollment)voor meer informatie.
 
 
 ## <a name="how-to-do-it"></a>Hoe u dit doet
@@ -61,5 +61,4 @@ Een grote Europese software fabrikant gebruikt een early adopter groep. Na de ee
 
 Als u hulp nodig hebt bij uw Windows 10-upgrade op elk gewenst moment in het proces, gaat u naar [Microsoft FastTrack](https://Microsoft.com/FastTrack/), meldt u zich aan en vraagt u om hulp. 
 
-Zie voor meer informatie [hulp vragen van FastTrack](quickstart-fasttrack.md). 
-
+Zie voor meer informatie [hulp vragen van FastTrack](quickstart-fasttrack.md).

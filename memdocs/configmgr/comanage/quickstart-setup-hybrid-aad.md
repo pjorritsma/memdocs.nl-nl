@@ -10,12 +10,12 @@ ms.assetid: 27dd26d1-e99c-4431-b2f8-60406394b6db
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8e2f7bbb51c72fa3d0f2a36e8a5419552d468b4c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 405303b3988e8c853ba30e8fb6d620d782b0474e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711474"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694896"
 ---
 # <a name="set-up-hybrid-azure-ad-for-co-management"></a>Hybride Azure AD instellen voor co-beheer
 
@@ -26,8 +26,8 @@ In de volgende video is Senior Program Manager Sandeep Deo en product marketing 
 > [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/Configuring-Devices-in-Azure-Active-Directory/player]
 
 Met het hybride proces van Azure AD-join worden automatisch uw on-premises aan het domein gekoppelde apparaten geregistreerd bij Azure AD. Zie de volgende artikelen voor meer informatie over dit proces:
-- [Inleiding tot apparaatbeheer in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-introduction) 
-- [Uw hybride Azure AD-deelname plannen](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)
+- [Inleiding tot apparaatbeheer in Azure Active Directory](/azure/active-directory/device-management-introduction) 
+- [Uw hybride Azure AD-deelname plannen](/azure/active-directory/devices/hybrid-azuread-join-plan)
 
 Hybride Azure AD-deelname is een van de belangrijkste fundamenten voor co-beheer. Dit proces kan voor sommige klanten lastig zijn, bijvoorbeeld:
 - Uw organisatie gebruikt een identiteits oplossing van derden 
@@ -41,14 +41,14 @@ Het oplossen van deze uitdagingen kan enige richt lijn zijn. Dit artikel helpt u
 Apparaten zijn vergelijkbaar met gebruikers bij het maken van een identiteit die u wilt beveiligen. Als u de identiteit van een apparaat op elk gewenst moment en op elke locatie wilt beveiligen, moet u de identiteit van dat apparaat in azure AD zetten.
 
 Op basis van het type domein dat u gebruikt, zijn er twee manieren om dit te doen. Hybride Azure AD-deelname configureren voor een van de volgende domein typen:  
-- [Federatieve domeinen](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-federated-domains)  
-- [Beheerde domeinen](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains)  
+- [Federatieve domeinen](/azure/active-directory/devices/hybrid-azuread-join-federated-domains)  
+- [Beheerde domeinen](/azure/active-directory/devices/hybrid-azuread-join-managed-domains)  
 
 De twee voor gaande methoden bieden de beste ervaring. Raadpleeg de volgende artikelen voor meer gedetailleerde informatie, inclusief het volledig hand matige proces:
-- [Hand matig aan hybride Azure AD gekoppelde apparaten configureren](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)  
-- AD [FS Pass-Through-verificatie voor hybride Azure AD](https://docs.microsoft.com/windows-server/identity/ad-fs/ad-fs-overview), inclusief Azure AD-detectie  
+- [Hand matig aan hybride Azure AD gekoppelde apparaten configureren](/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)  
+- AD [FS Pass-Through-verificatie voor hybride Azure AD](/windows-server/identity/ad-fs/ad-fs-overview), inclusief Azure AD-detectie  
 
-Zie voor richt lijnen voor probleem oplossing de [Windows 10 Hybrid Azure AD Troubleshooting Guide (Engelstalig](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current)).
+Zie voor richt lijnen voor probleem oplossing de [Windows 10 Hybrid Azure AD Troubleshooting Guide (Engelstalig](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current)).
 
 
 
@@ -66,5 +66,4 @@ Na een geslaagde implementatie en tests in de productie omgeving heeft deze klan
 
 Als u hulp nodig hebt bij het instellen van Azure AD op een wille keurig moment in het proces, gaat u naar [Microsoft FastTrack](https://Microsoft.com/FastTrack/), meldt u zich aan en vraagt u om hulp. 
 
-Zie voor meer informatie [hulp vragen van FastTrack](quickstart-fasttrack.md). 
-
+Zie voor meer informatie [hulp vragen van FastTrack](quickstart-fasttrack.md).

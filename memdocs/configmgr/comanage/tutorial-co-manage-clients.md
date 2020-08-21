@@ -10,12 +10,12 @@ ms.assetid: 140c522f-d09a-40b6-a4b0-e0d14742834a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9cb8097fbdd57184e5cd0e229cf96dcb317cf1e5
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: cc05ae5a9be6c437fab60f8c4c5a45d61e8c3e65
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127338"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694879"
 ---
 # <a name="tutorial-enable-co-management-for-existing-configuration-manager-clients"></a>Zelf studie: co-beheer inschakelen voor bestaande Configuration Manager-clients
 
@@ -50,7 +50,7 @@ Gebruik deze zelf studie wanneer:
 
 Als deze nog niet aanwezig is in uw omgeving, kunt u tijdens deze zelf studie het volgende doen:
 
-- Configureer [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-select-installation) tussen uw on-premises Active Directory en uw Azure Active Directory (AD)-Tenant.
+- Configureer [Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-select-installation) tussen uw on-premises Active Directory en uw Azure Active Directory (AD)-Tenant.
 
 > [!TIP]
 > U hoeft geen afzonderlijke intune-of EMS-licenties meer aan uw gebruikers te kopen en toe te wijzen. Zie [Veelgestelde vragen over producten en licenties](../core/understand/product-and-licensing-faq.md#bkmk_mem)voor meer informatie.
@@ -78,10 +78,10 @@ Bij het instellen van een hybride Azure AD moet u de integratie van een on-premi
 >
 > Voor meer informatie over hybride Azure AD begint u met de volgende artikelen in de Azure Active Directory-documentatie:
 >
-> - [Uw implementatie van Azure AD-deelname plannen](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)
-> - [Uw implementatie van hybride Azure AD-deelname plannen](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)
-> - [De hybride Azure AD-deelname van uw apparaten beheren](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-control)
-> - [Hybride Azure AD-deelname configureren voor federatieve domeinen](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-federated-domains)  
+> - [Uw implementatie van Azure AD-deelname plannen](/azure/active-directory/devices/azureadjoin-plan)
+> - [Uw implementatie van hybride Azure AD-deelname plannen](/azure/active-directory/devices/hybrid-azuread-join-plan)
+> - [De hybride Azure AD-deelname van uw apparaten beheren](/azure/active-directory/devices/hybrid-azuread-join-control)
+> - [Hybride Azure AD-deelname configureren voor federatieve domeinen](/azure/active-directory/devices/hybrid-azuread-join-federated-domains)  
 
 ### <a name="set-up-azure-ad-connect"></a>Azure AD Connect instellen
 
@@ -92,7 +92,7 @@ Vanaf versie 1.1.819.0 bevat Azure AD Connect een wizard om hybride Azure AD-kop
 Als u Azure AD Connect wilt configureren, hebt u referenties nodig van een globale beheerder voor Azure AD.  
 
 > [!TIP]  
-> De volgende procedure mag niet worden beschouwd als gezaghebbend voor het instellen van Azure AD Connect, maar deze wordt hier beschreven om het configureren van co-beheer tussen intune en Configuration Manager te stroom lijnen. Zie [Configure Hybrid Azure AD join's for Managed domains](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains) in de Azure AD-documentatie voor de gezaghebbende inhoud op deze en gerelateerde procedures voor het instellen van Azure AD.  
+> De volgende procedure mag niet worden beschouwd als gezaghebbend voor het instellen van Azure AD Connect, maar deze wordt hier beschreven om het configureren van co-beheer tussen intune en Configuration Manager te stroom lijnen. Zie [Configure Hybrid Azure AD join's for Managed domains](/azure/active-directory/devices/hybrid-azuread-join-managed-domains) in de Azure AD-documentatie voor de gezaghebbende inhoud op deze en gerelateerde procedures voor het instellen van Azure AD.  
 
 #### <a name="configure-a-hybrid-azure-ad-join-using-azure-ad-connect"></a>Een hybride Azure AD-deelname configureren met Azure AD Connect
 
@@ -107,7 +107,7 @@ Als u Azure AD Connect wilt configureren, hebt u referenties nodig van een globa
    U kunt de optie selecteren voor de ondersteuning van Windows-apparaten die lid zijn van een domein, maar u moet er wel voor zorgen dat gezamenlijk beheer van apparaten alleen wordt ondersteund voor Windows 10.
 8. Voer de volgende stappen uit op de **SCP** -pagina voor elk on-premises forest dat Azure AD Connect het SCP (Service Connection Point) wilt configureren, en selecteer vervolgens **volgende**:  
    1. Selecteer de forest.  
-   2. Selecteer de verificatieservice.  Als u een federatief domein hebt, selecteert u AD FS server, tenzij uw organisatie uitsluitend Windows 10-clients heeft en u de synchronisatie van computer/apparaat hebt geconfigureerd of als uw organisatie gebruikmaakt van [SeamlessSSO](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso).  
+   2. Selecteer de verificatieservice.  Als u een federatief domein hebt, selecteert u AD FS server, tenzij uw organisatie uitsluitend Windows 10-clients heeft en u de synchronisatie van computer/apparaat hebt geconfigureerd of als uw organisatie gebruikmaakt van [SeamlessSSO](/azure/active-directory/hybrid/how-to-connect-sso).  
    3. Klik op **Toevoegen** om de referenties van een ondernemingsbeheerder in te voeren.  
 9. Als u een beheerd domein hebt, slaat u deze stap over.  
 
@@ -115,7 +115,7 @@ Als u Azure AD Connect wilt configureren, hebt u referenties nodig van een globa
 10. Selecteer op de pagina **Gereed om te configureren** op **Configureren**.
 11. Selecteer de pagina **Configuratie voltooid** op **Afsluiten**.
 
-Als u problemen ondervindt met het volt ooien van hybride Azure AD join voor Windows-apparaten die lid zijn van een domein, raadpleegt u [problemen oplossen hybride Azure AD join voor Windows huidige apparaten](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current).
+Als u problemen ondervindt met het volt ooien van hybride Azure AD join voor Windows-apparaten die lid zijn van een domein, raadpleegt u [problemen oplossen hybride Azure AD join voor Windows huidige apparaten](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current).
 
 ## <a name="configure-client-settings-to-direct-clients-to-register-with-azure-ad"></a>Client instellingen configureren om clients te laten registreren bij Azure AD
 
@@ -155,7 +155,7 @@ Met automatische inschrijving kunnen gebruikers hun Windows 10-apparaten inschri
     > [!NOTE]
     > Sommige tenants hebben mogelijk niet de volgende opties om te configureren.<!-- SCCMDocs#1230 -->
     >
-    > **Microsoft intune** is het configureren van de MDM-app voor Azure AD. **Microsoft intune-inschrijving** is een specifieke Azure AD-app die wordt gemaakt wanneer u multi-factor Authentication-beleid toepast voor IOS-en Android-registratie. Zie [multi-factor Authentication vereisen voor inschrijvingen van intune-apparaten](https://docs.microsoft.com/intune/enrollment/multi-factor-authentication)voor meer informatie.
+    > **Microsoft intune** is het configureren van de MDM-app voor Azure AD. **Microsoft intune-inschrijving** is een specifieke Azure AD-app die wordt gemaakt wanneer u multi-factor Authentication-beleid toepast voor IOS-en Android-registratie. Zie [multi-factor Authentication vereisen voor inschrijvingen van intune-apparaten](/intune/enrollment/multi-factor-authentication)voor meer informatie.
 
 5. Voor MDM-gebruikers bereik selecteert u **alle**en vervolgens **Opslaan**.  
 

@@ -10,12 +10,12 @@ ms.assetid: 3cd9c725-6b42-427d-9191-86e67f84e48c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 52c2b70d2b094d5a89d80aafa61f1db67a53816f
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: b488e0953648b42baa59dc347b0bc942bac291fe
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83987712"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692567"
 ---
 # <a name="use-a-cloud-distribution-point-in-configuration-manager"></a>Een Cloud distributiepunt gebruiken in Configuration Manager
 
@@ -36,7 +36,7 @@ Een Cloud distributiepunt is een Configuration Manager-distributie punt dat word
 
 In dit artikel vindt u meer informatie over het Cloud distributiepunt, het plannen van het gebruik en het ontwerpen van uw implementatie. De sectie bevat de volgende secties:
 
-- [Functies en voor delen](#bkmk_features)
+- [Functies en -voordelen](#bkmk_features)
 - [Topologie ontwerp](#bkmk_topology)
 - [Vereisten](#bkmk_requirements)
 - [Specificaties](#bkmk_spec)
@@ -47,7 +47,7 @@ In dit artikel vindt u meer informatie over het Cloud distributiepunt, het plann
 - [Veelgestelde vragen](#bkmk_faq)
 
 
-## <a name="features-and-benefits"></a><a name="bkmk_features"></a>Functies en voor delen
+## <a name="features-and-benefits"></a><a name="bkmk_features"></a> Functies en voor delen
 
 ### <a name="features"></a>Functies
 
@@ -72,7 +72,7 @@ Het Cloud distributiepunt biedt de volgende extra voor delen:
 - Vanaf versie 1806 kunt u Cloud distributiepunten gebruiken als bron locaties voor pull-distributie punten.  
 
 
-## <a name="topology-design"></a><a name="bkmk_topology"></a>Topologie ontwerp
+## <a name="topology-design"></a><a name="bkmk_topology"></a> Topologie ontwerp
 
 De implementatie en het gebruik van het Cloud distributiepunt omvat de volgende onderdelen:  
 
@@ -89,7 +89,7 @@ De implementatie en het gebruik van het Cloud distributiepunt omvat de volgende 
 ### <a name="azure-resource-manager"></a>Azure Resource Manager
 
 <!--1322209-->
-Maak vanaf versie 1806 een distributie punt in de Cloud met behulp van een **Azure Resource Manager-implementatie**. [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) is een modern platform voor het beheren van alle oplossings resources als één entiteit, een zogenaamde [resource groep](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups). Wanneer u een Cloud distributiepunt implementeert met Azure Resource Manager, gebruikt de site Azure Active Directory (Azure AD) om de benodigde cloud resources te verifiëren en te maken. Het klassieke Azure-beheer certificaat is niet vereist voor deze moderne implementatie.  
+Maak vanaf versie 1806 een distributie punt in de Cloud met behulp van een **Azure Resource Manager-implementatie**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is een modern platform voor het beheren van alle oplossings resources als één entiteit, een zogenaamde [resource groep](/azure/azure-resource-manager/resource-group-overview#resource-groups). Wanneer u een Cloud distributiepunt implementeert met Azure Resource Manager, gebruikt de site Azure Active Directory (Azure AD) om de benodigde cloud resources te verifiëren en te maken. Het klassieke Azure-beheer certificaat is niet vereist voor deze moderne implementatie.  
 
 > [!Note]  
 > Deze functie biedt geen ondersteuning voor Azure Cloud service providers (CSP). De implementatie van het Cloud distributiepunt met Azure Resource Manager blijft de klassieke Cloud service gebruiken, die niet wordt ondersteund door de CSP. Zie [beschik bare Azure-Services in azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services)voor meer informatie.  
@@ -130,7 +130,7 @@ Wanneer u een Cloud distributiepunt in uw hiërarchie gebruikt, gebruikt u de vo
 - Maak een back-up en sla een kopie van het Server verificatie certificaat op. Als u de klassieke service-implementatie in azure gebruikt, moet u ook een back-up maken en een kopie van het Azure-beheer certificaat opslaan. Wanneer u de Configuration Manager primaire site naar een andere server herstelt, moet u de certificaten opnieuw importeren.  
 
 
-## <a name="requirements"></a><a name="bkmk_requirements"></a>Vereiste
+## <a name="requirements"></a><a name="bkmk_requirements"></a> Vereiste
 
 - U hebt een **Azure-abonnement** nodig om de service te hosten.  
 
@@ -156,7 +156,7 @@ Wanneer u een Cloud distributiepunt in uw hiërarchie gebruikt, gebruikt u de vo
 - Client apparaten hebben **Internet verbinding**nodig en moeten **IPv4**gebruiken.  
 
 
-## <a name="specifications"></a><a name="bkmk_spec"></a>Specificatie
+## <a name="specifications"></a><a name="bkmk_spec"></a> Specificatie
 
 - Het Cloud distributiepunt ondersteunt alle Windows-versies die worden vermeld in [ondersteunde besturings systemen voor clients en apparaten](../configs/supported-operating-systems-for-clients-and-devices.md).  
 
@@ -191,7 +191,7 @@ Wanneer u een Cloud distributiepunt in uw hiërarchie gebruikt, gebruikt u de vo
 - U kunt een Cloud distributiepunt niet configureren als een pull-distributie punt.  
 
 
-## <a name="cost"></a><a name="bkmk_cost"></a>Goedkope
+## <a name="cost"></a><a name="bkmk_cost"></a> Goedkope
 
 <!--501018-->
 > [!IMPORTANT]  
@@ -244,16 +244,16 @@ Een Cloud distributiepunt maakt gebruik van de volgende Azure-onderdelen, die ko
 
 - Cloud distributiepunten gebruiken de volgende standaard-Blob-opslag, afhankelijk van het implementatie model:  
 
-    - Een Azure Resource Manager-implementatie gebruikt Azure lokaal redundante opslag (LRS). Deze wijziging vermindert de kosten van het opslag account. De klassieke implementatie maakt geen gebruik van de aanvullende functies van GRS. Zie [lokaal redundante opslag](https://docs.microsoft.com/azure/storage/common/storage-redundancy-lrs)voor meer informatie.  
+    - Een Azure Resource Manager-implementatie gebruikt Azure lokaal redundante opslag (LRS). Deze wijziging vermindert de kosten van het opslag account. De klassieke implementatie maakt geen gebruik van de aanvullende functies van GRS. Zie [lokaal redundante opslag](/azure/storage/common/storage-redundancy-lrs)voor meer informatie.  
 
-    - Een klassieke implementatie met Configuration Manager versie 1810 of eerder maakt gebruik van Azure geo-redundante opslag (GRS). Zie [geo-redundante opslag](https://docs.microsoft.com/azure/storage/common/storage-redundancy-grs)voor meer informatie.  
+    - Een klassieke implementatie met Configuration Manager versie 1810 of eerder maakt gebruik van Azure geo-redundante opslag (GRS). Zie [geo-redundante opslag](/azure/storage/common/storage-redundancy-grs)voor meer informatie.  
 
 #### <a name="other-costs"></a>Andere kosten
 
 - Elke Cloud service heeft een dynamisch IP-adres. Elk afzonderlijk Cloud distributiepunt maakt gebruik van een nieuw dynamisch IP-adres. Door extra Vm's per Cloud service toe te voegen, worden deze adressen niet verhoogd.  
 
 
-## <a name="ports-and-data-flow"></a><a name="bkmk_dataflow"></a>Poorten en gegevens stroom
+## <a name="ports-and-data-flow"></a><a name="bkmk_dataflow"></a> Poorten en gegevens stroom
 
 Er zijn twee primaire gegevens stromen voor het Cloud distributiepunt:  
 
@@ -288,7 +288,7 @@ Wanneer een client een distributie punt in de Cloud gebruikt als een inhouds loc
 6. Als de client het Server verificatie certificaat van het Cloud distributiepunt vertrouwt, maakt het verbinding met Azure Storage om de inhoud te downloaden.
 
 
-## <a name="performance-and-scale"></a><a name="bkmk_perf"></a>Prestaties en schaal
+## <a name="performance-and-scale"></a><a name="bkmk_perf"></a> Prestaties en schaal
 
 <!--494872-->
 
@@ -308,7 +308,7 @@ Het Cloud distributiepunt gebruikt twee virtuele machines van Azure als front-en
 De Azure Storage-service ondersteunt per seconde 500 aanvragen voor één bestand. Prestaties testen van één distributie punt in de cloud van een enkele 100-MB-bestand naar 50.000 clients in 24 uur.<!--512106-->  
 
 
-## <a name="certificates"></a><a name="bkmk_certs"></a>Bewijzen  
+## <a name="certificates"></a><a name="bkmk_certs"></a> Bewijzen  
 
 Afhankelijk van het ontwerp van het Cloud distributiepunt hebt u een of meer digitale certificaten nodig.  
 
@@ -357,7 +357,7 @@ Als u de klassieke Azure-implementatie methode met Configuration Manager versie 
 Gebruik hetzelfde Azure-beheer certificaat voor alle klassieke implementaties van Cloud distributiepunten en Cloud beheer gateways voor alle Azure-abonnementen en alle Configuration Manager-sites om de complexiteit te verminderen.
 
 
-## <a name="frequently-asked-questions-faq"></a><a name="bkmk_faq"></a>Veelgestelde vragen
+## <a name="frequently-asked-questions-faq"></a><a name="bkmk_faq"></a> Veelgestelde vragen
 
 ### <a name="does-a-client-need-a-certificate-to-download-content-from-a-cloud-distribution-point"></a>Heeft een client een certificaat nodig om inhoud van een Cloud distributiepunt te downloaden?
 
@@ -375,11 +375,11 @@ Als uw organisatie gebruikmaakt van ExpressRoute, isoleert u het Azure-abonnemen
 
 ### <a name="do-i-need-to-maintain-the-azure-virtual-machines"></a>Moet ik de virtuele machines van Azure onderhouden?
 
-Er is geen onderhoud vereist. Het ontwerp van het Cloud distributiepunt maakt gebruik van Azure Platform as a Service (PaaS). Met het abonnement dat u opgeeft, maakt Configuration Manager de benodigde Vm's, opslag en netwerken. De virtuele machines worden beveiligd en bijgewerkt met Azure. Deze Vm's maken geen deel uit van uw on-premises omgeving, evenals het geval van een IaaS (Infrastructure as a Service). Het Cloud distributiepunt is een PaaS die uw Configuration Manager omgeving uitbreidt in de Cloud. Zie [beveiligings voordelen van een Paas-Cloud service model](https://docs.microsoft.com/azure/security/security-paas-deployments#security-advantages-of-a-paas-cloud-service-model)voor meer informatie.  
+Er is geen onderhoud vereist. Het ontwerp van het Cloud distributiepunt maakt gebruik van Azure Platform as a Service (PaaS). Met het abonnement dat u opgeeft, maakt Configuration Manager de benodigde Vm's, opslag en netwerken. De virtuele machines worden beveiligd en bijgewerkt met Azure. Deze Vm's maken geen deel uit van uw on-premises omgeving, evenals het geval van een IaaS (Infrastructure as a Service). Het Cloud distributiepunt is een PaaS die uw Configuration Manager omgeving uitbreidt in de Cloud. Zie [beveiligings voordelen van een Paas-Cloud service model](/azure/security/security-paas-deployments#security-advantages-of-a-paas-cloud-service-model)voor meer informatie.  
 
 ### <a name="does-the-cloud-distribution-point-use-azure-cdn"></a>Gebruikt het Cloud distributiepunt Azure CDN?
 
-De Azure Content Delivery Network (CDN) is een wereld wijde oplossing voor het snel leveren van inhoud met een hoge band breedte door de inhoud op strategisch geplaatste fysieke knoop punten over de hele wereld in de cache op te plaatsen. Zie [Wat is Azure CDN?](https://docs.microsoft.com/azure/cdn/cdn-overview)voor meer informatie.
+De Azure Content Delivery Network (CDN) is een wereld wijde oplossing voor het snel leveren van inhoud met een hoge band breedte door de inhoud op strategisch geplaatste fysieke knoop punten over de hele wereld in de cache op te plaatsen. Zie [Wat is Azure CDN?](/azure/cdn/cdn-overview)voor meer informatie.
 
 Het Configuration Manager Cloud distributiepunt biedt momenteel geen ondersteuning voor Azure CDN.
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: b7643c73d2e9dad00e926bdc3db905016c45860a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 062ae289ff53952d670592be6ff0027a91a627d4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905220"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694403"
 ---
 # <a name="capabilities-in-technical-preview-18062-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1806,2 voor Configuration Manager
 
@@ -40,7 +40,7 @@ Steps to workaround, if any.
 
 ## <a name="known-issues-in-this-technical-preview"></a>Bekende problemen in deze Technical Preview
 
-### <a name="clients-dont-automatically-update"></a><a name="ki_sqlncli"></a>Clients worden niet automatisch bijgewerkt
+### <a name="clients-dont-automatically-update"></a><a name="ki_sqlncli"></a> Clients worden niet automatisch bijgewerkt
 <!--518760-->
 Bij het bijwerken naar versie 1806,2 werkt de site ook de SQL Native Client bij, waardoor het opnieuw opstarten van de site server kan worden veroorzaakt. Deze vertraging leidt ertoe dat bepaalde bestanden niet worden bijgewerkt, wat van invloed is op automatische client upgrade.
 
@@ -55,7 +55,7 @@ Als u uw site al hebt bijgewerkt, werkt automatische client upgrade en client pu
 
     Deze locatie kan een netwerk share zijn die toegankelijk is vanaf de-clients.  
 
-3. Voer de volgende opdracht regel uit vanaf een opdracht prompt met verhoogde bevoegdheid:`C:\Temp\CMUClient\ccmsetup.exe /source:C:\Temp\CMUClient`  
+3. Voer de volgende opdracht regel uit vanaf een opdracht prompt met verhoogde bevoegdheid: `C:\Temp\CMUClient\ccmsetup.exe /source:C:\Temp\CMUClient`  
 
 Gebruik hetzelfde proces als u een nieuwe client installeert in uw Technical Preview versie 1806,2-site. 
 
@@ -65,7 +65,7 @@ Gebruik hetzelfde proces als u een nieuwe client installeert in uw Technical Pre
 > Opdracht regel eigenschappen, zoals SMSSITECODE of CCMLOGLEVEL, zijn OK voor gebruik, maar zijn niet nodig bij het upgraden van een bestaande client. 
 
 
-### <a name="version-18062-shows-version-1806-in-about-configuration-manager"></a><a name="ki_version"></a>Versie 1806,2 toont versie 1806 in about Configuration Manager
+### <a name="version-18062-shows-version-1806-in-about-configuration-manager"></a><a name="ki_version"></a> Versie 1806,2 toont versie 1806 in about Configuration Manager
 <!--518148-->
 Als u na de upgrade naar Technical Preview versie 1806,2 het venster **over Configuration Manager** opent in de linkerbovenhoek van de console, wordt nog steeds **versie 1806**weer gegeven. 
 
@@ -84,7 +84,7 @@ Gebruik de eigenschap **site versie** om het verschil te bepalen tussen 1806 en 
 **Hier volgen enkele nieuwe functies die u kunt uitproberen met deze versie.**  
 
 
-## <a name="improvements-to-phased-deployments"></a><a name="bkmk_pod"></a>Verbeteringen in gefaseerde implementaties
+## <a name="improvements-to-phased-deployments"></a><a name="bkmk_pod"></a> Verbeteringen in gefaseerde implementaties
 
 Deze release bevat de volgende verbeteringen in [gefaseerde implementaties](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md):
 - [Status van gefaseerde implementatie](#bkmk_pod-monitor)
@@ -92,7 +92,7 @@ Deze release bevat de volgende verbeteringen in [gefaseerde implementaties](../.
 - [Geleidelijke implementatie tijdens gefaseerd implementeren](#bkmk_pod-throttle)
 
 
-### <a name="phased-deployment-status"></a><a name="bkmk_pod-monitor"></a>Status van gefaseerde implementatie
+### <a name="phased-deployment-status"></a><a name="bkmk_pod-monitor"></a> Status van gefaseerde implementatie
 <!--1358577-->
 Gefaseerde implementaties hebben nu een systeem eigen bewakings ervaring. Selecteer een gefaseerde implementatie in het knoop punt **implementaties** in de werk ruimte **bewaking** en klik vervolgens op **status van gefaseerde implementatie** in het lint.
 
@@ -117,7 +117,7 @@ Dit dash board bevat de volgende informatie voor elke fase in de implementatie:
 In het dash board met de status van de fase van de implementatie kunnen meerdere rijen voor dezelfde fase worden weer gegeven.<!--518510-->
 
 
-### <a name="phased-deployment-of-applications"></a><a name="bkmk_pod-app"></a>Gefaseerde implementatie van toepassingen
+### <a name="phased-deployment-of-applications"></a><a name="bkmk_pod-app"></a> Gefaseerde implementatie van toepassingen
 <!--1358147-->
 Gefaseerde implementaties maken voor toepassingen. Met gefaseerde implementaties kunt u een gecoördineerde, geordende implementatie van software organiseren op basis van aanpas bare criteria en groepen.
 
@@ -132,7 +132,7 @@ Distribueer de inhoud voor de toepassing naar een distributie punt voordat u de 
 U kunt geen fasen voor een toepassing hand matig maken. De wizard maakt automatisch twee fasen voor toepassings implementaties.
 
 
-### <a name="gradual-rollout-during-phased-deployments"></a><a name="bkmk_pod-throttle"></a>Geleidelijke implementatie tijdens gefaseerd implementeren
+### <a name="gradual-rollout-during-phased-deployments"></a><a name="bkmk_pod-throttle"></a> Geleidelijke implementatie tijdens gefaseerd implementeren
 <!--1358578-->
 Tijdens een gefaseerde implementatie kan de implementatie in elke fase nu geleidelijk plaatsvinden. Dit gedrag helpt bij het oplossen van problemen met de implementatie en vermindert de belasting van het netwerk, veroorzaakt door de distributie van inhoud naar clients. De site kan geleidelijk de software beschikbaar maken, afhankelijk van de configuratie van elke fase. Elke client in een fase heeft een deadline die relatief is ten opzichte van de tijd dat de software beschikbaar is. Het tijd venster tussen de beschik bare tijd en deadline is hetzelfde voor alle clients in een fase. 
 
@@ -143,11 +143,11 @@ Wanneer u een gefaseerde implementatie maakt en hand matig een fase configureert
 
 
 
-## <a name="support-for-new-windows-app-package-formats"></a><a name="bkmk_msix"></a>Ondersteuning voor nieuwe Windows-app-pakket indelingen
+## <a name="support-for-new-windows-app-package-formats"></a><a name="bkmk_msix"></a> Ondersteuning voor nieuwe Windows-app-pakket indelingen
 <!--1357427-->
 Configuration Manager ondersteunt nu de implementatie van nieuwe indelingen van Windows 10 app package (. msix) en app-bundel (. msixbundle). De nieuwste Preview-versies van [Windows Insider](https://insider.windows.com/) ondersteunen momenteel deze nieuwe indelingen.
 
-Ga voor een overzicht van MSIX naar [een](https://docs.microsoft.com/archive/blogs/sgern/a-closer-look-at-msix)meer informatie over MSIX.
+Ga voor een overzicht van MSIX naar [een](/archive/blogs/sgern/a-closer-look-at-msix)meer informatie over MSIX.
 
 Zie voor meer informatie over het maken van een nieuwe MSIX-app [MSIX-ondersteuning geïntroduceerd in Insider Build 17682](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376).
 
@@ -164,11 +164,11 @@ Probeer de taken uit te voeren. Stuur vervolgens [feedback](capabilities-in-tech
 
 
 
-## <a name="improvement-to-client-push-security"></a><a name="bkmk_client-push"></a>Verbetering van client push beveiliging
+## <a name="improvement-to-client-push-security"></a><a name="bkmk_client-push"></a> Verbetering van client push beveiliging
 <!--1358204-->
 Wanneer u de [client push](../clients/deploy/plan/client-installation-methods.md#client-push-installation) methode voor het installeren van de Configuration Manager-client gebruikt, maakt de site server een externe verbinding met de client om de installatie te starten. Vanaf deze release kan de site Kerberos wederzijdse verificatie vereisen door geen terugval op NTLM toe te staan voordat de verbinding tot stand wordt gebracht. Deze verbetering helpt bij het beveiligen van de communicatie tussen de server en de client. 
 
-Afhankelijk van uw beveiligings beleid is het mogelijk dat uw omgeving al een voor keur heeft of Kerberos boven oudere NTLM-verificatie vereist. Zie de [instelling Windows-beveiligings beleid](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers#security-considerations)voor het beperken van NTLM voor meer informatie over de beveiligings overwegingen van deze verificatie protocollen.
+Afhankelijk van uw beveiligings beleid is het mogelijk dat uw omgeving al een voor keur heeft of Kerberos boven oudere NTLM-verificatie vereist. Zie de [instelling Windows-beveiligings beleid](/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers#security-considerations)voor het beperken van NTLM voor meer informatie over de beveiligings overwegingen van deze verificatie protocollen.
 
 
 ### <a name="prerequisite"></a>Vereiste
@@ -190,7 +190,7 @@ Wanneer u de site bijwerkt, blijft het bestaande gedrag behouden. Zodra u de eig
 
 
 
-## <a name="management-insights-for-proactive-maintenance"></a><a name="bkmk_insights"></a>Management Insights voor proactieve onderhoud
+## <a name="management-insights-for-proactive-maintenance"></a><a name="bkmk_insights"></a> Management Insights voor proactieve onderhoud
 <!--1352184,et al-->
 Er zijn extra beheer inzichten beschikbaar in deze versie om mogelijke configuratie problemen te markeren. Controleer de volgende regels in de nieuwe **proactieve onderhouds** groep:  
 
@@ -208,7 +208,7 @@ Er zijn extra beheer inzichten beschikbaar in deze versie om mogelijke configura
 
 
 
-## <a name="transition-mobile-apps-workload-for-co-managed-devices"></a><a name="bkmk_comgmt"></a>De werk belasting van mobiele apps voor gezamenlijk beheerde apparaten door lopen
+## <a name="transition-mobile-apps-workload-for-co-managed-devices"></a><a name="bkmk_comgmt"></a> De werk belasting van mobiele apps voor gezamenlijk beheerde apparaten door lopen
 <!--1357892-->
 Beheer mobiele apps met Microsoft Intune terwijl u Configuration Manager kunt gebruiken om Windows-bureaublad toepassingen te implementeren. Als u de werk belasting van moderne Apps wilt door lopen, gaat u naar de pagina met eigenschappen voor co-beheer. Verplaats de schuif regelaar van Configuration Manager naar pilot of all. 
 
@@ -218,11 +218,11 @@ Raadpleeg voor meer informatie de volgende artikelen:
 
 - [Co-beheer voor Windows 10-apparaten](../../comanage/overview.md)  
 
-- [Wat is Microsoft Intune-appbeheer?](https://docs.microsoft.com/intune/app-management)  
+- [Wat is Microsoft Intune-appbeheer?](/intune/app-management)  
 
 
 
-## <a name="boundary-group-options-for-peer-downloads"></a><a name="bkmk_bgoptions"></a>Opties voor grens groepen voor het downloaden van peers
+## <a name="boundary-group-options-for-peer-downloads"></a><a name="bkmk_bgoptions"></a> Opties voor grens groepen voor het downloaden van peers
 <!--1356193-->
 Grens groepen bevatten nu aanvullende instellingen om u meer controle te geven over de distributie van inhoud in uw omgeving. Deze release voegt de volgende opties toe:  
 
@@ -248,7 +248,7 @@ Als de peer-bron-client meer dan één IP-adres heeft (IPv4, IPv6 of beide), wer
 
 
 
-## <a name="third-party-software-updates-support-for-custom-catalogs"></a><a name="bkmk_3pupdate"></a>Ondersteuning van software-updates van derden voor aangepaste catalogi
+## <a name="third-party-software-updates-support-for-custom-catalogs"></a><a name="bkmk_3pupdate"></a> Ondersteuning van software-updates van derden voor aangepaste catalogi
 <!--1358714-->
 In deze release wordt de ondersteuning voor software-updates van derden verder herhaald als gevolg van uw [UserVoice-feedback](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8803711-3rd-party-patching-scup-integration-with-sccm-co). [Technical Preview versie 1806](capabilities-in-technical-preview-1806.md#bkmk-3pupdate) biedt ondersteuning voor *partner catalogi*, die geregistreerde catalogi van software leveranciers zijn. Catalogi die u levert, die niet bij micro soft zijn geregistreerd, worden *aangepaste catalogi*genoemd. Aangepaste catalogi toevoegen in de Configuration Manager-console.  
 
@@ -307,7 +307,7 @@ De Verwijder actie voor aangepaste catalogi wordt grijs weer gegeven, zodat u ge
 
 
 
-## <a name="improvements-to-cloud-management-features"></a><a name="bkmk_cloud"></a>Verbeteringen in de functies voor Cloud beheer
+## <a name="improvements-to-cloud-management-features"></a><a name="bkmk_cloud"></a> Verbeteringen in de functies voor Cloud beheer
 
 Deze release bevat de volgende verbeteringen:  
 
@@ -319,11 +319,11 @@ Deze release bevat de volgende verbeteringen:
 
     - Een [distributie punt in de Cloud implementeren met Azure Resource Manager](capabilities-in-technical-preview-1805.md#cloud-distribution-point-support-for-azure-resource-manager)  
 
-- Klanten gebruiken Windows auto pilot om Windows 10 in te richten op apparaten die zijn toegevoegd aan Azure Active Directory die zijn verbonden met het on-premises netwerk. Als u de Configuration Manager-client op deze apparaten wilt installeren of upgraden, hebt u een Cloud distributiepunt of een on-premises distributie punt niet nodig om **clients in staat te stellen anoniem verbinding te maken**. Schakel in plaats daarvan de site optie in om door **Configuration Manager gegenereerde certificaten te gebruiken voor HTTP-site systemen**, waarmee een client die lid is van een Cloud, kan communiceren met een on-premises distributie punt met http-functionaliteit. Zie [verbeterde beveiligde client communicatie](https://docs.microsoft.com/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications)voor meer informatie.<!--515854-->  
+- Klanten gebruiken Windows auto pilot om Windows 10 in te richten op apparaten die zijn toegevoegd aan Azure Active Directory die zijn verbonden met het on-premises netwerk. Als u de Configuration Manager-client op deze apparaten wilt installeren of upgraden, hebt u een Cloud distributiepunt of een on-premises distributie punt niet nodig om **clients in staat te stellen anoniem verbinding te maken**. Schakel in plaats daarvan de site optie in om door **Configuration Manager gegenereerde certificaten te gebruiken voor HTTP-site systemen**, waarmee een client die lid is van een Cloud, kan communiceren met een on-premises distributie punt met http-functionaliteit. Zie [verbeterde beveiligde client communicatie](/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications)voor meer informatie.<!--515854-->  
 
 
 
-## <a name="new-software-updates-compliance-report"></a><a name="bkmk_report"></a>Rapport voor naleving van nieuwe software-updates
+## <a name="new-software-updates-compliance-report"></a><a name="bkmk_report"></a> Rapport voor naleving van nieuwe software-updates
 <!--1357775-->
 Het weer geven van rapporten voor de compatibiliteit van software-updates bevat traditioneel gegevens van clients die recent geen contact hebben gemaakt met de site. Met een nieuw rapport kunt u de compatibiliteits resultaten voor een specifieke software-update groep filteren op ' gezonde ' clients. In dit rapport wordt de realistischere compatibiliteits status weer gegeven van de actieve clients in uw omgeving. 
  
@@ -338,4 +338,4 @@ Het rapport bevat de volgende onderdelen:
 
 
 ## <a name="next-steps"></a>Volgende stappen
-Zie [Technical Preview voor Configuration Manager voor](technical-preview.md)meer informatie over het installeren of bijwerken van de technische preview-vertakking.    
+Zie [Technical Preview voor Configuration Manager voor](technical-preview.md)meer informatie over het installeren of bijwerken van de technische preview-vertakking.

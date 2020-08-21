@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: d52725e0127f7129a3962cd3ef178d2540bb785a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 1836a4c7d08547405dad08d7e60eb108d0dfd00f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905740"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695712"
 ---
 # <a name="capabilities-in-technical-preview-1605-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1605 voor Configuration Manager
 
@@ -32,7 +32,7 @@ Dit artikel bevat een inleiding tot de functies die beschikbaar zijn in de Techn
 
   **Hier volgen enkele nieuwe functies die u kunt uitproberen met deze versie.**  
 
-##  <a name="per-app-vpn-for-windows-10-devices"></a><a name="BKMK_PerAppVPN"></a>VPN per app voor Windows 10-apparaten  
+##  <a name="per-app-vpn-for-windows-10-devices"></a><a name="BKMK_PerAppVPN"></a> VPN per app voor Windows 10-apparaten  
  Voor Windows 10-apparaten die worden beheerd met Configuration Manager met intune, kunt u een lijst met apps toevoegen die automatisch een VPN-verbinding openen die u hebt geconfigureerd via de Configuration Manager-beheer console. U hebt de mogelijkheid om VPN-verkeer naar deze apps te beperken of u kunt al het verkeer via de VPN-verbinding blijven toestaan.  
 
  **Vereisten**:  
@@ -41,17 +41,17 @@ Dit artikel bevat een inleiding tot de functies die beschikbaar zijn in de Techn
 
 -   Een Windows 10-VPN-profiel dat is geïmplementeerd op ten minste één apparaat  
 
-##  <a name="improvements-to-the-install-software-updates-task-sequence"></a><a name="BKMK_InstallSU"></a>Verbeteringen in de taken reeks software-updates installeren  
+##  <a name="improvements-to-the-install-software-updates-task-sequence"></a><a name="BKMK_InstallSU"></a> Verbeteringen in de taken reeks software-updates installeren  
  De volgende verbeteringen zijn aangebracht in de taken reeks software-updates installeren:  
 
 -   Er is een nieuwe taken reeks variabele, SMSTSSoftwareUpdateScanTimeout, beschikbaar om u de mogelijkheid te bieden de time-out voor de scan van software-updates te beheren tijdens de taken reeks stap software-updates installeren. De standaardwaarde is 30 minuten.  
 
 -   Er zijn verbeteringen aangebracht in de logboek registratie. Het logboek bestand bestand smsts. log bevat nieuwe logboek vermeldingen die verwijzen naar andere logboek bestanden die u kunnen helpen bij het oplossen van problemen tijdens het installatie proces van software-updates.  
 
-##  <a name="improvements-to-the-prepare-configmgr-client-for-capture-task-sequence-step"></a><a name="BKMK_PrepareConfigMgrClient"></a>Verbeteringen aan de taken reeks stap ConfigMgr-client voorbereiden voor vastleggen  
+##  <a name="improvements-to-the-prepare-configmgr-client-for-capture-task-sequence-step"></a><a name="BKMK_PrepareConfigMgrClient"></a> Verbeteringen aan de taken reeks stap ConfigMgr-client voorbereiden voor vastleggen  
  Met de stap ConfigMgr-client voorbereiden wordt de Configuration Manager-client nu volledig verwijderd, in plaats van alleen de sleutel gegevens te verwijderen. Wanneer de taken reeks de vastgelegde installatie kopie van het besturings systeem implementeert, wordt elke keer een nieuwe Configuration Manager-client geïnstalleerd.  
 
-##  <a name="grace-period-for-required-application-deployments"></a><a name="BKMK_Grace"></a>Respijt periode voor vereiste toepassings implementaties  
+##  <a name="grace-period-for-required-application-deployments"></a><a name="BKMK_Grace"></a> Respijt periode voor vereiste toepassings implementaties  
  In sommige gevallen kunt u gebruikers meer tijd geven om vereiste toepassings implementaties te installeren na eventuele deadlines die u hebt geconfigureerd. Als een eind gebruiker bijvoorbeeld slechts een vakantie heeft geretourneerd, kan het zijn dat ze lang moeten wachten terwijl er achterstallige toepassings implementaties zijn geïnstalleerd. Ze kunnen de toepassing echter altijd direct op elk gewenst moment installeren.  
 
  Om dit probleem op te lossen, kunt u nu een **respijt periode** definiëren door Configuration Manager client instellingen te implementeren voor een verzameling.  
@@ -68,7 +68,7 @@ Dit artikel bevat een inleiding tot de functies die beschikbaar zijn in de Techn
 
    Er zijn Vergelijk bare opties toegevoegd aan de wizard software-updates implementeren, de wizard regels voor automatische implementatie en eigenschappen pagina's. Deze worden momenteel echter niet geïmplementeerd in deze Technical Preview.  
 
-##  <a name="new-experience-for-remote-device-actions"></a><a name="BKMK_Remote"></a>Nieuwe ervaring voor acties van externe apparaten  
+##  <a name="new-experience-for-remote-device-actions"></a><a name="BKMK_Remote"></a> Nieuwe ervaring voor acties van externe apparaten  
  De ervaring voor het uitvoeren van acties voor externe apparaten vanuit de Configuration Manager-console is verbeterd.  
 Veelvoorkomende acties, zoals **buiten gebruik stellen/wissen**, **opnieuw instellen, wachtwoord code**, **extern vergren delen**en **bypass Activeringsslot** , kunnen nu worden gevonden in het menu **acties van extern apparaat** dat wordt geopend vanuit de werk ruimte **activa en naleving** .  
 
@@ -82,7 +82,7 @@ Veelvoorkomende acties, zoals **buiten gebruik stellen/wissen**, **opnieuw inste
 
 - Op de hoofd pagina van het knoop punt **apparaten** (niet alle kolommen kunnen standaard worden weer gegeven).  
 
-##  <a name="windows-store-for-business-apps"></a><a name="BKMK_WSFB"></a>Windows Store voor bedrijven-apps  
+##  <a name="windows-store-for-business-apps"></a><a name="BKMK_WSFB"></a> Windows Store voor bedrijven-apps  
  In de [Windows Store voor bedrijven](https://www.microsoft.com/business-store) kunt u apps zoeken en kopen voor uw organisatie, afzonderlijk of op volume. Als u de Store verbindt met Configuration Manager, kunt u apps die zijn gekocht via het volume-aankoop programma beheren via de Configuration Manager-console, bijvoorbeeld:  
 
 - U kunt de lijst met aangeschafte apps synchroniseren met Configuration Manager  
@@ -153,7 +153,7 @@ Veelvoorkomende acties, zoals **buiten gebruik stellen/wissen**, **opnieuw inste
 >   
 >  U kunt momenteel geen apps met een online licentie implementeren met Configuration Manager.  
 
-##  <a name="general-improvements-for-volume-purchased-apps"></a><a name="BKMK_VPP2"></a>Algemene verbeteringen voor apps die zijn gekocht via het volume-aankoop programma  
+##  <a name="general-improvements-for-volume-purchased-apps"></a><a name="BKMK_VPP2"></a> Algemene verbeteringen voor apps die zijn gekocht via het volume-aankoop programma  
 
 -   In deze release zijn apps die zijn gekocht via het volume van de Windows Store voor bedrijven en de iOS-App Store samengevoegd in dezelfde weer gave, **licentie gegevens voor Store-apps**.  
 
@@ -165,14 +165,14 @@ Veelvoorkomende acties, zoals **buiten gebruik stellen/wissen**, **opnieuw inste
 
 -   De locatie die u gebruikt om een Apple VPP-token op te halen en te uploaden voor apps die zijn gekocht via het volume-aankoop programma in de Configuration Manager-console is gewijzigd. U kunt dit nu doen in de werk ruimte **beheer** onder het knoop punt **Cloud Services**  >  **Apple volume Purchase Program tokens** .  
 
-##  <a name="enterprise-data-protection-edp"></a><a name="BKMK_VPP"></a>Ondernemings gegevens bescherming (EDP)  
+##  <a name="enterprise-data-protection-edp"></a><a name="BKMK_VPP"></a> Ondernemings gegevens bescherming (EDP)  
  U kunt configuratie-items maken waarmee u uw beleid voor ondernemings gegevens bescherming (EDP) implementeert, met inbegrip van uw beveiligde apps, uw EDP-beschermings niveau en het vinden van Bedrijfs gegevens in het netwerk. Zie de volgende onderwerpen voor meer informatie over EDP:  
 
-- [Uw bedrijfs gegevens beveiligen met behulp van Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
-- [Een beleid voor Windows Information Protection (WIP) maken en implementeren met behulp van Configuration Manager](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)
+- [Uw bedrijfs gegevens beveiligen met behulp van Windows Information Protection (WIP)](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
+- [Een beleid voor Windows Information Protection (WIP) maken en implementeren met behulp van Configuration Manager](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)
 
 
-##  <a name="end-users-can-install-apps-from-the-company-portal"></a><a name="BKMK_End"></a>Eind gebruikers kunnen apps installeren vanuit de Bedrijfsportal  
+##  <a name="end-users-can-install-apps-from-the-company-portal"></a><a name="BKMK_End"></a> Eind gebruikers kunnen apps installeren vanuit de Bedrijfsportal  
  On-premises MDM werd geïntroduceerd in de Configuration Manager versie 1511. In eerdere versies kon u toepassingen implementeren op door MDM beheerde Windows 10-apparaten met een implementatie doel van **vereiste** installatie voor on-PREMISes MDM-beheerde apparaten.  
 
  In deze release kunt u nu apps implementeren met het implementatie doel **beschikbaar** voor gebruikers van on-premises MDM-beheerde Windows 10-computers, en gebruikers kunnen deze apps nu zelf installeren vanaf de bedrijfsportal.
@@ -263,12 +263,12 @@ Als de Bedrijfsportal langer dan 15 minuten open is, wordt in deze technische pr
 
      Nadat u Bedrijfsportal hebt geopend, ziet u een dialoog venster voor verificatie met de naam **Configuration Manager** de Active Directory referenties van de gebruiker opgeven (in de vorm van user@domain of domein\gebruiker) om u aan te melden.  
 
-##  <a name="new-tabs-for-updates-and-operating-systems-in-software-center"></a><a name="BKMK_SW1"></a>Nieuwe tabbladen voor updates en besturings systemen in Software Center  
+##  <a name="new-tabs-for-updates-and-operating-systems-in-software-center"></a><a name="BKMK_SW1"></a> Nieuwe tabbladen voor updates en besturings systemen in Software Center  
  In deze release zijn de volgende wijzigingen aangebracht om de lay-out van de Software Center-toepassing te verbeteren:  
 
 -   Het tabblad **toepassingen** is opgesplitst in drie afzonderlijke tabbladen **voor updates**, **besturings systemen** (die eerder zijn gevonden in de lijst met **filters** ) en **toepassingen**.  
 
-##  <a name="service-a--server-group"></a><a name="BKMK_ServerGroups"></a>Een server groep onderhouden  
+##  <a name="service-a--server-group"></a><a name="BKMK_ServerGroups"></a> Een server groep onderhouden  
  Technical Preview voor Configuration Manager, versie 1511, bevat de mogelijkheid om een verzameling te maken waarbij alle apparaten in de verzameling een server groep vormen. Vervolgens kunt u de instellingen van de Server groep zodanig configureren dat deze worden gebruikt wanneer u software-updates implementeert voor de Server groep, het percentage van de computers die op een bepaald moment worden bijgewerkt, beheren en Power shell-scripts na de implementatie configureren om aangepaste acties uit te voeren.  
 
  Technical Preview voor Configuration Manager, versie 1605, voegt de mogelijkheid toe om de computers in de Server groep bij te werken in een opgegeven volg orde die u definieert, voegt uitgebreide bewaking toe om de status van de computers in de Server groep weer te geven en biedt de mogelijkheid om de implementatie vergrendelingen te wissen die handig zijn wanneer clients de software-updates niet konden installeren en ervoor zorgen dat andere clients de software-  
@@ -280,7 +280,7 @@ Als de Bedrijfsportal langer dan 15 minuten open is, wordt in deze technische pr
 
 -   Ik kan opgeven dat computers in de Server groep software-updates in een specifieke volg orde installeren op basis van de instellingen van de Server groep voor de verzameling. Gebruik de voorbeeld scripts in de procedure om de scripts voor de pre-implementatie en na de implementatie op te geven.  
 
--   Ik kan een software-update implementeren voor deze verzameling. Controleer de bestanden start. txt en end. txt (die zijn gemaakt op basis van de voorbeeld scripts) in C:\Temp en controleer de begin-en eind tijden voor de implementatie op de computers in de Server groep. Raadpleeg het bestand UpdatesDeployment. log voor meer informatie.  
+-   Ik kan een software-update implementeren voor deze verzameling. Controleer de start.txt-en end.txt-bestanden (die zijn gemaakt op basis van de voorbeeld scripts) in C:\Temp en controleer de begin-en eind tijden voor de implementatie op de computers in de Server groep. Raadpleeg het bestand UpdatesDeployment. log voor meer informatie.  
 
 #### <a name="to-create-a-collection-for-a-server-group"></a>Een verzameling voor een server groep maken  
 
@@ -335,7 +335,7 @@ Als de Bedrijfsportal langer dan 15 minuten open is, wordt in deze technische pr
 
 2.  Klik op het tabblad **Start** , in de groep **implementatie** , op **Server groep implementatie vergrendelingen wissen**. De implementatie vergrendelingen kunnen hand matig worden gewist wanneer clients de software-updates niet hebben geïnstalleerd en de software-updates niet worden geïnstalleerd door andere clients.  
 
-##  <a name="support-for-microsoft-defender-advanced-threat-protection-service"></a><a name="BKMK_ATP"></a>Ondersteuning voor micro soft Defender Advanced Threat Protection-Service  
+##  <a name="support-for-microsoft-defender-advanced-threat-protection-service"></a><a name="BKMK_ATP"></a> Ondersteuning voor micro soft Defender Advanced Threat Protection-Service  
  Micro soft Defender Advanced Threat Protection (ATP) is een service waarmee bedrijven geavanceerde aanvallen op hun netwerken kunnen detecteren, onderzoeken en hierop reageren. Micro soft Defender ATP is voorheen bekend als Windows Defender ATP. Meer informatie over [micro soft Defender ATP](https://blogs.windows.com/windowsexperience/2016/03/01/announcing-windows-defender-advanced-threat-protection). Configuration Manager kunt u helpen bij het bewaken en controleren van beheerde Windows 10 jubileum Edition-client apparaten.  
 
 ### <a name="try-it-now"></a>Probeer het nu!  
@@ -402,7 +402,7 @@ Als de Bedrijfsportal langer dan 15 minuten open is, wordt in deze technische pr
 
         -   **Er is geen onboarding** -beleid toegepast, maar de agent heeft geen beleid voor de onboarding gemeld  
 
-##  <a name="on-premises-device-health-attestation"></a><a name="BKMK_DHA"></a>On-premises Apparaatstatusverklaring  
+##  <a name="on-premises-device-health-attestation"></a><a name="BKMK_DHA"></a> On-premises Apparaatstatusverklaring  
  Health Attestation voor Windows 10-apparaten kan nu worden geconfigureerd om te communiceren met behulp van de on-premises infra structuur. Beheerders kunnen opgeven of rapportage plaatsvindt via de Cloud of on-premises resources. Als on-premises is geselecteerd voor Health Attestation-rapportage, kan een URL worden opgegeven voor de service. Hierdoor kunnen client-Pc's zonder Internet toegang apparaten inschakelen en beheren met Health Attestation.  
 
 ### <a name="enable-health-attestation-for-on-premises-devices"></a>Status verklaring inschakelen voor on-premises apparaten  
@@ -412,10 +412,10 @@ Als de Bedrijfsportal langer dan 15 minuten open is, wordt in deze technische pr
 
 2.  Geef de **URL op voor de on-premises statusverklaringsservice**en klik op **OK**.  
 
-##  <a name="new-restart-options-for-windows-10-clients-after-software-update-installation"></a><a name="BKMK_RestartOptions"></a>Nieuwe opties voor opnieuw opstarten voor Windows 10-clients na de installatie van de software-update  
+##  <a name="new-restart-options-for-windows-10-clients-after-software-update-installation"></a><a name="BKMK_RestartOptions"></a> Nieuwe opties voor opnieuw opstarten voor Windows 10-clients na de installatie van de software-update  
  Wanneer een software-update waarvoor opnieuw opstarten is vereist, wordt geïmplementeerd met Configuration Manager en op een computer is geïnstalleerd, wordt het opnieuw opstarten in behandeling gepland en wordt een dialoog venster voor opnieuw opstarten weer gegeven. Op dit moment kunt u voor Windows 8 en hoger als u de computer afsluit of opnieuw opstarten met behulp van de Windows-energie opties (in plaats van vanuit het dialoog venster voor opnieuw opstarten), het dialoog venster voor opnieuw opstarten blijft staan nadat de computer opnieuw is opgestart en de computer opnieuw moet worden opgestart om de ingestelde deadline te configureren. In deze technische preview-versie is de optie **bijwerken en opnieuw opstarten** en **bijwerken en afsluiten** beschikbaar op Windows 10-computers in de Windows-energie beheer wanneer het opnieuw opstarten in behandeling is voor een Configuration Manager software-update. Nadat u een van deze opties hebt gebruikt, wordt het dialoogvenster voor opnieuw opstarten niet weergegeven nadat de computer opnieuw wordt opgestart.  
 
-##  <a name="pre-declare-corporate-owned-devices-with-imei-or-ios-serial-number"></a><a name="BKMK_IMEI"></a>Apparaten in bedrijfs eigendom vooraf declareren met IMEI of iOS-serie nummer  
+##  <a name="pre-declare-corporate-owned-devices-with-imei-or-ios-serial-number"></a><a name="BKMK_IMEI"></a> Apparaten in bedrijfs eigendom vooraf declareren met IMEI of iOS-serie nummer  
  U kunt nu apparaten in bedrijfs eigendom identificeren door de IMEI-nummers (International Station Mobile Equipment Identity) te importeren. U kunt een bestand met door komma's gescheiden waarden (. CSV) met IMEI-nummers van het apparaat uploaden of u kunt de apparaatgegevens hand matig invoeren.  U kunt ook serie nummers importeren voor iOS-apparaten.  Met geïmporteerde gegevens wordt het eigendom van de apparaten ingesteld die zijn Inge schreven als ' zakelijk '.  Er is nog steeds een intune-licentie vereist voor elke gebruiker die toegang heeft tot de service.  
 
 ### <a name="try-it-out"></a>Probeer het nu!  
@@ -463,4 +463,4 @@ Als de Bedrijfsportal langer dan 15 minuten open is, wordt in deze technische pr
 
      Klik op **Volgende**.  
 
-4. Bekijk de resultaten van het importeren van het bestand. De details van eerder geïmporteerde IMEI-of serie nummers worden bijgewerkt met nieuwe gegevens.  Klik op **volgende** om door te gaan of op **terug** om de bijgewerkte gegevens op te slaan en de wizard te volt ooien.  
+4. Bekijk de resultaten van het importeren van het bestand. De details van eerder geïmporteerde IMEI-of serie nummers worden bijgewerkt met nieuwe gegevens.  Klik op **volgende** om door te gaan of op **terug** om de bijgewerkte gegevens op te slaan en de wizard te volt ooien.

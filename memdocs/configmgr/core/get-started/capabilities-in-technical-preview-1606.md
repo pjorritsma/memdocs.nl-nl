@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 0513c1908b1360a50653931dda57e5d148055240
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 18ea44f662591a21750fb630425ddfb975678aa2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905676"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695593"
 ---
 # <a name="capabilities-in-technical-preview-1606-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1606 voor Configuration Manager
 
@@ -36,7 +36,7 @@ Dit artikel bevat een inleiding tot de functies die beschikbaar zijn in de Techn
 
 **Hier volgen enkele nieuwe functies die u kunt uitproberen met deze versie.**  
 
-## <a name="automatically-categorize-devices-into-collections"></a><a name="dmp_category"></a>Apparaten automatisch categoriseren in verzamelingen
+## <a name="automatically-categorize-devices-into-collections"></a><a name="dmp_category"></a> Apparaten automatisch categoriseren in verzamelingen
 U kunt apparaatcategorieën maken die kunnen worden gebruikt om apparaten automatisch in apparaatsets te plaatsen wanneer u Configuration Manager gebruikt met Microsoft Intune. Gebruikers moeten dan een apparaatcategorie kiezen wanneer ze een apparaat registreren bij intune. U kunt de categorie van een apparaat ook wijzigen via de Configuration Manager-console.
 
 **Belang rijk:** Deze functie werkt met de versie van Microsoft Intune van **juni 2016** . Zorg ervoor dat u bent bijgewerkt naar deze release voordat u deze procedures uitprobeert.
@@ -59,7 +59,7 @@ Wanneer u een verzameling koppelt aan een apparaatcategorie, worden alle apparat
 2.  Selecteer een apparaat in de lijst **apparaten** en klik vervolgens op het tabblad **Start** in de groep **apparaat** op **categorie wijzigen**.
 3.  Kies in het dialoog venster apparaatcategorie **bewerken** de categorie die op dit apparaat moet worden toegepast en klik vervolgens op **OK**.
 
-## <a name="enforcement-grace-period-for-required-application-and-software-update-deployments"></a><a name="dmp_grace"></a>Respijt periode voor afdwinging voor vereiste toepassings-en software-update-implementaties
+## <a name="enforcement-grace-period-for-required-application-and-software-update-deployments"></a><a name="dmp_grace"></a> Respijt periode voor afdwinging voor vereiste toepassings-en software-update-implementaties
 
 In sommige gevallen wilt u mogelijk gebruikers meer tijd geven om vereiste toepassings implementaties of software-updates te installeren na eventuele deadlines die u hebt geconfigureerd. Dit kan meestal vereist zijn wanneer een computer gedurende lange tijd is uitgeschakeld en een groot aantal toepassings-of update-implementaties moet installeren.
 Als een eind gebruiker bijvoorbeeld slechts een vakantie heeft geretourneerd, kan het zijn dat ze lang moeten wachten terwijl er achterstallige toepassings implementaties zijn geïnstalleerd.
@@ -80,9 +80,9 @@ Er zijn Vergelijk bare opties toegevoegd aan de wizard software-updates implemen
 
 Device Guard is een Windows 10-functie waarbij gebruik wordt gemaakt van hardware-en software functies om strikt te bepalen wat er op het apparaat mag worden uitgevoerd.
 
-Zie [Inleiding tot Device Guard](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)voor meer informatie.
+Zie [Inleiding tot Device Guard](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)voor meer informatie.
 
-In deze release kan Configuration Manager worden gebruikt in combi natie met Device Guard en [Windows AppLocker](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd723678(v=ws.10)) , zodat uitvoer bare en dll-bestanden die worden geïmplementeerd met Configuration Manager, automatisch worden vertrouwd wanneer ze afkomstig zijn van een beheerd installatie programma, wat betekent dat ze kunnen worden uitgevoerd op het doel apparaat en dat andere software niet mag worden uitgevoerd, tenzij expliciet is toegestaan om te worden uitgevoerd door andere AppLocker-regels.  
+In deze release kan Configuration Manager worden gebruikt in combi natie met Device Guard en [Windows AppLocker](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd723678(v=ws.10)) , zodat uitvoer bare en dll-bestanden die worden geïmplementeerd met Configuration Manager, automatisch worden vertrouwd wanneer ze afkomstig zijn van een beheerd installatie programma, wat betekent dat ze kunnen worden uitgevoerd op het doel apparaat en dat andere software niet mag worden uitgevoerd, tenzij expliciet is toegestaan om te worden uitgevoerd door andere AppLocker-regels.  
 
 Op dit moment kan deze mogelijkheid niet worden geconfigureerd vanuit de Configuration Manager-console. Als u het beleid wilt configureren, moet u een register sleutel configureren op elke client en Windows-Services configureren op de client.
 Wanneer dit is gebeurd, configureert u het AppLocker-beleids bestand. Nadat u het beleids bestand hebt geconfigureerd, kunt u het implementeren op elk compatibel client apparaat.
@@ -95,11 +95,11 @@ Net als bij alle AppLocker-beleids regels kunnen beleid met beheerde installatie
 
 Raadpleeg voor meer informatie de volgende artikelen:
 
-- [Inleiding tot Device Guard](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)
+- [Inleiding tot Device Guard](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)
 
-- [Het implementatie proces van Windows Defender Application Control plannen en aan de slag gaan](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)
+- [Het implementatie proces van Windows Defender Application Control plannen en aan de slag gaan](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)
 
-  ##  <a name="multiple-device-management-points-for-on-premises-mobile-device-management"></a><a name="dmp_onprem"></a>Meerdere Apparaatbeheer punten voor on-premises beheer van mobiele apparaten  
+  ##  <a name="multiple-device-management-points-for-on-premises-mobile-device-management"></a><a name="dmp_onprem"></a> Meerdere Apparaatbeheer punten voor on-premises beheer van mobiele apparaten  
   Met Technical Preview 1606 van de on- \- premises Mobile Device Management (MDM) ondersteunt een nieuwe mogelijkheid in Windows 10 jubileum update waarmee automatisch een geregistreerd apparaat wordt geconfigureerd om meer dan één apparaatbeheerpunt beschikbaar te maken voor gebruik. Hierdoor kan het apparaat terugvallen op een ander apparaatbeheerpunt wanneer het normale gebruik niet beschikbaar is. Deze functie werkt alleen voor Pc's waarop Windows 10 jubileum update is geïnstalleerd.  
 
 ### <a name="try-it-out"></a>Probeer het nu!  
@@ -170,8 +170,8 @@ De eenvoudigste manier om de hoofdmap van de client certificaten die worden gebr
 #### <a name="upload-the-management-certificate-to-azure"></a>Het beheer certificaat uploaden naar Azure
 
 Er is een Azure-beheer certificaat vereist om Configuration Manager toegang te krijgen tot de Azure API en de Cloud proxy service te configureren. Raadpleeg de volgende artikelen in de Azure-documentatie voor meer informatie en instructies voor het uploaden van een beheer certificaat:
-- [Overzicht van certificaten voor Azure Cloud Services](https://azure.microsoft.com/documentation/articles/cloud-services-certs-create/)
-- [Een Azure Management API Management-certificaat uploaden](https://azure.microsoft.com/documentation/articles/azure-api-management-certs/).
+- [Overzicht van certificaten voor Azure Cloud Services](/azure/cloud-services/cloud-services-certs-create)
+- [Een Azure Management API Management-certificaat uploaden](/previous-versions/azure/azure-api-management-certs).
 
 Zorg ervoor dat u de abonnements-ID kopieert die is gekoppeld aan het beheer certificaat. U hebt deze nodig voor het configureren van Cloud proxy service in de Configuration Manager-console.
 
@@ -211,7 +211,7 @@ De laatste stap bij het instellen van de Cloud proxy service is het configureren
 
 #### <a name="check-status-on-a-client-on-the-internet"></a>Status controleren op een client op Internet
 
-Nadat de service en rollen volledig zijn geconfigureerd, krijgen interne clients de locatie van de Cloud proxy service op de volgende locatie aanvraag. Clients met bijgewerkte locatie gegevens kunnen vervolgens communiceren met Configuration Manager op internet. De polling cyclus voor locatie aanvragen is elke 24 uur. Als u niet wilt wachten op de normale geplande locatie aanvraag, kunt u de aanvraag afdwingen door de SMS agent host-service (ccmexec. exe) opnieuw te starten op de computer.
+Nadat de service en rollen volledig zijn geconfigureerd, krijgen interne clients de locatie van de Cloud proxy service op de volgende locatie aanvraag. Clients met bijgewerkte locatie gegevens kunnen vervolgens communiceren met Configuration Manager op internet. De polling cyclus voor locatie aanvragen is elke 24 uur. Als u niet wilt wachten op de normale geplande-locatie aanvraag, kunt u de aanvraag afdwingen door de SMS agent host-service (ccmexec.exe) opnieuw te starten op de computer.
 
 Nadat clients de nieuwe locatie-informatie voor de Cloud proxy service hebben, kunt u de status controleren van clients die zich niet meer op het interne particuliere netwerk bevinden, maar wel over Internet toegang hebben. U kunt ook verkeer op Cloud proxy service controleren door naar **beheer > te gaan Cloud Services > Cloud proxy service**, de service in het deel venster met de lijst te selecteren en de verkeers gegevens in het detail venster weer te geven.   
 
@@ -241,9 +241,9 @@ Met Technical Preview 1606 zijn verschillende wijzigingen geïntroduceerd die va
 - **Meer installatie status:**
 
     Wanneer u de update-installatie status voor een site bekijkt, worden in de console nu afzonderlijke details weer gegeven voor de volgende acties:
-    - **Downloaden** (dit is alleen van toepassing op de site op het hoogste niveau waar de site systeemrol voor het service aansluitpunt is geïnstalleerd).
+    - **Downloaden**  (dit is alleen van toepassing op de site op het hoogste niveau waar de site systeemrol voor het service aansluitpunt is geïnstalleerd).
     - **Replicatie**
-    - **Vereistencontrole**
+    - **Controle op vereisten**
     - **Installatie**
 
   Daarnaast vindt u hier meer gedetailleerde informatie over elke stap, zoals in het logboek bestand dat u kunt weer geven voor meer informatie.  

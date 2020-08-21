@@ -10,12 +10,12 @@ ms.assetid: 23e1e4dc-623a-4521-ad04-ae9482927097
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1987ba504630ab1d4b23cdb54710f0cbaa3db28a
-ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
+ms.openlocfilehash: 26846066aa713d40fdacfe75810d43cafd1c3f04
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506245"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693672"
 ---
 # <a name="create-configuration-items-for-windows-devices-with-on-premises-mdm-in-configuration-manager"></a>Configuratie-items maken voor Windows-apparaten met on-premises MDM in Configuration Manager
 
@@ -27,7 +27,7 @@ Raadpleeg de volgende artikelen voor meer algemene informatie over de instelling
 
 - [Aan de slag met instellingen voor naleving](../../compliance/get-started/get-started-with-compliance-settings.md)
 
-- [De instellingen voor naleving plannen en configureren](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)
+- [Nalevings instellingen plannen en configureren](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)
 
 ## <a name="create-a-configuration-item"></a>Een configuratie-item maken
 
@@ -58,7 +58,7 @@ Raadpleeg de volgende artikelen voor meer algemene informatie over de instelling
 
     - **Geen**: voor apparaten die niet voldoen aan deze nalevings regel wordt geen fout Ernst gerapporteerd voor Configuration Manager-rapporten.
 
-    - **Gegevens**
+    - **Informatie**
 
     - **Waarschuwing**
 
@@ -75,7 +75,7 @@ Raadpleeg de volgende artikelen voor meer algemene informatie over de instelling
 
 U kunt het nieuwe configuratie-item weergeven in het knooppunt **Configuratie-items** van de werkruimte **Activa en naleving** .
 
-## <a name="settings-reference"></a><a name="bkmk_setref"></a>Verwijzing naar instellingen  
+## <a name="settings-reference"></a><a name="bkmk_setref"></a> Verwijzing naar instellingen  
 
 In de volgende secties worden de specifieke instellingen beschreven die beschikbaar zijn in elke groep. Configureer deze instellingen op de pagina **Apparaatinstellingen** van de **wizard Configuratie-item maken** voor **Windows 8,1-en Windows 10** -apparaten die worden beheerd *zonder* de Configuration Manager-client.
 
@@ -127,7 +127,7 @@ Deze instellingen zijn voor apparaten met Windows 8.1 en Windows 10.
 - **Aangepast e-mail account**: het gebruik van een niet-organisatie-e-mail account op het apparaat toestaan of verbieden.
 - **Micro soft-account optioneel maken in Windows Mail-app**: Schakel deze optie in als u geen Microsoft-account nodig hebt in Windows Mail.
 
-### <a name="store"></a>Winkel
+### <a name="store"></a>Opslaan
 
 Deze instellingen zijn alleen voor apparaten met Windows 10 of hoger.
 
@@ -236,7 +236,7 @@ Deze instellingen zijn alleen voor apparaten met Windows 10 of hoger.
     - **Netwerk verbinding**: Kies **Internet** of **werk**.
     - **Verificatie**: Kies de verificatie methode voor de draadloze verbinding:
         - **Openen**
-        - **Share**
+        - **Gedeeld**
         - **WPA**
         - **WPA-PSK**
         - **WPA2**
@@ -263,8 +263,8 @@ Selecteer **importeren**en geef vervolgens de volgende waarden op:
 
 - **Certificaat bestand**: Blader naar en selecteer een certificaat bestand (**. CER**) dat u wilt importeren.
 - **Doel archief**: Kies een of meer van de volgende certificaat archieven:
-  - **Hoofdmap**
-  - **CA**
+  - **Basis**
+  - **CA (consistentie en beschikbaarheid)**
   - **Normaal**
   - **Gemachtigd**
   - **SPC**
@@ -325,7 +325,7 @@ Deze instellingen zijn alleen voor apparaten met Windows 10 team.
 
 ### <a name="windows-information-protection"></a>Windows Information Protection  
 
-Zie [uw ondernemings gegevens beveiligen met behulp van Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)voor meer informatie over het configureren van ondernemings gegevens beveiliging met Configuration Manager.
+Zie [uw ondernemings gegevens beveiligen met behulp van Windows Information Protection (WIP)](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)voor meer informatie over het configureren van ondernemings gegevens beveiliging met Configuration Manager.
 
 ### <a name="microsoft-edge-legacy"></a>Micro soft Edge verouderd
 

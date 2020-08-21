@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: bedb515c8446e13189fb84644bc0ce7563cc1574
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b3cb491ff3bfb10935566c33e321542435d2e0af
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078767"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692907"
 ---
 # <a name="capabilities-in-technical-preview-1709-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1709 voor Configuration Manager
 
@@ -34,7 +34,7 @@ Dit artikel bevat een inleiding tot de functies die beschikbaar zijn in de Techn
 - **Update voor preview versie 1709 mislukt wanneer u een site server in de passieve modus hebt**. Wanneer u de preview-versie 1706, 1707 of 1708 uitvoert en een [primaire site server in de passieve modus](capabilities-in-technical-preview-1706.md#site-server-role-high-availability)hebt, moet u de site server van de passieve modus verwijderen voordat u uw preview-site kunt bijwerken naar versie 1709. U kunt de site server van de passieve modus opnieuw installeren nadat versie 1709 van de site is uitgevoerd.
 
   De site server van de passieve modus verwijderen:
-  1. Ga in de-console naar **beheer** > **overzicht** > **site configuratie** > **servers en site systeem rollen**en selecteer vervolgens de site server passieve modus.
+  1. Ga in de-console naar **beheer**  >  **overzicht**  >  **site configuratie**  >  **servers en site systeem rollen**en selecteer vervolgens de site server passieve modus.
   2. Klik in het deel venster **site systeem rollen** met de rechter muisknop op de **site** serverrol en kies vervolgens **rol verwijderen**.
   3. Klik met de rechter muisknop op de site server in de passieve modus en kies **verwijderen**.
   4. Nadat de installatie van de site server ongedaan is gemaakt, start u de service **CONFIGURATION_MANAGER_UPDATE**opnieuw op de actieve primaire site server.
@@ -44,7 +44,7 @@ Dit artikel bevat een inleiding tot de functies die beschikbaar zijn in de Techn
 
 ## <a name="improved-vpn-profile-experience-in-configuration-manager-console"></a>Verbeterde VPN-profiel ervaring in Configuration Manager-console
 <!-- 1313282 -->
-In deze release hebben we de wizard VPN-profiel en eigenschappen bijgewerkt om de instellingen weer te geven die geschikt zijn voor het geselecteerde platform. Met name:
+In deze release hebben we de wizard VPN-profiel en eigenschappen bijgewerkt om de instellingen weer te geven die geschikt zijn voor het geselecteerde platform. Specifiek:
 
 - Elk platform heeft zijn eigen werk stroom, wat betekent dat nieuwe VPN-profielen alleen de instelling bevatten die door het platform wordt ondersteund.
 - De pagina's met **ondersteunde platforms** worden nu weer gegeven na de pagina **Algemeen** .  U kiest nu het platform voordat u eigenschaps waarden instelt.
@@ -62,7 +62,7 @@ Bestaande VPN-profielen worden ongewijzigd om het compatibiliteits risico te min
 
 Maak een nieuw VPN-profiel met behulp van het gebruikelijke proces. U ziet dat de eerste pagina in de opties van de wizard VPN-profiel is gewijzigd.
 
-1. Ga naar **activa en naleving** > **overzicht** > **instellingen** > voor naleving van**bedrijfs bronnen toegang** > **VPN-profielen** en kies vervolgens **VPN-profiel maken**.
+1. Ga naar **activa en naleving**  >  **overzicht**  >  **instellingen voor naleving**van  >  **bedrijfs bronnen toegang**  >  **VPN-profielen** en kies vervolgens **VPN-profiel maken**.
 2. Voer op de pagina **Algemeen** een naam in en kies een van de volgende opties onder **Geef het type VPN-profiel op dat u wilt maken**:
 
     - Windows 10  
@@ -109,26 +109,26 @@ Hieronder vindt u algemene vereisten voor het inschakelen van co-beheer:
 ### <a name="workloads-you-can-switch-to-intune"></a>Workloads die u kunt overschakelen naar intune
 Nadat u co-beheer hebt ingeschakeld, blijft Configuration Manager alle werk belastingen gaan beheren. Wanneer u besluit dat u klaar bent, kunt u intune starten met het beheer van beschik bare workloads. In deze versie kunt u de volgende werk belastingen beheren met intune.   
 
-#### <a name="compliance-policies"></a>Compliance beleidsregels
+#### <a name="compliance-policies"></a>Nalevingsbeleid
 Nalevings beleid definieert de regels en instellingen waaraan een apparaat moet voldoen om te worden beschouwd als compatibel met het beleid voor voorwaardelijke toegang. U kunt ook nalevingsbeleid gebruiken om nalevingsproblemen met apparaten te bewaken en onafhankelijk van voorwaardelijke toegang op te lossen.
 
 #### <a name="windows-update-for-business-policies"></a>Windows Update voor bedrijfs beleid
-Met Windows Update for business-beleid kunt u uitstel beleid configureren voor Windows 10-onderdelen updates of kwaliteits updates voor Windows 10-apparaten die rechtstreeks worden beheerd door Windows Update voor bedrijven. Zie [Configure Windows Update for Business policies](https://docs.microsoft.com/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies)(Engelstalig) voor meer informatie.  
+Met Windows Update for business-beleid kunt u uitstel beleid configureren voor Windows 10-onderdelen updates of kwaliteits updates voor Windows 10-apparaten die rechtstreeks worden beheerd door Windows Update voor bedrijven. Zie [Configure Windows Update for Business policies](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies)(Engelstalig) voor meer informatie.  
 
 ### <a name="remote-actions-available-in-intune-on-azure-for-co-managed-devices"></a>Externe acties die beschikbaar zijn in intune op Azure voor gezamenlijk beheerde apparaten
 Wanneer een Windows 10-apparaat is ingeschakeld voor co-beheer, hebt u de volgende externe acties beschikbaar in intune op Azure:  
-- [Fabrieks instellingen terugzetten](https://docs.microsoft.com/intune/devices-wipe#wipe)
-- [Selectief wissen](https://docs.microsoft.com/intune/apps-selective-wipe)
-- [Apparaten verwijderen](https://docs.microsoft.com/intune/devices-wipe#delete-devices-from-the-azure-active-directory-portal)
-- [Apparaat opnieuw opstarten](https://docs.microsoft.com/intune/device-restart)
-- [Fresh Start](https://docs.microsoft.com/intune/device-fresh-start)
+- [Fabrieks instellingen terugzetten](/intune/devices-wipe#wipe)
+- [Selectief wissen](/intune/apps-selective-wipe)
+- [Apparaten verwijderen](/intune/devices-wipe#delete-devices-from-the-azure-active-directory-portal)
+- [Apparaat opnieuw opstarten](/intune/device-restart)
+- [Fresh Start](/intune/device-fresh-start)
 
 ### <a name="prepare-intune-for-co-management"></a>InTune voorbereiden voor co-beheer
 Voordat u overschakelt van Configuration Manager naar intune, moet u de profielen en beleids regels maken die u in intune nodig hebt om ervoor te zorgen dat uw apparaten blijven worden beveiligd.
 U kunt in intune objecten maken op basis van de objecten die u in Configuration Manager hebt. Als uw huidige strategie is gebaseerd op verouderd of traditioneel beheer, wilt u wellicht een stap terugnemen om te zien welke beleids regels en profielen u nodig hebt voor modern beheer. Gebruik de volgende bronnen om de beleids regels en profielen te maken.    
-<!-- - [Device compliance policies](https://docs.microsoft.com/intune/compliance-policy-create-windows)  -->
-- [Windows Update voor bedrijfs beleid](https://docs.microsoft.com/intune/windows-update-for-business-configure)  
-- [Apparaatconfiguratieprofielen](https://docs.microsoft.com/intune/device-profile-create)  
+<!-- - [Device compliance policies](/intune/compliance-policy-create-windows)  -->
+- [Windows Update voor bedrijfs beleid](/intune/windows-update-for-business-configure)  
+- [Apparaatconfiguratieprofielen](/intune/device-profile-create)  
 
 ### <a name="architectural-overview-for-co-management"></a>Architectuur overzicht voor co-beheer
 Het volgende diagram biedt een architectuur overzicht van co-beheer en hoe het past in bestaande configuratie-en intune-infra structuren.
@@ -152,7 +152,7 @@ U kunt co-beheer inschakelen op Windows 10-apparaten die zijn gekoppeld aan AD e
 #### <a name="command-line-to-install-configuration-manager-client"></a>Opdracht regel voor de installatie van Configuration Manager-client
 Maak een app in intune voor Windows 10-apparaten die nog niet Configuration Manager-clients zijn. Wanneer u de app in de volgende secties maakt, gebruikt u de volgende opdracht regel:
 
-ccmsetup. msi CCMSETUPCMD = "/MP: &#60;*URL van het wederzijdse verificatie-eind punt voor de Cloud beheer gateway*&#62;/CCMHOSTNAME =&#60;*URL van de Cloud beheer gateway wederzijdse verificatie-eind punt*&#62; SMSSiteCode =&#60;*site* code&#62; SMSMP = https: &#47;/&#60;*FQDN van MP*&#62; AADTENANTID =&#60;*Aad-Tenant-id*&#62; AADTENANTNAME =&#60;*naam* van de Tenant&#62; AADCLIENTAPPID =&#60;*Server AppID voor Aad* *-* integratie&#62; AADRESOURCEURI = https: &#47;
+ccmsetup.msi CCMSETUPCMD = "/MP: &#60;*URL van het wederzijdse verificatie-eind punt van de Cloud beheer gateway*&#62;/CCMHOSTNAME =&#60;*URL van het wederzijdse verificatie-eind punt* van de Cloud beheer gateway&#62; SMSSiteCode =&#60;*site* code&#62; SMSMP = https: &#47;/&#60;*FQDN van MP*&#62; AADTENANTID =&#60;*Aad-Tenant-id*&#62; AADTENANTNAME =&#60;naam van de *Tenant* *&#62; AADCLIENTAPPID* =&#60;*Server AppID voor Aad*
 
 Als u bijvoorbeeld de volgende waarden had:
 
@@ -173,11 +173,11 @@ Als u bijvoorbeeld de volgende waarden had:
 
 U gebruikt de volgende opdracht regel:
 
-ccmsetup. msi CCMSETUPCMD = "/MP: https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100 CCMHOSTNAME = contoso. cloudapp. net/CCM_Proxy_MutualAuth/72057594037928100 SMSSiteCode = PS1 SMSMP = https:/&#47;sccmmp.corp.contoso.com AADTENANTID = 72F988BF-86F1-41AF-91AB-2D7CD011XXXX AADTENANTNAME = contoso AADCLIENTAPPID = bef323b3-042f-41a6-907a-f9faf0d1XXXX AADRESOURCEURI = https:/&#47;ConfigMgrServer"
+ccmsetup.msi CCMSETUPCMD = "/MP: https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100 CCMHOSTNAME = contoso. cloudapp. net/CCM_Proxy_MutualAuth/72057594037928100 SMSSiteCode = PS1 SMSMP = https:/&#47;sccmmp.corp.contoso.com AADTENANTID = 72F988BF-86F1-41AF-91AB-2D7CD011XXXX AADTENANTNAME = contoso AADCLIENTAPPID = bef323b3-042f-41a6-907a-f9faf0d1XXXX AADRESOURCEURI = https:/&#47;ConfigMgrServer"
 
 > [!Tip]
 >U kunt de opdracht regel parameters voor uw site vinden door de volgende stappen uit te voeren:     
-> 1. Ga in de Configuration Manager-console naar **beheer** > **overzicht** > **Cloud Services** > **co-beheer**.  
+> 1. Ga in de Configuration Manager-console naar **beheer**  >  **overzicht**  >  **Cloud Services**  >  **co-beheer**.  
 > 2. Kies op het tabblad Start in de groep beheren de optie **co-beheer configureren** om de wizard voor het onboarden van co-beheer te openen.    
 > 3. Klik op de pagina abonnement op **Aanmelden** en meld u aan bij uw intune-Tenant en klik vervolgens op **volgende**.    
 > 4. Klik op de pagina activering op **kopiëren** in het gedeelte apparaten die zijn **Inge schreven in intune** om de opdracht regel naar het klem bord te kopiëren en sla de opdracht regel vervolgens op voor gebruik in de procedure om de app te maken.  
@@ -185,22 +185,22 @@ ccmsetup. msi CCMSETUPCMD = "/MP: https:/&#47;contoso.cloudapp.net/CCM_Proxy_Mut
 
 #### <a name="new-windows-10-devices"></a>Nieuwe Windows 10-apparaten
 Voor nieuwe Windows 10-apparaten kunt u de auto pilot-service gebruiken voor het configureren van de out-of-Box-ervaring, waaronder het toevoegen van het apparaat aan AD en Azure AD, en het inschrijven van het apparaat bij intune. Maak vervolgens in intune een app om de Configuration Manager-client te implementeren.  
-1. Schakel Auto Pilot in voor de nieuwe Windows 10-apparaten. Zie [overzicht van Windows auto pilot](https://docs.microsoft.com/windows/deployment/windows-10-auto-pilot)voor meer informatie.  
-2. Configureer automatische inschrijving in azure AD voor uw apparaten die automatisch moeten worden inge schreven bij intune. Zie [Windows-apparaten inschrijven voor Microsoft intune](https://docs.microsoft.com/intune/windows-enroll)voor meer informatie.
-3. Maak een app in intune met het Configuration Manager-client pakket en implementeer de app op Windows 10-apparaten die u gezamenlijk wilt beheren. Gebruik de [opdracht regel om Configuration Manager-client te installeren](#command-line-to-install-configuration-manager-client) wanneer u de stappen door lopen om [clients van Internet te installeren met behulp van Azure AD](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-cmg-azure).   
+1. Schakel Auto Pilot in voor de nieuwe Windows 10-apparaten. Zie [overzicht van Windows auto pilot](/windows/deployment/windows-10-auto-pilot)voor meer informatie.  
+2. Configureer automatische inschrijving in azure AD voor uw apparaten die automatisch moeten worden inge schreven bij intune. Zie [Windows-apparaten inschrijven voor Microsoft intune](/intune/windows-enroll)voor meer informatie.
+3. Maak een app in intune met het Configuration Manager-client pakket en implementeer de app op Windows 10-apparaten die u gezamenlijk wilt beheren. Gebruik de [opdracht regel om Configuration Manager-client te installeren](#command-line-to-install-configuration-manager-client) wanneer u de stappen door lopen om [clients van Internet te installeren met behulp van Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure).   
 
 #### <a name="windows-10-devices-not-enrolled-in-intune-or-a-configuration-manager-client"></a>Windows 10-apparaten die niet zijn Inge schreven bij intune of een Configuration Manager-client
 Voor Windows 10-apparaten die niet zijn Inge schreven bij intune of de Configuration Manager-client, kunt u automatische inschrijving gebruiken om het apparaat in te schrijven bij intune. Maak vervolgens in intune een app om de Configuration Manager-client te implementeren.
-1. Configureer automatische inschrijving in azure AD voor uw apparaten die automatisch moeten worden inge schreven bij intune. Zie [Windows-apparaten inschrijven voor Microsoft intune](https://docs.microsoft.com/intune/windows-enroll)voor meer informatie.  
-2. Maak een app in intune met het Configuration Manager-client pakket en implementeer de app op Windows 10-apparaten die u gezamenlijk wilt beheren. Gebruik de [opdracht regel om Configuration Manager-client te installeren](#command-line-to-install-configuration-manager-client) wanneer u de stappen door lopen om [clients van Internet te installeren met behulp van Azure AD](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-cmg-azure).
+1. Configureer automatische inschrijving in azure AD voor uw apparaten die automatisch moeten worden inge schreven bij intune. Zie [Windows-apparaten inschrijven voor Microsoft intune](/intune/windows-enroll)voor meer informatie.  
+2. Maak een app in intune met het Configuration Manager-client pakket en implementeer de app op Windows 10-apparaten die u gezamenlijk wilt beheren. Gebruik de [opdracht regel om Configuration Manager-client te installeren](#command-line-to-install-configuration-manager-client) wanneer u de stappen door lopen om [clients van Internet te installeren met behulp van Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure).
 
 #### <a name="windows-10-devices-enrolled-in-intune"></a>Windows 10-apparaten die zijn Inge schreven bij intune
-Voor Windows 10-apparaten die al zijn Inge schreven bij intune, maakt u een app in intune om de Configuration Manager-client te implementeren. Gebruik de [opdracht regel om Configuration Manager-client te installeren](#command-line-to-install-configuration-manager-client) wanneer u de stappen door lopen om [clients van Internet te installeren met behulp van Azure AD](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-cmg-azure).  
+Voor Windows 10-apparaten die al zijn Inge schreven bij intune, maakt u een app in intune om de Configuration Manager-client te implementeren. Gebruik de [opdracht regel om Configuration Manager-client te installeren](#command-line-to-install-configuration-manager-client) wanneer u de stappen door lopen om [clients van Internet te installeren met behulp van Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure).  
 
 ### <a name="switch-configuration-manager-workloads-to-intune"></a>Configuration Manager-workloads overschakelen naar Intune
 In de vorige sectie hebt u Windows 10-apparaten voor bereid voor co-beheer. Deze apparaten zijn nu gekoppeld aan AD en Azure AD, en ze zijn geregistreerd bij intune en hebben de Configuration Manager-client. Waarschijnlijk zijn er nog steeds Windows 10-apparaten die zijn gekoppeld aan AD en die de Configuration Manager-client hebben, maar niet zijn toegevoegd aan Azure AD of zijn Inge schreven bij intune. De volgende procedure bevat de stappen voor het inschakelen van co-beheer, het voorbereiden van de rest van uw Windows 10-apparaten (Configuration Manager-clients zonder registratie van intune) voor co-beheer, en u kunt aan de slag gaan met het overschakelen van specifieke Configuration Manager workloads naar intune.
 
-1. Ga in de Configuration Manager-console naar **beheer** > **overzicht** > **Cloud Services** > **co-beheer**.    
+1. Ga in de Configuration Manager-console naar **beheer**  >  **overzicht**  >  **Cloud Services**  >  **co-beheer**.    
 2. Kies op het tabblad Start in de groep beheren de optie **co-beheer configureren** om de wizard voor het onboarden van co-beheer te openen.    
 3. Klik op de pagina abonnement op **Aanmelden** en meld u aan bij uw intune-Tenant en klik vervolgens op **volgende**.   
 4. Configureer op de pagina voor fase ring de volgende instellingen en klik vervolgens op **volgende**:
@@ -219,4 +219,4 @@ Select the co-management object, and then on the Home tab, click **Properties**.
 After you have enabled co-management, you can monitor which devices are managed by Configuration Manager and which are managed by Intune. You can also see which Configuration Manager workloads are managed by which product.-->
 
 ## <a name="see-also"></a>Zie ook
-Zie [Technical Preview voor Configuration Manager voor](technical-preview.md)meer informatie over het installeren of bijwerken van de technische preview-vertakking. 
+Zie [Technical Preview voor Configuration Manager voor](technical-preview.md)meer informatie over het installeren of bijwerken van de technische preview-vertakking.

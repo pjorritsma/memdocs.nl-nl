@@ -2,7 +2,7 @@
 title: Software Center plannen
 titleSuffix: Configuration Manager
 description: Bepaal hoe u Software Center zo wilt configureren dat gebruikers met Configuration Manager kunnen communiceren.
-ms.date: 08/11/2020
+ms.date: 08/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c6826794-aa19-469d-ae47-1a0db68a1ff1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5b32fc2de3c945ff2292f119a10d84d982d08677
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 802dbaa4188199e555a5cc0143ed599ad454e27e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127355"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695168"
 ---
 # <a name="plan-for-software-center"></a>Software Center plannen
 
@@ -25,7 +25,7 @@ Gebruikers kunnen instellingen wijzigen, zoeken naar toepassingen en toepassinge
 
 Zie de [Gebruikers handleiding voor Software Center](../../core/understand/software-center.md)voor meer informatie over de andere functies van software Center.  
 
-## <a name="configure-software-center"></a><a name="bkmk_userex"></a>Software Center configureren  
+## <a name="configure-software-center"></a><a name="bkmk_userex"></a> Software Center configureren  
 
 Werk uw Configuration Manager-sites en-clients bij naar versie 1906 of hoger om te profiteren van de nieuwste functies van software Center.
 
@@ -44,6 +44,8 @@ Werk uw Configuration Manager-sites en-clients bij naar versie 1906 of hoger om 
 
 - Gebruikers kunnen affiniteit tussen gebruikers en apparaten configureren in Software Center. Zie [gebruikers en apparaten koppelen met gebruikers affiniteit met apparaat](../deploy-use/link-users-and-devices-with-user-device-affinity.md)voor meer informatie.
 
+- Vanaf versie 2006 kunt u door co beheerde apparaten configureren voor het gebruik van de Bedrijfsportal voor zowel intune-als Configuration Manager-Apps. Zie [De bedrijfsportal-app configureren op co-beheerde apparaten](../../comanage/company-portal.md) voor meer informatie.<!--CMADO-3601237,INADO-4297660-->
+
 > [!IMPORTANT]
 > Als u gebruik wilt maken van nieuwe Configuration Manager functies, moet u clients eerst bijwerken naar de nieuwste versie. Wanneer u de-site en-console bijwerkt terwijl er nieuwe functionaliteit wordt weer gegeven in de Configuration Manager-console, is het volledige scenario niet functioneel totdat de client versie ook het meest recent is.
 
@@ -57,7 +59,7 @@ Werk uw Configuration Manager-sites en-clients bij naar versie 1906 of hoger om 
 
 - Voorheen heeft het Software Center het eerste beheer punt gekozen uit de lijst met beschik bare servers. Vanaf versie 1906 maakt het gebruik van hetzelfde beheer punt dat door de client wordt gebruikt. Met deze wijziging kan software center hetzelfde beheer punt van de toegewezen primaire site gebruiken als de client.
 
-## <a name="replace-toast-notifications-with-dialog-window"></a><a name="bkmk_impact"></a>Pop-upmeldingen vervangen door dialoog venster
+## <a name="replace-toast-notifications-with-dialog-window"></a><a name="bkmk_impact"></a> Pop-upmeldingen vervangen door dialoog venster
 
 <!--3555947-->
 Soms zien gebruikers de Windows-pop-upmelding over het opnieuw opstarten of de vereiste implementatie niet. De ervaring wordt dan niet weer geven om de herinnering af te stellen. Dit gedrag kan leiden tot een slechte gebruikers ervaring wanneer de client een deadline bereikt.
@@ -141,4 +143,7 @@ Als u de toepassings catalogus gebruikt, heeft het merk de volgende prioriteiten
 ## <a name="see-also"></a>Zie ook
 
 - [Gebruikershandleiding van Software Center](../../core/understand/software-center.md)
+
 - [Toepassingsbeheer plannen en configureren](plan-for-and-configure-application-management.md)
+
+- [De app Bedrijfsportal gebruiken op gezamenlijk beheerde apparaten](../../comanage/company-portal.md)

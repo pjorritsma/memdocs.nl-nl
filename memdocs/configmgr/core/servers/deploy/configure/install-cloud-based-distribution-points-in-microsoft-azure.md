@@ -10,12 +10,12 @@ ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 35379aed71544a25a98ec4dfa421be70c1bae851
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 4a1e19025af82c9beeed8c227871df94b4674791
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83427740"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692703"
 ---
 # <a name="install-a-cloud-distribution-point-for-configuration-manager"></a>Een Cloud distributiepunt voor Configuration Manager installeren
 
@@ -38,7 +38,7 @@ In dit artikel vindt u meer informatie over de stappen voor het installeren van 
 - [Geavanceerde probleemoplossing](#bkmk_tshoot)
 
 
-## <a name="before-you-begin"></a><a name="bkmk_before"></a>Voordat u begint
+## <a name="before-you-begin"></a><a name="bkmk_before"></a> Voordat u begint
 
 Lees eerst het artikel [een Cloud distributiepunt gebruiken](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md). Dit artikel helpt u bij het plannen en ontwerpen van uw Cloud distributiepunten.
 
@@ -91,14 +91,14 @@ Als u een Cloud distributiepunt wilt inschakelen voor het gebruik van Windows Br
 
 - Als de site server een site systeemrol van een on-premises distributie punt heeft, configureert u de optie in de eigenschappen van die rol om BranchCache in te **scha kelen en te configureren**. Zie [Configure a Distribution Point (een distributie punt configureren](install-and-configure-distribution-points.md#bkmk_config-general)) voor meer informatie.
 
-- Als de site server geen rol voor distributie punt heeft, installeert u de BranchCache-functie in Windows. Zie [de BranchCache-functie installeren](https://docs.microsoft.com/windows-server/networking/branchcache/deploy/install-the-branchcache-feature)voor meer informatie.
+- Als de site server geen rol voor distributie punt heeft, installeert u de BranchCache-functie in Windows. Zie [de BranchCache-functie installeren](/windows-server/networking/branchcache/deploy/install-the-branchcache-feature)voor meer informatie.
 
 Als u inhoud al hebt gedistribueerd naar een Cloud distributiepunt en vervolgens wilt inschakelen BranchCache, installeert u eerst de functie. Distribueer de inhoud vervolgens opnieuw naar het Cloud distributiepunt.
 
 > [!NOTE]  
 > Als u meer dan één Cloud distributiepunt hebt, moet u in Configuration Manager versie 1810 en eerder de wachtwoordzin voor de BranchCache-sleutel hand matig instellen. Zie [Microsoft ondersteuning KB 4458143](https://support.microsoft.com/help/4458143)voor meer informatie.
 
-## <a name="set-up"></a><a name="bkmk_setup"></a>Instellen  
+## <a name="set-up"></a><a name="bkmk_setup"></a> Instellen  
 
 Voer deze procedure uit op de site als host van dit Cloud distributiepunt zoals bepaald door uw [ontwerp](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md#bkmk_topology).  
 
@@ -147,7 +147,7 @@ De site begint met het maken van een nieuwe gehoste service voor het Cloud distr
 > `Waiting for check if container exists. Will check again in 10 seconds`  
 > Nadat het opslag account is ingericht, wordt de service gemaakt en geconfigureerd.  
 
-### <a name="verify-installation"></a>Installatie controleren
+### <a name="verify-installation"></a>De installatie controleren
 
 Controleer of de installatie van het Cloud distributiepunt is voltooid met behulp van de volgende methoden:  
 
@@ -158,7 +158,7 @@ Controleer of de installatie van het Cloud distributiepunt is voltooid met behul
 - Ga indien nodig naar de Azure Portal. In de **implementatie** voor het Cloud distributiepunt wordt de status **gereed**weer gegeven.  
 
 
-## <a name="configure-dns"></a><a name="bkmk_dns"></a>DNS configureren  
+## <a name="configure-dns"></a><a name="bkmk_dns"></a> DNS configureren  
 
 Voordat clients het Cloud distributiepunt kunnen gebruiken, moeten ze de naam van het Cloud distributiepunt kunnen omzetten naar een IP-adres dat door Azure wordt beheerd. Het beheer punt geeft de **service-FQDN** van het Cloud distributiepunt. Het Cloud distributiepunt bestaat in azure als de **service naam**. Zie deze waarden op het tabblad **instellingen** van de eigenschappen van het Cloud distributiepunt.
 
@@ -190,14 +190,14 @@ In het volgende proces ziet u hoe een client de naam van het Cloud distributiepu
 5. Het Cloud distributiepunt geeft het Server verificatie certificaat aan de client. De client gebruikt de vertrouwens keten van het certificaat om te valideren.  
 
 
-## <a name="set-up-site-server-proxy"></a><a name="bkmk_proxy"></a>Site server proxy instellen  
+## <a name="set-up-site-server-proxy"></a><a name="bkmk_proxy"></a> Site server proxy instellen  
 
 De primaire site server die het Cloud distributiepunt beheert, moet communiceren met Azure. Als uw organisatie een proxy server gebruikt om Internet toegang te beheren, moet u de primaire site server configureren voor het gebruik van deze proxy.  
 
 Zie [ondersteuning voor proxy server](../../../plan-design/network/proxy-server-support.md)voor meer informatie.  
 
 
-## <a name="distribute-content-and-configure-clients"></a><a name="bkmk_client"></a>Inhoud distribueren en clients configureren
+## <a name="distribute-content-and-configure-clients"></a><a name="bkmk_client"></a> Inhoud distribueren en clients configureren
 
 Distribueer inhoud naar het Cloud distributiepunt hetzelfde als elk ander on-premises distributie punt. Het beheer punt bevat niet het distributie punt van de cloud in de lijst met inhouds locaties, tenzij het de inhoud bevat die clients aanvragen. Zie [inhoud distribueren en beheren](deploy-and-manage-content.md)voor meer informatie.
 
@@ -212,13 +212,13 @@ Met standaard client instellingen kunnen clients automatisch Cloud distributiepu
     - Wijzig en implementeer deze instelling voor zowel gebruikers als apparaten.  
 
 
-## <a name="manage-and-monitor"></a><a name="bkmk_monitor"></a>Beheren en bewaken  
+## <a name="manage-and-monitor"></a><a name="bkmk_monitor"></a> Beheren en bewaken  
 
 Bewaak inhoud die u naar een Cloud distributiepunt distribueert hetzelfde als met andere on-premises distributie punten. Zie [inhoud bewaken](monitor-content-you-have-distributed.md)voor meer informatie.
 
 Wanneer u de lijst met Cloud distributiepunten weergeeft in de-console, kunt u aanvullende kolommen toevoegen aan de lijst. Bijvoorbeeld, de kolom **gegevens** uitgaand toont de hoeveelheid gegevensclients die in de afgelopen 30 dagen van de service is gedownload.<!-- SCCMDocs#755 -->
 
-### <a name="alerts"></a><a name="bkmk_alerts"></a>Berichten  
+### <a name="alerts"></a><a name="bkmk_alerts"></a> Berichten  
 
 Configuration Manager controleert periodiek de Azure-service. Als de service niet actief is of als er problemen zijn met het abonnement of het certificaat, wordt er Configuration Manager een waarschuwing gegenereerd.
 
@@ -234,7 +234,7 @@ Stel drempel waarden in voor de hoeveelheid gegevens die u wilt opslaan op het C
 Geef drempels op voor elk Cloud distributiepunt tijdens de installatie, of gebruik het tabblad **waarschuwingen** van de eigenschappen van het Cloud distributiepunt.  
 
 > [!NOTE]  
-> Waarschuwingen voor een Cloud distributiepunt zijn afhankelijk van gebruiks statistieken van Azure. Dit kan tot 24 uur duren. Zie [Opslaganalyse](https://docs.microsoft.com/rest/api/storageservices/storage-analytics)voor meer informatie over Opslaganalyse voor Azure.  
+> Waarschuwingen voor een Cloud distributiepunt zijn afhankelijk van gebruiks statistieken van Azure. Dit kan tot 24 uur duren. Zie [Opslaganalyse](/rest/api/storageservices/storage-analytics)voor meer informatie over Opslaganalyse voor Azure.  
 
 In een cyclus van een uur, downloadt de primaire site die het Cloud distributiepunt bewaakt transactie gegevens van Azure. Deze transactie gegevens worden opgeslagen in het `CloudDP-<ServiceName>.log` bestand op de site server. Configuration Manager wordt deze informatie vervolgens geëvalueerd op basis van de opslag-en overdrachts quota voor elk Cloud distributiepunt. Als de overdracht van gegevens het opgegeven volume bereikt of overschrijdt voor waarschuwingen of kritieke waarschuwingen, wordt Configuration Manager de juiste waarschuwing gegenereerd.  
 
@@ -242,7 +242,7 @@ In een cyclus van een uur, downloadt de primaire site die het Cloud distributiep
 > Omdat de site elk uur informatie over gegevens overdrachten downloadt van Azure, overschrijdt het gebruik mogelijk de drempel waarde voor waarschuwing of kritiek voordat Configuration Manager toegang krijgt tot de gegevens en een waarschuwing kan genereren.  
 
 
-## <a name="modify"></a><a name="bkmk_modify"></a>Wijzigen
+## <a name="modify"></a><a name="bkmk_modify"></a> Wijzigen
 
 Bekijk informatie op hoog niveau over het distributie punt in het knoop punt **Cloud distributiepunten** onder **Cloud Services** in de werk ruimte **beheer** van de Configuration Manager-console. Selecteer een distributie punt en selecteer **Eigenschappen** om meer details weer te geven.  
 
@@ -319,7 +319,7 @@ Wanneer u een Cloud distributiepunt verwijdert uit een hiërarchie, verwijdert C
 Het hand matig verwijderen van onderdelen in azure zorgt ervoor dat het systeem inconsistent is. Deze status blijft zwevende informatie en er kan onverwachte problemen optreden.
 
 
-## <a name="advanced-troubleshooting"></a><a name="bkmk_tshoot"></a>Geavanceerde probleem oplossing
+## <a name="advanced-troubleshooting"></a><a name="bkmk_tshoot"></a> Geavanceerde probleem oplossing
 
 Als u diagnostische logboek registratie wilt verzamelen van de Azure-Vm's om problemen met uw Cloud distributiepunt op te lossen, gebruikt u het volgende Power shell-voor beeld om de service diagnostische uitbrei ding voor het abonnement in te scha kelen:<!--514275-->  
 
@@ -345,7 +345,7 @@ Select-AzureSubscription $azureSubscriptionName
 Set-AzureServiceDiagnosticsExtension -StorageAccountName $storage_name -StorageAccountKey $key -DiagnosticsConfigurationPath $public_config –ServiceName $service_name -Slot 'Production' -Verbose
 ```
 
-Het volgende voor beeld is een voorbeeld bestand **Diagnostics. wadcfgx** waarnaar wordt verwezen in de variabele **public_config** in het bovenstaande Power shell-script. Zie [Azure Diagnostics schema voor extensie configuratie](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics-schema)voor meer informatie.  
+Het volgende voor beeld is een voorbeeld bestand **Diagnostics. wadcfgx** waarnaar wordt verwezen in de variabele **public_config** in het bovenstaande Power shell-script. Zie [Azure Diagnostics schema voor extensie configuratie](/azure/monitoring-and-diagnostics/azure-diagnostics-schema)voor meer informatie.  
 
 ``` XML
 <?xml version="1.0" encoding="utf-8"?>

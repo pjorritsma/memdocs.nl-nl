@@ -10,12 +10,12 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bab2050448e1c870aac8f3237c21b19498cdb674
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 51a636ffc4adad20e6bc1c69b3194db7a0fa72fd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124233"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697361"
 ---
 # <a name="task-sequence-steps"></a>Stappen voor takenreeksen
 
@@ -47,7 +47,7 @@ In de volgende secties voor specifieke taken reeks stappen worden de andere moge
 
 
 
-## <a name="apply-data-image"></a><a name="BKMK_ApplyDataImage"></a>Gegevens installatie kopie Toep assen
+## <a name="apply-data-image"></a><a name="BKMK_ApplyDataImage"></a> Gegevens installatie kopie Toep assen
 
 Gebruik deze stap om de gegevens installatie kopie te kopiëren naar de opgegeven doel partitie.  
 
@@ -66,10 +66,10 @@ Gebruik de volgende taken reeks variabelen met deze stap:
 
 Beheer deze stap met de volgende Power shell-cmdlets:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepApplyDataImage](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepApplyDataImage?view=sccm-ps)
-- [New-CMTSStepApplyDataImage](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepApplyDataImage?view=sccm-ps)
-- [Remove-CMTSStepApplyDataImage](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepApplyDataImage?view=sccm-ps)
-- [Set-CMTSStepApplyDataImage](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepApplyDataImage?view=sccm-ps)
+- [Get-CMTSStepApplyDataImage](/powershell/module/configurationmanager/Get-CMTSStepApplyDataImage?view=sccm-ps)
+- [New-CMTSStepApplyDataImage](/powershell/module/configurationmanager/New-CMTSStepApplyDataImage?view=sccm-ps)
+- [Remove-CMTSStepApplyDataImage](/powershell/module/configurationmanager/Remove-CMTSStepApplyDataImage?view=sccm-ps)
+- [Set-CMTSStepApplyDataImage](/powershell/module/configurationmanager/Set-CMTSStepApplyDataImage?view=sccm-ps)
 
 ### <a name="properties-for-apply-data-image"></a>Eigenschappen voor de installatie kopie van de gegevens Toep assen
 
@@ -100,7 +100,7 @@ Hiermee geeft u op dat de taken reeks alle bestanden op de doel partitie verwijd
 
 
 
-## <a name="apply-driver-package"></a><a name="BKMK_ApplyDriverPackage"></a>Stuur programmapakket Toep assen  
+## <a name="apply-driver-package"></a><a name="BKMK_ApplyDriverPackage"></a> Stuur programmapakket Toep assen  
 
 Gebruik deze stap om alle Stuur Programma's in het stuur programmapakket te downloaden en te installeren op het Windows-besturings systeem.
 
@@ -133,10 +133,10 @@ Gebruik de volgende taken reeks variabelen met deze stap:
 
 Beheer deze stap met de volgende Power shell-cmdlets:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepApplyDriverPackage](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepApplyDriverPackage?view=sccm-ps)
-- [New-CMTSStepApplyDriverPackage](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepApplyDriverPackage?view=sccm-ps)
-- [Remove-CMTSStepApplyDriverPackage](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepApplyDriverPackage?view=sccm-ps)
-- [Set-CMTSStepApplyDriverPackage](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepApplyDriverPackage?view=sccm-ps)
+- [Get-CMTSStepApplyDriverPackage](/powershell/module/configurationmanager/Get-CMTSStepApplyDriverPackage?view=sccm-ps)
+- [New-CMTSStepApplyDriverPackage](/powershell/module/configurationmanager/New-CMTSStepApplyDriverPackage?view=sccm-ps)
+- [Remove-CMTSStepApplyDriverPackage](/powershell/module/configurationmanager/Remove-CMTSStepApplyDriverPackage?view=sccm-ps)
+- [Set-CMTSStepApplyDriverPackage](/powershell/module/configurationmanager/Set-CMTSStepApplyDriverPackage?view=sccm-ps)
 
 ### <a name="properties-for-apply-driver-package"></a>Eigenschappen voor Stuur programmapakket Toep assen
 
@@ -150,7 +150,7 @@ Geef het stuur programmapakket op dat de benodigde apparaatstuurprogramma's beva
 
 Selecteer deze optie om de `/recurse` para meter toe te voegen aan de DISM-opdracht regel wanneer het stuur programmapakket door Windows wordt toegepast.
 
-Wanneer u deze optie inschakelt, kunt u ook aanvullende DISM-opdracht regel parameters opgeven. Gebruik de taken reeks variabele [OSDInstallDriversAdditionalOptions](task-sequence-variables.md#OSDInstallDriversAdditionalOptions) om meer opties toe te voegen. Zie [opdracht regel opties voor Windows 10 DISM](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options)voor meer informatie.<!-- SCCMDocs#2125 -->
+Wanneer u deze optie inschakelt, kunt u ook aanvullende DISM-opdracht regel parameters opgeven. Gebruik de taken reeks variabele [OSDInstallDriversAdditionalOptions](task-sequence-variables.md#OSDInstallDriversAdditionalOptions) om meer opties toe te voegen. Zie [opdracht regel opties voor Windows 10 DISM](/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options)voor meer informatie.<!-- SCCMDocs#2125 -->
 
 #### <a name="select-the-mass-storage-driver-within-the-package-that-needs-to-be-installed-before-setup-on-pre-windows-vista-operating-systems"></a>Selecteer het stuurprogramma voor massaopslag in het pakket dat moet worden geïnstalleerd vóór de installatie op besturingssystemen ouder dan Windows Vista.
 
@@ -170,7 +170,7 @@ Met deze optie kan Windows Stuur Programma's zonder digitale hand tekening insta
 
 
 
-## <a name="apply-network-settings"></a><a name="BKMK_ApplyNetworkSettings"></a>Netwerk instellingen Toep assen  
+## <a name="apply-network-settings"></a><a name="BKMK_ApplyNetworkSettings"></a> Netwerk instellingen Toep assen  
 
 Gebruik deze stap om de configuratie gegevens van het netwerk of de werk groep op te geven voor de doel computer. De taken reeks slaat deze waarden op in het juiste antwoord bestand. Windows Setup gebruikt dit antwoord bestand tijdens de **installatie van Windows en ConfigMgr** .  
 
@@ -200,10 +200,10 @@ Gebruik de volgende taken reeks variabelen met deze stap:
 
 Beheer deze stap met de volgende Power shell-cmdlets:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepApplyNetworkSetting](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepApplyNetworkSetting?view=sccm-ps)
-- [New-CMTSStepApplyNetworkSetting](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepApplyNetworkSetting?view=sccm-ps)
-- [Remove-CMTSStepApplyNetworkSetting](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepApplyNetworkSetting?view=sccm-ps)
-- [Set-CMTSStepApplyNetworkSetting](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepApplyNetworkSetting?view=sccm-ps)
+- [Get-CMTSStepApplyNetworkSetting](/powershell/module/configurationmanager/Get-CMTSStepApplyNetworkSetting?view=sccm-ps)
+- [New-CMTSStepApplyNetworkSetting](/powershell/module/configurationmanager/New-CMTSStepApplyNetworkSetting?view=sccm-ps)
+- [Remove-CMTSStepApplyNetworkSetting](/powershell/module/configurationmanager/Remove-CMTSStepApplyNetworkSetting?view=sccm-ps)
+- [Set-CMTSStepApplyNetworkSetting](/powershell/module/configurationmanager/Set-CMTSStepApplyNetworkSetting?view=sccm-ps)
 
 ### <a name="properties-for-apply-network-settings"></a>Eigenschappen voor netwerk instellingen Toep assen
 
@@ -235,7 +235,7 @@ Netwerkconfiguraties opgeven voor elke netwerkadapter in de computer. Selecteer 
 
 
 
-## <a name="apply-operating-system-image"></a><a name="BKMK_ApplyOperatingSystemImage"></a>Installatie kopie van besturings systeem Toep assen  
+## <a name="apply-operating-system-image"></a><a name="BKMK_ApplyOperatingSystemImage"></a> Installatie kopie van besturings systeem Toep assen  
 
 Gebruik deze stap om een besturings systeem te installeren op de doel computer.
 
@@ -264,10 +264,10 @@ Gebruik de volgende taken reeks variabelen met deze stap:
 
 Beheer deze stap met de volgende Power shell-cmdlets:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepApplyOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepApplyOperatingSystem?view=sccm-ps)
-- [New-CMTSStepApplyOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepApplyOperatingSystem?view=sccm-ps)
-- [Remove-CMTSStepApplyOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepApplyOperatingSystem?view=sccm-ps)
-- [Set-CMTSStepApplyOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepApplyOperatingSystem?view=sccm-ps)
+- [Get-CMTSStepApplyOperatingSystem](/powershell/module/configurationmanager/Get-CMTSStepApplyOperatingSystem?view=sccm-ps)
+- [New-CMTSStepApplyOperatingSystem](/powershell/module/configurationmanager/New-CMTSStepApplyOperatingSystem?view=sccm-ps)
+- [Remove-CMTSStepApplyOperatingSystem](/powershell/module/configurationmanager/Remove-CMTSStepApplyOperatingSystem?view=sccm-ps)
+- [Set-CMTSStepApplyOperatingSystem](/powershell/module/configurationmanager/Set-CMTSStepApplyOperatingSystem?view=sccm-ps)
 
 ### <a name="behaviors-for-apply-os-image"></a>Gedrag voor installatie kopie van besturings systeem Toep assen
 
@@ -359,7 +359,7 @@ Configureer de taken reeks voor toegang tot de installatie kopie van het besturi
 
 
 
-## <a name="apply-windows-settings"></a><a name="BKMK_ApplyWindowsSettings"></a>Windows-instellingen Toep assen
+## <a name="apply-windows-settings"></a><a name="BKMK_ApplyWindowsSettings"></a> Windows-instellingen Toep assen
 
 Gebruik deze stap om de Windows-instellingen voor de doel computer te configureren. De taken reeks slaat deze waarden op in het juiste antwoord bestand. Windows Setup gebruikt dit antwoord bestand tijdens de stap **Windows en ConfigMgr installeren** .  
 
@@ -390,10 +390,10 @@ Gebruik de volgende taken reeks variabelen met deze stap:
 
 Beheer deze stap met de volgende Power shell-cmdlets:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepApplyWindowsSetting](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepApplyWindowsSetting?view=sccm-ps)
-- [New-CMTSStepApplyWindowsSetting](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepApplyWindowsSetting?view=sccm-ps)
-- [Remove-CMTSStepApplyWindowsSetting](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepApplyWindowsSetting?view=sccm-ps)
-- [Set-CMTSStepApplyWindowsSetting](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepApplyWindowsSetting?view=sccm-ps)
+- [Get-CMTSStepApplyWindowsSetting](/powershell/module/configurationmanager/Get-CMTSStepApplyWindowsSetting?view=sccm-ps)
+- [New-CMTSStepApplyWindowsSetting](/powershell/module/configurationmanager/Get-CMTSStepApplyWindowsSetting?view=sccm-ps)
+- [Remove-CMTSStepApplyWindowsSetting](/powershell/module/configurationmanager/Remove-CMTSStepApplyWindowsSetting?view=sccm-ps)
+- [Set-CMTSStepApplyWindowsSetting](/powershell/module/configurationmanager/Set-CMTSStepApplyWindowsSetting?view=sccm-ps)
 
 ### <a name="properties-for-apply-windows-settings"></a>Eigenschappen voor het Toep assen van Windows-instellingen
 
@@ -450,12 +450,12 @@ Configureer de volgende instellingen:
 - Terugval taal gebruikers interface
 - Land instellingen voor gebruiker
 
-Zie [micro soft-Windows-International-core](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core)(Engelstalig) voor meer informatie over deze waarden voor Windows Setup-antwoord bestanden.
+Zie [micro soft-Windows-International-core](/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core)(Engelstalig) voor meer informatie over deze waarden voor Windows Setup-antwoord bestanden.
 
 > [!NOTE]
 > Als u een aangepast Windows Setup-antwoord bestand (unattend.xml) maakt, overschrijft deze stap alle bestaande waarden. Als u een dynamisch proces voor deze instellingen wilt automatiseren, gebruikt u de gerelateerde taken reeks variabelen. Bijvoorbeeld [OSDWindowsSettingsInputLocale](task-sequence-variables.md#OSDWindowsSettingsInputLocale). 
 
-## <a name="auto-apply-drivers"></a><a name="BKMK_AutoApplyDrivers"></a>Stuur Programma's automatisch Toep assen
+## <a name="auto-apply-drivers"></a><a name="BKMK_AutoApplyDrivers"></a> Stuur Programma's automatisch Toep assen
 
 Gebruik deze stap om stuur Programma's te zoeken en te installeren als onderdeel van de implementatie van het besturings systeem.  
 
@@ -502,10 +502,10 @@ Gebruik de volgende taken reeks variabelen met deze stap:
 
 Beheer deze stap met de volgende Power shell-cmdlets:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepAutoApplyDriver](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepAutoApplyDriver?view=sccm-ps)
-- [New-CMTSStepAutoApplyDriver](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepAutoApplyDriver?view=sccm-ps)
-- [Remove-CMTSStepAutoApplyDriver](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepAutoApplyDriver?view=sccm-ps)
-- [Set-CMTSStepAutoApplyDriver](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepAutoApplyDriver?view=sccm-ps)
+- [Get-CMTSStepAutoApplyDriver](/powershell/module/configurationmanager/Get-CMTSStepAutoApplyDriver?view=sccm-ps)
+- [New-CMTSStepAutoApplyDriver](/powershell/module/configurationmanager/New-CMTSStepAutoApplyDriver?view=sccm-ps)
+- [Remove-CMTSStepAutoApplyDriver](/powershell/module/configurationmanager/Remove-CMTSStepAutoApplyDriver?view=sccm-ps)
+- [Set-CMTSStepAutoApplyDriver](/powershell/module/configurationmanager/Set-CMTSStepAutoApplyDriver?view=sccm-ps)
 
 ### <a name="properties-for-auto-apply-drivers"></a>Eigenschappen voor Stuur Programma's automatisch Toep assen
 
@@ -538,7 +538,7 @@ Met deze optie kan Windows Stuur Programma's zonder digitale hand tekening insta
 
 
 
-## <a name="capture-network-settings"></a><a name="BKMK_CaptureNetworkSettings"></a>Netwerk instellingen vastleggen
+## <a name="capture-network-settings"></a><a name="BKMK_CaptureNetworkSettings"></a> Netwerk instellingen vastleggen
 
 Gebruik deze stap om de micro soft-netwerk instellingen vast te leggen van de computer waarop de taken reeks wordt uitgevoerd. De taken reeks slaat deze instellingen op in taken reeks variabelen. Deze instellingen overschrijven de standaard instellingen die u configureert in de stap **netwerk instellingen Toep assen** .  
 
@@ -557,10 +557,10 @@ Gebruik de volgende taken reeks variabelen met deze stap:
 
 Beheer deze stap met de volgende Power shell-cmdlets:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepCaptureNetworkSettings](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepCaptureNetworkSettings?view=sccm-ps)
-- [New-CMTSStepCaptureNetworkSettings](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepCaptureNetworkSettings?view=sccm-ps)
-- [Remove-CMTSStepCaptureNetworkSettings](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepCaptureNetworkSettings?view=sccm-ps)
-- [Set-CMTSStepCaptureNetworkSettings](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepCaptureNetworkSettings?view=sccm-ps)
+- [Get-CMTSStepCaptureNetworkSettings](/powershell/module/configurationmanager/Get-CMTSStepCaptureNetworkSettings?view=sccm-ps)
+- [New-CMTSStepCaptureNetworkSettings](/powershell/module/configurationmanager/New-CMTSStepCaptureNetworkSettings?view=sccm-ps)
+- [Remove-CMTSStepCaptureNetworkSettings](/powershell/module/configurationmanager/Remove-CMTSStepCaptureNetworkSettings?view=sccm-ps)
+- [Set-CMTSStepCaptureNetworkSettings](/powershell/module/configurationmanager/Set-CMTSStepCaptureNetworkSettings?view=sccm-ps)
 
 ### <a name="properties-for-capture-network-settings"></a>Eigenschappen voor het vastleggen van netwerk instellingen
 
@@ -580,7 +580,7 @@ Hiermee wordt de netwerkadapterconfiguratie van de doelcomputer vastgelegd. De v
 
 
 
-## <a name="capture-operating-system-image"></a><a name="BKMK_CaptureOperatingSystemImage"></a>Installatie kopie van het besturings systeem vastleggen
+## <a name="capture-operating-system-image"></a><a name="BKMK_CaptureOperatingSystemImage"></a> Installatie kopie van het besturings systeem vastleggen
 
 In deze stap worden een of meer installatie kopieën van een referentie computer vastgelegd. De taken reeks maakt een Windows-installatie kopie bestand (. Wim) op de opgegeven netwerk share. Gebruik vervolgens de wizard **installatie kopie pakket van besturings systeem toevoegen** om deze installatie kopie te importeren in Configuration Manager voor besturingssysteem implementaties op basis van een installatie kopie.  
 
@@ -610,10 +610,10 @@ Gebruik de volgende taken reeks variabelen met deze stap:
 
 Beheer deze stap met de volgende Power shell-cmdlets:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepCaptureSystemImage](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepCaptureSystemImage?view=sccm-ps)
-- [New-CMTSStepCaptureSystemImage](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepCaptureSystemImage?view=sccm-ps)
-- [Remove-CMTSStepCaptureSystemImage](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepCaptureSystemImage?view=sccm-ps)
-- [Set-CMTSStepCaptureSystemImage](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepCaptureSystemImage?view=sccm-ps)
+- [Get-CMTSStepCaptureSystemImage](/powershell/module/configurationmanager/Get-CMTSStepCaptureSystemImage?view=sccm-ps)
+- [New-CMTSStepCaptureSystemImage](/powershell/module/configurationmanager/New-CMTSStepCaptureSystemImage?view=sccm-ps)
+- [Remove-CMTSStepCaptureSystemImage](/powershell/module/configurationmanager/Remove-CMTSStepCaptureSystemImage?view=sccm-ps)
+- [Set-CMTSStepCaptureSystemImage](/powershell/module/configurationmanager/Set-CMTSStepCaptureSystemImage?view=sccm-ps)
 
 ### <a name="properties-for-capture-os-image"></a>Eigenschappen voor de installatie kopie van het besturings systeem vastleggen
 
@@ -641,7 +641,7 @@ Geef het Windows-account op dat machtigingen heeft voor de opgegeven netwerk sha
 
 
 
-## <a name="capture-user-state"></a><a name="BKMK_CaptureUserState"></a>Gebruikers status vastleggen
+## <a name="capture-user-state"></a><a name="BKMK_CaptureUserState"></a> Gebruikers status vastleggen
 
 Deze stap maakt gebruik van de Hulpprogramma voor migratie van gebruikersstatus (USMT) om de gebruikers status en instellingen vast te leggen van de computer waarop de taken reeks wordt uitgevoerd. Deze takenreeksstap wordt gebruikt in combinatie met de takenreeksstap **Gebruikersstatus herstellen**. Met deze stap wordt altijd de USMT-status opslag versleuteld met behulp van een versleutelings sleutel die Configuration Manager gegenereerd en beheerd.  
 
@@ -672,10 +672,10 @@ Gebruik de volgende taken reeks variabelen met deze stap:
 
 Beheer deze stap met de volgende Power shell-cmdlets:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepCaptureUserState](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepCaptureUserState?view=sccm-ps)
-- [New-CMTSStepCaptureUserState](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepCaptureUserState?view=sccm-ps)
-- [Remove-CMTSStepCaptureUserState](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepCaptureUserState?view=sccm-ps)
-- [Set-CMTSStepCaptureUserState](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepCaptureUserState?view=sccm-ps)
+- [Get-CMTSStepCaptureUserState](/powershell/module/configurationmanager/Get-CMTSStepCaptureUserState?view=sccm-ps)
+- [New-CMTSStepCaptureUserState](/powershell/module/configurationmanager/New-CMTSStepCaptureUserState?view=sccm-ps)
+- [Remove-CMTSStepCaptureUserState](/powershell/module/configurationmanager/Remove-CMTSStepCaptureUserState?view=sccm-ps)
+- [Set-CMTSStepCaptureUserState](/powershell/module/configurationmanager/Set-CMTSStepCaptureUserState?view=sccm-ps)
 
 ### <a name="properties-for-capture-user-state"></a>Eigenschappen voor het vastleggen van de gebruikers status
 
@@ -721,7 +721,7 @@ Schakel deze optie in om een van de volgende instellingen op te geven:
 
 - **Lokaal vastleggen met koppelingen in plaats van door bestanden te kopiëren**: schakel deze instelling in om bestanden met vaste NTFS-koppelingen vast te leggen.  
 
-    Zie [hard link Migration Store (Engelstalig](https://docs.microsoft.com/windows/deployment/usmt/usmt-hard-link-migration-store)) voor meer informatie over het migreren van gegevens met behulp van vaste koppelingen.  
+    Zie [hard link Migration Store (Engelstalig](/windows/deployment/usmt/usmt-hard-link-migration-store)) voor meer informatie over het migreren van gegevens met behulp van vaste koppelingen.  
 
 - **Vastleggen in offline modus (alleen Windows PE)**: Schakel deze instelling in om de gebruikers status vast te leggen in Windows PE in plaats van het volledige besturings systeem.  
 
@@ -731,7 +731,7 @@ Met deze optie kunt u bestanden vastleggen, zelfs als deze zijn vergrendeld voor
 
 
 
-## <a name="capture-windows-settings"></a><a name="BKMK_CaptureWindowsSettings"></a>Windows-instellingen vastleggen
+## <a name="capture-windows-settings"></a><a name="BKMK_CaptureWindowsSettings"></a> Windows-instellingen vastleggen
 
 Gebruik deze stap om de Windows-instellingen vast te leggen van de computer waarop de taken reeks wordt uitgevoerd. De taken reeks slaat deze instellingen op in taken reeks variabelen. Deze vastgelegde instellingen overschrijven de standaard instellingen die u configureert in de stap **Windows-instellingen Toep assen** .  
 
@@ -754,10 +754,10 @@ Gebruik de volgende taken reeks variabelen met deze stap:
 
 Beheer deze stap met de volgende Power shell-cmdlets:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepCaptureWindowsSettings](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepCaptureWindowsSettings?view=sccm-ps)
-- [New-CMTSStepCaptureWindowsSettings](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepCaptureWindowsSettings?view=sccm-ps)
-- [Remove-CMTSStepCaptureWindowsSettings](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepCaptureWindowsSettings?view=sccm-ps)
-- [Set-CMTSStepCaptureWindowsSettings](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepCaptureWindowsSettings?view=sccm-ps)
+- [Get-CMTSStepCaptureWindowsSettings](/powershell/module/configurationmanager/Get-CMTSStepCaptureWindowsSettings?view=sccm-ps)
+- [New-CMTSStepCaptureWindowsSettings](/powershell/module/configurationmanager/New-CMTSStepCaptureWindowsSettings?view=sccm-ps)
+- [Remove-CMTSStepCaptureWindowsSettings](/powershell/module/configurationmanager/Remove-CMTSStepCaptureWindowsSettings?view=sccm-ps)
+- [Set-CMTSStepCaptureWindowsSettings](/powershell/module/configurationmanager/Set-CMTSStepCaptureWindowsSettings?view=sccm-ps)
 
 ### <a name="properties-for-capture-windows-settings"></a>Eigenschappen voor het vastleggen van Windows-instellingen
 
@@ -776,7 +776,7 @@ Leg de geregistreerde namen van de gebruiker en organisatie vast van de computer
 Leg de tijd zone-instelling op de computer vast.  
 
 
-## <a name="check-readiness"></a><a name="BKMK_CheckReadiness"></a>Gereedheid controleren
+## <a name="check-readiness"></a><a name="BKMK_CheckReadiness"></a> Gereedheid controleren
 
 Gebruik deze stap om te controleren of de doel computer voldoet aan de opgegeven voor waarden voor de implementatie vereisten.  
 
@@ -822,10 +822,10 @@ Gebruik de volgende taken reeks variabelen met deze stap:
 
 Beheer deze stap met de volgende Power shell-cmdlets:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepPrestartCheck](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepPrestartCheck?view=sccm-ps)
-- [New-CMTSStepPrestartCheck](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepPrestartCheck?view=sccm-ps)
-- [Remove-CMTSStepPrestartCheck](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepPrestartCheck?view=sccm-ps)
-- [Set-CMTSStepPrestartCheck](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepPrestartCheck?view=sccm-ps)
+- [Get-CMTSStepPrestartCheck](/powershell/module/configurationmanager/Get-CMTSStepPrestartCheck?view=sccm-ps)
+- [New-CMTSStepPrestartCheck](/powershell/module/configurationmanager/New-CMTSStepPrestartCheck?view=sccm-ps)
+- [Remove-CMTSStepPrestartCheck](/powershell/module/configurationmanager/Remove-CMTSStepPrestartCheck?view=sccm-ps)
+- [Set-CMTSStepPrestartCheck](/powershell/module/configurationmanager/Set-CMTSStepPrestartCheck?view=sccm-ps)
 
 ### <a name="properties-for-check-readiness"></a>Eigenschappen voor de gereedheid controleren
 
@@ -886,7 +886,7 @@ Bepaal vanaf versie 2006 of het apparaat is geconfigureerd voor UEFI of BIOS.
 
 
 
-## <a name="connect-to-network-folder"></a><a name="BKMK_ConnectToNetworkFolder"></a>Verbinding maken met netwerkmap
+## <a name="connect-to-network-folder"></a><a name="BKMK_ConnectToNetworkFolder"></a> Verbinding maken met netwerkmap
 
 Gebruik deze stap om een verbinding te maken met een gedeelde netwerkmap.  
 
@@ -907,10 +907,10 @@ Gebruik de volgende taken reeks variabelen met deze stap:
 
 Beheer deze stap met de volgende Power shell-cmdlets:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepConnectNetworkFolder](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepConnectNetworkFolder?view=sccm-ps)
-- [New-CMTSStepConnectNetworkFolder](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepConnectNetworkFolder?view=sccm-ps)
-- [Remove-CMTSStepConnectNetworkFolder](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepConnectNetworkFolder?view=sccm-ps)
-- [Set-CMTSStepConnectNetworkFolder](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepConnectNetworkFolder?view=sccm-ps)
+- [Get-CMTSStepConnectNetworkFolder](/powershell/module/configurationmanager/Get-CMTSStepConnectNetworkFolder?view=sccm-ps)
+- [New-CMTSStepConnectNetworkFolder](/powershell/module/configurationmanager/New-CMTSStepConnectNetworkFolder?view=sccm-ps)
+- [Remove-CMTSStepConnectNetworkFolder](/powershell/module/configurationmanager/Remove-CMTSStepConnectNetworkFolder?view=sccm-ps)
+- [Set-CMTSStepConnectNetworkFolder](/powershell/module/configurationmanager/Set-CMTSStepConnectNetworkFolder?view=sccm-ps)
 
 ### <a name="properties-for-connect-to-network-folder"></a>Eigenschappen voor verbinding maken met netwerkmap
 
@@ -930,7 +930,7 @@ Selecteer **instellen** om het gebruikers account op te geven met machtigingen o
 
 
 
-## <a name="disable-bitlocker"></a><a name="BKMK_DisableBitLocker"></a>BitLocker uitschakelen
+## <a name="disable-bitlocker"></a><a name="BKMK_DisableBitLocker"></a> BitLocker uitschakelen
 
 Gebruik deze stap om BitLocker-versleuteling uit te scha kelen op het huidige besturingssysteem station of op een specifiek station. Met deze actie blijven de sleutel beveiligingen zichtbaar in Lees bare tekst op de vaste schijf. De inhoud van het station wordt niet ontsleuteld. Deze actie is bijna onmiddellijk voltooid.  
 
@@ -954,10 +954,10 @@ Met ingang van versie 1906 gebruikt u de volgende taken reeks variabelen met dez
 
 Beheer deze stap met de volgende Power shell-cmdlets:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepDisableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepDisableBitLocker?view=sccm-ps)
-- [New-CMTSStepDisableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepDisableBitLocker?view=sccm-ps)
-- [Remove-CMTSStepDisableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepDisableBitLocker?view=sccm-ps)
-- [Set-CMTSStepDisableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepDisableBitLocker?view=sccm-ps)
+- [Get-CMTSStepDisableBitLocker](/powershell/module/configurationmanager/Get-CMTSStepDisableBitLocker?view=sccm-ps)
+- [New-CMTSStepDisableBitLocker](/powershell/module/configurationmanager/New-CMTSStepDisableBitLocker?view=sccm-ps)
+- [Remove-CMTSStepDisableBitLocker](/powershell/module/configurationmanager/Remove-CMTSStepDisableBitLocker?view=sccm-ps)
+- [Set-CMTSStepDisableBitLocker](/powershell/module/configurationmanager/Set-CMTSStepDisableBitLocker?view=sccm-ps)
 
 ### <a name="properties-for-disable-bitlocker"></a>Eigenschappen voor uitschakelen van BitLocker
 
@@ -979,7 +979,7 @@ Met ingang van versie 1906, gebruikt u deze optie om het aantal herstartingen op
 U kunt dit gedrag instellen en wijzigen met behulp van de taken reeks variabelen [OSDBitLockerRebootCount](task-sequence-variables.md#OSDBitLockerRebootCount) en [OSDBitLockerRebootCountOverride](task-sequence-variables.md#OSDBitLockerRebootCountOverride).
 
 
-## <a name="download-package-content"></a><a name="BKMK_DownloadPackageContent"></a>Pakket inhoud downloaden
+## <a name="download-package-content"></a><a name="BKMK_DownloadPackageContent"></a> Pakket inhoud downloaden
 
 Gebruik deze stap om een van de volgende pakket typen te downloaden:  
 
@@ -1009,10 +1009,10 @@ Als u deze stap wilt toevoegen in de taken reeks editor, selecteert u **toevoege
 
 Beheer deze stap met de volgende Power shell-cmdlets:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepDownloadPackageContent](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepDownloadPackageContent?view=sccm-ps)
-- [New-CMTSStepDownloadPackageContent](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepDownloadPackageContent?view=sccm-ps)
-- [Remove-CMTSStepDownloadPackageContent](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepDownloadPackageContent?view=sccm-ps)
-- [Set-CMTSStepDownloadPackageContent](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepDownloadPackageContent?view=sccm-ps)
+- [Get-CMTSStepDownloadPackageContent](/powershell/module/configurationmanager/Get-CMTSStepDownloadPackageContent?view=sccm-ps)
+- [New-CMTSStepDownloadPackageContent](/powershell/module/configurationmanager/New-CMTSStepDownloadPackageContent?view=sccm-ps)
+- [Remove-CMTSStepDownloadPackageContent](/powershell/module/configurationmanager/Remove-CMTSStepDownloadPackageContent?view=sccm-ps)
+- [Set-CMTSStepDownloadPackageContent](/powershell/module/configurationmanager/Set-CMTSStepDownloadPackageContent?view=sccm-ps)
 
 ### <a name="properties-for-download-package-content"></a>Eigenschappen voor pakket inhoud downloaden
 
@@ -1042,7 +1042,7 @@ Configuration Manager voegt een numeriek achtervoegsel toe aan de naam van de va
 
 Als de taken reeks een pakket niet kan downloaden, begint het met het downloaden van het volgende pakket in de lijst.  
 
-### <a name="note-1-use-of-boot-images-in-the-download-package-content-step"></a><a name="bkmk_note1"></a>Opmerking 1: het gebruik van opstart installatie kopieën in de stap pakket inhoud downloaden
+### <a name="note-1-use-of-boot-images-in-the-download-package-content-step"></a><a name="bkmk_note1"></a> Opmerking 1: het gebruik van opstart installatie kopieën in de stap pakket inhoud downloaden
 
 *Van toepassing op versie 1910 en hoger*<!-- SCCMDocs-pr #4202 -->
 
@@ -1061,7 +1061,7 @@ Als u de [taken reeks eigenschappen](../deploy-use/manage-task-sequences-to-auto
   - Er wordt in de eigenschappen van een opstart installatie kopie verwezen.
   - Er zijn meerdere exemplaren van deze taken reeks, met verschillende installatie kopieën die nodig zijn voor de architectuur en taal
 
-## <a name="enable-bitlocker"></a><a name="BKMK_EnableBitLocker"></a>BitLocker inschakelen
+## <a name="enable-bitlocker"></a><a name="BKMK_EnableBitLocker"></a> BitLocker inschakelen
 
 BitLocker-stationsversleuteling biedt versleuteling op laag niveau van de inhoud van een schijfvolume. Gebruik deze stap om BitLocker-versleuteling in te scha kelen op ten minste twee partities op de harde schijf. De eerste actieve partitie bevat de Windows-bootstrapcode. Een andere partitie bevat het besturings systeem. De bootstrappartitie moet onversleuteld blijven.  
 
@@ -1103,10 +1103,10 @@ Gebruik de volgende taken reeks variabelen met deze stap:
 
 Beheer deze stap met de volgende Power shell-cmdlets:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepEnableBitLocker?view=sccm-ps)
-- [New-CMTSStepEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepEnableBitLocker?view=sccm-ps)
-- [Remove-CMTSStepEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepEnableBitLocker?view=sccm-ps)
-- [Set-CMTSStepEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepEnableBitLocker?view=sccm-ps)
+- [Get-CMTSStepEnableBitLocker](/powershell/module/configurationmanager/Get-CMTSStepEnableBitLocker?view=sccm-ps)
+- [New-CMTSStepEnableBitLocker](/powershell/module/configurationmanager/New-CMTSStepEnableBitLocker?view=sccm-ps)
+- [Remove-CMTSStepEnableBitLocker](/powershell/module/configurationmanager/Remove-CMTSStepEnableBitLocker?view=sccm-ps)
+- [Set-CMTSStepEnableBitLocker](/powershell/module/configurationmanager/Set-CMTSStepEnableBitLocker?view=sccm-ps)
 
 ### <a name="properties-for-enable-bitlocker"></a>Eigenschappen voor inschakelen van BitLocker
 
@@ -1162,7 +1162,7 @@ Het versleutelings proces kan uren duren wanneer een grote harde schijf wordt ve
 Selecteer met ingang van versie 2006 deze optie om stationsversleuteling over te slaan op een computer die geen ondersteunde of ingeschakelde TPM bevat. Gebruik deze optie bijvoorbeeld wanneer u een besturings systeem implementeert op een virtuele machine. Deze instelling is standaard uitgeschakeld voor de stap **BitLocker inschakelen** . Als u deze instelling inschakelt en het apparaat heeft geen functionele TPM, registreert de taken reeks engine een fout in bestand smsts. log en verzendt status bericht 11912. De taken reeks gaat verder dan deze stap.
 
 
-## <a name="format-and-partition-disk"></a><a name="BKMK_FormatandPartitionDisk"></a>Schijf Format teren en partitioneren
+## <a name="format-and-partition-disk"></a><a name="BKMK_FormatandPartitionDisk"></a> Schijf Format teren en partitioneren
 
 Gebruik deze stap om een opgegeven schijf op de doel computer te Format teren en te partitioneren.  
 
@@ -1186,10 +1186,10 @@ Gebruik de volgende taken reeks variabelen met deze stap:
 
 Beheer deze stap met de volgende Power shell-cmdlets:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepPartitionDisk](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtssteppartitiondisk?view=sccm-ps)
-- [New-CMTSStepPartitionDisk](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtssteppartitiondisk?view=sccm-ps)
-- [Remove-CMTSStepPartitionDisk](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtssteppartitiondisk?view=sccm-ps)
-- [Set-CMTSStepPartitionDisk](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtssteppartitiondisk?view=sccm-ps)
+- [Get-CMTSStepPartitionDisk](/powershell/module/configurationmanager/get-cmtssteppartitiondisk?view=sccm-ps)
+- [New-CMTSStepPartitionDisk](/powershell/module/configurationmanager/new-cmtssteppartitiondisk?view=sccm-ps)
+- [Remove-CMTSStepPartitionDisk](/powershell/module/configurationmanager/remove-cmtssteppartitiondisk?view=sccm-ps)
+- [Set-CMTSStepPartitionDisk](/powershell/module/configurationmanager/set-cmtssteppartitiondisk?view=sccm-ps)
 
 ### <a name="properties-for-format-and-partition-disk"></a>Eigenschappen voor Format teren en partitioneren schijf
 
@@ -1210,8 +1210,8 @@ Als u deze eigenschap selecteert, voert u een naam in voor de aangepaste variabe
 In de volgende model stappen ziet u een voor beeld:
 
 - **Power shell-script uitvoeren**: een aangepast script voor het verzamelen van doel schijven
-  - Sets `myOSDisk` op`1`
-  - Sets `myDataDisk` op`2`
+  - Sets `myOSDisk` op `1`
+  - Sets `myDataDisk` op `2`
 
 - **Schijf Format teren en partitioneren** voor besturingssysteem schijf: `myOSDisk` variabele opgeven
   - Schijf 1 als de systeem schijf configureren
@@ -1243,14 +1243,14 @@ Specifieke informatie over de partitie of het volume dat door de taken reeks wor
 
 Als u een nieuwe partitie wilt maken, selecteert u **Nieuw** om het dialoog venster **partitie-eigenschappen** te openen. Geef het partitie type en de grootte op en als het een opstart partitie is. Als u een bestaande partitie wilt wijzigen, selecteert u de te wijzigen partitie en selecteert u vervolgens de **Eigenschappen** knop. Zie een van de volgende artikelen voor meer informatie over het configureren van partities voor harde schijven:  
 
-- [Partities op basis van UEFI/GPT-schijven](https://docs.microsoft.com/windows-hardware/manufacture/desktop/configure-uefigpt-based-hard-drive-partitions)  
-- [Partities op basis van BIOS/MBR-schijven](https://docs.microsoft.com/windows-hardware/manufacture/desktop/configure-biosmbr-based-hard-drive-partitions)  
+- [Partities op basis van UEFI/GPT-schijven](/windows-hardware/manufacture/desktop/configure-uefigpt-based-hard-drive-partitions)  
+- [Partities op basis van BIOS/MBR-schijven](/windows-hardware/manufacture/desktop/configure-biosmbr-based-hard-drive-partitions)  
 
 Als u een partitie wilt verwijderen, kiest u de partitie en selecteert u vervolgens **verwijderen**.  
 
 
 
-## <a name="install-application"></a><a name="BKMK_InstallApplication"></a>Toepassing installeren
+## <a name="install-application"></a><a name="BKMK_InstallApplication"></a> Toepassing installeren
 
 Met deze stap worden de opgegeven toepassingen geïnstalleerd, of een set toepassingen die is gedefinieerd door een dynamische lijst met taken reeks variabelen. Wanneer de taken reeks deze stap uitvoert, begint de installatie van de toepassing onmiddellijk zonder te wachten op een polling-interval voor beleid.  
 
@@ -1295,10 +1295,10 @@ Gebruik de volgende taken reeks variabelen met deze stap:
 
 Beheer deze stap met de volgende Power shell-cmdlets:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepInstallApplication](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepinstallapplication?view=sccm-ps)
-- [New-CMTSStepInstallApplication](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepinstallapplication?view=sccm-ps)
-- [Remove-CMTSStepInstallApplication](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepinstallapplication?view=sccm-ps)
-- [Set-CMTSStepInstallApplication](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepinstallapplication?view=sccm-ps)
+- [Get-CMTSStepInstallApplication](/powershell/module/configurationmanager/get-cmtsstepinstallapplication?view=sccm-ps)
+- [New-CMTSStepInstallApplication](/powershell/module/configurationmanager/new-cmtsstepinstallapplication?view=sccm-ps)
+- [Remove-CMTSStepInstallApplication](/powershell/module/configurationmanager/remove-cmtsstepinstallapplication?view=sccm-ps)
+- [Set-CMTSStepInstallApplication](/powershell/module/configurationmanager/set-cmtsstepinstallapplication?view=sccm-ps)
 
 ### <a name="properties-for-install-application"></a>Eigenschappen voor installatie toepassing
 
@@ -1369,7 +1369,7 @@ Als de computer onverwacht opnieuw wordt opgestart door een van de toepassings i
 
 
 
-## <a name="install-package"></a><a name="BKMK_InstallPackage"></a>Pakket installeren
+## <a name="install-package"></a><a name="BKMK_InstallPackage"></a> Pakket installeren
 
 Gebruik deze stap om een software pakket te installeren als onderdeel van de taken reeks. Wanneer deze stap wordt uitgevoerd, begint de installatie onmiddellijk zonder te wachten op een polling-interval voor beleid.  
 
@@ -1408,10 +1408,10 @@ Gebruik de volgende taken reeks variabelen met deze stap:
 
 Beheer deze stap met de volgende Power shell-cmdlets:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepInstallSoftware](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepinstallsoftware?view=sccm-ps)
-- [New-CMTSStepInstallSoftware](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepinstallsoftware?view=sccm-ps)
-- [Remove-CMTSStepInstallSoftware](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepinstallsoftware?view=sccm-ps)
-- [Set-CMTSStepInstallSoftware](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepinstallsoftware?view=sccm-ps)
+- [Get-CMTSStepInstallSoftware](/powershell/module/configurationmanager/get-cmtsstepinstallsoftware?view=sccm-ps)
+- [New-CMTSStepInstallSoftware](/powershell/module/configurationmanager/new-cmtsstepinstallsoftware?view=sccm-ps)
+- [Remove-CMTSStepInstallSoftware](/powershell/module/configurationmanager/remove-cmtsstepinstallsoftware?view=sccm-ps)
+- [Set-CMTSStepInstallSoftware](/powershell/module/configurationmanager/set-cmtsstepinstallsoftware?view=sccm-ps)
 
 > [!TIP]
 > Inhoud vooraf in cache opslaan gebruiken om een toepasselijk upgrade pakket voor het besturings systeem te downloaden voordat een gebruiker de taken reeks installeert. Zie [inhoud vooraf in cache configureren](../deploy-use/configure-precache-content.md)voor meer informatie.
@@ -1464,7 +1464,7 @@ Deze instelling geeft aan dat de stap wordt voorgezet als de installatie van een
 
 
 
-## <a name="install-software-updates"></a><a name="BKMK_InstallSoftwareUpdates"></a>Software-updates installeren
+## <a name="install-software-updates"></a><a name="BKMK_InstallSoftwareUpdates"></a> Software-updates installeren
 
 Gebruik deze stap om software-updates te installeren op de doel computer. De doel computer wordt pas geëvalueerd voor toepasselijke software-updates als deze taken reeks stap wordt uitgevoerd. Op dat moment wordt de doel computer geëvalueerd voor software-updates zoals elke andere Configuration Manager-client. Voor deze stap om software-updates te installeren, moet u eerst de updates implementeren op een verzameling waarvan de doel computer lid is.  
 
@@ -1492,10 +1492,10 @@ Gebruik de volgende taken reeks variabelen met deze stap:
 
 Beheer deze stap met de volgende Power shell-cmdlets:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepInstallUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepinstallupdate?view=sccm-ps)
-- [New-CMTSStepInstallUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepinstallupdate?view=sccm-ps)
-- [Remove-CMTSStepInstallUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepinstallupdate?view=sccm-ps)
-- [Set-CMTSStepInstallUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepinstallupdate?view=sccm-ps)
+- [Get-CMTSStepInstallUpdate](/powershell/module/configurationmanager/get-cmtsstepinstallupdate?view=sccm-ps)
+- [New-CMTSStepInstallUpdate](/powershell/module/configurationmanager/new-cmtsstepinstallupdate?view=sccm-ps)
+- [Remove-CMTSStepInstallUpdate](/powershell/module/configurationmanager/remove-cmtsstepinstallupdate?view=sccm-ps)
+- [Set-CMTSStepInstallUpdate](/powershell/module/configurationmanager/set-cmtsstepinstallupdate?view=sccm-ps)
 
 Zie [software-updates installeren](install-software-updates.md)voor meer aanbevelingen en een technisch stroom diagram voor deze stap.
 
@@ -1534,7 +1534,7 @@ Als een van de updates de computer onverwacht opnieuw opstart, voert u deze stap
 
 
 
-## <a name="join-domain-or-workgroup"></a><a name="BKMK_JoinDomainorWorkgroup"></a>Lid worden van domein of werk groep
+## <a name="join-domain-or-workgroup"></a><a name="BKMK_JoinDomainorWorkgroup"></a> Lid worden van domein of werk groep
 
 Gebruik deze stap om de doel computer toe te voegen aan een werk groep of domein.  
 
@@ -1561,10 +1561,10 @@ Gebruik de volgende taken reeks variabelen met deze stap:
 
 Beheer deze stap met de volgende Power shell-cmdlets:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepJoinDomainWorkgroup](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepJoinDomainWorkgroup?view=sccm-ps)
-- [New-CMTSStepJoinDomainWorkgroup](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepJoinDomainWorkgroup?view=sccm-ps)
-- [Remove-CMTSStepJoinDomainWorkgroup](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepJoinDomainWorkgroup?view=sccm-ps)
-- [Set-CMTSStepJoinDomainWorkgroup](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepJoinDomainWorkgroup?view=sccm-ps)
+- [Get-CMTSStepJoinDomainWorkgroup](/powershell/module/configurationmanager/Get-CMTSStepJoinDomainWorkgroup?view=sccm-ps)
+- [New-CMTSStepJoinDomainWorkgroup](/powershell/module/configurationmanager/New-CMTSStepJoinDomainWorkgroup?view=sccm-ps)
+- [Remove-CMTSStepJoinDomainWorkgroup](/powershell/module/configurationmanager/Remove-CMTSStepJoinDomainWorkgroup?view=sccm-ps)
+- [Set-CMTSStepJoinDomainWorkgroup](/powershell/module/configurationmanager/Set-CMTSStepJoinDomainWorkgroup?view=sccm-ps)
 
 ### <a name="properties-for-join-domain-or-workgroup"></a>Eigenschappen voor lid van domein of werk groep
 
@@ -1582,11 +1582,11 @@ Typ optioneel een organisatie-eenheid (OE) of blader ernaartoe in het opgegeven 
 
 #### <a name="enter-the-account-which-has-permission-to-join-the-domain"></a>Voer het account in dat is gemachtigd om lid te worden van het domein.
 
-Selecteer **instellen** om de gebruikers naam en het wacht woord in te voeren voor een account met machtigingen om lid te worden van het domein. Voer het account in met de volgende indeling: `Domain\account` . Zie [accounts](../../core/plan-design/hierarchy/accounts.md#task-sequence-domain-join-account)voor meer informatie over het domein voor het samen voegen van taken reeksen.  
+Selecteer **instellen** om de gebruikers naam en het wacht woord in te voeren voor een account met machtigingen om lid te worden van het domein. Voer het account in met de volgende indeling:  `Domain\account` . Zie [accounts](../../core/plan-design/hierarchy/accounts.md#task-sequence-domain-join-account)voor meer informatie over het domein voor het samen voegen van taken reeksen.  
 
 
 
-## <a name="prepare-configmgr-client-for-capture"></a><a name="BKMK_PrepareConfigMgrClientforCapture"></a>ConfigMgr-client voorbereiden voor vastleggen
+## <a name="prepare-configmgr-client-for-capture"></a><a name="BKMK_PrepareConfigMgrClientforCapture"></a> ConfigMgr-client voorbereiden voor vastleggen
 
 Met deze stap kunt u de Configuration Manager-client op de referentie computer verwijderen of configureren. Met deze actie wordt de computer voor bereid voor vastleggen als onderdeel van het installatie kopie proces.
 
@@ -1603,14 +1603,14 @@ Als u deze stap wilt toevoegen in de taken reeks editor, selecteert u **toevoege
 
 Beheer deze stap met de volgende Power shell-cmdlets:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepPrepareConfigMgrClient](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepPrepareConfigMgrClient?view=sccm-ps)
-- [New-CMTSStepPrepareConfigMgrClient](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepPrepareConfigMgrClient?view=sccm-ps)
-- [Remove-CMTSStepPrepareConfigMgrClient](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepPrepareConfigMgrClient?view=sccm-ps)
-- [Set-CMTSStepPrepareConfigMgrClient](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepPrepareConfigMgrClient?view=sccm-ps)
+- [Get-CMTSStepPrepareConfigMgrClient](/powershell/module/configurationmanager/Get-CMTSStepPrepareConfigMgrClient?view=sccm-ps)
+- [New-CMTSStepPrepareConfigMgrClient](/powershell/module/configurationmanager/New-CMTSStepPrepareConfigMgrClient?view=sccm-ps)
+- [Remove-CMTSStepPrepareConfigMgrClient](/powershell/module/configurationmanager/Remove-CMTSStepPrepareConfigMgrClient?view=sccm-ps)
+- [Set-CMTSStepPrepareConfigMgrClient](/powershell/module/configurationmanager/Set-CMTSStepPrepareConfigMgrClient?view=sccm-ps)
 
 
 
-## <a name="prepare-windows-for-capture"></a><a name="BKMK_PrepareWindowsforCapture"></a>Windows voorbereiden voor vastleggen
+## <a name="prepare-windows-for-capture"></a><a name="BKMK_PrepareWindowsforCapture"></a> Windows voorbereiden voor vastleggen
 
 Gebruik deze stap om de Sysprep-opties op te geven bij het vastleggen van een installatie kopie van een besturings systeem op de referentie computer. Met deze stap wordt Sysprep uitgevoerd en wordt de computer opnieuw opgestart naar de opstart installatie kopie voor Windows PE die is opgegeven voor de taken reeks. Deze actie mislukt als de referentie computer lid is van een domein.  
 
@@ -1629,10 +1629,10 @@ Gebruik de volgende taken reeks variabelen met deze stap:
 
 Beheer deze stap met de volgende Power shell-cmdlets:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepPrepareWindows](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepPrepareWindows?view=sccm-ps)
-- [New-CMTSStepPrepareWindows](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepPrepareWindows?view=sccm-ps)
-- [Remove-CMTSStepPrepareWindows](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepPrepareWindows?view=sccm-ps)
-- [Set-CMTSStepPrepareWindows](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepPrepareWindows?view=sccm-ps)
+- [Get-CMTSStepPrepareWindows](/powershell/module/configurationmanager/Get-CMTSStepPrepareWindows?view=sccm-ps)
+- [New-CMTSStepPrepareWindows](/powershell/module/configurationmanager/New-CMTSStepPrepareWindows?view=sccm-ps)
+- [Remove-CMTSStepPrepareWindows](/powershell/module/configurationmanager/Remove-CMTSStepPrepareWindows?view=sccm-ps)
+- [Set-CMTSStepPrepareWindows](/powershell/module/configurationmanager/Set-CMTSStepPrepareWindows?view=sccm-ps)
 
 ### <a name="properties-for-prepare-windows-for-capture"></a>Eigenschappen voor het voorbereiden van Windows voor vastleggen
 
@@ -1659,7 +1659,7 @@ De taken reeks [Windows auto pilot voor bestaande apparaten](../../../autopilot/
 
 
 
-## <a name="pre-provision-bitlocker"></a><a name="BKMK_PreProvisionBitLocker"></a>BitLocker vooraf inrichten
+## <a name="pre-provision-bitlocker"></a><a name="BKMK_PreProvisionBitLocker"></a> BitLocker vooraf inrichten
 
 Gebruik deze stap om BitLocker in te scha kelen op een station in Windows PE. Standaard wordt alleen de gebruikte schijf ruimte versleuteld, zodat de versleutelings tijden veel sneller zijn. U past de sleutel beheer opties toe met behulp van de stap [BitLocker inschakelen](#BKMK_EnableBitLocker) nadat het besturings systeem is geïnstalleerd.
 
@@ -1674,10 +1674,10 @@ Als u deze stap wilt toevoegen in de taken reeks editor, selecteert u **toevoege
 
 Beheer deze stap met de volgende Power shell-cmdlets:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepOfflineEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepOfflineEnableBitLocker?view=sccm-ps)
-- [New-CMTSStepOfflineEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepOfflineEnableBitLocker?view=sccm-ps)
-- [Remove-CMTSStepOfflineEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepOfflineEnableBitLocker?view=sccm-ps)
-- [Set-CMTSStepOfflineEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepOfflineEnableBitLocker?view=sccm-ps)
+- [Get-CMTSStepOfflineEnableBitLocker](/powershell/module/configurationmanager/Get-CMTSStepOfflineEnableBitLocker?view=sccm-ps)
+- [New-CMTSStepOfflineEnableBitLocker](/powershell/module/configurationmanager/New-CMTSStepOfflineEnableBitLocker?view=sccm-ps)
+- [Remove-CMTSStepOfflineEnableBitLocker](/powershell/module/configurationmanager/Remove-CMTSStepOfflineEnableBitLocker?view=sccm-ps)
+- [Set-CMTSStepOfflineEnableBitLocker](/powershell/module/configurationmanager/Set-CMTSStepOfflineEnableBitLocker?view=sccm-ps)
 
 ### <a name="properties-for-pre-provision-bitlocker"></a>Eigenschappen voor BitLocker vooraf inrichten
 
@@ -1710,7 +1710,7 @@ Selecteer deze optie om stationsversleuteling over te slaan op een computer die 
 
 
 
-## <a name="release-state-store"></a><a name="BKMK_ReleaseStateStore"></a>Status opslag vrijgeven
+## <a name="release-state-store"></a><a name="BKMK_ReleaseStateStore"></a> Status opslag vrijgeven
 
 Gebruik deze stap om het status migratie punt te informeren dat de vastleg-of herstel actie is voltooid. Gebruik deze stap in combi natie met de stappen **status opslag opvragen**, **gebruikers toestand vastleggen**en **gebruikers status herstellen** . U kunt deze stappen gebruiken om gebruikers status gegevens te migreren met behulp van een status migratie punt en de Hulpprogramma voor migratie van gebruikersstatus (USMT).  
 
@@ -1737,10 +1737,10 @@ Gebruik de volgende taken reeks variabelen met deze stap:
 
 Beheer deze stap met de volgende Power shell-cmdlets:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepReleaseStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepReleaseStateStore?view=sccm-ps)
-- [New-CMTSStepReleaseStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepReleaseStateStore?view=sccm-ps)
-- [Remove-CMTSStepReleaseStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepReleaseStateStore?view=sccm-ps)
-- [Set-CMTSStepReleaseStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepReleaseStateStore?view=sccm-ps)
+- [Get-CMTSStepReleaseStateStore](/powershell/module/configurationmanager/Get-CMTSStepReleaseStateStore?view=sccm-ps)
+- [New-CMTSStepReleaseStateStore](/powershell/module/configurationmanager/New-CMTSStepReleaseStateStore?view=sccm-ps)
+- [Remove-CMTSStepReleaseStateStore](/powershell/module/configurationmanager/Remove-CMTSStepReleaseStateStore?view=sccm-ps)
+- [Set-CMTSStepReleaseStateStore](/powershell/module/configurationmanager/Set-CMTSStepReleaseStateStore?view=sccm-ps)
 
 ### <a name="properties-for-release-state-store"></a>Eigenschappen voor status opslag vrijgeven
 
@@ -1748,7 +1748,7 @@ Voor deze stap zijn geen instellingen vereist op het tabblad **Eigenschappen** .
 
 
 
-## <a name="request-state-store"></a><a name="BKMK_RequestStateStore"></a>Status opslag opvragen
+## <a name="request-state-store"></a><a name="BKMK_RequestStateStore"></a> Status opslag opvragen
 
 Gebruik deze stap om toegang aan te vragen tot een status migratie punt bij het vastleggen of herstellen van de status.  
 
@@ -1776,10 +1776,10 @@ Gebruik de volgende taken reeks variabelen met deze stap:
 
 Beheer deze stap met de volgende Power shell-cmdlets:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepRequestStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepRequestStateStore?view=sccm-ps)
-- [New-CMTSStepRequestStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepRequestStateStore?view=sccm-ps)
-- [Remove-CMTSStepRequestStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepRequestStateStore?view=sccm-ps)
-- [Set-CMTSStepRequestStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepRequestStateStore?view=sccm-ps)
+- [Get-CMTSStepRequestStateStore](/powershell/module/configurationmanager/Get-CMTSStepRequestStateStore?view=sccm-ps)
+- [New-CMTSStepRequestStateStore](/powershell/module/configurationmanager/New-CMTSStepRequestStateStore?view=sccm-ps)
+- [Remove-CMTSStepRequestStateStore](/powershell/module/configurationmanager/Remove-CMTSStepRequestStateStore?view=sccm-ps)
+- [Set-CMTSStepRequestStateStore](/powershell/module/configurationmanager/Set-CMTSStepRequestStateStore?view=sccm-ps)
 
 ### <a name="properties-for-request-state-store"></a>Eigenschappen voor aanvraag status opslag
 
@@ -1811,7 +1811,7 @@ Als de taken reeks geen toegang heeft tot het status migratie punt met behulp va
 
 
 
-## <a name="restart-computer"></a><a name="BKMK_RestartComputer"></a>Computer opnieuw opstarten
+## <a name="restart-computer"></a><a name="BKMK_RestartComputer"></a> Computer opnieuw opstarten
 
 Gebruik deze stap om de computer waarop de taken reeks wordt uitgevoerd opnieuw op te starten. Na het opnieuw opstarten gaat de computer automatisch door met de volgende stap in de taken reeks.  
 
@@ -1830,10 +1830,10 @@ Gebruik de volgende taken reeks variabelen met deze stap:
 
 Beheer deze stap met de volgende Power shell-cmdlets:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepReboot](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepreboot?view=sccm-ps)
-- [New-CMTSStepReboot](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepreboot?view=sccm-ps)
-- [Remove-CMTSStepReboot](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepreboot?view=sccm-ps)
-- [Set-CMTSStepReboot](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepreboot?view=sccm-ps)
+- [Get-CMTSStepReboot](/powershell/module/configurationmanager/get-cmtsstepreboot?view=sccm-ps)
+- [New-CMTSStepReboot](/powershell/module/configurationmanager/new-cmtsstepreboot?view=sccm-ps)
+- [Remove-CMTSStepReboot](/powershell/module/configurationmanager/remove-cmtsstepreboot?view=sccm-ps)
+- [Set-CMTSStepReboot](/powershell/module/configurationmanager/set-cmtsstepreboot?view=sccm-ps)
 
 ### <a name="properties-for-restart-computer"></a>Eigenschappen voor computer opnieuw opstarten
 
@@ -1861,7 +1861,7 @@ Geef de hoeveelheid tijd in seconden op waarna de doel computer opnieuw wordt op
 
 
 
-## <a name="restore-user-state"></a><a name="BKMK_RestoreUserState"></a>Gebruikers status herstellen
+## <a name="restore-user-state"></a><a name="BKMK_RestoreUserState"></a> Gebruikers status herstellen
 
 Gebruik deze stap om de Hulpprogramma voor migratie van gebruikersstatus (USMT) te initiëren voor het herstellen van de gebruikers status en-instellingen naar de doel computer. U gebruikt deze stap in combi natie met de stap **gebruikers status vastleggen** .  
 
@@ -1894,10 +1894,10 @@ Gebruik de volgende taken reeks variabelen met deze stap:
 
 Beheer deze stap met de volgende Power shell-cmdlets:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepRestoreUserState](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepRestoreUserState?view=sccm-ps)
-- [New-CMTSStepRestoreUserState](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepRestoreUserState?view=sccm-ps)
-- [Remove-CMTSStepRestoreUserState](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepRestoreUserState?view=sccm-ps)
-- [Set-CMTSStepRestoreUserState](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepRestoreUserState?view=sccm-ps)
+- [Get-CMTSStepRestoreUserState](/powershell/module/configurationmanager/Get-CMTSStepRestoreUserState?view=sccm-ps)
+- [New-CMTSStepRestoreUserState](/powershell/module/configurationmanager/New-CMTSStepRestoreUserState?view=sccm-ps)
+- [Remove-CMTSStepRestoreUserState](/powershell/module/configurationmanager/Remove-CMTSStepRestoreUserState?view=sccm-ps)
+- [Set-CMTSStepRestoreUserState](/powershell/module/configurationmanager/Set-CMTSStepRestoreUserState?view=sccm-ps)
 
 ### <a name="properties-for-restore-user-state"></a>Eigenschappen voor Restore User State
 
@@ -1929,7 +1929,7 @@ Schakel deze optie in om meer gedetailleerde informatie in het logboekbestand te
 
 
 
-## <a name="run-command-line"></a><a name="BKMK_RunCommandLine"></a>Opdracht regel uitvoeren
+## <a name="run-command-line"></a><a name="BKMK_RunCommandLine"></a> Opdracht regel uitvoeren
 
 Gebruik deze stap om de opgegeven opdracht regel uit te voeren.  
 
@@ -1958,10 +1958,10 @@ Gebruik de volgende taken reeks variabelen met deze stap:
 
 Beheer deze stap met de volgende Power shell-cmdlets:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepRunCommandLine](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepruncommandline?view=sccm-ps)
-- [New-CMTSStepRunCommandLine](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepruncommandline?view=sccm-ps)
-- [Remove-CMTSStepRunCommandLine](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepruncommandline?view=sccm-ps)
-- [Set-CMTSStepRunCommandLine](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepruncommandline?view=sccm-ps)
+- [Get-CMTSStepRunCommandLine](/powershell/module/configurationmanager/get-cmtsstepruncommandline?view=sccm-ps)
+- [New-CMTSStepRunCommandLine](/powershell/module/configurationmanager/new-cmtsstepruncommandline?view=sccm-ps)
+- [Remove-CMTSStepRunCommandLine](/powershell/module/configurationmanager/remove-cmtsstepruncommandline?view=sccm-ps)
+- [Set-CMTSStepRunCommandLine](/powershell/module/configurationmanager/set-cmtsstepruncommandline?view=sccm-ps)
 
 ### <a name="properties-for-run-command-line"></a>Eigenschappen voor opdracht regel uitvoeren
 
@@ -2043,7 +2043,7 @@ Neem andere afsluit codes op uit het script dat door de stap als geslaagd moet w
 
 
 
-## <a name="run-powershell-script"></a><a name="BKMK_RunPowerShellScript"></a>Power shell-script uitvoeren
+## <a name="run-powershell-script"></a><a name="BKMK_RunPowerShellScript"></a> Power shell-script uitvoeren
 
 Gebruik deze stap om het opgegeven Windows Power shell-script uit te voeren.  
 
@@ -2076,10 +2076,10 @@ Gebruik de volgende taken reeks variabelen met deze stap:
 
 Beheer deze stap met de volgende Power shell-cmdlets:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepRunPowerShellScript](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtssteprunpowershellscript?view=sccm-ps)
-- [New-CMTSStepRunPowerShellScript](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtssteprunpowershellscript?view=sccm-ps)
-- [Remove-CMTSStepRunPowerShellScript](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtssteprunpowershellscript?view=sccm-ps)
-- [Set-CMTSStepRunPowerShellScript](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtssteprunpowershellscript?view=sccm-ps)
+- [Get-CMTSStepRunPowerShellScript](/powershell/module/configurationmanager/get-cmtssteprunpowershellscript?view=sccm-ps)
+- [New-CMTSStepRunPowerShellScript](/powershell/module/configurationmanager/new-cmtssteprunpowershellscript?view=sccm-ps)
+- [Remove-CMTSStepRunPowerShellScript](/powershell/module/configurationmanager/remove-cmtssteprunpowershellscript?view=sccm-ps)
+- [Set-CMTSStepRunPowerShellScript](/powershell/module/configurationmanager/set-cmtssteprunpowershellscript?view=sccm-ps)
 
 > [!Note]  
 > Ondertekende Power shell-scripts gebruiken in Unicode-indeling. De ANSI-indeling, de standaard instelling, werkt niet met deze stap.
@@ -2198,7 +2198,7 @@ Vanaf versie 1902 neemt u andere afsluit codes op uit het script dat door de sta
 
 
 
-## <a name="run-task-sequence"></a><a name="child-task-sequence"></a>Taken reeks uitvoeren
+## <a name="run-task-sequence"></a><a name="child-task-sequence"></a> Taken reeks uitvoeren
 
 > [!Note]  
 > In versie 1910 Configuration Manager deze functie standaard ingeschakeld. In versie 1906 of eerder is Configuration Manager deze optionele functie standaard niet ingeschakeld. Schakel deze functie in voordat u deze gebruikt. Zie voor meer informatie [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).
@@ -2250,7 +2250,7 @@ Selecteer **Bladeren** om de onderliggende taken reeks te selecteren. In het dia
 
 
 
-## <a name="set-dynamic-variables"></a><a name="BKMK_SetDynamicVariables"></a>Dynamische variabelen instellen
+## <a name="set-dynamic-variables"></a><a name="BKMK_SetDynamicVariables"></a> Dynamische variabelen instellen
 
 Gebruik deze stap om de volgende acties uit te voeren:  
 
@@ -2320,7 +2320,7 @@ Wanneer u de optie **deze waarde niet weer geven**gebruikt, wordt de waarde van 
 > Als u variabelen opneemt in de stap **opdracht regel uitvoeren** , wordt in het logboek bestand van de taken reeks de volledige opdracht regel weer gegeven, inclusief de waarden van de variabele. Als u wilt voor komen dat mogelijk gevoelige gegevens in het logboek bestand worden weer gegeven, stelt u de taken reeks variabele **OSDDoNotLogCommand** in op `TRUE` .
 
 
-## <a name="set-task-sequence-variable"></a><a name="BKMK_SetTaskSequenceVariable"></a>Taken reeks variabele instellen
+## <a name="set-task-sequence-variable"></a><a name="BKMK_SetTaskSequenceVariable"></a> Taken reeks variabele instellen
 
 Gebruik deze stap om de waarde in te stellen van een variabele die wordt gebruikt in combi natie met de taken reeks.  
 
@@ -2339,10 +2339,10 @@ Takenreeksvariabelen worden gelezen door takenreeksacties en bepalen het gedrag 
 
 Beheer deze stap met de volgende Power shell-cmdlets:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepSetVariable](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepsetvariable?view=sccm-ps)
-- [New-CMTSStepSetVariable](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepsetvariable?view=sccm-ps)
-- [Remove-CMTSStepSetVariable](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepsetvariable?view=sccm-ps)
-- [Set-CMTSStepSetVariable](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepsetvariable?view=sccm-ps)
+- [Get-CMTSStepSetVariable](/powershell/module/configurationmanager/get-cmtsstepsetvariable?view=sccm-ps)
+- [New-CMTSStepSetVariable](/powershell/module/configurationmanager/new-cmtsstepsetvariable?view=sccm-ps)
+- [Remove-CMTSStepSetVariable](/powershell/module/configurationmanager/remove-cmtsstepsetvariable?view=sccm-ps)
+- [Set-CMTSStepSetVariable](/powershell/module/configurationmanager/set-cmtsstepsetvariable?view=sccm-ps)
 
 ### <a name="properties-for-set-task-sequence-variable"></a>Eigenschappen voor set-taken reeks variabele
 
@@ -2371,7 +2371,7 @@ De taken reeks stelt de variabele in op deze waarde. Stel deze taken reeks varia
 
 
 
-## <a name="setup-windows-and-configmgr"></a><a name="BKMK_SetupWindowsandConfigMgr"></a>Windows en ConfigMgr installeren
+## <a name="setup-windows-and-configmgr"></a><a name="BKMK_SetupWindowsandConfigMgr"></a> Windows en ConfigMgr installeren
 
 Gebruik deze stap om de overgang van Windows PE naar het nieuwe besturings systeem uit te voeren. Deze taken reeks stap is een vereist onderdeel van de implementatie van een besturings systeem. De Configuration Manager-client wordt in het nieuwe besturings systeem geïnstalleerd en bereidt de taken reeks voor om de uitvoering in het nieuwe besturings systeem voort te zetten.  
 
@@ -2409,11 +2409,11 @@ Met deze stap worden de volgende acties uitgevoerd:
 
     2. Start opnieuw op naar het nieuw geïmplementeerde besturings systeem.  
 
-    3. Windows Mini-Setup wordt uitgevoerd met behulp van het eerder opgegeven Sysprep. inf-of unattend.xml antwoord bestand met alle gebruikers interface-instellingen onderdrukt. Als u de stap **netwerk instellingen Toep assen** gebruikt om lid te worden van een domein, bevindt die informatie zich in het antwoord bestand. Windows Mini-Setup voegt de computer toe aan het domein.  
+    3. Windows Mini-Setup wordt uitgevoerd met behulp van het eerder opgegeven Sysprep. inf-of unattend.xml antwoord bestand met alle gebruikers interface-instellingen onderdrukt. Als u de stap  **netwerk instellingen Toep assen** gebruikt om lid te worden van een domein, bevindt die informatie zich in het antwoord bestand. Windows Mini-Setup voegt de computer toe aan het domein.  
 
 #### <a name="set-up-the-configuration-manager-client"></a>De Configuration Manager-client instellen  
 
-1. Nadat Windows Mini-Setup is voltooid, wordt de takenreeks hervat met behulp van setupcomplete.cmd. Zie [een script uitvoeren nadat de installatie is voltooid (SetupComplete. cmd)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/add-a-custom-script-to-windows-setup#run-a-script-after-setup-is-complete-setupcompletecmd)voor meer informatie.  
+1. Nadat Windows Mini-Setup is voltooid, wordt de takenreeks hervat met behulp van setupcomplete.cmd. Zie [een script uitvoeren nadat de installatie is voltooid (SetupComplete. cmd)](/windows-hardware/manufacture/desktop/add-a-custom-script-to-windows-setup#run-a-script-after-setup-is-complete-setupcompletecmd)voor meer informatie.  
 
 2. Schakel het lokale beheerders account in of uit op basis van de geselecteerde optie in de stap **Windows-instellingen Toep assen** .  
 
@@ -2426,7 +2426,7 @@ Met deze stap worden de volgende acties uitgevoerd:
 De taken reeks gaat verder met de volgende stap.  
 
 > [!Note]  
-> Windows-groeps beleid wordt normaal pas verwerkt nadat de taken reeks is voltooid. Dit gedrag is consistent in verschillende versies van Windows. Andere aangepaste acties tijdens de taken reeks kunnen de evaluatie van groeps beleid activeren. Zie [een script uitvoeren nadat de installatie is voltooid (SetupComplete. cmd)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/add-a-custom-script-to-windows-setup#run-a-script-after-setup-is-complete-setupcompletecmd)voor meer informatie over de volg orde van de bewerkingen. <!-- 2841304 -->
+> Windows-groeps beleid wordt normaal pas verwerkt nadat de taken reeks is voltooid. Dit gedrag is consistent in verschillende versies van Windows. Andere aangepaste acties tijdens de taken reeks kunnen de evaluatie van groeps beleid activeren. Zie [een script uitvoeren nadat de installatie is voltooid (SetupComplete. cmd)](/windows-hardware/manufacture/desktop/add-a-custom-script-to-windows-setup#run-a-script-after-setup-is-complete-setupcompletecmd)voor meer informatie over de volg orde van de bewerkingen. <!-- 2841304 -->
 
 
 ### <a name="variables-for-setup-windows-and-configmgr"></a>Variabelen voor het instellen van Windows en ConfigMgr
@@ -2439,10 +2439,10 @@ Gebruik de volgende taken reeks variabelen met deze stap:
 
 Beheer deze stap met de volgende Power shell-cmdlets:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepSetupWindowsAndConfigMgr](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
-- [New-CMTSStepSetupWindowsAndConfigMgr](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
-- [Remove-CMTSStepSetupWindowsAndConfigMgr](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
-- [Set-CMTSStepSetupWindowsAndConfigMgr](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
+- [Get-CMTSStepSetupWindowsAndConfigMgr](/powershell/module/configurationmanager/get-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
+- [New-CMTSStepSetupWindowsAndConfigMgr](/powershell/module/configurationmanager/new-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
+- [Remove-CMTSStepSetupWindowsAndConfigMgr](/powershell/module/configurationmanager/remove-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
+- [Set-CMTSStepSetupWindowsAndConfigMgr](/powershell/module/configurationmanager/set-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
 
 ### <a name="properties-for-setup-windows-and-configmgr"></a>Eigenschappen voor het installeren van Windows en ConfigMgr
 
@@ -2471,7 +2471,7 @@ Wanneer u een taken reeks voor implementatie van een besturings systeem uitvoert
 
 
 
-## <a name="upgrade-operating-system"></a><a name="BKMK_UpgradeOS"></a>Besturings systeem bijwerken
+## <a name="upgrade-operating-system"></a><a name="BKMK_UpgradeOS"></a> Besturings systeem bijwerken
 
 Gebruik deze stap om een oudere versie van Windows bij te werken naar een nieuwere versie van Windows 10.  
 
@@ -2496,10 +2496,10 @@ Gebruik de volgende taken reeks variabelen met deze stap:
 
 Beheer deze stap met de volgende Power shell-cmdlets:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepUpgradeOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepUpgradeOperatingSystem?view=sccm-ps)
-- [New-CMTSStepUpgradeOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepUpgradeOperatingSystem?view=sccm-ps)
-- [Remove-CMTSStepUpgradeOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepUpgradeOperatingSystem?view=sccm-ps)
-- [Set-CMTSStepUpgradeOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepUpgradeOperatingSystem?view=sccm-ps)
+- [Get-CMTSStepUpgradeOperatingSystem](/powershell/module/configurationmanager/Get-CMTSStepUpgradeOperatingSystem?view=sccm-ps)
+- [New-CMTSStepUpgradeOperatingSystem](/powershell/module/configurationmanager/New-CMTSStepUpgradeOperatingSystem?view=sccm-ps)
+- [Remove-CMTSStepUpgradeOperatingSystem](/powershell/module/configurationmanager/Remove-CMTSStepUpgradeOperatingSystem?view=sccm-ps)
+- [Set-CMTSStepUpgradeOperatingSystem](/powershell/module/configurationmanager/Set-CMTSStepUpgradeOperatingSystem?view=sccm-ps)
 
 ### <a name="properties-for-upgrade-os"></a>Eigenschappen voor upgrade-besturings systeem
 
@@ -2525,7 +2525,7 @@ Geef de product code op die u wilt Toep assen op het upgrade proces.
 
 #### <a name="provide-the-following-driver-content-to-windows-setup-during-upgrade"></a>Geef de volgende stuurprogramma-inhoud op aan Windows Setup tijdens de upgrade
 
-Stuur Programma's toevoegen aan de doel computer tijdens het upgrade proces. De stuurprogramma's moeten compatibel zijn met Windows 10. Deze instelling komt overeen met de Windows Setup opdracht regel optie `/InstallDriver` . Zie [Windows Setup opdracht regel opties](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#installdrivers)voor meer informatie.
+Stuur Programma's toevoegen aan de doel computer tijdens het upgrade proces. De stuurprogramma's moeten compatibel zijn met Windows 10. Deze instelling komt overeen met de Windows Setup opdracht regel optie `/InstallDriver` . Zie [Windows Setup opdracht regel opties](/windows-hardware/manufacture/desktop/windows-setup-command-line-options#installdrivers)voor meer informatie.
 
 Geef een van de volgende opties op:  
 
@@ -2561,7 +2561,7 @@ Setup retourneert een afsluitcode als resultaat van de scan. De volgende tabel b
 |MOSETUP_E_COMPAT_SYSREQ_BLOCK (0xC1900200)|Komt niet in aanmerking voor Windows 10.|  
 |MOSETUP_E_COMPAT_INSTALLDISKSPACE_BLOCK (0xC190020E)|Onvoldoende vrije schijfruimte.|  
 
-Zie [Windows Setup opdracht regel opties](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#compat)voor meer informatie over deze para meter.  
+Zie [Windows Setup opdracht regel opties](/windows-hardware/manufacture/desktop/windows-setup-command-line-options#compat)voor meer informatie over deze para meter.  
 
 #### <a name="ignore-any-dismissible-compatibility-messages"></a>Verwijder compatibiliteitsberichten die kunnen worden genegeerd
 

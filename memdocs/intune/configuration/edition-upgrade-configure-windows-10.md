@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 08/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b846aa1ead9bb2d1c1b15d783e646e59047c16ee
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 0e18395aae96adec3bf4bbf60bdcccdd205dc90d
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988417"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146334"
 ---
 # <a name="upgrade-windows-10-editions-or-switch-out-of-s-mode-on-devices-using-microsoft-intune"></a>Upgrade Windows 10-edities of schakel op apparaten de S-modus uit met behulp van Microsoft Intune
 
@@ -50,7 +50,7 @@ Dit artikel vermeldt de ondersteunde upgradepaden en laat zien hoe het apparaatc
 Controleer voor u apparaten upgradet of u aan de volgende vereisten voldoet:
 
 - Een geldige productcode om de bijgewerkte Windows-versie te installeren op alle apparaten waarop het beleid is gericht (voor versies van Windows 10 Desktop). U kunt Multi Activation Keys (MAK) of Key Management Server-sleutels (KMS) gebruiken.
-- Voor edities van Windows 10 Mobile en Windows 10 Holographic kunt u een licentiebestand van Microsoft gebruiken. Het licentiebestand bevat de licentiegegevens voor het installeren van de bijgewerkte versie op alle apparaten waarop het beleid is gericht.
+- Voor edities van Windows 10 Holographic kunt u een licentiebestand van Microsoft gebruiken. Het licentiebestand bevat de licentiegegevens voor het installeren van de bijgewerkte versie op alle apparaten waarop het beleid is gericht.
 - De Windows 10-apparaten waaraan u het beleid toewijst, worden geregistreerd bij Microsoft Intune. U kunt het editie-upgradebeleid niet gebruiken voor pc’s waarop de Intune-pc-clientsoftware wordt uitgevoerd.
 
 ## <a name="supported-upgrade-paths"></a>Ondersteunde upgradepaden
@@ -70,7 +70,6 @@ In de volgende tabel staan de ondersteunde upgradepaden voor het upgradeprofiel 
 | Windows 10 Core | Windows 10 Education <br/>Windows 10 Enterprise <br/>Windows 10 Pro Education | 
 | Windows 10 Core N | Windows 10 Education N <br/>Windows 10 Enterprise N <br/>Windows 10 Pro Education N | 
 | Windows 10 Holographic | Windows 10 Holographic for Business |
-| Windows 10 Mobile | Windows 10 Mobile Enterprise |
 
 <!--The following table provides information about the supported upgrade paths for Windows 10 editions in this policy:
 

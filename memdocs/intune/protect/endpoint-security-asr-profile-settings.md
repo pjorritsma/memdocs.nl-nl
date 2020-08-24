@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 08/11/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: a0d1ee33e3aca6dbb6ff6e349eb9a578aad6ae88
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: 36dca5ce8bb0fc3523bcd72441e3ecf22931609b
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048069"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146028"
 ---
 # <a name="attack-surface-reduction-policy-settings-for-endpoint-security-in-intune"></a>Beleidsinstellingen om kwetsbaarheid voor aanvallen te verminderen voor eindpuntbeveiliging in Intune
 
@@ -177,11 +177,14 @@ Ondersteunde platforms en profielen:
 ### <a name="microsoft-defender-application-control"></a>Microsoft Defender-toepassingsbeheer
 
 - **Toepassingsbeheer app-kluis**  
+  CSP: [AppLocker](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
+
   - **Niet geconfigureerd** (*standaard*)
   - **Onderdelen afdwingen en apps opslaan**
   - **Onderdelen controleren en apps opslaan**
   - **Onderdelen afdwingen, apps opslaan en Smartlocker**
-  - **Onderdelen, Store-apps en Smartlocker controleren** CSP: [AppLocker-CSP](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
+  - **Onderdelen controleren, apps opslaan en Smartlocker**
+   
 
 - **Blokkeren dat gebruikers SmartScreen-waarschuwingen kunnen negeren**  
   CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eccb45ee4a0aade230ba8c18f68c4f0bc992e011
-ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
+ms.openlocfilehash: 50c1842357a79ce3228b7b0a5283dc9a4e98b2d6
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491317"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252336"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Apparaten verwijderen via wissen of buiten gebruik stellen, of de registratie van het apparaat handmatig ongedaan maken
 
@@ -132,14 +132,14 @@ U kunt apparaten in de kioskmodus alleen wissen. U kunt Android-apparaten in de 
 
 ### <a name="windows"></a>Windows
 
-|Gegevenstype|Windows 8.1 (MDM) en Windows RT 8.1|Windows RT|Windows Phone 8.1 en Windows Phone 8|Windows 10|
+|Gegevenstype|Windows 8.1 (MDM) en Windows RT 8.1|Windows RT|Windows 10|
 |-------------|----------------------------------------------------------------|--------------|-----------------------------------------|--------|
-|Bedrijfs-apps en de bijbehorende gegevens die door Intune zijn geïnstalleerd|Sleutels worden ingetrokken voor bestanden die zijn beveiligd met EFS. De gebruiker kan de bestanden niet openen.|Bedrijfs-apps worden niet verwijderd.|Apps die oorspronkelijk zijn geïnstalleerd via de bedrijfsportal, worden verwijderd. Gegevens van bedrijfs-apps worden verwijderd.|Apps worden verwijderd. Sideloadsleutels worden verwijderd.<br>Voor Windows 10 versie 1709 (makersupdate) en hoger worden Microsoft 365-apps niet verwijderd. Win32-apps waarvoor de Intune-beheerextensie is geïnstalleerd, worden niet verwijderd van apparaten die niet meer ingeschreven zijn. Beheerders kunnen gebruikmaken van uitsluiting van opdrachten, zodat Win32-apps niet worden aangeboden op BYOD-apparaten.|
-|Instellingen|Configuraties die zijn ingesteld door Intune-beleid, worden niet meer afgedwongen. Gebruikers kunnen de instellingen wijzigen.|Configuraties die zijn ingesteld door Intune-beleid, worden niet meer afgedwongen. Gebruikers kunnen de instellingen wijzigen.|Configuraties die zijn ingesteld door Intune-beleid, worden niet meer afgedwongen. Gebruikers kunnen de instellingen wijzigen.|Configuraties die zijn ingesteld door Intune-beleid, worden niet meer afgedwongen. Gebruikers kunnen de instellingen wijzigen.|
-|Instellingen voor Wi-Fi en VPN-profiel|Verwijderd.|Verwijderd.|Niet ondersteund.|Verwijderd.|
-|Instellingen van certificaatprofiel|Certificaten worden verwijderd en ingetrokken.|Certificaten worden verwijderd en ingetrokken.|Niet ondersteund.|Certificaten worden verwijderd en ingetrokken.|
-|E-mail|Hiermee worden e-mails verwijderd waarvoor EFS is ingeschakeld. Dit omvat e-mails en bijlagen in de e-mail-app voor Windows.|Niet ondersteund.|E-mailprofielen die via Intune zijn ingericht, worden verwijderd. In de cache opgeslagen e-mail op het apparaat wordt verwijderd.|Hiermee worden e-mails verwijderd waarvoor EFS is ingeschakeld. Dit omvat e-mails en bijlagen in de e-mail-app voor Windows. Hiermee verwijdert u e-mailaccounts die zijn ingericht door Intune.|
-|Loskoppelen van Azure AD|Nee.|Nee.|Azure AD-record wordt verwijderd.|Azure AD-record wordt verwijderd.|
+|Bedrijfs-apps en de bijbehorende gegevens die door Intune zijn geïnstalleerd|Sleutels worden ingetrokken voor bestanden die zijn beveiligd met EFS. De gebruiker kan de bestanden niet openen.|Bedrijfs-apps worden niet verwijderd.|Apps worden verwijderd. Sideloadsleutels worden verwijderd.<br>Voor Windows 10 versie 1709 (makersupdate) en hoger worden Microsoft 365-apps niet verwijderd. Win32-apps waarvoor de Intune-beheerextensie is geïnstalleerd, worden niet verwijderd van apparaten die niet meer ingeschreven zijn. Beheerders kunnen gebruikmaken van uitsluiting van opdrachten, zodat Win32-apps niet worden aangeboden op BYOD-apparaten.|
+|Instellingen|Configuraties die zijn ingesteld door Intune-beleid, worden niet meer afgedwongen. Gebruikers kunnen de instellingen wijzigen.|Configuraties die zijn ingesteld door Intune-beleid, worden niet meer afgedwongen. Gebruikers kunnen de instellingen wijzigen.|Configuraties die zijn ingesteld door Intune-beleid, worden niet meer afgedwongen. Gebruikers kunnen de instellingen wijzigen.|
+|Instellingen voor Wi-Fi en VPN-profiel|Verwijderd.|Verwijderd.|Verwijderd.|
+|Instellingen van certificaatprofiel|Certificaten worden verwijderd en ingetrokken.|Certificaten worden verwijderd en ingetrokken.|Certificaten worden verwijderd en ingetrokken.|
+|E-mail|Hiermee worden e-mails verwijderd waarvoor EFS is ingeschakeld. Dit omvat e-mails en bijlagen in de e-mail-app voor Windows.|Niet ondersteund.|Hiermee worden e-mails verwijderd waarvoor EFS is ingeschakeld. Dit omvat e-mails en bijlagen in de e-mail-app voor Windows. Hiermee verwijdert u e-mailaccounts die zijn ingericht door Intune.|
+|Loskoppelen van Azure AD|Nee.|Nee.|Azure AD-record wordt verwijderd.|
 
 > [!NOTE]
 > Voor Windows 10-apparaten die lid worden van Azure AD tijdens de eerste installatie (OOBE), verwijdert de opdracht Buiten gebruik stellen alle Azure AD-accounts van het apparaat. Volg de stappen bij [Uw pc in de veilige modus starten](https://support.microsoft.com/en-us/help/12376/windows-10-start-your-pc-in-safe-mode) om u aan te melden als lokale beheerder en weer toegang te krijgen tot de lokale gegevens van de gebruiker. 
@@ -167,7 +167,8 @@ U kunt Intune configureren om automatisch apparaten te verwijderen die inactief 
 3. Voer in het vak **Apparaten verwijderen die zo veel dagen niet hebben ingecheckt** een getal tussen 30 en 270 in.
 4. Kies **Opslaan**.
 
-
+> [!NOTE]
+> Er zijn geen regels beschikbaar voor het opschonen van Android Enterprise-scenario's zoals [volledig beheerd](https://docs.microsoft.com/mem/intune/enrollment/android-fully-managed-enroll), [toegewezen](https://docs.microsoft.com/mem/intune/enrollment/android-kiosk-enroll) en [bedrijfseigendom met een werkprofiel](https://docs.microsoft.com/mem/intune/enrollment/android-corporate-owned-work-profile-enroll). 
 
 ## <a name="delete-devices-from-the-azure-active-directory-portal"></a>Apparaten verwijderen van de Azure Active Directory-portal
 

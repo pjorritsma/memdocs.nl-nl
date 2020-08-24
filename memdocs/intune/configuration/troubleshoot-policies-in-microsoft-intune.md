@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ee0603a96d7276e9e1ef0fb9bff60ac44a3ef84
-ms.sourcegitcommit: 64727a4b025a589e270842da39516c4c42563a34
+ms.openlocfilehash: bc307f22e3caa77357d8d3054a432c8d42c38fc4
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84301381"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146504"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Beleidsregels en profielen voor het oplossen van problemen in Intune
 
@@ -144,7 +144,7 @@ Afhankelijk van het apparaatplatform moet u mogelijk het beveiligingsbeleid opni
 
 Veeg bijvoorbeeld in Windows 8.1 op het bureaublad vanaf rechts over het scherm om de balk **Charms** te openen. Kies **Instellingen** > **Configuratiescherm** > **Gebruikersaccounts**. Selecteer aan de linkerkant de koppeling **Beveiligingsbeleid opnieuw instellen** en kies **Beleid opnieuw instellen**.
 
-Andere platformen, zoals Android, iOS/iPadOS en Windows Phone 8.1, moeten mogelijk buiten gebruik worden gesteld en weer opnieuw worden geregistreerd voordat u een minder beperkend beleid kunt toepassen.
+Andere platforms, zoals Android en iOS/iPadOS, moeten mogelijk buiten gebruik worden gesteld en weer opnieuw worden geregistreerd voordat u een minder beperkend beleid kunt toepassen.
 
 Mogelijk is [Problemen met apparaatregistratie oplossen](../enrollment/troubleshoot-device-enrollment-in-intune.md) een goede bron.
 

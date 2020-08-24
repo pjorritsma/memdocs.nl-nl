@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/10/2020
+ms.date: 08/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee6ccebc9610f74f9f34c08bc8204e652e0a01db
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: d47f1e121a5010a17d213d21d3208977e8f75514
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85092878"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217634"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Wi-Fi-instellingen toevoegen voor apparaten met Windows 10 en hoger in Intune
 
@@ -101,12 +101,14 @@ Enterprise-profielen gebruiken Extensible Authentication Protocol (EAP) om Wi-Fi
   - **Maximale tijd voor het verifiëren voordat de time-out optreedt**: geef het maximum aantal seconden op dat moet worden gewacht voordat de verificatie bij het netwerk wordt uitgevoerd, tussen 1 en 120 seconden.
   - **Windows toestaan om een gebruiker te vragen om aanvullende verificatiereferenties**: Als u **Ja** kiest, staat u toe dat het Windows-systeem de gebruiker om aanvullende verificatiereferenties vraagt als dit conform de verificatiemethode is vereist. Kies **Nee** om deze vragen te verbergen.
 
-- **In PMK-cache (Pairwise Master Key) opslaan inschakelen**: Selecteer **Ja** om de PMK die bij verificatie is gebruikt in de cache op te slaan. Doorgaans zorgt plaatsing in de cache ervoor dat verificatie bij het netwerk sneller kan worden voltooid. Kies **Nee** om de verificatiehandshake af te dwingen wanneer u verbinding met het Wi-Fi-netwerk maakt.
+- **In PMK-cache (Pairwise Master Key) opslaan inschakelen**: Selecteer **Ja** om de PMK die bij verificatie is gebruikt in de cache op te slaan. Doorgaans zorgt plaatsing in de cache ervoor dat verificatie bij het netwerk sneller kan worden voltooid. Kies **Nee** om de verificatiehandshake af te dwingen wanneer u verbinding met het Wi-Fi-netwerk maakt. Om de instelling **Verificatie vooraf inschakelen** te gebruiken, selecteert u **Ja**.
 
   - **Maximale tijd dat een PMK in de cache wordt opgeslagen**: voer het aantal minuten in dat een Pairwise Master Key (PMK) wordt opgeslagen in de cache, tussen 5 en 1440 minuten.
   - **Maximaal aantal PMK's dat in de cache wordt opgeslagen**: voer het aantal sleutels in dat wordt opgeslagen in de cache, tussen 1 en 255.
 
 - **Verificatie vooraf inschakelen**: Door verificatie vooraf kan het profiel verifiëren bij alle toegangspunten voor het netwerk in het profiel voordat u verbinding maakt. Bij het verplaatsen tussen toegangspunten kunnen gebruikers of apparaten door verificatie vooraf sneller opnieuw verbinding maken. Kies **Ja** als u wilt dat het profiel verifieert bij alle toegangspunten voor dit netwerk die binnen het bereik vallen. Kies **Nee** als u wilt vereisen dat gebruikers of apparaten bij elk toegangspunt afzonderlijk verifiëren.
+
+  Stel om deze instelling te gebruiken **Pairwise master key (PML) caching inschakelen** in op **Ja**.
 
   - **Maximum aantal pogingen voor verificatie vooraf**: voer in hoe vaak verificatie vooraf mag worden geprobeerd, tussen 1 en 16.
 

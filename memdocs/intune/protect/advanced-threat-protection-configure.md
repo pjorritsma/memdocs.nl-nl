@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/23/2020
+ms.date: 08/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e19315f07d803e2aab53b3724fde85f1975c0c5
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: ad02078d2a8b9926de463e01d3dcbc675c721e4a
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87264525"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179516"
 ---
 # <a name="configure-microsoft-defender-atp-in-intune"></a>Microsoft Defender ATP configureren in Intune
 
@@ -92,10 +92,10 @@ Wanneer u onboarding van een apparaat met het configuratiepakket eenmaal hebt ui
 
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecteer **Apparaten** > **Configuratieprofielen** > **Profiel maken**.
-3. Voer een **Naam** en **Beschrijving** in.
-4. Voor **Platform** selecteert u **Windows 10 en hoger**
-5. Voor **Profieltype** selecteert u **Microsoft Defender ATP (Windows 10 Desktop)** .
-6. Configureer de gewenste instellingen:
+3. Voor **Platform** selecteert u **Windows 10 en hoger**
+4. Selecteer voor het **Profieltype** **Microsoft Defender ATP (Windows 10 Desktop)** en selecteer vervolgens **Maken**.
+5. Voer op de pagina **Basisgegevens** een waarde bij *Naam* en *Beschrijving* (optioneel) in voor het profiel en kies dan **Volgende**.
+6. Configureer op de pagina **Configuratie-instellingen** het volgende:
 
    - **Type clientconfiguratiepakket voor Microsoft Defender ATP**: Selecteer **Onboarding uitvoeren** om het configuratiepakket aan het profiel toe te voegen. Selecteer **Offboarding uitvoeren** om configuratiepakket uit het profiel te verwijderen.
   
@@ -107,8 +107,14 @@ Wanneer u onboarding van een apparaat met het configuratiepakket eenmaal hebt ui
 
      [Windows 10-apparaten onboarden die Microsoft Endpoint Configuration Manager gebruiken](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm) bevat meer informatie over deze instellingen voor Microsoft Defender ATP.
 
-7. Selecteer **OK** en **Maken** om wijzigingen op te slaan. Hiermee maakt u het profiel.
-8. [Wijs een profiel voor apparaatconfiguratie toe](../configuration/device-profile-assign.md) aan apparaten die u wilt beoordelen met Microsoft Defender ATP.
+7. Selecteer **Volgende** om de pagina **Bereiktags** te openen. Bereiktags zijn optioneel. Selecteer **Volgende** om door te gaan.
+
+8. Selecteer op de pagina **Toewijzingen** de groepen die dit profiel zullen ontvangen. Zie [Gebruikers- en apparaatprofielen toewijzen](../configuration/device-profile-assign.md) voor meer informatie over het toewijzen van profielen.
+
+   Selecteer **Volgende**.
+
+9. Kies op de pagina **Controleren en maken** de optie **Maken** zodra u klaar bent. Het nieuwe profiel wordt weergegeven in de lijst wanneer u het beleidstype selecteert voor het profiel dat u hebt gemaakt.
+ **OK** en daarna **Maken** om uw wijzigingen op te slaan, waardoor het profiel wordt gemaakt.
 
 ### <a name="onboard-android-devices"></a>Android-apparaten onboarden
 

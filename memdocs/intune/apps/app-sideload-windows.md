@@ -1,12 +1,12 @@
 ---
-title: Windows- en Windows Phone-apps sideloaden
+title: Windows-apps sideloaden
 titleSuffix: Microsoft Intune
 description: Leer hoe u Line-Of-Business-apps ondertekent, zodat u Intune kunt gebruiken voor de implementatie van deze apps.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/07/2020
+ms.date: 08/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -16,12 +16,12 @@ ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8194c3fcc90942b791d5300a37b3c093a5229cc9
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: da43cab373021107a940ce0bd71c0f4986d5e907
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989583"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179618"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Line-of-business-apps ondertekenen, zodat ze kunnen worden geïmplementeerd op Windows-apparaten met Intune
 
@@ -64,13 +64,13 @@ In Intune wordt alleen het meest recent geüploade CER-bestand geïmplementeerd.
 
 ## <a name="how-to-renew-the-symantec-enterprise-code-signing-certificate"></a>Het zakelijke Symantec-certificaat voor ondertekening van programmacode vernieuwen
 
-Het certificaat dat is gebruikt om mobiele Windows Phone 8.1-apps te implementeren is op 28 februari 2019 buiten gebruik gesteld, en kan niet meer worden vernieuwd bij Symantec. Als u implementeert in Windows 10 Mobile, kunt u certificaten voor ondertekening van programmacode voor Symantec Desktop Enterprise blijven gebruiken door de instructies in [Sideloaden in Windows 10](app-sideload-windows.md#windows-10-sideloading) te volgen.
+Het certificaat dat is gebruikt om mobiele Windows Phone 8.1-apps te implementeren is op 28 februari 2019 buiten gebruik gesteld, en kan niet meer worden vernieuwd bij Symantec. Daarnaast heeft Intune de ondersteuning voor Windows 10 Mobile vanaf 10 augustus 2020 beëindigd.
 
 ## <a name="how-to-install-the-updated-certificate-for-line-of-business-lob-apps"></a>Het bijgewerkte certificaat voor LOB-apps (line-of-business) installeren
 
 Windows Phone 8.1
 
-LOB-apps voor dit platform kunnen niet meer worden geïmplementeerd in de Intune-service zodra het bestaande certificaat voor ondertekening van programmacode voor Symantec Mobile Enterprise verloopt. Het is wel nog steeds mogelijk om niet-ondertekende XAP/APPX-bestanden te sideloaden met behulp van een SD-kaart of door het bestand te downloaden naar het apparaat. Zie [XAP-bestanden installeren op Windows Phone](https://answers.microsoft.com/en-us/mobiledevices/forum/mdlumia-mdapps/how-to-install-xap-file-in-windows-phone-8/da09ee72-51ae-407c-9b85-bc148df89280) voor meer informatie.
+LOB-apps voor dit platform kunnen niet meer worden geïmplementeerd in de Intune-service zodra het bestaande certificaat voor ondertekening van programmacode voor Symantec Mobile Enterprise verloopt.
 
 Windows 8.1 Desktop/Windows 10 Desktop en Mobile
 
@@ -102,7 +102,7 @@ Zie [Deploying an appxbundle with dependencies via Microsoft Intune MDM](https:/
 
 ### <a name="how-do-i-update-the-company-portal-on-my-users-devices-if-they-have-already-installed-the-older-apps-from-the-store"></a>Hoe kan ik de Bedrijfsportal op de apparaten van mijn gebruikers bijwerken als hierop al de oudere apps uit de Store zijn geïnstalleerd?
 
-Als uw gebruikers de Windows 8.1- of Windows Phone 8.1-bedrijfsportal-apps al hebben geïnstalleerd vanuit de Store, moeten deze automatisch worden bijgewerkt naar de nieuwe versie, zonder dat hiervoor actie door u of uw gebruikers is vereist. Als de update niet wordt uitgevoerd, vraagt u uw gebruikers om te controleren of automatische updates voor Store-apps op hun apparaten is ingeschakeld.
+Als uw gebruikers de Windows 8.1-bedrijfsportal-apps al hebben geïnstalleerd vanuit de Store, moeten deze automatisch worden bijgewerkt naar de nieuwe versie, zonder dat hiervoor actie door u of uw gebruikers is vereist. Als de update niet wordt uitgevoerd, vraagt u uw gebruikers om te controleren of automatische updates voor Store-apps op hun apparaten is ingeschakeld.
 
 ### <a name="how-do-i-upgrade-my-sideloaded-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>Hoe ik een upgrade uitvoeren van mijn gesideloade Windows 8.1-bedrijfsportal-app naar de Windows 10-bedrijfsportal-app?
 
@@ -112,9 +112,9 @@ Als u de app moet sideloaden en de Windows 8.1-bedrijfsportal hebt geïmplemente
 
 Als u de app moet sideloaden en de Windows 8.1-bedrijfsportal hebt ondertekend en geïmplementeerd met het Symantec-certificaat voor ondertekening van programmacode, volgt u de stappen in de onderstaande sectie.  
 
-### <a name="how-do-i-upgrade-my-signed-and-sideloaded-windows-phone-81-company-portal-app-or-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>Hoe kan ik een upgrade uitvoeren van mijn ondertekende en gesideloade Windows Phone 8.1-bedrijfsportal-app of Windows 8.1-bedrijfsportal-app naar de Windows 10-bedrijfsportal-app?
+### <a name="how-do-i-upgrade-my-signed-and-sideloaded-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>Hoe kan ik een upgrade uitvoeren van mijn ondertekende en gesideloade Windows 8.1-bedrijfsportal-app naar de Windows 10-bedrijfsportal-app?
 
-Het wordt aanbevolen de bestaande implementatie voor de Bedrijfsportal-app voor Windows Phone 8.1 of de Bedrijfsportal-app voor Windows 8.1. te verwijderen door de implementatieactie in te stellen op 'Installatie ongedaan maken'. Zodra deze actie is uitgevoerd, kan de Windows 10-bedrijfsportal-app normaal worden geïmplementeerd.  
+Het wordt aanbevolen de bestaande implementatie voor de Bedrijfsportal-app voor Windows 8.1 te verwijderen door de implementatieactie in te stellen op 'Installatie ongedaan maken'. Zodra deze actie is uitgevoerd, kan de Windows 10-bedrijfsportal-app normaal worden geïmplementeerd.  
 
 Anders moet de Windows 10-bedrijfsportal-app op de juiste manier worden bijgewerkt en ondertekend om ervoor te zorgen dat het upgradepad in acht wordt genomen.  
 
@@ -130,7 +130,7 @@ U ondertekent en implementeert de app als volgt:
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
 | InputWin10AppxBundle  |                                             Het pad naar het bron-appxbundle-bestand.                                              |
 | OutputWin10AppxBundle |                                                  Het uitvoerpad voor het ondertekende appxbundle-bestand.                                                  |
-|       Win81Appx       |                          Het pad naar het Windows 8.1- of Windows Phone 8.1-bedrijfsportalbestand (het APPX-bestand).                           |
+|       Win81Appx       |                          Het pad naar het Windows 8.1-bedrijfsportalbestand (het appx-bestand).                           |
 |      PfxFilePath      |                                   Het pad naar het certificaat voor ondertekening van programmacode voor mobiele bedrijfsapparaten van Symantec (het PFX-bestand).                                    |
 |      PfxPassword      |                                     Het wachtwoord voor het certificaat voor ondertekening van programmacode voor mobiele bedrijfsapparaten van Symantec.                                      |
 |      PublisherId      |      De uitgevers-id van de onderneming. Als deze niet is opgegeven, wordt het veld Onderwerp van Symantec Enterprise-certificaat voor ondertekening van mobiele code gebruikt.       |

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 08/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ed7852a5aaf09a99823035d12bf2aa9139c1c02
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5be1c4fd42d27386b4fdc51cac6167625432491f
+ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990226"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559562"
 ---
 # <a name="how-to-manage-volume-purchased-apps-from-the-microsoft-store-for-business-with-microsoft-intune"></a>In volume aangeschafte apps beheren vanuit de Microsoft Store voor Bedrijven met Microsoft Intune
 
@@ -53,7 +53,7 @@ Lees de volgende informatie voordat u begint met het synchroniseren en toewijzen
 - Geregistreerde apparaten moeten gebruikmaken van de 1511-versie van Windows 10 of hoger.
 
 > [!NOTE]
-> Als u de Store uitschakelt op beheerde apparaten (handmatig of via beleid of groepsbeleid), kunnen online gelicentieerde apps niet worden geïnstalleerd.
+> Als u toegang tot de Store uitschakelt op beheerde apparaten (handmatig of via beleid of groepsbeleid), kunnen online gelicentieerde apps niet worden geïnstalleerd.
 
 ## <a name="associate-your-microsoft-store-for-business-account-with-intune"></a>Uw Microsoft Store voor Bedrijven-account koppelen aan Intune
 
@@ -78,6 +78,7 @@ U kunt nu doorgaan en synchronisatie instellen in de Intune-console.
 6. Klik op **Synchroniseren** om de apps die u hebt aangeschaft in Microsoft Store, op te halen in Intune.
 
 ## <a name="synchronize-apps"></a>Apps synchroniseren
+Als u uw Microsoft Store for Business-account al hebt gekoppeld met uw de beheerdersgegevens van Intune, kunt u de Microsoft Store for Business-apps met Intune handmatig synchroniseren met behulp van de volgende stappen.
 
 1. Selecteer **Tenantbeheer** > **Connectors en tokens** > **Microsoft Azure Store voor Bedrijven**.
 2. Klik op **Synchroniseren** om de apps die u hebt aangeschaft in Microsoft Store, op te halen in Intune.

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 08/11/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3981f40650544cdfdbfd0208e127a3e0aaecb823
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 87e6484939324abc5566386ffbe48f04ddbbe100
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462011"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146453"
 ---
 # <a name="android-enterprise-device-settings-to-configure-vpn-in-intune"></a>Instellingen voor Android Enterprise-apparaten voor het configureren van VPN in Intune
 
@@ -75,4 +75,4 @@ Zie [VPN-profielen](vpn-settings-configure.md) voor meer informatie over VPN-pro
 
 [Het profiel toewijzen](device-profile-assign.md) en [de status ervan controleren](device-profile-monitor.md).
 
-U kunt ook VPN-profielen maken voor apparaten met [Android](vpn-settings-android.md), [iOS/iPadOS](vpn-settings-ios.md), [macOS](vpn-settings-macos.md), [Windows 10 en hoger](vpn-settings-windows-10.md), [Windows 8.1](vpn-settings-windows-8-1.md) en [Windows Phone 8.1](vpn-settings-windows-phone-8-1.md).
+U kunt ook VPN-profielen maken voor [Android](vpn-settings-android.md), [iOS/iPadOS](vpn-settings-ios.md), [macOS](vpn-settings-macos.md), [Windows 10 en hoger](vpn-settings-windows-10.md) en [Windows 8.1](vpn-settings-windows-8-1.md).

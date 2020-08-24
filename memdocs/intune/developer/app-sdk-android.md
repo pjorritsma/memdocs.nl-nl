@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99fa22d351d8d0672d2745f18bb70dfd096ac1d7
-ms.sourcegitcommit: 16bc2ed5b64eab7f5ae74391bd9d7b66c39d8ca6
+ms.openlocfilehash: d1ede68097ef3afe0358154ff7b8802a0b3a7285
+ms.sourcegitcommit: f6b14e6fe694a2a05c6ed92e67089e80a00a0908
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86437416"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88501164"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Ontwikkelaarshandleiding voor Microsoft Intune App SDK voor Android
 
@@ -1184,7 +1184,7 @@ Als een account voor het eerst wordt geregistreerd, krijgt het account eerst de 
 | `AUTHORIZATION_NEEDED` | Dit resultaat geeft aan dat er geen token is verstrekt door de geregistreerde `MAMServiceAuthenticationCallback`-instantie van de app of dat het token ongeldig is.  De app moet een geldig token ophalen en indien mogelijk `updateToken()` aanroepen. |
 | `NOT_LICENSED` | De gebruiker heeft geen licentie voor Intune of er kan geen contact met de Intune MAM-service worden opgenomen.  De onbeheerde (normale) status van de app moet blijven gehandhaafd en de gebruiker moet worden geblokkeerd.  Er worden periodiek nieuwe registratiepogingen uitgevoerd voor het geval de gebruiker in de toekomst alsnog een licentie wordt verleend. |
 | `ENROLLMENT_SUCCEEDED` | De registratie is geslaagd of de gebruiker is al geregistreerd.  In het geval van een geslaagde registratie wordt er vóór deze melding een melding voor beleidsvernieuwing verzonden.  Toegang tot bedrijfsgegevens moet worden toegestaan. |
-| `ENROLLMENT_FAILED` | De registratie is mislukt.  Meer informatie vindt u in de logboeken van het apparaat.  De app moet in deze status geen toegang tot de bedrijfsgegevens verlenen, omdat eerder is vastgesteld dat de gebruiker een licentie heeft voor Intune.|
+| `ENROLLMENT_FAILED` | De registratie is mislukt.  Meer informatie vindt u in de logboeken van het apparaat.  De app moet in deze status geen toegang tot de bedrijfsgegevens verlenen, omdat eerder is vastgesteld dat de gebruiker een licentie heeft voor Intune. Alle apps moeten ervoor zorgen dat de toegang tot bedrijfsgegevens pas wordt geautoriseerd nadat door uw app 'enrollment_succeeded' is verkregen.|
 | `WRONG_USER` | Slechts één gebruiker per apparaat kan een app met de MAM-service registreren. Dit resultaat geeft aan dat de gebruiker voor wie dit resultaat is geleverd (de tweede gebruiker) is gericht op MAM-beleid, maar dat er al een andere gebruiker is ingeschreven. Het MAM-beleid kan niet worden afgedwongen voor de tweede gebruiker. Uw app mag geen toegang tot de gegevens van deze gebruiker toestaan (mogelijk door de gebruiker uit uw app te verwijderen) tenzij/totdat de registratie van deze gebruiker op een later tijdstip slaagt. Tegelijk met het leveren van dit `WRONG_USER`-resultaat, geeft MAM de optie om het bestaande account te verwijderen. Als de gebruiker bevestigend antwoordt, is het inderdaad mogelijk om de tweede gebruiker korte tijd later te registreren. Zolang de tweede gebruiker geregistreerd blijft, probeert MAM de registratie regelmatig opnieuw. |
 | `UNENROLLMENT_SUCCEEDED` | De registratie is ongedaan gemaakt.|
 | `UNENROLLMENT_FAILED` | Het ongedaan maken van de registratie is mislukt.  Meer informatie vindt u in de logboeken van het apparaat. In het algemeen gebeurt dit niet zolang de app een geldige UPN (niet null en niet leeg) doorgeeft. Er is geen directe, betrouwbare herstelactie die de app kan uitvoeren. Als deze waarde wordt ontvangen bij het ongedaan maken van de registratie van een geldige UPN, meldt u dit als een bug bij het Intune MAM-team.|

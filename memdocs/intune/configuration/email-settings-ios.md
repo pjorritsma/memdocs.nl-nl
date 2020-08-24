@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/08/2020
+ms.date: 08/11/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 099643f1e55c6f3e58c0cd685c2339abf00dd7dc
-ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
+ms.openlocfilehash: aec16e4c3c1eae5614fdf000740dcf8363bec1ca
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506210"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88145977"
 ---
 # <a name="add-e-mail-settings-for-ios-and-ipados-devices-in-microsoft-intune"></a>E-mailinstellingen toevoegen voor iOS-/iPadOS-apparaten in Microsoft Intune
 
@@ -162,4 +162,4 @@ In dit artikel worden alle e-mailinstellingen vermeld en beschreven, die beschik
 
 Het profiel is gemaakt, maar er gebeurt nog niets. Vervolgens kunt u [het profiel toewijzen](device-profile-assign.md) en [de status ervan controleren](device-profile-monitor.md).
 
-Configureer e-mailinstellingen op apparaten met [Android](email-settings-android.md), [Android Enterprise](email-settings-android-enterprise.md), [Windows 10](email-settings-windows-10.md) en [Windows Phone 8.1](email-settings-windows-phone-8-1.md).
+Configureer e-mailinstellingen op apparaten met [Android](email-settings-android.md), [Android Enterprise](email-settings-android-enterprise.md) en [Windows 10](email-settings-windows-10.md).

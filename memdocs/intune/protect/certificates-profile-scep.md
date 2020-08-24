@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/10/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 77a69af395aee293f927682f9d1a095c11a1d8a5
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: f0119ace5e1ec511ec0e8235a1dcea4b7199c058
+ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048086"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559535"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>SCEP-certificaatprofielen maken en toewijzen in Intune
 
@@ -211,13 +211,15 @@ Nadat u [uw infrastructuur hebt geconfigureerd](certificates-scep-configure.md) 
 
    - **Hash-algoritme**:
 
-     *(Van toepassing op Android, Android Enterprise, Windows Phone 8.1, Windows 8.1 en later en Windows 10 en later)*
+     *(Van toepassing op Android, Android Enterprise, Windows 8.1 en later, en Windows 10 en later)*
 
      Selecteer een van de beschikbare typen hash-algoritme om met dit certificaat te gebruiken. Selecteer het sterkste beveiligingsniveau dat door de verbindende apparaten wordt ondersteund.
 
    - **Basiscertificaat**:
 
      Selecteer het *vertrouwde certificaatprofiel* dat u eerder hebt geconfigureerd en hebt toegewezen aan de betreffende gebruikers en apparaten voor dit SCEP-certificaatprofiel. Het vertrouwde certificaatprofiel wordt gebruikt om het vertrouwde basis-CA-certificaat in te richten voor gebruikers en apparaten. Zie [Uw vertrouwde basis-CA-certificaat exporteren](certificates-configure.md#export-the-trusted-root-ca-certificate) en [Profielen voor vertrouwde certificaten maken](certificates-configure.md#create-trusted-certificate-profiles) in *Certificaten voor verificatie gebruiken in Intune* voor meer informatie over het vertrouwde certificaatprofiel. Als u een basiscertificeringsinstantie en een verlenende certificeringsinstantie hebt, selecteert u het vertrouwde basiscertificaatprofiel waarmee de verlenende certificeringsinstantie wordt gevalideerd.
+     > [!NOTE]
+     > Op iOS-/iPadOS-apparaten: als u een basiscertificeringsinstantie en een verlenende certificeringsinstantie hebt, selecteert u het vertrouwde basiscertificaatprofiel waarmee de basiscertificeringsinstantie wordt gevalideerd. 
 
    - **Uitgebreide-sleutelgebruik**:
 

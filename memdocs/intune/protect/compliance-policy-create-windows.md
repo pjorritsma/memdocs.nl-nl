@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6c42ec6b7b67a1c000702e6e53747270d0eda28c
-ms.sourcegitcommit: 16bc2ed5b64eab7f5ae74391bd9d7b66c39d8ca6
+ms.openlocfilehash: 0357f8fe751738bc3f8a5198db96b2113ee16bfc
+ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86437341"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559491"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Instellingen in Windows 10 en later om te markeren of apparaten wel of niet conform zijn met behulp van Intune
 
@@ -47,7 +47,9 @@ Gebruik deze nalevingsinstellingen als Intune-beheerder om de resources van uw o
    Windows BitLocker-stationsversleuteling versleutelt alle gegevens die zijn opgeslagen op het volume met het Windows-besturingssysteem. BitLocker gebruikt de TPM (Trusted Platform Module) om het Windows-besturingssysteem en de gebruikersgegevens te beveiligen. Het helpt ook om te bevestigen dat een computer niet is gemanipuleerd, zelfs als deze zonder toezicht, kwijtgeraakt of gestolen is. Als de computer is uitgerust met een compatibele TPM, gebruikt BitLocker de TPM om de versleutelingssleutels te vergrendelen die de gegevens beschermen. Als gevolg hiervan kunnen de sleutels niet worden gebruikt tot met de TPM de status van de computer is gecontroleerd.  
 
   - **Niet geconfigureerd** (*standaard*) - Deze instelling wordt niet beoordeeld op naleving of niet-naleving.
-  - **Vereisen** - Het apparaat kan gegevens die op de schijf zijn opgeslagen, beveiligen tegen onbevoegde toegang wanneer het systeem is uitgeschakeld of zich in de slaapstand bevindt.  
+  - **Vereisen** - Het apparaat kan gegevens die op de schijf zijn opgeslagen, beveiligen tegen onbevoegde toegang wanneer het systeem is uitgeschakeld of zich in de slaapstand bevindt.
+  
+  [HealthAttestation CSP - BitLockerStatus van het apparaat](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp)
 
 - **Vereisen dat beveiligd opstarten wordt ingeschakeld op het apparaat**:  
   - **Niet geconfigureerd** (*standaard*) - Deze instelling wordt niet beoordeeld op naleving of niet-naleving.
@@ -107,6 +109,9 @@ Geldt alleen voor gezamenlijk beheerde apparaten met Windows 10 en hoger. Appara
 
     U kunt bijvoorbeeld vereisen dat alle software-updates worden geïnstalleerd op apparaten. Deze vereiste heeft in Configuration Manager de status Geïnstalleerd. Als programma's op het apparaat een onbekende status hebben, is het apparaat niet-compatibel in Intune.
 
+  > [!NOTE]
+  > Gebruik **Vereisen apparaatcompliance van de Configuration Manager** alleen als de Compliance workload voor co-management is ingesteld op *Configuration Manager*. Wanneer u deze instelling gebruikt en de Compliance workload is ingesteld op *Intune*, kan dit van invloed zijn op de algemene compliance-evaluaties.
+
 ## <a name="system-security"></a>Systeembeveiliging
 
 ### <a name="password"></a>Wachtwoord
@@ -163,6 +168,8 @@ Geldt alleen voor gezamenlijk beheerde apparaten met Windows 10 en hoger. Appara
   Deze instelling geldt voor alle stations op een apparaat.
   - **Niet geconfigureerd** (*standaard*)
   - **Vereisen** - Gebruik *Vereisen* om de gegevensopslag op uw apparaten te versleutelen.
+  
+   [DeviceStatus CSP - DeviceStatus/Compliance/EncryptionCompliance](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
 
   > [!NOTE]
   > Met de instelling **Versleuteling van gegevensopslag op een apparaat** wordt algemeen gecontroleerd of er op het apparaat wordt versleuteld. Voor betere versleutelingsinstelling kunt u overwegen om **BitLocker vereisen** te gebruiken. Hierbij wordt gebruikgemaakt van de Windows-apparaatstatusverklaring om de Bitlocker-status op TPM-niveau te valideren.
@@ -182,7 +189,7 @@ Geldt alleen voor gezamenlijk beheerde apparaten met Windows 10 en hoger. Appara
   - **Niet geconfigureerd** (*standaard*): Intune controleert het apparaat niet op een TPM-chipversie.
   - **Vereisen**: Intune controleert of de TPM-chipversie compatibel is. Het apparaat is compatibel als de TPM-chipversie groter is dan **0** (nul). Het apparaat is niet compatibel als er zich geen TPM-versie op het apparaat bevindt.
 
-  [DeviceStatus CSP - DeviceStatus/TPM/SpecificationVersion node](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+  [DeviceStatus CSP - DeviceStatus/TPM/SpecificationVersion](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
   
 - **Antivirus**:  
   - **Niet geconfigureerd** (*standaard*) - Intune controleert niet of er antivirusoplossingen op het apparaat zijn geïnstalleerd.
@@ -214,7 +221,7 @@ Geldt alleen voor gezamenlijk beheerde apparaten met Windows 10 en hoger. Appara
   - **Niet geconfigureerd** (*standaard*): Intune dwingt geen vereisten af.
   - **Vereisen**: afdwingen dat de beveiligingsinformatie van Microsoft Defender- up-to-date is.
 
-  [Defender/Health/SignatureOutOfDate CSP](https://docs.microsoft.com/windows/client-management/mdm/defender-csp)
+  [Defender CSP - Defender/Health/SignatureOutOfDate CSP](https://docs.microsoft.com/windows/client-management/mdm/defender-csp)
   
   Zie [Updates van beveiligingsinformatie voor Microsoft Defender Antivirus en andere Microsoft-antimalware](https://www.microsoft.com/en-us/wdsi/defenderupdates) voor meer informatie.
 
@@ -222,7 +229,7 @@ Geldt alleen voor gezamenlijk beheerde apparaten met Windows 10 en hoger. Appara
   - **Niet geconfigureerd** (*standaard*): Intune beheert deze functie niet en wijzigt evenmin bestaande instellingen.
   - **Vereisen**: realtime-beveiliging inschakelen, waarmee op malware, spyware en andere ongewenste software wordt gescand.  
 
-  [Defender/AllowRealtimeMonitoring CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
+  [Policy CSP - Defender/AllowRealtimeMonitoring CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
 ## <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
 

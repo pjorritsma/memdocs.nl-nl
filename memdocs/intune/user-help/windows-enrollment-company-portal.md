@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/24/2019
+ms.date: 08/12/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 5e7cd5e5fa5f04e674b2fd9d37c8895b72372c4c
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2a79b5c433a286321426f2b14f63768e575b5556
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881404"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179465"
 ---
 # <a name="windows-device-enrollment-in-intune-company-portal"></a>Inschrijving van een Windows-apparaat bij de Intune-bedrijfsportal  
 
@@ -75,10 +75,8 @@ De stappen voor inschrijving verschillen voor verschillende versies van Windows 
     * __1607 of hoger__ is: schrijf het apparaat in via de route [**Instellingen** > **Toegang tot werk of school**](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
     * __1511 of lager__ is: schrijf het apparaat in via de route [**Instellingen** > **Accounts**](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
 
-## <a name="enroll-non-windows-10-devices"></a>Niet-Windows 10-apparaten inschrijven  
-Gebruik de volgende artikelen om andere ondersteunde Windows-apparaten in te schrijven via de website van de bedrijfsportal:   
-* [Windows 8.1- of Windows RT 8.1-apparaat](enroll-your-W81-or-rt81-windows.md)  
-* [Windows Phone 8.1-apparaat](enroll-your-wp81-windows.md)    
+## <a name="enroll-other-windows-devices"></a>Andere Windows-apparaten inschrijven  
+U kunt [Windows 8.1-apparaten of Windows RT 8.1-apparaten](enroll-your-W81-or-rt81-windows.md) inschrijven via de website van de bedrijfsportal. 
 
 ## <a name="it-administrator-support"></a>Ondersteuning IT-beheerder  
 Als u een IT-beheerder bent en in de problemen raakt tijdens het inschrijven van apparaten, kunt u [Troubleshooting Windows device enrollment problems in Microsoft Intune (Problemen oplossen met de inschrijving van Windows-apparaten in Microsoft Intune)](https://support.microsoft.com/help/4469913) raadplegen. Dit artikel bevat algemene fouten, de oorzaken en de stappen om deze op te lossen.  

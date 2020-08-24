@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/22/2020
+ms.date: 08/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4beb6c5a91f9f379006df482ff10066831389b6
-ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
+ms.openlocfilehash: 1cb05cb518d4edfb443bf4f70ff1c51154e17f4c
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216396"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217651"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>App-beveiligingsbeleid maken en toewijzen
 
@@ -103,7 +103,7 @@ Wanneer u een app-beveiligingsbeleid maakt voor iOS/iPadOS- en Android-apps, vol
     - **Android voorwaardelijke start**: raadpleeg [Beveiligingsbeleidsinstellingen voor Android-apps - Voorwaardelijke start](app-protection-policy-settings-android.md#conditional-launch) voor informatie.
 
 9. Klik op **Volgende** om de pagina **Toewijzingen** weer te geven.<br>
-   Op de pagina **Toewijzingen** kunt u het beveiligingsbeleid voor apps toewijzen aan groepen gebruikers.
+   Op de pagina **Toewijzingen** kunt u het beveiligingsbeleid voor apps toewijzen aan groepen gebruikers. U moet het beleid toepassen op een groep gebruikers om het beleid van kracht te laten worden.
 
 10. Klik op **Volgende: Beoordelen en maken** om de waarden en instellingen te bekijken die u hebt ingevoerd voor dit app-beveiligingsbeleid.
 
@@ -111,6 +111,9 @@ Wanneer u een app-beveiligingsbeleid maakt voor iOS/iPadOS- en Android-apps, vol
 
     > [!TIP]
     > Deze beleidsinstellingen worden alleen afgedwongen wanneer u apps in de context van het werk gebruikt. Als eindgebruikers de app gebruiken voor een privétaak, worden deze beleidsregels niet toegepast. Let op: wanneer u een nieuw bestand maakt, wordt dit als een privébestand beschouwd.
+
+    > [!IMPORTANT]
+    > Het kan enige tijd duren voordat het app-beveiligingsbeleid wordt toegepast op bestaande apparaten. Eindgebruikers zien een melding op het apparaat wanneer het app-beveiligingsbeleid wordt toegepast. Uw app-beveiligingsbeleid toepassen op apparaten voordat u voorwaardelijke toegangsregels toepast.
 
 Eindgebruikers kunnen de apps downloaden in de App Store of via Google Play. Zie voor meer informatie:
 * [Wat u kunt verwachten wanneer uw Android-app wordt beheerd door een app-beveiligingsbeleid](../fundamentals/end-user-mam-apps-android.md)

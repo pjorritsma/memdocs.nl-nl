@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/16/2020
+ms.date: 08/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96f5b4c8400e993de4ecde0aa3d7c30f82a20e6b
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: d8fd15b7bdc52d3cd8dc00f77dced42e9bb6bd66
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262707"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252149"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Instellingen voor beveiligingsbeleid voor apps voor Android in Microsoft Intune
 In dit artikel worden de app-beveiligingsbeleidsinstellingen voor Android-apparaten beschreven. De beleidsinstellingen die worden beschreven, kunnen worden [geconfigureerd](app-protection-policies.md) voor een app-beveiligingsbeleid in het deelvenster **Instellingen** in Azure Portal.
@@ -127,7 +127,7 @@ Zie [Uitzonderingen voor gegevensoverdrachtsbeleid voor apps](app-protection-pol
 
 
 ## <a name="conditional-launch"></a>Voorwaardelijk starten
-Configureer instellingen voor voorwaardelijk starten om beveiligingsvereisten voor aanmelden in te stellen voor toegangsbeveiligingsbeleid. 
+Configureer instellingen voor voorwaardelijk starten om beveiligingsvereisten voor aanmelden in te stellen voor app-beveiligingsbeleid. 
 
 Standaard wordt voorzien in verschillende instellingen met vooraf geconfigureerde waarden en acties. Enkele van deze instellingen kunt u verwijderen, bijvoorbeeld de *minimale versie van het besturingssysteem*. U kunt ook aanvullende instellingen selecteren in de vervolgkeuzelijst **Selecteer een optie**. 
 

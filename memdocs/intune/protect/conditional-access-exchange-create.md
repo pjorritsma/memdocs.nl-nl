@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6b0a22d24a67364df3d3aa064489db67e2c97e98
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: cb70d5842ce13b5baa9dc60ec2ed9cd698bad75c
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462232"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252755"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Toegang tot Exchange On-Premises voor Intune configureren
 
@@ -69,14 +69,13 @@ Controleer of aan de volgende voorwaarden is voldaan voordat u voorwaardelijke t
 
 ### <a name="support-for-mobile-devices"></a>Ondersteuning voor mobiele apparaten
 
-- **Windows Phone 8.1 en hoger**: zie [Beleid voor voorwaardelijke toegang maken](../protect/create-conditional-access-intune.md) om een beleid voor voorwaardelijke toegang te maken
+- **Windows Phone**: zie [Beleid voor voorwaardelijke toegang maken](../protect/create-conditional-access-intune.md) om een beleid voor voorwaardelijke toegang te maken
 - **Systeemeigen e-mailapp op iOS/iPadOS**: zie [Beleid voor voorwaardelijke toegang maken](../protect/create-conditional-access-intune.md) om een beleid voor voorwaardelijke toegang te maken
 - **EAS-mailclients zoals Gmail op Android 4 of hoger**: zie [Beleid voor voorwaardelijke toegang maken](../protect/create-conditional-access-intune.md) om een beleid voor voorwaardelijke toegang te maken
 
 - **EAS-mailclients op Android-apparaatbeheerder**: zie [Beleid voor voorwaardelijke toegang maken](../protect/create-conditional-access-intune.md) om een beleid voor voorwaardelijke toegang te maken
 
 - **EAS-mailclients op apparaten met een Android-werkprofiel**: alleen *Gmail* en *Nine Work for Android Enterprise* worden ondersteund op apparaten met een Android-werkprofiel. Voorwaardelijke toegang werkt alleen in combinatie met Android-werkprofielen als u een e-mailprofiel voor de app *Gmail* of *Nine Work for Android Enterprise* implementeert en die apps ook implementeert als verplicht te installeren apps. Nadat u de app hebt geïmplementeerd, kunt u voorwaardelijke toegang op basis van het apparaat instellen.
-
 
 #### <a name="to-set-up-conditional-access-for-android-work-profile-devices"></a>Voorwaardelijke toegang instellen voor apparaten met een Android-werkprofiel
 

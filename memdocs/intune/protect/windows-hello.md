@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/27/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: d120ee0f55651ab1661e426e5889aaf8a4c7e670
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 7088bfd5b27d986e12a175de1bdea0bf060c3ad3
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262860"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252517"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Windows Hello voor Bedrijven integreren in Microsoft Intune  
 
@@ -45,17 +45,15 @@ Daarnaast biedt Intune ondersteuning voor de volgende typen beleid voor het behe
 De rest van dit artikel gaat over het maken van een standaard Windows Hello voor Bedrijven-beleid dat gericht is op uw hele organisatie.
 
 > [!IMPORTANT]
-> In Windows 10 Desktop en Windows 10 Mobile vóór de jubileumupdate kunt u twee verschillende pincodes instellen voor het verifiëren van resources:
+> Vóór de jubileumupdate kunt u twee verschillende pincodes instellen voor het verifiëren van resources:
 >
 > - U kunt de **pincode van het apparaat** gebruiken om het apparaat te ontgrendelen en verbinding te maken met cloudresources.
 > - De **pincode voor werk** werd gebruikt om toegang tot krijgen tot de Azure AD-resources op de persoonlijke apparaten van de gebruiker (BYOD).
-> 
+>
 > In de jubileumupdate zijn deze twee pincodes samengevoegd tot één pincode voor het apparaat.
 > De waarde voor deze nieuwe pincode wordt ingesteld op basis van de Intune-configuratiebeleidsregels die u hebt ingesteld voor het beheer van de pincode van het apparaat, en eventuele Windows Hello-bedrijfsbeleidsregels die u hebt geconfigureerd.
-> Als u beide beleidstypen voor het beheren van de pincode hebt ingesteld, wordt het Windows Hello-bedrijfsbeleid toegepast op apparaten met zowel Windows 10 Desktop als apparaten met Windows 10 Mobile.
+> Als u beide beleidstypen voor het beheren van de pincode hebt ingesteld, wordt het Windows Hello-bedrijfsbeleid toegepast.
 > Als u ervoor wilt zorgen dat beleidsconflicten worden opgelost en het pincodebeleid correct wordt toegepast, werkt u het Windows Hello-bedrijfsbeleid bij zodat dit overeenkomt met de instellingen in het configuratiebeleid. Vervolgens vraagt u de gebruikers hun apparaten te synchroniseren in de bedrijfsportal-app.
-
-
 
 ## <a name="create-a-windows-hello-for-business-policy"></a>Een beleid voor Windows Hello voor Bedrijven maken
 
@@ -65,13 +63,13 @@ De rest van dit artikel gaat over het maken van een standaard Windows Hello voor
 
 3. Selecteer een van de volgende opties voor **Windows Hello voor Bedrijven configureren**:
 
-     - **Ingeschakeld**. Selecteer deze instelling als u instellingen voor Windows Hello voor Business wilt configureren.  Wanneer u *Ingeschakeld* selecteert, worden extra instellingen voor Windows Hello zichtbaar en kunnen ze voor apparaten worden geconfigureerd.
+   - **Ingeschakeld**. Selecteer deze instelling als u instellingen voor Windows Hello voor Business wilt configureren.  Wanneer u *Ingeschakeld* selecteert, worden extra instellingen voor Windows Hello zichtbaar en kunnen ze voor apparaten worden geconfigureerd.
 
-    - **Uitgeschakeld**. Selecteer deze optie als u Windows Hello voor Bedrijven niet wilt inschakelen tijdens de apparaatinschrijving. Als deze optie is uitgeschakeld, kunnen gebruikers Windows Hello voor Bedrijven niet inrichten, behalve op aan Azure Active Directory gekoppelde mobiele telefoons waarvoor het inrichten mogelijk vereist is. Wanneer deze optie is ingesteld op *Uitgeschakeld*, kunt u nog steeds de volgende instellingen voor Windows Hello voor Bedrijven configureren, zelfs als met dit beleid Windows Hello voor Bedrijven niet wordt ingeschakeld.
+   - **Uitgeschakeld**. Selecteer deze optie als u Windows Hello voor Bedrijven niet wilt inschakelen tijdens de apparaatinschrijving. Als dit is uitgeschakeld, kunnen gebruikers Windows Hello voor Bedrijven niet inrichten. Wanneer deze optie is ingesteld op *Uitgeschakeld*, kunt u nog steeds de volgende instellingen voor Windows Hello voor Bedrijven configureren, zelfs als met dit beleid Windows Hello voor Bedrijven niet wordt ingeschakeld.
 
-    - **Niet geconfigureerd**. Selecteer deze instelling als u niet met Intune instellingen voor Windows Hello voor Bedrijven wilt beheren. Alle eventueel bestaande Windows Hello voor Bedrijven-instellingen voor Windows 10-apparaten worden niet gewijzigd. Alle andere instellingen in het deelvenster zijn niet beschikbaar.
+   - **Niet geconfigureerd**. Selecteer deze instelling als u niet met Intune instellingen voor Windows Hello voor Bedrijven wilt beheren. Alle eventueel bestaande Windows Hello voor Bedrijven-instellingen voor Windows 10-apparaten worden niet gewijzigd. Alle andere instellingen in het deelvenster zijn niet beschikbaar.
 
-4. Als u in de vorige stap **Ingeschakeld** hebt geselecteerd, configureert u de vereiste instellingen die worden toegepast op alle ingeschreven Windows 10- en Windows 10 Mobile-apparaten. Nadat u deze instellingen hebt geconfigureerd, selecteert u **Opslaan**.
+4. Als u in de vorige stap **Ingeschakeld** hebt geselecteerd, configureert u de vereiste instellingen die worden toegepast op alle ingeschreven Windows 10-apparaten. Nadat u deze instellingen hebt geconfigureerd, selecteert u **Opslaan**.
 
    - **Een TPM (Trusted Platform Module) gebruiken**:
 

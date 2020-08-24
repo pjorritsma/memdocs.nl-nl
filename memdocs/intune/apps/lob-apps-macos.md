@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 08/18/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 673adad15e92fb06cf5cf7c3589b06ab8b1b337a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 407189163107da24e19b84c2011fa47f6a796475
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990648"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88591690"
 ---
 # <a name="how-to-add-macos-line-of-business-lob-apps-to-microsoft-intune"></a>LOB-apps (Line-Of-Business) voor macOS toevoegen in Microsoft Intune
 
@@ -42,13 +42,12 @@ Gebruik de informatie in dit artikel om macOS-Line-Of-Business-apps toe te voege
 U moet een extern hulpprogramma downloaden, het gedownloade hulpprogramma markeren als uitvoerbaar, en uw *.pkg*-bestanden vooraf verwerken met het hulpprogramma, voordat u het LOB-bestand kunt uploaden in Microsoft Intune. Het vooraf verwerken van uw *.pkg*-bestanden moet plaatsvinden op een macOS-apparaat. Gebruik de Intune App Wrapping Tool voor Mac om de Mac-apps in te schakelen om te worden beheerd in Microsoft Intune.
 
 > [!IMPORTANT]
-> Het *.pkg*-bestand moet zijn ondertekend met behulp van het certificaat Installatieprogramma voor ontwikkelaars-id's dat is verkregen via een Apple-ontwikkelaarsaccount. Alleen *.pkg*-bestanden kunnen worden gebruikt om LOB-apps voor macOS te uploaden in Microsoft Intune. Het converteren van andere indelingen, zoals *.dmg* naar *.pkg* wordt niet ondersteund.
->
+> Het *.pkg*-bestand moet zijn ondertekend met behulp van het certificaat Installatieprogramma voor ontwikkelaars-id's dat is verkregen via een Apple-ontwikkelaarsaccount. Alleen *.pkg*-bestanden kunnen worden gebruikt om LOB-apps voor macOS te uploaden in Microsoft Intune. Het converteren van andere indelingen, zoals *.dmg* naar *.pkg*, wordt ondersteund. Voor meer informatie over het converteren van niet-pkg toepassingstypen raadpleegt u [Hoe u DMG of apps met APP-indeling kunt implementeren voor door Intune beheerde Macs](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-deploy-dmg-or-app-format-apps-to-intune-managed-macs/ba-p/1503416).
 
 1. Download de [Intune App Wrapping Tool voor Mac](https://github.com/msintuneappsdk/intune-app-wrapping-tool-mac).
 
     > [!NOTE]
-    > De  **Intune App Wrapping Tool voor Mac** moet worden uitgevoerd op een macOS-computer. 
+    > De ** Intune App Wrapping Tool voor Mac** moet worden uitgevoerd op een macOS-computer. 
 
 2. Markeer het gedownloade hulpprogramma als een uitvoerbaar bestand:
    - Start de terminal-app.

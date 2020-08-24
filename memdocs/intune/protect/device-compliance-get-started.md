@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/15/2020
+ms.date: 08/14/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 832ddbde9e3cf4782c7d3867ad6a09cc250960c7
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: 6bb3397432f1c171418ea99510cb04f1bdefc639
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088323"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252789"
 ---
 # <a name="use-compliance-policies-to-set-rules-for-devices-you-manage-with-intune"></a>Beleidsregels voor compliance gebruiken om regels in te stellen voor apparaten die u beheert met Intune
 
@@ -31,9 +31,7 @@ Nalevingsbeleid in Intune:
 
 - De regels en instellingen vaststellen waaraan gebruikers en apparaten moeten voldoen om compatibel te zijn.
 - Neem daarbij ook acties op die van toepassing zijn op apparaten die niet compatibel zijn. Met acties voor niet-naleving kunnen gebruikers op de hoogte worden gebracht van de voorwaarden van niet-naleving en de gegevens op niet-compatibele apparaten beveiligen.
-- Kan [worden gecombineerd met voorwaardelijke toegang](#integrate-with-conditional-access) om gebruikers en apparaten te blokkeren die niet aan de regels voldoen en als niet-conform zijn gemarkeerd.
-
-  Voorwaardelijke toegang kan ook worden gebruikt met nalevingsstatusgegevens van apparaten die u beheert met externe partners voor beheer van mobiele apparaten. Als u deze mogelijkheid wilt inschakelen, voegt u ondersteuning voor de partner toe aan zowel Azure AD als Intune. Zie Ondersteuning voor apparaatnalevingspartners toevoegen voor meer informatie. 
+- Kan [worden gecombineerd met Voorwaardelijke toegang](#integrate-with-conditional-access), waardoor gebruikers en apparaten die niet aan de regels voldoen vervolgens kunnen worden geblokkeerd.
 
 Er zijn twee onderdelen voor nalevingsbeleid in Intune:
 
@@ -126,7 +124,6 @@ De volgende onderwerpen bevatten een koppeling naar artikelen die specifiek gaan
   - [iOS](compliance-policy-create-ios.md)
   - [macOS](compliance-policy-create-mac-os.md)
   - [Windows Holographic for Business](compliance-policy-create-windows.md#windows-holographic-for-business)
-  - [Windows Phone 8.1](compliance-policy-create-windows-8-1.md)
   - [Windows 8.1 en hoger](compliance-policy-create-windows-8-1.md)
   - [Windows 10 en hoger](compliance-policy-create-windows.md)
 
@@ -163,13 +160,13 @@ In de volgende tabel wordt beschreven hoe niet-compatibele instellingen worden b
 
 |**Beleidsinstelling**| **Platform** |
 | --- | ----|
-| **Configuratie van pincode of wachtwoord** | - **Android 4.0 en hoger**: In quarantaine<br>- **Samsung Knox Standard 4.0 en hoger**: In quarantaine<br>- **Android Enterprise**: In quarantaine  <br>  <br>- **iOS 8.0 en hoger**: Hersteld<br>- **macOS 10.11 en hoger**: Hersteld  <br>  <br>- **Windows 8.1 en hoger**: Hersteld<br>- **Windows Phone 8.1 en hoger**: Hersteld|
-| **Apparaatversleuteling** | - **Android 4.0 en hoger**: In quarantaine<br>- **Samsung Knox Standard 4.0 en hoger**: In quarantaine<br>- **Android Enterprise**: In quarantaine<br><br>- **iOS 8.0 en hoger**: Hersteld (door een pincode in te stellen)<br>- **macOS 10.11 en hoger**: Hersteld (door een pincode in te stellen)<br><br>- **Windows 8.1 en hoger**: Niet van toepassing<br>- **Windows Phone 8.1 en hoger**: Hersteld |
-| **Opengebroken of geroot apparaat** | - **Android 4.0 en hoger**: In quarantaine (geen instelling)<br>- **Samsung Knox Standard 4.0 en hoger**: In quarantaine (geen instelling)<br>- **Android Enterprise**: In quarantaine (geen instelling)<br><br>- **iOS 8.0 en hoger**: In quarantaine (geen instelling)<br>- **macOS 10.11 en hoger**: Niet van toepassing<br><br>- **Windows 8.1 en hoger**: Niet van toepassing<br>- **Windows Phone 8.1 en hoger**: Niet van toepassing |
-| **E-mailprofiel** | - **Android 4.0 en hoger**: Niet van toepassing<br>- **Samsung Knox Standard 4.0 en hoger**: Niet van toepassing<br>- **Android Enterprise**: Niet van toepassing<br><br>- **iOS 8.0 en hoger**: In quarantaine<br>- **macOS 10.11 en hoger**: In quarantaine<br><br>- **Windows 8.1 en hoger**: Niet van toepassing<br>- **Windows Phone 8.1 en hoger**: Niet van toepassing |
-| **Minimale versie van het besturingssysteem** | - **Android 4.0 en hoger**: In quarantaine<br>- **Samsung Knox Standard 4.0 en hoger**: In quarantaine<br>- **Android Enterprise**: In quarantaine<br><br>- **iOS 8.0 en hoger**: In quarantaine<br>- **macOS 10.11 en hoger**: In quarantaine<br><br>- **Windows 8.1 en hoger**: In quarantaine<br>- **Windows Phone 8.1 en hoger**: In quarantaine |
-| **Maximale versie van het besturingssysteem** | - **Android 4.0 en hoger**: In quarantaine<br>- **Samsung Knox Standard 4.0 en hoger**: In quarantaine<br>- **Android Enterprise**: In quarantaine<br><br>- **iOS 8.0 en hoger**: In quarantaine<br>- **macOS 10.11 en hoger**: In quarantaine<br><br>- **Windows 8.1 en hoger**: In quarantaine<br>- **Windows Phone 8.1 en hoger**: In quarantaine |
-| **Windows Health Attestation** | - **Android 4.0 en hoger**: Niet van toepassing<br>- **Samsung Knox Standard 4.0 en hoger**: Niet van toepassing<br>- **Android Enterprise**: Niet van toepassing<br><br>- **iOS 8.0 en hoger**: Niet van toepassing<br>- **macOS 10.11 en hoger**: Niet van toepassing<br><br>- **Windows 10 en Windows 10 Mobile**: In quarantaine<br>- **Windows 8.1 en hoger**: In quarantaine<br>- **Windows Phone 8.1 en hoger**: Niet van toepassing |
+| **Configuratie van pincode of wachtwoord** | - **Android 4.0 en hoger**: In quarantaine<br>- **Samsung Knox Standard 4.0 en hoger**: In quarantaine<br>- **Android Enterprise**: In quarantaine  <br>  <br>- **iOS 8.0 en hoger**: Hersteld<br>- **macOS 10.11 en hoger**: Hersteld  <br>  <br>- **Windows 8.1 en hoger**: Hersteld|
+| **Apparaatversleuteling** | - **Android 4.0 en hoger**: In quarantaine<br>- **Samsung Knox Standard 4.0 en hoger**: In quarantaine<br>- **Android Enterprise**: In quarantaine<br><br>- **iOS 8.0 en hoger**: Hersteld (door een pincode in te stellen)<br>- **macOS 10.11 en hoger**: Hersteld (door een pincode in te stellen)<br><br>- **Windows 8.1 en hoger**: Niet van toepassing|
+| **Opengebroken of geroot apparaat** | - **Android 4.0 en hoger**: In quarantaine (geen instelling)<br>- **Samsung Knox Standard 4.0 en hoger**: In quarantaine (geen instelling)<br>- **Android Enterprise**: In quarantaine (geen instelling)<br><br>- **iOS 8.0 en hoger**: In quarantaine (geen instelling)<br>- **macOS 10.11 en hoger**: Niet van toepassing<br><br>- **Windows 8.1 en hoger**: Niet van toepassing |
+| **E-mailprofiel** | - **Android 4.0 en hoger**: Niet van toepassing<br>- **Samsung Knox Standard 4.0 en hoger**: Niet van toepassing<br>- **Android Enterprise**: Niet van toepassing<br><br>- **iOS 8.0 en hoger**: In quarantaine<br>- **macOS 10.11 en hoger**: In quarantaine<br><br>- **Windows 8.1 en hoger**: Niet van toepassing |
+| **Minimale versie van het besturingssysteem** | - **Android 4.0 en hoger**: In quarantaine<br>- **Samsung Knox Standard 4.0 en hoger**: In quarantaine<br>- **Android Enterprise**: In quarantaine<br><br>- **iOS 8.0 en hoger**: In quarantaine<br>- **macOS 10.11 en hoger**: In quarantaine<br><br>- **Windows 8.1 en hoger**: In quarantaine|
+| **Maximale versie van het besturingssysteem** | - **Android 4.0 en hoger**: In quarantaine<br>- **Samsung Knox Standard 4.0 en hoger**: In quarantaine<br>- **Android Enterprise**: In quarantaine<br><br>- **iOS 8.0 en hoger**: In quarantaine<br>- **macOS 10.11 en hoger**: In quarantaine<br><br>- **Windows 8.1 en hoger**: In quarantaine |
+| **Windows Health Attestation** | - **Android 4.0 en hoger**: Niet van toepassing<br>- **Samsung Knox Standard 4.0 en hoger**: Niet van toepassing<br>- **Android Enterprise**: Niet van toepassing<br><br>- **iOS 8.0 en hoger**: Niet van toepassing<br>- **macOS 10.11 en hoger**: Niet van toepassing<br><br>- **Windows 10**: In quarantaine<br>- **Windows 8.1 en hoger**: In quarantaine |
 
 ---------------------------
 

@@ -6,7 +6,7 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 3/22/2019
+ms.date: 08/12/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d29294f1d9556f195fe70f0e2cb36cc8c9ddcfba
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 37ea8cf3f8615630ccc5b1f5fcc72f69c66db3ef
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357724"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179567"
 ---
 # <a name="create-a-design"></a>Een ontwerp maken
 
@@ -311,7 +311,7 @@ Hieronder ziet u een voorbeeld van een ontwerp voor een Wi-Fi-profiel:
 | **Type** | **Profielnaam** | **Apparaatplatform** | **Use cases** |
 |:---:|:---:|:---:|:---:|
 | Wi-Fi | Wi-Fi-profiel Azië | Android | Bedrijfseigendom, BYOD regio Azië|
-| Wi-Fi | Wi-Fi-profiel Noord-Amerika | Android, iOS/iPadOS, Windows 10 Mobile | Bedrijfseigendom, BYOD regio Noord-Amerika |
+| Wi-Fi | Wi-Fi-profiel Noord-Amerika | Android, iOS/iPadOS | Bedrijfseigendom, BYOD regio Noord-Amerika |
 
 U kunt [een sjabloon uit de bovenstaande tabel downloaden](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) om de behoeften van uw Wi-Fi-profiel vast te stellen.
 
@@ -323,7 +323,7 @@ Hieronder ziet u een voorbeeld van het vastleggen van het ontwerp van een VPN-pr
 
 | **Type** | **Profielnaam** | **Apparaatplatform** | **Use cases** |
 |:---:|:---:|:---:|:---:|
-| VPN | VPN Cisco, alle verbindingsprofielen | Android, iOS/iPadOS, Windows 10 Mobile | Bedrijfseigendom, BYOD Noord-Amerika en Duitsland|
+| VPN | VPN Cisco, alle verbindingsprofielen | Android, iOS/iPadOS | Bedrijfseigendom, BYOD Noord-Amerika en Duitsland|
 | VPN | Pulse Secure | Android | Bedrijfseigendom, BYOD regio Azië |
 
 U kunt [een sjabloon uit de bovenstaande tabel downloaden](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) om de behoeften van uw VPN-profiel vast te stellen.
@@ -374,7 +374,7 @@ Met beleid voor app-beveiliging kan het verlies van gegevens tot een minimum wor
 | **App** | **Doel** | **Platformen** | **Use case** | **Beleid voor app-beveiliging** |
 |:---:|:---:|:---:|:---:|:---:|
 | Outlook Mobile  | Beschikbaar | iOS | Bedrijfseigendom - leidinggevenden | Apparaat kan niet jailbroken zijn, bestanden versleutelen |                                                         
-| Word | Beschikbaar | iOS/iPadOS, Android - Samsung Knox, niet-Knox, Windows 10 Mobile | Bedrijfseigendom, BYOD | Apparaat kan niet jailbroken zijn, bestanden versleutelen |                                                         
+| Word | Beschikbaar | iOS/iPadOS, Android - Samsung Knox, geen Knox | Bedrijfseigendom, BYOD | Apparaat kan niet jailbroken zijn, bestanden versleutelen |                                                         
 
 
 U kunt [een sjabloon uit de bovenstaande tabel downloaden](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) om de behoeften van uw beleid voor app-beveiliging vast te stellen.
@@ -388,7 +388,7 @@ Hieronder ziet u een voorbeeld van het ontwerpen van nalevingsbeleid:
 
 | **Naam van beleid** | **Apparaatplatform** | **Instellingen** | **Doelgroep** |
 |:---:|:---:|:---:|:---:|
-| Nalevingsbeleid | iOS/iPadOS, Android - Samsung Knox, niet-Knox, Windows 10 Mobile | PIN - vereist, kan niet jailbroken zijn | Bedrijfseigendom, BYOD |
+| Nalevingsbeleid | iOS/iPadOS, Android - Samsung Knox, geen Knox | PIN - vereist, kan niet jailbroken zijn | Bedrijfseigendom, BYOD |
 
 
 U kunt [een sjabloon uit de bovenstaande tabel downloaden](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) om de behoeften van uw nalevingsbeleid vast te stellen.

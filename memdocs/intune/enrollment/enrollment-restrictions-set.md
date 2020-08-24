@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5ed799d01ea4fdae1f9ecb013b4cf73deb0e6f0
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: b056eb0bab2416a87f443c025a76c22b580ed3c9
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051652"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252438"
 ---
 # <a name="set-enrollment-restrictions"></a>Registratiebeperkingen instellen
 
@@ -47,11 +47,10 @@ U kunt onder ander de volgende registratiebeperkingen maken:
   - iOS/iPadOS
   - macOS
   - Windows
-  - Windows Mobile
-- Platformbesturingssysteemversie voor iOS/iPadOS, Android-apparaatbeheerder, Android-werkprofiel, Windows en Windows Mobile. (Alleen Windows 10-versies kunnen worden gebruikt. Laat dit veld leeg als Windows 8.1 is toegestaan.)
+- Platformbesturingssysteemversie voor iOS/iPadOS, Android-apparaatbeheerder, Android-werkprofiel en Windows.
   - Minimale versie.
   - Maximale versie.
-- Beperk [apparaten in persoonlijk eigendom](device-enrollment.md#bring-your-own-device) (alleen iOS, Android-apparaatbeheerder, Android-werkprofiel, macOS, Windows en Windows Mobile).
+- Beperk [apparaten in persoonlijk eigendom](device-enrollment.md#bring-your-own-device) (alleen iOS, Android-apparaatbeheerder, Android-werkprofiel, macOS, en Windows).
 
 ## <a name="default-restrictions"></a>Standaardbeperkingen
 

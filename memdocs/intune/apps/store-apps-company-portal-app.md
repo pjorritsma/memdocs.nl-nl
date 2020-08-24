@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/21/2020
+ms.date: 08/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7926bd972fd24f39bd4e3f520fd250526502812a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: c41f22e2aa60803067b9015f2ae3a84db43ff894
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983937"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179533"
 ---
 # <a name="add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>De Windows 10-bedrijfsportal-app toevoegen met Microsoft Intune
 
@@ -71,7 +71,7 @@ Zie [Deploying an appxbundle with dependencies via Microsoft Intune MDM](https:/
 
 ## <a name="frequently-asked-questions"></a>Veelgestelde vragen 
 ### <a name="how-do-i-update-the-company-portal-app-on-my-users-devices-if-they-have-already-installed-the-older-apps-from-the-store"></a>Hoe kan ik de bedrijfsportal-app op de apparaten van mijn gebruikers bijwerken als hierop al de oudere apps uit de Store zijn geïnstalleerd?
-Als uw gebruikers de Windows 8.1- of Windows Phone 8.1-bedrijfsportal-apps al hebben geïnstalleerd vanuit de Microsoft Store, moeten hun apps automatisch worden bijgewerkt naar de nieuwste versie, zonder dat hiervoor actie door u of uw gebruikers is vereist. Als de update niet wordt uitgevoerd, vraagt u uw gebruikers om te bevestigen dat automatische updates voor Store-apps op hun apparaten is ingeschakeld.   
+Als uw gebruikers de Windows 8.1 bedrijfsportal-apps al hebben geïnstalleerd vanuit de Microsoft Store, moeten hun apps automatisch worden bijgewerkt naar de nieuwste versie, zonder dat hiervoor actie door u of uw gebruikers is vereist. Als de update niet wordt uitgevoerd, vraagt u uw gebruikers om te bevestigen dat automatische updates voor Store-apps op hun apparaten is ingeschakeld.   
 
 ### <a name="how-do-i-upgrade-my-sideloaded-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>Hoe ik een upgrade uitvoeren van mijn gesideloade Windows 8.1-bedrijfsportal-app naar de Windows 10-bedrijfsportal-app?
 Het wordt aanbevolen de toewijzing voor de Windows 8.1-bedrijfsportal-app te verwijderen door de toewijzingsactie in te stellen op **Installatie ongedaan maken**. Als u deze instelling selecteert, kunt u de Windows 10 Bedrijfsportal-app toewijzen aan de hand van eender welke van de besproken opties.  
@@ -80,8 +80,8 @@ Als u de app moet sideloaden en de Windows 8.1-bedrijfsportal hebt toegewezen zo
 
 Als u de app moet sideloaden en de Windows 8.1-bedrijfsportal-app hebt ondertekend en toegewezen met het Symantec-certificaat voor de ondertekening van programmacode, volgt u de stappen in de volgende sectie.
 
-### <a name="how-do-i-upgrade-my-signed-and-sideloaded-windows-phone-81-company-portal-app-or-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>Hoe kan ik een upgrade uitvoeren van mijn ondertekende en gesideloade Windows Phone 8.1-bedrijfsportal-app of Windows 8.1-bedrijfsportal-app naar de Windows 10-bedrijfsportal-app?
-Het wordt aanbevolen de bestaande toewijzing voor de Windows Phone 8.1-bedrijfsportal-app of de Windows 8.1-bedrijfsportal-app te verwijderen door de toewijzingsactie in te stellen op **Installatie ongedaan maken**. Als u deze instelling selecteert, kunt u de Windows 10 Bedrijfsportal-app zoals gebruikelijk toewijzen.  
+### <a name="how-do-i-upgrade-my-signed-and-sideloaded-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>Hoe kan ik een upgrade uitvoeren van mijn ondertekende en gesideloade Windows 8.1-bedrijfsportal-app naar de Windows 10-bedrijfsportal-app?
+Het wordt aanbevolen de bestaande toewijzing voor de Windows 8.1-bedrijfsportal-app te verwijderen door de toewijzingsactie in te stellen op **Installatie ongedaan maken**. Als u deze instelling selecteert, kunt u de Windows 10 Bedrijfsportal-app zoals gebruikelijk toewijzen.  
 
 Anders moet de Windows 10-bedrijfsportal-app op de juiste manier worden bijgewerkt en ondertekend om ervoor te zorgen dat het upgradepad in acht wordt genomen.  
 
@@ -99,7 +99,7 @@ Het ondertekenen en toewijzen van de app gaat als volgt:
 |---|---|
 | InputWin10AppxBundle  |  Het pad naar het bron-appxbundle-bestand. |
 | OutputWin10AppxBundle | Het uitvoerpad voor het ondertekende appxbundle-bestand. 
-| Win81Appx  | Het pad naar het Windows 8.1- of Windows Phone 8.1-bedrijfsportalbestand (het appx-bestand). |
+| Win81Appx  | Het pad naar het Windows 8.1-bedrijfsportalbestand (het appx-bestand). |
 | PfxFilePath  |  Het pad naar het certificaat voor ondertekening van programmacode voor mobiele bedrijfsapparaten van Symantec (het PFX-bestand).  |
 | PfxPassword  | Het wachtwoord voor het certificaat voor ondertekening van programmacode voor mobiele bedrijfsapparaten van Symantec. |
 | PublisherId | De uitgevers-id van de onderneming. Als deze niet is opgegeven, wordt het veld Onderwerp van Symantec Enterprise-certificaat voor ondertekening van mobiele code gebruikt. |

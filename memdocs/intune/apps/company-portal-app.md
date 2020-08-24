@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/04/2020
+ms.date: 08/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 33977676b4c144573965477154a7939f6061280a
-ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
+ms.openlocfilehash: a82fbfa9e494828450729e29467580c29a590282
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87758343"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179550"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>De Intune-bedrijfsportal-apps, de bedrijfsportalwebsite en de Intune-app aanpassen
 
@@ -232,18 +232,16 @@ Zie [Customizing user self-service actions for the Company Portal](../apps/compa
 
 Voor sommige platforms en configuraties zijn geen selfserviceacties voor apparaten toegestaan. De onderstaande tabel bevat meer informatie over selfserviceacties:
 
-| Actie | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
+| Actie | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | macOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
 | Buiten gebruik stellen | Beschikbaar<sup>(1)</sup> | Beschikbaar<sup>(9)</sup> | Beschikbaar | Beschikbaar<sup>(7)</sup> |
 | Wissen | Beschikbaar | Beschikbaar<sup>(5)</sup><sup>(9)</sup> | NA | Beschikbaar<sup>(7)</sup> |
 | Naam wijzigen<sup>(4)</sup> | Beschikbaar | Beschikbaar | Beschikbaar | Beschikbaar |
 | Synchroniseren | Beschikbaar | Beschikbaar | Beschikbaar | Beschikbaar |
-| Vergrendelen op afstand | Alleen Windows Phone | Beschikbaar | Beschikbaar | Beschikbaar |
-| Wachtwoordcode opnieuw instellen | Alleen Windows Phone | Beschikbaar<sup>(8)</sup> | NA | Beschikbaar<sup>(6)</sup> |
 | Sleutelherstel | NA | NA | Beschikbaar<sup>(2)</sup> | NA |
 
 <sup>(1)</sup> **Buiten gebruik stellen** wordt altijd geblokkeerd op Windows-apparaten die zijn toegevoegd aan Azure AD.<br>
-<sup>(2)</sup> **Sleutelherstel** voor MacOS is alleen beschikbaar via de webportal.<br>
+<sup>(2)</sup> **Sleutelherstel** voor macOS is alleen beschikbaar via de webportal.<br>
 <sup>(3) </sup> Alle externe acties worden uitgeschakeld als u een Apparaatinschrijvingsmanager-inschrijving gebruikt.<br>
 <sup>(4)</sup> Met **Naam wijzigen** wordt alleen de apparaatnaam in de app of webportal van de bedrijfsportal gewijzigd, niet op het apparaat zelf.<br>
 <sup>(5)</sup> **Wissen** is niet beschikbaar op door de gebruiker ingeschreven iOS/iPadOS-apparaten.<br>

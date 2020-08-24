@@ -6,7 +6,7 @@ keywords: Intune-datawarehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/28/2020
+ms.date: 08/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db6feb746aa7177f56ff6e87565d67e207d4d9ef
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 1fb6ec17ce058247529ab1e51d50d876e4c97408
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165444"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252670"
 ---
 # <a name="microsoft-intune-data-warehouse-data-model"></a>Gegevensmodel van Microsoft Intune-datawarehouse
 
@@ -60,6 +60,9 @@ Een model met een sterschema is geoptimaliseerd voor flexibiliteit en gegevensan
 ## <a name="time-daily-snapshots"></a>Tijd: dagelijkse momentopnamen
 
 Het datawarehouse bevindt zich downstream van uw Intune-gegevens. Intune maakt dagelijks een momentopname om middernacht UTC en slaat de momentopname op in het datawarehouse. Hoelang de momentopnamen worden vastgehouden, verschilt per feitentabel. Voor sommige is dat zeven dagen, voor andere 30 dagen en voor weer andere zelfs nog langer.
+
+> [!NOTE]
+> Het datawarehouse synchroniseert niet met Jamf-apparaten. Zie [Problemen oplossen met Jamf Pro Integration met Microsoft Intune](..\protect\troubleshoot-jamf.md) en [Data Jamf Pro verzendt naar Intune](..\protect\data-jamf-sends-to-intune.md) voor meer informatie over Jamf.
 
 ## <a name="next-steps"></a>Volgende stappen
 

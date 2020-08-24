@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/18/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d60d4eba093ce9663abf2aa57c6461bef5a34ef1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: bed118810be877bf4671571814ee6d151d6f727b
+ms.sourcegitcommit: da5bfbe16856fdbfadc40b3797840e0b5110d97d
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988718"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512730"
 ---
 # <a name="intune-discovered-apps"></a>Door Intune gedetecteerde apps
 
@@ -57,7 +57,6 @@ De volgende lijst bevat de app-platformtypen, de apps die worden bewaakt op pers
 | Windows 10 (Win32-apps) OPMERKING: hiervoor is de [Intune-beheeruitbreiding](intune-management-extension.md) vereist op het apparaat | Niet van toepassing | Apps die door MSI op het apparaat zijn geïnstalleerd | Elke 24 uur vanaf het moment dat het apparaat wordt ingeschreven |
 | Windows 10 (moderne apps) | Alleen beheerde, moderne apps | Alle moderne apps die op het apparaat zijn geïnstalleerd | Elke zeven dagen vanaf het moment dat het apparaat wordt ingeschreven |
 | Windows 8.1 | Alleen beheerde apps | Alleen beheerde apps | Elke zeven dagen vanaf het moment dat het apparaat wordt ingeschreven |
-| Windows Phone 8 | Alleen beheerde apps | Alleen beheerde apps | Elke zeven dagen vanaf het moment dat het apparaat wordt ingeschreven |
 | Windows RT | Alleen beheerde apps | Alleen beheerde apps | Elke zeven dagen vanaf het moment dat het apparaat wordt ingeschreven |
 | iOS/iPadOS | Alleen beheerde apps | Alle apps die op het apparaat zijn geïnstalleerd | Elke zeven dagen vanaf het moment dat het apparaat wordt ingeschreven |
 | macOS | Alleen beheerde apps | Alle apps die op het apparaat zijn geïnstalleerd | Elke zeven dagen vanaf het moment dat het apparaat wordt ingeschreven |
@@ -65,7 +64,7 @@ De volgende lijst bevat de app-platformtypen, de apps die worden bewaakt op pers
 | Android Enterprise | Alleen beheerde apps | Alleen apps die in het werkprofiel zijn geïnstalleerd | Elke zeven dagen vanaf het moment dat het apparaat wordt ingeschreven |
 
 > [!NOTE]
-> - Op apparaten die zijn gekoppeld aan Windows 10 Hybrid Azure AD, zoals weergegeven in de workload App-beheer in Configuration Manager, wordt momenteel geen app-inventarisatie verzameld met IME (Intune Management Extensie), volgens de bovenstaande planning. Als u dit probleem wilt verhelpen, moet u de workload App-beheer in Configuration Manager overschakelen naar Intune voor de IME, om te worden geïnstalleerd op het apparaat (IME is vereist voor Win32-inventarisatie en PowerShell-implementatie). Opmerking: eventuele wijzigingen in of updates van dit gedrag worden aangekondigd in [In ontwikkeling](../fundamentals/in-development.md) en/of [Nieuwe functies](../fundamentals/whats-new.md).
+> - Op Windows 10-apparaten met co-beheer, zoals weergegeven in de workload [client-apps](https://docs.microsoft.com/mem/configmgr/comanage/workloads#client-apps) in Configuration Manager, wordt momenteel geen app-inventarisatie verzameld met IME (Intune Management Extensie), volgens de bovenstaande planning. Als u dit probleem wilt verhelpen, moet u de workload [client apps](https://docs.microsoft.com/mem/configmgr/comanage/workloads#client-apps) in Configuration Manager overschakelen naar Intune voor de IME, om te worden geïnstalleerd op het apparaat (IME is vereist voor Win32-inventarisatie en PowerShell-implementatie). Opmerking: eventuele wijzigingen in of updates van dit gedrag worden aangekondigd in [In ontwikkeling](../fundamentals/in-development.md) en/of [Nieuwe functies](../fundamentals/whats-new.md).
 > - Op macOS-apparaten in persoonlijk eigendom die zijn ingeschreven vóór november 2019 kunnen alle apps die op het apparaat zijn geïnstalleerd in gebruik blijven totdat het apparaat opnieuw wordt inschreven.
 > - Volledig beheerde en toegewezen Android Enterprise-apparaten geven geen gedetecteerde apps weer.
 

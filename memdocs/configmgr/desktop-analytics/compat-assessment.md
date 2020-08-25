@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: c9268514b43f4f728d3fff4715d4d71308a712f3
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: dbe827371f84bb90e2a7f2468aa139cba073fe49
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699072"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819742"
 ---
 # <a name="compatibility-assessment-in-desktop-analytics"></a>Compatibiliteits evaluatie in Desktop Analytics
 
@@ -245,4 +245,4 @@ U kunt de evaluatie vinden in het stuur programma in Desktop Analytics. Selectee
 
 ## <a name="see-also"></a>Zie ook
 
-Het FastTrack Center-voor deel voor Windows 10 biedt toegang tot de **desktop-app**. Dit voor deel is een nieuwe service die is ontworpen om problemen met Windows 10-en Microsoft 365-apps te verhelpen voor compatibiliteit met bedrijven. Zie voor meer informatie [bureau blad-app garanderen](/fasttrack/win-10-desktop-app-assure).
+Het FastTrack Center-voor deel voor Windows 10 biedt toegang tot de **desktop-app**. Dit voor deel is een nieuwe service die is ontworpen om problemen met Windows 10-en Microsoft 365-apps te verhelpen voor compatibiliteit met bedrijven. Zie voor meer informatie [bureau blad-app garanderen](/fasttrack/win-10-app-assure).

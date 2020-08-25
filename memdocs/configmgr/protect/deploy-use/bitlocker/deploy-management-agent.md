@@ -2,7 +2,7 @@
 title: BitLocker-beleid implementeren
 titleSuffix: Configuration Manager
 description: De BitLocker-beheer agent implementeren voor het Configuration Manager van clients en de herstel service naar beheer punten
-ms.date: 07/27/2020
+ms.date: 08/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: how-to
@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a7eca5c2f5c00ae559a8567d5fce1e4e36df19c0
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 67130932ee20849530c6e865971c7776c3e6b6b1
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129270"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819929"
 ---
 # <a name="deploy-bitlocker-management"></a>BitLocker-beleid implementeren
 
@@ -35,7 +35,7 @@ Voordat u het beleid voor BitLocker-beheer maakt en implementeert:
 
 - Als dat nodig is, [versleutelt u de herstel sleutels](encrypt-recovery-data.md) in de site database
 
-## <a name="create-a-policy"></a>Beleid maken
+## <a name="create-a-policy"></a>Een beleid maken
 
 Wanneer u dit beleid maakt en implementeert, schakelt de Configuration Manager-client de BitLocker-beheer agent op het apparaat in.
 
@@ -118,6 +118,8 @@ Als u de instellingen van een bestaand beleid wilt wijzigen, kiest u het in de l
 
 Wanneer u meer dan één beleids regel maakt, kunt u hun relatieve prioriteit configureren. Als u meerdere beleids regels op een client implementeert, wordt de prioriteits waarde gebruikt om de instellingen te bepalen.
 
+Vanaf versie 2006 kunt u Windows Power shell-cmdlets voor deze taak gebruiken. Zie [New-CMBlmSetting](/powershell/module/configurationmanager/new-cmblmsetting?view=sccm-ps)voor meer informatie.
+
 ## <a name="deploy-a-policy"></a>Een beleid implementeren
 
 1. Kies een bestaand beleid in het knoop punt **BitLocker-beheer** . Selecteer **implementeren**in het lint.
@@ -135,8 +137,9 @@ U kunt meerdere implementaties van hetzelfde beleid maken. Als u meer informatie
 > [!IMPORTANT]
 > De MBAM-client start niet BitLocker-stationsversleuteling acties als een verbinding met een extern bureau blad-protocol actief is. Alle verbindingen met de externe console moeten worden gesloten en er moet een gebruiker zijn aangemeld bij een fysieke console sessie voordat BitLocker-stationsversleuteling begint.
 
+Vanaf versie 2006 kunt u Windows Power shell-cmdlets voor deze taak gebruiken. Zie [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment?view=sccm-ps)voor meer informatie.
 
-## <a name="monitor"></a>Controleren
+## <a name="monitor"></a>Monitor
 
 Basis compatibiliteits statistieken weer geven over de beleids implementatie in het detail venster van het **BitLocker-beheer** knooppunt:
 
@@ -162,7 +165,7 @@ Gebruik de volgende logboeken om te controleren en problemen op te lossen:
 
 - Gebeurtenis logboek van de herstel service: Ga in Windows Logboeken naar toepassingen en services > micro soft > Windows > MBAM-web. Zie [informatie over BitLocker-gebeurtenis logboeken](../../tech-ref/bitlocker/about-event-logs.md) en [server gebeurtenis logboeken](../../tech-ref/bitlocker/server-event-logs.md)voor meer informatie.
 
-- Tracerings logboeken van de herstel service:`<Default IIS Web Root>\Microsoft BitLocker Management Solution\Logs\Recovery And Hardware Service\trace*.etl`
+- Tracerings logboeken van de herstel service: `<Default IIS Web Root>\Microsoft BitLocker Management Solution\Logs\Recovery And Hardware Service\trace*.etl`
 
 ## <a name="recovery-service"></a>Recovery-service
 

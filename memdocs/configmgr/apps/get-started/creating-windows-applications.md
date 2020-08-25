@@ -10,12 +10,12 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2712613eb6d03253c05a011037ac8492992e1f03
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 77fee5931046bc706f965a9a5d738f5a7e2223f4
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695185"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819623"
 ---
 # <a name="create-windows-applications-in-configuration-manager"></a>Windows-toepassingen maken in Configuration Manager
 
@@ -127,6 +127,11 @@ Vanaf versie 2002 kunt u complexe toepassingen installeren met behulp van taken 
 U kunt een taken reeks voor een implementatie zonder besturings systeem alleen toevoegen als een implementatie type voor een app. Het hoge effect, de implementatie van besturings systemen of upgrade taken reeksen van besturings systemen worden niet ondersteund. <!--A user-targeted deployment still runs in the user context of the local System account.-->
 
 Wanneer u dit implementatie type toevoegt aan een app, configureert u de eigenschappen op de pagina **taken reeks** . Zie [implementatie type **taken reeks** opties](../deploy-use/create-applications.md#bkmk_dt-ts)voor meer informatie.
+
+Met ingang van versie 2006 kunt u de volgende Windows Power shell-cmdlets gebruiken om een taken reeks implementatie type toe te voegen en te configureren:
+
+- [Add-CMTaskSequenceDeploymentType](/powershell/module/configurationmanager/add-cmtasksequencedeploymenttype?view=sccm-ps)
+- [Set-CMTaskSequenceDeploymentType](/powershell/module/configurationmanager/set-cmtasksequencedeploymenttype?view=sccm-ps)
 
 ### <a name="prerequisites-for-a-task-sequence-deployment-type"></a>Vereisten voor een implementatie type voor een taken reeks
 

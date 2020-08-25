@@ -2,7 +2,7 @@
 title: Wat is er nieuw in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Een samen vatting van de nieuwe functies in de meest recente maandelijkse versie van de Desktop Analytics-Cloud service.
-ms.date: 08/19/2020
+ms.date: 08/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: c41c6333cfee1b6a24bb84c0f020c14c303fd904
-ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
+ms.openlocfilehash: ce5043f090dd9c08a7a1e9ada5cb2020aabda11f
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88614754"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819725"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>Wat is er nieuw in Desktop Analytics
 
@@ -39,6 +39,12 @@ De **urgentie** configuratie van een app is essentieel voor desktop Analytics om
 Voor elke app die u met Configuration Manager implementeert, wordt deze door Desktop Analytics standaard automatisch geconfigureerd als belang rijk. Met dit gedrag kunt u de apps in uw omgeving sneller configureren, zodat u sneller kunt werken in een productie-implementatie.
 
 Zie [assets-apps](about-assets.md#apps)voor meer informatie.
+
+<!-- 6049643 -->
+
+### <a name="improved-processing-of-diagnostic-data-during-snapshot-generation"></a>Verbeterde verwerking van diagnostische gegevens tijdens het genereren van moment opnamen
+
+Micro soft is verbeterd hoe ze Windows diagnostische gegevens verzamelen en verwerken op basis van apparaten die zijn Inge schreven in Desktop Analytics. Deze verbeteringen verg Roten de betrouw baarheid van het dagelijks genereren van de moment opname en bereidt nieuwe functies in ontwikkeling voor. Als gevolg van dit werk heeft micro soft tijdelijk het aantal **apparaten dat deze app heeft gestart in de afgelopen 30 dagen in de** implementatie plannen uitgeschakeld. Zie [assets-apps](about-assets.md#usage)voor meer informatie.
 
 ## <a name="july-2020"></a>Juli 2020
 
@@ -145,7 +151,7 @@ Tijdens het voorbereiden kunt u nu invoer van een bestaande Windows Analytics-we
 
 Als u Desktop Analytics in uw omgeving instelt, maar u de service niet meer wilt gebruiken, kunt u uw account nu sluiten. Als u van gedachten verandert in 90 dagen, kunt u het account opnieuw activeren. Zie [uw account sluiten](account-close.md)voor meer informatie.
 
-## <a name="august-2019"></a>Augustus 2019
+## <a name="august-2019"></a>augustus 2019
 
 ### <a name="reset-your-account"></a>Uw account opnieuw instellen
 

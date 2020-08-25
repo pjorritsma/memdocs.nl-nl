@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: 907c8d63d68ee4f34b9d22be24f32ffb1878b715
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: e0ef22ec7bc5eb3d6b9ac3800b3e97374421944c
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696171"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819793"
 ---
 # <a name="manage-microsoft-365-apps-with-configuration-manager"></a>Microsoft 365-apps beheren met Configuration Manager
 
@@ -238,7 +238,7 @@ Voor update pakketten die zijn uitgebracht op en na 9 juni, begint de titel met 
 |--|--|
 |Semi-Annual-kanaal voor ondernemingen|Semi-Annual-kanaal|
 |Semi-Annual Enter prise-kanaal (preview-versie)|Semi-Annual-kanaal (Targeted)|
-|Maandelijks bedrijfs kanaal|N.v.t.|
+|Maandelijks bedrijfs kanaal|NA|
 |Huidig kanaal|Monthly-kanaal|
 |Huidig kanaal (preview-versie)|Monthly-kanaal (targeted)|
 |Bèta-kanaal|Handel|
@@ -248,8 +248,7 @@ Zie [software-updates automatisch implementeren](automatically-deploy-software-u
 
 ## <a name="change-the-update-channel-after-you-enable-microsoft-365-apps-clients-to-receive-updates-from-configuration-manager"></a>Wijzig het update kanaal nadat u hebt ingeschakeld Microsoft 365 apps-clients updates van Configuration Manager ontvangen
 
-Na de implementatie van Microsoft 365-apps, kunt u het update kanaal wijzigen met groepsbeleid of de Office Deployment Tool (ODT). U kunt bijvoorbeeld een apparaat verplaatsen van een semi-Annual-kanaal naar een semi-Annual-kanaal (targeted). Wanneer u het kanaal wijzigt, wordt Office automatisch bijgewerkt zonder dat de volledige versie opnieuw moet worden geïnstalleerd of gedownload. Zie voor meer informatie [het Microsoft 365-apps-update kanaal wijzigen voor apparaten in uw organisatie](//deployoffice/change-update-channels).
-
+Na de implementatie van Microsoft 365-apps, kunt u het update kanaal wijzigen met groepsbeleid of de Office Deployment Tool (ODT). U kunt bijvoorbeeld een apparaat verplaatsen van een semi-Annual-kanaal naar een semi-Annual-kanaal (targeted). Wanneer u het kanaal wijzigt, wordt Office automatisch bijgewerkt zonder dat de volledige versie opnieuw moet worden geïnstalleerd of gedownload. Zie voor meer informatie [het Microsoft 365-apps-update kanaal wijzigen voor apparaten in uw organisatie](https://docs.microsoft.com/deployoffice/change-update-channels).
 
 ## <a name="next-steps"></a>Volgende stappen
 

@@ -9,12 +9,12 @@ ms.assetid: 6d665cef-fc67-4686-bcb3-0572c0a3760c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9f24768521cd179c3a6403aff057de48ae46e7e7
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3b598cfad1d3a73f77e91bf3b41baab60c6c3616
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695508"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819691"
 ---
 # <a name="online-documentation-for-configuration-manager"></a>Online documentatie voor Configuration Manager
 
@@ -106,4 +106,4 @@ Zie [toegankelijkheids functies van Configuration Manager](/previous-versions/sy
 
 ### <a name="downloadable-documentation"></a>Download bare documentatie
 
-Down load een kopie van de technische documentatie voor System Center 2012 R2 Configuration Manager van het [micro soft Download centrum](https://www.microsoft.com/download/details.aspx?id=29901).
+Down load een kopie van de technische documentatie voor System Center 2012 R2 Configuration Manager van het [micro soft Download centrum](https://www.microsoft.com/download/details.aspx?id=29256).

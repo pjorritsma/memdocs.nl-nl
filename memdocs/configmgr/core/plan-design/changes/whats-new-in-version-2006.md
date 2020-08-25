@@ -10,12 +10,12 @@ ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: bdfb122173c913274373f41c3932f1ac094ec953
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: fc12c81a1ec58d17580b91e21a1ba7d2e0cb0cbc
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700279"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819674"
 ---
 # <a name="whats-new-in-version-2006-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 2006 van Configuration Manager current branch
 
@@ -31,6 +31,13 @@ Als u optimaal wilt profiteren van de nieuwe functies van Configuration Manager,
 > Als u een melding wilt ontvangen wanneer deze pagina wordt bijgewerkt, kopieert en plakt u de volgende URL in uw RSS feed-lezer: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2006+-+Configuration+Manager%22&locale=en-us`
 
 ## <a name="microsoft-endpoint-manager-tenant-attach"></a><a name="bkmk_tenant"></a> Micro soft Endpoint Manager-Tenant koppelen
+
+### <a name="tenant-attach-microsoft-defender-antivirus-policies-in-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> Tenant bijvoegen: micro soft Defender anti virus Policies in het beheer centrum van micro soft Endpoint Manager
+<!--4812909-->
+U kunt nu micro soft Defender anti virus-beleid maken in de micro soft Endpoint Manager-console en implementeren in Configuration Manager-verzamelingen. Raadpleeg de volgende artikelen voor meer informatie, waaronder gedetailleerde instructies en beschik bare instellingen:
+- [Tenant bijvoegen: Configuration Manager-clients onboarden naar micro soft Defender ATP vanuit het beheer centrum (preview-versie)](../../../tenant-attach/atp-onboard.md)
+- [Tenant bijvoegen: beleid voor beveiliging van eind punten implementeren vanuit het beheer centrum (preview-versie)](../../../tenant-attach/deploy-antivirus-policy.md)
+- [Instellingen voor het anti virus beleid van micro soft Defender voor aan de Tenant gekoppelde apparaten in Microsoft intune](../../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json). 
 
 ### <a name="install-applications-from-the-admin-center"></a>Toepassingen installeren vanuit het beheer centrum
 <!--7518897, 6024389-->
@@ -89,7 +96,7 @@ Intranet-clients hebben nu toegang tot een CMG-software-update punt wanneer het 
 
 ## <a name="cloud-attached-management"></a><a name="bkmk_cloud"></a> Cloud-gekoppeld beheer
 
-### <a name="use-the-company-portal-app-on-co-managed-devices"></a>De app Bedrijfsportal gebruiken op gezamenlijk beheerde apparaten
+### <a name="use-the-company-portal-app-on-co-managed-devices"></a>Gebruik de bedrijfsportal-app op gezamenlijk beheerde apparaten
 
 <!--CMADO-3601237,INADO-4297660-->
 

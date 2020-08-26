@@ -10,12 +10,12 @@ ms.assetid: caad0507-9913-415a-b13d-d36f8f0a1b80
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2c125212a13790e196d001f53411633d1e42d4f8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c87ae35fa3e5a76c57342a0d1cad4167b0f14685
+ms.sourcegitcommit: e43e6e83e3b38137ceebc6d299eacd94a925db85
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81710109"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88895959"
 ---
 # <a name="packages-and-programs-in-configuration-manager"></a>Pakketten en Program ma's in Configuration Manager
 
@@ -67,7 +67,9 @@ Pakketten kunnen enkele nieuwe functies van Configuration Manager gebruiken, waa
     - **Bronmap**: als het pakket bron bestanden bevat, kiest u **Bladeren** om het dialoog venster **bronmap instellen** te openen en geeft u de locatie van de bron bestanden voor het pakket op.  
 
         > [!NOTE]  
-        > Het computeraccount van de siteserver moet leesrechten voor de door u opgegeven bronmap hebben.  
+        > Het computeraccount van de siteserver moet leesrechten voor de door u opgegeven bronmap hebben.
+        >
+        > Windows beperkt het bronpad tot 256 tekens of minder. Deze limiet is van toepassing op pakket bronnen en op toepassingen. Zie [namen van bestanden, paden en naam ruimten](/windows/win32/fileio/naming-a-file)voor meer informatie.
 
     - Vanaf versie 1906 kunt u de **architectuur** en **taal** van het pakket opgeven als u inhoud vooraf in de cache wilt opslaan op een client. Zie [inhoud vooraf in cache configureren](../../osd/deploy-use/configure-precache-content.md)voor meer informatie.<!--4224642-->  
 

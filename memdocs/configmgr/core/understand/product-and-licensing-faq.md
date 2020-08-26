@@ -10,12 +10,12 @@ ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bf69dfd73472cb252d2d821dd8e5fb5eb5a6302f
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 0f249c4ad981c289be33d364dcb4f5b8635faecb
+ms.sourcegitcommit: e43e6e83e3b38137ceebc6d299eacd94a925db85
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695763"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88895891"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Veelgestelde vragen over Configuration Manager branches en licenties
 
@@ -102,6 +102,7 @@ Met de licentie voor co-beheer kunnen Configuration Manager klanten met Software
 |Beheer van software-updates|Ja|Ja|
 |Inventaris|Ja|Ja|
 |Appbeheer|Ja|Ja|
+|Externe volledige/selectief wissen|Ja|Ja|
 |Hulp op afstand<br>(Team Viewer-licentie vereist)|Ja|Ja|
 |Desktop Analytics<br>(Windows-abonnements licenties vereist|Ja|N.v.t.|
 |Tenantkoppeling|Ja|N.v.t.|

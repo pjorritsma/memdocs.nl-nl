@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fedb6c6f7cd9e396d990b4129f81fab4d812ec9c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 3d935e79dfe2fd0d786dae596cafe173b66018c9
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988636"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663291"
 ---
 # <a name="smime-overview-to-sign-and-encrypt-email-in-intune"></a>S/MIME-overzicht voor het ondertekenen en versleutelen van e-mails in Intune
 
@@ -30,7 +30,6 @@ E-mailcertificaten, ook wel S/MIME-certificaten genoemd, bieden extra beveiligin
 - iOS/iPadOS
 - macOS
 - Windows 10 en hoger
-- Windows Phone
 
 Op iOS/iPadOS-apparaten kunt u een door Intune beheerd e-mailprofiel maken dat gebruikmaakt van S/MIME en certificaten voor ondertekening en versleuteling van binnenkomende en uitgaande e-mailberichten. Op andere platforms wordt S/MIME mogelijk niet ondersteund. Als S/MIME wordt ondersteund, kunt u certificaten installeren die gebruikmaken van S/MIME-ondertekening en -versleuteling. Vervolgens kunnen eindgebruikers S/MIME inschakelen in hun e-mailtoepassing.
 

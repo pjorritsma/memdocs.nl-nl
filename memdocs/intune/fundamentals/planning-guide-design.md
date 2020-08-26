@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 37ea8cf3f8615630ccc5b1f5fcc72f69c66db3ef
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: 6412b0d23edb9f93becb3973cc1ae02c0a068dea
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179567"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663239"
 ---
 # <a name="create-a-design"></a>Een ontwerp maken
 
@@ -296,8 +296,8 @@ Hier volgt een voorbeeld van hoe u de certificaten tijdens het ontwerpen kunt va
 
 | **Type** | **Profielnaam** | **Apparaatplatform** | **Use cases** |   
 |:---:|:---:|:---:|:---:|
-| Basis-CA | Bedrijfseigendom, Basis-CA | Android, iOS/iPadOS, Windows Mobile | Bedrijfseigendom, BYOD  |                                                           
-| SCEP | Gebruikerscertificaat | Android, iOS/iPadOS, Windows Mobile | Bedrijfseigendom, BYOD |                                                           
+| Basis-CA | Bedrijfseigendom, Basis-CA | Android, iOS/iPadOS | Bedrijfseigendom, BYOD  |                                                           
+| SCEP | Gebruikerscertificaat | Android, iOS/iPadOS | Bedrijfseigendom, BYOD |                                                           
 
 
 U kunt [een sjabloon uit de bovenstaande tabel downloaden](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) om de behoeften van uw certificaatprofiel vast te stellen.

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 08/24/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c1431105bdba9731bda4599e310889bfbf86a2c
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: ad49651c7a9bd5b20aa7552f675f7dfe01be3b1c
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252251"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820558"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Een nalevingsbeleid maken in Microsoft Intune
 
@@ -113,19 +113,6 @@ Neem het volgende in acht voor het gebruik van het nalevingsbeleid voor apparate
 10. Controleer de instellingen op het tabblad **Beoordelen en maken** en selecteer **Maken** als u klaar bent om het nalevingsbeleid op te slaan.  
 
     De gebruikers of apparaten waarop het beleid is gericht, worden beoordeeld op naleving wanneer ze worden ingecheckt bij Intune.
-
-<!-- Evaluate option  - pending details as to its fate with this new Full Screen UI udpate  
-
-### Evaluate how many users are targeted
-
-When you assign the policy, you can also **Evaluate** how many users are affected. This feature calculates users; it doesn't calculate devices.
-
-1. In Intune, select **Devices** > **Compliance policies** > **Policies**.
-
-2. Select a *policy* > **Assignments** > **Evaluate**. A message shows you how many users are targeted by this policy.
-
-If the **Evaluate** button is grayed out, make sure the policy is assigned to one or more groups.
--->
 
 ## <a name="refresh-cycle-times"></a>Cyclusduur vernieuwen
 

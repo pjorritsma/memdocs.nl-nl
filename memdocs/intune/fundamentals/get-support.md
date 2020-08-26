@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/19/2020
+ms.date: 08/25/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6fef418394a37f0074ddb17cc170a61603b1d7f8
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: f71a74c69235e8e079f2cd325582dbbe9bb4a3f1
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093120"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820660"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Ondersteuning voor Microsoft Intune krijgen
 
@@ -83,8 +83,6 @@ Dit probleem treedt op wanneer u uw nieuwe tenantaccount niet hebt geverifieerd 
 
     > [!div class="mx-imgBorder"]
     > ![Het beheertype bevestigen](./media/get-support/confirm-management-selection.png)
-
-  - Als u Help en ondersteuning opent via **Probleemoplossing en ondersteuning** > **Help en ondersteuning**, wordt het geselecteerde beheertype niet weergegeven onder *Help en ondersteuning*.
 
   - Als u inzoomt op een ander knooppunt, zoals *Apparaten*, *Apps* of *Gebruikers* en vervolgens *Help en ondersteuning* selecteert, kunt u geen beheertype selecteren en wordt het type niet weergegeven onder *Help en ondersteuning*. In dit geval wordt uitgegaan van *Intune*. Als u niet wilt dat de context Intune is, gebruikt u de optie **?** , zodat u een ander beheertype kunt selecteren.
 

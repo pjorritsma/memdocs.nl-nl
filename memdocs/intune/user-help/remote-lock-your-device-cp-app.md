@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/07/2018
+ms.date: 08/20/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1616fe4104707668463843dfb890c2f8e0b0c4a8
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 84bf5d6be2761d368e514be31c6fd426b6c508f0
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880962"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820609"
 ---
 # <a name="lock-your-device-from-the-company-portal-app-for-windows-10"></a>Uw apparaat vergrendelen vanuit de bedrijfsportal-app voor Windows 10
 
@@ -35,9 +35,7 @@ Extern vergrendelen wordt ondersteund op apparaten waarop het volgende wordt uit
 
 * Android
 * iOS
-* macOS
-* Windows 10 Mobile (als voor het apparaat al een wachtwoordcode is ingesteld)
-* Windows Phone 8.1 (als voor het apparaat al een wachtwoordcode is ingesteld) 
+* macOS  
   
 ## <a name="remote-lock-device"></a>Apparaat extern vergrendelen
 Voer de volgende stappen uit om uw apparaat te vergrendelen vanuit de bedrijfsportal-app.  
@@ -55,5 +53,7 @@ Voer de volgende stappen uit om uw apparaat te vergrendelen vanuit de bedrijfspo
    ![Schermafbeelding van de bedrijfsportal-app: de pagina Apparaatdetails met de bevestigingsprompt van Extern vergrendelen.](./media/1804_remote_lock_Windows_CPapp_06.png)  
 
 4. Als u uw apparaat vindt, voert u uw wachtwoordcode in om dit apparaat te ontgrendelen.  
+
+## <a name="next-steps"></a>Volgende stappen
 
 Nog hulp nodig? Neem contact op met het ondersteuningsteam van uw bedrijf. Controleer of de contactgegevens beschikbaar zijn op de [bedrijfsportalwebsite](https://go.microsoft.com/fwlink/?linkid=2010980).

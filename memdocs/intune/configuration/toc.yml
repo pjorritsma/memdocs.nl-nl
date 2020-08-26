@@ -51,7 +51,7 @@
           displayName: 'psk, oma-uri, eap'
         - name: Problemen met Wi-Fi oplossen
           href: troubleshoot-wi-fi-profiles.md
-    - name: Beheersjablonen in Windows
+    - name: Beheersjablonen
       displayName: 'admx, gpo, group policy'
       items:
         - name: Beheersjablonen maken

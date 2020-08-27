@@ -2,7 +2,7 @@
 title: Wake on LAN configureren
 titleSuffix: Configuration Manager
 description: Selecteer Wake On LAN instellingen in Configuration Manager.
-ms.date: 08/11/2020
+ms.date: 08/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b475a0c8-85d6-4cc4-b11f-32c0cc98239e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: dcf6005d0364106df8717a1151dbad617e455ff9
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 33283b13bc28c7d102f014ac3cb4048681343ac2
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127032"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907844"
 ---
 # <a name="how-to-configure-wake-on-lan-in-configuration-manager"></a>Wake on LAN configureren in Configuration Manager
 
@@ -23,11 +23,11 @@ ms.locfileid: "88127032"
 
 Geef de instellingen voor Wake on LAN voor Configuration Manager op wanneer u computers uit de slaap stand wilt halen.
 
-## <a name="wake-on-lan-starting-in-version-1810"></a><a name="bkmk_wol-1810"></a>Wake-on-LAN vanaf versie 1810
+## <a name="wake-on-lan-starting-in-version-1810"></a><a name="bkmk_wol-1810"></a> Wake-on-LAN vanaf versie 1810
 <!--3607710-->
 Vanaf Configuration Manager 1810 is er een nieuwe manier om slapende computers te activeren. U kunt clients uit de Configuration Manager-console ontwaken, zelfs als de client zich niet in hetzelfde subnet bevindt als de site server. Als u onderhoud of query apparaten wilt uitvoeren, bent u niet beperkt door externe clients die in de slaap stand zijn. De site server maakt gebruik van het kanaal voor client meldingen om andere clients te identificeren die zich in hetzelfde externe subnet bevinden. vervolgens worden deze clients gebruikt om een Wake on LAN-aanvraag (Magic Packet) te verzenden. Met behulp van het kanaal voor client meldingen voor komt u dat MAC-kleppen worden afgesloten. Dit kan ertoe leiden dat de poort wordt uitgeschakeld door de router. De nieuwe versie van Wake on LAN kan op hetzelfde moment als de [oudere versie](#bkmk_wol-previous)worden ingeschakeld.
 
-### <a name="limitations"></a>Beperkingen
+### <a name="prerequisites-and-limitations"></a>Vereisten en beperkingen
 <!--7323898, 7363492-->
 - Ten minste één client in het doel-subnet moet actief zijn.
 - Deze functie biedt geen ondersteuning voor de volgende netwerk technologieën:
@@ -38,6 +38,8 @@ Vanaf Configuration Manager 1810 is er een nieuwe manier om slapende computers t
 - Machines die alleen worden geactiveerd wanneer u via de **Wake-up** -client melding op de hoogte wordt gebracht.
     - Voor wake-up wanneer er een deadline optreedt, wordt de oudere versie van Wake on LAN gebruikt.
     -  Als de oudere versie niet is ingeschakeld, treedt de client niet meer op voor implementaties die zijn gemaakt met de instellingen **Wake-on-LAN gebruiken om clients te laten ontwaken voor vereiste implementaties of voor** het **verzenden van Ontwaak pakketten**.  
+- De DHCP-lease duur kan niet worden ingesteld op oneindig. <!--8018584-->
+   - Mogelijk ziet u dat het &lt; *domein* van de SleepAgent_ \> @SYSTEM_0.log erg groot is en mogelijk een broadcast storm in omgevingen waarin DHCP-leases zijn ingesteld op oneindig.  
 
 ### <a name="security-role-permissions"></a>Machtigingen voor beveiligings rollen
 
@@ -82,7 +84,7 @@ Wanneer u beide versies van Wake on LAN hebt ingeschakeld, kunt u de melding cli
 Vanaf versie 1902 van de **Wake-up** -client wordt de huidige instelling voor het **Wake on LAN poort nummer (UDP)** nageleefd.
 
 
-## <a name="wake-on-lan-for-version-1806-and-earlier"></a><a name="bkmk_wol-previous"></a>Wake on LAN voor versie 1806 en lager
+## <a name="wake-on-lan-for-version-1806-and-earlier"></a><a name="bkmk_wol-previous"></a>  Wake on LAN voor versie 1806 en lager
 
 Geef de instellingen voor Wake on LAN voor Configuration Manager op wanneer u computers uit de slaap stand wilt halen om de vereiste software te installeren, zoals software-updates, toepassingen, taken reeksen en Program ma's.
 

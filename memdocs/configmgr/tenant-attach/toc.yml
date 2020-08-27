@@ -14,6 +14,14 @@
       href: cmpivot-overview-attached.md
     - name: CMPivot-voorbeeldscripts
       href: cmpivot-samples-attached.md
+- name: Eindpuntbeveiliging voor aan tenant gekoppelde apparaten (preview-versie)
+  items:
+    - name: Eindpuntbeveiliging inschakelen
+      href: atp-onboard.md
+    - name: Antivirusbeleid voor eindpuntbeveiliging maken en implementeren
+      href: deploy-antivirus-policy.md
+    - name: Instellingen voor Microsoft Defender Antivirus-beleid
+      href: ../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json
 - name: Problemen oplossen
   items:
     - name: Tenantkoppeling en apparaatacties

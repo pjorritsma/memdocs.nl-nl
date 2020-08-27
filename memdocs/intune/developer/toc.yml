@@ -1,6 +1,6 @@
 - name: Richtlijnen voor ontwikkelaars
   href: index.yml
-- name: Handleidingen
+- name: Instructiegidsen
   expanded: true
   items:
     - name: Apps beveiligen met Intune App SDK
@@ -74,6 +74,6 @@
         - name: Azure AD gebruiken voor toegang tot Intune-API's in Microsoft Graph
           href: intune-graph-apis.md
         - name: Intune-API-referentiemateriaal
-          href: 'https://developer.microsoft.com/graph/docs/api-reference/beta/resources/intune_graph_overview'
+          href: /graph/api/resources/intune-graph-overview?view=graph-rest-beta
         - name: Graph-API's gebruikt om apparaten te configureren
           href: graph-apis-used-by-intune-device-configuration-windows.md

@@ -103,6 +103,8 @@
               href: advanced-threat-protection-monitor.md
         - name: Migratie van firewallregels
           href: endpoint-security-firewall-rule-tool.md
+        - name: Tenantkoppeling
+          href: tenant-attach-intune.md
         - name: Schijven versleutelen
           items:
             - name: BitLocker-beleid beheren
@@ -308,8 +310,10 @@
           items:
             - name: Instellingen voor macOS Defender Antivirus
               href: antivirus-microsoft-defender-settings-macos.md
-            - name: Instellingen voor Windows 10 Microsoft Defender Antivirus
+            - name: Instellingen voor Windows 10 Defender Antivirus
               href: antivirus-microsoft-defender-settings-windows.md
+            - name: Instellingen voor tenantkoppeling voor Defender Antivirus
+              href: antivirus-microsoft-defender-settings-windows-tenant-attach.md
             - name: Instellingen voor Windows-beveiligingservaring
               href: antivirus-security-experience-windows-settings.md
         - name: Instellingen voor schijfversleutelingsprofielen

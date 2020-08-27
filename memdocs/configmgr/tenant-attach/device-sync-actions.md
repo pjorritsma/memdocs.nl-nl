@@ -10,12 +10,12 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 4bdfbabf27906eb8a79ec8ba24f51c3e176dc028
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: bac86ca5a74d35b64e211936806ef1735f4e0eea
+ms.sourcegitcommit: 231e2c3913a1d585310dfab7ffcd5c78c6bc5703
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700402"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970461"
 ---
 # <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a> Micro soft Endpoint Manager-Tenant bijvoegen: synchronisatie van apparaten en acties van apparaten
 <!--3555758 live 3/4/2020-->
@@ -39,6 +39,8 @@ Vanaf Configuration Manager versie 2002 kunt u uw Configuration Manager-apparate
 ## <a name="internet-endpoints"></a>Internet-eind punten
 
 [!INCLUDE [Internet endpoints for tenant attach](../core/plan-design/network/includes/internet-endpoints-tenant-attach.md)]
+
+Het service verbindings punt maakt een lange permanente uitgaande verbinding met deze eind punten. Controleer of de proxy die wordt gebruikt voor het service aansluitpunt niet langer uitgaande verbindingen te snel verloopt. We raden 3 minuten aan voor uitgaande verbindingen met deze Internet-eind punten. <!--7820969-->
 
 ## <a name="enable-device-upload-when-co-management-is-already-enabled"></a><a name="bkmk_edit"></a> Het uploaden van apparaten inschakelen als co-beheer al is ingeschakeld
 

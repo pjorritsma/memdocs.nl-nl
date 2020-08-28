@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 59d343d09f827edec5db0dd5302c75c00a0c8455
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 7f6cc0caf4df54196dbdb1859a69f19b3bbcacaa
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88694505"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995480"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1511 voor Configuration Manager
 
@@ -50,24 +50,24 @@ Voor computers die zijn verbonden via WUfB is Configuration Manager niet in staa
 
 5.  Op de computers die via WUfB worden beheerd, wordt **onbekend** weer gegeven in de compatibiliteits status en worden niet geteld als onderdeel van het algehele compatibiliteits percentage.  
 
-##  <a name="managing-office-365-proplus-client-update-through-configuration-manager"></a><a name="BKMK_Office365ProPlus"></a> Office 365 ProPlus-client update beheren via Configuration Manager  
- Configuration Manager hebt nu de mogelijkheid om updates voor Office 365 desktop-clients te beheren met behulp van de Configuration Manager Software Update Management-werk stroom.    
-Wanneer micro soft een nieuwe Office 365 desktop-client update publiceert op Windows Server updates Services (WSUS), kan Configuration Manager de update synchroniseren naar de catalogus als de Office 365-Update zodanig is geconfigureerd dat deze deel uitmaakt van de catalogus synchronisatie.  Op de Configuration Manager-site server worden de Office 365-client updates gedownload en wordt het pakket gedistribueerd naar Configuration Manager distributie punten.  De Configuration Manager-client brengt vervolgens Office 365 desktop-clients op de hoogte waar de updates worden opgehaald en wanneer het installatie proces van de update wordt gestart.  
+##  <a name="managing-microsoft-365-apps-for-enterprise-client-update-through-configuration-manager"></a><a name="BKMK_Office365ProPlus"></a> Microsoft 365-apps voor Enter prise-client update beheren via Configuration Manager  
+Configuration Manager hebt nu de mogelijkheid om Microsoft 365-client updates te beheren met behulp van de Configuration Manager Software Update Management-werk stroom.
+Wanneer micro soft een nieuwe Microsoft 365 bureau blad-client update publiceert naar Windows Server Update Services (WSUS), kan Configuration Manager de update synchroniseren naar de catalogus als de Microsoft 365 update is geconfigureerd om deel uit te maken van de catalogus synchronisatie.  De Configuration Manager-site server downloadt de Microsoft 365-client updates en distribueert het pakket naar Configuration Manager distributie punten.  De Configuration Manager-client waarschuwt Microsoft 365 desktop-clients waar de updates worden opgehaald en wanneer het installatie proces van de update wordt gestart.  
 
 **Vereisten voor dit scenario:**  
 
 ### <a name="try-it-out"></a>Probeer het nu!  
  Voer de volgende taak uit en gebruik vervolgens de feedback informatie boven aan dit onderwerp om ons te laten weten hoe het werkt:  
 
-1. U kunt Office 365-updates op de site server van Configuration Manager synchroniseren en deze weer geven vanuit de Configuration Manager-console.  
+1. U kunt Microsoft 365 updates synchroniseren naar de Configuration Manager-site server en deze weer geven vanuit de Configuration Manager-console.  
 
-2. U kunt Office 365-updates goed keuren en implementeren.  
+2. U kunt Microsoft 365 updates goed keuren en implementeren.  
 
-3. U kunt updates van Office 365 downloaden naar clients.  
+3. U kunt updates voor clients downloaden en Microsoft 365.  
 
-4. U kunt naleving voor Office 365-updates controleren met behulp van de controle of rapporten in de console.  
+4. U kunt naleving voor Microsoft 365-updates controleren met behulp van de controle of rapporten in de console.  
 
-   Zie [Office 365-client updates beheren met Configuration Manager Technical Preview](/deployoffice/manage-microsoft-365-apps-updates-configuration-manager)voor gedetailleerde stappen.  
+   Zie [Microsoft 365-client updates beheren met Configuration Manager Technical Preview](https://docs.microsoft.com/deployoffice/manage-microsoft-365-apps-updates-configuration-manager)voor gedetailleerde stappen.  
 
 ##  <a name="support-for-sql-server-alwayson-for-highly-available-databases"></a><a name="BKMK_AlwasyOn"></a> Ondersteuning voor SQL Server AlwaysOn voor Maxi maal beschik bare data bases  
  Configuration Manager ondersteunt nu het gebruik van een SQL Server AlwaysOn-beschikbaarheids groepen voor het hosten van de site database.  Wanneer u een nieuwe site installeert, kunt u instellen dat de beschikbaarheids groep wordt gebruikt in plaats van een normaal exemplaar van SQL Server.  

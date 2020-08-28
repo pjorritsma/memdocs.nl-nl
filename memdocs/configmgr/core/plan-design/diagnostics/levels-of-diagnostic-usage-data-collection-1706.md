@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 2a634c70d9c182982240d63ac9d6955c56308430
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 476a22c9eae3688174dba1cd68e25a4d79f2c8ea
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128760"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994783"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1706-of-configuration-manager"></a>Niveaus van het verzamelen van diagnostische gebruiks gegevens voor versie 1706 van Configuration Manager
 
@@ -137,7 +137,7 @@ Voor Configuration Manager versie 1706 omvat dit niveau het volgende:
 
    - ***[Nieuw]*** Aantal afzonderlijke huis stijl voor toepassings catalogus
 
-   - ***[Nieuw]*** Aantal Office 365-toepassingen dat is gemaakt met dash board
+   - ***[Nieuw]*** Aantal Microsoft 365 toepassingen dat is gemaakt met dash board
 
    - Aantal pakketten per type  
 
@@ -370,7 +370,7 @@ Voor Configuration Manager versie 1706 omvat dit niveau het volgende:
 
     - Configuraties die worden gebruikt voor actieve Windows 10-onderhouds plannen  
 
-    - Aantal geïmplementeerde Office 365-updates  
+    - Aantal geïmplementeerde Microsoft 365 updates  
 
     - ***[Nieuw]*** Aantal gesynchroniseerde Stuur Programma's van micro soft Surface
 

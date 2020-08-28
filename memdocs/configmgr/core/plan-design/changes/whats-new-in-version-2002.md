@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d54354c82a6487690aa571eb72554f4eee45747b
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 38ea77e44b1d1754d80d0ec902929f5de620c063
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700562"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993332"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 2002 van Configuration Manager current branch
 
@@ -312,13 +312,13 @@ Configuration Manager detecteert nu of een onderhouds stack-update (SSU) deel ui
 
 Zie [software-updates plannen](../../../sum/plan-design/plan-for-software-updates.md#bkmk_ssu)voor meer informatie.
 
-### <a name="office-365-updates-for-disconnected-software-update-points"></a>Office 365-updates voor niet-verbonden software-update punten
+### <a name="microsoft-365-updates-for-disconnected-software-update-points"></a>Microsoft 365 updates voor software-update punten zonder verbinding
 
 <!-- 4065163 -->
 
-U kunt een nieuw hulp programma gebruiken om Office 365-updates te importeren van een met internet verbonden WSUS-server in een niet-verbonden Configuration Manager omgeving. Als u eerder meta gegevens voor software die is bijgewerkt in omgevingen zonder verbinding hebt geëxporteerd en geïmporteerd, kunt u geen Office 365-updates implementeren. Office 365-updates vereisen aanvullende meta gegevens die zijn gedownload van een Office-API en het Office CDN, wat niet mogelijk is met niet-verbonden omgevingen.
+U kunt een nieuw hulp programma gebruiken voor het importeren van Microsoft 365 updates van een met internet verbonden WSUS-server naar een niet-verbonden Configuration Manager omgeving. Wanneer u eerder meta gegevens voor software die is bijgewerkt in omgevingen zonder verbinding hebt geëxporteerd en geïmporteerd, kunt u geen Microsoft 365-updates implementeren. Voor Microsoft 365 updates zijn aanvullende meta gegevens nodig die zijn gedownload van een Office-API en het Office CDN, wat niet mogelijk is met niet-verbonden omgevingen.
 
-Zie voor meer informatie [Office 365-updates synchroniseren vanaf een niet-verbonden software-update punt](../../../sum/get-started/synchronize-office-updates-disconnected.md).
+Zie [Synchronize Microsoft 365 updates van een niet-verbonden software-update punt](../../../sum/get-started/synchronize-office-updates-disconnected.md)voor meer informatie.
 
 <!-- ## <a name="bkmk_o365"></a> Office management -->
 

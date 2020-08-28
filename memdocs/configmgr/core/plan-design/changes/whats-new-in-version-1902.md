@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f758456ad75c4acde1b050be75d653cc0e1dcfa1
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 54794a575cda4197bc11160d1c5e374d06c143c6
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700364"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995242"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 1902 van Configuration Manager current branch
 
@@ -351,27 +351,27 @@ Gebruik Configuration Manager om bekende mappen van Windows te verplaatsen naar 
 
 Zie [Windows bekende mappen omleiden en verplaatsen naar OneDrive](/onedrive/redirect-known-folders)voor meer informatie over deze functie van OneDrive voor bedrijven.
 
-Zoek eerst [uw Office 365-Tenant-id](/onedrive/find-your-office-365-tenant-id). Implementeer vervolgens de OneDrive Sync Client versie 18.111.0603.0004 of hoger. Zie voor meer informatie [OneDrive-Apps implementeren met behulp van Configuration Manager](/onedrive/deploy-on-windows).  
+Zoek eerst [de Tenant-id van Microsoft 365](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id). Implementeer vervolgens de OneDrive Sync Client versie 18.111.0603.0004 of hoger. Zie voor meer informatie [OneDrive-Apps implementeren met behulp van Configuration Manager](https://docs.microsoft.com/onedrive/deploy-on-windows).  
 
 Als u een OneDrive voor bedrijven-profiel wilt maken en implementeren, gaat u in de Configuration Manager-console naar de werk ruimte **activa en naleving** . Vouw **instellingen voor naleving**uit en selecteer het knoop punt **voor OneDrive voor bedrijven-profielen** .  
 
 Zie de sectie Windows bekende mappen omleiden naar OneDrive in het artikel in de [OneDrive voor bedrijven-profielen](../../../compliance/deploy-use/onedrive-profile.md) voor meer informatie.
 
-### <a name="integration-for-office-365-proplus-readiness"></a>Integratie voor Office 365 ProPlus gereedheid
+### <a name="integration-for-microsoft-365-apps-for-enterprise-readiness"></a>Integratie voor Microsoft 365 apps voor de gereedheid van het bedrijf
 
 <!--3735402-->
-Gebruik Configuration Manager om apparaten met hoge betrouw baarheid te identificeren die gereed zijn voor de upgrade naar Office 365 ProPlus. De integratie biedt inzicht in mogelijke compatibiliteits problemen met Office-invoeg toepassingen en macro's die in uw omgeving worden gebruikt. Gebruik vervolgens Configuration Manager om Office te implementeren op apparaten die klaar zijn voor gebruik.
+Gebruik Configuration Manager om apparaten met hoge betrouw baarheid te identificeren die gereed zijn om te upgraden naar Microsoft 365 apps voor bedrijven. De integratie biedt inzicht in mogelijke compatibiliteits problemen met Office-invoeg toepassingen en macro's die in uw omgeving worden gebruikt. Gebruik vervolgens Configuration Manager om Office te implementeren op apparaten die klaar zijn voor gebruik.
 
-Het bestaande Office 365-client beheer Dashboard bevat nu een nieuwe tegel, **Office 365 ProPlus Upgradegereedheid**.
+Het bestaande Microsoft 365-client beheer Dashboard bevat nu een nieuwe tegel, **Office 365 ProPlus Upgradegereedheid**.
 
-Voor meer informatie, Zie [Office 365-dash board voor client beheer](../../../sum/deploy-use/office-365-dashboard.md#bkmk_o365_readiness)
+Zie [Microsoft 365 dash board voor client beheer](../../../sum/deploy-use/office-365-dashboard.md#bkmk_o365_readiness) voor meer informatie.
 
-### <a name="additional-languages-for-office-365-updates"></a>Aanvullende talen voor Office 365-updates
+### <a name="additional-languages-for-microsoft-365-updates"></a>Aanvullende talen voor Microsoft 365 updates
 
 <!--3555955-->
-Configuration Manager ondersteunt nu alle ondersteunde talen voor Office 365-client updates. De werk stroom voor updates scheidt nu de 38 talen voor **Windows Update** van de talloze talen voor **Office 365 client update**.
+Configuration Manager ondersteunt nu alle ondersteunde talen voor Microsoft 365-client updates. De werk stroom voor updates scheidt nu de 38 talen voor **Windows Update** van de talloze talen voor **Office 365 client update**.
 
-Zie [updates voor Office 365 beheren](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_o365_lang) voor meer informatie.
+Zie [Manage Microsoft 365 updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_o365_lang) (Engelstalig) voor meer informatie
 
 ### <a name="office-products-on-lifecycle-dashboard"></a>Dash board Office-producten op levens cyclus
 

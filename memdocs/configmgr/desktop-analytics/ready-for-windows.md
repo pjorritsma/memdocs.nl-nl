@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
 ROBOTS: NOINDEX
-ms.openlocfilehash: 63aba639eea221c3a13f7ebeabaa1b96a8439a72
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 484b1d808484984b4beaf434c0c27f2f1bec4e10
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700766"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995191"
 ---
 # <a name="ready-for-modern-desktop-retirement-faq"></a>Veelgestelde vragen over het voorbereiden van moderne Desktop-pensioen
 
@@ -45,11 +45,11 @@ De mogelijke categorieën zijn:
 
 ### <a name="what-happened-to-the-ready-for-windows-website"></a>Wat is er gebeurd met de kant-en-klare website van Windows?
 
-Veel klanten hebben problemen met het ophalen en blijven actueel van Windows 10 en Office 365 ProPlus. De primaire uitdaging is het testen van toepassingen, omdat dit proces doorgaans hand matig is. Het is tijdrovender dat IT-beheerders en toepassings eigenaren voortdurend bestaande toepassingen analyseren en vervolgens problemen oplossen die zich voordoen.
+Veel klanten hebben problemen met het ophalen en blijven actueel zijn met Windows 10 en Microsoft 365 apps voor bedrijven. De primaire uitdaging is het testen van toepassingen, omdat dit proces doorgaans hand matig is. Het is tijdrovender dat IT-beheerders en toepassings eigenaren voortdurend bestaande toepassingen analyseren en vervolgens problemen oplossen die zich voordoen.
 
-De lijst met kant-en- *klare bureau blad* -software oplossingen die worden ondersteund en in gebruik zijn op commerciële apparaten met Windows 10 en Office 365 ProPlus. De Directory helpt IT-beheerders die de nieuwste versies van Windows 10 en Office 365 voor hun implementaties overwegen.
+De lijst met kant-en- *klare bureau blad* -software oplossingen die worden ondersteund en in gebruik zijn op commerciële apparaten met Windows 10 en Microsoft 365-apps voor bedrijven. De Directory helpt IT-managers die de nieuwste versies van Windows 10 en Microsoft 365 voor hun implementaties overwegen.
 
-Feedback van IT-managers is dat ze deze inzichten willen integreren met de hulpprogram ma's die ze al gebruiken om hun implementatie plannen te plannen. Gebruik [Desktop Analytics](https://aka.ms/dadocs) en [Office 365 ProPlus gereedheids functies](/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) in Configuration Manager om uw Windows 10-en Office 365 ProPlus-upgrade projecten te plannen en te beheren. 
+Feedback van IT-managers is dat ze deze inzichten willen integreren met de hulpprogram ma's die ze al gebruiken om hun implementatie plannen te plannen. Gebruik de functies van [bureau blad Analytics](https://aka.ms/dadocs) en [Microsoft 365 apps](https://docs.microsoft.com/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) in Configuration Manager om uw Windows 10-en Microsoft 365-apps te plannen en te beheren voor Enter prise-upgrade projecten. 
 
 > [!Note]
 > Vanaf 21 april 2020, wordt de naam van Office 365 ProPlus gewijzigd in **Microsoft 365 apps voor bedrijven**. Zie [name wijzigen voor Office 365 ProPlus](/deployoffice/name-change)voor meer informatie. Mogelijk ziet u nog steeds verwijzingen naar de oude naam in de Configuration Manager-console en de ondersteunende documentatie terwijl de-console wordt bijgewerkt.
@@ -100,11 +100,11 @@ Desktop Analytics biedt een inventarisatie van de [apparaten en hun geïnstallee
 
 ### <a name="can-i-still-list-my-software-solution-in-desktop-analytics"></a>Kan ik nog steeds mijn software oplossing in Desktop Analytics vermelden?
 
-Publiceer een ondersteunings verklaring die uw product werkt met 32-bits of 64-bits Windows 10 of Office 365 ProPlus. Neem contact op met uw micro soft-contact persoon als u uw oplossingen in Desktop Analytics wilt presen teren.
+Publiceer een ondersteunings verklaring die voor uw product kan worden gebruikt met 32-bits of 64-bits Windows 10-of Microsoft 365-apps voor bedrijven. Neem contact op met uw micro soft-contact persoon als u uw oplossingen in Desktop Analytics wilt presen teren.
 
 ### <a name="how-can-listing-my-solutions-benefit-me"></a>Hoe kan ik mijn oplossingen voor delen?
 
-Duizenden IT-beheerders beheren miljoenen apparaten met Configuration Manager en desktop Analytics. Ze gebruiken deze hulpprogram ma's om hun organisaties in vertrouwen te plannen en bij te werken naar de nieuwste versie van Windows 10 en Office 365 ProPlus. Ze gebruiken ze ook om aankoop beslissingen te nemen voor software oplossingen.
+Duizenden IT-beheerders beheren miljoenen apparaten met Configuration Manager en desktop Analytics. Ze gebruiken deze hulpprogram ma's om hun organisaties vertrouwen te plannen en bij te werken naar de nieuwste versie van Windows 10 en Microsoft 365 apps voor bedrijven. Ze gebruiken ze ook om aankoop beslissingen te nemen voor software oplossingen.
 
 Micro soft integreert ondersteunings verklaringen van software leveranciers met de acceptatie gegevens die ze van commerciële apparaten ontvangen. Organisaties over de hele wereld gebruiken deze gegevens vervolgens in Desktop Analytics en Office Readiness-hulpprogram ma's. 
 
@@ -118,8 +118,8 @@ Evalueer de prestaties van uw oplossingen met rapporten over de status en de met
 - [Bureaublad](/windows/desktop/appxpkg/windows-desktop-application-program)
 - [Office-invoegtoepassingen](/office/dev/store/update-unpublish-and-view-metrics) 
 
-### <a name="how-can-i-develop-compatible-assets-for-windows-10-and-office-365-proplus"></a>Hoe kan ik compatibele assets ontwikkelen voor Windows 10 en Office 365 ProPlus?
+### <a name="how-can-i-develop-compatible-assets-for-windows-10-and-microsoft-365-apps-for-enterprise"></a>Hoe kan ik compatibele assets ontwikkelen voor Windows 10-en Microsoft 365-apps voor ondernemingen?
 
 Zorg ervoor dat uw desktop toepassingen nu compatibel zijn en blijf in de toekomst compatibel met Windows 10. Zie [toepassings compatibiliteit voor ontwikkel aars](https://developer.microsoft.com/windows/desktop/app-compatibility)voor meer informatie.
 
-Als u oplossingen voor Office 365 ProPlus ontwikkelt, raadpleegt u [Aanbevolen procedures voor het ontwikkelen van com-, VSTO-en VBA-invoeg toepassingen in Office](/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office).
+Zie [Aanbevolen procedures voor het ontwikkelen van com-, VSTO-en VBA-invoeg toepassingen in Office](https://docs.microsoft.com/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office)voor meer informatie over het ontwikkelen van oplossingen voor Microsoft 365-apps voor bedrijven.

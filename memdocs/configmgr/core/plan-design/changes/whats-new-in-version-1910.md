@@ -10,12 +10,12 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6406a208de448e40e1d686440f41610266cde042
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3c99716070bf32ae27a7bd8b7a114d8b920814e2
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700296"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993468"
 ---
 # <a name="whats-new-in-version-1910-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 1910 van Configuration Manager current branch
 
@@ -134,7 +134,7 @@ Zie voor meer informatie [micro soft Connected cache in Configuration Manager](.
 
 U kunt nu evaluatie van aangepaste configuratie basislijnen toevoegen als beoordelings regel voor het nalevings beleid. Wanneer u een configuratie basislijn maakt of bewerkt, kunt u nu gebruikmaken van de optie **deze basis lijn evalueren als onderdeel van de beoordeling van het nalevings beleid** . Wanneer u een nalevings beleidsregel toevoegt of bewerkt, hebt u een voor waarde met de naam onder de regel **geconfigureerde basis lijnen in de beoordeling van het nalevings beleid**.
 
-Voor gezamenlijk beheerde apparaten en wanneer u intune configureert om de resultaten van de nalevings beoordeling te Configuration Manager als onderdeel van de algemene nalevings status, wordt deze informatie verzonden naar Azure Active Directory. U kunt dit vervolgens gebruiken voor voorwaardelijke toegang tot uw Office 365-resources.
+Voor gezamenlijk beheerde apparaten en wanneer u intune configureert om de resultaten van de nalevings beoordeling te Configuration Manager als onderdeel van de algemene nalevings status, wordt deze informatie verzonden naar Azure Active Directory. U kunt het vervolgens gebruiken voor voorwaardelijke toegang tot uw Microsoft 365-resources.
 
 Zie [aangepaste configuratie basislijnen opnemen als onderdeel van de evaluatie van het nalevings beleid](../../../compliance/deploy-use/create-configuration-baselines.md#bkmk_CAbaselines)voor meer informatie.
 

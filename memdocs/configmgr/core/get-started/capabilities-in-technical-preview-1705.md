@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 0ddad23dfde87fa402c01d4eaa21a1b76db27d93
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 06119bfc096564f70922249121f63c3d2039efe8
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692924"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995446"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1705 voor Configuration Manager
 
@@ -136,20 +136,20 @@ Als u de site wilt stoppen, kunt u het [hulp programma voor hiërarchie onderhou
 Het stoppen van de site is gelijk aan het stoppen van de Site Component Manager-service (sitecomp), gevolgd door de SMS_Executive-service op de site server.
 
 
-## <a name="improved-user-notifications-for-office-365-updates"></a>Verbeterde gebruikers meldingen voor Office 365-updates
-Er zijn verbeteringen aangebracht in het gebruik van de Office-klik-en-klaar-gebruikers ervaring wanneer een client een update van Office 365 installeert. Dit omvat pop-up-en in-app-meldingen en een aftellings ervaring. Voordat deze release werd uitgebracht toen een Office 365-update werd verzonden naar een client, werden Office-toepassingen die zijn geopend, automatisch gesloten zonder dat er een waarschuwing wordt weer gegeven. Na deze update worden Office-toepassingen niet meer onverwacht gesloten.
+## <a name="improved-user-notifications-for-microsoft-365-updates"></a>Verbeterde gebruikers meldingen voor Microsoft 365 updates
+Er zijn verbeteringen aangebracht voor het gebruik van de Office-klik-en-klaar-gebruikers ervaring wanneer een client een Microsoft 365 update installeert. Dit omvat pop-up-en in-app-meldingen en een aftellings ervaring. Vóór deze release werden de geopende Office-toepassingen zonder waarschuwing automatisch gesloten wanneer een Microsoft 365 update naar een client is verzonden. Na deze update worden Office-toepassingen niet meer onverwacht gesloten.
 
 ### <a name="prerequisites"></a>Vereisten
-Deze update is van toepassing op Office 365 ProPlus-clients.
+Deze update is van toepassing op Microsoft 365-apps voor Enter prise-clients.
 
 ### <a name="known-issues"></a>Bekende problemen
-Wanneer een client een update toewijzing voor Office 365 voor de eerste keer evalueert en de update een deadline heeft gepland, direct wordt gepland of is gepland binnen 30 minuten, kan de gebruikers ervaring van Office 365 inconsistent zijn. De client kan bijvoorbeeld een dialoog venster voor het aftellen van 30 minuten ontvangen voor de update, maar de werkelijke afdwinging kan beginnen vóór het einde van de aftelling. Houd rekening met het volgende om dit gedrag te voor komen:
-- Implementeer de Office 365-update met een deadline die meer dan 60 minuten vóór de huidige tijd is gepland.
+Wanneer een client een Microsoft 365 update toewijzing voor de eerste keer evalueert en de update een deadline in het verleden heeft gepland, onmiddellijk wordt gepland of is gepland binnen 30 minuten, kan de gebruikers ervaring van Microsoft 365 inconsistent zijn. De client kan bijvoorbeeld een dialoog venster voor het aftellen van 30 minuten ontvangen voor de update, maar de werkelijke afdwinging kan beginnen vóór het einde van de aftelling. Houd rekening met het volgende om dit gedrag te voor komen:
+- Implementeer de Microsoft 365 update met een deadline die meer dan 60 minuten vóór de huidige tijd is gepland.
 - Een onderhouds venster configureren tijdens niet-kantoor uren op de verzameling of een respijt periode voor afdwinging configureren voor de implementatie.
 
 ### <a name="try-it-out"></a>Probeer het nu!
 Voer de volgende taken uit en stuur ons **feedback** via het tabblad **Start** van het lint om ons te laten weten hoe het werkt:
-- Implementeren op een client een update van Office 365 waarbij een deadline is ingesteld op een tijd van ten minste 60 minuten vóór de huidige tijd. Bekijk het nieuwe gedrag op de client.
+- Implementeren op een client a Microsoft 365 update waarbij een deadline is ingesteld op een tijd van ten minste 60 minuten vóór de huidige tijd. Bekijk het nieuwe gedrag op de client.
 
 
 ## <a name="configure-and-deploy-windows-defender-application-guard-policies"></a>Windows Defender Application Guard-beleid configureren en implementeren

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: a947b332addbc3404617abdbbe199ede4e74dc63
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 5c125bc92c8949384486c7efc03cea122258092e
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692788"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993502"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Wat&#39;s nieuw in versie 1702 van Configuration Manager
 
@@ -220,11 +220,11 @@ Vanaf deze release, wanneer u de Windows ADK-versie bijwerkt en vervolgens updat
 
 ## <a name="software-updates"></a>Software-updates
 
-### <a name="deploy-office-365-apps-to-clients"></a>Office 365-Apps implementeren op clients
-Vanaf versie 1702 kunt u vanuit het Office 365 client management-dash board het Office 365-installatie programma starten waarmee u de installatie-instellingen van Office 365 kunt configureren, bestanden van Office Content Delivery Networks (Cdn's) downloadt en de bestanden als een toepassing implementeert in Configuration Manager. Zie [Office 365 ProPlus-updates beheren](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_deploy)voor meer informatie.
+### <a name="deploy-microsoft-365-apps-to-clients"></a>Microsoft 365-Apps implementeren op clients
+Vanaf versie 1702 kunt u vanuit het Office 365 client management-dash board het Office 365-installatie programma starten waarmee u installatie-instellingen kunt configureren, bestanden downloaden van Office Content Delivery Networks (Cdn's) en de bestanden als een toepassing implementeert in Configuration Manager. Zie [updates van Microsoft 365-apps beheren](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_deploy)voor meer informatie.
 
 > [!IMPORTANT]
-> De Office 365-app die u maakt en implementeert met behulp van de wizard Office 365-toepassing in Configuration Manager wordt niet automatisch beheerd door Configuration Manager totdat u de instelling **beheer van de Office 365-client opnieuw inschakelen** hebt ingeschakeld. Zie [over client instellingen](../../clients/deploy/about-client-settings.md)voor meer informatie.
+> De Microsoft 365-app die u maakt en implementeert met behulp van de wizard Office 365-toepassing in Configuration Manager wordt niet automatisch door Configuration Manager beheerd totdat u de instelling **beheer van de Office 365-client opnieuw installeren van** software-updates inschakelen opnieuw inschakelt. Zie [over client instellingen](../../clients/deploy/about-client-settings.md)voor meer informatie.
 
 ### <a name="manage-express-installation-files-for-windows-10-updates"></a>De bestanden voor snelle installatie van Windows 10-updates beheren
 Vanaf versie 1702 ondersteunt Configuration Manager snelle installatie bestanden voor Windows 10-updates. Wanneer u een ondersteunde versie van Windows 10 gebruikt, kunt u de Configuration Manager-instellingen gebruiken om alleen de wijzigingen te downloaden tussen de cumulatieve update voor Windows 10 van de huidige maand en de update van de vorige maand. Zonder bestanden voor snelle installatie wordt Configuration Manager de volledige cumulatieve update van Windows 10 (inclusief alle updates van de vorige maanden) elke maand gedownload. Het gebruik van bestanden voor snelle installatie biedt kleinere down loads en snellere installatie tijden op clients. Zie voor meer informatie [bestanden voor snelle installatie beheren voor Windows 10-updates](../../../sum/deploy-use/manage-express-installation-files-for-windows-10-updates.md).

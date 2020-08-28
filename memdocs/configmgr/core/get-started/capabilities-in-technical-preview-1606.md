@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 18ea44f662591a21750fb630425ddfb975678aa2
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 9278e6cb148768e993706fe112bbfd70121cc6b9
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695593"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995463"
 ---
 # <a name="capabilities-in-technical-preview-1606-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1606 voor Configuration Manager
 
@@ -215,11 +215,11 @@ Nadat de service en rollen volledig zijn geconfigureerd, krijgen interne clients
 
 Nadat clients de nieuwe locatie-informatie voor de Cloud proxy service hebben, kunt u de status controleren van clients die zich niet meer op het interne particuliere netwerk bevinden, maar wel over Internet toegang hebben. U kunt ook verkeer op Cloud proxy service controleren door naar **beheer > te gaan Cloud Services > Cloud proxy service**, de service in het deel venster met de lijst te selecteren en de verkeers gegevens in het detail venster weer te geven.   
 
-## <a name="manage-the-office-365-client-agent-in-configuration-manager"></a><a name="manage_o365"></a>Office 365-clientagent beheren in Configuration Manager  
+## <a name="manage-the-microsoft-365-client-agent-in-configuration-manager"></a><a name="manage_o365"></a>De Microsoft 365-client agent in Configuration Manager beheren  
 
-Het starten van Technical Preview 1606, kunt u een instelling voor een Configuration Manager client agent gebruiken in plaats van groeps beleid, zodat Office 365-clients updates van Configuration Manager kunnen ontvangen. Nadat u deze instelling hebt geconfigureerd en Office 365-updates hebt geïmplementeerd, communiceert de Configuration Manager-client agent met de Office 365-client agent om Office 365-updates te downloaden vanaf een distributie punt en te installeren. Configuration Manager maakt ook inventarisatie van de instelling van de client agent.
+Het starten van Technical Preview 1606, kunt u een instelling voor een Configuration Manager client agent gebruiken in plaats van groeps beleid, zodat Microsoft 365-clients updates van Configuration Manager kunnen ontvangen. Nadat u deze instelling hebt geconfigureerd en Microsoft 365-updates hebt geïmplementeerd, communiceert de Configuration Manager-client agent met de Microsoft 365 client agent om Microsoft 365 updates van een distributie punt te downloaden en te installeren. Configuration Manager maakt ook inventarisatie van de instelling van de client agent.
 
-Zie [Office 365 ProPlus-updates beheren](../../sum/deploy-use/manage-office-365-proplus-updates.md)voor meer informatie.
+Zie [Microsoft 365-apps beheren voor bedrijfs updates](../../sum/deploy-use/manage-office-365-proplus-updates.md)voor meer informatie.
 
 ### <a name="set-the-configuration-manager-client-setting-to-manage-the-office-365-client-agent"></a>Stel de Configuration Manager client instelling in om de Office 365-client agent te beheren
 1.  Klik in de Configuration Manager-console op **beheer**  >  **overzicht**  >  **client instellingen**.

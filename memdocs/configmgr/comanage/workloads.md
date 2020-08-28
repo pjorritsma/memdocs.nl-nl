@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
-ms.openlocfilehash: e44576401d601c8c510aaf50b28e5924f5c4d6db
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 0425b937062acd96b8df66df38ec53a04e91b4de
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88694862"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995225"
 ---
 # <a name="co-management-workloads"></a>Werk belastingen voor co-beheer
 
@@ -110,9 +110,9 @@ Deze workload beheert Microsoft 365-apps op gezamenlijk beheerde apparaten.
 
 - Het kan ongeveer 24 uur duren voordat Office-updates worden weer gegeven op de client, tenzij de apparaten opnieuw zijn opgestart  
 
-- Er is een nieuwe globale voor waarde, **zijn Office 365-toepassingen die worden beheerd door intune op het apparaat**. Deze voor waarde wordt standaard toegevoegd als vereiste voor nieuwe Office 365-toepassingen. Wanneer u deze werk belasting overstapt, voldoen gezamenlijk beheerde clients niet aan de vereiste voor de toepassing. Vervolgens installeren ze geen Office 365 dat is geïmplementeerd via Configuration Manager.  
+- Er is een nieuwe globale voor waarde, **zijn Office 365-toepassingen die worden beheerd door intune op het apparaat**. Deze voor waarde wordt standaard toegevoegd als vereiste voor nieuwe Microsoft 365-toepassingen. Wanneer u deze werk belasting overstapt, voldoen gezamenlijk beheerde clients niet aan de vereiste voor de toepassing. Vervolgens installeren ze Microsoft 365 geïmplementeerd via Configuration Manager.  
 
-Zie [Office 365-apps toewijzen aan Windows 10-apparaten met Microsoft intune](/intune/apps-add-office365)voor meer informatie over de intune-functie.
+Zie voor meer informatie over de intune-functie [Microsoft 365-apps toewijzen aan Windows 10-apparaten met Microsoft intune](https://docs.microsoft.com/intune/apps-add-office365).
 
 ## <a name="client-apps"></a>Client-apps
 

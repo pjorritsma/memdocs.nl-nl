@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 9d58ffee30986efeda1716358ab7aa6c1d36cbf5
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 05ed0daf56275b2e0ed46b2f9dd93fd66eb360be
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695678"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995531"
 ---
 # <a name="capabilities-in-technical-preview-1609-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1609 voor Configuration Manager
 
@@ -347,36 +347,36 @@ In het dash board worden grafieken weer gegeven voor het volgende:
 - Office 365-client versies
 - Office 365-client talen
 - Office 365-client kanalen     
-Zie [Overzicht van updatekanalen voor Office 365 ProPlus](/deployoffice/overview-update-channels) voor meer informatie.
+Zie [Overzicht van updatekanalen voor Microsoft 365-apps](https://docs.microsoft.com/deployoffice/overview-update-channels) voor meer informatie.
 - Automatische implementatie regels waarbij Office 365-client is geselecteerd in de set beschik bare producten.
 
 U kunt de volgende acties uitvoeren op het dash board:
 - Aan de bovenkant van het dash board gebruikt u de vervolg keuzelijst **verzameling** om de dashboard gegevens te filteren op leden van een bepaalde verzameling.
-- Klik in de rechter bovenhoek van het dash board op **office 365 Installer** om de Wizard Office 365-client installatie te starten om Office 365-apps te implementeren op clients. Zie [Office 365-Apps implementeren op clients](#deploy-office-365-apps-to-clients)voor meer informatie.
-- Klik aan de rechter kant van het dash board op **een ADR maken** om de wizard regel voor automatische implementatie te openen en een nieuwe regel voor automatische implementatie (ADR) te maken. Als u een ADR voor Office 365-Apps wilt maken, selecteert u **Office 365-client** wanneer u het product kiest. Zie [software-updates automatisch implementeren](../../sum/deploy-use/automatically-deploy-software-updates.md)voor meer informatie.
+- Klik in de rechter bovenhoek van het dash board op **office 365 Installer** om de Wizard Office 365-client installatie te starten om Microsoft 365-apps te implementeren op clients. Zie [Microsoft 365-Apps implementeren op clients](#deploy-microsoft-365-apps-to-clients)voor meer informatie.
+- Klik aan de rechter kant van het dash board op **een ADR maken** om de wizard regel voor automatische implementatie te openen en een nieuwe regel voor automatische implementatie (ADR) te maken. Als u een ADR wilt maken voor Microsoft 365-apps, selecteert u **Office 365-client** wanneer u het product kiest. Zie [software-updates automatisch implementeren](../../sum/deploy-use/automatically-deploy-software-updates.md)voor meer informatie.
 - Klik in de rechter benedenhoek van het dash board op **client agent instellingen maken** om instellingen voor client agent te openen. Zie [over client instellingen](../clients/deploy/about-client-settings.md)voor meer informatie.
 
 
 
-Zie [office 365 ProPlus-updates beheren met Configuration Manager](../../sum/deploy-use/manage-office-365-proplus-updates.md)voor meer informatie over updates voor Office 365 ProPlus.
+Zie [Manage Microsoft 365 apps updates with Configuration Manager](../../sum/deploy-use/manage-office-365-proplus-updates.md)voor meer informatie over Microsoft 365-apps voor Enter prise-updates.
 
-## <a name="deploy-office-365-apps-to-clients"></a>Office 365-Apps implementeren op clients
-In deze versie van het Office 365-dash board voor client beheer kunt u het installatie programma van Office 365 starten, waarmee u installatie-instellingen voor Office 365 kunt configureren, bestanden van Office Content Delivery Networks (Cdn's) downloadt en de bestanden als een toepassing implementeert in Configuration Manager.
+## <a name="deploy-microsoft-365-apps-to-clients"></a>Microsoft 365-Apps implementeren op clients
+In deze versie van het Office 365-dash board voor client beheer kunt u het installatie programma van Office 365 starten, waarmee u Microsoft 365 installatie-instellingen kunt configureren, bestanden van Office Content Delivery Networks (Cdn's) downloadt en de bestanden als een toepassing implementeert in Configuration Manager.
 
-### <a name="limitations-of-office-365-deployment"></a>Beperkingen van Office 365-implementatie
+### <a name="limitations-of-microsoft-365-deployment"></a>Beperkingen van Microsoft 365 implementatie
 - U kunt problemen ondervinden bij het importeren van bestaande client instellingen (XML) in de wizard Office 365-app installeren. U kunt de client instellingen hand matig configureren zonder een probleem.
 
-#### <a name="to-deploy-office-365-apps-to-clients"></a>Office 365-Apps implementeren op clients
+#### <a name="to-deploy-microsoft-365-apps-to-clients"></a>Microsoft 365-Apps implementeren op clients
 1. Navigeer in de Configuration Manager-console naar **software bibliotheek**  >  **Overview**  >  **Office 365 client management**.
 2. Klik in het rechterdeel venster op **Office 365 Installer** . De Office 365-client installatie wizard wordt geopend.
 3. Geef op de pagina **Toepassings instellingen** een naam en beschrijving voor de app op, voer de download locatie voor de bestanden in en klik op **volgende**. Houd er rekening mee dat de locatie moet worden opgegeven in de vorm &#92;&#92;*server*&#92;*share*.
-4. Kies op de pagina **client instellingen importeren** of u de Office 365-client instellingen wilt importeren uit een bestaand XML-configuratie bestand of hand matig de instellingen wilt opgeven en klik vervolgens op **volgende**.
+4. Kies op de pagina **client instellingen importeren** of u de Microsoft 365 client instellingen wilt importeren uit een bestaand XML-configuratie bestand of dat u de instellingen hand matig wilt opgeven en klik vervolgens op **volgende**.
 Wanneer u een bestaand configuratie bestand hebt, voert u de locatie voor het bestand in en gaat u verder met stap 7. Houd er rekening mee dat de locatie moet worden opgegeven in de vorm &#92;&#92;*server*&#92;*share*&#92;*Bestands naam*. Indeling.
 
     > [!IMPORTANT]
     >U kunt problemen ondervinden bij het importeren van bestaande client instellingen (XML) in deze Technical Preview.
 
-5. Op de **client producten** pagina selecteert u het Office 365-pakket dat u gebruikt, selecteert u de toepassingen die u wilt opnemen, selecteert u eventuele extra Office-producten die moeten worden opgenomen en klikt u vervolgens op **volgende**.
+5. Selecteer op de pagina **client producten** de Microsoft 365 suite die u gebruikt, selecteer de toepassingen die u wilt opnemen, selecteer alle extra Office-producten die moeten worden opgenomen en klik vervolgens op **volgende**.
 6. Kies op de pagina **client instellingen** de instellingen die u wilt toevoegen en klik vervolgens op **volgende**.
 7. Kies op de pagina **implementatie** of u de toepassing wilt implementeren en klik vervolgens op **volgende**.
 Als u ervoor kiest om het pakket niet in de wizard te implementeren, gaat u naar stap 9.
@@ -385,7 +385,7 @@ Als u ervoor kiest om het pakket niet in de wizard te implementeren, gaat u naar
 10. U kunt de toepassing implementeren of bewerken op dezelfde manier als andere toepassingen in Configuration Manager vanuit **software bibliotheek**  >  **overzicht**toepassingen voor  >  **toepassings beheer**  >  **Applications**.
 
 >[!NOTE]
->Nadat u Office 365-apps hebt geïmplementeerd, kunt u regels voor automatische implementatie maken om de apps te onderhouden. Als u een ADR voor Office 365-Apps wilt maken, klikt u op **een ADR maken**en selecteert u **Office 365-client** wanneer u het product kiest. Zie [software-updates automatisch implementeren](../../sum/deploy-use/automatically-deploy-software-updates.md)voor meer informatie.
+>Nadat u Microsoft 365 apps hebt geïmplementeerd, kunt u regels voor automatische implementatie maken om de apps te onderhouden. Als u een ADR wilt maken voor Microsoft 365-apps, klikt u op **een ADR maken**en selecteert u **Office 365-client** wanneer u het product kiest. Zie [software-updates automatisch implementeren](../../sum/deploy-use/automatically-deploy-software-updates.md)voor meer informatie.
 
 ## <a name="improvements-for-bios-to-uefi-conversion"></a><a name="BKMK_UEFIConversion"></a>Verbeteringen voor de conversie van BIOS naar UEFI
 U kunt nu een taken reeks met een implementatie van een besturings systeem aanpassen met een nieuwe variabele, TSUEFIDrive, zodat de stap computer opnieuw opstarten een FAT32-partitie op de harde schijf voorbereidt voor overgang naar UEFI. De volgende procedure bevat een voor beeld van hoe u taken reeks stappen kunt maken om de harde schijf voor te bereiden voor de conversie van BIOS naar UEFI.

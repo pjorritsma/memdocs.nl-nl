@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 6ff280a01b7388f3e4d296625a94c0184a0e6b09
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 9ea860568d7f094588e628955f128e5b8a3aa154
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692975"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995412"
 ---
 # <a name="capabilities-in-technical-preview-1707-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1707 voor Configuration Manager
 
@@ -54,9 +54,9 @@ Dit artikel bevat een inleiding tot de functies die beschikbaar zijn in de Techn
  -  Task 2              
 -->
 
-## <a name="client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365"></a>Ondersteuning van peer-cache voor clients voor bestanden voor snelle installatie voor Windows 10 en Office 365
+## <a name="client-peer-cache-support-for-express-installation-files-for-windows-10-and-microsoft-365"></a>Ondersteuning voor client-peer-cache voor snelle installatie bestanden voor Windows 10 en Microsoft 365
 <!-- 1352486 -->
-Vanaf deze release ondersteunt peer-cache distributie van inhoud snelle installatie bestanden voor Windows 10 en van update bestanden voor Office 365. Er zijn geen aanvullende configuraties vereist.
+Vanaf deze release ondersteunt peer-cache distributie van bestanden voor snelle installatie van inhoud voor Windows 10 en van update bestanden voor Microsoft 365. Er zijn geen aanvullende configuraties vereist.
 
 ## <a name="surface-device-dashboard"></a>Surface Device-dash board
 <!--1355788-->
@@ -70,7 +70,7 @@ Klik op een gedeelte van het diagram **Surface Models** voor een volledige lijst
 ## <a name="configure-and-deploy-windows-defender-application-guard-policies"></a>Windows Defender Application Guard-beleid configureren en implementeren
 <!-- 1351960 -->
 
-[Windows Defender Application Guard](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) is een nieuwe Windows-functie waarmee u uw gebruikers kunt beschermen door niet-vertrouwde websites te openen in een beveiligde geïsoleerde container die niet toegankelijk is voor andere onderdelen van het besturings systeem. In deze Technical Preview hebt u ondersteuning toegevoegd om deze functie te configureren met behulp van Configuration Manager nalevings instellingen die u configureert, en vervolgens implementeert u deze in een verzameling. Deze functie wordt uitgebracht als Preview voor de 64-bits versie van de update van Windows 10 over het najaar van de maker (code code: RS3). Als u deze functie nu wilt testen, moet u een preview-versie van deze update gebruiken.
+[Windows Defender Application Guard](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) is een nieuwe Windows-functie waarmee u uw gebruikers kunt beschermen door niet-vertrouwde websites te openen in een beveiligde geïsoleerde container die niet toegankelijk is voor andere onderdelen van het besturings systeem. In deze Technical Preview hebt u ondersteuning toegevoegd om deze functie te configureren met behulp van Configuration Manager nalevings instellingen die u configureert, en vervolgens implementeert u deze in een verzameling. Deze functie wordt uitgebracht als Preview voor de 64-bits versie van de update van Windows 10 over het najaar van de maker (code naam: RS3). Als u deze functie nu wilt testen, moet u een preview-versie van deze update gebruiken.
 
 ### <a name="before-you-start"></a>Voordat u begint
 

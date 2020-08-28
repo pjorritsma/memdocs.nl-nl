@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 9a54ee5fb427f276ec755e748513b178d0c026ab
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 334397cfa52c90694823107c2144bfbbcbd509ac
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698568"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993621"
 ---
 # <a name="what39s-new-in-version-1602-of-configuration-manager"></a>Wat&#39;s nieuw in versie 1602 van Configuration Manager
 
@@ -98,8 +98,8 @@ Deze apps vindt u in het knoop punt **toepassingen** van de Configuration Manage
 
 ## <a name="software-updates"></a>Software-updates  
 
-### <a name="manage-office-365-client-updates"></a>Office 365-client updates beheren  
- Configuration Manager beschikt over de mogelijkheid om Office 365-client updates te beheren met behulp van de software-update beheer werk stroom. Zie [Office 365 ProPlus-updates beheren met Configuration Manager](../../../sum/deploy-use/manage-office-365-proplus-updates.md)voor meer informatie.  
+### <a name="manage-microsoft-365-client-updates"></a>Microsoft 365-client updates beheren  
+ Configuration Manager beschikt over de mogelijkheid om Microsoft 365-client updates te beheren met behulp van de software-update beheer werk stroom. Zie [updates voor Office 365-apps beheren met Configuration Manager](../../../sum/deploy-use/manage-office-365-proplus-updates.md)voor meer informatie.  
 
 ## <a name="compliance-settings"></a>Instellingen voor naleving  
 
@@ -119,7 +119,7 @@ Deze apps vindt u in het knoop punt **toepassingen** van de Configuration Manage
 
 
 ### <a name="restricting-access-based-on-the-health-of-devices"></a>Toegang beperken op basis van de status van apparaten  
- U kunt de toegang tot e-mail en Office 365-Services nu beperken op basis van de status van de apparaten, zoals gerapporteerd door de Health Attestation-service. Daarnaast worden apparaten die door intune worden beheerd, opgenomen in de status rapporten van het apparaat.  
+ U kunt de toegang tot e-mail en Microsoft 365 Services nu beperken op basis van de status van de apparaten, zoals gerapporteerd door de Health Attestation-service. Daarnaast worden apparaten die door intune worden beheerd, opgenomen in de status rapporten van het apparaat.  
 
  De Configuration Manager-console bevat een nieuwe nalevings regel waarmee u kunt opgeven of de apparaten toegang moeten krijgen of moeten worden geblokkeerd op basis van hun status. Zie [Health Attestation voor Configuration Manager](../../../core/servers/manage/health-attestation.md)voor meer informatie over Health Attestation-service en hoe de status van apparaten in intune wordt gerapporteerd.  
 

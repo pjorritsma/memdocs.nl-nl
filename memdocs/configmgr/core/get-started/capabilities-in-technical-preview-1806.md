@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 44fcea129b6f45c292bcdd6b83004131ce2d4e96
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 01c482700b56a1835e46cf5d48da75710f380496
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88694420"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995395"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1806 voor Configuration Manager
 
@@ -102,7 +102,7 @@ Voer de volgende stappen *eenmaal per hiërarchie* uit om de functie in te scha 
 
 2. Selecteer de site op het hoogste niveau in de hiërarchie. Klik in het lint op **site onderdelen configureren**en selecteer **Software-update punt**.  
 
-3. Schakel over naar het tabblad **updates** van derden. Selecteer de optie om **software-updates van derden in te scha kelen**. Zie [verbeteringen voor het inschakelen van ondersteuning voor software-updates van derden](capabilities-in-technical-preview-1805.md#improvements-for-enabling-third-party-software-update-support)voor meer informatie over de certificaat opties.  
+3. Schakel over naar het tabblad **updates van derden** . Selecteer de optie om **software-updates van derden in te scha kelen**. Zie [verbeteringen voor het inschakelen van ondersteuning voor software-updates van derden](capabilities-in-technical-preview-1805.md#improvements-for-enabling-third-party-software-update-support)voor meer informatie over de certificaat opties.  
 
    > [!Note]  
    > Als u de standaard optie voor Configuration Manager gebruikt voor het beheren van dit certificaat, wordt er een nieuw certificaat van het type **WSUS-ondertekening** van derden gemaakt in het knoop punt **certificaten** onder **beveiliging** in de werk ruimte **beheer** .  
@@ -176,14 +176,15 @@ In deze release wordt het MDM-beleid automatisch gesynchroniseerd op basis van M
 
 
 
-## <a name="transition-office-365-workload-to-intune-using-co-management"></a>Office 365-werk belasting overzetten naar intune met behulp van co-beheer
+## <a name="transition-microsoft-365-workload-to-intune-using-co-management"></a>Overgang Microsoft 365 werk belasting naar intune met behulp van co-beheer
 <!--1357841-->
-U kunt de Office 365-werk belasting nu overzetten van Configuration Manager naar Microsoft Intune na het inschakelen van co-beheer. Als u deze werk belasting wilt door lopen, gaat u naar de pagina met eigenschappen voor co-beheer en verplaatst u de schuif regelaar van Configuration Manager naar pilot of alle. Zie voor meer informatie [co-beheer voor Windows 10-apparaten](../../comanage/overview.md).
+U kunt de Microsoft 365 workload nu overzetten van Configuration Manager naar Microsoft Intune na het inschakelen van co-beheer. Als u deze werk belasting wilt door lopen, gaat u naar de pagina met eigenschappen voor co-beheer en verplaatst u de schuif regelaar van Configuration Manager naar pilot of alle. Zie voor meer informatie [co-beheer voor Windows 10-apparaten](../../comanage/overview.md).
 
-Er is ook een nieuwe globale voor waarde, **zijn Office 365-toepassingen die worden beheerd door intune op het apparaat**. Deze voor waarde wordt standaard toegevoegd als vereiste voor nieuwe Office 365-toepassingen. Wanneer u deze werk belasting overdraagt, voldoen gezamenlijk beheerde clients niet aan de vereiste voor de toepassing. Installeer dus Office 365 niet die is geïmplementeerd via Configuration Manager.
+Er is ook een nieuwe globale voor waarde, **zijn Office 365-toepassingen die worden beheerd door intune op het apparaat**. Deze voor waarde wordt standaard toegevoegd als vereiste voor nieuwe Microsoft 365-toepassingen. Wanneer u deze werk belasting overdraagt, voldoen gezamenlijk beheerde clients niet aan de vereiste voor de toepassing. Installeer daarom niet Microsoft 365 geïmplementeerd via Configuration Manager.
 
 ### <a name="known-issue"></a>Bekend probleem
-- Deze werkbelasting overgang is momenteel alleen van toepassing op Office 365-implementaties. Configuration Manager blijft Office 365-updates beheren.<!--510876--> Voor meer informatie, waaronder een mogelijke tijdelijke oplossing, raadpleegt u de Configuration Manager versie 1802 Release Opmerking het wijzigen van de [Office 365-client instelling is niet van toepassing](../servers/deploy/install/release-notes.md).
+
+- Deze werkbelasting overgang is momenteel alleen van toepassing op Microsoft 365-implementaties. Configuration Manager blijft Microsoft 365-updates beheren.<!--510876--> Voor meer informatie, waaronder een mogelijke tijdelijke oplossing, raadpleegt u de Configuration Manager versie 1802 Release Opmerking het [wijzigen van Microsoft 365 client instelling is niet van toepassing](../servers/deploy/install/release-notes.md).
 
 
 
@@ -240,7 +241,7 @@ Het hulp programma voor het aanpassen van Office is nu geïntegreerd met het ins
  Probeer de taken uit te voeren. Stuur vervolgens [feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) en laat ons weten hoe het heeft gewerkt.
 
 1. Ga in de Configuration Manager-console naar de werk ruimte **software bibliotheek** en selecteer het knoop punt **Office 365-client beheer** .
-2. Klik op de tegel **office 365-installatie programma** in het dash board om de Wizard Office 365-client installatie te starten. Zie [Deploying Office 365 apps](../../sum/deploy-use/manage-office-365-proplus-updates.md)(Engelstalig) voor meer informatie.
+2. Klik op de tegel **office 365-installatie programma** in het dash board om de Wizard Office 365-client installatie te starten. Zie [Microsoft 365-Apps implementeren](../../sum/deploy-use/manage-office-365-proplus-updates.md)voor meer informatie.
 3. Klik op de pagina **Office-instellingen** op **Go to Office Web page**. Gebruik het hulp programma voor het aanpassen van het online kantoor om instellingen voor deze implementatie op te geven. 
 4. Klik op **verzenden** in de rechter bovenhoek wanneer dit is voltooid. Voltooi de wizard Office 365-client installatie.
 

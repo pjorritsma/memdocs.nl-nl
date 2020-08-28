@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: bae73e89852efbc8e85ba4df7e98eb0452d6b754
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: d9fb986285186ce531a43283b002eb88eb9595a1
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128726"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994715"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1802-of-configuration-manager"></a>Niveaus van het verzamelen van diagnostische gebruiks gegevens voor versie 1802 van Configuration Manager
 
@@ -144,7 +144,7 @@ Voor Configuration Manager versie 1802 bevat dit niveau de volgende gegevens:
 
 - Aantal afzonderlijke huis stijl voor toepassings catalogus
 
-- Aantal Office 365-toepassingen dat is gemaakt met dash board
+- Aantal Microsoft 365 toepassingen dat is gemaakt met dash board
 
 - Aantal pakketten per type  
 
@@ -387,7 +387,7 @@ Voor Configuration Manager versie 1802 bevat dit niveau de volgende gegevens:
 
 - Configuraties die worden gebruikt voor actieve Windows 10-onderhouds plannen  
 
-- Aantal geïmplementeerde Office 365-updates  
+- Aantal geïmplementeerde Microsoft 365 updates  
 
 - Aantal gesynchroniseerde Stuur Programma's van micro soft Surface
 

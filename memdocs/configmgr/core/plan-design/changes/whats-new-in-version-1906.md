@@ -10,12 +10,12 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 0401207ec98331c33e87a0ac03b5cd7f750c17e7
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3736e5343e10bdfc8d5be8abf79ee27e46749834
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698711"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995106"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 1906 van Configuration Manager current branch
 
@@ -94,7 +94,7 @@ Zie [Management Insights](../../servers/manage/management-insights.md#security)v
     > [!Note]  
     > Deze wijziging is niet van toepassing op SQL Server clusters.
 
-- Site Recovery kan de data base opnieuw maken op een SQL always on-groep. Dit proces werkt met zowel hand matige als automatische seeding.<!-- SCCMDocs-pr#3846 -->
+- Site Recovery kunt de data base opnieuw maken in een SQL always on-groep. Dit proces werkt met zowel hand matige als automatische seeding.<!-- SCCMDocs-pr#3846 -->
 
 - Controles op vereisten voor nieuwe installatie:<!-- SCCMDocs-pr#3899 -->  
 
@@ -505,7 +505,7 @@ De **weer gave** die is vereist, is beschikbaar op de volgende locaties:
    - **Software bibliotheek**  >  Onderhoud van Windows **10**  >  **Alle Windows 10-updates**
    - **Software bibliotheek**  >  **Office 365-client beheer**  >  **Office 365-updates**
 
-Zie [software-updates bewaken](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates), [Windows als een service beheren](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates)en [Office 365 ProPlus-updates beheren](../../../sum/deploy-use/manage-office-365-proplus-updates.md)voor meer informatie.
+Zie [software-updates bewaken](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates), [Windows als een service beheren](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates)en [updates van Microsoft 365 apps beheren](../../../sum/deploy-use/manage-office-365-proplus-updates.md)voor meer informatie.
 
 
 ## <a name="office-management"></a><a name="bkmk_o365"></a> Office-beheer
@@ -514,7 +514,7 @@ Zie [software-updates bewaken](../../../sum/deploy-use/monitor-software-updates.
 
 <!--4021125-->
 
-Om te bepalen welke apparaten klaar zijn om te upgraden naar Office 365 ProPlus, is er een nieuw dash board voor gereedheid. Het bevat de **Office 365 ProPlus upgrade Readiness** -tegel die is uitgebracht in Configuration Manager huidige branch versie 1902. Ga in de Configuration Manager-console naar de werk ruimte **software bibliotheek** , vouw **Office 365 client management**uit en selecteer het knoop punt **Office 365 ProPlus Upgradegereedheid** .
+Er is een nieuw gereedheids dashboard nodig om te bepalen welke apparaten klaar zijn om te upgraden naar Microsoft 365-apps voor bedrijven. Het bevat de **Office 365 ProPlus upgrade Readiness** -tegel die is uitgebracht in Configuration Manager huidige branch versie 1902. Ga in de Configuration Manager-console naar de werk ruimte **software bibliotheek** , vouw **Office 365 client management**uit en selecteer het knoop punt **Office 365 ProPlus Upgradegereedheid** .
 
 Zie voor meer informatie over het dash board, vereisten en het gebruik van deze gegevens [integratie voor Office 365 ProPlus-gereedheid](../../../sum/deploy-use/office-365-dashboard.md#bkmk_readiness-dash).
 

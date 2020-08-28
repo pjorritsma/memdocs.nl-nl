@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 2fa46770adfbf3e688bbdc561d8193967f3913cd
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3817551c75557a275c98e8c62faef46185438a25
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698585"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993604"
 ---
 # <a name="what39s-new-in-version-1606-of-configuration-manager"></a>Wat&#39;s nieuw in versie 1606 van Configuration Manager
 
@@ -126,10 +126,10 @@ Voor de eigenschappen van een toepassing of pakket is er nu een koppeling waarme
 
 ## <a name="software-updates"></a>Software-updates
 
-### <a name="client-setting-to-manage-the-office-365-client-agent"></a>Client instelling voor het beheren van de Office 365-client agent
-U kunt nu een Configuration Manager client instelling gebruiken om de Office 365-client agent te beheren. Nadat u deze updates voor Office 365 hebt ingesteld en geïmplementeerd, werkt de Configuration Manager client agent met de Office 365-client agent om Office 365-updates te downloaden en installeren vanaf een distributie punt.
+### <a name="client-setting-to-manage-the-microsoft-365-client-agent"></a>Client instelling voor het beheren van de Microsoft 365-client agent
+U kunt nu een Configuration Manager client instelling gebruiken om de Microsoft 365-client agent te beheren. Nadat u dit hebt ingesteld en Microsoft 365 updates hebt geïmplementeerd, werkt de Configuration Manager-client agent met de Microsoft 365-client agent om Microsoft 365 updates te downloaden en te installeren vanaf een distributie punt.
 
-Zie [Office 365 ProPlus-updates beheren met Configuration Manager](../../../sum/deploy-use/manage-office-365-proplus-updates.md)voor meer informatie.
+Zie [updates van Microsoft 365-apps beheren met Configuration Manager](../../../sum/deploy-use/manage-office-365-proplus-updates.md)voor meer informatie.
 
 ### <a name="manually-switch-clients-to-a-new-software-update-point"></a>Clients hand matig overschakelen naar een nieuw software-update punt
 U kunt nu een optie inschakelen waarmee Configuration Manager-clients overschakelen naar een nieuw software-update punt wanneer er problemen zijn met het actieve software-update punt. Nadat deze optie is ingeschakeld, zoeken de clients naar een ander software-updatepunt bij de volgende scan.

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3b153dad513107b118d11fa95e3feaa035a1bc90
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3fc0344d7cf4a15925b314e38fd2d6b2ceee9762
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692635"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995004"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 1806 van Configuration Manager current branch
 
@@ -235,7 +235,7 @@ De volgende werk belastingen kunnen nu overstappen van Configuration Manager naa
 
 - **Apparaatconfiguratie**<!--1357903-->: Met deze workload kunt u intune gebruiken om MDM-beleid te implementeren, terwijl u Configuration Manager gebruikt voor het implementeren van toepassingen.  
 
-- **Office 365**<!--1357841-->: Voor apparaten worden geen Office 365-implementaties van Configuration Manager geïnstalleerd.  
+- **Office 365**<!--1357841-->: Apparaten worden niet Microsoft 365 implementaties van Configuration Manager geïnstalleerd.  
 
 - **Mobiele apps**<!--1357892-->: Alle beschik bare apps die zijn geïmplementeerd vanuit intune, zijn beschikbaar in de Bedrijfsportal. Apps die u vanaf Configuration Manager implementeert, zijn beschikbaar in Software Center. Deze functie is een [evaluatie versie](../../servers/manage/pre-release-features.md).  
 
@@ -294,9 +294,9 @@ Zie [Windows-toepassingen maken](../../../apps/get-started/creating-windows-appl
 
 ### <a name="office-customization-tool-integration-with-the-office-365-installer"></a>Integratie van Office Customization Tool met Office 365 Installer
 <!--1358149-->
-Het hulp programma voor het aanpassen van Office is nu geïntegreerd met het installatie programma van Office 365 in de Configuration Manager-console. Bij het maken van een implementatie voor Office 365, kunt u de meest recente Office-beheer baarheid-instellingen dynamisch configureren. Micro soft werkt het hulp programma voor het aanpassen van Office bij wanneer nieuwe versies van Office 365 worden uitgebracht. Met deze integratie kunt u gebruikmaken van nieuwe beheer baarheids instellingen in Office 365 zodra deze beschikbaar zijn. 
+Het hulp programma voor het aanpassen van Office is nu geïntegreerd met het installatie programma van Office 365 in de Configuration Manager-console. Wanneer u een implementatie voor Microsoft 365 maakt, moet u de meest recente Office-beheer baarheid-instellingen dynamisch configureren. Micro soft werkt het hulp programma voor het aanpassen van Office bij wanneer nieuwe builds van Microsoft 365 worden uitgebracht. Met deze integratie kunt u profiteren van nieuwe beheer instellingen in Microsoft 365 zodra deze beschikbaar zijn. 
 
-Zie [Deploying Office 365 apps](../../../sum/deploy-use/manage-office-365-proplus-updates.md)(Engelstalig) voor meer informatie.
+Zie [Microsoft 365-Apps implementeren](../../../sum/deploy-use/manage-office-365-proplus-updates.md)voor meer informatie.
 
 
 ### <a name="support-for-new-windows-app-package-formats"></a>Ondersteuning voor nieuwe Windows-app-pakket indelingen

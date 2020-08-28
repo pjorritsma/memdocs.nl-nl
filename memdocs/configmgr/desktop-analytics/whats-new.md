@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: ce5043f090dd9c08a7a1e9ada5cb2020aabda11f
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: dd188b80375861cd08784d0574e737bfce7f2d92
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819725"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993143"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>Wat is er nieuw in Desktop Analytics
 
@@ -72,7 +72,7 @@ De Desktop Analytics-Portal kan nu meldings banners weer geven. Met deze melding
 
 ### <a name="improvement-to-prerequisites"></a>Verbetering van vereisten
 
-Voor desktop Analytics is niet langer vereist dat u een Office 365-service in uw Azure Active Directory-Tenant (Azure AD) implementeert. De **Office 365-client beheer** -app in azure AD is nu de app **Desktop Analytics** om Configuration Manager het ophalen van gegevens en de status van de service mogelijk te maken.
+Voor desktop Analytics is het niet meer vereist dat u een Microsoft 365-service implementeert in uw Azure Active Directory Azure AD-Tenant. De **Office 365-client beheer** -app in azure AD is nu de app **Desktop Analytics** om Configuration Manager het ophalen van gegevens en de status van de service mogelijk te maken.
 
 ## <a name="may-2020"></a>Mei 2020
 

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e0f2801a9bf3d587d0117a720f4151f431441291
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 2e823aad8fcf69861d21a99f0e65dcf8aaa40dcd
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692822"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993383"
 ---
 # <a name="what39s-new-in-version-1706-of-configuration-manager"></a>Wat&#39;s nieuw in versie 1706 van Configuration Manager
 
@@ -44,9 +44,9 @@ Version 1706 drops support for the following products:
 
 ## <a name="site-infrastructure"></a>Site-infra structuur
 
-### <a name="client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365"></a>Ondersteuning van peer-cache voor clients voor bestanden voor snelle installatie voor Windows 10 en Office 365  
+### <a name="client-peer-cache-support-for-express-installation-files-for-windows-10-and-microsoft-365"></a>Ondersteuning voor client-peer-cache voor snelle installatie bestanden voor Windows 10 en Microsoft 365  
 <!-- 1352486 -->
-Vanaf deze release ondersteunt peer-cache distributie van inhoud snelle installatie bestanden voor Windows 10 en van update bestanden voor Office 365. Er zijn geen aanvullende configuraties vereist ter ondersteuning van deze wijziging.
+Vanaf deze release ondersteunt peer-cache distributie van bestanden voor snelle installatie van inhoud voor Windows 10 en van update bestanden voor Microsoft 365. Er zijn geen aanvullende configuraties vereist ter ondersteuning van deze wijziging.
 
 ### <a name="updates-for-the-data-warehouse"></a>Updates voor het Data Warehouse
 <!-- 1277922 -->
@@ -227,8 +227,8 @@ U kunt nu uitstel beleid configureren voor Windows 10-onderdelen updates of kwal
 
 Zie [integratie met Windows Update voor bedrijven in Windows 10](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md#configure-windows-update-for-business-deferral-policies)voor meer informatie.
 
-### <a name="improved-user-notifications-for-office-365-updates"></a>Verbeterde gebruikers meldingen voor Office 365-updates
-Er zijn verbeteringen aangebracht in het gebruik van de Office-klik-en-klaar-gebruikers ervaring wanneer een client een update van Office 365 installeert. Dit omvat pop-up-en in-app-meldingen en een aftellings ervaring. Zie voor meer informatie [gedrag voor opnieuw opstarten en client meldingen voor Office 365-updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md)
+### <a name="improved-user-notifications-for-microsoft-365-updates"></a>Verbeterde gebruikers meldingen voor Microsoft 365 updates
+Er zijn verbeteringen aangebracht voor het gebruik van de Office-klik-en-klaar-gebruikers ervaring wanneer een client een Microsoft 365 update installeert. Dit omvat pop-up-en in-app-meldingen en een aftellings ervaring. Zie voor meer informatie [gedrag voor opnieuw opstarten en client meldingen voor Microsoft 365 updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md)
 
 ## <a name="reporting"></a>Rapportage
 

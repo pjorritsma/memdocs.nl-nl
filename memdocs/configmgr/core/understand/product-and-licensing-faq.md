@@ -10,12 +10,12 @@ ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0f249c4ad981c289be33d364dcb4f5b8635faecb
-ms.sourcegitcommit: e43e6e83e3b38137ceebc6d299eacd94a925db85
+ms.openlocfilehash: faf8401e6aa89a60f2acbea8e0d97f9efaf09a84
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88895891"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994460"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Veelgestelde vragen over Configuration Manager branches en licenties
 
@@ -66,7 +66,7 @@ https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-pla
 -->
 
 > [!IMPORTANT]
-> Configuration Manager is niet opgenomen in het [Microsoft 365 Business](https://www.microsoft.com/microsoft-365/business) plan.
+> Configuration Manager is niet opgenomen in het [Microsoft 365 Business Premium](https://www.microsoft.com/microsoft-365/business) -abonnement.
 
 ### <a name="what-changes-with-licensing-for-co-management-in-microsoft-endpoint-manager"></a><a name="bkmk_mem"></a> Wat is er veranderd in licentie voor co-beheer in micro soft Endpoint Manager?
 

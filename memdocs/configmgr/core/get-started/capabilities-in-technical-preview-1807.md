@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 8ead53c71e336001ac820a437fa67758c6375cbd
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: bc848cd1f6365b5a94c915a00517ca0a4abb8e4a
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88694369"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995310"
 ---
 # <a name="capabilities-in-configuration-manager-technical-preview-version-1807"></a>Mogelijkheden in Configuration Manager Technical Preview-versie 1807 
 
@@ -42,14 +42,14 @@ Steps to workaround, if any.
 
 ## <a name="known-issues"></a>Bekende problemen 
 
-### <a name="issues-with-office-365-software-updates"></a><a name="ki_o365"></a> Problemen met Office 365-software-updates
+### <a name="issues-with-microsoft-365-software-updates"></a><a name="ki_o365"></a> Problemen met Microsoft 365 software-updates
 <!--521365-->
-Als u updates voor Office 365 beheert met behulp van de branches van Technical Preview versie 1806 en 1806,2, kunnen ze niet worden geïnstalleerd op clients. 
+Als u Microsoft 365 updates beheert met behulp van de branch versie 1806 en 1806,2 van Technical Preview, kunnen ze niet worden geïnstalleerd op clients. 
 
 #### <a name="workaround"></a>Tijdelijke oplossing
-- Verwijder bestaande implementatie pakketten en software-update groepen voor Office 365.  
+- Bestaande implementatie pakketten en software-update groepen voor Microsoft 365 verwijderen.  
 
-- Vanaf 31 juli 2018 synchroniseert u Office 365-software-updates en implementeert u alleen de meest recente updates.  
+- Vanaf 31 juli 2018, synchroniseert u Microsoft 365 software-updates en implementeert u alleen de meest recente updates.  
 
 
 
@@ -152,7 +152,7 @@ Probeer de taken uit te voeren. Stuur vervolgens [feedback](capabilities-in-tech
 
 1. Open in de Configuration Manager-console de eigenschappen van een Windows Installer of het implementatie type script installatie programma.  
 
-2. Ga naar het tabblad **Program ma's** . Geef de opdracht voor het herstellen van het **programma** op.  
+2. Ga naar het tabblad **Program ma's** . Geef de opdracht voor het **reparatie programma** op.  
 
 3. Implementeer de app. Schakel op het tabblad **implementatie-instellingen** van de implementatie de optie in om **eind gebruikers toe te staan om deze toepassing te herstellen**.  
 

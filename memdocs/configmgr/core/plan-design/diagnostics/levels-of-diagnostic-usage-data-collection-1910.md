@@ -10,12 +10,12 @@ ms.assetid: b3ce6b9a-7d54-4374-9b7a-f017f872bd6f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 316cd4b532c248027def1f1cac4dfbe71476b0a4
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: e1bd8667a1b6a808b0e0cdd645562fafdd24ad95
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128600"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994511"
 ---
 # <a name="diagnostic-and-usage-data-for-version-1910"></a>Diagnostische en gebruiks gegevens voor versie 1910
 
@@ -158,7 +158,7 @@ Voor Configuration Manager versie 1910 bevat dit niveau de volgende gegevens:
 
 - Aantal afzonderlijke huis stijl voor toepassings catalogus  
 
-- Aantal Office 365-toepassingen dat is gemaakt met dash board  
+- Aantal Microsoft 365 toepassingen dat is gemaakt met dash board  
 
 - Aantal pakketten per type  
 
@@ -208,7 +208,7 @@ Voor Configuration Manager versie 1910 bevat dit niveau de volgende gegevens:
 
 - Cumulatieve statistieken voor het gebruik van toepassings groepen
 
-- Cumulatieve statistieken over Office-invoeg toepassingen, gebruik van de Office Readiness Toolkit en aantallen clients met Office 365 ProPlus
+- Cumulatieve statistieken over Office-invoeg toepassingen, gebruik van de Office Readiness Toolkit en aantallen clients met Microsoft 365-apps voor bedrijven
 
 - ***[Nieuw]*** Statistische gegevens over de status van de Office-invoeg toepassing
 
@@ -446,7 +446,7 @@ Voor Configuration Manager versie 1910 bevat dit niveau de volgende gegevens:
 
 - Configuraties die worden gebruikt voor actieve Windows 10-onderhouds plannen  
 
-- Aantal geïmplementeerde Office 365-updates  
+- Aantal geïmplementeerde Microsoft 365 updates  
 
 - Aantal gesynchroniseerde Stuur Programma's van micro soft Surface  
 

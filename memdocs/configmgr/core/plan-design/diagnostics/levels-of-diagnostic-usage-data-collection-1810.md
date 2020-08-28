@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: eb6f1b9c97d017d7aaabb41075aaf68b6c1d7b45
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: afca31c224e40efa79638f05192259d0986e1e72
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128641"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994630"
 ---
 # <a name="diagnostic-and-usage-data-for-version-1810"></a>Diagnostische en gebruiks gegevens voor versie 1810
 
@@ -151,7 +151,7 @@ Voor Configuration Manager versie 1810 bevat dit niveau de volgende gegevens:
 
 - Aantal afzonderlijke huis stijl voor toepassings catalogus  
 
-- Aantal Office 365-toepassingen dat is gemaakt met dash board  
+- Aantal Microsoft 365 toepassingen dat is gemaakt met dash board  
 
 - Aantal pakketten per type  
 
@@ -432,7 +432,7 @@ Voor Configuration Manager versie 1810 bevat dit niveau de volgende gegevens:
 
 - Configuraties die worden gebruikt voor actieve Windows 10-onderhouds plannen  
 
-- Aantal geïmplementeerde Office 365-updates  
+- Aantal geïmplementeerde Microsoft 365 updates  
 
 - Aantal gesynchroniseerde Stuur Programma's van micro soft Surface  
 

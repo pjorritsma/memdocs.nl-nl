@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: b3e1a2feaddb7384d76790249152c89dfa8ee2d3
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: d23880def99fd12bffe83efffe9768f94481d07e
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904800"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993553"
 ---
 # <a name="what39s-new-in-version-1610-of-configuration-manager"></a>Wat&#39;s nieuw in versie 1610 van Configuration Manager
 
@@ -183,12 +183,12 @@ In het dash board worden grafieken weer gegeven voor het volgende:
 - Aantal Office 365-clients
 - Office 365-client versies
 - Office 365-client talen
-- Office 365-client kanalen     
+- Office 365-client kanalen
 
-Zie [Office 365 ProPlus-updates beheren](../../../sum/deploy-use/manage-office-365-proplus-updates.md)voor meer informatie.
+Zie [updates van Microsoft 365-apps beheren](../../../sum/deploy-use/manage-office-365-proplus-updates.md)voor meer informatie.
 
 ## <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>Takenreeksstappen voor het beheren van de conversie van BIOS naar UEFI
-U kunt nu een taken reeks met een implementatie van een besturings systeem aanpassen met een nieuwe variabele, TSUEFIDrive, zodat de stap **computer opnieuw opstarten** een FAT32-partitie op de harde schijf voorbereidt voor overgang naar UEFI. De volgende procedure bevat een voor beeld van hoe u taken reeks stappen kunt maken om de harde schijf voor te bereiden voor de conversie van BIOS naar UEFI. Zie [taken reeks stappen voor het beheren van de conversie van BIOS naar UEFI](../../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md)voor meer informatie.
+U kunt nu een taken reeks met een implementatie van een besturings systeem aanpassen met een nieuwe variabele, TSUEFIDrive, zodat de stap **computer opnieuw opstarten** een FAT32-partitie op de harde schijf voorbereidt voor overgang naar UEFI. De volgende procedure bevat een voor beeld van hoe u taken reeks stappen kunt maken om de harde schijf voor te bereiden voor de conversie van BIOS naar UEFI. Zie  [taken reeks stappen voor het beheren van de conversie van BIOS naar UEFI](../../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md)voor meer informatie.
 
 ##  <a name="improvements-to-the-task-sequence-step-prepare-configmgr-client-for-capture"></a>Verbeteringen aan de taken reeks stap: ConfigMgr-client voorbereiden voor vastleggen  
 Met de stap ConfigMgr-client voorbereiden wordt de Configuration Manager-client nu volledig verwijderd, in plaats van alleen de sleutel gegevens te verwijderen. Wanneer de taken reeks de vastgelegde installatie kopie van het besturings systeem implementeert, wordt elke keer een nieuwe Configuration Manager-client geïnstalleerd. Zie [taken reeks stappen](../../../osd/understand/task-sequence-steps.md#BKMK_PrepareConfigMgrClientforCapture)voor meer informatie.
@@ -226,7 +226,7 @@ Zie [configuratie-items voor apparaten die worden beheerd zonder de Configuratio
 - **Cookies toestaan**
 - **Active Scripting toestaan**
 
-#### <a name="app-settings"></a>Instellingen voor apps
+#### <a name="app-settings"></a>App-instellingen
 - **Google Play Store toestaan**
 
 #### <a name="device-capability-settings"></a>Instellingen voor apparaatfuncties

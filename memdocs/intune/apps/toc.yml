@@ -53,11 +53,11 @@
               href: windows-store-for-business.md
             - name: Beheerde Google Play-apps
               href: apps-add-android-for-work.md
-        - name: Office 365-pakket
+        - name: Microsoft 365 Suite
           items:
-            - name: Office 365-apps voor Windows 10
+            - name: Microsoft 365-apps voor Windows 10
               href: apps-add-office365.md
-            - name: Office 365-apps voor macOS
+            - name: Microsoft 365-apps voor macOS
               href: apps-add-office365-macos.md
         - name: Android Enterprise-systeem-apps
           href: apps-ae-system.md

@@ -10,12 +10,12 @@ ms.assetid: 26456bb7-f46b-4d8d-bb0b-e3fd9a52fe14
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 535b91b82e024431e4221824b4623b6ffc17b286
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 28d1a820642c7400ad60b1571851f18a3eb9124c
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700900"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068103"
 ---
 # <a name="use-the-company-portal-app-on-co-managed-devices"></a>Gebruik de bedrijfsportal-app op gezamenlijk beheerde apparaten
 
@@ -51,6 +51,8 @@ Raadpleeg voor meer informatie de volgende artikelen:
 ## <a name="prerequisites"></a>Vereisten
 
 - Configuration Manager huidige branch-versie 2006 of hoger
+
+- App-versie 11.0.8980.0 of hoger Bedrijfsportal
 
 - Windows 10, versie 1803 of hoger:
 

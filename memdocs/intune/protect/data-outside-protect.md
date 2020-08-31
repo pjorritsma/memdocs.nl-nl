@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa8a18d24fb27b1d1ca7ea7dbe4fad532f85d662
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: e4772743bc85df54251dc8926c69b9a5afbab559
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82022718"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663273"
 ---
 # <a name="prevent-unauthorized-access-to-company-data-using-microsoft-intune"></a>Toegang tot bedrijfsgegevens door onbevoegden voorkomen met Microsoft Intune
 
@@ -51,4 +51,4 @@ U kunt gegevens delen over [hoe en wanneer documenten en e-mails met gevoelige i
 Bij de volgende stappen krijgt u meer informatie over andere manieren waarop u de beveiliging van uw bedrijfsgegevens kunt verbeteren, met inbegrip van: 
 
 * Informatie over het gebruik van [Azure Information Protection op iOS-/iPadOS- en Android-apparaten](https://docs.microsoft.com/information-protection/rms-client/mobile-app-faq).
-* Informatie over de [Microsoft Rights Management-toepassing voor delen](https://technet.microsoft.com/dn451248) voor Windows Phone en Mac-computers.
+* Informatie over de [Microsoft Rights Management-toepassing voor delen](https://technet.microsoft.com/dn451248) voor Mac-computers.

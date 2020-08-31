@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 233bc5bbdf983069ed60c8a9afbe165fb2e6b9b1
-ms.sourcegitcommit: 764142960005ea0cb5afa00757f2b403ce5032c6
+ms.openlocfilehash: 088c3d6a281efcb1877d80d68382b1dc848ae321
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405814"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663375"
 ---
 # <a name="troubleshoot-conditional-access"></a>Problemen met voorwaardelijke toegang oplossen
 In dit artikel wordt beschreven wat u moet doen wanneer uw gebruikers geen toegang kunnen krijgen tot resources die met voorwaardelijke toegang zijn beschermd, of wanneer gebruikers wel toegang tot beschermde resources kunnen krijgen, maar eigenlijk zouden moeten worden geblokkeerd.
@@ -45,7 +45,7 @@ Er moet aan de volgende vereisten zijn voldaan voordat voorwaardelijke toegang w
 
 - Aan de gebruiker moet standaard een apparaatnalevingsbeleid zijn toegewezen. Dit kan afhankelijk zijn van de manier waarop de instelling **Apparaten waaraan geen nalevingsbeleid is toegewezen markeren als** onder **Apparaatnaleving** > **Instellingen nalevingsbeleid** in de Intune-beheerportal is geconfigureerd.
 
-- EAS (Exchange ActiveSync) moet worden geactiveerd op het apparaat als de gebruiker de systeemeigen e-mailclient van het apparaat gebruikt in plaats van Outlook. Dit gebeurt automatisch voor iOS/iPadOS-, Windows Phone- en Android Knox-apparaten.
+- EAS (Exchange ActiveSync) moet worden geactiveerd op het apparaat als de gebruiker de systeemeigen e-mailclient van het apparaat gebruikt in plaats van Outlook. Dit gebeurt automatisch voor iOS/iPadOS- en Android Knox-apparaten.
 
 - Voor on-premises Exchange, moet de Intune Exchange-connector juist zijn geconfigureerd. Raadpleeg [Het oplossen van problemen met de Exchange Connector in Microsoft Intune](troubleshoot-exchange-connector.md) voor meer informatie.
 
@@ -94,7 +94,7 @@ Deze voorwaarden voor elk apparaat zijn terug te vinden in Azure Portal en in he
 
 ## <a name="devices-are-noncompliant-but-users-are-not-blocked"></a>Apparaten zijn niet-conform maar gebruikers worden niet geblokkeerd
 
-- Voor Windows-pc's wordt met voorwaardelijke toegang alleen de systeemeigen e-mail-app, Office 2013 met moderne verificatie of Office 2016 geblokkeerd. Voor het blokkeren van eerdere versies van Outlook of alle mail-apps op Windows-pc's zijn AAD-apparaatregistraties en Active Directory Federation Services-configuraties (AD FS) vereist conform de instructies in [Voorwaardelijke toegang instellen voor SharePoint Online en Exchange Online voor Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-no-modern-authentication).
+- Voor Windows-pc's wordt met voorwaardelijke toegang alleen de systeemeigen e-mail-app, Office 2013 met moderne verificatie of Office 2016 geblokkeerd. Voor het blokkeren van eerdere versies van Outlook of alle mail-apps op Windows-pc's zijn Azure AD-apparaatregistraties en Active Directory Federation Services-configuraties (AD FS) vereist conform de instructies in [Voorwaardelijke toegang instellen voor SharePoint Online en Exchange Online voor Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-no-modern-authentication).
 
 - Als het apparaat selectief wordt gewist of buiten gebruik wordt gesteld in Intune, kan het zijn dat het apparaat nog enige uren na de buitengebruikstelling toegang heeft. Dit komt doordat Exchange de toegangsrechten gedurende zes uur in het cachegeheugen opslaat. Overweeg andere manieren om gegevens op buiten gebruik gestelde apparaten te beveiligen in dit scenario.
 

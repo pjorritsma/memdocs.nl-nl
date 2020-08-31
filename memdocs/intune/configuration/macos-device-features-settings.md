@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/15/2020
+ms.date: 08/20/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91bf09a122031b7186840bc17cd44cc5738b2ffe
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 79c389767ad3cb796e2cc7b4cd9a35015e17a837
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093549"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819657"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Instellingen van apparaatfuncties voor macOS in Intune
 
@@ -267,6 +267,15 @@ Deze functie is van toepassing op:
 - **Type app-extensie voor eenmalige aanmelding**: Kies het type app-extensie voor eenmalige aanmelding. Uw opties zijn:
 
   - **Niet geconfigureerd**: er worden geen app-extensies gebruikt. Als u een app-extensie wilt uitschakelen, stelt u het type app-extensie voor SSO in op **Niet geconfigureerd**.
+  - **Microsoft Azure AD**: Maakt gebruik van de SSO-invoegtoepassing van Microsoft Enterprise. Dat is een omleidingstype-SSO-app-extensie. Deze invoegtoepassing biedt SSO voor Active Directory-accounts voor alle macOS-toepassingen die ondersteuning bieden voor de functie [Enterprise Single Sign-On van Apple](https://developer.apple.com/documentation/authenticationservices). Gebruik dit SSO-app-extensietype om SSO in te schakelen voor Microsoft-apps, organisatie-apps en websites die worden geverifieerd met behulp van Azure AD.
+
+    De Azure AD-invoegtoepassing fungeert als een geavanceerde broker voor verificatie die verbeteringen in de beveiliging en de gebruikerservaring biedt.
+
+    > [!IMPORTANT]
+    > Installeer de macOS-bedrijfsportal-app op apparaten om eenmalige aanmelding te verkrijgen met het SSO-app-extensietype van Microsoft Azure AD. De bedrijfsportal-app levert de Microsoft Enterprise invoegtoepassing voor eenmalige aanmelding op apparaten. De instellingen van de MDM app-extensie voor eenmalige aanmelding activeren de invoegtoepassing. Zodra de bedrijfsportal-app en het profiel van de app-extensie voor eenmalige aanmelding op apparaten zijn geïnstalleerd, melden gebruikers zich aan met hun referenties en maken een sessie op hun apparaat. Deze sessie wordt voor verschillende toepassingen gebruikt, zonder dat gebruikers opnieuw moeten worden geverifieerd.
+    >
+    > Zie [Wat gebeurt er wanneer ik de bedrijfsportal-app installeer en mijn macOS-apparaat registreer bij Intune?](../user-help/what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-macos.md) voor meer informatie over de bedrijfsportal-app. De bedrijfsportal-app [downloaden](https://go.microsoft.com/fwlink/?linkid=853070).
+
   - **Omleiding**: Gebruik een algemene, aanpasbare app-extensie van het type Omleiding om eenmalige aanmelding te gebruiken met moderne verificatiestromen. Zorg ervoor dat u de extensie- en team-id van de app-extensie van uw organisatie kent.
   - **Referentie**: Gebruik een algemene, aanpasbare app-extensie van het type Referentie om eenmalige aanmelding te gebruiken met verificatiestromen met vraag en antwoord. Zorg ervoor dat u de extensie-id en de team-id van de app-extensie van uw organisatie kent.  
   - **Kerberos**: gebruik de ingebouwde Kerberos-extensie van Apple, die is opgenomen in macOS Catalina 10.15 en hoger. Deze optie is een Kerberos-versie van de app-extensie **Referentie**.
@@ -274,14 +283,14 @@ Deze functie is van toepassing op:
   > [!TIP]
   > Met de typen **Omleiding** en **Referentie** voegt u uw eigen configuratiewaarden toe om door te geven aan de extensie. Als u het type **Referentie** gebruikt, kunt u overwegen om de ingebouwde configuratie-instellingen te gebruiken die Apple heeft opgenomen in het type **Kerberos**.
 
-- **Extensie-id** (omleiding en referentie): voer de bundel-id in waarmee de app-extensie voor eenmalige aanmelding wordt aangeduid, zoals `com.apple.ssoexample`.
-- **Team-id** (omleiding en referentie): voer de team-id in van uw app-extensie voor eenmalige aanmelding. Een team-id is een alfanumerieke tekenreeks van 10 tekens (cijfers en letters) die wordt gegenereerd met Apple, zoals `ABCDE12345`. 
+- **Extensie-id** (omleiding, referentie): voer de bundel-id in waarmee de app-extensie voor eenmalige aanmelding wordt aangeduid, zoals `com.apple.ssoexample`.
+- **Team-id** (omleiding, referentie): voer de team-id in van uw app-extensie voor eenmalige aanmelding. Een team-id is een alfanumerieke tekenreeks van 10 tekens (cijfers en letters) die wordt gegenereerd met Apple, zoals `ABCDE12345`. 
 
   [Zoek uw team-id](https://help.apple.com/developer-account/#/dev55c3c710c): (hiermee wordt de website van Apple geopend) biedt meer informatie.
 
-- **Realm** (referentie en Kerberos): Voer de naam van uw verificatierealm in. De realmnaam moet in hoofdletters zijn, zoals `CONTOSO.COM`. Uw realmnaam is meestal gelijk aan uw DNS-domeinnaam, maar dan met alleen hoofdletters.
+- **Realm** (referentie, Kerberos): Voer de naam van uw verificatierealm in. De realmnaam moet in hoofdletters zijn, zoals `CONTOSO.COM`. Uw realmnaam is meestal gelijk aan uw DNS-domeinnaam, maar dan met alleen hoofdletters.
 
-- **Domeinen** (referentie en Kerberos): voer de domein- of hostnamen in van de sites die via eenmalige aanmelding kunnen worden geverifieerd. Als bijvoorbeeld `mysite.contoso.com` uw website is, is `mysite` de hostnaam en is `contoso.com` de domeinnaam. Wanneer gebruikers verbinding maken met een van deze sites, wordt de verificatie-uitdaging afgehandeld via de app-extensie. Met deze verificatie kunnen gebruikers Face ID, Touch ID of de pincode/wachtwoordcode van Apple gebruiken om zich aan te melden.
+- **Domeinen** (referentie, Kerberos): voer de domein- of hostnamen in van de sites die via eenmalige aanmelding kunnen worden geverifieerd. Als bijvoorbeeld `mysite.contoso.com` uw website is, is `mysite` de hostnaam en is `contoso.com` de domeinnaam. Wanneer gebruikers verbinding maken met een van deze sites, wordt de verificatie-uitdaging afgehandeld via de app-extensie. Met deze verificatie kunnen gebruikers Face ID, Touch ID of de pincode/wachtwoordcode van Apple gebruiken om zich aan te melden.
 
   - Alle domeinen in uw app-extensie voor eenmalige aanmelding bij Intune-profielen moeten uniek zijn. U kunt een domein niet herhalen in een app-extensieprofiel voor eenmalige aanmelding, zelfs niet als u verschillende typen app-extensie voor SSO gebruikt.
   - Deze domeinen zijn niet hoofdlettergevoelig.
@@ -291,7 +300,7 @@ Deze functie is van toepassing op:
   - Alle URL's in uw app-extensie voor SSO bij Intune-profielen moeten uniek zijn. U kunt een domein niet herhalen in een app-extensieprofiel voor eenmalige aanmelding, zelfs niet als u verschillende typen app-extensies voor eenmalige aanmelding gebruikt.
   - De URL's moeten beginnen met `http://` of `https://`.
 
-- **Aanvullende configuratie** (omleiding en referentie): Voer aanvullende extensiegegevens in die moeten worden doorgegeven aan de app-extensie voor eenmalige aanmelding:
+- **Aanvullende configuratie** (Microsoft Azure AD, omleiding, referentie): Voer aanvullende extensiegegevens in die moeten worden doorgegeven aan de app-extensie voor eenmalige aanmelding:
   - **Sleutel**: voer de naam in van het item dat u wilt toevoegen, zoals `user name`.
   - **Type**: voer het gegevenstype in. Uw opties zijn:
 
@@ -331,7 +340,13 @@ Deze functie is van toepassing op:
 - **Active Directory-sitecode** (alleen Kerberos): voer de naam in van de Active Directory-site die door de Kerberos-extensie moet worden gebruikt. Waarschijnlijk hoeft u deze waarde niet te wijzigen, omdat de Kerberos-extensie de Active Directory-sitecode mogelijk automatisch kan vinden.
 - **Cachenaam** (alleen Kerberos): voer de naam in van de generieke beveiligingsservices (Generic Security Services of GSS) van de Kerberos-cache. Waarschijnlijk hoeft u deze waarde niet in te stellen.  
 - **Bericht voor wachtwoordvereisten** (alleen Kerberos): voer een tekstversie in van de wachtwoordvereisten van uw organisatie die voor gebruikers worden weergegeven. Het bericht wordt weergegeven als u geen vereisten voor wachtwoordcomplexiteit van Active Directory nodig hebt of geen minimale wachtwoordlengte opgeeft.  
-- **App-bundel-id's** (alleen Kerberos): **voeg de app-bundel-id's toe** die moeten gebruikmaken van eenmalige aanmelding op uw apparaten. Aan deze apps wordt toegang verleend tot Kerberos Ticket Granting Ticket en het verificatieticket. De apps verifiëren gebruikers ook voor services waarvoor ze gemachtigd zijn.
+- **Modus Gedeeld apparaat** inschakelen (alleen Microsoft Azure AD): Selecteer **Ja** als u de SSO-invoegtoepassing van Microsoft Enterprise implementeert op macOS-apparaten die zijn geconfigureerd voor de modus Gedeeld apparaat van Azure AD. Met apparaten in de gedeelde modus kunnen veel gebruikers zich globaal aan- en afmelden bij toepassingen die de modus Gedeeld apparaat ondersteunen. Wanneer dit is ingesteld op **Niet geconfigureerd**, wordt deze instelling niet door Intune gewijzigd of bijgewerkt. 
+
+  Als dit is ingesteld op **Ja**, dan worden alle bestaande gebruikersaccounts van de apparaten gewist. Als u gegevensverlies of het herstellen van fabrieksinstellingen wilt voorkomen, moet u weten hoe deze instelling uw apparaten wijzigt.
+
+  Zie [Overzicht van de modus voor gedeelde apparaten](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices) voor meer informatie over de modus gedeeld apparaat.
+
+- **Bundel-id’s van app** (Microsoft Azure AD, Kerberos): **voeg de app-bundel-id's toe** die moeten gebruikmaken van eenmalige aanmelding op uw apparaten. Aan deze apps wordt toegang verleend tot Kerberos Ticket Granting Ticket en het verificatieticket. De apps verifiëren gebruikers ook voor services waarvoor ze gemachtigd zijn.
 - **Toewijzing aan domeinrealm** (alleen Kerberos): **voeg de DNS-achtervoegsels voor het domein toe** die moeten worden toegewezen aan uw realm. Gebruik deze instelling als de DNS-namen van de hosts niet overeenkomen met de realmnaam. Waarschijnlijk hoeft u deze aangepaste domein-naar-realm-toewijzing niet te maken.
 - **PKINIT-certificaat** (alleen Kerberos): **selecteer** het PIKNIT-certificaat (Public Key Cryptography for Initial Authentication) dat kan worden gebruikt voor Kerberos-verificatie. U kunt kiezen uit een [PKCS](../protect/certficates-pfx-configure.md)- of [SCEP](../protect/certificates-scep-configure.md)-certificaat dat u hebt toegevoegd in Intune. Raadpleeg [Certificaten gebruiken voor verificatie in Microsoft Intune](../protect/certificates-configure.md) voor meer informatie over certificaten.
 

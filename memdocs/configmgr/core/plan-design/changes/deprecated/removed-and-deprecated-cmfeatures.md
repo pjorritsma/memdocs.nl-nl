@@ -2,7 +2,7 @@
 title: 'Verouderde functies:'
 titleSuffix: Configuration Manager
 description: Meer informatie over de functies die Configuration Manager niet meer wordt ondersteund.
-ms.date: 08/11/2020
+ms.date: 08/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 29b5dd8fdceb803de77aff9adbd0614d1e201b18
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: aca9dc5c2ff2d88155ab19656f391cf87a4e977f
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88694251"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068086"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Verwijderde en afgeschafte functies voor Configuration Manager
 
@@ -31,6 +31,7 @@ De volgende functies zijn afgeschaft. U kunt ze nu nog steeds gebruiken, maar mi
 
 |Functie|Afschaffing eerst aangekondigd|Ondersteuning &nbsp; verwijderd|
 |-----------|---|--------------|
+|De geografische weer gave in het knoop punt **site hiërarchie** van de werk ruimte **bewaking** in de Configuration Manager-console.<!--8116777-->|Augustus 2020|NOG TE BEPALEN|
 |De implementatie voor het delen van inhoud van Azure is gewijzigd. Gebruik een Cloud beheer gateway die is ingeschakeld voor inhoud. U kunt in de toekomst geen traditioneel Cloud distributiepunt maken.|Februari 2019|TBD<sup>[Opmerking 1](#bkmk_note1)</sup>|
 |Implementatie van de klassieke service naar Azure voor de Cloud beheer gateway en het Cloud distributiepunt. Zie [plan for CMG](../../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager)voor meer informatie.|November 2018|TBD<sup>[Opmerking 1](#bkmk_note1)</sup>|
 
@@ -49,7 +50,7 @@ De volgende functies worden niet meer ondersteund. In sommige gevallen bevinden 
 | Evaluatie van apparaatstatusverklaring voor nalevings beleid voor voorwaardelijke toegang <!--1235616 aka 3608202--> Zie [Wat is er gebeurd met hybride MDM](../../../../mdm/understand/what-happened-to-hybrid.md)voor meer informatie.| 3 juli 2019 | Versie 1910 |
 | De app Configuration Manager Bedrijfsportal | 21 mei 2019 | Versie 1910 |
 | De toepassings catalogus, met inbegrip van beide site systeem rollen: het Application catalog-website punt en het webservicepunt. Zie [de Application Catalog verwijderen](../../../../apps/plan-design/plan-for-and-configure-application-management.md#bkmk_remove-appcat)voor meer informatie. | 21 mei 2019 | Versie 1910 |
-|Verificatie op basis van certificaten met instellingen voor Windows hello voor bedrijven in Configuration Manager<br>Zie [Windows hello voor bedrijven-instellingen](../../../../protect/deploy-use/windows-hello-for-business-settings.md)voor meer informatie.|december 2017|Versie 1910|
+|Verificatie op basis van certificaten met instellingen voor Windows hello voor bedrijven in Configuration Manager<br>Zie [Windows hello voor bedrijven-instellingen](../../../../protect/deploy-use/windows-hello-for-business-settings.md)voor meer informatie.|December 2017|Versie 1910|
 |System Center-Endpoint Protection voor Mac en Linux<br>Zie [End of support blog post](https://techcommunity.microsoft.com/t5/configuration-manager-blog/end-of-support-for-scep-for-mac-and-scep-for-linux-on-december/ba-p/286257)voor meer informatie.|Oktober 2018|31 december 2018|
 |On-premises voorwaardelijke toegang<br>Zie [Wat is er gebeurd met hybride MDM](../../../../mdm/understand/what-happened-to-hybrid.md)voor meer informatie.|30 januari 2019|1 september 2019|
 |Hybrid Mobile Device Management (MDM)<br>Zie [Wat is er gebeurd met hybride MDM](../../../../mdm/understand/what-happened-to-hybrid.md)voor meer informatie.<br><br>Vanaf de 1902-release van de intune-service, die aan het einde van februari 2019 werd verwacht, kunnen nieuwe klanten geen nieuwe hybride verbinding maken.<!--Intune feature 2683117-->|14 augustus 2018|1 september 2019|

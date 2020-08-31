@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/08/2020
+ms.date: 08/20/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 32d46374186596e8c8721b77510738caadcf78b8
-ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
+ms.openlocfilehash: 09ccfe079511c90f2ce7ecf6c27d4dfcf1c85327
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84814951"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820184"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>iOS- en iPadOS-apparaatinstellingen voor het gebruik van algemene iOS-/iPadOS-functies in Intune
 
@@ -304,7 +304,7 @@ Deze functie is van toepassing op:
   - **Niet geconfigureerd**: Deze instelling wordt niet gewijzigd of bijgewerkt door Intune. Standaard gebruikt het besturingssysteem geen app-extensies. Als u een app-extensie wilt uitschakelen, stelt u Type app-extensie voor SSO in op **Niet geconfigureerd**.
   - **Microsoft Azure AD**: Maakt gebruik van de SSO-invoegtoepassing van Microsoft Enterprise. Dat is een omleidingstype-SSO-app-extensie. Deze invoegtoepassing biedt SSO voor Active Directory-accounts voor alle toepassingen die ondersteuning bieden voor de functie [Enterprise Single Sign-On van Apple](https://developer.apple.com/documentation/authenticationservices). Gebruik dit SSO-app-extensietype om SSO in te schakelen voor Microsoft-apps, organisatie-apps en websites die worden geverifieerd met behulp van Azure AD.
 
-    De Azure AD-invoegtoepassing fungeert als een geavanceerde broker voor verificatie die verbeteringen in de beveiliging en de gebruikerservaring biedt. Alle apps die eerder brokered verificatie gebruikten met de app Microsoft Authenticator, behouden SSO met de [SSO-invoegtoepassing van Microsoft Enterprise voor Apple-apparaten](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin).
+    De Azure AD-invoegtoepassing fungeert als een geavanceerde broker voor verificatie die verbeteringen in de beveiliging en de gebruikerservaring biedt. Alle apps die de app Microsoft Authenticator gebruikten voor verificatie, behouden eenmalige aanmelding (SSO) met de [SSO-invoegtoepassing van Microsoft Enterprise voor Apple-apparaten](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin).
 
     > [!IMPORTANT]
     > Installeer eerst de iOS/iPadOS Microsoft Authenticator-app op apparaten om eenmalige aanmelding te verkrijgen met het SSO-app-extensietype van Microsoft Azure AD. De Authenticator-app biedt de SSO-invoegtoepassing van Microsoft Enterprise op apparaten, en de invoegtoepassing wordt geactiveerd door de instellingen van de MDM-app-extensie voor eenmalige aanmelding. Zodra Authenticator en het profiel van de app-extensie voor eenmalige aanmelding op apparaten zijn geïnstalleerd, moeten gebruikers hun referenties opgeven om zich aan te melden en een sessie tot stand te brengen op hun apparaat. Deze sessie wordt vervolgens voor verschillende toepassingen gebruikt, zonder dat gebruikers opnieuw moeten worden geverifieerd. Zie [Wat is de Microsoft Authenticator-app?](https://docs.microsoft.com/azure/active-directory/user-help/user-help-auth-app-overview)voor meer informatie over Authenticator.
@@ -371,7 +371,12 @@ Deze functie is van toepassing op:
 
 - **Active Directory-sitecode** (alleen Kerberos): voer de naam in van de Active Directory-site die door de Kerberos-extensie moet worden gebruikt. Waarschijnlijk hoeft u deze waarde niet te wijzigen, omdat de Kerberos-extensie de Active Directory-sitecode mogelijk automatisch kan vinden.
 - **Cachenaam** (alleen Kerberos): voer de naam in van de generieke beveiligingsservices (Generic Security Services of GSS) van de Kerberos-cache. Waarschijnlijk hoeft u deze waarde niet in te stellen.
-- **App-bundel-id's** (alleen Kerberos): **voeg de app-bundel-id's toe** die moeten gebruikmaken van eenmalige aanmelding op uw apparaten. Aan deze apps wordt toegang verleend tot de Kerberos TGT (Ticket Granting Ticket), het verificatieticket, en met deze apps worden gebruikers geverifieerd bij de services waarvoor ze een toegangsmachtiging hebben.
+- **Bundel-id’s van app** (Microsoft Azure AD, Kerberos): Voer de bundel-id's in van de extra apps waarvoor eenmalige aanmelding moet worden verkregen via een extensie op uw apparaten.
+
+  Als u het extensietype Microsoft Azure AD SSO-app gebruikt, gebruiken deze apps de Microsoft Enterprise SSO-invoegtoepassing om de gebruiker te verifiëren zonder dat hiervoor een aanmelding nodig is. De app-bundel-id's die u invoert zijn gemachtigd voor het gebruik van de extensie van de Microsoft Azure AD SSO-app als ze geen Microsoft-bibliotheken gebruiken, zoals Microsoft Authentication Library (MSAL). De ervaring met deze apps is mogelijk niet zo naadloos als die met de Microsoft-bibliotheken. Oudere apps die gebruikmaken van MSAL-verificatie of apps die geen gebruikmaken van de nieuwste Microsoft-bibliotheken, moeten worden toegevoegd aan deze lijst om goed te kunnen werken met de Microsoft Azure SSO-appextensie.  
+
+  Als u het appextensietype Kerberos SSO gebruikt hebben deze apps toegang tot de Kerberos TGT (Ticket Granting Ticket), het verificatieticket, en met deze apps worden gebruikers geverifieerd bij de services waarvoor ze een toegangsmachtiging hebben.
+
 - **Toewijzing aan domeinrealm** (alleen Kerberos): **voeg de DNS-achtervoegsels voor het domein toe** die moeten worden toegewezen aan uw realm. Gebruik deze instelling als de DNS-namen van de hosts niet overeenkomen met de realmnaam. Waarschijnlijk hoeft u deze aangepaste domein-naar-realm-toewijzing niet te maken.
 - **PKINIT-certificaat** (alleen Kerberos): **selecteer** het PIKNIT-certificaat (Public Key Cryptography for Initial Authentication) dat kan worden gebruikt voor Kerberos-verificatie. U kunt kiezen uit een [PKCS](../protect/certficates-pfx-configure.md)- of [SCEP](../protect/certificates-scep-configure.md)-certificaat dat u hebt toegevoegd in Intune. Raadpleeg [Certificaten gebruiken voor verificatie in Microsoft Intune](../protect/certificates-configure.md) voor meer informatie over certificaten.
 

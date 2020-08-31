@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 08/10/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: af506f9eee80d167b42827f93958fc2a3a5741a4
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: 7027eac119ef36adfdb9a0057a74d276696620b3
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051622"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820054"
 ---
 Deze mededelingen bevatten belangrijke informatie die u kan helpen om voorbereid te zijn op toekomstige wijzigingen en functies in Intune.
 
@@ -37,10 +37,10 @@ In MC208118 hebben we afgelopen maart een nieuwe, eenvoudige URL geïntroduceerd
 Het beheer door Android-apparaatbeheerders werd in Android 2.2 uitgebracht als een manier om Android-apparaten te beheren. Vervolgens werd, te beginnen met Android 5, het modernere beheerframework van [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) uitgebracht (voor apparaten die op betrouwbare wijze verbinding kunnen maken met Google Mobile Services). Google stimuleert de afschaffing van beheer door apparaatbeheerders door de beheerondersteuning in nieuwe Android-releases te verminderen.
 
 #### <a name="how-does-this-affect-me"></a>Wat betekent dit voor mij?
-Door deze veranderingen van Google beschikt u in het vierde kwartaal van 2020 niet meer over uitgebreide beheermogelijkheden op de apparaten die door een apparaatbeheerder worden beheerd. 
+Door deze veranderingen van Google beschikt u vanaf oktober 2020 niet meer over uitgebreide beheermogelijkheden op de apparaten die door een apparaatbeheerder worden beheerd. 
 
 > [!NOTE]
-> In eerdere communicaties werd het derde kwartaal van 2020 genoemd, maar de datum is verplaatst naar aanleiding van de [meest recente informatie van Google](https://www.blog.google/products/android-enterprise/da-migration/).
+> In eerdere communicaties werd het vierde kwartaal van 2020 genoemd, maar de datum is verplaatst naar aanleiding van de [meest recente informatie van Google](https://www.blog.google/products/android-enterprise/da-migration/).
 
 ##### <a name="device-types-that-will-be-impacted"></a>Apparaattypen die worden beïnvloed
 De apparaten die worden beïnvloed door de afgeschafte ondersteuning van apparaatbeheerders zijn de apparaten waarvoor de drie onderstaande voorwaarden gelden:
@@ -96,14 +96,14 @@ Beïnvloede compliance-instellingen:
 - Voor nieuw ingeschreven apparaten, nieuw toegewezen en bijgewerkte instellingen zullen de betreffende nalevingsinstellingen nog steeds worden weergegeven als redenen voor niet-compatibel op de pagina Apparaatinstellingen bijwerken en zal het apparaat niet meer voldoen aan de eisen, maar strengere eisen voor het wachtwoord zullen niet worden afgedwongen in de instellingen-app.
 
 #### <a name="cause-of-impact"></a>Oorzaak van de impact 
-Apparaten worden beïnvloed in het vierde kwartaal van 2020. Op dat moment zal de Bedrijfsportal-app worden bijgewerkt, waardoor de API-doelen van de Bedrijfsportal API van niveau 28 naar niveau 29 zullen gaan ([ zoals vereist door Google](https://www.blog.google/products/android-enterprise/da-migration/)). 
+Apparaten worden beïnvloed vanaf oktober 2020. Op dat moment zal de Bedrijfsportal-app worden bijgewerkt, waardoor de API-doelen van de Bedrijfsportal API van niveau 28 naar niveau 29 zullen gaan ([ zoals vereist door Google](https://www.blog.google/products/android-enterprise/da-migration/)). 
 
 Op dat moment zullen apparaten die door een apparaatbeheerder worden beheerd en niet door Samsung zijn gemaakt, worden beïnvloed zodra de gebruiker deze acties heeft voltooid:
 - Updates voor Android 10 of hoger.
 - Hiermee wordt de Bedrijfsportal-app bijgewerkt naar de versie waarop API-niveau 29 is gericht.
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Wat moet ik doen om me voor te bereiden op deze wijziging?
-Het volgende wordt aanbevolen om vermindering van de functionaliteit in het vierde kwartaal van 2020 te voorkomen:
+We raden u het volgende aan om te voorkomen dat u vanaf oktober 2020 te kampen heeft met beperkte functionaliteit:
 - **Nieuwe inschrijvingen**: Onboard nieuwe apparaten in [Android Enterprise](../enrollment/connect-intune-android-enterprise.md)-beheer (indien beschikbaar) en/of [app-beveiligingsbeleid](../apps/app-protection-policies.md). Onboard geen nieuwe apparaten in beheer door een apparaatbeheerder. 
 - **Eerder ingeschreven apparaten**: Als op een apparaat dat door de apparaatbeheerder wordt beheerd Android 10 of later wordt uitgevoerd of dit kan worden bijgewerkt naar Android 10 of later (met name als het geen Samsung-apparaat is), moet u het apparaat van apparaatbeheer naar [Android Enterprise](../enrollment/connect-intune-android-enterprise.md)-beheer en/of [app-beveiligingsbeleid](../apps/app-protection-policies.md) verplaatsen. U kunt de gestroomlijnde stroom gebruiken om [Android-apparaten van apparaatbeheerder naar werkprofielbeheer te verplaatsen](../enrollment/android-move-device-admin-work-profile.md).
 

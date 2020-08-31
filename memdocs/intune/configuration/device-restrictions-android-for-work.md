@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/16/2020
+ms.date: 08/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c23044b912b7f0edf2852477aad80dd9be66cf54
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: 8b08d5f1395c30b646885470c95fed2c7a96d3f9
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87526063"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819606"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Met Android Enterprise-apparaatinstellingen kunt u functies toestaan of beperken met behulp van Intune
 
@@ -435,29 +435,33 @@ Deze instellingen zijn van toepassing op Android Enterprise-inschrijvingstypen w
 
   - Android 7.0 en nieuwer waarbij het werkprofiel is ingeschakeld
 
-- **Minimale wachtwoordlengte**: Voer de minimale lengte van het wachtwoord in, tussen 4 en 16 tekens.
-- **Maximum aantal minuten van inactiviteit voordat het werkprofiel wordt vergrendeld**: Voer de tijdsduur in gedurende welke apparaten inactief moeten zijn voordat het scherm automatisch wordt vergrendeld. Gebruikers moeten hun referenties invoeren om weer toegang te krijgen. Voer bijvoorbeeld `5` in om het apparaat te vergrendelen nadat dit vijf minuten lang inactief is geweest. Wanneer de waarde leeg is of is ingesteld op **Niet geconfigureerd**, wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
+  Configureer ook het volgende:
 
-  Gebruikers kunnen op apparaten geen tijdwaarde instellen die groter is dan de geconfigureerde tijd in het profiel. Gebruikers kunnen een lagere tijdwaarde instellen. Als het profiel bijvoorbeeld is ingesteld op `15` minuten, kunnen gebruikers de waarde instellen op 5 minuten. Gebruikers kunnen de waarde niet instellen op 30 minuten.
+  - **Minimale wachtwoordlengte**: Voer de minimale lengte van het wachtwoord in, tussen 4 en 16 tekens.
+  - **Maximum aantal minuten van inactiviteit voordat het werkprofiel wordt vergrendeld**: Voer de tijdsduur in gedurende welke apparaten inactief moeten zijn voordat het scherm automatisch wordt vergrendeld. Gebruikers moeten hun referenties invoeren om weer toegang te krijgen. Voer bijvoorbeeld `5` in om het apparaat te vergrendelen nadat dit vijf minuten lang inactief is geweest. Wanneer de waarde leeg is of is ingesteld op **Niet geconfigureerd**, wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
 
-- **Aantal mislukte aanmeldingen voordat een apparaat wordt gewist**: Voer het aantal onjuiste wachtwoorden tussen 4 en 11 in dat is toegestaan voordat het werkprofiel op het apparaat wordt gewist. Met `0` (nul) kan de functionaliteit voor het wissen van het apparaat worden uitgeschakeld. Wanneer de waarde leeg is, wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
+    Gebruikers kunnen op apparaten geen tijdwaarde instellen die groter is dan de geconfigureerde tijd in het profiel. Gebruikers kunnen een lagere tijdwaarde instellen. Als het profiel bijvoorbeeld is ingesteld op `15` minuten, kunnen gebruikers de waarde instellen op 5 minuten. Gebruikers kunnen de waarde niet instellen op 30 minuten.
 
-- **Wachtwoordverlooptijd (dagen)** : Voer het aantal dagen in totdat het wachtwoorden van gebruikers moeten worden gewijzigd (van **1**-**365**).
-- **Vereist wachtwoordtype**: Voer het vereiste complexiteitsniveau voor het wachtwoord in en geef aan of biometrische apparaten kunnen worden gebruikt. Uw opties zijn:
-  - **Standaardwaarde apparaat**
-  - **Lage beveiligingsbiometrie**: [Sterke versus zwakke biometrie](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (hiermee wordt een Android-website geopend)
-  - **Vereist**
-  - **Ten minste numeriek**: Bevat numerieke tekens, zoals `123456789`.
-  - **Complex numeriek**: Herhaalde of opeenvolgende cijfers, zoals `1111` of `1234`, zijn niet toegestaan.
-  - **Ten minste alfabetisch**: Bevat letters uit het alfabet. Er zijn geen cijfers en symbolen vereist.
-  - **Ten minste alfanumeriek**: Dit zijn hoofdletters, kleine letters en numerieke tekens.
-  - **Ten minste alfanumeriek met symbolen**: Dit zijn hoofdletters, kleine letters, numerieke tekens, leestekens en symbolen.
+  - **Aantal mislukte aanmeldingen voordat een apparaat wordt gewist**: Voer het aantal onjuiste wachtwoorden tussen 4 en 11 in dat is toegestaan voordat het werkprofiel op het apparaat wordt gewist. Met `0` (nul) kan de functionaliteit voor het wissen van het apparaat worden uitgeschakeld. Wanneer de waarde leeg is, wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
 
-- **Wachtwoorden niet opnieuw gebruiken**: Gebruik deze instelling om te voorkomen dat gebruikers eerder gebruikte wachtwoorden hergebruiken. Voer het aantal eerder gebruikte wachtwoorden in dat niet opnieuw mag worden gebruikt, van 1 tot 24. Als u bijvoorbeeld `5` invoert, kan een gebruiker zijn nieuwe wachtwoord niet instellen op zijn huidige wachtwoord of een van zijn vier wachtwoorden daarvoor. Wanneer de waarde leeg is, wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
-- **Ontgrendelen met vingerafdruk**: Met **Blokkeren** voorkomt u dat gebruikers de vingerafdrukscanner van het apparaat gebruiken om het apparaat te ontgrendelen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem toestaat dat gebruikers het apparaat ontgrendelen met behulp van een vingerafdruk.
-- **Smart Lock en andere trustagenten**: Met **Blokkeren** voorkomt u dat Smart Lock of andere trustagenten instellingen voor het vergrendelingsscherm van compatibele apparaten aanpassen. Als apparaten zich op een vertrouwde locatie bevinden, kunt u met deze functie, ook wel trustagent genoemd, het vergrendelingsschermwachtwoord op apparaten uitschakelen of overslaan. Hiermee kan bijvoorbeeld het wachtwoord van het werkprofiel worden overgeslagen wanneer apparaten zijn verbonden met een bepaald Bluetooth-apparaat of wanneer deze zich in de buurt van een NFC-tag bevinden. Gebruik deze instelling om te voorkomen dat gebruikers Smart Lock configureren.
+  - **Wachtwoordverlooptijd (dagen)** : Voer het aantal dagen in totdat het wachtwoorden van gebruikers moeten worden gewijzigd (van **1**-**365**).
+  - **Vereist wachtwoordtype**: Voer het vereiste complexiteitsniveau voor het wachtwoord in en geef aan of biometrische apparaten kunnen worden gebruikt. Uw opties zijn:
+    - **Standaardwaarde apparaat**
+    - **Lage beveiligingsbiometrie**: [Sterke versus zwakke biometrie](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (hiermee wordt een Android-website geopend)
+    - **Vereist**
+    - **Ten minste numeriek**: Bevat numerieke tekens, zoals `123456789`.
+    - **Complex numeriek**: Herhaalde of opeenvolgende cijfers, zoals `1111` of `1234`, zijn niet toegestaan.
+    - **Ten minste alfabetisch**: Bevat letters uit het alfabet. Er zijn geen cijfers en symbolen vereist.
+    - **Ten minste alfanumeriek**: Dit zijn hoofdletters, kleine letters en numerieke tekens.
+    - **Ten minste alfanumeriek met symbolen**: Dit zijn hoofdletters, kleine letters, numerieke tekens, leestekens en symbolen.
 
-  Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
+  - **Wachtwoorden niet opnieuw gebruiken**: Gebruik deze instelling om te voorkomen dat gebruikers eerder gebruikte wachtwoorden hergebruiken. Voer het aantal eerder gebruikte wachtwoorden in dat niet opnieuw mag worden gebruikt, van 1 tot 24. Als u bijvoorbeeld `5` invoert, kan een gebruiker zijn nieuwe wachtwoord niet instellen op zijn huidige wachtwoord of een van zijn vier wachtwoorden daarvoor. Wanneer de waarde leeg is, wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
+  - **Ontgrendelen met gezicht**: Met **Blokkeren** voorkomt u dat gebruikers de gezichtsherkenning van het apparaat gebruiken om het werkprofiel te ontgrendelen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem toestaat dat gebruikers het apparaat ontgrendelen met behulp van gezichtsherkenning.
+  - **Ontgrendelen met vingerafdruk**: Met **Blokkeren** voorkomt u dat gebruikers de vingerafdrukscanner van het apparaat gebruiken om het werkprofiel te ontgrendelen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem toestaat dat gebruikers het apparaat ontgrendelen met behulp van een vingerafdruk.
+  - **Ontgrendelen met iris**: Met **Blokkeren** voorkomt u dat gebruikers de irisscanner van het apparaat gebruiken om het werkprofiel te ontgrendelen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem toestaat dat gebruikers het apparaat ontgrendelen met behulp van de irisscanner.
+  - **Smart Lock en andere trustagenten**: Met **Blokkeren** voorkomt u dat Smart Lock of andere trustagenten instellingen voor het vergrendelingsscherm van compatibele apparaten aanpassen. Als apparaten zich op een vertrouwde locatie bevinden, kunt u met deze functie, ook wel trustagent genoemd, het vergrendelingsschermwachtwoord op apparaten uitschakelen of overslaan. Hiermee kan bijvoorbeeld het wachtwoord van het werkprofiel worden overgeslagen wanneer apparaten zijn verbonden met een bepaald Bluetooth-apparaat of wanneer deze zich in de buurt van een NFC-tag bevinden. Gebruik deze instelling om te voorkomen dat gebruikers Smart Lock configureren.
+
+    Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
 
 ### <a name="password"></a>Wachtwoord
 
@@ -482,6 +486,8 @@ Deze wachtwoordinstellingen zijn van toepassing op persoonlijke profielen op app
 
 - **Wachtwoorden niet opnieuw gebruiken**: Gebruik deze instelling om te voorkomen dat gebruikers eerder gebruikte wachtwoorden hergebruiken. Voer het aantal eerder gebruikte wachtwoorden in dat niet opnieuw mag worden gebruikt, van 1 tot 24. Als u bijvoorbeeld `5` invoert, kan een gebruiker zijn nieuwe wachtwoord niet instellen op zijn huidige wachtwoord of een van zijn vier wachtwoorden daarvoor. Wanneer de waarde leeg is, wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
 - **Ontgrendelen met vingerafdruk**: Met **Blokkeren** voorkomt u dat gebruikers de vingerafdrukscanner van het apparaat gebruiken om het apparaat te ontgrendelen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem toestaat dat gebruikers het apparaat ontgrendelen met behulp van een vingerafdruk.
+- **Ontgrendelen met gezicht**: Met **Blokkeren** voorkomt u dat gebruikers de gezichtsherkenning van het apparaat gebruiken om het apparaat te ontgrendelen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem toestaat dat gebruikers het apparaat ontgrendelen met behulp van gezichtsherkenning.
+- **Ontgrendelen met iris**: Met **Blokkeren** voorkomt u dat gebruikers de irisscanner van het apparaat gebruiken om het apparaat te ontgrendelen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem toestaat dat gebruikers het apparaat ontgrendelen met behulp van de irisscanner.
 - **Smart Lock en andere trustagenten**: Met **Blokkeren** voorkomt u dat Smart Lock of andere trustagenten instellingen voor het vergrendelingsscherm van compatibele apparaten aanpassen. Als apparaten zich op een vertrouwde locatie bevinden, kunt u met deze functie, ook wel trustagent genoemd, het vergrendelingsschermwachtwoord op apparaten uitschakelen of overslaan. Hiermee kan bijvoorbeeld het wachtwoord van het werkprofiel worden overgeslagen wanneer apparaten zijn verbonden met een bepaald Bluetooth-apparaat of wanneer deze zich in de buurt van een NFC-tag bevinden. Gebruik deze instelling om te voorkomen dat gebruikers Smart Lock configureren.
 
   Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt.

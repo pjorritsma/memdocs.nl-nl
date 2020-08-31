@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/28/2018
+ms.date: 08/20/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 9d932fffa7381cca26699bb37e10783bcd7803dd
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 57d4cc3889c60f9b62d0bb0617731b9ab0058f4c
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880923"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820643"
 ---
 # <a name="remotely-lock-your-device-from-the-company-portal-website"></a>Uw apparaat extern vergrendelen op de website van de bedrijfsportal
 
@@ -35,9 +35,7 @@ De instelling voor extern vergrendelen werkt voor:
 * Android
 * iOS
 * macOS
-* Windows 10
-* Windows 10 Mobile (als voor het apparaat al een wachtwoordcode is ingesteld)
-* Windows Phone 8.1 (als voor het apparaat al een wachtwoordcode is ingesteld)  
+* Windows 10  
 
 1. Selecteer op de [bedrijfsportalwebsite](https://portal.manage.microsoft.com) de knop __Menu__ > __Apparaten__.  
 
@@ -53,6 +51,8 @@ De instelling voor extern vergrendelen werkt voor:
 
 4. Er verschijnt een bericht met de waarschuwing dat u op het punt staat uw apparaat te vergrendelen. Tik op **Extern vergrendelen** om te bevestigen.
 
+## <a name="check-the-status-of-remote-lock"></a>De status van Extern vergrendelen controleren
+
 Na de bevestiging probeert de bedrijfsportal uw apparaat te vergrendelen. Het bericht 'Extern vergrendelen in behandeling' wordt in de tussentijd weergegeven. Wanneer uw apparaat is vergrendeld, wordt de status weergegeven als 'Extern vergrendelen is geslaagd'.  
 
 De status Externe vergrendelen wordt op drie locaties weergegeven:
@@ -66,4 +66,6 @@ De status Externe vergrendelen wordt op drie locaties weergegeven:
 
 Als u uw apparaat terugvindt en het wilt ontgrendelen nadat u eerder Extern vergrendelen hebt gebruikt, voer dan gewoon uw wachtwoordcode in.  
 
-Nog hulp nodig? Neem contact op met het ondersteuningsteam van uw bedrijf. Controleer of de contactgegevens beschikbaar zijn op de [bedrijfsportalwebsite](https://go.microsoft.com/fwlink/?linkid=2010980).
+## <a name="next-steps"></a>Volgende stappen
+
+Hebt u vragen of hebt u hulp nodig? Neem contact op met IT-ondersteuning. Controleer of de contactgegevens beschikbaar zijn op de [bedrijfsportalwebsite](https://go.microsoft.com/fwlink/?linkid=2010980).  

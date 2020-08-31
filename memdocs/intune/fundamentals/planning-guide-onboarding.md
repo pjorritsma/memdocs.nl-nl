@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8396a9713e5ce4b6001aefb55485a908f0e605dd
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 19de56bfab6e4f4cf2f1243c6cbaf98053e6ba5e
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357659"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663256"
 ---
 # <a name="implement-your-microsoft-intune-plan"></a>Uw Microsoft Intune-abonnement implementeren
 
@@ -130,7 +130,7 @@ Intune biedt ondersteuning voor voorwaardelijke toegang voor Exchange Online, Ex
 
 ### <a name="task-13-enroll-devices"></a>Taak 13: Apparaten inschrijven
 
-Intune ondersteunt platformen voor iOS/iPadOS-, Mac OS-, Android-, Windows- en Windows Mobile-apparaten. Registreer platformen voor mobiele apparaten waar nodig op basis van de use cases en vereisten van uw Intune-implementatie.
+Intune ondersteunt platformen voor iOS/iPadOS-, Mac OS-, Android- en Windows-desktopapparaten. Registreer platformen voor mobiele apparaten waar nodig op basis van de use cases en vereisten van uw Intune-implementatie.
 
 - Meer informatie over [het registreren van apparaten](../enrollment/device-enrollment.md).
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/09/2020
+ms.date: 08/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f2718c73cb34e01c84ef07d5085c698028ca285c
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: b6d3f3ea7423cf87d2644611bcbd6e298ac60699
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461994"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820320"
 ---
 # <a name="intune-data-warehouse-collections"></a>Intune-datawarehouse-verzamelingen
 
@@ -253,8 +253,9 @@ Met de entiteit **devices** worden alle geregistreerde apparaten voor beheer en 
 | SubscriberCarrier          | Provider van abonnee van het apparaat                                                                                                                                                       |
 | PhoneNumber                | Telefoonnummer van het apparaat                                                                                                                                                             |
 | IMEI                       | IMEI                                                                                                                                                                                   |
-| CellularTechnology         | Mobiele telefoontechnologie van het apparaat                                                                                                                                                    |
-| WiFiMacAddress             | MAC-adres Wi-Fi                                                                                                                                                                              |
+| CellularTechnology         | Mobiele telefoontechnologie van het apparaat.                                                                                                                                                    |
+| WiFiMacAddress             | MAC-adres Wi-Fi.                                                                                                                                                                              |
+| windowsOsEdition             | De versie van het Windows-besturingssysteem.                                                                                                                                                                              |
 
 
 ## <a name="devicetypes"></a>deviceTypes
@@ -713,7 +714,7 @@ De entiteit **userTermsAndConditionsAcceptance** vertegenwoordigt de acceptaties
 |    Eigenschap    |    Beschrijving    |    Voorbeeld    |
 |-------------------------------|--------------------------------------------------------------------------------|----------------------------|
 |    dateKey    |    Een sleutel die overeenkomt met de datumwaarden in de verzameling dates.     |    20180823    |
-|    userKey    |    Toewijzing van een gebruikerssleutel aan een gebruiker in de verzameling users.     |    20000    |
+|    userKey    |    Toewijzing van een gebruikerssleutel aan een gebruiker in de verzameling users.     |    20.000    |
 |    termsAndConditionsKey    |    Een sleutel die overeenkomt met een vermelding in de verzameling termsAndConditions    |    1    |
 |    acceptedDateTimeUTC    |    De tijd dat de gebruiker deze voorwaarden heeft geaccepteerd    |    23-08-2018, 4:01:34 AM    |
 |    lastModifiedDateTimeUTC    |    De laatste keer dat deze vermelding is gewijzigd.     |    23-08-2018, 4:01:34 AM    |

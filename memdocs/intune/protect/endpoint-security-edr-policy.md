@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 08/24/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: b1711dad8163409d05c5299e8d3b54ad619b48ec
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: cba7b357dfae0c9dae06e8a21ddd0583fd96bcae
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462062"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820524"
 ---
 # <a name="endpoint-detection-and-response-policy-for-endpoint-security-in-intune"></a>Eindpuntdetectie- en eindpuntresponsbeleid voor eindpuntbeveiliging in Intune
 
@@ -43,24 +43,11 @@ Bekijk [Profielinstellingen voor eindpuntdetectie en -respons](endpoint-security
 
 - **Tenant voor Microsoft Defender Advanced Threat Protection**: uw Microsoft Defender ATP-tenant moet worden geïntegreerd met uw Microsoft Endpoint Manager-tenant (Intune-abonnement) voordat u een EDR-beleid kunt maken. Zie [Microsoft Defender ATP gebruiken](advanced-threat-protection.md) in de Intune-documentatie.
 
-**Apparaten vanuit Configuration Manager ondersteunen**:
+**Ondersteuning voor Configuration Manager-clients**:
 
-Voor ondersteuning bij het gebruik van een EDR-beleid bij Configuration Manager-apparaten zijn voor uw Configuration Manager-omgeving de volgende aanvullende configuraties vereist. In dit artikel vindt u [richtlijnen voor de configuratie](#set-up-configuration-manager-to-support-edr-policy):
+- **Tenantkoppeling instellen voor Configuration Manager-apparaten**: ter ondersteuning van het implementeren van EDR-beleid op apparaten die worden beheerd door Configuration Manager, configureert u *tenantkoppeling*. Dit omvat het configureren van Configuration Manager-apparaatverzamelingen om beveiligingsbeleid voor eindpunten van Intune te ondersteunen.
 
-- **Configuration Manager met versie 2002 of hoger**: op uw site moet u Configuration Manager 2002 of hoger gebruiken.
-
-- **De Configuration Manager-update installeren**: installeer de volgende update vanuit de Configuration Manager-console om ondersteuning in Configuration Manager 2002 mogelijk te maken voor het gebruik van het EDR-beleid dat u in het Microsoft Endpoint Manager-beheercentrum maakt:
-  - **Hotfix (KB4563473) Configuration Manager 2002**
-
-- **Tenantkoppeling configureren**: met tenantkoppeling kunt u verzamelingen apparaten van Configuration Manager synchroniseren met het Microsoft Configuration Manager-beheercentrum. Vervolgens kunt u het beheercentrum gebruiken voor het implementeren van EDR-beleid voor deze verzamelingen.
-
-  Tenantkoppeling wordt vaak geconfigureerd met co-beheer, maar u kunt ook een zelfstandige tenantkoppeling configureren.
-
-- **Configuration Manager-verzamelingen synchroniseren**: wanneer u een tenantkoppeling configureert, kunt u de Configuration Manager-apparaatverzamelingen selecteren om te synchroniseren met Microsoft Endpoint Manager-beheercentrum. U kunt ook later terugkeren om de apparaatverzamelingen te wijzigen die u synchroniseert. Het EDR-beleid voor Configuration Manager-apparaten kan alleen worden toegewezen aan verzamelingen die u hebt gesynchroniseerd.
-
-  Nadat u de verzamelingen hebt geselecteerd die u wilt synchroniseren, moet u deze inschakelen voor gebruik met Microsoft Defender ATP.
-
-- **Machtigingen voor Azure AD**: als u de installatie van de tenantkoppeling wilt uitvoeren en de Configuration Manager-verzamelingen wilt configureren die u wilt synchroniseren met Microsoft Endpoint Manager-beheercentrum, hebt u een account met globale beheerdersmachtigingen voor uw Azure-abonnement nodig.
+  Als u tenantkoppeling wilt instellen, inclusief de synchronisatie van Configuration Manager-verzamelingen met het beheercentrum van Microsoft Endpoint Manager en het mogelijk wilt maken dat zij met eindpuntbeveiligingsbeleid werken, raadpleegt u [Tenantkoppeling toevoegen ter ondersteuning van eindpuntbeschermingsbeleid](../protect/tenant-attach-intune.md).
 
 ## <a name="edr-profiles"></a>EDR-profielen
 
@@ -73,7 +60,7 @@ Voor ondersteuning bij het gebruik van een EDR-beleid bij Configuration Manager-
 
 **Configuration Manager**: De volgende instellingen worden ondersteund voor apparaten die u beheert met Configuratiebeheer:
 
-- Platform: **Windows 10- en Windows Server**: Configuration Manager implementeert het beleid op apparaten in uw Configuration Manager-verzamelingen.
+- Platform: **Windows 10- en Windows Server (ConfigMgr)** : Configuration Manager implementeert het beleid op apparaten in uw Configuration Manager-verzamelingen.
 - Profiel: **Eindpuntdetectie en -respons (ConfigMgr)**
 
 ## <a name="set-up-configuration-manager-to-support-edr-policy"></a>Configuration Manager instellen om het EDR-beleid te ondersteunen
@@ -86,8 +73,6 @@ In de volgende secties worden de vereiste taken behandeld:
 
 1. [De update voor Configuration Manager installeren](#task-1-install-the-update-for-configuration-manager)
 2. [Tenantkoppeling inschakelen](#task-2-configure-tenant-attach-and-synchronize-collections)  
-3. [Verzamelingen selecteren die u wilt synchroniseren](#task-3-select-collections-to-synchronize)
-4. [Verzamelingen inschakelen voor Microsoft Defender ATP](#task-4-enable-collections-for-microsoft-defender-atp)
 
 > [!TIP]
 > Voor meer informatie over het gebruik van Microsoft Defender ATP met Configuration Manager raadpleegt u de volgende artikelen in de Configuration Manager-inhoud:
@@ -111,8 +96,6 @@ Nadat u de update hebt geïnstalleerd, keert u terug om uw omgeving verder te co
 
 ### <a name="task-2-configure-tenant-attach-and-synchronize-collections"></a>Taak 2: Tenantkoppeling configureren en verzamelingen synchroniseren
 
-Als co-beheer eerder was ingeschakeld, is de tenantkoppeling al ingesteld en kunt u dit overslaan en naar [taak 3](#task-3-select-collections-to-synchronize) gaan.
-
 Met tenantkoppeling kunt u verzamelingen apparaten van uw Configuration Manager-implementatie synchroniseren met het Microsoft Endpoint Manager-beheercentrum. Na de synchronisatie van verzamelingen kunt u in het beheercentrum informatie over die apparaten bekijken en EDR-beleid van Intune erop implementeren.  
 
 Voor meer informatie over het tenantkoppelingsscenario raadpleegt u [Tenantkoppeling inschakelen](../../configmgr/tenant-attach/device-sync-actions.md) in de Configuration Manager-inhoud.
@@ -129,82 +112,26 @@ Als u van plan bent om co-beheer in te schakelen, moet u bekend zijn met co-behe
 3. Selecteer op de pagina **Tenant-onboarding** de optie **AzurePublicCloud** voor uw omgeving. Azure Government-cloud wordt niet ondersteund.
    1. Klik op **Aanmelden**. Gebruik uw *globale beheerder*-account om u aan te melden.
 
-   2. Zorg ervoor dat de optie **Uploaden naar het Microsoft Endpoint Manager-beheercentrum** is ingeschakeld op de pagina **Tenant-onboarding**.
+Het onderstaande wordt ondersteund voor apparaten die u met Intune beheert:
 
-   3. Verwijder het vinkje van **Automatische clientinschrijving voor co-beheer inschakelen**.
+- Platform: **Windows 10 en hoger**: Intune implementeert het beleid op apparaten in uw Azure AD-groepen.
+  - Profiel: **Eindpuntdetectie en -respons (MDM)**
 
-      Wanneer deze optie is geselecteerd, biedt de wizard extra pagina's om de installatie van co-beheer uit te voeren. Zie [Co-beheer inschakelen](../../configmgr/comanage/how-to-enable.md) in de Configuration Manager-inhoud voor meer informatie.
+### <a name="devices-managed-by-configuration-manager-in-preview"></a>Apparaten beheerd door Configuration Manager *(In preview)*
 
-     ![Tenantkoppeling configureren](media/endpoint-security-edr-policy/tenant-onboarding.png)
+Het volgende wordt ondersteund voor apparaten die u beheert met Configuration Manager via het scenario voor *tenantkoppeling*:
 
-4. Klik op **Volgende** en daarna op **Ja** om de melding **Een AAD-toepassing maken** te accepteren. Met deze actie wordt een service-principal ingericht en wordt een Azure AD-toepassingsregistratie gemaakt om de synchronisatie van verzamelingen met het Microsoft Endpoint Manager-beheercentrum te vergemakkelijken.
-
-5. Configureer op de pagina **Upload configureren** de verzamelingen die u wilt synchroniseren. U kunt uw configuratie beperken tot een of enkele verzamelingen of door de aanbevolen instelling voor het uploaden van apparaten te gebruiken voor **alle apparaten die worden beheerd door Microsoft Endpoint Configuration Manager**.
-
-6. Klik op **Samenvatting** om uw selectie te controleren en klik vervolgens op **Volgende**.
-
-7. Klik op **Sluiten** als de wizard is voltooid.
-
-   De tenantkoppeling is nu geconfigureerd en de geselecteerde verzamelingen worden gesynchroniseerd met het Microsoft Endpoint Manager-beheercentrum.
-
-#### <a name="enable-tenant-attach-when-you-use-co-management"></a>Tenantkoppeling inschakelen wanneer u co-beheer gebruikt
-
-1. Ga in de Configuration Manager-beheerconsole naar **Beheer** > **Overzicht** > **Cloudservices** > **Co-beheer**.
-
-2. Klik met de rechtermuisknop op uw instellingen voor co-beheer en selecteer **Eigenschappen**.
-
-3. Selecteer **Uploaden naar Microsoft Endpoint Manager-beheercentrum** in het tabblad **Upload configureren**. Klik op **Toepassen**.
-   - De standaardinstelling voor het uploaden van apparaten is **Alle apparaten die worden beheerd door Microsoft Endpoint Configuration Manager**. U kunt er ook voor kiezen om uw configuratie te beperken tot een of enkele verzamelingen apparaten.
-
-     ![Het tabblad Eigenschappen voor co-beheer bekijken](media/endpoint-security-edr-policy/configure-upload.png)
-
-4. Meld u aan met uw *globale beheerder*-account wanneer u hierom wordt gevraagd.
-
-5. Klik op **Ja** om de melding **AAD-toepassing maken** te accepteren. Met deze actie wordt een service-principal ingericht en wordt een Azure AD-toepassingsregistratie gemaakt om de synchronisatie te vergemakkelijken.
-
-6. Klik op **OK** om de eigenschappen voor co-beheer af te sluiten nadat u de wijzigingen hebt aangebracht.
-
-   De tenantkoppeling is nu geconfigureerd en de geselecteerde verzamelingen worden gesynchroniseerd met het Microsoft Endpoint Manager-beheercentrum.
-
-### <a name="task-3-select-collections-to-synchronize"></a>Taak 3: Verzamelingen selecteren die u wilt synchroniseren
-
-Wanneer de tenantkoppeling is geconfigureerd, kunt u verzamelingen selecteren die u wilt synchroniseren. Als u nog geen verzamelingen hebt gesynchroniseerd of de verzamelingen die u wel wilt synchroniseren opnieuw wilt configureren, kunt u hiervoor de eigenschappen van co-beheer in de Configuration Manager-console bewerken.
-
-#### <a name="select-collections"></a>Verzamelingen selecteren
-
-1. Ga in de Configuration Manager-beheerconsole naar **Beheer** > **Overzicht** > **Cloudservices** > **Co-beheer**.
-
-2. Klik met de rechtermuisknop op uw instellingen voor co-beheer en selecteer **Eigenschappen**.
-
-3. Selecteer **Uploaden naar Microsoft Endpoint Manager-beheercentrum** in het tabblad **Upload configureren**. Klik op **Toepassen**.
-
-   De standaardinstelling voor het uploaden van apparaten is **Alle apparaten die worden beheerd door Microsoft Endpoint Configuration Manager**. U kunt er ook voor kiezen om uw configuratie te beperken tot een of enkele verzamelingen apparaten.
-
-### <a name="task-4-enable-collections-for-microsoft-defender-atp"></a>Taak 4: Verzamelingen inschakelen voor Microsoft Defender ATP
-
-Nadat u verzamelingen hebt geconfigureerd die u wilt synchroniseren met Microsoft Endpoint Manager-beheercentrum, moet u deze verzamelingen alsnog inschakelen om deze geschikt te maken voor onboarding en Microsoft Defender ATP-beleid.  Hiervoor bewerkt u de eigenschappen van elke verzameling in de Configuration Manager-console.
-
-#### <a name="enable-collections-for-use-with-advanced-threat-protection"></a>Verzamelingen inschakelen voor gebruik met Advanced Threat Protection
-
-1. Klik met de rechtermuisknop vanuit een Configuration Manager-console die is verbonden met uw site op het hoogste niveau op een apparaatverzameling die u met Microsoft Endpoint Manager-beheercentrum synchroniseert, en selecteer **Eigenschappen**.
-
-2. Schakel op het tabblad **Cloudsynchronisatie** de optie in om **deze verzameling beschikbaar te maken voor het toewijzen van Microsoft Defender ATP-beleid in Intune**.
-
-   - U kunt deze optie niet selecteren als de Configuration Manager-hiërarchie niet is gekoppeld aan een tenant.
-  
-   ![Cloudsynchronisatie configureren](media/endpoint-security-edr-policy/cloud-sync.png)
-
-3. Selecteer **OK** om de configuratie op te slaan.
-
-   U kunt nu voor apparaten in deze verzameling Microsoft Defender ATP-beleid ontvangen.
+- Platform: **Windows 10- en Windows Server (ConfigMgr)** : Configuration Manager implementeert het beleid op apparaten in uw Configuration Manager-verzamelingen.
+  - Profiel: **Eindpuntdetectie en -respons (ConfigMgr) (preview-versie)**
 
 ## <a name="create-and-deploy-edr-policies"></a>EDR-beleid maken en implementeren
 
-Wanneer uw Microsoft Defender ATP-abonnement is geïntegreerd met Intune, kunt u een EDR-beleid maken en implementeren. Er zijn twee verschillende typen EDR-beleid die u kunt maken. Eén beleidstype voor apparaten die u met Intune beheert via MDM. Het tweede type is voor apparaten die u beheert met Configuration Manager.
+Wanneer u uw Microsoft Defender ATP-abonnement integreert met Intune, kunt u een EDR-beleid maken en implementeren. Er zijn twee verschillende typen EDR-beleid die u kunt maken. Eén beleidstype voor apparaten die u met Intune beheert via MDM. Het tweede type is voor apparaten die u beheert met Configuration Manager.
 
-U kiest het type beleid dat u wilt maken tijdens het maken van een nieuw EDR-beleid wanneer u het platform voor het beleid kiest.
+U kiest het type beleid dat u wilt maken tijdens het configureren van een nieuw EDR-beleid door een platform voor het beleid te kiezen.
 
-Voordat u beleid kunt implementeren op apparaten die worden beheerd door Configuration Manager, [stelt u Configuration Manager in ter ondersteuning van het EDR-beleid](#set-up-configuration-manager-to-support-edr-policy) vanuit het Microsoft Endpoint Manager-beheercentrum.
+Voordat u beleid kunt implementeren op apparaten die worden beheerd door Configuration Manager, stelt u Configuration Manager in ter ondersteuning van het EDR-beleid vanuit het Microsoft Endpoint Manager-beheercentrum. Zie [Tenantkoppeling configureren ter ondersteuning van eindpuntbeschermingsbeleid](../protect/tenant-attach-intune.md).
+
 
 ### <a name="create-edr-policies"></a>EDR-beleid maken
 
@@ -219,7 +146,7 @@ Voordat u beleid kunt implementeren op apparaten die worden beheerd door Configu
      - Profiel: **Eindpuntdetectie en -respons (MDM)**
 
    - Configuration Manager: Configuration Manager implementeert het beleid op apparaten in uw Configuration Manager-verzamelingen. Wanneer u het beleid maakt, selecteert u:
-     - Platform: **Windows 10 en Windows Server**
+     - Platform: **Windows 10 en Windows Server (ConfigMgr)**
      - Profiel: **Eindpuntdetectie en -respons (ConfigMgr)**
 
 4. Selecteer **Maken**.
@@ -257,8 +184,7 @@ U kunt uitgebreide informatie bekijken over de EDR-beleidsregels die u in het be
 
   De grafiek voor **apparaten met ATP-sensor** geeft alleen apparaten weer die naar Microsoft Defender ATP onboarden door het profiel voor **Windows 10 en hoger** te gebruiken. Om ervoor te zorgen dat al uw apparaten in deze grafiek worden weergeven, implementeert u het onboarding-profiel op al uw apparaten. Apparaten die op externe wijze, bijv. via groepsbeleid of PowerShell, op Microsoft Defender ATP worden uitgevoerd, behoren tot de **apparaten zonder ATP-sensor**.
 
-- Voor beleidsregels die zijn gericht op het **Windows 10- en Windows Server**-platform (Configuration Manager), ziet u een overzicht van de naleving van het beleid, maar u kunt niet inzoomen om aanvullende informatie te bekijken. De weergave is beperkt omdat het beheercentrum gegevens met een beperkte status ontvangt van Configuration Manager, waarmee de implementatie van het beleid op Configuration Manager apparaten wordt beheerd.
-
+- Voor beleid dat is gericht op het **Windows 10- en Windows Server (ConfigMgr)** -platform (Configuration Manager), ziet u een overzicht van de naleving van het beleid, maar u kunt niet inzoomen om aanvullende informatie te bekijken. De weergave is beperkt omdat het beheercentrum gegevens met een beperkte status ontvangt van Configuration Manager, waarmee de implementatie van het beleid op Configuration Manager apparaten wordt beheerd.
 
 [Bekijk de instellingen](endpoint-security-edr-profile-settings.md) die u voor de platformen en profielen kunt configureren.
 

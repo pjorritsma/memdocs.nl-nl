@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: f2ba732cfd8f377937a6471b5fc7f0558e19d6f0
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 52bcff0e8b84b8e5b8a3fbd0a68d322836e91bea
+ms.sourcegitcommit: 19ef60175cbfd5c5d1e213a6d64eded34ee42041
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881771"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88725329"
 ---
 # <a name="fix-common-problems-with-your-ios-device"></a>Veelvoorkomende problemen met uw iOS-apparaat oplossen
 
@@ -39,4 +39,4 @@ Met de links in dit artikel vindt u antwoorden op veelgestelde vragen over de iO
 - [Ik wil mijn iOS-apparaat bijwerken](you-need-to-update-your-ios-device.md)
 - [Mijn versie van iOS wordt nog niet ondersteund](your-ios-version-isnt-yet-supported.md)
 - [Ik moet een Mobile Threat Defense-app installeren op mijn iOS-apparaat](set-up-mobile-threat-defense.md)
-- [Ik moet een bedreiging oplossen die een Mobile Threat Defense-app op mijn iOS-apparaat heeft gevonden](you-need-to-resolve-a-threat-found-by-mtd-ios.md)
+- [Ik moet een bedreiging oplossen die een Mobile Threat Defense-app op mijn iOS-apparaat heeft gevonden](set-up-mobile-threat-defense.md#resolving-a-threat)

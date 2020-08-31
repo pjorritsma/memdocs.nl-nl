@@ -1,11 +1,11 @@
 ---
 title: Apparaatfuncties en -instellingen gebruiken in Microsoft Intune - Azure | Microsoft Docs
-description: Overzicht van de verschillende Microsoft Intune-apparaatprofielen. Krijg informatie over functies, beperkingen, e-mail, Wi-Fi, VPN, onderwijs, certificaten, Windows 10-upgrade, BitLocker en Microsoft Defender, Windows Information Protection, beheersjablonen en aangepaste configuratie-instellingen voor apparaten in het beheercentrum voor Microsoft Endpoint Manager. Gebruik deze profielen om gegevens en apparaten in uw bedrijf te beheren en te beveiligen.
+description: Overzicht van de verschillende Microsoft Intune-apparaatprofielen. Krijg informatie over GPO, functies, beperkingen, e-mail, Wi-Fi, VPN, onderwijs, certificaten, Windows 10-upgrade, BitLocker en Microsoft Defender, Windows Information Protection, beheersjablonen en aangepaste configuratie-instellingen voor apparaten in het beheercentrum voor Microsoft Endpoint Manager. Gebruik deze profielen om gegevens en apparaten in uw bedrijf te beheren en te beveiligen.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 08/20/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43101602defab75c15c542ec922cba6f2bf96cf0
-ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
+ms.openlocfilehash: 61053fff9d28193c8f4fc1731f72fe0052aba154
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88146317"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820490"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Functies en instellingen toepassen op uw apparaten met apparaatprofielen in Microsoft Intune
 
@@ -41,9 +41,7 @@ Dit artikel biedt een overzicht van de verschillende typen profielen die u kunt 
 
 ## <a name="administrative-templates"></a>Beheersjablonen
 
-[Beheersjablonen](administrative-templates-windows.md) bevatten honderden instellingen die u kunt configureren voor Internet Explorer, Microsoft Edge, OneDrive, extern bureaublad, Word, Excel en andere Office-programma's.
-
-Deze sjablonen bieden beheerders een vereenvoudigde weergave van instellingen die vergelijkbaar zijn met groepsbeleid, maar ze zijn voor 100% gebaseerd op de cloud.
+[Beheersjablonen](administrative-templates-windows.md) bevatten honderden instellingen die u kunt configureren voor Internet Explorer, Microsoft Edge, OneDrive, extern bureaublad, Word, Excel en andere Office-programma's. Deze sjablonen bieden beheerders een vereenvoudigde weergave van instellingen die vergelijkbaar zijn met groepsbeleid, maar ze zijn voor 100% gebaseerd op de cloud.
 
 Deze functie ondersteunt:
 

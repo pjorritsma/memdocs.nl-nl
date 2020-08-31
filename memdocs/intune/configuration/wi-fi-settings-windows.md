@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/13/2020
+ms.date: 08/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d47f1e121a5010a17d213d21d3208977e8f75514
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 6bfa28a6b4df30c6303f75d4a5cf91c20ce4e827
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217634"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820626"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Wi-Fi-instellingen toevoegen voor apparaten met Windows 10 en hoger in Intune
 
-U kunt een profiel maken met specifieke Wi-Fi-instellingen en dit profiel vervolgens implementeren op uw apparaten met Windows 10 of hoger. Microsoft Intune bevat veel functies, waaronder het verifiëren bij uw netwerk, het gebruik van een vooraf gedeelde sleutel en meer.
+U kunt een profiel maken met specifieke WiFi-instellingen. Implementeer vervolgens dit profiel op uw apparaten met Windows 10 of nieuwer. Microsoft Intune bevat veel functies, waaronder het verifiëren bij uw netwerk, het gebruik van een vooraf gedeelde sleutel en meer.
 
 In dit artikel worden deze instellingen beschreven.
 
@@ -86,7 +86,7 @@ Enterprise-profielen gebruiken Extensible Authentication Protocol (EAP) om Wi-Fi
 
     U maakt bijvoorbeeld een Wi-Fi-netwerk met de naam **ContosoCorp** en gebruikt **ContosoCorp** binnen dit configuratieprofiel. Ook het Wi-Fi-netwerk **ContosoGuest** ligt binnen bereik. Wanneer de bedrijfsapparaten binnen het bereik vallen, wilt u dat deze automatisch verbinding maken met **ContosoCorp**. In dit scenario stelt u de eigenschap **Verbinding maken met voorkeursnetwerk indien beschikbaar** in op **Nee**.
 
-  - **Verbinding maken met dit netwerk, zelfs wanneer de SSID van het netwerk niet wordt uitgezonden**: Kies **Ja** als u wilt dat het configuratieprofiel automatisch verbinding maakt met uw netwerk, zelfs wanneer het netwerk verborgen is (wat betekent dat de SSID niet openbaar wordt uitgezonden). Kies **Nee** als u niet wilt dat dit configuratieprofiel verbinding maakt met uw verborgen netwerk.
+- **Verbinding maken met dit netwerk, zelfs wanneer de SSID van het netwerk niet wordt uitgezonden**: Kies **Ja** als u wilt dat het configuratieprofiel automatisch verbinding maakt met uw netwerk, zelfs wanneer het netwerk verborgen is (wat betekent dat de SSID niet openbaar wordt uitgezonden). Kies **Nee** als u niet wilt dat dit configuratieprofiel verbinding maakt met uw verborgen netwerk.
 
 - **Limiet voor verbinding naar gebruik**: Een beheerder kan kiezen hoe het verkeer van het netwerk wordt gemeten. Toepassingen kunnen vervolgens hun gedrag voor netwerkverkeer aanpassen op basis van deze instelling. Uw opties zijn:
 
@@ -124,19 +124,27 @@ Enterprise-profielen gebruiken Extensible Authentication Protocol (EAP) om Wi-Fi
     > [!NOTE]
     > SCEP- en PKCS-certificaatprofielen worden ondersteund bij het gebruik van een EAP-type.
 
-    - **Server Trust**  
+    **SERVERVERTROUWEN**  
 
-      **Namen van certificaatservers**: Gebruiken met EAP-typen **EAP-TLS**, **EAP-TTLS** of **PEAP**. Voer een of meer algemene namen in die worden gebruikt in de certificaten die zijn uitgegeven door uw vertrouwde certificeringsinstantie (CA). Als u deze informatie verstrekt, kunt u het dialoogvenster Dynamisch vertrouwen negeren dat wordt weergegeven op apparaten van gebruikers als zij verbinding maken met dit Wi-Fi-netwerk.  
+    - **Namen van certificaatservers**: Gebruiken met EAP-typen **EAP-TLS**, **EAP-TTLS** of **PEAP**. Voer een of meer algemene namen in die worden gebruikt in de certificaten die zijn uitgegeven door uw vertrouwde certificeringsinstantie (CA). Als u deze informatie verstrekt, kunt u het dialoogvenster Dynamisch vertrouwen negeren dat wordt weergegeven op apparaten van gebruikers als zij verbinding maken met dit Wi-Fi-netwerk.  
 
-      **Basiscertificaat voor servervalidatie**: Gebruiken met EAP-typen **EAP-TLS**, **EAP-TTLS** of **PEAP**. Kies het profiel voor een vertrouwd basiscertificaat dat wordt gebruikt om de verbinding te verifiëren.  
+    - **Basiscertificaat voor servervalidatie**: Gebruiken met EAP-typen **EAP-TLS**, **EAP-TTLS** of **PEAP**. Kies het profiel voor een vertrouwd basiscertificaat dat wordt gebruikt om de verbinding te verifiëren.  
 
-      **Identiteitsprivacy (externe identiteit)** : Gebruiken met AEP-type **PEAP**. Voer de tekst in die wordt verzonden in antwoord op een EAP-identiteitsaanvraag. Deze tekst kan elke waarde hebben. Tijdens verificatie wordt deze anonieme identiteit in eerste instantie verzonden en wordt deze gevolgd door de echte identificatie in een beveiligde tunnel.  
+    - **Identiteitsprivacy (externe identiteit)** : Gebruiken met AEP-type **PEAP**. Voer de tekst in die wordt verzonden in antwoord op een EAP-identiteitsaanvraag. Deze tekst kan elke waarde hebben. Tijdens verificatie wordt deze anonieme identiteit in eerste instantie verzonden en wordt deze gevolgd door de echte identificatie in een beveiligde tunnel.  
 
-    - **Clientauthenticatie**
+    - **Servervalidatie uitvoeren in PEAP-fase 1**: Als dit is ingesteld op **Ja**, valideren apparaten in PEAP-onderhandelingsfase 1 het certificaat en verifiëren ze de server. Selecteer **Nee** om deze validatie te blokkeren of voorkomen. Wanneer dit is ingesteld op **Niet geconfigureerd**, wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
 
-      **Clientcertificaat voor clientverificatie (identiteitscertificaat)** : Gebruiken met EAP-type **EAP-TLS**. Kies het certificaatprofiel dat wordt gebruikt om de verbinding te verifiëren.
+      Als u **Ja**selecteert, moet u ook het volgende configureren:
 
-      **Verificatiemethode**: Gebruiken met EAP-type **EAP-TTLS**. Selecteer de verificatiemethode voor de verbinding:  
+      **Gebruikersprompts voor servervalidatie uitschakelen in PEAP-fase 1**: Als dit is ingesteld op **Ja**, worden in PEAP-onderhandelingsfase 1 geen gebruikersprompts weergegeven met de vraag om nieuwe PEAP-servers voor vertrouwde certificeringsinstanties. Selecteer **Nee** om deze prompts weer te geven. Wanneer dit is ingesteld op **Niet geconfigureerd**, wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
+
+    - **Cryptografische binding vereisen**: Met **Ja** worden verbindingen met PEAP-servers die geen cryptobinding gebruiken tijdens de PEAP-onderhandeling voorkomen. Voor **Nee** is geen cryptobinding vereist. Wanneer dit is ingesteld op **Niet geconfigureerd**, wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
+
+    **CLIENTVERIFICATIE**
+
+    - **Clientcertificaat voor clientverificatie (identiteitscertificaat)** : Gebruiken met EAP-type **EAP-TLS**. Kies het certificaatprofiel dat wordt gebruikt om de verbinding te verifiëren.
+
+    - **Verificatiemethode**: Gebruiken met EAP-type **EAP-TTLS**. Selecteer de verificatiemethode voor de verbinding:  
 
       - **Certificaten**: selecteer het clientcertificaat dat het identiteitscertificaat is dat aan de server wordt gepresenteerd.
       - **Gebruikersnaam en wachtwoord**: voer een **niet-EAP-methode (interne identiteit)** in voor verificatie. Uw opties zijn:
@@ -146,12 +154,12 @@ Enterprise-profielen gebruiken Extensible Authentication Protocol (EAP) om Wi-Fi
         - **Microsoft CHAP (MS-CHAP)**
         - **Microsoft CHAP versie 2 (MS-CHAP v2)**
 
-      **Identiteitsprivacy (externe identiteit)** : Gebruiken met EAP-type **EAP-TTLS**. Voer de tekst in die wordt verzonden in antwoord op een EAP-identiteitsaanvraag. Deze tekst kan elke waarde hebben. Tijdens verificatie wordt deze anonieme identiteit in eerste instantie verzonden en wordt deze gevolgd door de echte identificatie in een beveiligde tunnel.
+    - **Identiteitsprivacy (externe identiteit)** : Gebruiken met EAP-type **EAP-TTLS**. Voer de tekst in die wordt verzonden in antwoord op een EAP-identiteitsaanvraag. Deze tekst kan elke waarde hebben. Tijdens verificatie wordt deze anonieme identiteit in eerste instantie verzonden en wordt deze gevolgd door de echte identificatie in een beveiligde tunnel.
 
 - **Proxyinstellingen van bedrijf**: Kies deze optie om de proxyinstellingen binnen uw organisatie te gebruiken. Uw opties zijn:
   - **Geen**: Er zijn geen proxyinstellingen geconfigureerd.
   - **Handmatig configureren**: voer het **IP-adres van de proxyserver** en het bijbehorende **poortnummer** in.
-  - **Automatisch configureren**: voer de URL in die naar een proxyscript voor automatische configuratie (PAC) verwijst. Voer bijvoorbeeld `http://proxy.contoso.com/proxy.pac` in.
+  - **Automatisch configureren**: Voer de URL in die naar een proxyscript voor automatische configuratie (PAC) verwijst. Voer bijvoorbeeld `http://proxy.contoso.com/proxy.pac` in.
 
 - **Afdwingen dat het Wi-Fi-profiel voldoet aan Federal Information Processing Standard (FIPS)** : Kies **Ja** wanneer u wilt valideren op basis van de FIPS 140-2-standaard. Deze standaard is vereist voor alle instanties van de Amerikaanse federale overheid die beveiligingssystemen op basis van cryptografie gebruiken om gevoelige, niet-geclassificeerde informatie te beveiligen die digitaal is opgeslagen. Kies **Nee** om niet FIPS-compatibel te zijn.
 
@@ -161,9 +169,9 @@ Voor alle instellingen die niet beschikbaar zijn in Intune, kunt u Wi-Fi-instell
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Het profiel is gemaakt, maar er gebeurt niets. Vervolgens [wijst u dit profiel toe](device-profile-assign.md).
+Het profiel is gemaakt, maar er gebeurt mogelijk niets. Zorg ervoor dat u [het profiel toewijst](device-profile-assign.md) en [de status ervan controleert](device-profile-monitor.md).
 
 ## <a name="more-resources"></a>Meer bronnen
 
-- Zie de instellingen die beschikbaar zijn voor [Windows 8.1](wi-fi-settings-import-windows-8-1.md).
-- [Overzicht Wi-Fi-instellingen](wi-fi-settings-configure.md), met inbegrip van andere platformen.
+- [Wi-Fi-instellingen in Windows 8.1](wi-fi-settings-import-windows-8-1.md)
+- [Overzicht Wi-Fi-instellingen](wi-fi-settings-configure.md), met inbegrip van andere platformen

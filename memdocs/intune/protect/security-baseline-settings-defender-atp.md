@@ -18,12 +18,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 zone_pivot_groups: atp-baseline-versions
-ms.openlocfilehash: 8046318c55e2a9791f01fca4a5a54de3f1487782
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: d29240dcbcbbcd5a4399dbfb3648c2a6df47764c
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022179"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663426"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="atp-april-2020"
@@ -110,6 +110,9 @@ Zie [BitLocker Group Policy settings](https://docs.microsoft.com/windows/securit
   Deze instelling geldt alleen voor Windows Mobile- en Mobile Enterprise SKU-apparaten.
   - **Ja** (*standaard*): versleuteling op opslagkaarten is vereist voor mobiele apparaten.
   - **Niet geconfigureerd**: de instelling wordt teruggezet naar de standaardwaarde van het besturingssysteem; hierbij is geen versleuteling van de opslagkaart vereist.
+
+  > [!NOTE]
+  > Ondersteuning voor [Windows 10 Mobile](https://support.microsoft.com/help/4485197/windows-10-mobile-end-of-support-faq) en [Windows Phone 8.1](https://support.microsoft.com/help/4036480/windows-phone-8-1-end-of-support-faq) is beëindigd in augustus 2020.
 
 - **Volledige schijfversleuteling voor systeemstations en vaste gegevensstations inschakelen**  
   CSP: [RequireDeviceEncryption](https://go.microsoft.com/fwlink/?linkid=872523)

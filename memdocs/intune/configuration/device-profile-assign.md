@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/20/2020
+ms.date: 08/24/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,18 +15,18 @@ ms.assetid: f6f5414d-0e41-42fc-b6cf-e7ad76e1e06d
 ms.reviewer: altsou
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
+ms.custom: intune-azure, contperfq1
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5259fe84b11ce5d1ec4a3110dcbc188afb2e6d3e
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: 000ee384ff289b9511b2dde3b1468525ffed63d4
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565679"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819997"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Gebruikers- en apparaatprofielen toewijzen in Microsoft Intune
 
-U maakt een profiel en dit omvat alle instellingen die u hebt ingevoerd. De volgende stap is het implementeren of toewijzen van het profiel aan uw gebruikers- of apparaatgroepen in Azure AD (Active Directory). Wanneer het is toegewezen, ontvangen de gebruikers en apparaten uw profiel, en worden de ingevoerde instellingen toegewezen.
+U maakt een profiel en dit omvat alle instellingen die u hebt ingevoerd. De volgende stap is het implementeren of `toewijzen` van het profiel aan uw gebruikers- of apparaatgroepen. Wanneer het is toegewezen, ontvangen de gebruikers en apparaten uw profiel, en worden de ingevoerde instellingen toegewezen.
 
 In dit artikel ziet u hoe u een profiel kunt toewijzen, en krijgt u informatie over het gebruik van bereiktags in uw profielen.
 
@@ -45,21 +45,16 @@ Zorg ervoor dat u de juiste rol hebt om profielen toe te wijzen. Zie [Op rollen 
 
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecteer **Apparaten** > **Configuratieprofielen**. Alle profielen worden vermeld.
-3. Selecteer het profiel dat u wilt toewijzen > **Toewijzingen**.
-4. Geef aan of u groepen wilt **Opnemen** of **Uitsluiten** en selecteer vervolgens uw groepen. Wanneer u uw groepen hebt geselecteerd, kiest u een Azure AD-groep. Houd **Ctrl** ingedrukt om meerdere groepen te selecteren, en selecteer uw groepen.
+3. Selecteer het profiel dat u wilt toewijzen > **Eigenschappen** > **Toewijzingen** > **Bewerken**:
 
-    :::image type="content" source="./media/device-profile-assign/group-include-exclude.png" alt-text="Schermopname van opties waarmee u groepen kunt opnemen in of uitsluiten van een profieltoewijzing in Microsoft Intune":::
+    :::image type="content" source="./media/device-profile-assign/properties-select-assignments.png" alt-text="Toewijzingen selecteren om het profiel te implementeren voor gebruikers en groepen in Microsoft Intune en Endpoint Manager":::
 
-5. U moet vervolgens de wijzigingen **Opslaan**.
+4. Selecteer **Opgenomen groepen** of **Uitgesloten groepen** en vervolgens **Groepen selecteren die moeten worden opgenomen**. Wanneer u uw groepen hebt geselecteerd, kiest u een Azure AD-groep. Houd **Ctrl** ingedrukt om meerdere groepen te selecteren, en selecteer uw groepen.
 
-### <a name="evaluate-how-many-users-are-targeted"></a>Evalueren op hoeveel gebruikers een beleid is gericht
+    :::image type="content" source="./media/device-profile-assign/select-included-excluded-groups-profile-assignment.png" alt-text="Gebruikers en groepen opnemen of uitsluiten bij het toewijzen of implementeren van een profiel in Microsoft Intune en Endpoint Manager.":::
 
-Als u het profiel toewijst, kunt u ook **Evalueren** hoeveel gebruikers moeten worden beïnvloed. Met deze functie worden gebruikers berekend, geen apparaten.
-
-1. Selecteer in het beheercentrum **Apparaten** > **Configuratieprofielen**.
-2. Selecteer een profiel > **Toewijzingen** > **Evalueren**. In een bericht wordt weergegeven op hoeveel gebruikers dit profiel is gericht.
-
-Als de knop **Evalueren** is uitgeschakeld, controleert u of het profiel is toegewezen aan een of meer groepen.
+5. Selecteer **Beoordelen en opslaan**. Met deze stap wordt uw profiel niet toegewezen.
+6. Selecteer **Opslaan**. Wanneer u opslaat wordt uw profiel toegewezen. Uw groepen ontvangen uw profielinstellingen wanneer de apparaten inchecken bij de Intune-service.
 
 ## <a name="use-scope-tags-or-applicability-rules"></a>Bereiktags of toepasselijkheidsregels gebruiken
 

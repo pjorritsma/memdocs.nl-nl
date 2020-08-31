@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/06/2020
+ms.date: 08/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 349fdc7b0f13f0999b8c9993bcaba1d458ebac59
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 28bf8edb1b7c80e2362e9b145f38bd383dffa625
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989188"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820575"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Instellingen van apparaatfuncties voor iOS, iPadOS of macOS toevoegen in Intune
 
@@ -133,7 +133,7 @@ Van toepassing op:
 
 De meeste LOB-apps (Line-Of-Business) vereisen een zekere mate van gebruikersverificatie om beveiliging te ondersteunen. In veel gevallen moeten gebruikers bij de verificatie herhaaldelijk dezelfde referenties invoeren. Ontwikkelaars kunnen apps maken die gebruikmaken van eenmalige aanmelding (SSO) ter verbetering van de gebruikerservaring. Met eenmalige aanmelding hoeft een gebruiker minder vaak referenties in te voeren.
 
-Het profiel voor eenmalige aanmelding is gebaseerd op Kerberos. Kerberos is een netwerkverificatieprotocol waarbij gebruik wordt gemaakt van geheime-sleutelcryptografie om client-servertoepassingen te verifiëren. De Intune-instellingen definiëren Kerberos-accountgegevens wanneer er toegang wordt verkregen tot servers of opgegeven apps, en verwerken Kerberos-vragen voor webpagina's en systeemeigen apps. Apple raadt u aan de instellingen van de [Kerberos SSO-app-extensie](#single-sign-on-app-extension) (in dit artikel) in plaats van de SSO-instellingen te gebruiken.  
+Het profiel voor eenmalige aanmelding is gebaseerd op Kerberos. Kerberos is een netwerkverificatieprotocol waarbij gebruik wordt gemaakt van geheime-sleutelcryptografie om client-servertoepassingen te verifiëren. De Intune-instellingen definiëren Kerberos-accountgegevens wanneer er toegang wordt verkregen tot servers of specifieke apps, en verwerken Kerberos-vragen voor webpagina's en systeemeigen apps. Apple raadt u aan de instellingen van de [Kerberos SSO-app-extensie](#single-sign-on-app-extension) (in dit artikel) in plaats van de SSO-instellingen te gebruiken.  
 
 Voor het gebruik van eenmalige aanmelding, moet u over het volgende beschikken:
 
@@ -153,7 +153,7 @@ Met deze instellingen configureert u een app-extensie die eenmalige aanmelding (
 
 Gebruik deze instellingen in Intune voor het configureren van een SSO-app-extensie die is gemaakt door uw organisatie, uw id-provider, Microsoft of Apple. Met de SSO-app-extensie wordt de verificatie voor uw gebruikers afgehandeld. Met deze instellingen worden het omleidingstype en de SSO-app-extensies voor het referentietype geconfigureerd.
 
-- Het omleidingstype is ontworpen voor moderne verificatieprotocollen, zoals OpenID Connect, OAuth en SAML2. U kunt een algemene omleidingsextensie gebruiken op macOS-apparaten. Voor iOS- en iPadOS-apparaten kunt u kiezen tussen de Azure AD SSO-extensie van Microsoft ([Microsoft Enterprise SSO-invoegtoepassing](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)) en een algemene omleidingsextensie.
+- Het omleidingstype is ontworpen voor moderne verificatieprotocollen, zoals OpenID Connect, OAuth en SAML2. U kunt kiezen tussen de Azure AD SSO-extensie van Microsoft ([Microsoft Enterprise SSO-invoegtoepassing](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)) en een algemene omleidingsextensie.
 - Het referentietype is ontworpen voor verificatiestromen met vraag en antwoord. U kunt kiezen tussen een Kerberos-referentie-extensie van Apple en een algemene referentie-extensie.
 
 Zie [SSO-app-extensie voor iOS/iPadOS](ios-device-features-settings.md#single-sign-on-app-extension) en [SSO-app-extensie voor macOS](macos-device-features-settings.md#single-sign-on-app-extension) voor een lijst met instellingen die u kunt configureren in Intune.

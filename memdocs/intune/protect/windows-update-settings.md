@@ -15,12 +15,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c6cb913d0f3d3f806a8a9a2592624b2bcf376f40
-ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
+ms.openlocfilehash: ba826620d1589d081f683e3b4c807115c4a137ae
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83551907"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819708"
 ---
 # <a name="windows-update-settings-for-intune"></a>Windows Update-instellingen voor Intune  
 
@@ -179,12 +179,12 @@ De instellingen voor de gebruikerservaring bepalen de ervaring van de eindgebrui
   - **Toestaan**: sta toe dat de gebruiker van een apparaat een Windows Update-scan gebruikt om updates te zoeken en te downloaden, en functies te installeren.
   - **Blokkeren**: voorkom dat de gebruiker van een apparaat toegang heeft tot de Windows Update-scan, updates kan downloaden, en functies kan installeren.  
 
-- **Goedkeuring van de gebruiker vereisen voor opnieuw opstarten buiten werkuren**  
+- **Goedkeuring van gebruiker vereisen om de melding voor opnieuw starten te sluiten**  
   **Standaardinstelling**: Niet geconfigureerd  
   Windows Update CSP: [Update/AutoRestartRequiredNotificationDismissal](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
   
-  - **Niet geconfigureerd**  
-  - **Vereist**: Vereisen dat een gebruiker opnieuw opstarten van het apparaat buiten werkuren goedkeurt.  
+  - **Nee** - Automatisch negeren na 25 seconden.
+  - **Ja** - Verwijdering door gebruiker vereisen.
    
 - **Gebruiker voorafgaand aan het vereiste automatisch opnieuw opstarten herinneren met herinnering die kan worden genegeerd (uren)**  
   **Standaardinstelling**: 4  
@@ -239,7 +239,7 @@ De instellingen voor de gebruikerservaring bepalen de ervaring van de eindgebrui
   - **Respijtperiode**  
     **Standaardinstelling**: *Niet geconfigureerd* Windows Update CSP: [Update/ConfigureDeadlineGracePeriod]( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
 
-    Hiermee wordt een minimum aantal dagen na de deadline opgegeven voordat er automatische opnieuw wordt opgestart (2-7).
+    Hiermee wordt een minimum aantal dagen na de deadline opgegeven voordat er automatische opnieuw wordt opgestart (0-7).
 
   - **Automatisch opnieuw opstarten vóór deadline**  
     **Standaardinstelling**:  Ja - Windows Update CSP: [Update/ConfigureDeadlineNoAutoReboot](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinenoautoreboot)

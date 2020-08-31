@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb70d5842ce13b5baa9dc60ec2ed9cd698bad75c
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 19a2d82f23abef49f193859c46a17cbb44a61f49
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252755"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663341"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Toegang tot Exchange On-Premises voor Intune configureren
 
@@ -59,7 +59,7 @@ Controleer of aan de volgende voorwaarden is voldaan voordat u voorwaardelijke t
   - Het apparaat moet zijn **ingeschreven** bij Intune of lid zijn van een domein.
   - Het apparaat moet zijn **geregistreerd bij Azure Active Directory**. Bovendien moet de client-id van Exchange ActiveSync zijn geregistreerd bij Azure Active Directory.
 
-- De Azure AD Device Registration Service (DRS) wordt automatisch geactiveerd voor Intune- en Office 365-klanten. Klanten die de ADFS Device Registration Service al hebben geïmplementeerd, zien geen geregistreerde apparaten in hun on-premises Active Directory. **Dit geldt niet voor Windows-pc's en Windows Phone-apparaten**.
+- De Azure AD Device Registration Service (DRS) wordt automatisch geactiveerd voor Intune- en Office 365-klanten. Klanten die de ADFS Device Registration Service al hebben geïmplementeerd, zien geen geregistreerde apparaten in hun on-premises Active Directory. **Dit geldt niet voor Windows-pc's en -apparaten**.
 
 - Het apparaat moet **compatibel** zijn met alle soorten nalevingsbeleid die worden geïmplementeerd op het apparaat.
 
@@ -69,7 +69,6 @@ Controleer of aan de volgende voorwaarden is voldaan voordat u voorwaardelijke t
 
 ### <a name="support-for-mobile-devices"></a>Ondersteuning voor mobiele apparaten
 
-- **Windows Phone**: zie [Beleid voor voorwaardelijke toegang maken](../protect/create-conditional-access-intune.md) om een beleid voor voorwaardelijke toegang te maken
 - **Systeemeigen e-mailapp op iOS/iPadOS**: zie [Beleid voor voorwaardelijke toegang maken](../protect/create-conditional-access-intune.md) om een beleid voor voorwaardelijke toegang te maken
 - **EAS-mailclients zoals Gmail op Android 4 of hoger**: zie [Beleid voor voorwaardelijke toegang maken](../protect/create-conditional-access-intune.md) om een beleid voor voorwaardelijke toegang te maken
 

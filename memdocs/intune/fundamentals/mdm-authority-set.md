@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e1ac5180a30959618f37d909511785b4de1c407
-ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
+ms.openlocfilehash: 380e39406dcc0b5bd286605804e3aa3c52750dd1
+ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
 ms.translationtype: HT
 ms.contentlocale: nl-NL
 ms.lasthandoff: 08/19/2020
-ms.locfileid: "88591232"
+ms.locfileid: "88614735"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>De instantie voor het beheer van mobiele apparaten instellen
 
@@ -38,7 +38,7 @@ Mogelijke configuraties zijn:
 
 - **Basic Mobility and Security for Office 365**: als u deze configuratie activeert, ziet u de MDM-instantie ingesteld op Office 365. Als u Intune wilt gaan gebruiken, moet u Intune-licenties aanschaffen.
 
-- **Co-existentie van Basic Mobility and Security for Office 365**: u kunt Intune toevoegen aan uw tenant als u al Basic Mobility and Security for Office 365 gebruikt en de beheerinstantie instellen op Intune of Basic Mobility and Security for Office 365 voor elke gebruiker om te bepalen welke service moet worden gebruikt voor het beheer van hun bij MDM ingeschreven apparaten. De beheerinstantie van elke gebruiker wordt gedefinieerd op basis van de licentie die aan de gebruiker is toegewezen: Als de gebruiker alleen een licentie heeft voor Microsoft 365 Basic of Standard, worden zijn apparaten beheerd door Basic Mobility and Security for Office 365. Als de gebruiker een licentie met machtiging voor Intune heeft, worden de apparaten beheerd met Intune. Als u een licentie toevoegt die recht geeft op Intune aan een gebruiker die voorheen werd beheerd door Basic Mobility and Security for Office 365, wordt zijn apparaat overgezet naar beheer door Intune. Zorg ervoor dat Intune-configuraties worden toegewezen aan gebruikers om Basic Mobility and Security for Office 365 te vervangen alvorens gebruikers naar Intune over te zetten, anders verliezen hun apparaten de instellingen voor Basic Mobility and Security for Office 365 en krijgen ze geen vervanging van Intune.
+- **[Co-existentie](#coexistence) van Basic Mobility and Security for Office 365**: u kunt Intune toevoegen aan uw tenant als u al Basic Mobility and Security for Office 365 gebruikt en de beheerinstantie instellen op Intune of Basic Mobility and Security for Office 365 voor elke gebruiker om te bepalen welke service moet worden gebruikt voor het beheer van hun bij MDM ingeschreven apparaten. De beheerinstantie van elke gebruiker wordt gedefinieerd op basis van de licentie die aan de gebruiker is toegewezen: Als de gebruiker alleen een licentie heeft voor Microsoft 365 Basic of Standard, worden zijn apparaten beheerd door Basic Mobility and Security for Office 365. Als de gebruiker een licentie met machtiging voor Intune heeft, worden de apparaten beheerd met Intune. Als u een licentie toevoegt die recht geeft op Intune aan een gebruiker die voorheen werd beheerd door Basic Mobility and Security for Office 365, wordt zijn apparaat overgezet naar beheer door Intune. Zorg ervoor dat Intune-configuraties worden toegewezen aan gebruikers om Basic Mobility and Security for Office 365 te vervangen alvorens gebruikers naar Intune over te zetten, anders verliezen hun apparaten de instellingen voor Basic Mobility and Security for Office 365 en krijgen ze geen vervanging van Intune.
 
 ## <a name="set-mdm-authority-to-intune"></a>MDM-instantie instellen op Intune
 
@@ -85,9 +85,9 @@ Er zijn drie belangrijke stappen om co-existentie in te schakelen:
 ### <a name="preparation"></a>Voorbereiding
 
 Houd rekening met de volgende punten voordat u co-existentie met basismobiliteit en beveiliging inschakelt:
-- Zorg ervoor dat u over voldoende Intune-licenties beschikt voor de gebruikers die u wilt beheren via Intune.
+- Zorg ervoor dat u over voldoende [Intune-licenties](licenses.md) beschikt voor de gebruikers die u wilt beheren via Intune.
 - Controleer aan welke gebruikers licenties voor Intune zijn toegewezen. Nadat u co-existentie hebt ingeschakeld, worden de apparaten van alle gebruikers aan wie al een Intune-licentie is toegewezen, overgeschakeld naar Intune. Om het onverwacht overschakelen van apparaten te voorkomen, wordt aangeraden geen Intune-licenties toe te wijzen totdat u co-existentie hebt ingeschakeld.
-- Maak en implementeer Intune-beleid om het beveiligingsbeleid voor apparaten te vervangen dat oorspronkelijk werd geïmplementeerd via de portal voor beveiliging en naleving van Office 365. Deze vervanging moet worden uitgevoerd voor alle gebruikers die u verwacht te verplaatsen van basismobiliteit en beveiliging naar Intune. Als er geen Intune-beleid is toegewezen aan deze gebruikers, kan het inschakelen van co-existentie ertoe leiden dat ze de instellingen voor basismobiliteit en beveiliging kwijtraken. Deze instellingen gaan verloren zonder vervanging, zoals beheerde e-mailprofielen.
+- Maak en implementeer Intune-beleid om het beveiligingsbeleid voor apparaten te vervangen dat oorspronkelijk werd geïmplementeerd via de portal voor beveiliging en naleving van Office 365. Deze vervanging moet worden uitgevoerd voor alle gebruikers die u verwacht te verplaatsen van basismobiliteit en beveiliging naar Intune. Als er geen Intune-beleid is toegewezen aan deze gebruikers, kan het inschakelen van co-existentie ertoe leiden dat ze de instellingen voor basismobiliteit en beveiliging kwijtraken. Deze instellingen gaan verloren zonder vervanging, zoals beheerde e-mailprofielen. Zelfs bij het vervangen van apparaatbeveiligingsbeleid door Intune-beleid kunnen gebruikers worden gevraagd hun e-mailprofielen opnieuw te verifiëren nadat het apparaat is verplaatst naar Intune-beheer.
 
 ### <a name="add-intune-mdm-authority"></a>MDM-instantie voor Intune toevoegen
 

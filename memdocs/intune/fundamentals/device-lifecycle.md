@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9580a5cb99192f81fc83f8d61119f5368f0a5ee
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: 0c8d60a4a943ba2af9ea99f9eb887a9b77a49fcf
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088391"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693502"
 ---
 # <a name="overview-of-the-microsoft-intune-mobile-device-management-mdm-lifecycle"></a>Overzicht van de MDM-levenscyclus (Mobile Device Management) van Microsoft Intune
 
@@ -36,7 +36,7 @@ De hedendaagse MDM-strategieën (Mobile Device Management) hebben te maken met v
 
 Registratie van de apparaten is slechts de eerste stap. Om te profiteren van alles wat Intune te bieden heeft en te zorgen dat uw apparaten beveiligd en compatibel zijn met de standaarden van uw bedrijf, kunt u kiezen uit een breed scala aan beleidsregels. Hiermee kunt u vrijwel elk aspect configureren van de manier waarop beheerde apparaten werken. Bijvoorbeeld: moeten gebruikers wachtwoorden hebben op apparaten met bedrijfsgegevens? U kunt dit verplicht stellen. Hebt u Wi-Fi in het bedrijf? Dit kunt u automatisch configureren. De volgende typen configuratieopties zijn beschikbaar:
 
-- [**Apparaatconfiguratie**](../configuration/device-profiles.md). Hiermee kunt u de functies en mogelijkheden configureren van de apparaten die u beheert. U kunt bijvoorbeeld configureren dat het gebruik van een wachtwoord op Windows Phones vereist is en het gebruik van de camera op iPhones uitschakelen.
+- [**Apparaatconfiguratie**](../configuration/device-profiles.md). Hiermee kunt u de functies en mogelijkheden configureren van de apparaten die u beheert. U kunt bijvoorbeeld configureren dat het gebruik van een wachtwoord op Android-telefoons vereist is en het gebruik van de camera op iPhones uitschakelen.
 - [**Toegang tot bedrijfsresources**](../configuration/device-profiles.md). Wanneer u uw gebruikers toegang biedt tot hun werk vanaf hun persoonlijke apparaten, brengt dit uitdagingen met zich mee. Hoe kunt u er bijvoorbeeld voor zorgen dat alle apparaten die toegang moeten krijgen tot bedrijfs-e-mail, correct zijn geconfigureerd? Hoe zorgt u dat gebruikers toegang krijgen tot het bedrijfsnetwerk via een VPN-verbinding zonder dat zij complexe instellingen hoeven te kennen? Intune kan helpen deze last te verlagen door automatisch de apparaten te configureren die u beheert, zodat deze toegang krijgen tot gemeenschappelijke bedrijfsbronnen.
 - [**Beleid voor beheer van Windows-pc’s (met de Intune-clientsoftware)** ](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md). Hoewel de registratie van Windows-pc's met Intune u de meeste mogelijkheden voor apparaatbeheer geeft, blijft Intune ondersteuning bieden voor het beheer van Windows-pc's met de Intune-clientsoftware. Begin hier als u informatie wilt over de taken die u kunt uitvoeren met pc's.
 

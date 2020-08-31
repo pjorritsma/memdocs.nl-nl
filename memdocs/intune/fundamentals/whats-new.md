@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/30/2020
+ms.date: 08/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 894ef12107b8e8b520ca69a463be47ef339bd9b4
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: aa6839cef79623b456cd31eec6b894eae7687de3
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051623"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820269"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Wat is er nieuw in Microsoft Intune?
 
@@ -55,6 +55,127 @@ Ontdek elke week wat er nieuw is in Microsoft Intune in het [Microsoft Endpoint 
 ### Scripts
 
 <!-- ########################## -->
+## <a name="week-of-august-24-2020-2008-service-release"></a>Week van 24 augustus 2020 (2008 servicerelease)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="app-management"></a>Appbeheer
+
+#### <a name="associated-licenses-revoked-before-deletion-of-apple-vpp-token--6195322----"></a>Gekoppelde licenties ingetrokken voordat het Apple VPP-token wordt verwijderd<!--6195322  -->
+Als u een Apple VPP-token verwijdert in Microsoft Endpoint Manager, worden alle aan dit token gekoppelde Intune-licenties automatisch ingetrokken vóór de verwijdering.
+
+#### <a name="improvement-to-update-device-settings-page-in-company-portal-app-for-android-to-shows-descriptions----7414768-wnstaged---"></a>Verbetering van de pagina Apparaatinstellingen bijwerken in de bedrijfsportal-app voor Android om beschrijvingen weer te geven <!-- 7414768 wnstaged -->
+In de bedrijfsportal-app op Android-apparaten worden op de pagina **Apparaatinstellingen bijwerken** de instellingen vermeld die moeten worden bijgewerkt om compatibel te zijn. Gebruikers vouwen het probleem uit voor meer informatie en om de knop **Oplossen** te zien.
+
+Deze gebruikerservaring is verbeterd. De vermelde instellingen worden standaard uitgevouwen om de beschrijving en de knop **Oplossen** (indien van toepassing) weer te geven. Voorheen werden de problemen standaard samengevouwen. Dit nieuwe standaardgedrag vermindert het aantal klikken, zodat gebruikers problemen sneller kunnen oplossen.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-configuration"></a>Apparaatconfiguratie
+
+#### <a name="use-netmotion-as-a-vpn-connection-type-for-iosipados-and-macos-devices---1333631-----"></a>NetMotion gebruiken als een VPN-verbindingstype voor iOS/iPadOS en macOS-apparaten<!-- 1333631   -->
+Wanneer u een VPN-profiel maakt, is NetMotion beschikbaar als een VPN-verbindingstype (**Apparaten** > **Apparaatconfiguratie** > **Profiel maken** > **iOS/iPadOS** of **macOS** voor platform > **VPN** voor profiel > **NetMotion** voor verbindingstype).
+
+Zie [VPN-profielen maken om verbinding te maken met VPN-servers](../configuration/vpn-settings-configure.md) voor meer informatie over VPN-profielen in Intune.
+
+Van toepassing op:
+- iOS/iPadOS
+- macOS
+
+#### <a name="more-protected-extensible-authentication-protocol-peap-options-for-windows-10-wi-fi-profiles---3805024----"></a>Meer PEAP-opties (Protected Extensible Authentication Protocol) voor Wi-Fi-profielen voor Windows 10<!-- 3805024  -->
+Op Windows 10-apparaten kunt u Wi-Fi-profielen maken en het verificatietype voor EAP (Extensible Authentication Protocol) selecteren om Wi-Fi-verbindingen te verifiëren (**Apparaten** > **Configuratieprofielen** > **Profiel maken** > **Windows 10 en hoger** voor platform > **Wi-Fi** voor profiel > **Enterprise**).
+
+Wanneer u beveiligde EAP (PEAP) selecteert, zijn er nieuwe instellingen beschikbaar:
+- **Servervalidatie uitvoeren in PEAP-fase 1**: In PEAP-onderhandelingsfase 1 wordt de server geverifieerd door de certificaatvalidatie.
+  - **Gebruikersprompts voor servervalidatie uitschakelen in PEAP-fase 1**: In PEAP-onderhandelingsfase 1 worden gebruikersprompts met de vraag om nieuwe PEAP-servers voor vertrouwde certificeringsinstanties niet weergegeven.
+- **Cryptografische binding vereisen**: Hiermee worden verbindingen met PEAP-servers die geen cryptobinding gebruiken tijdens de PEAP-onderhandeling voorkomen.
+
+Ga naar [Wi-Fi-instellingen voor Windows 10- en nieuwere apparaten toevoegen](../configuration/wi-fi-settings-windows.md) voor een overzicht van de instellingen die u kunt configureren.
+
+Van toepassing op: 
+- Windows 10 en nieuwer
+
+#### <a name="configure-the-macos-microsoft-enterprise-sso-plug-in---5627576--idstaged---"></a>De macOS Microsoft Enterprise SSO-invoegtoepassing configureren<!-- 5627576  idstaged -->
+Het Microsoft Azure AD-team heeft een app-extensie voor eenmalige aanmelding (SSO) voor omleiden gemaakt waarmee gebruikers van macOS 10.15 +-toegang krijgen tot Microsoft-apps, organisatie-apps en websites die ondersteuning bieden voor de SSO-functie van Apple en verificatie met behulp van Azure AD, met één aanmelding. Met de release van de Microsoft Enterprise SSO-invoegtoepassing kunt u de SSO-extensie configureren met het nieuwe type app-extensie van Microsoft Azure AD (**Apparaten** > **Configuratieprofielen** > **Profiel maken** > **macOS** voor platform > **Apparaatfuncties** voor profiel > **App-extensie voor eenmalige aanmelding** > Type van app-extensie voor SSO > **Microsoft Azure AD**).
+
+Gebruikers moeten de bedrijfsportal-app op hun macOS-apparaat installeren en zich aanmelden om eenmalige aanmelding met het type app-extensie voor SSO van Microsoft Azure AD te kunnen uitvoeren. 
+
+Zie [App-extensie voor eenmalige aanmelding](../configuration/device-features-configure.md#single-sign-on-app-extension) voor meer informatie over app-extensies voor SSO voor macOS.
+
+Van toepassing op:
+- macOS 10.15 of hoger
+
+#### <a name="prevent-users-from-unlocking-android-enterprise-work-profile-devices-using-face-and-iris-scanning--6069759-idmiss---"></a>Voorkom dat gebruikers Android Enterprise-werkprofielapparaten kunnen ontgrendelen met behulp van de gezicht- en irisscanfunctie<!--6069759 idmiss -->
+U kunt nu voorkomen dat gebruikers met behulp van de gezicht- en irisscanfunctie hun door het werkprofiel beheerde apparaten ontgrendelen op het niveau van het apparaat of het werkprofiel. Dit kan worden ingesteld in **Apparaten** > **Configuratieprofielen** > **Profiel maken** > **Android Enterprise** voor platform > **Werkprofiel > Apparaatbeperkingen** voor profiel > **Werkprofielinstellingen**  en **Wachtwoord**gedeelten.
+
+Zie [Android Enterprise-apparaatinstellingen voor beheer van functies vanuit Intune](../configuration/device-restrictions-android-for-work.md#work-profile-only) voor meer informatie.
+
+Van toepassing op: 
+- Android Enterprise - Werkprofiel
+
+#### <a name="use-sso-app-extensions-on-more-iosipados-apps-with-the-microsoft-enterprise-sso-plug-in---7369991----"></a>App-extensies voor eenmalige aanmelding gebruiken voor meer iOS- en iPadOS-apps met de Microsoft Enterprise SSO-invoegtoepassing<!-- 7369991  -->
+De [Microsoft Enterprise SSO-invoegtoepassing voor Apple-apparaten](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin) kan worden gebruikt met alle apps die ondersteuning bieden voor app-extensies voor SSO. In Intune betekent deze functie dat de invoegtoepassing werkt met mobiele iOS/iPadOS-apps die niet gebruikmaken van de Microsoft Authentication Library (MSAL) voor Apple-apparaten. De apps hoeven geen MSAL te gebruiken, maar ze moeten wel worden geverifieerd bij Azure AD-eindpunten.
+
+Als u uw iOS-/iPadOS-apps wilt configureren voor het gebruik van SSO met de invoegtoepassing, voegt u de app-bundel-id's toe aan een iOS-/iPadOS-configuratieprofiel (**Apparaten** > **Configuratieprofielen** > **Profiel maken** > **iOS/iPadOS** voor platform > **Apparaatfuncties** voor profiel > **App-extensie voor eenmalige aanmelding** > **Microsoft Azure AD** Type van app-extensie voor SSO > **App-bundel-IDs**).
+
+Als u wilt zien welke extensie-instellingen voor SSO-apps u kunt configureren, gaat u naar [App-extensie voor eenmalige aanmelding](../configuration/ios-device-features-settings.md#single-sign-on-app-extension).
+
+Van toepassing op:
+- iOS/iPadOS
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-security"></a>Apparaatbeveiliging
+
+#### <a name="deploy-endpoint-security-antivirus-policy-to-tenant-attached-devices-preview---5475441----"></a>Antivirusbeleid voor eindpuntbeveiliging implementeren op apparaten die aan de tenant zijn gekoppeld (voorbeeld)<!-- 5475441  -->
+Als voorbeeld kunt u eindpuntbeveiligingsbeleid[ implementeren voor antivirus](../protect/endpoint-security-antivirus-policy.md) op apparaten die u beheert met Configuration Manager. Voor dit scenario moet u een tenantkoppeling tussen een ondersteunde versie van Configuration Manager en uw Intune-abonnement configureren. De volgende versies van Configuration Manager worden ondersteund:
+
+- Configuration Manager, huidige vertakking (2006)
+
+Zie voor meer informatie de [vereisten voor Intune-eindpuntbeveiligingsbeleid](../protect/tenant-attach-intune.md#specific-requirements-for-intune-endpoint-security-policies) om de tenantkoppeling te ondersteunen.
+
+#### <a name="changes-for-endpoint-security-antivirus-policy-exclusions--5583940-6018119------"></a>Wijzigingen in uitsluitingen antiviurusbeleid voor eindpuntbeveiliging<!--5583940, 6018119    -->
+We hebben twee wijzigingen voor het beheren van de uitsluitingslijsten van Microsoft Defender Antivirus geïntroduceerd die u configureert als onderdeel van een [antivirusbeleid voor eindpuntbeveiliging](../protect/endpoint-security-antivirus-policy.md). Met deze wijzigingen kunt u conflicten tussen verschillende beleidsregels voorkomen en conflicten met de uitsluitingslijst oplossen die mogelijk in uw eerder geïmplementeerde beleid aanwezig zijn.
+
+Beide wijzigingen zijn van toepassing op beleidsinstellingen voor de volgende [Microsoft Defender Antivirus Configuration Service Providers](../protect/antivirus-microsoft-defender-settings-windows.md#microsoft-defender-antivirus-exclusions) (CSP's):
+
+- Defender/ExcludedPaths
+- Defender/ExcludedExtensions
+- Defender/ExcludedProcesses
+
+De wijzigingen zijn:
+
+- Nieuw profieltype: **Microsoft Defender Antivirus-uitsluitingen** - gebruik dit nieuwe profieltype voor Windows 10 en hoger om een beleid te definiëren dat alleen gericht is op uitsluitingen van virussen. Dit profiel kan u helpen het beheer van uw uitsluitingslijsten te vereenvoudigen door deze te scheiden van andere beleidsconfiguraties.
+
+  De uitzonderingen die u kunt configureren omvatten Defender-*processen*, *bestandsextensies* en *bestanden* en *mappen* van Defender die niet door Microsoft Defender moeten worden gescand.
+
+- **Beleidsamenvoeging** - Intune voegt nu de lijst met uitsluitingen die u in afzonderlijke profielen hebt gedefinieerd, samen in een afzonderlijke lijst met uitsluitingen die op elk apparaat of elke gebruiker moeten worden toegepast. Als u bijvoorbeeld een gebruiker met drie afzonderlijke beleidsregels hebt, worden de uitsluitingslijsten van die drie beleidsregels samengevoegd in één hoofdverzameling van *Microsoft Defender Antivirus-uitsluitingen*, die vervolgens van toepassing zijn op de gebruiker.
+
+
+<!-- ########################## -->
+## <a name="week-of-august-17-2020"></a>Week van 17 augustus 2020
+
+### <a name="intune-apps"></a>Intune-apps
+
+#### <a name="custom-brand-image-now-displayed-in-the-windows-company-portal-profile-page---4280187---"></a>Aangepaste merkafbeelding wordt nu weergegeven op de Windows bedrijfsportal-profielpagina<!-- 4280187 -->
+Als Microsoft Intune-beheerder kunt u een aangepaste merkafbeelding naar Intune uploaden die als achtergrondafbeelding wordt weergegeven op de profielpagina van de gebruiker in de Windows bedrijfsportal-app. Zie [De Intune-bedrijfsportal-apps, de bedrijfsportalwebsite en de Intune-app aanpassen](../apps/company-portal-app.md#branding) voor meer informatie.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="app-management"></a>Appbeheer
+
+#### <a name="the-company-portal-adds-configuration-manager-application-support---4297660---"></a>De bedrijfsportal voegt ondersteuning voor Configuration Manager-toepassingen toe<!-- 4297660 -->
+De bedrijfsportal biedt nu ondersteuning voor Configuration Manager-toepassingen. Met deze functie kunnen eindgebruikers zowel Configuration Manager-toepassingen als met Intune geïmplementeerde toepassingen zien in de bedrijfsportal voor co-beheerde klanten. Deze ondersteuning helpt beheerders bij het consolideren van de verschillende portal-ervaringen van eindgebruikers. Zie [De bedrijfsportal-app configureren op co-beheerde apparaten](/mem/configmgr/comanage/company-portal) voor meer informatie. 
+
+### <a name="device-security"></a>Apparaatbeveiliging
+
+#### <a name="set-device-compliance-state-from-third-party-mdm-providers---6361689---"></a>De nalevingsstatus van apparaten van externe MDM-providers instellen<!-- 6361689 -->
+
+Intune ondersteunt nu [MDM-oplossingen van derden als een bron voor details over apparaatcompliance](../protect/device-compliance-partners.md). Deze compliancegegevens van derden kunnen worden gebruikt voor het afdwingen van beleid voor voorwaardelijke toegang voor Microsoft 365-apps op iOS en Android via integratie met Microsoft Intune.  Intune evalueert de compliancedetails van de externe provider om te bepalen of een apparaat te vertrouwen is en stelt vervolgens de kenmerken voor voorwaardelijke toegang in op Azure AD.  U gaat verder met het instellen van uw beleid voor voorwaardelijke toegang van Azure AD in het Microsoft Endpoint Manager-beheercentrum of de Azure AD-portal.
+
+De volgende MDM-providers van derden worden met deze release ondersteund als een openbare preview:
+
+- VMWare Workspace ONE UEM (voorheen bekend als AirWatch)
+
+*Deze update wordt wereldwijd uitgerold. U ziet deze functionaliteit in de loop van de volgende week.*
+
+<!-- ########################## -->
 ## <a name="week-of-august-10-2020"></a>Week van 10 augustus 2020
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -70,7 +191,7 @@ Vanuit het Microsoft Endpoint Manager-beheercentrum kunt u nu de installatie van
 ### <a name="monitor-and-troubleshoot"></a>Bewaken en problemen oplossen
 
 #### <a name="power-bi-compliance-report-template-v20---636958---"></a>Sjabloon voor Power BI-nalevingsrapport BI V 2.0<!-- 636958 -->
-Met behulp van Power BI-sjabloon-apps kunnen Power BI-partners Power BI-apps bouwen met weinig tot geen codering en deze naar elke Power BI-klant implementeren. Beheerders kunnen de versie van de Power BI-compatibiliteitsrapportsjabloon bijwerken van V 1.0 naar V 2.0. V 2.0 bevat een verbeterd ontwerp, evenals wijzigingen in de berekeningen en gegevens die worden opgehaald als onderdeel van de sjabloon. Zie [Verbinding maken met het datawarehouse met Power BI](../developer/reports-proc-get-a-link-powerbi.md) en [Een sjabloon-app bijwerken](https://docs.microsoft.com/power-bi/service-template-apps-install-distribute#update-a-template-app) voor meer informatie. Lees ook de blogpost [Announcing a New Version of the PowerBI Compliance Report with Intune Data Warehouse](https://aka.ms/new_compliance_report).
+Met behulp van Power BI-sjabloon-apps kunnen Power BI-partners Power BI-apps bouwen met weinig tot geen codering en deze naar elke Power BI-klant implementeren. Beheerders kunnen de versie van de Power BI-compatibiliteitsrapportsjabloon bijwerken van V 1.0 naar V 2.0. V 2.0 bevat een verbeterd ontwerp, evenals wijzigingen in de berekeningen en gegevens die worden opgehaald als onderdeel van de sjabloon. Zie [Verbinding maken met het datawarehouse met Power BI](../developer/reports-proc-get-a-link-powerbi.md) en [Een sjabloon-app bijwerken](https://docs.microsoft.com/power-bi/service-template-apps-install-distribute#update-a-template-app) voor meer informatie. Lees ook de blogpost [Announcing a New Version of the Power BI Compliance Report with Intune Data Warehouse](https://aka.ms/new_compliance_report).
 
 <!-- ########################## -->
 ## <a name="week-of-july-13-2020--2007-service-release"></a>Week van 13 juli 2020 (2007 servicerelease)
@@ -231,7 +352,7 @@ De DeviceComplianceOrg-logboeken in Intune bevatten voorheen alleen opsommingen 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="role-based-access-control"></a>Op rollen gebaseerd toegangsbeheer
 
-#### <a name="assign-profile-and-update-profile-permission-changes--7177586-idready-wnready-wnstaged--"></a>Wijzigingen in de machtigingen voor Profiel toewijzen en Profiel bijwerken<!--7177586 idready wnready wnstaged-->
+#### <a name="assign-profile-and-update-profile-permission-changes--7177586-----"></a>Wijzigingen in de machtigingen voor Profiel toewijzen en Profiel bijwerken<!--7177586   -->
 Machtigingen voor toegangsbeheer op basis van rollen zijn gewijzigd voor het profiel Toewijzen en Bijwerken voor de stroom Geautomatiseerde apparaatinschrijving:
 
 Profiel toewijzen: Beheerders met deze machtiging kunnen de profielen ook toewijzen aan tokens, en kunnen een standaardprofiel toewijzen aan een token voor Geautomatiseerde apparaatinschrijving.
@@ -243,7 +364,7 @@ Als u deze rollen wilt bekijken, gaat u naar [Microsoft Endpoint Manager-beheerc
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="scripting"></a>Uitvoeren van scripts
 
-#### <a name="additional-data-warehouse-v10-properties---6125732-wnready---"></a>Aanvullende Data Warehouse v1.0-eigenschappen<!-- 6125732 wnready -->
+#### <a name="additional-data-warehouse-v10-properties---6125732----"></a>Aanvullende Data Warehouse v1.0-eigenschappen<!-- 6125732  -->
 Er zijn aanvullende eigenschappen beschikbaar met behulp van Intune Data Warehouse v1.0. Via de entiteit [apparaten](../developer/reports-ref-devices.md#devices) zijn nu de volgende eigenschappen beschikbaar:
 - `ethernetMacAddress` - De unieke netwerk-id van dit apparaat.
 - `office365Version` - De versie van Office 365 die op het apparaat is geïnstalleerd.
@@ -368,7 +489,7 @@ Van toepassing op:
 - Windows 10 en nieuwer
 
 #### <a name="wired-network-device-configuration-profiles-for-macos-devices---3508686----"></a>Configuratieprofielen voor een bekabeld netwerkapparaat voor macOS-apparaten<!-- 3508686  -->
-Er is een nieuw configuratieprofiel voor macOS-apparaten beschikbaar waarmee bedrade netwerken kunnen worden geconfigureerd (**Apparaten** > **Configuratieprofielen > **Profiel maken** > **macOS** voor platform > **Bekabeld netwerk** voor profiel). Gebruik deze functie om 802.1x-profielen te maken om bekabelde netwerken te beheren en om deze bekabelde netwerken te implementeren op uw macOS-apparaten.
+Er is een nieuw configuratieprofiel voor macOS-apparaten beschikbaar waarmee bedrade netwerken kunnen worden geconfigureerd (**Apparaten** > **Configuratie-profielen** > **Profiel maken** > **macOS** voor platform > **Bekabeld netwerk** voor profiel). Gebruik deze functie om 802.1x-profielen te maken om bekabelde netwerken te beheren en om deze bekabelde netwerken te implementeren op uw macOS-apparaten.
 
 Zie [Bekabelde netwerken op macOS-apparaten](../configuration/wired-networks-configure.md)voor meer informatie over deze functie.
 
@@ -446,7 +567,7 @@ Er worden nieuwe fouten gerapporteerd voor iOS/iPadOS- en macOS-apparaten, waaro
 #### <a name="shared-ipads-for-business--6367326-----"></a>Gedeelde iPads voor bedrijven<!--6367326   -->
 U kunt Intune en Apple Business Manager gebruiken om snel en veilig Gedeelde iPad in te stellen, zodat meerdere werknemers apparaten kunnen delen. [Gedeelde iPad](https://developer.apple.com/education/shared-ipad/) van Apple biedt een persoonlijke ervaring voor meerdere gebruikers terwijl gebruikersgegevens behouden blijven. Wanneer gebruikers een beheerde Apple ID gebruiken, hebben ze toegang tot hun apps, gegevens en instellingen nadat ze zich hebben aangemeld bij een gedeelde iPad in hun organisatie. Gedeelde iPad werkt met federatieve identiteiten.
 
-Ga naar [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) > **Apparaten** > **iOS** > **iOS-inschrijving** > **Registratieprogrammatokens** > kies een token** > **Profielen** > **Profiel maken** > **iOS** om deze functie te zien. Selecteer op de pagina **Beheerinstellingen** de optie **Inschrijven zonder gebruikersaffiniteit** en u ziet de optie **Gedeelde iPad**.
+Ga naar [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) > **Apparaten** > **iOS** > **iOS-inschrijving** > **Registratieprogrammatokens** > **kies een token** > **Profielen** > **Profiel maken** > **iOS** om deze functie te zien. Selecteer op de pagina **Beheerinstellingen** de optie **Inschrijven zonder gebruikersaffiniteit** en u ziet de optie **Gedeelde iPad**.
 
 Vereist: iPadOS 13.4 en hoger. In deze release is ondersteuning toegevoegd voor tijdelijke sessies met Gedeelde iPad zodat gebruikers zonder een beheerde Apple ID toegang hebben tot een apparaat. Na afmelding worden alle gebruikersgegevens gewist zodat het apparaat direct gereed is voor gebruik. Het apparaat hoeft hierdoor niet meer te worden gewist. 
 
@@ -548,7 +669,7 @@ We hebben de pictogrammen in Bedrijfsportal bijgewerkt voor een moderner uiterli
 
 [Eindpuntbeveiligingsbeleid gebruiken voor eindpuntdetectie en -respons](../protect/endpoint-security-edr-policy.md) (EDR) om apparaten te onboarden en te configureren voor uw implementatie van Microsoft Defender Advanced Threat Protection (Defender ATP). EDR ondersteunt beleid voor Windows-apparaten die worden beheerd door Intune (MDM) en een afzonderlijk beleid voor Windows-apparaten die worden beheerd door Configuration Manager. 
 
-Als u het beleid voor apparaten van Configuration Manager wilt gebruiken, moet u Configuration Manager [instellen voor de ondersteuning van het EDR-beleid](../protect/endpoint-security-edr-policy.md#set-up-configuration-manager-to-support-edr-policy). Instellen omvat:
+Als u het beleid voor apparaten van Configuration Manager wilt gebruiken, moet u Configuration Manager [instellen voor de ondersteuning van het EDR-beleid](../protect/tenant-attach-intune.md). Instellen omvat:
 
 - Configureer uw Configuration Manager voor *tenantkoppeling*.
 - Installeer een module-update voor Configuration Manager om ondersteuning voor het EDR-beleid in te schakelen. Deze update is alleen van toepassing op hiërarchieën die *tenantkoppeling* hebben ingeschakeld.
@@ -752,7 +873,7 @@ De naam van Microsoft Office 365 ProPlus wordt gewijzigd in **Microsoft 365-apps
 U kunt met app-configuratiebeleid de S/MIME-instelling voor Outlook beheren op apparaten waarop Android Enterprise wordt uitgevoerd. U kunt ook kiezen of u wilt toestaan dat de apparaatgebruikers S/MIME in- of uitschakelen in de Outlook-instellingen. Ga in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) naar **Apps** > **App-configuratiebeleid** > **Toevoegen** > **Beheerde apparaten** om app-configuratiebeleid voor Android te gebruiken. Zie [Microsoft Outlook-configuratie-instellingen](../apps/app-configuration-policies-outlook.md) voor meer informatie over het configureren van instellingen voor Outlook.
 
 #### <a name="pre-release-testing-for-managed-google-play-apps---2681933----"></a>Testen voorafgaand aan de release voor beheerde Google Play-apps<!-- 2681933  -->
-Organisaties die gebruikmaken van [gesloten testtrajecten van Google Play voor het testen van apps voorafgaand aan de release](https://support.google.com/googleplay/android-developer/answer/3131213) kunnen deze trajecten beheren met Intune. U kunt selectief apps die worden gepubliceerd naar de trajecten voorafgaand aan de productiefase van Google Play aan testgroepen toewijzen om tests uit te voeren. In Intune kunt u ook zien of er voor een app een testtraject voor een build voorafgaand aan de productiefase is gepubliceerd en u kunt dat traject ook toewijzen aan AAD-gebruikersgroepen of -apparaatgroepen. Deze functie is beschikbaar voor al onze momenteel ondersteunde Android Enterprise-scenario's (werkprofiel, volledig beheerd en toegewezen). In het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) kunt u een Beheerde Google Play-app toevoegen door **Apps** > **Android** > **Toevoegen** te selecteren. Zie [Werken met gesloten testtrajecten van Beheerde Google Play](../apps/apps-add-android-for-work.md#working-with-managed-google-play-closed-testing-tracks) voor meer informatie.
+Organisaties die gebruikmaken van [gesloten testtrajecten van Google Play voor het testen van apps voorafgaand aan de release](https://support.google.com/googleplay/android-developer/answer/3131213) kunnen deze trajecten beheren met Intune. U kunt selectief apps die worden gepubliceerd naar de trajecten voorafgaand aan de productiefase van Google Play aan testgroepen toewijzen om tests uit te voeren. In Intune kunt u ook zien of er voor een app een testtraject voor een build voorafgaand aan de productiefase is gepubliceerd en u kunt dat traject ook toewijzen aan Azure AD-gebruikersgroepen of -apparaatgroepen. Deze functie is beschikbaar voor al onze momenteel ondersteunde Android Enterprise-scenario's (werkprofiel, volledig beheerd en toegewezen). In het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) kunt u een Beheerde Google Play-app toevoegen door **Apps** > **Android** > **Toevoegen** te selecteren. Zie [Werken met gesloten testtrajecten van Beheerde Google Play](../apps/apps-add-android-for-work.md#working-with-managed-google-play-closed-testing-tracks) voor meer informatie.
 
 #### <a name="microsoft-teams-is-now-included-in-the-office-365-suite-for-macos---5903936----"></a>Microsoft Teams is nu opgenomen in het Office 365-pakket voor macOS<!-- 5903936  -->
 Gebruikers aan wie Microsoft Office voor macOS is toegewezen in Microsoft Endpoint Manager krijgen nu naast de bestaande Microsoft Office-apps (Word, Excel, PowerPoint, Outlook en OneNote) ook Microsoft Teams. Intune herkent de bestaande Mac-apparaten waarop de andere Office voor macOS-apps zijn geïnstalleerd en probeert Microsoft Teams te installeren wanneer het apparaat de volgende keer bij Intune wordt ingecheckt. In het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) vindt u het **Office 365-pakket** voor macOS door **Apps** > **macOS** > **Toevoegen** te selecteren. Zie [Office 365 toewijzen aan macOS-apparaten met Microsoft Intune](../apps/apps-add-office365-macos.md) voor meer informatie.

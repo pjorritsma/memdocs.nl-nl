@@ -10,12 +10,12 @@ ms.assetid: 1fcc921f-085f-4b0b-9c53-1e0707211076
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f6d3f6dbbbb407ee63eb8253cbf3ca740a10479c
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: b419f313b9d4d300d286cf32605ebfe7e0e1573c
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699786"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068052"
 ---
 # <a name="additional-information-about-privacy-for-configuration-manager"></a>Aanvullende informatie over privacy voor Configuration Manager
 
@@ -88,6 +88,9 @@ Zie [Endpoint Protection](../../../protect/deploy-use/endpoint-protection.md)voo
 
 
 ## <a name="site-hierarchy--geographical-view-with-bing-maps"></a>Sitehiërarchie – Geografische weergave met Bing Maps
+
+> [!IMPORTANT]
+> Vanaf 2020 augustus is deze functie afgeschaft. Gebruik de optie **hiërarchie diagram** .<!--8116777-->
 
 Ga in de Configuration Manager-console naar de werk ruimte **bewaking** , selecteer het knoop punt **site hiërarchie** en schakel over naar de **geografische weer gave**. Met deze weer gave kunt u kaarten gebruiken die micro soft Bing Maps biedt om uw Configuration Manager fysieke server topologie weer te geven. Om deze functie in te scha kelen, wordt de locatie-informatie die u opgeeft van uw server naar de Bing Maps-webservice verzonden.
 

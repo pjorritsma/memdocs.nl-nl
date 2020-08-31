@@ -10,12 +10,12 @@ ms.assetid: 007dbb73-18a7-48a3-a489-97cf9fc4f140
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 66fc6744ef7d1aaf90a5e7339cc9a5174c0d33f6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 504943df58c0471a0ef821a269cc22b2d12d76d8
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713700"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068035"
 ---
 # <a name="monitor-the-hierarchy"></a>De hiërarchie bewaken
 
@@ -52,7 +52,7 @@ Als u sites controleert, zoekt u tekens die duiden op problemen waarvoor u actie
 Als bewakings taken signalen van problemen onthullen, onderzoekt u de bron van het probleem. Herstel het vervolgens snel om het risico van een storing van een site te minimaliseren.  
 
 
-## <a name="monitor-common-management-tasks"></a><a name="BKMK_MonintorMgmtTasks"></a>Algemene beheer taken bewaken
+## <a name="monitor-common-management-tasks"></a><a name="BKMK_MonintorMgmtTasks"></a> Algemene beheer taken bewaken
 
 Configuration Manager biedt ingebouwde bewaking vanuit de Configuration Manager-console.
 
@@ -99,13 +99,9 @@ Zie [app-gebruik controleren met software meter](../../../apps/deploy-use/monito
 Zie [software-updates bewaken](../../../sum/deploy-use/monitor-software-updates.md)voor meer informatie.  
 
 
-## <a name="monitor-the-site-hierarchy"></a><a name="BKMK_SH_Node"></a>De site hiërarchie bewaken
+## <a name="monitor-the-site-hierarchy"></a><a name="BKMK_SH_Node"></a> De site hiërarchie bewaken
 
-Het knoop punt **site hiërarchie** van de werk ruimte **bewaking** biedt u een overzicht van uw Configuration Manager hiërarchie en intersite-koppelingen. U kunt twee weergaven gebruiken:  
-
-- **Hiërarchie diagram**: geeft uw hiërarchie weer als een vereenvoudigde topologie kaart waarin alleen essentiële informatie wordt weer gegeven. Zie [hiërarchie diagram](#hierarchy-diagram)voor meer informatie.  
-
-- **Geografische weer gave**: hier worden uw sites op een geografische kaart weer gegeven met site locaties die u configureert. Zie [geografische weer gave](#geographical-view)voor meer informatie.  
+Het knoop punt **site hiërarchie** van de werk ruimte **bewaking** biedt u een overzicht van uw Configuration Manager hiërarchie en intersite-koppelingen. 
 
 Gebruik het knoop punt **site hiërarchie** om de status van elke site te controleren. Bewaak ook de koppelingen voor intersitereplicatie en hun relatie met externe factoren, zoals een geografische locatie.  
 
@@ -123,13 +119,16 @@ De volgende opties wijzigen het hiërarchiediagram:
 
 #### <a name="groups"></a>Groepen
 
-Het aantal primaire sites en secundaire sites configureren die een wijziging activeren in het hiërarchie diagram. Met deze wijziging in de weer gave worden de sites gecombineerd in één object. Vervolgens ziet u het totaal aantal sites en een Rollup van status berichten en de status van de site. Groeps configuraties hebben geen invloed op de geografische weer gave.  
+Het aantal primaire sites en secundaire sites configureren die een wijziging activeren in het hiërarchie diagram. Met deze wijziging in de weer gave worden de sites gecombineerd in één object. Vervolgens ziet u het totaal aantal sites en een Rollup van status berichten en de status van de site.
 
 #### <a name="favorite-sites"></a>Favoriete sites
 
 Geef afzonderlijke sites op als favoriete site. Een ster-icoontje identificeert een favoriete site in het hiërarchiediagram. Favoriete sites worden niet gecombineerd met andere sites wanneer u groepen gebruikt. Ze worden altijd afzonderlijk weer gegeven.  
 
 ### <a name="geographical-view"></a>Geografische weergave
+
+> [!IMPORTANT]
+> Vanaf 2020 augustus is deze functie afgeschaft. Gebruik de optie **hiërarchie diagram** .<!--8116777-->
 
 De geografische weergave toont de locatie van elke site op een geografische kaart. Alleen de sites die u met een locatie configureert worden weer gegeven. Wanneer u een site in deze weer gave selecteert, worden de replicatie koppelingen naar bovenliggende of onderliggende sites weer gegeven. In tegens telling tot de weer gave hiërarchie diagram kunt u geen site status bericht of Details van replicatie koppelingen weer geven in deze weer gave.  
 

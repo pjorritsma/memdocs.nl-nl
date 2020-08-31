@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/12/2020
+ms.date: 08/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a82fbfa9e494828450729e29467580c29a590282
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: 3a23db0f04895bda6f187e466965a959c891f1ad
+ms.sourcegitcommit: 19ef60175cbfd5c5d1e213a6d64eded34ee42041
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179550"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88725431"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>De Intune-bedrijfsportal-apps, de bedrijfsportalwebsite en de Intune-app aanpassen
 
@@ -45,7 +45,7 @@ De volgende tabel bevat de gegevens voor huismerkaanpassing voor de eindgebruike
 | **Weergeven in koptekst** | Selecteer of de koptekst in de ervaring voor de eindgebruiker **Bedrijfslogo en -naam**, **Alleen organisatielogo** of **Alleen organisatienaam** moet weergeven. In de onderstaande voorbeelden worden alleen de logo's weergegeven, niet de naam.  |
 | **Logo uploaden voor achtergrondkleur van thema​** | Upload het logo dat u wilt weergeven tegen de achtergrondkleur van het geselecteerde thema. Voor de beste weergave uploadt u een logo met een transparante achtergrond. In het voorbeeldvak onder de instelling kunt u zien hoe dit er uitziet.<p>Maximale afbeeldingsgrootte: 400 x 400 px<br>Maximale bestandsgrootte:   750 KB<br>Bestandstype: PNG, JPG of JPEG |
 | **Logo uploaden voor witte of lichte achtergrond​** | Upload het logo dat u wilt weergeven tegen een witte of lichtgekleurde achtergrond. Voor de beste weergave uploadt u een logo met een transparante achtergrond. In het voorbeeldvak onder de instelling kunt u zien hoe dit er uitziet tegen een witte achtergrond.<p>Maximale afbeeldingsgrootte: 400 x 400 px<br>Maximale bestandsgrootte: 750 KB<br>Bestandstype: PNG, JPG of JPEG |
-| **Merkafbeelding uploaden​** | Upload een afbeelding die het merk van uw organisatie weergeeft.<p><ul><li>Aanbevolen breedte van afbeelding: Groter dan 1125 pixels (minimaal 650 pixels vereist)</li><li>Maximale afbeeldingsgrootte: 1,3 MB</li><li>Bestandstype: PNG, JPG of JPEG</li><li>Deze wordt weergegeven op de volgende locaties:</li><ul><li>Bedrijfsportal voor iOS/iPadOS: Achtergrondafbeelding op de profielpagina van de gebruiker.</li><li>Bedrijfsportalwebsite:   Achtergrondafbeelding op de profielpagina van de gebruiker.</li><li>Intune-app voor Android: In de lade en als achtergrondafbeelding op de profielpagina van de gebruiker.</li></ul></ul> |
+| **Merkafbeelding uploaden​** | Upload een afbeelding die het merk van uw organisatie weergeeft.<p><ul><li>Aanbevolen breedte van afbeelding: Groter dan 1125 pixels (minimaal 650 pixels vereist)</li><li>Maximale afbeeldingsgrootte: 1,3 MB</li><li>Bestandstype: PNG, JPG of JPEG</li><li>Deze wordt weergegeven op de volgende locaties:</li><ul><li>Bedrijfsportal voor iOS/iPadOS: Achtergrondafbeelding op de profielpagina van de gebruiker.</li><li>Windows-bedrijfsportal: Achtergrondafbeelding op de profielpagina van de gebruiker.</li><li>Bedrijfsportalwebsite:   Achtergrondafbeelding op de profielpagina van de gebruiker.</li><li>Intune-app voor Android: In de lade en als achtergrondafbeelding op de profielpagina van de gebruiker.</li></ul></ul> |
 
 > [!NOTE]
 > Wanneer een gebruiker een iOS/iPadOS-toepassing installeert vanuit de bedrijfsportal wordt er een prompt weergegeven. Dit doet zich voor wanneer de iOS/iPadOS-app is gekoppeld aan de App Store, aan een volume-aankoopprogramma (VPP) of aan een Line-Of-Business-app (LOB). Met de prompt kunnen gebruikers de actie accepteren of het beheer van de app toestaan. In de prompt wordt uw bedrijfsnaam weergegeven. Wanneer uw bedrijfsnaam niet beschikbaar is, wordt **Bedrijfsportal** weergegeven.
@@ -133,7 +133,12 @@ De volgende tabel bevat specifieke configuratiedetails voor meldingen:
 
 ### <a name="app-sources"></a>App-bronnen
 
-U kunt kiezen welke extra app-bronnen worden weergegeven in Bedrijfsportal. De volgende tabel bevat specifieke configuratiedetails voor app-bronnen:
+U kunt kiezen welke extra app-bronnen worden weergegeven in Bedrijfsportal.
+
+> [!NOTE]
+> De bedrijfsportal biedt ondersteuning voor Configuration Manager-toepassingen. Met deze functie kunnen eindgebruikers zowel Configuration Manager-toepassingen als met Intune geïmplementeerde toepassingen zien in de bedrijfsportal voor co-beheerde klanten. Zie [De bedrijfsportal-app configureren op co-beheerde apparaten](/mem/configmgr/comanage/company-portal) voor meer informatie.
+
+De volgende tabel bevat specifieke configuratiedetails voor app-bronnen:
 
 | Veldnaam | Maximale lengte | Meer informatie |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -149,7 +154,7 @@ U kunt **Azure AD-ondernemingstoepassingen** en **Office Online-toepassingen** i
 
 ### <a name="customizing-user-self-service-actions-for-the-company-portal"></a>Self-serviceacties voor de gebruiker aanpassen voor de Bedrijfsportal
 
-U kunt de beschikbare self-serviceapparaatacties aanpassen die worden weergegeven aan eindgebruikers in de bedrijfsportal-app en -website. Als u onbedoelde apparaatacties wilt helpen voorkomen, kunt u instellingen configureren voor de Bedrijfsportal-app door **Tenantbeheer** > **Aanpassing** te selecteren. 
+U kunt de beschikbare self-serviceapparaatacties aanpassen die worden weergegeven aan eindgebruikers in de bedrijfsportal-app en -website. Als u onbedoelde apparaatacties wilt helpen voorkomen, kunt u instellingen configureren voor de Bedrijfsportal-app door **Tenantbeheer** > **Aanpassing** te selecteren.
 
 Hiervoor zijn de volgende opties beschikbaar:
 - Knop **Verwijderen** verbergen op zakelijke Windows-apparaten.
@@ -158,7 +163,7 @@ Hiervoor zijn de volgende opties beschikbaar:
 - Knop **Opnieuw instellen** verbergen op zakelijke iOS/iPadOS-apparaten.
 
 > [!NOTE]
-> Deze acties kunnen worden gebruikt om apparaatacties in de Bedrijfsportal-app en op de website te beperken zonder een restrictiebeleid voor apparaten te implementeren. Als u wilt voorkomen dat gebruikers de fabrieksinstellingen opnieuw instellen of MDM verwijderen, moet u een restrictiebeleid voor apparaten configureren. 
+> Deze acties kunnen worden gebruikt om apparaatacties in de Bedrijfsportal-app en op de website te beperken zonder een restrictiebeleid voor apparaten te implementeren. Als u wilt voorkomen dat gebruikers de fabrieksinstellingen opnieuw instellen of MDM verwijderen, moet u een restrictiebeleid voor apparaten configureren.
 
 ## <a name="opening-web-company-portal-applications"></a>Online bedrijfsportal-apps openen
 Als de eindgebruiker de Bedrijfsportal-app heeft geïnstalleerd voor online bedrijfsportaltoepassingen, zien eindgebruikers een dialoogvenster waarin wordt gevraagd hoe ze de toepassing willen openen wanneer ze deze buiten de browser openen. Als de app zich niet in het pad van de bedrijfsportal bevindt, zal de bedrijfsportal de startpagina openen. Als de app zich in het pad bevindt, wordt de specifieke app door de bedrijfsportal geopend. 

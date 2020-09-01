@@ -2,11 +2,11 @@
 
 ## [Wat is apparaatinschrijving?](use-managed-devices-to-get-work-done.md)
 
-## [Welke gegevens kan mijn bedrijf zien met Intune?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
+## [Welke informatie kan mijn organisatie zien?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
 
 ## [Vereisten voor het apparaatwachtwoord](password-does-not-meet-it-administrator-requirements.md)
 
-## [Aanmelden bij de bedrijfsportal](sign-in-to-the-company-portal.md)  
+## [De bedrijfsportal openen](sign-in-to-the-company-portal.md)  
 
 ## [Mobile Threat Defense-app installeren](set-up-mobile-threat-defense.md)  
 
@@ -64,7 +64,6 @@
 
 ## [Uw iOS-apparaat gebruiken](using-your-iOS-device-with-intune.md)
 ### [Gevolgen van het opnieuw instellen van iOS-apparaten](effects-of-device-reset-company-portal-ios.md)
-### [De bedrijfsportal-app installeren en u hierbij aanmelden](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
 ### Uw apparaat inschrijven
 #### [iOS-apparaten inschrijven](enroll-your-device-in-intune-ios.md)
 #### [Het door de organisatie verstrekte iOS-apparaat inschrijven](enroll-your-device-dep-ios.md)
@@ -143,7 +142,7 @@
 #### [Logboeken van de bedrijfsportal-app verzenden](send-logs-to-your-it-admin-cp-windows.md)
 #### [Logboeken van de Apparaatinstellingen-app verzenden](send-logs-to-your-it-admin-settings-windows.md)
 #### [Mijn versie van Windows wordt niet ondersteund](your-windows-version-isnt-yet-supported.md)
-#### [Office 365 installeren op mijn Windows 10-apparaat](install-office-windows.md)
+#### [Office installeren op mijn Windows 10-apparaat](install-office-windows.md)
 #### [Mijn apparaat moet worden versleuteld](you-need-to-enable-windows-encryption.md)
 #### [Mijn apparaat heeft antimalware-software nodig](your-device-needs-antimalware-software.md)
 #### [Beveiligd opstarten inschakelen](you-need-to-enable-secure-boot-windows.md)

@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 05ed0daf56275b2e0ed46b2f9dd93fd66eb360be
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 2ab05abee2889259cc6c92e9081e4d10e2123923
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995531"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193746"
 ---
 # <a name="capabilities-in-technical-preview-1609-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1609 voor Configuration Manager
 
@@ -347,7 +347,7 @@ In het dash board worden grafieken weer gegeven voor het volgende:
 - Office 365-client versies
 - Office 365-client talen
 - Office 365-client kanalen     
-Zie [Overzicht van updatekanalen voor Microsoft 365-apps](https://docs.microsoft.com/deployoffice/overview-update-channels) voor meer informatie.
+Zie [Overzicht van updatekanalen voor Microsoft 365-apps](/deployoffice/overview-update-channels) voor meer informatie.
 - Automatische implementatie regels waarbij Office 365-client is geselecteerd in de set beschik bare producten.
 
 U kunt de volgende acties uitvoeren op het dash board:

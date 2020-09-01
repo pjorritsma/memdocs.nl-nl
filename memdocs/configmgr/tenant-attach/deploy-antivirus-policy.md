@@ -10,12 +10,12 @@ ms.assetid: 07379821-02b3-4c61-af03-329c782e10d6
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: d09b519bfc116afd397d455c6a03a8748f9303cd
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 214a1ebc6b943edac194f27ee4aa539001026aaf
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88827019"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194209"
 ---
 # <a name="tenant-attach-create-and-deploy-endpoint-security-antivirus-policy-from-the-admin-center-preview"></a><a name="bkmk_atp"></a> Tenant bijvoegen: beveiligings beleid voor Endpoint Security maken en implementeren vanuit het beheer centrum (preview-versie)
 <!--5691658-->
@@ -30,7 +30,7 @@ Micro soft Endpoint Manager is een geïntegreerde oplossing voor het beheer van 
 ## <a name="prerequisites"></a>Vereisten
 
 - Toegang tot het [micro soft Endpoint Manager-beheer centrum](https://endpoint.microsoft.com/).
-- Een E5-licentie voor [micro soft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements#licensing-requirements).
+- Een E5-licentie voor [micro soft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements#licensing-requirements).
 - Een omgeving waaraan een [Tenant is gekoppeld met geüploade apparaten](device-sync-actions.md).
 - Mini maal Configuration Manager versie 2006 en de bijbehorende versie van de console zijn geïnstalleerd.
    - Voer een upgrade uit voor de doel apparaten naar de nieuwste versie van de Configuration Manager-client.

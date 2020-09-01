@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 7f6cc0caf4df54196dbdb1859a69f19b3bbcacaa
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: a7b61e1a609e0693ffcd30f3f7dc931f4cb38eef
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995480"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193635"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1511 voor Configuration Manager
 
@@ -67,7 +67,7 @@ Wanneer micro soft een nieuwe Microsoft 365 bureau blad-client update publiceert
 
 4. U kunt naleving voor Microsoft 365-updates controleren met behulp van de controle of rapporten in de console.  
 
-   Zie [Microsoft 365-client updates beheren met Configuration Manager Technical Preview](https://docs.microsoft.com/deployoffice/manage-microsoft-365-apps-updates-configuration-manager)voor gedetailleerde stappen.  
+   Zie [Microsoft 365-client updates beheren met Configuration Manager Technical Preview](/deployoffice/manage-microsoft-365-apps-updates-configuration-manager)voor gedetailleerde stappen.  
 
 ##  <a name="support-for-sql-server-alwayson-for-highly-available-databases"></a><a name="BKMK_AlwasyOn"></a> Ondersteuning voor SQL Server AlwaysOn voor Maxi maal beschik bare data bases  
  Configuration Manager ondersteunt nu het gebruik van een SQL Server AlwaysOn-beschikbaarheids groepen voor het hosten van de site database.  Wanneer u een nieuwe site installeert, kunt u instellen dat de beschikbaarheids groep wordt gebruikt in plaats van een normaal exemplaar van SQL Server.  

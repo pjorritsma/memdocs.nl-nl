@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
-ms.openlocfilehash: 0425b937062acd96b8df66df38ec53a04e91b4de
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 08261c51170e110dff40ebaaf7699c631ceda7e7
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995225"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193712"
 ---
 # <a name="co-management-workloads"></a>Werk belastingen voor co-beheer
 
@@ -112,7 +112,7 @@ Deze workload beheert Microsoft 365-apps op gezamenlijk beheerde apparaten.
 
 - Er is een nieuwe globale voor waarde, **zijn Office 365-toepassingen die worden beheerd door intune op het apparaat**. Deze voor waarde wordt standaard toegevoegd als vereiste voor nieuwe Microsoft 365-toepassingen. Wanneer u deze werk belasting overstapt, voldoen gezamenlijk beheerde clients niet aan de vereiste voor de toepassing. Vervolgens installeren ze Microsoft 365 geïmplementeerd via Configuration Manager.  
 
-Zie voor meer informatie over de intune-functie [Microsoft 365-apps toewijzen aan Windows 10-apparaten met Microsoft intune](https://docs.microsoft.com/intune/apps-add-office365).
+Zie voor meer informatie over de intune-functie [Microsoft 365-apps toewijzen aan Windows 10-apparaten met Microsoft intune](/intune/apps-add-office365).
 
 ## <a name="client-apps"></a>Client-apps
 

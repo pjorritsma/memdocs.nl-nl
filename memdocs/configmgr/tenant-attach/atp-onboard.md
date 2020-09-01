@@ -10,12 +10,12 @@ ms.assetid: 50f8e206-a2af-469a-9f1b-0f7a87166f48
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: a17d6fb437f83ae14895e8dd6d081ee4b6bd80fb
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: a2862812145e33a992ceaa346e138606eee5fad0
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88827028"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194216"
 ---
 # <a name="tenant-attach-onboard-configuration-manager-clients-to-microsoft-defender-atp-from-the-admin-center-preview"></a><a name="bkmk_atp"></a> Tenant bijvoegen: Configuration Manager-clients onboarden naar micro soft Defender ATP vanuit het beheer centrum (preview-versie)
 <!--5691658-->
@@ -29,14 +29,14 @@ Micro soft Endpoint Manager is een geïntegreerde oplossing voor het beheer van 
 ## <a name="prerequisites"></a>Vereisten
 
 - Toegang tot het [micro soft Endpoint Manager-beheer centrum](https://endpoint.microsoft.com/).
-- Een E5-licentie voor [micro soft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements#licensing-requirements).
+- Een E5-licentie voor [micro soft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements#licensing-requirements).
 - Een omgeving waaraan een [Tenant is gekoppeld met geüploade apparaten](device-sync-actions.md).
 - Mini maal Configuration Manager versie 2006 en de bijbehorende versie van de console zijn geïnstalleerd.
    - Voer een upgrade uit voor de doel apparaten naar de nieuwste versie van de Configuration Manager-client.
 
 ## <a name="make-configuration-manager-collections-available-to-assign-endpoint-security-policies"></a><a name="bkmk_collections"></a> Configuration Manager verzamelingen beschikbaar maken voor het toewijzen van endpoint-beveiligings beleidsregels
 
-Wanneer u verzamelingen van apparaten in intune inschakelt voor het gebruik van endpoint-beveiligings beleidsregels, configureert u apparaten in die verzamelingen voor onboarding met micro soft Defender ATP.
+Als u verzamelingen van apparaten in Intune in staat stelt om met eindpuntbeveiligingsbeleid Intune te werken, configureert u apparaten in die verzamelingen voor onboarding met Microsoft Defender ATP.
 
 [!INCLUDE [Enable endpoint security policies for a Configuration Manager collection](../../intune/protect/includes/make-configmgr-collection-available-edr.md)]
 

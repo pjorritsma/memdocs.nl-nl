@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
 ROBOTS: NOINDEX
-ms.openlocfilehash: 484b1d808484984b4beaf434c0c27f2f1bec4e10
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 2d431f744ab09aeb938a7961ebf713f71c0f8015
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995191"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193679"
 ---
 # <a name="ready-for-modern-desktop-retirement-faq"></a>Veelgestelde vragen over het voorbereiden van moderne Desktop-pensioen
 
@@ -49,7 +49,7 @@ Veel klanten hebben problemen met het ophalen en blijven actueel zijn met Window
 
 De lijst met kant-en- *klare bureau blad* -software oplossingen die worden ondersteund en in gebruik zijn op commerciële apparaten met Windows 10 en Microsoft 365-apps voor bedrijven. De Directory helpt IT-managers die de nieuwste versies van Windows 10 en Microsoft 365 voor hun implementaties overwegen.
 
-Feedback van IT-managers is dat ze deze inzichten willen integreren met de hulpprogram ma's die ze al gebruiken om hun implementatie plannen te plannen. Gebruik de functies van [bureau blad Analytics](https://aka.ms/dadocs) en [Microsoft 365 apps](https://docs.microsoft.com/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) in Configuration Manager om uw Windows 10-en Microsoft 365-apps te plannen en te beheren voor Enter prise-upgrade projecten. 
+Feedback van IT-managers is dat ze deze inzichten willen integreren met de hulpprogram ma's die ze al gebruiken om hun implementatie plannen te plannen. Gebruik de functies van [bureau blad Analytics](https://aka.ms/dadocs) en [Microsoft 365 apps](/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) in Configuration Manager om uw Windows 10-en Microsoft 365-apps te plannen en te beheren voor Enter prise-upgrade projecten. 
 
 > [!Note]
 > Vanaf 21 april 2020, wordt de naam van Office 365 ProPlus gewijzigd in **Microsoft 365 apps voor bedrijven**. Zie [name wijzigen voor Office 365 ProPlus](/deployoffice/name-change)voor meer informatie. Mogelijk ziet u nog steeds verwijzingen naar de oude naam in de Configuration Manager-console en de ondersteunende documentatie terwijl de-console wordt bijgewerkt.
@@ -122,4 +122,4 @@ Evalueer de prestaties van uw oplossingen met rapporten over de status en de met
 
 Zorg ervoor dat uw desktop toepassingen nu compatibel zijn en blijf in de toekomst compatibel met Windows 10. Zie [toepassings compatibiliteit voor ontwikkel aars](https://developer.microsoft.com/windows/desktop/app-compatibility)voor meer informatie.
 
-Zie [Aanbevolen procedures voor het ontwikkelen van com-, VSTO-en VBA-invoeg toepassingen in Office](https://docs.microsoft.com/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office)voor meer informatie over het ontwikkelen van oplossingen voor Microsoft 365-apps voor bedrijven.
+Zie [Aanbevolen procedures voor het ontwikkelen van com-, VSTO-en VBA-invoeg toepassingen in Office](/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office)voor meer informatie over het ontwikkelen van oplossingen voor Microsoft 365-apps voor bedrijven.

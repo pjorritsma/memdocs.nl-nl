@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 54794a575cda4197bc11160d1c5e374d06c143c6
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 78150c497757c1a3f0b65a870c35516983711d9a
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995242"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193824"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 1902 van Configuration Manager current branch
 
@@ -351,7 +351,7 @@ Gebruik Configuration Manager om bekende mappen van Windows te verplaatsen naar 
 
 Zie [Windows bekende mappen omleiden en verplaatsen naar OneDrive](/onedrive/redirect-known-folders)voor meer informatie over deze functie van OneDrive voor bedrijven.
 
-Zoek eerst [de Tenant-id van Microsoft 365](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id). Implementeer vervolgens de OneDrive Sync Client versie 18.111.0603.0004 of hoger. Zie voor meer informatie [OneDrive-Apps implementeren met behulp van Configuration Manager](https://docs.microsoft.com/onedrive/deploy-on-windows).  
+Zoek eerst [de Tenant-id van Microsoft 365](/onedrive/find-your-office-365-tenant-id). Implementeer vervolgens de OneDrive Sync Client versie 18.111.0603.0004 of hoger. Zie voor meer informatie [OneDrive-Apps implementeren met behulp van Configuration Manager](/onedrive/deploy-on-windows).  
 
 Als u een OneDrive voor bedrijven-profiel wilt maken en implementeren, gaat u in de Configuration Manager-console naar de werk ruimte **activa en naleving** . Vouw **instellingen voor naleving**uit en selecteer het knoop punt **voor OneDrive voor bedrijven-profielen** .  
 

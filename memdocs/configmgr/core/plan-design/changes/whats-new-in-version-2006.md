@@ -2,7 +2,7 @@
 title: Wat is er nieuw in versie 2006
 titleSuffix: Configuration Manager
 description: Krijg informatie over wijzigingen en nieuwe mogelijkheden die zijn geïntroduceerd in versie 2006 van Configuration Manager current branch.
-ms.date: 08/20/2020
+ms.date: 08/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: fc12c81a1ec58d17580b91e21a1ba7d2e0cb0cbc
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: c507879a77e57a0a06fe9528417394bcbf643608
+ms.sourcegitcommit: 68631e0f7d5bd09ae0ee9dc301a561ee9df10931
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819674"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89244994"
 ---
 # <a name="whats-new-in-version-2006-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 2006 van Configuration Manager current branch
 
@@ -363,9 +363,9 @@ The following additional hotfixes are available to address specific issues:
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Op dit moment wordt versie 2006 uitgebracht voor de vroege update ring. Als u deze update wilt installeren, moet u zich aanmelden. Zie [early update ring](../../servers/manage/checklist-for-installing-update-2006.md#early-update-ring)voor meer informatie.
+<!-- At this time, version 2006 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2006.md#early-update-ring). -->
 
-<!-- As of May 11, 2020, version 2006 is globally available for all customers to install. -->
+Vanaf 31 augustus 2020 is versie 2006 wereld wijd beschikbaar voor alle klanten die moeten worden geïnstalleerd.
 
 Wanneer u klaar bent om deze versie te installeren, raadpleegt u [updates voor Configuration Manager](../../servers/manage/updates.md) en [controle lijst voor het installeren van update 2006](../../servers/manage/checklist-for-installing-update-2006.md).
 

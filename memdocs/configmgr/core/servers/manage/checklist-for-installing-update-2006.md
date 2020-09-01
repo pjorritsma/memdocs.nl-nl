@@ -2,7 +2,7 @@
 title: Controle lijst voor 2006
 titleSuffix: Configuration Manager
 description: Meer informatie over de acties die u moet uitvoeren voordat u bijwerkt naar Configuration Manager versie 2006.
-ms.date: 08/17/2020
+ms.date: 08/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6d359306-69ae-4873-ba90-964b6ae51d79
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 05264780ef3971a7aa8b2d1778f0fe27c90b0b71
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 842264dcbbf93be623f68854b158d33c2f505928
+ms.sourcegitcommit: 68631e0f7d5bd09ae0ee9dc301a561ee9df10931
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696460"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89244993"
 ---
 # <a name="checklist-for-installing-update-2006-for-configuration-manager"></a>Controle lijst voor het installeren van update 2006 voor Configuration Manager
 
@@ -68,36 +68,38 @@ De eerste keer dat u een Configuration Manager-console gebruikt nadat de update 
 
 <!-- SCCMDocs#1397 -->
 
-<!-- As of May 11, 2020, version 2006 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version. -->
+Vanaf 31 augustus 2020 is versie 2006 wereld wijd beschikbaar voor alle klanten die moeten worden geïnstalleerd. Als u zich eerder hebt aangemeld bij de vroege update ring, kijkt u naar een update voor deze huidige vertakkings versie.
 
-Op dit moment wordt versie 2006 uitgebracht voor de vroege update ring. Als u deze update wilt installeren, moet u zich aanmelden. Met het volgende Power shell-script wordt uw hiërarchie of zelfstandige primaire site toegevoegd aan de vroege update ring voor versie 2006:
+<!--
+At this time, version 2006 is released for the early update ring. To install this update, you need to opt-in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2006:
 
-[Script voor versie 2006 opt-in](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
+[Version 2006 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target --
 
-Micro soft ondertekent het script digitaal en bundelt dit in een ondertekend zelfuitpakkend uitvoerbaar bestand.
+Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable.
 
 > [!NOTE]
-> Update versie 2006 is alleen van toepassing op sites waarop versie 1810 of hoger wordt uitgevoerd.
+> The version 2006 update is only applicable to sites running version 1810 or later.
 
-Om u aan te melden voor de eerste update ring:
+To opt-in to the early update ring:
 
-1. Een Windows Power shell versie 5-sessie openen **als beheerder**
+1. Open a Windows PowerShell version 5 session **as administrator**
 
     > [!IMPORTANT]
-    > Configuration Manager huidige vertakking biedt momenteel geen ondersteuning voor Power shell-versie 7. Als u Power shell versie 7 al hebt geïnstalleerd, kunt u nog steeds Power shell versie 5 gebruiken. Zie [using Power shell 7 side-by-side with Windows Power shell 5,1](/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7#using-powershell-7-side-by-side-with-windows-powershell-51)(Engelstalig) voor meer informatie.
+    > Configuration Manager current branch doesn't currently support PowerShell version 7. If you've already installed PowerShell version 7, you can still use PowerShell version 5. For more information, see [Using PowerShell 7 side-by-side with Windows PowerShell 5.1](/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7#using-powershell-7-side-by-side-with-windows-powershell-51).
 
-1. Voer het **EnableEarlyUpdateRing2006.ps1** script uit met de volgende syntaxis:
+1. Run the **EnableEarlyUpdateRing2006.ps1** script, using the following syntax:
 
     `EnableEarlyUpdateRing2006.ps1 <SiteServer_Name> | SiteServer_IP>`
 
-    Waar `SiteServer` verwijst naar de centrale beheer site of de zelfstandige primaire site server. Bijvoorbeeld: `EnableEarlyUpdateRing2006.ps1 cmprimary01`
+    Where `SiteServer` refers to the central administration site or standalone primary site server. For example, `EnableEarlyUpdateRing2006.ps1 cmprimary01`
 
-1. Controleren op updates. Zie [beschik bare updates ophalen](install-in-console-updates.md#get-available-updates)voor meer informatie.
+1. Check for updates. For more information, see [Get available updates](install-in-console-updates.md#get-available-updates).
 
-De update versie 2006 is nu beschikbaar in de-console.
+The version 2006 update should now be available in the console.
 
 > [!IMPORTANT]
-> Met dit script wordt de site alleen toegevoegd aan de vroege update ring voor versie 2006. Het is geen permanente wijziging.
+> This script only adds your site to the early update ring for version 2006. It's not a permanent change.
+-->
 
 ## <a name="checklist"></a>Controlelijst
 

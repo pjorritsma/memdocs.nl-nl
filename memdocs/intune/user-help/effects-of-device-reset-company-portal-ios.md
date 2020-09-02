@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1acbb00e5da0766685233cf7136caf8320564200
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 199bd8f267cc84492b21af83bf0761474080f11b
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878090"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913406"
 ---
 # <a name="effects-of-company-portal-ios-device-reset"></a>Effecten van het opnieuw instellen van een iOS-apparaat in de bedrijfsportal 
 
@@ -42,6 +42,6 @@ Als uw apparaat alleen is ingesteld voor toegang tot e-mail van werk of school:
 
 - Uw e-mailaccount van werk of school wordt verwijderd. Niet-opgeslagen e-mailberichten worden verwijderd.   
 
-De optie voor het opnieuw instellen van het apparaat is niet beschikbaar voor alle iOS-apparaten. Als u een IT-ondersteuningsmedewerker bent en meer wilt weten over deze beperkingen, raadpleegt u [Apparaten verwijderen door het apparaat te wissen, buiten gebruik te stellen of de inschrijving ervan handmatig ongedaan te maken](https://docs.microsoft.com/intune/devices-wipe).  
+De optie voor het opnieuw instellen van het apparaat is niet beschikbaar voor alle iOS-apparaten. Als u een IT-ondersteuningsmedewerker bent en meer wilt weten over deze beperkingen, raadpleegt u [Apparaten verwijderen door het apparaat te wissen, buiten gebruik te stellen of de inschrijving ervan handmatig ongedaan te maken](/intune/devices-wipe).  
 
 Neem contact op met uw IT-ondersteuningsmedewerker als u vragen hebt. Controleer of de contactgegevens beschikbaar zijn op de [bedrijfsportalwebsite](https://go.microsoft.com/fwlink/?linkid=2010980).

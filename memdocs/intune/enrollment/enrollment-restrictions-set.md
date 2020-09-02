@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b056eb0bab2416a87f443c025a76c22b580ed3c9
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: f13be3c277605f11a1b16e9bcd3484cf4cdc7027
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252438"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907039"
 ---
 # <a name="set-enrollment-restrictions"></a>Registratiebeperkingen instellen
 
@@ -122,7 +122,7 @@ Bij BYOD-registraties wordt er een melding aan gebruikers weergegeven waarin sta
 > - Inschrijvingen met Apparaatinschrijvingsmanager
 >
 > Apparaatlimietbeperkingen worden niet afgedwongen voor deze inschrijvingstypen, omdat ze worden beschouwd als gedeelde apparaten.
-> U kunt [in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#configure-device-settings) vaste limieten instellen voor deze typen inschrijvingen.
+> U kunt [in Azure Active Directory](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings) vaste limieten instellen voor deze typen inschrijvingen.
 
 
 ## <a name="change-enrollment-restrictions"></a>Inschrijvingsbeperkingen wijzigen
@@ -144,19 +144,19 @@ Als u uw eigen Windows-apparaten blokkeert voor inschrijving, wordt door Intune 
 
 De volgende methoden worden gezien als een zakelijke Windows-registratie:
 - De ingeschreven gebruiker maakt gebruik van [een apparaatinschrijvingsmanageraccount]( device-enrollment-manager-enroll.md).
-- Het apparaat is ingeschreven via [Windows AutoPilot](enrollment-autopilot.md).
+- Het apparaat is ingeschreven via [Windows AutoPilot](../../autopilot/enrollment-autopilot.md).
 - Het apparaat wordt met Windows Autopilot geregistreerd, maar is geen Alleen MDM-inschrijving-optie van Windows-instellingen.
 - Het IMEI-nummer van het apparaat wordt vermeld onder **Apparaatinschrijving** >  **[Zakelijke apparaat-id's](corporate-identifiers-add.md)** .
 - Het apparaat is geregistreerd via een [pakket voor bulkinrichting](windows-bulk-enroll.md).
-- Het apparaat is geregistreerd via GPO, of er is sprake van [automatische inschrijving met behulp van Configuration Manager voor co-beheer](https://docs.microsoft.com/configmgr/comanage/quickstart-paths#bkmk_path1).
+- Het apparaat is geregistreerd via GPO, of er is sprake van [automatische inschrijving met behulp van Configuration Manager voor co-beheer](/configmgr/comanage/quickstart-paths#bkmk_path1).
  
 De volgende inschrijvingen zijn door Intune gemarkeerd als zakelijk. Maar omdat ze de controle Intune-beheerder per apparaat niet aanbieden, worden ze geblokkeerd:
-- [Automatische MDM-inschrijving](windows-enroll.md#enable-windows-10-automatic-enrollment) met [Azure Active Directory-koppeling tijdens het instellen van Windows](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-frx)\*.
-- [Automatische MDM-inschrijving](windows-enroll.md#enable-windows-10-automatic-enrollment) met [Azure Active Directory-koppeling vanuit Windows-instellingen](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network)*.
+- [Automatische MDM-inschrijving](windows-enroll.md#enable-windows-10-automatic-enrollment) met [Azure Active Directory-koppeling tijdens het instellen van Windows](/azure/active-directory/device-management-azuread-joined-devices-frx)\*.
+- [Automatische MDM-inschrijving](windows-enroll.md#enable-windows-10-automatic-enrollment) met [Azure Active Directory-koppeling vanuit Windows-instellingen](/azure/active-directory/user-help/user-help-register-device-on-network)*.
  
 Ook de volgende persoonlijke registratiemethoden worden geblokkeerd:
-- [Automatische MDM-inschrijving](windows-enroll.md#enable-windows-10-automatic-enrollment) via [Werkaccount toevoegen vanuit de Windows-instellingen](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network)\*.
-- De optie [Alleen inschrijven voor MDM]( https://docs.microsoft.com/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device) in de Windows-instellingen.
+- [Automatische MDM-inschrijving](windows-enroll.md#enable-windows-10-automatic-enrollment) via [Werkaccount toevoegen vanuit de Windows-instellingen](/azure/active-directory/user-help/user-help-join-device-on-network)\*.
+- De optie [Alleen inschrijven voor MDM]( /windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device) in de Windows-instellingen.
 
 \* Deze worden niet geblokkeerd als ze zijn geregistreerd met Autopilot.
 

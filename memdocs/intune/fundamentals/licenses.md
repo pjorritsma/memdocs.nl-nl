@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fdf4fb6499299cd09fcac5673e252dd064120620
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: a447112bc721a87283210ca560b5d6bdbd38d26e
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764251"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912352"
 ---
 # <a name="microsoft-intune-licensing"></a>Licenties voor Microsoft Intune
 Microsoft Intune is beschikbaar voor verschillende klantbehoeften en organisatiegrootten, van een eenvoudig te gebruiken beheerervaring voor scholen en kleine bedrijven tot een meer geavanceerde functionaliteit die door zakelijke klanten wordt vereist. Zolang het abonnement actief is, verlenen de meeste licenties met Microsoft Intune ook rechten voor het gebruik van Microsoft Endpoint Configuration Manager. Er moet een licentie zijn toegewezen aan een beheerder om Intune te kunnen beheren.
@@ -48,7 +48,7 @@ Intune for Education is opgenomen in de volgende licenties:
 ## <a name="additional-information"></a>Aanvullende informatie
 - Naast de hierboven genoemde bundels is een Microsoft Intune-abonnement voor gebruikers en apparaten beschikbaar als zelfstandig abonnement.
 - Een abonnement voor uitsluitend Microsoft Intune-apparaten is beschikbaar voor het beheren van kiosken, toegewezen apparaten, apparaten in de telefoonkamer, IoT-apparaten en andere apparaten voor enkelvoudig gebruik waarvoor geen beveiligings- en beheerfuncties op basis van gebruikers zijn vereist.
-- De juiste Microsoft Intune-licentie wordt vereist als een gebruiker of apparaat direct of indirect profiteert van de Microsoft Intune-service, waaronder toegang tot de Microsoft Intune-service via een [Microsoft API](https://docs.microsoft.com/legal/microsoft-apis/terms-of-use).
+- De juiste Microsoft Intune-licentie wordt vereist als een gebruiker of apparaat direct of indirect profiteert van de Microsoft Intune-service, waaronder toegang tot de Microsoft Intune-service via een [Microsoft API](/legal/microsoft-apis/terms-of-use).
 - Intune is niet opgenomen in licenties die niet in de voorgaande tabellen staan.
 
 Ga naar de pagina met [Microsoft-licenties](https://www.microsoft.com/licensing/default) voor de meest recente informatie over productversies, updates van productlicenties, abonnementen voor volumelicenties en andere informatie met betrekking tot uw specifieke use-cases.  

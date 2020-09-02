@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4e917ca63bb671e8dfa46b280a4130051e75ef0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: dae87983f442661046fa48c63b5691f1bef48240
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79342904"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915888"
 ---
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Windows-pc's beheren als computers via de Intune-softwareclient
 
@@ -90,7 +90,7 @@ Hoewel de Intune-clientsoftware [beheermogelijkheden ondersteunt die helpen bij 
 
 Als u de Intune-clientsoftware gebruikt voor het beheer van Windows-pc's, kunt u alleen de beleidsregels gebruiken die worden weergegeven onder de sectie **Computerbeheer**.
 
-Intune beheert Windows-pc’s met beleidsregels, vergelijkbaar met de manier waarop Windows Server Active Directory Domain Services (AD DS) dat met groepsbeleidsobjecten doet. Als u Active Directory-computers die lid zijn van een domein wilt beheren met Intune, [zorgt u ervoor dat het Intune-beleid niet in strijd is met de groepsbeleidsobjecten](resolve-gpo-and-microsoft-intune-policy-conflicts.md) die in uw organisatie worden gebruikt. Zie [Groepsbeleid voor beginners](https://technet.microsoft.com/library/hh147307.aspx) voor meer informatie.
+Intune beheert Windows-pc’s met beleidsregels, vergelijkbaar met de manier waarop Windows Server Active Directory Domain Services (AD DS) dat met groepsbeleidsobjecten doet. Als u Active Directory-computers die lid zijn van een domein wilt beheren met Intune, [zorgt u ervoor dat het Intune-beleid niet in strijd is met de groepsbeleidsobjecten](resolve-gpo-and-microsoft-intune-policy-conflicts.md) die in uw organisatie worden gebruikt. Zie [Groepsbeleid voor beginners](/previous-versions/windows/it-pro/windows-7/hh147307(v=ws.10)) voor meer informatie.
 
   ![Een sjabloon selecteren voor een nieuw Windows pc-beleid](./media/manage-windows-pcs-with-microsoft-intune/select-template-for-pc-policy.png)
 

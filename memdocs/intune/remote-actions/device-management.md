@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a3c1b074e2fa35fa36bfb4f759ef348020c0dbed
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 0814fd11b2597c2a78dda70ba560e17fe2b742a1
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983235"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914358"
 ---
 # <a name="what-is-microsoft-intune-device-management"></a>Wat is Microsoft Intune-apparaatbeheer?
 
@@ -43,7 +43,7 @@ De workload **Apparaten** biedt inzicht in de apparaten die u beheert en biedt u
 
      Selecteer een apparaat om [meer informatie over dat apparaat weer te geven](device-inventory.md), zoals hardwaregegevens, geïnstalleerde apps en beleid.
 
-   - **Azure AD-apparaten** geeft een lijst weer met apparaten die zijn ingeschreven bij, of deel uitmaken van Azure Active Directory (Azure AD). Meer informatie over [Azure AD-apparaatbeheer](https://docs.microsoft.com/azure/active-directory/device-management-introduction).
+   - **Azure AD-apparaten** geeft een lijst weer met apparaten die zijn ingeschreven bij, of deel uitmaken van Azure Active Directory (Azure AD). Meer informatie over [Azure AD-apparaatbeheer](/azure/active-directory/device-management-introduction).
    - **Apparaatacties** bevat een geschiedenis van de acties op afstand die zijn uitgevoerd op verschillende apparaten, waarbij de actie, de status ervan, de persoon die de actie heeft gestart en het tijdstip worden vermeld.
 
      ![Schermafbeelding van acties voor het bewaken van apparaten](./media/device-management/monitor-device-actions.png)
@@ -57,7 +57,7 @@ De beschikbaarheid van de acties is afhankelijk van het apparaatplatform en de c
 
 - [Inventaris van apparaten weergeven](device-inventory.md)
 - Externe apparaatacties uitvoeren:
-  - [Autopilot opnieuw instellen](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)
+  - [Autopilot opnieuw instellen](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)
   - [BitLocker-sleutelrotatie](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys) (alleen Windows)
   - [Verwijderen](devices-wipe.md#delete-devices-from-the-intune-portal)
   - [Activeringsvergrendeling uitschakelen](device-activation-lock-disable.md) (alleen iOS)
@@ -72,7 +72,7 @@ De beschikbaarheid van de acties is afhankelijk van het apparaatplatform en de c
   - [Wachtwoordcode opnieuw instellen](device-passcode-reset.md)
   - [Opnieuw starten](device-restart.md) (alleen Windows)
   - [Buiten gebruik stellen](devices-wipe.md#retire)
-  - [Beveiligingsinformatie van Windows Defender bijwerken](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus)
+  - [Beveiligingsinformatie van Windows Defender bijwerken](/windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus)
   - [Windows 10-pincode opnieuw instellen](device-windows-pin-reset.md)
   - [Wissen](devices-wipe.md#wipe)
   - [Aangepaste meldingen verzenden](custom-notifications.md#send-a-custom-notification-to-a-single-device) (Android, iOS/iPadOS)

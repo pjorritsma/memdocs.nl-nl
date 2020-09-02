@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d18ea0a12f0525b71fbcb8660187af36f1148bee
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 8127281069ce4209adfc2aec82a93f5a60669307
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093166"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911859"
 ---
 # <a name="windows-holographic-for-business-device-settings-to-run-as-a-kiosk-in-intune"></a>Instellingen voor Windows Holographic for Business-apparaten om ze als kiosk uit te voeren via Intune
 
@@ -74,7 +74,7 @@ Apps in deze modus zijn beschikbaar in het startmenu. Deze apps zijn de enige ap
   - **Automatisch aanmelden (Windows 10 versie 1803 en hoger)** : Niet ondersteund in Windows Holographic for Business.
   - **Lokale gebruikersaccounts**: **Voeg** het lokale (op het apparaat) gebruikersaccount toe. Met het account dat u invoert, kunt u zich aanmelden bij de kiosk.
   - **Azure AD-gebruiker of -groep (Windows 10, versie 1803 of hoger)** : Hiervoor zijn gebruikersreferenties voor aanmelding op het apparaat vereist. Selecteer **Toevoegen** als u Azure AD-gebruikers of -groepen in de lijst wilt kiezen. U kunt meerdere gebruikers en groepen selecteren. Kies **Selecteren** om uw wijzigingen op te slaan.
-  - **HoloLens-bezoeker**: Het bezoekersaccount is een gastaccount waarvoor geen gebruikersreferenties zijn of verificatie is vereist, zoals wordt beschreven in [Gedeelde pc-modusconcepten](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
+  - **HoloLens-bezoeker**: Het bezoekersaccount is een gastaccount waarvoor geen gebruikersreferenties zijn of verificatie is vereist, zoals wordt beschreven in [Gedeelde pc-modusconcepten](/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
 
 - **Browser en apps**: Voeg de apps toe die u op het apparaat in kioskmodus wilt uitvoeren. U kunt verschillende apps toevoegen.
 
@@ -84,7 +84,7 @@ Apps in deze modus zijn beschikbaar in het startmenu. Deze apps zijn de enige ap
       - **Normale modus (volledige versie van Microsoft Edge)** : Er wordt een volledige versies van Microsoft Edge uitgevoerd met alle browserfuncties. Gebruikersgegevens en -statussen worden tussen sessies opgeslagen.
       - **Openbaar bladeren (InPrivate)** : hiermee wordt een versie met meerdere tabbladen van Microsoft Edge InPrivate uitgevoerd met een op maat gemaakte toepassing voor kiosken die in volledige schermweergave worden uitgevoerd.
 
-      Zie [Microsoft Edge-kioskmodus implementeren](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types) voor meer informatie over deze opties.
+      Zie [Microsoft Edge-kioskmodus implementeren](/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types) voor meer informatie over deze opties.
 
       > [!NOTE]
       > Via deze instelling schakelt u de Microsoft Edge-browser in op het apparaat. Als u specifieke Microsoft Edge-instellingen wilt configureren, maakt u een apparaatbeperkingsprofiel (**Apparaatconfiguratie** > **Profielen** > **Profiel maken** > **Windows 10** voor platform > **Apparaatbeperkingen** > **Microsoft Edge-browser**). De beschikbare Holographic for Business-instellingen worden in de [Microsoft Edge-browser](device-restrictions-windows-holographic.md#microsoft-edge-browser) vermeld en beschreven.
@@ -97,12 +97,12 @@ Apps in deze modus zijn beschikbaar in het startmenu. Deze apps zijn de enige ap
     - **Toevoegen via AUMID**: Gebruik deze optie om Postvak IN-apps voor Windows, zoals Kladblok of Calculator toe te voegen. Voer de volgende eigenschappen in:
 
       - **Toepassingsnaam**: Vereist. Geef een naam op voor de toepassing.
-      - **Model-id van toepassingsgebruiker (AUMID)** : Vereist. Voer de AUMID van de Windows-app in. Zie [De model-id van toepassingsgebruiker van een geïnstalleerde app vinden](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) als u wilt weten hoe u aan deze id komt.
+      - **Model-id van toepassingsgebruiker (AUMID)** : Vereist. Voer de AUMID van de Windows-app in. Zie [De model-id van toepassingsgebruiker van een geïnstalleerde app vinden](/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) als u wilt weten hoe u aan deze id komt.
 
     - **AutoLaunch**: Optioneel. Nadat u uw apps en browser hebt toegevoegd, selecteert u één app of browser die automatisch moet worden geopend wanneer de gebruiker zich aanmeldt. Er kan slechts één app of browser automatisch worden gestart.
     - **Tegelgrootte**: Vereist. Nadat u uw apps hebt toegevoegd, selecteert u een kleine, middelgrote, brede of grote app-tegelgrootte.
 
-- **Alternatieve indeling van het menu Start gebruiken**: Selecteer **Ja** om een XML-bestand op te geven waarin wordt beschreven hoe de apps worden weergegeven in het menu Start, zoals de volgorde van de apps. Gebruik deze optie als u meer aanpassingsmogelijkheden wilt gebruiken in het startmenu. [Startopmaak aanpassen en exporteren](https://docs.microsoft.com/hololens/hololens-kiosk#start-layout-for-hololens) biedt instructies en bevat een specifiek XML-bestand voor apparaten met Windows Holographic for Business.
+- **Alternatieve indeling van het menu Start gebruiken**: Selecteer **Ja** om een XML-bestand op te geven waarin wordt beschreven hoe de apps worden weergegeven in het menu Start, zoals de volgorde van de apps. Gebruik deze optie als u meer aanpassingsmogelijkheden wilt gebruiken in het startmenu. [Startopmaak aanpassen en exporteren](/hololens/hololens-kiosk#start-layout-for-hololens) biedt instructies en bevat een specifiek XML-bestand voor apparaten met Windows Holographic for Business.
 
 - **Windows-taakbalk**: Niet ondersteund in Windows Holographic for Business.
 - **Toegang tot de map Downloads toestaan**: Niet ondersteund in Windows Holographic for Business.

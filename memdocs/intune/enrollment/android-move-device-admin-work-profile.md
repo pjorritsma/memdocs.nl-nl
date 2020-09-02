@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 685f2a51c7a2bfacbc95fb2a7615f0e459b97245
-ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
+ms.openlocfilehash: fb62a7b592b492d4092b7af7ee29b2bfd50c66e8
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84126512"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915174"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>Android-apparaten verplaatsen van beheer door apparaatbeheerder naar werkprofielbeheer
 
@@ -40,7 +40,7 @@ Wanneer gebruikers zien dat ze om die reden niet meer compatibel zijn, kunnen ze
 - Stel Android-werkprofielbeheer in door [uw Intune-tenantaccount te koppelen aan uw Android Enterprise-account](connect-intune-android-enterprise.md).
 - [Stel de inschrijving van uw Android Enterprise-werkprofiel in](android-work-profile-enroll.md) voor de groep gebruikers die wordt verplaatst naar Android-werkprofiel.
 - Overweeg de limieten voor uw gebruikersapparaten te verhogen. Bij het uitschrijven van apparaten voor beheer door apparaatbeheerder worden apparaatregistraties mogelijk niet onmiddellijk verwijderd. Om tijdens deze periode een buffer te hebben, moet u mogelijk de capaciteit van de apparaatlimiet verhogen, zodat de gebruikers zich kunnen inschrijven voor werkprofielbeheer.
-  - [Configureer apparaatinstellingen voor Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#configure-device-settings) voor het maximum aantal apparaten per gebruiker.
+  - [Configureer apparaatinstellingen voor Azure Active Directory](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings) voor het maximum aantal apparaten per gebruiker.
   - Pas de [beperkingen voor Intune-apparaatlimieten](enrollment-restrictions-set.md#create-a-device-limit-restriction) aan door de apparaatlimiet in te stellen. 
 
 ## <a name="create-device-compliance-policy"></a>Nalevingsbeleid voor apparaat maken

@@ -19,12 +19,12 @@ ms.reviewer: annochiva
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 826515026e578cb993bb706fc61dedb4a80fb3e6
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: f0a674753ff23fca509bd21e6b52101104a6803f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464988"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910788"
 ---
 # <a name="store-your-personal-filevault-key"></a>Uw persoonlijke FileVault-sleutel opslaan 
 
@@ -81,7 +81,7 @@ Zie [Bedrijfsportal-berichten](store-recovery-key.md#company-portal-messages) vo
 
 ## <a name="it-pro-support"></a>IT Pro-ondersteuning
 
-Zie [FileVault-schijfversleuteling gebruiken voor macOS met Intune](https://docs.microsoft.com/mem/intune/protect/encrypt-devices-filevault) als u een IT-ondersteuningsmedewerker bent en FileVault-versleuteling wilt configureren en beheren voor macOS-apparaten.  
+Zie [FileVault-schijfversleuteling gebruiken voor macOS met Intune](../protect/encrypt-devices-filevault.md) als u een IT-ondersteuningsmedewerker bent en FileVault-versleuteling wilt configureren en beheren voor macOS-apparaten.  
 
 ## <a name="next-steps"></a>Volgende stappen
 
@@ -89,4 +89,4 @@ U kunt uw sleutel altijd ophalen via de bedrijfsportalwebsite, de Intune-app en 
 
 Ontdek wat u nog meer kunt doen vanuit de bedrijfsportalwebsite. Zie [De Intune-bedrijfsportalwebsite gebruiken](using-the-intune-company-portal-website.md) voor een lijst met acties.  
 
-Nog hulp nodig? Neem contact op met IT-ondersteuning. Controleer of de contactgegevens beschikbaar zijn op de [bedrijfsportalwebsite](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Nog hulp nodig? Neem contact op met IT-ondersteuning. Controleer of de contactgegevens beschikbaar zijn op de [bedrijfsportalwebsite](https://go.microsoft.com/fwlink/?linkid=2010980).

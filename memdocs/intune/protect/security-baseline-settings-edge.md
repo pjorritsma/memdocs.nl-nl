@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c20489b8da3080506065d68aeb1b19dae362c2fb
-ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
+ms.openlocfilehash: 8fd6943be69f66d4cd6fde2e9c08bec9323005a5
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83556316"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914426"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="edge-october-2019"
@@ -74,7 +74,7 @@ Als u wilt weten wat er is veranderd in deze versie van de basislijn vergeleken 
     - **Onderhandelen** *(standaard geselecteerd)*
 
 - **Standaardinstelling voor Adobe Flash**  
-  CSP: [Browser/AllowFlash](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowflash) en [Browser/AllowFlashClickToRun](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowflashclicktorun)
+  CSP: [Browser/AllowFlash](/windows/client-management/mdm/policy-csp-browser#browser-allowflash) en [Browser/AllowFlashClickToRun](/windows/client-management/mdm/policy-csp-browser#browser-allowflashclicktorun)
 
   Schakel toegang tot de volgende instelling in, waarmee u gedrag kunt configureren voor het uitvoeren van de Adobe Flash-invoegtoepassing.  
 
@@ -110,7 +110,7 @@ Als u wilt weten wat er is veranderd in deze versie van de basislijn vergeleken 
   - **Niet geconfigureerd**: standaard is in Microsoft Edge het gebruik van systeemeigen berichtenhosts op gebruikersniveau toegestaan.
 
 - **Opslaan van wachtwoorden in wachtwoordbeheer inschakelen**  
-  Microsoft Edge CSP: [Browser/AllowPasswordManager](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)  
+  Microsoft Edge CSP: [Browser/AllowPasswordManager](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)  
 
   Laat Microsoft Edge gebruikerswachtwoorden opslaan.
 
@@ -119,7 +119,7 @@ Als u wilt weten wat er is veranderd in deze versie van de basislijn vergeleken 
   - **Niet geconfigureerd**: gebruikers kunnen wachtwoorden opslaan en deze functie uitschakelen.
 
 - **Overslaan van Microsoft Defender SmartScreen-prompts voor sites voorkomen**  
-  CSP: [Browser/PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
+  CSP: [Browser/PreventSmartScreenPromptOverride](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
 
   Bepaal of gebruikers de waarschuwingen van Microsoft Defender SmartScreen over mogelijk schadelijke websites kunnen negeren.
 
@@ -128,7 +128,7 @@ Als u wilt weten wat er is veranderd in deze versie van de basislijn vergeleken 
   - **Niet geconfigureerd**: gebruikers kunnen de waarschuwingen van Microsoft Defender SmartScreen negeren en doorgaan naar de site
 
 - **Overslaan van Microsoft Defender SmartScreen-waarschuwingen over downloads voorkomen**  
-  CSP: [Browser/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)  
+  CSP: [Browser/PreventSmartScreenPromptOverrideForFiles](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)  
 
   Bepaal of gebruikers Microsoft Defender SmartScreen-waarschuwingen over niet-geverifieerde downloads kunnen negeren.
 
@@ -143,10 +143,10 @@ Als u wilt weten wat er is veranderd in deze versie van de basislijn vergeleken 
   - **Uitgeschakeld**: gebruikers kunnen afzien van site-isolatie. Site-isolatie wordt niet uitgeschakeld.
   - **Niet geconfigureerd**: gebruikers kunnen afzien van site-isolatie. Site-isolatie wordt niet uitgeschakeld.
 
-  In Microsoft Edge wordt ook het beleid [IsolateOrigins](https://docs.microsoft.com/deployedge/microsoft-edge-policies#isolateorigins) ondersteund, waarmee aanvullende, gedetailleerdere oorsprongen kunnen worden geïsoleerd.  Intune biedt geen ondersteuning voor het configureren van het IsolateOrigins-beleid.
+  In Microsoft Edge wordt ook het beleid [IsolateOrigins](/deployedge/microsoft-edge-policies#isolateorigins) ondersteund, waarmee aanvullende, gedetailleerdere oorsprongen kunnen worden geïsoleerd.  Intune biedt geen ondersteuning voor het configureren van het IsolateOrigins-beleid.
   
 - **Microsoft Defender SmartScreen configureren**  
-  CSP: [Browser/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)  
+  CSP: [Browser/AllowSmartScreen](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)  
   
   Microsoft Defender SmartScreen geeft waarschuwingsberichten weer om gebruikers te beschermen tegen mogelijke oplichting door phishing en schadelijke software. Microsoft Defender SmartScreen is standaard ingeschakeld.
   
@@ -166,7 +166,7 @@ Als u wilt weten wat er is veranderd in deze versie van de basislijn vergeleken 
   Dit beleid is alleen beschikbaar voor Windows-instanties die zijn toegevoegd aan een Microsoft Active Director-domein of op Windows 10 Pro-of Enterprise-instanties die zijn geregistreerd voor apparaatbeheer.
 
 - **Gebruikers toestaan om door te gaan vanaf de SSL-waarschuwingspagina**  
-   CSP: [Browser/PreventCertErrorOverrides](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventcerterroroverrides)  
+   CSP: [Browser/PreventCertErrorOverrides](/windows/client-management/mdm/policy-csp-browser#browser-preventcerterroroverrides)  
 
   Microsoft Edge toont een waarschuwingspagina wanneer gebruikers sites met SSL-fouten bezoeken.
   - **Ingeschakeld**: gebruikers kunnen door de waarschuwingspagina's klikken.
@@ -193,7 +193,7 @@ Als u wilt weten wat er is veranderd in deze versie van de basislijn vergeleken 
 
 - **Overslaan van Microsoft Defender SmartScreen-prompts voor sites voorkomen**  
   **Standaardinstelling**: Ingeschakeld  
-  Microsoft Edge CSP: [Browser/PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
+  Microsoft Edge CSP: [Browser/PreventSmartScreenPromptOverride](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
 
   Met deze beleidsinstelling kunt u bepalen of gebruikers de waarschuwingen van Microsoft Defender SmartScreen over mogelijk schadelijke websites kunnen negeren. 
   - Als u deze instelling inschakelt, kunnen gebruikers de waarschuwingen van Microsoft Defender SmartScreen niet negeren en kunnen ze niet doorgaan naar de site. 
@@ -213,7 +213,7 @@ Als u wilt weten wat er is veranderd in deze versie van de basislijn vergeleken 
 
 - **Overslaan van Microsoft Defender SmartScreen-waarschuwingen over downloads voorkomen**  
   **Standaardinstelling**: Ingeschakeld  
-  Microsoft Edge CSP: [Browser/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)  
+  Microsoft Edge CSP: [Browser/PreventSmartScreenPromptOverrideForFiles](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)  
 
   Met dit beleid kunt u bepalen of gebruikers Microsoft Defender SmartScreen-waarschuwingen over niet-geverifieerde downloads kunnen negeren.
   - Als u dit beleid inschakelt, kunnen gebruikers in uw organisatie Microsoft Defender SmartScreen-waarschuwingen niet negeren en kunnen ze de niet-geverifieerde downloads niet voltooien.
@@ -221,13 +221,13 @@ Als u wilt weten wat er is veranderd in deze versie van de basislijn vergeleken 
 
 - **Gebruikers toestaan om door te gaan vanaf de SSL-waarschuwingspagina**  
   **Standaardinstelling**: Uitgeschakeld  
-  Microsoft Edge CSP: [Browser/PreventCertErrorOverrides](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventcerterroroverrides)  
+  Microsoft Edge CSP: [Browser/PreventCertErrorOverrides](/windows/client-management/mdm/policy-csp-browser#browser-preventcerterroroverrides)  
 
   Microsoft Edge toont een waarschuwingspagina wanneer gebruikers sites met SSL-fouten bezoeken. Als u dit beleid instelt op *Ingeschakeld* of op *Niet geconfigureerd*, kunnen gebruikers door deze waarschuwingspagina's klikken. Wanneer dit beleid is *Uitgeschakeld*, worden gebruikers geblokkeerd en kunnen ze niet doorklikken op een waarschuwingspagina. 
 
 - **Standaardinstelling voor Adobe Flash**  
   **Standaardinstelling**: Ingeschakeld  
-  Microsoft Edge CSP: [Browser/AllowFlash](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowflash) en [Browser/AllowFlashClickToRun](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowflashclicktorun)  
+  Microsoft Edge CSP: [Browser/AllowFlash](/windows/client-management/mdm/policy-csp-browser#browser-allowflash) en [Browser/AllowFlashClickToRun](/windows/client-management/mdm/policy-csp-browser#browser-allowflashclicktorun)  
 
   Hiermee wordt bepaald of websites die niet worden gedekt door PluginsAllowedForUrls of PluginsBlockedForUrls automatisch de Adobe Flash-invoegtoepassing kunnen uitvoeren. 
 
@@ -264,7 +264,7 @@ Als u wilt weten wat er is veranderd in deze versie van de basislijn vergeleken 
 
 - **Opslaan van wachtwoorden in wachtwoordbeheer inschakelen**  
   **Standaardinstelling**: Uitgeschakeld  
-  Microsoft Edge CSP: [Browser/AllowPasswordManager](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)  
+  Microsoft Edge CSP: [Browser/AllowPasswordManager](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)  
 
   Laat Microsoft Edge gebruikerswachtwoorden opslaan.
   - Als u dit beleid inschakelt, kunnen gebruikers hun wachtwoord opslaan in Microsoft Edge. De volgende keer dat ze de site bezoeken, wordt het wachtwoord automatisch door Microsoft Edge ingevoerd.
@@ -288,7 +288,7 @@ Als u wilt weten wat er is veranderd in deze versie van de basislijn vergeleken 
 
 - **Microsoft Defender SmartScreen configureren**  
   **Standaardinstelling**: Ingeschakeld  
-  Microsoft Edge CSP: [Browser/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
+  Microsoft Edge CSP: [Browser/AllowSmartScreen](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
 
   Met deze beleidsinstelling kunt u configureren of Microsoft Defender SmartScreen moet worden ingeschakeld. Microsoft Defender SmartScreen geeft waarschuwingsberichten weer om uw gebruikers te beschermen tegen mogelijke oplichting door phishing en schadelijke software.
   

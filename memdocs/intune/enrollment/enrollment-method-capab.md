@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9dca2303d960937a529a902391d6c05539fc9d4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 701794ba476f87aaf079e39c834f3e8e3f2c280d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79359310"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913882"
 ---
 # <a name="intune-enrollment-method-capabilities-for-windows-devices"></a>Mogelijkheden die Intune biedt per inschrijvingsmethode voor Windows-apparaten
 [!INCLUDE[azure_portal](../includes/azure_portal.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "79359310"
 Er zijn verschillende methoden om de apparaten van uw werknemers in te schrijven bij Intune. Voor elke methode gelden andere aanbevolen procedures en mogelijkheden, zoals wordt weergegeven in de onderstaande tabellen.
 
 ## <a name="best-practices-by-enrollment-method"></a>Aanbevolen procedures per inschrijvingsmethode
-| **Best practices** | **[Neemt deel aan Azure AD](windows-enroll.md#enable-windows-10-automatic-enrollment)**|**[Neemt deel aan Azure AD via Autopilot (Gebruikersmodus)](enrollment-autopilot.md)** |**[Neemt deel aan Azure AD via Autopilot (Zelf-implementatiemodus)](enrollment-autopilot.md)** |**[Bulk](windows-bulk-enroll.md)**|**[DEM](device-enrollment-manager-enroll.md)** | **[BYOD](device-enrollment.md#bring-your-own-device)** | **[GPO](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)** | **[Co-beheer](https://docs.microsoft.com/configmgr/core/clients/manage/co-management-overview)** |
+| **Best practices** | **[Neemt deel aan Azure AD](windows-enroll.md#enable-windows-10-automatic-enrollment)**|**[Neemt deel aan Azure AD via Autopilot (Gebruikersmodus)](../../autopilot/enrollment-autopilot.md)** |**[Neemt deel aan Azure AD via Autopilot (Zelf-implementatiemodus)](../../autopilot/enrollment-autopilot.md)** |**[Bulk](windows-bulk-enroll.md)**|**[DEM](device-enrollment-manager-enroll.md)** | **[BYOD](device-enrollment.md#bring-your-own-device)** | **[GPO](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)** | **[Co-beheer](/configmgr/core/clients/manage/co-management-overview)** |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Veel gebruikt in EDU|![X](./media/enrollment-method-capab/xmark.png)|![Vinkje](./media/enrollment-method-capab/checkmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![Vinkje](./media/enrollment-method-capab/checkmark.png)|![Vinkje](./media/enrollment-method-capab/checkmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![X](./media/enrollment-method-capab/xmark.png)|
 |Apparaten kunnen worden gebruikt als gedeelde apparaten|![X](./media/enrollment-method-capab/xmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![Vinkje](./media/enrollment-method-capab/checkmark.png)|![Vinkje](./media/enrollment-method-capab/checkmark.png)|![Vinkje](./media/enrollment-method-capab/checkmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![X](./media/enrollment-method-capab/xmark.png)|
@@ -39,7 +39,7 @@ Er zijn verschillende methoden om de apparaten van uw werknemers in te schrijven
 
 ## <a name="capabilities-by-enrollment-method"></a>Mogelijkheden per inschrijvingsmethode
 
-| **Mogelijkheden** | **[Neemt deel aan Azure AD](windows-enroll.md#enable-windows-10-automatic-enrollment)**|**[Neemt deel aan Azure AD via Autopilot (Gebruikersmodus)](enrollment-autopilot.md)** |**[Neemt deel aan Azure AD via Autopilot (Zelf-implementatiemodus)](enrollment-autopilot.md)** |**[Bulk](windows-bulk-enroll.md)**|**[DEM](device-enrollment-manager-enroll.md)** | **[BYOD](device-enrollment.md#bring-your-own-device)** | **[GPO](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)** | **[Co-beheer](https://docs.microsoft.com/configmgr/core/clients/manage/co-management-overview)** |
+| **Mogelijkheden** | **[Neemt deel aan Azure AD](windows-enroll.md#enable-windows-10-automatic-enrollment)**|**[Neemt deel aan Azure AD via Autopilot (Gebruikersmodus)](../../autopilot/enrollment-autopilot.md)** |**[Neemt deel aan Azure AD via Autopilot (Zelf-implementatiemodus)](../../autopilot/enrollment-autopilot.md)** |**[Bulk](windows-bulk-enroll.md)**|**[DEM](device-enrollment-manager-enroll.md)** | **[BYOD](device-enrollment.md#bring-your-own-device)** | **[GPO](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)** | **[Co-beheer](/configmgr/core/clients/manage/co-management-overview)** |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Voorwaardelijke toegang                                      |![Vinkje](./media/enrollment-method-capab/checkmark.png)|![Vinkje](./media/enrollment-method-capab/checkmark.png)|![Vinkje](./media/enrollment-method-capab/checkmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![Vinkje](./media/enrollment-method-capab/checkmark.png)\*\*|![Vinkje](./media/enrollment-method-capab/checkmark.png)|![Vinkje](./media/enrollment-method-capab/checkmark.png)|![Vinkje](./media/enrollment-method-capab/checkmark.png)|
 |Gebruikers worden gekoppeld aan apparaten                    |![Vinkje](./media/enrollment-method-capab/checkmark.png)|![Vinkje](./media/enrollment-method-capab/checkmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![Vinkje](./media/enrollment-method-capab/checkmark.png)|![Vinkje](./media/enrollment-method-capab/checkmark.png)|![Vinkje](./media/enrollment-method-capab/checkmark.png)|
@@ -60,4 +60,3 @@ Er zijn verschillende methoden om de apparaten van uw werknemers in te schrijven
 ## <a name="next-steps"></a>Volgende stappen
 
 [Inschrijving instellen voor Windows](windows-enroll.md)
-

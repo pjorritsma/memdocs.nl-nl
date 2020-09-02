@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f0119ace5e1ec511ec0e8235a1dcea4b7199c058
-ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
+ms.openlocfilehash: 5126f2e5cc145e864fb4f56e472dba7a5179540f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559535"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915582"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>SCEP-certificaatprofielen maken en toewijzen in Intune
 
@@ -104,16 +104,16 @@ Nadat u [uw infrastructuur hebt geconfigureerd](certificates-scep-configure.md) 
          - **CN={{IMEINumber}}** : Het unieke nummer van de International Mobile Equipment Identity (IMEI) dat wordt gebruikt om een mobiele telefoon te identificeren.
          - **CN={{OnPrem_Distinguished_Name}}** : Een reeks RDN's (Relative Distinguished Name), gescheiden door komma's, zoals *CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com*.
 
-           Als u de variabele *{{OnPrem_Distinguished_Name}}* wilt gebruiken, moet u het gebruikerskenmerk *onpremisesdistinguishedname* met behulp van [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) synchroniseren met uw Azure AD.
+           Als u de variabele *{{OnPrem_Distinguished_Name}}* wilt gebruiken, moet u het gebruikerskenmerk *onpremisesdistinguishedname* met behulp van [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) synchroniseren met uw Azure AD.
 
          - **CN={{onPremisesSamAccountName}}** : Beheerders kunnen het kenmerk samAccountName van Active Directory met behulp van Azure AD Connect synchroniseren met Azure AD in een kenmerk met de naam *onPremisesSamAccountName*. Deze variabele kan in Intune worden vervangen als onderdeel van een aanvraag voor certificaatuitgifte in het onderwerp van een certificaat. Het kenmerk samAccountName is de aanmeldingsnaam van de gebruiker die wordt gebruikt ter ondersteuning van clients en servers van een oudere versie dan Windows 2000. De indeling voor de aanmeldingsnaam van de gebruiker is: *DomainName\testUser* of alleen *testUser*.
 
-            Als u de variabele *{{onPremisesSamAccountName}}* wilt gebruiken, moet u het gebruikerskenmerk *onPremisesSamAccountName* met behulp van [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) synchroniseren met uw Azure AD.
+            Als u de variabele *{{onPremisesSamAccountName}}* wilt gebruiken, moet u het gebruikerskenmerk *onPremisesSamAccountName* met behulp van [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) synchroniseren met uw Azure AD.
 
          Door een combinatie van een of meer van deze variabelen en statische tekenreeksen te gebruiken, kunt u een aangepaste indeling voor de naam van een certificaathouder maken, bijvoorbeeld:  
          - **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**
 
-         Dat voorbeeld bevat een indeling van de onderwerpnaam waarin gebruik wordt gemaakt van de variabelen CN en E, plus tekenreeksen voor de waarden Organizational Unit, Organization, Location, State en Country. [De functie CertStrToName](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) beschrijft deze functie en de ondersteunde tekenreeksen.
+         Dat voorbeeld bevat een indeling van de onderwerpnaam waarin gebruik wordt gemaakt van de variabelen CN en E, plus tekenreeksen voor de waarden Organizational Unit, Organization, Location, State en Country. [De functie CertStrToName](/windows/win32/api/wincrypt/nf-wincrypt-certstrtonamea) beschrijft deze functie en de ondersteunde tekenreeksen.
          
          \* Voor volledig beheerd en toegewezen Android-werkprofielen in bedrijfseigendom zal de instelling **CN={{UserPrincipalName}}** niet werken. Profielen met volledig beheerde en toegewezen Android-werkprofielen in bedrijfseigendom kunnen worden gebruikt voor apparaten zonder gebruiker; zo kunnen dergelijke profielen niet worden gebruikt om de user principal name van een gebruiker te achterhalen. Als u deze optie voor apparaten met gebruikers echt nodig hebt, kunt u een tijdelijke oplossing als volgt gebruiken: **CN={{UserName}}\@contoso.com** Dit biedt de gebruikersnaam en het domein dat u handmatig hebt toegevoegd, bijvoorbeeld janedoe@contoso.com
 
@@ -313,7 +313,7 @@ Denk na over het volgende voordat u verdergaat:
 
 - Als u een certificaat snel naar een apparaat wilt publiceren nadat het apparaat is geregistreerd, wijst u het certificaatprofiel toe aan een gebruikersgroep en niet aan een apparaatgroep. Als u het toewijst aan een apparaatgroep, is een volledige apparaatregistratie vereist voordat het apparaat beleid kan ontvangen.
 
-- Als u co-beheer gebruikt voor Intune en Configuration Manager, stelt u in Configuration Manager de [workloadschuifregelaar](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) voor resourcetoegangsbeleid in op **Intune** of **Testfase van Intune**. Met deze instelling is het toegestaan dat Windows 10-clients het proces starten om het certificaat aan te vragen.
+- Als u co-beheer gebruikt voor Intune en Configuration Manager, stelt u in Configuration Manager de [workloadschuifregelaar](/configmgr/comanage/how-to-switch-workloads) voor resourcetoegangsbeleid in op **Intune** of **Testfase van Intune**. Met deze instelling is het toegestaan dat Windows 10-clients het proces starten om het certificaat aan te vragen.
 
 > [!NOTE]
 > - Als op iOS-/iPadOS-apparaten een SCEP-certificaatprofiel of een PKCS-certificaatprofiel aan een extra profiel, zoals een Wi-Fi- of VPN-profiel, is gekoppeld, ontvangt het apparaat een certificaat voor al deze extra profielen. Hierdoor ontvangt het iOS-/iPadOS-apparaat meerdere certificaten na de SCEP- of PKCS-certificaataanvraag. 

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3d935e79dfe2fd0d786dae596cafe173b66018c9
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: c27a78d78678234b30ea80cfc192cb4250eca2e1
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663291"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915565"
 ---
 # <a name="smime-overview-to-sign-and-encrypt-email-in-intune"></a>S/MIME-overzicht voor het ondertekenen en versleutelen van e-mails in Intune
 
@@ -33,7 +33,7 @@ E-mailcertificaten, ook wel S/MIME-certificaten genoemd, bieden extra beveiligin
 
 Op iOS/iPadOS-apparaten kunt u een door Intune beheerd e-mailprofiel maken dat gebruikmaakt van S/MIME en certificaten voor ondertekening en versleuteling van binnenkomende en uitgaande e-mailberichten. Op andere platforms wordt S/MIME mogelijk niet ondersteund. Als S/MIME wordt ondersteund, kunt u certificaten installeren die gebruikmaken van S/MIME-ondertekening en -versleuteling. Vervolgens kunnen eindgebruikers S/MIME inschakelen in hun e-mailtoepassing.
 
-Zie [S/MIME for message signing and encryption](https://docs.microsoft.com/Exchange/policy-and-compliance/smime) (S/MIME voor e-mailondertekening en -versleuteling) voor meer informatie over S/MIME-ondertekening en -versleuteling van e-mailberichten met Exchange.
+Zie [S/MIME for message signing and encryption](/Exchange/policy-and-compliance/smime) (S/MIME voor e-mailondertekening en -versleuteling) voor meer informatie over S/MIME-ondertekening en -versleuteling van e-mailberichten met Exchange.
 
 Dit artikel bevat een overzicht van het gebruik van S/MIME-certificaten voor het ondertekenen en versleutelen van e-mailberichten op uw apparaten.
 
@@ -41,7 +41,7 @@ Dit artikel bevat een overzicht van het gebruik van S/MIME-certificaten voor het
 
 Met certificaten die worden gebruikt voor ondertekening kunnen client-e-mail-apps veilig communiceren met de e-mailserver.
 
-Als u handtekeningcertificaten wilt gebruiken, maakt u een sjabloon op de certificeringsinstantie (CA) die is gericht op ondertekening. [Het sjabloon Webservercertificaat configureren](https://docs.microsoft.com/windows-server/networking/core-network-guide/cncg/server-certs/configure-the-server-certificate-template) op Microsoft Active Directory Certificeringsinstantie bevat de stappen voor het maken van certificaatsjablonen.
+Als u handtekeningcertificaten wilt gebruiken, maakt u een sjabloon op de certificeringsinstantie (CA) die is gericht op ondertekening. [Het sjabloon Webservercertificaat configureren](/windows-server/networking/core-network-guide/cncg/server-certs/configure-the-server-certificate-template) op Microsoft Active Directory Certificeringsinstantie bevat de stappen voor het maken van certificaatsjablonen.
 
 Voor het ondertekenen van certificaten in Intune wordt gebruik gemaakt van PKCS-certificaten. In [PKCS-certificaten configureren en gebruiken](certficates-pfx-configure.md) wordt beschreven hoe u PKCS-certificaten in uw Intune-omgeving implementeert en gebruikt. Deze stappen omvatten:
 

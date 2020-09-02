@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f667b6ad9ba9f7c353d89b4d3fc4ff749499bfaf
-ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
+ms.openlocfilehash: ee05e72a4837ea894c7163551d0ce79a40ed1d82
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85972029"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912148"
 ---
 # <a name="add-mobile-threat-defense-apps-to-unenrolled-devices"></a>Mobile Threat Defense-apps toevoegen aan niet-ingeschreven apparaten
 
@@ -50,7 +50,7 @@ Wanneer het beveiligingsbeleid van de Intune-app met Mobile Threat Defense wordt
 Als u de app echter beschikbaar wilt maken voor eindgebruikers via de Intune-bedrijfsportal, raadpleegt u de instructies voor het [toevoegen van iOS Store-apps aan Microsoft Intune](../apps/store-apps-ios.md). Gebruik deze [URL voor de iOS App Store voor Microsoft Authenticator](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8) bij het invullen van de sectie **App-gegevens configureren**. Vergeet niet om als laatste stap [de app met behulp van Intune toe te wijzen aan groepen](../apps/apps-deploy.md).
 
 > [!NOTE]
-> Voor iOS-apparaten hebt u de app [Microsoft Authenticator](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) nodig, zodat de identiteit van gebruikers kan worden gecontroleerd door Azure AD. De Intune-bedrijfsportal werkt als de broker op Android-apparaten, zodat de identiteit van gebruikers kan worden gecontroleerd door Azure AD.
+> Voor iOS-apparaten hebt u de app [Microsoft Authenticator](/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) nodig, zodat de identiteit van gebruikers kan worden gecontroleerd door Azure AD. De Intune-bedrijfsportal werkt als de broker op Android-apparaten, zodat de identiteit van gebruikers kan worden gecontroleerd door Azure AD.
 
 ## <a name="making-mobile-threat-defense-apps-available-via-intune-optional"></a>Mobile Threat Defense-apps beschikbaar maken via Intune (optioneel)
 

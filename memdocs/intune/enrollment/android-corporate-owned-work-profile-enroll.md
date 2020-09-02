@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4934115915c41d696258aa54ee8f4b7c84d1809c
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 9a19a78002d0655cf63a8b757ea252fb8992603f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464977"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915259"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-corporate-owned-devices-with-work-profile"></a>Intune-inschrijving instellen voor zakelijke Android Enterprise-apparaten met een werkprofiel
 
@@ -83,7 +83,7 @@ U kunt apps en beleidsregels zenden naar toegewezen of dynamische apparaatgroepe
     - **Locatie voor het toevoegen van apparaten**: enrollmentProfileName
     - Kies in het middelste vak **Is gelijk aan**.
     - Voer in het laatste veld de naam in van het inschrijvingsprofiel dat u eerder hebt gemaakt.
-    Raadpleeg [Dynamische lidmaatschapsregels voor groepen in AAD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership) voor meer informatie over dynamische lidmaatschapsregels. 
+    Raadpleeg [Dynamische lidmaatschapsregels voor groepen in AAD](/azure/active-directory/users-groups-roles/groups-dynamic-membership) voor meer informatie over dynamische lidmaatschapsregels. 
 5. Kies **Query toevoegen** > **Maken**.
 
 ### <a name="revoke-tokens"></a>Tokens intrekken

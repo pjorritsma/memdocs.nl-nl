@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 42547885c5f791749517415b325c8c785ec52c13
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: 20b5b3de16023ac475cc41a633e5d3ab915a1bd0
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051400"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910720"
 ---
 # <a name="add-app-configuration-policies-for-managed-apps-without-device-enrollment"></a>App-configuratiebeleidsregels toevoegen voor beheerde apps zonder apparaatinschrijving
 
@@ -45,13 +45,13 @@ U kunt app-configuratiebeleidsregels gebruiken voor beheerde apps die de Intune 
  
         Voor Intune App SDK-functionaliteit geschikte apps ondersteunen configuraties in sleutel-waardeparen. Raadpleeg de documentatie van elke app voor meer informatie over welke sleutel-waardeconfiguraties worden ondersteund. Houd er rekening mee dat u tokens kunt gebruiken die dynamisch worden gevuld met gegevens die zijn gegenereerd door de app. Als u een algemene configuratie-instelling wilt verwijderen, kiest u het beletselteken ( **...** ) en selecteert u **Verwijderen**. Zie [Configuratiewaarden voor het gebruik van tokens](app-configuration-policies-managed-app.md#configuration-values-for-using-tokens) voor meer informatie. 
 
-    - **Configuratie-instellingen voor Outlook**: Outlook voor iOS en Android biedt beheerders de mogelijkheid om de standaardconfiguratie voor verschillende in-app-instellingen aan te passen. Zie [Outlook voor iOS en Android - Scenario's voor algemene configuratie-instellingen](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#general-app-configuration-scenarios) voor meer informatie.
+    - **Configuratie-instellingen voor Outlook**: Outlook voor iOS en Android biedt beheerders de mogelijkheid om de standaardconfiguratie voor verschillende in-app-instellingen aan te passen. Zie [Outlook voor iOS en Android - Scenario's voor algemene configuratie-instellingen](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#general-app-configuration-scenarios) voor meer informatie.
    
     - **S/MIME**: Secure Multipurpose Internet Mail Extensions (S/MIME) is een specificatie waarmee gebruikers e-mailberichten die digitaal zijn ondertekend en versleuteld, kunnen verzenden en ontvangen.
         - **S/MIME inschakelen**: Geef op of S/MIME-besturingselementen zijn ingeschakeld bij het opstellen van een e-mailbericht. Standaardwaarde: **Niet geconfigureerd**.
         - **Gebruiker toestaan om de instelling te wijzigen**: Geef aan of de gebruiker de synchronisatie-instelling mag wijzigen. S/MIME moet zijn ingeschakeld. Standaardwaarde: **Ja**.
         
-    Zie [Configuratie-instellingen voor de Outlook-app voor iOS en Android implementeren](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune) voor informatie over configuratiebeleidsinstellingen voor de Outlook-app.
+    Zie [Configuratie-instellingen voor de Outlook-app voor iOS en Android implementeren](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune) voor informatie over configuratiebeleidsinstellingen voor de Outlook-app.
 
 7. Klik op **Volgende** om de pagina **Toewijzingen** weer te geven.
 8. Klik op **Groepen selecteren die moeten worden opgenomen**.

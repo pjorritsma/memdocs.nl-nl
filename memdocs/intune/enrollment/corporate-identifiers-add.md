@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3e999cb66c42bd0e04c76cb13689122df187f2f6
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 061ee72dfb473eef8e1373497ad6494fa0c3541c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252721"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912607"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Apparaten identificeren als bedrijfseigendom
 
@@ -36,7 +36,7 @@ Tijdens het inschrijven wijst Intune automatisch de status Bedrijfseigendom toe 
 - Ingeschreven met een [apparaatinschrijvingsbeheerder](device-enrollment-manager-enroll.md)-account (alle platforms)
 - Ingeschreven via het Apple-[apparaatinschrijvingsprogramma](device-enrollment-program-enroll-ios.md), [Apple School Manager](apple-school-manager-set-up-ios.md) of [Apple Configurator](apple-configurator-enroll-ios.md) (alleen iOS)
 - [Herkend als bedrijfseigendom voorafgaand aan inschrijving](#identify-corporate-owned-devices-with-imei-or-serial-number) met een internationaal identificatienummer voor mobiele apparaten (IMEI; alle platforms met IMEI-nummers) of een serienummer (iOS en Android)
-- Deelgenomen aan Azure Active Directory met de referenties van uw werk- of school. [Apparaten die zijn geregistreerd bij Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/overview) worden gemarkeerd als persoonlijk.
+- Deelgenomen aan Azure Active Directory met de referenties van uw werk- of school. [Apparaten die zijn geregistreerd bij Azure Active Directory](/azure/active-directory/devices/overview) worden gemarkeerd als persoonlijk.
 - Opgegeven als Zakelijk in de [lijst Eigenschappen van het apparaat](#change-device-ownership)
 
 Na het inschrijven kunt u [de eigendomsinstelling wijzigen](#change-device-ownership) en schakelen tussen **Persoonlijk** en **Zakelijk**.

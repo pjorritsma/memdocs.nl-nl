@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b3052d8d213ce3190ed29b43f580a8de9c840b7
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: c99300e1c29aa7d3ec7519727dd6d12527626bfa
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943838"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911485"
 ---
 # <a name="intune-network-configuration-requirements-and-bandwidth"></a>Netwerkconfiguratievereisten en bandbreedte voor Intune
 
@@ -79,7 +79,7 @@ Zie de documentatie voor uw proxyserver voor informatie over het gebruik van een
 
 Met Delivery Optimization kunt u Intune gebruiken om het bandbreedteverbruik te verminderen wanneer toepassingen en updates worden gedownload naar uw Windows 10-apparaten. Door een zelf organiserende gedistribueerde cache te gebruiken, kunnen downloads worden opgehaald van traditionele servers en uit alternatieve bronnen (zoals netwerk-peers).
 
-Raadpleeg het artikel [Delivery Optimization voor Windows 10-updates](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#requirements) voor een volledige lijst met Windows 10-versies en inhoudstypen die worden ondersteund voor Delivery Optimization.
+Raadpleeg het artikel [Delivery Optimization voor Windows 10-updates](/windows/deployment/update/waas-delivery-optimization#requirements) voor een volledige lijst met Windows 10-versies en inhoudstypen die worden ondersteund voor Delivery Optimization.
 
 U kunt [Delivery Optimization configureren](../configuration/delivery-optimization-settings.md) als onderdeel van uw apparaatconfiguratieprofielen.
 
@@ -95,7 +95,7 @@ U kunt, tijdens de uren die u zelf configureert, BITS gebruiken op een Windows-c
 > [!NOTE]
 > Voor MDM-beheer in Windows maakt alleen de beheerinterface van het OS voor het type MobileMSI-app gebruik van BITS om te downloaden. Voor AppX/MsiX wordt een systeemeigen niet-BITS-downloadstack gebruikt, en Win32-apps via de Intune-agent gebruiken Delivery Optimization, in plaats van BITS.
 
-Zie [Background Intelligent Transfer Service](https://technet.microsoft.com/library/bb968799.aspx) in de TechNet-bibliotheek voor meer informatie over BITS en Windows-computers.
+Zie [Background Intelligent Transfer Service](/windows/win32/bits/background-intelligent-transfer-service-portal) in de TechNet-bibliotheek voor meer informatie over BITS en Windows-computers.
 
 
 #### <a name="use-branchcache-on-computers-requires-intune-software-client"></a>BranchCache gebruiken op computers (hiervoor is de Intune-softwareclient vereist)
@@ -111,7 +111,7 @@ Als u BranchCache wilt gebruiken, moet BranchCache op de clientcomputer zijn ing
 
 Wanneer de Intune-client is geïnstalleerd op computers, worden BranchCache en de modus Gedistribueerde cache standaard ingeschakeld. Als BranchCache echter is uitgeschakeld door groepsbeleid, overschrijft Intune dat beleid niet en blijft BranchCache uitgeschakeld.
 
-Als u BranchCache gebruikt, moet u samenwerken met andere beheerders in uw organisatie die het groepsbeleid en het beleid voor de Intune Firewall beheren. Zorg ervoor dat zij geen beleid implementeren waarmee BranchCache of Firewall-uitzonderingen worden uitgeschakeld. Zie [Overzicht van BranchCache](https://technet.microsoft.com/library/hh831696.aspx) voor meer informatie over BranchCache.
+Als u BranchCache gebruikt, moet u samenwerken met andere beheerders in uw organisatie die het groepsbeleid en het beleid voor de Intune Firewall beheren. Zorg ervoor dat zij geen beleid implementeren waarmee BranchCache of Firewall-uitzonderingen worden uitgeschakeld. Zie [Overzicht van BranchCache](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831696(v=ws.11)) voor meer informatie over BranchCache.
 
 
 ## <a name="next-steps"></a>Volgende stappen

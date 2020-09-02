@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 98ab8fd069b0542a29f61d9b0f5b69d7b82a8a1c
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 5daf488d878881c35db689fae0279c0312eb4c6a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074772"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915786"
 ---
 # <a name="tutorial-configure-slack-to-use-intune-for-emm-and-app-configuration"></a>Zelfstudie: Slack configureren om Intune te gebruiken voor de configuratie van EMM en de app
 
@@ -45,7 +45,7 @@ Voor deze zelfstudie hebt u een testtenant nodig met de volgende abonnementen:
 U hebt ook een [Slack Enterprise Grid](https://get.slack.help/hc/articles/360004150931-What-is-Slack-Enterprise-Grid-)-abonnement nodig.
 
 ## <a name="configure-your-slack-enterprise-grid-plan"></a>Uw Slack Enterprise Grid-abonnement configureren
-Schakel EMM in voor uw Slack Enterprise Grid-abonnement met behulp van de [instructies van Slack](https://get.slack.help/hc/articles/115002579426-Enable-Enterprise-Mobility-Management-for-your-org#step-2:-turn-on-emm) en [koppel uw Azure Active Directory](https://docs.microsoft.com/azure/active-directory/saas-apps/slack-tutorial) als de id-provider (IDP) van uw Grid-abonnement.
+Schakel EMM in voor uw Slack Enterprise Grid-abonnement met behulp van de [instructies van Slack](https://get.slack.help/hc/articles/115002579426-Enable-Enterprise-Mobility-Management-for-your-org#step-2:-turn-on-emm) en [koppel uw Azure Active Directory](/azure/active-directory/saas-apps/slack-tutorial) als de id-provider (IDP) van uw Grid-abonnement.
 
 ## <a name="sign-in-to-intune"></a>Aanmelden bij Intune
 Meld u bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) aan als een globale beheerder of een Intune-servicebeheerder. Als u een Intune-proefabonnement hebt gemaakt, is het account waarmee u het abonnement hebt gemaakt de globale beheerder.

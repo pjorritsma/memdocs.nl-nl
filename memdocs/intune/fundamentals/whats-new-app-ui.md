@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cbb66833397d16ec18ce015d26a19bd28a1113c4
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: 42bcbcdbc6cc6f3256ece2f24114f2d2a52083ce
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048154"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915004"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>UI-updates voor Intune-apps voor eindgebruikers
 
@@ -32,7 +32,7 @@ Informatie over de meest recente updates voor de Microsoft Intune-apps. We voege
 * Studenten en werknemers te waarschuwen voor wijzigingen in de app en in de inschrijving ervoor.
 * De documentatie of de helpdeskprocedures van uw organisatie bij te werken.  
 
-Zorg ervoor dat, als u een werknemer of student bent, u de schermafbeeldingen en koppelingen naar de Help-documentatie voor de bedrijfsportal bekijkt. Zie de [Help-documentatie voor bedrijfsportalgebruikers](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done) voor meer informatie over het gebruik van de bedrijfsportal-app.  
+Zorg ervoor dat, als u een werknemer of student bent, u de schermafbeeldingen en koppelingen naar de Help-documentatie voor de bedrijfsportal bekijkt. Zie de [Help-documentatie voor bedrijfsportalgebruikers](../user-help/use-managed-devices-to-get-work-done.md) voor meer informatie over het gebruik van de bedrijfsportal-app.  
 
 ## <a name="week-of-august-10-2020"></a>Week van 10 augustus 2020
 
@@ -193,7 +193,7 @@ De schermen en stappen in de bedrijfsportal-app voor iOS-inschrijving zijn bijge
 * De app instellingen te openen voor het installeren van het beheerprofiel op hun apparaat.  
 * Terug te gaan naar de bedrijfsportal-app om de inschrijving te voltooien.  
 
-Zie [iOS-apparaat inschrijven bij Intune](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-ios) voor de bijgewerkte stappen en schermen voor de inschrijving.  
+Zie [iOS-apparaat inschrijven bij Intune](../user-help/enroll-your-device-in-intune-ios.md) voor de bijgewerkte stappen en schermen voor de inschrijving.  
 
 ### <a name="user-experience-update-for-the-company-portal-app-for-ios----2536024---"></a>Update van de gebruikerservaring voor de bedrijfsportal-app voor iOS <!-- 2536024 -->
 De startpagina van de bedrijfsportal-app voor iOS-apparaten is opnieuw ontworpen. Dankzij deze wijziging kunt u patronen van de iOS-gebruikersinterface beter volgen op de startpagina en is de zichtbaarheid van apps en e-Books verbeterd.  
@@ -217,7 +217,7 @@ Als Microsoft Intune-beheerder kunt u een aangepaste merkafbeelding uploaden die
 ## <a name="week-of-august-27-2018"></a>Week van 27 augustus 2018  
 
 ### <a name="new-user-experience-update-for-the-company-portal-website---2000968---"></a>Nieuwe update van de gebruikerservaring voor de bedrijfsportalwebsite <!--2000968 -->  
-Op basis van feedback van klanten zijn er nieuwe functies toegevoegd aan de bedrijfsportalwebsite. U zult een aanzienlijke verbetering ervaren wat betreft de bestaande functionaliteit en bruikbaarheid van uw apparaten. Delen van de site, zoals apparaatgegevens, feedback, ondersteuning en apparaatoverzicht, hebben nu een nieuw, modern, responsief ontwerp. De [documentatie voor Intune-bedrijfsportalwebsite](https://docs.microsoft.com/mem/intune/user-help/using-the-intune-company-portal-website) is bijgewerkt, waarbij deze wijzigingen zijn meegenomen.   
+Op basis van feedback van klanten zijn er nieuwe functies toegevoegd aan de bedrijfsportalwebsite. U zult een aanzienlijke verbetering ervaren wat betreft de bestaande functionaliteit en bruikbaarheid van uw apparaten. Delen van de site, zoals apparaatgegevens, feedback, ondersteuning en apparaatoverzicht, hebben nu een nieuw, modern, responsief ontwerp. De [documentatie voor Intune-bedrijfsportalwebsite](../user-help/using-the-intune-company-portal-website.md) is bijgewerkt, waarbij deze wijzigingen zijn meegenomen.   
 
 De updates die u ziet zijn onder andere:  
 
@@ -257,7 +257,7 @@ Schermopname van de Details-weergave:
 
 ## <a name="week-of-april-23-2018"></a>Week van 23 april 2018
 ### <a name="updated-navigation-view-in-the-company-portal-app-for-windows-10----1195010---"></a>Navigatieweergave in de bedrijfsportal voor Windows 10 is bijgewerkt <!-- 1195010 -->
-De Intune-bedrijfsportal-app voor Windows 10 is bijgewerkt met de [Fluent Design System-navigatieweergave](https://docs.microsoft.com/windows/uwp/design/basics/navigation-basics). Aan de zijkant van de app wordt een statische verticale lijst weergegeven met alle toplevelpagina's. Klik op een willekeurige koppeling om snel pagina's weer te geven en te schakelen tussen pagina's. Dit is de eerste van verschillende updates die onderdeel uitmaken van onze voortdurende inspanningen om een meer adaptieve, intuïtieve en vertrouwde versie van Intune te maken. 
+De Intune-bedrijfsportal-app voor Windows 10 is bijgewerkt met de [Fluent Design System-navigatieweergave](/windows/uwp/design/basics/navigation-basics). Aan de zijkant van de app wordt een statische verticale lijst weergegeven met alle toplevelpagina's. Klik op een willekeurige koppeling om snel pagina's weer te geven en te schakelen tussen pagina's. Dit is de eerste van verschillende updates die onderdeel uitmaken van onze voortdurende inspanningen om een meer adaptieve, intuïtieve en vertrouwde versie van Intune te maken. 
 
 ![Schermafbeelding van het dashboard voor de bedrijfsportal-app waarop de Fluent Design-navigatieweergave wordt weergegeven](./media/whats-new-app-ui/1804_WindowsCP_Fluent_01.png)
 

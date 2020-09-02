@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 42362d2c4ccc83718721f5ca314b232274ade46a
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 52dd81efb13bcfcda02c8574e065814f49b5564c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383220"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911842"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Aan de slag met de Microsoft Intune App SDK
 
@@ -94,9 +94,9 @@ U hebt een van de volgende handleidingen voor ontwikkelaars nodig om de App Intu
 
 Als u uw app geschikt hebt gemaakt voor het app-beveiligingsbeleid, is daarnaast het volgende vereist voor uw app om deze correct te laten functioneren met voorwaardelijke toegang op basis van een app voor Azure ActiveDirectory (AAD):
 
-* De app is gebouwd met de [Azure Active Directory-verificatiebibliotheek](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) en geschikt gemaakt voor AAD Broker-verificatie.
+* De app is gebouwd met de [Azure Active Directory-verificatiebibliotheek](/azure/active-directory/develop/active-directory-authentication-libraries) en geschikt gemaakt voor AAD Broker-verificatie.
 
-* De [AAD-client-id](https://docs.microsoft.com/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication#configure-a-native-client-application) voor uw app moet uniek zijn voor de iOS- en Android-platformen.
+* De [AAD-client-id](/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication#configure-a-native-client-application) voor uw app moet uniek zijn voor de iOS- en Android-platformen.
 
 ## <a name="configure-telemetry-for-your-app"></a>Telemetrie configureren voor uw app
 
@@ -108,7 +108,7 @@ Met Microsoft Intune worden gebruiksstatistieken verzameld voor uw app.
 
 * **Intune App SDK voor Android**: De Intune App SDK voor Android beheert niet de gegevensverzameling vanuit uw app. De bedrijfsportal-app registreert standaard telemetriegegevens. Deze gegevens worden naar Microsoft Intune verzonden. Geheel volgens het Microsoft-beleid worden er geen persoonsgegevens verzameld. 
 
-  * Als eindgebruikers ervoor kiezen deze gegevens niet te verzenden, moeten ze telemetrie uitschakelen onder Instellingen op de bedrijfsportal-app. Zie [Gegevensverzameling door Microsoft uitschakelen](https://docs.microsoft.com/mem/intune/user-help/turn-off-microsoft-usage-data-collection-android) voor meer informatie. 
+  * Als eindgebruikers ervoor kiezen deze gegevens niet te verzenden, moeten ze telemetrie uitschakelen onder Instellingen op de bedrijfsportal-app. Zie [Gegevensverzameling door Microsoft uitschakelen](../user-help/turn-off-microsoft-usage-data-collection-android.md) voor meer informatie. 
 
 ## <a name="line-of-business-app-version-numbers"></a>Versienummers van line-of-business-apps
 

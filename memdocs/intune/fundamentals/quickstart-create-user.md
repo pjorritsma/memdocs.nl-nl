@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf5c76e276722fb9bab2b5d6fac511f0b22ae1f2
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6def2806bc35acf8becbbedfb031af99378711ee
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79356710"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913831"
 ---
 # <a name="quickstart-create-a-user-in-intune-and-assign-the-user-a-license"></a>Quickstart: Een gebruiker maken in Intune en een licentie toewijzen aan de gebruiker
 
@@ -59,7 +59,7 @@ Ga als volgt te werk om een Intune-licentie aan een gebruiker toe te wijzen:
 2. Selecteer **Gebruikers** > **Actieve gebruikers**, en selecteer vervolgens de gebruiker die u zojuist hebt gemaakt.
 3. Selecteer het tabblad **Licenties en apps**.
 4. Selecteer onder **Locatie selecteren**een locatie voor de gebruiker, als deze nog niet is ingesteld.
-2. Schakel het selectievakje **Intune** in het gedeelte **Licenties** in. Als een andere licentie Intune bevat, kunt u die licentie selecteren. De weergegeven [productnaam](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference) wordt gebruikt als het serviceabonnement in Azure Management.
+2. Schakel het selectievakje **Intune** in het gedeelte **Licenties** in. Als een andere licentie Intune bevat, kunt u die licentie selecteren. De weergegeven [productnaam](/azure/active-directory/users-groups-roles/licensing-service-plan-reference) wordt gebruikt als het serviceabonnement in Azure Management.
 
     ![De locatie en Intune-licentie selecteren](./media/quickstart-create-user/create-user-03.png)
 

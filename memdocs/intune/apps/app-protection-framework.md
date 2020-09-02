@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 444fb116150cf3d7a3ab4dcfe4eb450b20119df0
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: 0803563dc525b0835602d54d4bde3de1345aeb33
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86410926"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913372"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>Gegevensbeschermingsframework met beleid voor app-beveiliging 
 
@@ -64,7 +64,7 @@ De volgende instellingen voor het app-beveiligingsbeleid moeten worden ingeschak
 Microsoft raadt u aan gebruiksscenario's te bekijken en te categoriseren, en vervolgens gebruikers te configureren met behulp van de specifieke richtlijnen voor dat niveau. Net als bij elk framework moeten instellingen binnen een overeenkomstig niveau mogelijk worden aangepast op basis van de behoeften van de organisatie, omdat bij de gegevensbescherming de dreigingsomgeving, risicobereidheid en impact op de bruikbaarheid moeten worden beoordeeld.  
 
 ### <a name="conditional-access-policies"></a>Beleid voor voorwaardelijke toegang
-Beleid voor voorwaardelijke toegang van Azure Active Directory is vereist om ervoor te zorgen dat alleen apps die ondersteuning bieden voor app-beveiligingsbeleid toegang hebben tot gegevens in werk- en schoolaccounts. Zie **Scenario 1: Office 365-apps vereisen goedgekeurde apps met app-beveiligingsbeleid** in [App-beveiligingsbeleid vereisen voor toegang tot cloud-apps met voorwaardelijke toegang](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access) voor stappen voor het implementeren van specifiek beleid.
+Beleid voor voorwaardelijke toegang van Azure Active Directory is vereist om ervoor te zorgen dat alleen apps die ondersteuning bieden voor app-beveiligingsbeleid toegang hebben tot gegevens in werk- en schoolaccounts. Zie **Scenario 1: Office 365-apps vereisen goedgekeurde apps met app-beveiligingsbeleid** in [App-beveiligingsbeleid vereisen voor toegang tot cloud-apps met voorwaardelijke toegang](/azure/active-directory/conditional-access/app-protection-based-conditional-access) voor stappen voor het implementeren van specifiek beleid.
 
 ### <a name="apps-to-include-in-the-app-protection-policies"></a>Apps die moeten worden opgenomen in het app-beveiligingsbeleid  
 

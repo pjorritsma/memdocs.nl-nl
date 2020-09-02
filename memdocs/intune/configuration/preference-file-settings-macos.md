@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ebf65ecc6dbe5059adbd6fec70833bf2fcab9de7
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 478cce186d5f2943aeb5730acf90c3e875c8b687
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988669"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915310"
 ---
 # <a name="add-a-property-list-file-to-macos-devices-using-microsoft-intune"></a>Een eigenschappenlijstbestand toevoegen aan macOS-apparaten met behulp van Microsoft Intune
 
@@ -66,7 +66,7 @@ Deze instellingen worden toegevoegd aan een apparaatconfiguratieprofiel in Intun
 
     - **Naam van voorkeursdomein**: Voer de bundel-id in, bijvoorbeeld `com.company.application`. Voer bijvoorbeeld `com.Contoso.applicationName`, `com.Microsoft.Edge` of `com.microsoft.wdav` in.
 
-      Eigenschappenlijstbestanden worden meestal gebruikt voor webbrowsers (Microsoft Edge), [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) en aangepaste apps. Wanneer u een voorkeursdomein maakt, wordt er ook een bundel-id gemaakt.
+      Eigenschappenlijstbestanden worden meestal gebruikt voor webbrowsers (Microsoft Edge), [Microsoft Defender Advanced Threat Protection](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) en aangepaste apps. Wanneer u een voorkeursdomein maakt, wordt er ook een bundel-id gemaakt.
 
     - **Eigenschappenlijstbestand**: Selecteer het eigenschappenlijstbestand dat aan uw app is gekoppeld. Controleer of het een `.plist`- of `.xml`-bestand is. Upload bijvoorbeeld het bestand `YourApp-Manifest.plist` of het bestand `YourApp-Manifest.xml`.
 
@@ -97,4 +97,4 @@ Deze instellingen worden toegevoegd aan een apparaatconfiguratieprofiel in Intun
 
 [Het profiel toewijzen](device-profile-assign.md) en [de status ervan controleren](device-profile-monitor.md).
 
-Zie [Microsoft Edge-beleidsinstellingen voor macOS configureren](https://docs.microsoft.com/deployedge/configure-microsoft-edge-on-mac) voor meer informatie over voorkeursbestanden voor Microsoft Edge.
+Zie [Microsoft Edge-beleidsinstellingen voor macOS configureren](/deployedge/configure-microsoft-edge-on-mac) voor meer informatie over voorkeursbestanden voor Microsoft Edge.

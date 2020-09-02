@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb5dec2fd96c5b5dfe0b82bb30bf653250786c95
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f674cc7b0c7d7314c7152d530cff210319c568df
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986770"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913134"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Apparaten registreren in Intune met een manageraccount voor apparaatregistratie
 
@@ -49,7 +49,7 @@ DEM-gebruikersaccounts en apparaten die zijn ingeschreven met een DEM-gebruikers
 
 U kunt de volgende methoden gebruiken om apparaten in te schrijven met behulp van DEM-accounts:
 
-- [Windows Autopilot](enrollment-autopilot.md)
+- [Windows Autopilot](../../autopilot/enrollment-autopilot.md)
 - [Bulkinschrijving voor Windows-apparaten](windows-bulk-enroll.md)
 - DEM geïnitieerd via de Bedrijfsportal
 
@@ -77,4 +77,3 @@ Het verwijderen van een apparaatinschrijvingsmanager is niet van invloed op inge
 
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431), kies **Apparaten** > **Apparaten inschrijven** > **Apparaatinschrijvingsmanagers**.
 2. Klik op de blade **Apparaatinschrijvingsmanagers** op de DEM-gebruiker en selecteer **Verwijderen**.
-

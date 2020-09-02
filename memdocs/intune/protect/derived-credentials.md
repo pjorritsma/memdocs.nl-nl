@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 25d3813d79ec20cc396c3127be6be5371c20247f
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: a83d6301ffe5663abd6025c8f52b2e7a7e0b7982
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461179"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911111"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Afgeleide referenties gebruiken in Microsoft Intune
 
@@ -119,8 +119,8 @@ De belangrijkste overwegingen voor elke ondersteunde partner zijn de volgende.  
 
 Controleer de platformspecifieke gebruikerswerkstroom voor de apparaten waarvoor u afgeleide referenties gaat gebruiken.
 
-- [iOS en iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-disa-purebred)
-- [Volledig beheerde Android Enterprise-apparaten](https://docs.microsoft.com/mem/intune/user-help/enroll-android-device-disa-purebred)
+- [iOS en iPadOS](/intune-user-help/enroll-ios-device-disa-purebred)
+- [Volledig beheerde Android Enterprise-apparaten](../user-help/enroll-android-device-disa-purebred.md)
 
 **Belangrijke vereisten zijn onder meer**:
 
@@ -138,7 +138,7 @@ Zie [De DISA Purebred-app implementeren](#deploy-the-disa-purebred-app) verderop
 
 Controleer de platformspecifieke gebruikerswerkstroom voor de apparaten waarvoor u afgeleide referenties gaat gebruiken.
 
-- [iOS en iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-entrust-datacard)
+- [iOS en iPadOS](/intune-user-help/enroll-ios-device-entrust-datacard)
 - [Volledig beheerde Android Enterprise-apparaten](../user-help/enroll-android-device-entrust-datacard.md)
 
 **Belangrijke vereisten zijn onder meer**:
@@ -156,7 +156,7 @@ Controleer de platformspecifieke gebruikerswerkstroom voor de apparaten waarvoor
 
 Controleer de platformspecifieke gebruikerswerkstroom voor de apparaten waarvoor u afgeleide referenties gaat gebruiken.
 
-- [iOS en iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-intercede)
+- [iOS en iPadOS](/intune-user-help/enroll-ios-device-intercede)
 - [Volledig beheerde Android Enterprise-apparaten](../user-help/enroll-android-device-intercede.md)
 
 **Belangrijke vereisten zijn onder meer**:

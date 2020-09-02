@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43ebd7a242fbc0b859c7b947b02b330498649296
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: 895db60bcd4d484a218289978c2da2d2688b8887
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86410863"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910567"
 ---
 # <a name="review-client-app-protection-logs"></a>Logboeken voor beveiliging van de client-app controleren
 
@@ -31,7 +31,7 @@ Kom meer te weten over de instellingen die u kunt bekijken in de app-bescherming
 
 Het proces voor het inschakelen en verzamelen van logboeken verschilt per platform:
 - **IOS-/iPadOS-apparaten**: gebruik Microsoft Edge voor iOS/iPadOS om logboeken te verzamelen. Zie [Microsoft Edge voor iOS en Android gebruiken voor toegang tot logboeken voor beheerde apps](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs) voor details.
-- **Windows 10-apparaten**: gebruik *MDMDiag* en gebeurtenislogboeken. Zie [Diagnose MDM failures in Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) (MDM-fouten diagnosticeren in Windows 10) in de documentatie voor Windows-clientbeheer en het blog [Troubleshooting Windows 10 Intune Policy Failures](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (Problemen met het Windows 10 Intune-beleid oplossen).
+- **Windows 10-apparaten**: gebruik *MDMDiag* en gebeurtenislogboeken. Zie [Diagnose MDM failures in Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) (MDM-fouten diagnosticeren in Windows 10) in de documentatie voor Windows-clientbeheer en het blog [Troubleshooting Windows 10 Intune Policy Failures](/archive/blogs/configmgrdogs/troubleshooting-windows-10-intune-policy-failures) (Problemen met het Windows 10 Intune-beleid oplossen).
 - **Android-apparaten**: gebruik Microsoft Edge voor Android om logboeken te verzamelen. Zie [Microsoft Edge voor iOS en Android gebruiken voor toegang tot logboeken voor beheerde apps](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs) voor details.
 
   > [!NOTE]

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2614dfc903bf7f10633bf05414ed8a71cdd2e03b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5b70f36873200d0adbbc356d9a482cf13cc2ea49
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990619"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913321"
 ---
 # <a name="add-a-windows-line-of-business-app-to-microsoft-intune"></a>Een Windows Line-Of-Business-app toevoegen aan Microsoft Intune
 
@@ -50,7 +50,7 @@ Een LOB-app is een app die u vanaf een app-installatiebestand toevoegt. Dit type
    De details van de app worden weergegeven.
 
     > [!NOTE]
-    > De bestandsextensies voor Windows-apps zijn **.msi**, **.appx**, **.appxbundle**, **.msix** en **.msixbundle**. Voor meer informatie over **.msix** raadpleegt u [MSIX-documentatie](https://docs.microsoft.com/windows/msix/) en [MSIX-app-distributie](https://docs.microsoft.com/windows/msix/desktop/managing-your-msix-deployment-enterprise).
+    > De bestandsextensies voor Windows-apps zijn **.msi**, **.appx**, **.appxbundle**, **.msix** en **.msixbundle**. Voor meer informatie over **.msix** raadpleegt u [MSIX-documentatie](/windows/msix/) en [MSIX-app-distributie](/windows/msix/desktop/managing-your-msix-deployment-enterprise).
 
 3. Wanneer u klaar bent, selecteert u **OK** in het deelvenster **App-pakketbestand** om de app toe te voegen.
 
@@ -62,7 +62,7 @@ Een LOB-app is een app die u vanaf een app-installatiebestand toevoegt. Dit type
     - **Uitgever**: Voer de naam van de uitgever van de app in.
     - **Context voor app-installatie**: Selecteer de installatiecontext die u aan deze app wilt koppelen. Voor apps in de dubbele modus selecteert u de gewenste context voor deze app. Dit is vooraf geselecteerd voor alle apps op basis van pakket en kan niet worden aangepast.
     - **App-versie negeren**: stel deze optie in op **Ja** als de app-ontwikkelaar de app automatisch bijwerkt. Deze optie is alleen van toepassing op mobiele .msi-apps.
-    - **Opdrachtregelargumenten**: voer eventueel opdrachtregelargumenten in die u wilt toepassen op het MSI-bestand wanneer dit wordt uitgevoerd.  Bijvoorbeeld **/q**. Neem niet de msiexec-opdracht of -argumenten op, zoals **/i** of **/x**, omdat ze automatisch worden gebruikt. Zie [Opdrachtregelopties](https://docs.microsoft.com/windows/desktop/Msi/command-line-options) voor meer informatie. Als voor het MSI-bestand extra opdrachtregelopties vereist zijn, kunt u [Win32-app-beheer](app-management.md) gebruiken.
+    - **Opdrachtregelargumenten**: voer eventueel opdrachtregelargumenten in die u wilt toepassen op het MSI-bestand wanneer dit wordt uitgevoerd.  Bijvoorbeeld **/q**. Neem niet de msiexec-opdracht of -argumenten op, zoals **/i** of **/x**, omdat ze automatisch worden gebruikt. Zie [Opdrachtregelopties](/windows/desktop/Msi/command-line-options) voor meer informatie. Als voor het MSI-bestand extra opdrachtregelopties vereist zijn, kunt u [Win32-app-beheer](app-management.md) gebruiken.
     - **Categorie**: selecteer een of meer van de ingebouwde app-categorieën of selecteer een categorie die u hebt gemaakt. Met categorieën kunnen gebruikers de app gemakkelijker vinden wanneer ze door de bedrijfsportal bladeren.
     - **Deze weergeven als aanbevolen app in de bedrijfsportal**: Geef de app prominent weer op de hoofdpagina van de bedrijfsportal wanneer gebruikers door apps bladeren.
     - **Informatie-URL**: Voer de URL in van een website die informatie over deze app bevat (optioneel). De URL wordt weergegeven in de bedrijfsportal.

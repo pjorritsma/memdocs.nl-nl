@@ -16,18 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a1d410da2cbedb9bcd2418fac1ddb783529ee8c6
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: d5c57dcbe91d18b633831bafde3a0feae997ba76
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262588"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909377"
 ---
 # <a name="use-intune-to-remediate-vulnerabilities-identified-by-microsoft-defender-atp"></a>Intune gebruiken voor het oplossen van beveiligingsproblemen geïdentificeerd door Microsoft Defender ATP
 
 Wanneer u Intune integreert met Microsoft Defender Advanced Threat Protection (ATP), hebt u ook toegang tot Threat & Vulnerability Management (TVM) van ATP en kunt u Intune gebruiken voor het wegnemen van beveiligingsproblemen die door TVM zijn geïdentificeerd op eindpunten. Met deze integratie wordt bij de detectie en de prioriteitsbepaling van beveiligingsproblemen het risico centraal gesteld, waardoor de reactietijd bij problemen kan verbeteren in uw omgeving.
 
-[Threat & Vulnerability Management](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/next-gen-threat-and-vuln-mgt) maakt deel uit van [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/windows-defender-advanced-threat-protection).
+[Threat & Vulnerability Management](/windows/security/threat-protection/windows-defender-atp/next-gen-threat-and-vuln-mgt) maakt deel uit van [Microsoft Defender Advanced Threat Protection](/windows/security/threat-protection/windows-defender-atp/windows-defender-advanced-threat-protection).
 
 ## <a name="how-integration-works"></a>Hoe de integratie werkt
 
@@ -108,4 +108,4 @@ Meer informatie over Intune en [Microsoft Defender ATP](advanced-threat-protecti
 
 Bekijk Intune [Mobile Threat Defense](mobile-threat-defense.md).
 
-Bekijk het [dashboard Threat & Vulnerability Management](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/tvm-dashboard-insights) in Microsoft Defender ATP.
+Bekijk het [dashboard Threat & Vulnerability Management](/windows/security/threat-protection/windows-defender-atp/tvm-dashboard-insights) in Microsoft Defender ATP.

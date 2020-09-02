@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65459953fab0faed3e0c64b2097dd2a41e795111
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3a1b4d8d49c86bacaa633a4d84a7a2a4afd890c2
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79372565"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912420"
 ---
 # <a name="what-is-intune-for-government"></a>Wat is Intune for Government?
 
@@ -37,6 +37,6 @@ Met Intune for Government kunt u Windows 10-, iOS- en Android-apparaten beheren 
 - Ervoor zorgen dat apparaten en apps voldoen aan beveiligingsvereisten.
 
 ### <a name="next-steps"></a>Volgende stappen
-- Zie [Beschrijving van GCC High- DoD-service van Microsoft Intune for US Government](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-intune-govt-service-description) voor meer informatie over Intune for US Government.
+- Zie [Beschrijving van GCC High- DoD-service van Microsoft Intune for US Government](/enterprise-mobility-security/solutions/ems-intune-govt-service-description) voor meer informatie over Intune for US Government.
 - Duik in de [technische vereisten en mogelijkheden](/intune/supported-devices-browsers) van Intune.
-- [Verschillen in functies van Intune en Intune for US Government vergelijken](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-intune-govt-service-description).
+- [Verschillen in functies van Intune en Intune for US Government vergelijken](/enterprise-mobility-security/solutions/ems-intune-govt-service-description).

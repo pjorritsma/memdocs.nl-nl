@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4666c8c765f15ddd103727ccf2a7d840cb69bd20
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 889706a0fcf0d84abcbdb70b429e507233159254
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989364"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915939"
 ---
 # <a name="integrate-zimperium-with-intune"></a>Zimperium integreren met Intune
 
@@ -61,7 +61,7 @@ Het autorisatieproces van de Zimperium-app is als volgt:
 
 - De app Zimperium toestaan zich aan te melden met behulp van Azure AD-eenmalige aanmelding.
 
-Zie voor meer informatie over toestemming en Azure Active Directory-toepassingen [De machtigingen aanvragen bij een directory-beheerder](https://docs.microsoft.com/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-from-a-directory-admin) in het Azure Active Directory-artikel *Machtigingen en toestemming in het Azure Active Directory v2.0-eindpunt*.
+Zie voor meer informatie over toestemming en Azure Active Directory-toepassingen [De machtigingen aanvragen bij een directory-beheerder](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-from-a-directory-admin) in het Azure Active Directory-artikel *Machtigingen en toestemming in het Azure Active Directory v2.0-eindpunt*.
 
 
 ## <a name="to-set-up-zimperium-integration"></a>Instellen van Zimperium-integratie

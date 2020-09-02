@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 968aa9b2f7127e9b7f092f36a99b491a75f0b78c
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 6aff5dfe62c1c44ec22f56c287220b59b98a7536
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546863"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915480"
 ---
 # <a name="troubleshoot-windows-10-group-policy-based-auto-enrollment-in-intune"></a>Probleem oplossen met automatische, op beleid gebaseerde inschrijving van Windows 10-groepen in Intune
 
-U kunt groepsbeleid gebruiken om automatische inschrijving bij MDM te activeren voor aan een domein gekoppelde Active Directory-apparaten (AD). Zie [Windows 10-apparaten automatisch inschrijven aan de hand van groepsbeleid](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy) voor meer informatie over deze functie.
+U kunt groepsbeleid gebruiken om automatische inschrijving bij MDM te activeren voor aan een domein gekoppelde Active Directory-apparaten (AD). Zie [Windows 10-apparaten automatisch inschrijven aan de hand van groepsbeleid](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy) voor meer informatie over deze functie.
 
 ## <a name="verify-the-configuration"></a>De configuratie controleren
 
@@ -37,7 +37,7 @@ Voordat u met de probleemoplossing begint, kunt u het beste eerst controleren of
 
    ![De Intune-licentie controleren](./media/troubleshoot-windows-auto-enrollment/intune-license.png)
 
-- Controleer of automatische inschrijving is ingeschakeld voor alle gebruikers die de apparaten gaan inschrijven in Intune. Zie [Azure AD en Microsoft Intune: automatische MDM-inschrijving in de nieuwe portal](https://docs.microsoft.com/windows/client-management/mdm/azure-ad-and-microsoft-intune-automatic-mdm-enrollment-in-the-new-portal) voor meer informatie.
+- Controleer of automatische inschrijving is ingeschakeld voor alle gebruikers die de apparaten gaan inschrijven in Intune. Zie [Azure AD en Microsoft Intune: automatische MDM-inschrijving in de nieuwe portal](/windows/client-management/mdm/azure-ad-and-microsoft-intune-automatic-mdm-enrollment-in-the-new-portal) voor meer informatie.
 
    ![Automatische inschrijving controleren](./media/troubleshoot-windows-auto-enrollment/verify-auto-enrollment.png)
 
@@ -106,7 +106,7 @@ Gebeurtenis-id 75 wordt in de volgende situaties niet aan een logboek toegevoegd
 
   Als u deze fout wilt controleren, zoekt u gebeurtenis-id 76 (gebeurtenisbericht: Automatische MDM-inschrijving: Mislukt (onbekende Win32-foutcode: 0x8018002b)). Deze gebeurtenis geeft aan dat een automatische inschrijving is mislukt.
 
-  Zie [Problemen met inschrijving van Windows-apparaten in Microsoft Intune oplossen](https://docs.microsoft.com/intune/troubleshoot-windows-enrollment-errors) om deze fout op te lossen.
+  Zie [Problemen met inschrijving van Windows-apparaten in Microsoft Intune oplossen](/intune/troubleshoot-windows-enrollment-errors) om deze fout op te lossen.
 
 - De inschrijving is helemaal niet geactiveerd. In dit geval worden gebeurtenis-id 75 en gebeurtenis-id 76 niet aan een logboek toegevoegd.
   

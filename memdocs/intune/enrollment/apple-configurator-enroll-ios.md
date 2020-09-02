@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7101ad9bffcd80bd608690f22db37abbbc7a7895
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 00d515743f2391d9c232b9ae5d97062a01302c48
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093803"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908816"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-configurator"></a>Registratie van iOS-/iPadOS-apparaten instellen met Apple Configurator
 
@@ -60,7 +60,7 @@ Met een inschrijvingsprofiel voor apparaten worden de instellingen tijdens het i
 
 4. Geef voor **Gebruikersaffiniteit** aan of andere apparaten met dit profiel met of zonder toegewezen gebruiker moeten worden ingeschreven.
 
-    - **Inschrijven met gebruikersaffiniteit**: kies deze optie voor apparaten die eigendom zijn van gebruikers en die de bedrijfsportal willen gebruiken voor services zoals het installeren van apps. Het apparaat moet met de Configuratieassistent aan een gebruiker worden gekoppeld en kan vervolgens toegang krijgen tot bedrijfsgegevens en -e-mail. Alleen ondersteund bij inschrijving via Apple Configurator Setup Assistant. Gebruikersaffiniteit vereist [WS-Trust 1.3 gebruikersnaam/gemengd eindpunt](https://technet.microsoft.com/library/adfs2-help-endpoints). [Meer informatie](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
+    - **Inschrijven met gebruikersaffiniteit**: kies deze optie voor apparaten die eigendom zijn van gebruikers en die de bedrijfsportal willen gebruiken voor services zoals het installeren van apps. Het apparaat moet met de Configuratieassistent aan een gebruiker worden gekoppeld en kan vervolgens toegang krijgen tot bedrijfsgegevens en -e-mail. Alleen ondersteund bij inschrijving via Apple Configurator Setup Assistant. Gebruikersaffiniteit vereist [WS-Trust 1.3 gebruikersnaam/gemengd eindpunt](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)). [Meer informatie](/powershell/module/adfs/get-adfsendpoint?view=win10-ps).
 
     - **Inschrijven zonder gebruikersaffiniteit**: kies deze optie voor apparaten die niet aan één gebruiker zijn gelieerd. Gebruik dit voor apparaten waarmee taken worden uitgevoerd zonder toegang tot lokale gebruikersgegevens. Apps waarvoor een gebruikersrelatie is vereist, zoals de bedrijfsportal-app die wordt gebruikt voor het installeren van LOB-apps, zullen niet werken. Vereist voor directe inschrijving.
 
@@ -171,8 +171,3 @@ Apps waarvoor een gebruikersrelatie is vereist, zoals de bedrijfsportal-app die 
 6. Open **Instellingen** op het iOS-/iPadOS-apparaat en ga naar **Algemeen** > **Apparaatbeheer** > **Beheerprofiel**. Controleer of de profielinstallatie wordt weergegeven en controleer vervolgens de iOS-/iPadOS-beleidsbeperkingen en geïnstalleerde apps. Het kan 10 minuten duren voordat beleidsbeperkingen en apps worden weergegeven op het apparaat.
 
 7. Apparaten distribueren. Het iOS-/iPadOS-apparaat is nu ingeschreven bij Intune en wordt beheerd.
-
-
-
-
-

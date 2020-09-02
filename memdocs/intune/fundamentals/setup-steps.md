@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 631b2f0fdf0d5cdd79eee9a3645b5769b756d71b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: c0a71ba59a1704e0f6369f611a2922212a2aa8c6
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990699"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911335"
 ---
 # <a name="set-up-intune"></a>Intune instellen
 
@@ -30,10 +30,10 @@ Deze installatiestappen helpen u om Mobile Device Management (MDM) in te schakel
 
 Sommige stappen, zoals het instellen van een Intune-abonnement en het instellen van de MDM-instantie, zijn voor de meeste scenario’s vereist. Andere stappen, zoals het configureren van een aangepast domein of het toevoegen van apps, zijn optioneel en afhankelijk van de behoeften van uw organisatie.
 
-Als u momenteel Microsoft Endpoint Configuration Manager gebruikt voor het beheer van computers en servers, kunt u [Configuration Manager in de cloud koppelen met co-beheer](https://docs.microsoft.com/configmgr/comanage/overview).
+Als u momenteel Microsoft Endpoint Configuration Manager gebruikt voor het beheer van computers en servers, kunt u [Configuration Manager in de cloud koppelen met co-beheer](/configmgr/comanage/overview).
 
 >[!TIP]
->Als u ten minste 150 licenties koopt voor Intune als onderdeel van een in aanmerking komend abonnement, kunt u *FastTrack Center Benefit* gebruiken. Met deze service werken Microsoft-specialisten met u samen om uw omgeving gereed te maken voor Intune. Zie [FastTrack Center Benefit-proces voor Enterprise Mobility + Security (EMS)](https://docs.microsoft.com/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program).
+>Als u ten minste 150 licenties koopt voor Intune als onderdeel van een in aanmerking komend abonnement, kunt u *FastTrack Center Benefit* gebruiken. Met deze service werken Microsoft-specialisten met u samen om uw omgeving gereed te maken voor Intune. Zie [FastTrack Center Benefit-proces voor Enterprise Mobility + Security (EMS)](/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program).
 
 | Stappen | Status  |
 |---|---|

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c9586b27ce5040eb683fa22510c7c9a51aeee1d
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 0206af58be08130e67907bad18d7afa10e236d44
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262537"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912403"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Netwerkeindpunten voor Microsoft Intune  
 
@@ -91,7 +91,7 @@ Als u Intune gebruikt voor het implementeren van PowerShell-scripts of Win32-app
 
 ## <a name="windows-push-notification-services-wns"></a>Windows Push Notification Services (WNS)  
 
-Bij Windows-apparaten die door Intune worden beheerd met behulp van Mobile Device Management (MDM) moet voor apparaatacties en andere directe activiteiten Windows Push Notification Services (WNS) worden gebruikt. Zie [Allowing Windows Notification traffic through enterprise firewalls](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config) (Windows Notification-verkeer via de bedrijfsfirewalls toestaan) voor meer informatie.  
+Bij Windows-apparaten die door Intune worden beheerd met behulp van Mobile Device Management (MDM) moet voor apparaatacties en andere directe activiteiten Windows Push Notification Services (WNS) worden gebruikt. Zie [Allowing Windows Notification traffic through enterprise firewalls](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config) (Windows Notification-verkeer via de bedrijfsfirewalls toestaan) voor meer informatie.  
 
 ## <a name="delivery-optimization-port-requirements"></a>Delivery Optimization-poortvereisten  
 
@@ -101,7 +101,7 @@ Voor peer-to-peerverkeer gebruikt Delivery Optimization 7680 voor TCP/IP of 3544
 
 ### <a name="proxy-requirements"></a>Proxyvereisten  
 
-Als u Delivery Optimization wilt gebruiken, moet u aanvragen van bytebereiken toestaan. Zie [Proxy requirements for Windows Update](https://docs.microsoft.com/windows/deployment/update/windows-update-troubleshooting) (Proxyvereisten voor Windows Update) voor meer informatie.
+Als u Delivery Optimization wilt gebruiken, moet u aanvragen van bytebereiken toestaan. Zie [Proxy requirements for Windows Update](/windows/deployment/update/windows-update-troubleshooting) (Proxyvereisten voor Windows Update) voor meer informatie.
 
 ### <a name="firewall-requirements"></a>Firewallvereisten  
 
@@ -125,10 +125,10 @@ Zie voor meer informatie de documentatie van Apple: [TCP and UDP ports used by A
 
 ## <a name="android-port-information"></a>Informatie over Android-poort
 
-Afhankelijk van de keuze om Android-apparaten te beheren, moet u mogelijk de Google Android Enterprise-poorten en/of de Android-pushmelding openen. Raadpleeg de [documentatie voor Android-inschrijving](https://docs.microsoft.com/mem/intune/enrollment/android-enroll) voor meer informatie over de ondersteunde Android-beheermethoden. 
+Afhankelijk van de keuze om Android-apparaten te beheren, moet u mogelijk de Google Android Enterprise-poorten en/of de Android-pushmelding openen. Raadpleeg de [documentatie voor Android-inschrijving](../enrollment/android-enroll.md) voor meer informatie over de ondersteunde Android-beheermethoden. 
 
 > [!NOTE]
-> Omdat Google Mobile Services niet beschikbaar is in China, kunnen apparaten in China beheerd door Intune geen functies gebruiken waarvoor Google Mobile Services is vereist. Het gaat om de volgende functies: Google Play-mogelijkheden voor beveiliging, zoals apparaatbevestiging van SafetyNet, het beheren van apps vanuit de Google Play Store, Android Enterprise-mogelijkheden (zie deze [Google-documentatie](https://support.google.com/work/android/answer/6270910)). De app Intune-bedrijfsportal voor Android maakt daarnaast gebruik van Google Mobile Services om te communiceren met de Microsoft Intune-service. Omdat Google Play Services niet beschikbaar is in China, kan het tot acht uur duren voordat sommige taken zijn voltooid. Zie dit [artikel](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable) voor meer informatie.
+> Omdat Google Mobile Services niet beschikbaar is in China, kunnen apparaten in China beheerd door Intune geen functies gebruiken waarvoor Google Mobile Services is vereist. Het gaat om de volgende functies: Google Play-mogelijkheden voor beveiliging, zoals apparaatbevestiging van SafetyNet, het beheren van apps vanuit de Google Play Store, Android Enterprise-mogelijkheden (zie deze [Google-documentatie](https://support.google.com/work/android/answer/6270910)). De app Intune-bedrijfsportal voor Android maakt daarnaast gebruik van Google Mobile Services om te communiceren met de Microsoft Intune-service. Omdat Google Play Services niet beschikbaar is in China, kan het tot acht uur duren voordat sommige taken zijn voltooid. Zie dit [artikel](../apps/manage-without-gms.md#limitations-of-intune-device-administrator-management-when-gms-is-unavailable) voor meer informatie.
 
 ### <a name="google-android-enterprise"></a>Google Android Enterprise 
 
@@ -140,4 +140,4 @@ Intune maakt gebruik van Google Firebase Cloud Messaging (FCM) voor pushmeldinge
 
 ## <a name="endpoint-analytics"></a>Eindpuntanalyse
 
-Zie [Proxyconfiguratie voor eindpuntanalyse](https://docs.microsoft.com/mem/analytics/troubleshoot#bkmk_endpoints) voor meer informatie over de vereiste eindpunten voor eindpuntanalyse.
+Zie [Proxyconfiguratie voor eindpuntanalyse](../../analytics/troubleshoot.md#bkmk_endpoints) voor meer informatie over de vereiste eindpunten voor eindpuntanalyse.

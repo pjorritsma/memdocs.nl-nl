@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6d50d7f8e4edeaf6d88875fafef977936909d71f
-ms.sourcegitcommit: 532a06163f462527254d23e7dc505b18c0c4f938
+ms.openlocfilehash: 5c7a83f07ce9c3da2fa953a3ea0d97e05b928a6a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88110729"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915463"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Bulkregistratie voor Windows-apparaten
 
@@ -78,7 +78,7 @@ Azure AD-gebruikers zijn standaardgebruikers op deze apparaten en ontvangen toeg
    - Plaats het inrichtingspakket op een USB-station, plaats het USB-station in het apparaat dat u bulksgewijs wilt registreren en pas het toe tijdens de eerste configuratie
    - Plaats het inrichtingspakket in een netwerkmap en pas het toe na de eerste configuratie
 
-   Zie [Een inrichtingspakket toepassen](https://technet.microsoft.com/itpro/windows/configure/provisioning-apply-package) voor stapsgewijze instructies over het toepassen van een inrichtingspakket.
+   Zie [Een inrichtingspakket toepassen](/windows/configuration/provisioning-packages/provisioning-apply-package) voor stapsgewijze instructies over het toepassen van een inrichtingspakket.
 
 3. Nadat u het pakket hebt toegepast, wordt het apparaat na 1 minuut automatisch opnieuw opgestart.
    ![Schermafbeelding van het opgeven van de naam, projectmap en beschrijving in de app Windows Configuration Designer](./media/windows-bulk-enroll/bulk-enroll-add.png)

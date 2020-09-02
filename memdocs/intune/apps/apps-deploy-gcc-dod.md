@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1e98171955ed4f026da4c983e6ca8959cfe2606a
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 9fb3556d363d2e831861a15aeadfb78bc2fa7dbb
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217235"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914103"
 ---
 # <a name="deploying-apps-using-intune-on-the-gcc-high-and-dod-environments"></a>Apps implementeren met Intune in de GCC High- en DoD-omgevingen 
 
@@ -38,7 +38,7 @@ Als u met Intune een Line-Of-Business-app wilt toevoegen die voor een GCC High- 
 
 ## <a name="distribute-offline-apps-from-the-store-for-business-using-intune"></a>Offline-apps met Intune distribueren vanuit de Store voor Bedrijven  
 
-Als u [een offline gelicentieerde app moet downloaden](https://docs.microsoft.com/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app) uit de Microsoft Store voor Bedrijven, volgt u deze stappen om de toepassing te downloaden: 
+Als u [een offline gelicentieerde app moet downloaden](/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app) uit de Microsoft Store voor Bedrijven, volgt u deze stappen om de toepassing te downloaden: 
 
 1. Meld u aan bij de [Store voor Bedrijven](https://businessstore.microsoft.com/).
 2. Selecteer **Beheren** > **Instellingen**.
@@ -48,7 +48,7 @@ Als u apps wilt kopen en er een offlineversie beschikbaar is, kunt u het licenti
 
 ## <a name="syncing-intune-to-the-store-for-business"></a>Intune synchroniseren met de Store voor Bedrijven 
 
-In een commerciële omgeving (geen overheidsomgeving) kunnen beheerders Intune synchroniseren met de Microsoft Store voor Bedrijven. Deze functie is niet beschikbaar voor overheidsomgevingen. Voor meer informatie over de verschillen tussen Intune in commerciële omgevingen en Intune voor overheidsomgevingen raadpleegt u de [Beschrijving van de service Enterprise Mobility + Security for US Government](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-govt-service-description).  
+In een commerciële omgeving (geen overheidsomgeving) kunnen beheerders Intune synchroniseren met de Microsoft Store voor Bedrijven. Deze functie is niet beschikbaar voor overheidsomgevingen. Voor meer informatie over de verschillen tussen Intune in commerciële omgevingen en Intune voor overheidsomgevingen raadpleegt u de [Beschrijving van de service Enterprise Mobility + Security for US Government](/enterprise-mobility-security/solutions/ems-govt-service-description).  
 
 Zie [Apps die u hebt aangeschaft in Microsoft Store voor Bedrijven beheren met Microsoft Intune](windows-store-for-business.md) voor het synchroniseren van Intune met uw Store voor Bedrijven-account.  
 
@@ -60,4 +60,3 @@ Controleer de privacy- en nalevingsoverzichten van apps en vergelijk ze met de n
 
 Zie [Apps aan groepen toewijzen met Microsoft Intune](apps-deploy.md) voor meer informatie over het implementeren en toewijzen van apps.
 
- 

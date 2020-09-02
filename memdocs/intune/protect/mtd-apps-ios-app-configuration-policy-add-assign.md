@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4782c2a8f2c8791929ca4e585dab96031bf550fa
-ms.sourcegitcommit: f999131e513d50967f88795e400d5b089ebc5878
+ms.openlocfilehash: b487b9f921e40df8730fab235a2ec2c0d3f0f788
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85914618"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910856"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>MTD-apps (Mobile Threat Defense) toevoegen en toewijzen met Intune
 
@@ -45,7 +45,7 @@ Voer de volgende stappen in Intune uit: Zorg ervoor dat u bekend bent met de vol
 
 ## <a name="configure-microsoft-authenticator-for-ios"></a>Microsoft Authenticator voor iOS configureren
 
-Voor iOS-apparaten hebt u de app [Microsoft Authenticator](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) nodig, zodat de identiteit van gebruikers kan worden gecontroleerd door Azure AD. Bovendien hebt u een configuratiebeleid voor iOS-apps nodig, waarmee wordt bepaald welke MTD iOS-app moet worden gebruikt met Intune.
+Voor iOS-apparaten hebt u de app [Microsoft Authenticator](/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) nodig, zodat de identiteit van gebruikers kan worden gecontroleerd door Azure AD. Bovendien hebt u een configuratiebeleid voor iOS-apps nodig, waarmee wordt bepaald welke MTD iOS-app moet worden gebruikt met Intune.
 
 Zie de instructies in het artikel [iOS Store-apps toevoegen aan Microsoft Intune](../apps/store-apps-ios.md). Gebruik deze [URL voor de App Store voor Microsoft Authenticator](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8) wanneer u **App-gegevens** configureert.
 
@@ -197,7 +197,7 @@ Kies de sectie die overeenkomt met uw MTD-provider:
     5. Voeg **overgedragen machtigingen** toe aan uw app.
 
     > [!NOTE]
-    > Zie voor meer informatie de Engelstalige instructies voor het [configureren van een native clienttoepassing met Azure AD](https://azure.microsoft.com/documentation/articles/app-service-mobile-how-to-configure-active-directory-authentication/#optional-configure-a-native-client-application).
+    > Zie voor meer informatie de Engelstalige instructies voor het [configureren van een native clienttoepassing met Azure AD](/azure/app-service/configure-authentication-provider-aad#optional-configure-a-native-client-application).
 
   - **Het IPA-bestand van Lookout for Work toevoegen.**
 

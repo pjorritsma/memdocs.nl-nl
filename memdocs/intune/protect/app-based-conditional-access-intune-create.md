@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d07b87bca934dac924f2d2c281ecb7b2a2e8a2c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: a61e92265447f8ceced83d493b9397713b67dca6
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989789"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909428"
 ---
 # <a name="set-up-app-based-conditional-access-policies-with-intune"></a>Op apps gebaseerd beleid instellen voor voorwaardelijke toegang met Intune
 
@@ -32,7 +32,7 @@ Op apps gebaseerd beleid instellen voor voorwaardelijke toegang voor apps die de
 Voordat u op apps gebaseerd beleid voor voorwaardelijke toegang kunt gebruiken, moet u [op apps gebaseerd beveiligingsbeleid voor Intune](../apps/app-protection-policies.md) op uw apps hebben toegepast.
 
 > [!IMPORTANT]
-> In dit artikel worden de stappen besproken die u moet volgen om eenvoudig beleid voor voorwaardelijke toegang op basis van apps toe te voegen. U kunt dezelfde stappen gebruiken voor andere cloud-apps. Zie [Implementatie van voorwaardelijke toegang plannen](https://docs.microsoft.com/azure/active-directory/conditional-access/plan-conditional-access) voor meer informatie
+> In dit artikel worden de stappen besproken die u moet volgen om eenvoudig beleid voor voorwaardelijke toegang op basis van apps toe te voegen. U kunt dezelfde stappen gebruiken voor andere cloud-apps. Zie [Implementatie van voorwaardelijke toegang plannen](/azure/active-directory/conditional-access/plan-conditional-access) voor meer informatie
 
 ## <a name="create-app-based-conditional-access-policies"></a>Op apps gebaseerd beleid maken voor voorwaardelijke toegang
 
@@ -72,4 +72,4 @@ Voordat u beleid voor voorwaardelijke toegang kunt maken vanuit het Microsoft En
 ## <a name="see-also"></a>Zie ook
 
 [App-gegevens beveiligen met app-beveiligingsbeleid](../apps/app-protection-policies.md)
-[Voorwaardelijke toegang in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access)
+[Voorwaardelijke toegang in Azure Active Directory](/azure/active-directory/active-directory-conditional-access)

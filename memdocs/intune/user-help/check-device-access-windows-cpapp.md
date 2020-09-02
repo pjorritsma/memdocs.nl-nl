@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 24d83e5ada6109caec2f6238df44559909580931
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: af883fc950a878a70bac2f9121967254583a90d7
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878437"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914443"
 ---
 # <a name="check-access-from-company-portal-app-for-windows"></a>Controleren op toegang vanuit de bedrijfsportal-app voor Windows
 
@@ -68,7 +68,7 @@ Voltooi de stappen in dit artikel om toegang via de bedrijfsportal-app voor Wind
 
     ![Voorbeeldschermopname van de bedrijfsportal-app voor Windows: de startpagina met het gedeelte Mijn apparaten gemarkeerd.](./media/1809_CheckAccess_Context_Select_Device.png)  
 
-2. Klik met de rechtermuisknop op een apparaat of houd het apparaat ingedrukt om het [contextmenu](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus) hiervan te openen.  
+2. Klik met de rechtermuisknop op een apparaat of houd het apparaat ingedrukt om het [contextmenu](//windows/uwp/design/controls-and-patterns/menus) hiervan te openen.  
 
     ![Voorbeeldschermopname van de bedrijfsportal-app voor Windows: de startpagina. Het contextmenu van het apparaat kan worden bekeken in het gedeelte **Mijn apparaten** van de pagina. Hier ziet u de acties Naam wijzigen, Verwijderen en Toegang controleren.](./media/1809_DeviceContextMenu_Windows_CP.png)  
 3. Selecteer **Toegang controleren**. De app synchroniseert de huidige vereisten van de organisatie met uw apparaat en voert een controle uit om er zeker van te zijn dat het apparaat aan de eisen voldoet. Deze controle kan enkele minuten duren.  

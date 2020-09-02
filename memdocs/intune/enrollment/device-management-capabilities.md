@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43d412fda772fd36710895496087e97d782b8dba
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 950df650466966d7de1c360263b4f6a2c3b0824c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502626"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911655"
 ---
 # <a name="enrolled-device-management-capabilities-of-microsoft-intune"></a>Beheermogelijkheden voor geregistreerde apparaten in Microsoft Intune
 
@@ -44,7 +44,7 @@ Gebruikers krijgen toegang tot de bedrijfsportal waar ze apps kunnen installeren
 |Configuratiebeleid<br><br>Aangepast beleid| Hiermee kunt u veel instellingen en functies op mobiele apparaten in uw organisatie beheren. U kunt bijvoorbeeld een wachtwoord vereisen, het aantal mislukte pogingen beperken, de tijd waarna het scherm wordt vergrendeld verkorten, bepalen na hoeveel tijd wachtwoorden verlopen en voorkomen dat eerder gebruikte wachtwoorden opnieuw worden gebruikt. U kunt ook het gebruik van hardware- en softwarefuncties controleren, zoals de camera of de webbrowser van het apparaat.<br><br>Gebruik aangepast beleid wanneer configuratiebeleid niet de instellingen bevat die u nodig hebt. Op iOS-/iPadOS-apparaten kunt u instellingen importeren die u hebt geëxporteerd uit Apple Configurator. Op andere apparaten kunt u OMA-URI-instellingen (Open Mobile Alliance Uniform Resource Identifier) gebruiken om instellingen en functies op het apparaat te configureren.|[Instellingen en functies op uw apparaten beheren met Microsoft Intune-beleid](../protect/device-compliance-get-started.md)|
 |Wissen op afstand, vergrendelen op afstand en wachtwoordcode opnieuw instellen|Hiermee wist u gevoelige gegevens wanneer een apparaat is zoekgeraakt of gestolen. U kunt bijvoorbeeld het apparaat op afstand vergrendelen, de fabrieksinstellingen terugzetten of alleen bedrijfsgegevens wissen.<br><br>U kunt wachtwoordcodes opnieuw instellen als gebruikers geen toegang meer krijgen tot hun apparaat, verloren of gestolen apparaten vergrendelen of zelfs gegevens op verloren of gestolen apparaten wissen.|Uw apparaten beschermen met [extern vergrendelen](../remote-actions/device-remote-lock.md) en [het opnieuw instellen van de wachtwoordcode](../remote-actions/device-passcode-reset.md)|
 |Kioskmodus|Hiermee kunt u bepaalde functies van mobiele apparaten vergrendelen, zoals schermafbeeldingen en de aan/uit-knop. U kunt hiermee apparaten ook beperken tot het uitvoeren van een enkele app die u opgeeft. |[Beleidsinstellingen voor iOS-configuraties in Microsoft Intune](../configuration/device-restrictions-ios.md)|
-|AutoPilot-opnieuw instellen|Hiermee wordt een taak naar het apparaat verzonden om het opnieuw instellen extern te starten, waardoor IT-medewerkers of andere beheerders dit proces niet op elke computer afzonderlijk te hoeven starten. Wanneer Autopilot opnieuw instellen op een apparaat wordt gebruikt, wordt de primaire gebruiker van het apparaat verwijderd. De volgende gebruiker die zich na het opnieuw instellen aanmeldt, wordt ingesteld als primaire gebruiker.|[Externe AutoPilot-opnieuw instellen voor Windows](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)|
+|AutoPilot-opnieuw instellen|Hiermee wordt een taak naar het apparaat verzonden om het opnieuw instellen extern te starten, waardoor IT-medewerkers of andere beheerders dit proces niet op elke computer afzonderlijk te hoeven starten. Wanneer Autopilot opnieuw instellen op een apparaat wordt gebruikt, wordt de primaire gebruiker van het apparaat verwijderd. De volgende gebruiker die zich na het opnieuw instellen aanmeldt, wordt ingesteld als primaire gebruiker.|[Externe AutoPilot-opnieuw instellen voor Windows](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)|
 
 ## <a name="app-management"></a>App-beheer
 

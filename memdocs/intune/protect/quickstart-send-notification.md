@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d02329f65d7b7ecec1dbfeaf84ecbe5c8fb53013
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: e986021bb4d575ec3269e97b228cc381e1f2cf72
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079481"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910890"
 ---
 # <a name="quickstart-send-notifications-to-noncompliant-devices"></a>Quickstart: Meldingen verzenden naar niet-compatibele apparaten
 
 In deze quickstart gaat u Microsoft Intune gebruiken om een e-mailmelding te verzenden naar uw medewerkers met niet-compatibele apparaten.
 
-Wanneer Intune een apparaat detecteert dat niet compatibel is, markeert Intune standaard het apparaat onmiddellijk als niet-compatibel. [Voorwaardelijke toegang](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) van Azure Active Directory (Azure AD) blokkeert vervolgens het apparaat. Wanneer een apparaat niet compatibel is, kunt u via Intune acties voor niet-compatibiliteit toevoegen die u de flexibiliteit geven om te bepalen wat u moet doen. U kunt bijvoorbeeld gebruikers een respijtperiode geven om compatibel te zijn voordat niet-compatibele apparaten worden geblokkeerd.
+Wanneer Intune een apparaat detecteert dat niet compatibel is, markeert Intune standaard het apparaat onmiddellijk als niet-compatibel. [Voorwaardelijke toegang](/azure/active-directory/active-directory-conditional-access-azure-portal) van Azure Active Directory (Azure AD) blokkeert vervolgens het apparaat. Wanneer een apparaat niet compatibel is, kunt u via Intune acties voor niet-compatibiliteit toevoegen die u de flexibiliteit geven om te bepalen wat u moet doen. U kunt bijvoorbeeld gebruikers een respijtperiode geven om compatibel te zijn voordat niet-compatibele apparaten worden geblokkeerd.
 
 Eén actie die moet worden uitgevoerd wanneer een apparaat niet aan de compatibiliteitsvereisten voldoet, is het verzenden van e-mail aan de gebruiker van het apparaat. U kunt ook een e-mailmelding aanpassen voordat u deze verzendt. U kunt met name aanpassingen doorvoeren voor de ontvangers, het onderwerp en de berichttekst, inclusief het bedrijfslogo, en contactgegevens. Tevens geeft Intune in de e-mailmelding meer informatie over het apparaat dat niet compatibel is.
 
@@ -37,7 +37,7 @@ Als u niet over een Intune-abonnement beschikt, kunt u [zich registreren voor ee
 
 ## <a name="prerequisites"></a>Vereisten
 
-Wanneer u nalevingsbeleid gebruikt om toegang tot bedrijfsbronnen door apparaten te blokkeren, moet voorwaardelijke toegang voor Azure AD zijn ingesteld. Als u de quickstart [Een nalevingsbeleid voor apparaten maken](quickstart-set-password-length-android.md) hebt voltooid, gebruikt u Azure Active Directory. Zie [Voorwaardelijke toegang in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) en [Gebruikelijke manieren om voorwaardelijke toegang met Intune te gebruiken](../protect/conditional-access-intune-common-ways-use.md) voor meer informatie over Azure AD.
+Wanneer u nalevingsbeleid gebruikt om toegang tot bedrijfsbronnen door apparaten te blokkeren, moet voorwaardelijke toegang voor Azure AD zijn ingesteld. Als u de quickstart [Een nalevingsbeleid voor apparaten maken](quickstart-set-password-length-android.md) hebt voltooid, gebruikt u Azure Active Directory. Zie [Voorwaardelijke toegang in Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal) en [Gebruikelijke manieren om voorwaardelijke toegang met Intune te gebruiken](../protect/conditional-access-intune-common-ways-use.md) voor meer informatie over Azure AD.
 
 ## <a name="sign-in-to-intune"></a>Aanmelden bij Intune
 

@@ -19,12 +19,12 @@ ms.reviewer: coferro
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 77643d689a2a5693b71f85a7e82b98bddec9a646
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: b61265a1c278b83a91ac1e353794a358dcc5fdb3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881463"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915514"
 ---
 # <a name="reset-device-from-company-portal-website"></a>Uw apparaat opnieuw instellen via de bedrijfsportalwebsite
 
@@ -32,7 +32,7 @@ De fabrieksinstellingen van een gebruikt, verloren of gestolen apparaat herstell
 
 Als u een apparaat opnieuw instelt, wordt het niet meer weergegeven in de bedrijfsportal. Eerdere apps en bestanden worden gewist en de fabrieksinstellingen worden op het apparaat hersteld. 
 
-Het opnieuw instellen van een apparaat in de bedrijfsportal is niet beschikbaar voor alle iOS-apparaten. Als u een IT-ondersteuningsmedewerker bent en meer wilt weten over het opnieuw instellen van apparaten en de beperkingen ervan, raadpleegt u [Apparaten verwijderen door het apparaat te wissen, buiten gebruik te stellen of de inschrijving ervan handmatig ongedaan te maken](https://docs.microsoft.com/intune/devices-wipe).  
+Het opnieuw instellen van een apparaat in de bedrijfsportal is niet beschikbaar voor alle iOS-apparaten. Als u een IT-ondersteuningsmedewerker bent en meer wilt weten over het opnieuw instellen van apparaten en de beperkingen ervan, raadpleegt u [Apparaten verwijderen door het apparaat te wissen, buiten gebruik te stellen of de inschrijving ervan handmatig ongedaan te maken](/intune/devices-wipe).  
 
 > [!Note]
 > U kunt deze stappen ook uitvoeren vanaf een ander apparaat dat u hebt geregistreerd. Open de bedrijfsportal-app en voer de stappen uit voor een soortgelijke reset-ervaring. 

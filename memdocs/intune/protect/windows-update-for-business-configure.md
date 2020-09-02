@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4425178dde820bc1f9b0503d50406c007d090ca
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: b8d6bb9e69831d2804d93d3694671f8dd27da305
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252568"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915973"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Windows 10-software-updates beheren in Intune
 
@@ -38,7 +38,7 @@ Intune biedt de volgende beleidstypen voor het beheren van updates:
 
 U wijst beleid toe voor Windows 10-updateringen en Windows 10-onderdelenupdates voor groepen apparaten. U kunt beide beleidstypen in dezelfde Intune-omgeving gebruiken om software-updates voor uw Windows 10-apparaten te beheren en om een updatestrategie te maken die overeenkomt met de behoeften van uw bedrijf.
 
-Zie [Manage updates using Windows Update for Business](https://technet.microsoft.com/itpro/windows/manage/waas-manage-updates-wufb) (Updates beheren met Windows Update voor Bedrijven) voor meer informatie.
+Zie [Manage updates using Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb) (Updates beheren met Windows Update voor Bedrijven) voor meer informatie.
 
 ## <a name="prerequisites"></a>Vereisten
 
@@ -180,9 +180,9 @@ Houd rekening met het volgende als u Verwijderen gebruikt:
 
 - Specifiek voor onderdelenupdates is de periode die u de update kunt verwijderen beperkt van 2-60 dagen. Deze periode wordt geconfigureerd door de update-instelling voor updateringen **Periode instellen voor onderdelenupdate verwijderen (2-60 dagen)** . U kunt een onderdelenupdate die is geïnstalleerd op een apparaat, niet terugdraaien als het installeren van deze onderdelenupdate langer geleden is dan de geconfigureerde periode voor verwijderen.
 
-  Neem bijvoorbeeld een update-ring met een verwijderingsperiode voor onderdelenupdates van 20 dagen. Na 25 dagen besluit u de laatste onderdelenupdate terug te draaien, en gebruikt u de optie Verwijderen.  Op apparaten waarop de functie-update meer dan 20 dagen geleden is geïnstalleerd, is verwijderen niet mogelijk, omdat de vereiste bits als onderdeel van het onderhoud zijn verwijderd. Op apparaten waar de onderdelenupdate nog maar negentien dagen geleden is geïnstalleerd, kan de update wel worden verwijderd, als ze zich aanmelden om de verwijderopdracht te ontvangen voordat de verwijderingsperiode van twintig dagen is verstreken.
+  Neem bijvoorbeeld een update-ring met een verwijderingsperiode voor onderdelenupdates van 20 dagen. Na 25 dagen besluit u de laatste onderdelenupdate terug te draaien en gebruikt u de optie Verwijderen.  Op apparaten waarop de functie-update meer dan 20 dagen geleden is geïnstalleerd, is verwijderen niet mogelijk, omdat de vereiste bits als onderdeel van het onderhoud zijn verwijderd. Op apparaten waar de onderdelenupdate nog maar negentien dagen geleden is geïnstalleerd, kan de update wel worden verwijderd, als ze zich aanmelden om de verwijderopdracht te ontvangen voordat de verwijderingsperiode van twintig dagen is verstreken.
 
-Zie [CSP bijwerken](https://docs.microsoft.com/windows/client-management/mdm/update-csp) in de beheerdocumentatie voor Windows-clients voor meer informatie over Windows Update.
+Zie [CSP bijwerken](/windows/client-management/mdm/update-csp) in de beheerdocumentatie voor Windows-clients voor meer informatie over Windows Update.
 
 ##### <a name="to-uninstall-the-latest-windows-10-update"></a>De meest recente Windows 10-update verwijderen
 
@@ -247,7 +247,7 @@ In dit deelvenster kunt u het volgende doen:
 
 ## <a name="validation-and-reporting-for-windows-10-updates"></a>Validatie en rapportage voor Windows 10-updates
 
-Gebruik voor zowel Windows 10-updateringen als Windows 10-onderdelenupdates [Intune-nalevingsrapporten voor updates](windows-update-compliance-reports.md) om de status van apparaten te bewaken. Deze oplossing maakt gebruik van [Naleving van updates](https://docs.microsoft.com/windows/deployment/update/update-compliance-monitor) bij uw Azure-abonnement.
+Gebruik voor zowel Windows 10-updateringen als Windows 10-onderdelenupdates [Intune-nalevingsrapporten voor updates](windows-update-compliance-reports.md) om de status van apparaten te bewaken. Deze oplossing maakt gebruik van [Naleving van updates](/windows/deployment/update/update-compliance-monitor) bij uw Azure-abonnement.
 
 ## <a name="next-steps"></a>Volgende stappen
 

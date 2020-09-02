@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 61053fff9d28193c8f4fc1731f72fe0052aba154
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: c7e2964281e26e695dcd58629601a34043ab0e55
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820490"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913780"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Functies en instellingen toepassen op uw apparaten met apparaatprofielen in Microsoft Intune
 
@@ -138,7 +138,7 @@ Deze functie ondersteunt:
 
 ## <a name="education"></a>Education
 
-Met [Onderwijsinstellingen - Windows 10](education-settings-configure.md) kunt u opties configureren voor de [Windows-app Toets maken](https://docs.microsoft.com/education/windows/take-tests-in-windows-10). Wanneer u deze opties configureert, kunnen er geen andere apps op het apparaat worden uitgevoerd totdat de toets is voltooid.
+Met [Onderwijsinstellingen - Windows 10](education-settings-configure.md) kunt u opties configureren voor de [Windows-app Toets maken](/education/windows/take-tests-in-windows-10). Wanneer u deze opties configureert, kunnen er geen andere apps op het apparaat worden uitgevoerd totdat de toets is voltooid.
 
 Met [Onderwijsinstellingen - iOS/iPadOS](../fundamentals/education-settings-configure-ios-shared.md) kunt u de iOS-/iPadOS-app Classroom gebruiken om het leren te begeleiden en de apparaten van studenten in het leslokaal te beheren. U kunt iPads zo configureren dat meerdere studenten één apparaat kunnen delen.
 
@@ -157,7 +157,7 @@ Deze functie ondersteunt:
 
 Met [Endpoint Protection](../protect/endpoint-protection-configure.md) configureert u BitLocker- en Microsoft Defender-instellingen voor Windows 10-apparaten. En configureer de firewall, gateway en andere resources op macOS-apparaten.
 
-Zie het Engelstalige artikel [Configure endpoints using Mobile Device Management (MDM) tools](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm) (Eindpunten configureren met MDM-hulpprogramma's (Mobile Device Management)) als u Microsoft Defender Advanced Threat Protection (WDATP) wilt vrijgeven met Microsoft Intune.
+Zie het Engelstalige artikel [Configure endpoints using Mobile Device Management (MDM) tools](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm) (Eindpunten configureren met MDM-hulpprogramma's (Mobile Device Management)) als u Microsoft Defender Advanced Threat Protection (WDATP) wilt vrijgeven met Microsoft Intune.
 
 Deze functie ondersteunt:
 

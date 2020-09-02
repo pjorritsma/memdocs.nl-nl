@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c0973805a0646ec7df87f36eea183a9456f7e39
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: 7f2b2826e8eaf1cf1c1c8680743b582203199aed
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865503"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906834"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Inschrijving voor macOS-apparaten instellen in Intune
 
@@ -51,7 +51,7 @@ U kunt gebruikers hun eigen persoonlijke apparaten laten registreren in Intune-b
 - door naar de [bedrijfsportalwebsite](https://portal.manage.microsoft.com) te gaan; of
 - door de Mac-bedrijfsportal-app te downloaden via [aka.ms/EnrollMyMac](https://aka.ms/EnrollMyMac).
 
-U kunt uw gebruikers ook een koppeling sturen naar de stappen voor online registratie: [Uw Mac OS-apparaat registreren in Intune](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp).
+U kunt uw gebruikers ook een koppeling sturen naar de stappen voor online registratie: [Uw Mac OS-apparaat registreren in Intune](../user-help/enroll-your-device-in-intune-macos-cp.md).
 
 Zie de volgende artikelen voor meer informatie over andere taken voor eindgebruikers:
 
@@ -82,7 +82,7 @@ Voor VMware Fusion moet u [het VMX-bestand bewerken](https://kb.vmware.com/s/art
 
 Door de gebruiker goedgekeurde MDM-inschrijving is een type macOS-inschrijving die u kunt gebruiken om bepaalde vertrouwelijke instellingen te beheren. Zie de [ondersteuningsdocumentatie van Apple](https://support.apple.com/HT208019) voor meer informatie.  
  
-Vanaf 2020 juni worden alle nieuwe macOS MDM-inschrijvingen in Intune, inclusief inschrijvingen die niet worden uitgevoerd via automatische apparaatregistratie (ADE), beschouwd als zijnde door de gebruiker goedgekeurd. De eindgebruiker moet het beheerprofiel handmatig installeren in **Systeemvoorkeuren** > **Profielen** en zo goedkeuring van het beheerprofiel bieden. Systeemvoorkeuren wordt automatisch gestart vanuit de Bedrijfsportal-app voor BYOD macOS-gebruikers. [Instructies voor het installeren van het beheerprofiel](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp) zijn beschikbaar in de bedrijfsportal-app.     
+Vanaf 2020 juni worden alle nieuwe macOS MDM-inschrijvingen in Intune, inclusief inschrijvingen die niet worden uitgevoerd via automatische apparaatregistratie (ADE), beschouwd als zijnde door de gebruiker goedgekeurd. De eindgebruiker moet het beheerprofiel handmatig installeren in **Systeemvoorkeuren** > **Profielen** en zo goedkeuring van het beheerprofiel bieden. Systeemvoorkeuren wordt automatisch gestart vanuit de Bedrijfsportal-app voor BYOD macOS-gebruikers. [Instructies voor het installeren van het beheerprofiel](../user-help/enroll-your-device-in-intune-macos-cp.md) zijn beschikbaar in de bedrijfsportal-app.     
 
 BYOD macOS MDM-inschrijvingen voorafgaand aan juni 2020 kunnen niet door de gebruiker worden goedgekeurd als de eindgebruiker niet handmatig goedkeuring van het beheerprofiel heeft gegeven in **Systeemvoorkeuren** > **Profielen**. Voor BYOD-inschrijvingen na juni 2020 start de Bedrijfsportal-app **Systeemvoorkeuren** voor de gebruiker en moet de gebruiker Installeren selecteren. Als de gebruiker het beheerprofiel niet heeft goedgekeurd tijdens de registratie, kan de gebruiker naar **Systeemvoorkeuren** > **Profielen** gaan, het beheerprofiel kiezen en **Goedkeuren** selecteren om het profiel later goed te keuren.
 

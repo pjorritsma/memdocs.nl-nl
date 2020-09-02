@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6004526d8c9340e70e5149f2261eea07a916ed7
-ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
+ms.openlocfilehash: 849be91ccedab1f97b68b14e5bc2a51bc5a62f19
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871978"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915293"
 ---
 # <a name="common-questions-and-answers-with-device-policies-and-profiles-in-microsoft-intune"></a>Algemene vragen en antwoorden over apparaatbeleid en -profielen in Microsoft Intune
 
@@ -149,7 +149,7 @@ Voor sommige Windows 10-apparaten wordt Niet van toepassing weergegeven. In dat 
 - De instelling is alleen beschikbaar voor nieuwere versies van Windows en niet voor het huidige versie van het besturingssysteem (OS) op het apparaat.
 - De instelling is alleen beschikbaar voor de specifieke Windows-edities of specifieke SKU's, zoals Home, Professional, Enterprise en Education.
 
-Zie [Configuration Service Provider (CSP) reference](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) (CSP-referentie (Configuration Service Provider)) voor meer informatie over de versie- en SKU-vereisten voor de verschillende instellingen.
+Zie [Configuration Service Provider (CSP) reference](/windows/client-management/mdm/configuration-service-provider-reference) (CSP-referentie (Configuration Service Provider)) voor meer informatie over de versie- en SKU-vereisten voor de verschillende instellingen.
 
 ## <a name="next-steps"></a>Volgende stappen
 

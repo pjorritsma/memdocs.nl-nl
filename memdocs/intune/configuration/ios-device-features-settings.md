@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 09ccfe079511c90f2ce7ecf6c27d4dfcf1c85327
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: ad78240aa9f2a1ef515be2635cfad0ce68e8ecc8
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820184"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909000"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>iOS- en iPadOS-apparaatinstellingen voor het gebruik van algemene iOS-/iPadOS-functies in Intune
 
@@ -304,10 +304,10 @@ Deze functie is van toepassing op:
   - **Niet geconfigureerd**: Deze instelling wordt niet gewijzigd of bijgewerkt door Intune. Standaard gebruikt het besturingssysteem geen app-extensies. Als u een app-extensie wilt uitschakelen, stelt u Type app-extensie voor SSO in op **Niet geconfigureerd**.
   - **Microsoft Azure AD**: Maakt gebruik van de SSO-invoegtoepassing van Microsoft Enterprise. Dat is een omleidingstype-SSO-app-extensie. Deze invoegtoepassing biedt SSO voor Active Directory-accounts voor alle toepassingen die ondersteuning bieden voor de functie [Enterprise Single Sign-On van Apple](https://developer.apple.com/documentation/authenticationservices). Gebruik dit SSO-app-extensietype om SSO in te schakelen voor Microsoft-apps, organisatie-apps en websites die worden geverifieerd met behulp van Azure AD.
 
-    De Azure AD-invoegtoepassing fungeert als een geavanceerde broker voor verificatie die verbeteringen in de beveiliging en de gebruikerservaring biedt. Alle apps die de app Microsoft Authenticator gebruikten voor verificatie, behouden eenmalige aanmelding (SSO) met de [SSO-invoegtoepassing van Microsoft Enterprise voor Apple-apparaten](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin).
+    De Azure AD-invoegtoepassing fungeert als een geavanceerde broker voor verificatie die verbeteringen in de beveiliging en de gebruikerservaring biedt. Alle apps die de app Microsoft Authenticator gebruikten voor verificatie, behouden eenmalige aanmelding (SSO) met de [SSO-invoegtoepassing van Microsoft Enterprise voor Apple-apparaten](/azure/active-directory/develop/apple-sso-plugin).
 
     > [!IMPORTANT]
-    > Installeer eerst de iOS/iPadOS Microsoft Authenticator-app op apparaten om eenmalige aanmelding te verkrijgen met het SSO-app-extensietype van Microsoft Azure AD. De Authenticator-app biedt de SSO-invoegtoepassing van Microsoft Enterprise op apparaten, en de invoegtoepassing wordt geactiveerd door de instellingen van de MDM-app-extensie voor eenmalige aanmelding. Zodra Authenticator en het profiel van de app-extensie voor eenmalige aanmelding op apparaten zijn geïnstalleerd, moeten gebruikers hun referenties opgeven om zich aan te melden en een sessie tot stand te brengen op hun apparaat. Deze sessie wordt vervolgens voor verschillende toepassingen gebruikt, zonder dat gebruikers opnieuw moeten worden geverifieerd. Zie [Wat is de Microsoft Authenticator-app?](https://docs.microsoft.com/azure/active-directory/user-help/user-help-auth-app-overview)voor meer informatie over Authenticator.
+    > Installeer eerst de iOS/iPadOS Microsoft Authenticator-app op apparaten om eenmalige aanmelding te verkrijgen met het SSO-app-extensietype van Microsoft Azure AD. De Authenticator-app biedt de SSO-invoegtoepassing van Microsoft Enterprise op apparaten, en de invoegtoepassing wordt geactiveerd door de instellingen van de MDM-app-extensie voor eenmalige aanmelding. Zodra Authenticator en het profiel van de app-extensie voor eenmalige aanmelding op apparaten zijn geïnstalleerd, moeten gebruikers hun referenties opgeven om zich aan te melden en een sessie tot stand te brengen op hun apparaat. Deze sessie wordt vervolgens voor verschillende toepassingen gebruikt, zonder dat gebruikers opnieuw moeten worden geverifieerd. Zie [Wat is de Microsoft Authenticator-app?](/azure/active-directory/user-help/user-help-auth-app-overview)voor meer informatie over Authenticator.
 
   - **Omleiding**: Gebruik een algemene, aanpasbare app-extensie van het type Omleiding om eenmalige aanmelding te gebruiken met moderne verificatiestromen. Zorg ervoor dat u weet wat de extensie-id is van de app-extensie van uw organisatie.
   - **Referentie**: Gebruik een algemene, aanpasbare app-extensie van het type Referentie om eenmalige aanmelding te gebruiken met verificatiestromen met vraag en antwoord. Zorg ervoor dat u weet wat de extensie-id is van de app-extensie van uw organisatie.
@@ -318,7 +318,7 @@ Deze functie is van toepassing op:
 
 - **Modus Gedeeld apparaat** (alleen Microsoft Azure AD): Kies **Inschakelen** als u de SSO-invoegtoepassing van Microsoft Enterprise implementeert op iOS/iPadOS-apparaten die zijn geconfigureerd voor de modus Gedeeld apparaat van Azure AD. Met apparaten in de gedeelde modus kunnen veel gebruikers zich globaal aan- en afmelden bij toepassingen die de modus Gedeeld apparaat ondersteunen. Wanneer dit is ingesteld op **Niet geconfigureerd**, wordt deze instelling niet door Intune gewijzigd of bijgewerkt. iOS/iPadOS-apparaten zijn standaard niet bedoeld om te worden gedeeld door meerdere gebruikers.
 
-  Zie [Overzicht van de modus Gedeeld apparaat](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices) en [De modus Gedeeld apparaat voor iOS-apparaten](https://docs.microsoft.com/azure/active-directory/develop/msal-ios-shared-devices) voor meer informatie over de modus Gedeeld apparaat en hoe u deze kunt inschakelen.  
+  Zie [Overzicht van de modus Gedeeld apparaat](/azure/active-directory/develop/msal-shared-devices) en [De modus Gedeeld apparaat voor iOS-apparaten](/azure/active-directory/develop/msal-ios-shared-devices) voor meer informatie over de modus Gedeeld apparaat en hoe u deze kunt inschakelen.  
 
   Deze functie is van toepassing op:
   

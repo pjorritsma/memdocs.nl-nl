@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ef0ba25d697bca6d6a6af7aad3565e6c2c70841e
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 6b4508c0382b27efba2be9bcdcfa8693784f3e4a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165937"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907123"
 ---
 # <a name="intune-data-warehouse-api-endpoint"></a>Intune-datawarehouse-API-eindpunt
 
@@ -35,7 +35,7 @@ U kunt de Intune-datawarehouse-API gebruiken met een account met specifiek op ro
 
 Azure Active Directory (Azure AD) maakt gebruik van OAuth 2.0 om het mogelijk te maken dat u toegang tot webtoepassingen en web-API's in uw Azure AD-tenant kunt autoriseren. In deze taalonafhankelijke handleiding wordt beschreven hoe u HTTP-berichten verzendt en ontvangt zonder open source-bibliotheken te gebruiken. De OAuth 2.0-autorisatiecodestroom wordt beschreven in [sectie 4.1](https://tools.ietf.org/html/rfc6749#section-4.1) van de OAuth 2.0-specificatie.
 
-Zie [Toegang tot webtoepassingen die gebruikmaken van OAuth 2.0 en Azure Active Directory autoriseren](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code) voor meer informatie.
+Zie [Toegang tot webtoepassingen die gebruikmaken van OAuth 2.0 en Azure Active Directory autoriseren](/azure/active-directory/develop/active-directory-protocols-oauth-code) voor meer informatie.
 
 ## <a name="api-url-structure"></a>API URL-structuur
 

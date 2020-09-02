@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3d54a03290b7d2020b6ec13b64f985613c0a292d
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: 82ee499689a7c7ae85fb72cc4fc9b5f6d5ffc939
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912309"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908867"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Microsoft Intune App SDK Xamarin Bindings
 
@@ -56,7 +56,7 @@ Xamarin-apps die zijn gemaakt met de Intune App SDK Xamarin Bindings, kunnen nu 
 
 Controleer de [licentievoorwaarden](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20Xamarin%20Component.pdf). Druk een kopie van de licentievoorwaarden af voor uw administratie. Door de Intune App SDK Xamarin Bindings te downloaden en gebruiken, gaat u akkoord met deze licentievoorwaarden. Als u deze niet accepteert, mag u de software niet gebruiken.
 
-De Intune SDK is afhankelijk van [Microsoft Authentication Library (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/v2-overview) voor de [verificatie](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/) en voorwaardelijke startscenario's, waarvoor is vereist dat apps worden geconfigureerd met [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/). 
+De Intune SDK is afhankelijk van [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/v2-overview) voor de [verificatie](/azure/active-directory/develop/authentication-vs-authorization) en voorwaardelijke startscenario's, waarvoor is vereist dat apps worden geconfigureerd met [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis). 
 
 Als uw toepassing al is geconfigureerd voor het gebruik van MSAL en een eigen aangepaste client-id heeft waarmee u met Azure Active Directory kunt verifiëren, zorgt u ervoor dat u de stappen volgt voor het geven van uw Xamarin-app-machtigingen aan de Intune MAM-service (Mobile Application Management). Gebruik de instructies in de sectie [Uw app toegang geven tot de Intune-app-beveiligingsservice](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional) van de handleiding [Aan de slag met de Intune-SDK](app-sdk-get-started.md).
 
@@ -69,7 +69,7 @@ Potentiële adresvervalsing (spoofing), vrijgeven van informatie en uitbreiding 
   * [MS Intune App SDK NuGet-profiel](https://www.nuget.org/profiles/msintuneappsdk)
   * [Intune App SDK Xamarin GitHub-opslagplaats](https://github.com/msintuneappsdk/intune-app-sdk-xamarin)
 * Configureer uw NuGet-configuratie voor uw project om ondertekende, ongewijzigde NuGet-pakketten te vertrouwen.
-Zie [Ondertekende pakketten installeren](https://docs.microsoft.com/nuget/consume-packages/installing-signed-packages) voor meer informatie.
+Zie [Ondertekende pakketten installeren](/nuget/consume-packages/installing-signed-packages) voor meer informatie.
 * Beveilig de uitvoermap die de Xamarin-app bevat. Overweeg het gebruik van een map op gebruikersniveau voor de uitvoer.
 
 
@@ -212,9 +212,9 @@ Zodra de remapper is toegevoegd aan uw project moet u de vervangingen door MAM-e
 ```
 
 Zolang u de vervangingen niet doorvoert, kunnen de volgende compilatiefouten optreden:
-* [Compilatiefout CS0239](https://docs.microsoft.com/dotnet/csharp/misc/cs0239). Deze fout wordt veelal gezien in deze vorm ``'MainActivity.OnCreate(Bundle)': cannot override inherited member 'MAMAppCompatActivityBase.OnCreate(Bundle)' because it is sealed``.
+* [Compilatiefout CS0239](/dotnet/csharp/misc/cs0239). Deze fout wordt veelal gezien in deze vorm ``'MainActivity.OnCreate(Bundle)': cannot override inherited member 'MAMAppCompatActivityBase.OnCreate(Bundle)' because it is sealed``.
 Dit is verwacht want wanneer de remapper de overname van Xamarin-klassen wijzigt, worden sommige functies `sealed` en wordt een nieuwe MAM-variant toegevoegd aan de overschrijving.
-* [Compilatiefout CS0507](https://docs.microsoft.com/dotnet/csharp/language-reference/compiler-messages/cs0507): deze fout wordt veelal gezien in deze vorm ``'MyActivity.OnRequestPermissionsResult()' cannot change access modifiers when overriding 'public' inherited member ...``. Wanneer de remapper de overname van sommige Xamarin-klassen wijzigt, worden sommige lidfuncties gewijzigd in `public`. Als u een van deze functies overschrijft, moet u de toegangsmodificator voor deze overschrijvingen ook wijzigen in `public`.
+* [Compilatiefout CS0507](/dotnet/csharp/language-reference/compiler-messages/cs0507): deze fout wordt veelal gezien in deze vorm ``'MyActivity.OnRequestPermissionsResult()' cannot change access modifiers when overriding 'public' inherited member ...``. Wanneer de remapper de overname van sommige Xamarin-klassen wijzigt, worden sommige lidfuncties gewijzigd in `public`. Als u een van deze functies overschrijft, moet u de toegangsmodificator voor deze overschrijvingen ook wijzigen in `public`.
 
 > [!NOTE]
 > Met de remapper wordt een afhankelijkheid herschreven die in Visual Studio wordt gebruikt voor automatische aanvulling via IntelliSense. Wanneer de remapper is toegevoegd, moet u het project daarom mogelijk opnieuw laden en bouwen zodat de wijzigingen juist worden herkend in IntelliSense.
@@ -235,4 +235,4 @@ Voor app-beveiliging zonder apparaatregistratie hoeft de gebruiker het apparaat 
 Voorbeeldtoepassingen waarin MAM-functionaliteit in Xamarin.Android- en Xamarin.Forms-apps wordt belicht, zijn beschikbaar in [GitHub](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Xamarin-Android-Apps).
 
 ## <a name="support"></a>Support
-Als uw organisatie een bestaande Intune-klant is, kunt u contact opnemen met uw ondersteuningsmedewerker van Microsoft om een ondersteuningsticket te openen en een probleem te melden op de [GitHub-problemenpagina](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/issues). We zullen u zo snel mogelijk helpen. 
+Als uw organisatie een bestaande Intune-klant is, kunt u contact opnemen met uw ondersteuningsmedewerker van Microsoft om een ondersteuningsticket te openen en een probleem te melden op de [GitHub-problemenpagina](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/issues). We zullen u zo snel mogelijk helpen.

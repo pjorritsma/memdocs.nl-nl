@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48560af1ff31d5660f00e775a2f510b88c08fd9c
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: cf74b7b96f51658f50ae8654b0c3a7e364cac63d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820592"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911795"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Inschrijving voor Windows-apparaten instellen
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Met de informatie in dit artikel kunnen IT-beheerders de inschrijving van Windows-apparaten vereenvoudigen voor hun gebruikers. Zodra u [Intune hebt ingesteld](../fundamentals/setup-steps.md), kunnen gebruikers Windows-apparaten registreren door zich [aan te melden](https://docs.microsoft.com/mem/intune/user-help/windows-enrollment-company-portal) met hun werk- of schoolaccount.  
+Met de informatie in dit artikel kunnen IT-beheerders de inschrijving van Windows-apparaten vereenvoudigen voor hun gebruikers. Zodra u [Intune hebt ingesteld](../fundamentals/setup-steps.md), kunnen gebruikers Windows-apparaten registreren door zich [aan te melden](../user-help/windows-enrollment-company-portal.md) met hun werk- of schoolaccount.  
 
 Als Intune-beheerder kunt u de registratie op de volgende manieren vereenvoudigen:
 
@@ -39,7 +39,7 @@ Als Intune-beheerder kunt u de registratie op de volgende manieren vereenvoudige
 
 Vereenvoudiging van Windows-apparaatregistratie is afhankelijk van twee factoren:
 
-- **Gebruikt u Azure Active Directory Premium?** <br>[Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) is opgenomen in Enterprise Mobility + Security en andere licentieplannen.
+- **Gebruikt u Azure Active Directory Premium?** <br>[Azure AD Premium](/azure/active-directory/active-directory-get-started-premium) is opgenomen in Enterprise Mobility + Security en andere licentieplannen.
 - **Welke versies van Windows-clients worden er geregistreerd door gebruikers?** <br>Windows 10-apparaten kunnen automatisch worden ingeschreven door het toevoegen van een werk- of schoolaccount. Eerdere versies moeten worden ingeschreven met de bedrijfsportal-app.
 
 ||**Azure AD Premium**|**Overige AD**|
@@ -125,7 +125,7 @@ Azure Active Directory heeft een andere CNAME die wordt gebruikt voor apparaatre
 | --- | --- | --- | --- |
 | CNAME | EnterpriseRegistration. company_domain.com | EnterpriseRegistration.windows.net | 1 uur|
 
-Zie [Apparaat-id's beheren met de Azure-portal voor meer informatie over het registreren van apparaten.](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal)
+Zie [Apparaat-id's beheren met de Azure-portal voor meer informatie over het registreren van apparaten.](/azure/active-directory/devices/device-management-azure-portal)
 
 ## <a name="windows-10-auto-enrollment-and-device-registration"></a>Windows 10 auto-enrollment and device registration (Automatische inschrijving en apparaatregistratie in Windows 10)
 

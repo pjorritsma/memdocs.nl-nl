@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5d673c5688c4ab4f3219256412a098855af63ec
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: a82eb416021e86347818c333e74f31318b0661ce
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461875"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908646"
 ---
 # <a name="what-is-device-enrollment-in-intune"></a>Wat is apparaatinschrijving in Intune?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -59,16 +59,16 @@ Standaard kunnen apparaten voor alle platforms worden ingeschreven in Intune. U 
 |**[BYOD](#bring-your-own-device)** | Nee | Ja | Nee | [Meer informatie](windows-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| Nee |Nee |Nee |[Meer informatie](device-enrollment-manager-enroll.md)|
 |**Automatisch inschrijven** | Nee |Ja |Nee | [Meer informatie](windows-enroll.md#enable-windows-10-automatic-enrollment)|
-|**Autopilot** |Ja |Ja |Nee | [Meer informatie](enrollment-autopilot.md)
+|**Autopilot** |Ja |Ja |Nee | [Meer informatie](../../autopilot/enrollment-autopilot.md)
 |**Bulkregistratie** |Nee |Nee |Nee | [Meer informatie](windows-bulk-enroll.md) |
-|**Co-beheer** |Nee |Ja |Nee | [Meer informatie](https://docs.microsoft.com/configmgr/core/clients/manage/co-management-overview)
-|**GPO** |Nee |Ja |Nee | [Meer informatie](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
+|**Co-beheer** |Nee |Ja |Nee | [Meer informatie](/configmgr/core/clients/manage/co-management-overview)
+|**GPO** |Nee |Ja |Nee | [Meer informatie](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
 
 ## <a name="android-enrollment-methods"></a>Android-registratiemethoden
 
 | **Persoonlijk** | **Inschrijvingsmethoden** | **Opnieuw instellen vereist** | **Gebruikersaffiniteit** | **Vergrendeld** | **Details**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**Android-apparaatbeheer**|**Gebruiker geïnitieerd via bedrijfsportal** | Nee | Ja | Nee | [Meer informatie](https://docs.microsoft.com/mem/intune/user-help/enroll-device-android-company-portal)|
+|**Android-apparaatbeheer**|**Gebruiker geïnitieerd via bedrijfsportal** | Nee | Ja | Nee | [Meer informatie](../user-help/enroll-device-android-company-portal.md)|
 |**Android Enterprise - Werkprofiel**|**Gebruiker geïnitieerd via bedrijfsportal**| Nee | Ja | Nee | [Meer informatie](android-work-profile-enroll.md)|
 
 

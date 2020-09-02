@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3c6440b800b3bf652cb9adc8c565efcb48ef334
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 84fe1afcf04c6b3771d1541ad0488a95b9313dca
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165954"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908833"
 ---
 # <a name="use-the-microsoft-intune-data-warehouse"></a>Het Intune-datawarehouse gebruiken
 
@@ -43,7 +43,7 @@ Het datawarehouse biedt u toegang tot meer informatie over uw mobiele omgeving d
 - Een gegevensmodel waarbij de OData-standaard wordt gebruikt
 
 > [!Note]
-> Als u gebruikmaakt van gezamenlijk beheerd Mobile Device Management (MDM) met Microsoft Endpoint Configuration Manager en Microsoft Intune, moet u uw gegevens ophalen uit Configuration Manager. Het Intune-datawarehouse bevat alleen Intune-gegevens. U kunt een Configuration Manager Power BI-dashboard gebruiken voor uw aangepaste rapporten. Zie [Aankondiging van de Power BI-oplossingssjabloon voor Configuration Manager](https://powerbi.microsoft.com/blog/sccm-solution-template) en [Power BI-inhoud voor Dynamics 365](https://docs.microsoft.com/dynamics365/unified-operations/dev-itpro/analytics/power-bi-home-page) voor meer informatie.
+> Als u gebruikmaakt van gezamenlijk beheerd Mobile Device Management (MDM) met Microsoft Endpoint Configuration Manager en Microsoft Intune, moet u uw gegevens ophalen uit Configuration Manager. Het Intune-datawarehouse bevat alleen Intune-gegevens. U kunt een Configuration Manager Power BI-dashboard gebruiken voor uw aangepaste rapporten. Zie [Aankondiging van de Power BI-oplossingssjabloon voor Configuration Manager](https://powerbi.microsoft.com/blog/sccm-solution-template) en [Power BI-inhoud voor Dynamics 365](/dynamics365/unified-operations/dev-itpro/analytics/power-bi-home-page) voor meer informatie.
 
 > [!Important]  
 > U kunt nu versie v1.0 van een Intune-datawarehouse gebruiken door de queryparameter  `api-version=v1.0` in te stellen. Updates voor verzamelingen in het datawarehouse zijn additief van aard en veroorzaken geen problemen voor bestaande scenario's.<br><br>

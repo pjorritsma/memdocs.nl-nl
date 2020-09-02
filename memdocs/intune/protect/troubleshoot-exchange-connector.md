@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3e7f9c984b81bbe98269b0123371d8097d960ffb
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 57a7b232b7391d6b8716d4c2a56d69b44f6c07ee
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462130"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914749"
 ---
 # <a name="troubleshoot-the-intune-exchange-connector"></a>Problemen met Intune Exchange Connector oplossen
 
@@ -31,7 +31,7 @@ In dit artikel wordt beschreven hoe u problemen met betrekking tot de Intune Exc
 
 > [!IMPORTANT]
 >
-> Vanaf juli 2020 wordt de ondersteuning voor de Exchange connector afgeschaft en vervangen door Exchange [HMA](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (Hybrid Modern Authentication, hybride moderne verificatie) en de mogelijkheid om een Exchange-connector toe te voegen aan Intune wordt verwijderd.
+> Vanaf juli 2020 wordt de ondersteuning voor de Exchange connector afgeschaft en vervangen door Exchange [HMA](/office365/enterprise/hybrid-modern-auth-overview) (Hybrid Modern Authentication, hybride moderne verificatie) en de mogelijkheid om een Exchange-connector toe te voegen aan Intune wordt verwijderd.
 >
 > Klanten die eerder de Exchange-connector hebben geconfigureerd en deze gebruiken, hebben nog steeds de ondersteuning voor de connector.
 
@@ -66,7 +66,7 @@ Bekijk de [vereisten voor een on-premises Exchange-connector](exchange-connector
 
 - De computer die als host fungeert voor de Intune Exchange-connector en de Exchange-server voor clienttoegang (CAS) moet lid zijn van een domein en met hetzelfde LAN verbonden zijn. Zorg ervoor dat de vereiste machtigingen zijn toegevoegd voor het account dat door de Intune Exchange-connector wordt gebruikt.
 
-- Het meldingsaccount wordt gebruikt om de instellingen voor *Automatisch opsporen* op te halen. Zie [Automatisch opsporen-service in Exchange Server](https://docs.microsoft.com/exchange/architecture/client-access/autodiscover?view=exchserver-2016) voor meer informatie over Automatisch opsporen in Exchange.
+- Het meldingsaccount wordt gebruikt om de instellingen voor *Automatisch opsporen* op te halen. Zie [Automatisch opsporen-service in Exchange Server](/exchange/architecture/client-access/autodiscover?view=exchserver-2016) voor meer informatie over Automatisch opsporen in Exchange.
 
 - De Intune Exchange-connector verzendt met behulp van de referenties van het meldingsaccount een aanvraag naar de EWS-URL voor het verzenden van e-mailberichten met meldingen samen met de koppeling *Aan de slag* (om in te schrijven bij Intune). Het gebruik van de koppeling *Aan de slag* om u in te schrijven is verplicht voor Android-apparaten die niet van Knox zijn. Anders worden deze apparaten geblokkeerd door voorwaardelijke toegang.
 
@@ -86,4 +86,4 @@ De volgende artikelen kunnen helpen bij het oplossen van veelvoorkomende problem
 Hulp krijgen van het ondersteuningsteam of van de Intune-community:
 
 - Zie [Ondersteuning krijgen](../fundamentals/get-support.md) om de Intune-console te gebruiken voor het oplossen van het probleem of om een ondersteuningscase bij Microsoft te openen. 
-- Plaats uw probleem in de [Microsoft Intune fora](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod).  
+- Plaats uw probleem in de [Microsoft Intune fora](/answers/products/mem).  

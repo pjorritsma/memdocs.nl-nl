@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e4f98f0f1e60ff08e86dedb2dd34ac9f55157ac
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: b3d422978fe6e2cbb123b87311e5c175483b9f66
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820388"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915990"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Infrastructuur configureren om SCEP te ondersteunen in Intune
 
@@ -40,7 +40,7 @@ Voordat u doorgaat, moet u ervoor zorgen dat u [een *vertrouwd certificaatprofie
 
 De volgende on-premises infrastructuur moet worden uitgevoerd op servers die deel uitmaken van uw Active Directory-domein, met uitzondering van de webtoepassingsproxyserver.
 
-- **Certificeringsinstantie**: gebruik een Microsoft Active Directory Certificate Services-certificeringsinstantie (CA) voor ondernemingen die wordt uitgevoerd in een Enterprise-editie van Windows Server 2008 R2 met servicepack 1 of later. De versie van Windows Server die u gebruikt, moet ondersteund blijven door Microsoft. Een zelfstandige CA wordt niet ondersteund. Zie [De certificeringsinstantie installeren](https://technet.microsoft.com/library/jj125375.aspx) voor meer informatie. Als uw certificeringsinstantie werkt met Windows Server 2008 R2 SP1, moet u [de hotfix van KB2483564 installeren](https://support.microsoft.com/kb/2483564/).
+- **Certificeringsinstantie**: gebruik een Microsoft Active Directory Certificate Services-certificeringsinstantie (CA) voor ondernemingen die wordt uitgevoerd in een Enterprise-editie van Windows Server 2008 R2 met servicepack 1 of later. De versie van Windows Server die u gebruikt, moet ondersteund blijven door Microsoft. Een zelfstandige CA wordt niet ondersteund. Zie [De certificeringsinstantie installeren](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj125375(v=ws.11)) voor meer informatie. Als uw certificeringsinstantie werkt met Windows Server 2008 R2 SP1, moet u [de hotfix van KB2483564 installeren](https://support.microsoft.com/kb/2483564/).
 
 - **NDES-serverfunctie**: u moet een NDES-serverfunctie (Registratieservice voor netwerkapparaten) configureren in Windows Server 2012 R2 of later. In een volgende sectie van dit artikel wordt u begeleid bij [het installeren van NDES](#set-up-ndes).
 
@@ -48,7 +48,7 @@ De volgende on-premises infrastructuur moet worden uitgevoerd op servers die dee
   - U kunt niet gebruikmaken van NDES die is geïnstalleerd op de server waarop de ondernemings-CA wordt gehost.
   - U gaat de Microsoft Intune Certificate-connector op dezelfde server installeren die als host fungeert voor NDES.
 
-  Zie [Hulp bij Registratieservice voor netwerkapparaten](https://technet.microsoft.com/library/hh831498.aspx) in de Windows Server-documentatie en [Een beleidsmodule gebruiken met de Registratieservice voor netwerkapparaten](https://technet.microsoft.com/library/dn473016.aspx) voor meer informatie over NDES.
+  Zie [Hulp bij Registratieservice voor netwerkapparaten](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)) in de Windows Server-documentatie en [Een beleidsmodule gebruiken met de Registratieservice voor netwerkapparaten](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn473016(v=ws.11)) voor meer informatie over NDES.
 
 - **Microsoft Intune Certificate Connector**: de Microsoft Intune Certificate Connector is vereist voor het gebruik van SCEP-certificaatprofielen in Intune. In dit artikel vindt u instructies voor het [ installeren van deze connector](#install-the-intune-certificate-connector).
 
@@ -56,21 +56,21 @@ De volgende on-premises infrastructuur moet worden uitgevoerd op servers die dee
   - De connector heeft dezelfde netwerkvereisten als [beheerde apparaten](../fundamentals/intune-endpoints.md#access-for-managed-devices).
   - De connector moet worden uitgevoerd op dezelfde server als de NDES-serverfunctie, een server met Windows Server 2012 R2 of later.
   - .NET Framework 4.5 is vereist voor de connector en wordt automatisch geïnstalleerd met Windows Server 2012 R2.
-  - Verbeterde beveiliging van Internet Explorer [moet zijn ingeschakeld op de server die als host fungeert voor NDES](https://technet.microsoft.com/library/cc775800(v=WS.10).aspx) en de Microsoft Intune Certificate Connector.
+  - Verbeterde beveiliging van Internet Explorer [moet zijn ingeschakeld op de server die als host fungeert voor NDES](/previous-versions/windows/it-pro/windows-server-2003/cc775800(v=ws.10)) en de Microsoft Intune Certificate Connector.
 
 De volgende on-premises infrastructuur is optioneel:
 
 Als u wilt dat apparaten op internet certificaten ontvangen, moet u uw NDES-URL extern publiceren in uw bedrijfsnetwerk. U kunt de Azure AD-toepassingsproxy, de webtoepassingsproxyserver of een andere omgekeerde proxy gebruiken.
 
-- **Azure AD-toepassingsproxy** (optioneel): u kunt de Azure AD-toepassingsproxy gebruiken in plaats van een toegewezen webtoepassingsproxyserver (WAP-server) om de NDES-URL op internet te publiceren. Op die manier kunnen er certificaten worden verkregen voor zowel intranet- als internetgerichte apparaten. Zie voor meer informatie [Beveiligde externe toegang verschaffen voor on-premises toepassingen](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
+- **Azure AD-toepassingsproxy** (optioneel): u kunt de Azure AD-toepassingsproxy gebruiken in plaats van een toegewezen webtoepassingsproxyserver (WAP-server) om de NDES-URL op internet te publiceren. Op die manier kunnen er certificaten worden verkregen voor zowel intranet- als internetgerichte apparaten. Zie voor meer informatie [Beveiligde externe toegang verschaffen voor on-premises toepassingen](/azure/active-directory/manage-apps/application-proxy).
 
 - **Webtoepassingsproxyserver** (optioneel): gebruik een server met Windows Server 2012 R2 of later als webtoepassingsproxyserver (WAP-server) om uw NDES-URL op internet te publiceren.  Op die manier kunnen er certificaten worden verkregen voor zowel intranet- als internetgerichte apparaten.
 
-  De server die als host voor WAP fungeert, [moet een update installeren](https://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) waarmee ondersteuning wordt geboden voor de lange URL's die worden gebruikt door de Network Device Enrollment Service. Deze update is opgenomen in het [updatepakket van december 2014](https://support.microsoft.com/kb/3013769)en is afzonderlijk verkrijgbaar in [KB3011135](https://support.microsoft.com/kb/3011135).
+  De server die als host voor WAP fungeert, [moet een update installeren](/archive/blogs/ems/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2) waarmee ondersteuning wordt geboden voor de lange URL's die worden gebruikt door de Network Device Enrollment Service. Deze update is opgenomen in het [updatepakket van december 2014](https://support.microsoft.com/kb/3013769)en is afzonderlijk verkrijgbaar in [KB3011135](https://support.microsoft.com/kb/3011135).
 
   De WAP-server moet een SSL-certificaat hebben dat overeenkomt met de naam die op externe clients is gepubliceerd en het SSL-certificaat vertrouwen dat wordt gebruikt op de computer waarop de NDES-service wordt gehost. De WAP-server kan met deze certificaten de SSL-verbinding van clients beëindigen en een nieuwe SSL-verbinding naar de NDES-service maken.
 
-  Zie [Certificaten voor WAP plannen](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383650(v=ws.11)#plan-certificates) en [algemene informatie over WAP-servers](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn584113(v=ws.11)) voor meer informatie.
+  Zie [Certificaten voor WAP plannen](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383650(v=ws.11)#plan-certificates) en [algemene informatie over WAP-servers](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn584113(v=ws.11)) voor meer informatie.
 
 ### <a name="accounts"></a>Accounts
 
@@ -82,7 +82,7 @@ Als u wilt dat apparaten op internet certificaten ontvangen, moet u uw NDES-URL 
   - **Aanmelden als service**
   - **Aanmelden als batchtaak**
 
-  Zie [Een domeingebruikersaccount maken om te fungeren als NDES-serviceaccount](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)#to-create-a-domain-user-account-to-act-as-the-ndes-service-account) voor meer informatie.
+  Zie [Een domeingebruikersaccount maken om te fungeren als NDES-serviceaccount](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)#to-create-a-domain-user-account-to-act-as-the-ndes-service-account) voor meer informatie.
 
 - **Toegang tot de computer die als host fungeert voor de NDES-service**: u hebt een domeingebruikersaccount nodig met machtigingen voor het installeren en configureren van Windows-serverfuncties op de server waarop u NDES installeert.
 
@@ -90,7 +90,7 @@ Als u wilt dat apparaten op internet certificaten ontvangen, moet u uw NDES-URL 
 
 ### <a name="network-requirements"></a>Netwerkvereisten
 
-Het is raadzaam de NDES-service te publiceren via een omgekeerde proxy, zoals de [Azure AD-toepassingsproxy, Web Access Proxy](https://azure.microsoft.com/documentation/articles/active-directory-application-proxy-publish/) of een externe proxy. Als u geen omgekeerde proxy gebruikt, moet u TCP-verkeer toestaan van alle hosts en IP-adressen op internet naar de NDES-service via poort 443.
+Het is raadzaam de NDES-service te publiceren via een omgekeerde proxy, zoals de [Azure AD-toepassingsproxy, Web Access Proxy](/azure/active-directory/manage-apps/application-proxy-add-on-premises-application) of een externe proxy. Als u geen omgekeerde proxy gebruikt, moet u TCP-verkeer toestaan van alle hosts en IP-adressen op internet naar de NDES-service via poort 443.
 
 Sta alle poorten en protocollen toe die nodig zijn voor communicatie tussen de NDES-service en ondersteunende infrastructuur in uw omgeving. De computer waarop de NDES-service wordt gehost, moet bijvoorbeeld communiceren met de CA, DNS-servers, domeincontrollers en mogelijk andere services of servers in uw omgeving, zoals Configuration Manager.
 
@@ -234,11 +234,11 @@ Standaard gebruikt Intune de waarde die in de sjabloon is geconfigureerd. U kunt
 
 ## <a name="set-up-ndes"></a>NDES instellen
 
-Met de volgende procedures kunt u de Registratieservice voor netwerkapparaten (NDES) configureren voor gebruik in Intune. Zie [Hulp bij Registratieservice voor netwerkapparaten](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v%3dws.11)) voor meer informatie.
+Met de volgende procedures kunt u de Registratieservice voor netwerkapparaten (NDES) configureren voor gebruik in Intune. Zie [Hulp bij Registratieservice voor netwerkapparaten](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)) voor meer informatie.
 
 ### <a name="install-the-ndes-service"></a>De NDES-service installeren
 
-1. Meld u als **Ondernemingsbeheerder** aan op de server die als host voor NDES fungeert en gebruik vervolgens de [wizard Functies en onderdelen toevoegen](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831809(v=ws.11)) om NDES te installeren:
+1. Meld u als **Ondernemingsbeheerder** aan op de server die als host voor NDES fungeert en gebruik vervolgens de [wizard Functies en onderdelen toevoegen](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831809(v=ws.11)) om NDES te installeren:
 
    1. Selecteer in de wizard **Active Directory Certificate Services** om toegang te krijgen tot de AD CS-functieservices. Selecteer **Registratieservice voor netwerkapparaten**, schakel **Certificeringsinstantie** uit en voltooi vervolgens de wizard.
 

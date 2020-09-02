@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 49d1b8f407814fd368a7ff45bb94bc4c5ef7fd9d
-ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
+ms.openlocfilehash: 88b7f41b873697a7ec34bd1fc2f1098384ab1c18
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83556282"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915718"
 ---
 # <a name="windows-holographic-for-business-settings-to-manage-shared-devices-using-intune"></a>Windows Holographic for Business-instellingen voor het beheren van gedeelde apparaten met Intune
 
@@ -32,7 +32,7 @@ Met Microsoft Intune kunnen gebruikers zich met een gastaccount aanmelden op dez
 
 In dit artikel worden beschreven welke instellingen u in een Windows Holographic for Business-apparaatconfiguratieprofiel kunt gebruiken. Wanneer het profiel in Intune is gemaakt, implementeert u het of wijst u het toe aan apparaatgroepen in uw organisatie. U kunt dit profiel ook toewijzen aan een apparaatgroep met verschillende typen apparaten en besturingssysteemversies.
 
-Zie [Control access, accounts, and power features on shared PC or multi-user devices](shared-user-device-settings.md) (Toegang, accounts en energiefuncties beheren voor gedeelde pc's en apparaten met meerdere gebruikers) voor meer informatie over deze Intune-functie. Zie [AccountManagement CSP](https://docs.microsoft.com/windows/client-management/mdm/accountmanagement-csp) (CSP voor accountbeheer) voor meer informatie over de Windows-CSP.
+Zie [Control access, accounts, and power features on shared PC or multi-user devices](shared-user-device-settings.md) (Toegang, accounts en energiefuncties beheren voor gedeelde pc's en apparaten met meerdere gebruikers) voor meer informatie over deze Intune-functie. Zie [AccountManagement CSP](/windows/client-management/mdm/accountmanagement-csp) (CSP voor accountbeheer) voor meer informatie over de Windows-CSP.
 
 ## <a name="before-your-begin"></a>Voordat u begint
 

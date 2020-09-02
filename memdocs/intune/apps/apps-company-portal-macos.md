@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a58e22af70a3cf119cb044a15b40ba581fe6452c
-ms.sourcegitcommit: 5c15b59cde085787b85f032f88add70a11d8e9a2
+ms.openlocfilehash: 1eb64f8ed2bc67b4800a4583010dea150ade421d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86452845"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914154"
 ---
 # <a name="add-the-macos-company-portal-app"></a>De Bedrijfsportal-app voor macOS toevoegen
 
@@ -40,7 +40,7 @@ Om de apps veiliger te maken en up-to-date te houden na de installatie wordt de 
 > De Bedrijfsportal-app kan alleen automatisch worden geïnstalleerd op apparaten met Intune die al zijn ingeschreven met behulp van directe inschrijving of geautomatiseerde apparaatinschrijving. Voor persoonlijke apparaten of handmatige inschrijving moet de Bedrijfsportal-app worden gedownload en geïnstalleerd om de inschrijving te initiëren. Raadpleeg [Gebruikers instrueren om Bedrijfsportal te downloaden en installeren](#instruct-users-to-download-and-install-company-portal).
 ## <a name="instruct-users-to-download-and-install-company-portal"></a>Gebruikers instrueren om Bedrijfsportal te downloaden en installeren
 
-U kunt gebruikers instrueren om Bedrijfsportal voor macOS te downloaden en installeren en zich aan te melden. Raadpleeg [Uw macOS-apparaat inschrijven via de bedrijfsportal-app](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp) voor instructies over het downloaden en installeren van de Bedrijfsportal en het aanmelden.
+U kunt gebruikers instrueren om Bedrijfsportal voor macOS te downloaden en installeren en zich aan te melden. Raadpleeg [Uw macOS-apparaat inschrijven via de bedrijfsportal-app](../user-help/enroll-your-device-in-intune-macos-cp.md) voor instructies over het downloaden en installeren van de Bedrijfsportal en het aanmelden.
 
 ##  <a name="install-company-portal-for-macos-as-a-macos-lob-app"></a>Bedrijfsportal voor macOS installeren als macOS Line-Of-Business-app
 
@@ -66,5 +66,5 @@ Bedrijfsportal voor macOS kan worden gedownload en geïnstalleerd met behulp van
 > Voor het script is internettoegang vereist wanneer het wordt uitgevoerd om de huidige versie van Bedrijfsportal voor macOS te downloaden. 
 ## <a name="next-steps"></a>Volgende stappen
 - Zie [Apps aan groepen toewijzen](apps-deploy.md) voor meer informatie over het toewijzen van apps.
-- Zie [Programma voor apparaatinschrijving: macOS inschrijven](https://docs.microsoft.com/mem/intune/enrollment/device-enrollment-program-enroll-macos) voor meer informatie over het configureren van automatische apparaatinschrijving.
-- Zie [Mac-updates](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/mac-updates) voor meer informatie over het configureren van instellingen voor Microsoft AutoUpdate op macOS.
+- Zie [Programma voor apparaatinschrijving: macOS inschrijven](../enrollment/device-enrollment-program-enroll-macos.md) voor meer informatie over het configureren van automatische apparaatinschrijving.
+- Zie [Mac-updates](/windows/security/threat-protection/microsoft-defender-atp/mac-updates) voor meer informatie over het configureren van instellingen voor Microsoft AutoUpdate op macOS.

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 541c607bebb57b1ee23df1af3ab80d29cdd0c6fc
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: 720328ebe260c967bef4a879bd0ee33ae2f332a0
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866125"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915684"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Azure AD gebruiken voor toegang tot de Intune-API's in Microsoft Graph
 
@@ -53,9 +53,9 @@ Dit artikel:
 
 Zie voor meer informatie:
 
-- [Toegang tot webtoepassingen die gebruikmaken van OAuth 2.0 en Azure Active Directory autoriseren](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code)
+- [Toegang tot webtoepassingen die gebruikmaken van OAuth 2.0 en Azure Active Directory autoriseren](/azure/active-directory/develop/active-directory-protocols-oauth-code)
 - [Aan de slag met Azure AD-verificatie](https://www.visualstudio.com/docs/integrate/get-started/auth/oauth)
-- [Toepassingen integreren met Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications)
+- [Toepassingen integreren met Azure Active Directory](/azure/active-directory/develop/active-directory-integrating-applications)
 - [OAuth 2.0 begrijpen](https://oauth.net/2/)
 
 ## <a name="register-apps-to-use-the-microsoft-graph-api"></a>Apps voor het gebruik van de Microsoft Graph API registreren
@@ -80,7 +80,7 @@ U registreert als volgt apps voor het gebruik van de Microsoft Graph API:
 
     2. De waarden voor het **toepassingstype** en de **omleidings-URI**.
 
-        Dit is afhankelijk van uw vereisten. Bijvoorbeeld, als u een Azure AD-[verificatiebibliotheek](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL) gebruikt, stelt u **toepassingstype** in op `Native` en **omleidings-URI** op `urn:ietf:wg:oauth:2.0:oob`.
+        Dit is afhankelijk van uw vereisten. Bijvoorbeeld, als u een Azure AD-[verificatiebibliotheek](/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL) gebruikt, stelt u **toepassingstype** in op `Native` en **omleidings-URI** op `urn:ietf:wg:oauth:2.0:oob`.
 
         > [!NOTE]
         > Azure Active Directory (Azure AD) Authentication Library (ADAL) en Azure AD Graph API worden afgeschaft. Zie [Uw toepassingen bijwerken voor het gebruik van Microsoft Authentication Library (MSAL) en Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363) voor meer informatie.
@@ -88,7 +88,7 @@ U registreert als volgt apps voor het gebruik van de Microsoft Graph API:
 
         <img src="../media/azure-ad-app-new.png" width="209" height="140" alt="New app properties and values" />
 
-        Zie [Verificatiescenario's voor Azure AD](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios) voor meer informatie.
+        Zie [Verificatiescenario's voor Azure AD](/azure/active-directory/develop/active-directory-authentication-scenarios) voor meer informatie.
 
 5. Op de toepassingsblade:
 
@@ -106,7 +106,7 @@ U registreert als volgt apps voor het gebruik van de Microsoft Graph API:
 
     <img src="../media/azure-ad-perm-scopes.png" width="489" height="248" alt="Intune Graph API permission scopes" />
 
-    Kies de rollen die zijn vereist voor uw app door links van de relevante namen een vinkje te plaatsen.  Zie [Intune-machtigingsbereiken](#intune-permission-scopes) voor meer informatie over specifieke Intune-machtigingsbereiken.  Zie [Referentie voor Microsoft Graph-machtigingen](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) voor meer informatie over andere Graph API-machtigingsbereiken.
+    Kies de rollen die zijn vereist voor uw app door links van de relevante namen een vinkje te plaatsen.  Zie [Intune-machtigingsbereiken](#intune-permission-scopes) voor meer informatie over specifieke Intune-machtigingsbereiken.  Zie [Referentie voor Microsoft Graph-machtigingen](/graph/permissions-reference) voor meer informatie over andere Graph API-machtigingsbereiken.
 
     Kies het minste aantal rollen dat nodig is voor het implementeren van uw toepassing om de beste resultaten te verkrijgen.
 
@@ -141,8 +141,8 @@ Azure AD en Microsoft Graph gebruiken machtigingsbereiken om toegang tot bedrijf
 Machtigingsbereiken (ook wel de _OAuth-bereiken_ genoemd) beheren de toegang tot specifieke Intune-entiteiten en hun eigenschappen. Deze sectie bevat een overzicht van de machtigingsbereiken voor functies van de Intune-API.
 
 Zie voor meer informatie:
-- [Azure AD-verificatie](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-pass-through-authentication)
-- [Machtigingsbereiken voor toepassingen](https://docs.microsoft.com/azure/active-directory/develop/active-directory-v2-scopes)
+- [Azure AD-verificatie](/azure/active-directory/connect/active-directory-aadconnect-pass-through-authentication)
+- [Machtigingsbereiken voor toepassingen](/azure/active-directory/develop/active-directory-v2-scopes)
 
 Wanneer u Microsoft Graph machtigt, kunt u de volgende bereiken opgeven om toegang tot de Intune-functies te beheren: De volgende tabel bevat een overzicht van de machtigingsbereiken voor de Intune-API.  In de eerste kolom ziet u de naam van de functie, zoals weergegeven in Azure Portal. De tweede kolom bevat de naam van het machtigingbereik.
 

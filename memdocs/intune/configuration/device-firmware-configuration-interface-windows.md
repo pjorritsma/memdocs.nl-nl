@@ -16,18 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb45550f8c38237bebcc54db5531ab244ab10d84
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 6f30b2a3ecac3767da71c999b8920930532b8279
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531516"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915769"
 ---
 # <a name="use-device-firmware-configuration-interface-profiles-on-windows-devices-in-microsoft-intune-public-preview"></a>Device Firmware Configuration Interface-profielen gebruiken op Windows-apparaten in Microsoft Intune (openbare preview)
 
 Wanneer u Intune gebruikt om Autopilot-apparaten te beheren, kunt u met behulp van DFCI UEFI-instellingen (BIOS) beheren, nadat deze zijn opgegeven. Zie [Overzicht van DFCI](https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Dfci_Feature/) voor een overzicht van voordelen, scenario's en vereisten.
 
-Met DFCI [kunt u in Windows](https://docs.microsoft.com/windows/client-management/mdm/uefi-csp) beheeropdrachten van Intune naar UEFI (Unified Extensible Firmware Interface) doorgeven.
+Met DFCI [kunt u in Windows](/windows/client-management/mdm/uefi-csp) beheeropdrachten van Intune naar UEFI (Unified Extensible Firmware Interface) doorgeven.
 
 U kunt in Intune via deze functie BIOS-instellingen beheren. Normaal gesproken is de firmware toleranter voor kwaadaardige aanvallen. Hierdoor wordt het beheer van eindgebruikers over het BIOS beperkt, wat een voordeel is in verdachte omstandigheden.
 
@@ -45,11 +45,11 @@ Deze functie is van toepassing op:
 
 - Het apparaat moet voor Windows Autopilot zijn geregistreerd door een [Microsoft Cloud Solution Provider-partner (CSP)](https://partner.microsoft.com/cloud-solution-provider) of rechtstreeks door de OEM zijn geregistreerd. 
 
-  Apparaten die handmatig zijn geregistreerd voor Autopilot en bijvoorbeeld zijn [geïmporteerd uit een CSV-bestand](../enrollment/enrollment-autopilot.md#add-devices), mogen DFCI niet gebruiken. Voor DFCI-beheer is standaard een extern bewijsstuk vereist voor de commerciële aanschaf van het apparaat via een OEM of een Microsoft CSP-partnerregistratie voor Windows Autopilot.
+  Apparaten die handmatig zijn geregistreerd voor Autopilot en bijvoorbeeld zijn [geïmporteerd uit een CSV-bestand](../../autopilot/enrollment-autopilot.md#add-devices), mogen DFCI niet gebruiken. Voor DFCI-beheer is standaard een extern bewijsstuk vereist voor de commerciële aanschaf van het apparaat via een OEM of een Microsoft CSP-partnerregistratie voor Windows Autopilot.
 
   Zodra het apparaat is geregistreerd, wordt het serienummer in de lijst met Windows Autopilot-apparaten weergegeven.
 
-  Zie [Windows-apparaten in Intune inschrijven met Windows Autopilot](../enrollment/enrollment-autopilot.md) voor meer informatie over Autopilot en de bijbehorende vereisten.
+  Zie [Windows-apparaten in Intune inschrijven met Windows Autopilot](../../autopilot/enrollment-autopilot.md) voor meer informatie over Autopilot en de bijbehorende vereisten.
 
 ## <a name="create-your-azure-ad-security-groups"></a>Uw Azure AD-beveiligingsgroepen maken
 
@@ -66,7 +66,7 @@ Als u DFCI wilt gebruiken, maakt u de volgende profielen en wijst u deze toe aan
 
 ### <a name="create-an-autopilot-deployment-profile"></a>Een Autopilot-implementatieprofiel maken
 
-Met dit profiel worden nieuwe apparaten ingesteld en vooraf geconfigureerd. In het [Autopilot-implementatieprofiel](../enrollment/enrollment-autopilot.md#create-an-autopilot-deployment-profile) worden de stappen vermeld voor het maken van het profiel.
+Met dit profiel worden nieuwe apparaten ingesteld en vooraf geconfigureerd. In het [Autopilot-implementatieprofiel](../../autopilot/enrollment-autopilot.md#create-an-autopilot-deployment-profile) worden de stappen vermeld voor het maken van het profiel.
 
 ### <a name="create-an-enrollment-state-page-profile"></a>Een profiel voor een registratiestatuspagina maken
 

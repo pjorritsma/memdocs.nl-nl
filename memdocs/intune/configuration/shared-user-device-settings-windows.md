@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f013074ac67b7622b509d8b9781de3ab5f4041e0
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: d3a1a66988f922a293187f3ed30e3659dee567b1
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429493"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915701"
 ---
 # <a name="windows-10-and-later-settings-to-manage-shared-devices-using-intune"></a>Instellingen voor Windows 10 (en hoger) om gedeelde apparaten te beheren met Intune
 
@@ -32,7 +32,7 @@ Met Microsoft Intune kunnen eindgebruikers zich met een gastaccount aanmelden op
 
 In dit artikel wordt beschreven welke instellingen u kunt gebruiken in een apparaatconfiguratieprofiel voor Windows 10 (of hoger). Wanneer het profiel in Intune is gemaakt, implementeert u het of wijst u het toe aan apparaatgroepen in uw organisatie. U kunt dit profiel ook toewijzen aan apparaatgroepen met verschillende typen apparaten en besturingssysteemversies.
 
-Zie [Control access, accounts, and power features on shared PC or multi-user devices](shared-user-device-settings.md) (Toegang, accounts en energiefuncties beheren voor gedeelde pc's en apparaten met meerdere gebruikers) voor meer informatie over deze Intune-functie. Zie [SharedPC CSP](https://docs.microsoft.com/windows/client-management/mdm/sharedpc-csp) (CSP voor gedeelde pc's) voor meer informatie over de Windows-CSP.
+Zie [Control access, accounts, and power features on shared PC or multi-user devices](shared-user-device-settings.md) (Toegang, accounts en energiefuncties beheren voor gedeelde pc's en apparaten met meerdere gebruikers) voor meer informatie over deze Intune-functie. Zie [SharedPC CSP](/windows/client-management/mdm/sharedpc-csp) (CSP voor gedeelde pc's) voor meer informatie over de Windows-CSP.
 
 ## <a name="before-your-begin"></a>Voordat u begint
 
@@ -40,7 +40,7 @@ Zie [Control access, accounts, and power features on shared PC or multi-user dev
 
 ## <a name="shared-multi-user-device-settings"></a>Instellingen voor gedeelde apparaat voor meerdere gebruikers
 
-Deze instellingen maken gebruik van de [SharedPC CSP](https://docs.microsoft.com/windows/client-management/mdm/sharedpc-csp).
+Deze instellingen maken gebruik van de [SharedPC CSP](/windows/client-management/mdm/sharedpc-csp).
 
 - **Modus Gedeelde pc**: Met **Inschakelen** wordt de gedeelde pc-modus ingeschakeld. In deze modus kan slechts één gebruiker tegelijk zich aanmelden bij het apparaat. Andere gebruikers kunnen zich pas aanmelden wanneer de eerste gebruiker zich heeft afgemeld. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
 - **Gastaccount**: Kies ervoor om een gastoptie te maken op het aanmeldingsscherm. Voor een gastaccount zijn er geen gebruikersreferenties en verificatie nodig. Met deze instelling wordt er bij elk gebruik een nieuw lokaal account gemaakt. Uw opties zijn:
@@ -92,10 +92,10 @@ Deze instellingen maken gebruik van de [SharedPC CSP](https://docs.microsoft.com
   - **Ingeschakeld**: Hiermee worden de aanbevolen instellingen voor apparaten op scholen gebruikt. Met deze instellingen worden meer beperkingen opgelegd.
   - **Uitgeschakeld**: Het standaard- en aanbevolen onderwijsbeleid worden niet gebruikt.
 
-  Zie [Windows 10 configuration recommendations for education customers](https://docs.microsoft.com/education/windows/configure-windows-for-education) (Windows 10-configuratieaanbevelingen voor klanten uit het onderwijs) voor meer informatie over het onderwijsbeleid.
+  Zie [Windows 10 configuration recommendations for education customers](/education/windows/configure-windows-for-education) (Windows 10-configuratieaanbevelingen voor klanten uit het onderwijs) voor meer informatie over het onderwijsbeleid.
 
 > [!TIP]
-> [Een gedeelde of gast-pc instellen](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc) (hiermee wordt een andere Docs-website geopend) is een geweldige resource in deze Windows 10-functie, met concepten en groepsbeleid die kunnen worden ingesteld in de gedeelde modus.
+> [Een gedeelde of gast-pc instellen](/windows/configuration/set-up-shared-or-guest-pc) (hiermee wordt een andere Docs-website geopend) is een geweldige resource in deze Windows 10-functie, met concepten en groepsbeleid die kunnen worden ingesteld in de gedeelde modus.
 
 ## <a name="next-steps"></a>Volgende stappen
 

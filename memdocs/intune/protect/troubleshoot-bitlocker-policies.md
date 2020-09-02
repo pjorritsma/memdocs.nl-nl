@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 92d1e1c5d1e2a66ed036d0ed7a5a75d40c737bf3
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 771c1133d10c256d29755ebc146197a6cb35ceee
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428977"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914902"
 ---
 # <a name="troubleshoot-bitlocker-policies-in-microsoft-intune"></a>Problemen met BitLocker-beleid in Microsoft Intune oplossen
 
@@ -35,7 +35,7 @@ Met Microsoft Intune beschikt u over de volgende methoden om BitLocker te behere
 
 - **Beleidsregels voor apparaatconfiruatie**: bepaalde ingebouwde beleidsopties zijn beschikbaar in Intune wanneer u een apparaatconfiguratieprofiel maakt om Endpoint Protection te beheren. U kunt deze opties vinden door [een apparaatprofiel voor Endpoint Protection](endpoint-protection-configure.md#create-a-device-profile-containing-endpoint-protection-settings) te maken, **Windows 10 en later** te selecteren bij *Platform* en vervolgens de categorie **Windows-versleuteling** te selecteren bij *Instellingen*. 
 
-   Zie dit artikel voor de beschikbare opties en functies: [Windows-versleuteling](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption).
+   Zie dit artikel voor de beschikbare opties en functies: [Windows-versleuteling](/intune/endpoint-protection-windows-10#windows-encryption).
 
 - **Beveiligingsbasislijnen** - [Beveiligingsbasislijnen](security-baselines.md) zijn bekende groepen instellingen en standaardwaarden die door het relevante beveiligingsteam worden aanbevolen om Windows-apparaten te beveiligen. Met verschillende basislijnbronnen, zoals de *MDM-beveiligingsbasislijn* of de *Microsoft Defender ATP-basislijn*, kunt u dezelfde of andere instellingen beheren. U kunt er ook dezelfde instellingen mee beheren als met apparaatconfiguratiebeleid. 
 
@@ -43,12 +43,12 @@ Naast Intune wordt, voor hardware die compatibel is met Modern Standby-en HSTI, 
 
 BitLocker-instellingen kunnen ook op andere manieren worden beheerd, zoals met groepsbeleid, of handmatig worden ingesteld door een apparaatgebruiker.
 
-Ongeacht hoe instellingen worden toegepast op een apparaat, BitLocker-beleid maakt gebruik van de [BitLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) om versleuteling op het apparaat te configureren. De BitLocker CSP is ingebouwd in Windows. Wanneer via Intune een BitLocker-beleidsregel wordt geïmplementeerd op een toegewezen apparaat, worden de juiste waarden door de BitLocker CSP op het apparaat in het Windows-register geschreven zodat de beleidsinstellingen van kracht kunnen worden.
+Ongeacht hoe instellingen worden toegepast op een apparaat, BitLocker-beleid maakt gebruik van de [BitLocker CSP](/windows/client-management/mdm/bitlocker-csp) om versleuteling op het apparaat te configureren. De BitLocker CSP is ingebouwd in Windows. Wanneer via Intune een BitLocker-beleidsregel wordt geïmplementeerd op een toegewezen apparaat, worden de juiste waarden door de BitLocker CSP op het apparaat in het Windows-register geschreven zodat de beleidsinstellingen van kracht kunnen worden.
 
 Raadpleeg de volgende resources voor meer informatie over BitLocker:
 
-- [BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview)
-- [Overzicht van BitLocker en veelgestelde vragen over vereisten](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview-and-requirements-faq)
+- [BitLocker](/windows/security/information-protection/bitlocker/bitlocker-overview)
+- [Overzicht van BitLocker en veelgestelde vragen over vereisten](/windows/security/information-protection/bitlocker/bitlocker-overview-and-requirements-faq)
 
 Nu u basisinzicht hebt in de functie en werking van deze beleidsregels gaan we kijken hoe u kunt controleren of de BitLocker-instellingen zijn toegepast op een Windows-client.
 
@@ -109,7 +109,7 @@ Nadat BitLocker-beleid op een apparaat is geïmplementeerd, bekijkt u de volgend
 
 ![BitLocker-registersleutel](./media/troubleshooting-bitlocker-policies/registry.png)
 
-Deze waarden worden geconfigureerd door de BitLocker CSP. Controleer of de waarden van de sleutels overeenkomen met de instellingen die zijn opgegeven in de bron van uw Intune-versleutelingsbeleid voor Windows. Zie [BitLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)voor meer informatie over elk van deze instellingen.
+Deze waarden worden geconfigureerd door de BitLocker CSP. Controleer of de waarden van de sleutels overeenkomen met de instellingen die zijn opgegeven in de bron van uw Intune-versleutelingsbeleid voor Windows. Zie [BitLocker CSP](/windows/client-management/mdm/bitlocker-csp)voor meer informatie over elk van deze instellingen.
 
 > [!NOTE]
 > De Logboeken van Windows bevatten ook diverse informatie met betrekking tot BitLocker. Er is te veel om hier weer te geven, maar als u zoekt naar **BitLocker API** krijgt u veel nuttige informatie.
@@ -136,7 +136,7 @@ EncryptionMethodWithXtsFdvDropDown: 6 (The value 6 refers to the 128 bit encrypt
 EncryptionMethodWithXtsRdvDropDown: 6 (The value 6 refers to the 128 bit encryption)
 ```
 
-U kunt de [BitLocker CSP-documentatie](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) raadplegen om te zien wat elke waarde betekent. Voor dit voorbeeld wordt een fragment gedeeld in de volgende afbeelding.
+U kunt de [BitLocker CSP-documentatie](/windows/client-management/mdm/bitlocker-csp) raadplegen om te zien wat elke waarde betekent. Voor dit voorbeeld wordt een fragment gedeeld in de volgende afbeelding.
 
 ![Doelen van waarden](./media/troubleshooting-bitlocker-policies/shared-example.png)
 
@@ -162,10 +162,10 @@ Nu weet u hoe u kunt controleren of het BitLocker-beleid via Intune is geïmplem
 - **Mislukt de implementatie van het volledige beleid of zijn alleen bepaalde instellingen niet toegepast?** In een scenario waarin slechts enkele beleidsinstellingen niet zijn toegepast, controleert u de volgende mogelijkheden:
 
   1. **Niet alle BitLocker-instellingen worden ondersteund in alle Windows-versies**.
-     Het beleid wordt als één eenheid naar een apparaat verzonden. Als sommige instellingen dus wel van toepassing zijn en andere niet, kunt u erop vertrouwen dat het beleid zelf is ontvangen. In dit scenario is het mogelijk dat de Windows-versie op het apparaat de problematische instellingen niet ondersteunt. Zie [BitLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) in de Windows-documentatie voor meer informatie over de versievereisten voor elke instelling.
+     Het beleid wordt als één eenheid naar een apparaat verzonden. Als sommige instellingen dus wel van toepassing zijn en andere niet, kunt u erop vertrouwen dat het beleid zelf is ontvangen. In dit scenario is het mogelijk dat de Windows-versie op het apparaat de problematische instellingen niet ondersteunt. Zie [BitLocker CSP](/windows/client-management/mdm/bitlocker-csp) in de Windows-documentatie voor meer informatie over de versievereisten voor elke instelling.
 
   2. **BitLocker wordt niet op alle hardware ondersteund**.
-     Ook als u de juiste versie van Windows hebt, is het mogelijk dat de onderliggende apparaathardware niet voldoet aan de vereisten voor BitLocker-versleuteling. De [systeemvereisten voor BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements) vindt u in de Windows-documentatie, maar het belangrijkste is om te controleren of het apparaat een compatibele TPM-chip heeft (1.2 of later) en TCB-compatibele (Trusted Computing Group) BIOS- of UEFI-firmware.
+     Ook als u de juiste versie van Windows hebt, is het mogelijk dat de onderliggende apparaathardware niet voldoet aan de vereisten voor BitLocker-versleuteling. De [systeemvereisten voor BitLocker](/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements) vindt u in de Windows-documentatie, maar het belangrijkste is om te controleren of het apparaat een compatibele TPM-chip heeft (1.2 of later) en TCB-compatibele (Trusted Computing Group) BIOS- of UEFI-firmware.
      
 **BitLocker-versleuteling wordt niet op de achtergrond uitgevoerd**: u hebt een Endpoint Protection-beleid geconfigureerd waarbij de instelling voor een waarschuwing voor andere schijfversleuteling is ingesteld op blokkeren en de wizard voor versleuteling nog steeds wordt weergegeven:
 
@@ -209,11 +209,11 @@ Wanneer u problemen met BitLocker-beleid met Intune oplost en kunt bevestigen da
 
 Hieronder volgen nog meer resources die u kunnen helpen als u met BitLocker werkt:
 
-- [BitLocker-productdocumentatie](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview)
-- [BitLocker-systeemvereisten](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements)
-- [BitLocker: veelgestelde vragen](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-frequently-asked-questions)
-- [BitLocker CSP-documentatie](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)
-- [Instellingen voor Intune-versleutelingsbeleid voor Windows](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption)
-- [Hardwareonafhankelijke automatische BitLocker-versleuteling met behulp van AAD/MDM](https://blogs.technet.microsoft.com/home_is_where_i_lay_my_head/2017/06/07/hardware-independent-automatic-bitlocker-encryption-using-aadmdm/)
+- [BitLocker-productdocumentatie](/windows/security/information-protection/bitlocker/bitlocker-overview)
+- [BitLocker-systeemvereisten](/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements)
+- [BitLocker: veelgestelde vragen](/windows/security/information-protection/bitlocker/bitlocker-frequently-asked-questions)
+- [BitLocker CSP-documentatie](/windows/client-management/mdm/bitlocker-csp)
+- [Instellingen voor Intune-versleutelingsbeleid voor Windows](/intune/endpoint-protection-windows-10#windows-encryption)
+- [Hardwareonafhankelijke automatische BitLocker-versleuteling met behulp van AAD/MDM](/archive/blogs/home_is_where_i_lay_my_head/hardware-independent-automatic-bitlocker-encryption-using-aadmdm)
 - [CSP-beleid voor BitLocker-versleuteling op Autopilot-apparaten](https://techcommunity.microsoft.com/t5/Windows-10-security/CSP-policy-for-bitLocker-encryption-on-autopilot-devices/m-p/284537)
-- [Stapsgewijze instructies voor het maken en implementeren van BitLocker-beleid met Intune](https://blogs.technet.microsoft.com/cbernier/2017/07/11/windows-10-intune-windows-bitlocker-management-yes/)
+- [Stapsgewijze instructies voor het maken en implementeren van BitLocker-beleid met Intune](/archive/blogs/cbernier/windows-10-intune-windows-bitlocker-management-yes)

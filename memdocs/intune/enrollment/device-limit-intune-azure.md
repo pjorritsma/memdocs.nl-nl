@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8610b619a4ac05f37b893060b3b3a2bcb1dae528
-ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
+ms.openlocfilehash: 63c9d9e4752e4b0d317667162255e368fc5a099c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83864851"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908551"
 ---
 # <a name="understand-intune-and-azure-ads-device-limit-restrictions"></a>Meer informatie over Beperkingen voor apparaatlimieten van Intune en Azure AD
 
@@ -39,7 +39,7 @@ De apparaatlimietbeperkingen van Intune stelt het maximum aantal apparaten in da
 
 ## <a name="azure-device-limit-restriction"></a>Beperking voor apparaatlimiet van Azure
 
-Beperkingen voor Azure-apparaatlimieten stelt het maximum aantal apparaten in dat door Azure AD wordt toegevoegd of Azure AD wordt geregistreerd. Als u het **maximum aantal apparaten per gebruiker** wilt instellen, gaat u naar de Azure-portal > **Azure Active Directory** > **Apparaten**. Zie [Apparaatinstellingen configureren](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal) voor meer informatie
+Beperkingen voor Azure-apparaatlimieten stelt het maximum aantal apparaten in dat door Azure AD wordt toegevoegd of Azure AD wordt geregistreerd. Als u het **maximum aantal apparaten per gebruiker** wilt instellen, gaat u naar de Azure-portal > **Azure Active Directory** > **Apparaten**. Zie [Apparaatinstellingen configureren](/azure/active-directory/devices/device-management-azure-portal) voor meer informatie
 
 ## <a name="settings-applied-based-on-user-affinity"></a>Instellingen die zijn toegepast op basis van gebruikersaffiniteit
 
@@ -114,6 +114,6 @@ Voor de apparaatlimietbeperking in Azure is de instelling **Maximum aantal appar
 
 ## <a name="next-steps"></a>Volgende stappen
 
-- [Een beperking voor apparaatlimiet maken in Azure.](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#configure-device-settings)
+- [Een beperking voor apparaatlimiet maken in Azure.](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings)
 - [Apparaatinstellingen configureren in Azure.](enrollment-restrictions-set.md#create-a-device-limit-restriction)
-- [Meer informatie over registratie en domein toegevoegd.](https://docs.microsoft.com/azure/active-directory/devices/overview#getting-devices-in-azure-ad)
+- [Meer informatie over registratie en domein toegevoegd.](/azure/active-directory/devices/overview#getting-devices-in-azure-ad)

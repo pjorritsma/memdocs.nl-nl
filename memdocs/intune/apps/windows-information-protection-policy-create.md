@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 66ea84d8defa1d1d5b79f686537b391452cf3c30
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 88eabe07cadf45644f3e10be338a23454c5d1711
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990277"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911978"
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-policy-with-intune"></a>Met Intune WIP-beleid (WIP: Windows Information Protection) maken en implementeren
 
@@ -52,11 +52,11 @@ U moet enkele concepten begrijpen voor het toevoegen van WIP-beleid:
 U moet de MAM-provider configureren voordat u een WIP-beleid kunt maken. Meer informatie over [de configuratie van uw MAM-provider met Intune](app-protection-policies-configure-windows-10.md).  
 
 > [!IMPORTANT]
-> WIP biedt geen ondersteuning voor meerdere identiteiten; er kan slechts één beheerde identiteit tegelijkertijd bestaan. Zie [Uw ondernemingsgegevens beveiligen met Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip) voor meer informatie over de mogelijkheden en beperkingen van WIP.
+> WIP biedt geen ondersteuning voor meerdere identiteiten; er kan slechts één beheerde identiteit tegelijkertijd bestaan. Zie [Uw ondernemingsgegevens beveiligen met Windows Information Protection (WIP)](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip) voor meer informatie over de mogelijkheden en beperkingen van WIP.
 
 U moet bovendien beschikken over de volgende licentie en update:
 
-- Een [Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium)-licentie
+- Een [Azure AD Premium](/azure/active-directory/active-directory-get-started-premium)-licentie
 - [Update voor Windows Creators](https://blogs.windows.com/windowsexperience/2017/04/11/how-to-get-the-windows-10-creators-update/#o61bC2PdrHslHG5J.97)
 
 
@@ -68,7 +68,7 @@ U moet bovendien beschikken over de volgende licentie en update:
 Nadat u Intune hebt ingesteld in uw organisatie, kunt u specifiek WIP-beleid maken.
 
 > [!TIP]  
-> Zie [Een WIP-beleid (Windows Information Protection) maken met MAM via Azure Portal voor Microsoft Intune](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure) in de Windows-bibliotheek voor beveiligingsdocumentatie voor gerelateerde informatie over het maken van een WIP-beleid voor Intune, waaronder de beschikbare instellingen en hoe u deze configureert. 
+> Zie [Een WIP-beleid (Windows Information Protection) maken met MAM via Azure Portal voor Microsoft Intune](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure) in de Windows-bibliotheek voor beveiligingsdocumentatie voor gerelateerde informatie over het maken van een WIP-beleid voor Intune, waaronder de beschikbare instellingen en hoe u deze configureert. 
 
 
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
@@ -194,4 +194,4 @@ Nadat u het beveiligingsbeleid van uw OHW app hebt gemaakt, moet u deze implemen
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Zie [Uw ondernemingsgegevens beveiligen met Windows-gegevensbescherming (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip) voor meer informatie over Windows-gegevensbescherming.
+Zie [Uw ondernemingsgegevens beveiligen met Windows-gegevensbescherming (WIP)](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip) voor meer informatie over Windows-gegevensbescherming.

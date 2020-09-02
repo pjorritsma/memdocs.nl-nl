@@ -19,12 +19,12 @@ ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: aeb1f6ae1ca666a96eca583d2e3be9c565013e7c
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 1c43d2c4ae7ccda2cd0cf9283586a980eb166d22
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881319"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912080"
 ---
 # <a name="enroll-your-ios-device-in-telecom-expense-management"></a>Uw iOS-apparaat met voor Telecom Expense Management
 
@@ -39,7 +39,7 @@ Selecteer de gewenste optie. U krijgt dan een melding om de app [__Datalert__](h
 ## <a name="enroll-into-datalert-using-your-microsoft-work-or-school-account"></a>Registreren bij Datalert met uw werk- of schoolaccount van Microsoft
 
 > [!NOTE]
-> Voor registratie op deze manier moet de app [Microsoft Authenticator](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) geïnstalleerd en actief zijn op uw telefoon.
+> Voor registratie op deze manier moet de app [Microsoft Authenticator](/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) geïnstalleerd en actief zijn op uw telefoon.
 
 1. Selecteer __Registreren met Microsoft-account__.
 

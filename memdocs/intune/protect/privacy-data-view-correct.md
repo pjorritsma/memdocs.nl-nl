@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d6cddd94400874c508a31b11b22fa4417798e2da
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 865a6f33053d9e1fe011d6c2cddf94d0e3995148
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084780"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914958"
 ---
 # <a name="view-and-correct-personal-data"></a>Persoonlijke gegevens weergeven en corrigeren
 
@@ -37,7 +37,7 @@ Intune-beheerders kunnen bepaalde persoonlijke gegevens weergeven op basis van d
 Beheerders kunnen persoonlijke gegevens van de eindgebruiker in verschillende blades in de gebruikersinterface van Intune zien. In de volgende artikelen wordt uitgelegd waartoe informatiebeheerders wel en geen toegang hebben:
 - In [Apparaatdetails weergeven](../remote-actions/device-inventory.md) in Intune wordt uitgelegd hoe u de details van een apparaat van een eindgebruiker kunt weergeven.
 - In [App-gegevens en -toewijzingen controleren](../apps/apps-monitor.md) wordt uitgelegd hoe u details over geïnstalleerde apps op een apparaat van een eindgebruiker kunt weergeven.
-- Het artikel [Welke gegevens kan mijn bedrijf zien wanneer ik mijn apparaat inschrijf?](https://docs.microsoft.com/mem/intune/user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune) bevat een lijst met gegevens voor eindgebruikers van alle gegevens die hun bedrijf wel en niet kunnen zien. U kunt uw gebruikers het beste vertellen wat voor soort gegevens u verzamelt en waarom u die wilt verzamelen. Dit artikel kan de eerste stap in die transparantie zijn.
+- Het artikel [Welke gegevens kan mijn bedrijf zien wanneer ik mijn apparaat inschrijf?](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) bevat een lijst met gegevens voor eindgebruikers van alle gegevens die hun bedrijf wel en niet kunnen zien. U kunt uw gebruikers het beste vertellen wat voor soort gegevens u verzamelt en waarom u die wilt verzamelen. Dit artikel kan de eerste stap in die transparantie zijn.
 
 ### <a name="who-can-view-the-data"></a>Wie kan de gegevens bekijken?
 

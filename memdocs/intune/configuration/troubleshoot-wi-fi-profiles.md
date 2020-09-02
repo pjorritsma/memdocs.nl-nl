@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78b7a0ea6e25754e2839e1fda788b3440eaf3880
-ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
+ms.openlocfilehash: c2183f68cd49c9ca353511aadb4cb3a0b6901e84
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86872049"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915752"
 ---
 # <a name="troubleshoot-wi-fi-device-configuration-profiles-in-microsoft-intune"></a>Problemen met Wi-Fi-apparaatconfiguratieprofielen oplossen in Microsoft Intune
 
@@ -72,7 +72,7 @@ In dit scenario wordt een Nokia 6.1-apparaat gebruikt. Voordat het Wi-Fi-profiel
 
 In Android worden de activiteiten van het op het apparaat geïnstalleerde Wi-Fi-profiel beschreven in het bestand **Omadmlog.log**. U kunt maximaal vijf Omadmlog-logboekbestanden hebben. Zorg ervoor dat u de tijdstempel van de laatste synchronisatie krijgt, zodat u de bijbehorende logboekvermeldingen kunt vinden.
 
-In het volgende voorbeeld gebruikt u [CMTrace](https://docs.microsoft.com/configmgr/core/support/cmtrace) om de logboeken te lezen en zoekt u naar wifimgr:
+In het volgende voorbeeld gebruikt u [CMTrace](/configmgr/core/support/cmtrace) om de logboeken te lezen en zoekt u naar wifimgr:
 
 > [!div class="mx-imgBorder"]
 > ![Wi-Fi-verbinding wordt weergegeven als een opgeslagen netwerk](./media/troubleshoot-wi-fi-profiles/android-cmtrace-filter-wifimgr.png)
@@ -201,7 +201,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
       > ![Voorbeeld van diagnostische gegevens over MDM waarin WiFi-profielconfiguratie op Windows 10-apparaten wordt weergeven](./media/troubleshoot-wi-fi-profiles/windows-mdm-diagnostic-info.png)
 
   > [!TIP]
-  > Zie [Diagnose MDM failures in Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) (MDM-fouten in Windows 10 diagnosticeren) voor meer informatie.
+  > Zie [Diagnose MDM failures in Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) (MDM-fouten in Windows 10 diagnosticeren) voor meer informatie.
 
 - OP Android-apparaten: als de vertrouwde basis- en SCEP-profielen niet op het apparaat zijn geïnstalleerd, ziet u de volgende vermelding in het Omadmlog-bestand van de Bedrijfsportal-app:
 
@@ -236,7 +236,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
   - Bevestig dat alle vereiste certificaten in de volledige certificaatketen zich op het Android-apparaat bevinden. Anders kan het Wi-Fi-profiel niet op het apparaat worden geïnstalleerd. Zie [Missing intermediate certificate authority](https://developer.android.com/training/articles/security-ssl#MissingCa) (Ontbrekende tussenliggende certificeringsinstantie) voor meer informatie (hiermee wordt de website van Android geopend).
   - Filter Omadmlog met trefwoorden om naar informatie te zoeken, bijvoorbeeld welk certificaat wordt gebruikt in het Wi-Fi-profiel en of het profiel is toegepast.
 
-    Gebruik bijvoorbeeld [CMTrace](https://docs.microsoft.com/configmgr/core/support/cmtrace) om de logboeken te lezen. Gebruik de zoekreeks om op wifimgr te filteren:
+    Gebruik bijvoorbeeld [CMTrace](/configmgr/core/support/cmtrace) om de logboeken te lezen. Gebruik de zoekreeks om op wifimgr te filteren:
 
     > [!div class="mx-imgBorder"]
     > ![Op CMTrace filteren om naar WiFiMgr-configuratieprofielen op Android-apparaten te zoeken](./media/troubleshoot-wi-fi-profiles/cmtrace-filter-wifimgr.png)

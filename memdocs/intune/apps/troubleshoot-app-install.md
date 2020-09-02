@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a1ed521067548f43dbcdca3dcbbf7455f255adf
-ms.sourcegitcommit: 6e9375afc0ba21893f51a40cce16d03a8ed21038
+ms.openlocfilehash: 287306a8a583dcb6a9617a2933cecb0223a25df4
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86285280"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913100"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Problemen met app-installatie oplossen
 
@@ -125,7 +125,7 @@ App-typen die worden ondersteund op ARM64-apparaten zijn onder andere:
 
 ## <a name="troubleshooting-apps-from-the-microsoft-store"></a>Het oplossen van problemen met apps van Microsoft Store
 
-De informatie in het Engelstalige onderwerp [Troubleshooting packaging, deployment, and query of Windows Store apps](https://msdn.microsoft.com/library/windows/desktop/hh973484.aspx) (Het oplossen van problemen bij het verpakken, implementeren en zoeken van Microsoft Store-apps) helpt u om algemene problemen op te lossen die optreden tijdens het installeren van apps in Microsoft Store, hetzij met behulp van Intune of op een andere manier.
+De informatie in het Engelstalige onderwerp [Troubleshooting packaging, deployment, and query of Windows Store apps](/windows/win32/appxpkg/troubleshooting) (Het oplossen van problemen bij het verpakken, implementeren en zoeken van Microsoft Store-apps) helpt u om algemene problemen op te lossen die optreden tijdens het installeren van apps in Microsoft Store, hetzij met behulp van Intune of op een andere manier.
 
 ## <a name="app-troubleshooting-resources"></a>Resources voor het oplossen van problemen met apps
 - [Visio en Project implementeren als onderdeel van uw Microsoft 365-apps-implementatie](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Deploying-Visio-and-Project-as-part-of-your-Office/ba-p/701795)

@@ -18,16 +18,16 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 22910604d19aecb37adef2452d01d46c1435f7ef
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 544257bfb0fc844560cdbb1522345f4f8be63555
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79355254"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907004"
 ---
 # <a name="tutorial-walkthrough-of-microsoft-intune-in-the-azure-portal"></a>Zelfstudie: Walkthrough door Microsoft Intune in Azure Portal
 
-[Azure](https://docs.microsoft.com/learn/modules/welcome-to-azure) bevat meer dan 100 services die u met tal van cloud-computingscenario's en -mogelijkheden kunnen helpen. Microsoft Intune is van de vele services die beschikbaar zijn in Azure. Intune helpt u garanderen dat apparaten, apps en gegevens van uw bedrijf voldoen aan de beveiligingsvereisten van uw bedrijf. U bepaalt zelf welke vereisten moeten worden gecontroleerd en wat er gebeurt wanneer er niet aan die vereisten wordt voldaan. U vindt de Microsoft Intune-service in [Azure Portal](https://portal.azure.com). Door te weten welke functies beschikbaar zijn in Intune, kunt u verschillende MDM- (Mobile Device Management) en MAM-taken (Mobile Application Management) uitvoeren.
+[Azure](/learn/modules/welcome-to-azure) bevat meer dan 100 services die u met tal van cloud-computingscenario's en -mogelijkheden kunnen helpen. Microsoft Intune is van de vele services die beschikbaar zijn in Azure. Intune helpt u garanderen dat apparaten, apps en gegevens van uw bedrijf voldoen aan de beveiligingsvereisten van uw bedrijf. U bepaalt zelf welke vereisten moeten worden gecontroleerd en wat er gebeurt wanneer er niet aan die vereisten wordt voldaan. U vindt de Microsoft Intune-service in [Azure Portal](https://portal.azure.com). Door te weten welke functies beschikbaar zijn in Intune, kunt u verschillende MDM- (Mobile Device Management) en MAM-taken (Mobile Application Management) uitvoeren.
 
 In deze zelfstudie doet u het volgende:
 > [!div class="checklist"]

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 50c1842357a79ce3228b7b0a5283dc9a4e98b2d6
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 19c5c1f8e7a68a31150baa079ce9b766b6df72df
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252336"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906749"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Apparaten verwijderen via wissen of buiten gebruik stellen, of de registratie van het apparaat handmatig ongedaan maken
 
@@ -168,7 +168,7 @@ U kunt Intune configureren om automatisch apparaten te verwijderen die inactief 
 4. Kies **Opslaan**.
 
 > [!NOTE]
-> Er zijn geen regels beschikbaar voor het opschonen van Android Enterprise-scenario's zoals [volledig beheerd](https://docs.microsoft.com/mem/intune/enrollment/android-fully-managed-enroll), [toegewezen](https://docs.microsoft.com/mem/intune/enrollment/android-kiosk-enroll) en [bedrijfseigendom met een werkprofiel](https://docs.microsoft.com/mem/intune/enrollment/android-corporate-owned-work-profile-enroll). 
+> Er zijn geen regels beschikbaar voor het opschonen van Android Enterprise-scenario's zoals [volledig beheerd](../enrollment/android-fully-managed-enroll.md), [toegewezen](../enrollment/android-kiosk-enroll.md) en [bedrijfseigendom met een werkprofiel](../enrollment/android-corporate-owned-work-profile-enroll.md). 
 
 ## <a name="delete-devices-from-the-azure-active-directory-portal"></a>Apparaten verwijderen van de Azure Active Directory-portal
 
@@ -206,4 +206,3 @@ Beschikbaar voor apparaten met Windows 10. Meer informatie over [Nieuwe start](d
 ## <a name="next-steps"></a>Volgende stappen
 
 Zie [Inschrijvingsopties](../enrollment/enrollment-options.md) als u een verwijderd apparaat opnieuw wilt registreren.
-

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16b212bde0f46861b8acb1470588b784c6f2a7fb
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: 03c43adb14c854b89ef914f0b9b30ea2be690a92
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565662"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906783"
 ---
 # <a name="use-apis-to-add-third-party-cas-for-scep-to-intune"></a>API's gebruiken om CA's van derden voor SCEP aan Intune toe te voegen
 
@@ -96,7 +96,7 @@ Voor de SCEP-server is een Azure-app-id, Azure-app-sleutel en tenant-id nodig om
 
 De administrator van de SCEP-server kan deze gegevens verkrijgen door zich aan te melden bij Azure Portal, de toepassing te registreren, de toepassing de bevoegdheid **Microsoft Intune API\SCEP-vraag valideren** te geven, een sleutel voor de toepassing te maken en vervolgens de app-id, app-sleutel en tenant-id te downloaden.
 
-Zie [Portal gebruiken om een AAD-toepassing en service-principal te maken voor toegang tot resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal) voor instructies over het registreren van een toepassing en het ophalen van id's en sleutels.
+Zie [Portal gebruiken om een AAD-toepassing en service-principal te maken voor toegang tot resources](/azure/azure-resource-manager/resource-group-create-service-principal-portal) voor instructies over het registreren van een toepassing en het ophalen van id's en sleutels.
 
 ### <a name="java-library-api"></a>Java-bibliotheek-API
 
@@ -241,7 +241,7 @@ Hiermee wordt Intune geïnformeerd dat er een fout is opgetreden tijdens het ver
 
 - **transactionId**: De SCEP-transactie-id
 - **certificateRequest**: DER-gecodeerde PKCS #10-certificaataanvraag met Base64-gecodeerde tekenreeks
-- **hResult**: Win32-foutcode waarmee de opgetreden fout het beste kan worden beschreven. Zie [Win32-foutcodes](https://msdn.microsoft.com/library/cc231199.aspx)
+- **hResult**: Win32-foutcode waarmee de opgetreden fout het beste kan worden beschreven. Zie [Win32-foutcodes](/openspecs/windows_protocols/ms-erref/18d8fbe8-a967-4f1c-ae50-99ca8e491d2d)
 - **errorDescription**: Beschrijving van de opgetreden fout
 
 **Genereert**:

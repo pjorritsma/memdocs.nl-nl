@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 69b4df0b5ceb947ab875f82a0d6f5ac59ce89eef
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: e2a00ef50676ee24de30f93ad5b5ddd88192b6db
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252619"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915072"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Instellingen voor Windows 10 (en hoger) om apparaten te beveiligen met Intune
 
@@ -34,7 +34,7 @@ Zie [Apparaatbeperkingsinstellingen voor Windows 10](../configuration/device-res
 
 [Maak een configuratieprofiel voor eindpuntbeveiliging op een apparaat](endpoint-protection-configure.md).  
 
-Zie de [referentie van de configuratie-serviceprovider](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) voor meer informatie over configuratie-serviceproviders (CSP's).  
+Zie de [referentie van de configuratie-serviceprovider](/windows/client-management/mdm/configuration-service-provider-reference) voor meer informatie over configuratie-serviceproviders (CSP's).  
 
 ## <a name="microsoft-defender-application-guard"></a>Microsoft Defender Application Guard  
 
@@ -44,7 +44,7 @@ Application Guard is alleen beschikbaar voor apparaten met de 64 bitsversie van 
 
 - **Application Guard**  
   **Standaardinstelling**: Niet geconfigureerd  
-   Application Guard-CSP: [Settings/AllowWindowsDefenderApplicationGuard](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowwindowsdefenderapplicationguard)  
+   Application Guard-CSP: [Settings/AllowWindowsDefenderApplicationGuard](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowwindowsdefenderapplicationguard)  
 
   - **Ingeschakeld voor Edge**: hiermee wordt deze functie ingeschakeld en worden niet-vertrouwde sites geopend in een met Hyper-V gevirtualiseerde browsercontainer.  
   - **Niet geconfigureerd**: op het apparaat kan elke site (vertrouwd en niet-vertrouwd) worden geopend.  
@@ -63,7 +63,7 @@ Application Guard is alleen beschikbaar voor apparaten met de 64 bitsversie van 
 - **Inhoud van het Klembord**  
   Deze instelling is alleen beschikbaar wanneer *Gedrag van het Klembord* is ingesteld op een van de instellingen voor *Toestaan*.  
   **Standaardinstelling**: Niet geconfigureerd  
-  Application Guard-CSP: [Settings/ClipboardFileType](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp#clipboardfiletype)  
+  Application Guard-CSP: [Settings/ClipboardFileType](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#clipboardfiletype)  
 
   De toegestane inhoud van het Klembord selecteren.  
   - **Niet geconfigureerd**  
@@ -315,19 +315,19 @@ De volgende opties worden ondersteund door aangepaste firewallregels:
 
 - **Richting**   
   **Standaardinstelling**: Niet geconfigureerd  
-  Firewall-CSP: [FirewallRules/*FirewallRuleName*/Direction](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#direction)  
+  Firewall-CSP: [FirewallRules/*FirewallRuleName*/Direction](/windows/client-management/mdm/firewall-csp#direction)  
   
   Geef aan of deze regel van toepassing is op **Binnenkomend** of **Uitgaand** verkeer. Wanneer **Niet geconfigureerd** is ingesteld, wordt de regel automatisch toegepast op uitgaand verkeer.  
 
 - **Actie**  
   **Standaardinstelling**: Niet geconfigureerd  
-  Firewall-CSP: [FirewallRules/*FirewallRuleName*/Action](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#action) en [FirewallRules/*FirewallRuleName*/Action/Type](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#type)  
+  Firewall-CSP: [FirewallRules/*FirewallRuleName*/Action](/windows/client-management/mdm/firewall-csp#action) en [FirewallRules/*FirewallRuleName*/Action/Type](/windows/client-management/mdm/firewall-csp#type)  
 
   Selecteer **Toestaan** of **Blokkeren**. Wanneer **Niet geconfigureerd** is ingesteld, wordt de regel standaard toegepast op het toestaan van verkeer.  
 
 - **Netwerktype**  
   **Standaardinstelling**: 0 geselecteerd  
-  Firewall-CSP: [FirewallRules/*FirewallRuleName*/Profiles](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#profiles)  
+  Firewall-CSP: [FirewallRules/*FirewallRuleName*/Profiles](/windows/client-management/mdm/firewall-csp#profiles)  
 
   Selecteer maximaal drie netwerktypen waarop deze regel moet worden toegepast. De opties **Domein**, **Particulier** en **Openbaar** zijn beschikbaar.  Als er geen netwerktypen zijn geselecteerd, is de regel van toepassing op alle drie de netwerktypen.  
 
@@ -338,13 +338,13 @@ De volgende opties worden ondersteund door aangepaste firewallregels:
 
   Beheer de verbindingen voor een app of een programma. Selecteer een van de volgende opties en voltooi daarna de aanvullende configuratie:  
   - **Naam van pakketreeks**: geef een naam op voor de pakketreeks. Gebruik de PowerShell-opdracht **Get-AppxPackage** om de naam van de pakketreeks te zoeken.   
-    Firewall-CSP: [FirewallRules/*FirewallRuleName*/App/PackageFamilyName](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#packagefamilyname)  
+    Firewall-CSP: [FirewallRules/*FirewallRuleName*/App/PackageFamilyName](/windows/client-management/mdm/firewall-csp#packagefamilyname)  
  
   - **Bestandspad**: u moet een bestandspad opgeven naar een app op het clientapparaat. Dit kan een absoluut of een relatief pad zijn. Bijvoorbeeld:  C:\Windows\System\Notepad.exe or %WINDIR%\Notepad.exe.  
-    Firewall-CSP: [FirewallRules/*FirewallRuleName*/App/FilePath](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#filepath)  
+    Firewall-CSP: [FirewallRules/*FirewallRuleName*/App/FilePath](/windows/client-management/mdm/firewall-csp#filepath)  
 
   - **Windows-service**: geef de korte naam van de Windows-service op als het een service is en geen toepassing die verkeer verzendt of ontvangt. Gebruik de PowerShell-opdracht **Get-Service** om de korte naam van de service te zoeken.  
-    Firewall-CSP: [FirewallRules/*FirewallRuleName*/App/ServiceName](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#servicename)  
+    Firewall-CSP: [FirewallRules/*FirewallRuleName*/App/ServiceName](/windows/client-management/mdm/firewall-csp#servicename)  
 
   - **Alle**: *er is geen aanvullende configuratie beschikbaar*.  
 
@@ -354,7 +354,7 @@ Geef de lokale en externe adressen op waarop deze regel van toepassing is.
 
 - **Lokale adressen**    
   **Standaardinstelling**: Willekeurig adres  
-  Firewall-CSP: [FirewallRules/*FirewallRuleName*/LocalPortRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localportranges)  
+  Firewall-CSP: [FirewallRules/*FirewallRuleName*/LocalPortRanges](/windows/client-management/mdm/firewall-csp#localportranges)  
 
   Selecteer **Willekeurig adres** of **Opgegeven adres**.  
 
@@ -367,7 +367,7 @@ Geef de lokale en externe adressen op waarop deze regel van toepassing is.
 
 - **Externe adressen**  
   **Standaardinstelling**: Willekeurig adres  
-  Firewall-CSP: [FirewallRules/*FirewallRuleName*/RemoteAddressRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
+  Firewall-CSP: [FirewallRules/*FirewallRuleName*/RemoteAddressRanges](/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
  
   Selecteer **Willekeurig adres** of **Opgegeven adres**.  
 
@@ -392,21 +392,21 @@ Geef de lokale en externe poorten op waarop de regel van toepassing is.
 
 - **Protocol**  
   **Standaardinstelling**: Alle  
-  Firewall-CSP: [FirewallRules/*FirewallRuleName*/Protocol](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#protocol)  
+  Firewall-CSP: [FirewallRules/*FirewallRuleName*/Protocol](/windows/client-management/mdm/firewall-csp#protocol)  
   Selecteer een van de volgende opties en voltooi de vereiste configuraties:  
   - **Alle**: er is geen aanvullende configuratie beschikbaar.  
   - **TCP**: lokale en externe poorten configureren. Alle poorten en Opgegeven poorten worden door beide opties ondersteund. Voer Opgegeven poorten in met behulp van een lijst met door komma's gescheiden items.  
-    - **Lokale poorten**: firewall-CSP: [FirewallRules/*FirewallRuleName*/LocalPortRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localportranges)  
-    - **Externe poorten**: firewall-CSP: [FirewallRules/*FirewallRuleName*/RemotePortRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#remoteportranges)  
+    - **Lokale poorten**: firewall-CSP: [FirewallRules/*FirewallRuleName*/LocalPortRanges](/windows/client-management/mdm/firewall-csp#localportranges)  
+    - **Externe poorten**: firewall-CSP: [FirewallRules/*FirewallRuleName*/RemotePortRanges](/windows/client-management/mdm/firewall-csp#remoteportranges)  
   - **UDP**: lokale en externe poorten configureren. Alle poorten en Opgegeven poorten worden door beide opties ondersteund. Voer Opgegeven poorten in met behulp van een lijst met door komma's gescheiden items.  
-    - **Lokale poorten**: firewall-CSP: [FirewallRules/*FirewallRuleName*/LocalPortRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localportranges)  
-    - **Externe poorten**: firewall-CSP: [FirewallRules/*FirewallRuleName*/RemotePortRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#remoteportranges)  
+    - **Lokale poorten**: firewall-CSP: [FirewallRules/*FirewallRuleName*/LocalPortRanges](/windows/client-management/mdm/firewall-csp#localportranges)  
+    - **Externe poorten**: firewall-CSP: [FirewallRules/*FirewallRuleName*/RemotePortRanges](/windows/client-management/mdm/firewall-csp#remoteportranges)  
   - **Aangepast**: geef een aangepast **protocolnummer** op tussen 0 en 255.  
 
 #### <a name="advanced-configuration"></a>Geavanceerde configuratie  
 - **Interfacetypen**  
   **Standaardinstelling**: 0 geselecteerd  
-  Firewall-CSP: [FirewallRules/*FirewallRuleName*/InterfaceTypes](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#interfacetypes)  
+  Firewall-CSP: [FirewallRules/*FirewallRuleName*/InterfaceTypes](/windows/client-management/mdm/firewall-csp#interfacetypes)  
 
   Maak een keuze uit de volgende opties:  
   - **Externe toegang**  
@@ -483,7 +483,7 @@ Basisinstellingen zijn universele BitLocker-instellingen voor alle soorten gegev
   - **Standaardgebruikers toestaan om versleuteling in te schakelen tijdens Azure AD Join**  
     *Deze instelling is alleen van toepassing op apparaten met Azure Active Directory Joined (Azure ADJ) en is afhankelijk van de vorige instelling, `Warning for other disk encryption`.*  
     **Standaardinstelling**: Niet geconfigureerd  
-    BitLocker-CSP: [AllowStandardUserEncryption](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp#allowstandarduserencryption)
+    BitLocker-CSP: [AllowStandardUserEncryption](/windows/client-management/mdm/bitlocker-csp#allowstandarduserencryption)
 
      - **Toestaan**: standaardgebruikers (niet-beheerders) kunnen BitLocker-versleuteling inschakelen wanneer de gebruiker is aangemeld.  
      - **Niet geconfigureerd**: alleen beheerders kunnen BitLocker-versleuteling inschakelen op het apparaat.  
@@ -656,7 +656,7 @@ Deze instellingen zijn van toepassing zijn op gegevensstations van het besturing
 
   - **Clientgestuurde rotatie van herstelwachtwoorden**  
     **Standaardinstelling**: Sleutelrotatie is ingeschakeld voor apparaten die zijn toegevoegd aan Azure AD  
-    BitLocker-CSP: [ConfigureRecoveryPasswordRotation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)  
+    BitLocker-CSP: [ConfigureRecoveryPasswordRotation](/windows/client-management/mdm/bitlocker-csp)  
     
     Met deze instelling wordt een clientgestuurde rotatie van het herstelwachtwoord gestart na herstel van het besturingssysteemstation (met bootmgr of WinRE).  
 
@@ -780,7 +780,7 @@ Deze instellingen zijn van toepassing op verwisselbare gegevensstations.
  
 ## <a name="microsoft-defender-exploit-guard"></a>Microsoft Defender Exploit Guard  
 
-Gebruik [Exploit Protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/exploit-protection) om de kwetsbaarheid van door uw medewerkers gebruikte apps voor aanvallen te beheren en te verminderen.  
+Gebruik [Exploit Protection](/windows/security/threat-protection/microsoft-defender-atp/exploit-protection) om de kwetsbaarheid van door uw medewerkers gebruikte apps voor aanvallen te beheren en te verminderen.  
 
 ### <a name="attack-surface-reduction"></a>Kwetsbaarheid voor aanvallen verminderen  
 
@@ -790,7 +790,7 @@ Met behulp van regels voor vermindering van oppervlakte-aanvallen helpt u het ge
 
 - **Referentiediefstal in het Windows-subsysteem voor de lokale beveiligingsautoriteit markeren**  
   **Standaardinstelling**: Niet geconfigureerd  
-  Regel: [Blokkeer referentiediefstal in het Windows-subsysteem voor de lokale beveiligingsautoriteit (lsass.exe)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
+  Regel: [Blokkeer referentiediefstal in het Windows-subsysteem voor de lokale beveiligingsautoriteit (lsass.exe)](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
 
   Help acties en apps te voorkomen die meestal worden gebruikt door malware om computers te infecteren.  
 
@@ -800,7 +800,7 @@ Met behulp van regels voor vermindering van oppervlakte-aanvallen helpt u het ge
 
 - **Proces maken vanuit Adobe Reader (bètaversie)**  
   **Standaardinstelling**: Niet geconfigureerd  
-  Regel: [Blokkeren dat onderliggende processen kunnen worden gemaakt in Adobe Reader](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-adobe-reader-from-creating-child-processes)  
+  Regel: [Blokkeren dat onderliggende processen kunnen worden gemaakt in Adobe Reader](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-adobe-reader-from-creating-child-processes)  
 
   - **Niet geconfigureerd**  
   - **Inschakelen**: blokkeer onderliggende processen die met behulp van Adobe Reader worden gemaakt.  
@@ -812,7 +812,7 @@ Blokkeer de volgende acties voor Office-apps:
 
 - **Office-apps injecteren in andere processen (geen uitzonderingen)**  
   **Standaardinstelling**: Niet geconfigureerd  
-  Regel: [Voorkomen dat Office-toepassingen code in andere processen injecteren](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-injecting-code-into-other-processes)  
+  Regel: [Voorkomen dat Office-toepassingen code in andere processen injecteren](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-injecting-code-into-other-processes)  
 
   - **Niet geconfigureerd**  
   - **Blokkeren**: voorkom dat vanuit Office-apps kan worden geïnjecteerd in andere processen.  
@@ -820,7 +820,7 @@ Blokkeer de volgende acties voor Office-apps:
 
 - **Uitvoerbare inhoud maken met Office-apps/-macro's**  
   **Standaardinstelling**: Niet geconfigureerd  
-  Regel: [Voorkomen dat Office-toepassingen uitvoerbare inhoud maken](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-creating-executable-content)  
+  Regel: [Voorkomen dat Office-toepassingen uitvoerbare inhoud maken](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-creating-executable-content)  
 
   - **Niet geconfigureerd**  
   - **Blokkeren**: voorkom dat met Office-apps en -macro's uitvoerbare inhoud kan worden gemaakt.  
@@ -828,7 +828,7 @@ Blokkeer de volgende acties voor Office-apps:
 
 - **Onderliggende processen starten met Office-apps**  
   **Standaardinstelling**: Niet geconfigureerd  
-  Regel: [Voorkomen dat Office-toepassingen onderliggende processen maken](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-all-office-applications-from-creating-child-processes)  
+  Regel: [Voorkomen dat Office-toepassingen onderliggende processen maken](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-all-office-applications-from-creating-child-processes)  
 
   - **Niet geconfigureerd**  
   - **Blokkeren**: voorkom dat onderliggende processen kunnen worden gestart met Office-apps.  
@@ -836,7 +836,7 @@ Blokkeer de volgende acties voor Office-apps:
   
 - **Win32-importbewerkingen uit macrocode van Office**  
   **Standaardinstelling**: Niet geconfigureerd  
-  Regel: [Win32 API-aanroepen blokkeren vanuit Office-macro's](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-win32-api-calls-from-office-macros)  
+  Regel: [Win32 API-aanroepen blokkeren vanuit Office-macro's](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-win32-api-calls-from-office-macros)  
 
   - **Niet geconfigureerd**  
   - **Blokkeren**: Win32-importbewerkingen vanuit macrocode in Office blokkeren.  
@@ -844,7 +844,7 @@ Blokkeer de volgende acties voor Office-apps:
   
 - **Proces maken vanuit communicatieproducten van Office**  
   **Standaardinstelling**: Niet geconfigureerd  
-  Regel: [Voorkomen dat Office-communicatietoepassingen onderliggende processen maken](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-communication-application-from-creating-child-processes)  
+  Regel: [Voorkomen dat Office-communicatietoepassingen onderliggende processen maken](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-communication-application-from-creating-child-processes)  
 
   - **Niet geconfigureerd**  
   - **Inschakelen**: voorkom dat vanuit communicatie-apps voor Office onderliggende processen kunnen worden gemaakt.  
@@ -856,7 +856,7 @@ Blokkeer de volgende acties om scriptbedreigingen te voorkomen:
 
 - **Verborgen js-/vbs-/ps-/macrocode**  
   **Standaardinstelling**: Niet geconfigureerd  
-  Regel: [De uitvoering voorkomen van mogelijk betekenisloze scripts](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-execution-of-potentially-obfuscated-scripts)    
+  Regel: [De uitvoering voorkomen van mogelijk betekenisloze scripts](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-execution-of-potentially-obfuscated-scripts)    
 
   - **Niet geconfigureerd**  
   - **Blokkeren**: verborgen js-/vbs-/ps-/macrocode blokkeren.  
@@ -864,7 +864,7 @@ Blokkeer de volgende acties om scriptbedreigingen te voorkomen:
 
 - **Van internet gedownloade payloads uitvoeren met js-/vbs-bestanden (geen uitzonderingen)**  
   **Standaardinstelling**: Niet geconfigureerd  
-  Regel: [Voorkomen dat JavaScript of VBScript gedownloade uitvoerbare inhoud start](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-javascript-or-vbscript-from-launching-downloaded-executable-content)  
+  Regel: [Voorkomen dat JavaScript of VBScript gedownloade uitvoerbare inhoud start](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-javascript-or-vbscript-from-launching-downloaded-executable-content)  
 
   - **Niet geconfigureerd**  
   - **Blokkeren**: voorkom dat van internet gedownloade payloads kunnen worden uitgevoerd met js-/vbs-bestanden.  
@@ -872,7 +872,7 @@ Blokkeer de volgende acties om scriptbedreigingen te voorkomen:
 
 - **Het maken van processen met PSExec- en WMI-opdrachten**  
   **Standaardinstelling**: Niet geconfigureerd  
-  Regel: [Voorkomen dat processen worden gemaakt die afkomstig zijn van PSExec- en WMI-opdrachten](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-process-creations-originating-from-psexec-and-wmi-commands)  
+  Regel: [Voorkomen dat processen worden gemaakt die afkomstig zijn van PSExec- en WMI-opdrachten](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-process-creations-originating-from-psexec-and-wmi-commands)  
 
   - **Niet geconfigureerd**  
   - **Blokkeren**: het maken van processen voorkomen die afkomstig zijn van PSExec- en WMI-opdrachten.  
@@ -881,7 +881,7 @@ Blokkeer de volgende acties om scriptbedreigingen te voorkomen:
 
 - **Niet-vertrouwde en niet-ondertekende processen die worden uitgevoerd via USB**  
   **Standaardinstelling**: Niet geconfigureerd  
-  Regel: [Voorkomen dat niet-vertrouwde en niet-ondertekende processen kunnen worden uitgevoerd vanaf een USB](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-untrusted-and-unsigned-processes-that-run-from-usb)    
+  Regel: [Voorkomen dat niet-vertrouwde en niet-ondertekende processen kunnen worden uitgevoerd vanaf een USB](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-untrusted-and-unsigned-processes-that-run-from-usb)    
 
   - **Niet geconfigureerd**  
   - **Blokkeren**: voorkomen dat niet-vertrouwde en niet-ondertekende processen worden uitgevoerd vanaf een USB.  
@@ -889,7 +889,7 @@ Blokkeer de volgende acties om scriptbedreigingen te voorkomen:
   
 - **Uitvoerbare bestanden die niet voldoen aan een bepaalde gangbaarheid, ouderdom of aan criteria voor vertrouwde lijsten blokkeren**  
   **Standaardinstelling**: Niet geconfigureerd  
-  Regel: [Voorkomen dat uitvoerbare bestanden worden uitgevoerd tenzij deze voldoen aan een bepaalde gangbaarheid, ouderdom of criteria voor vertrouwde lijsten](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)    
+  Regel: [Voorkomen dat uitvoerbare bestanden worden uitgevoerd tenzij deze voldoen aan een bepaalde gangbaarheid, ouderdom of criteria voor vertrouwde lijsten](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)    
 
   - **Niet geconfigureerd**  
   - **Blokkeren**: voorkomen dat uitvoerbare bestanden worden uitgevoerd tenzij deze voldoen aan een bepaalde gangbaarheid, ouderdom of criteria voor vertrouwde lijsten.  
@@ -901,7 +901,7 @@ Blokkeer de volgende acties om e-mailbedreigingen te voorkomen:
 
 - **Uitvoering van uitvoerbare inhoud (exe-, dll-, ps-, js-, vbs-bestanden enzovoort) die is verwijderd uit e-mail (webmail/e-mailclient) (geen uitzonderingen)**  
   **Standaardinstelling**: Niet geconfigureerd  
-  Regel: [Uitvoerbare inhoud blokkeren van e-mailclient en webmail](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-content-from-email-client-and-webmail)  
+  Regel: [Uitvoerbare inhoud blokkeren van e-mailclient en webmail](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-content-from-email-client-and-webmail)  
 
   - **Niet geconfigureerd**  
   - **Blokkeren**: uitvoering voorkomen van uitvoerbare inhoud (exe-, dll-, ps-, js-, vbs-bestanden, enzovoort) die is verwijderd uit e-mail (webmail/e-mailclient).  
@@ -911,7 +911,7 @@ Blokkeer de volgende acties om e-mailbedreigingen te voorkomen:
 
 - **Geavanceerde ransomwarebeveiliging**  
   Standaard:  Niet geconfigureerd  
-  Regel: [Geavanceerde bescherming tegen ransomware gebruiken](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#use-advanced-protection-against-ransomware)  
+  Regel: [Geavanceerde bescherming tegen ransomware gebruiken](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#use-advanced-protection-against-ransomware)  
 
   - **Niet geconfigureerd**  
   - **Inschakelen**: agressieve ransomwarebeveiliging gebruiken.  
@@ -940,7 +940,7 @@ Blokkeer de volgende acties om e-mailbedreigingen te voorkomen:
 
 ### <a name="controlled-folder-access"></a>Gecontroleerde mappentoegang  
 
-Hiermee kunt u [waardevolle gegevens beter beveiligen](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/controlled-folders) tegen schadelijke apps en bedreigingen zoals ransomware.  
+Hiermee kunt u [waardevolle gegevens beter beveiligen](/windows/security/threat-protection/microsoft-defender-atp/controlled-folders) tegen schadelijke apps en bedreigingen zoals ransomware.  
 
 - **Mapbeveiliging**  
   **Standaardinstelling**: Niet geconfigureerd  
@@ -986,7 +986,7 @@ Uitgaande verbindingen naar IP-adressen of domeinen met een slechte reputatie bl
 - **XML uploaden**  
   **Standaardinstelling**: *Niet geconfigureerd*  
 
-  Als u beveiliging tegen misbruik wilt gebruiken om [apparaten tegen misbruik te beschermen](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection), maakt u een XML-bestand met de gewenste beperkingsinstellingen voor het systeem en de toepassing. Er zijn twee manieren om het XML-bestand te maken:  
+  Als u beveiliging tegen misbruik wilt gebruiken om [apparaten tegen misbruik te beschermen](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection), maakt u een XML-bestand met de gewenste beperkingsinstellingen voor het systeem en de toepassing. Er zijn twee manieren om het XML-bestand te maken:  
 
   - *PowerShell*: gebruik een of meer van de PowerShell-cmdlets *Get-ProcessMitigation*, *Set-ProcessMitigation* en *ConvertTo-ProcessMitigationPolicy*. Met de cdmlets worden beperkingsinstellingen geconfigureerd en wordt hiervan een XML-weergave geëxporteerd.  
 
@@ -1043,7 +1043,7 @@ Microsoft Defender Credential Guard beschermt tegen aanvallen waarbij referentie
 
 ## <a name="microsoft-defender-security-center"></a>Microsoft Defender-beveiligingscentrum  
 
-Het Microsoft Defender-beveiligingscentrum werkt als een afzonderlijke app of een afzonderlijk proces van de afzonderlijke functies. Deze geeft meldingen weer via het onderhoudscentrum. Het fungeert als een collector of één afzonderlijke plaats om de status te zien en een configuratie van de functies uit te voeren. Meer informatie in de documenten over [Windows Defender](https://docs.microsoft.com/windows/threat-protection/windows-defender-security-center/windows-defender-security-center).  
+Het Microsoft Defender-beveiligingscentrum werkt als een afzonderlijke app of een afzonderlijk proces van de afzonderlijke functies. Deze geeft meldingen weer via het onderhoudscentrum. Het fungeert als een collector of één afzonderlijke plaats om de status te zien en een configuratie van de functies uit te voeren. Meer informatie in de documenten over [Windows Defender](/windows/threat-protection/windows-defender-security-center/windows-defender-security-center).  
 
 ### <a name="microsoft-defender-security-center-app-and-notifications"></a>Microsoft Defender-beveiligingscentrum-app en meldingen  
 
@@ -1257,7 +1257,7 @@ Gebruik deze opties voor het configureren van de lokale beveiligingsinstellingen
 
 - **Apparaat ontkoppelen zonder aanmelding**  
   **Standaardinstelling**: Niet geconfigureerd  
-  LocalPoliciesSecurityOptions-CSP: [Devices_AllowUndockWithoutHavingToLogon](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-devices-allowundockwithouthavingtologon)  
+  LocalPoliciesSecurityOptions-CSP: [Devices_AllowUndockWithoutHavingToLogon](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-devices-allowundockwithouthavingtologon)  
 
   - **Blokkeren**: een gebruiker moet zich aanmelden bij het apparaat en toestemming krijgen om het apparaat los te koppelen.
   - **Niet geconfigureerd**: gebruikers kunnen op de fysieke knop voor het uitwerpen van een gedokt draagbaar apparaat drukken om het apparaat veilig te ontkoppelen.
@@ -1321,7 +1321,7 @@ Gebruik deze opties voor het configureren van de lokale beveiligingsinstellingen
 
 - **Gebruikersinformatie op vergrendelingsscherm**  
   **Standaardinstelling**: Niet geconfigureerd  
-  LocalPoliciesSecurityOptions-CSP: [InteractiveLogon_DisplayUserInformationWhenTheSessionIsLocked](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-displayuserinformationwhenthesessionislocked)  
+  LocalPoliciesSecurityOptions-CSP: [InteractiveLogon_DisplayUserInformationWhenTheSessionIsLocked](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-displayuserinformationwhenthesessionislocked)  
 
   Configureer welke gebruikersinformatie wordt weergegeven wanneer de sessie is vergrendeld. Als deze optie niet is geconfigureerd, worden de weergavenaam van de gebruiker, het domein en de gebruikersnaam weergegeven.  
 
@@ -1648,4 +1648,4 @@ Gebruik deze opties voor het configureren van de lokale beveiligingsinstellingen
 
 Het profiel is gemaakt, maar er gebeurt nog niets. Vervolgens moet u [het profiel toewijzen](../configuration/device-profile-assign.md) en [de status ervan controleren](../configuration/device-profile-monitor.md).  
 
-Instellingen voor eindpuntbescherming configureren op [macOS](endpoint-protection-macos.md)-apparaten.  
+Instellingen voor eindpuntbescherming configureren op [macOS](endpoint-protection-macos.md)-apparaten.

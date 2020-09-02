@@ -15,12 +15,12 @@ ms.reviewer: pfetty
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a264b9a3b8f0ba15debe7e7323c106f09fa12c6
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: b4523db7f2c7bb27542e7cb3e909ece7c93a996f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455239"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915412"
 ---
 # <a name="technology-decisions-for-enabling-byod-with-microsoft-enterprise-mobility--security-ems"></a>Beslissingen voor de technologie voor het inschakelen van BYOD met Microsoft Enterprise Mobility + Security (EMS)
 
@@ -33,7 +33,7 @@ In dit onderwerp wordt het eenvoudige voorbeeld behandeld waarin BYOD wordt inge
 * Uw e-mailaccounts worden gehost in Exchange Online
 
 ## <a name="common-reasons-to-manage-the-device-mdm"></a>Veelvoorkomende redenen om het apparaat te beheren (MDM)
-U kunt eenvoudig gebruikers ertoe bewegen hun apparaten te registreren bij apparaatbeheer door een beleid voor [voorwaardelijke toegang](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) voor Exchange Online te implementeren. Misschien wilt u persoonlijke apparaten om een van de volgende redenen beheren:
+U kunt eenvoudig gebruikers ertoe bewegen hun apparaten te registreren bij apparaatbeheer door een beleid voor [voorwaardelijke toegang](/azure/active-directory/active-directory-conditional-access-azure-portal) voor Exchange Online te implementeren. Misschien wilt u persoonlijke apparaten om een van de volgende redenen beheren:
 
 **Wi-Fi/VPN**: als uw gebruikers een zakelijk connectiviteitsprofiel nodig hebben om productief te zijn, kan dit naadloos worden geconfigureerd.
 

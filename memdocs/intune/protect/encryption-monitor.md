@@ -17,12 +17,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: c20d2ef806df46036d3a785bb5f8603d485d3880
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: d14ee52decf1b6ef9b2566b3233a385c1331bcc5
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86460464"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910975"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Apparaatversleuteling bewaken met Intune
 
@@ -59,7 +59,7 @@ In het deelvenster Versleutelingsrapport ziet u een lijst met de apparaten die u
     - Versie 1709 of hoger van *Business*, *Enterprise* of *Education*, of versie 1809 van *Pro*
     - Het apparaat moet beschikken over een TPM-chip
 
-    Zie de [BitLocker CSP (configuratieserviceprovider)](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) in de Windows-documentatie voor meer informatie.
+    Zie de [BitLocker CSP (configuratieserviceprovider)](/windows/client-management/mdm/bitlocker-csp) in de Windows-documentatie voor meer informatie.
 
   - **Niet gereed**: Het apparaat beschikt niet over alle versleutelingsmogelijkheden, maar kan nog wel worden versleuteld. Het Windows-apparaat kan bijvoorbeeld handmatig door een gebruiker worden versleuteld of door een groepsbeleid dat zodanig kan worden ingesteld dat versleuteling mogelijk is zonder een TPM.
   - **Niet van toepassing**: er is onvoldoende informatie beschikbaar om dit apparaat te classificeren.

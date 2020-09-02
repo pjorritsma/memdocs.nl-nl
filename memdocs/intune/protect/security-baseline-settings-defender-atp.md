@@ -18,12 +18,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 zone_pivot_groups: atp-baseline-versions
-ms.openlocfilehash: d29240dcbcbbcd5a4399dbfb3648c2a6df47764c
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 322e3be8e7421b0c622a8e656a3312791ed7feac
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663426"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913440"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="atp-april-2020"
@@ -55,12 +55,12 @@ De informatie in dit artikel is van toepassing op versie 3 van de Microsoft Defe
 
 De basislijn Microsoft Defender Advanced Threat Protection is beschikbaar als uw omgeving voldoet aan de vereisten voor het gebruik van [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites).
 
-Deze basislijn is geoptimaliseerd voor fysieke apparaten en wordt momenteel niet aanbevolen voor gebruik met virtuele machines (VM's) of VDI-eindpunten. Bepaalde basislijninstellingen kunnen invloed hebben op externe interactieve sessies in gevirtualiseerde omgevingen. Voor meer informatie ziet u [Increase compliance to the Microsoft Defender ATP security baseline](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) (Naleving met de Microsoft Defender ATP-beveiligingsbasislijn vergroten) in de Windows-documentatie.
+Deze basislijn is geoptimaliseerd voor fysieke apparaten en wordt momenteel niet aanbevolen voor gebruik met virtuele machines (VM's) of VDI-eindpunten. Bepaalde basislijninstellingen kunnen invloed hebben op externe interactieve sessies in gevirtualiseerde omgevingen. Voor meer informatie ziet u [Increase compliance to the Microsoft Defender ATP security baseline](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) (Naleving met de Microsoft Defender ATP-beveiligingsbasislijn vergroten) in de Windows-documentatie.
 
 
 ## <a name="application-guard"></a>Application Guard
 
-Zie [WindowsDefenderApplicationGuard CSP](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp) in de Windows-documentatie voor meer informatie.  
+Zie [WindowsDefenderApplicationGuard CSP](/windows/client-management/mdm/windowsdefenderapplicationguard-csp) in de Windows-documentatie voor meer informatie.  
 
 Wanneer u Microsoft Edge gebruikt, beschermt Microsoft Defender Application Guard uw omgeving tegen sites die niet worden vertrouwd door uw organisatie. Als gebruikers sites bezoeken die niet worden vermeld in uw geïsoleerde netwerkgrens, worden deze sites geopend in een virtuele browsersessie in Hyper-V. Vertrouwde sites worden gedefinieerd door een netwerkgrens.  
 
@@ -89,7 +89,7 @@ Wanneer u Microsoft Edge gebruikt, beschermt Microsoft Defender Application Guar
     - **Kopiëren en plakken tussen de pc en de browser toestaan**: er vindt geen blokkering van inhoud plaats.
 
 - **Windows-beleid voor netwerkisolatie**  
-  CSP: [CSP-beleid - NetworkIsolation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-networkisolation)
+  CSP: [CSP-beleid - NetworkIsolation](/windows/client-management/mdm/policy-csp-networkisolation)
 
   Geef een lijst met *netwerkdomeinen* op; dit zijn bedrijfsresources die worden gehost in de cloud die Application Guard als bedrijfssite behandelt
   - **Configureren** (*standaard*)
@@ -102,7 +102,7 @@ Wanneer u Microsoft Edge gebruikt, beschermt Microsoft Defender Application Guar
 
 ## <a name="bitlocker"></a>BitLocker
 
-Zie [BitLocker Group Policy settings](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings) (Instellingen voor BitLocker-groepsbeleid) in de Windows-documentatie voor meer informatie.
+Zie [BitLocker Group Policy settings](/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings) (Instellingen voor BitLocker-groepsbeleid) in de Windows-documentatie voor meer informatie.
 
 - **Vereisen dat opslagkaarten worden versleuteld (alleen mobiel)**  
   CSP: [RequireStorageCardEncryption](https://go.microsoft.com/fwlink/?linkid=872524)
@@ -290,7 +290,7 @@ Zie [BitLocker Group Policy settings](https://docs.microsoft.com/windows/securit
 ## <a name="dma-guard"></a>DMA Guard
 
 - **Opsomming van externe apparaten die niet compatibel zijn met DMA-beveiliging van kernel**  
-  CSP: [DmaGuard/DeviceEnumerationPolicy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
+  CSP: [DmaGuard/DeviceEnumerationPolicy](/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
 
   Dit beleid biedt extra beveiliging tegen externe DMA-compatibele apparaten. Het geeft u meer controle over de opsomming van externe DMA-compatibele apparaten die niet compatibel zijn met hertoewijzing/apparaatgeheugenisolatie en sandbox van DMA.
   
@@ -302,10 +302,10 @@ Zie [BitLocker Group Policy settings](https://docs.microsoft.com/windows/securit
 
 ## <a name="endpoint-detection-and-response"></a>Eindpuntdetectie en -respons
 
-Zie [WindowsAdvancedThreatProtection](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp) CSP in de Windows-documentatie voor meer informatie over de volgende instellingen.
+Zie [WindowsAdvancedThreatProtection](/windows/client-management/mdm/windowsadvancedthreatprotection-csp) CSP in de Windows-documentatie voor meer informatie over de volgende instellingen.
 
 - **Voorbeelddeling voor alle bestanden**  
-  CSP: [Configuration/SampleSharing](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
+  CSP: [Configuration/SampleSharing](/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
 
   Hiermee wordt de configuratieparameter van de voorbeelddeling van Microsoft Defender Advanced Threat Protection geretourneerd of ingesteld.  
   
@@ -313,7 +313,7 @@ Zie [WindowsAdvancedThreatProtection](https://docs.microsoft.com/windows/client-
   - **Niet geconfigureerd**
 
 - **Frequentie van telemetrierapporten versnellen**  
-  CSP: [Configuration/TelemetryReportingFrequency](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
+  CSP: [Configuration/TelemetryReportingFrequency](/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
 
   De frequentie van telemetrierapporten van Microsoft Defender Advanced Threat Protection versnellen.  
 
@@ -322,7 +322,7 @@ Zie [WindowsAdvancedThreatProtection](https://docs.microsoft.com/windows/client-
 
 ## <a name="firewall"></a>Firewall
 
-Raadpleeg [Firewall CSP](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) in de Windows-documentatie voor meer informatie.
+Raadpleeg [Firewall CSP](/windows/client-management/mdm/firewall-csp) in de Windows-documentatie voor meer informatie.
 
 - **Stateful File Transfer Protocol (FTP) blokkeren**  
   CSP: [MdmStore/Global/DisableStatefulFtp](https://go.microsoft.com/fwlink/?linkid=872536)  
@@ -590,7 +590,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   Standaard is **2:00 uur** ingesteld.
 
 - **Lage CPU-prioriteit voor geplande scans configureren**  
-  CSP: [Defender/EnableLowCPUPriority](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority)  
+  CSP: [Defender/EnableLowCPUPriority](/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority)  
 
   -**Ja** (*standaard*)
   - **Niet geconfigureerd**
@@ -630,7 +630,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   Configureer het aantal dagen dat items moeten worden bewaard in de quarantainemap voordat ze worden verwijderd. De standaardwaarde is nul (**0**), wat erin resulteert dat in quarantaine geplaatste bestanden nooit worden verwijderd.
 
 - **Defender-systeemscan plannen**  
-  CSP: [Defender/ScheduleScanDay](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)
+  CSP: [Defender/ScheduleScanDay](/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)
 
   Plan op welke dag Defender apparaten moet scannen. Standaard wordt de scan **door de gebruiker gedefinieerd**, maar er kan ook worden gekozen voor *elke dag*, een specifieke dag van de week of *Geen scan inplannen*.
 
@@ -754,7 +754,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   - **Niet-geconfigureerd**: de client maakt gebruik van de standaardinstellingen, waarbij het scannen van netwerkbestanden wordt uitgeschakeld.
   
 - **Defender: mogelijk ongewenste app-actie**  
-  CSP: [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
+  CSP: [Defender/PUAProtection](/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
 
   Geef het detectieniveau op voor mogelijk ongewenste toepassingen (PUA's). Defender waarschuwt gebruikers wanneer mogelijk ongewenste software wordt gedownload of op een apparaat wordt geïnstalleerd.
   - **Standaardwaarde apparaat**
@@ -762,7 +762,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   - **Controle**: Microsoft Defender detecteert mogelijk ongewenste toepassingen, maar neemt geen verdere acties. U kunt informatie nalezen over de toepassingen waartegen Windows Defender actie zou hebben ondernomen, door te zoeken naar gebeurtenissen die door Windows Defender in Logboeken zijn gemaakt.
 
 - **Cloudbeveiliging inschakelen**  
-  CSP: [AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
+  CSP: [AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 
   Standaard stuurt Defender op desktopapparaten met Windows 10 informatie naar Microsoft over eventuele gevonden problemen. Microsoft analyseert die gegevens om meer te weten te komen over problemen die u en andere klanten ondervinden, om verbeterde oplossingen te kunnen bieden.
 
@@ -879,7 +879,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
 
 ## <a name="windows-hello-for-business"></a>Windows Hello voor Bedrijven
 
-Raadpleeg [PassportForWork CSP](https://docs.microsoft.com/windows/client-management/mdm/passportforwork-csp) in de Windows-documentatie voor meer informatie.
+Raadpleeg [PassportForWork CSP](/windows/client-management/mdm/passportforwork-csp) in de Windows-documentatie voor meer informatie.
 
 - **Windows Hello voor Bedrijven blokkeren**  
 

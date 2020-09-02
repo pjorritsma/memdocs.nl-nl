@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc3ef945351529ce0db3e40108fef135414c4fab
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 6a37b94ee0e474e9e3da6aae359ba1b315212910
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093621"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911927"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Instellingen voor apparaten met Windows 10 en hoger om ze als kiosk uit te voeren via Intune
 
@@ -41,7 +41,7 @@ Zie voor meer informatie over de Windows-kioskfunctie in Intune [Configure kiosk
   1. Maak dit kioskprofiel om het apparaat in de kioskmodus uit te voeren.
   2. Maak het [apparaatbeperkingsprofiel](device-restrictions-windows-10.md#microsoft-edge-browser) en configureer specifieke functies en instellingen die zijn toegestaan in Microsoft Edge.
 
-- Controleer of bestanden, scripts en snelkoppelingen zich in het lokale systeem bevinden. Raadpleeg [Lay-out van het menu Start aanpassen en exporteren](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout) voor meer informatie, waaronder andere Windows-vereisten.
+- Controleer of bestanden, scripts en snelkoppelingen zich in het lokale systeem bevinden. Raadpleeg [Lay-out van het menu Start aanpassen en exporteren](/windows/configuration/customize-and-export-start-layout) voor meer informatie, waaronder andere Windows-vereisten.
 
 > [!IMPORTANT]
 > Zorg ervoor dat u dit kioskprofiel toewijst aan de dezelfde apparaten als uw [Microsoft Edge-profiel](device-restrictions-windows-10.md#microsoft-edge-browser).
@@ -54,17 +54,17 @@ Hiermee wordt slechts één app op het apparaat uitgevoerd.
 
 - **Aanmeldingstype gebruiker**: Selecteer het accounttype waarmee de app wordt uitgevoerd. Uw opties zijn:
 
-  - **Automatisch aanmelden (Windows 10 versie 1803 en hoger)** : Gebruik dit in kiosken in openbare omgevingen waarbij een gebruiker zich niet hoeft aan te melden, vergelijkbaar met een gastaccount. Deze instelling maakt gebruik van [AssignedAccess CSP](https://docs.microsoft.com/windows/client-management/mdm/assignedaccess-csp).
+  - **Automatisch aanmelden (Windows 10 versie 1803 en hoger)** : Gebruik dit in kiosken in openbare omgevingen waarbij een gebruiker zich niet hoeft aan te melden, vergelijkbaar met een gastaccount. Deze instelling maakt gebruik van [AssignedAccess CSP](/windows/client-management/mdm/assignedaccess-csp).
   - **Lokaal gebruikersaccount**: Voeg het lokale (op het apparaat) gebruikersaccount toe. Met het account dat u invoert, kunt u zich aanmelden bij de kiosk.
 
 - **Toepassingstype**: Selecteer het toepassingstype. Uw opties zijn:
 
   - **Microsoft Edge-browser toevoegen**: selecteer **Microsoft Edge-browser** en kies het **Microsoft Edge-kioskmodustype**:
 
-    - **Digitale/interactieve display**: hiermee wordt een volledig URL-scherm geopend, met alleen de inhoud op die website. [Digitale displays instellen](https://docs.microsoft.com/windows/configuration/setup-digital-signage) biedt meer informatie over deze functie.
+    - **Digitale/interactieve display**: hiermee wordt een volledig URL-scherm geopend, met alleen de inhoud op die website. [Digitale displays instellen](/windows/configuration/setup-digital-signage) biedt meer informatie over deze functie.
     - **Openbaar bladeren (InPrivate)** : Er wordt een beperkte versie met meerdere tabbladen van Microsoft Edge uitgevoerd. Gebruikers kunnen openbaar bladeren of de browsersessie beëindigen.
 
-    Zie [Microsoft Edge-kioskmodus implementeren](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types) voor meer informatie over deze opties.
+    Zie [Microsoft Edge-kioskmodus implementeren](/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types) voor meer informatie over deze opties.
 
     > [!NOTE]
     > Via deze instelling schakelt u de Microsoft Edge-browser in op het apparaat. Als u specifieke Microsoft Edge-instellingen wilt configureren, maakt u een apparaatbeperkingsprofiel (**Apparaatconfiguratie** > **Profielen** > **Profiel maken** > **Windows 10** voor platform > **Apparaatbeperkingen** > **Microsoft Edge-browser**). De beschikbare instellingen worden in de [Microsoft Edge-browser](device-restrictions-windows-10.md#microsoft-edge-browser) vermeld en beschreven.
@@ -96,7 +96,7 @@ Hiermee wordt slechts één app op het apparaat uitgevoerd.
       `office.com`
 
     > [!NOTE]
-    > Voor Windows 10-kiosken waarvoor automatische aanmelding is ingeschakeld met Microsoft Kiosk Browser moet u een offline licentie gebruiken uit de Microsoft Store voor bedrijven. Deze vereiste is van toepassing omdat bij de automatische aanmelding gebruik wordt gemaakt van een lokaal gebruikersaccount zonder AD-referenties (Azure Active Directory). Online licenties kunnen daarom niet worden beoordeeld. Zie [Offline apps distribueren](https://docs.microsoft.com/microsoft-store/distribute-offline-apps) voor meer informatie.
+    > Voor Windows 10-kiosken waarvoor automatische aanmelding is ingeschakeld met Microsoft Kiosk Browser moet u een offline licentie gebruiken uit de Microsoft Store voor bedrijven. Deze vereiste is van toepassing omdat bij de automatische aanmelding gebruik wordt gemaakt van een lokaal gebruikersaccount zonder AD-referenties (Azure Active Directory). Online licenties kunnen daarom niet worden beoordeeld. Zie [Offline apps distribueren](/microsoft-store/distribute-offline-apps) voor meer informatie.
 
   - **Store-app toevoegen**: selecteer **Een Store-app toevoegen** en kies een app uit de lijst.
 
@@ -112,7 +112,7 @@ Hiermee wordt slechts één app op het apparaat uitgevoerd.
 
   Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
 
-  [ApplicationManagement/ScheduleForceRestartForUpdateFailures CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures)
+  [ApplicationManagement/ScheduleForceRestartForUpdateFailures CSP](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures)
 
 ## <a name="multi-app-kiosk"></a>Kiosk voor meerdere apps
 
@@ -126,10 +126,10 @@ Apps in deze modus zijn beschikbaar in het startmenu. Deze apps zijn de enige ap
 
 - **Aanmeldingstype gebruiker**: selecteer het accounttype waarmee uw apps worden uitgevoerd. Uw opties zijn:
 
-  - **Automatisch aanmelden (Windows 10 versie 1803 en hoger)** : Gebruik dit in kiosken in openbare omgevingen waarbij een gebruiker zich niet hoeft aan te melden, vergelijkbaar met een gastaccount. Deze instelling maakt gebruik van [AssignedAccess CSP](https://docs.microsoft.com/windows/client-management/mdm/assignedaccess-csp).
+  - **Automatisch aanmelden (Windows 10 versie 1803 en hoger)** : Gebruik dit in kiosken in openbare omgevingen waarbij een gebruiker zich niet hoeft aan te melden, vergelijkbaar met een gastaccount. Deze instelling maakt gebruik van [AssignedAccess CSP](/windows/client-management/mdm/assignedaccess-csp).
   - **Lokaal gebruikersaccount**: **Voeg** het lokale (op het apparaat) gebruikersaccount toe. Met het account dat u invoert, kunt u zich aanmelden bij de kiosk.
   - **Azure AD-gebruiker of -groep (Windows 10, versie 1803 of hoger)** : Selecteer **Toevoegen** en kies Azure AD-gebruikers of -groepen in de lijst. U kunt meerdere gebruikers en groepen selecteren. Kies **Selecteren** om uw wijzigingen op te slaan.
-  - **HoloLens-bezoeker**: Het bezoekersaccount is een gastaccount waarvoor geen gebruikersreferenties zijn of verificatie is vereist, zoals wordt beschreven in [Gedeelde pc-modusconcepten](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
+  - **HoloLens-bezoeker**: Het bezoekersaccount is een gastaccount waarvoor geen gebruikersreferenties zijn of verificatie is vereist, zoals wordt beschreven in [Gedeelde pc-modusconcepten](/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
 
 - **Browser en apps**: Voeg de apps toe die u op het apparaat in kioskmodus wilt uitvoeren. U kunt verschillende apps toevoegen.
 
@@ -142,7 +142,7 @@ Apps in deze modus zijn beschikbaar in het startmenu. Deze apps zijn de enige ap
       - **Normale modus (volledige versie van Microsoft Edge)** : Er wordt een volledige versies van Microsoft Edge uitgevoerd met alle browserfuncties. Gebruikersgegevens en -statussen worden tussen sessies opgeslagen.
       - **Openbaar bladeren (InPrivate)** : hiermee wordt een versie met meerdere tabbladen van Microsoft Edge InPrivate uitgevoerd met een op maat gemaakte toepassing voor kiosken die in volledige schermweergave worden uitgevoerd.
 
-      Zie [Microsoft Edge-kioskmodus implementeren](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types) voor meer informatie over deze opties.
+      Zie [Microsoft Edge-kioskmodus implementeren](/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types) voor meer informatie over deze opties.
 
       > [!NOTE]
       > Via deze instelling schakelt u de Microsoft Edge-browser in op het apparaat. Als u specifieke Microsoft Edge-instellingen wilt configureren, maakt u een apparaatbeperkingsprofiel (**Apparaatconfiguratie** > **Profielen** > **Profiel maken** > > **Windows 10** voor platform > **Apparaatbeperkingen** >  **Microsoft Edge-browser**). De beschikbare instellingen worden in de [Microsoft Edge-browser](device-restrictions-windows-10.md#microsoft-edge-browser) vermeld en beschreven.
@@ -166,7 +166,7 @@ Apps in deze modus zijn beschikbaar in het startmenu. Deze apps zijn de enige ap
         Als u alleen bepaalde websites wilt toestaan, moet u een CSV-bestand uploaden dat een lijst met toegestane websites bevat. Als u geen CSV-bestand toevoegt, zijn alle websites toegestaan.
 
       > [!NOTE]
-      > Voor Windows 10-kiosken waarvoor automatische aanmelding is ingeschakeld met Microsoft Kiosk Browser moet u een offline licentie gebruiken uit de Microsoft Store voor Bedrijven. Deze vereiste is van toepassing omdat bij de automatische aanmelding gebruik wordt gemaakt van een lokaal gebruikersaccount zonder AD-referenties (Azure Active Directory). Online licenties kunnen daarom niet worden beoordeeld. Zie [Offline apps distribueren](https://docs.microsoft.com/microsoft-store/distribute-offline-apps) voor meer informatie.
+      > Voor Windows 10-kiosken waarvoor automatische aanmelding is ingeschakeld met Microsoft Kiosk Browser moet u een offline licentie gebruiken uit de Microsoft Store voor Bedrijven. Deze vereiste is van toepassing omdat bij de automatische aanmelding gebruik wordt gemaakt van een lokaal gebruikersaccount zonder AD-referenties (Azure Active Directory). Online licenties kunnen daarom niet worden beoordeeld. Zie [Offline apps distribueren](/microsoft-store/distribute-offline-apps) voor meer informatie.
 
   - **Toepassingen**
 
@@ -176,12 +176,12 @@ Apps in deze modus zijn beschikbaar in het startmenu. Deze apps zijn de enige ap
 
       - **Toepassingsnaam**: Vereist. Geef een naam op voor de toepassing.
       - **Lokaal pad naar het uitvoerbare bestand van de app**: Vereist. Voer het pad naar het uitvoerbare bestand in, zoals `C:\Program Files (x86)\Microsoft VS Code\Code.exe` of `C:\Program Files (x86)\Google\Chrome\Application\chrome.exe`.
-      - **Model-id van toepassingsgebruiker (AUMID) voor de Win32-app**: Voer de AUMID van de Win32-app in. Deze instelling bepaalt de indeling van de tegel na het opstarten op het bureaublad. Raadpleeg [Get-StartApps](https://docs.microsoft.com/powershell/module/startlayout/get-startapps?view=win10-ps) om deze id op te halen.
+      - **Model-id van toepassingsgebruiker (AUMID) voor de Win32-app**: Voer de AUMID van de Win32-app in. Deze instelling bepaalt de indeling van de tegel na het opstarten op het bureaublad. Raadpleeg [Get-StartApps](/powershell/module/startlayout/get-startapps?view=win10-ps) om deze id op te halen.
 
     - **Toevoegen via AUMID**: Gebruik deze optie om Postvak IN-apps voor Windows, zoals Kladblok of Calculator toe te voegen. Voer de volgende eigenschappen in:
 
       - **Toepassingsnaam**: Vereist. Geef een naam op voor de toepassing.
-      - **Model-id van toepassingsgebruiker (AUMID)** : Vereist. Voer de AUMID van de Windows-app in. Zie [De model-id van toepassingsgebruiker van een geïnstalleerde app vinden](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) als u wilt weten hoe u aan deze id komt.
+      - **Model-id van toepassingsgebruiker (AUMID)** : Vereist. Voer de AUMID van de Windows-app in. Zie [De model-id van toepassingsgebruiker van een geïnstalleerde app vinden](/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) als u wilt weten hoe u aan deze id komt.
 
     - **AutoLaunch**: Optioneel. Nadat u uw apps en browser hebt toegevoegd, selecteert u één app of browser die automatisch moet worden geopend wanneer de gebruiker zich aanmeldt. Er kan slechts één app of browser automatisch worden gestart.
     - **Tegelgrootte**: Vereist. Nadat u uw apps hebt toegevoegd, selecteert u een kleine, middelgrote, brede of grote app-tegelgrootte.
@@ -191,7 +191,7 @@ Apps in deze modus zijn beschikbaar in het startmenu. Deze apps zijn de enige ap
   > [!TIP]
   > Nadat u alle apps hebt toegevoegd, kunt u de volgorde ervan wijzigen door er op te klikken en de apps naar een andere positie op de lijst te slepen.  
 
-- **Alternatieve indeling van het menu Start gebruiken**: Selecteer **Ja** om een XML-bestand op te geven waarin wordt beschreven hoe de apps worden weergegeven in het menu Start, zoals de volgorde van de apps. Gebruik deze optie als u meer aanpassingsmogelijkheden wilt gebruiken in het startmenu. [Indeling Start aanpassen en exporteren](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout) biedt een aantal richtlijnen en een XML-voorbeeld.
+- **Alternatieve indeling van het menu Start gebruiken**: Selecteer **Ja** om een XML-bestand op te geven waarin wordt beschreven hoe de apps worden weergegeven in het menu Start, zoals de volgorde van de apps. Gebruik deze optie als u meer aanpassingsmogelijkheden wilt gebruiken in het startmenu. [Indeling Start aanpassen en exporteren](/windows/configuration/customize-and-export-start-layout) biedt een aantal richtlijnen en een XML-voorbeeld.
 
 - **Windows-taakbalk**: Kies of u wilt dat de taakbalk wordt **weergegeven** of **verborgen**. Standaard wordt de taakbalk niet weergegeven. Pictogrammen, zoals het Wi-Fi-pictogram, worden weergegeven, maar de instellingen kunnen niet worden gewijzigd door eindgebruikers.
 
@@ -207,7 +207,7 @@ Apps in deze modus zijn beschikbaar in het startmenu. Deze apps zijn de enige ap
 
   Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
 
-  [ApplicationManagement/ScheduleForceRestartForUpdateFailures CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures)
+  [ApplicationManagement/ScheduleForceRestartForUpdateFailures CSP](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures)
 
 ## <a name="next-steps"></a>Volgende stappen
 
@@ -215,4 +215,4 @@ Apps in deze modus zijn beschikbaar in het startmenu. Deze apps zijn de enige ap
 
 U kunt ook kiosk-profielen maken voor apparaten met [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#device-experience) en [Windows Holographic for Business](kiosk-settings-holographic.md).
 
-Zie ook [een kiosk met één app instellen](https://docs.microsoft.com/windows/configuration/kiosk-single-app) of [een kiosk met meerdere apps instellen](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) in de Windows-richtlijnen.
+Zie ook [een kiosk met één app instellen](/windows/configuration/kiosk-single-app) of [een kiosk met meerdere apps instellen](/windows/configuration/lock-down-windows-10-to-specific-apps) in de Windows-richtlijnen.

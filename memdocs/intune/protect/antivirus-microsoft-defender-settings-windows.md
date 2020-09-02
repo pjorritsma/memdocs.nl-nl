@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 92fa75794022123fd9456c40a50780a50f604662
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: ff5c8208cb1ee9357c501a3c457bc346879b241d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819776"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906698"
 ---
 # <a name="settings-for-windows-10-microsoft-defender-antivirus-policy-in-microsoft-intune"></a>Instellingen voor het Microsoft Defender Antivirus-beleid voor Windows 10 in Microsoft Intune
 
@@ -36,7 +36,7 @@ Deze instellingen zijn beschikbaar in de volgende profielen:
 **Instellingen**:
 
 - **Cloudbeveiliging inschakelen**  
-  CSP: [AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
+  CSP: [AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 
   Standaard stuurt Defender op desktopapparaten met Windows 10 informatie naar Microsoft over eventuele gevonden problemen. Microsoft analyseert die gegevens om meer te weten te komen over problemen die u en andere klanten ondervinden, om verbeterde oplossingen te kunnen bieden.
 
@@ -45,7 +45,7 @@ Deze instellingen zijn beschikbaar in de volgende profielen:
   - **Ja**: cloudbeveiliging is ingeschakeld.  Apparaatgebruikers kunnen deze instelling niet wijzigen.
 
 - **Cloudbeveiligingsniveau**  
-  CSP: [CloudBlockLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
+  CSP: [CloudBlockLevel](/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
 
   Configureer hoe strikt Defender Antivirus te werk gaat bij het blokkeren en scannen van verdachte bestanden.
   - **Niet geconfigureerd** (*standaard*): standaardblokkeringsniveau van Defender.
@@ -54,7 +54,7 @@ Deze instellingen zijn beschikbaar in de volgende profielen:
   - **Zero tolerance**: alle onbekende uitvoerbare bestanden worden geblokkeerd.
 
 - **Verlengde time-out van Windows Defender-cloud in seconden**  
-  CSP: [CloudExtendedTimeout](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout)
+  CSP: [CloudExtendedTimeout](/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout)
 
   Defender Antivirus blokkeert automatisch verdachte bestanden gedurende tien seconden, terwijl het de bestanden in de cloud scant om er zeker van te zijn dat deze veilig zijn. U kunt maximaal 50 seconden extra toevoegen aan deze time-out.
 
@@ -70,17 +70,17 @@ Deze instellingen zijn beschikbaar in de volgende profielen:
 Voor elke instelling in deze groep kunt u de instelling uitvouwen, **Toevoegen** selecteren en vervolgens een waarde voor de uitsluiting opgeven.
 
 - **Defender-processen die moeten worden uitgesloten**  
-  CSP: [ExcludedProcesses](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
+  CSP: [ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
 
   Geef een lijst op met bestanden die door processen worden geopend en die u wilt negeren tijdens een scan. Het proces zelf wordt niet uitgesloten van de scan.
 
 - **Bestandsextensies die moeten worden uitgesloten van scans en de realtime-beveiliging**  
-  CSP: [ExcludedExtensions](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
+  CSP: [ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
 
   Geef een lijst op met bestandsextensies die moeten worden genegeerd tijdens een scan.
 
 - **Defender-bestanden en -mappen die moeten worden uitgesloten**  
-  CSP: [ExcludedPaths](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
+  CSP: [ExcludedPaths](/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
 
   Geef een lijst op met bestanden en mappaden die tijdens een scan moeten worden genegeerd.
 
@@ -93,7 +93,7 @@ Deze instellingen zijn beschikbaar in de volgende profielen:
 **Instellingen**:
 
 - **Realtime-beveiliging inschakelen**  
-  CSP: [AllowRealtimeMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
+  CSP: [AllowRealtimeMonitoring](/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
   Vereis dat Defender op Windows 10-desktopapparaten gebruikmaakt van de realtime-bewakingsfunctionaliteit.
   - **Niet geconfigureerd** (*standaard*): de instelling wordt teruggezet op de systeemstandaard.
@@ -127,7 +127,7 @@ Deze instellingen zijn beschikbaar in de volgende profielen:
   - **Ja**: het gebruik van realtime-gedragscontrole wordt afgedwongen. Apparaatgebruikers kunnen deze instelling niet wijzigen.
 
 - **Netwerkbeveiliging inschakelen**  
-  CSP: [EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
+  CSP: [EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
 
   Bescherm apparaatgebruikers die gebruikmaken van een app tegen het openen van phishing-praktijken, sites die schadelijke software hosten en schadelijke inhoud op internet. Beveiliging omvat het voorkomen dat browsers van derden verbinding maken met gevaarlijke websites.
 
@@ -321,14 +321,14 @@ Deze instellingen zijn beschikbaar in de volgende profielen:
   Geef een interval van nul tot 24 (in uren) op dat wordt gebruikt om op handtekeningen te controleren. De waarde nul betekent dat er niet wordt gecontroleerd op nieuwe handtekeningen. Met de waarde 2 wordt elke twee uur gecontroleerd, enzovoort.
 
 - **De bestandsshares voor het downloaden van definitie-updates definiëren**  
-  CSP: [SignatureUpdateFallbackOrder](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefallbackorder)
+  CSP: [SignatureUpdateFallbackOrder](/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefallbackorder)
 
   Beheer locaties, zoals een UNC-bestandsshare, als bronlocatie voor het downloaden om definitie-updates op te halen. Zodra de definitie-updates van een opgegeven bron zijn gedownload, wordt er geen contact meer gemaakt met de resterende bronnen in de lijst.
 
   U kunt afzonderlijke locaties **toevoegen** of een lijst met locaties als een CSV-bestand **importeren**.
 
 - **De volgorde definiëren van de bronnen voor het downloaden van definitie-updates**  
-  CSP: [SignatureUpdateFileSharesSources](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefilesharessources)
+  CSP: [SignatureUpdateFileSharesSources](/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefilesharessources)
 
   Geef op in welke volgorde contact moet worden opgenomen met de bronlocaties die u hebt opgegeven om definitie-updates op te halen. Nadat de definitie-updates van een opgegeven bron zijn gedownload, wordt er geen contact meer gemaakt met de resterende bronnen in de lijst.
 
@@ -346,4 +346,3 @@ Deze instellingen zijn beschikbaar in de volgende profielen:
   - **Niet geconfigureerd** (*standaard*): de instelling wordt teruggezet op de standaardinstelling van de client, waarbij interface en meldingen zijn toegestaan.
   - **Nee**: de gebruikersinterface (UI) van Defender is niet toegankelijk en meldingen worden onderdrukt.
   - **Ja**
-

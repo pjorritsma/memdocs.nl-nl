@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 835105b12da44f34f23c3d1162ced27a7eca6868
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 233ef8ce9c4ebd8ce5efe91715d653feaba2e88a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252534"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909139"
 ---
 # <a name="use-windows-hello-for-business-on-windows-10-devices-with-microsoft-intune"></a>Gebruik Windows Hello voor Bedrijven op Windows 10-apparaten met Microsoft Intune
 
@@ -56,11 +56,11 @@ In dit artikel wordt beschreven hoe u een apparaatconfiguratieprofiel maakt. Zie
 
    - **Windows Hello voor Bedrijven configureren**: Kies hoe u Windows Hello voor Bedrijven wilt configureren:
 
-     - **Niet geconfigureerd** (standaard): [Richt Windows Hello voor Bedrijven in](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning) op het apparaat. Bij het toewijzen van profielen voor identiteitsbescherming voor alleen gebruikers wordt de apparaatcontext standaard ingesteld op **Niet geconfigureerd**.
+     - **Niet geconfigureerd** (standaard): [Richt Windows Hello voor Bedrijven in](/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning) op het apparaat. Bij het toewijzen van profielen voor identiteitsbescherming voor alleen gebruikers wordt de apparaatcontext standaard ingesteld op **Niet geconfigureerd**.
 
      - **Uitgeschakeld**: Als u Windows Hello voor Bedrijven niet wilt gebruiken, selecteert u deze optie. Deze optie schakelt Windows Hello voor Bedrijven voor alle gebruikers uit.
 
-     - **Ingeschakeld**: Selecteer deze optie voor het [inrichten](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning) en configureren van Windows Hello voor Bedrijven-instellingen in Intune. Voer de instellingen in die u wilt configureren. Zie [Instellingen voor Windows 10-apparaten om Windows Hello voor Bedrijven in te schakelen](identity-protection-windows-settings.md) voor een volledig overzicht van alle instellingen en wat ze doen.
+     - **Ingeschakeld**: Selecteer deze optie voor het [inrichten](/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning) en configureren van Windows Hello voor Bedrijven-instellingen in Intune. Voer de instellingen in die u wilt configureren. Zie [Instellingen voor Windows 10-apparaten om Windows Hello voor Bedrijven in te schakelen](identity-protection-windows-settings.md) voor een volledig overzicht van alle instellingen en wat ze doen.
 
    - **Beveiligingssleutels voor aanmelding gebruiken**: schakel de Windows Hello-beveiligingssleutel in als aanmeldingsreferenties voor alle pc's in de tenant.
 

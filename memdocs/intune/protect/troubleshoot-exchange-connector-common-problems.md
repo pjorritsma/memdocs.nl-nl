@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 57f8b8193fd2f4e871f744743b768ec6248ae0b9
-ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
+ms.openlocfilehash: b1ed3cd24c05586bd5dc9d9a2443a33ffcdc2a48
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85972127"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914800"
 ---
 # <a name="resolve-common-problems-with-the-intune-exchange-connector"></a>Algemene problemen met Intune Exchange Connector oplossen
  
@@ -56,7 +56,7 @@ Lees de volgende secties door om problemen met e-mailmeldingen op te lossen.
 
 ### <a name="check-the-notification-account-that-retrieves-autodiscover-settings"></a>Controleer het meldingsaccount waarop u de instellingen voor Automatisch opsporen ontvangt
 
-1. Zorg ervoor dat de Autodiscover-service en EWS zijn geconfigureerd op de Exchange Client Access-services. Zie [Client Access-services](https://docs.microsoft.com/Exchange/architecture/client-access/client-access) en de [service voor Automatisch opsporen in de Exchange-server](https://docs.microsoft.com/Exchange/architecture/client-access/autodiscover?view=exchserver-2019) voor meer informatie.
+1. Zorg ervoor dat de Autodiscover-service en EWS zijn geconfigureerd op de Exchange Client Access-services. Zie [Client Access-services](/Exchange/architecture/client-access/client-access) en de [service voor Automatisch opsporen in de Exchange-server](/Exchange/architecture/client-access/autodiscover?view=exchserver-2019) voor meer informatie.
 
 2. Controleer of uw meldingsaccount aan de volgende vereisten voldoet:
 
@@ -71,14 +71,14 @@ Lees de volgende secties door om problemen met e-mailmeldingen op te lossen.
    2. Voer *Autodiscover.SMTPdomain.com* in. De uitvoer moet er ongeveer uitzien zoals in de volgende afbeelding: ![Nslookup-resultaten](./media/troubleshoot-exchange-connector-common-problems/nslookup-results.png
       )
 
-   U kunt ook de service voor Automatisch opsporen testen vanaf internet, op https://testconnectivity.microsoft.com. Of test de service vanaf een lokaal domein met behulp van het hulpprogramma Microsoft Connectivity Analyzer. Zie [Het hulpprogramma Microsoft Connectivity Analyzer](https://docs.microsoft.com/previous-versions/office/exchange-remote-connectivity/jj851141(v=exchg.80)) voor meer informatie.
+   U kunt ook de service voor Automatisch opsporen testen vanaf internet, op https://testconnectivity.microsoft.com. Of test de service vanaf een lokaal domein met behulp van het hulpprogramma Microsoft Connectivity Analyzer. Zie [Het hulpprogramma Microsoft Connectivity Analyzer](/previous-versions/office/exchange-remote-connectivity/jj851141(v=exchg.80)) voor meer informatie.
 
 
 ### <a name="check-autodiscover"></a>Automatisch opsporen controleren
 
 Als Automatisch opsporen niet kan worden uitgevoerd, probeert u de volgende stappen:
 
-1. [Configureer een geldige DNS-record voor Automatisch opsporen](https://docs.microsoft.com/previous-versions/exchange-server/exchange-150/mt473798(v=exchg.150)).
+1. [Configureer een geldige DNS-record voor Automatisch opsporen](/previous-versions/exchange-server/exchange-150/mt473798(v=exchg.150)).
 
 2. Leg de EWS-URL in code vast in het configuratiebestand van de Intune Exchange-connector:
 

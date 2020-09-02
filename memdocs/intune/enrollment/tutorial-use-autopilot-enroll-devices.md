@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 619974819575936912b6a5c386116bdf26448252
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 45ec9e0353feffdc6beb068d5b99426a734d7096
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546840"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915429"
 ---
 # <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>Zelfstudie: Autopilot gebruiken om Windows-apparaten in Intune in te schrijven
 
@@ -40,12 +40,12 @@ In deze zelfstudie leert u het volgende:
 
 Als u niet over een Intune-abonnement beschikt, kunt u [zich registreren voor een gratis proefaccount](../fundamentals/free-trial-sign-up.md).
 
-Zie [Overzicht van Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot) voor een overzicht van voordelen, scenario's en vereisten van Autopilot.
+Zie [Overzicht van Windows Autopilot](/windows/deployment/windows-autopilot/windows-10-autopilot) voor een overzicht van voordelen, scenario's en vereisten van Autopilot.
 
 
 ## <a name="prerequisites"></a>Vereisten
 - [Automatische inschrijving bij Windows instellen](quickstart-setup-auto-enrollment.md)
-- [Azure Active Directory Premium-abonnement](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
+- [Azure Active Directory Premium-abonnement](/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
 
 
 ## <a name="add-devices"></a>Apparaten toevoegen
@@ -128,5 +128,3 @@ Er bestaat aanvullende informatie over andere opties die voor Windows Autopilot 
 
 > [!div class="nextstepaction"]
 > [Diepgaand artikel over Autopilot-inschrijving](../../autopilot/enrollment-autopilot.md)
-
-

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1bed9fe2ce2f674b5202deecce512802520f6a1d
-ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
+ms.openlocfilehash: 19a5123b3c6415e67591027ccf87c5d5631d1157
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87758173"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907259"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>App-configuratiebeleidsregels toevoegen voor beheerde Android Enterprise-apparaten
 
@@ -155,7 +155,7 @@ Een app maakt bijvoorbeeld gebruik van de microfoon van het apparaat. De gebruik
 ## <a name="additional-information"></a>Aanvullende informatie
 
 - [Een beheerde Google Play-app toewijzen aan Android Enterprise-apparaten](apps-add-android-for-work.md#assigning-a-managed-google-play-app-to-android-enterprise-work-profile-and-corporate-owned-work-profile-devices)
-- [Configuratie-instellingen voor de Outlook-app voor iOS/iPadOS en Android implementeren](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
+- [Configuratie-instellingen voor de Outlook-app voor iOS/iPadOS en Android implementeren](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
 
 ## <a name="next-steps"></a>Volgende stappen
 

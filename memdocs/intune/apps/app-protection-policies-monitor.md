@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 10c715bcff63e6ec5a9ec9002926f6ee6608360e
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: 3a64d3f58541194ed4c1a63ac57cddec70ff6873
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455069"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913474"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>App-beveiligingsbeleid controleren
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -92,7 +92,7 @@ U kunt zoeken naar een afzonderlijke gebruiker en de nalevingsstatus voor deze g
 - **Laatste synchronisatie**: Wanneer de app voor het laatst is gesynchroniseerd met Intune.
 
 >[!NOTE]
-> De kolom **Laatste synchronisatie** bevat in het rapport Gebruikersstatus op de console dezelfde waarde als in het [exporteerbare CSV-rapport](https://docs.microsoft.com/intune/app-protection-policies-monitor#export-app-protection-activities) van het app-beveiligingsbeleid. Het verschil is een kleine vertraging in synchronisatie tussen de waarde in de twee rapporten.
+> De kolom **Laatste synchronisatie** bevat in het rapport Gebruikersstatus op de console dezelfde waarde als in het [exporteerbare CSV-rapport](/intune/app-protection-policies-monitor#export-app-protection-activities) van het app-beveiligingsbeleid. Het verschil is een kleine vertraging in synchronisatie tussen de waarde in de twee rapporten.
 >
 > De tijd waarnaar wordt verwezen in Laatste synchronisatie, is het moment waarop het app-exemplaar voor het laatst is gezien in Intune. Wanneer een gebruiker een app start, communiceert de app mogelijk op deze starttijd met de Intune-app-beveiligingsservice, afhankelijk van de datum waarop deze voor het laatst is ingecheckt. Zie [interval voor nieuwe pogingen voor inchecken van app-beveiligingsbeleid](app-protection-policy-delivery.md). Als een eindgebruiker deze specifieke app niet heeft gebruikt gedurende het laatste interval voor inchecken (meestal 30 minuten, bij actief gebruik) en de app vervolgens start, gebeurt het volgende:
 >

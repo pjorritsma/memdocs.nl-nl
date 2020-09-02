@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e7858253772b554858209f3524f20bccf08839bd
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: bd15cc44ac3e6d17c36e3b623135b94ddcfcdbc3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217450"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912964"
 ---
 # <a name="troubleshoot-mobile-application-management"></a>Problemen met Mobile Application Management oplossen
 
@@ -59,7 +59,7 @@ Algemene problemen voor eindgebruikers worden onderverdeeld in de volgende categ
 Platform | Scenario | Uitleg |
 ---| --- | --- |
 iOS | De eindgebruiker kan de iOS-/iPadOS-extensie voor delen gebruiken om werk- of schoolgegevens te openen in niet-beheerde apps, zelfs wanneer het beleid voor gegevensoverdracht is ingesteld op **Alleen voor beheerde apps** of **Geen apps.** Ontstaat hierdoor geen gegevenslek? | De iOS-/iPadOS-extensie voor delen kan alleen met app-beveiligingsbeleid worden beheerd indien ook het apparaat wordt beheerd. Daarom worden **'bedrijfs'gegevens door Intune versleuteld voordat ze buiten de app worden gedeeld**. U kunt dit controleren door een 'zakelijk' bestand te openen buiten de beheerde app. Het bestand moet zijn versleuteld en kan niet worden geopend buiten de beheerde app.
-iOS | Waarom wordt de eindgebruiker **gevraagd de Microsoft Authenticator-app te installeren**? | Dit is nodig wanneer voorwaardelijke toegang op basis van apps is toegepast, zie [Goedgekeurde client-apps vereisen](https://docs.microsoft.com/azure/active-directory/conditional-access/app-based-conditional-access).
+iOS | Waarom wordt de eindgebruiker **gevraagd de Microsoft Authenticator-app te installeren**? | Dit is nodig wanneer voorwaardelijke toegang op basis van apps is toegepast, zie [Goedgekeurde client-apps vereisen](/azure/active-directory/conditional-access/app-based-conditional-access).
 Android | Waarom moet de eindgebruiker **de bedrijfsportal-app installeren**, zelfs als ik MAM-app-beveiliging zonder apparaatregistratie gebruik?  | Veel functies voor app-beveiliging in Android zijn ingebouwd in de bedrijfsportal-app. **De bedrijfsportal-app is altijd vereist, maar dat geldt niet voor apparaatregistratie**. Voor app-beveiliging zonder registratie hoeft de eindgebruiker alleen de bedrijfsportal-app op het apparaat te hebben geïnstalleerd.
 iOS/Android | Beleid voor app-beveiliging wordt niet toegepast op concept-e-mail in de Outlook-app | Aangezien Outlook ondersteuning biedt voor zowel zakelijke als persoonlijke accounts, wordt MAM niet afgedwongen in concept-e-mail.
 iOS/Android | Beleid voor app-beveiliging wordt niet toegepast op nieuwe documenten in WXP (Word, Excel, Power Point) | Aangezien WXP ondersteuning biedt voor zowel zakelijke als persoonlijke context, wordt MAM niet afgedwongen in nieuwe documenten, totdat ze zijn opgeslagen in een geïdentificeerde bedrijfslocatie, zoals OneDrive.

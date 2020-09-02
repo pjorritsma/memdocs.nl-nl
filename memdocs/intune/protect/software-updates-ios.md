@@ -13,12 +13,12 @@ ms.localizationpriority: high
 ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d1aefab1e222ddb20b1c033c787ba7d323f59e5
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 0a81e0e59eca03c9c15d7553376ea0c524251a18
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988298"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914851"
 ---
 # <a name="add-iosipados-software-update-policies-in-intune"></a>iOS/iPadOS-software-updatebeleid in Intune configureren
 
@@ -35,7 +35,7 @@ Deze functie is van toepassing op:
 Apparaten worden standaard ongeveer om de 8 uur bij Intune ingecheckt. Als er via een updatebeleid een update ter beschikking komt, wordt de update op het apparaat gedownload. Vervolgens wordt de update geïnstalleerd zodra het apparaat binnen de planningsconfiguratie wordt ingecheckt. Hoewel het updateproces doorgaans geen tussenkomst van de gebruiker omvat, moet de gebruiker een wachtwoordcode invoeren om een software-update te starten als het apparaat een wachtwoordcode heeft. Met profielen kan niet worden voorkomen dat gebruikers het besturingssysteem handmatig bijwerken. Met een apparaatconfiguratiebeleid waarmee de zichtbaarheid van software-updates wordt beperkt, kunt u voorkomen dat gebruikers het besturingssysteem handmatig bijwerken.
 
 > [!NOTE]
-> Bij het gebruik van [Autonome modus voor één app (ASAM)](https://docs.microsoft.com/mem/intune/configuration/device-restrictions-ios#autonomous-single-app-mode-asam) moet het effect van de besturingssysteemupdates worden overwogen, aangezien het resulterende gedrag mogelijk niet wenselijk is.
+> Bij het gebruik van [Autonome modus voor één app (ASAM)](../configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam) moet het effect van de besturingssysteemupdates worden overwogen, aangezien het resulterende gedrag mogelijk niet wenselijk is.
 Overweeg tests om de impact te beoordelen die besturingssysteemupdates hebben op de app die u uitvoert in ASAM.
 
 ## <a name="configure-the-policy"></a>Het beleid configureren

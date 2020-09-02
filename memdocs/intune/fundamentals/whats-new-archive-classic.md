@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3c939b2b21bc8bfbf82a997c05f24d91c487a9e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 398f1cd789d0ea2e2c15349e943c8e29545733e1
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81681969"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912318"
 ---
 # <a name="whats-new-in-the-intune-classic-portal---previous-months"></a>Wat is er nieuw in de klassieke Intune-portal - vorige maanden
 
@@ -345,7 +345,7 @@ __Firefox biedt geen ondersteuning meer voor Silverlight__ <!--VSO TBA-->
 Mozilla verwijdert per maart 2017 de ondersteuning voor Silverlight in versie 52 van de [Firefox-browser](https://www.mozilla.org/firefox). Als gevolg hiervan kunt u zich niet meer aanmelden bij de bestaande Intune-console wanneer u een latere versie dan Firefox 51 gebruikt. U kunt het beste Internet Explorer 10 of 11 voor toegang tot de beheerconsole, of een [eerdere versie dan Firefox 52](https://ftp.mozilla.org/pub/firefox/releases/). Met de overgang van Intune naar Azure Portal worden een aantal [moderne browsers](/azure/azure-preview-portal-supported-browsers-devices) ondersteund zonder afhankelijkheid van Silverlight.
 
 __Het verwijderen van beleid voor mobiele postvakken van Exchange Online__ <!--770687-->
-Vanaf december kunnen beheerders het beleid voor mobiele postvakken van Exchange Online (EAS) niet langer weergeven en configureren in de Intune-console. Deze wijziging wordt geïmplementeerd voor alle Intune-tenants in december en januari. De configuratie van bestaande beleidsregels blijft onveranderd. Voor het configureren van nieuw beleid maakt u gebruikt van de Exchange Management Shell. Meer informatie vindt u [hier](https://technet.microsoft.com/library/bb123783%28v=exchg.150%29.aspx).
+Vanaf december kunnen beheerders het beleid voor mobiele postvakken van Exchange Online (EAS) niet langer weergeven en configureren in de Intune-console. Deze wijziging wordt geïmplementeerd voor alle Intune-tenants in december en januari. De configuratie van bestaande beleidsregels blijft onveranderd. Voor het configureren van nieuw beleid maakt u gebruikt van de Exchange Management Shell. Meer informatie vindt u [hier](/exchange/mobile-device-mailbox-policies-exchange-2013-help).
 
 __De AV-speler, afbeeldingsviewer en PDF-viewer van Intune worden niet meer ondersteund in Android__ <!--747553-->
 Vanaf half december 2016 zijn de Intune AV-speler, afbeeldingsviewer en PDF-viewer niet langer beschikbaar voor gebruikers. Deze apps zijn vervangen door de app Azure Information Protection. Meer informatie over Azure Information Protection vindt u [hier](/information-protection/rms-client/mobile-app-faq).

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eeab1155a7a0035c5e0db15c3a5402d3636edaca
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 7981f661dd345ea80f9ab92debc9657072de1f4e
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461654"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907269"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>App-configuratiebeleid voor Microsoft Intune
 
@@ -71,7 +71,7 @@ Als u **Beheerde apps** selecteert als het **Type apparaatregistratie**, verwijs
 ![Type apparaatregistratie](./media/app-configuration-policies-overview/device-enrollment-type.png)
 
 > [!NOTE]
-> Voor apps met meerdere identiteiten, zoals Microsoft Outlook, kunnen gebruikersvoorkeuren worden overwogen. Zo worden voor het Postvak IN met prioriteit de gebruikersinstellingen gerespecteerd en wordt de configuratie ervan niet gewijzigd. Met andere parameters kunt u bepalen of een gebruiker de instelling wel of niet kan wijzigen. Zie [Configuratie-instellingen voor de Outlook-app voor iOS/iPadOS en Android implementeren](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune) voor meer informatie.
+> Voor apps met meerdere identiteiten, zoals Microsoft Outlook, kunnen gebruikersvoorkeuren worden overwogen. Zo worden voor het Postvak IN met prioriteit de gebruikersinstellingen gerespecteerd en wordt de configuratie ervan niet gewijzigd. Met andere parameters kunt u bepalen of een gebruiker de instelling wel of niet kan wijzigen. Zie [Configuratie-instellingen voor de Outlook-app voor iOS/iPadOS en Android implementeren](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune) voor meer informatie.
 
 ## <a name="android-app-configuration-policies"></a>Configuratiebeleidsregels voor Android-apps
 
@@ -176,7 +176,7 @@ Als u logboeken van een Android-apparaat wilt verzamelen, moet u of de eindgebru
     
 ## <a name="graph-api-support-for-app-configuration"></a>Graph API-ondersteuning voor app-configuratie
 
-U kunt Graph API gebruiken om app-configuratietaken uit te voeren. Zie het Engelstalige [Graph API Reference MAM Targeted Config](https://docs.microsoft.com/graph/api/resources/intune-shared-targetedmanagedappconfiguration?view=graph-rest-beta) voor meer informatie. Zie [Working with Intune in Microsoft Graph](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-beta) (Werken met intune in Microsoft Graph) voor meer informatie over Intune en Graph.
+U kunt Graph API gebruiken om app-configuratietaken uit te voeren. Zie het Engelstalige [Graph API Reference MAM Targeted Config](/graph/api/resources/intune-shared-targetedmanagedappconfiguration?view=graph-rest-beta) voor meer informatie. Zie [Working with Intune in Microsoft Graph](/graph/api/resources/intune-graph-overview?view=graph-rest-beta) (Werken met intune in Microsoft Graph) voor meer informatie over Intune en Graph.
 
 ## <a name="troubleshooting"></a>Probleemoplossing
 

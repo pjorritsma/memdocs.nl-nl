@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/15/2020
+ms.date: 05/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,16 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 55a73806e343ac23525dbd2a28950d46285bf9a3
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: 98b1380254a784dfe8939c607ab574f7bdaa8752
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088527"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914987"
 ---
 # <a name="manage-devices-with-endpoint-security-in-microsoft-intune"></a>Apparaten met eindpuntbeveiliging beheren in Microsoft Intune
 
-Als beveiligingsbeheerder gebruikt u de weergave *Alle apparaten* in het Beheercentrum van Microsoft Endpoint Manager om uw apparaten te controleren en te beheren. In de weergave wordt een lijst weergegeven met alle apparaten uit uw Azure Active Directory (Azure AD). Dit omvat apparaten die worden beheerd door Intune, Configuration Manager en via [co-beheer](https://docs.microsoft.com/configmgr/comanage/overview) door zowel Intune als Configuration Manager. Apparaten kunnen zich in de cloud en in uw on-premises infrastructuur bevinden wanneer deze zijn geïntegreerd met uw Azure AD.
+Als beveiligingsbeheerder gebruikt u de weergave *Alle apparaten* in het Beheercentrum van Microsoft Endpoint Manager om uw apparaten te controleren en te beheren. In de weergave wordt een lijst weergegeven met alle apparaten uit uw Azure Active Directory (Azure AD). Dit omvat apparaten die worden beheerd door Intune, Configuration Manager en via [co-beheer](/configmgr/comanage/overview) door zowel Intune als Configuration Manager. Apparaten kunnen zich in de cloud en in uw on-premises infrastructuur bevinden wanneer deze zijn geïntegreerd met uw Azure AD.
 
  Als u de weergave wilt vinden, opent u het [Beheercentrum voor Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) en selecteert u **Eindpuntbeveiliging** > **Alle apparaten**.
 
@@ -59,15 +59,13 @@ Overweeg de volgende velden:
 
     De nalevingsstatus voor apparaten die worden beheerd door Configuration Manager is niet zichtbaar in het beheercentrum van Microsoft Endpoint Manager.
 
-    Raadpleeg de Configuration Manager-documentatie [Tenant koppelen inschakelen](https://docs.microsoft.com/configmgr/tenant-attach/device-sync-actions) voor meer informatie.
+    Raadpleeg de Configuration Manager-documentatie [Tenant koppelen inschakelen](/configmgr/tenant-attach/device-sync-actions) voor meer informatie.
 
   - **MDM/ConfigMgr-agent**: deze apparaten staan onder co-beheer tussen Intune en Configuration Manager.
 
-    Met co-beheer kiest u [verschillende workloads in co-beheer](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) om te bepalen welke aspecten door Configuration Manager of door Intune worden beheerd. Deze opties zijn van invloed op het beleid dat op het apparaat van toepassing is, en hoe compatibiliteitsgegevens worden gerapporteerd aan het beheercentrum.
+    Met co-beheer kiest u [verschillende workloads in co-beheer](/configmgr/comanage/how-to-switch-workloads) om te bepalen welke aspecten door Configuration Manager of door Intune worden beheerd. Deze opties zijn van invloed op het beleid dat op het apparaat van toepassing is, en hoe compatibiliteitsgegevens worden gerapporteerd aan het beheercentrum.
 
     U kunt bijvoorbeeld Intune gebruiken voor het configureren van een beleid voor antivirus, firewall en versleuteling. Deze beleidstypen worden beschouwd als beleid voor het *Endpoint Protection*. Als u wilt dat een co-beheerd apparaat het Intune-beleid gebruikt en niet het Configuration Manager-beleid, stelt u de schuifregelaar voor co-beheer voor Endpoint Protection in op *Intune-* of *Pilot Intune*. Als de schuifregelaar is ingesteld op Configuration Manager, gebruikt het apparaat het beleid en de instellingen van Configuration Manager.
-
-  - **Workspace ONE**: deze apparaten worden beheerd door de externe apparaatnalevingspartner, Workspace ONE. Zie [apparaatnalevingspartners](../protect/device-compliance-partners.md) voor meer informatie.
 
 - **Naleving**: Naleving wordt geëvalueerd op basis van het nalevingsbeleid dat aan het apparaat is toegewezen. De bron van deze beleidsregels en welke informatie zich in de console bevindt, is afhankelijk van hoe het apparaat wordt beheerd. Intune, Configuration Manager of co-beheer. Stel de schuifregelaar voor co-beheer in voor de naleving van de compatibiliteit van apparaten met Intune of Pilot Intune zodat co-beheerde apparaten naleving rapporteren.  
 

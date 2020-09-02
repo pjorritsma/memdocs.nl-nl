@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 55e38ac8b5503e98df4878529ac892b55a52be47
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 2c6648f66c585dac5b8913fdb13adfcb98cbf927
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429624"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912692"
 ---
 # <a name="configure-the-take-a-test-app-on-windows-10-devices-using-intune"></a>De app Toets maken configureren op Windows 10-apparaten in Microsoft Intune
 
@@ -49,7 +49,7 @@ In [De app Toets maken in Intune](education-settings-configure.md) vindt u meer 
   - `user@contoso.com`
   - `computerName\username`
 - **Accountnaam**: U stelt een lokaal gastaccounttype in door de naam in te voeren van het account dat wordt gebruikt voor de app Toets maken. De accountnaam wordt weergegeven als tegel in het aanmeldingsscherm. Studenten klikken op de tegel om de toets te starten.  
-- **URL van de toets**: geef de URL op van de toets die de gebruikers moeten afleggen. Zie de [documentatie van Toets maken](https://docs.microsoft.com/education/windows/take-tests-in-windows-10) voor meer informatie over het ophalen van de URL.
+- **URL van de toets**: geef de URL op van de toets die de gebruikers moeten afleggen. Zie de [documentatie van Toets maken](/education/windows/take-tests-in-windows-10) voor meer informatie over het ophalen van de URL.
 - **Printerverbinding**: met **Vereisen** wordt alleen toegang tot de app Toets maken toegestaan vanaf apparaten die zijn verbonden met een printer. Met deze instelling wordt ook de afdrukknop van de app beschikbaar gemaakt voor toetsmakers. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk toegestaan dat studenten toegang krijgen tot de app vanaf apparaten die niet zijn verbonden met een printer.  
 - **Schermcontrole**: met **Toestaan** worden de schermactiviteiten gecontroleerd terwijl de gebruikers een toets afleggen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard wordt het mogelijk verhinderd dat u het scherm controleert tijdens de toets.
 - **Tekstsuggesties**: kies **Toestaan** om makers van de toets toe te staan tekstsuggesties te zien. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard worden tekstsuggesties terwijl de gebruikers een toets afleggen mogelijk geblokkeerd.

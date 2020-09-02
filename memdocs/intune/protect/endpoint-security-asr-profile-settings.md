@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 36dca5ce8bb0fc3523bcd72441e3ecf22931609b
-ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
+ms.openlocfilehash: a2b404e1741c93a6dbf5023f394f3b9528020617
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88146028"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913457"
 ---
 # <a name="attack-surface-reduction-policy-settings-for-endpoint-security-in-intune"></a>Beleidsinstellingen om kwetsbaarheid voor aanvallen te verminderen voor eindpuntbeveiliging in Intune
 
@@ -177,7 +177,7 @@ Ondersteunde platforms en profielen:
 ### <a name="microsoft-defender-application-control"></a>Microsoft Defender-toepassingsbeheer
 
 - **Toepassingsbeheer app-kluis**  
-  CSP: [AppLocker](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
+  CSP: [AppLocker](/windows/client-management/mdm/applocker-csp)
 
   - **Niet geconfigureerd** (*standaard*)
   - **Onderdelen afdwingen en apps opslaan**
@@ -397,7 +397,7 @@ Ondersteunde platforms en profielen:
   - **Ja**: Blokkeer directe geheugentoegang (DMA) voor alle downstream hot-pluggable PCI-poorten totdat een gebruiker zich bij Windows aanmeldt. Zodra een gebruiker zich heeft aangemeld, wordt in Windows een lijst gemaakt van de PCI-apparaten die met de PCI-poorten van de host zijn verbonden. Steeds wanneer de gebruiker het apparaat vergrendelt, wordt DMA geblokkeerd op hot-pluggable PCI-poorten zonder onderliggende apparaten totdat de gebruiker zich opnieuw aanmeldt. Apparaten die al waren geïnventariseerd toen het apparaat was ontgrendeld, blijven werken totdat ze worden losgekoppeld.
 
 - **Opsomming van externe apparaten die niet compatibel zijn met DMA-beveiliging van kernel**  
-  CSP: [DmaGuard/DeviceEnumerationPolicy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
+  CSP: [DmaGuard/DeviceEnumerationPolicy](/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
 
   Dit beleid biedt extra beveiliging tegen externe DMA-compatibele apparaten. Het geeft u meer controle over de opsomming van externe DMA-compatibele apparaten die niet compatibel zijn met hertoewijzing/apparaatgeheugenisolatie en sandbox van DMA.
 
@@ -408,40 +408,40 @@ Ondersteunde platforms en profielen:
   - **Alles toestaan**
 
 - **Bluetooth-verbindingen blokkeren**  
-  CSP: [Bluetooth/AllowDiscoverableMode](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
+  CSP: [Bluetooth/AllowDiscoverableMode](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
 
   - **Niet geconfigureerd** (*standaard*)
   - **Ja**: Bluetooth-verbindingen van en naar het apparaat blokkeren.
 
 - **Bluetooth-zichtbaarheid blokkeren**  
-  CSP: [Bluetooth/AllowDiscoverableMode](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
+  CSP: [Bluetooth/AllowDiscoverableMode](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
 
   - **Niet geconfigureerd** (*standaard*)
   - **Ja**: Hiermee wordt voorkomen dat het apparaat kan worden gedetecteerd door andere Bluetooth-apparaten.
 
 - **Vooraf koppelen van Bluetooth blokkeren**  
-  CSP: [Bluetooth/AllowPrepairing](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowprepairing)
+  CSP: [Bluetooth/AllowPrepairing](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowprepairing)
 
   - **Niet geconfigureerd** (*standaard*)
   - **Ja**: Hiermee wordt voorkomen dat bepaalde Bluetooth-apparaten automatisch worden gekoppeld met een hostapparaat.
 
 - **Bluetooth-reclame blokkeren**  
-  CSP: [Bluetooth/AllowAdvertising](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowadvertising)
+  CSP: [Bluetooth/AllowAdvertising](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowadvertising)
 
   - **Niet geconfigureerd** (*standaard*)
   - **Ja**: Hiermee wordt voorkomen dat het apparaat Bluetooth-reclames verzendt.  
 
 - **Dichtstbijzijnde Bluetooth-verbindingen blokkeren**  
-  CSP: [Bluetooth/AllowPromptedProximalConnections](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections): : Hiermee wordt voorkomen dat gebruikers Swift Pair en andere scenario’s op basis van nabijheid gebruiken
+  CSP: [Bluetooth/AllowPromptedProximalConnections](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections): : Hiermee wordt voorkomen dat gebruikers Swift Pair en andere scenario’s op basis van nabijheid gebruiken
 
   - **Niet geconfigureerd** (*standaard*)
   - **Ja**: Hiermee wordt voorkomen dat een apparaatgebruiker Swift Pair en andere op nabijheid gebaseerde scenario's gebruikt.  
 
-  [Bluetooth/AllowPromptedProximalConnections CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections)
+  [Bluetooth/AllowPromptedProximalConnections CSP](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections)
 
 - **Services waarvoor Bluetooth is toegestaan**  
-  CSP: [Bluetooth/ServicesAllowedList](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-servicesallowedlist).  
-  Raadpleeg [ServicesAllowedList usage guide](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#servicesallowedlist-usage-guide) (Engelstalig) voor meer informatie over de lijst met services
+  CSP: [Bluetooth/ServicesAllowedList](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-servicesallowedlist).  
+  Raadpleeg [ServicesAllowedList usage guide](/windows/client-management/mdm/policy-csp-bluetooth#servicesallowedlist-usage-guide) (Engelstalig) voor meer informatie over de lijst met services
 
   - **Toevoegen** : Hiermee geeft u toegestane Bluetooth-services en -profielen op als hexadecimale tekenreeksen, zoals `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}`.
   - **Importeren**: Hiermee importeert u een CSV-bestand met een lijst met Bluetooth-services en -profielen als hexadecimale tekenreeksen, zoals `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}`

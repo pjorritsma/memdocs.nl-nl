@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 25950311b5a6936340dbdba01961a5dab6f6ff91
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 25bb413aefa7d91ea825bbe96e057994b1375413
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461349"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915497"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Instellingen voor Windows 10- en Windows Holographic-apparaten om VPN-verbindingen met Intune toe te voegen
 
@@ -82,14 +82,14 @@ Afhankelijk van de instellingen die u kiest, kunnen niet alle waarden worden gec
 
     - **Machinecertificaten** (alleen IKEv2): Selecteer een bestaand clientcertificaatprofiel voor apparaten om het apparaat te verifiëren.
 
-      Als u [Tunnelverbindingen voor apparaten](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/vpn-device-tunnel-config) gebruikt, moet u deze optie selecteren.
+      Als u [Tunnelverbindingen voor apparaten](/windows-server/remote/remote-access/vpn/vpn-device-tunnel-config) gebruikt, moet u deze optie selecteren.
 
       Zie [Certificaten gebruiken voor verificatie](../protect/certificates-configure.md) voor het maken van certificaatprofielen in Intune.
 
     - **EAP** (alleen IKEv2): Selecteer een bestaand EAP-clientcertificaatprofiel (Extensible Authentication Protocol) om te verifiëren. Voer de verificatieparameters in de instelling **EAP XML-** in.
   - **Referenties onthouden bij elke aanmelding**: Kies ervoor om de verificatiereferenties op te slaan in het cachegeheugen.
   - **Aangepaste XML**: Geef aangepaste XML-opdrachten op waarmee de VPN-verbinding wordt geconfigureerd.
-  - **EAP XML**: Voer EAP XML-opdrachten in waarmee de VPN-verbinding wordt geconfigureerd. Zie [Configuratie van EAP](https://docs.microsoft.com/windows/client-management/mdm/eap-configuration) voor meer informatie.
+  - **EAP XML**: Voer EAP XML-opdrachten in waarmee de VPN-verbinding wordt geconfigureerd. Zie [Configuratie van EAP](/windows/client-management/mdm/eap-configuration) voor meer informatie.
 
   - **Apparaattunnel** (alleen IKEv2): Met **Inschakelen** wordt het apparaat automatisch met het VPN verbonden zonder tussenkomst of aanmelding van de gebruiker. Deze instelling is van toepassing op pc's die zijn toegevoegd aan Azure Active Directory (AD).
 
@@ -159,7 +159,7 @@ Voorbeeld:
 ### <a name="writing-custom-xml"></a>Aangepaste XML schrijven
 Raadpleeg de VPN-documentatie van de fabrikant voor meer informatie over het schrijven van aangepaste XML-opdrachten.
 
-Zie [EAP-configuratie](https://docs.microsoft.com/windows/client-management/mdm/eap-configuration) voor meer informatie over het maken van aangepaste XML-EAP.
+Zie [EAP-configuratie](/windows/client-management/mdm/eap-configuration) voor meer informatie over het maken van aangepaste XML-EAP.
 
 ## <a name="apps-and-traffic-rules"></a>Apps en verkeersregels
 

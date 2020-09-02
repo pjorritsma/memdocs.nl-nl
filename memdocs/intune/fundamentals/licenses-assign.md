@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e388914a489ee52cd9a29102a01c8221e3037775
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: d770ee040044cdaee9e4a717e9ee3045874952b2
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865683"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906902"
 ---
 # <a name="assign-licenses-to-users-so-they-can-enroll-devices-in-intune"></a>Licenties toewijzen aan gebruikers zodat ze kunnen apparaten inschrijven bij Intune
 
@@ -47,7 +47,7 @@ U kunt het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/f
 
 ## <a name="assign-an-intune-license-by-using-azure-active-directory"></a>Een Intune-licentie toewijzen met behulp van Azure Active Directory
 
-U kunt ook Intune-licenties aan gebruikers toewijzen met behulp van Azure Active Directory. Raadpleeg het artikel [License users in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-licensing-group-assignment-azure-portal) (Gebruikers een licentie verlenen via Azure Active Directory) voor meer informatie. 
+U kunt ook Intune-licenties aan gebruikers toewijzen met behulp van Azure Active Directory. Raadpleeg het artikel [License users in Azure Active Directory](/azure/active-directory/active-directory-licensing-group-assignment-azure-portal) (Gebruikers een licentie verlenen via Azure Active Directory) voor meer informatie. 
 
 ## <a name="use-school-data-sync-to-assign-licenses-to-users-in-intune-for-education"></a>Schoolgegevens synchroniseren gebruiken om licenties toe te wijzen aan gebruikers met Intune for Education
 
@@ -76,9 +76,9 @@ Hoe u Intune hebt aangeschaft, bepaalt de gegevens van uw abonnementen:
 - Als u Intune met een CC# of factuur hebt aangeschaft, zijn uw licenties op gebruikers gebaseerd.
 
 ## <a name="use-powershell-to-selectively-manage-ems-user-licenses"></a>PowerShell gebruiken om EMS-gebruikerslicenties selectief te beheren
-In organisaties die gebruikmaken van Enterprise Mobility + Security (voorheen Enterprise Mobility Suite) van Microsoft, werken mogelijk gebruikers die alleen Azure Active Directory Premium of Intune-services in het EMS-pakket nodig hebben. Met [Azure Active Directory PowerShell-cmdlets](https://msdn.microsoft.com/library/jj151815.aspx) kunt u één service of een subset van services toewijzen.
+In organisaties die gebruikmaken van Enterprise Mobility + Security (voorheen Enterprise Mobility Suite) van Microsoft, werken mogelijk gebruikers die alleen Azure Active Directory Premium of Intune-services in het EMS-pakket nodig hebben. Met [Azure Active Directory PowerShell-cmdlets](/previous-versions/azure/jj151815(v=azure.100)) kunt u één service of een subset van services toewijzen.
 
-Als u selectief gebruikerslicenties voor EMS-services wilt toewijzen, opent u PowerShell als beheerder op een computer waarop de [Azure Active Directory-module voor Windows PowerShell](https://msdn.microsoft.com/library/jj151815.aspx#bkmk_installmodule) is geïnstalleerd. U kunt PowerShell installeren op een lokale computer of op de ADFS-server.
+Als u selectief gebruikerslicenties voor EMS-services wilt toewijzen, opent u PowerShell als beheerder op een computer waarop de [Azure Active Directory-module voor Windows PowerShell](/previous-versions/azure/jj151815(v=azure.100)#bkmk_installmodule) is geïnstalleerd. U kunt PowerShell installeren op een lokale computer of op de ADFS-server.
 
 U moet een nieuwe licentie-SKU-definitie maken die alleen van toepassing is op de gewenste serviceplannen. Daarvoor schakelt u de plannen uit die u niet wilt toepassen. U kunt bijvoorbeeld een licentie-SKU-definitie maken waarmee geen licentie voor Intune wordt toegewezen. Typ het volgende om een lijst met beschikbare services weer te geven:
 

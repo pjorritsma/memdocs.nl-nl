@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ab862efd37bfeffc392d1d18cbf1f8a2f3deb50e
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: d51f7fd47e876a2e91665fb1a6e72f377de31429
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565696"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88916007"
 ---
 # <a name="set-up-intune-certificate-connector-for-digicert-pki-platform"></a>Intune Certificate Connector instellen voor het DigiCert PKI-platform
 
@@ -323,7 +323,7 @@ Nadat u de vorige stappen hebt voltooid, geeft Intune Certificate Connector PKCS
 
 ## <a name="troubleshooting"></a>Probleemoplossing
 
-De logboeken van de Intune Certificate Connector-service zijn beschikbaar in **% Program Files% \ micro soft Intune\NDESConnectorSvc\Logs\Logs** op de NDES Connector-computer. Open de logboeken in [SvcTraceViewer](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) en zoek naar uitzonderingen of foutmeldingen.
+De logboeken van de Intune Certificate Connector-service zijn beschikbaar in **% Program Files% \ micro soft Intune\NDESConnectorSvc\Logs\Logs** op de NDES Connector-computer. Open de logboeken in [SvcTraceViewer](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) en zoek naar uitzonderingen of foutmeldingen.
 
 | Probleem/foutbericht | Stappen om het probleem op te lossen |
 | --- | --- |

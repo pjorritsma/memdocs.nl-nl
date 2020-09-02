@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5cb4631b31d33e53b6ef172f142735d24a5c3cb6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 0a0b1913b200c8316be98cc7df5de4b8d63d0d18
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80220163"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911434"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Op rollen gebaseerd toegangsbeheer (RBAC) met Microsoft Intune
 
@@ -71,7 +71,7 @@ U kunt uw eigen rollen maken met aangepaste machtigingen. Zie [Een aangepaste ro
 | Algemene lezer | Alleen lezen | Alleen lezen |
 
 > [!TIP]
-> Intune bevat ook drie Azure AD-uitbreidingen: **Gebruikers**, **Groepen** en **Voorwaardelijke toegang**, die worden beheerd met Azure AD RBAC. Bovendien voert de **Beheerder van gebruikersaccounts** alleen activiteiten van AAD-gebruikers of -groepen uit en beschikt deze niet over volledige machtigingen voor het uitvoeren van alle activiteiten in Intune. Zie [RBAC met Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles) voor meer informatie.
+> Intune bevat ook drie Azure AD-uitbreidingen: **Gebruikers**, **Groepen** en **Voorwaardelijke toegang**, die worden beheerd met Azure AD RBAC. Bovendien voert de **Beheerder van gebruikersaccounts** alleen activiteiten van AAD-gebruikers of -groepen uit en beschikt deze niet over volledige machtigingen voor het uitvoeren van alle activiteiten in Intune. Zie [RBAC met Azure AD](/azure/active-directory/active-directory-assign-admin-roles) voor meer informatie.
 
 ## <a name="role-assignments"></a>Roltoewijzingen
 Met een roltoewijzing wordt gedefinieerd:

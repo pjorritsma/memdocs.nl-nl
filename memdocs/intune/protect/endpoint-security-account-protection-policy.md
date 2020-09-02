@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 6fb5702b7c809c7810004a53d084f19fa94dea9e
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: f08282fe6bd8675474415290d50c0b07b4e1fc25
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431849"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915055"
 ---
 # <a name="account-protection-policy-for-endpoint-security-in-intune"></a>Accountbeveiligingsbeleid voor eindpuntbeveiliging in Intune
 
@@ -30,7 +30,7 @@ Gebruik eindpuntbeveiligingsbeleid van Intune voor accountbeveiliging om de iden
 - *Windows Hello voor Bedrijven* vervangt wachtwoorden door een krachtige tweeledige verificatiemethode op pc's en mobiele apparaten.
 - *Credential Guard* helpt bij het beveiligen van referenties en geheimen die u gebruikt voor de apparaten.
 
-Zie [Identiteits- en toegangsbeheer](https://docs.microsoft.com/windows/security/identity-protection/) in de documentatie voor identiteits- en toegangsbeheer van Windows voor meer informatie.
+Zie [Identiteits- en toegangsbeheer](/windows/security/identity-protection/) in de documentatie voor identiteits- en toegangsbeheer van Windows voor meer informatie.
 
 U kunt het eindpuntbeveiligingsbeleid vinden bij Accountbeveiliging onder *Beheren* in het knooppunt **Eindpuntbeveiliging** van het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
 

@@ -16,19 +16,19 @@ ms.reviewer: crisk
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4d747a38dd8e2f95cafb25ec5705f83199f4c54
-ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
+ms.openlocfilehash: cd4c64e08177387561323b1e59bef3b976bf0bf3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83690687"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911179"
 ---
 # <a name="use-the-intune-tenant-status-page"></a>De tenantstatuspagina in Intune gebruiken
 
 De Tenantstatuspagina in Microsoft Intune is een gecentraliseerde hub met de huidige en belangrijke details over uw tenant. Dit zijn onder andere details over de beschikbaarheid en het gebruik van licenties, de status van de connector en belangrijke communicatie over de Intune-service.
 
 > [!TIP]
-> Een tenant is een instantie van Azure Active Directory (Azure AD). Uw abonnement op Intune wordt gehost door een Azure AD-tenant. Zie [Een tenant instellen](https://docs.microsoft.com/azure/active-directory/develop/quickstart-create-new-tenant) in de Azure AD-documentatie voor meer informatie.
+> Een tenant is een instantie van Azure Active Directory (Azure AD). Uw abonnement op Intune wordt gehost door een Azure AD-tenant. Zie [Een tenant instellen](/azure/active-directory/develop/quickstart-create-new-tenant) in de Azure AD-documentatie voor meer informatie.
 
 Als u het dashboard wilt bekijken, meldt u zich aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431), gaat u naar **Tenantbeheer** en selecteert u vervolgens **Tenantstatus**.
 

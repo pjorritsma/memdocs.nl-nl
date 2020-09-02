@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7163a8a615edd8f1b813801aab1e499ab30e0c20
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4ce8f787c8ba2b08cc47d8f1431ea7d4bdce5e58
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83991016"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914732"
 ---
 # <a name="overview-for-troubleshooting-scep-certificate-profiles-with-microsoft-intune"></a>Overzicht van het oplossen van problemen met SCEP-certificaatprofielen met Microsoft Intune
 
@@ -80,7 +80,7 @@ De volgende lijst bevat logboeken of consoles waarnaar wordt verwezen in volgend
 
 - **NDESConnector_date_time.svclog**:
 
-  In dit logboek wordt communicatie van de Microsoft Intune Certificate Connector met de Intune-cloudservice weergegeven. U kunt de [viewer voor servicetraceringen](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) gebruiken om dit logboekbestand weer te geven.
+  In dit logboek wordt communicatie van de Microsoft Intune Certificate Connector met de Intune-cloudservice weergegeven. U kunt de [viewer voor servicetraceringen](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) gebruiken om dit logboekbestand weer te geven.
 
   Gerelateerde registersleutel: *HKLM\SW\Microsoft\MicrosoftIntune\NDESConnector\ConnectionStatus*
 
@@ -88,7 +88,7 @@ De volgende lijst bevat logboeken of consoles waarnaar wordt verwezen in volgend
 
 - **CertificateRegistrationPoint_date_time.svclog**:
 
-  In dit logboek wordt de NDES-beleidsmodule die certificaataanvragen ontvangt en verifieert weergegeven. U kunt de [viewer voor servicetraceringen](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) gebruiken om dit logboekbestand weer te geven.
+  In dit logboek wordt de NDES-beleidsmodule die certificaataanvragen ontvangt en verifieert weergegeven. U kunt de [viewer voor servicetraceringen](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) gebruiken om dit logboekbestand weer te geven.
 
   Locatie: Op de server die als host fungeert voor NDES in *%program_files%\Microsoft intune\ndesconnectorsvc\logs\logs*
 
@@ -148,4 +148,4 @@ Open **Logboeken** > **Logboeken Toepassingen en Services** > **Microsoft** > **
 
 ## <a name="next-steps"></a>Volgende stappen
 
-[Implementatie van SCEP-certificaatprofielen](troubleshoot-scep-certificate-profile-deployment.md) controleren 
+[Implementatie van SCEP-certificaatprofielen](troubleshoot-scep-certificate-profile-deployment.md) controleren

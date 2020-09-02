@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8ce02a86236e390983b4e1ecca8d48d4767e49e
-ms.sourcegitcommit: 9eebe77af18045fceb3d41b43d76b370fe92b30e
+ms.openlocfilehash: 0f6c70bcfa1bf9d23ff3555498cb199ff032bb34
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87821628"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910533"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Beheerde Google Play-apps toevoegen aan Android Enterprise-apparaten met Intune
 
@@ -183,7 +183,7 @@ Als u een app uit de Store hebt goedgekeurd maar deze nog niet wordt weergegeven
 
 ## <a name="assigning-a-managed-google-play-app-to-android-enterprise-work-profile-and-corporate-owned-work-profile-devices"></a>Een beheerde Google Play-app toewijzen aan apparaten met een Android Enterprise-werkprofiel en apparaten met een werkprofiel in bedrijfseigendom
 
-Als de app wordt weergegeven in het knooppunt **App-licenties** van het workloadvenster **Apps**, kunt u de app [net als alle andere apps toewijzen](/mem/intune/apps/apps-deploy) door de app aan groepen gebruikers toe te wijzen.
+Als de app wordt weergegeven in het knooppunt **App-licenties** van het workloadvenster **Apps**, kunt u de app [net als alle andere apps toewijzen](./apps-deploy.md) door de app aan groepen gebruikers toe te wijzen.
 
 Nadat u de app hebt toegewezen, wordt deze geïnstalleerd (of is deze beschikbaar voor installatie) op de apparaten van de gebruikers die u hebt aangewezen. De gebruiker van het apparaat wordt geen toestemming voor de installatie gevraagd. Zie [Inschrijving van apparaten met Android Enterprise-werkprofielen instellen](../enrollment/android-work-profile-enroll.md) voor meer informatie over apparaten met Android Enterprise-werkprofielen. 
 

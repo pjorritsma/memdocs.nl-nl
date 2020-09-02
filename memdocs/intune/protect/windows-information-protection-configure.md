@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0d127dd8ba455ecb7e10fc94c343d12099a678d5
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 008f750fd15caeac8da9397a1c3ff0684cdf28f7
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079005"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914664"
 ---
 # <a name="how-to-configure-windows-information-protection-in-microsoft-intune"></a>Windows Information Protection configureren in Microsoft Intune
 
@@ -38,7 +38,7 @@ Dit Intune-beleid beheert de lijst met apps die zijn beveiligd door Windows Info
 > Als u de bedrijfsportal-app voor Windows 10 met Windows Information Protection wilt gebruiken, moet u de bedrijfsportal-app toevoegen in de modus Windows Information Protection van **Uitgesloten**. 
 
 Zie voor meer informatie:
-- [Uw ondernemingsgegevens beveiligen met Windows Information Protection](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
-- [Een WIP-beleid (Windows Information Protection) maken met de klassieke console voor Microsoft Intune](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/create-wip-policy-using-intune)
-- [Een WIP-beleid (Windows Information Protection) maken met MDM via Azure Portal voor Microsoft Intune](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/create-wip-policy-using-intune-azure)
-- [Een WIP-beleid (Windows Information Protection) maken met MAM via Azure Portal voor Microsoft Intune](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure)
+- [Uw ondernemingsgegevens beveiligen met Windows Information Protection](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
+- [Een WIP-beleid (Windows Information Protection) maken met de klassieke console voor Microsoft Intune](/windows/threat-protection/windows-information-protection/create-wip-policy-using-intune)
+- [Een WIP-beleid (Windows Information Protection) maken met MDM via Azure Portal voor Microsoft Intune](/windows/threat-protection/windows-information-protection/create-wip-policy-using-intune-azure)
+- [Een WIP-beleid (Windows Information Protection) maken met MAM via Azure Portal voor Microsoft Intune](/windows/threat-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure)

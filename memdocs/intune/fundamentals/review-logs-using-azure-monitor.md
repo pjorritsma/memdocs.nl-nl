@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f71bbc2022068616b90f37c209d41d28ea5970d0
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: c93f50f7c4b2537ab4dbd1d9462f13434e9c158e
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912529"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911519"
 ---
 # <a name="send-log-data-to-storage-event-hubs-or-log-analytics-in-intune-preview"></a>Logboekgegevens verzenden naar opslag, Event Hubs of Log Analytics in Intune (preview)
 
@@ -53,9 +53,9 @@ U hebt het volgende nodig om deze functie te gebruiken:
 
 Afhankelijk van waarheen u de auditlogboekgegevens wilt routeren, hebt u een van de volgende services nodig:
 
-* Een [Azure-opslagaccount](https://docs.microsoft.com/azure/storage/common/storage-account-overview) met *ListKeys*-machtigingen. We raden u aan om een algemeen opslagaccount te gebruiken en geen blob-opslagaccount. Zie de [Prijscalculator voor Azure Storage](https://azure.microsoft.com/pricing/calculator/?service=storage) voor prijsinformatie over opslag. 
-* Een [naamruimte voor Azure Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) voor integratie met oplossingen van derden.
-* Een [Log Analytics-werkruimte in Azure](https://docs.microsoft.com/azure/azure-monitor/learn/quick-create-workspace) voor het verzenden van logboeken naar Log Analytics.
+* Een [Azure-opslagaccount](/azure/storage/common/storage-account-overview) met *ListKeys*-machtigingen. We raden u aan om een algemeen opslagaccount te gebruiken en geen blob-opslagaccount. Zie de [Prijscalculator voor Azure Storage](https://azure.microsoft.com/pricing/calculator/?service=storage) voor prijsinformatie over opslag. 
+* Een [naamruimte voor Azure Event Hubs](/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) voor integratie met oplossingen van derden.
+* Een [Log Analytics-werkruimte in Azure](/azure/azure-monitor/learn/quick-create-workspace) voor het verzenden van logboeken naar Log Analytics.
 
 ## <a name="send-logs-to-azure-monitor"></a>Logboeken verzenden naar Azure Monitor
 
@@ -83,7 +83,7 @@ Afhankelijk van waarheen u de auditlogboekgegevens wilt routeren, hebt u een van
         1. Selecteer deze optie > **Configureren**. 
         2. Maak een nieuwe werkruimte en voer de details van de werkruimte in. Of kies een bestaande werkruimte in de lijst > **OK**.
 
-            [Azure Logboek Analytics-werkruimte](https://docs.microsoft.com/azure/azure-monitor/learn/quick-create-workspace) biedt meer details over deze instellingen.
+            [Azure Logboek Analytics-werkruimte](/azure/azure-monitor/learn/quick-create-workspace) biedt meer details over deze instellingen.
 
     - **LOG** > **AuditLogs**: Kies deze optie om de [Intune-auditlogboeken](monitor-audit-logs.md) te verzenden naar uw opslagaccount, Event Hub, of Log Analytics. In de auditlogboeken wordt de geschiedenis weergegeven van elke taak die een wijziging genereert in Intune, inclusief wie dit heeft uitgevoerd en wanneer.
 
@@ -178,7 +178,7 @@ De volgende tabel bevat een raming van de maandelijkse kosten voor een eenvoudig
 
 | Categorie | Waarde |
 | -------- | ----- |
-|Gebeurtenissen per seconde|0.1 |
+|Gebeurtenissen per seconde|0,1 |
 |Gebeurtenissen met een interval van vijf minuten| 52|
 |Volume per interval|104 kB |
 |Berichten per interval|1 |
@@ -187,7 +187,7 @@ De volgende tabel bevat een raming van de maandelijkse kosten voor een eenvoudig
 
 ### <a name="log-analytics-cost-considerations"></a>Kostenoverwegingen voor Log Analytics
 
-Zie [Kosten beheren door gegevensvolume en retentie in Log Analytics te beheren](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-cost-storage) als u wilt kijken welke kosten gepaard gaan met het beheren van de Log Analytics-werkruimte.
+Zie [Kosten beheren door gegevensvolume en retentie in Log Analytics te beheren](/azure/log-analytics/log-analytics-manage-cost-storage) als u wilt kijken welke kosten gepaard gaan met het beheren van de Log Analytics-werkruimte.
 
 ## <a name="frequently-asked-questions"></a>Veelgestelde vragen
 
@@ -199,7 +199,7 @@ Auditlogboeken en (de preview-versie van) operationele logboeken zijn beschikbaa
 
 ### <a name="after-an-action-when-do-the-corresponding-logs-show-up-in-the-event-hub"></a>Wanneer worden, na een actie, de bijbehorende logboeken weergegeven in de Event Hub?
 
-De logboeken worden meestal binnen enkele minuten nadat de actie is uitgevoerd, weergegeven in de Event Hub. [Wat is Azure Event Hubs?](https://docs.microsoft.com/azure/event-hubs/) biedt meer informatie.
+De logboeken worden meestal binnen enkele minuten nadat de actie is uitgevoerd, weergegeven in de Event Hub. [Wat is Azure Event Hubs?](/azure/event-hubs/) biedt meer informatie.
 
 ### <a name="after-an-action-when-do-the-corresponding-logs-show-up-in-the-storage-account"></a>Wanneer worden, na een actie, de bijbehorende logboeken weergegeven in het opslagaccount?
 
@@ -219,22 +219,22 @@ De kosten voor streamen zijn afhankelijk van het aantal berichten dat u per minu
 
 ### <a name="how-do-i-integrate-intune-audit-logs-with-my-siem-system"></a>Hoe integreer ik Intune-auditlogboeken met mijn SIEM-systeem?
 
-Azure Monitor gebruiken met Event Hubs om logboeken naar uw SIEM-systeem te streamen. [Stream de logboeken eerst naar een Event Hub](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub). [Stel het SIEM-hulpprogramma vervolgens in](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub#access-data-from-your-event-hub) met de geconfigureerde Event Hub. 
+Azure Monitor gebruiken met Event Hubs om logboeken naar uw SIEM-systeem te streamen. [Stream de logboeken eerst naar een Event Hub](/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub). [Stel het SIEM-hulpprogramma vervolgens in](/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub#access-data-from-your-event-hub) met de geconfigureerde Event Hub. 
 
 ### <a name="what-siem-tools-are-currently-supported"></a>Welke SIEM-hulpprogramma’s worden momenteel ondersteund?
 
-Azure Monitor wordt momenteel ondersteund met [Splunk](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-integrate-activity-logs-with-splunk), QRadar en [Sumo Logic](https://help.sumologic.com/Send-Data/Applications-and-Other-Data-Sources/Azure_Active_Directory) (een nieuwe website wordt geopend). Raadpleeg [Azure-bewakingsgegevens streamen naar een Event Hub voor gebruik door een extern hulpprogramma](https://docs.microsoft.com/azure/azure-monitor/platform/stream-monitoring-data-event-hubs) voor meer informatie over hoe de connectors werken.
+Azure Monitor wordt momenteel ondersteund met [Splunk](/azure/active-directory/reports-monitoring/tutorial-integrate-activity-logs-with-splunk), QRadar en [Sumo Logic](https://help.sumologic.com/Send-Data/Applications-and-Other-Data-Sources/Azure_Active_Directory) (een nieuwe website wordt geopend). Raadpleeg [Azure-bewakingsgegevens streamen naar een Event Hub voor gebruik door een extern hulpprogramma](/azure/azure-monitor/platform/stream-monitoring-data-event-hubs) voor meer informatie over hoe de connectors werken.
 
 ### <a name="can-i-access-the-data-from-an-event-hub-without-using-an-external-siem-tool"></a>Heb ik toegang tot de gegevens van een Event Hub zonder een extern SIEM-hulpprogramma te gebruiken?
 
-Ja. U kunt de [Event Hubs-API](https://docs.microsoft.com/azure/event-hubs/event-hubs-dotnet-standard-getstarted-receive-eph) gebruiken om de logboeken vanuit uw eigen aangepaste toepassing te bekijken.
+Ja. U kunt de [Event Hubs-API](/azure/event-hubs/event-hubs-dotnet-standard-getstarted-receive-eph) gebruiken om de logboeken vanuit uw eigen aangepaste toepassing te bekijken.
 
 ### <a name="what-data-is-stored"></a>Welke gegevens worden opgeslagen?
 
-In Intune worden geen gegevens opgeslagen die zijn verzonden via de pijplijn. In Intune worden gegevens gerouteerd naar de Azure Monitor-pijplijn, met de tenant als autoriteit. Zie [Overzicht van Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview) voor meer informatie.
+In Intune worden geen gegevens opgeslagen die zijn verzonden via de pijplijn. In Intune worden gegevens gerouteerd naar de Azure Monitor-pijplijn, met de tenant als autoriteit. Zie [Overzicht van Azure Monitor](/azure/azure-monitor/overview) voor meer informatie.
 
 ## <a name="next-steps"></a>Volgende stappen
 
-* [Activiteitenlogboeken in een opslagaccount archiveren](https://docs.microsoft.com/azure/active-directory/reports-monitoring/quickstart-azure-monitor-route-logs-to-storage-account)
-* [Activiteitenlogboeken doorsturen naar een Event Hub](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub)
-* [Activiteitenlogboeken met Log Analytics integreren](https://docs.microsoft.com/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics)
+* [Activiteitenlogboeken in een opslagaccount archiveren](/azure/active-directory/reports-monitoring/quickstart-azure-monitor-route-logs-to-storage-account)
+* [Activiteitenlogboeken doorsturen naar een Event Hub](/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub)
+* [Activiteitenlogboeken met Log Analytics integreren](/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics)

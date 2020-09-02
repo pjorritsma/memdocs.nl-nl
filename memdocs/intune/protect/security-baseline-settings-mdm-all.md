@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0bfbb73772124ded12d520c6c5742d1576f50f82
-ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
+ms.openlocfilehash: 01df8f50da5b0665c1c29949c1ee2c954e47cc9f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491300"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914885"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Windows MDM-beveiligingsbasislijninstellingen voor Intune
 
@@ -57,7 +57,7 @@ Zie [Wat is er nieuw in de nieuwe sjabloon](#whats-changed-in-the-new-template) 
 
 ## <a name="above-lock"></a>Vergrendeling boven
 
-Zie [Beleids-CSP - AboveLock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-abovelock) in de Windows-documentatie voor meer informatie.  
+Zie [Beleids-CSP - AboveLock](/windows/client-management/mdm/policy-csp-abovelock) in de Windows-documentatie voor meer informatie.  
 
 - **Weergave van toast-meldingen blokkeren**:  
   Met deze beleidsinstelling kunt u voorkomen dat app-meldingen in het vergrendelingsscherm worden weergegeven. Als u deze beleidsinstelling inschakelt, worden geen app-meldingen weergegeven op het vergrendelingsscherm. Als u deze beleidsinstelling uitschakelt of niet configureert, kunnen gebruikers kiezen voor welke app meldingen op het vergrendelingsscherm worden weergegeven.  
@@ -76,7 +76,7 @@ Zie [Beleids-CSP - AboveLock](https://docs.microsoft.com/windows/client-manageme
 
 ## <a name="app-runtime"></a>App-runtime
 
-Zie [Beleids-CSP - AppRuntime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-appruntime) in de Windows-documentatie voor meer informatie.
+Zie [Beleids-CSP - AppRuntime](/windows/client-management/mdm/policy-csp-appruntime) in de Windows-documentatie voor meer informatie.
 
 - **Optionele Microsoft-accounts voor Windows Store-apps**:  
   Met deze beleidsinstelling kunt u regelen of Microsoft-accounts optioneel zijn voor Windows Store-apps waarvoor gebruikers een account nodig hebben om zich aan melden. Dit beleid heeft alleen invloed op Windows Store-apps die deze functie ondersteunen. Als u deze beleidsinstelling inschakelt, kunnen gebruikers zich aanmelden met een bedrijfsaccount bij Windows Store-apps waarvoor ze normaalgesproken een Microsoft-account nodig hebben om zich aan te melden. Als u deze beleidsinstelling uitschakelt of niet configureert, moeten gebruikers zich aanmelden met een Microsoft-account.  
@@ -86,7 +86,7 @@ Zie [Beleids-CSP - AppRuntime](https://docs.microsoft.com/windows/client-managem
 
 ## <a name="application-management"></a>Toepassingsbeheer
 
-Zie [Beleids-CSP - ApplicationManagement](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement) in de Windows-documentatie voor meer informatie.
+Zie [Beleids-CSP - ApplicationManagement](/windows/client-management/mdm/policy-csp-applicationmanagement) in de Windows-documentatie voor meer informatie.
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
@@ -118,7 +118,7 @@ Zie [Beleids-CSP - ApplicationManagement](https://docs.microsoft.com/windows/cli
 
 ## <a name="auto-play"></a>Automatisch afspelen
 
-Zie [Beleids-CSP - Automatisch afspelen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-autoplay) in de Windows-documentatie voor meer informatie.
+Zie [Beleids-CSP - Automatisch afspelen](/windows/client-management/mdm/policy-csp-autoplay) in de Windows-documentatie voor meer informatie.
 
 - **Automatisch afspelen: standaardgedrag voor AutoRun**:  
   Deze instelling beïnvloedt het standaardgedrag voor AutoRun-opdrachten. AutoRun-opdrachten worden opgeslagen in AutoRun.inf-bestanden en kunnen worden gebruikt voor het starten van installatieprogramma's of andere routines. Wanneer deze optie is *ingeschakeld*, kunnen beheerders het standaardgedrag van AutoRun wijzigen op een apparaat waarop Windows Vista of later wordt uitgevoerd. Gedrag kan worden ingesteld op: a) AutoRun-opdrachten volledig uitschakelen, of b) terugzetten naar gedrag voordat Windows Vista werd uitgevoerd, waarbij de AutoRun-opdracht automatisch werd uitgevoerd. Wanneer deze optie is ingesteld op *Uitgeschakeld* of *Niet geconfigureerd*,worden gebruikers op apparaten waarop Windows Vista of later wordt uitgevoerd, gevraagd om een AutoRun-opdracht moet worden uitgevoerd.  
@@ -140,7 +140,7 @@ Zie [Beleids-CSP - Automatisch afspelen](https://docs.microsoft.com/windows/clie
 
 ## <a name="bitlocker"></a>BitLocker
 
-Zie [Beleids-CSP - BitLocker](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bitlocker) in de Windows-documentatie voor meer informatie.
+Zie [Beleids-CSP - BitLocker](/windows/client-management/mdm/policy-csp-bitlocker) in de Windows-documentatie voor meer informatie.
 
 - **BitLocker-beleid voor losse stations**:  
   Deze beleidsinstelling wordt gebruikt om de versleutelingsmethode en coderingssterkte te regelen. De waarden van dit beleid bepalen de coderingssterkte die door BitLocker wordt gebruikt voor versleuteling. Ondernemingen kunnen het versleutelingsniveau bepalen voor extra beveiliging (AES-256 is sterker dan AES-128). Als u deze instelling inschakelt, kunt u afzonderlijke versleutelingsalgoritmen en belangrijke coderingssterkten configureren voor vaste gegevensstations, besturingssysteemstations en losse gegevensstations. Voor vaste stations en besturingssysteemstations wordt het gebruik van het XTS-AES-algoritme aanbevolen. Gebruik 128-bits AES-CBC of 256-bits AES-CBC voor losse stations als het station in andere apparaten wordt gebruikt waarop geen Windows 10, versie 1511 of later wordt uitgevoerd. Het wijzigen van de versleutelingsmethode heeft geen invloed als het station al is versleuteld of als de versleuteling nog wordt uitgevoerd. In deze gevallen wordt deze beleidsinstelling genegeerd.  
@@ -193,7 +193,7 @@ Zie [Beleids-CSP - BitLocker](https://docs.microsoft.com/windows/client-manageme
 
 ## <a name="browser"></a>Browser
 
-Zie [Beleids-CSP - Browser](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser) in de Windows-documentatie voor meer informatie.
+Zie [Beleids-CSP - Browser](/windows/client-management/mdm/policy-csp-browser) in de Windows-documentatie voor meer informatie.
 
 - **SmartScreen vereisen voor Microsoft Edge**:  
   Microsoft Edge gebruikt standaard Microsoft Defender SmartScreen (ingeschakeld) om gebruikers tegen mogelijke oplichting door phishing en schadelijke software te beschermen. Bovendien kunnen gebruikers Microsoft Defender SmartScreen standaard niet uitschakelen (uitzetten). Als u dit beleid inschakelt, wordt Microsoft Defender SmartScreen uitgeschakeld en kunnen gebruikers deze functie niet inschakelen. Configureer dit beleid niet als u gebruikers Microsoft Defender SmartScreen zelf wilt kunnen laten in- of uitschakelen.  
@@ -227,7 +227,7 @@ Zie [Beleids-CSP - Browser](https://docs.microsoft.com/windows/client-management
 
 ## <a name="connectivity"></a>Connectiviteit
 
-Zie [Beleids-CSP - Connectiviteit](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity) in de Windows-documentatie voor meer informatie.
+Zie [Beleids-CSP - Connectiviteit](/windows/client-management/mdm/policy-csp-connectivity) in de Windows-documentatie voor meer informatie.
 
 - **Internetdownloads voor de wizards Webpublicaties en Online bestellen blokkeren**:  
   Dit beleid bepaalt of Windows moet worden gebruikt voor het downloaden van een lijst met providers voor de wizards Webpublicaties en Online bestellen. Met deze wizards kunnen gebruikers in een lijst met bedrijven een bedrijf selecteren dat services als onlineopslag en het afdrukken van foto's biedt. Standaard worden zowel bedrijven weergegeven die zijn gedownload van een Windows-website als bedrijven die zijn opgegeven in het register. Als u deze beleidsinstelling inschakelt, worden geen providers gedownload en worden alleen de serviceproviders weergegeven die in het cachegeheugen van het lokale register zijn opgeslagen. Als u deze beleidsinstelling uitschakelt of niet configureert, wordt een lijst met providers gedownload wanneer de gebruiker de wizards Publiceren op internet of Online bestellen gebruikt. Zie de documentatie voor de wizards Publiceren op internet of Online bestellen voor meer informatie over bijvoorbeeld het opgeven van serviceproviders in het register.  
@@ -260,7 +260,7 @@ Zie [Beleids-CSP - Connectiviteit](https://docs.microsoft.com/windows/client-man
 
 ## <a name="credentials-delegation"></a>CredentialsDelegation
 
-Zie [Beleids-CSP - CredentialsDelegation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-credentialsdelegation) in de Windows-documentatie voor meer informatie.
+Zie [Beleids-CSP - CredentialsDelegation](/windows/client-management/mdm/policy-csp-credentialsdelegation) in de Windows-documentatie voor meer informatie.
 
 - **Delegatie van externe host van aanmeldingsgegevens die niet kunnen worden geëxporteerd**:  
   Met een externe host staat u toe dat aanmeldingsgegevens die niet kunnen worden geëxporteerd, kunnen worden gedelegeerd. Wanneer u overdracht van referenties gebruikt, leveren apparaten een exporteerbare versie van referenties aan de externe host, waarmee gebruikers het risico lopen op diefstal van referenties door aanvallers op de externe host. Als u deze beleidsinstelling inschakelt, biedt de host ondersteuning voor de modi Beperkt beheer of Externe Credential Guard. Als u deze beleidsinstelling uitschakelt of niet configureert, worden de modi Beperkt beheer of Externe Credential Guard niet ondersteund. De gebruiker moet zijn of haar aanmeldingsgegevens altijd doorgeven aan de host.  
@@ -270,7 +270,7 @@ Zie [Beleids-CSP - CredentialsDelegation](https://docs.microsoft.com/windows/cli
 
 ## <a name="credentials-ui"></a>Referenties gebruikersinterface
 
-Zie [Beleids-CSP - CredentialsUI](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-credentialsui) in de Windows-documentatie voor meer informatie.
+Zie [Beleids-CSP - CredentialsUI](/windows/client-management/mdm/policy-csp-credentialsui) in de Windows-documentatie voor meer informatie.
 
 - **Beheerders opsommen**:  
   Met deze beleidsinstelling bepaalt u of beheerdersaccounts worden weergegeven wanneer een gebruiker probeert een toepassing uit te breiden die wordt uitgevoerd. Standaard worden beheerdersaccounts niet weergegeven wanneer de gebruiker een toepassing die wordt uitgevoerd probeert uit te breiden. Als u deze beleidsinstelling inschakelt, worden alle lokale beheerdersaccounts op de pc weergegeven zodat de gebruiker één account kan kiezen en het juiste wachtwoord kan invoeren. Als u deze beleidsinstelling uitschakelt, zijn gebruikers altijd vereist om een gebruikersnaam en wachtwoord in te voeren om toepassingen uit te breiden.  
@@ -280,7 +280,7 @@ Zie [Beleids-CSP - CredentialsUI](https://docs.microsoft.com/windows/client-mana
 
 ## <a name="data-protection"></a>Gegevensbescherming
 
-Zie [Beleids-CSP - DataProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection) in de Windows-documentatie voor meer informatie.
+Zie [Beleids-CSP - DataProtection](/windows/client-management/mdm/policy-csp-dataprotection) in de Windows-documentatie voor meer informatie.
 
 - **Direct Memory Access blokkeren**:  
   Met deze beleidsinstelling kunt u Direct Memory Access (DMA) blokkeren voor alle hot-pluggable PCI-downstream-poorten totdat een gebruiker zich bij Windows aanmeldt. Zodra een gebruiker zich heeft aangemeld, somt Windows de PCI-apparaten op die met de PCI-poorten van de host zijn verbonden. Steeds wanneer de gebruiker het apparaat vergrendelt, wordt DMA geblokkeerd op hot-pluggable PCI-poorten zonder onderliggende apparaten totdat de gebruiker zich opnieuw aanmeldt. Apparaten die al waren geïnventariseerd toen het apparaat was ontgrendeld, blijven werken totdat ze worden losgekoppeld. Deze beleidsinstelling wordt uitsluitend afgedwongen wanneer BitLocker of apparaatversleuteling is ingeschakeld.  
@@ -290,7 +290,7 @@ Zie [Beleids-CSP - DataProtection](https://docs.microsoft.com/windows/client-man
 
 ## <a name="device-guard"></a>Device Guard
 
-Zie [Beleids-CSP - DeviceGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceguard) in de Windows-documentatie voor meer informatie.
+Zie [Beleids-CSP - DeviceGuard](/windows/client-management/mdm/policy-csp-deviceguard) in de Windows-documentatie voor meer informatie.
 
 - **Credential Guard inschakelen**:  
   Met deze instelling kunnen gebruikers Credential Guard inschakelen met op virtualisatie gebaseerde beveiliging om aanmeldingsgegevens bij opnieuw opstarten te beschermen.  
@@ -318,11 +318,11 @@ Zie [Beleids-CSP - DeviceGuard](https://docs.microsoft.com/windows/client-manage
 
 ## <a name="device-installation"></a>Apparaatinstallatie
 
-Zie [Beleids-CSP - apparaatinstallatie](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation) in de Windows-documentatie voor meer informatie.
+Zie [Beleids-CSP - apparaatinstallatie](/windows/client-management/mdm/policy-csp-deviceinstallation) in de Windows-documentatie voor meer informatie.
 
 - **Installatie van hardwareapparaten op basis van apparaat-id's**:  
   Met deze beleidsinstelling kunt u een lijst opgeven met Plug en Play-hardware id's en compatibele id's voor apparaten die niet mogen worden geïnstalleerd in Windows. Deze beleidsinstelling heeft een hogere prioriteit dan welke andere beleidsinstelling dan ook waarmee Windows wordt toegestaan een apparaat te installeren. Als u deze beleidsinstelling inschakelt, kunnen in Windows geen apparaten worden geïnstalleerd waarvan de hardware-id of compatibele id in de door u gemaakte lijst staat. Als u deze beleidsinstelling inschakelt op een externe desktopserver, heeft deze invloed op de omleiding van de opgegeven apparaten van een externe desktopclient naar de externe desktopserver. Als u deze beleidsinstelling uitschakelt of niet configureert, kunnen apparaten worden geïnstalleerd of bijgewerkt, voor zover dat door andere beleidsinstellingen is toegestaan of verboden.  
-  [Meer informatie](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-preventinstallationofmatchingdeviceids)
+  [Meer informatie](/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-preventinstallationofmatchingdeviceids)
 
   **Standaardinstelling**: Installatie van hardwareapparaten blokkeren
 
@@ -340,7 +340,7 @@ Zie [Beleids-CSP - apparaatinstallatie](https://docs.microsoft.com/windows/clien
 
 - **Installatie van hardwareapparaten op basis van installatieklassen**:  
   Met deze beleidsinstelling kunt u een lijst opgeven met GUID's (Globally Unique Identifiers) voor de installatieklasse van apparaten voor apparaatstuurprogramma's die niet mogen worden geïnstalleerd in Windows. Deze beleidsinstelling heeft een hogere prioriteit dan welke andere beleidsinstelling dan ook waarmee Windows wordt toegestaan een apparaat te installeren. Als u deze beleidsinstelling inschakelt, kan Windows geen apparaatstuurprogramma's installeren of bijwerken waarvan de GUID's voor de installatieklasse van apparaten in de door u gemaakte lijst staan. Als u deze beleidsinstelling inschakelt op een externe desktopserver, heeft deze invloed op de omleiding van de opgegeven apparaten van een externe desktopclient naar de externe desktopserver. Als u deze beleidsinstelling uitschakelt of niet configureert, kan Windows apparaten installeren en bijwerken, voor zover dat door andere beleidsinstellingen is toegestaan of verboden.  
-  [Meer informatie](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-preventinstallationofmatchingdevicesetupclasses)
+  [Meer informatie](/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-preventinstallationofmatchingdevicesetupclasses)
 
   **Standaardinstelling**: Installatie van hardwareapparaten blokkeren
 
@@ -358,7 +358,7 @@ Zie [Beleids-CSP - apparaatinstallatie](https://docs.microsoft.com/windows/clien
 
 ## <a name="device-lock"></a>Apparaatvergrendeling
 
-Zie [Beleids-CSP - DeviceLock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock) in de Windows-documentatie voor meer informatie.
+Zie [Beleids-CSP - DeviceLock](/windows/client-management/mdm/policy-csp-devicelock) in de Windows-documentatie voor meer informatie.
 
 - **Gebruik van de camera voorkomen**:  
   Hiermee schakelt u schakelaar voor de camera op het vergrendelingsscherm uit bij de pc-instellingen en voorkomt u dat een camera op het vergrendelingsscherm kan worden aangeroepen. Standaard kunnen gebruikers het aanroepen van een beschikbare camera op het vergrendelingsscherm zelf inschakelen. Als u deze instelling inschakelt, kunnen gebruikers cameratoegang vanaf het vergrendelingsscherm niet in- of uitschakelen in de pc-instellingen en kan de camera niet worden aangeroepen op het vergrendelingsscherm.  
@@ -436,11 +436,11 @@ Zie [Beleids-CSP - DeviceLock](https://docs.microsoft.com/windows/client-managem
 
 ## <a name="dma-guard"></a>DMA Guard
 
-Raadpleeg [Beleids-CSP - DmaGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard) in de Windows-documentatie voor meer informatie.
+Raadpleeg [Beleids-CSP - DmaGuard](/windows/client-management/mdm/policy-csp-dmaguard) in de Windows-documentatie voor meer informatie.
 
 - **Opsomming van externe apparaten die niet compatibel zijn met DMA-beveiliging van kernel**:  
   Dit beleid is bedoeld om extra beveiliging te bieden tegen externe DMA-compatibele apparaten. Het geeft u meer controle over de opsomming van externe DMA-compatibele apparaten die niet compatibel zijn met hertoewijzing/apparaatgeheugenisolatie en sandbox van DMA. Dit beleid wordt alleen uitgevoerd als DMA-beveiliging van kernel wordt ondersteund en ingeschakeld door de systeemfirmware. DMA-beveiliging van kernel is een platformfunctie die niet kan worden beheerd via beleid of door de eindgebruiker. De functie moet door het systeem worden ondersteund ten tijde van de productie. Bekijk het veld DMA-beveiliging van kernel op de overzichtspagina van MSINFO32.exe om te controleren of het systeem DMA-beveiliging van kernel ondersteunt.  
-  [Meer informatie](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
+  [Meer informatie](/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
 
   **Standaardinstelling**: Alles blokkeren
 
@@ -449,7 +449,7 @@ Raadpleeg [Beleids-CSP - DmaGuard](https://docs.microsoft.com/windows/client-man
 
 ## <a name="event-log-service"></a>De service Gebeurtenislogboek
 
-Zie [Beleids-CSP - EventLogService](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-eventlogservice) in de Windows-documentatie voor meer informatie.
+Zie [Beleids-CSP - EventLogService](/windows/client-management/mdm/policy-csp-eventlogservice) in de Windows-documentatie voor meer informatie.
 
 - **Maximale bestandsgrootte voor beveiligingslogboeken (in kB)** :  
   Met deze beleidsinstelling geeft u de maximale grootte van het logboekbestand (in kB) op. Als u deze beleidsinstelling inschakelt, kunt u een maximale grootte voor logboekbestanden tussen 1 MB (1024 kB) en 2 TB (2147483647 KB) instellen, die per kB kan worden verhoogd. Als u deze beleidsinstelling uitschakelt of niet configureert, wordt de maximale grootte van het logboekbestand ingesteld op de lokaal geconfigureerde waarde. Deze waarde kan door de lokale beheerder worden gewijzigd via het dialoogvenster Logboekeigenschappen. De standaardinstelling is 20 MB.  
@@ -471,7 +471,7 @@ Zie [Beleids-CSP - EventLogService](https://docs.microsoft.com/windows/client-ma
 
 ## <a name="experience"></a>Ervaring
 
-Zie [Beleids-CSP - Ervaring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience) in de Windows-documentatie voor meer informatie.
+Zie [Beleids-CSP - Ervaring](/windows/client-management/mdm/policy-csp-experience) in de Windows-documentatie voor meer informatie.
 
 - **Windows Spotlight blokkeren**:  
   Laat IT-beheerders alle functies van Windows Spotlight uitschakelen (blokkeren). Dit omvat Windows Spotlight op het vergrendelingsscherm, Windows Tips, Microsoft-functies voor consumenten en andere gerelateerde functies.  
@@ -495,7 +495,7 @@ Zie [Beleids-CSP - Ervaring](https://docs.microsoft.com/windows/client-managemen
 
 ## <a name="exploit-guard"></a>ExploitGuard
 
-Zie [Beleids-CSP - ExploitGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-exploitguard) in de Windows-documentatie voor meer informatie.
+Zie [Beleids-CSP - ExploitGuard](/windows/client-management/mdm/policy-csp-exploitguard) in de Windows-documentatie voor meer informatie.
 
 - **XML uploaden**:  
   Hiermee kan de IT-beheerder een configuratie pushen die de gewenste systeem- en toepassingbeperkingsopties voor alle apparaten in de organisatie aangeeft. De configuratie wordt vertegenwoordigd door een XML. Exploit Protection helpt apparaten te beschermen tegen malware die exploits gebruikt om zichzelf te verspreiden en andere apparaten te infecteren. U gebruikt de Windows-beveiligingsapp of PowerShell om een set beperkingen te maken (dit wordt een configuratie genoemd). U kunt deze configuratie vervolgens als XML-bestand exporteren en delen met meerdere apparaten in uw netwerk, zodat ze allemaal dezelfde set beperkingsinstellingen hebben. U kunt ook een bestaand XML-bestand met een EMET-configuratie naar een XML-bestand voor exploitbeveiligingsconfiguratie converteren en importeren.  
@@ -505,7 +505,7 @@ Zie [Beleids-CSP - ExploitGuard](https://docs.microsoft.com/windows/client-manag
 
 ## <a name="file-explorer"></a>Verkenner
 
-Zie [Beleids-CSP - FileExplorer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-fileexplorer) in de Windows-documentatie voor meer informatie.  
+Zie [Beleids-CSP - FileExplorer](/windows/client-management/mdm/policy-csp-fileexplorer) in de Windows-documentatie voor meer informatie.  
 
 - **Preventie van gegevensuitvoering blokkeren**:  
   Wanneer u preventie van gegevensuitvoering uitschakelt, kunnen bepaalde verouderde invoegtoepassingen werken zonder de Verkenner af te sluiten.  
@@ -521,7 +521,7 @@ Zie [Beleids-CSP - FileExplorer](https://docs.microsoft.com/windows/client-manag
 
 ## <a name="firewall"></a>Firewall
 
-Raadpleeg [2.2.2 FW_PROFILE_TYPE]( https://docs.microsoft.com/openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc) in de documentatie voor Windows-protocollen voor meer informatie.
+Raadpleeg [2.2.2 FW_PROFILE_TYPE]( /openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc) in de documentatie voor Windows-protocollen voor meer informatie.
 
 - **Firewallprofiel voor domein**:  
   Hiermee geeft u de profielen op waartoe de regel behoort: Domein, Privé of Openbaar. Deze waarde vertegenwoordigt het profiel voor netwerken die zijn verbonden met domeinen.  
@@ -579,7 +579,7 @@ Raadpleeg [2.2.2 FW_PROFILE_TYPE]( https://docs.microsoft.com/openspecs/windows_
 
 ## <a name="internet-explorer"></a>Internet Explorer
 
-Zie [Beleids-CSP - InternetExplorer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-internetexplorer) in de Windows-documentatie voor meer informatie.
+Zie [Beleids-CSP - InternetExplorer](/windows/client-management/mdm/policy-csp-internetexplorer) in de Windows-documentatie voor meer informatie.
 
 - **Beperkte updates van de statusbalk vinden plaats in de Internet Explorer-zone via script**:  
   Met deze beleidsinstelling kunt u instellen of de statusbalk in de zone via een script mag worden bijgewerkt.
@@ -1340,7 +1340,7 @@ Zie [Beleids-CSP - InternetExplorer](https://docs.microsoft.com/windows/client-m
 
 ## <a name="local-policies-security-options"></a>Beveiligingsopties voor lokaal beleid
 
-Zie [Beleids-CSP - LocalPoliciesSecurityOptions](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions) in de Windows-documentatie voor meer informatie.
+Zie [Beleids-CSP - LocalPoliciesSecurityOptions](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions) in de Windows-documentatie voor meer informatie.
 
 - **Anonieme toegang tot named pipes en shares beperken**:  
   Wanneer dit is ingeschakeld, wordt met deze beveiligingsinstelling anonieme toegang beperkt tot shares en pipes voor de instellingen van: (1) named pipes die anoniem kunnen worden benaderd (2) shares die anoniem kunnen worden benaderd.  
@@ -1548,14 +1548,14 @@ Zie [Beleids-CSP - LocalPoliciesSecurityOptions](https://docs.microsoft.com/wind
 
 ## <a name="microsoft-defender"></a>Microsoft Defender
 
-Zie [Beleids-CSP - Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) in de Windows-documentatie voor meer informatie.
+Zie [Beleids-CSP - Defender](/windows/client-management/mdm/policy-csp-defender) in de Windows-documentatie voor meer informatie.
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 
 - **Blokkeren dat onderliggende processen kunnen worden gemaakt in Adobe Reader**:  
 Deze regel voorkomt aanvallen door het maken van extra processen met Adobe Reader te blokkeren. Via social engineering of aanvallen kan malware aanvullende payloads downloaden en starten en uit Adobe Reader breken. Door te blokkeren dat onderliggende processen worden gegenereerd met Adobe Reader kan er geen malware worden verspreid die probeert om deze te gebruiken als vector.
-[Meer informatie](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+[Meer informatie](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
   **Standaardinstelling**: Inschakelen
 
@@ -1670,7 +1670,7 @@ Deze regel voorkomt aanvallen door het maken van extra processen met Adobe Reade
   **Standaardinstelling**: Inschakelen
 
 - **Defender: mogelijk ongewenste app-actie**:  
-  CSP: [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)+
+  CSP: [Defender/PUAProtection](/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)+
 
   De beveiligingsfunctie tegen mogelijk ongewenste toepassingen (PUA; potentially unwanted application) in Microsoft Defender Antivirus kan mogelijk ongewenste toepassingen identificeren en voorkomen dat ze worden gedownload en geïnstalleerd op eindpunten in uw netwerk. Deze toepassingen worden niet beschouwd als virussen, malware of andere soorten bedreigingen, maar kunnen mogelijk acties uitvoeren op eindpunten die nadelige invloed hebben op de prestaties of het gebruik. Mogelijk ongewenste toepassingen kan ook verwijzen naar toepassingen die een slechte reputatie hebben. Standaardgedrag van mogelijk ongewenste toepassingen is: Verschillende typen softwarebundeling Advertentietoevoeging in webbrowsers Optimalisatieprogramma's voor stuurprogramma's en registers die problemen detecteren en vragen om betaling om problemen op te lossen. Ze blijven op het eindpunt en er worden geen wijzigen of optimalisaties aangebracht (ook wel bekend als 'rogue antivirus'-programma's). Deze toepassingen kunnen het risico op infectie van uw netwerk met malware verhogen, ervoor zorgen dat malware-infecties moeilijker kunnen worden geïdentificeerd en kunnen IT-resources verspillen omdat deze de toepassingen moeten opschonen.
 
@@ -1715,7 +1715,7 @@ Deze regel voorkomt aanvallen door het maken van extra processen met Adobe Reade
 
 ## <a name="ms-security-guide"></a>MS-beveiligingshandleiding
 
-Raadpleeg [Policy CSP - MSSecurityGuide](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-mssecurityguide) (Beleids-CSP - MSSecurityGuide) in de Windows-documentatie voor meer informatie.
+Raadpleeg [Policy CSP - MSSecurityGuide](/windows/client-management/mdm/policy-csp-mssecurityguide) (Beleids-CSP - MSSecurityGuide) in de Windows-documentatie voor meer informatie.
 
 - **UAC-beperkingen toepassen op lokale accounts bij netwerkaanmelding**:  
   [Meer informatie](https://go.microsoft.com/fwlink/?linkid=2067188)
@@ -1744,7 +1744,7 @@ Raadpleeg [Policy CSP - MSSecurityGuide](https://docs.microsoft.com/windows/clie
 
 ## <a name="mss-legacy"></a>MSS Legacy
 
-Raadpleeg [Policy CSP - MSSLegacy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-msslegacy) (Beleids-CSP - MSSLegacy) in de Windows-documentatie voor meer informatie.
+Raadpleeg [Policy CSP - MSSLegacy](/windows/client-management/mdm/policy-csp-msslegacy) (Beleids-CSP - MSSLegacy) in de Windows-documentatie voor meer informatie.
 
 - **Beveiligingsniveau voor routering van IP-bron voor netwerk**:  
   [Meer informatie](https://go.microsoft.com/fwlink/?linkid=2067220)
@@ -1768,7 +1768,7 @@ Raadpleeg [Policy CSP - MSSLegacy](https://docs.microsoft.com/windows/client-man
 
 ## <a name="power"></a>Voeding
 
-Raadpleeg [Policy CSP - Power](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power) (Beleids-CSP - Voeding) in de Windows-documentatie voor meer informatie.
+Raadpleeg [Policy CSP - Power](/windows/client-management/mdm/policy-csp-power) (Beleids-CSP - Voeding) in de Windows-documentatie voor meer informatie.
 
 - **Wachtwoord bij activering vereisen tijdens aansluiting op netstroom**:  
   Met deze beleidsinstelling kunt u opgeven of de gebruiker om een wachtwoord wordt gevraagd als de slaapstand wordt uitgeschakeld. Als u deze beleidsinstelling inschakelt of niet configureert, wordt de gebruiker om een wachtwoord gevraagd wanneer de slaapstand wordt uitgeschakeld. Als u deze beleidsinstelling uitschakelt, wordt de gebruiker niet om een wachtwoord gevraagd wanneer de slaapstand wordt uitgeschakeld.  
@@ -1799,7 +1799,7 @@ Raadpleeg [Policy CSP - Power](https://docs.microsoft.com/windows/client-managem
 
 ## <a name="remote-assistance"></a>Hulp op afstand
 
-Zie [Beleids-CSP - RemoteAssistance](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remoteassistance#remoteassistance-solicitedremoteassistance) in de Windows-documentatie voor meer informatie.
+Zie [Beleids-CSP - RemoteAssistance](/windows/client-management/mdm/policy-csp-remoteassistance#remoteassistance-solicitedremoteassistance) in de Windows-documentatie voor meer informatie.
 
 - **Hulp op afstand aanvragen**:  
   Met deze beleidsinstelling kunt u Aangevraagde hulp op afstand op deze computer in- of uitschakelen.
@@ -1836,7 +1836,7 @@ Zie [Beleids-CSP - RemoteAssistance](https://docs.microsoft.com/windows/client-m
 
 ## <a name="remote-desktop-services"></a>Extern bureaublad-services
 
-Zie [Beleids-CSP - RemoteDesktopServices](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotedesktopservices) in de Windows-documentatie voor meer informatie.
+Zie [Beleids-CSP - RemoteDesktopServices](/windows/client-management/mdm/policy-csp-remotedesktopservices) in de Windows-documentatie voor meer informatie.
 
 - **Wachtwoord opslaan blokkeren**:  
   Hiermee bepaalt u of wachtwoorden op deze computer kunnen worden opgeslagen vanuit een verbinding met extern bureaublad. Als u deze instelling inschakelt, wordt het selectievakje voor het opslaan van het wachtwoord in de verbinding met extern bureaublad uitgeschakeld en kunnen gebruikers geen wachtwoorden opslaan. Wanneer gebruikers een RDP-bestand openen met behulp van een verbinding met extern bureaublad en hun instellingen opslaan, wordt een wachtwoord dat voorheen aanwezig was in het RDP-bestand verwijderd. Als u deze instelling uitschakelt of niet configureert, kan de gebruiker met behulp van de verbinding met extern bureaublad wachtwoorden opslaan.  
@@ -1878,7 +1878,7 @@ Zie [Beleids-CSP - RemoteDesktopServices](https://docs.microsoft.com/windows/cli
 
 ## <a name="remote-management"></a>Extern beheer
 
-Zie [Beleids-CSP - RemoteManagement](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotemanagement) in de Windows-documentatie voor meer informatie.
+Zie [Beleids-CSP - RemoteManagement](/windows/client-management/mdm/policy-csp-remotemanagement) in de Windows-documentatie voor meer informatie.
 
 - **Referenties opslaan voor Uitvoeren als blokkeren**:  
   Basisverificatie voor clients.  
@@ -1918,7 +1918,7 @@ Zie [Beleids-CSP - RemoteManagement](https://docs.microsoft.com/windows/client-m
 
 ## <a name="remote-procedure-call"></a>Externe procedureaanroep
 
-Zie [Beleids-CSP - RemoteProcedureCall](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remoteprocedurecall) in de Windows-documentatie voor meer informatie.
+Zie [Beleids-CSP - RemoteProcedureCall](/windows/client-management/mdm/policy-csp-remoteprocedurecall) in de Windows-documentatie voor meer informatie.
 
 - **Opties voor RPC niet-geverifieerde clients**:  
   Met deze beleidsinstelling bepaalt u hoe de RPC-serverruntime omgaat met niet-geverifieerde RPC-clients die verbinding maken met RPC-servers. Deze beleidsinstelling heeft gevolgen voor alle RPC-toepassingen. In een domeinomgeving dient u voorzichtig te zijn met het gebruik van deze beleidsinstelling, aangezien het gevolgen kan hebben voor een breed scala aan functies, waaronder de verwerking van het groepsbeleid zelf. Het kan zijn dat het herstellen van een wijziging in deze beleidsinstelling handmatig op elke betreffende machine moet worden uitgevoerd. Pas deze beleidsinstelling niet toe op een domeincontroller. Als u deze beleidsinstelling uitschakelt, maakt de RPC-serverruntime gebruik van de waarde 'Geverifieerd' op Windows Client en van de waarde 'Geen' op Windows Server-versies die ondersteuning bieden voor deze instelling. Als u deze beleidsinstelling niet configureert, blijft deze uitgeschakeld. De RPC-serverruntime gedraagt zich alsof deze is ingeschakeld met de waarde 'Geverifieerd' die wordt gebruikt voor Windows Client en de waarde 'Geen' die wordt gebruikt voor Server SKU's die ondersteuning bieden voor deze beleidsinstelling. Als u deze beleidsinstelling inschakelt, zorgt deze ervoor dat de RPC-serverruntime beperkingen oplegt aan niet-geverifieerde RPC-clients die verbinding maken met RPC-servers die op een computer worden uitgevoerd. Een client zal worden beschouwd als een geverifieerde client als deze een named pipe gebruikt om te communiceren met de server of als deze RPC-beveiliging gebruikt. RPC-interfaces die specifiek hebben verzocht om toegankelijk te zijn voor niet-geverifieerde clients kunnen worden uitgezonderd van deze beperking, afhankelijk van de geselecteerde waarde voor deze instelling.
@@ -1935,7 +1935,7 @@ Zie [Beleids-CSP - RemoteProcedureCall](https://docs.microsoft.com/windows/clien
 
 ## <a name="search"></a>Zoeken
 
-Zie [Beleids-CSP - Search](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search) in de Windows-documentatie voor meer informatie.
+Zie [Beleids-CSP - Search](/windows/client-management/mdm/policy-csp-search) in de Windows-documentatie voor meer informatie.
 
 - **Indexeren van versleutelde items uitschakelen**:  
   Hiermee kunt u het indexeren van items toestaan of verbieden. Deze schakeloptie dient voor de Windows Search-indexeerfunctie. Hiermee bepaalt u of items die zijn versleuteld, worden geïndexeerd, zoals de bestanden met Windows Information Protection (WIP). Wanneer het beleid wordt ingeschakeld, worden de items met WIP-beveiliging geïndexeerd en worden de metagegevens opgeslagen op een niet-versleutelde locatie. De metagegevens bevatten gegevens zoals het bestandspad en de wijzigingsdatum. Als het beleid is uitgeschakeld, worden de items met WIP-beveiliging niet geïndexeerd en worden ze niet weergegeven in de resultaten in Cortana of Verkenner. Als er te veel mediabestanden met WIP-beveiliging op het apparaat staan, kunnen de prestaties bij gebruik van foto's en Groove-apps ook worden beïnvloed.  
@@ -1945,7 +1945,7 @@ Zie [Beleids-CSP - Search](https://docs.microsoft.com/windows/client-management/
 
 ## <a name="smart-screen"></a>SmartScreen
 
-Zie [Beleids-CSP - SmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen) in de Windows-documentatie voor meer informatie.
+Zie [Beleids-CSP - SmartScreen](/windows/client-management/mdm/policy-csp-smartscreen) in de Windows-documentatie voor meer informatie.
 
 ::: zone-end
 ::: zone pivot="mdm-preview"
@@ -1991,7 +1991,7 @@ Zie [Beleids-CSP - SmartScreen](https://docs.microsoft.com/windows/client-manage
 
 ## <a name="system"></a>Systeem
 
-Zie [Beleids-CSP - System](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system) in de Windows-documentatie voor meer informatie.
+Zie [Beleids-CSP - System](/windows/client-management/mdm/policy-csp-system) in de Windows-documentatie voor meer informatie.
 
 - **Initialisatie van systeemstartstuurprogramma**:  
   Met deze beleidsinstelling kunt u opgeven welke systeemstartstuurprogramma's worden geïnitialiseerd op basis van een classificatie die is bepaald door het systeemstartstuurprogramma Early Launch Antimalware. Het systeemstartstuurprogramma Early Launch Antimalware kan de volgende classificaties retourneren voor elk systeemstartstuurprogramma:
@@ -2011,7 +2011,7 @@ Zie [Beleids-CSP - System](https://docs.microsoft.com/windows/client-management/
 
 ## <a name="wi-fi"></a>Wi-Fi
 
-Zie [Beleids-CSP - Wi-Fi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-wifi) in de Windows-documentatie voor meer informatie.
+Zie [Beleids-CSP - Wi-Fi](/windows/client-management/mdm/policy-csp-wifi) in de Windows-documentatie voor meer informatie.
 
 - **Internetverbinding delen blokkeren**:  
   Hiermee geeft u op of het delen van internet op het apparaat mogelijk is.  
@@ -2027,7 +2027,7 @@ Zie [Beleids-CSP - Wi-Fi](https://docs.microsoft.com/windows/client-management/m
 
 ## <a name="windows-connection-manager"></a>Windows-verbindingsbeheer
 
-Zie [Beleids-CSP - WindowsConnectionManager](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsconnectionmanager) in de Windows-documentatie voor meer informatie.
+Zie [Beleids-CSP - WindowsConnectionManager](/windows/client-management/mdm/policy-csp-windowsconnectionmanager) in de Windows-documentatie voor meer informatie.
 
 - **Verbinding met niet-domeinnetwerken blokkeren**:  
   Met deze beleidsinstelling wordt voorkomen dat computers tegelijk verbinding maken met zowel een domein- als niet-domeinnetwerk. Als deze instelling is ingeschakeld, reageert de computer op automatische en handmatige pogingen om verbinding te maken met een netwerk op basis van de volgende omstandigheden:
@@ -2086,7 +2086,7 @@ Zie [Beleids-CSP - WindowsConnectionManager](https://docs.microsoft.com/windows/
 
 ## <a name="windows-ink-workspace"></a>Windows Ink-werkruimte
 
-Raadpleeg [Policy CSP - WindowsInkWorkspace](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsinkworkspace) (Beleids-CSP - WindowsInkWorkspace) in de Windows-documentatie voor meer informatie.
+Raadpleeg [Policy CSP - WindowsInkWorkspace](/windows/client-management/mdm/policy-csp-windowsinkworkspace) (Beleids-CSP - WindowsInkWorkspace) in de Windows-documentatie voor meer informatie.
 
 - **Werkruimte van Windows Ink**:  
   Hiermee wordt opgegeven of de gebruiker toegang kan krijgen tot de Windows Ink-werkruimte.
@@ -2103,7 +2103,7 @@ Raadpleeg [Policy CSP - WindowsInkWorkspace](https://docs.microsoft.com/windows/
 
 ## <a name="windows-powershell"></a>Windows PowerShell
 
-Raadpleeg [Policy CSP - WindowsPowerShell](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowspowershell) (Beleids-CSP - WindowsPowerShell) in de Windows-documentatie voor meer informatie.
+Raadpleeg [Policy CSP - WindowsPowerShell](/windows/client-management/mdm/policy-csp-windowspowershell) (Beleids-CSP - WindowsPowerShell) in de Windows-documentatie voor meer informatie.
 
 - **Logboekregistratie van blokkeren van PowerShell-scripts**:  
   Met deze beleidsinstelling wordt logboekregistratie van alle PowerShell-scriptinvoer naar het gebeurtenislogboek van Microsoft-Windows-PowerShell/Operational ingeschakeld. Als u deze beleidsinstelling inschakelt, wordt met Windows PowerShell de verwerking van opdrachten, scriptblokkeringen, functies en scripts via logboekregistratie bijgehouden, ongeacht of deze interactief worden aangeroepen of via automatisering. Als u deze beleidsinstelling uitschakelt, wordt logboekregistratie van PowerShell-scriptinvoer uitgeschakeld. Als u de logboekregistratie voor het aanroepen van script blokkeren inschakelt, worden gebeurtenissen door PowerShell vastgelegd bij het aanroepen van een opdracht, scriptblokkering, functie of bij het starten of stoppen van een script. Als het aanroeplogbestand wordt ingeschakeld, wordt er een groot aantal gebeurtenislogboeken gegenereerd. Opmerking: Deze beleidsinstelling bestaat onder Computerconfiguratie en Gebruikersconfiguratie in de Groepsbeleidseditor. De beleidsinstelling Computerconfiguratie heeft voorrang op de beleidsinstelling Gebruikersconfiguratie.  

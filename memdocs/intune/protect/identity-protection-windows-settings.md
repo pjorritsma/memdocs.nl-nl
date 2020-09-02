@@ -16,18 +16,18 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: b4581ba6bdc8b5be41d5cf567c631ffaad40d418
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ce4795dd060d29b62887fbf5496b2f2706ba954f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79351965"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909105"
 ---
 # <a name="windows-10-device-settings-to-enable-windows-hello-for-business-in-intune"></a>Windows 10 device settings to enable Windows Hello for Business in Intune (Instellingen voor Windows 10-apparaten om Windows Hello voor Bedrijven in Intune in te schakelen)
 
 Dit artikel bevat een overzicht en beschrijving van de instellingen voor Windows Hello voor Bedrijven die u kunt beheren op Windows 10-apparaten in Intune. Als Intune-beheerder kunt u deze instellingen configureren en toewijzen aan Windows 10-apparaten als onderdeel van uw MDM-oplossing (Mobile Device Management). 
 
-U kunt meer informatie over deze instellingen vinden in [Beleidsinstellingen configureren voor Windows Hello voor Bedrijven](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings) in de Windows Hello-documentatie.
+U kunt meer informatie over deze instellingen vinden in [Beleidsinstellingen configureren voor Windows Hello voor Bedrijven](/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings) in de Windows Hello-documentatie.
 
 
 Zie [Identity Protection configureren](identity-protection-configure.md) voor meer informatie over Windows Hello voor Bedrijven-profielen in Intune.
@@ -125,7 +125,7 @@ Zie [Identity Protection configureren](identity-protection-configure.md) voor me
   - **Certificaat voor on-premises resources**  
 
     - **Inschakelen**: hiermee staat u Windows Hello voor Bedrijven toe certificaten te gebruiken voor verificatie bij on-premises resources.
-    - **Niet geconfigureerd**: hiermee voorkomt u dat Windows Hello voor Bedrijven certificaten gebruikt voor verificatie bij on-premises resources. In plaats daarvan maken apparaten gebruik van het standaardgedrag van *On-premises verificatie met sleutelvertrouwen*. Zie [Gebruikerscertificaat voor on-premises verificatie](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings#use-certificate-for-on-premises-authentication) in de Windows Hello-documentatie voor meer informatie.  
+    - **Niet geconfigureerd**: hiermee voorkomt u dat Windows Hello voor Bedrijven certificaten gebruikt voor verificatie bij on-premises resources. In plaats daarvan maken apparaten gebruik van het standaardgedrag van *On-premises verificatie met sleutelvertrouwen*. Zie [Gebruikerscertificaat voor on-premises verificatie](/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings#use-certificate-for-on-premises-authentication) in de Windows Hello-documentatie voor meer informatie.  
 
   **Standaardinstelling**: Niet geconfigureerd
 

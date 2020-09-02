@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c6f2eb7d6174c706cdd8a3910df1d0ddc2e6ef0
-ms.sourcegitcommit: 532a06163f462527254d23e7dc505b18c0c4f938
+ms.openlocfilehash: acc61df344cb4134a863d75fff517047e78d067d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88110678"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914783"
 ---
 # <a name="troubleshoot-pkcs-certificate-deployment-in-microsoft-intune"></a>Problemen met de implementatie van PKCS-certificaten oplossen in Microsoft Intune
 
@@ -39,7 +39,7 @@ De meest voorkomende bron van problemen voor PKCS-certificaatprofielen heeft bet
 - **Certificeringsinstantie**: De interne FQDN van de certificeringsinstantiecomputer. Bijvoorbeeld server1.domain.local.
 - **Naam van certificeringsinstantie**: De naam van de certificeringsinstantie, zoals die wordt weergegeven in de MMC voor de certificeringsinstantie. Kijk onder **Certificeringsinstantie (lokaal)**
 
-U kunt het [opdrachtregelprogramma certutil](https://docs.microsoft.com/windows-server/administration/windows-commands/certutil) in de CA gebruiken om de juiste certificeringsinstantie en naam voor de certificeringsinstantie te bevestigen.
+U kunt het [opdrachtregelprogramma certutil](/windows-server/administration/windows-commands/certutil) in de CA gebruiken om de juiste certificeringsinstantie en naam voor de certificeringsinstantie te bevestigen.
 
 ## <a name="pkcs-communication-overview"></a>Overzicht van PKCS-communicatie
 
@@ -76,7 +76,7 @@ Logboekbestanden voor deze rollen omvatten onder andere Windows Logboeken, certi
 
 - **NDESConnector_date_time.svclog**:
 
-  In dit logboek wordt communicatie van de Microsoft Intune Certificate Connector met de Intune-cloudservice weergegeven. U kunt de [viewer voor servicetraceringen](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) gebruiken om dit logboekbestand weer te geven.
+  In dit logboek wordt communicatie van de Microsoft Intune Certificate Connector met de Intune-cloudservice weergegeven. U kunt de [viewer voor servicetraceringen](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) gebruiken om dit logboekbestand weer te geven.
 
   Gerelateerde registersleutel: *HKLM\SW\Microsoft\MicrosoftIntune\NDESConnector\ConnectionStatus*
 
@@ -84,7 +84,7 @@ Logboekbestanden voor deze rollen omvatten onder andere Windows Logboeken, certi
 
 - **CertificateRegistrationPoint_date_time.svclog**:
 
-  In dit logboek wordt de NDES-beleidsmodule die certificaataanvragen ontvangt en verifieert weergegeven. U kunt de [viewer voor servicetraceringen](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) gebruiken om dit logboekbestand weer te geven.
+  In dit logboek wordt de NDES-beleidsmodule die certificaataanvragen ontvangt en verifieert weergegeven. U kunt de [viewer voor servicetraceringen](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) gebruiken om dit logboekbestand weer te geven.
 
   Locatie: Op de server die als host fungeert voor NDES in *%program_files%\Microsoft intune\ndesconnectorsvc\logs\logs*
 
@@ -217,7 +217,7 @@ Dit probleem treedt op als de computer die als host fungeert voor de Intune NDES
 
 **Oplossing**:
 
-Configureer handmatig de naam van certificaatinschrijvingsbeleidsserver op de computer die als host fungeert voor de NDES-connector. Gebruik de PowerShell-cmdlet [add-CertificateEnrollmentPolicyServer](https://docs.microsoft.com/powershell/module/pkiclient/add-certificateenrollmentpolicyserver?view=win10-ps) om de naam te configureren.
+Configureer handmatig de naam van certificaatinschrijvingsbeleidsserver op de computer die als host fungeert voor de NDES-connector. Gebruik de PowerShell-cmdlet [add-CertificateEnrollmentPolicyServer](/powershell/module/pkiclient/add-certificateenrollmentpolicyserver?view=win10-ps) om de naam te configureren.
 
 ### <a name="the-submission-is-pending"></a>De verzending is in behandeling
 

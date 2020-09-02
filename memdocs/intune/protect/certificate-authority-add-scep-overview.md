@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c757688dec9d7c484ec2c71f86177ffbdf3a92d3
-ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
+ms.openlocfilehash: 8cb847410bf04b4d7d8132e2069b6ced1751b921
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871998"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913576"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>Partnercertificeringsinstanties toevoegen in Intune met behulp van SCEP
 
@@ -70,7 +70,7 @@ Voordat u externe certificeringsinstanties gaat integreren met Intune, moet u be
 
 Als u wilt toestaan dat een externe SCEP-server aangepaste vragen kan valideren met Intune, moet u een app maken in Azure AD. Deze app verleent gedelegeerde rechten aan Intune om SCEP-aanvragen te valideren.
 
-Zorg ervoor dat u over de vereiste machtigingen beschikt om een Azure AD-app te registreren. Zie [Vereiste machtigingen](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal#required-permissions) in de documentatie van Azure AD.
+Zorg ervoor dat u over de vereiste machtigingen beschikt om een Azure AD-app te registreren. Zie [Vereiste machtigingen](/azure/azure-resource-manager/resource-group-create-service-principal-portal#required-permissions) in de documentatie van Azure AD.
 
 #### <a name="create-an-application-in-azure-active-directory"></a>Een toepassing maken in Azure Active Directory  
 

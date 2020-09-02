@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0357f8fe751738bc3f8a5198db96b2113ee16bfc
-ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
+ms.openlocfilehash: 20d3f3967fa77ab90229915afc8b05043004b125
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559491"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909343"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Instellingen in Windows 10 en later om te markeren of apparaten wel of niet conform zijn met behulp van Intune
 
@@ -49,14 +49,14 @@ Gebruik deze nalevingsinstellingen als Intune-beheerder om de resources van uw o
   - **Niet geconfigureerd** (*standaard*) - Deze instelling wordt niet beoordeeld op naleving of niet-naleving.
   - **Vereisen** - Het apparaat kan gegevens die op de schijf zijn opgeslagen, beveiligen tegen onbevoegde toegang wanneer het systeem is uitgeschakeld of zich in de slaapstand bevindt.
   
-  [HealthAttestation CSP - BitLockerStatus van het apparaat](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp)
+  [HealthAttestation CSP - BitLockerStatus van het apparaat](/windows/client-management/mdm/healthattestation-csp)
 
 - **Vereisen dat beveiligd opstarten wordt ingeschakeld op het apparaat**:  
   - **Niet geconfigureerd** (*standaard*) - Deze instelling wordt niet beoordeeld op naleving of niet-naleving.
   - **Vereisen** - Het systeem wordt geforceerd opgestart in een vertrouwde fabrieksstatus. De belangrijkste onderdelen die worden gebruikt om de machine op te starten, moeten de juiste cryptografische handtekeningen hebben die worden vertrouwd door de organisatie die het apparaat heeft gemaakt. De UEFI-firmware verifieert de digitale handtekening voordat de computer kan worden opgestart. Als de bestanden zijn gemanipuleerd, waardoor de bijbehorende handtekening is beschadigd, kan het systeem niet worden gestart.
 
   > [!NOTE]
-  > De instelling **Vereisen dat beveiligd opstarten wordt ingeschakeld op het apparaat** wordt ondersteund op bepaalde TPM 1.2- en 2.0-apparaten. Voor apparaten die geen ondersteuning bieden voor TPM 2.0 of later, wordt de beleidsstatus in Intune weergegeven als **Niet-conform**. Zie [Apparaatstatusverklaring](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation) voor meer informatie over ondersteunde versies.
+  > De instelling **Vereisen dat beveiligd opstarten wordt ingeschakeld op het apparaat** wordt ondersteund op bepaalde TPM 1.2- en 2.0-apparaten. Voor apparaten die geen ondersteuning bieden voor TPM 2.0 of later, wordt de beleidsstatus in Intune weergegeven als **Niet-conform**. Zie [Apparaatstatusverklaring](/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation) voor meer informatie over ondersteunde versies.
 
 - **Code-integriteit vereisen**:  
   Code-integriteit is een functie waarmee de integriteit van een stuurprogramma of systeembestand wordt gevalideerd telkens wanneer dit in het geheugen wordt geladen.
@@ -65,7 +65,7 @@ Gebruik deze nalevingsinstellingen als Intune-beheerder om de resources van uw o
 
 Meer resources:
 
-- Zie [Health Attestation CSP](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp) voor meer informatie over de werking van de Health Attestation-service.
+- Zie [Health Attestation CSP](/windows/client-management/mdm/healthattestation-csp) voor meer informatie over de werking van de Health Attestation-service.
 - [Ondersteuningstip: Apparaatstatusverklaring gebruiken als onderdeel van uw Intune-nalevingsbeleid](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643).
 
 ## <a name="device-properties"></a>Apparaateigenschappen
@@ -140,8 +140,8 @@ Geldt alleen voor gezamenlijk beheerde apparaten met Windows 10 en hoger. Appara
     > [!TIP]
     > Beleidsregels van alfanumerieke wachtwoorden kunnen ingewikkeld zijn. Wij raden beheerders aan om de CSP's te lezen voor meer informatie:
     >
-    > - [DeviceLock/AlphanumericDevicePasswordRequired CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-alphanumericdevicepasswordrequired)
-    > - [DeviceLock/MinDevicePasswordComplexCharacters CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-mindevicepasswordcomplexcharacters)
+    > - [DeviceLock/AlphanumericDevicePasswordRequired CSP](/windows/client-management/mdm/policy-csp-devicelock#devicelock-alphanumericdevicepasswordrequired)
+    > - [DeviceLock/MinDevicePasswordComplexCharacters CSP](/windows/client-management/mdm/policy-csp-devicelock#devicelock-mindevicepasswordcomplexcharacters)
 
 - **Minimale wachtwoordlengte**:  
   Voer het aantal cijfers of tekens in waaruit het wachtwoord minimaal moet bestaan.
@@ -169,7 +169,7 @@ Geldt alleen voor gezamenlijk beheerde apparaten met Windows 10 en hoger. Appara
   - **Niet geconfigureerd** (*standaard*)
   - **Vereisen** - Gebruik *Vereisen* om de gegevensopslag op uw apparaten te versleutelen.
   
-   [DeviceStatus CSP - DeviceStatus/Compliance/EncryptionCompliance](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+   [DeviceStatus CSP - DeviceStatus/Compliance/EncryptionCompliance](/windows/client-management/mdm/devicestatus-csp)
 
   > [!NOTE]
   > Met de instelling **Versleuteling van gegevensopslag op een apparaat** wordt algemeen gecontroleerd of er op het apparaat wordt versleuteld. Voor betere versleutelingsinstelling kunt u overwegen om **BitLocker vereisen** te gebruiken. Hierbij wordt gebruikgemaakt van de Windows-apparaatstatusverklaring om de Bitlocker-status op TPM-niveau te valideren.
@@ -180,28 +180,28 @@ Geldt alleen voor gezamenlijk beheerde apparaten met Windows 10 en hoger. Appara
   - **Niet geconfigureerd** (*standaard*): Intune beheert de Microsoft Defender-firewall niet en wijzigt evenmin bestaande instellingen.
   - **Vereisen**: Microsoft Defender-firewall inschakelen en voorkomen dat gebruikers deze functie kunnen uitschakelen.
 
-  [Firewall-CSP](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp)
+  [Firewall-CSP](/windows/client-management/mdm/firewall-csp)
 
   > [!NOTE]
-  > Als het apparaat onmiddellijk wordt gesynchroniseerd nadat het opnieuw is opgestart, of als het apparaat direct wordt gesynchroniseerd na te zijn geactiveerd uit de slaapstand, rapporteert deze instelling mogelijk **fout**. Dit scenario heeft mogelijk geen invloed op de algehele compatibiliteitsstatus van de apparaat. Als u de compatibiliteitsstatus opnieuw wilt evalueren, moet u [het apparaat handmatig synchroniseren](https://docs.microsoft.com/mem/intune/user-help/sync-your-device-manually-windows).
+  > Als het apparaat onmiddellijk wordt gesynchroniseerd nadat het opnieuw is opgestart, of als het apparaat direct wordt gesynchroniseerd na te zijn geactiveerd uit de slaapstand, rapporteert deze instelling mogelijk **fout**. Dit scenario heeft mogelijk geen invloed op de algehele compatibiliteitsstatus van de apparaat. Als u de compatibiliteitsstatus opnieuw wilt evalueren, moet u [het apparaat handmatig synchroniseren](../user-help/sync-your-device-manually-windows.md).
 
 - **Trusted Platform Module (TPM)** :  
   - **Niet geconfigureerd** (*standaard*): Intune controleert het apparaat niet op een TPM-chipversie.
   - **Vereisen**: Intune controleert of de TPM-chipversie compatibel is. Het apparaat is compatibel als de TPM-chipversie groter is dan **0** (nul). Het apparaat is niet compatibel als er zich geen TPM-versie op het apparaat bevindt.
 
-  [DeviceStatus CSP - DeviceStatus/TPM/SpecificationVersion](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+  [DeviceStatus CSP - DeviceStatus/TPM/SpecificationVersion](/windows/client-management/mdm/devicestatus-csp)
   
 - **Antivirus**:  
   - **Niet geconfigureerd** (*standaard*) - Intune controleert niet of er antivirusoplossingen op het apparaat zijn geïnstalleerd.
   - **Vereisen** - Controleer de naleving met behulp van antivirusoplossingen die zijn geregistreerd bij [Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), zoals Symantec en Microsoft Defender.
 
-  [DeviceStatus CSP - DeviceStatus/Antivirus/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+  [DeviceStatus CSP - DeviceStatus/Antivirus/Status](/windows/client-management/mdm/devicestatus-csp)
 
 - **Antispyware**:  
   - **Niet geconfigureerd** (*standaard*) - Intune controleert niet of er antispywareoplossingen op het apparaat zijn geïnstalleerd.
   - **Vereisen** - Controleer de naleving met behulp van antispywareoplossingen die zijn geregistreerd bij [Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), zoals Symantec en Microsoft Defender.
 
-  [DeviceStatus CSP - DeviceStatus/Antispyware/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+  [DeviceStatus CSP - DeviceStatus/Antispyware/Status](/windows/client-management/mdm/devicestatus-csp)
 
 ### <a name="defender"></a>Defender
 
@@ -221,7 +221,7 @@ Geldt alleen voor gezamenlijk beheerde apparaten met Windows 10 en hoger. Appara
   - **Niet geconfigureerd** (*standaard*): Intune dwingt geen vereisten af.
   - **Vereisen**: afdwingen dat de beveiligingsinformatie van Microsoft Defender- up-to-date is.
 
-  [Defender CSP - Defender/Health/SignatureOutOfDate CSP](https://docs.microsoft.com/windows/client-management/mdm/defender-csp)
+  [Defender CSP - Defender/Health/SignatureOutOfDate CSP](/windows/client-management/mdm/defender-csp)
   
   Zie [Updates van beveiligingsinformatie voor Microsoft Defender Antivirus en andere Microsoft-antimalware](https://www.microsoft.com/en-us/wdsi/defenderupdates) voor meer informatie.
 
@@ -229,7 +229,7 @@ Geldt alleen voor gezamenlijk beheerde apparaten met Windows 10 en hoger. Appara
   - **Niet geconfigureerd** (*standaard*): Intune beheert deze functie niet en wijzigt evenmin bestaande instellingen.
   - **Vereisen**: realtime-beveiliging inschakelen, waarmee op malware, spyware en andere ongewenste software wordt gescand.  
 
-  [Policy CSP - Defender/AllowRealtimeMonitoring CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
+  [Policy CSP - Defender/AllowRealtimeMonitoring CSP](/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
 ## <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
 
@@ -251,7 +251,7 @@ Windows Holographic for Business gebruikt het **Windows 10 en hoger**-platform. 
 
 - **Systeembeveiliging** > **Versleuteling** > **Versleuteling van opslag van gegevens op apparaat**.
 
-Zie [Verify device encryption](https://docs.microsoft.com/hololens/security-encryption-data-protection) (Apparaatversleuteling controleren) om apparaatversleuteling te controleren op de Microsoft HoloLens.
+Zie [Verify device encryption](/hololens/security-encryption-data-protection) (Apparaatversleuteling controleren) om apparaatversleuteling te controleren op de Microsoft HoloLens.
 
 ## <a name="surface-hub"></a>Surface Hub
 

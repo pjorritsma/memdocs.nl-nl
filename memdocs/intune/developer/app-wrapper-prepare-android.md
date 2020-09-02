@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 69a694ab9da7987271214bc6919cd3b676f9814e
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 82c27aaef1f30e4f021f6370d5c7cf7ce157f3c0
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166056"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908850"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Android-apps voorbereiden voor app-beveiligingsbeleid met Intune App Wrapping Tool
 
@@ -99,7 +99,7 @@ Onthoud in welke map het hulpprogramma is geïnstalleerd. De standaardlocatie is
 | **&lt;CommonParameters&gt;** | (Optioneel) De opdracht ondersteunt algemene PowerShell-parameters, zoals verbose, debug enzovoort. |
 
 
-- Zie voor een lijst met algemene parameters het [Microsoft Script Center](https://technet.microsoft.com/library/hh847884.aspx).
+- Zie voor een lijst met algemene parameters het [Microsoft Script Center](/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 - Als u gedetailleerde gebruiksinformatie over de App Wrapping Tool wilt weergeven, voert u deze opdracht in:
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: daa4d079d60dc7474e5ba6a140e07a77e25b347d
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 28b213ff690dcc745f023f8deb225b0bd6ef9bc1
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165971"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908799"
 ---
 # <a name="intune-data-warehouse-application-only-authentication"></a>Intune Datawarehouse-verificatie enkel voor toepassing
 
@@ -31,7 +31,7 @@ U kunt een toepassing instellen met behulp van Azure Active Directory (Azure AD)
 
 ## <a name="authorization"></a>Autorisatie
 
-Azure Active Directory (Azure AD) maakt gebruik van OAuth 2.0 om het mogelijk te maken dat u toegang tot webtoepassingen en web-API's in uw Azure AD-tenant kunt autoriseren. In deze handleiding wordt beschreven hoe u uw toepassing verifieert met C#. De OAuth 2.0-autorisatiecodestroom wordt beschreven in sectie 4.1 van de OAuth 2.0-specificatie. Zie [Toegang tot webtoepassingen die gebruikmaken van OAuth 2.0 en Azure Active Directory autoriseren](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code) voor meer informatie.
+Azure Active Directory (Azure AD) maakt gebruik van OAuth 2.0 om het mogelijk te maken dat u toegang tot webtoepassingen en web-API's in uw Azure AD-tenant kunt autoriseren. In deze handleiding wordt beschreven hoe u uw toepassing verifieert met C#. De OAuth 2.0-autorisatiecodestroom wordt beschreven in sectie 4.1 van de OAuth 2.0-specificatie. Zie [Toegang tot webtoepassingen die gebruikmaken van OAuth 2.0 en Azure Active Directory autoriseren](/azure/active-directory/develop/active-directory-protocols-oauth-code) voor meer informatie.
 
 
 ## <a name="azure-keyvault"></a>Azure KeyVault
@@ -51,7 +51,7 @@ In deze sectie geeft u informatie over de web-app waarnaar u in Intune wilt verw
 
     - Een app-naam, bijvoorbeeld *Intune App-Only Auth*.
     - Het **Toepassingstype**. Kies **Web-app/API** om een app toe te voegen die een webtoepassing, een web-API of beide is.
-    - De **Aanmeldings-URL** van de toepassing. Dit is de locatie waar gebruikers tijdens het verificatieproces automatisch naartoe navigeren. Ze moeten bewijzen dat ze zijn wie ze beweren te zijn. Bekijk [What is application access and single sign-on with Azure Active Directory?](https://docs.microsoft.com/azure/active-directory/active-directory-appssoaccess-whatis) (wat is toepassingstoegang en eenmalige aanmelding met Azure Active Directory?) voor meer informatie.
+    - De **Aanmeldings-URL** van de toepassing. Dit is de locatie waar gebruikers tijdens het verificatieproces automatisch naartoe navigeren. Ze moeten bewijzen dat ze zijn wie ze beweren te zijn. Bekijk [What is application access and single sign-on with Azure Active Directory?](/azure/active-directory/active-directory-appssoaccess-whatis) (wat is toepassingstoegang en eenmalige aanmelding met Azure Active Directory?) voor meer informatie.
 
 7. Klik onderaan de blade **Maken** op **Maken**.
 
@@ -164,5 +164,4 @@ Maak in Visual Studio een Console-app-project (.NET Framework) dat het .NET Fram
     > Bekijk het [Intune Datawarehouse-codevoorbeeld](https://github.com/Microsoft/Intune-Data-Warehouse/tree/master/Samples/CSharp ) voor aanvullende implementatiecode.
 
 ## <a name="next-steps"></a>Volgende stappen
-Lees meer informatie over Azure Key Vault in [Wat is Azure Key Vault?](https://docs.microsoft.com/azure/key-vault/key-vault-whatis)
-
+Lees meer informatie over Azure Key Vault in [Wat is Azure Key Vault?](/azure/key-vault/key-vault-whatis)

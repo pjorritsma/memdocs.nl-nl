@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5ff2898f97bbef4cba0d14d4810a503d613cff18
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: f94fdd6dcad0b1d1e05caa38dbdfd63dd8746013
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077917"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915225"
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Waar is de Intune-functie die ik zoek gebleven in Azure?
 Bij het verplaatsen van Intune naar de Azure-portal hebben we van de gelegenheid gebruikgemaakt om een aantal taken logischer in te delen. Maar dergelijke verbeteringen betekenen wel dat u de nieuwe indeling moet leren kennen. Deze referentiegids is speciaal bedoeld voor degenen die heel vertrouwd zijn met Intune in de klassieke portal, en die zich afvragen waar bepaalde functies in Intune zijn gebleven in Azure Portal. Als een functie die u zoekt niet wordt behandeld in dit artikel, laat dan een reactie achter onder het artikel, zodat we het kunnen bijwerken.
@@ -45,7 +45,7 @@ Instellingen voor de bedrijfsportal|Beheer > Bedrijfsportal|**Beheer** > Mobiele
 
 
 ## <a name="where-do-i-manage-groups"></a>Waar kan ik groepen beheren?
-Intune in de Azure-portal gebruikt [Azure Active Directory (AD)](https://docs.microsoft.com/azure/active-directory/active-directory-groups-create-azure-portal) om groepen te beheren.
+Intune in de Azure-portal gebruikt [Azure Active Directory (AD)](/azure/active-directory/active-directory-groups-create-azure-portal) om groepen te beheren.
 
 ## <a name="where-did-enrollment-rules-go"></a>Waar zijn de inschrijvingsregels gebleven?
 In de klassieke portal kunt u regels instellen voor de MDM-inschrijving van mobiele en moderne Windows- en macOS-apparaten.
@@ -73,7 +73,7 @@ Nieuwe beperkingsmogelijkheden worden uitsluitend toegevoegd aan Azure Portal.
 ## <a name="where-did-my-conditional-access-policies-go"></a>Waar is mijn beleid voor voorwaardelijke toegang?
 Nadat uw tenant is gemigreerd naar de Azure-portal, blijven de beleidsregels voor voorwaardelijke toegang van uw tenant van kracht. U kunt deze echter niet weergeven of wijzigen via Intune in Azure Portal.
 
-Als u beleidsregels voor voorwaardelijke toegang wilt weergeven en er wijzigingen in wilt aanbrengen via de Azure-portal, moet u de oude beleidsregels verwijderen uit de klassieke portal. U maakt ze daarna opnieuw in Azure Portal. Raadpleeg [Klassiek beleid migreren in de Azure-portal](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-migration) voor meer informatie over het migreren van beleidsregels voor voorwaardelijke toegang. 
+Als u beleidsregels voor voorwaardelijke toegang wilt weergeven en er wijzigingen in wilt aanbrengen via de Azure-portal, moet u de oude beleidsregels verwijderen uit de klassieke portal. U maakt ze daarna opnieuw in Azure Portal. Raadpleeg [Klassiek beleid migreren in de Azure-portal](/azure/active-directory/active-directory-conditional-access-migration) voor meer informatie over het migreren van beleidsregels voor voorwaardelijke toegang. 
 
 ## <a name="where-did-my-compliance-policies-go"></a>Waar is mijn nalevingsbeleid gebleven?
 Nadat uw tenant is gemigreerd naar Azure Portal, blijft het nalevingsbeleid van uw tenant van kracht. U kunt deze echter niet weergeven of wijzigen via Intune in Azure Portal.

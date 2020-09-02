@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 752e2b1948c1c56c77866b69365d0da2859dd279
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 09da822557e27eca29da2afc342c93a76d698d6c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531637"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909921"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>Beleidssets gebruiken om verzamelingen beheerobjecten te groeperen
 
@@ -71,7 +71,7 @@ Wanneer u een beleidsset maakt, maakt u één toewijzingseenheid en beheert u ko
 5. Klik op **Volgende: apparaatbeheer**.<br>
    Op de pagina **Apparaatbeheer** kunt u apparaatbeheerobjecten toevoegen aan uw beleidsset, zoals [apparaatconfiguratieprofielen](../configuration/device-profiles.md) en [nalevingsbeleid voor apparaten](../protect/device-compliance-get-started.md). Zorg ervoor dat u alle gekoppelde objecten opneemt, zoals andere beleidsregels, certificaten en profielen voor beveiligingsbasislijnprofielen.
 6. Klik op **Volgende: apparaatinschrijving**.<br>
-   Op de pagina **Apparaatinschrijving** kunt u inschrijvingsobjecten voor apparaten toevoegen aan uw beleidsset, zoals [beperkingen voor apparaattypen](../enrollment/enrollment-restrictions-set.md), [implementatieprofielen voor Windows Autopilot](../enrollment/enrollment-autopilot.md) en [profielen voor inschrijvingsstatuspagina](../enrollment/windows-enrollment-status.md).
+   Op de pagina **Apparaatinschrijving** kunt u inschrijvingsobjecten voor apparaten toevoegen aan uw beleidsset, zoals [beperkingen voor apparaattypen](../enrollment/enrollment-restrictions-set.md), [implementatieprofielen voor Windows Autopilot](../../autopilot/enrollment-autopilot.md) en [profielen voor inschrijvingsstatuspagina](../enrollment/windows-enrollment-status.md).
 7. Klik op **Volgende: toewijzingen**.<br>
    Op de pagina **Toewijzingen** kunt u de beleidsinstelling toewijzen aan gebruikers en apparaten. Het is belangrijk dat u weet dat u een app kunt toewijzen aan een apparaat, ongeacht of het apparaat wordt beheerd in Intune.
 8. Klik op **Volgende: beoordelen en maken** om de waarden te controleren die u hebt ingevoerd voor het profiel.

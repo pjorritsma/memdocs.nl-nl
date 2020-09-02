@@ -16,19 +16,19 @@ ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da43cab373021107a940ce0bd71c0f4986d5e907
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: fb981563c2d98389f6d1dda4d050e391e9ad5637
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179618"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910465"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Line-of-business-apps ondertekenen, zodat ze kunnen worden geïmplementeerd op Windows-apparaten met Intune
 
 Als Intune-beheerder kunt u universele LOB-apps (Line-of-Business) implementeren op Windows 8.1 Desktop of Windows 10 Desktop en Mobile-apparaten, met inbegrip van de bedrijfsportal-app. Als u *APPX*-apps wilt implementeren op Windows 8.1 Desktop- of Windows 10 Desktop- en Mobile-apparaten, kunt u een certificaat voor ondertekening bij programmacode van een openbare certificeringsinstantie gebruiken die al wordt vertrouwd op uw Windows-apparaten, of u kunt uw eigen certificeringsinstantie gebruiken.
 
  > [!NOTE]
- > Voor Windows 8.1 Desktop is bedrijfsbeleid vereist om sideloaden mogelijk te maken, of u moet sideloadsleutels gebruiken (automatisch ingeschakeld voor aan een domein toegevoegde apparaten). Zie [Windows 8 sideloaden](https://blogs.technet.microsoft.com/scd-odtsp/2012/09/27/windows-8-sideloading-requirements-from-technet/)voor meer informatie.
+ > Voor Windows 8.1 Desktop is bedrijfsbeleid vereist om sideloaden mogelijk te maken, of u moet sideloadsleutels gebruiken (automatisch ingeschakeld voor aan een domein toegevoegde apparaten). Zie [Windows 8 sideloaden](/archive/blogs/scd-odtsp/windows-8-sideloading-requirements-from-technet)voor meer informatie.
 
 ## <a name="windows-10-sideloading"></a>Sideloaden in Windows 10
 
@@ -36,11 +36,11 @@ In Windows 10 is sideloaden anders dan in eerdere versies van Windows:
 
 - Met behulp van bedrijfsbeleid kunt u een apparaat ontgrendelen voor sideloaden. Intune biedt configuratiebeleid voor apparaten genaamd Vertrouwde app-installatie. U hoeft dit beleid alleen maar in stellen op <allow> voor apparaten waarop het certificaat dat wordt gebruikt om de APPX-app te ondertekenen, al wordt vertrouwd.
 
-- Symantec Phone-certificaten en sideloadlicentiesleutels zijn niet vereist. Als er echter geen on-premises certificeringsinstantie beschikbaar is, moet u mogelijk een certificaat voor ondertekening van programmacode verkrijgen bij een openbare certificeringsinstantie. Zie [Inleiding tot ondertekening van programmacode](https://docs.microsoft.com/windows/desktop/SecCrypto/cryptography-tools#introduction-to-code-signing) voor meer informatie.
+- Symantec Phone-certificaten en sideloadlicentiesleutels zijn niet vereist. Als er echter geen on-premises certificeringsinstantie beschikbaar is, moet u mogelijk een certificaat voor ondertekening van programmacode verkrijgen bij een openbare certificeringsinstantie. Zie [Inleiding tot ondertekening van programmacode](/windows/desktop/SecCrypto/cryptography-tools#introduction-to-code-signing) voor meer informatie.
 
 ### <a name="code-sign-your-app"></a>Ondertekenen van programmacode voor uw app
 
-De eerste stap is het ondertekenen van programmacode voor uw appx-pakket. Zie [Sign app package using SignTool](https://docs.microsoft.com/windows/uwp/packaging/sign-app-package-using-signtool) (App-pakket ondertekenen met behulp van SignTool) voor meer informatie.
+De eerste stap is het ondertekenen van programmacode voor uw appx-pakket. Zie [Sign app package using SignTool](/windows/uwp/packaging/sign-app-package-using-signtool) (App-pakket ondertekenen met behulp van SignTool) voor meer informatie.
 
 ### <a name="upload-your-app"></a>Uw app uploaden
 
@@ -98,7 +98,7 @@ Als u geen toegang wilt bieden tot de Microsoft Store, kunt u de Bedrijfsportal-
       <img alt="Error message - The Windows app dependency must be provided." src="./media/app-sideload-windows/Win10CP-error-message.png" width="200">
 6. Ga terug naar Intune en upload the Bedrijfsportal-app als nieuwe app. Implementeer als vereiste app naar de gewenste set doelgebruikers.  
 
-Zie [Deploying an appxbundle with dependencies via Microsoft Intune MDM](https://blogs.technet.microsoft.com/configmgrdogs/2016/11/30/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm/) (Een appxbundle met afhankelijkheden implementeren via Microsoft Intune MDM) voor meer informatie over hoe Intune afhankelijkheden voor universele apps verwerkt.  
+Zie [Deploying an appxbundle with dependencies via Microsoft Intune MDM](/archive/blogs/configmgrdogs/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm) (Een appxbundle met afhankelijkheden implementeren via Microsoft Intune MDM) voor meer informatie over hoe Intune afhankelijkheden voor universele apps verwerkt.  
 
 ### <a name="how-do-i-update-the-company-portal-on-my-users-devices-if-they-have-already-installed-the-older-apps-from-the-store"></a>Hoe kan ik de Bedrijfsportal op de apparaten van mijn gebruikers bijwerken als hierop al de oudere apps uit de Store zijn geïnstalleerd?
 
@@ -136,4 +136,4 @@ U ondertekent en implementeert de app als volgt:
 |      PublisherId      |      De uitgevers-id van de onderneming. Als deze niet is opgegeven, wordt het veld Onderwerp van Symantec Enterprise-certificaat voor ondertekening van mobiele code gebruikt.       |
 |        SdkPath        | Het pad naar de hoofdmap van de Windows-SDK voor Windows 10. Dit argument is optioneel en wordt standaard ingesteld op ${env:ProgramFiles(x86)} \Windows Kits\10 |
 
-Via het script wordt de ondertekende versie van de Windows 10-bedrijfsportal-app uitgevoerd wanneer het uitvoeren van de app is voltooid. Vervolgens implementeert u de ondertekende versie van de app als een LOB-app via Intune. De huidige geïmplementeerde versies worden bijgewerkt naar deze nieuwe app.  
+Via het script wordt de ondertekende versie van de Windows 10-bedrijfsportal-app uitgevoerd wanneer het uitvoeren van de app is voltooid. Vervolgens implementeert u de ondertekende versie van de app als een LOB-app via Intune. De huidige geïmplementeerde versies worden bijgewerkt naar deze nieuwe app.

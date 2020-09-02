@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0f4080c5cfcc6635478bd88b7d9edf42dd3d8576
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: 80f49d00f042037d0833df9536d792fda6f9068b
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179482"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910363"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>PowerShell-scripts op Windows 10-apparaten gebruiken in Intune
 
@@ -51,14 +51,14 @@ De Intune-beheeruitbreiding heeft de volgende vereisten. Zodra aan de vereisten 
   
 - Apparaten die zijn gekoppeld aan Azure Active Directory (AD), met inbegrip van:  
   
-  - Hybride Azure AD-koppeling: Apparaten die aan Azure Active Directory (AD) én aan een on-premises Active Directory (AD) zijn gekoppeld. Zie [De implementatie van uw hybride Azure Active Directory-deelname plannen](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan) voor hulp.
+  - Hybride Azure AD-koppeling: Apparaten die aan Azure Active Directory (AD) én aan een on-premises Active Directory (AD) zijn gekoppeld. Zie [De implementatie van uw hybride Azure Active Directory-deelname plannen](/azure/active-directory/devices/hybrid-azuread-join-plan) voor hulp.
   
   > [!TIP]
-  > Zorg ervoor dat apparaten zijn [gekoppeld](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) aan Azure AD. Apparaten die alleen [geregistreerd](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) zijn in Azure AD zullen scripts niet ontvangen.  
+  > Zorg ervoor dat apparaten zijn [gekoppeld](/azure/active-directory/user-help/user-help-join-device-on-network) aan Azure AD. Apparaten die alleen [geregistreerd](/azure/active-directory/user-help/user-help-register-device-on-network) zijn in Azure AD zullen scripts niet ontvangen.  
 
 - Apparaten die zijn ingeschreven bij Intune, met inbegrip van:
 
-  - Apparaten die zijn ingeschreven bij een groepsbeleid (GPO). Zie [Enroll a Windows 10 device automatically using Group Policy](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy) (Windows 10-apparaten automatisch inschrijven aan de hand van groepsbeleid) voor hulp.
+  - Apparaten die zijn ingeschreven bij een groepsbeleid (GPO). Zie [Enroll a Windows 10 device automatically using Group Policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy) (Windows 10-apparaten automatisch inschrijven aan de hand van groepsbeleid) voor hulp.
   
   - Handmatig bij Intune ingeschreven apparaten. Dit is in de volgende situaties het geval:
   
@@ -70,9 +70,9 @@ De Intune-beheeruitbreiding heeft de volgende vereisten. Zodra aan de vereisten 
 
   - Gezamenlijk beheerde apparaten waarop gebruik wordt gemaakt Configuration Manager en Intune. Wanneer u Win32-apps installeert, moet u ervoor zorgen dat de workload van **Apps** is ingesteld op **Testfase voor Intune** of **Intune**. PowerShell-scripts worden zelfs uitgevoerd als de workload voor **Apps** is ingesteld op **Configuration Manager**. De Intune-beheerextensie wordt geïmplementeerd op een apparaat wanneer u een PowerShell-script naar het apparaat target. Zoals hierboven vermeld, moet het apparaat echter een Azure AD- of hybride Azure AD-gekoppeld apparaat zijn met Windows 10 versie 1607 of hoger. Raadpleeg de volgende artikelen voor meer informatie: 
   
-    - [Wat is co-beheer?](https://docs.microsoft.com/configmgr/comanage/overview) 
-    - [Workload Client-apps](https://docs.microsoft.com/configmgr/comanage/workloads#client-apps)
-    - [Configuration Manager-workloads overschakelen naar Intune](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads)
+    - [Wat is co-beheer?](/configmgr/comanage/overview) 
+    - [Workload Client-apps](/configmgr/comanage/workloads#client-apps)
+    - [Configuration Manager-workloads overschakelen naar Intune](/configmgr/comanage/how-to-switch-workloads)
   
 > [!NOTE]
 > Zie [Virtuele Windows 10-machines gebruiken met Intune](../fundamentals/windows-10-virtual-machines.md) voor meer informatie over het gebruik van virtuele Windows 10-machines.
@@ -169,7 +169,7 @@ Selecteer in **PowerShell-scripts** het script dat u wilt controleren, kies **Co
 
 ## <a name="intune-management-extension-logs"></a>Intune-beheeruitbreidingslogboeken
 
-Agentlogboeken op de clientcomputer staan meestal in `\ProgramData\Microsoft\IntuneManagementExtension\Logs`. U kunt [CMTrace.exe](https://docs.microsoft.com/configmgr/core/support/cmtrace) gebruiken om deze logboekbestanden te bekijken.
+Agentlogboeken op de clientcomputer staan meestal in `\ProgramData\Microsoft\IntuneManagementExtension\Logs`. U kunt [CMTrace.exe](/configmgr/core/support/cmtrace) gebruiken om deze logboekbestanden te bekijken.
 
 ![Schermopname of voorbeeldlogboeken van de cmtrace-agent in Microsoft Intune](./media/apps-win32-app-management/apps-win32-app-10.png)  
 
@@ -210,7 +210,7 @@ Als u wilt zien of het apparaat automatisch wordt ingeschreven, kunt u het volge
     > [!TIP]
     > De **Microsoft Intune-beheeruitbreiding** is een service die wordt uitgevoerd op het apparaat, net als andere services die in de app Services worden vermeld (services.msc). Nadat een apparaat opnieuw is opgestart, wordt deze service mogelijk ook opnieuw opgestart. Er wordt dan gecontroleerd op aan de Intune-service toegewezen PowerShell-scripts. Als de **Microsoft Intune-beheeruitbreiding** is ingesteld op Handmatig, wordt de service mogelijk niet opnieuw opgestart wanneer het apparaat opnieuw wordt opgestart.
 
-- Zorg ervoor dat apparaten zijn [gekoppeld aan Azure AD](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network). Apparaten die alleen zijn toegevoegd aan uw werkplek of organisatie ([geregistreerd](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) in Azure AD) ontvangt uw scripts niet.
+- Zorg ervoor dat apparaten zijn [gekoppeld aan Azure AD](/azure/active-directory/user-help/user-help-join-device-on-network). Apparaten die alleen zijn toegevoegd aan uw werkplek of organisatie ([geregistreerd](/azure/active-directory/user-help/user-help-register-device-on-network) in Azure AD) ontvangt uw scripts niet.
 - De client met de Intune-beheeruitbreiding controleert eenmaal per uur op wijzigingen in het script of het beleid in Intune.
 - Controleer of de Intune-beheeruitbreiding is gedownload naar `%ProgramFiles(x86)%\Microsoft Intune Management Extension`.
 - Scripts worden in de S-modus niet uitgevoerd op Surface Hubs en in Windows 10.
@@ -219,7 +219,7 @@ Als u wilt zien of het apparaat automatisch wordt ingeschreven, kunt u het volge
 
 - Om scriptproblemen te isoleren, kunt u:
 
-  - Controleer de configuratie van PowerShell-uitvoering op uw apparaten. Zie het [PowerShell-uitvoeringsbeleid](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-6) voor hulp.
+  - Controleer de configuratie van PowerShell-uitvoering op uw apparaten. Zie het [PowerShell-uitvoeringsbeleid](/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-6) voor hulp.
   - Voer een voorbeeldscript uit via de Intune-beheeruitbreiding. Maak bijvoorbeeld een map `C:\Scripts` en geef iedereen volledig beheer voor die map. Voer het volgende script uit:
 
     ```powershell
@@ -228,7 +228,7 @@ Als u wilt zien of het apparaat automatisch wordt ingeschreven, kunt u het volge
 
     Als dat lukt, moet output.txt worden gemaakt dat de tekst 'Script worked' bevat.
 
-  - Als u de uitvoering van het script wilt testen zonder Intune, voert u de scripts lokaal in het systeemaccount uit met behulp van het hulpprogramma [psexec](https://docs.microsoft.com/sysinternals/downloads/psexec):
+  - Als u de uitvoering van het script wilt testen zonder Intune, voert u de scripts lokaal in het systeemaccount uit met behulp van het hulpprogramma [psexec](/sysinternals/downloads/psexec):
 
     `psexec -i -s`  
     

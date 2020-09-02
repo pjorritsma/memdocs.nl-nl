@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 682934276a080323976e7045a14450dc382f4574
-ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
+ms.openlocfilehash: da725c63c340a3ff64e1f69f96f59bd5dea30eb3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83406586"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907891"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>Zelfstudie: De cloud gebruiken voor het configureren van groepsbeleid op Windows 10-apparaten met ADMX-sjablonen en Microsoft Intune
 
@@ -37,7 +37,7 @@ ADMX-sjablonen zijn beschikbaar voor de volgende services:
 - **Office**: download op [Microsoft 365 apps, Office 2019 en Office 2016](https://www.microsoft.com/download/details.aspx?id=49030).
 - **Windows**: ingebouwd in het Windows 10-besturingssysteem.
 
-Zie [Informatie over door ADMX ondersteund beleid](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies) voor meer informatie over ADMX-beleid.
+Zie [Informatie over door ADMX ondersteund beleid](/windows/client-management/mdm/understanding-admx-backed-policies) voor meer informatie over ADMX-beleid.
 
 In Microsoft Intune zijn deze sjablonen ingebouwd. Ze zijn beschikbaar als **beheersjabloonprofielen**. In dit profiel configureert u de instellingen die u wilt opnemen en vervolgens wijst u dit profiel toe aan uw apparaten.
 
@@ -57,7 +57,7 @@ Deze functie is van toepassing op:
 
 ## <a name="prerequisites"></a>Vereisten
 
-- Een Microsoft 365 E3- of E5-abonnement dat Intune en Azure Active Directory (AD) Premium bevat. Als u geen E3- of E5-abonnement hebt, kunt u [het gratis proberen](https://docs.microsoft.com/office365/admin/try-or-buy-microsoft-365?view=o365-worldwide).
+- Een Microsoft 365 E3- of E5-abonnement dat Intune en Azure Active Directory (AD) Premium bevat. Als u geen E3- of E5-abonnement hebt, kunt u [het gratis proberen](/office365/admin/try-or-buy-microsoft-365?view=o365-worldwide).
 
   Zie [Uw bedrijf transformeren met Microsoft 365](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans) voor meer informatie over wat u krijgt bij de verschillende Microsoft 365-licenties.
 
@@ -190,10 +190,10 @@ In deze volgende stappen maakt u beveiligingsgroepen en voegt u gebruikers toe a
 
 - Dynamische groepen zijn een functie in Azure AD Premium. Als u geen Azure AD Premium hebt, kunt u alleen toegewezen groepen maken. Voor meer informatie over dynamische groepen raadpleegt u:
 
-  - [Dynamisch groepslidmaatschap in Azure Active Directory (deel 1)](https://blogs.technet.microsoft.com/pauljones/2017/08/28/dynamic-group-membership-in-azure-active-directory-part-1/)
-  - [Dynamisch groepslidmaatschap in Azure Active Directory (deel 2)](https://blogs.technet.microsoft.com/pauljones/2017/08/29/dynamic-group-membership-in-azure-active-directory-part-2/)
+  - [Dynamisch groepslidmaatschap in Azure Active Directory (deel 1)](/archive/blogs/pauljones/dynamic-group-membership-in-azure-active-directory-part-1)
+  - [Dynamisch groepslidmaatschap in Azure Active Directory (deel 2)](/archive/blogs/pauljones/dynamic-group-membership-in-azure-active-directory-part-2)
 
-- Azure AD Premium bevat andere services die vaak worden gebruikt bij het beheren van apps en apparaten, waaronder [meervoudige verificatie (MFA)](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks) en [voorwaardelijke toegang](https://docs.microsoft.com/azure/active-directory/conditional-access/overview).
+- Azure AD Premium bevat andere services die vaak worden gebruikt bij het beheren van apps en apparaten, waaronder [meervoudige verificatie (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks) en [voorwaardelijke toegang](/azure/active-directory/conditional-access/overview).
 
 - Veel beheerders vragen wanneer ze gebruikersgroepen moeten gebruiken en wanneer ze apparaatgroepen moeten gebruiken. Zie [Gebruikersgroepen versus apparaatgroepen](device-profile-assign.md#user-groups-vs-device-groups) voor enkele richtlijnen.
 
@@ -420,7 +420,7 @@ Uw instellingen zien er ongeveer uit zoals de volgende:
 > [!div class="mx-imgBorder"]
 > ![Een OneDrive-beheersjabloon maken in Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/one-drive-administrative-template.png)
 
-Zie [Groepsbeleid gebruiken voor het beheren van instellingen voor OneDrive-synchronisatieclients](https://docs.microsoft.com/onedrive/use-group-policy) voor meer informatie over OneDrive-clientinstellingen.
+Zie [Groepsbeleid gebruiken voor het beheren van instellingen voor OneDrive-synchronisatieclients](/onedrive/use-group-policy) voor meer informatie over OneDrive-clientinstellingen.
 
 ### <a name="assign-your-template"></a>Uw sjabloon toewijzen
 
@@ -438,7 +438,7 @@ Op dit moment hebt u enkele beheersjablonen gemaakt en deze toegewezen aan groep
 In de sectie worden de volgende resources gebruikt. We gaan deze resources in deze sectie installeren.
 
 - [Intune PowerShell SDK](https://github.com/microsoft/Intune-PowerShell-SDK)
-- [Microsoft Graph API voor Intune](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-1.0)
+- [Microsoft Graph API voor Intune](/graph/api/resources/intune-graph-overview?view=graph-rest-1.0)
 
 1. Open op de **Beheercomputer** de optie **Windows PowerShell** als administrator:
 
@@ -458,7 +458,7 @@ In de sectie worden de volgende resources gebruikt. We gaan deze resources in de
 
     3. Voer `Y` in om het te wijzigen.
 
-    Het uitvoeringsbeleid van PowerShell helpt te voorkomen dat schadelijke scripts worden uitgevoerd. Zie [Over uitvoeringsbeleid](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies) voor meer informatie.
+    Het uitvoeringsbeleid van PowerShell helpt te voorkomen dat schadelijke scripts worden uitgevoerd. Zie [Over uitvoeringsbeleid](/powershell/module/microsoft.powershell.core/about/about_execution_policies) voor meer informatie.
 
 3. Voer in: `Install-Module -Name Microsoft.Graph.Intune`
 
@@ -581,7 +581,7 @@ Wanneer u deze niet meer nodig hebt, kunt u het volgende doen:
 
 ## <a name="next-steps"></a>Volgende stappen
 
-In deze zelfstudie bent u meer vertrouwd geraakt met het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431), hebt u de opbouwfunctie voor query's gebruikt om dynamische groepen te maken en hebt u beheersjablonen in Intune gemaakt om [ADMX-instellingen](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies) te configureren. U hebt ook het gebruik van ADMX-sjablonen on-premises en in de cloud met Intune vergeleken. Als bonus hebt u PowerShell-cmdlets gebruikt om een beheersjabloon te maken.
+In deze zelfstudie bent u meer vertrouwd geraakt met het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431), hebt u de opbouwfunctie voor query's gebruikt om dynamische groepen te maken en hebt u beheersjablonen in Intune gemaakt om [ADMX-instellingen](/windows/client-management/mdm/understanding-admx-backed-policies) te configureren. U hebt ook het gebruik van ADMX-sjablonen on-premises en in de cloud met Intune vergeleken. Als bonus hebt u PowerShell-cmdlets gebruikt om een beheersjabloon te maken.
 
 Voor meer informatie over beheersjablonen in Intune raadpleegt u:
 

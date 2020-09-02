@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3267bf4e59d6745e480a81f8bdc39cfa2827ea4
-ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
+ms.openlocfilehash: 3cabf3bad447ef3db8250d14fcb376cb86aefad3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506329"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907546"
 ---
 # <a name="set-up-a-telecom-expense-management-service-in-intune"></a>Een Telecom Expense Management-service instellen in Intune
 
@@ -184,8 +184,8 @@ De Datalert-service is nu actief. Er wordt begonnen met het controleren van het 
 
 Voor de ervaring van de eindgebruiker kunnen de volgende artikelen helpen:
 
-- [Uw iOS/iPadOS-apparaat registreren bij Telecom Expense Management](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-with-telecom-expense-management-ios)
-- [Uw Android-apparaat registreren bij Telecom Expense Management](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-with-telecom-expense-management-android)
+- [Uw iOS/iPadOS-apparaat registreren bij Telecom Expense Management](../user-help/enroll-your-device-with-telecom-expense-management-ios.md)
+- [Uw Android-apparaat registreren bij Telecom Expense Management](../user-help/enroll-your-device-with-telecom-expense-management-android.md)
 
 ## <a name="turn-off-the-datalert-service"></a>De Datalert-service uitschakelen
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 839130f11da41d8b3bd417e8ec3ff3f6301811ed
-ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
+ms.openlocfilehash: c0adb573dbb40f00a1b43b9fb356cdc20b97b669
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88146368"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910074"
 ---
 # <a name="use-custom-settings-for-windows-phone-81-devices-in-intune"></a>Aangepaste instellingen gebruiken voor Windows Phone 8.1-apparaten in Intune
 
@@ -30,7 +30,7 @@ ms.locfileid: "88146368"
 
 Met Microsoft Intune kunt u aangepaste instellingen voor uw Windows Phone 8.1-apparaten toevoegen of maken met behulp van 'aangepaste profielen'. Aangepaste profielen zijn een functie in Intune. Ze zijn ontworpen om apparaatinstellingen en -functies toe te voegen die niet in Intune zijn ingebouwd.
 
-In aangepaste profielen voor Windows Phone 8.1 worden OMA-URI-instellingen (Open Mobile Alliance Uniform Resource Identifier) gebruikt om verschillende functies te configureren. Deze instellingen worden doorgaans gebruikt door fabrikanten van mobiele apparaten om functies op het apparaat te beheren. In [Windows Phone 8.1 MDM-protocoldocumentatie](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-phone/dn499787(v=technet.10)) vindt u een lijst met de instellingen.
+In aangepaste profielen voor Windows Phone 8.1 worden OMA-URI-instellingen (Open Mobile Alliance Uniform Resource Identifier) gebruikt om verschillende functies te configureren. Deze instellingen worden doorgaans gebruikt door fabrikanten van mobiele apparaten om functies op het apparaat te beheren. In [Windows Phone 8.1 MDM-protocoldocumentatie](/previous-versions/windows/it-pro/windows-phone/dn499787(v=technet.10)) vindt u een lijst met de instellingen.
 
 In dit artikel wordt beschreven hoe u een aangepast profiel maakt voor Windows Phone 8.1-apparaten. 
 

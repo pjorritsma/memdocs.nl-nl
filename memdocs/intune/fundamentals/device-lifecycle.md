@@ -15,16 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c8d60a4a943ba2af9ea99f9eb887a9b77a49fcf
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 64e15e05ba7613b8bf2941d00a48c19292fafc90
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88693502"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909751"
 ---
 # <a name="overview-of-the-microsoft-intune-mobile-device-management-mdm-lifecycle"></a>Overzicht van de MDM-levenscyclus (Mobile Device Management) van Microsoft Intune
 
-Alle apparaten die u beheert, hebben een *levensduur*. Intune kan u helpen met het beheren van deze levensduur: van de inschrijving, configuratie en beveiliging tot de buitengebruikstelling van het apparaat, wanneer het niet meer nodig is. Hier is een voorbeeld: een door uw bedrijf gekochte iPad moet eerst worden ingeschreven met uw Microsoft Intune-account om uw bedrijf in staat te stellen deze te beheren. Vervolgens moet deze worden geconfigureerd naar behoefte van uw bedrijf en moeten de gegevens die er door een gebruiker op worden opgeslagen, worden beschermd. Ten slotte, wanneer die iPad niet meer nodig is, moet u alle gevoelige gegevens die hierop staan [buiten gebruik stellen of wissen](https://docs.microsoft.com/mem/intune/remote-actions/devices-wipe).
+Alle apparaten die u beheert, hebben een *levensduur*. Intune kan u helpen met het beheren van deze levensduur: van de inschrijving, configuratie en beveiliging tot de buitengebruikstelling van het apparaat, wanneer het niet meer nodig is. Hier is een voorbeeld: een door uw bedrijf gekochte iPad moet eerst worden ingeschreven met uw Microsoft Intune-account om uw bedrijf in staat te stellen deze te beheren. Vervolgens moet deze worden geconfigureerd naar behoefte van uw bedrijf en moeten de gegevens die er door een gebruiker op worden opgeslagen, worden beschermd. Ten slotte, wanneer die iPad niet meer nodig is, moet u alle gevoelige gegevens die hierop staan [buiten gebruik stellen of wissen](../remote-actions/devices-wipe.md).
 
 ![De levenscyclus van apparaten](./media/device-lifecycle/device-lifecycle.png "de levenscyclus van Intune-apparaten")
 

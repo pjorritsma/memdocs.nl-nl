@@ -17,20 +17,20 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b26bf4910e6745a60634a2b313a37beeb33192d3
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 9c7300c03ce0ba703f423aa420e9e47534ef2968
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986894"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908680"
 ---
 # <a name="work-with-existing-on-premises-proxy-servers"></a>Werken met bestaande on-premises proxyservers
 
 In dit artikel wordt uitgelegd hoe u de Intune Connector voor Active Directory configureert zodat u met uitgaande proxyservers kunt werken. Het is bedoeld voor klanten met netwerkomgevingen met bestaande proxy's.
 
-De Intune-connector voor Active Directory probeert standaard automatisch een proxyserver in het netwerk te zoeken met behulp van Web Proxy Auto-Discovery (WPAD). Als dit in uw netwerk is geconfigureerd, is er mogelijk geen aanvullende configuratie vereist.  Als er wijzigingen nodig zijn, wordt in de volgende secties beschreven hoe u de standaardinstellingen overschrijft, gebruikmakend van [de standaard .NET Framework-mogelijkheden voor het configureren van proxy-instellingen](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings).  In deze documentatie worden extra opties beschreven.
+De Intune-connector voor Active Directory probeert standaard automatisch een proxyserver in het netwerk te zoeken met behulp van Web Proxy Auto-Discovery (WPAD). Als dit in uw netwerk is geconfigureerd, is er mogelijk geen aanvullende configuratie vereist.  Als er wijzigingen nodig zijn, wordt in de volgende secties beschreven hoe u de standaardinstellingen overschrijft, gebruikmakend van [de standaard .NET Framework-mogelijkheden voor het configureren van proxy-instellingen](/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings).  In deze documentatie worden extra opties beschreven.
 
-Zie [Meer informatie over Azure AD-toepassingsproxyconnectoren](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-connectors) voor meer informatie over de werking van connectoren.
+Zie [Meer informatie over Azure AD-toepassingsproxyconnectoren](/azure/active-directory/manage-apps/application-proxy-connectors) voor meer informatie over de werking van connectoren.
 
 ## <a name="completely-bypass-outbound-proxies"></a>Uitgaande proxy's volledig overslaan
 

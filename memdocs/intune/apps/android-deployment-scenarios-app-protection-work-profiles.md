@@ -15,12 +15,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 80a26e10a3c05436699d3cafb3c4564e73099c07
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: c77a7355d63eb7f670949846c15670148b61c971
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165835"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907174"
 ---
 # <a name="application-protection-policies-and-work-profiles-on-android-enterprise-devices-in-intune"></a>Toepassingsbeveiligingsbeleid en werkprofielen op Android Enterprise-apparaten in Intune
 
@@ -106,7 +106,7 @@ Office-toepassingen, zoals Outlook en OneDrive, kunnen werken met 'meerdere iden
 
 Wanneer u werkprofielen gebruikt, kunt u dit gedrag voor meerdere identiteiten uitschakelen. Wanneer u dit uitschakelt, kunnen badge-exemplaren van de app in het werkprofiel alleen worden geconfigureerd met een organisatie-id. Gebruik de app-configuratie-instelling Toegestane accounts voor het ondersteunen van Office Android-apps.
 
-Zie voor meer informatie [Deploying Outlook for iOS/iPadOS and Android app configuration settings](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune) (Configuratie-instellingen implementeren voor Outlook voor iOS/iPadOS en Android).
+Zie voor meer informatie [Deploying Outlook for iOS/iPadOS and Android app configuration settings](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune) (Configuratie-instellingen implementeren voor Outlook voor iOS/iPadOS en Android).
 
 ## <a name="when-to-use-intune-app"></a>Wanneer Intune-APP te gebruiken
 

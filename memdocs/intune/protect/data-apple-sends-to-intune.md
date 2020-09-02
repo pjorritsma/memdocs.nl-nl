@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 106c08b6e988c104858a06ef9843ebcb2e3ae93a
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b8ef2832d853ae98da99cfd505adc7799c115a7b
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079770"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907715"
 ---
 # <a name="data-apple-sends-to-intune"></a>Gegevens die Apple verzendt naar Intune
 
@@ -33,7 +33,7 @@ Als een van de volgende Apple-services wordt ingeschakeld op een apparaat, maakt
 
 - [Apple Device Enrollment Program (DEP)](../enrollment/device-enrollment-program-enroll-ios.md)
 - [Apple MDM-pushcertificaat (APNs)](../enrollment/apple-mdm-push-certificate-get.md)
-- [Apple School Manager (ASM)](https://docs.microsoft.com/schooldatasync/apple-school-manager-integration-with-intune-for-education-and-school-data-sync)
+- [Apple School Manager (ASM)](/schooldatasync/apple-school-manager-integration-with-intune-for-education-and-school-data-sync)
 - [Apple Volume Purchase Program (VPP)](../apps/vpp-apps-ios.md)
 
 Voordat Microsoft Intune verbinding kan maken, moet u een Apple-account maken voor elk van de Apple-services.
@@ -108,5 +108,3 @@ De volgende tabel bevat de gegevens die een Apple-apparaat naar Intune verzendt.
 
 
 Als u geen Apple-services meer wilt gebruiken met Microsoft Intune en u de gegevens wilt verwijderen, moet u zowel De Microsoft Intune Apple-token uitschakelen als uw Apple-account verwijderen. In uw Apple-account vindt u meer informatie over accountbeheer.
-
-

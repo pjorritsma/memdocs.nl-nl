@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1e3b12251117e689f3b4a5456cf20bae3797083a
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 49423d1d1b887aaf3ed3323ff36678bb7319b1ad
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87264517"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909462"
 ---
 # <a name="configure-microsoft-defender-atp-on-android-devices-you-manage-with-intune"></a>Microsoft Defender ATP configureren op Android-apparaten die u beheert met Intune
 
@@ -31,7 +31,7 @@ Voordat u verder gaat, moet u [Microsoft Defender ATP in Intune configureren](..
 
 ## <a name="configure-web-protection-on-devices-that-run-android"></a>Webbeveiliging configureren op apparaten met Android
 
-Microsoft Defender ATP voor Android bevat standaard het onderdeel webbeveiliging en schakelt dit in. [Webbeveiliging](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/web-protection-overview) helpt bij het beveiligen van apparaten tegen webbedreigingen en beschermt gebruikers tegen phishing-aanvallen.
+Microsoft Defender ATP voor Android bevat standaard het onderdeel webbeveiliging en schakelt dit in. [Webbeveiliging](/windows/security/threat-protection/microsoft-defender-atp/web-protection-overview) helpt bij het beveiligen van apparaten tegen webbedreigingen en beschermt gebruikers tegen phishing-aanvallen.
 
 Hoewel deze optie standaard is ingeschakeld, zijn er geldige redenen om deze beveiliging op sommige Android-apparaten uit te schakelen. U kunt er bijvoorbeeld voor kiezen om alleen de scanfunctie van de Microsoft Defender ATP-app te gebruiken of om te voorkomen dat webbeveiliging gebruikmaakt van uw VPN tijdens het scannen op schadelijke URL's.
 
@@ -127,5 +127,5 @@ Als u webbeveiliging op apparaten wilt configureren, gebruikt u de volgende proc
 
 Meer informatie vindt u in de Microsoft Defender ATP-documentatie:
 
-- [Voorwaardelijke toegang van Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
-- [Microsoft Defender ATP-risicodashboard](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)
+- [Voorwaardelijke toegang van Microsoft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
+- [Microsoft Defender ATP-risicodashboard](/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)

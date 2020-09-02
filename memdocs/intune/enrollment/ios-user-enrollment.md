@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73a222ee8f847071174ea7dee1c438b69a1bd0ae
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 72bbc3d720f7abb22296d21bfe4869240200c912
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093779"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907732"
 ---
 # <a name="set-up-iosipados-and-ipados-user-enrollment-preview"></a>Gebruikersinschrijving voor iOS/iPadOS en iPadOS instellen (preview)
 
@@ -46,7 +46,7 @@ Met een inschrijvingsprofiel worden de instellingen gedefinieerd die worden toeg
 
     ![Apple-inschrijvingsprofiel maken](./media/ios-user-enrollment/create-profile.png)
 
-2. Voer op de pagina **Basisinformatie** een **Naam** en een **Beschrijving** voor het profiel in voor administratieve doeleinden. Gebruikers zien deze gegevens niet. U kunt dit veld **Naam** gebruiken om een dynamische groep te maken in Azure Active Directory. Gebruik de profielnaam om de parameter enrollmentProfileName te definiëren om apparaten aan dit inschrijvingsprofiel toe te wijzen. Meer informatie over [Azure Active Directory dynamic groups](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices) (dynamische Azure Active Directory-groepen).
+2. Voer op de pagina **Basisinformatie** een **Naam** en een **Beschrijving** voor het profiel in voor administratieve doeleinden. Gebruikers zien deze gegevens niet. U kunt dit veld **Naam** gebruiken om een dynamische groep te maken in Azure Active Directory. Gebruik de profielnaam om de parameter enrollmentProfileName te definiëren om apparaten aan dit inschrijvingsprofiel toe te wijzen. Meer informatie over [Azure Active Directory dynamic groups](/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices) (dynamische Azure Active Directory-groepen).
 
     ![Pagina Basisinformatie](./media/ios-user-enrollment/basics-page.png)
 
@@ -58,7 +58,7 @@ Met een inschrijvingsprofiel worden de instellingen gedefinieerd die worden toeg
 
     - **Apparaatinschrijving**: alle gebruikers in dit profiel gebruiken apparaatinschrijving.
     - **Gebruikersinschrijving**: alle gebruikers in dit profiel gebruiken gebruikersinschrijving.
-    - **Bepalen op basis van gebruikerskeuze**: alle gebruikers in deze groep mogen kiezen welk type inschrijving ze gebruiken. Wanneer gebruikers hun apparaten inschrijven, krijgen ze de mogelijkheid om te kiezen tussen **Ik ben eigenaar van dit apparaat** en **(Bedrijf) is eigenaar van dit apparaat**. Als ze de laatste optie selecteren, wordt het apparaat ingeschreven via apparaatinschrijving. Als gebruikers **Ik ben eigenaar dit apparaat** kiezen, wordt een andere optie weergegeven om te kiezen of ze het hele apparaat of alleen aan werk gerelateerde apps en gegevens willen beveiligen. De keuze van eindgebruikers of ze de eigenaar van het apparaat zijn, bepaalt welk inschrijvingstype op hun apparaat wordt geïmplementeerd. Deze gebruikerskeuze wordt ook weergegeven in het kenmerk Apparaateigendom in Intune. Zie [Toegang tot uw bedrijfsbronnen instellen voor uw iOS-/iPadOS-apparaat](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp) voor meer informatie over de gebruikerservaring.
+    - **Bepalen op basis van gebruikerskeuze**: alle gebruikers in deze groep mogen kiezen welk type inschrijving ze gebruiken. Wanneer gebruikers hun apparaten inschrijven, krijgen ze de mogelijkheid om te kiezen tussen **Ik ben eigenaar van dit apparaat** en **(Bedrijf) is eigenaar van dit apparaat**. Als ze de laatste optie selecteren, wordt het apparaat ingeschreven via apparaatinschrijving. Als gebruikers **Ik ben eigenaar dit apparaat** kiezen, wordt een andere optie weergegeven om te kiezen of ze het hele apparaat of alleen aan werk gerelateerde apps en gegevens willen beveiligen. De keuze van eindgebruikers of ze de eigenaar van het apparaat zijn, bepaalt welk inschrijvingstype op hun apparaat wordt geïmplementeerd. Deze gebruikerskeuze wordt ook weergegeven in het kenmerk Apparaateigendom in Intune. Zie [Toegang tot uw bedrijfsbronnen instellen voor uw iOS-/iPadOS-apparaat](../user-help/enroll-your-device-in-intune-macos-cp.md) voor meer informatie over de gebruikerservaring.
     
 5. Selecteer **Volgende**.
 
@@ -81,5 +81,3 @@ Als u meerdere typen inschrijvingsprofielen hebt gemaakt, is het mogelijk de vol
 2. Sleep de profielen in de lijst en zet deze neer in de volgorde waarin u deze wilt toepassen.
 
 Als er conflicten tussen profielen voor een gebruiker optreden, wordt het profiel met de hoogste prioriteit toegepast voor de gebruiker.
-
-

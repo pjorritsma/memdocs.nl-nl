@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad02078d2a8b9926de463e01d3dcbc675c721e4a
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: a9c3e456722d0b747a07c3f7040edc2cdf28f264
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179516"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909581"
 ---
 # <a name="configure-microsoft-defender-atp-in-intune"></a>Microsoft Defender ATP configureren in Intune
 
@@ -84,9 +84,9 @@ Wanneer u ondersteuning voor Microsoft Defender ATP in Intune hebt ingeschakeld,
 
 Toen u de verbinding tussen Intune en Microsoft Defender ATP tot stand bracht, heeft Intune van Microsoft Defender ATP een configuratiepakket voor onboarding ontvangen. U implementeert dit configuratiepakket op uw Windows-apparaten met een apparaatconfiguratieprofiel voor Microsoft Defender ATP.
 
-Het configuratiepakket configureert apparaten zodanig dat ze communiceren met [Microsoft Defender ATP-services](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) om bestanden te scannen en bedreigingen te detecteren. Het apparaat wordt ook geconfigureerd om het risiconiveau van apparaten te rapporteren aan Microsoft Defender ATP op basis van nalevingsbeleid dat u maakt.
+Het configuratiepakket configureert apparaten zodanig dat ze communiceren met [Microsoft Defender ATP-services](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) om bestanden te scannen en bedreigingen te detecteren. Het apparaat wordt ook geconfigureerd om het risiconiveau van apparaten te rapporteren aan Microsoft Defender ATP op basis van nalevingsbeleid dat u maakt.
 
-Wanneer u onboarding van een apparaat met het configuratiepakket eenmaal hebt uitgevoerd, hoeft u dit niet opnieuw te doen. U kunt apparaten onboarden met behulp van een [groepsbeleid of Microsoft Endpoint Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints).
+Wanneer u onboarding van een apparaat met het configuratiepakket eenmaal hebt uitgevoerd, hoeft u dit niet opnieuw te doen. U kunt apparaten onboarden met behulp van een [groepsbeleid of Microsoft Endpoint Configuration Manager](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints).
 
 ### <a name="create-the-device-configuration-profile-to-onboard-windows-devices"></a>Het configuratieprofiel van het apparaat maken om Windows-apparaten te onboarden
 
@@ -105,7 +105,7 @@ Wanneer u onboarding van een apparaat met het configuratiepakket eenmaal hebt ui
    - **Voorbeelddeling voor alle bestanden**: Met **Inschakelen** staat u toe dat voorbeelden worden verzameld en gedeeld met Microsoft Defender ATP. Als u bijvoorbeeld een verdacht bestand ziet, kunt u het verzenden naar Microsoft Defender ATP voor grondige analyse. **Niet geconfigureerd**: eventuele voorbeelden voor het Microsoft Defender ATP worden niet gedeeld.
    - **Frequentie van telemetrierapporten versnellen**: U kunt deze instelling **inschakelen** voor apparaten met een hoog risico, zodat er vaker telemetrie naar de Microsoft Defender ATP-service wordt gerapporteerd.
 
-     [Windows 10-apparaten onboarden die Microsoft Endpoint Configuration Manager gebruiken](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm) bevat meer informatie over deze instellingen voor Microsoft Defender ATP.
+     [Windows 10-apparaten onboarden die Microsoft Endpoint Configuration Manager gebruiken](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm) bevat meer informatie over deze instellingen voor Microsoft Defender ATP.
 
 7. Selecteer **Volgende** om de pagina **Bereiktags** te openen. Bereiktags zijn optioneel. Selecteer **Volgende** om door te gaan.
 
@@ -120,7 +120,7 @@ Wanneer u onboarding van een apparaat met het configuratiepakket eenmaal hebt ui
 
 Nadat u de service-naar-serviceverbinding tussen Intune en Microsoft Defender ATP tot stand hebt gebracht, kunt u Android-apparaten onboarden in Microsoft Defender ATP. Met de onboarding worden apparaten geconfigureerd om te communiceren met Defender ATP, waarna er gegevens over het risiconiveau van de apparaten worden verzameld.
 
-In tegenstelling tot Windows-apparaten is er geen configuratiepakket voor apparaten waarop Android wordt uitgevoerd. Raadpleeg [Overzicht van Microsoft Defender ATP voor Android](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-android) in de ATP-documentatie van Microsoft Defender voor vereisten en instructies voor onboarding voor Android.
+In tegenstelling tot Windows-apparaten is er geen configuratiepakket voor apparaten waarop Android wordt uitgevoerd. Raadpleeg [Overzicht van Microsoft Defender ATP voor Android](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-android) in de ATP-documentatie van Microsoft Defender voor vereisten en instructies voor onboarding voor Android.
 
 Voor apparaten met Android kunt u ook Intune-beleid gebruiken om Microsoft Defender ATP op Android te wijzigen. Raadpleeg [Webbeveiliging van Microsoft Defender ATP](../protect/advanced-threat-protection-manage-android.md) voor meer informatie.
 
@@ -145,7 +145,7 @@ Als u niet bekend bent met het maken van nalevingsbeleid, raadpleegt u de proced
   
 5. Vouw op het tabblad **Nalevingsinstellingen** de groep **Microsoft Defender ATP** uit en stel de optie **Vereisen dat het apparaat op of onder het apparaatdreigingsniveau moet zijn** in op het gewenste niveau.
 
-   De classificatie van bedreigingsniveaus wordt [bepaald door Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/alerts-queue).
+   De classificatie van bedreigingsniveaus wordt [bepaald door Microsoft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/alerts-queue).
 
    - **Veilig**: Dit is het veiligste niveau. Het apparaat heeft geen toegang tot bedrijfsresources als er ook maar één bedreiging is gevonden. Als er bedreigingen worden gevonden, wordt het apparaat geëvalueerd als niet-compatibel. (Microsoft Defender ATP gebruikt de waarde *Veilig*.)
    - **Laag**: Het apparaat is conform als er alleen bedreigingen van een laag niveau aanwezig zijn. Apparaten met een gemiddeld of hoog dreigingsniveau zijn niet conform.
@@ -194,5 +194,5 @@ Meer informatie vindt u in de Intune-documentatie:
 
 Meer informatie vindt u in de Microsoft Defender ATP-documentatie:
 
-- [Voorwaardelijke toegang van Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
-- [Microsoft Defender ATP-risicodashboard](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)
+- [Voorwaardelijke toegang van Microsoft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
+- [Microsoft Defender ATP-risicodashboard](/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)

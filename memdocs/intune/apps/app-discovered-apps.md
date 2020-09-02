@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bed118810be877bf4671571814ee6d151d6f727b
-ms.sourcegitcommit: da5bfbe16856fdbfadc40b3797840e0b5110d97d
+ms.openlocfilehash: 358d01a968c98262980f8e121d8e7e92e2880c6c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88512730"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907813"
 ---
 # <a name="intune-discovered-apps"></a>Door Intune gedetecteerde apps
 
@@ -64,7 +64,7 @@ De volgende lijst bevat de app-platformtypen, de apps die worden bewaakt op pers
 | Android Enterprise | Alleen beheerde apps | Alleen apps die in het werkprofiel zijn geïnstalleerd | Elke zeven dagen vanaf het moment dat het apparaat wordt ingeschreven |
 
 > [!NOTE]
-> - Op Windows 10-apparaten met co-beheer, zoals weergegeven in de workload [client-apps](https://docs.microsoft.com/mem/configmgr/comanage/workloads#client-apps) in Configuration Manager, wordt momenteel geen app-inventarisatie verzameld met IME (Intune Management Extensie), volgens de bovenstaande planning. Als u dit probleem wilt verhelpen, moet u de workload [client apps](https://docs.microsoft.com/mem/configmgr/comanage/workloads#client-apps) in Configuration Manager overschakelen naar Intune voor de IME, om te worden geïnstalleerd op het apparaat (IME is vereist voor Win32-inventarisatie en PowerShell-implementatie). Opmerking: eventuele wijzigingen in of updates van dit gedrag worden aangekondigd in [In ontwikkeling](../fundamentals/in-development.md) en/of [Nieuwe functies](../fundamentals/whats-new.md).
+> - Op Windows 10-apparaten met co-beheer, zoals weergegeven in de workload [client-apps](../../configmgr/comanage/workloads.md#client-apps) in Configuration Manager, wordt momenteel geen app-inventarisatie verzameld met IME (Intune Management Extensie), volgens de bovenstaande planning. Als u dit probleem wilt verhelpen, moet u de workload [client apps](../../configmgr/comanage/workloads.md#client-apps) in Configuration Manager overschakelen naar Intune voor de IME, om te worden geïnstalleerd op het apparaat (IME is vereist voor Win32-inventarisatie en PowerShell-implementatie). Opmerking: eventuele wijzigingen in of updates van dit gedrag worden aangekondigd in [In ontwikkeling](../fundamentals/in-development.md) en/of [Nieuwe functies](../fundamentals/whats-new.md).
 > - Op macOS-apparaten in persoonlijk eigendom die zijn ingeschreven vóór november 2019 kunnen alle apps die op het apparaat zijn geïnstalleerd in gebruik blijven totdat het apparaat opnieuw wordt inschreven.
 > - Volledig beheerde en toegewezen Android Enterprise-apparaten geven geen gedetecteerde apps weer.
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c41f22e2aa60803067b9015f2ae3a84db43ff894
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: 2e359a87cb9e62b6d7542d82d9819b5c132a8bc2
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179533"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910261"
 ---
 # <a name="add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>De Windows 10-bedrijfsportal-app toevoegen met Microsoft Intune
 
@@ -67,7 +67,7 @@ Uw gebruikers kunnen de bedrijfsportal-app zelf installeren vanuit Microsoft Sto
 
 11. Wijs de Bedrijfsportal-app, indien nodig, toe als vereiste app voor een geselecteerde set gebruikers- of apparaatgroepen.  
 
-Zie [Deploying an appxbundle with dependencies via Microsoft Intune MDM](https://blogs.technet.microsoft.com/configmgrdogs/2016/11/30/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm/) (Een appxbundle met afhankelijkheden implementeren via Microsoft Intune MDM) voor meer informatie over hoe Intune afhankelijkheden voor universele apps verwerkt.  
+Zie [Deploying an appxbundle with dependencies via Microsoft Intune MDM](/archive/blogs/configmgrdogs/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm) (Een appxbundle met afhankelijkheden implementeren via Microsoft Intune MDM) voor meer informatie over hoe Intune afhankelijkheden voor universele apps verwerkt.  
 
 ## <a name="frequently-asked-questions"></a>Veelgestelde vragen 
 ### <a name="how-do-i-update-the-company-portal-app-on-my-users-devices-if-they-have-already-installed-the-older-apps-from-the-store"></a>Hoe kan ik de bedrijfsportal-app op de apparaten van mijn gebruikers bijwerken als hierop al de oudere apps uit de Store zijn geïnstalleerd?
@@ -110,4 +110,3 @@ Zodra het script is uitgevoerd, wordt de ondertekende versie van de Windows 10-b
 ## <a name="next-steps"></a>Volgende stappen
 
 - [Apps aan groepen toewijzen](apps-deploy.md)
-

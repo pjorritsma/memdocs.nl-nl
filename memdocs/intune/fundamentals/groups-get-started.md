@@ -16,12 +16,12 @@ ms.assetid: 323f384d-8a76-4adc-999b-e508d641bfa1
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e8fdd0de8b276017a51c2fd464eef4b1d8505bc
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 82834dc3a7fc60292228acbd62c7c6a8b8a94ee3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075384"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909785"
 ---
 # <a name="microsoft-intune-classic-groups-in-the-azure-portal"></a>Klassieke Microsoft Intune-groepen in Azure Portal
 
@@ -47,9 +47,9 @@ Sommige functies voor Intune-groepen die u mogelijk eerder hebt gebruikt, zijn n
 ## <a name="how-to-get-started"></a>Aan de slag
 
 - Lees de volgende onderwerpen voor informatie over Azure AD-beveiligingsgroepen en hoe deze werken:
-  - [Toegang tot resources beheren met Azure Active Directory-groepen](https://azure.microsoft.com/documentation/articles/active-directory-manage-groups/).
-  - [Groepen beheren in Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/).
-  - [Geavanceerde regels maken met kenmerken](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/).
+  - [Toegang tot resources beheren met Azure Active Directory-groepen](/azure/active-directory/fundamentals/active-directory-manage-groups).
+  - [Groepen beheren in Azure Active Directory](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal).
+  - [Geavanceerde regels maken met kenmerken](/azure/active-directory/users-groups-roles/groups-dynamic-membership).
 - Zorg ervoor dat beheerders die groepen moeten maken, worden toegevoegd aan de Azure AD-rol **Intune-servicebeheerder**. De rol Servicebeheerder van Azure AD heeft geen **Groep beheren**-machtigingen.
 - Als uw Intune-groepen de optie **Specifieke leden uitsluiten** hebben gebruikt, beslist u of u deze groepen opnieuw kunt vormgeven zonder uitsluitingen of dat u geavanceerde regels nodig hebt om aan bedrijfsbehoeften te voldoen.
 

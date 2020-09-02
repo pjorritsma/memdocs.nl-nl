@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 761e668ae2c774bb52dbe6971d343d60b3e95516
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e6dae19e466d3d0e88ae07d1c82a63b098439632
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986101"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908612"
 ---
 # <a name="categorize-devices-into-groups"></a>Apparaten categoriseren in groepen
 
@@ -55,7 +55,7 @@ Als u Azure Active Directory-beveiligingsgroepen (Azure AD) maakt in stap 2, geb
 ### <a name="step-2-create-azure-active-directory-security-groups"></a>Stap 2: Azure Active Directory-beveiligingsgroepen maken
 In deze stap maakt u dynamische groepen in Azure Portal op basis van de apparaatcategorie en de naam van de apparaatcategorie.
 
-Zie [Geavanceerde regels maken met kenmerken](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/#using-attributes-to-create-rules-for-device-objects) in de documentatie van Azure AD om door te gaan.
+Zie [Geavanceerde regels maken met kenmerken](/azure/active-directory/users-groups-roles/groups-dynamic-membership#using-attributes-to-create-rules-for-device-objects) in de documentatie van Azure AD om door te gaan.
 
 Gebruik de informatie in deze sectie om een apparaatgroep met een geavanceerde regel te maken op basis van het kenmerk **deviceCategory**. Bijvoorbeeld: (**device.deviceCategory -eq***de naam van de apparaatcategorie in Azure Portal*.
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3a20477b643da961f5c7281d92f3d24a4e7313d
-ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
+ms.openlocfilehash: 2e61e7e8bae436e567bceec5f098170cfb7b7c6a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87443854"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907749"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Verbinding maken met het datawarehouse met Power BI
 
@@ -42,7 +42,7 @@ U kunt de Compliance-app van Power BI gebruiken om interactieve, dynamisch gegen
 Er worden ook trends gemarkeerd voor inschrijving, naleving, apparaatconfiguratieprofiel en software-updates. In de voorbeeldgrafieken en -rapporten worden gebruiksvriendelijke filters toegepast op het canvas. Als u geavanceerde filters wilt gebruiken, gaat u naar het deelvenster **Filter** in Power BI Desktop.
 
 > [!NOTE]
-> Power BI-partners kunnen met Power BI-sjabloon-apps Power BI-apps bouwen met weinig tot geen codering en deze naar elke Power BI-klant implementeren. U kunt bijvoorbeeld de Power BI-nalevingsrapportsjabloon in V2.0 gebruiken. V 2.0 bevat een verbeterd ontwerp, evenals wijzigingen in de berekeningen en gegevens die worden opgehaald als onderdeel van de sjabloon. Zie [Een sjabloon-app bijwerken](https://docs.microsoft.com/power-bi/service-template-apps-install-distribute#update-a-template-app), [De app Intune-naleving (datawarehouse)](https://appsource.microsoft.com/product/power-bi/pbi_intune.intune_compliance_dw_app-preview?flightCodes=65ede247-5273-43b8-8a25-b89c7d211fbd) en [Wat zijn Power BI-sjabloon-apps?](https://docs.microsoft.com/power-bi/service-template-apps-overview)
+> Power BI-partners kunnen met Power BI-sjabloon-apps Power BI-apps bouwen met weinig tot geen codering en deze naar elke Power BI-klant implementeren. U kunt bijvoorbeeld de Power BI-nalevingsrapportsjabloon in V2.0 gebruiken. V 2.0 bevat een verbeterd ontwerp, evenals wijzigingen in de berekeningen en gegevens die worden opgehaald als onderdeel van de sjabloon. Zie [Een sjabloon-app bijwerken](/power-bi/service-template-apps-install-distribute#update-a-template-app), [De app Intune-naleving (datawarehouse)](https://appsource.microsoft.com/product/power-bi/pbi_intune.intune_compliance_dw_app-preview?flightCodes=65ede247-5273-43b8-8a25-b89c7d211fbd) en [Wat zijn Power BI-sjabloon-apps?](/power-bi/service-template-apps-overview)
 
 De volgende stappen laten zien hoe u het Power BI-bestand downloadt en hoe u de OData-koppeling gebruikt met Power BI.
 

@@ -16,16 +16,16 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: samyada
-ms.openlocfilehash: 325460e4d487ade7337fc99b8a77fd3182d6cc17
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: a75fe5bac4bb99b30e21ec842dcbbe3be83e9e5b
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430114"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909445"
 ---
 # <a name="settings-for-microsoft-defender-atp-for-mac-in-microsoft-intune"></a>Instellingen voor Microsoft Defender ATP voor Mac in Microsoft Intune
 
-Bekijk de instellingen voor het *Antivirus*-profiel die u in Microsoft Intune kunt configureren voor Microsoft Defender ATP voor Mac. Zie [Microsoft Defender Advanced Threat Protection voor Mac](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) in de Windows-documentatie voor meer informatie over deze instellingen.
+Bekijk de instellingen voor het *Antivirus*-profiel die u in Microsoft Intune kunt configureren voor Microsoft Defender ATP voor Mac. Zie [Microsoft Defender Advanced Threat Protection voor Mac](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) in de Windows-documentatie voor meer informatie over deze instellingen.
 
 Meer informatie over het gebruik van [Beleidsregels voor eindpuntbeveiliging](../protect/endpoint-security-policy.md) in Intune.
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5ed491fd379879369ead35ceb2c618def91d3e53
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 170a5b22362ee3bd9e347af2addc03ef3b542de2
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985924"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907800"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Implementatie van Windows 10-apps met behulp van Microsoft Intune 
 
@@ -69,7 +69,7 @@ U kunt Windows 10 LOB-apps ondertekenen en uploaden naar de Intune-beheerconsole
 
 ## <a name="microsoft-store-for-business-apps"></a>Apps in de Microsoft Store voor Bedrijven
 
-Microsoft Store voor Bedrijven-apps zijn moderne apps die zijn aangeschaft in de Microsoft Store voor Bedrijven-beheerportal. Ze worden vervolgens gesynchroniseerd naar Microsoft Intune voor beheer. De apps kunnen zowel online gelicentieerd als offline gelicentieerd zijn. In Microsoft Store worden updates rechtstreeks beheert, zonder dat extra actie van de beheerder is vereist. U kunt bovendien met een aangepaste Uniform Resource Identifier (URI) voorkomen dat bepaalde apps worden bijgewerkt. Zie [Enterprise app management - Prevent app from automatic updates](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates) (Bedrijfsappbeheer - Voorkomen dat apps automatisch worden bijgewerkt) voor meer informatie. De gebruiker kan ook updates voor alle Microsoft Store voor Bedrijven-apps uitschakelen. 
+Microsoft Store voor Bedrijven-apps zijn moderne apps die zijn aangeschaft in de Microsoft Store voor Bedrijven-beheerportal. Ze worden vervolgens gesynchroniseerd naar Microsoft Intune voor beheer. De apps kunnen zowel online gelicentieerd als offline gelicentieerd zijn. In Microsoft Store worden updates rechtstreeks beheert, zonder dat extra actie van de beheerder is vereist. U kunt bovendien met een aangepaste Uniform Resource Identifier (URI) voorkomen dat bepaalde apps worden bijgewerkt. Zie [Enterprise app management - Prevent app from automatic updates](/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates) (Bedrijfsappbeheer - Voorkomen dat apps automatisch worden bijgewerkt) voor meer informatie. De gebruiker kan ook updates voor alle Microsoft Store voor Bedrijven-apps uitschakelen. 
 
 ### <a name="categorize-microsoft-store-for-business-apps"></a>Microsoft Store voor Bedrijven-apps categoriseren 
 Microsoft Store voor Bedrijven-apps categoriseren: 
@@ -106,7 +106,7 @@ Windows LOB-apps (met name APPX en MSIX) en Microsoft Store voor Bedrijven-apps 
   - Fout: Een gebruiker kan niet het doel zijn van de installatie van apparaatcontext.
 
 > [!IMPORTANT]
-> Bij gebruik in combinatie met een inrichtingsscenario met Autopilot-ondersteuning is er geen vereiste voor LOB-apps en Microsoft Store voor Bedrijven-apps die zijn geïmplementeerd in de apparaatcontext voor een apparaatgroep. Zie [Implementatie van Windows Autopilot-ondersteuning](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove) voor meer informatie.
+> Bij gebruik in combinatie met een inrichtingsscenario met Autopilot-ondersteuning is er geen vereiste voor LOB-apps en Microsoft Store voor Bedrijven-apps die zijn geïmplementeerd in de apparaatcontext voor een apparaatgroep. Zie [Implementatie van Windows Autopilot-ondersteuning](/windows/deployment/windows-autopilot/white-glove) voor meer informatie.
 
 > [!Note]
 > Nadat u een app-toewijzing hebt opgeslagen met een specifieke implementatie, kunt u de context voor deze toewijzing niet wijzigen, met uitzondering van moderne apps. Voor moderne apps kunt u de context wijzigen van gebruikerscontext in apparaatcontext. 

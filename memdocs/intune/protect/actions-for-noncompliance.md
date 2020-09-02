@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d262041c982d3d9a629ccb550a1376e5e479a759
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: fa533ea8a34fae0c3460d207bb88e6b64b0957eb
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252772"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909649"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Acties configureren voor niet-compatibele apparaten in Intune
 
@@ -29,7 +29,7 @@ Voor apparaten die niet aan uw nalevingsbeleid of -regels voldoen, kunt u **Acti
 
 ## <a name="overview"></a>Overzicht
 
-Elk nalevingsbeleid bevat standaard de actie voor niet-naleving van **Apparaat als niet-compatibel markeren** met een planning van nul dagen (**0**). Het resultaat van deze standaardactie is dat wanneer Intune een apparaat detecteert dat niet compatibel is, Intune het apparaat onmiddellijk als niet-compatibel markeert. Nadat een apparaat als niet-compatibel is gemarkeerd, kan [Voorwaardelijke toegang](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) van Azure Active Directory (AD) het apparaat vervolgens blokkeren.
+Elk nalevingsbeleid bevat standaard de actie voor niet-naleving van **Apparaat als niet-compatibel markeren** met een planning van nul dagen (**0**). Het resultaat van deze standaardactie is dat wanneer Intune een apparaat detecteert dat niet compatibel is, Intune het apparaat onmiddellijk als niet-compatibel markeert. Nadat een apparaat als niet-compatibel is gemarkeerd, kan [Voorwaardelijke toegang](/azure/active-directory/active-directory-conditional-access-azure-portal) van Azure Active Directory (AD) het apparaat vervolgens blokkeren.
 
 Door **acties voor niet-naleving** te configureren, krijgt u meer flexibiliteit om te bepalen wat er moet gebeuren met niet-compatibele apparaten en wanneer u dit moet doen. U kunt er bijvoorbeeld voor kiezen het apparaat niet onmiddellijk te blokkeren en de gebruiker een respijtperiode te bieden om ervoor te zorgen dat het apparaat weer compatibel wordt.
 
@@ -107,7 +107,7 @@ Wanneer het e-mailbericht wordt verzonden, geeft Intune meer informatie over het
 
 U kunt [acties voor niet-naleving toevoegen](#add-actions-for-noncompliance) wanneer u nalevingsbeleid voor apparaten configureert of op een later tijdstip, door het beleid te bewerken. U kunt aan elk beleid extra acties toevoegen om aan uw behoeften te voldoen. Onthoud dat elk nalevingsbeleid automatisch de standaardactie voor niet-naleving bevat waarmee apparaten worden aangemerkt als niet-compatibel, waarbij een planning is ingesteld op nul dagen.
 
-Wanneer u nalevingsbeleid gebruikt om toegang tot bedrijfsresources door apparaten te blokkeren, moet voorwaardelijke toegang voor Azure AD zijn ingesteld. Zie [Voorwaardelijke toegang in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) of [Gebruikelijke manieren om voorwaardelijke toegang met Intune te gebruiken](conditional-access-intune-common-ways-use.md) voor instructies.
+Wanneer u nalevingsbeleid gebruikt om toegang tot bedrijfsresources door apparaten te blokkeren, moet voorwaardelijke toegang voor Azure AD zijn ingesteld. Zie [Voorwaardelijke toegang in Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal) of [Gebruikelijke manieren om voorwaardelijke toegang met Intune te gebruiken](conditional-access-intune-common-ways-use.md) voor instructies.
 
 Zie de volgende platform-specifieke richtlijnen om een nalevingsbeleid voor apparaten te maken:
 

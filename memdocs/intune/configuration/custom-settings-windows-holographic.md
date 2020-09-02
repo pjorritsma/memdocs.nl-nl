@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f37550bcfd8105b9cf5ea51c1bfa0d9305721348
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 3928cd13b5368c8ab196a67669cb3a9f7d3fc2e9
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990084"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910023"
 ---
 # <a name="use-custom-settings-for-windows-holographic-for-business-devices-in-intune"></a>Aangepaste instellingen gebruiken voor apparaten met Windows Holographic for Business in Intune
 
@@ -29,7 +29,7 @@ Met Microsoft Intune kunt u aangepaste instellingen voor uw Windows Holographic 
 
 In aangepaste profielen voor Windows Holographic for Business worden OMA-URI-instellingen (Open Mobile Alliance Uniform Resource Identifier) gebruikt om verschillende functies te configureren. Deze instellingen worden doorgaans gebruikt door fabrikanten van mobiele apparaten om functies op het apparaat te beheren.
 
-Met behulp van Windows Holographic for Business komen veel instellingen voor configuratieserviceproviders (CSP's) ter beschikking. Zie [Inleiding tot configuratieserviceproviders (CSP's) voor IT-professionals](https://technet.microsoft.com/itpro/windows/manage/how-it-pros-can-use-configuration-service-providers) voor een overzicht van CSP’s. Zie [CSP's die worden ondersteund in Windows Holographic](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference#hololens) voor specifieke CSP’s die door Windows Holographic worden ondersteund.
+Met behulp van Windows Holographic for Business komen veel instellingen voor configuratieserviceproviders (CSP's) ter beschikking. Zie [Inleiding tot configuratieserviceproviders (CSP's) voor IT-professionals](/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers) voor een overzicht van CSP’s. Zie [CSP's die worden ondersteund in Windows Holographic](/windows/client-management/mdm/configuration-service-provider-reference#hololens) voor specifieke CSP’s die door Windows Holographic worden ondersteund.
 
 Als u een specifieke instelling zoekt, moet u er rekening mee houden dat het [beperkingsprofiel voor Windows Holographic for Business-apparaten](device-restrictions-windows-holographic.md) tal van ingebouwde instellingen bevat. U hoeft daarom mogelijk geen aangepaste waarden in te voeren.
 
@@ -64,91 +64,91 @@ Nadat u een aantal instellingen hebt toegevoegd, kunt u **Exporteren** selectere
 
 De volgende instellingen zijn handig voor apparaten waarop Windows Holographic for Business wordt uitgevoerd:
 
-### <a name="allowfastreconnect"></a>[AllowFastReconnect](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-allowfastreconnect)
+### <a name="allowfastreconnect"></a>[AllowFastReconnect](/windows/client-management/mdm/policy-csp-authentication#authentication-allowfastreconnect)
 
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Gegevenstype|
 > |---|---|
 > |./Vendor/MSFT/Policy/Config/Authentication/AllowFastReconnect|Geheel getal<br/>0: niet toegestaan<br/>1: toegestaan (standaard)|
 
-### <a name="allowupdateservice"></a>[AllowUpdateService](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowupdateservice)
+### <a name="allowupdateservice"></a>[AllowUpdateService](/windows/client-management/mdm/policy-csp-update#update-allowupdateservice)
 
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Gegevenstype|
 > |---|---|
 > |./Vendor/MSFT/Policy/Config/Update/AllowUpdateService|Geheel getal<br/>0: updateservice niet toegestaan <br/>1: updateservice toegestaan (standaard).|
 
-### <a name="allowvpn"></a>[AllowVPN](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-settings#settings-allowvpn)
+### <a name="allowvpn"></a>[AllowVPN](/windows/client-management/mdm/policy-csp-settings#settings-allowvpn)
 
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Gegevenstype|
 > |---|---|
 > |./Vendor/MSFT/Policy/Config/Settings/AllowVPN|Geheel getal<br/>0: niet toegestaan<br/>1: toegestaan (standaard)|
 
-### <a name="requireupdateapproval"></a>[RequireUpdateApproval](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-requireupdateapproval)
+### <a name="requireupdateapproval"></a>[RequireUpdateApproval](/windows/client-management/mdm/policy-csp-update#update-requireupdateapproval)
 
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Gegevenstype|
 > |---|---|
 > |./Vendor/MSFT/Policy/Config/Update/RequireUpdateApproval|Deze instelling is beschikbaar in RS5 (build 17763) en eerder. Gebruik vanaf 19H1 (build 18362) [Windows Update voor Bedrijven](../protect/windows-update-for-business-configure.md).<br/><br/>Geheel getal<br/>0: niet geconfigureerd. Alle toepasselijke updates worden op het apparaat geïnstalleerd.<br/>1: op het apparaat worden alleen updates geïnstalleerd die toepasselijk zijn en op de lijst Toegestane updates staan. Stel dit beleid in op 1 als de IT-afdeling controle wilt behouden over de implementatie van updates op apparaten, zoals wanneer er vóór het implementeren tests moeten worden uitgevoerd.|
 
-### <a name="scheduledinstalltime"></a>[ScheduledInstallTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-scheduledinstalltime)
+### <a name="scheduledinstalltime"></a>[ScheduledInstallTime](/windows/client-management/mdm/policy-csp-update#update-scheduledinstalltime)
 
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Gegevenstype|
 > |---|---|
 > |./Vendor/MSFT/Policy/Config/Update/ScheduledInstallTime|Geheel getal 0-23, waarbij 0=12AM en 23=11PM<br/>De standaardwaarde is 3.|
 
-### <a name="updateserviceurl"></a>[UpdateServiceURL](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-updateserviceurl)
+### <a name="updateserviceurl"></a>[UpdateServiceURL](/windows/client-management/mdm/policy-csp-update#update-updateserviceurl)
 
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Gegevenstype|
 > |---|---|
 > |./Vendor/MSFT/Policy/Config/Update/UpdateServiceUrl|Deze instelling is beschikbaar in RS5 (build 17763) en eerder. Gebruik vanaf 19H1 (build 18362) [Windows Update voor Bedrijven](../protect/windows-update-for-business-configure.md).<br/><br/>Tekenreeks<br/>URL: het apparaat controleert via de opgegeven URL op updates van de WSUS-server.<br/>Niet geconfigureerd: het apparaat controleert op updates via Microsoft Update.|
 
-### <a name="approvedupdates"></a>[ApprovedUpdates](https://docs.microsoft.com/windows/client-management/mdm/update-csp)
+### <a name="approvedupdates"></a>[ApprovedUpdates](/windows/client-management/mdm/update-csp)
 
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Gegevenstype|
 > |---|---|
-> |./Vendor/MSFT/Update/ApprovedUpdates/*GUID*<br/><br/>**Belangrijk**<br/>U moet de bijgewerkte gebruiksrechtovereenkomsten lezen en accepteren namens uw eindgebruikers. Als u dit niet doet, is dat een schending van de juridische of contractuele verplichtingen.|Knooppunt voor update-goedkeuringen en acceptatie van gebruiksrechtovereenkomsten namens de eindgebruiker.<br/><br/>Raadpleeg voor meer informatie [Update CSP](https://docs.microsoft.com/windows/client-management/mdm/update-csp).|
+> |./Vendor/MSFT/Update/ApprovedUpdates/*GUID*<br/><br/>**Belangrijk**<br/>U moet de bijgewerkte gebruiksrechtovereenkomsten lezen en accepteren namens uw eindgebruikers. Als u dit niet doet, is dat een schending van de juridische of contractuele verplichtingen.|Knooppunt voor update-goedkeuringen en acceptatie van gebruiksrechtovereenkomsten namens de eindgebruiker.<br/><br/>Raadpleeg voor meer informatie [Update CSP](/windows/client-management/mdm/update-csp).|
 
-### <a name="applicationlaunchrestrictions"></a>[ApplicationLaunchRestrictions](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
+### <a name="applicationlaunchrestrictions"></a>[ApplicationLaunchRestrictions](/windows/client-management/mdm/applocker-csp)
 
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Gegevenstype|
 > |----|---|
-> |./Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/*Grouping*/*ApplicationType*/Policy<br/><br/>**Belangrijk**<br/>In het AppLocker CPS-artikel wordt gebruikgemaakt van XML-voorbeelden met het escape-teken. Als u de instellingen wilt configureren met aangepaste Intune-profielen, moet u gewone XML gebruiken.|Tekenreeks<br/>Raadpleeg [AppLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp) voor meer informatie.|
+> |./Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/*Grouping*/*ApplicationType*/Policy<br/><br/>**Belangrijk**<br/>In het AppLocker CPS-artikel wordt gebruikgemaakt van XML-voorbeelden met het escape-teken. Als u de instellingen wilt configureren met aangepaste Intune-profielen, moet u gewone XML gebruiken.|Tekenreeks<br/>Raadpleeg [AppLocker CSP](/windows/client-management/mdm/applocker-csp) voor meer informatie.|
 
-### <a name="deletionpolicy"></a>[DeletionPolicy](https://docs.microsoft.com/windows/client-management/mdm/accountmanagement-csp)
+### <a name="deletionpolicy"></a>[DeletionPolicy](/windows/client-management/mdm/accountmanagement-csp)
 
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Gegevenstype|
 > |----|---|
 > |./Vendor/MSFT/AccountManagement/UserProfileManagement/DeletionPolicy|Geheel getal<br/>0 - meteen verwijderen zodra het apparaat terugkeert naar een toestand zonder momenteel actieve gebruikers<br/>1 - verwijderen bij limiet opslagcapaciteit (standaard)<br/>2 - verwijderen bij zowel een opslagcapaciteitslimiet als limiet voor inactieve profielen|
 
-### <a name="enableprofilemanager"></a>[EnableProfileManager](https://docs.microsoft.com/windows/client-management/mdm/accountmanagement-csp)
+### <a name="enableprofilemanager"></a>[EnableProfileManager](/windows/client-management/mdm/accountmanagement-csp)
 
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Gegevenstype|
 > |----|---|
 > |./Vendor/MSFT/AccountManagement/UserProfileManagement/EnableProfileManager|Boolean-waarde<br/>Waar - inschakelen<br/>Onwaar - uitschakelen (standaard)|
 
-### <a name="profileinactivitythreshold"></a>[ProfileInactivityThreshold](https://docs.microsoft.com/windows/client-management/mdm/accountmanagement-csp)
+### <a name="profileinactivitythreshold"></a>[ProfileInactivityThreshold](/windows/client-management/mdm/accountmanagement-csp)
 
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Gegevenstype|
 > |----|---|
 > |./Vendor/MSFT/AccountManagement/UserProfileManagement/ProfileInactivityThreshold|Geheel getal<br/>De standaardwaarde is 30.|
 
-### <a name="storagecapacitystartdeletion"></a>[StorageCapacityStartDeletion](https://docs.microsoft.com/windows/client-management/mdm/accountmanagement-csp)
+### <a name="storagecapacitystartdeletion"></a>[StorageCapacityStartDeletion](/windows/client-management/mdm/accountmanagement-csp)
 
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Gegevenstype|
 > |----|---|
 > |./Vendor/MSFT/AccountManagement/UserProfileManagement/StorageCapacityStartDeletion|Geheel getal<br/>De standaardwaarde is 25.|
 
-### <a name="storagecapacitystopdeletion"></a>[StorageCapacityStopDeletion](https://docs.microsoft.com/windows/client-management/mdm/accountmanagement-csp)
+### <a name="storagecapacitystopdeletion"></a>[StorageCapacityStopDeletion](/windows/client-management/mdm/accountmanagement-csp)
 
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Gegevenstype|
@@ -157,9 +157,9 @@ De volgende instellingen zijn handig voor apparaten waarop Windows Holographic f
 
 ## <a name="find-the-policies-you-can-configure"></a>De beleidsregels zoeken die u kunt configureren
 
-U vindt een volledige lijst met alle configuratieserviceproviders (CSP's) die door Windows Holographic worden ondersteund in [CSP's die worden ondersteund in Windows Holographic](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference#hololens). Niet alle instellingen zijn compatibel met alle versies van Windows Holographic. In de tabel in [CSP's die worden ondersteund in Windows Holographic](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference#hololens) worden de ondersteunde versies voor elke CSP vermeld.
+U vindt een volledige lijst met alle configuratieserviceproviders (CSP's) die door Windows Holographic worden ondersteund in [CSP's die worden ondersteund in Windows Holographic](/windows/client-management/mdm/configuration-service-provider-reference#hololens). Niet alle instellingen zijn compatibel met alle versies van Windows Holographic. In de tabel in [CSP's die worden ondersteund in Windows Holographic](/windows/client-management/mdm/configuration-service-provider-reference#hololens) worden de ondersteunde versies voor elke CSP vermeld.
 
-Bovendien worden niet alle instellingen ondersteund die worden vermeld in [CSP's die worden ondersteund in Windows Holographic](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference#hololens) door Intune. Als u wilt weten of de gewenste instelling door Intune wordt ondersteund, opent u het artikel voor de betreffende instelling. U kunt op elke instellingenpagina zien welke bewerkingen worden ondersteund. Voor gebruik in combinatie met Intune moet de instelling de bewerking **Toevoegen** of **Vervangen** ondersteunen.
+Bovendien worden niet alle instellingen ondersteund die worden vermeld in [CSP's die worden ondersteund in Windows Holographic](/windows/client-management/mdm/configuration-service-provider-reference#hololens) door Intune. Als u wilt weten of de gewenste instelling door Intune wordt ondersteund, opent u het artikel voor de betreffende instelling. U kunt op elke instellingenpagina zien welke bewerkingen worden ondersteund. Voor gebruik in combinatie met Intune moet de instelling de bewerking **Toevoegen** of **Vervangen** ondersteunen.
 
 ## <a name="next-steps"></a>Volgende stappen
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 607e2303cbec9ec7fc069db602d51684b71e6575
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c8cc44cb614154df1a128ee1f1708a3259f88169
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80083835"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910040"
 ---
 # <a name="troubleshoot-and-see-potential-issues-on-android-zebra-devices-in-microsoft-intune"></a>Problemen oplossen en potentiële problemen op Android Zebra-apparaten in Microsoft Intune weergeven
 
@@ -57,7 +57,7 @@ Als u logboeken wilt ophalen nadat het profiel al is geïmplementeerd met Intune
 Op het apparaat worden logboeken opgeslagen in `/sdcard/Android/data/com.microsoft.windowsintune.companyportal/files`
 
 ### <a name="get-logs-from-email"></a>Logboeken ophalen van e-mail
-Als u logboeken wilt ophalen nadat het profiel al is geïmplementeerd met Intune, kunnen eindgebruikers u de logboeken via e-mail verzenden via een e-mail-app op het apparaat. Open de bedrijfsportal-app op het Zebra-apparaat en [verzend de logboeken](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android). Met de functie Logboeken verzenden wordt ook een PowerLift-incident-id gemaakt, waarnaar u kunt verwijzen als u contact opneemt met Microsoft Ondersteuning.
+Als u logboeken wilt ophalen nadat het profiel al is geïmplementeerd met Intune, kunnen eindgebruikers u de logboeken via e-mail verzenden via een e-mail-app op het apparaat. Open de bedrijfsportal-app op het Zebra-apparaat en [verzend de logboeken](../user-help/send-logs-to-your-it-admin-by-email-android.md). Met de functie Logboeken verzenden wordt ook een PowerLift-incident-id gemaakt, waarnaar u kunt verwijzen als u contact opneemt met Microsoft Ondersteuning.
 
 ## <a name="read-the-logs"></a>De logboeken lezen
 

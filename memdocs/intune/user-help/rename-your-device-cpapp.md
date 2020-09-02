@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 8c71ef5e1abfcccfdeec6c01551a23bf1d1750bd
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2fcb7be9d5a75f17e2b9c347be9cd5d4eedd925d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881148"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907647"
 ---
 # <a name="rename-device-from-the-company-portal-app-for-windows"></a>De naam van een apparaat wijzigen vanuit de bedrijfsportal-app voor Windows
 Wijzig de naam van een apparaat zodat het apparaat gemakkelijker wordt herkend tussen andere apparaten. Met de bedrijfsportal-app voor Windows kunt u de naam van de volgende soorten verbonden apparaten wijzigen:  
@@ -47,7 +47,7 @@ Voer de volgende stap uit om een apparaat te verwijderen van de pagina **Apparaa
      ![Voorbeeldschermopname van de bedrijfsportal-app voor Windows: de pagina Apparaatdetails, pop-upvenster Naam wijzigen.](./media/1808_RenameApp_Popup.png)  
 
 ## <a name="rename-device-from-device-context-menu"></a>Naam van apparaat wijzigen vanaf het contextmenu van het apparaat  
-Voer de volgende stap uit om een apparaat te verwijderen via de acties van het [contextmenu](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus).  
+Voer de volgende stap uit om een apparaat te verwijderen via de acties van het [contextmenu](//windows/uwp/design/controls-and-patterns/menus).  
 
 1. Ga naar de **startpagina** van de bedrijfsportal-app en ga naar **Mijn apparaten**.
 
@@ -61,4 +61,3 @@ Voer de volgende stap uit om een apparaat te verwijderen via de acties van het [
      ![Voorbeeldschermopname van de bedrijfsportal-app voor Windows: de startpagina. Het pop-upveld Naam wijzigen wordt weergegeven bij apparaten. Hierin kan de gebruiker een nieuwe naam typen en op Naam wijzigen of annuleren klikken.](./media/1808_RenameApp_Popup.png)  
 
 Nog hulp nodig? Neem contact op met het ondersteuningsteam van uw bedrijf. Controleer of de contactgegevens beschikbaar zijn op de [bedrijfsportalwebsite](https://go.microsoft.com/fwlink/?linkid=2010980).
-

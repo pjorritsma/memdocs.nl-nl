@@ -17,12 +17,12 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e50d518c3709d71085a57ad9a430444564c24cb9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a385b990dfb3c81ea10454b2134f92dec5a2f073
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357555"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907664"
 ---
 # <a name="additional-resources-for-planning-your-intune-deployment"></a>Aanvullende resources voor het plannen van uw Intune-implementatie
 
@@ -50,7 +50,7 @@ Hier volgt een lijst met tabelsjablonen voor elke sectie.
 
 Neem de volgende resources door voor aanvullende informatie die nuttig kan zijn tijdens het plannen, ontwerpen en implementeren van Intune.
 
-- [Microsoft Intune-documentatie](https://docs.microsoft.com/intune/): het volledige aanbod van Intune-documentatie.
+- [Microsoft Intune-documentatie](/intune/): het volledige aanbod van Intune-documentatie.
 
 - [Microsoft Trust Center](https://www.microsoft.com/TrustCenter): informatie over de methode van Microsoft met betrekking tot de beveiliging, privacy, naleving en transparantie in alle Microsoft-cloudproducten en -services.
 

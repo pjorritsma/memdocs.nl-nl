@@ -2,7 +2,7 @@
 title: Wat is er nieuw in versie 2006
 titleSuffix: Configuration Manager
 description: Krijg informatie over wijzigingen en nieuwe mogelijkheden die zijn geïntroduceerd in versie 2006 van Configuration Manager current branch.
-ms.date: 08/31/2020
+ms.date: 09/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c507879a77e57a0a06fe9528417394bcbf643608
-ms.sourcegitcommit: 68631e0f7d5bd09ae0ee9dc301a561ee9df10931
+ms.openlocfilehash: 3c061236202e685a6b59eeca3254a80cc1ddabf9
+ms.sourcegitcommit: 9d5c7a5e6ec430dc02d6d345028f6b29f6579b20
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89244994"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89385359"
 ---
 # <a name="whats-new-in-version-2006-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 2006 van Configuration Manager current branch
 
@@ -340,8 +340,7 @@ Zie [release opmerkingen voor Power shell versie 2006](/powershell/sccm/2006-rel
 
 Zie [release opmerkingen voor de beheer service](../../../develop/adminservice/release-notes.md#bkmk_2006)voor meer informatie over wijzigingen in de beheer service rest API.
 
-<!--
-Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4556203).
+Afgezien van nieuwe functies bevat deze release ook aanvullende wijzigingen, zoals oplossingen voor problemen. Zie [overzicht van wijzigingen in Configuration Manager current branch, versie 2006](https://support.microsoft.com/help/4578830)voor meer informatie.
 
 <!--
 The following update rollup (4517869) is available in the console starting on October 1, 2019: [Update rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869).

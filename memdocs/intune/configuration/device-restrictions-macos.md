@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4f4ef6bab42f2f1b97c32a422d92247a3e564f7
-ms.sourcegitcommit: a198e4efa52b16f87049853b9d8c9854fd9fa057
+ms.openlocfilehash: c068a092ad0f7087ad28b8424cc2640214972f82
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84680401"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996687"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>Met macOS-apparaatinstellingen kunt u functies toestaan of beperken met behulp van Intune
 
@@ -176,7 +176,7 @@ Deze functie is van toepassing op:
 ### <a name="settings-apply-to-user-approved-device-enrollment-automated-device-enrollment"></a>Deze instellingen zijn van toepassing op: Door de gebruiker goedgekeurde apparaatinschrijving, automatische apparaatregistratie
 
 - **Apps en processen**: **Voeg** apps of processen toe om de toegang te configureren. Voer ook in:
-  - **Naam**: Voer een naam in voor uw app of proces. Voer bijvoorbeeld `Microsoft Remote Desktop` of `Microsoft Office 365` in.
+  - **Naam**: Voer een naam in voor uw app of proces. Voer bijvoorbeeld `Microsoft Remote Desktop` of `Microsoft 365` in.
   
   - **Id-type**: Uw opties zijn:
     - **Bundel-id**: Selecteer deze optie voor apps.

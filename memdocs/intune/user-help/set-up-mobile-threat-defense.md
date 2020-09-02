@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser, contperfq1
 ms.collection: ''
-ms.openlocfilehash: 23d449b6b5edf43ea709f8fce194ac5a8afe8eb4
-ms.sourcegitcommit: 19ef60175cbfd5c5d1e213a6d64eded34ee42041
+ms.openlocfilehash: 37b7006ef912d87276c11e09cb6db0c0f14059c4
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88725346"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193909"
 ---
 # <a name="install-mobile-threat-defense-app"></a>Mobile Threat Defense-app installeren  
 
@@ -71,7 +71,7 @@ Als u wordt gevraagd een MTD-app te installeren, maar niet zeker weet welke u mo
 ### <a name="device-registration"></a>Apparaatregistratie  
 Apparaatregistratie is noodzakelijk om uw identiteit te controleren en om uw school- of werkaccount aan uw apparaat te koppelen. Als uw apparaat niet is geregistreerd, wordt u automatisch door deze stappen geleid voordat u de MTD-app installeert.   
 
-Zie [Uw persoonlijke apparaat registreren op het netwerk van uw organisatie](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) voor meer informatie over apparaatregistratie.  
+Zie [Uw persoonlijke apparaat registreren op het netwerk van uw organisatie](/azure/active-directory/user-help/user-help-register-device-on-network) voor meer informatie over apparaatregistratie.  
 
 ### <a name="ios-setup"></a>Installeren in iOS  
 Deze stappen beginnen op het scherm **Toegang krijgen**, dat wordt weergegeven nadat u zich hebt aangemeld bij een beveiligde app.  
@@ -124,9 +124,9 @@ Een bedreiging oplossen en opnieuw toegang krijgen tot beveiligde apps:
 
 ### <a name="share-app-logs-with-it-support"></a>App-logboeken delen met IT-ondersteuning  
 U kunt ook uw app-logboeken naar uw IT-ondersteuningsmedewerker sturen om deze meer context over een mislukte installatie te geven.  
-* Android-gebruikers: [Uw logboeken uploaden en e-mailen](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android) vanuit de bedrijfsportal.   
+* Android-gebruikers: [Uw logboeken uploaden en e-mailen](./send-logs-to-your-it-admin-by-email-android.md) vanuit de bedrijfsportal.   
 
-* Gebruikers van iOS-apparaten: U kunt [uw logboeken ophalen en verzenden](https://docs.microsoft.com/intune/apps/manage-microsoft-edge#use-microsoft-edge-to-access-managed-app-logs) vanuit Microsoft Edge voor iOS.  
+* Gebruikers van iOS-apparaten: U kunt [uw logboeken ophalen en verzenden](/intune/apps/manage-microsoft-edge#use-microsoft-edge-to-access-managed-app-logs) vanuit Microsoft Edge voor iOS.  
 
 
 ## <a name="next-steps"></a>Volgende stappen  
@@ -137,4 +137,3 @@ Raadpleeg de volgende artikelen voor meer informatie over hoe beheerde apps werk
 * [Beheerde apps op uw iOS-apparaat gebruiken](use-managed-apps-on-your-device-ios.md)  
 
 Nog hulp nodig? Neem contact op met het ondersteuningsteam van uw bedrijf. Controleer of de contactgegevens beschikbaar zijn op de [bedrijfsportalwebsite](https://go.microsoft.com/fwlink/?linkid=2010980).
-

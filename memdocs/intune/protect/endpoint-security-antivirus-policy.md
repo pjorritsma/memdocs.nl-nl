@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 63400c81ee678a98a83ed17cf192335acf9c047b
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 2460a132711fb19d12f33bbada23756fc2344cca
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820290"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194243"
 ---
 # <a name="antivirus-policy-for-endpoint-security-in-intune"></a>Antivirusbeleid voor eindpuntbeveiliging in Intune
 
@@ -39,7 +39,7 @@ Het antivirusbeleid bevat dezelfde instellingen als bij *eindpuntbescherming* of
 
 - **macOS**
   - Een ondersteunde versie van macOS
-  - Microsoft Defender ATP moet op een apparaat zijn geïnstalleerd om de antivirus-instellingen op dat apparaat te beheren met Intune. Zie. [Microsoft Defender ATP voor macOS](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (in de documentatie van Microsoft Defender ATP)
+  - Microsoft Defender ATP moet op een apparaat zijn geïnstalleerd om de antivirus-instellingen op dat apparaat te beheren met Intune. Zie. [Microsoft Defender ATP voor macOS](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (in de documentatie van Microsoft Defender ATP)
 
 - **Windows 10 en hoger**
   - Er zijn geen aanvullende voorwaarden vereist.
@@ -65,7 +65,7 @@ De onderstaande profielen worden ondersteund voor apparaten die u met Intune beh
 
   - Profiel: **Antivirus**: [Instellingen voor antivirusbeleid beheren](../protect/antivirus-microsoft-defender-settings-macos.md) voor macOS.
 
-    Wanneer u [Microsoft Defender ATP voor Mac](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) gebruikt, kunt u antivirus-instellingen configureren en implementeren op uw beheerde macOS-apparaten via Intune in plaats van deze instellingen te configureren met behulp van `.plist` bestanden.
+    Wanneer u [Microsoft Defender ATP voor Mac](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) gebruikt, kunt u antivirus-instellingen configureren en implementeren op uw beheerde macOS-apparaten via Intune in plaats van deze instellingen te configureren met behulp van `.plist` bestanden.
 
 **Windows 10**:
 
@@ -77,7 +77,7 @@ De onderstaande profielen worden ondersteund voor apparaten die u met Intune beh
 
     Het *Microsoft Defender Antivirus*-profiel is een afzonderlijk exemplaar van de antivirusinstellingen die worden gevonden in het *Beperkingsprofiel voor apparaten* voor het configuratiebeleid voor apparaten.
   
-    In tegenstelling tot de antivirus-instellingen in een *Restrictieprofiel voor apparaten*, kunt u deze instellingen gebruiken voor apparaten die gezamenlijk worden beheerd. Als u deze instellingen wilt gebruiken, moet u de [schuifregelaar voor cobeheerworkload](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) voor Endpoint Protection instellen op Intune.
+    In tegenstelling tot de antivirus-instellingen in een *Restrictieprofiel voor apparaten*, kunt u deze instellingen gebruiken voor apparaten die gezamenlijk worden beheerd. Als u deze instellingen wilt gebruiken, moet u de [schuifregelaar voor cobeheerworkload](/configmgr/comanage/how-to-switch-workloads) voor Endpoint Protection instellen op Intune.
 
   - Profiel: **Microsoft Defender Antivirus-uitsluitingen** - Beheer beleidsinstellingen alleen voor [antivirusuitsluitingen](../protect/antivirus-microsoft-defender-settings-windows.md#microsoft-defender-antivirus-exclusions).
   
@@ -117,9 +117,9 @@ De volgende instellingen ondersteunen het samenvoegen van beleid:
 
 [Microsoft Defender Antivirus-beleid](../protect/antivirus-microsoft-defender-settings-windows.md)
 
-- **Defender-processen die moeten worden uitgesloten** - CSP: [Defender/ExcludedProcesses](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
-- **Bestandsextensies die moeten worden uitgesloten van scans en de realtime-beveiliging** - CSP: [Defender/ExcludedExtensions](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
-- **Defender-bestanden en -mappen die moeten worden uitgesloten** - CSP: [Defender/ExcludedPaths](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
+- **Defender-processen die moeten worden uitgesloten** - CSP: [Defender/ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
+- **Bestandsextensies die moeten worden uitgesloten van scans en de realtime-beveiliging** - CSP: [Defender/ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
+- **Defender-bestanden en -mappen die moeten worden uitgesloten** - CSP: [Defender/ExcludedPaths](/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
 
 ## <a name="antivirus-policy-reports"></a>Beleidsrapporten voor antivirus
 

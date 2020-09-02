@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 481113dc64418b1579dbf9b478cd3ebd85b6cb72
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: cbf23dc82f5524bcd8c778c41e964c7a9e46c21e
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179321"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057267"
 ---
 # <a name="using-your-windows-device-with-intune-company-portal"></a>Uw Windows-apparaat gebruiken met de Intune-bedrijfsportal
 
@@ -33,7 +33,7 @@ In dit artikel worden specifieke taken en informatie voor de bedrijfsportal voor
 ## <a name="how-to-get-company-portal"></a>De bedrijfsportal ophalen
 De bedrijfsportal is beschikbaar als website-versie en als app-download. Meld u aan met uw werk- of schoolreferenties voor [toegang tot de bedrijfsportalwebsite](https://go.microsoft.com/fwlink/?linkid=2010980).  
 
-Raadpleeg [Aanmelden bij de bedrijfsportal](https://docs.microsoft.com/mem/intune/user-help/sign-in-to-the-company-portal) voor gedetailleerde stappen en schermopnamen.
+Raadpleeg [Aanmelden bij de bedrijfsportal](./sign-in-to-the-company-portal.md) voor gedetailleerde stappen en schermopnamen.
 
 ## <a name="supported-versions"></a>Ondersteunde versies
 
@@ -67,7 +67,7 @@ Er worden andere versies van Windows, zoals [Windows 10 Holographic](https://www
 * [Mijn Windows-apparaat bijwerken](you-need-to-update-your-windows-device.md)
 * [Logboeken van de bedrijfsportal-app verzenden](send-logs-to-your-it-admin-cp-windows.md)
 * [Logboeken van de Apparaatinstellingen-app verzenden](send-logs-to-your-it-admin-settings-windows.md)
-* [Office 365 installeren op mijn Windows 10-apparaat](install-office-windows.md)
+* [Office installeren op mijn Windows 10-apparaat](install-office-windows.md)
 * [Mijn apparaat moet worden versleuteld](you-need-to-enable-windows-encryption.md)
 * [Antimalware-software ophalen](your-device-needs-antimalware-software.md)
 * [Beveiligd opstarten inschakelen](you-need-to-enable-secure-boot-windows.md)

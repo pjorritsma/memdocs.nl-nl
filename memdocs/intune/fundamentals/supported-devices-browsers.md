@@ -18,20 +18,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a9622a89b8b689dab7ea2d6d332d1d29c38f5668
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a8bfddd247f2f86d8fc5a9162a5c68efd5e7ffb5
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80085742"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996279"
 ---
 # <a name="supported-operating-systems-and-browsers-in-intune"></a>Ondersteunde besturingssystemen en browsers in Intune
 
 Bestudeer, voordat u Microsoft Intune instelt, de ondersteunde besturingssystemen en browsers.
 
-Raadpleeg voor hulp bij de installatie van Intune op uw apparaat [Beheerde apparaten gebruiken om werk gedaan te krijgen](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done) en [Bandbreedtegebruik](network-bandwidth-use.md).
+Raadpleeg voor hulp bij de installatie van Intune op uw apparaat [Beheerde apparaten gebruiken om werk gedaan te krijgen](../user-help/use-managed-devices-to-get-work-done.md) en [Bandbreedtegebruik](network-bandwidth-use.md).
 
-Voor meer informatie over ondersteuning door de configuratie-serviceprovider, gaat u naar de [referentie van de configuratie-serviceprovider](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
+Voor meer informatie over ondersteuning door de configuratie-serviceprovider, gaat u naar de [referentie van de configuratie-serviceprovider](/windows/client-management/mdm/configuration-service-provider-reference).
 
 > [!NOTE]
 > In Intune is nu Android 5.x (Lollipop) of hoger vereist voor toepassingen en apparaten om toegang te krijgen tot bedrijfsbronnen via de Bedrijfsportal-app voor Android en de Intune-app-SDK voor Android. Deze vereiste is NIET van toepassing bij Polycom, op Teams-apparaten met Android-versie 4.4. Deze apparaten worden nog steeds ondersteund. 
@@ -103,7 +103,7 @@ Een [Intune-softwareclient](manage-windows-pcs-with-microsoft-intune.md) kan als
 
 <!--  ### Exchange ActiveSync management
 
-You can manage [Exchange ActiveSync devices](../enrollment/device-enrollment.md#mobile-device-management-with-exchange-activesync-and-intune) from the Intune console. This option provides a limited set of management capabilities when compared to the other methods. See [Capabilities of built-in Mobile Device Management in Office 365](https://support.office.com/article/Capabilities-of-built-in-Mobile-Device-Management-for-Office-365-a1da44e5-7475-4992-be91-9ccec25905b0) for a list of supported devices.  -->
+You can manage [Exchange ActiveSync devices](../enrollment/device-enrollment.md#mobile-device-management-with-exchange-activesync-and-intune) from the Intune console. This option provides a limited set of management capabilities when compared to the other methods. See [Capabilities of built-in Mobile Device Management in Microsoft 365](https://support.office.com/article/Capabilities-of-built-in-Mobile-Device-Management-for-Office-365-a1da44e5-7475-4992-be91-9ccec25905b0) for a list of supported devices.  -->
 
 ## <a name="intune-supported-web-browsers"></a>Door Intune ondersteunde webbrowsers
 
@@ -131,6 +131,6 @@ De volgende Silverlight-browsers ondersteunen de Intune-console:
 - Mozilla Firefox met Silverlight ingeschakeld (versies vóór versie 56)
 
 > [!Note]
-> Microsoft Edge en mobiele browsers worden niet ondersteund voor de klassieke Intune-portal, omdat ze geen ondersteuning bieden voor [Microsoft Silverlight](https://msdn.microsoft.com/library/cc838158(v=vs.95).aspx).
+> Microsoft Edge en mobiele browsers worden niet ondersteund voor de klassieke Intune-portal, omdat ze geen ondersteuning bieden voor [Microsoft Silverlight](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838158(v=vs.95)).
 
 Alleen gebruikers met servicebeheerdersmachtigingen en tenantbeheerders met de rol Algemene beheerder kunnen zich bij deze portal aanmelden. Voor toegang tot de beheerconsole moet uw account een licentie voor het gebruik van Intune en de aanmeldingsstatus **Toegestaan** hebben.

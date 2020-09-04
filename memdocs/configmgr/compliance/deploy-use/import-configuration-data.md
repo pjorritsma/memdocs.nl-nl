@@ -10,12 +10,12 @@ ms.assetid: 309b9a09-a611-4ba2-90ab-dde51582cf87
 author: mestew
 manager: dougeby
 ms.author: mstewart
-ms.openlocfilehash: 3c31f97e2a494fa4b0d3e9e825a81b562859e5dd
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 7d9760a49815b9eb33c7886f4d9a8f9637dedd21
+ms.sourcegitcommit: 9f072da27aa64f46a9409470b5dac5bfac3a0fe5
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240351"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89468308"
 ---
 # <a name="import-configuration-data-with-configuration-manager"></a>Configuratie gegevens importeren met Configuration Manager
 
@@ -28,8 +28,6 @@ Naast het maken van configuratie basislijnen en configuratie-items in de Configu
 - Configuratie gegevens die zijn geëxporteerd uit System Center 2012 Configuration Manager en hoger.  
 
 - Configuratie gegevens die extern zijn gemaakt en die voldoen aan het SML-schema.  
-
-  Zie [System Center 2012 Configuration Manager Configuration Pack](https://www.microsoft.com/download/details.aspx?id=30710&WT.mc_id=rss_alldownloads_all)(Engelstalig) voor een voorbeeld van een configuratiepakket waarmee u compliantie beheert voor System Center 2012 Configuration Manager-siteserverrollen.  
 
 Wanneer u een configuratiebasislijn importeert, kunnen enkele of alle van de configuratie-items waarnaar wordt verwezen in de configuratiebasislijn ook worden opgenomen in het CAB-bestand. Tijdens het import proces wordt in Configuration Manager gecontroleerd of alle configuratie-items waarnaar wordt verwezen in de configuratie basislijn ook zijn opgenomen in het CAB-bestand of al aanwezig zijn in de Configuration Manager-site. Het import proces mislukt als u een configuratie basislijn probeert te importeren die verwijst naar de configuratie gegevens die Configuration Manager niet kan worden gevonden.  
 

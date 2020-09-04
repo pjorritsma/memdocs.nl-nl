@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 76d1edf8598e1abd71b6fd1db7faffa1750110d4
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: eff1ec6a8346132853285195d8e96aa6b8d3a8fa
+ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129117"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432571"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Technical Preview voor Configuration Manager
 
@@ -30,9 +30,9 @@ Deze informatie is van toepassing op alle versies van de Configuration Manager T
 Voor informatie over wat er nieuw is in de *huidige vertakking* van Configuration Manager raadpleegt u [Wat is er nieuw in Configuration Manager incrementele versies](../plan-design/changes/whats-new-incremental-versions.md).
 
 > [!Tip]
-> Als u een melding wilt ontvangen wanneer deze pagina wordt bijgewerkt, kopieert en plakt u de volgende URL in uw RSS feed-lezer:`https://docs.microsoft.com/api/search/rss?search=%22technical+preview+releases+-+Configuration+Manager%22&locale=en-us`
+> Als u een melding wilt ontvangen wanneer deze pagina wordt bijgewerkt, kopieert en plakt u de volgende URL in uw RSS feed-lezer: `https://docs.microsoft.com/api/search/rss?search=%22technical+preview+releases+-+Configuration+Manager%22&locale=en-us`
 
-## <a name="requirements-and-limitations"></a><a name="bkmk_reqs"></a>Vereisten en beperkingen
+## <a name="requirements-and-limitations"></a><a name="bkmk_reqs"></a> Vereisten en beperkingen
 
 > [!IMPORTANT]
 > De Technical Preview is gelicentieerd voor gebruik in een test omgeving. Micro soft biedt mogelijk geen ondersteunings services en bepaalde functies zijn mogelijk niet beschikbaar in Technical previews. Daarnaast hebben technische preview-software mogelijk gereduceerde of andere beveiligings-, privacy-, toegankelijkheids-, beschik baarheids-en betrouwbaarheids normen ten opzichte van commerciële software.
@@ -76,7 +76,7 @@ De technische preview-vertakking van Configuration Manager ondersteunt de volgen
 > [!Note]
 > Het opnemen van deze producten in deze inhoud impliceert geen uitbrei ding van ondersteuning voor een versie die niet langer is dan de levens cyclus. Configuration Manager biedt geen ondersteuning voor producten die niet langer zijn dan de levens cyclus. Zie [micro soft Lifecycle-beleid](https://support.microsoft.com/lifecycle)voor meer informatie.
 
-## <a name="install-and-update"></a><a name="bkmk_install"></a>Installeren en bijwerken
+## <a name="install-and-update"></a><a name="bkmk_install"></a> Installeren en bijwerken
 
 De Configuration Manager Technical Preview-vertakking voor het gebruik van Lab is verschillend van de Configuration Manager huidige vertakking voor productie gebruik.
 
@@ -97,7 +97,7 @@ Installeer een basislijn versie van Maxi maal één jaar na de release. Gebruik 
 
 Down load een basislijn versie van het [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
 
-## <a name="providing-feedback"></a><a name="BKMK_TPFeedback"></a>Feedback geven
+## <a name="providing-feedback"></a><a name="BKMK_TPFeedback"></a> Feedback geven
 
 We horen graag uw feedback over de nieuwe functies in de Technical Preview. Zie [product feedback](../understand/find-help.md#product-feedback)voor meer informatie.
 
@@ -110,7 +110,7 @@ Als u ideeën hebt over nieuwe functies die u graag wilt zien, laat het ons wete
 Enable this section if needed to include any broad change to the tech preview branch
 -->
 
-## <a name="features-in-the-most-recent-version"></a><a name="bkmk_tpCaps"></a>Functies in de meest recente versie
+## <a name="features-in-the-most-recent-version"></a><a name="bkmk_tpCaps"></a> Functies in de meest recente versie
 
 <!-- (explanatory comment)
 This is the full list of new features in the latest TP release
@@ -166,11 +166,8 @@ De volgende functies zijn uitgebracht met eerdere versies van de Configuration M
 
 | Functie        | Technical Preview-versie |
 |----------------|---------------------------|
-| De app Bedrijfsportal gebruiken op gezamenlijk beheerde apparaten <!--3601237--> | [Tech Preview 2006](2020/technical-preview-2006.md#bkmk_portal) |
 | Verbeteringen in beschik bare apps via CMG <!--7033501--> | [Tech Preview 2006](2020/technical-preview-2006.md#bkmk_availapp) |
-| Tenant bijvoegen: verbeteringen aan Configuration Manager acties in het beheer centrum van micro soft Endpoint Manager <!--7518897--> | [Tech Preview 2006](2020/technical-preview-2006.md#bkmk_apps) |
 | Tenantkoppeling: Tijdlijn van het apparaat in het beheercentrum <!--7141381--> | [Tech Preview 2005](2020/technical-preview-2005.md#bkmk_timeline) |
-| Tenantkoppeling: Een toepassing installeren vanuit het beheercentrum <!--6024389--> | [Tech Preview 2005](2020/technical-preview-2005.md#bkmk_apps) |
 | Tenantkoppeling: CMPivot vanuit het beheercentrum <!--6024392--> | [Tech Preview 2005](2020/technical-preview-2005.md#bkmk_cmpivot) |
 | Tenantkoppeling: Scripts uitvoeren vanuit het beheercentrum <!--6234688--> | [Tech Preview 2005](2020/technical-preview-2005.md#bkmk_scripts) |
 | Verbeteringen in de Cloud Management Gateway-cmdlets <!--6978300--> | [Tech Preview 2005](2020/technical-preview-2005.md#bkmk_pwshcmg) |

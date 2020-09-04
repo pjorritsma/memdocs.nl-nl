@@ -10,12 +10,12 @@ ms.assetid: 315e2613-dc71-46b1-80cb-26161d08103a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eaceea5f83bd93fee8261a94147383cde001f90b
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: dc8aa57bda5f5a29d72af854be9a18e4f32760f8
+ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699582"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432537"
 ---
 # <a name="integrate-with-power-bi-report-server"></a>Integreren met Power BI Report Server
 
@@ -103,9 +103,15 @@ Gebruik dit proces alleen als u nog geen Reporting Services-punt op de site hebt
 
 1. Wanneer het rapport klaar is om op te slaan, gaat u naar het menu **bestand** , selecteert u **Opslaan als**en kiest u **Power bi Report Server**.
 
-1. Voer in het venster **Power bi Report Server selectie** de URL in voor het Reporting Services-punt als het **nieuwe rapport server adres**. Bijvoorbeeld `https://rsp.contoso.com/Reports`.
+1. Voer in het venster **Power bi Report Server selectie** de URL in voor het Reporting Services-punt als het **nieuwe rapport server adres**. Bijvoorbeeld `https://rsp.contoso.com/Reports`. Selecteer **OK**.
 
-In de Configuration Manager-console ziet u het nieuwe rapport in de lijst met Power BI-rapporten.
+1. Dubbel klik in het venster **rapport opslaan** op de `ConfigMgr_<SiteCode>` map. Bijvoorbeeld, `ConfigMgr_PS1` waar `PS1` is de ConfigMgr-site code. U kunt desgewenst kiezen of maken (van de rapport server) een submap om deze op te slaan in.
+    > [!TIP]
+    > Rapporten en rapport mappen met Power BI rapporten moeten zich in de `ConfigMgr_<SiteCode>` map op de rapport server bevinden of ze worden niet weer gegeven in de Configuration Manager-console.
+
+1. Voer in **Bestands naam**een naam in voor het rapport.
+
+In de Configuration Manager-console ziet u het nieuwe rapport in de lijst met Power BI-rapporten. Als uw rapporten niet worden weer gegeven, controleert u of u de rapporten hebt opgeslagen in de `ConfigMgr_<SiteCode>` map.
 
 ## <a name="next-steps"></a>Volgende stappen
 

@@ -2,7 +2,7 @@
 title: Apps in de bedrijfsportal
 titleSuffix: Configuration Manager
 description: Geef een consistente gebruikers ervaring op voor gezamenlijk beheerde apparaten om de Bedrijfsportal-app te gebruiken.
-ms.date: 08/20/2020
+ms.date: 09/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: how-to
@@ -10,12 +10,12 @@ ms.assetid: 26456bb7-f46b-4d8d-bb0b-e3fd9a52fe14
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 28d1a820642c7400ad60b1571851f18a3eb9124c
-ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
+ms.openlocfilehash: cd49546e49d6964cfe37b0b13e1abe9175f4aa0e
+ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89068103"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432554"
 ---
 # <a name="use-the-company-portal-app-on-co-managed-devices"></a>Gebruik de bedrijfsportal-app op gezamenlijk beheerde apparaten
 
@@ -50,7 +50,7 @@ Raadpleeg voor meer informatie de volgende artikelen:
 
 ## <a name="prerequisites"></a>Vereisten
 
-- Configuration Manager huidige branch-versie 2006 of hoger
+- Configuration Manager huidige branch-versie 2006 of hoger <sup>([Zie Veelgestelde vragen](#bkmk_ver-prereq))</sup>
 
 - App-versie 11.0.8980.0 of hoger Bedrijfsportal
 
@@ -118,6 +118,10 @@ Als u de client instelling voor Bedrijfsportal wijzigt, wordt de Bedrijfsportal 
 Als u problemen met de installatie van Configuration Manager-Apps wilt oplossen, gaat u naar de sectie **help & ondersteuning** in bedrijfsportal. Wanneer u de optie **Help ophalen** gebruikt, kunt u Configuration Manager-logboek bestanden verzenden als onderdeel van de aanvraag.
 
 ## <a name="frequently-asked-questions-faq"></a>Veelgestelde vragen
+
+### <a name="im-using-configuration-manager-version-2002-why-is-the-new-company-portal-showing-configuration-manager-apps"></a><a name="bkmk_ver-prereq"></a> Ik gebruik Configuration Manager versie 2002, waarom is de nieuwe Bedrijfsportal Configuration Manager apps weer gegeven?
+
+Bedrijfsportal versie 11.0.8980.0 of nieuwer bevat Configuration Manager geïmplementeerde toepassingen voor alle clients met co-beheer die deze gebruiken. Configuration Manager versie 2006 is de vereiste omdat hiermee de client instelling voor het beheren van meldingen wordt toegevoegd. Als u de Bedrijfsportal op een gezamenlijk beheerd apparaat van een eerdere versie installeert of de client instelling niet configureert, zien gebruikers meldingen van beide portals. Deze ervaring kan verwarrend zijn voor gebruikers.
 
 ### <a name="does-company-portal-support-applications-deployed-as-software-updates-from-configuration-manager"></a>Ondersteunt Bedrijfsportal toepassingen die worden geïmplementeerd als software-updates van Configuration Manager?
 

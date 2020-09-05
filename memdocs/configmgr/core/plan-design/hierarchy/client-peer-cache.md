@@ -10,12 +10,12 @@ ms.assetid: 86cd5382-8b41-45db-a4f0-16265ae22657
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c302e839c2a41ba27d160db24928f7e202de78dc
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: 4d0bd136278053ded38d0d6ed4cfe4059ffe3037
+ms.sourcegitcommit: 0ec6d8dabb14f20b1d84f7b503f1b03aac2a30d4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110182"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89479311"
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>Peer-cache voor Configuration Manager-clients
 
@@ -50,11 +50,11 @@ Peer-cache vervangt niet het gebruik van andere oplossingen, zoals Windows Branc
 
 
 
-## <a name="operations"></a>Bewerkingen
+## <a name="operations"></a>Operations
 
 Implementeer de [client instellingen](#bkmk_settings) voor een verzameling om peer-cache in te scha kelen. Vervolgens fungeren leden van die verzameling als peer-cache bron voor andere clients in dezelfde grens groep.  
 
-- Een client die fungeert als een peer-inhouds bron, verzendt een lijst met beschik bare inhoud in de cache naar het beheer punt met behulp van status berichten.
+- Een client die fungeert als een peer-inhouds bron, verzendt een lijst met beschik bare inhoud in de cache naar het beheer punt met behulp van status berichten. Een peer-inhouds bron client verzendt ook een status bericht naar het beheer punt wanneer de inhoud uit de lokale cache wordt verwijderd.
 
    > [!NOTE]
    > Zie [status berichten in Configuration Manager](state-messaging-system-center-configuration-manager.md#7200-state_topictype_super_peer_update_cache_map) voor de lijst met toepasselijke peer-inhouds bron status berichten specifcally die met de status bericht-id's 7200, 7201, 7202 en 7203.
@@ -116,7 +116,7 @@ Wanneer de peer-cache bron een aanvraag voor de inhoud afwijst, blijft de peer-c
 
 
 
-## <a name="peer-cache-client-settings"></a><a name="bkmk_settings"></a>Client instellingen voor peer-cache
+## <a name="peer-cache-client-settings"></a><a name="bkmk_settings"></a> Client instellingen voor peer-cache
 
 Zie [client cache-instellingen](../../clients/deploy/about-client-settings.md#client-cache-settings)voor meer informatie over de client instellingen voor peer-caching. 
 
@@ -126,7 +126,7 @@ Op peer-caching-clients die gebruikmaken van de Windows Firewall, Configuration 
 
 
 
-## <a name="partial-download-support"></a><a name="bkmk_parts"></a>Gedeeltelijke download ondersteuning
+## <a name="partial-download-support"></a><a name="bkmk_parts"></a> Gedeeltelijke download ondersteuning
 <!--1357346-->
 Vanaf versie 1806 kunnen peer-cache bronnen van de client nu inhoud delen in delen. Deze onderdelen minimaliseren de netwerk overdracht om WAN-gebruik te verminderen. Het beheer punt biedt gedetailleerdere tracking van de inhouds onderdelen. Er wordt geprobeerd om meer dan één down load van dezelfde inhoud per grens groep te verwijderen. 
 

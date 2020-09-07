@@ -1,6 +1,6 @@
 ---
-title: Office 365 installeren op uw Windows 10-apparaat | Microsoft Docs
-description: ''
+title: Office installeren op uw Windows 10-apparaat | Microsoft Docs
+description: Ontdek hoe u het Office-pakket op verschillende manieren op uw Windows 10-apparaat kunt installeren. Bekijk aanvullende beschikbare ondersteuningsopties voor uw bedrijf.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -19,14 +19,14 @@ ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: a49d5de1ce0dd91ff9dacb07d50970bc9ef2e90d
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 4d7ea5c59c27939fbef454d372c0a18e4b51feee
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882161"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057382"
 ---
-# <a name="installing-office-365-on-your-windows-10-device"></a>Office 365 installeren op uw Windows 10-apparaat
+# <a name="install-office-on-your-windows-10-device"></a>Office installeren op uw Windows 10-apparaat
 
 U kunt het Office-pakket op verschillende manieren op uw Windows 10-apparaat installeren. Afhankelijk van de grootte van uw bedrijf kunnen er mogelijk meerdere versies van Office worden gedownload van de bedrijfsportal.
 

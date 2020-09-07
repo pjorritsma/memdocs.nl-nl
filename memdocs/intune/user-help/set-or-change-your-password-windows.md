@@ -1,11 +1,11 @@
 ---
 title: Apparaatwachtwoord instellen of wijzigen | Microsoft Docs
-description: ''
+description: Maak of wijzig het wachtwoord op uw mobiele apparaat of desktopapparaat met Windows 10.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/28/2018
+ms.date: 08/27/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,35 +17,30 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 0c4922bfa179436d30d73c4314662ee0cd7aa815
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: ec3fdfb5015cd1b0c0c43e94f9cf55762e4bf559
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881917"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057450"
 ---
-# <a name="make-your-device-safer-with-the-right-password"></a>Uw apparaat veiliger maken met het juiste wachtwoord
+# <a name="set-a-device-password-on-windows-10-device"></a>Een apparaatwachtwoord instellen op een Windows 10-apparaat
+Maak of wijzig het wachtwoord op uw mobiele apparaat of desktopapparaat met Windows 10. 
 
-Mensen hebben dagelijks toegang tot bedrijfsresources, zoals e-mail en documenten, nodig vanaf hun Windows-apparaten. Uw organisatie wil ervoor zorgen dat uw apparaat dit op een veilige manier doet. U kunt een wachtwoord vereisen om ervoor te zorgen dat uw apparaat zich op een veilige manier toegang tot deze resources verschaft. Deze wachtwoorden worden bijvoorbeeld gebruikt voor toegang tot het apparaat vanaf het vergrendelingsscherm.
+Op een mobiel apparaat:
 
-Als uw Windows-apparaat niet aan het wachtwoordbeleid van het ondersteuningsteam van het bedrijf voldoet, wordt er een bericht weergegeven met een korte beschrijving van het probleem en wordt uitgelegd wat u moet doen om ervoor zorgen dat uw wachtwoord voldoet aan de vereisten.
+1. Ga naar het menu **Start** > **Instellingen**.
+2. Open de systeeminstellingen. Selecteer **Accounts** > **Aanmeldingsopties**.
+3. Selecteer **Wachtwoord** > **Wijzigen**.
+4. Volg de aanwijzingen op het scherm om een nieuw wachtwoord in te stellen.  
 
-> [!Note]
-> Het ondersteuningsteam van het bedrijf kan meerdere wachtwoordvereisten instellen. Het is bijvoorbeeld mogelijk dat het wachtwoord een bepaald aantal tekens moet bevatten en dat er een combinatie van cijfers en letters moet worden gebruikt. Aangezien er meer dan één vereiste kan worden ingesteld, wordt in deze instructies alleen uitgelegd hoe u het wachtwoord instelt of wijzigt. Ze beschrijven niet elke mogelijke combinatie van vereisten.
+Op een desktopapparaat:  
+1. Druk op **Ctrl**+**Alt**+**Del** op het toetsenbord.   
+2. Selecteer **Een wachtwoord wijzigen**.
+3. Volg de aanwijzingen op het scherm om een nieuw wachtwoord in te stellen.  
 
-## <a name="to-change-your-password-on-windows-phone-81"></a>Uw wachtwoord wijzigen in Windows Phone 8.1
+Als u meer hulp nodig hebt: 
+ 
+* Neem contact op met uw IT-ondersteuningsmedewerker voor hulp met wachtwoord vereisten, Bedrijfsportal of problemen met netwerktoegang. Controleer of de contactgegevens beschikbaar zijn op de [bedrijfsportalwebsite](https://go.microsoft.com/fwlink/?linkid=2010980).  
+* Zie [Aanmeldingsopties en accountbeveiliging voor Windows 10](https://support.microsoft.com/help/4468253/windows-10-sign-in-options-and-privacy) voor meer informatie over de andere aanmeldingsopties in Windows 10.  
 
-1. Kies in het **beginscherm** de optie **Instellingen** en vervolgens **Vergrendelingsscherm**.
-2. Schuif omlaag naar **Wachtwoord** en kies **Wachtwoord wijzigen**.
-3. Voer in het vak **Huidig wachtwoord** uw huidige wachtwoord in.
-4. Voer in het vak **Nieuw wachtwoord** het nieuwe wachtwoord in en bevestig het wachtwoord in het vak **Wachtwoord bevestigen**.
-4. Kies **Gereed**.
-
-## <a name="to-set-your-password-on-windows-phone-81"></a>Uw wachtwoord instellen in Windows Phone 8.1
-
-1. Kies in het **beginscherm** de optie **Instellingen** en vervolgens **Vergrendelingsscherm**.
-2. Schuif omlaag naar **Wachtwoord** en stel **Wachtwoord** in op **Aan**.
-3. Voer in het vak **Nieuw wachtwoord** het nieuwe wachtwoord in en bevestig het wachtwoord in het vak **Wachtwoord bevestigen**.
-4. Kies **Gereed**.
-
-Nog hulp nodig? Neem contact op met het ondersteuningsteam van uw bedrijf. Controleer of de contactgegevens beschikbaar zijn op de [bedrijfsportalwebsite](https://go.microsoft.com/fwlink/?linkid=2010980).

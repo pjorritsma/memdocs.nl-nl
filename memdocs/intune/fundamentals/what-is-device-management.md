@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0dedb4746c40ff1cc2f5a2f166b1e0277997cb88
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: c7d5583addc4e76f5af0ea0b9780f20d8fa78a2c
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353612"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996194"
 ---
 # <a name="device-management-overview"></a>Overzicht van apparaatbeheer
 
@@ -52,20 +52,20 @@ Met Intune kunt u meerdere apparaten voor één persoon beheren. Het is daarbij 
 **[Veelvoorkomende scenario's](common-scenarios.md)** is een uitstekende resource om te ontdekken hoe Intune met bepaalde kwesties omgaat ten aanzien van mobiele apparaten. Er zijn scenario's te vinden over:  
 
 - E-mail beveiligen met on-premises Exchange
-- Office 365 veilig gebruiken
+- Microsoft 365 veilig gebruiken
 - Persoonlijke apparaten gebruiken voor toegang tot bedrijfsresources
 
 Raadpleeg [Wat is Intune?](what-is-intune.md) voor meer informatie over Intune.
 
 ## <a name="co-management"></a>Co-beheer
 
-Veel organisaties gebruiken on-premises Configuration Manager om apparaten, met inbegrip van desktops en servers, te beheren. U kunt uw on-premises Configuration Manager in de cloud verbinden met Microsoft Intune. Wanneer u verbindt via de cloud, krijgt u de voordelen van Intune en de cloud, met inbegrip van [voorwaardelijke toegang](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-conditional-access), [het uitvoeren van externe acties](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-remote-actions), [het gebruiken van Windows Autopilot](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-autopilot), en meer.
+Veel organisaties gebruiken on-premises Configuration Manager om apparaten, met inbegrip van desktops en servers, te beheren. U kunt uw on-premises Configuration Manager in de cloud verbinden met Microsoft Intune. Wanneer u verbindt via de cloud, krijgt u de voordelen van Intune en de cloud, met inbegrip van [voorwaardelijke toegang](../../configmgr/comanage/quickstart-conditional-access.md), [het uitvoeren van externe acties](../../configmgr/comanage/quickstart-remote-actions.md), [het gebruiken van Windows Autopilot](../../configmgr/comanage/quickstart-autopilot.md), en meer.
 
-[Microsoft Endpoint Manager](https://docs.microsoft.com/mem/endpoint-manager-overview) is een oplossingsplatform dat verschillende technologieën verenigt. Het bevat [Microsoft Intune](what-is-intune.md) voor het apparaatbeheer in de cloud en [Configuration Manager + Intune](https://docs.microsoft.com/mem/configmgr/comanage/overview) voor het koppelen van apparaten in de cloud.
+[Microsoft Endpoint Manager](../../endpoint-manager-overview.md) is een oplossingsplatform dat verschillende technologieën verenigt. Het bevat [Microsoft Intune](what-is-intune.md) voor het apparaatbeheer in de cloud en [Configuration Manager + Intune](../../configmgr/comanage/overview.md) voor het koppelen van apparaten in de cloud.
 
 Als u Configuration Manager gebruikt en u klaar bent om sommige taken naar de cloud te verplaatsen, is co-beheer ideaal.
 
-Zie [What is co-management](https://docs.microsoft.com/mem/configmgr/comanage/overview) (Wat is co-beheer?) voor meer informatie over het koppelen van Configuration Manager in de cloud.
+Zie [What is co-management](../../configmgr/comanage/overview.md) (Wat is co-beheer?) voor meer informatie over het koppelen van Configuration Manager in de cloud.
 
 ## <a name="integration-with-secure-and-protect-services"></a>Integratie met services beveiligen en beschermen
 
@@ -108,11 +108,11 @@ In het beheercentrum voor apparaatbeheer kunt u:
 - Software-updates beheren
   - [Windows 10-updates beheren](../protect/windows-update-for-business-configure.md)  
   - [iOS-/iPadOS-updates beheren](../protect/software-updates-ios.md)  
-- [Azure Active Directory](https://docs.microsoft.com/azure/active-directory)  
-- [Gebruikers beheren](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
-- [Groepen en leden beheren](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups)
+- [Azure Active Directory](/azure/active-directory)  
+- [Gebruikers beheren](/azure/active-directory/fundamentals/add-users-azure-active-directory)
+- [Groepen en leden beheren](/azure/active-directory/fundamentals/active-directory-manage-groups)
 - [Problemen oplossen](help-desk-operators.md)
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Wanneer u klaar bent om aan de slag te gaan met een MDM- of MAM-oplossing, doorloopt u de verschillende stappen voor het instellen van Intune, het inschrijven van apparaten en het maken van beleid. [Mobile Device Management voor Microsoft 365](https://docs.microsoft.com/microsoft-365/enterprise/mobility-infrastructure) is ook een goede resource.
+Wanneer u klaar bent om aan de slag te gaan met een MDM- of MAM-oplossing, doorloopt u de verschillende stappen voor het instellen van Intune, het inschrijven van apparaten en het maken van beleid. [Mobile Device Management voor Microsoft 365](/microsoft-365/enterprise/mobility-infrastructure) is ook een goede resource.

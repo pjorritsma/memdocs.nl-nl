@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e919ac336532e8b641908b02c0e282ae9e1711e7
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 431dc3fec49609c4f163c9d7f471b60565611bc3
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85094011"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992834"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-school-manager"></a>Inschrijving van iOS-/iPadOS-apparaten instellen met Apple School Manager
 
@@ -38,7 +38,7 @@ Inschrijving voor Apple School Manager kan niet worden gebruikt met het [Automat
 **Vereisten**
 - [Apple MDM-push certificaat (Mobile Device Management)](apple-mdm-push-certificate-get.md)
 - [MDM-instantie](../fundamentals/mdm-authority-set.md)
-- Als u ADFS gebruikt, vereist gebruikersaffiniteit [WS-Trust 1.3 gebruikersnaam/gemengd eindpunt](https://technet.microsoft.com/library/adfs2-help-endpoints). [Meer informatie](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
+- Als u ADFS gebruikt, vereist gebruikersaffiniteit [WS-Trust 1.3 gebruikersnaam/gemengd eindpunt](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)). [Meer informatie](/powershell/module/adfs/get-adfsendpoint?view=win10-ps).
 - Apparaten die zijn gekocht via het programma [Apple School Management](http://school.apple.com)
 
 ## <a name="get-an-apple-token-and-assign-devices"></a>Een Apple-token ophalen en apparaten toewijzen
@@ -83,12 +83,12 @@ Na installatie van het token kunt u een inschrijvingsprofiel voor Apple School-a
 1. Kies in het [Beheercentrum voor Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **iOS/iPadOS** > **iOS/iPadOS** > **Tokens voor het inschrijvingsprogramma**.
 2. Selecteer een token, kies **Profielen** en kies vervolgens **Profiel maken**.
 
-3. Voer in het venster **Profiel maken** een **naam** en een **beschrijving** voor het profiel in voor administratieve doeleinden. Gebruikers zien deze gegevens niet. U kunt dit veld **Naam** gebruiken om een dynamische groep te maken in Azure Active Directory. Gebruik de profielnaam om de parameter enrollmentProfileName te definiëren om apparaten aan dit inschrijvingsprofiel toe te wijzen. Meer informatie over [Azure Active Directory dynamic groups](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices) (dynamische Azure Active Directory-groepen).
+3. Voer in het venster **Profiel maken** een **naam** en een **beschrijving** voor het profiel in voor administratieve doeleinden. Gebruikers zien deze gegevens niet. U kunt dit veld **Naam** gebruiken om een dynamische groep te maken in Azure Active Directory. Gebruik de profielnaam om de parameter enrollmentProfileName te definiëren om apparaten aan dit inschrijvingsprofiel toe te wijzen. Meer informatie over [Azure Active Directory dynamic groups](/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices) (dynamische Azure Active Directory-groepen).
 
     ![Naam en beschrijving van het profiel.](./media/apple-school-manager-set-up-ios/image05.png)
 
 4. Geef voor **Gebruikersaffiniteit** aan of andere apparaten met dit profiel met of zonder toegewezen gebruiker moeten worden ingeschreven.
-    - **Inschrijven met gebruikersaffiniteit**: kies deze optie voor apparaten die eigendom zijn van gebruikers en die de bedrijfsportal willen gebruiken voor services zoals het installeren van apps. Met deze optie kunnen gebruikers hun apparaat verifiëren door de bedrijfsportal te gebruiken. Als u ADFS gebruikt, vereist gebruikersaffiniteit [WS-Trust 1.3 gebruikersnaam/gemengd eindpunt](https://technet.microsoft.com/library/adfs2-help-endpoints). [Meer informatie](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).   Voor de modus Gedeelde iPad in Apple School Manager moeten gebruikers worden ingeschreven zonder gebruikersaffiniteit.
+    - **Inschrijven met gebruikersaffiniteit**: kies deze optie voor apparaten die eigendom zijn van gebruikers en die de bedrijfsportal willen gebruiken voor services zoals het installeren van apps. Met deze optie kunnen gebruikers hun apparaat verifiëren door de bedrijfsportal te gebruiken. Als u ADFS gebruikt, vereist gebruikersaffiniteit [WS-Trust 1.3 gebruikersnaam/gemengd eindpunt](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)). [Meer informatie](/powershell/module/adfs/get-adfsendpoint?view=win10-ps).   Voor de modus Gedeelde iPad in Apple School Manager moeten gebruikers worden ingeschreven zonder gebruikersaffiniteit.
 
     - **Inschrijven zonder gebruikersaffiniteit**: kies deze optie voor apparaten die niet aan één gebruiker zijn gelieerd, zoals een gedeeld apparaat. Gebruik deze optie voor apparaten waarmee taken worden uitgevoerd zonder toegang tot lokale gebruikersgegevens. Apps als de Bedrijfsportal-app werken niet.
 
@@ -156,7 +156,7 @@ Na installatie van het token kunt u een inschrijvingsprofiel voor Apple School-a
 
 1. Kies in het [Beheercentrum voor Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) de opties **Apparaten** > **iOS/iPadOS** > **iOS/iPadOS** > **Tokens voor het inschrijvingsprogramma**.
 2. Selecteer een Apple School Manager-token en kies vervolgens **School Data Sync**.
-3. Kies onder **School Data Sync** voor **Toestaan**. Met deze instelling kan Intune verbinding maken met SDS in Office 365.
+3. Kies onder **School Data Sync** voor **Toestaan**. Met deze instelling kan Intune verbinding maken met SDS in Microsoft 365.
 4. Als u een verbinding tussen Apple School Manager en Azure AD wilt maken, kiest u **Microsoft School Data Sync instellen**. Meer informatie over [het instellen van Microsoft School Data Sync](https://support.office.com/article/Install-the-School-Data-Sync-Toolkit-8e27426c-8c46-416e-b0df-c29b5f3f62e1).
 5. Klik op **Opslaan** > **OK**.
 

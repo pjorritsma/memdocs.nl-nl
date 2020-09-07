@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 08/27/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2ef0cf3909442cec818fd775bef4f848d6be5a83
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: ef1b6c82cae82763dc327f16e35d0e3bc522c3c7
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022310"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057467"
 ---
 # <a name="enroll-your-device-with-company-portal"></a>Uw apparaat inschrijven bij de bedrijfsportal  
 Schrijf uw persoonlijke of zakelijke Android-apparaat in voor veilige toegang tot uw zakelijke e-mail, apps en gegevens. De bedrijfsportal biedt ondersteuning voor Android-apparaten, inclusief Samsung Knox, met Android 4.4 en hoger.  
@@ -32,11 +32,24 @@ Schrijf uw persoonlijke of zakelijke Android-apparaat in voor veilige toegang to
 > [!VIDEO https://www.youtube.com/embed/k0Q_sGLSx6o?rel=0]
 
 > [!NOTE]
-> Samsung Knox is een beveiligingstype dat door sommige Samsung-apparaten wordt gebruikt als extra bescherming naast de beveiligingsfuncties van systeemeigen Android-apparaten. Als u wilt controleren of u een Samsung Knox-apparaat hebt, gaat u naar **Instellingen** > **Over apparaat**. Als de **Knox-versie** niet wordt vermeld, hebt u een systeemeigen Android-apparaat.
+> Samsung Knox is een beveiligingstype dat door sommige Samsung-apparaten wordt gebruikt als extra bescherming naast de beveiligingsfuncties van systeemeigen Android-apparaten. Als u wilt controleren of u een Samsung Knox-apparaat hebt, gaat u naar **Instellingen** > **Over apparaat**. Als de **Knox-versie** niet wordt vermeld, hebt u een systeemeigen Android-apparaat.  
+
+## <a name="install-company-portal-app"></a>De bedrijfsportal-app installeren  
+Installeer de app Intune-bedrijfsportal via [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal). Zie [Bedrijfsportal-app installeren in de Volksrepubliek China](install-company-portal-android-china.md) voor een lijst met app-stores die de app aanbieden in de Volksrepubliek China.
+
+1. Tik op **Start** > **Play Store**.
+
+2. Zoek naar **Intune-bedrijfsportal**. Tik vervolgens op de app om deze te openen. 
+
+    ![android-zoeken-bedrijfsportal](./media/and-cpinstall-1-search-cp.png)
+
+4. Tik op **INSTALLEREN**.
+
+5. Wanneer u wordt gevraagd om machtigingen voor apps, tikt u op **ACCEPTEREN**.  
+
+    ![android-voorwaarden-accepteren-bedrijfsportal](./media/and-cpinstall-3-cp-accept.png)
 
 ## <a name="enroll-device"></a>Een apparaat inschrijven  
-Zorg ervoor dat u de Intune-bedrijfsportal-app hebt geïnstalleerd [uit Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal). Zie [Bedrijfsportal-app installeren in de Volksrepubliek China](install-company-portal-android-china.md) voor een lijst met app-stores die de app aanbieden in de Volksrepubliek China.
-
 Tijdens de registratie wordt u mogelijk gevraagd om een categorie te kiezen die het beste beschrijft hoe u uw apparaat gebruikt. Het ondersteuningsteam van het bedrijf gebruikt uw antwoord om te controleren tot welke apps u toegang hebt.  
 
 1. Open de bedrijfsportal-app en meld u aan met het account van uw werk of school.  

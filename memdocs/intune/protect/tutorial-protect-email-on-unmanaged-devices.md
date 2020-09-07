@@ -1,7 +1,7 @@
 ---
 title: 'Zelfstudie: Exchange Online-e-mail beschermen op onbeheerde apparaten'
 titleSuffix: Microsoft Intune
-description: Leer hoe u Office 365 Exchange Online kunt beveiligen met app-beveiligingsbeleid van Intune en voorwaardelijke toegang via Azure AD.
+description: Leer hoe u Microsoft 365 Exchange Online kunt beveiligen met app-beveiligingsbeleid van Intune en voorwaardelijke toegang via Azure AD.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f32ced29b6bb53f8c091ba1a0f42261a2baa493
-ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
+ms.openlocfilehash: 12b776af250a9d4a9bf0fb6c8ba7eec98540f883
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82605215"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993950"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>Zelfstudie: Exchange Online-e-mail beschermen op onbeheerde apparaten
 
@@ -120,7 +120,7 @@ U gaat nu twee beleidsregels voor voorwaardelijke toegang maken, om zo alle appa
 
 4. Onder **Toewijzingen** selecteert u **Gebruikers en groepen**. Op het tabblad **Opnemen** selecteert u **Alle gebruikers** en vervolgens **Voltooid**.
 
-5. Onder **Toewijzingen** selecteert u **Cloud-apps of acties**. Omdat we Office 365 Exchange Online e-mail willen beschermen, selecteren we deze functie via de volgende stappen:
+5. Onder **Toewijzingen** selecteert u **Cloud-apps of acties**. Omdat we Microsoft 365 Exchange Online e-mail willen beschermen, selecteren we deze functie via de volgende stappen:
 
    1. Op het tabblad **Opnemen** selecteert u **Apps selecteren**.
    2. Kies **Selecteren**.
@@ -170,7 +170,7 @@ Het beleid voor voorwaardelijke toegang voor clients met moderne verificatie is 
 
 4. Onder **Toewijzingen** selecteert u **Gebruikers en groepen**. Op het tabblad *Opnemen* selecteert u **Alle gebruikers** en vervolgens **Voltooid**.
 
-5. Onder **Toewijzingen** selecteert u **Cloud-apps of acties**. Selecteer Office 365 Exchange Online-e-mail aan de hand van de volgende stappen:
+5. Onder **Toewijzingen** selecteert u **Cloud-apps of acties**. Selecteer Microsoft 365 Exchange Online-e-mail aan de hand van de volgende stappen:
 
    1. Op het tabblad *Opnemen* selecteert u **Apps selecteren**.
    2. Kies **Selecteren**.
@@ -205,7 +205,7 @@ Uw app-beveiligingsbeleid en voorwaardelijke toegang zijn nu ingesteld en kunnen
 
 ## <a name="try-it-out"></a>Beleid uitproberen
 
-Met het beleid dat u hebt gemaakt, moeten apparaten zich inschrijven bij Intune en de mobiele Outlook-app gebruiken om toegang tot Office 365-e-mail te krijgen. Om dit scenario op een iOS-apparaat te testen, probeert u zich aan te melden bij Exchange Online met de referenties van een gebruiker in uw testtenant.
+Met het beleid dat u hebt gemaakt, moeten apparaten zich inschrijven bij Intune en de mobiele Outlook-app gebruiken om toegang tot Microsoft 365-e-mail te krijgen. Om dit scenario op een iOS-apparaat te testen, probeert u zich aan te melden bij Exchange Online met de referenties van een gebruiker in uw testtenant.
 
 1. Als u dit op een iPhone wilt testen, gaat u naar **Instellingen** > **Wachtwoorden & accounts** > **Account toevoegen** > **Exchange**.
 

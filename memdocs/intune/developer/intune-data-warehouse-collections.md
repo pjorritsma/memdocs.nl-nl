@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6d3f3ea7423cf87d2644611bcbd6e298ac60699
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 348bafecd462aa9e4722443c33b62311b2f97e1a
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820320"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993096"
 ---
 # <a name="intune-data-warehouse-collections"></a>Intune-datawarehouse-verzamelingen
 
@@ -69,7 +69,7 @@ De entiteit **appType** vermeldt de installatiebron van een app.
 | 3         | iOS Store-app                   | Een iOS Store-app.                                 |
 | 4         | iOS LOB-app                     | Een iOS Line-Of-Business-app.                      |
 | 5         | Beheerde iOS Store-app (MAM)     | Een iOS Store-app die onder beheer staat.       |
-| 6         | O365 Pro Plus Suite             | De Microsoft 365-apps voor Windows 10.     |
+| 6         | Microsoft 365-apps voor ondernemingen        | De Microsoft 365-apps voor Windows 10.     |
 | 7         | Web-app                         | Een web-app.                                        |
 | 8         | Windows Phone 8.1 Store-app     | Een Windows Phone 8.1 Store-app.                    |
 | 9         | Windows Store-app               | Een Windows Store-app.                              |
@@ -235,7 +235,7 @@ Met de entiteit **devices** worden alle geregistreerde apparaten voor beheer en 
 | DeviceCategoryKey          | Sleutel van de categorie die is gekoppeld aan dit apparaat.                                                                                                                                     |
 | DeviceEnrollmentType       | Sleutel van het registratietype dat is gekoppeld aan dit apparaat (geeft de registratiemethode aan).                                                                                             |
 | ComplianceStateKey         | Sleutel van de Nalevingsstatus die is gekoppeld aan dit apparaat.                                                                                                                             |
-| office365Version           | De versie van Office 365 die op het apparaat is geïnstalleerd.                                                                                                                             |
+| office365Version           | De versie van Microsoft 365 die op het apparaat is geïnstalleerd.                                                                                                                             |
 | OSVersion                  | De versie van het besturingssysteem van het apparaat.                                                                                                                                                |
 | EasDeviceId                | De Exchange ActiveSync-id van het apparaat.                                                                                                                                                  |
 | SerialNumber               | SerialNumber                                                                                                                                                                           |
@@ -286,7 +286,7 @@ De entiteit **deviceTypes** vertegenwoordigt het apparaattype waarnaar wordt ver
 | 11           | Android           | Android-apparaat dat wordt beheerd met Apparaatbeheer   |
 | 12           | ISocConsumer      | iSoc Consumer-apparaat                                |
 | 13           | Unix              | UNIX-apparaat                                         |
-| 14           | MacMDM            | Mac OS X-apparaat dat wordt beheerd met de ingebouwde MDM-agent |
+| 14           | MacMDM            | OS X-apparaat dat wordt beheerd met de ingebouwde MDM-agent |
 | 15           | HoloLens          | HoloLens-apparaat                                       |
 | 16           | SurfaceHub        | Surface Hub-apparaat                                  |
 | 17           | AndroidForWork    | Android-apparaat dat wordt beheerd met de Android-profieleigenaar  |
@@ -595,7 +595,7 @@ Met de entiteit **ownerType** wordt aangegeven of een apparaat bedrijfseigendom 
 | ownerTypeName | Vertegenwoordigt het eigenaartype van de apparaten:  Corporate - Het apparaat is bedrijfseigendom.  Personal - apparaat is persoonlijk eigendom (BYOD).   Unknown - er is geen informatie over dit apparaat. | Corporate Personal Unknown |
 
 > [!Note]  
-> Bij het maken van dynamische groepen voor apparaten moet u voor het `ownerTypeName`-filter in AzureAD de waarde `deviceOwnership` instellen als `Company`. Zie [Regels voor apparaten](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) voor meer informatie. 
+> Bij het maken van dynamische groepen voor apparaten moet u voor het `ownerTypeName`-filter in AzureAD de waarde `deviceOwnership` instellen als `Company`. Zie [Regels voor apparaten](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) voor meer informatie. 
 
 ## <a name="policies"></a>policies
 De entiteit **Policy** bevat apparaatconfiguratieprofielen, app-configuratieprofielen en nalevingsbeleid. U kunt het beleid met MDM (Mobile Device Management) toewijzen aan een groep in uw onderneming.

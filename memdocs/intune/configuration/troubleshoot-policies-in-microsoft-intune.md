@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc307f22e3caa77357d8d3054a432c8d42c38fc4
-ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
+ms.openlocfilehash: 26545af603e71c0adff5a0c5dcdcbbc337ce4eb3
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88146504"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995174"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Beleidsregels en profielen voor het oplossen van problemen in Intune
 
@@ -122,15 +122,15 @@ Controleer de [tenantstatus](../fundamentals/tenant-status.md) en controleer of 
 ## <a name="policy-troubleshooting-resources"></a>Problemen met beleidsresources polossen
 
 - [Problemen oplossen met iOS-/iPadOS- of Android-beleid dat niet van toepassing is op apparaten](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-tip-Troubleshooting-iOS-or-Android-policies-not-applying/ba-p/280154) (opent een andere website van Microsoft)
-- [Problemen oplossen met Intune-beleidsfouten in Windows 10](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (opent een blog)
+- [Problemen oplossen met Intune-beleidsfouten in Windows 10](/archive/blogs/configmgrdogs/troubleshooting-windows-10-intune-policy-failures) (opent een blog)
 - [Problemen oplossen met aangepaste CSP-instellingen voor Windows 10](https://support.microsoft.com/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (opent een andere website van Microsoft)
-- [Groepsbeleid in Windows 10 versus MDM-beleid in Intune](https://blogs.technet.microsoft.com/cbernier/2018/04/02/windows-10-group-policy-vs-intune-mdm-policy-who-wins/) (opent een andere website van Microsoft)
+- [Groepsbeleid in Windows 10 versus MDM-beleid in Intune](/archive/blogs/cbernier/windows-10-group-policy-vs-intune-mdm-policy-who-wins) (opent een andere website van Microsoft)
 
 ## <a name="alert-saving-of-access-rules-to-exchange-has-failed"></a>Waarschuwing: Opslaan van toegangsregels in Exchange is mislukt
 
 **Probleem**: U ontvangt in de beheerconsole de waarschuwing **Het opslaan van de toegangsregels in Exchange is mislukt**.
 
-Als u beleid hebt gemaakt in de werkruimte Beleid voor Exchange On-Premises (beheerconsole), maar Office 365 gebruikt, worden de geconfigureerde beleidsinstellingen niet door Intune afgedwongen. Noteer de beleidsbron die in de waarschuwing wordt vermeld. Verwijder de verouderde regels in de werkruimte Beleid voor Exchange On-Premises. De verouderde regels zijn algemene Exchange-regels in Intune voor Exchange On-Premises en zijn niet relevant voor Office 365. Maak vervolgens een nieuw beleid voor Office 365.
+Als u beleid hebt gemaakt in de werkruimte Beleid voor Exchange On-Premises (beheerconsole), maar Microsoft 365 gebruikt, worden de geconfigureerde beleidsinstellingen niet door Intune afgedwongen. Noteer de beleidsbron die in de waarschuwing wordt vermeld. Verwijder de verouderde regels in de werkruimte Beleid voor Exchange On-Premises. De verouderde regels zijn algemene Exchange-regels in Intune voor Exchange On-Premises en zijn niet relevant voor Microsoft 365. Maak vervolgens een nieuw beleid voor Microsoft 365.
 
 [Problemen met de Intune on-premises Exchange-connector oplossen](../protect/troubleshoot-exchange-connector.md) is wellicht een goede bron.
 

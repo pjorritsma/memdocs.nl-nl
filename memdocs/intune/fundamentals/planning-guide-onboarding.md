@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19de56bfab6e4f4cf2f1243c6cbaf98053e6ba5e
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 0b479f770053051e580a68aa810a60c35d745ac5
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663256"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996347"
 ---
 # <a name="implement-your-microsoft-intune-plan"></a>Uw Microsoft Intune-abonnement implementeren
 
@@ -37,7 +37,7 @@ De belangrijkste vereisten voor de zelfstandige versie van Intune zijn:
 
 - Enterprise Mobility + Security (EMS)/Intune-abonnement
 
-- Office 365-abonnement (voor Office-apps en door beveiligingsbeleid voor apps beheerde apps)
+- Microsoft 365-abonnement (voor Office-apps en door beveiligingsbeleid voor apps beheerde apps)
 
 - Apple APNs-certificaat (voor het beheer van het iOS/iPadOS-apparaatplatform)
 
@@ -60,11 +60,11 @@ Zoals hierboven aangegeven in de sectie met Intune-vereisten, moet u een EMS- of
 
 - Meer informatie over [het kopen van Microsoft Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-pricing).
 
-### <a name="task-2-add-office-365-subscription"></a>Taak 2: een Office 365-abonnement toevoegen
+### <a name="task-2-add-microsoft-365-subscription"></a>Taak 2: Microsoft 365-abonnement toevoegen
 
-Deze stap is optioneel. U moet een Office 365-abonnement hebben als u van plan bent Exchange Online te gebruiken en mobiele Office-apps te beheren met app-beveiligingsbeleid. Als uw organisatie geen Office 365-abonnement heeft, kunt u contact opnemen met Microsoft of uw Microsoft-accountteam om aan te geven dat u de aanschaf van Office 365 overweegt.
+Deze stap is optioneel. U moet een Microsoft 365-abonnement hebben als u van plan bent Exchange Online te gebruiken en mobiele Office-apps te beheren met app-beveiligingsbeleid. Als uw organisatie geen Microsoft 365-abonnement heeft, kunt u contact opnemen met Microsoft of uw Microsoft-accountteam om aan te geven dat u de aanschaf van Microsoft 365 overweegt.
 
-- Meer informatie over [het kopen van Office 365](https://products.office.com/business/compare-office-365-for-business-plans).
+- Meer informatie over [het kopen van Microsoft 365](https://products.office.com/business/compare-office-365-for-business-plans).
 
 ### <a name="task-3-add-users-groups-in-azure-ad"></a>Taak 3: gebruikersgroepen toevoegen in Azure AD
 
@@ -74,9 +74,9 @@ Wellicht moet u gebruikers of beveiligingsgroepen toevoegen in Active Directory 
 <!---why not send them to the AAD connect topic? Question out to Andre: https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect--->
 
 
-### <a name="task-4-assign-intune-and-office-365-user-licenses"></a>Taak 4: Intune- en Office 365-gebruikerslicenties toewijzen
+### <a name="task-4-assign-intune-and-microsoft-365-user-licenses"></a>Taak 4: Intune- en Microsoft 365-gebruikerslicenties toewijzen
 
-Alle gebruikers voor wie de rollout van EMS/Intune en Office 365 is bedoeld, moeten beschikken over een licentie die aan hen is toegewezen. U kunt EMS/Intune- en Office 365-licenties toewijzen in het Microsoft 365-beheercentrum.
+Alle gebruikers voor wie de implementatie van EMS/Intune en Microsoft 365 is bedoeld, moeten beschikken over een licentie die aan hen is toegewezen. U kunt EMS/Intune- en Microsoft 365-licenties toewijzen in het Microsoft 365-beheercentrum.
 
 - Meer informatie over [het toewijzen van Intune-licenties](licenses-assign.md).
 
@@ -130,7 +130,7 @@ Intune biedt ondersteuning voor voorwaardelijke toegang voor Exchange Online, Ex
 
 ### <a name="task-13-enroll-devices"></a>Taak 13: Apparaten inschrijven
 
-Intune ondersteunt platformen voor iOS/iPadOS-, Mac OS-, Android- en Windows-desktopapparaten. Registreer platformen voor mobiele apparaten waar nodig op basis van de use cases en vereisten van uw Intune-implementatie.
+Intune ondersteunt platformen voor iOS/iPadOS-, macOS-, Android- en Windows-desktopapparaten. Registreer platformen voor mobiele apparaten waar nodig op basis van de use cases en vereisten van uw Intune-implementatie.
 
 - Meer informatie over [het registreren van apparaten](../enrollment/device-enrollment.md).
 

@@ -17,12 +17,12 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aeca72af3eadf55174f1ad97c1e294f48f131801
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ae07904d9fb21773fbc4caad18cb183d9565c401
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357230"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996296"
 ---
 # <a name="intune-testing-and-validation"></a>Intune testen en valideren
 
@@ -40,7 +40,7 @@ U wordt aangeraden het volgende te documenteren:
 
 Als een ontwerponderdeel niet is opgenomen in ten minste één testcriterium voor een vereiste of scenario, moet u beslissen of het ontwerponderdeel wel of niet vereist is. Zorg er bovendien voor dat u over de volgende items beschikt:
 
-- **Accounts:** Testaccounts die een licentie hebben voor EMS en Office 365 om alle use-casescenario's te testen.
+- **Accounts:** Testaccounts die een licentie hebben voor EMS en Microsoft 365 om alle use-casescenario's te testen.
 
 - **Apparaten:** Testapparaten die kunnen worden gewist of teruggezet naar de fabrieksinstellingen.
 

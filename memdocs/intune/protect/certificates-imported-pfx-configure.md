@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 630d270202f1064c9e80e7cb87df3929138ee54a
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: 048e1d3efcb96d18453bfd7b3dbf332dc83b7a1f
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048103"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992569"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Geïmporteerde PKCS-certificaten configureren en gebruiken met Intune
 
@@ -69,7 +69,7 @@ Als u geïmporteerde PKCS-certificaten wilt gebruiken met Intune, hebt u de volg
 
   U kunt een Windows-server gebruiken als host voor de PFX-certificaatconnector voor Microsoft Intune.  De connector wordt gebruikt om aanvragen te verwerken voor certificaten die in Intune worden geïmporteerd.
   
-  Voor de connector is toegang tot dezelfde poorten vereist als voor beheerde apparaten, zoals te lezen is in onze [inhoud over apparaateindpunten](https://docs.microsoft.com/intune/fundamentals/intune-endpoints#access-for-managed-devices).
+  Voor de connector is toegang tot dezelfde poorten vereist als voor beheerde apparaten, zoals te lezen is in onze [inhoud over apparaateindpunten](/intune/fundamentals/intune-endpoints#access-for-managed-devices).
 
   Intune staat toe dat de *Microsoft Intune-certificaatconnector* en de *PFX-certificaatconnector voor Microsoft Intune* op dezelfde server worden geïnstalleerd.
 
@@ -104,7 +104,7 @@ Wanneer u Intune gebruikt om een **geïmporteerd PFX-certificaat** voor een gebr
 5. Het tabblad **Inschrijving** wordt na de installatie geopend. Als u de verbinding met Intune wilt inschakelen, kiest u **Aanmelden** en geeft u een account met globale beheerdersmachtigingen voor Azure of beheerdersbevoegdheden voor Intune op.
 
    > [!WARNING]
-   > In Windows Server wordt **Configuratie verbeterde beveiliging IE** standaard ingesteld op **Ingeschakeld**, wat kan leiden tot aanmeldingsproblemen bij Office 365.
+   > In Windows Server wordt **Configuratie verbeterde beveiliging IE** standaard ingesteld op **Ingeschakeld**, wat kan leiden tot aanmeldingsproblemen bij Microsoft 365.
 
 6. Sluit het venster.
 
@@ -112,9 +112,9 @@ Wanneer u Intune gebruikt om een **geïmporteerd PFX-certificaat** voor een gebr
 
 ## <a name="import-pfx-certificates-to-intune"></a>PFX-certificaten importeren in Intune
 
-U kunt [Microsoft Graph](https://docs.microsoft.com/graph) gebruiken om de PFX-certificaten van uw gebruikers te importeren in Intune. Het [PowerShell-project PFXImport op GitHub](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell) biedt u hulp-cmdlets waarmee u de bewerkingen eenvoudig kunt uitvoeren.
+U kunt [Microsoft Graph](/graph) gebruiken om de PFX-certificaten van uw gebruikers te importeren in Intune. Het [PowerShell-project PFXImport op GitHub](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell) biedt u hulp-cmdlets waarmee u de bewerkingen eenvoudig kunt uitvoeren.
 
-Als u liever uw eigen aangepaste oplossing met behulp van Graph gebruikt, gebruikt u het [resourcetype userPFXCertificate](https://docs.microsoft.com/graph/api/resources/intune-raimportcerts-userpfxcertificate?view=graph-rest-beta).
+Als u liever uw eigen aangepaste oplossing met behulp van Graph gebruikt, gebruikt u het [resourcetype userPFXCertificate](/graph/api/resources/intune-raimportcerts-userpfxcertificate?view=graph-rest-beta).
 
 ### <a name="build-pfximport-powershell-project-cmdlets"></a>Cmdlets voor het 'PowerShell-project PFXImport' maken
 
@@ -210,7 +210,7 @@ Selecteer de sleutelopslagprovider die overeenkomt met de provider die u hebt ge
 
 8. Voer `Get-IntuneUserPfxCertificate -UserList "<UserUPN>"` uit om te controleren of het certificaat is geïmporteerd
 
-9.  Voer `Remove-IntuneAuthenticationToken` als een best practice uit om de AAD-tokencache op te schonen zonder te wachten tot deze vanzelf verloopt
+9.  Voer `Remove-IntuneAuthenticationToken` als een best practice uit om de Azure AD-tokencache op te schonen zonder te wachten tot deze vanzelf verloopt
 
 Voor meer informatie over andere beschikbare opdrachten, raadpleegt u het leesmij-bestand in het [PowerShell-project PFXImport op GitHub](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
 

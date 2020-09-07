@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f71a74c69235e8e079f2cd325582dbbe9bb4a3f1
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 2a476be4fb8c9d40150648e72d3203df564893dd
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820660"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994341"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Ondersteuning voor Microsoft Intune krijgen
 
 Microsoft biedt wereldwijde technische, voorverkoop-, facturerings- en abonnementsondersteuning voor Microsoft Intune. Ondersteuning is online en telefonisch beschikbaar voor betaalde abonnementen en proefabonnementen. Online technische ondersteuning is beschikbaar in het Engels en Japans. Telefonische ondersteuning en online-ondersteuning bij factureren zijn in meer talen beschikbaar.
 
-Als Intune-beheerder kunt u de optie **Help en ondersteuning** gebruiken om vanuit de Azure-portal een onlineondersteuningsticket voor Intune in te dienen. Als u een ondersteuningsincident wilt maken en beheren, moet uw account een Azure Active Directory-rol (Azure AD) hebben met de *actie* **microsoft.office365.supportTickets**. Zie [beheerdersrollen in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) voor informatie over rollen en machtigingen in Azure AD die zijn vereist voor het maken van een ondersteuningsticket.
+Als Intune-beheerder kunt u de optie **Help en ondersteuning** gebruiken om vanuit de Azure-portal een onlineondersteuningsticket voor Intune in te dienen. Als u een ondersteuningsincident wilt maken en beheren, moet uw account een Azure Active Directory-rol (Azure AD) hebben met de *actie* **microsoft.office365.supportTickets**. Zie [beheerdersrollen in Azure Active Directory](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) voor informatie over rollen en machtigingen in Azure AD die zijn vereist voor het maken van een ondersteuningsticket.
 
 >[!IMPORTANT]
 > Neem voor technische ondersteuning voor externe producten die met Intune werken (zoals SaaSwedo, Cisco of Lookout), contact op met de leverancier van dat product. Open pas een ondersteuningsaanvraag voor Intune als u zeker weet dat het andere product juist is geconfigureerd.
@@ -50,7 +50,7 @@ Wanneer u een nieuw gemaakte tenant voor Intune gebruikt, is het mogelijk dat *H
 
 De foutdetails bestaan onder andere uit een *sessie-id*, *extensie*gegevens en meer.
 
-Dit probleem treedt op wanneer u uw nieuwe tenantaccount niet hebt geverifieerd via het **M365-beheercentrum** op https://admin.microsoft.com of de **Office 365-portal** op https://portal.office.com. U kunt dit probleem oplossen door de koppeling naar het *M365-beheercentrum* in het bericht te selecteren of door naar https://portal.office.com te gaan en u aan te melden. Na verificatie op beide sites hebt u toegang tot *Help en ondersteuning* voor Intune.
+Dit probleem treedt op wanneer u uw nieuwe tenantaccount niet hebt geverifieerd via het **Microsoft 365-beheercentrum** op https://admin.microsoft.com of de **Office 365-portal** op https://portal.office.com. U kunt dit probleem oplossen door de koppeling naar het *Microsoft 365-beheercentrum* in het bericht te selecteren of door naar https://portal.office.com te gaan en u aan te melden. Na verificatie op beide sites hebt u toegang tot *Help en ondersteuning* voor Intune.
 
 **Toegang tot Help en ondersteuning**:
 

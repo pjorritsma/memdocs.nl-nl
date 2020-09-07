@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: de3d4eb47a6a08c0ba2bdddb20312f7e95eb8c84
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 3975e2fcf7e43e4b7468664f9ccc27b692c40d85
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882203"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057311"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Apps op uw apparaat installeren en delen
 
@@ -53,12 +53,12 @@ Installeer apps op uw apparaat vanuit de bedrijfsportal-app voor Windows.
 > [!IMPORTANT]
 > Als een vereiste app niet kan worden geïnstalleerd en uw organisatie het voor u mogelijk maakt om deze handmatig te installeren, selecteert u **Opnieuw proberen**. Het kan tot tien minuten duren voordat de bijgewerkte status wordt weergegeven. Als u tijdens deze periode nogmaals **Opnieuw proberen** selecteert en er een foutmelding wordt weergegeven, is dat geen probleem. Blijf tien minuten wachten totdat de bijgewerkte status wordt weergegeven.   
 
-Afhankelijk van de grootte van uw bedrijf kunnen er mogelijk meerdere versies van Office worden gedownload van de bedrijfsportal. Zie[Office 365 installeren op uw Windows-apparaat](./install-office-windows.md) voor meer informatie over het Office-pakket voor Windows-apparaten.
+Afhankelijk van de grootte van uw bedrijf kunnen er mogelijk meerdere versies van Office worden gedownload van de bedrijfsportal. Zie [Microsoft 365 installeren op uw Windows-apparaat](./install-office-windows.md) voor meer informatie over het Office-pakket voor Windows-apparaten.
 
 ## <a name="share-apps"></a>Apps delen  
 U kunt apps delen met en aanbevelen aan contactpersonen van uw werk of school. In de volgende stappen wordt beschreven hoe u een koppeling rechtstreeks uit de bedrijfsportal kunt delen.
 
-1. In de bedrijfsportal klikt u met de rechtermuisknop op een app om het [contextmenu](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus) hiervan te openen. U kunt ook op de app drukken en deze vasthouden.  
+1. In de bedrijfsportal klikt u met de rechtermuisknop op een app om het [contextmenu](//windows/uwp/design/controls-and-patterns/menus) hiervan te openen. U kunt ook op de app drukken en deze vasthouden.  
 
     ![De bedrijfsportal-app voor Windows 10, voorpagina, met daarop een lijst met apps en apparaten. Het klikbare contextmenu Delen is zichtbaar boven op het pictogram van de voorbeeldapp. ](./media/1808_ShareContext_CP_Windows.png)  
 
@@ -97,4 +97,4 @@ Ga naar het navigatiemenu en selecteer **Geïnstalleerde apps** om naar deze pag
 
 Gebruik **Sorteren op** om het toewijzingstype of de uitgever voor de apps alfabetisch op naam of chronologisch op publicatiedatum te rangschikken. Gebruik **Filteren op** om de apps die worden weergegeven te beperken op installatiestatus.  Als er geen apps beschikbaar zijn, wordt er een bericht weergegeven dat er geen bedrijfs-apps zijn geïnstalleerd.  
 
-Hebt u meer hulp nodig? Neem contact op met het ondersteuningsteam van uw bedrijf. Controleer of de contactgegevens beschikbaar zijn op de [bedrijfsportalwebsite](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Hebt u meer hulp nodig? Neem contact op met het ondersteuningsteam van uw bedrijf. Controleer of de contactgegevens beschikbaar zijn op de [bedrijfsportalwebsite](https://go.microsoft.com/fwlink/?linkid=2010980).

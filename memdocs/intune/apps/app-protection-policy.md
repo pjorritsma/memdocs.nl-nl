@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9688397218539ef3cc16f6fed91380e1820dbb15
-ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
+ms.openlocfilehash: ce01d71ecc928af48eb72da9235a7074623ff34c
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997984"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996755"
 ---
 # <a name="app-protection-policies-overview"></a>Overzicht van App-beveiligingsbeleid
 
@@ -52,7 +52,7 @@ Beveiligingsbeleid voor apps kan worden geconfigureerd voor apps die worden uitg
 - **Apparaten die niet zijn geregistreerd in een MDM-oplossing:** Bij deze apparaten gaat het meestal om apparaten die in het bezit zijn van werknemers, of om apparaten die niet worden beheerd door of zijn ingeschreven bij Intune of een andere MDM-oplossing.
 
 > [!IMPORTANT]
-> U kunt MAM-beleid maken voor mobiele Office-apps die verbinding maken met Office 365-services. U kunt de toegang tot Exchange on-premises mailboxen tevens beveiligen door beveiligingsbeleid voor Intune-apps te maken voor Outlook voor iOS/iPadOS en Android met hybride moderne verificatie. Voordat u deze functie gebruikt, moet u ervoor zorgen dat u voldoet aan de [Outlook voor iOS-/iPadOS- en Android-vereisten](https://technet.microsoft.com/library/mt846639(v=exchg.160).aspx). Beveiligingsbeleid voor apps wordt niet ondersteund voor andere apps die verbinding maken met on-premises Exchange- of SharePoint-services.
+> U kunt MAM-beleid maken voor mobiele Office-apps die verbinding maken met Microsoft 365-services. U kunt de toegang tot Exchange on-premises mailboxen tevens beveiligen door beveiligingsbeleid voor Intune-apps te maken voor Outlook voor iOS/iPadOS en Android met hybride moderne verificatie. Voordat u deze functie gebruikt, moet u ervoor zorgen dat u voldoet aan de [Outlook voor iOS-/iPadOS- en Android-vereisten](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth?view=exchserver-2019). Beveiligingsbeleid voor apps wordt niet ondersteund voor andere apps die verbinding maken met on-premises Exchange- of SharePoint-services.
 
 ## <a name="benefits-of-using-app-protection-policies"></a>Voordelen van het gebruik van het beveiligingsbeleid voor apps
 
@@ -149,7 +149,7 @@ Alle apps die zijn geïntegreerd met de [Intune-SDK](../developer/app-sdk.md) of
 
 Het Intune SDK-ontwikkelingsteam houdt zich actief bezig met het testen en onderhouden van ondersteuning voor apps die zijn gebouwd met de systeemeigen Android-, iOS-/iPadOS- (Obj-C, Swift), Xamarin- en Xamarin.Forms-platforms. Hoewel het sommige klanten is gelukt om de Intune SDK te integreren in andere platforms, zoals React Native en NativeScript, bieden we geen specifieke instructies of plug-ins voor app-ontwikkelaars die andere platforms gebruiken dan de platforms die door ons worden ondersteund.
 
-De [Intune-SDK](../developer/app-sdk.md) maakt gebruik van een aantal geavanceerde moderne verificatiefuncties van [Azure Active Directory Authentication Library](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL) voor zowel de eigen als de externe versies van de SDK. Hierdoor werkt [Microsoft Authentication Library](https://docs.microsoft.com/azure/active-directory/develop/reference-v2-libraries) (MSAL) niet goed met de meeste belangrijkste scenario's, zoals verificatie in de Intune-app-beveiligingsservice en voorwaardelijk starten. Gezien het feit dat het Identity-team van Microsoft gebruikers over het algemeen aanraadt om voor alle Microsoft Office-apps over te stappen naar MSAL, zal de [Intune-SDK](../developer/app-sdk.md) daar uiteindelijk ondersteuning voor moeten gaan bieden, maar hier zijn momenteel nog geen plannen voor.
+De [Intune-SDK](../developer/app-sdk.md) maakt gebruik van een aantal geavanceerde moderne verificatiefuncties van [Azure Active Directory Authentication Library](/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL) voor zowel de eigen als de externe versies van de SDK. Hierdoor werkt [Microsoft Authentication Library](/azure/active-directory/develop/reference-v2-libraries) (MSAL) niet goed met de meeste belangrijkste scenario's, zoals verificatie in de Intune-app-beveiligingsservice en voorwaardelijk starten. Gezien het feit dat het Identity-team van Microsoft gebruikers over het algemeen aanraadt om voor alle Microsoft Office-apps over te stappen naar MSAL, zal de [Intune-SDK](../developer/app-sdk.md) daar uiteindelijk ondersteuning voor moeten gaan bieden, maar hier zijn momenteel nog geen plannen voor.
 
 ## <a name="end-user-requirements-to-use-app-protection-policies"></a>Vereisten voor eindgebruikers voor het gebruik van beveiligingsbeleid voor apps
 
@@ -171,15 +171,15 @@ Er zijn enkele aanvullende vereisten waarmee u rekening moet houden bij het gebr
 Dit zijn de aanvullende vereisten voor het gebruik van de [mobiele Outlook-app](https://products.office.com/outlook):
 
 - De eindgebruiker moet de mobiele app van Outlook op zijn apparaat hebben geïnstalleerd.
-- De eindgebruiker moet een [Office 365 Exchange Online](https://products.office.com/exchange/exchange-online)-postvak en -licentie aan het Azure Active Directory-account hebben gekoppeld.
+- De eindgebruiker moet een [Microsoft 365 Exchange Online](https://products.office.com/exchange/exchange-online)-postvak en -licentie aan het Azure Active Directory-account hebben gekoppeld.
 
   >[!NOTE]
-  > De mobiele app van Outlook ondersteunt momenteel alleen Intune-app-beveiliging voor Microsoft Exchange Online en [Exchange Server met hybride moderne verificatie](https://technet.microsoft.com/library/mt846639(v=exchg.160).aspx) en biedt geen ondersteuning voor Exchange in Office 365 Dedicated.
+  > De mobiele app van Outlook ondersteunt momenteel alleen Intune-app-beveiliging voor Microsoft Exchange Online en [Exchange Server met hybride moderne verificatie](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth?view=exchserver-2019) en biedt geen ondersteuning voor Exchange in Office 365 Dedicated.
 
 ### <a name="word-excel-and-powerpoint"></a>Word, Excel en PowerPoint
 Dit zijn de aanvullende vereisten voor het gebruik van de apps [Word, Excel en PowerPoint](https://products.office.com/business/office):
 
-- De eindgebruiker moet een licentie voor [Microsoft 365 Apps voor Business of Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) aan zijn Azure Active Directory-account hebben gekoppeld. Het abonnement moet de Office-apps voor mobiele apparaten bevatten en kan een cloudopslagaccount met [OneDrive voor Bedrijven](https://onedrive.live.com/about/business/) bevatten. Office 365-licenties kunnen aan de hand van de volgende [instructies](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc) worden toegewezen in het [Microsoft 365-beheercentrum](https://admin.microsoft.com).
+- De eindgebruiker moet een licentie voor [Microsoft 365 Apps voor Business of Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) aan zijn Azure Active Directory-account hebben gekoppeld. Het abonnement moet de Office-apps voor mobiele apparaten bevatten en kan een cloudopslagaccount met [OneDrive voor Bedrijven](https://onedrive.live.com/about/business/) bevatten. Microsoft 365-licenties kunnen aan de hand van de volgende [instructies](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc) worden toegewezen in het [Microsoft 365-beheercentrum](https://admin.microsoft.com).
 
 - De eindgebruiker moet een beheerde locatie hebben die is geconfigureerd met de gedetailleerde functie voor 'opslaan als', onder de instelling 'Kopieën van organisatiegegevens opslaan' van het beveiligingsbeleid voor toepassingen. Als bijvoorbeeld OneDrive de beheerde locatie is, moet de [OneDrive](https://onedrive.live.com/about/)-app worden geconfigureerd in de Word-, Excel- of PowerPoint-app van de eindgebruiker.
 
@@ -192,7 +192,7 @@ Dit zijn de aanvullende vereisten voor het gebruik van de apps [Word, Excel en P
 Voor Office is een beheerde locatie (bijvoorbeeld OneDrive) nodig. Intune markeert alle gegevens in de app als 'zakelijk' of 'persoonlijk'. Gegevens worden als 'zakelijk' beschouwd wanneer ze afkomstig zijn van een bedrijfslocatie. Voor Office-apps worden de volgende locaties door Intune beschouwd als bedrijfslocaties: e-mail (Exchange) of cloudopslag (OneDrive-app met een OneDrive voor Bedrijven-account).
 
 ### <a name="skype-for-business"></a>Skype voor bedrijven
-Er zijn de aanvullende vereisten voor het gebruik van Skype voor Bedrijven. Zie de licentievereisten voor [Skype voor Bedrijven](https://products.office.com/skype-for-business/it-pros). Zie respectievelijk [Hybride moderne verificatie voor SfB en Exchange wordt algemeen beschikbaar (GA)](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756) en [Moderne verificatie voor on-premises SfB met AAD](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910) voor hybride en on-premises configuraties van Skype voor Bedrijven (SfB).
+Er zijn de aanvullende vereisten voor het gebruik van Skype voor Bedrijven. Zie de licentievereisten voor [Skype voor Bedrijven](https://products.office.com/skype-for-business/it-pros). Zie respectievelijk [Hybride moderne verificatie voor Skype voor Bedrijven (SfB) en Exchange wordt algemeen beschikbaar (GA)](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756) en [Moderne verificatie voor on-premises Skype voor Bedrijven (SfB) met Azure AD](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910) voor hybride en on-premises configuraties van Skype voor Bedrijven (SfB).
 
 ## <a name="app-protection-global-policy"></a>Algemeen appbeveiligingsbeleid
 

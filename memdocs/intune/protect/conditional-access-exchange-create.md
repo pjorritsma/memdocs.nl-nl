@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19a2d82f23abef49f193859c46a17cbb44a61f49
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 7dc7fb7b01add52b75fcc4a4a42f57951decf484
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663341"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993126"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Toegang tot Exchange On-Premises voor Intune configureren
 
@@ -34,7 +34,7 @@ Als u een Exchange Online Dedicated-omgeving hebt en wilt weten of deze de nieuw
 > [!IMPORTANT]
 > De informatie in dit artikel is van toepassing op klanten die worden ondersteund voor het gebruik van een Exchange-connector.
 >
-> Vanaf juli 2020 wordt de ondersteuning voor de Exchange connector afgeschaft en vervangen door Exchange [HMA](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (Hybrid Modern Authentication, hybride moderne verificatie).  Als u een Exchange-connector hebt ingesteld in uw omgeving, blijft de Intune-tenant ondersteund voor het gebruik ervan en houdt u toegang tot de gebruikersinterface die de configuratie ervan ondersteunt. U kunt de connector blijven gebruiken of HMA configureren en vervolgens de connector verwijderen.
+> Vanaf juli 2020 wordt de ondersteuning voor de Exchange connector afgeschaft en vervangen door Exchange [HMA](/office365/enterprise/hybrid-modern-auth-overview) (Hybrid Modern Authentication, hybride moderne verificatie).  Als u een Exchange-connector hebt ingesteld in uw omgeving, blijft de Intune-tenant ondersteund voor het gebruik ervan en houdt u toegang tot de gebruikersinterface die de configuratie ervan ondersteunt. U kunt de connector blijven gebruiken of HMA configureren en vervolgens de connector verwijderen.
 >
 > U hebt Intune niet nodig om via HMA de Exchange-connector in te stellen en te gebruiken. Met deze wijziging wordt de gebruikersinterface voor het configureren en beheren van de Exchange-connector voor Intune verwijderd uit het Microsoft Endpoint Manager-beheercentrum, tenzij u al een Exchange-connector gebruikt met uw abonnement.
 
@@ -59,7 +59,7 @@ Controleer of aan de volgende voorwaarden is voldaan voordat u voorwaardelijke t
   - Het apparaat moet zijn **ingeschreven** bij Intune of lid zijn van een domein.
   - Het apparaat moet zijn **geregistreerd bij Azure Active Directory**. Bovendien moet de client-id van Exchange ActiveSync zijn geregistreerd bij Azure Active Directory.
 
-- De Azure AD Device Registration Service (DRS) wordt automatisch geactiveerd voor Intune- en Office 365-klanten. Klanten die de ADFS Device Registration Service al hebben geïmplementeerd, zien geen geregistreerde apparaten in hun on-premises Active Directory. **Dit geldt niet voor Windows-pc's en -apparaten**.
+- De Azure Active Directory Device Registration (DRS) wordt automatisch geactiveerd voor Intune- en Microsoft 365-klanten. Klanten die de ADFS Device Registration Service al hebben geïmplementeerd, zien geen geregistreerde apparaten in hun on-premises Active Directory. **Dit geldt niet voor Windows-pc's en -apparaten**.
 
 - Het apparaat moet **compatibel** zijn met alle soorten nalevingsbeleid die worden geïmplementeerd op het apparaat.
 
@@ -86,16 +86,16 @@ Controleer of aan de volgende voorwaarden is voldaan voordat u voorwaardelijke t
 
   4. Selecteer **Android Enterprise** bij **Platform** en selecteer **E-mail** bij **Profieltype**.
 
-  5. Configureer de [instellingen van het e-mailprofiel](https://docs.microsoft.com/intune/configuration/email-settings-android-enterprise#android-enterprise).
+  5. Configureer de [instellingen van het e-mailprofiel](/intune/configuration/email-settings-android-enterprise#android-enterprise).
 
   6. Wanneer u klaar bent, selecteert u **OK** > **Maken** om uw wijzigingen op te slaan.
 
-  7. Nadat u het e-mailprofiel hebt gemaakt, moet u deze [toewijzen aan groepen](https://docs.microsoft.com/intune/device-profile-assign).
+  7. Nadat u het e-mailprofiel hebt gemaakt, moet u deze [toewijzen aan groepen](/intune/device-profile-assign).
 
-  8. Stel [Voorwaardelijke toegang op basis van het apparaat](https://docs.microsoft.com/intune/protect/conditional-access-intune-common-ways-use#device-based-conditional-access) in.
+  8. Stel [Voorwaardelijke toegang op basis van het apparaat](/intune/protect/conditional-access-intune-common-ways-use#device-based-conditional-access) in.
 
 > [!NOTE]
-> Microsoft Outlook voor Android en iOS/iPadOS wordt niet ondersteund via de on-premises Exchange-connector. Als u wilt gebruikmaken van Azure Active Directory-beleid voor voorwaardelijke toegang en beleid voor Intune-app-beveiliging met Outlook voor iOS/iPadOS en Android voor uw on-premises postvakken, raadpleegt u [Hybride moderne verificatie gebruiken met Outlook voor iOS/iPadOS en Android](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth).
+> Microsoft Outlook voor Android en iOS/iPadOS wordt niet ondersteund via de on-premises Exchange-connector. Als u wilt gebruikmaken van Azure Active Directory-beleid voor voorwaardelijke toegang en beleid voor Intune-app-beveiliging met Outlook voor iOS/iPadOS en Android voor uw on-premises postvakken, raadpleegt u [Hybride moderne verificatie gebruiken met Outlook voor iOS/iPadOS en Android](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth).
 
 ### <a name="support-for-pcs"></a>Ondersteuning voor pc's
 

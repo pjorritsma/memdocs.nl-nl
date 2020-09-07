@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8814e1a2c6b1af48d71a0a82c02492e48b44dda9
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: 2c8d007ba2fccb92fd90de4da64945155678041d
+ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84271004"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281197"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Intune (zelfstandig) - Win32-app-beheer
 
@@ -240,7 +240,7 @@ De volgende stappen bevatten instructies waarmee u een Windows-app kunt toevoege
                 ![Schermopname van het deelvenster Detectieregels: bestaan van map](./media/apps-win32-app-management/apps-win32-app-04.png)
         
         3. **Register**: verifieer op basis van waarde, tekenreeks, geheel getal of versie.
-            - **Sleutelpad**: het volledige pad van de registervermelding met de waarde die moet worden gedetecteerd.
+            - **Sleutelpad**: het volledige pad van de registervermelding met de waarde die moet worden gedetecteerd. Een geldige syntaxis is HKEY_LOCAL_MACHINE \Software\WinRAR of HKLM\Software\WinRAR.
             - **Waardenaam**: de naam van de registerwaarde die moet worden gedetecteerd. Als deze waarde leeg is, wordt de detectie op de sleutel uitgevoerd. De (standaard)waarde van een sleutel wordt als detectiewaarde gebruikt als de detectiemethode anders is dan het bestaan van het bestand of de map.
             - **Detectiemethode**: selecteer het type detectiemethode dat moet worden gebruikt om de aanwezigheid van de app te valideren.
             - **Gekoppeld aan een 32-bits app op 64-bits clients**: selecteer **Ja** om het 32-bits register te doorzoeken op 64-bits clients. Selecteer **Nee** (standaard) om het 64-bits register op 64-bits clients te doorzoeken. Voor 32-bits clients wordt altijd het 32-bits register doorzocht.

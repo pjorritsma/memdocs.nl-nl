@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1655c7b18262d0515308a00c617f06d917d976de
-ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
+ms.openlocfilehash: 92c0911ff9250fb1b2832df4b7e269f192ee8cda
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85972171"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057518"
 ---
 # <a name="wandera-mobile-threat-defense-connector-with-intune"></a>Wandera Mobile Threat Defense-connector met Intune  
 
@@ -38,7 +38,7 @@ De mobiele app van Wandera wordt met Microsoft Intune moeiteloos geïnstalleerd.
 
 Het compliancebeleid in Intune omvat een regel voor MTD op basis van de risicobeoordeling van Wandera. Als deze regel is ingeschakeld, controleert Intune of het apparaat voldoet aan het beleid dat u hebt ingeschakeld.
 
-Voor apparaten die niet-compatibel zijn, kan toegang tot resources als Office 365 worden geblokkeerd. Gebruikers van een geblokkeerd apparaat ontvangen richtlijnen van de Wandera-app, zodat ze het probleem kunnen oplossen en weer toegang kunnen krijgen.
+Voor apparaten die niet-compatibel zijn, kan toegang tot resources als Microsoft 365 worden geblokkeerd. Gebruikers van een geblokkeerd apparaat ontvangen richtlijnen van de Wandera-app, zodat ze het probleem kunnen oplossen en weer toegang kunnen krijgen.
 
 Met Wandera wordt Intune bijgewerkt met het meest recente bedreigingsniveau (Beveiligd, Laag, Gemiddeld of Hoog) wanneer het wordt gewijzigd. Dit bedreigingsniveau wordt voortdurend herberekend door de Wandera Security Cloud en is gebaseerd op de status van het apparaat, de netwerkactiviteit en tal van mobiele bedreigingsinformatiefeeds over verschillende bedreigingscategorieën.
 

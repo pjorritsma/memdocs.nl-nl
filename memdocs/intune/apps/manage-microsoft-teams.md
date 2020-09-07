@@ -17,23 +17,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4ebc719d65024f26d1661d311bfbf9077bcdcbe3
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: b1531de9ceab57b26bc9af5faac08673b8b758b0
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86410909"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993097"
 ---
 # <a name="manage-team-collaboration-access-by-using-teams-for-ios-and-android-with-microsoft-intune"></a>Toegang tot samenwerking als team beheren met behulp van Teams voor iOS en Android met Microsoft Intune
 
 Microsoft Teams is de hub voor teamsamenwerking in Microsoft 365 die de personen, content en hulpprogramma's integreert die uw team nodig heeft om beter en effectiever te kunnen werken.
 
-De meest veelzijdige en breedste beveiligingsmogelijkheden voor Office 365-gegevens zijn beschikbaar wanneer u zich abonneert op de Enterprise Mobility + Security Suite, die functies bevat van Microsoft Intune en Azure Active Directory Premium, zoals voorwaardelijke toegang. U moet minimaal een beleid voor voorwaardelijke toegang implementeren dat connectiviteit toestaat voor Teams voor iOS en Android vanaf mobiele apparaten en een Intune-beleid voor app-beveiliging dat ervoor zorgt dat de samenwerkingservaring wordt beschermd.
+De meest veelzijdige en breedste beveiligingsmogelijkheden voor Microsoft 365-gegevens zijn beschikbaar wanneer u zich abonneert op de Enterprise Mobility + Security Suite, die functies bevat van Microsoft Intune en Azure Active Directory Premium, zoals voorwaardelijke toegang. U moet minimaal een beleid voor voorwaardelijke toegang implementeren dat connectiviteit toestaat voor Teams voor iOS en Android vanaf mobiele apparaten en een Intune-beleid voor app-beveiliging dat ervoor zorgt dat de samenwerkingservaring wordt beschermd.
 
 ## <a name="apply-conditional-access"></a>Voorwaardelijke toegang toepassen
-Organisaties kunnen gebruikmaken van het beleid voor voorwaardelijke toegang van Azure AD om ervoor te zorgen dat gebruikers alleen toegang hebben tot werk- of schoolinhoud met behulp van Teams voor iOS en Android. Hiervoor hebt u een beleid voor voorwaardelijke toegang nodig dat zich richt op alle potentiële gebruikers. Meer informatie over het maken van dit beleid vindt u in [Beveiligingsbeleid voor apps vereisen voor toegang tot cloud-apps met voorwaardelijke toegang](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access).
+Organisaties kunnen gebruikmaken van het beleid voor voorwaardelijke toegang van Azure AD om ervoor te zorgen dat gebruikers alleen toegang hebben tot werk- of schoolinhoud met behulp van Teams voor iOS en Android. Hiervoor hebt u een beleid voor voorwaardelijke toegang nodig dat zich richt op alle potentiële gebruikers. Meer informatie over het maken van dit beleid vindt u in [Beveiligingsbeleid voor apps vereisen voor toegang tot cloud-apps met voorwaardelijke toegang](/azure/active-directory/conditional-access/app-protection-based-conditional-access).
 
-1. Volg "Stap 1: Een beleid voor voorwaardelijke toegang tot Azure AD voor Office 365 configureren" in [scenario 1: Voor Office 365-apps zijn goedgekeurde apps met app-beveiligingsbeleid vereist](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies), waarmee Teams voor iOS en Android is toegestaan, maar externe clients voor mobiele apparaten met OAuth worden geblokkeerd en geen verbinding kunnen maken met Office 365-eindpunten.
+1. Volg "Stap 1: Een beleid voor voorwaardelijke toegang tot Azure AD voor Office 365 configureren" in [scenario 1: Voor Office 365-apps zijn goedgekeurde apps met app-beveiligingsbeleid vereist](/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies), waarmee Teams voor iOS en Android is toegestaan, maar externe clients voor mobiele apparaten met OAuth worden geblokkeerd en geen verbinding kunnen maken met Office 365-eindpunten.
 
    >[!NOTE]
    > Dit beleid zorgt ervoor dat mobiele gebruikers toegang hebben tot alle Office-eindpunten met behulp van de toepasselijke apps.

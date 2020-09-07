@@ -1,8 +1,8 @@
 ---
 title: Exchange zonder apparaatbeheer
 titleSuffix: Microsoft Intune
-description: Gebruik Microsoft Intune om werknemers toegang te geven tot hun e-mail van Office 365 Exchange Online zonder een apparaatbeheersysteem in te stellen.
-keywords: Toegang tot e-mail van Office 365 Exchange
+description: Gebruik Microsoft Intune om werknemers toegang te verlenen tot hun e-mail van Microsoft 365 Exchange Online zonder een apparaatbeheersysteem in te stellen.
+keywords: Toegang tot e-mail van Microsoft 365 Exchange
 author: brenduns
 ms.author: brenduns
 manager: dougeby
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9669625225f8ad3960ece39e2a6b04849421ce6
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 8491d716751a4d370003583059546f17b689657e
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022178"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996126"
 ---
-# <a name="protect-office-365-exchange-online-without-requiring-device-management"></a>Office 365 Exchange Online beveiligen zonder dat apparaatbeheer is vereist
+# <a name="protect-microsoft-365-exchange-online-without-requiring-device-management"></a>Microsoft 365 Exchange Online beveiligen zonder dat apparaatbeheer is vereist
 
-U kunt werknemers toegang geven tot hun werk-e-mail zonder de overhead van het instellen van een apparaatbeheersysteem. U kunt toegang tot Office 365 Exchange Online geven via Intune. Bevestig dat u licenties hebt voor Microsoft 365 of voor Azure Active Directory (premium) en Intune om de benodigde stappen te voltooien. Werknemers moeten beschikken over een [ondersteund iOS-/iPadOS- of Android-apparaat](../fundamentals/supported-devices-browsers.md). 
+U kunt werknemers toegang geven tot hun werk-e-mail zonder de overhead van het instellen van een apparaatbeheersysteem. U kunt toegang tot Microsoft 365 Exchange Online verlenen via Intune. Bevestig dat u licenties hebt voor Microsoft 365 of voor Azure Active Directory (premium) en Intune om de benodigde stappen te voltooien. Werknemers moeten beschikken over een [ondersteund iOS-/iPadOS- of Android-apparaat](../fundamentals/supported-devices-browsers.md). 
 
 Als u een apparaatbeheersysteem wilt instellen, is dat mogelijk. Dit type app-beveiliging werkt onafhankelijk van apparaatbeheer. 
 
@@ -48,8 +48,8 @@ Als u een apparaatbeheersysteem wilt instellen, is dat mogelijk. Dit type app-be
 
 U hebt voorwaardelijke toegang op basis van een app gebruikt om de beveiliging van bedrijfsgegevens te verbeteren. Bij de volgende stappen krijgt u meer informatie over andere manieren waarop u de beveiliging van uw bedrijfsgegevens kunt verbeteren, met inbegrip van: 
 
-* Instellen van [voorwaardelijke toegang op basis van apparaatcompatibiliteit, apparaatrisico, locatie en gebruikerskenmerken in Active Directory en Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal).  
+* Instellen van [voorwaardelijke toegang op basis van apparaatcompatibiliteit, apparaatrisico, locatie en gebruikerskenmerken in Active Directory en Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal).  
 * Instellen van app-beveiligingsbeleid om uw bedrijfsgegevens te beschermen tegen opzettelijke en niet-opzettelijke gegevenslekken. 
 * Gebruik van Azure Information Protection om bedrijfsgegevens buiten uw netwerk te beveiligen. 
 
-Wilt u hulp bij het inschakelen van dit of andere scenario's voor EMS of Office 365? Als u ten minste 150 licenties voor Microsoft 365, Enterprise Mobility + Security of Azure Active Directory Premium hebt, gebruikt u uw [FastTrack-voordelen](https://docs.microsoft.com/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program). 
+Wilt u hulp bij het toepassen hiervan of andere scenario's voor EMS of Microsoft 365? Als u ten minste 150 licenties voor Microsoft 365, Enterprise Mobility + Security of Azure Active Directory Premium hebt, gebruikt u uw [FastTrack-voordelen](/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program).

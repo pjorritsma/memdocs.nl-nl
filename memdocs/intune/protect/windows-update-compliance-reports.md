@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/13/2020
+ms.date: 09/01/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b4ef3a4c2ba539cc507ef413a4648b42e246b11d
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 297707da0afb03650eaab91b26abad9947c6a951
+ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990916"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89286149"
 ---
 # <a name="intune-compliance-reports-for-updates"></a>Intune-nalevingsrapporten voor updates
 
@@ -39,15 +39,15 @@ U kunt als volgt een beleidsrapport weergeven met de implementatiestatus voor de
 
    Kies in de sectie **Bewaken** een van de volgende rapporten om meer gedetailleerde informatie over de implementatiering weer te geven:
 
-   - **Apparaatstatus**: hier wordt de configuratiestatus van het apparaat weergegeven. Zie [Update deviceConfigurationDeviceStatus]( https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationdevicestatus-update?view=graph-rest-1.0) voor meer details.
+   - **Apparaatstatus**: hier wordt de configuratiestatus van het apparaat weergegeven. Zie [Update deviceConfigurationDeviceStatus]( /graph/api/intune-deviceconfig-deviceconfigurationdevicestatus-update?view=graph-rest-1.0) voor meer details.
 
-   - **Gebruikersstatus**: hier wordt de gebruikersnaam, de status en de laatste rapportagedatum weergegeven. Zie [List deviceConfigurationUserStatuses](https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationuserstatus-list?view=graph-rest-1.0) voor meer details.
+   - **Gebruikersstatus**: hier wordt de gebruikersnaam, de status en de laatste rapportagedatum weergegeven. Zie [List deviceConfigurationUserStatuses](/graph/api/intune-deviceconfig-deviceconfigurationuserstatus-list?view=graph-rest-1.0) voor meer details.
 
-   - **Updatestatus van de eindgebruiker**: hier wordt de updatestatus van het Windows-apparaat weergegeven. Zie [windowsUpdateState](https://docs.microsoft.com/graph/api/resources/intune-shared-windowsupdatestate?view=graph-rest-beta) voor meer details.
+   - **Updatestatus van de eindgebruiker**: hier wordt de updatestatus van het Windows-apparaat weergegeven. Zie [windowsUpdateState](/graph/api/resources/intune-shared-windowsupdatestate?view=graph-rest-beta) voor meer details.
 
 ## <a name="use-update-compliance"></a>Updatenaleving gebruiken
 
-Met [Updatenaleving](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor) kunt u de Windows 10-update-implementaties bewaken. Updatenaleving wordt u aangeboden via Azure Portal en is gratis beschikbaar voor apparaten die aan de [voorwaarden](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started#update-compliance-prerequisites) voldoen.  
+Met [Updatenaleving](/windows/deployment/update/update-compliance-monitor) kunt u de Windows 10-update-implementaties bewaken. Updatenaleving wordt u aangeboden via Azure Portal en is gratis beschikbaar voor apparaten die aan de [voorwaarden](/windows/deployment/update/update-compliance-get-started#update-compliance-prerequisites) voldoen.  
 
 Wanneer u deze oplossing gebruikt, kunt u een commerciële id implementeren op elk van uw door Intune beheerde Windows 10-apparaten waarvoor u over de naleving van updates wilt rapporteren.  
 
@@ -59,12 +59,12 @@ U kunt bijvoorbeeld de volgende waarden gebruiken in **OMA-URI-instelling toevoe
 
 - **Naam van instelling**: Commerciële id voor Windows Analytics
 - **Beschrijving van instelling**: Commerciële id voor Windows Analytics-oplossingen configureren
-- **OMA-URI** (hoofdlettergevoelig): *./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID*
+- **OMA-URI** (hoofdlettergevoelig): *./Vendor/MSFT/DMClient/Provider/ProviderID/CommercialID*
 - **Gegevenstype**: Tekenreeks
-- **Waarde**: \<gebruik de GUID die wordt weergegeven op het tabblad Windows-telemetrie in uw OMS-werkruimte>
+- **Waarde**: \<Use the GUID shown on the Windows Telemetry tab in your OMS workspace>
 
 > [!NOTE]
-> Zie [DMClient configuratieserviceprovider (CSP)]( https://docs.microsoft.com/windows/client-management/mdm/dmclient-csp) voor meer informatie over MS DM Server.
+> Zie [DMClient configuratieserviceprovider (CSP)]( /windows/client-management/mdm/dmclient-csp) voor meer informatie over MS DM Server.
 
 ## <a name="next-steps"></a>Volgende stappen
 

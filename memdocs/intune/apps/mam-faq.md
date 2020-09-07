@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81ba50c9822ff5672fd52bab1d89f444aafdb402
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 20d217246be59a612c1a022251f89559ad940894
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022327"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996432"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Veelgestelde vragen over MAM en app-beveiliging
 
@@ -66,13 +66,13 @@ Alle apps die zijn geïntegreerd met de [Intune App SDK](../developer/app-sdk.md
 
 **Wat zijn de basisvereisten voor het gebruik van app-beveiligingsbeleidsregels voor een app die door Intune wordt beheerd?**
 
-- De eindgebruiker moet een AAD-account (Azure Active Directory) hebben. Zie [Gebruikers toevoegen en beheerdersmachtigingen aan Intune toekennen](../fundamentals/users-add.md) voor informatie over het maken van Intune-gebruikers in Azure Active Directory.
+- De eindgebruiker moet een Azure Active Directory-account (Azure AD) hebben. Zie [Gebruikers toevoegen en beheerdersmachtigingen aan Intune toekennen](../fundamentals/users-add.md) voor informatie over het maken van Intune-gebruikers in Azure Active Directory.
 
 - Er moet een licentie voor Microsoft Intune Azure aan het Azure Active Directory-account van de eindgebruiker zijn toegewezen. Zie [Intune-licenties beheren](../fundamentals/licenses-assign.md) voor informatie over het toewijzen van Intune-licenties aan eindgebruikers.
 
 - De eindgebruiker moet behoren tot een beveiligingsgroep waarop een beleidsregel voor de beveiliging van apps is gericht. Dezelfde beleidsregel voor de beveiliging van apps moet ook zijn gericht op de specifieke app die wordt gebruikt. Beleid voor app-beveiliging kan worden gemaakt en geïmplementeerd in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431). Beveiligingsgroepen kunnen op dit moment worden gemaakt in het [Microsoft 365-beheercentrum](https://admin.microsoft.com).
 
-- De eindgebruiker moet zich bij de app aanmelden met zijn AAD-account.
+- De eindgebruiker moet zich bij de app aanmelden met zijn Azure AD-account.
 
 **Wat zijn de mogelijkheden als ik een app met Intune-app-beveiliging wil inschakelen, maar die app geen ondersteund platform voor app-ontwikkeling gebruikt?**
 
@@ -85,14 +85,14 @@ De Intune App SDK kan de Microsoft Authentication Library gebruiken voor de veri
 
 - De eindgebruiker moet de mobiele app van Outlook op zijn apparaat hebben geïnstalleerd.
 
-- De eindgebruiker moet een [Office 365 Exchange Online](https://products.office.com/exchange/exchange-online)-postvak en -licentie aan het Azure Active Directory-account hebben gekoppeld.
+- De eindgebruiker moet een [Microsoft 365 Exchange Online](https://products.office.com/exchange/exchange-online)-postvak en -licentie aan het Azure Active Directory-account hebben gekoppeld.
 
   >[!NOTE]
-  > De mobiele app van Outlook ondersteunt momenteel alleen Intune-app-beveiliging voor Microsoft Exchange Online en [Exchange Server met hybride moderne verificatie](https://technet.microsoft.com/library/mt846639(v=exchg.160).aspx) en biedt geen ondersteuning voor Exchange in Office 365 Dedicated.
+  > De mobiele app van Outlook ondersteunt momenteel alleen Intune-app-beveiliging voor Microsoft Exchange Online en [Exchange Server met hybride moderne verificatie](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth?view=exchserver-2019) en biedt geen ondersteuning voor Exchange in Office 365 Dedicated.
 
 **Wat zijn de aanvullende vereisten voor het gebruik van de apps [Word, Excel en PowerPoint](https://products.office.com/business/office)?**
 
-- De eindgebruiker moet een licentie voor [Microsoft 365 Apps voor Business of Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) aan zijn Azure Active Directory-account hebben gekoppeld. Het abonnement moet de Office-apps voor mobiele apparaten bevatten en kan een cloudopslagaccount met [OneDrive voor Bedrijven](https://onedrive.live.com/about/business/) bevatten. Office 365-licenties kunnen aan de hand van de volgende [instructies](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc) worden toegewezen in het [Microsoft 365-beheercentrum](https://admin.microsoft.com).
+- De eindgebruiker moet een licentie voor [Microsoft 365 Apps voor Business of Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) aan zijn Azure Active Directory-account hebben gekoppeld. Het abonnement moet de Office-apps voor mobiele apparaten bevatten en kan een cloudopslagaccount met [OneDrive voor Bedrijven](https://onedrive.live.com/about/business/) bevatten. Microsoft 365-licenties kunnen aan de hand van de volgende [instructies](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc) worden toegewezen in het [Microsoft 365-beheercentrum](https://admin.microsoft.com).
 
 - De eindgebruiker moet een beheerde locatie hebben die is geconfigureerd met de gedetailleerde functie voor 'opslaan als', onder de instelling 'Kopieën van organisatiegegevens opslaan' van het beveiligingsbeleid voor toepassingen. Als bijvoorbeeld OneDrive de beheerde locatie is, moet de [OneDrive](https://onedrive.live.com/about/)-app worden geconfigureerd in de Word-, Excel- of PowerPoint-app van de eindgebruiker.
 
@@ -105,7 +105,7 @@ De Intune App SDK kan de Microsoft Authentication Library gebruiken voor de veri
 Intune markeert alle gegevens in de app als 'zakelijk' of 'persoonlijk'. Gegevens worden als 'zakelijk' beschouwd wanneer ze afkomstig zijn van een bedrijfslocatie. Voor Office-apps worden de volgende locaties door Intune beschouwd als bedrijfslocaties: e-mail (Exchange) of cloudopslag (OneDrive-app met een OneDrive voor Bedrijven-account).
 
 **Wat zijn de aanvullende vereisten voor het gebruik van Skype voor Bedrijven?**<br></br>
-Zie de licentievereisten voor [Skype voor Bedrijven](https://products.office.com/skype-for-business/it-pros). Zie respectievelijk [Hybride moderne verificatie voor SfB en Exchange wordt algemeen beschikbaar (GA)](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756) en [Moderne verificatie voor on-premises SfB met AAD](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910) voor hybride en on-premises configuraties van Skype voor Bedrijven (SfB).
+Zie de licentievereisten voor [Skype voor Bedrijven](https://products.office.com/skype-for-business/it-pros). Zie respectievelijk [Hybride moderne verificatie voor Skype voor Bedrijven (SfB) en Exchange wordt algemeen beschikbaar (GA)](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756) en [Moderne verificatie voor on-premises Skype voor Bedrijven (SfB) met Azure AD](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910) voor hybride en on-premises configuraties van Skype voor Bedrijven (SfB).
 
 ## <a name="app-protection-features"></a>Functies voor app-beveiliging
 

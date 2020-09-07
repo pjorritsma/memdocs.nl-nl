@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2095fdd349437e03c673fb9f7906511c5e3af388
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: 0d638cb382aa7abe8859648192837601c86f22ce
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088374"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996551"
 ---
 # <a name="microsoft-endpoint-manager-overview"></a>Overzicht van Microsoft Endpoint Manager
 
@@ -42,40 +42,40 @@ Endpoint Manager omvat onder andere de volgende services:
 
   Als u een on-premises infrastructuur hebt, zoals Exchange of Active Directory, zijn de Intune-connectors ook beschikbaar:
 
-  - De **Intune Connector voor Active Directory** voegt vermeldingen toe aan uw on-premises Active Directory-domein voor computers die worden ingeschreven met Windows Autopilot. Zie [Hybride apparaten die aan Azure AD zijn toegevoegd](/mem/intune/enrollment/windows-autopilot-hybrid) voor meer informatie.
-  - Met de **Intune Certificate Connector** worden certificaataanvragen verwerkt van apparaten die voor verificatie gebruikmaken van certificaten en S/MIME-e-mailversleuteling. Zie [Certificaten gebruiken voor verificatie](/mem/intune/protect/certificates-configure) voor meer informatie.
+  - De **Intune Connector voor Active Directory** voegt vermeldingen toe aan uw on-premises Active Directory-domein voor computers die worden ingeschreven met Windows Autopilot. Zie [Hybride apparaten die aan Azure AD zijn toegevoegd](./autopilot/windows-autopilot-hybrid.md) voor meer informatie.
+  - Met de **Intune Certificate Connector** worden certificaataanvragen verwerkt van apparaten die voor verificatie gebruikmaken van certificaten en S/MIME-e-mailversleuteling. Zie [Certificaten gebruiken voor verificatie](./intune/protect/certificates-configure.md) voor meer informatie.
 
   Gebruik Intune als onderdeel van Endpoint Manager om nalevingsregels te maken en controleren, om apps, functies en instellingen te implementeren op uw apparaten met behulp van de cloud.
 
-  Zie [Wat is Microsoft Intune?](https://docs.microsoft.com/intune/fundamentals/what-is-intune) voor meer informatie.
+  Zie [Wat is Microsoft Intune?](/intune/fundamentals/what-is-intune) voor meer informatie.
 
 - **Configuration Manager**: Configuration Manager is een on-premises oplossing voor het beheren van desktopcomputers, servers en laptops die zich op uw netwerk of op internet bevinden. U kunt ervoor kiezen om Configuration Manager in de cloud te gebruiken zodat integratie met Intune, Azure Active Directory (AD), Microsoft Defender ATP en andere cloudservices mogelijk is. Gebruik Configuration Manager om apps, software-updates en besturingssystemen te implementeren. U kunt ook naleving controleren, query's uitvoeren en in realtime op clients reageren, en nog veel meer.
 
-  Omdat Configuration Manager onderdeel is van Endpoint Manager kunt u deze gewoon blijven gebruiken. Als u een aantal taken wilt verplaatsen naar de cloud, kunt u het gebruik van [co-beheer](https://docs.microsoft.com/configmgr/comanage/) overwegen.
+  Omdat Configuration Manager onderdeel is van Endpoint Manager kunt u deze gewoon blijven gebruiken. Als u een aantal taken wilt verplaatsen naar de cloud, kunt u het gebruik van [co-beheer](/configmgr/comanage/) overwegen.
 
-  Zie [Wat is Configuration Manager?](https://docs.microsoft.com/configmgr/core/understand/introduction) voor meer informatie.
+  Zie [Wat is Configuration Manager?](/configmgr/core/understand/introduction) voor meer informatie.
 
 - **Co-beheer**: met co-beheer combineert u uw huidige investering in on-premises Configuration Manager met de cloud omdat er gebruik wordt gemaakt van Intune en andere Microsoft 365-cloudservices. U kunt kiezen of Configuration Manager of Intune de beheerinstantie is die voor de zeven verschillende workloadgroepen moet worden gebruikt.
 
   Als onderdeel van Endpoint Manager wordt bij co-beheer gebruikgemaakt van cloudfuncties, waaronder voorwaardelijke toegang. Een aantal taken blijft u on-premises uitvoeren, terwijl u andere taken in de cloud met Intune uitvoert.
 
-  Zie [Wat is co-beheer?](https://docs.microsoft.com/configmgr/comanage/overview) voor meer informatie.
+  Zie [Wat is co-beheer?](/configmgr/comanage/overview) voor meer informatie.
 
 - **Desktop Analytics**: Desktop Analytics is een cloudservice die kan worden geïntegreerd met Configuration Manager. Desktop Analytics biedt inzicht en intelligentie zodat u beter geïnformeerde beslissingen kunt nemen over de updategereedheid van Windows. De service combineert gegevens van uw organisatie met gegevens die zijn verzameld van miljoenen apparaten die zijn verbonden met de Microsoft-cloud. Ze geeft informatie over beveiligingsupdates, apps en apparaten in uw organisatie, en identificeert compatibiliteitsproblemen met apps en stuurprogramma's. Voer een test uit met apparaten die waarschijnlijk de beste inzichten bieden in assets in uw organisatie.
 
   Als onderdeel van Endpoint Manager, kunt u inzichten uit de cloud die door Desktop Analytics zijn verzameld, gebruiken om Windows 10-apparaten up-to-date te houden.
 
-  Zie [Wat is Desktop Analytics?](https://docs.microsoft.com/configmgr/desktop-analytics/overview) voor meer informatie.
+  Zie [Wat is Desktop Analytics?](/configmgr/desktop-analytics/overview) voor meer informatie.
 
 - **Windows Autopilot**: met Windows Autopilot kunt u nieuwe apparaten installeren en vooraf configureren, zodat ze klaar zijn voor gebruik. Windows Autopilot is ontworpen om het gebruik van Windows-apparaten tijdens alle fasen van de levenscyclus te vereenvoudigen, voor zowel IT-medewerkers als eindgebruikers, vanaf de eerste implementatie tot het einde van de cyclus.
 
   Gebruik Autopilot als onderdeel van Endpoint Manager om apparaten vooraf te configureren en om ze automatisch in te schrijven in Intune. U kunt Autopilot ook integreren met Configuration Manager en co-beheer voor complexere configuraties van apparaten (preview-versie).
 
-  Zie [Een overzicht van Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot) en [Windows-apparaten inschrijven in Intune](/mem/intune/enrollment/enrollment-autopilot) voor meer informatie.
+  Zie [Een overzicht van Windows Autopilot](/windows/deployment/windows-autopilot/windows-autopilot) en [Windows-apparaten inschrijven in Intune](./autopilot/enrollment-autopilot.md) voor meer informatie.
 
 - **Azure Active Directory (AD)** : Azure AD wordt gebruikt door de eindpuntbeheerder voor de identiteit van apparaten, gebruikers, groepen en meervoudige verificatie (MFA). **Azure AD Premium**, wat extra kosten met zich meebrengt, heeft [extra functies](https://azure.microsoft.com/pricing/details/active-directory/) om apparaten, apps en gegevens te beschermen, met inbegrip van dynamische groepen, automatische inschrijving en voorwaardelijke toegang.
 
-  Zie [gebruikers toevoegen](/mem/intune/fundamentals/users-add), [automatisch inschrijven instellen](/mem/intune/enrollment/windows-enroll) en [over voorwaardelijke toegang](/mem/intune/protect/conditional-access) voor meer informatie.
+  Zie [gebruikers toevoegen](./intune/fundamentals/users-add.md), [automatisch inschrijven instellen](./intune/enrollment/windows-enroll.md) en [over voorwaardelijke toegang](./intune/protect/conditional-access.md) voor meer informatie.
 
 - **Endpoint Manager-beheercentrum**: het [beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) is een website die alles biedt wat u nodig hebt voor het maken van beleidsregels en het beheren van uw apparaten. Het maakt gebruikt van andere belangrijke services voor het beheer van apparaten, waaronder groepen, beveiliging, voorwaardelijke toegang en rapportage. In dit beheercentrum vindt u ook apparaten die worden beheerd door Configuration Manager en Intune (als preview-versie).
 
@@ -105,7 +105,7 @@ Microsoft Endpoint Manager is een oplossingsplatform dat verschillende technolog
 
 Als u momenteel Configuration Manager gebruikt, krijgt u ook Microsoft Intune om uw Windows-apparaten te beheren. Voor andere platforms, zoals iOS/iPadOS en Android, hebt u een afzonderlijke Intune-licentie nodig.
 
-In de meeste gevallen is Microsoft 365 mogelijk de beste optie, omdat u dan ook Endpoint Manager en Office 365 hebt. Zie [Microsoft 365](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise) voor meer informatie.
+In de meeste gevallen is Microsoft 365 mogelijk de beste optie, omdat u dan ook Endpoint Manager en Office hebt. Zie [Microsoft 365](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise) voor meer informatie.
 
 ## <a name="next-steps"></a>Volgende stappen
 
@@ -115,4 +115,4 @@ In de meeste gevallen is Microsoft 365 mogelijk de beste optie, omdat u dan ook 
 
 [Zelfstudie: Walkthrough voor Intune in Microsoft Endpoint Manager](/intune/fundamentals/tutorial-walkthrough-endpoint-manager)
 
-[Wat is Microsoft 365? Leermodule](https://docs.microsoft.com/learn/modules/what-is-m365/index)
+[Wat is Microsoft 365? Leermodule](/learn/modules/what-is-m365/index)

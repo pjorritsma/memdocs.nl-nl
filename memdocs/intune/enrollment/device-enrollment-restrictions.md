@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5c2689e010c0ec75340e1a96952cf6ac162322da
-ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
+ms.openlocfilehash: 618be398d963e0a796ad9be7e8810201fc5e12f5
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87758275"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995089"
 ---
 # <a name="android-enterprise-device-enrollment-restrictions"></a>Inschrijvingsbeperkingen voor Android Enterprise-apparaten
 
@@ -58,9 +58,9 @@ Voor hoge beveiliging voor Android Enterprise-werkprofielen (niveau 3) moeten de
 Zorg ervoor dat de organisatie inschrijving van volledig beheerde apparaten bij Android Enterprise ondersteunt door [De volledig beheerde ingeschreven apparaten](android-fully-managed-enroll.md#enroll-the-fully-managed-devices) te bekijken. 
 
 ## <a name="conditional-access-policies"></a>Beleid voor voorwaardelijke toegang
-Organisaties kunnen gebruikmaken van het beleid voor voorwaardelijke toegang van Azure AD om ervoor te zorgen dat gebruikers alleen toegang hebben tot werk- of schoolinhoud op ingeschreven Android-apparaten. Hiervoor hebt u een beleid voor voorwaardelijke toegang nodig dat zich richt op alle potentiële gebruikers. Meer informatie over het maken van dit beleid vindt u in [Beheerde apparaten vereisen voor toegang tot cloud-apps met voorwaardelijke toegang](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices). 
+Organisaties kunnen gebruikmaken van het beleid voor voorwaardelijke toegang van Azure AD om ervoor te zorgen dat gebruikers alleen toegang hebben tot werk- of schoolinhoud op ingeschreven Android-apparaten. Hiervoor hebt u een beleid voor voorwaardelijke toegang nodig dat zich richt op alle potentiële gebruikers. Meer informatie over het maken van dit beleid vindt u in [Beheerde apparaten vereisen voor toegang tot cloud-apps met voorwaardelijke toegang](/azure/active-directory/conditional-access/require-managed-devices). 
 
-Volg de stappen in [Scenario: Apparaatinschrijving vereisen voor iOS- en Android-apparaten](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices#scenario-require-device-enrollment-for-ios-and-android-devices), wat ervoor zorgt dat alleen ingeschreven mobiele apparaten die aan de eisen voldoen verbinding kunnen maken met Office 365-eindpunten.
+Volg de stappen in [Scenario: Apparaatinschrijving vereisen voor iOS- en Android-apparaten](/azure/active-directory/conditional-access/require-managed-devices#scenario-require-device-enrollment-for-ios-and-android-devices), wat ervoor zorgt dat alleen ingeschreven mobiele apparaten die aan de eisen voldoen verbinding kunnen maken met Microsoft 365-eindpunten.
 
 ## <a name="next-steps"></a>Volgende stappen
 

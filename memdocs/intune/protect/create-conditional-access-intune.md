@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e40f9bc84e4969e963629479f22a6f988e025c4e
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: ed80cd89728a1ce58d37be8c16b8e61dcfbb5566
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985049"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992671"
 ---
 # <a name="create-a-device-based-conditional-access-policy"></a>Beleid maken voor voorwaardelijke toegang op basis van apparaten
 
@@ -89,7 +89,7 @@ Beleid voor voorwaardelijke toegang specificeert de app of services die u wilt b
    - **Apparaatstatus.** : het beleid voor voorwaardelijke toegang is van toepassing op alle apparaatstatussen, tenzij u Ja kiest en specifiek de statussen 'Apparaat aan Hybrid Azure AD toegevoegd' of 'Apparaat gemarkeerd als compatibel' (of beide) uitsluit.
 
      > [!TIP]
-     > Indien u zowel **Moderne verificatieclients** als **Exchange ActiveSync-clients** wilt beveiligen, maakt u twee afzonderlijke beleidsvarianten voor voorwaardelijke toegang, één voor elk clienttype. Exchange ActiveSync ondersteunt weliswaar moderne verificatie, maar alleen met de voorwaarde 'platform'. Andere voorwaarden, zoals meervoudige verificatie, worden niet ondersteund. Om de toegang tot Exchange Online vanaf Exchange ActiveSync effectief te beveiligen, maakt u een beleid voor voorwaardelijke toegang dat de cloud-app Office 365 Exchange Online en de client-app Exchange ActiveSync specificeert, waarbij de optie 'Beleid alleen toepassen op ondersteunde platformen' is geselecteerd.
+     > Indien u zowel **Moderne verificatieclients** als **Exchange ActiveSync-clients** wilt beveiligen, maakt u twee afzonderlijke beleidsvarianten voor voorwaardelijke toegang, één voor elk clienttype. Exchange ActiveSync ondersteunt weliswaar moderne verificatie, maar alleen met de voorwaarde 'platform'. Andere voorwaarden, zoals meervoudige verificatie, worden niet ondersteund. Om de toegang tot Exchange Online vanaf Exchange ActiveSync effectief te beveiligen, maakt u een beleid voor voorwaardelijke toegang waarin de cloud-app Microsoft 365 Exchange Online en de client-app Exchange ActiveSync zijn gespecificeerd, waarbij de optie 'Beleid alleen toepassen op ondersteunde platformen' is geselecteerd.
 
 9. Selecteer **Voltooid**.
 

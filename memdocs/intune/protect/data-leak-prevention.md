@@ -2,7 +2,7 @@
 title: Gegevenslekken op niet-beheerde apparaten voorkomen
 titleSuffix: Microsoft Intune
 description: Sta met Microsoft Intune toegang tot zakelijke gegevens op apparaten toe en beveilig gegevens tegen gegevenslekken.
-keywords: bescherming van gegevens voorkomt gegevenslekken op O365 Office 365-apparaten
+keywords: bescherming van gegevens voorkomt gegevenslekken op M365 Microsoft 365-apparaten
 ms.author: dougeby
 author: dougeby
 manager: dougeby
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d694a2221dff705d6ec2c1dc1db426740d95cdbe
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c979d6cf35611a419c4e27605b696c6ad3d85cd9
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79352420"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996177"
 ---
 # <a name="prevent-data-leaks-on-non-managed-devices-using-microsoft-intune"></a>Gegevenslekken op niet-beheerde apparaten voorkomen met Microsoft Intune
 
-Als u toegang verleent tot bedrijfsgegevens gehost door Office 365, kunt u bepalen hoe gebruikers gegevens delen en opslaan zonder risico op (on)opzettelijke gegevenslekken. Microsoft Intune biedt app-beveiligingsbeleid voor gegevensbeveiliging dat u instelt voor het beveiligen van uw bedrijfsgegevens op apparaten van gebruikers. De apparaten hoeven niet te zijn ingeschreven in de Intune-service. 
+Als u toegang verleent tot bedrijfsgegevens die worden gehost door Microsoft 365, kunt u bepalen hoe gebruikers gegevens delen en opslaan zonder risico op (on)opzettelijke gegevenslekken. Microsoft Intune biedt app-beveiligingsbeleid voor gegevensbeveiliging dat u instelt voor het beveiligen van uw bedrijfsgegevens op apparaten van gebruikers. De apparaten hoeven niet te zijn ingeschreven in de Intune-service. 
 
 App-beveiligingsbeleid dat is ingesteld met Intune werkt ook op apparaten die worden beheerd met een beheersysteem voor niet-Microsoft-apparaten. De persoonlijke gegevens op de apparaten worden ongemoeid gelaten, alleen bedrijfsgegevens worden beheerd door de IT-afdeling. 
 
@@ -40,7 +40,7 @@ Intune-app-beveiligingsbeleid is onafhankelijk van apparaatbeheer. Met app-bevei
 Het volgende actieplan kan worden gebruikt wanneer u aan de volgende vereisten voldoet:
 
 * Uw bedrijf is gereed voor een veilige overgang naar de cloud.
-* Uw bedrijf gebruikt Office 365 Exchange Online, SharePoint Online, OneDrive voor Bedrijven of Yammer.
+* Uw bedrijf gebruikt Microsoft 365 Exchange Online, SharePoint Online, OneDrive voor Bedrijven of Yammer.
 * Uw bedrijf heeft licenties voor Microsoft 365, Enterprise Mobility + Security (EMS) of Azure Information Protection.
 * Uw bedrijf biedt gebruikers toegang tot bedrijfsgegevens vanaf zakelijke of persoonlijke Windows-, iOS/iPadOS- of Android-apparaten.
 * Uw bedrijf wil niet de inschrijving van persoonlijke apparaten in een apparaatbeheerservice verplichten.
@@ -55,7 +55,7 @@ Voor iOS/iPadOS- en Android-apparaten:
 
 Voor Windows 10-apparaten:
 
-1. Ontdek [hoe Windows Information Protection (WIP) werkt](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/protect-enterprise-data-using-wip).
+1. Ontdek [hoe Windows Information Protection (WIP) werkt](/windows/threat-protection/windows-information-protection/protect-enterprise-data-using-wip).
 2. Aan de slag met de configuratie van [app-beveiligingsbeleid in Windows 10](../apps/app-protection-policies-configure-windows-10.md).
 3. [Beveiligingsbeleid voor de beveiliging van apps voor WIP maken en implementeren met Intune](../apps/windows-information-protection-policy-create.md).
 
@@ -68,4 +68,4 @@ Deel zo nodig de volgende koppelingen voor aanvullende informatie:
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Wilt u hulp bij het inschakelen van dit of andere scenario's voor EMS of Office 365? Als u ten minste 150 licenties voor Microsoft 365, Enterprise Mobility + Security of Azure Active Directory Premium hebt, gebruikt u uw [FastTrack-voordelen](https://docs.microsoft.com/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program).
+Wilt u hulp bij het toepassen hiervan of andere scenario's voor EMS of Microsoft 365? Als u ten minste 150 licenties voor Microsoft 365, Enterprise Mobility + Security of Azure Active Directory Premium hebt, gebruikt u uw [FastTrack-voordelen](/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program).

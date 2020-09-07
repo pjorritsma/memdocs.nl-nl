@@ -18,21 +18,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 37bf4cf8d6381ab076f7c0cd0eb879ddf43d571c
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 9c4cc5fc662e27badcb0c1c1ae478ab700fce70e
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217100"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996466"
 ---
 # <a name="add-built-in-apps-to-microsoft-intune"></a>Ingebouwde apps toevoegen aan Microsoft Intune
 
-Met het *ingebouwde* app-type kunt u eenvoudig gecureerde beheerde apps zoals Office 365-apps toewijzen aan iOS-/iPadOS- en Android-apparaten. U kunt specifieke apps voor dit app-type, zoals Excel, OneDrive, Outlook, Skype en andere, toewijzen. Nadat u een app hebt toegevoegd, wordt het app-type weergegeven als *ingebouwde iOS-app* of *ingebouwde Android-app*. Met behulp van het ingebouwde app-type kunt u kiezen welke van deze apps u wilt publiceren naar gebruikers van apparaten.
+Met het *ingebouwde* app-type kunt u eenvoudig gecureerde beheerde apps zoals Microsoft 365-apps toewijzen aan iOS-/iPadOS- en Android-apparaten. U kunt specifieke apps voor dit app-type, zoals Excel, OneDrive, Outlook, Skype en andere, toewijzen. Nadat u een app hebt toegevoegd, wordt het app-type weergegeven als *ingebouwde iOS-app* of *ingebouwde Android-app*. Met behulp van het ingebouwde app-type kunt u kiezen welke van deze apps u wilt publiceren naar gebruikers van apparaten.
 
-In eerdere versies van de Intune-console heeft Intune verschillende standaard beheerde Office 365-apps opgegeven, zoals Outlook en OneDrive. De app-typen voor deze beheerde apps waren gelabeld als *Beheerde iOS Store-app* of *Beheerde Android-app*. In plaats van dat u deze app-typen gebruikt, raden we u aan dat u het ingebouwde app-type gebruikt. Door het ingebouwde app-type te gebruiken, hebt u meer flexibiliteit om Office 365-apps te bewerken en te verwijderen.
+In eerdere versies van de Intune-console heeft Intune verschillende standaard beheerde Microsoft 365-apps opgegeven, zoals Outlook en OneDrive. De app-typen voor deze beheerde apps waren gelabeld als *Beheerde iOS Store-app* of *Beheerde Android-app*. In plaats van dat u deze app-typen gebruikt, raden we u aan dat u het ingebouwde app-type gebruikt. Door het ingebouwde app-type te gebruiken, hebt u meer flexibiliteit om Microsoft 365-apps te bewerken en te verwijderen.
 
 >[!NOTE]
->Office 365-standaardapps die als *Beheerde iOS Store-app* of *Beheerde Android-app* zijn gelabeld worden uit de app-lijst verwijderd zodra alle toewijzingen zijn verwijderd.
+>Microsoft 365-standaard-apps die als *Beheerde iOS Store-app* of *Beheerde Android-app* zijn gelabeld worden uit de app-lijst verwijderd zodra alle toewijzingen zijn verwijderd.
 
 ## <a name="add-a-built-in-app"></a>Ingebouwde app toevoegen
 

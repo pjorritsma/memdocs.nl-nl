@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28a5bc7a1ee00e9595c50d274605af1b33c1ea90
-ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
+ms.openlocfilehash: 939a9b46c3972bc4d575b3b58d08f5f6fb169239
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85332795"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996256"
 ---
 # <a name="microsoft-intune-is-an-mdm-and-mam-provider-for-your-devices"></a>Microsoft Intune is een MDM- en MAM-provider voor uw apparaten
 
@@ -34,7 +34,7 @@ Intune maakt onderdeel uit van de [EMS-suite (Enterprise Mobility + Security)](h
 
 Met Intune kunt u het volgende doen:
 
-- Kiezen voor 100% werken in de cloud met Intune, of voor [co-beheer](https://docs.microsoft.com/configmgr/comanage/overview) tussen Configuration Manager en Intune.
+- Kiezen voor 100% werken in de cloud met Intune, of voor [co-beheer](/configmgr/comanage/overview) tussen Configuration Manager en Intune.
 - Regels instellen en instellingen configureren voor persoonlijke apparaten en apparaten die eigendom zijn van de organisatie, om toegang te krijgen tot gegevens en netwerken.
 - Apps implementeren en verifiëren op apparaten: on-premises en mobiel.
 - Uw bedrijfsgegevens beschermen door de manier te bepalen waarop gebruikers gegevens kunnen openen en delen.
@@ -106,9 +106,9 @@ Intune is beschikbaar:
 
 - Als een zelfstandige [Azure-service](https://go.microsoft.com/fwlink/?linkid=2090973)
 - Inbegrepen bij [Microsoft 365 ](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/microsoft-intune) en [Microsoft 365 Government](https://www.microsoft.com/microsoft-365/government)
-- Als [Mobile Device Management in Office 365 ](https://support.office.com/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd), wat bestaat uit een beperkt aantal Intune-functies
+- Als [Mobile Device Management in Microsoft 365](https://support.office.com/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd), wat bestaat uit een beperkt aantal Intune-functies
 
-InTune wordt gebruikt in veel sectoren, waaronder [Government ](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-govt-service-description), [Education ](https://www.microsoft.com/en-us/education/intune), [Kiosk of toegewezen apparaat ](../configuration/kiosk-settings.md) voor productie en verkoop, en meer.
+InTune wordt gebruikt in veel sectoren, waaronder [Government ](/enterprise-mobility-security/solutions/ems-govt-service-description), [Education ](https://www.microsoft.com/en-us/education/intune), [Kiosk of toegewezen apparaat ](../configuration/kiosk-settings.md) voor productie en verkoop, en meer.
 
 ## <a name="next-steps"></a>Volgende stappen
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 88f8a2ff04f536370f613341170e7fae0a808ff6
-ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
+ms.openlocfilehash: 265b92229d687c7dafb2c6de196990c29ffc0cb8
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87365522"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996092"
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>MTD-nalevingsbeleid (Mobile Threat Defense) voor apparaten maken met Intune
 
@@ -68,7 +68,7 @@ Vereisten voor apparaatnalevingsbeleid met MTD:
 7. Kies op de pagina **Controleren en maken** de optie **Maken** zodra u klaar bent. Het nieuwe profiel wordt weergegeven in de lijst wanneer u het beleidstype selecteert voor het profiel dat u hebt gemaakt.
 
 > [!IMPORTANT]
-> Als u beleid voor voorwaardelijke toegang voor Office 365 of andere services maakt, wordt de compatibiliteitsevaluatie van het apparaat bekeken en wordt niet-compatibele apparaten de toegang tot bedrijfsresources geweigerd tot de bedreiging op het apparaat is opgelost.
+> Als u beleid voor voorwaardelijke toegang voor Microsoft 365 of andere services maakt, wordt de compatibiliteitsevaluatie van het apparaat bekeken en wordt niet-compatibele apparaten de toegang tot bedrijfsresources geweigerd tot de bedreiging op het apparaat is opgelost.
 
 ## <a name="to-assign-an-mtd-device-compliance-policy"></a>Nalevingsbeleid voor MTD-apparaten toewijzen
 

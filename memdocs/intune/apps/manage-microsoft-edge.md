@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2eb5a5e87b54fd8a92fc40c6d1295250d90b05c4
-ms.sourcegitcommit: f6b14e6fe694a2a05c6ed92e67089e80a00a0908
+ms.openlocfilehash: ee7f02571e31656825f7f85fa128247126ecb890
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88501181"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995140"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>Internettoegang beheren met behulp van Microsoft Edge voor iOS en Android met Microsoft Intune
 
@@ -34,20 +34,20 @@ Microsoft Edge voor iOS wordt ondersteund op iOS 12.0 en hoger. Microsoft Edge v
 > [!NOTE]
 > Microsoft Edge voor iOS en Android maakt geen gebruik van de instellingen die gebruikers configureren voor de systeemeigen browser op hun apparaten, omdat Microsoft Edge voor iOS en Android geen toegang heeft tot deze instellingen.
 
-De meest veelzijdige en breedste beveiligingsmogelijkheden voor Office 365-gegevens zijn beschikbaar wanneer u zich abonneert op de Enterprise Mobility + Security Suite, die functies bevat van Microsoft Intune en Azure Active Directory Premium, zoals voorwaardelijke toegang. U moet minimaal een beleid voor voorwaardelijke toegang implementeren dat alleen connectiviteit toestaat voor Microsoft Edge voor iOS en Android vanaf mobiele apparaten en een Intune-beleid voor app-beveiliging dat ervoor zorgt dat de surfervaring wordt beschermd.
+De meest veelzijdige en breedste beveiligingsmogelijkheden voor Microsoft 365-gegevens zijn beschikbaar wanneer u zich abonneert op de Enterprise Mobility + Security Suite, die functies bevat van Microsoft Intune en Azure Active Directory Premium, zoals voorwaardelijke toegang. U moet minimaal een beleid voor voorwaardelijke toegang implementeren dat alleen connectiviteit toestaat voor Microsoft Edge voor iOS en Android vanaf mobiele apparaten en een Intune-beleid voor app-beveiliging dat ervoor zorgt dat de surfervaring wordt beschermd.
 
 > [!NOTE]
 > Nieuwe webclips (vastgemaakte webtoepassingen) op iOS-apparaten worden geopend in Microsoft Edge voor iOS en Android in plaats van in de Intune Managed Browser wanneer ze in een beveiligde browser moeten worden geopend. Voor oudere iOS-webclips moet u een nieuw doel opgeven om ervoor te zorgen dat ze worden geopend in Microsoft Edge voor iOS en Android in plaats van in de Managed Browser.
 
 ## <a name="apply-conditional-access"></a>Voorwaardelijke toegang toepassen
-Organisaties kunnen gebruikmaken van het beleid voor voorwaardelijke toegang van Azure AD om ervoor te zorgen dat gebruikers alleen toegang hebben tot werk- of schoolinhoud met behulp van Microsoft Edge voor iOS en Android. Hiervoor hebt u een beleid voor voorwaardelijke toegang nodig dat zich richt op alle potentiële gebruikers. Meer informatie over het maken van dit beleid vindt u in [Beveiligingsbeleid voor apps vereisen voor toegang tot cloud-apps met voorwaardelijke toegang](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access).
+Organisaties kunnen gebruikmaken van het beleid voor voorwaardelijke toegang van Azure AD om ervoor te zorgen dat gebruikers alleen toegang hebben tot werk- of schoolinhoud met behulp van Microsoft Edge voor iOS en Android. Hiervoor hebt u een beleid voor voorwaardelijke toegang nodig dat zich richt op alle potentiële gebruikers. Meer informatie over het maken van dit beleid vindt u in [Beveiligingsbeleid voor apps vereisen voor toegang tot cloud-apps met voorwaardelijke toegang](/azure/active-directory/conditional-access/app-protection-based-conditional-access).
 
-1. Volg [Scenario 2: Voor browser-apps zijn goedgekeurde apps met app-beveiligingsbeleid vereist](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-2-browser-apps-require-approved-apps-with-app-protection-policies), waarmee Microsoft Edge voor iOS en Android is toegestaan, maar andere webbrowsers voor mobiele apparaten worden geblokkeerd en geen verbinding kunnen maken met Office 365-eindpunten.
+1. Volg [Scenario 2: Voor browser-apps zijn goedgekeurde apps met app-beveiligingsbeleid vereist](/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-2-browser-apps-require-approved-apps-with-app-protection-policies), waarmee Microsoft Edge voor iOS en Android is toegestaan, maar andere webbrowsers voor mobiele apparaten worden geblokkeerd en geen verbinding kunnen maken met Office 365-eindpunten.
 
    >[!NOTE]
-   > Dit beleid zorgt ervoor dat mobiele gebruikers toegang hebben tot alle Office 365-eindpunten vanuit Microsoft Edge voor iOS en Android. Dit beleid voorkomt ook dat gebruikers InPrivate gebruiken om toegang te krijgen tot Office 365-eindpunten.
+   > Dit beleid zorgt ervoor dat mobiele gebruikers toegang kunnen hebben tot alle Microsoft 365-eindpunten vanuit Microsoft Edge voor iOS en Android. Dit beleid voorkomt ook dat gebruikers InPrivate gebruiken om toegang te krijgen tot Microsoft 365-eindpunten.
 
-Met voorwaardelijke toegang kunt u zich ook richten op on-premises sites die u zichtbaar hebt gemaakt voor externe gebruikers via de [Azure AD-toepassingsproxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started).
+Met voorwaardelijke toegang kunt u zich ook richten op on-premises sites die u zichtbaar hebt gemaakt voor externe gebruikers via de [Azure AD-toepassingsproxy](/azure/active-directory/active-directory-application-proxy-get-started).
 
 ## <a name="create-intune-app-protection-policies"></a>Beveiligingsbeleid voor apps in Intune maken
 
@@ -268,7 +268,7 @@ Microsoft Edge Sync stelt gebruikers standaard in staat om toegang te krijgen to
 - Wachtwoorden
 - Adressen en meer (automatisch invullen van formulieren)
 
-De synchronisatiefunctionaliteit wordt ingeschakeld via toestemming van de gebruiker en gebruikers kunnen synchronisatie in- of uitschakelen voor elk van de hierboven vermelde gegevenstypen. Zie [Microsoft Edge Sync](https://docs.microsoft.com/DeployEdge/microsoft-edge-enterprise-sync) voor meer informatie.
+De synchronisatiefunctionaliteit wordt ingeschakeld via toestemming van de gebruiker en gebruikers kunnen synchronisatie in- of uitschakelen voor elk van de hierboven vermelde gegevenstypen. Zie [Microsoft Edge Sync](/DeployEdge/microsoft-edge-enterprise-sync) voor meer informatie.
 
 Organisaties hebben de mogelijkheid om Microsoft Edge-synchronisatie uit te schakelen op iOS en Android. 
 
@@ -343,7 +343,7 @@ U kunt verschillende URL-indelingen gebruiken om uw lijsten met toegestane/geblo
 
 ### <a name="manage-proxy-configuration"></a>Proxyconfiguratie beheren
 
-U kunt Microsoft Edge voor iOS en Android en de [Azure AD-toepassingsproxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) samen gebruiken om gebruikers toegang te verlenen tot intranetsites op hun mobiele apparaten. Bijvoorbeeld: 
+U kunt Microsoft Edge voor iOS en Android en de [Azure AD-toepassingsproxy](/azure/active-directory/active-directory-application-proxy-get-started) samen gebruiken om gebruikers toegang te verlenen tot intranetsites op hun mobiele apparaten. Bijvoorbeeld: 
 
 - Een gebruiker maakt gebruik van de mobiele app van Outlook, die wordt beveiligd door Intune. De gebruiker klikt vervolgens op een koppeling naar een intranetsite in een e-mailbericht en Microsoft Edge voor iOS en Android herkent dat deze intranetsite beschikbaar is gesteld voor de gebruiker via toepassingsproxy. De gebruiker wordt automatisch omgeleid via de toepassingsproxy om zich bij de betreffende meervoudige verificatie en voorwaardelijke toegang te verifiëren voordat de intranetsite wordt bereikt. De gebruiker heeft nu zelfs op mobiele apparaten toegang tot interne sites en de koppeling in Outlook werkt naar behoren.
 - Een gebruiker opent Microsoft Edge voor iOS en Android op het iOS- of Android-apparaat. Als Microsoft Edge voor iOS en Android wordt beveiligd met Intune en de toepassingsproxy is ingeschakeld, kan de gebruiker naar een intranetsite navigeren via de gebruikelijke interne URL. Microsoft Edge voor iOS en Android herkent dat deze intranetsite via toepassingsproxy beschikbaar is gesteld aan de gebruiker. De gebruiker wordt automatisch door de toepassingsproxy gestuurd om zich te verifiëren voordat hij de intranetsite bereikt. 
@@ -351,7 +351,7 @@ U kunt Microsoft Edge voor iOS en Android en de [Azure AD-toepassingsproxy](http
 Voordat u begint:
 
 - Stel de interne toepassingen in via de Azure AD-toepassingsproxy.
-  - Raadpleeg [deze documentatie](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy) voor het configureren van de toepassingsproxy en het publiceren van toepassingen.
+  - Raadpleeg [deze documentatie](/azure/active-directory/manage-apps/application-proxy) voor het configureren van de toepassingsproxy en het publiceren van toepassingen.
 - Er moet een [Intune-app-beveiligingsbeleid](app-protection-policy.md) worden toegewezen aan de Microsoft Edge voor iOS en Android-app.
 - Microsoft-apps moeten beschikken over een app-beveiligingsbeleid waarvan de instelling voor gegevensoverdracht **Overdracht van webinhoud met andere apps beperken** is ingesteld op **Microsoft Edge**.
 
@@ -438,7 +438,7 @@ Gebruikers die Microsoft Edge voor iOS en Android op hun iOS- of Android-apparaa
 
 Zie [Logboeken voor beveiliging van client-apps controleren](app-protection-policy-settings-log.md) voor een lijst met instellingen die worden opgeslagen in app-logboeken.
 
-Lees [Send logs to your IT admin by email](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android) (Logboeken naar uw IT-beheerder verzenden via e-mail) om te zien hoe u logboeken op Android-apparaten kunt bekijken.
+Lees [Send logs to your IT admin by email](../user-help/send-logs-to-your-it-admin-by-email-android.md) (Logboeken naar uw IT-beheerder verzenden via e-mail) om te zien hoe u logboeken op Android-apparaten kunt bekijken.
 
 ## <a name="next-steps"></a>Volgende stappen
 

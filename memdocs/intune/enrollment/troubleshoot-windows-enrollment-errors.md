@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5d296137f71b89abf65f20493fbc1151ffebf28
-ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
+ms.openlocfilehash: 5f72acb12f6e17b3634c0b87b8ad298a410fb83f
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84795581"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994222"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Problemen met inschrijving van Windows-apparaten in Microsoft Intune oplossen
 
@@ -133,7 +133,7 @@ Wijs een geldige Intune-licentie toe aan de gebruiker en schrijf het apparaat ve
 ### <a name="looks-like-the-mdm-terms-of-use-endpoint-is-not-correctly-configured"></a>Het lijkt erop dat het eindpunt voor de MDM-gebruiksvoorwaarden niet juist is geconfigureerd.
 
 **Oorzaak**: Een van de volgende omstandigheden: 
- - U gebruikt zowel MDM (Mobile Device Management) voor Office 365 als Intune op de tenant en de gebruiker die probeert het apparaat in te schrijven, heeft geen geldige Intune-licentie of Office 365-licentie.     
+ - U gebruikt zowel MDM (Mobile Device Management) voor Microsoft 365 als Intune op de tenant en de gebruiker die probeert het apparaat in te schrijven, heeft geen geldige Intune-licentie of Microsoft 365-licentie.     
 - De MDM-voorwaarden in Azure AD zijn leeg of bevatten niet de juiste URL.    
 
 #### <a name="resolution"></a>Oplossing
@@ -141,7 +141,7 @@ Wijs een geldige Intune-licentie toe aan de gebruiker en schrijf het apparaat ve
 Gebruik een van de volgende methoden om dit probleem op te lossen: 
  
 ##### <a name="assign-a-valid-license-to-the-user"></a>Een geldige licentie toewijzen aan de gebruiker
-Ga naar het [Microsoft 365-beheercentrum](https://admin.microsoft.com)en wijs een Intune-of een Office 365-licentie toe aan de gebruiker.
+Ga naar het [Microsoft 365-beheercentrum](https://admin.microsoft.com) en wijs een Intune-of een Microsoft 365-licentie toe aan de gebruiker.
 
 ##### <a name="correct-the-mdm-terms-of-use-url"></a>De URL voor de MDM-gebruiksvoorwaarden corrigeren
   1. Meld u aan bij de [Azure-portal](https://portal.azure.com/) en selecteer vervolgens **Azure Active Directory**.    
@@ -216,9 +216,9 @@ Voer deze stappen uit om dit probleem op te lossen in een zelfstandige Intune-om
 
    Als u **Geselecteerd** kiest, klikt u op **Geselecteerd**en klikt u vervolgens op **Leden toevoegen** om alle gebruikers toe te voegen die hun apparaten kunnen toevoegen aan Azure AD. Zorg ervoor dat alle Azure AD-accounts voor het inrichtingspakket worden toegevoegd.
  
-Zie [Create a provisioning package for Windows 10](https://docs.microsoft.com/windows/configuration/provisioning-packages/provisioning-create-package) (Een inrichtingspakket maken voor Windows 10) voor meer informatie over het maken van een inrichtingspakket voor Windows Configuration Designer.
+Zie [Create a provisioning package for Windows 10](/windows/configuration/provisioning-packages/provisioning-create-package) (Een inrichtingspakket maken voor Windows 10) voor meer informatie over het maken van een inrichtingspakket voor Windows Configuration Designer.
 
-Zie [Use the Set up School PCs app](https://docs.microsoft.com/education/windows/use-set-up-school-pcs-app) (De app Set up School PCs gebruiken) voor meer informatie over de app Set up School PCs.
+Zie [Use the Set up School PCs app](/education/windows/use-set-up-school-pcs-app) (De app Set up School PCs gebruiken) voor meer informatie over de app Set up School PCs.
 
 
 ### <a name="auto-mdm-enroll-failed"></a>Automatische MDM-inschrijving: Mislukt 
@@ -276,7 +276,7 @@ Zorg ervoor dat de naamgevingsindeling voldoet aan de volgende vereisten:
 **Oorzaak**: Dit probleem doet zich voor als er een proxy, een firewall of een ander netwerkapparaat is dat de toegang tot de id-provider (IdP) blokkeert.
 
 #### <a name="resolution"></a>Oplossing
-Zorg ervoor dat de vereiste toegang tot op internet gebaseerde services voor Autopilot niet wordt geblokkeerd. Zie [Windows Autopilot requirements](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements-network) (Vereisten voor Windows Autopilot) voor meer informatie.
+Zorg ervoor dat de vereiste toegang tot op internet gebaseerde services voor Autopilot niet wordt geblokkeerd. Zie [Windows Autopilot requirements](/windows/deployment/windows-autopilot/windows-autopilot-requirements-network) (Vereisten voor Windows Autopilot) voor meer informatie.
 
 ### <a name="autopilot-device-enrollment-failed-with-error-hresult--0x80180022"></a>Inschrijving van Autopilot-apparaat mislukt met de fout HRESULT = 0x80180022
 
@@ -294,7 +294,7 @@ Voer een upgrade van de TPM-chip uit naar versie 2.0.
 
 Als het probleem zich blijft voordoen, controleert u of hetzelfde apparaat zich in twee toegewezen groepen bevindt, waarbij aan elke groep een ander Autopilot-profiel wordt toegewezen. Als dit het geval is, bepaalt u welk Autopilot-profiel moet worden toegepast op het apparaat en verwijdert u vervolgens de toewijzing van het andere profiel.
 
-Zie [Deploying a kiosk using Windows Autopilot](https://blogs.technet.microsoft.com/mniehaus/2018/06/07/deploying-a-kiosk-using-windows-autopilot/) (Engelstalig) voor meer informatie over het implementeren van een Windows-apparaat in kioskmodus met Autopilot.
+Zie [Deploying a kiosk using Windows Autopilot](/archive/blogs/mniehaus/deploying-a-kiosk-using-windows-autopilot) (Engelstalig) voor meer informatie over het implementeren van een Windows-apparaat in kioskmodus met Autopilot.
 
 
 ### <a name="securing-your-hardware-failed-0x800705b4"></a>Uw hardware beveiligen (Mislukt: 0x800705b4).
@@ -317,7 +317,7 @@ Registering your device for mobile management (Previous step failed)
 #### <a name="resolution"></a>Oplossing
 Zorg ervoor dat het doelapparaat voldoet aan beide vereisten die worden beschreven in de sectie **Oorzaak**.
 
-Zie [Deploying a kiosk using Windows Autopilot](https://blogs.technet.microsoft.com/mniehaus/2018/06/07/deploying-a-kiosk-using-windows-autopilot/) (Engelstalig) voor meer informatie over het implementeren van een Windows-apparaat in kioskmodus met Autopilot.
+Zie [Deploying a kiosk using Windows Autopilot](/archive/blogs/mniehaus/deploying-a-kiosk-using-windows-autopilot) (Engelstalig) voor meer informatie over het implementeren van een Windows-apparaat in kioskmodus met Autopilot.
 
 
 ### <a name="something-went-wrong-error-code-80070774"></a>Er is iets misgegaan. Foutcode 80070774.
@@ -365,7 +365,7 @@ Description:
 }
 ```
 
-Dit probleem wordt meestal veroorzaakt door het onjuist delegeren van machtigingen aan de organisatie-eenheid waar de Windows Autopilot-apparaten worden gemaakt. Zie [Increase the computer account limit in the Organizational Unit](windows-autopilot-hybrid.md#increase-the-computer-account-limit-in-the-organizational-unit) (Engelstalig) voor meer informatie.
+Dit probleem wordt meestal veroorzaakt door het onjuist delegeren van machtigingen aan de organisatie-eenheid waar de Windows Autopilot-apparaten worden gemaakt. Zie [Increase the computer account limit in the Organizational Unit](../../autopilot/windows-autopilot-hybrid.md#increase-the-computer-account-limit-in-the-organizational-unit) (Engelstalig) voor meer informatie.
 
 1. Open **Active Directory: gebruikers en computers (DSA.msc)** .
 2. Klik met de rechtermuisknop op de organisatie-eenheid die u gaat gebruiken om aan Hybrid Azure AD gekoppelde computers te maken > **Beheer delegeren**.
@@ -398,4 +398,4 @@ Probeer een van de volgende methoden:
 - [Lees de blog van het Microsoft Intune Support Team](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
 - [Lees de blog Microsoft Enterprise Mobility and Security](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)
 - [Ondersteuning voor Microsoft Intune krijgen](../fundamentals/get-support.md)
-- [Inschrijvingsfouten van co-beheer zoeken](https://docs.microsoft.com/configmgr/comanage/how-to-monitor#enrollment-errors)
+- [Inschrijvingsfouten van co-beheer zoeken](/configmgr/comanage/how-to-monitor#enrollment-errors)

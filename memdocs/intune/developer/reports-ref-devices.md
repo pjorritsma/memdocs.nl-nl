@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc01428430eb665dc609cff84ee322f28e3b7d79
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 852d119d7b80df28436f5a8e25fe39782e1e5cc0
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165427"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996381"
 ---
 # <a name="reference-for-devices-entities"></a>Informatie voor apparaatentiteiten
 
@@ -65,7 +65,7 @@ De entiteit **deviceTypes** vertegenwoordigt het apparaattype waarnaar wordt ver
 | 10 |IPod |iPod-apparaat |
 | 11 |Android |Android-apparaat dat wordt beheerd met Apparaatbeheer |
 | 12 |ISocConsumer |iSoc Consumer-apparaat |
-| 14 |MacMDM |Mac OS X-apparaat dat wordt beheerd met de ingebouwde MDM-agent |
+| 14 |MacMDM |OS X-apparaat dat wordt beheerd met de ingebouwde MDM-agent |
 | 15 |HoloLens |HoloLens-apparaat |
 | 16 |SurfaceHub |Surface Hub-apparaat |
 | 17 |AndroidForWork |Android-apparaat dat wordt beheerd met de Android-profieleigenaar |
@@ -170,7 +170,7 @@ Met de entiteit **enrollmentType** wordt aangegeven of een apparaat bedrijfseige
 | ownerTypeName |Vertegenwoordigt het eigenaartype van de apparaten:  <br>Corporate - apparaat is bedrijfseigendom. <br>Personal - apparaat is persoonlijk eigendom (BYOD).  <br>Unknown - er is geen informatie over dit apparaat. |Corporate Personal Unknown |
 
 > [!Note]  
-> Bij het maken van dynamische groepen voor apparaten moet u voor de `ownerTypeName` in AzureAD de filterwaarde `deviceOwnership` instellen als `Company`. Zie [Regels voor apparaten](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) voor meer informatie. 
+> Bij het maken van dynamische groepen voor apparaten moet u voor de `ownerTypeName` in AzureAD de filterwaarde `deviceOwnership` instellen als `Company`. Zie [Regels voor apparaten](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) voor meer informatie. 
 
 ## <a name="managementstates"></a>managementStates
 
@@ -266,7 +266,7 @@ Met de entiteit **devices** worden alle geregistreerde apparaten voor beheer en 
 | windowsOsEdition           | De versie van het Windows-besturingssysteem.                                                                                                                             |
 | EthernetMacAddress           | De unieke netwerk-id van dit apparaat.                                                                                                                                        |
 | model                      | Het apparaatmodel.                                                                                                                                                                      |
-| office365Version           | De versie van Office 365 die op het apparaat is geïnstalleerd.                                                                                                                             |
+| office365Version           | De versie van Microsoft 365 die op het apparaat is geïnstalleerd.                                                                                                                             |
 
 
 ## <a name="devicepropertyhistories"></a>devicePropertyHistories
@@ -288,4 +288,3 @@ De entiteit **devicePropertyHistory** heeft dezelfde eigenschappen als de appara
 | deviceCategoryKey          | Sleutel van het kenmerk voor de apparaatcategorie voor dit apparaat. 
 | physicalMemoryInBytes      | Het fysieke geheugen in bytes.                                                                                                                                                          |
 | totalStorageSpaceInBytes   | Totale opslagcapaciteit in bytes.                                                                                                                                                                |
-

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4991ced4517ffe5902f876c196b47c2c2b50a8a6
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 1bfb903cbff6f4e2a47117f504981759c00b1d27
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262758"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993848"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>Begeleid scenario: in de cloud beheerde moderne desktop
 
@@ -55,14 +55,14 @@ U moet uw testapparaat en testgebruiker in dit begeleide scenario opgeven. Zorg 
 
 - Stel een testgebruikersaccount in Azure Active Directory in.
 - Maak een testapparaat met Windows 10, versie 1903 of later.
-- (Optioneel) [Registreer het testapparaat bij Windows Autopilot](../enrollment/enrollment-autopilot.md#add-devices).
+- (Optioneel) [Registreer het testapparaat bij Windows Autopilot](../../autopilot/enrollment-autopilot.md#add-devices).
 - (Optioneel) [Schakel huisstijl in voor de Azure Active Directory-aanmeldingspagina van uw organisatie](https://go.microsoft.com/fwlink/?linkid=2102455).
 
 ## <a name="step-2---user"></a>Stap 2: gebruiker
 
 Kies een gebruiker om in te stellen op het apparaat. Deze persoon wordt de primaire gebruiker van het apparaat.
 
-Als u meer gebruikers of apparaten wilt toevoegen aan deze configuratie, voegt u de gebruikers en apparaten simpelweg toe aan de AAD-beveiligingsgroepen die worden gegenereerd door de wizard. In tegenstelling tot andere begeleide scenario's hoeft u de wizard niet meer dan één keer uit te voeren, aangezien de configuratie niet kan worden aangepast. U voegt gewoon meer gebruikers en apparaten toe aan de gemaakte AAD-groepen. Nadat u de wizard hebt voltooid, kunt u de groep weergeven die is gegenereerd met de geïmplementeerde aanbevolen beleidsregels.
+Als u meer gebruikers of apparaten wilt toevoegen aan deze configuratie, voegt u de gebruikers en apparaten simpelweg toe aan de Azure AD-beveiligingsgroepen die worden gegenereerd door de wizard. In tegenstelling tot andere begeleide scenario's hoeft u de wizard niet meer dan één keer uit te voeren, aangezien de configuratie niet kan worden aangepast. U voegt gewoon meer gebruikers en apparaten toe aan de gemaakte Azure AD-groepen. Nadat u de wizard hebt voltooid, kunt u de groep weergeven die is gegenereerd met de geïmplementeerde aanbevolen beleidsregels.
 
 ## <a name="step-3---device"></a>Stap 3: apparaat
 
@@ -74,7 +74,7 @@ Met Windows Autopilot wordt de configuratie van nieuwe apparaten geautomatiseerd
 
 ### <a name="option-b--manual-device-enrollment"></a>Optie B: handmatige inschrijving van apparaten
 
-Gebruikers kunnen hun nieuwe apparaat handmatig instellen en inschrijven bij Mobile Device Management. Nadat u dit scenario hebt voltooid, stelt u het apparaat opnieuw in en geeft u de primaire gebruiker de inschrijvingsinstructies voor Windows-apparaten. Zie [Een Windows 10-apparaat toevoegen aan Azure AD tijdens de first-run experience](https://docs.microsoft.com/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device) voor meer informatie.
+Gebruikers kunnen hun nieuwe apparaat handmatig instellen en inschrijven bij Mobile Device Management. Nadat u dit scenario hebt voltooid, stelt u het apparaat opnieuw in en geeft u de primaire gebruiker de inschrijvingsinstructies voor Windows-apparaten. Zie [Een Windows 10-apparaat toevoegen aan Azure AD tijdens de first-run experience](/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device) voor meer informatie.
 
 ## <a name="step-4---review--create"></a>Stap 4: beoordelen en maken
 
@@ -90,12 +90,12 @@ In de laatste stap kunt u een samenvatting beoordelen van de instellingen die u 
         - Ingesteld op **Alle** voor de app **Microsoft Intune** of,
         - Ingesteld op **Sommige**. Voeg ook de gebruikersgroep toe die is gemaakt in dit begeleide scenario.
 2. Controleer of de geselecteerde gebruiker apparaten kan toevoegen aan Azure Active Directory.
-    - Zorg ervoor dat AAD-deelname is:
+    - Zorg ervoor dat de toevoeging aan Azure AD is:
         - Ingesteld op **Alle** of,
         - Ingesteld op **Sommige**. Voeg ook de gebruikersgroep toe die is gemaakt in dit begeleide scenario.
 3. Volg de relevante stappen op het apparaat om het toe te voegen aan Azure AD op basis van het volgende:
-    - Met Autopilot. Zie [Windows Autopilot-gebruikersmodus](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) voor meer informatie.
-    - Zonder Autopilot: Zie [Een Windows 10-apparaat toevoegen aan Azure AD tijdens de first-run experience](https://docs.microsoft.com/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device) voor meer informatie.
+    - Met Autopilot. Zie [Windows Autopilot-gebruikersmodus](/windows/deployment/windows-autopilot/user-driven) voor meer informatie.
+    - Zonder Autopilot: Zie [Een Windows 10-apparaat toevoegen aan Azure AD tijdens de first-run experience](/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device) voor meer informatie.
 
 ### <a name="what-happens-when-i-click-deploy"></a>Wat gebeurt er als ik op Implementeren klik?
 De gebruiker en het apparaat worden toegevoegd aan nieuwe beveiligingsgroepen. Deze worden ook geconfigureerd met voor Intune aanbevolen instellingen voor beveiliging en productiviteit op het werk of op school. Nadat de gebruiker het apparaat aan Azure AD heeft toegevoegd, worden er extra apps en instellingen aan het apparaat gekoppeld. Zie voor meer informatie over deze aanvullende configuraties [Quickstart: uw Windows 10-apparaat inschrijven](../enrollment/quickstart-enroll-windows-device.md).
@@ -122,7 +122,7 @@ In het begeleide scenario wordt de gebruiker ook toegewezen aan het geselecteerd
 
 Zodra de gebruiker het apparaat heeft toegevoegd aan Azure Active Directory worden de volgende configuraties toegepast op het apparaat:
 
-1. Microsoft 365-apps worden automatisch geïnstalleerd op de in de cloud beheerde pc. Hierin bevinden zich vertrouwde toepassingen als Access, Excel, OneNote, Outlook, PowerPoint, Publisher, Skype voor Bedrijven en Word. U kunt deze toepassingen gebruiken om verbinding te maken met Office 365-services zoals SharePoint Online, Exchange Online en Skype voor Bedrijven Online. Microsoft 365-apps worden regelmatig bijgewerkt met nieuwe functies, in tegenstelling tot niet-abonnementsversies van Office. Zie Nieuwe functies in Office 365 voor een lijst met nieuwe functies.
+1. Microsoft 365-apps worden automatisch geïnstalleerd op de in de cloud beheerde pc. Hierin bevinden zich vertrouwde toepassingen als Access, Excel, OneNote, Outlook, PowerPoint, Publisher, Skype voor Bedrijven en Word. U kunt deze apps gebruiken om verbinding te maken met Microsoft 365-services, zoals SharePoint Online, Exchange Online en Skype voor Bedrijven Online. Microsoft 365-apps worden regelmatig bijgewerkt met nieuwe functies, in tegenstelling tot niet-abonnementsversies van Office. Zie Nieuw in Microsoft 365 voor een lijst met nieuwe functies.
 2. Er worden Windows-beveiligingsbasislijnen geïnstalleerd op de in de cloud beheerde pc. Als u Microsoft Defender Advanced Threat Protection hebt ingesteld, worden in het begeleide scenario ook basislijninstellingen voor Defender geconfigureerd. Defender Advanced Threat Protection biedt een nieuwe beveiligingslaag na schending in de Windows 10-beveiligingsstack. Met een combinatie van clienttechnologie die is ingebouwd in Windows 10 en een robuuste cloudservice helpt deze laag bij het detecteren van bedreigingen die door andere beveiligingsmethoden heen zijn gekomen. 
 
 ## <a name="next-steps"></a>Volgende stappen

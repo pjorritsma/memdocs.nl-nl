@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74fbf1af85fdaef7cebde5c58f7892015b433ff6
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 63ef6acb54f079f2a47800ae84cbe49cd4fabed3
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079226"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992638"
 ---
 # <a name="determine-deployment-goals-objectives-and-challenges"></a>Doelen, doelstellingen en uitdagingen voor de implementatie bepalen
 
@@ -33,9 +33,9 @@ Een goed implementatieplan begint met het vaststellen van de doelen en doelstell
 
 Implementatiedoelen zijn de langetermijndoelen die u beoogt met de implementatie van Intune in uw organisatie. Hieronder ziet u enkele voorbeelden van zulke doelen samen met de bijbehorende beschrijving en bedrijfswaarde.
 
-- **Integreren met Office 365 en ondersteuning voor het gebruik van mobiele Office-apps**
+- **Integreren met Microsoft 365 en ondersteuning bieden voor het gebruik van mobiele Office-apps**
 
-  - **Beschrijving:** krachtige integratie met Office 365 en het gebruik van mobiele Office-apps die beveiligd zijn.
+  - **Beschrijving:** Hechte integratie bieden met Microsoft 365 en het gebruik van mobiele Office-apps die beveiligd zijn.
 
   - **Bedrijfswaarde:** beveilig en verbeter de gebruikerservaring door gebruikers te laten werken met apps de ze kennen en waar ze de voorkeur aan geven.
 

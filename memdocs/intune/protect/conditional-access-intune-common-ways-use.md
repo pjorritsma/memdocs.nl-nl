@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c1d4dacf29aa0c87a8356306d10bf05acbf3afb
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 52c8be7556fac2cf06d244fc8640a0ed7d173481
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462164"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992939"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Wat zijn gebruikelijke manieren om voorwaardelijke toegang met Intune te gebruiken?
 
@@ -35,24 +35,24 @@ Met de informatie in dit artikel kunt u meer inzicht krijgen in hoe u de Intune-
 
 ## <a name="device-based-conditional-access"></a>Voorwaardelijke toegang op basis van het apparaat
 
-Intune en Azure Active Directory werken samen om ervoor te zorgen dat alleen beheerde en compatibele apparaten toegang kunnen krijgen tot e-mail, Office 365-services, SaaS-apps (Software as a Service) en [on-premises apps](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started). U kunt daarnaast een beleid in Azure Active Directory instellen, zodat alleen computers die zijn toegevoegd aan een domein of mobiele apparaten die zijn ingeschreven in Intune, toegang tot Office 365-services hebben.
+Intune en Azure Active Directory werken samen om ervoor te zorgen dat alleen beheerde en compatibele apparaten toegang kunnen krijgen tot e-mail, Microsoft 365-services, SaaS-apps (Software as a Service) en [on-premises apps](/azure/active-directory/active-directory-application-proxy-get-started). U kunt daarnaast een beleid in Azure Active Directory instellen, zodat alleen computers die zijn toegevoegd aan een domein of mobiele apparaten die zijn ingeschreven in Intune, toegang tot Microsoft 365-services hebben.
 
 Met Intune beschikt u over mogelijkheden voor apparaatnalevingsbeleid waarmee u de nalevingsstatus van het apparaat kunt evalueren. De nalevingsstatus wordt gerapporteerd aan Azure Active Directory om het voorwaardelijke toegangsbeleid af te dwingen dat in Azure Active Directory wordt gemaakt wanneer de gebruiker zich toegang tot uw bedrijfsresources probeert te verschaffen.
 
-De op apparaten gebaseerde beleidsregels voor voorwaardelijke toegang voor Exchange Online en andere Office 365-producten geconfigureerd via de [Azure-portal](../fundamentals/what-is-intune.md).
+De op apparaten gebaseerde beleidsregels voor voorwaardelijke toegang voor Exchange Online en andere Microsoft 365-producten geconfigureerd via [Azure Portal](../fundamentals/what-is-intune.md).
 
-- Meer informatie over [het vereisen van beheerde apparaten met voorwaardelijke toegang in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices).
+- Meer informatie over [het vereisen van beheerde apparaten met voorwaardelijke toegang in Azure Active Directory](/azure/active-directory/conditional-access/require-managed-devices).
 
 - Meer informatie over [Intune-apparaatnaleving](device-compliance-get-started.md).
 
-- Meer informatie over [ondersteunde browsers met voorwaardelijke toegang in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/conditional-access/technical-reference#supported-browsers).
+- Meer informatie over [ondersteunde browsers met voorwaardelijke toegang in Azure Active Directory](/azure/active-directory/conditional-access/technical-reference#supported-browsers).
 
 > [!NOTE]
 > Als u op Android-apparaten Op apparaten gebaseerde toegang voor Sharepoint Online of Op browsers gebaseerde toegang tot Exchange Online inschakelt, moeten gebruikers de optie **Browsertoegang inschakelen** als volgt op het ingeschreven apparaat inschakelen:
 > 1. Open de **app Bedrijfsportal**.
 > 2. Ga naar de pagina **Instellingen** via de drie puntjes (...) of via de menuknop van de hardware.
 > 3. Selecteer **Browsertoegang inschakelen**. 
-> 4. In de browser Chrome meldt u zich af bij Office 365. Start vervolgens Chrome opnieuw op.
+> 4. Meld u in de Chrome-browser af bij Microsoft 365 en start Chrome vervolgens opnieuw.
 
 ### <a name="conditional-access-based-on-network-access-control"></a>Voorwaardelijke toegang op basis van netwerktoegangsbeheer
 
@@ -88,11 +88,11 @@ Voorwaardelijke toegang voor pc's biedt mogelijkheden die vergelijkbaar zijn met
 
 - **Workplace join en Intune-beheer:** Hier kan de gebruiker de eigen persoonlijke apparaten toevoegen voor toegang tot bedrijfsresources en -services. U kunt Workplace Join gebruiken en apparaten bij Intune MDM registreren om beleidsregels op apparaatniveau te ontvangen. Dit is een alternatieve optie om de criteria voor voorwaardelijke toegang te evalueren.
 
-Meer informatie over [apparaatbeheer in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/overview).
+Meer informatie over [apparaatbeheer in Azure Active Directory](/azure/active-directory/devices/overview).
 
 ## <a name="app-based-conditional-access"></a>Voorwaardelijke toegang op basis van apps
 
-Intune en Azure Active Directory werken samen om ervoor te zorgen dat alleen beheerde apps toegang hebben tot de bedrijfs-e-mail of andere Office 365-services.
+Intune en Azure Active Directory werken samen om ervoor te zorgen dat alleen beheerde apps toegang hebben tot de bedrijfs-e-mail of andere Microsoft 365-services.
 
 - Meer informatie over [op apps gebaseerde voorwaardelijke toegang met Intune](app-based-conditional-access-intune.md).
 
@@ -111,7 +111,7 @@ Wanneer er beleidsregels voor apparaatcompatibiliteit en voorwaardelijke toegang
 Wanneer apparaten niet voldoen aan de gestelde voorwaarden, wordt de eindgebruiker door de registratieprocedure voor het apparaat geleid om het probleem te verhelpen dat ervoor zorgt dat het apparaat niet-compatibel is.
 
 > [!NOTE]
-> Vanaf juli 2020 wordt de ondersteuning voor de Exchange connector afgeschaft en vervangen door Exchange [HMA](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (Hybrid Modern Authentication, hybride moderne verificatie). Voor het gebruik van HMA hebt u Intune niet nodig om de Exchange-connector in te stellen en te gebruiken. Met deze wijziging wordt de gebruikersinterface voor het configureren en beheren van de Exchange-connector voor Intune verwijderd uit het Microsoft Endpoint Manager-beheercentrum, tenzij u al een Exchange-connector gebruikt met uw abonnement.
+> Vanaf juli 2020 wordt de ondersteuning voor de Exchange connector afgeschaft en vervangen door Exchange [HMA](/office365/enterprise/hybrid-modern-auth-overview) (Hybrid Modern Authentication, hybride moderne verificatie). Voor het gebruik van HMA hebt u Intune niet nodig om de Exchange-connector in te stellen en te gebruiken. Met deze wijziging wordt de gebruikersinterface voor het configureren en beheren van de Exchange-connector voor Intune verwijderd uit het Microsoft Endpoint Manager-beheercentrum, tenzij u al een Exchange-connector gebruikt met uw abonnement.
 >
 > Als u een Exchange-connector hebt ingesteld in uw omgeving, blijft de Intune-tenant ondersteund voor het gebruik ervan en houdt u toegang tot de gebruikersinterface die de configuratie ervan ondersteunt. Raadpleeg [Exchange on-premises-connector installeren](../protect/exchange-connector-install.md) voor meer informatie. U kunt de connector blijven gebruiken of HMA configureren en vervolgens de connector verwijderen.
 >
@@ -162,7 +162,7 @@ De Exchange-server biedt de API en infrastructuur om apparaten in quarantaine te
 
 ## <a name="next-steps"></a>Volgende stappen
 
-[Voorwaardelijke toegang in Azure Active Directory configureren](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
+[Voorwaardelijke toegang in Azure Active Directory configureren](/azure/active-directory/active-directory-conditional-access-azure-portal)
 
 [Op apps gebaseerd beleid voor voorwaardelijke toegang instellen](app-based-conditional-access-intune-create.md)
 

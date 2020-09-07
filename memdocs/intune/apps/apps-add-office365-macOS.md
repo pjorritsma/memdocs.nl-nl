@@ -1,7 +1,7 @@
 ---
-title: Office 365-apps installeren op macOS-apparaten met Microsoft Intune
+title: Microsoft 365-apps installeren op macOS-apparaten met Microsoft Intune
 titleSuffix: ''
-description: Meer informatie over hoe u Microsoft Intune kunt gebruiken om Office 365-apps op macOS-apparaten te installeren.
+description: Meer informatie over hoe u Microsoft Intune kunt gebruiken om Microsoft 365-apps op macOS-apparaten te installeren.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -18,23 +18,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 14a4d66cfd5ac0ee3c0938e96794ed12d5b5fde6
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 2eb8ea29739e2478df68e3b9926f111f2ee8d0e4
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989518"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996483"
 ---
-# <a name="assign-office-365-to-macos-devices-with-microsoft-intune"></a>Office 365 toewijzen aan macOS-apparaten met Microsoft Intune
+# <a name="assign-microsoft-365-to-macos-devices-with-microsoft-intune"></a>Microsoft 365-apps installeren op macOS-apparaten met Microsoft Intune
 
-Met dit type app kunt u Office 365 2016-apps eenvoudig toewijzen aan macOS-apparaten. Door dit type app te gebruiken, kunt u Word, Excel, PowerPoint, Outlook, OneNote en Teams installeren. Deze apps worden ook geleverd met Microsoft AutoUpdate (MAU) om ervoor te zorgen dat de apps veiliger worden en up-to-date blijven. De apps die u wilt, worden als één app weergegeven in de lijst met apps in de Intune-console.
+Met dit type app kunt u Microsoft 365-apps eenvoudig toewijzen aan macOS-apparaten. Door dit type app te gebruiken, kunt u Word, Excel, PowerPoint, Outlook, OneNote en Teams installeren. Deze apps worden ook geleverd met Microsoft AutoUpdate (MAU) om ervoor te zorgen dat de apps veiliger worden en up-to-date blijven. De apps die u wilt, worden als één app weergegeven in de lijst met apps in de Intune-console.
 
 > [!NOTE]
 > De naam van Microsoft Office 365 ProPlus is gewijzigd in **Microsoft 365-apps voor ondernemingen**. In onze documentatie verwijzen we er doorgaans naar met **Microsoft 365-apps**.
 
 ## <a name="before-you-start"></a>Voordat u begint
 
-Voordat u Office 365-apps gaat toevoegen aan macOS-apparaten, moet u de volgende details begrijpen:
+Voordat u Microsoft 365-apps gaat toevoegen aan macOS-apparaten, moet u de volgende details begrijpen:
 
 - Op de apparaten waarop u deze apps implementeert, moet macOS 10.10 of hoger zijn geïnstalleerd.
 - Intune ondersteunt alleen het toevoegen van de Office-apps die in het Office 2016 voor Mac-pakket zijn opgenomen.
@@ -89,5 +89,5 @@ U kunt bereiktags gebruiken om te bepalen wie er informatie over client-apps mag
 
 ## <a name="next-steps"></a>Volgende stappen
 
-- Zie [Apps van Microsoft 365 toewijzen aan Windows 10-apparaten met Microsoft Intune](apps-add-office365.md) voor meer informatie over het toevoegen van Office 365-apps aan Windows 10-apparaten.
+- Zie [Apps van Microsoft 365 toewijzen aan Windows 10-apparaten met Microsoft Intune](apps-add-office365.md) voor meer informatie over het toevoegen van Microsoft 365-apps aan Windows 10-apparaten.
 - Zie voor meer informatie over app-toewijzingen opnemen in of uitsluiten uit groepen gebruikers [App-toewijzingen opnemen en uitsluiten](apps-inc-exl-assignments.md).

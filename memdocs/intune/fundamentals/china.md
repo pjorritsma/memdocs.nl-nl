@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c4e567c7812f53a7497f368ded47d72640443f6
-ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
+ms.openlocfilehash: 34f1aeb9ec265b7a6e09135bc931574732f5816d
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86137389"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994205"
 ---
 # <a name="intune-operated-by-21vianet-in-china"></a>Door Intune beheerd via 21Vianet in China  
 
@@ -48,20 +48,20 @@ Omdat de services in China worden beheerd door een partner vanuit China, zijn er
   - Google Play Protect mogelijkheden, zoals SafetyNet-apparaatbeveiliging.
   - Apps beheren vanuit de Google Play Store.
   - Android-bedrijfsmogelijkheden. Zie deze [Google-documentatie](https://support.google.com/work/android/answer/6270910?hl=en) voor meer informatie.
-- De app Intune-bedrijfsportal voor Android maakt gebruik van Google Mobile Services om te communiceren met de Microsoft Intune-service. Omdat Google Play Services niet beschikbaar is in China, kan het tot acht uur duren voordat sommige taken zijn voltooid. Zie dit [artikel](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable) voor meer informatie. 
+- De app Intune-bedrijfsportal voor Android maakt gebruik van Google Mobile Services om te communiceren met de Microsoft Intune-service. Omdat Google Play Services niet beschikbaar is in China, kan het tot acht uur duren voordat sommige taken zijn voltooid. Zie dit [artikel](../apps/manage-without-gms.md#limitations-of-intune-device-administrator-management-when-gms-is-unavailable) voor meer informatie. 
 - De klantervaring met Intune (Bedrijfsportal-app) kan verschillen in China om lokale regelgeving na te volgen en verbeterde functionaliteit te bieden.
 - Begrenzing is niet beschikbaar.
 - De beschikbaarheid van Mobile Application Management (MAM) is afhankelijk van de beschikbaarheid van deze apps in de Volksrepubliek China.
 
 ## <a name="you-control-customer-data"></a>U beheert klantgegevens
 
-In Microsoft Azure, Intune, Office 365 en Power BI beheerd door 21Vianet, hebt u volledige controle over uw gegevens:
+In Microsoft Azure, Intune, Microsoft 365 en Power BI beheerd door 21Vianet, hebt u volledige controle over uw gegevens:
 - U weet waar klantgegevens zich bevinden.
 - U beheert de toegang tot uw klantgegevens.
 - U beheert uw klantgegevens als u de service verlaat.
 - U hebt beheeropties voor de beveiliging van uw klantgegevens.
 
-Met Microsoft Azure, Intune, Office 365 en Power BI beheerd door 21Vianet, bent u de eigenaar van uw gegevens:
+Met Microsoft Azure, Intune, Microsoft 365 en Power BI beheerd door 21Vianet, bent u de eigenaar van uw gegevens:
 - 21Vianet maakt geen gebruik van klantgegevens voor reclamedoeleinden.
 - U bepaalt wie toegang heeft tot uw klantgegevens.
 - We gebruiken logische isolatie om de gegevens van elke klant te scheiden.
@@ -72,8 +72,8 @@ Met Microsoft Azure, Intune, Office 365 en Power BI beheerd door 21Vianet, bent 
 
 De rol Tenant Administrator voor Intune beheerd door 21Vianet kan op de volgende manieren gegevens van personen opvragen:
 
-- Met behulp van het Azure Active Directory-beheercentrum kan een Tenant Administrator een betrokkene permanent verwijderen uit Azure Active Directory en gerelateerde services. Zie [Azure Data Subject Requests - Delete](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-azure?view=o365-worldwide#step-5-delete) (Azure-gegevensaanvragen - verwijderen) voor meer informatie
-- Door het systeem gegenereerde logboeken voor Microsoft-services die door 21Vianet worden beheerd, kunnen worden geëxporteerd door Tenant Administrators met Data Log Export. Zie [Azure Data Subject Requests - Export](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-azure?view=o365-worldwide#step-6-export) (Azure-gegevensaanvragen - exporteren) voor meer informatie.
+- Met behulp van het Azure Active Directory-beheercentrum kan een Tenant Administrator een betrokkene permanent verwijderen uit Azure Active Directory en gerelateerde services. Zie [Azure Data Subject Requests - Delete](/microsoft-365/compliance/gdpr-dsr-azure?view=o365-worldwide#step-5-delete) (Azure-gegevensaanvragen - verwijderen) voor meer informatie
+- Door het systeem gegenereerde logboeken voor Microsoft-services die door 21Vianet worden beheerd, kunnen worden geëxporteerd door Tenant Administrators met Data Log Export. Zie [Azure Data Subject Requests - Export](/microsoft-365/compliance/gdpr-dsr-azure?view=o365-worldwide#step-6-export) (Azure-gegevensaanvragen - exporteren) voor meer informatie.
 
 ## <a name="next-steps"></a>Volgende stappen
 

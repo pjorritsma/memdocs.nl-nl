@@ -2,7 +2,7 @@
 title: Gegevens in Intune beveiligen en delen
 titleSuffix: Microsoft Intune
 description: Lees informatie over de beveiliging en het delen van persoonlijke gegevens in Intune.
-keywords: ''
+keywords: privacy, data
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9f4e6d425923637d991ef62bb0e3c8090e657403
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: fba72c89676d8974f5e7f9aac25d3365b69f61c7
+ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079549"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89286251"
 ---
 # <a name="data-security-and-sharing-in-intune"></a>Gegevens in Intune beveiligen en delen
 
@@ -36,17 +36,9 @@ Microsoft Intune volgt dezelfde technische en organisatorische maatregelen die M
 
 Zie [Service Trust Portal](https://www.microsoft.com/en-us/TrustCenter/stp) voor meer informatie.
 
-Intune maakt gebruik van gegevensminimalisatietechnieken, zoals
-
-- aggregatie
-- optionele gegevensverzameling voor bepaalde functies
-- gegevens die minder nauwkeurig of gevoelig zijn gemaakt
-
-Intune maakt ook gebruik van technieken als RBAC en JiT-beveiliging voor ondersteuningsaanvragen om gegevensbescherming standaard te waarborgen. 
-
 ### <a name="data-breach-reporting"></a>Rapportage van een datalek
 
-Wanneer een CRSI (Customer-Reportable Security Incident) wordt geïdentificeerd, worden klanten hiervan op de hoogte gebracht. In dit proces wordt samen met het Microsoft O365-team melding gedaan van het lek aan de gebruikers van Microsoft O365 met Intune.
+Wanneer een CRSI (Customer-Reportable Security Incident) wordt geïdentificeerd, worden klanten hiervan op de hoogte gebracht. In dit proces wordt samen met het Microsoft 365-team melding gedaan van het lek aan de gebruikers van Microsoft 365 met Intune.
 
 ## <a name="data-sharing"></a>Gegevens delen
 
@@ -55,7 +47,7 @@ Wanneer bepaalde functies (zoals het Apple Device Enrollment Program) door tenan
 - Derden die fungeren als Microsoft agent.
 - Derden die niet fungeren als Microsoft agent, maar alleen wanneer tenantbeheerders hiervoor expliciet machtigingen geven voor Intune.
 
-Alle derden die fungeren als Microsoft agent zijn opgenomen in de [lijst van toeleveranciers voor Online Services](https://aka.ms/Online_Serv_Subcontractor_List).
+Alle derden die fungeren als Microsoft-agent zijn opgenomen in de [lijst toeleveranciers voor Online Services](https://aka.ms/Online_Serv_Subcontractor_List).
 
 Het delen van gegevens met dergelijke entiteiten wordt gedaan ter ondersteuning van de klant en de technische ondersteuning, voor service-onderhoud en andere bewerkingen.
 
@@ -72,7 +64,7 @@ Raadpleeg de volgende artikelen voor informatie over gegevens die worden gedeeld
 
 Microsoft Intune deelt geen gegevens met Configuration Manager. Configuration Manager is een on-premises product dat rechtstreeks door de klant wordt geïmplementeerd, beheerd en uitgevoerd. De diagnostische gegevens en gebruiksgegevens die door Configuration Manager worden verzameld, worden alleen gebruikt om de installatie-ervaring, kwaliteit en beveiliging van toekomstige releases te verbeteren.
 
-Zie [Diagnostische gegevens en gebruiksgegevens voor Configuration Manager](https://docs.microsoft.com/configmgr/core/plan-design/diagnostics/diagnostics-and-usage-data) voor meer informatie. 
+Zie [Diagnostische gegevens en gebruiksgegevens voor Configuration Manager](/configmgr/core/plan-design/diagnostics/diagnostics-and-usage-data) voor meer informatie. 
 
 
 ## <a name="next-steps"></a>Volgende stappen

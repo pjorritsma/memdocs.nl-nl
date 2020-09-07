@@ -16,32 +16,32 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3db207e4c1c75706c1f54762bf74c1757d342ac1
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: ac2133455d4440e8048e7b9aba8f9f9b13d98a53
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84973040"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996534"
 ---
 # <a name="manage-messaging-collaboration-access-by-using-outlook-for-ios-and-android-with-microsoft-intune"></a>Toegang tot samenwerking via berichten beheren met behulp van Outlook voor iOS en Android met Microsoft Intune
 
 Met de Outlook-app voor iOS en Android kunnen gebruikers in uw organisatie meer doen op hun mobiele apparaten met hun e-mail, agenda, contactpersonen en andere bestanden bij elkaar.
 
-De meest veelzijdige en breedste beveiligingsmogelijkheden voor Office 365-gegevens zijn beschikbaar wanneer u zich abonneert op de Enterprise Mobility + Security Suite, die functies bevat van Microsoft Intune en Azure Active Directory Premium, zoals voorwaardelijke toegang. U moet minimaal een beleid voor voorwaardelijke toegang implementeren dat connectiviteit toestaat voor Outlook voor iOS en Android vanaf mobiele apparaten en een Intune-beleid voor app-beveiliging dat ervoor zorgt dat de samenwerkingservaring wordt beschermd.
+De meest veelzijdige en breedste beveiligingsmogelijkheden voor Microsoft 365-gegevens zijn beschikbaar wanneer u zich abonneert op de Enterprise Mobility + Security Suite, die functies bevat van Microsoft Intune en Azure Active Directory Premium, zoals voorwaardelijke toegang. U moet minimaal een beleid voor voorwaardelijke toegang implementeren dat connectiviteit toestaat voor Outlook voor iOS en Android vanaf mobiele apparaten en een Intune-beleid voor app-beveiliging dat ervoor zorgt dat de samenwerkingservaring wordt beschermd.
 
 ## <a name="apply-conditional-access"></a>Voorwaardelijke toegang toepassen
-Organisaties kunnen gebruikmaken van het beleid voor voorwaardelijke toegang van Azure AD om ervoor te zorgen dat gebruikers alleen toegang hebben tot werk- of schoolinhoud met behulp van Outlook voor iOS en Android. Hiervoor hebt u een beleid voor voorwaardelijke toegang nodig dat zich richt op alle potentiële gebruikers. Meer informatie over het maken van dit beleid vindt u in [Beveiligingsbeleid voor apps vereisen voor toegang tot cloud-apps met voorwaardelijke toegang](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access).
+Organisaties kunnen gebruikmaken van het beleid voor voorwaardelijke toegang van Azure AD om ervoor te zorgen dat gebruikers alleen toegang hebben tot werk- of schoolinhoud met behulp van Outlook voor iOS en Android. Hiervoor hebt u een beleid voor voorwaardelijke toegang nodig dat zich richt op alle potentiële gebruikers. Meer informatie over het maken van dit beleid vindt u in [Beveiligingsbeleid voor apps vereisen voor toegang tot cloud-apps met voorwaardelijke toegang](/azure/active-directory/conditional-access/app-protection-based-conditional-access).
 
-1. Volg stap 1: Een beleid voor voorwaardelijke toegang tot Azure AD voor Office 365 configureren in [scenario 1: Voor Office 365-apps zijn goedgekeurde apps met app-beveiligingsbeleid vereist](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies) waarmee Outlook voor iOS en Android is toegestaan, maar Exchange ActiveSync-clients met OAuth worden geblokkeerd en geen verbinding kunnen maken met Exchange Online.
+1. Volg stap 1: Een beleid voor voorwaardelijke toegang tot Azure AD voor Office 365 configureren in [scenario 1: Voor Office 365-apps zijn goedgekeurde apps met app-beveiligingsbeleid vereist](/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies) waarmee Outlook voor iOS en Android is toegestaan, maar Exchange ActiveSync-clients met OAuth worden geblokkeerd en geen verbinding kunnen maken met Exchange Online.
 
    > [!NOTE]
    > Dit beleid zorgt ervoor dat mobiele gebruikers toegang hebben tot alle Office-eindpunten met behulp van de toepasselijke apps.
 
-2. Volg stap 2: Een beleid voor voorwaardelijke toegang voor Azure AD configureren voor Exchange Online met ActiveSync (EAS) in [scenario 1: Voor Office 365-apps zijn goedgekeurde apps met app-beveiligingsbeleid](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies) vereist, waarmee wordt voorkomen dat voor Exchange ActiveSync-clients basisverificatie wordt gebruikt om verbinding te maken met Exchange Online.
+2. Volg stap 2: Een beleid voor voorwaardelijke toegang voor Azure AD configureren voor Exchange Online met ActiveSync (EAS) in [scenario 1: Voor Office 365-apps zijn goedgekeurde apps met app-beveiligingsbeleid](/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies) vereist, waarmee wordt voorkomen dat voor Exchange ActiveSync-clients basisverificatie wordt gebruikt om verbinding te maken met Exchange Online.
 
-   In de bovenstaande beleidsregels wordt gebruikgemaakt van het toekenningsbeheer [Beleid voor app-beveiliging vereisen](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-technical-reference), dat ervoor zorgt dat beleid voor Intune-app-beveiliging wordt toegepast op het gekoppelde account in Outlook voor iOS en Android voordat toegang wordt verleend. Als de gebruiker niet is toegewezen aan een beveiligingsbeleid voor Intune-apps, geen licentie voor Intune heeft of als de app niet is opgenomen in het beleid voor Intune-app-beveiliging, voorkomt het beleid dat de gebruiker een toegangstoken kan verkrijgen en toegang kan krijgen tot berichtgegevens.
+   In de bovenstaande beleidsregels wordt gebruikgemaakt van het toekenningsbeheer [Beleid voor app-beveiliging vereisen](/azure/active-directory/active-directory-conditional-access-technical-reference), dat ervoor zorgt dat beleid voor Intune-app-beveiliging wordt toegepast op het gekoppelde account in Outlook voor iOS en Android voordat toegang wordt verleend. Als de gebruiker niet is toegewezen aan een beveiligingsbeleid voor Intune-apps, geen licentie voor Intune heeft of als de app niet is opgenomen in het beleid voor Intune-app-beveiliging, voorkomt het beleid dat de gebruiker een toegangstoken kan verkrijgen en toegang kan krijgen tot berichtgegevens.
 
-3. Volg ten slotte [Instructies: Verouderde verificatie voor Azure AD blokkeren met voorwaardelijke toegang](https://docs.microsoft.com/azure/active-directory/conditional-access/block-legacy-authentication) voor het blokkeren van verouderde verificatie voor andere Exchange-protocollen op iOS-en Android-apparaten. Dit beleid moet alleen gericht zijn op Office 365 Exchange Online-Cloud-apps en iOS-en Android-apparaatplatformen. Dit zorgt ervoor dat mobiele apps met behulp van Exchange Web Services-, IMAP4- of POP3-protocollen met basisverificatie geen verbinding kunnen maken met Exchange Online.
+3. Volg ten slotte [Instructies: Verouderde verificatie voor Azure AD blokkeren met voorwaardelijke toegang](/azure/active-directory/conditional-access/block-legacy-authentication) voor het blokkeren van verouderde verificatie voor andere Exchange-protocollen op iOS-en Android-apparaten. Dit beleid moet alleen gericht zijn op Microsoft 365 Exchange Online-Cloud-apps en iOS-en Android-apparaatplatformen. Dit zorgt ervoor dat mobiele apps met behulp van Exchange Web Services-, IMAP4- of POP3-protocollen met basisverificatie geen verbinding kunnen maken met Exchange Online.
 
 ## <a name="create-intune-app-protection-policies"></a>Beveiligingsbeleid voor apps in Intune maken
 
@@ -79,7 +79,7 @@ App-configuratie kan worden geleverd via het OS-kanaal van Mobile Device Managem
 - S/MIME-instellingen
 - Instellingen voor gegevensbeveiliging
 
-Zie [Deploying Outlook for iOS and Android app configuration settings](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune) (Configuratie-instellingen voor de Outlook-app voor iOS en Android implementeren) voor specifieke stappen en gedetailleerde informatie over de configuratie-instellingen die de Outlook-app voor iOS en Android ondersteunt.
+Zie [Deploying Outlook for iOS and Android app configuration settings](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune) (Configuratie-instellingen voor de Outlook-app voor iOS en Android implementeren) voor specifieke stappen en gedetailleerde informatie over de configuratie-instellingen die de Outlook-app voor iOS en Android ondersteunt.
 
 ## <a name="next-steps"></a>Volgende stappen
 

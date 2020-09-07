@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ccbd923ba1110f99c57b499115a41a03ec3317c1
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 394ffa75b6f272024d440fad56d68727c27531da
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252806"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996449"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Apps toevoegen aan Microsoft Intune 
 
@@ -56,8 +56,8 @@ De volgende tabel bevat de specifieke app-typen en informatie over hoe u deze ku
 | iOS/iPadOS Store-app  | Store-app  | Selecteer **iOS** als het **app-type**, zoek de app en selecteer de app in Intune. |
 | Microsoft Store-apps  | Store-app  | Selecteer **Windows** als het **app-type** en voer de URL van de Microsoft Store in voor de app. |
 | Beheerde Google Play-apps | Store-app  | Selecteer **Beheerde Google Play** als het **apptype**, zoek de app en selecteer de app in Intune. |
-| Office 365-apps voor Windows 10  | Store-app (Office 365) | Selecteer **Windows 10** bij **Microsoft 365-apps** als het **app-type**, en selecteer vervolgens de Office 365-app die u wilt installeren.  |
-| Office 365-apps voor macOS | Store-app (Office 365) | Selecteer **macOS** bij **Microsoft 365-apps** als het **app-type** en selecteer vervolgens de Office 365-app-suite. |
+| Microsoft 365-apps voor Windows 10  | Store-app (Microsoft 365) | Selecteer **Windows 10** onder **Microsoft 365-apps** als **app-type**, en selecteer vervolgens de Microsoft 365-app die u wilt installeren.  |
+| Microsoft 365-apps voor macOS | Store-app (Microsoft 365) | Selecteer **macOS** bij **Microsoft 365-apps** als het **app-type** en selecteer vervolgens de Microsoft 365-app-suite. |
 | Microsoft Edge versie 77 en hoger voor Windows 10 | Store-app | Selecteer **Windows 10** bij **Microsoft Edge versie 77 en hoger** als het **app-type**. |
 | Microsoft Edge versie 77 en hoger voor macOS | Store-app | Selecteer **macOS** bij **Microsoft Edge versie 77 en hoger** als het **app-type**. |
 | Android LOB-apps (Line-Of-Business) | LOB-app | Selecteer **Line-Of-Business**-app als het **app-type**, selecteer het **app-pakketbestand** en voeg vervolgens een Android-installatiebestand toe met de extensie **.apk**.  |
@@ -221,8 +221,8 @@ Als u wilt leren hoe u voor elk platform apps aan Intune toevoegt, raadpleegt u:
 - [Web-apps (voor alle platformen)](web-app.md)
 - [Microsoft Store-apps](store-apps-windows.md)
 - [Windows LOB-app](lob-apps-windows.md)
-- [Office 365-apps voor Windows 10](apps-add-office365.md)
-- [Office 365-apps voor macOS](apps-add-office365-macos.md)
+- [Microsoft 365-apps voor Windows 10](apps-add-office365.md)
+- [Microsoft 365-apps voor macOS](apps-add-office365-macos.md)
 - [Beheerde Google Play-apps](apps-add-android-for-work.md)
 - [Microsoft Edge voor Windows 10](apps-windows-edge.md)
 - [Microsoft Edge voor macOS](apps-edge-macos.md)

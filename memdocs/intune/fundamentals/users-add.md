@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 10b3e8d25f32277b3aa96e5e008d1f6611b7e46c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 56d632da8480e0beedac7f086928638633dbe49c
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988164"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996313"
 ---
 # <a name="add-users-and-grant-administrative-permission-to-intune"></a>Gebruikers toevoegen en beheerdersmachtigingen aan Intune toekennen
 
@@ -36,7 +36,7 @@ U kunt handmatig gebruikers aan uw Intune-abonnement toevoegen via het [Microsof
 ### <a name="add-intune-users-in-the-microsoft-365-admin-center"></a>Intune-gebruikers toevoegen in het Microsoft 365-beheercentrum
 
 1. Meld u aan bij het [Microsoft 365-beheercentrum](https://admin.microsoft.com) met een account voor globale beheerders of beheerders voor gebruikerstoegang.
-2. Selecteer **Beheer** in het menu Office 365.
+2. Selecteer **Beheerder** in het Microsoft 365-menu.
 3. Selecteer **Nieuwe gebruiker** in het beheercentrum.
 
    ![Schermafbeelding van de sectie Een gebruiker toevoegen](./media/users-add/office-add-user.png)
@@ -76,10 +76,10 @@ U kunt handmatig gebruikers aan uw Intune-abonnement toevoegen via het [Microsof
 
 Nadat u gebruikers aan uw Intune-abonnement hebt toegevoegd, kunt u het beste enkele gebruikers beheerdersmachtigingen verlenen.  Voer hiertoe de volgende stappen uit:
 
-### <a name="give-admin-permissions-in-office-365"></a>Beheerdersmachtigingen verlenen in Office 365
+### <a name="give-admin-permissions-in-microsoft-365"></a>Beheerdersmachtigingen verlenen in Microsoft 365
 
 1. Meld u aan bij het [Microsoft 365-beheercentrum](https://admin.microsoft.com) met een account voor globale beheerders.
-2. Selecteer **Beheer** in het menu Office 365.
+2. Selecteer **Beheerder** in het Microsoft 365-menu.
 3. Kies in het beheercentrum de optie **Actieve gebruikers** en kies vervolgens de gebruiker waaraan u beheerdersmachtigingen wilt verlenen.
 
 4. Kies in de kolom **Rollen** de optie **Bewerken**.
@@ -102,11 +102,11 @@ Nadat u gebruikers aan uw Intune-abonnement hebt toegevoegd, kunt u het beste en
 
 Wijs gebruikers een of meer beheerdersmachtigingen toe. Deze machtigingen bepalen het beheerbereik voor gebruikers en de taken die ze kunnen beheren. De beheerdersmachtigingen voor de verschillende Microsoft-cloudservices komen overeen, hoewel bepaalde machtigingen mogelijk niet worden ondersteund door sommige services. In zowel de Azure-portal als het Microsoft 365-beheercentrum worden beperkte beheerdersrollen vermeld die niet door Intune worden gebruikt. Intune-beheerdersmachtigingen bevatten de volgende opties:
 
-- **Globale beheerder**: (Office 365 en Intune) heeft toegang tot alle beheerfuncties in Intune. De persoon die zich voor Intune aanmeldt, wordt standaard een globale beheerder. Globale beheerders zijn de enige beheerders die andere beheerdersrollen kunnen toewijzen. U kunt meer dan één globale beheerder hebben in uw organisatie. Als best practice is het raadzaam dat slechts een paar mensen in uw bedrijf deze rol vervullen om het risico voor uw bedrijf te reduceren.
-- **Wachtwoordbeheerder**: (Office 365 en Intune) stelt wachtwoorden opnieuw in, beheert serviceaanvragen en bewaakt de servicestatus. Wachtwoordbeheerders zijn beperkt tot het opnieuw instellen van wachtwoorden voor gebruikers.
-- **Servicebeheerder**: (Office 365 en Intune) opent ondersteuningsaanvragen voor Microsoft en bekijkt het servicedashboard en berichtencentrum. Ze beschikken alleen over weergavemachtigingen, met uitzondering voor het openen en lezen van ondersteuningstickets.
-- **Factureringsbeheerder**: (Office 365 en Intune) doet aankopen, beheert abonnementen, beheert ondersteuningstickets en bewaakt de servicestatus.
-- **Beheerder**: (Office 365 en Intune) stelt wachtwoorden opnieuw in, bewaakt de servicestatus, voegt gebruikersaccounts toe en verwijdert deze, en beheert serviceaanvragen. De beheerder van de gebruikerstoegang kan geen globale beheerder verwijderen, andere beheerdersrollen maken of wachtwoorden opnieuw instellen voor andere beheerders.
+- **Globale beheerder**: (Microsoft 365 en Intune) heeft toegang tot alle beheerfuncties in Intune. De persoon die zich voor Intune aanmeldt, wordt standaard een globale beheerder. Globale beheerders zijn de enige beheerders die andere beheerdersrollen kunnen toewijzen. U kunt meer dan één globale beheerder hebben in uw organisatie. Als best practice is het raadzaam dat slechts een paar mensen in uw bedrijf deze rol vervullen om het risico voor uw bedrijf te reduceren.
+- **Wachtwoordbeheerder**: (Microsoft 365 en Intune) stelt wachtwoorden opnieuw in, beheert serviceaanvragen en bewaakt de servicestatus. Wachtwoordbeheerders zijn beperkt tot het opnieuw instellen van wachtwoorden voor gebruikers.
+- **Servicebeheerder**: (Microsoft 365 en Intune) opent ondersteuningsaanvragen voor Microsoft en bekijkt het servicedashboard en berichtencentrum. Ze beschikken alleen over weergavemachtigingen, met uitzondering voor het openen en lezen van ondersteuningstickets.
+- **Factureringsbeheerder**: (Microsoft 365 en Intune) doet aankopen, beheert abonnementen, beheert ondersteuningstickets en bewaakt de servicestatus.
+- **Beheerder**: (Microsoft 365 en Intune) stelt wachtwoorden opnieuw in, bewaakt de servicestatus, voegt gebruikersaccounts toe en verwijdert deze, en beheert serviceaanvragen. De beheerder van de gebruikerstoegang kan geen globale beheerder verwijderen, andere beheerdersrollen maken of wachtwoorden opnieuw instellen voor andere beheerders.
 - **Intune-servicebeheerder**: beschikt over alle machtigingen voor globale beheerders van Intune, behalve machtigingen voor het aanmaken van beheerders met opties voor **directory-rollen**.
 
 Het account dat u gebruikt om uw Microsoft Intune-abonnement te maken, heeft de rol van globale beheerder. Het is een best practice om de rol van globale beheerder niet te gebruiken voor dagelijkse beheertaken. Een beheerder heeft geen Intune-licentie nodig voor toegang tot Intune op het Azure-portal, maar om bepaalde beheertaken zoals het instellen van de Exchange-serverconnector uit te kunnen voeren, is wel een Intune-licentie vereist.
@@ -115,11 +115,11 @@ Voor toegang tot het Microsoft 365-beheercentrum moet **Toegestane gebruikers aa
 
 ## <a name="sync-active-directory-and-add-users-to-intune"></a>Active Directory synchroniseren en gebruikers toevoegen aan Intune
 
-U kunt adreslijstsynchronisatie configureren voor het importeren van gebruikersaccounts uit de on-premises Active Directory in Microsoft Azure Active Directory (Azure AD) die Intune-gebruikers bevat. Het koppelen van uw on-premises Active Directory-service aan alle Azure Active Directory-services zorgt ervoor dat het beheer van gebruikersidentiteiten veel eenvoudiger wordt. U kunt ook eenmalige aanmelding configureren om de verificatie vertrouwd en eenvoudig te maken voor uw gebruikers. Door dezelfde [Azure AD-tenant](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect/) te koppelen met meerdere services, zijn de gebruikersaccounts die u eerder hebt gesynchroniseerd, beschikbaar voor alle cloudservices.
+U kunt adreslijstsynchronisatie configureren voor het importeren van gebruikersaccounts uit de on-premises Active Directory in Microsoft Azure Active Directory (Azure AD) die Intune-gebruikers bevat. Het koppelen van uw on-premises Active Directory-service aan alle Azure Active Directory-services zorgt ervoor dat het beheer van gebruikersidentiteiten veel eenvoudiger wordt. U kunt ook eenmalige aanmelding configureren om de verificatie vertrouwd en eenvoudig te maken voor uw gebruikers. Door dezelfde [Azure AD-tenant](/azure/active-directory/hybrid/whatis-hybrid-identity) te koppelen met meerdere services, zijn de gebruikersaccounts die u eerder hebt gesynchroniseerd, beschikbaar voor alle cloudservices.
 
 ### <a name="how-to-sync-on-premises-users-with-azure-ad"></a>On-premises gebruikers synchroniseren met Azure AD
 
 Het enige hulpprogramma dat u nodig hebt om uw gebruikersaccounts te synchroniseren met Azure AD, is de [Azure AD Connect-wizard](https://www.microsoft.com/download/details.aspx?id=47594). De Azure AD Connect-wizard biedt een vereenvoudigde begeleiding voor het verbinden van de on-premises infrastructuur voor identiteiten aan de cloud. Kies uw topologie en behoeften (één of meerdere mappen, synchronisatie van wachtwoordhashes, pass-through-verificatie of federatie). De wizard implementeert en configureert alle onderdelen die zijn vereist om de verbinding mogelijk te maken. Inclusief: synchronisatieservices, Active Directory Federation Services (AD FS) en de Azure AD PowerShell-module.
 
 > [!TIP]
-> Azure AD Connect bevat functionaliteit die eerder is uitgebracht als Dirsync en Azure AD Sync. Lees meer over [adreslijstintegratie](https://technet.microsoft.com/library/jj573653.aspx). Zie [Overeenkomsten tussen Active Directory en Azure AD](https://technet.microsoft.com/library/dn518177.aspx) voor meer informatie over het synchroniseren van gebruikersaccounts vanuit de lokale directory naar Azure AD.
+> Azure AD Connect bevat functionaliteit die eerder is uitgebracht als Dirsync en Azure AD Sync. Lees meer over [adreslijstintegratie](/previous-versions/azure/azure-services/jj573653(v=azure.100)). Zie [Overeenkomsten tussen Active Directory en Azure AD](/previous-versions/azure/azure-services/dn518177(v=azure.100)) voor meer informatie over het synchroniseren van gebruikersaccounts vanuit de lokale directory naar Azure AD.

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/17/2020
+ms.date: 08/31/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28bf8edb1b7c80e2362e9b145f38bd383dffa625
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: a5460e9c01da8a9a227caf5a03186a37f2c427bb
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820575"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194085"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Instellingen van apparaatfuncties voor iOS, iPadOS of macOS toevoegen in Intune
 
@@ -153,7 +153,11 @@ Met deze instellingen configureert u een app-extensie die eenmalige aanmelding (
 
 Gebruik deze instellingen in Intune voor het configureren van een SSO-app-extensie die is gemaakt door uw organisatie, uw id-provider, Microsoft of Apple. Met de SSO-app-extensie wordt de verificatie voor uw gebruikers afgehandeld. Met deze instellingen worden het omleidingstype en de SSO-app-extensies voor het referentietype geconfigureerd.
 
-- Het omleidingstype is ontworpen voor moderne verificatieprotocollen, zoals OpenID Connect, OAuth en SAML2. U kunt kiezen tussen de Azure AD SSO-extensie van Microsoft ([Microsoft Enterprise SSO-invoegtoepassing](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)) en een algemene omleidingsextensie.
+- Het omleidingstype is ontworpen voor moderne verificatieprotocollen, zoals OpenID Connect, OAuth en SAML2. U kunt kiezen tussen de Azure AD SSO-extensie van Microsoft ([Microsoft Enterprise SSO-invoegtoepassing](/azure/active-directory/develop/apple-sso-plugin)) en een algemene omleidingsextensie.
+
+  > [!IMPORTANT]
+  > De Microsoft Azure AD-extensie voor eenmalige aanmelding is bij macOS nog steeds in ontwikkeling. De extensie wordt vermeld in de Intune-gebruikersinterface, maar werkt niet zoals verwacht. Gebruik **Microsoft Azure AD** niet voor het type app-extensie voor eenmalige aanmelding bij macOS.
+
 - Het referentietype is ontworpen voor verificatiestromen met vraag en antwoord. U kunt kiezen tussen een Kerberos-referentie-extensie van Apple en een algemene referentie-extensie.
 
 Zie [SSO-app-extensie voor iOS/iPadOS](ios-device-features-settings.md#single-sign-on-app-extension) en [SSO-app-extensie voor macOS](macos-device-features-settings.md#single-sign-on-app-extension) voor een lijst met instellingen die u kunt configureren in Intune.

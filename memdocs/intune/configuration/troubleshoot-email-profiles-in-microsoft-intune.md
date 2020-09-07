@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 717ad28625b5eac97c26bcd09a21ef34250a7d39
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: 3d011d6111ede4bb5879e53e771d20b792bf00d3
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565713"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995123"
 ---
 # <a name="common-issues-and-resolutions-with-email-profiles-in-microsoft-intune"></a>Veelvoorkomende problemen met en oplossingen voor e-mailprofielen in Microsoft Intune
 
@@ -51,7 +51,7 @@ In deze scenario's bepaalt u of het belangrijker is om apparaatgroepen te gebrui
 
 ## <a name="device-already-has-an-email-profile-installed"></a>Er is al een e-mailprofiel geïnstalleerd op het apparaat
 
-Als gebruikers een e-mailprofiel maken voordat ze zich inschrijven in Intune of Office 365 MDM, werkt het e-mailprofiel dat door Intune is geïmplementeerd mogelijk niet zoals verwacht:
+Als gebruikers een e-mailprofiel maken voordat ze zich inschrijven in Intune of Microsoft 365 MDM, werkt het e-mailprofiel dat door Intune is geïmplementeerd mogelijk niet zoals verwacht:
 
 - **iOS/iPadOS**: Intune detecteert een bestaand, dubbel e-mailprofiel op basis van hostnaam en e-mailadres. Het door de gebruiker gemaakte e-mailprofiel blokkeert de implementatie van het in Intune gemaakte profiel. Dit scenario is een veelvoorkomend probleem, omdat iOS-/iPadOS-gebruikers vaak zelf een e-mailprofiel maken en het apparaat vervolgens inschrijven. De bedrijfsportal-app geeft aan dat de gebruiker niet compatibel is en kan de gebruiker vragen om het e-mailprofiel te verwijderen.
 

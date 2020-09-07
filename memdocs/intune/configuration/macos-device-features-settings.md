@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/20/2020
+ms.date: 08/27/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79c389767ad3cb796e2cc7b4cd9a35015e17a837
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: e70952b0d90222bd31a4e9df997d70e9d528ef24
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819657"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194195"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Instellingen van apparaatfuncties voor macOS in Intune
 
@@ -267,7 +267,12 @@ Deze functie is van toepassing op:
 - **Type app-extensie voor eenmalige aanmelding**: Kies het type app-extensie voor eenmalige aanmelding. Uw opties zijn:
 
   - **Niet geconfigureerd**: er worden geen app-extensies gebruikt. Als u een app-extensie wilt uitschakelen, stelt u het type app-extensie voor SSO in op **Niet geconfigureerd**.
-  - **Microsoft Azure AD**: Maakt gebruik van de SSO-invoegtoepassing van Microsoft Enterprise. Dat is een omleidingstype-SSO-app-extensie. Deze invoegtoepassing biedt SSO voor Active Directory-accounts voor alle macOS-toepassingen die ondersteuning bieden voor de functie [Enterprise Single Sign-On van Apple](https://developer.apple.com/documentation/authenticationservices). Gebruik dit SSO-app-extensietype om SSO in te schakelen voor Microsoft-apps, organisatie-apps en websites die worden geverifieerd met behulp van Azure AD.
+  - **Microsoft Azure AD**: 
+
+    > [!IMPORTANT]
+    > De Microsoft Azure AD-extensie voor eenmalige aanmelding is nog steeds in ontwikkeling. De extensie wordt vermeld in de Intune-gebruikersinterface, maar werkt niet zoals verwacht. Gebruik **Microsoft Azure AD** niet voor het type app-extensie voor eenmalige aanmelding.
+
+    Maakt gebruik van de SSO-invoegtoepassing van Microsoft Enterprise. Dat is een omleidingstype-SSO-app-extensie. Deze invoegtoepassing biedt SSO voor Active Directory-accounts voor alle macOS-toepassingen die ondersteuning bieden voor de functie [Enterprise Single Sign-On van Apple](https://developer.apple.com/documentation/authenticationservices). Gebruik dit SSO-app-extensietype om SSO in te schakelen voor Microsoft-apps, organisatie-apps en websites die worden geverifieerd met behulp van Azure AD.
 
     De Azure AD-invoegtoepassing fungeert als een geavanceerde broker voor verificatie die verbeteringen in de beveiliging en de gebruikerservaring biedt.
 
@@ -324,7 +329,7 @@ Deze functie is van toepassing op:
 - **Automatische detectie** (alleen Kerberos): als deze optie is ingesteld op **Blokkeren**, maakt de Kerberos-extensie niet automatisch gebruik van LDAP en DNS om de Active Directory-sitenaam te bepalen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem kan standaard toestaan dat de extensie automatisch naar de Active Directory-sitenaam zoekt.
 - **Wachtwoordwijzigingen** (alleen Kerberos): **Blokkeren** voorkomt dat gebruikers de wachtwoorden kunnen wijzigen waarmee ze zich aanmelden bij de door u ingevoerde domeinen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem kan standaard wachtwoordwijzigingen toestaan.  
 - **Wachtwoordsynchronisatie** (alleen Kerberos): kies **Inschakelen** om de lokale wachtwoorden van de gebruikers te synchroniseren met Azure AD. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het besturingssysteem kan standaard wachtwoordsynchronisatie met Azure AD uitschakelen. Gebruik deze instelling als alternatief of als back-up voor SSO. Deze instelling werkt niet als gebruikers zijn aangemeld met een mobiel Apple-account.
-- **Active Directory-wachtwoordcomplexiteit van Windows Server** (alleen Kerberos): Kies **Vereisen** zodat gebruikerswachtwoorden moeten voldoen aan de vereisten voor wachtwoordcomplexiteit van Active Directory. Zie [Wachtwoorden moeten voldoen aan complexiteitsvereisten](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements) voor meer informatie. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het kan zijn dat het besturingssysteem standaard niet vereist dat gebruikers moeten voldoen aan de wachtwoordvereisten van Active Directory.
+- **Active Directory-wachtwoordcomplexiteit van Windows Server** (alleen Kerberos): Kies **Vereisen** zodat gebruikerswachtwoorden moeten voldoen aan de vereisten voor wachtwoordcomplexiteit van Active Directory. Zie [Wachtwoorden moeten voldoen aan complexiteitsvereisten](/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements) voor meer informatie. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het kan zijn dat het besturingssysteem standaard niet vereist dat gebruikers moeten voldoen aan de wachtwoordvereisten van Active Directory.
 - **Minimale wachtwoordlengte** (alleen Kerberos): Voer het minimum aantal tekens in dat wachtwoorden van gebruikers moeten bevatten. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het kan zijn dat het besturingssysteem standaard geen minimumwachtwoordlengte afdwingt voor de gebruikers.
 - **Limiet voor het opnieuw gebruiken van een wachtwoord** (alleen Kerberos): Voer het aantal nieuwe wachtwoorden in, van 1 tot 24, die worden gebruikt voordat een eerder gebruikt wachtwoord opnieuw kan worden gebruikt in het domein. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het kan zijn dat het besturingssysteem standaard geen limiet voor het opnieuw gebruiken van wachtwoorden afdwingt.
 - **Minimale gebruiksduur wachtwoord** (alleen Kerberos): Voer het aantal dagen in dat een wachtwoord wordt gebruikt in het domein voordat gebruikers dit kunnen wijzigen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Het kan zijn dat het besturingssysteem standaard geen minimumduur voor wachtwoorden afdwingt waarna deze kunnen worden gewijzigd.
@@ -344,7 +349,7 @@ Deze functie is van toepassing op:
 
   Als dit is ingesteld op **Ja**, dan worden alle bestaande gebruikersaccounts van de apparaten gewist. Als u gegevensverlies of het herstellen van fabrieksinstellingen wilt voorkomen, moet u weten hoe deze instelling uw apparaten wijzigt.
 
-  Zie [Overzicht van de modus voor gedeelde apparaten](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices) voor meer informatie over de modus gedeeld apparaat.
+  Zie [Overzicht van de modus voor gedeelde apparaten](/azure/active-directory/develop/msal-shared-devices) voor meer informatie over de modus gedeeld apparaat.
 
 - **Bundel-id’s van app** (Microsoft Azure AD, Kerberos): **voeg de app-bundel-id's toe** die moeten gebruikmaken van eenmalige aanmelding op uw apparaten. Aan deze apps wordt toegang verleend tot Kerberos Ticket Granting Ticket en het verificatieticket. De apps verifiëren gebruikers ook voor services waarvoor ze gemachtigd zijn.
 - **Toewijzing aan domeinrealm** (alleen Kerberos): **voeg de DNS-achtervoegsels voor het domein toe** die moeten worden toegewezen aan uw realm. Gebruik deze instelling als de DNS-namen van de hosts niet overeenkomen met de realmnaam. Waarschijnlijk hoeft u deze aangepaste domein-naar-realm-toewijzing niet te maken.

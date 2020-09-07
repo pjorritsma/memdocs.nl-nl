@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db975d15ec0c93bde8991872f6847364786aa429
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: 99cde56dbe1f9f63cb8e0af69721191455f16d2a
+ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912417"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281180"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Ontwikkelaarshandleiding voor Microsoft Intune App SDK voor iOS
 
@@ -657,7 +657,7 @@ Intune-beheerders kunnen configuratiegegevens gericht implementeren via Intune A
 
 * Verstuur een aanroep naar de juiste selector voor het object `IntuneMAMAppConfig`. Als de sleutel van uw toepassing bijvoorbeeld een tekenreeks is, moet u `stringValueForKey` of `allStringsForKey` gebruiken. Zie `IntuneMAMAppConfig.h` voor een gedetailleerde beschrijving van retourwaarden en foutcondities.
 
-Zie [Graph API Reference](https://developer.microsoft.com/graph/docs/concepts/overview) (Naslaginformatie over Graph API) voor meer informatie over de mogelijkheden van Graph API.
+Zie [Graph API Reference](/graph/overview) (Naslaginformatie over Graph API) voor meer informatie over de mogelijkheden van Graph API.
 
 Als u meer wilt weten over het maken van een op MAM gericht app-configuratiebeleid in iOS, raadpleegt u het onderwerp over op MAM gerichte app-configuratie in [App-configuratiebeleidsregels voor beheerde iOS-/iPadOS-apparaten toevoegen](../apps/app-configuration-policies-use-ios.md).
 
@@ -753,14 +753,30 @@ Alle apps worden standaard beschouwd als apps met één identiteit. De SDK stelt
     Deze methode wordt aangeroepen vanuit een achtergrondthread. De app mag geen waarde retourneren totdat alle gegevens van de gebruiker zijn verwijderd (met uitzondering van bestanden, als de app FALSE retourneert).
 
 ## <a name="siri-intents"></a>SIRI-intenties
+
 Als uw app is geïntegreerd met SIRI-intenties, lees dan de opmerkingen voor `areSiriIntentsAllowed` in `IntuneMAMPolicy.h` voor instructies met betrekking tot de ondersteuning van dit scenario. 
     
 ## <a name="notifications"></a>Meldingen
+
 Als uw app meldingen ontvangt, lees dan de opmerkingen voor `notificationPolicy` in `IntuneMAMPolicy.h` voor instructies met betrekking tot de ondersteuning van dit scenario.  Het wordt aanbevolen om apps te registreren voor `IntuneMAMPolicyDidChangeNotification` beschreven in `IntuneMAMPolicyManager.h` en deze waarde te communiceren met hun `UNNotificationServiceExtension` via de sleutelketen.
-## <a name="displaying-web-content-within-application"></a>Webinhoud in de toepassing weergeven
-Als uw toepassing de mogelijkheid biedt om websites weer te geven in een webweergave en als de weergegeven webpagina's kunnen navigeren naar willekeurige sites, is de toepassing verantwoordelijk voor het instellen van de huidige identiteit, zodat beheerde gegevens niet via de webweergave kunnen worden gelekt. Voorbeelden hiervan zijn webpagina's als 'Een functie voorstellen' of 'Feedback' waarop directe of indirecte koppelingen naar een zoekmachine staan.
-Toepassingen met meerdere identiteiten moeten het doorgeven van IntuneMAMPolicyManager setUIPolicyIdentity aanroepen in de lege tekenreeks voordat de webweergave wordt weergegeven. Nadat de webweergave is gesloten, moet de toepassing het doorgeven van setUIPolicyIdentity aanroepen in de huidige identiteit.
-Toepassingen met één identiteit moeten het doorgeven van IntuneMAMPolicyManager setCurrentThreadIdentity aanroepen in de lege tekenreeks voordat de webweergave wordt weergegeven. Nadat de webweergave is gesloten, moet de toepassing het doorgeven van setCurrentThreadIdentity aanroepen in nil.
+
+## <a name="displaying-web-content-within-an-application"></a>Webinhoud in een toepassing weergeven
+
+Als uw toepassing websites kan weergeven in een webweergave, moet u mogelijk logica toevoegen om gegevenslekken te voorkomen, afhankelijk van het specifieke scenario.
+
+### <a name="webviews-that-display-only-non-corporate-contentwebsites"></a>Webweergaven waarin alleen niet-zakelijke inhoud/websites worden weergegeven
+
+Als in uw toepassing geen zakelijke gegevens in de webweergave worden weergegeven en gebruikers naar willekeurige sites kunnen bladeren waar ze mogelijk beheerde gegevens van andere onderdelen van de toepassing kunnen kopiëren en in een openbaar forum kunnen plakken, is de toepassing verantwoordelijk voor het instellen van de huidige identiteit, zodat beheerde gegevens niet kunnen worden gelekt via de webweergave. Voorbeelden hiervan zijn webpagina's als 'Een functie voorstellen' of 'Feedback' waarop directe of indirecte koppelingen naar een zoekmachine staan. Toepassingen met meerdere identiteiten moeten het doorgeven van IntuneMAMPolicyManager setUIPolicyIdentity aanroepen in de lege tekenreeks voordat de webweergave wordt weergegeven. Nadat de webweergave is gesloten, moet de toepassing het doorgeven van setUIPolicyIdentity aanroepen in de huidige identiteit. Toepassingen met één identiteit moeten het doorgeven van IntuneMAMPolicyManager setCurrentThreadIdentity aanroepen in de lege tekenreeks voordat de webweergave wordt weergegeven. Nadat de webweergave is gesloten, moet de toepassing het doorgeven van setCurrentThreadIdentity aanroepen in nil. Zo zorgt u ervoor dat de Intune-SDK de webweergave als niet-beheerd behandelt en dat beheerde gegevens uit andere delen van de toepassing niet in de webweergave kunnen worden geplakt als het beleid als zodanig is geconfigureerd. 
+
+### <a name="webviews-that-display-only-corporate-contentwebsites"></a>Webweergaven waarin alleen zakelijke inhoud/websites worden weergegeven
+
+Als uw toepassing alleen zakelijke gegevens in de webweergave weergeeft en gebruikers niet naar willekeurige sites kunnen bladeren, zijn er geen wijzigingen vereist.
+
+### <a name="webviews-that-might-display-both-corporate-and-non-corporate-contentwebsites"></a>Webweergaven die mogelijk zowel zakelijke als niet-zakelijke inhoud/websites weergeven
+
+Voor dit scenario wordt alleen WKWebView ondersteund. Toepassingen die gebruikmaken van de verouderde UIWebView moeten worden overgezet naar WKWebView. Als uw toepassing zakelijke inhoud in de WKWebView weergeeft en gebruikers ook toegang hebben tot niet-zakelijke inhoud/websites die kunnen leiden tot gegevenslekken, moet de toepassing de gemachtigde methode isExternalURL: die is gedefinieerd in IntuneMAMPolicyDelegate.h implementeren. Toepassingen moeten bepalen of de URL die wordt doorgegeven aan de gemachtigde methode een bedrijfswebsite is waarin beheerde gegevens kunnen worden geplakt of een niet-zakelijke website die bedrijfsgegevens kan lekken. 
+
+Als NO in isExternalURL wordt geretourneerd, krijgt de Intune-SDK de melding dat de website die wordt geladen een bedrijfslocatie is waar beheerde gegevens kunnen worden gedeeld. Als YES wordt geretourneerd, opent de Intune-SDK de URL in Edge in plaats van de WKWebView als dit is vereist volgens de huidige beleidsinstellingen. Dit zorgt ervoor dat er geen beheerde gegevens uit de app kunnen worden gelekt naar de externe website.
 
 ## <a name="ios-best-practices"></a>Aanbevolen procedures voor iOS
 

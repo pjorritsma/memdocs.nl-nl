@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87f81c9f33fd267bcd57a14b59c88d36a937fecd
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: 5c0aadb15587822ca2500ec477b6264ce4e96ed2
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865819"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993519"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Problemen bij de apparaatinschrijving in Microsoft Intune oplossen
 
@@ -47,8 +47,8 @@ U kunt er ook voor zorgen dat de datum en tijd op het apparaat van de gebruiker 
 
 Gebruikers van beheerde apparaten kunnen registratie- en diagnostische gegevens laten vastleggen in logboeken, zodat u deze kunt bekijken. Gebruikersinstructies voor het vastleggen van gegevens in logboeken vindt u in:
 
-- [Android-inschrijvingsfouten verzenden naar de IT-beheerder](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-using-cable-android)
-- [iOS-/iPadOS-fouten naar uw IT-beheerder verzenden](https://docs.microsoft.com/mem/intune/user-help/send-errors-to-your-it-admin-ios)
+- [Android-inschrijvingsfouten verzenden naar de IT-beheerder](../user-help/send-logs-to-your-it-admin-using-cable-android.md)
+- [iOS-/iPadOS-fouten naar uw IT-beheerder verzenden](../user-help/send-errors-to-your-it-admin-ios.md)
 
 
 ## <a name="general-enrollment-issues"></a>Problemen bij het registreren van apparaten
@@ -121,12 +121,12 @@ Om te voorkomen dat apparaatlimieten worden bereikt, moet u ervoor zorgen dat ve
 **Probleem:** Dit probleem kan optreden wanneer u een tweede geverifieerd domein aan de ADFS toevoegt. Gebruikers met het UPN-achtervoegsel (User Principal Name) van het tweede domein kunnen zich mogelijk niet aanmelden bij de portals of apparaten inschrijven.
 
 
-<strong>Oplossing:</strong> Microsoft Office 365-klanten moeten een afzonderlijke instantie van ADFS 2.0 Federation Service implementeren voor elk achtervoegsel als ze:
+<strong>Oplossing:</strong> Microsoft 365-klanten moeten een afzonderlijke instantie van ADFS 2.0 Federation Service implementeren voor elk achtervoegsel als ze:
 - eenmalige aanmelding (SSO) gebruiken via ADFS 2.0, en
 - over meerdere domeinen op het hoogste niveau beschikken voor UPN-achtervoegsels van gebruikers in hun organisatie (bijvoorbeeld @contoso.com of @fabrikam.com).
 
 
-Een [updatepakket voor ADFS 2.0](https://support.microsoft.com/kb/2607496) kan worden gebruikt met de schakeloptie <strong>SupportMultipleDomain</strong> om de ADFS-server in te schakelen voor ondersteuning van dit scenario zonder extra ADFS 2.0-servers. Lees [deze blog](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/) voor meer informatie.
+Een [updatepakket voor ADFS 2.0](https://support.microsoft.com/kb/2607496) kan worden gebruikt met de schakeloptie <strong>SupportMultipleDomain</strong> om de ADFS-server in te schakelen voor ondersteuning van dit scenario zonder extra ADFS 2.0-servers. Lees [deze blog](/archive/blogs/abizerh/supportmultipledomain-switch-when-managing-sso-to-office-365) voor meer informatie.
 
 
 ## <a name="android-issues"></a>Problemen met Android
@@ -215,7 +215,7 @@ De gebruiker kan wellicht het ontbrekende certificaat ophalen door de instructie
 
 Nadat gebruikers hun zakelijke referenties hebben ingevoerd en zijn omgeleid voor federatieve aanmelding, krijgen ze mogelijk nog steeds het foutbericht voor een ontbrekend certificaat te zien. In dat geval betekent de fout mogelijk dat er een tussencertificaat ontbreekt op uw ADFS-server (Active Directory Federation Services)
 
-De certificaatfout treedt op omdat er voor Android-apparaten tussencertificaten moeten worden opgenomen in een [Hallo van een SSL-server](https://technet.microsoft.com/library/cc783349.aspx). Momenteel verzendt een standaard AD FS-server of WAP - AD FS-proxyserver alleen het AD FS-service SSL-certificaat in de Hallo-reactie van de SSL-server op een Hallo van een SSL-client.
+De certificaatfout treedt op omdat er voor Android-apparaten tussencertificaten moeten worden opgenomen in een [Hallo van een SSL-server](/previous-versions/windows/it-pro/windows-server-2003/cc783349(v=ws.10)). Momenteel verzendt een standaard AD FS-server of WAP - AD FS-proxyserver alleen het AD FS-service SSL-certificaat in de Hallo-reactie van de SSL-server op een Hallo van een SSL-client.
 
 Als u dit probleem wilt oplossen, importeert u als volgt de certificaten in het persoonlijke certificaatarchief op de AD FS-server of proxy’s:
 
@@ -294,9 +294,9 @@ Voor het inschrijven van ADE-apparaten met gebruikersaffiniteit moet het WS-Trus
 Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
 ```
 
-Zie de [documentatie over Get-AdfsEndpoint](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint) voor meer informatie.
+Zie de [documentatie over Get-AdfsEndpoint](/powershell/module/adfs/get-adfsendpoint?view=win10-ps) voor meer informatie.
 
-Zie [Aanbevolen procedures voor het beveiligen van Active Directory Federation Services](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/operations/best-practices-securing-ad-fs) voor meer informatie. Doe het volgende om te bepalen of WS-Trust 1.3 Username/Mixed is ingeschakeld in uw provider voor identiteitsfederaties:
+Zie [Aanbevolen procedures voor het beveiligen van Active Directory Federation Services](/windows-server/identity/ad-fs/deployment/Best-Practices-Securing-AD-FS) voor meer informatie. Doe het volgende om te bepalen of WS-Trust 1.3 Username/Mixed is ingeschakeld in uw provider voor identiteitsfederaties:
 - Neem contact op met Microsoft Ondersteuning als u ADFS gebruikt
 - Neem contact op met de externe leverancier van identiteiten.
 

@@ -1,11 +1,11 @@
 ---
-title: Uw wachtwoordcode instellen of wijzigen | Microsoft Docs
-description: Uw wachtwoordcode instellen of wijzigen
+title: De wachtwoordcode van uw apparaat instellen of wijzigen | Intune-bedrijfsportal | Microsoft Docs
+description: Stel de wachtwoordcode op uw iOS-apparaat in of wijzig deze op zo'n manier dat deze voldoet aan de beveiligingsvereisten van uw organisatie.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/18/2019
+ms.date: 08/27/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,33 +17,32 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 85b98d9ea3a4953e26bf94f990e2c1321309f4de
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 4d4bc798b668fb0922183419eac01a2d3003eb16
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881926"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057484"
 ---
-# <a name="set-or-change-your-passcode"></a>Uw wachtwoordcode instellen of wijzigen
+# <a name="set-a-device-passcode-on-ios-device"></a>Een apparaatwachtwoordcode instellen op een iOS-apparaat  
 
-Maak een nieuwe wachtwoordcode of wijzig een bestaande zodat deze voldoet aan de vereisten van uw organisatie. Met de wachtwoordcode voorkomt u dat niet-geautoriseerde personen uw apparaat ontgrendelen en gebruiken. 
+> [!TIP]
+> Raadpleeg de [Apple-documentatie](https://support.apple.com/HT204060) voor de meest recente stappen. 
 
-Uw organisatie kan meerdere wachtwoordcodevereisten instellen. Zie [Vereisten voor apparaatwachtwoorden voor ingeschreven apparaten](password-does-not-meet-it-administrator-requirements.md) voor een lijst met veelvoorkomende wachtwoordvereisten.  
-
-Neem contact op met de IT-ondersteuningsmedewerker als u problemen ondervindt bij het maken of wijzigen van de wachtwoordcode.  
-
-
-## <a name="set-your-passcode"></a>Uw wachtwoordcode instellen
+Maak een nieuwe of veiligere wachtwoordcode op uw iOS-apparaat.  
 
 1. Tik op **Instellingen** > **Touch ID en wachtwoordcode**.
 2. Tik in het menu **Touch ID en wachtwoordcode** op **Wachtwoordcode inschakelen**.
-3. Geef een nieuwe wachtwoordcode op die voldoet aan de vereisten van het ondersteuningsteam van het bedrijf en geef de code nogmaals op om deze te verifiëren.
+3. Voer een nieuwe wachtwoordcode in en voer deze opnieuw in om te bevestigen.  
 
-## <a name="change-your-passcode"></a>Uw wachtwoordcode wijzigen
+Doe het volgende als u de apparaatwachtwoordcode wilt wijzigen: 
 
 1. Tik op **Instellingen** > **Touch ID en wachtwoordcode**.
-2. Voer uw wachtwoordcode in. Het menu **Touch ID en wachtwoordcode** wordt geopend.
-2. Tik op **Wachtwoordcode wijzigen** en voer de oude wachtwoordcode in.
-3. Geef een nieuwe wachtwoordcode op die voldoet aan de vereisten van het ondersteuningsteam van het bedrijf en geef de code nogmaals op om deze te verifiëren.
+2. Voer uw huidige wachtwoordcode in. 
+3. Het menu **Touch ID en wachtwoordcode** wordt geopend. Tik op **Wachtwoordcode wijzigen** en voer uw huidige (binnenkort oude) wachtwoordcode opnieuw in.  
+4. Voer een nieuwe wachtwoordcode in en voer deze opnieuw in om te bevestigen.  
 
-Nog hulp nodig? Neem contact op met het ondersteuningsteam van uw bedrijf. Controleer of de contactgegevens beschikbaar zijn op de [bedrijfsportalwebsite](https://go.microsoft.com/fwlink/?linkid=2010980).
+
+## <a name="next-steps"></a>Volgende stappen  
+
+Hebt u nog hulp nodig of hebt u problemen bij het verkrijgen van toegang tot het netwerk van uw organisatie? Neem contact op met IT-ondersteuning. Op de [Intune-bedrijfsportalwebsite](https://go.microsoft.com/fwlink/?linkid=2010980) vindt u de betreffende contactgegevens.  

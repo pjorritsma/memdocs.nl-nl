@@ -1,6 +1,6 @@
 ---
-title: Office 365 bijwerken met beheersjablonen in Microsoft Intune - Azure | Microsoft Docs
-description: Gebruik beheersjablonen in Microsoft Intune om Office 365-apps bij te werken naar de nieuwste versie en kies hoe vaak op updates moet worden gecontroleerd. Zie de registersleutels van het apparaat die worden bijgewerkt wanneer er een Intune-beleid wordt toegepast op Office Update.
+title: Microsoft 365 bijwerken met beheersjablonen in Microsoft Intune - Azure | Microsoft Docs
+description: Gebruik beheersjablonen in Microsoft Intune om Microsoft 365-apps bij te werken naar de nieuwste versie en kies hoe vaak op updates moet worden gecontroleerd. Zie de registersleutels van het apparaat die worden bijgewerkt wanneer er een Intune-beleid wordt toegepast op Office Update.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -16,29 +16,29 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72b0ef53f0451314ef121f82524697ddfdc38cd3
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 2af6784db43b2513b57d850d85fa4deaa3052613
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531720"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193841"
 ---
-# <a name="use-update-channel-and-target-version-settings-to-update-office-365-with-microsoft-intune-administrative-templates"></a>Instellingen van het updatekanaal en de doelversie gebruiken om Office 365 bij te werken met Microsoft Intune-beheersjablonen
+# <a name="use-update-channel-and-target-version-settings-to-update-microsoft-365-with-microsoft-intune-administrative-templates"></a>Instellingen van het updatekanaal en de doelversie gebruiken om Microsoft 365 bij te werken met Microsoft Intune-beheersjablonen
 
-In Intune kunt u [Windows 10-sjablonen gebruiken om instellingen voor groepsbeleid te configureren](administrative-templates-windows.md). In dit artikel wordt beschreven hoe u Office 365 bijwerkt met behulp van een beheersjabloon in Intune. Het biedt ook richtlijnen om te bevestigen dat uw beleid is toegepast. U kunt deze informatie ook gebruiken bij het oplossen van problemen.
+In Intune kunt u [Windows 10-sjablonen gebruiken om instellingen voor groepsbeleid te configureren](administrative-templates-windows.md). In dit artikel wordt beschreven hoe u Microsoft 365 bijwerkt met behulp van een beheersjabloon in Intune. Het biedt ook richtlijnen om te bevestigen dat uw beleid is toegepast. U kunt deze informatie ook gebruiken bij het oplossen van problemen.
 
-In dit scenario maakt u een beheersjabloon in Intune waarmee Office 365 op uw apparaten wordt bijgewerkt.
+In dit scenario maakt u een beheersjabloon in Intune waarmee Microsoft 365 op uw apparaten wordt bijgewerkt.
 
 Zie [Windows 10-sjablonen gebruiken voor het configureren van instellingen voor groepsbeleid](administrative-templates-windows.md) voor meer informatie over beheersjablonen.
 
 Van toepassing op:
 
 - Windows 10 en hoger
-- Office 365
+- Microsoft 365
 
 ## <a name="prerequisites"></a>Vereisten
 
-[Schakel automatische updates voor Microsoft 365-apps in](https://docs.microsoft.com/deployoffice/configure-update-settings-for-office-365-proplus) voor uw Office-apps. U kunt dit doen met behulp van groepsbeleid of met de Intune Office 2016 ADMX-sjabloon:
+[Schakel automatische updates voor Microsoft 365-apps in](/deployoffice/configure-update-settings-for-office-365-proplus) voor uw Office-apps. U kunt dit doen met behulp van groepsbeleid of met de Intune Office 2016 ADMX-sjabloon:
 
 > [!div class="mx-imgBorder"]
 > ![De instelling Automatische updates inschakelen voor Office instellen in de Intune-beheersjabloon](./media/administrative-templates-update-office/admx-enable-automatic-updates.png)
@@ -56,7 +56,7 @@ Van toepassing op:
 2. [Wijs het beleid toe](device-profile-assign.md) aan uw Windows 10-apparaten. Als u het beleid sneller wilt testen, kunt u het beleid ook synchroniseren:
 
     - [Het beleid in Intune synchroniseren](../remote-actions/device-sync.md)
-    - [Het beleid handmatig op het apparaat synchroniseren](https://docs.microsoft.com/mem/intune/user-help/sync-your-device-manually-windows#sync-from-settings-app)
+    - [Het beleid handmatig op het apparaat synchroniseren](../user-help/sync-your-device-manually-windows.md#sync-from-settings-app)
 
 ## <a name="check-the-intune-registry-keys"></a>Intune-registersleutels controleren
 
@@ -79,7 +79,7 @@ Nadat u het beleid en de apparaatsynchronisaties hebt toegewezen, kunt u bevesti
     > ![Voorbeeld: registersleutel L_Updatebranch in beheersjabloon](./media/administrative-templates-update-office/admx-update-branch-registry-key.png)
 
     > [!TIP]
-    > In [Microsoft 365-apps beheren met Configuration Manager](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) worden de waarden met hun betekenis vermeld. De registerwaarden zijn gebaseerd op het geselecteerde distributiekanaal:
+    > In [Microsoft 365-apps beheren met Configuration Manager](/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) worden de waarden met hun betekenis vermeld. De registerwaarden zijn gebaseerd op het geselecteerde distributiekanaal:
     >
     >- Monthly-kanaal                - waarde="Current"
     >- Monthly-kanaal (Targeted)     - waarde="Current"
@@ -97,9 +97,9 @@ Op dit punt wordt het Intune-beleid toegepast op het apparaat.
     U ziet de volgende registersleutels:
 
     - `UpdateChannel`: een dynamische sleutel die wordt gewijzigd, afhankelijk van de geconfigureerde instellingen.
-    - `CDNBaseUrl`: deze wordt ingesteld wanneer Office 365 op het apparaat wordt geïnstalleerd.
+    - `CDNBaseUrl`: deze wordt ingesteld wanneer Microsoft 365 op het apparaat wordt geïnstalleerd.
 
-3. Bekijk de waarde `UpdateChannel`. De waarde vertelt u hoe vaak Office wordt bijgewerkt. In [Microsoft 365 Apps beheren met Configuration Manager](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) worden de waarden vermeld en waarvoor ze zijn ingesteld.
+3. Bekijk de waarde `UpdateChannel`. De waarde vertelt u hoe vaak Office wordt bijgewerkt. In [Microsoft 365 Apps beheren met Configuration Manager](/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) worden de waarden vermeld en waarvoor ze zijn ingesteld.
 
     In het volgende voorbeeld ziet u dat `UpdateChannel` is ingesteld op `http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60`, dus op **maandelijks**:
 
@@ -134,7 +134,7 @@ Als u het beleid wilt testen, kunt u de beleidsinstellingen op het apparaat afdw
 
     Deze moet worden bijgewerkt met de waarde die in het beleid is ingesteld. In ons voorbeeld moet de waarde worden ingesteld op `http://officecdn.microsoft.com/pr/7ffbc6bf-bc32-4f92-8982-f9dd17fd3114`.
 
-Op dit moment wordt het Office-updatekanaal op het apparaat gewijzigd. Als u de status wilt controleren, kunt u een Office 365-app openen voor een gebruiker die deze update ontvangt.
+Op dit moment wordt het Office-updatekanaal op het apparaat gewijzigd. Als u de status wilt controleren, kunt u een Microsoft 365-app openen voor een gebruiker die deze update ontvangt.
 
 ## <a name="force-the-office-synchronization-to-update-account-information"></a>Office-synchronisatie afdwingen accountgegevens bij te werken  
 
@@ -142,7 +142,7 @@ Als u meer wilt doen, kunt u Office afdwingen de nieuwste versie-update op te ha
 
 ### <a name="step-1-force-the-office-version-to-update"></a>Stap 1: Office-versie afdwingen tot bijwerken
 
-1. Bevestig dat de Office-versie ondersteuning biedt voor het updatekanaal dat u kiest. [Update history for Microsoft 365 Apps](https://docs.microsoft.com/officeupdates/update-history-office365-proplus-by-date) (Updategeschiedenis van Microsoft 365-apps) bevat de buildnummers die de verschillende updatekanalen ondersteunen.
+1. Bevestig dat de Office-versie ondersteuning biedt voor het updatekanaal dat u kiest. [Update history for Microsoft 365 Apps](/officeupdates/update-history-office365-proplus-by-date) (Updategeschiedenis van Microsoft 365-apps) bevat de buildnummers die de verschillende updatekanalen ondersteunen.
 
 2. Ga in de [Intune-beheersjabloon](administrative-templates-windows.md#create-the-template) naar de instelling **Doelversie** en voer de gewenste versie in.
 
@@ -181,8 +181,8 @@ U kunt deze stappen gebruiken om uw beleid te testen voordat u het beleid voor a
 
 ## <a name="next-steps"></a>Volgende stappen
 
-[Kanaalwaarden voor Office 365-clients bijwerken](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)
+[Kanaalwaarden voor Microsoft 365-clients bijwerken](/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)
 
-[Overview of the Office cloud policy service for Microsoft 365 Apps ](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service) (Overzicht van de Office-cloudbeleidsservice voor Microsoft 365-apps)
+[Overview of the Office cloud policy service for Microsoft 365 Apps ](/deployoffice/overview-office-cloud-policy-service) (Overzicht van de Office-cloudbeleidsservice voor Microsoft 365-apps)
 
 [Windows 10-sjablonen gebruiken voor het configureren van instellingen voor groepsbeleid (ADMX-sjablonen) in Microsoft Intune](administrative-templates-windows.md)

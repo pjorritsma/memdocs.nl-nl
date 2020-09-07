@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6a2e05e86bf765071d9d22edebfec2ec03115123
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: ecb0e1864fd47cf7aad65fa88de765cb47fce583
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217587"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996721"
 ---
 # <a name="protecting-application-extensions"></a>Toepassingsextensies beveiligen
 
@@ -39,10 +39,10 @@ Als u wilt dat uw eindgebruikers geen Outlook-invoegtoepassingen meer kunnen ben
 - Als u wilt voorkomen dat gebruikers sideloading uitvoeren voor invoegtoepassingen, verwijdert u de My Custom Apps-rol.
 - Als u wilt voorkomen dat gebruikers sowieso een invoegtoepassing kunnen installeren, verwijdert u zowel de My Custom Apps-rol als de My Marketplace-rol.
 
-Deze instructies zijn van toepassing op Office 365, Exchange 2016, Exchange 2013 via Outlook op het web, Windows, Mac en mobiele apparaten.
+Deze instructies zijn van toepassing op Microsoft 365, Exchange 2016, Exchange 2013 via Outlook op internet, Windows, Mac en mobiele apparaten.
 
-- Meer informatie over [invoegtoepassingen voor Outlook](https://technet.microsoft.com/library/jj943753(v=exchg.150).aspx).
-- Meer informatie over [het opgeven van de beheerders en gebruikers die invoegtoepassingen voor de Outlook-app kunnen installeren en beheren](https://technet.microsoft.com/library/jj943754(v=exchg.150).aspx).
+- Meer informatie over [invoegtoepassingen voor Outlook](/exchange/clients-and-mobile-in-exchange-online/add-ins-for-outlook/add-ins-for-outlook).
+- Meer informatie over [het opgeven van de beheerders en gebruikers die invoegtoepassingen voor de Outlook-app kunnen installeren en beheren](/exchange/clients-and-mobile-in-exchange-online/add-ins-for-outlook/specify-who-can-install-and-manage-add-ins).
 
 ## <a name="linkedin-account-connections-for-microsoft-apps"></a>LinkedIn-accountverbindingen voor Microsoft-apps
 
@@ -51,7 +51,7 @@ Met LinkedIn-accountverbindingen kunnen gebruikers in bepaalde Microsoft-apps op
 > [!NOTE]
 > LinkedIn-integratie is momenteel niet beschikbaar voor klanten van de Amerikaanse overheid en voor organisaties met Exchange Online-postvakken die worden gehost in Australië, Canada, China, Frankrijk, Duitsland, India, Zuid-Korea, het Verenigd Koninkrijk, Japan en Zuid-Afrika.
 
-Het beleid voor Intune SDK en voor Intune-app-beveiliging omvat geen ondersteuning voor het beheren van LinkedIn-accountverbindingen, maar er zijn andere manieren om deze te beheren. U kunt LinkedIn-accountverbindingen voor uw hele organisatie uitschakelen of LinkedIn-accountverbindingen voor bepaalde gebruikersgroepen in uw organisatie inschakelen. Deze instellingen hebben invloed op LinkedIn-verbindingen in Office 365-apps op alle platforms (web, mobiel en desktop). U kunt het volgende doen:
+Het beleid voor Intune SDK en voor Intune-app-beveiliging omvat geen ondersteuning voor het beheren van LinkedIn-accountverbindingen, maar er zijn andere manieren om deze te beheren. U kunt LinkedIn-accountverbindingen voor uw hele organisatie uitschakelen of LinkedIn-accountverbindingen voor bepaalde gebruikersgroepen in uw organisatie inschakelen. Deze instellingen hebben invloed op LinkedIn-verbindingen in Microsoft 365-apps op alle platforms (web, mobiel en desktop). U kunt het volgende doen:
 
 - Schakel LinkedIn-accountverbindingen voor uw tenant in de Azure Portal in of uit. 
 - Schakel LinkedIn-accountverbindingen voor de Office 2016-apps van uw organisatie in of uit met behulp van groepsbeleid.
@@ -66,16 +66,16 @@ Als een gebruiker toestaat dat gegevens tussen accounts worden gedeeld, zoals me
 
 |Machtigingen voor Microsoft Graph  |Beschrijving  |
 |---------|---------|
-|Leesmachtigingen voor [Personen](https://developer.microsoft.com/graph/docs/concepts/permissions_reference#people-permissions)     |Hiermee geeft u de app toestemming om een beoordeelde lijst met relevante personen voor de aangemelde gebruiker te lezen. De lijst kan lokale contactpersonen, contactpersonen uit sociale netwerken of de directory van uw organisatie en personen uit recente communicaties (zoals e-mail en Skype) bevatten.         |
-|Leesmachtigingen voor [Agenda's](https://developer.microsoft.com/graph/docs/concepts/permissions_reference#calendars-permissions)     |Hiermee geeft u de app toestemming om gebeurtenissen in agenda's van gebruikers te lezen. Bevat de vergaderingen in de agenda's van gebruikers en de tijden, locaties en deelnemers daarvan.         |
-|Leesmachtigingen voor [Gebruikersprofiel](https://developer.microsoft.com/graph/docs/concepts/permissions_reference#user-permissions)     |Hiermee geeft u gebruikers toestemming om zich aan te melden bij de app en geeft u de app toestemming om het profiel van de aangemelde gebruikers te lezen. Het geeft de app ook toestemming om basale bedrijfsinformatie te lezen voor aangemelde gebruikers.         |
-|Subscriptions     |Dit bereik is niet beschikbaar en nog niet in gebruik. Het bevat abonnementen die door de organisatie van de gebruiker zijn gegeven voor apps en services van Microsoft, zoals Office 365.         |
+|Leesmachtigingen voor [Personen](/graph/permissions-reference#people-permissions)     |Hiermee geeft u de app toestemming om een beoordeelde lijst met relevante personen voor de aangemelde gebruiker te lezen. De lijst kan lokale contactpersonen, contactpersonen uit sociale netwerken of de directory van uw organisatie en personen uit recente communicaties (zoals e-mail en Skype) bevatten.         |
+|Leesmachtigingen voor [Agenda's](/graph/permissions-reference#calendars-permissions)     |Hiermee geeft u de app toestemming om gebeurtenissen in agenda's van gebruikers te lezen. Bevat de vergaderingen in de agenda's van gebruikers en de tijden, locaties en deelnemers daarvan.         |
+|Leesmachtigingen voor [Gebruikersprofiel](/graph/permissions-reference#user-permissions)     |Hiermee geeft u gebruikers toestemming om zich aan te melden bij de app en geeft u de app toestemming om het profiel van de aangemelde gebruikers te lezen. Het geeft de app ook toestemming om basale bedrijfsinformatie te lezen voor aangemelde gebruikers.         |
+|Subscriptions     |Dit bereik is niet beschikbaar en nog niet in gebruik. Het bevat abonnementen die door de organisatie van de gebruiker zijn gegeven voor apps en services van Microsoft, zoals Microsoft 365.         |
 |Insights     |Dit bereik is niet beschikbaar en nog niet in gebruik. Het bevat de interessegebieden die zijn gekoppeld aan het account van de aangemelde gebruiker op basis van het gebruik van de Microsoft-services.         |
 
 ### <a name="learn-more"></a>Meer informatie
 
 - Lees meer over [LinkedIn-informatie en -functies in uw Microsoft-apps](https://go.microsoft.com/fwlink/?linkid=850740).
-- Lees meer over de versie met LinkedIn-accountverbindingen op de [pagina met de Office 365-roadmap](https://products.office.com/en-US/business/office-365-roadmap?filters=%26freeformsearch=linkedin#abc). 
-- Lees meer over [Het configureren van LinkedIn-accountverbindingen](https://docs.microsoft.com/azure/active-directory/linkedin-integration).
+- Lees meer over de versie met LinkedIn-accountverbindingen op de [pagina met de Microsoft 365-roadmap](https://products.office.com/en-US/business/office-365-roadmap?filters=%26freeformsearch=linkedin#abc). 
+- Lees meer over [Het configureren van LinkedIn-accountverbindingen](/azure/active-directory/linkedin-integration).
 - Raadpleeg [LinkedIn in Microsoft-toepassingen op het werk of op school](https://www.linkedin.com/help/linkedin/answer/84077) voor meer informatie over gegevens die worden gedeeld tussen de LinkedIn-accounts, of de werk- of schoolaccounts van Microsoft van de gebruikers.
 

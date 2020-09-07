@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d71326dc46d404925bdd94bd5d1140f23151748c
-ms.sourcegitcommit: 24fcf19054dcd62429f6181cdc568d894e01b99a
+ms.openlocfilehash: b0f360509f456489a321e072c2acfbf26c14bf98
+ms.sourcegitcommit: 231e2c3913a1d585310dfab7ffcd5c78c6bc5703
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86946640"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970495"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>PKCS-certificaten configureren en gebruiken met Intune
 
@@ -40,12 +40,12 @@ Als u PKCS-certificaten wilt gebruiken met Intune, hebt u de volgende infrastruc
 - **Active Directory-domein**:  
   Alle servers die in dit gedeelte worden genoemd, moeten lid zijn van uw Active Directory-domein.
 
-  Zie [AD DS-ontwerp- en -planning](https://docs.microsoft.com/windows-server/identity/ad-ds/plan/ad-ds-design-and-planning) voor meer informatie over het installeren en configureren van AD DS (Active Directory Domain Services).
+  Zie [AD DS-ontwerp- en -planning](/windows-server/identity/ad-ds/plan/ad-ds-design-and-planning) voor meer informatie over het installeren en configureren van AD DS (Active Directory Domain Services).
 
 - **Certificeringsinstantie**:  
    Een certificeringsinstantie (CA) voor ondernemingen.
 
-  Raadpleeg [Stapsgewijze handleiding bij Active Directory Certificate Services](https://technet.microsoft.com/library/cc772393) als u informatie wilt over het installeren en configureren van Active Directory Certificate Services (AD CS).
+  Raadpleeg [Stapsgewijze handleiding bij Active Directory Certificate Services](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772393(v=ws.10)) als u informatie wilt over het installeren en configureren van Active Directory Certificate Services (AD CS).
 
   > [!WARNING]  
   > Voor Intune moet u AD CS uitvoeren met een certificeringsinstantie (CA) voor ondernemingen, niet met een zelfstandige certificeringsinstantie.
@@ -82,7 +82,7 @@ Als u PKCS-certificaten wilt gebruiken met Intune, hebt u de volgende infrastruc
   - Microsoft Intune Certificate Connector: voor verificatie en voor scenario's met S/MIME-e-mailondertekening
   - PFX-certificaatconnector voor Microsoft Intune: voor scenario's met S/MIME-e-mailversleuteling.
 
-  Voor de connectors is toegang tot dezelfde poorten vereist als voor beheerde apparaten, zoals te lezen is in onze [inhoud over apparaateindpunten](https://docs.microsoft.com/intune/fundamentals/intune-endpoints#access-for-managed-devices).
+  Voor de connectors is toegang tot dezelfde poorten vereist als voor beheerde apparaten, zoals te lezen is in onze [inhoud over apparaateindpunten](/intune/fundamentals/intune-endpoints#access-for-managed-devices).
 
   Intune staat toe dat de *PFX-certificaatconnector* en de *Microsoft Intune-certificaatconnector* op dezelfde server worden geïnstalleerd.
   
@@ -119,6 +119,12 @@ Voor verificatie van een apparaat met VPN, Wi-Fi of andere resources hebt u op e
     > **Sjabloonnaam** is standaard hetzelfde als **Weergavenaam van sjabloon**, maar dan *zonder spaties*. Noteer de naam van de sjabloon; deze hebt u later nodig.
 
 6. Selecteer in **Afhandeling van aanvragen** de optie **De persoonlijke sleutel exporteerbaar maken**.
+    
+    > [!NOTE]
+    > In tegenstelling tot SCEP wordt met PKCS de persoonlijke sleutel van het certificaat gegenereerd op de server waarop de connector is geïnstalleerd en niet op het apparaat. Het is een vereiste dat de certificaatsjabloon het exporteren van de persoonlijke sleutel mogelijk maakt, zodat de certificaatconnector het PFX-certificaat kan exporteren en naar het apparaat kan verzenden. 
+    >
+    > Houd er echter rekening mee dat de certificaten worden geïnstalleerd op het apparaat zelf met een als niet-exporteerbaar gemarkeerde persoonlijke sleutel.
+    
 7. Bevestig in **Cryptografie** dat de **Minimale sleutelgrootte** is ingesteld op 2048.
 8. Kies **Leveren met het verzoek** in **Onderwerpnaam**.
 9. Bevestig in **Extensies** dat Encrypting File System, Beveiligde e-mail en Clientauthenticatie worden weergegeven onder **Toepassingsbeleid**.
@@ -160,7 +166,7 @@ Voor verificatie van een apparaat met VPN, Wi-Fi of andere resources hebt u op e
 6. U wordt aangeraden om op het tabblad **Geavanceerd** het keuzerondje **Systeemaccount van deze computer gebruiken (standaard)** ingeschakeld te laten.
 7. **Toepassen** > **Sluiten**
 8. Ga terug naar de Intune-portal (**Intune** > **Apparaatconfiguratie** > **Certificaatconnectors**). Even later wordt een groen vinkje weergegeven en is de **Verbindingsstatus** **Actief**. Uw connector-server kan nu communiceren met Intune.
-9. Als u een webproxy in uw netwerkomgeving hebt, hebt u mogelijk extra configuraties nodig voordat de connector werkt. Raadpleeg [Werken met bestaande on-premises proxyservers](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers) in de Azure Active Directory-documentatie voor meer informatie.
+9. Als u een webproxy in uw netwerkomgeving hebt, hebt u mogelijk extra configuraties nodig voordat de connector werkt. Raadpleeg [Werken met bestaande on-premises proxyservers](/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers) in de Azure Active Directory-documentatie voor meer informatie.
     - Android Enterprise (*Werkprofiel*)
     - iOS
     - macOS
@@ -292,16 +298,16 @@ Platformen:
   - **CN={{IMEINumber}}** : Het unieke nummer van de International Mobile Equipment Identity (IMEI) dat wordt gebruikt om een mobiele telefoon te identificeren.
   - **CN={{OnPrem_Distinguished_Name}}** : Een reeks RDN's (Relative Distinguished Name), gescheiden door komma's, zoals *CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com*.
 
-    Als u de variabele *{{OnPrem_Distinguished_Name}}* wilt gebruiken, moet u het gebruikerskenmerk *onpremisesdistinguishedname* met behulp van [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) synchroniseren met uw Azure AD.
+    Als u de variabele *{{OnPrem_Distinguished_Name}}* wilt gebruiken, moet u het gebruikerskenmerk *onpremisesdistinguishedname* met behulp van [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) synchroniseren met uw Azure AD.
 
   - **CN={{onPremisesSamAccountName}}** : Beheerders kunnen het kenmerk samAccountName van Active Directory met behulp van Azure AD Connect synchroniseren met Azure AD in een kenmerk met de naam *onPremisesSamAccountName*. Deze variabele kan in Intune worden vervangen als onderdeel van een aanvraag voor certificaatuitgifte in het onderwerp van een certificaat. Het kenmerk samAccountName is de aanmeldingsnaam van de gebruiker die wordt gebruikt ter ondersteuning van clients en servers van een oudere versie dan Windows 2000. De indeling voor de aanmeldingsnaam van de gebruiker is: *DomainName\testUser* of alleen *testUser*.
 
-    Als u de variabele *{{onPremisesSamAccountName}}* wilt gebruiken, moet u het gebruikerskenmerk *onPremisesSamAccountName* met behulp van [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) synchroniseren met uw Azure AD.
+    Als u de variabele *{{onPremisesSamAccountName}}* wilt gebruiken, moet u het gebruikerskenmerk *onPremisesSamAccountName* met behulp van [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) synchroniseren met uw Azure AD.
 
   Door een combinatie van een of meer van deze variabelen en statische tekenreeksen te gebruiken, kunt u een aangepaste indeling voor de naam van een certificaathouder maken, bijvoorbeeld:  
   - **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**
   
-  Dat voorbeeld bevat een indeling van de onderwerpnaam waarin gebruik wordt gemaakt van de variabelen CN en E, plus tekenreeksen voor de waarden Organizational Unit, Organization, Location, State en Country. [De functie CertStrToName](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) beschrijft deze functie en de ondersteunde tekenreeksen.
+  Dat voorbeeld bevat een indeling van de onderwerpnaam waarin gebruik wordt gemaakt van de variabelen CN en E, plus tekenreeksen voor de waarden Organizational Unit, Organization, Location, State en Country. [De functie CertStrToName](/windows/win32/api/wincrypt/nf-wincrypt-certstrtonamea) beschrijft deze functie en de ondersteunde tekenreeksen.
 
 - **Certificaattype Apparaat**  
   Indelingsopties voor de Indeling van de onderwerpnaam zijn de volgende variabelen: 

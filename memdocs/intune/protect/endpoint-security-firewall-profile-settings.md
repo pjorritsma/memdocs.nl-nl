@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 08/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: d90870a60ea292939926816bb74b5d285dc6a09f
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 10d9320932e7835b8c2ecac46e35ea5a57375904
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431602"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068130"
 ---
 # <a name="firewall-policy-settings-for-endpoint-security-in-intune"></a>Instellingen van firewallbeleid voor eindpuntbeveiliging in Intune
 
@@ -198,22 +198,22 @@ De volgende instellingen zijn geconfigureerd als [eindpointbeveiligingsbeleid vo
   - **Niet geconfigureerd**
 
 - **Familienaam van het pakket**  
-  [Get-AppxPackage](https://docs.microsoft.com/previous-versions//hh856044(v=technet.10))
+  [Get-AppxPackage](/previous-versions//hh856044(v=technet.10))
 
   Familienamen van pakketten kunnen worden opgehaald met de opdracht Get-AppxPackage van PowerShell.
 
 - **Pad naar bestand**  
-  CSP: [FirewallRules/FirewallRuleName/App/FilePath](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#filepath)
+  CSP: [FirewallRules/FirewallRuleName/App/FilePath](/windows/client-management/mdm/firewall-csp#filepath)
 
   Als u het bestandspad van een app wilt opgeven, voert u de locatie van de apps in op het clientapparaat. Bijvoorbeeld: `C:\Windows\System\Notepad.exe` of `%WINDIR%\Notepad.exe`
 
 - **Servicenaam**  
-  [FirewallRules/FirewallRuleName/App/ServiceName](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#servicename)
+  [FirewallRules/FirewallRuleName/App/ServiceName](/windows/client-management/mdm/firewall-csp#servicename)
 
   Een korte naam van een Windows-service gebruiken wanneer een service, niet een toepassing, verkeer verzendt of ontvangt. Korte namen van services worden opgehaald door de `Get-Service` opdracht uit te voeren vanuit PowerShell.
 
 - **Protocol**  
-  CSP: [FirewallRules/FirewallRuleName/Protocol](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#protocol)
+  CSP: [FirewallRules/FirewallRuleName/Protocol](/windows/client-management/mdm/firewall-csp#protocol)
 
   Geef het protocol voor deze poortregel op.
   - Met transportlaag-protocollen zoals *TCP (6)* en *UDP (17)* kunt u poorten of poortbereiken opgeven.
@@ -228,7 +228,7 @@ De volgende instellingen zijn geconfigureerd als [eindpointbeveiligingsbeleid vo
   - **Niet geconfigureerd**
 
 - **Geautoriseerde gebruikers**  
-  [FirewallRules/FirewallRuleName/LocalUserAuthorizationList](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localuserauthorizedlist)
+  [FirewallRules/FirewallRuleName/LocalUserAuthorizationList](/windows/client-management/mdm/firewall-csp#localuserauthorizedlist)
 
   Geef een lijst met geautoriseerde lokale gebruikers voor deze regel op. Als de *Service-naam* is ingesteld als een Windows-service, kan geen lijst met geautoriseerde gebruikers worden opgegeven. Als er geen gemachtigde gebruiker is opgegeven, wordt de standaardwaarde *Alle gebruikers*.
 
@@ -237,9 +237,14 @@ De volgende instellingen zijn geconfigureerd als [eindpointbeveiligingsbeleid vo
   - **Ja**: een lokaal adres ondersteunen en geen adresbereik configureren.
 
 - **Lokale adresbereiken**  
-  CSP: [FirewallRules/FirewallRuleName/LocalAddressRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localaddressranges)  
+  CSP: [FirewallRules/FirewallRuleName/LocalAddressRanges](/windows/client-management/mdm/firewall-csp#localaddressranges)  
 
-  Voeg een of meer adressen toe als een lijst met door komma's gescheiden lokale adressen waarop de regel van toepassing is. Geldige invoergegevens (tokens) zijn onder andere de volgende opties:
+  Lokale adresbereiken beheren voor deze regel. U kunt het volgende doen:
+  - **Voeg** een of meer adressen toe als een lijst met door komma's gescheiden lokale adressen waarop de regel van toepassing is.
+  - **Importeer** een csv-bestand dat een lijst met adressen bevat met te gebruiken lokale adresbereiken.
+  - **Exporteer** uw huidige lijst met lokale adresbereiken als een csv-bestand.
+
+  Geldige invoergegevens (tokens) zijn onder andere de volgende opties:
   - **Een asterisk**: een asterisk (\*) geeft een lokaal adres aan. Als dit het geval is, moet de asterisk het enige token zijn dat is opgenomen.
   - **Een subnet**: Om een subnet op te geven, gebruikt u een subnetmasker of een netwerkvoorvoegselnotatie. Als er geen subnetmasker en ook geen netwerkvoorvoegsel wordt opgegeven, wordt de standaardinstelling 255.255.255.255 voor het subnetmasker gebruikt.
   - **Een geldig IPv6-adres**
@@ -253,9 +258,14 @@ De volgende instellingen zijn geconfigureerd als [eindpointbeveiligingsbeleid vo
   - **Ja**: een extern adres ondersteunen en geen adresbereik configureren.
 
 - **Externe adresbereiken**  
-  CSP: [FirewallRules/FirewallRuleName/RemoteAddressRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
+  CSP: [FirewallRules/FirewallRuleName/RemoteAddressRanges](/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
 
-  Voeg een of meer adressen toe als een lijst met door komma's gescheiden externe adressen waarop de regel van toepassing is. Geldige invoergegevens (tokens) zijn onder andere de volgende opties en zijn niet hoofdlettergevoelig:
+  Beheer lokale adresbereiken voor deze regel. U kunt het volgende doen:
+  - Een of meer adressen **toevoegen** als een lijst met door komma's gescheiden externe adressen waarop de regel van toepassing is.
+  - Een csv-bestand **importeren** dat een lijst met adressen bevat met te gebruiken lokale adresbereiken.
+  - Uw huidige lijst **exporteren** met lokale adresbereiken als een csv-bestand.
+
+  Geldige invoergegevens (tokens) zijn onder andere de volgende opties en zijn niet hoofdlettergevoelig:
   - **Een asterisk**: een asterisk (\*) geeft een extern adres aan. Als dit het geval is, moet de asterisk het enige token zijn dat is opgenomen.
   - **Defaultgateway**
   - **DHCP**

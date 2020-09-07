@@ -214,6 +214,8 @@
       items:
         - name: Certificaten gebruiken voor verificatie
           href: certificates-configure.md
+        - name: Certificaatconnectors
+          href: certificate-connectors.md
         - name: SCEP
           items:
             - name: SCEP-infrastructuur

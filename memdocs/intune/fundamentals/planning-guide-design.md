@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6412b0d23edb9f93becb3973cc1ae02c0a068dea
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 6a1f3f4dc6187616d007c0ab9c97072bc3970c0a
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663239"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996364"
 ---
 # <a name="create-a-design"></a>Een ontwerp maken
 
@@ -134,15 +134,15 @@ We onderzoeken deze algemene externe afhankelijkheden hieronder nader.
 
 ### <a name="identity"></a>Identiteit
 
-Identiteit is de manier waarop de gebruikers worden geïdentificeerd die tot uw organisatie behoren en die een apparaat registreren. Intune vereist Azure Active Directory (Azure AD) als provider van gebruiker-id's. Als u deze service al gebruikt, kunt u gebruikmaken van uw bestaande identiteit in de cloud. Azure AD Connect is bovendien het aanbevolen hulpmiddel om uw lokale gebruikers-id's te synchroniseren met Microsoft-cloudservices. Als uw organisatie al met Office 365 werkt, is het belangrijk dat Intune van dezelfde Azure AD-omgeving gebruikmaakt.
+Identiteit is de manier waarop de gebruikers worden geïdentificeerd die tot uw organisatie behoren en die een apparaat registreren. Intune vereist Azure Active Directory (Azure AD) als provider van gebruiker-id's. Als u deze service al gebruikt, kunt u gebruikmaken van uw bestaande identiteit in de cloud. Azure AD Connect is bovendien het aanbevolen hulpmiddel om uw lokale gebruikers-id's te synchroniseren met Microsoft-cloudservices. Als uw organisatie al met Microsoft 365 werkt, is het belangrijk dat Intune van dezelfde Azure AD-omgeving gebruikmaakt.
 
 Meer informatie over de volgende Intune-identiteitsvereisten :
 
-- [Identiteitsvereisten](https://docs.microsoft.com/azure/active-directory/understand-azure-identity-solutions).
+- [Identiteitsvereisten](/azure/active-directory/understand-azure-identity-solutions).
 
-- [Vereisten voor adreslijstsynchronisatie](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect).
+- [Vereisten voor adreslijstsynchronisatie](/azure/active-directory/connect/active-directory-aadconnect).
 
-- [Vereisten voor meervoudige verificatie](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud).
+- [Vereisten voor meervoudige verificatie](/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud).
 
 ### <a name="user-and-device-groups"></a>Gebruikers- en apparaatgroepen
 

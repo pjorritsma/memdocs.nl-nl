@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31cc746edce40300b5678439550ce3108270750d
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: ae034699d3a07311ca6a51557cbbc673916569bf
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988864"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994273"
 ---
 # <a name="sign-up-or-sign-in-to-microsoft-intune"></a>Registreren of aanmelden bij Microsoft Intune
 
 In dit onderwerp wordt aan systeembeheerders uitgelegd hoe u zich kunt aanmelden voor een Intune-account.
 
-Voordat u zich voor Intune aanmeldt, moet u bepalen of u al een Microsoft Online Services-account, Enterprise Agreement of equivalente volumelicentieovereenkomst hebt. Een Microsoft-volumelicentieovereenkomst of ander Microsoft-cloudservices-abonnement, zoals Office 365 omvat gewoonlijk een werk- of schoolaccount.
+Voordat u zich voor Intune aanmeldt, moet u bepalen of u al een Microsoft Online Services-account, Enterprise Agreement of equivalente volumelicentieovereenkomst hebt. Een Microsoft-volumelicentieovereenkomst of ander abonnement op Microsoft-cloudservices, zoals Microsoft 365, omvat gewoonlijk een werk- of schoolaccount.
 
 Als u al een werk- of schoolaccount hebt **meld u dan aan** met dat account en voeg Intune toe aan uw abonnement. Anders kunt u zich **registreren** voor een nieuw account om Intune te gebruiken voor uw organisatie.
 
@@ -70,12 +70,12 @@ Intune voor onderwijs: https://intuneeducation.portal.azure.com
 
 Klassieke Intune-portal: https://manage.microsoft.com De klassieke Intune-portal wordt alleen gebruikt voor het beheren van apparaten die zijn ingeschreven bij de Intune-softwareclient voor pc's
 
-### <a name="urls-for-intune-services-provided-by-office-365"></a>URL's voor Intune-services van Office 365
+### <a name="urls-for-intune-services-provided-by-microsoft-365"></a>URL's voor Intune-services van Microsoft 365
 
 Microsoft 365 Business: https://portal.microsoft.com/adminportal
 
-Beheer van mobiele apparaten van Office 365: https://admin.microsoft.com/adminportal/home#/MifoDevices
+Microsoft 365 Mobile Device Management: https://admin.microsoft.com/adminportal/home#/MifoDevices
 
 ## <a name="see-also"></a>Zie tevens
 
-[U kunt zich niet aanmelden bij Office 365, Azure of Intune](https://support.microsoft.com/help/2412085)
+[U kunt zich niet aanmelden bij Microsoft 365, Azure of Intune](https://support.microsoft.com/help/2412085)

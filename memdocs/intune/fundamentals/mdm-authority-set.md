@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 380e39406dcc0b5bd286605804e3aa3c52750dd1
-ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
+ms.openlocfilehash: 676e7a4db54558eaea87ad2fa8efbe8af546f035
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88614735"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996568"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>De instantie voor het beheer van mobiele apparaten instellen
 
@@ -34,11 +34,11 @@ Mogelijke configuraties zijn:
 
 - **Intune Standalone**: cloudbeheer dat u configureert met behulp van de Azure Portal. Bevat de volledige reeks mogelijkheden van Intune. [De MDM-instantie instellen in de Intune-beheerconsole](#set-mdm-authority-to-intune).
 
-- **Co-beheer voor Intune**: integratie van de Intune-cloudoplossing met Configuration Manager voor Windows 10-apparaten. U kunt Intune configureren met behulp van de Configuration Manager-console. [Configureer de automatische inschrijving van apparaten in Intune](https://docs.microsoft.com/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune). 
+- **Co-beheer voor Intune**: integratie van de Intune-cloudoplossing met Configuration Manager voor Windows 10-apparaten. U kunt Intune configureren met behulp van de Configuration Manager-console. [Configureer de automatische inschrijving van apparaten in Intune](/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune). 
 
-- **Basic Mobility and Security for Office 365**: als u deze configuratie activeert, ziet u de MDM-instantie ingesteld op Office 365. Als u Intune wilt gaan gebruiken, moet u Intune-licenties aanschaffen.
+- **Basic Mobility and Security for Microsoft 365**: als u deze configuratie activeert, ziet u dat de MDM-instantie is ingesteld op Office 365. Als u Intune wilt gaan gebruiken, moet u Intune-licenties aanschaffen.
 
-- **[Co-existentie](#coexistence) van Basic Mobility and Security for Office 365**: u kunt Intune toevoegen aan uw tenant als u al Basic Mobility and Security for Office 365 gebruikt en de beheerinstantie instellen op Intune of Basic Mobility and Security for Office 365 voor elke gebruiker om te bepalen welke service moet worden gebruikt voor het beheer van hun bij MDM ingeschreven apparaten. De beheerinstantie van elke gebruiker wordt gedefinieerd op basis van de licentie die aan de gebruiker is toegewezen: Als de gebruiker alleen een licentie heeft voor Microsoft 365 Basic of Standard, worden zijn apparaten beheerd door Basic Mobility and Security for Office 365. Als de gebruiker een licentie met machtiging voor Intune heeft, worden de apparaten beheerd met Intune. Als u een licentie toevoegt die recht geeft op Intune aan een gebruiker die voorheen werd beheerd door Basic Mobility and Security for Office 365, wordt zijn apparaat overgezet naar beheer door Intune. Zorg ervoor dat Intune-configuraties worden toegewezen aan gebruikers om Basic Mobility and Security for Office 365 te vervangen alvorens gebruikers naar Intune over te zetten, anders verliezen hun apparaten de instellingen voor Basic Mobility and Security for Office 365 en krijgen ze geen vervanging van Intune.
+- **[Co-existentie](#coexistence) van Basic Mobility and Security for Microsoft 365**: u kunt Intune toevoegen aan uw tenant als u al Basic Mobility and Security for Microsoft 365 gebruikt en de beheerinstantie instellen op Intune of Basic Mobility and Security for Microsoft 365 voor elke gebruiker om te bepalen welke service moet worden gebruikt voor het beheer van hun bij MDM ingeschreven apparaten. De beheerinstantie van elke gebruiker wordt gedefinieerd op basis van de licentie die aan de gebruiker is toegewezen: Als gebruikers alleen een licentie hebben voor Microsoft 365 Basic of Standard, worden hun apparaten beheerd door Basic Mobility and Security for Microsoft 365. Als de gebruiker een licentie met machtiging voor Intune heeft, worden de apparaten beheerd met Intune. Als u een licentie toevoegt die gebruikers machtigt voor Intune die voorheen werden beheerd door Basic Mobility and Security for Microsoft 365, worden hun apparaten overgezet naar beheer door Intune. Zorg ervoor dat Intune-configuraties worden toegewezen aan gebruikers om Basic Mobility and Security for Microsoft 365 te vervangen alvorens gebruikers naar Intune over te zetten, anders verliezen hun apparaten de instellingen voor Basic Mobility and Security for Microsoft 365 en krijgen ze geen vervanging van Intune.
 
 ## <a name="set-mdm-authority-to-intune"></a>MDM-instantie instellen op Intune
 
@@ -109,7 +109,7 @@ Het MDM-certificaat wordt automatisch vernieuwd wanneer mobiele apparaten commun
 
 ## <a name="remove-mdm-authority"></a>MDM-instantie verwijderen
 
-De MDM-instantie kan niet weer worden gewijzigd in Onbekend. De MDM-instantie wordt gebruikt door de service om te bepalen aan welke portal ingeschreven apparaten rapporteren (Microsoft Intune of Basic Mobility and Security for Office 365).
+De MDM-instantie kan niet weer worden gewijzigd in Onbekend. De MDM-instantie wordt gebruikt door de service om te bepalen aan welke portal geregistreerde apparaten rapporteren (Microsoft Intune of Basic Mobility and Security for Microsoft 365).
 
 ## <a name="what-to-expect-after-changing-the-mdm-authority"></a>Wat u kunt verwachten na het wijzigen van de MDM-instantie
 

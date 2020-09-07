@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 37724c4d9acdfcdb9e371a21a7b15c509de78c60
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: c81216ae7350beafcf1e090b278d5975d6fea086
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865469"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993288"
 ---
 # <a name="troubleshoot-iosipados-device-enrollment-problems-in-microsoft-intune"></a>Problemen met inschrijving van iOS-/iPadOS-apparaten in Microsoft Intune oplossen
 
@@ -87,7 +87,7 @@ Verzamel de volgende gegevens van het probleem:
 **Oorzaak**: De gebruiker die het apparaat probeert in te schrijven, heeft geen licentie voor Microsoft Intune.
 
 #### <a name="resolution"></a>Oplossing
-1. Ga naar het [Office 365-beheercentrum](https://admin.microsoft.com)en kies **Gebruikers > Actieve gebruikers**.
+1. Ga naar het [Microsoft 365-beheercentrum](https://admin.microsoft.com)en kies daarna **Gebruikers > Actieve gebruikers**.
 2. Selecteer het gebruikersaccount waaraan u een Intune-gebruikerslicentie wilt toewijzen en selecteer vervolgens **Productlicenties > Bewerken**.
 3. Selecteer **Aan**voor de licentie die u aan deze gebruiker wilt toewijzen en kies vervolgens **Opslaan**.
 4. Schrijf het apparaat opnieuw in.
@@ -181,7 +181,7 @@ Vernieuw het APNs-certificaat en schrijf het apparaat opnieuw in.
 > Zorg ervoor dat u het APNs-certificaat vernieuwt. U moet het APNs-certificaat dus niet vervangen. Als u het certificaat vervangt, moet u alle iOS-/iPadOS-apparaten opnieuw inschrijven in Intune. 
 
 - Zie [Een Apple MDM-pushcertificaat verlengen](apple-mdm-push-certificate-get.md#renew-apple-mdm-push-certificate) voor informatie over het vernieuwen van het APNs-certificaat in de zelfstandige versie van Intune.
-- Zie [Een APNs-certificaat maken voor iOS-/iPadOS-apparaten](https://support.office.com/article/Create-an-APNs-Certificate-for-iOS-devices-522b43f4-a2ff-46f6-962a-dd4f47e546a7)voor informatie over het vernieuwen van het APNs-certificaat in Office 365.
+- Zie [Een APNs-certificaat maken voor iOS-/iPadOS-apparaten](https://support.office.com/article/Create-an-APNs-Certificate-for-iOS-devices-522b43f4-a2ff-46f6-962a-dd4f47e546a7) voor informatie over het vernieuwen van het APNs-certificaat in Microsoft 365.
 
 ### <a name="xpc_type_error-connection-invalid"></a>XPC_TYPE_ERROR Verbinding ongeldig
 

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/24/2020
+ms.date: 09/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4283caf8f21e87736b09a3d6c7b31f8daf1f6075
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: b661068515069b1bc4c20acdc1c9ad00a12fe7dd
+ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546823"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89286200"
 ---
 # <a name="android-enterprise-work-profile-security-configurations"></a>Beveiligingsconfiguraties voor Android Enterprise-werkprofiel
 
@@ -90,7 +90,9 @@ Niveau 1 is de aanbevolen minimale beveiligingsconfiguratie voor persoonlijke ap
 | Werkprofielinstellingen | Wachtwoordverlooptijd (dagen) | Niet geconfigureerd | Organisaties moeten deze instelling mogelijk bijwerken, zodat deze overeenkomt met het wachtwoordbeleid. |
 | Werkprofielinstellingen | Vereist wachtwoordtype | Complex numeriek ||
 | Werkprofielinstellingen | Wachtwoorden niet opnieuw gebruiken | Niet geconfigureerd | Organisaties moeten deze instelling mogelijk bijwerken, zodat deze overeenkomt met het wachtwoordbeleid.|
+| Werkprofielinstellingen | Ontgrendelen met gezicht | Niet geconfigureerd ||
 | Werkprofielinstellingen | Ontgrendelen met vingerafdruk | Niet geconfigureerd ||
+| Werkprofielinstellingen | Ontgrendelen met iris | Niet geconfigureerd ||
 | Werkprofielinstellingen | Smart Lock en andere trustagenten | Niet geconfigureerd |||
 | Wachtwoord van apparaat | Minimale wachtwoordlengte | 6 | Organisaties moeten deze instelling mogelijk bijwerken, zodat deze overeenkomt met het wachtwoordbeleid. |
 | Wachtwoord van apparaat | Maximum aantal minuten van inactiviteit voordat het scherm wordt vergrendeld | 5 | Organisaties moeten deze instelling mogelijk bijwerken, zodat deze overeenkomt met het wachtwoordbeleid. |

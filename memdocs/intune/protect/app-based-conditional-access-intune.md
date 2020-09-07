@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 27033c2452224bc93e335f3517c9548ad65666c4
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: e1619f3dde57b002ce8884e4af7d4a02e3d71b9f
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82080144"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992756"
 ---
 # <a name="app-based-conditional-access-with-intune"></a>Op apps gebaseerde voorwaardelijke toegang met Intune
 
 U kunt [beveiligingsbeleid voor apps in Intune](../apps/app-protection-policy.md) gebruiken om te helpen bij het beveiligen van uw bedrijfsgegevens op apparaten die zijn geregistreerd in Intune. U kunt ook beveiligingsbeleid voor apps gebruiken op apparaten die in het bezit zijn van werknemers en die niet zijn geregistreerd voor beheer in Intune. In dit geval moet u, zelfs als u het apparaat niet beheert, er nog steeds voor zorgen dat uw bedrijfsgegevens en -bronnen zijn beveiligd.
 
-Met op apps gebaseerde voorwaardelijke toegang en beheer van client-apps voegt u een beveiligingslaag toe door ervoor te zorgen dat alleen client-apps die app-beveiligingsbeleid van Intune ondersteunen, toegang hebben tot Exchange Online en andere Office 365-services.
+Met op apps gebaseerde voorwaardelijke toegang en beheer van client-apps voegt u een beveiligingslaag toe door ervoor te zorgen dat alleen client-apps die app-beveiligingsbeleid van Intune ondersteunen, toegang hebben tot Exchange Online en andere Microsoft 365-services.
 
 > [!NOTE]
 > Een beheerde app is een app waarop app-beveiligingsbeleid is toegepast en die door Intune kan worden beheerd.
@@ -47,9 +47,9 @@ Zie [Prijzen van Enterprise Mobility](https://www.microsoft.com/cloud-platform/e
 
 ## <a name="supported-apps"></a>Ondersteunde apps
 
-Een lijst met apps die ondersteuning bieden voor voorwaardelijke toegang op app-basis is beschikbaar in de [technische naslaginformatie over voorwaardelijke toegang voor Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-technical-reference).
+Een lijst met apps die ondersteuning bieden voor voorwaardelijke toegang op app-basis is beschikbaar in de [technische naslaginformatie over voorwaardelijke toegang voor Azure Active Directory](/azure/active-directory/active-directory-conditional-access-technical-reference).
 
-Op apps gebaseerde voorwaardelijke toegang [biedt ook ondersteuning voor LOB-apps (Line-Of-Business)](app-modern-authentication-block.md), maar als u deze apps wilt gebruiken, moet u gebruikmaken van [moderne Office 365-verificatie](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a). 
+Op apps gebaseerde voorwaardelijke toegang [biedt ook ondersteuning voor LOB-apps (Line-Of-Business)](app-modern-authentication-block.md), maar als u deze apps wilt gebruiken, moet u gebruikmaken van [moderne Microsoft 365-verificatie](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a). 
 
 ## <a name="how-app-based-conditional-access-works"></a>Hoe op apps gebaseerde voorwaardelijke toegang werkt
 

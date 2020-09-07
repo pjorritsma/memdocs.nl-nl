@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/17/2020
+ms.date: 08/31/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8b08d5f1395c30b646885470c95fed2c7a96d3f9
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: b213769234d55fd2a542ac166afe59c6e8b9e6c2
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819606"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194103"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Met Android Enterprise-apparaatinstellingen kunt u functies toestaan of beperken met behulp van Intune
 
@@ -296,7 +296,7 @@ End of comment -->
 - **Aantal mislukte aanmeldingen voordat een apparaat wordt gewist**: Voer het aantal onjuiste wachtwoorden tussen 4 en 11 in dat is toegestaan voordat het apparaat wordt gewist. Met `0` (nul) kan de functionaliteit voor het wissen van het apparaat worden uitgeschakeld. Wanneer de waarde leeg is, wordt deze instelling niet door Intune gewijzigd of bijgewerkt.
 
   > [!NOTE]
-  > Op volledig beheerde, toegewezen apparaten met een werkprofiel in bedrijfseigendom worden gebruikers niet gevraagd om een wachtwoord in te stellen. De instellingen worden afgedwongen en u moet het wachtwoord handmatig instellen. Het beleid waarmee dit wordt afgedwongen wordt als mislukt gerapporteerd totdat u een wachtwoord instelt dat aan uw vereisten voldoet.
+  > Op volledig beheerde, toegewezen apparaten met een werkprofiel in bedrijfseigendom worden gebruikers niet gevraagd om een wachtwoord in te stellen. De instellingen zijn vereist, maar gebruikers worden mogelijk niet op de hoogte gesteld. Gebruikers moeten het wachtwoord handmatig instellen. Het beleid geeft de melding dat de aanmelding is mislukt totdat de gebruiker een wachtwoord instelt dat voldoet aan uw vereisten.
 
 ### <a name="power-settings"></a>Energie-instellingen
 

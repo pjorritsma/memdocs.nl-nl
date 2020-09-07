@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3b7784d4ad86e3418259f85ca1c4577d2289dc86
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c39174dded9fae0055786b6132b3f964f187b1b1
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79358153"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992705"
 ---
 # <a name="basic-setup"></a>Basisconfiguratie
 
@@ -33,17 +33,17 @@ Nadat u uw omgeving hebt geëvalueerd, is het tijd om Microsoft Intune in te ste
 
 Voor Intune is Azure Active Directory (Azure AD) vereist als id- en gebruikersgroepprovider. Meer informatie over:
 
-- [Identiteitsvereisten](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview)
+- [Identiteitsvereisten](/azure/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview)
 
-- [Adreslijstsynchronisatie](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements)
+- [Adreslijstsynchronisatie](/azure/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements)
 
-- [Multi-factor authentication (MFA)](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks)
+- [Multi-factor authentication (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks)
 
 - [Gebruikers- en apparaatgroepen plannen](users-add.md)
 
 - [Gebruikers- en apparaatgroepen maken](groups-get-started.md)
 
-Als uw organisatie al met Office 365 werkt, moet Intune van dezelfde Azure Active Directory-omgeving gebruikmaken.
+Als uw organisatie al met Microsoft 365 werkt, moet Intune van dezelfde Azure Active Directory-omgeving gebruikmaken.
 
 ### <a name="pki-optional"></a>PKI (optioneel)
 
@@ -63,7 +63,7 @@ Voordat u naar Intune kunt migreren, moet u eerst beschikken over een [Intune-ab
 
 - Meer informatie over het [toewijzen van Intune-gebruikerslicenties](licenses-assign.md).
 
-- Als u een nieuwe AAD-tenant hebt gemaakt, lees dan [hoe u nieuwe gebruikers maakt of gebruikers uit uw on-premises Active Directory (AD) synchroniseert.](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect)
+- Als u een nieuwe AAD-tenant hebt gemaakt, lees dan [hoe u nieuwe gebruikers maakt of gebruikers uit uw on-premises Active Directory (AD) synchroniseert.](/azure/active-directory/connect/active-directory-aadconnect)
 
 ### <a name="task-3-set-your-mdm-authority-to-intune"></a>Taak 3: de MDM-instantie instellen op Intune
 

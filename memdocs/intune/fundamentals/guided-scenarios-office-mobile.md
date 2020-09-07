@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5ed7b8c0e8a4953dd2b125fbaf3e63ce74873a7
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 46e2f716808f5f3c91e44932572146d04c259484
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217487"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993899"
 ---
 # <a name="guided-scenario---secure-microsoft-office-mobile-apps"></a>Begeleid scenario: veilige mobiele apps voor Microsoft Office
 
@@ -52,7 +52,7 @@ U kunt beveiligingsbeleid voor apps gebruiken om te voorkomen dat gebruikers wer
 - Beleid voor gegevensverplaatsing, zoals **Kopieën van organisatiegegevens opslaan** en **Knippen, kopiëren en plakken beperken**.
 - Instellingen voor toegangsbeleid zoals Eenvoudige pincode vereisen voor toegang en Beheerde apps blokkeren op gekraakte of geroote apparaten.
 
-Met op apps gebaseerde voorwaardelijke toegang en beheer van client-apps voegt u een beveiligingslaag toe door ervoor te zorgen dat alleen client-apps die app-beveiligingsbeleid van Intune ondersteunen, toegang hebben tot Exchange Online en andere Office 365-services.
+Met op apps gebaseerde voorwaardelijke toegang en beheer van client-apps voegt u een beveiligingslaag toe door ervoor te zorgen dat alleen client-apps die app-beveiligingsbeleid van Intune ondersteunen, toegang hebben tot Exchange Online en andere Microsoft 365-services.
 
 U kunt de ingebouwde e-mailapps voor iOS/iPadOS en Android blokkeren wanneer u alleen toegang van de Microsoft Outlook-app tot Exchange Online toestaat. Bovendien kunt u de toegang tot SharePoint Online blokkeren voor apps waarvoor geen app-beveiligingsbeleid in Intune is ingesteld.
 

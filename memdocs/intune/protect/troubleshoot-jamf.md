@@ -17,12 +17,12 @@ ms.reviewer: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78f69edbc38bc41863783010a0e795290b7762c5
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: 492c6dd82e0b2c016da77b8dd6f10d9e3d4b5db6
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270919"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993058"
 ---
 # <a name="troubleshoot-integration-of-jamf-pro-with-microsoft-intune"></a>Problemen oplossen met integratie van Jamf Pro met Microsoft Intune
 
@@ -38,7 +38,7 @@ Voordat u begint met het oplossen van problemen, moet u wat basisinformatie verz
 - Controleer de vereisten in de volgende artikelen, afhankelijk van de manier waarop u de Jamf Pro-integratie met Intune configureert:
   - [De Jamf-cloudconnector gebruiken om Jamf Pro te integreren met Intune](conditional-access-jamf-cloud-connector.md)
   - [Jamf Pro integreren met Intune](conditional-access-integrate-jamf.md#prerequisites)
-- Alle gebruikers moeten over Microsoft Intune- en Microsoft AAD Premium P1-licenties beschikken
+- Alle gebruikers moeten over Microsoft Intune- en Microsoft Azure AD Premium P1-licenties beschikken
 - U moet over een gebruikersaccount met machtigingen voor integratie met Microsoft Intune beschikken in de Jamf Pro-console.
 - U moet over een gebruikersaccount met globale beheerdersmachtigingen beschikken in Azure.
 
@@ -85,7 +85,7 @@ Nadat een apparaat met de status *Reageert niet* is gemarkeerd in Jamf Pro, moet
 
 ### <a name="mac-devices-prompt-for-keychain-sign-in-when-you-open-an-app"></a>Op Mac-apparaten wordt aan gebruikers gevraagd om zich met de sleutelhanger aan te melden wanneer ze een app openen  
 
-Nadat u de integratie van Intune en Jamf Pro hebt geconfigureerd en voorwaardelijke toegangsbeleidsregels hebt geïmplementeerd, wordt gebruikers van apparaten die met Jamf Pro worden beheerd, gevraagd een wachtwoord in te voeren wanneer ze Microsoft Office 365-toepassingen openen zoals Teams, Outlook en andere apps waarvoor Azure AD-verificatie is vereist. 
+Nadat u de integratie van Intune en Jamf Pro hebt geconfigureerd en beleid voor voorwaardelijke toegang hebt geïmplementeerd, wordt gebruikers van apparaten die met Jamf Pro worden beheerd, gevraagd een wachtwoord in te voeren wanneer ze Microsoft 365-apps openen zoals Teams, Outlook en andere apps waarvoor Azure AD-verificatie is vereist. 
 
 Een prompt met tekst zoals in het volgende voorbeeld wordt bijvoorbeeld weergegeven wanneer Microsoft Teams wordt geopend:
 
@@ -157,7 +157,7 @@ In de bedrijfsportal-app ziet de gebruiker mogelijk **`Not registered`** , en mo
 
 **Oplossing**  
 U kunt de registratiebron als volgt van Intune wijzigen in Jamf:
-1. [De registratie van het macOS-apparaat bij Intune ongedaan maken](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-macos). Om het voor apparaten die niet volledig uit Intune zijn verwijderd niet nog ingewikkelder te maken, raadpleegt u [*Oorzaak 6*](#cause-6) in deze lijst met oorzaken.  
+1. [De registratie van het macOS-apparaat bij Intune ongedaan maken](../user-help/unenroll-your-device-from-intune-macos.md). Om het voor apparaten die niet volledig uit Intune zijn verwijderd niet nog ingewikkelder te maken, raadpleegt u [*Oorzaak 6*](#cause-6) in deze lijst met oorzaken.  
 
 2. Gebruik Jamf-selfservice op het apparaat om de bedrijfsportal-app te openen en het apparaat vervolgens in te schrijven bij Intune. Voor deze taak moet u [Jamf hebben gebruikt om de bedrijfsportal-app voor macOS te implementeren](conditional-access-assign-jamf.md#deploy-the-company-portal-app-for-macos-in-jamf-pro) en [een beleid in Jamf Pro hebben gemaakt waarmee het gebruikersapparaat bij Azure AD wordt geregistreerd](conditional-access-assign-jamf.md#create-a-policy-in-jamf-pro-to-have-users-register-their-devices-with-azure-active-directory).  
 

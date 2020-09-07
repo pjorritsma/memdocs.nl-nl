@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f44bd52d12753ae25b8828d6c41d3055721a1fd6
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: fc6201ca73a7599ab05b8a4874a431eed6b81c46
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165988"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912471"
 ---
 # <a name="intune-reports"></a>Intune-rapporten
 Met Microsoft Intune-rapporten kunt u de status en activiteit van eindpunten in uw organisatie effectiever en proactief in de gaten houden. Het biedt ook andere rapportagegegevens in Intune. U kunt bijvoorbeeld rapporten zien over de compatibiliteit, de status en de trends van apparaten. Daarnaast kunt u aangepaste rapporten maken om meer specifieke gegevens te verkrijgen. 
@@ -103,7 +103,7 @@ U kunt het rapport **Trends** weergeven door de volgende stappen uit te voeren:
     ![Trendrapport van Intune](./media/intune-reports/intune-reports-03.png)
 
 ## <a name="azure-monitor-integration-reports-specialist"></a>Azure Monitor-integratierapporten (specialistisch)
-U kunt uw eigen rapporten aanpassen om de gewenste gegevens op te halen. De gegevens in uw rapporten zijn optioneel beschikbaar via [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview) met behulp van [Log Analytics](reports.md#log-analytics) en [Azure Monitor-werkmappen](reports.md#workbooks). Met deze oplossingen kunt u aangepaste query's maken, waarschuwingen configureren en dashboards maken om de compatibiliteitsgegevens van het apparaat op de gewenste manier weer te geven. Daarnaast kunt u de activiteitenlogboeken in uw Azure Storage-account bewaren, integreren met de rapporten met behulp van [security information and event management (SIEM) tools](https://docs.microsoft.com/microsoft-365/security/office-365-security/siem-server-integration) (hulpprogramma's voor SIEM (Security Information and Event Management)) en de rapporten correleren met Azure AD-activiteitenlogboeken. Azure Monitor-werkmappen kunnen worden gebruikt naast het importeren van dashboards indien er behoefte is aan aangepaste rapportage.
+U kunt uw eigen rapporten aanpassen om de gewenste gegevens op te halen. De gegevens in uw rapporten zijn optioneel beschikbaar via [Azure Monitor](/azure/azure-monitor/overview) met behulp van [Log Analytics](reports.md#log-analytics) en [Azure Monitor-werkmappen](reports.md#workbooks). Met deze oplossingen kunt u aangepaste query's maken, waarschuwingen configureren en dashboards maken om de compatibiliteitsgegevens van het apparaat op de gewenste manier weer te geven. Daarnaast kunt u de activiteitenlogboeken in uw Azure Storage-account bewaren, integreren met de rapporten met behulp van [security information and event management (SIEM) tools](/microsoft-365/security/office-365-security/siem-server-integration) (hulpprogramma's voor SIEM (Security Information and Event Management)) en de rapporten correleren met Azure AD-activiteitenlogboeken. Azure Monitor-werkmappen kunnen worden gebruikt naast het importeren van dashboards indien er behoefte is aan aangepaste rapportage.
 
 > [!NOTE]
 > Voor de functionaliteit van complexe rapporten is een Azure-abonnement vereist.
@@ -141,21 +141,21 @@ Elke Azure-resource vereist een eigen diagnostische instelling. De diagnostische
 
 Met één diagnostische instelling kan een van beide doelen worden gedefinieerd. Als u gegevens wilt verzenden naar meer dan één bepaald type doel (bijvoorbeeld twee verschillende Log Analytics-werkruimten), maakt u meerdere instellingen. Elke resource kan maximaal vijf diagnostische instellingen hebben.
 
-Zie [Diagnostische instelling maken voor het verzamelen van platformlogboeken en metrische gegevens in Azure](https://docs.microsoft.com/azure/azure-monitor/platform/diagnostic-settings) voor meer informatie over diagnostische instellingen.
+Zie [Diagnostische instelling maken voor het verzamelen van platformlogboeken en metrische gegevens in Azure](/azure/azure-monitor/platform/diagnostic-settings) voor meer informatie over diagnostische instellingen.
 
 ### <a name="log-analytics"></a>Log Analytics
-Log Analytics is het primaire hulpprogramma in de Azure-portal voor het schrijven van logboekquery's en het interactief analyseren van de resultaten van de query's. Zelfs als een logboekquery elders in Azure Monitor wordt gebruikt, moet u de query doorgaans eerst schrijven en testen met behulp van Log Analytics. Zie [Overzicht van logboekquery's in Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview) voor meer informatie over het gebruik van Log Analytics en het maken van logboekquery's. 
+Log Analytics is het primaire hulpprogramma in de Azure-portal voor het schrijven van logboekquery's en het interactief analyseren van de resultaten van de query's. Zelfs als een logboekquery elders in Azure Monitor wordt gebruikt, moet u de query doorgaans eerst schrijven en testen met behulp van Log Analytics. Zie [Overzicht van logboekquery's in Azure Monitor](/azure/azure-monitor/log-query/log-query-overview) voor meer informatie over het gebruik van Log Analytics en het maken van logboekquery's. 
 
 ### <a name="workbooks"></a>Werkmappen
-Werkmappen combineren tekst, query's van Log Analytics, metrische gegevens van Azure en parameters in uitgebreide interactieve rapporten. Werkmappen kunnen worden bewerkt door andere teamleden die toegang hebben tot dezelfde Azure-resources. Zie [Azure Monitor-werkmappen](https://docs.microsoft.com/azure/azure-monitor/app/usage-workbooks) voor meer informatie over werkmappen. U kunt ook werken met werkmapsjablonen en eraan bijdragen. Zie [Azure Monitor Workbook Templates](https://go.microsoft.com/fwlink/?linkid=867045) (Azure Monitor-werkmapsjablonen) voor meer informatie.
+Werkmappen combineren tekst, query's van Log Analytics, metrische gegevens van Azure en parameters in uitgebreide interactieve rapporten. Werkmappen kunnen worden bewerkt door andere teamleden die toegang hebben tot dezelfde Azure-resources. Zie [Azure Monitor-werkmappen](/azure/azure-monitor/app/usage-workbooks) voor meer informatie over werkmappen. U kunt ook werken met werkmapsjablonen en eraan bijdragen. Zie [Azure Monitor Workbook Templates](https://go.microsoft.com/fwlink/?linkid=867045) (Azure Monitor-werkmapsjablonen) voor meer informatie.
 
 ## <a name="next-steps"></a>Volgende stappen 
 
 Meer informatie over de volgende technologieën:
 - [Blog - Microsoft Intune reporting framework](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Reporting-Framework-Coming-to-Intune/ba-p/1009553) (Blog: Microsoft Intune-rapportageframework)
-- [Azure Monitor](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-activity-logs-azure-monitor)
-- [Wat is Log Analytics?](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview#what-is-log-analytics)
-- [Logboekquery's](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview)
-- [Aan de slag met Log Analytics in Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/log-query/get-started-portal)
-- [Azure Monitor-werkmappen](https://docs.microsoft.com/azure/azure-monitor/app/usage-workbooks)
-- [Security information and event management (SIEM) tools](https://docs.microsoft.com/microsoft-365/security/office-365-security/siem-server-integration) (Hulpprogramma's voor SIEM (Security Information and Event Management))
+- [Azure Monitor](/azure/active-directory/reports-monitoring/concept-activity-logs-azure-monitor)
+- [Wat is Log Analytics?](/azure/azure-monitor/log-query/log-query-overview#what-is-log-analytics)
+- [Logboekquery's](/azure/azure-monitor/log-query/log-query-overview)
+- [Aan de slag met Log Analytics in Azure Monitor](/azure/azure-monitor/log-query/get-started-portal)
+- [Azure Monitor-werkmappen](/azure/azure-monitor/app/usage-workbooks)
+- [SIEM-hulpprogramma's (Security Information and Event Management)](/microsoft-365/security/office-365-security/siem-server-integration)

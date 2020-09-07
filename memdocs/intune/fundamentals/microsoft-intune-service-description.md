@@ -1,6 +1,6 @@
 ---
 title: Beschrijving van de Microsoft Intune-service
-description: Microsoft Intune is een cloudservice waarmee u Windows-, iOS-/iPadOS-, Mac OS X- en Android-apparaten kunt beheren.
+description: Microsoft Intune is een cloudservice waarmee u Windows-, iOS-/iPadOS-, macOS- en Android-apparaten kunt beheren.
 keywords: ''
 author: dougeby
 ms.author: dougeby
@@ -15,12 +15,12 @@ ms.reviewer: cacamp
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f89fc7ffb3059204507a541e19afa2e97424dea5
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 7352ebaf9b4aba07316c8fd9b1b5fc98d20588b0
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663222"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992688"
 ---
 # <a name="microsoft-intune-service-description"></a>Beschrijving van de Microsoft Intune-service
 
@@ -55,17 +55,17 @@ Omdat het MDM-ecosysteem regelmatig wordt gewijzigd met bijgewerkte versies van 
 
 - [Wat is er nieuw in Microsoft Intune?](whats-new.md) Dit onderwerp wordt maandelijks bijgewerkt met de service-update en wekelijks wanneer er bijvoorbeeld apps zoals de bedrijfsportal-app worden vrijgegeven.
 
-- Belangrijke updates van de service worden ook aangekondigd in het berichtencentrum van de [Microsoft 365-beheerportal](https://admin.microsoft.com/). Als u de bijbehorende [mobiele Office 365-beheer-app](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a) installeert, kunt u meldingen ontvangen op uw mobiele apparaat. Lees hier meer over het werken met het [berichtencentrum voor Office 365](https://support.office.com/client/results?Shownav=true&ns=O365ENTADMIN&version=15&ver=15&HelpID=O365E_MCManageUpdates).
+- Belangrijke updates van de service worden ook aangekondigd in het berichtencentrum van de [Microsoft 365-beheerportal](https://admin.microsoft.com/). Als u de bijbehorende [mobiele Microsoft 365-beheer-app](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a) installeert, kunt u meldingen ontvangen op uw mobiele apparaat. Lees hier meer over het werken met het [berichtencentrum voor Microsoft 365](https://support.office.com/client/results?Shownav=true&ns=O365ENTADMIN&version=15&ver=15&HelpID=O365E_MCManageUpdates).
 
   Een paar nuttige tips:
 
-  - De berichten in het Office 365-beheercentrum worden gericht gestuurd. Dit betekent dat als uw bedrijf niet beschikt over een Intune voor EDU-aanbieding, u geen berichten ontvangt over Intune voor EDU.
+  - De berichten in het Microsoft 365-beheercentrum worden gericht gestuurd. Dit betekent dat als uw bedrijf niet beschikt over een Intune voor EDU-aanbieding, u geen berichten ontvangt over Intune voor EDU.
 
   - Berichten verlopen. Zo is de melding dat de service is bijgewerkt met een koppeling naar de Wat is er nieuw-pagina waarschijnlijk verlopen voordat u de volgende melding over service-updates ontvangt. Anders zou u een groot aantal berichten hebben die mogelijk niet meer relevant zijn.
 
-  - Met de mobiele app voor Office 365-beheer kunt u alle berichten doorzoeken en de melding doorsturen als u deze wilt delen met collega's in uw organisatie.
+  - Met de mobiele app voor Microsoft 365-beheer kunt u alle berichten doorzoeken en de melding doorsturen als u deze wilt delen met collega's in uw organisatie.
 
-  - Onder Edit message center preferences (Voorkeuren voor het berichtencentrum bewerken) komt een wisselknop voor **Intune** zodat u de berichten kunt bekijken die naar een Intune-abonnement zijn gestuurd. Als u Mobile Device Management voor Office 365 ziet: dat is niet Intune maar een andere service.
+  - Onder Edit message center preferences (Voorkeuren voor het berichtencentrum bewerken) komt een wisselknop voor **Intune** zodat u de berichten kunt bekijken die naar een Intune-abonnement zijn gestuurd. Als u Mobile Device Management voor Microsoft 365 ziet: dat is niet Intune maar een andere service.
 
 - We gebruiken ook twee blogs gebruikt voor het delen van de EMS-berichten en de best practices voor Intune-ondersteuning:
 
@@ -74,21 +74,21 @@ Omdat het MDM-ecosysteem regelmatig wordt gewijzigd met bijgewerkte versies van 
   - [De blog Intune Support](https://blogs.technet.microsoft.com/intunesupport/)
 
 > [!Note]
-> U kunt de servicestatus van Intune bewaken in de [Microsoft 365-beheerportal](https://admin.microsoft.com). Kies **Servicestatus** in het linkerdeelvenster. U kunt ook de [mobiele app voor Office 365-beheer](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a) gebruiken om de servicestatus weer te geven.
+> U kunt de servicestatus van Intune bewaken in de [Microsoft 365-beheerportal](https://admin.microsoft.com). Kies **Servicestatus** in het linkerdeelvenster. U kunt ook de [mobiele app voor Microsoft 365-beheer](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a) gebruiken om de servicestatus weer te geven.
 
 ## <a name="types-of-notices-microsoft-provides-about-the-intune-service"></a>Typen meldingen die Microsoft over de Intune-service biedt
 
 Om ervoor te zorgen dat u zich voor kunt bereiden op wijzigingen in de service, brengen wij u hiervan ten minste 7 tot 90 dagen vóór de servicewijziging op de hoogte, afhankelijk van de gevolgen van de wijziging. Het kan onder andere gaan om de volgende typen wijzigingen:
 
-- Wijzigingen in de eindgebruikerservaring die u wilt delen met uw helpdeskpersoneel of uw eindgebruikers. Microsoft brengt u doorgaans 7 tot 30 dagen vóór dergelijke wijzigingen op de hoogte en legt deze vast in [Wat is er nieuw in de gebruikersinterface van de Intune-app](whats-new-app-ui.md). Zaken als de correctie van een spelfout, worden doorgaans niet vastgelegd in documentatie. Maar een wijziging in de eindgebruikerservaring voor inschrijving is in de gebruikersinterface voldoende ingrijpend, zodat zowel een bericht wordt gestuurd naar klanten via het berichtencentrum van Office 365 als een koppeling wordt geplaatst in de Wat is er nieuw in de gebruikersinterface van de Intune-app. Zo bent u op de hoogte van aanstaande wijzigingen en hebt u de tijd om de richtlijnen voor uw eindgebruikers te evalueren en bij te werken voordat de wijzigingen worden uitgerold.
+- Wijzigingen in de eindgebruikerservaring die u wilt delen met uw helpdeskpersoneel of uw eindgebruikers. Microsoft brengt u doorgaans 7 tot 30 dagen vóór dergelijke wijzigingen op de hoogte en legt deze vast in [Wat is er nieuw in de gebruikersinterface van de Intune-app](whats-new-app-ui.md). Zaken als de correctie van een spelfout, worden doorgaans niet vastgelegd in documentatie. Maar een wijziging in de eindgebruikerservaring voor inschrijving is in de gebruikersinterface voldoende ingrijpend, zodat zowel een bericht wordt gestuurd naar klanten via het berichtencentrum van Microsoft 365 als een koppeling wordt geplaatst in de Wat is er nieuw in de gebruikersinterface van de Intune-app. Zo bent u op de hoogte van aanstaande wijzigingen en hebt u de tijd om de richtlijnen voor uw eindgebruikers te evalueren en bij te werken voordat de wijzigingen worden uitgerold.
 
-- Wijzigingen waarop u actie moet ondernemen, heten **Plan for Change** (Plannen voor wijziging) en worden doorgaans circa 30 dagen voorafgaand aan de wijziging aangekondigd. In het berichtencentrum van Office 365 wordt specifiek de categorie Plannen voor wijziging aangegeven. Als er een exacte datum bekend is waarop de wijziging in gebruik wordt genomen, wordt tevens een datum voor **Act by** (reageren voor) vermeld, met een visuele wachtrij en uitroepteken.
+- Wijzigingen waarop u actie moet ondernemen, heten **Plan for Change** (Plannen voor wijziging) en worden doorgaans circa 30 dagen voorafgaand aan de wijziging aangekondigd. In het berichtencentrum van Microsoft 365 wordt specifiek de categorie Plannen voor wijziging aangegeven. Als er een exacte datum bekend is waarop de wijziging in gebruik wordt genomen, wordt tevens een datum voor **Act by** (reageren voor) vermeld, met een visuele wachtrij en uitroepteken.
 
 - Voor de meeste afschaffingen ontvangt u 90 dagen voorafgaand aan de afschaffing een kennisgeving. Als bijvoorbeeld de ondersteuning van een specifieke versie van IE wordt afgeschaft, is het doel om u hier 90 dagen van tevoren over te informeren. Het aankondigen van afschaffingen worden echter complexer wanneer een ander bedrijf een afschaffing aankondigt. Wanneer bijvoorbeeld een browserbedrijf aankondigt dat Silverlight niet meer zal worden ondersteund in hun nieuwste build, laat Microsoft aan klanten weten dat die browser niet meer zal worden ondersteund, maar kan deze kennisgeving mogelijk niet binnen 90 dagen voor de wijziging worden gestuurd.
 
 - In het geval van stopzetting van de Intune-service, ontvangt u 12 maanden van tevoren een melding.
 
-In het zeldzame geval dat er na een incident actie moet worden ondernomen om uw service te herstellen of dat er een grote wijziging op stapel staat die op basis van feedback van klanten door Microsoft als mogelijk verstorend wordt beschouwd, wordt op basis van de instellingen in uw [Office 365-communicatievoorkeuren](https://support.office.com/article/Change-your-contact-preferences-for-communications-from-Microsoft-6f70de1b-a64d-4498-bfbd-be8c83a9c0fc) en of u een geldig (en bij voorkeur zakelijk) e-mailadres hebt opgegeven, een e-mail gestuurd naar de servicebeheerders.  
+In het zeldzame geval dat er na een incident actie moet worden ondernomen om uw service te herstellen of dat er een grote wijziging op stapel staat die op basis van feedback van klanten door Microsoft als mogelijk verstorend wordt beschouwd, wordt op basis van de instellingen in uw [Microsoft 365-communicatievoorkeuren](https://support.office.com/article/Change-your-contact-preferences-for-communications-from-Microsoft-6f70de1b-a64d-4498-bfbd-be8c83a9c0fc) en of u een geldig (en bij voorkeur zakelijk) e-mailadres hebt opgegeven, een e-mail gestuurd naar de servicebeheerders.  
 
 
 <!--- ## Choose the management solution that's right for you

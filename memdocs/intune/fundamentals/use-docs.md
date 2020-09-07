@@ -11,12 +11,12 @@ author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3d5d8d2d9882c033f3fbb726db937ba48d67fdc8
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 07574b0e08d3e46785b354551434007bc63bee44
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988168"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194069"
 ---
 # <a name="using-the-intune-docs"></a>De intune-documenten gebruiken
 
@@ -48,7 +48,7 @@ Zie [Ondersteuning voor Intune krijgen](get-support.md) voor algemene hulp en on
 
 ## <a name="provide-doc-feedback"></a>Feedback over documenten geven
 
-De sectie Feedback bevindt zich onderaan in elk artikel. Klik in de rechterbovenhoek van een artikel op de koppeling **Feedback** om naar deze sectie te gaan. Feedback is geïntegreerd met GitHub-problemen. Raadpleeg de [blogpost in het documentenplatform](https://docs.microsoft.com/teamblog/a-new-feedback-system-is-coming-to-docs) voor meer informatie over de integratie met GitHub-problemen.
+De sectie Feedback bevindt zich onderaan in elk artikel. Klik in de rechterbovenhoek van een artikel op de koppeling **Feedback** om naar deze sectie te gaan. Feedback is geïntegreerd met GitHub-problemen. Raadpleeg de [blogpost in het documentenplatform](/teamblog/a-new-feedback-system-is-coming-to-docs) voor meer informatie over de integratie met GitHub-problemen.
 
 Klik op **Productfeedback** om feedback te delen over de Intune-service (niet over de documenten).
 
@@ -68,13 +68,13 @@ Gebruik GitHub-problemen om de volgende typen feedback in te dienen:
 - Lokalisatie: Feedback over de vertaling van inhoud.
 - Optimalisatie van zoekmachines (SEO): Feedback over problemen bij het zoeken naar inhoud. Neem de zoekmachine, trefwoorden, en het doelartikel op in de opmerkingen.
 
-Als er problemen worden gemeld met onderwerpen die niet te maken hebben met documenten, zoals [productfeedback](https://microsoftintune.uservoice.com/forums/291681-ideas), [vragen over een product](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod) of [ondersteuningsaanvragen](get-support.md), worden deze problemen gesloten. De gebruiker wordt vervolgens naar het juiste feedbackkanaal geleid.
+Als er problemen worden gemeld met onderwerpen die niet te maken hebben met documenten, zoals [productfeedback](https://microsoftintune.uservoice.com/forums/291681-ideas), [vragen over een product](/answers/products/mem) of [ondersteuningsaanvragen](get-support.md), worden deze problemen gesloten. De gebruiker wordt vervolgens naar het juiste feedbackkanaal geleid.
 
 Raadpleeg [Feedback over documenten](https://aka.ms/sitefeedback) om feedback te delen op het microsoft.com-platform. Het platform bevat alle wrapperonderdelen, zoals de koptekst, de inhoudsopgave en het snelmenu. Ook is er informatie over hoe de artikelen worden weergegeven in de browser, zoals het lettertype, de waarschuwingsvakken en pagina-ankers.
 
 ## <a name="contribute-to-docs"></a>Bijdragen aan documenten
 
-De Intune-documenten, zoals de meeste inhoud op docs.microsoft.com, zijn een open-source op GitHub. In deze bibliotheek worden bijdragen uit de community geaccepteerd en aangemoedigd. Raadpleeg [Handleiding voor bijdragers](https://docs.microsoft.com/contribute) voor meer informatie over hoe u aan de slag kunt gaan. Het maken van een [GitHub-account](https://github.com/join) is de enige vereiste.
+De Intune-documenten, zoals de meeste inhoud op docs.microsoft.com, zijn een open-source op GitHub. In deze bibliotheek worden bijdragen uit de community geaccepteerd en aangemoedigd. Raadpleeg [Handleiding voor bijdragers](/contribute) voor meer informatie over hoe u aan de slag kunt gaan. Het maken van een [GitHub-account](https://github.com/join) is de enige vereiste.
 
 ### <a name="basic-steps-to-contribute-to-docs"></a>Basisstappen voor het bijdragen aan documenten
 
@@ -82,7 +82,7 @@ De Intune-documenten, zoals de meeste inhoud op docs.microsoft.com, zijn een ope
 
 2. Klik op het potloodpictogram om het bronbestand te bewerken.  
 
-3. Breng wijzigingen aan in de Markdown-bron. Raadpleeg [Markdown gebruiken voor het schrijven van documenten](https://docs.microsoft.com/contribute/contribute-how-to-write-use-markdown) voor meer informatie.  
+3. Breng wijzigingen aan in de Markdown-bron. Raadpleeg [Markdown gebruiken voor het schrijven van documenten](/contribute/contribute-how-to-write-use-markdown) voor meer informatie.  
 
 4. Open in de sectie Bestandswijziging de openbare opmerking bij doorvoering, waarin wordt beschreven *wat* u hebt gewijzigd. Klik vervolgens op **Bestandswijziging voorstellen**.  
 
@@ -109,7 +109,7 @@ Volg deze algemene richtlijnen bij het bijdragen aan Intune-documenten:
 
 - Dien niet ineens heel grote pull-aanvragen in. U kunt in plaats hiervan [het probleem melden](#provide-doc-feedback) en een discussie starten. Vervolgens kunnen we het eens worden over de richting, voordat u heel veel tijd investeert.  
 
-- Lees de [Microsoft-stijlgids](https://aka.ms/MicrosoftStyle). Ken de [10 belangrijkste tips voor Microsoft-stijl en Microsoft Voice](https://docs.microsoft.com/style-guide/top-10-tips-style-voice).  
+- Lees de [Microsoft-stijlgids](https://aka.ms/MicrosoftStyle). Ken de [10 belangrijkste tips voor Microsoft-stijl en Microsoft Voice](/style-guide/top-10-tips-style-voice).  
 
 - Volg de [GitHub-werkstroom](https://guides.github.com/introduction/flow/).  
 
@@ -117,7 +117,7 @@ Volg deze algemene richtlijnen bij het bijdragen aan Intune-documenten:
 
 ## <a name="consolidation-of-documentation-for-microsoft-endpoint-manager"></a>Consolidatie van documentatie voor Microsoft Endpoint Manager
 
-Voor betere ondersteuning van gecombineerde scenario's voor Intune en Configuration Manager is de documentatie voor Intune en Configuration Manager geconsolideerd op de Microsoft Endpoint Manager-site. De Intune-documentatie bevindt zich nu op [https://docs.microsoft.com/mem/intune](https://docs.microsoft.com/mem/intune) en de documentatiebibliotheek van Configuration Manager is beschikbaar op [https://docs.microsoft.com/mem/configmgr](https://docs.microsoft.com/mem/configmgr). Als u een oude URL gebruikt, worden alle koppelingen automatisch omgeleid, zodat u geen wijzigingen hoeft aan te brengen om deze inhoud te lezen.
+Voor betere ondersteuning van gecombineerde scenario's voor Intune en Configuration Manager is de documentatie voor Intune en Configuration Manager geconsolideerd op de Microsoft Endpoint Manager-site. De Intune-documentatie bevindt zich nu op [../index.yml](../index.yml) en de documentatiebibliotheek van Configuration Manager is beschikbaar op [../../configmgr/index.yml](../../configmgr/index.yml). Als u een oude URL gebruikt, worden alle koppelingen automatisch omgeleid, zodat u geen wijzigingen hoeft aan te brengen om deze inhoud te lezen.
 
 Als u feedback geeft of een bijdrage levert aan artikelen, zijn er enkele wijzigingen nodig:
 

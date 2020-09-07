@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/13/2020
+ms.date: 08/31/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,16 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac0e1089b91fa6404ab9582b7f64ae6f60bf217b
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: a9e5b334beecdd8037b3aabb2b81ec57db0673b8
+ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88216972"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89286217"
 ---
 # <a name="enable-win32-apps-on-s-mode-devices"></a>Win32-apps inschakelen op S-modusapparaten
 
-[Windows 10 S-modus](https://docs.microsoft.com/windows/deployment/s-mode) is een vergrendeld besturingssysteem dat alleen Store-apps uitvoert. Op Windows S-apparaten kunnen standaard geen Win32-apps worden geïnstalleerd en uitgevoerd. Deze apparaten bevatten één *Win 10S-basisbeleid*, waardoor het S-modusapparaat geen Win32-apps kan uitvoeren. Door echter een aanvullend **S-modusbeleid** te maken en te gebruiken in Intune, kunt u Win32-apps installeren en uitvoeren op beheerde Windows 10 S-modusapparaten. Met de PowerShell-hulpprogramma's van [Microsoft Defender Application Control (WDAC)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) kunt u een of meer aanvullende beleidsregels maken voor de Windows S-modus. U moet het aanvullende beleid ondertekenen met de [Device Guard Signing service (DGSS)](https://go.microsoft.com/fwlink/?linkid=2095629) of met [SignTool.exe](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/use-signed-policies-to-protect-windows-defender-application-control-against-tampering) en vervolgens het beleid uploaden en distribueren via Intune. Als alternatief kunt u het aanvullende beleid ondertekenen met een codesigning-certificaat van uw organisatie, maar de voorkeur gaat uit naar DGSS. In het geval dat u het codesigning-certificaat van uw organisatie gebruikt, moet het basiscertificaat waaraan het codesigning-certificaat is gekoppeld, aanwezig zijn op het apparaat.
+[Windows 10 S-modus](/windows/deployment/s-mode) is een vergrendeld besturingssysteem dat alleen Store-apps uitvoert. Op Windows S-apparaten kunnen standaard geen Win32-apps worden geïnstalleerd en uitgevoerd. Deze apparaten bevatten één *Win 10S-basisbeleid*, waardoor het S-modusapparaat geen Win32-apps kan uitvoeren. Door echter een aanvullend **S-modusbeleid** te maken en te gebruiken in Intune, kunt u Win32-apps installeren en uitvoeren op beheerde Windows 10 S-modusapparaten. Met de PowerShell-hulpprogramma's van [Microsoft Defender Application Control (WDAC)](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) kunt u een of meer aanvullende beleidsregels maken voor de Windows S-modus. U moet het aanvullende beleid ondertekenen met de [Device Guard Signing service (DGSS)](https://go.microsoft.com/fwlink/?linkid=2095629) of met [SignTool.exe](/windows/security/threat-protection/windows-defender-application-control/use-signed-policies-to-protect-windows-defender-application-control-against-tampering) en vervolgens het beleid uploaden en distribueren via Intune. Als alternatief kunt u het aanvullende beleid ondertekenen met een codesigning-certificaat van uw organisatie, maar de voorkeur gaat uit naar DGSS. In het geval dat u het codesigning-certificaat van uw organisatie gebruikt, moet het basiscertificaat waaraan het codesigning-certificaat is gekoppeld, aanwezig zijn op het apparaat.
+
+> [!IMPORTANT]
+> Versie 2 van de Device Guard-service voor ondertekenen is vanaf medio september 2020 beschikbaar voor gebruik en u kunt tot uiterlijk eind december 2020 overstappen naar DGSS-versie 2. Eind december 2020 worden de bestaande webtoepassingen voor de huidige versie van de DGSS buiten gebruik gesteld en kan deze niet meer worden gebruikt. U moet plannen maken om tussen september en december 2020 naar de nieuwe versie van de service te migreren. Neem contact op met DGSSMigration@Microsoft.com voor meer informatie.
 
 Door het aanvullende beleid voor de S-modus toe te wijzen in Intune, stelt u het apparaat in staat een uitzondering te maken op het bestaande S-modusbeleid van het apparaat, waardoor de geüploade bijbehorende ondertekende app-catalogus kan worden gebruikt. Het beleid stelt een lijst met toegestane apps in (de app-catalogus) die op het S-modusapparaat kan worden gebruikt.
 
@@ -40,8 +43,8 @@ De stappen voor het uitvoeren van Win32-apps op een Windows 10-apparaat in de S-
 
 1. Schakel S-modusapparaten in via Intune als onderdeel van het inschrijfproces van Windows 10 S.
 2. Een aanvullend beleid maken om Win32-apps toe te staan:
-   - U kunt [Microsoft Defender Application Control (WDAC)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)-hulpprogramma's gebruiken om een aanvullend beleid te maken. De basis-beleids-id binnen het beleid moet overeenkomen met de basis-beleids-id van het S-modusapparaat (die hard is gecodeerd op de client). Zorg er ook voor dat de versie van het beleid hoger is dan de vorige versie.
-   - U gebruikt DGSS om uw aanvullende beleid te ondertekenen. Zie voor meer informatie [Sign code integrity policy with Device Guard signing](https://docs.microsoft.com/microsoft-store/sign-code-integrity-policy-with-device-guard-signing) (code-integriteitsbeleid ondertekenen met Device Guard-ondertekening).
+   - U kunt [Microsoft Defender Application Control (WDAC)](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)-hulpprogramma's gebruiken om een aanvullend beleid te maken. De basis-beleids-id binnen het beleid moet overeenkomen met de basis-beleids-id van het S-modusapparaat (die hard is gecodeerd op de client). Zorg er ook voor dat de versie van het beleid hoger is dan de vorige versie.
+   - U gebruikt DGSS om uw aanvullende beleid te ondertekenen. Zie voor meer informatie [Sign code integrity policy with Device Guard signing](/microsoft-store/sign-code-integrity-policy-with-device-guard-signing) (code-integriteitsbeleid ondertekenen met Device Guard-ondertekening).
    - U uploadt het ondertekende aanvullende beleid naar Intune door een aanvullende beleidsregel voor Windows 10 S-modus te maken (zie hieronder).
 3. U staat Win32-app-catalogi toe via Intune:
    - U maakt catalogusbestanden (1 voor elke app) en ondertekent deze met DGSS of een andere certificaatinfrastructuur.
@@ -98,6 +101,6 @@ Rapportagewaarden die worden weergegeven in de Intune-console voor S-modusrappor
 
 ## <a name="next-steps"></a>Volgende stappen
 
-- Zie [Win32-apps in S-modus](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/lob-win32-apps-on-s) voor meer informatie.
+- Zie [Win32-apps in S-modus](/windows/security/threat-protection/windows-defender-application-control/lob-win32-apps-on-s) voor meer informatie.
 - Zie [Apps toevoegen aan Microsoft Intune](apps-add.md) voor meer informatie over apps toevoegen aan Intune.
 - Zie [Intune Win32 app-beheer](apps-win32-app-management.md) voor meer informatie over Win32-apps.

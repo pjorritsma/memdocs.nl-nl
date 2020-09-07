@@ -15,12 +15,12 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - Intune
-ms.openlocfilehash: 7f4d3f8193eeaf9597d56c8cf1cd999147915e61
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 9aceb4d2b8b0b67af297fa5d15cdf66ae04a83f4
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531567"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996619"
 ---
 # <a name="troubleshooting-app-protection-policy-deployment-in-intune"></a>Problemen oplossen met de implementatie van Intune-beveiligingsbeleid voor apps
 
@@ -57,14 +57,14 @@ Hoewel u het Intune-beveiligingsbeleid voor apps onafhankelijk van een MDM-oplos
 - De gebruiker moet behoren tot een beveiligingsgroep waarop een beleidsregel voor de beveiliging van apps is gericht. Dezelfde beleidsregel voor de beveiliging van apps moet ook zijn gericht op de specifieke app die wordt gebruikt.
 - Android-apparaten moeten beschikken over de bedrijfsportal-app om app-beveiligingsbeleid te krijgen.
 - Als u de apps [Word, Excel of Power Point](https://products.office.com/business/office) gebruikt, moet aan de volgende aanvullende vereisten worden voldaan:
-    - De gebruiker moet een licentie voor [Microsoft 365 Apps voor Business of Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) aan zijn/haar Azure Active Directory-account (Azure AD) hebben gekoppeld. Het abonnement moet de Office-apps voor mobiele apparaten bevatten en kan een cloudopslagaccount met [OneDrive voor Bedrijven](https://onedrive.live.com/about/business/) bevatten. Office 365-licenties kunnen aan de hand van de volgende [instructies](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc) worden toegewezen in het [Microsoft 365-beheercentrum](https://admin.microsoft.com).
+    - De gebruiker moet een licentie voor [Microsoft 365 Apps voor Business of Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) aan zijn/haar Azure Active Directory-account (Azure AD) hebben gekoppeld. Het abonnement moet de Office-apps voor mobiele apparaten bevatten en kan een cloudopslagaccount met [OneDrive voor Bedrijven](https://onedrive.live.com/about/business/) bevatten. Microsoft 365-licenties kunnen aan de hand van de volgende [instructies](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc) worden toegewezen in het [Microsoft 365-beheercentrum](https://admin.microsoft.com).
     - De gebruiker moet een beheerde locatie hebben die is geconfigureerd met behulp van de gedetailleerde functionaliteit **Opslaan als**. Deze opdracht bevindt zich onder de instelling **Kopieën van organisatiegegevens opslaan** in het beveiligingsbeleid van de toepassing. Als bijvoorbeeld [OneDrive](https://onedrive.live.com/about/) de beheerde locatie is, moet de OneDrive-app worden geconfigureerd in de Word-, Excel- of PowerPoint-app van de gebruiker.
     - Als OneDrive de beheerde locatie is, moet de app het doel zijn van het app-beveiligingsbeleid dat voor de gebruiker is geïmplementeerd.
 
   > [!NOTE]
   > De mobiele Office-apps bieden momenteel alleen ondersteuning voor SharePoint Online en niet voor SharePoint On-Premises.
 
-- Als u Intune-beveiligingsbeleid voor apps gebruikt in combinatie met on-premises resources (Microsoft Skype voor bedrijven en Microsoft Exchange Server), moet u [Hybrid Modern Authentication (HMA) inschakelen voor Skype voor bedrijven en Exchange](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview).
+- Als u Intune-beveiligingsbeleid voor apps gebruikt in combinatie met on-premises resources (Microsoft Skype voor bedrijven en Microsoft Exchange Server), moet u [Hybrid Modern Authentication (HMA) inschakelen voor Skype voor bedrijven en Exchange](/office365/enterprise/hybrid-modern-auth-overview).
 
 Voor het app-beveiligingsbeleid van Intune moet de identiteit van de gebruiker in de app consistent zijn met [Intune App SDK](../developer/app-sdk-get-started.md). Deze consistentie kan alleen worden gegarandeerd via moderne verificatie. Er zijn scenario's waarin apps kunnen werken in een on-premises configuratie zonder moderne verificatie. De resultaten zijn echter niet consistent of gegarandeerd.
 
@@ -74,7 +74,7 @@ Raadpleeg de volgende artikelen voor meer informatie over het inschakelen van HM
 [Hybride, moderne authenticatie voor SfB en Exchange wordt algemeen beschikbaar](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756)
 
 - **On-premises**<br>
-[Moderne authenticatie voor SfB On-premises met AAD](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910)
+[Moderne authenticatie voor SfB On-premises met Azure AD](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910)
 
 ### <a name="check-app-protection-policy-status"></a>De status van het app-beveiligingsbeleid controleren
 
@@ -83,7 +83,7 @@ Voer de volgende stappen uit om de beveiligingsstatus van uw app te controleren:
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecteer **Apps** > **Bewaken** > **App-beveiligingsstatus** en vervolgens de tegel **Toegewezen gebruikers**.
 3. Op de pagina **App-rapportage** selecteert u **Gebruiker selecteren** voor een lijst met gebruikers en groepen.
-4. Zoek en selecteer een van de betrokken gebruikers in de lijst en selecteer vervolgens **Gebruiker selecteren**. Bovenaan het deelvenster App-rapportage ziet u of de gebruiker een licentie voor app-beveiliging heeft en over een licentie voor O365 beschikt. U kunt ook de app-status voor alle apparaten van de gebruiker bekijken.
+4. Zoek en selecteer een van de betrokken gebruikers in de lijst en selecteer vervolgens **Gebruiker selecteren**. Bovenaan het deelvenster App-rapportage ziet u of de gebruiker een licentie voor app-beveiliging heeft en over een licentie voor Microsoft 365 beschikt. U kunt ook de app-status voor alle apparaten van de gebruiker bekijken.
 5. Noteer deze belangrijke informatie, zoals de beoogde apps, apparaattypen, beleidsregels, de incheckstatus van het apparaat en het laatste synchronisatietijdstip.
 
 > [!NOTE]
@@ -95,9 +95,9 @@ Zie [De configuratie van uw beveiligingsbeleid voor apps valideren in Microsoft 
 
 In de meeste scenario's melden gebruikers zich aan bij hun accounts met behulp van hun user principal name (UPN). In sommige omgevingen (zoals in on-premises scenario's) kunnen gebruikers echter een andere vorm van aanmeldingsreferenties gebruiken. In dergelijke gevallen is het mogelijk dat de UPN die in de app wordt gebruikt, niet overeenkomt met het UPN-object in Azure AD. Als dit probleem zich voordoet, wordt het beveiligingsbeleid voor apps niet zoals verwacht toegepast.
 
-Op basis van de best practices van Microsoft moet de UPN met het primaire SMTP-adres overeenkomen. Met deze procedure kunnen gebruikers zich dankzij een consistente identiteit aanmelden bij beheerde apps, Intune-beveiliging voor apps en andere Azure AD-resources. Zie [Azure AD UserPrincipalName-populatie](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-userprincipalname)voor meer informatie.
+Op basis van de best practices van Microsoft moet de UPN met het primaire SMTP-adres overeenkomen. Met deze procedure kunnen gebruikers zich dankzij een consistente identiteit aanmelden bij beheerde apps, Intune-beveiliging voor apps en andere Azure AD-resources. Zie [Azure AD UserPrincipalName-populatie](/azure/active-directory/connect/active-directory-aadconnect-userprincipalname)voor meer informatie.
 
-Als voor uw omgeving alternatieve aanmeldingsmethoden zijn vereist, raadpleegt u [Een alternatieve aanmeldings-id configureren](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configuring-alternate-login-id), met name [HMA met alternatieve-id](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configuring-alternate-login-id#hybrid-modern-authentication-with-alternate-id).
+Als voor uw omgeving alternatieve aanmeldingsmethoden zijn vereist, raadpleegt u [Een alternatieve aanmeldings-id configureren](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id), met name [HMA met alternatieve-id](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id#hybrid-modern-authentication-with-alternate-id).
 
 ### <a name="verify-that-the-user-is-targeted"></a>Controleren of het beleid op de gebruiker is gericht
 
@@ -115,7 +115,7 @@ Wanneer u het beleid toewijst aan een gebruikersgroep, moet u ervoor zorgen dat 
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecteer **Groepen > Alle groepen**, zoek vervolgens de groep op die wordt gebruikt voor de toewijzing van uw app-beveiligingsbeleid en selecteer deze.
 3. Selecteer onder de sectie **Beheren** **Leden**.
-4. Als de betrokken gebruiker niet wordt weergegeven, controleert u [Toegang tot apps en resources beheren met Azure Active Directory-groepen](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups) en uw lidmaatschapsregels voor de groep. Controleer of de betrokken gebruiker deel uitmaakt van de groep.
+4. Als de betrokken gebruiker niet wordt weergegeven, controleert u [Toegang tot apps en resources beheren met Azure Active Directory-groepen](/azure/active-directory/fundamentals/active-directory-manage-groups) en uw lidmaatschapsregels voor de groep. Controleer of de betrokken gebruiker deel uitmaakt van de groep.
 5. Controleer of de betrokken gebruiker zich niet in een voor het beleid uitgesloten groep bevindt.
 
 > [!IMPORTANT]

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 534a7f60668091e613ff9dd9fc8a388ec59a247a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f99ddee5a30b7fb6d604e91711d12ed81b53dd91
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989412"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993933"
 ---
 # <a name="add-groups-to-organize-users-and-devices"></a>Groepen toevoegen om gebruikers en apparaten in te delen
 
@@ -54,7 +54,7 @@ Volg de onderstaande stappen om een nieuwe groep te maken.
         >
         > Als uw primaire rol apparaatbeheer is, raden we u aan het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) te gebruiken.
 
-    - **Office 365**: Biedt mogelijkheden voor samenwerking door leden toegang te geven tot gedeelde postvakken, agenda's, bestanden, SharePoint-sites en meer. Met deze optie kunt u ook personen van buiten uw organisatie toegang verlenen tot de groep. Zie [Over Office 365-groepen](https://support.office.com/article/learn-about-office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2) voor meer informatie.
+    - **Microsoft 365**: Biedt mogelijkheden voor samenwerking door leden toegang te geven tot gedeelde postvakken, agenda's, bestanden, SharePoint-sites en meer. Met deze optie kunt u ook personen van buiten uw organisatie toegang verlenen tot de groep. Zie [Informatie over Microsoft 365-groepen](https://support.office.com/article/learn-about-office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2) voor meer informatie.
 
 4. Voer een **naam** en **beschrijving** in voor de nieuwe groep. Wees specifiek en voeg informatie toe, zodat anderen weten waar de groep voor dient.
 
@@ -70,8 +70,8 @@ Volg de onderstaande stappen om een nieuwe groep te maken.
 
     Voor meer informatie over deze lidmaatschapstypen en het maken van dynamische expressies raadpleegt u:
 
-    - [Een basisgroep maken en leden toevoegen met Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal)
-    - [Dynamische lidmaatschapsregels voor groepen in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership)
+    - [Een basisgroep maken en leden toevoegen met Azure Active Directory](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal)
+    - [Dynamische lidmaatschapsregels voor groepen in Azure Active Directory](/azure/active-directory/users-groups-roles/groups-dynamic-membership)
 
     > [!NOTE]
     > Wanneer u in dit beheercentrum gebruikers of groepen maakt, krijgt u mogelijk niet de **Azure Active Directory**-huisstijl te zien. Maar dat is wel wat er wordt gebruikt.
@@ -106,4 +106,4 @@ Zie [Beleid toewijzen aan gebruikersgroepen of apparaatgroepen](../configuration
 ## <a name="see-also"></a>Zie tevens
 
 - [Op rollen gebaseerd toegangsbeheer (RBAC) met Microsoft Intune](role-based-access-control.md)
-- [Toegang tot resources beheren met Azure AD-groepen](https://docs.microsoft.com/azure/active-directory/active-directory-manage-groups)
+- [Toegang tot resources beheren met Azure AD-groepen](/azure/active-directory/active-directory-manage-groups)

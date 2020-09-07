@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9f6b117855430af281db7087d77f53bb0e11c61
-ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
+ms.openlocfilehash: 3d7ba1f42ebffa8580e368d89ea9720e544e0063
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86137412"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994001"
 ---
 # <a name="set-up-symantec-endpoint-protection-mobile-integration-with-intune"></a>Symantec Endpoint Protection Mobile-integratie met Intune instellen
 
@@ -138,7 +138,7 @@ Met SEP Mobile worden apparaten waarop de Mobile Threat Defense-service wordt ui
 
     ![Afbeelding van het toevoegen van de iOS/iPadOS-app aan Active Directory](./media/skycure-mtd-connector-integration/symantec-portal-basic-add.png)
 
-7. Meld u aan met de Azure Active Directory-referenties voor het Office 365-account waarmee de map wordt beheerd.
+7. Meld u aan met de Azure Active Directory-referenties voor het Microsoft 365-account waarmee de map wordt beheerd.
 
 8. Kies de knop **Accepteren** om de iOS/iPadOS-app SEP Mobile toe te voegen aan Azure Active Directory.
 

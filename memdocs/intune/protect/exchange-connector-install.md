@@ -18,26 +18,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db9f275254a7b392491d01769db71d42f04c33f2
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: 27d123629baa925756f842d13212f9801da13f55
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048120"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996160"
 ---
 # <a name="set-up-the-on-premises-intune-exchange-connector"></a>De on-premises Intune Exchange-connector instellen
 
 > [!IMPORTANT]
 > De informatie in dit artikel is van toepassing op klanten die worden ondersteund voor het gebruik van een Exchange-connector.
 >
-> Vanaf juli 2020 wordt de ondersteuning voor de Exchange connector afgeschaft en vervangen door Exchange [HMA](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (Hybrid Modern Authentication, hybride moderne verificatie).  Als u een Exchange-connector hebt ingesteld in uw omgeving, blijft de Intune-tenant ondersteund voor het gebruik ervan en houdt u toegang tot de gebruikersinterface die de configuratie ervan ondersteunt. U kunt de connector blijven gebruiken of HMA configureren en vervolgens de connector verwijderen.
+> Vanaf juli 2020 wordt de ondersteuning voor de Exchange connector afgeschaft en vervangen door Exchange [HMA](/office365/enterprise/hybrid-modern-auth-overview) (Hybrid Modern Authentication, hybride moderne verificatie).  Als u een Exchange-connector hebt ingesteld in uw omgeving, blijft de Intune-tenant ondersteund voor het gebruik ervan en houdt u toegang tot de gebruikersinterface die de configuratie ervan ondersteunt. U kunt de connector blijven gebruiken of HMA configureren en vervolgens de connector verwijderen.
 >
 >U hebt Intune niet nodig om via HMA de Exchange-connector in te stellen en te gebruiken. Met deze wijziging wordt de gebruikersinterface voor het configureren en beheren van de Exchange-connector voor Intune verwijderd uit het Microsoft Endpoint Manager-beheercentrum, tenzij u al een Exchange-connector gebruikt met uw abonnement.
 
 Voor het beveiligen van de toegang tot Exchange is Intune afhankelijk van het on-premises onderdeel Microsoft Intune Exchange Connector. Deze connector wordt op sommige plaatsen in de Intune-console ook wel de *On-premises Exchange ActiveSync-connector* genoemd.
 
 > [!IMPORTANT]
-> In Intune wordt de ondersteuning voor de functie Exchange On-Premises Connector verwijderd uit Intune-serviceversies vanaf 2007 (juli). Bestaande klanten met een actieve connector kunnen op dit moment verder gaan met de huidige functionaliteit. Nieuwe klanten en bestaande klanten die geen actieve connector hebben, kunnen geen nieuwe connectors meer maken of Exchange ActiveSync-apparaten (EAS) beheren vanuit Intune. Voor deze tenants raadt Microsoft aan om met Exchange [HMA (Hybrid Modern Authentication)](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) de toegang tot Exchange On-Premises te beveiligen. Met HMA kunt u zowel beleidsregels voor Intune-app-beveiliging (ook bekend als MAM) als voorwaardelijke toegang via Outlook Mobile voor Exchange On-Premises inschakelen.
+> In Intune wordt de ondersteuning voor de functie Exchange On-Premises Connector verwijderd uit Intune-serviceversies vanaf 2007 (juli). Bestaande klanten met een actieve connector kunnen op dit moment verder gaan met de huidige functionaliteit. Nieuwe klanten en bestaande klanten die geen actieve connector hebben, kunnen geen nieuwe connectors meer maken of Exchange ActiveSync-apparaten (EAS) beheren vanuit Intune. Voor deze tenants raadt Microsoft aan om met Exchange [HMA (Hybrid Modern Authentication)](/office365/enterprise/hybrid-modern-auth-overview) de toegang tot Exchange On-Premises te beveiligen. Met HMA kunt u zowel beleidsregels voor Intune-app-beveiliging (ook bekend als MAM) als voorwaardelijke toegang via Outlook Mobile voor Exchange On-Premises inschakelen.
 
 Met behulp van de informatie in dit artikel kunt u Microsoft Intune Exchange Connector installeren en controleren. U kunt de connector met uw [beleid voor voorwaardelijke toegang](conditional-access-exchange-create.md) gebruiken om toegang tot uw on-premises Exchange-postvakken toe te staan of te blokkeren.
 
@@ -154,7 +154,7 @@ Volg deze stappen om de Intune Exchange-connector te installeren. Als u meerdere
 
    Voor een gehoste Exchange-server geeft u het adres van de Exchange-server op. De URL van de gehoste Exchange-server zoeken:
 
-   1. Open Outlook voor Office 365.
+   1. Open Outlook voor Microsoft 365.
 
    2. Kies het pictogram **?** in de linkerbovenhoek en selecteer **Over**.
 
@@ -174,7 +174,7 @@ Volg deze stappen om de Intune Exchange-connector te installeren. Als u meerdere
 
 5. Geef referenties op om meldingen te verzenden naar het Exchange Server-postvak van een gebruiker. Deze gebruiker kan worden toegewezen aan alleen meldingen. De meldingengebruiker moet een Exchange-postvak hebben om meldingen te verzenden via e-mail. U kunt deze meldingen configureren met behulp van beleid voor voorwaardelijke toegang in Intune.
 
-   Zorg ervoor dat de Autodiscover-service en de Exchange-webservices zijn geconfigureerd op de Exchange-server voor clienttoegang (CAS). Zie [Server voor clienttoegang](https://technet.microsoft.com/library/dd298114.aspx) voor meer informatie.
+   Zorg ervoor dat de Autodiscover-service en de Exchange-webservices zijn geconfigureerd op de Exchange-server voor clienttoegang (CAS). Zie [Server voor clienttoegang](/Exchange/architecture/client-access/client-access?view=exchserver-2019) voor meer informatie.
 
 6. Geef in het veld **Wachtwoord** het wachtwoord voor dit account op om Intune in te schakelen voor toegang tot de Exchange-server.
 

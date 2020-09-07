@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6fc1e75f38767de77f89dce2a85c747a7390e76d
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: ee6961de9a33f54db4f3fa8bb4c5a2bfa9406fbb
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217410"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993831"
 ---
 # <a name="guided-scenario---deploy-microsoft-edge-for-mobile"></a>Begeleid scenario: Microsoft Edge voor mobiel implementeren
 
@@ -34,7 +34,7 @@ Microsoft Edge stelt gebruikers in staat zich een weg te banen door de wirwar va
 > Als u hebt geblokkeerd dat gebruikers iOS/iPadOS- of Android-apparaten kunnen registreren, wordt in dit scenario registratie niet ingeschakeld en moeten gebruikers zelf Edge installeren.
 Op basis van Intune-beleid zijn onder andere de volgende zakelijke functies van Microsoft Edge beschikbaar:
 
-- **Dual-Identity**. Gebruikers kunnen zowel een werkaccount als een persoonlijk account maken om mee te browsen. Er is sprake van een volledige scheiding tussen de twee identiteiten. Dit is vergelijkbaar met de architectuur en ervaring in Office 365 en Outlook. Intune-beheerders kunnen het gewenste beleid instellen voor beveiligde browsersessies binnen het werkaccount.
+- **Dual-Identity**. Gebruikers kunnen zowel een werkaccount als een persoonlijk account maken om mee te browsen. Er is sprake van een volledige scheiding tussen de twee identiteiten. Dit is vergelijkbaar met de architectuur en ervaring in Microsoft 365 en Outlook. Intune-beheerders kunnen het gewenste beleid instellen voor beveiligde browsersessies binnen het werkaccount.
 - **Integratie van beveiligingsbeleid voor Intune-apps**. Beheerders kunnen nu app-beveiligingsbeleid instellen voor Microsoft Edge, inclusief beheer over knippen, kopiëren en plakken, waardoor er geen schermopnamen kunnen worden vastgelegd. Ook kunnen ze ervoor zorgen dat door de gebruiker geselecteerde koppelingen alleen kunnen worden geopend in andere beheerde apps.
 - **Proxyintegratie met Azure-toepassingen**. Beheerders kunnen toegang tot SaaS-app en web-apps beheren, en ervoor zorgen dat browser-apps alleen worden uitgevoerd in de beveiligde Microsoft Edge-browser, of eindgebruikers nu verbinding maken vanuit het bedrijfsnetwerk of vanaf internet.
 - **Beheerde snelkoppelingen naar Favorieten en naar de startpagina**. Beheerders kunnen, voor een betere toegankelijkheid, URL’s instellen die worden weergegeven onder Favorieten wanneer eindgebruikers zich in hun zakelijke context bevinden. Beheerders kunnen een snelkoppeling naar de startpagina instellen, die wordt weergegeven als primaire snelkoppeling wanneer de zakelijke gebruiker een nieuwe pagina of een nieuw tabblad opent in Microsoft Edge.

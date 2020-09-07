@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 572519d8ddf3558f1573f26b84fd6217108a24b3
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 267bf556447308ee0c81c5ad9c9bb8153df9532d
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988011"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994103"
 ---
 # <a name="configure-a-custom-domain-name"></a>Een aangepaste domeinnaam configureren
 
@@ -32,10 +32,10 @@ Wanneer uw organisatie zich registreert voor een cloudservice van Microsoft, zoa
 
 Voordat u gebruikersaccounts maakt of de on-premises Active Directory synchroniseert, wordt ten zeerste aangeraden om te bepalen of u alleen het domein .onmicrosoft.com gebruikt of dat u een of meer van uw aangepaste domeinnamen toevoegt. Stel een aangepast domein in voordat u gebruikers toevoegt om het gebruikersbeheer te vereenvoudigen. Door een klantdomein in te stellen, kunnen gebruikers zich aanmelden met de referenties die ze gebruiken voor toegang tot andere domeinbronnen.
 
-Wanneer u zich op een cloudservice van Microsoft abonneert, wordt uw exemplaar van die service een [tenant van Microsoft Azure AD](https://technet.microsoft.com/library/jj573650.aspx#BKMK_WhatIsAnAzureADTenant), dat identiteits- en adreslijstservices voor uw cloudservice biedt. En omdat de taken voor het configureren van Intune om de aangepaste domeinnaam van uw organisatie te gebruiken, dezelfde zijn als voor andere Azure AD-tenants, kunt u de informatie en procedures uit [Uw domein toevoegen](https://azure.microsoft.com/documentation/articles/active-directory-add-domain/) gebruiken.
+Wanneer u zich op een cloudservice van Microsoft abonneert, wordt uw exemplaar van die service een [tenant van Microsoft Azure AD](/previous-versions/azure/azure-services/jj573650(v=azure.100)#BKMK_WhatIsAnAzureADTenant), dat identiteits- en adreslijstservices voor uw cloudservice biedt. En omdat de taken voor het configureren van Intune om de aangepaste domeinnaam van uw organisatie te gebruiken, dezelfde zijn als voor andere Azure AD-tenants, kunt u de informatie en procedures uit [Uw domein toevoegen](/azure/active-directory/fundamentals/add-custom-domain) gebruiken.
 
 > [!TIP]
-> Zie voor meer informatie over aangepaste domeinen, [Conceptual overview of custom domain names in Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-add-domain-concepts/) (conceptueel overzicht van aangepaste domeinnamen in Azure Active Directory).
+> Zie voor meer informatie over aangepaste domeinen, [Conceptual overview of custom domain names in Azure Active Directory](/azure/active-directory/users-groups-roles/domains-manage) (conceptueel overzicht van aangepaste domeinnamen in Azure Active Directory).
 
 U kunt de initiële domeinnaam onmicrosoft.com niet wijzigen of verwijderen. U kunt aangepaste domeinnamen toevoegen, controleren of verwijderen met Intune om uw bedrijfsidentiteit helder te houden.
 
@@ -52,8 +52,8 @@ U kunt de initiële domeinnaam onmicrosoft.com niet wijzigen of verwijderen. U k
     - **Register.com-gebruikers**: Volg de [stapsgewijze instructies](https://support.office.com/article/Create-DNS-records-at-Register-com-for-Office-365-55bd8c38-3316-48ae-a368-4959b2c1684e#BKMK_verify) om de TXT-record te maken.
 5. [Mogelijk moet u extra DNS-records maken voor Intune-inschrijvingen](../enrollment/windows-enroll.md#simplify-windows-enrollment-without-azure-ad-premium).
 
-De stappen voor het toevoegen en controleren van een aangepast domein kunnen ook worden [uitgevoerd in Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-add-domain/).
+De stappen voor het toevoegen en controleren van een aangepast domein kunnen ook worden [uitgevoerd in Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain).
 
-Meer informatie [over uw initiële onmicrosoft.com-domein in Office 365](https://support.office.com/article/About-your-initial-onmicrosoft-com-domain-in-Office-365-B9FC3018-8844-43F3-8DB1-1B3A8E9CFD5A)
+Meer informatie [over uw initiële onmicrosoft.com-domein in Microsoft 365](https://support.office.com/article/About-your-initial-onmicrosoft-com-domain-in-Office-365-B9FC3018-8844-43F3-8DB1-1B3A8E9CFD5A)
 
 U vindt meer informatie over het [vereenvoudigen van Windows-inschrijving zonder Azure AD Premium](../enrollment/windows-enroll.md#simplify-windows-enrollment-without-azure-ad-premium) door een DNS CNAME te maken waarmee de inschrijving wordt omgeleid naar Intune-servers.

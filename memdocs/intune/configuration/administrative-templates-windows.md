@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89635c9eb2849b4896ea3df85dd081d6e267627e
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: faa217bd5e56a304b80298f2039ad3c541612e54
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990204"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992800"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Windows 10-sjablonen gebruiken voor het configureren van instellingen voor groepsbeleid in Microsoft Intune
 
@@ -33,7 +33,7 @@ Deze functie is van toepassing op:
 
 - Windows 10 en nieuwer
 
-De Windows-instellingen zijn vergelijkbaar met instellingen voor groepsbeleid (GPO) in Active Directory (AD). Deze instellingen zijn ingebouwd in Windows. Het zijn [door ADMX ondersteunde instellingen](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies) die gebruikmaken van XML. De instellingen voor Office en Microsoft Edge worden door ADMX opgenomen en gebruiken ADMX-instellingen in [Office-bestanden met beheersjablonen](https://www.microsoft.com/download/details.aspx?id=49030) en [Microsoft Edge-bestanden met beheersjablonen](https://www.microsoftedgeinsider.com/enterprise). En de Intune-sjablonen zijn 100% cloudgebaseerd. Ze bieden een eenvoudige en duidelijke manier om de instellingen te configureren en om de gewenste instellingen te zoeken.
+De Windows-instellingen zijn vergelijkbaar met instellingen voor groepsbeleid (GPO) in Active Directory (AD). Deze instellingen zijn ingebouwd in Windows. Het zijn [door ADMX ondersteunde instellingen](/windows/client-management/mdm/understanding-admx-backed-policies) die gebruikmaken van XML. De instellingen voor Office en Microsoft Edge worden door ADMX opgenomen en gebruiken ADMX-instellingen in [Office-bestanden met beheersjablonen](https://www.microsoft.com/download/details.aspx?id=49030) en [Microsoft Edge-bestanden met beheersjablonen](https://www.microsoftedgeinsider.com/enterprise). En de Intune-sjablonen zijn 100% cloudgebaseerd. Ze bieden een eenvoudige en duidelijke manier om de instellingen te configureren en om de gewenste instellingen te zoeken.
 
 **Beheersjablonen** zijn ingebouwd in Intune en hoeven niet te worden aangepast; dit geldt ook voor het gebruik van de OMA-URI. Gebruik deze sjablooninstellingen als basis voor het beheren van uw Windows 10-apparaten, als onderdeel van uw MDM-oplossing (Mobile Device Management).
 
@@ -43,7 +43,7 @@ In dit artikel vindt u de stappen voor het maken van een sjabloon voor Windows 1
 
 - Sommige van deze instellingen zijn beschikbaar vanaf Windows 10 versie 1709 (RS2/build 15063). Sommige instellingen zijn niet in alle Windows-edities beschikbaar. Voor de beste ervaring wordt u aangeraden Windows 10 Enterprise versie 1903 (19H1/build 18362) of nieuwer te gebruiken.
 
-- De Windows-instellingen maken gebruik van [beleids-CSP's voor Windows](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies). De CSP's werken op verschillende edities van Windows zoals Home, Professional, Enterprise enzovoort. Ga naar [Beleids-CSP's voor Windows](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies) om te zien of een bepaalde CSP in een specifieke editie werkt.
+- De Windows-instellingen maken gebruik van [beleids-CSP's voor Windows](/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies). De CSP's werken op verschillende edities van Windows zoals Home, Professional, Enterprise enzovoort. Ga naar [Beleids-CSP's voor Windows](/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies) om te zien of een bepaalde CSP in een specifieke editie werkt.
 
 ## <a name="create-the-template"></a>De sjabloon maken
 
@@ -136,6 +136,6 @@ In deze sjablonen zijn duizenden verschillende instellingen beschikbaar. Gebruik
 
 De sjabloon is gemaakt, maar het is mogelijk dat er nog niets gebeurt. De volgende stap is [de sjabloon, ook wel een profiel genoemd, toewijzen](device-profile-assign.md) en [de status ervan bewaken](device-profile-monitor.md).
 
-[Office 365 bijwerken met behulp van beheersjablonen](administrative-templates-update-office.md).
+[Microsoft 365 bijwerken met behulp van beheersjablonen](administrative-templates-update-office.md).
 
 [Zelfstudie: De cloud gebruiken voor het configureren van groepsbeleid op Windows 10-apparaten met ADMX-sjablonen en Microsoft Intune](tutorial-walkthrough-administrative-templates.md)

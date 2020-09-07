@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0630c38a28499c0add8cacf4deb5356345167c99
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 02266ce355d4fc4b74487840a91b503d69bf7b2e
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990469"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996500"
 ---
 # <a name="how-to-validate-your-app-protection-policy-setup-in-microsoft-intune"></a>De configuratie van uw beveiligingsbeleid voor apps valideren in Microsoft Intune
 
@@ -39,20 +39,20 @@ Gebruikers melden waarschijnlijk geen problemen, omdat app-beveiliging een hulpp
 Als blijkt dat uw beveiligingsbeleid voor apps niet werkt zoals verwacht, controleert u deze items:
 
 - Hebben de gebruikers een licentie voor app-beveiliging?
-- Hebben de gebruikers een licentie voor O365?
+- Hebben de gebruikers een licentie voor Microsoft 365?
 - Is de status van elke beschermingsapp van de gebruiker zoals verwacht. De apps kunnen de status **Ingecheckt** of **Niet ingecheckt** hebben.
 
 ### <a name="user-app-protection-status"></a>Gebruikersstatus van de app-beveiliging
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Selecteer **Apps** > **Bewaken** >  **App-beveiligingsstatus** en vervolgens de tegel **Toegewezen gebruikers**. 
 4. Op de pagina **App-rapportage** selecteert u **Gebruiker selecteren** voor een lijst met gebruikers en groepen. 
-5. Zoek naar en selecteer een gebruiker uit de lijst en kies vervolgens **Gebruiker selecteren**. Bovenaan het venster **App-rapportage** ziet u of de gebruiker een licentie voor app-beveiliging heeft. U kunt ook zien of de gebruiker een licentie voor O365 heeft en wat de app-status voor alle apparaten van de gebruiker is.
+5. Zoek naar en selecteer een gebruiker uit de lijst en kies vervolgens **Gebruiker selecteren**. Bovenaan het venster **App-rapportage** ziet u of de gebruiker een licentie voor app-beveiliging heeft. U kunt ook zien of de gebruiker een licentie voor Microsoft 365 heeft en wat de app-status voor alle apparaten van de gebruiker is.
 
 ## <a name="what-to-do"></a>Wat u moet doen
 Hier ziet u welke acties u moet ondernemen op basis van de gebruikersstatus:
 
 - Als de gebruiker geen licentie voor app-beveiliging heeft, moet u een [Intune-licentie](../fundamentals/licenses.md) toewijzen aan de gebruiker.
-- Als de gebruiker geen licentie voor O365 heeft, vraagt u een [licentie](../fundamentals/licenses.md) voor de gebruiker aan.
+- Als de gebruiker geen licentie voor Microsoft 365 heeft, vraagt u een [licentie](../fundamentals/licenses.md) voor de gebruiker aan.
 - Als de app van een gebruiker de status **Niet ingecheckt** heeft, controleert u of u het [beveiligingsbeleid voor apps](app-protection-policies-validate.md) voor de betreffende app correct hebt geconfigureerd.
 - Zorg ervoor dat deze voorwaarden van toepassing zijn op alle gebruikers waarop [beveiligingsbeleid voor apps](app-protection-policies-monitor.md) van toepassing moet zijn.
 

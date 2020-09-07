@@ -18,18 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 088c3d6a281efcb1877d80d68382b1dc848ae321
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 7e51f7dc4bf76b9dc35b3eb560bc2dcbe9c48916
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663375"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993814"
 ---
 # <a name="troubleshoot-conditional-access"></a>Problemen met voorwaardelijke toegang oplossen
 In dit artikel wordt beschreven wat u moet doen wanneer uw gebruikers geen toegang kunnen krijgen tot resources die met voorwaardelijke toegang zijn beschermd, of wanneer gebruikers wel toegang tot beschermde resources kunnen krijgen, maar eigenlijk zouden moeten worden geblokkeerd.
 
 Met Intune en voorwaardelijke toegang kunt u de toegang tot services beveiligen, zoals:
-- Office 365-services zoals Exchange Online, SharePoint Online en Skype voor Bedrijven Online
+
+- Microsoft 365-services zoals Exchange Online, SharePoint Online en Skype voor Bedrijven Online
 - Exchange On-premises
 - Verschillende andere services
 
@@ -49,7 +50,7 @@ Er moet aan de volgende vereisten zijn voldaan voordat voorwaardelijke toegang w
 
 - Voor on-premises Exchange, moet de Intune Exchange-connector juist zijn geconfigureerd. Raadpleeg [Het oplossen van problemen met de Exchange Connector in Microsoft Intune](troubleshoot-exchange-connector.md) voor meer informatie.
 
-- Voor on-premises Skype moet u hybride moderne verificatie configureren. Raadpleeg [Overzicht van hybride moderne verificatie](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview).
+- Voor on-premises Skype moet u hybride moderne verificatie configureren. Raadpleeg [Overzicht van hybride moderne verificatie](/office365/enterprise/hybrid-modern-auth-overview).
 
 Deze voorwaarden voor elk apparaat zijn terug te vinden in Azure Portal en in het inventarisrapport van het apparaat.
 
@@ -77,11 +78,11 @@ Deze voorwaarden voor elk apparaat zijn terug te vinden in Azure Portal en in he
 
 - Een Android-apparaat dat is ingeschreven en aan de eisen voldoet, kan alsnog worden geblokkeerd en een quarantainemelding ontvangen wanneer een gebruiker voor de eerste keer bedrijfsresources probeert te openen. Als dit gebeurt, controleert u of de bedrijfsportal-app niet wordt uitgevoerd en selecteert u vervolgens op de koppeling **Nu aan de slag** in de quarantaine-e-mail om evaluatie te activeren. Dit hoeft alleen te gebeuren wanneer voorwaardelijke toegang voor de eerste keer wordt ingeschakeld.
 
-- Op een Android-apparaat dat is ingeschreven, ziet de gebruiker mogelijk Geen certificaten gevonden, en krijgt de gebruiker geen toegang tot O365-resources. De gebruikers moeten de optie *Browsertoegang inschakelen* als volgt inschakelen op geregistreerde apparaten:
+- Op een Android-apparaat dat is ingeschreven, ziet de gebruiker mogelijk de melding 'Geen certificaten gevonden' en krijgt de gebruiker geen toegang tot Microsoft 365-resources. De gebruikers moeten de optie *Browsertoegang inschakelen* als volgt inschakelen op geregistreerde apparaten:
   1. Open de app Bedrijfsportal.
   2. Ga naar de pagina Instellingen via de drie puntjes (...) of via de menuknop van de hardware.
   3. Selecteer de knop *Browsertoegang inschakelen*.
-  4. In de browser Chrome meldt u zich af bij Office 365. Start vervolgens Chrome opnieuw op.  
+  4. Meld u in de Chrome-browser af bij Microsoft 365 en start Chrome vervolgens opnieuw.  
 
 
 ## <a name="devices-are-blocked-and-no-quarantine-email-is-received"></a>Apparaten worden geblokkeerd en er is geen quarantaine-e-mail ontvangen
@@ -94,7 +95,7 @@ Deze voorwaarden voor elk apparaat zijn terug te vinden in Azure Portal en in he
 
 ## <a name="devices-are-noncompliant-but-users-are-not-blocked"></a>Apparaten zijn niet-conform maar gebruikers worden niet geblokkeerd
 
-- Voor Windows-pc's wordt met voorwaardelijke toegang alleen de systeemeigen e-mail-app, Office 2013 met moderne verificatie of Office 2016 geblokkeerd. Voor het blokkeren van eerdere versies van Outlook of alle mail-apps op Windows-pc's zijn Azure AD-apparaatregistraties en Active Directory Federation Services-configuraties (AD FS) vereist conform de instructies in [Voorwaardelijke toegang instellen voor SharePoint Online en Exchange Online voor Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-no-modern-authentication).
+- Voor Windows-pc's wordt met voorwaardelijke toegang alleen de systeemeigen e-mail-app, Office 2013 met moderne verificatie of Office 2016 geblokkeerd. Voor het blokkeren van eerdere versies van Outlook of alle mail-apps op Windows-pc's zijn Azure AD-apparaatregistraties en Active Directory Federation Services-configuraties (AD FS) vereist conform de instructies in [Voorwaardelijke toegang instellen voor SharePoint Online en Exchange Online voor Azure Active Directory](/azure/active-directory/active-directory-conditional-access-no-modern-authentication).
 
 - Als het apparaat selectief wordt gewist of buiten gebruik wordt gesteld in Intune, kan het zijn dat het apparaat nog enige uren na de buitengebruikstelling toegang heeft. Dit komt doordat Exchange de toegangsrechten gedurende zes uur in het cachegeheugen opslaat. Overweeg andere manieren om gegevens op buiten gebruik gestelde apparaten te beveiligen in dit scenario.
 

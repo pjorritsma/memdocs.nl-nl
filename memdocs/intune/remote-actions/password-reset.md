@@ -15,12 +15,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d491fba013df10b6576f49b1e00ab9a1ea18f482
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4769cad7538b780ca8f501a74f3d9984f46269ec
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79337951"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057501"
 ---
 # <a name="reduce-help-desk-costs-with-self-service-password-reset"></a>Verlaag helpdeskkosten met selfservice voor wachtwoordherstel
 
@@ -32,16 +32,16 @@ U kunt werknemers wachtwoorden voor werk- en schoolaccounts opnieuw laten instel
 
 ## <a name="action-plan"></a>Actieplan
 
-1. Weet hoe [selfservice voor wachtwoordherstel van Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-overview) werkt. 
-2. Vraag werknemers en leerlingen/studenten zich te [registreren voor de selfservice voor wachtwoordherstel](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-reset-register).
-3. Voor toekomstig gebruik geeft u werknemers en leerlingen/studenten instructies voor het [opnieuw instellen of wijzigen van een wachtwoord](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-update-your-own-password).
-4. [Selfservice voor wachtwoordherstel inschakelen](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-getting-started).
+1. Weet hoe [selfservice voor wachtwoordherstel van Azure Active Directory](/azure/active-directory/active-directory-passwords-overview) werkt. 
+2. Vraag werknemers en leerlingen/studenten zich te [registreren voor de selfservice voor wachtwoordherstel](/azure/active-directory/active-directory-passwords-reset-register).
+3. Voor toekomstig gebruik geeft u werknemers en leerlingen/studenten instructies voor het [opnieuw instellen of wijzigen van een wachtwoord](/azure/active-directory/active-directory-passwords-update-your-own-password).
+4. [Selfservice voor wachtwoordherstel inschakelen](/azure/active-directory/active-directory-passwords-getting-started).
 
 ## <a name="next-steps"></a>Volgende stappen
 
 Meer informatie over de volgende artikelen:
 
-* [Aanbevolen procedures voor wachtwoorden](https://docs.microsoft.com/azure/active-directory/active-directory-secure-passwords) 
-* [Licentieverlening voor de selfservice voor wachtwoordherstel](https://docs.microsoft.com/azure/active-directory/active-directory-secure-passwords)
+* [Aanbevolen procedures voor wachtwoorden](/azure/active-directory/active-directory-secure-passwords) 
+* [Licentieverlening voor de selfservice voor wachtwoordherstel](/azure/active-directory/active-directory-secure-passwords)
 
-Wilt u hulp bij het inschakelen van dit of andere scenario's voor EMS of Office 365? Als u ten minste 150 licenties voor Microsoft 365, Enterprise Mobility + Security of Azure Active Directory Premium hebt, gebruikt u uw [FastTrack-voordelen](https://docs.microsoft.com/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program).
+Wilt u hulp bij het toepassen hiervan of andere scenario's voor EMS of Microsoft 365? Als u ten minste 150 licenties voor Microsoft 365, Enterprise Mobility + Security of Azure Active Directory Premium hebt, gebruikt u uw [FastTrack-voordelen](/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program).

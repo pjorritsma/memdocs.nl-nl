@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/09/2020
+ms.date: 08/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d23eaeee839122bad46cd9619a790b9ca6332a6
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: ba4bef364f734f9078b7c404e06978b018f4c387
+ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383254"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281078"
 ---
 # <a name="manage-collaboration-experiences-using-office-for-ios-and-android-with-microsoft-intune"></a>Samenwerkingservaringen beheren met Office voor iOS en Android met Microsoft Intune
 
@@ -32,12 +32,12 @@ Office voor iOS en Android biedt verschillende belangrijke voordelen, waaronder:
 - Integratie van de Office Lens-technologie om de kracht van de camera te ontgrendelen met mogelijkheden zoals het converteren van afbeeldingen naar bewerkbare Word- en Excel-documenten, het scannen van PDF's en het vastleggen van whiteboards met automatische digitale verbeteringen om de inhoud gemakkelijker te kunnen lezen.
 - Het toevoegen van nieuwe functionaliteit voor veelvoorkomende taken die vaak voorkomen bij het werken op een telefoon, zoals het maken van snelle notities, het ondertekenen van PDF's, het scannen van QR-codes en het overdragen van bestanden tussen apparaten.
 
-De meest veelzijdige en breedste beveiligingsmogelijkheden voor Office 365-gegevens zijn beschikbaar wanneer u zich abonneert op de Enterprise Mobility + Security Suite, die functies bevat van Microsoft Intune en Azure Active Directory Premium, zoals voorwaardelijke toegang. U moet minimaal een beleid voor voorwaardelijke toegang implementeren dat connectiviteit toestaat voor Office voor iOS en Android vanaf mobiele apparaten en een Intune-beleid voor app-beveiliging dat ervoor zorgt dat de samenwerkingservaring wordt beschermd.
+De meest veelzijdige en breedste beveiligingsmogelijkheden voor Microsoft 365-gegevens zijn beschikbaar wanneer u zich abonneert op de Enterprise Mobility + Security Suite, die functies bevat van Microsoft Intune en Azure Active Directory Premium, zoals voorwaardelijke toegang. U moet minimaal een beleid voor voorwaardelijke toegang implementeren dat connectiviteit toestaat voor Office voor iOS en Android vanaf mobiele apparaten en een Intune-beleid voor app-beveiliging dat ervoor zorgt dat de samenwerkingservaring wordt beschermd.
 
 ## <a name="apply-conditional-access"></a>Voorwaardelijke toegang toepassen
-Organisaties kunnen gebruikmaken van het beleid voor voorwaardelijke toegang van Azure AD om ervoor te zorgen dat gebruikers alleen toegang hebben tot werk- of schoolinhoud met behulp van Office voor iOS en Android. Hiervoor hebt u een beleid voor voorwaardelijke toegang nodig dat zich richt op alle potentiële gebruikers. Meer informatie over het maken van dit beleid vindt u in [Beveiligingsbeleid voor apps vereisen voor toegang tot cloud-apps met voorwaardelijke toegang](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access).
+Organisaties kunnen gebruikmaken van het beleid voor voorwaardelijke toegang van Azure AD om ervoor te zorgen dat gebruikers alleen toegang hebben tot werk- of schoolinhoud met behulp van Office voor iOS en Android. Hiervoor hebt u een beleid voor voorwaardelijke toegang nodig dat zich richt op alle potentiële gebruikers. Meer informatie over het maken van dit beleid vindt u in [Beveiligingsbeleid voor apps vereisen voor toegang tot cloud-apps met voorwaardelijke toegang](/azure/active-directory/conditional-access/app-protection-based-conditional-access).
 
-1. Volg stap 1: Een beleid voor voorwaardelijke toegang tot Azure AD voor Office 365 configureren" in [scenario 1: Voor Office 365-apps zijn goedgekeurde apps met app-beveiligingsbeleid vereist](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies), waarmee Office voor iOS en Android is toegestaan, maar externe clients voor mobiele apparaten met OAuth worden geblokkeerd en geen verbinding kunnen maken met Office 365-eindpunten.
+1. Volg stap 1: Een beleid voor voorwaardelijke toegang tot Azure AD voor Office 365 configureren" in [scenario 1: Voor Office 365-apps zijn goedgekeurde apps met app-beveiligingsbeleid vereist](/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies), waarmee Office voor iOS en Android is toegestaan, maar externe clients voor mobiele apparaten met OAuth worden geblokkeerd en geen verbinding kunnen maken met Office 365-eindpunten.
 
    >[!NOTE]
    > Dit beleid zorgt ervoor dat mobiele gebruikers toegang hebben tot alle Office-eindpunten met behulp van de toepasselijke apps.
@@ -74,6 +74,7 @@ Office voor iOS en Android ondersteunt app-instellingen waarmee Unified Endpoint
 App-configuratie kan worden geleverd via het OS-kanaal van Mobile Device Management (MDM) op geregistreerde apparaten (kanaal [Beheerde app-configuratie](https://developer.apple.com/library/content/samplecode/sc2279/Introduction/Intro.html) voor iOS of kanaal [Android in de Enterprise](https://developer.android.com/work/managed-configurations) voor Android) of via het kanaal Intune-app-beveiligingsbeleid (APP). Office voor iOS en Android ondersteunt de volgende configuratiescenario's:
 
 - Alleen werk- of schoolaccounts toestaan
+- Algemene app-configuratie
 - Instellingen voor gegevensbeveiliging
 
 > [!IMPORTANT]
@@ -96,6 +97,26 @@ Dit configuratiescenario werkt alleen met geregistreerde apparaten. Een UEM-prov
 
 > [!NOTE]
 > Op dit moment ondersteunt alleen Office voor Android de modus voor door de organisatie toegestane accounts.
+
+## <a name="general-app-configuration-scenarios"></a>Algemene configuratiescenario's voor apps
+
+Office voor iOS en Android biedt beheerders de mogelijkheid om de standaardconfiguratie voor verschillende in-app-instellingen aan te passen.  Deze mogelijkheid wordt aangeboden zowel voor geregistreerde apparaten via een UEM-provider als voor apparaten die niet zijn geregistreerd toen op Office voor iOS en Android een Intune-app-beveiliging beleid is toegepast.
+
+> [!NOTE]
+> Als een app-beveiligingsbeleid is gericht op de gebruikers, wordt aanbevolen om de instellingen van de algemene app-configuratie in een inschrijvingsmodel voor **beheerde apps** te implementeren. Dit zorgt ervoor dat het App Configuration-beleid wordt geïmplementeerd op zowel geregistreerde apparaten als niet-geregistreerde apparaten. 
+
+Office ondersteunt de volgende instellingen voor configuratie:
+
+- Het maken van plaknotities beheren
+
+### <a name="manage-the-creation-of-sticky-notes"></a>Het maken van plaknotities beheren
+
+Standaard kunnen gebruikers met Office voor iOS en Android plaknotities maken. Voor gebruikers met Exchange Online-postvakken worden de notities gesynchroniseerd in het postvak van de gebruiker. Voor gebruikers met on-premises postvakken worden deze notities alleen opgeslagen op het lokale apparaat.
+
+|    Sleutel    |    Waarde    |
+|-------------------------------------------------------------------|-------------|
+|    com.microsoft.office.NotesCreationEnabled    |    Met **waar** (standaard) kunt u plaknotities maken voor het werk- of schoolaccount<br>Met **onwaar** kunt u geen plaknotities maken voor het werk- of schoolaccount    |
+
 
 ## <a name="data-protection-app-configuration-scenarios"></a>App-configuratiescenario's voor gegevensbescherming
 

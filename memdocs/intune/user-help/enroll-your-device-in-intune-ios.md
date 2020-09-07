@@ -19,12 +19,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2e32b6e1c5e976669e78d3cf00610fbd57b68dd1
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: 0d4ae3b78e9bbb2e6135bec4a0e1ab69e80092ba
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048035"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057399"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>Toegang tot uw bedrijfsbronnen instellen voor uw iOS-apparaat  
 
@@ -54,11 +54,11 @@ Nadat het apparaat is geregistreerd, zorgt de bedrijfsportal-app ervoor dat uw a
 ### <a name="setting-notifications"></a>Meldingen instellen  
 Als uw organisatie na de registratie een nieuwe beveiligingsvereiste oplegt, zoals meervoudige verificatie, wordt u via de bedrijfsportal-app op de hoogte gebracht. U hebt de mogelijkheid om uw instellingen aan te passen, zodat u op uw apparaat kunt blijven werken.  
 
-Zie [Wat gebeurt er wanneer ik de bedrijfsportal-app installeer en mijn apparaat inschrijf?](https://docs.microsoft.com//mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios) voor meer informatie over inschrijving.  
+Zie [Wat gebeurt er wanneer ik de bedrijfsportal-app installeer en mijn apparaat inschrijf?](//mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios) voor meer informatie over inschrijving.  
 
-## <a name="prerequisties"></a>Vereisten  
+## <a name="prerequisites"></a>Vereisten    
 
-* Ga naar de App Store om de [Intune-bedrijfsportal-app](install-and-sign-in-to-the-intune-company-portal-app-ios.md) te downloaden en op uw apparaat te installeren. 
+* De bedrijfsportal-app installeren [vanuit de App Store](https://go.microsoft.com/fwlink/?linkid=2141414).
 * Onderbreek uw Wi-Fi-verbinding niet totdat alle stappen zijn voltooid.
 * Zorg voor toegang tot de Safari-webbrowser op het apparaat.
 
@@ -188,4 +188,4 @@ Als u een IT-beheerder bent en in de problemen raakt tijdens het inschrijven van
 ## <a name="next-steps"></a>Volgende stappen  
 Zoek nuttige apps voor op uw werk of op school. Informatie over [hoe apps beschikbaar worden gesteld](use-managed-apps-on-your-device-ios.md) aan u via Bedrijfsportal.  
 
-Nog hulp nodig? Neem contact op met het ondersteuningsteam van uw bedrijf. U vindt de contactgegevens van uw beheerder op de [bedrijfsportalwebsite](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Nog hulp nodig? Neem contact op met het ondersteuningsteam van uw bedrijf. U vindt de contactgegevens van uw beheerder op de [bedrijfsportalwebsite](https://go.microsoft.com/fwlink/?linkid=2010980).

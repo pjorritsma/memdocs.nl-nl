@@ -5,7 +5,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/18/2020
+ms.date: 09/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b47361bf4812de91d12c779a6eb58fef35e9d0f2
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 975ab2faa91a5e904beb5aa17b776061f122916d
+ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262044"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89286268"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developers-testing-guide"></a>Testhandleiding voor ontwikkelaars voor Microsoft Intune App SDK voor Android
 
@@ -33,7 +33,7 @@ Als uw bedrijf nog niet over een tenant beschikt, kunt u een demotenant met of z
 1. Ga naar de [Microsoft CDX-website voor het maken van tenants](https://cdx.transform.microsoft.com/my-tenants/create-tenant) en maak een Microsoft 365 Enterprise-tenant.
 2. [Stel Intune in](../fundamentals/setup-steps.md) om Mobile Device Management (MDM) in te schakelen.
 3. [Gebruikers maken](../fundamentals/users-add.md).
-4. [Groepen maken](../fundamentals/groups-add.md).
+4. [Groepen maken]../fundamentals/(groups-add.md).
 5. [Licenties toewijzen](../fundamentals/licenses-assign.md) die geschikt zijn voor het testen.
 
 
@@ -97,7 +97,7 @@ U kunt het systeemklembord als volgt beperken tot beheerde toepassingen:
     - Tekst kopiëren van uw app naar een niet-beheerde app (bijvoorbeeld Berichten) is geblokkeerd.
 
 ### <a name="prevent-save"></a>Opslaan voorkomen
-Als voor uw app [geïntegreerde Opslaan als-besturingselementen](app-sdk-android.md#example-data-transfer-between-apps-and-device-or-cloud-storage-locations) vereist zijn, kunt u de functionaliteit voor **Opslaan als** als volgt beheren:
+Als voor uw app geïntegreerde Opslaan als-besturingselementen vereist zijn, kunt u de functionaliteit voor **Opslaan als** als volgt beheren:
 
 1. Stel **Opslaan als voorkomen** in op **Ja**.
 2. Bevestig de volgende voorwaarden:

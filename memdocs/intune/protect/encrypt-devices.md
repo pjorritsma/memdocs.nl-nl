@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a9fad599342cf358409c7be09ebb8b4eb1c0c4a5
-ms.sourcegitcommit: e8076576f5c0ea7e72358d233782f8c38c184c8f
+ms.openlocfilehash: 8843ab5c8bf3d0e6970398c1ad81a8a2b3b8f9cb
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87334620"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193960"
 ---
 # <a name="manage-bitlocker-policy-for-windows-10-in-intune"></a>Het BitLocker-beleid voor Windows 10 in Intune beheren
 
@@ -97,7 +97,7 @@ Gebruik een van de volgende procedures om het gewenste beleidstype op te stellen
    1. **Platform**: Windows 10 en hoger
    2. **Profieltype**: Endpoint Protection
 
-   ![Het BitLocker-profiel selecteren](./media/encrypt-devices/select-windows-bitlocker-dc.png)
+   ![Het profiel selecteren](./media/encrypt-devices/select-windows-bitlocker-dc.png)
 
 4. Selecteer **Instellingen** > **Windows-versleuteling**.
 
@@ -123,7 +123,8 @@ U kunt een BitLocker-beleid configureren waardoor BitLocker automatisch en op de
 
 op een apparaat moet aan de volgende voorwaarden worden voldaan om in aanmerking te komen voor het op de achtergrond inschakelen van BitLocker:
 
-- Op het apparaat moet Windows 10 versie 1809 of hoger worden uitgevoerd
+- Als eindgebruikers zich bij de apparaten aanmelden als Beheerder, moet Windows 10 versie 1803 of hoger op het apparaat worden uitgevoerd.
+- Als eindgebruikers zich bij de apparaten aanmelden als Standaardgebruiker, moet Windows 10 versie 1809 of hoger op het apparaat worden uitgevoerd.
 - Het apparaat moet aan Azure AD zijn toegevoegd  
 
 **BitLocker-beleidsconfiguratie**:
@@ -156,7 +157,7 @@ Intune biedt toegang tot de Microsoft Azure Active Directory-blade voor BitLocke
 
    Als er geen sleutels aanwezig zijn in Azure AD, wordt *Er is geen BitLocker-sleutel gevonden voor dit apparaat* weergegeven.
 
-De informatie voor BitLocker wordt verkregen met behulp van de [BitLocker-configuratieserviceprovider](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (CSP). BitLocker CSP wordt ondersteund op Windows 10-versie 1703 en hoger en voor Windows 10 Pro-versie 1809 en hoger.
+De informatie voor BitLocker wordt verkregen met behulp van de [BitLocker-configuratieserviceprovider](/windows/client-management/mdm/bitlocker-csp) (CSP). BitLocker CSP wordt ondersteund op Windows 10-versie 1703 en hoger en voor Windows 10 Pro-versie 1809 en hoger.
 
 ### <a name="rotate-bitlocker-recovery-keys"></a>BitLocker-herstelsleutels roteren
 

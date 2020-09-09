@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 51fbb59fa0557df1757258b9463514c6355ff92d
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: faabd2656e8b72502c682eaab37a0cc5b484ea03
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88996245"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423931"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Wat is er nieuw in Microsoft Intune - vorige maanden
 
@@ -447,7 +447,7 @@ Intune biedt nu begeleide scenario's die u helpen bij het voltooien van een spec
 Zie [Overzicht van begeleide scenario's voor Intune](guided-scenarios-overview.md) voor meer informatie.
 
 #### <a name="additional-app-configuration-variable-available---4969237-----"></a>Extra variabele voor app-configuratie beschikbaar<!-- 4969237   -->
-Wanneer u een app-configuratiebeleid maakt, kunt u de configuratievariabele `AAD Device ID` opnemen als onderdeel van de configuratie-instellingen. Selecteer in Intune **Client-apps** > **App-configuratiebeleid** > **Toevoegen**. Voer de gegevens van uw configuratiebeleid in en selecteer **Configuratie-instellingen** om de blade **Configuratie-instellingen** weer te geven. Zie voor meer informatie [App-configuratiebeleid voor beheerde Android Enterprise-apparaten: de configuratie-ontwerper gebruiken](../apps/app-configuration-policies-use-android.md#use-the-configuration-designer).
+Wanneer u een app-configuratiebeleid maakt, kunt u de configuratievariabele `AAD_Device_ID` opnemen als onderdeel van de configuratie-instellingen. Selecteer in Intune **Client-apps** > **App-configuratiebeleid** > **Toevoegen**. Voer de gegevens van uw configuratiebeleid in en selecteer **Configuratie-instellingen** om de blade **Configuratie-instellingen** weer te geven. Zie voor meer informatie [App-configuratiebeleid voor beheerde Android Enterprise-apparaten: de configuratie-ontwerper gebruiken](../apps/app-configuration-policies-use-android.md#use-the-configuration-designer).
 
 #### <a name="create-groups-of-management-objects-called-policy-sets---3762880----"></a>Groepen beheerobjecten, zogenaamde beleidssets, maken<!-- 3762880  -->
 Met beleidssets kunt u een bundel met verwijzingen maken naar reeds bestaande beheerentiteiten die moeten worden geïdentificeerd, waarop moet worden gericht en die moet worden bewaakt als één conceptuele eenheid. Met beleidssets worden geen bestaande concepten of objecten vervangen. U kunt afzonderlijke objecten blijven toewijzen in Intune en u kunt verwijzen naar afzonderlijke objecten als onderdeel van een beleidsset. Daarom worden wijzigingen aan deze afzonderlijke objecten weergegeven in de beleidsset.  In Intune selecteert u **Beleidssets** > **Maken** om een nieuwe beleidsset te maken.
@@ -479,7 +479,7 @@ De gebruikersinterface-ervaring voor het [maken](../protect/software-updates-ios
 #### <a name="engaged-restart-settings-are-removed-from-windows-update-rings----4464404--------"></a>Instellingen voor gepland opnieuw opstarten zijn verwijderd uit Windows-update-ringen<!--  4464404      -->
 Zoals eerder aangekondigd, ondersteunen Windows 10-update-ringen van Intune nu [instellingen voor deadlines](../protect/windows-update-settings.md) en wordt *Gepland opnieuw opstarten* niet meer ondersteund. Instellingen voor *Gepland opnieuw opstarten* zijn niet meer beschikbaar wanneer u update-ringen in Intune configureert of beheert.  
 
-Deze wijziging ligt op één lijn met [wijzigingen in Windows-service](//windows/whats-new/whats-new-windows-10-version-1903#servicing). Verder vervangen op apparaten met Windows 10 1903 of hoger *deadlines* configuraties voor *gepland opnieuw opstarten*.
+Deze wijziging ligt op één lijn met [wijzigingen in Windows-service](/windows/whats-new/whats-new-windows-10-version-1903#servicing). Verder vervangen op apparaten met Windows 10 1903 of hoger *deadlines* configuraties voor *gepland opnieuw opstarten*.
 
 #### <a name="prevent-installation-of-apps-from-unknown-sources-on-android-enterprise-work-profile-devices---4760025-----"></a>Installatie van apps van onbekende bronnen op apparaten met een Android Enterprise-werkprofiel voorkomen<!-- 4760025   -->
 Op apparaten met een Android Enterprise-werkprofiel kunnen gebruikers nooit apps van onbekende bronnen installeren. In deze update is er een nieuwe instelling, namelijk **App-installaties van onbekende bronnen in het persoonlijke profiel voorkomen**. Met deze instelling wordt standaard voorkomen dat gebruikers apps van onbekende bronnen extern kunnen laden in het persoonlijke profiel op het apparaat.
@@ -1346,7 +1346,7 @@ Deze vier apps worden automatisch toegevoegd aan de lijst met Intune-apps van be
 ### <a name="device-configuration"></a>Apparaatconfiguratie
 
 #### <a name="updated-pfx-certificate-connector-for-microsoft-intune---1533038---"></a>Bijgewerkte PFX-certificaatconnector voor Microsoft Intune<!-- 1533038 -->
-We hebben een update uitgebracht voor de [PFX Certificate Connector voor Microsoft Intune](../protect/certficates-pfx-configure.md#whats-new-for-connectors) die een oplossing biedt voor een probleem waarbij bestaande PFX-certificaten steeds opnieuw worden verwerkt. Hierdoor stopt de connector met het verwerken van nieuwe aanvragen.
+We hebben een update uitgebracht voor de [PFX Certificate Connector voor Microsoft Intune](../protect/certificate-connectors.md#whats-new-for-connectors) die een oplossing biedt voor een probleem waarbij bestaande PFX-certificaten steeds opnieuw worden verwerkt. Hierdoor stopt de connector met het verwerken van nieuwe aanvragen.
 
 #### <a name="intune-security-tasks-for-defender-atp-in-public-preview---3208597---"></a>Intune-beveiligingstaken voor Defender ATP (in openbare preview)<!-- 3208597 -->
 In de openbare preview-versie kunt u Intune gebruiken voor het beheren van [beveiligingstaken voor Microsoft Defender Advanced Threat Protection (ATP)](../protect/atp-manage-vulnerabilities.md). Door deze integratie met ATP wordt er een op risico's gebaseerde aanpak voor het detecteren, classificeren en oplossen van beveiligingsproblemen en onjuiste configuraties van eindpunten toegevoegd, terwijl er ook minder tijd zit tussen het detecteren en oplossen van beveiligingsproblemen.
@@ -1400,7 +1400,7 @@ Ga naar [VPN-instellingen configureren op iOS-apparaten](../configuration/vpn-se
 Van toepassing op: iOS
 
 #### <a name="updated-pfx-certificate-connector-for-microsoft-intune---doc-vso-1521237----"></a>Bijgewerkte PFX-certificaatconnector voor Microsoft Intune<!-- doc-vso 1521237  -->  
-We hebben een update uitgebracht voor de [PFX-certificaatconnector voor Microsoft Intune](../protect/certficates-pfx-configure.md#whats-new-for-connectors), waardoor de polling-interval wordt verlaagd van 5 minuten naar 30 seconden.
+We hebben een update uitgebracht voor de [PFX-certificaatconnector voor Microsoft Intune](../protect/certificate-connectors.md#whats-new-for-connectors), waardoor de polling-interval wordt verlaagd van 5 minuten naar 30 seconden.
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -1487,7 +1487,7 @@ De ondersteuning voor het Intune-app-beveiligingsbeleid (APP) voor de instelling
 ### <a name="device-configuration"></a>Apparaatconfiguratie
 
 #### <a name="updated-certificate-connectors---icm-113304612---"></a>Bijgewerkte certificaatconnectors<!-- ICM 113304612 -->
-We hebben updates uitgebracht voor zowel de [Intune-certificaatconnector als de PFX-certificaatconnector voor Microsoft Intune](../protect/certficates-pfx-configure.md#whats-new-for-connectors). Met de nieuwe releases worden verschillende bekende problemen opgelost.
+We hebben updates uitgebracht voor zowel de [Intune-certificaatconnector als de PFX-certificaatconnector voor Microsoft Intune](../protect/certificate-connectors.md#whats-new-for-connectors). Met de nieuwe releases worden verschillende bekende problemen opgelost.
 
 #### <a name="set-login-settings-and-control-restart-options-on-macos-devices---1210083----"></a>Aanmeldingsinstellingen configureren en opties voor opnieuw opstarten beheren op macOS-apparaten<!-- 1210083  -->
 U kunt op macOS-apparaten een apparaatconfiguratieprofiel maken (**Apparaatconfiguratie** > **Profielen** > **Profiel maken** > **macOS** kiezen als platform > **Apparaatfuncties** als profieltype). Deze update bevat nieuwe aanmeldingsvensterinstellingen, zoals het weergeven van een aangepaste banner, het kiezen hoe gebruikers zich aanmelden, het weergeven of verbergen van de energie-instellingen enzovoort.

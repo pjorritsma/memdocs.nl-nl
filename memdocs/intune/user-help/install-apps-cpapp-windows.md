@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 3975e2fcf7e43e4b7468664f9ccc27b692c40d85
-ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
+ms.openlocfilehash: 0639f5a92d4377212834f5c7089f534628e787d1
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89057311"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390854"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Apps op uw apparaat installeren en delen
 
@@ -58,7 +58,7 @@ Afhankelijk van de grootte van uw bedrijf kunnen er mogelijk meerdere versies va
 ## <a name="share-apps"></a>Apps delen  
 U kunt apps delen met en aanbevelen aan contactpersonen van uw werk of school. In de volgende stappen wordt beschreven hoe u een koppeling rechtstreeks uit de bedrijfsportal kunt delen.
 
-1. In de bedrijfsportal klikt u met de rechtermuisknop op een app om het [contextmenu](//windows/uwp/design/controls-and-patterns/menus) hiervan te openen. U kunt ook op de app drukken en deze vasthouden.  
+1. In de bedrijfsportal klikt u met de rechtermuisknop op een app om het [contextmenu](/windows/uwp/design/controls-and-patterns/menus) hiervan te openen. U kunt ook op de app drukken en deze vasthouden.  
 
     ![De bedrijfsportal-app voor Windows 10, voorpagina, met daarop een lijst met apps en apparaten. Het klikbare contextmenu Delen is zichtbaar boven op het pictogram van de voorbeeldapp. ](./media/1808_ShareContext_CP_Windows.png)  
 

@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: d6cb9693f0bafcff22f3fce9d3f972e9eac41b22
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 1f0da16a34db49e1490334099b9236628afd4501
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88909088"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390548"
 ---
 # <a name="remove-your-windows-device-from-management"></a>Windows-apparaat verwijderen uit beheer
 
@@ -57,7 +57,7 @@ Voer de volgende stappen uit om een Windows 10-apparaat te verwijderen uit behee
 
     ![Voorbeeldschermopname van de bedrijfsportal-app voor Windows: de startpagina met het gedeelte Mijn apparaten gemarkeerd.](./media/1809_CheckAccess_Context_Select_Device.png)
 
-2. Klik met de rechtermuisknop op een apparaat of houd het apparaat ingedrukt om het [contextmenu](//windows/uwp/design/controls-and-patterns/menus) hiervan te openen.  
+2. Klik met de rechtermuisknop op een apparaat of houd het apparaat ingedrukt om het [contextmenu](/windows/uwp/design/controls-and-patterns/menus) hiervan te openen.  
 
 3. Selecteer **Verwijderen**.  
 

@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2fcb7be9d5a75f17e2b9c347be9cd5d4eedd925d
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: ea17b57fc0881e189d0d57b823caece3610b4528
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907647"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390837"
 ---
 # <a name="rename-device-from-the-company-portal-app-for-windows"></a>De naam van een apparaat wijzigen vanuit de bedrijfsportal-app voor Windows
 Wijzig de naam van een apparaat zodat het apparaat gemakkelijker wordt herkend tussen andere apparaten. Met de bedrijfsportal-app voor Windows kunt u de naam van de volgende soorten verbonden apparaten wijzigen:  
@@ -47,7 +47,7 @@ Voer de volgende stap uit om een apparaat te verwijderen van de pagina **Apparaa
      ![Voorbeeldschermopname van de bedrijfsportal-app voor Windows: de pagina Apparaatdetails, pop-upvenster Naam wijzigen.](./media/1808_RenameApp_Popup.png)  
 
 ## <a name="rename-device-from-device-context-menu"></a>Naam van apparaat wijzigen vanaf het contextmenu van het apparaat  
-Voer de volgende stap uit om een apparaat te verwijderen via de acties van het [contextmenu](//windows/uwp/design/controls-and-patterns/menus).  
+Voer de volgende stap uit om een apparaat te verwijderen via de acties van het [contextmenu](/windows/uwp/design/controls-and-patterns/menus).  
 
 1. Ga naar de **startpagina** van de bedrijfsportal-app en ga naar **Mijn apparaten**.
 

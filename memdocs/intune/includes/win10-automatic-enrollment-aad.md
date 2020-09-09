@@ -46,4 +46,4 @@ Met automatische inschrijving kunnen gebruikers hun Windows 10-apparaten inschri
 
 6. Selecteer **Opslaan**.
 
-Tweeledige verificatie is standaard niet ingeschakeld voor de service. Tweeledige verificatie wordt echter aanbevolen bij het registreren van een apparaat. Om tweeledige verificatie in te schakelen, configureert u een provider voor tweeledige verificatie in Azure AD en configureert u uw gebruikersaccounts voor meervoudige verificatie. Zie [Aan de slag met de Azure Multi-Factor Authentication Server](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud).
+Tweeledige verificatie is standaard niet ingeschakeld voor de service. Tweeledige verificatie wordt echter aanbevolen bij het registreren van een apparaat. Om tweeledige verificatie in te schakelen, configureert u een provider voor tweeledige verificatie in Azure AD en configureert u uw gebruikersaccounts voor meervoudige verificatie. Zie [Aan de slag met de Azure Multi-Factor Authentication Server](/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud).

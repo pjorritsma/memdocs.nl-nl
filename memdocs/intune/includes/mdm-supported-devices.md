@@ -1,5 +1,3 @@
-
-
 ### <a name="apple"></a>Apple
 - Apple iOS 11.0 en hoger
 - Apple iPadOS 13.0 en hoger
@@ -15,7 +13,7 @@
 - Windows 10 (versies Home, S, Pro, Education en Enterprise)
 - Windows 10 Enterprise 2019 LTSC
 
-  Zie [Nieuwe functies in Windows 10 Enterprise 2019 LTSC](https://docs.microsoft.com/windows/whats-new/ltsc/whats-new-windows-10-2019) voor meer informatie over het beheren van apparaten waarop Windows 10 2019 LTSC wordt uitgevoerd
+  Zie [Nieuwe functies in Windows 10 Enterprise 2019 LTSC](/windows/whats-new/ltsc/whats-new-windows-10-2019) voor meer informatie over het beheren van apparaten waarop Windows 10 2019 LTSC wordt uitgevoerd
   
 - Windows 10 Mobile
 - Windows 10 IoT Enterprise (x86, x64)
@@ -26,13 +24,12 @@
 
 - Windows 10 Teams (Surface Hub)
 
-   Zie [Surface Hub beheren met MDM](https://docs.microsoft.com/surface-hub/manage-settings-with-mdm-for-surface-hub) voor meer informatie over het beheren van apparaten waarop Windows 10 Teams wordt uitgevoerd
+   Zie [Surface Hub beheren met MDM](/surface-hub/manage-settings-with-mdm-for-surface-hub) voor meer informatie over het beheren van apparaten waarop Windows 10 Teams wordt uitgevoerd
 - Windows 10 1709 (RS3) en nieuwer, Windows 8.1 RT en pc's met Windows 8.1 (onderhoudsmodus)
 
 > [!NOTE]
-> Niet alle Windows-edities bieden ondersteuning voor alle beschikbare systeemfuncties die worden geconfigureerd via MDM. Raadpleeg de [referentiedocumenten voor de serviceprovider voor Windows-configuratie](https://docs.microsoft.com/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers). Elke CSP laat zien welke Windows-edities worden ondersteund.
+> Niet alle Windows-edities bieden ondersteuning voor alle beschikbare systeemfuncties die worden geconfigureerd via MDM. Raadpleeg de [referentiedocumenten voor de serviceprovider voor Windows-configuratie](/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers). Elke CSP laat zien welke Windows-edities worden ondersteund.
 
 Klanten met Enterprise Management + Security (EMS) kunnen ook [Azure Active Directory (Azure AD) gebruiken voor het registreren van Windows 10-apparaten](/intune/windows-enroll).
 
 Zie [Virtuele Windows 10-machines gebruiken met Intune](../fundamentals/windows-10-virtual-machines.md) voor richtlijnen voor het gebruik van virtuele Windows 10-machines met Intune.
-

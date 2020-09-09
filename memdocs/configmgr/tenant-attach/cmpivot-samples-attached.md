@@ -2,7 +2,7 @@
 title: Aan de Tenant gekoppelde CMPivot-voorbeeld scripts
 titleSuffix: Configuration Manager
 description: Script voorbeelden voor CMPivot van micro soft Endpoint Manager-apparaten die zijn gekoppeld aan de Tenant.
-ms.date: 05/26/2020
+ms.date: 09/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: sample
@@ -10,19 +10,21 @@ ms.assetid: 1d589306-9537-4306-a9bf-02c9771df514
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f32418b9351644f4c01ffadc7f9115ddf9325558
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3657454f99323683b36627001f79b540726436eb
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700385"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564064"
 ---
-# <a name="tenant-attach-cmpivot-sample-scripts"></a>Tenant bijvoegen: CMPivot-voorbeeld scripts
+# <a name="tenant-attach-cmpivot-preview-sample-scripts"></a>Tenant bijvoegen: CMPivot (preview)-voorbeeld scripts
 <!---->
-*Van toepassing op: Configuration Manager (technische preview-vertakking)*
+*Van toepassing op: Configuration Manager (huidige vertakking)*
 
 > [!Important]
-> Dit artikel is van toepassing op de Technical Preview-vertakking voor Configuration Manager. Zie [Configuration Manager Technical Preview versie 2005](../core/get-started/2020/technical-preview-2005.md#bkmk_cmpivot)voor meer informatie.
+> - Deze informatie is gekoppeld aan een preview-functie die aanzienlijk kan worden gewijzigd voordat deze commercieel wordt uitgebracht. Microsoft biedt geen enkele expliciete of impliciete garanties met betrekking tot de informatie die hier wordt verstrekt.
+
+Voer [CMPivot](cmpivot-start.md) -query's uit vanuit het micro soft Endpoint Manager-beheer centrum. Hieronder vindt u enkele algemene query behoeften en hoe CMPivot kunnen worden gebruikt om te voldoen aan deze vereisten. CMPivot maakt gebruik van een subset van de [Kusto query language (KQL)](https://docs.microsoft.com/azure/kusto/query/).
 
 Hieronder vindt u enkele algemene query behoeften en hoe CMPivot kunnen worden gebruikt om te voldoen aan deze vereisten. CMPivot maakt gebruik van een subset van de [Kusto query language (KQL)](/azure/kusto/query/).
 
@@ -30,4 +32,4 @@ Hieronder vindt u enkele algemene query behoeften en hoe CMPivot kunnen worden g
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Zie voor meer informatie over entiteiten voor uw query's [micro soft Endpoint Manager Tenant attach: CMPivot Overview](cmpivot-overview-attached.md)(Engelstalig).
+Zie voor meer informatie [Start CMPivot (preview) in het beheer centrum](cmpivot-start.md) voor meer informatie over de entiteiten voor uw query's raadpleegt u [micro soft Endpoint Manager Tenant Attaching: CMPivot Usage Overview](cmpivot-overview-attached.md)(Engelstalig).

@@ -10,12 +10,12 @@ ms.assetid: 75f47456-cd8d-4c83-8dc5-98b336a7c6c8
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 6fb487b590773afd1b59133f647696d9f858b439
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 7e02c642c95952c8751f03a8e1cb8838feff1155
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700378"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564040"
 ---
 # <a name="troubleshoot-application-installation-for-devices-uploaded-to-the-admin-center-preview"></a>Problemen met de installatie van een toepassing oplossen voor apparaten die zijn geüpload naar het beheer centrum (preview-versie)
 <!--6374854, 6521921-->
@@ -88,7 +88,7 @@ Onverwachte fouten worden meestal veroorzaakt door een [service aansluitpunt](..
 **Fout bericht:** De site-informatie is nog niet gesynchroniseerd van Configuration Manager naar het micro soft Endpoint Manager-beheer centrum. Wacht tot 15 minuten nadat u de site hebt gekoppeld aan uw Azure-Tenant.
 
 **Mogelijke oorzaken:**
-- Deze fout treedt doorgaans op wanneer nieuw onboarding wordt toegevoegd aan de Tenant. Wacht 15 minuten tot de gegevens zijn gesynchroniseerd.
+- Deze fout treedt doorgaans op wanneer nieuw onboarding wordt toegevoegd aan de Tenant. Wacht tot een uur voordat de gegevens worden gesynchroniseerd.
 - Deze fout kan ook optreden als de centrale beheer site is bijgewerkt naar een nieuwe versie van Configuration Manager, maar er nog geen upgrade is uitgevoerd voor sommige onderliggende primaire sites.
 
 ### <a name="application-shows-as-installed-after-creating-a-new-deployment"></a><a name="bkmk_installed"></a> De toepassing wordt weer gegeven als geïnstalleerd na het maken van een nieuwe implementatie

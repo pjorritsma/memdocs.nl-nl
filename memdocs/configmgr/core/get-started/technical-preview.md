@@ -2,7 +2,7 @@
 title: Technical Preview-releases
 titleSuffix: Configuration Manager
 description: Meer informatie over de technische preview-vertakking om nieuwe functies en mogelijkheden in Configuration Manager te testen.
-ms.date: 08/11/2020
+ms.date: 09/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eff1ec6a8346132853285195d8e96aa6b8d3a8fa
-ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
+ms.openlocfilehash: 2a5740d2ef1c0745d5df4995ba6ecb70015b7b13
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89432571"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564207"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Technical Preview voor Configuration Manager
 
@@ -167,8 +167,6 @@ De volgende functies zijn uitgebracht met eerdere versies van de Configuration M
 | Functie        | Technical Preview-versie |
 |----------------|---------------------------|
 | Verbeteringen in beschik bare apps via CMG <!--7033501--> | [Tech Preview 2006](2020/technical-preview-2006.md#bkmk_availapp) |
-| Tenantkoppeling: Tijdlijn van het apparaat in het beheercentrum <!--7141381--> | [Tech Preview 2005](2020/technical-preview-2005.md#bkmk_timeline) |
-| Tenantkoppeling: CMPivot vanuit het beheercentrum <!--6024392--> | [Tech Preview 2005](2020/technical-preview-2005.md#bkmk_cmpivot) |
 | Tenantkoppeling: Scripts uitvoeren vanuit het beheercentrum <!--6234688--> | [Tech Preview 2005](2020/technical-preview-2005.md#bkmk_scripts) |
 | Verbeteringen in de Cloud Management Gateway-cmdlets <!--6978300--> | [Tech Preview 2005](2020/technical-preview-2005.md#bkmk_pwshcmg) |
 | Fouten bij het instellen van rapporten en upgrades naar micro soft <!--5622909--> | [Tech Preview 2005](2020/technical-preview-2005.md#report-setup-and-upgrade-failures-to-microsoft) |

@@ -2,7 +2,7 @@
 title: Wat is er nieuw in versie 2006
 titleSuffix: Configuration Manager
 description: Krijg informatie over wijzigingen en nieuwe mogelijkheden die zijn geïntroduceerd in versie 2006 van Configuration Manager current branch.
-ms.date: 09/01/2020
+ms.date: 09/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3c061236202e685a6b59eeca3254a80cc1ddabf9
-ms.sourcegitcommit: 9d5c7a5e6ec430dc02d6d345028f6b29f6579b20
+ms.openlocfilehash: f46f3ee92854a6509d168134490e79a2d314b95f
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89385359"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564224"
 ---
 # <a name="whats-new-in-version-2006-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 2006 van Configuration Manager current branch
 
@@ -32,12 +32,26 @@ Als u optimaal wilt profiteren van de nieuwe functies van Configuration Manager,
 
 ## <a name="microsoft-endpoint-manager-tenant-attach"></a><a name="bkmk_tenant"></a> Micro soft Endpoint Manager-Tenant koppelen
 
+### <a name="device-timeline-in-the-admin-center"></a><a name="bkmk_timeline"></a> Tijd lijn van apparaat in het beheer centrum
+<!--7220536, CM7141381-->
+Wanneer Configuration Manager een apparaat synchroniseert met Microsoft Endpoint Manager via een tenantkoppeling, kunt u een tijdlijn van gebeurtenissen bekijken. Deze tijdlijn toont eerdere activiteiten op het apparaat die u kunnen helpen bij het oplossen van problemen. Zie [tijd lijn van het apparaat in het beheer centrum](../../../tenant-attach/timeline.md)voor meer informatie.
+
+### <a name="resource-explorer-in-the-admin-center"></a><a name="bkmk_hinv"></a> Resource Explorer in het beheer centrum
+<!--6479284-->
+Vanuit het micro soft endpoint management-beheer centrum kunt u de hardware-inventaris voor het uploaden van Configuration Manager-apparaten bekijken met resource Explorer. Zie [Tenant attach: resource Explorer in het beheer centrum](../../../tenant-attach/resource-explorer.md)voor meer informatie.
+
+### <a name="cmpivot-from-the-admin-center"></a><a name="bkmk_cmpivot"></a> CMPivot van het beheer centrum
+<!--6024392-->
+Breng de kracht van CMPivot naar het micro soft Endpoint Manager-beheer centrum. Sta aanvullende persona's, zoals Helpdesk, toe om vanuit de cloud realtimequery's te starten op een afzonderlijk, door ConfigMgr beheerd apparaat en de resultaten te retourneren naar het beheercentrum. Dit biedt alle traditionele voordelen van CMPivot, waarmee IT-beheerders en andere aangewezen personen de status van apparaten in hun omgeving snel kunnen beoordelen en actie kunnen ondernemen.
+
+Zie voor meer informatie over CMPivot in het beheer centrum [CMPivot-vereisten](../../../tenant-attach/cmpivot-start.md), overzicht van [CMPivot](../../../tenant-attach/cmpivot-overview-attached.md)en CMPivot- [voorbeeld scripts](../../../tenant-attach/cmpivot-samples-attached.md).
+
 ### <a name="tenant-attach-microsoft-defender-antivirus-policies-in-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> Tenant bijvoegen: micro soft Defender anti virus Policies in het beheer centrum van micro soft Endpoint Manager
 <!--4812909-->
 U kunt nu micro soft Defender anti virus-beleid maken in de micro soft Endpoint Manager-console en implementeren in Configuration Manager-verzamelingen. Raadpleeg de volgende artikelen voor meer informatie, waaronder gedetailleerde instructies en beschik bare instellingen:
 - [Tenant bijvoegen: Configuration Manager-clients onboarden naar micro soft Defender ATP vanuit het beheer centrum (preview-versie)](../../../tenant-attach/atp-onboard.md)
 - [Tenant bijvoegen: beleid voor beveiliging van eind punten implementeren vanuit het beheer centrum (preview-versie)](../../../tenant-attach/deploy-antivirus-policy.md)
-- [Instellingen voor het anti virus beleid van micro soft Defender voor aan de Tenant gekoppelde apparaten in Microsoft intune](../../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json). 
+- [Instellingen voor het anti virus beleid van micro soft Defender voor aan de Tenant gekoppelde apparaten in Microsoft intune](../../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json).
 
 ### <a name="install-applications-from-the-admin-center"></a>Toepassingen installeren vanuit het beheer centrum
 <!--7518897, 6024389-->
@@ -258,7 +272,7 @@ Deze release bevat de volgende aanvullende verbeteringen voor de implementatie v
 
 - Sommige klanten bouwen aangepaste taken reeks interfaces met behulp van de methode **IProgressUI:: ShowMessage** , maar er wordt geen waarde geretourneerd voor het antwoord van de gebruiker. Deze release voegt de methode [IProgressUI:: ShowMessageEx](../../../develop/reference/core/clients/client-classes/iprogressui--showmessageex-method.md) toe. Deze nieuwe methode is vergelijkbaar met de bestaande methode, maar bevat ook een nieuwe integer-resultaat variabele, **pResult**.<!--6448458-->
 
-## <a name="protection"></a>Protection
+## <a name="protection"></a>Beveiliging
 
 ### <a name="cmg-support-for-endpoint-protection-policies"></a>CMG-ondersteuning voor Endpoint Protection-beleid
 

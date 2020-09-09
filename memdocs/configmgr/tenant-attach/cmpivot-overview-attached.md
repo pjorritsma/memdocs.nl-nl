@@ -1,8 +1,8 @@
 ---
-title: CMPivot-overzicht van gekoppelde Tenant
+title: Overzicht van gekoppeld CMPivot-gebruik aan Tenant
 titleSuffix: Configuration Manager
-description: Overzicht van CMPivot voor aan micro soft Endpoint Manager gekoppelde apparaten.
-ms.date: 08/17/2020
+description: Overzicht van het gebruik van CMPivot voor aan micro soft Endpoint Manager gekoppelde apparaten.
+ms.date: 09/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -10,19 +10,19 @@ ms.assetid: 31bf1359-54e5-4416-9f39-6bb0070db542
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 529cf0c27793262abb2902477ceab11201212b1e
-ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
+ms.openlocfilehash: 8967957883a1c8d397377c30409cb94139014214
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88614717"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564070"
 ---
-# <a name="tenant-attach-cmpivot-overview"></a>Tenant koppelen: overzicht van CMPivot
+# <a name="tenant-attach-cmpivot-preview-usage-overview"></a>Tenant bijvoegen: CMPivot (preview) gebruiks overzicht
 
-*Van toepassing op: Configuration Manager (technische preview-vertakking)*
+*Van toepassing op: Configuration Manager (huidige vertakking)*
 
 > [!Important]
-> Dit artikel is van toepassing op de Technical Preview-vertakking voor Configuration Manager. Zie [Configuration Manager Technical Preview versie 2005](../core/get-started/2020/technical-preview-2005.md#bkmk_cmpivot)voor meer informatie.
+> - Deze informatie is gekoppeld aan een preview-functie die aanzienlijk kan worden gewijzigd voordat deze commercieel wordt uitgebracht. Microsoft biedt geen enkele expliciete of impliciete garanties met betrekking tot de informatie die hier wordt verstrekt.
 
 Met CMPivot kunt u snel de status van een apparaat in uw omgeving beoordelen en actie ondernemen. Wanneer u een query invoert, wordt in CMPivot een query in realtime uitgevoerd op het apparaat dat momenteel is verbonden. De geretourneerde gegevens kunnen vervolgens worden gefilterd, gegroepeerd en verfijnd voor het beantwoorden van zakelijke vragen, het oplossen van problemen in uw omgeving of het reageren op beveiligings Risico's. Zie [CMPivot gebruiken](../core/servers/manage/cmpivot.md)voor meer informatie over het gebruik van CMPivot.
 
@@ -44,4 +44,4 @@ Wanneer u CMPivot gebruikt vanuit de beheer console van micro soft Endpoint Mana
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Zie voor meer voorbeeld scripts [micro soft Endpoint Manager Tenant koppelen: CMPivot-script voorbeelden](cmpivot-samples-attached.md).
+Zie voor meer informatie [Start CMPivot (preview) in het beheer centrum](cmpivot-start.md) voor meer voorbeeld scripts raadpleegt u [micro soft Endpoint Manager Tenant koppelen: CMPivot-script voorbeelden](cmpivot-samples-attached.md).

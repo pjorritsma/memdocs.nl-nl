@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7397fc17-3ae8-4525-8386-aea8a9cffa06
-ms.openlocfilehash: 7e6a98c25fabff31d3eae688edf89540c1ab71a7
-ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
+ms.openlocfilehash: cbea7d7e126b120145533b7cf19822b54b3cb701
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84613942"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607970"
 ---
 # <a name="surface-device-dashboard-in-configuration-manager"></a>Dash board van Surface-apparaat in Configuration Manager
 
@@ -52,7 +52,7 @@ Het Surface Device-dash board toont drie grafieken voor uw omgeving.
 
 - **Top vijf van firmware versies**: geeft een grafiek weer met de vijf meest voorkomende firmware modellen in uw omgeving. 
   - Als u de muis aanwijzer boven een grafiek sectie houdt, geeft u het aantal Surface-apparaten weer dat de firmware versie is geselecteerd. Vanaf Configuration Manager versie 1806, klikken op een grafiek sectie, wordt een lijst met relevante apparaten weer gegeven. <!--1358654-->
-     ![Lijst met apparaten voor Surface model](media/Surface-Firmware-Hover.PNG)
+     ![Knop info Surface firmware](media/Surface-Firmware-Hover.PNG)
 
 
 ## <a name="more-information"></a>Meer informatie

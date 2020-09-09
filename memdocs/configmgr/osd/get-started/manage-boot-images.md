@@ -10,12 +10,12 @@ ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 74b8b0f29172140a19c402c79b7ea9b7339cf3e5
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3ddcf0c9ff4a9af1e74a745d8bda326804365206
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88697633"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606310"
 ---
 # <a name="manage-boot-images-with-configuration-manager"></a>Opstart installatie kopieën beheren met Configuration Manager
 
@@ -206,7 +206,7 @@ Selecteer op het tabblad **Aanpassen** één van de volgende instellingen:
 - **Standaard toetsenbord indeling instellen in WinPE**: <!--4910348-->Configureer vanaf versie 1910 de standaardtoetsen bord indeling voor een opstart installatie kopie. Als u een andere taal dan en-US selecteert, bevat Configuration Manager nog steeds en-us in de beschik bare land instellingen voor invoer. Op het apparaat is de oorspronkelijke toetsenbord indeling de geselecteerde land instelling, maar de gebruiker kan het apparaat overschakelen naar en-US als dat nodig is.
 
 > [!Tip]
-> Gebruik de Power shell [-cmdlet Set-CMBootImage](/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) om deze instellingen te configureren van een script.
+> Gebruik de Power shell [-cmdlet Set-CMBootImage](/powershell/module/configurationmanager/set-cmbootimage) om deze instellingen te configureren van een script.
 
 #### <a name="optional-components"></a>Optionele onderdelen
 

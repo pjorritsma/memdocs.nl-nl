@@ -10,12 +10,12 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 42dc0f65e9e3765de35e6db7f5272aeeaab63fa2
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3e16e605bde9224d641647ed8ad5ae58a9bfcf1e
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695287"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606524"
 ---
 # <a name="create-applications-in-configuration-manager"></a>Toepassingen maken in Configuration Manager
 
@@ -649,9 +649,9 @@ Configureer aanvullende opties die uniek zijn voor implementatie typen voor virt
 
 2. Selecteer een toepassing met een app-V-implementatie type en selecteer **Eigenschappen**.  
 
-3. Ga in de eigenschappen van de toepassing naar het tabblad **implementatie typen** , selecteer het implementatie type app-V en selecteer **bewerken**.  
+3. Ga in de eigenschappen van de toepassing naar het tabblad **implementatie typen** . Selecteer app-V-implementatie type en selecteer **bewerken**.  
 
-4. In de eigenschappen van het implementatie type gaat u naar het tabblad **inhoud** . Configureer zo nodig de volgende opties:  
+4. Ga in de eigenschappen van het implementatie type naar het tabblad **inhoud** . Configureer zo nodig de volgende opties:  
 
     - **Inhoud in de client cache behouden**: de Configuration Manager-client verwijdert de inhoud voor dit implementatie type niet uit de cache.  
 
@@ -665,7 +665,7 @@ Configureer aanvullende opties die uniek zijn voor implementatie typen voor virt
 
 2. Selecteer een toepassing met een app-V-implementatie type en selecteer **Eigenschappen**.  
 
-3. Ga in de eigenschappen van de toepassing naar het tabblad **implementatie typen** , selecteer het implementatie type app-V en selecteer **bewerken**.  
+3. Ga in de eigenschappen van de toepassing naar het tabblad **implementatie typen** . Selecteer app-V-implementatie type en selecteer **bewerken**.  
 
 4. Ga in de eigenschappen van het implementatie type naar het tabblad **publiceren** . Selecteer de items in de virtuele toepassing die u wilt publiceren.  
 
@@ -688,7 +688,7 @@ Gebruik de volgende procedure om een toepassing in Configuration Manager te impo
 De nieuwe toepassing wordt weergegeven in het knooppunt **Toepassingen**.  
 
 > [!TIP]  
-> De Windows Power shell **-cmdlet Import-CMApplication** heeft dezelfde functie als deze procedure. Zie [import-CMApplication](/powershell/module/configurationmanager/import-cmapplication?view=sccm-ps)voor meer informatie.  
+> De Windows Power shell **-cmdlet Import-CMApplication** heeft dezelfde functie als deze procedure. Zie [import-CMApplication](/powershell/module/configurationmanager/import-cmapplication)voor meer informatie.  
 
 Zie [management tasks for Applications](management-tasks-applications.md)(Engelstalig) voor meer informatie over het exporteren van een toepassing.
 

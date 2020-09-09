@@ -10,12 +10,12 @@ ms.assetid: 5ef1bff8-9733-4b5a-b65f-26b94accd210
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: feb9f4206df65ee34228577a9e589ddd1be72870
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 11a7330220ed1aa8f4c3f813418ea86e59e0e1fc
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127241"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608008"
 ---
 # <a name="device-restart-notifications-in-configuration-manager"></a>Meldingen voor het opnieuw opstarten van apparaten in Configuration Manager
 
@@ -27,7 +27,7 @@ De meldingen die een gebruiker ontvangt voor een apparaat dat opnieuw moet worde
 
 De [client instellingen voor het opnieuw opstarten](#client-settings) van de computer wijzigen de gebruikers ervaring voor alle vereiste implementaties waarvoor het opnieuw opstarten van de volgende typen is vereist:
 
-- [Toepassing](../../../apps/deploy-use/deploy-applications.md)
+- [App](../../../apps/deploy-use/deploy-applications.md)
 - [Takenreeks](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)
 - [Software-update](../../../sum/deploy-use/deploy-software-updates.md)
 
@@ -51,7 +51,7 @@ Software Center toont een melding met de optie uitstellen en de resterende tijd 
 
 Software Center toont deze laatste melding over aftelling die de gebruiker niet kan sluiten of uitstellen.
 
-:::image type="content" source="media/3976435-final-restart-countdown.png" alt-text="Melding over laatste aftelling Software Center":::
+:::image type="content" source="media/3976435-final-restart-countdown.png" alt-text="Aftelling laatste herstart Software Center":::
 
 Vanaf versie 1906 ziet de gebruiker geen voortgangs balk in de melding over opnieuw opstarten totdat de herstart van de computer minder dan 24 uur duurt.
 
@@ -237,11 +237,11 @@ Als de gebruiker het apparaat na de installatie niet opnieuw heeft opgestart, kr
 
 - Tijdelijke melding wanneer u het dialoog venster Software Center gebruikt en niet op pop-up:
 
-    :::image type="content" source="media/3555947-1902-hide-notification.png" alt-text="Melding over opnieuw starten in behandeling Software Center met knop uitstellen":::
+    :::image type="content" source="media/3555947-1902-hide-notification.png" alt-text="Melding Software Center opnieuw starten in behandeling met de knop Snooze in versie 1902":::
 
 Als de gebruiker niet opnieuw wordt opgestart na de tijdelijke melding, krijgt deze de laatste melding over aftelling dat ze niet kunnen worden gesloten. Het tijdstip waarop de laatste melding wordt weer gegeven, is gebaseerd op de client instelling: **een dialoog venster weer geven dat de gebruiker niet kan sluiten, waarin het aftellings interval wordt weer gegeven voordat de gebruiker wordt afgemeld of de computer opnieuw wordt opgestart (minuten)**. Als de instelling bijvoorbeeld 60 is, wordt een uur voordat de computer opnieuw wordt opgestart, de laatste melding voor de gebruiker weer gegeven:
 
-:::image type="content" source="media/3555947-1902-final-countdown.png" alt-text="Melding over laatste aftelling Software Center":::
+:::image type="content" source="media/3555947-1902-final-countdown.png" alt-text="Melding over laatste aftelling Software Center in versie 1902":::
 
 De volgende instellingen moeten korter zijn dan het kortste [onderhouds venster](../manage/collections/use-maintenance-windows.md) dat wordt toegepast op de computer:
 

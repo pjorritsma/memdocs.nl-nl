@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 38ea77e44b1d1754d80d0ec902929f5de620c063
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 7c5c9868949fa9bbf08bbf00083eda8e60750470
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88993332"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607705"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 2002 van Configuration Manager current branch
 
@@ -426,7 +426,7 @@ Vanaf deze versie zijn de volgende functies niet meer [voorlopige versie](../../
 - [Zelfstandige CMPivot](../../servers/manage/cmpivot.md#bkmk_standalone)<!--3555890/4692885-->
 - [Client-apps voor gezamenlijk beheerde apparaten](../../../comanage/workloads.md#client-apps) (voorheen bekend als *mobiele apps voor gezamenlijk beheerde apparaten*)<!-- 1357892/3600959 -->
 
-Zie [release opmerkingen voor Power shell versie 2002](/powershell/sccm/2002-release-notes?view=sccm-ps)voor meer informatie over wijzigingen in de Windows Power shell-cmdlets voor Configuration Manager.
+Zie [release opmerkingen voor Power shell versie 2002](/powershell/sccm/2002-release-notes)voor meer informatie over wijzigingen in de Windows Power shell-cmdlets voor Configuration Manager.
 
 Zie [release opmerkingen voor de beheer service](../../../develop/adminservice/release-notes.md#bkmk_2002)voor meer informatie over wijzigingen in de beheer service rest API.
 

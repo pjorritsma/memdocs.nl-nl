@@ -9,12 +9,13 @@ ms.assetid: 7610bbd3-a67f-4a09-8115-e35d40d43b42
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2c733ef03482ddfc1f3e6502d7f5fe8ae0d20b76
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+description: Beleid voor antimalware en Windows Firewall beveiliging plannen
+ms.openlocfilehash: 2e3904b7b7232e92fd4a246d2e0519ef32fb67f6
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85590504"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606841"
 ---
 # <a name="planning-for-endpoint-protection-in-configuration-manager"></a>Endpoint Protection plannen in Configuration Manager
 

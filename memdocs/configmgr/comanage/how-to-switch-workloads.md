@@ -10,12 +10,12 @@ manager: dougeby
 ms.date: 09/06/2019
 ms.topic: how-to
 ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
-ms.openlocfilehash: 88c8b34437ba52e700ef97885aafed40734a0f32
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: 50f606f008c52470b1742840fcde391f1030455c
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776953"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606809"
 ---
 # <a name="how-to-switch-configuration-manager-workloads-to-intune"></a>Configuration Manager-workloads overschakelen naar Intune
 
@@ -43,7 +43,7 @@ Vanaf versie 1906 kunt u verschillende pilot verzamelingen configureren voor elk
 
 4. Ga naar het tabblad **staging** en wijzig zo nodig de **pilot verzameling** voor een van de werk belastingen.
   
-   ![Scherm afbeelding van het tabblad werk belastingen op de pagina met eigenschappen voor co-beheer](media/3555750-co-management-staging-tab.png)
+   ![Scherm afbeelding van het tabblad staging op de pagina eigenschappen voor co-beheer](media/3555750-co-management-staging-tab.png)
 
 > [!Important]  
 > - Voordat u een werk belasting overschakelt, moet u ervoor zorgen dat u de bijbehorende werk belasting correct configureert en implementeert in intune. Zorg ervoor dat workloads altijd worden beheerd door een van de beheer hulpprogramma's voor uw apparaten.
@@ -60,7 +60,7 @@ U kunt overstappen op werk belastingen wanneer u co-beheer inschakelt of later w
 
 3. Schakel over naar het tabblad **werk belastingen** . Standaard worden alle werk belastingen ingesteld op de instelling **Configuration Manager** . Als u wilt overschakelen op een werk belasting, verplaatst u het besturings element schuif regelaar voor de werk belasting naar de gewenste instelling.  
 
-    ![Scherm afbeelding van het tabblad werk belastingen op de pagina met eigenschappen voor co-beheer](media/properties-workloads.png)
+    ![Scherm afbeelding van het tabblad werk belastingen op de pagina eigenschappen van co-beheer, versie 1902](media/properties-workloads.png)
 
     - **Configuration Manager**: Configuration Manager blijft deze werk belasting beheren.  
 

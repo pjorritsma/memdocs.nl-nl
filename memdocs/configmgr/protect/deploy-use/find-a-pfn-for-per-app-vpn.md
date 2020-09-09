@@ -10,12 +10,12 @@ ms.assetid: 47118499-3d26-4c25-bfde-b129de7eaa59
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 744abfcd36b2f162fffdc5e7f3e8c9258a617496
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 357b13b06bcfaabf6c22f68a3c21e498630cebf2
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699973"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608214"
 ---
 # <a name="find-a-package-family-name-pfn-for-per-app-vpn"></a>Een familienaam van een pakket (PFN) zoeken voor VPN per app
 
@@ -26,7 +26,7 @@ Er zijn twee manieren om een PFN te zoeken, zodat u VPN per app kunt configurere
 
 ## <a name="find-a-pfn-for-an-app-thats-installed-on-a-windows-10-computer"></a>Een PFN zoeken voor een app die is geïnstalleerd op een Windows 10-computer
 
-Als de app waarmee u werkt, al is geïnstalleerd op een Windows 10-computer, kunt u de PowerShell-cmdlet [Get-AppxPackage](/powershell/module/appx/get-appxpackage?view=win10-ps) gebruiken om de PFN op te halen.
+Als de app waarmee u werkt, al is geïnstalleerd op een Windows 10-computer, kunt u de PowerShell-cmdlet [Get-AppxPackage](/powershell/module/appx/get-appxpackage) gebruiken om de PFN op te halen.
 
 De syntaxis voor Get-AppxPackage is:
 

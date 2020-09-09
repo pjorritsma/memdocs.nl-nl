@@ -10,18 +10,18 @@ ms.assetid: a49a9564-0863-44c3-991e-a8e271fed586
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 20b23cec74ae3d201bc81fe1834e87e7eb8fcc13
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 32800284c415de6a36e856abf473bc6d8d729e6f
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129644"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608244"
 ---
 # <a name="changes-to-cmpivot"></a>Wijzigingen in CMPivot
 
 Gebruik de volgende informatie voor meer informatie over de wijzigingen die zijn aangebracht in [CMPivot](cmpivot.md) tussen Configuration Manager-versies:
 
-## <a name="cmpivot-changes-for-version-2006"></a><a name="bkmk_2006"></a>CMPivot wijzigingen voor versie 2006
+## <a name="cmpivot-changes-for-version-2006"></a><a name="bkmk_2006"></a> CMPivot wijzigingen voor versie 2006
 <!--6518631-->
 
 Vanaf versie 2006 zijn de volgende verbeteringen aangebracht in CMPivot:
@@ -42,14 +42,14 @@ Vanaf versie 2006 zijn de volgende verbeteringen aangebracht in CMPivot:
 ![De draai tabel van het apparaat voor meerdere apparaten met behulp van CMPivot](./media/6518631-cmpivot-multi-select.png)
 
 
-## <a name="cmpivot-changes-for-version-2002"></a><a name="bkmk_2002"></a>CMPivot wijzigingen voor versie 2002
+## <a name="cmpivot-changes-for-version-2002"></a><a name="bkmk_2002"></a> CMPivot wijzigingen voor versie 2002
 <!--5870934-->
 We hebben het eenvoudiger gemaakt om te navigeren in CMPivot-entiteiten. Vanaf Configuration Manager versie 2002 kunt u CMPivot-entiteiten zoeken. Er zijn ook nieuwe pictogrammen toegevoegd om de entiteiten en de object typen van de entiteit eenvoudig te onderscheiden.
 
 ![Zoeken in CMPivot-entiteiten](./media/5870934-search-cmpivot-entities.png)
 
 
-## <a name="cmpivot-changes-for-version-1910"></a><a name="bkmk_cmpivot1910"></a>CMPivot wijzigingen voor versie 1910
+## <a name="cmpivot-changes-for-version-1910"></a><a name="bkmk_cmpivot1910"></a> CMPivot wijzigingen voor versie 1910
 <!--5410930, 3197353-->
 Vanaf versie 1910 werd CMPivot aanzienlijk geoptimaliseerd om het netwerk verkeer en de belasting van uw servers te verminderen. Daarnaast zijn er een aantal entiteiten en entiteits verbeteringen toegevoegd aan de hulp bij het oplossen van problemen en jacht. De volgende wijzigingen zijn geïntroduceerd voor CMPivot in versie 1910:
 
@@ -64,7 +64,7 @@ Vanaf versie 1910 werd CMPivot aanzienlijk geoptimaliseerd om het netwerk verkee
 - [Andere verbeteringen in CMPivot](#bkmk_Other)
 
 
-### <a name="optimizations-to-the-cmpivot-engine"></a><a name="bkmk_optimization"></a>Optimalisaties voor de CMPivot-engine
+### <a name="optimizations-to-the-cmpivot-engine"></a><a name="bkmk_optimization"></a> Optimalisaties voor de CMPivot-engine
 <!--3197353-->
 CMPivot is geoptimaliseerd in 1910 om het netwerk verkeer en de belasting van uw servers te verminderen. Veel query bewerkingen worden nu direct uitgevoerd op de client in plaats van op de servers. Deze wijziging betekent ook dat sommige CMPivot-bewerkingen minimale gegevens retour neren van de eerste query. Als u wilt inzoomen op de gegevens voor meer informatie, kan een nieuwe query worden uitgevoerd om de aanvullende gegevens van de client op te halen. Voorheen werd bijvoorbeeld een grote gegevensset naar de server geretourneerd toen u de query ' aantal ' overzichten ' had uitgevoerd.  Tijdens het retour neren van een grote gegevensset wordt direct inzoomen aangeboden, maar vaak is alleen het aantal samenvattingen nodig. In 1910 wanneer u ervoor kiest om in te zoomen op een specifieke client, wordt een andere verzameling van de gegevens uitgevoerd om de aanvullende gegevens die u hebt aangevraagd, te retour neren. Met deze wijziging worden de prestaties en schaal baarheid van query's op een groot aantal clients verbeterd. <!--3197353, 5458337-->
 
@@ -90,7 +90,7 @@ De CMPivot-optimalisaties verlagen het netwerk en de CPU-belasting van de server
    | project Device, MalwareFound = iif( isnull(FileName), 'No', 'Yes')
    ```
 
-### <a name="wineventlognametimespan"></a><a name="bkmk_WinEvent"></a>Wine vent ( \<logname> , [ \<timespan> ])
+### <a name="wineventlognametimespan"></a><a name="bkmk_WinEvent"></a> Wine vent ( \<logname> , [ \<timespan> ])
 
 Deze entiteit wordt gebruikt voor het ophalen van gebeurtenissen uit gebeurtenis logboeken en logboek bestanden voor gebeurtenis tracering. De entiteit haalt gegevens op uit gebeurtenis logboeken die worden gegenereerd door de Windows-gebeurtenis logboek technologie. De entiteit haalt ook gebeurtenissen op in logboek bestanden die zijn gegenereerd door Event Tracing for Windows (ETW). Wine vent bekijkt de gebeurtenissen die standaard in de afgelopen 24 uur zijn opgetreden. De standaard instelling voor 24 uur kan echter worden overschreven door een time span op te nemen.
 
@@ -100,7 +100,7 @@ WinEvent('Microsoft-Windows-HelloForBusiness/Operational', 1d)
 | summarize count() by Device
 ```
 
-### <a name="filecontentfilename"></a><a name="bkmk_File"></a>FileContent ( \<filename> )
+### <a name="filecontentfilename"></a><a name="bkmk_File"></a> FileContent ( \<filename> )
 
 FileContent wordt gebruikt om de inhoud van een tekst bestand op te halen.
 
@@ -110,7 +110,7 @@ FileContent('c:\\windows\\SMSCFG.ini')
 | project Device, SMSId= substring(Content,22)
 ```
 
-### <a name="processmoduleprocessname"></a><a name="bkmk_ProcessModule"></a>ProcessModule ( \<processname> )  
+### <a name="processmoduleprocessname"></a><a name="bkmk_ProcessModule"></a> ProcessModule ( \<processname> )  
 
 Deze entiteit wordt gebruikt voor het inventariseren van de modules (dll's) die door een bepaald proces zijn geladen. ProcessModule is handig bij het zoeken naar malware die in legitieme processen wordt verborgen.  
 
@@ -120,7 +120,7 @@ ProcessModule('powershell')
 | order by count_ desc
 ```
 
-### <a name="aadstatus"></a><a name="bkmk_AadStatus"></a>AadStatus
+### <a name="aadstatus"></a><a name="bkmk_AadStatus"></a> AadStatus
 
 Deze entiteit kan worden gebruikt om de huidige Azure Active Directory identiteits gegevens van een apparaat op te halen.
 
@@ -131,7 +131,7 @@ AadStatus
 | render piechart
 ```
 
-### <a name="epstatus"></a><a name="bkmk_EPStatus"></a>EPStatus
+### <a name="epstatus"></a><a name="bkmk_EPStatus"></a> EPStatus
 
 EPStatus wordt gebruikt voor het ophalen van de status van de antimalware-software die op de computer is geïnstalleerd.
 
@@ -143,7 +143,7 @@ EPStatus
 | render barchart
 ```
 
-### <a name="local-device-query-evaluation-using-cmpivot-standalone"></a><a name="bkmk_local-eval"></a>Query-evaluatie van lokale apparaten met behulp van CMPivot standalone
+### <a name="local-device-query-evaluation-using-cmpivot-standalone"></a><a name="bkmk_local-eval"></a> Query-evaluatie van lokale apparaten met behulp van CMPivot standalone
 <!--3197353-->
 Wanneer u CMPivot gebruikt buiten de Configuration Manager-console, kunt u alleen een query uitvoeren op het lokale apparaat zonder dat de Configuration Manager-infra structuur nodig is. U kunt nu gebruikmaken van de CMPivot Azure Log Analytics-query's om snel WMI-gegevens op het lokale apparaat weer te geven. Hiermee wordt ook de validatie en verfijning van CMPivot-query's ingeschakeld voordat deze in een grotere omgeving worden uitgevoerd. Zelfstandige CMPivot is alleen beschikbaar in het Engels. Zie [CMPivot standalone](#bkmk_standalone)voor meer informatie over CMPivot standalone.
 
@@ -153,7 +153,7 @@ Wanneer u CMPivot gebruikt buiten de Configuration Manager-console, kunt u allee
 - Als u op **deze PC**niet-WMI-entiteiten opvraagt, ziet u een **Ongeldige naam ruimte** of een niet-eenduidige uitzonde ring.
 - Voer CMPivot standalone uit vanuit de snelkoppeling in het menu Start, niet rechtstreeks vanuit het pad van het uitvoer bare bestand. <!--5787962-->
 
-### <a name="other-enhancements"></a><a name="bkmk_Other"></a>Andere verbeteringen
+### <a name="other-enhancements"></a><a name="bkmk_Other"></a> Andere verbeteringen
 
 - U kunt reguliere expressie type query's uitvoeren met behulp van de `like` operator new. Bijvoorbeeld:<!--3056858-->
   
@@ -206,7 +206,7 @@ Wanneer u CMPivot gebruikt buiten de Configuration Manager-console, kunt u allee
   - Elke client is beperkt tot 128 KB aan gegevens per query.
   - Resultaten kunnen worden afgekapt als de resultaten van de query groter zijn dan 128 KB.
 
-## <a name="cmpivot-changes-for-version-1906"></a><a name="bkmk_cmpivot1906"></a>CMPivot wijzigingen voor versie 1906
+## <a name="cmpivot-changes-for-version-1906"></a><a name="bkmk_cmpivot1906"></a> CMPivot wijzigingen voor versie 1906
 
 Vanaf versie 1906 zijn de volgende items toegevoegd aan CMPivot:
 
@@ -214,7 +214,7 @@ Vanaf versie 1906 zijn de volgende items toegevoegd aan CMPivot:
 - [De CMPivot-machtigingen zijn toegevoegd aan de rol beveiligings beheerder](#bkmk_cmpivot_secadmin1906)
 - [Zelfstandige CMPivot](#bkmk_standalone)
 
-### <a name="add-joins-additional-operators-and-aggregators-in-cmpivot"></a><a name="bkmk_cmpivot_joins"></a>Voeg koppelingen, extra Opera tors en aggregators toe in CMPivot
+### <a name="add-joins-additional-operators-and-aggregators-in-cmpivot"></a><a name="bkmk_cmpivot_joins"></a> Voeg koppelingen, extra Opera tors en aggregators toe in CMPivot
 <!--4054074-->
 U hebt nu extra reken kundige Opera Tors, aggregators en de mogelijkheid om toevoeg query's toe te voegen, zoals het gebruik van het REGI ster en het bestand samen. De volgende items zijn toegevoegd:
 
@@ -262,7 +262,7 @@ De render-operator bestaat al in CMPivot. Er is ondersteuning voor meerdere reek
 | substring() | Hiermee wordt een subtekenreeks geëxtraheerd van een bron teken reeks, beginnend bij een index naar het einde van de teken reeks |
 | tostring() | Converteert invoer naar een teken reeks bewerking |
 
-#### <a name="examples"></a><a name="bkmk_cmpivot_examples1906"></a>Vindt
+#### <a name="examples"></a><a name="bkmk_cmpivot_examples1906"></a> Vindt
 
 - Apparaat, fabrikant, model en niet weer geven:
 
@@ -284,7 +284,7 @@ De render-operator bestaat al in CMPivot. Er is ondersteuning voor meerdere reek
 
    ![Gestapeld staaf diagram met opstart tijden voor een apparaat in MS](./media/4054074-render-using-with-statement.png)
 
-### <a name="added-cmpivot-permissions-to-the-security-administrator-role"></a><a name="bkmk_cmpivot_secadmin1906"></a>De CMPivot-machtigingen zijn toegevoegd aan de rol beveiligings beheerder
+### <a name="added-cmpivot-permissions-to-the-security-administrator-role"></a><a name="bkmk_cmpivot_secadmin1906"></a> De CMPivot-machtigingen zijn toegevoegd aan de rol beveiligings beheerder
 <!--4683130-->
 
 Vanaf versie 1906 zijn de volgende machtigingen toegevoegd aan de ingebouwde rol **beveiligings beheerder** van Configuration Manager:
@@ -296,11 +296,11 @@ Vanaf versie 1906 zijn de volgende machtigingen toegevoegd aan de ingebouwde rol
 >[!NOTE]
 > **Run scripts** is een superset van de machtiging **Run CMPivot** .
 
-### <a name="cmpivot-standalone"></a><a name="bkmk_standalone"></a>Zelfstandige CMPivot
+### <a name="cmpivot-standalone"></a><a name="bkmk_standalone"></a> Zelfstandige CMPivot
 
 [!INCLUDE [CMPivot standalone](includes/cmpivot-standalone.md)] 
 
-## <a name="cmpivot-changes-for-version-1902"></a><a name="bkmk_cmpivot1902"></a>CMPivot wijzigingen voor versie 1902
+## <a name="cmpivot-changes-for-version-1902"></a><a name="bkmk_cmpivot1902"></a> CMPivot wijzigingen voor versie 1902
 <!--3610960-->
 Vanaf Configuration Manager versie 1902 kunt u CMPivot uitvoeren vanaf de centrale beheer site (CAS) in een-hiërarchie. De primaire site verwerkt nog steeds de communicatie met de client. Wanneer CMPivot vanaf de centrale beheer site wordt uitgevoerd, communiceert deze met de primaire site via het kanaal voor het abonnement op hoge snelheid van berichten. Deze communicatie vertrouwt niet op de standaard SQL-replicatie tussen sites.
 
@@ -359,12 +359,12 @@ U kunt beperkte delegering definiëren om CMPivot te laten werken aan de certifi
       1. Kies **alleen Kerberos gebruiken**.
       1. Voeg de SQL Server-service van elke primaire site toe met de poort en het exemplaar.
       1. Zorg ervoor dat deze wijzigingen worden uitgelijnd met het beveiligings beleid van uw bedrijf.
-1. Zorg ervoor dat de [SPN wordt gepubliceerd](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover?view=sql-server-2017#SPNs) voor de naam van de SQL-LISTENER van CAS en elke naam van de primaire SQL-listener.
+1. Zorg ervoor dat de [SPN wordt gepubliceerd](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover#SPNs) voor de naam van de SQL-LISTENER van CAS en elke naam van de primaire SQL-listener.
 1. Start de primaire SQL-servers opnieuw op.
 1. Start de CAS-site server en de CAS SQL-servers opnieuw op.
 
 
-## <a name="cmpivot-changes-for-version-1810"></a><a name="bkmk_cmpivot"></a>CMPivot wijzigingen voor versie 1810
+## <a name="cmpivot-changes-for-version-1810"></a><a name="bkmk_cmpivot"></a> CMPivot wijzigingen voor versie 1810
 <!--1359068, 3607759-->
 
 CMPivot bevat de volgende verbeteringen vanaf Configuration Manager versie 1810:
@@ -377,7 +377,7 @@ CMPivot bevat de volgende verbeteringen vanaf Configuration Manager versie 1810:
 - [Query samenvatting](#bkmk_cmpivot-summary)  
 - [Controle status berichten](#cmpivot-audit-status-messages)
 
-### <a name="cmpivot-utility-and-performance"></a><a name="bkmk_cmpivot-perf"></a>CMPivot-hulp programma en prestaties
+### <a name="cmpivot-utility-and-performance"></a><a name="bkmk_cmpivot-perf"></a> CMPivot-hulp programma en prestaties
 
 - CMPivot retourneert Maxi maal 100.000 cellen in plaats van 20.000 rijen.
   - Als de entiteit 5 eigenschappen heeft, wat betekent 5 kolommen, worden Maxi maal 20.000 rijen weer gegeven.
@@ -393,7 +393,7 @@ CMPivot bevat de volgende verbeteringen vanaf Configuration Manager versie 1810:
   - Als het script of de query-uitvoer groter is dan 80 KB, verzendt de client de gegevens via een status bericht.
   - Als de client niet is bijgewerkt naar de 1810-client versie, blijven status berichten gebruiken.
 
-- Mogelijk wordt de volgende fout weer geven wanneer u CMPivot start: **u kunt CMPivot nu niet gebruiken vanwege een incompatibele script versie. Dit probleem kan worden veroorzaakt doordat de hiërarchie een upgrade uitvoert voor een site. Wacht tot de upgrade is voltooid en probeer het vervolgens opnieuw.**
+- Mogelijk wordt de volgende fout weer geven wanneer u CMPivot start:  **u kunt CMPivot nu niet gebruiken vanwege een incompatibele script versie. Dit probleem kan worden veroorzaakt doordat de hiërarchie een upgrade uitvoert voor een site. Wacht tot de upgrade is voltooid en probeer het vervolgens opnieuw.**
 
   - Als dit bericht wordt weer gegeven, kan dit het volgende betekenen:
     - Het beveiligings bereik is niet juist ingesteld.
@@ -401,7 +401,7 @@ CMPivot bevat de volgende verbeteringen vanaf Configuration Manager versie 1810:
     - Het onderliggende CMPivot-script is incompatibel.
 
 
-### <a name="scalar-functions"></a><a name="bkmk_cmpivot-functions"></a>Scalaire functies
+### <a name="scalar-functions"></a><a name="bkmk_cmpivot-functions"></a> Scalaire functies
 CMPivot ondersteunt de volgende scalaire functies:
 - **geleden ()**: de opgegeven time span aftrekken van de huidige UTC-klok tijd  
 - **datetime_diff ()**: berekent het kalender verschil tussen twee datum/tijd-waarden  
@@ -409,7 +409,7 @@ CMPivot ondersteunt de volgende scalaire functies:
 - **bin ()**: rondt waarden af naar een geheel getal veelvoud van een bepaalde opslaglocatie grootte  
 
 > [!Note]  
-> Het gegevens type datetime vertegenwoordigt een onmiddellijke tijd, meestal uitgedrukt als een datum en tijd van de dag. Tijd waarden worden gemeten in eenheden van 1 seconde. Een datum/tijd-waarde is altijd in de UTC-tijd zone. Altijd datum en tijd letterlijke waarden in ISO 8601-indeling, bijvoorbeeld`yyyy-mm-dd HH:MM:ss`  
+> Het gegevens type datetime vertegenwoordigt een onmiddellijke tijd, meestal uitgedrukt als een datum en tijd van de dag. Tijd waarden worden gemeten in eenheden van 1 seconde. Een datum/tijd-waarde is altijd in de UTC-tijd zone. Altijd datum en tijd letterlijke waarden in ISO 8601-indeling, bijvoorbeeld `yyyy-mm-dd HH:MM:ss`  
 
 #### <a name="examples"></a>Voorbeelden
 - `datetime(2015-12-31 23:59:59.9)`: Een bepaalde letterlijke datum tijd   
@@ -417,7 +417,7 @@ CMPivot ondersteunt de volgende scalaire functies:
 - `ago(1d)`: De huidige tijd min één dag  
 
 
-### <a name="rendering-visualizations"></a><a name="bkmk_cmpivot-charts"></a>Visualisaties weer geven
+### <a name="rendering-visualizations"></a><a name="bkmk_cmpivot-charts"></a> Visualisaties weer geven
 
 CMPivot bevat nu Basic-ondersteuning voor de KQL- [render-operator](https://docs.microsoft.com/azure/kusto/query/renderoperator). Deze ondersteuning omvat de volgende typen:  
 - **Barchart**: de eerste kolom is x-as en kan tekst, DateTime of numeric zijn. De tweede kolommen moeten numeriek zijn en worden weer gegeven als een horizontale streep.  
@@ -461,7 +461,7 @@ OperatingSystem
 ![Voor beeld van een visualisatie van een CMPivot-cirkel diagram](media/1359068-cmpivot-piechart.png)
 
 
-### <a name="hardware-inventory"></a><a name="bkmk_cmpivot-hinv"></a>Hardware-inventarisatie
+### <a name="hardware-inventory"></a><a name="bkmk_cmpivot-hinv"></a> Hardware-inventarisatie
 Gebruik CMPivot voor het opvragen van een hardware-inventaris klasse. Deze klassen bevatten alle aangepaste uitbrei dingen die u hebt gemaakt voor de hardware-inventarisatie. CMPivot keert onmiddellijk in de cache resultaten van de laatste scan voor hardware-inventarisatie die is opgeslagen in de site database. Tegelijkertijd worden de resultaten bijgewerkt, indien nodig met Live gegevens van alle online clients.
 
 De kleur verzadiging van de gegevens in de resultaten tabel of-grafiek geeft aan of de gegevens in de cache worden opgeslagen. Donker blauw is bijvoorbeeld real-time gegevens van een online-client. Licht blauw is gegevens in de cache.
@@ -486,7 +486,7 @@ LogicalDisk
 - U kunt de ingebouwde entiteiten niet overschrijven door een inventaris entiteit met dezelfde naam te maken  
 
 
-### <a name="scalar-operators"></a><a name="bkmk_cmpivot-operators"></a>Scalaire Opera tors
+### <a name="scalar-operators"></a><a name="bkmk_cmpivot-operators"></a> Scalaire Opera tors
 CMPivot bevat de volgende scalaire Opera tors:  
 
 > [!Note]  
@@ -500,7 +500,7 @@ CMPivot bevat de volgende scalaire Opera tors:
 |!=|Niet gelijk aan|`"abc" != "ABC"`|
 |zo|LHS bevat een overeenkomst voor RHS|`"FabriKam" like "%Brik%"`|
 |! like|LHS bevat geen overeenkomst voor RHS|`"Fabrikam" !like "%xyz%"`|
-|bevat|RHS treedt op als een subreeks van LHS|`"FabriKam" contains "BRik"`|
+|contains|RHS treedt op als een subreeks van LHS|`"FabriKam" contains "BRik"`|
 |! bevat|RHS vindt niet plaats in LHS|`"Fabrikam" !contains "xyz"`|
 |startsWith|RHS is een initiële subreeks van LHS|`"Fabrikam" startswith "fab"`|
 |! startsWith|RHS is geen initiële subreeks van LHS|`"Fabrikam" !startswith "kam"`|
@@ -508,7 +508,7 @@ CMPivot bevat de volgende scalaire Opera tors:
 |! endswith|RHS is geen afsluitende subreeks van LHS|`"Fabrikam" !endswith "brik"`|
 
 
-### <a name="query-summary"></a><a name="bkmk_cmpivot-summary"></a>Query samenvatting
+### <a name="query-summary"></a><a name="bkmk_cmpivot-summary"></a> Query samenvatting
 
 Selecteer het tabblad **query samenvatting** onder aan het venster CMPivot. Deze status helpt u bij het identificeren van clients die offline zijn, of het oplossen van fouten die zich kunnen voordoen. Selecteer een waarde in de kolom aantal om een lijst met specifieke apparaten met die status te openen. 
 

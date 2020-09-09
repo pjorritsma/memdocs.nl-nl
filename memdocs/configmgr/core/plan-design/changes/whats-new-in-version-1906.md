@@ -10,12 +10,12 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3736e5343e10bdfc8d5be8abf79ee27e46749834
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: d28d3ed697097b177ef9e2849fbcd6003505594c
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995106"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607810"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 1906 van Configuration Manager current branch
 
@@ -622,7 +622,7 @@ Vanaf deze versie zijn de volgende functies niet meer voorlopige versie:
 
 Afgezien van nieuwe functies bevat deze release ook aanvullende wijzigingen, zoals oplossingen voor problemen. Zie [overzicht van wijzigingen in Configuration Manager current branch, versie 1906](https://support.microsoft.com/help/4514258)voor meer informatie.
 
-Zie [release opmerkingen voor Power shell versie 1906](/powershell/sccm/1906-release-notes?view=sccm-ps)voor meer informatie over wijzigingen in de Windows Power shell-cmdlets voor Configuration Manager.
+Zie [release opmerkingen voor Power shell versie 1906](/powershell/sccm/1906-release-notes)voor meer informatie over wijzigingen in de Windows Power shell-cmdlets voor Configuration Manager.
 
 Het volgende update pakket (4517869) is beschikbaar in de-console vanaf 1 oktober 2019: [Update pakket voor Configuration Manager current branch, versie 1906](https://support.microsoft.com/help/4517869).
 

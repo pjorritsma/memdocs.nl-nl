@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 06119bfc096564f70922249121f63c3d2039efe8
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 99a053800971642b1c771329c2ff9b3a29ce7912
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995446"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607890"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1705 voor Configuration Manager
 
@@ -121,12 +121,12 @@ Met deze versie kunt u nu asynchrone doorvoer replica's gebruiken in de SQL Serv
 
 - Deze release biedt geen ondersteuning voor failover voor het gebruik van de asynchrone doorvoer replica als uw site database.
   > [!CAUTION]  
-  > Omdat Configuration Manager de status van de asynchrone doorvoer replica niet valideert om te bevestigen dat deze actueel is, en [door het ontwerp van een dergelijke replica niet kan worden gesynchroniseerd](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-2014#AvailabilityModes), kunt u het gebruik van een asynchrone doorvoer replica, omdat de site database de integriteit van uw site en gegevens mogelijk maakt.  
+  > Omdat Configuration Manager de status van de asynchrone doorvoer replica niet valideert om te bevestigen dat deze actueel is, en [door het ontwerp van een dergelijke replica niet kan worden gesynchroniseerd](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server#AvailabilityModes), kunt u het gebruik van een asynchrone doorvoer replica, omdat de site database de integriteit van uw site en gegevens mogelijk maakt.  
 
 - U kunt hetzelfde aantal en type replica's in een beschikbaarheids groep gebruiken, zoals wordt ondersteund door de versie van SQL Server die u gebruikt.   (Eerdere ondersteuning is beperkt tot twee synchroon door Voer-replica's.)
 
 ### <a name="configure-an-asynchronous-commit-replica"></a>Een asynchrone doorvoer replica configureren
-Als u een asynchrone replica wilt toevoegen aan een [beschikbaarheids groep die u gebruikt met Configuration Manager](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md), hoeft u de vereiste configuratie scripts voor het configureren van een synchrone replica niet uit te voeren. (Dit komt doordat er geen ondersteuning is voor het gebruik van deze asynchrone replica als de site database.) Zie [een secundaire replica toevoegen aan een beschikbaarheids groep](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server?view=sql-server-2014)voor meer informatie.
+Als u een asynchrone replica wilt toevoegen aan een [beschikbaarheids groep die u gebruikt met Configuration Manager](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md), hoeft u de vereiste configuratie scripts voor het configureren van een synchrone replica niet uit te voeren. (Dit komt doordat er geen ondersteuning is voor het gebruik van deze asynchrone replica als de site database.) Zie [een secundaire replica toevoegen aan een beschikbaarheids groep](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server)voor meer informatie.
 
 ### <a name="use-the-asynchronous-replica-to-recover-your-site"></a>De asynchrone replica gebruiken om uw site te herstellen
 Voordat u een asynchrone replica gebruikt om de site database te herstellen, moet u de actieve primaire site stoppen om te voor komen dat er extra schrijf bewerkingen naar de site database worden uitgevoerd. Nadat u de site hebt gestopt, kunt u een asynchrone replica gebruiken in plaats van een [hand matig herstelde data base](../servers/manage/recover-sites.md#use-a-site-database-that-has-been-manually-recovered)te gebruiken.

@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 78150c497757c1a3f0b65a870c35516983711d9a
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: 950146c694addc5be0b351278a381ff4839e7bca
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89193824"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607781"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 1902 van Configuration Manager current branch
 
@@ -479,7 +479,7 @@ Wanneer u een site server installeert of bijwerkt, worden deze installatie besta
 
 Afgezien van nieuwe functies bevat deze release ook aanvullende wijzigingen, zoals oplossingen voor problemen. Zie [overzicht van wijzigingen in Configuration Manager current branch, versie 1902](https://support.microsoft.com/help/4498910)voor meer informatie.
 
-Zie [release opmerkingen voor Power shell versie 1902](/powershell/sccm/1902-release-notes?view=sccm-ps)voor meer informatie over wijzigingen in de Windows Power shell-cmdlets voor Configuration Manager.
+Zie [release opmerkingen voor Power shell versie 1902](/powershell/sccm/1902-release-notes)voor meer informatie over wijzigingen in de Windows Power shell-cmdlets voor Configuration Manager.
 
 Het volgende update pakket (4500571) is beschikbaar in de-console vanaf 17 juni 2019: [Update pakket voor Configuration Manager current branch, versie 1902](https://support.microsoft.com/help/4500571).
 

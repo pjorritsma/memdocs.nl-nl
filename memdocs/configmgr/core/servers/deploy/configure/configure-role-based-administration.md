@@ -9,12 +9,13 @@ ms.assetid: 57413dd3-b2f8-4a5f-b27f-8464d357caff
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 14258c3e7e2cfe5423b97064a26fdf5616d6b0a4
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+description: Combi neer beveiligings rollen, beveiligingsbereiken en toegewezen verzamelingen om het beheer bereik te definiëren voor elke gebruiker met beheerders rechten
+ms.openlocfilehash: a475660d2a171829e1592c1c411a3251e74eb79f
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078614"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607617"
 ---
 # <a name="configure-role-based-administration-for-configuration-manager"></a>Op rollen gebaseerd beheer configureren voor Configuration Manager
 
@@ -68,7 +69,7 @@ In Configuration Manager combineert beheer op basis van rollen beveiligings roll
             > [!NOTE]  
             > Nadat u een beveiligingsrol importeert, kunt u de eigenschappen van de beveiligingsrol bewerken om de objectmachtigingen te wijzigen die zijn gekoppeld aan de beveiligingsrol.  
 
-## <a name="configure-security-roles"></a><a name="BKMK_ConfigSecRole"></a>Beveiligings rollen configureren
+## <a name="configure-security-roles"></a><a name="BKMK_ConfigSecRole"></a> Beveiligings rollen configureren
 
  De groepen van beveiligingsmachtiging die gedefinieerd zijn voor een beveiligingsmachtigingen worden beveiligingsbewerkingstoewijzingen genoemd. Beveiligingsbewerkingstoewijzingen vertegenwoordigen een combinatie van objecttypes en -acties die beschikbaar zijn voor elk type object. U kunt wijzigen welke beveiligings bewerkingen beschikbaar zijn voor een aangepaste beveiligingsrol, maar u kunt de ingebouwde beveiligings rollen die Configuration Manager biedt, niet wijzigen.  
 
@@ -89,7 +90,7 @@ In Configuration Manager combineert beheer op basis van rollen beveiligings roll
 
 8. Wanneer u klaar bent met het configureren van de beveiligings bewerkings toewijzingen, kiest u **OK** om de nieuwe beveiligingsrol op te slaan.  
 
-##  <a name="configure-security-scopes-for-an-object"></a><a name="BKMK_ConfigSecScope"></a>Beveiligingsbereiken voor een object configureren
+##  <a name="configure-security-scopes-for-an-object"></a><a name="BKMK_ConfigSecScope"></a> Beveiligingsbereiken voor een object configureren
  U beheert de koppeling van een beveiligings bereik voor een object uit het-object, niet uit het beveiligings bereik. De enige directe configuraties die beveiligingsbereiken ondersteunen zijn wijzigingen aan zijn naam en beschrijving. Om de naam en beschrijving van een beveiligingsbereik te wijzigen wanneer u de eigenschappen van het beveiligingsbereik ziet, moet u de **Wijzig** -machtiging hebben voor het met **Beveiligingsbereiken** te beveiligen object.  
 
  Wanneer u een nieuw object in Configuration Manager maakt, wordt het gekoppeld aan elk beveiligings bereik dat is gekoppeld aan de beveiligings rollen van het account dat wordt gebruikt om het object te maken. Dit gedrag treedt op wanneer deze beveiligings rollen de machtiging **maken** hebben of een **beveiligings bereik instellen** . U kunt de beveiligingsbereiken voor het object wijzigen nadat u het hebt gemaakt.  
@@ -98,7 +99,7 @@ In Configuration Manager combineert beheer op basis van rollen beveiligings roll
 
  Gebruik de volgende procedure voor het configureren van de beveiligingsbereiken die aan een object zijn toegewezen.  
 
-### <a name="to-configure-security-scopes-for-an-object"></a><a name="bkmk_config-sec-scope"></a>Beveiligingsbereiken voor een object configureren  
+### <a name="to-configure-security-scopes-for-an-object"></a><a name="bkmk_config-sec-scope"></a> Beveiligingsbereiken voor een object configureren  
 
 1. Selecteer in de Configuration Manager-console een object dat ondersteuning biedt voor het toewijzen aan een beveiligings bereik.  
 2. Kies op het tabblad **Start** in de groep **classificeren** de optie **beveiligingsbereiken instellen**.
@@ -108,12 +109,12 @@ In Configuration Manager combineert beheer op basis van rollen beveiligings roll
     > [!NOTE]  
     > Wanneer u een nieuw object maakt, moet u het object toewijzen aan verschillende beveiligingsbereiken. Als u het aantal beveiligingsbereiken wilt wijzigen dat aan het object is gekoppeld, moet u deze toewijzing wijzigen nadat het object is gemaakt.
 
-### <a name="to-configure-security-scopes-for-a-folder-starting-in-version-1906"></a><a name="bkmk_config-folder"></a>Beveiligingsbereiken configureren voor een map (vanaf versie 1906)
+### <a name="to-configure-security-scopes-for-a-folder-starting-in-version-1906"></a><a name="bkmk_config-folder"></a> Beveiligingsbereiken configureren voor een map (vanaf versie 1906)
 <!--3600867-->
 
 1. Selecteer een map in de Configuration Manager-console.  
 1. Kies op het tabblad **map** in het lint de optie **beveiligingsbereiken instellen**.
-   - U kunt ook met de rechter muisknop op **de map klikken** > en**beveiligingsbereiken instellen**selecteren.
+   - U kunt ook met de rechter muisknop op **de map klikken**en  >  **beveiligingsbereiken instellen**selecteren.
 1. Schakel in het dialoog venster **Beveiligingsbereiken instellen** het selectie vakje beveiligingsbereiken voor de map in of uit. Elke map moet aan ten minste één beveiligings bereik worden toegewezen. Alle mappen worden toegewezen aan het **standaard** beveiligings bereik totdat u het wijzigt.
 1. Kies **OK** om de toegewezen beveiligingsbereiken op te slaan.  
 
@@ -122,7 +123,7 @@ In Configuration Manager combineert beheer op basis van rollen beveiligings roll
     > 
     > - Een item kan worden doorzocht in een map buiten het beveiligings bereik van een gebruiker als die gebruiker een beveiligings bereik deelt met de persoon die het object heeft gemaakt. <!--5602690-->
 
-## <a name="configure-collections-to-manage-security"></a><a name="BKMK_ConfigColl"></a>Verzamelingen configureren voor het beheren van beveiliging
+## <a name="configure-collections-to-manage-security"></a><a name="BKMK_ConfigColl"></a> Verzamelingen configureren voor het beheren van beveiliging
 
  Er zijn geen procedures voor het configureren van verzamelingen voor rolgebaseerd beheer. Verzamelingen hebben geen beheer configuratie op basis van rollen. In plaats daarvan wijst u verzamelingen toe aan een gebruiker met beheerders rechten wanneer u de gebruiker met beheerders rechten configureert. De beveiligings bewerkingen voor de verzameling die zijn ingeschakeld in de door de gebruiker toegewezen beveiligings rollen bepalen de machtigingen die een gebruiker met beheerders rechten heeft voor verzamelingen en verzamelings bronnen (verzamelings leden).  
 
@@ -130,7 +131,7 @@ In Configuration Manager combineert beheer op basis van rollen beveiligings roll
 
  Daarnaast kan een gebruiker met beheerders rechten de machtiging **verwijderen** of **wijzigen** niet gebruiken voor een verzameling die direct aan hen is toegewezen. Maar ze kunnen deze machtigingen gebruiken op de verzamelingen die beperkt zijn tot deze verzameling. In het vorige voor beeld kan de gebruiker met beheerders rechten de verzameling alle Noord-Amerika Bureau bladen verwijderen of wijzigen, maar de verzameling alle Bureau bladen kan niet worden verwijderd of gewijzigd.  
 
-## <a name="create-a-new-administrative-user"></a><a name="BKMK_Create_AdminUser"></a>Een nieuwe gebruiker met beheerders rechten maken
+## <a name="create-a-new-administrative-user"></a><a name="BKMK_Create_AdminUser"></a> Een nieuwe gebruiker met beheerders rechten maken
 
  Als u individuen of leden van een beveiligings groep toegang wilt verlenen tot het beheren van Configuration Manager, maakt u een gebruiker met beheerders rechten in Configuration Manager en geeft u het Windows-account van de gebruiker of gebruikers groep op. Aan elke gebruiker met beheerders rechten in Configuration Manager moet ten minste één beveiligingsrol en één beveiligings bereik worden toegewezen. U kunt tevens verzamelingen toewijzen om het beheerbereik van de gebruiker met beheerdersrechten te beperken.  
 
@@ -163,7 +164,7 @@ In Configuration Manager combineert beheer op basis van rollen beveiligings roll
 
     - Als u **alleen de instanties van objecten die zijn toegewezen aan de gespecificeerde beveiligingsbereiken en verzamelingen**hebt geselecteerd, kunt u **toevoegen** kiezen om extra verzamelingen en beveiligingsbereiken te selecteren. Of selecteer een of meer objecten in de lijst en kies **verwijderen** om ze te verwijderen. Kies **OK** om deze procedure te volt ooien.  
 
-## <a name="modify-the-administrative-scope-of-an-administrative-user"></a><a name="BKMK_ModAdminUser"></a>Het beheer bereik van een gebruiker met beheerders rechten wijzigen
+## <a name="modify-the-administrative-scope-of-an-administrative-user"></a><a name="BKMK_ModAdminUser"></a> Het beheer bereik van een gebruiker met beheerders rechten wijzigen
 
  U kunt het beheerbereik van een gebruiker met beheerdersrechten wijzigen door beveiligingsrollen, beveiligingsbereiken, en verzamelingen die aan de gebruiker gekoppeld zijn, toe te voegen of te verwijderen. Aan elke gebruiker met beheerdersrechten moet minimaal één beveiligingsrol en één beveiligingsbereik zijn gekoppeld. Mogelijk moet u één of meer verzamelingen aan het beheerbereik van de gebruiker toewijzen. De meeste beveiligings rollen communiceren met verzamelingen en functioneren niet goed zonder een toegewezen verzameling.  
 

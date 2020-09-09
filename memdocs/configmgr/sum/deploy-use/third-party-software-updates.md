@@ -10,12 +10,12 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3192cd8177075542ffc86ab236b817db5befca1d
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: bf50039a7c2fe8490c89f3e3b0adca275bb69e20
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696885"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607986"
 ---
 # <a name="enable-third-party-updates"></a>Updates van derden inschakelen 
 
@@ -125,7 +125,7 @@ Wanneer u zich abonneert op een catalogus van derden in de Configuration Manager
 
 1. Ga in de Configuration Manager-console naar de werk ruimte **software bibliotheek** . Vouw **software-updates** uit en selecteer het knoop punt **Software-update catalogi van derden** .  
 2. Selecteer de catalogus waarop u zich wilt abonneren en klik op **Abonneren op catalogus** op het lint. 
-    ![Updates van derden Voeg aangepaste catalogus toe](media/third-party-updates-subscribe.png)
+    ![Updates van derden abonneren op catalogus](media/third-party-updates-subscribe.png)
 3. Het catalogus certificaat controleren en goed keuren.  
    > [!NOTE]
    > 

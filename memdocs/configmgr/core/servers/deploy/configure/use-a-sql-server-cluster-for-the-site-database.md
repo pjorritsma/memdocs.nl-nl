@@ -10,12 +10,12 @@ ms.assetid: d09a82c6-bbd1-49ca-8ffe-e3ce87b85d33
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 988a9c31fca8d06104ce317f4709ee990089d723
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 90e4c0dfd2b55ec5acf943cd591ba45c719a68ff
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699140"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607519"
 ---
 # <a name="use-a-sql-server-cluster-for-the-site-database"></a>Een SQL Server cluster gebruiken voor de site database
 
@@ -63,7 +63,7 @@ Houd rekening met de volgende vereisten:
 - Als u Kerberos-verificatie wilt ondersteunen, schakelt u het **TCP/IP-** netwerk communicatie protocol in voor de netwerk verbinding van elk SQL Server cluster knooppunt. Het protocol **named pipes** is niet vereist, maar kan worden gebruikt om problemen met Kerberos-verificatie op te lossen. De instellingen voor het netwerk protocol worden geconfigureerd in **SQL Server Configuration Manager**, onder **SQL Server netwerk configuratie**.  
 
 - Er zijn specifieke certificaat vereisten wanneer u een SQL Server cluster gebruikt voor de site database. Raadpleeg voor meer informatie de volgende artikelen:
-  - [Een certificaat installeren in een configuratie van een SQL-failovercluster](/sql/database-engine/configure-windows/manage-certificates?view=sql-server-ver15#provision-failover-cluster-cert)
+  - [Een certificaat installeren in een configuratie van een SQL-failovercluster](/sql/database-engine/configure-windows/manage-certificates#provision-failover-cluster-cert)
   - [PKI-certificaatvereisten voor Configuration Manager](../../../plan-design/network/pki-certificate-requirements.md#BKMK_PKIcertificates_for_servers)
 
   > [!NOTE]
@@ -101,7 +101,7 @@ Configuration Manager biedt geen ondersteuning voor Data Protection Manager (DPM
 
 Hier volgen de belangrijkste taken die u moet uitvoeren om de site database voor te bereiden:
 
-- Maak de virtuele SQL Server-cluster om de sitedatabase te hosten in een bestaande Windows Server-clusteromgeving. Zie de documentatie die specifiek is voor uw versie van SQL Server voor specifieke stappen voor het installeren en instellen van een SQL Server cluster. Zie [een nieuw SQL Server-failovercluster maken](/sql/sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup?view=sql-server-2017)voor meer informatie.  
+- Maak de virtuele SQL Server-cluster om de sitedatabase te hosten in een bestaande Windows Server-clusteromgeving. Zie de documentatie die specifiek is voor uw versie van SQL Server voor specifieke stappen voor het installeren en instellen van een SQL Server cluster. Zie [een nieuw SQL Server-failovercluster maken](/sql/sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup)voor meer informatie.  
 
 - Plaats op elke computer in het SQL Server cluster een bestand in de hoofdmap van elk station waar u niet wilt dat Configuration Manager site-onderdelen installeert. Noem het bestand `NO_SMS_ON_DRIVE.SMS`. Configuration Manager installeert standaard sommige onderdelen op elk fysiek knoop punt om bewerkingen zoals back-ups te ondersteunen.  
 

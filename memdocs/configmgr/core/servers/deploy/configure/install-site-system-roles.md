@@ -10,12 +10,12 @@ ms.assetid: 61f5c774-7667-44ae-b8e4-a4951318b183
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 30b57de75e637aa083070832783647b8ad35b4a7
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 8cb16b6fd703142e0c3c6400403207976b4208f5
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700528"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607572"
 ---
 # <a name="install-site-system-roles-for-configuration-manager"></a>Site systeem rollen voor Configuration Manager installeren
 
@@ -56,7 +56,7 @@ Configuration Manager gebruikt het **installatie account van het site systeem** 
 1. Voltooi de wizard. Er kunnen extra pagina's voor specifieke rollen worden weer gegeven. Zie [configuratie opties voor site systeem rollen](configuration-options-for-site-system-roles.md)voor meer informatie.
 
 > [!TIP]
-> De Windows Power shell-cmdlet **New-CMSiteSystemServer**voert dezelfde functie uit als deze procedure. Zie [New-CMSiteSystemServer](/powershell/module/configurationmanager/new-cmsitesystemserver?view=sccm-ps)voor meer informatie.
+> De Windows Power shell-cmdlet **New-CMSiteSystemServer**voert dezelfde functie uit als deze procedure. Zie [New-CMSiteSystemServer](/powershell/module/configurationmanager/new-cmsitesystemserver)voor meer informatie.
 
 ## <a name="install-roles-on-a-new-site-system-server"></a><a name="bkmk_createnew"></a> Rollen installeren op een nieuwe site systeem server
 
@@ -76,7 +76,7 @@ Configuration Manager gebruikt het **installatie account van het site systeem** 
 1. Voltooi de wizard. Er kunnen extra pagina's voor specifieke rollen worden weer gegeven. Zie [configuratie opties voor site systeem rollen](configuration-options-for-site-system-roles.md)voor meer informatie.
 
 > [!TIP]
-> De Windows Power shell-cmdlet **New-CMSiteSystemServer**voert dezelfde functie uit als deze procedure. Zie [New-CMSiteSystemServer](/powershell/module/configurationmanager/new-cmsitesystemserver?view=sccm-ps)voor meer informatie.
+> De Windows Power shell-cmdlet **New-CMSiteSystemServer**voert dezelfde functie uit als deze procedure. Zie [New-CMSiteSystemServer](/powershell/module/configurationmanager/new-cmsitesystemserver)voor meer informatie.
 
 ## <a name="next-steps"></a>Volgende stappen
 

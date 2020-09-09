@@ -1,7 +1,7 @@
 ---
 title: PFX-certificaatprofielen importeren
 titleSuffix: Configuration Manager
-description: Meer informatie over het gebruik van PFX-bestanden in Configuration Manager om gebruikersspecifieke certificaten te genereren die ondersteuning bieden voor versleutelde gegevens uitwisseling.
+description: Meer informatie over het importeren van PFX-bestanden in Configuration Manager om gebruikersspecifieke certificaten te genereren die ondersteuning bieden voor versleutelde gegevens uitwisseling.
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
@@ -10,12 +10,12 @@ ms.assetid: e3bb3e13-3037-4122-93bc-504bfd080a4d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: df5dfdeab010012a258fe59612a348c269081c45
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: ef8c1656c12ead992d5305cdf86b1ab8fcfcb836
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700494"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608428"
 ---
 # <a name="import-pfx-certificate-profiles"></a>PFX-certificaatprofielen importeren
 
@@ -70,9 +70,9 @@ Wijs de doel gebruikers toe als primaire gebruikers op de Windows 10-apparaten w
 
 Als u een PFX-certificaat wilt importeren, gebruikt u de volgende Configuration Manager Power shell-cmdlets voor het inrichten van een PFX-script maken:
 
-- [Get-CMClientCertificatePfx](/powershell/module/configurationmanager/get-cmclientcertificatepfx?view=sccm-ps)
-- [Import-CMClientCertificatePfx](/powershell/module/configurationmanager/import-cmclientcertificatepfx?view=sccm-ps)
-- [Remove-CMClientCertificatePfx](/powershell/module/configurationmanager/remove-cmclientcertificatepfx?view=sccm-ps)
+- [Get-CMClientCertificatePfx](/powershell/module/configurationmanager/get-cmclientcertificatepfx)
+- [Import-CMClientCertificatePfx](/powershell/module/configurationmanager/import-cmclientcertificatepfx)
+- [Remove-CMClientCertificatePfx](/powershell/module/configurationmanager/remove-cmclientcertificatepfx)
 
 ### <a name="example-script"></a>Voorbeeldscript
 

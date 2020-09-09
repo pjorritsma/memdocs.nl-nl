@@ -10,12 +10,12 @@ ms.assetid: 72d1ccd5-3763-4f88-9273-e1a73e8f4286
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 73acd43ef9d7924682de9df66487c5a04297e640
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 855351fc7fe28b40f23e1e01767fd62a782bc1e0
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88697497"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606992"
 ---
 # <a name="install-software-updates"></a>Software-updates installeren
 
@@ -107,7 +107,7 @@ Zie [software-updates Toep assen op een installatie kopie](../get-started/manage
 - Ondersteunt alleen op CBS gebaseerde updates. Er kunnen geen updates van Microsoft 365 apps worden toegepast
 
 > [!Tip]  
-> U kunt de selectie van software-updates automatiseren met behulp van Power shell. Gebruik de cmdlet [Get-CMSoftwareUpdate](/powershell/module/configurationmanager/get-cmsoftwareupdate?view=sccm-ps) om een lijst met updates op te halen. Gebruik vervolgens de cmdlet [New-CMOperatingSystemImageUpdateSchedule](/powershell/module/configurationmanager/new-cmoperatingsystemimageupdateschedule?view=sccm-ps) om het offline-onderhouds schema te maken. In het volgende voor beeld ziet u een methode om deze actie te automatiseren:
+> U kunt de selectie van software-updates automatiseren met behulp van Power shell. Gebruik de cmdlet [Get-CMSoftwareUpdate](/powershell/module/configurationmanager/get-cmsoftwareupdate) om een lijst met updates op te halen. Gebruik vervolgens de cmdlet [New-CMOperatingSystemImageUpdateSchedule](/powershell/module/configurationmanager/new-cmoperatingsystemimageupdateschedule) om het offline-onderhouds schema te maken. In het volgende voor beeld ziet u een methode om deze actie te automatiseren:
 >
 > ```PowerShell
 > # Get the OS image

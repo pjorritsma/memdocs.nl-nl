@@ -10,12 +10,12 @@ ms.technology: configmgr-sum
 ms.assetid: 63c5ef72-5715-4d86-85a2-71beba469fab
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: ff616c9ee61e85e4e77aeef6254ca9922427270c
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 0ca0509893ecadc4c54d06ca98c18531959fb941
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129420"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608411"
 ---
 # <a name="icons-used-for-software-updates-in-configuration-manager"></a>Pictogrammen die worden gebruikt voor software-updates in Configuration Manager
 
@@ -27,7 +27,7 @@ Gesynchroniseerde software-updates worden weer gegeven in de Configuration Manag
  Gesynchroniseerde software-updates worden aangeduid met een van de volgende pictogrammen.  
 
 ### <a name="normal-icon"></a>Pictogram Normaal  
- ![pictogram](../media/Normal.jpg "Pictogram normaal") Het pictogram met de groene pijl duidt op een normale software-update.  
+ ![Pictogram normaal](../media/Normal.jpg) Het pictogram met de groene pijl duidt op een normale software-update.  
 
  **Beschrijving:**  
 
@@ -38,7 +38,7 @@ Gesynchroniseerde software-updates worden weer gegeven in de Configuration Manag
  Er zijn geen operationele problemen.  
 
 ### <a name="expired-icon"></a>Pictogram Verlopen  
- ![pictogram](../media/Expired.jpg "Pictogram verlopen") Het pictogram met de zwarte X duidt op een verlopen software-update. U kunt verlopen software-updates ook identificeren aan de hand van de kolom **verlopen** voor de software-update wanneer deze wordt weer gegeven in de Configuration Manager-console.  
+ ![Pictogram verlopen ](../media/Expired.jpg) het pictogram met de zwarte X duidt op een verlopen software-update. U kunt verlopen software-updates ook identificeren aan de hand van de kolom **verlopen** voor de software-update wanneer deze wordt weer gegeven in de Configuration Manager-console.  
 
  **Beschrijving:**  
 
@@ -49,7 +49,7 @@ Gesynchroniseerde software-updates worden weer gegeven in de Configuration Manag
  Er zijn geen operationele problemen.
 
 ### <a name="superseded-icon"></a>Pictogram Vervangen  
- ![pictogram](../media/Superseded.jpg "Pictogram vervangen") Het pictogram met de gele ster vertegenwoordigt een vervangen software-update. U kunt vervangen software-updates ook identificeren door de **vervangen** kolom te bekijken voor de software-update wanneer deze wordt weer gegeven in de Configuration Manager-console.  
+ ![Vervangend pictogram ](../media/Superseded.jpg) het pictogram met de gele ster vertegenwoordigt een vervangen software-update. U kunt vervangen software-updates ook identificeren door de **vervangen** kolom te bekijken voor de software-update wanneer deze wordt weer gegeven in de Configuration Manager-console.  
 
  **Beschrijving:**  
 
@@ -68,7 +68,7 @@ Gesynchroniseerde software-updates worden weer gegeven in de Configuration Manag
   Indien mogelijk moet u in plaats van de vervangen software-update de vervangende software-update implementeren op clientcomputers. U kunt op het tabblad **Vervangingsinformatie** in de eigenschappen van de software-update een lijst weergeven van de software-updates die de software-update vervangen.  
 
 ### <a name="invalid-icon"></a>Pictogram Ongeldig  
- ![pictogram](../media/Invalid.jpg "Ongeldig pictogram") Het pictogram met de rode X duidt op een ongeldige software-update.  
+ ![Ongeldig pictogram](../media/Invalid.jpg) Het pictogram met de rode X duidt op een ongeldige software-update.  
 
  **Beschrijving:**  
 
@@ -83,7 +83,7 @@ Gesynchroniseerde software-updates worden weer gegeven in de Configuration Manag
   Als de inhoud voor een software-update ontbreekt, kunnen clients de software-update niet installeren totdat de inhoud beschikbaar is op een distributiepunt. U kunt de inhoud opnieuw naar distributiepunten distribueren met behulp van de actie **Opnieuw distribueren** . Als er inhoud ontbreekt voor een software-update in een implementatie die is gemaakt op een bovenliggende site, moet de software-update worden gerepliceerd of opnieuw worden gedistribueerd naar de onderliggende site. Zie [de inhoud beheren die u hebt gedistribueerd](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_manage)voor meer informatie over het opnieuw distribueren van inhoud.  
 
 ### <a name="metadata-only-icon"></a>Pictogram Alleen metagegevens
- ![pictogram](../media/MetadataOnly.png "Pictogram alleen meta gegevens") Het pictogram met de blauwe pijl duidt op een software-update met alleen meta gegevens.
+ ![Pictogram alleen meta gegevens](../media/MetadataOnly.png) Het pictogram met de blauwe pijl duidt op een software-update waarbij alleen de metagegevens worden bijgewerkt.
 
  **Beschrijving:**  
 
@@ -97,28 +97,28 @@ Gesynchroniseerde software-updates worden weer gegeven in de Configuration Manag
  Software-updategroepen worden aangeduid met een van de volgende pictogrammen.  
 
 ### <a name="normal-icon"></a>Pictogram Normaal  
- ![pictogram](../media/Normal.jpg "Pictogram normaal") Het pictogram met de groene pijl duidt op een software-update groep die alleen normale software-updates bevat.  
+ ![Software-update groepen-pictogram normaal](../media/Normal.jpg) Het pictogram met de groene pijl duidt op een software-updategroep die alleen normale software-updates bevat.  
 
  **Operationele problemen:**  
 
  Er zijn geen operationele problemen.  
 
 ### <a name="expired-icon"></a>Pictogram Verlopen  
- ![pictogram](../media/Expired.jpg "Pictogram verlopen") Het pictogram met de zwarte X duidt op een software-update groep die een of meer verlopen software-updates bevat.  
+ ![Software-update groepen-pictogram verlopen](../media/Expired.jpg) Het pictogram met de zwarte X duidt op een software-updategroep die een of meer verlopen software-updates bevat.  
 
  **Operationele problemen:**  
 
  Indien mogelijk moeten de verlopen software-updates in de software-updategroep worden verwijderd of vervangen.  
 
 ### <a name="superseded-icon"></a>Pictogram Vervangen  
- ![pictogram](../media/Superseded.jpg "Pictogram vervangen") Het pictogram met de gele ster duidt op een software-update groep die een of meer vervangen software-updates bevat.  
+ ![Software-update groepen-vervangen pictogram](../media/Superseded.jpg) Het pictogram met de gele ster duidt op een software-updategroep die een of meer vervangen software-updates bevat.  
 
  **Operationele problemen:**  
 
  Indien mogelijk moet de vervangen software-update in de software-updategroep worden vervangen door de vervangende software-update.  
 
 ### <a name="invalid-icon"></a>Pictogram Ongeldig  
- ![pictogram](../media/Invalid.jpg "Ongeldig pictogram") Het pictogram met de rode X duidt op een software-update groep die een of meer ongeldige software-updates bevat.  
+ ![Software-update groepen-ongeldig pictogram](../media/Invalid.jpg) Het pictogram met de rode X duidt op een software-updategroep die een of meer ongeldige software-updates bevat.  
 
  **Operationele problemen:**  
 

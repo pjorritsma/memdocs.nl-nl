@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3fc0344d7cf4a15925b314e38fd2d6b2ceee9762
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: eae605c067094665f2f6866e75fa8f9a94a5df52
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995004"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607735"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 1806 van Configuration Manager current branch
 
@@ -584,7 +584,7 @@ Zie voor meer informatie [console verbeteringen in versie 1806](../../servers/ma
 
 Afgezien van nieuwe functies bevat deze release ook aanvullende wijzigingen, zoals oplossingen voor problemen. Zie [overzicht van wijzigingen in Configuration Manager current branch, versie 1806](https://support.microsoft.com/help/4459701)voor meer informatie.
 
-Zie [Power shell 1806 Release Notes](/powershell/sccm/1806_release_notes?view=sccm-ps)(Engelstalig) voor meer informatie over wijzigingen in de Windows Power shell-cmdlets voor Configuration Manager.
+Zie [Power shell 1806 Release Notes](/powershell/sccm/1806_release_notes)(Engelstalig) voor meer informatie over wijzigingen in de Windows Power shell-cmdlets voor Configuration Manager.
 
 Het volgende update pakket (4462978) is beschikbaar in de-console vanaf 24 oktober 2018: [Update pakket voor Configuration Manager current branch, versie 1806](https://support.microsoft.com/help/4462978).
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 7a4c42891276b36fd888f0f70495bdcd504f23a1
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: e9fa71060b8125b7d0872a40d197f1c423217bad
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88693009"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607936"
 ---
 # <a name="capabilities-in-technical-preview-1702-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1702 voor Configuration Manager
 
@@ -109,14 +109,14 @@ Een nieuwe regel voor nalevings beleid voor apparaten is beschikbaar om u te hel
 
 Dit helpt organisaties bovendien bij het beperken van gegevens die worden gelekt via onbeveiligde apps en om te voor komen dat er veel gegevens worden verbruikt via bepaalde apps.
 
-### <a name="try-it-out"></a>Probeer het eens
+### <a name="try-it-out"></a>Beleid uitproberen
 
 **Scenario:** Identificeer apps die mogelijk gegevens lekken veroorzaken door zakelijke gegevens buiten uw bedrijf te verzenden of die een buitensporig gegevens verbruik veroorzaken, en [Maak vervolgens een nalevings beleid voor voorwaardelijke toegang](../../mdm/understand/what-happened-to-hybrid.md) om deze apps toe te voegen aan de lijst met niet-compatibele apps. Hiermee blokkeert u de toegang tot bedrijfs bronnen die ondersteuning bieden voor voorwaardelijke toegang totdat de gebruiker de geblokkeerde app kan verwijderen.
 
 ## <a name="antimalware-client-version-alert"></a>Waarschuwing voor versie van antimalware-client
 Met ingang van deze preview-versie biedt Configuration Manager Endpoint Protection een waarschuwing als meer dan 20% (standaard) van beheerde clients een verlopen versie van de antimalware-client (bijvoorbeeld Windows Defender of Endpoint Protection-client) gebruiken.
 
-### <a name="try-it-out"></a>Probeer het eens
+### <a name="try-it-out"></a>Beleid uitproberen
 Zorg ervoor dat Endpoint Protection is ingeschakeld op alle bureau blad-en Server-clients met het beleid voor client instellingen. U kunt nu de **antimalware-client versie** en **Endpoint Protection implementatie status** weer geven door te gaan naar **activa en naleving**  >  **overzicht**  >  **apparaten**  >  **alle Desk tops en clients te leveren**. Als u wilt controleren op een waarschuwing, bekijkt u **waarschuwingen** in de werk ruimte **bewaking** . Als er meer dan 20% van beheerde clients een verlopen versie van de antimalware-software uitvoert, wordt de antimalware-client versie verouderde waarschuwing weer gegeven. Deze waarschuwing wordt niet weer gegeven op het tabblad **controle**  >  **overzicht** . Schakel software-updates voor antimalware-clients in om verlopen antimalware-clients bij te werken.
 
 Als u het percentage wilt configureren waarmee de waarschuwing wordt gegenereerd, vouwt u **bewakings**  >  **waarschuwingen**  >  **alle waarschuwingen**uit, dubbelklikt u op **antimalware-clients verouderd** en wijzigt u de **waarschuwing voor het activeren als het percentage beheerde clients met een verouderde versie van de antimalware meer is dan de** optie.
@@ -186,11 +186,11 @@ Gebruik de volgende procedure om een taken reeks als hoge impact in te stellen.
 
    Stel dat u de volgende aangepaste melding wilt configureren in eigenschappen.
 
-   ![Aangepaste melding voor een taken reeks](./media/user-notification.png)
+   ![Aangepaste melding voor de eigenschappen van een taken reeks](./media/user-notification.png)
 
    Het volgende meldings bericht wordt weer gegeven wanneer de eind gebruiker de installatie opent vanuit software Center.
 
-   ![Aangepaste melding voor een taken reeks](./media/user-notification-enduser.png)
+   ![Aangepaste melding voor een taken reeks-software Center](./media/user-notification-enduser.png)
 
 ### <a name="configure-software-center-properties"></a>Eigenschappen van software Center configureren
 Gebruik de volgende procedure om de details te configureren voor de taken reeks die wordt weer gegeven in Software Center. Deze details zijn alleen ter informatie.  

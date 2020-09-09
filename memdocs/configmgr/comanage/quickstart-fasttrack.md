@@ -10,12 +10,12 @@ ms.assetid: 42e80570-d637-41a4-97b7-ebf1f8975af3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a01b6a3dde9921af2f5486475b0defb0c869cccd
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2513941ede51ec8af3dfd1776c31ac428d7260c6
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711509"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606803"
 ---
 # <a name="get-help-from-fasttrack-for-co-management"></a>Hulp krijgen van FastTrack voor co-beheer
 
@@ -25,7 +25,7 @@ In de volgende video is Senior Program Manager Patrick McSweeney en Ainley van d
 
 > [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/How-to-Request-Assistance-from-FastTrack/player]
 
-Als u een aanvraag voor hulp van FastTrack wilt maken, gaat u eerst naar [FastTrack voor Microsoft 365](https://fasttrack.microsoft.com/microsoft365/capabilities?view=security). Selecteer **Aanmelden**en voer uw organisatie-id in. Nadat u zich hebt geverifieerd, gaat u naar het dash board en volgt u de aanwijzingen om het formulier **voor de aanvraag om hulp** te vinden.
+Als u een aanvraag voor hulp van FastTrack wilt maken, gaat u eerst naar [FastTrack voor Microsoft 365](https://www.microsoft.com/fasttrack/microsoft-365/security). Selecteer **Aanmelden**en voer uw organisatie-id in. Nadat u zich hebt geverifieerd, gaat u naar het dash board en volgt u de aanwijzingen om het formulier **voor de aanvraag om hulp** te vinden.
 
 Uw inzending wordt gecontroleerd en doorgestuurd naar het juiste FastTrack-team. Ze behandelen uw geschiktheid en specifieke behoeften. 
 
@@ -34,7 +34,7 @@ De FastTrack voor Microsoft 365 site bevat ook documentatie, aanbevelingen, hulp
 
 ### <a name="make-a-fasttrack-request"></a>Een FastTrack-aanvraag indienen:
 
-1. Meld u aan bij [FastTrack voor Microsoft 365](https://fasttrack.microsoft.com/microsoft365/capabilities?view=security) met uw organisatie-ID en wacht woord.  
+1. Meld u aan bij [FastTrack voor Microsoft 365](https://www.microsoft.com/fasttrack/microsoft-365/security) met uw organisatie-ID en wacht woord.  
 
 2. Selecteer in de sectie Welkom bij FastTrack de optie **FastTrack hulp aanvragen**.  
 

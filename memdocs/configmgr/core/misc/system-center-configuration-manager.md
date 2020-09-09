@@ -9,12 +9,13 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 8ccadb3736d2eeea88618f905be20d834a523f27
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+description: Tijdelijke aanduiding bestand voor Configuration Manager documentatie
+ms.openlocfilehash: 610b63659ece4bd270f52006171750cc604bd600
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695474"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607771"
 ---
 # <a name="configuration-manager"></a>Configuration Manager
 
@@ -22,4 +23,4 @@ ms.locfileid: "88695474"
 
 Welkom bij Configuration Manager. Gebruik Configuration Manager om uw IT-services effectiever te maken met veilige en schaalbare software-implementatie, beheer van compatibiliteitsinstellingen en uitgebreid activabeheer waaronder servers, desktops en mobiele apparatuur.  
 
-Zoek de meest recente inhoud voor deze versie van Configuration Manager Online op de volgende locatie: [online documentatie voor Configuration Manager](/configmgr).
+Zoek de meest recente inhoud voor deze versie van Configuration Manager Online op de volgende locatie: [online documentatie voor Configuration Manager](/mem/configmgr).

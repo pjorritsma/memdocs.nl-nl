@@ -10,12 +10,12 @@ ms.assetid: b06f781b-ab25-4d9a-b128-02cbd7cbcffe
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e647672b02c0122709b3c80fc012ed1fb82b1519
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: db1e0d78263d264c66eed7258db800397baad735
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696426"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607575"
 ---
 # <a name="database-replicas-for-management-points-for-configuration-manager"></a>Database replica's voor beheer punten voor Configuration Manager
 
@@ -57,7 +57,7 @@ Configuration Manager primaire sites kunnen een database replica gebruiken om de
 
     -   De sitedatabase moet de databasereplica **publiceren** en elke externe databasereplicaserver moet zijn **geabonneerd** op de gepubliceerde gegevens.  
 
-    -   Zowel de SQL Server die de sitedatabase host als de SQL Server die een databasereplica host, moet worden geconfigureerd voor ondersteuning van een **Max Text Repl Size** van 2 GB. Zie [Configure the max text repl size Server Configuration Option](/sql/database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option?view=sql-server-ver15) (De serverconfiguratie-optie Max text repl size configureren) voor een voorbeeld om deze optie op SQL Server 2012 te configureren.  
+    -   Zowel de SQL Server die de sitedatabase host als de SQL Server die een databasereplica host, moet worden geconfigureerd voor ondersteuning van een **Max Text Repl Size** van 2 GB. Zie [Configure the max text repl size Server Configuration Option](/sql/database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option) (De serverconfiguratie-optie Max text repl size configureren) voor een voorbeeld om deze optie op SQL Server 2012 te configureren.  
 
 -   **Zelfondertekend certificaat:** Als u een database replica wilt configureren, moet u een zelfondertekend certificaat maken op de data base-replica server en dit certificaat beschikbaar maken voor elk beheer punt dat die data base-replica server gaat gebruiken.  
 
@@ -158,7 +158,7 @@ Gebruik de volgende procedure als een voorbeeld van hoe u een databasereplicaser
 
       -   Selecteer **Nieuwe database** om een nieuwe database te maken voor de databasereplica. Geef op de pagina **Nieuwe database** een naam op voor de database en klik op **OK**.  
 
-   5. Klik op **Volgende** om verder te gaan.  
+   5. Klik op **Volgende** om door te gaan.  
 
    6. Klik op de pagina **beveiliging van distributie agent** op de eigenschappen knop **(....)** in de rij verbinding met abonnee server van het dialoog venster en configureer de beveiligings instellingen voor de verbinding.  
 
@@ -174,7 +174,7 @@ Gebruik de volgende procedure als een voorbeeld van hoe u een databasereplicaser
         -   Als de SQL Server Agent wordt uitgevoerd met een ander account, selecteert u **Uitvoeren onder het volgende Windows-account** en configureert u dat account. U kunt een Windows-account of een SQL Serveraccount opgeven.  
 
         > [!IMPORTANT]  
-        >  U moet aan het account dat de distributieagent uitvoert machtigingen verlenen voor de uitgever als een pull-abonnement. Zie [beveiliging van Distribution agent](/sql/relational-databases/replication/distribution-agent-security?view=sql-server-ver15)voor meer informatie over het configureren van deze machtigingen.  
+        >  U moet aan het account dat de distributieagent uitvoert machtigingen verlenen voor de uitgever als een pull-abonnement. Zie [beveiliging van Distribution agent](/sql/relational-databases/replication/distribution-agent-security)voor meer informatie over het configureren van deze machtigingen.  
 
       - Voor **Verbinding maken met de distributeur**selecteert u **Door het procesaccount te imiteren**.  
 
@@ -459,7 +459,7 @@ Om clientnotificatie met een databasereplica voor een beheerpunt te ondersteunen
 -   Voor elke volgende databasereplica waarvoor u dit script gebruikt om te configureren, werkt u de beschrijvende naam voor het certificaat bij.  Als u dit wilt doen, bewerkt u de regel **$Enrollment. CertificateFriendlyName = "ConfigMgr-SQL Server-identificatie certificaat"** en vervang **configuration manager SQL Server Identification Certificate** door een nieuwe naam, zoals  **ConfigMgr SQL Server identificatie Certificate1**.  
 
 ##  <a name="manage-database-replica-configurations"></a><a name="BKMK_DBReplicaOps"></a> Configuraties voor database replica's beheren  
- Wanneer u een databasereplica op een site gebruikt, moet u als aanvulling op het proces voor het verwijderen van een databasereplica, het verwijderen van een site die een databasereplica gebruikt, of het verplaatsen van de sitedatabase naar een nieuwe installatie van SQL Server, ook de informatie in de volgende secties gebruiken. Wanneer u informatie in de volgende secties gebruikt om publicaties te verwijderen, maak dan gebruik van de richtlijnen voor het verwijderen van transactionele replicatie voor de versie van SQL Server die u voor de databasereplica gebruikt. Zie [een publicatie verwijderen](/sql/relational-databases/replication/publish/delete-a-publication?view=sql-server-ver15)voor meer informatie.  
+ Wanneer u een databasereplica op een site gebruikt, moet u als aanvulling op het proces voor het verwijderen van een databasereplica, het verwijderen van een site die een databasereplica gebruikt, of het verplaatsen van de sitedatabase naar een nieuwe installatie van SQL Server, ook de informatie in de volgende secties gebruiken. Wanneer u informatie in de volgende secties gebruikt om publicaties te verwijderen, maak dan gebruik van de richtlijnen voor het verwijderen van transactionele replicatie voor de versie van SQL Server die u voor de databasereplica gebruikt. Zie [een publicatie verwijderen](/sql/relational-databases/replication/publish/delete-a-publication)voor meer informatie.  
 
 > [!NOTE]  
 >  Als u een sitedatabase herstelt die was geconfigureerd voor databasereplica's, moet u, voordat u de databasereplica's kunt gebruiken, elke databasereplica opnieuw configureren, waarbij zowel de publicaties als abonnementen opnieuw worden gemaakt.  

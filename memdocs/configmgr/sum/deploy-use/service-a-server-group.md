@@ -1,7 +1,7 @@
 ---
 title: Een servergroep onderhouden
 titleSuffix: Configuration Manager
-description: De Configuration Manager-console bevat waarschuwingen en statussen voor het bewaken van updates en naleving.
+description: Server groepen zijn vervangen door Orchestration-groepen
 author: mestew
 ms.author: mstewart
 manager: dougeby
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 304a83ea-0f72-437d-9688-2e6e0c7526dd
-ms.openlocfilehash: 7d6d8bef145e14547e5e6a726a93cb9470b94afd
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a5475d2a33ebcf7fb2e1500a8dc6573180b9a70c
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724326"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608391"
 ---
 # <a name="service-a-server-group"></a>Een servergroep onderhouden
 

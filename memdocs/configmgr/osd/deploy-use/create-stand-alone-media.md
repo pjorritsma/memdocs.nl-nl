@@ -10,12 +10,12 @@ ms.assetid: c6b9ccd2-78d9-4f0e-b25a-70d0866300ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1c8710c50dc2feabebd7e8f0f84ac49b3b0dd35c
-ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
+ms.openlocfilehash: 8ff3e0ee8f002a21e283b8a56f55d0daa2490253
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89068018"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606357"
 ---
 # <a name="create-stand-alone-media"></a>Zelfstandige media maken
 
@@ -151,7 +151,7 @@ Voordat u de wizard taken reeks media maken uitvoert voor het maken van media vo
         >
         > Op zelfstandige media worden alleen de taken reeks stappen en hun variabelen versleuteld. De resterende inhoud van de media wordt niet versleuteld. Neem geen gevoelige informatie op in taken reeks scripts. U kunt alle gevoelige informatie opslaan en implementeren met behulp van takenreeksvariabelen.  
 
-    - **Selecteer een geldig datum bereik voor deze zelfstandige media**: stel optionele begin-en verval datums in op het medium. Deze instelling is standaard uitgeschakeld. De datums worden vergeleken met de systeem tijd op de computer voordat de zelfstandige media worden uitgevoerd. Wanneer de systeem tijd eerder is dan de begin tijd of later dan de verloop tijd, wordt de zelfstandige media niet gestart. Deze opties zijn ook beschikbaar met de Power shell [-cmdlet New-CMStandaloneMedia](/powershell/module/configurationmanager/new-cmstandalonemedia?view=sccm-ps) .  
+    - **Selecteer een geldig datum bereik voor deze zelfstandige media**: stel optionele begin-en verval datums in op het medium. Deze instelling is standaard uitgeschakeld. De datums worden vergeleken met de systeem tijd op de computer voordat de zelfstandige media worden uitgevoerd. Wanneer de systeem tijd eerder is dan de begin tijd of later dan de verloop tijd, wordt de zelfstandige media niet gestart. Deze opties zijn ook beschikbaar met de Power shell [-cmdlet New-CMStandaloneMedia](/powershell/module/configurationmanager/new-cmstandalonemedia) .  
 
 6. Selecteer op de pagina **zelfstandige CD/DVD** de taken reeks die het besturings systeem implementeert. U kunt alleen die taken reeksen selecteren die aan een opstart installatie kopie zijn gekoppeld. Controleer de lijst met inhoud waarnaar wordt verwezen door de taken reeks.  
 

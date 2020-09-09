@@ -10,12 +10,12 @@ ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2dd722ddcf0e5ea6e944a76366204ac83ede05ec
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 5bdf2adbf4ba5f02869ba5058da84ee7738e0ce2
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698953"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608071"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Lijst met vereisten controles voor Configuration Manager
 
@@ -741,7 +741,7 @@ Het account dat u hebt geconfigureerd voor het uitvoeren van de SQL Server-servi
 
 Start in versie 1810, Controleer of de site database een achterstand heeft voor het bijhouden van SQL-wijzigingen.<!--SCCMDocs-pr issue 3023-->  
 
-U moet deze controle hand matig controleren door een opgeslagen diagnostische procedure uit te voeren in de site database. Maak eerst een [Diagnostische verbinding](/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017) met uw site database. De eenvoudigste methode is om de query-editor van de data base engine van SQL Server Management Studio te gebruiken en verbinding te maken met `admin:<instance name>` .
+U moet deze controle hand matig controleren door een opgeslagen diagnostische procedure uit te voeren in de site database. Maak eerst een [Diagnostische verbinding](/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators) met uw site database. De eenvoudigste methode is om de query-editor van de data base engine van SQL Server Management Studio te gebruiken en verbinding te maken met `admin:<instance name>` .
 
 Voer de volgende opdrachten uit in een exclusieve beheerders verbindings venster:
 

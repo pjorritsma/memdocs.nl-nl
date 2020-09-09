@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: f52d6956cf860de8e45ac4e532500d32bcf077ba
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 3e618a8a0db81ad870c5aeedc89b01ba6089a0f8
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074500"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607918"
 ---
 # <a name="capabilities-in-technical-preview-1512-for-configuration-manager"></a>Mogelijkheden van Technical Preview 1512 voor Configuration Manager
 
@@ -26,7 +26,7 @@ Dit artikel bevat een inleiding tot de functies die beschikbaar zijn in de Techn
 
  Hier volgen enkele nieuwe functies die u kunt uitproberen met deze versie.  
 
-##  <a name="device-health-attestation"></a><a name="bkmk_devicehealth"></a>Apparaatstatusverklaring  
+##  <a name="device-health-attestation"></a><a name="bkmk_devicehealth"></a> Apparaatstatusverklaring  
  Vanaf Technical Preview 1512 kunnen beheerders de status van Windows 10-Apparaatstatusverklaring in de Configuration Manager-console bekijken.  Deze functionaliteit is beschikbaar voor Configuration Manager en Configuration Manager met Microsoft Intune. Met Health Attestation van apparaten kan de beheerder zorgen dat clientcomputers over betrouwbare configuraties van BIOS, TPM en opstartsoftware beschikken. Voor de ondersteuning van apparaatstatusverklaring moeten op client apparaten Win10 worden uitgevoerd met TPM 2 ingeschakeld. Met Health Attestation van apparaten wordt het aantal apparaten weergegeven dat is ingeschakeld voor elk van de volgende:  
 
 -   Vroegtijdig starten van anti-malware  
@@ -41,20 +41,20 @@ In de-console worden ook de belangrijkste ontbrekende instellingen voor status a
 
 Als u de weer gave van de apparaatstatusverklaring wilt bekijken, gaat u in de Configuration Manager-console naar de werk ruimte **bewaking** van, klikt u op **beveiligings** knooppunt en klikt u vervolgens op **Health Attestation**.  
 
-##  <a name="in-console-monitoring-for-terms-and-conditions"></a><a name="bkmk_viewterms"></a>Bewaking in de console voor voor waarden  
+##  <a name="in-console-monitoring-for-terms-and-conditions"></a><a name="bkmk_viewterms"></a> Bewaking in de console voor voor waarden  
 Met ingang van Technical Preview 1512, wanneer u Configuration Manager integreert met Microsoft Intune, kunt u de Configuration Manager-console gebruiken om te zien welke gebruikers de voor waarden hebben geaccepteerd die zijn geconfigureerd door uw IT-afdeling en welke gebruikers dat niet hebben.  
 
 **Samenvattings informatie weer geven:**  
 
--   Ga in de Configuration Manager-console naar **bewakings** > **overzicht** > **implementaties** en selecteer de implementatie van de voor waarden die u wilt weer geven.  
+-   Ga in de Configuration Manager-console naar **bewakings**  >  **overzicht**  >  **implementaties** en selecteer de implementatie van de voor waarden die u wilt weer geven.  
 
 **Gedetailleerde informatie weer geven:**  
 
-1.  Ga in de Configuration Manager-console naar **activa en naleving** > **overzicht** > **voor waarden voor****nalevings instellingen** > en selecteer de voor waarden die u wilt weer geven.  
+1.  Ga in de Configuration Manager-console naar **activa en naleving**  >  **overzicht**  >  voor waarden voor**nalevings instellingen**en selecteer de voor waarden die  >  **Terms and Conditions**u wilt weer geven.  
 
 2.  Selecteer aan de onderkant van de console het tabblad **implementaties** , selecteer de implementatie en klik vervolgens op **status weer geven.**  
 
-##  <a name="improvements-to-endpoint-protection-policy-settings"></a><a name="bkmk_EPpolicy"></a>Verbeteringen aan Endpoint Protection-beleids instellingen  
+##  <a name="improvements-to-endpoint-protection-policy-settings"></a><a name="bkmk_EPpolicy"></a> Verbeteringen aan Endpoint Protection-beleids instellingen  
 In de 1512 Technical Preview zijn de volgende nieuwe instellingen toegevoegd in Endpoint Protection antimalware-beleid:  
 
 -   Real-time beveiliging: **mogelijk ongewenste toepassingen blok keren tijdens het downloaden en voorafgaand aan de installatie**  
@@ -81,7 +81,7 @@ In de 1512 Technical Preview zijn de volgende nieuwe instellingen toegevoegd in 
 
          In het volgende voor beeld ziet u de Windows Defender-instelling in Windows 10 die door de beheerder is ingesteld als ingeschakeld en de gebruiker deze niet mag wijzigen:  
 
-         ![TechRef&#95;WinDefender](../../core/get-started/media/TechRef_WinDefender.png "TechRef_WinDefender")  
+         ![Windows Defender: voor beelden van automatische verzen ding](../../core/get-started/media/TechRef_WinDefender.png)  
 
     Daarnaast is de bestaande instelling **bestanden en mappen uitsluiten** in de sectie uitsluitings instellingen van het antimalwarebeleid van Endpoint Protection verbeterd zodat het apparaat kan worden uitgesloten. U kunt nu bijvoorbeeld het volgende opgeven als een uitsluiting: **\device\mvfs** (voor Multiversion-bestandssysteem). Met het beleid wordt het pad naar het apparaat niet gevalideerd. het Endpoint Protection-beleid wordt aan de antimalware-engine op de client door gegeven dat de teken reeks van het apparaat moet kunnen interpreteren.  
 

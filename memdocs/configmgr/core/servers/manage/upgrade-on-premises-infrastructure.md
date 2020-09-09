@@ -10,12 +10,12 @@ ms.assetid: 8ca970dd-e71c-404f-9435-d36e773a0db2
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7efc775199a34a66a8cd4a83b85baccd4a3ab5cb
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 0c2894bcdf80901171cceba96e7829793f899383
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699480"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606783"
 ---
 # <a name="upgrade-on-premises-infrastructure-that-supports-configuration-manager"></a>On-premises infra structuur bijwerken die ondersteuning biedt voor Configuration Manager
 
@@ -242,15 +242,15 @@ Voer de volgende SQL-query uit op de site database server om het compatibiliteit
 SELECT name, compatibility_level FROM sys.databases
 ```
 
-Zie [ALTER data base Compatibility Level (Transact-SQL) (Engelstalig)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017)voor meer informatie over compatibiliteits niveaus voor SQL CE en hoe u deze kunt instellen.
+Zie [ALTER data base Compatibility Level (Transact-SQL) (Engelstalig)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)voor meer informatie over compatibiliteits niveaus voor SQL CE en hoe u deze kunt instellen.
 
 Raadpleeg de volgende SQL Server artikelen voor meer informatie over het upgraden van SQL Server:  
 
 - [Voer een upgrade uit naar SQL Server 2017](/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2017)  
 
-- [Voer een upgrade uit naar SQL Server 2016](/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2016)  
+- [Voer een upgrade uit naar SQL Server 2016](/sql/database-engine/install-windows/supported-version-and-edition-upgrades)  
 
-- [Upgrade naar SQL Server 2014](/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2014)  
+- [Upgrade naar SQL Server 2014](/sql/database-engine/install-windows/supported-version-and-edition-upgrades)  
 
 ### <a name="to-upgrade-sql-server-on-the-site-database-server"></a>Een upgrade uitvoeren voor SQL Server op de sitedatabaseserver  
 

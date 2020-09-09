@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 04630815b3d10a232d7fc0eea50296062c823194
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: a92d5a627d6cbe4e64ffa221ae00458f4227c844
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699837"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607746"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 1810 van Configuration Manager current branch
 
@@ -427,7 +427,7 @@ De on-premises MDM-vereiste voor het configureren van een Microsoft Intune-abonn
 
 Afgezien van nieuwe functies bevat deze release ook aanvullende wijzigingen, zoals oplossingen voor problemen. Zie [overzicht van wijzigingen in Configuration Manager current branch, versie 1810](https://support.microsoft.com/help/4482169)voor meer informatie.
 
-Zie [release opmerkingen voor Power shell versie 1810](/powershell/sccm/1810-release-notes?view=sccm-ps)voor meer informatie over wijzigingen in de Windows Power shell-cmdlets voor Configuration Manager.
+Zie [release opmerkingen voor Power shell versie 1810](/powershell/sccm/1810-release-notes)voor meer informatie over wijzigingen in de Windows Power shell-cmdlets voor Configuration Manager.
 
 Het volgende update pakket (4488598) is beschikbaar in de-console vanaf 25 maart 2019: [Update pakket 2 voor Configuration Manager current branch, versie 1810](https://support.microsoft.com/help/4488598). Dit vervangt het vorige update pakket KB 4486457.
 

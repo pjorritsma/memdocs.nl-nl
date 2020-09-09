@@ -10,12 +10,12 @@ ms.assetid: f7ade768-2b2b-4aab-8ee1-73624d03a9c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b52fe5a60899d7e871381d1a34a2360bbe68a36c
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 82b122f96806b6e3f77afccf8b8d4195c294b224
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820473"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608028"
 ---
 # <a name="bitlocker-settings-reference"></a>Naslag informatie over BitLocker-instellingen
 
@@ -56,7 +56,7 @@ Voor Windows 8,1-apparaten schakelt u de optie voor de **versleutelings methode 
 - AES 128-bits (standaard)
 - AES 256-bits
 
-Zie [New-CMBLEncryptionMethodPolicy](/powershell/module/configurationmanager/new-cmblencryptionmethodpolicy?view=sccm-ps)voor meer informatie over het maken van dit beleid met Windows Power shell.
+Zie [New-CMBLEncryptionMethodPolicy](/powershell/module/configurationmanager/new-cmblencryptionmethodpolicy)voor meer informatie over het maken van dit beleid met Windows Power shell.
 
 #### <a name="windows-10-devices"></a>Windows 10-apparaten
 
@@ -72,7 +72,7 @@ Schakel voor Windows 10-apparaten de optie voor de **versleutelings methode voor
 >
 > Als u een verwisselbaar station wilt gebruiken op apparaten waarop Windows 10 niet wordt uitgevoerd, gebruikt u AES-CBC.
 
-Zie [New-CMBLEncryptionMethodWithXts](/powershell/module/configurationmanager/new-cmblencryptionmethodwithxts?view=sccm-ps)voor meer informatie over het maken van dit beleid met Windows Power shell.
+Zie [New-CMBLEncryptionMethodWithXts](/powershell/module/configurationmanager/new-cmblencryptionmethodwithxts)voor meer informatie over het maken van dit beleid met Windows Power shell.
 
 #### <a name="general-usage-notes-for-drive-encryption-and-cipher-strength"></a>Algemene gebruiks notities voor stationsversleuteling en codeer sterkte
 
@@ -92,7 +92,7 @@ Configureer dit beleid om de prestaties van het opnieuw opstarten te verbeteren 
 
 Wanneer u dit beleid niet configureert, verwijdert BitLocker de geheimen uit het geheugen wanneer de computer opnieuw wordt opgestart.
 
-Zie [New-CMNoOverwritePolicy](/powershell/module/configurationmanager/new-cmnooverwritepolicy?view=sccm-ps)voor meer informatie over het maken van dit beleid met Windows Power shell.
+Zie [New-CMNoOverwritePolicy](/powershell/module/configurationmanager/new-cmnooverwritepolicy)voor meer informatie over het maken van dit beleid met Windows Power shell.
 
 ### <a name="validate-smart-card-certificate-usage-rule-compliance"></a>Naleving van regels voor smartcard certificaat gebruik valideren
 
@@ -102,7 +102,7 @@ Dit beleid configureren voor het gebruik van BitLocker-beveiliging op basis van 
 
 Wanneer u dit beleid niet configureert, gebruikt BitLocker de standaard object-id `1.3.6.1.4.1.311.67.1.1` om een certificaat op te geven.
 
-Zie [New-CMScCompliancePolicy](/powershell/module/configurationmanager/new-cmsccompliancepolicy?view=sccm-ps)voor meer informatie over het maken van dit beleid met Windows Power shell.
+Zie [New-CMScCompliancePolicy](/powershell/module/configurationmanager/new-cmsccompliancepolicy)voor meer informatie over het maken van dit beleid met Windows Power shell.
 
 ### <a name="organization-unique-identifiers"></a>Unieke id's van de organisatie
 
@@ -114,7 +114,7 @@ Wanneer u dit beleid niet configureert, gebruikt BitLocker het veld **id** niet.
 
 Als uw organisatie hogere beveiligings metingen vereist, configureert u het veld **identificatie** . Stel dit veld in op alle doel-USB-apparaten en lijn het uit met deze instelling.
 
-Zie [New-CMUidPolicy](/powershell/module/configurationmanager/new-cmuidpolicy?view=sccm-ps)voor meer informatie over het maken van dit beleid met Windows Power shell.
+Zie [New-CMUidPolicy](/powershell/module/configurationmanager/new-cmuidpolicy)voor meer informatie over het maken van dit beleid met Windows Power shell.
 
 ## <a name="os-drive"></a>Station van het besturingssysteem
 
@@ -144,7 +144,7 @@ Op apparaten met een compatibele TPM kunnen tijdens het opstarten twee typen ver
 >
 > - Stand-by statussen (S1-S3) toestaan tijdens het slapen (op batterij)
 
-Zie [New-CMBMSOSDEncryptionPolicy](/powershell/module/configurationmanager/new-cmbmsosdencryptionpolicy?view=sccm-ps)voor meer informatie over het maken van dit beleid met Windows Power shell.
+Zie [New-CMBMSOSDEncryptionPolicy](/powershell/module/configurationmanager/new-cmbmsosdencryptionpolicy)voor meer informatie over het maken van dit beleid met Windows Power shell.
 
 ### <a name="allow-enhanced-pins-for-startup"></a>Uitgebreide pincodes voor opstarten toestaan
 
@@ -161,7 +161,7 @@ Als u deze instelling inschakelt, kan de gebruiker met alle nieuwe BitLocker-ops
 
 Als u deze beleids instelling uitschakelt of niet configureert, gebruikt BitLocker geen verbeterde pincodes.
 
-Zie [New-CMEnhancedPIN](/powershell/module/configurationmanager/new-cmenhancedpin?view=sccm-ps)voor meer informatie over het maken van dit beleid met Windows Power shell.
+Zie [New-CMEnhancedPIN](/powershell/module/configurationmanager/new-cmenhancedpin)voor meer informatie over het maken van dit beleid met Windows Power shell.
 
 ### <a name="operating-system-drive-password-policy"></a>Wachtwoord beleid besturings systeem
 
@@ -177,7 +177,7 @@ Gebruik deze instellingen om de beperkingen voor wacht woorden in te stellen voo
 
 Als u deze beleids instelling inschakelt, kunnen gebruikers een wacht woord configureren dat voldoet aan de vereisten die u definieert.
 
-Zie [New-CMOSPassphrase](/powershell/module/configurationmanager/new-cmospassphrase?view=sccm-ps)voor meer informatie over het maken van dit beleid met Windows Power shell.
+Zie [New-CMOSPassphrase](/powershell/module/configurationmanager/new-cmospassphrase)voor meer informatie over het maken van dit beleid met Windows Power shell.
 
 #### <a name="general-usage-notes-for-os-drive-password-policy"></a>Algemene gebruiks opmerkingen voor wachtwoord beleid voor het besturings systeem-station
 
@@ -197,7 +197,7 @@ Als u deze instelling inschakelt of niet configureert, vernieuwt Windows de plat
 
 Als u deze beleids instelling uitschakelt, worden de validatie gegevens van het platform in deze situatie niet vernieuwd.
 
-Zie [New-CMTpmAutoResealPolicy](/powershell/module/configurationmanager/new-cmtpmautoresealpolicy?view=sccm-ps)voor meer informatie over het maken van dit beleid met Windows Power shell.
+Zie [New-CMTpmAutoResealPolicy](/powershell/module/configurationmanager/new-cmtpmautoresealpolicy)voor meer informatie over het maken van dit beleid met Windows Power shell.
 
 ### <a name="pre-boot-recovery-message-and-url"></a>Preboot-herstelbericht en -URL
 
@@ -220,7 +220,7 @@ Wanneer u deze instelling inschakelt, selecteert u een van de volgende opties vo
 > [!NOTE]
 > Niet alle tekens en talen worden ondersteund in de pre-boot. Test eerst uw aangepaste bericht of URL om te controleren of deze correct wordt weer gegeven op het BitLocker-herstel scherm vóór het opstarten.
 
-Zie [New-CMPrebootRecoveryInfo](/powershell/module/configurationmanager/new-cmprebootrecoveryinfo?view=sccm-ps)voor meer informatie over het maken van dit beleid met Windows Power shell.
+Zie [New-CMPrebootRecoveryInfo](/powershell/module/configurationmanager/new-cmprebootrecoveryinfo)voor meer informatie over het maken van dit beleid met Windows Power shell.
 
 ### <a name="encryption-policy-enforcement-settings-os-drive"></a>Instellingen voor afdwingen van versleutelings beleid (OS-station)
 
@@ -236,7 +236,7 @@ Als u deze instelling uitschakelt of niet configureert, vereist Configuration Ma
 
 Als u het beleid onmiddellijk wilt afdwingen, stelt u een respijt periode van in `0` .
 
-Zie [New-CMUseOsEnforcePolicy](/powershell/module/configurationmanager/new-cmuseosenforcepolicy?view=sccm-ps)voor meer informatie over het maken van dit beleid met Windows Power shell.
+Zie [New-CMUseOsEnforcePolicy](/powershell/module/configurationmanager/new-cmuseosenforcepolicy)voor meer informatie over het maken van dit beleid met Windows Power shell.
 
 ## <a name="fixed-drive"></a>Vast station
 
@@ -256,7 +256,7 @@ Als u deze instelling niet configureert, vereist BitLocker dat gebruikers geen v
 
 Als u deze instelling uitschakelt, kunnen gebruikers hun vaste gegevens stations niet onder BitLocker-beveiliging plaatsen. Als u dit beleid uitschakelt nadat BitLocker vaste gegevens stations heeft versleuteld, ontsleutelt BitLocker de vaste schijven.
 
-Zie [New-CMBMSFDVEncryptionPolicy](/powershell/module/configurationmanager/new-cmbmsfdvencryptionpolicy?view=sccm-ps)voor meer informatie over het maken van dit beleid met Windows Power shell.
+Zie [New-CMBMSFDVEncryptionPolicy](/powershell/module/configurationmanager/new-cmbmsfdvencryptionpolicy)voor meer informatie over het maken van dit beleid met Windows Power shell.
 
 ### <a name="deny-write-access-to-fixed-drives-not-protected-by-bitlocker"></a>Schrijf toegang weigeren voor vaste stations die niet worden beveiligd met BitLocker
 
@@ -272,7 +272,7 @@ Wanneer u deze instelling inschakelt:
 
 Wanneer u deze instelling niet configureert, koppelt Windows alle vaste-gegevens stations met lees-en schrijf toegang.
 
-Zie [New-CMFDVDenyWriteAccessPolicy](/powershell/module/configurationmanager/new-cmfdvdenywriteaccesspolicy?view=sccm-ps)voor meer informatie over het maken van dit beleid met Windows Power shell.
+Zie [New-CMFDVDenyWriteAccessPolicy](/powershell/module/configurationmanager/new-cmfdvdenywriteaccesspolicy)voor meer informatie over het maken van dit beleid met Windows Power shell.
 
 ### <a name="fixed-data-drive-password-policy"></a>Wachtwoord beleid voor vaste gegevens stations
 
@@ -294,7 +294,7 @@ Als u deze instelling uitschakelt, kunnen gebruikers geen wacht woord configurer
 
 Wanneer het beleid niet is geconfigureerd, ondersteunt BitLocker wacht woorden met de standaard instellingen. De standaard instellingen bevatten geen vereisten voor wachtwoord complexiteit en vereisen slechts acht tekens.
 
-Zie [New-CMFDVPassPhrasePolicy](/powershell/module/configurationmanager/new-cmfdvpassphrasepolicy?view=sccm-ps)voor meer informatie over het maken van dit beleid met Windows Power shell.
+Zie [New-CMFDVPassPhrasePolicy](/powershell/module/configurationmanager/new-cmfdvpassphrasepolicy)voor meer informatie over het maken van dit beleid met Windows Power shell.
 
 #### <a name="general-usage-notes-for-fixed-data-drive-password-policy"></a>Algemene gebruiks notities voor het wachtwoord beleid voor vaste gegevens stations
 
@@ -318,7 +318,7 @@ Als u deze instelling uitschakelt of niet configureert, vereist Configuration Ma
 
 Als u het beleid onmiddellijk wilt afdwingen, stelt u een respijt periode van in `0` .
 
-Zie [New-CMUseFddEnforcePolicy](/powershell/module/configurationmanager/new-cmusefddenforcepolicy?view=sccm-ps)voor meer informatie over het maken van dit beleid met Windows Power shell.
+Zie [New-CMUseFddEnforcePolicy](/powershell/module/configurationmanager/new-cmusefddenforcepolicy)voor meer informatie over het maken van dit beleid met Windows Power shell.
 
 ## <a name="removable-drive"></a>Verwisselbaar station
 
@@ -348,7 +348,7 @@ Wanneer u deze instelling inschakelt:
 
 Als u deze instelling uitschakelt, kunnen gebruikers geen BitLocker gebruiken op Verwissel bare stations.
 
-Zie [New-CMRDVConfigureBDEPolicy](/powershell/module/configurationmanager/new-cmrdvconfigurebdepolicy?view=sccm-ps)voor meer informatie over het maken van dit beleid met Windows Power shell.
+Zie [New-CMRDVConfigureBDEPolicy](/powershell/module/configurationmanager/new-cmrdvconfigurebdepolicy)voor meer informatie over het maken van dit beleid met Windows Power shell.
 
 ### <a name="deny-write-access-to-removable-drives-not-protected-by-bitlocker"></a>Schrijf toegang weigeren voor Verwissel bare stations die niet worden beveiligd met BitLocker
 
@@ -369,7 +369,7 @@ Wanneer u deze instelling uitschakelt of niet configureert, koppelt Windows alle
 > [!NOTE]
 > U kunt deze instelling onderdrukken met de instellingen voor groeps **System**beleid in de  >  **toegang tot de Verwissel bare opslag**van het systeem. Als u de groeps beleids instelling **Verwissel bare schijven inschakelt: schrijf toegang weigeren**, negeert BitLocker deze Configuration Manager instelling.
 
-Zie [New-CMRDVDenyWriteAccessPolicy](/powershell/module/configurationmanager/new-cmrdvdenywriteaccesspolicy?view=sccm-ps)voor meer informatie over het maken van dit beleid met Windows Power shell.
+Zie [New-CMRDVDenyWriteAccessPolicy](/powershell/module/configurationmanager/new-cmrdvdenywriteaccesspolicy)voor meer informatie over het maken van dit beleid met Windows Power shell.
 
 ### <a name="removable-data-drive-password-policy"></a>Verwisselbaar gegevens station wachtwoord beleid
 
@@ -391,7 +391,7 @@ Als u deze instelling uitschakelt, kunnen gebruikers geen wacht woord configurer
 
 Wanneer het beleid niet is geconfigureerd, ondersteunt BitLocker wacht woorden met de standaard instellingen. De standaard instellingen bevatten geen vereisten voor wachtwoord complexiteit en vereisen slechts acht tekens.
 
-Zie [New-CMRDVPassPhrasePolicy](/powershell/module/configurationmanager/new-cmrdvpassphrasepolicy?view=sccm-ps)voor meer informatie over het maken van dit beleid met Windows Power shell.
+Zie [New-CMRDVPassPhrasePolicy](/powershell/module/configurationmanager/new-cmrdvpassphrasepolicy)voor meer informatie over het maken van dit beleid met Windows Power shell.
 
 #### <a name="general-usage-notes-for-removable-data-drive-password-policy"></a>Algemene gebruiks opmerkingen voor het wachtwoord beleid voor Verwissel bare gegevens stations
 
@@ -419,8 +419,8 @@ Wanneer u deze instelling inschakelt, wordt in de site database automatisch een 
 
 Zie voor meer informatie over het maken van dit beleid met Windows Power shell:
 
-- [Set-CMBlmPlaintextStorage](/powershell/module/configurationmanager/set-cmblmplaintextstorage?view=sccm-ps)
-- [New-CMBMSClientConfigureCheckIntervalPolicy](/powershell/module/configurationmanager/new-cmbmsclientconfigurecheckintervalpolicy?view=sccm-ps)
+- [Set-CMBlmPlaintextStorage](/powershell/module/configurationmanager/set-cmblmplaintextstorage)
+- [New-CMBMSClientConfigureCheckIntervalPolicy](/powershell/module/configurationmanager/new-cmbmsclientconfigurecheckintervalpolicy)
 
 ### <a name="user-exemption-policy"></a>Beleid voor gebruikers uitsluiting
 
@@ -447,7 +447,7 @@ Als u deze instelling uitschakelt of niet configureert, worden de instructies vo
 > [!NOTE]
 > BitLocker beheert uitzonde ringen per gebruiker, niet per computer. Als meerdere gebruikers zich aanmelden bij dezelfde computer en een gebruiker niet is uitgesloten, versleutelt BitLocker de computer.
 
-Zie [New-CMBMSUserExemptionPolicy](/powershell/module/configurationmanager/new-cmbmsuserexemptionpolicy?view=sccm-ps)voor meer informatie over het maken van dit beleid met Windows Power shell.
+Zie [New-CMBMSUserExemptionPolicy](/powershell/module/configurationmanager/new-cmbmsuserexemptionpolicy)voor meer informatie over het maken van dit beleid met Windows Power shell.
 
 ### <a name="url-for-the-security-policy-link"></a>URL voor de koppeling naar het beveiligings beleid
 
@@ -459,8 +459,8 @@ Als u deze instelling inschakelt, configureert u de **koppelings-URL voor het be
 
 Als u deze instelling uitschakelt of niet configureert, wordt de koppeling beveiligings beleid niet weer gegeven in BitLocker.
 
-Zie [New-CMMoreInfoUrlPolicy](/powershell/module/configurationmanager/new-cmmoreinfourlpolicy?view=sccm-ps)voor meer informatie over het maken van dit beleid met Windows Power shell.
+Zie [New-CMMoreInfoUrlPolicy](/powershell/module/configurationmanager/new-cmmoreinfourlpolicy)voor meer informatie over het maken van dit beleid met Windows Power shell.
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Als u Windows Power shell gebruikt om deze beleids objecten te maken, gebruikt u de cmdlet [New-CMBlmSetting](/powershell/module/configurationmanager/new-cmblmsetting?view=sccm-ps) . Met deze cmdlet maakt u een object met beleids instellingen voor BitLocker-beheer dat alle opgegeven beleids regels bevat. Gebruik de cmdlet [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment?view=sccm-ps) om de beleids instellingen te implementeren voor een verzameling.
+Als u Windows Power shell gebruikt om deze beleids objecten te maken, gebruikt u de cmdlet [New-CMBlmSetting](/powershell/module/configurationmanager/new-cmblmsetting) . Met deze cmdlet maakt u een object met beleids instellingen voor BitLocker-beheer dat alle opgegeven beleids regels bevat. Gebruik de cmdlet [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment) om de beleids instellingen te implementeren voor een verzameling.

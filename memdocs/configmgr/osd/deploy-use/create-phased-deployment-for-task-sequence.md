@@ -10,12 +10,12 @@ ms.assetid: b634ff68-b909-48d2-9e2c-0933486673c5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a14448c03596853be943440c0fab775ee1d19081
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 71e7f9c23b55beecc98bffb5da73465f0681a4a4
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820422"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606393"
 ---
 # <a name="create-phased-deployments-with-configuration-manager"></a>Gefaseerde implementaties met Configuration Manager maken
 
@@ -27,7 +27,7 @@ Gefaseerde implementaties maken voor de volgende objecten:
 
 - **Takenreeks**
   - De gefaseerde implementatie van taken reeksen biedt geen ondersteuning voor de installatie van PXE of media
-- **Toepassing** <!--1358147-->  
+- **App** <!--1358147-->  
 - **Software-update** <!--1358146-->  
   - U kunt een regel voor automatische implementatie (ADR) niet gebruiken voor een gefaseerde implementatie
 
@@ -53,8 +53,8 @@ Deze instellingen zijn uniek voor gefaseerde implementaties. Configureer deze in
 
 Met ingang van versie 2002 gebruikt u de volgende Windows Power shell-cmdlets voor het hand matig configureren van fasen voor implementaties van software-updates en taken reeksen:
 
-- [New-CMSoftwareUpdatePhase](/powershell/module/configurationmanager/new-cmsoftwareupdatephase?view=sccm-ps)
-- [New-CMTaskSequencePhase](/powershell/module/configurationmanager/new-cmtasksequencephase?view=sccm-ps)
+- [New-CMSoftwareUpdatePhase](/powershell/module/configurationmanager/new-cmsoftwareupdatephase)
+- [New-CMTaskSequencePhase](/powershell/module/configurationmanager/new-cmtasksequencephase)
 
 ### <a name="criteria-for-success-of-the-first-phase"></a>Criteria voor het slagen van de eerste fase
 
@@ -102,14 +102,14 @@ Configureer deze instelling voor de implementatie in elke fase, zodat deze gelei
 
 2. Geef op de pagina **Algemeen** de gefaseerde implementatie een **naam**, **Beschrijving** (optioneel) en selecteer **automatisch een standaard implementatie met twee fasen maken**.  
 
-3. Selecteer **Bladeren** en kies een doel verzameling voor zowel de **eerste verzameling** als de **tweede verzamelings** velden. Voor een taken reeks en software-updates selecteert u uit apparaten verzamelen. Voor een toepassing selecteert u van gebruikers-of apparaat-verzamelingen. Selecteer **Volgende**.  
+3. Selecteer **Bladeren** en kies een doel verzameling voor zowel de **eerste verzameling** als de **tweede verzamelings** velden. Voor een taken reeks en software-updates selecteert u uit apparaten verzamelen. Voor een toepassing selecteert u van gebruikers-of apparaat-verzamelingen. Selecteer **Next**.  
 
     > [!Important]  
     > Met de wizard gefaseerde implementatie wordt u niet op de hoogte gesteld als een implementatie mogelijk een groot risico is. Zie instellingen voor het [beheren van implementaties met een hoog risico](../../core/servers/manage/settings-to-manage-high-risk-deployments.md) en de notitie wanneer u [een taken reeks implementeert](deploy-a-task-sequence.md)voor meer informatie.  
 
 4. Kies op de pagina **instellingen** één optie voor elk van de plannings instellingen. Zie [Phase Settings](#bkmk_settings)(Engelstalig) voor meer informatie. Selecteer **volgende** als u klaar bent.  
 
-5. Bekijk op de pagina **fasen** de twee fasen die de wizard voor de opgegeven verzamelingen maakt. Selecteer **Volgende**. Deze instructies beslaan de procedure om automatisch een standaard implementatie met twee fasen te maken. Met de wizard kunt u fasen voor een gefaseerde implementatie toevoegen, verwijderen, opnieuw rangschikken, bewerken of weer geven. Zie [een gefaseerde implementatie met hand matig geconfigureerde fasen maken](#bkmk_manual)voor meer informatie over deze aanvullende acties.  
+5. Bekijk op de pagina **fasen** de twee fasen die de wizard voor de opgegeven verzamelingen maakt. Selecteer **Next**. Deze instructies beslaan de procedure om automatisch een standaard implementatie met twee fasen te maken. Met de wizard kunt u fasen voor een gefaseerde implementatie toevoegen, verwijderen, opnieuw rangschikken, bewerken of weer geven. Zie [een gefaseerde implementatie met hand matig geconfigureerde fasen maken](#bkmk_manual)voor meer informatie over deze aanvullende acties.  
 
 6. Bevestig uw selecties op het tabblad **samen vatting** en selecteer vervolgens **volgende** om de wizard te volt ooien.  
 
@@ -118,9 +118,9 @@ Configureer deze instelling voor de implementatie in elke fase, zodat deze gelei
 
 Vanaf versie 2002 gebruikt u de volgende Windows Power shell-cmdlets voor deze taak:
 
-- [New-CMApplicationAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmapplicationautophaseddeployment?view=sccm-ps)
-- [New-CMSoftwareUpdateAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdateautophaseddeployment?view=sccm-ps)
-- [New-CMTaskSequenceAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmtasksequenceautophaseddeployment?view=sccm-ps)
+- [New-CMApplicationAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmapplicationautophaseddeployment)
+- [New-CMSoftwareUpdateAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdateautophaseddeployment)
+- [New-CMTaskSequenceAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmtasksequenceautophaseddeployment)
 
 ## <a name="create-a-phased-deployment-with-manually-configured-phases"></a><a name="bkmk_manual"></a> Een gefaseerde implementatie met hand matig geconfigureerde fasen maken
 <!--1358148-->
@@ -166,12 +166,12 @@ Een gefaseerde implementatie met hand matig geconfigureerde fasen voor een taken
        > - Criteria voor het slagen van de vorige fase  
        > - Voor waarden voor het starten van deze implementatie fase na een geslaagde uitvoering van de vorige fase
 
-1. Selecteer **Volgende**. Controleer de instellingen op de pagina **samen vatting** en voltooi vervolgens de wizard gefaseerde implementatie maken.
+1. Selecteer **Next**. Controleer de instellingen op de pagina **samen vatting** en voltooi vervolgens de wizard gefaseerde implementatie maken.
 
 Vanaf versie 2002 gebruikt u de volgende Windows Power shell-cmdlets voor deze taak:
 
-- [New-CMSoftwareUpdateManualPhasedDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdatemanualphaseddeployment?view=sccm-ps)
-- [New-CMTaskSequenceManualPhasedDeployment](/powershell/module/configurationmanager/new-cmtasksequencemanualphaseddeployment?view=sccm-ps)
+- [New-CMSoftwareUpdateManualPhasedDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdatemanualphaseddeployment)
+- [New-CMTaskSequenceManualPhasedDeployment](/powershell/module/configurationmanager/new-cmtasksequencemanualphaseddeployment)
 
 Nadat u een gefaseerde implementatie hebt gemaakt, opent u de eigenschappen ervan om wijzigingen aan te brengen:  
 
@@ -187,6 +187,6 @@ Nadat u een gefaseerde implementatie hebt gemaakt, opent u de eigenschappen erva
 
 Gefaseerde implementaties beheren en bewaken:
 
-- [Toepassing](manage-monitor-phased-deployments.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)
+- [App](manage-monitor-phased-deployments.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)
 - [Software-update](manage-monitor-phased-deployments.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json)  
 - [Takenreeks](manage-monitor-phased-deployments.md)  

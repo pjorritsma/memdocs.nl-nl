@@ -10,12 +10,12 @@ ms.assetid: e6c1df1d-7728-4980-9199-bc32cde5439e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 0b79e0ec67fa7c1d7ede0af1549c8cda4dd3ee3c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e3dedef9ffe785ce7127fc371030cfd990d70e38
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81717704"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608386"
 ---
 # <a name="manage-publications-in-updates-publisher"></a>Publicaties in updates Publisher beheren
 
@@ -36,7 +36,7 @@ Als u de naam van een publicatie wilt wijzigen, selecteert u de publicatie in de
 ## <a name="change-the-publication-type-of-updates-in-a-publication"></a>Het publicatie type van updates in een publicatie wijzigen
 Vanuit de **werk ruimte publicatie**kunt u het **publicatie type** van updates en bundels wijzigen die zijn toegewezen aan een publicatie.
 
-1. Selecteer de publicatie met de updates die u wilt wijzigen en selecteer vervolgens een of meer updates of bundels uit de naam van **alle &lt;publicatie> leden updates** .
+1. Selecteer de publicatie met de updates die u wilt wijzigen en selecteer vervolgens een of meer updates of bundels uit de naam van **alle &lt; publicatie> leden updates** .
 
 2. Kies vervolgens een van de volgende opties op het tabblad **Start** . Welke opties beschikbaar zijn, is afhankelijk van het publicatie type van de updates die u hebt geselecteerd.
 
@@ -82,9 +82,6 @@ Als u een publicatie wilt exporteren, gaat u naar de **werk ruimte publicaties**
 Als de publicatie is geselecteerd, kiest u **exporteren** in het tabblad **Start** van het lint en geeft u vervolgens een pad en bestands naam op voor het exporteren van de catalogus.
 
 U kunt ook afhankelijke software-updates exporteren (opnemen) als onderdeel van de export.
-
-## <a name="rename-a-publication"></a>De naam van een publicatie wijzigen
-Als u de naam van een publicatie wilt wijzigen, selecteert u de **werk ruimte publicaties**en kiest u vervolgens **bewerken** op het tabblad **publicatie** van het lint.
 
 ## <a name="delete-a-publication"></a>Een publicatie verwijderen
 Als u een publicatie wilt verwijderen, selecteert u de **werk ruimte publicaties**en kiest u vervolgens **verwijderen** op het tabblad **publicatie** van het lint.

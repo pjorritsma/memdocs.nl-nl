@@ -10,12 +10,12 @@ ms.assetid: 20493c86-6454-4b35-8f22-0d049b68b8bb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 15aba2a32e680ab9499f5295307c82daafbbed71
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 659dd91c4b6bbeba6e2e93d3318683a4006aa5ff
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695338"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606598"
 ---
 # <a name="approve-applications-in-configuration-manager"></a>Toepassingen goed keuren in Configuration Manager
 
@@ -49,7 +49,7 @@ Nadat u een toepassing hebt goedgekeurd voor installatie, kunt u de aanvraag in 
 
 Vanaf versie 1906, als u een app-aanvraag goedkeurt in de-console en deze vervolgens weigert, kunt u deze nu opnieuw goed keuren. Nadat u het hebt goedgekeurd, wordt de app opnieuw op de client geïnstalleerd.  <!-- 4224910 -->
 
-Automatiseer het goedkeurings proces met de Power shell [-cmdlet goed keuren-CMApprovalRequest](/powershell/module/configurationmanager/approve-cmapprovalrequest?view=sccm-ps) . Vanaf versie 1902 bevat deze cmdlet de para meter **InstallActionBehavior** . Gebruik deze para meter om op te geven of de toepassing direct moet worden geïnstalleerd of buiten kantoor uren.<!-- SCCMDocs-pr issue #3418 -->
+Automatiseer het goedkeurings proces met de Power shell [-cmdlet goed keuren-CMApprovalRequest](/powershell/module/configurationmanager/approve-cmapprovalrequest) . Vanaf versie 1902 bevat deze cmdlet de para meter **InstallActionBehavior** . Gebruik deze para meter om op te geven of de toepassing direct moet worden geïnstalleerd of buiten kantoor uren.<!-- SCCMDocs-pr issue #3418 -->
 
 Vanaf 1906 kunt u zien welke implementaties goed keuring vereisen. Selecteer een app in het knoop punt **toepassingen** . Ga in het detail venster naar het tabblad **implementaties** . Er is een nieuwe kolom die standaard wordt weer gegeven, **vereist goed keuring**.
 
@@ -128,7 +128,7 @@ Met deze vereisten ontvangen ontvangers een e-mail met een melding van de aanvra
 
 Met deze aanvullende optionele vereisten kan de ontvanger de aanvraag vanaf elke locatie goed keuren of afwijzen die toegang heeft tot internet.
 
-- Schakel de service SMS-provider beheer in via de Cloud beheer gateway. Ga in de Configuration Manager-console naar de werk ruimte **beheer** , vouw **site configuratie**uit en selecteer het knoop punt **servers en site systeem rollen** . Selecteer de server met de functie SMS-provider. Selecteer in het detail venster de rol **SMS-provider** en selecteer **Eigenschappen** in het lint op het tabblad siterol. selecteer de optie om **Configuration Manager Cloud beheer gateway verkeer voor de beheer service toe te staan**.  
+- Schakel de service SMS-provider beheer in via de Cloud beheer gateway. Ga in de Configuration Manager-console naar de werk ruimte **beheer** , vouw **site configuratie**uit en selecteer het knoop punt **servers en site systeem rollen** . Selecteer de server met de functie SMS-provider. Selecteer de rol **SMS-provider** in het detail venster en selecteer **Eigenschappen** in het lint op het tabblad siterol. Selecteer de optie voor het **toestaan van Configuration Manager Cloud beheer gateway verkeer voor de beheer service**.  
 
 - De SMS-provider vereist **.net 4.5.2** of hoger.  
 

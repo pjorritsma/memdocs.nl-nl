@@ -10,12 +10,12 @@ ms.assetid: 36385bea-f05e-4300-947f-cb3927b3bac5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6bddf46df63eac70a536faaee04a2ac7243e534a
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 7302262c0da5f48bae83f5194ce41206055ae94d
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128270"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608350"
 ---
 # <a name="troubleshoot-cmpivot"></a>Problemen met CMPivot oplossen
 
@@ -23,7 +23,7 @@ CMPivot is een hulp programma dat toegang biedt tot een real-time status van de 
 
 Het kan voor komen dat u CMPivot moet oplossen. Als een status bericht van een client naar CMPivot bijvoorbeeld beschadigd raakt, kan de site server het bericht niet verwerken. Dit artikel helpt u bij het begrijpen van de informatie stroom voor CMPivot.
 
-## <a name="troubleshoot-cmpivot-in-version-1902-and-later"></a><a name="bkmk_CMPivot-1902"></a>Problemen met CMPivot oplossen in versie 1902 en hoger
+## <a name="troubleshoot-cmpivot-in-version-1902-and-later"></a><a name="bkmk_CMPivot-1902"></a> Problemen met CMPivot oplossen in versie 1902 en hoger
 
 In Configuration Manager versies 1902 en hoger kunt u CMPivot uitvoeren vanaf de centrale beheer site (CAS) in een-hiërarchie. De primaire site verwerkt nog steeds de communicatie met de client.
 
@@ -45,11 +45,11 @@ Zoek naar `smsprov.log` de volgende regels:
   <pre><code lang="Log">Type parameter is 135.
   Auditing: User &ltusername> ran script 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14 with hash dc6c2ad05f1bfda88d880c54121c8b5cea6a394282425a88dd4d8714547dc4a2 on collection &ltCollectionId>. </code></pre>
 
- `7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14`is de script-GUID voor CMPivot. U kunt deze GUID ook zien in [CMPivot controle status berichten](cmpivot-changes.md#cmpivot-audit-status-messages).
+ `7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14` is de script-GUID voor CMPivot. U kunt deze GUID ook zien in [CMPivot controle status berichten](cmpivot-changes.md#cmpivot-audit-status-messages).
 
 Zoek vervolgens de ID in het venster CMPivot. Deze ID is de `ClientOperationID` .
 
-![CMPivot-venster met ClientOperationID gemarkeerd](media/cmpivot-client-operationid-1902.png)
+![CMPivot-venster met ClientOperationID gemarkeerd, versie 1902](media/cmpivot-client-operationid-1902.png)
 
 Zoek de `TaskID` in de tabel ClientAction. De `TaskID` correspondeert met de `UniqueID` in de ClientAction-tabel.
 
@@ -57,7 +57,7 @@ Zoek de `TaskID` in de tabel ClientAction. De `TaskID` correspondeert met de `Un
 select * from ClientAction where ClientOperationId=<id>
 ```
 
-`BgbServer.log`Zoek in de bij `TaskID` SQL verzamelde en Let op de `PushID` . De `TaskID` heeft de naam `TaskGUID` . Bijvoorbeeld:
+`BgbServer.log`Zoek in de bij `TaskID` SQL verzamelde en Let op de `PushID` . De     `TaskID` heeft de naam `TaskGUID` . Bijvoorbeeld:
 
 <pre><code lang="Log">Starting to send push task (<b>PushID: 9</b> TaskID: 12 <b>TaskGUID: 9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0</b> TaskType: 15 TaskParam: PFNjcmlwdENvbnRlbnQgU2NyaXB0R3VpZD0nN0RDNkI2RjEtRTdGNi00M0MxL (truncated log entry)
 Finished sending push task (<b>PushID: 9</b> TaskID: 12) to 2 clients
@@ -121,7 +121,7 @@ select * from vSMS_CMPivotStatus where TaskID='{9A4E59D2-2F5B-4067-A9FA-B99602A3
 
 [![CMPIVOT SQL-query's voor het oplossen van problemen in versie 1902](media/cmpivot-sql-queries-1902.png)](media/cmpivot-sql-queries-1902.png#lightbox)
 
-## <a name="troubleshoot-cmpivot-in-1810-and-earlier"></a><a name="bkmk_CMPivot-1810"></a>Problemen met CMPivot oplossen in 1810 en eerdere versies
+## <a name="troubleshoot-cmpivot-in-1810-and-earlier"></a><a name="bkmk_CMPivot-1810"></a> Problemen met CMPivot oplossen in 1810 en eerdere versies
 
 In Configuration Manager versies 1810 en eerder, verwerkt de site server de communicatie met de client.
 

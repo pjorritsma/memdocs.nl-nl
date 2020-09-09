@@ -10,12 +10,12 @@ ms.assetid: c4041e21-21ff-4d95-ab05-14007e0047cf
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 15c1be9ed388356e17f8591123114dccf7bcd612
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: cf96add17fa9ff5d4bf0aeb7970f4db046f7b463
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695202"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606532"
 ---
 # <a name="management-tasks-for-configuration-manager-applications"></a>Beheer taken voor Configuration Manager toepassingen
 
@@ -40,7 +40,7 @@ Zie [toepassingen maken](../../apps/deploy-use/create-applications.md)voor meer 
 |**Statistieken bijwerken**|Hiermee wordt de informatie bijgewerkt die in het knooppunt **Implementaties** van de werkruimte **Bewaking** wordt weergegeven over de implementaties van deze toepassing.<br /><br /> Zie [toepassingen bewaken vanuit de Configuration Manager-console](../../apps/deploy-use/monitor-applications-from-the-console.md).|  
 |**Opnieuw invoeren**|Een toepassing die buiten gebruik is gesteld met de beheer taak **buiten gebruik stellen** , opnieuw wordt ingesteld.|  
 |**Buiten gebruik stellen**|Wanneer u een toepassing buiten gebruik stelt, is deze niet langer beschikbaar voor implementatie, maar de toepassing en implementaties van de toepassing worden niet verwijderd. Bestaande exemplaren van deze toepassing die op clientcomputers werden geïnstalleerd, worden niet verwijderd. Eventuele wijzigingen aan de toepassing worden na 60 dagen uit Configuration Manager verwijderd. Maar geïnstalleerde kopieën van de toepassing worden niet verwijderd.<br /><br /> Als u een toepassing wilt verwijderen, moet u eerst de toepassing buiten gebruik stellen, alle implementaties verwijderen, verwijzingen naar de toepassing verwijderen door andere implementaties en vervolgens alle revisies van de toepassing verwijderen.<br /><br /> Zie [toepassingen herzien en vervangen](../../apps/deploy-use/revise-and-supersede-applications.md).|  
-|**Exporteren**|Hiermee wordt de **wizard toepassing exporteren** geopend, waarmee u de geselecteerde toepassingen kunt exporteren naar een zip-bestand dat u vervolgens op een andere site archiveert of installeert. Als u ervoor kiest toepassings inhoud te exporteren, wordt er een map gemaakt die de inhoud bevat.<br /><br /> U kunt ook toepassings afhankelijkheden, vervangings relaties en voor waarden en inhoud voor de toepassing en de afhankelijkheden hiervan exporteren.<br /><br /> De Windows Power shell **-cmdlet Export-CMApplication**heeft dezelfde functie. Zie [export-CMApplication](/powershell/module/configurationmanager/export-cmapplication?view=sccm-ps)voor meer informatie.|  
+|**Exporteren**|Hiermee wordt de **wizard toepassing exporteren** geopend, waarmee u de geselecteerde toepassingen kunt exporteren naar een zip-bestand dat u vervolgens op een andere site archiveert of installeert. Als u ervoor kiest toepassings inhoud te exporteren, wordt er een map gemaakt die de inhoud bevat.<br /><br /> U kunt ook toepassings afhankelijkheden, vervangings relaties en voor waarden en inhoud voor de toepassing en de afhankelijkheden hiervan exporteren.<br /><br /> De Windows Power shell **-cmdlet Export-CMApplication**heeft dezelfde functie. Zie [export-CMApplication](/powershell/module/configurationmanager/export-cmapplication)voor meer informatie.|  
 |**Verwijderen**|Hiermee verwijdert u de geselecteerde toepassing.<br /><br /> U kunt een toepassing niet verwijderen als andere toepassingen ervan afhankelijk zijn, als er een actieve implementatie van de toepassing is of als de toepassing afhankelijke takenreeksen heeft.|  
 |**Implementatie simuleren**|Hiermee wordt de **Wizard Implementatie van toepassing simuleren** geopend, waarin u de resultaten van een toepassingsimplementatie op computers kunt testen zonder de toepassing daadwerkelijk te installeren of verwijderen.<br /><br /> Zie [toepassings implementaties simuleren](../../apps/deploy-use/simulate-application-deployments.md).|  
 |**Implementeren**|Hiermee wordt de **Wizard Software implementeren** geopend, waarin u de geselecteerde toepassing kunt implementeren naar verzamelingen computers in uw hiërarchie.<br /><br /> Zie [toepassingen implementeren](../../apps/deploy-use/deploy-applications.md).|  

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19c5c1f8e7a68a31150baa079ce9b766b6df72df
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: c36b46cedb69ae0ce9d5559797fba78f5f7ab7f6
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88906749"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564275"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Apparaten verwijderen via wissen of buiten gebruik stellen, of de registratie van het apparaat handmatig ongedaan maken
 
@@ -174,7 +174,7 @@ U kunt Intune configureren om automatisch apparaten te verwijderen die inactief 
 
 Vanwege communicatieproblemen of ontbrekende apparaten moet u wellicht apparaten verwijderen van Azure AD. U kunt de actie **Verwijderen** gebruiken voor het verwijderen van apparaatrecords uit Azure Portal die onbereikbaar zijn en vermoedelijk niet opnieuw met Azure gaan communiceren. Met de actie **Verwijderen** wordt het apparaat niet uit beheer verwijderd.
 
-1. Meld u met uw beheerdersreferenties aan bij [Azure Active Directory in Azure Portal](https://aka.ms/accessaad). U kunt u ook aanmelden bij het [Microsoft 365-beheercentrum](https://admin.microsoft.com). Selecteer **Beheercentrums** > **Azure AD** in het menu.
+1. Meld u met uw beheerdersreferenties aan bij [Azure Active Directory in Azure Portal](https://azure.microsoft.com/services/active-directory/). U kunt u ook aanmelden bij het [Microsoft 365-beheercentrum](https://admin.microsoft.com). Selecteer **Beheercentrums** > **Azure AD** in het menu.
 2. Maak een Azure-abonnement als u er nog geen hebt. U kunt dit zonder creditcard of betaling doen als u beschikt over een betaald account (selecteer de abonnementskoppeling **Uw gratis Azure Active Directory registreren**).
 3. Selecteer **Azure Active Directory** en vervolgens uw organisatie.
 4. Selecteer het tabblad **Gebruikers** .

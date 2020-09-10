@@ -10,12 +10,12 @@ ms.assetid: 44c2eb8a-3ccc-471f-838b-55d7971bb79e
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 9ca99afa60ed5f8b9a1491381767ec4f6359826f
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 2555d933d3ed19c83de02dca1c672031343836fa
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252500"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643514"
 ---
 # <a name="troubleshoot-configmgr-client-details-in-the-admin-center-preview"></a>Problemen met ConfigMgr-client Details in het beheer centrum oplossen (preview-versie)
 <!--6374854, 6521921-->
@@ -44,7 +44,7 @@ Wanneer u de details van de ConfigMgr-client bekijkt, kunt u een van deze fouten
 
 1. Gebruik hetzelfde account om u aan te melden bij het beheer centrum. De on-premises identiteit moet worden gesynchroniseerd met en overeenkomen met de Cloud identiteit.
 1. Controleer of het account de machtiging **lezen** heeft voor de **verzameling** van het apparaat in Configuration Manager.
-1. Zorg ervoor dat Configuration Manager het gebruikers account met beheerders ervaring heeft gedetecteerd dat u gebruikt. Ga in de Configuration Manager-console naar de werk ruimte **activa en naleving** . Selecteer het knoop punt **gebruikers** en zoek uw gebruikers account.
+1. Zorg ervoor dat Configuration Manager het gebruikers account met beheerders rechten heeft gedetecteerd dat u gebruikt voor toegang tot de functies voor het koppelen van tenants in het micro soft Endpoint Manager-beheer centrum. Ga in de Configuration Manager-console naar de werk ruimte **activa en naleving** . Selecteer het knoop punt **gebruikers** en zoek uw gebruikers account.
 
     Als uw account niet wordt weer gegeven in het knoop punt **gebruikers** , controleert u de configuratie van de [Active Directory gebruikers detectie](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser)van de site.
 

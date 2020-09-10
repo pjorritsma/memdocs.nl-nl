@@ -10,12 +10,12 @@ ms.assetid: 54a58548-45f3-4f75-93d6-d2fd96227e6a
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 979ec6f081a318886eda9eeac91c16adc635701d
-ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
+ms.openlocfilehash: fd71c622a7fc8086c88ecf116e67abdbcbc2e875
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89564306"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643611"
 ---
 # <a name="troubleshoot-the-timeline-for-devices-uploaded-to-the-admin-center-preview"></a><a name="bkmk_timeline"></a> Problemen met de tijd lijn oplossen voor apparaten die zijn geüpload naar het beheer centrum (preview-versie)
 <!--CM7141381, IN7552762 pubpreview Sept8, 2020 -->
@@ -37,7 +37,7 @@ Wanneer u de tijd lijn vanuit het micro soft-beheer centrum voor eind punten bek
 
 **Mogelijke oorzaken:**
 
-- Zorg ervoor dat [Azure AD-gebruikers](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) detectie en [Active Directory gebruikers detectie](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) zijn geconfigureerd en dat de gebruiker wordt gedetecteerd door beide.
+- Zorg ervoor dat [Azure AD-gebruikers](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) detectie en [Active Directory gebruikers detectie](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) zijn geconfigureerd en dat het gebruikers account dat toegang heeft tot de Tenant functies van het micro soft Endpoint Manager-beheer centrum wordt gedetecteerd door beide.
 - In het gebruikers account ontbreekt mogelijk de gebruikersrol **beheerder** voor de Configuration Manager micro service-toepassing in azure AD. Voeg de rol in azure AD toe uit **bedrijfs toepassingen**  >  **Configuration Manager micro service**-  >  **gebruikers en-groepen**  >  **gebruiker toevoegen**. Groepen worden ondersteund als u Azure AD Premium hebt. Het kan tot een uur duren voordat wijzigingen in deze machtiging van kracht worden.
 
 ### <a name="unable-to-get-timeline-information"></a><a name="bkmk_403"></a> Kan geen tijdlijn gegevens ophalen

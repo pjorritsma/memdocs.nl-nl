@@ -2,7 +2,7 @@
 title: 'Tenant koppelen: ConfigMgr-client Details (preview) in het beheer centrum'
 titleSuffix: Configuration Manager
 description: Details van de client voor Configuration Manager apparaten weer geven vanuit het beheer centrum.
-ms.date: 07/08/2020
+ms.date: 09/09/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -10,12 +10,12 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 066a7517700d85315a04bec55b6f8254d3e49255
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: fbe75e34465335450f3a09680b68a78520451bd1
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700392"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643391"
 ---
 # <a name="tenant-attach-configmgr-client-details-in-the-admin-center-preview"></a><a name="bkmk_mem"></a> Tenant bijvoegen: client Details ConfigMgr in het beheer centrum (preview-versie)
 <!--6024387, 6374854, 6521921, intune 7552762 pubpreview July 7, 2020-->
@@ -33,12 +33,12 @@ Micro soft Endpoint Manager is een geïntegreerde oplossing voor het beheer van 
 - Een van de volgende browsers:
   - Micro soft Edge, versie 77 en hoger
   - Google Chrome
-- Het gebruikers account is gedetecteerd met de gebruikers [detectie van Azure Active Directory (Azure AD)](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) en [Active Directory gebruikers detectie](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
+- Het gebruikers account voor het koppelen van functies voor Tenant koppeling in het **micro soft Endpoint Manager-beheer centrum** moet zijn gedetecteerd met [Azure Active Directory (Azure AD) gebruikers detectie](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) en [Active Directory gebruikers detectie](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
   - Dit betekent dat het gebruikers account een gesynchroniseerd gebruikers object moet zijn in Azure.
 
 ## <a name="permissions"></a>Machtigingen
 
-Het gebruikers account heeft de volgende machtigingen nodig:
+De gebruikers account voor het koppelen van functies voor Tenant koppeling in het micro soft Endpoint Manager-beheer centrum heeft de volgende machtigingen nodig:
 
 - De **Lees** machtiging voor de **verzameling** van het apparaat in Configuration Manager.
 - De gebruikersrol **beheerder** voor de Configuration Manager micro service-toepassing in azure AD.

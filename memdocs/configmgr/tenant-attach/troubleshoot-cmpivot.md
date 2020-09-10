@@ -10,12 +10,12 @@ ms.assetid: 86f97154-c9fc-4efd-9d49-4a253cef5953
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: d1ca270bc1095e1596f5e725c16a97f4e42e4411
-ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
+ms.openlocfilehash: 7b7e8b347dee46e42f9fe9d9cb89332a3ee1bef5
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89564303"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643386"
 ---
 # <a name="troubleshoot-cmpivot-preview-for-devices-uploaded-to-the-admin-center"></a>Problemen oplossen met CMPivot (preview) voor apparaten die zijn geüpload naar het beheer centrum
 <!--6024392-->
@@ -42,7 +42,7 @@ Gebruik het volgende om problemen met CMPivot in het beheer centrum van micro so
 
 1. Gebruik hetzelfde account om u aan te melden bij het beheer centrum. De on-premises identiteit moet worden gesynchroniseerd met en overeenkomen met de Cloud identiteit.
 1. Controleer of het account de machtiging **lezen** heeft voor de **verzameling** van het apparaat in Configuration Manager.
-1. Zorg ervoor dat Configuration Manager het gebruikers account met beheerders ervaring heeft gedetecteerd dat u gebruikt. Ga in de Configuration Manager-console naar de werk ruimte **activa en naleving** . Selecteer het knoop punt **gebruikers** en zoek uw gebruikers account.
+1. Zorg ervoor dat Configuration Manager het gebruikers account met beheerders rechten heeft gedetecteerd dat u gebruikt voor toegang tot de functies voor het koppelen van tenants in het micro soft Endpoint Manager-beheer centrum. Ga in de Configuration Manager-console naar de werk ruimte **activa en naleving** . Selecteer het knoop punt **gebruikers** en zoek uw gebruikers account.
 
     Als uw account niet wordt weer gegeven in het knoop punt **gebruikers** , controleert u de configuratie van de [Active Directory gebruikers detectie](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser)van de site.
 

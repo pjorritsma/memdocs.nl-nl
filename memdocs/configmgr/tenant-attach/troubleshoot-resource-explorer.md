@@ -10,12 +10,12 @@ ms.assetid: 05829d36-2cbf-4921-bf4b-cfcdef4cfcc1
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: a93127e28d451c74828c4362fa00418e35c6e56f
-ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
+ms.openlocfilehash: 013bbb631b62a46927d9430751ac796237bfcefc
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89564307"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643569"
 ---
 # <a name="troubleshoot-resource-explorer-for-devices-uploaded-to-the-admin-center-preview"></a>Problemen met resource Explorer oplossen voor apparaten die zijn geüpload naar het beheer centrum (preview)
 <!--6479284-->
@@ -42,7 +42,7 @@ Gebruik het volgende om problemen met resource Explorer voor ConfigMgr-apparaten
 
 1. Gebruik hetzelfde account om u aan te melden bij het beheer centrum. De on-premises identiteit moet worden gesynchroniseerd met en overeenkomen met de Cloud identiteit.
 1. Controleer of het account de machtiging **lezen** heeft voor de **verzameling** van het apparaat in Configuration Manager.
-1. Zorg ervoor dat Configuration Manager het gebruikers account met beheerders ervaring heeft gedetecteerd dat u gebruikt. Ga in de Configuration Manager-console naar de werk ruimte **activa en naleving** . Selecteer het knoop punt **gebruikers** en zoek uw gebruikers account.
+1. Zorg ervoor dat Configuration Manager het gebruikers account met beheerders rechten heeft gedetecteerd dat u gebruikt voor toegang tot de functies voor het koppelen van tenants in het micro soft Endpoint Manager-beheer centrum. Ga in de Configuration Manager-console naar de werk ruimte **activa en naleving** . Selecteer het knoop punt **gebruikers** en zoek uw gebruikers account.
 
     Als uw account niet wordt weer gegeven in het knoop punt **gebruikers** , controleert u de configuratie van de [Active Directory gebruikers detectie](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser)van de site.
 

@@ -5,12 +5,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: include
 ms.date: 08/11/2020
-ms.openlocfilehash: a61bf84a872458f37826c3de07ede05b1b658f0c
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: b0c25174873e00cf23dacd2c77208775f1fb1ced
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127295"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89644148"
 ---
 <!--3555750 FKA 1357954 --Don't apply H2/H3 in this include file since they are context driven by article-->
 
@@ -61,6 +61,6 @@ Als u co-beheer inschakelt, kunt u gebruikmaken van de open bare Azure-Cloud, Az
 
 1. Geef op de pagina voor **fase ring** de pilot verzameling op voor elk van de werk belastingen die zijn ingesteld op **pilot intune**.
 
-   ![Verzameling voor automatische inschrijving van intune opgeven ](../media/3555750-co-management-onboarding-staging.png)
+   ![Wizard Configuratie van co-beheer, staging pagina, prototype verzamelingen opgeven](../media/3555750-co-management-onboarding-staging.png)
 
 1. Voltooi de wizard om co-beheer in te scha kelen.

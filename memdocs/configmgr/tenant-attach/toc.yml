@@ -8,9 +8,15 @@
       href: client-details.md
     - name: Toepassingen installeren (preview-versie)
       href: applications.md
+    - name: Apparaattijdlijn (preview-versie)
+      href: timeline.md
+    - name: Resource Explorer (preview-versie)
+      href: resource-explorer.md
 - name: CMPivot voor aan tenant gekoppelde apparaten (preview)
   items:
-    - name: Overzicht van CMPivot
+    - name: CMPivot starten (preview-versie)
+      href: cmpivot-start.md
+    - name: Overzicht van het gebruik van CMPivot
       href: cmpivot-overview-attached.md
     - name: CMPivot-voorbeeldscripts
       href: cmpivot-samples-attached.md
@@ -30,3 +36,9 @@
       href: troubleshoot-client-details.md
     - name: Toepassingsinstallatie (preview-versie)
       href: troubleshoot-applications.md
+    - name: Tijdlijn (preview-versie)
+      href: troubleshoot-timeline.md
+    - name: Resource Explorer (preview-versie)
+      href: troubleshoot-resource-explorer.md
+    - name: CMPivot (preview-versie)
+      href: troubleshoot-cmpivot.md

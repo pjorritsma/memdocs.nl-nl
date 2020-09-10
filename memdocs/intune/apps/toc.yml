@@ -202,6 +202,8 @@
               href: data-transfer-between-apps-manage-ios.md
         - name: App-logboeken voor beveiliging controleren
           href: app-protection-policy-settings-log.md
+    - name: Beleidsregels voor Office-apps
+      href: app-office-policies.md
     - name: Problemen oplossen
       items:
         - name: Gebruikers helpen problemen op te lossen

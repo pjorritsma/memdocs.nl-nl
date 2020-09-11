@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 09/3/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 6d94748356b342fe6dc9498d815edbdb92038af3
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 303acae2eba275907b70fcc52660217568913c62
+ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88913491"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432520"
 ---
 # <a name="attack-surface-reduction-policy-for-endpoint-security-in-intune"></a>Beleid om kwetsbaarheid voor aanvallen te verminderen voor eindpuntbeveiliging in Intune
 
@@ -58,6 +58,9 @@ Bekijk [instellingen voor profielen die kwetsbaarheid voor aanvallen verminderen
 - **Toepassingsbeheer**: Instellingen voor toepassingsbeheer kunnen helpen beveiligingsrisico's te beperken door de toepassingen te beperken die gebruikers kunnen uitvoeren en de code die wordt uitgevoerd in de systeemkern (kernel). Instellingen beheren waarmee niet-ondertekende scripts en MSI’s kunnen worden geblokkeerd en Windows PowerShell kan worden beperkt om te worden uitgevoerd in de modus gebonden taal.
 
   Zie [Toepassingscontrole](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) in de Microsoft Defender ATP-documentatie voor meer informatie.
+  
+    > [!NOTE]
+    > Als u deze instelling gebruikt, vraagt AppLocker CSP de eindgebruiker op dit moment om de computer opnieuw op te starten wanneer er beleid wordt geïmplementeerd.
 
 - **Regels voor het verminderen van kwetsbaarheid voor aanvallen**: instellingen configureren voor beperkingsregels voor kwetsbaarheid voor aanvallen verminderen die gericht zijn op gedrag dat schadelijke software en schadelijke apps doorgaans gebruiken om computers te infecteren, waaronder:
   - Uitvoerbare bestanden en scripts die worden gebruikt in Office-apps of webmail en proberen bestanden te downloaden of uit te voeren

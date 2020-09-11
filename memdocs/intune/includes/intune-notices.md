@@ -7,14 +7,20 @@ ms.topic: include
 ms.date: 08/10/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 7027eac119ef36adfdb9a0057a74d276696620b3
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: b26cec11b2bdf64e6ef99d45395de00b43fa1bfa
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820054"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564092"
 ---
 Deze mededelingen bevatten belangrijke informatie die u kan helpen om voorbereid te zijn op toekomstige wijzigingen en functies in Intune.
+
+### <a name="updated-end-user-experience-for-android-device-administrator-wi-fi-profiles---7662680----"></a>Bijgewerkte ervaring voor eindgebruikers voor Wi-Fi-profielen voor de Android-apparaatbeheerder<!-- 7662680  -->
+Als gevolg van een wijziging door Google is de ervaring voor eindgebruikers voor nieuwe Wi-Fi-profielen aanzienlijk anders vanaf de oktober-release van de bedrijfsportal-app. Gebruikers moeten extra machtigingen accepteren en expliciet de Wi-Fi-configuraties accepteren wanneer ze worden geïmplementeerd. Wi-Fi-configuraties worden niet weergegeven in de lijst met bekende Wi-Fi-netwerken, maar er wordt automatisch verbinding gemaakt wanneer ze binnen bereik zijn. Het gedrag van bestaande Wi-Fi-profielen verandert niet. Er zijn ook geen wijzigingen in de beheerervaring in het Endpoint Manager-beheercentrum.
+
+Van toepassing op:
+- Android-apparaatbeheer, Android 10 en hoger
 
 ### <a name="microsoft-intune-ends-support-for-windows-phone-81-and-windows-10-mobile---3544938-3544909---"></a>Microsoft Intune eindigt de ondersteuning voor Windows Phone 8.1 en Windows 10 Mobile<!-- 3544938, 3544909 -->
 In juli 2017 is de reguliere ondersteuning van Microsoft voor Windows Phone 8.1 beëindigd en in juni 2019 de uitgebreide ondersteuning. De Bedrijfsportal-app voor Windows Phone 8.1 bevindt zich sinds oktober 2017 in de continuïteitsmodus. Daarnaast heeft Microsoft Intune op 20 februari 2020 de ondersteuning beëindigd voor Windows Phone 8.1. 
@@ -46,7 +52,7 @@ Door deze veranderingen van Google beschikt u vanaf oktober 2020 niet meer over 
 De apparaten die worden beïnvloed door de afgeschafte ondersteuning van apparaatbeheerders zijn de apparaten waarvoor de drie onderstaande voorwaarden gelden:
 - Ingeschreven bij beheer door apparaatbeheerder.
 - Android 10 of hoger.
-- Geen Samsung-apparaat.
+- Alle Android-fabrikanten, behalve Samsung.
 
 Apparaten worden niet beïnvloed als ze een van de volgende zijn:
 - Niet ingeschreven bij beheer door apparaatbeheerder.
@@ -76,15 +82,6 @@ Apparaten worden niet beïnvloed als ze een van de volgende zijn:
 
 ![Schermopname van de pagina met het Android-nalevingsbeleid](../fundamentals/media/notices/android-compliance-settings.png)
 
-###### <a name="additional-impacts-based-on-android-os-version"></a>Extra effecten op basis van de Android-besturingssysteemversie
-
-**Android 10**: Voor alle apparaten die door de apparaatbeheerder worden beheerd (inclusief Samsung) met Android 10 en later, heeft Google de mogelijkheid voor apparaatbeheerders om toegang te krijgen tot informatie over de apparaatidentificatie beperkt, zoals de Bedrijfsportal. Nadat een apparaat naar Android 10 of hoger is bijgewerkt, heeft deze beperking gevolgen voor de volgende Intune-functies:
-- Netwerktoegangsbeheer voor VPN werkt niet meer
-- Als u apparaten identificeert als bedrijfseigendom met een IMEI of serienummer, wordt het apparaat niet automatisch gemarkeerd als In bedrijfseigendom
-- Het IMEI en serienummer zijn niet langer zichtbaar voor IT-beheerders in Intune
-
-**Android 11**: Momenteel wordt Android 11-ondersteuning op de nieuwste bètaversie van de ontwikkelaar getest om te evalueren of deze invloed zal hebben op apparaten die door een apparaatbeheerder worden beheerd.
-
 #### <a name="user-experience-of-impacted-settings-on-impacted-devices"></a>Ervaring van gebruikers met beïnvloede instellingen op beïnvloede apparaten
 
 Beïnvloede configuratie-instellingen:
@@ -95,6 +92,9 @@ Beïnvloede compliance-instellingen:
 - Voor reeds ingeschreven apparaten waarop de instellingen al is toegepast, zullen de beïnvloede nalevingsinstellingen nog steeds worden weergegeven als redenen voor niet-compatibel op de pagina Apparaatinstellingen bijwerken, zal het apparaat niet meer voldoen aan de vereisten en zullen de vereisten voor het wachtwoord nog steeds worden afgedwongen in de instellingen-app.
 - Voor nieuw ingeschreven apparaten, nieuw toegewezen en bijgewerkte instellingen zullen de betreffende nalevingsinstellingen nog steeds worden weergegeven als redenen voor niet-compatibel op de pagina Apparaatinstellingen bijwerken en zal het apparaat niet meer voldoen aan de eisen, maar strengere eisen voor het wachtwoord zullen niet worden afgedwongen in de instellingen-app.
 
+Extra wijzigingen in de gebruikerservaring voor Wi-Fi-profielen
+- Gebruikers moeten extra machtigingen accepteren en expliciet de Wi-Fi-configuraties accepteren wanneer ze worden geïmplementeerd. Wi-Fi-configuraties worden niet weergegeven in de lijst met bekende Wi-Fi-netwerken, maar er wordt automatisch verbinding gemaakt wanneer ze binnen bereik zijn. Het gedrag van bestaande Wi-Fi-profielen verandert niet. Er zijn ook geen wijzigingen in de beheerervaring in het Endpoint Manager-beheercentrum.  
+
 #### <a name="cause-of-impact"></a>Oorzaak van de impact 
 Apparaten worden beïnvloed vanaf oktober 2020. Op dat moment zal de Bedrijfsportal-app worden bijgewerkt, waardoor de API-doelen van de Bedrijfsportal API van niveau 28 naar niveau 29 zullen gaan ([ zoals vereist door Google](https://www.blog.google/products/android-enterprise/da-migration/)). 
 
@@ -102,10 +102,28 @@ Op dat moment zullen apparaten die door een apparaatbeheerder worden beheerd en 
 - Updates voor Android 10 of hoger.
 - Hiermee wordt de Bedrijfsportal-app bijgewerkt naar de versie waarop API-niveau 29 is gericht.
 
+#### <a name="additional-impacts-based-on-android-os-version"></a>Extra effecten op basis van de Android-besturingssysteemversie 
+**Android 10**: Voor alle apparaten die door apparaatbeheerders worden beheerd (inclusief Samsung) met Android 10 en hoger, heeft Google de toegang tot id-gegevens van het apparaat beperkt voor beheeragenten zoals Bedrijfsportal. Nadat een apparaat naar Android 10 of hoger is bijgewerkt, heeft deze beperking gevolgen voor de volgende Intune-functies: 
+- Netwerktoegangsbeheer voor VPN werkt niet meer 
+- Als u apparaten identificeert als bedrijfseigendom met een IMEI of serienummer, wordt het apparaat niet automatisch gemarkeerd als In bedrijfseigendom 
+- Het IMEI en serienummer zijn niet langer zichtbaar voor IT-beheerders in Intune 
+
+**Android 11**: We blijven de meest recente bètaversie van Android 11 testen om de impact op beheerde apparaten van de apparaatbeheerder te evalueren. Dit zijn onze ervaringen: 
+- Voor apparaten van apparaatbeheerders (met uitzondering van Samsung) met Android 11 en hoger heeft Google de mogelijkheid voor beheerders, zoals Bedrijfsportal, voor het afdwingen van het blokkeren van een camera verwijderd. Dit gebeurt al vóór de oktoberupdate van de Bedrijfsportal-app. Beleidsregels voor het blokkeren van de camera die worden toegepast op apparaten voordat ze naar Android 11 worden bijgewerkt, blijven van toepassing.  
+- In Android 11 kunnen vertrouwde basiscertificaten niet meer worden geïmplementeerd op apparaten met een apparaatbeheerder (behalve op Samsung-apparaten). Gebruikers moeten het vertrouwde basiscertificaat handmatig op het apparaat installeren. Wanneer het vertrouwde basiscertificaat handmatig op een apparaat is geïnstalleerd, kunt u SCEP gebruiken om certificaten in te richten op het apparaat. In dit scenario moet u nog steeds een beleid voor vertrouwde certificaten maken en implementeren op het apparaat en dat beleid koppelen aan het SCEP-certificaatprofiel. 
+    - Als het vertrouwde basiscertificaat op het apparaat staat, wordt het SCEP-certificaatprofiel geïnstalleerd.  
+    - Als het vertrouwde certificaat niet wordt gevonden, mislukt het SCEP-certificaatprofiel. 
+
+
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Wat moet ik doen om me voor te bereiden op deze wijziging?
 We raden u het volgende aan om te voorkomen dat u vanaf oktober 2020 te kampen heeft met beperkte functionaliteit:
 - **Nieuwe inschrijvingen**: Onboard nieuwe apparaten in [Android Enterprise](../enrollment/connect-intune-android-enterprise.md)-beheer (indien beschikbaar) en/of [app-beveiligingsbeleid](../apps/app-protection-policies.md). Onboard geen nieuwe apparaten in beheer door een apparaatbeheerder. 
 - **Eerder ingeschreven apparaten**: Als op een apparaat dat door de apparaatbeheerder wordt beheerd Android 10 of later wordt uitgevoerd of dit kan worden bijgewerkt naar Android 10 of later (met name als het geen Samsung-apparaat is), moet u het apparaat van apparaatbeheer naar [Android Enterprise](../enrollment/connect-intune-android-enterprise.md)-beheer en/of [app-beveiligingsbeleid](../apps/app-protection-policies.md) verplaatsen. U kunt de gestroomlijnde stroom gebruiken om [Android-apparaten van apparaatbeheerder naar werkprofielbeheer te verplaatsen](../enrollment/android-move-device-admin-work-profile.md).
+- **Wachtwoordcomplexiteit configureren**: In het geval van betrokken apparaten met Android 10 en hoger, kunt u met een toekomstige instelling, Wachtwoordcomplexiteit geheten, wachtwoordbeperkingen en naleving blijven afdwingen. Wachtwoordcomplexiteit is een meting van de wachtwoordsterkte die rekening houdt met het wachtwoordtype, de lengte en de kwaliteit.
+
+#### <a name="what-if-i-have-non-samsung-devices-that-cannot-move-to-android-enterprise"></a>Wat moet ik doen als ik niet-Samsung-apparaten heb die niet kunnen worden verplaatst naar Android Enterprise? 
+Sommige apparaten kunnen niet worden verplaatst van de apparaatbeheerder naar beheer in Android Enterprise. [Google heeft Android Enterprise in sommige markten niet beschikbaar gesteld](https://support.google.com/work/android/answer/6270910?hl=en), bijvoorbeeld. U kunt nog steeds Intune gebruiken voor het beheren van niet-Samsung-apparaten met een apparaatbeheerder, maar de wijzigingen in de functionaliteit die in dit bericht worden vermeld, zijn van toepassing. Zie [Intune gebruiken in omgevingen zonder Google Mobile Services](../apps/manage-without-gms.md) voor begeleiding bij het beheren van apparaten als Android Enterprise niet beschikbaar is. 
+
 
 #### <a name="additional-information"></a>Aanvullende informatie
 - [Android-apparaten verplaatsen van beheer door apparaatbeheerder naar werkprofielbeheer](../enrollment/android-move-device-admin-work-profile.md)

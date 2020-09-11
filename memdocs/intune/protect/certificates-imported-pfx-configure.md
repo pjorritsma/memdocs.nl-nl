@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/29/2020
+ms.date: 09/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 048e1d3efcb96d18453bfd7b3dbf332dc83b7a1f
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 89da26da402648d95a3a1e91482c1cbe7ad415e4
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88992569"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423782"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Geïmporteerde PKCS-certificaten configureren en gebruiken met Intune
 
@@ -89,13 +89,15 @@ Wanneer u Intune gebruikt om een **geïmporteerd PFX-certificaat** voor een gebr
 
 ## <a name="download-install-and-configure-the-pfx-certificate-connector-for-microsoft-intune"></a>De PFX-certificaatconnector voor Microsoft Intune downloaden, installeren en configureren
 
+Controleer voordat u begint de [beoordelingsvereisten voor de connector](certificate-connectors.md) en zorgt u ervoor dat uw omgeving en Windows-server klaar zijn voor de ondersteuning van de connector.
+
 1. Meld u aan bij het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecteer **Tenantbeheer** > **Connectors en tokens** > **Certificaatconnectors** > **Toevoegen**.
+2. Selecteer **Tenantbeheer** > **Connectors en tokens** > **Certificaatconnectors** >  **+ Toevoegen**.
 
-   ![PFX-certificaatconnector voor Microsoft Intune downloaden](./media/certificates-imported-pfx-configure/download-imported-pfxconnector.png)
+3. Klik op *De certificaatconnectorsoftware downloaden* voor de connector voor PKCS #12 en sla het bestand op op een locatie waartoe u toegang hebt vanaf de server waarop u de connector gaat installeren.
 
-3. Volg de richtlijnen om de *PFX-certificaatconnector voor Microsoft Intune* te downloaden naar een locatie die toegankelijk is vanaf de server waarop u de connector wilt installeren.
+   ![Microsoft Intune-connector downloaden](./media/certificates-imported-pfx-configure/download-connector.png)
 
 4. Nadat het downloaden is voltooid, meldt u zich aan bij de server en voert u het installatieprogramma (PfxCertificateConnectorBootstrapper.exe) uit.  
    - Wanneer u de standaard installatielocatie accepteert, wordt de connector geïnstalleerd in `Program Files\Microsoft Intune\PFXCertificateConnector`.

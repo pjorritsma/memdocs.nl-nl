@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/20/2020
+ms.date: 09/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c27a78d78678234b30ea80cfc192cb4250eca2e1
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 5bf1150a32db213c2c8b697625076a601377c1e6
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915565"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423761"
 ---
 # <a name="smime-overview-to-sign-and-encrypt-email-in-intune"></a>S/MIME-overzicht voor het ondertekenen en versleutelen van e-mails in Intune
 
@@ -45,7 +45,11 @@ Als u handtekeningcertificaten wilt gebruiken, maakt u een sjabloon op de certif
 
 Voor het ondertekenen van certificaten in Intune wordt gebruik gemaakt van PKCS-certificaten. In [PKCS-certificaten configureren en gebruiken](certficates-pfx-configure.md) wordt beschreven hoe u PKCS-certificaten in uw Intune-omgeving implementeert en gebruikt. Deze stappen omvatten:
 
-- De Microsoft Intune-certificaatconnector downloaden en installeren ter ondersteuning van PKCS-certificaataanvragen. De connector heeft dezelfde netwerkvereisten als [beheerde apparaten](../fundamentals/intune-endpoints.md#access-for-managed-devices).
+- De PFX-certificaatconnector downloaden en installeren ter ondersteuning van PKCS-certificaataanvragen. De connector heeft dezelfde netwerkvereisten als [beheerde apparaten](../fundamentals/intune-endpoints.md#access-for-managed-devices).
+  > [!IMPORTANT]
+  > Vanaf PFX-certificaatconnector 6.2008.60.607 (uitgebracht in augustus 2020) ondersteunt deze connector implementatie van certificaten voor PCKS #12-certificaataanvragen en verwerkt deze aanvragen voor PFX-bestanden die zijn geïmporteerd in Intune voor S/MIME-e-mailversleuteling voor een specifieke gebruiker. U hoeft de Microsoft Intune-connector niet meer te gebruiken wanneer u PKCS-certificaatprofielen gebruikt.
+  > 
+  > Zie [Certificaatconnectors](certificate-connectors.md) voor meer informatie
 - Een profiel voor een vertrouwd basiscertificaat maken voor uw apparaten. Deze stap omvat het gebruik van vertrouwde basis- en tussencertificaten voor uw certificeringsinstantie en de implementatie van het profiel op apparaten.
 - Een PKCS-certificaatprofiel maken met behulp van de certificaatsjabloon die u hebt gemaakt. Met dit profiel zorgt u voor ondertekening van certificaten op apparaten en implementeert u het PKCS-certificaatprofiel op apparaten.
 

@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/13/2020
+ms.date: 09/03/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d2c3e663b7bc5dfb263d8caad0a7c21d89ed2a93
-ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
+ms.openlocfilehash: 273efc6be6b3f93c04c0ce39c2688859d3c96c56
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86303433"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423880"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Met instellingen voor iOS- en iPadOS-apparaten kunt u functies toestaan of beperken met behulp van Intune
 
@@ -70,8 +70,9 @@ Deze instellingen worden toegevoegd aan een apparaatconfiguratieprofiel in Intun
   Stel de instelling **Schermopname** in op **Blokkeren** als u deze instelling wilt gebruiken.
 
   Deze functie is van toepassing op:  
-  - iOS 9.3 en hoger
-  - iPadOS 13.0 en hoger
+  - iOS 9.3 - iOS 12.x: Apparaten onder supervisie vereist
+  - iOS 13.0 en hoger: Geen apparaten onder supervisie vereist
+  - iPadOS 13.0 en hoger: Apparaten moeten worden ingeschreven met apparaatinschrijving of geautomatiseerde apparaatinschrijving (ADE)
 
 - **Ongevraagde schermobservatie met de app Classroom**: Met **Toestaan** kunnen docenten de iOS-/iPadOS-schermen van leerlingen/studenten observeren via de app Classroom zonder dat de leerlingen/studenten dit weten. Op apparaten van leerlingen/studenten die zijn ingeschreven bij een cursus met behulp van de app Classroom, is toestemming voor de docent van deze cursus automatisch ingeschakeld. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard is het mogelijk dat het besturingssysteem het gebruik van deze functie niet toestaat.
 

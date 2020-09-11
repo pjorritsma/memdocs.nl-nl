@@ -18,16 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec355eb1b388e384b5250e9c17f739cd05941ee7
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: 94ef57ddd9186678f4f09c74764f9fc110534db3
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89194226"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390806"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>De Intune-bedrijfsportal-apps, de bedrijfsportalwebsite en de Intune-app aanpassen
 
 Via de bedrijfsportal-apps, de bedrijfsportalwebsite en de Intune-app op Android hebben gebruikers toegang tot bedrijfsgegevens en kunnen ze algemene taken uitvoeren. Algemene taken zijn onder andere apparaten inschrijven, apps installeren en informatie zoeken (zoals hulp van uw IT-afdeling). Daarnaast biedt dit gebruikers een veilige omgeving voor toegang tot bedrijfsresources. De eindgebruikerservaring bevat verschillende pagina's, zoals de startpagina, Apps, App-details, Apparaten en Apparaatdetails. Als u snel apps wilt vinden in de bedrijfsportal, kunt u de apps filteren op de pagina Apps.
+
+> [!NOTE]
+> De bedrijfsportal biedt ondersteuning voor Configuration Manager-toepassingen. Met deze functie kunnen eindgebruikers zowel Configuration Manager-toepassingen als met Intune geïmplementeerde toepassingen zien in de bedrijfsportal voor co-beheerde klanten. Met deze nieuwe versie van de bedrijfsportal worden door Configuration Manager geïmplementeerde apps weergegeven voor alle klanten die gezamenlijk worden beheerd. Deze ondersteuning helpt beheerders bij het consolideren van de verschillende portal-ervaringen van eindgebruikers. Zie [De bedrijfsportal-app configureren op co-beheerde apparaten](/mem/configmgr/comanage/company-portal) voor meer informatie.
 
 ## <a name="customizing-the-user-experience"></a>De gebruikerservaring aanpassen
 

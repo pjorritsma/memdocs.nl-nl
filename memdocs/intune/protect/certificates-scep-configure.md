@@ -1,11 +1,11 @@
 ---
 title: Infrastructuur configureren om SCEP-certificaatprofielen te ondersteunen in Microsoft Intune - Azure | Microsoft Docs
-description: Als u SCEP in Microsoft Intune wilt gebruiken, configureert u uw on-premises AD-domein, maakt u een certificeringsinstantie, stelt u de NDES-server in en installeert u de Microsoft Intune Certificate Connector.
+description: Als u SCEP in Microsoft Intune wilt gebruiken, configureert u uw on-premises AD-domein, maakt u een certificeringsinstantie, stelt u de NDES-server in en installeert u de Microsoft-certificaatconnector.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/20/2020
+ms.date: 09/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b3d422978fe6e2cbb123b87311e5c175483b9f66
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 9e681129d5cc17e2e828a8f7a03e305f9b938b47
+ms.sourcegitcommit: 0ec6d8dabb14f20b1d84f7b503f1b03aac2a30d4
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915990"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89479345"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Infrastructuur configureren om SCEP te ondersteunen in Intune
 
-Intune ondersteunt het gebruik van Simple Certificate Enrollment Protocol (SCEP) om [verbindingen met uw apps en bedrijfsresources te verifiëren](certificates-configure.md). SCEP maakt gebruik van het certificaat van de certificeringsinstantie (CA) om de uitwisseling van berichten te beveiligen voor de Certificate Signing Request (CSR). Wanneer uw infrastructuur SCEP ondersteunt, kunt u gebruikmaken van *SCEP-certificaatprofielen* van Intune (een apparaatprofieltype in Intune) om de certificaten op uw apparaten te implementeren. De Microsoft Intune Certificate Connector is vereist voor het gebruik van SCEP-certificaatprofielen in Intune wanneer u een Active Directory Certificate Services-certificeringsinstantie gebruikt. De connector is niet vereist wanneer u [externe certificeringsinstanties](certificate-authority-add-scep-overview.md#set-up-third-party-ca-integration) gebruikt. 
+Intune ondersteunt het gebruik van Simple Certificate Enrollment Protocol (SCEP) om [verbindingen met uw apps en bedrijfsresources te verifiëren](certificates-configure.md). SCEP maakt gebruik van het certificaat van de certificeringsinstantie (CA) om de uitwisseling van berichten te beveiligen voor de Certificate Signing Request (CSR). Wanneer uw infrastructuur SCEP ondersteunt, kunt u gebruikmaken van *SCEP-certificaatprofielen* van Intune (een apparaatprofieltype in Intune) om de certificaten op uw apparaten te implementeren. De Microsoft Intune-connector is vereist voor het gebruik van SCEP-certificaatprofielen in Intune wanneer u een Active Directory Certificate Services-certificeringsinstantie gebruikt. De connector is niet vereist wanneer u [externe certificeringsinstanties](certificate-authority-add-scep-overview.md#set-up-third-party-ca-integration) gebruikt. 
 
 De informatie in dit artikel kan u helpen bij het configureren van uw infrastructuur voor de ondersteuning van SCEP wanneer u Active Directory Certificate Services gebruikt. Nadat de infrastructuur is geconfigureerd, kunt u [SCEP-certificaatprofielen maken en implementeren](certificates-profile-scep.md) in Intune.
 
@@ -46,25 +46,25 @@ De volgende on-premises infrastructuur moet worden uitgevoerd op servers die dee
 
   - De server die als host fungeert voor NDES moet deel uitmaken van het domein en zich in hetzelfde forest bevinden als uw ondernemings-CA.
   - U kunt niet gebruikmaken van NDES die is geïnstalleerd op de server waarop de ondernemings-CA wordt gehost.
-  - U gaat de Microsoft Intune Certificate-connector op dezelfde server installeren die als host fungeert voor NDES.
+  - U installeert de Microsoft Intune-connector op dezelfde server die als host fungeert voor NDES.
 
   Zie [Hulp bij Registratieservice voor netwerkapparaten](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)) in de Windows Server-documentatie en [Een beleidsmodule gebruiken met de Registratieservice voor netwerkapparaten](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn473016(v=ws.11)) voor meer informatie over NDES.
 
-- **Microsoft Intune Certificate Connector**: de Microsoft Intune Certificate Connector is vereist voor het gebruik van SCEP-certificaatprofielen in Intune. In dit artikel vindt u instructies voor het [ installeren van deze connector](#install-the-intune-certificate-connector).
+- **Microsoft Intune-connector**: de Microsoft Intune-connector is vereist voor het gebruik van SCEP-certificaatprofielen in Intune. In dit artikel vindt u instructies voor het [ installeren van deze connector](#install-the-microsoft-intune-connector).
 
   De connector ondersteunt ook de Federal Information Processing Standard-modus (FIPS). FIPS is niet vereist, maar wanneer deze modus is ingeschakeld, kunt u certificaten verlenen en intrekken.
   - De connector heeft dezelfde netwerkvereisten als [beheerde apparaten](../fundamentals/intune-endpoints.md#access-for-managed-devices).
   - De connector moet worden uitgevoerd op dezelfde server als de NDES-serverfunctie, een server met Windows Server 2012 R2 of later.
   - .NET Framework 4.5 is vereist voor de connector en wordt automatisch geïnstalleerd met Windows Server 2012 R2.
-  - Verbeterde beveiliging van Internet Explorer [moet zijn ingeschakeld op de server die als host fungeert voor NDES](/previous-versions/windows/it-pro/windows-server-2003/cc775800(v=ws.10)) en de Microsoft Intune Certificate Connector.
+  - Verbeterde beveiliging van Internet Explorer [moet zijn ingeschakeld op de server die als host fungeert voor NDES](/previous-versions/windows/it-pro/windows-server-2003/cc775800(v=ws.10)) en de Microsoft Intune-connector.
 
-De volgende on-premises infrastructuur is optioneel:
+#### <a name="support-for-ndes-on-the-internet"></a>Ondersteuning voor NDES op internet
 
-Als u wilt dat apparaten op internet certificaten ontvangen, moet u uw NDES-URL extern publiceren in uw bedrijfsnetwerk. U kunt de Azure AD-toepassingsproxy, de webtoepassingsproxyserver of een andere omgekeerde proxy gebruiken.
+Als u wilt dat apparaten op internet certificaten ontvangen, moet u uw NDES-URL extern publiceren in uw bedrijfsnetwerk. Hiervoor kunt u een *Azure AD-toepassingsproxy* of een *Web ApplicationProxy-server* gebruiken. U kunt ook een andere omgekeerde proxy naar keuze gebruiken.
 
-- **Azure AD-toepassingsproxy** (optioneel): u kunt de Azure AD-toepassingsproxy gebruiken in plaats van een toegewezen webtoepassingsproxyserver (WAP-server) om de NDES-URL op internet te publiceren. Op die manier kunnen er certificaten worden verkregen voor zowel intranet- als internetgerichte apparaten. Zie voor meer informatie [Beveiligde externe toegang verschaffen voor on-premises toepassingen](/azure/active-directory/manage-apps/application-proxy).
+- **Azure AD-toepassingsproxy**: u kunt de Azure AD-toepassingsproxy gebruiken in plaats van een toegewezen webtoepassingsproxyserver (WAP-server) om de NDES-URL op internet te publiceren. Op die manier kunnen er certificaten worden verkregen voor zowel intranet- als internetgerichte apparaten. Zie [Integreren met Azure AD-toepassingsproxy op een server met een registratieservice voor netwerkapparaten (NDES)](/azure/active-directory/manage-apps/active-directory-app-proxy-protect-ndes) voor meer informatie.
 
-- **Webtoepassingsproxyserver** (optioneel): gebruik een server met Windows Server 2012 R2 of later als webtoepassingsproxyserver (WAP-server) om uw NDES-URL op internet te publiceren.  Op die manier kunnen er certificaten worden verkregen voor zowel intranet- als internetgerichte apparaten.
+- **Webtoepassingsproxyserver**: gebruik een server met Windows Server 2012 R2 of later als webtoepassingsproxyserver (WAP-server) om uw NDES-URL op internet te publiceren.  Op die manier kunnen er certificaten worden verkregen voor zowel intranet- als internetgerichte apparaten.
 
   De server die als host voor WAP fungeert, [moet een update installeren](/archive/blogs/ems/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2) waarmee ondersteuning wordt geboden voor de lange URL's die worden gebruikt door de Network Device Enrollment Service. Deze update is opgenomen in het [updatepakket van december 2014](https://support.microsoft.com/kb/3013769)en is afzonderlijk verkrijgbaar in [KB3011135](https://support.microsoft.com/kb/3011135).
 
@@ -101,7 +101,7 @@ De volgende certificaten en sjablonen worden gebruikt wanneer u SCEP gebruikt.
 |Object    |Details    |
 |----------|-----------|
 |**SCEP-certificaatsjabloon**         |De sjabloon die u gaat configureren op uw verlenende CA, die wordt gebruikt om de SCEP-aanvragen van apparaten uit te voeren. |
-|**Clientverificatiecertificaat** |Aangevraagd door uw verlenende CA of openbare CA.<br /> U installeert dit certificaat op de computer die als host fungeert voor de NDES-service en wordt gebruikt door de Microsoft Intune Certificate Connector.<br /> Als voor het certificaat het gebruik van *client-* en *serververificatiesleutels* is ingesteld (**Uitgebreid sleutelgebruik**) voor de CA-sjabloon die u gebruikt om dit certificaat te verlenen, dan kunt u hetzelfde certificaat gebruiken voor zowel server- als clientverificatie. |
+|**Clientverificatiecertificaat** |Aangevraagd door uw verlenende CA of openbare CA.<br /> U installeert dit certificaat op de computer die als host fungeert voor de NDES-service en wordt gebruikt door de Microsoft Intune-connector.<br /> Als voor het certificaat het gebruik van *client-* en *serververificatiesleutels* is ingesteld (**Uitgebreid sleutelgebruik**) voor de CA-sjabloon die u gebruikt om dit certificaat te verlenen, dan kunt u hetzelfde certificaat gebruiken voor zowel server- als clientverificatie. |
 |**Serververificatiecertificaat** |Webservercertificaat aangevraagd door uw verlenende CA of openbare CA.<br /> U installeert en verbindt dit SSL-certificaat in IIS op de computer die als host fungeert voor NDES.<br />Als voor het certificaat het gebruik van *client-* en *serververificatiesleutels* is ingesteld (**Uitgebreid sleutelgebruik**) voor de CA-sjabloon die u gebruikt om dit certificaat te verlenen, dan kunt u hetzelfde certificaat gebruiken voor zowel server- als clientverificatie. |
 |**Vertrouwd basis-CA-certificaat**       |Als u een SCEP-certificaatprofiel wilt gebruiken, moeten de apparaten uw vertrouwde basiscertificeringsinstantie (CA) vertrouwen. Gebruik een *vertrouwd certificaatprofiel* in Intune om het vertrouwde basis-CA-certificaat in te richten voor gebruikers en apparaten. <br/><br/> **-** Gebruik één vertrouwd basis-CA-certificaat per besturingssysteemplatform en koppel dat certificaat aan elk vertrouwde certificaatprofiel dat u maakt. <br /><br /> **-** U kunt extra vertrouwde basis-CA-certificaten gebruiken als dat nodig is. U kunt bijvoorbeeld extra certificaten gebruiken om een vertrouwensrelatie met een CA te leveren die de serververificatiecertificaten voor uw Wi-Fi-toegangspunten ondertekent. Maak extra vertrouwde basis-CA-certificaten voor verlenende CA's.  In het SCEP-certificaatprofiel dat u in Intune maakt, moet u het vertrouwde basis-CA-profiel voor de verlenende CA opgeven.<br/><br/> Zie [Het vertrouwde basis-CA-certificaat exporteren](certificates-configure.md#export-the-trusted-root-ca-certificate) en [Profielen voor vertrouwde certificaten maken](certificates-configure.md#create-trusted-certificate-profiles) in *Certificaten voor verificatie gebruiken in Intune* voor meer informatie over het vertrouwde certificaatprofiel. |
 
@@ -177,7 +177,7 @@ Voor de volgende secties is kennis nodig van Windows Server 2012 R2 of later en 
 
 ### <a name="create-the-client-certificate-template"></a>De clientcertificaatsjabloon maken
 
-Voor de Intune Certificate Connector is een certificaat vereist met het uitgebreide sleutelgebruik *Clientverificatie* en een Onderwerpnaam die gelijk is aan de FQDN van de computer waarop de connector is geïnstalleerd. Er is een sjabloon met de volgende eigenschappen vereist:
+Voor de Microsoft Intune-connector is een certificaat vereist met het uitgebreide sleutelgebruik *Clientverificatie* en een Onderwerpnaam die gelijk is aan de FQDN van de computer waarop de connector is geïnstalleerd. Er is een sjabloon met de volgende eigenschappen vereist:
 
 - **Extensies** > **Toepassingsbeleid** moet **Clientverificatie** bevatten
 - **Onderwerpnaam** > **Met de aanvraag meeleveren**.
@@ -192,13 +192,13 @@ Voor de communicatie tussen beheerde apparaten en IIS op de NDES-server wordt HT
 - **Onderwerpnaam** > **Met de aanvraag meeleveren**.
 
 > [!NOTE]
-> Als u een certificaat hebt dat voldoet aan de vereisten van zowel de client- als servercertificaatsjabloon, kunt u één certificaat voor zowel IIS als de Intune Certificate Connector gebruiken.
+> Als u een certificaat hebt dat voldoet aan de vereisten van zowel de client- als servercertificaatsjabloon, kunt u één certificaat voor zowel IIS als de Microsoft Intune-connector gebruiken.
 
 ### <a name="grant-permissions-for-certificate-revocation"></a>Machtigingen verlenen voor het intrekken van certificaten
 
 Als u wilt dat certificaten die niet meer nodig zijn door Intune worden ingetrokken, moet u daartoe machtigingen verlenen in de certificeringsinstantie.
 
-In de Intune Certificate Connector kunt u het **systeemaccount** van de NDES-server gebruiken of een specifiek account, zoals het **NDES-serviceaccount**.
+In de Microsoft Intune-connector kunt u het **systeemaccount** van de NDES-server gebruiken of een specifiek account, zoals het **NDES-serviceaccount**.
 
 1. Klik in de console van de certificeringsinstantie met de rechtermuisknop op de CA-naam en selecteer **Eigenschappen**.
 
@@ -336,7 +336,7 @@ Deze certificaten zijn het **Clientverificatiecertificaat**  en het **Serververi
 
 - **Clientverificatiecertificaat** 
 
-   Dit certificaat wordt gebruikt tijdens de installatie van de Intune Certificate Connector.
+   Dit certificaat wordt gebruikt tijdens de installatie van de Microsoft Intune-connector.
 
    Vraag een **clientverificatie**certificaat van uw interne CA of een openbare CA aan en installeer het certificaat.
    
@@ -372,10 +372,9 @@ Deze certificaten zijn het **Clientverificatiecertificaat**  en het **Serververi
    
       1. Geef voor het **SSL-certificaat**het serververificatiecertificaat op.
 
+## <a name="install-the-microsoft-intune-connector"></a>De Microsoft Intune-connector installeren
 
-## <a name="install-the-intune-certificate-connector"></a>De Microsoft Intune Certificate Connector installeren
-
-De Microsoft Intune Certificate Connector wordt geïnstalleerd op server waarop uw NDES-service wordt uitgevoerd. Het gebruik van NDES of de Intune Certificate Connector op dezelfde server als uw verlenende certificeringsinstantie (CA) wordt niet ondersteund.
+De Microsoft Intune-connector wordt geïnstalleerd op de server waarop uw NDES-service wordt uitgevoerd. Het gebruik van NDES of de Microsoft Intune-connector op dezelfde server als uw verlenende certificeringsinstantie (CA) wordt niet ondersteund.
 
 ### <a name="to-install-the-certificate-connector"></a>Certificate Connector installeren
 
@@ -389,7 +388,7 @@ De Microsoft Intune Certificate Connector wordt geïnstalleerd op server waarop 
 
 4. Nadat het downloaden is voltooid, gaat u naar de server waarop de NDES-rol (Registratieservice voor netwerkapparaten) wordt uitgevoerd. Vervolgens:
 
-   1. Controleer of .NET 4.5 Framework is geïnstalleerd. Dit wordt vereist door de Intune Certificate Connector. .NET Framework 4.5 wordt automatisch geïnstalleerd met Windows Server 2012 R2 en nieuwere versies.
+   1. Controleer of .NET 4.5 Framework is geïnstalleerd. Dit is vereist voor de Microsoft Intune-connector. .NET Framework 4.5 wordt automatisch geïnstalleerd met Windows Server 2012 R2 en nieuwere versies.
 
    2. Gebruik een account met beheerdersmachtigingen voor de server om het installatieprogramma (**NDESConnectorSetup.exe**) uit te voeren. Via het installatieprogramma wordt ook de beleidsmodule voor NDES en de webservice Certificaatregistratiepunt (CRP) van IIS geïnstalleerd. De webservice CRP, *CertificateRegistrationSvc*, wordt als een toepassing in IIS uitgevoerd.
 
@@ -397,10 +396,10 @@ De Microsoft Intune Certificate Connector wordt geïnstalleerd op server waarop 
 
 5. Wanneer om het clientcertificaat voor de Certificate Connector wordt gevraagd, kiest u **Selecteren** en selecteert u het **clientverificatiecertificaat** dat u op uw NDES-server hebt geïnstalleerd tijdens stap 3 van de procedure [Certificaten installeren en verbinden op de server waarop NDES wordt gehost](#install-and-bind-certificates-on-the-server-that-hosts-ndes) die eerder in dit artikel is beschreven.
 
-   Nadat u het clientverificatiecertificaat hebt geselecteerd, wordt u teruggevoerd naar het gebied **Clientcertificaat voor Microsoft Intune Certificate Connector**. Hoewel het certificaat dat u hebt geselecteerd niet wordt weergegeven, selecteert u **Volgende** om de eigenschappen van dat certificaat weer te geven. Selecteer **Volgende** en vervolgens **Installeren**.
+   Nadat u het clientverificatiecertificaat hebt geselecteerd, wordt u teruggevoerd naar het gebied **Clientcertificaat voor Microsoft Intune-connector**. Hoewel het certificaat dat u hebt geselecteerd niet wordt weergegeven, selecteert u **Volgende** om de eigenschappen van dat certificaat weer te geven. Selecteer **Volgende** en vervolgens **Installeren**.
 
 > [!NOTE]
-> De volgende wijzigingen moeten worden aangebracht voor GCC High-tenants voordat de Intune Certificate Connector wordt gestart.
+> De volgende wijzigingen moeten worden aangebracht voor GCC High-tenants voordat de Microsoft Intune-connector wordt gestart.
 > 
 > Breng wijzigingen aan in de twee onderstaande configuratiebestanden, waarmee de service-eindpunten voor de GCC High-omgeving worden bijgewerkt. U ziet dat door deze updates de URI van het achtervoegsel **.com** in het achtervoegsel **.us** wordt gewijzigd. Er zijn in totaal drie URI-updates, twee updates in het configuratiebestand NDESConnectorUI.exe. config en één update in het bestand NDESConnector.exe.config.
 > 
@@ -437,7 +436,7 @@ De Microsoft Intune Certificate Connector wordt geïnstalleerd op server waarop 
 
    2. Aan het account dat u gebruikt moet een geldige Intune-licentie zijn toegewezen.
 
-   3. Nadat u zich hebt aangemeld, wordt door de Intune Certificate Connector een certificaat van Intune gedownload. Dit certificaat wordt gebruikt voor verificatie tussen de connector en Intune. Als het account dat u hebt gebruikt geen Intune-licentie heeft, kan het certificaat niet uit Intune worden opgehaald door de connector (NDESConnectorUI.exe).  
+   3. Nadat u zich hebt aangemeld, wordt door de Microsoft Intune-connector een certificaat van Intune gedownload. Dit certificaat wordt gebruikt voor verificatie tussen de connector en Intune. Als het account dat u hebt gebruikt geen Intune-licentie heeft, kan het certificaat niet uit Intune worden opgehaald door de connector (NDESConnectorUI.exe).  
 
       Als uw organisatie een proxyserver gebruikt en de NDES-server de proxy nodig heeft om toegang tot internet te krijgen, selecteert u **Proxyserver gebruiken**. Voer vervolgens de naam van de proxyserver, de poort en de accountreferenties in om verbinding te maken.
 
@@ -450,9 +449,9 @@ De Microsoft Intune Certificate Connector wordt geïnstalleerd op server waarop 
 Controleer of de service wordt uitgevoerd door een browser te openen en de volgende URL in te voeren. Dan wordt er een **403**-fout geretourneerd: `https://<FQDN_of_your_NDES_server>/certsrv/mscep/mscep.dll`
 
 > [!NOTE]
-> De Intune Certificate Connector ondersteunt TLS 1.2. Als de server waarop de connector wordt gehost TLS 1.2 ondersteunt, wordt TLS 1.2 gebruikt. Als de server TLS 1.2 niet ondersteunt, wordt TLS 1.1 gebruikt. Momenteel wordt TLS 1.1 gebruikt voor verificatie tussen de apparaten en de server.
+> De Microsoft Intune-connector ondersteunt TLS 1.2. Als de server waarop de connector wordt gehost TLS 1.2 ondersteunt, wordt TLS 1.2 gebruikt. Als de server TLS 1.2 niet ondersteunt, wordt TLS 1.1 gebruikt. Momenteel wordt TLS 1.1 gebruikt voor verificatie tussen de apparaten en de server.
 
 ## <a name="next-steps"></a>Volgende stappen
 
 [Een SCEP-certificaatprofiel maken](certificates-profile-scep.md)  
-[Problemen met de Intune Certificate Connector oplossen](troubleshoot-certificate-connector-events.md)
+[Problemen met de Microsoft Intune-connector oplossen](troubleshoot-certificate-connector-events.md)

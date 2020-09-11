@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/31/2020
+ms.date: 09/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7becc53b9464cad6f864f219f2d59046c2e61707
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: dc8fa6f2d4fe5171bd8a4ffe977eec7f6eed2093
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89193780"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564093"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Wat is er nieuw in Microsoft Intune?
 
@@ -53,6 +53,44 @@ Ontdek elke week wat er nieuw is in Microsoft Intune in het [Microsoft Endpoint 
 ### Monitor and troubleshoot
 ### Role-based access control
 ### Scripts
+
+<!-- ########################## -->
+## <a name="week-of-september-7-2020"></a>Week van 7 september 2020
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-management"></a>Apparaatbeheer
+
+#### <a name="tenant-attach-device-timeline-in-the-admin-center"></a>Tenantkoppeling: Tijdlijn van het apparaat in het beheercentrum
+<!--7220536, CM7141381-->
+Wanneer Configuration Manager een apparaat synchroniseert met Microsoft Endpoint Manager via een tenantkoppeling, kunt u een tijdlijn van gebeurtenissen bekijken. Deze tijdlijn toont eerdere activiteiten op het apparaat die u kunnen helpen bij het oplossen van problemen. Zie voor meer informatie [Tenant koppelen: Tijdlijn van het apparaat in het beheercentrum](../../configmgr/tenant-attach/timeline.md).
+
+#### <a name="tenant-attach-resource-explorer-in-the-admin-center"></a><a name="bkmk_hinv"></a> Tenantkoppeling: Resource Explorer in het beheercentrum
+<!--IN7220536, CM6479284 -->
+U kunt in het Microsoft Endpoint Management-beheercentrum de hardware-inventaris voor geüploade Configuration Manager-apparaten bekijken met Resource Explorer. Zie voor meer informatie [Tenant koppelen: Resource Explorer in het beheercentrum](../../configmgr/tenant-attach/resource-explorer.md).
+
+#### <a name="tenant-attach-cmpivot-from-the-admin-center"></a>Tenantkoppeling: CMPivot vanuit het beheercentrum
+<!--IN7220536, CM6024392-->
+Profiteer van alle voordelen van CMPivot in het Microsoft Endpoint Manager-beheercentrum. Sta aanvullende persona's, zoals Helpdesk, toe om vanuit de cloud realtimequery's te starten op een afzonderlijk, door ConfigMgr beheerd apparaat en de resultaten te retourneren naar het beheercentrum. Dit biedt alle traditionele voordelen van CMPivot, waarmee IT-beheerders en andere aangewezen personen de status van apparaten in hun omgeving snel kunnen beoordelen en actie kunnen ondernemen.
+
+Zie [CMPivot-vereisten](../../configmgr/tenant-attach/cmpivot-start.md), [Overzicht van CMPivot](../../configmgr/tenant-attach/cmpivot-overview-attached.md) en [CMPivot-voorbeeldscripts](../../configmgr/tenant-attach/cmpivot-samples-attached.md) voor meer informatie over CMPivot in het beheercentrum.
+
+## <a name="week-of-august-31-2020"></a>Week van 31 augustus 2020
+
+### <a name="device-configuration"></a>Apparaatconfiguratie
+
+#### <a name="new-version-of-the-pfx-certificate-connector-and-changes-for-pkcs-certificate-profile-support-----4839686----"></a>Nieuwe versie van de PFX-certificaatconnector en wijzigingen in de ondersteuning van het PKCS-certificaatprofiel <!--  4839686  -->
+
+Er is een nieuwe versie van de PFX-certificaatconnector uitgebracht, versie **6.2008.60.607**. Deze nieuwe connectorversie:
+
+- Ondersteunt het gebruik van PKCS-certificaatprofielen op alle ondersteunde platformen, met uitzondering van Windows 8.1
+ 
+  We hebben de PCKS-ondersteuning in de PFX-certificaatconnector geconsolideerd.  Dit betekent dat u de Microsoft-certificaatconnector kunt verwijderen en NDES uit uw omgeving kunt te verwijderen als u in uw omgeving geen SCEP gebruikt en geen NDES gebruikt voor andere intenties. 
+ 
+- Omdat er geen functionaliteit uit de Microsoft-certificaatconnector is verwijderd, kunt u deze blijven gebruiken ter ondersteuning van PKCS-certificaatprofielen.
+- Ondersteunt het intrekken van certificaten voor Outlook S/MIME
+- Hiervoor is .NET Framework 4.7.2 vereist
+
+Zie [Certificaatconnectors](../protect/certificate-connectors.md) voor meer informatie over certificaatconnectors, waaronder een lijst met connectorreleases voor beide certificaatconnectors
+
 
 <!-- ########################## -->
 ## <a name="week-of-august-24-2020-2008-service-release"></a>Week van 24 augustus 2020 (2008 servicerelease)
@@ -179,7 +217,7 @@ Als Microsoft Intune-beheerder kunt u een aangepaste merkafbeelding naar Intune 
 ### <a name="app-management"></a>Appbeheer
 
 #### <a name="the-company-portal-adds-configuration-manager-application-support---4297660---"></a>De bedrijfsportal voegt ondersteuning voor Configuration Manager-toepassingen toe<!-- 4297660 -->
-De bedrijfsportal biedt nu ondersteuning voor Configuration Manager-toepassingen. Met deze functie kunnen eindgebruikers zowel Configuration Manager-toepassingen als met Intune geïmplementeerde toepassingen zien in de bedrijfsportal voor co-beheerde klanten. Deze ondersteuning helpt beheerders bij het consolideren van de verschillende portal-ervaringen van eindgebruikers. Zie [De bedrijfsportal-app configureren op co-beheerde apparaten](../../configmgr/comanage/company-portal.md) voor meer informatie. 
+De bedrijfsportal biedt nu ondersteuning voor Configuration Manager-toepassingen. Met deze functie kunnen eindgebruikers zowel Configuration Manager-toepassingen als met Intune geïmplementeerde toepassingen zien in de bedrijfsportal voor co-beheerde klanten. Met deze nieuwe versie van de bedrijfsportal worden door Configuration Manager geïmplementeerde apps weergegeven voor alle klanten die gezamenlijk worden beheerd. Deze ondersteuning helpt beheerders bij het consolideren van de verschillende portal-ervaringen van eindgebruikers. Zie [De bedrijfsportal-app configureren op co-beheerde apparaten](../../configmgr/comanage/company-portal.md) voor meer informatie. 
 
 ### <a name="device-security"></a>Apparaatbeveiliging
 
@@ -639,6 +677,9 @@ Wanneer u [een sjabloon voor een meldingsbericht configureert](../protect/action
 #### <a name="admins-no-longer-require-an-intune-license-to-access-microsoft-endpoint-manager-admin-console--1335430---"></a>Beheerders hebben geen Intune-licentie meer nodig om toegang te krijgen tot de Microsoft Endpoint Manager-beheerconsole<!--1335430 -->
 U kunt nu een tenantbrede wisselknop instellen die de Intune-licentievereiste voor beheerders verwijdert om toegang te krijgen tot de MEM-beheerconsole en API's van de query-grafiek. Nadat u de licentievereiste hebt verwijderd, kunt u deze nooit meer herstellen. 
 
+
+> [!Note]
+> Voor sommige acties, waaronder de Team Viewer-connectorstroom, is nog wel een Intune-licentie nodig.
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->

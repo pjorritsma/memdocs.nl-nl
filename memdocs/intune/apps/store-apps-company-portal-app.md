@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/12/2020
+ms.date: 09/01/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e359a87cb9e62b6d7542d82d9819b5c132a8bc2
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 4dca7e5b790cd932841211b04cf463602df55a57
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88910261"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390769"
 ---
 # <a name="add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>De Windows 10-bedrijfsportal-app toevoegen met Microsoft Intune
 
@@ -33,6 +33,9 @@ Uw gebruikers kunnen de bedrijfsportal-app zelf installeren vanuit Microsoft Sto
 
  > [!IMPORTANT]
  > Als u de Bedrijfsportal-app downloadt, moet u voor de optie die in dit artikel wordt beschreven, updates steeds handmatig toewijzen wanneer een app-update wordt uitgebracht. Voor het implementeren van de Bedrijfsportal-app op voor Windows 10 Autopilot ingerichte apparaten ziet u [De Windows 10 Bedrijfsportal-app toevoegen op Autopilot-apparaten](store-apps-company-portal-autopilot.md).
+
+> [!NOTE]
+> De bedrijfsportal biedt ondersteuning voor Configuration Manager-toepassingen. Met deze functie kunnen eindgebruikers zowel Configuration Manager-toepassingen als met Intune geïmplementeerde toepassingen zien in de bedrijfsportal voor co-beheerde klanten. Met deze nieuwe versie van de bedrijfsportal worden door Configuration Manager geïmplementeerde apps weergegeven voor alle klanten die gezamenlijk worden beheerd. Deze ondersteuning helpt beheerders bij het consolideren van de verschillende portal-ervaringen van eindgebruikers. Zie [De bedrijfsportal-app configureren op co-beheerde apparaten](/mem/configmgr/comanage/company-portal) voor meer informatie.
 
 ## <a name="configure-settings-to-show-offline-apps"></a>Instellingen configureren om apps offline weer te geven
 1. Meld u met uw beheerdersaccount aan bij [Microsoft Store voor Bedrijven](https://www.microsoft.com/business-store).

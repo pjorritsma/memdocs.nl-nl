@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/29/2020
+ms.date: 09/1/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 80b725393323484ecb33aad947a95894604c4d5a
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 0c6655f9d7aaa708e5dd0b2818c9cfc1ba4c9cdc
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88906885"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390786"
 ---
 # <a name="mobile-threat-defense-integration-with-intune"></a>Integratie van Mobile Threat Defense met Intune
 
@@ -86,7 +86,9 @@ Toegang wordt geboden wanneer het apparaat is hersteld:<br>
 ![Afbeelding van een apparaat waartoe middels Mobile Threat Defense toegang is verleend](./media/mobile-threat-defense/MTD-image-4.png)
 
 > [!NOTE]
-> U kunt meerdere Mobile Threat Defense-leveranciers gebruiken met één Intune-tenant. Wanneer echter twee of meer leveranciers zijn geconfigureerd voor hetzelfde platform, moet op alle apparaten die dat platform uitvoeren, elke MTD-app worden geïnstalleerd en moet er op bedreigingen worden gescand. Als er geen scan kan worden verzonden vanuit een geconfigureerde app, heeft dit als gevolg dat het apparaat als niet-compatibel wordt gemarkeerd. 
+> Het wordt aanbevolen om één Mobile Threat Defense-leverancier per tenant per platform te gebruiken. 
+> 
+> Voor apparaatcompatibiliteit kunt u meerdere Mobile Threat Defense-leveranciers gebruiken met één Intune-tenant. Wanneer echter twee of meer leveranciers zijn geconfigureerd voor hetzelfde platform, moet op alle apparaten die dat platform uitvoeren, elke MTD-app worden geïnstalleerd en moet er op bedreigingen worden gescand. Als er geen scan kan worden verzonden vanuit een geconfigureerde app, heeft dit als gevolg dat het apparaat als niet-compatibel wordt gemarkeerd. 
 
 ## <a name="mobile-threat-defense-partners"></a>Mobile Threat Defense-partners
 

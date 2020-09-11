@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 8843ab5c8bf3d0e6970398c1ad81a8a2b3b8f9cb
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: 4c652907d105b4b0363b2113916e892360feab39
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89193960"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564258"
 ---
 # <a name="manage-bitlocker-policy-for-windows-10-in-intune"></a>Het BitLocker-beleid voor Windows 10 in Intune beheren
 
@@ -97,7 +97,7 @@ Gebruik een van de volgende procedures om het gewenste beleidstype op te stellen
    1. **Platform**: Windows 10 en hoger
    2. **Profieltype**: Endpoint Protection
 
-   ![Het profiel selecteren](./media/encrypt-devices/select-windows-bitlocker-dc.png)
+   ![Uw BitLocker-profiel selecteren](./media/encrypt-devices/select-windows-bitlocker-dc.png)
 
 4. Selecteer **Instellingen** > **Windows-versleuteling**.
 
@@ -149,6 +149,8 @@ Intune biedt toegang tot de Microsoft Azure Active Directory-blade voor BitLocke
 2. Selecteer **Apparaten** > **Alle apparaten**.
 
 3. Selecteer een apparaat in de lijst en selecteer vervolgens onder *Monitor* **Herstelsleutels**.
+
+4. Klik op **Herstelsleutel weergeven**. Als u dit selecteert, wordt er een vermelding in het auditlogboek gegenereerd onder de activiteit 'KeyManagement'.
   
    Als er sleutels in Azure AD beschikbaar zijn, is de volgende informatie beschikbaar:
    - BitLocker-sleutel-id
@@ -158,6 +160,8 @@ Intune biedt toegang tot de Microsoft Azure Active Directory-blade voor BitLocke
    Als er geen sleutels aanwezig zijn in Azure AD, wordt *Er is geen BitLocker-sleutel gevonden voor dit apparaat* weergegeven.
 
 De informatie voor BitLocker wordt verkregen met behulp van de [BitLocker-configuratieserviceprovider](/windows/client-management/mdm/bitlocker-csp) (CSP). BitLocker CSP wordt ondersteund op Windows 10-versie 1703 en hoger en voor Windows 10 Pro-versie 1809 en hoger.
+
+Zie [Auditlogboeken in Azure Portal](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#audit-logs) voor meer informatie over vermeldingen in het auditlogboek.
 
 ### <a name="rotate-bitlocker-recovery-keys"></a>BitLocker-herstelsleutels roteren
 

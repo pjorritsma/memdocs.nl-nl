@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 09/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b1db36b0ea3d2ba691811958a01043a606b4681a
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 22bfe44b95eedcdf87a41cfaaf959c72cfbe93e2
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88251969"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423812"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Certificaten voor verificatie gebruiken in Microsoft Intune
 
@@ -44,11 +44,13 @@ Elk afzonderlijk certificaatprofiel dat u maakt, ondersteunt één platform. Als
 
 Als u een Microsoft-certificeringsinstantie gebruikt (CA):
 
-- Als u SCEP-certificaatprofielen wilt gebruiken, moet u [een NDES-server (Network Device Enrollment Service) instellen](certificates-scep-configure.md#set-up-ndes) voor gebruik met Intune.
-- Als u de volgende certificaatprofieltypen wilt gebruiken, moet u de [Microsoft Intune Certificate Connector installeren](certificates-scep-configure.md#install-the-intune-certificate-connector):
-  - SCEP-certificaatprofiel
-  - PKCS-certificaatprofiel
+- SCEP-certificaatprofielen gebruiken:
+  - [Stel een NDES-server (Network Device Enrollment Service) in](certificates-scep-configure.md#set-up-ndes) voor gebruik met Intune.
+  - [Installeer de Microsoft Certificate Connector](certificates-scep-configure.md#install-the-microsoft-intune-connector):
 
+- PKCS-certificaatprofielen gebruiken:
+  - [Installeer de PFX Certificate Connector voor Microsoft Intune](certificates-imported-pfx-configure.
+  
 - Geïmporteerde PKCS-certificaten gebruiken:
   - [Installeer de PFX-certificaatconnector voor Microsoft Intune](certificates-imported-pfx-configure.md#download-install-and-configure-the-pfx-certificate-connector-for-microsoft-intune).
   - Exporteer certificaten van de certificeringsinstantie en importeer deze vervolgens in Microsoft Intune. Zie [het PowerShell-project PFXImport](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
@@ -80,9 +82,9 @@ Als u een externe (niet-Microsoft) certificeringsinstantie (CA) gebruikt:
 | Platform              | Vertrouwd certificaatprofiel | PKCS-certificaatprofiel | SCEP-certificaatprofiel | Geïmporteerd PKCS-certificaatprofiel  |
 |--|--|--|--|---|
 | Android-apparaatbeheerder | ![Ondersteund](./media/certificates-configure/green-check.png) | ![Ondersteund](./media/certificates-configure/green-check.png) | ![Ondersteund](./media/certificates-configure/green-check.png)|  ![Ondersteund](./media/certificates-configure/green-check.png) |
-| Android Enterprise <br> - Volledig beheerd (apparaateigenaar)   | ![Ondersteund](./media/certificates-configure/green-check.png) |   | ![Ondersteund](./media/certificates-configure/green-check.png) |  ![Ondersteund](./media/certificates-configure/green-check.png)  |
+| Android Enterprise <br> - Volledig beheerd (apparaateigenaar)   | ![Ondersteund](./media/certificates-configure/green-check.png) | ![Ondersteund](./media/certificates-configure/green-check.png)  | ![Ondersteund](./media/certificates-configure/green-check.png) |  ![Ondersteund](./media/certificates-configure/green-check.png)  |
 | Android Enterprise <br> - Toegewezen (apparaateigenaar)   | ![Ondersteund](./media/certificates-configure/green-check.png)  | ![Ondersteund](./media/certificates-configure/green-check.png) | ![Ondersteund](./media/certificates-configure/green-check.png)  | ![Ondersteund](./media/certificates-configure/green-check.png)|
-| Android Enterprise <br> Werkprofiel in bedrijfseigendom   | ![Ondersteund](./media/certificates-configure/green-check.png)  |  | ![Ondersteund](./media/certificates-configure/green-check.png)  | ![Ondersteund](./media/certificates-configure/green-check.png)  |
+| Android Enterprise <br> Werkprofiel in bedrijfseigendom   | ![Ondersteund](./media/certificates-configure/green-check.png)  | ![Ondersteund](./media/certificates-configure/green-check.png)  | ![Ondersteund](./media/certificates-configure/green-check.png)  | ![Ondersteund](./media/certificates-configure/green-check.png)  |
 | Android Enterprise <br> - Werkprofiel    | ![Ondersteund](./media/certificates-configure/green-check.png) | ![Ondersteund](./media/certificates-configure/green-check.png) | ![Ondersteund](./media/certificates-configure/green-check.png) | ![Ondersteund](./media/certificates-configure/green-check.png) |
 | iOS/iPadOS                   | ![Ondersteund](./media/certificates-configure/green-check.png) | ![Ondersteund](./media/certificates-configure/green-check.png) | ![Ondersteund](./media/certificates-configure/green-check.png) | ![Ondersteund](./media/certificates-configure/green-check.png) |
 | macOS                 | ![Ondersteund](./media/certificates-configure/green-check.png) |  ![Ondersteund](./media/certificates-configure/green-check.png) |![Ondersteund](./media/certificates-configure/green-check.png)|![Ondersteund](./media/certificates-configure/green-check.png)|
@@ -172,3 +174,5 @@ Maak SCEP-, PKCS- of geïmporteerde PKCS-certificaatprofielen voor elk platform 
 - [Infrastructuur configureren om SCEP-certificaten te ondersteunen in Intune](certificates-scep-configure.md)  
 - [PKCS-certificaten configureren en beheren met Intune](certficates-pfx-configure.md)  
 - [Een geïmporteerd PKCS-certificaatprofiel maken](certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile)
+
+Meer informatie over [certificaatconnectors](certificate-connectors.md)

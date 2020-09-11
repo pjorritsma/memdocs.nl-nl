@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 09/3/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e2a00ef50676ee24de30f93ad5b5ddd88192b6db
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 12ac9998f60236a9aa661fc2088449db982180bf
+ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915072"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432605"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Instellingen voor Windows 10 (en hoger) om apparaten te beveiligen met Intune
 
@@ -1016,6 +1016,9 @@ Kies aanvullende apps die moeten worden gecontroleerd door of kunnen worden vert
   - **Niet geconfigureerd**: toepassingsbeheer wordt niet aan apparaten toegevoegd. De instellingen die eerder zijn toegevoegd, worden echter nog steeds afgedwongen op toegewezen apparaten. 
  
   - **Alleen controle**: toepassingen worden niet geblokkeerd. Alle gebeurtenissen worden in de logboeken van de lokale client vastgelegd.  
+
+    > [!NOTE]
+    > Als u deze instelling gebruikt, vraagt AppLocker CSP de eindgebruiker op dit moment om de computer opnieuw op te starten wanneer er beleid wordt geïmplementeerd.
 
 ## <a name="microsoft-defender-credential-guard"></a>Microsoft Defender Credential Guard  
 

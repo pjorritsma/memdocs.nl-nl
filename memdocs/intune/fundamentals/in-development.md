@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: feb277f30401f31ddb400f5e3f6cd7709fa31c0b
-ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
+ms.openlocfilehash: f9ec657e7d2ee83f3f4f54f9a33a5a350faa4229
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89286234"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564241"
 ---
 # <a name="in-development-for-microsoft-intune"></a>In ontwikkeling voor Microsoft Intune
 
@@ -218,15 +218,6 @@ PowerShell-scripts bieden ondersteuning voor apparaten die bij Azure AD zijn ger
 ### <a name="log-analytics-will-include-device-details-log--6014987----"></a>Log Analytics bevat een logboek met apparaatgegevens<!--6014987  -->
 De logboeken voor Intune-apparaatgegevens vindt u in **Rapporten** > **Logboekanalyse**. U kunt apparaatgegevens met elkaar in verband brengen om aangepaste query's en Azure-werkmappen te maken.
 
-### <a name="tenant-attach-device-timeline-in-the-admin-center--7220536-cm7141381---"></a>Tenantkoppeling: Tijdlijn van het apparaat in het beheercentrum<!--7220536, CM7141381 -->
-Wanneer Configuration Manager een apparaat synchroniseert met Microsoft Endpoint Manager via een tenantkoppeling, kunt u een tijdlijn van gebeurtenissen bekijken. Deze tijdlijn toont eerdere activiteiten op het apparaat die u kunnen helpen bij het oplossen van problemen. Zie [Configuration Manager Technical Preview 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_timeline) voor meer informatie.  
-
-### <a name="tenant-attach-install-an-application-from-the-admin-center---7220536-cm6024389---"></a>Tenantkoppeling: Een toepassing installeren vanuit het beheercentrum<!-- 7220536, CM6024389 -->
-Vanuit het Microsoft Endpoint Management-beheercentrum kunt u de installatie van een toepassing in realtime initiëren voor een apparaat dat is gekoppeld via een tenant. Zie [Configuration Manager Technical Preview 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_apps) voor meer informatie.
-
-### <a name="tenant-attach-cmpivot-from-the-admin-center--7220536-cm6024392---"></a>Tenantkoppeling: CMPivot vanuit het beheercentrum<!--7220536, CM6024392 -->
-U kunt profiteren van alle voordelen van [CMPivot](../../configmgr/tenant-attach/cmpivot-overview-attached.md) in het Microsoft Endpoint Manager-beheercentrum. Sta aanvullende persona's, zoals Helpdesk, toe om vanuit de cloud realtimequery's te starten op een afzonderlijk, door ConfigMgr beheerd apparaat en de resultaten te retourneren naar het beheercentrum. Dit biedt alle traditionele voordelen van CMPivot, waarmee IT-beheerders en andere aangewezen personen de status van apparaten in hun omgeving snel kunnen beoordelen en actie kunnen ondernemen. Zie [Configuration Manager Technical Preview 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_cmpivot) voor meer informatie. 
-
 ### <a name="tenant-attach-run-scripts-from-the-admin-center--7220536-cm6234688---"></a>Tenantkoppeling: Scripts uitvoeren vanuit het beheercentrum<!--7220536, CM6234688 -->
 U kunt de krachtige on-premises functie [Scripts uitvoeren](../../configmgr/apps/deploy-use/create-deploy-scripts.md) van Configuration Manager in het Microsoft Endpoint Manager-beheercentrum gebruiken. Sta extra persona's, zoals Helpdesk, toe om PowerShell-scripts vanuit de cloud uit te voeren met een individueel door Configuration Manager beheerd apparaat. Hiermee krijgt u alle bekende voordelen van PowerShell-scripts die al zijn gedefinieerd en goedgekeurd door de Configuration Manager-beheerder voor deze nieuwe omgeving. Zie [Configuration Manager Technical Preview 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_scripts) voor meer informatie. 
 
@@ -275,11 +266,11 @@ In **Apparaten** > **Groepsbeleidsanalyse (preview)** kunt u uw groepsbeleidsobj
 Van toepassing op:
 - Windows 10 en nieuwer
 
-#### <a name="new-windows-10-feature-update-report---6473121-----"></a>Nieuw rapport met functie-updates voor Windows 10<!-- 6473121   -->
-Het rapport **Fouten bij functie-updates** bevat foutgegevens voor apparaten waarvoor een beleid voor **functie-updates voor Windows 10** geldt en waarvoor is geprobeerd om een update uit te voeren. In het [beheercentrum van Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) selecteert u **Apparaten** > **Controleren** > **Fouten bij functie-updates** om dit rapport weer te geven."
-
 #### <a name="new-windows-10-feature-update-report---6473128----"></a>Nieuw rapport met functie-updates voor Windows 10<!-- 6473128  -->
 Het rapport **Functie-updates voor Windows** bevat een algemeen overzicht van de naleving voor apparaten waarvoor het beleid **Functie-updates voor Windows 10** geldt. In het [beheercentrum van Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) selecteert u **Rapporten** > **Windows-updates (preview)**  > **Fouten bij functie-updates** om de samenvatting voor dit rapport weer te geven. Als u rapporten voor specifieke beleidsregels wilt weergeven, selecteert u het tabblad **Rapporten** en opent u het **rapport Functie-updates voor Windows**. 
+
+#### <a name="new-windows-10-feature-failures-update-report---6473121-----"></a>Nieuw updaterapport met functieproblemen voor Windows 10<!-- 6473121   -->
+Het rapport **Fouten bij functie-updates** bevat foutgegevens voor apparaten waarvoor een beleid voor **functie-updates voor Windows 10** geldt en waarvoor is geprobeerd om een update uit te voeren. In het [beheercentrum van Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) selecteert u **Apparaten** > **Controleren** > **Fouten bij functie-updates** om dit rapport weer te geven."
 
 <!-- ***********************************************-->
 <!--

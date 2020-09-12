@@ -10,12 +10,12 @@ ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 17c22027ffc28f2e04e95b8223de27b8f26489fd
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: fff07351725e6606a49804bba79f226a9042c349
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698483"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039343"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Accounts die worden gebruikt in Configuration Manager
 
@@ -336,7 +336,7 @@ U kunt meer dan één client push installatie account opgeven. Configuration Man
 > 4. Verwijder vervolgens het oude account uit Configuration Manager en Active Directory Domain Services  
 
 > [!IMPORTANT]  
-> Verleen dit account niet het recht om lokaal aan te melden.  
+> Domein-of lokaal groeps beleid gebruiken om het Windows-gebruikers recht toe te wijzen om **lokaal aanmelden te weigeren**. Als lid van de groep Administrators heeft dit account het recht om lokaal aan te melden, wat niet nodig is. Voor betere beveiliging weigert expliciet het recht voor dit account. Het recht weigeren vervangt het recht toestaan.<!--MEMDocs#744-->
 
 Zie [client push Installation](../../clients/deploy/plan/client-installation-methods.md#client-push-installation)(Engelstalig) voor meer informatie.
 

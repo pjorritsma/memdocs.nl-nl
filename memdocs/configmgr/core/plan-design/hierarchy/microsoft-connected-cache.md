@@ -2,7 +2,7 @@
 title: Microsoft verbonden cache
 titleSuffix: Configuration Manager
 description: Uw Configuration Manager-distributie punt gebruiken als lokale cache server voor leverings optimalisatie
-ms.date: 05/05/2020
+ms.date: 09/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cd44270d8662d9e7b1b26db92e2f66035edc24f1
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: a42e0937748ecd31b16698904f724260b9b60512
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699327"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039292"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Met micro soft verbonden cache in Configuration Manager
 
@@ -23,7 +23,7 @@ ms.locfileid: "88699327"
 
 <!--3555764-->
 
-Vanaf versie 1906 kunt u een micro soft Connected cache-server op uw distributie punten installeren. Door deze inhoud on-premises in de cache te plaatsen, kunnen uw clients profiteren van de functie voor Delivery Optimization, maar kunt u WAN-koppelingen helpen beveiligen.
+Vanaf versie 1906 kunt u een micro soft Connected cache-server op uw distributie punten installeren. Door deze inhoud on-premises in de cache te plaatsen, kunnen uw clients profiteren van de functie voor leverings optimalisatie waarmee WAN-koppelingen kunnen worden beveiligd.
 
 > [!NOTE]
 > Vanaf versie 1910 wordt deze functie nu **micro soft Connected cache**genoemd. Het was voorheen bekend als Delivery Optimization in-Network cache.
@@ -35,7 +35,7 @@ Deze cache is gescheiden van de inhoud van het distributie punt van Configuratio
 > [!Note]  
 > De verbonden cache server is een toepassing die is geïnstalleerd op Windows Server. Deze toepassing is nog in ontwikkeling.
 
-## <a name="how-it-works"></a>Hoe het werkt
+## <a name="how-it-works"></a>Uitleg
 
 Wanneer u clients configureert voor het gebruik van de verbonden cache server, vragen ze geen door micro soft Cloud beheerde inhoud meer via internet. Clients vragen deze inhoud van de cache server die is geïnstalleerd op het distributie punt. De on-premises server slaat deze inhoud op in de cache met behulp van de IIS-functie voor Application Request Routing (ARR). Vervolgens kan de cache server snel reageren op toekomstige aanvragen voor dezelfde inhoud. Als de verbonden cache server niet beschikbaar is, of als de inhoud nog niet in de cache is opgeslagen, downloaden clients de inhoud van het internet. Clients gebruiken ook Delivery Optimization om delen van de inhoud te downloaden van peers in hun netwerk.
 
@@ -109,7 +109,7 @@ Het station wijzigen nadat u de verbonden cache hebt geïnstalleerd:
 
 - Als deze is ingesteld op automatisch, moet u eerst het **no_sms_on_drive. SMS** -bestand maken. Breng vervolgens een wijziging aan in de eigenschappen van het distributie punt om een configuratie wijziging te activeren.
 
-### <a name="automation"></a>Automatisering
+### <a name="automation"></a>Automation
 
 <!-- SCCMDocs#1911 -->
 

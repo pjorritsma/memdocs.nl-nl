@@ -268,14 +268,14 @@
       items:
         - name: Overzicht van Technical Preview
           href: get-started/technical-preview.md
+        - name: 2009-functies
+          href: get-started/2020/technical-preview-2009.md
         - name: 2008-functies
           href: get-started/2020/technical-preview-2008.md
         - name: 2007-functies
           href: get-started/2020/technical-preview-2007.md
         - name: 2006 functies
           href: get-started/2020/technical-preview-2006.md
-        - name: 2005 functies
-          href: get-started/2020/technical-preview-2005.md
     - name: Gegevens migreren tussen hiërarchieën
       items:
         - name: Overzicht van Migratie

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-ms.openlocfilehash: 51e64f8f815c4ba90522acf6529cff4d971dd553
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 62f5059ef02d7b2594a506135abf332a8b6c0def
+ms.sourcegitcommit: 4b8c317c71535c2d464f336c03b5bebdd2c6d4c9
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699803"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90083893"
 ---
 # <a name="integrate-with-windows-update-for-business"></a>Integreren met Windows Update voor bedrijven
 
@@ -90,9 +90,9 @@ Zie aan de slag [met Windows Insider Program for Business](/windows/deployment/u
     - **Branche gereedheids niveau**: Stel de vertakking in waarvoor het apparaat Windows-updates zal ontvangen. Kies een semi-Annual-kanaal (targeted), semi-Annual-kanaal of een Windows Insider-build.
 
         > [!NOTE]
-        > Beleid voor **Semi-Annual-kanaal (targeted)** implementeren in Windows 10, *versie 1903 of hoger*. Beleids regels implementeren voor **Semi-Annual-kanaal** naar Windows 10, *versie 1809 of eerder*.
+        > Beleid voor **Semi-Annual-kanaal** implementeren in Windows 10, *versie 1903 of hoger*. Beleids regels implementeren voor **Semi-Annual-kanaal (targeted)** naar Windows 10, *versie 1809 of eerder*.
         >
-        > Als u een beleid voor **Semi-Annual-kanaal** implementeert in Windows 10, versie 1903 of hoger, mislukt de implementatie met de fout **0x8004100c**.<!-- 5593139 -->
+        > Als u een beleid voor **Semi-Annual-kanaal (targeted)** implementeert voor Windows 10, versie 1903 of hoger, mislukt de implementatie met de fout **0x8004100c**.<!-- 5593139 -->
 
     - **Uitstel periode (dagen)**: Geef het aantal dagen op waarvoor updates van onderdelen worden uitgesteld. U kunt het ontvangen van deze onderdelen updates uitstellen tot 365 dagen vanaf de release.
     - **Onderbreken van onderdelen updates starten**: Selecteer of u wilt onderbreken dat apparaten maxi maal 35 dagen worden ontvangen vanaf het moment dat u de updates onderbreekt. Als het maximum aantal dagen is verstreken, verloopt de functionaliteit voor onderbreken automatisch en zoekt het apparaat in Windows-Updates naar toepasselijke updates. Na deze scan kunt u de updates opnieuw onderbreken. U kunt de onderbreking van de functie-updates uitschakelen door het selectie vakje uit te scha kelen.

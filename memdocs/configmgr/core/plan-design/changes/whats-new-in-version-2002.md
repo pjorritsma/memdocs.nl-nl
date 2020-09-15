@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7c5c9868949fa9bbf08bbf00083eda8e60750470
-ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
+ms.openlocfilehash: 4035a6684fc346205f7c7af109bf4c0389576e77
+ms.sourcegitcommit: 4b8c317c71535c2d464f336c03b5bebdd2c6d4c9
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89607705"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90083961"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 2002 van Configuration Manager current branch
 
@@ -438,12 +438,12 @@ Het volgende update pakket (4560496) is beschikbaar in de-console vanaf 15 juli 
 
 De volgende aanvullende hotfixes zijn beschikbaar om specifieke problemen op te lossen:
 
-| Id | Titel | Date | In-console |
+| Id | Titel | Datum | In-console |
 |---------|---------|---------|---------|
 | [4575339](https://support.microsoft.com/help/4575339) | Apparaten worden twee keer weer gegeven in micro soft endpoint Configuration Manager beheer centrum | 23 juli 2020 | Nee |
 | [4575774](https://support.microsoft.com/help/4575774) | De cmdlet New-CMTSStepPrestartCheck mislukt in Configuration Manager, versie 2002 | 24 juli 2020 | Nee |
 | [4576782](https://support.microsoft.com/help/4576782) | Time-out voor toepassings blad in micro soft Endpoint Manager-beheer centrum | 11 augustus 2020 | Nee |
-
+| [4578123](https://support.microsoft.com/help/4578123) | CMPivot-query's geven onverwachte resultaten in Configuration Manager, versie 2002 | 24 augustus 2020 | Nee |
 <!--
 > [!NOTE]
 > Starting in version 1902, in-console hotfixes now have supersedence relationships. For more information, see [Supersedence for in-console hotfixes](../../servers/manage/updates.md#bkmk_supersede).

@@ -2,7 +2,7 @@
 title: Technical Preview-releases
 titleSuffix: Configuration Manager
 description: Meer informatie over de technische preview-vertakking om nieuwe functies en mogelijkheden in Configuration Manager te testen.
-ms.date: 09/08/2020
+ms.date: 09/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2a5740d2ef1c0745d5df4995ba6ecb70015b7b13
-ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
+ms.openlocfilehash: a27cd1e7a28b52ccc224f965b678d7d578be75eb
+ms.sourcegitcommit: dc2cca9eb70aef15037e8f7d18d671c513bfde85
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89564207"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90081736"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Technical Preview voor Configuration Manager
 
@@ -116,19 +116,21 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](2020/technical-preview-2007.md) <!--ID-->
+<!-- - [title](2020/technical-preview-2009.md) <!--ID-->
 
 De volgende functies zijn beschikbaar met de meest recente versie van Configuration Manager Technical Preview:
 
-### <a name="technical-preview-version-2008"></a>Technical Preview-versie 2008
+### <a name="technical-preview-version-2009"></a>Technical Preview-versie 2009
 
-- [Voor beeld van verzamelings query](2020/technical-preview-2008.md#collection-query-preview) <!--7380401-->
-- [SetupDiag-fouten analyseren voor onderdeel updates](2020/technical-preview-2008.md#bkmk_setupdiag) <!--4385028-->
-- [Scenario status bewaken](2020/technical-preview-2008.md#bkmk_health) <!--7699463-->
-- [Evaluatie weergave verzameling](2020/technical-preview-2008.md#bkmk_colleval) <!--6251274-->
-- [Zie de grootte van de taken reeks in de-console](2020/technical-preview-2008.md#bkmk_tssize) <!--7645732-->
-- [Taak verouderde verzamelde bestanden voor diagnostische gegevens verwijderen](2020/technical-preview-2008.md#bkmk_logs) <!--6503308-->
-- [Objecten importeren in huidige map](2020/technical-preview-2008.md#bkmk_folder) <!--6601203-->
+- [Cloud beheer gateway met schaalset voor virtuele machines](2020/technical-preview-2009.md#bkmk_cmgvmss) <!--3601040-->
+- [Verbeteringen aan beheer op afstand](2020/technical-preview-2009.md#bkmk_remctrl) <!--4575930-->
+- [Een besturings systeem implementeren via CMG met behulp van opstart media](2020/technical-preview-2009.md#bkmk_osdcmg) <!--3555923-->
+- [Verzamelings relaties weer geven](2020/technical-preview-2009.md#bkmk_coll) <!--3608121-->
+- [Wake-machine bij implementatie deadline met het uitvoeren van peer-activering](2020/technical-preview-2009.md#bkmk_wol) <!--3734819-->
+- [Verbeteringen in console meldingen](2020/technical-preview-2009.md#bkmk_notifications) <!--7410221-->
+- [Meldingen voor apparaten die geen updates meer ontvangen](2020/technical-preview-2009.md#bkmk_patch) <!--7520646-->
+- [Verbeterde Windows Server-ervaring voor het opnieuw opstarten van niet-beheerders accounts](2020/technical-preview-2009.md#bkmk_server) <!--7821529-->
+- [Verbeteringen in de implementatie van het besturings systeem](2020/technical-preview-2009.md#bkmk_osd) <!--7799892,7068388-->
 
 > [!NOTE]
 > Functies die beschikbaar waren in een eerdere versie van de Technical Preview blijven beschikbaar in latere versies. Op dezelfde manier blijven functies die worden toegevoegd aan de Configuration Manager huidige vertakking beschikbaar in de vertakking Technical Preview.
@@ -145,6 +147,16 @@ De volgende functies zijn uitgebracht met eerdere versies van de Configuration M
 
 > [!TIP]
 > Wanneer er een nieuwe huidige branch-versie beschikbaar is, worden de functies die beschikbaar zijn in die versie weer gegeven in het laatste artikel *Wat is er nieuw* . Zie [Wat is er nieuw in incrementele versies](../plan-design/changes/whats-new-incremental-versions.md#supported-versions)? voor meer informatie.
+
+### <a name="technical-preview-version-2008"></a>Technical Preview-versie 2008
+
+- [Voor beeld van verzamelings query](2020/technical-preview-2008.md#collection-query-preview) <!--7380401-->
+- [SetupDiag-fouten analyseren voor onderdeel updates](2020/technical-preview-2008.md#bkmk_setupdiag) <!--4385028-->
+- [Scenario status bewaken](2020/technical-preview-2008.md#bkmk_health) <!--7699463-->
+- [Evaluatie weergave verzameling](2020/technical-preview-2008.md#bkmk_colleval) <!--6251274-->
+- [Zie de grootte van de taken reeks in de-console](2020/technical-preview-2008.md#bkmk_tssize) <!--7645732-->
+- [Taak verouderde verzamelde bestanden voor diagnostische gegevens verwijderen](2020/technical-preview-2008.md#bkmk_logs) <!--6503308-->
+- [Objecten importeren in huidige map](2020/technical-preview-2008.md#bkmk_folder) <!--6601203-->
 
 ### <a name="technical-preview-version-2007"></a>Technical Preview-versie 2007
 

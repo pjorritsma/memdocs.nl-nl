@@ -81,9 +81,17 @@
             - name: macOS LOB-apps
               href: lob-apps-macos.md
             - name: Win32-app-beheer
-              href: apps-win32-app-management.md
-            - name: Win32-app-apparaten in de S-modus
-              href: apps-win32-s-mode.md
+              items:
+                - name: Overzicht van Win32-app-beheer
+                  href: apps-win32-app-management.md
+                - name: Een Win32-app voorbereiden
+                  href: apps-win32-prepare.md
+                - name: Een Win32-app toevoegen
+                  href: apps-win32-add.md
+                - name: Problemen met een Win32-app oplossen
+                  href: apps-win32-troubleshoot.md
+                - name: Win32-app-apparaten in de S-modus
+                  href: apps-win32-s-mode.md
         - name: Specifieke apps toevoegen
           items:
             - name: Bedrijfsportal-app - Autopilot

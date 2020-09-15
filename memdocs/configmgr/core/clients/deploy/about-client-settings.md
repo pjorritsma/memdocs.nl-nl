@@ -2,7 +2,7 @@
 title: Clientinstellingen
 titleSuffix: Configuration Manager
 description: Meer informatie over de standaard-en aangepaste instellingen voor het beheren van client gedrag
-ms.date: 08/20/2020
+ms.date: 09/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8045df681560972a353e08ee43c10b6ae86dc50f
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 9e44c67e2dd7c78787d849e84784a39c40125dc0
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88693417"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076087"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Over client instellingen in Configuration Manager
 
@@ -644,11 +644,9 @@ Stel deze optie in op **Ja** als u verificatie op netwerk niveau (NLA) wilt gebr
 ### <a name="select-the-user-portal"></a>De gebruikers Portal selecteren
 
 <!--CMADO-3601237,INADO-4297660-->
-Als u vanaf versie 2006 de Bedrijfsportal op door co beheerde apparaten implementeert, configureert u deze instelling in **bedrijfsportal**. Deze instelling zorgt ervoor dat gebruikers alleen meldingen ontvangen van Bedrijfsportal.
+Als u vanaf versie 2006 de Bedrijfsportal op door co beheerde apparaten implementeert, configureert u deze instelling in **bedrijfsportal**. Deze instelling zorgt ervoor dat meldingen van Configuration Manager en intune de Bedrijfsportal starten. Als een Configuration Manager melding is voor een scenario dat niet wordt ondersteund door de Bedrijfsportal, selecteert u de melding Software Center wordt gestart.
 
-Als u de Bedrijfsportal op een gezamenlijk beheerd apparaat installeert, maar deze instelling configureert in **Software Center**, zien gebruikers meldingen van beide portals. Deze ervaring kan verwarrend zijn voor gebruikers.
-
-Als u de client instelling voor Bedrijfsportal wijzigt, wordt de Bedrijfsportal gestart wanneer een gebruiker een Configuration Manager melding selecteert. Als de melding betrekking heeft op een scenario, wordt de Bedrijfsportal niet ondersteund door het selecteren van de melding Software Center.
+Als u de Bedrijfsportal installeert op een apparaat met co-beheer, maar deze instelling configureert in **Software Center**, worden meldingen van Configuration Manager Software Center starten. Meldingen van intune starten de Bedrijfsportal. Dit gedrag kan verwarrend zijn voor gebruikers om te communiceren met verschillende portals.
 
 Het gedrag van de Bedrijfsportal is afhankelijk van de configuratie van de werk belasting voor co-beheer. Zie [De bedrijfsportal-app configureren op co-beheerde apparaten](../../../comanage/company-portal.md) voor meer informatie.
 

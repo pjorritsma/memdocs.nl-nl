@@ -10,12 +10,12 @@ ms.assetid: 26456bb7-f46b-4d8d-bb0b-e3fd9a52fe14
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cd49546e49d6964cfe37b0b13e1abe9175f4aa0e
-ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
+ms.openlocfilehash: d44116ee022f2f01fb8b84244fb903fa6d440345
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89432554"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076155"
 ---
 # <a name="use-the-company-portal-app-on-co-managed-devices"></a>Gebruik de bedrijfsportal-app op gezamenlijk beheerde apparaten
 
@@ -121,7 +121,12 @@ Als u problemen met de installatie van Configuration Manager-Apps wilt oplossen,
 
 ### <a name="im-using-configuration-manager-version-2002-why-is-the-new-company-portal-showing-configuration-manager-apps"></a><a name="bkmk_ver-prereq"></a> Ik gebruik Configuration Manager versie 2002, waarom is de nieuwe Bedrijfsportal Configuration Manager apps weer gegeven?
 
-Bedrijfsportal versie 11.0.8980.0 of nieuwer bevat Configuration Manager geïmplementeerde toepassingen voor alle clients met co-beheer die deze gebruiken. Configuration Manager versie 2006 is de vereiste omdat hiermee de client instelling voor het beheren van meldingen wordt toegevoegd. Als u de Bedrijfsportal op een gezamenlijk beheerd apparaat van een eerdere versie installeert of de client instelling niet configureert, zien gebruikers meldingen van beide portals. Deze ervaring kan verwarrend zijn voor gebruikers.
+Bedrijfsportal versie 11.0.8980.0 of nieuwer bevat Configuration Manager geïmplementeerde toepassingen voor alle clients met co-beheer die deze gebruiken. Configuration Manager versie 2006 is de vereiste omdat hiermee de client instelling voor het beheren van meldingen wordt toegevoegd. Als u de Bedrijfsportal installeert op een gezamenlijk beheerd apparaat van een eerdere versie of als u de client instelling niet configureert, veroorzaakt dit gedrag dat voor gebruikers verwarrend is. Meldingen van Configuration Manager Software Center starten, terwijl meldingen van intune de Bedrijfsportal starten.
+
+Micro soft raadt het volgende aan:
+
+- Gebruik Bedrijfsportal versie 11.0.8980.0 of hoger op door co beheerde clients met Configuration Manager versie 2006 of hoger.
+- De client instelling configureren **Selecteer de gebruikers Portal** die u wilt **bedrijfsportal**
 
 ### <a name="does-company-portal-support-applications-deployed-as-software-updates-from-configuration-manager"></a>Ondersteunt Bedrijfsportal toepassingen die worden geïmplementeerd als software-updates van Configuration Manager?
 

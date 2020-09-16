@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3276b7d483bf0fc3f94ce12245304ad9ad2ebad3
-ms.sourcegitcommit: 15450a1e92d9f67f74ae619ffe192c15948107c5
+ms.openlocfilehash: e30ec0c695483b493a9df603f5c7501d494c6aec
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89516270"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574844"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Netwerkeindpunten voor Microsoft Intune  
 
@@ -65,7 +65,6 @@ De volgende tabel bevat de poorten en services waartoe de Intune-client toegang 
 |fef.msua02.manage.microsoft.com|52.177.194.236|
 |fef.msua04.manage.microsoft.com|23.96.112.28|
 |fef.msua06.manage.microsoft.com|13.78.185.97|
-|fef.msub05.manage.microsoft.com|23.97.166.52|
 |fef.msuc03.manage.microsoft.com|23.101.0.100|
 |fef.amsua0502.manage.microsoft.com|13.85.68.142|
 |fef.amsua0602.manage.microsoft.com|52.161.28.64|

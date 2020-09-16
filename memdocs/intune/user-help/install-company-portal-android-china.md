@@ -19,19 +19,18 @@ ms.reviewer: jeyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2880ef5ba044f616f3b14e54c5e42b89eb58912a
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: ce421c40d3a4b1e8a92df139bb18fce22f6231eb
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048001"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606077"
 ---
 # <a name="install-company-portal-app-in-peoples-republic-of-china"></a>Bedrijfsportal-app installeren in de Volksrepubliek China
 
 Installeer de Intune-bedrijfsportal-app om vanaf uw Android-apparaat toegang te krijgen tot school- of werkresources. De app is beschikbaar in de Volksrepubliek China en kan worden geïnstalleerd vanuit de volgende app stores: 
 
 * [Google Play](https://go.microsoft.com/fwlink/?linkid=871947) (niet overal beschikbaar)
-* [Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947) 
 * OPPO
 * [Lenovo](https://go.microsoft.com/fwlink/?linkid=2125082)
 * [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)

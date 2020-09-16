@@ -7,15 +7,15 @@ ms.technology: configmgr-comanage
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 09/06/2019
+ms.date: 09/15/2020
 ms.topic: how-to
 ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
-ms.openlocfilehash: 50f606f008c52470b1742840fcde391f1030455c
-ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
+ms.openlocfilehash: 52a08549087338d0609aafc26f2cc1b3b697d6ba
+ms.sourcegitcommit: e533cdf8722156a66b1cc46f710def96587345d0
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89606809"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90568576"
 ---
 # <a name="how-to-switch-configuration-manager-workloads-to-intune"></a>Configuration Manager-workloads overschakelen naar Intune
 
@@ -47,7 +47,7 @@ Vanaf versie 1906 kunt u verschillende pilot verzamelingen configureren voor elk
 
 > [!Important]  
 > - Voordat u een werk belasting overschakelt, moet u ervoor zorgen dat u de bijbehorende werk belasting correct configureert en implementeert in intune. Zorg ervoor dat workloads altijd worden beheerd door een van de beheer hulpprogramma's voor uw apparaten.
-> - Vanaf Configuration Manager versie 1806, wanneer u een werk belasting voor co-beheer overschakelt, wordt het MDM-beleid automatisch gesynchroniseerd vanuit Microsoft Intune. Deze synchronisatie treedt ook op wanneer u de actie **computer beleid downloaden** van client meldingen in de Configuration Manager-console start. Zie [het ophalen van client beleid initiëren met client meldingen](../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval)voor meer informatie. <!--1357377-->
+> - Vanaf Configuration Manager versie 1806, wanneer u een werk belasting voor co-beheer overschakelt, wordt het MDM-beleid automatisch gesynchroniseerd vanuit Microsoft Intune. <!--7087526-->
 
 ## <a name="switch-workloads-in-version-1902-and-earlier"></a>Werk belastingen overschakelen in versie 1902 en lager
 
@@ -74,7 +74,7 @@ U kunt overstappen op werk belastingen wanneer u co-beheer inschakelt of later w
 
 > [!Important]  
 > - Voordat u een werk belasting overschakelt, moet u ervoor zorgen dat u de bijbehorende werk belasting correct configureert en implementeert in intune. Zorg ervoor dat workloads altijd worden beheerd door een van de beheer hulpprogramma's voor uw apparaten. 
-> - Vanaf Configuration Manager versie 1806, wanneer u een werk belasting voor co-beheer overschakelt, wordt het MDM-beleid automatisch gesynchroniseerd vanuit Microsoft Intune. Deze synchronisatie treedt ook op wanneer u de actie **computer beleid downloaden** van client meldingen in de Configuration Manager-console start. Zie [het ophalen van client beleid initiëren met client meldingen](../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval)voor meer informatie. <!--1357377-->
+> - Vanaf Configuration Manager versie 1806, wanneer u een werk belasting voor co-beheer overschakelt, wordt het MDM-beleid automatisch gesynchroniseerd vanuit Microsoft Intune. <!--7087526-->
 
 ## <a name="next-steps"></a>Volgende stappen
 

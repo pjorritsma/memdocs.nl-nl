@@ -10,12 +10,12 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 86a19970b58747d83ae8823eb8e2a85c40c03c4d
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: ab4d42d635955774f504ccd831e9ced755b0b36a
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88697344"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574725"
 ---
 # <a name="task-sequence-variables"></a>Takenreeksvariabelen
 
@@ -579,6 +579,12 @@ Als er meerdere apparaatstuurprogramma's in de stuurprogrammacatalogus zijn die 
 (invoer)
 
 Een door komma's gescheiden lijst van unieke categorie-id's uit de stuurprogrammacatalogus. Met de stap **stuur programma automatisch Toep assen** worden alleen de Stuur Programma's in ten minste één van de opgegeven categorieën beschouwd. Deze waarde is optioneel en is niet standaard ingesteld. Haal de beschik bare categorie-Id's op door de lijst met **SMS_CategoryInstance** objecten op de site te inventariseren.
+
+### <a name="osdbitlockerpin"></a><a name="OSDBitLockerPIN"></a> OSDBitLockerPIN
+<!-- MEMDOcs #764 -->
+*Is van toepassing op de stap [BitLocker inschakelen](task-sequence-steps.md#BKMK_EnableBitLocker) .*
+
+Geef de pincode op voor BitLocker-versleuteling. Deze variabele is alleen geldig als de BitLocker-modus **TPM en pincode**is.
 
 ### <a name="osdbitlockerrebootcount"></a><a name="OSDBitLockerRebootCount"></a> OSDBitLockerRebootCount
 

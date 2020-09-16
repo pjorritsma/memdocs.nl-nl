@@ -2,7 +2,7 @@
 title: BitLocker-portals instellen
 titleSuffix: Configuration Manager
 description: De BitLocker-beheer onderdelen voor de Self-Service Portal en de beheer-en bewakings website installeren
-ms.date: 08/11/2020
+ms.date: 09/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: how-to
@@ -10,12 +10,12 @@ ms.assetid: 1cd8ac9f-b7ba-4cf4-8cd2-d548b0d6b1df
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d1b07d30c7a593ec0bd70e6c330c57364186f2c8
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: f6834090cd2a58113fb26e298c0c451f846f5ce9
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88697259"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574589"
 ---
 # <a name="set-up-bitlocker-portals"></a>BitLocker-portals instellen
 
@@ -106,6 +106,8 @@ Dit proces maakt gebruik van een Power shell-script, MBAMWebSiteInstaller.ps1, o
 - `-IISWebSite`: De website waarop het script de MBAM-webtoepassingen installeert. Standaard wordt de IIS-standaard website gebruikt. Maak de aangepaste website voordat u deze para meter gebruikt.
 
 - `-InstallDirectory`: Het pad waarin het script de Web-toepassings bestanden installeert. Dit pad is standaard `C:\inetpub` . Maak de aangepaste map voordat u deze para meter gebruikt.
+
+- `-DomainName`*is van toepassing op versie 2002 en hoger*: Geef de NetBIOS-domein naam van de server op met de Help Desk of selfservice Web Portal Role. Alleen vereist als de NetBIOS-domein naam niet overeenkomt met de DNS-domein naam. Deze configuratie wordt ook wel een niet-aaneengesloten domein naam ruimte genoemd. Bijvoorbeeld, `-DomainName fabrikham` waarbij de DNS-domein naam is `contoso.com` .<!-- MEMDocs #759 -->
 
 - `-Uninstall`: Hiermee verwijdert u de BitLocker Management Help Desk/self-service portal sites op een webserver waarop ze eerder zijn geïnstalleerd.
 

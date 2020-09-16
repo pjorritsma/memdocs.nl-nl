@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8ef60b82e6ab594689576520443bc74eac7bd17d
-ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
+ms.openlocfilehash: 018b8f09b0f5595c854eee761f495974665a45ce
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89606940"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574675"
 ---
 # <a name="deploy-bitlocker-management"></a>BitLocker-beleid implementeren
 
@@ -214,7 +214,8 @@ U kunt dit probleem omzeilen door BitLocker op het apparaat uit te scha kelen. I
 
 De Configuration Manager-client-handler voor BitLocker is op zichzelfe hoogte. Als het apparaat wordt beheerd door co-beheer en u de [Endpoint Protection workload](../../../comanage/workloads.md#endpoint-protection) overschakelt naar intune, wordt het BitLocker-beleid door de Configuration Manager-client genegeerd. Het apparaat ontvangt een Windows-versleutelings beleid van intune.
 
-Wanneer u overschakelt van versleutelings beheer instanties en de gewenste versleutelings algoritme wordt ook gewijzigd, moet u de [hercodering](#re-encryption) plannen.
+> [!NOTE]
+> Voor het wisselen van de versleutelings beheer instanties zijn geen aanvullende acties op de client vereist. Als u echter verwisselt met versleutelings beheer instanties en het gewenste versleutelings algoritme ook wordt gewijzigd, moet u de [hercodering](#re-encryption)plannen.
 
 Raadpleeg de volgende artikelen voor meer informatie over het beheren van BitLocker met intune:
 

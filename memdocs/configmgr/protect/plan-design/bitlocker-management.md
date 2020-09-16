@@ -2,7 +2,7 @@
 title: BitLocker-beheer plannen
 titleSuffix: Configuration Manager
 description: Plannen voor het beheer van BitLocker-stationsversleuteling met Configuration Manager
-ms.date: 08/11/2020
+ms.date: 09/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 22e78fdba1c004554d671ba2db96c61395f95ca2
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 193189e0e949aefdff15630476a306c1dc4ef2c7
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699956"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574528"
 ---
 # <a name="plan-for-bitlocker-management"></a>BitLocker-beheer plannen
 
@@ -23,12 +23,12 @@ ms.locfileid: "88699956"
 
 <!-- 3601034 -->
 
-Vanaf versie 1910 gebruikt u Configuration Manager om BitLocker-stationsversleuteling (BDE) te beheren voor on-premises Windows-clients, die zijn gekoppeld aan Active Directory. Azure Active Directory lid zijn van een werk groep of clients worden niet ondersteund. Het biedt een volledig beheer van de BitLocker-levenscyclus waarmee het gebruik van micro soft BitLocker Administration and monitoring (MBAM) kan worden vervangen.
+Vanaf versie 1910 gebruikt u Configuration Manager om BitLocker-stationsversleuteling (BDE) te beheren voor on-premises Windows-clients, die zijn gekoppeld aan Active Directory. Het biedt een volledig beheer van de BitLocker-levenscyclus waarmee het gebruik van micro soft BitLocker Administration and monitoring (MBAM) kan worden vervangen.
 
 > [!NOTE]
 > Configuration Manager schakelt deze optionele functie standaard niet in. U moet deze functie inschakelen voordat u deze kunt gebruiken. Zie voor meer informatie [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).  
 
-Zie [overzicht van BitLocker](/windows/security/information-protection/bitlocker/bitlocker-overview)voor meer informatie.
+Zie [overzicht van BitLocker](/windows/security/information-protection/bitlocker/bitlocker-overview)voor meer algemene informatie over BitLocker.
 
 > [!TIP]
 > Als u versleuteling wilt beheren op met co beheerde Windows 10-apparaten met behulp van de micro soft Endpoint Manager-Cloud service, schakelt u de [ **Endpoint Protection** workload](../../comanage/workloads.md#endpoint-protection) over naar intune. Zie [Windows-versleuteling](/intune/protect/endpoint-protection-windows-10#windows-encryption)voor meer informatie over het gebruik van intune.
@@ -71,6 +71,8 @@ Sta andere personen in uw organisatie buiten de Configuration Manager-console to
 Laat gebruikers zichzelf helpen met een sleutel voor eenmalig gebruik voor het ontgrendelen van een apparaat dat is versleuteld met BitLocker. Zodra deze sleutel wordt gebruikt, wordt er een nieuwe sleutel voor het apparaat gegenereerd.
 
 ## <a name="prerequisites"></a>Vereisten
+
+- Azure Active Directory lid zijn van een werk groep of clients in niet-vertrouwde domeinen worden niet ondersteund. De client moet momenteel lid zijn van on-premises Active Directory. Deze configuratie is om te verifiëren met de Recovery-service voor borg sleutels.
 
 - Als u een beheer beleid voor BitLocker wilt maken, moet u de rol **volledige beheerder** hebben in Configuration Manager.
 

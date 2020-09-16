@@ -10,12 +10,12 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 37abb7cba84c8e2479e59070e47c3f09b3b2b8d9
-ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
+ms.openlocfilehash: 49792ea588f01cc57a1dbce9cc137b94a0e4d291
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89606971"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574793"
 ---
 # <a name="task-sequence-steps"></a>Stappen voor takenreeksen
 
@@ -160,7 +160,7 @@ Geef alle Stuur Programma's voor massa opslag op die nodig zijn om een klassiek 
 
 Selecteer het stuur programma voor massa opslag dat moet worden geïnstalleerd vóór de installatie van een klassiek besturings systeem. De vervolg keuzelijst wordt gevuld vanuit het opgegeven pakket.  
 
-##### <a name="model"></a>Model
+##### <a name="model"></a>Modelleren
 
 Geef het apparaat op dat essentieel is voor het opstarten dat nodig is voor implementaties van besturings systemen van vóór Windows Vista.  
 
@@ -1096,8 +1096,9 @@ Als de harde schijf al is versleuteld, maar BitLocker is uitgeschakeld, schakelt
 
 Gebruik de volgende taken reeks variabelen met deze stap:  
 
-- [OSDBitLockerRecoveryPassword](task-sequence-variables.md#OSDBitLockerRecoveryPassword)  
-- [OSDBitLockerStartupKey](task-sequence-variables.md#OSDBitLockerStartupKey)  
+- [OSDBitLockerPIN](task-sequence-variables.md#OSDBitLockerPIN)
+- [OSDBitLockerRecoveryPassword](task-sequence-variables.md#OSDBitLockerRecoveryPassword)
+- [OSDBitLockerStartupKey](task-sequence-variables.md#OSDBitLockerStartupKey)
 
 ### <a name="cmdlets-for-enable-bitlocker"></a>Cmdlets voor het inschakelen van BitLocker
 
@@ -1592,12 +1593,20 @@ Met deze stap kunt u de Configuration Manager-client op de referentie computer v
 
 Met deze stap wordt de Configuration Manager-client volledig verwijderd, in plaats van alleen de sleutel gegevens te verwijderen. Wanneer de vastgelegde installatie kopie van het besturings systeem door de taken reeks wordt geïmplementeerd, wordt elke keer een nieuwe Configuration Manager-client geïnstalleerd.  
 
-> [!Note]  
-> De taken reeks engine verwijdert de client alleen tijdens het **bouwen en vastleggen van een referentie-installatie kopie van het besturings systeem** . De taken reeks engine verwijdert de client niet tijdens andere vastleg methoden, zoals vastleg media of een aangepaste taken reeks.  
+> [!TIP]
+> De taken reeks engine verwijdert standaard alleen de client tijdens de taken reeks voor het **maken en vastleggen van een referentie-installatie kopie van het besturings systeem** . De taken reeks engine verwijdert de client niet tijdens andere vastleg methoden, zoals vastleg media of een aangepaste taken reeks. U kunt dit gedrag overideen voor een implementatie taken reeks van een besturings systeem. Stel de taken reeks variabele **SMSTSUninstallCCMClient** in op **True** voordat de stap **ConfigMgr-client voorbereiden voor vastleggen wordt voor bereid** . Deze variabele en dit gedrag zijn alleen van toepassing op taken reeksen voor besturingssysteem implementaties. De client wordt verwijderd na de volgende keer dat het apparaat opnieuw wordt opgestart.
 
 Deze taken reeks stap kan alleen in het volledige besturings systeem worden uitgevoerd. Deze wordt niet uitgevoerd in Windows PE.  
 
 Als u deze stap wilt toevoegen in de taken reeks editor, selecteert u **toevoegen**, selecteert u **installatie kopieën**en selecteert u **ConfigMgr-client voorbereiden voor vastleggen**.
+
+
+### <a name="variables-for-prepare-configmgr-client-for-capture"></a>Variabelen voor het voorbereiden van ConfigMgr-client voor vastleggen
+
+Gebruik de volgende taken reeks variabelen met deze stap:  
+
+- SMSTSUninstallCCMClient
+
 
 ### <a name="cmdlets-for-prepare-configmgr-client-for-capture"></a>Cmdlets voor het voorbereiden van ConfigMgr-client voor vastleggen
 

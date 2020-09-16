@@ -2,7 +2,7 @@
 title: Clients bewaken
 titleSuffix: Configuration Manager
 description: Gedetailleerde richt lijnen voor het controleren van clients in Configuration Manager
-ms.date: 07/12/2019
+ms.date: 09/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2c8f57cf-1968-48de-87fb-4897432ed6e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 00a10e169db36c62b083c56114159b54185a1040
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: 8094db944a1430311f0c3bb8c94bc7043b12c5ae
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87525910"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574610"
 ---
 # <a name="how-to-monitor-clients-in-configuration-manager"></a>Clients controleren in Configuration Manager
 
@@ -24,7 +24,7 @@ ms.locfileid: "87525910"
 Nadat u de Configuration Manager-client op de Windows-apparaten in uw site hebt geïnstalleerd, controleert u de status en activiteit in de Configuration Manager-console.  
 
 
-## <a name="about-client-status"></a><a name="bkmk_about"></a>Over de client status
+## <a name="about-client-status"></a><a name="bkmk_about"></a> Over de client status
 
 Configuration Manager biedt de volgende soorten informatie als client status:  
 
@@ -47,7 +47,7 @@ Configuration Manager biedt de volgende soorten informatie als client status:
 - **Verouderd**: de site heeft een nieuwe apparaat-record gevonden met dezelfde hardware-id, zodat de oude record als verouderd wordt gemarkeerd. Rapporten tellen geen verouderde records van hetzelfde apparaat meerdere keren. U kunt nog steeds beleid bereiken voor verouderde apparaten. Als de site geen heartbeat voor een verouderde record krijgt na 90 dagen van inactiviteit, wordt het verouderde apparaat verwijderd tijdens het uitvoeren van de site onderhoud taak **verouderde client detectie gegevens verwijderen**.
 
 
-## <a name="monitor-individual-clients"></a><a name="bkmk_indStatus"></a>Afzonderlijke clients bewaken
+## <a name="monitor-individual-clients"></a><a name="bkmk_indStatus"></a> Afzonderlijke clients bewaken
 
 1. Ga in de Configuration Manager-console naar de werk ruimte **activa en naleving** . Selecteer het knoop punt **apparaten** of kies een verzameling onder **apparaten verzamelingen**.  
 
@@ -71,16 +71,16 @@ Configuration Manager biedt de volgende soorten informatie als client status:
 3. Selecteer een afzonderlijke client in het lijst deel venster om meer statussen in het detail venster weer te geven. Deze informatie omvat client activiteit en client controle status.  
 
 
-## <a name="client-health-dashboard"></a><a name="bkmk_health"></a>Client status dashboard
+## <a name="client-health-dashboard"></a><a name="bkmk_health"></a> Client status dashboard
 
 <!--3599209-->
 U implementeert software-updates en andere apps om uw omgeving te beveiligen, maar deze implementaties bereiken alleen gezonde clients. Slechte Configuration Manager-clients hebben een negatieve invloed op de algehele naleving. Het bepalen van de status van de client kan lastig zijn, afhankelijk van de noemer: hoeveel apparaten in totaal moeten worden beheerd? Als u bijvoorbeeld alle systemen van Active Directory ontdekt, zelfs als sommige van deze records voor buiten gebruik gestelde machines zijn, neemt dit proces uw noemer toe.
 
-Vanaf versie 1902 kunt u een dash board weer geven met informatie over de status van Configuration Manager-clients in uw omgeving. Bekijk de status van uw client, scenario status en veelvoorkomende fouten. Filter de weer gave op diverse kenmerken om potentiële problemen per OS en client versies te bekijken.
+Configuration Manager biedt een dash board met informatie over de status van clients in uw omgeving. Bekijk de status van uw client, scenario status en veelvoorkomende fouten. Filter de weer gave op diverse kenmerken om potentiële problemen per OS en client versies te bekijken.
 
 Ga in de Configuration Manager-console naar de werk ruimte **bewaking** . Vouw **client status**uit en selecteer het knoop punt **client status dashboard** .
 
-![Scherm afbeelding client status dashboard](media/3599209-client-health-dashboard.png)
+:::image type="content" source="media/3599209-client-health-dashboard.png" alt-text="Scherm afbeelding client status dashboard" lightbox="media/3599209-client-health-dashboard.png":::
 
 > [!Tip]  
 > Er zijn geen wijzigingen in ccmeval.  
@@ -91,18 +91,18 @@ Standaard worden in het dash board van de client status online-clients en-client
 
 Boven aan het dash board bevindt zich een set filters voor het aanpassen van de gegevens die in het dash board worden weer gegeven.
 
-- **Verzameling**: standaard worden in het dash board apparaten weer gegeven in de verzameling **alle systemen** . Selecteer een apparaat verzameling in de lijst om de weer gave te beperken tot een subset van apparaten in een specifieke verzameling.  
+- **Client status voor clients in de volgende verzamelingen**: in het dash board worden standaard apparaten weer gegeven in de verzameling **alle systemen** . Selecteer een apparaat verzameling om de weer gave te beperken tot een subset van apparaten in een bepaalde verzameling.  
 
-- **Online/offline**: in het dash board worden standaard alleen online clients weer gegeven. Deze status is afkomstig van het kanaal voor client meldingen dat elke vijf minuten de status van een client bijwerkt. Zie [about client status](monitor-clients.md#bkmk_about)voor meer informatie.  
+- **Client actief in het afgelopen aantal dagen**: standaard geeft het dash board clients weer die in de afgelopen drie dagen actief zijn.  
 
-- **Actieve \# dagen**: standaard geeft het dash board clients weer die in de afgelopen drie dagen actief zijn.  
+- **Client status voor offline clients toevoegen**: standaard worden alleen online clients weer gegeven in het dash board. Deze status is afkomstig van het kanaal voor client meldingen dat elke vijf minuten de status van een client bijwerkt. Zie [about client status](monitor-clients.md#bkmk_about)voor meer informatie.  
 
-- **Alleen fout**: bereik de weer gave alleen voor apparaten die een client status fout rapporteren.  
+- **Alleen details van de status van de client weer geven**: bereik de weer gave alleen voor apparaten die een client status fout rapporteren.  
 
     > [!Tip]  
     > Gebruik dit filter samen met de tegels van de client versie en de besturingssysteem versie. Zie [versie tegels](#version-tiles)voor meer informatie.
 
-### <a name="client-health-percentage"></a>Client status percentage
+### <a name="overall-client-health"></a>Algehele client status
 
 Deze tegel toont de algehele client status in uw hiërarchie.
 
@@ -161,7 +161,7 @@ Failure 1 description
 Solution for failure 1 -->
 
 
-## <a name="monitor-the-status-of-all-clients"></a><a name="bkmk_allStatus"></a>De status van alle clients controleren
+## <a name="monitor-the-status-of-all-clients"></a><a name="bkmk_allStatus"></a> De status van alle clients controleren
 
 1. Ga in de Configuration Manager-console naar de werk ruimte **bewaking** en selecteer het knoop punt **client status** . Bekijk de algemene statistieken voor client activiteit en client controles op de site. Wijzig het bereik van de informatie door een andere verzameling te kiezen.  
 
@@ -174,7 +174,7 @@ Solution for failure 1 -->
     Waarschuwingen configureren om u te waarschuwen wanneer client controle resultaten of client activiteit onder een opgegeven percentage daalt. De site kan u ook waarschuwen wanneer herbemiddeling mislukt op een opgegeven percentage clients. Zie [How to configure client status](../deploy/configure-client-status.md)voor meer informatie.  
 
 
-## <a name="client-health-checks"></a><a name="BKMK_ClientHealth"></a>Client status controles
+## <a name="client-health-checks"></a><a name="BKMK_ClientHealth"></a> Client status controles
 
 Client controle voert de volgende controles en herstel bewerkingen uit:  
 

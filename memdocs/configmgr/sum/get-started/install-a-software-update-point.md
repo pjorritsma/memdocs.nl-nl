@@ -5,17 +5,17 @@ description: Voor primaire sites is een software-update punt op de centrale behe
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/27/2019
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b099a645-6434-498f-a408-1d438e394396
-ms.openlocfilehash: 0cddb8df51624a562597da17ea310db0a26081f3
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1f3ab3c108a7f8481aee84b6df5cd41b4b186246
+ms.sourcegitcommit: 6176a7825d6c663faa318a6818b7764bc70f08fc
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81715471"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90718838"
 ---
 # <a name="install-and-configure-a-software-update-point"></a>Een software-update punt installeren en configureren  
 
@@ -69,7 +69,7 @@ ms.locfileid: "81715471"
 ### <a name="configure-ssl-communications-to-wsus"></a>SSL-communicatie naar WSUS configureren  
  U kunt SSL-communicatie configureren op de pagina **Algemeen** van de wizard of op het tabblad **Algemeen** in de eigenschappen van het software-updatepunt.  
 
- Voor meer informatie over het gebruik van SSL, zie [Beslissen om WSUS te configureren voor gebruik van SSL](../plan-design/plan-for-software-updates.md#BKMK_WSUSandSSL).  
+ Zie [bepalen of WSUS moet worden geconfigureerd](../plan-design/plan-for-software-updates.md#BKMK_WSUSandSSL) voor het gebruik van SSL en [een software-update punt configureren voor het gebruik van TLS/SSL met een PKI-certificaat](../get-started/software-update-point-ssl.md)voor meer informatie over het gebruik van SSL.  
 
 ### <a name="wsus-server-connection-account"></a>WSUS-serververbindingsaccount  
  U kunt een account configureren voor gebruik door de siteserver wanneer het verbinding maakt met WSUS dat op het software-updatepunt wordt uitgevoerd. Wanneer u dit account niet configureert, gebruikt de Configuration Manager het computer account voor de site server om verbinding te maken met WSUS. Configureer het WSUS-serververbindingsaccount op de pagina **Proxy- en accountinstellingen** van de wizard of op het tabblad **Proxy- en accountinstellingen** in de eigenschappen van het software-updatepunt.  U kunt het account configureren op verschillende plaatsen van de wizard, afhankelijk van de versie van Configuration Manager die u gebruikt.  
@@ -93,7 +93,7 @@ ms.locfileid: "81715471"
     > [!NOTE]  
     >  Wanneer zich een firewall tussen het software-updatepunt en internet bevindt, moet de firewall mogelijk worden geconfigureerd om de HTTP- en HTTPS-poorten te accepteren die worden gebruikt voor de WSUS-website. U kunt ook kiezen om de toegang op de firewall te beperken tot beperkte domeinen. Zie [Firewalls configureren](../plan-design/plan-for-software-updates.md#BKMK_ConfigureFirewalls)voor meer informatie over het plannen van een firewall die software-updates ondersteunt.  
 
--   **Synchroniseren vanaf een gegevens bron locatie stroomopwaarts: gebruik deze instelling om meta gegevens van software-updates te synchroniseren vanuit de upstream-synchronisatie bron. <a name="BKMK_wsussync"> </a>** De onderliggende primaire sites en secundaire sites worden automatisch geconfigureerd om de URL van de bovenliggende site voor deze instelling te gebruiken. U kunt de software-updates synchroniseren vanaf een bestaande WSUS-server. Geef een URL op, bijvoorbeeld `https://WSUSServer:8531`, waarbij 8531 de poort is die wordt gebruikt om verbinding te maken met de WSUS-server.  
+-   ** <a name="BKMK_wsussync"></a> Synchroniseren vanaf een gegevens bron locatie stroomopwaarts**: gebruik deze instelling om meta gegevens van software-updates te synchroniseren vanuit de upstream-synchronisatie bron. De onderliggende primaire sites en secundaire sites worden automatisch geconfigureerd om de URL van de bovenliggende site voor deze instelling te gebruiken. U kunt de software-updates synchroniseren vanaf een bestaande WSUS-server. Geef een URL op, bijvoorbeeld `https://WSUSServer:8531` , waarbij 8531 de poort is die wordt gebruikt om verbinding te maken met de WSUS-server.  
 
 -   **Niet synchroniseren vanuit Microsoft Update of gegevensbron stroomopwaarts**: gebruik deze instelling om software-updates handmatig te synchroniseren wanneer het software-updatepunt op de site op het hoogste niveau niet is verbonden met internet. Zie de sectie [Software-updates synchroniseren vanaf een niet-verbonden software-updatepunt](synchronize-software-updates-disconnected.md)voor meer informatie.  
 

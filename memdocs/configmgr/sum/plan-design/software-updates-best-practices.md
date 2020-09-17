@@ -5,17 +5,17 @@ description: Gebruik deze aanbevolen procedures voor software-updates in Configu
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 07/30/2018
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 6d20389a-9de2-4a64-bced-9fc4fa519174
-ms.openlocfilehash: 3a48ce044f3d1aecbebf2ba93e936dd34b904140
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 2809a6852cc3739cfe48418580ba464c3abe956a
+ms.sourcegitcommit: 6176a7825d6c663faa318a6818b7764bc70f08fc
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696635"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90718685"
 ---
 # <a name="best-practices-for-software-updates-in-configuration-manager"></a>Aanbevolen procedures voor software-updates in Configuration Manager
 
@@ -53,7 +53,8 @@ Wanneer de Configuration Manager-en WSUS-data bases hetzelfde exemplaar van SQL 
 
 Wanneer u WSUS installeert, selecteert u de instelling om **Updates lokaal**op te slaan. Deze instelling zorgt ervoor dat WSUS de licentie voorwaarden downloadt die aan software-updates zijn gekoppeld. De termen worden tijdens het synchronisatie proces gedownload en opgeslagen op de lokale harde schijf voor de WSUS-server. Als u deze instelling niet selecteert, kunnen client computers geen compatibiliteits scans uitvoeren voor software-updates met licentie voorwaarden. Met het onderdeel **WSUS Synchronization Manager** van het software-update punt wordt gecontroleerd of deze instelling standaard elke 60 minuten is ingeschakeld.  
 
-
+### <a name="configure-your-software-update-points-to-use-tlsssl"></a><a name="bkmk_ssl"></a> Uw software-update punten configureren voor het gebruik van TLS/SSL
+Het configureren van Windows Server Update Services (WSUS)-servers en de bijbehorende software-update punten voor het gebruik van TLS/SSL kunnen de mogelijkheid van een mogelijke aanvaller om een client op afstand te inbreuk maken en bevoegdheden te verhogen, te verminderen. We raden u ten zeerste aan het TLS/SSL-protocol te gebruiken om de infra structuur voor software-updates te beveiligen, om ervoor te zorgen dat de beste beveiligings protocollen aanwezig zijn. Zie voor meer informatie de [zelf studie een software-update punt configureren voor het gebruik van TLS/SSL met een PKI-certificaat](../get-started/software-update-point-ssl.md).
 
 ## <a name="operational-best-practices"></a><a name="bkmk_operation"></a> Aanbevolen procedures voor operationeel  
 

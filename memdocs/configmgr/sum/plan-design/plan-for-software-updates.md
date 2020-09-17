@@ -5,17 +5,17 @@ description: Een plan voor de infra structuur van het software-update punt is es
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
-ms.openlocfilehash: 991f367dbd842037aecf4f808f27c4fb2961cc38
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: c38f3b509ba6104647dd60c8284fde52b5b4995e
+ms.sourcegitcommit: 6176a7825d6c663faa318a6818b7764bc70f08fc
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696715"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90718821"
 ---
 # <a name="plan-for-software-updates-in-configuration-manager"></a>Software-updates plannen in Configuration Manager
 
@@ -260,10 +260,10 @@ Wanneer een WSUS-server is geconfigureerd als een software-update punt, kunt u d
 Wanneer u de rol van het software-update punt op een primaire site server toevoegt, kunt u geen WSUS-server gebruiken die als een replica is geconfigureerd. Wanneer de WSUS-server is geconfigureerd als een replica, kan Configuration Manager de WSUS-server niet configureren en mislukt de WSUS-synchronisatie. Het eerste software-updatepunt dat u installeert op een primaire site wordt het standaardsoftware-updatepunt. Andere software-updatepunten op de site zijn geconfigureerd als replica's van het standaardsoftware-updatepunt.  
 
 ####  <a name="decide-whether-to-configure-wsus-to-use-ssl"></a><a name="BKMK_WSUSandSSL"></a> Beslissen of WSUS moet worden geconfigureerd voor het gebruik van SSL  
-Gebruik het SSL-protocol om het software-update punt te beveiligen. WSUS gebruikt SSL om clientcomputers en downstream-WSUS-servers voor de WSUS-server te verifiëren. WSUS gebruikt ook SSL om de metagegevens van de software-update te versleutelen. Wanneer u ervoor kiest om WSUS met SSL te beveiligen, moet u de WSUS-server voorbereiden voordat u het software-update punt installeert. Zie voor meer informatie het artikel [SSL configureren op de WSUS-server](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) in de documentatie voor WSUS. 
 
-Wanneer u het software-update punt installeert en configureert, selecteert u de optie om **SSL-communicatie voor de WSUS-server in te scha kelen**. Als dat niet het geval is, wordt WSUS door Configuration Manager geconfigureerd om SSL niet te gebruiken. Wanneer u SSL inschakelt op een software-update punt, moet u ook software-update punten op onderliggende sites configureren voor het gebruik van SSL.  
+Het SSL-protocol gebruiken om het software-update punt te beveiligen, wordt sterk aanbevolen. WSUS gebruikt SSL om clientcomputers en downstream-WSUS-servers voor de WSUS-server te verifiëren. WSUS gebruikt ook SSL om de metagegevens van de software-update te versleutelen. Wanneer u ervoor kiest om WSUS met SSL te beveiligen, moet u de WSUS-server voorbereiden voordat u het software-update punt installeert.
 
+Wanneer u het software-update punt installeert en configureert, selecteert u de optie om **SSL-communicatie voor de WSUS-server in te scha kelen**. Als dat niet het geval is, wordt WSUS door Configuration Manager geconfigureerd om SSL niet te gebruiken. Wanneer u SSL inschakelt op een software-update punt, moet u ook software-update punten op onderliggende sites configureren voor het gebruik van SSL. Zie voor meer informatie de [zelf studie een software-update punt configureren voor het gebruik van TLS/SSL met een PKI-certificaat](../get-started/software-update-point-ssl.md).
 
 ###  <a name="configure-firewalls"></a><a name="BKMK_ConfigureFirewalls"></a> Firewalls configureren  
 

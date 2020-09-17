@@ -3,19 +3,19 @@ title: Beveiliging en privacy voor software-updates
 titleSuffix: Configuration Manager
 description: Volg deze aanbevolen procedures voor de beveiliging van software-updates en informatie over de manier waarop Configuration Manager privacy-informatie verwerkt.
 manager: dougeby
-ms.date: 10/06/2016
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 41d6d5d8-ba84-4efb-b105-4d1eed239824
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 5c7a1ac5e88aa669ae1d5e6bb9333e1f54fb5980
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0838f43abf7ff972ac3f6ca2cdf44dcafda323ca
+ms.sourcegitcommit: 6176a7825d6c663faa318a6818b7764bc70f08fc
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724004"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90718719"
 ---
 # <a name="security-and-privacy-for-software-updates-in-configuration-manager"></a>Beveiliging en privacy voor software-updates in Configuration Manager
 
@@ -42,7 +42,9 @@ Dit onderwerp bevat beveiligings-en privacy-informatie voor software-updates in 
 
 -   Schakel SSL op Windows Server Update Services (WSUS) in en volg de aanbevolen procedures om WSUS te beveiligen.  
 
-     Bepaal en volg de aanbevolen beveiligings procedures voor de WSUS-versie die u gebruikt met Configuration Manager.  
+     Bepaal en volg de aanbevolen beveiligings procedures voor de WSUS-versie die u gebruikt met Configuration Manager. 
+
+     Voor meer informatie over het inschakelen van SSL raadpleegt [u de zelf studie een software-update punt configureren voor het gebruik van TLS/SSL met een PKI-certificaat](../get-started/software-update-point-ssl.md). 
 
     > [!IMPORTANT]  
     >  Als u het software-updatepunt zodanig configureert dat SSL-communicatie voor de WSUS-server wordt ingeschakeld, moet u virtuele roots voor SSL configureren op de WSUS-server.  
@@ -59,7 +61,7 @@ Dit onderwerp bevat beveiligings-en privacy-informatie voor software-updates in 
 
      Zie [Configure WSUS to use a custom web site](plan-for-software-updates.md#BKMK_CustomWebSite)voor meer informatie.  
 
-##  <a name="privacy-information-for-software-updates"></a><a name="BKMK_Privacy_HardwareInventory"></a>Privacy-informatie voor software-updates  
+##  <a name="privacy-information-for-software-updates"></a><a name="BKMK_Privacy_HardwareInventory"></a> Privacy-informatie voor software-updates  
  Bij software-updates worden uw clientcomputers gescand om te bepalen welke updates u nodig hebt. Vervolgens wordt die informatie teruggestuurd naar de sitedatabase. Tijdens het software-update proces kan Configuration Manager informatie verzenden tussen clients en servers die de computer en aanmeldings accounts identificeren.  
 
  Configuration Manager houdt informatie over de status van het software-implementatie proces. Statusinformatie wordt niet versleuteld tijdens de overdracht of opslag. Status informatie wordt opgeslagen in de Configuration Manager-Data Base en wordt verwijderd door de onderhouds taken van de data base. Er wordt geen statusinformatie verzonden naar Microsoft.  

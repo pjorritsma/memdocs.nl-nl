@@ -10,12 +10,12 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ab4d42d635955774f504ccd831e9ced755b0b36a
-ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
+ms.openlocfilehash: 852ab8b709dcec90d7819a63a6cb6dbb2c781534
+ms.sourcegitcommit: 2339c927b6576db8878f34f167a9a45c5dc9f58d
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90574725"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90689460"
 ---
 # <a name="task-sequence-variables"></a>Takenreeksvariabelen
 
@@ -1651,7 +1651,9 @@ Gebruik deze variabele als u inhoud tijdelijk in de takenreekscache wilt houden.
 
 ### <a name="smstspostaction"></a><a name="SMSTSPostAction"></a> SMSTSPostAction
 
-Hiermee geeft u een opdracht op die wordt uitgevoerd nadat de taken reeks is voltooid. Geef bijvoorbeeld `shutdown.exe /r /t 30 /f` op dat de computer 30 seconden nadat de taken reeks is voltooid, opnieuw moet worden opgestart.
+Hiermee geeft u een opdracht op die wordt uitgevoerd nadat de taken reeks is voltooid. Net voordat de taken reeks wordt afgesloten, wordt de opgegeven post-actie door het service tsmanager-proces uitgevoerd. Er wordt niet gewacht of de status wordt vastgelegd, alleen afgesloten nadat de opdracht is aangeroepen.<!-- MEMDocs #719 -->
+
+Geef bijvoorbeeld `shutdown.exe /r /t 30 /f` op dat de computer 30 seconden nadat de taken reeks is voltooid, opnieuw moet worden opgestart.
 
 ### <a name="smstspreferredadvertid"></a><a name="SMSTSPreferredAdvertID"></a> SMSTSPreferredAdvertID
 

@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5e9c911929dd5a99c6b63beed9c6b221e69e9b25
-ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
+ms.openlocfilehash: eef375cad028a6903a0fa28d1cc3f7562bcebf6f
+ms.sourcegitcommit: 2339c927b6576db8878f34f167a9a45c5dc9f58d
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89607544"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90689409"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Het gebruik van SQL Server AlwaysOn-beschikbaarheids groepen met Configuration Manager voorbereiden
 
@@ -390,6 +390,9 @@ Stel het herstel model van de site database in op **Full**. Deze configuratie is
 Als ten minste één knoop punt van de beschikbaarheids groep nog steeds functioneel is, gebruikt u de site Recovery-optie om **database herstel over te slaan (deze optie gebruiken als de site database onbeschadigd is)**.
 
 Vanaf versie 1906 kan site Recovery de data base opnieuw maken op basis van een SQL always on-groep. Dit proces werkt met zowel hand matige als automatische seeding.<!-- SCCMDocs-pr#3846 -->
+
+> [!TIP]
+> Wanneer u de wizard Setup/herstel uitvoert, is de nieuwe database pagina voor de **beschikbaarheids groep** alleen van toepassing op hand matige seeding-configuraties. Bij automatische seeding is er geen back-up van de gedeelde data base, zodat de pagina van de wizard niet wordt weer gegeven.<!-- SCCMDocs #2242 -->
 
 Wanneer u in versie 1902 of eerder alle knoop punten van een beschikbaarheids groep kwijtraakt, moet u eerst de beschikbaarheids groep opnieuw maken voordat u de site kunt herstellen. Configuration Manager kan het beschikbaarheids knooppunt niet opnieuw samen stellen of herstellen. Maak de groep opnieuw, herstel de back-up en configureer de SQL-Server opnieuw. Gebruik vervolgens de site Recovery-optie om **database herstel over te slaan (gebruik deze optie als de site database onbeschadigd is)**.
 

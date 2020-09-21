@@ -10,12 +10,12 @@ ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 07980da205dcc222216ec7607cf7488bbb0f356a
-ms.sourcegitcommit: af4fc4f928203c1bfdb27499a56c91fe0ebae854
+ms.openlocfilehash: d3e6146b2388478356778175691beae126f5e1d3
+ms.sourcegitcommit: a61d4f73bdee6872db723514a865d7b1bb76d815
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90802877"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90837071"
 ---
 # <a name="whats-new-in-version-2006-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 2006 van Configuration Manager current branch
 
@@ -365,15 +365,15 @@ The following update rollup (4517869) is available in the console starting on Oc
 
 -->
 
-<!--
-### Hotfixes
 
-The following additional hotfixes are available to address specific issues:
+### <a name="hotfixes"></a>Hotfixes
 
-| ID | Title | Date | In-console |
+De volgende aanvullende hotfixes zijn beschikbaar om specifieke problemen op te lossen:
+
+| Id | Titel | Date | In-console |
 |---------|---------|---------|---------|
-| [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune connector certificate does not renew in Configuration Manager | 18 January 2019 | Yes |
-
+| [4580678](https://support.microsoft.com/help/4580678) | Tenant koppelings pakket voor Configuration Manager current branch, versie 2006 | 18 september 2020 | Ja |
+<!--
 > [!NOTE]  
 > Starting in version 1902, in-console hotfixes now have supersedence relationships. For more information, see [Supersedence for in-console hotfixes](../../servers/manage/updates.md#bkmk_supersede).
 -->

@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/12/2020
+ms.date: 09/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e6aa3c887a22c468d8d482ce2d4ba0da8202fceb
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 1cc9cf0bdba9a6dea77955a6b88d3221053ea50f
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88906817"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076138"
 ---
 # <a name="see-device-details-in-intune"></a>Apparaatdetails bekijken in Intune
 
@@ -105,7 +105,7 @@ Afhankelijk van de provider die door de apparaten wordt gebruikt, worden mogelij
 |Versleuteld|Als de waarde **Ja** is, worden de gegevens die zijn opgeslagen op het apparaat versleuteld.|Windows, iOS/iPadOS, Android|
 
 > [!Note]  
-> Op toegewezen of volledig beheerde Android-apparaten wordt het telefoonnummer niet geïnventariseerd.
+> Het telefoonnummer wordt geïnventariseerd op Android Enterprise Dedicated, Fully Managed of Corporate-Owned Work Profile-apparaten.
 
 ## <a name="next-steps"></a>Volgende stappen
 Bekijk wat u nog meer kunt doen om met Intune uw [apparaten te beheren](device-management.md).

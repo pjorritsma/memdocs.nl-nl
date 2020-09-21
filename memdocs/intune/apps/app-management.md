@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 09/03/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3b4a3334649b411390088a665f9a8fe9db8b47e1
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 68336d252cb3d3d3d49cc0c7a32e49e94ba5cdd7
+ms.sourcegitcommit: d6cbd1a1c2926064e074e3431471534eb142c905
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252302"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012660"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Wat is Microsoft Intune-appbeheer?
 
@@ -101,6 +101,7 @@ Boven in het navigatiemenu voor de app-workload vindt u informatie over veelgebr
     - **App-configuratiebeleid**: selecteer deze optie om instellingen op te geven die mogelijk vereist zijn wanneer een gebruiker een app uitvoert. Zie [Configuratiebeleid voor apps](app-configuration-policies-use-ios.md), [Configuratiebeleid voor iOS-apps](app-configuration-policies-use-ios.md) en [Configuratiebeleid voor Android-apps](app-configuration-policies-overview.md) voor meer informatie.
     - **Inrichtingsprofielen voor iOS-app**: iOS-apps hebben een inrichtingsprofiel en code die zijn ondertekend met een certificaat. Wanneer het certificaat is verlopen, kan de app niet meer worden uitgevoerd. Intune biedt u de hulpmiddelen om proactief een nieuw beleid voor inrichtingsprofielen toe te wijzen aan apparaten met apps die bijna zijn verlopen. Zie [Inrichtingsprofielen voor iOS-apps](app-provisioning-profile-ios.md) voor meer informatie.
     - **Aanvullende beleidsregels S-modus**: Selecteer deze optie om toe te staan dat er aanvullende toepassingen op uw beheerde S-modusapparaten worden uitgevoerd. Zie [Aanvullend beleid voor de S-modus](apps-win32-s-mode.md) voor meer informatie.
+    - **Beleidsregels voor Office-apps**: Selecteer deze optie voor het maken van beleidsbeheer voor mobiele apps voor mobiele Office-apps die verbinding maken met Microsoft 365-services. U kunt de toegang tot Exchange on-premises mailboxen tevens beveiligen door beveiligingsbeleid voor Intune-apps te maken voor Outlook voor iOS/iPadOS en Android met hybride moderne verificatie. U moet voldoen aan de vereisten voor het gebruik van beleidsregels voor Office-apps. Zie [Vereisten voor het gebruik van de Office-cloudbeleidsservice](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service#requirements-for-using-the-office-cloud-policy-service) voor meer informatie over vereisten. Beveiligingsbeleid voor apps wordt niet ondersteund voor andere apps die verbinding maken met on-premises Exchange- of SharePoint-services. Zie [Overzicht van de Office-cloudbeleidsservice voor Microsoft 365-apps for enterprise](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service) voor meer informatie.
     - **Beleidssets**: Selecteer deze optie om een toewijsbare verzameling apps, beleidsregels en andere door u gemaakte beheerobjecten te maken. Zie [Beleidssets](../fundamentals/policy-sets.md) voor meer informatie.
 - **Overige**:   
     - **App selectief wissen**: selecteer deze optie om alleen bedrijfsgegevens van een geselecteerd gebruikersapparaat te verwijderen. Zie [App selectief wissen](apps-selective-wipe.md) voor meer informatie.
@@ -109,10 +110,10 @@ Boven in het navigatiemenu voor de app-workload vindt u informatie over veelgebr
 - **Help en ondersteuning**: problemen oplossen, ondersteuning aanvragen of de status van Intune weergeven. Zie [Problemen oplossen](../fundamentals/help-desk-operators.md) voor meer informatie.
 
 ### <a name="try-the-interactive-guide"></a>De interactieve handleiding proberen
-De stappen in de interactieve handleiding [Mobiele apps en desktoptoepassingen beheren en beveiligen met Microsoft Endpoint Manager](https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager) leiden u door het Microsoft Endpoint Manager-beheercentrum waar u ziet hoe u apparaten beheert die zijn ingeschreven bij Intune, naleving afdwingt met beleidsregels en de gegevens van uw organisatie beveiligt.</br></br>
+De stappen in de interactieve handleiding [Mobiele apps en desktoptoepassingen beheren en beveiligen met Microsoft Endpoint Manager](https://mslearn.cloudguides.com/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager) leiden u door het Microsoft Endpoint Manager-beheercentrum waar u ziet hoe u apparaten beheert die zijn ingeschreven bij Intune, naleving afdwingt met beleidsregels en de gegevens van uw organisatie beveiligt.</br></br>
 
 <div align=”center”>
-<iframe allowfullscreen width="95%" height="450" src="https://mslearn.cloudguides.com/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager" frameborder="0" scrolling="no"/></iframe>
+<iframe allowfullscreen width="95%" height="450" src="https://mslearn.cloudguides.com/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager" frameborder="0" scrolling="no" loading="lazy"/></iframe>
 </div>
 
 ## <a name="additional-information"></a>Aanvullende informatie

@@ -17,14 +17,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c6dcd41377234bbb1b40e513f16c3393d763b17f
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: a5f479dcad0c293c547edec24f0f835a4fc987e1
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088187"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574827"
 ---
 # <a name="unlicensed-admins"></a>Beheerders zonder licentie
+
+> [!Important]
+> Met deze optie wordt alleen de licentievereiste voor beheerders verwijderd voor toegang tot Microsoft Endpoint Manager. Voor het gebruik van andere functies of services, zoals Azure Active Directory Premium, kan nog steeds een licentie voor de beheerder zijn vereist.
 
 U kunt het beheercentrum voor Intune/Microsoft Endpoint Manager toegang verlenen tot beheerders zonder intune-licenties.
 

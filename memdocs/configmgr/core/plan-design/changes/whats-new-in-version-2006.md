@@ -10,12 +10,12 @@ ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7e67773c359291db3c537ac0ed8fe6ce6fbcfc1f
-ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
+ms.openlocfilehash: 07980da205dcc222216ec7607cf7488bbb0f356a
+ms.sourcegitcommit: af4fc4f928203c1bfdb27499a56c91fe0ebae854
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89607646"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90802877"
 ---
 # <a name="whats-new-in-version-2006-of-configuration-manager-current-branch"></a>Wat is er nieuw in versie 2006 van Configuration Manager current branch
 
@@ -32,21 +32,25 @@ Als u optimaal wilt profiteren van de nieuwe functies van Configuration Manager,
 
 ## <a name="microsoft-endpoint-manager-tenant-attach"></a><a name="bkmk_tenant"></a> Micro soft Endpoint Manager-Tenant koppelen
 
+### <a name="scripts-from-the-admin-center"></a>Scripts van het beheer centrum
+<!--IN7220536, CM6234688  -->
+Maak gebruik Configuration Manager van de functie voor on-premises [uitvoering van scripts](../../../apps/deploy-use/create-deploy-scripts.md) in het micro soft Endpoint Manager-beheer centrum. Sta extra personen, zoals Help Desk, toe om Power shell-scripts uit de Cloud uit te voeren op basis van een individueel Configuration Manager beheerd apparaat in realtime. Hiermee krijgt u alle bekende voordelen van PowerShell-scripts die al zijn gedefinieerd en goedgekeurd door de Configuration Manager-beheerder voor deze nieuwe omgeving. Zie voor meer informatie [Tenant attach: scripts in het beheer centrum](../../../tenant-attach/scripts.md).
+
 ### <a name="device-timeline-in-the-admin-center"></a><a name="bkmk_timeline"></a> Tijd lijn van apparaat in het beheer centrum
 <!--7220536, CM7141381-->
-Wanneer Configuration Manager een apparaat synchroniseert met Microsoft Endpoint Manager via een tenantkoppeling, kunt u een tijdlijn van gebeurtenissen bekijken. Deze tijdlijn toont eerdere activiteiten op het apparaat die u kunnen helpen bij het oplossen van problemen. Zie [tijd lijn van het apparaat in het beheer centrum](../../../tenant-attach/timeline.md)voor meer informatie.
+Wanneer Configuration Manager een apparaat synchroniseert met Microsoft Endpoint Manager via een tenantkoppeling, kunt u een tijdlijn van gebeurtenissen bekijken. Deze tijdlijn toont eerdere activiteiten op het apparaat die u kunnen helpen bij het oplossen van problemen. Zie voor meer informatie [Tenant koppelen: Tijdlijn van het apparaat in het beheercentrum](../../../tenant-attach/timeline.md).
 
 ### <a name="resource-explorer-in-the-admin-center"></a><a name="bkmk_hinv"></a> Resource Explorer in het beheer centrum
 <!--6479284-->
-Vanuit het micro soft endpoint management-beheer centrum kunt u de hardware-inventaris voor het uploaden van Configuration Manager-apparaten bekijken met resource Explorer. Zie [Tenant attach: resource Explorer in het beheer centrum](../../../tenant-attach/resource-explorer.md)voor meer informatie.
+U kunt in het Microsoft Endpoint Management-beheercentrum de hardware-inventaris voor geüploade Configuration Manager-apparaten bekijken met Resource Explorer. Zie voor meer informatie [Tenant koppelen: Resource Explorer in het beheercentrum](../../../tenant-attach/resource-explorer.md).
 
 ### <a name="cmpivot-from-the-admin-center"></a><a name="bkmk_cmpivot"></a> CMPivot van het beheer centrum
 <!--6024392-->
-Breng de kracht van CMPivot naar het micro soft Endpoint Manager-beheer centrum. Sta aanvullende persona's, zoals Helpdesk, toe om vanuit de cloud realtimequery's te starten op een afzonderlijk, door ConfigMgr beheerd apparaat en de resultaten te retourneren naar het beheercentrum. Dit biedt alle traditionele voordelen van CMPivot, waarmee IT-beheerders en andere aangewezen personen de status van apparaten in hun omgeving snel kunnen beoordelen en actie kunnen ondernemen.
+Profiteer van alle voordelen van CMPivot in het Microsoft Endpoint Manager-beheercentrum. Sta aanvullende persona's, zoals Helpdesk, toe om vanuit de cloud realtimequery's te starten op een afzonderlijk, door ConfigMgr beheerd apparaat en de resultaten te retourneren naar het beheercentrum. Dit biedt alle traditionele voordelen van CMPivot, waarmee IT-beheerders en andere aangewezen personen de status van apparaten in hun omgeving snel kunnen beoordelen en actie kunnen ondernemen.
 
-Zie voor meer informatie over CMPivot in het beheer centrum [CMPivot-vereisten](../../../tenant-attach/cmpivot-start.md), overzicht van [CMPivot](../../../tenant-attach/cmpivot-overview-attached.md)en CMPivot- [voorbeeld scripts](../../../tenant-attach/cmpivot-samples-attached.md).
+Zie voor meer informatie over CMPivot in het beheer centrum [Tenant attach: start CMPivot in het beheer centrum](../../../tenant-attach/cmpivot-start.md), [CMPivot Overview](../../../tenant-attach/cmpivot-overview-attached.md)en CMPivot- [voorbeeld scripts](../../../tenant-attach/cmpivot-samples-attached.md).
 
-### <a name="tenant-attach-microsoft-defender-antivirus-policies-in-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> Tenant bijvoegen: micro soft Defender anti virus Policies in het beheer centrum van micro soft Endpoint Manager
+### <a name="microsoft-defender-antivirus-policies-in-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> Micro soft Defender anti virus-beleids regels in het micro soft Endpoint Manager-beheer centrum
 <!--4812909-->
 U kunt nu micro soft Defender anti virus-beleid maken in de micro soft Endpoint Manager-console en implementeren in Configuration Manager-verzamelingen. Raadpleeg de volgende artikelen voor meer informatie, waaronder gedetailleerde instructies en beschik bare instellingen:
 - [Tenant bijvoegen: Configuration Manager-clients onboarden naar micro soft Defender ATP vanuit het beheer centrum (preview-versie)](../../../tenant-attach/atp-onboard.md)

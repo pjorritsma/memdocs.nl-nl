@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1024681ed42c192983ffde23777de72c40622c65
-ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
+ms.openlocfilehash: 28ca32bc65ee0c4647c22b10b6b5d47a25efa202
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89423714"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643617"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>PKCS-certificaten configureren en gebruiken met Intune
 
@@ -140,9 +140,13 @@ Controleer voordat u begint de [beoordelingsvereisten voor de connector](certifi
    > [!WARNING]
    > In Windows Server wordt **Configuratie verbeterde beveiliging IE** standaard ingesteld op **Ingeschakeld**, wat kan leiden tot aanmeldingsproblemen bij Office 365.
 
-6. Sluit het venster.
+6. Selecteer het tabblad **CA-account** en voer vervolgens referenties in voor een account dat de machtiging Certificaten uitgeven en beheren heeft op uw certificeringsinstantie. Deze referenties worden gebruikt om certificaten te kunnen intrekken op de certificeringsinstantie. 
 
-7. Ga in het Microsoft Endpoint Manager-beheercentrum terug naar **Tenantbeheer** > **Connectors en tokens** > **Certificaatconnectors**. Even later wordt een groen vinkje weergegeven en wordt de verbindingsstatus bijgewerkt. Uw connector-server kan nu communiceren met Intune.
+    **Pas** de wijzigingen toe.
+
+7. Sluit het venster.
+
+8. Ga in het Microsoft Endpoint Manager-beheercentrum terug naar **Tenantbeheer** > **Connectors en tokens** > **Certificaatconnectors**. Even later wordt een groen vinkje weergegeven en wordt de verbindingsstatus bijgewerkt. Uw connector-server kan nu communiceren met Intune.
 
 ## <a name="create-a-trusted-certificate-profile"></a>Een vertrouwd certificaatprofiel maken
 

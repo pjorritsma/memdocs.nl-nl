@@ -17,24 +17,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d23af858db709deb041fa1259d7c7d203eaa65dd
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 148e549d72c3d5802bc9d86f7d0fd81d55b21aa7
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217707"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039224"
 ---
 # <a name="add-an-android-line-of-business-app-to-microsoft-intune"></a>Een Android Line-Of-Business-app toevoegen aan Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Een LOB-app is een app die u vanaf een app-installatiebestand aan Intune toevoegt. Dit type app wordt doorgaans intern geschreven. De LOB-app wordt door Intune op het apparaat van de gebruiker geïnstalleerd. 
+Een LOB-app is een app die u vanaf een app-installatiebestand aan Intune toevoegt. Dit type app wordt doorgaans intern geschreven. De LOB-app wordt door Intune op het apparaat van de gebruiker geïnstalleerd. Dit geldt alleen voor apparaten die worden beheerd door Apparaatbeheer.
 
 > [!Note]
 > Zie [Privé-LOB-apps in de beheerde Google Play Store publiceren met de Google-console voor ontwikkelaars](apps-add-android-for-work.md?#managed-google-play-private-lob-app-publishing-using-the-google-developer-console) voor meer informatie over LOB-apps en de Google Play-console voor ontwikkelaars. 
 
 > [!Note]
-> Zie [Beheerde Google Play-apps toevoegen aan Android Enterprise-apparaten met Intune](apps-add-android-for-work.md) voor Android for Work-apparaten. 
+> Zie [Beheerde Google Play-apps toevoegen aan Android Enterprise-apparaten met Intune](apps-add-android-for-work.md) voor Android Enterprise-apparaten. 
 
 ## <a name="select-the-app-type"></a>Het app-type selecteren
 

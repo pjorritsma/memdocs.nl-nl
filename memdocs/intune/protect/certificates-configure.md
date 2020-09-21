@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 22bfe44b95eedcdf87a41cfaaf959c72cfbe93e2
-ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
+ms.openlocfilehash: f91de698a518a8f8530ae42d5a8842d7876074a1
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89423812"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076216"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Certificaten voor verificatie gebruiken in Microsoft Intune
 
@@ -46,10 +46,10 @@ Als u een Microsoft-certificeringsinstantie gebruikt (CA):
 
 - SCEP-certificaatprofielen gebruiken:
   - [Stel een NDES-server (Network Device Enrollment Service) in](certificates-scep-configure.md#set-up-ndes) voor gebruik met Intune.
-  - [Installeer de Microsoft Certificate Connector](certificates-scep-configure.md#install-the-microsoft-intune-connector):
+  - [Installeer de Microsoft Certificate Connector](certificates-scep-configure.md#install-the-microsoft-intune-connector).
 
 - PKCS-certificaatprofielen gebruiken:
-  - [Installeer de PFX Certificate Connector voor Microsoft Intune](certificates-imported-pfx-configure.
+  - [Installeer de PFX-certificaatconnector voor Microsoft Intune](certficates-pfx-configure.md).
   
 - Geïmporteerde PKCS-certificaten gebruiken:
   - [Installeer de PFX-certificaatconnector voor Microsoft Intune](certificates-imported-pfx-configure.md#download-install-and-configure-the-pfx-certificate-connector-for-microsoft-intune).

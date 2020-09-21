@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99cde56dbe1f9f63cb8e0af69721191455f16d2a
-ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
+ms.openlocfilehash: 08f0f02075baf7447815beb56c0f9c0a726c4d43
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89281180"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039394"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Ontwikkelaarshandleiding voor Microsoft Intune App SDK voor iOS
 
@@ -70,6 +70,7 @@ De volgende header-bestanden bevatten de API's, gegevenstypen en protocollen die
 
 -  IntuneMAMAppConfig.h
 -  IntuneMAMAppConfigManager.h
+-  IntuneMAMComplianceManager.h
 -  IntuneMAMDataProtectionInfo.h
 -  IntuneMAMDataProtectionManager.h
 -  IntuneMAMDefs.h
@@ -77,12 +78,15 @@ De volgende header-bestanden bevatten de API's, gegevenstypen en protocollen die
 -  IntuneMAMEnrollmentDelegate.h
 -  IntuneMAMEnrollmentManager.h
 -  IntuneMAMEnrollmentStatus.h
+-  IntuneMAMFile.h
 -  IntuneMAMFileProtectionInfo.h
 -  IntuneMAMDataProtectionManager.h
 -  IntuneMAMLogger.h
 -  IntuneMAMPolicy.h
 -  IntuneMAMPolicyDelegate.h
 -  IntuneMAMPolicyManager.h
+-  IntuneMAMSettings.h
+-  IntuneMAMUIHelper.h
 -  IntuneMAMVersionInfo.h
 
 Ontwikkelaars kunnen de inhoud van de voorgaande headers beschikbaar maken door IntuneMAM.h te importeren
@@ -214,19 +218,19 @@ Als uw app al MSAL gebruikt, zijn de volgende configuraties vereist:
 
 3. Geef onder de woordenlijst **IntuneMAMSettings** met de sleutelnaam `ADALRedirectUri` ook de omleidings-URI op die voor MSAL-aanroepen moet worden gebruikt. U kunt in plaats daarvan ook `ADALRedirectScheme` opgeven als de omleidings-URI van de toepassing de indeling `scheme://bundle_id` heeft.
 
-Apps kunnen bovendien deze Azure AD-instellingen tijdens runtime overschrijven. U kunt dit doen door de eigenschappen `aadAuthorityUriOverride`, `aadClientIdOverride` en `aadRedirectUriOverride` voor de instantie `IntuneMAMPolicyManager` in te stellen.
+Apps kunnen bovendien deze Azure AD-instellingen tijdens runtime overschrijven. Daartoe stelt u de eigenschappen `aadAuthorityUriOverride`, `aadClientIdOverride` en `aadRedirectUriOverride` voor de klasse `IntuneMAMSettings` in.
 
 4. Zorg ervoor dat de stappen om uw iOS-app te machtigen voor het app-beschermingsbeleid (APP) zijn gevolgd. Gebruik de instructies in de handleiding [Aan de slag met de Intune-SDK](app-sdk-get-started.md#next-steps-after-integration) in '[Uw app toegang geven tot de Intune-app-beveiligingsservice (optioneel)](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional)'.  
 
 > [!NOTE]
-> De methode Info.plist wordt aanbevolen voor alle instellingen die statisch zijn en niet tijdens runtime hoeven te worden vastgesteld. Waarden die zijn toegewezen aan de `IntuneMAMPolicyManager`-eigenschappen hebben voorrang op eventuele bijbehorende waarden die zijn opgegeven in de Info.plist en blijven behouden ook nadat de app opnieuw wordt gestart. De SDK blijft deze gebruiken voor het inchecken van beleid totdat de gebruiker wordt uitgeschreven of de waarden worden gewist of gewijzigd.
+> De methode Info.plist wordt aanbevolen voor alle instellingen die statisch zijn en niet tijdens runtime hoeven te worden vastgesteld. Waarden die in runtime zijn toegewezen aan de eigenschappen van klasse `IntuneMAMSettings`, hebben voorrang op eventuele bijbehorende waarden die zijn opgegeven in de Info.plist en blijven behouden ook nadat de app opnieuw wordt gestart. De SDK blijft deze gebruiken voor het inchecken van beleid totdat de gebruiker wordt uitgeschreven of de waarden worden gewist of gewijzigd.
 
 ### <a name="if-your-app-does-not-use-msal"></a>Als uw app geen gebruik maakt van MSAL
 
 Zoals eerder vermeld, wordt voor de Intune App SDK de [Microsoft Authentication Library](https://github.com/AzureAD/microsoft-authentication-library-for-objc) gebruikt voor de verificatie en voorwaardelijke startscenario's. De SDK maakt ook gebruik van MSAL om de gebruikers-id te registreren bij de MAM-service om zonder scenario's voor apparaatinschrijving beheertaken uit te voeren. Als **uw app geen gebruik maakt van MSAL voor het eigen verificatiemechanisme**, moet u wellicht aangepaste AAD-instellingen configureren:
 
 * Ontwikkelaars moeten een app-registratie in AAD maken met een aangepaste omleidings-URI in de indeling die [hier](https://github.com/AzureAD/microsoft-authentication-library-for-objc/wiki/Migrating-from-ADAL-Objective-C-to-MSAL-Objective-C#app-registration-migration) is opgegeven. 
-* Ontwikkelaars moeten de eerder genoemde `ADALClientID`- en `ADALRedirectUri`-instellingen of de equivalente eigenschappen `aadClientIdOverride` en `aadRedirectUriOverride` van de `IntuneMAMPolicyManager`-instantie instellen. 
+* Ontwikkelaars moeten de eerder genoemde `ADALClientID`- en `ADALRedirectUri`-instellingen of de equivalente eigenschappen `aadClientIdOverride` en `aadRedirectUriOverride` van de klasse `IntuneMAMSettings` instellen. 
 * Ook moeten ontwikkelaars ervoor zorgen dat ze stap 4 in de vorige sectie uitvoeren om de app-registratie toegang te geven tot de Intune-app-beveiligingsservice.
 
 ### <a name="special-considerations-when-using-msal"></a>Speciale overwegingen bij het gebruik van MSAL 
@@ -766,7 +770,7 @@ Als uw toepassing websites kan weergeven in een webweergave, moet u mogelijk log
 
 ### <a name="webviews-that-display-only-non-corporate-contentwebsites"></a>Webweergaven waarin alleen niet-zakelijke inhoud/websites worden weergegeven
 
-Als in uw toepassing geen zakelijke gegevens in de webweergave worden weergegeven en gebruikers naar willekeurige sites kunnen bladeren waar ze mogelijk beheerde gegevens van andere onderdelen van de toepassing kunnen kopiëren en in een openbaar forum kunnen plakken, is de toepassing verantwoordelijk voor het instellen van de huidige identiteit, zodat beheerde gegevens niet kunnen worden gelekt via de webweergave. Voorbeelden hiervan zijn webpagina's als 'Een functie voorstellen' of 'Feedback' waarop directe of indirecte koppelingen naar een zoekmachine staan. Toepassingen met meerdere identiteiten moeten het doorgeven van IntuneMAMPolicyManager setUIPolicyIdentity aanroepen in de lege tekenreeks voordat de webweergave wordt weergegeven. Nadat de webweergave is gesloten, moet de toepassing het doorgeven van setUIPolicyIdentity aanroepen in de huidige identiteit. Toepassingen met één identiteit moeten het doorgeven van IntuneMAMPolicyManager setCurrentThreadIdentity aanroepen in de lege tekenreeks voordat de webweergave wordt weergegeven. Nadat de webweergave is gesloten, moet de toepassing het doorgeven van setCurrentThreadIdentity aanroepen in nil. Zo zorgt u ervoor dat de Intune-SDK de webweergave als niet-beheerd behandelt en dat beheerde gegevens uit andere delen van de toepassing niet in de webweergave kunnen worden geplakt als het beleid als zodanig is geconfigureerd. 
+Als in uw toepassing geen zakelijke gegevens in de webweergave worden weergegeven en gebruikers naar willekeurige sites kunnen bladeren waar ze mogelijk beheerde gegevens van andere onderdelen van de toepassing kunnen kopiëren en in een openbaar forum kunnen plakken, is de toepassing verantwoordelijk voor het instellen van de huidige identiteit, zodat beheerde gegevens niet kunnen worden gelekt via de webweergave. Voorbeelden hiervan zijn webpagina's als 'Een functie voorstellen' of 'Feedback' waarop directe of indirecte koppelingen naar een zoekmachine staan. Toepassingen met meerdere identiteiten moeten `setUIPolicyIdentity` voor het exemplaar `IntuneMAMPolicyManager` aanroepen en de lege tekenreeks doorgeven voordat de webweergave wordt weergegeven. Nadat de webweergave is gesloten, moet de toepassing `setUIPolicyIdentity` aanroepen en de huidige identiteit doorgeven. Toepassingen met één identiteit moeten `setCurrentThreadIdentity` voor het exemplaar `IntuneMAMPolicyManager` aanroepen en de lege tekenreeks doorgeven voordat de webweergave wordt weergegeven. Nadat de webweergave is gesloten, moet de toepassing `setCurrentThreadIdentity` aanroepen en nil doorgeven. Zo zorgt u ervoor dat de Intune-SDK de webweergave als niet-beheerd behandelt en dat beheerde gegevens uit andere delen van de toepassing niet in de webweergave kunnen worden geplakt als het beleid als zodanig is geconfigureerd. 
 
 ### <a name="webviews-that-display-only-corporate-contentwebsites"></a>Webweergaven waarin alleen zakelijke inhoud/websites worden weergegeven
 
@@ -774,9 +778,9 @@ Als uw toepassing alleen zakelijke gegevens in de webweergave weergeeft en gebru
 
 ### <a name="webviews-that-might-display-both-corporate-and-non-corporate-contentwebsites"></a>Webweergaven die mogelijk zowel zakelijke als niet-zakelijke inhoud/websites weergeven
 
-Voor dit scenario wordt alleen WKWebView ondersteund. Toepassingen die gebruikmaken van de verouderde UIWebView moeten worden overgezet naar WKWebView. Als uw toepassing zakelijke inhoud in de WKWebView weergeeft en gebruikers ook toegang hebben tot niet-zakelijke inhoud/websites die kunnen leiden tot gegevenslekken, moet de toepassing de gemachtigde methode isExternalURL: die is gedefinieerd in IntuneMAMPolicyDelegate.h implementeren. Toepassingen moeten bepalen of de URL die wordt doorgegeven aan de gemachtigde methode een bedrijfswebsite is waarin beheerde gegevens kunnen worden geplakt of een niet-zakelijke website die bedrijfsgegevens kan lekken. 
+Voor dit scenario wordt alleen WKWebView ondersteund. Toepassingen die gebruikmaken van de verouderde UIWebView moeten worden overgezet naar WKWebView. Als uw toepassing zakelijke inhoud in de WKWebView weergeeft en gebruikers ook toegang hebben tot niet-zakelijke inhoud/websites die kunnen leiden tot gegevenslekken, moet de toepassing de gemachtigde methode `isExternalURL:` implementeren die is gedefinieerd in `IntuneMAMPolicyDelegate.h`. Toepassingen moeten bepalen of de URL die wordt doorgegeven aan de gemachtigde methode een bedrijfswebsite is waarin beheerde gegevens kunnen worden geplakt of een niet-zakelijke website die bedrijfsgegevens kan lekken. 
 
-Als NO in isExternalURL wordt geretourneerd, krijgt de Intune-SDK de melding dat de website die wordt geladen een bedrijfslocatie is waar beheerde gegevens kunnen worden gedeeld. Als YES wordt geretourneerd, opent de Intune-SDK de URL in Edge in plaats van de WKWebView als dit is vereist volgens de huidige beleidsinstellingen. Dit zorgt ervoor dat er geen beheerde gegevens uit de app kunnen worden gelekt naar de externe website.
+Als NO in `isExternalURL` wordt geretourneerd, krijgt de Intune-SDK de melding dat de website die wordt geladen een bedrijfslocatie is waar beheerde gegevens kunnen worden gedeeld. Als YES wordt geretourneerd, opent de Intune-SDK de URL in Edge in plaats van de WKWebView als dit is vereist volgens de huidige beleidsinstellingen. Dit zorgt ervoor dat er geen beheerde gegevens uit de app kunnen worden gelekt naar de externe website.
 
 ## <a name="ios-best-practices"></a>Aanbevolen procedures voor iOS
 
@@ -827,7 +831,7 @@ Ja, de IT-beheerder kan een opdracht voor selectief wissen verzenden naar de app
 
 ### <a name="is-there-a-sample-app-that-demonstrates-how-to-integrate-the-sdk"></a>Is er een voorbeeld-app die de integratie van de SDK laat zien?
 
-Ja. Onlangs is het open-source-voorbeeld-app [Wagr voor iOS](https://github.com/Microsoft/Wagr-Sample-Intune-iOS-App) vernieuwd. Wagr is nu ingeschakeld voor app-beveiligingsbeleid met behulp van de Intune App SDK.
+Ja. Raadpleeg de voorbeeld-app [Chatr](https://github.com/msintuneappsdk/Chatr-Sample-Intune-iOS-App).
 
 ### <a name="how-can-i-troubleshoot-my-app"></a>Hoe kan ik problemen met mijn app oplossen?
 

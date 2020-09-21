@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 08/10/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: b26cec11b2bdf64e6ef99d45395de00b43fa1bfa
-ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
+ms.openlocfilehash: e63bb965b8fed4c0266e359493bbfa67100862cb
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89564092"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90045169"
 ---
 Deze mededelingen bevatten belangrijke informatie die u kan helpen om voorbereid te zijn op toekomstige wijzigingen en functies in Intune.
 
@@ -108,7 +108,7 @@ Op dat moment zullen apparaten die door een apparaatbeheerder worden beheerd en 
 - Als u apparaten identificeert als bedrijfseigendom met een IMEI of serienummer, wordt het apparaat niet automatisch gemarkeerd als In bedrijfseigendom 
 - Het IMEI en serienummer zijn niet langer zichtbaar voor IT-beheerders in Intune 
 
-**Android 11**: We blijven de meest recente bètaversie van Android 11 testen om de impact op beheerde apparaten van de apparaatbeheerder te evalueren. Dit zijn onze ervaringen: 
+**Android 11**: Dit zijn de wijzigingen voor een door een apparaatbeheerder beheerd apparaat wanneer het apparaat wordt bijgewerkt naar Android 11: 
 - Voor apparaten van apparaatbeheerders (met uitzondering van Samsung) met Android 11 en hoger heeft Google de mogelijkheid voor beheerders, zoals Bedrijfsportal, voor het afdwingen van het blokkeren van een camera verwijderd. Dit gebeurt al vóór de oktoberupdate van de Bedrijfsportal-app. Beleidsregels voor het blokkeren van de camera die worden toegepast op apparaten voordat ze naar Android 11 worden bijgewerkt, blijven van toepassing.  
 - In Android 11 kunnen vertrouwde basiscertificaten niet meer worden geïmplementeerd op apparaten met een apparaatbeheerder (behalve op Samsung-apparaten). Gebruikers moeten het vertrouwde basiscertificaat handmatig op het apparaat installeren. Wanneer het vertrouwde basiscertificaat handmatig op een apparaat is geïnstalleerd, kunt u SCEP gebruiken om certificaten in te richten op het apparaat. In dit scenario moet u nog steeds een beleid voor vertrouwde certificaten maken en implementeren op het apparaat en dat beleid koppelen aan het SCEP-certificaatprofiel. 
     - Als het vertrouwde basiscertificaat op het apparaat staat, wordt het SCEP-certificaatprofiel geïnstalleerd.  

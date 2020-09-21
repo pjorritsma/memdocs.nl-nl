@@ -2,11 +2,11 @@
 title: Opslag en verwerking van gegevens in Intune
 titleSuffix: Microsoft Intune
 description: Informatie over de opslag en verwerking van persoonlijke gegevens in Intune.
-keywords: ''
+keywords: gegevens, privacy
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/18/2018
+ms.date: 09/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,40 +18,36 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9bb40b21d9a257586bbd38d24b2e9b6b0a9f8ce3
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 92c7c597a6d196ab5f8c3170cd5880682a280e73
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079532"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076060"
 ---
 # <a name="data-storage-and-processing-in-intune"></a>Opslag en verwerking van gegevens in Intune
 
-Nadat Intune [de gegevens heeft verzameld](privacy-data-collect.md), verloopt de opslag en verwerking van die gegevens zoals hieronder wordt beschreven.
+### <a name="storing-customer-data"></a>Klantgegevens opslaan
 
-## <a name="storing-personal-data"></a>Persoonlijke gegevens opslaan
-
-Alle niet-telemetrische gegevens die zijn verzameld, worden verwerkt via de Intune-service en opgeslagen op een of meer van de volgende locaties: 
-
-- SQLAzure 
-- Betrouwbare verzamelingen (Service Fabric)  
-- Azure Storage 
-
-Telemetrische gegevens (servicelogboeken, prestatielogboeken, fouten enzovoort) die essentieel zijn voor de bewaking en het bieden van een stabiele service, worden verzonden naar de gegevensopslag van telemetrie van Microsoft.
+Nadat Intune [de gegevens heeft verzameld](privacy-data-collect.md), volgt Intune het standaardbeleid voor gegevensverwerking voor Microsoft 365 waarin staat aangegeven hoe klantgegevens worden opgeslagen en verwerkt. Zie [Opslag van uw Microsoft 365-klantgegevens](https://docs.microsoft.com/microsoft-365/enterprise/o365-data-locations). Persoonsgegevens worden verwerkt binnen de gecontroleerde compliancegrens van de Intune-service volgens de technische veiligheidsmaatregelen die zijn gewaarborgd via [Microsoft OST (Voorwaarden voor Online Diensten)](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46).
 
 ### <a name="storage-locations"></a>Opslaglocaties
 
 Microsoft biedt in veel regio's wereldwijd Intune-services aan. Intune respecteert de opslaglocaties die zijn gekozen door de beheerder voor klantgegevens.
 
-Raadpleeg voor meer informatie [Waar bevinden uw gegevens zich?](https://www.microsoft.com/trust-center/privacy/data-location)
+Zie [Locaties van gegevenscentra](https://docs.microsoft.com/microsoft-365/enterprise/o365-data-locations?view=o365-worldwide#data-center-locations)voor meer informatie
 
 ### <a name="personal-data-retention"></a>Persoonlijke gegevens bewaren
 
-Over het algemeen worden persoonlijke gegevens door Intune bewaard tot dertig dagen nadat de gebruiker is verwijderd uit Intune-beheer.
+Standaardbeleid van Microsoft 365-gegevensverwerking geeft aan hoe lang klantgegevens na verwijdering behouden blijven. Er zijn twee scenario's waarin klantgegevens worden verwijderd:
 
-Telemetrische gegevens die zijn verzameld als onderdeel van het gebruik van Intune, worden maximaal 30 dagen bewaard.
+-**Actieve verwijdering**: De tenant heeft een actief abonnement en een gebruiker of beheerder verwijdert gegevens, of beheerders verwijderen een gebruiker.
+-**Passieve verwijdering**: Het tenantabonnement is beëindigd.
 
-Auditlogboeken worden maximaal één jaar bewaard.
+Zie [Gegevensretentie, -verwijdering en -vernietiging in Microsoft 365](https://docs.microsoft.com/microsoft-365/enterprise/microsoft-365-data-retention-deletion-and-destruction-overview?view=o365-worldwide) voor elk van de verwijderingsscenario's.  
+
+Over het algemeen worden persoonsgegevens die door Intune zijn verzameld, binnen 30 dagen na verwijdering verwijderd. Auditlogboeken worden maximaal één jaar bewaard voor beveiligingsdoeleinden. 
+
 
 ## <a name="processing-personal-data"></a>Persoonlijke gegevens verwerken
 
@@ -60,15 +56,6 @@ Intune verwerkt persoonlijke gegevens conform ISO-gecertificeerde systemen. Zie 
 ### <a name="profiling-and-marketing"></a>Profilering en marketing
 
 Microsoft Intune gebruikt geen persoonlijke gegevens die zijn verzameld als onderdeel van de service voor profilerings- of marketingdoeleinden. 
-
-### <a name="restrict-processing-of-personal-data"></a>Verwerking van persoonlijke gegevens beperken
-
-Als u de verwerking van persoonlijke gegevens van een gebruiker wilt beperken, kunt u het gebruikersaccount verwijderen door:
-1. Een elektronisch exemplaar van de persoonlijke gegevens van de gebruiker te verwijderen, met inbegrip van
-    - accounts
-    - servicegegevens
-    - gekoppelde logboeken
-2. Het account van de gebruiker en de bijbehorende gegevens te verwijderen uit Intune.
 
 ## <a name="next-steps"></a>Volgende stappen
 

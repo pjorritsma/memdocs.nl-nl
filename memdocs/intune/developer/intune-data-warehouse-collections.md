@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/24/2020
+ms.date: 09/08/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 348bafecd462aa9e4722443c33b62311b2f97e1a
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: e0a9ecebd86404d4218142d1a3acb591974b027d
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88993096"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608096"
 ---
 # <a name="intune-data-warehouse-collections"></a>Intune-datawarehouse-verzamelingen
 
@@ -34,30 +34,30 @@ De entiteit **AppRevision** biedt een overzicht van alle versies van apps.
 
 |          Eigenschap          |                                      Beschrijving                                      |                Voorbeeld               |
 |----------------------------|---------------------------------------------------------------------------------------|--------------------------------------|
-| AppKey                     | De unieke id van de app.                                                         | 123                                  |
-| ApplicationID              | De unieke id van de app, vergelijkbaar met AppKey, maar dit is een natuurlijke sleutel.        | b66bc706-ffff-7437-0340-032819502773 |
-| Revisie                   | De versie zoals vermeld door de beheerder tijdens het uploaden van het binaire bestand.                   | 2                                    |
-| Titel                      | De titel van de app.                                                                     | Excel                                |
-| Uitgever                  | De uitgever van de app.                                                                 | Microsoft                            |
-| UploadState                | De uploadstatus van de app.                                                              | 1                                    |
-| AppTypeKey                 | Verwijzing naar AppType, zoals beschreven in de volgende sectie.                            | 1                                    |
-| VppProgramTypeKey          | Verwijzing naar VppProgramType, zoals hieronder beschreven.                                        | 30876                                |
-| CreationTime               | Het tijdstip waarop deze revisie is gemaakt.                                            | 23-11-2016, 0:00                      |
-| ModifiedTime               | De laatste keer dat er iets aan deze revisie is gewijzigd.                            | 23-11-2016, 0:00                      |
-| Grootte                       | De grootte van het binaire bestand in bytes.                                                          | 120.392.000                          |
-| StartDateInclusiveUTC      | De datum en tijd in UTC waarop deze app-revisie is gemaakt in het datawarehouse.      | 23-11-2016, 0:00                      |
-| EndDateExclusiveUTC        | De datum en tijd in UTC waarop deze app-revisie verouderd is geraakt.                        | 23-11-2016, 0:00                      |
+| appKey                     | De unieke id van de app.                                                         | 123                                  |
+| applicationId              | De unieke id van de app, vergelijkbaar met AppKey, maar dit is een natuurlijke sleutel.        | b66bc706-ffff-7437-0340-032819502773 |
+| revision                   | De versie zoals vermeld door de beheerder tijdens het uploaden van het binaire bestand.                   | 2                                    |
+| title                      | De titel van de app.                                                                     | Excel                                |
+| publisher                  | De uitgever van de app.                                                                 | Microsoft                            |
+| uploadState                | De uploadstatus van de app.                                                              | 1                                    |
+| appTypeKey                 | Verwijzing naar AppType, zoals beschreven in de volgende sectie.                            | 1                                    |
+| vppProgramTypeKey          | Verwijzing naar VppProgramType, zoals hieronder beschreven.                                        | 30876                                |
+| creationTime               | Het tijdstip waarop deze revisie is gemaakt.                                            | 23-11-2016, 0:00                      |
+| modifiedTime               | De laatste keer dat er iets aan deze revisie is gewijzigd.                            | 23-11-2016, 0:00                      |
+| grootte                       | De grootte van het binaire bestand in bytes.                                                          | 120.392.000                          |
+| startDateInclusiveUTC      | De datum en tijd in UTC waarop deze app-revisie is gemaakt in het datawarehouse.      | 23-11-2016, 0:00                      |
+| endDateExclusiveUTC        | De datum en tijd in UTC waarop deze app-revisie verouderd is geraakt.                        | 23-11-2016, 0:00                      |
 | IsCurrent                  | Geeft aan of deze app-versie actueel is of niet aanwezig is in het datawarehouse.         | Waar/onwaar                           |
-| RowLastModifiedDateTimeUTC | De datum en tijd in UTC waarop deze app-versie het laatst is gewijzigd in het datawarehouse. | 23-11-2016, 0:00                      |
+| rowLastModifiedDateTimeUTC | De datum en tijd in UTC waarop deze app-versie het laatst is gewijzigd in het datawarehouse. | 23-11-2016, 0:00                      |
 
 ## <a name="apptypes"></a>AppTypes
 De entiteit **appType** vermeldt de installatiebron van een app.
 
 |   Eigenschap  |        Beschrijving        |
 |-------------|---------------------------|
-| AppTypeID   | De id voor het type           |
-| AppTypeKey  | De surrogaatsleutel voor de sleutel |
-| AppTypeName | App-type                  |
+| appTypeID   | De id voor het type           |
+| appTypeKey  | De surrogaatsleutel voor de sleutel |
+| appTypeName | App-type                  |
 
 ### <a name="example"></a>Voorbeeld
 
@@ -82,28 +82,28 @@ De volgende tabel geeft een overzicht van de toewijzingsstatus van nalevingsbele
 
 |    Eigenschap   |                                                                                      Beschrijving                                                                                     |  Voorbeeld |
 |---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| DateKey       | De datum waarop de samenvatting voor het nalevingsbeleid is gemaakt.                                                                                                                   | 20161204 |
-| Onbekend       | Het aantal apparaten dat offline is of om een andere redenen niet kan communiceren met Intune of Azure AD.                                                                           | 5        |
-| Niet van toepassing | Het aantal apparaten waarvoor het nalevingsbeleid waarop de beheerder zich richt, niet van toepassing is.                                                                                     | 201      |
-| Compliant     | Het aantal apparaten waarop een of meer nalevingsbeleidsregels voor apparaten is toegepast waarop de beheerder zich richt.                                                                        | 4083     |
-| Respijtperiode | Aantal apparaten die niet voldoen aan het beleid, maar zich in de respijtperiode bevindt die door de beheerder is vastgesteld.                                                                                  | 57       |
-| Niet-compatibel  | Het aantal apparaten waarop een of meer nalevingsbeleidsregels niet zijn toegepast waarop de beheerder zich richt of waarvoor de gebruiker niet voldoet aan de beleidsregels waarop de beheerder zich richt. | 43       |
-|    Fout      |    Het aantal apparaten dat niet kan communiceren met Intune of Azure AD en een foutbericht heeft geretourneerd.                                                                          |    3     |
+| dateKey       | De datum waarop de samenvatting voor het nalevingsbeleid is gemaakt.                                                                                                                   | 20161204 |
+| unknown       | Het aantal apparaten dat offline is of om een andere redenen niet kan communiceren met Intune of Azure AD.                                                                           | 5        |
+| notApplicable | Het aantal apparaten waarvoor het nalevingsbeleid waarop de beheerder zich richt, niet van toepassing is.                                                                                     | 201      |
+| compliant     | Het aantal apparaten waarop een of meer nalevingsbeleidsregels voor apparaten is toegepast waarop de beheerder zich richt.                                                                        | 4083     |
+| inGracePeriod | Aantal apparaten die niet voldoen aan het beleid, maar zich in de respijtperiode bevindt die door de beheerder is vastgesteld.                                                                                  | 57       |
+| nonCompliant  | Het aantal apparaten waarop een of meer nalevingsbeleidsregels niet zijn toegepast waarop de beheerder zich richt of waarvoor de gebruiker niet voldoet aan de beleidsregels waarop de beheerder zich richt. | 43       |
+|    fout      |    Het aantal apparaten dat niet kan communiceren met Intune of Azure AD en een foutbericht heeft geretourneerd.                                                                          |    3     |
 
 ## <a name="compliancepolicystatusdeviceperpolicyactivities"></a>compliancePolicyStatusDevicePerPolicyActivities
 De volgende tabel geeft een overzicht van de toewijzingsstatus van nalevingsbeleid voor apparaten per beleid en per beleidstype. In de tabel wordt het aantal apparaten weergegeven dat is gevonden in elke nalevingsstatus voor elk toegewezen nalevingsbeleid.
 
 |      Eigenschap     |                                                                                      Beschrijving                                                                                     |  Voorbeeld |
 |-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| DateKey           | De datum waarop de samenvatting voor het nalevingsbeleid is gemaakt.                                                                                                                   | 20161219 |
-| PolicyKey         | Sleutel voor het nalevingsbeleid waarvoor de samenvatting is gemaakt.                                                                                                                   | 10178    |
-| PolicyPlatformKey | Sleutel voor het platformtype van het nalevingsbeleid waarvoor de samenvatting is gemaakt.                                                                                            | 5        |
-| Onbekend           | Het aantal apparaten dat offline is of om een andere redenen niet kan communiceren met Intune of Azure AD.                                                                           | 13       |
-| Niet van toepassing     | Het aantal apparaten waarvoor het nalevingsbeleid waarop de beheerder zich richt, niet van toepassing is.                                                                                     | 3        |
-| Compliant         | Het aantal apparaten waarop een of meer nalevingsbeleidsregels voor apparaten is toegepast waarop de beheerder zich richt.                                                                        | 45       |
-| Respijtperiode     | Aantal apparaten die niet voldoen aan het beleid, maar zich in de respijtperiode bevindt die door de beheerder is vastgesteld.                                                                                  | 3        |
-| Niet-compatibel      | Het aantal apparaten waarop een of meer nalevingsbeleidsregels niet zijn toegepast waarop de beheerder zich richt of waarvoor de gebruiker niet voldoet aan de beleidsregels waarop de beheerder zich richt. | 7        |
-| Fout             | Het aantal apparaten dat niet kan communiceren met Intune of Azure AD en een foutbericht heeft geretourneerd.                                                                             | 3        |
+| dateKey           | De datum waarop de samenvatting voor het nalevingsbeleid is gemaakt.                                                                                                                   | 20161219 |
+| policyKey         | Sleutel voor het nalevingsbeleid waarvoor de samenvatting is gemaakt.                                                                                                                   | 10178    |
+| policyPlatformKey | Sleutel voor het platformtype van het nalevingsbeleid waarvoor de samenvatting is gemaakt.                                                                                            | 5        |
+| unknown           | Het aantal apparaten dat offline is of om een andere redenen niet kan communiceren met Intune of Azure AD.                                                                           | 13       |
+| notApplicable     | Het aantal apparaten waarvoor het nalevingsbeleid waarop de beheerder zich richt, niet van toepassing is.                                                                                     | 3        |
+| compliant         | Het aantal apparaten waarop een of meer nalevingsbeleidsregels voor apparaten is toegepast waarop de beheerder zich richt.                                                                        | 45       |
+| inGracePeriod     | Aantal apparaten die niet voldoen aan het beleid, maar zich in de respijtperiode bevindt die door de beheerder is vastgesteld.                                                                                  | 3        |
+| nonCompliant      | Het aantal apparaten waarop een of meer nalevingsbeleidsregels niet zijn toegepast waarop de beheerder zich richt of waarvoor de gebruiker niet voldoet aan de beleidsregels waarop de beheerder zich richt. | 7        |
+| fout             | Het aantal apparaten dat niet kan communiceren met Intune of Azure AD en een foutbericht heeft geretourneerd.                                                                             | 3        |
 ## <a name="compliancestates"></a>complianceStates
 
 |      Eigenschap      |                       Beschrijving                      |
@@ -129,24 +129,24 @@ De entiteit **date** vertegenwoordigt datums waarnaar wordt verwezen door meerde
 
 |     Eigenschap    |                       Beschrijving                      |    Voorbeeld    |
 |-----------------|--------------------------------------------------------|---------------|
-| DateKey         | Unieke id voor deze datum in het datawarehouse. | 20160703      |
-| FullDate        | Deze datum wordt weergegeven in de volledige datum-/tijdnotatie.        | 3-7-2016, 0:00 |
-| DayOfWeek       | Dag van week                                            | 1             |
-| DayOfMonth      | Dag van maand                                           | 3             |
-| DayOfYear       | Dag van jaar                                            | 185           |
-| WeekOfYear      | Week van jaar                                           | 28            |
-| MonthOfYear     | Maand van jaar                                      | 7             |
-| CalendarQuarter | Kalenderkwartaal                                       | 3             |
-| CalendarYear    | Kalenderjaar                                          | 2016          |
-| DateKey         | Unieke id voor deze datum in het datawarehouse. | 20160703      |
-| FullDate        | Deze datum wordt weergegeven in de volledige datum-/tijdnotatie.        | 3-7-2016, 0:00 |
-| DayOfWeek       | Dag van week                                            | 1             |
-| DayOfMonth      | Dag van maand                                           | 3             |
-| DayOfYear       | Dag van jaar                                            | 185           |
-| WeekOfYear      | Week van jaar                                           | 28            |
-| MonthOfYear     | Maand van jaar                                      | 7             |
-| CalendarQuarter | Kalenderkwartaal                                       | 3             |
-| CalendarYear    | Kalenderjaar                                          | 2016          |
+| dateKey         | Unieke id voor deze datum in het datawarehouse. | 20160703      |
+| fullDate        | Deze datum wordt weergegeven in de volledige datum-/tijdnotatie.        | 3-7-2016, 0:00 |
+| dayOfWeek       | Dag van week                                            | 1             |
+| dayOfMonth      | Dag van maand                                           | 3             |
+| dayOfYear       | Dag van jaar                                            | 185           |
+| weekOfYear      | Week van jaar                                           | 28            |
+| monthOfYear     | Maand van jaar                                      | 7             |
+| calendarQuarter | Kalenderkwartaal                                       | 3             |
+| calendarYear    | Kalenderjaar                                          | 2016          |
+| dateKey         | Unieke id voor deze datum in het datawarehouse. | 20160703      |
+| fullDate        | Deze datum wordt weergegeven in de volledige datum-/tijdnotatie.        | 3-7-2016, 0:00 |
+| dayOfWeek       | Dag van week                                            | 1             |
+| dayOfMonth      | Dag van maand                                           | 3             |
+| dayOfYear       | Dag van jaar                                            | 185           |
+| weekOfYear      | Week van jaar                                           | 28            |
+| monthOfYear     | Maand van jaar                                      | 7             |
+| calendarQuarter | Kalenderkwartaal                                       | 3             |
+| calendarYear    | Kalenderjaar                                          | 2016          |
 
 ## <a name="devicecategories"></a>deviceCategories
 
@@ -161,38 +161,38 @@ De entiteit **DeviceConfigurationProfileDeviceActivity** bevat het aantal appara
 
 |  Eigenschap |                                          Beschrijving                                          |  Voorbeeld |
 |-----------|-----------------------------------------------------------------------------------------------|----------|
-| DateKey   | De datum waarop het inchecken van het apparaatconfiguratieprofiel is vastgelegd in het datawarehouse. | 20160703 |
-| In behandeling   | Aantal unieke apparaten met de status In behandeling.                                                    | 123      |
-| Geslaagd | Aantal unieke apparaten met de status Geslaagd.                                                    | 12       |
-| Fout     | Aantal unieke apparaten met de status Fout.                                                      | 10       |
-| Mislukt    | Aantal unieke apparaten met de status Mislukt.                                                     | 2        |
+| dateKey   | De datum waarop het inchecken van het apparaatconfiguratieprofiel is vastgelegd in het datawarehouse. | 20160703 |
+| in behandeling   | Aantal unieke apparaten met de status In behandeling.                                                    | 123      |
+| geslaagd | Aantal unieke apparaten met de status Geslaagd.                                                    | 12       |
+| fout     | Aantal unieke apparaten met de status Fout.                                                      | 10       |
+| mislukt    | Aantal unieke apparaten met de status Mislukt.                                                     | 2        |
 
 ## <a name="deviceconfigurationprofileuseractivities"></a>deviceConfigurationProfileUserActivities 
 De entiteit **DeviceConfigurationProfileUserActivity** bevat het aantal gebruikers met de status Geslaagd, In behandeling, Mislukt of Fout per dag. Het aantal weerspiegelt de apparaatconfiguratieprofielen die zijn toegewezen aan de entiteit. Als een gebruiker bijvoorbeeld voor alle toegewezen beleidsregels de status Geslaagd heeft, wordt de teller voor die status met één opgehoogd voor die dag. Als aan een gebruiker twee profielen zijn toegewezen, één met de status Geslaagd en het andere profiel met de status Fout, wordt de gebruiker in de foutstatus geplaatst. De entiteit **DeviceConfigurationProfileUserActivity** geeft voor de afgelopen dertig dagen aan hoeveel gebruikers op een bepaalde dag een bepaalde status hebben. 
 
 | Eigenschap  | Beschrijving  | Voorbeeld  |
 |------------|----------------------------------------------------------------------------------------------|-----------|
-| DateKey  | De datum waarop het inchecken van het apparaatconfiguratieprofiel is vastgelegd in het datawarehouse.  | 20160703  |
-| In behandeling  | Aantal unieke gebruikers met de status In behandeling.  | 123  |
-| Geslaagd  | Aantal unieke gebruikers met de status Geslaagd.  | 12  |
-| Fout  | Aantal unieke gebruikers met de status Fout.  | 10  |
-| Mislukt  | Aantal unieke gebruikers met de status Mislukt.  | 2  |
+| dateKey  | De datum waarop het inchecken van het apparaatconfiguratieprofiel is vastgelegd in het datawarehouse.  | 20160703  |
+| in behandeling  | Aantal unieke gebruikers met de status In behandeling.  | 123  |
+| geslaagd  | Aantal unieke gebruikers met de status Geslaagd.  | 12  |
+| fout  | Aantal unieke gebruikers met de status Fout.  | 10  |
+| mislukt  | Aantal unieke gebruikers met de status Mislukt.  | 2  |
 
 ## <a name="devicepropertyhistories"></a>devicePropertyHistories
 
 |          Eigenschap          |                                                                                      Beschrijving                                                                                     |
 |----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| DateKey                    | Verwijzing naar datumtabel waarmee de dag wordt aangegeven.                                                                                                                                          |
-| DeviceKey                  | Unieke id van het apparaat in het datawarehouse - surrogaatsleutel. Dit is een verwijzing naar de apparaattabel die de Intune-apparaat-id bevat.                               |
-| DeviceName                 | Naam van het apparaat op platforms waarop het benoemen van een apparaat is toegestaan. Op andere platforms maakt Intune een naam op basis van andere eigenschappen. Dit kenmerk is niet beschikbaar voor alle apparaten. |
-| DeviceRegistrationStateKey | Sleutel van het kenmerk voor de apparaatregistratiestatus voor dit apparaat.                                                                                                                    |
-| OwnerTypeKey               | Sleutel van het kenmerk voor het type eigenaar voor dit apparaat: zakelijk, persoonlijk of onbekend.                                                                                                  |
-| ManagementStateKey         | Sleutel van de aan dit apparaat gekoppelde beheerstatus, waarmee de laatste status van een externe actie wordt aangegeven of dat het apparaat is gekraakt of geroot.                                                |
-| AzureADRegistered          | Of het apparaat is geregistreerd bij Azure Active Directory.                                                                                                                             |
-| ComplianceStateKey         | Een sleutel voor de ComplianceState.                                                                                                                                                            |
-| OSVersion                  | Versie besturingssysteem.                                                                                                                                                                          |
-| JailBroken                 | Of het apparaat jailbroken of geroot is.                                                                                                                                         |
-| DeviceCategoryKey          | Sleutel van het kenmerk voor de apparaatcategorie voor dit apparaat.                                                                                                                                    |
+| dateKey                    | Verwijzing naar datumtabel waarmee de dag wordt aangegeven.                                                                                                                                          |
+| deviceKey                  | Unieke id van het apparaat in het datawarehouse - surrogaatsleutel. Dit is een verwijzing naar de apparaattabel die de Intune-apparaat-id bevat.                               |
+| deviceName                 | Naam van het apparaat op platforms waarop het benoemen van een apparaat is toegestaan. Op andere platforms maakt Intune een naam op basis van andere eigenschappen. Dit kenmerk is niet beschikbaar voor alle apparaten. |
+| deviceRegistrationStateKey | Sleutel van het kenmerk voor de apparaatregistratiestatus voor dit apparaat.                                                                                                                    |
+| ownerTypeKey               | Sleutel van het kenmerk voor het type eigenaar voor dit apparaat: zakelijk, persoonlijk of onbekend.                                                                                                  |
+| managementStateKey         | Sleutel van de aan dit apparaat gekoppelde beheerstatus, waarmee de laatste status van een externe actie wordt aangegeven of dat het apparaat is gekraakt of geroot.                                                |
+| azureADRegistered          | Of het apparaat is geregistreerd bij Azure Active Directory.                                                                                                                             |
+| complianceStateKey         | Een sleutel voor de ComplianceState.                                                                                                                                                            |
+| oSVersion                  | Versie besturingssysteem.                                                                                                                                                                          |
+| jailBroken                 | Of het apparaat jailbroken of geroot is.                                                                                                                                         |
+| deviceCategoryKey          | Sleutel van het kenmerk voor de apparaatcategorie voor dit apparaat.                                                                                                                                    |
 | physicalMemoryInBytes      | Het fysieke geheugen in bytes.                                                                                                                                    |
 | totalStorageSpaceInBytes      | Totale opslagcapaciteit in bytes.                                                                                                                                    |
 
@@ -205,56 +205,56 @@ De entiteit **DeviceRegistrationState** vertegenwoordigt het registratietype waa
 | deviceRegistrationStateID   | Unieke id voor registratiestatus                                            |
 | deviceRegistrationStateKey  | Unieke id van de registratiestatus in het datawarehouse - surrogaatsleutel |
 | deviceRegistrationStateName | Registratiestatus                                                                  |
-|    NotRegistered                     |    Niet geregistreerd                                                                                                                                                                  |
-|    Geregistreerd                        |       Geregistreerd                                                                                                                                                                   |
-|    Revoked                           |       Status betekent dat de client is geblokkeerd door de IT-beheerder en dat de blokkering voor de client kan worden opgeheven. Een apparaat kan ook de status Ingetrokken hebben nadat deze is gewist of buiten gebruik is gesteld.        |
-|    KeyConflict                       |    Sleutelconflict                                                                                                                                                                    |
-|    ApprovalPending                   |    Goedkeuring in behandeling                                                                                                                                                                |
-|    CertificateReset                  |    Certificaat opnieuw instellen                                                                                                                                                               |
-|    NotRegisteredPendingEnrollment    |    Niet geregistreerde, in behandeling zijnde registratie                                                                                                                                               |
-|    Onbekend                           |    Onbekende status                                                                                                                                                                   |
+|    notRegistered                     |    Niet geregistreerd                                                                                                                                                                  |
+|    registered                        |       Geregistreerd                                                                                                                                                                   |
+|    revoked                           |       Status betekent dat de client is geblokkeerd door de IT-beheerder en dat de blokkering voor de client kan worden opgeheven. Een apparaat kan ook de status Ingetrokken hebben nadat deze is gewist of buiten gebruik is gesteld.        |
+|    keyConflict                       |    Sleutelconflict                                                                                                                                                                    |
+|    approvalPending                   |    Goedkeuring in behandeling                                                                                                                                                                |
+|    certificateReset                  |    Certificaat opnieuw instellen                                                                                                                                                               |
+|    notRegisteredPendingEnrollment    |    Niet geregistreerde, in behandeling zijnde registratie                                                                                                                                               |
+|    unknown                           |    Onbekende status                                                                                                                                                                   |
 
 ## <a name="devices"></a>devices
 Met de entiteit **devices** worden alle geregistreerde apparaten voor beheer en de bijbehorende eigenschappen weergegeven.
 
 |          Eigenschap          |                                                                                       Beschrijving                                                                                      |
 |----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| DeviceKey                  | Unieke id van het apparaat in het datawarehouse - surrogaatsleutel.                                                                                                               |
-| DeviceId                   | Unieke id van het apparaat.                                                                                                                                                     |
-| DeviceName                 | Naam van het apparaat op platforms waarop het benoemen van een apparaat is toegestaan. Op andere platforms maakt Intune een naam op basis van andere eigenschappen. Dit kenmerk is niet beschikbaar voor alle apparaten. |
-| DeviceTypeKey              | Sleutel van het kenmerk voor het apparaattype voor dit apparaat.                                                                                                                                    |
-| DeviceRegistrationState    | Sleutel van het kenmerk voor de clientregistratiestatus voor dit apparaat.                                                                                                                      |
-| OwnerTypeKey               | Sleutel van het kenmerk voor het type eigenaar voor dit apparaat: zakelijk, persoonlijk of onbekend.                                                                                                    |
-| EnrolledDateTime           | De datum en tijd waarop het apparaat is ingeschreven.                                                                                                                                         |
+| deviceKey                  | Unieke id van het apparaat in het datawarehouse - surrogaatsleutel.                                                                                                               |
+| deviceId                   | Unieke id van het apparaat.                                                                                                                                                     |
+| deviceName                 | Naam van het apparaat op platforms waarop het benoemen van een apparaat is toegestaan. Op andere platforms maakt Intune een naam op basis van andere eigenschappen. Dit kenmerk is niet beschikbaar voor alle apparaten. |
+| deviceTypeKey              | Sleutel van het kenmerk voor het apparaattype voor dit apparaat.                                                                                                                                    |
+| deviceRegistrationState    | Sleutel van het kenmerk voor de clientregistratiestatus voor dit apparaat.                                                                                                                      |
+| ownerTypeKey               | Sleutel van het kenmerk voor het type eigenaar voor dit apparaat: zakelijk, persoonlijk of onbekend.                                                                                                    |
+| enrolledDateTime           | De datum en tijd waarop het apparaat is ingeschreven.                                                                                                                                         |
 | EthernetMacAddress           | De unieke netwerk-id van dit apparaat.                                                                                                                                         |
-| LastSyncDateTime           | Laatste bekende keer dat een apparaat is ingecheckt bij Intune.                                                                                                                                              |
-| ManagementAgentKey         | Sleutel van de beheeragent die is gekoppeld aan dit apparaat.                                                                                                                             |
-| ManagementStateKey         | Sleutel van de aan dit apparaat gekoppelde beheerstatus waarmee de laatste status van een externe actie wordt aangegeven of dat het apparaat is gekraakt of geroot.                                                |
-| AzureADDeviceId            | De Azure-apparaat-id voor dit apparaat.                                                                                                                                                  |
-| AzureADRegistered          | Of het apparaat is geregistreerd bij Azure Active Directory.                                                                                                                             |
-| DeviceCategoryKey          | Sleutel van de categorie die is gekoppeld aan dit apparaat.                                                                                                                                     |
-| DeviceEnrollmentType       | Sleutel van het registratietype dat is gekoppeld aan dit apparaat (geeft de registratiemethode aan).                                                                                             |
-| ComplianceStateKey         | Sleutel van de Nalevingsstatus die is gekoppeld aan dit apparaat.                                                                                                                             |
+| lastSyncDateTime           | Laatste bekende keer dat een apparaat is ingecheckt bij Intune.                                                                                                                                              |
+| managementAgentKey         | Sleutel van de beheeragent die is gekoppeld aan dit apparaat.                                                                                                                             |
+| managementStateKey         | Sleutel van de aan dit apparaat gekoppelde beheerstatus waarmee de laatste status van een externe actie wordt aangegeven of dat het apparaat is gekraakt of geroot.                                                |
+| azureADDeviceId            | De Azure-apparaat-id voor dit apparaat.                                                                                                                                                  |
+| azureADRegistered          | Of het apparaat is geregistreerd bij Azure Active Directory.                                                                                                                             |
+| deviceCategoryKey          | Sleutel van de categorie die is gekoppeld aan dit apparaat.                                                                                                                                     |
+| deviceEnrollmentType       | Sleutel van het registratietype dat is gekoppeld aan dit apparaat (geeft de registratiemethode aan).                                                                                             |
+| complianceStateKey         | Sleutel van de Nalevingsstatus die is gekoppeld aan dit apparaat.                                                                                                                             |
 | office365Version           | De versie van Microsoft 365 die op het apparaat is geïnstalleerd.                                                                                                                             |
-| OSVersion                  | De versie van het besturingssysteem van het apparaat.                                                                                                                                                |
-| EasDeviceId                | De Exchange ActiveSync-id van het apparaat.                                                                                                                                                  |
-| SerialNumber               | SerialNumber                                                                                                                                                                           |
-| UserId                     | De unieke id voor de gebruiker die is gekoppeld aan het apparaat.                                                                                                                           |
-| RowLastModifiedDateTimeUTC | De datum en tijd in UTC waarop dit apparaat het laatst is gewijzigd in het datawarehouse.                                                                                                       |
-| Fabrikant               | Fabrikant van het apparaat                                                                                                                                                             |
-| Model                      | Model van het apparaat                                                                                                                                                                    |
-| OperatingSystem            | Het besturingssysteem van het apparaat. Windows, iOS/iPadOS, enzovoort                                                                                                                                   |
-| IsDeleted                  | Binaire code om weer te geven of het apparaat is verwijderd of niet.                                                                                                                                 |
-| AndroidSecurityPatchLevel  | Niveau Android-beveiligingspatch                                                                                                                                                           |
-| MEID                       | MEID                                                                                                                                                                                   |
+| oSVersion                  | De versie van het besturingssysteem van het apparaat.                                                                                                                                                |
+| easDeviceId                | De Exchange ActiveSync-id van het apparaat.                                                                                                                                                  |
+| serialNumber               | SerialNumber                                                                                                                                                                           |
+| userId                     | De unieke id voor de gebruiker die is gekoppeld aan het apparaat.                                                                                                                           |
+| rowLastModifiedDateTimeUTC | De datum en tijd in UTC waarop dit apparaat het laatst is gewijzigd in het datawarehouse.                                                                                                       |
+| manufacturer               | Fabrikant van het apparaat                                                                                                                                                             |
+| model                      | Model van het apparaat                                                                                                                                                                    |
+| operatingSystem            | Het besturingssysteem van het apparaat. Windows, iOS/iPadOS, enzovoort                                                                                                                                   |
+| isDeleted                  | Binaire code om weer te geven of het apparaat is verwijderd of niet.                                                                                                                                 |
+| androidSecurityPatchLevel  | Niveau Android-beveiligingspatch                                                                                                                                                           |
+| mEID                       | MEID                                                                                                                                                                                   |
 | isSupervised               | De supervisiestatus van het apparaat                                                                                                                                                               |
-| FreeStorageSpaceInBytes    | Beschikbare opslag in bytes.                                                                                                                                                                 |
-| EncryptionState            | De versleutelingsstatus van het apparaat.                                                                                                                                                      |
-| SubscriberCarrier          | Provider van abonnee van het apparaat                                                                                                                                                       |
-| PhoneNumber                | Telefoonnummer van het apparaat                                                                                                                                                             |
-| IMEI                       | IMEI                                                                                                                                                                                   |
-| CellularTechnology         | Mobiele telefoontechnologie van het apparaat.                                                                                                                                                    |
-| WiFiMacAddress             | MAC-adres Wi-Fi.                                                                                                                                                                              |
+| freeStorageSpaceInBytes    | Beschikbare opslag in bytes.                                                                                                                                                                 |
+| encryptionState            | De versleutelingsstatus van het apparaat.                                                                                                                                                      |
+| subscriberCarrier          | Provider van abonnee van het apparaat                                                                                                                                                       |
+| phoneNumber                | Telefoonnummer van het apparaat                                                                                                                                                             |
+| iMEI                       | IMEI                                                                                                                                                                                   |
+| cellularTechnology         | Mobiele telefoontechnologie van het apparaat.                                                                                                                                                    |
+| wiFiMacAddress             | MAC-adres Wi-Fi.                                                                                                                                                                              |
 | windowsOsEdition             | De versie van het Windows-besturingssysteem.                                                                                                                                                                              |
 
 
@@ -263,9 +263,9 @@ De entiteit **deviceTypes** vertegenwoordigt het apparaattype waarnaar wordt ver
 
 |    Eigenschap    |                                  Beschrijving                                 |
 |----------------|------------------------------------------------------------------------------|
-| DeviceTypeID   | Unieke id van het apparaattype                                       |
-| DeviceTypeKey  | Unieke id van het apparaattype in het datawarehouse - surrogaatsleutel |
-| DeviceTypeName | Apparaattype                                                                |
+| deviceTypeID   | Unieke id van het apparaattype                                       |
+| deviceTypeKey  | Unieke id van het apparaattype in het datawarehouse - surrogaatsleutel |
+| deviceTypeName | Apparaattype                                                                |
 
 ### <a name="example"></a>Voorbeeld
 
@@ -412,27 +412,27 @@ De **IntuneManagementExtension** bevat een lijst met dagelijkse **IntuneManageme
 
 |       Eigenschap      |                          Beschrijving                          | Voorbeeld |
 |---------------------|---------------------------------------------------------------|---------|
-| DateKey             | De unieke id van de datum.                                | 123     |
-| TenantKey           | De unieke id van de tenant.                              | 456     |
-| DeviceKey           | Unieke id van het apparaat.                              | 789     |
-| ExtensionVersionKey | De unieke id van de IntuneManagementExtension-versie. | 1       |
-| ExtensionStateKey   | Unieke id van de status.                            | 2       |
+| dateKey             | De unieke id van de datum.                                | 123     |
+| tenantKey           | De unieke id van de tenant.                              | 456     |
+| deviceKey           | Unieke id van het apparaat.                              | 789     |
+| extensionVersionKey | De unieke id van de IntuneManagementExtension-versie. | 1       |
+| extensionStateKey   | Unieke id van de status.                            | 2       |
 
 ## <a name="intunemanagementextensionhealthstates"></a>intuneManagementExtensionHealthStates
 De **IntuneManagementExtensionHealthState** bevat een lijst van alle mogelijke statussen van de **IntuneManagementExtension**.
 
 |      Eigenschap     |                   Beschrijving                  | Voorbeeld |
 |-------------------|------------------------------------------------|---------|
-| ExtensionStateKey | Unieke id van de status.           | 2       |
-| ExtensionState    | De status van een IntuneManagementExtension. | In orde |
+| extensionStateKey | Unieke id van de status.           | 2       |
+| extensionState    | De status van een IntuneManagementExtension. | In orde |
 
 ## <a name="intunemanagementextensionversions"></a>intuneManagementExtensionVersions
 De entiteit **IntuneManagementExtensionVersion** bevat een lijst van alle versies die worden gebruikt door **IntuneManagementExtension**.
 
 |       Eigenschap      |                          Beschrijving                          | Voorbeeld |
 |---------------------|---------------------------------------------------------------|---------|
-| ExtensionVersionKey | De unieke id van de IntuneManagementExtension-versie. | 1       |
-| ExtensionVersion    | Het versienummer, bestaande uit vier cijfers.                                   | 1.0.2.0 |
+| extensionVersionKey | De unieke id van de IntuneManagementExtension-versie. | 1       |
+| extensionVersion    | Het versienummer, bestaande uit vier cijfers.                                   | 1.0.2.0 |
 
 ## <a name="mamapplications"></a>MamApplications
 
@@ -443,10 +443,10 @@ De entiteit **MamApplication** bevat een lijst met LOB-apps (Line-of-Business) d
 | mamApplicationKey |De unieke id van de MAM-toepassing. | 432 |
 | mamApplicationName |De naam van de MAM-toepassing. |Voorbeeldnaam voor de MAM-toepassing |
 | mamApplicationId |De toepassings-id van de MAM-toepassing. | 123 |
-| IsDeleted |Geeft aan of deze MAM-app-record is bijgewerkt. <br>Waar: de MAM-app heeft een nieuwe record met bijgewerkte velden in deze tabel. <br>Onwaar: de meest recente record voor deze MAM-app. |Waar/onwaar |
-| StartDateInclusiveUTC |De datum en tijd in UTC waarop deze MAM-app is gemaakt in het datawarehouse. |11/23/2016 12:00:00 AM |
-| DeletedDateUTC |De datum en tijd in UTC waarop IsDeleted is gewijzigd in Waar. |11/23/2016 12:00:00 AM |
-| RowLastModifiedDateTimeUTC |De datum en tijd in UTC waarop deze MAM-app het laatst is gewijzigd in het datawarehouse. |11/23/2016 12:00:00 AM |
+| isDeleted |Geeft aan of deze MAM-app-record is bijgewerkt. <br>Waar: de MAM-app heeft een nieuwe record met bijgewerkte velden in deze tabel. <br>Onwaar: de meest recente record voor deze MAM-app. |Waar/onwaar |
+| startDateInclusiveUTC |De datum en tijd in UTC waarop deze MAM-app is gemaakt in het datawarehouse. |11/23/2016 12:00:00 AM |
+| deletedDateUTC |De datum en tijd in UTC waarop IsDeleted is gewijzigd in Waar. |11/23/2016 12:00:00 AM |
+| rowLastModifiedDateTimeUTC |De datum en tijd in UTC waarop deze MAM-app het laatst is gewijzigd in het datawarehouse. |11/23/2016 12:00:00 AM |
 
 
 ## <a name="mamapplicationinstances"></a>MamApplicationInstances
@@ -456,22 +456,22 @@ De entiteit **MamApplicationInstance** bevat een lijst met beheerde MAM-apps (Mo
 
 |          Eigenschap          |                                                                                                  Beschrijving                                                                                                  |               Voorbeeld                |
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
-|   ApplicationInstanceKey   |                                                               De unieke id van het MAM-app-exemplaar in het datawarehouse (surrogaatsleutel).                                                                |                 123                  |
-|           UserId           |                                                                              De gebruikers-id van de gebruiker die deze MAM-app heeft geïnstalleerd.                                                                              | b66bc706-ffff-7437-0340-032819502773 |
-|   ApplicationInstanceId    |                                              De unieke id van het MAM-app-exemplaar, vergelijkbaar met ApplicationInstanceKey, maar de id is een natuurlijke sleutel.                                              | b66bc706-ffff-7437-0340-032819502773 |
+|   applicationInstanceKey   |                                                               De unieke id van het MAM-app-exemplaar in het datawarehouse (surrogaatsleutel).                                                                |                 123                  |
+|           userId           |                                                                              De gebruikers-id van de gebruiker die deze MAM-app heeft geïnstalleerd.                                                                              | b66bc706-ffff-7437-0340-032819502773 |
+|   applicationInstanceId    |                                              De unieke id van het MAM-app-exemplaar, vergelijkbaar met ApplicationInstanceKey, maar de id is een natuurlijke sleutel.                                              | b66bc706-ffff-7437-0340-032819502773 |
 | mamApplicationId | De toepassings-id van de MAM-toepassing waarvoor dit MAM-toepassingsexemplaar is gemaakt.   | 11/23/2016 12:00:00 AM   |
-|     ApplicationVersion     |                                                                                     De toepassingsversie van deze MAM-app.                                                                                      |                  2                   |
-|        CreatedDate         |                                                                 De datum waarop deze record van het MAM-app-exemplaar is gemaakt. De waarde kan null zijn.                                                                 |        11/23/2016 12:00:00 AM        |
-|          Platform          |                                                                          Het platform van het apparaat waarop deze MAM-app is geïnstalleerd.                                                                           |                  2                   |
-|      PlatformVersion       |                                                                      De versie van het platform van het apparaat waarop deze MAM-app is geïnstalleerd.                                                                       |                 2.2                  |
-|         SdkVersion         |                                                                            De MAM SDK-versie waarmee deze MAM-app is ingepakt.                                                                            |                 3.2                  |
+|     applicationVersion     |                                                                                     De toepassingsversie van deze MAM-app.                                                                                      |                  2                   |
+|        createdDate         |                                                                 De datum waarop deze record van het MAM-app-exemplaar is gemaakt. De waarde kan null zijn.                                                                 |        11/23/2016 12:00:00 AM        |
+|          platform          |                                                                          Het platform van het apparaat waarop deze MAM-app is geïnstalleerd.                                                                           |                  2                   |
+|      platformVersion       |                                                                      De versie van het platform van het apparaat waarop deze MAM-app is geïnstalleerd.                                                                       |                 2.2                  |
+|         sdkVersion         |                                                                            De MAM SDK-versie waarmee deze MAM-app is ingepakt.                                                                            |                 3.2                  |
 | mamDeviceId | De apparaat-id van het apparaat waaraan het MAM-toepassingsexemplaar is gekoppeld.   | 11/23/2016 12:00:00 AM   |
 | mamDeviceType | Het apparaattype van het apparaat waaraan het MAM-toepassingsexemplaar is gekoppeld.   | 11/23/2016 12:00:00 AM   |
 | mamDeviceName | De apparaatnaam van het apparaat waaraan het MAM-toepassingsexemplaar is gekoppeld.   | 11/23/2016 12:00:00 AM   |
-|         IsDeleted          | Geeft aan of de record van dit MAM-app-exemplaar is bijgewerkt. <br>True: het MAM-app-exemplaar heeft een nieuwe record met bijgewerkte velden in deze tabel. <br>Onwaar: de meest recente record voor dit MAM-app-exemplaar. |              Waar/onwaar              |
-|   StartDateInclusiveUTC    |                                                              De datum en tijd in UTC waarop dit MAM-app-exemplaar is gemaakt in het datawarehouse.                                                               |        11/23/2016 12:00:00 AM        |
-|       DeletedDateUTC       |                                                                             De datum en tijd in UTC waarop IsDeleted is gewijzigd in Waar.                                                                              |        11/23/2016 12:00:00 AM        |
-| RowLastModifiedDateTimeUTC |                                                           De datum en tijd in UTC waarop dit MAM-app-exemplaar het laatst is gewijzigd in het datawarehouse.                                                            |        11/23/2016 12:00:00 AM        |
+|         isDeleted          | Geeft aan of de record van dit MAM-app-exemplaar is bijgewerkt. <br>True: het MAM-app-exemplaar heeft een nieuwe record met bijgewerkte velden in deze tabel. <br>Onwaar: de meest recente record voor dit MAM-app-exemplaar. |              Waar/onwaar              |
+|   startDateInclusiveUtc    |                                                              De datum en tijd in UTC waarop dit MAM-app-exemplaar is gemaakt in het datawarehouse.                                                               |        11/23/2016 12:00:00 AM        |
+|       deletedDateUtc       |                                                                             De datum en tijd in UTC waarop IsDeleted is gewijzigd in Waar.                                                                              |        11/23/2016 12:00:00 AM        |
+| rowLastModifiedDateTimeUtc |                                                           De datum en tijd in UTC waarop dit MAM-app-exemplaar het laatst is gewijzigd in het datawarehouse.                                                            |        11/23/2016 12:00:00 AM        |
 
 ## <a name="mamcheckins"></a>MamCheckins
 
@@ -482,13 +482,13 @@ De entiteit **MamCheckin** vertegenwoordigt gegevens die worden verzameld wannee
 
 | Eigenschap | Beschrijving | Voorbeeld |
 |---------|------------|--------|
-| DateKey |De datum waarop het inchecken van de MAM-app is vastgelegd in het datawarehouse. | 20160703 |
-| ApplicationInstanceKey |De sleutel van het app-exemplaar dat is gekoppeld aan het inchecken van deze MAM-app. | 123 |
-| UserKey |De sleutel van de gebruiker die is gekoppeld aan het inchecken van deze MAM-app. | 4323 |
+| dateKey |De datum waarop het inchecken van de MAM-app is vastgelegd in het datawarehouse. | 20160703 |
+| applicationInstanceKey |De sleutel van het app-exemplaar dat is gekoppeld aan het inchecken van deze MAM-app. | 123 |
+| userKey |De sleutel van de gebruiker die is gekoppeld aan het inchecken van deze MAM-app. | 4323 |
 | mamApplicationKey |De toepassingssleutel van de toepassing waaraan de MAM-toepassingcheck-in is gekoppeld. | 432 |
-| DeviceHealthKey |De sleutel van de apparaatstatus die is gekoppeld aan het inchecken van deze MAM-app. | 321 |
-| PlatformKey |Het platform van het apparaat dat is gekoppeld aan het inchecken van deze MAM-app. |123 |
-| LastCheckInDate |De datum en tijd waarop deze MAM-app het laatst is ingecheckt. De waarde kan null zijn. |11/23/2016 12:00:00 AM |
+| deviceHealthKey |De sleutel van de apparaatstatus die is gekoppeld aan het inchecken van deze MAM-app. | 321 |
+| platformKey |Het platform van het apparaat dat is gekoppeld aan het inchecken van deze MAM-app. |123 |
+| lastCheckInDate |De datum en tijd waarop deze MAM-app het laatst is ingecheckt. De waarde kan null zijn. |11/23/2016 12:00:00 AM |
 
 ## <a name="mamdevicehealths"></a>MamDeviceHealths
 
@@ -496,10 +496,10 @@ De entiteit **MamDeviceHealth** vertegenwoordigt apparaten waarop MAM-beleid (Mo
 
 | Eigenschap | Beschrijving | Voorbeeld |
 |---------|------------|--------|
-| DeviceHealthKey |De unieke id van het apparaat en de bijbehorende status in het datawarehouse (surrogaatsleutel). |123 |
-| DeviceHealth |De unieke id van het apparaat en de bijbehorende status, vergelijkbaar met DeviceHealthKey, maar de id is een natuurlijke sleutel. |b66bc706-ffff-7777-0340-032819502773 |
-| DeviceHealthName |De status van het apparaat. <br>Niet beschikbaar: er is geen informatie over dit apparaat. <br>Goed: apparaat is niet opengebroken. <br>Slecht: apparaat is opengebroken. |Niet beschikbaar Goed Slecht |
-| RowLastModifiedDateTimeUTC |De datum en tijd in UTC waarop deze specifieke MAM-apparaatstatus het laatst is gewijzigd in het datawarehouse. |11/23/2016 12:00:00 AM |
+| deviceHealthKey |De unieke id van het apparaat en de bijbehorende status in het datawarehouse (surrogaatsleutel). |123 |
+| deviceHealth |De unieke id van het apparaat en de bijbehorende status, vergelijkbaar met DeviceHealthKey, maar de id is een natuurlijke sleutel. |b66bc706-ffff-7777-0340-032819502773 |
+| deviceHealthName |De status van het apparaat. <br>Niet beschikbaar: er is geen informatie over dit apparaat. <br>Goed: apparaat is niet opengebroken. <br>Slecht: apparaat is opengebroken. |Niet beschikbaar Goed Slecht |
+| rowLastModifiedDateTimeUtc |De datum en tijd in UTC waarop deze specifieke MAM-apparaatstatus het laatst is gewijzigd in het datawarehouse. |11/23/2016 12:00:00 AM |
 
 ## <a name="mamplatforms"></a>MamPlatforms
 
@@ -508,19 +508,19 @@ De entiteit **MamPlatform** bevat de platformnamen en -typen waarop een MAM-app 
 
 |          Eigenschap          |                                    Beschrijving                                    |                         Voorbeeld                         |
 |----------------------------|-----------------------------------------------------------------------------------|---------------------------------------------------------|
-|        PlatformKey         |     De unieke id van het platform in het datawarehouse (surrogaatsleutel).      |                           123                           |
-|          Platform          | De unieke id van de platform, vergelijkbaar met PlatformKey, maar het is een natuurlijke sleutel. |                           123                           |
-|        PlatformName        |                                   De naam van het platform                                   | Niet beschikbaar <br>Geen <br>Windows <br>iOS <br>Android. |
-| RowLastModifiedDateTimeUTC | De datum en tijd in UTC waarop dit platform het laatst is gewijzigd in het datawarehouse.  |                 11/23/2016 12:00:00 AM                  |
+|        platformKey         |     De unieke id van het platform in het datawarehouse (surrogaatsleutel).      |                           123                           |
+|          platform          | De unieke id van de platform, vergelijkbaar met PlatformKey, maar het is een natuurlijke sleutel. |                           123                           |
+|        platformName        |                                   De naam van het platform                                   | Niet beschikbaar <br>Geen <br>Windows <br>iOS <br>Android. |
+| rowLastModifiedDateTimeUtc | De datum en tijd in UTC waarop dit platform het laatst is gewijzigd in het datawarehouse.  |                 11/23/2016 12:00:00 AM                  |
 
 ## <a name="managementagenttypes"></a>managementAgentTypes
 De entiteit **ManagementAgentTypes** vertegenwoordigt de agents die worden gebruikt om een apparaat te beheren.
 
 |         Eigenschap        |                                       Beschrijving                                       |
 |-------------------------|-----------------------------------------------------------------------------------------|
-| ManagementAgentTypeID   | Unieke id van het type beheeragent.                                         |
-| ManagementAgentTypeKey  | Unieke id van het type beheeragent in het datawarehouse - surrogaatsleutel. |
-| ManagementAgentTypeName | Hiermee wordt aangegeven wat voor soort agent wordt gebruikt om het apparaat te beheren.                              |
+| managementAgentTypeID   | Unieke id van het type beheeragent.                                         |
+| managementAgentTypeKey  | Unieke id van het type beheeragent in het datawarehouse - surrogaatsleutel. |
+| managementAgentTypeName | Hiermee wordt aangegeven wat voor soort agent wordt gebruikt om het apparaat te beheren.                              |
 
 ### <a name="example"></a>Voorbeeld
 
@@ -569,21 +569,21 @@ De entiteit MobileAppInstallState vertegenwoordigt de installatiestatus van een 
 
 |       Eigenschap      |                        Beschrijving                       |
 |---------------------|----------------------------------------------------------|
-| AppInstallStateKey  | De unieke id van de installatiestatus van de app voor uw account. |
-| AppInstallState     | Enum-waarde van de installatiestatus van de app.                     |
-| AppInstallStateName | Naam van de installatiestatus van de app.                           |
+| appInstallStateKey  | De unieke id van de installatiestatus van de app voor uw account. |
+| appInstallState     | Enum-waarde van de installatiestatus van de app.                     |
+| appInstallStateName | Naam van de installatiestatus van de app.                           |
 
 ## <a name="mobileappinstallstatuscounts"></a>mobileAppInstallStatusCounts
 Vertegenwoordigt de installatiestatus van een mobiele app voor een bepaald doelapparaattype met behulp van Mobile Application Management via Microsoft Intune.
 
 |      Eigenschap      |                                                          Beschrijving                                                          |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------|
-| DateKey            | Sleutel van de datum waarop de installatiestatus van de app werd vastgelegd.                                                                     |
-| AppKey             | Sleutel van de mobiele app die wordt gebruikt om een exemplaar van AppRevision te identificeren.                                                          |
-| DeviceTypeKey      | Sleutel van het apparaattype dat is gekoppeld aan de mobiele toepassing.                                                              |
-| AppInstallStateKey | Sleutel van de installatiestatus van de app die wordt gebruikt om een exemplaar van MobileAppInstallState te identificeren.                                         |
-| ErrorCode          | De foutcode geretourneerd door het app-installatieprogramma, het mobiele platform of de service met betrekking tot de installatie van de app. |
-| Aantal              | Totaalaantal.                                                                                                                  |
+| dateKey            | Sleutel van de datum waarop de installatiestatus van de app werd vastgelegd.                                                                     |
+| appKey             | Sleutel van de mobiele app die wordt gebruikt om een exemplaar van AppRevision te identificeren.                                                          |
+| deviceTypeKey      | Sleutel van het apparaattype dat is gekoppeld aan de mobiele toepassing.                                                              |
+| appInstallStateKey | Sleutel van de installatiestatus van de app die wordt gebruikt om een exemplaar van MobileAppInstallState te identificeren.                                         |
+| errorCode          | De foutcode geretourneerd door het app-installatieprogramma, het mobiele platform of de service met betrekking tot de installatie van de app. |
+| count              | Totaalaantal.                                                                                                                  |
 
 ## <a name="ownertypes"></a>ownerTypes
 Met de entiteit **ownerType** wordt aangegeven of een apparaat bedrijfseigendom of privé-eigendom is of dat niet bekend is wie de eigenaar is.
@@ -602,67 +602,67 @@ De entiteit **Policy** bevat apparaatconfiguratieprofielen, app-configuratieprof
 
 |          Eigenschap          |                                                                       Beschrijving                                                                      |                Voorbeeld               |
 |----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
-| PolicyKey                  | Een unieke sleutel voor het beleid in het datawarehouse.                                                                                              | 123                                  |
-| PolicyId                   | Een unieke id van het beleid in het datawarehouse.                                                                                                 | b66bc706-ffff-7437-0340-032819502773 |
-| PolicyName                 | De naam van het beleid.                                                                                                                                    | "Windows 10 Baseline"                |
-| PolicyVersion              | De versie van het beleid. Wanneer het beleid wordt gewijzigd, wordt er een nieuwere versie gemaakt.                                                             | 1, 2, 3                              |
-| IsDeleted                  | Geeft aan of de beleidsrecord is bijgewerkt.  Waar: het beleid heeft een nieuwe record met bijgewerkte velden.  Onwaar: de meest recente record voor het beleid. | Waar/onwaar                           |
-| StartDateInclusiveUTC      | De datum en tijd in UTC waarop het beleid is gemaakt in het datawarehouse.                                                                              | 23-11-2016, 0:00                      |
-| DeletedDateUTC             | De datum en tijd in UTC waarop IsDeleted is gewijzigd in Waar.                                                                                                   | 23-11-2016, 0:00                      |
-| RowLastModifiedDateTimeUTC | De datum en tijd in UTC waarop het beleid het laatst is gewijzigd in het datawarehouse.                                                                        | 23-11-2016, 0:00                      |
+| policyKey                  | Een unieke sleutel voor het beleid in het datawarehouse.                                                                                              | 123                                  |
+| policyId                   | Een unieke id van het beleid in het datawarehouse.                                                                                                 | b66bc706-ffff-7437-0340-032819502773 |
+| policyName                 | De naam van het beleid.                                                                                                                                    | "Windows 10 Baseline"                |
+| policyVersion              | De versie van het beleid. Wanneer het beleid wordt gewijzigd, wordt er een nieuwere versie gemaakt.                                                             | 1, 2, 3                              |
+| isDeleted                  | Geeft aan of de beleidsrecord is bijgewerkt.  Waar: het beleid heeft een nieuwe record met bijgewerkte velden.  Onwaar: de meest recente record voor het beleid. | Waar/onwaar                           |
+| startDateInclusiveUTC      | De datum en tijd in UTC waarop het beleid is gemaakt in het datawarehouse.                                                                              | 23-11-2016, 0:00                      |
+| deletedDateUTC             | De datum en tijd in UTC waarop IsDeleted is gewijzigd in Waar.                                                                                                   | 23-11-2016, 0:00                      |
+| rowLastModifiedDateTimeUTC | De datum en tijd in UTC waarop het beleid het laatst is gewijzigd in het datawarehouse.                                                                        | 23-11-2016, 0:00                      |
 
 ## <a name="policydeviceactivities"></a>policyDeviceActivities
 In de volgende tabel wordt het aantal apparaten met de status Geslaagd, In behandeling, Mislukt of Fout per dag weergegeven. Het aantal weerspiegelt de gegevens per beleidstypeprofiel. Als een apparaat bijvoorbeeld voor alle toegewezen beleidsregels de status Geslaagd heeft, wordt de teller voor die status met één opgehoogd voor die dag. Als aan een apparaat twee profielen zijn toegewezen, één met de status Geslaagd en het andere profiel met de status Fout, wordt de teller Geslaagd met één opgehoogd en wordt het apparaat in de foutstatus geplaatst. De entiteit **policyDeviceActivity** geeft voor de afgelopen 30 dagen aan hoeveel apparaten op een bepaalde dag een bepaalde status hebben.
 
 |  Eigenschap |                                           Beschrijving                                           |        Voorbeeld        |
 |-----------|-------------------------------------------------------------------------------------------------|-----------------------|
-| DateKey   | De datum waarop het inchecken van het apparaatconfiguratieprofiel is vastgelegd in het datawarehouse. | 20160703              |
-| In behandeling   | Aantal unieke apparaten met de status In behandeling.                                                    | 123                   |
-| Geslaagd | Aantal unieke apparaten met de status Geslaagd.                                                    | 12                    |
-| PolicyKey | Beleidssleutel, kan worden samengevoegd met Policy om de naam van het beleid op te halen.                                  | Windows 10-basislijn |
-| Fout     | Aantal unieke apparaten met de status Fout.                                                      | 10                    |
-| Mislukt    | Aantal unieke apparaten met de status Mislukt.                                                     | 2                     |
+| dateKey   | De datum waarop het inchecken van het apparaatconfiguratieprofiel is vastgelegd in het datawarehouse. | 20160703              |
+| in behandeling   | Aantal unieke apparaten met de status In behandeling.                                                    | 123                   |
+| geslaagd | Aantal unieke apparaten met de status Geslaagd.                                                    | 12                    |
+| policyKey | Beleidssleutel, kan worden samengevoegd met Policy om de naam van het beleid op te halen.                                  | Windows 10-basislijn |
+| fout     | Aantal unieke apparaten met de status Fout.                                                      | 10                    |
+| mislukt    | Aantal unieke apparaten met de status Mislukt.                                                     | 2                     |
 
 ## <a name="policyplatformtypes"></a>policyPlatformTypes
 
 |        Eigenschap        |                      Beschrijving                      |     Voorbeeld    |
 |------------------------|-------------------------------------------------------|----------------|
-| PolicyPlatformTypeKey  | De unieke sleutel voor het platformtype van het beleid.        | 20170519       |
-| PolicyPlatformTypeId   | De unieke id voor het platformtype van het beleid. | 1              |
-| PolicyPlatformTypeName | De naam van het platformtype van het beleid.              | AndroidForWork |
+| policyPlatformTypeKey  | De unieke sleutel voor het platformtype van het beleid.        | 20170519       |
+| policyPlatformTypeId   | De unieke id voor het platformtype van het beleid. | 1              |
+| policyPlatformTypeName | De naam van het platformtype van het beleid.              | AndroidForWork |
 
 ## <a name="policytypeactivities"></a>policyTypeActivities
 De entiteit **PolicyTypeActivity** bevat het cumulatieve aantal apparaten met de status Geslaagd, In behandeling, Mislukt of Fout. Deze statuswaarden verwijzen naar een apparaatconfiguratieprofiel, app-configuratieprofiel of nalevingsbeleid per dag.
 
 |    Eigenschap   |                                          Beschrijving                                          |           Voorbeeld           |
 |---------------|-----------------------------------------------------------------------------------------------|-----------------------------|
-| DateKey       | De datum waarop het inchecken van het apparaatconfiguratieprofiel is vastgelegd in het datawarehouse. | 20160703                    |
-| PolicyKey     | Beleidssleutel, kan worden samengevoegd met Policy om de naam van het beleid op te halen.                                | Windows 10 baseline         |
-| PolicyTypeKey | Het type beleidssleutel, kan worden samengevoegd met PolicyType om de naam van het beleidstype op te halen.             | Windows 10-nalevingsbeleid configureren |
-| In behandeling       | Aantal unieke apparaten met de status In behandeling.                                                    | 123                         |
-| Geslaagd     | Aantal unieke apparaten met de status Geslaagd.                                                    | 12                          |
-| Fout         | Aantal unieke apparaten met de status Fout.                                                      | 10                          |
-| Mislukt        | Aantal unieke apparaten met de status Mislukt.                                                     | 2                           |
+| dateKey       | De datum waarop het inchecken van het apparaatconfiguratieprofiel is vastgelegd in het datawarehouse. | 20160703                    |
+| policyKey     | Beleidssleutel, kan worden samengevoegd met Policy om de naam van het beleid op te halen.                                | Windows 10 baseline         |
+| policyTypeKey | Het type beleidssleutel, kan worden samengevoegd met PolicyType om de naam van het beleidstype op te halen.             | Windows 10-nalevingsbeleid configureren |
+| in behandeling       | Aantal unieke apparaten met de status In behandeling.                                                    | 123                         |
+| geslaagd     | Aantal unieke apparaten met de status Geslaagd.                                                    | 12                          |
+| fout         | Aantal unieke apparaten met de status Fout.                                                      | 10                          |
+| mislukt        | Aantal unieke apparaten met de status Mislukt.                                                     | 2                           |
 
 ## <a name="policytypes"></a>policyTypes
 De entiteit **PolicyType** bevat typen apparaatconfiguratieprofielen, app-configuratieprofielen en nalevingsbeleid. U kunt het beleid met MDM (Mobile Device Management) toewijzen aan een groep in uw onderneming.
 
 |    Eigenschap    |                       Beschrijving                      |            Voorbeeld            |
 |----------------|--------------------------------------------------------|-------------------------------|
-| PolicyTypeId   | Een unieke id van het beleid in het bronsysteem.  | 123                           |
-| PolicyTypeKey  | Een unieke id van het beleid in het datawarehouse. | 1                             |
-| PolicyTypeName | De naam van het beleidstype                               | Nalevingsbeleid van Windows 10. |
+| policyTypeId   | Een unieke id van het beleid in het bronsysteem.  | 123                           |
+| policyTypeKey  | Een unieke id van het beleid in het datawarehouse. | 1                             |
+| policyTypeName | De naam van het beleidstype                               | Nalevingsbeleid van Windows 10. |
 
 ## <a name="policyuseractivities"></a>policyUserActivities
 In de volgende tabel wordt het aantal gebruikers met de status Geslaagd, In behandeling, Mislukt of Fout per dag weergegeven. Het aantal weerspiegelt de gegevens per beleidstypeprofiel. Als een gebruiker bijvoorbeeld voor alle toegewezen beleidsregels de status Geslaagd heeft, wordt de teller voor die status met één opgehoogd voor die dag. Als aan een gebruiker twee profielen zijn toegewezen, één met de status Geslaagd en het andere profiel met de status Fout, wordt de gebruiker in de foutstatus geplaatst. De entiteit **PolicyUserActivity** geeft voor de afgelopen 30 dagen aan hoeveel gebruikers op een bepaalde dag een bepaalde status hebben.
 
 |  Eigenschap |                                          Beschrijving                                          |       Voorbeeld       |
 |-----------|-----------------------------------------------------------------------------------------------|---------------------|
-| DateKey   | De datum waarop het inchecken van het apparaatconfiguratieprofiel is vastgelegd in het datawarehouse. | 20160703            |
-| In behandeling   | Aantal unieke apparaten met de status In behandeling.                                                    | 123                 |
-| Geslaagd | Aantal unieke apparaten met de status Geslaagd.                                                    | 12                  |
-| PolicyKey | Beleidssleutel, kan worden samengevoegd met Policy om de naam van het beleid op te halen.                                | Windows 10 baseline |
-| Fout     | Aantal unieke apparaten met de status Fout.                                                      | 10                  |
+| dateKey   | De datum waarop het inchecken van het apparaatconfiguratieprofiel is vastgelegd in het datawarehouse. | 20160703            |
+| in behandeling   | Aantal unieke apparaten met de status In behandeling.                                                    | 123                 |
+| geslaagd | Aantal unieke apparaten met de status Geslaagd.                                                    | 12                  |
+| policyKey | Beleidssleutel, kan worden samengevoegd met Policy om de naam van het beleid op te halen.                                | Windows 10 baseline |
+| fout     | Aantal unieke apparaten met de status Fout.                                                      | 10                  |
 
 ## <a name="termsandconditions"></a>termsAndConditions
 De entiteit **termsAndConditions** vertegenwoordigt de metagegevens en inhoud van een set Gebruikersvoorwaarden. De inhoud van de gebruikersvoorwaarden wordt aan gebruikers weergegeven bij hun eerste poging tot inschrijven bij Intune en vervolgens na bewerkingen waarvoor een beheerder re-acceptatie vereist. Op deze manier kunnen beheerders bepalingen communiceren waarmee een gebruiker moet instemmen om apparaten in te schrijven bij Intune.
@@ -686,11 +686,11 @@ De entiteit **UserDeviceAssociation** bevat gebruikersapparaatkoppelingen in uw 
 
 |        Naam        |                                             Beschrijving                                            |     Voorbeeld     |
 |--------------------|----------------------------------------------------------------------------------------------------|-----------------|
-| UserKey            | Een unieke id van gebruiker in het datawarehouse.   (surrogaatsleutel).                            | 123             |
-| DeviceKey          | Een unieke id van het apparaat in het datawarehouse.                                             | 123             |
-| CreatedDateTimeUTC | De datum en tijd wanneer de gebruikersapparaatkoppeling is gemaakt. Hiervoor wordt de UTC-notatie gebruikt.                     | 23-11-2016, 0:00 |
-| IsDeleted          | Geeft aan dat de gebruiker het apparaat heeft uitgeschreven en dat de koppeling niet meer actueel is. | Waar/onwaar      |
-| EndedDateTimeUTC   | De datum en tijd in UTC waarop IsDeleted is gewijzigd in Waar.                                               | 23-6-2017, 0:00  |
+| userKey            | Een unieke id van gebruiker in het datawarehouse.   (surrogaatsleutel).                            | 123             |
+| deviceKey          | Een unieke id van het apparaat in het datawarehouse.                                             | 123             |
+| createdDateTimeUTC | De datum en tijd wanneer de gebruikersapparaatkoppeling is gemaakt. Hiervoor wordt de UTC-notatie gebruikt.                     | 23-11-2016, 0:00 |
+| isDeleted          | Geeft aan dat de gebruiker het apparaat heeft uitgeschreven en dat de koppeling niet meer actueel is. | Waar/onwaar      |
+| endedDateTimeUTC   | De datum en tijd in UTC waarop IsDeleted is gewijzigd in Waar.                                               | 23-6-2017, 0:00  |
 
 ## <a name="users"></a>gebruikers
 De entiteit **user** bevat een lijst van alle Azure Active Directory-gebruikers (Azure AD) met toegewezen licenties in uw onderneming.
@@ -699,14 +699,14 @@ De entiteitverzameling **user** bevat gebruikersgegevens. Deze records bevatten 
 
 |          Eigenschap          |                                                                                                           Beschrijving                                                                                                          |                Voorbeeld               |
 |----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
-| UserKey                    | De unieke id van de gebruiker in het datawarehouse - surrogaatsleutel.                                                                                                                                                         | 123                                  |
-| UserId                     | De unieke id van de gebruiker, vergelijkbaar met UserKey, maar dit is een natuurlijke sleutel.                                                                                                                                                    | b66bc706-ffff-7437-0340-032819502773 |
-| UserEmail                  | Het e-mailadres van de gebruiker.                                                                                                                                                                                                     | John@constoso.com                    |
+| userKey                    | De unieke id van de gebruiker in het datawarehouse - surrogaatsleutel.                                                                                                                                                         | 123                                  |
+| userId                     | De unieke id van de gebruiker, vergelijkbaar met UserKey, maar dit is een natuurlijke sleutel.                                                                                                                                                    | b66bc706-ffff-7437-0340-032819502773 |
+| userEmail                  | Het e-mailadres van de gebruiker.                                                                                                                                                                                                     | John@constoso.com                    |
 | userPrincipalName                        | De UPN (user principal name) van de gebruiker.                                                                                                                                                                                               | John@constoso.com                    |
-| DisplayName                | De weergavenaam van de gebruiker.                                                                                                                                                                                                      | Jan                                 |
-| IntuneLicensed             | Geeft aan of deze gebruiker een licentie heeft voor Intune                                                                                                                                                                              | Waar/onwaar                           |
-| IsDeleted                  | Geeft aan of alle licenties van de gebruiker zijn verlopen en of de gebruiker daarom uit Intune werd verwijderd. Deze markering verandert niet voor één record. In plaats daarvan wordt er een nieuwe record gemaakt voor een nieuwe gebruikersstatus. | Waar/onwaar                           |
-| RowLastModifiedDateTimeUTC | De datum en tijd in UTC waarop de record het laatst is gewijzigd in het datawarehouse                                                                                                                                                 | 23-11-2016, 0:00                      |
+| displayName                | De weergavenaam van de gebruiker.                                                                                                                                                                                                      | Jan                                 |
+| intuneLicensed             | Geeft aan of deze gebruiker een licentie heeft voor Intune                                                                                                                                                                              | Waar/onwaar                           |
+| isDeleted                  | Geeft aan of alle licenties van de gebruiker zijn verlopen en of de gebruiker daarom uit Intune werd verwijderd. Deze markering verandert niet voor één record. In plaats daarvan wordt er een nieuwe record gemaakt voor een nieuwe gebruikersstatus. | Waar/onwaar                           |
+| rowLastModifiedDateTimeUTC | De datum en tijd in UTC waarop de record het laatst is gewijzigd in het datawarehouse                                                                                                                                                 | 23-11-2016, 0:00                      |
 
 ## <a name="usertermsandconditionsacceptances"></a>userTermsAndConditionsAcceptances
 De entiteit **userTermsAndConditionsAcceptance** vertegenwoordigt de acceptatiestatus van een bepaalde set voorwaarden door een bepaalde gebruiker. Gebruikers moeten de meest recente versie van de voorwaarden accepteren om toegang te behouden tot de bedrijfsportal.
@@ -724,9 +724,9 @@ De entiteit **vppProgramTypes** bevat een lijst van mogelijke VPP-programmatypen
 
 |      Eigenschap      |          Beschrijving         |
 |--------------------|------------------------------|
-| VppProgramTypeID   | De id voor het type.           |
-| VppProgramTypeKey  | De surrogaatsleutel voor de sleutel. |
-| VppProgramTypeName | Het type VPP-programma.          |
+| vppProgramTypeID   | De id voor het type.           |
+| vppProgramTypeKey  | De surrogaatsleutel voor de sleutel. |
+| vppProgramTypeName | Het type VPP-programma.          |
 
 ### <a name="example"></a>Voorbeeld
 

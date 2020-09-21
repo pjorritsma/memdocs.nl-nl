@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/07/2020
+ms.date: 09/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4aee16fc0dacce46e75735a161ae2c56d3bdb15
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4e1850249acab42c3284b3e77c96a764bfad9898
+ms.sourcegitcommit: dc2cca9eb70aef15037e8f7d18d671c513bfde85
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990674"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90081787"
 ---
 # <a name="add-an-ios-line-of-business-app-to-microsoft-intune"></a>Een iOS Line-Of-Business-app toevoegen aan Microsoft Intune
 
@@ -35,6 +35,8 @@ Gebruik de informatie in dit artikel om iOS-Line-Of-Business-apps (LOB) aan Micr
 > Gebruikers van iOS-apparaten kunnen sommige van de ingebouwde iOS-apps, zoals Stocks en Maps verwijderen. U kunt Intune niet gebruiken voor het opnieuw implementeren van deze apps. Als gebruikers deze apps verwijderen, moeten ze naar de App Store gaan en ze handmatig opnieuw installeren.
 >
 > iOS LOB-apps hebben een maximale grootte van 2 GB per app.
+>
+> Apple Shared-iPads bieden geen ondersteuning voor LOB-apps.
 
 > [!NOTE]
 > Bundel-id's (bijvoorbeeld *com.contoso.app*) zijn unieke id's van een app. Als u bijvoorbeeld voor testdoeleinden een bètaversie van een LOB-app wilt installeren naast de productieversie, moet de bètaversie een andere unieke id hebben (bijvoorbeeld *com.contoso.app-beta*). Anders overlapt de bètaversie de productieversie en wordt deze behandeld als een upgrade. Het wijzigen van de naam van het IPA-bestand heeft geen invloed op dit gedrag.

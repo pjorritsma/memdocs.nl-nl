@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/30/2020
+ms.date: 08/28/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b35011577b6c5882a2f136d9b6d321b182c2be6a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 166681c4cdb2ac3652234c12e50bcb185c43dcbe
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83991074"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076172"
 ---
 # <a name="troubleshoot-device-to-ndes-server-communication-for-scep-certificate-profiles-in-microsoft-intune"></a>Los problemen op met de communicatie tussen een apparaat en de NDES-server voor SCEP-certificaatprofielen in Microsoft Intune
 
@@ -76,7 +76,7 @@ Raadpleeg het [OMADM-logboek van het apparaat](troubleshoot-scep-certificate-pro
 De belangrijkste vermeldingen zijn onder andere de volgende tekenreeksen:
 
 - Er is 1 200 OK-aanvraag
-- ontvangen tijdens het verzenden van GetCACaps(ca) naar https://\<server>.msappproxy.net/certsrv/mscep/mscep.dll?operation=GetCACaps&message=ca
+- '200 OK' ontvangen tijdens het verzenden van GetCACaps(ca) naar https://\<server>.msappproxy.net/certsrv/mscep/mscep.dll?operation=GetCACaps&message=ca
 - pkiMessage ondertekenen met behulp van de sleutel die hoort bij [dn=CN=\<username>; serial=1]
 
 
@@ -191,6 +191,7 @@ Als u naar de URL van de SCEP-server bladert, ontvangt u het volgende NDES-beric
   ```
 
   Als de installatie mislukt, verwijdert u de Microsoft Intune-connector en installeert u deze opnieuw.
+  Als de installatie is voltooid en u het Genreal NDES-bericht blijft ontvangen, voert u de **iisreset** opdracht uit om IIS opnieuw te starten.
 
 #### <a name="http-error-503"></a>HTTP-fout 503
 

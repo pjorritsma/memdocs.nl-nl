@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a28d2810c3a93cd60013ae347c054783515196d7
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: d5ec26d03336e73f7dadf0912992b018058dc493
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907293"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574878"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>iOS-/iPadOS-apparaten automatisch inschrijven met Automated Device Enrollment van Apple
 
@@ -226,8 +226,7 @@ Na installatie van het token kunt u een inschrijvingsprofiel voor ADE-apparaten 
 
 14. Als u in de vorige stap hebt gekozen voor **Apple Configurator per certificaat toestaan**, moet u een Apple Configurator-certificaat kiezen om te importeren.
 
-15. U kunt een naamgevingsindeling opgeven voor apparaten die automatisch wordt toegepast wanneer zij zich inschrijven en na elke keer dat succesvol wordt ingecheckt. Als u een naamgevingssjabloon wilt maken, selecteert u **Ja** onder **Sjabloon voor apparaatnamen toepassen**. Voer vervolgens in het tekstvak **Apparaatnaamsjabloon** het te gebruiken sjabloon in voor de naam die dit profiel gebruiken. U kunt een sjabloonindeling opgeven waarin het apparaattype en serienummer wordt opgenomen. 
-
+15. U kunt een naamgevingsindeling opgeven voor apparaten die automatisch wordt toegepast wanneer zij zich inschrijven en na elke keer dat succesvol wordt ingecheckt. Als u een naamgevingssjabloon wilt maken, selecteert u **Ja** onder **Sjabloon voor apparaatnamen toepassen**. Voer vervolgens in het tekstvak **Apparaatnaamsjabloon** het te gebruiken sjabloon in voor de naam die dit profiel gebruiken. U kunt een sjabloonindeling opgeven waarin het apparaattype en serienummer wordt opgenomen. De apparaatnaamsjabloon biedt ondersteuning voor de iPhone, de iPad en de iPod Touch. 
 16. Kies **Volgende: Aanpassing van Configuratieassistent**.
 
 17. Configureer op de pagina **Aanpassing van Configuratieassistent** de volgende profielinstellingen: ![Aanpassing van Configuratieassistent](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png).

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/31/2020
+ms.date: 09/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b213769234d55fd2a542ac166afe59c6e8b9e6c2
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: 2e79017726e8b8924ac5502c7522b124f11e6c60
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89194103"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606949"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Met Android Enterprise-apparaatinstellingen kunt u functies toestaan of beperken met behulp van Intune
 
@@ -35,13 +35,13 @@ In dit artikel vindt u een overzicht en beschrijving van de verschillende instel
 
 Deze instellingen zijn van toepassing op Android Enterprise-inschrijvingstypen waarbij het hele apparaat wordt beheerd in Intune, zoals volledig beheerde, toegewezen Android Enterprise-apparaten met een werkprofiel in bedrijfseigendom.
 
-Sommige instellingen worden niet door alle inschrijvingstypen ondersteund. Zie de gebruikersinterface om na te gaan welke instellingen door welke inschrijvingstypen worden ondersteund. Elke instelling bevindt zich onder een kop die aangeeft welke inschrijvingstypen deze instelling kunnen gebruiken.
+Sommige instellingen worden niet door alle inschrijvingstypen ondersteund. Zie de gebruikersinterface om na te gaan welke instellingen door welke inschrijvingstypen worden ondersteund. Elke instelling bevindt zich onder een kop die aangeeft welke inschrijvingstypen de instelling kan gebruiken.
 
-![Headers instellen.](./media/device-restrictions-android-for-work/setting-headers.png)
+:::image type="content" source="./media/device-restrictions-android-for-work/setting-headers.png" alt-text="Zie de informatie over de koppen van Android Enterprise-gebruikers en -accounts en de inschrijvingstypen waarop deze van toepassing zijn in Microsoft Intune en Endpoint Manager.":::
 
 Sommige instellingen zijn alleen van toepassing op het niveau van het werkprofiel voor apparaten in bedrijfseigendom met een werkprofiel. Ten aanzien van volledig beheerde en toegewezen apparaten zijn deze instellingen nog steeds van toepassing op het hele apparaat. Deze instellingen zijn gemarkeerd met een descriptor *(op het niveau van het werkprofiel)* in de gebruikersinterface.
 
-![Headers instellen.](./media/device-restrictions-android-for-work/work-profile-level.png)
+:::image type="content" source="./media/device-restrictions-android-for-work/work-profile-level.png" alt-text="Zie de Android Enterprise-toepassingsinstellingen die van toepassing zijn op het niveau van het werkprofiel in Microsoft Intune en Endpoint Manager.":::
 
 
 ### <a name="general"></a>Algemeen
@@ -239,7 +239,7 @@ Gebruik deze instellingen om een kioskstijlervaring op uw toegewezen apparaten t
 - **Volledig beheerd**: Hiermee configureert u de Microsoft Launcher-app op volledig beheerde apparaten.
 
   - **Microsoft Launcher instellen als standaardstartprogramma**: Als u **Inschakelen** kiest, wordt Microsoft Launcher ingesteld als het standaardstartprogramma op het startscherm. Als u Launcher de standaard maakt, kunnen gebruikers geen ander startprogramma gebruiken. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Microsoft Launcher wordt niet als het standaardstartprogramma afgedwongen.
-  - **Aangepaste achtergrond configureren**: Met **Inschakelen** kunt u uw eigen afbeelding toepassen als achtergrond voor het startscherm en kiezen of gebruikers de afbeelding kunnen wijzigen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard behoudt het apparaat de huidige achtergrond.
+  - **Aangepaste achtergrond configureren**: Met de optie **Inschakelen** van de Microsoft Launcher-app kunt u uw eigen afbeelding toepassen als achtergrond voor het startscherm en kiezen of gebruikers de afbeelding kunnen wijzigen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard behoudt het apparaat de huidige achtergrond.
     - **De URL van de achtergrondafbeelding invoeren**: Voer de URL van de achtergrondafbeelding in. Deze afbeelding wordt weergegeven op het startscherm van het apparaat. Voer bijvoorbeeld `http://www.contoso.com/image.jpg` in. 
     - **Gebruiker toestaan om de achtergrond te wijzigen**: Met **Inschakelen** worden gebruikers toegestaan om de achtergrondafbeelding te wijzigen. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard kunnen gebruikers de achtergrond niet wijzigen.
   - **De startfeed inschakelen**: Met **Inschakelen** wordt de startfeed ingeschakeld, waarmee agenda's, documenten en recente activiteiten worden weergegeven. Wanneer dit is ingesteld op **Niet geconfigureerd** (standaard), wordt deze instelling niet door Intune gewijzigd of bijgewerkt. Standaard wordt deze feed niet weergegeven.

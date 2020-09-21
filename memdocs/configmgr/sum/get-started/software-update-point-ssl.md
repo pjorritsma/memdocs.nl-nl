@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: bd9989b8-ccaf-4d51-8262-b4a99b600d12
-ms.openlocfilehash: e8359077ac363d2d732b2ffa6712c9b938a2c709
-ms.sourcegitcommit: 6176a7825d6c663faa318a6818b7764bc70f08fc
+ms.openlocfilehash: 4f21af0a5431b5d06f6d96504fa99b52aa43e324
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90718964"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814461"
 ---
 # <a name="tutorial-configure-a-software-update-point-to-use-tlsssl-with-a-pki-certificate"></a>Zelf studie: een software-update punt configureren voor het gebruik van TLS/SSL met een PKI-certificaat
 
@@ -70,9 +70,12 @@ Als u al een geschikt certificaat in het **persoonlijke** certificaat archief va
 1. Selecteer **alle taken** en vervolgens **Nieuw certificaat aanvragen**.
 1. Kies **volgende** om de certificaat inschrijving te starten.
 1. Kies het type certificaat dat u wilt inschrijven. Het doel van het certificaat is **Server verificatie** en het micro soft-certificaat sjabloon dat moet worden gebruikt, is **webserver** of een aangepaste sjabloon waarvoor **Server verificatie** is opgegeven als **uitgebreid sleutel gebruik**. U wordt mogelijk gevraagd om aanvullende informatie over het registreren van het certificaat. Normaal gesp roken geeft u de volgende gegevens op minimale:
+
    - **Algemene naam:** Op het tabblad **onderwerp** , stelt u de waarde voor de FQDN van de WSUS-server in.
    - **Beschrijvende naam:** Op het tabblad **Algemeen** , stel de waarde in op een beschrijvende naam zodat u het certificaat later kunt identificeren.
-:::image type="content" source="media/certificate-properties.png" alt-text="Venster Eigenschappen van certificaat om meer informatie voor inschrijving op te geven":::
+   
+   :::image type="content" source="media/certificate-properties.png" alt-text="Venster Eigenschappen van certificaat om meer informatie voor inschrijving op te geven":::
+
 1. Selecteer **Inschrijven** en vervolgens **volt ooien** om de registratie te volt ooien.
 1. Open het certificaat als u details wilt weer geven, zoals de vinger afdruk van het certificaat.
 
@@ -87,9 +90,13 @@ Zodra u het certificaat in het persoonlijke certificaat archief van de WSUS-serv
 1. Ga naar **sites**  >  **WSUS-beheer**.
 1. Selecteer **bindingen** in het menu actie of klik met de rechter muisknop op de site.
 1. Selecteer in het venster **site bindingen** de regel voor **https**en selecteer vervolgens **bewerken...**.
+
    - Verwijder de HTTP-site binding niet. WSUS gebruikt HTTP voor de update-inhouds bestanden.
-1. Kies onder de optie **SSL-certificaat** het certificaat dat u wilt verbinden met de WSUS-beheer site. De beschrijvende naam van het certificaat wordt weer gegeven in de vervolg keuzelijst. Als er geen beschrijvende naam is opgegeven, wordt het veld van het certificaat `IssuedTo` weer gegeven. Als u niet zeker weet welk certificaat u moet gebruiken, selecteert u **weer gave** en controleert u of de vinger afdruk overeenkomt met de naam die u hebt verkregen.  
+   
+1. Kies onder de optie **SSL-certificaat** het certificaat dat u wilt verbinden met de WSUS-beheer site. De beschrijvende naam van het certificaat wordt weer gegeven in de vervolg keuzelijst. Als er geen beschrijvende naam is opgegeven, wordt het veld van het certificaat `IssuedTo` weer gegeven. Als u niet zeker weet welk certificaat u moet gebruiken, selecteert u **weer gave** en controleert u of de vinger afdruk overeenkomt met de naam die u hebt verkregen.
+
    :::image type="content" source="media/edit-site-binding.png" alt-text="Venster site binding bewerken met selectie van SSL-certificaat":::
+
 1. Selecteer **OK** wanneer u klaar bent en **sluit** vervolgens de site bindingen af. Blijf Internet Information Services (IIS) Manager geopend voor de volgende stappen.
 
 
@@ -106,11 +113,11 @@ Zodra u het certificaat in het persoonlijke certificaat archief van de WSUS-serv
    - SimpleAuthWebService
 
    Breng de volgende wijzigingen aan:
-
-      1. Selecteer **SSL-instellingen**.
-      1. Schakel de optie **SSL vereisen** in.
-      1. Controleer of de optie voor **client certificaten** is ingesteld op **negeren**.
-      1. Selecteer **Toepassen**.
+   
+   1. Selecteer **SSL-instellingen**.
+   1. Schakel de optie **SSL vereisen** in.
+   1. Controleer of de optie voor **client certificaten** is ingesteld op **negeren**.
+   1. Selecteer **Toepassen**.
 
 Stel de SSL-instellingen niet in op de WSUS-beheer site op het hoogste niveau omdat bepaalde functies, zoals inhoud, HTTP moeten gebruiken.
 
@@ -119,13 +126,16 @@ Stel de SSL-instellingen niet in op de WSUS-beheer site op het hoogste niveau om
 Zodra de webservices zijn ingesteld om SSL te vereisen, moet de WSUS-toepassing worden geïnformeerd zodat er een extra configuratie kan worden uitgevoerd om de wijziging te ondersteunen.
 
 1. Open een opdracht prompt met beheerders rechten op de WSUS-server. Het gebruikers account dat deze opdracht uitvoert, moet lid zijn van de groep WSUS-Administrators of de lokale groep Administrators.
-1. Wijzig de map in de map hulpprogram ma's voor WSUS:  
+1. Wijzig de map in de map hulpprogram ma's voor WSUS:
+
    `cd "c:\Program Files\Update Services\Tools"`
+   
 1. Configureer WSUS voor het gebruik van SSL met de volgende opdracht:
 
     `WsusUtil.exe configuressl server.contoso.com`
    
    Waarbij *server.contoso.com* de FQDN-naam van de WSUS-server is.
+   
 1. WsusUtil retourneert de URL van de WSUS-server met het poort nummer dat aan het einde is opgegeven. De poort is 8531 (standaard) of 443. Controleer of de geretourneerde URL is wat u verwacht. Als er een fout is opgetreden, kunt u de opdracht opnieuw uitvoeren.
 
    :::image type="content" source="media/wsusutil.png" alt-text="De wsusutil configuressl opdracht die de HTTPS-URL voor WSUS retourneert":::
@@ -147,8 +157,11 @@ Open de WSUS-console om te controleren of u een SSL-verbinding met de ApiRemotin
 1. Open de WSUS-console en selecteer **actie**  >  **verbinding maken met server**.
 1. Voer de FQDN van de WSUS-server in voor de optie **Server naam** .
 1. Kies het **poort nummer** dat wordt geretourneerd in de URL van WSUSutil.
+
 1. Het **gebruik Secure Sockets Layer (SSL) voor het maken van een verbinding met deze server** optie wordt automatisch ingeschakeld wanneer 8531 (standaard) of 443 wordt gekozen.
-       :::image type="content" source="media/connect-wsus-console.png" alt-text="Verbinding maken met de WSUS-console via de HTTPS-poort":::
+
+       :::image type="content" source="media/connect-wsus-console.png" alt-text="Connect to the WSUS console over the HTTPS port":::
+       
 1. Als uw Configuration Manager-site server extern is van het software-update punt, start u de WSUS-console vanaf de site server en controleert u of de WSUS-console verbinding kan maken via SSL.
    - Als de externe WSUS-console geen verbinding kan maken, duidt dit op een probleem met het vertrouwen van het certificaat, de naam omzetting of de poort die wordt geblokkeerd.
 
@@ -168,6 +181,7 @@ Voer de volgende stappen uit om het software-update punt te configureren voor he
 1. Schakel de optie **SSL-communicatie vereisen met de WSUS-server** in.
 
    :::image type="content" source="media/sup-properties.png" alt-text="SUP-eigenschappen met de optie voor het vereisen van SSL-communicatie met de WSUS-server":::
+   
 1. In het [**bestand WCM. log**](../../core/plan-design/hierarchy/log-files.md#BKMK_SUPLog) voor de site ziet u de volgende vermeldingen wanneer u de wijziging toepast:
 
    ```
@@ -191,7 +205,9 @@ Voor beelden van logboek bestanden zijn bewerkt voor het verwijderen van overbod
 1. Ga naar **software bibliotheek**  >  **overzicht**  >  **software-updates**  >  **alle software-updates**.
 1. Selecteer op het lint de optie **software-updates synchroniseren**.
 1. Selecteer **Ja** in het bericht waarin u wordt gevraagd of u een synchronisatie voor de gehele site wilt initiëren voor software-updates.
+
    - Sinds de WSUS-configuratie is gewijzigd, treedt er een volledige synchronisatie van software-updates op in plaats van een Delta synchronisatie.
+   
 1. Open **bestand Wsyncmgr. log** voor de site. Als u een onderliggende site bewaken, moet u wachten tot de bovenliggende site de synchronisatie eerst voltooit. Controleer of de server is gesynchroniseerd door het logboek te controleren op items die vergelijkbaar zijn met het volgende:
 
    ```
@@ -246,6 +262,7 @@ Wanneer u het software-update punt wijzigt zodat SSL is vereist, ontvangen Confi
 
 1. Controleer **bestand locationservices. log** om te controleren of de client de juiste WSUS-URL ziet.
 **LocationServices.log**
+
    ```
    WSUSLocationReply : <WSUSLocationReply SchemaVersion="1
    ...

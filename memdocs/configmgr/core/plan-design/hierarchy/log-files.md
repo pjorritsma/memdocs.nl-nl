@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1e24a7fe6a81408de48a73889db923cc8c5094ea
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: aa473d15b5abfbab7049a1e822a890d76aee239b
+ms.sourcegitcommit: 81f6b4cac6c991d34bc864f950c82e5b57e906c3
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700545"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90779547"
 ---
 # <a name="log-file-reference"></a>Verwijzing naar logboekbestand
 
@@ -584,7 +584,7 @@ De volgende tabel geeft een lijst van de logboek bestanden die informatie bevatt
 
 #### <a name="note-1-logs-synchronized-from-azure"></a><a name="bkmk_note1"></a> Opmerking 1: logboeken die zijn gesynchroniseerd vanuit Azure
 
-Dit zijn lokale Configuration Manager-logboek bestanden die Cloud Service Manager elke vijf minuten synchroniseert vanuit Azure Storage. De Cloud beheer gateway pusht elke vijf minuten logboeken naar Azure Storage. De maximale vertraging is 10 minuten. Uitgebreide switches beïnvloeden zowel lokale als externe logboeken. De daad werkelijke bestands namen bevatten de service naam en de instantie-id van de rol. Bijvoorbeeld CMG-*servicenaam* - *RoleInstanceID*-CMGSetup. log
+Dit zijn lokale Configuration Manager-logboek bestanden die Cloud Service Manager elke vijf minuten synchroniseert vanuit Azure Storage. De Cloud beheer gateway pusht elke vijf minuten logboeken naar Azure Storage. De maximale vertraging is 10 minuten. Uitgebreide switches beïnvloeden zowel lokale als externe logboeken. De daad werkelijke bestands namen bevatten de service naam en de instantie-id van de rol. Bijvoorbeeld CMG-*servicenaam* - *RoleInstanceID*-CMGSetup. log. Deze logboek bestanden worden gesynchroniseerd, dus u hoeft geen RDP-verbinding te maken met de Cloud beheer gateway om ze te verkrijgen. deze optie wordt niet ondersteund.
 
 ### <a name="compliance-settings-and-company-resource-access"></a><a name="BKMK_CompSettingsLog"></a> Instellingen voor naleving en toegang tot bedrijfs bronnen
 
@@ -630,7 +630,7 @@ Gebruik de volgende logboek bestanden voor hulp bij het oplossen van problemen m
 De logboek bestanden op het service verbindings punt bevinden zich in de volgende map: `%ProgramFiles%\Configuration Manager\Logs\M365A` .
 De logboek bestanden op de Configuration Manager-client bevinden zich in de volgende map: `%WinDir%\CCM\logs` .
 
-| Log | Beschrijving |Computer met logboekbestand|
+| Logboek | Beschrijving |Computer met logboekbestand|
 |---------|---------|---------|
 | M365ADeploymentPlanWorker. log | Informatie over het implementatie plan synchronisatie van de Cloud service van Desktop Analytics naar een on-premises Configuration Manager |Serviceverbindingspunt|
 | M365ADeviceHealthWorker. log | Informatie over het uploaden van apparaatstatus van Configuration Manager naar micro soft Cloud |Serviceverbindingspunt|

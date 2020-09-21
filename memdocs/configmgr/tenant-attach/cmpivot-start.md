@@ -10,14 +10,14 @@ ms.assetid: ae6c0c83-2299-4463-958d-5555e3fcbdbe
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 88fe50bd75fff73604c78125b0cd7599aa1afa4f
-ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
+ms.openlocfilehash: eb30d1ec371060223e6f776497037dc34b81184b
+ms.sourcegitcommit: af4fc4f928203c1bfdb27499a56c91fe0ebae854
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89564313"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90802891"
 ---
-# <a name="launch-cmpivot-from-the-admin-center-preview"></a><a name="bkmk_cmpivot"></a> CMPivot starten vanuit het beheer centrum (preview-versie)
+# <a name="tenant-attach-launch-cmpivot-from-the-admin-center-preview"></a><a name="bkmk_cmpivot"></a> Tenant bijvoegen: CMPivot starten vanuit het beheer centrum (preview-versie)
 
 *Van toepassing op: Configuration Manager (huidige vertakking)* 
 

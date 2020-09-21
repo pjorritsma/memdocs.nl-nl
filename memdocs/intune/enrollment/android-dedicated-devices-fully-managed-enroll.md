@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 1/15/2018
+ms.date: 9/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9fafc6a48e933fbcce692c560532736808cbf7c4
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: eec0f59504351f6b40e221a15d89a62e9a28be05
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915242"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076199"
 ---
 # <a name="enroll-your-android-enterprise-dedicated-fully-managed-or-corporate-owned-with-work-profile-devices"></a>Uw toegewezen Android Enterprise-apparaten, volledig beheerde apparaten of apparaten met een werkprofiel in bedrijfseigendom inschrijven
 
-Nadat u uw [toegewezen Android Enterprise-apparaten](android-kiosk-enroll.md), [volledig beheerde apparaten](android-fully-managed-enroll.md) of [apparaten met een werkprofiel in bedrijfseigendom](android-corporate-owned-work-profile-enroll.md) in Intune hebt ingesteld, kunt u de apparaten inschrijven. Registratie van Intune voor zowel toegewezen apparaten als volledig beheerde apparaten begint met het terugzetten van de fabrieksinstellingen. De manier waarop u uw Android Enterprise-apparaten inschrijft, is afhankelijk van het besturingssysteem.
+Nadat u uw [toegewezen Android Enterprise-apparaten](android-kiosk-enroll.md), [volledig beheerde apparaten](android-fully-managed-enroll.md) of [apparaten met een werkprofiel in bedrijfseigendom](android-corporate-owned-work-profile-enroll.md) in Intune hebt ingesteld, kunt u de apparaten inschrijven. Registratie van Intune voor toegewezen apparaten, volledig beheerde apparaten en apparaten in bedrijfseigendom met een werkprofiel begint met het terugzetten van de fabrieksinstellingen. De manier waarop u uw Android Enterprise-apparaten inschrijft, is afhankelijk van het besturingssysteem.
 
 | Inschrijvingsmethode | Minimumversie van het Android-besturingssysteem voor toegewezen en volledig beheerde apparaten |
 | ----- | ----- |

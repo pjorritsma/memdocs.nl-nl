@@ -2,11 +2,11 @@
 title: Persoonlijke gegevens controleren, exporteren of verwijderen
 titleSuffix: Microsoft Intune
 description: Informatie over het controleren, exporteren of verwijderen van persoonlijke gegevens.
-keywords: ''
+keywords: AVG, persoonlijke gegevens, privacy
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/18/2018
+ms.date: 9/10/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2bdf057893ff24cd4bc5b671d53fbb5c75f597f5
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 5d792df5a4a8690751d7d140aa7fa89191aedb1b
+ms.sourcegitcommit: d6cbd1a1c2926064e074e3431471534eb142c905
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995990"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012626"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>Persoonlijke gegevens controleren, exporteren of verwijderen in Intune
 
@@ -60,10 +60,10 @@ Er zijn drie manieren om persoonlijke gegevens te verwijderen uit Intune-beheer:
 
 ### <a name="delete-a-user-from-intune"></a>Een gebruiker uit Intune verwijderen
 
-Als u de persoonlijke gegevens van een eindgebruiker uit Intune wilt verwijderen, moet een beheerder [de gebruiker verwijderen uit Azure Active Directory (AAD)](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user). Wanneer de gebruiker wordt verwijderd uit AAD (permanent verwijderd), ontvangt Intune het verwijdersignaal van AAD. Vervolgens worden alle persoonlijke gegevens van de gebruiker verwijderd uit de Intune-service. De gegevens van de gebruiker worden binnen 30 dagen na de verwijderingsactie verwijderd uit de Intune-service.
+Als u de persoonlijke gegevens van een eindgebruiker uit Intune wilt verwijderen, moet een beheerder [de gebruiker verwijderen uit Azure Active Directory (Azure AD)](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user). Wanneer de gebruiker uit Azure AD wordt verwijderd (permanent verwijderd), ontvangt Intune het verwijdersignaal van Azure AD. Vervolgens worden alle persoonlijke gegevens van de gebruiker uit de Intune-service verwijderd. De gegevens van de gebruiker worden binnen 30 dagen na de verwijderingsactie verwijderd uit de Intune-service.
 
 ### <a name="reset-device-to-factory-settings"></a>De fabrieksinstellingen van het apparaat terugzetten
-Wanneer u de fabrieksinstellingen van het apparaat terugzet, worden alle bedrijfsgegevens en persoonlijke gegevens teruggezet naar de oorspronkelijke fabrieksinstellingen. Dit is bijvoorbeeld handig als u het apparaat aan een volgende werknemer wilt geven. Gebruikersbestanden, door de gebruiker geïnstalleerde toepassingen en niet-standaardinstellingen worden verwijderd. Deze gegevens worden binnen 30 dagen na de verwijderingsactie verwijderd uit de Intune-service.
+Wanneer u de fabrieksinstellingen van het apparaat terugzet, worden alle bedrijfsgegevens en persoonlijke gegevens teruggezet naar de oorspronkelijke fabrieksinstellingen. Dit is bijvoorbeeld handig als u het apparaat aan een volgende werknemer wilt geven. Gebruikersbestanden, door de gebruiker geïnstalleerde toepassingen en niet-standaardinstellingen worden verwijderd. Deze gegevens worden binnen dertig dagen na de verwijderingsactie uit de Intune-service verwijderd.
 
 ### <a name="user-self-removal-from-intune-management"></a>De gebruiker verwijdert zichzelf uit Intune-beheer
 Gebruikers kunnen hun persoonlijke [Android-, Apple- of Windows-](../user-help/unenroll-your-device-from-intune-android.md)apparaat uit Intune-beheer verwijderen zonder hulp van de beheerder.   
@@ -77,4 +77,4 @@ Als een Intune-tenantklant zijn Intune-account annuleert, worden alle tenantgege
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Ontdek hoe u persoonlijke gegevens in Intune kunt [controleren, exporteren of verwijderen](privacy-data-audit-export-delete.md).
+Ontdek hoe u in Intune [persoonlijke gegevens kunt weergeven en corrigeren](privacy-data-view-correct.md).

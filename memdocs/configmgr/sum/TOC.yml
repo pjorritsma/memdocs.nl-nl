@@ -28,6 +28,8 @@
       href: get-started/configure-classifications-and-products.md
     - name: Instellingen voor software-updates beheren
       href: get-started/manage-settings-for-software-updates.md
+    - name: Een software-updatepunt configureren om SSL te gebruiken
+      href: get-started/software-update-point-ssl.md
     - name: Software-updates synchroniseren in niet-verbonden omgevingen
       items:
         - name: Software-updates vanaf een niet-verbonden software-updatepunt synchroniseren

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 75f6585144f62636033c94f701a57cb70e018c26
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: 2fc05ced647e8784333c2a20bc13c27aa2bf3447
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051577"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076121"
 ---
 # <a name="set-up-the-enrollment-status-page"></a>De pagina Status van de inschrijving instellen
  
@@ -122,8 +122,8 @@ Deze gegevens worden bijgehouden voor de voorbereiding van het apparaat:
 De pagina voor de status van de inschrijving houdt de volgende items voor de installatie van het apparaat:
 
 - Beveiligingsbeleid
-  - Eén configuratieprovider (CSP) voor alle inschrijvingen.
-  - Werkelijke CSP's die door Intune zijn geconfigureerd, worden hier niet bijgehouden.
+  - Beleid voor Microsoft Edge, toegewezen toegang en Kiosk Browser wordt momenteel bijgehouden.
+  - Andere beleidsregels worden niet bijgehouden.
 - Toepassingen
   - LOB (Line-of-Business) MSI-apps per apparaat.
   - LOB (Line-of-Business) opslag-apps met installatiecontext = apparaat.
@@ -138,8 +138,8 @@ De pagina voor de status van de inschrijving houdt de volgende items voor de ins
 Voor de installatie van het account worden op de pagina Status van de inschrijving de volgende items bijgehouden als deze zijn toegewezen aan de huidige aangemelde gebruiker:
 
 - Beveiligingsbeleid
-  - Eén CSP voor alle inschrijvingen.
-  - Werkelijke CSP's die door Intune zijn geconfigureerd, worden hier niet bijgehouden.
+  - Beleid voor Microsoft Edge, toegewezen toegang en Kiosk Browser wordt momenteel bijgehouden.
+  - Andere beleidsregels worden niet bijgehouden.
 - Toepassingen
   - LOB (Line-of-Business) MSI-apps per gebruiker die worden toegewezen aan alle apparaten, aan alle gebruikers of aan een gebruikersgroep waarvan de gebruiker die het apparaat inschrijft, lid is.
   - LOB (Line-of-Business) MSI-apps per apparaat die worden toegewezen aan alle gebruikers of aan een gebruikersgroep waarvan de gebruiker die het apparaat inschrijft, lid is.
@@ -152,53 +152,6 @@ Voor de installatie van het account worden op de pagina Status van de inschrijvi
   - VPN- of Wi-Fi-profielen die worden toegewezen aan alle gebruikers of aan een gebruikersgroep waarvan de gebruiker die het apparaat inschrijft, lid is.
 - Certificaten
   - Certificaatprofielen die worden toegewezen aan alle gebruikers of aan een gebruikersgroep waarvan de gebruiker die het apparaat inschrijft, lid is.
-
-### <a name="troubleshooting"></a>Probleemoplossing
-
-Hieronder volgen enkele veelgestelde vragen over het oplossen van problemen met betrekking tot de pagina Status van de inschrijving.
-
-- Waarom zijn mijn toepassingen niet geïnstalleerd en getraceerd met de pagina Inschrijvingsstatus?
-  - Om te garanderen dat toepassingen worden geïnstalleerd en getraceerd met de pagina Inschrijvingsstatus, zorgt u ervoor dat:
-      - De apps zijn toegewezen aan een Azure AD-groep met het apparaat (voor op apparaten gerichte apps) of de gebruiker (voor op gebruikers gerichte apps), met behulp van de toewijzing 'vereist'.  (Op apparaten gerichte apps worden getraceerd tijdens de apparaatfase van ESP, terwijl op gebruikers gerichte apps worden getraceerd tijdens de gebruikersfase van ESP.)
-      - U geeft **Apparaatgebruik blokkeren totdat alle apps en profielen zijn geïnstalleerd** op of neemt de app op in de lijst **Apparaatgebruik blokkeren tot deze vereiste apps zijn geïnstalleerd**.
-      - De apps worden geïnstalleerd in apparaatcontext en hebben geen toepasselijkheidsregels voor gebruikerscontext.
-
-- Waarom wordt de pagina Status van de inschrijving weergegeven voor implementaties zonder Autopilot, bijvoorbeeld wanneer een gebruiker zich voor de eerste keer aanmeldt op een apparaat dat voor co-beheer is ingeschreven bij Configuration Manager?  
-  - Op de pagina Status van de inschrijving wordt de installatiestatus voor alle inschrijvingsmethoden vermeld, met inbegrip van
-      - Autopilot
-      - co-beheer met Configuration Manager
-      - wanneer een nieuwe gebruiker zich voor de eerste keer aanmeldt bij een apparaat waarop het beleid voor de pagina Status van de inschrijving is toegepast
-      - wanneer de instelling **Alleen pagina weergeven voor apparaten die zijn ingericht door Out-of-Box Experience (OOBE)** is ingeschakeld en het beleid is ingesteld, krijgt alleen de eerste gebruiker die zich bij het apparaat aanmeldt de pagina Status van de inschrijving
-
-- Hoe kan ik de pagina Status van de inschrijving uitschakelen als deze is geconfigureerd op het apparaat?
-  - Het beleid voor de pagina Status van de inschrijving wordt ingesteld op een apparaat op het moment van inschrijving. Als u de pagina Status van de inschrijving wilt uitschakelen, moet u de secties Disable User ESP en Disable Device ESP van de pagina Status van de inschrijving uitschakelen. U kunt dit doen door aangepaste OMA-URI-instellingen te maken met de volgende configuraties.
-
-      Pagina Status van de inschrijving voor gebruikers uitschakelen:
-
-      ```
-      Name:  Disable User ESP (choose a name you desire)
-      Description:  (enter a description)
-      OMA-URI:  ./Vendor/MSFT/DMClient/Provider/MS DM Server/FirstSyncStatus/SkipUserStatusPage
-      Data type:  Boolean
-      Value:  True 
-      ```
-      Pagina Status van de inschrijving voor apparaten uitschakelen:
-
-      ```
-      Name:  Disable Device ESP (choose a name you desire)
-      Description:  (enter a description)
-      OMA-URI:  ./Vendor/MSFT/DMClient/Provider/MS DM Server/FirstSyncStatus/SkipDeviceStatusPage
-      Data type:  Boolean
-      Value:  True 
-      ```
-- Hoe kan ik logboekbestanden verzamelen?
-  - Er zijn twee manieren om logboekbestanden te verzamelen voor de pagina Status van de inschrijving:
-      - Schakel in het ESP-beleid de mogelijkheid voor gebruikers in om logboeken te verzamelen. Wanneer er een time-out optreedt op de pagina Status van de inschrijving, kan de eindgebruiker de optie **Logboeken verzamelen** kiezen. Door een USB-stick te plaatsen, kunnen de logboekbestanden worden gekopieerd.
-      - Open een opdrachtprompt met Shift-F10 en voer vervolgens de volgende opdrachtregel in om logboekbestanden te genereren: 
-
-      ```
-      mdmdiagnosticstool.exe -area Autopilot -cab <pathToOutputCabFile>.cab 
-      ```
 
 ### <a name="known-issues"></a>Bekende problemen
 
@@ -219,4 +172,6 @@ Hieronder vindt u bekende problemen met betrekking tot de pagina Status van de i
 
 ## <a name="next-steps"></a>Volgende stappen
 
-Nadat u Windows-inschrijvingspagina's hebt ingesteld, kunt u leren hoe u Windows-apparaten beheert. Zie [Wat is Microsoft Intune-apparaatbeheer?](../remote-actions/device-management.md) voor meer informatie.
+Nadat u Windows-inschrijvingspagina's hebt ingesteld, kunt u leren hoe u [Windows-apparaten beheert](../remote-actions/device-management.md).
+
+[Problemen met de statuspagina voor Windows-inschrijvingen oplossen](https://docs.microsoft.com/troubleshoot/mem/intune/understand-troubleshoot-esp#troubleshooting)

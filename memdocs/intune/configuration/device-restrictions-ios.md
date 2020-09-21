@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/03/2020
+ms.date: 09/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 273efc6be6b3f93c04c0ce39c2688859d3c96c56
-ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
+ms.openlocfilehash: ca9fb5b350cd9c89b8d4eb37144340b93e9ebbab
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89423880"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574810"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Met instellingen voor iOS- en iPadOS-apparaten kunt u functies toestaan of beperken met behulp van Intune
 
@@ -173,9 +173,9 @@ Deze instellingen worden toegevoegd aan een apparaatconfiguratieprofiel in Intun
   > [!NOTE]
   > Voor apparaten die door de gebruiker zijn ingeschreven, kunnen gebruikers een pincode van meer dan 6 cijfers instellen. Er worden echter niet meer dan 6 cijfers afgedwongen op het apparaat. Stel dat een beheerder de minimale lengte instelt op `8`. Gebruikers hoeven op apparaten die door gebruikers zijn ingeschreven alleen een 6-cijferig pincode in te stellen. Intune dwingt geen pincode van meer dan 6 cijfers af op door gebruikers geregistreerde apparaten.
 
-- **Aantal mislukte aanmeldingen voordat een apparaat wordt gewist**: Voer het aantal mislukte aanmeldingen in tussen 4 en 11 voordat het apparaat wordt gewist.
+- **Aantal mislukte aanmeldingen voordat een apparaat wordt gewist**: Voer in na hoeveel mislukte aanmeldingen (tussen 2 en 11) het apparaat wordt gewist. Het wordt niet aanbevolen deze waarde in te stellen op `2` of `3`. Het komt vaker voor dat het verkeerde wachtwoord wordt ingevoerd. Het gebeurt dikwijls dat het apparaat wordt gewist na twee of drie mislukte wachtwoordpogingen. Het wordt aanbevolen deze waarde in te stellen op minimaal `4`. 
   
-  iOS/iPadOS heeft ingebouwde beveiliging die van invloed kan zijn op deze instelling. iOS/iPadOS kan bijvoorbeeld het activeren van beleid vertragen, afhankelijk van het aantal mislukte aanmeldingen. Ook kan het besturingssysteem het herhaaldelijk invoeren van dezelfde toegangscode als één poging beschouwen. De [iOS-/iPadOS-beveiligingshandleiding](https://www.apple.com/business/site/docs/iOS_Security_Guide.pdf) van Apple (opent de website van Apple) is een goede bron en biedt meer specifieke informatie over wachtwoordcodes.
+  iOS/iPadOS heeft ingebouwde beveiliging die van invloed kan zijn op deze instelling. iOS/iPadOS kan bijvoorbeeld het activeren van beleid vertragen, afhankelijk van het aantal mislukte aanmeldingen. Ook kan het besturingssysteem het herhaaldelijk invoeren van dezelfde toegangscode als één poging beschouwen. De [iOS-/iPadOS-beveiligingshandleiding](https://www.apple.com/business/site/docs/iOS_Security_Guide.pdf) van Apple (opent de website van Apple) is een goede bron en biedt meer specifieke informatie over wachtwoordcodes. 
   
 - **Maximum aantal minuten na schermvergrendeling voordat wachtwoord is vereist**<sup>1</sup>: Geef op hoe lang apparaten inactief moeten zijn voordat gebruikers hun wachtwoord opnieuw moeten invoeren. Als de ingevoerde tijd langer is dan de tijd die is ingesteld op het apparaat, wordt de door u ingevoerde tijd genegeerd.
 

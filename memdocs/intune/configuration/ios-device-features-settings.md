@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/20/2020
+ms.date: 09/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad78240aa9f2a1ef515be2635cfad0ce68e8ecc8
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 6989dc3559a1de950f5d2ec8280894f1f1983b61
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88909000"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574861"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>iOS- en iPadOS-apparaatinstellingen voor het gebruik van algemene iOS-/iPadOS-functies in Intune
 
@@ -343,7 +343,7 @@ Deze functie is van toepassing op:
   - De URL's moeten beginnen met `http://` of `https://`.
 
 - **Aanvullende configuratie** (Microsoft Azure AD, omleiding en referentie): Voer aanvullende extensiegegevens in die moeten worden doorgegeven aan de app-extensie voor eenmalige aanmelding:
-  - **Sleutel**: voer de naam in van het item dat u wilt toevoegen, zoals `user name`.
+  - **Sleutel**: voer de naam in van het item dat u wilt toevoegen, zoals `user name`. `AppAllowList` is hoofdlettergevoelig. Let erop dat u exact 'AppAllowList' invoert. 
   - **Type**: voer het gegevenstype in. Uw opties zijn:
 
     - Tekenreeks

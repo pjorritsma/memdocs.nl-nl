@@ -12,6 +12,8 @@
       href: timeline.md
     - name: Resource Explorer (preview-versie)
       href: resource-explorer.md
+    - name: Scripts uitvoeren (preview-versie)
+      href: scripts.md
 - name: CMPivot voor aan tenant gekoppelde apparaten (preview)
   items:
     - name: CMPivot starten (preview-versie)
@@ -28,6 +30,10 @@
       href: deploy-antivirus-policy.md
     - name: Instellingen voor Microsoft Defender Antivirus-beleid
       href: ../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json
+- name: Naslaginformatie
+  items:
+    - name: Gegevens over tenantkoppeling verzamelen
+      href: data-collection.md
 - name: Problemen oplossen
   items:
     - name: Tenantkoppeling en apparaatacties
@@ -40,5 +46,7 @@
       href: troubleshoot-timeline.md
     - name: Resource Explorer (preview-versie)
       href: troubleshoot-resource-explorer.md
+    - name: Scripts uitvoeren (preview-versie)
+      href: troubleshoot-scripts.md
     - name: CMPivot (preview-versie)
       href: troubleshoot-cmpivot.md

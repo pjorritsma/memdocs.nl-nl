@@ -11,24 +11,48 @@ metadata:
   author: mestew
   ms.author: mstewart
   ms.date: 04/01/2020
-  ms.openlocfilehash: 80a602c8aa6be7599bbb579f41f34fb560d903c3
-  ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
+  ms.openlocfilehash: b3d6c2510cb26fb520c3b765a0931991aaed6e14
+  ms.sourcegitcommit: af4fc4f928203c1bfdb27499a56c91fe0ebae854
   ms.translationtype: HT
   ms.contentlocale: nl-NL
-  ms.lasthandoff: 08/28/2020
-  ms.locfileid: "89067984"
+  ms.lasthandoff: 09/18/2020
+  ms.locfileid: "90802819"
 landingContent:
 - title: Over tenantkoppeling
   linkLists:
-  - linkListType: overview
+  - linkListType: get-started
     links:
     - text: Tenantkoppeling inschakelen
       url: device-sync-actions.md
-    - text: Details van ConfigMgr-client bekijken (preview)
-      url: client-details.md
   - linkListType: reference
     links:
     - text: Problemen met tenantkoppeling en apparaatacties oplossen
       url: troubleshoot.md
     - text: Problemen met details van ConfigMgr-client oplossen (preview)
       url: troubleshoot-client-details.md
+- title: Informatie over geüploade apparaten krijgen
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Details van ConfigMgr-client bekijken (preview)
+      url: client-details.md
+    - text: Apparaattijdlijn (preview-versie)
+      url: timeline.md
+    - text: Resource Explorer (preview-versie)
+      url: resource-explorer.md
+- title: Belangrijkste taken
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Scripts uitvoeren
+      url: scripts.md
+    - text: Toepassingen installeren
+      url: applications.md
+    - text: CMPivot starten
+      url: cmpivot-start.md
+  - linkListType: concept
+    links:
+    - text: Overzicht van het gebruik van CMPivot
+      url: cmpivot-overview-attached.md
+    - text: CMPivot-voorbeeldscripts
+      url: cmpivot-samples-attached.md

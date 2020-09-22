@@ -51,9 +51,11 @@
           displayName: 'psk, oma-uri, eap'
         - name: Problemen met Wi-Fi oplossen
           href: troubleshoot-wi-fi-profiles.md
-    - name: Beheersjablonen
-      displayName: 'admx, gpo, group policy'
+    - name: Groepsbeleid en beheersjablonen
+      displayName: 'admx, gpo'
       items:
+        - name: Groepsbeleidsanalyse
+          href: group-policy-analytics.md
         - name: Beheersjablonen maken
           href: administrative-templates-windows.md
         - name: Office bijwerken met behulp van beheersjablonen

@@ -23,6 +23,8 @@
     - name: Privacy en persoonlijke gegevens
       href: privacy-personal-data.md
       items:
+        - name: Optionele diagnostische gegevens in client-apps
+          href: client-apps-optional-data.md
         - name: Gegevens verzamelen
           href: privacy-data-collect.md
         - name: Opslag en verwerking van gegevens

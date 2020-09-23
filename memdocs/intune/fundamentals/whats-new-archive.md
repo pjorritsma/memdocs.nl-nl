@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 1/28/2020
+ms.date: 9/22/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -19,16 +19,726 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: faabd2656e8b72502c682eaab37a0cc5b484ea03
-ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
+ms.openlocfilehash: c3bfa6b58523d47e53eb2e1e8a2565fa04390b10
+ms.sourcegitcommit: fdd6d3c4b906e895ebec2856ebc38b0656296d2c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89423931"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91002874"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Wat is er nieuw in Microsoft Intune - vorige maanden
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
+<!-- ########################## -->
+## <a name="may-2020"></a>Mei 2020
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="app-management"></a>Appbeheer
+
+#### <a name="windows-32-bit-x86-apps-on-arm64-devices---5477661---"></a>32-bits Windows-apps (x86) op ARM64-apparaten<!-- 5477661 -->
+32-bits Windows-apps (x86) die zijn geïmplementeerd als beschikbaar voor ARM64-apparaten worden nu weergegeven in de bedrijfsportal. Zie [Intune Win32 app-beheer](../apps/apps-win32-app-management.md) voor meer informatie over 32-bits Windows-apps.
+
+#### <a name="windows-company-portal-app-icon---7114635---"></a>Pictogram voor Windows-bedrijfsportal-app<!-- 7114635 -->
+Het pictogram voor de Windows-bedrijfsportal-app is bijgewerkt. Zie [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md) (De Intune-bedrijfsportal-apps, Bedrijfsportal-website en Intune-app aanpassen) voor meer informatie over de Bedrijfsportal.
+
+#### <a name="update-to-icons-in-company-portal-app-for-iosipados-and-macos--6057697---"></a>Bijgewerkte pictogrammen in de Bedrijfsportal-app voor iOS/iPadOS en macOS<!--6057697 -->
+We hebben de pictogrammen in Bedrijfsportal bijgewerkt voor een moderner uiterlijk dat wordt ondersteund op apparaten met twee schermen en is afgestemd op het Microsoft Fluent Design-systeem. Als u de bijgewerkte pictogrammen wilt zien, gaat u naar [UI-updates voor Intune-apps voor eindgebruikers](./whats-new-app-ui.md). 
+
+#### <a name="customize-self-service-device-actions-in-the-company-portal--4393379---"></a>Selfservice-apparaatacties in de bedrijfsportal aanpassen<!--4393379 -->
+U kunt de beschikbare self-serviceapparaatacties aanpassen die worden weergegeven aan eindgebruikers in de bedrijfsportal-app en -website. Als u onbedoelde apparaatacties wilt helpen voorkomen, kunt u deze instellingen configureren voor de bedrijfsportal-app door **Tenantbeheer** > **Aanpassing** te selecteren. Hiervoor zijn de volgende opties beschikbaar:
+- Knop **Verwijderen** verbergen op zakelijke Windows-apparaten.
+- Knop **Opnieuw instellen** verbergen op zakelijke Windows-apparaten.
+- Knop **Opnieuw instellen** verbergen op zakelijke iOS-apparaten.
+- Knop **Verwijderen** verbergen op zakelijke iOS-apparaten.
+Raadpleeg [Selfservice-apparaatacties voor gebruikers van de bedrijfsportal](../apps/company-portal-app.md#user-self-service-device-actions-from-the-company-portal) voor meer informatie.
+
+#### <a name="auto-update-vpp-available-apps---3640511----"></a>Beschikbare VPP-apps automatisch bijwerken<!-- 3640511  -->
+Apps die zijn gepubliceerd als voor Volume Purchase Program (VPP) beschikbare apps, worden automatisch bijgewerkt wanneer **Automatische updates van apps** is ingeschakeld voor het VPP-token. Voorheen werden voor VPP beschikbare apps niet automatisch bijgewerkt. Eindgebruikers moesten in plaats daarvan naar de bedrijfsportal gaan en de app opnieuw installeren als er een nieuwere versie beschikbaar was. De vereiste apps blijven automatische updates wel ondersteunen.
+
+#### <a name="android-company-portal-user-experience---5736084----"></a>Gebruikerservaring van de Android-bedrijfsportal<!-- 5736084  -->
+In de 2005-release van de Android-bedrijfsportal zien eindgebruikers van Android-apparaten aan wie een waarschuwing, blokkering of verwijdering door een app-beveiligingsbeleid is uitgegeven, een nieuwe gebruikerservaring. In plaats van de huidige dialoogvensters zien eindgebruikers een bericht dat een volledige pagina beslaat met een beschrijving van de reden voor de waarschuwing, blokkering of verwijdering en de stappen om het probleem te verhelpen. Zie [App-beveiligingservaring voor Android-apparaten](../apps/app-protection-policy.md#app-protection-experience-for-android-devices) en [Instellingen van app-beveiligingsbeleid voor Android in Microsoft Intune](../apps/app-protection-policy-settings-android.md) voor meer informatie.
+
+#### <a name="support-for-multiple-accounts-in-company-portal-for-macos---5779449----"></a>Ondersteuning voor meerdere accounts in de bedrijfsportal voor macOS<!-- 5779449  -->
+Met de bedrijfsportal op macOS-apparaten worden gebruikersaccounts nu in de cache opgeslagen, waardoor het aanmelden eenvoudiger wordt. Gebruikers hoeven zich niet meer bij de bedrijfsportal aan te melden wanneer ze de toepassing starten. Daarnaast geeft de bedrijfsportal een accountkiezer weer als er meerdere gebruikersaccounts in de cache zijn opgeslagen, zodat gebruikers hun gebruikersnaam niet hoeven in te voeren. 
+
+#### <a name="newly-available-protected-apps---7060934-----"></a>Nieuw beschikbare, beveiligde apps<!-- 7060934   -->
+De volgende beveiligde apps zijn nu beschikbaar:
+- Board Papers
+- Breezy voor Intune
+- Hearsay Relate voor Intune
+- ISEC7 Mobile Exchange Delegate voor Intune
+- Lexmark voor Intune
+- Meetio Enterprise
+- Microsoft Whiteboard
+- Now® Mobile - Intune
+- Qlik Sense Mobile 
+- ServiceNow® Agent - Intune
+- ServiceNow® Onboarding - Intune
+- Smartcrypt voor Intune
+- Tact voor Intune
+- Nul - e-mail voor advocaten
+
+Zie [Met Microsoft Intune beveiligde apps](../apps/apps-supported-intune-apps.md) voor meer informatie over beveiligde apps.
+
+#### <a name="search-the-intune-docs-from-the-company-portal---1736480-----"></a>De Intune-documentatie zoeken in de bedrijfsportal<!-- 1736480   -->
+U kunt nu rechtstreeks vanaf de bedrijfsportal voor macOS-app zoeken in de Intune-documentatie. Selecteer in de menubalk **Help** > **Zoeken** en voer de trefwoorden van uw zoekopdracht in om snel antwoorden op uw vragen te vinden.
+
+#### <a name="company-portal-for-android-guides-users-to-get-apps-after-work-profile-enrollment----6103999---"></a>Bedrijfsportal voor Android helpt gebruikers apps te verkrijgen na registratie van het werkprofiel <!-- 6103999 -->
+De in-app-richtlijnen in de bedrijfsportal zijn verbeterd zodat gebruikers gemakkelijker apps kunnen zoeken en installeren. Nadat gebruikers zich hebben geregistreerd voor werkprofielbeheer, zien ze een bericht dat ze aanbevolen apps kunnen vinden in de Google Play-versie met badge. De laatste stap in [Apparaat inschrijven met Android-profiel](../user-help/enroll-device-android-work-profile.md) is bijgewerkt zodat het nieuwe bericht wordt weergegeven. Gebruikers zien ook de nieuwe koppeling **Apps downloaden** in de het linkerpaneel van de bedrijfsportal. Om ruimte te maken voor deze nieuwe en verbeterde ervaringen, is het tabblad **Apps** verwijderd. Als u de bijgewerkte vensters wilt zien, gaat u naar [UI-updates voor eindgebruikers-apps voor Intune](./whats-new-app-ui.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-configuration"></a>Apparaatconfiguratie
+
+#### <a name="improvements-to-oemconfig-support-for-zebra-technologies-devices---4184154---"></a>Verbeteringen in de ondersteuning van OEMConfig voor apparaten van Zebra Technologies<!-- 4184154 -->
+Intune biedt volledige ondersteuning voor alle functies van Zebra OEMConfig. Klanten die apparaten van Zebra Technologies beheren met Android Enterprise en OEMConfig, kunnen op één apparaat meerdere profielen van OEMConfig implementeren. Klanten kunnen ook uitgebreide rapportages bekijken over de status van hun profielen van Zebra OEMConfig.
+
+Zie [Meerdere profielen van OEMConfig Implementeren op apparaten van Zebra in Microsoft Intune](../configuration/oemconfig-zebra-android-devices.md) voor meer informatie.
+
+Er is geen wijziging in het gedrag van OEMConfig voor andere OEM's.
+
+Van toepassing op:
+- Android Enterprise
+- Apparaten van Zebra Technologies die ondersteuning bieden voor OEMConfig. Neem contact op met Zebra voor specifieke informatie over ondersteuning.
+
+#### <a name="configure-system-extensions-on-macos-devices---6255624---"></a>Systeemuitbreidingen op macOS-apparaten configureren<!-- 6255624 -->
+Op macOS-apparaten kunt u een profiel voor kernelextensies maken om instellingen te configureren op kernelniveau (**Apparaten** > **Configuratieprofielen** > **macOS** voor platform > **Kernelextensies** voor profiel). In een toekomstige versie schaft Apple kernelextensies uiteindelijk af en vervangt deze door systeemextensies.
+
+Systeemextensies worden uitgevoerd in de gebruikersruimte en hebben geen toegang tot de kernel. Het doel is de beveiliging te verhogen en de eindgebruiker meer controle te bieden, terwijl aanvallen op kernelniveau beperkt worden. Met zowel kernelextensies als systeemextensies kunnen gebruikers app-extensies installeren waarmee de systeemeigen mogelijkheden van het besturingssysteem worden uitgebreid.
+
+In Intune kunt u zowel kernelextensies als systeemextensies configureren (**Apparaten** > **Configuratieprofielen** > **macOS** voor platform > **Systeemextensies** voor profiel). Kernelextensies zijn van toepassing op 10.13.2 en nieuwer. Systeemextensies zijn van toepassing op 10.15 en nieuwer. Vanaf macOS 10.15 tot macOS 10.15.4 kunnen kernelextensies en systeemextensies naast elkaar worden uitgevoerd. 
+
+Zie [macOS-kernelextensies toevoegen](../configuration/kernel-extensions-overview-macos.md) voor meer informatie over deze extensies op apparaten van macOS.
+
+Van toepassing op:
+- macOS 10.15 of hoger
+
+#### <a name="configure-app-and-process-privacy-preferences-on-macos-devices---2934232-----"></a>Privacyvoorkeuren voor apps en processen op apparaten van macOS configureren<!-- 2934232   --> 
+Bij de release van macOS Catalina 10.15 zijn nieuwe beveiligings- en privacyverbeteringen toegevoegd. Standaard kunnen toepassingen en processen zonder toestemming van de gebruiker geen toegang krijgen tot specifieke gegevens. Als gebruikers geen toestemming geven, werken de toepassingen en processen mogelijk niet. Intune voegt ondersteuning toe voor instellingen waarmee IT-beheerders toestemming voor toegang tot gegevens namens eindgebruikers kunnen toestaan of weigeren op apparaten waarop macOS 10.14 of hoger wordt uitgevoerd. Door deze instellingen blijven toepassingen en processen goed werken en zijn er minder vaak prompts te zien. 
+
+Zie [privacyvoorkeuren van macOS](../configuration/device-restrictions-macos.md#privacy-preferences) voor meer informatie over de instellingen die u kunt beheren.
+
+Van toepassing op:
+- macOS 10.14 en hoger
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-enrollment"></a>Apparaatinschrijving
+
+#### <a name="enrollment-restrictions-support-scope-tags--4209550----"></a>Inschrijvingsbeperkingen bieden ondersteuning voor bereiktags<!--4209550  -->
+U kunt bereiktags nu toewijzen aan inschrijvingsbeperkingen. Ga hiervoor naar [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) > **Apparaten** > **Inschrijvingsbeperkingen** > **Beperking maken**. Maak een van beide typen beperkingen en u ziet de pagina **Bereiktags**. Zie [Inschrijvingsbeperkingen instellen](../enrollment/enrollment-restrictions-set.md) voor meer informatie.
+
+#### <a name="autopilot-support-for-hololens-2-devices--6305220----"></a>Autopilot-ondersteuning voor Hololens 2-apparaten<!--6305220  -->
+Windows Autopilot biedt nu ondersteuning voor Hololens 2-apparaten. Zie [Windows Autopilot voor HoloLens 2](/hololens/hololens2-autopilot) voor meer informatie over het gebruik van Autopilot voor Hololens.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-management"></a>Apparaatbeheer
+
+#### <a name="use-sync-remote-action-in-bulk-for-ios--6440956--idmiss--"></a>Externe actie synchroniseren in bulk gebruiken voor iOS<!--6440956  idmiss-->
+U kunt nu de externe actie synchroniseren op maximaal 100 apparaten van iOS tegelijk gebruiken. Ga naar [Beheercentrum voor Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Apparaten** > **Alle apparaten** > **Bulkapparaatacties** om deze nieuwe functie weer te geven. 
+
+#### <a name="automated-device-sync-interval-down-to-12-hours--3077535----"></a>Interval voor automatisch synchroniseren van apparaten verlaagd tot 12 uur<!--3077535  -->
+Voor Automated Device Enrollment van Apple is het automatische synchronisatie-interval voor apparaten tussen Intune en Apple Business Manager gereduceerd van 24 uur tot 12 uur. Zie [Beheerde apparaten synchroniseren](../enrollment/device-enrollment-program-enroll-ios.md#sync-managed-devices) voor meer informatie over synchronisatie.
+
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-security"></a>Apparaatbeveiliging
+
+#### <a name="derived-credentials-support-for-disa-purebred-on-android-devices---6939073-------"></a>Ondersteuning voor afgeleide referenties voor DISA Purebred op Android-apparaten<!-- 6939073     -->
+U kunt nu *DISA Purebred* op volledig beheerde Android Enterprise-apparaten gebruiken als provider van [afgeleide referenties](../protect/derived-credentials.md). Er wordt ook ondersteuning geboden voor het ophalen van een afgeleide referentie voor DISA Purebred. U kunt een afgeleide referentie gebruiken voor app-verificatie, Wi-Fi, VPN of voor S/MIME-ondertekening en/of versleuteling voor apps die dit ondersteunen. 
+
+#### <a name="send-push-notifications-as-an-action-for-noncompliance----1733150-----"></a>Pushmeldingen verzenden als actie voor niet-naleving <!-- 1733150   -->
+U kunt nu een [actie voor niet-naleving](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance) configureren die een pushmelding naar een gebruiker verzendt wanneer het apparaat niet voldoet aan de voorwaarden van een compliancebeleid. De nieuwe actie is **Pushmelding verzenden naar eindgebruiker** en wordt ondersteund op Android- en iOS-apparaten.
+
+Wanneer gebruikers de pushmelding op hun apparaat selecteren, wordt de Bedrijfsportal- of Intune-app geopend om gedetailleerd weer te geven waarom ze niet compatibel zijn.
+
+#### <a name="endpoint-security-content-and-new-features---5720009-5892558-7130145-5653324-7140602----"></a>Inhoud van eindpuntbeveiliging en nieuwe functies<!-- 5720009 5892558, 7130145, 5653324, 7140602  -->
+
+De documentatie voor Intune [Eindpuntbeveiliging](../protect/endpoint-security.md) is nu beschikbaar. In het knooppunt eindpuntbeveiliging van het Beheercentrum voor Microsoft Endpoint Manager kunt u het volgende doen:
+
+- Gericht beveiligingsbeleid maken en implementeren op uw beheerde apparaten
+- Integratie met Microsoft Defender Advanced Threat Protection configureren en beveiligingstaken beheren die helpen bij het herstellen van risico’s voor apparaten met een risico die als zodanig door uw ATP-team zijn geïdentificeerd
+- Beveiligingsbasislijnen configureren
+- Naleving van het apparaat en het beleid voor voorwaardelijke toegang beheren
+- De nalevingsstatus voor al uw apparaten van zowel Intune als Configuration Manager bekijken wanneer Configuration Manager is geconfigureerd voor koppeling van de client.
+
+Naast de beschikbaarheid van inhoud zijn de volgende punten deze maand nieuw voor Eindpuntbeveiliging:
+
+- [**Eindpuntbeveiligingsbeleid**](../protect/endpoint-security-policy.md) **is niet meer in** ***preview*** en is nu klaar voor gebruik in productieomgevingen, als *algemeen beschikbaar*, met twee uitzonderingen:
+
+  - In een nieuwe *openbare preview* kunt u het [**Microsoft Defender Firewall-regels** profiel](../protect/endpoint-security-firewall-policy.md#firewall-profiles) voor Windows 10 Firewallbeleid gebruiken. Met elk exemplaar van dit profiel kunt u maximaal 150 firewallregels configureren ter aanvulling van uw Microsoft Defender Firewall-profielen. 
+  - Beveiligingsbeleid voor accountbeveiliging blijft in preview. 
+
+- U kunt nu [**een duplicaat van eindpuntbeveiligingsbeleid maken**](../protect/endpoint-security-policy.md#duplicate-a-policy). Duplicaten behouden de instellingen van de configuratie van het oorspronkelijke beleid, maar krijgen een nieuwe naam. Het nieuwe beleidsexemplaar bevat geen toewijzingen aan groepen voordat u het nieuwe beleidsexemplaar bewerkt om deze toe te voegen. U kunt het volgende beleid dupliceren:
+  - Antivirus
+  - Schijfversleuteling
+  - Firewall
+  - Eindpuntdetectie en -respons
+  - Kwetsbaarheid voor aanvallen verminderen
+  - Accountbeveiliging
+
+- U kunt nu [**een duplicaat van een beveiligingsbasislijn maken**](../protect/security-baselines.md#duplicate-a-security-baseline). Duplicaten behouden de instellingen van de configuratie van de oorspronkelijke basislijn, maar krijgen een nieuwe naam. Het nieuwe exemplaar van de basislijn bevat geen toewijzingen aan groepen voordat u het nieuwe exemplaar van de basislijn bewerkt om deze toe te voegen.
+
+- Er is een nieuw rapport voor het antivirusbeleid van de eindpuntbeveiliging beschikbaar: [**Beschadigde eindpunten voor Windows 10**](../protect/endpoint-security-antivirus-policy.md#windows-10-unhealthy-endpoints). Dit rapport is een nieuwe pagina die u kunt selecteren wanneer u uw antivirusbeleid van de eindpuntbeveiliging bekijkt. In het rapport wordt de antivirusstatus van uw door MDM beheerde Windows 10-apparaten weergegeven.  
+
+#### <a name="support-for-smime-signing-and-encryption-certificates-with-outlook-on-android---7207474----"></a>Ondersteuning voor S/MIME-ondertekening en versleutelingscertificaten met Outlook op Android<!-- 7207474  -->
+U kunt nu certificaten voor S/MIME-ondertekening en versleuteling gebruiken met Outlook op Android. Met deze ondersteuning kunt u deze certificaten inrichten door gebruik te maken van SCEP, PKCS en van geïmporteerde certificaatprofielen van PKCS. De volgende platformen van Android worden ondersteund:
+
+- Android Enterprise-werkprofiel
+- Android-apparaatbeheerder
+
+Ondersteuning voor volledig beheerde Android Enterprise-apparaten is binnenkort beschikbaar.
+
+Zie [Vertrouwelijkheidslabels en -bescherming in Outlook voor iOS en Android](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/sensitive-labeling-and-protection-outlook-for-ios-android) in de documentatie van Exchange voor meer informatie over deze ondersteuning.
+
+#### <a name="use-endpoint-detection-and-response-policy-to-onboard-devices-to-defender-atp---7130165----"></a>Eindpuntdetectie en antwoordbeleid gebruiken om apparaten te onboarden naar Defender ATP<!-- 7130165  -->
+
+[Eindpuntbeveiligingsbeleid gebruiken voor eindpuntdetectie en -respons](../protect/endpoint-security-edr-policy.md) (EDR) om apparaten te onboarden en te configureren voor uw implementatie van Microsoft Defender Advanced Threat Protection (Defender ATP). EDR ondersteunt beleid voor Windows-apparaten die worden beheerd door Intune (MDM) en een afzonderlijk beleid voor Windows-apparaten die worden beheerd door Configuration Manager. 
+
+Als u het beleid voor apparaten van Configuration Manager wilt gebruiken, moet u Configuration Manager [instellen voor de ondersteuning van het EDR-beleid](../protect/tenant-attach-intune.md). Instellen omvat:
+
+- Configureer uw Configuration Manager voor *tenantkoppeling*.
+- Installeer een module-update voor Configuration Manager om ondersteuning voor het EDR-beleid in te schakelen. Deze update is alleen van toepassing op hiërarchieën die *tenantkoppeling* hebben ingeschakeld.
+- Synchroniseer uw apparaatverzamelingen van uw hiërarchie met het Beheercentrum voor Microsoft Endpoint Manager.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="monitor-and-troubleshoot"></a>Bewaken en problemen oplossen
+
+#### <a name="device-reports-ui-update---6269408---"></a>Apparaat rapporteert dat er een update is van de gebruikersinterface<!-- 6269408 -->
+Het deelvenster rapportenoverzicht biedt nu een tabblad **Overzicht** en een tabblad **Rapporten**. Selecteer in het [Beheercentrum voor Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) **Rapporten**, selecteer vervolgens het tabblad **Rapporten** om de beschikbare rapporttypen te bekijken. Zie [Intune-rapporten](reports.md) voor verwante gegevens.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="scripting"></a>Uitvoeren van scripts
+
+#### <a name="macos-script-support---6376978----"></a>ondersteuning voor macOS-script<!-- 6376978  -->
+Scriptondersteuning voor macOS is nu algemeen beschikbaar. Daarnaast is ondersteuning toegevoegd voor zowel door de gebruiker toegewezen scripts als macOS-apparaten die zijn ingeschreven bij Automatische apparaatinschrijving van Apple (voorheen Device Enrollment Program). Zie [Shell-scripts op macOS-apparaten gebruiken in Intune](../apps/macos-shell-scripts.md) voor meer informatie.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="app-management"></a>Appbeheer
+
+#### <a name="microsoft-office-365-proplus-rename---6368143---"></a>Naamswijziging Microsoft Office 365 ProPlus<!-- 6368143 -->
+De naam van Microsoft Office 365 ProPlus wordt gewijzigd in **Microsoft 365-apps voor ondernemingen**. Zie [Naamswijziging voor Office 365 ProPlus](/deployoffice/name-change) voor meer informatie. In onze documentatie verwijzen we er doorgaans naar met Microsoft 365-apps. In het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) vindt u de apps door **Apps** > **Windows** > **Toevoegen** te selecteren. Zie [Apps toevoegen aan Microsoft Intune](../apps/apps-add.md) voor informatie over het toevoegen van apps.
+
+#### <a name="manage-smime-settings-for-outlook-on-android-enterprise-devices---6517085-----"></a>S/MIME-instellingen voor Outlook op Android Enterprise-apparaten beheren<!-- 6517085   -->
+U kunt met app-configuratiebeleid de S/MIME-instelling voor Outlook beheren op apparaten waarop Android Enterprise wordt uitgevoerd. U kunt ook kiezen of u wilt toestaan dat de apparaatgebruikers S/MIME in- of uitschakelen in de Outlook-instellingen. Ga in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) naar **Apps** > **App-configuratiebeleid** > **Toevoegen** > **Beheerde apparaten** om app-configuratiebeleid voor Android te gebruiken. Zie [Microsoft Outlook-configuratie-instellingen](../apps/app-configuration-policies-outlook.md) voor meer informatie over het configureren van instellingen voor Outlook.
+
+#### <a name="pre-release-testing-for-managed-google-play-apps---2681933----"></a>Testen voorafgaand aan de release voor beheerde Google Play-apps<!-- 2681933  -->
+Organisaties die gebruikmaken van [gesloten testtrajecten van Google Play voor het testen van apps voorafgaand aan de release](https://support.google.com/googleplay/android-developer/answer/3131213) kunnen deze trajecten beheren met Intune. U kunt selectief apps die worden gepubliceerd naar de trajecten voorafgaand aan de productiefase van Google Play aan testgroepen toewijzen om tests uit te voeren. In Intune kunt u ook zien of er voor een app een testtraject voor een build voorafgaand aan de productiefase is gepubliceerd en u kunt dat traject ook toewijzen aan Azure AD-gebruikersgroepen of -apparaatgroepen. Deze functie is beschikbaar voor al onze momenteel ondersteunde Android Enterprise-scenario's (werkprofiel, volledig beheerd en toegewezen). In het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) kunt u een Beheerde Google Play-app toevoegen door **Apps** > **Android** > **Toevoegen** te selecteren. Zie [Werken met gesloten testtrajecten van Beheerde Google Play](../apps/apps-add-android-for-work.md#working-with-managed-google-play-closed-testing-tracks) voor meer informatie.
+
+#### <a name="microsoft-teams-is-now-included-in-microsoft-365-for-macos---5903936----"></a>Microsoft Teams is nu opgenomen in Microsoft 365 voor macOS<!-- 5903936  -->
+Gebruikers aan wie Microsoft 365 voor macOS is toegewezen in Microsoft Endpoint Manager krijgen nu naast de bestaande Microsoft 365-apps (Word, Excel, PowerPoint, Outlook en OneNote) ook Microsoft Teams. Intune herkent de bestaande Mac-apparaten waarop de andere Office voor macOS-apps zijn geïnstalleerd en probeert Microsoft Teams te installeren wanneer het apparaat de volgende keer bij Intune wordt ingecheckt. In het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) vindt u het **Office 365-pakket** voor macOS door **Apps** > **macOS** > **Toevoegen** te selecteren. Zie [Office 365 toewijzen aan macOS-apparaten met Microsoft Intune](../apps/apps-add-office365-macos.md) voor meer informatie.
+
+#### <a name="update-to-android-app-configuration-policies---6113334----"></a>Update voor configuratiebeleid voor Android-apps<!-- 6113334  -->
+De configuratiebeleidsregels voor Android-apps zijn bijgewerkt, zodat beheerders het type apparaatinschrijving kunnen selecteren voordat een app-configuratieprofiel wordt gemaakt. De functionaliteit wordt toegevoegd aan het account voor certificaatprofielen die zijn gebaseerd op inschrijvingstype (werkprofiel of apparaateigenaar).  Deze update biedt het volgende:
+
+1. Als er een nieuw profiel wordt gemaakt en Werkprofiel en Apparaateigenaarprofiel als het type apparaatinschrijving zijn geselecteerd, kunt u geen certificaatprofiel aan het app-configuratiebeleid koppelen.
+2. Als er een nieuw profiel wordt gemaakt en alleen Werkprofiel is geselecteerd, kan Werkprofiel-certificaatbeleid dat is gemaakt onder Apparaatconfiguratie worden gebruikt.
+3. Als er een nieuw profiel wordt gemaakt en alleen Apparaateigenaar is geselecteerd, kan Apparaateigenaar-certificaatbeleid dat is gemaakt onder Apparaatconfiguratie worden gebruikt. 
+
+> [!IMPORTANT]
+> Bestaand beleid dat is gemaakt voorafgaand aan de release van deze functie (release april 2020 - 2004) en waarvoor geen certificaatprofielen zijn gekoppeld aan het beleid, wordt voor het type apparaatinschrijving standaard ingesteld op Werkprofiel en Apparaateigenaarprofiel. Bestaand beleid dat is gemaakt voorafgaand aan de release van deze functie en waaraan certificaatprofielen zijn gekoppeld, wordt bovendien standaard ingesteld op uitsluitend Werkprofiel.
+
+Daarnaast voegen we Gmail- en Nine-e-mailconfiguratieprofielen toe die worden gebruikt met zowel het inschrijvingstype Werkprofiel als het inschrijvingstype Apparaateigenaar, waaronder het gebruik van certificaatprofielen voor beide e-mailconfiguratietypen.  Gmail- of Nine-beleid dat u onder Apparaatconfiguratie voor werkprofielen hebt gemaakt, blijft van toepassing op het apparaat en het is niet nodig om ze te verplaatsen naar het app-configuratiebeleid.
+
+In het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) vindt u het app-configuratiebeleid door **Apps** > **App-configuratiebeleid** te selecteren. Zie [App-configuratiebeleid voor Microsoft Intune](../apps/app-configuration-policies-overview.md) voor meer informatie over app-configuratiebeleid.
+
+#### <a name="push-notification-when-device-ownership-type-is-changed---5575875---"></a>Pushmelding wanneer verandering optreedt in eigendomstype voor het apparaat<!-- 5575875 -->
+U kunt uit het oogpunt van privacy een pushmelding configureren die naar de gebruikers van zowel de Android- als de iOS-bedrijfsportal wordt verzonden wanneer het eigendomstype voor hun apparaat is gewijzigd van Persoonlijk naar Zakelijk. Deze pushmelding is standaard ingesteld op uitgeschakeld. U kunt de instelling vinden in Microsoft Endpoint Manager door **Tenantbeheer** > **Aanpassing** te selecteren. Zie [Eigendom van het apparaat wijzigen](../enrollment/corporate-identifiers-add.md#change-device-ownership) voor meer informatie over de wijze waarop het eigendom van het apparaat van invloed is op uw eindgebruikers.
+
+#### <a name="group-targeting-support-for-customization-pane---4722837----"></a>Ondersteuning voor groepsdoelen voor het deelvenster Aanpassing<!-- 4722837  -->
+U kunt de instellingen in het deelvenster **Aanpassing** toepassen op gebruikersgroepen. Ga voor deze instellingen in Intune naar het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) en selecteer **Tenantbeheer** > **Aanpassing**. Zie [De Intune-bedrijfsportal-apps, de bedrijfsportalwebsite en de Intune-app aanpassen](../apps/company-portal-app.md) voor meer informatie over aanpassing.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-configuration"></a>Apparaatconfiguratie
+
+#### <a name="multiple-evaluate-each-connection-attempt-on-demand-vpn-rules-supported-on-ios-ipados-and-macos---6424615----"></a>Meerdere on-demand VPN-regels met de actie 'Elke verbindingspoging evalueren' die worden ondersteund in iOS, iPadOS en macOS<!-- 6424615  -->
+De gebruikerservaring van Intune maakt meerdere on-demand VPN-regels mogelijk in hetzelfde VPN-profiel met de actie **Elke verbindingspoging evalueren** (**Apparaten** > **Configuratieprofielen** > **Profiel maken** > **iOS/iPadOS** of **macOS** voor het platform > **VPN** voor profiel > **Automatische VPN** > **On-demand**).
+
+Alleen de eerste regel in de lijst is gehonoreerd. Dit gedrag is vast, en in Intune worden alle regels in de lijst geëvalueerd. Elke regel wordt geëvalueerd in de volgorde waarin deze wordt weergegeven in de lijst met regels op aanvraag.
+
+> [!NOTE]
+> Als u beschikt over bestaande VPN-profielen die gebruikmaken van deze on-demand VPN-regels, geldt de oplossing voor de volgende keer dat u het VPN-profiel wijzigt. Maak bijvoorbeeld een kleine wijziging, wijzig bijvoorbeeld de naam van de verbinding, en sla het profiel op.
+>
+> Als u SCEP-certificaten gebruikt voor verificatie, zorgt deze wijziging ervoor dat de certificaten voor dit VPN-profiel opnieuw worden uitgegeven.
+
+Van toepassing op:
+- iOS/iPadOS
+- macOS
+
+Zie [VPN-profielen maken](../configuration/vpn-settings-configure.md) voor meer informatie over VPN-profielen.
+
+#### <a name="additional-options-in-sso-and-sso-app-extension-profiles-on-iosipados-devices---6504155-----"></a>Aanvullende opties in profielen voor eenmalige aanmelding en app-extensies voor eenmalige aanmelding op iOS- en iPadOS-apparaten<!-- 6504155   -->
+
+Op iOS-/iPadOS-apparaten kunt u het volgende doen:
+- Stel in profielen voor eenmalige aanmelding (**Apparaten** > **Configuratieprofielen** > **Profiel maken** > **iOS/iPadOS** voor platform > **Apparaatfuncties** voor profiel > **Eenmalige aanmelding**) de principal-naam van Kerberos in op de SAM-accountnaam (Security Account Manager) in profielen voor eenmalige aanmelding. 
+- Configureer in profielen voor app-extensies voor eenmalige aanmelding (**Apparaten** > **Configuratieprofielen** > **Profiel maken** > **iOS/iPadOS** voor platform > **Apparaatfuncties** voor profieltype > **App-extensie voor eenmalige aanmelding**) de iOS/iPadOS Microsoft Azure AD-extensie met minder klikken door een nieuw type app-extensie voor eenmalige aanmelding te gebruiken. U kunt de Azure AD-extensie voor apparaten in de modus Gedeeld apparaat inschakelen en extensiespecifieke gegevens naar de extensie verzenden.
+
+Van toepassing op:
+- iOS/iPadOS 13.0+
+
+Zie [Overzicht van app-extensies voor eenmalige aanmelding](../configuration/device-features-configure.md#single-sign-on-app-extension) en [Lijst met instellingen voor eenmalige aanmelding](../configuration/ios-device-features-settings.md#single-sign-on-app-extension) voor meer informatie over het gebruik van eenmalige aanmelding op iOS-/iPadOS-apparaten.
+
+#### <a name="new-shell-script-settings-for-macos-devices---6884363---"></a>Nieuwe instellingen voor shell-script voor macOS-apparaten<!-- 6884363 -->
+Bij het configureren van shell-scripts voor macOS-apparaten kunt u nu de volgende nieuwe instellingen configureren: 
+- Scriptmeldingen op apparaten verbergen
+- Scriptfrequentie
+- Maximum aantal keren dat het script opnieuw moet worden uitgevoerd als het script mislukt
+
+Zie [Shell-scripts op macOS-apparaten gebruiken in Intune](../apps/macos-shell-scripts.md) voor meer informatie.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-enrollment"></a>Apparaatinschrijving
+
+#### <a name="delete-apple-automated-device-enrollment-token-when-default-profile-is-present--6393220---"></a>Token voor automatische apparaatinschrijving van Apple verwijderen als standaardprofiel aanwezig is<!--6393220 -->
+Voorheen kon u een standaardprofiel niet verwijderen. Dit betekende dat u het bijbehorende token voor automatische apparaatinschrijving niet kon verwijderen. Nu kunt u het token verwijderen als:
+- er geen apparaten aan het token zijn toegewezen
+- er een standaardprofiel aanwezig is. Hiervoor verwijdert u het standaardprofiel en vervolgens het bijbehorende token.
+Zie [Een ADE-token uit Intune verwijderen](../enrollment/device-enrollment-program-enroll-ios.md#delete-an-automated-device-enrollment-token-from-intune) voor meer informatie.
+
+#### <a name="scaled-up-support-for-apple-automated-device-enrollment-and-apple-configurator-2-devices-profiles-and-tokens--3542402---"></a>Uitgebreide ondersteuning voor apparaten, profielen en tokens voor Apple ADE en Apple Configurator 2<!--3542402 -->
+Om gedistribueerde IT-afdelingen en -organisaties te helpen, ondersteunt Intune nu tot maximaal 1000 inschrijvingsprofielen per token, 2000 ADE-tokens (voorheen bekend als DEP) per Intune-account en 75.000 apparaten per token. Er is geen specifieke limiet voor apparaten per inschrijvingsprofiel, beneden het maximumaantal apparaten per token.
+
+Intune ondersteunt nu tot maximaal 1000 Apple Configurator 2-profielen.
+
+Ga voor meer informatie naar [Ondersteund volume](../enrollment/device-enrollment-program-enroll-ios.md#supported-volume).
+
+#### <a name="all-devices-page-column-entry-changes--6967616---"></a>Wijzigingen in kolomvermelding van alle apparaten<!--6967616 -->
+Op de pagina **Alle apparaten** zijn de vermeldingen voor de kolom **Beheerd door** gewijzigd:
+- Nu wordt *Intune* weergegeven in plaats van *MDM*
+- Nu wordt *Co-beheer* weergegeven in plaats van *MDM/ConfigMgr-agent*
+
+De exportwaarden zijn ongewijzigd.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-management"></a>Apparaatbeheer
+
+#### <a name="trusted-platform-manager-tpm-version-information-now-on-device-hardware-page--6224914-idmiss---"></a>Informatie over de versiegegevens van TPM (Trusted Platform Manager) op de pagina Apparaathardware<!--6224914 idmiss -->
+U kunt nu het TPM-versienummer zien op de hardwarepagina van een apparaat ([Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) > **Apparaten** > Kies een apparaat > **Hardware** > kijk onder **Systeembehuizing**).
+
+#### <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions---6317104-cm3555758----"></a>Microsoft Endpoint Manager-tenant koppelen: Synchronisatie van apparaten en apparaatacties<!-- 6317104, CM3555758  -->
+Microsoft Endpoint Manager brengt Configuration Manager en Intune samen in één console. Vanaf Configuration Manager versie 2002 kunt u uw Configuration Manager-apparaten uploaden naar de cloudservice en er acties op uitvoeren in het beheercentrum. Raadpleeg voor meer informatie [Microsoft Endpoint Manager-tenant koppelen: Synchronisatie van apparaten en apparaatacties](../../configmgr/tenant-attach/device-sync-actions.md). 
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="monitor-and-troubleshoot"></a>Bewaken en problemen oplossen
+
+#### <a name="collect-logs-to-better-troubleshoot-scripts-assigned-to-macos-devices---6359853----"></a>Logboeken verzamelen voor het beter oplossen van problemen in scripts die zijn toegewezen aan macOS-apparaten<!-- 6359853  -->
+U kunt nu logboeken verzamelen voor het beter oplossen van problemen in scripts die zijn toegewezen aan macOS-apparaten. U kunt logboeken van maximaal 60 MB (gecomprimeerde) of 25 bestanden verzamelen, afhankelijk van wat zich het eerst voordoet. Zie [Problemen met macOS Shell-scriptbeleid oplossen met behulp van logboekverzameling](../apps/macos-shell-scripts.md#troubleshoot-macos-shell-script-policies-using-log-collection) voor meer informatie.
+ 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="security"></a>Beveiliging
+
+#### <a name="derived-credentials-to-provision-android-enterprise-fully-managed-devices-with-certificates--4839592------"></a>Afgeleide referenties voor het inrichten van volledig beheerde Android Enterprise-apparaten met certificaten<!--4839592    -->
+Intune ondersteunt nu het gebruik van [afgeleide referenties](../protect/derived-credentials.md) als verificatiemethode voor Android-apparaten. Afgeleide referenties zijn een implementatie van de National Institute of Standards and Technology (NIST) 800-157-standaard voor het implementeren van certificaten op apparaten. Onze ondersteuning voor Android vormt een uitbreiding op onze ondersteuning voor apparaten met iOS/iPadOS.
+
+Afgeleide referenties zijn afhankelijk van het gebruik van een Personal Identity Verification (PIV) of Common Access Card (CAC), zoals een smartcard. Om een afgeleide referentie voor een mobiele apparaat te verkrijgen, beginnen gebruikers in de Microsoft Intune-app en volgen ze een registratiewerkstroom die uniek is voor de provider die u gebruikt. Alle providers hebben met elkaar gemeen dat ze vereisen dat een smartcard voor verificatie bij de afgeleide referentieprovider. Deze provider verzendt vervolgens een certificaat naar het apparaat dat is afgeleid van de smartcard van de gebruiker.
+
+U gebruikt afgeleide referenties als verificatiemethode voor configuratieprofielen voor apparaten voor VPN en Wi-Fi. U kunt ze ook gebruiken voor app-verificatie, S/MIME-ondertekening en versleuteling voor toepassingen die hiervoor ondersteuning bieden.
+
+Intune biedt nu ondersteuning voor de volgende afgeleide referentieproviders bij Android:
+- Entrust Datacard
+- Intercede
+
+In een toekomstige release komt een derde provider, DISA Purebred, beschikbaar voor Android.
+
+#### <a name="microsoft-edge-security-baseline-is-now-generally-available--6586139---"></a>De functie Beveiligingsbasislijn van Microsoft Edge is nu algemeen beschikbaar<!--6586139 -->
+
+Er is nu een nieuwe versie van de functie [Beveiligingsbasislijn van Microsoft Edge](../protect/security-baselines.md#available-security-baselines) beschikbaar. Deze wordt uitgebracht als algemeen beschikbaar (GA). De voorgaande Microsoft Edge-basislijn was in preview.  De nieuwe basislijnversie van april 2020 (Microsoft Edge versie 80 en hoger). 
+
+Met de release van deze nieuwe basislijn is het niet meer mogelijk om profielen te maken op basis van de vorige basislijnversies, maar u kunt nog steeds profielen gebruiken die u hebt gemaakt met deze versies. U kunt er ook voor kiezen om [uw bestaande profielen bij te werken, zodat u de meest recente basislijnversie kunt gebruiken](../protect/security-baselines.md#change-the-baseline-version-for-a-profile). 
+
+<!-- ########################## -->
+## <a name="march-2020"></a>Maart 2020
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="app-management"></a>Appbeheer
+
+####  <a name="improved-sign-in-experience-in-company-portal-for-android"></a>Bijgewerkte aanmeldervaring voor de bedrijfsportal-app voor Android    
+De indeling van diverse aanmeldingsschermen in de bedrijfsportal-app voor Android is bijgewerkt voor een modernere, eenvoudige en duidelijke ervaring voor gebruikers. Zie [Wat is er nieuw in de gebruikersinterface van de app?](./whats-new-app-ui.md) voor een overzicht van de verbeteringen.
+
+#### <a name="configure-delivery-optimization-agent-when-downloading-win32-app-content---5410945---"></a>Delivery Optimization-agent configureren tijdens het downloaden van inhoud voor de Win32-app<!-- 5410945 -->
+U kunt de Delivery Optimization-agent configureren zodat inhoud voor de Win32-app op de achtergrond of op de voorgrond wordt gedownload op basis van de toewijzing. Voor bestaande Win32-apps wordt inhoud nog steeds op de achtergrond gedownload. Selecteer in het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) de optie **Apps** > **Alle apps** >  *en selecteer de Win32-app* > **Eigenschappen**. Selecteer **Bewerken** naast **Toewijzingen**.  Bewerk de toewijzing door **Opnemen** te selecteren onder **Modus** in de sectie **Vereist**.  U vindt de nieuwe instelling in de sectie **App-instellingen**. Zie [Beheer van Win32-apps - Delivery Optimization](../apps/apps-win32-app-management.md#delivery-optimization) voor meer informatie over Delivery Optimization.
+
+#### <a name="company-portal-for-ios-supports-landscape-mode--6048329----"></a>Bedrijfsportal voor iOS biedt ondersteuning voor de liggende modus<!--6048329  -->   
+Gebruikers kunnen hun apparaat nu inschrijven, apps zoeken en ondersteuning krijgen met hun favoriete schermstand. De app detecteert automatisch de stand en past de weergave aan de liggende of staande modus van het scherm aan, tenzij gebruikers het scherm vergrendelen in de staande modus.  
+
+#### <a name="script-support-for-macos-devices-public-preview---4280361----"></a>Scriptondersteuning voor macOS-apparaten (openbare preview)<!-- 4280361  -->
+U kunt scripts toevoegen en implementeren op macOS-apparaten. Dankzij deze ondersteuning hebt u meer mogelijkheden om macOS-apparaten te configureren buiten wat al mogelijk is, met behulp van systeemeigen MDM-mogelijkheden op macOS-apparaten. Zie [Shell-scripts op macOS-apparaten gebruiken in Intune](../apps/macos-shell-scripts.md) voor meer informatie.
+
+#### <a name="macos-and-ios-company-portal-updates---5779439-5780234----"></a>Updates voor de macOS- en iOS-bedrijfsportal<!-- 5779439, 5780234  -->
+Het deelvenster Profiel van de macOS- en iOS-bedrijfsportal is bijgewerkt met de knop Afmelden. Daarnaast is de gebruikersinterface van het deelvenster Profiel in de macOS-bedrijfsportal verbeterd. Raadpleeg [De bedrijfsportal-app van Microsoft Intune configureren](../apps/company-portal-app.md) voor meer informatie over de bedrijfsportal-app.
+
+#### <a name="retarget-web-clips-to-microsoft-edge-on-ios-devices---5455276-----"></a>Microsoft Edge als nieuw doel opgeven voor webclips op iOS-apparaten<!-- 5455276   -->
+Nieuw geïmplementeerde webclips (vastgemaakte web-apps) op iOS-apparaten die verplicht in een beveiligde browser moeten worden geopend, worden nu geopend in Microsoft Edge in plaats van in de Intune Managed Browser. U moet een nieuw doel opgeven voor reeds bestaande webclips om ervoor te zorgen dat deze worden geopend in Microsoft Edge, en niet in de Managed Browser. Zie [Webtoegang beheren met behulp van Microsoft Edge met Microsoft Intune](../apps/manage-microsoft-edge.md) en [Webtoepassingen toevoegen aan Microsoft Intune](../apps/web-app.md) voor meer informatie.
+
+#### <a name="use-the-intune-diagnostic-tool-with-microsoft-edge-for-android---4735244----"></a>Het diagnostisch hulpprogramma van Intune met Microsoft Edge voor Android<!-- 4735244  -->
+Microsoft Edge voor Android is nu geïntegreerd met het diagnostisch hulpprogramma van Intune. Net als in Microsoft Edge voor iOS kunt u 'about:intunehelp' in de URL-balk (het adresvak) van Microsoft Edge op het apparaat invoeren om het diagnostisch hulpprogramma van Intune te starten. Dit hulpprogramma verstrekt gedetailleerde logboeken. Gebruikers kunnen worden geholpen bij het verzamelen van deze logboeken en het verzenden ervan naar hun IT-afdeling, of bij het bekijken van MAM-logboeken voor specifieke apps.
+
+#### <a name="updates-to-intune-branding-and-customization---5236032----"></a>Updates van Huisstijl en aanpassing van Intune<!-- 5236032  -->
+Het Intune-deelvenster Huisstijl en aanpassing is bijgewerkt met enkele verbeteringen, zoals:
+
+- De naam van het deelvenster wordt gewijzigd in **Aanpassing**.
+- De rangschikking en het ontwerp van de instellingen wordt verbeterd.
+- De tekst en knopinfo voor instellingen wordt verbeterd.
+
+Ga voor deze instellingen in Intune naar het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) en selecteer **Tenantbeheer** > **Aanpassing**. Zie [De bedrijfsportal-app van Microsoft Intune configureren](../apps/company-portal-app.md) voor informatie over bestaande aanpassingen.
+
+#### <a name="users-personal-encrypted-recovery-key---6273943----"></a>Persoonlijke, versleutelde herstelsleutel van gebruiker<!-- 6273943  -->
+Er is een nieuwe Intune-functie beschikbaar waarmee gebruikers hun persoonlijke, versleutelde **FileVault**-herstelsleutel voor Mac-apparaten kunnen downloaden via de bedrijfsportal-toepassing voor Android of via de Android Intune-toepassing. Zowel de bedrijfsportal-toepassing als de Intune-toepassing bevat een koppeling om de onlinebedrijfsportal in een Chrome-browser te openen. Hier kunnen gebruikers de **FileVault**-herstelsleutel zien die ze nodig hebben voor toegang tot hun Mac-apparaten. Zie [Apparaatversleuteling gebruiken met Intune](../protect/encrypt-devices.md) voor meer informatie over versleuteling.
+
+#### <a name="optimized-dedicated-device-enrollment----6114580----"></a>Geoptimaliseerde inschrijving van toegewezen Android-apparaten <!-- 6114580  -->
+We optimaliseren de inschrijving voor toegewezen Android Enterprise-apparaten en maken het gemakkelijker om SCEP-certificaten die aan Wi-Fi zijn gekoppeld, toe te passen op toegewezen apparaten die zijn ingeschreven vóór 22 november 2019. Voor nieuwe inschrijvingen wordt de Intune-app gewoon geïnstalleerd, maar eindgebruikers hoeven tijdens de registratie de stap **Intune-agent inschakelen** niet meer uit te voeren. De installatie wordt automatisch uitgevoerd op de achtergrond en SCEP-certificaten die zijn gekoppeld aan Wi-Fi, kunnen worden geïmplementeerd en ingesteld zonder interactie van de eindgebruiker.  
+
+Deze wijzigingen worden in de loop van de maand maart gefaseerd ingevoerd terwijl de Intune-serviceback-end wordt geïmplementeerd. Eind maart vertonen alle tenants dit nieuwe gedrag. Zie [Ondersteuning voor SCEP-certificaten in toegewezen Android Enterprise-apparaten](https://techcommunity.microsoft.com/t5/intune-customer-success/support-for-scep-certificates-in-android-enterprise-dedicated/ba-p/928147) voor bijbehorende informatie.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-configuration"></a>Apparaatconfiguratie
+
+#### <a name="new-user-experience-when-creating-administrative-templates-on-windows-devices--5096036---"></a>Nieuwe gebruikerservaring bij het maken van beheersjablonen op Windows-apparaten<!--5096036 -->
+Op basis van feedback van klanten en onze overstap naar de nieuwe Azure-ervaring in volledig scherm hebben we de profielervaring voor Beheersjablonen bijgewerkt met een mapweergave. Er zijn geen wijzigingen aangebracht in instellingen of bestaande profielen. Uw bestaande profielen zijn dus niet gewijzigd en kunnen in de nieuwe weergave worden gebruikt. U kunt nog steeds naar alle instellingsopties navigeren door **Alle instellingen** te selecteren en zoekopdrachten te gebruiken. De structuurweergave is onderverdeeld in Computer- en Gebruikersconfiguraties. U vindt instellingen voor Windows, Office en Edge in de betreffende mappen.  
+
+Van toepassing op:
+- Windows 10 en nieuwer
+
+#### <a name="vpn-profiles-with-ikev2-vpn-connections-can-use-always-on-with-iosipados-devices---1947932-----"></a>Voor VPN-profielen met IKEv2 VPN-verbindingen kan AlwaysOn worden gebruikt voor iOS-/iPadOS-apparaten<!-- 1947932   -->
+Op iOS-/iPadOS-apparaten kunt u een VPN-profiel maken dat gebruikmaakt van een IKEv2-verbinding (**Apparaten** > **Configuratieprofielen** > **Profiel maken** > **iOS/iPadOS** als platform > **VPN** als profieltype). Nu kunt u permanente VPN configureren met IKEv2. IKEv2 VPN-profielen maken, nadat deze zijn geconfigureerd, automatisch verbinding en blijven verbonden (of maken snel opnieuw verbinding) met het VPN. De verbinding blijft bestaan, ook bij wisselingen van netwerk of als apparaten opnieuw worden opgestart.
+
+In iOS/iPadOS is AlwaysOn VPN beperkt tot IKEv2-profielen.
+
+Als u wilt zien welke IKEv2-instellingen u momenteel kunt configureren, gaat u naar [VPN-instellingen toevoegen op iOS-apparaten in Microsoft Intune](../configuration/vpn-settings-ios.md#ikev2-settings).
+
+Van toepassing op:
+- iOS/iPadOS
+
+#### <a name="delete-bundles-and-bundle-arrays-in-oemconfig-device-configuration-profiles-on-android-enterprise-devices---5550355-----"></a>Bundels en gebundelde matrices verwijderen uit OEMConfig-apparaatconfiguratieprofielen op Android Enterprise-apparaten<!-- 5550355   -->
+Op Android Enterprise-apparaten kunt u OEMConfig-profielen maken en bijwerken (**Apparaten** > **Configuratieprofielen** > **Profiel maken** > **Android Enterprise** als platform > **OEMConfig** als profieltype). Gebruikers kunnen bundels en gebundelde matrices verwijderen met behulp van de **Configuratieontwerper** in Intune.
+
+Zie [Android Enterprise-apparaten gebruiken en beheren met OEMConfig in Microsoft Intune](../configuration/android-oem-configuration-overview.md) voor meer informatie over OEMConfig-profielen.
+
+Van toepassing op:
+- Android Enterprise
+
+#### <a name="configure-the-iosipados-microsoft-azure-ad-sso-app-extension---5672534-----"></a>De SSO-extensie van Microsoft Azure AD voor iOS/iPadOS-apps configureren<!-- 5672534   -->
+Het Microsoft Azure AD-team heeft een app-extensie voor SSO (eenmalige aanmelding) voor omleiden gemaakt, zodat gebruikers van iOS en iPadOS 13.0 en hoger met eenmalige aanmelding toegang hebben tot Microsoft-apps en -websites. Alle apps waarvoor eerder brokered verificatie werd uitgevoerd met de app Microsoft Authenticator, behouden SSO met de nieuwe SSO-extensie. Met de release van de SSO-extensie van Azure AD kunt u de SSO-extensie configureren met het type SSO-extensie voor omleiding van apps (**Apparaten** > **Configuratieprofielen** > **Profiel maken** > **iOS/iPadOS** als platform > **Apparaatfuncties** als profieltype > **App-extensie voor eenmalige aanmelding**.
+
+Van toepassing op:
+- iOS 13.0 en hoger
+- iPadOS 13.0 en hoger
+
+Zie [App-extensie voor eenmalige aanmelding](../configuration/device-features-configure.md#single-sign-on-app-extension) voor meer informatie over app-extensies voor SSO voor iOS.
+
+#### <a name="enterprise-app-trust-settings-modification-setting-is-removed-from-iosipados-device-restriction-profiles---6225131-----"></a>De instelling voor aanpassing van de vertrouwensinstellingen voor de Enterprise-app is verwijderd uit de profielen voor apparaatbeperking voor iOS/iPadOS<!-- 6225131   -->
+U maakt een profiel met apparaatbeperkingen op het iOS/iPadOS-apparaat (**Apparaten** > **Configuratieprofielen** > **Profiel maken** > **iOS/iPadOS** voor platform > **Apparaatbeperkingen** voor profieltype). De instelling **Aanpassing van de vertrouwensinstellingen voor de Enterprise-app** is door Apple verwijderd en uit Intune verwijderd. Als u deze instelling momenteel in een profiel gebruikt, heeft dit geen invloed. Deze wordt verwijderd uit bestaande profielen. Deze instelling is ook verwijderd uit rapporten in Intune.
+
+Van toepassing op:
+- iOS/iPadOS
+
+Ga naar [iOS- en iPadOS-apparaatinstellingen om functies toe te staan of te beperken met Intune](../configuration/device-restrictions-ios.md) als u alle instellingen wilt bekijken die u kunt beperken.
+
+#### <a name="troubleshooting-pending-mam-policy-notification-changed-to-informational-icon--6348954---"></a>Problemen oplossen: Melding van MAM-beleid in behandeling gewijzigd in informatiepictogram<!--6348954 -->
+Het meldingspictogram op de blade Probleemoplossing voor een MAM-beleid dat in behandeling is, is gewijzigd in een informatiepictogram.
+
+####  <a name="ui-update-when-configuring-compliance-policy---3961639------"></a>Update van gebruikersinterface tijdens de configuratie van het nalevingsbeleid<!-- 3961639    -->
+
+De gebruikersinterface voor het [maken van nalevingsbeleid](../protect/create-compliance-policy.md#create-the-policy) in Microsoft Endpoint Manager is bijgewerkt (**Apparaten** > **Nalevingsbeleid** > **Beleidsregels** > **Beleid maken**). Er is een nieuwe gebruikerservaring die dezelfde instellingen en gegevens bevat als die u eerder gebruikte. De nieuwe ervaring volgt een wizard-achtig proces voor het maken van een nalevingsbeleid en bevat een pagina waarop u *Toewijzingen* voor het beleid kunt toevoegen, en een pagina *Beoordelen en maken* waarop u uw configuratie kunt controleren voordat u het beleid maakt.
+
+#### <a name="retire-noncompliant-devices---1827291---------"></a>Niet-compatibele apparaten buiten gebruik stellen<!-- 1827291       -->
+We hebben een nieuwe actie voor niet-compatibele apparaten toegevoegd die u aan elk beleid kunt toevoegen, om het [niet-compatibele apparaat buiten gebruik te stellen](../protect/actions-for-noncompliance.md#add-actions-for-noncompliance).  De nieuwe actie, **Het niet-compatibele apparaat buiten gebruik stellen** heeft tot gevolg dat alle bedrijfsgegevens van het apparaat worden verwijderd en dat het apparaat wordt verwijderd uit Intune-beheer.  Deze actie wordt uitgevoerd wanneer de geconfigureerde waarde in dagen is bereikt. Op dat moment komt het apparaat in aanmerking voor buitengebruikstelling. De minimumwaarde is 30 dagen.  Expliciete goedkeuring van de IT-beheerder is vereist voor het buiten gebruik stellen van de apparaten met behulp van de sectie *buiten gebruik stellen van niet-compatibele apparaten*, waarbij beheerders alle in aanmerking komende apparaten buiten gebruik kunnen stellen.
+
+#### <a name="support-for-wpa-and-wpa2-in-ios-enterprise-wi-fi-profiles--6215273-----"></a>Ondersteuning voor WPA en WPA2 in Enterprise Wi-Fi-profielen voor iOS<!--6215273   -->
+[Enterprise Wi-Fi-profielen voor iOS](../configuration/wi-fi-settings-ios.md#enterprise-profiles) biedt nu ondersteuning voor het veld *Beveiligingstype*. Bij *Beveiligingstype* kunt u **WPA Enterprise** of **WPA/WPA2 Enterprise** selecteren en vervolgens een *EAP-type* selecteren.  (**Apparaten** > **Configuratieprofielen** > **Profiel maken** en selecteer **iOS/iPadOS** als *Platform* en vervolgens **Wi-Fi** als *Profiel*). 
+
+De nieuwe Enterprise-opties zijn vergelijkbaar met die voor een basis-Wi-Fi-profiel voor iOS.
+
+#### <a name="new-user-experience-for-certificate-email-vpn-and-wi-fi-vpn-profiles---5615208-----"></a>Nieuwe gebruikerservaring voor certificaat-, e-mail-, VPN- en Wi-Fi-profielen<!-- 5615208   -->
+De [gebruikerservaring](../configuration/device-profile-create.md) in het Beheercentrum voor Microsoft Endpoint Manager is bijgewerkt (**Apparaten** > **Configuratieprofielen** > **Profiel maken**) voor het maken en aanpassen van de volgende profieltypen. De nieuwe ervaring biedt dezelfde instellingen als voorheen, maar kent een wizardachtige methode waarvoor minder horizontaal bladeren is vereist. U hoeft bestaande configuraties niet bij te werken met de nieuwe ervaring.
+
+- Afgeleide referentie
+- E-mail
+- PKCS-certificaat
+- PKCS-geïmporteerd certificaat
+- SCEP-certificaat
+- Vertrouwd certificaat
+- VPN
+- Wi-Fi
+
+#### <a name="improved-user-interface-experience-when-creating-device-restrictions-profiles-on-android-and-android-enterprise-devices---5841361---"></a>Verbeterde gebruikersinterface-ervaring bij het maken van profielen voor apparaatbeperkingen op Android- en Android Enterprise-apparaten<!-- 5841361 -->
+Wanneer u een profiel voor Android- of Android Enterprise-apparaten maakt, wordt de ervaring in het Microsoft Endpoint Manager-beheercentrum bijgewerkt. Deze wijziging is van invloed op de volgende apparaatconfiguratieprofielen (**Apparaten** > **Configuratieprofielen** > **Profiel maken** > **Android-apparaatbeheerder** of **Android Enterprise** voor platform):
+
+- Apparaatbeperkingen: Android-apparaatbeheerder
+- Apparaatbeperkingen: Android Enterprise-apparaateigenaar
+- Apparaatbeperkingen: Android Enterprise - Werkprofiel
+
+Zie [Android-apparaatbeheerder](../configuration/device-restrictions-android.md) en [Android Enterprise](../configuration/device-restrictions-android-for-work.md) voor meer informatie over de apparaatbeperkingen die u kunt configureren.
+
+#### <a name="improved-user-interface-experience-when-creating-configuration-profiles-on-iosipados-and-macos-devices---5569002-5568997---"></a>Verbeterde gebruikersinterface-ervaring bij het maken van configuratieprofielen op iOS-/iPadOS- en macOS-apparaten<!-- 5569002 5568997 -->
+Wanneer u een profiel voor iOS-of macOS-apparaten maakt, wordt de ervaring in het Microsoft Endpoint Manager-beheercentrum bijgewerkt. Deze wijziging is van invloed op de volgende apparaatconfiguratieprofielen (**Apparaten** > **Configuratieprofielen** > **Profiel maken** > **iOS/iPadOS** of **macOS** als platform):
+
+- Aangepast: iOS/iPadOS, macOS
+- Apparaatfuncties: iOS/iPadOS, macOS
+- Apparaatbeperkingen: iOS/iPadOS, macOS
+- Endpoint Protection: macOS
+- Extensies: macOS
+- Voorkeursbestand: macOS
+
+#### <a name="hide-from-user-configuration-setting-in-device-features-on-macos-devices---6524869---"></a>Verbergen in de instelling voor gebruikersconfiguratie in de apparaatfuncties op macOS-apparaten<!-- 6524869 -->
+Wanneer u een configuratieprofiel voor apparaatfuncties maakt op macOS-apparaten, is er een nieuwe instelling beschikbaar, **Verbergen voor gebruikersconfiguratie**, (via **Apparaten** > **Configuratieprofielen** > **Profiel maken** > **macOS** voor platform > **Apparaatfuncties** voor profiel > **Aanmeldingsitems**).
+
+Met deze functie wordt het selectievakje voor het verbergen van een app in de lijst **Gebruikers en groepen** in de lijst met aanmeldingsitems voor apps op macOS-apparaten ingesteld. Voor bestaande profielen wordt deze instelling in de lijst als niet-geconfigureerd weergegeven. Beheerders kunnen bestaande profielen bijwerken om deze instelling te configureren.
+
+Als deze optie is ingesteld op **Verbergen**, wordt het selectievakje voor het verbergen van een app ingeschakeld. Gebruikers kunnen dit niet wijzigen. De app wordt ook verborgen voor gebruikers nadat ze zich aanmelden op hun apparaten.
+
+> [!div class="mx-imgBorder"]
+> ![Apps verbergen op macOS-apparaten nadat gebruikers zich aanmelden bij het apparaat in Microsoft Intune en Endpoint Manager](./media/whats-new/macos-hide-checkmark-users-groups-login-items-apps-list.png)
+
+Zie [Instellingen van apparaatfuncties voor macOS in Intune](../configuration/macos-device-features-settings.md) voor meer informatie over de instelling die u kunt configureren.
+
+Deze functie is van toepassing op:
+- macOS
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-enrollment"></a>Apparaatinschrijving
+
+#### <a name="configure-if-enrollment-is-available-in-company-portal-for-android-and-ios---4260128----"></a>Configureren bij inschrijving is beschikbaar in de bedrijfsportal voor Android en iOS<!-- 4260128  -->
+U kunt configureren of apparaatinschrijving in de bedrijfsportal op Android- en iOS-apparaten beschikbaar is met prompts, beschikbaar is zonder prompts of niet beschikbaar is voor gebruikers. Ga naar het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) en selecteer **Tenantbeheer** > **Aanpassing** > **Bewerken** > **Apparaatinschrijving** om deze instellingen in Intune te zoeken.  
+
+Voor ondersteuning van de instelling voor het inschrijven van apparaten moeten eindgebruikers beschikken over deze bedrijfsportalversies:
+-    Bedrijfsportal op iOS: versie 4.4 of hoger
+-    Bedrijfsportal op Android: versie 5.0.4715.0 of hoger
+
+Raadpleeg [De bedrijfsportal-app van Microsoft Intune configureren](../apps/company-portal-app.md) voor meer informatie over de bestaande bedrijfsportal-aanpassingen.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-management"></a>Apparaatbeheer
+
+#### <a name="new-android-report-on-android-devices-overview-page---5435435-----"></a>Nieuw Android-rapport op de overzichtspagina Android-apparaten<!-- 5435435   -->
+Er is een rapport aan de Microsoft Endpoint Manager-beheerconsole toegevoegd op de pagina met het overzicht van Android-apparaten waarop wordt weergegeven hoeveel Android-apparaten zijn ingeschreven in elke oplossing voor apparaatbeheer. In dit diagram (vergelijkbaar met hetzelfde diagram dat u al via de Azure-console hebt gemaakt) ziet u het aantal apparaten met werkprofiel, volledig beheerd, toegewezen en door de beheerder geregistreerd. Kies **Apparaten** > **Android** > **Overzicht** om het rapport weer te geven.
+
+#### <a name="guide-users-from-android-device-administrator-management-to-work-profile-management--5857738-----"></a>Gebruikers doorsturen van Beheer door Android-apparaatbeheerder naar Beheer van werkprofielen<!--5857738   -->
+Binnenkort wordt een nieuwe nalevingsinstelling uitgebracht voor het Android-apparaatbeheerplatform. Met behulp van deze instelling kunt u een apparaat niet-compatibel maken als dit apparaat door de apparaatbeheerder wordt beheerd.
+
+Op deze niet-compatibele apparaten zien gebruikers op de pagina **Apparaatinstellingen bijwerken** het bericht **Verplaatsen naar nieuwe instelling voor apparaatbeheer**. Als de gebruikers op de knop **Oplossen** tikken, worden ze geholpen bij het volgende:
+
+1. Uitschrijven bij Beheer door apparaatbeheerder
+2. Inschrijven bij Beheer van werkprofielen
+3. Problemen met naleving oplossen 
+ 
+Google vermindert de ondersteuning voor apparaatbeheerders in nieuwe Android-versies in een poging om apparaatbeheer moderner, breder en veiliger te maken met behulp van Android Enterprise.  Intune biedt slechts tot het tweede kwartaal van 2020 nog ondersteuning voor Android-apparaten met Android 10 en hoger die door apparaatbeheerder worden beheerd. Apparaten die worden beheerd met apparaatbeheerder (m.u.v. Samsung) en waarop Android 10 of hoger wordt uitgevoerd, kunnen na dit moment niet langer volledig worden beheerd. Betrokken apparaten ontvangen met name geen nieuwe wachtwoordvereisten meer.
+
+Meer informatie over deze instelling vindt u in [Android-apparaten verplaatsen van beheer door apparaatbeheerder naar werkprofielbeheer](../enrollment/android-move-device-admin-work-profile.md). 
+
+#### <a name="new-url-for-the-microsoft-endpoint-manager-admin-center---3704810---"></a>Nieuwe URL voor het Microsoft Endpoint Manager-beheercentrum<!-- 3704810 -->
+De URL voor het Microsoft Endpoint Manager-beheercentrum (voorheen Microsoft 365 Device Management) is gewijzigd in [https://endpoint.microsoft.com](https://endpoint.microsoft.com), zodat deze overeenkomt met de aankondiging van Microsoft Endpoint Manager op Ignite van vorig jaar. De URL voor het oude beheercentrum ([https://devicemanagement.microsoft.com](https://devicemanagement.microsoft.com)) werkt nog wel, maar het wordt aanbevolen de nieuwe URL te gebruiken voor het Microsoft Endpoint Manager-beheercentrum.
+
+Zie [IT-taken vereenvoudigen met het Microsoft Endpoint Manager-beheercentrum](what-is-device-management.md#simplify-it-tasks-using-the-device-management-admin-center) voor meer informatie. 
+
+#### <a name="change-primary-user-for-windows-devices---3794742-----"></a>Primaire gebruiker wijzigen voor Windows-apparaten<!-- 3794742   -->
+U kunt de primaire gebruiker voor hybride Windows-apparaten en gekoppelde Azure AD-apparaten wijzigen. Ga hiervoor naar **Intune** > **Apparaten** > **Alle apparaten** > kies een apparaat > **Eigenschappen** > **Primaire gebruiker**. Zie [De hoofdgebruiker van een apparaat wijzigen](../remote-actions/find-primary-user.md#change-a-devices-primary-user) voor meer informatie.
+
+Er is ook een nieuwe RBAC-machtiging (Beheerde apparaten/Hoofdgebruiker instellen) gemaakt voor deze taak. De machtiging is toegevoegd aan ingebouwde rollen, waaronder de Helpdeskoperator, Schoolbeheerder en Endpoint Security Manager.
+
+Deze functie wordt als preview-versie uitgerold naar klanten wereldwijd. U kunt de functie in de komende weken tegenkomen.
+
+#### <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions---6317104-cm3555758--"></a>Microsoft Endpoint Manager-tenant koppelen: Synchronisatie van apparaten en apparaatacties<!-- 6317104, CM3555758-->
+Microsoft Endpoint Manager brengt Configuration Manager en Intune samen in één console. Vanaf Configuration Manager Technical Preview versie 2002.2 kunt u uw Configuration Manager-apparaten uploaden naar de cloudservice en er acties op uitvoeren in het beheercentrum. Zie [Functies in Configuration Manager Technical Preview versie 2002.2](/configmgr/core/get-started/2020/technical-preview-2002-2#bkmk_attach) voor meer informatie.
+
+Raadpleeg het [artikel Configuration Manager Technical Preview](/configmgr/core/get-started/technical-preview) voordat u deze update installeert. Dit artikel bevat een overzicht van de algemene vereisten en beperkingen voor het gebruik van een technische preview, hoe u versies bijwerkt en hoe u feedback geeft.
+
+#### <a name="bulk-remote-actions--4576882--"></a>Externe bulkacties<!--4576882-->
+U kunt nu bulkopdrachten uitgeven voor de volgende externe acties: opnieuw opstarten, naam wijzigen, Autopilot opnieuw instellen, wissen en verwijderen. Ga naar [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) > **Apparaten** > **Alle apparaten** > **Bulkacties** om de nieuwe bulkacties weer te geven.
+
+#### <a name="all-devices-list-improved-search-sort-and-filter--6179023--"></a>De lijst met alle apparaten biedt verbeterde functionaliteit voor zoeken, sorteren en filteren<!--6179023-->
+De lijst met alle apparaten is verbeterd voor betere prestaties en betere functionaliteit op het gebied van zoeken, sorteren en filteren. Voor meer informatie raadpleegt u [deze ondersteuningstip](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-changes-in-all-devices-list-and-reporting-in-intune/ba-p/1220946).  
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="monitor-and-troubleshoot"></a>Bewaken en problemen oplossen
+
+#### <a name="the-data-warehouse-now-provides-the-mac-address---6123680----"></a>Het Data Warehouse bevat nu het MAC-adres<!-- 6123680  -->
+Het Intune Data Warehouse levert het MAC-adres als een nieuwe eigenschap (`EthernetMacAddress`) in de `device`-entiteit, zodat beheerders het MAC-adres van de gebruiker kunnen relateren aan de host. Deze eigenschap is handig om specifieke gebruikers te bereiken en incidenten op te lossen die zich op het netwerk voordoen. Beheerders kunnen deze eigenschap ook gebruiken in [Power BI-rapporten](../developer/reports-proc-get-a-link-powerbi.md) om uitgebreidere rapporten te maken. Zie de [apparaat](../developer/intune-data-warehouse-collections.md#devices)-entiteit van het Intune Data Warehouse voor meer informatie.
+
+#### <a name="additional-data-warehouse-device-inventory-properties---6125732----"></a>Aanvullende eigenschappen voor inventaris van Data Warehouse-apparaten<!-- 6125732  -->
+Er zijn aanvullende eigenschappen voor de inventaris van apparaten beschikbaar met behulp van het Intune Data Warehouse. Via de bèta-verzameling [apparaten](../developer/reports-ref-devices.md#devices) zijn de volgende eigenschappen beschikbaar:
+- `ethernetMacAddress` - De unieke netwerk-id van dit apparaat.
+- `model` - Het apparaatmodel.
+- `office365Version` - De versie van Microsoft 365 die op het apparaat is geïnstalleerd.
+- `windowsOsEdition` - De versie van het besturingssysteem.
+
+Via de bèta-verzameling [devicePropertyHistory](../developer/reports-ref-devices.md#devicepropertyhistories) zijn de volgende eigenschappen beschikbaar:
+- `physicalMemoryInBytes` - Het fysieke geheugen in bytes.
+- `totalStorageSpaceInBytes`: de totale opslagcapaciteit in bytes.
+
+Zie [Microsoft Intune Data Warehouse API](../developer/reports-nav-intune-data-warehouse.md) voor meer informatie.
+
+#### <a name="help-and-support-workflow-update-to-support-additional-services---5654170-----"></a>Update voor hulp en ondersteuning bij workflows ter ondersteuning van extra services<!-- 5654170   -->
+De pagina Help en ondersteuning in het beheercentrum van Microsoft Endpoint Manager is bijgewerkt. U kunt daar nu [het beheertype kiezen dat u wilt gebruiken](get-support.md#options-to-access-help-and-support). Dankzij deze wijziging kunt u de volgende beheertypen selecteren:
+
+- Configuration Manager (bevat Desktop Analytics)
+- Intune
+- Co-beheer
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="security"></a>Beveiliging
+
+#### <a name="use-a-preview-of-security-administrator-focused-policies-as-part-of-endpoint-security--6131401----"></a>Een preview van een beleid voor beveiligingsbeheerders gebruiken als onderdeel van Endpoint Security<!--6131401  -->
+Als openbare preview zijn er in het Microsoft Endpoint Management-beheercentrum meerdere nieuwe beleidsgroepen toegevoegd onder het Endpoint Security-knooppunt. Een beveiligingsbeheerder kan deze nieuwe beleidsregels gebruiken om zich te focussen op specifieke aspecten van apparaatbeveiliging, om afzonderlijke groepen gerelateerde instellingen te beheren zonder de overhead van de grotere hoofdtaak van het apparaatconfiguratiebeleid.
+
+Met uitzondering van het nieuwe *Antivirus-beleid voor Microsoft Defender Antivirus* (zie hieronder), zijn de instellingen in deze nieuwe preview-beleidsregels en -profielen dezelfde als die u mogelijk al hebt geconfigureerd via [Apparaatconfiguratieprofielen](../configuration/device-profile-create.md).
+
+Hieronder vindt u de nieuwe beleidstypen die allemaal in preview zijn, evenals de beschikbare profieltypen:
+
+- **Antivirus (preview)** :
+  - macOS:
+    - **Antivirus**: beheer de instellingen van het [Antivirus-beleid](../protect/antivirus-microsoft-defender-settings-macos.md) voor macOS om [Microsoft Defender ATP voor Mac](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) te beheren.
+
+  - Windows 10 en hoger:
+    - **Microsoft Defender Antivirus**: beheer de instellingen van het [Antivirus-beleid](../protect/antivirus-microsoft-defender-settings-windows.md) voor cloudbeveiliging, uitsluitingen voor Antivirus, herstel, scanopties, en meer.
+
+      Het Antivirus-profiel voor *Microsoft Defender Antivirus* is een uitzondering waarmee een nieuw exemplaar van instellingen is geïntroduceerd. Ze vormen een onderdeel van een beperkingsprofiel voor apparaten. Deze nieuwe Antivirus-instellingen:
+
+        - zijn dezelfde instellingen als die in de apparaatbeperkingen, maar ze ondersteunen een derde optie voor configuratie die niet beschikbaar is bij configuratie als een apparaatbeperking.
+        - zijn van toepassing op apparaten die gezamenlijk worden beheerd met Configuration Manager en als de schuifregelaar [workload in co-beheer](/configmgr/comanage/how-to-switch-workloads) voor Endpoint Protection is ingesteld op Intune.
+
+     Plan het gebruik van het nieuwe *Antivirus-profiel van*  > *Microsoft Defender Antivirus* in plaats van het te configureren via een profiel voor apparaatbeperking.
+
+  - **Windows Security-ervaring**: beheer welke instellingen van Windows Security eindgebruikers kunnen bekijken in het Microsoft Defender-beveiligingscentrum en welke meldingen ze ontvangen. Deze instellingen zijn niet gewijzigd ten opzichte van de instellingen die beschikbaar zijn als een Endpoint Protection-profiel voor apparaatconfiguratie.
+
+- **Schijfversleuteling (preview)** :
+  - macOS:
+    - **FileVault**
+  - Windows 10 en hoger:
+    - **BitLocker**
+- **Firewall (preview)** :
+  - macOS:
+    - **macOS-firewall**
+  - Windows 10 en hoger:
+    - **Microsoft Defender Firewall**
+- **Eindpuntdetectie en -respons (preview)** :
+  - Windows 10 en hoger: -**Windows 10 Intune**
+- **Kwetsbaarheid voor aanvallen verminderen (preview)** :
+  - Windows 10 en hoger:
+    - **App- en browserisolatie**
+    - **Webbeveiliging**
+    - **Toepassingsbeheer**
+    - **Regels voor het verminderen van kwetsbaarheid voor aanvallen**
+    - **Apparaatbeheer**
+    - **Exploit Protection**
+- **Accountbeveiliging (preview)** :
+  - Windows 10 en hoger:
+    - **Accountbeveiliging**
+
+<!-- ########################## -->
+## <a name="february-2020"></a>Februari 2020
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="app-management"></a>Appbeheer
+
+#### <a name="microsoft-defender-advanced-threat-protection-atp-app-for-macos---5424618---"></a>Microsoft Defender ATP-app (Advanced Threat Protection) voor macOS<!-- 5424618 -->
+Intune biedt een eenvoudige manier om de Microsoft Defender ATP-app (Advanced Threat Protection) voor macOS te implementeren op beheerde Mac-apparaten. Zie [Microsoft Defender ATP toevoegen aan macOS-apparaten met behulp van Microsoft Intune](../apps/apps-advanced-threat-protection-macos.md) en [Microsoft Defender Advanced Threat Protection voor Mac](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) voor meer informatie.  
+
+#### <a name="macos-company-portal-user-experience-improvements---5568987---"></a>Verbeteringen in de gebruikerservaring met de Bedrijfsportal-app in macOS<!-- 5568987 -->
+De ervaring met apparaatinschrijving in macOS en de Bedrijfsportal-app voor Mac is verbeterd. U ziet de volgende verbeteringen:
+- Een betere Microsoft **AutoUpdate**-ervaring tijdens de inschrijving, zodat uw gebruikers over de nieuwste versie van de Bedrijfsportal beschikken.
+- Een uitgebreide controlestap voor naleving tijdens de inschrijving.
+- Ondersteuning voor gekopieerde incident-id's, zodat uw gebruikers sneller fouten vanaf hun apparaten kunnen verzenden naar het ondersteuningsteam van uw bedrijf.
+
+Raadpleeg [Uw macOS-apparaat inschrijven met behulp van de Bedrijfsportal-app](../user-help/enroll-your-device-in-intune-macos-cp.md) voor meer informatie over inschrijven en de Bedrijfsportal-app voor Mac.
+
+#### <a name="app-protection-policies-for-better-mobile-now-supports-ios-and-ipados---6224512----"></a>App-beveiligingsbeleid voor Better Mobile biedt nu ondersteuning voor iOS en iPadOS<!-- 6224512  -->
+
+In oktober 2019 is aan het app-beveiligingsbeleid van Intune de mogelijkheid toegevoegd om gegevens van onze Microsoft Threat Defense-partners te gebruiken. Met deze update kunt u nu gebruikmaken van een app-beveiligingsbeleid om de bedrijfsgegevens van gebruikers te blokkeren of selectief te wissen, op basis van de status van een apparaat met behulp van Better Mobile op iOS en iPadOS.  Zie [App-beveiligingsbeleid voor Mobile Threat Defense maken met Intune](../protect/mtd-app-protection-policy.md).
+
+#### <a name="microsoft-edge-version-77-and-later-on-windows-10-devices---5843584---"></a>Microsoft Edge versie 77 of hoger op Windows 10-apparaten<!-- 5843584 -->
+Intune biedt nu ondersteuning voor het verwijderen van Microsoft Edge versie 77 en hoger op Windows 10-apparaten. Raadpleeg [Microsoft Edge voor Windows 10 toevoegen aan Microsoft Intune](../apps/apps-windows-edge.md) voor meer informatie.
+
+#### <a name="screen-removed-from-company-portal-android-work-profile-enrollment--6103987---"></a>Scherm verwijderd uit Bedrijfsportal, inschrijving van Android-werkprofiel<!--6103987 -->
+Het scherm **Wat is de volgende stap?** is verwijderd uit de inschrijvingsstroom voor het Android-werkprofiel in de Bedrijfsportal om de gebruikerservaring te stroomlijnen. Ga naar [Inschrijven met Android-werkprofiel](../user-help/enroll-device-android-work-profile.md) om de bijgewerkte inschrijvingsstroom voor het Android-werkprofiel weer te geven.  
+
+#### <a name="company-portal-app-improved-performance---6178652---"></a>Verbeterde prestaties van de Bedrijfsportal-app<!-- 6178652 -->
+De Bedrijfsportal-app is bijgewerkt om de verbeterde prestaties te ondersteunen voor apparaten die gebruikmaken van ARM64-processors, zoals de Surface Pro X. Voorheen werkte de Bedrijfsportal in een geëmuleerde ARM32-modus. Nu, in versie 10.4.7080.0 en hoger, is de Bedrijfsportal-app systeemeigen gecompileerd voor ARM64. Raadpleeg [De Microsoft Intune-bedrijfsportal-app configureren](../apps/company-portal-app.md) voor meer informatie over de Bedrijfsportal-app.
+
+#### <a name="microsofts-new-office-app---5859926---"></a>De nieuwe Office-app van Microsoft<!-- 5859926 -->
+De nieuwe Office-app van Microsoft is nu algemeen beschikbaar en kan worden gedownload en gebruikt. De Office-app biedt een geconsolideerde ervaring waarbij uw gebruikers in één app in Word, Excel en PowerPoint kunnen werken. U kunt de app voorzien van een app-beveiligingsbeleid om ervoor te zorgen dat de gegevens die worden geopend, worden beveiligd.
+
+Zie [Intune-app-beveiligingsbeleid inschakelen met de mobiele Office-app](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-how-to-enable-intune-app-protection-policies-with/ba-p/1045493) voor meer informatie.
+
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-configuration"></a>Apparaatconfiguratie
+
+#### <a name="enable-network-access-control-nac-with-cisco-anyconnect-vpn-on-ios-devices---4860111----"></a>Netwerktoegangsbeheer (NAC) inschakelen met Cisco AnyConnect-VPN op iOS-apparaten<!-- 4860111  -->
+Op iOS-apparaten kunt u een VPN-profiel maken en verschillende verbindingstypen gebruiken, waaronder Cisco AnyConnect (**Apparaatconfiguratie** > **Profielen** > **Profiel maken** > **iOS** voor platform > **VPN** voor profieltype > **Cisco AnyConnect** voor het verbindingstype).
+
+U kunt netwerktoegangsbeheer (NAC) inschakelen met Cisco AnyConnect. Om deze functie te gebruiken, moet u ook het volgende doen:
+
+1. In de [beheerdershandleiding voor de Cisco Identity Services Engine](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html) volgt u de stappen in **Microsoft Intune configureren als MDM-server** om de Cisco Identity Services Engine (ISE) te configureren in Azure.
+2. Selecteer in het profiel voor configuratie van Intune-apparaten de instelling **Netwerktoegangsbeheer (NAC) inschakelen**.
+
+Ga naar [VPN-instellingen configureren op iOS-apparaten](../configuration/vpn-settings-ios.md) om de beschikbare VPN-instellingen te zien.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-enrollment"></a>Apparaatinschrijving
+
+#### <a name="serial-number-on-the-apple-mdm-push-certificate-page--5947765----"></a>Serienummer op de pagina Apple MDM-pushcertificaat<!--5947765  -->
+Op de pagina Apple MDM-pushcertificaat wordt het serienummer weergegeven. Het serienummer is nodig om opnieuw toegang te krijgen tot het Apple MDM-pushcertificaat als u geen toegang meer hebt tot de Apple-id waarmee het certificaat is gemaakt. Als u het serienummer wilt zien, gaat u naar **Apparaten** > **iOS** > **iOS-inschrijving** > **Apple MDM-pushcertificaat**.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-management"></a>Apparaatbeheer
+
+#### <a name="new-update-schedule-options-for-pushing-os-updates-to-enrolled-iosipados-devices--5879689----"></a>Nieuwe planningsopties voor updates om updates van het besturingssysteem te pushen naar ingeschreven iOS-/iPadOS-apparaten<!--5879689  -->
+U kunt kiezen uit de volgende opties bij het plannen van updates van het besturingssysteem voor iOS-/iPadOS-apparaten. Deze opties zijn van toepassing op apparaten waarvoor het inschrijvingstype Apple Business Manager of Apple School Manager is gebruikt.
+- Bijwerken wanneer de volgende keer wordt ingecheckt
+- Bijwerken op gepland tijdstip
+- Bijwerken buiten gepland tijdstip
+
+Voor de laatste twee opties kunt u meerdere tijdvensters maken.
+
+Als u de nieuwe opties wilt zien, gaat u naar MEM > **Apparaten** > **iOS** ** > Beleid voor IOS/iPadOS bijwerken** > **Profiel maken**.
+
+#### <a name="choose-which-iosipados-updates-to-push-to-enrolled-devices--5879689----"></a>Kies welke iOS-/iPadOS-updates naar ingeschreven apparaten moeten worden gepusht<!--5879689  -->
+U kunt een specifieke iOS-/iPadOS-update kiezen (behalve de meest recente update) om te pushen naar apparaten die zijn ingeschreven met Apple Business Manager of Apple School Manager. Op dergelijke apparaten moet configuratiebeleid voor apparaten zijn ingesteld om de zichtbaarheid van software-updates gedurende een aantal dagen te vertragen. Als u deze functie wilt zien, gaat u naar MEM > **Apparaten** > **iOS** ** > Beleid voor IOS/iPadOS bijwerken** > **Profiel maken**.
+
+#### <a name="exports-from-the-all-devices-list--now-in-zipped-csv-format--6343117--"></a>Exports uit de lijst met alle apparaten nu beschikbaar in ingepakte CSV-indeling<!--6343117-->
+Exports op de pagina **Apparaten** > **Alle apparaten** zijn nu beschikbaar in ingepakte CSV-indeling.
+
+### <a name="windows-7-ends-extended-support--3042987---"></a>Uitgebreide ondersteuning voor Windows 7 beëindigd<!--3042987 -->
+Uitgebreide ondersteuning voor Windows 7 beëindigd op 14 januari 2020. Ondersteuning van Intune afgeschaft voor apparaten met Windows 7. Technische hulp en automatische updates die helpen bij het beschermen van uw pc zijn niet meer beschikbaar. Voer een upgrade uit naar Windows 10. Zie voor meer informatie de blogpost [Plan for Change](https://aka.ms/Windows7_Intune).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-security"></a>Apparaatbeveiliging
+
+#### <a name="improved-intune-reporting-experience---3791418-----"></a>Verbeterde rapportagemogelijkheden van Intune<!-- 3791418   -->
+Intune biedt nu verbeterde rapportagemogelijkheden, waaronder nieuwe rapporttypen, betere organisatie van rapporten, meer gerichte weergaven, verbeterde rapportfunctionaliteit, en consistente en actuele gegevens. De rapportageversie gaat van openbare preview naar GA (algemene beschikbaarheid). Daarnaast biedt de GA-release ondersteuning voor lokalisatie, oplossingen voor fouten, ontwerpverbeteringen, en samengevoegde apparaatnalevingsgegevens op tegels in het [Beheercentrum voor Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+Nieuwe rapporttypen richten zich op de volgende informatie:
+
+- **Operationeel**: bevat nieuwe records die zich richten op een negatieve status. 
+- **Organisatorisch**: biedt een breder overzicht van de algemene status.
+- **Historisch**: bevat patronen en trends gedurende een bepaalde periode.
+- **Specialistisch**: hiermee kunt u onbewerkte gegevens gebruiken om uw eigen aangepaste rapporten te maken.
+
+De eerste set nieuwe rapporten richt zich op de naleving van apparaten. Zie [Microsoft Intune Reporting Framework](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Reporting-Framework-Coming-to-Intune/ba-p/1009553) (Rapportageframework van Microsoft Intune) en [Intune-rapporten](reports.md) voor meer informatie.
+
+#### <a name="consolidated-the-location-of-security-baselines-in-the-ui---6177074-----"></a>De locatie van beveiligingsbasislijnen in de gebruikersinterface is geconsolideerd<!-- 6177074   -->
+We hebben de paden geconsolideerd zodat u de [beveiligingsbasislijnen](../protect/security-baselines.md) kunt vinden in het beheercentrum voor Microsoft Eindpuntbeheer. Hiervoor zijn de *beveiligingsbasislijnen* van verschillende UI-locaties verwijderd. U kunt nu het volgende pad gebruiken om de beveiligingsbasislijnen te vinden:  **Eindpuntbeveiliging** > **Beveiligingsbasislijnen**.
+
+#### <a name="expanded-support-for-imported-pkcs-certificates---6044197----"></a>Uitgebreide ondersteuning voor geïmporteerde PKCS-certificaten<!-- 6044197  -->
+De ondersteuning voor het gebruik van [geïmporteerde PKCS-certificaten](../protect/certificates-imported-pfx-configure.md#supported-platforms) is uitgebreid zodat er ondersteuning wordt geboden voor *volledig beheerde Android Enterprise-apparaten*. Over het algemeen wordt het importeren van PFX-certificaten gebruikt voor S/MIME-versleutelingsscenario's, waarbij de versleutelingscertificaten van een gebruiker op al diens apparaten zijn vereist, zodat e-mails kunnen worden gedecodeerd.
+
+De volgende platformen bieden ondersteuning voor het importeren van PFX-certificaten:
+
+- Android - Apparaatbeheerder
+- Android Enterprise - Volledig beheerd
+- Android Enterprise - Werkprofiel
+- iOS
+- Mac
+- Windows 10
+
+#### <a name="view-the-endpoint-security-configuration-for-devices---6206460----"></a>De configuratie van eindpuntbeveiliging voor apparaten weergeven<!-- 6206460  -->
+De naam van de optie in het beheercentrum voor Microsoft Eindpuntbeheer is bijgewerkt voor het weergeven van [eindpuntbeveiligingsconfiguraties die van toepassing zijn op een specifiek apparaat](../protect/security-baselines-monitor.md#view-endpoint-security-configurations-per-device). De naam van deze optie wordt **Configuratie van eindpuntbeveiliging** omdat hierbij de toepasselijke beveiligingsbasislijnen en extra beleidsregels worden weergegeven die buiten de beveiligingsbasislijnen zijn gemaakt. Voorheen heette deze optie *Beveiligingsbasislijnen*.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="role-based-access-control"></a>Op rollen gebaseerd toegangsbeheer
+
+#### <a name="intune-roles-user-interface-changes-coming--5801612-----"></a>Wijzigingen in de gebruikersinterface van Intune-rollen zijn binnenkort beschikbaar<!--5801612   -->
+De gebruikersinterface voor het [Microsoft Endpoint Manager-beheercentrum](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenantbeheer** > **Rollen** heeft nu een gebruiksvriendelijker en intuïtief ontwerp. Deze ervaring biedt dezelfde instellingen en gegevens als u nu gebruikt, maar werkt met een wizardachtige procedure.
 
 <!-- ########################## -->
 ## <a name="january-2020"></a>januari 2020
@@ -585,7 +1295,7 @@ U gebruikt afgeleide referenties als verificatiemethode voor configuratieprofiel
 Raadpleeg [Afgeleide PIV-referenties](https://www.nccoe.nist.gov/projects/building-blocks/piv-credentials) op www.nccoe.nist.gov voor meer informatie over de standaard.
 
 #### <a name="use-graph-api-to-specify-an-on-premises-user-principal-name-as-a-variable-for-scep-certificates----5437939----------"></a>Graph API gebruiken om een on-premises user principal name op te geven als een variabele voor SCEP-certificaten<!--  5437939        -->  
-Wanneer u de [Intune Graph API](/graph/api/resources/intune-graph-overview?view=graph-rest-1.0)gebruikt, kunt u onPremisesUserPrincipalName opgeven als een variabele voor de alternatieve naam voor het onderwerp (SAN) voor SCEP-certificaten.
+Wanneer u de [Intune Graph API](/graph/api/resources/intune-graph-overview?view=graph-rest-1.0&preserve-view=true)gebruikt, kunt u onPremisesUserPrincipalName opgeven als een variabele voor de alternatieve naam voor het onderwerp (SAN) voor SCEP-certificaten.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->'
 ### <a name="microsoft-365-device-management"></a>Microsoft 365 Device Management
@@ -643,7 +1353,7 @@ Wanneer u LOB-apps (Line-of-Business) van Android installeert op [Zebra-apparate
 Momenteel wordt, nadat de LOB-app is gedownload, een melding over het **slagen van de download** weergegeven op het apparaat van de gebruiker. U kunt deze melding alleen negeren door in de schaduw van de melding te tikken op **Alles wissen**. Dit meldingsprobleem wordt opgelost in een toekomstige release, en de installatie vindt volledig op de achtergrond plaats, zonder dat dit zichtbaar is.
 
 #### <a name="read-and-write-graph-api-operations-for-intune-apps---5031704----"></a>Graph API-bewerkingen voor Intune-apps lezen en schrijven<!-- 5031704  -->
-De Intune Graph API kan via lees- en schrijfbewerkingen worden aangeroepen voor toepassingen, met behulp van de app-id zonder gebruikersreferenties. Zie [Working with Intune in Microsoft Graph](/graph/api/resources/intune-graph-overview?view=graph-rest-1.0) (Werken met intune in Microsoft Graph) voor meer informatie over het openen van de Microsoft Graph API voor Intune.
+De Intune Graph API kan via lees- en schrijfbewerkingen worden aangeroepen voor toepassingen, met behulp van de app-id zonder gebruikersreferenties. Zie [Working with Intune in Microsoft Graph](/graph/api/resources/intune-graph-overview?view=graph-rest-1.0&preserve-view=true) (Werken met intune in Microsoft Graph) voor meer informatie over het openen van de Microsoft Graph API voor Intune.
 
 #### <a name="protected-data-sharing-and-encryption-for-intune-app-sdk-for-ios---3586942----"></a>Het delen en versleutelen van beveiligde gegevens voor Intune App SDK voor iOS<!-- 3586942  -->
 De Intune App-SDK voor iOS gebruikt 256-bits versleutelingssleutels wanneer versleuteling is ingeschakeld door app-beveiligingsbeleid. Het delen van beveiligde gegevens is pas mogelijk als alle apps over SDK-versie 8.1.1 beschikken.
@@ -1273,7 +1983,7 @@ Wanneer u [beveiligingsbasislijnprofielen](../protect/security-baselines.md#crea
 Voor de functie **Beveiligingsbasislijnen** is de previewfase beëindigd. De functie is nu algemeen beschikbaar.  Dit betekent dat de functie gereed is voor gebruik in productie. De afzonderlijke basislijnsjablonen blijven mogelijk echter wel in de previewfase, en worden geëvalueerd en op basis van hun eigen planningen algemeen uitgebracht.
 
 #### <a name="the-mdm-security-baseline-template-is-now-generally-available---3794072-4217151--3534649---"></a>De sjabloon MDM-beveiligingsbasislijn is algemeen beschikbaar<!-- 3794072, 4217151,  3534649 -->
-Voor de sjabloon MDM-beveiligingsbasislijn is de previewfase beëindigd. De functie is nu algemeen beschikbaar. De algemeen beschikbare sjabloon wordt geïdentificeerd als **MDM-beveiligingsbasislijn voor mei 2019**.  Dit is een nieuwe sjabloon en geen upgrade van de previewversie.  Voor een nieuwe sjabloon moet u de [instellingen die deze bevat](../protect/security-baseline-settings-mdm.md), controleren en vervolgens nieuwe profielen maken om de sjabloon voor uw apparaat te implementeren. Andere beveiligingsbasislijnsjablonen blijven mogelijk in de previewfase. Zie [Beschikbare beveiligingsbasislijnen](../protect/security-baselines.md#available-security-baselines) voor een lijst met beschikbare basislijnen.  
+Voor de sjabloon MDM-beveiligingsbasislijn is de previewfase beëindigd. De functie is nu algemeen beschikbaar. De algemeen beschikbare sjabloon wordt geïdentificeerd als **MDM-beveiligingsbasislijn voor mei 2019**.  Dit is een nieuwe sjabloon en geen upgrade van de previewversie.  Voor een nieuwe sjabloon moet u de [instellingen die deze bevat](../protect/security-baseline-settings-mdm-all.md), controleren en vervolgens nieuwe profielen maken om de sjabloon voor uw apparaat te implementeren. Andere beveiligingsbasislijnsjablonen blijven mogelijk in de previewfase. Zie [Beschikbare beveiligingsbasislijnen](../protect/security-baselines.md#available-security-baselines) voor een lijst met beschikbare basislijnen.  
 
 De nieuwe sjabloon *MDM-beveiligingsbasislijn voor mei 2019* bevat de twee instellingen die onlangs zijn aangekondigd in het artikel In ontwikkeling:  
 - Vergrendeling boven: Door spraak geactiveerde apps vanaf een vergrendeld scherm  
@@ -1294,7 +2004,7 @@ De instelling voor apparaatconfiguratie voor identiteitsbeveiliging met de naam 
 De in Intune ingebouwde rol School Administrator bevat nu machtigingen voor maken, lezen, bijwerken en verwijderen (CRUD-machtigingen) voor beheerde apps. Deze update betekent dat als u in Intune for Education bent toegewezen als groepsbeheerder, u voortaan het iOS MDM-pushcertificaat, iOS MDM-servertokens en iOS VPP-tokens kunt maken, weergeven, bijwerken en verwijderen, in combinatie met [alle bestaande machtigingen die u hebt](/intune-education/group-admin-delegate#group-admin-permissions). Als u een van deze acties wilt uitvoeren, gaat u naar **Tenantinstellingen** > **iOS-apparaatbeheer**.  
 
 #### <a name="applications-can-use-the-graph-api-to-call-read-operations-without-user-credentials---4655885---"></a>Toepassingen kunnen gebruikmaken van de Graph API om leesbewerkingen aan te roepen zonder gebruikersreferenties<!-- 4655885 -->
-Toepassingen kunnen met app-identiteiten Intune Graph API-leesbewerkingen aanroepen, zonder dat er gebruikersreferenties nodig zijn. Zie [Working with Intune in Microsoft Graph](/graph/api/resources/intune-graph-overview?view=graph-rest-1.0) (Werken met intune in Microsoft Graph) voor meer informatie over het openen van de Microsoft Graph API voor Intune.
+Toepassingen kunnen met app-identiteiten Intune Graph API-leesbewerkingen aanroepen, zonder dat er gebruikersreferenties nodig zijn. Zie [Working with Intune in Microsoft Graph](/graph/api/resources/intune-graph-overview?view=graph-rest-1.0&preserve-view=true) (Werken met intune in Microsoft Graph) voor meer informatie over het openen van de Microsoft Graph API voor Intune.
 
 #### <a name="apply-scope-tags-to-microsoft-store-for-business-apps---4392555---"></a>Bereiktags toepassen op Microsoft Store voor Bedrijven-apps<!-- 4392555 -->
 U kunt voortaan bereiktags toepassen op Microsoft Store voor Bedrijven-apps. Zie [Use role-based access control and scope tags for distributed IT](scope-tags.md) (Op rollen gebaseerd toegangsbeheer (RBAC) en bereiktags gebruiken voor gedistribueerde IT) voor meer informatie over bereiktags.
@@ -3110,7 +3820,7 @@ U ziet ook:
 Ga naar [Wat is er nieuw in de gebruikersinterface van de app?](whats-new-app-ui.md) om het bijgewerkte uiterlijk te bekijken.
 
 #### <a name="protect-on-premises-exchange-data-using-intune-app-and-ca---1056954---"></a>On-premises Exchange-gegevens beveiligen met Intune APP en CA<!-- 1056954 -->
-U kunt nu Intune App Policy Protection (APP) en Conditional Access (CA) gebruiken om de toegang tot on-premises Exchange-gegevens te beveiligen met Outlook Mobile. Als u beleid voor app-beveiliging wilt toevoegen of wijzigen in Azure Portal, selecteert u **Microsoft Intune** > **Client-apps** > **Beleid voor app-beveiliging**. Voordat u deze functie gebruikt, moet u ervoor zorgen dat u voldoet aan de [Outlook voor iOS- en Android-vereisten](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth?view=exchserver-2019).
+U kunt nu Intune App Policy Protection (APP) en Conditional Access (CA) gebruiken om de toegang tot on-premises Exchange-gegevens te beveiligen met Outlook Mobile. Als u beleid voor app-beveiliging wilt toevoegen of wijzigen in Azure Portal, selecteert u **Microsoft Intune** > **Client-apps** > **Beleid voor app-beveiliging**. Voordat u deze functie gebruikt, moet u ervoor zorgen dat u voldoet aan de [Outlook voor iOS- en Android-vereisten](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth?view=exchserver-2019&preserve-view=true).
 
 
 ### <a name="user-interface"></a>Gebruikersinterface
@@ -4027,7 +4737,7 @@ Intune kan de afzonderlijk verkrijgbare [TeamViewer](https://www.teamviewer.com)
 #### <a name="scan-devices-with-windows-defender---1280988--1280990-----"></a>Apparaten scannen met Windows Defender<!-- 1280988  1280990   -->
 U kunt nu een **Snelle scan** en **Volledige scan** uitvoeren en **Handtekeningen bijwerken** met Windows Defender Antivirus op beheerde Windows 10-apparaten. Kies op de overzichtsblade van het apparaat de actie die u op het apparaat wilt uitvoeren. U wordt gevraagd om de actie te bevestigen voordat de opdracht naar het apparaat wordt verzonden. 
 
-**Snelle scan**: Een snelle scan scant locaties waar malware zich registreert om te worden gestart, zoals registercodes en bekende opstartmappen in Windows. Een snelle scan duurt gemiddeld vijf minuten. In combinatie met de instelling **Realtimebeveiliging altijd ingeschakeld**, die bestanden scant wanneer ze worden geopend en gesloten en wanneer een gebruiker naar een map gaat, helpt een snelle scan om bescherming te bieden tegen malware die zich mogelijk in het systeem of de kernel bevindt. Gebruikers zien de scanresultaten op hun apparaten wanneer hij is voltooid. 
+**Snelle scan**: Een snelle scan scant locaties waar malware zich registreert om te worden gestart, zoals registercodes en bekende opstartmappen in Windows. Een snelle scan duurt gemiddeld vijf minuten. In combinatie met de instelling **Realtimebeveiliging altijd ingeschakeld**, die bestanden scant wanneer ze worden geopend en gesloten en wanneer een gebruiker naar een map gaat, helpt een snelle scan om bescherming te bieden tegen malware die zich mogelijk in het systeem of de kernel bevindt. Gebruikers zien de scanresultaten op hun apparaat wanneer de scan is voltooid. 
 
 **Volledige scan**: Een volledige scan kan handig zijn om vast te stellen of er inactieve componenten zijn waarvoor een diepgaandere opschoning is vereist op apparaten die met een malwarebedreiging te maken hebben gekregen. De scan is handig voor het uitvoeren van scans op aanvraag. Het uitvoeren van volledige scans kan een uur duren. Gebruikers zien de scanresultaten op hun apparaat wanneer de scan is voltooid. 
 

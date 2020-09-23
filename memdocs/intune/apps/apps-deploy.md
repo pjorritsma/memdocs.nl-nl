@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cafc7549dfb04bff14b0cdfe8c737ee4971d4db1
-ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
+ms.openlocfilehash: 57e9195a71c268a9d7465be767b51f0f335dfb8d
+ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87443818"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91008172"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Apps toewijzen aan groepen met Microsoft Intune
 
@@ -64,7 +64,7 @@ In de volgende tabellen worden de verschillende opties vermeld voor het toewijze
    - **Beschikbaar voor ingeschreven apparaten**: wijs de app toe aan groepen gebruikers die de app vanuit de bedrijfsportal-app of -website installeren.
    - **Beschikbaar met of zonder inschrijving**: deze app wordt toegewezen aan groepen gebruikers van wie de apparaten niet zijn ingeschreven bij Intune. Gebruikers moeten een Intune-licentie toegewezen krijgen, zie [Intune-licenties](../fundamentals/licenses.md).
    - **Vereist**: de app wordt geïnstalleerd op apparaten in de geselecteerde groepen. Sommige platformen hebben mogelijk aanvullende prompts voor de eindgebruiker ter bevestiging voordat de installatie van de app begint.
-   - **Verwijderen**: de app wordt verwijderd van apparaten in de geselecteerde groepen als Intune de toepassing eerder op het apparaat heeft geïnstalleerd via de toewijzingen 'Beschikbaar voor ingeschreven apparaten' of 'Vereist' met behulp van dezelfde implementatie. Webkoppelingen kunnen niet worden verwijderd na implementatie.
+   - **Verwijderen**: de app wordt verwijderd van apparaten in de geselecteerde groepen als Intune de toepassing eerder op het apparaat heeft geïnstalleerd via de toewijzingen 'Beschikbaar voor ingeschreven apparaten' of 'Vereist' met behulp van dezelfde implementatie. 
 
      > [!NOTE]
      > **Alleen voor iOS/iPadOS-apps**:

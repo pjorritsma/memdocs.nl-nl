@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8bfddd247f2f86d8fc5a9162a5c68efd5e7ffb5
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 463e2b7c72c91131de88eb3de956556d65d50788
+ms.sourcegitcommit: fdd6d3c4b906e895ebec2856ebc38b0656296d2c
 ms.translationtype: HT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88996279"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91002763"
 ---
 # <a name="supported-operating-systems-and-browsers-in-intune"></a>Ondersteunde besturingssystemen en browsers in Intune
 
@@ -95,7 +95,7 @@ Een [Intune-softwareclient](manage-windows-pcs-with-microsoft-intune.md) kan als
 > [!Note]
 > Microsoft heeft aangekondigd dat de ondersteuning voor Windows 7 op 14 januari 2020 wordt beëindigd. Op deze datum zal Intune ook de ondersteuning beëindigen voor apparaten waarop Windows 7 wordt uitgevoerd.
 >
-> Voor meer informatie, zie [Geplande wijziging voor Intune: aanstaande beëindiging van ondersteuning voor Windows 7](whats-new.md#windows-7-ends-extended-support).
+> Voor meer informatie, zie [Geplande wijziging voor Intune: aanstaande beëindiging van ondersteuning voor Windows 7](whats-new-archive.md#windows-7-ends-extended-support).
 >
 > Microsoft Intune beëindigt op 15 oktober 2020 de ondersteuning voor de op Silverlight gebaseerde Intune-console. Daarmee wordt ook de ondersteuning beëindigd voor de op de Silverlight-console geconfigureerde PC-softwareclient (oftewel de PC-agent).
 >

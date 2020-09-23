@@ -22,6 +22,7 @@
 ##### [Inschrijven met Intercede](enroll-android-device-intercede.md)
 ##### [Inschrijven met DISA Purebred](enroll-android-device-disa-purebred.md)
 ### [Verplaatsen naar nieuwe apparaatbeheerinstellingen](move-to-new-device-management-setup.md)
+### [Microsoft Tunnel voor Android gebruiken](use-microsoft-tunnel-android.md)
 ### [Beheerde apps op een apparaat gebruiken](use-managed-apps-on-your-device-android.md)
 ### [Een apparaat versleutelen](encrypt-your-device-android.md)
 ### [Een pincode of wachtwoord instellen](set-your-pin-or-password-android.md)
@@ -71,7 +72,7 @@
 ##### [Inschrijven met Entrust Datacard](enroll-ios-device-entrust-datacard.md)
 ##### [Inschrijven met Intercede](enroll-ios-device-intercede.md)
 ##### [Inschrijven met DISA Purebred](enroll-ios-device-disa-purebred.md)
-
+### [Microsoft Tunnel voor iOS gebruiken](use-microsoft-tunnel-iOS.md)
 
 ### [Beheerde apps op een apparaat gebruiken](use-managed-apps-on-your-device-ios.md)
 ### [Een wachtwoordcode instellen of wijzigen](set-or-change-your-passcode-ios.md)

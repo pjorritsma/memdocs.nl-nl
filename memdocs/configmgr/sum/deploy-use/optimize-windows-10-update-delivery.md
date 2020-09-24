@@ -10,12 +10,12 @@ ms.assetid: b670cfaf-96a4-4fcb-9caa-0f2e8c2c6198
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f16a5736d0bebbcb4f3b03989c6983cd55ac8f54
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: ff661683bdb1d7ff491186ab214719c8d073b72a
+ms.sourcegitcommit: bcfacddbee1faa3826eea89697018450dfa9d264
 ms.translationtype: MT
 ms.contentlocale: nl-NL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696987"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91134931"
 ---
 # <a name="optimize-windows-10-update-delivery-with-configuration-manager"></a>De levering van Windows 10-updates optimaliseren met Configuration Manager
 
@@ -106,13 +106,13 @@ Het selecteren van de juiste peer cache technologie voor bestanden voor snelle i
 | Functionaliteit  | Delivery optimization  | Peer-cache  | BranchCache  |
 |---------|---------|---------|---------|
 | Ondersteund in meerdere subnetten | Ja | Ja | Nee |
-| Bandbreedte regeling | Ja (systeem eigen) | Ja (via BITS) | Ja (via BITS) |
+| Bandbreedtebeperking | Ja (systeem eigen) | Ja (via BITS) | Ja (via BITS) |
 | Ondersteuning voor gedeeltelijke inhoud | Ja, voor alle ondersteunde inhouds typen die in de volgende rij van deze kolom worden weer gegeven. | Alleen voor Microsoft 365-apps en snelle updates | Ja, voor alle ondersteunde inhouds typen die in de volgende rij van deze kolom worden weer gegeven. |
 | Ondersteunde inhouds typen | **Via ConfigMgr:** </br> -Snelle updates </br> -Alle Windows-updates (vanaf versie 1910). Dit omvat geen updates van Microsoft 365-apps.</br> </br> **Via micro soft Cloud:**</br> -Windows-en beveiligings updates</br> -Stuur Programma's</br> -Windows Store-apps</br> -Windows Store voor bedrijven-apps | Alle inhouds typen van ConfigMgr, inclusief afbeeldingen die zijn gedownload in [Windows PE](../../osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md) | Alle inhouds typen van ConfigMgr, behalve afbeeldingen |
 | Cache grootte op schijf beheer | Ja | Ja | Ja |
 | Detectie van een peer bron | Automatisch | Hand matig (instelling client agent) | Automatisch |
 | Peer-detectie | Via Delivery Optimization Cloud service (Internet toegang vereist) | Via beheer punt (gebaseerd op client grens groepen) | Cast |
-| Rapportage | Ja (met Desktop Analytics) | Dash board client gegevens bronnen ConfigMgr | Dash board client gegevens bronnen ConfigMgr |
+| Rapporten | [Updatecompatibiliteit](/windows/deployment/update/update-compliance-get-started) | Dash board client gegevens bronnen ConfigMgr | Dash board client gegevens bronnen ConfigMgr |
 | Besturings element voor WAN-gebruik | Ja (systeem eigen, kan worden beheerd via groeps beleids instellingen) | Grensgroepen | Alleen subnet-ondersteuning |
 | Beheer via ConfigMgr | Gedeeltelijk (instelling client agent) | Ja (instelling client agent) | Ja (instelling client agent) |
 
